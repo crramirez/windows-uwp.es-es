@@ -7,17 +7,17 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6efe7aa27721f519ba93052abf2d0e8189f58941
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 87d4be69d9a7869f5331d30225e93a22ad9e959c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57622320"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371252"
 ---
 # <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>Con los valores generados por el sistema
 
 
-La [fase del ensamblador de entrada (IA](input-assembler-stage--ia-.md) genera valores generados por el sistema (basándose en la [semantics](https://msdn.microsoft.com/library/windows/desktop/bb509647) de entrada proporcionada por el usuario) para admitir determinadas eficiencias en las operaciones del sombreador. Al adjuntar datos, como un id. de instancia (visible para la [fase del sombreador de vértices (VS)](vertex-shader-stage--vs-.md)), un id. de vértice (visible para VS) o un id. de primitivo (visible para la [fase del sombreador de geometría (GS)](geometry-shader-stage--gs-.md)/[fase del sombreador de píxeles (PS)](pixel-shader-stage--ps-.md)), una fase del sombreador posterior puede ver estos valores del sistema para optimizar el procesamiento en esa fase.
+La [fase del ensamblador de entrada (IA](input-assembler-stage--ia-.md) genera valores generados por el sistema (basándose en la [semantics](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics) de entrada proporcionada por el usuario) para admitir determinadas eficiencias en las operaciones del sombreador. Al adjuntar datos, como un id. de instancia (visible para la [fase del sombreador de vértices (VS)](vertex-shader-stage--vs-.md)), un id. de vértice (visible para VS) o un id. de primitivo (visible para la [fase del sombreador de geometría (GS)](geometry-shader-stage--gs-.md)/[fase del sombreador de píxeles (PS)](pixel-shader-stage--ps-.md)), una fase del sombreador posterior puede ver estos valores del sistema para optimizar el procesamiento en esa fase.
 
 Por ejemplo, la fase VS puede buscar el identificador de instancia para obtener datos adicionales por vértice para el sombreador o para realizar otras operaciones; por ejemplo, las fases GS y PS pueden usar el identificador de primitivo para obtener datos de cada primitivo de la misma manera.
 

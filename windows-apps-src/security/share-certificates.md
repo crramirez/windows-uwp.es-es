@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 1caa7361011b535a0dd63da53e0aba2eadff72be
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3fe9a6fe94fa388c35f181341972211b9ed6c03f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654780"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371920"
 ---
 # <a name="share-certificates-between-apps"></a>Compartir certificados entre aplicaciones
 
@@ -57,12 +57,12 @@ En este artículo se usa Microsoft Internet Information Services (IIS) como ejem
 ## <a name="configure-your-web-service-to-use-client-certificate-authentication"></a>Configurar el servicio web para que use la autenticación de certificados de cliente
 
 
-1.  Ejecuta el **Administrador de Internet Information Services (IIS)**.
-2.  Expande los sitios de tu servidor IIS. En **Sitio web predeterminado**, selecciona el nuevo servicio web "FirstContosoBank". En la sección **Acciones**, selecciona **Configuración avanzada...**.
+1.  Ejecuta el **Administrador de Internet Information Services (IIS)** .
+2.  Expande los sitios de tu servidor IIS. En **Sitio web predeterminado**, selecciona el nuevo servicio web "FirstContosoBank". En la sección **Acciones**, selecciona **Configuración avanzada...** .
 3.  Establece **Grupo de aplicaciones** en **.NET v2.0** y haz clic en **Aceptar**.
-4.  En el **Administrador de Internet Information Services (IIS)**, selecciona tu servidor IIS y haz doble clic en **Certificados de servidor**. En la sección **Acciones**, selecciona **Crear certificado autofirmado...**. Escribe "ContosoBank" como nombre descriptivo para el certificado y haz clic en **Aceptar**. Esto creará un nuevo certificado para que lo use el servidor IIS, con el formato "&lt;nombre_de_servidor&gt;.&lt;nombre_de_dominio&gt;".
-5.  En el **Administrador de Internet Information Services (IIS)**, selecciona el sitio web predeterminado. En la sección **Acciones**, selecciona **Enlace** y haz clic en **Agregar...**. Selecciona "https" como tipo, establece el puerto en "443" y especifica el nombre de host completo del servidor IIS ("&lt;nombre_de_servidor&gt;.&lt;nombre_de_dominio&gt;"). Establece el certificado SSL en "ContosoBank". Haga clic en **Aceptar**. Haz clic en **Cerrar** en la ventana **Enlaces de sitios**.
-6.  En el **Administrador de Internet Information Services (IIS)**, selecciona el servicio web "FirstContosoBank". Haz doble clic en **Configuración de SSL**. Activa **Requerir SSL**. En **Certificados de cliente**, selecciona **Requerir**. En la sección **Acciones**, haz clic en **Aplicar**.
+4.  En el **Administrador de Internet Information Services (IIS)** , selecciona tu servidor IIS y haz doble clic en **Certificados de servidor**. En la sección **Acciones**, selecciona **Crear certificado autofirmado...** . Escribe "ContosoBank" como nombre descriptivo para el certificado y haz clic en **Aceptar**. Esto creará un nuevo certificado para que lo use el servidor IIS, con el formato "&lt;nombre_de_servidor&gt;.&lt;nombre_de_dominio&gt;".
+5.  En el **Administrador de Internet Information Services (IIS)** , selecciona el sitio web predeterminado. En la sección **Acciones**, selecciona **Enlace** y haz clic en **Agregar...** . Selecciona "https" como tipo, establece el puerto en "443" y especifica el nombre de host completo del servidor IIS ("&lt;nombre_de_servidor&gt;.&lt;nombre_de_dominio&gt;"). Establece el certificado SSL en "ContosoBank". Haga clic en **Aceptar**. Haz clic en **Cerrar** en la ventana **Enlaces de sitios**.
+6.  En el **Administrador de Internet Information Services (IIS)** , selecciona el servicio web "FirstContosoBank". Haz doble clic en **Configuración de SSL**. Activa **Requerir SSL**. En **Certificados de cliente**, selecciona **Requerir**. En la sección **Acciones**, haz clic en **Aplicar**.
 7.  Para comprobar que el servicio web está correctamente configurado, abre el explorador web y escribe la siguiente dirección web: "https://&lt;nombre_de_servidor&gt;.&lt;nombre_de_dominio&gt;/FirstContosoBank/Service1.asmx". Por ejemplo, "https://myserver.example.com/FirstContosoBank/Service1.asmx". Si tu servicio web está correctamente configurado, se te pedirá que selecciones un certificado de cliente para poder acceder al servicio web.
 
 Puedes repetir los pasos anteriores para crear varios servicios web a los que se pueda acceder con el mismo certificado de cliente.
@@ -70,11 +70,11 @@ Puedes repetir los pasos anteriores para crear varios servicios web a los que se
 ## <a name="create-a-uwp-app-that-uses-certificate-authentication"></a>Crear una aplicación para UWP que use autenticación de certificado
 
 
-Ahora que tienes uno o varios servicios web protegidos, tus aplicaciones pueden usar certificados para autenticar en esos servicios web. Cuando se realiza una solicitud a un servicio web autenticado usando el objeto [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639), la solicitud inicial no contendrá un certificado de cliente. El servicio web autenticado responderá con una solicitud para autenticar el cliente. Cuando esto ocurre, el cliente de Windows consultará automáticamente los certificados de cliente disponibles en el almacén de certificados. El usuario puede seleccionar uno de estos certificados para autenticarse en el servicio web. Algunos certificados están protegidos por contraseña, por lo que necesitarás proporcionar al usuario una manera de especificar la contraseña del certificado.
+Ahora que tienes uno o varios servicios web protegidos, tus aplicaciones pueden usar certificados para autenticar en esos servicios web. Cuando se realiza una solicitud a un servicio web autenticado usando el objeto [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient), la solicitud inicial no contendrá un certificado de cliente. El servicio web autenticado responderá con una solicitud para autenticar el cliente. Cuando esto ocurre, el cliente de Windows consultará automáticamente los certificados de cliente disponibles en el almacén de certificados. El usuario puede seleccionar uno de estos certificados para autenticarse en el servicio web. Algunos certificados están protegidos por contraseña, por lo que necesitarás proporcionar al usuario una manera de especificar la contraseña del certificado.
 
 Si no hay certificados de cliente disponibles, el usuario tendrá que agregar un certificado al almacén de certificados. En tu aplicación puedes incluir código que permita al usuario seleccionar un archivo PFX que contenga un certificado de cliente y, después, importar ese certificado al almacén de certificados de cliente.
 
-**Sugerencia**  makecert.exe puede usar para crear un archivo PFX para usarlo con este inicio rápido. Para obtener información sobre cómo usar makecert.exe, consulta [MakeCert.](https://msdn.microsoft.com/library/windows/desktop/aa386968)
+**Sugerencia**  makecert.exe puede usar para crear un archivo PFX para usarlo con este inicio rápido. Para obtener información sobre cómo usar makecert.exe, consulta [MakeCert.](https://docs.microsoft.com/windows/desktop/SecCrypto/makecert)
 
  
 

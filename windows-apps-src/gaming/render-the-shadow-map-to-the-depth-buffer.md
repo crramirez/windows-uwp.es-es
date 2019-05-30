@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, rendering, representación, shadow map, mapa de sombras, depth buffer, búfer de profundidad, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 27cd535dc51a330937c345acf352677a42c652eb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a8ae67df457d4abafc8fb689a747139f62ca0e0e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621340"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368075"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a>Representar el mapa de sombras en el búfer de profundidad
 
@@ -37,7 +37,7 @@ Para el pase (o transferencia) de representación de sombras, especifica un búf
 
 Especifica la ventanilla de luz y un sombreador de vértices, y establece los búferes de constantes del espacio de luz. Usa la selección (culling) de la cara anterior para este pase a fin de optimizar los valores de profundidad en el búfer de sombras.
 
-Observa que en la mayoría de dispositivos, puedes especificar nullptr para el sombreador de píxeles (o saltear completamente la especificación de un sombreador de píxeles). Sin embargo algunos controladores pueden generar una excepción cuando llamas a draw en el dispositivo de Direct3D con un sombreador de píxeles nulo establecido. Para evitar esta excepción, puedes establecer un sombreador de píxeles mínimo para el pase de representación de sombras. El resultado de este sombreador se descarta; puede llamar a [**discard**](https://msdn.microsoft.com/library/windows/desktop/bb943995) en cada píxel.
+Observa que en la mayoría de dispositivos, puedes especificar nullptr para el sombreador de píxeles (o saltear completamente la especificación de un sombreador de píxeles). Sin embargo algunos controladores pueden generar una excepción cuando llamas a draw en el dispositivo de Direct3D con un sombreador de píxeles nulo establecido. Para evitar esta excepción, puedes establecer un sombreador de píxeles mínimo para el pase de representación de sombras. El resultado de este sombreador se descarta; puede llamar a [**discard**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-discard) en cada píxel.
 
 Representa los objetos que pueden arrojar sombras, pero no te preocupes en representar geometría que no pueda dar sombra (como el piso de una habitación u objetos quitados del pase de sombras por motivos de optimización).
 
@@ -125,7 +125,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-**Optimizar el frustum de vista:**  Asegúrese de que su implementación calcula un frustum vista estrecha para que obtengan más precisión fuera de su búfer de profundidad. Consulta [Técnicas habituales para mejorar los mapas de profundidad de sombras](https://msdn.microsoft.com/library/windows/desktop/ee416324) para ver más sugerencias sobre la técnica de sombras.
+**Optimizar el frustum de vista:**  Asegúrese de que su implementación calcula un frustum vista estrecha para que obtengan más precisión fuera de su búfer de profundidad. Consulta [Técnicas habituales para mejorar los mapas de profundidad de sombras](https://docs.microsoft.com/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps) para ver más sugerencias sobre la técnica de sombras.
 
 ## <a name="vertex-shader-for-shadow-pass"></a>Sombreador de vértices para el pase de sombras
 

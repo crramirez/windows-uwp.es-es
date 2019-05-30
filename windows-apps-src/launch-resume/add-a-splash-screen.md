@@ -6,12 +6,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 882ee548754b9fa498697a8d75a12a23f86fc9de
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 956e4050e3077ac827cf8107470698b42878a5e1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616890"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370874"
 ---
 # <a name="add-a-splash-screen"></a>Agregar una pantalla de presentación
 
@@ -29,7 +29,7 @@ Cuando usas una plantilla de Visual Studio para crear tu aplicación, se agrega 
 
     ![captura de pantalla de la ventana "package.appxmanifest" en Visual Studio 2017](images/appmanifest.png)
 
-    Si abres "Package.appxmanifest" en un editor de texto, se muestra el elemento [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br211467) como secundario del elemento [**VisualElements**](https://msdn.microsoft.com/library/windows/apps/br211471). El marcado de la pantalla de presentación predeterminada del archivo de manifiesto tiene el siguiente aspecto en un editor de texto:
+    Si abres "Package.appxmanifest" en un editor de texto, se muestra el elemento [**SplashScreen**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-splashscreen) como secundario del elemento [**VisualElements**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements). El marcado de la pantalla de presentación predeterminada del archivo de manifiesto tiene el siguiente aspecto en un editor de texto:
 
     ```xml
     <uap:SplashScreen Image="Assets\SplashScreen.png" />
@@ -43,7 +43,7 @@ Cuando usas una plantilla de Visual Studio para crear tu aplicación, se agrega 
 
     **Importante**  la imagen de pantalla de presentación que elija debe ser 1152 x 1920 píxeles que es el tamaño correcto para un 2.4 x factor de escala. Si este es el único activo que proporcionas, se reducirá para los factores de escala de 1.4x y 1x.
 
-6. En el campo **Color de fondo** de la sección **Pantalla de presentación**, establece el color de fondo que se mostrará con la imagen de la pantalla de presentación. Puede escribir el nombre de un color o '\#' y el valor hexadecimal de un color. Para obtener una lista de los nombres de colores disponibles, consulta el elemento [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br211467). El establecimiento de un color de fondo para tu pantalla de presentación es opcional. Si no se especifica un color para una aplicación para UWP, valor predeterminado es el color de fondo de pantalla de presentación a un gris claro (valor hexadecimal \#464646). Se trata del mismo color que el color de fondo del **Icono** (consulta el campo **Color de fondo** en la sección **Imágenes y logotipos en mosaico** de la pestaña **Activos visuales**). Si no especificas un color para un Windows Phone, o lo estableces en "transparente", el color de fondo de pantalla de presentación será transparente.
+6. En el campo **Color de fondo** de la sección **Pantalla de presentación**, establece el color de fondo que se mostrará con la imagen de la pantalla de presentación. Puede escribir el nombre de un color o '\#' y el valor hexadecimal de un color. Para obtener una lista de los nombres de colores disponibles, consulta el elemento [**SplashScreen**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-splashscreen). El establecimiento de un color de fondo para tu pantalla de presentación es opcional. Si no se especifica un color para una aplicación para UWP, valor predeterminado es el color de fondo de pantalla de presentación a un gris claro (valor hexadecimal \#464646). Se trata del mismo color que el color de fondo del **Icono** (consulta el campo **Color de fondo** en la sección **Imágenes y logotipos en mosaico** de la pestaña **Activos visuales**). Si no especificas un color para un Windows Phone, o lo estableces en "transparente", el color de fondo de pantalla de presentación será transparente.
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
@@ -52,5 +52,5 @@ Si tu aplicación tarda un poco en cargarse, considera la posibilidad de agregar
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Crear una pantalla de presentación personalizado](create-a-customized-splash-screen.md)
-* [Referencia de esquema del manifiesto del paquete: Elemento de la pantalla de presentación](https://msdn.microsoft.com/library/windows/apps/br211467)
-* [Clase Windows.ApplicationModel.Activation.SplashScreen](https://msdn.microsoft.com/library/windows/apps/br224763)
+* [Referencia de esquema del manifiesto del paquete: Elemento de la pantalla de presentación](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-splashscreen)
+* [Clase Windows.ApplicationModel.Activation.SplashScreen](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen)

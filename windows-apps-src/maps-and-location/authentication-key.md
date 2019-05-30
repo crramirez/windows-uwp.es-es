@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, clave de autenticación de mapa, control de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 620566036dc5aa9357d10e60ec92067ba0faf130
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8f62ecfab5bd8d09092e5264831327b8c63666bc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649560"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370510"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar una clave de autenticación de mapas
 
 
 
 
-La [aplicación universal de Windows](https://msdn.microsoft.com/library/windows/apps/dn894631) debe autenticarse para poder usar [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este tema se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación.
+La [aplicación universal de Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) debe autenticarse para poder usar [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este tema se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación.
 
 **Sugerencia** Para obtener más información sobre el uso de mapas en la aplicación, descarga el ejemplo siguiente del [repositorio de ejemplos de la plataforma universal de Windows](https://go.microsoft.com/fwlink/p/?LinkId=619979) que encontrarás en GitHub:
 
@@ -59,11 +59,11 @@ Para crear una nueva clave
 ## <a name="add-the-key-to-your-app"></a>Agregar la clave a la aplicación
 
 
-La clave de autenticación de mapa es necesaria para usar [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) y los servicios de mapa ([**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)) en la aplicación universal de Windows. Agrégala al control de mapa y asigna los objetos de servicio, según corresponda.
+La clave de autenticación de mapa es necesaria para usar [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa ([**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps)) en la aplicación universal de Windows. Agrégala al control de mapa y asigna los objetos de servicio, según corresponda.
 
 ### <a name="to-add-the-key-to-a-map-control"></a>Agregar la clave a un control de mapa
 
-Para autenticar servicios en el espacio de nombres [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), establece la propiedad [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) en el valor de la clave de autenticación. Puedes establecer esta propiedad en el código o en el marcado XAML, según tus preferencias. Para obtener más información sobre el uso de **MapControl**, consulta [Mostrar mapas con vistas 2D, 3D y Streetside](display-maps.md).
+Para autenticar servicios en el espacio de nombres [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl), establece la propiedad [**MapServiceToken**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken) en el valor de la clave de autenticación. Puedes establecer esta propiedad en el código o en el marcado XAML, según tus preferencias. Para obtener más información sobre el uso de **MapControl**, consulta [Mostrar mapas con vistas 2D, 3D y Streetside](display-maps.md).
 
 -   Este ejemplo establece **MapServiceToken** en el valor de la clave de autenticación del código.
 
@@ -79,7 +79,7 @@ Para autenticar servicios en el espacio de nombres [**MapControl**](https://msdn
 
 ### <a name="to-add-the-key-to-map-services"></a>Agregar la clave a servicios de mapa
 
-Para usar servicios en el espacio de nombres [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979), establece la propiedad [**ServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn636977) en el valor de clave de autenticación. Para obtener más información sobre el uso de los servicios de mapa, consulta [Mostrar rutas e indicaciones](routes-and-directions.md) y [Realizar geocodificación y geocodificación inversa](geocoding.md).
+Para usar servicios en el espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps), establece la propiedad [**ServiceToken**](https://docs.microsoft.com/uwp/api/windows.services.maps.mapservice.servicetoken) en el valor de clave de autenticación. Para obtener más información sobre el uso de los servicios de mapa, consulta [Mostrar rutas e indicaciones](routes-and-directions.md) y [Realizar geocodificación y geocodificación inversa](geocoding.md).
 
 -   Este ejemplo establece **ServiceToken** en el valor de la clave de autenticación del código.
 
@@ -91,6 +91,6 @@ Para usar servicios en el espacio de nombres [**Windows.Services.Maps**](https:/
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [Ejemplo de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Directrices de diseño para mapas](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Directrices de diseño para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
 * Vídeo de [Build 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757) (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en las aplicaciones de Windows)
 * [Ejemplo de aplicación de tráfico para UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)

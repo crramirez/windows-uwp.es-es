@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app, aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: c6f4a4cb86bb5cf23e84e75ad99750dd6cff9539
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 96efc6145d382d4f6a996e541d638f2a1d896e80
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334544"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372661"
 ---
 # <a name="get-an-app"></a>Obtener una aplicación
 
@@ -42,9 +42,9 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Name        | Tipo   | Descripción                                                                 |
+| Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que se recuperará. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que se recuperará. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud

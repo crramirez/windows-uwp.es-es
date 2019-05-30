@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submission, envío de aplicación, delete, eliminar
 ms.localizationpriority: medium
-ms.openlocfilehash: d2e5d77fa89bcb77bfecb79f2171e4ec550f42f4
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: e5f16aa763b393ed9a328524b966624f825f1295
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334143"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372547"
 ---
 # <a name="delete-an-app-submission"></a>Eliminar un envío de aplicación
 
@@ -42,9 +42,9 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Name        | Tipo   | Descripción                                                                 |
+| Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío que se va a eliminar. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío que se va a eliminar. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | submissionId | string | Obligatorio. El identificador del envío que se va a eliminar. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de aplicación](create-an-app-submission.md). Para un envío que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de envío en el centro de partners.  |
 
 

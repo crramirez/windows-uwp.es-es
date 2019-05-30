@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, entrada táctil, controles, directx, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: e8892219b485d320bb77f90ac0d172e8e2403392
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b1f683f2d357057e33f3daa613e1b027a83776af
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618740"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367764"
 ---
 # <a name="touch-controls-for-games"></a>Controles táctiles para juegos
 
@@ -119,7 +119,7 @@ Usamos estos 3 controladores de eventos para actualizar la información de estad
 
 Por último, usamos estos métodos y propiedades para inicializar, acceder y actualizar la información de estado del controlador de cámara.
 
--   **Initialize** es un controlador de eventos al que llama nuestra aplicación para inicializar los controles y adjuntarlos al objeto [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que describe la ventana de la pantalla.
+-   **Initialize** es un controlador de eventos al que llama nuestra aplicación para inicializar los controles y adjuntarlos al objeto [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) que describe la ventana de la pantalla.
 -   **SetPosition** es un método al que llama la aplicación para establecer las coordenadas (x, y y z) de nuestros controles en el espacio de la escena. Ten en cuenta que nuestra coordenada z es 0 a lo largo de este tutorial.
 -   **obtener\_posición** es una propiedad que tiene acceso nuestra aplicación para obtener la posición actual de la cámara en el espacio de la escena. Puedes usar esta propiedad como forma de comunicar la posición actual de la cámara a la aplicación.
 -   **obtener\_FixedLookPoint** es una propiedad que tiene acceso nuestra aplicación para obtener el punto actual hacia el que se enfrenta la cámara del controlador. En este ejemplo, está bloqueada como normal en el plano x-y.
@@ -134,15 +134,15 @@ Ahora, intentemos combinar todas las piezas.
 
 El distribuidor de eventos de Windows Runtime proporciona 3 eventos que queremos que controle nuestra aplicación:
 
--   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)
--   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)
--   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)
+-   [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed)
+-   [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved)
+-   [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased)
 
-Estos eventos se implementan en el tipo [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Damos por sentado que tienes un objeto **CoreWindow** con el que trabajar. Para más información, consulta el tema sobre cómo [configurar una aplicación C++ para UWP para mostrar una vista DirectX](https://msdn.microsoft.com/library/windows/apps/hh465077).
+Estos eventos se implementan en el tipo [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow). Damos por sentado que tienes un objeto **CoreWindow** con el que trabajar. Para más información, consulta el tema sobre cómo [configurar una aplicación C++ para UWP para mostrar una vista DirectX](https://docs.microsoft.com/previous-versions/windows/apps/hh465077(v=win.10)).
 
 Puesto que estos eventos se desencadenan mientras nuestra aplicación se ejecuta, los controladores actualizan la información del estado del controlador de cámara definida en nuestros campos privados.
 
-En primer lugar, rellenemos los controladores de eventos de puntero táctiles. En el primer controlador de eventos, **OnPointerPressed**, obtenemos las coordenadas X-Y del puntero de [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) que administra nuestra pantalla cuando el usuario toca la pantalla o hace clic con el mouse.
+En primer lugar, rellenemos los controladores de eventos de puntero táctiles. En el primer controlador de eventos, **OnPointerPressed**, obtenemos las coordenadas X-Y del puntero de [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) que administra nuestra pantalla cuando el usuario toca la pantalla o hace clic con el mouse.
 
 **OnPointerPressed**
 
@@ -190,7 +190,7 @@ void CameraPanController::OnPointerMoved(
 }
 ```
 
-Para terminar, debemos desactivar el comportamiento panorámico de la cámara cuando el jugador deje de tocar la pantalla. Usamos **OnPointerReleased**, que se llama cuando [ **PointerReleased** ](https://msdn.microsoft.com/library/windows/apps/br208279) se desencadena para establecer **m\_panInUse** en FALSE y desactivar el movimiento panorámico de cámara y establezca el identificador de puntero en 0.
+Para terminar, debemos desactivar el comportamiento panorámico de la cámara cuando el jugador deje de tocar la pantalla. Usamos **OnPointerReleased**, que se llama cuando [ **PointerReleased** ](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) se desencadena para establecer **m\_panInUse** en FALSE y desactivar el movimiento panorámico de cámara y establezca el identificador de puntero en 0.
 
 **OnPointerReleased**
 
@@ -239,7 +239,7 @@ void CameraPanController::Initialize( _In_ CoreWindow^ window )
 }
 ```
 
-**Initialize** hace referencia a la instancia [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) de la aplicación como un parámetro y registra los controladores de eventos que desarrollamos en los eventos adecuados en **CoreWindow**.
+**Initialize** hace referencia a la instancia [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) de la aplicación como un parámetro y registra los controladores de eventos que desarrollamos en los eventos adecuados en **CoreWindow**.
 
 ## <a name="getting-and-setting-the-position-of-the-camera-controller"></a>Obtención y establecimiento de la posición del controlador de cámara
 
@@ -339,7 +339,7 @@ Ahora podemos obtener una coordenada del espacio de la escena en la que se centr
         );  
 ```
 
-Enhorabuena. Has implementado un sencillo conjunto de controles táctiles de movimiento panorámico de cámara en tu juego.
+¡Enhorabuena! Has implementado un sencillo conjunto de controles táctiles de movimiento panorámico de cámara en tu juego.
 
 
  

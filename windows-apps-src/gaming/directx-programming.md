@@ -6,12 +6,12 @@ ms.date: 06/23/2017
 ms.topic: article
 keywords: windows 10, uwp, game, juego, overview, información general, programming, programación, directx, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 83ac401892761e1e6433d337babbce00dc559b98
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 56da2fabbe0e3e6ae49ebb817a6f57e4d62d7ae9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608850"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368800"
 ---
 # <a name="directx-programming"></a>Programación con DirectX
 
@@ -38,7 +38,7 @@ En esta sección se proporciona información sobre el desarrollo de juegos para 
 <td align="left"><p>Obtén información sobre DirectX a través de muestras de juegos.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="directx-fundamentals.md">Aspectos básicos</a></p></td>
+<td align="left"><p><a href="directx-fundamentals.md">Fundamentals</a></p></td>
 <td align="left"><p>Explica los conceptos básicos de programación con DirectX.</p></td>
 </tr>
 <tr class="even">
@@ -61,7 +61,7 @@ En esta sección se proporciona información sobre el desarrollo de juegos para 
 </table>
 
 
-Para obtener guías de programación y referencia de DirectX, consulta [Gráficos de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080.aspx) y [Gráficos de Direct3D 12](https://msdn.microsoft.com/library/windows/desktop/dn903821.aspx).
+Para obtener guías de programación y referencia de DirectX, consulta [Gráficos de Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) y [Gráficos de Direct3D 12](https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-12-graphics).
  
 
 

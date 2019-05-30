@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2347efc5d68abd53442f52ecabdc060393ee561b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7146fe6489d61c641b7104e8c7c25728550c1c54
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636560"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370662"
 ---
 # <a name="face-and-vertex-normal-vectors"></a>Vectores normales de caras y vértices
 
@@ -31,7 +31,7 @@ En la siguiente ilustración se muestra un vector normal para una cara anterior:
 ## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Se enfrenta a atrás de caras traseras
 
 
-Cualquier cara que no es anterior es posterior. Direct3D no siempre representa caras posteriores; se dice que las caras posteriores deben seleccionarse. La selección de cara posterior significa eliminar las caras posteriores de la representación. Puedes cambiar el modo de selección para representar caras posteriores si quieres. Consulta [Culling State (Estado de selección)](https://msdn.microsoft.com/library/windows/desktop/bb204882) para obtener más información.
+Cualquier cara que no es anterior es posterior. Direct3D no siempre representa caras posteriores; se dice que las caras posteriores deben seleccionarse. La selección de cara posterior significa eliminar las caras posteriores de la representación. Puedes cambiar el modo de selección para representar caras posteriores si quieres. Consulta [Culling State (Estado de selección)](https://docs.microsoft.com/windows/desktop/direct3d9/culling-state) para obtener más información.
 
 ## <a name="span-idvertexunitnormalsspanspan-idvertexunitnormalsspanspan-idvertexunitnormalsspanvertex-unit-normals"></a><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>Normales de la unidad de vértice
 

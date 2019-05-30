@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 80591abb1e3130540ea94bc1f8d2602b90edc590
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1dabfee25df08d933fc892c3ed6e46f3cc6f4513
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613670"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364033"
 ---
 # <a name="tooltips"></a>Información sobre herramientas
 
@@ -25,7 +25,7 @@ La información sobre herramientas es una breve descripción que está vinculada
 
 ![Una información sobre herramientas](images/controls/tool-tip.png)
 
-> **API importantes**: [Clase de información sobre herramientas](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [clase ToolTipService](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
+> **API importantes**: [Clase de información sobre herramientas](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [clase ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -153,4 +153,4 @@ Si una información sobre herramientas oculta el contenido que se hace referenci
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase de información sobre herramientas](https://msdn.microsoft.com/library/windows/apps/br227608)
+- [Clase de información sobre herramientas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip)

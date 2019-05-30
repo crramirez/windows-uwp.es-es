@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f0b42a10c2cdd61aef84e08d6bd4f6408a978c3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8a280d07ab7d715adaa7da941be641cd54e24443
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617320"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371017"
 ---
 # <a name="lost-devices"></a>Dispositivos perdidos
 
@@ -21,7 +21,7 @@ Un dispositivo de Direct3D puede estar en un estado operativo o perdido. El esta
 
 De manera predeterminada, no se especifica el conjunto completo de los escenarios que pueden provocar que un dispositivo pase al estado perdido. Algunos ejemplos típicos incluyen la pérdida del foco, como cuando el usuario presiona ALT + TAB o cuando se inicializa un cuadro de diálogo del sistema. Los dispositivos también pueden pasar al estado perdido debido a un evento de administración de energía o cuando otra aplicación usa la operación de pantalla completa. Además, cualquier error al restablecer un dispositivo lo deja en estado perdido.
 
-Se garantiza que todos los métodos que derivan de [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) funcionarán después de que el dispositivo esté en estado perdido. Por lo general, después de que el dispositivo esté en estado perdido, cada función tiene las tres opciones siguientes:
+Se garantiza que todos los métodos que derivan de [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) funcionarán después de que el dispositivo esté en estado perdido. Por lo general, después de que el dispositivo esté en estado perdido, cada función tiene las tres opciones siguientes:
 
 -   Error de "dispositivo perdido": significa que la aplicación debe reconocer que el dispositivo está en estado perdido, por lo que la aplicación identifica que algo no ocurre según lo esperado.
 -   Un error silenciosamente, devolver S\_Aceptar o cualquier otro código de retorno - si una función no funciona en modo silencioso, la aplicación por lo general no puede distinguir entre el resultado de "¡success" y "error silencioso".

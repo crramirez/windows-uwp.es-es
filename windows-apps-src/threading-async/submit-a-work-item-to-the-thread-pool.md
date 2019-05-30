@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: 423f0efa9118f581d6e768a815dd2550801aa87e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ff47115c228e3cf6530e12aa4686c88660f16fcd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658020"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371550"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
@@ -19,19 +19,19 @@ ms.locfileid: "57658020"
 
 <b>API importantes</b>
 
--   [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)
--   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)
+-   [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)
+-   [**IAsyncAction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)
 
 Obtén información acerca de cómo realizar trabajo en un subproceso separado mediante el envío de un elemento de trabajo al grupo de subprocesos. Usa esto para mantener una interfaz de usuario con capacidad de respuesta mientras se completa un trabajo que tarda una cantidad de tiempo considerable, y para completar varias tareas en paralelo.
 
 ## <a name="create-and-submit-the-work-item"></a>Crear y enviar el elemento de trabajo
 
-Crea un elemento de trabajo mediante una llamada a [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593). Proporciona un delegado que haga el trabajo (puedes usar una función lambda o una función delegada). Ten en cuenta que **RunAsync** devuelve un objeto [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580). Almacena este objeto para usarlo en el paso siguiente.
+Crea un elemento de trabajo mediante una llamada a [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync). Proporciona un delegado que haga el trabajo (puedes usar una función lambda o una función delegada). Ten en cuenta que **RunAsync** devuelve un objeto [**IAsyncAction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction). Almacena este objeto para usarlo en el paso siguiente.
 
-Hay tres versiones de [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) disponibles para que puedas especificar opcionalmente la prioridad del elemento de trabajo, así como controlar si se ejecuta simultáneamente con otros elementos de trabajo.
+Hay tres versiones de [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync) disponibles para que puedas especificar opcionalmente la prioridad del elemento de trabajo, así como controlar si se ejecuta simultáneamente con otros elementos de trabajo.
 
 >[!NOTE]
->Use [ **CoreDispatcher.RunAsync** ](https://msdn.microsoft.com/library/windows/apps/Hh750317) para tener acceso el subproceso de UI y mostrar el progreso del elemento de trabajo.
+>Use [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para tener acceso el subproceso de UI y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda para que realice el trabajo:
 
@@ -269,13 +269,13 @@ auto asyncAction = ThreadPool::RunAsync(workItem);
 m_workItem = asyncAction;
 ```
 
-Después de la llamada a [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593), el grupo de subprocesos pone el elemento de trabajo en cola y este se ejecuta cuando hay un subproceso disponible. Los elementos de trabajo del grupo de subprocesos se ejecutan de manera asincrónica en cualquier orden, de manera que debes asegurarte de que los elementos de trabajo funcionen de manera independiente.
+Después de la llamada a [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync), el grupo de subprocesos pone el elemento de trabajo en cola y este se ejecuta cuando hay un subproceso disponible. Los elementos de trabajo del grupo de subprocesos se ejecutan de manera asincrónica en cualquier orden, de manera que debes asegurarte de que los elementos de trabajo funcionen de manera independiente.
 
-Ten en cuenta que el elemento de trabajo comprueba la propiedad [**IAsyncInfo.Status**](https://msdn.microsoft.com/library/windows/apps/BR206593) y existe si el elemento de trabajo se cancela.
+Ten en cuenta que el elemento de trabajo comprueba la propiedad [**IAsyncInfo.Status**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncinfo.status) y existe si el elemento de trabajo se cancela.
 
 ## <a name="handle-work-item-completion"></a>Controlar la finalización del elemento de trabajo
 
-Proporciona un controlador de finalización mediante la configuración de la propiedad [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) del elemento de trabajo. Proporciona un delegado (puedes usar una función lambda o una función delegada) para controlar que el elemento de trabajo se complete. Por ejemplo, usa [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) para acceder al subproceso de interfaz de usuario y mostrar el resultado.
+Proporciona un controlador de finalización mediante la configuración de la propiedad [**IAsyncAction.Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) del elemento de trabajo. Proporciona un delegado (puedes usar una función lambda o una función delegada) para controlar que el elemento de trabajo se complete. Por ejemplo, usa [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para acceder al subproceso de interfaz de usuario y mostrar el resultado.
 
 En el siguiente ejemplo se actualiza la interfaz de usuario con el resultado del elemento de trabajo enviado en el paso 1:
 

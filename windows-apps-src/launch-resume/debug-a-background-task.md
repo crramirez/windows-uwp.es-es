@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, tareas en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: e0ae12bbb2bad1fbcd663f5be8f26656d640afc8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 11ebd180ebc3bc08b418f3b22ebed190bf73c18d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57599210"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366206"
 ---
 # <a name="debug-a-background-task"></a>Depurar una tarea en segundo plano
 
 
 **API importantes**
--   [Windows.ApplicationModel.Background](https://msdn.microsoft.com/library/windows/apps/br224847)
+-   [Windows.ApplicationModel.Background](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 Aprende a depurar una tarea en segundo plano, incluida la activación y el seguimiento de depuración de la tarea en segundo plano en el registro de eventos de Windows.
 
@@ -36,16 +36,16 @@ En este tema se supone que tienes una aplicación existente con una tarea en seg
 
 Las tareas en segundo plano se pueden desencadenar manualmente mediante Microsoft Visual Studio. Después, podrás analizar el código y depurarlo.
 
-1.  En C#, coloca un punto de interrupción en el método Run de la clase en segundo plano (para las tareas en segundo plano dentro del proceso, coloca el punto de interrupción en App.OnBackgroundActivated()) o escribe el resultado de depuración mediante [**System.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441592.aspx).
+1.  En C#, coloca un punto de interrupción en el método Run de la clase en segundo plano (para las tareas en segundo plano dentro del proceso, coloca el punto de interrupción en App.OnBackgroundActivated()) o escribe el resultado de depuración mediante [**System.Diagnostics**](https://docs.microsoft.com/dotnet/api/system.diagnostics?view=netframework-4.7.2).
 
-    En C++, coloca un punto de interrupción en la función Run de la clase en segundo plano (para las tareas en segundo plano dentro del proceso, coloca el punto de interrupción en App.OnBackgroundActivated()) o escribe el resultado de depuración mediante [**OutputDebugString**](https://msdn.microsoft.com/library/windows/desktop/aa363362).
+    En C++, coloca un punto de interrupción en la función Run de la clase en segundo plano (para las tareas en segundo plano dentro del proceso, coloca el punto de interrupción en App.OnBackgroundActivated()) o escribe el resultado de depuración mediante [**OutputDebugString**](https://docs.microsoft.com/windows/desktop/api/debugapi/nf-debugapi-outputdebugstringw).
 
 2.  Ejecuta la aplicación en el depurador y después desencadena la tarea en segundo plano mediante la barra de herramientas **Eventos de ciclo de vida**. Este menú desplegable muestra los nombres de las tareas en segundo plano que pueden activarse con Visual Studio.
 
     Para que esto funcione, la tarea en segundo plano ya debe estar registrada y debe seguir esperando el desencadenador. Por ejemplo, si una tarea en segundo plano se registró con TimeTrigger y ese desencadenador ya está activado, iniciar la tarea a través de Visual Studio no tendrá efecto.
 
 > [!Note]
-> Tareas en segundo plano con los siguientes desencadenadores no se puede activar de esta manera: [**Desencadenador de aplicación**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.applicationtrigger.aspx), [ **MediaProcessing desencadenador**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.mediaprocessingtrigger.aspx), [ **ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), [ **PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543)y tareas en segundo plano mediante un [ **SystemTrigger** ](https://msdn.microsoft.com/library/windows/apps/br224838) con el [  **SmsReceived** ](https://msdn.microsoft.com/library/windows/apps/br224839) el tipo de desencadenador.  
+> Tareas en segundo plano con los siguientes desencadenadores no se puede activar de esta manera: [**Desencadenador de aplicación**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger), [ **MediaProcessing desencadenador**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger), [ **ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), [ **PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)y tareas en segundo plano mediante un [ **SystemTrigger** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) con el [  **SmsReceived** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) el tipo de desencadenador.  
 > **ApplicationTrigger** y **MediaProcessingTrigger** se pueden señalar manualmente en el código con `trigger.RequestAsync()`.
 
 ![depurar tareas en segundo plano](images/debugging-activation.png)
@@ -71,7 +71,7 @@ La activación de la tarea en segundo plano depende de tres cosas:
 
     -   En C# y C++, el atributo de punto de entrada debe coincidir con el espacio de nombres de la tarea en segundo plano seguido por el nombre de clase. Por ejemplo: RuntimeComponent1.MyBackgroundTask.
     -   También deben especificarse todos los tipos de desencadenadores usados con la tarea.
-    -   El ejecutable NO DEBE especificarse a menos que estés usando [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) o [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543).
+    -   El ejecutable NO DEBE especificarse a menos que estés usando [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) o [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger).
 
 3.  Solo Windows. Para ver el punto de entrada que usa Windows para activar la tarea en segundo plano, habilita el seguimiento de depuración y usa el registro de eventos de Windows.
 
@@ -95,13 +95,13 @@ Si una aplicación que usa tareas en segundo plano se implementa con Visual Stud
 -   Puedes seleccionar la opción de depuración "Reinstalar siempre mi paquete" para evitar esto en proyectos con C#.
 -   Espera hasta que la aplicación está lista para la implementación final para incrementar la versión del paquete (no lo cambies durante la depuración).
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 -   Asegúrate de que tu aplicación compruebe los registros de tareas en segundo plano existentes antes de registrar la tarea nuevamente. Varios registros de la misma tarea pueden causar resultados inesperados al ejecutar la tarea en segundo plano más de una vez cada vez que esta se desencadena.
 -   Si la tarea en segundo plano requiere acceso a la pantalla de bloqueo, asegúrate de poner la aplicación en la pantalla de bloqueo antes de intentar depurar la tarea en segundo plano. Para obtener información acerca de cómo especificar opciones para bloquear aplicaciones compatibles con la pantalla de bloqueo, consulta [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md).
 -   Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se ocupe correctamente de los escenarios en los que se produce un error en el registro de tareas en segundo plano. Si, en cambio, la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
-Para obtener más información sobre el uso de VS para depurar una tarea en segundo plano, consulte [cómo desencadenar suspender, reanudar y en segundo plano de los eventos en aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
+Para obtener más información sobre el uso de VS para depurar una tarea en segundo plano, consulte [cómo desencadenar suspender, reanudar y en segundo plano de los eventos en aplicaciones para UWP](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015).
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -110,8 +110,8 @@ Para obtener más información sobre el uso de VS para depurar una tarea en segu
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
-* [Cómo desencadenar suspender, reanudar y en segundo plano de los eventos en aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
-* [Analizar la calidad del código de aplicaciones para UWP con análisis de código de Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
+* [Cómo desencadenar suspender, reanudar y en segundo plano de los eventos en aplicaciones para UWP](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)
+* [Analizar la calidad del código de aplicaciones para UWP con análisis de código de Visual Studio](https://docs.microsoft.com/visualstudio/test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis?view=vs-2015)
 
  
 

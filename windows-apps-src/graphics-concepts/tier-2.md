@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f9f9a69c0e30459929d1e31084ea88b3f7ebbd0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c48b02de34bd37acced8ef65859708f31fd78ca2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612890"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370861"
 ---
 # <a name="tier-2"></a>Nivel 2
 
@@ -42,7 +42,7 @@ Las escrituras en mosaicos sin asignar no van a la memoria, pero es posible que 
 
 El filtrado de texturas con una superficie que incluya mosaicos **NULL** y no **NULL** contribuye 0 (con valores predeterminados para los componentes de formato que faltan) para los elementos de textura en mosaicos **NULL** en la operación general de filtro. Algún hardware anterior no cumple este requisito y devuelve 0 (con valores predeterminados para los componentes de formato que faltan) para el resultado del filtro completo si cualquier elemento de textura (con un ancho distinto de cero) se ubica en un mosaico **NULL**. No se permitirá a ningún otro hardware que pase por alto el requisito de incluir todos los elementos de textura (con ponderación distinta de cero) en la operación de filtro.
 
-Los accesos a elementos de textura **NULL** hacen que la operación [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083) para los comentarios de estado respecto a la lectura de una textura devuelva false. Esto sucede independientemente del modo en que el resultado del acceso a la textura puede escribirse enmascarado en el sombreador y de cuántos componentes haya en el formato de la textura (la combinación de los cuales pueden hacer que parezca que no es necesario acceder a la textura).
+Los accesos a elementos de textura **NULL** hacen que la operación [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) para los comentarios de estado respecto a la lectura de una textura devuelva false. Esto sucede independientemente del modo en que el resultado del acceso a la textura puede escribirse enmascarado en el sombreador y de cuántos componentes haya en el formato de la textura (la combinación de los cuales pueden hacer que parezca que no es necesario acceder a la textura).
 
 ## <a name="span-idalignmentconstraintsspanspan-idalignmentconstraintsspanspan-idalignmentconstraintsspanalignment-constraints"></a><span id="Alignment_constraints"></span><span id="alignment_constraints"></span><span id="ALIGNMENT_CONSTRAINTS"></span>Restricciones de alineación
 

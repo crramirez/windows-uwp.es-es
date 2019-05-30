@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, DirectX, input latency, latencia de entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a74e2e24810dee058aa166800091af91d55cdef4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601750"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368456"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Optimización de la latencia de entrada en juegos DirectX de la Plataforma universal de Windows (UWP)
 
@@ -65,7 +65,7 @@ Realizaremos una iteración de un sencillo juego de puzzle para ilustrar la impl
 
 La primera iteración del juego de puzzle actualiza la pantalla únicamente cuando un usuario mueve una pieza del puzzle. Un usuario puede arrastrar una pieza del puzzle hasta su sitio o bien ajustarla en su sitio seleccionándola y, luego, tocando el destino correspondiente. En el segundo caso, la pieza de puzzle irá al destino sin ninguna animación o efecto.
 
-El código tiene un bucle de juego con un solo subproceso dentro del método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) que usa **CoreProcessEventsOption::ProcessOneAndAllPending**. Si se usa esta opción, todos los eventos que actualmente estén disponibles se distribuirán en la cola. Si no hay eventos pendientes, el bucle del juego espera hasta que surge uno.
+El código tiene un bucle de juego con un solo subproceso dentro del método [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run) que usa **CoreProcessEventsOption::ProcessOneAndAllPending**. Si se usa esta opción, todos los eventos que actualmente estén disponibles se distribuirán en la cola. Si no hay eventos pendientes, el bucle del juego espera hasta que surge uno.
 
 ``` syntax
 void App::Run()
@@ -96,7 +96,7 @@ void App::Run()
 
 En la segunda iteración, el juego se modifica de forma que, cuando un usuario selecciona una pieza del puzzle y después toca el destino correcto de dicha pieza, se produce una animación de la pieza en pantalla hasta que llega a su destino.
 
-Como ya se comentó antes, el código tiene un bucle de juego con un solo subproceso que usa **ProcessOneAndAllPending** para distribuir los eventos de entrada en la cola. La diferencia aquí reside en que, durante una animación, el bucle cambia para usar **CoreProcessEventsOption::ProcessAllIfPresent** y, así, no tener que esperar nuevos eventos de entrada. Si no hay eventos pendientes, [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) regresa inmediatamente y permite que la aplicación muestre el siguiente fotograma de la animación. Cuando la animación finaliza, el bucle cambia de nuevo a **ProcessOneAndAllPending** para restringir las actualizaciones de pantalla.
+Como ya se comentó antes, el código tiene un bucle de juego con un solo subproceso que usa **ProcessOneAndAllPending** para distribuir los eventos de entrada en la cola. La diferencia aquí reside en que, durante una animación, el bucle cambia para usar **CoreProcessEventsOption::ProcessAllIfPresent** y, así, no tener que esperar nuevos eventos de entrada. Si no hay eventos pendientes, [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) regresa inmediatamente y permite que la aplicación muestre el siguiente fotograma de la animación. Cuando la animación finaliza, el bucle cambia de nuevo a **ProcessOneAndAllPending** para restringir las actualizaciones de pantalla.
 
 ``` syntax
 void App::Run()
@@ -182,7 +182,7 @@ Sin embargo, esta facilidad de desarrollo tiene su precio, y es que representar 
 
 Algunos juegos pueden ser capaces de ignorar o compensar el aumento de la latencia de entrada que hemos visto en el escenario 3. No obstante, si una latencia de entrada baja es fundamental para la experiencia del juego y la sensibilidad de la respuesta del jugador, los juegos que se representan a 60 fotogramas por segundo deberán procesar las entradas en un subproceso aparte.
 
-La cuarta iteración del juego de puzzle se basa en el escenario 3, y divide el procesamiento de entradas y la representación de gráficos del bucle del juego en subprocesos independientes. Al tener subprocesos independientes para cada evento, la salida de gráficos no provoca retrasos en la entrada, pero el código es más complejo. En el escenario 4, el subproceso de entrada llama a [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) con [**CoreProcessEventsOption::ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217), que espera nuevos eventos y distribuye todos los eventos disponibles. Este comportamiento se mantiene hasta que la ventana se cierra o el juego llama a [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows/apps/br208260).
+La cuarta iteración del juego de puzzle se basa en el escenario 3, y divide el procesamiento de entradas y la representación de gráficos del bucle del juego en subprocesos independientes. Al tener subprocesos independientes para cada evento, la salida de gráficos no provoca retrasos en la entrada, pero el código es más complejo. En el escenario 4, el subproceso de entrada llama a [**ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) con [**CoreProcessEventsOption::ProcessUntilQuit**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreProcessEventsOption), que espera nuevos eventos y distribuye todos los eventos disponibles. Este comportamiento se mantiene hasta que la ventana se cierra o el juego llama a [**CoreWindow::Close**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.close).
 
 ``` syntax
 void App::Run()
@@ -233,7 +233,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-El **DirectX 11 y XAML App (Windows Universal)** plantilla en Microsoft Visual Studio 2015 divide el bucle de juego en varios subprocesos de manera similar. Emplea el objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) para iniciar un subproceso dedicado a controlar la entrada y, de igual modo, crea un subproceso de representación independiente del subproceso de interfaz de usuario XAML. Para más información sobre estas plantillas, te recomendamos que leas [Crear un proyecto de juego para la Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
+El **DirectX 11 y XAML App (Windows Universal)** plantilla en Microsoft Visual Studio 2015 divide el bucle de juego en varios subprocesos de manera similar. Emplea el objeto [**Windows::UI::Core::CoreIndependentInputSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreIndependentInputSource) para iniciar un subproceso dedicado a controlar la entrada y, de igual modo, crea un subproceso de representación independiente del subproceso de interfaz de usuario XAML. Para más información sobre estas plantillas, te recomendamos que leas [Crear un proyecto de juego para la Plataforma universal de Windows y DirectX a partir de una plantilla](user-interface.md).
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>Otras formas de reducir la latencia de entrada
 

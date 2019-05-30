@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: teclado, accesibilidad, navegación, foco, texto, entrada, interacciones del usuario, keyboard, accessibility, navigation, focus, text, input, user interactions
 ms.date: 07/13/2018
 ms.topic: article
-ms.openlocfilehash: e44b7cf5a61a795e52490f6d603aea0bcf87bea2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 192c016dfa61f39074d99bccf58ff9371f16d16f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658300"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365427"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder a la presencia del teclado táctil
 
@@ -211,8 +211,8 @@ void Scenario2_ShowHideEvents::OnHiding(InputPane^ /*sender*/, InputPaneVisibili
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Interacciones de teclado](keyboard-interactions.md)
-- [Accesibilidad de teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
-- [Automatización del mismo nivel personalizado](https://msdn.microsoft.com/library/windows/apps/mt297667)
+- [Accesibilidad de teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
+- [Automatización del mismo nivel personalizado](https://docs.microsoft.com/windows/uwp/accessibility/custom-automation-peers)
 
 **Ejemplos**
 

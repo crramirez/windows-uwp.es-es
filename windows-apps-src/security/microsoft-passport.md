@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: aacce5710f8ed0066e5efdfb5e0344473f718f9b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1026bd153f43d5e956fbacdcc33728d890f34e34
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651550"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371968"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -115,16 +115,16 @@ El siguiente paso es pedir al usuario la información necesaria para registrarse
 
 En este escenario, usamos la dirección de correo como el identificador único del usuario. Una vez que el usuario se registre, considera la posibilidad de enviar un correo electrónico de validación para asegurarte de que la dirección sea válida. Esto te proporciona un mecanismo para restablecer la cuenta, si fuera necesario.
 
-Si el usuario configuró su PIN, la aplicación crea el objeto [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029) del usuario. La aplicación también puede adquirir información opcional de atestación de la clave para obtener la prueba criptográfica de que la clave se genera en el TPM. La clave pública generada y, opcionalmente, la atestación, se envían al servidor back-end para registrar el dispositivo que se está usando. Cada par de claves generado en cada uno de los dispositivos será único.
+Si el usuario configuró su PIN, la aplicación crea el objeto [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential) del usuario. La aplicación también puede adquirir información opcional de atestación de la clave para obtener la prueba criptográfica de que la clave se genera en el TPM. La clave pública generada y, opcionalmente, la atestación, se envían al servidor back-end para registrar el dispositivo que se está usando. Cada par de claves generado en cada uno de los dispositivos será único.
 
-El código para crear la [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029) tiene el aspecto siguiente:
+El código para crear la [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential) tiene el aspecto siguiente:
 
 ```csharp
 var keyCreationResult = await KeyCredentialManager.RequestCreateAsync(
     AccountId, KeyCredentialCreationOption.ReplaceExisting);
 ```
 
-El método [**RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048) es la parte que crea las claves pública y privada. Si el dispositivo tiene el chip TPM correcto, las API solicitarán el chip TPM para crear las claves pública y privada, y almacenar el resultado; si no hay ningún chip TPM disponible, el sistema operativo creará el par de claves en el código. No hay ninguna manera de que la aplicación acceda directamente a las claves privadas creadas. Parte de la creación de los pares de claves es también la información de atestación resultante. (Consulta el capítulo siguiente para más información sobre la atestación).
+El método [**RequestCreateAsync**](https://docs.microsoft.com/previous-versions/windows/dn973048(v=win.10)) es la parte que crea las claves pública y privada. Si el dispositivo tiene el chip TPM correcto, las API solicitarán el chip TPM para crear las claves pública y privada, y almacenar el resultado; si no hay ningún chip TPM disponible, el sistema operativo creará el par de claves en el código. No hay ninguna manera de que la aplicación acceda directamente a las claves privadas creadas. Parte de la creación de los pares de claves es también la información de atestación resultante. (Consulta el capítulo siguiente para más información sobre la atestación).
 
 Después de crear la información de par de claves y atestación en el dispositivo del usuario, la clave pública, la información de atestación opcional y el identificador único (como la dirección de correo) deben enviarse al servicio de registro de back-end y almacenarse en el back-end.
 
@@ -208,8 +208,8 @@ Cuando recibe la clave RSA generada, la declaración de atestación y el certifi
 - El certificado AIK tiene validez temporal.
 - Todos los certificados de la CA emisora de la cadena tienen validez temporal y no se han revocado.
 - La declaración de atestación está formada correctamente.
-- La firma del blob [**KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) usa una clave pública de AIK.
-- La clave pública incluida en el blob [**KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) coincide con la clave RSA pública que el cliente envió junto con la declaración de atestación.
+- La firma del blob [**KeyAttestation**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates.KeyAttestationHelper) usa una clave pública de AIK.
+- La clave pública incluida en el blob [**KeyAttestation**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates.KeyAttestationHelper) coincide con la clave RSA pública que el cliente envió junto con la declaración de atestación.
 
 La aplicación podría asignar al usuario un nivel de autorización diferente, en función de estas condiciones. Por ejemplo, si se produce un error en una de estas comprobaciones, podría no inscribir al usuario o podría limitar lo que el usuario puede hacer.
 
@@ -219,7 +219,7 @@ Una vez que el usuario se inscribe en el sistema, puede usar la aplicación. Seg
 
 ### <a name="33-force-the-user-to-sign-in-again"></a>3.3 Exigir al usuario que vuelva a iniciar sesión
 
-En algunos escenarios, quizás prefieras que el usuario demuestre que es la persona que ha iniciado sesión antes de acceder a la aplicación o a veces antes de hacer una acción determinada dentro de la aplicación. Por ejemplo, antes de que una aplicación de banca envíe el comando de transferencia de dinero al servidor, quieres asegurarte de que es el usuario, en lugar de alguien encontró un dispositivo conectado, que intenta realizar una transacción. Puedes exigir al usuario que inicie sesión nuevamente en la aplicación mediante la clase [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134). La siguiente línea de código obligará al usuario a escribir sus credenciales.
+En algunos escenarios, quizás prefieras que el usuario demuestre que es la persona que ha iniciado sesión antes de acceder a la aplicación o a veces antes de hacer una acción determinada dentro de la aplicación. Por ejemplo, antes de que una aplicación de banca envíe el comando de transferencia de dinero al servidor, quieres asegurarte de que es el usuario, en lugar de alguien encontró un dispositivo conectado, que intenta realizar una transacción. Puedes exigir al usuario que inicie sesión nuevamente en la aplicación mediante la clase [**UserConsentVerifier**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier). La siguiente línea de código obligará al usuario a escribir sus credenciales.
 
 La siguiente línea de código obligará al usuario a escribir sus credenciales.
 
@@ -267,7 +267,7 @@ if (openKeyResult.Status == KeyCredentialStatus.Success)
 }
 ```
 
-La primera línea, [**KeyCredentialManager.OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn973046), pedirá al sistema operativo que abra el identificador de clave. Si se lleva a cabo correctamente, puedes firmar el mensaje de desafío con el método [**KeyCredential.RequestSignAsync**](https://msdn.microsoft.com/library/windows/apps/dn973058), que hará que el sistema operativo solicite el PIN o las credenciales biométricas del usuario a través de Windows Hello. El desarrollador no tendrá en ningún momento acceso a la clave privada del usuario. Todo se protege a través de las API.
+La primera línea, [**KeyCredentialManager.OpenAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredentialmanager.openasync), pedirá al sistema operativo que abra el identificador de clave. Si se lleva a cabo correctamente, puedes firmar el mensaje de desafío con el método [**KeyCredential.RequestSignAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredential.requestsignasync), que hará que el sistema operativo solicite el PIN o las credenciales biométricas del usuario a través de Windows Hello. El desarrollador no tendrá en ningún momento acceso a la clave privada del usuario. Todo se protege a través de las API.
 
 Las API solicitan al sistema operativo que firme el desafío con la clave privada. El sistema luego pide al usuario un código PIN o un inicio de sesión biométrico configurado. Cuando se especifique la información correcta, el sistema puede pedir al chip TPM que realice las funciones criptográficas y firme el desafío. (O bien, puede usar la solución de software de reserva, si no hay ningún TPM disponible). El cliente debe enviar el desafío firmado de vuelta al servidor.
 
@@ -387,9 +387,9 @@ La interfaz de usuario podría tener el siguiente aspecto:
 
 ![Interfaz de usuario de Windows Hello](images/passport-ui.png)
 
-Si el usuario opta por empezar a usar Windows Hello, debes crear el objeto [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029), tal como se describe más arriba. El servidor de registro en el backend agrega la clave pública y la declaración de atestación opcional a la base de datos. Dado que el usuario ya se autenticó con el nombre de usuario y la contraseña, el servidor puede vincular las nuevas credenciales a la información de usuario actual en la base de datos. El modelo de base de datos podría ser el mismo que en el que se usa en el ejemplo descrito anteriormente.
+Si el usuario opta por empezar a usar Windows Hello, debes crear el objeto [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential), tal como se describe más arriba. El servidor de registro en el backend agrega la clave pública y la declaración de atestación opcional a la base de datos. Dado que el usuario ya se autenticó con el nombre de usuario y la contraseña, el servidor puede vincular las nuevas credenciales a la información de usuario actual en la base de datos. El modelo de base de datos podría ser el mismo que en el que se usa en el ejemplo descrito anteriormente.
 
-Si la aplicación pudo crear el objeto [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029) de los usuarios, almacena el identificador de usuario en el almacenamiento aislado para que el usuario pueda seleccionar esta cuenta en la lista cuando la aplicación se inicie de nuevo. A partir de este punto, el flujo sigue exactamente los ejemplos que se describen en los capítulos anteriores.
+Si la aplicación pudo crear el objeto [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential) de los usuarios, almacena el identificador de usuario en el almacenamiento aislado para que el usuario pueda seleccionar esta cuenta en la lista cuando la aplicación se inicie de nuevo. A partir de este punto, el flujo sigue exactamente los ejemplos que se describen en los capítulos anteriores.
 
 El paso final de la migración a un escenario de Windows Hello completo consiste en deshabilitar la opción de nombre de inicio de sesión y contraseña en la aplicación, y eliminar las contraseñas con hash almacenadas de la base de datos.
 
@@ -408,7 +408,7 @@ Las opciones de implementación flexibles permiten que Windows Hello reemplace e
 ### <a name="61-articles-and-sample-code"></a>6.1 Artículos y código de ejemplo
 
 - [Introducción a Windows Hello](https://windows.microsoft.com/windows-10/getstarted-what-is-hello)
-- [Detalles de implementación de Windows Hello](https://msdn.microsoft.com/library/mt589441)
+- [Detalles de implementación de Windows Hello](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-passport-guide)
 - [Ejemplo de Windows Hello código en GitHub](https://go.microsoft.com/fwlink/?LinkID=717812)
 
 ### <a name="62-terminology"></a>6.2 Terminología

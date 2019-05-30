@@ -8,12 +8,12 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, uwp, notificaciones del sistema, notificaciones del sistema interactivas, notificaciones del sistema adaptables, contenido de notificaciones del sistema, carga de notificaciones del sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: a75e39dfcddbef5bb5c37c2a253a46a7b9cc9577
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 75e5ea7e83a1a274b90b14588f7d809a4aa91269
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596830"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366877"
 ---
 # <a name="toast-content"></a>Contenido de notificaciones del sistema
 
@@ -22,7 +22,7 @@ Las notificaciones del sistema interactivas y adaptables permiten crear notifica
 > **API importantes**: [paquete NuGet de notificaciones del kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 > [!NOTE]
-> Para ver las plantillas de heredada de Windows 8.1 y Windows Phone 8.1, consulte el [catálogo de plantillas del sistema heredado](https://msdn.microsoft.com/library/windows/apps/hh761494).
+> Para ver las plantillas de heredada de Windows 8.1 y Windows Phone 8.1, consulte el [catálogo de plantillas del sistema heredado](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10)).
 
 
 ## <a name="getting-started"></a>Introducción
@@ -42,8 +42,8 @@ Para obtener información sobre cómo enviar una notificación, consulta [Enviar
 Las notificaciones del sistema son una combinación de algunas propiedades de datos como etiqueta o grupo (que te permiten identificar la notificación) y el *contenido del sistema*.
 
 Los componentes principales del contenido de notificación del sistema son...
-* **iniciar**: Esto define qué argumentos se pasarán a la aplicación cuando el usuario hace clic en la notificación del sistema, permitiéndole al vínculo profundo en el contenido correcto que estaba mostrando el toast. Para obtener más información, consulta [Enviar notificación del sistema local](send-local-toast.md).
-* **Visual**: La parte visual de la notificación del sistema, incluidos el tipo genérico de enlace contiene texto e imágenes.
+* **launch**: Esto define qué argumentos se pasarán a la aplicación cuando el usuario hace clic en la notificación del sistema, permitiéndole al vínculo profundo en el contenido correcto que estaba mostrando el toast. Para obtener más información, consulta [Enviar notificación del sistema local](send-local-toast.md).
+* **visual**: La parte visual de la notificación del sistema, incluidos el tipo genérico de enlace contiene texto e imágenes.
 * **acciones**: La parte interactiva de la notificación del sistema, incluidas entradas y acciones.
 * **audio**: Los controles en el audio se reproduce cuando el toast se muestra al usuario.
 
@@ -847,7 +847,7 @@ Para crear alarmas, avisos y notificaciones de llamadas entrantes, simplemente u
 > [!IMPORTANT]
 > Cuando uses Recordatorio o alarma, debes proporcionar al menos un botón en la notificación del sistema. De lo contrario, la notificación del sistema se tratará como una notificación del sistema normal.
 
-* **Recordatorio**: La notificación permanecerá en la pantalla hasta que el usuario lo descarte o realiza una acción. En Windows Mobile, la notificación del sistema también aparecerá previamente expandida. Se reproducirá un sonido de aviso.
+* **Reminder**: La notificación permanecerá en la pantalla hasta que el usuario lo descarte o realiza una acción. En Windows Mobile, la notificación del sistema también aparecerá previamente expandida. Se reproducirá un sonido de aviso.
 * **Alarma**: Además de los comportamientos de recordatorio, alarmas además bucle audio con un sonido de alarma de forma predeterminada.
 * **IncomingCall**: Las notificaciones de llamadas entrantes se muestran en pantalla completa en los dispositivos Windows Mobile. De lo contrario, tienen los mismos comportamientos que las alarmas excepto en que usan audio de tono y sus botones tienen un estilo diferente.
 

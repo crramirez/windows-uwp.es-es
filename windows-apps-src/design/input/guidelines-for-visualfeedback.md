@@ -8,18 +8,18 @@ keywords: información visual,información de foco,información táctil,informac
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b043ec71eb7d5883a1b22c4f0d8f43824034d454
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1f716b930a4d8b96a55a5741e5a520be624526fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640790"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363540"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Directrices para información visual
 
 Usa la información visual para mostrar a los usuarios cuándo se detectan, se interpretan y se controlan sus interacciones. La información visual puede ayudar a los usuarios al promover la interacción. Indica si una interacción se ha realizado correctamente, lo que mejora la sensación de control del usuario. También transmite los estados del sistema y reduce los errores.
 
-> **API importantes**:  [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
+> **API importantes**:  [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
 
 ## <a name="recommendations"></a>Recomendaciones
 
@@ -27,7 +27,7 @@ Usa la información visual para mostrar a los usuarios cuándo se detectan, se i
     - Consulta [Estilos XAML](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles) para obtener más información sobre cómo personalizar las propiedades de un control, incluidas las propiedades de estado visual.
     - Consulta la [Clase UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) para obtener más información sobre cómo realizar cambios en una plantilla de control
     - Piensa en crear tu propio control con plantilla personalizado si necesitas realizar cambios importantes en una plantilla de control. Para ver un ejemplo de un control con plantilla personalizado, consulta el [ejemplo de control de edición personalizado](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
-- No uses visualizaciones táctiles en situaciones en que podrían interferir con el uso de la aplicación. Para más información, consulta [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
+- No uses visualizaciones táctiles en situaciones en que podrían interferir con el uso de la aplicación. Para más información, consulta [**ShowGestureFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback).
 - No muestres información a menos que sea absolutamente necesario. No muestres información visual a menos que esta sirva para añadir valor que no se encuentra disponible en ningún otro sitio. De este modo, mantendrás la interfaz de usuario ordenada y organizada.
 - Intenta no personalizar drásticamente los comportamientos de la información visual de los gestos integrados de Windows, ya que esto podría generar una experiencia del usuario confusa e incoherente.
 
@@ -44,7 +44,7 @@ Al usar los controles de plataforma XAML disponibles, te aseguras de que la apli
 
 Los comentarios visuales dependen por lo general del dispositivo de entrada (táctil, panel táctil, mouse, lápiz o pluma, teclado, etc.). Por ejemplo, la información integrada para un mouse por lo general implica mover y cambiar el cursor, mientras que la entrada táctil o de lápiz requiere visualizaciones de contacto, y la navegación y entrada de teclado usa rectángulos de foco y resaltado.
 
-Usa [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969) para establecer el comportamiento de la información para los gestos de la plataforma.
+Usa [**ShowGestureFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback) para establecer el comportamiento de la información para los gestos de la plataforma.
 
 Si personalizas la interfaz de usuario de información, asegúrate de proporcionar información que sea adecuada y admita todos los modos de entrada.
 
@@ -73,7 +73,7 @@ Para cambiar el grosor del tipo de borde (principal o secundario) usa **FocusVis
 ```
 ![Grosores de los márgenes visuales de foco de alta visibilidad](images/FocusMargin.png)
 
-El margen es una propiedad de tipo [**Grosor**](https://msdn.microsoft.com/library/system.windows.thickness)y, por lo tanto, el margen se puede personalizar para que aparezca únicamente en determinadas partes del control. Consulta a continuación: ![Alta visibilidad foco margen visual grosor solo abajo](images/FocusThicknessSide.png)
+El margen es una propiedad de tipo [**Grosor**](https://docs.microsoft.com/dotnet/api/system.windows.thickness?redirectedfrom=MSDN)y, por lo tanto, el margen se puede personalizar para que aparezca únicamente en determinadas partes del control. Consulta a continuación: ![Alta visibilidad foco margen visual grosor solo abajo](images/FocusThicknessSide.png)
 
 El margen es el espacio entre los límites de los elementos visuales de control y el inicio del *borde secundario* de los elementos visuales de foco. El margen predeterminado está **1px** por encima de los límites del control. Puedes editar este margen según el control, cambiando la propiedad **FocusVisualMargin**:
 ```XAML
@@ -112,7 +112,7 @@ Para cambiar los colores según el control, modifica las propiedades de los elem
 * [Directrices sobre movimiento panorámico](guidelines-for-panning.md)
 
 **Para desarrolladores**
-* [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/mt185599)
+* [Interacciones del usuario personalizadas](https://developer.microsoft.com/windows/design/inputs-devices)
 
 **Ejemplos**
 * [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)

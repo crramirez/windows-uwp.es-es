@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, noticias, lo que de, new
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b84736e41e039d350a849c55fead008cbab5fdea
-ms.sourcegitcommit: bc64db47b6ff326f15cac15fc2cfd709fa7f877b
+ms.openlocfilehash: a84e118d988d8bf6a7d26eba7d5dd009c7ad44f3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626211"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360141"
 ---
 # <a name="whats-new-in-cwinrt"></a>Novedades de C / c++ / WinRT
 
@@ -302,7 +302,7 @@ Si previamente ha dejado a C++ / c++ / WinRT para incluir los encabezados de Win
 
 Actualmente, las únicas excepciones a aislamiento de archivo de encabezado de Windows SDK son intrínsecos y valores numéricos. No hay ningún problema conocido con estas últimas dependencias restantes.
 
-En el proyecto, puede habilitar volver a la interoperabilidad con los encabezados del SDK de Windows si necesita. Por ejemplo, podría implementar una interfaz COM (arraigada en [ **IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)). Por ejemplo, incluye `unknwn.h` antes de incluir cualquier C++ / c++ / WinRT encabezados. Si lo hace C / c++ / WinRT biblioteca base para habilitar varios enlaces admitir las interfaces COM clásicas. Para obtener un ejemplo de código, vea [componentes COM de autor con C++ / c++ / WinRT](author-coclasses.md). De forma similar, incluir explícitamente los encabezados de Windows SDK que declaran tipos o funciones que desea llamar.
+En el proyecto, puede habilitar volver a la interoperabilidad con los encabezados del SDK de Windows si necesita. Por ejemplo, podría implementar una interfaz COM (arraigada en [ **IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)). Por ejemplo, incluye `unknwn.h` antes de incluir cualquier C++ / c++ / WinRT encabezados. Si lo hace C / c++ / WinRT biblioteca base para habilitar varios enlaces admitir las interfaces COM clásicas. Para obtener un ejemplo de código, vea [componentes COM de autor con C++ / c++ / WinRT](author-coclasses.md). De forma similar, incluir explícitamente los encabezados de Windows SDK que declaran tipos o funciones que desea llamar.
 
 ### <a name="how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>Cómo redirigir C++ / c++ / WinRT proyecto a una versión posterior del SDK de Windows
 
@@ -315,7 +315,7 @@ Sin embargo, hay otras dos maneras de redirigir el proyecto en Visual Studio.
 
 Si aparecen errores del vinculador o compilador después de usar cualquiera de estos dos métodos, puede probar la solución de limpieza (**compilar** > **Limpiar solución** o elimine manualmente todos archivos y carpetas temporales) antes de intentar volver a crearla.
 
-Si genera el compilador de C++ "*error C2039: 'IUnknown': no es un miembro de '\`espacio de nombres global''*", a continuación, agregue `#include <unknwn.h>` a la parte superior de su `pch.h` archivo (antes de incluir cualquier C++ / c++ / WinRT encabezados).
+Si genera el compilador de C++ "*error C2039: 'IUnknown': no es un miembro de '\`espacio de nombres global''* ", a continuación, agregue `#include <unknwn.h>` a la parte superior de su `pch.h` archivo (antes de incluir cualquier C++ / c++ / WinRT encabezados).
 
 También es posible que deba agregar `#include <hstring.h>` después de eso.
 

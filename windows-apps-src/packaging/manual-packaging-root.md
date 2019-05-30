@@ -6,21 +6,21 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, packaging, empaquetado
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c429c3c88b0ae23cb518a59cab2e5a3c4f380a2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d90307560c315741751a5ab58ccdf0eaf35d97fc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658200"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372791"
 ---
 # <a name="manual-app-packaging"></a>Empaquetado de aplicación manual
 
 Si quieres crear y firmar un paquete de aplicación, pero no usaste Visual Studio para desarrollar tu aplicación, tendrás que usar las herramientas de empaquetado de aplicación manual.
 
 > [!IMPORTANT] 
-> Si usaste Visual Studio para desarrollar tu aplicación, es recomendable usar el Asistente de Visual Studio para crear y firmar el paquete de la aplicación. Para más información, consulta [Empaquetado de aplicaciones para UWP con Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
+> Si usaste Visual Studio para desarrollar tu aplicación, es recomendable usar el Asistente de Visual Studio para crear y firmar el paquete de la aplicación. Para más información, consulta [Empaquetado de aplicaciones para UWP con Visual Studio](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-## <a name="purpose"></a>Propósito
+## <a name="purpose"></a>Finalidad
 
 En esta sección se incluyen artículos o vínculos a artículos sobre el empaquetado manual de aplicaciones para la Plataforma universal de Windows (UWP).
 

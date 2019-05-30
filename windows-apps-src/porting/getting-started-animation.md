@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc5e107fd343798698f5957c26d87a0d3ffe6625
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b30f2e9d08fd36686045523c54180829570cbd2d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608630"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372869"
 ---
 # <a name="getting-started-animation"></a>Introducción: Animación
 
@@ -124,9 +124,9 @@ Si abres el archivo MainPage.xaml en la vista **XAML**, verás el código XAML q
 ...
 ```
 
-Puedes modificar este XAML manualmente o regresar a Blend y seguir trabajando desde allí. Con Blend es más divertido crear interfaces de usuario atractivas, y la capacidad para animarlas mediante una herramienta gráfica puede acelerar considerablemente el tiempo de desarrollo. Para más información sobre las animaciones, consulta [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350).
+Puedes modificar este XAML manualmente o regresar a Blend y seguir trabajando desde allí. Con Blend es más divertido crear interfaces de usuario atractivas, y la capacidad para animarlas mediante una herramienta gráfica puede acelerar considerablemente el tiempo de desarrollo. Para más información sobre las animaciones, consulta [Información general sobre animaciones](https://docs.microsoft.com/windows/uwp/graphics/animations-overview).
 
-**Tenga en cuenta**  para obtener información acerca de las animaciones para <span class="legacy-term">aplicaciones para UWP con JavaScript y HTML</span>, consulte [animar la interfaz de usuario (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+**Tenga en cuenta**  para obtener información acerca de las animaciones para <span class="legacy-term">aplicaciones para UWP con JavaScript y HTML</span>, consulte [animar la interfaz de usuario (HTML)](https://docs.microsoft.com/previous-versions/windows/apps/hh465165(v=win.10)).
 
 ### <a name="next-step"></a>Paso siguiente
 

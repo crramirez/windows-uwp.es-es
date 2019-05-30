@@ -6,12 +6,12 @@ ms.date: 04/04/2018
 ms.topic: article
 keywords: windows 10, uwp, registro, cuenta de desarrollador
 ms.localizationpriority: medium
-ms.openlocfilehash: 75dc0bfdc1ae70ebb59743a54cc2b4ae0522f683
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1eac2ad42b277c8cea5d571e08018d62ba338011
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596050"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370638"
 ---
 # <a name="create-a-developer-account"></a>Crea una cuenta de desarrollador
 
@@ -25,5 +25,5 @@ Ofrecemos [cuentas individuales y de empresa en sitios de todo el mundo](../publ
 
 ## <a name="have-a-name-for-your-app"></a>¿Tienes un nombre para tu aplicación?
 
-Apenas tengas tu cuenta de desarrollador, puedes [crear tu aplicación reservando un nombre](https://msdn.microsoft.com/library/windows/apps/JJ657967).
+Apenas tengas tu cuenta de desarrollador, puedes [crear tu aplicación reservando un nombre](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name).
 

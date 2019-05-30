@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx, gráficos, graphics
 ms.localizationpriority: medium
-ms.openlocfilehash: fc93111d48f71a6ca8acad8191a2afb535fad2f0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 68d2c6ec250286b9820ff218f9b35637f49f3b97
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660940"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368750"
 ---
 # <a name="draw-to-the-screen"></a>Dibujar en la pantalla
 
@@ -20,24 +20,24 @@ ms.locfileid: "57660940"
 
 **API importantes**
 
--   [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)
--   [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582)
--   [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)
+-   [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d)
+-   [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview)
+-   [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)
 
 Por fin hemos portado el código que dibuja un cubo giratorio en la pantalla.
 
 En OpenGL ES 2.0, el contexto de dibujo se define como un tipo EGLContext que contiene los parámetros de superficie y ventana, así como los recursos necesarios para dibujar los destinos de representación que se usarán para componer la imagen final. Usas este contexto para configurar los recursos gráficos, de modo tal que los resultados de la canalización de sombreador se muestren correctamente en pantalla. Uno de los recursos principales es el "búfer de reserva" (u "objeto de búfer de trama") que contiene los destinos de representación compuestos y finales, listos para la presentación en pantalla.
 
-Con Direct3D, el proceso de configurar los recursos de gráficos para dibujar en la pantalla es más didáctico y requiere pocas API adicionales. (Una plantilla de Direct3D de Microsoft Visual Studio puede simplificar considerablemente este proceso, aunque!) Para obtener un contexto (denominado un contexto de dispositivo Direct3D), primero debe obtener un [ **ID3D11Device1** ](https://msdn.microsoft.com/library/windows/desktop/hh404575) de objetos y usarlo para crear y configurar un [ **ID3D11DeviceContext1**  ](https://msdn.microsoft.com/library/windows/desktop/hh404598) objeto. Estos dos objetos se usan en conjunto para configurar los recursos específicos que necesitas para dibujar en pantalla.
+Con Direct3D, el proceso de configurar los recursos de gráficos para dibujar en la pantalla es más didáctico y requiere pocas API adicionales. (Una plantilla de Direct3D de Microsoft Visual Studio puede simplificar considerablemente este proceso, aunque!) Para obtener un contexto (denominado un contexto de dispositivo Direct3D), primero debe obtener un [ **ID3D11Device1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) de objetos y usarlo para crear y configurar un [ **ID3D11DeviceContext1**  ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) objeto. Estos dos objetos se usan en conjunto para configurar los recursos específicos que necesitas para dibujar en pantalla.
 
 En menos palabras, las API de DXGI contienen sobre todo varias API para administrar recursos que directamente pertenecen al adaptador de gráficos y Direct3D contiene las API para una interfaz entre la GPU y tu programa principal que se ejecuta en la CPU. 
 
 Para que podamos hacer comparaciones en nuestra muestra, estos son los tipos relevantes de cada API:
 
--   [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575): proporciona una representación virtual de dispositivo de gráficos y sus recursos.
--   [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598): proporciona la interfaz para configurar los búferes y emitir comandos de representación.
--   [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631): la cadena de intercambio es análoga al búfer de reserva en OpenGL ES 2.0. Es la región de la memoria en el adaptador de gráficos que contiene las imágenes finales de representación para mostrar. Se denomina "cadena de intercambio" porque tiene varios búferes que pueden escribirse e "intercambiarse" para presentar la representación más reciente en pantalla.
--   [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582): contiene el búfer de mapa de bits 2D que dibuja el contexto de dispositivo Direct3D en y que presenta la cadena de intercambio. Al igual que con OpenGL ES 2.0, puedes tener varios destinos de representación. Algunos de ellos no se enlazan a la cadena de intercambio, pero se usan para técnicas de sombreado de varios pases.
+-   [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1): proporciona una representación virtual de dispositivo de gráficos y sus recursos.
+-   [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1): proporciona la interfaz para configurar los búferes y emitir comandos de representación.
+-   [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1): la cadena de intercambio es análoga al búfer de reserva en OpenGL ES 2.0. Es la región de la memoria en el adaptador de gráficos que contiene las imágenes finales de representación para mostrar. Se denomina "cadena de intercambio" porque tiene varios búferes que pueden escribirse e "intercambiarse" para presentar la representación más reciente en pantalla.
+-   [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview): contiene el búfer de mapa de bits 2D que dibuja el contexto de dispositivo Direct3D en y que presenta la cadena de intercambio. Al igual que con OpenGL ES 2.0, puedes tener varios destinos de representación. Algunos de ellos no se enlazan a la cadena de intercambio, pero se usan para técnicas de sombreado de varios pases.
 
 En la plantilla, el objeto de representador contiene estos campos:
 
@@ -63,7 +63,7 @@ m_d3dDevice->CreateRenderTargetView(
   &m_d3dRenderTargetViewWin);
 ```
 
-El tiempo de ejecución de Direct3D crea implícitamente una interfaz [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343) para [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635); esta representa la textura como un "búfer de reserva", para que así la cadena de intercambio pueda mostrarla.
+El tiempo de ejecución de Direct3D crea implícitamente una interfaz [**IDXGISurface1**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1) para [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d); esta representa la textura como un "búfer de reserva", para que así la cadena de intercambio pueda mostrarla.
 
 La inicialización y la configuración del dispositivo Direct3D, el contexto del dispositivo y los destinos de representación, pueden enlazarse en los métodos personalizados **CreateDeviceResources** y **CreateWindowSizeDependentResources** de la plantilla Direct3D.
 
@@ -123,15 +123,15 @@ void Render(GraphicsContext *drawContext)
 
 En Direct3D 11 el proceso es muy similar. (Suponemos que estás usando la ventanilla y la configuración del destino de representación de la plantilla Direct3D).
 
--   Actualiza los búferes de constantes (la matriz de proyección de la vista de modelo, en este caso) con llamadas a [**ID3D11DeviceContext1::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/hh446790).
--   Establece el búfer de vértices con [**ID3D11DeviceContext1::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456).
--   Establece el búfer de índices con [**ID3D11DeviceContext1::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453).
--   Establece la topología de triángulos específica (una lista de triángulos) con [**ID3D11DeviceContext1::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455).
--   Establece el diseño de entrada del búfer de vértices con [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454).
--   Enlaza el sombreador de vértices con [**ID3D11DeviceContext1::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493).
--   Enlaza el sombreador de fragmentos con [**ID3D11DeviceContext1::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472).
--   Envía los vértices indexados mediante sombreadores y crea los resultados de color en el búfer del destino de representación con [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409).
--   Muestra el búfer del destino de representación con [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797).
+-   Actualiza los búferes de constantes (la matriz de proyección de la vista de modelo, en este caso) con llamadas a [**ID3D11DeviceContext1::UpdateSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-updatesubresource1).
+-   Establece el búfer de vértices con [**ID3D11DeviceContext1::IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers).
+-   Establece el búfer de índices con [**ID3D11DeviceContext1::IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetindexbuffer).
+-   Establece la topología de triángulos específica (una lista de triángulos) con [**ID3D11DeviceContext1::IASetPrimitiveTopology**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology).
+-   Establece el diseño de entrada del búfer de vértices con [**ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout).
+-   Enlaza el sombreador de vértices con [**ID3D11DeviceContext1::VSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetshader).
+-   Enlaza el sombreador de fragmentos con [**ID3D11DeviceContext1::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader).
+-   Envía los vértices indexados mediante sombreadores y crea los resultados de color en el búfer del destino de representación con [**ID3D11DeviceContext1::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed).
+-   Muestra el búfer del destino de representación con [**IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1).
 
 Direct3D 11: Procesamiento de un marco para mostrar
 
@@ -196,14 +196,14 @@ void RenderObject::Render()
 
 ```
 
-Una vez realizada la llamada a [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797), el marco aparece en la pantalla configurada.
+Una vez realizada la llamada a [**IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1), el marco aparece en la pantalla configurada.
 
 ## <a name="previous-step"></a>Paso anterior
 
 
 [Migrar GLSL](port-the-glsl.md)
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Este ejemplo pasa por alto gran parte de la complejidad que implica configurar los recursos del dispositivo, en especial aplicaciones DirectX para la Plataforma universal de Windows (UWP). Sugerimos que revises el código completo de la plantilla, sobre todo las partes encargadas de la administración y configuración de recursos de dispositivo y ventana. Las aplicaciones para UWP tienen que admitir tanto eventos de rotación como eventos de suspensión y reanudación. Asimismo, la plantilla muestra los procedimientos recomendados para controlar la pérdida de una interfaz o un cambio en los parámetros de la pantalla.
 

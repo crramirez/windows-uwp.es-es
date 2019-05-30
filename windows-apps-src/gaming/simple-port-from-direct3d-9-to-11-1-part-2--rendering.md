@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, marco de representación, convertir, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: aba723a5ee2443664d6d640adc124b991ff0da7e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6629ba035a7fb0085e28f3fa033e58a1c1105ccf
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608830"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368027"
 ---
 # <a name="convert-the-rendering-framework"></a>Convertir el marco de representación
 
@@ -93,7 +93,7 @@ technique RenderSceneSimple
 }
 ```
 
-En Direct3D 11 aún podemos usar nuestros sombreadores HLSL. Ponemos cada sombreador en su propio archivo HLSL para que Visual Studio los compile en distintos archivos. Luego los cargamos como recursos independientes de Direct3D. Se establece el destino de nivel a [Shader Model 4 Level 9\_1 (/ 4\_0\_nivel\_9\_1)](https://msdn.microsoft.com/library/windows/desktop/ff476876) porque estos sombreadores se escriben para GPU de DirectX 9.1.
+En Direct3D 11 aún podemos usar nuestros sombreadores HLSL. Ponemos cada sombreador en su propio archivo HLSL para que Visual Studio los compile en distintos archivos. Luego los cargamos como recursos independientes de Direct3D. Se establece el destino de nivel a [Shader Model 4 Level 9\_1 (/ 4\_0\_nivel\_9\_1)](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro) porque estos sombreadores se escriben para GPU de DirectX 9.1.
 
 Después de definir el diseño de entrada, nos aseguramos de que este represente la misma estructura de datos que usamos para almacenar datos de vértice en la memoria del sistema y en la memoria de GPU. De manera similar, la salida de un sombreador de vértices debe coincidir con la estructura que se usó como entrada en el sombreador de píxeles. Las reglas difieren de las de pasar datos de una función a otra en C++. Puedes omitir las variables no usadas al final de la estructura. No obstante, no se puede reorganizar el orden ni omitir contenido en el medio de la estructura de datos.
 
@@ -101,7 +101,7 @@ Después de definir el diseño de entrada, nos aseguramos de que este represente
 
  
 
-Es posible que los archivos HLSL usa la sintaxis antigua para semántica sombreador: por ejemplo, COLOR, en lugar de SV\_destino. En ese caso, tendrás que habilitar el modo de compatibilidad HLSL (opción del compilador /Gec) o actualizar la [semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647) del sombreador para la sintaxis actual. En este ejemplo, se actualizó el sombreador de vértices con la sintaxis actual.
+Es posible que los archivos HLSL usa la sintaxis antigua para semántica sombreador: por ejemplo, COLOR, en lugar de SV\_destino. En ese caso, tendrás que habilitar el modo de compatibilidad HLSL (opción del compilador /Gec) o actualizar la [semántica](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics) del sombreador para la sintaxis actual. En este ejemplo, se actualizó el sombreador de vértices con la sintaxis actual.
 
 Este es nuestro sombreador de vértices para la transformación de hardware, esta vez definido en su propio archivo.
 
@@ -185,7 +185,7 @@ PS_OUTPUT main(PS_INPUT In)
 ## <a name="compile-and-load-shaders"></a>Compilar y cargar sombreadores
 
 
-Los juegos de Direct3D 9 por lo general usaban la biblioteca de efectos como una forma conveniente de implementar canalizaciones programables. Los efectos pueden compilarse en tiempo de ejecución con el método [**función D3DXCreateEffectFromFile**](https://msdn.microsoft.com/library/windows/desktop/bb172768).
+Los juegos de Direct3D 9 por lo general usaban la biblioteca de efectos como una forma conveniente de implementar canalizaciones programables. Los efectos pueden compilarse en tiempo de ejecución con el método [**función D3DXCreateEffectFromFile**](https://docs.microsoft.com/windows/desktop/direct3d9/d3dxcreateeffectfromfile).
 
 Cargar un efecto en Direct3D 9
 
@@ -234,7 +234,7 @@ m_d3dDevice->CreateVertexShader(
     );
 ```
 
-Para incluir el código de bytes del sombreador en el paquete de la aplicación compilado, solo agrega el archivo HLSL al proyecto de Visual Studio. Visual Studio usará la [herramienta compiladora de efectos](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) para compilar archivos HLSL en objetos de sombreador compilado (archivos .CSO) e incluirlos en el paquete de la aplicación.
+Para incluir el código de bytes del sombreador en el paquete de la aplicación compilado, solo agrega el archivo HLSL al proyecto de Visual Studio. Visual Studio usará la [herramienta compiladora de efectos](https://docs.microsoft.com/windows/desktop/direct3dtools/fxc) (FXC) para compilar archivos HLSL en objetos de sombreador compilado (archivos .CSO) e incluirlos en el paquete de la aplicación.
 
 > **Tenga en cuenta**    Asegúrese de establecer el nivel de función de destino correcto para el compilador HLSL: haga clic en el archivo de origen HLSL en Visual Studio, seleccione Propiedades y cambiar el **Shader Model** en **Compilador HLSL -&gt; General**. Direct3D compara esta propiedad con las capacidades de hardware cuando la aplicación crea el recurso de sombreador de Direct3D.
 
@@ -242,11 +242,11 @@ Para incluir el código de bytes del sombreador en el paquete de la aplicación 
 
 ![Propiedades de sombreador HLSL](images/hlslshaderpropertiesmenu.png)![Tipo de sombreador HLSL](images/hlslshadertypeproperties.png)
 
-Este es un buen lugar para crear el diseño de entrada, que corresponde a la declaración de la transmisión de vértices en Direct3D 9. La estructura de datos de vértice debe coincidir con lo que el sombreador de vértices usa. En Direct3D 11 tenemos un mayor control del diseño de entrada; podemos definir el tamaño de la matriz y la longitud en bits de los vectores de punto flotante, y también podemos especificar la semántica para el sombreador de vértices. Creamos un [ **D3D11\_entrada\_elemento\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476180) estructurar y usarla para informar a Direct3D el aspecto que tendrá los datos de vértice. Esperamos que termine la carga del sombreador de vértices para definir el diseño de entrada, porque la API lo valida con el recurso de sombreador de vértices. Si el diseño de entrada no es compatible, entonces Direct3D inicia una excepción.
+Este es un buen lugar para crear el diseño de entrada, que corresponde a la declaración de la transmisión de vértices en Direct3D 9. La estructura de datos de vértice debe coincidir con lo que el sombreador de vértices usa. En Direct3D 11 tenemos un mayor control del diseño de entrada; podemos definir el tamaño de la matriz y la longitud en bits de los vectores de punto flotante, y también podemos especificar la semántica para el sombreador de vértices. Creamos un [ **D3D11\_entrada\_elemento\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_input_element_desc) estructurar y usarla para informar a Direct3D el aspecto que tendrá los datos de vértice. Esperamos que termine la carga del sombreador de vértices para definir el diseño de entrada, porque la API lo valida con el recurso de sombreador de vértices. Si el diseño de entrada no es compatible, entonces Direct3D inicia una excepción.
 
-Los datos de vértice se deben almacenar en tipos compatibles en la memoria del sistema. Pueden ayudar los tipos de datos DirectXMath; Por ejemplo, DXGI\_formato\_R32G32B32\_FLOAT corresponde a [ **XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475).
+Los datos de vértice se deben almacenar en tipos compatibles en la memoria del sistema. Pueden ayudar los tipos de datos DirectXMath; Por ejemplo, DXGI\_formato\_R32G32B32\_FLOAT corresponde a [ **XMFLOAT3**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat3).
 
-> **Tenga en cuenta**    búferes de constantes usar un diseño fijo de entrada que se alinea con números de punto flotante de cuatro a la vez. [**XMFLOAT4** ](https://msdn.microsoft.com/library/windows/desktop/ee419608) (y sus derivados) se recomiendan para los datos del búfer de constantes.
+> **Tenga en cuenta**    búferes de constantes usar un diseño fijo de entrada que se alinea con números de punto flotante de cuatro a la vez. [**XMFLOAT4** ](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4) (y sus derivados) se recomiendan para los datos del búfer de constantes.
 
  
 
@@ -483,7 +483,7 @@ Presentar un marco en pantalla con DirectX 11
 m_swapChain->Present(1, 0);
 ```
 
-La cadena de representación que acabamos de crear recibirá una llamada proveniente de un bucle de juego implementado en el método [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505). Esto se muestra en [parte 3: Bucle de juego y la ventanilla](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md).
+La cadena de representación que acabamos de crear recibirá una llamada proveniente de un bucle de juego implementado en el método [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run). Esto se muestra en [parte 3: Bucle de juego y la ventanilla](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md).
 
  
 

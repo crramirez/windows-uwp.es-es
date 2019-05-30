@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4de5ba146c8241598527dd268d604fcc9bb97d6d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a29fbe49e45b819ddf4ffc3172445996d3622360
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662360"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370625"
 ---
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>Reglas de punto flotante
 
@@ -82,13 +82,13 @@ Algunas de estas reglas son una opción única en que IEEE-754 ofrece posibilida
 -   x +/- 0.0f siempre da como resultado x (excepto el número no normalizado vaciado). Pero -0 + 0 = +0.
 -   Las operaciones fusionadas (por ejemplo, mad, dp3) producen resultados que son más precisos que la peor ordenación de serie posible de evaluación de la expansión sin fusionar de la operación. La definición de la posible peor ordenación, por motivos de tolerancia, no es una definición fija para una operación determinada combinada; depende de los valores concretos de las entradas. A los pasos individuales de la expansión sin fusionar se permite una tolerancia de 1 ULP (o bien, para las instrucciones en que Direct3D llama con una tolerancia un poco más laxa que 1 ULP, se permite la tolerancia más laxa).
 -   Las operaciones fusionadas cumplen las mismas reglas NaN que las operaciones no fusionadas.
--   sqrt y rcp tienen una tolerancia de 1 ULP. Las instrucciones de raíz cuadrada recíprocas y recíprocas del sombreador, [**rcp**](https://msdn.microsoft.com/library/windows/desktop/hh447205) y [**rsq**](https://msdn.microsoft.com/library/windows/desktop/hh447221), tienen sus propios requisitos de precisión estrictos independientes.
+-   sqrt y rcp tienen una tolerancia de 1 ULP. Las instrucciones de raíz cuadrada recíprocas y recíprocas del sombreador, [**rcp**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/hh447205(v=vs.85)) y [**rsq**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/rsq--sm4---asm-), tienen sus propios requisitos de precisión estrictos independientes.
 -   La multiplicación y la división operan en el nivel de precisión de punto flotante de 32 bits (precisión de 0.5 ULP en la multiplicación y de 1.0 ULP para el valor recíproco). Si x/y se implementa directamente, los resultados deben tener la misma precisión o superior que un método de dos pasos.
 
 ## <a name="span-iddoubleprec64bitspanspan-iddoubleprec64bitspan64-bit-double-precision-floating-point-rules"></a><span id="double_prec_64_bit"></span><span id="DOUBLE_PREC_64_BIT"></span>64 bits (precisión doble) reglas de punto flotantes
 
 
-Los controladores de hardware y de pantalla admiten opcionalmente el punto flotante de precisión doble. Para indicar la compatibilidad, cuando se llama a [ **ID3D11Device::CheckFeatureSupport** ](https://msdn.microsoft.com/library/windows/desktop/ff476497) con [ **D3D11\_característica\_dobles** ](https://msdn.microsoft.com/library/windows/desktop/ff476124#d3d11-feature-doubles), los conjuntos de controladores **DoublePrecisionFloatShaderOps** de [ **D3D11\_característica\_datos\_dobles** ](https://msdn.microsoft.com/library/windows/desktop/ff476127) en TRUE. A continuación, el controlador y el hardware deben admitir todas las instrucciones de punto flotante de precisión doble.
+Los controladores de hardware y de pantalla admiten opcionalmente el punto flotante de precisión doble. Para indicar la compatibilidad, cuando se llama a [ **ID3D11Device::CheckFeatureSupport** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) con [ **D3D11\_característica\_dobles** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ne-d3d11-d3d11_feature), los conjuntos de controladores **DoublePrecisionFloatShaderOps** de [ **D3D11\_característica\_datos\_dobles** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_doubles) en TRUE. A continuación, el controlador y el hardware deben admitir todas las instrucciones de punto flotante de precisión doble.
 
 Las instrucciones de precisión doble siguen requisitos de comportamiento de IEEE 754R.
 
@@ -148,9 +148,9 @@ Las reglas de punto flotante de 32 bits también incluyen números de punto flot
 
 [Apéndices](appendix.md)
 
-[Recursos](https://msdn.microsoft.com/library/windows/desktop/ff476894)
+[Recursos](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources)
 
-[Texturas](https://msdn.microsoft.com/library/windows/desktop/ff476902)
+[Texturas](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-textures)
 
  
 

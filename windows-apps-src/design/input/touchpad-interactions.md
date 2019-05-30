@@ -8,12 +8,12 @@ keywords: panel táctil,PTP,táctil,función táctil,puntero,entrada,interacció
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 895bf1ffe4fc79a65fdf452235ee9466e91b7215
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7a4c3c5e2c3041aef3e2223e3bb45c1c3d3d37ad
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593910"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365272"
 ---
 # <a name="touchpad-design-guidelines"></a>Directrices para el diseño de panel táctil
 
@@ -42,7 +42,7 @@ Los datos de entrada proporcionados por el panel táctil pueden ser:
 
 Un panel táctil combina la entrada multitáctil indirecta con la entrada precisa de un dispositivo señalador, como por ejemplo un mouse. Esta combinación hace que el panel táctil sea ideal tanto para la interfaz de usuario optimizada para entrada táctil como para los destinos típicamente más pequeños de las aplicaciones de productividad y el entorno de escritorio. Optimiza el diseño de tu aplicación para UWP para la entrada táctil y obtén compatibilidad con paneles táctiles de manera predeterminada.
 
-Los paneles táctiles integran diversas experiencias de interacción, por lo que te recomendamos usar el evento [**PointerEntered**](https://msdn.microsoft.com/library/windows/apps/br208968) para proporcionar comandos de interfaz de usuario de estilo mouse además de la compatibilidad integrada con la entrada táctil. Por ejemplo, usa botones Anterior y Siguiente para que los usuarios puedan pasar de una página de contenido a otra además de realizar movimientos panorámicos por el contenido.
+Los paneles táctiles integran diversas experiencias de interacción, por lo que te recomendamos usar el evento [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered) para proporcionar comandos de interfaz de usuario de estilo mouse además de la compatibilidad integrada con la entrada táctil. Por ejemplo, usa botones Anterior y Siguiente para que los usuarios puedan pasar de una página de contenido a otra además de realizar movimientos panorámicos por el contenido.
 
 Los gestos y las directrices que se explican en este tema te pueden ayudar a asegurarte de que tu aplicación admite la entrada del panel táctil sin problemas y con muy poco código.
 
@@ -119,7 +119,7 @@ Estos son algunos ejemplos de gestos optimizados para panel táctil para realiza
 ## <a name="hardware"></a>Hardware
 
 
-Consulta las funciones del dispositivo de mouse ([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)) para identificar cuáles son los aspectos de la interfaz de usuario de tu aplicación a los que el hardware del panel táctil puede acceder directamente. Te recomendamos que proporciones interfaces de usuario tanto para entrada táctil como para entrada del mouse.
+Consulta las funciones del dispositivo de mouse ([**MouseCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseCapabilities)) para identificar cuáles son los aspectos de la interfaz de usuario de tu aplicación a los que el hardware del panel táctil puede acceder directamente. Te recomendamos que proporciones interfaces de usuario tanto para entrada táctil como para entrada del mouse.
 
 Para obtener más información sobre cómo consultar las funciones de dispositivos, consulta [Identificar los dispositivos de entrada](identify-input-devices.md).
 
@@ -132,14 +132,14 @@ Para obtener más información sobre cómo consultar las funciones de dispositiv
 -   No uses rectángulos de foco con las interacciones del panel táctil. Resérvalos para las interacciones del teclado.
 -   Muestra información visual simultáneamente para todos los elementos que representan el mismo destino de entrada.
 
-Para obtener instrucciones más generales sobre la información visual, consulta el tema sobre las [directrices para información visual](https://msdn.microsoft.com/library/windows/apps/hh465342).
+Para obtener instrucciones más generales sobre la información visual, consulta el tema sobre las [directrices para información visual](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-visualfeedback).
 
 ## <a name="cursors"></a>Cursores
 
 
 Hay disponible un conjunto de cursores estándar para un puntero del panel táctil. Estos se usan para indicar la acción principal de un elemento.
 
-Cada cursor estándar tiene asociada una imagen predeterminada correspondiente. El usuario o una aplicación pueden reemplazar la imagen predeterminada asociada con cualquier cursor estándar en cualquier momento. Las aplicaciones para UWP especifican una imagen de cursor mediante la función [**PointerCursor**](https://msdn.microsoft.com/library/windows/apps/br208273).
+Cada cursor estándar tiene asociada una imagen predeterminada correspondiente. El usuario o una aplicación pueden reemplazar la imagen predeterminada asociada con cualquier cursor estándar en cualquier momento. Las aplicaciones para UWP especifican una imagen de cursor mediante la función [**PointerCursor**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor).
 
 Si necesitas personalizar el cursor del mouse:
 

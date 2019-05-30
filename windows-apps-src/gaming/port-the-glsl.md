@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, glsl, port, portar
 ms.localizationpriority: medium
-ms.openlocfilehash: 809440f9e77af19c01f4a050eee3b6f8d1c709b7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 210f98476a06b88e7d3d543006a6d4ec886cfd45
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621380"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368253"
 ---
 # <a name="port-the-glsl"></a>Migrar GLSL
 
@@ -20,14 +20,14 @@ ms.locfileid: "57621380"
 
 **API importantes**
 
--   [Semántica HLSL](https://msdn.microsoft.com/library/windows/desktop/bb205574)
--   [Constantes de sombreador HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509581)
+-   [Semántica HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps)
+-   [Constantes de sombreador HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants)
 
 Una vez que traslades el código que crea y configura los búferes y objetos de sombreador, tienes que portar el código a esos sombreadores: del lenguaje GL Shader Language (GLSL) de OpenGL ES 2.0 al lenguaje High-level Shader Language (HLSL) de Direct3D 11.
 
 En OpenGL ES 2.0, los sombreadores de devuelven los datos después de la ejecución mediante las funciones intrínsecas como **gl\_posición**, **gl\_FragColor**, o **gl\_FragData \[n\]**  (donde n es el índice para un destino de representación específicos). En Direct3D, no hay elementos intrínsecos específicos y los sombreadores devuelven datos como el tipo devuelto de sus respectivas funciones main().
 
-Los datos que quieres interpolar entre las fases de sombreador, como la posición de vértice o la normal, se controlan mediante la declaración **varying**. Sin embargo, Direct3D no tiene esta declaración. Cualquier dato que quieras pasar entre las fases de sombreador debe marcarse con una [semántica de HLSL](https://msdn.microsoft.com/library/windows/desktop/bb205574). La semántica que se elige indica el propósito de los datos. Por ejemplo, declararías datos de vértice que quieres interpolados en el sombreador de fragmentos, de esta manera:
+Los datos que quieres interpolar entre las fases de sombreador, como la posición de vértice o la normal, se controlan mediante la declaración **varying**. Sin embargo, Direct3D no tiene esta declaración. Cualquier dato que quieras pasar entre las fases de sombreador debe marcarse con una [semántica de HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps). La semántica que se elige indica el propósito de los datos. Por ejemplo, declararías datos de vértice que quieres interpolados en el sombreador de fragmentos, de esta manera:
 
 `float4 vertPos : POSITION;`
 
@@ -54,7 +54,7 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 };
 ```
 
-En este ejemplo, el búfer de constantes usa el registro b0 para mantener el búfer empaquetado. Todos los registros se conocen en el formulario b\#. Para obtener más información sobre la implementación de búferes de constantes, registros y empaquetado de datos en HLSL, lee [Shader Constants (HLSL) (Constantes de sombreador [HLSL])](https://msdn.microsoft.com/library/windows/desktop/bb509581).
+En este ejemplo, el búfer de constantes usa el registro b0 para mantener el búfer empaquetado. Todos los registros se conocen en el formulario b\#. Para obtener más información sobre la implementación de búferes de constantes, registros y empaquetado de datos en HLSL, lee [Shader Constants (HLSL) (Constantes de sombreador [HLSL])](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants).
 
 <a name="instructions"></a>Instrucciones
 ------------
@@ -159,10 +159,10 @@ El color para el píxel en posición se escribe en el destino de representación
 ---------
 [Dibujar en la pantalla](draw-to-the-screen.md) Observaciones
 -------
-Comprender la semántica de HLSL y el empaquetado de los búferes de constantes puede ahorrarte un buen dolor de cabeza por culpa de la depuración, además de ofrecerte oportunidades de optimización. Si se produce una oportunidad, lea [sintaxis Variable (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Introducción a los búferes de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898), y [Cómo: Crear un búfer de constantes](https://msdn.microsoft.com/library/windows/desktop/ff476896). De lo contrario, estas son algunas sugerencias iniciales para que tengas en cuenta sobre semántica y búferes de constantes.
+Comprender la semántica de HLSL y el empaquetado de los búferes de constantes puede ahorrarte un buen dolor de cabeza por culpa de la depuración, además de ofrecerte oportunidades de optimización. Si se produce una oportunidad, lea [sintaxis Variable (HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-variable-syntax), [Introducción a los búferes de Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-intro), y [Cómo: Crear un búfer de constantes](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to). De lo contrario, estas son algunas sugerencias iniciales para que tengas en cuenta sobre semántica y búferes de constantes.
 
 -   Siempre comprueba dos veces el código de configuración Direct3D del representador para asegurarte de que las estructuras de tus búferes de constantes coincidan con las declaraciones de struct cbuffer en HLSL, y de que los tipos escalares de componentes coincidan en ambas declaraciones.
--   En el código C++ del representador, usa tipos de [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833) en tus declaraciones de búferes de constantes para garantizar el empaquetado de datos apropiado.
+-   En el código C++ del representador, usa tipos de [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal) en tus declaraciones de búferes de constantes para garantizar el empaquetado de datos apropiado.
 -   La mejor forma de usar búferes de constantes con eficiencia es organizar las variables de sombreador en búferes de constantes según su frecuencia de actualización. Por ejemplo, si tienes algunos datos de uniforme que se actualizan una vez por trama, y otros datos de uniforme que se actualizan solo cuando la cámara se mueve, considera separar esos datos en búferes de constantes independientes.
 -   La semántica que olvidaste aplicar o que aplicaste de manera incorrecta será tu primera fuente de error de compilación de sombreador (FXC). ¡Revisa dos veces! Los documentos pueden ser algo confusos, ya que varias páginas y muestras anteriores se refieren a distintas versiones de la semántica de HLSL anteriores a Direct3D 11.
 -   Asegúrate de saber qué nivel de características de Direct3D eliges como destino para cada sombreador. La semántica para la característica de nivel 9\_ \* son distintos de los 11\_1.

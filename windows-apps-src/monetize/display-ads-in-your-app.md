@@ -6,12 +6,12 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, banner, control de anuncios, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 84ed7f5f1eb65f06a47e92de962777ca9d3c50c7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0ef3050e2583674bf6cd5a601dbde1500f6b457e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658500"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372553"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising
 
@@ -48,7 +48,7 @@ Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para l
     <br/>
     <a href="best-practices-for-ads-in-apps.md">Procedimientos recomendados</a>
     <br/>
-    <a href="https://msdn.microsoft.com/en-us/library/windows/apps/mt691884.aspx">Referencia de API</a>
+    <a href="https://docs.microsoft.com/uwp/api/overview/advertising">Referencia de API</a>
     </td>
 </tr>
 </tbody>
@@ -108,7 +108,7 @@ Una vez que se publique la aplicación y está disponible en el Store, puede rev
 
 Para obtener más ayuda con el SDK de Microsoft Advertising, usa los siguientes recursos.
 
-|  Tarea    | Recurso |               
+|  Tarea    | Resource |               
 |----------|-------|
 | Informar de un error u obtener soporte técnico asistido para la publicidad     | Visita la [página de soporte técnico](https://developer.microsoft.com/en-us/windows/support) y elige **Anuncios en aplicaciones**.        |
 | Obtener soporte técnico de la comunidad     | Visita el [foro](https://go.microsoft.com/fwlink/p/?LinkId=401266).       |

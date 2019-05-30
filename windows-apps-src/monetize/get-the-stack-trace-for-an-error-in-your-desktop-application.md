@@ -5,16 +5,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Microsoft Store, Microsoft Store analytics API, API de análisis Microsoft Store, error, error, stack trace, seguimiento de la pila
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cc8aaef2b26af88234efe62bf7cf1cb998e19bc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4aaa71c431a9dac6ad6650d05f71df897f0884fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57659900"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372683"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a>Obtener el seguimiento de la pila de un error en la aplicación de escritorio
 
-Usa este método en la API de análisis de Microsoft Store para obtener el seguimiento de la pila de un error en una aplicación de escritorio que agregaste al [Programa de aplicaciones de escritorio de Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504). Este método solo puede descargar el seguimiento de la pila de un error producido en los últimos 30 días. Los seguimientos de pila también están disponibles en el [informe de mantenimiento](https://msdn.microsoft.com/library/windows/desktop/mt826504) para aplicaciones de escritorio en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para obtener el seguimiento de la pila de un error en una aplicación de escritorio que agregaste al [Programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Este método solo puede descargar el seguimiento de la pila de un error producido en los últimos 30 días. Los seguimientos de pila también están disponibles en el [informe de mantenimiento](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) para aplicaciones de escritorio en el centro de partners.
 
 Para poder usar este método, debes emplear antes el método para [obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md) para recuperar el hash del identificador del archivo CAB que está asociado con el error para el que quieres recuperar el seguimiento de la pila.
 
@@ -39,7 +39,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                                                                 |
+| Header        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
  
@@ -48,7 +48,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 | Parámetro        | Tipo   |  Descripción      |  Requerido  |
 |---------------|--------|---------------|------|
-| applicationId | string | El identificador de producto de la aplicación de escritorio de la cual quieres obtener un seguimiento de la pila. Para obtener el identificador de producto de una aplicación de escritorio, abra cualquier [análisis de informes para su aplicación de escritorio en el centro de partners](https://msdn.microsoft.com/library/windows/desktop/mt826504) (como el **informe de mantenimiento**) y recuperar el identificador de producto de la dirección URL. |  Sí  |
+| applicationId | string | El identificador de producto de la aplicación de escritorio de la cual quieres obtener un seguimiento de la pila. Para obtener el identificador de producto de una aplicación de escritorio, abra cualquier [análisis de informes para su aplicación de escritorio en el centro de partners](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) (como el **informe de mantenimiento**) y recuperar el identificador de producto de la dirección URL. |  Sí  |
 | cabIdHash | string | El hash del identificador exclusivo del archivo CAB asociado con el error para el que quieres recuperar el seguimiento de la pila. Para obtener este valor, usa el método [obtener los detalles de un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md) para recuperar los detalles de un error específico de tu aplicación de escritorio y usa el valor **cabIdHash** en el cuerpo de la respuesta de ese método. |  Sí  |
 
  

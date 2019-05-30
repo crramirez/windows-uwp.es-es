@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d58587c8a7e391c51dc3267dd6ebb069170604a4
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: f6593c19503fec3ee0e60920c66af7de8f2a7025
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244281"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363637"
 ---
 # <a name="rotation"></a>Giro
 
 
 En este artículo se describe la nueva interfaz de usuario de Windows para realizar una rotación. También se ofrecen directrices sobre la experiencia del usuario que debes tener presente cuando uses este nuevo mecanismo de interacción en una aplicación para UWP.
 
-> **API importantes**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **API importantes**: [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
 ## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 
@@ -29,7 +29,7 @@ En este artículo se describe la nueva interfaz de usuario de Windows para reali
 ## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
 
-**Introducción a la rotación**
+**Información general de rotación**
 
 La rotación es la técnica optimizada para entrada táctil que utilizan las aplicaciones para UWP para permitir que los usuarios giren un objeto en dirección circular (en el sentido de las agujas del reloj o en el sentido contrario).
 
@@ -38,7 +38,7 @@ En función del dispositivo de entrada, la interacción de rotación se realiza 
 -   Un mouse o una pluma/lápiz activos para mover la barra de redimensionamiento para rotación de un objeto seleccionado.
 -   Una pluma o un lápiz táctiles o pasivos para girar el objeto en la dirección deseada mediante el gesto de girar.
 
-**Cuándo usar la rotación**
+**Cuándo usar rotación**
 
 Usa la rotación para ayudar a los usuarios a girar directamente elementos de la interfaz de usuario. En los diagramas siguientes se muestran algunas de las posiciones de los dedos admitidas para la interacción de rotación.
 
@@ -48,13 +48,13 @@ Usa la rotación para ayudar a los usuarios a girar directamente elementos de la
 
 En la primera imagen se muestran los puntos de contacto táctil inicial (pulgar) y secundario (índice): el índice está tocando un árbol y el pulgar toca un tronco.
 
-![imagen en la que se muestran los dos puntos táctiles iniciales en el gesto de girar.](images/ux-rotate-points1.png)
+![imagen que muestra los dos puntos de toque inicial para el movimiento de rotación.](images/ux-rotate-points1.png)
 En la segunda imagen, la rotación se ejecuta en torno del punto táctil inicial (pulgar). Después de la rotación, el índice sigue tocando el árbol y el pulgar sigue en contacto con el tronco (el punto de rotación).
 
-![imagen en la que se muestra una ilustración girada en la que el punto de rotación está restringido a uno de los dos puntos táctiles iniciales.](images/ux-rotate-points2.png)
+![imagen que muestra una imagen girada con el punto de rotación se limita a uno de los dos puntos de toque inicial.](images/ux-rotate-points2.png)
 En la tercera imagen, la aplicación (o el usuario) ha definido que el centro de rotación sea el punto central de la ilustración. Después de la rotación, la ilusión de manipulación directa se ha roto porque la ilustración no giró en torno de uno de los dedos (a menos que fuera el usuario quien hubiera elegido esa configuración).
 
-![imagen en la que se muestra una ilustración girada en la que el punto de rotación está restringido al centro de la ilustración en lugar de uno de los dos puntos táctiles iniciales.](images/ux-rotate-points3.png)
+![imagen que muestra una imagen con el punto de giro girada restringida para el centro de la imagen en lugar de cualquiera de los dos puntos de toque inicial.](images/ux-rotate-points3.png)
 En esta última imagen, la aplicación (o el usuario) ha definido que el centro de rotación sea un punto en el medio del borde izquierdo de la ilustración. De nuevo, a menos que sea el usuario quien haya elegido esa configuración, la ilusión de manipulación directa se rompe.
 
 ![imagen en la que se muestra una ilustración girada en la que el punto de rotación está restringido al centro del borde izquierdo de la ilustración en lugar de uno de los dos puntos táctiles iniciales.](images/ux-rotate-points4.png)
@@ -102,21 +102,21 @@ Windows 10 admite tres tipos de rotación: gratis, restringida y combinada.
 ## <a name="related-topics"></a>Temas relacionados
 
 
-**Muestras**
-* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+**Ejemplos**
+* [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Ejemplos de archivo**
 * [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Entrada: Ejemplo de pruebas de posicionamiento táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Entrada: Ejemplo de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
 * [Entrada: Los gestos y manipulaciones con GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Entrada: Las manipulaciones y ejemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Muestra de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Ejemplo de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

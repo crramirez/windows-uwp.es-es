@@ -6,12 +6,12 @@ ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp, packaging
 ms.localizationpriority: medium
-ms.openlocfilehash: 8eb0fa1eef5b859de561407a91215d5b75624030
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 5d18f67ca9088c227052a2222f798cadff6df75c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58173011"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372820"
 ---
 # <a name="packaging-apps"></a>Empaquetado de aplicaciones
 
@@ -31,5 +31,5 @@ Esta sección contiene o menciona artículos sobre los paquetes de aplicaciones 
 | [Instalar aplicaciones para Windows 10 con el Instalador de aplicación](https://docs.microsoft.com/windows/msix/app-installer/app-installer-root) | El Instalador de aplicación permite instalar las aplicaciones para Windows 10 haciendo doble clic en el paquete de la aplicación. |
 | [Instalar aplicaciones con la herramienta WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para UWP desde una máquina con Windows 10 en cualquier dispositivo con Windows 10 Mobile. Puedes usar esta herramienta para implementar un paquete de aplicación si el dispositivo con Windows 10 Mobile está conectado mediante USB o disponible en la misma subred sin necesidad de Microsoft Visual Studio o la solución para dicha aplicación. Este artículo describe cómo instalar aplicaciones para UWP con esta herramienta. |
 | [Configurar compilaciones automatizadas para la aplicación para UWP](auto-build-package-uwp-apps.md) | Si quieres empaquetar tu aplicación dentro de un proceso de compilación automatizado, este tema muestra cómo hacerlo con Visual Studio Team Services (VSTS). |
-| [Declaraciones de funcionalidades de las aplicaciones](app-capability-declarations.md) | Las funcionalidades deben declararse en el [manifiesto del paquete](https://msdn.microsoft.com/library/windows/apps/BR211474) de la aplicación para UWP para poder obtener acceso a determinadas API o ciertos recursos, como imágenes o música, o a dispositivos, como la cámara o el micrófono. |
+| [Declaraciones de funcionalidades de las aplicaciones](app-capability-declarations.md) | Las funcionalidades deben declararse en el [manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest) de la aplicación para UWP para poder obtener acceso a determinadas API o ciertos recursos, como imágenes o música, o a dispositivos, como la cámara o el micrófono. |
 | [Descargar e instalar actualizaciones de paquetes desde Store](self-install-package-updates.md) | La aplicación para UWP puede buscar mediante programación actualizaciones de paquete, así como instalarlas. La aplicación también puede consultar los paquetes que se marcaron como obligatorios en el Centro de partners y deshabilitar la funcionalidad hasta que se instale la actualización obligatoria.  |

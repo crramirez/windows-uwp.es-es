@@ -8,12 +8,12 @@ keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, I
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c12e5cb7012ba9ff9a4ed383427e37b79835983
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7eb7f085c5e4daa46cfa6c256ec3938be3c13d82
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645850"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365345"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Almacenar y recuperar datos de trazos de lápiz de Windows Ink
 
@@ -23,17 +23,17 @@ Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializ
 > [!NOTE]
 > El formato ISF es la representación más compacta y persistente de la entrada de lápiz. Puede incrustarse en un formato de documento binario, como un archivo GIF, o colocarse directamente en el Portapapeles.
 
-> **API importantes**: [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), [ **Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+> **API importantes**: [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas), [**Windows.UI.Input.Inking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
 
 ## <a name="save-ink-strokes-to-a-file"></a>Guardar los trazos de lápiz en un archivo
 
-Aquí se muestra cómo guardar trazos de lápiz dibujados en un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+Aquí se muestra cómo guardar trazos de lápiz dibujados en un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
 **Descargar este ejemplo de [guardar y cargar los trazos de tinta de un archivo de formato serializado de tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
-    La interfaz de usuario incluye los botones "Save", "Load" y "Clear", así como el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+    La interfaz de usuario incluye los botones "Save", "Load" y "Clear", así como el [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -63,7 +63,7 @@ Aquí se muestra cómo guardar trazos de lápiz dibujados en un control [**InkCa
 
 2.  A continuación, definimos algunos comportamientos de entrada de lápiz básicos.
 
-    El [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar los datos de entrada del lápiz y el mouse como trazos de lápiz ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), y se declaran los agentes de escucha para los eventos de clic de los botones.
+    El [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar los datos de entrada del lápiz y el mouse como trazos de lápiz ([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)), y se declaran los agentes de escucha para los eventos de clic de los botones.
 ```csharp
 public MainPage()
     {
@@ -85,11 +85,11 @@ public MainPage()
 
 3.  Por último, guardamos la entrada de lápiz en el controlador de eventos de clic del botón **Save**.
 
-    Un [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) permite al usuario seleccionar el archivo y la ubicación donde deben guardarse los datos de entrada de lápiz.
+    Un [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) permite al usuario seleccionar el archivo y la ubicación donde deben guardarse los datos de entrada de lápiz.
 
-    Una vez que se selecciona un archivo, se abre una secuencia [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) establecida en [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241635).
+    Una vez que se selecciona un archivo, se abre una secuencia [**IRandomAccessStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStream) establecida en [**ReadWrite**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode).
 
-    Después, llamamos al método [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114) para serializar los trazos de lápiz administrados por el objeto [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) en la secuencia.
+    Después, llamamos al método [**SaveAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.iinkstrokecontainer.saveasync) para serializar los trazos de lápiz administrados por el objeto [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) en la secuencia.
 
 ```csharp
 // Save ink data to a file.
@@ -155,17 +155,17 @@ public MainPage()
 ```
 
 > [!NOTE]
-> El formato GIF es el único formato de archivo admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) (que se muestra en la sección siguiente) admite otros formatos por motivos de compatibilidad con versiones anteriores.
+> El formato GIF es el único formato de archivo admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync) (que se muestra en la sección siguiente) admite otros formatos por motivos de compatibilidad con versiones anteriores.
 
 ## <a name="load-ink-strokes-from-a-file"></a>Cargar trazos de lápiz de un archivo
 
-Aquí se muestra cómo cargar trazos de lápiz de un archivo y representarlos en un control [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+Aquí se muestra cómo cargar trazos de lápiz de un archivo y representarlos en un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
 **Descargar este ejemplo de [guardar y cargar los trazos de tinta de un archivo de formato serializado de tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
-    La interfaz de usuario incluye los botones "Save", "Load" y "Clear", así como el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+    La interfaz de usuario incluye los botones "Save", "Load" y "Clear", así como el [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -195,7 +195,7 @@ Aquí se muestra cómo cargar trazos de lápiz de un archivo y representarlos en
 
 2.  A continuación, definimos algunos comportamientos de entrada de lápiz básicos.
 
-    El [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar los datos de entrada del lápiz y el mouse como trazos de lápiz ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), y se declaran los agentes de escucha para los eventos de clic de los botones.
+    El [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar los datos de entrada del lápiz y el mouse como trazos de lápiz ([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)), y se declaran los agentes de escucha para los eventos de clic de los botones.
 ```csharp
 public MainPage()
     {
@@ -217,11 +217,11 @@ public MainPage()
 
 3.  Por último, cargamos la entrada de lápiz en el controlador de eventos de clic del botón **Load**.
 
-    Un [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) permite al usuario seleccionar el archivo y la ubicación de donde deben recuperarse los datos de entrada de lápiz guardados.
+    Un [**FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) permite al usuario seleccionar el archivo y la ubicación de donde deben recuperarse los datos de entrada de lápiz guardados.
 
-    Una vez que se selecciona un archivo, se abre una secuencia [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) establecida en [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635).
+    Una vez que se selecciona un archivo, se abre una secuencia [**IRandomAccessStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStream) establecida en [**Read**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode).
 
-    A continuación, llamamos a [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) para leer, deserializar y cargar los trazos de lápiz guardados en el [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Cuando los trazos se cargan en el **InkStrokeContainer**, el [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) los representa inmediatamente en el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+    A continuación, llamamos a [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync) para leer, deserializar y cargar los trazos de lápiz guardados en el [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer). Cuando los trazos se cargan en el **InkStrokeContainer**, el [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) los representa inmediatamente en el [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
     > [!NOTE]
     > Se borran todos los trazos existentes en el objeto InkStrokeContainer antes de cargarse los trazos nuevos.
@@ -260,7 +260,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 ```
 
 > [!NOTE]
-> El formato GIF es el único formato de archivo admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) es compatible con los siguientes formatos por motivos de compatibilidad con versiones anteriores.
+> El formato GIF es el único formato de archivo admitido para guardar datos de entrada de lápiz. Sin embargo, el método [**LoadAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.loadasync) es compatible con los siguientes formatos por motivos de compatibilidad con versiones anteriores.
 
 | Formato                    | Descripción |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -273,7 +273,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 
 Aquí se muestra cómo usar el Portapapeles para transferir los trazos de lápiz entre aplicaciones.
 
-Para admitir la funcionalidad de Portapapeles, los comandos Cortar y Copiar integrados del [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) requieren la selección de uno o más trazos de lápiz.
+Para admitir la funcionalidad de Portapapeles, los comandos Cortar y Copiar integrados del [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) requieren la selección de uno o más trazos de lápiz.
 
 Para este ejemplo, habilitamos la selección de trazo cuando se modifica la entrada con el botón de menú contextual del lápiz (o el botón secundario del mouse). Para obtener un ejemplo completo de cómo implementar la selección de trazo, consulta Entrada de paso a través para el procesamiento avanzado en [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md).
 
@@ -281,7 +281,7 @@ Para este ejemplo, habilitamos la selección de trazo cuando se modifica la entr
 
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
-    La interfaz de usuario incluye los botones "Cut", "Copy", "Paste" y "Clear", junto con el [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) y un lienzo de selección.
+    La interfaz de usuario incluye los botones "Cut", "Copy", "Paste" y "Clear", junto con el [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) y un lienzo de selección.
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -317,7 +317,7 @@ Para este ejemplo, habilitamos la selección de trazo cuando se modifica la entr
 
 2.  A continuación, definimos algunos comportamientos de entrada de lápiz básicos.
 
-    El [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) está configurado para interpretar los datos de entrada de lápiz y mouse como trazos de lápiz ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). Aquí también se declaran los agentes de escucha para los eventos de clic de los botones, y los eventos de puntero y trazo para la funcionalidad de selección.
+    El [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) está configurado para interpretar los datos de entrada de lápiz y mouse como trazos de lápiz ([**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes)). Aquí también se declaran los agentes de escucha para los eventos de clic de los botones, y los eventos de puntero y trazo para la funcionalidad de selección.
 
     Para obtener un ejemplo completo de cómo implementar la selección de trazo, consulta Entrada de paso a través para el procesamiento avanzado en [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md).
 ```csharp
@@ -367,9 +367,9 @@ public MainPage()
 
 3.  Por último, después de agregar compatibilidad de selección de trazo, implementamos la funcionalidad del Portapapeles en los controladores de eventos de clic de los botones **Cut**, **Copy** y **Paste**.
 
-    Para cortar, primero llamamos a [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/br244232) en el [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) del [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
+    Para cortar, primero llamamos a [**CopySelectedToClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.copyselectedtoclipboard) en el [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) del [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter).
 
-    A continuación, llamamos a [**DeleteSelected**](https://msdn.microsoft.com/library/windows/apps/br244233) para quitar los trazos del lienzo de entrada de lápiz.
+    A continuación, llamamos a [**DeleteSelected**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.deleteselected) para quitar los trazos del lienzo de entrada de lápiz.
 
     Por último, eliminamos todos los trazos de selección del lienzo de selección.
     
@@ -403,7 +403,7 @@ private void btnCut_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-Para copiar, simplemente llamamos a [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/br244232) en el [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) del [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
+Para copiar, simplemente llamamos a [**CopySelectedToClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.copyselectedtoclipboard) en el [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) del [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter).
 
 
 ```csharp
@@ -413,9 +413,9 @@ private void btnCopy_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-Para pegar, llamamos a [**CanPasteFromClipboard**](https://msdn.microsoft.com/library/windows/apps/br208495) para garantizar que el contenido del Portapapeles se pueda pegar en el lienzo de entrada de lápiz.
+Para pegar, llamamos a [**CanPasteFromClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.canpastefromclipboard) para garantizar que el contenido del Portapapeles se pueda pegar en el lienzo de entrada de lápiz.
 
-Si es así, llamamos a [**PasteFromClipboard**](https://msdn.microsoft.com/library/windows/apps/br208503) para insertar los trazos de lápiz del Portapapeles en el objeto [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) del objeto [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011), lo que representará los trazos en el lienzo de entrada de lápiz.
+Si es así, llamamos a [**PasteFromClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.pastefromclipboard) para insertar los trazos de lápiz del Portapapeles en el objeto [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) del objeto [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter), lo que representará los trazos en el lienzo de entrada de lápiz.
 
 ```csharp
 private void btnPaste_Click(object sender, RoutedEventArgs e)

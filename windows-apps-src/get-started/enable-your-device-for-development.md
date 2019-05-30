@@ -3,15 +3,15 @@ ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: Habilitar el dispositivo para el desarrollo
 description: Configura el dispositivo Windows 10 para el desarrollo y la depuración.
 keywords: Introducción a Visual Studio con licencia de desarrollador, dispositivo con licencia de desarrollador habilitada
-ms.date: 05/30/2018
+ms.date: 4/9/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 90ff8e8c0d11e58d251e9c2f5bfb00f3b8aedf1a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f927d8bce1e59ba9a8ed9b0f3f08ce3575c6d7bd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618960"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367021"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -93,11 +93,11 @@ Esta imagen muestra las funciones de desarrollo para Windows 10:
 Para obtener más información sobre Device Portal, véase [Introducción a Windows Device Portal](../debug-test-perf/device-portal.md).
 
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
-- [Portal de dispositivo de escritorio](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
+- [Portal de dispositivo de escritorio](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
 - [Portal de dispositivos para HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
 - [Portal de dispositivo de IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [Portal de dispositivos para dispositivos móviles](../debug-test-perf/device-portal-mobile.md)
-- [Portal de dispositivos para Xbox](../debug-test-perf/device-portal-xbox.md)
+- [Portal de dispositivos para Xbox](../xbox-apps/device-portal-xbox.md)
 
 Si se producen problemas al habilitar el modo de desarrollador o Device Portal, consulta el foro [Problemas conocidos](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) para buscar soluciones para estos problemas, o visita [Error al instalar el paquete de modo de desarrollador](#failure-to-install-developer-mode-package) para obtener más detalles y cuáles KB de WSUS deberían habilitarse para desbloquear el paquete de modo de desarrollador.
 
@@ -133,7 +133,7 @@ En versiones anteriores de Windows 10 Mobile, estaba presente una opción de vol
 
 Hay varias herramientas que puedes usar para implementar una aplicación desde un PC con Windows 10 a un dispositivo con Windows 10. Ambos dispositivos deben estar conectados a la misma subred de la red mediante una conexión con cable o inalámbrica, o bien deben estar conectados mediante USB. Ambas formas enumeradas solo instalan el paquete de aplicación (.appx/.appxbundle); no instalan certificados.
 
--   Usa la herramienta de implementación de aplicaciones de Windows 10 (WinAppDeployCmd). Obtén más información sobre la [herramienta WinAppDeployCmd](https://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
+-   Usa la herramienta de implementación de aplicaciones de Windows 10 (WinAppDeployCmd). Obtén más información sobre la [herramienta WinAppDeployCmd](https://docs.microsoft.com/previous-versions/windows/apps/mt203806(v=vs.140)).
 -   Puedes usar [Device Portal](../debug-test-perf/device-portal.md) para realizar implementaciones desde el navegador a un dispositivo móvil con Windows 10, versión 1511 o posterior. Usa la página **[Aplicaciones](../debug-test-perf/device-portal.md#apps-manager)** de Device Portal para cargar un paquete de la aplicación (.appx) e instalarlo en el dispositivo.
 
 ## <a name="failure-to-install-developer-mode-package"></a>Error al instalar el paquete de modo de desarrollador
@@ -233,9 +233,9 @@ Si creas o transfieres localmente aplicaciones en un dispositivo con Windows 8.1
 
 Después debes habilitar el dispositivo para el desarrollo, tal como se describe en este tema, para que puedas seguir desarrollando en este dispositivo. Si no lo haces, es posible que obtengas un error al depurar la aplicación o intentar crear un paquete para ella. Este es un ejemplo de este error:
 
-Error: DEP0700: No se pudo registrar la aplicación.
+Error : DEP0700: No se pudo registrar la aplicación.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [La primera aplicación](your-first-app.md)
 * [Publicar tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).

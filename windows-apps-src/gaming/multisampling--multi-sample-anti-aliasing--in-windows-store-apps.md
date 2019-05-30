@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, muestreo múltiple, direct3d, games, multisampling
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c1634af8589a97f5070ff85909fe12ab16bf8d6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b547e47b7d896ab818349dcc70ee9dc3c7078847
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610860"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368385"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> El muestreo múltiple en Universal Windows Platform (UWP) aplicaciones
 
 
 
-Aprende a usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D. El muestreo múltiple, también conocido como suavizado de contorno de muestras múltiples, es una técnica gráfica que se usa para disminuir la apariencia de bordes afilados. Se aplica dibujando más píxeles de los que existen en el destino de representación y después promediando valores para mantener la apariencia de un borde "parcial" en ciertos píxeles. Si quieres ver una descripción más minuciosa de cómo funciona el muestreo múltiple en Direct3D, consulta [Multisample Anti-Aliasing Rasterization Rules (Reglas de rasterización para el suavizado de contorno de muestras múltiples)](https://msdn.microsoft.com/library/windows/desktop/cc627092#Multisample).
+Aprende a usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D. El muestreo múltiple, también conocido como suavizado de contorno de muestras múltiples, es una técnica gráfica que se usa para disminuir la apariencia de bordes afilados. Se aplica dibujando más píxeles de los que existen en el destino de representación y después promediando valores para mantener la apariencia de un borde "parcial" en ciertos píxeles. Si quieres ver una descripción más minuciosa de cómo funciona el muestreo múltiple en Direct3D, consulta [Multisample Anti-Aliasing Rasterization Rules (Reglas de rasterización para el suavizado de contorno de muestras múltiples)](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage-rules).
 
 ## <a name="multisampling-and-the-flip-model-swap-chain"></a>Muestreo múltiple y la cadena de intercambio en el modelo flip
 
@@ -28,9 +28,9 @@ Las aplicaciones para UWP con DirectX deben usar cadenas de intercambio en el mo
 
 Los niveles de característica de Direct3D garantizan la compatibilidad con funciones mínimas y específicas para el recuento de muestras y garantizan la disponibilidad de ciertos formatos de búfer que admitirán el muestreo múltiple. Los dispositivos de gráficos, por lo general, admiten una mayor variedad de formatos y recuentos de muestras que la cantidad mínima requerida. La compatibilidad con el muestreo múltiple se puede determinar en tiempo de ejecución. Para ello, debes comprobar la compatibilidad de las características con el muestreo múltiple en formatos DXGI específicos y, a continuación, debes comprobar los recuentos de muestras que se pueden usar con cada formato admitido.
 
-1.  Llama a [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497) para averiguar qué formatos DXGI se pueden usar con el muestreo múltiple. Suministra los formatos de destino de representación que tu juego puede usar. El destino de representación y el destino de la resolución debe usar el mismo formato, así que compruebe para ambos [ **D3D11\_formato\_soporte\_MULTIMUESTRA\_RENDERTARGET** ](https://msdn.microsoft.com/library/windows/desktop/ff476134) y **D3D11\_formato\_soporte\_MULTIMUESTRA\_resolver**.
+1.  Llama a [**ID3D11Device::CheckFeatureSupport**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) para averiguar qué formatos DXGI se pueden usar con el muestreo múltiple. Suministra los formatos de destino de representación que tu juego puede usar. El destino de representación y el destino de la resolución debe usar el mismo formato, así que compruebe para ambos [ **D3D11\_formato\_soporte\_MULTIMUESTRA\_RENDERTARGET** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ne-d3d11-d3d11_format_support) y **D3D11\_formato\_soporte\_MULTIMUESTRA\_resolver**.
 
-    **La característica de nivel de 9:  ** Aunque la característica de nivel 9 dispositivos [garantizar la compatibilidad con formatos de destino de representación de muestreo múltiple](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), no se garantiza la compatibilidad para destinos de resolución de muestreo múltiple. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
+    **La característica de nivel de 9:  ** Aunque la característica de nivel 9 dispositivos [garantizar la compatibilidad con formatos de destino de representación de muestreo múltiple](https://docs.microsoft.com/previous-versions//ff471324(v=vs.85)), no se garantiza la compatibilidad para destinos de resolución de muestreo múltiple. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
 
     El código siguiente comprueba el muestreo múltiple de soporte técnico para todos lo DXGI\_valores de formato:
 
@@ -55,7 +55,7 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
     }
     ```
 
-2.  Por cada formato admitido, consulta la compatibilidad del recuento de muestras llamando a [**ID3D11Device::CheckMultisampleQualityLevels**](https://msdn.microsoft.com/library/windows/desktop/ff476499).
+2.  Por cada formato admitido, consulta la compatibilidad del recuento de muestras llamando a [**ID3D11Device::CheckMultisampleQualityLevels**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkmultisamplequalitylevels).
 
     El siguiente código comprueba la compatibilidad del tamaño de muestras en formatos DXGI admitidos:
 
@@ -82,7 +82,7 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
     }
     ```
 
-    > **Tenga en cuenta**    Use [ **ID3D11Device2::CheckMultisampleQualityLevels1** ](https://msdn.microsoft.com/library/windows/desktop/dn280494) en su lugar si necesita comprobar compatibilidad de muestreo múltiple para los búferes de recursos en mosaico.
+    > **Tenga en cuenta**    Use [ **ID3D11Device2::CheckMultisampleQualityLevels1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_2/nf-d3d11_2-id3d11device2-checkmultisamplequalitylevels1) en su lugar si necesita comprobar compatibilidad de muestreo múltiple para los búferes de recursos en mosaico.
 
      
 
@@ -179,7 +179,7 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
     m_d3dContext->RSSetViewports(1, &m_screenViewport);
     ```
 
-6.  Representa cada fotograma en el destino de representación de muestras múltiples. Cuando la representación esté completa, llama a [**ID3D11DeviceContext::ResolveSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476474) antes de presentar el fotograma. Esta acción le indica a Direct3D que debe llevar a cabo la operación de muestreo múltiple, calculando el valor de cada píxel para mostrar y colocando el resultado en el búfer de reserva. El búfer de reserva incluye la imagen final con suavizado de contorno y puede presentarse.
+6.  Representa cada fotograma en el destino de representación de muestras múltiples. Cuando la representación esté completa, llama a [**ID3D11DeviceContext::ResolveSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-resolvesubresource) antes de presentar el fotograma. Esta acción le indica a Direct3D que debe llevar a cabo la operación de muestreo múltiple, calculando el valor de cada píxel para mostrar y colocando el resultado en el búfer de reserva. El búfer de reserva incluye la imagen final con suavizado de contorno y puede presentarse.
 
     El siguiente código resuelve el subrecurso antes de presentar el fotograma:
 

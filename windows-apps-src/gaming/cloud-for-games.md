@@ -6,12 +6,12 @@ ms.date: 03/27/2018
 ms.topic: article
 keywords: Windows 10, UWP, juegos, servicios en la nube
 ms.localizationpriority: medium
-ms.openlocfilehash: 5781d8f8606f68360018cfa17d5cfe5719ed31a6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 15a7e3bed746a31ce2d8f458045cdd1126b71b8c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57637690"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368994"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>Uso de servicios en la nube con juegos para UWP
 
@@ -68,7 +68,7 @@ Descubre cómo otros desarrolladores han implementado soluciones en la nube en s
         </td>
     </tr>
     <tr>
-        <td><a href="https://www.halowaypoint.com/">343 industries</a></td>
+        <td><a href="https://www.halowaypoint.com/">343 Industries</a></td>
         <td><b>Halo 5: Tutores</b> implementa <a href="https://www.halowaypoint.com/spartan-companies">Halo: Las empresas Spartan</a> como su plataforma de juegos sociales mediante el uso de Azure Cosmos DB (a través de la API de DocumentDB), que se ha seleccionado para su velocidad y flexibilidad debido a sus capacidades de la indexación automática.</td>
         <td>
             <ul>
@@ -91,7 +91,7 @@ Descubre cómo otros desarrolladores han implementado soluciones en la nube en s
             <ul>
                 <li><a href="https://channel9.msdn.com/Shows/Cloud+Cover/Episode-228-Building-Games-with-Service-Fabric#time=06m52s">Creación de juegos con Service Fabric: Antigüedad del juego de ascenso MMO (vídeo)</a>
                 <li><a href="https://channel9.msdn.com/Events/Build/2016/KEY02#time=57m20s">Administrar los componentes de juegos como microservicios con Azure Service Fabric (vídeo)</a> 
-                <li><a href="https://channel9.msdn.com/Shows/Azure-Friday/Age-of-Ascent-from-Illyriad-Powered-by-Azure-Service-Fabric-and-ASPNET">Entrevista con desarrolladores Age of Ascent (vídeo)</a>
+                <li><a href="/Blogs/Azure/Age-of-Ascent-from-Illyriad-Powered-by-Azure-Service-Fabric-and-ASPNET">Entrevista con desarrolladores Age of Ascent (vídeo)</a>
             </ul>
         </td>
     </tr>
@@ -165,11 +165,11 @@ A continuación se indican algunas maneras de usar las ofertas de la nube de Azu
 | Iniciar sesión, verificación de identidad      | El jugador inicia sesión y se autentica la identidad del jugador.  | [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) | Inicio de sesión único a cualquier aplicación web en la nube y local con la autenticación multifactor.            | 
 | Juego con el modelo de infraestructura como servicio (IaaS)      | El juego se hospeda en máquinas virtuales en la nube.       | [Máquinas virtuales de Azure](https://azure.microsoft.com/services/virtual-machines/) | Escala de 1 a miles de instancias de máquina virtual como servidores de juegos con redes virtuales integradas y equilibrio de carga; coherencia híbrida con sistemas locales.           |
 | Juegos web o móviles con el modelo de plataforma como servicio (PaaS)            | El juego se hospeda en una plataforma administrada.                | [Azure App Service](https://azure.microsoft.com/services/app-service/) | PaaS para sitios web o juegos móviles (lo que se refiere a las VM de Azure con software intermedio, herramientas de desarrollo, BI y administración de bases de datos).   |
-| Juego en la nube de n niveles, altamente disponible y escalable, con mayor control del sistema operativo (PaaS)        | El juego se hospeda en una plataforma administrada.                | [Servicio de nube de Azure](https://azure.microsoft.com/services/app-service/) | PaaS está diseñado para admitir aplicaciones que sean escalables, confiables y baratas de operar   |
+| Juego en la nube de n niveles, altamente disponible y escalable, con mayor control del sistema operativo (PaaS)        | El juego se hospeda en una plataforma administrada.                | [Azure Cloud Service](https://azure.microsoft.com/services/app-service/) | PaaS está diseñado para admitir aplicaciones que sean escalables, confiables y baratas de operar   |
 | Equilibrio de carga en las regiones, para mejor rendimiento y disponibilidad | Encamina las solicitudes entrantes de juego. Puede actuar como el primer nivel de equilibrio de carga.       | [Traffic Manager de Azure](https://azure.microsoft.com/en-us/services/traffic-manager/) | Ofrece varias opciones de conmutación automática por error y la capacidad de distribuir el tráfico de forma equitativa o con valores ponderados. Puede combinarse sin problemas en los sistemas locales y en la nube. |
-| Almacenamiento en la nube de datos de juegos       | Los datos de los juegos más recientes se almacenan en la nube y se envían a dispositivos cliente. | [Almacenamiento de blobs de Azure](https://azure.microsoft.com/services/storage/blobs/)| Sin limitación de los tipos de archivo que se pueden almacenar; almacenamiento de objetos para grandes cantidades de datos sin estructurar, como imágenes, audio, vídeo y mucho más.  |
+| Almacenamiento en la nube de datos de juegos       | Los datos de los juegos más recientes se almacenan en la nube y se envían a dispositivos cliente. | [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)| Sin limitación de los tipos de archivo que se pueden almacenar; almacenamiento de objetos para grandes cantidades de datos sin estructurar, como imágenes, audio, vídeo y mucho más.  |
 | Tablas de almacenamiento datos temporales| Las transacciones de juegos (cambios en los estados de juego) se almacenan temporalmente en tablas. | [Azure Table Storage](https://azure.microsoft.com/services/storage/tables/)| Los datos de juegos pueden almacenarse en un esquema flexible según las necesidades del juego. |
-| Poner en cola transacciones y solicitudes de juegos| Las transacciones de juegos se procesan en forma de cola. | [Cola de Azure Storage](https://azure.microsoft.com/services/storage/queues/)| Las colas absorben las ráfagas de tráfico inesperadas y pueden impedir que los servidores se sobrecarguen con una avalancha repentina de solicitudes durante el juego.   |
+| Poner en cola transacciones y solicitudes de juegos| Las transacciones de juegos se procesan en forma de cola. | [Azure Queue Storage](https://azure.microsoft.com/services/storage/queues/)| Las colas absorben las ráfagas de tráfico inesperadas y pueden impedir que los servidores se sobrecarguen con una avalancha repentina de solicitudes durante el juego.   |
 | Base de datos de juegos relacional escalable| Almacenamiento estructurado de datos relacionales, como las transacciones en el juego, en la base de datos. | [Base de datos SQL Azure](https://azure.microsoft.com/services/sql-database/)| Base de datos SQL como servicio ([comparación con SQL en una máquina virtual](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)).  |
 | Base de datos de juegos escalable y distribuida de baja latencia| Lectura, escritura y consulta rápidas de datos del juego y el reproductor con flexibilidad de esquema. | [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)| Base de datos de documentos NoSQL de baja latencia como servicio.   |
 | Uso del centro de datos propio con los servicios de Azure | El juego se recupera del propio centro de datos y se envía a los dispositivos cliente. | [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) | Permite a tu organización ofrecer servicios de Azure del propio centro de datos que te ayudarán a mejorar tus logros.  |
@@ -221,7 +221,7 @@ Estamos continuamente innovando y añadiendo características nuevas. Para obten
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Guía de desarrollo de juegos de Windows 10](https://msdn.microsoft.com/windows/uwp/gaming/e2e)
+* [Guía de desarrollo de juegos de Windows 10](https://docs.microsoft.com/windows/uwp/gaming/e2e)
 * [Azure para juegos](https://azure.microsoft.com/solutions/gaming/)
 * [Playfab](https://playfab.com/)
 * [Microsoft for Startups](https://startups.microsoft.com)

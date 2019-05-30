@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, rendering, representación, scene, escena, depth testing, pruebas de profundidad, direct3d, shadows, sombras
 ms.localizationpriority: medium
-ms.openlocfilehash: 237da82ef51466ae2460c3be27486091bf4066f3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d1c2c4e5d45b28c318085f4ce257b587f23f1426
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630460"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368105"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>Representar la escena con prueba de profundidad
 
@@ -67,7 +67,7 @@ Luego el sombreador de píxeles usará la posición del espacio de luz interpola
 ## <a name="test-whether-the-position-is-in-the-light-frustum"></a>Probar si la posición está en el frustum de la luz
 
 
-Primero comprueba que el píxel esté en el frustum de vista de la luz normalizando las coordenadas X e Y. Si ambos están dentro del intervalo \[0, 1\] , a continuación, es posible que el píxel en la sombra. De lo contrario, puedes omitir la prueba de profundidad. Un sombreador puede probar esto rápidamente llamando a [Saturar](https://msdn.microsoft.com/library/windows/desktop/hh447231) y comparando el resultado con el valor original.
+Primero comprueba que el píxel esté en el frustum de vista de la luz normalizando las coordenadas X e Y. Si ambos están dentro del intervalo \[0, 1\] , a continuación, es posible que el píxel en la sombra. De lo contrario, puedes omitir la prueba de profundidad. Un sombreador puede probar esto rápidamente llamando a [Saturar](https://docs.microsoft.com/windows/desktop/direct3dhlsl/saturate) y comparando el resultado con el valor original.
 
 ```cpp
 // Compute texture coordinates for the current point's location on the shadow map.
@@ -89,7 +89,7 @@ if ((saturate(shadowTexCoords.x) == shadowTexCoords.x) &&
 ## <a name="depth-test-against-the-shadow-map"></a>Prueba de profundidad con el mapa de sombras
 
 
-Usa una función de comparación de muestras ([SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) o [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697)) para probar la profundidad del píxel en espacio de luz con respecto al mapa de profundidad. Calcula el valor de profundidad de espacio de luz normalizada, que es `z / w`, y pasa el valor a la función de comparación. Dado que usamos una prueba de comparación LessOrEqual para el muestrario, la función intrínseca devuelve cero cuando se aprueba la prueba de comparación. Esto indica que el píxel está en sombra.
+Usa una función de comparación de muestras ([SampleCmp](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmp) o [SampleCmpLevelZero](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmplevelzero)) para probar la profundidad del píxel en espacio de luz con respecto al mapa de profundidad. Calcula el valor de profundidad de espacio de luz normalizada, que es `z / w`, y pasa el valor a la función de comparación. Dado que usamos una prueba de comparación LessOrEqual para el muestrario, la función intrínseca devuelve cero cuando se aprueba la prueba de comparación. Esto indica que el píxel está en sombra.
 
 ```cpp
 // Use an offset value to mitigate shadow artifacts due to imprecise 

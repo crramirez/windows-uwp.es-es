@@ -7,19 +7,19 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e1f7e787f2ee80a3168d38a9afd9a249dc0e6de0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 81b2bc5e78087b19d8829df4dab4b03e4db76467
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603070"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370987"
 ---
 # <a name="pixel-shader-ps-stage"></a>Fase del sombreador de píxeles (PS)
 
 
 La fase del sombreador de píxeles (PS) recibe datos interpolados de un primitivo y genera datos por píxel, como el color.
 
-Se trata de una fase del sombreador programable; se muestra como un bloque redondeado en el diagrama de [canalización de gráficos](graphics-pipeline.md). Esta fase del sombreador expone su propia funcionalidad única, integrada en Shader Model 4.0 [Common-Shader Core](https://msdn.microsoft.com/library/windows/desktop/bb509580).
+Se trata de una fase del sombreador programable; se muestra como un bloque redondeado en el diagrama de [canalización de gráficos](graphics-pipeline.md). Esta fase del sombreador expone su propia funcionalidad única, integrada en Shader Model 4.0 [Common-Shader Core](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-common-core).
 
 La fase del sombreador de píxeles (PS) habilita completas técnicas de sombreado, como el posprocesamiento y la iluminación por píxel. Un sombreador de píxeles es un programa que combina variables de constantes, datos de textura, valores interpolados por vértice y otros datos para producir salidas por píxel. La [fase del rasterizador (RS)](rasterizer-stage--rs-.md) invoca un sombreador de píxeles una vez para cada píxel incluido en un primitivo, aunque se puede especificar un sombreador **NULL** para impedir que se ejecute un sombreador.
 
@@ -34,9 +34,9 @@ Cuando se configura la canalización sin un sombreador de geometría, un sombrea
 
 Los datos de entrada del sombreador de píxeles incluyen atributos de vértice (que se pueden interpolar con o sin corrección de la perspectiva) o pueden tratarse como constantes por primitivo. Las entradas del sombreador de píxeles se interpolan desde los atributos de vértice del primitivo que se está rasterizando, según el modo de interpolación declarado. Si un primitivo se recorta antes de la rasterización, el modo de interpolación se respeta también durante el proceso de recorte.
 
-Los atributos de vértice se interpolan (o evalúan) en las ubicaciones del centro del sombreador de píxeles. Los modos de interpolación de atributos del sombreador de píxeles se declaran en una declaración del registro de entrada, por elemento, ya sea en un [argumento](https://msdn.microsoft.com/library/windows/desktop/bb509606) o una [estructura de entrada](https://msdn.microsoft.com/library/windows/desktop/bb509668). Los atributos se pueden interpolar de forma lineal o con el muestreo de centroide. Consulta la sección "Muestreo centroide de atributos durante el suavizado de contorno multimuestra" en [Reglas de rasterización](rasterization-rules.md). La evaluación centroide es importante solamente durante el muestreo múltiple para resolver casos donde un píxel está incluido en un tipo, pero un centro de píxel podría no estarlo; la evaluación centroide se produce lo más cerca posible del centro de píxeles (no incluido).
+Los atributos de vértice se interpolan (o evalúan) en las ubicaciones del centro del sombreador de píxeles. Los modos de interpolación de atributos del sombreador de píxeles se declaran en una declaración del registro de entrada, por elemento, ya sea en un [argumento](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-function-parameters) o una [estructura de entrada](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-struct). Los atributos se pueden interpolar de forma lineal o con el muestreo de centroide. Consulta la sección "Muestreo centroide de atributos durante el suavizado de contorno multimuestra" en [Reglas de rasterización](rasterization-rules.md). La evaluación centroide es importante solamente durante el muestreo múltiple para resolver casos donde un píxel está incluido en un tipo, pero un centro de píxel podría no estarlo; la evaluación centroide se produce lo más cerca posible del centro de píxeles (no incluido).
 
-Las entradas también se pueden declarar con una [semántica de valor del sistema](https://msdn.microsoft.com/library/windows/desktop/bb509647), que marca un parámetro que se utiliza en otras fases de la canalización. Por ejemplo, una posición de píxel debe marcarse con la VP\_la semántica de posición. El [etapa del ensamblador de entrada (IA)](input-assembler-stage--ia-.md) puede generar uno escalar de un sombreador de píxeles (mediante SV\_PrimitiveID); el [etapa del rasterizador (RS)](rasterizer-stage--rs-.md) también se puede generar uno escalar de un sombreador de píxeles (mediante SV\_ IsFrontFace).
+Las entradas también se pueden declarar con una [semántica de valor del sistema](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics), que marca un parámetro que se utiliza en otras fases de la canalización. Por ejemplo, una posición de píxel debe marcarse con la VP\_la semántica de posición. El [etapa del ensamblador de entrada (IA)](input-assembler-stage--ia-.md) puede generar uno escalar de un sombreador de píxeles (mediante SV\_PrimitiveID); el [etapa del rasterizador (RS)](rasterizer-stage--rs-.md) también se puede generar uno escalar de un sombreador de píxeles (mediante SV\_ IsFrontFace).
 
 ## <a name="span-idoutputsspanspan-idoutputsspanspan-idoutputsspanoutputs"></a><span id="Outputs"></span><span id="outputs"></span><span id="OUTPUTS"></span>Salidas
 

@@ -3,7 +3,7 @@ description: Puede crear una vista de árbol expandible mediante el enlace de It
 title: Vista de árbol
 label: Tree view
 template: detail.hbs
-ms.date: 01/03/2019
+ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 pm-contact: predavid
@@ -13,13 +13,13 @@ doc-status: Published
 dev_langs:
 - csharp
 - vb
-ms.custom: RS5
-ms.openlocfilehash: 7c666d417fb980cab72165681583ac83e9eaca00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.custom: RS5, 19H1
+ms.openlocfilehash: d9f0396558186008430ccf1454e48f5e2194ee0e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57628520"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363999"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -85,7 +85,7 @@ Puede enlazar un origen de datos jerárquicos para la [ItemsSource](/uwp/api/win
 > [!IMPORTANT]
 > Sus API relacionado y ItemsSource requieren Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior, o el [biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 >
-> ItemsSource es un mecanismo alternativo para TreeView.RootNodes para colocar contenido en el control TreeView. No se puede establecer ItemsSource y RootNodes al mismo tiempo. Cuando usas ItemsSource, crean automáticamente los nodos y puede tener acceso a ellos desde la propiedad TreeView.RootNodes.
+> ItemsSource es un mecanismo alternativo para TreeView.RootNodes para colocar contenido en el control TreeView. No se puede establecer ItemsSource y RootNodes al mismo tiempo. Cuando usas ItemsSource, los nodos se crean automáticamente y puede tener acceso a ellos desde la propiedad TreeView.RootNodes.
 
 Este es un ejemplo de una vista de árbol sencilla que se ha declarado en XAML. Normalmente se agregan los nodos en el código, pero te mostramos aquí la jerarquía XAML, porque puede resultar útil para visualizar cómo se crea la jerarquía de nodos.
 
@@ -126,7 +126,7 @@ Consulte _mediante enlace de datos de vista de árbol_ la sección ejemplos para
 
 Si usa TreeView.ItemsSource, estas API están disponibles para obtener el nodo o elemento de datos desde el contenedor y viceversa.
 
-| **[Elemento TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem)** | |
+| **[TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem)** | |
 | - | - |
 | [TreeView.ItemFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.itemfromcontainer) | Obtiene el elemento de datos para el contenedor de TreeViewItem especificado. |
 | [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | Obtiene el contenedor de TreeViewItem para el elemento de datos especificado. |
@@ -171,17 +171,17 @@ End Sub
 
 Estas API están disponibles para administrar la jerarquía de datos de su vista de árbol.
 
-| **[Vista de árbol](/uwp/api/windows.ui.xaml.controls.treeview)** | |
+| **[TreeView](/uwp/api/windows.ui.xaml.controls.treeview)** | |
 | - | - |
 | [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) | Una vista de árbol puede tener uno o varios nodos de raíz. Agrega un objeto TreeViewNode a la colección RootNodes para crear un nodo raíz. El **Parent** de un nodo raíz es siempre **null**. El valor de **Depth** de un nodo raíz es 0. |
 
 | **[TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)** | |
 | - | - |
-| [Elementos secundarios](/uwp/api/windows.ui.xaml.controls.treeviewnode.children) | Agrega objetos TreeViewNode a la colección de elementos secundarios de un nodo primario para crear la jerarquía del nodo. Un nodo es el elemento **Parent** de todos los nodos en su colección **Children**. |
+| [Children](/uwp/api/windows.ui.xaml.controls.treeviewnode.children) | Agrega objetos TreeViewNode a la colección de elementos secundarios de un nodo primario para crear la jerarquía del nodo. Un nodo es el elemento **Parent** de todos los nodos en su colección **Children**. |
 | [HasChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.haschildren) | **true** si el nodo ha realizado los elementos secundarios. **false** indica una carpeta vacía o un elemento. |
 | [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) | Usa esta propiedad si estás rellenando nodos cuando se expanden. Consulta _Rellenar un nodo cuando está en expansión_ más adelante en este artículo. |
 | [profundidad](/uwp/api/windows.ui.xaml.controls.treeviewnode.depth) | Indica a qué distancia está un nodo secundario del nodo raíz. |
-| [Elemento primario](/uwp/api/windows.ui.xaml.controls.treeviewnode.parent) | Obtiene la TreeViewNode que posee la colección **Children** de la que forma parte este nodo. |
+| [Parent](/uwp/api/windows.ui.xaml.controls.treeviewnode.parent) | Obtiene la TreeViewNode que posee la colección **Children** de la que forma parte este nodo. |
 
 La vista de árbol utiliza las propiedades **HasChildren** y **HasUnrealizedChildren** para determinar si se muestra el icono de expandir/contraer. Si cualquiera de estas propiedades es **true**, se muestra el icono; de lo contrario, no se muestra.
 
@@ -932,5 +932,5 @@ End Sub
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [TreeView (clase)](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview)
-- [Clase de ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)
+- [Clase de ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)
 - [ListView y GridView](listview-and-gridview.md)

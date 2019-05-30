@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Microsoft Store, Store services, Microsoft Store analytics API, API de análisis de Microsoft Store, campañas publicitarias, ad campaigns
 ms.localizationpriority: medium
-ms.openlocfilehash: 1190ec43c5b98eabd897a3bed3788aaf6eb0cb7d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d1b76184f70c796ad3b6e89b119dd56670ed028f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594580"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372161"
 ---
 # <a name="get-ad-campaign-performance-data"></a>Obtener los datos de rendimiento de la campaña de anuncios
 
@@ -41,7 +41,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                |
+| Header        | Tipo   | Descripción                |
 |---------------|--------|---------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
@@ -53,14 +53,14 @@ Para recuperar los datos de rendimiento de una campaña de anuncios de una aplic
 | Parámetro     | Tipo   | Descripción     | Requerido |
 |---------------|--------|-----------------|----------|
 | applicationId   | string    | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que quieres recuperar los datos de rendimiento de campaña de anuncios. |    No      |
-|  startDate  |  fecha   |  La fecha de inicio del intervalo de fechas de los datos de rendimiento de campaña de anuncios que quieres recuperar en formato AAAA/MM/DD. El valor predeterminado es la fecha 30 días posterior al día en curso.   |   No    |
-| endDate   |  fecha   |  La fecha de finalización del intervalo de fechas de los datos de rendimiento de campaña de anuncios que quieres recuperar en formato AAAA/MM/DD. El valor predeterminado es la fecha del día anterior.   |   No    |
+|  startDate  |  date   |  La fecha de inicio del intervalo de fechas de los datos de rendimiento de campaña de anuncios que quieres recuperar en formato AAAA/MM/DD. El valor predeterminado es la fecha 30 días posterior al día en curso.   |   No    |
+| endDate   |  date   |  La fecha de finalización del intervalo de fechas de los datos de rendimiento de campaña de anuncios que quieres recuperar en formato AAAA/MM/DD. El valor predeterminado es la fecha del día anterior.   |   No    |
 | top   |  entero   |  Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos.   |   No    |
 | skip   | entero    |  Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente.   |   No    |
 | filter   |  string   |  Una o más instrucciones que filtran las filas de la respuesta. El único filtro admitido es **campaignId**. Cada instrucción puede utilizar los operadores **eq** o **ne**, y las instrucciones se pueden combinar mediante **and** u **or**.  Este es un ejemplo del parámetro *filter*: ```filter=campaignId eq '100023'```.   |   No    |
 |  aggregationLevel  |  string   | Especifica el intervalo de tiempo necesario para el que quieres recuperar datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>.    |   No    |
-| orderby   |  string   |  <p>Instrucción que ordena los valores de los datos resultantes de los datos de rendimiento de una campaña de anuncios. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:</p><ul><li><strong>Fecha</strong></li><li><strong>campaignId</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Este es un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,campaignId</em></p>   |   No    |
-|  groupby  |  string   |  <p>Una instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:</p><ul><li><strong>campaignId</strong></li><li><strong>applicationId</strong></li><li><strong>Fecha</strong></li><li><strong>currencyCode</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=applicationId&amp;aggregationLevel=week</em></p>   |   No    |
+| orderby   |  string   |  <p>Instrucción que ordena los valores de los datos resultantes de los datos de rendimiento de una campaña de anuncios. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:</p><ul><li><strong>date</strong></li><li><strong>campaignId</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Este es un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,campaignId</em></p>   |   No    |
+|  groupby  |  string   |  <p>Una instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:</p><ul><li><strong>campaignId</strong></li><li><strong>applicationId</strong></li><li><strong>date</strong></li><li><strong>currencyCode</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>&amp;groupby=applicationId&amp;aggregationLevel=week</em></p>   |   No    |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -96,7 +96,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción            |
 |---------------------|--------|------------------------|
-| fecha                | string | Es la primera fecha del intervalo de fechas de los datos de rendimiento de una campaña de anuncios. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| date                | string | Es la primera fecha del intervalo de fechas de los datos de rendimiento de una campaña de anuncios. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | applicationId       | string | El identificador de la Tienda de la aplicación para la que quieres recuperar los datos de rendimiento de campaña de anuncios.                     |
 | campaignId     | string | El identificador de la campaña de anuncios.           |
 | lineId     | string |    El identificador de la [línea de entrega](manage-delivery-lines-for-ad-campaigns.md) de la campaña publicitaria que generó estos datos de rendimiento.        |
@@ -150,6 +150,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear una campaña de publicidad para la aplicación](https://msdn.microsoft.com/windows/uwp/publish/create-an-ad-campaign-for-your-app)
+* [Crear una campaña de publicidad para la aplicación](https://docs.microsoft.com/windows/uwp/publish/create-an-ad-campaign-for-your-app)
 * [Ejecutar campañas de anuncios mediante servicios de Microsoft Store](run-ad-campaigns-using-windows-store-services.md)
 * [Acceder a los datos de análisis con servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)

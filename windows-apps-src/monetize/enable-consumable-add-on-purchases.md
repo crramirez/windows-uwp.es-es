@@ -6,19 +6,19 @@ keywords: windows 10, uwp, consumibles, consumable, complementos, add-ons, compr
 ms.date: 05/09/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 142c9f90161f4fd61946ccb7452af7ee91f66baa
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 601d4d0a2cfe7e6d024e9cc07fefcdb2be688a36
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334823"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371831"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Habilitar compras de complementos consumibles
 
-En este artículo se demuestra cómo usar los métodos de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) en el espacio de nombres [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) para administrar el suministro de complementos consumibles del usuario en las aplicaciones para UWP. Usar complementos consumibles para los elementos que se puedan comprar, usar y volver a comprar. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas.
+En este artículo se demuestra cómo usar los métodos de la clase [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) en el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) para administrar el suministro de complementos consumibles del usuario en las aplicaciones para UWP. Usar complementos consumibles para los elementos que se puedan comprar, usar y volver a comprar. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas.
 
 > [!NOTE]
-> El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [este artículo](enable-consumable-in-app-product-purchases.md).
+> El espacio de nombres **Windows.Services.Store** se introdujo en Windows 10, versión 1607 y solo se puede usar en proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio. Si la aplicación está destinada a una versión anterior de Windows 10, debes usar el espacio de nombres [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) en lugar del espacio de nombres **Windows.Services.Store**. Para obtener más información, consulta [este artículo](enable-consumable-in-app-product-purchases.md).
 
 ## <a name="overview-of-consumable-add-ons"></a>Introducción a los complementos consumibles
 
@@ -45,24 +45,24 @@ En cualquier momento, también puedes [obtener el saldo restante](enable-consuma
 
 Estos ejemplos cumplen los siguientes requisitos:
 * Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o un versión posterior.
-* Tiene [creó un envío de la aplicación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y esta aplicación se publica en el Store. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Tienda mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
+* Tiene [creó un envío de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y esta aplicación se publica en el Store. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Tienda mientras la pruebas. Para obtener más información, consulta nuestra [guía para prueba](in-app-purchases-and-trials.md#testing).
 * Tiene [crea un complemento puede usar para la aplicación](../publish/add-on-submissions.md) en el centro de partners.
 
 El código de estos ejemplos supone que:
-* El código se ejecuta en el contexto de una [página](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) que contiene un elemento [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) denominado ```workingProgressRing``` y un elemento [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominado ```textBlock```. Estos objetos se usan para indicar que se está produciendo una operación asincrónica y para mostrar mensajes de salida, respectivamente.
+* El código se ejecuta en el contexto de una [página](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) que contiene un elemento [ProgressRing](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring) denominado ```workingProgressRing``` y un elemento [TextBlock](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock) denominado ```textBlock```. Estos objetos se usan para indicar que se está produciendo una operación asincrónica y para mostrar mensajes de salida, respectivamente.
 * El archivo de código tiene una instrucción **using** para el espacio de nombres **Windows.Services.Store**.
 * La aplicación es una de usuario único que se ejecuta solamente en el contexto del usuario que la inició. Para obtener más información, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md#api_intro).
 
 Para obtener una aplicación de ejemplo completa, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
 
 > [!NOTE]
-> Si tienes una aplicación de escritorio que usa el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop), puede que tengas que agregar código adicional que no se muestra en estos ejemplos para configurar el objeto [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
+> Si tienes una aplicación de escritorio que usa el [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop), puede que tengas que agregar código adicional que no se muestra en estos ejemplos para configurar el objeto [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext). Para obtener más información, consulta [Uso de la clase StoreContext en una aplicación de escritorio que usa el Puente de escritorio](in-app-purchases-and-trials.md#desktop).
 
 <span id="report_fulfilled" />
 
 ## <a name="report-a-consumable-add-on-as-fulfilled"></a>Notificar un complemento consumible como completado
 
-Después de que el usuario [compre el complemento](enable-in-app-purchases-of-apps-and-add-ons.md) desde la aplicación y de consumir el complemento, la aplicación debe notificar el complemento como completado llamando al método [ReportConsumableFulfillmentAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.reportconsumablefulfillmentasync) de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx). Debes pasar la siguiente información a este método:
+Después de que el usuario [compre el complemento](enable-in-app-purchases-of-apps-and-add-ons.md) desde la aplicación y de consumir el complemento, la aplicación debe notificar el complemento como completado llamando al método [ReportConsumableFulfillmentAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.reportconsumablefulfillmentasync) de la clase [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext). Debes pasar la siguiente información a este método:
 
 * El [Id. de la tienda](in-app-purchases-and-trials.md#store-ids) del complemento que quieres notificar como completado.
 * Las unidades del complemento que quieres notificar como completadas.
@@ -79,7 +79,7 @@ Este ejemplo muestra cómo notificar un consumible administrado por la Tienda co
 
 ## <a name="get-the-remaining-balance-for-a-store-managed-consumable"></a>Obtener el saldo restante para un consumible administrado por la Tienda
 
-En este ejemplo se muestra cómo usar el método [GetConsumableBalanceRemainingAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getconsumablebalanceremainingasync) de la clase [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) para obtener el saldo restante para un complemento consumible administrado por la Tienda.
+En este ejemplo se muestra cómo usar el método [GetConsumableBalanceRemainingAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getconsumablebalanceremainingasync) de la clase [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) para obtener el saldo restante para un complemento consumible administrado por la Tienda.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-csharp[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs#GetRemainingAddOnBalance)]

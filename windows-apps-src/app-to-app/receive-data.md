@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e17b9ddd5833899a83e24d24c74f9c620a28f5c8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bfd84d5e0e41f07b53be0c0afce4b881a8a75d59
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617640"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359220"
 ---
 # <a name="receive-data"></a>Recibir datos
 
@@ -57,7 +57,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 } 
 ```
 
-Los datos que el usuario quiere compartir están contenidos en un objeto [**ShareOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation). Puedes usar este objeto para comprobar el formato de los datos que contiene.
+Los datos que el usuario quiere compartir están contenidos en un objeto [**ShareOperation**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation). Puedes usar este objeto para comprobar el formato de los datos que contiene.
 
 ```cs
 ShareOperation shareOperation = args.ShareOperation;
@@ -79,7 +79,7 @@ En algunos casos, es posible que tu aplicación tarde en procesar los datos que 
 shareOperation.ReportStarted(); 
 ```
 
-Después de llamar a [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted), no debes esperar más interacciones del usuario con tu aplicación. En consecuencia, no debes llamar a este método a menos que tu aplicación se encuentre en un punto en el que el usuario pueda descartarla.
+Después de llamar a [**ReportStarted**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted), no debes esperar más interacciones del usuario con tu aplicación. En consecuencia, no debes llamar a este método a menos que tu aplicación se encuentre en un punto en el que el usuario pueda descartarla.
 
 Con un recurso compartido extendido, es posible que el usuario quiera descartar la aplicación de origen antes de que tu aplicación tenga todos los datos del objeto DataPackage. Por lo tanto, te recomendamos que, cuando tu aplicación haya adquirido los datos que necesita, informes al sistema. De este modo, el sistema puede suspender o finalizar la aplicación de origen según sea necesario.
 
@@ -93,21 +93,21 @@ Si se produce algún problema, llama a [**ReportError**](https://msdn.microsoft.
 shareOperation.ReportError("Could not reach the server! Try again later."); 
 ```
 
-Por último, una vez que tu aplicación haya procesado correctamente el contenido compartido, debes llamar a [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted) para notificárselo al sistema.
+Por último, una vez que tu aplicación haya procesado correctamente el contenido compartido, debes llamar a [**ReportCompleted**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportcompleted) para notificárselo al sistema.
 
 ```cs
 shareOperation.ReportCompleted();
 ```
 
-Cuando usas estos métodos, normalmente los llamas en el orden indicado anteriormente y no lo haces más de una vez. Sin embargo, hay veces en las que una aplicación de destino puede llamar a [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) antes de a [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted). Por ejemplo, la aplicación podría recuperar los datos como parte de una tarea del controlador de activación, pero no llamar a **ReportStarted** hasta que el usuario seleccione botón **Compartir**.
+Cuando usas estos métodos, normalmente los llamas en el orden indicado anteriormente y no lo haces más de una vez. Sin embargo, hay veces en las que una aplicación de destino puede llamar a [**ReportDataRetrieved**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportdataretrieved) antes de a [**ReportStarted**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted). Por ejemplo, la aplicación podría recuperar los datos como parte de una tarea del controlador de activación, pero no llamar a **ReportStarted** hasta que el usuario seleccione botón **Compartir**.
 
 ## <a name="return-a-quicklink-if-sharing-was-successful"></a>Devolver un objeto Quicklink en operaciones de uso compartido correctas
 
-Cuando un usuario seleccione tu aplicación para recibir contenido, te recomendamos que crees un [**QuickLink**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink). Un **QuickLink** es como un acceso directo que hace que a los usuarios les resulte más fácil compartir información con tu aplicación. Por ejemplo, tu aplicación puede crear un **QuickLink** que abra un nuevo mensaje de correo configurado previamente con la dirección de correo de un amigo.
+Cuando un usuario seleccione tu aplicación para recibir contenido, te recomendamos que crees un [**QuickLink**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink). Un **QuickLink** es como un acceso directo que hace que a los usuarios les resulte más fácil compartir información con tu aplicación. Por ejemplo, tu aplicación puede crear un **QuickLink** que abra un nuevo mensaje de correo configurado previamente con la dirección de correo de un amigo.
 
-Un **QuickLink** debe tener un título, un icono y un identificador. El título (por ejemplo, "Enviar correo electrónico a mamá") y el icono aparecen cuando el usuario pulsa el símbolo Compartir. El identificador es lo que tu aplicación usa para acceder a cualquier información personalizada, como una dirección de correo o unas credenciales de inicio de sesión. Cuando la aplicación crea un **QuickLink**, devuelve el **QuickLink** al sistema mediante una llamada a [**ReportCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportCompleted).
+Un **QuickLink** debe tener un título, un icono y un identificador. El título (por ejemplo, "Enviar correo electrónico a mamá") y el icono aparecen cuando el usuario pulsa el símbolo Compartir. El identificador es lo que tu aplicación usa para acceder a cualquier información personalizada, como una dirección de correo o unas credenciales de inicio de sesión. Cuando la aplicación crea un **QuickLink**, devuelve el **QuickLink** al sistema mediante una llamada a [**ReportCompleted**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportcompleted).
 
-Un **QuickLink** en realidad no almacena datos. En su lugar, contiene un identificador que, cuando se selecciona, se envía a tu aplicación. Tu aplicación es responsable de almacenar el identificador del **QuickLink** y los datos de usuario correspondientes. Cuando el usuario pulsa el objeto **QuickLink**, puedes obtener el identificador mediante la propiedad [**QuickLinkId**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.QuickLinkId).
+Un **QuickLink** en realidad no almacena datos. En su lugar, contiene un identificador que, cuando se selecciona, se envía a tu aplicación. Tu aplicación es responsable de almacenar el identificador del **QuickLink** y los datos de usuario correspondientes. Cuando el usuario pulsa el objeto **QuickLink**, puedes obtener el identificador mediante la propiedad [**QuickLinkId**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.quicklinkid).
 
 ```cs
 async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, string quickLinkTitle)
@@ -131,15 +131,15 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 }
 ```
 
-## <a name="see-also"></a>Consulte también 
+## <a name="see-also"></a>Vea también 
 
 * [Comunicación entre aplicaciones](index.md)
 * [Compartir datos](share-data.md)
-* [OnShareTargetActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onsharetargetactivated.aspx)
-* [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
-* [ReportError](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reporterror.aspx)
-* [ReportCompleted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportcompleted.aspx)
-* [ReportDataRetrieved](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportdataretrieved.aspx)
-* [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
-* [Enlace rápido](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.aspx)
-* [QuickLInkId](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.id.aspx)
+* [OnShareTargetActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsharetargetactivated)
+* [ReportStarted](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted)
+* [ReportError](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reporterror)
+* [ReportCompleted](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportcompleted)
+* [ReportDataRetrieved](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportdataretrieved)
+* [ReportStarted](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted)
+* [QuickLink](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.quicklink)
+* [QuickLInkId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.quicklink.id)

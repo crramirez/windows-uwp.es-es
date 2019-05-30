@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: eb9c600e58be04d8ce967eb119777d6746507fbe
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a574ff858f8eab3fa1984ecd883a786fa0e0f19c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636370"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364719"
 ---
 # <a name="lists"></a>Listas
 
@@ -30,7 +30,7 @@ Mostrar listas y habilitar la interacción con el contenido basado en la colecci
 
 Se proporcionan directrices de diseño, características y ejemplos para cada patrón de lista.
 
-> **API importantes**: [Clase de ListView](https://msdn.microsoft.com/library/windows/apps/br242878), [clase GridView](https://msdn.microsoft.com/library/windows/apps/br242705), [ComboBox (clase)](https://msdn.microsoft.com/library/windows/apps/br209348)
+> **API importantes**: [Clase de ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [ComboBox (clase)](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
 
 > <div id="main">
@@ -92,7 +92,7 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 <td align="left"><p>Las listas invertidas tienen nuevos elementos agregados en la parte inferior, al igual que en una aplicación de chat. Sigue estas instrucciones para usar una lista invertida en tu aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="pull-to-refresh.md">Incorporación de cambios para actualizar</a></p></td>
+<td align="left"><p><a href="pull-to-refresh.md">Pull-to-refresh</a></p></td>
 <td align="left"><p>El patrón extraer para actualizar permite al usuario desplegar una lista de datos con la entrada táctil para recuperar más datos. Usa estas instrucciones para implementar el patrón extraer para actualizar en tu vista de lista.</p></td>
 </tr>
 <tr class="even">
@@ -265,11 +265,11 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 - [Maestro/detalles](master-details.md)
 - [Panel de navegación](navigationview.md)
 - [Zoom semántico](semantic-zoom.md)
-- [Arrastrar y colocar](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
+- [Arrastrar y colocar](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 - [Imágenes en miniatura](../../files/thumbnails.md)
 
 **Para desarrolladores**
-- [Clase de ListView](https://msdn.microsoft.com/library/windows/apps/br242878)
-- [Clase GridView](https://msdn.microsoft.com/library/windows/apps/br242705)
-- [ComboBox (clase)](https://msdn.microsoft.com/library/windows/apps/br209348)
-- [Clase de cuadro de lista](https://msdn.microsoft.com/library/windows/apps/br242868)
+- [Clase de ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [Clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
+- [ComboBox (clase)](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+- [Clase de cuadro de lista](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)

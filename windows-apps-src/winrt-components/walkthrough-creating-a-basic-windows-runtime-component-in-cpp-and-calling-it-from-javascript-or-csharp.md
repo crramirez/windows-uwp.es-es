@@ -6,18 +6,18 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1f147d98b8d88e912cc9fec40d5e29c34748167
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: 4bed6858998fe20a5dddf709cac1d2436f001c08
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291903"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363196"
 ---
 # <a name="walkthrough-creating-a-windows-runtime-component-in-ccx-and-calling-it-from-javascript-or-c"></a>Tutorial: Crear un componente de Windows Runtime en C++/CX y llamarlo desde JavaScript o C#
 > [!NOTE]
 > Este tema existe para ayudar a mantener tu aplicación de C++/CX. Pero te recomendamos que uses [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para nuevas aplicaciones. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows. Para obtener información sobre cómo crear un componente de tiempo de ejecución de Windows con C++ / c++ / WinRT, consulte [crear eventos en C / c++ / WinRT](../cpp-and-winrt-apis/author-events.md).
 
-En este tutorial se muestra cómo crear un archivo DLL básico del componente de Windows Runtime que se pueda llamar desde JavaScript, C# o Visual Basic. Antes de comenzar este tutorial, asegúrate de que conoces conceptos como la interfaz binaria abstracta (ABI), las clases de referencia y las extensiones del componente de Visual C++, que facilitan el trabajo con clases de referencia. Para obtener más información, consulta [Crear componentes de Windows Runtime en C++](creating-windows-runtime-components-in-cpp.md) y [Referencia del lenguaje de Visual C++ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
+En este tutorial se muestra cómo crear un archivo DLL básico del componente de Windows Runtime que se pueda llamar desde JavaScript, C# o Visual Basic. Antes de comenzar este tutorial, asegúrate de que conoces conceptos como la interfaz binaria abstracta (ABI), las clases de referencia y las extensiones del componente de Visual C++, que facilitan el trabajo con clases de referencia. Para obtener más información, consulta [Crear componentes de Windows Runtime en C++](creating-windows-runtime-components-in-cpp.md) y [Referencia del lenguaje de Visual C++ (C++/CX)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx).
 
 ## <a name="creating-the-c-component-dll"></a>Crear el archivo DLL del componente de C++
 En este ejemplo, en primer lugar se crea el proyecto de componente, pero primero se podría crear el proyecto de JavaScript. No importa el orden.
@@ -34,7 +34,7 @@ Ten en cuenta que la clase principal del componente contiene ejemplos de definic
 4. Elige el botón **Aceptar**.
 
 ## <a name="to-add-an-activatable-class-to-the-component"></a>**Para agregar una clase activable al componente**
-Una clase activable es la que puede crear el código de cliente mediante una **nueva** expresión (**Nuevo** en Visual Basic, o **ref new** en C++). En tu componente, debe declararse como **public ref class sealed**. De hecho, los archivos Class1.h y .cpp ya tienen una clase de referencia. Puedes cambiar el nombre, pero en este ejemplo, usaremos el nombre predeterminado: Class1. Puedes definir clases de referencia adicionales o normales en tu componente si son necesarias. Para obtener más información sobre las clases de referencia, consulta [Sistema de tipo (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx).
+Una clase activable es la que puede crear el código de cliente mediante una **nueva** expresión (**Nuevo** en Visual Basic, o **ref new** en C++). En tu componente, debe declararse como **public ref class sealed**. De hecho, los archivos Class1.h y .cpp ya tienen una clase de referencia. Puedes cambiar el nombre, pero en este ejemplo, usaremos el nombre predeterminado: Class1. Puedes definir clases de referencia adicionales o normales en tu componente si son necesarias. Para obtener más información sobre las clases de referencia, consulta [Sistema de tipo (C++/CX)](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx).
 
 Agregue estas \#directivas #include a Class1.h:
 
@@ -272,7 +272,7 @@ Si solo deseas crear un cliente de C#, puedes omitir este apartado.
 ### <a name="to-create-a-javascript-project"></a>Para crear un proyecto de JavaScript
 1. En el Explorador de soluciones, abre el menú contextual para el nodo Solución y elige **Añadir, Nuevo proyecto**.
 
-2. Expande JavaScript (puede estar anidado en **Otros lenguajes**) y elige **Aplicación vacía (Windows Universal)**.
+2. Expande JavaScript (puede estar anidado en **Otros lenguajes**) y elige **Aplicación vacía (Windows Universal)** .
 
 3. Acepta el nombre predeterminado, App1, eligiendo el botón **Aceptar**.
 

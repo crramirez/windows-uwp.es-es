@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d10dbf52f0ed01d46f9e5cba83cd14d48bfc88d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9d4910a514c9fc1f16c29056319043393506a9e2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639180"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366913"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Crear un juego para UWP en JavaScript
 
@@ -51,7 +51,7 @@ La forma más sencilla de empezar es visitar GitHub, haz clic en el botón verde
 
 ![Clonar el repositorio](images/JS2D_2.png)
 
-También puedes descargar el proyecto como un archivo zip, o usar cualquier otra manera estándar para que funcione con [proyectos de GitHub](https://msdn.microsoft.com/en-us/windows/uwp/get-started/get-uwp-app-samples).
+También puedes descargar el proyecto como un archivo zip, o usar cualquier otra manera estándar para que funcione con [proyectos de GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
 
 Una vez que se ha cargado la solución en Visual Studio, verás varios archivos, incluidos:
 
@@ -122,7 +122,7 @@ Haremos que el dinosaurio camine, mediante la definición de diferentes fotogram
 
 Ahora, vamos a agregar algunas nubes esponjosas al escenario. Una vez que se ejecute el juego, se deslizarán por la pantalla. La imagen para la nube ya está en la solución, en la carpeta de *imágenes*.
 
-Busca en **main.js** hasta que encuentres la función **init()**. Esta función se llama cuando se inicia el juego, y es dónde empezamos a configurar todos los objetos gráficos.
+Busca en **main.js** hasta que encuentres la función **init()** . Esta función se llama cuando se inicia el juego, y es dónde empezamos a configurar todos los objetos gráficos.
 
 Busque el código siguiente y quite los comentarios (\\) desde la línea que hace referencia a la imagen en la nube.
 
@@ -145,7 +145,7 @@ JavaScript necesita un poco de ayuda para cargar recursos como imágenes, así q
     loader.loadManifest(manifest, true, "../images/");
 ```    
 
-Cuando se llama a la función **loadingComplete()**, las imágenes se cargan y están listas para usar. Podrás ver una sección comentada que crea las nubes, ahora su mapa de bits ya está disponible. Quita los comentarios, para que tenga este aspecto:
+Cuando se llama a la función **loadingComplete()** , las imágenes se cargan y están listas para usar. Podrás ver una sección comentada que crea las nubes, ahora su mapa de bits ya está disponible. Quita los comentarios, para que tenga este aspecto:
 
 ```
     // Create some clouds to drift by..
@@ -177,7 +177,7 @@ Ahora vamos a hacer que las nubes se muevan. El secreto para hacer que las nubes
 
 Este código llamará a una función denominada **gameLoop()** entre 30 y 60 fotogramas por segundo. La velocidad exacta depende de la velocidad del equipo.
 
-Busca la función **gameLoop()** y hacia el final verás una función denominada **animateClouds()**. Modifícala para que no se comente.
+Busca la función **gameLoop()** y hacia el final verás una función denominada **animateClouds()** . Modifícala para que no se comente.
 
 ```
     // Move clouds
@@ -204,7 +204,7 @@ Si ejecutas la aplicación ahora, verás que las nubes han iniciado el desplazam
 
 ### <a name="4-adding-keyboard-and-mouse-input"></a>4. Adición de teclado y mouse de entrada
 
-Un juego con el que no se puede interactuar, no es un juego. Así que vamos a permitir que el jugador use el teclado o el mouse para hacer algo. En la función **loadingComplete()**, verás lo siguiente. Quita los comentarios.
+Un juego con el que no se puede interactuar, no es un juego. Así que vamos a permitir que el jugador use el teclado o el mouse para hacer algo. En la función **loadingComplete()** , verás lo siguiente. Quita los comentarios.
 
 ```
     // This code will call the method 'keyboardPressed' is the user presses a key.
@@ -214,7 +214,7 @@ Un juego con el que no se puede interactuar, no es un juego. Así que vamos a pe
     stage.on("stagemousedown", mouseClicked);
 ```
 
-Ahora tenemos dos funciones que se llamarán cada vez que el jugador toque una tecla o haga clic con el mouse. Ambos eventos llamarán a **userDidSomething()**, una función que mira la variable gamestate para decidir qué está haciendo el juego, y qué debe ocurrir después como resultado.
+Ahora tenemos dos funciones que se llamarán cada vez que el jugador toque una tecla o haga clic con el mouse. Ambos eventos llamarán a **userDidSomething()** , una función que mira la variable gamestate para decidir qué está haciendo el juego, y qué debe ocurrir después como resultado.
 
 Gamestate es un patrón de diseño común que se usa en juegos. Todo lo que sucede, sucede en la función **gameLoop()** que llama el temporizador ticker. gameLoop() realiza un seguimiento de si se está jugando al juego, o si está en un "estado de fin del juego" o en un "estado listo para jugar", o cualquier otro estado que defina el autor, con una variable. Esta variable de estado se comprueba en una instrucción switch y esto define a qué otras funciones se llama. Por lo tanto, si el estado se establece en "jugando", se llamará a las funciones para hacer que el dinosaurio salte y que los barriles se muevan. Si algo mata al dinosaurio, la variable gamestate se configurará en "estado de fin del juego" y se mostrará el mensaje "¡Fin del juego !". Si estás interesado en los patrones de diseño de juego, te recomendamos el libro [Game Programming Patterns](https://gameprogrammingpatterns.com/) (Modelos de programación de juegos).
 
@@ -261,8 +261,8 @@ Ahora tiene una aplicación para UWP, es posible que publicarla en la Microsoft 
 Este proceso tiene diferentes pasos.
 
 1. Tienes que estar [registrado](https://developer.microsoft.com/en-us/store/register) como desarrollador de Windows.
-2. Debes usar la [lista de comprobación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) del envío de la aplicación.
-3. La aplicación debe enviarse para su [certificación](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process).
+2. Debes usar la [lista de comprobación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) del envío de la aplicación.
+3. La aplicación debe enviarse para su [certificación](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
 
 Para obtener más información, consulte [publicar su aplicación para UWP](https://developer.microsoft.com/en-us/store/publish-apps).
 

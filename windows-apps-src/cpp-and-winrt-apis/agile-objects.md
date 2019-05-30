@@ -1,16 +1,16 @@
 ---
 description: Un objeto ágil es aquel al que se puede acceder desde cualquier subproceso. Tus tipos C++/WinRT son ágiles de manera predeterminada, pero puedes optar por rechazarlos.
 title: Objetos ágiles con C++/WinRT
-ms.date: 10/20/2018
+ms.date: 04/24/2019
 ms.topic: article
 keywords: awndows 10, uwp, estándar, c++, cpp, winrt, proyección, ágil, objeto, agilidad, IAgileObject
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b390161a4eb2c4f38fed9bce226c5a5e92c5ad8
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: 82dff619e6fa3934f69b93090bee90de6359ca07
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291786"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360329"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Los objetos ágiles en C++ / c++ / WinRT
 
@@ -19,7 +19,7 @@ En la mayoría de los casos, una instancia de una clase en tiempo de ejecución 
 Pero puede dejar de participar. Es posible que tenga un motivo convincente para requerir un objeto del tipo residir, por ejemplo, en un determinado contenedor uniproceso. Por lo general, esto está relacionado con los requisitos de reentrada. Pero cada vez más, incluso las API de interfaces de usuarios ofrecen objetos ágiles. En general, la agilidad es la opción más sencilla y aporta el mayor rendimiento. Además, cuando se implementa una fábrica de activaciones, debe ser ágil aunque tu correspondiente clase en tiempo de ejecución no lo sea.
 
 > [!NOTE]
-> Windows Runtime se basa en COM. En términos COM, se registra una clase ágil con `ThreadingModel` = *both*. Para obtener más información sobre subprocesos modelos y apartamentos COM, vea [comprensión y Using COM Threading Models](https://msdn.microsoft.com/library/ms809971).
+> Windows Runtime se basa en COM. En términos COM, se registra una clase ágil con `ThreadingModel` = *both*. Para obtener más información sobre subprocesos modelos y apartamentos COM, vea [comprensión y Using COM Threading Models](/previous-versions/ms809971(v=msdn.10)).
 
 ## <a name="code-examples"></a>Ejemplos de código
 
@@ -37,7 +37,7 @@ struct MyType : winrt::implements<MyType, IStringable>
 };
 ```
 
-Dado que no lo hemos rechazado todavía, esta implementación es ágil. La estructura base [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) implementa [**IAgileObject**](https://msdn.microsoft.com/library/windows/desktop/hh802476) y [**IMarshal**](/windows/desktop/api/objidl/nn-objidl-imarshal). La implementación **IMarshal** usa **CoCreateFreeThreadedMarshaler** para hacer lo correcto para el código heredado que no conoce **IAgileObject**.
+Dado que no lo hemos rechazado todavía, esta implementación es ágil. La estructura base [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) implementa [**IAgileObject**](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject) y [**IMarshal**](/windows/desktop/api/objidl/nn-objidl-imarshal). La implementación **IMarshal** usa **CoCreateFreeThreadedMarshaler** para hacer lo correcto para el código heredado que no conoce **IAgileObject**.
 
 Este código comprueba la agilidad de un objeto. La llamada a [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) inicia una excepción si `myimpl` no es ágil.
 
@@ -115,7 +115,7 @@ La llamada [**agile_ref::get**](/uwp/cpp-ref-for-winrt/agile-ref#agile_refget-fu
 
 ## <a name="important-apis"></a>API importantes
 
-* [Interfaz IAgileObject](https://msdn.microsoft.com/library/windows/desktop/hh802476)
+* [Interfaz IAgileObject](https://docs.microsoft.com/windows/desktop/api/objidl/nn-objidl-iagileobject)
 * [IMarshal (interfaz)](/windows/desktop/api/objidl/nn-objidl-imarshal)
 * [winrt::agile_ref struct template](/uwp/cpp-ref-for-winrt/agile-ref)
 * [winrt::implements struct template](/uwp/cpp-ref-for-winrt/implements)
@@ -126,4 +126,4 @@ La llamada [**agile_ref::get**](/uwp/cpp-ref-for-winrt/agile-ref#agile_refget-fu
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Entender y usar modelos de subprocesamiento de com.](https://msdn.microsoft.com/library/ms809971)
+* [Entender y usar modelos de subprocesamiento de com.](/previous-versions/ms809971(v=msdn.10))

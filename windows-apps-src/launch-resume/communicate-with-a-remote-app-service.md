@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, los sistemas remotos, Roma, proyecto Roma, tarea en segundo plano, el servicio de aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: ddadae05ca3243f9bbd6b53cbb98f234ac560acd
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 067b465feccda424dd6a8e3f44e784166afe6d48
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612940"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366421"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>Comunicarse con un servicio de aplicaciones remoto
 
@@ -63,14 +63,14 @@ Las siguientes instrucciones **using** son necesarias para que el código de est
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetUsings)]
 
 
-Primero debes crear una instancia de un objeto [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.AppService.AppServiceConnection), como si tuvieras que llamar a un servicio de aplicaciones localmente. Este proceso se describe con más detalle en [Crear y consumir un servicio de aplicaciones](how-to-create-and-consume-an-app-service.md). En este ejemplo, el servicio de aplicaciones de destino es el servicio del generador de números aleatorios.
+Primero debes crear una instancia de un objeto [**AppServiceConnection**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceConnection), como si tuvieras que llamar a un servicio de aplicaciones localmente. Este proceso se describe con más detalle en [Crear y consumir un servicio de aplicaciones](how-to-create-and-consume-an-app-service.md). En este ejemplo, el servicio de aplicaciones de destino es el servicio del generador de números aleatorios.
 
 > [!NOTE]
-> Se supone que ya se ha adquirido un objeto [RemoteSystem](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) por algún medio dentro del código que llamará al siguiente método. Consulta [Iniciar una aplicación remota](launch-a-remote-app.md) para obtener instrucciones sobre cómo configurar esta función.
+> Se supone que ya se ha adquirido un objeto [RemoteSystem](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem) por algún medio dentro del código que llamará al siguiente método. Consulta [Iniciar una aplicación remota](launch-a-remote-app.md) para obtener instrucciones sobre cómo configurar esta función.
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetAppService)]
 
-Luego, se crea un objeto [**RemoteSystemConnectionRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemConnectionRequest) para el dispositivo remoto previsto. A continuación, se usa para abrir **AppServiceConnection** para ese dispositivo. Ten en cuenta que, en el siguiente ejemplo, el control y los informes de errores se simplifican por motivos de brevedad.
+Luego, se crea un objeto [**RemoteSystemConnectionRequest**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystemConnectionRequest) para el dispositivo remoto previsto. A continuación, se usa para abrir **AppServiceConnection** para ese dispositivo. Ten en cuenta que, en el siguiente ejemplo, el control y los informes de errores se simplifican por motivos de brevedad.
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetRemoteConnection)]
 
@@ -78,7 +78,7 @@ En este punto, deberías tener una conexión abierta a un servicio de aplicacion
 
 ## <a name="exchange-service-specific-messages-over-the-remote-connection"></a>Mensajes específicos del servicio de Exchange mediante la conexión remota
 
-Desde aquí, puedes enviar y recibir mensajes al servicio y desde el servicio en el formulario de objetos [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset) (para obtener más información, consulta [Crear y consumir un servicio de aplicaciones](how-to-create-and-consume-an-app-service.md)). El servicio de generador de números aleatorios toma dos enteros con las claves `"minvalue"` y `"maxvalue"` como entradas, selecciona aleatoriamente un número entero dentro de su intervalo y lo devuelve al proceso de llamada con la clave `"Result"`.
+Desde aquí, puedes enviar y recibir mensajes al servicio y desde el servicio en el formulario de objetos [**ValueSet**](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset) (para obtener más información, consulta [Crear y consumir un servicio de aplicaciones](how-to-create-and-consume-an-app-service.md)). El servicio de generador de números aleatorios toma dos enteros con las claves `"minvalue"` y `"maxvalue"` como entradas, selecciona aleatoriamente un número entero dentro de su intervalo y lo devuelve al proceso de llamada con la clave `"Result"`.
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetSendMessage)]
 
@@ -89,5 +89,5 @@ Ahora que te has conectado a un servicio de aplicaciones en un dispositivo remot
 [Introducción (proyecto Roma) a aplicaciones y dispositivos conectado](connected-apps-and-devices.md)  
 [Inicie una aplicación remota](launch-a-remote-app.md)  
 [Crear y usar un servicio de aplicación](how-to-create-and-consume-an-app-service.md)  
-[Referencia de API de sistemas remoto](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
+[Referencia de API de sistemas remoto](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems)  
 [Muestra de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)

@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, completar, consumible, Microsoft Store collection API, fulfill, consumable
 ms.localizationpriority: medium
-ms.openlocfilehash: cea8937af3df0ad1e80434d649f431d188521667
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 994113abc34a0a5f7905bff00aa77c6785409927
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615810"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372770"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Notificar productos consumibles como completados
 
@@ -39,12 +39,12 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Método | URI de la solicitud                                                   |
 |--------|---------------------------------------------------------------|
-| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
+| EXPONER   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado         | Tipo   | Descripción                                                                                           |
+| Header         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
 | Autorización  | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;.                           |
 | Host           | string | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
@@ -60,7 +60,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 | itemId        | string       | Valor *itemId* devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con *trackingId*.      | No       |
 | trackingId    | guid         | Identificador de seguimiento único proporcionado por el desarrollador. Usa este parámetro con *itemId*.         | No       |
 | productId     | string       | Valor *productId* devuelto por una [consulta de productos](query-for-products.md). Usa este parámetro con *transactionId*.   | No       |
-| transactionId | guid         | El valor de identificador de transacción que se obtiene de uno de los siguientes orígenes. Usa este parámetro con *productId*.<ul><li>La propiedad [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) de la clase [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392).</li><li>El recibo de la aplicación o del producto devuelto por [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) o [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync).</li><li>El parámetro *transactionId* devuelto por una [consulta de productos](query-for-products.md).</li></ul>   | No       |
+| transactionId | guid         | El valor de identificador de transacción que se obtiene de uno de los siguientes orígenes. Usa este parámetro con *productId*.<ul><li>La propiedad [TransactionID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.purchaseresults.transactionid) de la clase [PurchaseResults](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.PurchaseResults).</li><li>El recibo de la aplicación o del producto devuelto por [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) o [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync).</li><li>El parámetro *transactionId* devuelto por una [consulta de productos](query-for-products.md).</li></ul>   | No       |
 
 
 El objeto UserIdentity contiene los parámetros siguientes.

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, los sistemas remotos, Roma, proyecto Roma
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
-ms.openlocfilehash: c785e6d2a8021148f572df88a6d9e6ba07c4a457
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ae9229378f75adeb215a881bdaf955b010cd7806
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601180"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366372"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Aplicaciones y dispositivos conectados (Project Rome)
 
@@ -19,7 +19,7 @@ En esta sección se explica cómo conectar las aplicaciones en dispositivos y pl
 
 La mayoría de los usuarios tiene varios dispositivos y con frecuencia comienzan una actividad en un dispositivo y la finalizan en otro. Para ello, las aplicaciones necesitan abarcar dispositivos y plataformas. Roma proyecto le permite detectar dispositivos remotos, iniciar una aplicación en un dispositivo remoto y comunicarse con un servicio de aplicaciones en un dispositivo remoto.
 
-Las [API de sistemas remotos](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems) introducidas en Windows 10, versión 1607 te permiten crear aplicaciones que permiten a los usuarios iniciar una tarea en un dispositivo y finalizarla en otro. La tarea sigue siendo el punto central y los usuarios pueden hacer su trabajo en el dispositivo que resulte más cómodo. Por ejemplo, un usuario escuchar la radio del teléfono en el coche, pero, cuando llegue a casa, querrá transferir la reproducción a tu Xbox One, que está conectada a su equipo de música doméstico.
+Las [API de sistemas remotos](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems) introducidas en Windows 10, versión 1607 te permiten crear aplicaciones que permiten a los usuarios iniciar una tarea en un dispositivo y finalizarla en otro. La tarea sigue siendo el punto central y los usuarios pueden hacer su trabajo en el dispositivo que resulte más cómodo. Por ejemplo, un usuario escuchar la radio del teléfono en el coche, pero, cuando llegue a casa, querrá transferir la reproducción a tu Xbox One, que está conectada a su equipo de música doméstico.
 
 También puedes usar Project Rome para dispositivos complementarios o escenarios de control remoto. Usa las API de mensajería de servicio de aplicaciones para crear un canal de la aplicación entre dos dispositivos para enviar y recibir mensajes personalizados. Por ejemplo, puedes escribir una aplicación para el teléfono que controle la reproducción en tu televisión o una aplicación complementaria que proporcione información sobre los personajes de un programa de televisión que estés viendo a través de otra aplicación.  
 

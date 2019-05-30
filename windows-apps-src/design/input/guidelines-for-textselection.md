@@ -8,19 +8,19 @@ keywords: teclado,texto,entrada,interacciones del usuario
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9679e6e658e7fa1eb50b41331e7e59ec2115fc14
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fc227904e57577a30eb2d171a060fb69d39b71f0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612510"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363496"
 ---
 # <a name="selecting-text-and-images"></a>Seleccionar texto e imágenes
 
 
 En este artículo se describen la selección y la manipulación de texto, imágenes y controles, y se ofrecen directrices sobre la experiencia del usuario que debes tener en cuenta al usar estos mecanismos en las aplicaciones.
 
-> **API importantes**: [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994), [ **Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
+> **API importantes**: [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
  
 
 
@@ -109,7 +109,7 @@ Por ejemplo, las barras de redimensionamiento también se pueden usar en aplicac
 
 
 **Para desarrolladores**
-* [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/mt185599)
+* [Interacciones del usuario personalizadas](https://developer.microsoft.com/windows/design/inputs-devices)
 
 **Ejemplos**
 * [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)

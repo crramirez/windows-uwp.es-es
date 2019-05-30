@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, OpenGL, Direct3D, canalización de sombreador
 ms.localizationpriority: medium
-ms.openlocfilehash: f02b365175909b5038e5eb117f12851be9f14e3a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8793ef8b44df1ca1d93133383666434f525f2d07
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653700"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368976"
 ---
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D
 
@@ -20,36 +20,36 @@ ms.locfileid: "57653700"
 
 **API importantes**
 
--   [Etapa del ensamblador de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205116)
--   [Etapa del sombreador de vértices](https://msdn.microsoft.com/library/windows/desktop/bb205146#Vertex_Shader_Stage)
--   [Etapa del sombreador de píxeles](https://msdn.microsoft.com/library/windows/desktop/bb205146#Pixel_Shader_Stage)
+-   [Etapa del ensamblador de entrada](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage)
+-   [Etapa del sombreador de vértices](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85))
+-   [Etapa del sombreador de píxeles](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85))
 
-En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0. En términos de diseño de API, sin embargo, los principales componentes para crear y administrar las fases de sombreador forman parte de dos interfaces importantes: [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575) y [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). En este tema intentamos asignar patrones comunes de API para la canalización de sombreador de OpenGL ES 2.0 a sus equivalentes en Direct3D 11 en estas interfaces.
+En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0. En términos de diseño de API, sin embargo, los principales componentes para crear y administrar las fases de sombreador forman parte de dos interfaces importantes: [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) y [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1). En este tema intentamos asignar patrones comunes de API para la canalización de sombreador de OpenGL ES 2.0 a sus equivalentes en Direct3D 11 en estas interfaces.
 
 ## <a name="reviewing-the-direct3d-11-shader-pipeline"></a>Revisar la canalización de sombreador en Direct3D 11
 
 
-Los objetos de sombreador se crean en la interfaz [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575)con métodos, como [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) y [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513).
+Los objetos de sombreador se crean en la interfaz [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)con métodos, como [**ID3D11Device1::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader) y [**ID3D11Device1::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader).
 
-La canalización de gráficos en Direct3D 11 se administra mediante instancias de la interfaz [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) y tiene estas fases:
+La canalización de gráficos en Direct3D 11 se administra mediante instancias de la interfaz [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) y tiene estas fases:
 
--   [Fase del ensamblador de entrada](https://msdn.microsoft.com/library/windows/desktop/bb205116). Esta fase suministra datos (triángulos, líneas y puntos) a la canalización. [**ID3D11DeviceContext1** ](https://msdn.microsoft.com/library/windows/desktop/hh404598) métodos que admiten esta fase tienen el prefijo "I".
--   [Fase del sombreador de vértices](https://msdn.microsoft.com/library/windows/desktop/bb205146#Vertex_Shader_Stage). Esta fase procesa vértices, normalmente realizando ciertas operaciones, como transformar, enmascarar e iluminar. Un sombreador de vértices siempre toma un solo vértice de entrada y produce un solo vértice de salida. [**ID3D11DeviceContext1** ](https://msdn.microsoft.com/library/windows/desktop/hh404598) métodos que admiten esta fase tienen el prefijo "Frente a".
--   [Fase de salida en secuencias](https://msdn.microsoft.com/library/windows/desktop/bb205121). Esta fase transmite datos primitivos de la canalización a la memoria para llegar al rasterizador. Los datos pueden transmitirse o pasarse al rasterizador. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse en la CPU. [**ID3D11DeviceContext1** ](https://msdn.microsoft.com/library/windows/desktop/hh404598) tienen el prefijo "Otros" métodos que admiten este escenario.
--   [Fase del rasterizador](https://msdn.microsoft.com/library/windows/desktop/bb205125). El rasterizador recorta primitivos, los prepara para el sombreador de píxeles y determina cómo invocar sombreadores de píxeles. Puede deshabilitar la rasterización indicando a la canalización no hay ningún sombreador de píxeles (establecer la etapa del sombreador de píxeles en NULL con [ **ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)) y deshabilitar la profundidad y Galería de símbolos de las pruebas () establecer DepthEnable y StencilEnable en FALSE en [ **D3D11\_profundidad\_CLICHÉ\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476110)). Mientras estén deshabilitadas, los contadores de la canalización relacionados con la rasterización no se actualizarán.
--   [Fase del sombreador de píxeles](https://msdn.microsoft.com/library/windows/desktop/bb205146#Pixel_Shader_Stage): La fase del sombreador de píxeles recibe datos interpolados para un primitivo y genera datos por píxel, como el color. [**ID3D11DeviceContext1** ](https://msdn.microsoft.com/library/windows/desktop/hh404598) métodos que admiten esta fase tienen el prefijo "PS".
--   [Fase de fusión de salida](https://msdn.microsoft.com/library/windows/desktop/bb205120). Esta fase combina varios tipos de datos de salida (valores de sombreador de píxeles, información de profundidad y galería de símbolos) con los contenidos del destino de representación y los búferes de profundidad y galería de símbolos para generar el resultado final de canalización. [**ID3D11DeviceContext1** ](https://msdn.microsoft.com/library/windows/desktop/hh404598) métodos que admiten esta fase tienen el prefijo "OM".
+-   [Fase del ensamblador de entrada](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage). Esta fase suministra datos (triángulos, líneas y puntos) a la canalización. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) métodos que admiten esta fase tienen el prefijo "I".
+-   [Fase del sombreador de vértices](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85)). Esta fase procesa vértices, normalmente realizando ciertas operaciones, como transformar, enmascarar e iluminar. Un sombreador de vértices siempre toma un solo vértice de entrada y produce un solo vértice de salida. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) métodos que admiten esta fase tienen el prefijo "Frente a".
+-   [Fase de salida en secuencias](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-stream-stage). Esta fase transmite datos primitivos de la canalización a la memoria para llegar al rasterizador. Los datos pueden transmitirse o pasarse al rasterizador. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse en la CPU. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) tienen el prefijo "Otros" métodos que admiten este escenario.
+-   [Fase del rasterizador](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage). El rasterizador recorta primitivos, los prepara para el sombreador de píxeles y determina cómo invocar sombreadores de píxeles. Puede deshabilitar la rasterización indicando a la canalización no hay ningún sombreador de píxeles (establecer la etapa del sombreador de píxeles en NULL con [ **ID3D11DeviceContext::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader)) y deshabilitar la profundidad y Galería de símbolos de las pruebas () establecer DepthEnable y StencilEnable en FALSE en [ **D3D11\_profundidad\_CLICHÉ\_DESC**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc)). Mientras estén deshabilitadas, los contadores de la canalización relacionados con la rasterización no se actualizarán.
+-   [Fase del sombreador de píxeles](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85)): La fase del sombreador de píxeles recibe datos interpolados para un primitivo y genera datos por píxel, como el color. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) métodos que admiten esta fase tienen el prefijo "PS".
+-   [Fase de fusión de salida](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-merger-stage). Esta fase combina varios tipos de datos de salida (valores de sombreador de píxeles, información de profundidad y galería de símbolos) con los contenidos del destino de representación y los búferes de profundidad y galería de símbolos para generar el resultado final de canalización. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) métodos que admiten esta fase tienen el prefijo "OM".
 
-(También hay fases para los sombreadores de geometría, sombreadores de casco, teseladores y sombreadores de dominio, pero como estos no tienen análogos en OpenGL ES 2.0, no los trataremos en este tema). Para obtener una lista completa de los métodos para estas fases, consulta las páginas de referencia de [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) y [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). **ID3D11DeviceContext1** extiende **ID3D11DeviceContext** para Direct3D 11.
+(También hay fases para los sombreadores de geometría, sombreadores de casco, teseladores y sombreadores de dominio, pero como estos no tienen análogos en OpenGL ES 2.0, no los trataremos en este tema). Para obtener una lista completa de los métodos para estas fases, consulta las páginas de referencia de [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) y [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1). **ID3D11DeviceContext1** extiende **ID3D11DeviceContext** para Direct3D 11.
 
 ## <a name="creating-a-shader"></a>Crear un sombreador
 
 
-En Direct3D, los recursos de sombreador no se crean antes de su compilación y carga, en cambio, un recurso se crea tras la carga de HLSL. Por lo tanto, no hay ninguna función directamente análoga a glCreateShader, que crea un recurso de sombreador inicializado de un tipo específico (por ejemplo, GL\_VÉRTICE\_SOMBREADOR o GL\_fragmento\_SOMBREADOR). En cambio, los sombreadores se crean después de haberse cargado HLSL con funciones específicas como [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) y [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513), que toman el tipo y el HLSL compilado como parámetros.
+En Direct3D, los recursos de sombreador no se crean antes de su compilación y carga, en cambio, un recurso se crea tras la carga de HLSL. Por lo tanto, no hay ninguna función directamente análoga a glCreateShader, que crea un recurso de sombreador inicializado de un tipo específico (por ejemplo, GL\_VÉRTICE\_SOMBREADOR o GL\_fragmento\_SOMBREADOR). En cambio, los sombreadores se crean después de haberse cargado HLSL con funciones específicas como [**ID3D11Device1::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader) y [**ID3D11Device1::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader), que toman el tipo y el HLSL compilado como parámetros.
 
 | OpenGL ES 2.0  | Direct3D 11                                                                                                                                                                                                                                                             |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| glCreateShader | Llama a [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) y [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) después de cargar correctamente el objeto de sombreador compilado, pasándoles el CSO como búfer. |
+| glCreateShader | Llama a [**ID3D11Device1::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader) y [**ID3D11Device1::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader) después de cargar correctamente el objeto de sombreador compilado, pasándoles el CSO como búfer. |
 
  
 
@@ -72,25 +72,25 @@ Como se explicó en la sección de creación de un sombreador, Direct3D 11 crea 
 
 | OpenGL ES 2.0 | Direct3D 11                                                                                                                                                                                                                           |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ShaderSource  | Llama a [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) y [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) después de cargar correctamente el objeto de sombreador compilado. |
+| ShaderSource  | Llama a [**ID3D11Device1::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader) y [**ID3D11Device1::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader) después de cargar correctamente el objeto de sombreador compilado. |
 
  
 
 ## <a name="setting-up-the-pipeline"></a>Configurar la canalización
 
 
-OpenGL ES 2.0 tiene el objeto del"programa sombreador" que contiene varios sombreadores para la ejecución. Los sombreadores individuales se adjuntan al objeto de programa sombreador. Si embargo, en Direct3D 11, trabajas directamente con el contexto de representación ([**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)) y creas los sombreadores allí.
+OpenGL ES 2.0 tiene el objeto del"programa sombreador" que contiene varios sombreadores para la ejecución. Los sombreadores individuales se adjuntan al objeto de programa sombreador. Si embargo, en Direct3D 11, trabajas directamente con el contexto de representación ([**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1)) y creas los sombreadores allí.
 
 | OpenGL ES 2.0   | Direct3D 11                                                                                   |
 |-----------------|-----------------------------------------------------------------------------------------------|
 | glCreateProgram | N/D. Direct3D 11 no usa la abstracción de objeto de programa sombreador.                          |
 | glLinkProgram   | N/D. Direct3D 11 no usa la abstracción de objeto de programa sombreador.                          |
 | glUseProgram    | N/D. Direct3D 11 no usa la abstracción de objeto de programa sombreador.                          |
-| glGetProgramiv  | Usa la referencia que creaste para [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). |
+| glGetProgramiv  | Usa la referencia que creaste para [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1). |
 
  
 
-Crea una instancia de [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) y [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/dn280493) con el método [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) estático.
+Crea una instancia de [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) y [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) con el método [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) estático.
 
 ``` syntax
 Microsoft::WRL::ComPtr<ID3D11Device1>          m_d3dDevice;
@@ -115,7 +115,7 @@ D3D11CreateDevice(
 ## <a name="setting-the-viewports"></a>Establecer las ventanillas
 
 
-Establecer una ventanilla en Direct3D 11 es muy similar a como lo haces en OpenGL ES 2.0. En Direct3D 11, llame a [ **ID3D11DeviceContext::RSSetViewports** ](https://msdn.microsoft.com/library/windows/desktop/ff476480) con un objeto configurado [ **CD3D11\_VENTANILLA**](https://msdn.microsoft.com/library/windows/desktop/jj151722).
+Establecer una ventanilla en Direct3D 11 es muy similar a como lo haces en OpenGL ES 2.0. En Direct3D 11, llame a [ **ID3D11DeviceContext::RSSetViewports** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports) con un objeto configurado [ **CD3D11\_VENTANILLA**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/jj151722(v=vs.85)).
 
 Direct3D 11: Configuración de una ventanilla.
 
@@ -131,33 +131,33 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 | OpenGL ES 2.0 | Direct3D 11                                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| glViewport    | [**CD3D11\_VENTANILLA**](https://msdn.microsoft.com/library/windows/desktop/jj151722), [ **ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
+| glViewport    | [**CD3D11\_VIEWPORT**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/jj151722(v=vs.85)), [**ID3D11DeviceContext::RSSetViewports**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports) |
 
  
 
 ## <a name="configuring-the-vertex-shaders"></a>Configurar los sombreadores de vértices
 
 
-La configuración de un sombreador de vértices en Direct3D 11 se realiza cuando el sombreador está cargado. Los uniformes se pasan como búferes de constantes con [**ID3D11DeviceContext1::VSSetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh446795).
+La configuración de un sombreador de vértices en Direct3D 11 se realiza cuando el sombreador está cargado. Los uniformes se pasan como búferes de constantes con [**ID3D11DeviceContext1::VSSetConstantBuffers1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-vssetconstantbuffers1).
 
 | OpenGL ES 2.0                    | Direct3D 11                                                                                               |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|
-| glAttachShader                   | [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524)                       |
-| glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::VSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476489)                       |
-| glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::VSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh446793). |
+| glAttachShader                   | [**ID3D11Device1::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader)                       |
+| glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::VSGetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vsgetshader)                       |
+| glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::VSGetConstantBuffers1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-vsgetconstantbuffers1). |
 
  
 
 ## <a name="configuring-the-pixel-shaders"></a>Configurar los sombreadores de píxeles
 
 
-La configuración de un sombreador de píxeles en Direct3D 11 se realiza cuando el sombreador está cargado. Los uniformes se pasan como búferes de constantes con [**ID3D11DeviceContext1::PSSetConstantBuffers1.**](https://msdn.microsoft.com/library/windows/desktop/hh404649)
+La configuración de un sombreador de píxeles en Direct3D 11 se realiza cuando el sombreador está cargado. Los uniformes se pasan como búferes de constantes con [**ID3D11DeviceContext1::PSSetConstantBuffers1.** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-pssetconstantbuffers1)
 
 | OpenGL ES 2.0                    | Direct3D 11                                                                                               |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|
-| glAttachShader                   | [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)                         |
-| glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::PSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476468)                       |
-| glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::PSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh404645). |
+| glAttachShader                   | [**ID3D11Device1::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader)                         |
+| glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::PSGetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-psgetshader)                       |
+| glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::PSGetConstantBuffers1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-psgetconstantbuffers1). |
 
  
 
@@ -168,8 +168,8 @@ Cuando la canalización se completa, dibujas los resultados de las fases de somb
 
 | OpenGL ES 2.0  | Direct3D 11                                                                                                                                                                                                                                         |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| glDrawElements | [**ID3D11DeviceContext1::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407), [ **ID3D11DeviceContext1::DrawIndexed** ](https://msdn.microsoft.com/library/windows/desktop/ff476409) (o en otro Draw\* métodos en [  **ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/ff476385)). |
-| eglSwapBuffers | [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)                                                                                                                                                                              |
+| glDrawElements | [**ID3D11DeviceContext1::Draw**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw), [ **ID3D11DeviceContext1::DrawIndexed** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed) (o en otro Draw\* métodos en [  **ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)). |
+| eglSwapBuffers | [**IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)                                                                                                                                                                              |
 
  
 
@@ -201,10 +201,10 @@ Estas son algunas asignaciones para intrínsecos de sombreador comunes de OpenGL
 | Valor del sistema de OpenGL | Usa esta semántica de HLSL                                                                                                                                                   |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GL\_posición        | POSITION(n) para los datos del búfer de vértices. SV\_posición proporciona una posición de píxel al sombreador de píxeles y no se puede escribir la aplicación.                                        |
-| GL\_Normal          | NORMAL(n) para los datos normales proporcionados por el búfer de vértices.                                                                                                                 |
-| GL\_TexCoord\[n\]   | TEXCOORD(n) para los datos de coordenadas de la textura UV (ST en algunos documentos de OpenGL) suministrados a un sombreador.                                                                       |
-| GL\_FragColor       | COLOR(n) para los datos RGBA suministrados a un sombreador. Ten en cuenta que el trato es idéntico para los datos de coordenadas, la semántica simplemente te ayuda a identificar que son datos de color. |
-| GL\_FragData\[n\]   | SV\_destino\[n\] para la escritura de un sombreador de píxeles en una textura de destino o en otro búfer de píxeles.                                                                               |
+| gl\_Normal          | NORMAL(n) para los datos normales proporcionados por el búfer de vértices.                                                                                                                 |
+| gl\_TexCoord\[n\]   | TEXCOORD(n) para los datos de coordenadas de la textura UV (ST en algunos documentos de OpenGL) suministrados a un sombreador.                                                                       |
+| gl\_FragColor       | COLOR(n) para los datos RGBA suministrados a un sombreador. Ten en cuenta que el trato es idéntico para los datos de coordenadas, la semántica simplemente te ayuda a identificar que son datos de color. |
+| gl\_FragData\[n\]   | SV\_destino\[n\] para la escritura de un sombreador de píxeles en una textura de destino o en otro búfer de píxeles.                                                                               |
 
  
 
@@ -241,7 +241,7 @@ float4 main(PixelShaderInput input) : SV_TARGET
 
 En este caso, SV\_destino es la ubicación del destino de representación que el color de píxel (definido como un vector con cuatro valores float) se escribe en cuando finalice la ejecución del sombreador.
 
-Para obtener más detalles sobre el uso de semántica con Direct3D, lee [Semántica de HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509647).
+Para obtener más detalles sobre el uso de semántica con Direct3D, lee [Semántica de HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics).
 
  
 

@@ -6,20 +6,20 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f8c1cc6e17d95f55cc97af7695c12b374edcaaa8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2c7fadaf902b4aa543234bc8d43fbc1595a54219
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57632890"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369687"
 ---
 # <a name="use-the-compass"></a>Usar la brújula
 
 
 **API importantes**
 
--   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**Compass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Compass)
 
 **Ejemplo**
 
@@ -41,7 +41,7 @@ Esta sección se divide en dos subsecciones: En la primera subsección, conocer�
 
 ### <a name="instructions"></a>Instrucciones
 
--   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
+-   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#** .
 
 -   Abre el archivo MainPage.xaml.cs del proyecto y reemplaza el código existente con lo siguiente.
 

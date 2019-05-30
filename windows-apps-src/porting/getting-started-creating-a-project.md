@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b6ea9fdf2e504e1ceee71658eab308751e1745c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 32366289d51944c3ff30a77dc84602473a3fba45
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601450"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372862"
 ---
 # <a name="getting-started-creating-a-project"></a>Introducción: Creación de un proyecto
 
@@ -25,7 +25,7 @@ En el siguiente vídeo se comparan Xcode y Visual Studio.
 
 También encontrarás este [blog sobre la compilación de aplicaciones para Windows](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/) muy útil.
 
-Crear una aplicación para Windows 10 (conoce más formalmente como una aplicación de plataforma Universal de Windows (UWP)) es más bien como la creación de una aplicación iOS mediante guiones gráficos. A menudo se construye la aplicación de Windows 10 a través de varias páginas, cada página que contiene una parte distinta de la interfaz de usuario, como un sitio web. Cada página suele tener dos archivos de origen asociados: uno para almacenar la interfaz de usuario en [Introducción a XAML](https://msdn.microsoft.com/library/windows/apps/mt185595), y otro que contiene el código fuente, que suele ser C#. A medida que el usuario interactúe con la aplicación, irá pasando por estas páginas. En este tutorial vas a crear una aplicación con dos páginas.
+Crear una aplicación para Windows 10 (conoce más formalmente como una aplicación de plataforma Universal de Windows (UWP)) es más bien como la creación de una aplicación iOS mediante guiones gráficos. A menudo se construye la aplicación de Windows 10 a través de varias páginas, cada página que contiene una parte distinta de la interfaz de usuario, como un sitio web. Cada página suele tener dos archivos de origen asociados: uno para almacenar la interfaz de usuario en [Introducción a XAML](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview), y otro que contiene el código fuente, que suele ser C#. A medida que el usuario interactúe con la aplicación, irá pasando por estas páginas. En este tutorial vas a crear una aplicación con dos páginas.
 
 **Tenga en cuenta**  una característica importante de las aplicaciones de Windows 10 es el hecho de que el mismo código fuente y el mismo conjunto de API, está disponible para usted con independencia de la plataforma. Como sabes, cuando escribes una aplicación de iOS universal para iPhone y iPad, puedes determinar en el tiempo de ejecución la plataforma en que se ejecuta la aplicación y realizar la acción apropiada. De forma similar, las aplicaciones de Windows 10 pueden imaginar, en tiempo de ejecución, el dispositivo que se ejecutan. Con una aplicación para UWP, no hay ninguna necesidad de usar \#compilaciones ifdef en el código fuente para crear el teléfono en comparación con el escritorio. Por comodidad, las aplicaciones de Windows 10 también inteligentemente usan sus controles de interfaz de usuario en función del dispositivo: por ejemplo, la aplicación puede hacer referencia a un control de selector de fecha y el control automáticamente buscar y funcionan de manera diferente dependiendo de si lo tiene se está ejecutando en un escritorio o en una pantalla de teléfono. Sin embargo, el código fuente no se modifica.
 

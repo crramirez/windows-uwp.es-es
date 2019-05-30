@@ -6,12 +6,12 @@ keywords: Ejemplo de juego DirectX, ejemplo de juego, plataforma universal de Wi
 ms.date: 12/01/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: dc602e2dd29231c1e6554d7ef55e9666a373fa31
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c2ee2795410c083a6dd460a8537115dc8d20de31
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642870"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367707"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>Crear un juego de Plataforma universal de Windows (UWP) simple con DirectX
 
@@ -32,7 +32,7 @@ Antes de empezar este tutorial, necesitas estar familiarizado con estos temas.
 -   Álgebra lineal básica y conceptos de física newtoniana.
 -   Terminología básica de programación de gráficos.
 -   Conceptos básicos de programación en Windows.
--   Conocimiento básico de las API [Direct2D](https://msdn.microsoft.com/library/windows/apps/dd370990.aspx) y [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/hh404569).
+-   Conocimiento básico de las API [Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) y [Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/how-to-use-direct3d-11).
 
 ##  <a name="direct3d-uwp-shooting-game-sample"></a>Juego de disparos de ejemplo Direct3D (UWP)
 
@@ -61,5 +61,5 @@ La muestra hace una demostración de los siguientes conceptos de juego:
 | [Marco de representación II: Representación de juegos](tutorial-game-rendering.md) | En la segunda parte del tema de la representación, aprenderás a preparar los datos necesarios antes de la representación. |
 | [Agregar una interfaz de usuario](tutorial--adding-a-user-interface.md) | Agregar sencillas opciones de menú y componentes de la pantalla de visualización frontal, proporcionando comentarios al jugador. |
 | [Agregar controles](tutorial--adding-controls.md) | Agregar controles de movimiento y vista en el juego &mdash; controles táctiles básicos, de mouse y de dispositivos de juego. |
-| [Agregar sonido](tutorial--adding-sound.md) | Aprende a crear los sonidos de juego usando API [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813). |
+| [Agregar sonido](tutorial--adding-sound.md) | Aprende a crear los sonidos de juego usando API [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-introduction). |
 | [Ampliar el ejemplo de juego](tutorial-resources.md) | Recursos para ampliar tu conocimiento del desarrollo de juegos DirectX, incluyendo el uso de XAML para crear superposiciones. |

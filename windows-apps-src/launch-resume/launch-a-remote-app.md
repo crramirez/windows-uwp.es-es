@@ -6,12 +6,12 @@ ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, los sistemas remotos, Roma, proyecto Roma
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
-ms.openlocfilehash: 26a67816195105572d9f690599b9a880ece90c98
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ac4a5783250f3bd21cb8a3b96a579715830e687d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658420"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371714"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>Iniciar una aplicación en un dispositivo remoto
 
@@ -62,7 +62,7 @@ Agrega una llamada a `BuildDeviceList()` en el código de inicio de la aplicaci�
 
 ## <a name="launch-an-app-on-a-remote-device"></a>Iniciar una aplicación en un dispositivo remoto
 
-Para iniciar una aplicación de forma remota, pasa el dispositivo al que quieres conectarte con la API [**RemoteLauncher.LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/windows.system.remotelauncher.launchuriasync.aspx). Hay tres sobrecargas para este método. La más simple, que se muestra en este ejemplo, especifica el URI que activará la aplicación en el dispositivo remoto. En este ejemplo, el URI abre la aplicación Mapas en el equipo remoto con una vista 3D de la torre Space Needle.
+Para iniciar una aplicación de forma remota, pasa el dispositivo al que quieres conectarte con la API [**RemoteLauncher.LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotelauncher.launchuriasync). Hay tres sobrecargas para este método. La más simple, que se muestra en este ejemplo, especifica el URI que activará la aplicación en el dispositivo remoto. En este ejemplo, el URI abre la aplicación Mapas en el equipo remoto con una vista 3D de la torre Space Needle.
 
 Otras sobrecargas de **RemoteLauncher.LaunchUriAsync** te permiten especificar opciones, como el URI del sitio web, para ver si en el dispositivo remoto no se puede iniciar ninguna aplicación que pueda controlar el URI, y una lista opcional de nombres de familia de paquete, que se podría usar para iniciar el URI en el dispositivo remoto. También puedes proporcionar datos en forma de pares clave-valor. Podrías pasar datos a la aplicación que estás activando para proporcionar contexto a la aplicación remota, como el nombre de la canción que se va a reproducir y la ubicación de reproducción actual al pasar la reproducción de un dispositivo a otro.
 
@@ -70,11 +70,11 @@ En casos prácticos, podrías proporcionar la interfaz de usuario para seleccion
 
 [!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetRemoteUriLaunch)]
 
-El objeto [**RemoteLaunchUriStatus**](https://msdn.microsoft.com/library/windows/apps/windows.system.remotelaunchuristatus.aspx) que se devuelve de **RemoteLauncher.LaunchUriAsync()** indica si el inicio remoto se ha realizado correctamente y, si no es así, la causa.
+El objeto [**RemoteLaunchUriStatus**](https://docs.microsoft.com/uwp/api/windows.system.remotelaunchuristatus) que se devuelve de **RemoteLauncher.LaunchUriAsync()** indica si el inicio remoto se ha realizado correctamente y, si no es así, la causa.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Referencia de API de sistemas remoto](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
+[Referencia de API de sistemas remoto](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems)  
 [Introducción (proyecto Roma) a aplicaciones y dispositivos conectado](connected-apps-and-devices.md)  
 [Detectar dispositivos remotos](discover-remote-devices.md)  
 La [muestra de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems) indica cómo detectar un sistema remoto, iniciar una aplicación en un sistema remoto y usar los servicios de aplicaciones para enviar mensajes entre aplicaciones que se ejecuten en dos sistemas.

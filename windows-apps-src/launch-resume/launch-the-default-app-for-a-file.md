@@ -6,28 +6,28 @@ ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f8e59ae5fb20ce8e1a900f7c1415a699715215e0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 475c7b98e33b78ac3bea4ddecc8414a8e3aa07b3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594530"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370804"
 ---
 # <a name="launch-the-default-app-for-a-file"></a>Iniciar la aplicación predeterminada de un archivo
 
 **API importantes**
 
--   [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
+-   [**Windows.System.Launcher.LaunchFileAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.)
 
-Aprende cómo iniciar la aplicación predeterminada de un archivo. Muchas aplicaciones necesitan funcionar con archivos que no pueden controlar. Por ejemplo, las aplicaciones de correo electrónico reciben una gran variedad de tipos de archivo y necesitan una forma de iniciar estos archivos en sus controladores predeterminados. Los siguientes pasos te mostrarán cómo usar la API [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) para iniciar el controlador predeterminado para un archivo que no puede controlar la aplicación.
+Aprende cómo iniciar la aplicación predeterminada de un archivo. Muchas aplicaciones necesitan funcionar con archivos que no pueden controlar. Por ejemplo, las aplicaciones de correo electrónico reciben una gran variedad de tipos de archivo y necesitan una forma de iniciar estos archivos en sus controladores predeterminados. Los siguientes pasos te mostrarán cómo usar la API [**Windows.System.Launcher**](https://docs.microsoft.com/uwp/api/Windows.System.Launcher) para iniciar el controlador predeterminado para un archivo que no puede controlar la aplicación.
 
 ## <a name="get-the-file-object"></a>Obtener un objeto de archivo
 
-Primero, obtén un objeto [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) para el archivo.
+Primero, obtén un objeto [**Windows.Storage.StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) para el archivo.
 
-Si el archivo está incluido en el paquete de la aplicación, puedes usar la propiedad [**Package.InstalledLocation**](https://msdn.microsoft.com/library/windows/apps/br224681) para obtener un objeto [**Windows.Storage.StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) y el método [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para obtener el objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
+Si el archivo está incluido en el paquete de la aplicación, puedes usar la propiedad [**Package.InstalledLocation**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.package.installedlocation) para obtener un objeto [**Windows.Storage.StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) y el método [**Windows.Storage.StorageFolder.GetFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfileasync) para obtener el objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile).
 
-Si el archivo está en una carpeta conocida, puedes usar las propiedades de la clase [**Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151) para obtener una clase [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) y el método [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para obtener el objeto [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
+Si el archivo está en una carpeta conocida, puedes usar las propiedades de la clase [**Windows.Storage.KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders) para obtener una clase [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) y el método [**GetFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfileasync) para obtener el objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile).
 
 ## <a name="launch-the-file"></a>Inicia el archivo
 
@@ -35,14 +35,14 @@ Windows proporciona varias opciones distintas para iniciar el controlador predet
 
 | Opción | Método | Descripción |
 |--------|--------|-------------|
-| Inicio predeterminado | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | Inicia el archivo especificado con el controlador predeterminado. |
-| Abrir con inicio | [**LaunchFileAsync (IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicia el archivo especificado dejando que el usuario elija el controlador mediante el cuadro de diálogo Abrir con. |
-| Iniciar con una reserva de aplicación recomendada | [**LaunchFileAsync (IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Inicia el archivo especificado con el controlador predeterminado. Si el sistema no tiene ningún controlador instalado, recomienda al usuario una aplicación de la tienda. |
-| Inicio con una vista deseada permanente | [**LaunchFileAsync (IStorageFile, LauncherOptions)** ](https://msdn.microsoft.com/library/windows/apps/hh701465) (solo Windows) | Inicia el archivo especificado con el controlador predeterminado. Especifica una preferencia para que permanezca en la pantalla después de iniciar y solicitar un tamaño de ventana específico. [**LauncherOptions.DesiredRemainingView** ](https://msdn.microsoft.com/library/windows/apps/dn298314) no es compatible con la familia de dispositivos móviles. |
+| Inicio predeterminado | [**LaunchFileAsync(IStorageFile)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync) | Inicia el archivo especificado con el controlador predeterminado. |
+| Abrir con inicio | [**LaunchFileAsync(IStorageFile, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.) | Inicia el archivo especificado dejando que el usuario elija el controlador mediante el cuadro de diálogo Abrir con. |
+| Iniciar con una reserva de aplicación recomendada | [**LaunchFileAsync(IStorageFile, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.) | Inicia el archivo especificado con el controlador predeterminado. Si el sistema no tiene ningún controlador instalado, recomienda al usuario una aplicación de la tienda. |
+| Inicio con una vista deseada permanente | [**LaunchFileAsync(IStorageFile, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.) (Windows-only) | Inicia el archivo especificado con el controlador predeterminado. Especifica una preferencia para que permanezca en la pantalla después de iniciar y solicitar un tamaño de ventana específico. [**LauncherOptions.DesiredRemainingView** ](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) no es compatible con la familia de dispositivos móviles. |
 
 ### <a name="default-launch"></a>Inicio predeterminado
 
-Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) para iniciar la aplicación predeterminada. En este ejemplo, se usa el método [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) para iniciar un archivo de imagen, test.png, incluido en el paquete de la aplicación.
+Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync) para iniciar la aplicación predeterminada. En este ejemplo, se usa el método [**Windows.Storage.StorageFolder.GetFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfileasync) para iniciar un archivo de imagen, test.png, incluido en el paquete de la aplicación.
 
 ```csharp
 async void DefaultLaunch()
@@ -155,7 +155,7 @@ void MainPage::DefaultLaunch()
 
 ### <a name="open-with-launch"></a>Abrir con inicio
 
-Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) con [**LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438) establecido en **true** para iniciar la aplicación que el usuario seleccione en el cuadro de diálogo **Abrir con**.
+Llama al método [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.) con [**LauncherOptions.DisplayApplicationPicker**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.displayapplicationpicker) establecido en **true** para iniciar la aplicación que el usuario seleccione en el cuadro de diálogo **Abrir con**.
 
 Recomendamos que uses el cuadro de diálogo **Abrir con**, cuando el usuario quiera seleccionar una aplicación que no sea la aplicación predeterminada para un archivo en particular. Por ejemplo, si la aplicación permite al usuario iniciar un archivo de imagen, el controlador predeterminado probablemente sea una aplicación de visualización. A veces, es posible que el usuario quiera editar la imagen en lugar de verla. Usa la opción **Abrir con** junto con un comando alternativo de la **barra de la aplicación** o de un menú contextual, para permitir que el usuario abra el cuadro de diálogo **Abrir con** y selecciona la aplicación de edición en estos tipos de escenarios.
 
@@ -289,7 +289,7 @@ void MainPage::DefaultLaunch()
 
 **Iniciar con una aplicación recomendada de reserva**
 
-En algunos casos, el usuario podría no tener instalada una aplicación para administrar el archivo que estás iniciando. Si esto sucede, de manera predeterminada, Windows ofrece un vínculo al usuario para que busque una aplicación apropiada en la Tienda. Si quieres recomendar al usuario qué aplicación comprar en este escenario, debes incluir la recomendación junto con el archivo que estás iniciando. Para ello, llama al método [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) con [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) establecido con el nombre de familia de paquete correspondiente a la aplicación de la Tienda que quieras recomendar. Después, establece [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481) en el nombre de dicha aplicación. Windows usará esta información para reemplazar la opción general de buscar una aplicación por una opción específica para comprar la aplicación recomendada en la Tienda.
+En algunos casos, el usuario podría no tener instalada una aplicación para administrar el archivo que estás iniciando. Si esto sucede, de manera predeterminada, Windows ofrece un vínculo al usuario para que busque una aplicación apropiada en la Tienda. Si quieres recomendar al usuario qué aplicación comprar en este escenario, debes incluir la recomendación junto con el archivo que estás iniciando. Para ello, llama al método [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.) con [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname) establecido con el nombre de familia de paquete correspondiente a la aplicación de la Tienda que quieras recomendar. Después, establece [**LauncherOptions.PreferredApplicationDisplayName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationdisplayname) en el nombre de dicha aplicación. Windows usará esta información para reemplazar la opción general de buscar una aplicación por una opción específica para comprar la aplicación recomendada en la Tienda.
 
 > [!NOTE]
 > Debe establecer estas dos opciones para recomendar una aplicación. Si se establece una, pero la otra no, se producirá un error.
@@ -434,12 +434,12 @@ void MainPage::DefaultLaunch()
 
 ### <a name="launch-with-a-desired-remaining-view-windows-only"></a>Inicio con una vista deseada permanente (solo Windows)
 
-Las aplicaciones de origen que llaman a [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) pueden solicitar que permanezcan en pantalla después de iniciarse un archivo. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el archivo. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. También puedes usar el elemento **DesiredRemainingView** para indicar que la aplicación de origen no necesita permanecer en pantalla después de iniciar un archivo, y que la aplicación de destino puede sustituirla por completo. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
+Las aplicaciones de origen que llaman a [**LaunchFileAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.) pueden solicitar que permanezcan en pantalla después de iniciarse un archivo. Windows intenta compartir de manera predeterminada todo el espacio disponible entre la aplicación de origen y la aplicación de destino que controla el archivo. Las aplicaciones de origen pueden usar la propiedad [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) para indicar al sistema operativo que prefieren que la ventana de la aplicación ocupe más o menos espacio del que hay disponible. También puedes usar el elemento **DesiredRemainingView** para indicar que la aplicación de origen no necesita permanecer en pantalla después de iniciar un archivo, y que la aplicación de destino puede sustituirla por completo. Esta propiedad especifica únicamente el tamaño de ventana preferido de la aplicación que llama; no especifica el comportamiento de ninguna otra aplicación que también esté en pantalla al mismo tiempo.
 
 > [!NOTE]
-> Windows tiene en cuenta varios factores diferentes cuando determina tamaño de ventana final de la aplicación de origen, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en la pantalla, la orientación de la pantalla y así sucesivamente. Aunque establezcas la propiedad [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), no se garantiza un comportamiento de ventanas específico para la aplicación de origen.
+> Windows tiene en cuenta varios factores diferentes cuando determina tamaño de ventana final de la aplicación de origen, por ejemplo, la preferencia de la aplicación de origen, el número de aplicaciones en la pantalla, la orientación de la pantalla y así sucesivamente. Aunque establezcas la propiedad [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview), no se garantiza un comportamiento de ventanas específico para la aplicación de origen.
 
-**Familia de dispositivos móviles:  **[**LauncherOptions.DesiredRemainingView** ](https://msdn.microsoft.com/library/windows/apps/dn298314) no es compatible con la familia de dispositivos móviles.
+**Familia de dispositivos móviles:  **[**LauncherOptions.DesiredRemainingView** ](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) no es compatible con la familia de dispositivos móviles.
 
 ```csharp
 async void DefaultLaunch()
@@ -540,7 +540,7 @@ void MainPage::DefaultLaunch()
 }
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 La aplicación no puede seleccionar qué aplicación se inicia, sino que es el usuario quien la determina. El usuario puede seleccionar una aplicación para la Plataforma universal de Windows (UWP) o una aplicación de escritorio de Windows.
 
@@ -559,9 +559,9 @@ Si intentas iniciar un tipo de archivo restringido, se producirá un error en el
 
 ### <a name="guidelines"></a>Instrucciones
 
-* [Directrices para los tipos de archivo y los URI](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [Directrices para los tipos de archivo y los URI](https://docs.microsoft.com/windows/uwp/files/index)
 
 ### <a name="reference"></a>Referencia
 
-* [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)
-* [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
+* [**Windows.Storage.StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)
+* [**Windows.System.Launcher.LaunchFileAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.)

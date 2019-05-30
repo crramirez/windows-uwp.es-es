@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cda37ee9964a3e7e02f4e4ce3829a8b55e823692
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fd0e7137f31a8f1620f7937b52efe1ca84a6b99a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660900"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370786"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Iniciar la aplicación Microsoft Store
 
 
 
-Este tema se describe la **ms-windows-store:** Esquema de URI. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store a páginas específicas en el almacén mediante el uso de la [ **LaunchUriAsync** ](https://msdn.microsoft.com/library/windows/apps/hh701476) método.
+Este tema se describe la **ms-windows-store:** Esquema de URI. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store a páginas específicas en el almacén mediante el uso de la [ **LaunchUriAsync** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) método.
 
 En este ejemplo se muestra cómo abrir Microsoft Store a la página Juegos:
 
@@ -25,7 +25,7 @@ En este ejemplo se muestra cómo abrir Microsoft Store a la página Juegos:
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
 ```
 
-## <a name="ms-windows-store-uri-scheme-reference"></a>MS-windows-store: Referencia de esquema URI
+## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: Referencia de esquema URI
 
 <table>
 <tr><th>Descripción</th><th></th><th>Esquema de URI</th></tr>
@@ -41,7 +41,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">Inicia la página de detalles del producto (PDP) de un producto. <p>Se recomienda para los clientes de Windows 10 Store ID y funcionará en todas las versiones de sistema operativo, pero las formas de la operación anteriores (p. ej.: PFN) son todavía compatibles.</p>
-<p>Estos valores se pueden encontrar en <a href="https://partner.microsoft.com/dashboard">centro de partners</a> en el <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">identidad de aplicación</a> página en la sección de administración de la aplicación para cada aplicación.</p>
+<p>Estos valores se pueden encontrar en <a href="https://partner.microsoft.com/dashboard">centro de partners</a> en el <a href="https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details">identidad de aplicación</a> página en la sección de administración de la aplicación para cada aplicación.</p>
 </td>
 <td>
 Id. de Store <p>(recomendado)</p>

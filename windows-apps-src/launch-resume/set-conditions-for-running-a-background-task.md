@@ -10,38 +10,38 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 8740829ab95b804afba564110f38116f2c90b416
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 88836ac0363001e86c17486e1527b96a4eac0faa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57650940"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371842"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Establecer condiciones para ejecutar una tarea en segundo plano
 
 **API importantes**
 
-- [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834)
-- [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)
-- [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
+- [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition)
+- [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)
+- [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
 Aprende a establecer condiciones que controlen cuándo se ejecutará tu tarea en segundo plano.
 
-En ocasiones, las tareas en segundo plano requieren que se cumplan ciertas condiciones para que la tarea en segundo plano se desarrolle correctamente. Puedes especificar una o más de las condiciones especificadas por [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) al registrar tu tarea en segundo plano. La condición se comprobará después de que se haya activado el desencadenador. La tarea en segundo plano se pondrá en cola, pero no se ejecutará hasta que se satisfagan todas las condiciones.
+En ocasiones, las tareas en segundo plano requieren que se cumplan ciertas condiciones para que la tarea en segundo plano se desarrolle correctamente. Puedes especificar una o más de las condiciones especificadas por [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) al registrar tu tarea en segundo plano. La condición se comprobará después de que se haya activado el desencadenador. La tarea en segundo plano se pondrá en cola, pero no se ejecutará hasta que se satisfagan todas las condiciones.
 
-Establecer condiciones sobre las tareas en segundo plano ahorra duración de la batería y CPU evitando que las tareas se ejecuten innecesariamente. Por ejemplo, si una tarea en segundo plano se ejecuta en un temporizador y requiere conectividad a Internet, agrega la condición **InternetAvailable** al [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) antes de registrar la tarea. Esto ayudará a impedir que la tarea use recursos del sistema y consuma batería de forma innecesaria al ejecutarse en segundo plano solo cuando haya transcurrido el temporizador *e* Internet esté disponible.
+Establecer condiciones sobre las tareas en segundo plano ahorra duración de la batería y CPU evitando que las tareas se ejecuten innecesariamente. Por ejemplo, si una tarea en segundo plano se ejecuta en un temporizador y requiere conectividad a Internet, agrega la condición **InternetAvailable** al [**TaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) antes de registrar la tarea. Esto ayudará a impedir que la tarea use recursos del sistema y consuma batería de forma innecesaria al ejecutarse en segundo plano solo cuando haya transcurrido el temporizador *e* Internet esté disponible.
 
-También es posible combinar varias condiciones llamando a **AddCondition** varias veces en el mismo [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768). Procura no agregar condiciones conflictivas, como **UserPresent** y **UserNotPresent**.
+También es posible combinar varias condiciones llamando a **AddCondition** varias veces en el mismo [**TaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder). Procura no agregar condiciones conflictivas, como **UserPresent** y **UserNotPresent**.
 
 ## <a name="create-a-systemcondition-object"></a>Crear un objeto SystemCondition
 
-En este tema se supone que ya tienes una tarea en segundo plano asociada a tu aplicación y que esta ya incluye código que crea un objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) denominado **taskBuilder**.  Consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) o [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md) si necesitas crear primero una tarea en segundo plano.
+En este tema se supone que ya tienes una tarea en segundo plano asociada a tu aplicación y que esta ya incluye código que crea un objeto [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) denominado **taskBuilder**.  Consulta [Crear y registrar una tarea en segundo plano dentro de proceso](create-and-register-an-inproc-background-task.md) o [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md) si necesitas crear primero una tarea en segundo plano.
 
 Este tema se aplica a las tareas en segundo plano que se ejecutan fuera de proceso, así como las que se ejecutan en el mismo proceso que la aplicación en primer plano.
 
-Antes de agregar la condición, crea un objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) para representar la condición que debe estar vigente para que una tarea en segundo plano se ejecute. En el constructor, especifica la condición que debe cumplirse proporcionando un valor de enumeración [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
+Antes de agregar la condición, crea un objeto [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) para representar la condición que debe estar vigente para que una tarea en segundo plano se ejecute. En el constructor, especifica la condición que debe cumplirse proporcionando un valor de enumeración [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType).
 
-El siguiente código crea un objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) que especifica la condición **InternetAvailable**:
+El siguiente código crea un objeto [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) que especifica la condición **InternetAvailable**:
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -58,7 +58,7 @@ SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionTyp
 
 ## <a name="add-the-systemcondition-object-to-your-background-task"></a>Agregar el objeto SystemCondition a la tarea en segundo plano
 
-Para agregar una condición, llama al método [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) en el objeto [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) y pásalo al objeto [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834).
+Para agregar una condición, llama al método [**AddCondition**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.addcondition) en el objeto [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) y pásalo al objeto [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition).
 
 El siguiente código utiliza **taskBuilder** para agregar la condición **InternetAvailable**.
 
@@ -76,7 +76,7 @@ taskBuilder->AddCondition(internetCondition);
 
 ## <a name="register-your-background-task"></a>Registrar tu tarea en segundo plano
 
-Ahora ya puedes registrar tu tarea en segundo plano con el método [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) y la tarea en segundo plano no comenzará hasta que no se satisfaga la condición especificada.
+Ahora ya puedes registrar tu tarea en segundo plano con el método [**Register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) y la tarea en segundo plano no comenzará hasta que no se satisfaga la condición especificada.
 
 El siguiente código registra la tarea y almacena el objeto BackgroundTaskRegistration resultante:
 
@@ -93,16 +93,16 @@ BackgroundTaskRegistration ^ task = taskBuilder->Register();
 ```
 
 > [!NOTE]
-> Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
+> Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar cualquier tipo de desencadenador en segundo plano.
 
-Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
+Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) y luego a [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
 > [!NOTE]
 > Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se ocupe correctamente de los escenarios en los que se produce un error en el registro de tareas en segundo plano. Si, en cambio, la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
 ## <a name="place-multiple-conditions-on-your-background-task"></a>Colocar varias condiciones en tu tarea en segundo plano
 
-Para agregar varias condiciones, tu aplicación realiza varias llamadas al método [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) . Estas llamadas deben recibirse antes de que el registro de la tarea entre en vigor.
+Para agregar varias condiciones, tu aplicación realiza varias llamadas al método [**AddCondition**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.addcondition) . Estas llamadas deben recibirse antes de que el registro de la tarea entre en vigor.
 
 > [!NOTE]
 > Tenga cuidado de no para agregar condiciones en conflicto para una tarea en segundo plano.
@@ -175,10 +175,10 @@ recurringTaskBuilder->AddCondition(internetCondition);
 BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 > [!NOTE]
-> Elija las condiciones para la tarea en segundo plano para que se ejecute solo cuando es necesario y no se ejecuta cuando no debe. Consulta [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) para obtener descripciones de las diferentes condiciones de las tareas en segundo plano.
+> Elija las condiciones para la tarea en segundo plano para que se ejecute solo cuando es necesario y no se ejecuta cuando no debe. Consulta [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) para obtener descripciones de las diferentes condiciones de las tareas en segundo plano.
 
 ## <a name="related-topics"></a>Temas relacionados
 

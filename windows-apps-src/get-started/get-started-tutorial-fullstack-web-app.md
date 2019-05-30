@@ -5,12 +5,12 @@ keywords: hosted web app, aplicación web hospedada, HWA, HWA, REST API, API de 
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c76f0da8c3ac1d50ccd2d328dd321df9aa9bd3e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c38a7182cd27abcfb0de66c721f0e06b95b695d5
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624630"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366985"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Crear una web de una sola página con back-end de API de REST
 
@@ -30,7 +30,7 @@ Si todavía no tienes estos recursos en la máquina, sigue estos vínculos de de
 
  - [Generador Express](https://expressjs.com/en/starter/generator.html): después de instalar el nodo, instale Express mediante la ejecución `npm install express-generator -g`
 
- - [Código de Visual Studio](https://code.visualstudio.com/)
+ - [Visual Studio Code](https://code.visualstudio.com/)
 
 Si quieres completar los pasos finales del hospedaje del servicio de API y la aplicación de juego de memoria en Microsoft Azure, tendrás que [crear una cuenta gratuita de Azure](https://azure.microsoft.com/en-us/free/) si todavía no lo has hecho.
 
@@ -115,7 +115,7 @@ Vamos a usar [Swagger](https://swagger.io/) para transformar el diseño de la AP
 
 1. Crea una nueva carpeta (en el *GitHub* local, por ejemplo) y descarga el archivo [**api.json**](https://raw.githubusercontent.com/Microsoft/Windows-tutorials-web/master/Single-Page-App-with-REST-API/backend/api.json?token=ACEfklXAHTeLkHYaI5plV20QCGuqC31cks5ZFhVIwA%3D%3D) que contiene nuestras definiciones de API del juego de memoria. Asegúrate de que el nombre de la carpeta no contiene ningún espacio.
 
-2. Abre tu shell favorito ([o usa el terminal integrado de Visual Studio Code](https://code.visualstudio.com/docs/editor/integrated-terminal)) en esa carpeta y ejecuta el siguiente comando del administrador de paquetes de nodos (NPM) para instalar la herramienta de código de scaffolding [Yeoman](https://yeoman.io/) (yo) y el generador Swagger para el entorno de nodo global (**-g**):
+2. Abre tu shell favorito ([o usa el terminal integrado de Visual Studio Code](https://code.visualstudio.com/docs/editor/integrated-terminal)) en esa carpeta y ejecuta el siguiente comando del administrador de paquetes de nodos (NPM) para instalar la herramienta de código de scaffolding [Yeoman](https://yeoman.io/) (yo) y el generador Swagger para el entorno de nodo global ( **-g**):
 
     ```
     npm install -g yo
@@ -278,7 +278,7 @@ Los documentos de Azure te guiarán en los procedimientos siguientes:
  - [Configuración de la aplicación de API para la implementación de Git](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git) e
  - [Implementar el código de la aplicación de API en Azure](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
 
-Al registrar la aplicación, intenta diferenciar tu *Nombre de la aplicación* (para evitar conflictos de nomenclatura con otras personas que soliciten variaciones en la URL *http://memorygameapi.azurewebsites.net*).
+Al registrar la aplicación, intenta diferenciar tu *Nombre de la aplicación* (para evitar conflictos de nomenclatura con otras personas que soliciten variaciones en la URL *http://memorygameapi.azurewebsites.net* ).
 
 Si has llegado hasta aquí y Azure te sirve ahora la interfaz de usuario Swagger, queda solo un paso final para el back-end del juego de memoria. Desde [Azure Portal](https://portal.azure.com), selecciona tu *App Service* recién creado y, a continuación, selecciona o busca la opción **CORS** (uso compartido de recursos entre orígenes). En **Orígenes permitidos**, agrega un asterisco (`*`) y haz clic en **Guardar**. Esto te permite realizar llamadas entre orígenes a tu servicio de API desde el front-end del juego de memoria mientras lo desarrollas en tu máquina local. Después de finalizar el front-end del juego de memoria e implementarlo en Azure, puedes reemplazar esta entrada por la dirección URL específica de la aplicación web.
 
@@ -616,7 +616,7 @@ La adición de un movimiento de volteo con [transformaciones CSS](https://docs.m
     Ahora cuando un usuario hace clic en una carta, esta se gira 180 grados.
 
 ### <a name="6-test-and-play"></a>6. Pruebas y reproducción
-Enhorabuena. Has terminado de crear la aplicación web. Vamos a probarla. 
+¡Enhorabuena! Has terminado de crear la aplicación web. Vamos a probarla. 
 
 1. Abra un símbolo del sistema en el directorio de memoria y escriba el siguiente comando: `npm start`
 
@@ -626,7 +626,7 @@ Enhorabuena. Has terminado de crear la aplicación web. Vamos a probarla.
 
     También puedes comparar tu código con el código proporcionado en la carpeta Final.
 
-4. Para detener el juego, en el símbolo del sistema, escriba: **CTRL + C**, **Y**. 
+4. Para detener el juego, en el símbolo del sistema, escriba: **Ctrl + C**, **Y**. 
 
 ### <a name="going-further"></a>Ir más allá
 
@@ -636,7 +636,7 @@ Los pasos básicos para publicarla en Microsoft Store son:
 
  1. Crear una cuenta de [Desarrollador de Windows](https://developer.microsoft.com/en-us/store/register).
  2. Usar la [lista de comprobación de envío de aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-submissions).
- 3. Enviar la aplicación para su [certificación](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process).
+ 3. Enviar la aplicación para su [certificación](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
 
 Estos son algunos recursos útiles para ir más allá:
 

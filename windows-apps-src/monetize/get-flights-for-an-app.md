@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flights, pilotos, package flights, paquetes piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f55a218c0cb4f4964fe12eb8e2eeb5b504f6405
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 66e64f2c499835a345bb9563fd005b86a926a4d2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334783"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372013"
 ---
 # <a name="get-package-flights-for-an-app"></a>Obtener paquetes piloto para una aplicación
 
-Use este método en la API de envío de Microsoft Store para enumerar los vuelos de paquete para una aplicación que está registrado en la cuenta del centro de partners. Para obtener más información acerca de los paquetes piloto, consulta [Paquetes piloto](https://msdn.microsoft.com/windows/uwp/publish/package-flights).
+Use este método en la API de envío de Microsoft Store para enumerar los vuelos de paquete para una aplicación que está registrado en la cuenta del centro de partners. Para obtener más información acerca de los paquetes piloto, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -44,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 |  Nombre  |  Tipo  |  Descripción  |  Requerido  |
 |------|------|------|------|
-|  applicationId  |  string  |  El identificador de la Tienda de la aplicación para la que quieres recuperar paquetes piloto. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sí  |
+|  applicationId  |  string  |  El identificador de la Tienda de la aplicación para la que quieres recuperar paquetes piloto. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Sí  |
 |  top  |  entero  |  Número de elementos que se devolverán en la solicitud (es decir, el número de paquetes piloto que se devolverán). Si los paquetes piloto de tu cuenta superan el valor especificado en la consulta, el cuerpo de la respuesta incluirá una ruta de acceso al URI relativa que puedes anexar al URI del método para solicitar la siguiente página de datos.  |  No  |
 |  skip  |  entero  |  El número de elementos que se omitirán en la consulta antes de devolver los elementos restantes. Usa este parámetro para consultar conjuntos de datos. Por ejemplo, top = 10 y skip = 0 recuperan los elementos del 1 al 10, mientras que top = 10 y skip = 10 recuperan los elementos del 11 al 20, y así sucesivamente.  |  No  |
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, malla, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: d3b6717c0b2d9d85e9c81e78fcaa1df1abbea23b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9b5aa00b5beb7c80a903fbf17d432f73f16561a2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595650"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368981"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>Crear y mostrar una malla básica
 
@@ -28,7 +28,7 @@ En los juegos 3D de la Plataforma universal de Windows (UWP), normalmente se usa
 
 ### <a name="technologies"></a>Tecnologías
 
--   [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh769064)
+-   [Direct3D](https://docs.microsoft.com/windows/desktop/getting-started-with-direct3d)
 
 ### <a name="prerequisites"></a>Requisitos previos
 
@@ -77,7 +77,7 @@ Entonces tienes 8 vértices, cada uno con un color específico. Cada emparejamie
 
 ### <a name="step-2-set-up-the-input-layout"></a>Paso 2: Configurar el diseño de entrada
 
-Ahora tienes los vértices en la memoria. Pero el dispositivo de gráficos tiene su propia memoria a la que accedes con Direct3D. Cuando introduces los datos de vértices en el dispositivo de gráficos para que se procesen, necesitas facilitar las cosas: debes declarar cómo aparecen estos datos para el que dispositivo los interprete cuando los obtenga desde el juego. Para ello, usas [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575).
+Ahora tienes los vértices en la memoria. Pero el dispositivo de gráficos tiene su propia memoria a la que accedes con Direct3D. Cuando introduces los datos de vértices en el dispositivo de gráficos para que se procesen, necesitas facilitar las cosas: debes declarar cómo aparecen estos datos para el que dispositivo los interprete cuando los obtenga desde el juego. Para ello, usas [**ID3D11InputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11inputlayout).
 
 Declara y establece el diseño de entrada para el búfer de vértices.
 
@@ -110,17 +110,17 @@ En este código, especificas un diseño para los vértices, o sea qué datos con
 
     Los valores de **COLOR**, por lo general, se devuelven como un valor RGBA de 4 componentes al final de la canalización de sombreador. En este ejemplo, establecerás el valor alfa "A" en 1.0 (opacidad máxima) en la canalización de sombreador para todos los píxeles.
 
-Para obtener una lista completa de formatos, vea [ **DXGI\_formato**](https://msdn.microsoft.com/library/windows/desktop/bb173059). Si quieres obtener la lista completa de la semántica HLSL, consulta [Semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647).
+Para obtener una lista completa de formatos, vea [ **DXGI\_formato**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format). Si quieres obtener la lista completa de la semántica HLSL, consulta [Semántica](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics).
 
-Llama a [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) y crea el diseño de entrada en el dispositivo Direct3D. Ahora necesitas crear un búfer que pueda realmente mantener los datos.
+Llama a [**ID3D11Device::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout) y crea el diseño de entrada en el dispositivo Direct3D. Ahora necesitas crear un búfer que pueda realmente mantener los datos.
 
 ### <a name="step-3-populate-the-vertex-buffers"></a>Paso 3: Rellene los búferes de vértices
 
 Los búferes de vértices contienen la lista de vértices para cada triángulo de la malla. Cada vértice debe ser único en esta lista. En nuestro ejemplo, tienes 8 vértices para el cubo. El sombreador de vértices se ejecuta en el dispositivo de gráficos y lee el búfer de vértices. Interpreta los datos según el diseño de entrada que especificaste en el paso anterior.
 
-En el siguiente ejemplo, proporcionas una descripción y un subrecurso para el búfer que le dan a Direct3D una serie de indicaciones sobre la asignación física de los datos de vértices y cómo tratarlos en la memoria del dispositivo de gráficos. Esto es necesario porque usas un [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) genérico, que podría contener de todo. El [ **D3D11\_búfer\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) y [ **D3D11\_SUBRESOURCE\_datos** ](https://msdn.microsoft.com/library/windows/desktop/ff476220)estructuras se suministran para asegurarse de que Direct3D comprende el diseño de memoria física del búfer, incluido el tamaño de cada elemento de vértices en el búfer, así como el tamaño máximo de la lista de vértices. Aquí también puedes controlar el acceso a la memoria del búfer y su recorrido, pero eso ya correspondería a otro tutorial.
+En el siguiente ejemplo, proporcionas una descripción y un subrecurso para el búfer que le dan a Direct3D una serie de indicaciones sobre la asignación física de los datos de vértices y cómo tratarlos en la memoria del dispositivo de gráficos. Esto es necesario porque usas un [**ID3D11Buffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11buffer) genérico, que podría contener de todo. El [ **D3D11\_búfer\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) y [ **D3D11\_SUBRESOURCE\_datos** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data)estructuras se suministran para asegurarse de que Direct3D comprende el diseño de memoria física del búfer, incluido el tamaño de cada elemento de vértices en el búfer, así como el tamaño máximo de la lista de vértices. Aquí también puedes controlar el acceso a la memoria del búfer y su recorrido, pero eso ya correspondería a otro tutorial.
 
-Después de configurar el búfer, llama a [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) para crearlo realmente. Obviamente, si tienes más de un objeto, crea búferes para cada uno de los modelos.
+Después de configurar el búfer, llama a [**ID3D11Device::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) para crearlo realmente. Obviamente, si tienes más de un objeto, crea búferes para cada uno de los modelos.
 
 Declara y crea el búfer de vértices.
 
@@ -187,9 +187,9 @@ unsigned short cubeIndices[] =
     0, 4, 7 };
 ```
 
-Treinta y seis elementos de índice en el búfer es un número muy redundante para tan solo 8 vértices. Si opta por eliminar algunas de las redundancias y usar un tipo de lista de vértices diferentes, como una banda o de un ventilador, debe especificar ese tipo al proporcionar un determinado [ **D3D11\_PRIMITIVOS\_topología** ](https://msdn.microsoft.com/library/windows/desktop/ff476189) valor para el [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://msdn.microsoft.com/library/windows/desktop/ff476455) método.
+Treinta y seis elementos de índice en el búfer es un número muy redundante para tan solo 8 vértices. Si opta por eliminar algunas de las redundancias y usar un tipo de lista de vértices diferentes, como una banda o de un ventilador, debe especificar ese tipo al proporcionar un determinado [ **D3D11\_PRIMITIVOS\_topología** ](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ff476189(v=vs.85)) valor para el [ **ID3D11DeviceContext::IASetPrimitiveTopology** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology) método.
 
-Para obtener más información sobre las distintas técnicas de listas de índices, consulta [Topologías primitivas](https://msdn.microsoft.com/library/windows/desktop/bb205124).
+Para obtener más información sobre las distintas técnicas de listas de índices, consulta [Topologías primitivas](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-primitive-topologies).
 
 ### <a name="step-5-create-a-constant-buffer-for-your-transformation-matrices"></a>Paso 5: Crear un búfer de constantes para las matrices de la transformación
 
@@ -289,7 +289,7 @@ m_constantBufferData.projection = DirectX::XMFLOAT4X4(
             );
 ```
 
-Mientras estás aquí, establece los búferes de índices y vértices en[ID3D11DeviceContext](https://msdn.microsoft.com/library/windows/desktop/ff476149), además de la topología que usas.
+Mientras estás aquí, establece los búferes de índices y vértices en[ID3D11DeviceContext](https://docs.microsoft.com/windows/desktop/direct3d11/d3d11-graphics-reference-10level9-context), además de la topología que usas.
 
 ```cpp
 // Set the vertex and index buffers, and specify the way they define geometry.
@@ -412,7 +412,7 @@ Coloca este código en un archivo HLSL independiente del HLSL del sombreador de 
 
 ### <a name="step-8-rasterizing-and-displaying-the-mesh"></a>Paso 8: Rasterización y mostrar la malla
 
-Ejecutemos la canalización. Esto es fácil: llama a [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565).
+Ejecutemos la canalización. Esto es fácil: llama a [**ID3D11DeviceContext::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-drawindexed).
 
 ¡Dibuja el cubo!
 
@@ -438,7 +438,7 @@ m_swapChain->Present(1, 0);
 
 ¡Y listo! Para una escena repleta de modelos, usa varios búferes de índices y vértices. Incluso podrías tener distintos sombreadores para distintos tipos de modelos. Recuerda que cada modelo tiene su propio sistema de coordenadas y necesitas transformarlos al sistema compartido de coordenadas globales, usando las matrices definidas en el búfer de constantes.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 En este tema se explica cómo crear y mostrar la geometría simple que tú mismo has elaborado. Para obtener más información sobre cómo cargar geometría compleja de un archivo y convertirla al formato del objeto de búfer de vértices (.vbo) específico de la muestra, consulta [Cómo cargar recursos en tu juego DirectX](load-a-game-asset.md).  
 

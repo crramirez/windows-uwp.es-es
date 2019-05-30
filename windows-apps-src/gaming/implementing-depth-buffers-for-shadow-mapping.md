@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx, volúmenes de sombra, shadow volumes, búferes de profundidad, depth buffers, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 2feecb3080efefb2f9625fd8b66c5b722ad02a45
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2ce0cbd310ea89c5fa7b5c68033402f559768a24
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57622280"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368508"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>Tutorial: Implementar los volúmenes de instantáneas con búferes de profundidad en Direct3D 11
 
@@ -75,13 +75,13 @@ Debes [preparar el entorno de desarrollo para el desarrollo de juegos de DirectX
 
 **Direct3D**
 
-* [Escribir sombreadores HLSL in Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [Escribir sombreadores HLSL in Direct3D 9](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-writing-shaders-9)
 * [Cree un nuevo proyecto de DirectX 11 para UWP](user-interface.md)
 
 **Asignación de artículos técnicos de sombra**
 
-* [Técnicas comunes para mejorar los mapas de profundidad de la sombra](https://msdn.microsoft.com/library/windows/desktop/ee416324)
-* [Mapas de sombra en cascada](https://msdn.microsoft.com/library/windows/desktop/ee416307)
+* [Técnicas comunes para mejorar los mapas de profundidad de la sombra](https://docs.microsoft.com/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps)
+* [Mapas de sombra en cascada](https://docs.microsoft.com/windows/desktop/DxTechArts/cascaded-shadow-maps)
 
  
 

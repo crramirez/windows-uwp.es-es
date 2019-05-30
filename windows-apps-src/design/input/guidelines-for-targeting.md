@@ -8,12 +8,12 @@ ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c05b6686d31606a9510b1433339dc8829a52893
-ms.sourcegitcommit: 7a1d5198345d114c58287d8a047eadc4fe10f012
+ms.openlocfilehash: 34f8d15b971cc9ed286471010a21d1b44b84af13
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59247183"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363470"
 ---
 # <a name="guidelines-for-touch-targets"></a>Directrices para los destinos de toque
 
@@ -25,7 +25,7 @@ Todos los controles UWP se han diseñado con tamaños de destino táctil predete
 
 En este tema, se describen estos comportamientos predeterminados, por lo que puede diseñar la aplicación para la máxima facilidad de uso mediante los controles de plataforma y los controles personalizados (la aplicación, es necesario ellos).
 
-> **API importantes**: [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **API importantes**: [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
 ## <a name="fluent-standard-sizing"></a>Ajuste de tamaño estándar Fluent
 
@@ -79,22 +79,22 @@ Estas recomendaciones del tamaño de destino pueden ajustarse según sea necesar
 
 - [Introducción al diseño de aplicaciones para UWP](../basics/design-and-ui-intro.md)
 - [Tamaño del control y la densidad](../style/spacing.md)
-- [Alineación, margen, espaciado interno](../layout/alignment-margin-padding.md)
+- [Alineación, márgenes y relleno](../layout/alignment-margin-padding.md)
 
 ### <a name="samples"></a>Muestras
 
-- [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [Ejemplo de entrada de latencia baja](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+- [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+- [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 - [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [Muestra de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 ### <a name="archive-samples"></a>Ejemplos de archivo
 
 - [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
 - [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
 - [Entrada: Ejemplo de pruebas de posicionamiento táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
-- [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
+- [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
 - [Entrada: Ejemplo de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
 - [Entrada: Ejemplo de gestos de Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
 - [Entrada: Las manipulaciones y ejemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-- [Muestra de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+- [Ejemplo de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)

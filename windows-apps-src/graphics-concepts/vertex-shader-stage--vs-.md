@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ca3b5e230270b46b7cb2709d4bfa06c4c51d0224
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5893719e43314eb15c684948a31de5a025a926fc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598160"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370837"
 ---
 # <a name="vertex-shader-vs-stage"></a>Fase del sombreador de vértices (VS)
 
@@ -29,7 +29,7 @@ La fase del sombreador de vértices (VS) se usa para el procesamiento individual
 -   Transformación
 -   Iluminación por vértice
 
-La fase del sombreador de vértices es una fase de sombreador programable; se muestra como un bloque redondeado en el diagrama de [canalización de gráficos](graphics-pipeline.md). Esta fase del sombreador usa el modelo de sombreador 4.0 [sombreador común básico](https://msdn.microsoft.com/library/windows/desktop/bb509580).
+La fase del sombreador de vértices es una fase de sombreador programable; se muestra como un bloque redondeado en el diagrama de [canalización de gráficos](graphics-pipeline.md). Esta fase del sombreador usa el modelo de sombreador 4.0 [sombreador común básico](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-common-core).
 
 La fase del sombreador de vértices (VS) procesa los vértices de ensamblador de entrada. Los sombreadores de vértices trabajan con un solo vértice de entrada y producen un solo vértice de salida. La fase del sombreador de vértices siempre debe estar activa para que se ejecute la canalización. Si no se requiere ninguna modificación o transformación de vértice, debe crearse un sombreador de vértices transparente y establecerlo en la canalización.
 
@@ -39,7 +39,7 @@ La etapa del sombreador de vértices puede consumir dos valores generados por el
 
 Los sombreadores de vértices siempre se ejecutan en todos los vértices, incluidos los vértices adyacentes en topologías primitivas de entrada con proximidad. Se puede consultar el número de veces que se ha ejecutado el sombreador de vértices de la CPU con las estadísticas de canalización VSInvocations.
 
-Puede realizar un sombreador de vértices carga y las operaciones de muestreo de textura que no se requieren los derivados del espacio de pantalla (usar funciones intrínsecas de HLSL: [Ejemplo (objeto de textura HLSL DirectX)](https://msdn.microsoft.com/library/windows/desktop/bb509695), [SampleCmpLevelZero (objeto de textura HLSL DirectX)](https://msdn.microsoft.com/library/windows/desktop/bb509697), y [SampleGrad (objeto de textura HLSL DirectX)](https://msdn.microsoft.com/library/windows/desktop/bb509698)).
+Puede realizar un sombreador de vértices carga y las operaciones de muestreo de textura que no se requieren los derivados del espacio de pantalla (usar funciones intrínsecas de HLSL: [Ejemplo (objeto de textura HLSL DirectX)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-sample), [SampleCmpLevelZero (objeto de textura HLSL DirectX)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmplevelzero), y [SampleGrad (objeto de textura HLSL DirectX)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplegrad)).
 
 ## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
 

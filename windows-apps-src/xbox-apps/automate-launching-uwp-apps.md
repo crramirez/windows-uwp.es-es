@@ -4,12 +4,12 @@ description: Los desarrolladores pueden usar la activación de protocolos y la a
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
-ms.openlocfilehash: fb68b4bbd1b751591e9f336efe5dad3c22b3bf92
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f61fcfcef549295b8f3c9004572a74043a2917a2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618310"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365827"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar el inicio de aplicaciones de Windows 10 para UWP
 
@@ -48,7 +48,7 @@ Para activar la aplicación con un protocolo, usa la línea de comandos con el i
   scheme://username:password@host:port/path.extension?query#fragment
   ```
 
-El objeto de URI tiene métodos para analizar una cadena URI en este formato. Para obtener más información, consulta [Uri class (MSDN)](https://msdn.microsoft.com/library/windows/apps/windows.foundation.uri.aspx). 
+El objeto de URI tiene métodos para analizar una cadena URI en este formato. Para obtener más información, consulta [Uri class (MSDN)](https://docs.microsoft.com/uwp/api/windows.foundation.uri). 
 
 Ejemplos:
 
@@ -210,6 +210,6 @@ void OnActivated(IActivatedEventArgs^ args)
 ## <a name="summary"></a>Resumen
 En resumen, puedes usar distintos métodos para iniciar la aplicación para UWP. Dependiendo de los requisitos y de los casos de uso, algunos métodos pueden resultar más adecuados que otros. 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [UWP en Xbox One](index.md)
 

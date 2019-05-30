@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06c42cff51852f7d0456d533af60455d7d1b9caf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 07d94f5b11acfe14bf55392c5cbf2c1b7bcfbeef
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613900"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369394"
 ---
 # <a name="accessing-homegroup-content"></a>Acceso a contenido de Grupo Hogar
 
@@ -19,7 +19,7 @@ ms.locfileid: "57613900"
 
 **API importantes**
 
--   [**Clase Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151)
+-   [**Clase Windows.Storage.KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders)
 
 Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye imágenes, música y vídeos.
 
@@ -27,7 +27,7 @@ Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye im�
 
 -   **Comprender la programación asincrónica para las aplicaciones de la plataforma Universal de Windows (UWP)**
 
-    Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
+    Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 -   **Declaraciones de capacidad para la aplicación**
 
@@ -50,7 +50,7 @@ Sigue estos pasos para abrir una instancia del selector de archivos que permite 
 
 1.  **Crear y personalizar el selector de archivos**
 
-    Usa [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) para crear el selector de archivos y después establece la propiedad [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) del selector en [**PickerLocationId.HomeGroup**](https://msdn.microsoft.com/library/windows/apps/br207890). O bien, establece otras propiedades que sean relevantes para los usuarios y la aplicación. Para obtener directrices que te ayuden a decidir cómo personalizar el selector de archivos, consulta [Directrices y lista de comprobación para selectores de archivos](https://msdn.microsoft.com/library/windows/apps/hh465182)
+    Usa [**FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) para crear el selector de archivos y después establece la propiedad [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation) del selector en [**PickerLocationId.HomeGroup**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerLocationId). O bien, establece otras propiedades que sean relevantes para los usuarios y la aplicación. Para obtener directrices que te ayuden a decidir cómo personalizar el selector de archivos, consulta [Directrices y lista de comprobación para selectores de archivos](https://docs.microsoft.com/windows/uwp/files/quickstart-using-file-and-folder-pickers)
 
     En este ejemplo se crea un selector de archivos que se abre en el Grupo Hogar, incluye archivos de cualquier tipo y muestra los archivos como imágenes en miniatura:
     ```cs
@@ -63,7 +63,7 @@ Sigue estos pasos para abrir una instancia del selector de archivos que permite 
 
 2.  **Mostrar el selector de archivos y procesar el archivo seleccionado.**
 
-    Después de crear y personalizar el selector de archivos, permite que el usuario seleccione un archivo llamando a [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275), o varios archivos llamando a [**FileOpenPicker.PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851).
+    Después de crear y personalizar el selector de archivos, permite que el usuario seleccione un archivo llamando a [**FileOpenPicker.PickSingleFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync), o varios archivos llamando a [**FileOpenPicker.PickMultipleFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.pickmultiplefilesasync).
 
     En este ejemplo se muestra el selector de archivos que permite al usuario seleccionar un archivo:
     ```cs
@@ -85,7 +85,7 @@ En esta sección se muestra cómo buscar elementos del Grupo Hogar que coinciden
 
 1.  **Obtener el término de consulta del usuario.**
 
-    Aquí obtenemos un término de consulta que el usuario especificó en un control [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) llamado `searchQueryTextBox`:
+    Aquí obtenemos un término de consulta que el usuario especificó en un control [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) llamado `searchQueryTextBox`:
     ```cs
     string queryTerm = this.searchQueryTextBox.Text;    
     ```
@@ -128,7 +128,7 @@ En esta sección se muestra cómo buscar archivos del Grupo Hogar que comparte u
 
 1.  **Obtiene una colección de usuarios del grupo hogar.**
 
-    Cada una de las carpetas de primer nivel del Grupo Hogar representa un usuario de Grupo Hogar individual. Por lo tanto, para obtener una colección de usuarios de Grupo Hogar, llama a [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227279) para recuperar las carpetas de Grupo Hogar de nivel superior.
+    Cada una de las carpetas de primer nivel del Grupo Hogar representa un usuario de Grupo Hogar individual. Por lo tanto, para obtener una colección de usuarios de Grupo Hogar, llama a [**GetFoldersAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfoldersasync) para recuperar las carpetas de Grupo Hogar de nivel superior.
     ```cs
     System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFolder> hgFolders =
         await Windows.Storage.KnownFolders.HomeGroup.GetFoldersAsync();    
@@ -173,7 +173,7 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
 
 1.  **Incluya un control MediaElement en la aplicación.**
 
-    [  **MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) te permite reproducir contenido de audio y vídeo en tu aplicación. Para obtener información sobre la reproducción de audio y vídeo, consulta [Crear controles de transporte personalizados](https://msdn.microsoft.com/library/windows/apps/mt187271) y [Audio, vídeo y cámara](https://msdn.microsoft.com/library/windows/apps/mt203788).
+    [  **MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) te permite reproducir contenido de audio y vídeo en tu aplicación. Para obtener información sobre la reproducción de audio y vídeo, consulta [Crear controles de transporte personalizados](https://docs.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls) y [Audio, vídeo y cámara](https://docs.microsoft.com/windows/uwp/audio-video-camera/index).
     ```HTML
     <Grid x:Name="Output" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
         <MediaElement x:Name="VideoBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" Width="400" Height="300"/>
@@ -193,7 +193,7 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Abra la selección de archivos del usuario para el acceso de lectura y establezca la secuencia de archivos como origen para la** [ **MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926), y, a continuación, reproduzca el archivo.
+3.  **Abra la selección de archivos del usuario para el acceso de lectura y establezca la secuencia de archivos como origen para la** [ **MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement), y, a continuación, reproduzca el archivo.
     ```cs
     if (file != null)
     {

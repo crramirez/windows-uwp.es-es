@@ -7,35 +7,35 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 00d6c16ecaa64abf7d83154fdb864671dbff3eae
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: db8a368f6cd9e0b6d38fb16d81dbc31a0f8a615f
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643490"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370603"
 ---
 # <a name="hlsl-streaming-resources-exposure"></a>Exposición de recursos de streaming de HLSL
 
 
-Se necesita una sintaxis específica del lenguaje High Level Shader Language (HLSL) de Microsoft para admitir los recursos de streaming en [Shader Model 5](https://msdn.microsoft.com/library/windows/desktop/ff471356).
+Se necesita una sintaxis específica del lenguaje High Level Shader Language (HLSL) de Microsoft para admitir los recursos de streaming en [Shader Model 5](https://docs.microsoft.com/windows/desktop/direct3dhlsl/d3d11-graphics-reference-sm5).
 
 La sintaxis HLSL para Shader Model 5 solo se admite en dispositivos con compatibilidad con recursos de streaming. Cada método HLSL pertinente para los recursos de streaming de la siguiente tabla acepta un parámetro opcional adicional (comentarios) o dos (restricción y comentarios en este orden). Por ejemplo, un método **Sample** es:
 
 **Ejemplo (muestra, ubicación \[, desplazamiento \[, abrazadera \[, comentarios\] \] \])**
 
-Un ejemplo de método **Sample** es [**Texture2D.Sample(S,float,int,float,uint)**](https://msdn.microsoft.com/library/windows/desktop/dn393787).
+Un ejemplo de método **Sample** es [**Texture2D.Sample(S,float,int,float,uint)** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/t2darray-sample-s-float-int-float-uint-).
 
 Los parámetros de desplazamiento, restricción y comentarios son opcionales. Debes especificar todos los parámetros opcionales hasta el que necesites, que sea coherente con las reglas de C++ de los argumentos de la función predeterminada. Por ejemplo, si es necesario el estado de comentarios, los parámetros de desplazamiento y restricción deben proporcionarse explícitamente en **Sample**, aunque no sean necesarios lógicamente.
 
 El parámetro de restricción es un valor de tipo float escalar. El valor literal de restricción =0.0f indica que no se realiza la operación de restricción.
 
-El parámetro de comentarios es una variable **uint** que puedes proporcionar a la función intrínseca de consulta de acceso a la memoria [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083). No debes modificar ni interpretar el valor del parámetro; sin embargo, el compilador no proporciona ningún análisis avanzado ni diagnóstico para detectar si se ha modificado el valor.
+El parámetro de comentarios es una variable **uint** que puedes proporcionar a la función intrínseca de consulta de acceso a la memoria [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped). No debes modificar ni interpretar el valor del parámetro; sin embargo, el compilador no proporciona ningún análisis avanzado ni diagnóstico para detectar si se ha modificado el valor.
 
-Esta es la sintaxis de [**CheckAccessFullyMapped**](https://msdn.microsoft.com/library/windows/desktop/dn292083):
+Esta es la sintaxis de [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped):
 
-**BOOL CheckAccessFullyMapped (en uint FeedbackVar);**
+**bool CheckAccessFullyMapped(in uint FeedbackVar);**
 
-[**CheckAccessFullyMapped** ](https://msdn.microsoft.com/library/windows/desktop/dn292083) interpreta el valor de *FeedbackVar* y devuelve true si todos los datos que se obtiene acceso se ha asignado en el recurso; de lo contrario, **CheckAccessFullyMapped**devuelve false.
+[**CheckAccessFullyMapped** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) interpreta el valor de *FeedbackVar* y devuelve true si todos los datos que se obtiene acceso se ha asignado en el recurso; de lo contrario, **CheckAccessFullyMapped**devuelve false.
 
 Si hay el parámetro de restricción o comentarios, el compilador emite una variante de la instrucción básica. Por ejemplo, la muestra de un recurso de streaming genera la instrucción `sample_cl_s`.
 
@@ -56,7 +56,7 @@ En esta tabla se resumen los métodos HLSL que se modifican para admitir los com
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><a href="https://msdn.microsoft.com/library/windows/desktop/ff471359">Objetos HLSL</a> </th>
+<th align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/d3d11-graphics-reference-sm5-objects">Objetos HLSL</a> </th>
 <th align="left">Métodos intrínsecos con la opción de comentarios (*); también hay la opción de restricción</th>
 </tr>
 </thead>

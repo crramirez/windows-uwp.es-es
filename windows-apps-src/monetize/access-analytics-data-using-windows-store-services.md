@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ab3e223c99a13e4520d5bc603454881803a3cb64
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 14a1b73a2c82beea746d40c25bfa18ddf6171203
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334863"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371999"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a los datos de análisis mediante los servicios de la Store
 
@@ -95,7 +95,7 @@ Los siguientes métodos de análisis están disponibles para aplicaciones para U
 
 ### <a name="methods-for-desktop-applications"></a>Métodos para aplicaciones de escritorio
 
-Los siguientes métodos de análisis están disponibles para que las cuentas de desarrollador que pertenecen al [Programa de aplicaciones de escritorio de Windows](https://msdn.microsoft.com/library/windows/desktop/mt826504) puedan usarlos.
+Los siguientes métodos de análisis están disponibles para que las cuentas de desarrollador que pertenecen al [Programa de aplicaciones de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) puedan usarlos.
 
 | Escenario       | Métodos      |
 |---------------|--------------------|
@@ -125,7 +125,7 @@ Los siguientes métodos adicionales están disponibles para su uso con las cuent
 
 ### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware y controladores
 
-Las cuentas de desarrollador que pertenecen a la [programa del panel de Windows hardware](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tiene acceso a un conjunto de métodos para recuperar datos de análisis de hardware y controladores adicional. Para obtener más información, consulte [panel Hardware API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
+Las cuentas de desarrollador que pertenecen a la [programa del panel de Windows hardware](https://docs.microsoft.com/windows-hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tiene acceso a un conjunto de métodos para recuperar datos de análisis de hardware y controladores adicional. Para obtener más información, consulte [panel Hardware API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Ejemplo de código
 

@@ -6,36 +6,36 @@ ms.topic: article
 keywords: Windows 10, uwp, tareas en segundo plano
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
-ms.openlocfilehash: 50e818059436cf7653bf7ac7b2203b0761b93377
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f37ffe21795fc68ff72b4e6f1de591c96d2f8b90
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615800"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366212"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>Crear y registrar una tarea en segundo plano dentro del proceso
 
 **API importantes**
 
--   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
--   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
+-   [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+-   [**BackgroundTaskCompletedEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcompletedeventhandler)
 
 Este tema muestra cómo crear y registrar una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación.
 
-Las tareas en segundo plano dentro del proceso son más fáciles de implementar que las tareas en segundo plano fuera del proceso. No obstante, son menos resistentes. Si se bloquea el código que se ejecuta en una tarea en segundo plano dentro del proceso, la aplicación también se bloqueará. Ten en cuenta también que [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) y **IoTStartupTask** no pueden usarse con el modelo dentro del proceso. Activar una tarea en segundo plano de VoIP dentro de la aplicación tampoco es posible. Estas tareas y los desencadenadores aún son compatibles con el modelo de tarea en segundo plano fuera del proceso.
+Las tareas en segundo plano dentro del proceso son más fáciles de implementar que las tareas en segundo plano fuera del proceso. No obstante, son menos resistentes. Si se bloquea el código que se ejecuta en una tarea en segundo plano dentro del proceso, la aplicación también se bloqueará. Ten en cuenta también que [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceusetrigger), [DeviceServicingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceservicingtrigger) y **IoTStartupTask** no pueden usarse con el modelo dentro del proceso. Activar una tarea en segundo plano de VoIP dentro de la aplicación tampoco es posible. Estas tareas y los desencadenadores aún son compatibles con el modelo de tarea en segundo plano fuera del proceso.
 
 Ten en cuenta que la actividad en segundo plano puede finalizarse incluso cuando se ejecuta dentro del proceso en primer plano de la aplicación si se ejecuta más allá de los límites de tiempo de ejecución. Para algunos fines sigue siendo útil la resistencia de separar el trabajo en una tarea en segundo plano que se ejecuta en un proceso independiente. Mantener el trabajo en segundo plano como una tarea independiente de la aplicación en primer plano puede ser la mejor opción para el trabajo que no requiere la comunicación con la aplicación en primer plano.
 
 ## <a name="fundamentals"></a>Conceptos básicos
 
-El modelo dentro del proceso mejora el ciclo de vida de la aplicación con mejores notificaciones para cuando la aplicación está en primer plano o en segundo plano. Dos nuevos eventos están disponibles en el objeto de aplicación para estas transiciones: [**EnteredBackground** ](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) y [ **LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground). Estos eventos encajan en el ciclo de vida de la aplicación en función del estado de visibilidad de la aplicación. Obtén más información sobre estos eventos y cómo afectan al ciclo de vida de la aplicación en [Ciclo de vida de la aplicación](app-lifecycle.md).
+El modelo dentro del proceso mejora el ciclo de vida de la aplicación con mejores notificaciones para cuando la aplicación está en primer plano o en segundo plano. Dos nuevos eventos están disponibles en el objeto de aplicación para estas transiciones: [**EnteredBackground** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) y [ **LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground). Estos eventos encajan en el ciclo de vida de la aplicación en función del estado de visibilidad de la aplicación. Obtén más información sobre estos eventos y cómo afectan al ciclo de vida de la aplicación en [Ciclo de vida de la aplicación](app-lifecycle.md).
 
 En un nivel alto, controlarás el evento **EnteredBackground** para ejecutar el código que se ejecutará mientras la aplicación se ejecuta en segundo plano y controlarás **LeavingBackground** para saber cuándo tu aplicación se ha desplazado a un primer plano.
 
 ## <a name="register-your-background-task-trigger"></a>Registrar el desencadenador de tareas en segundo plano
 
-La actividad en segundo plano dentro del proceso se registra de forma similar a la actividad en segundo plano fuera del proceso. Todos los desencadenadores en segundo plano empiezan con el registro con el uso de [BackgroundTaskBuilder](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.aspx?f=255&MSPPError=-2147217396). El ensamblador facilita el registro de una tarea en segundo plano mediante la configuración de todos los valores necesarios en un solo lugar:
+La actividad en segundo plano dentro del proceso se registra de forma similar a la actividad en segundo plano fuera del proceso. Todos los desencadenadores en segundo plano empiezan con el registro con el uso de [BackgroundTaskBuilder](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder?f=255&MSPPError=-2147217396). El ensamblador facilita el registro de una tarea en segundo plano mediante la configuración de todos los valores necesarios en un solo lugar:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -48,16 +48,16 @@ La actividad en segundo plano dentro del proceso se registra de forma similar a 
 > ```
 
 > [!NOTE]
-> Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) antes de registrar cualquier tipo de desencadenador en segundo plano.
-> Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) y luego a [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
+> Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar cualquier tipo de desencadenador en segundo plano.
+> Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) y luego a [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
-Para actividades en segundo plano dentro del proceso no se configura `TaskEntryPoint.` Dejarlo en blanco habilita el punto de entrada predeterminado, un nuevo método protegido en el objeto de la aplicación denominado [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).
+Para actividades en segundo plano dentro del proceso no se configura `TaskEntryPoint.` Dejarlo en blanco habilita el punto de entrada predeterminado, un nuevo método protegido en el objeto de la aplicación denominado [OnBackgroundActivated()](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated).
 
-Una vez que se registra un desencadenador, se activará en función del tipo de desencadenador establecido en el método [SetTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.settrigger.aspx). En el ejemplo anterior se utiliza un [TimeTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.timetrigger.aspx), que se activará quince minutos desde el momento en que se registró.
+Una vez que se registra un desencadenador, se activará en función del tipo de desencadenador establecido en el método [SetTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.settrigger). En el ejemplo anterior se utiliza un [TimeTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.timetrigger), que se activará quince minutos desde el momento en que se registró.
 
 ## <a name="add-a-condition-to-control-when-your-task-will-run-optional"></a>Adición de una condición para controlar cuándo se ejecutará la tarea (opcional)
 
-Puedes agregar una condición para controlar cuándo se ejecutará la tarea después de que se produzca el evento del desencadenador. Por ejemplo, si no quieres que la tarea se ejecute hasta que el usuario esté presente, usa la condición **UserPresent**. Para obtener una lista de posibles condiciones, consulta [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
+Puedes agregar una condición para controlar cuándo se ejecutará la tarea después de que se produzca el evento del desencadenador. Por ejemplo, si no quieres que la tarea se ejecute hasta que el usuario esté presente, usa la condición **UserPresent**. Para obtener una lista de posibles condiciones, consulta [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType).
 
 El siguiente código de muestra asigna una condición que requiere que el usuario esté presente:
 
@@ -68,7 +68,7 @@ El siguiente código de muestra asigna una condición que requiere que el usuari
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>Colocación del código de la actividad en segundo plano en OnBackgroundActivated()
 
-Coloque el código de la actividad en segundo plano en [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) responda al desencadenador en segundo plano cuando se desencadena. **OnBackgroundActivated** puede tratarse como [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396). El método tiene un [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) parámetro, que todo lo contiene que el **ejecutar** método ofrece. Por ejemplo, en App.xaml.cs:
+Coloque el código de la actividad en segundo plano en [OnBackgroundActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated) responda al desencadenador en segundo plano cuando se desencadena. **OnBackgroundActivated** puede tratarse como [IBackgroundTask.Run](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run?f=255&MSPPError=-2147217396). El método tiene un [BackgroundActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.backgroundactivatedeventargs) parámetro, que todo lo contiene que el **ejecutar** método ofrece. Por ejemplo, en App.xaml.cs:
 
 ``` cs
 using Windows.ApplicationModel.Background;
@@ -114,7 +114,7 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 
 * [Convertir una tarea en segundo plano fuera de proceso en una tarea en segundo plano en curso](convert-out-of-process-background-task.md)
 * [Crear y registrar una tarea en segundo plano fuera del proceso](create-and-register-a-background-task.md)
-* [Reproducir archivos multimedia en segundo plano](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
+* [Reproducir archivos multimedia en segundo plano](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
 * [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
@@ -131,4 +131,4 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 
 **Referencia de API de tareas en segundo plano**
 
-* [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
+* [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)

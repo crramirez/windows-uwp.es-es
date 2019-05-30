@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5752a7bf18d785121258ea3fe75afe8383be2aff
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4a6b61463204b4ae60fbb853cd00a10c7185a084
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57636110"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362703"
 ---
 # <a name="send-a-local-tile-notification"></a>Enviar una notificación de icono local
  
@@ -204,7 +204,7 @@ Las notificaciones de inserción o periódicas solo pueden agregar nuevas notifi
 
 **Uso de la cola de notificación**
 
-Ahora que has realizado tu primera actualización de iconos, puedes habilitar una [cola de notificaciones](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234) para expandir la funcionalidad del icono.
+Ahora que has realizado tu primera actualización de iconos, puedes habilitar una [cola de notificaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh868234(v=win.10)) para expandir la funcionalidad del icono.
 
 **Otros métodos de entrega de notificación**
 
@@ -291,7 +291,7 @@ var notification = new TileNotification(doc);
 * [Biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 * [Ejemplo de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
 * [**Espacio de nombres Windows.UI.Notifications**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
-* [Uso de la cola de notificación (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
+* [Uso de la cola de notificación (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/hh868234(v=win.10))
 * [Entrega de notificaciones](choosing-a-notification-delivery-method.md)
  
 

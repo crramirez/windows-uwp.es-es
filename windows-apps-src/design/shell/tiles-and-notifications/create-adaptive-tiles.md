@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 524cc15dbb7a3264d8476210f727508ea41ace87
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 08a7ca0b08a9df57d3c496f33f963fcd9d0ebfe2
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639610"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367059"
 ---
 # <a name="create-adaptive-tiles"></a>Crear iconos adaptables
 
 Las plantillas de icono Adaptive son una característica nueva en Windows 10, lo que le permite diseñar su propio contenido de la notificación de mosaico con un lenguaje de marcado simple y flexible que se adapte a las densidades de pantalla diferentes. En este artículo se explica cómo crear iconos dinámicos adaptables para la aplicación Plataforma universal de Windows (UWP). Para obtener la lista completa de atributos y elementos adaptables, consulta el [Esquema de iconos adaptables](../tiles-and-notifications/tile-schema.md).
 
-(Si lo desea, todavía puede usar las plantillas preestablecidas desde el [catálogo de plantillas de icono de Windows 8](https://msdn.microsoft.com/library/windows/apps/hh761491) al diseñar las notificaciones para Windows 10.)
+(Si lo desea, todavía puede usar las plantillas preestablecidas desde el [catálogo de plantillas de icono de Windows 8](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) al diseñar las notificaciones para Windows 10.)
 
 
 ## <a name="getting-started"></a>Introducción
@@ -284,7 +284,7 @@ Si no especificas la personalización de marca en la carga de notificaciones, la
 
  
 
-## <a name="display-name"></a>Nombre para mostrar
+## <a name="display-name"></a>`Display name`
 
 
 Puedes invalidar el nombre para mostrar de una notificación escribiendo la cadena de texto que quieras con el atributo **displayName**. Al igual que con la personalización de marca, puedes especificar esto en el elemento [TileVisual](../tiles-and-notifications/tile-schema.md#tilevisual), que afecta a toda la carga de notificaciones, o en el elemento [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding), que solo afecta a iconos individuales.
@@ -414,11 +414,11 @@ new AdaptiveText()
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;texto de sugerencia-style = "\*" /&gt; | Alto de fuente               | Espesor de la fuente |
-| subtítulo                        | 12 píxeles efectivos (epx) | Normal     |
-| body                           | 15 epx                    | Normal     |
+| &lt;text hint-style="\*" /&gt; | Alto de fuente               | Espesor de la fuente |
+| subtítulo                        | 12 píxeles efectivos (epx) | Regular     |
+| body                           | 15 epx                    | Regular     |
 | base                           | 15 epx                    | Semibold    |
-| subtitle                       | 20 epx                    | Normal     |
+| subtitle                       | 20 epx                    | Regular     |
 | title                          | 24 epx                    | Semilight   |
 | subheader                      | 34 epx                    | Claro       |
 | header                         | 46 epx                    | Claro       |
@@ -592,19 +592,19 @@ El atributo **hint-weight** te permite controlar el ancho de las columnas. El va
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
-<td align="left">25 %</td>
+<td align="left">25%</td>
 </tr>
 <tr class="even">
 <td align="left">Peso total: 4</td>
@@ -662,7 +662,7 @@ Si quieres que la primera columna ocupe un 20 % del ancho total y que la segund
 </tr>
 <tr class="even">
 <td align="left">20</td>
-<td align="left">20 %</td>
+<td align="left">20%</td>
 </tr>
 <tr class="odd">
 <td align="left">80</td>

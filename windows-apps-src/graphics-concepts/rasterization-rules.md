@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c622c037f878d1ad34cdadf897dde10683532832
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 28376f6e96cc490c7c44f4ed60093591e873300e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660870"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371006"
 ---
 # <a name="rasterization-rules"></a>Reglas de rasterización
 
@@ -97,7 +97,7 @@ Por lo general, las reglas de rasterización de primitivos no cambian con el sua
 
 -   Para un punto se realiza una prueba de cobertura para cada ubicación de muestra (no de un centro de píxel).
 
-Los formatos de muestreo múltiple se pueden utilizar en destinos de representación que se pueden leer en sombreadores mediante [load](https://msdn.microsoft.com/library/windows/desktop/bb509694), dado que no es necesario resolver muestras individuales a las que accede el sombreador. Los formatos de profundidad no se admiten para el recurso multimuestra, por lo que están restringidos a los destinos de representación solamente.
+Los formatos de muestreo múltiple se pueden utilizar en destinos de representación que se pueden leer en sombreadores mediante [load](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-load), dado que no es necesario resolver muestras individuales a las que accede el sombreador. Los formatos de profundidad no se admiten para el recurso multimuestra, por lo que están restringidos a los destinos de representación solamente.
 
 Los formatos sin tipos admiten el muestreo múltiple para permitir que una vista de recursos interprete datos de diferentes maneras. Por ejemplo, podría crear un recurso de muestreo múltiple mediante R8G8B8A8\_TYPELESS, representación a ella mediante un recurso de la vista de destino de representación con un R8G8B8A8\_UINT dar formato y, después, resolver el contenido a otro recurso con un R8G8B8A8\_Formato de datos UNORM.
 

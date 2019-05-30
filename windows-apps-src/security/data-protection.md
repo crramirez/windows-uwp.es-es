@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c93527a2ee738a3e6b0f4e9b9d2a1343158441b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 15feb86677cd70774a99fe4046d817c71fc71f90
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608270"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372581"
 ---
 # <a name="data-protection"></a>Protección de datos
 
 
 
-En este artículo se explica cómo usar la clase [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) en el espacio de nombres [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) para cifrar y descifrar datos digitales en una aplicación para UWP.
+En este artículo se explica cómo usar la clase [**DataProtectionProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) en el espacio de nombres [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection) para cifrar y descifrar datos digitales en una aplicación para UWP.
 
 Puedes usar las API de protección de datos de varias maneras:
 
@@ -26,12 +26,12 @@ Puedes usar las API de protección de datos de varias maneras:
 -   Para proteger los datos con una clave simétrica. Esto funciona, por ejemplo, para proteger datos con una entidad de seguridad distinta de AD, como Live ID.
 -   Para proteger datos en las credenciales (contraseña) usadas durante el inicio de sesión en un sitio web.
 
-Para proteger los datos, cuando crees un objeto [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559), debes especificar un descriptor de protección antes de llamar a [**ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/br241563) o [**ProtectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241564). El siguiente ejemplo muestra posibles descriptores de protección.
+Para proteger los datos, cuando crees un objeto [**DataProtectionProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider), debes especificar un descriptor de protección antes de llamar a [**ProtectAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectasync) o [**ProtectStreamAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectstreamasync). El siguiente ejemplo muestra posibles descriptores de protección.
 
 ## <a name="protecting-static-data"></a>Protección de datos estáticos
 
 
-El siguiente ejemplo muestra cómo usar los métodos [**ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/br241563) y [**UnprotectAsync**](https://msdn.microsoft.com/library/windows/apps/br241565) para proteger datos estáticos de forma asincrónica en el SID del usuario actual.
+El siguiente ejemplo muestra cómo usar los métodos [**ProtectAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectasync) y [**UnprotectAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.unprotectasync) para proteger datos estáticos de forma asincrónica en el SID del usuario actual.
 
 ```cs
 using Windows.Security.Cryptography;
@@ -116,7 +116,7 @@ namespace SampleProtectAsync
 ## <a name="protecting-stream-data"></a>Protección de datos de secuencia
 
 
-En el siguiente ejemplo se muestra cómo usar los métodos [**ProtectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241564) y [**UnprotectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241566) para proteger los datos de secuencia de forma asincrónica en el SID del usuario actual.
+En el siguiente ejemplo se muestra cómo usar los métodos [**ProtectStreamAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectstreamasync) y [**UnprotectStreamAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.unprotectstreamasync) para proteger los datos de secuencia de forma asincrónica en el SID del usuario actual.
 
 ```cs
 using Windows.Security.Cryptography;

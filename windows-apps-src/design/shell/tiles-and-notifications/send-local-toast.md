@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, enviar notificaciones del sistema, notificaciones, enviar notificaciones, notificaciones del sistema, cómo, inicio rápido, introducción, ejemplo de código, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: 410e8121aecfe13805586c9287f62444f80a1b1b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4c8def5d1a220fe0458dd5c244d875b991b2b76c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605930"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365928"
 ---
 # <a name="send-a-local-toast-notification"></a>Enviar una notificación de icono local
 
@@ -54,7 +54,7 @@ Para comprender completamente este tema, será útil lo siguiente...
 > A diferencia de Windows 8/8.1, ya no necesitas declarar en el manifiesto de la aplicación que la aplicación puede mostrar notificaciones del sistema. Todas las aplicaciones pueden enviar y mostrar notificaciones del sistema.
 
 > [!NOTE]
-> **Las aplicaciones de Windows 8/8.1**: Use la [documentación archivada](https://msdn.microsoft.com/library/windows/apps/xaml/hh868254.aspx).
+> **Las aplicaciones de Windows 8/8.1**: Use la [documentación archivada](https://docs.microsoft.com/previous-versions/windows/apps/hh868254(v=win.10)).
 
 
 ## <a name="install-nuget-packages"></a>Instalación de paquetes NuGet
@@ -238,7 +238,7 @@ toast.ExpirationTime = DateTime.Now.AddDays(2);
 
 Si quieres eliminar o reemplazar mediante programación la notificación que envíes, debes usar la propiedad Tag (y, opcionalmente, la propiedad Group) para proporcionar una clave principal para la notificación. A continuación, puedes usar esta clave principal en el futuro para eliminar o reemplazar la notificación.
 
-Para ver más detalles sobre reemplazando o quitando ya entregan las notificaciones del sistema, consulte [inicio rápido: Administrar las notificaciones del sistema en el centro de actividades (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/dn631260.aspx).
+Para ver más detalles sobre reemplazando o quitando ya entregan las notificaciones del sistema, consulte [inicio rápido: Administrar las notificaciones del sistema en el centro de actividades (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10)).
 
 Etiqueta y Grupo combinados actúan como clave principal compuesta. Grupo es el identificador más genérico, donde puede asignar grupos como "wallPosts", "messages", "friendRequests", etcetera. Y, a continuación, etiqueta debe identificar de forma única la notificación de sí mismo desde dentro del grupo. Al usar un grupo genérico, puedes quitar todas las notificaciones de ese grupo mediante la [API RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_).
 
@@ -270,7 +270,7 @@ Este es un ejemplo de lo que debe hacer una aplicación de mensajería...
 3. La aplicación abre la conversación y, a continuación, borra todas las notificaciones del sistema para esa conversación (usando [RemoveGroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_) en el grupo suministrado por la aplicación para esa conversación)
 4. El centro de actividades del usuario refleja correctamente ahora el estado de la notificación, ya que no queda ninguna notificación obsoleta para esa conversación en el centro de actividades.
 
-Para obtener información sobre cómo borrar todas las notificaciones o quitar notificaciones específicas, consulte [inicio rápido: Administrar las notificaciones del sistema en el centro de actividades (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/dn631260.aspx).
+Para obtener información sobre cómo borrar todas las notificaciones o quitar notificaciones específicas, consulte [inicio rápido: Administrar las notificaciones del sistema en el centro de actividades (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10)).
 
 
 ## <a name="handling-activation"></a>Control de la activación

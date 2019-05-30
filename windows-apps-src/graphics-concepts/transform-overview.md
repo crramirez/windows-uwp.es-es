@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a01814729e38668e05201b4b7c8876dc150c488e
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: fe97d689711202511dcfec023b718cd1ba9b0b1d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291773"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370935"
 ---
 # <a name="transform-overview"></a>Introducción a las transformaciones
 
@@ -60,7 +60,7 @@ Las matrices se escriben en orden de fila-columna. Una matriz que escala uniform
 
 ![ecuación de una matriz para escala uniforme](images/matrix.png)
 
-En C++, Direct3D declara matrices como una matriz de dos dimensiones, una estructura de matriz. El siguiente ejemplo muestra cómo inicializar una estructura de [**D3DMATRIX**](https://msdn.microsoft.com/library/windows/desktop/bb172573) para que funcione como una matriz de escala uniforme (factor de escala "s").
+En C++, Direct3D declara matrices como una matriz de dos dimensiones, una estructura de matriz. El siguiente ejemplo muestra cómo inicializar una estructura de [**D3DMATRIX**](https://docs.microsoft.com/windows/desktop/direct3d9/d3dmatrix) para que funcione como una matriz de escala uniforme (factor de escala "s").
 
 ```cpp
 D3DMATRIX scale = {

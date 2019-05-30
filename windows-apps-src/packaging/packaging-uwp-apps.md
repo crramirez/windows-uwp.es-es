@@ -9,12 +9,12 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a7a34846cbadfa9e133976695239b98294a0dd2
-ms.sourcegitcommit: 559d3387d5929431212d147d9e085895e162916a
+ms.openlocfilehash: ba1e09a3819b2c22de52760519f352adc36d6362
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66184579"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372370"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Empaquetar una aplicación para UWP con Visual Studio
 
@@ -46,7 +46,7 @@ Después de completar los pasos anteriores, estás listo para distribuir tu apli
 
 1.  **Pruebe la aplicación.** Antes de empaquetar la aplicación para enviarla de centro de partners, asegúrese de que funciona según lo previsto en todas las familias de dispositivos que va a admitir. Estas familias de dispositivos pueden incluir los equipos de escritorio, móviles, Surface Hub, Xbox, dispositivos de IoT, etc. Para obtener más información sobre cómo implementar y probar la aplicación con Visual Studio, consulte [implementación y depuración de aplicaciones para UWP](../debug-test-perf/deploying-and-debugging-uwp-apps.md).
 2.  **Optimizar la aplicación.** Puedes usar las herramientas de generación de perfiles y depuración de Visual Studio para optimizar el rendimiento de tu aplicación para UWP. Por ejemplo, la herramienta Línea de tiempo para la capacidad de respuesta de la interfaz de usuario, la herramienta Uso de memoria, la herramienta Uso de CPU, etc. Para obtener más información acerca de estas herramientas de línea de comandos, consulta el tema [Recorrido por las funciones de perfiles](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour):
-3.  **Comprobar la compatibilidad de .NET Native (para VB y C# aplicaciones).** En la Plataforma universal de Windows, hay un compilador nativo que mejorará el rendimiento en tiempo de ejecución de la aplicación. Una vez hecho este cambio, debe probar la aplicación en este entorno de compilación. De manera predeterminada, la configuración de compilación **Release** habilita la cadena de herramientas de .NET nativa, por lo que es importante probar la aplicación con esta configuración **Release** y comprobar que se comporta según lo esperado. Algunos problemas de depuración comunes que pueden producirse con .NET Native se explican con más detalle en [Depuración de aplicaciones universales de .NET Native](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx).
+3.  **Comprobar la compatibilidad de .NET Native (para VB y C# aplicaciones).** En la Plataforma universal de Windows, hay un compilador nativo que mejorará el rendimiento en tiempo de ejecución de la aplicación. Una vez hecho este cambio, debe probar la aplicación en este entorno de compilación. De manera predeterminada, la configuración de compilación **Release** habilita la cadena de herramientas de .NET nativa, por lo que es importante probar la aplicación con esta configuración **Release** y comprobar que se comporta según lo esperado. Algunos problemas de depuración comunes que pueden producirse con .NET Native se explican con más detalle en [Depuración de aplicaciones universales de .NET Native](https://blogs.msdn.microsoft.com/devops/2015/07/29/debugging-net-native-windows-universal-apps/).
 
 ## <a name="configure-an-app-package"></a>Configurar un paquete de la aplicación
 
@@ -118,9 +118,9 @@ Valide la aplicación antes de enviarla al centro de partners para la certificac
 
 **Para validar el paquete de la aplicación localmente**
 
-1. En el último **creación de paquete completada** página de la **crear paquetes de aplicaciones** asistente, deje el **máquina Local** opción seleccionada y haga clic en **iniciar Kit de certificación de aplicaciones de Windows**. Para obtener más información sobre la prueba de la aplicación con el Kit para la certificación de hardware en Windows, consulta [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/Mt186449).
+1. En el último **creación de paquete completada** página de la **crear paquetes de aplicaciones** asistente, deje el **máquina Local** opción seleccionada y haga clic en **iniciar Kit de certificación de aplicaciones de Windows**. Para obtener más información sobre la prueba de la aplicación con el Kit para la certificación de hardware en Windows, consulta [Kit para la certificación de aplicaciones en Windows](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
-    El Kit para la certificación de aplicaciones en Windows realiza diversas pruebas y devuelve los resultados. Consulta [Pruebas del Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/mt186450) para obtener información más especifica.
+    El Kit para la certificación de aplicaciones en Windows realiza diversas pruebas y devuelve los resultados. Consulta [Pruebas del Kit para la certificación de aplicaciones en Windows](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit-tests) para obtener información más especifica.
 
     Si tiene un dispositivo remoto de Windows 10 que desea usar para las pruebas, deberá instalar el Kit de certificación de aplicaciones de Windows manualmente en ese dispositivo. La siguiente sección te guiará a través de estos pasos. Después de realizar estos pasos, puedes seleccionar **Máquina remota** y hacer clic en **Iniciar el Kit para la certificación de aplicaciones en Windows** para conectarte al dispositivo remoto y ejecutar las pruebas de validación.
 
@@ -128,23 +128,23 @@ Valide la aplicación antes de enviarla al centro de partners para la certificac
 
 **Para validar el paquete de aplicación en un dispositivo remoto de Windows 10**
 
-1.  Habilitar el dispositivo Windows 10 para el desarrollo siguiendo la [habilitar el dispositivo para el desarrollo](https://msdn.microsoft.com/library/windows/apps/Dn706236) instrucciones.
+1.  Habilitar el dispositivo Windows 10 para el desarrollo siguiendo la [habilitar el dispositivo para el desarrollo](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) instrucciones.
     >[!IMPORTANT]
     > No se puede validar el paquete de aplicación en un dispositivo remoto de ARM para Windows 10.
-2.  Descarga e instala las herramientas remotas para Visual Studio. Estas herramientas se usan para ejecutar el Kit para la certificación de aplicaciones en Windows de forma remota. Para obtener más información acerca de estas herramientas, incluida la ubicación para descargarlas, visita [Ejecutar aplicaciones para UWP en un equipo remoto](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor).
+2.  Descarga e instala las herramientas remotas para Visual Studio. Estas herramientas se usan para ejecutar el Kit para la certificación de aplicaciones en Windows de forma remota. Para obtener más información acerca de estas herramientas, incluida la ubicación para descargarlas, visita [Ejecutar aplicaciones para UWP en un equipo remoto](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine?view=vs-2015).
 3.  Descargue los [Windows App Certification Kit](https://go.microsoft.com/fwlink/p/?LinkID=309666) e instálelo en su dispositivo Windows 10 remoto.
 4.  En la página **Creación del paquete completada** del asistente, elige el botón de opción **Máquina remota** y, a continuación, el botón de puntos suspensivos que se encuentra junto al botón **Probar conexión**.
     >[!NOTE]
-    > El **máquina remota** botón de opción solo está disponible si ha seleccionado al menos una configuración de solución que admita la validación. Para obtener más información sobre la prueba de la aplicación con el WACK, consulta [Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/Mt186449).
+    > El **máquina remota** botón de opción solo está disponible si ha seleccionado al menos una configuración de solución que admita la validación. Para obtener más información sobre la prueba de la aplicación con el WACK, consulta [Kit para la certificación de aplicaciones en Windows](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit).
 5.  Especifica un tipo de dispositivo de la subred, o proporciona el nombre del servidor de nombres de dominio (DNS) o la dirección IP de un dispositivo que esté fuera de la subred.
 6.  En la lista **Modo de autenticación**, elige **Ninguno** si el dispositivo no requiere que inicies sesión con las credenciales de Windows.
-7.  Elige el botón **Seleccionar** y el botón **Iniciar el Kit para la certificación de aplicaciones en Windows**. Si se ejecutan herramientas remotas en este dispositivo, Visual Studio se conecta a al dispositivo y realiza las pruebas de validación. Consulta [Pruebas del Kit para la certificación de aplicaciones en Windows](https://msdn.microsoft.com/library/windows/apps/mt186450).
+7.  Elige el botón **Seleccionar** y el botón **Iniciar el Kit para la certificación de aplicaciones en Windows**. Si se ejecutan herramientas remotas en este dispositivo, Visual Studio se conecta a al dispositivo y realiza las pruebas de validación. Consulta [Pruebas del Kit para la certificación de aplicaciones en Windows](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit-tests).
 
 ### <a name="automate-store-submission"></a>Automatizar el envío de almacén
 
 A partir de 2019 de Visual Studio, puede enviar el archivo .appxupload generado a la Microsoft Store directamente desde el IDE seleccionando el **enviar automáticamente a la Microsoft Store después de la validación del Kit de certificación de aplicaciones de Windows** opción. Debe especificar las credenciales usadas para el envío. Estas credenciales se componen de tres partes: el **Id. de inquilino de Azure**, el **Id. de cliente** y **secreto de cliente**. Siga estos pasos para obtenerlas:
 
-1. En el centro de partners, vaya a su **opciones del desarrollador**, haga clic en **usuarios**y asociar la cuenta del centro de desarrollo de su organización con el directorio de Azure AD de su organización. Para obtener instrucciones detalladas, consulta [Administración de usuarios de la cuenta](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
+1. En el centro de partners, vaya a su **opciones del desarrollador**, haga clic en **usuarios**y asociar la cuenta del centro de desarrollo de su organización con el directorio de Azure AD de su organización. Para obtener instrucciones detalladas, consulta [Administración de usuarios de la cuenta](https://docs.microsoft.com/windows/uwp/publish/manage-account-users).
 2. En el **usuarios** página, haga clic en **agregar aplicaciones de Azure AD**, agregar la aplicación de Azure AD que representa la aplicación o servicio que usará para tener acceso a los envíos de la cuenta del centro de desarrollo y asígnele el Rol de administrador. Si esta aplicación ya existe en el directorio de Azure AD, puede seleccionarla en la página de aplicaciones de Azure AD de agregar para agregarlo a la cuenta del centro de desarrollo. De lo contrario, puedes crear una nueva aplicación de Azure AD en la página **Adición de aplicaciones de Azure AD**. Para obtener más información, consulte [agregar usuarios, grupos y aplicaciones de Azure AD a su cuenta de centro de partners](/windows/uwp/publish/add-users-groups-and-azure-ad-applications).
 3. Vuelva a la **administrar usuarios** página, haga clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copie el **Id. de inquilino** y **Id. de cliente** valores.
 4. Haz clic en **Agregar nueva clave**. En la siguiente pantalla, copie el valor de clave, que corresponde al secreto del cliente. No podrá volver a acceder a esta información después de salir de esta página, así que asegúrese de que no se pierda. Para obtener más información, consulte la información sobre la administración de claves en [agregar usuarios, grupos y aplicaciones de Azure AD a su cuenta de centro de partners](/windows/uwp/publish/add-users-groups-and-azure-ad-applications).

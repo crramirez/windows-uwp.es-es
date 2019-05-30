@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, direct3d 11, inicialización, migrar, direct3d 9
 ms.localizationpriority: medium
-ms.openlocfilehash: 2aaf6dcc001a09e33588ac18898767b9cf92819c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c5a7f33ddbc6d70af5293b92165892c2098e452d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604190"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368031"
 ---
 # <a name="initialize-direct3d-11"></a>Inicializar Direct3D 11
 
@@ -29,7 +29,7 @@ Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a
 ## <a name="initialize-the-direct3d-device"></a>Inicializar el dispositivo Direct3D
 
 
-En Direct3D 9, creamos un identificador para el dispositivo Direct3D llamando a [**IDirect3D9::CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174313). Empezamos obteniendo un puntero a [**IDirect3D9 interface**](https://msdn.microsoft.com/library/windows/desktop/bb174300) y especificamos un número de parámetros para controlar la configuración del dispositivo Direct3D y la cadena de intercambio. Antes de hacer esto, llamamos a [**GetDeviceCaps**](https://msdn.microsoft.com/library/windows/desktop/dd144877) para asegurarnos de que no estábamos pidiéndole al dispositivo que hiciera algo que no podía.
+En Direct3D 9, creamos un identificador para el dispositivo Direct3D llamando a [**IDirect3D9::CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-createdevice). Empezamos obteniendo un puntero a [**IDirect3D9 interface**](https://docs.microsoft.com/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3d9) y especificamos un número de parámetros para controlar la configuración del dispositivo Direct3D y la cadena de intercambio. Antes de hacer esto, llamamos a [**GetDeviceCaps**](https://docs.microsoft.com/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) para asegurarnos de que no estábamos pidiéndole al dispositivo que hiciera algo que no podía.
 
 Direct3D 9
 
@@ -69,7 +69,7 @@ m_pD3D->CreateDevice(
 
 En Direct3D 11, el contexto del dispositivo y la infraestructura de gráficos se consideran de manera independiente del dispositivo en sí. La inicialización se divide en varios pasos.
 
-Primero, creamos el dispositivo. Obtenemos una lista de los niveles de característica que el dispositivo admite. Esta lista informa la mayor parte de lo que necesitamos saber sobre la GPU. Además no es necesario que creemos una interfaz solo para acceder a Direct3D. En cambio, usamos la API principal de [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082). Obtenemos un identificador para el dispositivo y su contexto inmediato. El contexto del dispositivo se usa para establecer el estado de canalización y generar comandos de representación.
+Primero, creamos el dispositivo. Obtenemos una lista de los niveles de característica que el dispositivo admite. Esta lista informa la mayor parte de lo que necesitamos saber sobre la GPU. Además no es necesario que creemos una interfaz solo para acceder a Direct3D. En cambio, usamos la API principal de [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice). Obtenemos un identificador para el dispositivo y su contexto inmediato. El contexto del dispositivo se usa para establecer el estado de canalización y generar comandos de representación.
 
 Después de crear el dispositivo Direct3D 11 y su contexto, podemos aprovechar la funcionalidad del puntero COM para obtener la versión más reciente de las interfaces, lo cual incluye capacidad adicional, siempre recomendable.
 
@@ -125,7 +125,7 @@ Direct3D 11 incluye una API de dispositivo denominada infraestructura de gráfic
 
 El dispositivo Direct3D implementa una interfaz COM para DXGI. Primero necesitamos obtener esa interfaz y usarla para solicitar el adaptador DXGI que hospeda el dispositivo. Luego usamos el adaptador DXGI para crear una fábrica de DXGI.
 
-> **Tenga en cuenta**    son interfaces COM, por lo que podría ser usar su primera respuesta [ **QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). En cambio, debes usar punteros inteligentes [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx). Luego, simplemente llama al método [**Como()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx), suministrando un puntero COM vacío del tipo de interfaz correcto.
+> **Tenga en cuenta**    son interfaces COM, por lo que podría ser usar su primera respuesta [ **QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). En cambio, debes usar punteros inteligentes [**Microsoft::WRL::ComPtr**](https://docs.microsoft.com/cpp/windows/comptr-class). Luego, simplemente llama al método [**Como()** ](https://docs.microsoft.com/previous-versions/br230426(v=vs.140)), suministrando un puntero COM vacío del tipo de interfaz correcto.
 
  
 
@@ -147,7 +147,7 @@ dxgiAdapter->GetParent(
     );
 ```
 
-Ahora que tenemos la fábrica de DXGI, podemos usarla para crear la cadena de intercambio. Definamos los parámetros de la cadena de intercambio. Se debe especificar el formato de la superficie; elegiremos [ **DXGI\_formato\_B8G8R8A8\_UNORM** ](https://msdn.microsoft.com/library/windows/desktop/bb173059) porque es compatible con Direct2D. Deshabilitaremos el ajuste de escala de la pantalla, el muestreo múltiple y la representación en estéreo, porque no se usarán en este ejemplo. Dado que estamos ejecutando directamente en una clase CoreWindow, podemos dejar el ancho y el alto establecidos en 0 y obtener los valores de pantalla completa de manera automática.
+Ahora que tenemos la fábrica de DXGI, podemos usarla para crear la cadena de intercambio. Definamos los parámetros de la cadena de intercambio. Se debe especificar el formato de la superficie; elegiremos [ **DXGI\_formato\_B8G8R8A8\_UNORM** ](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) porque es compatible con Direct2D. Deshabilitaremos el ajuste de escala de la pantalla, el muestreo múltiple y la representación en estéreo, porque no se usarán en este ejemplo. Dado que estamos ejecutando directamente en una clase CoreWindow, podemos dejar el ancho y el alto establecidos en 0 y obtener los valores de pantalla completa de manera automática.
 
 > **Tenga en cuenta**    conjunto siempre el *SDKVersion* parámetro D3D11\_SDK\_versión para aplicaciones UWP.
 
@@ -167,9 +167,9 @@ dxgiFactory->CreateSwapChainForCoreWindow(
 swapChain.As(&m_swapChain);
 ```
 
-Para asegurarse de que no representar con más frecuencia que realmente puede mostrar la pantalla, establecemos latencia del marco de 1 y el uso [ **DXGI\_intercambiar\_efecto\_VOLTEAR\_SEQUENTIAL** ](https://msdn.microsoft.com/library/windows/desktop/bb173077). Esto ahorra energía y es un requisito de certificación de almacenamiento. Obtendremos más detalles sobre la presentación en pantalla en la segunda parte de este tutorial.
+Para asegurarse de que no representar con más frecuencia que realmente puede mostrar la pantalla, establecemos latencia del marco de 1 y el uso [ **DXGI\_intercambiar\_efecto\_VOLTEAR\_SEQUENTIAL** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_effect). Esto ahorra energía y es un requisito de certificación de almacenamiento. Obtendremos más detalles sobre la presentación en pantalla en la segunda parte de este tutorial.
 
-> **Tenga en cuenta**    puede usar multithreading (por ejemplo, [ **ThreadPool** ](https://msdn.microsoft.com/library/windows/apps/br229642) los elementos de trabajo) para continuar con otro trabajo mientras se bloquea el subproceso de representación.
+> **Tenga en cuenta**    puede usar multithreading (por ejemplo, [ **ThreadPool** ](https://docs.microsoft.com/uwp/api/Windows.System.Threading) los elementos de trabajo) para continuar con otro trabajo mientras se bloquea el subproceso de representación.
 
  
 

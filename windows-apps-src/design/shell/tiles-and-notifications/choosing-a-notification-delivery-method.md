@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 503f7baad0d91f4e7c29010145ecb162f98bc81c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b1ea41a509b1673b7c4f5812d34db93dd6b0c93e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606290"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365942"
 ---
 # <a name="choose-a-notification-delivery-method"></a>Elegir un método de entrega de notificaciones
 
@@ -27,7 +27,7 @@ En este artículo se abordan las cuatro opciones de notificación (local, progra
 
 Existen cuatro mecanismos que puede usar una aplicación para entregar una notificación:
 
--   **local**
+-   **Local**
 -   **Programado**
 -   **Periódicas**
 -   **inserción**
@@ -150,10 +150,10 @@ Las notificaciones de inserción necesitan un servicio de nube que administre ca
 
 De forma predeterminada, las notificaciones de inserción caducan tres días después de que se reciban en el dispositivo. Si es necesario, puedes invalidar este valor predeterminado con una fecha de caducidad explícita (las notificaciones del sistema tienen un máximo de tres días).
 
-Para más información, consulta lo siguiente:
+Para obtener más información, vea:
 
 -   [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
--   [Directrices para las notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
+-   [Directrices para las notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
 -   [Ejemplos de código de notificaciones de universal Windows Platform (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
@@ -162,8 +162,8 @@ Para más información, consulta lo siguiente:
 
 * [Enviar una notificación de icono local](sending-a-local-tile-notification.md)
 * [Enviar una notificación del sistema local](send-local-toast.md)
-* [Directrices para las notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
-* [Directrices sobre notificaciones del sistema](https://msdn.microsoft.com/library/windows/apps/hh465391)
+* [Directrices para las notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [Directrices sobre notificaciones del sistema](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-badges-notifications)
 * [Introducción a las notificaciones periódicas](periodic-notification-overview.md)
 * [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
 * [Notificaciones de universal Windows Platform (UWP) ejemplos de código en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)

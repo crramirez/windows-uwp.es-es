@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c5e1c294da2b4ef24ff8f62b686890cb8c69c06
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 70957cbce10da25943b3c6347ccbbc81aafb5739
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646290"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370768"
 ---
 # <a name="input-assembler-ia-stage"></a>Fase del ensamblador de entrada (IA)
 
@@ -22,7 +22,7 @@ La fase del ensamblador de entrada (IA) proporciona datos de primitivos y de ady
 ## <a name="span-idpurpose-and-usesspanspan-idpurpose-and-usesspanspan-idpurpose-and-usesspanpurpose-and-uses"></a><span id="Purpose-and-uses"></span><span id="purpose-and-uses"></span><span id="PURPOSE-AND-USES"></span>Propósito y usos
 
 
-La finalidad de la fase del ensamblador de entrada (IA) es leer datos de primitivos (puntos, líneas y triángulos) desde los búferes rellenados por el usuario, agrupar los datos en primitivos que usarán las otras fases de la canalización y adjuntar [valores generados por el sistema](https://msdn.microsoft.com/library/windows/desktop/bb509647) para ayudar a que los sombreadores sean más eficientes. Los valores generados por el sistema son cadenas de texto que también se denominan semántica. Se construyen las fases del sombreador programable desde un núcleo de sombreador común, que usa valores generados por el sistema (por ejemplo, un id. de primitivo, instancia o vértice), para que la fase del sombreador pueda reducir el procesamiento solo a los primitivos, las instancias o los vértices que todavía no se procesaron.
+La finalidad de la fase del ensamblador de entrada (IA) es leer datos de primitivos (puntos, líneas y triángulos) desde los búferes rellenados por el usuario, agrupar los datos en primitivos que usarán las otras fases de la canalización y adjuntar [valores generados por el sistema](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics) para ayudar a que los sombreadores sean más eficientes. Los valores generados por el sistema son cadenas de texto que también se denominan semántica. Se construyen las fases del sombreador programable desde un núcleo de sombreador común, que usa valores generados por el sistema (por ejemplo, un id. de primitivo, instancia o vértice), para que la fase del sombreador pueda reducir el procesamiento solo a los primitivos, las instancias o los vértices que todavía no se procesaron.
 
 La fase de IA puede integrar vértices en varios [tipos primitivos](primitive-topologies.md) distintos (por ejemplo, listas de líneas, series de triángulos o primitivos con adyacencia). Los tipos de primitivos como una lista de triángulos con adyacencia y una lista de línea con adyacencia admiten la [fase de sombreador de geometría (GS)](geometry-shader-stage--gs-.md).
 
@@ -61,7 +61,7 @@ La fase de IA ensambla los datos en primitivos, adjunta valores generados por el
 </tr>
 <tr class="even">
 <td align="left"><p><a href="using-system-generated-values.md">Con los valores generados por el sistema</a></p></td>
-<td align="left"><p>La fase del ensamblador de entrada (IA) genera valores generados por el sistema (basándose en la <a href="https://msdn.microsoft.com/library/windows/desktop/bb509647">semántica</a> de entrada proporcionada por el usuario) para admitir determinadas eficiencias en las operaciones del sombreador. Al adjuntar datos, como un id. de instancia (visible para la <a href="vertex-shader-stage--vs-.md">fase del sombreador de vértices (VS)</a>), un id. de vértice (visible para VS) o un id. de primitivo (visible para la <a href="geometry-shader-stage--gs-.md">fase del sombreador de geometría (GS)</a>/<a href="pixel-shader-stage--ps-.md">fase del sombreador de píxeles (PS)</a>), una fase del sombreador posterior puede ver estos valores del sistema para optimizar el procesamiento en esa fase.</p></td>
+<td align="left"><p>La fase del ensamblador de entrada (IA) genera valores generados por el sistema (basándose en la <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics">semántica</a> de entrada proporcionada por el usuario) para admitir determinadas eficiencias en las operaciones del sombreador. Al adjuntar datos, como un id. de instancia (visible para la <a href="vertex-shader-stage--vs-.md">fase del sombreador de vértices (VS)</a>), un id. de vértice (visible para VS) o un id. de primitivo (visible para la <a href="geometry-shader-stage--gs-.md">fase del sombreador de geometría (GS)</a>/<a href="pixel-shader-stage--ps-.md">fase del sombreador de píxeles (PS)</a>), una fase del sombreador posterior puede ver estos valores del sistema para optimizar el procesamiento en esa fase.</p></td>
 </tr>
 </tbody>
 </table>

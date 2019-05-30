@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a3133508a0cb8919994543845412ef71a8d463fe
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5d02c75775dfd63281dbf46c7f9fc58f48ac1e20
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611770"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359967"
 ---
 # <a name="conditional-xaml"></a>XAML condicional
 
@@ -244,6 +244,6 @@ Si la aplicación se ejecuta en Fall Creators Update, usa ColorPicker para permi
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Guía de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [Guía de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
 - [Detectar dinámicamente las características con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (Vídeo de compilación de 2015)

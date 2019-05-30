@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d79c369e14236b827bdc18aba6c74349528728b3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ee3d6a7fc29ec2adfeb149a3bc84f27c482c3be7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635180"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366699"
 ---
 # <a name="pop-up-ui-animations"></a>Animaciones de interfaz de usuario emergente
 
@@ -21,7 +21,7 @@ ms.locfileid: "57635180"
 
 Usa animaciones de elementos emergentes para mostrar y ocultar interfaces de usuarios emergentes para controles flotantes o elementos personalizados emergentes de interfaz de usuario. Los elementos emergentes son contenedores que aparecen sobre el contenido de la aplicación y se descartan si el usuario presiona o hace clic fuera del elemento emergente.
 
-> **API importantes**: [**Clase PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210383), [ **PopupThemeTransition clase**](https://msdn.microsoft.com/library/windows/apps/hh969172)
+> **API importantes**: [**Clase PopInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopInThemeAnimation), [ **PopupThemeTransition clase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopupThemeTransition)
 
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
@@ -33,12 +33,12 @@ Usa animaciones de elementos emergentes para mostrar y ocultar interfaces de usu
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Animar la interfaz de usuario emergente](https://msdn.microsoft.com/library/windows/apps/xaml/jj649433)
-* [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
-* [**Clase PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210383)
-* [**Clase PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210391)
-* [**Clase PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/hh969172)
+* [Información general sobre animaciones](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
+* [Animar la interfaz de usuario emergente](https://docs.microsoft.com/previous-versions/windows/apps/jj649433(v=win.10))
+* [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [**Clase PopInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopInThemeAnimation)
+* [**Clase PopOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation)
+* [**Clase PopupThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopupThemeTransition)
 
  
 

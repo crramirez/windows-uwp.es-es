@@ -6,12 +6,12 @@ ms.date: 08/22/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals
 ms.localizationpriority: medium
-ms.openlocfilehash: d41a9fe2363e5d5c462fb0646fbcc2479c756119
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 21dcbbcc1fde25877592fafe9e8372e269a72a42
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598670"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368493"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Conceptos básicos sobre la muestra de Marble Maze
 
@@ -27,22 +27,22 @@ Estos son algunos de los puntos principales que se tratan en este documento para
 
 -   Usa la plantilla de Visual C++ **DirectX 11 App (Windows universal)** en Visual Studio para crear tu juego para UWP con DirectX.
 -   Windows Runtime proporciona clases e interfaces para que puedas desarrollar aplicaciones para UWP de una manera más moderna y orientada a los objetos.
--   Usar referencias a objetos con el símbolo de acento circunflejo (^) para administrar la duración de las variables en tiempo de ejecución de Windows, [Microsoft::WRL::ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) para administrar la vigencia de objetos COM, y [std::shared\_ptr](https://docs.microsoft.com/cpp/standard-library/shared-ptr-class) o [std::unique\_ptr](https://docs.microsoft.com/cpp/standard-library/unique-ptr-class) para administrar la duración de todos los demás objetos de C++ de asignados por montón.
+-   Usar referencias a objetos con el símbolo de acento circunflejo (^) para administrar la duración de las variables en tiempo de ejecución de Windows, [Microsoft::WRL::ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) para administrar la vigencia de objetos COM, y [std::shared\_ptr](https://docs.microsoft.com/cpp/standard-library/shared-ptr-class) o [std::unique\_ptr](https://docs.microsoft.com/cpp/standard-library/unique-ptr-class) para administrar la duración de todos los demás asignados por montón C++ objetos.
 -   En la mayoría de los casos, usa el controlador de excepciones en vez de los códigos de resultados para tratar los errores inesperados.
 -   Usa [anotaciones SAL](https://docs.microsoft.com/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects) junto con herramientas de análisis de código para detectar errores en tu aplicación.
 
 ## <a name="creating-the-visual-studio-project"></a>Creación del proyecto de Visual Studio
 
 
-Si has descargado y extraído el ejemplo, puedes abrir el archivo **MarbleMaze_VS2017.sln** (en la carpeta **C++**) en Visual Studio, con lo que te aparecerá el código.
+Si has descargado y extraído el ejemplo, puedes abrir el archivo **MarbleMaze_VS2017.sln** (en la carpeta **C++** ) en Visual Studio, con lo que te aparecerá el código.
 
 Cuando creamos el proyecto de Visual Studio para Marble Maze, empezamos con un proyecto existente. Sin embargo, si aún no tienes un proyecto existente que proporcione la funcionalidad básica que requiere tu juego para UWP con DirectX, recomendamos que crees un proyecto basado en la plantilla **DirectX 11 (Windows universal)** de Visual Studio, porque proporciona una aplicación 3D de trabajo básica. Para ello, realice los pasos siguientes:
 
 1. En Visual Studio 2017, selecciona **Archivo > Nuevo > Proyecto...**
 
-2. En la ventana **Nuevo proyecto**, en la barra lateral izquierda, selecciona **Instalado > Plantillas > Visual C++**.
+2. En la ventana **Nuevo proyecto**, en la barra lateral izquierda, selecciona **Instalado > Plantillas > Visual C++** .
 
-3. En la lista central, selecciona **Aplicación DirectX 11 (Windows Universal )**. Si no ves esta opción, puede que no tengas instalados los componentes necesarios&mdash;consulta [Modificar Visual Studio 2017 agregando o quitando cargas de trabajo y componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener información sobre cómo instalar componentes adicionales.
+3. En la lista central, selecciona **Aplicación DirectX 11 (Windows Universal )** . Si no ves esta opción, puede que no tengas instalados los componentes necesarios&mdash;consulta [Modificar Visual Studio 2017 agregando o quitando cargas de trabajo y componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener información sobre cómo instalar componentes adicionales.
 
 4. Da a tu proyecto un **Nombre**, una **Ubicación** para los archivos a almacenar y un **Nombre de la solución**, y haz clic en **Aceptar**.
 
@@ -54,7 +54,7 @@ Un valor importante del proyecto en la plantilla **DirectX 11 App (Windows unive
 
  
 
-Todas las aplicaciones para UWP que se obtienen de la Microsoft Store viene en forma de un paquete de aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Puedes editar el manifiesto abriendo **Package.appxmanifest** en el proyecto. Para más información sobre los paquetes de la aplicación, consulta [Empaquetado de aplicaciones](https://msdn.microsoft.com/library/windows/apps/mt270969).
+Todas las aplicaciones para UWP que se obtienen de la Microsoft Store viene en forma de un paquete de aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Puedes editar el manifiesto abriendo **Package.appxmanifest** en el proyecto. Para más información sobre los paquetes de la aplicación, consulta [Empaquetado de aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/index).
 
 ##  <a name="building-deploying-and-running-the-game"></a> Compilar, implementar y ejecutar el juego
 
@@ -79,16 +79,16 @@ Puedes usar la entrada táctil, el acelerómetro, el mando de la Xbox One o el r
 
 Windows Runtime es una interfaz de programación que puedes usar para crear aplicaciones para UWP que se ejecutan solo en un entorno de aplicación especial. Dichas aplicaciones usan funciones, tipos de datos y dispositivos autorizados y se distribuyen desde la Microsoft Store. En el nivel inferior, Windows Runtime consta de una interfaz binaria de aplicaciones (ABI). La ABI es un contrato binario de nivel inferior que hace que varios lenguajes de programación, como JavaScript, los lenguajes .NET y Visual C++, puedan acceder a las API de Windows Runtime.
 
-Para llamar a las API de Windows Runtime desde JavaScript y .NET, estos lenguajes requieren proyecciones que son específicas de cada entorno de lenguaje. Cuando llamas a una API de Windows Runtime desde JavaScript o .NET, estás invocando la proyección que, a su vez, llama a la función de ABI subyacente. Aunque puedes llamar a las funciones de ABI directamente en C++, Microsoft proporciona también proyecciones para C++ porque facilitan mucho el consumo de las API de Windows en tiempo de ejecución al tiempo que mantienen un alto rendimiento. Microsoft también proporciona extensiones de lenguaje para Visual C++ que admiten específicamente las proyecciones de Windows Runtime. Muchas de estas extensiones de lenguaje recuerdan a la sintaxis del lenguaje C++/CLI. Sin embargo, en vez de tener como destino CLR (Common Language Runtime), las aplicaciones nativas usan esta sintaxis para tener Windows Runtime como destino. El modificador de la referencia a objetos, o símbolo circunflejo (^), es una parte importante de esta nueva sintaxis porque permite que se eliminen automáticamente los objetos en tiempo de ejecución mediante el recuento de referencias. En vez de llamar a métodos como [AddRef](https://msdn.microsoft.com/library/windows/desktop/ms691379) y [Release](https://msdn.microsoft.com/library/windows/desktop/ms682317) para administrar la duración de un objeto de Windows Runtime, el tiempo de ejecución elimina el objeto cuando no hay ningún otro componente que le haga referencia, por ejemplo, cuando deja el ámbito o cuando estableces todas las referencias como **nullptr**. Otro aspecto importante del uso de Visual C++ para crear aplicaciones para UWP es la palabra clave **ref new**. Usa **ref new** en lugar de **new** para crear objetos de Windows Runtime con recuento de referencias. Para obtener más información, consulta [Sistema de tipos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822).
+Para llamar a las API de Windows Runtime desde JavaScript y .NET, estos lenguajes requieren proyecciones que son específicas de cada entorno de lenguaje. Cuando llamas a una API de Windows Runtime desde JavaScript o .NET, estás invocando la proyección que, a su vez, llama a la función de ABI subyacente. Aunque puedes llamar a las funciones de ABI directamente en C++, Microsoft proporciona también proyecciones para C++ porque facilitan mucho el consumo de las API de Windows en tiempo de ejecución al tiempo que mantienen un alto rendimiento. Microsoft también proporciona extensiones de lenguaje para Visual C++ que admiten específicamente las proyecciones de Windows Runtime. Muchas de estas extensiones de lenguaje recuerdan a la sintaxis del lenguaje C++/CLI. Sin embargo, en vez de tener como destino CLR (Common Language Runtime), las aplicaciones nativas usan esta sintaxis para tener Windows Runtime como destino. El modificador de la referencia a objetos, o símbolo circunflejo (^), es una parte importante de esta nueva sintaxis porque permite que se eliminen automáticamente los objetos en tiempo de ejecución mediante el recuento de referencias. En vez de llamar a métodos como [AddRef](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) y [Release](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) para administrar la duración de un objeto de Windows Runtime, el tiempo de ejecución elimina el objeto cuando no hay ningún otro componente que le haga referencia, por ejemplo, cuando deja el ámbito o cuando estableces todas las referencias como **nullptr**. Otro aspecto importante del uso de Visual C++ para crear aplicaciones para UWP es la palabra clave **ref new**. Usa **ref new** en lugar de **new** para crear objetos de Windows Runtime con recuento de referencias. Para obtener más información, consulta [Sistema de tipos (C++/CX)](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx).
 
 > [!IMPORTANT]
 > Solo tienes que usar **^** y **ref new** cuando crees objetos de Windows Runtime o componentes de Windows Runtime. Puedes usar la sintaxis estándar de C++ cuando escribas código principal de la aplicación que no use Windows Runtime.
 
-Marble Maze usa **^** junto con **Microsoft::WRL::ComPtr** para administrar objetos asignados por montón y minimizar las pérdidas de memoria. Se recomienda que use ^ para administrar la duración de las variables en tiempo de ejecución de Windows, **ComPtr** para administrar la duración de las variables de COM (como cuando usas DirectX), y **std::shared\_ptr** o **std::unique\_ptr** para administrar la duración de todos los demás objetos de C++ de asignados por montón.
+Marble Maze usa **^** junto con **Microsoft::WRL::ComPtr** para administrar objetos asignados por montón y minimizar las pérdidas de memoria. Se recomienda que use ^ para administrar la duración de las variables en tiempo de ejecución de Windows, **ComPtr** para administrar la duración de las variables de COM (como cuando usas DirectX), y **std::shared\_ptr** o **std::unique\_ptr** para administrar la duración de todos los demás asignados por montón C++ objetos.
 
  
 
-Para más información sobre las extensiones de lenguaje disponibles para una aplicación para UWP con C++, consulta [Referencia de lenguaje Visual C++ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh699871).
+Para más información sobre las extensiones de lenguaje disponibles para una aplicación para UWP con C++, consulta [Referencia de lenguaje Visual C++ (C++/CX)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx).
 
 ###  <a name="error-handling"></a>Control de errores
 
@@ -99,7 +99,7 @@ Recomendamos que uses las siguientes convenciones en tu modelo de administració
 -   Usa excepciones para comunicar errores inesperados.
 -   No uses excepciones para controlar el flujo de código.
 -   Captura solo las excepciones que puedas administrar y de las que te puedas recuperar de forma segura. De lo contrario, no captures la excepción y deja que la aplicación termine.
--   Cuando llames a una rutina de DirectX que devuelva **HRESULT**, usa la función **DX::ThrowIfFailed**. Esta función se define en [DirectXHelper.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/master/C%2B%2B/Shared/DirectXHelper.h). **ThrowIfFailed** inicia una excepción si el **HRESULT** proporcionado es un código de error. Por ejemplo, **E\_puntero** hace **ThrowIfFailed** para producir [NullReferenceException](https://msdn.microsoft.com/library/windows/apps/hh755823.aspx).
+-   Cuando llames a una rutina de DirectX que devuelva **HRESULT**, usa la función **DX::ThrowIfFailed**. Esta función se define en [DirectXHelper.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/master/C%2B%2B/Shared/DirectXHelper.h). **ThrowIfFailed** inicia una excepción si el **HRESULT** proporcionado es un código de error. Por ejemplo, **E\_puntero** hace **ThrowIfFailed** para producir [NullReferenceException](https://docs.microsoft.com/cpp/cppcx/platform-nullreferenceexception-class).
 
     Cuando uses **ThrowIfFailed**, pon la llamada de DirectX en una línea aparte para mejorar la lectura del código, tal como se muestra en el siguiente ejemplo.
 

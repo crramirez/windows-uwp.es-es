@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 85d1c41fc10f509f3872fb1e4a0af5fa1e1e7c30
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0b7a60b3eba8545eeeea4cf477a40e044578c166
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631400"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371241"
 ---
 # <a name="primitive-topologies"></a>Topologías primitivas
 
@@ -69,7 +69,7 @@ En la siguiente tabla, se describen los símbolos de la ilustración anterior.
 ## <a name="span-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspangenerating-multiple-strips"></a><span id="Generating_Multiple_Strips"></span><span id="generating_multiple_strips"></span><span id="GENERATING_MULTIPLE_STRIPS"></span>Generar varias bandas
 
 
-Puedes generar varias series a través del corte en tiras. Para realizar un corte en tiras, puedes llamar explícitamente a la función HLSL [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660) o insertar un valor de índice especial en el búfer de índices. Este valor es -1, que es 0xffffffff para índices de 32 bits o 0xffff para índices de 16 bits.
+Puedes generar varias series a través del corte en tiras. Para realizar un corte en tiras, puedes llamar explícitamente a la función HLSL [RestartStrip](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-so-restartstrip) o insertar un valor de índice especial en el búfer de índices. Este valor es -1, que es 0xffffffff para índices de 32 bits o 0xffff para índices de 16 bits.
 
 Un índice de -1 indica un "corte" o un "reinicio" explícito de la serie actual. El índice anterior completa la serie o el primitivo anterior y el índice siguiente inicia un nuevo primitivo o serie.
 

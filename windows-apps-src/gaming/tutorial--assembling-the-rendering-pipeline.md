@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c16f1fbb55374b1d04c9fc9f5f7eae72ad19b00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0eeb515f07d9bc2e48ba97f6ef4d71afd0226ace
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604860"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367735"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Marco de representación lo hago?: Introducción a la representación
 
@@ -74,9 +74,9 @@ void App::Initialize(
 La escena de juego debe representarse cuando se inicia el juego. Las instrucciones para la representación empiezan en el método [__GameMain::Run__](#gamemainrun-method), tal y como se muestra a continuación.
 
 El flujo simple es:
-1. __Actualización de__
-2. __Representación__
-3. __Presente__
+1. __Update__
+2. __Render__
+3. __Present__
 
 ### <a name="gamemainrun-method"></a>Método GameMain::Run
 
@@ -496,11 +496,11 @@ Para ayudarte a crear esta canalización, debes estar familiarizado con lo sigui
 * [Etapas del sombreador](#shader-stages)
 * [Varios formatos de archivo de sombreador](#various-shader-file-formats)
 
-Para obtener más información, consulta [Comprender la canalización de representación de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/dn643746.aspx) y [Canalización de gráficos](https://msdn.microsoft.com/library/windows/desktop/ff476882.aspx).
+Para obtener más información, consulta [Comprender la canalización de representación de Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3dgetstarted/understand-the-directx-11-2-graphics-pipeline) y [Canalización de gráficos](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-graphics-pipeline).
 
 #### <a name="hlsl"></a>HLSL
 
-HLSL es el lenguaje de sombreado de nivel alto para DirectX. Con HLSL puedes crear sombreadores programables como en C para la canalización de Direct3D. Para obtener más información, consulta [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561.aspx).
+HLSL es el lenguaje de sombreado de nivel alto para DirectX. Con HLSL puedes crear sombreadores programables como en C para la canalización de Direct3D. Para obtener más información, consulta [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl).
 
 #### <a name="shaders"></a>Sombreadores
 
@@ -516,7 +516,7 @@ Los sombreadores de vértices procesan vértices, normalmente realizando operaci
 
 #### <a name="shader-stages"></a>Fases de sombreador
 
-Una secuencia de estos diferentes sombreadores definidos para procesar esta secuencia de primitivos se conoce como fase de sombreador en una canalización de representación. Las fases reales dependen de la versión de Direct3D, pero normalmente incluyen las fases de vértices, geometría y píxeles. También hay otras fases, como los sombreadores de casco y dominio para teselación y el sombreador de cálculo. Todas estas fases son completamente programables mediante el [HLSL])(#hlsl). Para obtener más información, consulta [Canalización de gráficos](https://msdn.microsoft.com/library/windows/desktop/ff476882.aspx).
+Una secuencia de estos diferentes sombreadores definidos para procesar esta secuencia de primitivos se conoce como fase de sombreador en una canalización de representación. Las fases reales dependen de la versión de Direct3D, pero normalmente incluyen las fases de vértices, geometría y píxeles. También hay otras fases, como los sombreadores de casco y dominio para teselación y el sombreador de cálculo. Todas estas fases son completamente programables mediante el [HLSL])(#hlsl). Para obtener más información, consulta [Canalización de gráficos](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-graphics-pipeline).
 
 #### <a name="various-shader-file-formats"></a>Diversos formatos de archivo de sombreador
 
@@ -533,7 +533,7 @@ Extensiones de archivo de código de sombreador:
 
 Direct3D 11 es un conjunto de API que nos ayudan a crear gráficos para aplicaciones con gran cantidad de gráficos, como los juegos, donde necesitamos una buena tarjeta gráfica para procesar un cálculo intensivo. Esta sección explica brevemente los conceptos de programación de gráficos de Direct3D 11: recurso, subrecurso, dispositivo y contexto de dispositivo.
 
-#### <a name="resource"></a>Recurso
+#### <a name="resource"></a>Resource
 
 Para aquellos que son nuevos, los recursos (también conocidos como recursos de dispositivo) son como información sobre la representación de un objeto como texturas, posición y color. Los recursos proporcionan datos a la canalización y definen lo que se representa en la escena. Los recursos se pueden cargar desde el medio de juegos o crearse de forma dinámica en tiempo de ejecución.
 
@@ -545,17 +545,17 @@ El término subrecurso hace referencia al subconjunto de un recurso. Direct3D pu
 
 #### <a name="depth-stencil"></a>Galería de símbolos de profundidad
 
-Una recurso de galería de símbolos de profundidad contiene el formato y el búfer para contener la información de la galería de símbolos de profundidad. Se crea mediante un recurso de textura. Para obtener más información sobre cómo crear un recurso de galería de símbolos de profundidad, consulta [Configurar la funcionalidad de la galería de símbolos de profundidad](https://msdn.microsoft.com/library/windows/desktop/bb205074.aspx). Accedemos al recurso de galería de símbolos de profundidad a través de la vista de galería de símbolos de profundidad que se implementa mediante la interfaz [ID3D11DepthStencilView](https://msdn.microsoft.com/library/windows/desktop/ff476377.aspx).
+Una recurso de galería de símbolos de profundidad contiene el formato y el búfer para contener la información de la galería de símbolos de profundidad. Se crea mediante un recurso de textura. Para obtener más información sobre cómo crear un recurso de galería de símbolos de profundidad, consulta [Configurar la funcionalidad de la galería de símbolos de profundidad](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-depth-stencil). Accedemos al recurso de galería de símbolos de profundidad a través de la vista de galería de símbolos de profundidad que se implementa mediante la interfaz [ID3D11DepthStencilView](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11depthstencilview).
 
 La información de profundidad nos dice qué áreas de polígonos se representan en lugar de ocultarse de la vista. La información de la galería de símbolos nos indica qué píxeles se enmascaran. Se puede usar para producir efectos especiales, ya que determina si se dibuja un píxel o no; establece el bit a 1 o 0. 
 
-Para más información, consulta lo siguiente: [Vista de galería de símbolos de profundidad](../graphics-concepts/depth-stencil-view--dsv-.md), [búfer de profundidad](../graphics-concepts/depth-buffers.md), y [búfer de galería de símbolos](../graphics-concepts/stencil-buffers.md).
+Para obtener más información, vea: [Vista de galería de símbolos de profundidad](../graphics-concepts/depth-stencil-view--dsv-.md), [búfer de profundidad](../graphics-concepts/depth-buffers.md), y [búfer de galería de símbolos](../graphics-concepts/stencil-buffers.md).
 
 #### <a name="render-target"></a>Destino de representación
 
-Un destino de representación es un recurso que podemos escribir al final de un pase de representación. Normalmente se crea mediante el método [ID3D11Device::CreateRenderTargetView](https://msdn.microsoft.com/library/windows/desktop/ff476517.aspx), usando el búfer de reserva de la cadena de intercambio (que también es un recurso) como el parámetro de entrada. 
+Un destino de representación es un recurso que podemos escribir al final de un pase de representación. Normalmente se crea mediante el método [ID3D11Device::CreateRenderTargetView](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createrendertargetview), usando el búfer de reserva de la cadena de intercambio (que también es un recurso) como el parámetro de entrada. 
 
-Cada destino de representación debe tener también una vista de galería de símbolos de profundidad correspondiente cuando usamos [OMSetRenderTargets](https://msdn.microsoft.com/library/windows/desktop/ff476464.aspx) para establecer el destino de representación antes de usarlo; también requiere una vista de galería de símbolos de profundidad. Accedemos el recurso de destino de representación a través de la vista de destino de representación implementada con la interfaz [ID3D11RenderTargetView](https://msdn.microsoft.com/library/windows/desktop/ff476582.aspx). 
+Cada destino de representación debe tener también una vista de galería de símbolos de profundidad correspondiente cuando usamos [OMSetRenderTargets](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-omsetrendertargets) para establecer el destino de representación antes de usarlo; también requiere una vista de galería de símbolos de profundidad. Accedemos el recurso de destino de representación a través de la vista de destino de representación implementada con la interfaz [ID3D11RenderTargetView](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview). 
 
 #### <a name="device"></a>Dispositivo
 
@@ -563,25 +563,25 @@ Para los que no conocen Direct3D 11, un dispositivo es una manera de asignar y d
 
 Para una explicación más precisa, un dispositivo Direct3D es el componente de representación de Direct3D. Un dispositivo encapsula y almacena el estado de representación, transforma, ilumina y rasteriza una imagen en una superficie. Para obtener más información, consulta [Dispositivos](../graphics-concepts/devices.md).
 
-Un dispositivo está representado mediante la interfaz [ID3D11Device](https://msdn.microsoft.com/library/windows/desktop/ff476379.aspx). En otras palabras, la interfaz ID3D11Device representa un adaptador de pantalla virtual y se usa para crear los recursos que pertenecen a un dispositivo. 
+Un dispositivo está representado mediante la interfaz [ID3D11Device](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device). En otras palabras, la interfaz ID3D11Device representa un adaptador de pantalla virtual y se usa para crear los recursos que pertenecen a un dispositivo. 
 
-Ten en cuenta que hay diferentes versiones de ID3D11Device, [ID3D11Device5](https://msdn.microsoft.com/library/windows/desktop/mt492478.aspx) es la versión más reciente y agrega nuevos métodos a los de ID3D11Device4. Para obtener más información sobre cómo se comunica Direct3D con el hardware subyacente, consulta [Arquitectura del modelo de controlador de dispositivo de Windows (WDDM)](https://docs.microsoft.com/windows-hardware/drivers/display/windows-vista-and-later-display-driver-model-architecture).
+Ten en cuenta que hay diferentes versiones de ID3D11Device, [ID3D11Device5](https://docs.microsoft.com/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11device5) es la versión más reciente y agrega nuevos métodos a los de ID3D11Device4. Para obtener más información sobre cómo se comunica Direct3D con el hardware subyacente, consulta [Arquitectura del modelo de controlador de dispositivo de Windows (WDDM)](https://docs.microsoft.com/windows-hardware/drivers/display/windows-vista-and-later-display-driver-model-architecture).
 
-Cada aplicación debe tener al menos un dispositivo, la mayoría de las aplicaciones solo crea un dispositivo. Crear un dispositivo para uno de los controladores de hardware instalados en su equipo mediante una llamada a __D3D11CreateDevice__ o __D3D11CreateDeviceAndSwapChain__ y especificando el tipo de controlador con el D3D\_ CONTROLADOR\_indicador de tipo. Cada dispositivo puede usar uno o varios contextos de dispositivo, según las funciones deseadas. Para más información consulta [Función D3D11CreateDevice](https://msdn.microsoft.com/library/windows/desktop/ff476082.aspx).
+Cada aplicación debe tener al menos un dispositivo, la mayoría de las aplicaciones solo crea un dispositivo. Crear un dispositivo para uno de los controladores de hardware instalados en su equipo mediante una llamada a __D3D11CreateDevice__ o __D3D11CreateDeviceAndSwapChain__ y especificando el tipo de controlador con el D3D\_ CONTROLADOR\_indicador de tipo. Cada dispositivo puede usar uno o varios contextos de dispositivo, según las funciones deseadas. Para más información consulta [Función D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice).
 
 #### <a name="device-context"></a>Contexto de dispositivo
 
 Un contexto de dispositivo se usa para establecer el estado de la [canalización](#rendering-pipeline) y generar comandos de representación usando [recursos](#resource) propiedad de un [dispositivo](#device). 
 
-Direct3D 11 implementa dos tipos de contextos de dispositivo, uno para la representación inmediata y otro para la representación diferida; ambos contextos se representan con una interfaz [ID3D11DeviceContext](https://msdn.microsoft.com/library/windows/desktop/ff476385.aspx).  
+Direct3D 11 implementa dos tipos de contextos de dispositivo, uno para la representación inmediata y otro para la representación diferida; ambos contextos se representan con una interfaz [ID3D11DeviceContext](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext).  
 
 Las interfaces __ID3D11DeviceContext__ tienen diferentes versiones; __ID3D11DeviceContext4__ agrega nuevos métodos a los de __ID3D11DeviceContext3__.
 
-Nota: __ID3D11DeviceContext4__ se introdujo en Windows 10 Creators Update y es la versión más reciente de la __ID3D11DeviceContext__ interfaz. Las aplicaciones orientadas a Windows 10 Creators Update deben usar esta interfaz en lugar de las versiones anteriores. Para obtener más información, consulta [ID3D11DeviceContext4](https://msdn.microsoft.com/library/windows/desktop/mt492481.aspx).
+Nota: __ID3D11DeviceContext4__ se introdujo en Windows 10 Creators Update y es la versión más reciente de la __ID3D11DeviceContext__ interfaz. Las aplicaciones orientadas a Windows 10 Creators Update deben usar esta interfaz en lugar de las versiones anteriores. Para obtener más información, consulta [ID3D11DeviceContext4](https://docs.microsoft.com/windows/desktop/api/d3d11_3/nn-d3d11_3-id3d11devicecontext4).
 
 #### <a name="dxdeviceresources"></a>DX::DeviceResources
 
-La clase __DX::DeviceResources__ está en los archivos .h de __DeviceResources.cpp__/__.h__ y controla todos los recursos de dispositivo de DirectX. En el proyecto de juego de muestra y en el proyecto de plantilla de DirectX 11 App, estos archivos están en la carpeta __Commons__. Puedes conseguir la versión más reciente de estos archivos al crear un nuevo proyecto de plantilla DirectX 11 App en Visual Studio 2015 o posterior.
+La clase __DX::DeviceResources__ está en los archivos .h de __DeviceResources.cpp__/ __.h__ y controla todos los recursos de dispositivo de DirectX. En el proyecto de juego de muestra y en el proyecto de plantilla de DirectX 11 App, estos archivos están en la carpeta __Commons__. Puedes conseguir la versión más reciente de estos archivos al crear un nuevo proyecto de plantilla DirectX 11 App en Visual Studio 2015 o posterior.
 
 ### <a name="buffer"></a>Búfer
 
@@ -612,11 +612,11 @@ Enlaza búferes a:
     * La fase de salida de secuencia llamando a __ID3D11DeviceContext::SOSetTargets__
     * La fase del sombreador, llamando a métodos de sombreado como __ID3D11DeviceContext::VSSetConstantBuffers__
 
-Para obtener más información consulta [Introducción a los búferes en Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898.aspx).
+Para obtener más información consulta [Introducción a los búferes en Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-intro).
 
 ### <a name="dxgi"></a>DXGI
 
-Microsoft DirectX Graphics Infrastructure (DXGI) es un subsistema nuevo que se introdujo con Windows Vista que encapsula algunas de las tareas de bajo nivel que son necesarios por Direct3D 10, versión 10.1, 11 y 11.1. Se debe tener especial cuidado al usar DXGI en una aplicación multiproceso, para garantizar que no se producen interbloqueos. Para obtener más información, consulte [DirectX Graphics Infrastructure (DXGI): Prácticas recomendadas-Multithreading](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
+Microsoft DirectX Graphics Infrastructure (DXGI) es un subsistema nuevo que se introdujo con Windows Vista que encapsula algunas de las tareas de bajo nivel que son necesarios por Direct3D 10, versión 10.1, 11 y 11.1. Se debe tener especial cuidado al usar DXGI en una aplicación multiproceso, para garantizar que no se producen interbloqueos. Para obtener más información, consulte [DirectX Graphics Infrastructure (DXGI): Prácticas recomendadas-Multithreading](https://docs.microsoft.com/windows/desktop/direct3darticles/dxgi-best-practices)
 
 ### <a name="feature-level"></a>Nivel de características
 
@@ -624,9 +624,9 @@ El nivel de características es un concepto que se introdujo en Direct3D 11 para
 
 Cada tarjeta de vídeo implementa un cierto nivel de funcionalidad DirectX, en función de las GPU instaladas. En versiones anteriores de Microsoft Direct3D, podías averiguar la versión de Direct3D de la tarjeta de vídeo implementada y, a continuación, programar la aplicación de la manera correspondiente. 
 
-Con el nivel de características, cuando creas un dispositivo, puedes intentar crear un dispositivo para el nivel de características que deseas solicitar. Si la creación de dispositivos funciona, ese nivel de característica existe, si no, el hardware no admite ese nivel de características. Puedes intentar volver a crear un dispositivo a un nivel de características inferior o puedes elegir salir de la aplicación. Por ejemplo, las 12\_nivel 0 requiere Direct3D 11.3 o Direct3D 12 y el modelo de sombreador 5.1. Para obtener más información, consulte [niveles de características de Direct3D: Información general para cada nivel de característica](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview).
+Con el nivel de características, cuando creas un dispositivo, puedes intentar crear un dispositivo para el nivel de características que deseas solicitar. Si la creación de dispositivos funciona, ese nivel de característica existe, si no, el hardware no admite ese nivel de características. Puedes intentar volver a crear un dispositivo a un nivel de características inferior o puedes elegir salir de la aplicación. Por ejemplo, las 12\_nivel 0 requiere Direct3D 11.3 o Direct3D 12 y el modelo de sombreador 5.1. Para obtener más información, consulte [niveles de características de Direct3D: Información general para cada nivel de característica](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro).
 
-Usar niveles de características, puede desarrollar una aplicación de Direct3D 9, Microsoft Direct3D 10 o Direct3D 11 y, a continuación, ejecútelo en 9, 10 u 11 hardware (con algunas excepciones). Para más información, consulta [Niveles de características Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
+Usar niveles de características, puede desarrollar una aplicación de Direct3D 9, Microsoft Direct3D 10 o Direct3D 11 y, a continuación, ejecútelo en 9, 10 u 11 hardware (con algunas excepciones). Para más información, consulta [Niveles de características Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro).
 
 ### <a name="stereo-rendering"></a>Representación en estéreo
 

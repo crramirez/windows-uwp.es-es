@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b8c4777e1c34bca36200bf6e8a96c35d6a0b1079
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 727abc5724914e3a8ad4463645455b9d63933bd7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640310"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66372195"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
 
@@ -26,8 +26,8 @@ Al registrar para controlar un evento en la UWP, el descriptor de acceso "add" d
 
 Afortunadamente, Visual Basic y C# compiladores simplifican este proceso: Cuando se declara un evento con descriptores de acceso personalizados en un componente de Windows en tiempo de ejecución, los compiladores usan automáticamente el patrón UWP. Por ejemplo, aparecerá un error del compilador si tu descriptor de acceso "add" no devuelve un token. .NET Framework proporciona dos tipos para facilitar la implementación:
 
--   La estructura [EventRegistrationToken](https://msdn.microsoft.com/library/windows/apps/windows.foundation.eventregistrationtoken.aspx) representa el token.
--   La clase [EventRegistrationTokenTable&lt;T&gt;](https://msdn.microsoft.com/library/hh138412.aspx) crea tokens y mantiene una correlación entre los tokens y los controladores de eventos. El argumento de tipo genérico es el tipo de argumento de evento. Creas una instancia de esta clase para cada evento la primera vez que se registra un controlador de eventos para ese evento.
+-   La estructura [EventRegistrationToken](https://docs.microsoft.com/uwp/api/windows.foundation.eventregistrationtoken) representa el token.
+-   La clase [EventRegistrationTokenTable&lt;T&gt;](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.eventregistrationtokentable-1?redirectedfrom=MSDN) crea tokens y mantiene una correlación entre los tokens y los controladores de eventos. El argumento de tipo genérico es el tipo de argumento de evento. Creas una instancia de esta clase para cada evento la primera vez que se registra un controlador de eventos para ese evento.
 
 El siguiente código para el evento NumberChanged muestra el patrón básico para eventos de la UWP. En este ejemplo, el constructor para el objeto "event argument", NumberChangedEventArgs, usa un solo parámetro de número entero que representa el valor numérico modificado.
 
@@ -101,16 +101,16 @@ El método ("Shared" en Visual Basic) GetOrCreateEventRegistrationTokenTable est
 
 > **Importante**  para garantizar la seguridad del subproceso, el campo que contiene la instancia del evento EventRegistrationTokenTable&lt;T&gt; debe ser un campo de nivel de clase. Si se trata de un campo de nivel de clase, el método GetOrCreateEventRegistrationTokenTable garantiza que cuando varios subprocesos intentan crear la tabla de tokens, todos los subprocesos obtienen la misma instancia de la tabla. En el caso de un evento determinado, todas las llamadas al método GetOrCreateEventRegistrationTokenTable deben utilizar el mismo campo de nivel de clase.
 
-Llamar al método GetOrCreateEventRegistrationTokenTable en el descriptor de acceso "remove" y en el método [RaiseEvent](https://msdn.microsoft.com/library/fwd3bwed.aspx) (método OnRaiseEvent en C#) garantiza que no se produce ninguna excepción si estos métodos se llaman antes de que se hayan agregado los delegados del controlador de eventos.
+Llamar al método GetOrCreateEventRegistrationTokenTable en el descriptor de acceso "remove" y en el método [RaiseEvent](https://docs.microsoft.com/dotnet/articles/visual-basic/language-reference/statements/raiseevent-statement) (método OnRaiseEvent en C#) garantiza que no se produce ninguna excepción si estos métodos se llaman antes de que se hayan agregado los delegados del controlador de eventos.
 
 Los otros miembros de la clase EventRegistrationTokenTable&lt;T&gt; que se utilizan en el patrón de eventos de la UWP incluyen lo siguiente:
 
--   El método [AddEventHandler](https://msdn.microsoft.com/library/hh138458.aspx) genera un token para el delegado del controlador de eventos, almacena el delegado en la tabla, lo agrega a la lista de invocación y devuelve el token.
--   La sobrecarga del método [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) elimina el delegado de la tabla y de la lista de invocación.
+-   El método [AddEventHandler](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.eventregistrationtokentable-1.addeventhandler?redirectedfrom=MSDN#System_Runtime_InteropServices_WindowsRuntime_EventRegistrationTokenTable_1_AddEventHandler__0_) genera un token para el delegado del controlador de eventos, almacena el delegado en la tabla, lo agrega a la lista de invocación y devuelve el token.
+-   La sobrecarga del método [RemoveEventHandler(EventRegistrationToken)](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.eventregistrationtokentable-1.removeeventhandler?redirectedfrom=MSDN#System_Runtime_InteropServices_WindowsRuntime_EventRegistrationTokenTable_1_RemoveEventHandler_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_) elimina el delegado de la tabla y de la lista de invocación.
 
     >**Tenga en cuenta**  métodos AddEventHandler The y RemoveEventHandler(EventRegistrationToken) bloquean la tabla para ayudar a garantizar la seguridad para subprocesos.
 
--   La propiedad [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) devuelve un delegado que incluye todos los controladores de eventos que están registrados actualmente para controlar el evento. Usa este delegado para generar el evento o usa los métodos de la clase delegada para invocar los controladores de forma individual.
+-   La propiedad [InvocationList](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.eventregistrationtokentable-1.invocationlist?redirectedfrom=MSDN#System_Runtime_InteropServices_WindowsRuntime_EventRegistrationTokenTable_1_InvocationList) devuelve un delegado que incluye todos los controladores de eventos que están registrados actualmente para controlar el evento. Usa este delegado para generar el evento o usa los métodos de la clase delegada para invocar los controladores de forma individual.
 
     >**Tenga en cuenta**  se recomienda que siga el patrón que se muestra en el ejemplo proporcionado anteriormente en este artículo y copie el delegado a una variable temporal antes de invocarlo. Esto evita una condición de carrera en la que un subproceso elimina el último controlador, lo que reduce el delegado a nulo justo antes de que otro subproceso intente invocar el delegado. Los delegados son inmutables, por lo que la copia sigue siendo válida.
 
@@ -118,12 +118,12 @@ Coloca tu propio código en los descriptores de acceso según corresponda. Si la
 
 C#usuarios: Al escribir los descriptores de acceso de eventos personalizados en el patrón de eventos UWP, el compilador no proporciona los métodos abreviados sintácticos habituales. Genera errores si utilizas el nombre del evento en tu código.
 
-Usuarios de Visual Basic: En .NET Framework, un evento es simplemente un delegado de multidifusión que representa todos los controladores de eventos registrado. Generar el evento simplemente implica invocar el delegado. La sintaxis de Visual Basic, por lo general, oculta las interacciones con el delegado, y el compilador copia el delegado antes de invocarlo, tal como se describe en la nota sobre seguridad para subprocesos. Cuando creas un evento personalizado en un componente de Windows Runtime, tienes que tratar directamente con el delegado. Esto también significa que puedes, por ejemplo, usar el método [MulticastDelegate.GetInvocationList](https://msdn.microsoft.com/library/system.multicastdelegate.getinvocationlist.aspx) para obtener una matriz que contenga un delegado independiente para cada controlador de eventos, si quieres invocar los controladores por separado.
+Usuarios de Visual Basic: En .NET Framework, un evento es simplemente un delegado de multidifusión que representa todos los controladores de eventos registrado. Generar el evento simplemente implica invocar el delegado. La sintaxis de Visual Basic, por lo general, oculta las interacciones con el delegado, y el compilador copia el delegado antes de invocarlo, tal como se describe en la nota sobre seguridad para subprocesos. Cuando creas un evento personalizado en un componente de Windows Runtime, tienes que tratar directamente con el delegado. Esto también significa que puedes, por ejemplo, usar el método [MulticastDelegate.GetInvocationList](https://docs.microsoft.com/dotnet/api/system.multicastdelegate.getinvocationlist?redirectedfrom=MSDN#System_MulticastDelegate_GetInvocationList) para obtener una matriz que contenga un delegado independiente para cada controlador de eventos, si quieres invocar los controladores por separado.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Eventos (Visual Basic)](https://msdn.microsoft.com/library/ms172877.aspx)
-* [Eventos (Guía de programación de C#)](https://msdn.microsoft.com/library/awbftdfh.aspx)
-* [.NET para información general de aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
-* [.NET para aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
+* [Eventos (Visual Basic)](https://docs.microsoft.com/dotnet/articles/visual-basic/programming-guide/language-features/events/index)
+* [Eventos (Guía de programación de C#)](https://docs.microsoft.com/dotnet/articles/csharp/programming-guide/events/index)
+* [.NET para información general de aplicaciones UWP](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))
+* [.NET para aplicaciones UWP](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0)
 * [Tutorial: Crear un componente de tiempo de ejecución de Windows Simple y llamarlo desde JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

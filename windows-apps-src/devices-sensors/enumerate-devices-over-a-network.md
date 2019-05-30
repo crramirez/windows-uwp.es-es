@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 2011bf0ed1e0f1536c0863729ee99415059641a6
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: e5773a77ccb98a75363184bcb17a6e3282e00932
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63772776"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370193"
 ---
 # <a name="enumerate-devices-over-a-network"></a>Enumerar dispositivos a través de una red
 
@@ -22,13 +22,13 @@ ms.locfileid: "63772776"
 
 - [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
-Además de la detección de dispositivos conectados localmente, puedes usar las API [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) para enumerar dispositivos a través de protocolos de red e inalámbricos.
+Además de la detección de dispositivos conectados localmente, puedes usar las API [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) para enumerar dispositivos a través de protocolos de red e inalámbricos.
 
 ## <a name="enumerating-devices-over-networked-or-wireless-protocols"></a>Enumeración de dispositivos mediante protocolos de red o inalámbricos
 
-A veces es necesario enumerar los dispositivos que no están conectados localmente y que solo pueden detectarse a través de protocolos de red o inalámbricos. Para ello, las API de [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) tienen tres tipos de objetos de dispositivo: **AssociationEndpoint** (AEP), **AssociationEndpointContainer** (contenedor AEP) y **AssociationEndpointService** (servicio AEP). En conjunto, se denominan AEP u objetos AEP.
+A veces es necesario enumerar los dispositivos que no están conectados localmente y que solo pueden detectarse a través de protocolos de red o inalámbricos. Para ello, las API de [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) tienen tres tipos de objetos de dispositivo: **AssociationEndpoint** (AEP), **AssociationEndpointContainer** (contenedor AEP) y **AssociationEndpointService** (servicio AEP). En conjunto, se denominan AEP u objetos AEP.
 
-Algunas API de dispositivos proporcionan una cadena de selector que puedes usar para enumerar a través de los objetos AEP disponibles. Esto puede incluir tanto dispositivos que están emparejados con el sistema como dispositivos que no lo están. Es posible que algunos de los dispositivos no necesiten emparejarse. Estas API de dispositivo pueden intentar emparejar el dispositivo si es necesario emparejarlo antes de interactuar con él. Wi-Fi Direct es un ejemplo de API que siguen este patrón. Si estas API de dispositivo no emparejan automáticamente el dispositivo, puedes emparejarlo mediante el objeto [**DeviceInformationPairing**](https://msdn.microsoft.com/library/windows/apps/Mt168396) disponible en [**DeviceInformation.Pairing**](https://msdn.microsoft.com/library/windows/apps/Dn705960).
+Algunas API de dispositivos proporcionan una cadena de selector que puedes usar para enumerar a través de los objetos AEP disponibles. Esto puede incluir tanto dispositivos que están emparejados con el sistema como dispositivos que no lo están. Es posible que algunos de los dispositivos no necesiten emparejarse. Estas API de dispositivo pueden intentar emparejar el dispositivo si es necesario emparejarlo antes de interactuar con él. Wi-Fi Direct es un ejemplo de API que siguen este patrón. Si estas API de dispositivo no emparejan automáticamente el dispositivo, puedes emparejarlo mediante el objeto [**DeviceInformationPairing**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing) disponible en [**DeviceInformation.Pairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing).
 
 Sin embargo, puede haber casos en los que quieras detectar dispositivos manualmente sin usar una cadena de selector predefinida. Por ejemplo, es posible que solo tengas que recopilar información acerca de los dispositivos AEP sin interactuar con ellos, o que desees buscar más objetos AEP de los que se detectarán con la cadena de selector predefinida. En este caso, podrás crear tu propia cadena de selector y usarla siguiendo las instrucciones de la sección [Compilar un selector de dispositivos](build-a-device-selector.md).
 
@@ -55,26 +55,26 @@ Cuando crees tu selector, te recomendamos que limites el ámbito de la enumeraci
 
 Cada tipo AEP tiene una propiedad que puedes usar para limitar la enumeración a un protocolo específico. Ten en cuenta que puedes usar el operador OR en un filtro AQS para combinar varios protocolos. Estos son algunos ejemplos de cadenas de filtro AQS que muestran cómo realizar consultas de dispositivos AEP.
 
-Esta AQS consulta todos los objetos UPnP **AssociationEndpoint** cuando la enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) está establecida como **AsssociationEndpoint**.
+Esta AQS consulta todos los objetos UPnP **AssociationEndpoint** cuando la enumeración [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) está establecida como **AsssociationEndpoint**.
 
 ``` syntax
 System.Devices.Aep.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}"
 ```
 
-Esta AQS consulta todos los objetos UPnP y WSD **AssociationEndpoint** cuando la enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) está establecida como **AsssociationEndpoint**.
+Esta AQS consulta todos los objetos UPnP y WSD **AssociationEndpoint** cuando la enumeración [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) está establecida como **AsssociationEndpoint**.
 
 ``` syntax
 System.Devices.Aep.ProtocolId:="{782232aa-a2f9-4993-971b-aedc551346b0}" OR
 System.Devices.Aep.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}"
 ```
 
-Esta AQS consulta todos los objetos UPnP **AssociationEndpointService** si la enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) está establecida como **AssociationEndpointService**.
+Esta AQS consulta todos los objetos UPnP **AssociationEndpointService** si la enumeración [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) está establecida como **AssociationEndpointService**.
 
 ``` syntax
 System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}"
 ```
 
-Esta AQS consulta los objetos **AssociationEndpointContainer** cuando la enumeración [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) está establecida como **AssociationEndpointContainer**, pero solo los encuentra al enumerar el protocolo UPnP. Por lo general, no sería útil enumerar contenedores que solo provienen de un protocolo. Sin embargo, esto puede ser útil si limitas tu filtro a los protocolos en los que sabes que se puede detectar tu dispositivo.
+Esta AQS consulta los objetos **AssociationEndpointContainer** cuando la enumeración [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) está establecida como **AssociationEndpointContainer**, pero solo los encuentra al enumerar el protocolo UPnP. Por lo general, no sería útil enumerar contenedores que solo provienen de un protocolo. Sin embargo, esto puede ser útil si limitas tu filtro a los protocolos en los que sabes que se puede detectar tu dispositivo.
 
 ``` syntax
 System.Devices.AepContainer.ProtocolIds:~~"{0e261de4-12f0-46e6-91ba-428607ccef64}"

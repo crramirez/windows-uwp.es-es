@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, glsl, hlsl, opengl, directx, sombreados, shaders
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f468584d995de40ff14df1527ab1df8275c36a8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 60ab16566b6e86fe458dbd4a896c354d978994b6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611170"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368702"
 ---
 # <a name="glsl-to-hlsl-reference"></a>Referencia de GLSL a HLSL
 
@@ -63,7 +63,7 @@ GLSL y HLSL generalmente difieren de estas maneras:
 </tr>
 <tr class="even">
 <td align="left">Compilación de sombreador integrada en la API gráfica</td>
-<td align="left">El compilador de HLSL <a href="https://msdn.microsoft.com/library/windows/desktop/bb509633">compila el sombreador</a> en una representación binaria intermedia antes de que Direct3D la pase al controlador.
+<td align="left">El compilador de HLSL <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-part1">compila el sombreador</a> en una representación binaria intermedia antes de que Direct3D la pase al controlador.
 <div class="alert">
 <strong>Tenga en cuenta</strong>  esta representación binaria es independiente del hardware. Generalmente se compila en el tiempo de compilación de la aplicación en lugar de en su tiempo de ejecución.
 </div>
@@ -84,17 +84,17 @@ GLSL y HLSL generalmente difieren de estas maneras:
 </tr>
 <tr class="odd">
 <td align="left">texture2D [Function]</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/desktop/bb509695">texture.Sample</a> [datatype.Function]</td>
+<td align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-sample">texture.Sample</a> [datatype.Function]</td>
 </tr>
 <tr class="even">
 <td align="left">sampler2D [datatype]</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/desktop/ff471525">Texture2D</a> [datatype]</td>
+<td align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d">Texture2D</a> [datatype]</td>
 </tr>
 <tr class="odd">
 <td align="left">Matrices principales de fila (predeterminado)</td>
 <td align="left">Matrices principales de columna (predeterminado)
 <div class="alert">
-<strong>Tenga en cuenta</strong>    uso el <strong>row_major</strong> modificador de tipo para cambiar el diseño de una variable. Para obtener más información, consulta el tema sobre la <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">sintaxis de variable</a>. También puedes especificar una marca de compilador o una pragma para cambiar el valor predeterminado global.
+<strong>Tenga en cuenta</strong>    uso el <strong>row_major</strong> modificador de tipo para cambiar el diseño de una variable. Para obtener más información, consulta el tema sobre la <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-variable-syntax">sintaxis de variable</a>. También puedes especificar una marca de compilador o una pragma para cambiar el valor predeterminado global.
 </div>
 <div>
  
@@ -113,7 +113,7 @@ GLSL y HLSL generalmente difieren de estas maneras:
 
  
 
-En GLSL, se presenta la mayoría del estado de OpenGL como variables globales predefinidas. Por ejemplo, con GLSL, utilice el **gl\_posición** variable para especificar la posición del vértice y el **gl\_FragColor** variable para especificar el color del fragmento. En HLSL, se pasa el estado de Direct3D explícitamente desde el código de la aplicación al sombreador. Por ejemplo, con Direct3D y HLSL, la entrada al sombreador de vértices debe coincidir con el formato de datos en el búfer de vértices, y la estructura de un búfer de constantes en el código de la aplicación debe coincidir con la estructura de un búfer de constantes ([cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581)) en el código del sombreador.
+En GLSL, se presenta la mayoría del estado de OpenGL como variables globales predefinidas. Por ejemplo, con GLSL, utilice el **gl\_posición** variable para especificar la posición del vértice y el **gl\_FragColor** variable para especificar el color del fragmento. En HLSL, se pasa el estado de Direct3D explícitamente desde el código de la aplicación al sombreador. Por ejemplo, con Direct3D y HLSL, la entrada al sombreador de vértices debe coincidir con el formato de datos en el búfer de vértices, y la estructura de un búfer de constantes en el código de la aplicación debe coincidir con la estructura de un búfer de constantes ([cbuffer](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants)) en el código del sombreador.
 
 ## <a name="porting-glsl-variables-to-hlsl"></a>Migrar variables de GLSL a HLSL
 
@@ -133,22 +133,22 @@ En GLSL, aplicas modificadores (calificadores) a una declaración de variable de
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>Uniforme</strong></p>
+<td align="left"><p><strong>uniform</strong></p>
 <p>Se pasa una variable uniform desde el código de la aplicación a los sombreadores de fragmentos o vértices. Debes establecer los valores de todos los uniformes antes de dibujar cualquier triángulo con esos sombreadores para que sus valores no cambien durante el proceso de dibujo de una malla de triángulo. Estos valores son uniformes. Algunos uniformes se establecen para todo el cuadro y otros exclusivamente para un par de sombreador de vértices y píxeles particular.</p>
 <p>Las variables uniformes son variables por polígono.</p></td>
 <td align="left"><p>Se usa el búfer de constantes.</p>
-<p>Vea <a href="https://msdn.microsoft.com/library/windows/desktop/ff476896">Cómo: Crear un búfer de constantes</a> y <a href="https://msdn.microsoft.com/library/windows/desktop/bb509581">constantes de sombreador</a>.</p></td>
+<p>Vea <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to">Cómo: Crear un búfer de constantes</a> y <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants">constantes de sombreador</a>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>variable</strong></p>
+<td align="left"><p><strong>varying</strong></p>
 <p>Se inicializa una variable varying dentro del sombreador de vértices y se pasa a una variable varying con el mismo nombre en el sombreador de fragmentos. Dado que el sombreador de vértices solamente establece el valor de las variables cambiantes en cada vértice, el rasterizador interpola esos valores (de una forma correcta para la perspectiva) para generar valores por fragmento para pasarlos al sombreador de fragmentos. Estas variables varían en cada triángulo.</p></td>
 <td align="left">Se usa la estructura que se devuelve del sombreador de vértices como la entrada al sombreador de píxeles. Asegúrate de que los valores semánticos coincidan.</td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>Atributo</strong></p>
+<td align="left"><p><strong>attribute</strong></p>
 <p>Un elemento attribute es una parte de la descripción de un vértice que se pasa desde el código de la aplicación solo al sombreador de vértices. A diferencia de un uniforme, estableces el valor de cada atributo para cada vértice, el cual permite que cada vértice tenga un valor diferente. Las variables de atributo son variables por vértice.</p></td>
-<td align="left"><p>Define un búfer de vértices en tu código de la aplicación de Direct3D y hazlo coincidir con la entrada del vértice definida en el sombreador de vértices. Tienes la opción de definir un búfer de índice. Vea <a href="https://msdn.microsoft.com/library/windows/desktop/ff476899">Cómo: Crear un búfer de vértices</a> y <a href="https://msdn.microsoft.com/library/windows/desktop/ff476897">Cómo: Crear un búfer de índice</a>.</p>
-<p>Crea un diseño de entrada en el código de la aplicación de Direct3D y haz coincidir los valores semánticos con los que se encuentran en la entrada de vértice. Consulta el tema sobre <a href="https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout">cómo crear el diseño de entrada</a>.</p></td>
+<td align="left"><p>Define un búfer de vértices en tu código de la aplicación de Direct3D y hazlo coincidir con la entrada del vértice definida en el sombreador de vértices. Tienes la opción de definir un búfer de índice. Vea <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-vertex-how-to">Cómo: Crear un búfer de vértices</a> y <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-index-how-to">Cómo: Crear un búfer de índice</a>.</p>
+<p>Crea un diseño de entrada en el código de la aplicación de Direct3D y haz coincidir los valores semánticos con los que se encuentran en la entrada de vértice. Consulta el tema sobre <a href="https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-getting-started">cómo crear el diseño de entrada</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>const</strong></p>
@@ -162,7 +162,7 @@ En GLSL, aplicas modificadores (calificadores) a una declaración de variable de
 
 En GLSL, las variables sin modificadores son tan solo variables globales ordinarias que son privadas para cada sombreador.
 
-Cuando pasas datos a las texturas ([Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) en HLSL) y sus muestras asociadas ([SamplerState](https://msdn.microsoft.com/library/windows/desktop/bb509644) en HLSL), generalmente los declaras como variables globales en el sombreador de píxeles.
+Cuando pasas datos a las texturas ([Texture2D](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d) en HLSL) y sus muestras asociadas ([SamplerState](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-sampler) en HLSL), generalmente los declaras como variables globales en el sombreador de píxeles.
 
 ## <a name="porting-glsl-types-to-hlsl"></a>Migrar tipos de GLSL a HLSL
 
@@ -185,7 +185,7 @@ Usa esta tabla para migrar tus tipos de GLSL a HLSL.
 <td align="left">tipos escalares: float, int, bool</td>
 <td align="left"><p>tipos escalares: float, int, bool</p>
 <p>también, uint, double</p>
-<p>Para más información, consulta el tema sobre los <a href="https://msdn.microsoft.com/library/windows/desktop/bb509646">tipos escalares</a>).</p></td>
+<p>Para más información, consulta el tema sobre los <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar">tipos escalares</a>).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>tipo de vector</p>
@@ -207,8 +207,8 @@ Usa esta tabla para migrar tus tipos de GLSL a HLSL.
 <li>min16uint</li>
 </ul></li>
 </ul>
-<p>Para obtener más información, consulta el tema sobre el <a href="https://msdn.microsoft.com/library/windows/desktop/bb509707">tipo de vector</a> y las <a href="https://msdn.microsoft.com/library/windows/desktop/bb509568">palabras clave</a>.</p>
-<p>El tipo de vector también está definido como float4 (typedef vector &lt;float, 4&gt; vector;). Para obtener más información, consulta el tema sobre el <a href="https://msdn.microsoft.com/library/windows/desktop/bb509702">tipo definido por el usuario</a>.</p></td>
+<p>Para obtener más información, consulta el tema sobre el <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-vector">tipo de vector</a> y las <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-appendix-keywords">palabras clave</a>.</p>
+<p>El tipo de vector también está definido como float4 (typedef vector &lt;float, 4&gt; vector;). Para obtener más información, consulta el tema sobre el <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-user-defined">tipo definido por el usuario</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>tipo de matriz</p>
@@ -231,9 +231,9 @@ Usa esta tabla para migrar tus tipos de GLSL a HLSL.
 <li>min16uint</li>
 </ul></li>
 </ul>
-<p>También puedes usar el <a href="https://msdn.microsoft.com/library/windows/desktop/bb509623">tipo de matriz</a> para definir una matriz.</p>
+<p>También puedes usar el <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-matrix">tipo de matriz</a> para definir una matriz.</p>
 <p>Por ejemplo: matriz &lt;float, 2, 2&gt; fMatrix = {0.0f, 0.1, 2.1f, 2.2f};</p>
-<p>el tipo de matriz también está definido como float4x4 (matriz typedef &lt;float, 4, 4&gt; matrix;). Para obtener más información, consulta el tema sobre el <a href="https://msdn.microsoft.com/library/windows/desktop/bb509702">tipo definido por el usuario</a>.</p></td>
+<p>el tipo de matriz también está definido como float4x4 (matriz typedef &lt;float, 4, 4&gt; matrix;). Para obtener más información, consulta el tema sobre el <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-user-defined">tipo definido por el usuario</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>calificadores de precisión para float, int, sampler</p>
@@ -254,18 +254,18 @@ Usa esta tabla para migrar tus tipos de GLSL a HLSL.
 <p>Valor de 2,8 bits con signo de punto fijo mínimo (2 bits de número entero y 8 bits de componente fraccionario). El componente fraccionario de 8 bits puede incluir el 1 en lugar de excluirlo para darle un rango de inclusión completo de -2 a 2.</p></li>
 <li>min16int:: entero con signo de 16 bits mínimo</li>
 <li><p>min12int: entero con signo de 12 bits mínimo</p>
-<p>Este tipo es para 10Level9 (<a href="https://msdn.microsoft.com/library/windows/desktop/ff476876">niveles de característica 9_x </a>) en el que los enteros están representados por números de punto flotante. Esta es la precisión que puedes obtener cuando emulas un entero con un número de punto flotante de 16 bits.</p></li>
+<p>Este tipo es para 10Level9 (<a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">niveles de característica 9_x </a>) en el que los enteros están representados por números de punto flotante. Esta es la precisión que puedes obtener cuando emulas un entero con un número de punto flotante de 16 bits.</p></li>
 <li>min16uint: entero sin signo de 16 bits mínimo</li>
 </ul>
-<p>Para más información, consulta el tema sobre los <a href="https://msdn.microsoft.com/library/windows/desktop/bb509646">tipos escalares</a> y el <a href="https://msdn.microsoft.com/library/windows/desktop/hh968108">uso de la precisión mínima de HLSL</a>.</p></td>
+<p>Para más información, consulta el tema sobre los <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar">tipos escalares</a> y el <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/using-hlsl-minimum-precision">uso de la precisión mínima de HLSL</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">sampler2D</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/desktop/ff471525">Texture2D</a></td>
+<td align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d">Texture2D</a></td>
 </tr>
 <tr class="even">
 <td align="left">samplerCube</td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/desktop/bb509700">TextureCube</a></td>
+<td align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-type">TextureCube</a></td>
 </tr>
 </tbody>
 </table>
@@ -324,7 +324,7 @@ Usa esta tabla para migrar variables globales predefinidas de GLSL a HLSL.
 <p>Por ejemplo, float4 Color [4]: SV_Target;</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>gl_FragData [n]</strong></p>
+<td align="left"><p><strong>gl_FragData[n]</strong></p>
 <p>Esta variable es de tipo <strong>vec4</strong>.</p>
 <p>Color de fragmento para adjunto de color n</p></td>
 <td align="left"><p>SV_Target[n]</p>
@@ -380,7 +380,7 @@ Usa esta tabla para migrar variables globales predefinidas de GLSL a HLSL.
 
  
 
-Se usa la semántica para especificar la posición, el color, etc. de la entrada del sombreador de vértices y la entrada del sombreador de píxeles. Debes hacer coincidir los valores de la semántica en el diseño de entrada con la entrada del sombreador de vértices. Para ver ejemplos, consulta [Ejemplos de cómo migrar variables de GLSL a HLS](#examples-of-porting-glsl-variables-to-hlsl). Para obtener más información acerca de la semántica de HLSL, consulta el tema sobre [semántica](https://msdn.microsoft.com/library/windows/desktop/bb509647).
+Se usa la semántica para especificar la posición, el color, etc. de la entrada del sombreador de vértices y la entrada del sombreador de píxeles. Debes hacer coincidir los valores de la semántica en el diseño de entrada con la entrada del sombreador de vértices. Para ver ejemplos, consulta [Ejemplos de cómo migrar variables de GLSL a HLS](#examples-of-porting-glsl-variables-to-hlsl). Para obtener más información acerca de la semántica de HLSL, consulta el tema sobre [semántica](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics).
 
 ## <a name="examples-of-porting-glsl-variables-to-hlsl"></a>Ejemplos de cómo migrar variables de GLSL a HLSL
 
@@ -433,7 +433,7 @@ gl_FragColor = vec4(colorVarying, 1.0);
 
 ### <a name="constant-buffers-and-data-transfers-in-hlsl"></a>Búferes de constantes y transferencias de datos en HLSL
 
-He aquí un ejemplo de cómo pasas datos al sombreador de vértices de HLSL que después fluyen a través del sombreador de píxeles. En tu código de aplicación, define un vértice y un búfer de constantes. Después, en el código del sombreador de vértices, define el búfer de constantes como un elemento [cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581) y almacena los datos por vértice y los datos de entrada del sombreador de píxeles. Aquí se usan estructuras denominadas **VertexShaderInput** y **PixelShaderInput**.
+He aquí un ejemplo de cómo pasas datos al sombreador de vértices de HLSL que después fluyen a través del sombreador de píxeles. En tu código de aplicación, define un vértice y un búfer de constantes. Después, en el código del sombreador de vértices, define el búfer de constantes como un elemento [cbuffer](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants) y almacena los datos por vértice y los datos de entrada del sombreador de píxeles. Aquí se usan estructuras denominadas **VertexShaderInput** y **PixelShaderInput**.
 
 Código de aplicación de Direct3D
 
