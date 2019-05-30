@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c1c9b75599efe4566bc1783f68ff9752510d1d99
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4bebd214f5f634e501f7a79bc57cc306f1b559e7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640570"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359197"
 ---
 # <a name="share-data"></a>Compartir datos
 
@@ -20,11 +20,11 @@ Este artículo explica cómo admitir el contrato para contenido compartido en un
 
 ## <a name="set-up-an-event-handler"></a>Configurar un controlador de eventos
 
-Agrega un controlador de eventos [**DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested) para que se llame siempre que un usuario invoque el recurso compartido. Esto puede producirse si el usuario pulsa un control de la aplicación (por ejemplo, un botón o un comando de la barra de la aplicación) o automáticamente en un escenario específico (si el usuario finaliza un nivel y obtiene una puntuación alta, por ejemplo).
+Agrega un controlador de eventos [**DataRequested**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested) para que se llame siempre que un usuario invoque el recurso compartido. Esto puede producirse si el usuario pulsa un control de la aplicación (por ejemplo, un botón o un comando de la barra de la aplicación) o automáticamente en un escenario específico (si el usuario finaliza un nivel y obtiene una puntuación alta, por ejemplo).
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
 
-Cuando se produce un evento [**DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested), tu aplicación recibe un objeto [**DataRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest). Este objeto contiene un [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) que puedes usar para proporcionar el contenido que el usuario quiere compartir. Debes proporcionar un título y datos para compartir. La descripción es opcional, pero se recomienda.
+Cuando se produce un evento [**DataRequested**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested), tu aplicación recibe un objeto [**DataRequest**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataRequest). Este objeto contiene un [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) que puedes usar para proporcionar el contenido que el usuario quiere compartir. Debes proporcionar un título y datos para compartir. La descripción es opcional, pero se recomienda.
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
@@ -36,17 +36,17 @@ Puedes compartir varios tipos de datos, incluidos:
 -   Identificadores uniformes de recursos (URI)
 -   HTML
 -   Texto con formato
--   Bitmaps
+-   Mapas de bits
 -   Archivos
 -   Personalizar datos definidos por el desarrollador
 
-El objeto [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) puede contener uno o más de estos formatos, en cualquier combinación. En el ejemplo a continuación se muestra el uso compartido de un texto.
+El objeto [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) puede contener uno o más de estos formatos, en cualquier combinación. En el ejemplo a continuación se muestra el uso compartido de un texto.
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
 ## <a name="set-properties"></a>Establecer las propiedades
 
-Cuando empaquetas datos para compartirlos, puedes suministrar diversas propiedades que proporcionan información adicional acerca del contenido que se va a compartir. Estas propiedades ayudan a las aplicaciones de destino a mejorar la experiencia del usuario. Por ejemplo, una descripción sirve de ayuda cuando el usuario está compartiendo contenido con más de una aplicación. Agregar una miniatura al compartir una imagen o un vínculo a una página web proporciona al usuario una referencia visual. Para obtener más información, consulta [**DataPackagePropertySet**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackagePropertySet).
+Cuando empaquetas datos para compartirlos, puedes suministrar diversas propiedades que proporcionan información adicional acerca del contenido que se va a compartir. Estas propiedades ayudan a las aplicaciones de destino a mejorar la experiencia del usuario. Por ejemplo, una descripción sirve de ayuda cuando el usuario está compartiendo contenido con más de una aplicación. Agregar una miniatura al compartir una imagen o un vínculo a una página web proporciona al usuario una referencia visual. Para obtener más información, consulta [**DataPackagePropertySet**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackagePropertySet).
 
 Todas las propiedades excepto el título son opcionales. La propiedad de título es obligatoria y debe establecerse.
 
@@ -54,7 +54,7 @@ Todas las propiedades excepto el título son opcionales. La propiedad de título
 
 ## <a name="launch-the-share-ui"></a>Iniciar la interfaz de usuario de uso compartido
 
-El sistema proporciona una interfaz de usuario para uso compartido. Para iniciarla, llama al método [**ShowShareUI**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI).
+El sistema proporciona una interfaz de usuario para uso compartido. Para iniciarla, llama al método [**ShowShareUI**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.showshareui).
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
@@ -66,7 +66,7 @@ En la mayoría de los casos, compartir contenido es un proceso sencillo. Sin emb
 
 A veces, puede que no tenga sentido preparar de inmediato los datos que el usuario quiere compartir. Por ejemplo, si la aplicación admite el envío de un archivo de imagen grande en varios formatos posibles, no resulta eficaz crear esas todas esas imágenes antes de que el usuario haga su selección.
 
-Para solucionar este problema, un [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) puede contener una función delegada, es decir, una función a la que se llama cuando la aplicación receptora solicita datos. Recomendamos el uso de un delegado cuando los datos que un usuario quiera compartir hagan un uso intensivo de los recursos.
+Para solucionar este problema, un [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) puede contener una función delegada, es decir, una función a la que se llama cuando la aplicación receptora solicita datos. Recomendamos el uso de un delegado cuando los datos que un usuario quiera compartir hagan un uso intensivo de los recursos.
 
 <!-- For some reason, this snippet was inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -93,15 +93,15 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 }
 ```
 
-## <a name="see-also"></a>Consulte también 
+## <a name="see-also"></a>Vea también 
 
 * [Comunicación entre aplicaciones](index.md)
 * [Recibir datos](receive-data.md)
-* [DataPackage](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.aspx)
-* [DataPackagePropertySet](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackagepropertyset.aspx)
-* [DataRequest](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.aspx)
-* [DataRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.datarequested.aspx)
-* [FailWithDisplayText](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext.aspx)
-* [ShowShareUi](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.showshareui.aspx)
+* [DataPackage](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage)
+* [DataPackagePropertySet](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackagepropertyset)
+* [DataRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest)
+* [DataRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested)
+* [FailWithDisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext)
+* [ShowShareUi](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.showshareui)
  
 

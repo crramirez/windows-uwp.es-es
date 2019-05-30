@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 267e6e1cf9a004b6703e000b694274b802220f60
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cf538e6b7c66bfc61574295d5b040db82122e78a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611930"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363346"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Introducción a los Servicios de notificaciones de inserción de Windows (WNS)
  
@@ -40,12 +40,12 @@ Antes de enviar notificaciones con WNS, la aplicación debe registrarse en el pa
 
 Cada aplicación tiene su propio conjunto de credenciales para su servicio de nube. Estas credenciales no se pueden usar para enviar notificaciones a cualquier otra aplicación.
 
-Para obtener más información acerca del registro de una aplicación, consulta el tema sobre [cómo autenticar con el Servicio de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407).
+Para obtener más información acerca del registro de una aplicación, consulta el tema sobre [cómo autenticar con el Servicio de notificaciones de inserción de Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10)).
 
 ## <a name="requesting-a-notification-channel"></a>Solicitud de un canal de notificación
 
 
-Cuando se ejecuta una aplicación que puede recibir notificaciones de inserción, primero debe solicitar un canal de notificación mediante [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager#Windows_Networking_PushNotifications_PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsync_System_String_). Para obtener una explicación detallada y un código de ejemplo, consulta el tema sobre [cómo solicitar, crear y guardar un canal de notificación](https://msdn.microsoft.com/library/windows/apps/hh465412). Esta API devuelve un URI de canal que está vinculado exclusivamente a la aplicación que llama y su icono, y a través del cual pueden enviarse todos los tipos de notificaciones.
+Cuando se ejecuta una aplicación que puede recibir notificaciones de inserción, primero debe solicitar un canal de notificación mediante [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager#Windows_Networking_PushNotifications_PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsync_System_String_). Para obtener una explicación detallada y un código de ejemplo, consulta el tema sobre [cómo solicitar, crear y guardar un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10)). Esta API devuelve un URI de canal que está vinculado exclusivamente a la aplicación que llama y su icono, y a través del cual pueden enviarse todos los tipos de notificaciones.
 
 Después de crear correctamente un URI de canal, la aplicación lo envía a su servicio de nube junto con metadatos específicos que deben asociarse con este URI.
 
@@ -54,7 +54,7 @@ Después de crear correctamente un URI de canal, la aplicación lo envía a su s
 -   No garantizamos que el URI de canal de notificación de una aplicación siempre sea el mismo. Recomendamos que la aplicación solicite un canal nuevo cada vez que se ejecute y que actualice su servicio cuando el URI cambie. El desarrollador nunca debe cambiar el URI de canal; debe considerarlo como una cadena de caja negra. En este momento, los URI de canal expiran después de 30 días. Si la aplicación de Windows 10 renovará periódicamente su canal en segundo plano, puede descargar el [Push y ejemplo de notificaciones periódicas](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 y volver a usar su código fuente o el patrón se muestra.
 -   El desarrollador es quien implementa la interfaz entre el servicio de nube y la aplicación cliente. Recomendamos que la aplicación pase por un proceso de autenticación con su propio servicio y transmita datos en un protocolo seguro, como HTTPS.
 -   Es importante que el servicio de nube siempre asegure que el URI de canal use el dominio "notify.windows.com". El servicio nunca debe insertar notificaciones en un canal en otro dominio. Si alguna vez la devolución de llamada de la aplicación se ve comprometida, un atacante malintencionado podría enviar un URI de canal para suplantar WNS. Si no se inspecciona el dominio, el servicio de nube podría revelar información a este atacante sin saberlo.
--   Si tu servicio de nube intenta enviar una notificación a un canal expirado, WNS devolverá el [código de respuesta 410](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#WNSResponseCodes). En respuesta a ese código, tu servicio no debe seguir intentando enviar notificaciones a ese URI.
+-   Si tu servicio de nube intenta enviar una notificación a un canal expirado, WNS devolverá el [código de respuesta 410](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)). En respuesta a ese código, tu servicio no debe seguir intentando enviar notificaciones a ese URI.
 
 ## <a name="authenticating-your-cloud-service"></a>Autenticación del servicio de nube
 
@@ -70,7 +70,7 @@ En un nivel alto, la cadena de información es la siguiente:
 
 ![Diagrama WNS para la autenticación del servicio de nube](images/wns-diagram-02.png)
 
-En la autenticación con WNS, el servicio de nube envía una solicitud HTTP en una capa de sockets seguros (SSL). Los parámetros se proporcionan en el formato "aplicación/x-www-formato-urlcodificada". Proporcionar el SID del paquete en el "cliente\_id" campo y el secreto de la clave en el "cliente\_secreto" campo. Para obtener detalles de sintaxis, consulta la referencia sobre la [solicitud de token de acceso](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#access_token_request).
+En la autenticación con WNS, el servicio de nube envía una solicitud HTTP en una capa de sockets seguros (SSL). Los parámetros se proporcionan en el formato "aplicación/x-www-formato-urlcodificada". Proporcionar el SID del paquete en el "cliente\_id" campo y el secreto de la clave en el "cliente\_secreto" campo. Para obtener detalles de sintaxis, consulta la referencia sobre la [solicitud de token de acceso](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)).
 
 **Tenga en cuenta**  esto es simplemente un ejemplo, no cortar y pegar código que puede usar correctamente en su propio código.
 
@@ -87,7 +87,7 @@ En la autenticación con WNS, el servicio de nube envía una solicitud HTTP en u
 
 WNS autentica el servicio de nube y, si es correcto, envía una respuesta de "200 Correcto". El token de acceso se devuelve en los parámetros incluidos en el cuerpo de la respuesta HTTP, mediante el tipo de medios "application/json". Una vez que el servicio recibe el token de acceso, estás listo para enviar notificaciones.
 
-El siguiente ejemplo muestra una respuesta de autenticación correcta, incluido el token de acceso. Para obtener detalles de sintaxis, consulta el tema sobre la [solicitud de servicio de notificaciones de inserción y encabezados de respuesta](https://msdn.microsoft.com/library/windows/apps/hh465435).
+El siguiente ejemplo muestra una respuesta de autenticación correcta, incluido el token de acceso. Para obtener detalles de sintaxis, consulta el tema sobre la [solicitud de servicio de notificaciones de inserción y encabezados de respuesta](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)).
 
 ``` http
  HTTP/1.1 200 OK   
@@ -113,13 +113,13 @@ El siguiente ejemplo muestra una respuesta de autenticación correcta, incluido 
 
 Mediante el URI de canal, el servicio de nube puede enviar una notificación siempre que tenga una actualización para el usuario.
 
-El token de acceso descrito anteriormente puede volver a usarse para varias solicitudes de notificación; no es necesario que el servicio de nube solicite un token de acceso nuevo para cada notificación. Si el token de acceso expiró, la solicitud de notificación devolverá un error. Recomendamos que no intentes reenviar tu notificación más de una vez, si se rechaza el token de acceso. Si encuentras este error, deberás solicitar un token de acceso nuevo y reenviar la notificación. Para ver el código de error exacto, consulta el tema sobre [códigos de respuesta de una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/hh465435).
+El token de acceso descrito anteriormente puede volver a usarse para varias solicitudes de notificación; no es necesario que el servicio de nube solicite un token de acceso nuevo para cada notificación. Si el token de acceso expiró, la solicitud de notificación devolverá un error. Recomendamos que no intentes reenviar tu notificación más de una vez, si se rechaza el token de acceso. Si encuentras este error, deberás solicitar un token de acceso nuevo y reenviar la notificación. Para ver el código de error exacto, consulta el tema sobre [códigos de respuesta de una notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)).
 
 1.  El servicio de nube envía una solicitud HTTP POST al URI de canal. Esta solicitud debe hacerse en SSL y contener los encabezados necesarios, así como la carga de la notificación. El encabezado de autorización debe incluir el token de acceso adquirido para la autorización.
 
-    Aquí te mostramos un ejemplo de solicitud. Para obtener detalles de sintaxis, consulta el tema sobre [códigos de respuesta de una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/hh465435).
+    Aquí te mostramos un ejemplo de solicitud. Para obtener detalles de sintaxis, consulta el tema sobre [códigos de respuesta de una notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)).
 
-    Para obtener más información sobre la composición de la carga de notificación, consulte [inicio rápido: Enviar una notificación push](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252). La carga de una notificación, una notificación del sistema o una notificación de icono se suministra como contenido XML conforme a su [Esquema de iconos adaptativos](adaptive-tiles-schema.md) o el [Esquema de iconos heredados](https://msdn.microsoft.com/library/windows/apps/br212853). Por su parte, la carga de una notificación sin procesar carece de una estructura específica, ya que se define estrictamente para cada aplicación.
+    Para obtener más información sobre la composición de la carga de notificación, consulte [inicio rápido: Enviar una notificación push](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10)). La carga de una notificación, una notificación del sistema o una notificación de icono se suministra como contenido XML conforme a su [Esquema de iconos adaptativos](adaptive-tiles-schema.md) o el [Esquema de iconos heredados](https://docs.microsoft.com/uwp/schemas/tiles/tiles-xml-schema-portal). Por su parte, la carga de una notificación sin procesar carece de una estructura específica, ya que se define estrictamente para cada aplicación.
 
     ``` http
      POST https://cloud.notify.windows.com/?token=AQE%bU%2fSjZOCvRjjpILow%3d%3d HTTP/1.1
@@ -145,7 +145,7 @@ En este diagrama se muestra el flujo de datos:
 -   Las notificaciones nunca deben incluir información confidencial.
 -   Para enviar una notificación, el servicio de nube primero debe autenticar con WNS y recibir un token de acceso.
 -   Un token de acceso solo permite a un servicio de nube enviar notificaciones a una sola aplicación para la cual se creó ese token. No se puede usar un mismo token de acceso para enviar notificaciones entre varias aplicaciones. Por lo tanto, si tu servicio de nube admite varias aplicaciones, debe proporcionarse el token de acceso correcto de la aplicación al insertarse una notificación en cada URI de canal.
--   Cuando el dispositivo no tenga conexión, WNS almacenará de manera predeterminada hasta cinco notificaciones de icono (si la cola está habilitada; de lo contrario, almacenará una sola) y una notificación de distintivo para cada URI de canal y notificaciones sin procesar. Este comportamiento de almacenamiento en caché predeterminado puede modificarse a través del encabezado [Directiva-de-memoria-caché-de-X-WNS](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_cache). Ten en cuenta que las notificaciones del sistema nunca se almacenan cuando el dispositivo está sin conexión.
+-   Cuando el dispositivo no tenga conexión, WNS almacenará de manera predeterminada hasta cinco notificaciones de icono (si la cola está habilitada; de lo contrario, almacenará una sola) y una notificación de distintivo para cada URI de canal y notificaciones sin procesar. Este comportamiento de almacenamiento en caché predeterminado puede modificarse a través del encabezado [Directiva-de-memoria-caché-de-X-WNS](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)). Ten en cuenta que las notificaciones del sistema nunca se almacenan cuando el dispositivo está sin conexión.
 -   En escenarios donde el contenido de una notificación está personalizado para el usuario, WNS recomienda que el servicio de nube envíe esas actualizaciones inmediatamente apenas se reciben. Entre los ejemplos de este escenario, se incluyen actualizaciones de fuentes de medios sociales, invitaciones de comunicación instantánea, notificaciones de mensaje nuevo o alertas. De forma alternativa, puedes tener escenarios en los que la misma actualización genérica se envía con frecuencia a un gran subconjunto de usuarios; por ejemplo, pronóstico del tiempo, cotizaciones y nuevas actualizaciones. Las instrucciones de WNS especifican que la frecuencia de estas actualizaciones debe ser de una cada 30 minutos, como máximo. El usuario final o WNS podrían considerarlas abusivas si se envían con mayor frecuencia.
 
 ## <a name="expiration-of-tile-and-badge-notifications"></a>Expiración de las notificaciones de icono y de distintivo
@@ -153,7 +153,7 @@ En este diagrama se muestra el flujo de datos:
 
 De forma predeterminada, las notificaciones de icono y de distintivo expiran después de su descarga. Cuando una notificación expira, el contenido se quita del icono o de la cola y no se vuelve a mostrar al usuario. Se recomienda establecer una caducidad (con un tiempo apropiado para tu aplicación) en todas las notificaciones de icono y distintivo de modo que el contenido del icono no persista más allá de su relevancia. El tiempo de caducidad explícito resulta esencial para contenido con una vida útil definida. Esto también garantiza la eliminación de contenido obsoleto si el servicio de nube deja de enviar notificaciones o si el usuario se desconecta de la red durante un período de tiempo prolongado.
 
-Tu servicio de nube puede establecer una caducidad para cada notificación al ajustar el encabezado X-WNS-TTL para que especifique el tiempo (en segundos) que tu notificación permanecerá válida después de su envío. Si quieres obtener más información, consulta el tema sobre [encabezados de respuesta y solicitud del servicio de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_ttl).
+Tu servicio de nube puede establecer una caducidad para cada notificación al ajustar el encabezado X-WNS-TTL para que especifique el tiempo (en segundos) que tu notificación permanecerá válida después de su envío. Si quieres obtener más información, consulta el tema sobre [encabezados de respuesta y solicitud del servicio de notificaciones de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)).
 
 Por ejemplo, durante un día de gran actividad en el mercado de valores, puedes establecer la caducidad para la actualización del precio de unas acciones en el doble del intervalo de envío (por ejemplo, una hora después de la recepción si estás enviando notificaciones cada media hora). Otro ejemplo sería una aplicación de noticias, que podría determinar que un día es un tiempo de caducidad apropiado para una actualización diaria del icono de noticias.
 
@@ -244,14 +244,14 @@ Este es el código XAML para la clase [**ContentDialog**](https://docs.microsoft
 
 
 * [Enviar una notificación de icono local](sending-a-local-tile-notification.md)
-* [Inicio rápido: Enviar una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
-* [Cómo actualizar una notificación a través de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh465450)
-* [Cómo solicitar, crear y guardar un canal de notificación](https://msdn.microsoft.com/library/windows/apps/hh465412)
-* [Cómo interceptar las notificaciones para la ejecución de aplicaciones](https://msdn.microsoft.com/library/windows/apps/xaml/jj709907.aspx)
-* [Cómo realizar la autenticación con el servicio de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407)
-* [Encabezados de solicitud y respuesta del servicio de notificación de inserción](https://msdn.microsoft.com/library/windows/apps/hh465435)
-* [Directrices y lista de comprobación para las notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
-* [Notificaciones sin procesar](https://msdn.microsoft.com/library/windows/apps/hh761488)
+* [Inicio rápido: Enviar una notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [Cómo actualizar una notificación a través de notificaciones de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
+* [Cómo solicitar, crear y guardar un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
+* [Cómo interceptar las notificaciones para la ejecución de aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
+* [Cómo realizar la autenticación con el servicio de notificaciones de inserción de Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [Encabezados de solicitud y respuesta del servicio de notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
+* [Directrices y lista de comprobación para las notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [Notificaciones sin procesar](https://docs.microsoft.com/previous-versions/windows/apps/hh761488(v=win.10))
  
 
  

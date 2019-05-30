@@ -372,7 +372,7 @@ Si tu aplicación no se está ejecutando:
 
 
 ### <a name="foreground-vs-background-activation"></a>Activación en primer plano frente a activación en segundo plano
-Para aplicaciones de escritorio, la activación en primer plano y en segundo plano se controla de forma idéntica: se llama a tu activador de COM. Depende del código de tu aplicación decidir si se mostrará una ventana o simplemente se realizará algún trabajo y después se saldrá. Por lo tanto, al especificar un **activationType****en segundo plano** en el contenido de la notificación del sistema no se cambia el comportamiento.
+Para aplicaciones de escritorio, la activación en primer plano y en segundo plano se controla de forma idéntica: se llama a tu activador de COM. Depende del código de tu aplicación decidir si se mostrará una ventana o simplemente se realizará algún trabajo y después se saldrá. Por lo tanto, al especificar un **activationType** **en segundo plano** en el contenido de la notificación del sistema no se cambia el comportamiento.
 
 
 ## <a name="step-9-remove-and-manage-notifications"></a>Paso 9: Quitar y administrar las notificaciones

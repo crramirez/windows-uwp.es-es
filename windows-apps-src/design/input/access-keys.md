@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: bd71e4715b26f9e06326690d3642b4d19e23d292
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6c13ac8f1421fe785ebce70789c8ea6d0bf6c068
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57617270"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364014"
 ---
 # <a name="access-keys"></a>Teclas de acceso
 
@@ -29,7 +29,7 @@ Consulta el tema [Teclas de aceleración](keyboard-accelerators.md) para obtener
 
 La Plataforma universal de Windows (UWP) ofrece compatibilidad integrada en los controles de la plataforma tanto para teclas de acceso basadas en el teclado como para comentarios de la interfaz de usuario asociada a través de indicaciones visuales llamadas sugerencias de teclas.
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Una tecla de acceso es una combinación de la tecla Alt y una o más teclas alfanuméricas, lo que sirve como ayuda *mnemotécnica*, y que en general se presionan en secuencia y no de forma simultánea.
 
@@ -353,7 +353,7 @@ En este ejemplo se muestra cómo cambiar estos recursos de aplicación:
 
 El marco XAML expone las propiedades de automatización que permiten a los clientes de automatización de la interfaz de usuario detectar información sobre los elementos en la interfaz de usuario.
 
-Si especificas la propiedad AccessKey en un control UIElement o TextElement, puedes usar la propiedad [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) para obtener este valor. Los clientes de accesibilidad, como el Narrador, leen el valor de esta propiedad cada vez que un elemento tiene el foco.
+Si especificas la propiedad AccessKey en un control UIElement o TextElement, puedes usar la propiedad [AutomationProperties.AccessKey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) para obtener este valor. Los clientes de accesibilidad, como el Narrador, leen el valor de esta propiedad cada vez que un elemento tiene el foco.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

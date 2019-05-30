@@ -6,12 +6,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d66d717d77d2797e8a483871b8d3369befb5b6b
-ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.openlocfilehash: f199d70fc9194f211533820a7b23e20de929752d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320588"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359337"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -249,11 +249,11 @@ ms-resource://john:password@contoso.myapp:8080/Resources/String1
 
 ### <a name="path-ms-resource"></a>Ruta (ms-resource)
 
-La ruta de acceso identifica la ubicación jerárquica del subárbol [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live) (consulta el [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)) y [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live) dentro de él. En general, esto corresponde al nombre de archivo (no se incluye la extensión) de un archivo de recursos (.resw) y el identificador de un recurso de cadena dentro de él.
+La ruta de acceso identifica la ubicación jerárquica del subárbol [ResourceMap](/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap?branch=live) (consulta el [Sistema de administración de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))) y [NamedResource](/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource?branch=live) dentro de él. En general, esto corresponde al nombre de archivo (no se incluye la extensión) de un archivo de recursos (.resw) y el identificador de un recurso de cadena dentro de él.
 
 Para obtener ejemplos y más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md) y [Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).
 
-El componente de ruta de acceso de `ms-resource` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. Sin embargo, la recuperación subyacente no un [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) con *ignoreCase* establecido en `true`.
+El componente de ruta de acceso de `ms-resource` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. Sin embargo, la recuperación subyacente no un [CompareStringOrdinal](https://docs.microsoft.com/windows/desktop/api/winstring/nf-winstring-windowscomparestringordinal) con *ignoreCase* establecido en `true`.
 
 La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y '”' (carácter de comilla doble) deben codificarse con caracteres de porcentaje en las rutas de acceso para representar datos como los nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. Por lo tanto, para recuperar un recurso de cadena de un archivo de recursos denominado `Hello#World.resw`, usar este URI.
 
@@ -274,5 +274,5 @@ Los desarrolladores de componentes específicos con capas por encima de este an�
 * [Hacer referencia a una imagen u otros activos de código y marcado XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Almacenar y recuperar la configuración y otros datos de aplicación](../design/app-settings/store-and-retrieve-app-data.md)
 * [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md)
-* [Sistema de administración de recursos](https://msdn.microsoft.com/library/windows/apps/jj552947)
+* [Sistema de administración de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))
 * [Icono y notificaciones del sistema compatibilidad con las notificaciones para el idioma, la escala y el contraste alto](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)

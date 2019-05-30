@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bae6e5b21369c30c8ed067fe7283c0a116d220b8
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: 55879c33e30564f4639b8880c3a12f4b4181245e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343294"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365919"
 ---
 # <a name="interaction-primer"></a>Información básica sobre interacción
 
@@ -135,7 +135,7 @@ La función de dictado normalmente se usa cuando una aplicación no necesita com
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de voz](https://msdn.microsoft.com/library/windows/apps/dn596121)
+[Directrices para el diseño de voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
  
 
 ## <a name="pen"></a>Lápiz
@@ -168,7 +168,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de lápiz](https://msdn.microsoft.com/library/windows/apps/dn456352)
+[Directrices para el diseño de lápiz](https://docs.microsoft.com/windows/uwp/input-and-devices/pen-and-stylus-interactions)
  
 
 ## <a name="touch"></a>Función táctil
@@ -203,7 +203,7 @@ En general, la función táctil:
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de la función táctil](https://msdn.microsoft.com/library/windows/apps/hh465370)
+[Directrices para el diseño de la función táctil](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-user-interaction)
  
 
 ## <a name="touchpad"></a>Panel táctil
@@ -227,7 +227,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de panel táctil](https://msdn.microsoft.com/library/windows/apps/dn456353)
+[Directrices para el diseño de panel táctil](https://docs.microsoft.com/windows/uwp/input-and-devices/touch-interactions)
  
 
 ## <a name="keyboard"></a>Teclado
@@ -267,7 +267,7 @@ En general, un teclado:
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de teclado](https://msdn.microsoft.com/library/windows/apps/hh972345)
+[Directrices para el diseño de teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
  
 
 ## <a name="mouse"></a>Mouse
@@ -294,7 +294,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
 ### <a name="more-info"></a>Más información
 
-[Directrices para el diseño de mouse](https://msdn.microsoft.com/library/windows/apps/dn456351)
+[Directrices para el diseño de mouse](https://docs.microsoft.com/windows/uwp/input-and-devices/mouse-interactions)
  
 
 ## <a name="gesture"></a>Gesto

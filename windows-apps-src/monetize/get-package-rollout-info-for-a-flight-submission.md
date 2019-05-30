@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, package rollout, lanzamiento de paquete, flight submission, envío piloto
 ms.assetid: 397f1b99-2be7-4f65-bcf1-9433a3d496ad
 ms.localizationpriority: medium
-ms.openlocfilehash: 1afc53a6f798fa5a85ddb3ec329d6c6b3fbee8ed
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: ba1cfe5c1afbf807b401b734e3d4af449a16e30a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334463"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66358915"
 ---
 # <a name="get-rollout-info-for-a-flight-submission"></a>Obtener la información de lanzamiento para un envío piloto
 
@@ -44,9 +44,9 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Nombre        | Tipo   | Descripción                                                                 |
+| Name        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El identificador de la Tienda de la aplicación que contiene el envío del paquete piloto con la información acerca del lanzamiento de paquetes cuyo estado quieres obtener. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Obligatorio. El identificador de la Tienda de la aplicación que contiene el envío del paquete piloto con la información acerca del lanzamiento de paquetes cuyo estado quieres obtener. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | flightId | string | Obligatorio. El identificador del paquete piloto que contiene el envío con la información acerca del lanzamiento de paquetes cuyo estado quieres obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un paquete piloto](create-a-flight.md) y [obtener paquetes piloto para una aplicación](get-flights-for-an-app.md). Para un vuelo en el que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de vuelos en el centro de partners.    |
 | submissionId | string | Obligatorio. El identificador del envío con la información acerca del lanzamiento de paquetes que quieres obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de paquete piloto](create-a-flight-submission.md). Para un envío que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de envío en el centro de partners.   |
 

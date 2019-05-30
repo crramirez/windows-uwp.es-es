@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, games, juegos, opengl, direct3d, buffers, búferes, uniforms, uniformes, vertex attributes, atributos de vértice
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a1db1890e47257412a7e2ee8e08c40164d0d927
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9d79a4573438aec49d4aa1b828c90e72c04150de
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57656250"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368152"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Comparar búferes, uniformes y atributos de vértice de OpenGL ES 2.0 con Direct3D
 
@@ -20,9 +20,9 @@ ms.locfileid: "57656250"
 
 **API importantes**
 
--   [**ID3D11Device1::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/hh404575)
--   [**ID3D11Device1::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512)
--   [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)
+-   [**ID3D11Device1::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)
+-   [**ID3D11Device1::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout)
+-   [**ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout)
 
 Durante el proceso de migración de OpenGL ES 2.0 a Direct3D 11, debes cambiar la sintaxis y el comportamiento de API para pasar datos entre la aplicación y los programas sombreadores.
 
@@ -34,9 +34,9 @@ Esta es la asignación básica.
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | uniforme                   | campo de búfer de constantes (**cbuffer**).                                                                                                                                                |
 | atributo                 | campo de elementos de búfer de vértices, designado por un diseño de entrada y marcado con una semántica HLSL específica.                                                                                |
-| objeto de búfer             | búfer; Consulte [ **D3D11\_SUBRESOURCE\_datos** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) y [ **D3D11\_búfer\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092)y definiciones de un búfer de uso general. |
-| objeto de búfer de cuadros (FBO) | destinos de representación; consulta [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) con [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635).                                       |
-| búfer de reserva               | cadena de intercambio con superficie "búfer de reserva"; consulta [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) con la interfaz [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343) adjunta.                       |
+| objeto de búfer             | búfer; Consulte [ **D3D11\_SUBRESOURCE\_datos** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) y [ **D3D11\_búfer\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc)y definiciones de un búfer de uso general. |
+| objeto de búfer de cuadros (FBO) | destinos de representación; consulta [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) con [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d).                                       |
+| búfer de reserva               | cadena de intercambio con superficie "búfer de reserva"; consulta [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) con la interfaz [**IDXGISurface1**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1) adjunta.                       |
 
  
 
@@ -73,9 +73,9 @@ Otros búferes incluyen búferes de píxeles y mapas, como texturas. La canaliza
 
 En Direct3D 11, los elementos de datos del búfer se consideran "subrecursos" y pueden variar entre elementos de datos de vértice individuales y texturas de mapas de MIP.
 
--   Rellenar un [ **D3D11\_SUBRESOURCE\_datos** ](https://msdn.microsoft.com/library/windows/desktop/ff476220) estructura con la configuración de un elemento de datos del búfer.
--   Rellenar un [ **D3D11\_búfer\_DESC** ](https://msdn.microsoft.com/library/windows/desktop/ff476092) estructura con el tamaño de los elementos individuales en el búfer, así como el tipo de búfer.
--   Llama a [**ID3D11Device1::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/hh404575) con estas dos estructuras.
+-   Rellenar un [ **D3D11\_SUBRESOURCE\_datos** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_subresource_data) estructura con la configuración de un elemento de datos del búfer.
+-   Rellenar un [ **D3D11\_búfer\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_buffer_desc) estructura con el tamaño de los elementos individuales en el búfer, así como el tipo de búfer.
+-   Llama a [**ID3D11Device1::CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) con estas dos estructuras.
 
 Direct3D 11: Crear y rellenar un búfer de vértices y un búfer de índice.
 
@@ -106,7 +106,7 @@ m_d3dDevice->CreateBuffer(
     
 ```
 
-Los mapas o búferes de píxeles grabables, como un búfer de cuadros, pueden crearse como objetos [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635). Estos pueden enlazarse como recursos a [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) o a [**ID3D11ShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476628) y, una vez enlazados, pueden mostrarse con la cadena de intercambio asociada o pasar a un sombreador, respectivamente.
+Los mapas o búferes de píxeles grabables, como un búfer de cuadros, pueden crearse como objetos [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d). Estos pueden enlazarse como recursos a [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) o a [**ID3D11ShaderResourceView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11shaderresourceview) y, una vez enlazados, pueden mostrarse con la cadena de intercambio asociada o pasar a un sombreador, respectivamente.
 
 Direct3D 11: Creación de un objeto de búfer de fotogramas.
 
@@ -147,7 +147,7 @@ OpenGL ES 2.0: Declaración uniforme GLSL
 uniform mat4 u_mvpMatrix;
 ```
 
-Direct3D designa datos de uniforme como "búferes de constantes", que, al igual que los uniformes, contienen datos de constantes proporcionados a sombreadores individuales. Al igual que con los búferes de uniformes, es importante empaquetar los datos del búfer de constantes en la memoria de forma que el sombreador pueda interpretarlos. Uso de tipos de DirectXMath (como [ **XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608)) en lugar de tipos de plataforma (como **float\***  o **float\[4\]** ) garantiza la alineación del elemento de datos adecuada.
+Direct3D designa datos de uniforme como "búferes de constantes", que, al igual que los uniformes, contienen datos de constantes proporcionados a sombreadores individuales. Al igual que con los búferes de uniformes, es importante empaquetar los datos del búfer de constantes en la memoria de forma que el sombreador pueda interpretarlos. Uso de tipos de DirectXMath (como [ **XMFLOAT4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4)) en lugar de tipos de plataforma (como **float\***  o **float\[4\]** ) garantiza la alineación del elemento de datos adecuada.
 
 Los búferes de constantes deben tener un registro de GPU asociado que se use para hacer referencia a los datos en la GPU. Los datos se empaquetan en la ubicación del registro, como se indica en el diseño del búfer.
 
@@ -224,7 +224,7 @@ attribute vec4 a_position;
 attribute vec4 a_color;                     
 ```
 
-De alguna manera, el mismo proceso se mantiene para Direct3D. En lugar de atributos, los datos de vértice se proporcionan en búferes de entrada, que incluyen búferes de vértices y los correspondientes búferes de índices. No obstante, dado que Direct3D no tiene la declaración de "atributo", debes especificar un diseño de entrada que declara el componente individual de los elementos de datos en el búfer de vértices, así como la semántica de HLSL que indica dónde y cómo el sombreador de vértices va a interpretar estos componentes. La semántica de HLSL requiere que definas el uso de cada componente con una cadena específica que informa al motor sombreador sobre su propósito. Por ejemplo, los datos de posición de vértice se marcan como POSITION, los datos normales se marcan como NORMAL y los datos de color de vértice se marcan como COLOR. (Otras fases del sombreador también requieren semántica específica, y esa semántica tener interpretaciones diferentes en función de la etapa del sombreador). Para obtener más información sobre la semántica HLSL, lea [portar su canalización de sombreador](change-your-shader-loading-code.md) y [HLSL semántica](https://msdn.microsoft.com/library/windows/desktop/bb205574).
+De alguna manera, el mismo proceso se mantiene para Direct3D. En lugar de atributos, los datos de vértice se proporcionan en búferes de entrada, que incluyen búferes de vértices y los correspondientes búferes de índices. No obstante, dado que Direct3D no tiene la declaración de "atributo", debes especificar un diseño de entrada que declara el componente individual de los elementos de datos en el búfer de vértices, así como la semántica de HLSL que indica dónde y cómo el sombreador de vértices va a interpretar estos componentes. La semántica de HLSL requiere que definas el uso de cada componente con una cadena específica que informa al motor sombreador sobre su propósito. Por ejemplo, los datos de posición de vértice se marcan como POSITION, los datos normales se marcan como NORMAL y los datos de color de vértice se marcan como COLOR. (Otras fases del sombreador también requieren semántica específica, y esa semántica tener interpretaciones diferentes en función de la etapa del sombreador). Para obtener más información sobre la semántica HLSL, lea [portar su canalización de sombreador](change-your-shader-loading-code.md) y [HLSL semántica](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dcl-usage---ps).
 
 De manera colectiva, el proceso de establecer los búferes de vértices e índices, así como el diseño de entrada, se denomina fase de "Ensamblado de entrada" (IA) de la canalización de gráficos de Direct3D.
 
@@ -255,7 +255,7 @@ Un diseño de entrada se declara y asocia con un sombreador de vértices al decl
 -   Una coordenada de posición de vértice, representada en la memoria principal como XMFLOAT3, que es una matriz alineada de 3 valores de puntos flotantes de 32 bits para las coordenadas (x, y, z).
 -   Un valor de color de vértice, representado como XMFLOAT4, que es una matriz alineada de 4 valores de puntos flotantes de 32 bits para el color (RGBA).
 
-Debes asignar una semántica y un tipo de formato a cada uno. A continuación, debes pasar la descripción a [**ID3D11Device1::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512). El diseño de entrada se usará cuando llamemos a [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) en el momento en que configures el ensamblado de entrada durante el método de representación.
+Debes asignar una semántica y un tipo de formato a cada uno. A continuación, debes pasar la descripción a [**ID3D11Device1::CreateInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createinputlayout). El diseño de entrada se usará cuando llamemos a [**ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout) en el momento en que configures el ensamblado de entrada durante el método de representación.
 
 Direct3D 11: Que describe una distribución con semántica específica
 

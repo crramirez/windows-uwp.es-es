@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, education
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
-ms.openlocfilehash: 7696cd785b4a8720f6eefb7bc897d13ffb0c7115
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8c2333d960ba91b1d1c3d3030481108407909594
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583425"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359204"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>Desarrollar aplicaciones universales de Windows para la educación
 ![Captura de pantalla de prueba de una aplicación](images/take-a-test-screen-small.png)
@@ -38,7 +38,7 @@ La plataforma Windows Ink consigue que las aplicaciones educativas deslumbren ad
 
 
 ### <a name="microsoft-store"></a>Microsoft Store
-A menudo, las aplicaciones educativas se publican en circunstancias especiales para una organización específica. Consulta [Distribuir aplicaciones de LOB en las empresas](https://msdn.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) para obtener información sobre este tema.
+A menudo, las aplicaciones educativas se publican en circunstancias especiales para una organización específica. Consulta [Distribuir aplicaciones de LOB en las empresas](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) para obtener información sobre este tema.
 
 ## <a name="related-topics"></a>Temas relacionados
 - [Windows 10 for Education](https://technet.microsoft.com/edu/windows/index) en el centro de TI de Windows

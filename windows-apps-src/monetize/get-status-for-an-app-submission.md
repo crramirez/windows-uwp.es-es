@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submission, envío de aplicación, status, estado
 ms.localizationpriority: medium
-ms.openlocfilehash: c6fc7a3316cacf1ab6cbe246f7868096b75c538e
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 30e3314f52ec39f9f262f274fcf2db70f0aad7d9
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334443"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66358776"
 ---
 # <a name="get-the-status-of-an-app-submission"></a>Obtener el estado de un envío de aplicación
 
@@ -44,7 +44,7 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 | Name        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío cuyo estado quieres obtener. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que contiene el envío cuyo estado quieres obtener. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | submissionId | string | Obligatorio. El identificador del envío para el que quieres obtener el estado. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de aplicación](create-an-app-submission.md). Para un envío que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de envío en el centro de partners.  |
 
 

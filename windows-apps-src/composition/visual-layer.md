@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4607280fd031fa556bfc5d1c719f4b4e1aeb928e
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: 7c61f6580039b9fe3da915491acd84c939088370
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984101"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361386"
 ---
 # <a name="visual-layer"></a>Capa visual
 
@@ -38,7 +38,7 @@ Las principales funciones de la capa visual son las siguientes:
 
 ### <a name="content"></a>Contenido
 
-El contenido es hospedado, transformado y disponible para su uso por el sistema de animación y efectos mediante elementos visuales. En la base de la jerarquía de clase es la clase [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), un proxy ligero de subprocesos ágiles en el proceso de la aplicación para el estado visual del compositor de objetos. Incluyen subclases de Visual  [**ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) para permitir que los elementos secundarios crear árboles de objetos visuales y [ **SpriteVisual** ](https://msdn.microsoft.com/library/windows/apps/Mt589433) que contiene el contenido y se puede pintar con cualquier colores sólidos, efectos personalizados de contenido o visuales dibujados. En conjunto, estos tipos de elementos visuales conforman la estructura del árbol visual para la interfaz de usuario 2D y respaldan a los objetos FrameworkElements de XAML más visibles.
+El contenido es hospedado, transformado y disponible para su uso por el sistema de animación y efectos mediante elementos visuales. En la base de la jerarquía de clase es la clase [**Visual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual), un proxy ligero de subprocesos ágiles en el proceso de la aplicación para el estado visual del compositor de objetos. Incluyen subclases de Visual  [**ContainerVisual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ContainerVisual) para permitir que los elementos secundarios crear árboles de objetos visuales y [ **SpriteVisual** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual) que contiene el contenido y se puede pintar con cualquier colores sólidos, efectos personalizados de contenido o visuales dibujados. En conjunto, estos tipos de elementos visuales conforman la estructura del árbol visual para la interfaz de usuario 2D y respaldan a los objetos FrameworkElements de XAML más visibles.
 
 Para más información, consulta la información general sobre los [objetos visuales de composición](composition-visual-tree.md).
 
@@ -58,7 +58,7 @@ Para más información, consulta la información general sobre las [animaciones 
 
 ### <a name="working-with-your-xaml-uwp-app"></a>Trabajar con la aplicación para UWP de XAML
 
-Puedes acceder a un elemento visual creado por el marco XAML y respaldando un objeto FrameworkElement visible, mediante la clase [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976) en [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908). Ten en cuenta que los elementos visuales que el marco crea para ti vienen con algunas limitaciones en cuanto a personalización. Esto se debe a que el marco administra los desplazamientos, las transformaciones y los ciclos de vida. Sin embargo, puedes crear tus propios elementos visuales y adjuntarlos a un elemento XAML existente a través de ElementCompositionPreview o agregándolo a un objeto ContainerVisual existente en algún lugar de la estructura del árbol visual.
+Puedes acceder a un elemento visual creado por el marco XAML y respaldando un objeto FrameworkElement visible, mediante la clase [**ElementCompositionPreview**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) en [**Windows.UI.Xaml.Hosting**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting). Ten en cuenta que los elementos visuales que el marco crea para ti vienen con algunas limitaciones en cuanto a personalización. Esto se debe a que el marco administra los desplazamientos, las transformaciones y los ciclos de vida. Sin embargo, puedes crear tus propios elementos visuales y adjuntarlos a un elemento XAML existente a través de ElementCompositionPreview o agregándolo a un objeto ContainerVisual existente en algún lugar de la estructura del árbol visual.
 
 Para más información, consulta la información general de [Uso de la capa visual con XAML](using-the-visual-layer-with-xaml.md).
 
@@ -66,11 +66,11 @@ Para más información, consulta la información general de [Uso de la capa visu
 
 Puede usar la capa Visual para mejorar la apariencia, sensación y funcionalidad de su WPF, Windows Forms, y C++ aplicaciones de escritorio de Win32. Puede migrar islas de contenido para utilizar la capa Visual y mantener el resto de la interfaz de usuario en su marco de trabajo existente. Esto significa que puede realizar actualizaciones importantes y mejoras en la interfaz de usuario de la aplicación sin necesidad de realizar grandes cambios en el código existente base.
 
-Para obtener más información, consulte [modernizar sus aplicaciones de escritorio mediante la capa Visual](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps).
+Para más información, consulta [Modernización de una aplicación de escritorio mediante la capa visual](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps).
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-* [**Documentación de referencia completa de la API**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
+* [**Documentación de referencia completa de la API**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
 * Muestras avanzadas de la interfaz de usuario y la composición en [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).
 * [Galería de ejemplos de Windows.UI.Composition](https://aka.ms/winuiapp)
 * [@windowsui Fuente de Twitter ](https://twitter.com/windowsui)

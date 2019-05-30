@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ac80888019044beabc44335290bc6ad59cf377c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0e5ba7ddb6ef37b4aa54584602fc890bbabc8998
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608140"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359350"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, escala, contraste alto y otros calificadores
 
@@ -114,7 +114,7 @@ Dependiendo de las herramientas y el flujo de trabajo que usas para la creación
 
 ## <a name="alternateform"></a>AlternateForm
 
-El calificador `alternateform` se usa para proporcionar una forma alternativa de un recurso para alguna finalidad especial. Normalmente esto lo usan solo los desarrolladores japoneses de aplicaciones para proporcionar una cadena furigana para la que `msft-phonetic` está reservada (consulta la sección "Admitir Furigana para las cadenas en japonés que puedan ordenarse" en [Cómo prepararse para la localización](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)).
+El calificador `alternateform` se usa para proporcionar una forma alternativa de un recurso para alguna finalidad especial. Normalmente esto lo usan solo los desarrolladores japoneses de aplicaciones para proporcionar una cadena furigana para la que `msft-phonetic` está reservada (consulta la sección "Admitir Furigana para las cadenas en japonés que puedan ordenarse" en [Cómo prepararse para la localización](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))).
 
 El sistema de destino o la aplicación deben proporcionar un valor con respecto al cual concuerden los calificadores `alternateform`. No uses el prefijo `msft-` para tus propios valores de calificador `alternateform` personalizados.
 
@@ -193,7 +193,7 @@ Es poco probable que necesites el nombre de calificador `dxfeaturelevel`. Fue di
 
 El calificador `homeregion` corresponde a la configuración del usuario para el país o región. Representa la ubicación principal del usuario. Los valores incluyen cualquier [etiqueta de región BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) que sea válida. Es decir, cualquier código de región de dos letras **ISO 3166-1 alpha-2**, además del conjunto de códigos geográficos de tres dígitos **numérico ISO 3166-1** para regiones compuestas (consulta la [Composición M49 de códigos de región de la División de Estadística de las Naciones Unidas](https://go.microsoft.com/fwlink/p/?linkid=247929)). Los códigos de "Agrupaciones económicas seleccionadas y otras" no son válidos.
 
-## <a name="language"></a>Idioma
+## <a name="language"></a>Lenguaje
 
 Un calificador `language` corresponde a la configuración de idioma de la pantalla. Los valores incluyen cualquier [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) que sea válida. Para obtener una lista de idiomas, consulta el [Registro de subetiquetas de idioma de IANA](https://go.microsoft.com/fwlink/p/?linkid=227303).
 
@@ -250,7 +250,7 @@ Para obtener información sobre la calificación de un recurso tanto para `scale
 
 ## <a name="targetsize"></a>TargetSize
 
-El calificador `targetsize` se usa principalmente para especificar los [iconos de asociación de tipo de archivo](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh127427) o los [iconos de protocolo](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bb266530) a mostrar en el Explorador de archivos. El valor del calificador representa la longitud del lado de una imagen cuadrada en píxeles (físicos) sin procesar. Se carga el recurso cuyo valor coincide con la opción de configuración Vista del Explorador de archivos; o el recurso con el siguiente valor más grande, en caso de ausencia de coincidencia exacta.
+El calificador `targetsize` se usa principalmente para especificar los [iconos de asociación de tipo de archivo](https://docs.microsoft.com/windows/desktop/shell/how-to-assign-a-custom-icon-to-a-file-type) o los [iconos de protocolo](https://docs.microsoft.com/windows/desktop/search/-search-3x-wds-ph-ui-extensions) a mostrar en el Explorador de archivos. El valor del calificador representa la longitud del lado de una imagen cuadrada en píxeles (físicos) sin procesar. Se carga el recurso cuyo valor coincide con la opción de configuración Vista del Explorador de archivos; o el recurso con el siguiente valor más grande, en caso de ausencia de coincidencia exacta.
 
 Puedes definir activos que representen varios tamaños de valor de calificador `targetsize` para el icono de la aplicación (`/Assets/Square44x44Logo.png`) en la pestaña de activos visuales del diseñador de manifiesto de paquete de la aplicación.
 
@@ -259,6 +259,21 @@ Para obtener información sobre la calificación de un recurso tanto para `scale
 ## <a name="theme"></a>Tema
 
 El calificador `theme` se usa para proporcionar recursos que coincidan mejor con la configuración predeterminada del modo de aplicación o la invalidación de la aplicación usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme).
+
+
+## <a name="shell-light-theme-and-unplated-resources"></a>Tema claro de shell y los recursos sin placa
+El *Windows 10 puede actualizar 2019* introdujo un nuevo tema "claro" para el Shell de Windows. Como resultado, algunos activos de la aplicación que se mostraban anteriormente en un fondo oscuro ahora se mostrará en un fondo claro. Para las aplicaciones que las aplicaciones que proporcionan los activos sin placa altform para la barra de tareas y la ventana de los conmutadores (Alt + Tab, vista de tareas, etcetera), debe comprobar que tienen contraste aceptable en un fondo claro.
+
+### <a name="providing-light-theme-specific-assets"></a>Proporcionar recursos específicos del tema claro
+Las aplicaciones que desean proporcionar un recurso adaptado para el tema claro shell puede usar un nuevo calificador de recursos de forma alternativa: `altform-lightunplated`. Este calificador refleja el calificador sin placa altform existente. 
+
+### <a name="downlevel-considerations"></a>Consideraciones de nivel inferior
+Las aplicaciones no deben usar el `theme-light` calificador con el `altform-unplated` calificador. Esto provocará un comportamiento impredecible en RS5 y versiones anteriores de Windows debido a los recursos de manera que se cargan para la barra de tareas. En versiones anteriores de windows, puede utilizarse la versión del tema claro incorrectamente. El `altform-lightunplated` calificador evita este problema. 
+
+### <a name="compatibility-behavior"></a>Comportamiento de compatibilidad
+Para versiones anteriores compatibilidad, Windows incluye lógica para detectar una iconos monocromática y comprobar si contrasta con el fondo deseado. Si se produce un error en el icono cumplir los requisitos de contraste, Windows buscará una versión de blanco en contraste del recurso. Si no está disponible, Windows recurrirá a con la versión recubierta del recurso.
+
+
 
 ## <a name="important-apis"></a>API importantes
 
@@ -269,7 +284,7 @@ El calificador `theme` se usa para proporcionar recursos que coincidan mejor con
 
 * [Los píxeles efectivos y el factor de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
 * [Sistema de administración de recursos](resource-management-system.md)
-* [Preparación para la localización](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh967762)
+* [Preparación para la localización](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))
 * [Detectar la plataforma de la aplicación se ejecuta](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
 * [Información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
 * [Localizar sus cadenas de interfaz de usuario](localize-strings-ui-manifest.md)

@@ -6,26 +6,26 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c105425be5b8eb56f32956f126a8f6c2c4f30f2e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: eb0adece0d950a4fe66d45e125d981ae986a3e4b
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644280"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359843"
 ---
 # <a name="performance"></a>Rendimiento
 
 
 Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, puedes realizar mediciones desde el principio y con la suficiente frecuencia durante el ciclo de vida del proyecto para estar seguro que cumples los objetivos. En esta sección se muestra cómo organizar el flujo de trabajo de rendimiento, solucionar problemas de animaciones y los problemas de velocidad de fotogramas y ajustar el tiempo de inicio, tiempo de navegación de páginas y el uso de la memoria.
 
-Si no ha hecho lo ha hecho, un paso que hemos visto resultado mejoras de rendimiento significativas sólo traslade su aplicación a Windows 10 de destino. Varias optimizaciones de XAML (por ejemplo, [{x: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) solo están disponibles en las aplicaciones de Windows 10. Consulte [portar aplicaciones de Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) y la sesión //build/ [mover a la plataforma Universal de Windows](https://channel9.msdn.com/Events/Build/2015/3-741).
+Si no ha hecho lo ha hecho, un paso que hemos visto resultado mejoras de rendimiento significativas sólo traslade su aplicación a Windows 10 de destino. Varias optimizaciones de XAML (por ejemplo, [{x: Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)) solo están disponibles en las aplicaciones de Windows 10. Consulte [portar aplicaciones de Windows 10](https://docs.microsoft.com/windows/uwp/porting/index) y la sesión //build/ [mover a la plataforma Universal de Windows](https://channel9.msdn.com/Events/Build/2015/3-741).
 
 | Tema | Descripción |
 |-------|-------------|
 | [Planear el rendimiento](planning-and-measuring-performance.md) | Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, realiza mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos. |
 | [Optimización de la actividad en segundo plano](optimize-background-activity.md) | Crea aplicaciones para UWP que colaboren con el sistema para usar tareas en segundo plano de una manera que produzca un consumo eficiente de la batería. |
-| [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md) | Mejora el rendimiento y el tiempo de inicio de [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de esos elementos. |
-| [Virtualización de datos de ListView y GridView](listview-and-gridview-data-optimization.md) | Mejora el rendimiento y el tiempo de inicio de [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) mediante la virtualización de datos. |
+| [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md) | Mejora el rendimiento y el tiempo de inicio de [<strong>GridView</strong>](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de esos elementos. |
+| [Virtualización de datos de ListView y GridView](listview-and-gridview-data-optimization.md) | Mejora el rendimiento y el tiempo de inicio de [<strong>GridView</strong>](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) mediante la virtualización de datos. |
 | [Mejorar el rendimiento de la colección de elementos no utilizados](improve-garbage-collection-performance.md) | La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no usados de .NET para las aplicaciones para UWP. |
 | [Mantener la capacidad de respuesta del subproceso de la interfaz de usuario](keep-the-ui-thread-responsive.md) | Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan cálculos, independientemente del tipo de equipo. Esto significa cosas distintas en función de la aplicación. En el caso de algunas aplicaciones, esto se traduce en la necesidad de proporcionar una física más realista, cargar los datos desde el disco o desde la Web con mayor rapidez, presentar escenas complejas y navegar entre páginas velozmente, encontrar direcciones al instante o procesar datos con rapidez. Independientemente del tipo de cálculo, los usuarios quieren que las aplicaciones respondan a su entrada y que nunca parezca que dejan de responder mientras &quot;están pensando&quot;. |
 | [Optimizar el marcado XAML](optimize-xaml-loading.md) | El análisis del marcado XAML para crear objetos en la memoria requiere mucho tiempo para una interfaz de usuario compleja. Estas son algunas acciones que puedes realizar para mejorar el análisis del marcado XAML, el tiempo de carga y la eficiencia de la memoria de tu aplicación. | 

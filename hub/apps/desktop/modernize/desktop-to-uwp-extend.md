@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 10ad54dd485d7dbf5e7f4cb119c7700c09056017
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 672485dd505227da0a59a220edaa9648e2521e63
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215133"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359624"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>Ampliar su aplicación de escritorio con componentes UWP modernos
 
@@ -175,7 +175,7 @@ También puedes abrir el **package.appxmanifest** en el diseñador, elegir la pe
 
 ### <a name="start-the-uwp-app"></a>Iniciar la aplicación para UWP
 
-En primer lugar, desde tu aplicación de escritorio, crea un [Uri](https://msdn.microsoft.com/library/system.uri.aspx) que incluya el nombre del protocolo y los parámetros que quieras pasar a la aplicación para UWP. Luego llama al método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync).
+En primer lugar, desde tu aplicación de escritorio, crea un [Uri](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) que incluya el nombre del protocolo y los parámetros que quieras pasar a la aplicación para UWP. Luego llama al método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync).
 
 ```csharp
 

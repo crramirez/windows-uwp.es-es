@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3344230bc52013825d94cfbe3668acfa0d7a2e13
-ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.openlocfilehash: 93a81501b524826484111419899675fbb99b86fa
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58914005"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364755"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -22,7 +22,7 @@ A diferencia de [ListView](/uwp/api/windows.ui.xaml.controls.listview), [ItemsRe
 
 Puede pensar en [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) conceptualmente como un panel controladas por datos, en lugar de como un control completo, como ListView. Especifique una colección de elementos de datos que se mostrará una plantilla de elemento que genera un elemento de interfaz de usuario para cada elemento de datos y un diseño que determina cómo se tamaño y coloca los elementos. A continuación, ItemsRepeater genera elementos secundarios en función del origen de datos y los muestra según lo especificado por la plantilla de elemento y el diseño. Los elementos mostrados no es necesario ser homogéneo porque ItemsRepeater pueden cargar contenido para representar los elementos de datos según los criterios especificados en un selector de plantillas de datos.
 
-| **Obtener la biblioteca de interfaz de usuario de Windows** |
+| **Obtención de la biblioteca de interfaz de usuario de Windows** |
 | - |
 | Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete de NuGet que contiene los nuevos controles y características de interfaz de usuario para aplicaciones UWP. Para obtener más información, incluidas las instrucciones de instalación, consulte el [Introducción a la biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
@@ -50,7 +50,7 @@ ItemsRepeater no tiene una colección de elementos integrada. Si tiene que propo
 <td>
     <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para abrir la aplicación y ver el <a href="xamlcontrolsgallery:/item/ItemsRepeater">ItemsRepeater</a> en acción.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -59,17 +59,30 @@ ItemsRepeater no tiene una colección de elementos integrada. Si tiene que propo
 
 ## <a name="scrolling-with-itemsrepeater"></a>Desplazamiento con ItemsRepeater
 
-[ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) no se deriva de [Control](/uwp/api/windows.ui.xaml.controls.control), por lo que no tiene una plantilla de control. Por lo tanto, no contiene cualquier integrada desplazamiento como un ListView o realizar otros controles de la colección.
+[**ItemsRepeater** ](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) no se deriva de [ **Control**](/uwp/api/windows.ui.xaml.controls.control), por lo que no tiene una plantilla de control. Por lo tanto, no contiene cualquier integrada desplazamiento como un ListView o realizar otros controles de la colección.
 
-Cuando se usa un ItemsRepeater, debe proporcionar la funcionalidad de desplazamiento incluyéndolo en una [ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer) control.
+Cuando se usa un **ItemsRepeater**, debe proporcionar funcionalidad de desplazamiento incluyéndolo en una [ **ScrollViewer** ](/uwp/api/windows.ui.xaml.controls.scrollviewer) control.
+
+> [!NOTE]
+> Si la aplicación se ejecutará en versiones anteriores de Windows - aquellos publicado *antes* Windows 10, versión 1809 - también tendrá que hospedar el **ScrollViewer** dentro de la [  **ItemsRepeaterScrollHost**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeaterscrollhost). 
+> ```xaml
+> <muxc:ItemsRepeaterScrollHost>
+>     <ScrollViewer>
+>         <muxc:ItemsRepeater ... />
+>     </ScrollViewer>
+> </muxc:ItemsRepeaterScrollHost>
+> ```
+> Si la aplicación solo se ejecutará en las versiones recientes de Windows 10, versión 1809 y versiones posterior:, no es necesario utilizar el [ **ItemsRepeaterScrollHost**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeaterscrollhost).
+>
+> Antes de Windows 10, versión 1809, **ScrollViewer** no implementó la [ **IScrollAnchorProvider** ](/uwp/api/windows.ui.xaml.controls.iscrollanchorprovider) interfaz que el **ItemsRepeater**necesita.  El **ItemsRepeaterScrollHost** permite la **ItemsRepeater** coordinarse con **ScrollViewer** en versiones anteriores para conservar correctamente la ubicación de los elementos visible el usuario está viendo.  En caso contrario, es posible que aparecen los elementos mover o, de repente, desaparecen cuando se cambian los elementos de la lista o se cambia el tamaño de la aplicación.
 
 ## <a name="create-an-itemsrepeater"></a>Crear un ItemsRepeater
 
-Para usar un [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater), debe proporcionarle los datos que se va a mostrar estableciendo la propiedad ItemsSource. A continuación, indique cómo mostrar los elementos estableciendo los [ItemTemplate](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) propiedad.
+Para usar un [ **ItemsRepeater**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater), debe proporcionarle los datos que se va a mostrar estableciendo el **ItemsSource** propiedad. A continuación, indique cómo mostrar los elementos estableciendo los [ **ItemTemplate** ](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) propiedad.
 
 ### <a name="itemssource"></a>ItemsSource
 
-Para rellenar la vista, establecer el [ItemsSource](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemssource) propiedad a una colección de elementos de datos. En este caso, ItemsSource se establece en el código directamente a una instancia de una colección.
+Para rellenar la vista, establecer el [ **ItemsSource** ](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemssource) propiedad a una colección de elementos de datos. En este caso, el **ItemsSource** se establece en el código directamente a una instancia de una colección.
 
 ```csharp
 ObservableCollection<string> Items = new ObservableCollection<string>();
@@ -78,21 +91,23 @@ ItemsRepeater itemsRepeater1 = new ItemsRepeater();
 itemsRepeater1.ItemsSource = Items;
 ```
 
-También puedes enlazar la propiedad ItemsSource a una colección en XAML. Para obtener más información sobre el enlace de datos, consulta [Introducción al enlace de datos](https://msdn.microsoft.com/windows/uwp/data-binding/data-binding-quickstart).
+También puede enlazar el **ItemsSource** propiedad a una colección en XAML. Para obtener más información sobre el enlace de datos, consulta [Introducción al enlace de datos](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-quickstart).
 
 
 ```xaml
 <ItemsRepeater ItemsSource="{x:Bind Items}"/>
 ```
 
-### <a name="data-template"></a>Plantilla de datos
+### <a name="itemtemplate"></a>ItemTemplate
+Para especificar cómo se visualiza un elemento de datos, establezca el [ **ItemTemplate** ](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) propiedad a un [ **DataTemplate** ](/uwp/api/windows.ui.xaml.datatemplate) o [  **DataTemplateSelector** ](/uwp/api/windows.ui.xaml.controls.datatemplateselector) ha definido. La plantilla de datos define cómo se visualizan los datos. De forma predeterminada, el elemento se muestra en la vista con un **TextBlock** la usa la representación de cadena del objeto de datos.
 
-La plantilla de datos de un elemento define cómo se visualizan los datos. De forma predeterminada, el elemento se muestra en la vista como la representación de cadena del objeto de datos al que está enlazado con un bloque de texto. No obstante, seguramente quieras mostrar una presentación más enriquecida de los datos. Para especificar exactamente cómo se muestran los elementos, defina un [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate). El lenguaje XAML de la clase DataTemplate define el diseño y la apariencia de los controles usados para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o pueden tener contenido estático definido en línea. Asignar la DataTemplate para el [ItemTemplate](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) propiedad de la ItemsRepeater.
+Sin embargo, normalmente desea mostrar una presentación más enriquecida de los datos mediante una plantilla que define el diseño y la apariencia de uno o más controles que va a usar para mostrar un elemento individual. Los controles que usar en la plantilla se pueden enlazar a las propiedades del objeto de datos o tienen insertada definido de contenido estático.
 
-En este ejemplo, el objeto de datos es una cadena simple. Usar una plantilla de datos para agregar una imagen a la izquierda del texto y estilo TextBlock para mostrar la cadena en verde azulado.
+#### <a name="datatemplate"></a>DataTemplate
+En este ejemplo, el objeto de datos es una cadena simple. El **DataTemplate** incluye una imagen a la izquierda del texto y estilos el **TextBlock** para mostrar la cadena en un color verde azulado.
 
 > [!NOTE]
-> Cuando uses la [extensión de marcado x:Bind](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) en DataTemplate, debes especificar DataType (`x:DataType`) en DataTemplate.
+> Cuando se usa el [extensión de marcado x: Bind](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) en un **DataTemplate**, tendrá que especificar el tipo de datos (`x:DataType`) en la plantilla de datos.
 
 ```xaml
 <DataTemplate x:DataType="x:String">
@@ -109,23 +124,46 @@ En este ejemplo, el objeto de datos es una cadena simple. Usar una plantilla de 
 </DataTemplate>
 ```
 
-Aquí es cómo los elementos aparecerá cuando se muestra con esta plantilla de datos.
+Aquí es cómo los elementos aparecerá cuando se muestra con este **DataTemplate**.
 
 ![Elementos que se muestran con una plantilla de datos](images/listview-itemstemplate.png)
 
-El número de elementos que se usan en la plantilla de datos para un elemento puede tener un impacto significativo en el rendimiento si la vista muestra un gran número de elementos. Para obtener más información y ejemplos de cómo usar las plantillas de datos para definir la apariencia de los elementos en la lista, consulte [contenedores y las plantillas de elemento](item-containers-templates.md).
+El número de elementos que se usan en el **DataTemplate** para un elemento puede tener un impacto significativo en el rendimiento si la vista muestra un gran número de elementos. Para obtener más información y ejemplos de cómo usar **DataTemplate**para definir la apariencia de los elementos en la lista, consulte [contenedores y las plantillas de elemento](item-containers-templates.md).
 
 > [!TIP]
-> ItemsRepeater no se ajusta el contenido de la plantilla de datos en un contenedor de elementos, como ListView y otros controles de la colección. En su lugar, ItemsRepeater presenta solo lo que se define en la plantilla de datos. Si desea que los elementos que tienen el mismo aspecto que un elemento de vista de lista, puede usar un contenedor, como ListViewItem, en la plantilla de datos. ItemsRepeater mostrará los objetos visuales de ListViewItem, pero no hace que el uso de otras funcionalidades, como la selección o que se muestra la casilla de selección múltiple.
+> Para mayor comodidad cuando quiere declarar la plantilla insertada en lugar de al que hace referencia como un recurso estático, puede especificar el **DataTemplate** o **DataTemplateSelector** como elemento secundario directo de la **ItemsRepeater**.  Se asignará como el valor de la **ItemTemplate** propiedad. Por ejemplo, esto es válido:
+> ```xaml
+> <ItemsRepeater ItemsSource="{x:Bind Items}">
+>     <DataTemplate>
+>         <!-- ... -->
+>     </DataTemplate>
+> </ItemsRepeater>
+> ```
+
+> [!TIP]
+> A diferencia de **ListView** y otros controles de la colección, el **ItemsRepeater** no se ajusta los elementos de un **DataTemplate** con un contenedor de elementos adicionales que incluye directiva predeterminada, como los márgenes, relleno, los objetos visuales de selección o un puntero a través de estado visual. En su lugar, **ItemsRepeater** sólo presenta lo que se define en el **DataTemplate**. Si desea que los elementos que tienen el mismo aspecto que un elemento de vista de lista, se puede incluir explícitamente un contenedor, como **ListViewItem**, en la plantilla de datos. **ItemsRepeater** mostrará el **ListViewItem** objetos visuales, pero no convierte automáticamente el uso de otras funcionalidades, como la selección o que se muestra la casilla de selección múltiple.
 >
-> De forma similar, si la recopilación de datos es una colección de controles reales, como botón (`List<Button>`), puede colocar un ContentPresenter en la DataTemplate para mostrar el control.
+> De forma similar, si la recopilación de datos es una colección de controles reales, como **botón** (`List<Button>`), puede colocar un **ContentPresenter** en su **DataTemplate** a Mostrar el control.
 
 #### <a name="datatemplateselector"></a>DataTemplateSelector
 
-Los elementos que mostrar en la vista no debe ser del mismo tipo. [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) puede usar un **DataTemplateSelector** para cargar una plantilla de datos para representar los elementos de datos según los criterios que especifique. Para obtener más información y ejemplos, vea [DataTemplateSelector](/uwp/api/windows.ui.xaml.controls.datatemplateselector).
+Los elementos que mostrar en la vista no debe ser del mismo tipo. Puede proporcionar el [ **ItemTemplate** ](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) propiedad con un [ **DataTemplateSelector** ](/uwp/api/windows.ui.xaml.controls.datatemplateselector) para seleccionar distintos  **DataTemplate**en función de los criterios que especifique.
+
+En este ejemplo se da por supuesto un **DataTemplateSelector** se ha definido que decide entre dos diferentes **DataTemplate**s para representar un elemento grande y pequeño.
+
+```xaml
+<ItemsRepeater ...>
+    <ItemsRepeater.ItemTemplate>
+        <local:VariableSizeTemplateSelector Large="{StaticResource LargeItemTemplate}" 
+                                            Small="{StaticResource SmallItemTemplate}"/>
+    </ItemsRepeater.ItemTemplate>
+</ItemsRepeater>
+```
+
+Al definir un **DataTemplateSelector** para usar con **ItemsRepeater** sólo tiene que implementar una invalidación para el [ **SelectTemplateCore(Object)** ](/uwp/api/windows.ui.xaml.controls.datatemplateselector.selecttemplatecore#Windows_UI_Xaml_Controls_DataTemplateSelector_SelectTemplateCore_System_Object_) método. Para obtener más información y ejemplos, vea [ **DataTemplateSelector**](/uwp/api/windows.ui.xaml.controls.datatemplateselector).
 
 > [!NOTE]
-> Una alternativa al uso de DataTemplate o DataTemplateSelector consiste en implementar su propia clase derivada de [Microsoft.UI.Xaml.Controls.ElementFactory](/uwp/api/microsoft.ui.xaml.controls.elementfactory) que es responsable de generar el contenido cuando se solicita.
+> Una alternativa a **DataTemplate**s para administrar cómo se crean elementos en escenarios más avanzados consiste en implementar su propio [ **Windows.UI.Xaml.Controls.IElementFactory** ](/uwp/api/windows.ui.xaml.controls.ielementfactory)que se usará como el **ItemTemplate**.  Será responsable de generar el contenido cuando se solicita.
 
 ## <a name="configure-the-data-source"></a>Configurar el origen de datos
 
@@ -632,6 +670,7 @@ En este ejemplo se muestra un diseño de una aplicación que tiene varias catego
 
 ```xaml
 <!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
+<!-- Include the <muxc:ItemsRepeaterScrollHost> if targeting Windows 10 versions earlier than 1809. -->
 <ScrollViewer>
   <muxc:ItemsRepeater ItemsSource="{x:Bind Categories}"
                       Background="LightGreen">
@@ -639,6 +678,7 @@ En este ejemplo se muestra un diseño de una aplicación que tiene varias catego
       <DataTemplate x:DataType="local:Category">
         <StackPanel Margin="12,0">
           <TextBlock Text="{x:Bind Name}" Style="{ThemeResource TitleTextBlockStyle}"/>
+          <!-- Include the <muxc:ItemsRepeaterScrollHost> if targeting Windows 10 versions earlier than 1809. -->
           <ScrollViewer HorizontalScrollMode="Enabled"
                                           VerticalScrollMode="Disabled"
                                           HorizontalScrollBarVisibility="Auto" >

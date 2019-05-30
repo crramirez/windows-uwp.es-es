@@ -5,17 +5,17 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: Windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: b85777c254c36cc7bf5b156569c7cef267a6c567
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 879be9591bae36a1dbcd485387fbb4ac7f502fea
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626220"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360083"
 ---
 # <a name="functions-in-xbind"></a>Funciones de x: Bind
 
 > [!NOTE]
-> Para obtener información general sobre el uso de enlace de datos en su aplicación con **{x: Bind}** (y para obtener una comparación total entre **{x: Bind}** y **{Binding}**), consulte [datos enlace en profundidad](data-binding-in-depth.md).
+> Para obtener información general sobre el uso de enlace de datos en su aplicación con **{x: Bind}** (y para obtener una comparación total entre **{x: Bind}** y **{Binding}** ), consulte [datos enlace en profundidad](data-binding-in-depth.md).
 
 A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esto permite:
 
@@ -23,7 +23,7 @@ A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una f
 - Obtener una manera de que los enlaces dependan de más de un parámetro
 
 > [!NOTE]
-> Para usar las funciones con **{x: Bind}**, la versión del SDK de destino mínima de la aplicación debe ser la 14393 o posterior. No puedes usar las funciones si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> Para usar las funciones con **{x: Bind}** , la versión del SDK de destino mínima de la aplicación debe ser la 14393 o posterior. No puedes usar las funciones si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 En el siguiente ejemplo, el primer y segundo planos del elemento están enlazados a las funciones dedicadas a realizar la conversión según el parámetro de color.
 

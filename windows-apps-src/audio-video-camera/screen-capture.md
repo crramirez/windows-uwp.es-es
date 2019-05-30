@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: windows 10, uwp, captura de pantalla
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bbe52de6e148ff86f492ee2c490e5dda388ffa1
-ms.sourcegitcommit: 703f23f0cd2037997b6540335d32d344d5604974
+ms.openlocfilehash: 5d61e5bb8e5f00a2ac5743ed1a91c470f455c9c6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58867891"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361451"
 ---
 # <a name="screen-capture"></a>Captura de pantalla
 
@@ -216,15 +216,15 @@ Se recomienda evitar el uso del subproceso de la interfaz de usuario si es posib
 
 También puedes extraer fotogramas manualmente con el método **Direct3D11CaptureFramePool.TryGetNextFrame** hasta que consigas todos los fotogramas que necesites.
 
-El objeto **Direct3D11CaptureFrame** contiene las propiedades **ContentSize**, **Surface** y **SystemRelativeTime**. **SystemRelativeTime** es tiempo QPC ([QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904)) que se puede usar para sincronizar otros elementos multimedia.
+El objeto **Direct3D11CaptureFrame** contiene las propiedades **ContentSize**, **Surface** y **SystemRelativeTime**. **SystemRelativeTime** es tiempo QPC ([QueryPerformanceCounter](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancecounter)) que se puede usar para sincronizar otros elementos multimedia.
 
 ## <a name="processing-capture-frames"></a>Procesamiento de fotogramas de captura
 
-Cada fotograma de **Direct3D11CaptureFramePool** se comprueba al llamar a **TryGetNextFrame** y se vuelve a comprobar en función de la duración del objeto **Direct3D11CaptureFrame**. Para aplicaciones nativas, soltar el objeto **Direct3D11CaptureFrame** es suficiente para volver a integrar el fotograma en la agrupación de fotogramas. Para aplicaciones administradas, se recomienda usar el método **Direct3D11CaptureFrame.Dispose** (**Cerrar** en C++). **Direct3D11CaptureFrame** implementa la interfaz de [IClosable](https://docs.microsoft.com/uwp/api/Windows.Foundation.IClosable), que se proyecta como [IDisposable](https://msdn.microsoft.com/library/system.idisposable.aspx) para los llamadores de C#.
+Cada fotograma de **Direct3D11CaptureFramePool** se comprueba al llamar a **TryGetNextFrame** y se vuelve a comprobar en función de la duración del objeto **Direct3D11CaptureFrame**. Para aplicaciones nativas, soltar el objeto **Direct3D11CaptureFrame** es suficiente para volver a integrar el fotograma en la agrupación de fotogramas. Para aplicaciones administradas, se recomienda usar el método **Direct3D11CaptureFrame.Dispose** (**Cerrar** en C++). **Direct3D11CaptureFrame** implementa la interfaz de [IClosable](https://docs.microsoft.com/uwp/api/Windows.Foundation.IClosable), que se proyecta como [IDisposable](https://docs.microsoft.com/dotnet/api/system.idisposable?redirectedfrom=MSDN) para los llamadores de C#.
 
 Las aplicaciones no deben guardar referencias a objetos **Direct3D11CaptureFrame**, ni deben guardar referencias a la superficie de Direct3D subyacente después de que se haya vuelto a integrar el fotograma.
 
-Al procesar un fotograma, se recomienda que las aplicaciones tomen el bloqueo de [ID3D11Multithread](https://msdn.microsoft.com/library/windows/desktop/mt644886) en el mismo dispositivo que está asociado al objeto **Direct3D11CaptureFramePool**.
+Al procesar un fotograma, se recomienda que las aplicaciones tomen el bloqueo de [ID3D11Multithread](https://docs.microsoft.com/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11multithread) en el mismo dispositivo que está asociado al objeto **Direct3D11CaptureFramePool**.
 
 La superficie de Direct3D subyacente siempre será del tamaño especificado al crear (o volver a crear) el **Direct3D11CaptureFramePool**. Si el tamaño del contenido es mayor que el del fotograma, el contenido se recorta al tamaño del fotograma. Si el contenido es menor que el fotograma, el resto del fotograma contiene datos sin definir. Se recomienda que las aplicaciones se copien fuera de un subrectángulo con la propiedad **ContentSize** para que ese **Direct3D11CaptureFrame** evite mostrar contenido no definido.
 

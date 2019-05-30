@@ -5,12 +5,12 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e0fcb903bd272bd10d434a27d41e6e4558a624ea
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: a6a1d93b1deaad084ff25db946199b678b35703c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334903"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66369510"
 ---
 # <a name="best-practices-for-writing-to-files"></a>Procedimientos recomendados para escribir en archivos
 
@@ -192,7 +192,7 @@ else
 
 ### <a name="synchronize-access-to-the-file"></a>Sincronizar el acceso al archivo
 
-El [Parallel Programming with .NET blog](https://blogs.msdn.microsoft.com/pfxteam/) es un excelente recurso para obtener instrucciones sobre la programación paralela. En concreto, el [escribir comentarios sobre un elemento AsyncReaderWriterLock](https://blogs.msdn.microsoft.com/pfxteam/2012/02/12/building-async-coordination-primitives-part-7-asyncreaderwriterlock/) describe cómo mantener el acceso exclusivo a un archivo para escritura mientras que permita el acceso de lectura simultáneo. Tenga en cuenta que la serialización que e/s afectará al rendimiento.
+El [Parallel Programming with .NET blog](https://devblogs.microsoft.com/pfxteam/) es un excelente recurso para obtener instrucciones sobre la programación paralela. En concreto, el [escribir comentarios sobre un elemento AsyncReaderWriterLock](https://devblogs.microsoft.com/pfxteam/building-async-coordination-primitives-part-7-asyncreaderwriterlock/) describe cómo mantener el acceso exclusivo a un archivo para escritura mientras que permita el acceso de lectura simultáneo. Tenga en cuenta que la serialización que e/s afectará al rendimiento.
 
 ## <a name="see-also"></a>Vea también
 

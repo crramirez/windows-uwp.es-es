@@ -6,12 +6,12 @@ ms.date: 10/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: db481fac1bdcb9e79762f52aee48574e987c4cbb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8a846aab77fad6f087057fe930d11ac781ed7171
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601020"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362196"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Probar aplicaciones de Surface Hub con Visual Studio
 El simulador de Visual Studio ofrece un entorno donde puede diseñar, desarrollar, depurar y probar aplicaciones de la Plataforma universal de Windows (UWP), incluidas las aplicaciones que hayas creado para Microsoft Surface Hub. El simulador no utiliza la misma interfaz de usuario como Surface Hub, pero resulta útil para probar cómo la aplicación de aspecto y el comportamiento con el tamaño de pantalla de Surface Hub y la resolución.
@@ -90,7 +90,7 @@ De forma predeterminada, Surface Hub solo instala las aplicaciones desde la Micr
 3. Elige el **Modo de desarrollador** y acepta la advertencia.
 
 ### <a name="deploy-your-app-from-visual-studio"></a>Implementar la aplicación desde Visual Studio
-Para obtener más información sobre el proceso de implementación en general, consulte [implementación y depuración de aplicaciones para UWP](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
+Para obtener más información sobre el proceso de implementación en general, consulte [implementación y depuración de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 
    > [!NOTE]
    > Esta característica requiere Visual Studio 2015 Update 1 o posterior, pero se recomienda que use la versión más actualizada más reciente de Visual Studio. Una instancia de Visual Studio al día gibe que todo el desarrollo más reciente y las actualizaciones de seguridad.

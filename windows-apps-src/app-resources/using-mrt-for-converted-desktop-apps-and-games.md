@@ -5,18 +5,18 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. recursos, juegos, centennial, convertidor de aplicaciones de escritorio, mui, ensamblado satélite
 ms.localizationpriority: medium
-ms.openlocfilehash: b17dffec37a5cadb450e93ea15508becfd7b9233
-ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.openlocfilehash: 82050c92311ce8bb7457637a486943a5fed3e334
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320638"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359329"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Usar el sistema de administración de recursos de Windows 10 en una aplicación o juego heredado.
 
 Con frecuencia, las aplicaciones .NET y Win32 están localizadas en diferentes idiomas, para así ampliar el mercado al que pueden dirigirse. Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación de .NET o Win32 o un juego como un paquete MSIX o AppX, puede aprovechar el sistema de administración de recursos para cargar recursos adaptados para el contexto de tiempo de ejecución de la aplicación. Este tema detallado describe las técnicas.
 
-Existen muchas formas para localizar las aplicaciones Win32 tradicionales, pero Windows 8 introdujo un nuevo [sistema de administración de recursos](https://msdn.microsoft.com/en-us/library/windows/apps/jj552947.aspx) que funciona entre lenguajes de programación y tipos de aplicaciones, además de proporcionar funcionalidad que va más allá de una simple localización. Este sistema se denominará "MRT" en este tema. Históricamente, eso significaba "Tecnología de recursos modernos", pero ha dejado de usarse el término "Modernos". También se puede llamar al administrador de recursos MRM (administrador de recursos modernos) o PRI (índice de recursos del paquete).
+Existen muchas formas para localizar las aplicaciones Win32 tradicionales, pero Windows 8 introdujo un nuevo [sistema de administración de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)) que funciona entre lenguajes de programación y tipos de aplicaciones, además de proporcionar funcionalidad que va más allá de una simple localización. Este sistema se denominará "MRT" en este tema. Históricamente, eso significaba "Tecnología de recursos modernos", pero ha dejado de usarse el término "Modernos". También se puede llamar al administrador de recursos MRM (administrador de recursos modernos) o PRI (índice de recursos del paquete).
 
 En combinación con la implementación basado en AppX o MSIX (por ejemplo, desde la Microsoft Store), MRT puede entregar automáticamente los recursos más aplicable para un usuario determinado o dispositivo que minimiza la descarga e instala el tamaño de la aplicación. Esta reducción de tamaño puede ser significativa para las aplicaciones que tienen una gran cantidad de contenido localizado, quizás del orden de varios *gigabytes* para juegos AAA. Entre las ventajas adicionales de MRT se encuentran las listas localizadas en el shell de Windows y en Microsoft Store, una lógica de reserva automática cuando el idioma preferido de un usuario no coincide con los recursos disponibles.
 
@@ -66,7 +66,7 @@ Este es un ejemplo sencillo de una aplicación que tiene etiquetas de texto en d
 
 En el gráfico, el código de aplicación hace referencia a los tres nombres de recursos lógicos. En tiempo de ejecución, la pseudo-función `GetResource` usa MRT para buscar estos nombres de recursos en la tabla de recursos (llamada archivo PRI) y encuentra el candidato más adecuado en función de las condiciones de entorno (el idioma del usuario y el factor de escala de la pantalla). En el caso de las etiquetas, se usan las cadenas directamente. En el caso de la imagen de logotipo, las cadenas se interpretan como nombres de archivo y se leen los archivos del disco. 
 
-Si el usuario habla un idioma distinto del inglés o alemán o tiene un factor de escala para mostrar que no sea 100% o 300%, MRT toma el candidato coincidente "más cercano" según un conjunto de reglas de reserva (vea [sistema de administración de recursos](https://msdn.microsoft.com/en-us/library/windows/apps/jj552947.aspx) para obtener más información en segundo plano).
+Si el usuario habla un idioma distinto del inglés o alemán o tiene un factor de escala para mostrar que no sea 100% o 300%, MRT toma el candidato coincidente "más cercano" según un conjunto de reglas de reserva (vea [sistema de administración de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)) para obtener más información en segundo plano).
 
 Tenga en cuenta que MRT es compatible con los recursos que se adaptan a más de un calificador, por ejemplo, si la imagen de logotipo contiene texto incrustado que también sea necesario localizar, el logotipo tendría cuatro candidatos: Escala/EN-100, DE/escala-100, EN/escala-300 y DE/escala-300.
 
@@ -150,7 +150,7 @@ Si desea crear manualmente el paquete, deberá crear una estructura de directori
 
 Para obtener más información sobre el archivo de manifiesto de paquete y el diseño del paquete, consulte [manifiesto del paquete de aplicación](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appx-package-manifest).
 
-Por último, si usa Visual Studio para crear un nuevo proyecto y migrar el código existente a través de, consulte [crear un "Hello, world" app](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal). Puede incluir el código existente en el nuevo proyecto, pero es probable que deba realizar cambios de código significativos (especialmente en la interfaz de usuario) para poder ejecutarse como una aplicación para UWP pura. Estos cambios están fuera del ámbito de este documento.
+Por último, si usa Visual Studio para crear un nuevo proyecto y migrar el código existente a través de, consulte [crear un "Hello, world" app](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal). Puede incluir el código existente en el nuevo proyecto, pero es probable que deba realizar cambios de código significativos (especialmente en la interfaz de usuario) para poder ejecutarse como una aplicación para UWP pura. Estos cambios están fuera del ámbito de este documento.
 
 ## <a name="phase-1-localize-the-manifest"></a>Fase 1: Localizar el manifiesto
 

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a31464d208e8d9abe68703560552c99e5d957463
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0e5c5e19c6e23f4c0094220a735a0c2a48c1cc34
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57638240"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362063"
 ---
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
 
@@ -30,7 +30,7 @@ Estos son ejemplos de opciones de la aplicación que pertenecen a una página de
 -   Opciones que dependen de las preferencias del usuario, como música, efectos de sonido o temas de colores.
 -   La información sobre la aplicación a la que no se tiene acceso muy a menudo, como la directiva de privacidad, la ayuda, la versión de la aplicación o la información de copyright.
 
-Los comandos que forman parte del flujo de trabajo habitual de la aplicación (por ejemplo, cambiar el tamaño del pincel en una aplicación de dibujo) no deben estar en una página de configuración. Para obtener información sobre la colocación de los comandos, consulta los [Conceptos básicos del diseño de comandos](https://msdn.microsoft.com/library/windows/apps/dn958433).
+Los comandos que forman parte del flujo de trabajo habitual de la aplicación (por ejemplo, cambiar el tamaño del pincel en una aplicación de dibujo) no deben estar en una página de configuración. Para obtener información sobre la colocación de los comandos, consulta los [Conceptos básicos del diseño de comandos](https://docs.microsoft.com/windows/uwp/layout/commanding-basics).
 
 ## <a name="general-recommendations"></a>Recomendaciones generales
 
@@ -67,7 +67,7 @@ Si estás usando un diseño de navegación centralizada, el punto de entrada de 
 
 Para un diseño de pestañas o tablas dinámicas, no se recomienda colocar el punto de entrada de la configuración de la aplicación como uno de los elementos principales de la navegación. En su lugar, el punto de entrada de la configuración de la aplicación debe colocarse en el menú de desbordamiento "Más" de la barra de aplicaciones.
 
-**Detalles principales**
+**Master-details**
 
 En lugar de esconder el punto de entrada de la configuración de la aplicación en lo más profundo de un panel de detalles maestro, conviértelo en el último elemento anclado en el nivel superior del panel maestro.
 
@@ -132,20 +132,20 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
     -   [Alternar conmutadores](../controls-and-patterns/toggles.md): Para permitir que los usuarios establece valores on u off.
     -   [Los botones de radio](../controls-and-patterns/radio-button.md): Para permitir que los usuarios elijan un elemento de un conjunto de hasta 5 mutuamente exclusivas, las opciones relacionadas con.
     -   [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): Para permitir que los usuarios escribir texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
-    -   [Hipervínculos](../controls-and-patterns/hyperlinks.md): Para llevar al usuario a otra página dentro de la aplicación o a un sitio Web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
+    -   [Hyperlinks](../controls-and-patterns/hyperlinks.md): Para llevar al usuario a otra página dentro de la aplicación o a un sitio Web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
     -   [Botones](../controls-and-patterns/buttons.md): Para permitir que los usuarios iniciar una acción inmediata sin descartar el control flotante configuración actual.
 -   Agrega un mensaje descriptivo si se desactiva uno de los controles. Coloca este mensaje por encima del control deshabilitado.
--   Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](https://msdn.microsoft.com/library/windows/apps/br212672) o [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288), con un desplazamiento izquierdo de 100 píxeles.
+-   Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](https://docs.microsoft.com/previous-versions/windows/apps/br212672(v=win.10)) o [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition), con un desplazamiento izquierdo de 100 píxeles.
 -   Usa encabezados de sección, párrafos y etiquetas para ayudar a organizar y aclarar el contenido, si fuera necesario.
 -   Si necesitas repetir la configuración, usa un nivel adicional de interfaz de usuario o un modelo de expandir/contraer, pero evita las jerarquías de más de dos niveles. Por ejemplo, una aplicación sobre el clima que proporciona una configuración por ciudad podría enumerar las ciudades y permitir que el usuario pulse sobre la ciudad para abrir un control flotante nuevo o expandirse para mostrar las opciones de configuración.
--   Si la carga de controles o de contenido web tarda, usa un control de progreso indeterminado para indicar al usuario que se está cargando la información. Para obtener más información, consulta [Directrices sobre controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469).
+-   Si la carga de controles o de contenido web tarda, usa un control de progreso indeterminado para indicar al usuario que se está cargando la información. Para obtener más información, consulta [Directrices sobre controles de progreso](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls).
 -   No uses botones para la navegación o para confirmar cambios. Usa hipervínculos para ir a otras páginas y, en lugar de usar un botón para confirmar los cambios, guárdalos automáticamente en la configuración de la aplicación cuando el usuario descarte el control flotante de configuración.
 
 
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Conceptos básicos del diseño de comando](https://msdn.microsoft.com/library/windows/apps/dn958433)
-* [Directrices sobre controles de progreso](https://msdn.microsoft.com/library/windows/apps/hh465469)
-* [Store y recuperar datos de la aplicación](https://msdn.microsoft.com/library/windows/apps/mt299098)
-* [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
+* [Conceptos básicos del diseño de comando](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
+* [Directrices sobre controles de progreso](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)
+* [Store y recuperar datos de la aplicación](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
+* [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)

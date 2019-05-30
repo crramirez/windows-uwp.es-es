@@ -1,24 +1,24 @@
 ---
 description: Un valor escalar debe estar encapsulado dentro de un objeto de clase de referencia antes de pasarlo a una función que espera **IInspectable**. Dicho proceso de encapsulación se conoce como la *conversión boxing* del valor.
 title: Conversión boxing y unboxing de valores escalar a IInspectable con C++/WinRT
-ms.date: 04/10/2018
+ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, control, conversión boxing, escalar, valor
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c86d1ac8ce83ea092ce0e2730ea0e9d4a201b94
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1bd69e07f2285b6c05581a60ddbaf4b394d0b6d0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639680"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361202"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>Conversión boxing y unboxing de valores escalar a IInspectable con C++/WinRT
  
-La [**interfaz IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) es la interfaz de raíz de cada clase en tiempo de ejecución de Windows Runtime (WinRT). Esto es una idea análoga de [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) que se encuentra en la raíz de cada interfaz y clase COM; y **System.Object** que se encuentra en la raíz de cada clase con [sistema de tipo común](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system).
+La [**interfaz IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) es la interfaz de raíz de cada clase en tiempo de ejecución de Windows Runtime (WinRT). Esto es una idea análoga de [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) que se encuentra en la raíz de cada interfaz y clase COM; y **System.Object** que se encuentra en la raíz de cada clase con [sistema de tipo común](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system).
 
 En otras palabras, una función que espera **IInspectable** se puede pasar a una instancia de cualquier clase en tiempo de ejecución. Pero no puedes pasar directamente un valor escalar, como un valor numérico o de texto, a este tipo de función. En su lugar, un valor escalar debe estar encapsulado dentro de un objeto de clase de referencia. Dicho proceso de encapsulación se conoce como la *conversión boxing* del valor.
 
-[C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) proporciona el [ **winrt::box_value** ](/uwp/cpp-ref-for-winrt/box-value) función, que toma un valor escalar y devuelve el valor en la caja en una **IInspectable**. Para realizar la conversión unboxing de una **IInspectable** de vuelta a un valor escalar, están las funciones [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) y [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or).
+[C++/ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) proporciona el [ **winrt::box_value** ](/uwp/cpp-ref-for-winrt/box-value) función, que toma un valor escalar y devuelve el valor en la caja en una **IInspectable**. Para realizar la conversión unboxing de una **IInspectable** de vuelta a un valor escalar, están las funciones [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) y [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or).
 
 ## <a name="examples-of-boxing-a-value"></a>Ejemplos de conversiones boxing de un valor
 La función de descriptor de acceso [**LaunchActivatedEventArgs::Arguments**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.Arguments) devuelve un [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring), que es un valor escalar. Podemos hacer la conversión boxing de dicho valor **hstring** y pasarlo a una función que espera **IInspectable** de este modo.

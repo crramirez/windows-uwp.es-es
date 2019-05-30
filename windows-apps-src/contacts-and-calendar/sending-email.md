@@ -6,12 +6,12 @@ keywords: contactos, correo electrónico, enviar
 ms.date: 10/11/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1593ab8b547a464492a35aa7d49d38f667a8210b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 524e1f12c3da0d9d06e73d84e08e2d54efde9a7e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626490"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361219"
 ---
 # <a name="send-email"></a>Enviar correo electrónico
 
@@ -25,7 +25,7 @@ Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrón
 
 ## <a name="launch-the-compose-email-dialog"></a>Iniciar el cuadro de diálogo de redacción de correo electrónico
 
-Crea un nuevo objeto [**EmailMessage**](https://msdn.microsoft.com/library/windows/apps/Dn631270) y define los datos que quieras que se rellenen previamente en el cuadro de diálogo de redacción de correo electrónico. Llama a [**ShowComposeNewEmailAsync**](https://msdn.microsoft.com/library/windows/apps/Dn631269) para que se muestre el cuadro de diálogo.
+Crea un nuevo objeto [**EmailMessage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Email.EmailMessage) y define los datos que quieras que se rellenen previamente en el cuadro de diálogo de redacción de correo electrónico. Llama a [**ShowComposeNewEmailAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailmanager.showcomposenewemailasync) para que se muestre el cuadro de diálogo.
 
 ``` cs
 private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient,
@@ -51,12 +51,12 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de correo electrónico. Para información sobre la selección de contactos para usarlos como destinatarios de un mensaje de correo electrónico, consulta [Seleccionar contactos](selecting-contacts.md). Consulta [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) para seleccionar un archivo y usarlo como datos adjuntos de correo electrónico.
+Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de correo electrónico. Para información sobre la selección de contactos para usarlos como destinatarios de un mensaje de correo electrónico, consulta [Seleccionar contactos](selecting-contacts.md). Consulta [**PickSingleFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync) para seleccionar un archivo y usarlo como datos adjuntos de correo electrónico.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Selección de contactos](selecting-contacts.md)
-* [Para continuar con la aplicación de Windows Phone después de llamar a un selector de archivos](https://msdn.microsoft.com/library/windows/apps/xaml/Dn614994)
+* [Para continuar con la aplicación de Windows Phone después de llamar a un selector de archivos](https://docs.microsoft.com/previous-versions/windows/apps/dn614994(v=win.10))
  
 
  

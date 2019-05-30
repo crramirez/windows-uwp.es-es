@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 71a56bc23b4b727d5be2ed35fb77afae03f0689c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8731e5c794210c1a084c3de3cbf5004c7749a5e0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613230"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359910"
 ---
 # <a name="optimize-background-activity"></a>Optimización de la actividad en segundo plano
 
 Las aplicaciones universales de Windows deben tener un buen rendimiento en todas las familias de dispositivos por igual. En los dispositivos alimentados por batería, el consumo de energía es un factor determinante en la experiencia global del usuario de la aplicación. Una duración de la batería de todo el día es una característica deseable para todos los usuarios, pero requiere la eficiencia de todo el software instalado en el dispositivo, incluido el tuyo. 
 
-El comportamiento de las tareas en segundo plano es posiblemente el factor más importante en el gasto total de energía de una aplicación. Una tarea en segundo plano es cualquier actividad del programa que se haya registrado en el sistema para ejecutarse sin que la aplicación esté abierta. Para más información, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task).
+El comportamiento de las tareas en segundo plano es posiblemente el factor más importante en el gasto total de energía de una aplicación. Una tarea en segundo plano es cualquier actividad del programa que se haya registrado en el sistema para ejecutarse sin que la aplicación esté abierta. Para más información, consulta [Crear y registrar una tarea en segundo plano fuera de proceso](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task).
 
 ## <a name="background-activity-permissions"></a>Permisos de actividad en segundo plano
 
@@ -39,7 +39,7 @@ En dispositivos de escritorio, la opción configuración "Administrado por Windo
 
 ![desactivar permisos de tareas en segundo plano](images/background-task-permissions-off.png)
 
-En la aplicación, puedes usar el valor de enumeración [**BackgroundAccessStatus**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.backgroundaccessstatus) que devuelve una llamada al método [**BackgroundExecutionManager.RequestAccessAsync()**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync.aspx) para determinar su configuración actual de permisos de actividad en segundo plano.
+En la aplicación, puedes usar el valor de enumeración [**BackgroundAccessStatus**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.backgroundaccessstatus) que devuelve una llamada al método [**BackgroundExecutionManager.RequestAccessAsync()** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) para determinar su configuración actual de permisos de actividad en segundo plano.
 
 Con todo esto queremos decir que si la aplicación no implementa una administración responsable de la actividad en segundo plano, el usuario puede denegar todos los permisos para segundo plano a tu aplicación, que no es lo más conveniente para ninguna de las partes. Si a la aplicación se le ha denegado permiso para ejecutarse en segundo plano, pero requiere actividad en segundo plano para completar una acción del usuario, puedes notificar al usuario y dirigirlo a la aplicación Configuración. Para ello, [inicia la aplicación Configuración](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/launch-settings-app) a la página de detalles de uso de la batería o de aplicaciones en segundo plano.
 
@@ -52,10 +52,10 @@ Comprueba el estado del modo de ahorro de batería desde dentro de la aplicació
 Los siguientes son pasos adicionales que puede realizar al registrar las tareas en segundo plano para que gasten menos batería.
 
 ### <a name="use-a-maintenance-trigger"></a>Usar un desencadenador de mantenimiento 
-Puede usarse un objeto [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.maintenancetrigger.aspx) en lugar de un objeto [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.aspx) para determinar cuándo se inicia una tarea en segundo plano. Las tareas que usan desencadenadores de mantenimiento solo se ejecutan cuando el dispositivo está conectado a la corriente alterna y se permite que se ejecuten durante más tiempo. Consulta [Usar un desencadenador de mantenimiento](https://msdn.microsoft.com/windows/uwp/launch-resume/use-a-maintenance-trigger) para obtener instrucciones.
+Puede usarse un objeto [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.maintenancetrigger) en lugar de un objeto [**SystemTrigger**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.systemtrigger) para determinar cuándo se inicia una tarea en segundo plano. Las tareas que usan desencadenadores de mantenimiento solo se ejecutan cuando el dispositivo está conectado a la corriente alterna y se permite que se ejecuten durante más tiempo. Consulta [Usar un desencadenador de mantenimiento](https://docs.microsoft.com/windows/uwp/launch-resume/use-a-maintenance-trigger) para obtener instrucciones.
 
 ### <a name="use-the-backgroundworkcostnothigh-system-condition-type"></a>Usa el tipo de condición del sistema **BackgroundWorkCostNotHigh**.
-Deben cumplirse las condiciones del sistema para ejecutar tareas en segundo plano (consulta [Establecer condiciones para ejecutar una tarea en segundo plano](https://msdn.microsoft.com/windows/uwp/launch-resume/set-conditions-for-running-a-background-task) para obtener más información). El coste del trabajo en segundo plano es una medida que denota el impacto *relativo* sobre la energía de ejecutar la tarea en segundo plano. Una tarea que se ejecuta cuando el dispositivo está conectado a la corriente alterna se marca como **bajo** (poco o ningún impacto en la batería). Una tarea que se ejecuta cuando el dispositivo funciona con batería y con la pantalla desactivada se marca como **alto**, porque probablemente haya poca actividad de programas ejecutándose en el dispositivo en el momento, por lo que la tarea en segundo plano tendría un mayor coste relativo. Una tarea que se ejecuta cuando el dispositivo funciona con batería y con la pantalla *activada* se marca como **medio**, ya que probablemente ya exista alguna actividad de programas en ejecución y la tarea en segundo sumaría un poco más al coste de la energía. La condición del sistema **BackgroundWorkCostNotHigh** simplemente retrasa la capacidad de ejecución de la tarea hasta que la pantalla se active o el dispositivo esté conectado a la corriente alterna.
+Deben cumplirse las condiciones del sistema para ejecutar tareas en segundo plano (consulta [Establecer condiciones para ejecutar una tarea en segundo plano](https://docs.microsoft.com/windows/uwp/launch-resume/set-conditions-for-running-a-background-task) para obtener más información). El coste del trabajo en segundo plano es una medida que denota el impacto *relativo* sobre la energía de ejecutar la tarea en segundo plano. Una tarea que se ejecuta cuando el dispositivo está conectado a la corriente alterna se marca como **bajo** (poco o ningún impacto en la batería). Una tarea que se ejecuta cuando el dispositivo funciona con batería y con la pantalla desactivada se marca como **alto**, porque probablemente haya poca actividad de programas ejecutándose en el dispositivo en el momento, por lo que la tarea en segundo plano tendría un mayor coste relativo. Una tarea que se ejecuta cuando el dispositivo funciona con batería y con la pantalla *activada* se marca como **medio**, ya que probablemente ya exista alguna actividad de programas en ejecución y la tarea en segundo sumaría un poco más al coste de la energía. La condición del sistema **BackgroundWorkCostNotHigh** simplemente retrasa la capacidad de ejecución de la tarea hasta que la pantalla se active o el dispositivo esté conectado a la corriente alterna.
 
 ## <a name="test-battery-efficiency"></a>Probar la eficiencia de la batería
 
@@ -63,6 +63,6 @@ Asegúrate de probar tu aplicación en dispositivos reales para los escenarios d
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y registrar una tarea en segundo plano fuera del proceso](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
-* [Planear el rendimiento](https://msdn.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
+* [Crear y registrar una tarea en segundo plano fuera del proceso](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)  
+* [Planear el rendimiento](https://docs.microsoft.com/windows/uwp/debug-test-perf/planning-and-measuring-performance)  
 

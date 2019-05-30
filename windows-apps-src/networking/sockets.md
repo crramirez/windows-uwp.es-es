@@ -6,27 +6,27 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cdad8f3405420e0548974c734ad23bfd44f2c6b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8278e02de4d0f9a0efa301051a57bf59bce8d520
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648830"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363301"
 ---
 # <a name="sockets"></a>Sockets
 Los sockets son una tecnología de transferencia de datos de bajo nivel en cuya parte superior se implementan muchas protocolos de red. UWP ofrece las clases de socket TCP y UDP de cliente-servidor o aplicaciones de punto a punto, si las conexiones son de larga duración o una conexión establecida no es necesaria.
 
-Este tema se centra en cómo usar las clases de socket de Plataforma universal de Windows (UWP) que se encuentran en el espacio de nombres [**Windows.Networking.Sockets**](/uwp/api/Windows.Networking.Sockets). Pero también puedes usar [2 de Windows Sockets (Winsock)](https://msdn.microsoft.com/library/windows/desktop/ms740673) en una aplicación para UWP.
+Este tema se centra en cómo usar las clases de socket de Plataforma universal de Windows (UWP) que se encuentran en el espacio de nombres [**Windows.Networking.Sockets**](/uwp/api/Windows.Networking.Sockets). Pero también puedes usar [2 de Windows Sockets (Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2) en una aplicación para UWP.
 
 > [!NOTE]
-> Como consecuencia del [aislamiento de red](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx), Windows deshabilita establecer una conexión de socket (Sockets o WinSock) entre dos aplicaciones para UWP que se ejecuten en el mismo equipo, ya sea mediante la dirección de bucle invertido local (127.0.0.0) o especificando explícitamente la dirección IP local. Para obtener más información acerca de los mecanismos por los que las aplicaciones para UWP pueden comunicarse entre sí, consulta [Comunicación entre aplicaciones](/windows/uwp/app-to-app/index).
+> Como consecuencia del [aislamiento de red](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)), Windows deshabilita establecer una conexión de socket (Sockets o WinSock) entre dos aplicaciones para UWP que se ejecuten en el mismo equipo, ya sea mediante la dirección de bucle invertido local (127.0.0.0) o especificando explícitamente la dirección IP local. Para obtener más información acerca de los mecanismos por los que las aplicaciones para UWP pueden comunicarse entre sí, consulta [Comunicación entre aplicaciones](/windows/uwp/app-to-app/index).
 
 ## <a name="build-a-basic-tcp-socket-client-and-server"></a>Crear un servidor y cliente de socket TCP básico
 Un socket TCP (Protocolo de control de transmisión) proporciona transferencias de datos de red de bajo nivel en cualquier dirección para conexiones de larga duración. Los sockets TCP son la característica subyacente que usan la mayoría de los protocolos de red que se usan en Internet. Para demostrar las operaciones básicas de TCP, el código de ejemplo siguiente muestra un [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) y un [**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener) enviando y recibiendo datos a través de TCP para formar un servidor y un cliente de eco.
 
 Para comenzar con las menos partes móviles posibles &mdash; y eludir problemas de aislamiento de red para el presente &mdash; crea un nuevo proyecto y coloca el código de cliente y servidor siguiente en el mismo proyecto.
 
-Deberás [declarar una funcionalidad de aplicación](../packaging/app-capability-declarations.md) en el proyecto. Abre tu archivo de origen de manifiesto del paquete de aplicación (el archivo `Package.appxmanifest`) y, en la pestaña Funcionalidades, marca **Redes privadas (cliente y servidor)**. Este es el aspecto que tiene en el marcado `Package.appxmanifest`.
+Deberás [declarar una funcionalidad de aplicación](../packaging/app-capability-declarations.md) en el proyecto. Abre tu archivo de origen de manifiesto del paquete de aplicación (el archivo `Package.appxmanifest`) y, en la pestaña Funcionalidades, marca **Redes privadas (cliente y servidor)** . Este es el aspecto que tiene en el marcado `Package.appxmanifest`.
 
 ```xml
 <Capability Name="privateNetworkClientServer" />
@@ -555,7 +555,7 @@ Este comportamiento se aplica a todos los sockets y clases WebSockets en el espa
 ## <a name="build-a-basic-udp-socket-client-and-server"></a>Crear un servidor y cliente de socket UDP básico
 Un socket UDP (Protocolo de datagramas de usuario) se parece a un socket TCP en que también proporciona transferencias de datos de red de bajo nivel en cualquier dirección. Sin embargo, si bien un socket TCP es para las conexiones de larga duración, un socket UDP es para aplicaciones donde no se requiere una conexión establecida. Dado que los sockets UDP no mantienen la conexión en ambos extremos, son una solución rápida y sencilla para redes entre equipos remotos. Pero los sockets UDP no garantizan la integridad de los paquetes de red incluso si los paquetes llegan al destino remoto. Por lo tanto, la aplicación tendrá que diseñarse para tolerar eso. Algunos ejemplos de aplicaciones que usan sockets UDP son la detección de redes locales y los clientes de chat local.
 
-Para demostrar las operaciones básicas de UDP, el código de ejemplo siguiente muestra la clase [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) que se va a utilizar para enviar y recibir datos sobre UDP para formar un servidor y un cliente de eco. Crea un nuevo proyecto y coloca el código de cliente y servidor que se incluye a continuación en el mismo proyecto. Al igual que sucede con socket TCP, tendrás que declarar la funcionalidad de la aplicación **Redes privadas (cliente y servidor)**.
+Para demostrar las operaciones básicas de UDP, el código de ejemplo siguiente muestra la clase [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) que se va a utilizar para enviar y recibir datos sobre UDP para formar un servidor y un cliente de eco. Crea un nuevo proyecto y coloca el código de cliente y servidor que se incluye a continuación en el mismo proyecto. Al igual que sucede con socket TCP, tendrás que declarar la funcionalidad de la aplicación **Redes privadas (cliente y servidor)** .
 
 ### <a name="an-echo-client-and-server-using-udp-sockets"></a>Un servidor y cliente de eco, con sockets UDP
 Construye un [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) para reproducir el rol de servidor de eco, enlazarlo a un número de puerto específico, escuchar un mensaje UDP entrante y enviarlo de vuelta. El evento [**DatagramSocket.MessageReceived**](/uwp/api/Windows.Networking.Sockets.DatagramSocket.MessageReceived) se genera cuando se recibe un mensaje en el socket.
@@ -1380,8 +1380,8 @@ El constructor [**HostName**](/uwp/api/Windows.Networking.HostName) puede arroja
 ## <a name="related-topics"></a>Temas relacionados
 * [Comunicación entre aplicaciones](/windows/uwp/app-to-app/index)
 * [Simultaneidad y operaciones asincrónicas con C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)
-* [Cómo establecer las capacidades de red](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)
-* [Windows Sockets (Winsock) 2](https://msdn.microsoft.com/library/windows/desktop/ms740673)
+* [Cómo establecer las capacidades de red](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+* [Windows Sockets (Winsock) 2](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)
 
 ## <a name="samples"></a>Muestras
 * [Ejemplo de StreamSocket](https://go.microsoft.com/fwlink/p/?LinkId=620609)

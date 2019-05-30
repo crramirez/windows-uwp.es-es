@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 291c2a922e2b2df7111da8bfc6aefb57b87e84bb
-ms.sourcegitcommit: 4bad5f9427e7db27b57bedc6d7df19077c62e8c3
+ms.openlocfilehash: d4150e7296badd3d31a9aacc7becd3d849f6affd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535190"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360419"
 ---
 # <a name="my-people-notifications"></a>Notificaciones de Mis allegados
 
@@ -126,7 +126,7 @@ Cuando inicies la notificación, debería tener el siguiente aspecto:
 ![notificación spritesheet](images/pizza-notification-small.gif)
 
 ## <a name="starting-the-notification"></a>Inicio de la notificación
-Para iniciar una notificación de Mis allegados, necesitamos convertir la plantilla de notificación del sistema en un objeto [XmlDocument](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.xmldocument.aspx). Cuando definas la notificación del sistema en un archivo XML (aquí denominado "content.xml"), puedes usar este código para iniciarla:
+Para iniciar una notificación de Mis allegados, necesitamos convertir la plantilla de notificación del sistema en un objeto [XmlDocument](https://docs.microsoft.com/uwp/api/windows.data.xml.dom.xmldocument). Cuando definas la notificación del sistema en un archivo XML (aquí denominado "content.xml"), puedes usar este código para iniciarla:
 
 ```CSharp
 string xmlText = File.ReadAllText("content.xml");

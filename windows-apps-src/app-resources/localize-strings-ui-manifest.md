@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 321f8efc1475bc153102f3f8157cd2d094b37077
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 71150df50a7c7e01293d4ec638f520239124e7cd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57630140"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359407"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de aplicación
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
@@ -69,7 +69,7 @@ Greeting.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name
 Puedes cargar explícitamente un recurso de cadena en función de un único identificador de recursos de cadena.
 
 > [!NOTE]
-> Si tienes una llamada a cualquier método **GetForCurrentView** que *podría* ejecutarse en un subproceso de trabajo o en segundo plano, protege esa llamada con una prueba `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)`. La llamada a **GetForCurrentView** a partir de los resultados de subproceso de trabajo o fondo genera la excepción de que es posible que no se cree la excepción "*&lt;nombreDeTipo&gt; en subprocesos que no tienen una clase CoreWindow*".
+> Si tienes una llamada a cualquier método **GetForCurrentView** que *podría* ejecutarse en un subproceso de trabajo o en segundo plano, protege esa llamada con una prueba `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)`. La llamada a **GetForCurrentView** a partir de los resultados de subproceso de trabajo o fondo genera la excepción de que es posible que no se cree la excepción " *&lt;nombreDeTipo&gt; en subprocesos que no tienen una clase CoreWindow*".
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
@@ -152,7 +152,7 @@ Deberá agregar `/<resources-file-name>/` delante del identificador de recurso d
 El siguiente ejemplo de código presupone que `ErrorMessages.resw` contiene un recurso cuyo nombre es "MismatchedPasswords" y cuyo valor describe el error.
 
 > [!NOTE]
-> Si tienes una llamada a cualquier método **GetForCurrentView** que *podría* ejecutarse en un subproceso de trabajo o en segundo plano, protege esa llamada con una prueba `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)`. La llamada a **GetForCurrentView** a partir de los resultados de subproceso de trabajo o fondo genera la excepción de que es posible que no se cree la excepción "*&lt;nombreDeTipo&gt; en subprocesos que no tienen una clase CoreWindow*".
+> Si tienes una llamada a cualquier método **GetForCurrentView** que *podría* ejecutarse en un subproceso de trabajo o en segundo plano, protege esa llamada con una prueba `if (Windows.UI.Core.CoreWindow.GetForCurrentThread() != null)`. La llamada a **GetForCurrentView** a partir de los resultados de subproceso de trabajo o fondo genera la excepción de que es posible que no se cree la excepción " *&lt;nombreDeTipo&gt; en subprocesos que no tienen una clase CoreWindow*".
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ErrorMessages");
@@ -282,7 +282,7 @@ Los recursos de un paquete de aplicación se administra y se tiene acceso a trav
 Un paquete de marcos puede tener acceso a sus propios recursos con un URI de identificador de recursos absoluto. Consulta también [esquemas URI](uri-schemes.md).
 
 ## <a name="important-apis"></a>API importantes
-* [ApplicationModel.Resources.ResourceLoader](https://msdn.microsoft.com/library/windows/apps/br206014)
+* [ApplicationModel.Resources.ResourceLoader](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.ResourceLoader)
 * [ResourceContext.SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)
 
@@ -293,4 +293,4 @@ Un paquete de marcos puede tener acceso a sus propios recursos con un URI de ide
 * [Elementos localizables de manifiesto](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
 * [Etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
 * [Adaptar los recursos de idioma, la escala y otros calificadores](tailor-resources-lang-scale-contrast.md)
-* [Cómo cargar recursos de cadena](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)
+* [Cómo cargar recursos de cadena](https://docs.microsoft.com/previous-versions/windows/apps/hh965323(v=win.10))

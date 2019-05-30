@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e2a96169f44802c62f341029b9bc1c5eb7e31de
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4c743f68a5cbfd493f9d384166b62cbd494884ee
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57647730"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366040"
 ---
 # <a name="reposition-animations"></a>Animaciones de reposición
 
@@ -21,7 +21,7 @@ ms.locfileid: "57647730"
 
 Usa la animación de reposición para mover uno o varios elementos a otra posición.
 
-> **API importantes**: [**Clase RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210421), [ **RepositionThemeTransition clase**](https://msdn.microsoft.com/library/windows/apps/br210429)
+> **API importantes**: [**Clase RepositionThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation), [ **RepositionThemeTransition clase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition)
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
@@ -31,11 +31,11 @@ Usa la animación de reposición para mover uno o varios elementos a otra posici
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Información general sobre animaciones](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [Vuelve a colocar la animación](https://msdn.microsoft.com/library/windows/apps/xaml/jj649434)
-* [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
-* [**Clase RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/br210421)
-* [**Clase RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210429)
+* [Información general sobre animaciones](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
+* [Vuelve a colocar la animación](https://docs.microsoft.com/previous-versions/windows/apps/jj649434(v=win.10))
+* [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [**Clase RepositionThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation)
+* [**Clase RepositionThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition)
 
 
  

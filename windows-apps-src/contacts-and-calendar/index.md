@@ -6,12 +6,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp, contacts, calendar, appointments, email messages
 ms.localizationpriority: medium
-ms.openlocfilehash: 239dbaa7799d9991a63223d1cd8706d34445a16b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6356e20966fc3899196e00ba5a99ebcf0104f8d6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583270"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361259"
 ---
 # <a name="contacts-my-people-and-calendar"></a>Contactos, Mis allegados y calendario
 
@@ -22,10 +22,10 @@ Para conocer los distintos modos en que tu aplicación puede obtener acceso a lo
 
 | Tema | Descripción |
 |-------|-------------|
-| [Seleccionar contactos](selecting-contacts.md) | Mediante el espacio de nombres [<strong>Windows.ApplicationModel.Contacts</strong>](https://msdn.microsoft.com/library/windows/apps/BR225002), tienes varias opciones para seleccionar contactos. Aquí te mostraremos cómo seleccionar un único contacto o varios contactos, y aprenderás a configurar el selector de contactos para recuperar solamente la información de contacto que necesita tu aplicación. |
+| [Seleccionar contactos](selecting-contacts.md) | Mediante el espacio de nombres [<strong>Windows.ApplicationModel.Contacts</strong>](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts), tienes varias opciones para seleccionar contactos. Aquí te mostraremos cómo seleccionar un único contacto o varios contactos, y aprenderás a configurar el selector de contactos para recuperar solamente la información de contacto que necesita tu aplicación. |
 | [Enviar correo electrónico](sending-email.md) | Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrónico para que el usuario pueda enviar un mensaje de correo electrónico. Puedes rellenar previamente los campos del correo electrónico con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar. |
 | [Enviar un mensaje SMS](sending-an-sms-message.md) | En este tema se muestra cómo iniciar el cuadro de diálogo de redacción de mensajes SMS para que el usuario pueda enviar un mensaje SMS. Puedes rellenar previamente los campos del SMS con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar. |
-| [Administrar citas](managing-appointments.md) | Con el espacio de nombres [<strong>Windows.ApplicationModel.Appointments</strong>](https://msdn.microsoft.com/library/windows/apps/Dn263359), puedes crear y administrar citas en la aplicación de calendario de un usuario. Aquí te mostraremos cómo crear una cita, agregarla a la aplicación de calendario, reemplazarla en dicha aplicación y quitarla de ella. También te enseñaremos cómo mostrar un intervalo de tiempo para una aplicación de calendario y crear un objeto de repetición de citas. |
+| [Administrar citas](managing-appointments.md) | Con el espacio de nombres [<strong>Windows.ApplicationModel.Appointments</strong>](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Appointments), puedes crear y administrar citas en la aplicación de calendario de un usuario. Aquí te mostraremos cómo crear una cita, agregarla a la aplicación de calendario, reemplazarla en dicha aplicación y quitarla de ella. También te enseñaremos cómo mostrar un intervalo de tiempo para una aplicación de calendario y crear un objeto de repetición de citas. |
 | [Conectar la aplicación a acciones en una tarjeta de contacto](integrating-with-contacts.md) | Muestra cómo hacer que tu aplicación aparezca junto a acciones en una tarjeta de contacto o una minitarjeta de contacto. Los usuarios pueden elegir tu aplicación para realizar una acción, como abrir una página de perfil, realizar una llamada o enviar un mensaje. |
 | [Agregar compatibilidad con Mis allegados a una aplicación](my-people-support.md) | Muestra cómo agregar compatibilidad con Mis allegados a una aplicación y cómo anclar y desanclar contactos en la barra de tareas. |
 | [Uso compartido de Mis allegados](my-people-sharing.md) | Muestra cómo agregar compatibilidad con el uso compartido de Mis allegados, que permite que los usuarios compartan contenido con sus contactos anclados mediante la acción de arrastrar archivos desde el Explorador de archivos hasta una chincheta de Mis allegados. |

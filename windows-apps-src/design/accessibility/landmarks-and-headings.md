@@ -8,12 +8,12 @@ ms.date: 01/24/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d81957c379bd948a50d08b980ff20debc6c223c5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 28a1bd46646deae8f6e6519d72295d42ce2766db
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611270"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359559"
 ---
 # <a name="landmarks-and-headings"></a>Puntos de referencia y encabezados
 
@@ -33,7 +33,7 @@ Hay un cuadro de edición de búsqueda ajustado dentro de un punto de referencia
 
 La aplicación Configuración sería accesible sin puntos de referencia y encabezados, pero resulta más fácil de usar con ellos. Un usuario de lector de pantalla puede ir de manera rápida y fácil al grupo (punto de referencia) que necesite y luego acceder igual de rápido al subgrupo (encabezado). 
 
-Usa [AutomationProperties.LandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LandmarkTypeProperty) para configurar el elemento de interfaz de usuario como el [tipo de punto de referencia](https://msdn.microsoft.com/library/windows/desktop/mt759299) que quieras. Este elemento de la interfaz de usuario de punto de referencia encapsula todos los demás elementos de la interfaz de usuario que tienen sentido para ese punto de referencia. 
+Usa [AutomationProperties.LandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LandmarkTypeProperty) para configurar el elemento de interfaz de usuario como el [tipo de punto de referencia](https://docs.microsoft.com/windows/desktop/WinAuto/landmark-type-identifiers) que quieras. Este elemento de la interfaz de usuario de punto de referencia encapsula todos los demás elementos de la interfaz de usuario que tienen sentido para ese punto de referencia. 
 
 Usa [AutomationProperties.LocalizedLandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LocalizedLandmarkTypeProperty) para dar un nombre específicamente al punto de referencia. Si se selecciona un tipo de punto de referencia predefinido como principal o de navegación, estos nombres se usarán para el nombre del punto de referencia. Sin embargo, si se establece el tipo de punto de referencia como personalizada, es necesario dar un nombre específicamente al punto de referencia mediante esta propiedad. También puedes usar esta propiedad para reemplazar los nombres predeterminados de los tipos de punto de referencia no personalizados. 
 

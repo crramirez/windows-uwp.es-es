@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción, uwp, windows 10, pista de aprendizaje, archivos, e/s de archivos, leer archivo, escribir archivo, crear archivo, escribir texto, leer texto
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e0abc146820ca27ee83662ba5f8b79a1daf90bab
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5480638e201dca8a5eb5363d7a5944422c626f67
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662510"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366891"
 ---
 # <a name="work-with-files"></a>Trabajar con archivos
 
@@ -130,7 +130,7 @@ Este es un resumen rápido de las API y otra documentación de utilidad que te a
 | [Crear, escribir y leer archivos](https://docs.microsoft.com/windows/uwp/files/quickstart-reading-and-writing-files) | Cubre la creación, lectura y escritura de texto, datos binarios y secuencias. |
 | [Introducción introducción almacenar datos de la aplicación localmente](https://blogs.windows.com/buildingapps/2016/05/10/getting-started-storing-app-data-locally/#pCbJKGjcShh5DTV5.97) | Además de cubrir los procedimientos recomendados para guardar los datos locales, aborda el propósito de la carpeta LocalSettings y LocalCache. |
 | [Introducción a los datos de aplicación móvil](https://blogs.windows.com/buildingapps/2016/05/03/getting-started-with-roaming-app-data/#RgjgLt5OkU9DbVV8.97) | Una serie de dos partes sobre cómo usar los datos de aplicaciones de roaming. |
-| [Directrices para los datos de aplicaciones móviles](https://msdn.microsoft.com/library/windows/apps/hh465094) | Sigue estas directrices de datos de roaming cuando diseñes tu aplicación. |
+| [Directrices para los datos de aplicaciones móviles](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data) | Sigue estas directrices de datos de roaming cuando diseñes tu aplicación. |
 | [Almacenar y recuperar la configuración y otros datos de aplicación](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data) | Proporciona una visión general de varios almacenes de datos de aplicación, como las carpetas locales, de roaming y temporales. Consulta la sección [Datos de roaming](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#roaming-data) para obtener directrices e información adicional acerca de la escritura de datos que se transfieren entre dispositivos. |
 | [Permisos de acceso a archivos](https://docs.microsoft.com/windows/uwp/files/file-access-permissions) | Información sobre las ubicaciones del sistema de archivo a las que puede acceder tu aplicación. |
 | [Abrir archivos y carpetas con un selector](https://docs.microsoft.com/windows/uwp/files/quickstart-using-file-and-folder-pickers) | Muestra cómo acceder a archivos y carpetas, permite al usuario decidir a través de una interfaz de usuario de selector. |

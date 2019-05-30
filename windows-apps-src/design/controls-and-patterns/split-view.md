@@ -12,18 +12,18 @@ design-contact: kimsea
 dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e0c709261b08231fa82af615d5398fd66648d4e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7381d8d99f47a69ba7398366762a7dbb4088e04a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646470"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364177"
 ---
 # <a name="split-view-control"></a>Control de vista en dos paneles
 
 Un control de vista en dos paneles tiene un panel expandible y contraíble y un área de contenido.
 
-> **API importantes**: [Clase de SplitView](https://msdn.microsoft.com/library/windows/apps/dn864360)
+> **API importantes**: [Clase de SplitView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SplitView)
 
 Este es un ejemplo de la aplicación Microsoft Edge con SplitView para mostrar su hub.
 
@@ -36,7 +36,7 @@ Este es un ejemplo de la aplicación Microsoft Edge con SplitView para mostrar s
 
     El panel está oculto hasta que se abre. Cuando se abre, el panel se superpone al área de contenido.
 
--   **en línea**
+-   **Inline**
 
     El panel siempre está visible y no se superpone al área de contenido. Las áreas del panel y el contenido dividen la superficie disponible de la pantalla.
 

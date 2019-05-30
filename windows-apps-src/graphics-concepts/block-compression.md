@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f6a1277dbb2d756f0d3a4ffc1fd545f892a2096
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2ac7f0785894849cffe09cd902f459015f1f7b6b
+ms.sourcegitcommit: ea15237291ae3ade0bf22e38bd292c3a23947a03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596510"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377322"
 ---
 # <a name="block-compression"></a>Compresión de bloques
 
@@ -73,7 +73,7 @@ Si tienes un código de aplicación que usa un puntero de memoria para recorrer 
 
 En el lado izquierdo del diagrama se muestran los tamaños de los niveles del mapa MIP que se generan para una textura de 60×40 sin comprimir. El tamaño de nivel superior se toma de la llamada API que genera la textura; cada nivel subsiguiente tiene la mitad del tamaño del nivel anterior. Para una textura sin comprimir, no existe ninguna diferencia entre el tamaño virtual (declarado) y el tamaño físico (real).
 
-En el lado derecho del diagrama se muestran los tamaños de los niveles del mapa MIP que se generan para la misma textura 60×40 con compresión. Ten en cuenta que tanto el segundo como el tercer nivel tienen rellenos de memoria para que los tamaños sean múltiplos de 4 en cada nivel. Esto es necesario para que los algoritmos puedan operar con bloques de elementos de textura de 4×4. Esto es más evidente si piensas en los niveles del mapa MIP que son menores que 4×4; el tamaño de estos niveles del mapa MIP muy pequeños se redondearán hacia arriba al múltiplo de 4 más cercano cuando se asigne la memoria de textura.
+En el lado derecho del diagrama se muestran los tamaños de los niveles del mapa MIP que se generan para la misma textura 60×40 con compresión. Ten en cuenta que tanto el segundo como el tercer nivel tienen rellenos de memoria para que los tamaños sean múltiplos de 4 en cada nivel. Esto es necesario para que los algoritmos puedan operar con bloques de elementos de textura de 4×4. Esto es especialmente evidente si considera que los niveles de mipmap que son menores que 4 × 4; el tamaño de estos niveles de mipmap muy pequeño se redondeará al factor más cercano de 4 cuando se asigna memoria de textura.
 
 El muestreo de hardware usa el tamaño virtual; cuando se muestrea la textura, se omite el relleno de memoria. Para los niveles del mapa MIP menores que 4×4, solo se usarán los cuatro primeros elementos de textura para un mapa de 2×2, y un bloque de 1×1 solo usará el primer elemento de textura. Sin embargo, no hay ninguna estructura de API que exponga el tamaño físico (incluido el relleno de memoria).
 
@@ -94,13 +94,13 @@ Direct3D implementa varios esquemas de compresión; cada uno implementa un equil
 | Color y alfa de tres componentes | Color (5:6:5), alfa (1) o sin alfa  | [BC1](#bc1)                    |
 | Color y alfa de tres componentes | Color (5:6:5), alfa (4)              | [BC2](#bc2)                    |
 | Color y alfa de tres componentes | Color (5:6:5), alfa (8)              | [BC3](#bc3)                    |
-| Color de un componente             | Un componente (8)                     | [TEXTURAS BC4](#bc4)                    |
+| Color de un componente             | Un componente (8)                     | [BC4](#bc4)                    |
 | Color de dos componentes             | Dos componentes (8:8)                  | [BC5](#bc5)                    |
 
 - [BC1](#bc1)
 - [BC2](#bc2)
 - [BC3](#bc3)
-- [TEXTURAS BC4](#bc4)
+- [BC4](#bc4)
 - [BC5](#bc5)
 
 ### <a name="span-idbc1spanspan-idbc1spanbc1"></a><span id="BC1"></span><span id="bc1"></span>BC1
@@ -181,7 +181,7 @@ else
 }
 ```
 
-### <a name="span-idbc4spanspan-idbc4spanbc4"></a><span id="BC4"></span><span id="bc4"></span>TEXTURAS BC4
+### <a name="span-idbc4spanspan-idbc4spanbc4"></a><span id="BC4"></span><span id="bc4"></span>BC4
 
 Usa el formato BC4 para almacenar datos de color de un componente mediante 8 bits para cada color. Como resultado de la mayor precisión (en comparación con [BC1](#bc1)), las texturas BC4 es ideal para almacenar datos de punto flotante en el intervalo de \[0 a 1\] utilizando el DXGI\_formato\_las texturas BC4\_Formato UNORM y \[-1 a + 1\] utilizando el DXGI\_formato\_las texturas BC4\_formato SNORM. Si se supone una textura de 4×4 con el formato de datos más amplio posible, esta técnica de compresión reduce la memoria necesaria de 16 bytes (16 colores × 1 componentes/color × 1 byte/componente) a 8 bytes.
 
@@ -193,10 +193,10 @@ El algoritmo usa los índices de 3 bits para buscar los colores en una tabla de
 
 El algoritmo determina el número de valores de color interpolados tras examinar los dos valores de referencia. Si rojo\_0 es mayor que rojo\_1 y, a continuación, las texturas BC4 interpola 6 valores de color; en caso contrario, interpola 4. Cuando BC4 interpola solo 4 valores de color, establece dos valores de color adicionales (0.0f para totalmente transparente y 1.0f para totalmente opaco). Para comprimir los valores de alfa en el área de elementos de textura de 4×4, BC4 almacena el código de bits correspondiente a los valores de alfa interpolados que más se acerquen al alfa original para un elemento de textura determinado.
 
-- [LAS TEXTURAS BC4\_UNORM](#bc4-unorm)
-- [LAS TEXTURAS BC4\_SNORM](#bc4-snorm)
+- [BC4\_UNORM](#bc4-unorm)
+- [BC4\_SNORM](#bc4-snorm)
 
-### <a name="span-idbc4unormspanspan-idbc4unormspanspan-idbc4-unormspanbc4unorm"></a><span id="BC4_UNORM"></span><span id="bc4_unorm"></span><span id="bc4-unorm"></span>LAS TEXTURAS BC4\_UNORM
+### <a name="span-idbc4unormspanspan-idbc4unormspanspan-idbc4-unormspanbc4unorm"></a><span id="BC4_UNORM"></span><span id="bc4_unorm"></span><span id="bc4-unorm"></span>BC4\_UNORM
 
 La interpolación de los datos de componente único se logra como se muestra en el siguiente ejemplo de código.
 
@@ -227,7 +227,7 @@ else
 
 A los colores de referencia se les asignan índices de 3 bits (000–111, dado que hay 8 valores), que se guardarán en los bloques rojo "a" a rojo "p" durante la compresión.
 
-### <a name="span-idbc4snormspanspan-idbc4snormspanspan-idbc4-snormspanbc4snorm"></a><span id="BC4_SNORM"></span><span id="bc4_snorm"></span><span id="bc4-snorm"></span>LAS TEXTURAS BC4\_SNORM
+### <a name="span-idbc4snormspanspan-idbc4snormspanspan-idbc4-snormspanbc4snorm"></a><span id="BC4_SNORM"></span><span id="bc4_snorm"></span><span id="bc4-snorm"></span>BC4\_SNORM
 
 El DXGI\_formato\_las texturas BC4\_SNORM es exactamente igual, salvo que se codifican los datos en el intervalo SNORM y cuando 4 se interpolan los valores de color. La interpolación de los datos de componente único se logra como se muestra en el siguiente ejemplo de código.
 
@@ -346,13 +346,13 @@ FLOAT32 f = 1.0f;
 UINT32 u;
 ```
 
-Para reinterpretar 'f' como el tipo de 'u', usa [memcpy](https://msdn.microsoft.com/library/dswaw1wk.aspx):
+Para reinterpretar 'f' como el tipo de 'u', usa [memcpy](https://docs.microsoft.com/cpp/c-runtime-library/reference/memcpy-wmemcpy):
 
 ```cpp
 memcpy( &u, &f, sizeof( f ) ); // 'u' becomes equal to 0x3F800000.
 ```
 
-En la reinterpretación anterior, no cambia el valor subyacente de los datos; [memcpy](https://msdn.microsoft.com/library/dswaw1wk.aspx) reinterpreta el float como un entero sin signo.
+En la reinterpretación anterior, no cambia el valor subyacente de los datos; [memcpy](https://docs.microsoft.com/cpp/c-runtime-library/reference/memcpy-wmemcpy) reinterpreta el float como un entero sin signo.
 
 Para realizar el tipo de conversión más habitual, usa la asignación:
 

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a9991cd4a0a3fce630b1c7be64650c79daf74e6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8f00bb9449d9e48518d16e08fa6b6665eecd2f85
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597410"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359741"
 ---
 # <a name="accessibility-in-the-store"></a>Accesibilidad en la Tienda  
 
@@ -40,7 +40,7 @@ Debes declarar tu aplicación como accesible si la has compilado para ello y has
     * usar métodos abreviados de teclado para alcanzar una funcionalidad de la aplicación principal;
     * usar los gestos táctiles del narrador para la equivalencia con el tabulador y las flechas para dispositivos sin teclado.
 * Garantizar que la interfaz de usuario de tu aplicación es accesible visualmente, es decir, que tiene una relación de contraste de texto mínima de 4.5:1, que no depende solamente del color para transmitir la información, etc.
-* Usar herramientas de prueba de accesibilidad como [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) y [**UIAVerify**](https://msdn.microsoft.com/library/windows/desktop/Hh920986) para comprobar la implementación que has realizado de la accesibilidad y resolver todos los errores de prioridad 1 notificados por dichas herramientas.
+* Usar herramientas de prueba de accesibilidad como [**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) y [**UIAVerify**](https://docs.microsoft.com/windows/desktop/WinAuto/ui-automation-verify) para comprobar la implementación que has realizado de la accesibilidad y resolver todos los errores de prioridad 1 notificados por dichas herramientas.
 * Comprobar los principales escenarios de la aplicación de principio a fin usando el narrador, la lupa, el teclado en pantalla, un tema de contraste alto y con la opción de ppp ajustada.
 
 Consulta el tema [Lista de comprobación para accesibilidad](accessibility-checklist.md) para obtener un revisión de estos procedimientos y vínculos a recursos que te ayudarán a llevarlos a cabo.

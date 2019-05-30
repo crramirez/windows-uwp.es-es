@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: cb87bea001492e39a0f60b96f884db70b5bd28ad
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d5774b5301f7e8ce0616df72cfbf4fc81d0d0cf7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592530"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363252"
 ---
 # <a name="command-bar-flyout"></a>Control flotante de la barra de comandos
 
@@ -153,7 +153,7 @@ También puede agregar comandos a la **SecondaryCommands** colección. Comandos 
 
 ### <a name="app-bar-buttons"></a>Botones de la barra de la aplicación
 
-Puede rellenar el PrimaryCommands y SecondaryCommands directamente con [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx), y [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) controles.
+Puede rellenar el PrimaryCommands y SecondaryCommands directamente con [AppBarButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton), [AppBarToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton), y [AppBarSeparator](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator) controles.
 
 Los controles de botón de la barra de la aplicación se caracterizan por un icono y una etiqueta de texto. Estos controles están optimizados para su uso en una barra de comandos y su apariencia cambia dependiendo de si el control se muestra en la barra de comandos o en el menú de desbordamiento.
 
@@ -411,4 +411,4 @@ No se puede personalizar TextCommandBarFlyout y se administra automáticamente p
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Conceptos básicos sobre el diseño de comandos de aplicaciones para la Plataforma universal de Windows (UWP)](../basics/commanding-basics.md)
-- [Clase de barra de comandos](https://msdn.microsoft.com/library/windows/apps/dn279427)
+- [Clase de barra de comandos](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)

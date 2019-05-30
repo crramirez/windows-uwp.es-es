@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, package rollout, lanzamiento de paquete, app submission, envío de aplicación
 ms.assetid: 9ada5ac3-a86e-4bb6-8ebc-915ba9649e3c
 ms.localizationpriority: medium
-ms.openlocfilehash: 301973fd231570f0fe63b8838971906c25e2d55c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3ca8fc759d123a25a58c8126426fb41066d5f1b4
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594400"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66358878"
 ---
 # <a name="get-rollout-info-for-an-app-submission"></a>Obtener la información de lanzamiento para un envío de aplicación
 
@@ -37,16 +37,16 @@ Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                                                                 |
+| Header        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Nombre        | Tipo   | Descripción                                                                 |
+| Name        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El identificador de la Tienda de la aplicación que contiene el envío con la información acerca del lanzamiento de paquetes cuyo estado quieres obtener. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Obligatorio. El identificador de la Tienda de la aplicación que contiene el envío con la información acerca del lanzamiento de paquetes cuyo estado quieres obtener. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 | submissionId | string | Obligatorio. El identificador del envío con la información acerca del lanzamiento de paquetes que quieres obtener. Este identificador está disponible en los datos de respuesta a las solicitudes para [crear un envío de aplicación](create-an-app-submission.md). Para un envío que se creó en el centro de partners, este identificador también está disponible en la dirección URL de la página de envío en el centro de partners.  |
 
 

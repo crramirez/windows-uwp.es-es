@@ -7,12 +7,12 @@ ms.date: 03/18/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ece6c5eea6cc05a966a7eae4cd16958dddee4d4
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 996bbaf4dd05ce5b24e536459c6d7d009a53fa19
+ms.sourcegitcommit: f167775291cbc566b72b0859ae6b426d848c5c89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215049"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266407"
 ---
 # <a name="choose-your-app-platform"></a>Elección de la plataforma de aplicaciones
 
@@ -29,7 +29,10 @@ Todas estas plataformas de aplicaciones le permiten crear aplicaciones de escrit
 
 * **API de Win32**. La API de Win32 (también denominada la API de Windows) es la plataforma original para C nativo /C++ las aplicaciones de Windows que requieren acceso directo al hardware y Windows. Proporciona una experiencia de desarrollo de primera clase sin según un entorno de tiempo de ejecución administrado, como .NET y WinRT. Esto hace que la API Win32 de la plataforma de elección para aplicaciones que necesitan el máximo nivel de rendimiento y el acceso directo al hardware del sistema.
 
-En este artículo se describe estas plataformas con más detalle y le ayuda a determinar la mejor para su aplicación.
+En este artículo se describe estas plataformas con más detalle y le ayuda a determinar la mejor para su aplicación. 
+
+> [!NOTE]
+> Con independencia de qué plataforma de aplicación que elija, puede utilizar muchas características de la plataforma Universal de Windows (UWP) para ofrecer una experiencia moderna de la aplicación en Windows 10. Por ejemplo, incluso si su aplicación de escritorio se compila con la API de Win32, Windows Forms o WPF, todavía puede utilizar muchas características que se introdujo por primera vez con UWP, como la implementación del paquete MSIX y controles de UWP XAML. Para obtener más información, consulte [modernizar sus aplicaciones de escritorio](modernize/index.md).
 
 ## <a name="uwp"></a>UWP
 

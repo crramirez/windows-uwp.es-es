@@ -6,12 +6,12 @@ ms.date: 04/18/2017
 ms.topic: article
 keywords: windows 10, uwp, metadata, metadatos, cue, indicación, speech, voz, chapter, capítulo
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b3753e92524e300252930f48433f91e175353c9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 92f8826729bb2374b87267d27b961d74eb72e928
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635860"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360552"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>Indicaciones de metadatos temporizados admitidos por el sistema
 En este artículo se describe cómo sacar provecho de los diversos formatos de metadatos temporizados que pueden estar integrados en archivos o secuencias multimedia. Las aplicaciones para UWP pueden registrarse en los eventos que genera la canalización multimedia durante la reproducción cada vez que se encuentren estas indicaciones de metadatos. Con la clase [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue), las aplicaciones pueden implementar sus propias indicaciones de metadatos personalizados, pero en este artículo nos centramos en varios estándares de metadatos que la canalización multimedia detecta automáticamente, por ejemplo:
@@ -24,7 +24,7 @@ En este artículo se describe cómo sacar provecho de los diversos formatos de m
 * Cuadros mp4 emsg fragmentados
 
 
-En este artículo se amplían los conceptos presentados en el artículo [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md), que incluye los conceptos básicos de trabajar con las clases [**MediaSource**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource), [**MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackitem) y [**TimedMetadataTrack**](https://msdn.microsoft.com/library/windows/apps/dn956580), así como instrucciones generales sobre el uso de metadatos temporizados en la aplicación.
+En este artículo se amplían los conceptos presentados en el artículo [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md), que incluye los conceptos básicos de trabajar con las clases [**MediaSource**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource), [**MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackitem) y [**TimedMetadataTrack**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.TimedMetadataTrack), así como instrucciones generales sobre el uso de metadatos temporizados en la aplicación.
 
 Los pasos básicos de implementación son los mismos para todos los distintos tipos de metadatos temporizados que se describen en este artículo:
 
@@ -172,7 +172,7 @@ En el método auxiliar **RegisterMetadataHandlerForEmsgCues**, obtén una instan
 [!code-cs[RegisterMetadataHandlerForEmsgCues](./code/MediaSource_RS1/cs/MainPage_Cues.xaml.cs#SnippetRegisterMetadataHandlerForEmsgCues)]
 
 
-En el controlador del evento **CueEntered**, transmite la indicación de datos incluida en la propiedad **Cue** del objeto [**MediaCueEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.core.mediacueeventargs) a un objeto [**DataCue**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue).  Comprueba que el objeto **DataCue** no es nulo. Las propiedades del cuadro emsg las proporciona la canalización multimedia como propiedades personalizadas en la colección [**Properties**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue.Properties) del objeto DataCue. En este ejemplo se intenta extraer varios valores de propiedad diferentes mediante el método **[TryGetValue](https://docs.microsoft.com/uwp/api/windows.foundation.collections.propertyset.trygetvalue)**. Si este método devuelve nulo, significa que la propiedad solicitada no está presente en el cuadro emsg, de modo que se establece un valor predeterminado en su lugar.
+En el controlador del evento **CueEntered**, transmite la indicación de datos incluida en la propiedad **Cue** del objeto [**MediaCueEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.core.mediacueeventargs) a un objeto [**DataCue**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue).  Comprueba que el objeto **DataCue** no es nulo. Las propiedades del cuadro emsg las proporciona la canalización multimedia como propiedades personalizadas en la colección [**Properties**](https://docs.microsoft.com/uwp/api/windows.media.core.datacue.Properties) del objeto DataCue. En este ejemplo se intenta extraer varios valores de propiedad diferentes mediante el método **[TryGetValue](https://docs.microsoft.com/uwp/api/windows.foundation.collections.propertyset.trygetvalue)** . Si este método devuelve nulo, significa que la propiedad solicitada no está presente en el cuadro emsg, de modo que se establece un valor predeterminado en su lugar.
 
 En la parte siguiente del ejemplo se muestra el escenario donde se desencadena la reproducción de anuncios, lo que sucede cuando la propiedad *scheme_id_uri*, obtenida en el paso anterior, tiene un valor de "urn: scte:scte35:2013:xml" (consulta [http://dashif.org/identifiers/event-schemes/](https://dashif.org/identifiers/event-schemes/)). Ten en cuenta que, según el estándar, se recomienda enviar este emsg varias veces para la redundancia, de modo que en este ejemplo se mantiene una lista de identificadores emsg que ya se han procesado y se procesan solo los mensajes nuevos. Crea un nuevo objeto **DataReader** para leer los datos de indicación mediante una llamada a [**DataReader.FromBuffer**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.FromBuffer) y establece la codificación en UTF-8 estableciendo la propiedad [**UnicodeEncoding**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader.UnicodeEncoding). Luego, lee los datos. En este ejemplo, la carga del mensaje se escribe en el resultado de depuración. Una aplicación real sería usar los datos de carga para programar la reproducción de un anuncio.
 

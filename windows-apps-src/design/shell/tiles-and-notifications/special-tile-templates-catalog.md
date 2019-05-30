@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 09647347134463c8dd2d93f6b869796c8def44e2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 739abc139eabc9f773938f55c15d3e18aaf562ce
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57619810"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66365965"
 ---
 # <a name="special-tile-templates"></a>Plantillas de iconos especiales
  
@@ -96,7 +96,7 @@ El distintivo del icono se actualizará acordemente.
 
 **Paso 5: En resumen**
 
-La siguiente imagen ilustra cómo se asocian las distintas API y cargas con cada uno de los aspectos de la plantilla de iconos icónica. Una [notificación de icono](https://msdn.microsoft.com/library/windows/apps/hh779724) (que contenga esos elementos &lt;binding&gt;) se usa para especificar la plantilla icónica y el activo de imagen; una [notificación de distintivo](https://msdn.microsoft.com/library/windows/apps/hh779719) especifica el valor numérico; las propiedades del icono controlan el nombre para mostrar, el color y otros datos de tu icono.
+La siguiente imagen ilustra cómo se asocian las distintas API y cargas con cada uno de los aspectos de la plantilla de iconos icónica. Una [notificación de icono](https://docs.microsoft.com/previous-versions/windows/apps/hh779724(v=win.10)) (que contenga esos elementos &lt;binding&gt;) se usa para especificar la plantilla icónica y el activo de imagen; una [notificación de distintivo](https://docs.microsoft.com/previous-versions/windows/apps/hh779719(v=win.10)) especifica el valor numérico; las propiedades del icono controlan el nombre para mostrar, el color y otros datos de tu icono.
 
 ![API y cargas asociadas con la plantilla de iconos icónica](images/iconic-template-properties-info.png)
 

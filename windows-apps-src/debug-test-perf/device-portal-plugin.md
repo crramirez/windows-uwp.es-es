@@ -6,12 +6,12 @@ ms.date: 03/24/2017
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: d9e11445d77434320c8842608bf8183a078c0660
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: debc4572a26db9e849dd31f17b114f15aa9ef055
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644470"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362490"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Escribir un complemento personalizado para Portal de dispositivos
 
@@ -75,7 +75,7 @@ Para esta funcionalidad se requieren dos nuevas capacidades. También deben agre
 ```
 
 > [!NOTE]
-> La funcionalidad "devicePortalProvider" está restringida ("rescap"), lo que significa que tienes que obtener autorización previa de la Tienda antes de que tu aplicación se pueda publicar allí. Sin embargo, esto no impide probar la aplicación de manera a través de la instalación de prueba. Para más información sobre las funcionalidades restringidas, consulta [Declaraciones de funcionalidades de las aplicaciones](https://msdn.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities).
+> La funcionalidad "devicePortalProvider" está restringida ("rescap"), lo que significa que tienes que obtener autorización previa de la Tienda antes de que tu aplicación se pueda publicar allí. Sin embargo, esto no impide probar la aplicación de manera a través de la instalación de prueba. Para más información sobre las funcionalidades restringidas, consulta [Declaraciones de funcionalidades de las aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
 ## <a name="set-up-your-background-task-and-winrt-component"></a>Configurar la tarea en segundo plano y el componente WinRT
 Para configurar la conexión a Device Portal, la aplicación debe enlazar una conexión de servicio de la aplicación desde el servicio Device Portal con la instancia de Device Portal en ejecución dentro de la aplicación. Para ello, agrega un nuevo componente WinRT a tu aplicación con una clase que implemente [**IBackgroundTask**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.ibackgroundtask).

@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 42ec5c1e91fbeebcaad68f346f317893fdfb2e1c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3f979edbd49699447040880964dd1378bc7c94c0
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606890"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362083"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
 
@@ -118,7 +118,7 @@ La imagen {image name} no se encuentra en el paquete.  | Falta una imagen obliga
 La imagen {image name} no es un archivo de imagen válido.  | Asegúrate de que todas las imágenes de la aplicación cumplan con las restricciones de tipo de formato de archivo apropiado. En el mensaje en sí, {image name}contiene el nombre de la imagen que no es válida. 
 La imagen “BadgeLogo” tiene un valor ABGR {value} en la posición (x, y) que no es válido. El píxel debe ser blanco (##FFFFFF) o transparente (00######).  | El logotipo del distintivo es una imagen que se muestra junto a la notificación del distintivo para identificar la aplicación en la pantalla de bloqueo. Esta imagen debe ser monocromática (puede tener únicamente píxeles blancos o transparentes). En el mensaje en sí, {value} contiene un valor de color en la imagen que no es válido. 
 La imagen "BadgeLogo" tiene un valor ABGR {value} en la posición (x, y) que no es válido para una imagen con blanco en contraste alto. El píxel debe ser (##2A2A2A) o más oscuro, o transparente (00######).  | El logotipo del distintivo es una imagen que se muestra junto a la notificación del distintivo para identificar la aplicación en la pantalla de bloqueo. Dado que el logotipo del distintivo aparece en un fondo blanco cuando se usa blanco en contraste alto, debe ser una versión oscura del logotipo del distintivo normal. En blanco de alto contraste, el logotipo del distintivo solo puede contener píxeles que son más oscuros que (##2A2A2A) o transparentes. En el mensaje en sí, {value} contiene un valor de color en la imagen que no es válido. 
-La imagen debe definir al menos una variante sin un calificador TargetSize. Debe definir un calificador Scale o dejar Scale y TargetSize sin especificar, para que de manera predeterminada se establezca Scale-100.  | Para más información, consulta las guías sobre el [diseño adaptativo](https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx) y los [recursos de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data). 
+La imagen debe definir al menos una variante sin un calificador TargetSize. Debe definir un calificador Scale o dejar Scale y TargetSize sin especificar, para que de manera predeterminada se establezca Scale-100.  | Para más información, consulta las guías sobre el [diseño adaptativo](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) y los [recursos de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data). 
 Al paquete le falta un archivo "resources.pri".  | Si tienes contenido localizable en el manifiesto de la aplicación, asegúrate de que el paquete de la aplicación incluya un archivo resources.pri válido. 
 El archivo "resources.pri" debe tener un mapa de recursos cuyo nombre coincida con el nombre del paquete {package full name}.  | Este error puede obtenerse si el manifiesto cambió y el nombre del mapa de recursos del archivo resources.pri deja de coincidir con el nombre del paquete en el manifiesto. En el mensaje en sí, {package full name} contiene el nombre del paquete que resources.pri debe tener. Para corregir esto, debes reconstruir resources.pri y la forma más fácil de hacerlo es reconstruyendo el paquete de la aplicación. 
 El archivo "resources.pri" no debe tener habilitado Combinar automáticamente.  | MakePRI.exe admite una opción denominada Combinar automáticamente. El valor predeterminado de Combinar automáticamente es desactivado. Cuando está habilitado, Combinar automáticamente combina los recursos del paquete de idioma de una aplicación en un solo resources.pri en tiempo de ejecución. No se recomienda para las aplicaciones que se va a distribuir a través de la Microsoft Store. El resources.pri de una aplicación que se distribuye a través de la Microsoft Store deben estar en la raíz del paquete de la aplicación y contienen todas las referencias del lenguaje que admita la aplicación. 
@@ -156,7 +156,7 @@ La aplicación puede declarar los tipos de archivo a los que se puede asociar. U
 * **Regla de dependencia de marco de trabajo**  
 Esta prueba aplica el requisito de que las aplicaciones declaren las dependencias adecuadas en UWP. Si se encuentra una dependencia inadecuada, la aplicación no pasará la prueba. Si hay un error de coincidencia entre la versión del sistema operativo a la que se dirige la aplicación y las dependencias de marco establecidas, la aplicación no superará la prueba. Tampoco lo hará si hace referencia a alguna "versión preliminar " de los archivos dll del marco.
 * **Comprobación de la comunicación entre procesos (IPC)**  
-Esta prueba impone el requisito de que las aplicaciones Puente de dispositivo de escritorio no se comunican fuera del contenedor de la aplicación con componentes del escritorio. La comunicación entre procesos está pensada exclusivamente para las aplicaciones de prueba. Las aplicaciones en las que el nombre especificado en [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) sea `DesktopApplicationPath` no superarán esta prueba.  
+Esta prueba impone el requisito de que las aplicaciones Puente de dispositivo de escritorio no se comunican fuera del contenedor de la aplicación con componentes del escritorio. La comunicación entre procesos está pensada exclusivamente para las aplicaciones de prueba. Las aplicaciones en las que el nombre especificado en [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) sea `DesktopApplicationPath` no superarán esta prueba.  
 
 **Acción correctora**  
 Compara el manifiesto de la aplicación con los requisitos descritos en la página sobre los [Requisitos del paquete de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements).
@@ -217,10 +217,10 @@ Esta prueba verifica todos los componentes para UWP en la aplicación:
 Esto puede corregirse al asegurarte de que la aplicación se haya compilado como una versión de lanzamiento y no como una versión de depuración. 
 
 > [!NOTE]
-> La compilación de depuración de una aplicación se producirá un error de esta prueba incluso si la aplicación solo usa [API para aplicaciones UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx). Revise los mensajes de error para identificar la API presente que no es una API para aplicaciones UWP permitida. 
+> La compilación de depuración de una aplicación se producirá un error de esta prueba incluso si la aplicación solo usa [API para aplicaciones UWP](https://docs.microsoft.com/uwp/). Revise los mensajes de error para identificar la API presente que no es una API para aplicaciones UWP permitida. 
 
 > [!NOTE]
-> Las aplicaciones de C++ que se compilan en una configuración de depuración se producirá un error de esta prueba incluso si la configuración solo usa las API de Windows SDK para aplicaciones UWP. Consulte [alternativas a las API de Windows en aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) para obtener más información.
+> Las aplicaciones de C++ que se compilan en una configuración de depuración se producirá un error de esta prueba incluso si la configuración solo usa las API de Windows SDK para aplicaciones UWP. Consulte [alternativas a las API de Windows en aplicaciones para UWP](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps) para obtener más información.
 
 ### <a name="6-user-account-control-uac-test"></a>6. Prueba de control (UAC) de cuenta de usuario  
 
@@ -286,4 +286,4 @@ Quita todas las claves de firma de código privado (por ejemplo, archivos .pfx y
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies)

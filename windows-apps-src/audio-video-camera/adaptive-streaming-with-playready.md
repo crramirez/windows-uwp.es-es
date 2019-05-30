@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 36cd006b4608d82999281ebd407fd32e168ae38b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f87ecf0c3c90976295d85c1a995f1de091491974
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57650470"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359176"
 ---
 # <a name="adaptive-streaming-with-playready"></a>Streaming adaptable con PlayReady
 
@@ -63,9 +63,9 @@ private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 
 ## <a name="setting-up-the-mediaprotectionmanager"></a>Configurar el MediaProtectionManager
 
-Para agregar la protección de contenido de PlayReady a tu aplicación para UWP, tienes que configurar un objeto [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040). Esto se hace al inicializar el objeto [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912).
+Para agregar la protección de contenido de PlayReady a tu aplicación para UWP, tienes que configurar un objeto [MediaProtectionManager](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.MediaProtectionManager). Esto se hace al inicializar el objeto [**AdaptiveMediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource).
 
-El siguiente código configura un objeto [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040):
+El siguiente código configura un objeto [MediaProtectionManager](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.MediaProtectionManager):
 
 ```csharp
 private void SetUpProtectionManager(ref MediaElement mediaElement)
@@ -100,7 +100,7 @@ private void SetUpProtectionManager(ref MediaElement mediaElement)
 
 Este código puede copiarse simplemente en la aplicación, dado que es obligatorio para configurar la protección de contenido.
 
-El evento [ComponentLoadFailed](https://msdn.microsoft.com/library/windows/apps/br207041) se activa cuando no se puede realizar la carga de datos binarios. Debemos agregar un controlador de eventos para controlar este evento, que señale que no se completó la carga:
+El evento [ComponentLoadFailed](https://docs.microsoft.com/uwp/api/windows.media.protection.mediaprotectionmanager.componentloadfailed) se activa cuando no se puede realizar la carga de datos binarios. Debemos agregar un controlador de eventos para controlar este evento, que señale que no se completó la carga:
 
 ```csharp
 private void ProtectionManager_ComponentLoadFailed(
@@ -111,7 +111,7 @@ private void ProtectionManager_ComponentLoadFailed(
 }
 ```
 
-De forma similar, debemos agregar un controlador de eventos para el evento [ServiceRequested](https://msdn.microsoft.com/library/windows/apps/br207045), que se activa cuando se solicita un servicio. Este código comprueba de qué tipo de solicitud se trata y responde en consecuencia:
+De forma similar, debemos agregar un controlador de eventos para el evento [ServiceRequested](https://docs.microsoft.com/uwp/api/windows.media.protection.mediaprotectionmanager.servicerequested), que se activa cuando se solicita un servicio. Este código comprueba de qué tipo de solicitud se trata y responde en consecuencia:
 
 ```csharp
 private async void ProtectionManager_ServiceRequested(
@@ -192,7 +192,7 @@ async void ProActiveIndivRequest()
 
 ## <a name="license-acquisition-service-requests"></a>Solicitudes de servicio de adquisición de licencias
 
-Si, en su lugar, la solicitud era de tipo [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285), llamamos a la siguiente función para solicitar y adquirir la licencia de PlayReady. Indicamos al objeto **MediaProtectionServiceCompletion** que se haya pasado si la solicitud era correcta o no y completamos la solicitud:
+Si, en su lugar, la solicitud era de tipo [PlayReadyLicenseAcquisitionServiceRequest](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest), llamamos a la siguiente función para solicitar y adquirir la licencia de PlayReady. Indicamos al objeto **MediaProtectionServiceCompletion** que se haya pasado si la solicitud era correcta o no y completamos la solicitud:
 
 ```csharp
 async void LicenseAcquisitionRequest(
@@ -274,7 +274,7 @@ async void LicenseAcquisitionRequest(
 
 ## <a name="initializing-the-adaptivemediasource"></a>Inicializar el objeto AdaptiveMediaSource
 
-Por último, necesitarás una función para inicializar el objeto [AdaptiveMediaSource](https://msdn.microsoft.com/library/windows/apps/dn946912), que se creó a partir de una clase [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) y una clase [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926) concretas. La clase **Uri** debe ser el vínculo al archivo multimedia (HLS o DASH), y la clase **MediaElement** debe estar definida en el código XAML.
+Por último, necesitarás una función para inicializar el objeto [AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource), que se creó a partir de una clase [Uri](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) y una clase [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) concretas. La clase **Uri** debe ser el vínculo al archivo multimedia (HLS o DASH), y la clase **MediaElement** debe estar definida en el código XAML.
 
 ```csharp
 async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
@@ -295,7 +295,7 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 
 Puedes llamar a esta función en cualquier evento que controle el inicio del streaming adaptable, por ejemplo, en un evento Click de botón.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [DRM de PlayReady](playready-client-sdk.md)
 
 

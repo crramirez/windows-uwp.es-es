@@ -1,16 +1,16 @@
 ---
 description: Respuestas a preguntas que probablemente tengas acerca de la creación y consumo de las API de Windows Runtime con C++/WinRT.
 title: Preguntas más frecuentes sobre C++/WinRT
-ms.date: 10/26/2018
+ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, preguntas más frecuentes, P+F
 ms.localizationpriority: medium
-ms.openlocfilehash: 70aedf4034ce433b0aa529375799cf45a18ca3e0
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: 7ac7f8e46974b7c12b42f6d6f94052e61902b240
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291893"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360250"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Preguntas más frecuentes sobre C++/WinRT
 Respuestas a preguntas que le pueda tener sobre la creación y consumo de Windows en tiempo de ejecución APIs con [C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -21,8 +21,11 @@ Respuestas a preguntas que le pueda tener sobre la creación y consumo de Window
 ## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>¿Cómo redirigir mi C++ / c++ / WinRT proyecto a una versión posterior del SDK de Windows?
 Consulte [cómo redestinar C++ / c++ / WinRT proyecto a una versión posterior del SDK de Windows](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk).
 
+## <a name="why-wont-my-new-project-compile-now-that-ive-moved-to-cwinrt-20"></a>¿Por qué no mi nuevo proyecto se compilará, ahora que moví a C++WinRT 2.0?
+Para todo el conjunto de cambios (incluidos los cambios importantes), consulte [noticias y los cambios, en C++WinRT 2.0](news.md#news-and-changes-in-cwinrt-20). Por ejemplo, para la compatibilidad con corrutinas (incluidas las aplicaciones auxiliares de corrutina como **winrt::resume_background**, **winrt::resume_foreground**, y **winrt::resume_on_signal** ), deberá `#include <winrt/coroutine.h>`. Si usas basado en rango `for` en una colección en tiempo de ejecución de Windows, a continuación, ahora deberá `#include <winrt/Windows.Foundation.Collections.h>`.
+
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>¿Por qué no se compilará mi nuevo proyecto? Estoy usando Visual Studio 2017 (versión 15.8.0 o superior) y el SDK versión 17134
-Si usa Visual Studio 2017 (versión 15.8.0 o superior) y como destino el SDK de Windows versión 10.0.17134.0 (Windows 10, versión 1803), a continuación, otra recién creada C++/proyecto de WinRT puede generar errores al compilar con el error "*error C3861: 'from_abi': no se encontró el identificador*"y con otros errores que se originan en *base.h*. La solución consiste en cualquier destino una posterior (mayor cumplimiento) versión del SDK de Windows, o la propiedad de proyecto conjunto **C o C++** > **lenguaje** > **modo de conformidad: No** (Además, si **/ permissive-** aparece en la propiedad del proyecto **C o C++** > **línea de comandos** en **opciones adicionales** , a continuación, eliminarlo).
+Si usa Visual Studio 2017 (versión 15.8.0 o superior) y como destino el SDK de Windows versión 10.0.17134.0 (Windows 10, versión 1803), a continuación, otra recién creada C++/proyecto de WinRT puede generar errores al compilar con el error "*error C3861: 'from_abi': no se encontró el identificador*"y con otros errores que se originan en *base.h*. La solución consiste en cualquier destino una posterior (mayor cumplimiento) versión del SDK de Windows, o la propiedad de proyecto conjunto **C o C++**  > **lenguaje** > **modo de conformidad: No** (Además, si **/ permissive-** aparece en la propiedad del proyecto **C o C++**  > **línea de comandos** en **opciones adicionales** , a continuación, eliminarlo).
 
 ## <a name="how-do-i-resolve-the-build-error-the-cwinrt-vsix-no-longer-provides-project-build-support--please-add-a-project-reference-to-the-microsoftwindowscppwinrt-nuget-package"></a>Cómo se puede resolver el error de compilación "C++ / c++ / WinRT VSIX ya no proporciona soporte técnico de compilación del proyecto.  ¿Agregue una referencia de proyecto al paquete Microsoft.Windows.CppWinRT Nuget"?
 Instalar el **Microsoft.Windows.CppWinRT** paquete de NuGet en el proyecto. Para obtener más información, consulte [versiones anteriores de la extensión VSIX](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension).
@@ -44,7 +47,7 @@ Solo si la clase en tiempo de ejecución se ha diseñado para consumirse desde f
 ## <a name="why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error"></a>¿Por qué el enlazador me va a dar un "error LNK2019: ¿Error de símbolo externo sin resolver"?
 Si el símbolo no resuelto es una API de los encabezados de espacio de nombres de Windows para la proyección C++/WinRT (en el espacio de nombres **winrt**), la API se declara más adelante en un encabezado que hayas incluido, pero su definición está en un encabezado que todavía no hayas incluido. Incluye el encabezado nombrado para el espacio de nombres de la API y vuelve a crearlo. Para obtener más información, consulta [Encabezados de proyección de C++/WinRT](consume-apis.md#cwinrt-projection-headers).
 
-Si el símbolo sin resolver es una función en tiempo de ejecución de Windows gratuita, como [RoInitialize](https://msdn.microsoft.com/library/br224650), a continuación, tendrá que vincule explícitamente el [WindowsApp.lib](/uwp/win32-and-com/win32-apis) biblioteca paraguas en el proyecto. La proyección de C++/WinRT depende de algunas de estas funciones (no miembro) y puntos de entrada libres . Si usas una de las plantillas de proyecto [Extensión de Visual Studio (VSIX) de C++ /WinRT](https://aka.ms/cppwinrt/vsix) para la aplicación, `WindowsApp.lib` se vincula por ti automáticamente. De lo contrario, puedes usar la configuración de enlace del proyecto para incluirla o hacerlo en el código fuente.
+Si el símbolo sin resolver es una función en tiempo de ejecución de Windows gratuita, como [RoInitialize](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roinitialize), a continuación, tendrá que vincule explícitamente el [WindowsApp.lib](/uwp/win32-and-com/win32-apis) biblioteca paraguas en el proyecto. La proyección de C++/WinRT depende de algunas de estas funciones (no miembro) y puntos de entrada libres . Si usas una de las plantillas de proyecto [Extensión de Visual Studio (VSIX) de C++ /WinRT](https://aka.ms/cppwinrt/vsix) para la aplicación, `WindowsApp.lib` se vincula por ti automáticamente. De lo contrario, puedes usar la configuración de enlace del proyecto para incluirla o hacerlo en el código fuente.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")
@@ -61,7 +64,7 @@ Si tienes una clase en tiempo de ejecución que libera recursos en su destructor
 ## <a name="can-i-use-llvmclang-to-compile-with-cwinrt"></a>¿Puedo usar LLVM/Clang para compilar con C++/WinRT?
 No admitimos la cadena de herramientas de LLVM y Clang para C++/WinRT, pero hacemos uso de ella internamente para validar la conformidad con los estándares de C++/WinRT. Por ejemplo, si quisieras emular lo que hacemos internamente, podrías intentar un experimento, como el que se describe a continuación.
 
-Ve a la [página de descarga de LLVM](https://releases.llvm.org/download.html), busca **Descargar LLVM 6.0.0** > **Archivos binarios integrados previamente**y descarga **Clang para Windows (64 bits)**. Durante la instalación, opta por agregar LLVM a la variable del sistema PATH para poder invocarlo desde un símbolo del sistema. Para los fines de este experimento, puede hacer caso omiso de los errores "No se pudo encontrar el directorio de conjuntos de herramientas de MSBuild" o "Error de instalación de la integración de MSVC", si aparecen. Hay una gran variedad de formas para invocar LLVM/Clang; el siguiente ejemplo muestra una de las formas.
+Ve a la [página de descarga de LLVM](https://releases.llvm.org/download.html), busca **Descargar LLVM 6.0.0** > **Archivos binarios integrados previamente**y descarga **Clang para Windows (64 bits)** . Durante la instalación, opta por agregar LLVM a la variable del sistema PATH para poder invocarlo desde un símbolo del sistema. Para los fines de este experimento, puede hacer caso omiso de los errores "No se pudo encontrar el directorio de conjuntos de herramientas de MSBuild" o "Error de instalación de la integración de MSVC", si aparecen. Hay una gran variedad de formas para invocar LLVM/Clang; el siguiente ejemplo muestra una de las formas.
 
 ```cmd
 C:\ExperimentWithLLVMClang>type main.cpp

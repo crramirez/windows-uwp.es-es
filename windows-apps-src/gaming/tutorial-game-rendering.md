@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
-ms.openlocfilehash: 108e9bf21b0552ac7f88721bf4b1ee72ca2a5e2c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2b44558232247de969f22d5767a16d921cfbf252
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610510"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367570"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>Marco de representación II: Representación de juegos
 
@@ -37,7 +37,7 @@ Este artículo explica cómo configurar otras partes del fotograma y preparar lo
 El representador es responsable de crear y mantener todos los objetos D3D11 y D2D usados para generar los elementos visuales del juego. La clase __GameRenderer__ es el representador de este juego de muestra y está diseñada para satisfacer las necesidades de representación del juego.
 
 Estos son algunos conceptos que puedes usar para intentar diseñar el representador de tu juego:
-* Dado que las API de Direct3D 11 están definidas como API [COM](https://msdn.microsoft.com/library/windows/desktop/ms694363.aspx), debes proporcionar referencias de [ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) a los objetos definidos por estas API. Estos objetos se liberan automáticamente cuando su última referencia sale del alcance cuando la aplicación finaliza. Para obtener más información, consulta [ComPtr](https://github.com/Microsoft/DirectXTK/wiki/ComPtr). Ejemplos de estos objetos: búferes de constantes, objetos de sombreador - [sombreador de vértices](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders), [sombreador de píxeles](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders) y objetos de recursos de sombreador.
+* Dado que las API de Direct3D 11 están definidas como API [COM](https://docs.microsoft.com/windows/desktop/com/the-component-object-model), debes proporcionar referencias de [ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) a los objetos definidos por estas API. Estos objetos se liberan automáticamente cuando su última referencia sale del alcance cuando la aplicación finaliza. Para obtener más información, consulta [ComPtr](https://github.com/Microsoft/DirectXTK/wiki/ComPtr). Ejemplos de estos objetos: búferes de constantes, objetos de sombreador - [sombreador de vértices](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders), [sombreador de píxeles](tutorial--assembling-the-rendering-pipeline.md#vertex-shaders-and-pixel-shaders) y objetos de recursos de sombreador.
 * Los búferes de constantes se definen en esta clase para contener diversos datos necesarios para la representación.
     * Utiliza varios búferes de constantes con diferentes frecuencias para reducir la cantidad de datos que deben enviarse a la GPU por fotograma. Este ejemplo separa las constantes en diferentes búferes, según la frecuencia con la que deben actualizarse. Este es el procedimiento recomendado para la programación de Direct3D. 
     * En esta muestra de juego se definen 4 búferes de constantes.
@@ -46,7 +46,7 @@ Estos son algunos conceptos que puedes usar para intentar diseñar el representa
         3. __m\_constantBufferChangesEveryFrame__ contiene la matriz de vista. Esta matriz depende de la posición de la cámara y la dirección de vista (lo normal para la proyección) y cambia solamente una vez por fotograma en el método __Render__. Esto se explicó anteriormente en __marco de representación lo hago?: Introducción a la representación__, en el [ __GameRenderer::Render__ método](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method).
         4. __m\_constantBufferChangesEveryPrim__ contiene las propiedades del modelo matrix y material de cada tipo primitivo. La matriz de modelos transforma los vértices desde las coordenadas locales en coordenadas globales. Estas constantes son específicas de cada primitivo y se actualizan para cada llamada de dibujo. Esto se explicó anteriormente en __marco de representación lo hago?: Introducción a la representación__, en el [representación primitiva](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering).
 * Los objetos de recursos del sombreador que guardan las texturas para los primitivos se definen también en esta clase.
-    * Algunas texturas están predefinidas ([DDS](https://msdn.microsoft.com/library/windows/desktop/bb943991.aspx) es un formato de archivo que puede usarse para almacenar texturas comprimidas y sin comprimir. Las texturas DDS se usan para las paredes y el piso del mundo, así como esferas de munición).
+    * Algunas texturas están predefinidas ([DDS](https://docs.microsoft.com/windows/desktop/direct3ddds/dx-graphics-dds-pguide) es un formato de archivo que puede usarse para almacenar texturas comprimidas y sin comprimir. Las texturas DDS se usan para las paredes y el piso del mundo, así como esferas de munición).
     * En este ejemplo de juego, son objetos de recurso de sombreador: __m\_sphereTexture__, __m\_cylinderTexture__, __m\_ceilingTexture__, __m\_floorTexture__, __m\_wallsTexture__.
 * Los objetos del sombreador se definen en esta clase para calcular nuestros primitivos y texturas. 
     * En este ejemplo de juego, los objetos de sombreador son __m\_vertexShader__, __m\_vertexShaderFlat__, y __m\_pixelShader__, __m\_pixelShaderFlat__.

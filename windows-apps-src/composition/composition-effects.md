@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ebf54e062ef2388562cc970a2f124f0ce1f978c7
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b07ab7fa6b65e16f39d9e2a77a677d33d3c70254
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653830"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360509"
 ---
 # <a name="composition-effects"></a>Efectos de composición
 
-Las API [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) permiten aplicar efectos a las imágenes en tiempo real y a la interfaz de usuario, con propiedades de efectos que se pueden animar. En esta introducción, veremos las funciones disponibles que permiten aplicar efectos a una composición visual.
+Las API [**Windows.UI.Composition**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition) permiten aplicar efectos a las imágenes en tiempo real y a la interfaz de usuario, con propiedades de efectos que se pueden animar. En esta introducción, veremos las funciones disponibles que permiten aplicar efectos a una composición visual.
 
-Para respaldar la coherencia de la [Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx) para los desarrolladores que describen efectos en sus aplicaciones, los efectos de composición aprovechan la interfaz IGraphicsEffect de Win2D para usar las descripciones de efectos a través del espacio de nombre [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm).
+Para respaldar la coherencia de la [Plataforma universal de Windows (UWP)](https://docs.microsoft.com/windows/uwp/get-started/whats-a-uwp) para los desarrolladores que describen efectos en sus aplicaciones, los efectos de composición aprovechan la interfaz IGraphicsEffect de Win2D para usar las descripciones de efectos a través del espacio de nombre [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm).
 
 Los efectos de pincel se usan para pintar áreas de una aplicación mediante efectos en un conjunto de imágenes existentes. Las API de efectos de composición de Windows 10 se centran en las clases SpriteVisual. La clase SpriteVisual permite la flexibilidad e interacción en cuanto a la creación de colores, imágenes y efectos. La clase SpriteVisual es un tipo visual de composición que puede rellenar un rectángulo 2D con un pincel. El objeto visual define los límites del rectángulo y el pincel define los píxeles usados para pintar el rectángulo.
 
@@ -144,7 +144,7 @@ Este tutorial de inicio rápido muestra cómo usar algunas de las funciones bás
 
 - Si no tienes una versión compatible de Visual Studio instalada, dirígete a la página de descargas de Visual Studio [aquí](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx).
 
-### <a name="creating-a-new-project"></a>Creación de un nuevo proyecto
+### <a name="creating-a-new-project"></a>Crear un nuevo proyecto
 
 - Ve a Archivo -> Nuevo -> Proyecto...
 - Selecciona "Visual C#".
@@ -238,7 +238,7 @@ LoadImage(surfaceBrush);
 ## <a name="more-information"></a>Más información
 
 - [Microsoft – GitHub de composición](https://github.com/Microsoft/composition)
-- [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878)
+- [**Windows.UI.Composition**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
 - [Equipo de composición de Windows en Twitter](https://twitter.com/wincomposition)
 - [Información general de composición](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
 - [Conceptos básicos del árbol Visual](composition-visual-tree.md)

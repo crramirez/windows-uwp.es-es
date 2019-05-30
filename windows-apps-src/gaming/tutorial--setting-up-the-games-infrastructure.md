@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, el programa de instalación, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 789b235220e5d22b85f7b3038d5d468729439501
-ms.sourcegitcommit: 7a3d28472901edbe4ecdde7e1a01a505ee5bc028
+ms.openlocfilehash: ca91926ec374015eeb88be6d89d3e1741d8b9c6d
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658771"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367683"
 ---
 # <a name="set-up-the-game-project"></a>Configurar el proyecto de juego
 
@@ -35,7 +35,7 @@ Si no estás familiarizado con el desarrollo de la Plataforma Universal de Windo
 
 Una plantilla de Visual Studio es una colección de configuraciones y archivos de código para un tipo específico de aplicación basándose en el lenguaje y la tecnología elegidos. En Microsoft Visual Studio 2017, encontrará una serie de plantillas que puede facilitar considerablemente desarrollo de aplicaciones de juegos y gráficos. Si no usas una plantilla, debes desarrollar tú mismo casi todo el marco básico de generación de gráficos, lo que puede suponer una ardua tarea para un desarrollador de juegos novel.
 
-La plantilla usada para este tutorial es la titulada **DirectX 11 App (Universal Windows)**. 
+La plantilla usada para este tutorial es la titulada **DirectX 11 App (Universal Windows)** . 
 
 Pasos para crear un proyecto de juego DirectX 11 en Visual Studio:
 1.  Seleccione **archivo...** &gt; **Nuevo** &gt; **proyecto...**
@@ -53,7 +53,7 @@ La clase **App** se hereda de la clase **IFrameworkView**.
 
 ### <a name="inspect-apph"></a>Inspecciona **App.h**.
 
-Echemos un vistazo rápidamente a los métodos de 5 **App.h** &mdash; [ **inicializar**](https://msdn.microsoft.com/library/windows/apps/hh700495), [ **SetWindow** ](https://msdn.microsoft.com/library/windows/apps/hh700509), [ **Carga**](https://msdn.microsoft.com/library/windows/apps/hh700501), [ **ejecutar**](https://msdn.microsoft.com/library/windows/apps/hh700505), y [ **desinicializar** ](https://msdn.microsoft.com/library/windows/apps/hh700523) al implementar el [ **IFrameworkView** ](https://msdn.microsoft.com/library/windows/apps/hh700469) interfaz que define un proveedor de vistas. Estos métodos los ejecuta el singleton de la aplicación que se crea al lanzar el juego, y carga todos los recursos de la aplicación, además de conectar los controladores de eventos apropiados.
+Echemos un vistazo rápidamente a los métodos de 5 **App.h** &mdash; [ **inicializar**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.initialize), [ **SetWindow** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.setwindow), [ **Carga**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.load), [ **ejecutar**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run), y [ **desinicializar** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.uninitialize) al implementar el [ **IFrameworkView** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.run) interfaz que define un proveedor de vistas. Estos métodos los ejecuta el singleton de la aplicación que se crea al lanzar el juego, y carga todos los recursos de la aplicación, además de conectar los controladores de eventos apropiados.
 
 ```cpp
     // Main entry point for our app. Connects the app with the Windows shell and handle application lifecycle events.
@@ -129,13 +129,13 @@ Ejecuta el **Diseñador de manifiestos** haciendo doble clic en el archivo **Pac
 
 ![captura de pantalla del editor del manifiesto package.appx.](images/simple-dx-game-setup-app-manifest.png)
 
-Para más información sobre el archivo **package.appxmanifest** y el empaquetado, consulta el [Diseñador de manifiestos](https://msdn.microsoft.com/library/windows/apps/br230259.aspx). Por ahora, echa un vistazo a la pestaña **Capacidades** y mira las opciones proporcionadas.
+Para más información sobre el archivo **package.appxmanifest** y el empaquetado, consulta el [Diseñador de manifiestos](https://docs.microsoft.com/previous-versions/br230259(v=vs.140)). Por ahora, echa un vistazo a la pestaña **Capacidades** y mira las opciones proporcionadas.
 
 ![captura de pantalla con las capacidades predeterminadas de una aplicación direct3d.](images/simple-dx-game-setup-capabilities.png)
 
 Si no seleccionas las funcionalidades que usa tu juego, como el acceso a **Internet** para los juegos locales guardados, o Internet para ver las puntuaciones más altas globales, no podrás tener acceso a los recursos o características correspondientes. Cuando crees un nuevo juego, asegúrate de que seleccionas las funcionalidades que necesitará el juego para ejecutarse.
 
-Ahora, veamos el resto de archivos que vienen con la plantilla **DirectX 11 App (Universal Windows)**.
+Ahora, veamos el resto de archivos que vienen con la plantilla **DirectX 11 App (Universal Windows)** .
 
 ## <a name="review-the-included-libraries-and-headers"></a>Revisa las bibliotecas y los encabezados incluidos
 

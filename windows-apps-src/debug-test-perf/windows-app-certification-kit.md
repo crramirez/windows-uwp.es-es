@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: b480e96621e143e283a2556bdbef394aaf7dbc07
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ea84d57fbfba9666a2553500dc94275bd8b4d209
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597440"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359749"
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
 
 
-Para obtener la aplicación [Windows Certified](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) o prepárelo para [publicación a la Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062), debe validar y probar localmente en primer lugar. Este tema muestra cómo instalar y ejecutar el [Windows App Certification Kit](https://go.microsoft.com/fwlink/p/?LinkID=309666) para asegurarse de que la aplicación es segura y eficaz.
+Para obtener la aplicación [Windows Certified](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) o prepárelo para [publicación a la Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/app-submissions), debe validar y probar localmente en primer lugar. Este tema muestra cómo instalar y ejecutar el [Windows App Certification Kit](https://go.microsoft.com/fwlink/p/?LinkID=309666) para asegurarse de que la aplicación es segura y eficaz.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -52,7 +52,7 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 6.  Abre el archivo de informe y revisa los resultados de la prueba.
 
-**Tenga en cuenta**  si usa Visual Studio, puede ejecutar el Kit de certificación de aplicaciones de Windows cuando se crea el paquete de aplicación. Consulta [Empaquetado de aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/Mt627715) para obtener información sobre cómo hacerlo.
+**Tenga en cuenta**  si usa Visual Studio, puede ejecutar el Kit de certificación de aplicaciones de Windows cuando se crea el paquete de aplicación. Consulta [Empaquetado de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps) para obtener información sobre cómo hacerlo.
 
  
 
@@ -86,14 +86,14 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 Los umbrales de la prueba de rendimiento del Kit para la certificación de aplicaciones en Windows se basan en el rendimiento de un equipo de bajo consumo.
 
-Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumple la [las directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944), le recomendamos que pruebe su aplicación en un equipo de bajo consumo de energía, como un equipo basado en Intel Atom con una resolución de pantalla de 1366 x 768 (o posterior) y un disco duro rotatorio (en lugar de un disco duro de estado sólido).
+Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumple la [las directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies), le recomendamos que pruebe su aplicación en un equipo de bajo consumo de energía, como un equipo basado en Intel Atom con una resolución de pantalla de 1366 x 768 (o posterior) y un disco duro rotatorio (en lugar de un disco duro de estado sólido).
 
-A medida que evolucionan los equipos de bajo consumo, las características de rendimiento podrían cambiar con el tiempo. Hacer referencia a la más actual [las directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944) y probar la aplicación con la versión más reciente del Kit de certificación de aplicaciones de Windows para asegurarse de que la aplicación cumple los requisitos de rendimiento más recientes.
+A medida que evolucionan los equipos de bajo consumo, las características de rendimiento podrían cambiar con el tiempo. Hacer referencia a la más actual [las directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) y probar la aplicación con la versión más reciente del Kit de certificación de aplicaciones de Windows para asegurarse de que la aplicación cumple los requisitos de rendimiento más recientes.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Pruebas del Kit de certificación de aplicaciones de Windows](windows-app-certification-kit-tests.md)
-* [Directivas de Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies)
  
 
  

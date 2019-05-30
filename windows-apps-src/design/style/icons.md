@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fb97f69ccdffcec86dfdaf5fa6c5f817644ebd61
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5e464251200812e79474d05d9d0a680b49167871
+ms.sourcegitcommit: 7da28cf4f4e8390bc9a21a9488b03af39271cbbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612450"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64564538"
 ---
 # <a name="icons-for-uwp-apps"></a>Iconos de aplicaciones para UWP
 
@@ -31,13 +31,13 @@ Los iconos pueden aparecer en aplicaciones y fuera de ellas:
         **Icons inside the app**
 
         ![icons inside the app](images/icons/inside-icons.png)
-        Inside your app, you use icons to represent an action, such as copying text or navigating to the settings page.
+Dentro de la aplicación, utilice los iconos para representar una acción, como copiar texto o navegar a la página de configuración.
     :::column-end:::
     :::column:::
-        **Icons outside the app**
+**Iconos de fuera de la aplicación**
 
         ![icons outside the app](images/icons/outside-icons.jpg)
-         Outside your app, Windows uses an icon to represent your app in the start menu and in the taskbar. If the user chooses to pin your app to the start menu, your app's start tile can feature your app's icon. Your app's icon appears in the title bar and you can choose to create a splash screen with your app's logo.
+Fuera de la aplicación, Windows utiliza un icono para representar la aplicación en el menú Inicio y en la barra de tareas. Si el usuario elige anclar la aplicación al menú Inicio, el icono de inicio de la aplicación puede abarcar el icono de la aplicación. Icono de la aplicación aparece en la barra de título y se puede crear una pantalla de presentación con el logotipo de la aplicación.
     :::column-end:::
 :::row-end:::
 
@@ -52,13 +52,13 @@ Los iconos pueden ahorrar espacio, pero ¿cuándo deberías usarlos?
         ![do](images/do.svg)
         ![icons standard image](images/icons/icons-standard.svg)<br>
 
-        Use an icon for actions, like cut, copy, paste, and save, or for navigation items in a navigation menu.
+Usar un icono para las acciones, como cortar, copiar, pegar y guardar o para los elementos de navegación de un menú de navegación.
     :::column-end:::
     :::column:::
         ![don't](images/dont.svg)
         ![icons concept image](images/icons/icons-concept.svg)<br>
 
-        Use an icon if one already exists for the concept you want to represent. (To see whether an icon exists, check the Segoe icon list.)
+Usar un icono si ya existe uno para el concepto de que desea representar. (Para ver si existe un icono, compruebe la lista de iconos Segoe).
     :::column-end:::
 :::row-end:::
 
@@ -67,13 +67,13 @@ Los iconos pueden ahorrar espacio, pero ¿cuándo deberías usarlos?
         ![do](images/do.svg)
         ![icon shopping cart](images/icons/icon-shopping-cart.svg)<br>
 
-        Use an icon if it's easy for the user to understand what the icon means and it's simple enough to be clear at small sizes.
+Usar un icono si es fácil para el usuario a comprender qué significa el icono y es lo suficientemente sencilla para ser claro en tamaños pequeños.
     :::column-end:::
     :::column:::
         ![dont](images/dont.svg)
         ![icons concept image](images/icons/icon-bad-example.png)<br>
 
-        Don't use an icon if its meaning isn't clear, or if making it clear requires a complex shape.
+No use un icono si su significado no está claro, o si lo que desactive requiere una forma compleja.
     :::column-end:::
 :::row-end:::
 
@@ -86,7 +86,7 @@ Existen muchas formas de crear un icono. Puedes usar una fuente de símbolos com
 ### <a name="use-a-predefined-icon"></a>Usa un icono predefinido.
 :::row:::
     :::column:::
-        Microsoft provides over 1000 icons in the form of the Segoe MDL2 Assets font. It might not be intuitive to get an icon from a font, but our font display technology means these icons will look crisp and sharp on any display, at any resolution, and at any size. 
+Microsoft ofrece más de 1.000 iconos en el formulario de la fuente Segoe MDL2 activos. Es posible que no sea intuitivo obtener un icono de una fuente, pero nuestra tecnología de visualización de fuentes implica que estos iconos tendrán un aspecto limpio y nítido en cualquier pantalla, en cualquier resolución y en cualquier tamaño. Para obtener instrucciones, consulte [iconos Segoe MDL2](segoe-ui-symbol-font.md).
     :::column-end:::
     :::column:::
         ![pre-defined icon image](images/icons/predefined-icon.png)
@@ -96,7 +96,7 @@ Existen muchas formas de crear un icono. Puedes usar una fuente de símbolos com
 ### <a name="use-a-font"></a>Usa una fuente.
 :::row:::
     :::column:::
-        You don't have to use the Segoe MDL2 Assets font--you can use any font the user has installed on their system, such as Wingdings or Webdings.
+No tiene que usar la fuente Segoe MDL2 activos, puede usar cualquier fuente que el usuario ha instalado en su sistema, como Wingdings o Webdings.
     :::column-end:::
     :::column:::
         ![wingdings image](images/icons/wingdings.png)
@@ -106,7 +106,7 @@ Existen muchas formas de crear un icono. Puedes usar una fuente de símbolos com
 ### <a name="use-a-scalable-vector-graphics-svg-file"></a>Usa un archivo Scalable Vector Graphics (SVG).
 :::row:::
     :::column:::
-        SVG resources are ideal for icons, because they always look sharp at any size or resolution. Most drawing applications can export to SVG. 
+Recursos SVG son ideales para los iconos, ya que siempre RECURRO sharp de cualquier tamaño o resolución. La mayoría de las aplicaciones de dibujo pueden exportar a SVG. Para obtener instrucciones, consulte [SVGImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.svgimagesource).
     :::column-end:::
     :::column:::
         ![SVG image](images/icons/icon-scale.gif)
@@ -116,7 +116,7 @@ Existen muchas formas de crear un icono. Puedes usar una fuente de símbolos com
 ### <a name="use-geometry-objects"></a>Usa objetos de geometría.
 :::row:::
     :::column:::
-        Like SVG files, geometries are a vector-based resource, so they always look sharp. However, creating a geometry is complicated because you have to individually specify each point and curve. It's really only a good choice if you need to modify the icon while your app is running (to animate it, for example). For instructions, see [Move and draw commands for geometries](../../xaml-platform/move-draw-commands-syntax.md). 
+Como los archivos SVG, geometrías son un recurso basado en vectores, por lo que siempre RECURRO sharp. Sin embargo, la creación de una geometría resulta complicada porque tienes que especificar individualmente cada punto y curva. Realmente solo es una buena opción si tienes que modificar el icono mientras se está ejecutan tu aplicación (para animarlo, por ejemplo). Para obtener instrucciones, consulta [Mover y dibujar comandos para geometrías](../../xaml-platform/move-draw-commands-syntax.md). 
     :::column-end:::
     :::column:::
         ![Geometry objects image](images/icons/geometry-objects.png)
@@ -126,7 +126,7 @@ Existen muchas formas de crear un icono. Puedes usar una fuente de símbolos com
 ### <a name="you-can-also-use-a-bitmap-image-such-as-png-gif-or-jpeg-although-we-dont-recommend-it"></a>También puedes usar una imagen de mapa de bits, como PNG, GIF o JPEG, aunque no lo recomendamos.
 :::row:::
     :::column:::
-        Bitmap images are created at a specific size, so they have to be scaled up or down depending on how large you want the icon to be and the resolution of the screen. When the image is scaled down (shrunk), it can appear blurry; when it's scaled up, it can appear blocky and pixelated. If you have to use a bitmap image we recommend using a PNG or GIF over a JPEG. 
+Imágenes de mapa de bits se crean con un tamaño específico, para que tengan que se puede escalar o reducir verticalmente según lo grande desea que el icono sea y la resolución de la pantalla. Cuando la imagen se reduce, puede aparecer borrosa; cuando se aumenta, puede aparecer en bloque y pixelada. Si tienes que usar una imagen de mapa de bits, te recomendamos usar PNG o GIF a través de un formato JPEG. 
     :::column-end:::
     :::column:::
         ![don't](images/dont.svg)
@@ -149,7 +149,7 @@ Hay algunas maneras de agregar un icono a un botón:
 :::row:::
     :::column span="2":::
         <b>Step 1</b><br>
-        Set the button's font family to `Segoe MDL2 Assets` and its content property to the unicode value of the glyph you want to use:
+Establece la familia de fuentes del botón en `Segoe MDL2 Assets` y su propiedad de contenido en el valor unicode del glifo que desea usar:
     :::column-end:::
     :::column:::
         ![Create an icon button step 1](images/icons/create-icon-step-1.svg)
@@ -163,10 +163,7 @@ Hay algunas maneras de agregar un icono a un botón:
 :::row:::
     :::column span="2":::
         <b>Step 2</b><br>
-        You can use one of the icon element objects: [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon),
-        [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), 
-        [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon), or
-        [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon). This gives you more types of icons to choose from, and enables you to combine icons and other types of content, such as text, if you want:
+Puede usar uno de los objetos de elemento de icono: [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon), [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon), o [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon). Esto le ofrece más tipos de iconos que puede elegir y le permite combinar iconos y otros tipos de contenido, como texto, si desea:
     :::column-end:::
     :::column:::
         ![Create an icon button step 2](images/icons/icon-text-step-2.svg)
@@ -186,7 +183,7 @@ Hay algunas maneras de agregar un icono a un botón:
 
 :::row:::
     :::column span:::
-        When you have a series of commands that go together, such as cut/copy/paste or a set of drawing commands for a photo-editing program, put them together in a [command bar](../controls-and-patterns/app-bars.md). A command bar takes one or more app bar buttons or app bar toggle buttons, each of which represents an action. Each button has an [Icon](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) property you use to control which icon it displays. There are a variety of ways to specify the icon. 
+Cuando haya una serie de comandos que van juntas, como cortar/copiar/pegar o un conjunto de comandos para un programa de edición de fotografías de dibujo póngalos todos juntos en un [barra de comandos](../controls-and-patterns/app-bars.md). Una barra de comandos toma uno o varios botones de la barra de aplicaciones o botones de alternancia de la barra de aplicaciones, cada uno de los cuales representa una acción. Cada botón tiene una propiedad [Icon](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) que usas para controlar qué icono muestra. Hay varias formas de especificar el icono. 
     :::column-end:::
     :::column:::
         ![Example of a command bar with icons](images/icons/create-icon-command-bar.svg)

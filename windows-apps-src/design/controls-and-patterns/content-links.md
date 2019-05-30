@@ -10,12 +10,12 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: a984e30bbdc569522b04d328087775aa9e8ce2bc
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3fc54662b29255b73e972bcfb0fa4b6bb2dcf968
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648540"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363060"
 ---
 # <a name="content-links-in-text-controls"></a>Enlaces de contenido en controles de texto
 
@@ -39,8 +39,8 @@ Hay dos maneras diferentes de usar vínculos de contenido:
 
 Este es el aspecto predeterminado de los vínculos de contenido en un RichEditBox y en un TextBlock.
 
-![vínculo de contenido enriquecido en el cuadro de edición](images/content-link-default-richedit.png)
-![vínculo de contenido en el bloque de texto](images/content-link-default-textblock.png)
+![content link in rich edit box](images/content-link-default-richedit.png)
+![content link in text block](images/content-link-default-textblock.png)
 
 Las diferencias de uso, representación y comportamiento se tratan en detalle en las siguientes secciones. En esta tabla encontrarás una breve comparación de las diferencias principales entre un vínculo de contenido en un RichEditBox y un bloque de texto.
 
@@ -303,7 +303,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 ```
 
 > [!TIP]
-> Cuando uses un ContentLink en un control de texto con otros elementos de texto en XAML, coloca el contenido en un contenedor [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) y aplica el atributo `xml:space="preserve"` al contenedor Span para mantener el espacio en blanco entre el ContentLink y otros elementos.
+> Cuando uses un ContentLink en un control de texto con otros elementos de texto en XAML, coloca el contenido en un contenedor [Span](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span) y aplica el atributo `xml:space="preserve"` al contenedor Span para mantener el espacio en blanco entre el ContentLink y otros elementos.
 
 ## <a name="examples"></a>Ejemplos
 

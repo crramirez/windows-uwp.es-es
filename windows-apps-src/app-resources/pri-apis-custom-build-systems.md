@@ -6,15 +6,15 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 617812415d3dcd00ec24d5f55971ae311265b61d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b300630ff4a9b6735cb7891444da4333532735c1
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598520"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359378"
 ---
 # <a name="package-resource-indexing-pri-apis-and-custom-build-systems"></a>API de indexación de recursos de paquetes (PRI) y sistemas de compilación personalizados
-Con las [API de indexación de recursos de paquetes (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690), puedes desarrollar un sistema de compilación personalizado para los recursos de la aplicación para UWP. El sistema de compilación podrá crear, versionar y volcar (como XML) archivos de índice de recursos del paquete (PRI) en cualquier nivel de complejidad que necesite tu aplicación para UWP. Si tienes un sistema de compilación personalizado que actualmente utiliza la herramienta de línea de comandos MakePri.exe (consulta [Compile resources manually with MakePri.exe](makepri-exe-command-options.md)), para un aumento del control y del rendimiento, es recomendable llamar a las API de PRI en su lugar en lugar de a MakePri.exe.
+Con las [API de indexación de recursos de paquetes (PRI)](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference), puedes desarrollar un sistema de compilación personalizado para los recursos de la aplicación para UWP. El sistema de compilación podrá crear, versionar y volcar (como XML) archivos de índice de recursos del paquete (PRI) en cualquier nivel de complejidad que necesite tu aplicación para UWP. Si tienes un sistema de compilación personalizado que actualmente utiliza la herramienta de línea de comandos MakePri.exe (consulta [Compile resources manually with MakePri.exe](makepri-exe-command-options.md)), para un aumento del control y del rendimiento, es recomendable llamar a las API de PRI en su lugar en lugar de a MakePri.exe.
 
 Las API de PRI se introdujeron en Windows SDK para Windows 10, versión 1803. Las API adoptan la forma de las API de Windows de Win32, lo que significa que tienes algunas opciones para llamarlas. Puedes llamarlas directamente desde una aplicación de Win32 o puedes llamarlas a través de [invocación de plataforma](/dotnet/framework/interop/consuming-unmanaged-dll-functions?branch=live) desde una aplicación .NET o incluso desde una aplicación para UWP.
 
@@ -31,7 +31,7 @@ El límite de tamaño de un archivo PRI es de 64 kilobytes.
 |[Escenario 1: Generar un archivo PRI desde recursos de cadena y los archivos de recursos](pri-apis-scenario-1.md)|En este escenario, crearemos una nueva aplicación para representar nuestro sistema de compilación personalizado. Crearemos un indizador de recursos y le agregaremos cadenas y otros tipos de recursos. A continuación, generaremos y volcaremos un archivo PRI.|
 
 ## <a name="important-apis"></a>API importantes
-* [Indexación de referencia (PRI) de recursos del paquete](https://msdn.microsoft.com/library/windows/desktop/mt845690)
+* [Indexación de referencia (PRI) de recursos del paquete](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Compilar recursos manualmente con MakePri.exe](makepri-exe-command-options.md)

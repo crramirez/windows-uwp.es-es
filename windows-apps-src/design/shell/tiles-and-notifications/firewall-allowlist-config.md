@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, WNS, el servicio de notificaciones de windows, notificación, windows, firewall, solución de problemas, IP, el tráfico, enterprise, red, IPv4, VIP, FQDN, dirección IP pública
 ms.localizationpriority: medium
-ms.openlocfilehash: 466463bfc984707af4cb30618f9cbfa47d78703c
-ms.sourcegitcommit: fd7d358aad3a5b7112f5a587bb6ea86805dc8a4d
+ms.openlocfilehash: 9ed4ad6ed828abda9d487ef96beca9b655c92421
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976255"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366675"
 ---
 # <a name="allowing-windows-notification-traffic-through-enterprise-firewalls"></a>Permitir el tráfico de notificación de Windows a través de firewalls empresariales
 
@@ -78,10 +78,10 @@ Si usa el servicio de notificación heredado, MPNS, los intervalos de direccione
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Inicio rápido: Enviar una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
-* [Cómo solicitar, crear y guardar un canal de notificación](https://msdn.microsoft.com/library/windows/apps/hh465412)
-* [Cómo interceptar las notificaciones para la ejecución de aplicaciones](https://msdn.microsoft.com/library/windows/apps/xaml/jj709907.aspx)
-* [Cómo realizar la autenticación con el servicio de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407)
-* [Encabezados de solicitud y respuesta del servicio de notificación de inserción](https://msdn.microsoft.com/library/windows/apps/hh465435)
-* [Directrices y lista de comprobación para las notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
+* [Inicio rápido: Enviar una notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [Cómo solicitar, crear y guardar un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
+* [Cómo interceptar las notificaciones para la ejecución de aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
+* [Cómo realizar la autenticación con el servicio de notificaciones de inserción de Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [Encabezados de solicitud y respuesta del servicio de notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
+* [Directrices y lista de comprobación para las notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
  

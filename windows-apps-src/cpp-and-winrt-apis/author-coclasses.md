@@ -1,21 +1,21 @@
 ---
 description: C++/WinRT puede ayudarte a crear componentes COM clásicos, igual que te ayuda a crear clases de Windows Runtime.
 title: Crear componentes COM con C++ / WinRT
-ms.date: 09/06/2018
+ms.date: 04/24/2019
 ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, autor, COM, component
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 27c55e94a4e11bbbf550c21fd61ee384c8b21f9c
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 3badcd59155bc4bb5ef8d9e29271b853c245c24e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244361"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360322"
 ---
 # <a name="author-com-components-with-cwinrt"></a>Crear componentes COM con C++ / WinRT
 
-[C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) puede ayudarle a crear el clásico modelo de objetos componentes (COM) componentes (o coclases), tal como le ayuda a crear las clases de Windows en tiempo de ejecución. Aquí es una ilustración simple, que puede probar si pega el código en el `pch.h` y `main.cpp` de un nuevo **Visual C++**   >  **Windows Desktop**  >  **Aplicación de consola de Windows (C++/WinRT)** proyecto.
+[C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) puede ayudarle a crear el clásico modelo de objetos componentes (COM) componentes (o coclases), tal como le ayuda a crear las clases de Windows en tiempo de ejecución. Aquí es una ilustración simple, que puede probar si pega el código en el `pch.h` y `main.cpp` de un nuevo **aplicación de consola de Windows (C++ / c++ / WinRT)** proyecto.
 
 ```cppwinrt
 // pch.h
@@ -74,7 +74,7 @@ Encontrará más información sobre el área de características de notificació
 
 ## <a name="create-a-windows-console-application-project-toastandcallback"></a>Crear un proyecto de aplicación de consola de Windows (ToastAndCallback)
 
-Comienza creando un proyecto nuevo en Microsoft Visual Studio Crear un **Visual C++** > **Windows Desktop** > **aplicación de consola de Windows (C++ / c++ / WinRT)** del proyecto y asígnele el nombre  *ToastAndCallback*.
+Comienza creando un proyecto nuevo en Microsoft Visual Studio Crear un **aplicación de consola de Windows (C++/WinRT)** del proyecto y asígnele el nombre *ToastAndCallback*.
 
 Abra `pch.h`y agregue `#include <unknwn.h>` antes el incluye para C++ / c++ / WinRT encabezados. Este es el resultado; puede reemplazar el contenido de su `pch.h` con esta lista.
 
@@ -89,7 +89,6 @@ Abra `main.cpp`y quitar las directivas using que genera la plantilla de proyecto
 
 ```cppwinrt
 // main.cpp : Defines the entry point for the console application.
-//
 
 #include "pch.h"
 
@@ -173,7 +172,7 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 };
 ```
 
-La implementación de la coclase anterior sigue el mismo patrón que se muestra en [API autor con C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). Por lo tanto, puede usar la misma técnica para implementar interfaces COM, así como interfaces de Windows en tiempo de ejecución. Los componentes COM y las clases en tiempo de ejecución de Windows exponen sus características a través de interfaces. Todas las interfaces de COM se deriva en última instancia el [ **interfaz IUnknown** ](https://msdn.microsoft.com/library/windows/desktop/ms680509) interfaz. El tiempo de ejecución de Windows se basa en COM&mdash;una diferencia está en última instancia, interfaces de Windows en tiempo de ejecución se derivan de la [ **interfaz IInspectable** ](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (y **IInspectable**  deriva **IUnknown**).
+La implementación de la coclase anterior sigue el mismo patrón que se muestra en [API autor con C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). Por lo tanto, puede usar la misma técnica para implementar interfaces COM, así como interfaces de Windows en tiempo de ejecución. Los componentes COM y las clases en tiempo de ejecución de Windows exponen sus características a través de interfaces. Todas las interfaces de COM se deriva en última instancia el [ **interfaz IUnknown** ](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) interfaz. El tiempo de ejecución de Windows se basa en COM&mdash;una diferencia está en última instancia, interfaces de Windows en tiempo de ejecución se derivan de la [ **interfaz IInspectable** ](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (y **IInspectable**  deriva **IUnknown**).
 
 En la coclase en el código anterior, implementamos el **INotificationActivationCallback::Activate** método, que es la función que se llama cuando el usuario hace clic en el botón de devolución de llamada en una notificación del sistema. Pero antes de llamar a esa función, debe crearse una instancia de la coclase, y ese es el trabajo de la **IClassFactory:: CreateInstance** función.
 
@@ -432,7 +431,7 @@ Como alternativa (y posiblemente más probable), puede elegir hospedar su coclas
 
 ### <a name="create-a-dynamic-link-library-dll-project"></a>Crear un proyecto de biblioteca de vínculos dinámicos (DLL)
 
-Puede iniciar la tarea de creación de un servidor COM en proceso mediante la creación de un nuevo proyecto en Microsoft Visual Studio. Crear un **Visual C++** > **Windows Desktop** > **biblioteca de vínculos dinámicos (DLL)** proyecto.
+Puede iniciar la tarea de creación de un servidor COM en proceso mediante la creación de un nuevo proyecto en Microsoft Visual Studio. Crear un **Visual C++**  > **Windows Desktop** > **biblioteca de vínculos dinámicos (DLL)** proyecto.
 
 Para agregar C++ / c++ / WinRT soporte para el nuevo proyecto, siga los pasos descritos en [modificar un proyecto de aplicación de escritorio de Windows para agregar C++ / c++ / WinRT soporte](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
@@ -540,10 +539,10 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 
 ## <a name="important-apis"></a>API importantes
 * [Interfaz IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
-* [Interfaz IUnknown](https://msdn.microsoft.com/library/windows/desktop/ms680509)
-* [Plantilla de estructura winrt::implements](/uwp/cpp-ref-for-winrt/implements)
+* [Interfaz IUnknown](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)
+* [winrt::implements struct template](/uwp/cpp-ref-for-winrt/implements)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Crear API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
-* [Consumir componentes COM con C++ / WinRT](consume-com.md)
-* [Enviar una notificación de icono local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)
+* [Consumir componentes COM con C++/WinRT](consume-com.md)
+* [Enviar una notificación del sistema local](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

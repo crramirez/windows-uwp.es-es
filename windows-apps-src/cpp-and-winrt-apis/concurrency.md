@@ -1,16 +1,16 @@
 ---
 description: Este tema muestra cómo puedes crear y consumir objetos asincrónicos de Windows Runtime con C++/WinRT.
 title: Operaciones simultáneas y asincrónicas con C++/WinRT
-ms.date: 10/27/2018
+ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, simultaneidad, async, asincrónico, asincronía
 ms.localizationpriority: medium
-ms.openlocfilehash: f3283ffa5fa047806befa2712301c25a7d07af8e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5dba97ede63b1bcb85c4ee1807d5558f4c93834a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611300"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66361210"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Operaciones simultáneas y asincrónicas con C++/WinRT
 
@@ -21,22 +21,22 @@ En este tema se muestra las maneras en que ambos pueden creación y consumen obj
 Cualquier API de Windows Runtime que tenga el potencial de tardar más de 50 milisegundos en completarse se implementa como una función asincrónica (con un nombre terminado en "Async"). La implementación de una función asincrónica inicia el trabajo en otro subproceso y regresa inmediatamente con un objeto que representa la operación asincrónica. Cuando se completa la operación asincrónica, dicho objeto devuelto contiene cualquier valor que resultase del trabajo. El espacio de nombres de Windows Runtime **Windows::Foundation** contiene cuatro tipos de objetos de la operación asincrónica.
 
 - [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction),
-- [**IAsyncActionWithProgress&lt;TProgress&gt;**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_),
-- [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation_tresult_), y
-- [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_).
+- [**IAsyncActionWithProgress&lt;TProgress&gt;** ](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_),
+- [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_), y
+- [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_).
 
 Cada uno de estos tipos de la operación asincrónica se proyecta en un correspondiente tipo en el espacio de nombres **winrt::Windows::Foundation** de C++/WinRT. C++ / WinRT también contiene una estructura adaptadora await interna. No usa directamente, pero gracias a esa estructura, puede escribir un `co_await` instrucción para esperar el resultado de cualquier función que devuelve uno de estos tipos de operación asincrónica de forma cooperativa. Y puedes crear tus propias corrutinas que devuelvan estos tipos.
 
-Un ejemplo de una función asincrónica de Windows es [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync), que devuelve un objeto de la operación asincrónica de tipo [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_). Echemos un vistazo a algunas formas&mdash;primer bloqueo y, a continuación, sin bloqueo&mdash;del uso de C++ / c++ / WinRT para llamar a una API como que.
+Un ejemplo de una función asincrónica de Windows es [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync), que devuelve un objeto de la operación asincrónica de tipo [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_). Echemos un vistazo a algunas formas&mdash;primer bloqueo y, a continuación, sin bloqueo&mdash;del uso de C++ / c++ / WinRT para llamar a una API como que.
 
 ## <a name="block-the-calling-thread"></a>Bloquear el subproceso de llamada
 
 El siguiente ejemplo de código recibe un objeto de la operación asincrónica desde **RetrieveFeedAsync** y llama a **get** en dicho objeto para bloquear el subproceso de llamada hasta que los resultados de la operación asincrónica estén disponibles.
 
+Si desea copiar y pegar este ejemplo directamente en el archivo de código fuente principal de un **aplicación de consola de Windows (C++/WinRT)** proyecto y, a continuación, primer conjunto **no utilizar encabezados precompilados** en el proyecto Propiedades.
+
 ```cppwinrt
 // main.cpp
-
-#include "pch.h"
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Web.Syndication.h>
 
@@ -63,6 +63,9 @@ Una llamada a **get** ofrece una codificación cómoda y es ideal para aplicacio
 
 ## <a name="write-a-coroutine"></a>Escribir una corrutina
 
+> [!IMPORTANT]
+> Como de [ C++WinRT 2.0](news.md#news-and-changes-in-cwinrt-20), no olvide `#include <winrt/coroutine.h>` al crear o consumir una corrutina.
+
 C++/WinRT integra las corrutinas de C++ en el modelo de programación para proporcionar una forma natural de esperar de forma cooperativa un resultado. Puedes producir tu propia operación asincrónica de Windows Runtime escribiendo un corrutina. En el ejemplo de código siguiente, **ProcessFeedAsync** es la corrutina.
 
 > [!NOTE]
@@ -70,11 +73,10 @@ C++/WinRT integra las corrutinas de C++ en el modelo de programación para propo
 
 ```cppwinrt
 // main.cpp
-
-#include "pch.h"
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Web.Syndication.h>
 #include <iostream>
+#include <winrt/coroutine.h>
+#include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Windows.Web.Syndication.h>
 
 using namespace winrt;
 using namespace Windows::Foundation;
@@ -118,11 +120,10 @@ En el siguiente ejemplo, encapsulamos una llamada a **RetrieveFeedAsync** de un 
 
 ```cppwinrt
 // main.cpp
-
-#include "pch.h"
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Web.Syndication.h>
 #include <iostream>
+#include <winrt/coroutine.h>
+#include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Windows.Web.Syndication.h>
 
 using namespace winrt;
 using namespace Windows::Foundation;
@@ -155,13 +156,16 @@ int main()
 
 En el ejemplo anterior, **RetrieveBlogFeedAsync** devuelve un **IAsyncOperationWithProgress**, que tiene progreso y un valor devuelto. Podemos hacer otro trabajo mientras **RetrieveBlogFeedAsync** está haciendo el suyo y recuperando la fuente. A continuación, llamamos a **get** en este objeto de la operación asincrónica para bloquear, esperar a que se complete y obtener los resultados de la operación.
 
-Si vas a devolver asincrónicamente un tipo de Windows Runtime, debes devolver un [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation_tresult_) o un [**IAsyncOperationWithProgress&lt;TResult, TProgress &gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_). Cualquier clase de tiempo de ejecución propia o de terceros cualifica o cualquier tipo que se pueda pasar a o desde una función de Windows Runtime (por ejemplo, `int` o **winrt::hstring**). El compilador te ayudará con un error "*debe ser de tipo WinRT*" si intentas usar uno de estos tipos de la operación asincrónica con un tipo que no sea de Windows Runtime.
+Si vas a devolver asincrónicamente un tipo de Windows Runtime, debes devolver un [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_) o un [**IAsyncOperationWithProgress&lt;TResult, TProgress &gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_). Cualquier clase de tiempo de ejecución propia o de terceros cualifica o cualquier tipo que se pueda pasar a o desde una función de Windows Runtime (por ejemplo, `int` o **winrt::hstring**). El compilador te ayudará con un error "*debe ser de tipo WinRT*" si intentas usar uno de estos tipos de la operación asincrónica con un tipo que no sea de Windows Runtime.
 
 Si una corrutina no tiene al menos una declaración `co_await`, para que cualifique como un corrutina, debe tener al menos una declaración `co_return` o `co_yield`. Habrá casos donde la corrutina pueda devolver un valor sin introducir cualquier asincronía y, por lo tanto, sin bloquear ni cambiar de contexto. Este es un ejemplo que hace que (se llame a los tiempos segundo y subsiguientes) al almacenar en caché un valor.
 
 ```cppwinrt
+...
+#include <winrt/coroutine.h>
+...
 winrt::hstring m_cache;
- 
+
 IAsyncOperation<winrt::hstring> ReadAsync()
 {
     if (m_cache.empty())
@@ -181,12 +185,10 @@ Si vas a devolver de forma asincrónica un tipo que *no* sea de Windows Runtime,
 
 ```cppwinrt
 // main.cpp
-
-#include "pch.h"
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Web.Syndication.h>
 #include <iostream>
 #include <ppltasks.h>
+#include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Windows.Web.Syndication.h>
 
 using namespace winrt;
 using namespace Windows::Foundation;
@@ -195,12 +197,12 @@ using namespace Windows::Web::Syndication;
 concurrency::task<std::wstring> RetrieveFirstTitleAsync()
 {
     return concurrency::create_task([]
-    {
-        Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
-        SyndicationClient syndicationClient;
-        SyndicationFeed syndicationFeed{ syndicationClient.RetrieveFeedAsync(rssFeedUri).get() };
-        return std::wstring{ syndicationFeed.Items().GetAt(0).Title().Text() };
-    });
+        {
+            Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
+            SyndicationClient syndicationClient;
+            SyndicationFeed syndicationFeed{ syndicationClient.RetrieveFeedAsync(rssFeedUri).get() };
+            return std::wstring{ syndicationFeed.Items().GetAt(0).Title().Text() };
+        });
 }
 
 int main()
@@ -225,11 +227,14 @@ void DoWork(Param const& value);
 Pero puedes experimentar problemas si pasas un parámetro de referencia a una corrutina.
 
 ```cppwinrt
+...
+#include <winrt/coroutine.h>
+...
 // NOT the recommended way to pass a value to a coroutine!
 IASyncAction DoWorkAsync(Param const& value)
 {
     // While it's ok to access value here...
-    
+
     co_await DoOtherWorkAsync();
 
     // ...accessing value here carries no guarantees of safety.
@@ -244,7 +249,7 @@ IASyncAction DoWorkAsync(Param value);
 ```
 
 También es discutible que (a menos que quieras mover el valor) pasar objetos por valor const es una buena práctica. No tendrá ningún efecto en el valor de origen desde el que estás haciendo una copia, pero hace que el propósito sea claro y ayuda si modificas accidentalmente la copia.
-    
+
 ```cppwinrt
 // coroutine with strictly unnecessary const (but arguably good practice).
 IASyncAction DoWorkAsync(Param const value);
@@ -258,9 +263,12 @@ Una corrutina es una función como cualquier otro que un autor de llamada se blo
 
 Por lo tanto, antes de realizar el trabajo enlazado a proceso en una corrutina, necesario devolver la ejecución al llamador (es decir, introducir un punto de suspensión) para que el llamador no se bloquea. Si aún no está haciendo que `co_await`- ing alguna otra operación, puede realizar `co_await` el [ **winrt::resume_background** ](/uwp/cpp-ref-for-winrt/resume-background) función. Eso devuelve el control a la persona que llama y, a continuación, reanuda inmediatamente en un subproceso del grupo de subprocesos.
 
-El grupo de subprocesos que se va a usar en la implementación es el [grupo de subprocesos de Windows](https://msdn.microsoft.com/library/windows/desktop/ms686766) de bajo nivel, por lo que es eficaz en forma óptima.
+El grupo de subprocesos que se va a usar en la implementación es el [grupo de subprocesos de Windows](https://docs.microsoft.com/windows/desktop/ProcThread/thread-pool-api) de bajo nivel, por lo que es eficaz en forma óptima.
 
 ```cppwinrt
+...
+#include <winrt/coroutine.h>
+...
 IAsyncOperation<uint32_t> DoWorkOnThreadPoolAsync()
 {
     co_await winrt::resume_background(); // Return control; resume on thread pool.
@@ -280,6 +288,9 @@ IAsyncOperation<uint32_t> DoWorkOnThreadPoolAsync()
 Este escenario se expande en el anterior. Descargas cierto trabajo en el grupo de subprocesos, pero quieres mostrar el progreso en la interfaz de usuario (UI).
 
 ```cppwinrt
+...
+#include <winrt/coroutine.h>
+...
 IAsyncAction DoWorkAsync(TextBlock textblock)
 {
     co_await winrt::resume_background();
@@ -292,6 +303,9 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 El código anterior lanza una excepción [**winrt::hresult_wrong_thread**](/uwp/cpp-ref-for-winrt/error-handling/hresult-wrong-thread), porque debe actualizarse un **TextBlock** desde el subproceso que lo creó, que es el subproceso de interfaz de usuario. Una solución es capturar el contexto del subproceso dentro del cual se llamó originalmente a nuestra corrutina. Para ello, cree una instancia un [ **winrt::apartment_context** ](/uwp/cpp-ref-for-winrt/apartment-context) de objetos, el trabajo, en segundo plano y, a continuación, `co_await` el **apartment_context** para volver a la llamada a contexto.
 
 ```cppwinrt
+...
+#include <winrt/coroutine.h>
+...
 IAsyncAction DoWorkAsync(TextBlock textblock)
 {
     winrt::apartment_context ui_thread; // Capture calling context.
@@ -310,7 +324,9 @@ Mientras se llame la corrutina anterior desde el subproceso de interfaz de usuar
 Una solución más general para actualizar la interfaz de usuario, que incluye los casos donde no está seguro sobre el subproceso que realiza la llamada, puede `co_await` el [ **winrt::resume_foreground** ](/uwp/cpp-ref-for-winrt/resume-foreground) función para cambiar a un determinado subproceso en primer plano. En el siguiente ejemplo de código, especificamos el subproceso de primer plano, pasando el objeto del distribuidor asociado a **TextBlock** (mediante el acceso a su propiedad [**Dispatcher**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher#Windows_UI_Xaml_DependencyObject_Dispatcher)). La implementación de **winrt::resume_foreground** llama a [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync) en ese objeto de distribuidor para ejecutar el trabajo que viene después de él en la corrutina.
 
 ```cppwinrt
-#include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
+...
+#include <winrt/coroutine.h>
+...
 IAsyncAction DoWorkAsync(TextBlock textblock)
 {
     co_await winrt::resume_background();
@@ -329,6 +345,9 @@ En términos generales, después de un punto de suspensión en una corrutina, el
 Pero si le `co_await` cualquiera de los cuatro tipos de operación asincrónica de Windows en tiempo de ejecución (**IAsyncXxx**), a continuación, C++ / c++ / WinRT captura el contexto de llamada en el momento `co_await`. Y le garantiza que todavía está en ese contexto cuando se reanuda la continuación. C++ / c++ / WinRT para ello, comprueba si ya está en el contexto de llamada y, si no, cambiar a él. Si estaba en un subproceso de contenedor uniproceso (STA) antes de `co_await`, acto seguido, estará en el mismo posteriormente; si estaba en un subproceso de apartamento multiproceso (MTA) antes de `co_await`, a continuación, estará más adelante en uno.
 
 ```cppwinrt
+...
+#include <winrt/coroutine.h>
+...
 IAsyncAction ProcessFeedAsync()
 {
     Uri rssFeedUri{ L"https://blogs.windows.com/feed" };
@@ -343,6 +362,9 @@ IAsyncAction ProcessFeedAsync()
 La razón puede confiar en este comportamiento es que C++ / c++ / WinRT proporciona código para adaptarse a esos tipos de operación asincrónica de Windows en tiempo de ejecución para la compatibilidad de idioma de corrutina de C++ (estos fragmentos de código se denominan adaptadores de espera). El resto de tipos que admite await en C++ / c++ / WinRT simplemente son contenedores del grupo de subprocesos o las aplicaciones auxiliares; por lo que se completan en el grupo de subprocesos.
 
 ```cppwinrt
+...
+#include <winrt/coroutine.h>
+...
 using namespace std::chrono;
 IAsyncOperation<int> return_123_after_5s()
 {
@@ -358,7 +380,9 @@ Si se `co_await` algún otro tipo&mdash;incluso en C++ / c++ / WinRT implementac
 Para mantener los cambios de contexto reduce al mínimo, puede usar algunas de las técnicas que ya hemos visto en este tema. Veamos algunas de las ilustraciones de hacer eso. En este ejemplo de pseudocódigo siguiente, se muestra el esquema de un controlador de eventos que llama a una API de Windows en tiempo de ejecución para cargar una imagen, directamente a un subproceso en segundo plano para procesar dicha imagen y, a continuación, se devuelve al subproceso de interfaz de usuario para mostrar la imagen en la interfaz de usuario.
 
 ```cppwinrt
-#include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
+...
+#include <winrt/coroutine.h>
+...
 IAsyncAction MainPage::ClickHandler(IInspectable /* sender */, RoutedEventArgs /* args */)
 {
     // We begin in the UI context.
@@ -384,7 +408,9 @@ IAsyncAction MainPage::ClickHandler(IInspectable /* sender */, RoutedEventArgs /
 En este escenario, hay un poco de ineffiency alrededor de la llamada a **StorageFile::OpenAsync**. Hay un cambio de contexto necesario para un fondo de subprocesos (de modo que el controlador puede devolver la ejecución al autor de llamada), en la reanudación después de que C++ / c++ / WinRT restaura el contexto del subproceso de interfaz de usuario. Pero, en este caso, no es necesario que sea en el subproceso de interfaz de usuario hasta que se van a actualizar la interfaz de usuario. Las más Windows en tiempo de ejecución APIs llamamos *antes* nuestra llamada a **winrt::resume_background**, los modificadores de contexto atrás y hacia más innecesarios incurrimos. La solución es no llamar a *cualquier* Windows en tiempo de ejecución APIs antes. Moverlos todos después la **winrt::resume_background**.
 
 ```cppwinrt
-#include <winrt/Windows.UI.Core.h> // necessary in order to use winrt::resume_foreground.
+...
+#include <winrt/coroutine.h>
+...
 IAsyncAction MainPage::ClickHandler(IInspectable /* sender */, RoutedEventArgs /* args */)
 {
     // We begin in the UI context.
@@ -408,9 +434,12 @@ IAsyncAction MainPage::ClickHandler(IInspectable /* sender */, RoutedEventArgs /
 Si desea hacer algo más avanzado y, a continuación, puede escribir la suya: adaptadores await. Por ejemplo, si desea que un `co_await` reanudar en el mismo subproceso que se completa la acción de async en (por lo tanto, no hay ningún cambio de contexto), a continuación, podría empezar escribiendo await adaptadores similares a los que se muestra a continuación.
 
 > [!NOTE]
-> El ejemplo de código siguiente se proporciona con fines formativos; es para ayudarle a comenzar a comprender cómo await funcionan los adaptadores. Si desea utilizar esta técnica en su propio código base, se recomienda que desarrolle y pruebe sus propios await struct(s) del adaptador. Por ejemplo, podría escribir **complete_on_any**, **complete_on_current**, y **complete_on(dispatcher)**. También considere la posibilidad de plantillas que toman el **IAsyncXxx** tipo como un parámetro de plantilla.
+> El ejemplo de código siguiente se proporciona con fines formativos; es para ayudarle a comenzar a comprender cómo await funcionan los adaptadores. Si desea utilizar esta técnica en su propio código base, se recomienda que desarrolle y pruebe sus propios await struct(s) del adaptador. Por ejemplo, podría escribir **complete_on_any**, **complete_on_current**, y **complete_on(dispatcher)** . También considere la posibilidad de plantillas que toman el **IAsyncXxx** tipo como un parámetro de plantilla.
 
 ```cppwinrt
+...
+#include <winrt/coroutine.h>
+...
 struct no_switch
 {
     no_switch(Windows::Foundation::IAsyncAction const& async) : m_async(async)
@@ -440,9 +469,12 @@ private:
 };
 ```
 
-Para aprender a usar el **argumento de sin cambios** : adaptadores await, primero deberá saber que cuando el compilador de C++ se encuentra un `co_await` expresión busca funciones llamadas **await_ready**, **await_suspend**, y **await_resume**. C++ / c++ / WinRT biblioteca proporciona estas funciones para que obtenga de forma predeterminada, al igual que este comportamiento razonable.
+Para aprender a usar el **argumento de sin cambios** : adaptadores await, primero deberá saber que, cuando el C++ compilador encuentra un `co_await` expresión busca funciones llamadas **await_ready**, **await_suspend**, y **await_resume**. C++ / c++ / WinRT biblioteca proporciona estas funciones para que obtenga de forma predeterminada, al igual que este comportamiento razonable.
 
 ```cppwinrt
+...
+#include <winrt/coroutine.h>
+...
 IAsyncAction async{ ProcessFeedAsync() };
 co_await async;
 ```
@@ -450,11 +482,14 @@ co_await async;
 Para usar el **argumento de sin cambios** : adaptadores await, cambie el tipo del que `co_await` expresión desde **IAsyncXxx** a **argumento de sin cambios**, como en este ejemplo.
 
 ```cppwinrt
+...
+#include <winrt/coroutine.h>
+...
 IAsyncAction async{ ProcessFeedAsync() };
 co_await static_cast<no_switch>(async);
 ```
 
-A continuación, en lugar de buscar los tres **await_xxx** funciones que coinciden con **IAsyncXxx**, el compilador de C++ busca funciones que coinciden con **argumento de sin cambios**.
+A continuación, en lugar de buscar los tres **await_xxx** funciones que coinciden con **IAsyncXxx**, el C++ compilador busca funciones que coinciden con **argumento de sin cambios**.
 
 ## <a name="canceling-an-asychronous-operation-and-cancellation-callbacks"></a>Cancelar una operación asincrónica y las devoluciones de llamada de cancelación
 
@@ -469,7 +504,16 @@ Características del Runtime de Windows para la programación asincrónica permi
 
 // MainPage.h
 ...
+#include <winrt/coroutine.h>
+#include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Search.h>
+
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::Foundation::Collections;
+using namespace Windows::Storage;
+using namespace Windows::Storage::Search;
+using namespace Windows::UI::Xaml;
 ...
 struct MainPage : MainPageT<MainPage>
 {
@@ -506,18 +550,17 @@ struct MainPage : MainPageT<MainPage>
 private:
     IAsyncOperation<::IVectorView<StorageFile>> m_async;
 };
+...
 ```
 
 Para el lado de la implementación de la cancelación, comencemos con un ejemplo sencillo.
 
 ```cppwinrt
-// pch.h
-#pragma once
+// main.cpp
 #include <iostream>
+#include <winrt/coroutine.h>
 #include <winrt/Windows.Foundation.h>
 
-// main.cpp : Defines the entry point for the console application.
-#include "pch.h"
 using namespace winrt;
 using namespace Windows::Foundation;
 using namespace std::chrono_literals;
@@ -553,6 +596,8 @@ Por lo tanto, otra opción es sondear explícitamente la cancelación dentro de 
 
 ```cppwinrt
 ...
+#include <winrt/coroutine.h>
+...
 IAsyncAction ExplicitCancellationAsync()
 {
     auto cancellation_token{ co_await winrt::get_cancellation_token() };
@@ -582,13 +627,11 @@ Cancelación del Runtime de Windows no fluye automáticamente a otros objetos as
 En este ejemplo de código siguiente, **NestedCoroutineAsync** realiza el trabajo, pero no tiene ninguna lógica especial de cancelación en ella. **CancellationPropagatorAsync** es esencialmente un contenedor de la corrutina anidada; el contenedor reenvía cancelación de manera preventiva.
 
 ```cppwinrt
-// pch.h
-#pragma once
+// main.cpp
 #include <iostream>
+#include <winrt/coroutine.h>
 #include <winrt/Windows.Foundation.h>
 
-// main.cpp : Defines the entry point for the console application.
-#include "pch.h"
 using namespace winrt;
 using namespace Windows::Foundation;
 using namespace std::chrono_literals;
@@ -636,13 +679,11 @@ int main()
 Si devuelve la corrutina [ **IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_), o [ **IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_), entonces puede recuperar el objeto devuelto por la [ **winrt::get_progress_token** ](/uwp/cpp-ref-for-winrt/get-progress-token) funcionando y usarlo para notificar el progreso hacia un controlador de progreso. Aquí tienes un ejemplo de código.
 
 ```cppwinrt
-// pch.h
-#pragma once
+// main.cpp
 #include <iostream>
+#include <winrt/coroutine.h>
 #include <winrt/Windows.Foundation.h>
 
-// main.cpp : Defines the entry point for the console application.
-#include "pch.h"
 using namespace winrt;
 using namespace Windows::Foundation;
 using namespace std::chrono_literals;
@@ -715,12 +756,10 @@ Para obtener más información sobre los controladores de finalización, consult
 A veces, tiene una tarea que se puede realizar simultáneamente con otro trabajo, y no es necesario esperar a que se complete (ningún otro trabajo depende de él), tampoco es necesario para devolver un valor. En ese caso, puede lanzar la tarea y la olvide. Puede hacerlo escribiendo una corrutina cuyo tipo de valor devuelto es [ **winrt::fire_and_forget** ](/uwp/cpp-ref-for-winrt/fire-and-forget) (en lugar de uno de los tipos de operación asincrónica de Windows en tiempo de ejecución, o **Concurrency::Task**).
 
 ```cppwinrt
-// pch.h
-#pragma once
+// main.cpp
+#include <winrt/coroutine.h>
 #include <winrt/Windows.Foundation.h>
 
-// main.cpp : Defines the entry point for the console application.
-#include "pch.h"
 using namespace winrt;
 using namespace std::chrono_literals;
 
@@ -740,8 +779,8 @@ int main()
 ## <a name="important-apis"></a>API importantes
 * [clase Concurrency:: Task](/cpp/parallel/concrt/reference/task-class)
 * [Interfaz IAsyncAction](/uwp/api/windows.foundation.iasyncaction)
-* [IAsyncActionWithProgress&lt;TProgress&gt; interfaz](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)
-* [IAsyncOperation&lt;TResult&gt; interfaz](/uwp/api/windows.foundation.iasyncoperation_tresult_)
+* [IAsyncActionWithProgress&lt;TProgress&gt; interface](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)
+* [IAsyncOperation&lt;TResult&gt; interface](/uwp/api/windows.foundation.iasyncoperation_tresult_)
 * [IAsyncOperationWithProgress&lt;TResult, TProgress&gt; interfaz](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)
 * [Método SyndicationClient::RetrieveFeedAsync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
 * [Clase SyndicationFeed](/uwp/api/windows.web.syndication.syndicationfeed)

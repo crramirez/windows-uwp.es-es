@@ -5,12 +5,12 @@ ms.date: 07/07/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d010816b1ba4c9941aea7bdcdb4bd4c50038aca6
-ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.openlocfilehash: 72bad5bff8092e63a73cc1e32f4424b70867d245
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59067840"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366031"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>Elegir el tipo adecuado de canal de notificación de inserción
 
@@ -38,10 +38,10 @@ Son los más usados actualmente en Windows y son adecuados para casi todos los e
 
 ### <a name="what-do-primary-channels-enable"></a>¿Qué permiten los canales principales?
 
--   **Enviar actualizaciones de iconos o distintivos para el icono principal.** Si el usuario ha elegido anclar tu icono a la pantalla de inicio, esta es tu oportunidad de que esté a la vista. Envía actualizaciones con información útil o avisos de experiencias dentro de la aplicación. 
--   **Envío de notificaciones del sistema.** Las notificaciones son una oportunidad de poner inmediatamente determinada información ante el usuario. Las hace mostrar el shell en la parte superior de la mayoría de las aplicaciones y, aparecen en vivo en el centro de actividades, por lo que el usuario puede volver atrás e interactuar con ellas más tarde. 
+-   **Envío de actualizaciones de icono o un distintivo en el icono principal.** Si el usuario ha elegido anclar tu icono a la pantalla de inicio, esta es tu oportunidad de que esté a la vista. Envía actualizaciones con información útil o avisos de experiencias dentro de la aplicación. 
+-   **Cómo enviar notificaciones.** Las notificaciones son una oportunidad de poner inmediatamente determinada información ante el usuario. Las hace mostrar el shell en la parte superior de la mayoría de las aplicaciones y, aparecen en vivo en el centro de actividades, por lo que el usuario puede volver atrás e interactuar con ellas más tarde. 
 -   **Envío de notificaciones sin procesar para desencadenar una tarea en segundo plano.** A veces, quieres realizar algún trabajo en nombre del usuario, en función de una notificación. Las notificaciones sin procesar permiten que se ejecuten las tareas en segundo plano de tu aplicación 
--   **Cifrado de mensajes en tránsito proporcionado por Windows con TLS.** Los mensajes se cifran en la red tanto al llegar a WNS como al ir hacia el dispositivo del usuario.  
+-   **Cifrado de mensajes en tránsito proporcionado por Windows mediante TLS.** Los mensajes se cifran en la red tanto al llegar a WNS como al ir hacia el dispositivo del usuario.  
 
 ### <a name="limitations-of-primary-channels"></a>Limitaciones de los canales principales
 
@@ -108,12 +108,12 @@ Esta es una comparación rápida entre los distintos tipos de canales:
 
 <tr class="header">
 <th align="left"><b>Tipo</b></th>
-<th align="left"><b>¿Notificación del sistema?</b></th>
-<th align="left"><b>¿Notificación de icono, distintivo?</b></th>
-<th align="left"><b>¿Notificaciones de inserción sin procesar?</b></th>
+<th align="left"><b>¿Notificación de inserción?</b></th>
+<th align="left"><b>¿Icono/notificación de inserción?</b></th>
+<th align="left"><b>¿Sin procesar notificaciones de inserción?</b></th>
 <th align="left"><b>Autenticación</b></th>
 <th align="left"><b>API</b></th>
-<th align="left"><b>¿Es obligatorio el registro en la Tienda?</b></th>
+<th align="left"><b>¿Requerido el registro de Store?</b></th>
 <th align="left"><b>Canales</b></th>
 <th align="left"><b>Cifrado</b></th>
 </tr>
@@ -167,11 +167,11 @@ En general, te recomendamos que uses el canal principal en la aplicación, con u
 
 * [Enviar una notificación de icono local](../tiles-and-notifications/sending-a-local-tile-notification.md)
 * [Notificaciones del sistema interactivas y adaptables](../tiles-and-notifications/adaptive-interactive-toasts.md)
-* [Inicio rápido: Enviar una notificación de inserción](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)
-* [Cómo actualizar un distintivo mediante notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh465450)
-* [Cómo solicitar, crear y guardar un canal de notificación](https://msdn.microsoft.com/library/windows/apps/hh465412)
-* [Cómo interceptar notificaciones para aplicaciones en ejecución](https://msdn.microsoft.com/library/windows/apps/hh465450)
-* [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (WNS)](https://msdn.microsoft.com/library/windows/apps/hh465407)
-* [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](https://msdn.microsoft.com/library/windows/apps/hh465435)
-* [Directrices y lista de comprobación de notificaciones de inserción](https://msdn.microsoft.com/library/windows/apps/hh761462)
+* [Inicio rápido: Enviar una notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [Cómo actualizar una notificación a través de notificaciones de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
+* [Cómo solicitar, crear y guardar un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
+* [Cómo interceptar las notificaciones para la ejecución de aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
+* [Cómo realizar la autenticación con el servicio de notificaciones de inserción de Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [Encabezados de solicitud y respuesta del servicio de notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
+* [Directrices y lista de comprobación para las notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
 * [Notificaciones sin procesar](raw-notification-overview.md)

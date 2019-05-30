@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c7d40765e0d12e3543f198aebd5acd15ed3aff3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2e1eba68d1046892a67d779d353fd9b2e6bf224e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595500"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366940"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Crear un juego en 3D en JavaScript con three.js
 
@@ -638,7 +638,7 @@ Al final, aplicamos cualquiera de los valores actualizados `x` e `y` a la cámar
 
 ---
 
-Enhorabuena. Ya tienes una cámara controlada por el jugador que puede moverse y mirar alrededor. Todavía podemos colarnos por las paredes, pero eso lo solucionaremos más tarde. A continuación, agregaremos el dinosaurio.
+¡Enhorabuena! Ya tienes una cámara controlada por el jugador que puede moverse y mirar alrededor. Todavía podemos colarnos por las paredes, pero eso lo solucionaremos más tarde. A continuación, agregaremos el dinosaurio.
 
 <iframe height='300' scrolling='no' title='Mover' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulte el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>moverse por</a> mediante Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -1075,7 +1075,7 @@ function lockChange() {
 
 ---
 
-Eso es todo. Ha sido un viaje largo, pero ya tenemos nuestro juego creado con **three.js**.
+Ya está. Ha sido un viaje largo, pero ya tenemos nuestro juego creado con **three.js**.
 
 Consulta la parte superior de la página para ver el [último CodePen](#introduction).
 
@@ -1084,7 +1084,7 @@ Consulta la parte superior de la página para ver el [último CodePen](#introduc
 Ahora tiene una aplicación para UWP, es posible que publicarla en la Microsoft Store (suponiendo que se han mejorado en primer lugar). Este proceso tiene diferentes pasos.
 
 1.  Tienes que estar [registrado](https://developer.microsoft.com/store/register) como desarrollador de Windows.
-2.  Debes usar la [lista de comprobación](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) del envío de la aplicación.
-3.  La aplicación debe enviarse para su [certificación](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process).
+2.  Debes usar la [lista de comprobación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) del envío de la aplicación.
+3.  La aplicación debe enviarse para su [certificación](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
 Para obtener más información, consulte [publicar su aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
 

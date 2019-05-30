@@ -6,15 +6,15 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ccb9447e9594f71907f0da5d0e15f9c6c65bb6b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a63cf64fec32be5439838618e534617d1f4a9afc
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57622760"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66359359"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>Escenario 1: Generar un archivo PRI desde recursos de cadena y los archivos de recursos
-En este escenario, usaremos las [API de indexación de recursos de paquetes (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690) para que una aplicación nueva represente nuestro sistema de compilación personalizado. Recuerda que el propósito de este sistema de compilación personalizado consiste en crear archivos PRI para una aplicación para UWP de destino. Por lo tanto, como parte de este tutorial, vamos a crear algunos archivos de recursos de muestra (con cadenas y otros tipos de recursos) para representar los recursos de esa aplicación para UWP de destino.
+En este escenario, usaremos las [API de indexación de recursos de paquetes (PRI)](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference) para que una aplicación nueva represente nuestro sistema de compilación personalizado. Recuerda que el propósito de este sistema de compilación personalizado consiste en crear archivos PRI para una aplicación para UWP de destino. Por lo tanto, como parte de este tutorial, vamos a crear algunos archivos de recursos de muestra (con cadenas y otros tipos de recursos) para representar los recursos de esa aplicación para UWP de destino.
 
 ## <a name="new-project"></a>Nuevo proyecto
 Comienza creando un proyecto nuevo en Microsoft Visual Studio Crea un proyecto de **aplicación de consola de Windows de Visual C++** y asígnale el nombre de *CBSConsoleApp* (para "aplicación de consola de sistema de compilación personalizado").
@@ -228,10 +228,10 @@ La información comienza con un mapa de recursos, que tiene el nombre de la fami
 El primer recurso de cadena es *EnOnlyString* de `en-US\resources.resw` y solo tiene un candidato (que coincide con el calificador *language-en-US*). A continuación, viene *LocalizedString1* tanto de `resources.resw` como de `en-US\resources.resw`. En consecuencia, tiene dos candidatos: una coincidencia *language-en-US*y un candidato independiente de reserva que coincide con cualquier contexto. Del mismo modo, *LocalizedString2* tiene dos candidatos: *language-de-DE* e independiente. Y, finalmente, *NeutralOnlyString* solo existe en forma independiente. Le doy ese nombre para dejar claro que no se ha diseñado para localizarse.
 
 ## <a name="summary"></a>Resumen
-En este escenario, te mostramos cómo usar las [API de indexación de recursos de paquetes (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690) para crear un indizador de recursos. Hemos agregado archivos de activos y recursos de cadena para el indizador de recursos. A continuación, hemos usado el indizador de recursos para generar un archivo binario PRI. Y finalmente hemos volcado el archivo PRI binario en formato XML, de modo que podríamos confirmamos que contiene la información que esperábamos.
+En este escenario, te mostramos cómo usar las [API de indexación de recursos de paquetes (PRI)](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference) para crear un indizador de recursos. Hemos agregado archivos de activos y recursos de cadena para el indizador de recursos. A continuación, hemos usado el indizador de recursos para generar un archivo binario PRI. Y finalmente hemos volcado el archivo PRI binario en formato XML, de modo que podríamos confirmamos que contiene la información que esperábamos.
 
 ## <a name="important-apis"></a>API importantes
-* [Indexación de referencia (PRI) de recursos del paquete](https://msdn.microsoft.com/library/windows/desktop/mt845690)
+* [Indexación de referencia (PRI) de recursos del paquete](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [API de indexación de recursos de paquetes (PRI) y sistemas de compilación personalizados](pri-apis-custom-build-systems.md)

@@ -5,12 +5,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, SQLite, base de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: 552de1ccb8f8e69a4ad716e54557ae0b5cd3a3f4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 465376214f1bf1b390ec6db8609783e4e7872196
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635670"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362788"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Usar una base de datos de SQLite en una aplicación para UWP
 Puedes usar SQLite para almacenar y recuperar datos en una base de datos ligera en el dispositivo del usuario. Esta guía te muestra cómo hacerlo.
@@ -39,7 +39,7 @@ Para probarlo, consulta [Introducción a EF Core en la Plataforma universal de W
 
 ### <a name="sqlite-library"></a>Biblioteca de SQLite
 
-La biblioteca de [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) implementa las interfaces en el espacio de nombres [System.Data.Common](https://msdn.microsoft.com/library/system.data.common.aspx). Microsoft mantiene estas implementaciones de forma activa, y estas proporcionan un contenedor intuitivo para la API de SQLite nativa de bajo nivel.
+La biblioteca de [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) implementa las interfaces en el espacio de nombres [System.Data.Common](https://docs.microsoft.com/dotnet/api/system.data.common?redirectedfrom=MSDN). Microsoft mantiene estas implementaciones de forma activa, y estas proporcionan un contenedor intuitivo para la API de SQLite nativa de bajo nivel.
 
 El resto de esta guía te ayudará a usar esta biblioteca.
 
@@ -127,7 +127,7 @@ Haremos lo siguiente:
 
 : uno: Preparación de la clase de acceso a datos.
 
-: dos: Inicializar la base de datos de SQLite.
+:two: Inicializar la base de datos de SQLite.
 
 : tres: Insertar datos en la base de datos de SQLite.
 
