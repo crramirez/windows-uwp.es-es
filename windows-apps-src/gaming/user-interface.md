@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, UWP, games, directx, plantillas
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a4491fe9a3bb97a73652c40a2968f2f53c377b5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5eb36b66cc067111e2749ebd51a05994a011ba01
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634250"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66367472"
 ---
 # <a name="directx-game-project-templates"></a>Plantillas de proyectos de juegos DirectX
 
@@ -33,7 +33,7 @@ Visual Studio 2015 incluye tres plantillas de DirectX y UWP:
 
 -   DirectX 11 App (Universal Windows): la plantilla DirectX 11 App (Universal Windows) crea un proyecto de UWP, que representa directamente en una ventana de aplicación con DirectX 11.
 -   DirectX 12 App (Universal Windows): la plantilla DirectX 12 App (Universal Windows) crea un proyecto de UWP, que representa directamente en una ventana de aplicación con DirectX 12.
--   DirectX 11 and XAML App (Universal Windows): la plantilla DirectX 11 and XAML App (Universal Windows) crea un proyecto de UWP, que representa en un control XAML con DirectX 11. Esta plantilla usa un [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834), para que puedas usar los controles de la interfaz de usuario XAML. Esto puede facilitar la adición de elementos de interfaz de usuario pero el uso de la plantilla XAML puede reducir el rendimiento.
+-   DirectX 11 and XAML App (Universal Windows): la plantilla DirectX 11 and XAML App (Universal Windows) crea un proyecto de UWP, que representa en un control XAML con DirectX 11. Esta plantilla usa un [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel), para que puedas usar los controles de la interfaz de usuario XAML. Esto puede facilitar la adición de elementos de interfaz de usuario pero el uso de la plantilla XAML puede reducir el rendimiento.
 
 La plantilla que elijas dependerá del rendimiento y de las tecnologías que quieras usar.
 

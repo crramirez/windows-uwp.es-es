@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a77048bed3ad27f2040a672d93380d0250f9aa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 177d5a8fed47396fa694bd8fb88baea8d8b7bbb3
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641100"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66371186"
 ---
 # <a name="output-merger-om-stage"></a>Fase de fusión de salida (OM)
 
@@ -37,7 +37,7 @@ La fusión combina uno o más valores de píxel para crear un color de píxel fi
 
 ![diagrama de funcionamiento de la fusión de datos](images/d3d10-blend-state.png)
 
-Conceptualmente, puedes visualizar este diagrama de flujo implementado dos veces en la fase de fusión de salida: el primero combina los datos RGB, mientras que, en paralelo, el segundo combina los datos alfa. Para ver cómo usar la API para crear y establecer el estado de fusión, consulta [Configuring Blending Functionality](https://msdn.microsoft.com/library/windows/desktop/bb205072) (Configurar la funcionalidad de fusión).
+Conceptualmente, puedes visualizar este diagrama de flujo implementado dos veces en la fase de fusión de salida: el primero combina los datos RGB, mientras que, en paralelo, el segundo combina los datos alfa. Para ver cómo usar la API para crear y establecer el estado de fusión, consulta [Configuring Blending Functionality](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-blend-state) (Configurar la funcionalidad de fusión).
 
 La fusión de la función fija se puede habilitar de manera independiente para cada destino de representación. No obstante, existe un único conjunto de controles de fusión, por lo que la misma fusión se aplica a todos los objetos RenderTargets con la fusión habilitada. Los valores de fusión (incluido BlendFactor) siempre se fijan en el rango del formato de destino de representación antes de la fusión. La fijación se realiza por destino de representación y respeta el tipo de destino de representación. La única excepción es para los formatos float16, float11 o float10, que no se fijan, de modo que las operaciones de fusión en estos formatos pueden realizarse, como mínimo, con la misma precisión o el mismo rango que el formato de salida. Los valores NaN y ceros con firma se propagan en todos los casos (incluidos los pesos de fusión de 0,0).
 

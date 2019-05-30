@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c598868610e42e0f2ad64ef2d4fedfb48c4d91e9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ad304d22fd1c519f7364ac69882eeaac9fa1a5c7
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598620"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360710"
 ---
 # <a name="playready-encrypted-media-extension"></a>Encrypted Media Extension (EME) de PlayReady
 
@@ -72,7 +72,7 @@ Para usar la tecnología DRM de hardware de PlayReady, la aplicación web de Jav
 En ocasiones algunos contenidos no son compatibles con DRM de hardware. El contenido Cocktail nunca se admite en DRM de hardware; si quieres reproducir este tipo de contenido debes desactivar DRM de hardware. Cierto DRM de hardware admitirá HEVC y otro no lo hará. Si quieres reproducir contenido HEVC y DRM de hardware no lo admite, también tendrás que desactivarlo.
 
 > [!NOTE]
-> Para determinar si se admite el contenido HEVC, después de crear una instancia de `com.microsoft.playready`, usa el método [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441).
+> Para determinar si se admite el contenido HEVC, después de crear una instancia de `com.microsoft.playready`, usa el método [**PlayReadyStatics.CheckSupportedHardware**](https://docs.microsoft.com/uwp/api/windows.media.protection.playready.playreadystatics.checksupportedhardware).
 
 ## <a name="add-secure-stop-to-your-web-app"></a>Agregar la detención segura a aplicaciones web
 
@@ -298,7 +298,7 @@ function foo() {
 
 Para obtener más información, consulta las [aplicaciones de muestra](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [DRM de PlayReady](playready-client-sdk.md)
 
 

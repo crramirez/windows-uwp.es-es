@@ -6,12 +6,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2d402bca61fc271b6d1e2e972cca280693f9ce3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 36ebabbfd8f7e5f40e31be44d6dc7e4483a199ee
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57658130"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363712"
 ---
 # <a name="guidelines-for-cross-slide"></a>Instrucciones para el deslizamiento transversal
 
@@ -20,9 +20,9 @@ ms.locfileid: "57658130"
 
 **API importantes**
 
--   [**CrossSliding**](https://msdn.microsoft.com/library/windows/apps/br241942)
--   [**CrossSlideThresholds**](https://msdn.microsoft.com/library/windows/apps/br241941)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
+-   [**CrossSliding**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crosssliding)
+-   [**CrossSlideThresholds**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crossslidethresholds)
+-   [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
 
 Usa el gesto de deslizamiento transversal para admitir la selección con el gesto de deslizar rápidamente y las interacciones de arrastrar (mover) con el gesto de deslizar.
 
@@ -54,7 +54,7 @@ En esta imagen se muestra cómo un usuario toca un elemento de la interfaz de us
 
 Aquí encontrarás algunas directrices que debes tener en cuenta a la hora de incluir la funcionalidad de deslizar transversalmente en tu aplicación.
 
-Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección. Para más información, consulta [Agregar controles ListView](https://msdn.microsoft.com/library/windows/apps/hh465382).
+Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección. Para más información, consulta [Agregar controles ListView](https://docs.microsoft.com/previous-versions/windows/apps/hh465382(v=win.10)).
 
 **Tenga en cuenta**  en casos donde el área de contenido puede estar distribuido en dos direcciones, como los exploradores web o lectores electrónicos, la interacción con hora presione y mantenga debe usarse para invocar el menú contextual para los objetos como imágenes e hipervínculos.
 
@@ -69,7 +69,7 @@ Usa el deslizamiento transversal para listas y colecciones que se desplazan en u
 
 ### <span id="selection"></span><span id="SELECTION"></span>
 
-**Seleccionar**
+**Selecting**
 
 Seleccionar es el marcado de uno o más objetos sin que haya inicio o activación. Esta acción es similar a un único clic con el mouse o la tecla Mayús y un clic del mouse sobre uno o varios objetos.
 

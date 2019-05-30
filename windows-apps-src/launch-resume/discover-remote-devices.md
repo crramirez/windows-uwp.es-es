@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: dispositivos Windows 10, uwp, conectados, los sistemas remotos, Roma, proyecto Roma
 ms.localizationpriority: medium
-ms.openlocfilehash: 7788cb546eddf77292210b5b1e8268239504a843
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 665a40cf69b7518643390abddc3895be07c63c5c
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592140"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66366196"
 ---
 # <a name="discover-remote-devices"></a>Detectar dispositivos remotos
 Tu aplicación puede usar la red inalámbrica, Bluetooth y conexión de nube para detectar dispositivos Windows en los que se inicie sesión con la misma cuenta de Microsoft que en el dispositivo detectado. Los dispositivos remotos no necesitan tener instalado ningún software especial para que se puedan reconocer.
@@ -20,7 +20,7 @@ Tu aplicación puede usar la red inalámbrica, Bluetooth y conexión de nube par
 > Esta guía da por hecho que ya has concedido acceso a la característica de sistemas remotos siguiendo los pasos de [Iniciar una aplicación remota](launch-a-remote-app.md).
 
 ## <a name="filter-the-set-of-discoverable-devices"></a>Filtrar el conjunto de dispositivos reconocibles
-Puedes reducir el conjunto de dispositivos reconocibles mediante el uso de [**RemoteSystemWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher) con filtros. Los filtros pueden detectar el tipo de detección (próxima frente a red local frente a conexión de nube), el tipo de dispositivo (escritorio, dispositivos móviles, Xbox, Hub y Holographic) y el estado de disponibilidad (el estado de disponibilidad de un dispositivo para usar características de sistema remoto).
+Puedes reducir el conjunto de dispositivos reconocibles mediante el uso de [**RemoteSystemWatcher**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystemWatcher) con filtros. Los filtros pueden detectar el tipo de detección (próxima frente a red local frente a conexión de nube), el tipo de dispositivo (escritorio, dispositivos móviles, Xbox, Hub y Holographic) y el estado de disponibilidad (el estado de disponibilidad de un dispositivo para usar características de sistema remoto).
 
 Los objetos de filtro se deben crear antes de que se inicialice el objeto **RemoteSystemWatcher** o mientras se inicialice, ya que se pasan como un parámetro en su constructor. El siguiente código crea un filtro de cada tipo disponible y luego los agrega a una lista.
 
@@ -31,24 +31,24 @@ Los objetos de filtro se deben crear antes de que se inicialice el objeto **Remo
 
 > [!NOTE]
 > El valor de filtro de proximidad no garantiza el grado de proximidad física. Para escenarios que requieren proximidad física confiable, usa el valor [**RemoteSystemDiscoveryType.SpatiallyProximal**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype) en el filtro. Actualmente, este filtro solo permite que los dispositivos se detecten por Bluetooth. Como se admiten nuevos mecanismos y protocolos de detección que garantizan la proximidad física, se incluirán aquí también.  
-También hay una propiedad en el [ **RemoteSystem** ](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) clase que indica si un dispositivo detectado es en realidad en proximidad física: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity).
+También hay una propiedad en el [ **RemoteSystem** ](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem) clase que indica si un dispositivo detectado es en realidad en proximidad física: [**RemoteSystem.IsAvailableBySpatialProximity**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem.IsAvailableByProximity).
 
 > [!NOTE]
 > Si quieres detectar dispositivos a través de una red local (determinado por la selección de filtro de tipo de detección), la red debe estar utilizando un perfil "privado" o de "dominio". El dispositivo no detectará otros dispositivos en una red "pública".
 
-Una vez que se crea una lista de objetos [**IRemoteSystemFilter**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.IRemoteSystemFilter), se puede pasar en el constructor de un **RemoteSystemWatcher**.
+Una vez que se crea una lista de objetos [**IRemoteSystemFilter**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.IRemoteSystemFilter), se puede pasar en el constructor de un **RemoteSystemWatcher**.
 
 [!code-cs[Main](./code/DiscoverDevices/MainPage.xaml.cs#SnippetCreateWatcher)]
 
-Cuando se llama al método [**Inicio**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.Start) de este observador, se genera el evento [**RemoteSystemAdded**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemWatcher.RemoteSystemAdded) solo si se detecta un dispositivo que cumpla con todos los criterios siguientes:
+Cuando se llama al método [**Inicio**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemwatcher.start) de este observador, se genera el evento [**RemoteSystemAdded**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemwatcher.remotesystemadded) solo si se detecta un dispositivo que cumpla con todos los criterios siguientes:
 * Es reconocible por conexión de proximidad
 * Es un escritorio o un teléfono
 * Se clasifica como disponible
 
-Desde allí, el procedimiento para controlar los eventos, recuperar objetos [**RemoteSystem**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) y conectarse a dispositivos remotos es exactamente igual que el de [Iniciar una aplicación remota](launch-a-remote-app.md). En resumen, los objetos **RemoteSystem** se almacenan como propiedades de objetos [**RemoteSystemAddedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemAddedEventArgs), que se pasan con cada evento **RemoteSystemAdded**.
+Desde allí, el procedimiento para controlar los eventos, recuperar objetos [**RemoteSystem**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem) y conectarse a dispositivos remotos es exactamente igual que el de [Iniciar una aplicación remota](launch-a-remote-app.md). En resumen, los objetos **RemoteSystem** se almacenan como propiedades de objetos [**RemoteSystemAddedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystemAddedEventArgs), que se pasan con cada evento **RemoteSystemAdded**.
 
 ## <a name="discover-devices-by-address-input"></a>Detectar dispositivos mediante entrada de dirección
-Es posible que algunos dispositivos no estén asociados a un usuario o no sean detectables mediante un examen, pero se puede llegar a ellos igualmente si la aplicación detectada usa una dirección directa. La clase [**HostName**](https://msdn.microsoft.com/library/windows/apps/windows.networking.hostname.aspx) se usa para representar la dirección de un dispositivo remoto. A menudo se almacena en forma de una dirección IP, pero se permiten varios otros formatos (consulta el [**constructor de HostName**](https://msdn.microsoft.com/library/windows/apps/br207118.aspx) para obtener información detallada).
+Es posible que algunos dispositivos no estén asociados a un usuario o no sean detectables mediante un examen, pero se puede llegar a ellos igualmente si la aplicación detectada usa una dirección directa. La clase [**HostName**](https://docs.microsoft.com/uwp/api/windows.networking.hostname) se usa para representar la dirección de un dispositivo remoto. A menudo se almacena en forma de una dirección IP, pero se permiten varios otros formatos (consulta el [**constructor de HostName**](https://docs.microsoft.com/uwp/api/windows.networking.hostname.) para obtener información detallada).
 
 Un objeto **RemoteSystem** se recupera si se proporciona un objeto **HostName** válido. Si los datos de la dirección no son válidos, se devuelve una referencia de objeto `null`.
 
@@ -95,5 +95,5 @@ Para cambiar esta configuración, el usuario debe abrir la aplicación **Configu
 ## <a name="related-topics"></a>Temas relacionados
 * [Las aplicaciones conectadas y los dispositivos (proyecto Roma)](connected-apps-and-devices.md)
 * [Inicie una aplicación remota](launch-a-remote-app.md)
-* [Referencia de API de sistemas remoto](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)
+* [Referencia de API de sistemas remoto](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems)
 * [Muestra de sistemas remotos](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)

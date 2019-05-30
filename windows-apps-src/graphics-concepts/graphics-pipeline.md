@@ -8,19 +8,19 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 55621cec768e0aac680c3a84fd803e591459a97d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1b931268dc20f40c1bc1d7c700f346d29d6aa9d6
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605440"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66370613"
 ---
 # <a name="graphics-pipeline"></a>Canalización de gráficos
 
 
 La canalización de gráficos de Direct3D está diseñada para generar gráficos para aplicaciones de juegos en tiempo real. Los datos fluyen de la entrada a la salida por cada una de las fases configurables o programables.
 
-Todas las fases pueden configurarse mediante la API de Direct3D. Las fases que ofrecen núcleos de sombreador comunes (bloques rectangulares redondeados) pueden programarse mediante el lenguaje de programación [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561). Esto hace que la canalización sea muy flexible y adaptable.
+Todas las fases pueden configurarse mediante la API de Direct3D. Las fases que ofrecen núcleos de sombreador comunes (bloques rectangulares redondeados) pueden programarse mediante el lenguaje de programación [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl). Esto hace que la canalización sea muy flexible y adaptable.
 
 La más utilizadas son la fase del sombreador de vértices (VS) y la fase del sombreador de píxeles (PS). Si no proporcionas estas fases de sombreador, se usa el sombreador de píxeles y un vértice de paso a través no operativo predeterminado.
 
@@ -48,7 +48,7 @@ La más utilizadas son la fase del sombreador de vértices (VS) y la fase del so
 
 ## <a name="geometry-shader-stage"></a>Fase de sombreador de geometría
 
-|-|-| |Propósito|La [fase del sombreador de geometría (GS)](geometry-shader-stage--gs-.md) procesa primitivos completos: triángulos, líneas y puntos, junto con sus vértices adyacentes. Admite la amplificación y la desamplificación geométrica. Es útil para algoritmos, como Point Sprite Expansion, Dynamic Particle Systems, Fur/Fin Generation, Shadow Volume Generation, Single Pass Render-to-Cubemap, Per-Primitive Material Swapping y Per-Primitive Material Setup, que incluye la generación de coordenadas baricéntricas como datos primitivos, de modo que un sombreador de píxeles pueda realizar la interpolación de atributos personalizada. | |Entrada|A diferencia de los sombreadores de vértices, que trabajan en un solo vértice, las entradas del sombreador de geometría son los vértices para un primitivo completo (tres vértices para triángulos, dos vértices para líneas o un solo vértice para el punto).| |Salida|La fase del sombreador de geometría (GS) es capaz de presentar varios vértices que forman una sola topología seleccionada. Las topologías de salida del sombreador de geometría disponibles son <strong>tristrip</strong>, <strong>linestrip</strong> y <strong>pointlist</strong>. El número de primitivos emitido puede variar libremente dentro de cualquier invocación del sombreador de geometría, aunque el número máximo de vértices que podría emitirse debe declararse de forma estática. Las longitudes de franja emitidas desde una invocación del sombreador de geometría pueden ser arbitrarias, y pueden crearse nuevas franjas a través de la función HLSL [RestartStrip](https://msdn.microsoft.com/library/windows/desktop/bb509660).|
+|-|-| |Propósito|La [fase del sombreador de geometría (GS)](geometry-shader-stage--gs-.md) procesa primitivos completos: triángulos, líneas y puntos, junto con sus vértices adyacentes. Admite la amplificación y la desamplificación geométrica. Es útil para algoritmos, como Point Sprite Expansion, Dynamic Particle Systems, Fur/Fin Generation, Shadow Volume Generation, Single Pass Render-to-Cubemap, Per-Primitive Material Swapping y Per-Primitive Material Setup, que incluye la generación de coordenadas baricéntricas como datos primitivos, de modo que un sombreador de píxeles pueda realizar la interpolación de atributos personalizada. | |Entrada|A diferencia de los sombreadores de vértices, que trabajan en un solo vértice, las entradas del sombreador de geometría son los vértices para un primitivo completo (tres vértices para triángulos, dos vértices para líneas o un solo vértice para el punto).| |Salida|La fase del sombreador de geometría (GS) es capaz de presentar varios vértices que forman una sola topología seleccionada. Las topologías de salida del sombreador de geometría disponibles son <strong>tristrip</strong>, <strong>linestrip</strong> y <strong>pointlist</strong>. El número de primitivos emitido puede variar libremente dentro de cualquier invocación del sombreador de geometría, aunque el número máximo de vértices que podría emitirse debe declararse de forma estática. Las longitudes de franja emitidas desde una invocación del sombreador de geometría pueden ser arbitrarias, y pueden crearse nuevas franjas a través de la función HLSL [RestartStrip](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-so-restartstrip).|
 
 ## <a name="stream-output-stage"></a>Fase de salida de flujo
 

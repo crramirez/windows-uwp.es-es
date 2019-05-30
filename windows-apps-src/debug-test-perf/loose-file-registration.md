@@ -5,12 +5,12 @@ ms.date: 6/1/2018
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos, Administrador de aplicaciones, implementación, sdk
 ms.localizationpriority: medium
-ms.openlocfilehash: 928c07bd23228f0fefd78be6019a0d116b2e6e4b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: adc944f3e84e2ea7ba3dacd2021bc2e141bf8cdd
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635430"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362317"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Implementar una aplicación a través del registro de archivos dinámico 
 
@@ -34,7 +34,7 @@ Diseño de archivo dinámico es simplemente el acto de colocar el contenido de l
 Windows proporciona varias herramientas para desarrolladores para registrar los diseños de archivo dinámico en dispositivos locales y remotos. Puede elegir entre `WinDeployAppCmd` (herramienta de SDK de Windows), Windows Device Portal, PowerShell, y [Visual Studio](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#register-layout-from-network). A continuación analizaremos cómo registrar archivos separados con estas herramientas. Pero en primer lugar, asegúrese de que tiene la configuración:
 
 - Los dispositivos deben estar en Windows 10 Creators Update (compilación 14965) o una versión posterior.
-- Deberá habilitar [modo de programador](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) y [detección de dispositivos](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development#device-discovery) en todos los dispositivos.
+- Deberá habilitar [modo de programador](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) y [detección de dispositivos](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development#device-discovery) en todos los dispositivos.
 
 > [!IMPORTANT]
 > Registro de archivo dinámico solo está disponible en los dispositivos que admiten el protocolo de recurso compartido de red (SMB): Escritorio y Xbox. 

@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a3bf2ce69105787b7ca9e83c7f7fe5db8ae1038
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 14f5fa06cfa0a6a7e393f3e2d513af0898d1f822
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624860"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360938"
 ---
 # <a name="periodic-notification-overview"></a>Introducción a las notificaciones periódicas
  
@@ -34,14 +34,14 @@ Las notificaciones periódicas permiten a la aplicación obtener actualizaciones
 
 Las notificaciones periódicas requieren que la aplicación hospede un servicio de nube. Todos los usuarios que tienen la aplicación instalada sondean el servicio de forma periódica. En cada intervalo de sondeo, por ejemplo, una vez cada hora, Windows envía una solicitud HTTP GET al URI, descarga el contenido del icono o distintivo solicitado (como XML) que se suministra en la respuesta a la solicitud, y muestra el contenido en el icono de la aplicación.
 
-Ten en cuenta que las actualizaciones periódicas no se pueden usar como notificaciones del sistema. Las notificaciones del sistema se entregan mejor mediante notificaciones [programadas](https://msdn.microsoft.com/library/windows/apps/hh465417) o [de inserción](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252).
+Ten en cuenta que las actualizaciones periódicas no se pueden usar como notificaciones del sistema. Las notificaciones del sistema se entregan mejor mediante notificaciones [programadas](https://docs.microsoft.com/previous-versions/windows/apps/hh465417(v=win.10)) o [de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10)).
 
 ## <a name="uri-location-and-xml-content"></a>Ubicación del URI y contenido XML
 
 
 Se puede usar cualquier dirección web HTTP o HTTPS válida como el URI que se sondeará.
 
-La respuesta del servidor de nube incluye el contenido descargado. El contenido que devuelve el URI debe cumplir la especificación del esquema XML de [icono](adaptive-tiles-schema.md) o [distintivo](https://msdn.microsoft.com/library/windows/apps/br212851), y debe usar la codificación UTF-8. Puedes usar encabezados HTTP definidos para especificar el [tiempo de caducidad](#expiration-of-tile-and-badge-notifications) o la etiqueta de la notificación.
+La respuesta del servidor de nube incluye el contenido descargado. El contenido que devuelve el URI debe cumplir la especificación del esquema XML de [icono](adaptive-tiles-schema.md) o [distintivo](https://docs.microsoft.com/uwp/schemas/tiles/badgeschema/schema-root), y debe usar la codificación UTF-8. Puedes usar encabezados HTTP definidos para especificar el [tiempo de caducidad](#expiration-of-tile-and-badge-notifications) o la etiqueta de la notificación.
 
 ## <a name="polling-behavior"></a>Comportamiento del sondeo
 
@@ -49,8 +49,8 @@ La respuesta del servidor de nube incluye el contenido descargado. El contenido 
 Para comenzar a sondear llama a uno de estos métodos:
 
 -   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (icono)
--   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (notificación)
--   [**StartPeriodicUpdateBatch** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (icono)
+-   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (Badge)
+-   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (Tile)
 
 Cuando se llama a uno de estos métodos, se sondea inmediatamente el URI y el icono o distintivo se actualiza con el contenido recibido. Después de este sondeo inicial, Windows continúa proporcionando actualizaciones con el intervalo solicitado. El sondeo continúa hasta que lo detienes explícitamente (con [**TileUpdater.StopPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater.StopPeriodicUpdate)), se desinstala tu aplicación o, en el caso de un icono secundario, se quita el icono. En caso contrario, Windows sigue sondeando las actualizaciones del icono o distintivo aunque la aplicación no vuelva a iniciarse nunca.
 
@@ -84,13 +84,13 @@ Por ejemplo, durante un día de gran actividad en el mercado de valores, puedes 
 ## <a name="periodic-notifications-in-the-notification-queue"></a>Notificaciones periódicas en la cola de notificaciones
 
 
-Puedes usar actualizaciones de icono periódicas con el [ciclo de notificaciones](https://msdn.microsoft.com/library/windows/apps/hh781199). De manera predeterminada, un icono de la pantalla Inicio muestra el contenido de una sola notificación hasta que es reemplazada por una notificación nueva. Cuando el ciclo de notificaciones está habilitado, se mantienen hasta cinco notificaciones en la cola y el icono las recorre cíclicamente.
+Puedes usar actualizaciones de icono periódicas con el [ciclo de notificaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh781199(v=win.10)). De manera predeterminada, un icono de la pantalla Inicio muestra el contenido de una sola notificación hasta que es reemplazada por una notificación nueva. Cuando el ciclo de notificaciones está habilitado, se mantienen hasta cinco notificaciones en la cola y el icono las recorre cíclicamente.
 
-Si la cola ha alcanzado su capacidad de cinco notificaciones, la próxima notificación nueva reemplazará la notificación más antigua de la cola. No obstante, si se establecen etiquetas en las notificaciones, puede afectar a la directiva de reemplazo de la cola. Una etiqueta es una cadena específica de la aplicación, y que no distingue entre mayúsculas y minúsculas, de hasta 16 caracteres especificada en el encabezado HTTP [X-WNS-Tag](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_tag) de la carga de respuesta. Windows compara la etiqueta de una notificación entrante con las etiquetas de todas las notificaciones que ya están en la cola. Si se encuentra una coincidencia, la nueva notificación reemplaza la notificación de la cola que tiene la misma etiqueta. Si no se encuentra ninguna coincidencia, se aplica la regla de reemplazo predeterminado y la nueva notificación reemplaza la notificación más antigua de la cola.
+Si la cola ha alcanzado su capacidad de cinco notificaciones, la próxima notificación nueva reemplazará la notificación más antigua de la cola. No obstante, si se establecen etiquetas en las notificaciones, puede afectar a la directiva de reemplazo de la cola. Una etiqueta es una cadena específica de la aplicación, y que no distingue entre mayúsculas y minúsculas, de hasta 16 caracteres especificada en el encabezado HTTP [X-WNS-Tag](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) de la carga de respuesta. Windows compara la etiqueta de una notificación entrante con las etiquetas de todas las notificaciones que ya están en la cola. Si se encuentra una coincidencia, la nueva notificación reemplaza la notificación de la cola que tiene la misma etiqueta. Si no se encuentra ninguna coincidencia, se aplica la regla de reemplazo predeterminado y la nueva notificación reemplaza la notificación más antigua de la cola.
 
 Puedes usar la cola y las etiquetas de notificaciones para implementar diferentes escenarios de notificación. Por ejemplo, una aplicación de bolsa podría enviar cinco notificaciones, cada una en relación con una cotización diferente y etiquetada con el nombre de la cotización. Esto permite que la cola nunca contenga dos notificaciones para la misma cotización; la más antigua se considera obsoleta.
 
-Para obtener más información, consulta [Uso de la cola de notificaciones](https://msdn.microsoft.com/library/windows/apps/hh781199).
+Para obtener más información, consulta [Uso de la cola de notificaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh781199(v=win.10)).
 
 ### <a name="enabling-the-notification-queue"></a>Habilitar la cola de notificaciones
 
@@ -103,7 +103,7 @@ Debes proporcionar un URI único para cada notificación que quieras que Windows
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Directrices para las notificaciones periódicas](https://msdn.microsoft.com/library/windows/apps/hh761461)
-* [Cómo configurar las notificaciones periódicas para notificaciones](https://msdn.microsoft.com/library/windows/apps/hh761476)
-* [Cómo configurar las notificaciones periódicas para iconos](https://msdn.microsoft.com/library/windows/apps/hh761476)
+* [Directrices para las notificaciones periódicas](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-periodic-notification-overview)
+* [Cómo configurar las notificaciones periódicas para notificaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
+* [Cómo configurar las notificaciones periódicas para iconos](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
  

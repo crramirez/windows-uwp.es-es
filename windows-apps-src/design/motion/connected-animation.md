@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 21e7c026d336507b1a82badba770ac3bb50e19f8
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: d1d459ab10614ddf9186275b1a6b66e8fa5703ec
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984119"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364958"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>Animación conectada para aplicaciones para UWP
 
@@ -63,7 +63,7 @@ Al navegar entre páginas, es importante que el usuario pueda comprender el nuev
 
 ## <a name="when-to-use-connected-animation"></a>Cuándo usar animaciones conectadas
 
-En general, las animaciones conectadas se usan al cambiar de página, aunque pueden aplicarse a cualquier experiencia donde cambie el contenido de una interfaz de usuario y quieras que el usuario se mantenga en contexto. Debes pensar en usar una animación conectada en lugar de una [transición de navegación de profundización](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.navigationthemetransition.aspx) siempre que haya una imagen u otro elemento de la interfaz de usuario que se comparta entre las vistas de origen y de destino.
+En general, las animaciones conectadas se usan al cambiar de página, aunque pueden aplicarse a cualquier experiencia donde cambie el contenido de una interfaz de usuario y quieras que el usuario se mantenga en contexto. Debes pensar en usar una animación conectada en lugar de una [transición de navegación de profundización](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) siempre que haya una imagen u otro elemento de la interfaz de usuario que se comparta entre las vistas de origen y de destino.
 
 ## <a name="configure-connected-animation"></a>Configurar la animación conectada
 

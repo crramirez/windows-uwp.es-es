@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 363ea5728b94d6b42f29299e8d240bcfc6242b4c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5fc43d5229ecd2bd9502fd74fef7f5197f758c62
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625120"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66363592"
 ---
 # <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
 
 
 El movimiento panorámico o el desplazamiento permiten a los usuarios navegar dentro de una única vista para mostrar el contenido de la vista que no cabe en la ventanilla. Algunos ejemplos de vistas son la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos.
 
-> **API importantes**: [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [ **Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
+> **API importantes**: [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
 
 ## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
@@ -79,10 +79,9 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 El movimiento panorámico de forma táctil, mediante un gesto de deslizar o deslizar rápidamente con uno o varios dedos, es como desplazarse con el mouse. La interacción de movimiento panorámico es más parecida a la acción de girar la rueda del mouse o deslizar el cuadro de desplazamiento que a la de hacer clic en la barra de desplazamiento. A menos que una distinción es realizada en una API o necesita alguna interfaz de usuario de Windows específico del dispositivo, simplemente nos referimos a ambos interacciones que un movimiento panorámico.
 
 > <div id="main">
-> <strong>Windows 10 Fall Creators Update - cambio de comportamiento</strong>
-> </div>
-> De manera predeterminada, en lugar de selección de texto, un lápiz activo ahora se desplaza o un movimiento panorámico en aplicaciones para UWP (como la entrada táctil, panel táctil y el lápiz pasivo).  
+> <strong>Windows 10 Fall Creators Update - cambio de comportamiento</strong> de forma predeterminada, en lugar de la selección de texto, un lápiz activo ahora se desplaza/pan en aplicaciones UWP (por ejemplo, táctil, teclado táctil y lápiz pasivo).  
 > Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, vea el tema de referencia de API para el <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer clase</a>.
+> </div>
 
 Según el dispositivo de entrada, el usuario se mueve panorámicamente en una región de movimiento panorámico usando uno de los siguientes:
 
@@ -172,9 +171,9 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 ## <a name="related-articles"></a>Artículos relacionados
 
 
-* [Interacciones del usuario personalizadas](https://msdn.microsoft.com/library/windows/apps/mt185599)
-* [Optimizar el ListView y GridView](https://msdn.microsoft.com/library/windows/apps/mt204776)
-* [Accesibilidad de teclado](https://msdn.microsoft.com/library/windows/apps/mt244347)
+* [Interacciones del usuario personalizadas](https://developer.microsoft.com/windows/design/inputs-devices)
+* [Optimizar el ListView y GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
+* [Accesibilidad de teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
 
 **Ejemplos**
 * [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)

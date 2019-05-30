@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ab83e74dc59b407c15e1a8213540c8954fcd16e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e671c61058ec1c048fbb1b547cc79060a7cd0d0a
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610900"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66364334"
 ---
 # <a name="rich-text-block"></a>Bloque de texto enriquecido
 
@@ -24,7 +24,7 @@ ms.locfileid: "57610900"
 
 Los bloques de texto enriquecido proporcionan varias características para el diseño avanzado de texto que puedes usar cuando necesitas admitir párrafos, elementos de interfaz de usuario en línea o diseños de texto complejos.
 
-> **API importantes**: [Clase RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [RichTextBlockOverflow clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx), [párrafo clase](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx), [clase de tipografía](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
+> **API importantes**: [Clase RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [RichTextBlockOverflow clase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow), [párrafo clase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph), [clase de tipografía](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -52,18 +52,18 @@ Para obtener más información sobre cómo elegir el control de texto correcto, 
 
 ## <a name="create-a-rich-text-block"></a>Crear un bloque de texto enriquecido
 
-La propiedad de contenido de RichTextBlock es la propiedad [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx), que admite el texto basado en párrafos a través del elemento [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx). No tiene una propiedad **Text** que puedas usar para obtener acceso con facilidad a contenido de texto del control en la aplicación. Sin embargo, RichTextBlock proporciona varias características únicas que TextBlock no ofrece. 
+La propiedad de contenido de RichTextBlock es la propiedad [Blocks](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.blocks), que admite el texto basado en párrafos a través del elemento [Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph). No tiene una propiedad **Text** que puedas usar para obtener acceso con facilidad a contenido de texto del control en la aplicación. Sin embargo, RichTextBlock proporciona varias características únicas que TextBlock no ofrece. 
 
 RichTextBlock admite:
-- Varios párrafos. Configura la propiedad [TextIndent](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.textindent.aspx) para establecer la sangría de los párrafos.
-- Elementos de la interfaz de usuario en línea. Usa un [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.inlineuicontainer.aspx) para visualizar los elementos de la interfaz de usuario, tales como las imágenes, en línea con el texto.
-- Contenedores de desbordamiento. Usa elementos [RichTextBlockOverflow](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx) para crear diseños de texto de varias columnas.
+- Varios párrafos. Configura la propiedad [TextIndent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.textindent) para establecer la sangría de los párrafos.
+- Elementos de la interfaz de usuario en línea. Usa un [InlineUIContainer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.InlineUIContainer) para visualizar los elementos de la interfaz de usuario, tales como las imágenes, en línea con el texto.
+- Contenedores de desbordamiento. Usa elementos [RichTextBlockOverflow](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow) para crear diseños de texto de varias columnas.
 
 ### <a name="paragraphs"></a>Párrafos
 
-Los elementos [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) se usan para definir los bloques de texto que deben mostrarse dentro de un control RichTextBlock. Cada RichTextBlock debe incluir al menos un Paragraph. 
+Los elementos [Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph) se usan para definir los bloques de texto que deben mostrarse dentro de un control RichTextBlock. Cada RichTextBlock debe incluir al menos un Paragraph. 
 
-Para definir la cantidad de sangría de todos los párrafos de un RichTextBlock, se puede establecer la propiedad [RichTextBlock.TextIndent](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.textindent.aspx). Para invalidar esta configuración para párrafos específicos de un RichTextBlock, puedes establecer la propiedad [Paragraph.TextIndent](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.textindent.aspx) en un valor diferente.
+Para definir la cantidad de sangría de todos los párrafos de un RichTextBlock, se puede establecer la propiedad [RichTextBlock.TextIndent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.textindent). Para invalidar esta configuración para párrafos específicos de un RichTextBlock, puedes establecer la propiedad [Paragraph.TextIndent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.paragraph.textindent) en un valor diferente.
 
 ```xaml
 <RichTextBlock TextIndent="12">
@@ -75,7 +75,7 @@ Para definir la cantidad de sangría de todos los párrafos de un RichTextBlock,
 
 ### <a name="inline-ui-elements"></a>Elementos de la interfaz de usuario en línea
 
-La clase [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.inlineuicontainer.aspx) permite incrustar cualquier UIElement en línea con el texto. Un escenario común es colocar un objeto Image en línea con el texto, pero también puedes usar elementos interactivos, como un objeto Button o CheckBox.
+La clase [InlineUIContainer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.InlineUIContainer) permite incrustar cualquier UIElement en línea con el texto. Un escenario común es colocar un objeto Image en línea con el texto, pero también puedes usar elementos interactivos, como un objeto Button o CheckBox.
 
 Si quieres integrar más de un elemento en línea en la misma posición, considera usar un panel como el único elemento secundario InlineUIContainer y luego colocar los diversos elementos dentro de ese panel.
 
@@ -95,7 +95,7 @@ En este ejemplo se muestra cómo usar un InlineUIContainer para insertar una ima
 
 ## <a name="overflow-containers"></a>Contenedores de desbordamiento
 
-Puedes usar un RichTextBlock con elementos [RichTextBlockOverflow](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx) para crear diseños de página con varias columnas u otros diseños avanzados. El contenido de un elemento RichTextBlockOverflow siempre procede de un elemento RichTextBlock. Para vincular los elementos RichTextBlockOverflow, estos se establecen como el OverflowContentTarget de un RichTextBlock u otro RichTextBlockOverflow.
+Puedes usar un RichTextBlock con elementos [RichTextBlockOverflow](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow) para crear diseños de página con varias columnas u otros diseños avanzados. El contenido de un elemento RichTextBlockOverflow siempre procede de un elemento RichTextBlock. Para vincular los elementos RichTextBlockOverflow, estos se establecen como el OverflowContentTarget de un RichTextBlock u otro RichTextBlockOverflow.
 
 Este es un ejemplo simple que crea un diseño de dos columnas. Consulta la sección de ejemplos para conocer un ejemplo más complejo.
 
@@ -121,7 +121,7 @@ Aunque el RichTextBlock almacena texto sin formato, puedes aplicar diversas opci
 
 ### <a name="inline-elements"></a>Elementos en línea
 
-El espacio de nombres [Windows.UI.Xaml.Documents](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.aspx) proporciona una variedad de elementos de texto en línea que puedes usar para dar formato al texto, como Bold, Italic, Run, Span y LineBreak. Una forma habitual para aplicar formato a las secciones de texto es colocar el texto en un elemento Run o Span y luego establecer las propiedades en ese elemento.
+El espacio de nombres [Windows.UI.Xaml.Documents](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents) proporciona una variedad de elementos de texto en línea que puedes usar para dar formato al texto, como Bold, Italic, Run, Span y LineBreak. Una forma habitual para aplicar formato a las secciones de texto es colocar el texto en un elemento Run o Span y luego establecer las propiedades en ese elemento.
 
 Este es un Paragraph con la primera frase en texto azul de 16 pt y negrita.
 
@@ -134,7 +134,7 @@ Este es un Paragraph con la primera frase en texto azul de 16 pt y negrita.
 
 ### <a name="typography"></a>Tipografía
 
-Las propiedades adjuntas de la clase [Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx) otorgan acceso a un conjunto de propiedades de tipografía de Microsoft OpenType. Puedes establecer estas propiedades adjuntas tanto en el RichTextBlock como en los elementos de texto en línea individuales, como aquí se muestra.
+Las propiedades adjuntas de la clase [Typography](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Typography) otorgan acceso a un conjunto de propiedades de tipografía de Microsoft OpenType. Puedes establecer estas propiedades adjuntas tanto en el RichTextBlock como en los elementos de texto en línea individuales, como aquí se muestra.
 
 ```xaml
 <RichTextBlock Typography.StylisticSet4="True">
@@ -159,12 +159,12 @@ Consulta las directrices para texto y tipografía.
 
 **Para diseñadores**
 - [Directrices para comprobar la ortografía](text-controls.md)
-- [Adición de búsqueda](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [Adición de búsqueda](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
 - [Directrices para la entrada de texto](text-controls.md)
 
 **Para desarrolladores (XAML)**
-- [Clase de cuadro de texto](https://msdn.microsoft.com/library/windows/apps/br209683)
-- [Clase Windows.UI.Xaml.Controls PasswordBox](https://msdn.microsoft.com/library/windows/apps/br227519)
+- [Clase de cuadro de texto](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Clase Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 
 
 **Para los desarrolladores (otros)**

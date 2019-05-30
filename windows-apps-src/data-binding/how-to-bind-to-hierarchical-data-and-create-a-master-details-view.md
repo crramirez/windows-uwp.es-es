@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c2280fd7234fc41ee02dc17909bda8d7af0e1b9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d8695a385dbc6d550a8002a5f64b7d777e95594e
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602080"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66360030"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles
 
@@ -19,9 +19,9 @@ ms.locfileid: "57602080"
 
 > **Tenga en cuenta**  Consulte también el [ejemplo de principal-detalle](https://go.microsoft.com/fwlink/p/?linkid=619991).
 
-Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) que están enlazadas juntas en una cadena. En este tema se usa la [extensión de marcado {x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) donde es posible y la extensión más flexible (pero menos eficaz) [de marcado {Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) cuando es necesario.
+Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) que están enlazadas juntas en una cadena. En este tema se usa la [extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) donde es posible y la extensión más flexible (pero menos eficaz) [de marcado {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) cuando es necesario.
 
-Una estructura común de las aplicaciones de Plataforma de Windows universal (UWP) es navegar a distintas páginas de detalles cuando un usuario realiza una selección en una lista maestra. Esto es útil cuando quieres ofrecer una representación visual rica de cada elemento en cada nivel de una jerarquía. Otra opción es mostrar varios niveles de datos en una sola página. Esto es útil cuando quieres mostrar unas pocas listas sencillas que permitirán al usuario navegar rápidamente hasta el elemento que le interesa. En este tema se describe cómo implementar esta interacción. Las instancias de [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) hacen un seguimiento de la selección actual en cada nivel jerárquico.
+Una estructura común de las aplicaciones de Plataforma de Windows universal (UWP) es navegar a distintas páginas de detalles cuando un usuario realiza una selección en una lista maestra. Esto es útil cuando quieres ofrecer una representación visual rica de cada elemento en cada nivel de una jerarquía. Otra opción es mostrar varios niveles de datos en una sola página. Esto es útil cuando quieres mostrar unas pocas listas sencillas que permitirán al usuario navegar rápidamente hasta el elemento que le interesa. En este tema se describe cómo implementar esta interacción. Las instancias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) hacen un seguimiento de la selección actual en cada nivel jerárquico.
 
 Crearemos una vista de una jerarquía de un equipo deportivo organizada en listas de ligas, divisiones y equipos, e incluimos una vista de detalles de los equipos. Cuando seleccionas un elemento de cualquier lista, las vistas siguientes se actualizan automáticamente.
 
@@ -29,11 +29,11 @@ Crearemos una vista de una jerarquía de un equipo deportivo organizada en lista
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-En este tema suponemos que sabes cómo crear una aplicación básica para UWP. Si quieres obtener instrucciones para crear tu primera aplicación UWP, consulta el tema sobre cómo [crear tu primera aplicación UWP con C# o Visual Basic](https://msdn.microsoft.com/library/windows/apps/Hh974581).
+En este tema suponemos que sabes cómo crear una aplicación básica para UWP. Si quieres obtener instrucciones para crear tu primera aplicación UWP, consulta el tema sobre cómo [crear tu primera aplicación UWP con C# o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh974581(v=win.10)).
 
 ## <a name="create-the-project"></a>Crear el proyecto
 
-Crea un nuevo proyecto de **Aplicación vacía (Windows Universal)**. Asígnale el nombre "MasterDetailsBinding".
+Crea un nuevo proyecto de **Aplicación vacía (Windows Universal)** . Asígnale el nombre "MasterDetailsBinding".
 
 ## <a name="create-the-data-model"></a>Crear el modelo de datos
 
@@ -130,7 +130,7 @@ namespace MasterDetailsBinding
 }
 ```
 
-Por último, reemplaza el contenido del archivo MainPage.xaml por el marcado siguiente, que declara tres instancias de [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) y las enlaza juntas en una cadena. A continuación, los controles subsiguientes se pueden enlazar al elemento **CollectionViewSource** apropiado, según su nivel en la jerarquía.
+Por último, reemplaza el contenido del archivo MainPage.xaml por el marcado siguiente, que declara tres instancias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) y las enlaza juntas en una cadena. A continuación, los controles subsiguientes se pueden enlazar al elemento **CollectionViewSource** apropiado, según su nivel en la jerarquía.
 
 ```xml
 <Page
@@ -220,7 +220,7 @@ Por último, reemplaza el contenido del archivo MainPage.xaml por el marcado sig
 </Page>
 ```
 
-Ten en cuenta que mediante un enlace directo al elemento [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), estás dando por sentado que quieres enlazar al elemento actual en los enlaces en los que la ruta de acceso no se encuentre en la propia colección. No es necesario especificar la propiedad **CurrentItem** como la ruta de acceso del enlace, aunque sí puedes hacerlo si encuentras alguna ambigüedad. Por ejemplo, el elemento [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365), que representa la vista del equipo, tiene la propiedad [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) enlazada al elemento **CollectionViewSource** de `Teams`. No obstante, los controles del elemento [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) se enlazan a las propiedades de la clase `Team`, porque el elemento **CollectionViewSource** facilita de forma automática el equipo seleccionado actualmente de la lista de equipos cuando es necesario.
+Ten en cuenta que mediante un enlace directo al elemento [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource), estás dando por sentado que quieres enlazar al elemento actual en los enlaces en los que la ruta de acceso no se encuentre en la propia colección. No es necesario especificar la propiedad **CurrentItem** como la ruta de acceso del enlace, aunque sí puedes hacerlo si encuentras alguna ambigüedad. Por ejemplo, el elemento [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl), que representa la vista del equipo, tiene la propiedad [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) enlazada al elemento **CollectionViewSource** de `Teams`. No obstante, los controles del elemento [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) se enlazan a las propiedades de la clase `Team`, porque el elemento **CollectionViewSource** facilita de forma automática el equipo seleccionado actualmente de la lista de equipos cuando es necesario.
 
  
 

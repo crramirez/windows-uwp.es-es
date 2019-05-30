@@ -6,12 +6,12 @@ ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp, test, rendimiento, performance, depuración, debug, pruebas
 ms.localizationpriority: medium
-ms.openlocfilehash: c210f84c4fc3d07ba5a3d81eef059e17fdf9f308
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 3263f7a0f1c353cfd15bf83e6fe1b0004b3bcc94
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244441"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66362682"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 
@@ -92,7 +92,7 @@ Para implementar en un equipo remoto con Creators Update preinstalado, el equipo
 
 Para ello, busca **Depurador remoto** en el menú **Inicio**, ábrelo y, si te lo pide, permite que el depurador configure las opciones del firewall. De manera predeterminada, el depurador se inicia con la autenticación de Windows. Esto requiere credenciales de usuario si el usuario que inició sesión no es el mismo en ambos equipos.
 
-Para cambiarlo a **sin autenticación**, en el **Remote Debugger**, vaya a **herramientas**  - &gt; **opciones**, y Vuelva a establecerla en **sin autenticación**. Tras configurar el depurador remoto, también debes asegurarte de que has configurado el dispositivo host en [Modo de desarrollador](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). Después de esto, puedes implementar desde la máquina de desarrollo.
+Para cambiarlo a **sin autenticación**, en el **Remote Debugger**, vaya a **herramientas**  - &gt; **opciones**, y Vuelva a establecerla en **sin autenticación**. Tras configurar el depurador remoto, también debes asegurarte de que has configurado el dispositivo host en [Modo de desarrollador](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). Después de esto, puedes implementar desde la máquina de desarrollo.
 
 Para obtener más información, consulta la página [Centro de descarga para Visual Studio](https://www.visualstudio.com/downloads/).
 
@@ -119,7 +119,7 @@ Después de especificar los argumentos de la línea de comandos, puedes acceder 
 
 Existen tres modos de autenticación para la implementación del equipo remoto:
 
-- **Universal (protocolo sin cifrar)**: Utilice este modo de autenticación cada vez que se va a implementar en un dispositivo remoto. Actualmente, esto es para dispositivos de IoT, dispositivos de Xbox y dispositivos HoloLens, así como para dispositivos con Creators Update o equipos más nuevos. Universal (protocolo sin cifrar) solo se debe usar en redes de confianza. La conexión de depuración es vulnerable para los usuarios malintencionados que podrían interceptar y cambiar los datos que se pasan entre el desarrollo y el equipo remoto.
+- **Universal (protocolo sin cifrar)** : Utilice este modo de autenticación cada vez que se va a implementar en un dispositivo remoto. Actualmente, esto es para dispositivos de IoT, dispositivos de Xbox y dispositivos HoloLens, así como para dispositivos con Creators Update o equipos más nuevos. Universal (protocolo sin cifrar) solo se debe usar en redes de confianza. La conexión de depuración es vulnerable para los usuarios malintencionados que podrían interceptar y cambiar los datos que se pasan entre el desarrollo y el equipo remoto.
 - **Windows**: Este modo de autenticación solo está pensado para usarse para un equipo remoto (escritorio o portátil) ejecutando Visual Studio Remote Tools. Usa este modo de autenticación si tienes acceso a las credenciales del usuario que inició la sesión de la máquina de destino. Este es el canal más seguro para la implementación remota.
 - **Ninguna**: Este modo de autenticación solo está pensado para usarse para un equipo remoto (escritorio o portátil) ejecutando Visual Studio Remote Tools. Usa este modo de autenticación si tienes una instalación de máquina de prueba en un entorno en el que se inició sesión con una cuenta de prueba y no se pueden escribir credenciales. Asegúrate de que la configuración del depurador remoto esté establecida para aceptar que no haya autenticación.
 
@@ -160,7 +160,7 @@ La **ruta de acceso de registro del paquete** especificada cuando **copias archi
 > [!NOTE]
 > **Copiar archivos en el dispositivo** actualmente se admite en Xbox con Actualización de aniversario de Windows 10 y con equipos con Windows 10 Creators Update.
 
-En el dispositivo remoto, el diseño se copiará en la siguiente ubicación predeterminada según la familia de dispositivos: `\\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
+En el dispositivo remoto, el diseño se copie en la siguiente ubicación predeterminada: `\\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
 
 ### <a name="register-layout-from-network"></a>Registrar el diseño desde la red
 
@@ -171,14 +171,14 @@ Para registrar correctamente el diseño desde la red, primero debes hacer que **
 Para obtener ayuda con este tema, consulta los siguientes ejemplos:
 
 - Ejemplo 1 (carpeta local de diseño, accesible como un recurso compartido de red):
-  - **Ruta de acceso de la carpeta del diseño** = `D:\Layouts\App1`
-  - **Ruta de acceso de registro del paquete** = `\\NETWORK-SHARE\Layouts\App1`
+  - **Ruta de acceso de carpeta de diseño** = `D:\Layouts\App1`
+  - **Ruta de acceso de registro de paquete** = `\\NETWORK-SHARE\Layouts\App1`
 
 - Ejemplo 2 (carpeta de diseño de la red):
-  - **Ruta de acceso de la carpeta del diseño** = `\\NETWORK-SHARE\Layouts\App1`
-  - **Ruta de acceso de registro del paquete** = `\\NETWORK-SHARE\Layouts\App1`
+  - **Ruta de acceso de carpeta de diseño** = `\\NETWORK-SHARE\Layouts\App1`
+  - **Ruta de acceso de registro de paquete** = `\\NETWORK-SHARE\Layouts\App1`
 
-Cuando registres el diseño desde la red por primera vez, las credenciales se almacenarán en caché en el dispositivo de destino para que no sea necesario iniciar sesión una y otra vez. Para quitar las credenciales almacenadas en caché, puedes usar la [herramienta WinAppDeployCmd.exe](https://msdn.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool) desde el SDK de Windows 10 con el comando **deletecreds**.
+Cuando registres el diseño desde la red por primera vez, las credenciales se almacenarán en caché en el dispositivo de destino para que no sea necesario iniciar sesión una y otra vez. Para quitar las credenciales almacenadas en caché, puedes usar la [herramienta WinAppDeployCmd.exe](https://docs.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool) desde el SDK de Windows 10 con el comando **deletecreds**.
 
 No puedes seleccionar **Mantener todos los archivos en el dispositivo** al registrar el diseño desde la red porque no hay archivos que se copien físicamente al dispositivo remoto.
 
@@ -189,13 +189,13 @@ En el dispositivo remoto, el diseño se registra en la siguiente ubicación pred
 
 ## <a name="debugging-options"></a>Opciones de depuración
 
-En Windows 10, se mejora el rendimiento de inicio de aplicaciones para UWP, inicie de forma proactiva y, a continuación, suspensión de aplicaciones en una técnica denominada [inicio previo](https://msdn.microsoft.com/library/windows/apps/Mt593297). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
+En Windows 10, se mejora el rendimiento de inicio de aplicaciones para UWP, inicie de forma proactiva y, a continuación, suspensión de aplicaciones en una técnica denominada [inicio previo](https://docs.microsoft.com/windows/uwp/launch-resume/handle-app-prelaunch). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
 
 Se admite la depuración desde un proyecto de Visual Studio (**depurar**  - &gt; **otros destinos de depuración**  - &gt; **depurar Universal Aplicación de Windows inicio previo**) y para las aplicaciones ya instaladas en la máquina (**depurar**  - &gt; **otros destinos de depuración**  - &gt; **Depurar paquete de aplicaciones instalado** seleccionando el **aplicación activa con el inicio previo** casilla de verificación). Para obtener más información, consulta [Debug UWP Prelaunch (Depurar inicio previo de UWP)](https://go.microsoft.com/fwlink/p/?LinkId=717245).
 
 Puedes establecer las siguientes opciones de implementación en la página de propiedades de **Depurar** del proyecto de inicio:
 
-- **Permitir bucle invertido de la red local**
+- **Permitir bucle invertido de red local**
 
   Por cuestiones de seguridad, no se permite que una aplicación para UWP instalada de modo estándar realice llamadas de red al dispositivo en el que está instalada. De manera predeterminada, la implementación de Visual Studio crea una exención de esta regla para la aplicación implementada. Esta exención te permite probar los procedimientos de comunicación en un solo equipo. Antes de enviar la aplicación a la Microsoft Store, debe probarla sin la exención.
 
@@ -204,7 +204,7 @@ Puedes establecer las siguientes opciones de implementación en la página de pr
   - En el C# y Visual Basic **depurar** página de propiedades, desactive la **permitir bucle invertido de red local** casilla de verificación.
   - En la página de propiedades de **Depuración** de JavaScript y C++, establece el valor de **Permitir bucle invertido de la red local** en **No**.
 
-- **No iniciar, pero depurar mi código al empezar / Iniciar aplicación**
+- **No iniciar, pero depurar mi código al empezar / iniciar aplicación**
 
   Para configurar la implementación para iniciar automáticamente una sesión de depuración cuando se inicie la aplicación:
 
@@ -226,7 +226,7 @@ Para cargar símbolos en una sesión de depuración con [WinDbg](#windbg), estab
 .reload
 ```
 
-Puedes agregar más rutas de acceso mediante el delimitador `‘;’` o puedes usar el comando `.sympath+`. Para obtener información sobre operaciones de símbolos más avanzadas que usan WinDbg, consulta [Public and Private Symbols (Símbolos públicos y privados)](https://msdn.microsoft.com/library/windows/hardware/ff553493).
+Puedes agregar más rutas de acceso mediante el delimitador `‘;’` o puedes usar el comando `.sympath+`. Para obtener información sobre operaciones de símbolos más avanzadas que usan WinDbg, consulta [Public and Private Symbols (Símbolos públicos y privados)](https://docs.microsoft.com/windows-hardware/drivers/debugger/public-and-private-symbols).
 
 ## <a name="windbg"></a>WinDbg
 
@@ -246,7 +246,7 @@ Uno de los comandos más populares de WinDBG es `!analyze -v`, que se usa para r
 - EXCEPTION_RECORD: dirección, código e indicadores de la excepción actual
 - STACK_TEXT: seguimiento de la pila antes de la excepción
 
-Para obtener una lista completa de todos los comandos de WinDbg, consulta [Debugger Commands (Comandos del depurador)](https://msdn.microsoft.com/library/ff540507).
+Para obtener una lista completa de todos los comandos de WinDbg, consulta [Debugger Commands (Comandos del depurador)](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-commands).
 
 ## <a name="related-topics"></a>Temas relacionados
 

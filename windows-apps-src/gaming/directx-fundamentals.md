@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, game, juego, directx, DirectX, load, carga, rasterize, rasterizar, mesh, malla, bitmap, mapa de bits, 2D, 2D, 3D, 3D
 ms.localizationpriority: medium
-ms.openlocfilehash: afd08d62182bd0980f43ce1c4578c1181f8a6d2f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 942a775fca262903b1ee72831b4eae6612d25786
+ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613750"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66368866"
 ---
 # <a name="fundamentals-of-directx-programming"></a>Conceptos básicos de programación con DirectX
 
@@ -42,7 +42,7 @@ El tema sobre la carga de recursos en el juego DirectX te guía por los pasos b�
 <td align="left"><p>Crea elementos gráficos 2D con DirectX.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://msdn.microsoft.com/windows/uwp/graphics-concepts/index">Guía de aprendizaje de gráficos de Direct3D</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/uwp/graphics-concepts/index">Guía de aprendizaje de gráficos de Direct3D</a></p></td>
 <td align="left"><p>Comprende los conceptos de elementos gráficos Direct3D.</p></td>
 </tr>
 <tr class="odd">
