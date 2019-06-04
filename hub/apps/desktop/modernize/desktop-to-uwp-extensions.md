@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 291c16d14428f8c6476b12fbadf00f84c26a4235
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 814d8c04943e32ff4d2f0c81bd847e78becd5ebb
+ms.sourcegitcommit: a4fe508e62827a10471e2359e81e82132dc2ac5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359476"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66468326"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Integre su aplicación de escritorio empaquetado con Windows 10 y UWP
 
@@ -123,7 +123,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Name |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación. |
+|Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación. |
 |MigrationProgId |El [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) que describe la aplicación, el componente y la versión de la aplicación de escritorio desde la que desea heredar las asociaciones de archivo.|
 
 #### <a name="example"></a>Ejemplo
@@ -179,10 +179,10 @@ La aplicación empaquetada puede asociar extensiones de tipo de archivo. Si un u
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación.   |
+|Name |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación.   |
 |FileType |Es el archivo de extensión compatible con la aplicación. |
 
 #### <a name="example"></a>Ejemplo
@@ -244,7 +244,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Nombre |Descripción |
 |-------|-------------|
 |Category | Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. |
+|Name |Identificador único de la aplicación. |
 |Verb |Es el nombre que aparece en el menú contextual del Explorador de archivos. Esta cadena se puede localizar mediante ```ms-resource```.|
 |Id |Es el identificador único del verbo. Si la aplicación es una aplicación para UWP, se pasa a la aplicación como parte de sus argumentos del evento de activación para que pueda procesar correctamente la selección del usuario. Si la aplicación es una aplicación empaquetada de plena confianza, recibe los parámetros en su lugar (consulte la siguiente viñeta). |
 |Parámetros |Es la lista de parámetros de argumento y valores asociados con el verbo. Si la aplicación es una aplicación empaquetada de plena confianza, estos parámetros se pasan a la aplicación como argumentos del evento cuando se activa la aplicación. Puede personalizar el comportamiento de la aplicación en función de los verbos de activación diferentes. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. Si la aplicación es una aplicación para UWP, no puede pasar parámetros. En su lugar, la aplicación recibirá el identificador (consulta el punto anterior).|
@@ -431,7 +431,7 @@ Declara esta extensión en el nivel de paquete del manifiesto de la aplicación.
 
 ```
 
-|Name | Descripción |
+|Nombre | Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.loaderSearchPathOverride``
 |FolderPath | La ruta de la carpeta que contiene tus archivos dll. Especifica una ruta de acceso relativa a la carpeta raíz del paquete. En una extensión puedes especificar hasta cinco rutas de acceso. Si quieres que el sistema busque archivos en la carpeta raíz del paquete, usa una cadena vacía para una de estas rutas de acceso. No incluyas rutas de acceso duplicados y asegúrate de que las rutas de acceso no contengan barras diagonales iniciales y finales o barras diagonales inversas. <br><br> El sistema no buscará en subcarpetas, por tanto asegúrate de indicar explícitamente cada carpeta que contenga archivos DLL que quieres que cargue el sistema.|
@@ -465,6 +465,7 @@ Esta opción permite que los usuarios organicen tus archivos e interactúen con 
 * [Mostrar el contenido del archivo en el panel de vista previa del explorador de archivos](#preview)
 * [Permitir que los usuarios para agrupar los archivos mediante el uso de la columna de tipo en el Explorador de archivos](#enable)
 * [Propiedades de archivo a disposición búsqueda, índice, cuadros de diálogo Propiedades y el panel de detalles](#make-file-properties)
+* [Especifique un controlador del menú contextual para un tipo de archivo](#context-menu)
 * [Asegúrese de archivos desde su servicio en la nube aparecen en el Explorador de archivos](#cloud-files)
 
 <a id="define" />
@@ -495,7 +496,7 @@ Especifique cómo se comporta la aplicación cuando un usuario abre varios archi
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
@@ -635,7 +636,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Name |Identificador único de la aplicación. |
+|Nombre |Identificador único de la aplicación. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid   |Identificador de clase de la aplicación. |
 
@@ -758,7 +759,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Name |Identificador único de la aplicación. |
@@ -784,6 +785,104 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
             <desktop2:DesktopPropertyHandler Clsid ="20000000-0000-0000-0000-000000000001"/>
           </uap3:FileTypeAssociation>
         </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+</Package>
+```
+
+<a id="context-menu" />
+
+### <a name="specify-a-context-menu-handler-for-a-file-type"></a>Especifique un controlador del menú contextual para un tipo de archivo
+
+Si su aplicación de escritorio define un [controlador del menú contextual](https://docs.microsoft.com/windows/desktop/shell/context-menu-handlers), use esta extensión para registrar el controlador de menú.
+
+#### <a name="xml-namespaces"></a>Espacios de nombres XML
+
+* http://schemas.microsoft.com/appx/manifest/foundation/windows10
+* http://schemas.microsoft.com/appx/manifest/desktop/windows10/4
+
+#### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
+
+```XML
+<Extensions>
+    <com:Extension Category="windows.comServer">
+        <com:ComServer>
+            <com:SurrogateServer AppId="[AppID]" DisplayName="[DisplayName]">
+                <com:Class Id="[Clsid]" Path="[Path]" ThreadingModel="[Model]"/>
+            </com:SurrogateServer>
+        </com:ComServer>
+    </com:Extension>
+    <desktop4:Extension Category="windows.fileExplorerContextMenus">
+        <desktop4:FileExplorerContextMenus>
+            <desktop4:ItemType Type="[Type]">
+                <desktop4:Verb Id="[ID]" Clsid="[Clsid]" />
+            </desktop4:ItemType>
+        </desktop4:FileExplorerContextMenus>
+    </desktop4:Extension>
+</Extensions>
+```
+
+Buscar la referencia de esquema completa aquí: [com:ComServer](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-com-comserver) y [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus).
+
+#### <a name="instructions"></a>Instrucciones
+
+Para registrar el controlador del menú contextual, siga estas instrucciones.
+
+1. En su aplicación de escritorio, implemente un [controlador del menú contextual](https://docs.microsoft.com/windows/desktop/shell/context-menu-handlers) implementando la [IExplorerCommand](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) o [IExplorerCommandState](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate) interfaz. Para obtener un ejemplo, vea el [ExplorerCommandVerb](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/ExplorerCommandVerb) ejemplo de código. Asegúrese de que define un GUID de clase para cada uno de los objetos de implementación. Por ejemplo, el código siguiente define un identificador de clase para una implementación de [IExplorerCommand](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand).
+
+    ```cpp
+    class __declspec(uuid("d0c8bceb-28eb-49ae-bc68-454ae84d6264")) CExplorerCommandVerb;
+    ```
+
+2. En el manifiesto del paquete, especifique un [com:ComServer](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-com-comserver) extensión de aplicación que se registra un servidor de suplente de COM con el identificador de clase de la implementación del controlador de menú contextual.
+
+    ```xml
+    <com:Extension Category="windows.comServer">
+        <com:ComServer>
+            <com:SurrogateServer AppId="d0c8bceb-28eb-49ae-bc68-454ae84d6264" DisplayName="ContosoHandler">
+                <com:Class Id="d0c8bceb-28eb-49ae-bc68-454ae84d6264" Path="ExplorerCommandVerb.dll" ThreadingModel="STA"/>
+            </com:SurrogateServer>
+        </com:ComServer>
+    </com:Extension>
+    ```
+
+2. En el manifiesto del paquete, especifique un [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) extensión de aplicación que registra la implementación del controlador de menú contextual.
+
+    ```xml
+    <desktop4:Extension Category="windows.fileExplorerContextMenus">
+        <desktop4:FileExplorerContextMenus>
+            <desktop4:ItemType Type=".rar">
+                <desktop4:Verb Id="Command1" Clsid="d0c8bceb-28eb-49ae-bc68-454ae84d6264" />
+            </desktop4:ItemType>
+        </desktop4:FileExplorerContextMenus>
+    </desktop4:Extension>
+    ```
+
+#### <a name="example"></a>Ejemplo
+
+```XML
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"
+  IgnorableNamespaces="desktop4">
+  <Applications>
+    <Application>
+      <Extensions>
+        <com:Extension Category="windows.comServer">
+          <com:ComServer>
+            <com:SurrogateServer AppId="d0c8bceb-28eb-49ae-bc68-454ae84d6264" DisplayName="ContosoHandler"">
+              <com:Class Id="Id="d0c8bceb-28eb-49ae-bc68-454ae84d6264" Path="ExplorerCommandVerb.dll" ThreadingModel="STA"/>
+            </com:SurrogateServer>
+          </com:ComServer>
+        </com:Extension>
+        <desktop4:Extension Category="windows.fileExplorerContextMenus">
+          <desktop4:FileExplorerContextMenus>
+            <desktop4:ItemType Type=".contoso">
+              <desktop4:Verb Id="Command1" Clsid="d0c8bceb-28eb-49ae-bc68-454ae84d6264" />
+            </desktop4:ItemType>
+          </desktop4:FileExplorerContextMenus>
+        </desktop4:Extension>
       </Extensions>
     </Application>
   </Applications>
@@ -816,7 +915,7 @@ Registra los controladores que se implementan en la aplicación. También puedes
 
 ```
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.cloudfiles``
 |iconResource |El icono que representa tu servicio de proveedor de archivos en la nube. Este icono aparece en el panel Navegación del Explorador de archivos.  Los usuarios eligen este icono para mostrar archivos desde tu servicio en la nube. |
@@ -886,10 +985,10 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.protocol``
-|Name |Nombre del protocolo. |
+|Nombre |Nombre del protocolo. |
 |Parámetros |La lista de parámetros y valores para pasar a la aplicación como argumentos de evento cuando se activa la aplicación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. |
 
 ### <a name="example"></a>Ejemplo
@@ -1004,7 +1103,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Extension>
 ```
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.startupTask``|
 |Archivo ejecutable |Ruta de acceso relativa para que se inicie el archivo ejecutable. |
@@ -1059,7 +1158,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
   </AutoPlayHandler>
 ```
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.autoPlayHandler``
 |ActionDisplayName |Una cadena que representa la acción que los usuarios pueden realizar con un dispositivo que se conectan a un equipo (por ejemplo: "Importar archivos" o "Reproducir vídeo"). |
@@ -1146,7 +1245,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.appPrinter``
 |DisplayName |Es el nombre que quieres que aparezcan en la lista de destinos de impresión de una aplicación. |
@@ -1196,7 +1295,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 Puedes encontrar la referencia de esquema completa [aquí](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.sharedFonts``
 |Archivo |Es el archivo que contiene las fuentes que quieres compartir. |
@@ -1242,7 +1341,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Extension>
 ```
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fullTrustProcess``
 |GroupID |Cadena que identifica el conjunto de parámetros que quieres pasar al archivo ejecutable. |

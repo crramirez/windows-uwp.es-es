@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 1a0c632089c8c4cf84ecf6df99935671423b51a6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d720b256ae528192d694f98877126a6df087a18e
+ms.sourcegitcommit: 26bd7953ee5c5e625d4ed8f93df0391511c76f23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370816"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491142"
 ---
 # <a name="launch-the-windows-settings-app"></a>Cómo iniciar la aplicación Configuración de Windows
 
@@ -274,7 +274,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Acerca de | ms-settings:about |
 | Configuración avanzada de pantalla | ms-settings:display-advanced (solo está disponible en dispositivos que admiten opciones avanzadas de pantalla) |
-| Preferencias de volumen y dispositivo de aplicación | ms-settings:apps-volume |
+| Preferencias de volumen y dispositivo de aplicación | MS-configuración: las aplicaciones-volumen (**agregada en Windows 10, versión 1903**)|
 | Ahorro de batería | ms-settings:batterysaver (solo está disponible en dispositivos que tengan batería, como una tableta) |
 | Configuración de ahorro de batería | ms-settings:batterysaver-settings (solo está disponible en dispositivos que tengan batería, como una tableta) |
 | Uso de la batería | ms-settings:batterysaver-usagedetails (solo está disponible en dispositivos que tengan batería, como una tableta) |
