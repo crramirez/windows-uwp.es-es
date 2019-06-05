@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, guidelines, directrices, best practices, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: 78f044890e49f4631abf710764bc2f9746a1306f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7bb187092158386c503b91973d8d63ce291b4760
+ms.sourcegitcommit: c62b260eecd373e57b19a623bae77e29180e0f3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639150"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66565515"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
 
@@ -76,6 +76,8 @@ En esta sección se proporcionan ejemplos de escenarios de anuncios de banner qu
 * Escribir o distribuir código que llame a los servicios de anuncio a través de medios que no sean las bibliotecas de Microsoft Advertising que se ejecutan en el contexto de la aplicación.
 
 * Interactuar con interfaces no documentadas u objetos secundarios creados por las bibliotecas de Microsoft Advertising, por ejemplo, **WebView** o **MediaElement**.
+
+* Para publicar anuncios en un viewbox para reducir el tamaño de los anuncios para permitir que los anuncios más de una página de lo normal.
 
 <span id="interstitialbestpractices10" />
 
@@ -173,7 +175,7 @@ Hay dos sobrecargas para el método **RegisterAdContainer** que puedes usar:
 
 * Si quieres que sea seleccionable el contenedor completo para todos los elementos de anuncios nativos individuales, llama al método **RegisterAdContainer(FrameworkElement)** y pasa el control del contenedor al método. Por ejemplo, si muestras todos los elementos de anuncios nativos en controles independientes que se hospedan en un **StackPanel** y quieres que sea seleccionable todo el **StackPanel**, pasa el **StackPanel** a este método.
 
-* Si quieres que solo sean seleccionables determinados elementos de anuncios nativos, llama al método **RegisterAdContainer(FrameworkElement, IVector(FrameworkElement))**. Solo serán seleccionables los controles que pases al segundo parámetro.
+* Si quieres que solo sean seleccionables determinados elementos de anuncios nativos, llama al método **RegisterAdContainer(FrameworkElement, IVector(FrameworkElement))** . Solo serán seleccionables los controles que pases al segundo parámetro.
 
 ### <a name="required-native-ad-elements"></a>Elementos de anuncios nativos necesarios
 
