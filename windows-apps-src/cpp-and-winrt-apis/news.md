@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, noticias, lo que de, new
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a84e118d988d8bf6a7d26eba7d5dd009c7ad44f3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 11249335f9d29d37bb0824fa779d3ae151c74799
+ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360141"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66721652"
 ---
 # <a name="whats-new-in-cwinrt"></a>Novedades de C / c++ / WinRT
 
@@ -160,13 +160,17 @@ Esta optimización se evita la #include dependencias en `module.g.cpp` para que 
 
 El `module.g.cpp` archivo también contiene ahora dos asistentes que se pueden componer adicionales, denominados **winrt_can_unload_now**, y **winrt_get_activation_factory**. Estos se han diseñado para proyectos grandes, donde un archivo DLL se compone de un número de bibliotecas, cada uno con sus propias clases de tiempo de ejecución. En esa situación, debe unir manualmente la DLL **DllGetActivationFactory** y **DllCanUnloadNow**. Estos elementos auxiliares facilitan mucho más fácil de hacer eso, al evitar errores falsos de origen. El `cppwinrt.exe` la herramienta `-lib` marca también puede utilizarse para proporcionar su propio preámbulo a cada lib individual (en lugar de `winrt_xxx`) para que las funciones de cada lib tenga nombre individualmente y, por tanto, se combinan de forma inequívoca.
 
-#### <a name="new-winrtcoroutineh-header"></a>Nuevo `winrt/coroutine.h` encabezado
+#### <a name="coroutine-support"></a>Compatibilidad con corrutinas
 
-El `winrt/coroutine.h` encabezado es el nuevo lugar para todos C++la compatibilidad con corrutinas de /WinRT. Anteriormente, esta compatibilidad residía en distintos lugares, lo que pensamos fue muy restrictivo. Puesto que ahora se generan las interfaces asincrónicas de Windows en tiempo de ejecución, en lugar de escritos a mano, que ahora residen en `winrt/Windows.Foundation.h`. Aparte de ser más fácil de mantener y dar soporte, significa que esa corrutina aplicaciones auxiliares como [ **resume_foreground** ](/uwp/cpp-ref-for-winrt/resume-foreground) ya no se ha agregado al final de un encabezado de espacio de nombres específico. En su lugar, pueden incluir más de forma natural sus dependencias. Esto permite que más **resume_foreground** para admitir no solo reanudar en un determinado [ **Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher), pero puede ahora también admite reanudar en un determinado [ **Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue). Anteriormente, solo uno podría tener soporte técnico; pero no ambos, ya que la definición solo puede residir en un espacio de nombres.
+Compatibilidad con corrutinas se incluye automáticamente. Anteriormente, la compatibilidad con residía en varios lugares, lo que pensamos fue muy restrictivo. Y, a continuación, temporalmente para la versión 2.0, un `winrt/coroutine.h` era necesario el archivo de encabezado, pero que ya no es necesario. Puesto que ahora se generan las interfaces asincrónicas de Windows en tiempo de ejecución, en lugar de escritos a mano, que ahora residen en `winrt/Windows.Foundation.h`. Aparte de ser más fácil de mantener y dar soporte, significa que esa corrutina aplicaciones auxiliares como [ **resume_foreground** ](/uwp/cpp-ref-for-winrt/resume-foreground) ya no se ha agregado al final de un encabezado de espacio de nombres específico. En su lugar, pueden incluir más de forma natural sus dependencias. Esto permite que más **resume_foreground** para admitir no solo reanudar en un determinado [ **Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher), pero puede ahora también admite reanudar en un determinado [ **Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue). Anteriormente, solo uno podría tener soporte técnico; pero no ambos, ya que la definición solo puede residir en un espacio de nombres.
 
 Este es un ejemplo de la **DispatcherQueue** admite.
 
 ```cppwinrt
+...
+#include <winrt/Windows.System.h>
+using namespace Windows::System;
+...
 fire_and_forget Async(DispatcherQueueController controller)
 {
     bool queued = co_await resume_foreground(controller.DispatcherQueue());

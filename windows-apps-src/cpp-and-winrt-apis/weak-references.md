@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, referencia fuerte y débil,
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c9fb112c6f83fa7bd9a3612916efd2527d821c29
-ms.sourcegitcommit: 6c7e1aa3bd396a1ad714e8b77c0800759dc2d8e1
+ms.openlocfilehash: 46a0e21295ba430671be4e36ab213e182c2b1737
+ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65821072"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66721634"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Las referencias fuertes y débiles en C / c++ / WinRT
 
@@ -25,7 +25,6 @@ La lista de código siguiente muestra un ejemplo típico de una corrutina que es
 // pch.h
 #pragma once
 #include <iostream>
-#include <winrt/coroutine.h>
 #include <winrt/Windows.Foundation.h>
 
 // main.cpp : Defines the entry point for the console application.
