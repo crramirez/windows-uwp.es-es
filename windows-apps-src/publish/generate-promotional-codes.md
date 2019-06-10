@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, código de promoción, códigos de promoción, token, tokens
 ms.localizationpriority: medium
-ms.openlocfilehash: db4cde6f8c195101ec31de26c00ffa7325e08d71
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 931b3abfe13a3834d991ee1a0a38c752b9e3f719
+ms.sourcegitcommit: 7da28cf4f4e8390bc9a21a9488b03af39271cbbe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605400"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64745028"
 ---
 # <a name="generate-promotional-codes"></a>Generar códigos promocionales
 
@@ -31,8 +31,13 @@ Puede generar códigos de uso único (y distribuir uno para cada cliente), o bie
 Ten en cuenta las siguientes directivas para los códigos promocionales:
 
 -   Puedes generar códigos de promoción para cualquier aplicación o complemento (con la excepción de complementos de suscripción) que hayas publicado en la Microsoft Store. Los clientes pueden canjear los códigos en cualquier versión de Windows que sea compatible con la aplicación o complemento.
--   Los códigos promocionales expiran seis meses después de la fecha de su pedido (a menos que elijas una fecha de expiración anterior).
--   Cada 6 meses, puedes generar códigos que permiten hasta 1600 canjes para tus aplicaciones o complementos. El período de 6 meses comienza cuando se envía el primer pedido de códigos promocionales, incluso si elige una fecha de expiración anterior. El total de 1600 canjes por producto se aplica a los códigos de uso único y a los códigos que pueden usarse varias veces.
+-   Para los juegos:
+    - Puede generar hasta 5000 códigos promocionales por juego.
+    - Los códigos promocionales generados para juegos no expiren nunca.
+- Para los demás tipos de aplicaciones o complementos:
+    - En cualquier período de seis meses, puede generar hasta 1600 códigos promocionales de uso único o cualquier número de usar varios códigos de forma que el total había permitida canjes no exceda de 1600.
+    - El período de 6 meses comienza al generar el primero se crea el código de promoción y tiene una duración de seis meses, independientemente de si se establece una fecha de expiración anterior sobre los códigos.
+    - Los códigos creados durante un período de seis meses existente será contarán para el número de códigos generados dentro de ese período, incluso si expira una vez finalizado el período (por ejemplo, si genera un código en el último día de la ventana de seis meses, será will ser todavía  ser válidos durante un total de 6 meses desde su creación).
 -   Debe seguir los requisitos definidos en el [acuerdo del desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), incluida la sección **3 k. Los códigos promocionales**.
 
 > [!NOTE]
@@ -78,7 +83,7 @@ Para descargar un pedido completado de códigos promocionales y distribuirlos a 
     -   **Id. de pedido**: Un identificador único para el orden en el que se generó este código.
     -   **Dado a**: Un campo vacío que puede usar para realizar un seguimiento de qué cliente dio el código.
     -   **Disponible**: El número de veces que el código sigue estando disponible para canjear (en el momento en que se generó el archivo).
-    -   **Canjeado**: El número de veces que se ha canjeado el código (en el momento en que se generó el archivo).
+    -   **Redeemed**: El número de veces que se ha canjeado el código (en el momento en que se generó el archivo).
 
 4.  Distribuye las direcciones URL canjeables a los clientes mediante el formato de comunicación que prefieras (por ejemplo, notificaciones dirigidas, correo electrónico, mensaje SMS o tarjetas impresas). Te recomendamos que incluyas lo siguiente en la comunicación:
     -   Una explicación de para qué aplicación o complemento es el código promocional y, de forma opcional, una descripción de por qué el cliente recibe el código.
