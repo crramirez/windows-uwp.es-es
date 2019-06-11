@@ -6,12 +6,12 @@ keywords: lista de comprobación, windows, uwp, envío, enviar, juego, aplicaci�
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b98ea7f1d28c4fcd63cd2d4706905578b240e126
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 24d3c99636009ebf65f3e24d39d657297b105150
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57643290"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826120"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
@@ -40,10 +40,10 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 ### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
 | Nombre del campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Mercados**                   | Default: Todos los mercados posibles  | [Definir la selección de mercado y precios](define-pricing-and-market-selection.md)         |
+| **Markets**                   | Default: Todos los mercados posibles  | [Definir la selección de mercado y precios](define-pricing-and-market-selection.md)         |
 | **Audiencia**                | Default: Audiencia pública | [Audiencia](choose-visibility-options.md#audience) |
 | **Detectabilidad**                | Default: Hacer que esta aplicación disponible y pueda detectar en el Store | [Detectabilidad](choose-visibility-options.md#discoverability) |
-| **Programación**                  | Default: Versión tan pronto como sea posible        | [Configurar la programación de la versión exacta](configure-precise-release-scheduling.md) |
+| **Schedule**                  | Default: Versión tan pronto como sea posible        | [Configurar la programación de la versión exacta](configure-precise-release-scheduling.md) |
 | **Precio base**                | Requerido                                    | [Establecer y programar los precios de la aplicación](set-and-schedule-app-pricing.md)              |
 | **Prueba gratuita**                | Default: Sin prueba gratuita                      | [Prueba gratuita](set-app-pricing-and-availability.md#free-trial)              |
 | **Precio de oferta**              | Opcional                                    | [Poner aplicaciones y complementos a la venta](put-apps-and-add-ons-on-sale.md)           |
@@ -56,7 +56,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 | Nombre del campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **Categoría y subcategoría**  | Requerido                                    | [Tabla de categoría y subcategoría](category-and-subcategory-table.md)       |
-| **URL de la política de privacidad**            | Obligatorio para muchas aplicaciones. Consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](https://docs.microsoft.com/en-us/legal/windows/agreements/store-policies#105-personal-information) | [URL de la política de privacidad](enter-app-properties.md#privacy-policy-url)        |
+| **URL de la política de privacidad**            | Obligatorio para muchas aplicaciones. Consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](store-policies.md#105-personal-information) | [URL de la política de privacidad](enter-app-properties.md#privacy-policy-url)        |
 | **Sitio Web**                   | Opcional                                    | [Sitio Web](enter-app-properties.md#website)                   |
 | **Información de contacto de soporte técnico**      | Obligatorio si tu producto está disponible en Xbox; de lo contrario, opcional (pero recomendado)                                   | [Información de contacto de soporte técnico](enter-app-properties.md#support-contact-info)              |
 | **Configuración del juego**             | Opcional (solo aplicable a los juegos)         | [Configuración del juego](enter-app-properties.md#game-settings) |
@@ -97,9 +97,9 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 | **Logotipos de Store**               | Recomendado; necesario para algunas versiones de sistemas operativos | [Logotipos de Store](app-screenshots-and-images.md#store-logos)             |
 | **Finalizadores**                  | Opcional                                    | [Finalizadores](app-screenshots-and-images.md#trailers)                | 
 | **Imagen de Windows 10 y Xbox (art héroe de 16:9)**     | Recomendado        | [10 de Windows y Xbox image (art héroe de 16:9)
-] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Imágenes de Xbox**     | Necesario para la visualización adecuada si publica en Xbox        | [Imágenes de Xbox
-] (#xbox-imágenes de aplicación capturas de pantalla y images.md) |
+](app-screenshots-and-images.md#xbox-images) |
 | **Campos adicionales**  | Opcional                                    | [Campos adicionales](create-app-store-listings.md#supplemental-fields) 
 | **Términos de búsqueda**              | Opcional                                    | [Términos de búsqueda](create-app-store-listings.md#search-terms)         |
 | **Información de copyright y marca comercial** | Opcional                                 | [Información de copyright y marca comercial](create-app-store-listings.md#copyright-and-trademark-info) |

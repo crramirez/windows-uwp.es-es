@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b35f95556a13d880992a12d7434af76feed4334
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 7556ca526ecfa28b1d97346501ec1875f938ca35
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63770887"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826219"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
@@ -31,9 +31,9 @@ Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 
 | Cuenta individual | Cuenta de empresa |
 |--------------------|-----------------|
-| <ul><li>Cuesta aproximadamente 19 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type))</li></ul> |
+| <ul><li>Cuesta aproximadamente 19 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
-Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Por el [Store directivas](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), información de la cuenta de aplicaciones con cierta funcionalidad, como las que tienen acceso a financiero o que requieren autenticación para acceder a la funcionalidad principal (sin usar un tercero seguro dedicado proveedor de autenticación), solo se pueden publicar las cuentas de empresa.
+Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Por el [Store directivas](store-policies.md#1014-account-type), información de la cuenta de aplicaciones con cierta funcionalidad, como las que tienen acceso a financiero o que requieren autenticación para acceder a la funcionalidad principal (sin usar un tercero seguro dedicado proveedor de autenticación), solo se pueden publicar las cuentas de empresa.
 
 ## <a name="account-verification"></a>Comprobación de cuentas
 
@@ -252,4 +252,4 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 | Zambia                            | 19 USD              | 99 USD           | ZMK pagados al banco | No     |  
 | Zimbabue                          | 19 USD              | 99 USD           | USD pagados al banco | No     |
 
-\*  Se puede usar como un método de pago para las cuentas de pago en este mercado PayPal, pero no se puede usar para pagar fo son la tarifa de registro de la cuenta de desarrollador.
+\*  PayPal puede usarse como un método de pago para las cuentas de pago en este mercado, pero no se puede usar para pagar la tarifa de registro de la cuenta de desarrollador.

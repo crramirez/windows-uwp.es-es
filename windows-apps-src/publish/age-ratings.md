@@ -6,12 +6,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp, clasificación por edades, clasificación de juegos, iarc, clasificación, cuestionario, panel de clasificación, clasificación de contenido
 ms.localizationpriority: medium
-ms.openlocfilehash: fc079cd0c3fb75444a8ac8c6f8376c3ed5a992b4
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 55592f2d16807e2ad359a21977bd483db0b2e089
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787311"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826178"
 ---
 # <a name="age-ratings"></a>Clasificaciones por edades
 
@@ -59,4 +59,4 @@ Anteriormente, los propios desarrolladores especificaban la clasificación por e
 | 7+ (Apto para mayores de 7 años)   | Las aplicaciones con esta clasificación por edades tienen los mismos criterios que las aplicaciones clasificadas como 3+, excepto que pueden incluir contenido que podría asustar a público más joven y pueden tener desnudez parcial, siempre y cuando esta no tenga connotaciones sexuales. Esta clasificación solo debe usarse para aplicaciones donde el contenido es adecuado para niños.                                                                                   |
 | 12+ (Apto para mayores de 12 años) | Las aplicaciones con esta clasificación por edad pueden contener un mayor nivel de desnudez que no sea de carácter sexual, violencia gráfica leve hacia personajes irreales o violencia no gráfica hacia personajes realistas de humanos o animales. Esta clasificación por edad también puede incluir lenguaje soez, pero este no puede tener carácter sexual. Además, las aplicaciones a partir de esta clasificación por edad pueden permitir los siguientes usos no controlados: (i) acceso a redes sociales en línea o (ii) uso compartido de información personal con terceros, incluidos otros jugadores o personas conocidas en línea. (Para que esta actividad se considere controlada, la aplicación debe incluir funciones de control parental que requieran permiso paterno para usar dichas funciones de uso compartido, y deberás identificar y explicar su funcionalidad en las [notas para certificación](notes-for-certification.md)). |
 | 16+ (Apto para mayores de 16 años) | Las aplicaciones con esta clasificación por edad pueden describir violencia realista con cantidades de sangre mínimas y pueden describir actividades sexuales. También pueden hacer referencia al consumo de drogas o tabaco y a actividades criminales, y pueden tener un lenguaje más soez que el permitido en las aplicaciones clasificadas como 12+, dentro de los límites estipulados en las directivas de la Tienda.                                                                                                                           |
-| 18+ (Apto para adultos)            | Los juegos con esta clasificación por edades pueden contener escenas de sangre y violencia extrema, desagradable o explicita, solo adecuada para un público adulto. Todo el contenido debe cumplir con los criterios de las [directivas de contenido](https://docs.microsoft.com/legal/windows/agreements/store-policies).                                                                                                                                                            |
+| 18+ (Apto para adultos)            | Los juegos con esta clasificación por edades pueden contener escenas de sangre y violencia extrema, desagradable o explicita, solo adecuada para un público adulto. Todo el contenido debe cumplir con los criterios de las [directivas de contenido](store-policies.md).                                                                                                                                                            |

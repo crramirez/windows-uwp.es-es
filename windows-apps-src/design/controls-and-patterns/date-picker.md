@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b8e03683d38b382d74bd6defbf7732578878960
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7e0a7d1732833f8e6fc750f8ee481fa3c1116b50
+ms.sourcegitcommit: 0d6110cd3d868612bee347566f5b85b724cb57df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362840"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66823599"
 ---
 # <a name="date-picker"></a>Selector de fecha
 
@@ -59,7 +59,7 @@ El punto de entrada muestra la fecha elegida y, cuando el usuario lo selecciona,
 En este ejemplo, se muestra cómo crear un sencillo selector de fecha con un encabezado.
 
 ```xaml
-<DatePicker x:Name=birthDatePicker Header="Date of birth"/>
+<DatePicker x:Name="birthDatePicker" Header="Date of birth"/>
 ```
 
 ```csharp

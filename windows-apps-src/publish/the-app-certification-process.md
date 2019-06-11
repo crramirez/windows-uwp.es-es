@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, publicar, preprocesamiento, certificación, liberar, pendientes, enviar, publicar, estado, tiempo
 ms.localizationpriority: medium
-ms.openlocfilehash: fe9df9ce95c6b17bcd3d702bf09ac57b9f205e0c
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: d88d8deeb467f186f120fb8c1e579d5c9222aaf1
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63790585"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826229"
 ---
 # <a name="the-app-certification-process"></a>Proceso de certificación de la aplicación
 
@@ -29,7 +29,7 @@ Durante esta fase, se llevan a cabo varias pruebas:
 -   **Pruebas de compatibilidad técnica:** Compatibilidad técnica se prueba mediante el Kit de certificación de aplicaciones de Windows. (Debes asegurarte siempre de [probar tu aplicación con el Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviarla a la Tienda).
 -   **Cumplimiento de contenidos:** La cantidad de tiempo que tarde varía según la complejidad de la aplicación es, cuánto contenido visual tiene y cuántas aplicaciones se han enviado recientemente. Asegúrate de proporcionar toda la información que los evaluadores deben conocer en la página [Notas para la certificación](notes-for-certification.md).
 
-Una vez completado el proceso de certificación, obtendrás un informe donde se indicará si la aplicación pasó o no la certificación. Si no la pasó, el informe indicará en qué prueba produjo errores o qué [directiva](https://docs.microsoft.com/legal/windows/agreements/store-policies) no se cumplió. Después de solucionar el problema, puedes crear un nuevo envío de la aplicación para volver a iniciar el proceso de certificación.
+Una vez completado el proceso de certificación, obtendrás un informe donde se indicará si la aplicación pasó o no la certificación. Si no la pasó, el informe indicará en qué prueba produjo errores o qué [directiva](store-policies.md) no se cumplió. Después de solucionar el problema, puedes crear un nuevo envío de la aplicación para volver a iniciar el proceso de certificación.
 
 ## <a name="release"></a>Publicación
 
@@ -54,7 +54,7 @@ Mientras la aplicación está en la fase de publicación, el **mostrar detalles*
 Tras completar los pasos anteriores, el estado del envío cambiará de **Publicación** a **En la Tienda**. Entonces, tu envío estará disponible en Microsoft Store para que lo descarguen los clientes (a menos que hayas elegido otra opción de [Visibilidad](choose-visibility-options.md#discoverability)). 
 
 > [!NOTE]
-> También se realizan comprobaciones puntuales de aplicaciones después de haberse publicado, para poder identificar posibles problemas y garantizar que la aplicación cumple con todas las [directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies). Si encontramos algún problema, se te notificará al respecto y sobre cómo solucionarlo, si corresponde, o bien sobre si la aplicación se ha quitado de la Tienda.
+> También se realizan comprobaciones puntuales de aplicaciones después de haberse publicado, para poder identificar posibles problemas y garantizar que la aplicación cumple con todas las [directivas de Microsoft Store](store-policies.md). Si encontramos algún problema, se te notificará al respecto y sobre cómo solucionarlo, si corresponde, o bien sobre si la aplicación se ha quitado de la Tienda.
 
  
 

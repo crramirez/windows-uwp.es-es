@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, lob, línea de negocio, aplicaciones para empresas, store para empresas, store para educación, empresa
 ms.localizationpriority: medium
-ms.openlocfilehash: b379762ba3d3ea11b974a84119280247b85bc19e
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: d44d2b248ddc2bff6ffa91860621fe315fb22c47
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787070"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826151"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicaciones de línea de negocio a empresas
 
@@ -39,7 +39,7 @@ Para confirmar la asociación, haz clic en **Aceptar**. De este modo, podrás pu
 
 ## <a name="submit-lob-apps"></a>Enviar aplicaciones de LOB
 
-Cuando estés listo para publicar una aplicación para uso exclusivo de la empresa, el proceso es similar al proceso de envío de aplicaciones. La aplicación pasa por el mismo [proceso de certificación](the-app-certification-process.md), y debe cumplir con todas las [directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies). Solo hay algunas etapas del proceso que son diferentes.
+Cuando estés listo para publicar una aplicación para uso exclusivo de la empresa, el proceso es similar al proceso de envío de aplicaciones. La aplicación pasa por el mismo [proceso de certificación](the-app-certification-process.md), y debe cumplir con todas las [directivas de Microsoft Store](store-policies.md). Solo hay algunas etapas del proceso que son diferentes.
 
 
 ### <a name="visibility"></a>Visibilidad

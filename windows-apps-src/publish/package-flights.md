@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, distribución de paquetes piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c0d299ba5b3a37b2f80a5e3c9b4456d63c3e0d4
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: abd4b26d0943bf032f93f62719959ef6650e0d65
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788474"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826139"
 ---
 # <a name="package-flights"></a>Paquetes piloto
 
@@ -75,7 +75,7 @@ De manera predeterminada, tu paquete piloto se publicará y estará disponible p
 
 ## <a name="submit-your-package-flight-to-the-store"></a>Enviar el paquete piloto a la Tienda
 
-Cuando hayas especificado los paquetes y hayas configurado las opciones necesarias, haz clic en **Enviar a la Tienda**. A continuación, el paquete piloto pasará por el [proceso de certificación de la aplicación](the-app-certification-process.md). Tenga en cuenta que los paquetes incluidos en los vuelos de paquete deben cumplir la [las directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies), al igual que con todos los envíos.
+Cuando hayas especificado los paquetes y hayas configurado las opciones necesarias, haz clic en **Enviar a la Tienda**. A continuación, el paquete piloto pasará por el [proceso de certificación de la aplicación](the-app-certification-process.md). Tenga en cuenta que los paquetes incluidos en los vuelos de paquete deben cumplir la [las directivas de Microsoft Store](store-policies.md), al igual que con todos los envíos.
 
 Las personas de los grupos piloto asociados con ese paquete piloto que ya tengan tu aplicación, obtendrán ahora una actualización con los paquetes que has incluido en el paquete piloto. Si esas personas todavía no tienen la aplicación, obtendrán los paquetes del paquete piloto cuando la instalen. 
 

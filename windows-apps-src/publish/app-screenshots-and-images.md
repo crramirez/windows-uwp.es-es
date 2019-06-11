@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
 ms.localizationpriority: medium
-ms.openlocfilehash: a27763d76d2be65c7e0d2c6ccaeb0cd13123bdae
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 3f1931a15b5517264cd11dca8d8086dda7094b93
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244317"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826156"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -128,7 +128,7 @@ Sigue estas recomendaciones para facilitar tus tráileres de manera eficaz:
 
 También debes seguir los requisitos que se describen a continuación.
 
-**Para agregar tráileres a tu descripción:**
+**Para agregar los finalizadores a la lista:**
 1. Subir el **archivo de vídeo** de tu tráiler en el cuadro indicado. También se muestra un menú desplegable en caso de que también quieras reutilizar una tráiler que ya has subido (quizá para descripción de Store en un idioma diferente).
 2. Una vez que hayas subido el tráiler, tendrás que subir una **imagen en miniatura** que lo complemente. Debe ser un archivo .png de 1920 x 1080 píxeles y, por lo general, suele ser una imagen estática sacada del tráiler.
 3. Haz clic en el icono de lápiz para agregar un **título** para tu tráiler (255 caracteres o menos).
@@ -152,7 +152,7 @@ Al proporcionar los tráileres, asegúrate de seguir estos requisitos:
 - El título no puede superar los 255 caracteres. 
 - No incluyas clasificaciones por edades en tus tráileres.
 
-Al igual que el resto de campos de la página de descripción de Store, los tráileres deben pasar la certificación antes de poder publicarlos en Microsoft Store. Asegúrate de que tus tráileres cumplan con las [directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
+Al igual que el resto de campos de la página de descripción de Store, los tráileres deben pasar la certificación antes de poder publicarlos en Microsoft Store. Asegúrate de que tus tráileres cumplan con las [directivas de Microsoft Store](store-policies.md).
 
 Existen requisitos adicionales según el tipo de archivo.
 
@@ -223,7 +223,7 @@ El formato de imagen **2:1 (2400 x 1200)** solo se usa si la aplicación es comp
 
 Si la aplicación haya enviado anteriormente es compatible con versiones anteriores del sistema operativo (Windows 8.x y Windows Phone 8.x), se deben proporcionar estas imágenes en orden para que podamos considere la posibilidad de que cuenta con la aplicación en los diseños promocionales (aunque no garantizan que destacados de la aplicación). Si la aplicación no es compatible con estas versiones anteriores del sistema operativo, omita esta sección. (Esta sección se llamaba anteriormente **Imágenes promocionales opcionales**).
 
-**Para Windows Phone 8.1 y versiones anteriores**, dos tamaños de imagen se pueden usar en los diseños de promoción: **1000 x 800 píxeles (5:4)** y **358 x 358 píxeles (1:1)**. Si la aplicación se ejecuta en Windows Phone 8.1 o versiones anteriores, se recomienda proporcionar imágenes en ambos de estos tamaños.  
+**Para Windows Phone 8.1 y versiones anteriores**, dos tamaños de imagen se pueden usar en los diseños de promoción: **1000 x 800 píxeles (5:4)** y **358 x 358 píxeles (1:1)** . Si la aplicación se ejecuta en Windows Phone 8.1 o versiones anteriores, se recomienda proporcionar imágenes en ambos de estos tamaños.  
 
 > [!TIP]
 > Asegúrate de incluir una imagen de icono de la aplicación de 300 x 300 en la sección [Logotipos de Store](#store-logos) para cualquier envío que admita Windows Phone 8.1 o versiones anteriores. Esto garantiza que la aplicación no aparezca en Store con un icono en blanco.  

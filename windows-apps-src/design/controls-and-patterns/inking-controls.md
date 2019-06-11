@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: 0eb5a03a2a6de8624e8b414fa31c6eec51c04bbc
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9b34f88d198ec80c67e5aac7b57001e42fe5c516
+ms.sourcegitcommit: aa5a055e3ff9ee9defc73ed9567196d59f59542a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66364889"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66825021"
 ---
 # <a name="inking-controls"></a>Controles de entrada manuscrita
 
@@ -84,7 +84,7 @@ Para agregar un control InkCanvas a tu aplicación se requiere una sola línea d
 ```
 
 > [!NOTE]
-> Para la personalización detallada de InkCanvas mediante InkPresenter, consulta el artículo ["Interacciones de pluma y lápiz en aplicaciones para UWP"](https://windowsstyleguide/input/pen-and-stylus-interactions/).
+> Personalización de InkCanvas mediante InkPresenter detallada, consulte el ["Manuscrita interacciones y tinta de Windows en aplicaciones para UWP"](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions) artículo.
 
 El control InkToolbar debe usarse junto con un control InkCanvas. La incorporación de un control InkToolbar (con todas las herramientas integradas) en la aplicación requiere una línea de marcado adicional:
 
@@ -170,6 +170,6 @@ El borrador también tiene un control flotante que proporciona el comando **Borr
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Interacciones del lápiz y el lápiz óptico en aplicaciones para UWP](https://windowsstyleguide/input/pen-and-stylus-interactions/)
-- [Reconocer trazos de tinta](https://windowsstyleguide/input/convert-ink-to-text/)
-- [Store y recuperar los trazos de tinta](https://windowsstyleguide/input/save-and-load-ink/)
+- [Las interacciones del lápiz y entrada de lápiz de Windows en aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions)
+- [Reconocer trazos de tinta de Windows como texto y formas](https://docs.microsoft.com/windows/uwp/design/input/convert-ink-to-text)
+- [Store y recuperar datos del trazo de tinta de Windows](https://docs.microsoft.com/windows/uwp/design/input/save-and-load-ink)

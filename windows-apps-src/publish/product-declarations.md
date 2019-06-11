@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bab1d6bd629aa85351e28a907d4b5ad705fb377
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 47011a22353f26361a392690d857bde1fc180c03
+ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788368"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826110"
 ---
 # <a name="product-declarations"></a>Declaraciones de producto
 
@@ -21,7 +21,7 @@ Las siguientes secciones describen algunas de las declaraciones y lo que necesit
 
 ## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Esta aplicación permite a los usuarios realizar compras, pero no utiliza el sistema de comercio de Microsoft Store.
 
-Para casi cualquier envío, debe dejar desactivada esta casilla, desde las aplicaciones que ofrecen la oportunidad de comprar los elementos que están o se pueden consumir o utilizarse dentro de la aplicación deben usar la compra de Microsoft Store en la aplicación de API para crear y enviar los complementos. Por el [acuerdo del desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), las aplicaciones que se crearon y enviadas antes del 29 de junio de 2015, podrían continuar ofrecer funcionalidad de compra en la aplicación sin usar el motor de comercio de Microsoft, siempre que la funcionalidad de compra cumple con la [las directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
+Para casi cualquier envío, debe dejar desactivada esta casilla, desde las aplicaciones que ofrecen la oportunidad de comprar los elementos que están o se pueden consumir o utilizarse dentro de la aplicación deben usar la compra de Microsoft Store en la aplicación de API para crear y enviar los complementos. Por el [acuerdo del desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), las aplicaciones que se crearon y enviadas antes del 29 de junio de 2015, podrían continuar ofrecer funcionalidad de compra en la aplicación sin usar el motor de comercio de Microsoft, siempre que la funcionalidad de compra cumple con la [las directivas de Microsoft Store](store-policies.md#108-financial-transactions). Si esto se aplica a tu aplicación, debes marcar esta casilla. Si no, déjala desactivada.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Esta aplicación se ha probado y cumple las directrices de accesibilidad.
 
