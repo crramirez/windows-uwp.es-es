@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: d720b256ae528192d694f98877126a6df087a18e
-ms.sourcegitcommit: 26bd7953ee5c5e625d4ed8f93df0391511c76f23
+ms.openlocfilehash: 9ce2024131035e77e7d8140c047e37979c6ac490
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491142"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040140"
 ---
 # <a name="launch-the-windows-settings-app"></a>Cómo iniciar la aplicación Configuración de Windows
 
@@ -251,7 +251,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Notificaciones | ms-settings:privacy-notifications |
 | Otros dispositivos | ms-settings:privacy-customdevices |
 | Imágenes | ms-settings:privacy-pictures |
-| Llamadas de teléfono | MS-configuración: privacidad-phonecall (**en desuso en Windows 10, versión 1809 y versiones posterior**) |
+| Llamadas de teléfono | MS-configuración: privacidad-llamadas telefónicas (**en desuso en Windows 10, versión 1809 y versiones posterior**) |
 | Señales de radio | ms-settings:privacy-radios |
 | Voz, entrada manuscrita y escritura |ms-settings:privacy-speechtyping |
 | Tareas | ms-settings:privacy-tasks |
