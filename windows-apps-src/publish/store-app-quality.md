@@ -8,10 +8,10 @@ keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: B15D4F19-4E6A-4C27-AD64-F03014D11BA9
 ms.openlocfilehash: 550ffeac8912769fc7e319d819f4de67f6d36cf1
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66826422"
 ---
 # <a name="app-quality"></a>Calidad de la aplicación
@@ -86,7 +86,7 @@ Los clientes valoran la atención a sus comentarios y necesidades. Los clientes 
 - Para obtener más información, consulte [Interactuar con los clientes](https://developer.microsoft.com/store/engage).
 
 
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
 
 - [Código de conducta y directivas de Microsoft Store](store-policies-and-code-of-conduct.md)
 - [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)

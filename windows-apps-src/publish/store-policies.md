@@ -8,10 +8,10 @@ keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
 ms.openlocfilehash: 3511fb221e1e087f7ced5ce11aca8d53bd027079
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66826482"
 ---
 # <a name="microsoft-store-policies"></a>Directivas de Microsoft Store
@@ -467,7 +467,7 @@ Si el producto ofrece contenido (por ejemplo, generado por el usuario, comercial
 ---
 <sup>1</sup>"Store" o "Microsoft Store" significa una plataforma que controla o es propiedad de Microsoft, independientemente de su nombre, a través de la cual las aplicaciones pueden ofrecerse a los clientes o ser adquiridas por ellos. A menos que se especifique lo contrario, Store incluye Microsoft Store, Tienda Windows, Tienda Xbox, Tienda Microsoft para Empresas y Microsoft Store para Educación.
 
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
 
 - [Historial de cambios de las directivas de Microsoft Store](store-policies-change-history.md)
 - [Código de conducta y directivas de Microsoft Store](store-policies-and-code-of-conduct.md)
