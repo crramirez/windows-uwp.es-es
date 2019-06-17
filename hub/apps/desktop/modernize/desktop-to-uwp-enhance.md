@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 22aefb58dc06a35ed3a10338eb585aa6c49e55fc
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 4846a29e914ffed15e4c3dea938cc51cefd566e0
+ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215101"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131946"
 ---
 # <a name="call-uwp-apis-in-desktop-apps"></a>Llamar a las API de UWP en aplicaciones de escritorio
 
@@ -213,10 +213,6 @@ El compilador compila ese código solo si esa constante se define en la configur
 Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. La aplicación llama a Windows Runtime APIs sólo si el usuario se ejecuta la aplicación como una aplicación empaquetada en Windows 10.
 
 La manera más fácil agregar comprobaciones en tiempo de ejecución en el código consiste en instalar este paquete de Nuget: [Las aplicaciones auxiliares de Desktop Bridge](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, utilice el ``IsRunningAsUWP()`` método a la puerta de todo el código que llama a Windows Runtime APIs. Consulte este blog para obtener más detalles: [Desktop Bridge - identificar el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
-
-## <a name="related-video"></a>Vídeo relacionado
-
-<iframe src="https://mva.microsoft.com/en-US/training-courses-embed/developers-guide-to-the-desktop-bridge-17373/Demo-Use-UWP-APIs-in-Your-Code-3d78c6WhD_9506218965" width="636" height="480" allowFullScreen frameBorder="0"></iframe>
 
 ## <a name="related-samples"></a>Muestras relacionadas
 
