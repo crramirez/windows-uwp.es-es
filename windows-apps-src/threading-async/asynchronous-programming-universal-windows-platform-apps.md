@@ -49,8 +49,7 @@ Con el patrón asincrónico de UWP, es posible que puedas evitar explícitamente
 | Visual Basic         | palabra clave **Async**, operador **Await** |
 | C++/WinRT            | corrutina, y **co_await** operador  |
 | C++/CX               | clase **task**, método **.then**      |
-| JavaScript           | 
-objeto de promesa, función **then**     |
+| JavaScript           | objeto de promesa, función **then**     |
 
 ## <a name="asynchronous-patterns-in-uwp-using-c-and-visual-basic"></a>Modelos asincrónicos en UWP con C# y Visual Basic
 Un segmento típico de código escrito en C# o Visual Basic se ejecuta sincrónicamente, lo que significa que cuando se ejecuta una línea, finaliza antes de que se ejecute la siguiente. Ha habido modelos de programación de Microsoft .NET anteriores para la ejecución asincrónica, pero el código resultante tiende a enfatizar la mecánica de la ejecución del código asincrónico en lugar de centrarse en la tarea que el código está tratando de realizar. UWP, .NET Framework y los compiladores de C# y Visual Basic han agregado características que extraen los mecanismos asincrónicos del código. Puedes escribir código asincrónico para .NET y UWP que se centre en qué es lo que hace el código, en lugar de en cómo y cuándo hacerlo. El código asincrónico tendrá un aspecto muy similar al código sincrónico. Para obtener más información, consulta [Llamar a API asincrónicas en C# o Visual Basic](call-asynchronous-apis-in-csharp-or-visual-basic.md).
