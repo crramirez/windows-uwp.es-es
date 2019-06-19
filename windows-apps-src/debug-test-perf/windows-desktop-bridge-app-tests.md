@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f979edbd49699447040880964dd1378bc7c94c0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 38c9a40dbe1a46aa125c76cd1fcc88a84685c8cc
+ms.sourcegitcommit: 280193dfe5a106fc6b4c85df3ac40535547b855c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362083"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67235173"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
 
@@ -30,7 +30,7 @@ Esta prueba verifica que todos los archivos portables ejecutables (PE) contienen
 La prueba examina todos los archivos portables ejecutables en el paquete y comprueba sus encabezados en busca de una firma. Se recomiendan que todos los archivos PE estén firmados digitalmente. Si alguno de los archivos PE no está firmado, se generará una advertencia.
  
 **Acciones correctivas**  
-Siempre se recomienda tener archivos firmados digitalmente. Para más información, consulta [Introducción a la firma de código](https://msdn.microsoft.com/en-us/library/ms537361(v=vs.85).aspx).
+Siempre se recomienda tener archivos firmados digitalmente. Para más información, consulta [Introducción a la firma de código](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)).
 
 ### <a name="2-file-association-verbs"></a>2. Verbos de asociación de archivo 
 **En segundo plano**  
