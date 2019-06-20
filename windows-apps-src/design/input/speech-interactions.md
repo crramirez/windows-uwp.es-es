@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fb292ad5cba892275709fbc89d5d53fa136144f3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ef8cdad247a57ce5fab461e70c2725fda4231efd
+ms.sourcegitcommit: ed32219e04f814a12ea018348e9cf678fcfd5e3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365298"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67253060"
 ---
 # <a name="speech-interactions"></a>Interacciones de voz
 
@@ -58,7 +58,7 @@ Detén el reconocimiento si se detecta entrada desde un dispositivo que no sea e
 
 Especifica el intervalo de tiempo sin entrada de voz que indica que el reconocimiento ha finalizado. No reinicies automáticamente el reconocimiento después de este período de tiempo, ya que suele indicar que el usuario ha dejado de interactuar con la aplicación.
 
-Deshabilita la interfaz de usuario de reconocimiento continuo y finaliza la sesión de reconocimiento si no hay disponible una conexión de red. El reconocimiento continuo requiere una conexión de red.
+Deshabilita la interfaz de usuario de reconocimiento continuo y finaliza la sesión de reconocimiento si no hay disponible una conexión de red. Reconocimiento continua requiere una conexión de red.
 
 ## <a name="commanding"></a>Comandos
 
@@ -200,7 +200,7 @@ Debes escuchar todas las cadenas de TTS para garantizar que son inteligibles y s
 -   Encadenar una secuencia de palabras inusuales o dictar números o signos de puntuación puede provocar que una frase sea ininteligible.
 -   La voz puede sonar forzada cuando la prosodia o cadencia es diferente a cómo un hablante nativo diría una frase.
 
-Estos dos tipos de problema se pueden abordar usando SSML en lugar de texto sin formato como entrada en el sintetizador de voz. Para obtener más información sobre SSML, consulta [Usar SSML para controlar la voz sintetizada](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) y [Referencia de Lenguaje de marcado de síntesis de voz](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
+Ambos problemas pueden resolverse mediante el uso de SSML instead of plain text como entrada para el sintetizador de voz. Para obtener más información sobre SSML, consulta [Usar SSML para controlar la voz sintetizada](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) y [Referencia de Lenguaje de marcado de síntesis de voz](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
 
 ## <a name="other-articles-in-this-section"></a>Otros artículos de esta sección 
 
