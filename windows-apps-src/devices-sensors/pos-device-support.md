@@ -5,19 +5,19 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 865c95fe5453a038a73b397fdcf32f77f9e8defb
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: aa8bec12ca3920b1e273d8f2d98186f62a340016
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63828075"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321532"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Punto admitido de periféricos de servicio
 
 ## <a name="barcode-scanner"></a>Escáner de código de barras
 | Conectividad | Soporte |
 | -------------|-------------|
-| USB          | <p>Windows contiene un controlador de clase en el cuadro para analizadores de código de barras USB conectado que se basa en la especificación de HID de tabla de uso del analizador de PDV (8c) definida por [USB.org](https://www.usb.org/developers/hidpage/). Consulta la siguiente tabla para obtener una lista de los dispositivos compatibles conocidos.  Consulta el manual del escáner de códigos de barras o ponte en contacto con el fabricante para determinar cómo configurar el escáner en modo **USB.HID.POS Scanner**. </p><p>Windows también admite la implementación de controladores específicos del proveedor para admitir escáneres de códigos de barras adicionales que no admiten el estándar de escáner USB.HID.POS. Ponte en contacto con el fabricante del escáner de códigos de barras para información sobre la disponibilidad de controladores específicos del proveedor.</p><p>Los fabricantes de escáneres de códigos de barras pueden consultar la [Guía de diseño de controladores de escáner de códigos de barras](https://aka.ms/pointofservice-drv) para obtener información sobre cómo crear un controlador de escáner de códigos de barras personalizado</p> |
+| USB          | <p>Windows contiene un controlador de clase en el cuadro para analizadores de código de barras USB conectado que se basa en la especificación de HID de tabla de uso del analizador de PDV (8c) definida por [USB.org](https://www.usb.org/hid). Consulta la siguiente tabla para obtener una lista de los dispositivos compatibles conocidos.  Consulta el manual del escáner de códigos de barras o ponte en contacto con el fabricante para determinar cómo configurar el escáner en modo **USB.HID.POS Scanner**. </p><p>Windows también admite la implementación de controladores específicos del proveedor para admitir escáneres de códigos de barras adicionales que no admiten el estándar de escáner USB.HID.POS. Ponte en contacto con el fabricante del escáner de códigos de barras para información sobre la disponibilidad de controladores específicos del proveedor.</p><p>Los fabricantes de escáneres de códigos de barras pueden consultar la [Guía de diseño de controladores de escáner de códigos de barras](https://aka.ms/pointofservice-drv) para obtener información sobre cómo crear un controlador de escáner de códigos de barras personalizado</p> |
 | Bluetooth    | <p>Windows admite el protocolo de puerto serie: escáneres de códigos de barras de Bluetooth con interfaz serie única (SPP SSI). Consulta la siguiente tabla para obtener una lista de los dispositivos compatibles conocidos. Consulta el manual del escáner de código de barras o ponte en contacto con el fabricante para determinar cómo configurar el escáner en modo **SPP-SSI**.</p> |
 | Cámara web       | <p>A partir de la versión 1803 de Windows 10, se pueden leer códigos de barras a través del objetivo de una cámara estándar desde una aplicación Universal de Windows. Se recomienda que uses una cámara con enfoque automático y una resolución mínima de 1920 x 1440.  Algunas cámaras de resolución más baja pueden leer códigos de barras estándar si la impresión es lo suficientemente grande.  Los códigos de barras con elementos más estrechos pueden requerir cámaras de mayor resolución.</p>| 
 |
@@ -68,8 +68,8 @@ ms.locfileid: "63828075"
 
 
 ¹ Upgradable para admitir 2D códigos de barras a través de Honeywell <br/>
-Firmware mínimo de ² 009 (2018.07.09) necesario. Que se pueden actualizar mediante Zebra [123Scan](http://www.zebra.com/123Scan).<br/>
-Firmware mínimo de ³ 016 (2018.01.18) necesario. Que se pueden actualizar mediante Zebra [123Scan](http://www.zebra.com/123Scan). 
+Firmware mínimo de ² 009 (2018.07.09) necesario. Que se pueden actualizar mediante Zebra [123Scan](http://www.zebra.com/123scan).<br/>
+Firmware mínimo de ³ 016 (2018.01.18) necesario. Que se pueden actualizar mediante Zebra [123Scan](http://www.zebra.com/123scan). 
 
 
 <hr>

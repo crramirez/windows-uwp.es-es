@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: b6fdc59e8a7203a3bb8c6ad79adabd446b884639
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bfed00cf4866d79d4ac3097026cc09c70f9327cd
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597720"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318168"
 ---
 # <a name="relation-based-animations"></a>Animaciones basadas en relaciones
 
@@ -55,7 +55,7 @@ Las expresiones también admiten un conjunto de palabras clave: frases especiale
 Existen dos opciones para crear expresiones en la aplicación para UWP:
 
 1. Crear la ecuación como una cadena a través de la API pública oficial.
-1. Crear la ecuación en un modelo de objetos con seguridad de tipos mediante la herramienta ExpressionBuilder de código abierto. Consulta [el código fuente y la documentación de Github](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/ExpressionBuilder).
+1. Crear la ecuación en un modelo de objetos con seguridad de tipos mediante la herramienta ExpressionBuilder de código abierto. Consulta [el código fuente y la documentación de Github](https://github.com/microsoft/WindowsCompositionSamples/tree/master/ExpressionBuilder).
 
 Para este documento, definiremos nuestras expresiones mediante ExpressionBuilder.
 

@@ -6,12 +6,12 @@ ms.date: 01/3/2019
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 2561f18e2ac054c8b378b0c7c0a9689bebcc4140
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3b25283dbe8feff74ba994efba31c542f59171d9
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611260"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317881"
 ---
 # <a name="device-portal-for-hololens"></a>Device Portal para HoloLens
 
@@ -21,12 +21,12 @@ ms.locfileid: "57611260"
 ### <a name="enable-device-portal"></a>Habilitar Device Portal
 
 1. Enciende HoloLens y colócalo en el dispositivo.
-2. Realiza el gesto [nástico](https://dev.windows.com/holographic/Gestures.html#Bloom) para iniciar el menú principal.
-3. Mira el icono **Configuración** y realiza el gesto de [toque en el aire](https://dev.windows.com/holographic/Gestures.html#Press_and_release). Realiza un segundo toque en el aire para colocar la aplicación en tu entorno. La aplicación Configuración se iniciará una vez la hayas colocado.
+2. Realiza el gesto [nástico](https://developer.microsoft.com/mixed-reality#Bloom) para iniciar el menú principal.
+3. Mira el icono **Configuración** y realiza el gesto de [toque en el aire](https://developer.microsoft.com/mixed-reality#Press_and_release). Realiza un segundo toque en el aire para colocar la aplicación en tu entorno. La aplicación Configuración se iniciará una vez la hayas colocado.
 4. Selecciona el elemento de menú **Actualizar**.
 5. Selecciona el elemento de menú **Para desarrolladores**.
 6. Habilita el **Modo de desarrollador**.
-7. [Desplázate hacia abajo](https://dev.windows.com/holographic/Gestures.html#Navigation) y habilita Device Portal.
+7. [Desplázate hacia abajo](https://developer.microsoft.com/mixed-reality#Navigation) y habilita Device Portal.
 
 
 ### <a name="pair-your-device"></a>Emparejar el dispositivo
@@ -51,7 +51,7 @@ ms.locfileid: "57611260"
 #### <a name="connect-to-an-emulator"></a>Conectarse a un emulador 
 
 También puedes usar Device Portal con el emulador. Para conectarte a Device Portal, usa la barra de herramientas. Haz clic en este icono:
-- Abra el Portal de dispositivos: Abra el Windows Device Portal para el sistema operativo de HoloLens en el emulador.
+- Abra el Portal de dispositivos: abre el Portal de dispositivos Windows correspondiente al sistema operativo de HoloLens en el emulador.
 
 #### <a name="create-a-username-and-password"></a>Crear un nombre de usuario y una contraseña. 
 
@@ -90,11 +90,11 @@ La sesión de Device Portal se inicia en la página principal. Accede a otras p�
 
 La barra de herramientas de la parte superior de la página proporciona acceso al estado usado frecuentemente y a las características.
 - **En línea**: Indica si el dispositivo está conectado a Wi-Fi.
-- **Apagado**: Desactiva el dispositivo.
-- **Reiniciar**: Los ciclos de energía en el dispositivo.
+- **Shutdown**: Desactiva el dispositivo.
+- **Restart**: Los ciclos de energía en el dispositivo.
 - **Seguridad**: Abre la página seguridad del dispositivo.
 - **Genial**: Indica la temperatura del dispositivo.
-- **AIRE ACONDICIONADO**: Indica si el dispositivo está conectado y de carga.
+- **A/C**: Indica si el dispositivo está conectado y de carga.
 - **Ayudar a**: Se abre la página de documentación de la interfaz REST.
 
 En la página principal se muestra la siguiente información:
@@ -174,7 +174,7 @@ Envía la entrada de teclado desde la máquina remota a HoloLens.
 
 Haz clic o pulsa en la región de debajo del teclado virtual para habilitar el envío de pulsaciones de teclas a HoloLens. Escribe texto de entrada en el cuadro de texto y haz clic o pulsa en Enviar para enviar las pulsaciones de teclas a la aplicación activa.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Información general de Windows Device Portal](device-portal.md)
 * [Referencia de API de principales del Portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core) (API comunes a todos los dispositivos Windows 10)

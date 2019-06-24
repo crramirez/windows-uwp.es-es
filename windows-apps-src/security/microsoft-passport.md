@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 1026bd153f43d5e956fbacdcc33728d890f34e34
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6e69d3489bcc41f40eca07aff628425d34819c4b
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371968"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320587"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
 En este artículo se describe el nuevo Windows Hello tecnología que se incluye como parte del sistema operativo Windows 10 y se describe cómo los desarrolladores pueden implementar esta tecnología para proteger sus aplicaciones de plataforma Universal de Windows (UWP) y los servicios back-end. En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10.
 
-Ten en cuenta que este artículo se centra en el desarrollo de aplicaciones. Para información sobre los detalles de implementación y la arquitectura de Windows Hello, consulta la [Guía de Windows Hello en TechNet](https://technet.microsoft.com/library/mt589441.aspx).
+Ten en cuenta que este artículo se centra en el desarrollo de aplicaciones. Para información sobre los detalles de implementación y la arquitectura de Windows Hello, consulta la [Guía de Windows Hello en TechNet](https://docs.microsoft.com/windows/keep-secure/microsoft-passport-guide).
 
 Para obtener un ejemplo de código completo, consulta el [ejemplo de código de Windows Hello en GitHub](https://go.microsoft.com/fwlink/?LinkID=717812).
 
@@ -62,7 +62,7 @@ No obstante, Windows Hello no es tan solo un sustituto de los sistemas 2FA tradi
 
 ### <a name="22-how-windows-hello-works"></a>2.2 Cómo funciona Windows Hello
 
-Cuando el usuario configura Windows Hello en su equipo, genera un nuevo par de claves pública y privada en el dispositivo. El [módulo de plataforma segura](https://technet.microsoft.com/itpro/windows/keep-secure/trusted-platform-module-overview) (TPM) genera y protege esta clave privada. Si el dispositivo no tiene un chip de TPM, la clave privada se cifra y se protege mediante software. Además, los dispositivos con TPM generan un bloque de datos que se puede usar para certificar que una clave está enlazada al TPM. Esta información de atestación puede usarse en la solución para decidir si se concede al usuario un nivel diferente de autorización, por ejemplo.
+Cuando el usuario configura Windows Hello en su equipo, genera un nuevo par de claves pública y privada en el dispositivo. El [módulo de plataforma segura](https://docs.microsoft.com/windows/keep-secure/trusted-platform-module-overview) (TPM) genera y protege esta clave privada. Si el dispositivo no tiene un chip de TPM, la clave privada se cifra y se protege mediante software. Además, los dispositivos con TPM generan un bloque de datos que se puede usar para certificar que una clave está enlazada al TPM. Esta información de atestación puede usarse en la solución para decidir si se concede al usuario un nivel diferente de autorización, por ejemplo.
 
 Para habilitar Windows Hello en un dispositivo, el usuario debe tener su cuenta de Azure Active Directory o cuenta de Microsoft asociada en la configuración de Windows.
 
@@ -407,8 +407,8 @@ Las opciones de implementación flexibles permiten que Windows Hello reemplace e
 
 ### <a name="61-articles-and-sample-code"></a>6.1 Artículos y código de ejemplo
 
-- [Introducción a Windows Hello](https://windows.microsoft.com/windows-10/getstarted-what-is-hello)
-- [Detalles de implementación de Windows Hello](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-passport-guide)
+- [Introducción a Windows Hello](https://support.microsoft.com/help/17215)
+- [Detalles de implementación de Windows Hello](https://docs.microsoft.com/windows/keep-secure/microsoft-passport-guide)
 - [Ejemplo de Windows Hello código en GitHub](https://go.microsoft.com/fwlink/?LinkID=717812)
 
 ### <a name="62-terminology"></a>6.2 Terminología

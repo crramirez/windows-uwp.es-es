@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, education
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c2333d960ba91b1d1c3d3030481108407909594
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3d68fd78a7da3f1b98f61225f3aad8ca1590140e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359204"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317607"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>Desarrollar aplicaciones universales de Windows para la educación
 ![Captura de pantalla de prueba de una aplicación](images/take-a-test-screen-small.png)
@@ -23,7 +23,7 @@ Las aplicaciones educativas deben ser accesibles. Para obtener más información
 
 
 ### <a name="secure-assessments"></a>Evaluaciones seguras
-A menudo, las aplicaciones de evaluación y exámenes deberán crear un entorno *sellado* para impedir que los alumnos usen otros equipos o recursos de Internet durante un examen. Esta funcionalidad está disponible a través de la [API Hacer un examen](take-a-test-api.md). Consulta la aplicación web [Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) en el centro de TI de Windows para ver un ejemplo de un entorno de exámenes con acceso en línea bloqueado para realizar pruebas de alto riesgo.
+A menudo, las aplicaciones de evaluación y exámenes deberán crear un entorno *sellado* para impedir que los alumnos usen otros equipos o recursos de Internet durante un examen. Esta funcionalidad está disponible a través de la [API Hacer un examen](take-a-test-api.md). Consulta la aplicación web [Hacer un examen](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) en el centro de TI de Windows para ver un ejemplo de un entorno de exámenes con acceso en línea bloqueado para realizar pruebas de alto riesgo.
 
 ### <a name="user-input"></a>Entrada de usuario
 La entrada del usuario es una parte fundamental de las aplicaciones educativas; los controles de interfaz de usuario deben ser intuitivos y con capacidad de respuesta para desconcentrar al usuario. Para obtener una visión general de las opciones de entrada disponibles en una aplicación universal de Windows, consulta [Información básica de entradas](https://docs.microsoft.com/windows/uwp/design/input/input-primer) y los temas de la sección "Diseño e interfaz de usuario". Además, las aplicaciones de ejemplo siguientes muestran el control de la interfaz de usuario básico en la Plataforma universal de Windows.
@@ -41,4 +41,4 @@ La plataforma Windows Ink consigue que las aplicaciones educativas deslumbren ad
 A menudo, las aplicaciones educativas se publican en circunstancias especiales para una organización específica. Consulta [Distribuir aplicaciones de LOB en las empresas](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) para obtener información sobre este tema.
 
 ## <a name="related-topics"></a>Temas relacionados
-- [Windows 10 for Education](https://technet.microsoft.com/edu/windows/index) en el centro de TI de Windows
+- [Windows 10 for Education](https://docs.microsoft.com/education/windows/index) en el centro de TI de Windows

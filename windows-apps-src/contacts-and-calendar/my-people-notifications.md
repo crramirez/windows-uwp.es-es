@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d4150e7296badd3d31a9aacc7becd3d849f6affd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4cfd970b3ca070218adcea86612016e567df3879
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360419"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318019"
 ---
 # <a name="my-people-notifications"></a>Notificaciones de Mis allegados
 
@@ -76,7 +76,7 @@ Además, el nodo del sistema de nivel superior debe incluir el parámetro **hint
 
 > [!NOTE]
 > Si tu aplicación utiliza las [API ContactStore](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) y la propiedad [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para vincular contactos almacenados en el PC con contactos almacenados de forma remota, es esencial que el valor de la propiedad RemoteId sea único y estable. Esto significa que el identificador remoto debe identificar de forma consistente una sola cuenta de usuario y debería contener una etiqueta única que no entre en conflicto con los identificadores remotos de otros contactos del PC, incluidos los contactos propiedad de otras aplicaciones.
-> Si no se garantiza que los identificadores remotos utilizados por tu aplicación sean únicos y estables, puedes utilizar la [clase RemoteIdHelper](https://msdn.microsoft.com/en-us/library/windows/apps/jj207024(v=vs.105).aspx#BKMK_UsingtheRemoteIdHelperclass) para agregar una etiqueta única a todos tus identificadores remotos antes de agregarlos al sistema. O puedes decidir no utilizar en absoluto la propiedad RemoteId y en su lugar crear una propiedad personalizada extendida en la que almacenar los identificadores remotos de tus contactos.
+> Si no se garantiza que los identificadores remotos utilizados por tu aplicación sean únicos y estables, puedes utilizar la [clase RemoteIdHelper](https://docs.microsoft.com/previous-versions/windows/apps/jj207024(v=vs.105)#BKMK_UsingtheRemoteIdHelperclass) para agregar una etiqueta única a todos tus identificadores remotos antes de agregarlos al sistema. O puedes decidir no utilizar en absoluto la propiedad RemoteId y en su lugar crear una propiedad personalizada extendida en la que almacenar los identificadores remotos de tus contactos.
 
 Además del segundo enlace y la carga, debes incluir otra carga en el primer enlace para la notificación del sistema reserva. La notificación usará esto si se fuerza a revertir a una notificación del sistema normal (explicado detalladamente al [final de este artículo](/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast)).
 

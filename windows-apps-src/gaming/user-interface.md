@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, UWP, games, directx, plantillas
 ms.localizationpriority: medium
-ms.openlocfilehash: 5eb36b66cc067111e2749ebd51a05994a011ba01
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 668a41a69c2b7dab338d251d95e23e801fa85cf6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367472"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321139"
 ---
 # <a name="directx-game-project-templates"></a>Plantillas de proyectos de juegos DirectX
 
@@ -24,7 +24,7 @@ Las plantillas de DirectX y UWP (Plataforma universal de Windows) te permiten cr
 
 Para crear el proyecto, debes:
 
--   [Descargar Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions). Visual Studio 2015 dispone de herramientas de programación, como las herramientas de depuración de gráficos. Para obtener información general sobre las herramientas y las funciones de juegos y elementos gráficos de DirectX, consulta [Herramientas de Visual Studio para programación de juegos DirectX](set-up-visual-studio-for-game-development.md).
+-   [Descargar Microsoft Visual Studio 2015](https://visualstudio.microsoft.com/vs/). Visual Studio 2015 dispone de herramientas de programación, como las herramientas de depuración de gráficos. Para obtener información general sobre las herramientas y las funciones de juegos y elementos gráficos de DirectX, consulta [Herramientas de Visual Studio para programación de juegos DirectX](set-up-visual-studio-for-game-development.md).
 
 ## <a name="choosing-a-template"></a>Elección de una plantilla
 

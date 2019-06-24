@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08acb2972469a84e6a37d7293ed00cae8df94dfb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 58bf8df4551c8bcfc663d2c832bef3a879ff6350
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57611540"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317975"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Agregar compatibilidad con Mis allegados a una aplicación
 
@@ -23,13 +23,13 @@ La función Mis allegados permite a los usuarios a anclar contactos desde una ap
 + Windows 10 y Microsoft Visual Studio 2017. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
 + Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Hay tres cosas que debes hacer para habilitar la aplicación para usar la función Mis allegados:
 
 1. [Declarar la compatibilidad con el contrato de activación shareTarget en el manifiesto de aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
 2. [Anotar los contactos que los usuarios pueden compartir al uso de la aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
-3.  Admitir varias instancias de tu aplicación en ejecución al mismo tiempo. Los usuarios deben poder interactuar con una versión completa de la aplicación mientras la usan en un panel de contactos.  Pueden incluso usarla en varios paneles de contactos a la vez.  Para admitir esto, la aplicación debe poder ejecutar varias vistas al mismo tiempo. Para obtener información sobre cómo hacerlo, consulta el artículo ["Mostrar varias vistas en una aplicación"](https://docs.microsoft.com/en-us/windows/uwp/layout/show-multiple-views).
+3.  Admitir varias instancias de tu aplicación en ejecución al mismo tiempo. Los usuarios deben poder interactuar con una versión completa de la aplicación mientras la usan en un panel de contactos.  Pueden incluso usarla en varios paneles de contactos a la vez.  Para admitir esto, la aplicación debe poder ejecutar varias vistas al mismo tiempo. Para obtener información sobre cómo hacerlo, consulta el artículo ["Mostrar varias vistas en una aplicación"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views).
 
 Cuando lo hayas hecho, la aplicación aparecerá en el panel de contactos de contactos marcados.
 
@@ -179,7 +179,7 @@ El objeto ContactPanel también te permite establecer el color de fondo del enca
 
 ## <a name="supporting-notification-badging"></a>Compatibilidad con distintivos de notificación
 
-Si quieres que los contactos anclados a la barra de tareas se identifiquen cuando las nuevas notificaciones lleguen de la aplicación relacionada a dicha persona, debes incluir el parámetro **hint-people** en tus [notificaciones del sistema](https://docs.microsoft.com/en-us/windows/uwp/shell/tiles-and-notifications/adaptive-interactive-toasts) y la expresión [Notificaciones de Mis allegados](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications).
+Si quieres que los contactos anclados a la barra de tareas se identifiquen cuando las nuevas notificaciones lleguen de la aplicación relacionada a dicha persona, debes incluir el parámetro **hint-people** en tus [notificaciones del sistema](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts) y la expresión [Notificaciones de Mis allegados](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications).
 
 ![Distintivos de notificación de Contactos](images/my-people-badging.png)
 
@@ -248,7 +248,7 @@ async Task PinMultipleContacts(Contact[] contacts)
 
 **Nota:** 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 + [Uso compartido de Mis allegados](my-people-sharing.md)
 + [Mis notificaciones de personas](my-people-notifications.md)
 + [Vídeo de Channel 9 sobre cómo agregar personas de mi soporte técnico a una aplicación](https://channel9.msdn.com/Events/Build/2017/P4056)

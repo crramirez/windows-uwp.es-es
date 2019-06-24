@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ddadde2502e8512ba38dc30c6ac24d22631d62c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f653ebe874bfa4d4ad8bb608acf9495f02191de7
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372642"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320623"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hello
 
@@ -38,7 +38,7 @@ Existen numerosas formas de uso del marco del dispositivo complementario Windows
 
 ### <a name="biometric-enabled-windows-hello-companion-devices"></a>Dispositivos complementarios Windows Hello habilitados para biométrica
 
-Si el dispositivo complementario admite biometría, en algunos casos, el [marco biométrico de Windows](https://msdn.microsoft.com/library/windows/hardware/mt608302(v=vs.85).aspx) puede ser una solución mejor que el marco del dispositivo complementario Windows Hello. Ponte en contacto con [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com) y te ayudaremos a elegir el enfoque correcto.
+Si el dispositivo complementario admite biometría, en algunos casos, el [marco biométrico de Windows](https://msdn.microsoft.com/windows/hardware/commercialize/design/device-experiences/windows-hello) puede ser una solución mejor que el marco del dispositivo complementario Windows Hello. Ponte en contacto con [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com) y te ayudaremos a elegir el enfoque correcto.
 
 ### <a name="components-of-the-solution"></a>Componentes de la solución
 

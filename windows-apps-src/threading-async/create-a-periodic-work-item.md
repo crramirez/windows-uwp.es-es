@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, elemento de trabajo periódico, subprocesos, temporizadores
 ms.localizationpriority: medium
-ms.openlocfilehash: cf3a5817e459c7089eafb8f2c38d58b0e8eef03c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8e045c12f96cc9404abb4ba9be395eb49b1ab850
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371563"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321996"
 ---
 # <a name="create-a-periodic-work-item"></a>Crear un elemento de trabajo periódico
 
@@ -31,7 +31,7 @@ Usa el método [**CreatePeriodicTimer**](https://docs.microsoft.com/uwp/api/wind
 
 > **Tenga en cuenta**  evitar especificar un valor de cero (o cualquier valor inferior a un milisegundo) para el intervalo. Esto hará que el temporizador periódico se comporte como un temporizador de único disparo.
 
-> **Tenga en cuenta**  puede usar [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+> **Tenga en cuenta**  puede usar [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta una vez cada 60 segundos:
 

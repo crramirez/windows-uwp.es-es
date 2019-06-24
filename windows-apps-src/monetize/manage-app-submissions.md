@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submissions, envíos de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 65e8599a73a196ebb72fe3cc45ea984f82057741
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 52aeb590e7672ccfd3fe74232575f008c132d9fd
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371507"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320171"
 ---
 # <a name="manage-app-submissions"></a>Administración de envíos de aplicaciones
 
@@ -98,7 +98,7 @@ Para crear un envío de aplicación, sigue este proceso.
     El cuerpo de la respuesta contiene un recurso [envío de aplicación](#app-submission-object) que incluye el identificador del nuevo envío, el URI de firma de acceso compartido (SAS) para cargar los archivos relacionados para el envío a Azure Blob Storage (como paquetes de aplicaciones, imágenes de descripciones y archivos de tráileres) y todos los datos del nuevo envío (como las descripciones y la información sobre precios).
 
     > [!NOTE]
-    > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure Blob storage, consulte [firmas de acceso compartido, parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) y [firmas de acceso compartido, parte 2: Crear y usar una SAS con Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+    > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure Blob storage, consulte [firmas de acceso compartido, parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) y [firmas de acceso compartido, parte 2: Crear y usar una SAS con Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
 4. Si estás agregando nuevos paquetes, imágenes de descripciones o archivos de tráileres para el envío, [prepara los paquetes de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) y [prepara las imágenes y capturas de pantalla de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Agrega todos estos archivos a un archivo ZIP.
 

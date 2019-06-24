@@ -6,12 +6,12 @@ ms.date: 01/29/2018
 ms.topic: article
 keywords: Windows 10, uwp, impresión
 ms.localizationpriority: medium
-ms.openlocfilehash: 743df4398792d910626f63900d244ab4da388fb0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1a60def61e974bca493fb932cc0fb8716ba521f0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369827"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321488"
 ---
 # <a name="print-from-your-app"></a>Imprimir desde tu aplicación
 
@@ -137,7 +137,7 @@ En este ejemplo, se muestra una ventana de impresión en el controlador de event
 
 ## <a name="format-your-apps-content"></a>Aplicar formato al contenido de la aplicación
 
-Cuando llamas a **ShowPrintUIAsync**, se genera el evento [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597). El controlador de eventos **PrintTaskRequested** que se muestra en este paso, crea una clase [**PrintTask**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.PrintTask) llamando al método [**PrintTaskRequest.CreatePrintTask**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtaskrequest.createprinttask); a continuación, pasa el título de la página de impresión y el nombre de un delegado [**PrintTaskSourceRequestedHandler**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask.source). Ten en cuenta que en este ejemplo, el delegado **PrintTaskSourceRequestedHandler** se define en línea. Igualmente, el delegado **PrintTaskSourceRequestedHandler** te proporciona el contenido formateado para imprimir; más adelante lo describiremos con más detalle.
+Cuando llamas a **ShowPrintUIAsync**, se genera el evento [**PrintTaskRequested**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress). El controlador de eventos **PrintTaskRequested** que se muestra en este paso, crea una clase [**PrintTask**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.PrintTask) llamando al método [**PrintTaskRequest.CreatePrintTask**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtaskrequest.createprinttask); a continuación, pasa el título de la página de impresión y el nombre de un delegado [**PrintTaskSourceRequestedHandler**](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask.source). Ten en cuenta que en este ejemplo, el delegado **PrintTaskSourceRequestedHandler** se define en línea. Igualmente, el delegado **PrintTaskSourceRequestedHandler** te proporciona el contenido formateado para imprimir; más adelante lo describiremos con más detalle.
 
 En este ejemplo, se define también un controlador de finalización para capturar errores. Es recomendable controlar los eventos de finalización, ya que luego tu aplicación puede informar al usuario si ocurrió un error y proporcionar posibles soluciones. De la misma manera, la aplicación puede usar el evento de finalización para indicar los pasos que el usuario debe seguir después de que el trabajo de impresión se haya completado correctamente.
 
@@ -258,7 +258,7 @@ En este paso se crea una nueva opción de impresión, se define una lista de los
 | **Imprimir selección**  | Imprimir solo el contenido seleccionado por el usuario.|
 | **Intervalo de impresión**      | Mostrar un control de edición en que el usuario pueda especificar las páginas que va a imprimir.|
 
-En primer lugar, modifica el controlador de eventos [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) para agregar el código que te permitirá obtener un objeto [**PrintTaskOptionDetails**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails).
+En primer lugar, modifica el controlador de eventos [**PrintTaskRequested**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_#Windows_Foundation_IAsyncOperationWithProgress_2_Progress) para agregar el código que te permitirá obtener un objeto [**PrintTaskOptionDetails**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails).
 
 ```csharp
 PrintTaskOptionDetails printDetailedOptions = PrintTaskOptionDetails.GetFromPrintTaskOptions(printTask.Options);

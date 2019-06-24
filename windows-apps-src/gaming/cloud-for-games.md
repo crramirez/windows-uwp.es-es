@@ -6,12 +6,12 @@ ms.date: 03/27/2018
 ms.topic: article
 keywords: Windows 10, UWP, juegos, servicios en la nube
 ms.localizationpriority: medium
-ms.openlocfilehash: 15a7e3bed746a31ce2d8f458045cdd1126b71b8c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b1b63c6eb3c803b26ead85332affe1fc4f20e314
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368994"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321335"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>Uso de servicios en la nube con juegos para UWP
 
@@ -111,7 +111,7 @@ Descubre cómo otros desarrolladores han implementado soluciones en la nube en s
         </td>
     </tr>
     <tr>
-        <td><a href="https://www.crimecoast.com/">Unidades de píxeles</a></td>
+        <td><a href="http://www.crimecoast.com/">Unidades de píxeles</a></td>
         <td>Pixel Squad desarrolló <b>Crime Coast</b> con el motor de juego de Unity y Azure. <b>Crime Coast</b> es un juego de estrategia social disponible para las plataformas Android, iOS y Windows. En su juego se usó lo siguiente: Almacenamiento de blobs de Azure, Caché en Redis de Azure administrada, una matriz de máquinas virtuales IIS de carga equilibrada y el centro de notificaciones de Microsoft. Descubre cómo administraron la escala y controlaron el aumento de jugadores con 5000 jugadores simultáneos.
         </td>
         <td>
@@ -182,7 +182,7 @@ A continuación se indican algunas maneras de usar las ofertas de la nube de Azu
 | Recopilación y análisis de datos de juegos| Procesamiento en paralelo masivo de datos de bases de datos relacionales y no relacionales. | [Almacenamiento de datos de Azure](https://azure.microsoft.com/services/sql-data-warehouse/)| Almacenamiento de datos elástico como servicio con funcionalidades de clase empresarial.   |
 | Atraer a los usuarios a aumentar el uso y la retención| Enviar notificaciones push dirigidas a cualquier plataforma desde cualquier back-end para generar interés y fomentar acciones específicas del juego. | [Azure Notification Hubs](https://azure.microsoft.com/services/notification-hubs/)| Difusión rápida de inserción para llegar a millones de dispositivos móviles en todas las plataformas principales &mdash; iOS, Android, Windows, Kindle, Baidu. Tu juego puede alojarse en cualquier back-end de la &mdash; nube o local.|
 | Streaming del contenido multimedia a tu público local y de todo el mundo, protegiendo tu contenido| Difusión de tráileres de juegos y clips cinemáticos de calidad que pueden verse desde cualquier dispositivo.| [Servicios multimedia de Azure](https://azure.microsoft.com/services/media-services/)| Streaming de vídeo bajo demanda y en directo, con funcionalidades integradas de red de entrega de contenido. Uso de un jugador para todas tus necesidades de reproducción, que incluye cifrado y protección de contenido.| 
-| Desarrollar, distribuir y realizar pruebas beta de tus aplicaciones móviles | Probar y distribuir tu aplicación móvil. Rendimiento de aplicaciones y administración de la experiencia de usuario. | [HockeyApp](https://azure.microsoft.com/services/hockeyapp/)| Integra las métricas de informes de bloqueo y de usuarios con una plataforma de comentarios de usuario y distribución de aplicaciones. Admite las aplicaciones de Android, Cordova, iOS, OS X, Unity, Windows y Xamarin. Además, considere la posibilidad de [Visual Studio Mobile Center](https://www.visualstudio.com/vs/mobile-center/) &mdash; centro de control para bloqueos de aplicaciones que combina análisis exhaustivos, informes, insertar notificaciones, la distribución de aplicaciones y mucho más. |
+| Desarrollar, distribuir y realizar pruebas beta de tus aplicaciones móviles | Probar y distribuir tu aplicación móvil. Rendimiento de aplicaciones y administración de la experiencia de usuario. | [HockeyApp](https://azure.microsoft.com/services/hockeyapp/)| Integra las métricas de informes de bloqueo y de usuarios con una plataforma de comentarios de usuario y distribución de aplicaciones. Admite las aplicaciones de Android, Cordova, iOS, OS X, Unity, Windows y Xamarin. Además, considere la posibilidad de [Visual Studio Mobile Center](https://visualstudio.microsoft.com/app-center/) &mdash; centro de control para bloqueos de aplicaciones que combina análisis exhaustivos, informes, insertar notificaciones, la distribución de aplicaciones y mucho más. |
 | Creación de campañas de marketing para aumentar el uso y la retención  | Enviar notificaciones de inserción a los reproductores de destino para generar interés y fomentar acciones específicas del juego según el análisis de datos. | [Interacción móvil](https://azure.microsoft.com/services/mobile-engagement/): se retirará en marzo de 2018 y solo está disponible actualmente para los clientes existentes |  Aumentar el tiempo de juego y la retención del usuario en las principales plataformas (iOS, Android, Windows y Windows Phone). |
 
 
@@ -206,7 +206,7 @@ A continuación se indican algunas maneras de usar las ofertas de la nube de Azu
 ## <a name="tools-and-other-useful-links"></a>Herramientas y otros vínculos útiles
 
 * [Foros de MSDN &mdash; plataforma Windows Azure](https://social.msdn.microsoft.com/Forums/azure/home?category=windowsazureplatform)
-* [Herramienta de prueba de carga en la nube](https://www.visualstudio.com/team-services/cloud-load-testing/)
+* [Herramienta de prueba de carga en la nube](https://visualstudio.microsoft.com/team-services/cloud-load-testing/)
 * [SDK y herramientas de línea de comandos](https://azure.microsoft.com/downloads/)
     
 ## <a name="software-as-a-service-for-game-backend"></a>Software como servicio para el back-end del juego

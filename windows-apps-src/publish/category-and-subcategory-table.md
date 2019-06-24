@@ -6,12 +6,12 @@ ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp, categoría, subcategoría, género, categorías, géneros
 ms.localizationpriority: medium
-ms.openlocfilehash: 227119c265565e6f2f7965e53bb57f74a5c619f1
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 4d7f3d01122bf4311e8f7b3a4a166478d5ba0ea6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787163"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320049"
 ---
 # <a name="category-and-subcategory-table"></a>Tabla de categoría y subcategoría
 
@@ -20,7 +20,7 @@ Describir la aplicación en la categoría y subcategoría correctas ayuda a los 
 
 Debes elegir la categoría que mejor describa la aplicación. También puedes elegir una subcategoría, si está disponible. Si no estás seguro de qué categoría o subcategoría usar o no puedes encontrar una que se ajuste a la aplicación, elige una que creas que los clientes tengan más probabilidades de mirar al buscar aplicaciones como la tuya.
 
-Si elige **juegos** para la categoría, debe seleccionar al menos una subcategoría (llamado *género* para juegos). Puedes elegir tantos géneros adecuados para tu juego como quieras. Ten en cuenta que para poder publicar un juego para los clientes de Xbox, debes habilitar el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators) o seguir el proceso de [aprobación de concepto](../gaming/concept-approval.md)). 
+Si elige **juegos** para la categoría, debe seleccionar al menos una subcategoría (llamado *género* para juegos). Puedes elegir tantos géneros adecuados para tu juego como quieras. Ten en cuenta que para poder publicar un juego para los clientes de Xbox, debes habilitar el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) o seguir el proceso de [aprobación de concepto](../gaming/concept-approval.md)). 
 
 > [!IMPORTANT] 
 > Si publicas la aplicación en la categoría **Juegos**, no podrás elegir una categoría diferente en un nuevo envío; debe seguir publicada en la categoría **Juegos** (aunque puedes cambiar las selecciones de género en un nuevo envío). De igual modo, no puedes elegir la categoría **Juegos** al actualizar una aplicación que hayas publicado anteriormente en una categoría diferente.

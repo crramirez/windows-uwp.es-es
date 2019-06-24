@@ -5,12 +5,12 @@ ms.date: 07/13/2017
 ms.topic: article
 keywords: windows 10, uwp, empaquetado, arquitectura, configuración de paquete
 ms.localizationpriority: medium
-ms.openlocfilehash: 338dac1d43e08257fa00b51c0c311a090f3d95c0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c691605ad121ee1e218bfe7947a9026a46fc5234
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57619940"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319802"
 ---
 # <a name="app-package-architectures"></a>Arquitecturas de paquetes de aplicaciones
 
@@ -44,7 +44,7 @@ Esta configuración se usa con menos frecuencia que la configuración x86. Debe 
 La configuración de Windows 10 en ARM incluye equipos de escritorio, dispositivos móviles y algunos dispositivos con IoT Core (Rasperry Pi 2, Raspberry Pi 3 y DragonBoard). Los equipos de escritorio con Windows 10 en ARM son una novedad de la familia de Windows, por lo que si eres desarrollador de aplicaciones para UWP, debes enviar los paquetes de ARM a la Tienda para obtener la mejor experiencia posible en estos equipos.
 
 >[!NOTE]
-> Para compilar la aplicación para UWP como destino la plataforma ARM64 de forma nativa, debe tener Visual Studio 2017 versión 15,9 o posterior. Para obtener más información, consulte [esta entrada de blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
+> Para compilar la aplicación para UWP como destino la plataforma ARM64 de forma nativa, debe tener Visual Studio 2017 versión 15,9 o posterior. Para obtener más información, consulte [esta entrada de blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development/).
 
 Para obtener más información, consulte [Windows 10 en ARM](../porting/apps-on-arm.md). Consulta esta charla de //Build para ver una demostración de [Windows 10 en ARM](https://channel9.msdn.com/Events/Build/2017/P4171) y obtener más información acerca de cómo funciona.
 

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 88d2377f95efbe79853b1416213a25e22ed7d5f0
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e9cc88792e6cfdc581a4c7dc27ecc060cc0000c3
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639700"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317341"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Diseño de software inclusivo para Windows 10  
 
@@ -23,7 +23,7 @@ En Microsoft, estamos mejorando nuestros principios y prácticas de diseño. Est
 
 Esta nueva filosofía de diseño se denomina diseño inclusivo. La idea consiste en diseñar software con todos los usuarios en mente desde el principio. Esto difiere de considerar la accesibilidad como una tecnología que se añade al final del proceso de desarrollo para satisfacer a los requerimientos de un pequeño grupo de usuarios.
 
-"Definimos discapacidad como un desajuste entre las necesidades de la persona y las del servicio, producto o entorno que se ofrece. Cualquier persona puede experimentar una discapacidad. Es un rasgo humano común y no debe excluirse."  \- desde el [Inclusive](https://www.microsoft.com/design/inclusive) vídeo  
+"Definimos discapacidad como un desajuste entre las necesidades de la persona y las del servicio, producto o entorno que se ofrece. Cualquier persona puede experimentar una discapacidad. Es un rasgo humano común y no debe excluirse."  \- desde el [Inclusive](https://www.microsoft.com/design/inclusive/) vídeo  
 
 El diseño inclusivo crea mejores productos para todos. Se trata de considerar la gama completa de diversidad humana. Considera las rampas que se encuentran ahora en la mayoría de las esquinas de las aceras. Claramente fueron pensadas para ser usadas por personas en sillas de ruedas. Pero ahora casi todo el mundo las usa, incluso personas con sillitas para bebés, ciclistas y patinadores en monopatín. Incluso los peatones usarán dichas rampas a menudo porque están ahí y mejoran la experiencia. El control remoto de la televisión podría considerarse una tecnología de asistencia (AT) para una persona con limitaciones físicas. E incluso hoy es prácticamente imposible comprar un televisor sin uno de ellos. Antes de que los niños aprendan a atarse los zapatos, pueden llevar zapatos sin cordones o de cierre fácil. Los zapatos que son fáciles de poner y quitar suelen preferirse en culturas donde los zapatos se quitan antes de entrar en una casa. También son mejores para aquellas personas con problemas de habilidad, como artritis o una fractura de muñeca.
 
@@ -50,7 +50,7 @@ Un estudio de 2003-2004 encargado por Microsoft y llevado a cabo por Forrester R
 
 Además de las discapacidades permanentes, la gravedad y los tipos de dificultades que experimenta un individuo pueden variar a lo largo su vida. La persona normal no existe. Nuestras capacidades siempre están cambiando. Margaret Meade dijo: "Todos somos únicos. Ser únicos nos hace iguales."  
 
-Microsoft está comprometido con la investigación sobre las ciencias de la computación y la ingeniería de software con el objetivo de mejorar la experiencia informática y crear nuevas tecnologías informáticas. Consulta [Proyectos actuales de investigación y desarrollo de Microsoft](https://www.microsoft.com/enable/microsoft/research.aspx) dirigidos a hacer que el equipo sea más accesible y fácil de ver, escuchar e interactuar.  
+Microsoft está comprometido con la investigación sobre las ciencias de la computación y la ingeniería de software con el objetivo de mejorar la experiencia informática y crear nuevas tecnologías informáticas. Consulta [Proyectos actuales de investigación y desarrollo de Microsoft](https://www.microsoft.com/accessibility/) dirigidos a hacer que el equipo sea más accesible y fácil de ver, escuchar e interactuar.  
 
 ## <a name="practical-design-steps"></a>Pasos prácticos de diseño  
 Si estás preparado, esta sección es para ti. Se describen los pasos prácticos de diseño a tener en cuenta al implementar el diseño inclusivo para tu aplicación.  
@@ -104,7 +104,7 @@ En resumen, sigue estos siete pasos para garantizar que tu software sea inclusiv
 7.  Entrega tu producto final y documenta tu implementación para aquellas otras personas que trabajen en el proyecto después de ti.  
 
 ## <a name="related-topics"></a>Temas relacionados  
-* [Diseño inclusivo](https://design.microsoft.com/inclusive)
+* [Diseño inclusivo](https://www.microsoft.com/design/inclusive/)
 * [Ingeniería Software para mejorar la accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Centro de desarrollo de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps)
 * [Desarrollo de aplicaciones inclusivas de Windows](developing-inclusive-windows-apps.md) 

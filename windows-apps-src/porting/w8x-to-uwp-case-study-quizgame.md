@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d2d1b2b4e6875730d5a6bfa8dd711e11ac5d049c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 81f50625d3af6728adcc6c377a249410354489dd
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642920"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322354"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Windows Runtime 8.x a UWP caso práctico: Aplicación de ejemplo QuizGame
 
@@ -40,7 +40,7 @@ La aplicación usa patrones que usan vistas y modelos de vista. Como resultado d
 
 [Aplicación de Windows 10 descarga el QuizGame10](https://go.microsoft.com/fwlink/?linkid=532954). Este es el estado de la aplicación justo después de la migración. 
 
-[Consulta la versión más reciente de esta muestra en GitHub](https://github.com/Microsoft/Windows-appsample-quizgame).
+[Consulta la versión más reciente de esta muestra en GitHub](https://github.com/microsoft/Windows-appsample-networkhelper).
 
 ## <a name="the-winrt-81-solution"></a>La solución de WinRT 8.1
 
@@ -94,7 +94,7 @@ En función de esas opciones, obtendrá puerto QuizGame.Windows a un nuevo proye
 
 **P2PHelper**
 
--   En la solución, cree un nuevo proyecto de biblioteca de clases de Windows 10 (**nuevo proyecto** &gt; **Windows Universal** &gt; **biblioteca de clases (Windows Universal)**) y asígnele el nombre P2PHelper.
+-   En la solución, cree un nuevo proyecto de biblioteca de clases de Windows 10 (**nuevo proyecto** &gt; **Windows Universal** &gt; **biblioteca de clases (Windows Universal)** ) y asígnele el nombre P2PHelper.
 -   Elimina Class1.cs del nuevo proyecto.
 -   Copia P2PSession.cs, P2PSessionClient.cs y P2PSessionHost.cs en la carpeta del nuevo proyecto e incluye los archivos copiados en el nuevo proyecto.
 -   El proyecto se compila sin necesidad de realizar más cambios.
@@ -106,7 +106,7 @@ En función de esas opciones, obtendrá puerto QuizGame.Windows a un nuevo proye
 
 **QuizGameHost**
 
--   Cree un nuevo proyecto de aplicación de Windows 10 (**agregar** &gt; **nuevo proyecto** &gt; **Windows Universal** &gt; **en blanco Aplicación (Windows Universal)**) y asígnele el nombre QuizGameHost.
+-   Cree un nuevo proyecto de aplicación de Windows 10 (**agregar** &gt; **nuevo proyecto** &gt; **Windows Universal** &gt; **en blanco Aplicación (Windows Universal)** ) y asígnele el nombre QuizGameHost.
 -   Agregue una referencia a P2PHelper (**Agregar referencia** &gt; **proyectos** &gt; **solución** &gt; **P2PHelper**).
 -   En el **Explorador de soluciones**, crea una nueva carpeta para cada una de las carpetas compartidas en el disco. A su vez, haga clic en cada carpeta que acaba de crear y haga clic en **agregar** &gt; **elemento existente** y navegue hasta una carpeta. Abre la carpeta compartida correspondiente, selecciona todos los archivos y haz clic en **Agregar como vínculo**.
 -   Copiar MainPage.xaml desde \\QuizGame.Windows\\ a \\QuizGameHost\\ y cambie el espacio de nombres a QuizGameHost.
@@ -133,7 +133,7 @@ por esta:
 
 **QuizGameClient**
 
--   Cree un nuevo proyecto de aplicación de Windows 10 (**agregar** &gt; **nuevo proyecto** &gt; **Windows Universal** &gt; **en blanco Aplicación (Windows Universal)**) y asígnele el nombre QuizGameClient.
+-   Cree un nuevo proyecto de aplicación de Windows 10 (**agregar** &gt; **nuevo proyecto** &gt; **Windows Universal** &gt; **en blanco Aplicación (Windows Universal)** ) y asígnele el nombre QuizGameClient.
 -   Agregue una referencia a P2PHelper (**Agregar referencia** &gt; **proyectos** &gt; **solución** &gt; **P2PHelper**).
 -   En el **Explorador de soluciones**, crea una nueva carpeta para cada una de las carpetas compartidas en el disco. A su vez, haga clic en cada carpeta que acaba de crear y haga clic en **agregar** &gt; **elemento existente** y navegue hasta una carpeta. Abre la carpeta compartida correspondiente, selecciona todos los archivos y haz clic en **Agregar como vínculo**.
 -   Copiar MainPage.xaml desde \\QuizGame.WindowsPhone\\ a \\QuizGameClient\\ y cambie el espacio de nombres a QuizGameClient.

@@ -6,12 +6,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, anuncios, publicidad, instalar, SDK, biblioteca de publicidad
 ms.localizationpriority: medium
-ms.openlocfilehash: baf70cc6df7b0683f3dc362436c63eb1e688e678
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: d348b1b7a7b057388b437fab9952bb8eaffe9957
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334703"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320231"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instala el SDK de Microsoft Advertising
 
@@ -66,7 +66,7 @@ Para instalar el SDK de Microsoft Advertising en un proyecto de UWP específico 
 
 5. En el cuadro de búsqueda, escribe **Microsoft.Advertising.XAML** (para un proyecto de XAML) o **Microsoft.Advertising.JS** (para un proyecto de JavaScript o HTML) e instala el paquete correspondiente. Cuando el paquete se haya instalado, guarda la solución.
     > [!NOTE]
-    > Si la ventana **Salida** notifica un error de *Install-Package* que indica que la ruta de acceso especificada es demasiado larga, puede que tengas que configurar NuGet para extraer los paquetes en otra ubicación con una ruta más corta que la ubicación predeterminada. Para ello, agrega el valor `repositoryPath` a un archivo nuget.config en el equipo y asígnalo a una ruta de carpeta corta donde se puedan extraer paquetes de NuGet. Para obtener más información, consulta [este artículo](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) en la documentación de NuGet. Como alternativa, puedes mover tu proyecto de Visual Studio a otra carpeta con una ruta más corta.
+    > Si la ventana **Salida** notifica un error de *Install-Package* que indica que la ruta de acceso especificada es demasiado larga, puede que tengas que configurar NuGet para extraer los paquetes en otra ubicación con una ruta más corta que la ubicación predeterminada. Para ello, agrega el valor `repositoryPath` a un archivo nuget.config en el equipo y asígnalo a una ruta de carpeta corta donde se puedan extraer paquetes de NuGet. Para obtener más información, consulta [este artículo](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior) en la documentación de NuGet. Como alternativa, puedes mover tu proyecto de Visual Studio a otra carpeta con una ruta más corta.
 
 6. Cierra la solución y, a continuación, vuelve a abrirla.
 

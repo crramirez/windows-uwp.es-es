@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
-ms.openlocfilehash: 019db8c93b61f84dde400f7be9f98bf82b1466e8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: afebfd089b80b7402929bd85ea482b86aca0e694
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57660330"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320215"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a>Llevar los juegos HTML a UWP en Xbox
-Xbox One es una excelente plataforma para juegos HTML 5. Los juegos HTML 5 se ejecutan en el motor del explorador [Edge](https://developer.microsoft.com/microsoft-edge/). Edge es rápido y totalmente compatible con las características de HTML 5 y CSS 3, como WebGL y Canvas.
+Xbox One es una excelente plataforma para juegos HTML 5. Los juegos HTML 5 se ejecutan en el motor del explorador [Edge](https://developer.microsoft.com/microsoft-edge). Edge es rápido y totalmente compatible con las características de HTML 5 y CSS 3, como WebGL y Canvas.
 
-Los motores de juegos más populares, como [Construct 2](https://www.scirra.com/blog/176/announcing-xbox-one-export-beta), ofrecen compatibilidad con Xbox One. No hemos probado todos los marcos y los motores HTML, pero por lo que hemos visto hasta ahora, creemos que la mayoría de ellos funcionarán en Xbox One.
+Los motores de juegos más populares, como [Construct 2](https://www.construct.net/en/blogs/construct-official-blog-1/announcing-xbox-one-export-beta-857), ofrecen compatibilidad con Xbox One. No hemos probado todos los marcos y los motores HTML, pero por lo que hemos visto hasta ahora, creemos que la mayoría de ellos funcionarán en Xbox One.
 
 Los juegos HTML se encuentran en igualdad de condiciones respecto de cualquier otro tipo de juego. Los desarrolladores pueden obtener acceso completo a las API nativas, como la entrada del mando, Kinect, etc.
 
@@ -31,6 +31,6 @@ Este vídeo profundiza más sobre las aplicaciones web empaquetadas y las aplica
 
 Para comenzar, descarga el motor elegido y busca las instrucciones de las aplicaciones de Windows 10. También debes leer la [guía de introducción](getting-started.md) para obtener información sobre cómo convertir la consola en un kit de desarrollo y cómo realizar la implementación desde Visual Studio.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [Llevar los juegos existentes a Xbox](development-lanes-landing.md)
 - [UWP en Xbox One](index.md)

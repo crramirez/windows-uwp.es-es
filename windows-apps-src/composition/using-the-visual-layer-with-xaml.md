@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c00bf23a8539f7ee37974e16586a4477cc6b78bb
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4d118633d9d0d9b7007c94ec4d5053db34b09e29
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360402"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318043"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>Uso de la capa visual con XAML
 
@@ -25,7 +25,7 @@ La funcionalidad de interoperabilidad entre XAML y la capa visual puede usarse p
 - Sombras paralelas con píxeles perfectos
 
 Estos efectos y animaciones pueden aplicarse a contenido XAML existente, para que no tengas que reestructurar considerablemente la aplicación XAML para aprovechar la nueva funcionalidad.
-Las animaciones de diseño, las sombras y los efectos de desenfoque se tratan en la sección Recetas que aparece más adelante. Para obtener un ejemplo de código que implementa el parallax, consulta la [ParallaxingListItems sample](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems) (Muestra de ParallaxingListItems). El [repositorio WindowsUIDevLabs](https://github.com/Microsoft/WindowsUIDevLabs) (en inglés) también contiene varios ejemplos más para la implementación de animaciones, sombras y efectos.
+Las animaciones de diseño, las sombras y los efectos de desenfoque se tratan en la sección Recetas que aparece más adelante. Para obtener un ejemplo de código que implementa el parallax, consulta la [ParallaxingListItems sample](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 10586/ParallaxingListItems) (Muestra de ParallaxingListItems). El [repositorio WindowsUIDevLabs](https://github.com/microsoft/WindowsCompositionSamples) (en inglés) también contiene varios ejemplos más para la implementación de animaciones, sombras y efectos.
 
 ## <a name="the-xamlcompositionbrushbase-class"></a>Clase XamlCompositionBrushBase
 
@@ -364,6 +364,6 @@ private void InitializeFrostedGlass(UIElement glassHost)
 
 - [Información general de capa Visual](https://docs.microsoft.com/windows/uwp/composition/visual-layer)
 - [**ElementCompositionPreview** clase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview)
-- Muestras avanzadas de la interfaz de usuario y la composición en [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).
-- [Ejemplo de BasicXamlInterop](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/BasicXamlInterop)
-- [Ejemplo de ParallaxingListItems](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems)
+- Muestras avanzadas de la interfaz de usuario y la composición en [WindowsUIDevLabs GitHub](https://github.com/microsoft/WindowsCompositionSamples).
+- [Ejemplo de BasicXamlInterop](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 10586/BasicXamlInterop)
+- [Ejemplo de ParallaxingListItems](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 10586/ParallaxingListItems)

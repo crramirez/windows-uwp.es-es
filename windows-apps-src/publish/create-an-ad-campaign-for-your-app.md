@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, anuncio, campaña, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d38d47c1b5e228e984faa4657cd12735e98bcf9
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 1dc06a2977832e659220b133ba42a99bad982291
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215231"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320093"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para tu aplicación
 
@@ -90,7 +90,7 @@ Aquí te mostramos cómo crear una campaña publicitaria con el fin de promocion
 
 12.  Si tienes una [cuenta premium](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign), puedes usar la casilla **Dirección URL de destino** para controlar lo que sucede cuando un cliente hace clic en el anuncio.
     * Si dejas la casilla vacía, cuando un cliente haga clic en el anuncio, se mostrará la descripción de la Tienda de la aplicación.
-    * Si usas el ajuste, Kochava, ajustar o Vungle para medir el análisis de la instalación de la aplicación, escriba la dirección URL de seguimiento de instalación. Al guardar la campaña, se valida la dirección URL de seguimiento para garantizar que se resuelve en la página de descripción de la aplicación en Microsoft Store. Para obtener más información acerca del seguimiento de instalación con estos servicios, consulte el [ajustar](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/), [optimizar](https://help.tune.com/), y [Vungle](https://support.vungle.com/) documentación .
+    * Si usas el ajuste, Kochava, ajustar o Vungle para medir el análisis de la instalación de la aplicación, escriba la dirección URL de seguimiento de instalación. Al guardar la campaña, se valida la dirección URL de seguimiento para garantizar que se resuelve en la página de descripción de la aplicación en Microsoft Store. Para obtener más información acerca del seguimiento de instalación con estos servicios, consulte el [ajustar](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/), [optimizar](https://help.tune.com/hasoffers/), y [Vungle](https://support.vungle.com/hc/en-us) documentación .
     * Si elegiste **Incrementar el compromiso con la aplicación** como objetivo de la campaña, puedes especificar un [vínculo profundo de URI](../launch-resume/handle-uri-activation.md) para redirigir a los clientes del segmento seleccionado a una página específica dentro de la aplicación.
     * Si especificas cualquier destino que no sea la página de descripción de la aplicación o una página dentro de la aplicación, la campaña se pondrá en pausa automáticamente.
 

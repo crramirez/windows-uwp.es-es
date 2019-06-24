@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c13ac8f1421fe785ebce70789c8ea6d0bf6c068
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b27c5a0446bc9b329b09855f06d58a13723ece1c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66364014"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317383"
 ---
 # <a name="access-keys"></a>Teclas de acceso
 
@@ -241,7 +241,7 @@ Las teclas de acceso localizadas se especifican en el archivo resources.resw del
 
 _Especifique la propiedad AccessKey especificada en el archivo resources.resw_
 
-Para obtener más información, consulta [Traducir recursos de la interfaz de usuario](https://msdn.microsoft.com/library/windows/apps/xaml/Hh965329(v=win.10).aspx).
+Para obtener más información, consulta [Traducir recursos de la interfaz de usuario](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10)).
 
 ## <a name="key-tip-positioning"></a>Ubicación de las sugerencias de teclas
 

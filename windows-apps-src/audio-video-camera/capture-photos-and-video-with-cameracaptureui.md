@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 35eed8310b406a960334c90d6c359c0313b2660c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f23d80b4d2796b4d9c86648c09d6bece5e82d482
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66358897"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317832"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Capturar fotografías y vídeos con la interfaz de usuario de la cámara integrada de Windows
 
@@ -36,7 +36,7 @@ Para capturar una foto, crea un objeto [**CameraCaptureUI**](https://docs.micros
 > [!NOTE]
 > El recorte de imágenes en **CameraCaptureUI** no se admite en los dispositivos de la familia de dispositivos móviles. El valor de la propiedad [**AllowCropping**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureuiphotocapturesettings.allowcropping) se omite cuando se ejecuta la aplicación en estos dispositivos.
 
-Realiza una llamada a [**CaptureFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.) y especifica [**CameraCaptureUIMode.Photo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUIMode) para especificar que se debe capturar una foto. El método devuelve una instancia [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) que contiene la imagen si la captura se realiza correctamente. Si el usuario cancela la captura, el objeto devuelto es null.
+Realiza una llamada a [**CaptureFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.capturefileasync) y especifica [**CameraCaptureUIMode.Photo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUIMode) para especificar que se debe capturar una foto. El método devuelve una instancia [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) que contiene la imagen si la captura se realiza correctamente. Si el usuario cancela la captura, el objeto devuelto es null.
 
 [!code-cs[CapturePhoto](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCapturePhoto)]
 
@@ -62,7 +62,7 @@ Para usar el mapa de bits de software en tu página XAML, incluye el espacio de 
 
 [!code-cs[UsingSoftwareBitmapSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingSoftwareBitmapSource)]
 
-El control de **Image** requiere que el origen de imagen tenga el formato BGRA8 con valores alfa premultiplicados o sin alfa. Por lo tanto, realiza una llamada al método estático [**SoftwareBitmap.Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows) para crear un nuevo mapa de bits de software con el formato deseado. A continuación, crea un objeto [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource) nuevo y realiza una llamada a [**SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync) para asignar el mapa de bits de software al origen. Por último, establece el control de **Image** de la propiedad [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) del control para mostrar la foto capturada en la interfaz de usuario.
+El control de **Image** requiere que el origen de imagen tenga el formato BGRA8 con valores alfa premultiplicados o sin alfa. Por lo tanto, realiza una llamada al método estático [**SoftwareBitmap.Convert**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert) para crear un nuevo mapa de bits de software con el formato deseado. A continuación, crea un objeto [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource) nuevo y realiza una llamada a [**SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync) para asignar el mapa de bits de software al origen. Por último, establece el control de **Image** de la propiedad [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) del control para mostrar la foto capturada en la interfaz de usuario.
 
 [!code-cs[SetImageSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSetImageSource)]
 
@@ -70,7 +70,7 @@ El control de **Image** requiere que el origen de imagen tenga el formato BGRA8 
 
 Para capturar un vídeo, crea un objeto [**CameraCaptureUI**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUI) nuevo. El uso de la propiedad [**VideoSettings**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.videosettings) del objeto puede especificar las propiedades del vídeo devuelto, como el formato de imagen del vídeo.
 
-Realiza una llamada a [**CaptureFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.) y especifica [**Video**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.videosettings) para especificar que se debe capturar un vídeo. El método devuelve una instancia [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) que contiene el vídeo si la captura se realiza correctamente. Si el usuario cancela la captura, el objeto devuelto es null.
+Realiza una llamada a [**CaptureFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.capturefileasync) y especifica [**Video**](https://docs.microsoft.com/uwp/api/windows.media.capture.cameracaptureui.videosettings) para especificar que se debe capturar un vídeo. El método devuelve una instancia [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) que contiene el vídeo si la captura se realiza correctamente. Si el usuario cancela la captura, el objeto devuelto es null.
 
 [!code-cs[CaptureVideo](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCaptureVideo)]
 

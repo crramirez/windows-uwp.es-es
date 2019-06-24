@@ -6,16 +6,16 @@ ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ba28fb49accc213f570e470142e259c08122b704
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: e9567e06f80035bbcf811b5aaeaf8058ffee41a3
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334583"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320026"
 ---
 # <a name="app-management-and-services"></a>Administración y servicios de aplicaciones
 
-Puede administrar y ver los detalles relacionados con cada una de las aplicaciones en [centro de partners](https://partner.microsoft.com/dashboard/)y configurar servicios como las notificaciones, A / B las pruebas y se asigna.
+Puede administrar y ver los detalles relacionados con cada una de las aplicaciones en [centro de partners](https://partner.microsoft.com/dashboard)y configurar servicios como las notificaciones, A / B las pruebas y se asigna.
 
 Cuando se trabaja con una aplicación en el centro de partners, podrá ver secciones en el menú de navegación izquierdo para **servicios** y **administración de aplicaciones**. Puedes expandir estas secciones para tener acceso a la funcionalidad que se describe a continuación.
 
@@ -25,7 +25,7 @@ La sección **Servicios** te permite administrar varios servicios diferentes par
 
 ## <a name="xbox-live"></a>Xbox Live
 
-Si está publicando un juego, puede habilitar la [programa de creadores de Xbox Live](https://xbox.com/developers/creators-program) en esta página. Esto le permite empezar a configurar y probar características de Xbox Live y, finalmente, publique su juego de programa de creadores de Xbox Live.
+Si está publicando un juego, puede habilitar la [programa de creadores de Xbox Live](https://www.xbox.com/developers/creators-program) en esta página. Esto le permite empezar a configurar y probar características de Xbox Live y, finalmente, publique su juego de programa de creadores de Xbox Live.
 
 Para obtener más información, consulte [empezar a trabajar con el programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) y [crear un nuevo título de programa de creadores de Xbox Live y publicar en el entorno de prueba](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/create-and-test-a-new-creators-title).
 
@@ -51,7 +51,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 Si el producto se integra con Azure AD y llama a las API que solicitan cualquiera [permisos de la aplicación o permisos delegados](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) que requieren el consentimiento del administrador, escriba su Id. de cliente de Azure AD. Esto permite a los administradores que adquieren la aplicación para su consentimiento de concesión de organización para su producto actuar en nombre de todos los usuarios en el inquilino.
 
-Para obtener más información, consulte [solicitud de consentimiento para un inquilino al completo](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
+Para obtener más información, consulte [solicitud de consentimiento para un inquilino al completo](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant).
 
 ## <a name="app-management"></a>Administración de aplicaciones
 

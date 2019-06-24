@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, in-app purchases, compras desde la aplicación, IAPs, IAP, add-ons, complementos, catalog, catálogo, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: b2292bbbe735d9121955d93407a53456176dbbee
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e297c01aa19449691e775c4d7d2c33028b234cfa
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371034"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320180"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>Administrar un catálogo extenso de productos desde la aplicación
 
@@ -32,7 +32,7 @@ La Tienda usará únicamente el *offerId* de la solicitud de compra en la clase 
 
 ## <a name="make-the-purchase-request-for-the-in-app-product"></a>Realizar la solicitud de compra del producto desde la aplicación
 
-La solicitud de compra de un producto concreto dentro de un catálogo voluminoso se controla en gran medida como cualquier otra solicitud de compra dentro de la aplicación. Cuando tu aplicación llama a la nueva sobrecarga del método [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), proporciona tanto un *OfferId* como un objeto [ProductPurchaseDisplayProperties](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productpurchasedisplayproperties.) rellenado con el nombre del producto desde la aplicación.
+La solicitud de compra de un producto concreto dentro de un catálogo voluminoso se controla en gran medida como cualquier otra solicitud de compra dentro de la aplicación. Cuando tu aplicación llama a la nueva sobrecarga del método [RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync), proporciona tanto un *OfferId* como un objeto [ProductPurchaseDisplayProperties](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productpurchasedisplayproperties) rellenado con el nombre del producto desde la aplicación.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#MakePurchaseRequest)]

@@ -6,12 +6,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, guidelines, directrices, best practices, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bb187092158386c503b91973d8d63ce291b4760
-ms.sourcegitcommit: c62b260eecd373e57b19a623bae77e29180e0f3d
+ms.openlocfilehash: cf7f61f427ef0b1a0ff5b6f3b66d02d13d02e4ab
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66565515"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320683"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
 
@@ -25,10 +25,10 @@ En este artículo se proporcionan directrices para ofrecer magníficas experienc
 Antes de revisar nuestras directrices para diferentes tipos de anuncios en este artículo, revisa estos procedimientos recomendados generales para mejorar tus ingresos por anuncios.
 
 * [Planear la colocación de anuncios detenidamente](https://blogs.windows.com/buildingapps/2017/04/10/monetizing-app-advertisement-placement/). Consulta nuestras directrices relacionadas acerca de la [optimización la capacidad de visualización de las unidades de anuncio](optimize-ad-unit-viewability.md).
-* [Usar anuncios de banner intersticiales como reserva para anuncios intersticiales en vídeo](https://blogs.windows.com/buildingapps/2017/04/17/monetizing-app-use-interstitial-banner-fallback-interstitial-video).
+* [Usar anuncios de banner intersticiales como reserva para anuncios intersticiales en vídeo](https://blogs.windows.com/buildingapps/2017/04/17/monetizing-app-use-interstitial-banner-fallback-interstitial-video/).
 * [Conocer a los usuarios para proporcionar anuncios más dirigidos](https://blogs.windows.com/buildingapps/2017/05/17/monetize-app-know-user-serve-better-targeted-ads/).
 * [Usar las bibliotecas de publicidad más recientes](https://blogs.windows.com/buildingapps/2017/05/22/earn-money-moving-latest-advertising-libraries/).
-* [Establecer la configuración de COPPA correcta para tu aplicación](https://blogs.windows.com/buildingapps/2017/06/21/monetizing-app-set-coppa-settings-app).
+* [Establecer la configuración de COPPA correcta para tu aplicación](https://blogs.windows.com/buildingapps/2017/06/21/monetizing-app-set-coppa-settings-app/).
 
 
 ## <a name="guidelines-for-banner-ads"></a>Directrices para anuncios de banner
@@ -39,7 +39,7 @@ En las siguientes secciones se proporcionan recomendaciones sobre cómo implemen
 
 Te recomendamos que sigas los siguientes procedimientos recomendados a la hora de implementar anuncios de banner en tu aplicación:
 
-* [Usar tamaños de Interactive Advertising Bureau](https://blogs.windows.com/buildingapps/2017/04/03/monetizing-app-use-interactive-advertising-bureau-ad-sizes) que se ajusten correctamente al diseño del dispositivo.
+* [Usar tamaños de Interactive Advertising Bureau](https://blogs.windows.com/buildingapps/2017/04/03/monetizing-app-use-interactive-advertising-bureau-ad-sizes/) que se ajusten correctamente al diseño del dispositivo.
 
 * Dedica la mayor parte de la interfaz de usuario de la aplicación al contenido y los controles funcionales.
 

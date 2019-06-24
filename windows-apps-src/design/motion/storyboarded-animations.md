@@ -6,12 +6,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ebc87c685d92fa4dbc1a954e2fc6f0cf549a5554
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 62f603a6ff5aadc1c3e5342db6a7d771f8c37a7b
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366077"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320842"
 ---
 # <a name="storyboarded-animations"></a>Animaciones con guion gráfico
 
@@ -70,7 +70,7 @@ Para conectar una animación a un destino, debes hacer referencia al destino med
 
 ### <a name="targeting-the-dependency-property-to-animate"></a>Seleccionar como destino la propiedad de dependencia que se va a animar
 
-Establece un valor para [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v%3Dvs.95)) en la animación. De esta forma, se determina qué propiedad específica del objeto de destino se anima.
+Establece un valor para [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95)) en la animación. De esta forma, se determina qué propiedad específica del objeto de destino se anima.
 
 A veces debes seleccionar como destino una propiedad que no es una propiedad inmediata del objeto de destino, pero que se anida más profundamente en una relación de objeto-propiedad. Muchas veces debes hacer esto para explorar en profundidad un conjunto de objetos de contribución y valores de propiedades hasta que puedas hacer referencia a un tipo de propiedad que se pueda animar ([**Doble**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN), [**Punto**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color)). Este concepto se denomina *selección indirecta de destino*y la sintaxis para seleccionar una propiedad como destino de esta manera se conoce como *ruta de propiedad*.
 
@@ -101,7 +101,7 @@ Notarás que en algunos de estos ejemplos se usan corchetes para encerrar los n�
 
 También puedes animar propiedades adjuntas de XAML. Siempre encierra el nombre completo de la propiedad adjunta entre paréntesis, por ejemplo, `(Canvas.Left)`. Para obtener más información, consulta [Animación de propiedades adjuntas de XAML](./storyboarded-animations.md#animating-xaml-attached-properties).
 
-Para más información sobre cómo usar una ruta de propiedad para la selección indirecta como destino de la propiedad que deseas animar, consulta [Sintaxis de property-path](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax) o [**propiedade anexada Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v%3Dvs.95)).
+Para más información sobre cómo usar una ruta de propiedad para la selección indirecta como destino de la propiedad que deseas animar, consulta [Sintaxis de property-path](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax) o [**propiedade anexada Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95)).
 
 ### <a name="animation-types"></a>Tipos de animación
 
@@ -323,7 +323,7 @@ Hay una forma de iniciar una animación que se pueda declarar completamente en X
 
 ## <a name="animating-xaml-attached-properties"></a>Animación de propiedades adjuntas de XAML
 
-No es algo habitual, pero puedes aplicar un valor animado a una propiedad adjunta de XAML. Si quieres obtener más información sobre propiedades adjuntas y cómo funcionan, consulta [Introducción a las propiedades adjuntas](https://docs.microsoft.com/windows/uwp/xaml-platform/attached-properties-overview). Para seleccionar una propiedad adjunta como destino hace falta una [sintaxis de property-path](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax) que incluya el nombre de la propiedad entre paréntesis. Puedes animar las propiedades adjuntas integradas tales como [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v%3Dvs.95)) con un [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames) que aplique valores enteros discretos. Sin embargo, existe una limitación en la implementación XAML de Windows Runtime y es que no puedes animar una propiedad adjunta personalizada.
+No es algo habitual, pero puedes aplicar un valor animado a una propiedad adjunta de XAML. Si quieres obtener más información sobre propiedades adjuntas y cómo funcionan, consulta [Introducción a las propiedades adjuntas](https://docs.microsoft.com/windows/uwp/xaml-platform/attached-properties-overview). Para seleccionar una propiedad adjunta como destino hace falta una [sintaxis de property-path](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax) que incluya el nombre de la propiedad entre paréntesis. Puedes animar las propiedades adjuntas integradas tales como [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) con un [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames) que aplique valores enteros discretos. Sin embargo, existe una limitación en la implementación XAML de Windows Runtime y es que no puedes animar una propiedad adjunta personalizada.
 
 ## <a name="more-animation-types-and-next-steps-for-learning-about-animating-your-ui"></a>Más tipos de animaciones y los pasos que deben seguirse para obtener información sobre la animación de la interfaz de usuario
 
@@ -337,7 +337,7 @@ Hasta ahora, hemos mostrado las animaciones personalizadas que se animan entre d
 * [Animaciones amplía su información de estados visuales](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10))
 * [Plantillas de control](https://docs.microsoft.com/windows/uwp/controls-and-patterns/control-templates)
 * [**guión gráfico**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)
-* [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v%3Dvs.95))
+* [**Storyboard.TargetProperty**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms616983(v=vs.95))
  
 
  

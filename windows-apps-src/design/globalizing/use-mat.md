@@ -6,12 +6,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: c6dc07ff35cdd90deaddff06f89aa585aa63156a
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 49f03a1ae5ed0ea1a602103e2181c252c8c29c2f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335033"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319329"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Usar el Kit de herramientas para aplicaciones multilingües 4.0
 
@@ -58,7 +58,7 @@ En la ventana de resultados (que muestra el resultado del Kit de herramientas pa
 Sigue estos pasos para agregar idiomas al proyecto.
 
 1. En el Explorador de soluciones, haz clic con el botón derecho en el nodo del proyecto.
-2. Haz clic en **Kit de herramientas para aplicaciones multilingües** > **Agregar idiomas de traducción...**.
+2. Haz clic en **Kit de herramientas para aplicaciones multilingües** > **Agregar idiomas de traducción...** .
 3. En el cuadro de diálogo Idiomas de traducción, selecciona los idiomas que deseas admitir y haz clic en Aceptar.
 
 El Kit de herramientas realiza estas tareas en respuesta.
@@ -115,7 +115,7 @@ También puedes abrir el Editor multilingüe de esta forma. Ve a Inicio, muestra
 
 #### <a name="option-2-send-the-xlf-files-to-a-third-party-for-translation"></a>Opción 2. Envía los archivos .xlf a un tercero para que los traduzca
 
-Para subcontratar los trabajos de traducción y edición a los localizadores, selecciona los archivos .xlf deseados en el Explorador de soluciones, haz clic en ellos con el botón derecho del ratón y haz clic en **Kit de herramientas para aplicaciones multilingües** > **Exportar traducciones...**.
+Para subcontratar los trabajos de traducción y edición a los localizadores, selecciona los archivos .xlf deseados en el Explorador de soluciones, haz clic en ellos con el botón derecho del ratón y haz clic en **Kit de herramientas para aplicaciones multilingües** > **Exportar traducciones...** .
 
 Seleccione **salida: Destinatario de correo** en el cuadro de diálogo de recursos de cadena de exportación y haga clic en Aceptar y los archivos se comprimen y adjunta a un nuevo correo electrónico. Seleccione **salida: Ubicación de carpeta del archivo**explorador para una carpeta y haga clic en Aceptar, opcionalmente elija para que se comprimen los archivos de nuevo en Aceptar y los archivos estarán (comprimido y) guardado en la ubicación que elija, dentro de una carpeta nueva denominada para el proyecto.
 
@@ -127,11 +127,11 @@ Recompila el proyecto para hacer que las cadenas traducidas se copien en el arch
 
 Estos proveedores de otros fabricantes ofrecen servicios de localización y pueden ayudarte.
 
-- [Elanex](https://www.elanex.com/)
+- [Elanex](https://www.strakertranslations.com/)
 - [Keywords Studios](https://www.keywordsstudios.com/)
 - [Lionbridge](https://www.lionbridge.com)
-- [Moravia](https://www.moravia.com/)
-- [SDL](https://www.sdl.com/languagecloud/managed-translation/ilp/instantquote)
+- [Moravia](https://www.rws.com/what-we-do/rws-moravia/)
+- [SDL](https://www.sdl.com/translate/get-started/instant-quote.html)
 - [Welocalize](https://www.welocalize.com/)
 
 > [!NOTE]

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c4b796c8af493508328730c2b958a0beb38bf60c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a50ca6eaeecd2528eaa0d8558ef70552ae49944a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361956"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317291"
 ---
 # <a name="expose-basic-accessibility-information"></a>Exponer información básica de accesibilidad  
 
@@ -97,7 +97,7 @@ XAML
 <span id="LABELS"/>
 
 ## <a name="labels-and-labeledby"></a>Etiquetas y LabeledBy.  
-La manera preferida de asociar una etiqueta con un elemento de formulario es usar [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) con **x:Name** para el texto de la etiqueta y después definir la propiedad adjunta [**AutomationProperties.LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v%3Dvs.95)) en el elemento de formulario para hacer referencia a la etiqueta **TextBlock** por su nombre XAML. Si usas este modelo, cuando el usuario hace clic en la etiqueta, el foco se mueve al control asociado y las tecnologías de asistencia pueden usar el texto de la etiqueta como nombre accesible del campo del formulario. A continuación te mostramos un ejemplo que muestra esta técnica.
+La manera preferida de asociar una etiqueta con un elemento de formulario es usar [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) con **x:Name** para el texto de la etiqueta y después definir la propiedad adjunta [**AutomationProperties.LabeledBy**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v=vs.95)) en el elemento de formulario para hacer referencia a la etiqueta **TextBlock** por su nombre XAML. Si usas este modelo, cuando el usuario hace clic en la etiqueta, el foco se mueve al control asociado y las tecnologías de asistencia pueden usar el texto de la etiqueta como nombre accesible del campo del formulario. A continuación te mostramos un ejemplo que muestra esta técnica.
 
 XAML
 ```xml

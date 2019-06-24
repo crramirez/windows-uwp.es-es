@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: e3fcf6b792990fad9cb0071aece878cac31f5420
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 20cb1e3162f0c852a60c620be92afd37ad9f8232
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662920"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317271"
 ---
 # <a name="keyboard-interactions"></a>Interacciones de teclado
 
@@ -59,7 +59,7 @@ Estos son los dispositivos y las herramientas que se describen en este tema:
 |-----------------------------------|-----------------|
 |Teclado (hardware y software)   |El teclado de hardware estándar, además de las aplicaciones de UWP admiten dos teclados de software: la [teclado táctil (o software)](#software-keyboard) y [teclado en pantalla](#on-screen-keyboard).|
 |Controlador para juegos y control remoto         |El controlador para juegos y el control remoto de Xbox son dispositivos de entrada fundamentales en la [experiencia de 10 pies](../devices/designing-for-tv.md). Para obtener información específica sobre la compatibilidad de UWP para el controlador para juegos y el control remoto, consulta [Interacciones con el controlador para juegos y el control remoto](gamepad-and-remote-interactions.md).|
-|Lectores de pantalla (Narrador)          |El Narrador es un lector de pantalla integrado para Windows, que proporciona una funcionalidad y unas experiencias de interacción únicas, pero que sigue basándose en la navegación y entrada básicas por teclado. Para más información sobre el Narrador, consulta [Introducción al Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started).|
+|Lectores de pantalla (Narrador)          |El Narrador es un lector de pantalla integrado para Windows, que proporciona una funcionalidad y unas experiencias de interacción únicas, pero que sigue basándose en la navegación y entrada básicas por teclado. Para más información sobre el Narrador, consulta [Introducción al Narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator).|
 
 ## <a name="custom-experiences-and-efficient-keyboarding"></a>Experiencias personalizadas y uso eficiente del teclado
 Como se mencionó, la compatibilidad del teclado es integral, para garantizar que las aplicaciones funcionen bien para usuarios con distintas habilidades, capacidades y expectativas. Te recomendamos que des prioridad a lo siguiente.
@@ -320,7 +320,7 @@ Considere la posibilidad de agregar compatibilidad con la navegación de teclas 
       <p><img src="images/keyboard/dialog.png" alt="Dialog buttons"/></p>
       <p><sup>Botones del cuadro de diálogo</sup></p>
       <p><img src="images/keyboard/radiobutton.png" alt="Radio buttons"/></p>
-      <p><sup>Botones de opción</sup></p>     
+      <p><sup>RadioButtons</sup></p>     
     </td>
     <td>
       <p><img src="images/keyboard/appbar.png" alt="AppBar buttons"/></p>
@@ -364,7 +364,7 @@ En la siguiente imagen se muestra un comportamiento intuitivo de navegación med
 
 ### <a name="keyboard-and-narrator"></a>El teclado y el Narrador
 
-El Narrador es una herramienta de accesibilidad de la interfaz de usuario dirigida a los usuarios del teclado (también se admiten otros tipos de entrada). Sin embargo, la funcionalidad del Narrador va más allá de las interacciones de teclado admitidas por las aplicaciones para UWP y es necesario prestar especial atención al diseñar tu aplicación para UWP para el Narrador. (La [página de conceptos básicos del Narrador](https://support.microsoft.com/help/22808/windows-10-narrator-learning-basics) te guía a través de la experiencia del usuario con el Narrador).
+El Narrador es una herramienta de accesibilidad de la interfaz de usuario dirigida a los usuarios del teclado (también se admiten otros tipos de entrada). Sin embargo, la funcionalidad del Narrador va más allá de las interacciones de teclado admitidas por las aplicaciones para UWP y es necesario prestar especial atención al diseñar tu aplicación para UWP para el Narrador. (La [página de conceptos básicos del Narrador](https://support.microsoft.com/help/22808/windows-10-narrator-basics) te guía a través de la experiencia del usuario con el Narrador).
 
 Algunas de las diferencias entre los comportamientos del teclado para UWP y los admitidos por el Narrador incluyen:
 -   Combinaciones de teclas adicionales para la navegación a elementos de la interfaz de usuario que no están expuestos a través de la navegación habitual mediante el teclado, como Bloq Mayús+teclas de dirección para leer las etiquetas de los controles.

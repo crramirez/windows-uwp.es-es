@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows 10, uwp, juegos, games, desarrollo de juegos, game development
 ms.localizationpriority: medium
-ms.openlocfilehash: 6729711a424bfdcf9af2da92d60f12a066500256
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 950f9415e63a31a5204a15f4f72b968535489cfa
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368782"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321243"
 ---
 # <a name="windows-10-game-development-guide"></a>Guía de desarrollo de juegos para Windows 10
 
@@ -50,15 +50,15 @@ A lo largo de esta guía, encontrarás vínculos profundos a documentación impo
     </colgroup>
     <tr>
         <td>Portal principal del Centro de desarrollo de Windows</td>
-        <td><a href="https://dev.windows.com">Centro de desarrollo de Windows</a></td>
+        <td><a href="https://developer.microsoft.com/windows">Centro de desarrollo de Windows</a></td>
     </tr>
     <tr>
         <td>Desarrollar aplicaciones de Windows</td>
-        <td><a href="https://dev.windows.com/develop">Desarrollar aplicaciones de Windows</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps/develop">Desarrollar aplicaciones de Windows</a></td>
     </tr>
     <tr>
         <td>Desarrollo de aplicaciones de la Plataforma universal de Windows</td>
-        <td><a href="https://developer.microsoft.com/windows/apps/">Guías de procedimientos para aplicaciones de Windows 10</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps">Guías de procedimientos para aplicaciones de Windows 10</a></td>
     </tr>
     <tr>
         <td>Guías de procedimientos para los juegos para UWP</td>
@@ -169,7 +169,7 @@ El programa Herramientas y software intermedio para Xbox ofrece licencias de kit
 
 ### <a name="game-samples"></a>Muestras de juegos
 
-Hay muchas muestras de juegos y aplicaciones para Windows 10 disponibles que te ayudarán a comprender las funciones de juegos de Windows 10 y a empezar a desarrollar juegos rápidamente. Se desarrollan y publican muestras continuamente, por lo que te recomendamos que consultes ocasionalmente los portales de muestras para ver las novedades. También puedes [ver](https://help.github.com/articles/watching-repositories/) los repositorios de GitHub para recibir notificaciones de cambios y adiciones.
+Hay muchas muestras de juegos y aplicaciones para Windows 10 disponibles que te ayudarán a comprender las funciones de juegos de Windows 10 y a empezar a desarrollar juegos rápidamente. Se desarrollan y publican muestras continuamente, por lo que te recomendamos que consultes ocasionalmente los portales de muestras para ver las novedades. También puedes [ver](https://help.github.com/en/articles/watching-and-unwatching-repositories) los repositorios de GitHub para recibir notificaciones de cambios y adiciones.
 
 <table>
     <colgroup>
@@ -306,7 +306,7 @@ Los blogs para desarrolladores son otro excelente recurso para obtener la inform
     </tr>
     <tr>
         <td>Blogs sobre herramientas para desarrolladores de Visual Studio</td>
-        <td><a href="https://devblogs.microsoft.com/">Blogs de herramientas para desarrolladores</a></td>
+        <td><a href="https://devblogs.microsoft.com/visualstudio/">Blogs de herramientas para desarrolladores</a></td>
     </tr>
     <tr>
         <td>Blog sobre herramientas para desarrolladores de Somasegar</td>
@@ -619,11 +619,11 @@ Los puentes de plataforma universal de Windows son tecnologías que llevan tu ap
     </colgroup>
     <tr>
         <td>Puentes de UWP</td>
-        <td><a href="https://dev.windows.com/bridges/">Lleve el código a Windows</a></td>
+        <td><a href="https://developer.microsoft.com/windows/bridges">Lleve el código a Windows</a></td>
     </tr>
     <tr>
         <td>Puente de Windows para iOS</td>
-        <td><a href="https://dev.windows.com/bridges/ios">Traiga sus aplicaciones de iOS a Windows</a></td>
+        <td><a href="https://developer.microsoft.com/windows/bridges/ios">Traiga sus aplicaciones de iOS a Windows</a></td>
     </tr>
     <tr>
         <td>Puente de Windows para aplicaciones de escritorio (.NET y Win32)</td>
@@ -688,11 +688,11 @@ A partir de Unity 5.4, Unity es compatible con el desarrollo de Direct3D 12.
     </colgroup>
     <tr>
         <td>Motor de juego de Unity</td>
-        <td><a href="https://unity3d.com/">Unity: motor de juego</a></td>
+        <td><a href="https://unity.com/">Unity: motor de juego</a></td>
     </tr>
     <tr>
         <td>Obtener Unity</td>
-        <td><a href="https://unity3d.com/get-unity">Obtener Unity</a></td>
+        <td><a href="https://store.unity.com/">Obtener Unity</a></td>
     </tr>
     <tr>
         <td>Documentación de Unity para Windows</td>
@@ -756,7 +756,7 @@ El conjunto modular de herramientas y tecnologías de Havok ayuda a los creadore
     </tr>
     <tr>
         <td>Foros de soporte técnico de Havok</td>
-        <td><a href="https://support.havok.com">Havok</a></td>
+        <td><a href="https://www.havok.com/">Havok</a></td>
     </tr>
 </table>
  
@@ -957,7 +957,7 @@ La preparación para desarrollar una aplicación de la Plataforma universal de W
     </colgroup>
     <tr>
         <td>Introducción al desarrollo para UWP</td>
-        <td><a href="https://dev.windows.com/getstarted">Introducción a las aplicaciones de Windows</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps/getstarted">Introducción a las aplicaciones de Windows</a></td>
     </tr>
     <tr>
         <td>Preparación para el desarrollo en la UWP</td>
@@ -991,7 +991,7 @@ Si empiezas a dar tus primeros pasos en la programación para la UWP y estás co
     </colgroup>
     <tr>
         <td>Información general sobre el desarrollo de aplicaciones de la Plataforma universal de Windows</td>
-        <td><a href="https://dev.windows.com/develop">Desarrollar aplicaciones de Windows</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps/develop">Desarrollar aplicaciones de Windows</a></td>
     </tr>
     <tr>
         <td>Información general sobre la programación de red en la UWP</td>
@@ -1347,7 +1347,7 @@ Un icono es una representación de tu juego en el menú Inicio. Los iconos y las
     </tr>
     <tr>
         <td>Extensión del generador de iconos de UWP para Visual Studio</td>
-        <td><a href="https://marketplace.visualstudio.com/vsgallery/09611e90-f3e8-44b7-9c83-18dba8275bb2">Herramienta para crear iconos de todo lo necesarios con una imagen única</a></td>
+        <td><a href="https://marketplace.visualstudio.com/items?itemName=shenchauhan.UWPTileGenerator">Herramienta para crear iconos de todo lo necesarios con una imagen única</a></td>
     </tr>
     <tr>
         <td>Extensión del generador de iconos para UWP para Visual Studio (entrada de blog)</td>
@@ -1397,7 +1397,7 @@ Windows Performance Toolkit (WPT) se compone de herramientas de supervisión del
     </colgroup>
     <tr>
         <td>Prueba de rendimiento de código</td>
-        <td><a href="https://www.visualstudio.com/team-services/cloud-load-testing/">Pruebas de carga basadas en la nube</a></td>
+        <td><a href="https://azure.microsoft.com/services/devops/test-plans/">Pruebas de carga basadas en la nube</a></td>
     </tr>
     <tr>
         <td>Obtener el tipo de consola Xbox con la información de dispositivo de juegos</td>
@@ -1530,7 +1530,7 @@ Deberá usar [centro de partners](https://partner.microsoft.com/dashboard) para 
     </colgroup>
     <tr>
         <td>Publicación de aplicaciones de centro de partners</td>
-        <td><a href="https://dev.windows.com/publish">Publicar aplicaciones de Windows</a></td>
+        <td><a href="https://developer.microsoft.com/store/publish-apps">Publicar aplicaciones de Windows</a></td>
     </tr>
     <tr>
         <td>Centro de partners avanzada de publicación (GDN)</td>
@@ -1658,7 +1658,7 @@ Cuando hayas terminado el desarrollo y enviado tu juego, todavía no habrás ter
     </tr>
     <tr>
         <td>Formas para promover tu juego</td>
-        <td><a href="https://dev.windows.com/store-promotion">Promociona tus aplicaciones</a></td>
+        <td><a href="https://developer.microsoft.com/store/promote-your-apps">Promociona tus aplicaciones</a></td>
     </tr>
 </table>
  
@@ -1692,7 +1692,7 @@ Visual Studio Application Insights proporciona análisis de rendimiento, telemet
     </colgroup>
     <tr>
         <td>Comprensión del comportamiento de los jugadores con GameAnalytics</td>
-        <td><a href="https://www.gameanalytics.com/">GameAnalytics</a></td>
+        <td><a href="https://gameanalytics.com/">GameAnalytics</a></td>
     </tr>
     <tr>
         <td>Conectar tu juego para UWP con Google Analytics</td>
@@ -1712,7 +1712,7 @@ Visual Studio Application Insights proporciona análisis de rendimiento, telemet
     </tr>
     <tr>
         <td>Usar Vungle para agregar anuncios de vídeo en tus juegos</td>
-        <td><a href="https://v.vungle.com/sdk">Obtener SDK de Windows para Vungle</a></td>
+        <td><a href="https://publisher.vungle.com/sdk/">Obtener SDK de Windows para Vungle</a></td>
     </tr>
 </table>
  

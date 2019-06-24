@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: ff47115c228e3cf6530e12aa4686c88660f16fcd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0ff0eca18eeab72dbf0a2f9a539e452a5923392d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371550"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322016"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
@@ -31,7 +31,7 @@ Crea un elemento de trabajo mediante una llamada a [**RunAsync**](https://docs.m
 Hay tres versiones de [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync) disponibles para que puedas especificar opcionalmente la prioridad del elemento de trabajo, así como controlar si se ejecuta simultáneamente con otros elementos de trabajo.
 
 >[!NOTE]
->Use [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para tener acceso el subproceso de UI y mostrar el progreso del elemento de trabajo.
+>Use [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso el subproceso de UI y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda para que realice el trabajo:
 
@@ -195,7 +195,7 @@ const unsigned int n = 9999;
 // A shared pointer to the result.
 // We use a shared pointer to keep the result alive until the
 // thread is done.
-std::shared_ptr<unsigned long> nthPrime = make_shared<unsigned long int>(0);
+std::shared_ptr<unsigned long> nthPrime = std::make_shared<unsigned long int>(0);
 
 // Simulates work by searching for the nth prime number. Uses a
 // naive algorithm and counts 2 as the first prime number.
@@ -275,7 +275,7 @@ Ten en cuenta que el elemento de trabajo comprueba la propiedad [**IAsyncInfo.St
 
 ## <a name="handle-work-item-completion"></a>Controlar la finalización del elemento de trabajo
 
-Proporciona un controlador de finalización mediante la configuración de la propiedad [**IAsyncAction.Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) del elemento de trabajo. Proporciona un delegado (puedes usar una función lambda o una función delegada) para controlar que el elemento de trabajo se complete. Por ejemplo, usa [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para acceder al subproceso de interfaz de usuario y mostrar el resultado.
+Proporciona un controlador de finalización mediante la configuración de la propiedad [**IAsyncAction.Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) del elemento de trabajo. Proporciona un delegado (puedes usar una función lambda o una función delegada) para controlar que el elemento de trabajo se complete. Por ejemplo, usa [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para acceder al subproceso de interfaz de usuario y mostrar el resultado.
 
 En el siguiente ejemplo se actualiza la interfaz de usuario con el resultado del elemento de trabajo enviado en el paso 1:
 

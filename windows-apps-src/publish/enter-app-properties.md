@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, configuración de juegos, modo de presentación, requisitos del sistema, requisitos de hardware, hardware mínimo, hardware recomendado, directiva de privacidad, información de contacto de soporte técnico, sitio web de aplicaciones, información de soporte técnico
 ms.localizationpriority: medium
-ms.openlocfilehash: ec3b78da4e56ab5994155c41505bbdde42b44e12
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 5bc1283560334d2eac97fd358feabfca0f411014
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63774045"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320041"
 ---
 # <a name="enter-app-properties"></a>Especificar las propiedades de la aplicación
 
@@ -67,7 +67,7 @@ Si tu juego es compatible con cualquiera de las opciones multijugador, asegúrat
 
 ## <a name="display-mode"></a>Modo de pantalla
 
-Esta sección te permite indicar si tu producto está diseñado para ejecutarse en una vista envolvente (no una vista 2D) para [Windows Mixed Reality](https://developer.microsoft.com/windows/mixed-reality) en equipos o dispositivos HoloLens. Si indicas que lo está, también deberás:
+Esta sección te permite indicar si tu producto está diseñado para ejecutarse en una vista envolvente (no una vista 2D) para [Windows Mixed Reality](https://developer.microsoft.com/mixed-reality) en equipos o dispositivos HoloLens. Si indicas que lo está, también deberás:
 - Seleccionar **Minimum hardware** o **Hardware recomendado** para **Windows Mixed Reality immersive headset** en la sección [Requisitos del sistema](#system-requirements) que aparece más abajo en la página **Propiedades**.
 - Especificar la opción **Boundary setup** (si el equipo está seleccionado) para que los usuarios sepan si se ha diseñado para usarse solo en una posición de sentado o de pie, o si permite (o si requiere) que el usuario se mueva al usarlo. 
 

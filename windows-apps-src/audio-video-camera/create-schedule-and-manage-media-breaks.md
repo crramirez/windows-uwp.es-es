@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 68260cadd4322d51c528bf6c6af7f5c8472f2199
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 23cb51ec6b2c6c2560c0a1f6d583ba916768254c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361859"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318560"
 ---
 # <a name="create-schedule-and-manage-media-breaks"></a>Crear, programar y administrar interrupciones multimedia
 
@@ -66,7 +66,7 @@ Hay varios eventos relacionados con las interrupciones multimedia que se pueden 
 
 [!code-cs[RegisterMediaBreakEvents](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetRegisterMediaBreakEvents)]
 
-[  **BreakStarted**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakmanager.breakstarted) se genera cuando se inicia una interrupción multimedia. Puedes actualizar la interfaz de usuario para que el usuario sepa que se está reproduciendo contenido de interrupción multimedia. En este ejemplo se usa [**MediaBreakStartedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaBreakStartedEventArgs) pasado al controlador para obtener una referencia a la interrupción multimedia que se inició. La propiedad [**CurrentItemIndex**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacklist.currentitemindex) se usa para determinar qué elemento multimedia se está reproduciendo en la lista de reproducción de la interrupción multimedia. A continuación, se actualiza la interfaz de usuario para mostrar al usuario el índice de anuncios actual y el número de anuncios restantes en la interrupción. Recuerda que las actualizaciones de la interfaz de usuario deben realizarse en el subproceso de interfaz de usuario, por lo que la llamada debe realizarse dentro de una llamada a [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows). 
+[  **BreakStarted**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakmanager.breakstarted) se genera cuando se inicia una interrupción multimedia. Puedes actualizar la interfaz de usuario para que el usuario sepa que se está reproduciendo contenido de interrupción multimedia. En este ejemplo se usa [**MediaBreakStartedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaBreakStartedEventArgs) pasado al controlador para obtener una referencia a la interrupción multimedia que se inició. La propiedad [**CurrentItemIndex**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacklist.currentitemindex) se usa para determinar qué elemento multimedia se está reproduciendo en la lista de reproducción de la interrupción multimedia. A continuación, se actualiza la interfaz de usuario para mostrar al usuario el índice de anuncios actual y el número de anuncios restantes en la interrupción. Recuerda que las actualizaciones de la interfaz de usuario deben realizarse en el subproceso de interfaz de usuario, por lo que la llamada debe realizarse dentro de una llamada a [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync). 
 
 [!code-cs[BreakStarted](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakStarted)]
 

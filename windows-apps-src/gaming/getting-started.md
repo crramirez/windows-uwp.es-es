@@ -6,12 +6,12 @@ ms.date: 01/25/2018
 ms.topic: article
 keywords: Windows 10, uwp, juegos, introducción
 localizationpriority: medium
-ms.openlocfilehash: 596d0b1eb371fec98825b23a214683421e388506
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: c0d819322e7e9479772f8ca3d72bbdcdb4d192b8
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162660"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321269"
 ---
 # <a name="getting-started"></a>Introducción
 
@@ -31,7 +31,7 @@ Pasos para empezar a desarrollar juegos de inmediato.
 
 Asegúrese de que ha instalado en el dispositivo de Windows 10 y tiene la versión más reciente actualizaciones instaladas.
 
-Instalar un IDE como Visual Studio adecuado. Visual Studio Community 2017 está disponible para su descarga gratuita. Para obtener más información, consulte [descargas de Visual Studio](https://www.visualstudio.com/downloads/).
+Instalar un IDE como Visual Studio adecuado. Visual Studio Community 2017 está disponible para su descarga gratuita. Para obtener más información, consulte [descargas de Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
 Si tiene previsto utilizar un motor de juego y otro middleware, consulte [puentes, motores de juegos y middleware](e2e.md#bridges-game-engines-and-middleware) sección la [Guía de desarrollo de juegos de Windows 10](e2e.md). Para obtener información sobre el desarrollo de juegos de Windows y Xbox con un motor de juego específico, deberá ir a la documentación del motor de juego.
 
@@ -54,7 +54,7 @@ Para obtener más ejemplos, vea [ejemplos de juegos](e2e.md#game-samples).
 
 Si desea desarrollar un juego de Xbox o utilizar las características de Xbox Live en el juego, ya sea unir el [programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) o [ ID@Xbox ](https://www.xbox.com/Developers/id) programa. 
 
-Para más información acerca de las características de Xbox Live que están disponibles para cada uno de los programas, consulte [tabla de características](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#feature-table). Para obtener más información, consulte [programas de desarrollador](e2e.md#developer-programs).
+Para más información acerca de las características de Xbox Live que están disponibles para cada uno de los programas, consulte [tabla de características](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#feature-table). Para obtener más información, consulte [programas de desarrollador](e2e.md#developer-programs).
 
 > [!Note]
 > Programa de creadores de Xbox Live está disponible para todos los desarrolladores. **Cualquier persona** puede publicar un juego de Xbox. Para que el elemento de título del programa creadores de Xbox Live, simplemente debe habilitar esta opción desde el centro de partners. Para obtener más información sobre cómo registrarse para obtener una cuenta de centro de partners, consulte [paso 5](#step-5-sign-up-for-a-partner-center-account) a continuación.

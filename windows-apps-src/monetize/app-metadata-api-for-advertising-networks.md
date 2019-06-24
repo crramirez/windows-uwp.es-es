@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP, red de publicidad, metadatos de la aplicación
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
 ms.localizationpriority: medium
-ms.openlocfilehash: 0122c2fbe1e0e9905a8509694c4a589e04e33247
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d47b1fb567c647ade6ae81373b391c42354f7d88
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621140"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318623"
 ---
 # <a name="app-metadata-api-for-advertising-networks"></a>API de metadatos de la aplicación para redes de publicidad
 
@@ -67,7 +67,7 @@ Este método tiene la siguiente sintaxis de solicitud.
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción                                                                 |
+| Header        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | Ocp-Apim-Subscription-Key | string | Obligatorio. Clave de suscripción que has [recuperado desde el portal de API de metadatos de la aplicación](#get-key).  |
 
@@ -134,7 +134,7 @@ Para obtener más información acerca de los valores del cuerpo de respuesta, co
 | phoneStoreGuid           | string  | El id. del producto (Windows Phone 8.x) de la aplicación. Este identificador es un GUID.  |
 | windowsStoreGuid           | string  | El id. del producto (Windows 8.x) de la aplicación. Este identificador es un GUID. |
 | storeCategory           | string  | La categoría de la aplicación en la Tienda. Para los valores admitidos, consulta la [Tabla de categoría y subcategoría](../publish/category-and-subcategory-table.md) para aplicaciones de la Tienda.  |
-| iabCategory           | string  | La categoría de contenido de la aplicación tal como está definida por Interactive Advertising Bureau (IAB). Por ejemplo, **Noticias** o **Deportes**. Para obtener una lista de categorías de contenido, consulta la página sobre la [taxonomía de contenido de IAB Tech Lab](https://www.iab.com/guidelines/iab-quality-assurance-guidelines-qag-taxonomy) en el sitio web de IAB.   |
+| iabCategory           | string  | La categoría de contenido de la aplicación tal como está definida por Interactive Advertising Bureau (IAB). Por ejemplo, **Noticias** o **Deportes**. Para obtener una lista de categorías de contenido, consulta la página sobre la [taxonomía de contenido de IAB Tech Lab](https://www.iab.com/guidelines/iab-quality-assurance-guidelines-qag-taxonomy/) en el sitio web de IAB.   |
 | iabCategoryId           | string  | El identificador de la categoría de contenido de la aplicación. Por ejemplo, **IAB12** es el identificador de la categoría de noticias e **IAB17** es el identificador de la categoría de deportes. Para obtener una lista de identificadores de categorías de contenido, consulta la sección 5.1 en la [especificación de API de OpenRTB](https://www.iab.com/wp-content/uploads/2015/05/OpenRTB_API_Specification_Version_2_3_1.pdf). |
 | coppa           | Booleano  | Devuelve verdadero si la aplicación está dirigida a niños menores de 13 años y, por tanto, tiene obligaciones en virtud de la Ley de protección de la privacidad infantil en línea (COPPA); de lo contrario, devuelve false.  |
 | downloadUrl           | string  | Vínculo a la descripción de la aplicación en la Tienda. Este vínculo está en formato ```https://www.microsoft.com/store/apps/<Store ID>```.  |

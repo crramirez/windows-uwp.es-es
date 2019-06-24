@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 57f8d7d57c016c015d01e80b07fc0e2c0260ef7f
-ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.openlocfilehash: f069899da69e4689e21fa578ff7124fbaf453ea3
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320618"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317724"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Cargar imágenes y recursos adaptados a escala, tema, contraste alto y otros
 La aplicación puede cargar archivos de recursos de imagen (u otros archivos de activos) adaptados para [factor de escala de visualización](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), tema, contraste alto y otros contextos de tiempo de ejecución. Estas imágenes pueden referenciarse desde código imperativo o desde marcado XAML, por ejemplo como la propiedad **Origen** de una **Imagen**. También pueden aparecer en el archivo de origen del manifiesto del paquete de la aplicación (el archivo `Package.appxmanifest`), por ejemplo, como el valor de icono de la aplicación en la pestaña de activos visuales del Diseñador de manifiestos de Visual Studio en los iconos y notificaciones del sistema. Con calificadores en los nombres de archivo de las imágenes y, opcionalmente, cargándolas dinámicamente con ayuda de un [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live), puedes hacer que se cargue el archivo de imagen más adecuado que coincida mejor con la configuración de tiempo de ejecución del usuario en lo relativo a escala de la pantalla, tema, contraste alto, idioma y otros contextos.
@@ -86,7 +86,7 @@ El esquema `ms-appx-web` accede a los mismos archivos que `ms-appx`, pero en el 
 this.myXAMLWebViewElement.Source = new Uri("ms-appx-web:///Pages/default.html");
 ```
 
-Para cualquiera de los escenarios que se muestran en estos ejemplos, usa la sobrecarga [constructor Uri](https://docs.microsoft.com/en-us/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) que infiere el [UriKind](https://docs.microsoft.com/en-us/dotnet/api/system.urikind). Especifica un URI absoluto válido, incluido el esquema y autoridad, o simplemente deja que la autoridad sea predeterminada para el paquete de la aplicación, como en el ejemplo anterior.
+Para cualquiera de los escenarios que se muestran en estos ejemplos, usa la sobrecarga [constructor Uri](https://docs.microsoft.com/en-us/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) que infiere el [UriKind](https://docs.microsoft.com/dotnet/api/system.urikind?view=netframework-4.8). Especifica un URI absoluto válido, incluido el esquema y autoridad, o simplemente deja que la autoridad sea predeterminada para el paquete de la aplicación, como en el ejemplo anterior.
 
 Observa cómo en estos URI de ejemplo, el esquema ("`ms-appx`" o "`ms-appx-web`") va seguido de "`://`", seguido a su vez por una ruta de acceso absoluta. En una ruta de acceso absoluta, el símbolo "`/`" al comienzo hace que la ruta de acceso se interprete desde la raíz del paquete.
 

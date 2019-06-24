@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, tecnología, technology, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: ba15a4f965dc582a8bd4eaeca211367ea1fcb5cb
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c6d2b0bd04fd14804f65072c8a698e1a240ce00e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368688"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321303"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>Tecnologías de juego de aplicaciones para la UWP
 
@@ -323,7 +323,7 @@ Hay muchas API relacionadas con el desarrollo de juegos, pero no todos los juego
 
 El [programa de creadores de Xbox Live](https://developer.microsoft.com/games/xbox/xboxlive/creator) permite que cualquier desarrollador a integrar Xbox Live en su juego para UWP y publicar en Xbox One y Windows 10. Integra experiencias de redes sociales de Xbox Live, como el inicio de sesión, la presencia, los marcadores y mucho más en tu juego, con un tiempo de desarrollo mínimo. Las funciones de redes sociales de Xbox Live están diseñadas para hacer crecer tu audiencia de forma orgánica, difundiendo el conocimiento a más de 55 millones de jugadores activos.
 
-Si quieres obtener acceso a todavía más funcionalidades de Xbox Live, marketing dedicado y soporte técnico de desarrollo, así como la posibilidad de aparecer destacado en la Tienda principal de Xbox One, presenta la solicitud para el programa [ID@Xbox](https://www.xbox.com/developers/id). Para ver qué funciones están disponibles para el Programa de creadores de Xbox Live y el programa ID@Xbox, consulta la [Tabla de funciones](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#feature-table).
+Si quieres obtener acceso a todavía más funcionalidades de Xbox Live, marketing dedicado y soporte técnico de desarrollo, así como la posibilidad de aparecer destacado en la Tienda principal de Xbox One, presenta la solicitud para el programa [ID@Xbox](https://www.xbox.com/developers/id). Para ver qué funciones están disponibles para el Programa de creadores de Xbox Live y el programa ID@Xbox, consulta la [Tabla de funciones](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#feature-table).
 
 Para obtener más información, consulta [Agregar Xbox Live a tu juego](e2e.md#adding-xbox-live-to-your-game).
 

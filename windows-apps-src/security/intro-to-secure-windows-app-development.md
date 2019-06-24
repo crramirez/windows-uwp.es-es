@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: ee386199fbee7d2f9b839d6b1805c6181e4d70a9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c9b4060fbd2e59a545451c9c8ebe103c9bb527a0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371391"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320601"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Introducción al desarrollo seguro de aplicaciones de Windows
 
@@ -175,7 +175,7 @@ El flujo de trabajo de registro de una aplicación puede ser parecido al siguien
 
 Puede que la información de registro que recopiles incluya mucha más información de identificación de lo que se ve este escenario simple. Por ejemplo, si tu aplicación accede a un servicio protegido, como por ejemplo, para la banca, tendrás que solicitar comprobación de la identidad y otras cosas como parte del proceso de suscripción. Cuando se cumplan todas las condiciones, la clave pública de este usuario se almacenará en el back-end y se usará para la validación la próxima vez que el usuario utilice el servicio.
 
-Para obtener más información sobre Windows Hello, consulta la [Guía de Windows Hello](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-passport-guide) y la [Guía para desarrolladores de Windows Hello](microsoft-passport.md).
+Para obtener más información sobre Windows Hello, consulta la [Guía de Windows Hello](https://docs.microsoft.com/windows/keep-secure/microsoft-passport-guide) y la [Guía para desarrolladores de Windows Hello](microsoft-passport.md).
 
 ## <a name="3-data-in-flight-security-methods"></a>3 Métodos de seguridad de datos en desarrollo
 
@@ -478,14 +478,14 @@ Cuando los datos llegan al dispositivo, el modelo de aplicaciones de Windows ofr
 
 ### <a name="62-code-samples"></a>6.2 Muestras de código
 
--   [Caja de seguridad de credenciales](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/PasswordVault)
--   [Selector de credenciales](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CredentialPicker)
--   [Bloqueo del dispositivo con inicio de sesión de Azure](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DeviceLockdownAzureLogin)
--   [Protección de datos empresariales](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/EnterpriseDataProtection)
--   [KeyCredentialManager](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/KeyCredentialManager)
--   [Tarjetas inteligentes](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SmartCard)
--   [Administración de cuentas Web](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAccountManagement)
--   [WebAuthenticationBroker](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAuthenticationBroker)
+-   [Caja de seguridad de credenciales](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PasswordVault)
+-   [Selector de credenciales](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CredentialPicker)
+-   [Bloqueo del dispositivo con inicio de sesión de Azure](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceLockdownAzureLogin)
+-   [Protección de datos empresariales](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection)
+-   [KeyCredentialManager](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/KeyCredentialManager)
+-   [Tarjetas inteligentes](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SmartCard)
+-   [Administración de cuentas Web](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)
+-   [WebAuthenticationBroker](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
 
 ### <a name="63-api-reference"></a>6.3 Referencia de API
 

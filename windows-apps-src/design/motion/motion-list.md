@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 228fec1571ab3f9c01b4a8dd4084e19bc28dbfe7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d0dc449c0134799f3de675fff4bdbbda66046be8
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366740"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317096"
 ---
 # <a name="add-and-delete-animations"></a>Agregar y eliminar animaciones
 
@@ -21,7 +21,7 @@ ms.locfileid: "66366740"
 
 Las animaciones de listas te permiten insertar o quitar uno o varios elementos de una colección, como un álbum de fotos o una lista de resultados de búsqueda.
 
-> **API importantes**: [**Clase AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition.)
+> **API importantes**: [**Clase AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition)
 
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
@@ -41,7 +41,7 @@ Las animaciones de listas te permiten insertar o quitar uno o varios elementos d
 * [Información general sobre animaciones](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
 * [Animar lista adiciones y eliminaciones](https://docs.microsoft.com/previous-versions/windows/apps/jj649430(v=win.10))
 * [Inicio rápido: Animar la interfaz de usuario mediante la biblioteca de animaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
-* [**Clase AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition.)
+* [**Clase AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition)
 
  
 

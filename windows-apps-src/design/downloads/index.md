@@ -7,18 +7,18 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2c7332a3e1097a8e62576ae5920eb82c2bd5d2a6
-ms.sourcegitcommit: 423ff8f1fd791445e21cca534bcefe407251acf1
+ms.openlocfilehash: 20980562f73bca2087d4c0a6ee049c848404d6a6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251608"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319415"
 ---
 ![Conceptos básicos de diseño](../images/downloads-2x.png)
 
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y ejemplos de aplicaciones para UWP
  
-Diseño y descargas relacionadas con la interfaz de usuario para aplicaciones de Fluent Design o UWP. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/downloads">nuestra página de descargas principales</a>. 
+Diseño y descargas relacionadas con la interfaz de usuario para aplicaciones de Fluent Design o UWP. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/windows/downloads">nuestra página de descargas principales</a>. 
 
 
 ## <a name="design-toolkits"></a>Kits de herramientas de diseño
@@ -131,4 +131,4 @@ En este ejemplo se proporciona una demostración interactiva de todos los contro
 
 ## <a name="want-more-code"></a>¿Quieres ver más código?
 
-Consulta la página de ejemplo de Windows para obtener una lista completa de todas las aplicaciones de muestra para UWP. <a href="https://developer.microsoft.com/samples">Ir al portal de muestras</a>
+Consulta la página de ejemplo de Windows para obtener una lista completa de todas las aplicaciones de muestra para UWP. <a href="https://developer.microsoft.com/windows/samples">Ir al portal de muestras</a>

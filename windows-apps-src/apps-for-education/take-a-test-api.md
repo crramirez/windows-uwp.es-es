@@ -6,18 +6,18 @@ ms.date: 08/08/2018
 ms.topic: article
 keywords: windows 10, uwp, education
 ms.localizationpriority: medium
-ms.openlocfilehash: bee8a04e3b4d57caf7da3e21f2be3c789d83be90
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 31672ff989da7d72f751a33ec3df3d8d528e22ec
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627600"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317817"
 ---
 # <a name="take-a-test-javascript-api"></a>API de JavaScript "Hacer un examen"
 
-[Hacer un examen](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) es una aplicación para UWP basada en explorador que presenta bloqueado evaluaciones en línea de prueba decisiva, lo que permite a los educadores a centrarse en la evaluación de contenido en lugar de cómo proporcionar un entorno de pruebas. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
+[Hacer un examen](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) es una aplicación para UWP basada en explorador que presenta bloqueado evaluaciones en línea de prueba decisiva, lo que permite a los educadores a centrarse en la evaluación de contenido en lugar de cómo proporcionar un entorno de pruebas. Para ello, usa una API de JavaScript que cualquier aplicación web puede usar. La API de Hacer un examen admite la [API estándar del explorador de SBAC](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) para las principales pruebas determinantes que suelen llevarse a cabo.
 
-Si quieres obtener información acerca de la propia aplicación, consulta [Referencia técnica de la aplicación Hacer un examen)](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). Para solucionar cualquier problema, consulta [Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos](troubleshooting.md).
+Si quieres obtener información acerca de la propia aplicación, consulta [Referencia técnica de la aplicación Hacer un examen)](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). Para solucionar cualquier problema, consulta [Solucionar problemas de los eventos de Hacer un examen de Microsoft con el Visor de eventos](troubleshooting.md).
 
 ## <a name="reference-documentation"></a>Documentación de referencia
 Las APIs de Hacer un examen existen en los siguientes espacios de nombres. Ten en cuenta que todas las API dependen de un objeto `SecureBrowser` global.
@@ -32,11 +32,11 @@ El espacio de nombres de seguridad le permite bloquear el dispositivo, compruebe
 
 | Método | Descripción   |
 |--------|---------------|
-|[bloqueo de seguridad](#lockDown) | Bloquea el dispositivo para pruebas. |
+|[lockDown](#lockDown) | Bloquea el dispositivo para pruebas. |
 |[isEnvironmentSecure](#isEnvironmentSecure) | Determina si el contexto de bloqueo aún se aplica al dispositivo. |
 |[getDeviceInfo](#getDeviceInfo) | Obtén información acerca de la plataforma en el que se ejecuta la aplicación de prueba. |
 |[examineProcessList](#examineProcessList)|Obtiene la lista de procesos del usuario y del sistema en ejecución.|
-|[Cerrar](#close) | Cierra el explorador y se desbloquea el dispositivo. |
+|[close](#close) | Cierra el explorador y se desbloquea el dispositivo. |
 |[getPermissiveMode](#getPermissiveMode)|Comprueba si el modo permisivo está activado o desactivado.|
 |[setPermissiveMode](#setPermissiveMode)|Activa o desactiva el modo permisivo.|
 |[emptyClipBoard](#emptyClipBoard)|Borra el portapapeles del sistema.|
@@ -58,7 +58,7 @@ Bloquea el dispositivo. También se usa para desbloquear el dispositivo. La apli
 `void SecureBrowser.security.lockDown(Boolean enable, Function onSuccess, Function onError);`
 
 **Parámetros**  
-* `enable` - **True** para ejecutar la aplicación Take a Test por encima de la pantalla de bloqueo y aplicar directivas que se abordan en este [documento](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). **false** detiene la ejecución de Hacer un examen pasando por alto la pantalla de bloqueo y se cierra a menos que la aplicación no esté bloqueada, en cuyo caso el parámetro no tendrá ningún efecto.  
+* `enable` - **True** para ejecutar la aplicación Take a Test por encima de la pantalla de bloqueo y aplicar directivas que se abordan en este [documento](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). **false** detiene la ejecución de Hacer un examen pasando por alto la pantalla de bloqueo y se cierra a menos que la aplicación no esté bloqueada, en cuyo caso el parámetro no tendrá ningún efecto.  
 * `onSuccess` -[opcional] la función que llama una vez que ha se ha habilitado o deshabilitado correctamente el bloqueo. Debe tener la forma `Function(Boolean currentlockdownstate)`.  
 * `onError` -[opcional] la función que se llama si el error en la operación de bloqueo. Debe tener la forma `Function(Boolean currentlockdownstate)`.  
 
@@ -100,7 +100,7 @@ Obtén información acerca de la plataforma en el que se ejecuta la aplicación 
 
 **Parámetros**  
 * `callback` -La función que se va a llamar cuando se complete esta función. Debe tener la forma `Function(String infoObj)` donde `infoObj` es una cadena JSON que contiene varios campos. Se deben admitir los siguientes campos:
-    * `os` representa el tipo de sistema operativo (por ejemplo: Windows, macOS, Linux, iOS, Android, etcetera.)
+    * `os` representa el tipo de sistema operativo (por ejemplo: Windows, macOS, Linux, iOS, Android, etc.)
     * `name` representa el nombre de la versión del sistema operativo, si existe (por ejemplo: Sierra, Ubuntu).
     * `version` representa la versión del sistema operativo (por ejemplo: 10.1, 10 pro, etcetera.)
     * `brand` representa la personalización de marca de explorador segura (por ejemplo: OAKS, CA, SmarterApp, etcetera.)
@@ -221,7 +221,7 @@ Obtiene la hora en que se inició la aplicación de prueba.
 **Sintaxis**  
 `DateTime SecureBrowser.settings.getStartTime();`
 
-**devolver**  
+**Return**  
 Un objeto DateTime que indica la hora en que se inició la aplicación de prueba.
 
 **Requisitos**  

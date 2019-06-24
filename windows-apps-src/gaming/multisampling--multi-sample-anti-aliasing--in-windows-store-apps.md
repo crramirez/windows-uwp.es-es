@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, muestreo múltiple, direct3d, games, multisampling
 ms.localizationpriority: medium
-ms.openlocfilehash: b547e47b7d896ab818349dcc70ee9dc3c7078847
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 976cdfb5f1dc92f693f7296d6e33d7ccc4c4d6e7
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368385"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318941"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> El muestreo múltiple en Universal Windows Platform (UWP) aplicaciones
 
@@ -30,7 +30,7 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
 
 1.  Llama a [**ID3D11Device::CheckFeatureSupport**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) para averiguar qué formatos DXGI se pueden usar con el muestreo múltiple. Suministra los formatos de destino de representación que tu juego puede usar. El destino de representación y el destino de la resolución debe usar el mismo formato, así que compruebe para ambos [ **D3D11\_formato\_soporte\_MULTIMUESTRA\_RENDERTARGET** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ne-d3d11-d3d11_format_support) y **D3D11\_formato\_soporte\_MULTIMUESTRA\_resolver**.
 
-    **La característica de nivel de 9:  ** Aunque la característica de nivel 9 dispositivos [garantizar la compatibilidad con formatos de destino de representación de muestreo múltiple](https://docs.microsoft.com/previous-versions//ff471324(v=vs.85)), no se garantiza la compatibilidad para destinos de resolución de muestreo múltiple. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
+    **La característica de nivel de 9:  ** Aunque la característica de nivel 9 dispositivos [garantizar la compatibilidad con formatos de destino de representación de muestreo múltiple](https://docs.microsoft.com/previous-versions/ff471324(v=vs.85)), no se garantiza la compatibilidad para destinos de resolución de muestreo múltiple. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
 
     El código siguiente comprueba el muestreo múltiple de soporte técnico para todos lo DXGI\_valores de formato:
 

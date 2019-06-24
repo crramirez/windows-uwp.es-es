@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, temporizador, subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a1a7a161734a142b5f1399798394494d05c6a49
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fb375f280c474ce5a23e10977f96659480cdbb53
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371508"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320514"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Enviar un elemento de trabajo con un temporizador
 
@@ -27,7 +27,7 @@ Obtén información acerca de cómo crear un elemento de trabajo que se ejecute 
 
 Usa el método [**CreateTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) para crear un temporizador para el elemento de trabajo. Envía un lambda que realice el trabajo y usa el parámetro *delay* para especificar cuánto tiempo espera el grupo de subprocesos antes de poder asignar el elemento de trabajo a un subproceso disponible. El retraso se especifica con una estructura [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan).
 
-> **Tenga en cuenta**  puede usar [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+> **Tenga en cuenta**  puede usar [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta en tres minutos:
 

@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp, Windows Information Protection, datos empresariales, protección de datos empresariales, edp, aplicaciones habilitadas
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
-ms.openlocfilehash: f6938118b3a9041eea27367c3916e94ce34d468e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 42f08127567704b1c8623ac64857cc5afe0ef882
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57595480"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321390"
 ---
 # <a name="windows-information-protection-wip"></a>Windows Information Protection (WIP)
 
@@ -42,8 +42,8 @@ Si los usuarios anulan la inscripción de su dispositivo del sistema MDM de la o
 ![Ciclo de vida de WIP](images/wip-lifecycle.png)
 
 > **Obtenga más información acerca de WIP** <br>
-* [Introducción a Windows Information Protection](https://blogs.technet.microsoft.com/windowsitpro/2016/06/29/introducing-windows-information-protection/)
-* [Proteger los datos de empresa con Windows Information Protection (WIP)](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx)
+* [Introducción a Windows Information Protection](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
+* [Proteger los datos de empresa con Windows Information Protection (WIP)](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
 
 Si la aplicación está en la lista de aplicaciones permitidas, todos los datos generados por la aplicación están sujetos a las restricciones de la directiva. Esto significa que si los administradores revocan el acceso del usuario a los datos de empresa, dichos usuarios perderán el acceso a todos los datos de la aplicación que has creado.
 

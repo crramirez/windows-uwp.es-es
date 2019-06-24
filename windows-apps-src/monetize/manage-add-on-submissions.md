@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-on submissions, envíos de complementos, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: e6e75483ca6c01958a4b8bda2c5c3bb60e764eff
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6a287889f27712d1272dd0a2f8f3d068b376fefe
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372480"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320203"
 ---
 # <a name="manage-add-on-submissions"></a>Manage add-on submissions (Administrar envíos de complemento)
 
@@ -92,7 +92,7 @@ Para crear un envío de un complemento, sigue este proceso.
     El cuerpo de la respuesta contiene un recurso [envío de complemento](#add-on-submission-object) que incluye el identificador del nuevo envío, el URI de firma de acceso compartido (SAS) para cargar los iconos de complemento para el envío a Azure Blob Storage y todos los datos del nuevo envío (como las descripciones y la información sobre precios).
 
     > [!NOTE]
-    > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure Blob storage, consulte [firmas de acceso compartido, parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1) y [firmas de acceso compartido, parte 2: Crear y usar una SAS con Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+    > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure Blob storage, consulte [firmas de acceso compartido, parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) y [firmas de acceso compartido, parte 2: Crear y usar una SAS con Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
 4. Si estás agregando nuevos iconos para el envío, [prepara los iconos](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions) y agrégalos a un archivo ZIP.
 

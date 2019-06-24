@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bcc9a6d89a143d8fd03d73dbd83b832ed9513ee2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9692a8ef21e9f62114b38c6bb5d15199b8c0e04a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644420"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318151"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a>Adaptación de efectos y experiencias con la interfaz de usuario de Windows
 
@@ -112,13 +112,13 @@ La API se puede agregar al código existente en unos pocos pasos sencillos.
     }
     ```
 
-Código de ejemplo completo se puede encontrar en el [repositorio de Github de la interfaz de usuario de Windows](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2015063/CompCapabilities).
+Código de ejemplo completo se puede encontrar en el [repositorio de Github de la interfaz de usuario de Windows](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 15063/CompCapabilities).
 
 ## <a name="fast-vs-slow-effects"></a>Rápida frente a efectos de baja velocidad
 
 Según los comentarios de proporcionado [AreEffectsSupported](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectssupported) y [AreEffectsFast](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectsfast) métodos de la API CompositionCapabilities, la aplicación puede decidir intercambiar los efectos caros o no se admite para otros efectos de su elección que están optimizados para el dispositivo. Algunos efectos se sabe que más consumen muchos recursos que otras constantemente y deben usarse con moderación y otros efectos que pueden usarse más libremente. Para todos los efectos, sin embargo, la atención debe usarse cuando encadenamiento y animar como algunos escenarios o combinaciones pueden cambiar las características de rendimiento del gráfico del efecto. A continuación se muestran algunas características de rendimiento por regla general de los efectos individuales:
 
-- Efectos que se sabe que tienen impacto alto rendimiento son los siguientes: Desenfoque gausiano, máscara de sombras, BackDropBrush, HostBackDropBrush y capa Visual. No se recomienda para los dispositivos de gama baja [(9.1-9.3 de nivel de características)](https://msdn.microsoft.com/library/windows/desktop/ff476876(v=vs.85).aspx)y debe utilizarse con precaución en dispositivos de gama alta.
+- Efectos que se sabe que tienen impacto alto rendimiento son los siguientes: Desenfoque gausiano, máscara de sombras, BackDropBrush, HostBackDropBrush y capa Visual. No se recomienda para los dispositivos de gama baja [(9.1-9.3 de nivel de características)](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)y debe utilizarse con precaución en dispositivos de gama alta.
 - Efectos con impacto en el rendimiento medio incluyen la matriz de colores, determinados BlendModes de efecto de Blend (luminosidad, Color, saturación y tono), (según el escenario), SpotLight y SceneLightingEffect BorderEffect. Estos efectos pueden funcionar con determinados escenarios en los dispositivos de gama baja, pero cuidado se debe usar al encadenamiento y animación. Se recomienda restringir el uso a dos o menos y animar en sólo las transiciones.
 - Todos los demás efectos tienen un rendimiento bajo impacto y funcionan en todos los escenarios razonables cuando la animación y el encadenamiento.
 

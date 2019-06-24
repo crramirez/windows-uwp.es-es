@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: f41bf9f56b63f59844bec976e9d6e5e3d650b271
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3dbb06f53f760724da312e00f545d799d6a24200
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370269"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321571"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>Habilitar el acceso de modo usuario a GPIO, I2C, y SPI
 
@@ -614,7 +614,7 @@ Además de los recursos de memoria e interrupción que suelen requerir los contr
 * CLIENT_ConnectFunctionConfigPins: `GpioClx` lo llama para requerir que el controlador de minipuerto aplique la configuración de multiplexación especificada.
 * CLIENT_DisconnectFunctionConfigPins: `GpioClx` lo llama para requerir que el controlador de minipuerto revierta la configuración de multiplexación.
 
-Consulta [funciones de devolución de llamada de eventos de GpioClx](https://docs.microsoft.com/previous-versions//hh439464(v=vs.85)) para obtener una descripción de estas rutinas.
+Consulta [funciones de devolución de llamada de eventos de GpioClx](https://docs.microsoft.com/previous-versions/hh439464(v=vs.85)) para obtener una descripción de estas rutinas.
 
 Además de estas dos nuevas DDI, deben auditarse DDI existentes para la compatibilidad de multiplexación de patillas:
 

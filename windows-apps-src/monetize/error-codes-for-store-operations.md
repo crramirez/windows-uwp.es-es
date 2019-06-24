@@ -5,12 +5,12 @@ ms.date: 08/24/2017
 ms.topic: article
 keywords: windows 10, uwp, compras desde la aplicación, IAP, complementos, códigos de error
 ms.localizationpriority: medium
-ms.openlocfilehash: ba505b30076c356a39ae195e1d187cbc49d8a66a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e887e5fec2a2e04658332a25a3a6c8e23fe2550c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662880"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321717"
 ---
 # <a name="error-codes-for-store-operations"></a>Códigos de error para las operaciones de Microsoft Store
 
@@ -53,7 +53,7 @@ Los siguientes códigos de error están relacionados con las operaciones de lice
 | 0x803F8009<br/>0x803F800A   | El período de prueba de la aplicación ha expirado.   |
 | 0x803F8190   |  La licencia no permite que el producto se use en el país o región de tu dispositivo.  |
 | 0x803F81F5<br/>0x803F81F6<br/>0x803F81F7<br/>0x803F81F8<br/>0x803F81F9   |  Has alcanzado el número máximo de dispositivos que pueden usarse con juegos y aplicaciones de Microsoft Store. Para usar este juego o aplicación en el dispositivo actual, primero debes eliminar otro dispositivo de la cuenta.  |
-| 0x803F9000<br/>0x803F9001    |  La licencia está dañada o ha expirado. Para ayudar a resolver este error, intente ejecutar el [Solucionador de problemas para aplicaciones de Windows](https://support.microsoft.com/help/4027498/windows-run-the-troubleshooter-for-windows-apps) para restablecer la caché de Store.     |
+| 0x803F9000<br/>0x803F9001    |  La licencia está dañada o ha expirado. Para ayudar a resolver este error, intente ejecutar el [Solucionador de problemas para aplicaciones de Windows](https://support.microsoft.com/help/4027498/microsoft-store-fix-problems-with-apps) para restablecer la caché de Store.     |
 | 0x803F9006    |  No se pudo completar la operación porque el usuario que tiene derecho a usar este producto no ha iniciado sesión en el dispositivo con su cuenta de Microsoft.            |
 | 0x803F9008<br/>0x803F9009    |  El dispositivo está desconectado. El dispositivo debe estar conectado para usar este producto.            |
 | 0x803F900A    |  La suscripción ha caducado.            |

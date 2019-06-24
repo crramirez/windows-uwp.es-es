@@ -5,19 +5,19 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, achievements, logros
 ms.localizationpriority: medium
-ms.openlocfilehash: f1d9f7f27e4d0a219aa8bf474b9f57efbb1c74a0
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 422024445be4662aab0a47b5527369c8b7091446
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162620"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317768"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Obtener datos de logros de Xbox Live
 
-Usa este método en la API de análisis de Microsoft Store para obtener el número de clientes que han desbloqueado cada logros para tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live//index.md) durante el día más reciente para el que están disponibles los datos de logros, los 30 días anteriores hasta ese día y la duración total de tu juego hasta ese día. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para obtener el número de clientes que han desbloqueado cada logros para tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md) durante el día más reciente para el que están disponibles los datos de logros, los 30 días anteriores hasta ese día y la duración total de tu juego hasta ese día. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
 
 > [!IMPORTANT]
-> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

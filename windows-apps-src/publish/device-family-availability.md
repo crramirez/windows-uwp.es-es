@@ -5,12 +5,12 @@ ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp, paquetes, carga, disponibilidad de familia de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: af2152eb8d174f6d2e40e20c8cdaccd0e87605bb
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 088fb859ae38e608182b22b94300b9c27063054e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787102"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320017"
 ---
 # <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos
 
@@ -30,7 +30,7 @@ Los paquetes destinados a la familia de dispositivos Windows.Universal se pueden
 
 Puedes desactivar la casilla para cualquier familia de dispositivos Windows 10 si no quieres ofrecer el envío a los clientes de ese tipo de dispositivo. Si se desactiva la casilla de una familia de dispositivos, los clientes nuevos de ese tipo de dispositivo no podrán conseguir la aplicación (aunque los clientes que ya la tengan pueden seguir usándola y obtendrán cualquier actualización que envíes).
 
-Si tu app las admite, se recomienda dejar estas casillas activadas salvo que tengas un motivo específico para limitar los tipos de dispositivos Windows 10 que pueden comprar tu aplicación. Por ejemplo, si sabes que tu aplicación no ofrece una buena experiencia en [Surface Hub](https://developer.microsoft.com/windows/surfacehub) o [Microsoft HoloLens](https://developer.microsoft.com/windows/mixed-reality), puedes desactivar la casilla **Windows 10 Team** o **Windows 10 Holographic**. Esto impide que los clientes nuevos adquieran la aplicación en esos dispositivos. Si más adelante decides que la aplicación está lista para esos clientes, puedes crear un nuevo envío con las casillas activadas.
+Si tu app las admite, se recomienda dejar estas casillas activadas salvo que tengas un motivo específico para limitar los tipos de dispositivos Windows 10 que pueden comprar tu aplicación. Por ejemplo, si sabes que tu aplicación no ofrece una buena experiencia en [Surface Hub](https://developer.microsoft.com/windows/surfacehub) o [Microsoft HoloLens](https://developer.microsoft.com/mixed-reality), puedes desactivar la casilla **Windows 10 Team** o **Windows 10 Holographic**. Esto impide que los clientes nuevos adquieran la aplicación en esos dispositivos. Si más adelante decides que la aplicación está lista para esos clientes, puedes crear un nuevo envío con las casillas activadas.
 
 <span id="xbox" />
 

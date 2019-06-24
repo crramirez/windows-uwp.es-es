@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 097ff0bb9e2ac8d36780a692172afb0a7933fdd1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 275dc6ab7cdb310dff817a3e0017568ad2fed80c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66364973"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317125"
 ---
 # <a name="show-multiple-views-for-an-app"></a>Mostrar varias vistas de una aplicación
 
@@ -83,7 +83,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 3.  En el nuevo subproceso, rellena la ventana.
 
-    Debes usar el método [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para programar el trabajo de la conversación de la interfaz de usuario para la nueva vista. Debes usar una [expresión lambda](https://go.microsoft.com/fwlink/p/?LinkId=389615) para pasar una función como un argumento para el método **RunAsync**. El trabajo que realices en la función lambda se realizará en el subproceso de la nueva vista.
+    Debes usar el método [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para programar el trabajo de la conversación de la interfaz de usuario para la nueva vista. Debes usar una [expresión lambda](https://go.microsoft.com/fwlink/p/?LinkId=389615) para pasar una función como un argumento para el método **RunAsync**. El trabajo que realices en la función lambda se realizará en el subproceso de la nueva vista.
 
     En XAML, lo normal es agregar un elemento [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) a la propiedad [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content) del elemento [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) y luego desplazar al elemento **Frame** a una [**página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) XAML donde has definido el contenido de la aplicación. Para obtener más información, consulta [Navegación de punto a punto entre dos páginas](../basics/navigate-between-two-pages.md).
 
@@ -125,7 +125,7 @@ Si se abren vistas secundarias, se puede ocultar la ventana de la vista principa
 Otras vistas, incluidas todas las vistas que se crean llamando a [**CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview) en el código de la aplicación, son vistas secundarias. La vista principal y las vistas secundarias se almacenan en la colección [**CoreApplication.Views**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.views). Por lo general, las vistas secundarias se crean en respuesta a una acción del usuario. En algunos casos, el sistema crea vistas secundarias para tu aplicación.
 
 > [!NOTE]
-> Puedes usar la característica *acceso asignado* de Windows para ejecutar una aplicación en [modo de pantalla completa](https://technet.microsoft.com/library/mt219050.aspx). Al hacerlo, el sistema crea una vista secundaria para presentar la interfaz de usuario de la aplicación sobre la pantalla de bloqueo. No se permiten vistas secundarias creadas por la aplicación, por lo que si intentas mostrar tu propia vista secundaria en modo de pantalla completa, se iniciará una excepción.
+> Puedes usar la característica *acceso asignado* de Windows para ejecutar una aplicación en [modo de pantalla completa](https://docs.microsoft.com/windows/manage/set-up-a-device-for-anyone-to-use). Al hacerlo, el sistema crea una vista secundaria para presentar la interfaz de usuario de la aplicación sobre la pantalla de bloqueo. No se permiten vistas secundarias creadas por la aplicación, por lo que si intentas mostrar tu propia vista secundaria en modo de pantalla completa, se iniciará una excepción.
 
 ## <a name="switch-from-one-view-to-another"></a>Cambiar de una vista a otra
 

@@ -8,12 +8,12 @@ ms.date: 11/16/2017
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ffed5cdc063a35b4693aa4a9323e2143b69e4fc
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 2ecf82294614114e711483dfdc58cfad36591369
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065348"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319560"
 ---
 # <a name="controls-for-uwp-apps"></a>Controles de aplicaciones para UWP 
 
@@ -133,6 +133,6 @@ Obtén la aplicación _XAML Controls Gallery_ de Microsoft Store para ver en acc
 
 ## <a name="additional-controls"></a>Controles adicionales
 
-Hay disponibles controles adicionales para el desarrollo para UWP desde empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/products/uwp">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> y <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Estos controles proporcionan compatibilidad adicional para desarrolladores de empresa y .NET, ya que mejoran los controles estándar del sistema con controles y servicios personalizados.  
+Hay disponibles controles adicionales para el desarrollo para UWP desde empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> y <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Estos controles proporcionan compatibilidad adicional para desarrolladores de empresa y .NET, ya que mejoran los controles estándar del sistema con controles y servicios personalizados.  
 
 Si estás interesado en saber más sobre estos controles, echa un vistazo al ejemplo de <a href="https://github.com/Microsoft/Windows-appsample-customers-orders-database">base de datos de pedidos de clientes</a> en GitHub. En este ejemplo, se usa el control de cuadrícula de datos y la validación de entrada de datos de Telerik, que forma parte de su interfaz de usuario para el conjunto de aplicaciones de UWP. La interfaz de usuario para el conjunto de aplicaciones de UWP es una colección de más de 20 controles que está disponible como proyecto de código abierto a través de .NET Foundation.

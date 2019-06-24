@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 3dprinting, impresión en 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 712efde0293edff6134309ac2d6d9105413a2877
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e2ed99720afdccef297d46853d4a2445b497195e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370422"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321695"
 ---
 # <a name="3d-printing-from-your-app"></a>Impresión en 3D desde la aplicación
 
@@ -54,7 +54,7 @@ Agrega **TextBlock** para comentarios de la interfaz de usuario.
 ## <a name="get-the-3d-data"></a>Obtener los datos de 3D
 
 
-El método con el que la aplicación obtiene datos de geometría 3D variará. La aplicación puede recuperar datos de una digitalización 3D, descargar datos de modelo de un recurso web o generar una malla 3D mediante programación a través de fórmulas matemáticas o entradas del usuario. Para que resulte más sencillo, en esta guía se mostrará cómo cargar un archivo de datos 3D (de cualquiera de los distintos tipos de archivo comunes) en la memoria del programa desde el almacenamiento del dispositivo. La [Biblioteca de modelos de 3D Builder](https://developer.microsoft.com/windows/hardware/3d-builder-model-library) proporciona distintos modelos que puedes descargar fácilmente en el dispositivo.
+El método con el que la aplicación obtiene datos de geometría 3D variará. La aplicación puede recuperar datos de una digitalización 3D, descargar datos de modelo de un recurso web o generar una malla 3D mediante programación a través de fórmulas matemáticas o entradas del usuario. Para que resulte más sencillo, en esta guía se mostrará cómo cargar un archivo de datos 3D (de cualquiera de los distintos tipos de archivo comunes) en la memoria del programa desde el almacenamiento del dispositivo. La [Biblioteca de modelos de 3D Builder](https://developer.microsoft.com/windows/hardware/3d-print/windows-3d-printing) proporciona distintos modelos que puedes descargar fácilmente en el dispositivo.
 
 En tu método `OnLoadClick`, usa la clase [**FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) para cargar un único archivo en la memoria de la aplicación.
 

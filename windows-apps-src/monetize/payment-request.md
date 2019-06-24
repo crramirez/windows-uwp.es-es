@@ -4,12 +4,12 @@ title: Simplificar los pagos con la API de solicitud de pago
 ms.date: 09/26/2017
 ms.topic: article
 keywords: Windows 10, uwp, solicitud de pago
-ms.openlocfilehash: a40b8265e3445319bd7baa530df0f9e9eaae0f31
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: f055bacbddae88cdbd100b460d933682b3c78a13
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63804486"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320061"
 ---
 # <a name="simplify-payments-with-the-payment-request-api"></a>Simplificar los pagos con la API de solicitud de pago
 La API de solicitud de pago para aplicaciones UWP se basa en el [especificación de la API de solicitud de pago de W3C](https://w3c.github.io/browser-payment-api/). Proporciona la capacidad de simplificar el proceso de pago en sus aplicaciones para UWP. Pueden acelerar los usuarios a través de desprotección mediante opciones de pago y ya ha guardado con su cuenta de Microsoft de direcciones de envío. Puede aumentar la tasa de conversión y reducir el riesgo de infracciones de datos porque se convierte la información de pago. A partir de Windows 10 Creators Update, los usuarios pueden usar sus opciones de guardado de pago para pagar fácilmente en todas las experiencias en aplicaciones para UWP.
@@ -18,7 +18,7 @@ La API de solicitud de pago para aplicaciones UWP se basa en el [especificación
 Antes de comenzar con la API de solicitud de pago, hay algunas cosas que debe hacer o tener en cuenta.
 
 ### <a name="getting-a-merchant-id"></a>Obtener un identificador de comerciante
-Como parte del proceso de solicitud de pago, Microsoft solicita tokens de pago en el nombre de su proveedor de servicios. Por lo que necesitamos su autorización para solicitar esos tokens antes de empezar a usar la API.  Debe seguir unos pasos para registrarse para una cuenta de vendedor y proporcione la autorización necesaria. Para ello, vaya a [Microsoft Seller Center](https://seller.microsoft.com/en-us/dashboard/registration/seller/?accountprogram=uwp). Una vez haya hecho esto, copie el identificador de comerciante resultante Id. de Partner Center en su aplicación al construir la solicitud de pago. A continuación, cuando la aplicación envía una solicitud de pago, recibirá un token de pago de su procesador que necesitará para enviar el pago.
+Como parte del proceso de solicitud de pago, Microsoft solicita tokens de pago en el nombre de su proveedor de servicios. Por lo que necesitamos su autorización para solicitar esos tokens antes de empezar a usar la API.  Debe seguir unos pasos para registrarse para una cuenta de vendedor y proporcione la autorización necesaria. Para ello, vaya a [Microsoft Seller Center](https://partner.microsoft.com/dashboard/registration/seller?accountprogram=uwp). Una vez haya hecho esto, copie el identificador de comerciante resultante Id. de Partner Center en su aplicación al construir la solicitud de pago. A continuación, cuando la aplicación envía una solicitud de pago, recibirá un token de pago de su procesador que necesitará para enviar el pago.
 
 ### <a name="geographic-restrictions-and-language-support"></a>Las restricciones geográficas y compatibilidad con idiomas
 La API de solicitud de pago puede usarse únicamente por las empresas en Estados Unidos para procesar las transacciones en los Estados Unidos.
@@ -80,5 +80,5 @@ Una vez completado el pago, se presentará al usuario un **pedido confirmado** p
 - [Documentación de referencia Windows.ApplicationModel.Payments](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.payments)
 - [UWP la aplicación de ejemplo en GitHub](https://github.com/Microsoft/Windows-appsample-shopping)
 - [Especificación de API de solicitud de pago de W3C](https://www.w3.org/TR/payment-request/)
-- [Solicitud de pago de API ](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/payment-request-api)
+- [Solicitud de pago de API ](https://docs.microsoft.com/microsoft-edge/dev-guide/windows-integration/payment-request-api)
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, OpenGL, Direct3D, canalización de sombreador
 ms.localizationpriority: medium
-ms.openlocfilehash: 8793ef8b44df1ca1d93133383666434f525f2d07
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fc5e1eb9c261a4397d83c833591f2497521aa1c6
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368976"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321379"
 ---
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>Comparar la canalización de sombreador de OpenGL ES 2.0 con Direct3D
 
@@ -21,8 +21,8 @@ ms.locfileid: "66368976"
 **API importantes**
 
 -   [Etapa del ensamblador de entrada](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage)
--   [Etapa del sombreador de vértices](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85))
--   [Etapa del sombreador de píxeles](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85))
+-   [Etapa del sombreador de vértices](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85))
+-   [Etapa del sombreador de píxeles](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85))
 
 En términos conceptuales, la canalización de sombreador de Direct3D 11 es muy similar a la de OpenGL ES 2.0. En términos de diseño de API, sin embargo, los principales componentes para crear y administrar las fases de sombreador forman parte de dos interfaces importantes: [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) y [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1). En este tema intentamos asignar patrones comunes de API para la canalización de sombreador de OpenGL ES 2.0 a sus equivalentes en Direct3D 11 en estas interfaces.
 
@@ -34,10 +34,10 @@ Los objetos de sombreador se crean en la interfaz [**ID3D11Device1**](https://do
 La canalización de gráficos en Direct3D 11 se administra mediante instancias de la interfaz [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) y tiene estas fases:
 
 -   [Fase del ensamblador de entrada](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage). Esta fase suministra datos (triángulos, líneas y puntos) a la canalización. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) métodos que admiten esta fase tienen el prefijo "I".
--   [Fase del sombreador de vértices](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85)). Esta fase procesa vértices, normalmente realizando ciertas operaciones, como transformar, enmascarar e iluminar. Un sombreador de vértices siempre toma un solo vértice de entrada y produce un solo vértice de salida. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) métodos que admiten esta fase tienen el prefijo "Frente a".
+-   [Fase del sombreador de vértices](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85)). Esta fase procesa vértices, normalmente realizando ciertas operaciones, como transformar, enmascarar e iluminar. Un sombreador de vértices siempre toma un solo vértice de entrada y produce un solo vértice de salida. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) métodos que admiten esta fase tienen el prefijo "Frente a".
 -   [Fase de salida en secuencias](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-stream-stage). Esta fase transmite datos primitivos de la canalización a la memoria para llegar al rasterizador. Los datos pueden transmitirse o pasarse al rasterizador. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse en la CPU. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) tienen el prefijo "Otros" métodos que admiten este escenario.
 -   [Fase del rasterizador](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage). El rasterizador recorta primitivos, los prepara para el sombreador de píxeles y determina cómo invocar sombreadores de píxeles. Puede deshabilitar la rasterización indicando a la canalización no hay ningún sombreador de píxeles (establecer la etapa del sombreador de píxeles en NULL con [ **ID3D11DeviceContext::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader)) y deshabilitar la profundidad y Galería de símbolos de las pruebas () establecer DepthEnable y StencilEnable en FALSE en [ **D3D11\_profundidad\_CLICHÉ\_DESC**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc)). Mientras estén deshabilitadas, los contadores de la canalización relacionados con la rasterización no se actualizarán.
--   [Fase del sombreador de píxeles](https://docs.microsoft.com/previous-versions//bb205146(v=vs.85)): La fase del sombreador de píxeles recibe datos interpolados para un primitivo y genera datos por píxel, como el color. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) métodos que admiten esta fase tienen el prefijo "PS".
+-   [Fase del sombreador de píxeles](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85)): La fase del sombreador de píxeles recibe datos interpolados para un primitivo y genera datos por píxel, como el color. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) métodos que admiten esta fase tienen el prefijo "PS".
 -   [Fase de fusión de salida](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-merger-stage). Esta fase combina varios tipos de datos de salida (valores de sombreador de píxeles, información de profundidad y galería de símbolos) con los contenidos del destino de representación y los búferes de profundidad y galería de símbolos para generar el resultado final de canalización. [**ID3D11DeviceContext1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) métodos que admiten esta fase tienen el prefijo "OM".
 
 (También hay fases para los sombreadores de geometría, sombreadores de casco, teseladores y sombreadores de dominio, pero como estos no tienen análogos en OpenGL ES 2.0, no los trataremos en este tema). Para obtener una lista completa de los métodos para estas fases, consulta las páginas de referencia de [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) y [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1). **ID3D11DeviceContext1** extiende **ID3D11DeviceContext** para Direct3D 11.
@@ -178,7 +178,7 @@ Cuando la canalización se completa, dibujas los resultados de las fases de somb
 
 GLSL y HLSL no son muy distintos más allá de la compatibilidad con tipos complejos y la sintaxis general. Muchos desarrolladores consideran que la migración es más fácil estableciendo un alias de las instrucciones comunes de OpenGL ES 2.0 y las definiciones de sus equivalentes en HLSL. Ten en cuenta que Direct3D usa la versión del modelo de sombreador para expresar el conjunto de características del HLSL que una interfaz de gráficos admite. OpenGL tiene una especificación de versión distinta para HLSL. La siguiente tabla intenta darte una idea aproximada de los conjuntos de características del lenguaje de sombreador que se definen para Direct3D 11 y OpenGL ES 2.0 en términos de versión.
 
-| Lenguaje de sombreador           | Versión de característica GLSL                                                                                                                                                                                                       | Modelo de sombreador Direct3D |
+| Lenguaje de sombreador           | Versión de característica GLSL                                                                                                                                                                                                      | Modelo de sombreador Direct3D |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
 | HLSL en Direct3D 11          | ~4.30.                                                                                                                                                                                                                    | SM 5.0                |
 | GLSL ES para OpenGL ES 2.0 | 1.40. Las implementaciones anteriores de GLSL ES para OpenGL ES 2.0 pueden usar de 1.10 a 1.30. Compruebe el código original con glGetString (GL\_SOMBREADO\_LENGUAJE\_versión) o glGetString (SOMBREADO\_LENGUAJE\_versión) para determinarlo. | ~SM 2.0               |

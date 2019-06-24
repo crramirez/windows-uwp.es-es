@@ -5,12 +5,12 @@ ms.date: 10/04/2018
 ms.topic: article
 keywords: Windows 10, uwp, de punto de servicio, punto de venta, lector de banda magnética
 ms.localizationpriority: medium
-ms.openlocfilehash: 1805213c7c30ccbc67fb96098f11480703589bb4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 12b88d942e4b5a9c90880f6bd362ba9e7e011186
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651610"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321552"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>Obtener y comprender los datos de bandas magnéticas
 
@@ -24,8 +24,7 @@ Cada vez que el lector reconoce una tarjeta deslizada, se producirá uno de los 
 * [Evento BankCardDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): Se produce cuando una tarjeta bancaria pasar.
 * [Evento VendorSpecificDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.vendorspecificdatareceived): Se produce al pasar una tarjeta específica del proveedor.
 
-La aplicación solo necesita suscribirse a los eventos que son compatibles con el lector de la banda magnética. Puede ver qué tipos de tarjetas son compatibles con [MagneticStripeReader.SupportedCardTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes
-).
+La aplicación solo necesita suscribirse a los eventos que son compatibles con el lector de la banda magnética. Puede ver qué tipos de tarjetas son compatibles con [MagneticStripeReader.SupportedCardTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes).
 
 El código siguiente muestra cómo suscribirse a las tres ***DataReceived** eventos:
 
@@ -118,11 +117,11 @@ private void GetTrackData(MagneticStripeReaderBankCardDataReceivedEventArgs args
 
 [!INCLUDE [feedback](./includes/pos-feedback.md)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Lector de la banda magnética](pos-magnetic-stripe-reader.md)
 * [Clase ClaimedMagneticStripeReader](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader)
-* [Clase MagneticStripeReaderAamvaCardDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderaamvacarddatareceivedeventargs)
+* [MagneticStripeReaderAamvaCardDataReceivedEventArgs Class](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderaamvacarddatareceivedeventargs)
 * [Clase MagneticStripeReaderBankCardDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderbankcarddatareceivedeventargs)
 * [Clase MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadervendorspecificcarddatareceivedeventargs)
 * [MagneticStripeReaderReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport)

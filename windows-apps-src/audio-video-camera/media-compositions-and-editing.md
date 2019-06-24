@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4054f1f4ce4db7f158c1297b748ecea8cab83602
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6a0b21ac4c2bc1a2278757cdaa542be39c01f481
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360743"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318251"
 ---
 # <a name="media-compositions-and-editing"></a>Composiciones y edición multimedia
 
@@ -86,7 +86,7 @@ Para representar una composición multimedia en un archivo plano de vídeo para 
 
 [!code-cs[Namespace2](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace2)]
 
-Después de permitir al usuario seleccionar un archivo de salida mediante una clase [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker), procesa la composición al archivo seleccionado mediante una llamada al método [**RenderToFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.editing.mediacomposition.rendertofileasync) del objeto **MediaComposition**. El resto del código del siguiente ejemplo simplemente sigue el patrón de control de un [**AsyncOperationWithProgress**](https://docs.microsoft.com/previous-versions//br205807(v=vs.85)).
+Después de permitir al usuario seleccionar un archivo de salida mediante una clase [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker), procesa la composición al archivo seleccionado mediante una llamada al método [**RenderToFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.editing.mediacomposition.rendertofileasync) del objeto **MediaComposition**. El resto del código del siguiente ejemplo simplemente sigue el patrón de control de un [**AsyncOperationWithProgress**](https://docs.microsoft.com/previous-versions/br205807(v=vs.85)).
 
 [!code-cs[RenderCompositionToFile](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetRenderCompositionToFile)]
 

@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 972556a3d8d46dce11b251fc11d209fa96d3b751
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 150ea5fc9f5e91171f29cc985351856487e91d4a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362586"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318757"
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 
@@ -43,7 +43,7 @@ Independientemente del modo, hay dos tipos de enlace, y como están ambos normal
 **Aplicaciones de ejemplo que muestran {x: Bind}**
 
 -   [Ejemplo de {x:Bind}](https://go.microsoft.com/fwlink/p/?linkid=619989).
--   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame).
+-   [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper).
 -   [Ejemplo de conceptos básicos de interfaz de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=619992).
 
 **Aplicaciones de ejemplo que muestran {Binding}**
@@ -199,7 +199,7 @@ void HostViewModel::PropertyChanged(winrt::event_token const& token) noexcept
 
 Ahora la propiedad **NextButtonText** es observable. Cuando creas una enlace unidireccional o bidireccional con esa propiedad (te mostraremos cómo más adelante), el objeto de enlace resultante se suscribe al evento **PropertyChanged**. Cuando se genera el evento, controlador del objeto de enlace recibe un argumento que contiene el nombre de la propiedad que ha cambiado. Así es cómo el objeto de enlace sabe a qué valor de propiedad dirigirse y volver a leer.
 
-Por lo que no tiene que implementar el patrón anterior varias veces, si usa C# , a continuación, simplemente puede derivar el **BindableBase** clase graves que encontrará en el [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) ejemplo (en la carpeta "Común"). Este es un ejemplo de cómo queda.
+Por lo que no tiene que implementar el patrón anterior varias veces, si usa C# , a continuación, simplemente puede derivar el **BindableBase** clase graves que encontrará en el [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper) ejemplo (en la carpeta "Común"). Este es un ejemplo de cómo queda.
 
 ```csharp
 public class HostViewModel : BindableBase
@@ -604,7 +604,7 @@ Click="{x:Bind RootFrame.GoForward}"/>
 
 Los métodos sobrecargados no puede usarse para controlar un evento con esta técnica. Además, si el método que controla el evento tiene parámetros, todos deben ser asignables a partir de los tipos de todos los parámetros del evento, respectivamente. En este caso, [**Frame.GoForward**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goforward) no esté sobrecargado y no tiene parámetros (pero podría ser válido incluso si usó dos parámetros **object**). [**Frame.GoBack** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goback) está sobrecargado, no obstante, por lo que no podemos usar ese método con esta técnica.
 
-La técnica de enlace de eventos es similar a implementar y consumir comandos (un comando es una propiedad que devuelve un objeto que implementa la interfaz [**ICommand**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand)). Ambos [{x: enlace}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) y [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) funcionan con comandos. Debido a que no tienes que implementar el patrón de comando varias veces, puedes usar la clase **DelegateCommand** auxiliar que encontrarás en la muestra [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) (en la carpeta "Común").
+La técnica de enlace de eventos es similar a implementar y consumir comandos (un comando es una propiedad que devuelve un objeto que implementa la interfaz [**ICommand**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand)). Ambos [{x: enlace}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) y [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) funcionan con comandos. Debido a que no tienes que implementar el patrón de comando varias veces, puedes usar la clase **DelegateCommand** auxiliar que encontrarás en la muestra [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper) (en la carpeta "Común").
 
 ## <a name="binding-to-a-collection-of-folders-or-files"></a>Enlace a una colección de carpetas o archivos
 

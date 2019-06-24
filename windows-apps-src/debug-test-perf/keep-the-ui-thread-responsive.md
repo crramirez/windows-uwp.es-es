@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 607b7956786f5713b6133633c2609b801883c76b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2c2314110b4967653b02db6c374e6c66375814d0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362398"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317551"
 ---
 # <a name="keep-the-ui-thread-responsive"></a>Mantener la capacidad de respuesta del subproceso de la interfaz de usuario
 
@@ -20,7 +20,7 @@ Los usuarios esperan que las aplicaciones sigan respondiendo mientras realizan c
 
 La aplicación se controla mediante eventos, lo que significa que el código realiza el trabajo en respuesta a eventos y, a continuación, permanece inactivo hasta el siguiente evento. El código de la plataforma de la interfaz de usuario (diseño, entradas, generación de eventos, etc.) y el código de la aplicación de la interfaz de usuario se ejecutan en el mismo subproceso de interfaz de usuario. Solo una instrucción puede ejecutarse en dicho subproceso a la vez, por lo que si el código de la aplicación tarda demasiado en procesar un evento, el marco no podrá ejecutar el diseño ni generar nuevos eventos de interacción del usuario. La capacidad de respuesta de tu aplicación depende de la disponibilidad del subproceso de la interfaz de usuario para procesar trabajo.
 
-Deberás usar el subproceso de la interfaz de usuario para que realice casi todos los cambios en el subproceso de la interfaz de usuario, incluida la creación de tipos de interfaz de usuario y el acceso a sus miembros. La interfaz de usuario no se puede actualizar desde un subproceso, aunque puedes publicar un mensaje con [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) para hacer que el código se ejecute allí.
+Deberás usar el subproceso de la interfaz de usuario para que realice casi todos los cambios en el subproceso de la interfaz de usuario, incluida la creación de tipos de interfaz de usuario y el acceso a sus miembros. La interfaz de usuario no se puede actualizar desde un subproceso, aunque puedes publicar un mensaje con [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para hacer que el código se ejecute allí.
 
 > **Tenga en cuenta**  la única excepción es que hay un subproceso de representación independiente que se puede aplicar los cambios de la interfaz de usuario que no afectan a cómo se controla la entrada o el diseño básico. Por ejemplo, muchas animaciones y transiciones que no afectan al diseño pueden ejecutarse en este subproceso de representación.
 
@@ -43,7 +43,7 @@ Programa los controladores de eventos para volver rápidamente. En los casos en 
 
 Puedes programar el trabajo de manera asincrónica mediante el operador **await** en C#, el operador **Await** en Visual Basic o delegados en C++. Pero esto no garantiza que el trabajo que programes se ejecutará en un subproceso en segundo plano. Muchas de las API de la Plataforma universal de Windows (UWP) programan el trabajo en el subproceso en segundo plano automáticamente, pero si llamas al código de tu aplicación usando únicamente **await** o un delegado, ejecutarás dicho método o delegado en el subproceso de interfaz de usuario. Debes indicar de manera explícita cuándo quieres ejecutar el código de tu aplicación en un subproceso en segundo plano. En C# y Visual Basic, puede hacerlo pasando código [ **Task.Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run?redirectedfrom=MSDN#overloads).
 
-Recuerda que solo se puede tener acceso a los elementos de la interfaz de usuario desde el subproceso de interfaz de usuario. Usa el subproceso de interfaz de usuario para tener acceso a los elementos de interfaz de usuario antes de iniciar el trabajo en segundo plano, o bien usa [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) o [**CoreDispatcher.RunIdleAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runidleasync) en el subproceso en segundo plano.
+Recuerda que solo se puede tener acceso a los elementos de la interfaz de usuario desde el subproceso de interfaz de usuario. Usa el subproceso de interfaz de usuario para tener acceso a los elementos de interfaz de usuario antes de iniciar el trabajo en segundo plano, o bien usa [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) o [**CoreDispatcher.RunIdleAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runidleasync) en el subproceso en segundo plano.
 
 Un ejemplo de trabajo que puede ejecutarse en un subproceso en segundo plano es el cálculo de IA en un juego. El código que calcula el próximo movimiento del equipo puede tardar mucho en ejecutarse.
 
@@ -105,4 +105,4 @@ En este ejemplo, el controlador `NextMove_Click` vuelve a **await** para mantene
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Interacciones del usuario personalizadas](https://developer.microsoft.com/windows/design/inputs-devices)
+* [Interacciones del usuario personalizadas](https://docs.microsoft.com/windows/uwp/design/layout/index)

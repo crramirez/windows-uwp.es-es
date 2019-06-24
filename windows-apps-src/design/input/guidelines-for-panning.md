@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fc43d5229ecd2bd9502fd74fef7f5197f758c62
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 01754d94cf413317cf204d04f8590028eeabcfc8
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363592"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317311"
 ---
 # <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
 
@@ -171,7 +171,7 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 ## <a name="related-articles"></a>Artículos relacionados
 
 
-* [Interacciones del usuario personalizadas](https://developer.microsoft.com/windows/design/inputs-devices)
+* [Interacciones del usuario personalizadas](https://docs.microsoft.com/windows/uwp/design/layout/index)
 * [Optimizar el ListView y GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
 * [Accesibilidad de teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
 

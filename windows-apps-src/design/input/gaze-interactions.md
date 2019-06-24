@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 77e39b9c7440fab491b3d7ef85baa757d299fff8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3fb07dd9aec475566940dbf98ae6bd1c5f9c1337
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604400"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317338"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>Interacciones de mirada y seguimiento de ojos en aplicaciones para UWP
 
@@ -29,7 +29,7 @@ Proporciona soporte técnico para realizar un seguimiento de la mirada del usuar
 
 **API importantes**: [Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview), [GazeDevicePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview), [GazeInputSourcePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 La entrada de mirada es un modo eficaz de interactuar y usar aplicaciones de Windows y UWP que es especialmente útil como una tecnología de asistencia para usuarios con enfermedades neuromusculares (por ejemplo, ELA) y otras limitaciones que implican discapacidades musculares o nerviosas.
 
@@ -44,7 +44,7 @@ Debido a los datos personales potencialmente sensibles recopilados por los dispo
 
 Además, si la aplicación recopila, almacena o transfiere datos de seguimiento de los ojos, debe describir esto en la declaración de privacidad de la aplicación y seguir todos los otros requisitos de **Información personal** en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
-## <a name="setup"></a>Instalación
+## <a name="setup"></a>Programa de instalación
 
 Para usar las API de entrada de mirada en la aplicación para UWP tienes que: 
 
@@ -66,7 +66,7 @@ Para usar las API de entrada de mirada en la aplicación para UWP tienes que:
 
 En este ejemplo, se muestra cómo realizar un seguimiento de la mirada del usuario dentro de una aplicación para UWP y usar una función de sincronización con pruebas de posicionamiento básicas para indicar en qué medida pueden mantener el enfoque de la mirada en un elemento específico.
 
-Se usa una pequeña elipse para mostrar dónde se encuentra el punto de mirada dentro de la ventanilla de la aplicación, mientras una [RadialProgressBar](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/controls/radialprogressbar) desde el [Kit de herramientas de Comunidad Windows](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/) se coloca aleatoriamente en el lienzo. Cuando se detecta el foco de la mirada foco en la barra de progreso, se inicia un temporizador y la barra de progreso se reubica aleatoriamente en el lienzo cuando la barra de progreso llega al 100 %.
+Se usa una pequeña elipse para mostrar dónde se encuentra el punto de mirada dentro de la ventanilla de la aplicación, mientras una [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar) desde el [Kit de herramientas de Comunidad Windows](https://docs.microsoft.com/windows/communitytoolkit/) se coloca aleatoriamente en el lienzo. Cuando se detecta el foco de la mirada foco en la barra de progreso, se inicia un temporizador y la barra de progreso se reubica aleatoriamente en el lienzo cuando la barra de progreso llega al 100 %.
 
 ![Ejemplo de seguimiento de la mirada con temporizador](images/gaze/gaze-input-timed2.gif)
 
@@ -405,7 +405,7 @@ Se usa una pequeña elipse para mostrar dónde se encuentra el punto de mirada d
 
     Mostramos y ocultamos la elipse de seguimiento de mirada en `GazeEntered` y `GazeExited`, respectivamente.
 
-    En `GazeMoved`, movemos nuestra elipse de seguimiento de mirada en función de la [EyeGazePosition](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview.eyegazeposition) proporcionada por el [CurrentPoint](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs.currentpoint) de los [GazeEnteredPreviewEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs). También administramos el temporizador de foco de mirada en la [RadialProgressBar](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/controls/radialprogressbar), que activa el reposicionamiento de la barra de progreso. Consulta el paso siguiente para obtener más información.
+    En `GazeMoved`, movemos nuestra elipse de seguimiento de mirada en función de la [EyeGazePosition](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview.eyegazeposition) proporcionada por el [CurrentPoint](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs.currentpoint) de los [GazeEnteredPreviewEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs). También administramos el temporizador de foco de mirada en la [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar), que activa el reposicionamiento de la barra de progreso. Consulta el paso siguiente para obtener más información.
 
     ```csharp
     /// <summary>
@@ -596,11 +596,11 @@ Se usa una pequeña elipse para mostrar dónde se encuentra el punto de mirada d
     }
     ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 ### <a name="resources"></a>Recursos
 
-- [Biblioteca de observación de Kit de herramientas de comunidad de Windows](https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/gaze/gazeinteractionlibrary)
+- [Biblioteca de observación de Kit de herramientas de comunidad de Windows](https://docs.microsoft.com/windows/communitytoolkit/gaze/gazeinteractionlibrary)
 
 ### <a name="topic-samples"></a>Ejemplos del tema
 

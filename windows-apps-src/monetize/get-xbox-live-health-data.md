@@ -5,20 +5,20 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, health, estado, client errors, errores de clientes
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a311550541391d9aa5dc035bc73130274dc9e0e
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 052b8befc1540c3c2eae58e406db77e431ce6729
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162911"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321753"
 ---
 # <a name="get-xbox-live-health-data"></a>Obtener datos de estado de Xbox Live
 
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de estado de tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live//index.md). Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de estado de tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md). Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
 
 > [!IMPORTANT]
-> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -51,8 +51,8 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|---------------|------|
 | applicationId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de estado de Xbox Live.  |  Sí  |
 | metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **callingpattern**.  |  Sí  |
-| startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de estado que se han de recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
-| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de estado que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
+| startDate | date | La fecha de inicio del intervalo de fechas de los datos de estado que se han de recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
+| endDate | date | Fecha de finalización del intervalo de fechas de los datos de estado que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
 | filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>sandboxId</strong></li></ul> | No   |
@@ -83,7 +83,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | El Id. de Store del juego para la que estás recuperando los datos de estado.     |
-| fecha                | string | La primera fecha del intervalo de fechas de los datos de estado. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| date                | string | La primera fecha del intervalo de fechas de los datos de estado. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | deviceType          | string | Una de las siguientes cadenas que especifica el tipo de dispositivo en el que utilizó el juego:<p/><ul><li><strong>XboxOne</strong></li><li><strong>WindowsOneCore</strong> (este valor indica un PC)</li><li><strong>Unknown</strong></li></ul>  |
 | sandboxId     | string |   El id. de espacio aislado creado para el juego. Este puede ser el valor RETAIL o el Id. de un espacio aislado privado.   |
 | packageVersion     | string |  La versión del paquete de cuatro partes del juego.  |
@@ -96,7 +96,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 |------------|--------|-------------------------------------------------------|
 | servicio      | string  |   El nombre del servicio de Xbox Live relacionado con los datos de estado.       |
 | endpoint      | string  |   El punto de conexión del servicio de Xbox Live relacionado con los datos de estado.        |
-| httpStatusCode      | string  |  El código de estado HTTP de este conjunto de datos de estado.<p/><p/>**Nota**&nbsp;&nbsp;El código de estado **429E** indica que se realizó correctamente la llamada al servicio solo porque la [limitación de velocidad detallada](https://docs.microsoft.com/gaming/xbox-live//using-xbox-live/best-practices/fine-grained-rate-limiting.md) estaba exenta durante la llamada. La velocidad detallada limitada podría aplicarse en el futuro si el gran volumen de experiencias de servicio, y en ese caso la llamada daría como resultado un [código de estado HTTP 429](https://docs.microsoft.com/gaming/xbox-live//using-xbox-live/best-practices/fine-grained-rate-limiting.md#http-429-response-object).         |
+| httpStatusCode      | string  |  El código de estado HTTP de este conjunto de datos de estado.<p/><p/>**Nota**&nbsp;&nbsp;El código de estado **429E** indica que se realizó correctamente la llamada al servicio solo porque la [limitación de velocidad detallada](https://docs.microsoft.com/gaming/xbox-live/using-xbox-live/best-practices/fine-grained-rate-limiting.md) estaba exenta durante la llamada. La velocidad detallada limitada podría aplicarse en el futuro si el gran volumen de experiencias de servicio, y en ese caso la llamada daría como resultado un [código de estado HTTP 429](https://docs.microsoft.com/gaming/xbox-live/using-xbox-live/best-practices/fine-grained-rate-limiting.md#http-429-response-object).         |
 | serviceResponses      | número  | El número de respuestas de servicio que devolvieron el código de estado especificado.         |
 | uniqueDevices      | número  |  El número de dispositivos únicos que llamaron al servicio y recibieron el código de estado especificado.       |
 | uniqueUsers      | número  |   El número de usuarios únicos que recibieron el código de estado especificado.       |

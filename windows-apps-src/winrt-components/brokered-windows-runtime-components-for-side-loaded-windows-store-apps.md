@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: a9b6c6fc7a7e3ddfab70fe289a41bb4d436e9722
-ms.sourcegitcommit: ea15237291ae3ade0bf22e38bd292c3a23947a03
+ms.openlocfilehash: 24878d3c63de7df9c55f48571984b7d60d1ea240
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377310"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320371"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes negociados de Windows Runtime para una aplicación de prueba para UWP
 
@@ -19,7 +19,7 @@ Este artículo describe una característica empresarial de destino compatible co
 
 ## <a name="introduction"></a>Introducción
 
->**Tenga en cuenta**  el código de ejemplo que acompaña a este documento se puede descargar para [Visual Studio 2015 y 2017](https://aka.ms/brokeredsample). La plantilla de Microsoft Visual Studio para compilar asíncrona de componentes de Windows en tiempo de ejecución puede descargarse aquí: [Plantilla de Visual Studio 2015 como destino las aplicaciones de Windows Universal para Windows 10](https://marketplace.visualstudio.com/vsgallery/10be07b3-67ef-4e02-9243-01b78cd27935)
+>**Tenga en cuenta**  el código de ejemplo que acompaña a este documento se puede descargar para [Visual Studio 2015 y 2017](https://aka.ms/brokeredsample). La plantilla de Microsoft Visual Studio para compilar asíncrona de componentes de Windows en tiempo de ejecución puede descargarse aquí: [Plantilla de Visual Studio 2015 como destino las aplicaciones de Windows Universal para Windows 10](https://marketplace.visualstudio.com/items?itemName=vs-publisher-713547.VS2015TemplateBrokeredComponents)
 
 Windows incluyen una nueva característica denominada *asíncrona de componentes de Windows en tiempo de ejecución para las aplicaciones de carga lateral*. Usamos el término IPC (comunicación entre procesos) para describir la capacidad de ejecutar activos de software de escritorio existentes en un proceso (componente de escritorio) mientras se interactúa con este código en una aplicación para UWP. Este es un modelo que resultará familiar para los desarrolladores empresariales porque las aplicaciones de base de datos y las aplicaciones que usan servicios NT en Windows comparten una arquitectura multiproceso similar.
 
@@ -590,7 +590,7 @@ Debe enumerar la lista de módulos para un servidor de agente *clrhost.dll* en
 
 ## <a name="resources"></a>Recursos
 
--   [Plantillas de proyecto de componente de WinRT asíncrona para Windows 10 y VS 2015](https://marketplace.visualstudio.com/vsgallery/10be07b3-67ef-4e02-9243-01b78cd27935)
+-   [Plantillas de proyecto de componente de WinRT asíncrona para Windows 10 y VS 2015](https://marketplace.visualstudio.com/items?itemName=vs-publisher-713547.VS2015TemplateBrokeredComponents)
 
 -   [Ejemplo de componente de WinRT asíncrona NorthwindRT](https://go.microsoft.com/fwlink/p/?LinkID=397349)
 

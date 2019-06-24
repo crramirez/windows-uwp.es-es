@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bebd214f5f634e501f7a79bc57cc306f1b559e7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 08dbe9ed7aaa732172d488712aa47d6d3631508a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359197"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317701"
 ---
 # <a name="share-data"></a>Compartir datos
 
@@ -60,7 +60,7 @@ El sistema proporciona una interfaz de usuario para uso compartido. Para iniciar
 
 ## <a name="handle-errors"></a>Controlar errores
 
-En la mayoría de los casos, compartir contenido es un proceso sencillo. Sin embargo, siempre existe la posibilidad de que ocurra algo inesperado. Por ejemplo, es posible que la aplicación haya solicitado al usuario que seleccione contenido para compartir, pero el usuario no ha seleccionado nada. Para controlar estas situaciones, usa el método [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)), que muestra un mensaje al usuario si se produce un error.
+En la mayoría de los casos, compartir contenido es un proceso sencillo. Sin embargo, siempre existe la posibilidad de que ocurra algo inesperado. Por ejemplo, es posible que la aplicación haya solicitado al usuario que seleccione contenido para compartir, pero el usuario no ha seleccionado nada. Para controlar estas situaciones, usa el método [**FailWithDisplayText**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataRequest#Windows_ApplicationModel_DataTransfer_DataRequest_FailWithDisplayText_System_String_), que muestra un mensaje al usuario si se produce un error.
 
 ## <a name="delay-share-with-delegates"></a>Retrasar el uso compartido con funciones delegadas
 

@@ -7,12 +7,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, uwp, notificación, colección, grupo, experiencia de usuario, directrices de ux, orientación, acción, notificaciones del sistema, centro de actividades, noninterruptive, notificaciones efectiva, las notificaciones no intrusivos, procesables, administrar, organizar
 ms.localizationpriority: medium
-ms.openlocfilehash: 878df85db9ab0e33db06a86ddb726f07dc28f013
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 327a2add84343be3b972f7bb1f232298e7ef92ad
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57615770"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320729"
 ---
 # <a name="toast-notification-ux-guidance"></a>Guía de UX de notificación del sistema
 Las notificaciones son una parte necesaria de su ciclo de vida moderno ayudan a los usuarios ser más productivos y comprometida con aplicaciones y sitios Web, así como Manténgase al día con las actualizaciones. Sin embargo, las notificaciones rápidamente pueden activar desde útil overbearing y molestos si no están diseñadas de manera orientados al usuario. Las notificaciones son una con el botón secundario fuera de la que se ha desactivado y es poco probable que una vez que están desactivadas, se activará a intentarlo.  Por lo tanto, asegúrese de que las notificaciones son respetuosas del conjunto de espacio en la pantalla del usuario y la hora, por lo que puede mantener abierto este canal de engagement.
@@ -65,4 +65,4 @@ Si envía notificaciones a la aplicación UWP hoy en día, puede ver análisis s
 * [Contenido de notificación del sistema](adaptive-interactive-toasts.md)
 * [Notificaciones sin procesar](raw-notification-overview.md)
 * [Actualización pendiente](toast-pending-update.md)
-* [Biblioteca de notificaciones en GitHub (parte del Kit de herramientas de comunidad de Windows)](https://github.com/Microsoft/UWPCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [Biblioteca de notificaciones en GitHub (parte del Kit de herramientas de comunidad de Windows)](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)

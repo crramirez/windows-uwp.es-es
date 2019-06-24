@@ -5,12 +5,12 @@ ms.date: 04/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2de040b31f026818f27a0e345992b9c00945c7a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9b1d663c0d4c4ff86650f015e5e428d6505af156
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365104"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317143"
 ---
 # <a name="layout-panels"></a>Paneles de diseño
 
@@ -133,7 +133,7 @@ El panel [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.
 
 Para colocar los objetos en celdas específicas del panel Grid, usa las propiedades adjuntas [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column?view=netframework-4.8) y [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row?view=netframework-4.8).
 
-Para hacer que el contenido se expanda entre varias filas y columnas, usa las propiedades adjuntas [**Grid.RowSpan**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms605035(v%3Dvs.95)) y [**Grid.ColumnSpan**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.columnspan?view=netframework-4.8).
+Para hacer que el contenido se expanda entre varias filas y columnas, usa las propiedades adjuntas [**Grid.RowSpan**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms605035(v=vs.95)) y [**Grid.ColumnSpan**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.columnspan?view=netframework-4.8).
 
 En este ejemplo de código XAML se muestra cómo crear una cuadrícula con dos filas y dos columnas.
 
@@ -231,7 +231,7 @@ En este ejemplo, el número máximo de filas de cada columna es 3. En la primera
 
 El panel [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) posiciona sus elementos secundarios con puntos de coordenadas fijos y no es compatible con diseños fluidos. Para especificar los puntos en los elementos secundarios se establecen las propiedades adjuntas [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) y [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8) de cada elemento. El objeto Canvas primario lee estas propiedades adjuntas en sus elementos secundarios y usa los valores durante el pase de diseño [Arrange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange).
 
-Los objetos de un Canvas se pueden superponer, donde un objeto se dibuja encima de otro objeto. De manera predeterminada, el Canvas representa los objetos secundarios en el orden en que se declaran, por lo que el último elemento secundario se representa en la parte superior (cada elemento tiene un valor predeterminado z-index de 0). Esto es lo mismo que en otros paneles integrados. Sin embargo, Canvas también admite la propiedad adjunta [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v%3Dvs.95)) que puedes establecer en cada uno de los elementos secundarios. Puedes establecer esta propiedad en el código para cambiar el orden de dibujo de los elementos en tiempo de ejecución. El elemento con el valor Canvas.ZIndex más alto se dibuja en última instancia y, por lo tanto, se dibuja sobre los demás elementos que compartan el mismo espacio y se superponen. Observa que el valor alfa (transparencia) se respeta, por lo que, aunque los elementos se superpongan, el contenido que se muestra en las áreas superpuestas podría mezclarse si el valor de alfa del que está situado más arriba no es el máximo.
+Los objetos de un Canvas se pueden superponer, donde un objeto se dibuja encima de otro objeto. De manera predeterminada, el Canvas representa los objetos secundarios en el orden en que se declaran, por lo que el último elemento secundario se representa en la parte superior (cada elemento tiene un valor predeterminado z-index de 0). Esto es lo mismo que en otros paneles integrados. Sin embargo, Canvas también admite la propiedad adjunta [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) que puedes establecer en cada uno de los elementos secundarios. Puedes establecer esta propiedad en el código para cambiar el orden de dibujo de los elementos en tiempo de ejecución. El elemento con el valor Canvas.ZIndex más alto se dibuja en última instancia y, por lo tanto, se dibuja sobre los demás elementos que compartan el mismo espacio y se superponen. Observa que el valor alfa (transparencia) se respeta, por lo que, aunque los elementos se superpongan, el contenido que se muestra en las áreas superpuestas podría mezclarse si el valor de alfa del que está situado más arriba no es el máximo.
 
 El Canvas no ajusta el tamaño de sus elementos secundarios. Cada elemento debe especificar su tamaño.
 

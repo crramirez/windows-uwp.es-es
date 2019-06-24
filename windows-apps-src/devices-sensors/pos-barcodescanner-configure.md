@@ -5,12 +5,12 @@ ms.date: 08/29/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 792fb50858620ff5dd269a0d7a3b8e491b9f247b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 8466c56ef73a1c38c67e28cf52de7f380e6c563a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57591070"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321580"
 ---
 # <a name="configure-a-barcode-scanner"></a>Configurar un escáner de códigos de barras
 
@@ -19,7 +19,7 @@ Los escáneres de código de barras se pueden configurar en varios modos diferen
 Muchos de los escáneres de códigos de barra se pueden configurar en modo **cuñas de teclado**, lo hace que el escáner aparezca como un teclado de Windows.  Esto te permite digitalizar códigos de barra en aplicaciones que no están preparadas para ello, como el Bloc de notas.  Al digitalizar un código de barras en este modo, los datos descodificados desde el escáner se introducen en el punto de inserción como si hubieras escrito los datos mediante el teclado.  Si quieres tener más control sobre el escáner desde la aplicación para UWP, tendrás que configurarlo en un modo diferente al de cuña de teclado.
 
 ## <a name="usb-barcode-scanner"></a>Escáner de código de barras USB
-Un escáner de código de barras conectado por USB debe configurarse en modo **HID POS Scanner** para que funcione con el controlador del escáner de código de barras que se incluye en Windows. Este controlador es una implementación de la **HID de punto de venta uso tablas** especificación publicado en [USB HID](https://www.usb.org/developers/hidpage/).  Consulta la documentación del escáner o ponte en contacto con el fabricante para obtener instrucciones sobre cómo habilitar el modo **HID POS Scanner**.  Una vez configurado como **HID POS Scanner**, el escáner de código de barras aparecerá en el Administrador de dispositivos, bajo el nodo **POS Barcode Scanner** como **escáner de código de barras POS HID**.
+Un escáner de código de barras conectado por USB debe configurarse en modo **HID POS Scanner** para que funcione con el controlador del escáner de código de barras que se incluye en Windows. Este controlador es una implementación de la **HID de punto de venta uso tablas** especificación publicado en [USB HID](https://www.usb.org/hid).  Consulta la documentación del escáner o ponte en contacto con el fabricante para obtener instrucciones sobre cómo habilitar el modo **HID POS Scanner**.  Una vez configurado como **HID POS Scanner**, el escáner de código de barras aparecerá en el Administrador de dispositivos, bajo el nodo **POS Barcode Scanner** como **escáner de código de barras POS HID**.
 
 El fabricante del escáner de código de barras también puede tener un controlador específico del proveedor que sea compatible con las API de escáner de código de barras de UWP que usen un modo distinto al de **HID POS Scanner**.  Si ya ha instalado un controlador proporcionado por el fabricante compatible con las API de escáner de código de barras de UWP, puede ver un dispositivo específico del proveedor aparece en **POS escáner** en Administrador de dispositivos.
 

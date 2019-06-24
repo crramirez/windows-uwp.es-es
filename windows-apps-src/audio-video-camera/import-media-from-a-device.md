@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ec16f9810a0802fc319b3ebac679cc4cb2f8334
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a4302568b398c76198e241aeb37980165e1bb864
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361721"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318368"
 ---
 # <a name="import-media-from-a-device"></a>Importar contenido multimedia desde un dispositivo
 
@@ -50,7 +50,7 @@ Implementa un controlador para el botón Cancelar. Los ejemplos que se muestran 
 
 En un escenario de importación de contenido multimedia típico, se muestra al usuario una lista de elementos multimedia disponibles para importar. Puede haber un gran número de archivos multimedia para elegir y, por lo general, es recomendable mostrar una miniatura para cada elemento multimedia. Por este motivo, en este ejemplo se usan tres clases auxiliares para cargar las entradas de manera incremental en el control ListView a medida que el usuario se desplaza hacia abajo por la lista.
 
-* Clase **IncrementalLoadingBase**: implementa [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist?redirectedfrom=MSDN), [**ISupportIncrementalLoading**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading) y [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/system.collections.specialized.inotifycollectionchanged(v=vs.105).aspx) para proporcionar el comportamiento de carga incremental de base.
+* Clase **IncrementalLoadingBase**: implementa [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist?redirectedfrom=MSDN), [**ISupportIncrementalLoading**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading) y [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?redirectedfrom=MSDN) para proporcionar el comportamiento de carga incremental de base.
 * Clase **GeneratorIncrementalLoadingClass**: proporciona una implementación de la clase base de carga incremental.
 * Clase **ImportableItemWrapper**: contenedor fino en torno a una clase [**PhotoImportItem**](https://docs.microsoft.com/uwp/api/Windows.Media.Import.PhotoImportItem) para agregar una propiedad [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) enlazable para la imagen en miniatura de cada elemento importado.
 

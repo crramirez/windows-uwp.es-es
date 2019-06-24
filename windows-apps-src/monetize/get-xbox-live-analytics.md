@@ -5,19 +5,19 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live,
 ms.localizationpriority: medium
-ms.openlocfilehash: dd10fadea415bd769061e198fcf29f8edf0f3124
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 5ab41001f7331defc6d37b0561e2844392ccca3c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162681"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321850"
 ---
 # <a name="get-xbox-live-analytics-data"></a>Obtener datos de análisis de Xbox Live
 
-Usa este método en la API de análisis de Microsoft Store para obtener los últimos 30 días de datos de análisis general de los clientes al reproducir tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live//index.md), incluido el uso de datos del accesorio para dispositivo, tipo de conexión a Internet, distribución de la puntuación del jugador, estadísticas del juego y amigos y seguidores. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para obtener los últimos 30 días de datos de análisis general de los clientes al reproducir tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md), incluido el uso de datos del accesorio para dispositivo, tipo de conexión a Internet, distribución de la puntuación del jugador, estadísticas del juego y amigos y seguidores. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
 
 > [!IMPORTANT]
-> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 Los datos de análisis adicionales para juegos habilitados para Xbox Live están disponibles a través de los siguientes métodos:
 * [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
@@ -72,7 +72,7 @@ Authorization: Bearer <your access token>
 
 Este método devuelve una matriz *Value* que contiene los siguientes objetos.
 
-| Objeto      | Descripción                  |
+| Object      | Descripción                  |
 |-------------|---------------------------------------------------|
 | ProductData   |   Contiene un objeto [DeviceProperties](#deviceproperties) y un objeto [UserProperties](#userproperties) que contiene los últimos 30 días de datos de análisis de dispositivos y usuarios de tu juego.    |  
 | XboxwideData   |  Contiene un objeto [DeviceProperties](#deviceproperties) y un objeto [UserProperties](#userproperties) que contiene los últimos 30 días de datos medios de análisis de dispositivos y usuarios todos los clientes Xbox Live, en porcentajes. Estos datos se incluyen para compararlos con los datos de tu juego.   |                                           

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b07ab7fa6b65e16f39d9e2a77a677d33d3c70254
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: afcb94ca0e6692d5dfede526f1368b71920ab771
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360509"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318200"
 ---
 # <a name="composition-effects"></a>Efectos de composición
 
@@ -142,7 +142,7 @@ Este tutorial de inicio rápido muestra cómo usar algunas de las funciones bás
 
 ### <a name="installing-visual-studio"></a>Instalación de Visual Studio
 
-- Si no tienes una versión compatible de Visual Studio instalada, dirígete a la página de descargas de Visual Studio [aquí](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx).
+- Si no tienes una versión compatible de Visual Studio instalada, dirígete a la página de descargas de Visual Studio [aquí](https://visualstudio.microsoft.com/downloads/download-visual-studio-vs).
 
 ### <a name="creating-a-new-project"></a>Crear un nuevo proyecto
 
@@ -237,7 +237,7 @@ LoadImage(surfaceBrush);
 
 ## <a name="more-information"></a>Más información
 
-- [Microsoft – GitHub de composición](https://github.com/Microsoft/composition)
+- [Microsoft – GitHub de composición](https://github.com/microsoft/WindowsCompositionSamples)
 - [**Windows.UI.Composition**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
 - [Equipo de composición de Windows en Twitter](https://twitter.com/wincomposition)
 - [Información general de composición](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)

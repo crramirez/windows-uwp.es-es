@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 834f631cd5c4b8696e75f83f194b95f809b1cf8a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 87e4eb90b4801d01ecb85c91b5e64ccc9155d199
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57649870"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318095"
 ---
 # <a name="pull-to-refresh-with-source-modifiers"></a>Extracción de actualización con modificadores de origen (SourceModifiers)
 
@@ -48,7 +48,7 @@ Para la experiencia del usuario final, queremos crear el efecto de "resistencia"
 
 ![Lista con extracción de actualización](images/animation/city-list.gif)
 
-El código de trabajo para esta experiencia se puede encontrar en el [repositorio de Windows UI Dev Labs en GitHub](https://github.com/Microsoft/WindowsUIDevLabs). Este es el recorrido paso a paso para la creación de esa experiencia.
+El código de trabajo para esta experiencia se puede encontrar en el [repositorio de Windows UI Dev Labs en GitHub](https://github.com/microsoft/WindowsCompositionSamples). Este es el recorrido paso a paso para la creación de esa experiencia.
 En el código de marcado XAML, tienes lo siguiente:
 
 ```xaml

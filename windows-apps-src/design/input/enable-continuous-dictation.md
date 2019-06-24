@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3709a9076ce1d258ce2eca7f97aa1478088a9044
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 646f4ad98e6c914c2318a164629d31ce7b67dab4
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363565"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317302"
 ---
 # <a name="continuous-dictation"></a>Dictado continuo
 
@@ -125,7 +125,7 @@ speechRecognizer.ContinuousRecognitionSession.ResultGenerated +=
 
 2.  Igualmente, comprobamos la propiedad [**Confidence**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.confidence). Si el valor de la propiedad Confidence es [**medio**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionConfidence) o mejor, anexamos el texto a StringBuilder. También actualizaremos la interfaz de usuario a medida que recopilemos entradas.
 
-    **Tenga en cuenta**  el [ **ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) evento se provoca en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si necesita un controlador actualizar la interfaz de usuario (como el \[muestra de voz y TTS\] does), debe enviar las actualizaciones al subproceso de interfaz de usuario a través de la [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) método del distribuidor.
+    **Tenga en cuenta**  el [ **ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) evento se provoca en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si necesita un controlador actualizar la interfaz de usuario (como el \[muestra de voz y TTS\] does), debe enviar las actualizaciones al subproceso de interfaz de usuario a través de la [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) método del distribuidor.
 ```csharp
 private async void ContinuousRecognitionSession_ResultGenerated(
       SpeechContinuousRecognitionSession sender,
@@ -165,7 +165,7 @@ speechRecognizer.ContinuousRecognitionSession.Completed +=
 
 4.  El controlador de eventos comprueba la propiedad Status para determinar si el reconocimiento se realizó correctamente. También controla el caso en el que el usuario ha dejado de hablar. A menudo, el elemento [**TimeoutExceeded**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus) se considera como un reconocimiento correcto, ya que significa que el usuario ha terminado de hablar. Debes controlar este caso en el código para obtener una buena experiencia.
 
-    **Tenga en cuenta**  el [ **ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) evento se provoca en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si necesita un controlador actualizar la interfaz de usuario (como el \[muestra de voz y TTS\] does), debe enviar las actualizaciones al subproceso de interfaz de usuario a través de la [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) método del distribuidor.
+    **Tenga en cuenta**  el [ **ResultGenerated** ](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) evento se provoca en un subproceso en segundo plano que no se puede actualizar directamente la interfaz de usuario. Si necesita un controlador actualizar la interfaz de usuario (como el \[muestra de voz y TTS\] does), debe enviar las actualizaciones al subproceso de interfaz de usuario a través de la [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) método del distribuidor.
 ```csharp
 private async void ContinuousRecognitionSession_Completed(
       SpeechContinuousRecognitionSession sender,

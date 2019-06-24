@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72a7a7d4bbe6987781c538a7276bf3942f10cf5b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 87299ad36ac1cca3318a240e55cb2ce73c2a8699
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372202"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320306"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnosticar condiciones de error del componente de Windows Runtime
 
@@ -25,7 +25,7 @@ En este artículo no se abarcan todos los errores. Los errores que se tratan aqu
 ## <a name="error-message-for-implementing-async-interface-provides-incorrect-type"></a>El mensaje de error para implementar la interfaz asincrónica proporciona un tipo incorrecto
 
 
-Los componentes administrados de Windows Runtime no pueden implementar las interfaces de la Plataforma universal de Windows (UWP) que representan operaciones o acciones asincrónicas ([IAsyncAction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress&lt;TProgress&gt;](https://docs.microsoft.com/previous-versions//br205784(v=vs.85)), [IAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_) o [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)). En su lugar, .NET Framework proporciona la clase [AsyncInfo](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime?redirectedfrom=MSDN) para generar operaciones asincrónicas en componentes de Windows Runtime. El mensaje de error que Winmdexp.exe muestra cuando intentas implementar una interfaz asincrónica incorrectamente hace referencia a esta clase por su nombre anterior, AsyncInfoFactory. .NET Framework ya no incluye la clase AsyncInfoFactory.
+Los componentes administrados de Windows Runtime no pueden implementar las interfaces de la Plataforma universal de Windows (UWP) que representan operaciones o acciones asincrónicas ([IAsyncAction](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-iasyncaction), [IAsyncActionWithProgress&lt;TProgress&gt;](https://docs.microsoft.com/previous-versions/br205784(v=vs.85)), [IAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_) o [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)). En su lugar, .NET Framework proporciona la clase [AsyncInfo](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime?redirectedfrom=MSDN) para generar operaciones asincrónicas en componentes de Windows Runtime. El mensaje de error que Winmdexp.exe muestra cuando intentas implementar una interfaz asincrónica incorrectamente hace referencia a esta clase por su nombre anterior, AsyncInfoFactory. .NET Framework ya no incluye la clase AsyncInfoFactory.
 
 | Número de error | Texto de mensaje|       
 |--------------|-------------|

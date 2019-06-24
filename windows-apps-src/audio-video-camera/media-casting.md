@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2318d873a55b4134cf36eda91b57866e14b6b3a7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 50f588caaf36d9a2a74222029e17785663cf3953
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361732"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318299"
 ---
 # <a name="media-casting"></a>Transmitir contenido multimedia
 
@@ -66,14 +66,14 @@ Agrega un botón en el archivo XAML para permitir al usuario iniciar el selector
 
 [!code-xml[CastPickerButton](./code/MediaCasting_RS1/cs/MainPage.xaml#SnippetCastPickerButton)]
 
-En el controlador de eventos **Click** para el botón, llama a [**TransformToVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.) para obtener la transformación de un elemento de interfaz de usuario con respecto a otro elemento. En este ejemplo, la transformación es la posición del botón Selector en relación a la raíz visual de la ventana de la aplicación. Llama al método [**Show**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevicepicker.show) del objeto [**CastingDevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Media.Casting.CastingDevicePicker) para iniciar el cuadro de diálogo del selector de conversión. Especifica la ubicación y las dimensiones del botón Selector de conversión de tipos para que el sistema pueda hacer que el cuadro de diálogo salga del botón que el usuario ha presionado.
+En el controlador de eventos **Click** para el botón, llama a [**TransformToVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.transformtovisual) para obtener la transformación de un elemento de interfaz de usuario con respecto a otro elemento. En este ejemplo, la transformación es la posición del botón Selector en relación a la raíz visual de la ventana de la aplicación. Llama al método [**Show**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevicepicker.show) del objeto [**CastingDevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Media.Casting.CastingDevicePicker) para iniciar el cuadro de diálogo del selector de conversión. Especifica la ubicación y las dimensiones del botón Selector de conversión de tipos para que el sistema pueda hacer que el cuadro de diálogo salga del botón que el usuario ha presionado.
 
 [!code-cs[CastPickerButtonClick](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetCastPickerButtonClick)]
 
 En el controlador de eventos **CastingDeviceSelected** llama al método [**CreateCastingConnection**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.createcastingconnection) de la propiedad de los argumentos del evento [**SelectedCastingDevice**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdeviceselectedeventargs.selectedcastingdevice), que representa el dispositivo de conversión seleccionado por el usuario. Registrar controladores para los eventos [**ErrorOccurred**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.erroroccurred) y [**StateChanged**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.statechanged). Por último, llama a [**RequestStartCastingAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.requeststartcastingasync) para comenzar la transmisión al pasar el resultado al método [**GetAsCastingSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaelement.getascastingsource) del objeto **MediaPlayer** del control **MediaPlayerElement** para especificar que el contenido multimedia que se va a transmitir es el contenido del objeto **MediaPlayer** asociado al control **MediaPlayerElement**.
 
 > [!NOTE] 
-> La conexión de la transmisión se debe iniciar en el subproceso de interfaz de usuario. Dado que no se llama a **CastingDeviceSelected** desde el subproceso de interfaz de usuario, debes realizar estas llamadas dentro de una llamada a [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows), lo que hace que se les llame en el subproceso de interfaz de usuario.
+> La conexión de la transmisión se debe iniciar en el subproceso de interfaz de usuario. Dado que no se llama a **CastingDeviceSelected** desde el subproceso de interfaz de usuario, debes realizar estas llamadas dentro de una llamada a [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync), lo que hace que se les llame en el subproceso de interfaz de usuario.
 
 [!code-cs[CastingDeviceSelected](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetCastingDeviceSelected)]
 
@@ -112,7 +112,7 @@ Por último, registra controladores de eventos para los eventos [**Added**](http
 
 El evento **Added** se genera cuando el observador detecta un nuevo dispositivo. En el controlador para este evento, crea un nuevo objeto [**CastingDevice**](https://docs.microsoft.com/uwp/api/Windows.Media.Casting.CastingDevice) llamando a [**CastingDevice.FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.fromidasync) y pasando el identificador del dispositivo de conversión detectado, que está incluido en el objeto **DeviceInformation** pasado al controlador.
 
-Agregar el **CastingDevice** al dispositivo de conversión **ListBox** para que el usuario pueda seleccionarlo. Debido a la propiedad [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) definida en el XAML, la propiedad [**FriendlyName**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.friendlyname) se usará como el texto del elemento en el cuadro de lista. Dado que no se llama a este controlador de eventos en el subproceso de interfaz de usuario, debes actualizar la interfaz de usuario desde una llamada a [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows).
+Agregar el **CastingDevice** al dispositivo de conversión **ListBox** para que el usuario pueda seleccionarlo. Debido a la propiedad [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) definida en el XAML, la propiedad [**FriendlyName**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingdevice.friendlyname) se usará como el texto del elemento en el cuadro de lista. Dado que no se llama a este controlador de eventos en el subproceso de interfaz de usuario, debes actualizar la interfaz de usuario desde una llamada a [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync).
 
 [!code-cs[WatcherAdded](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetWatcherAdded)]
 
@@ -149,7 +149,7 @@ En el controlador para el evento **ErrorOccurred**, actualiza la interfaz de usu
 
 [!code-cs[ErrorOccurred](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetErrorOccurred)]
 
-Por último, implementa el controlador para el botón Desconectar. Detén la conversión de tipos de medios y desconecta el dispositivo de conversión mediante una llamada al método [**DisconnectAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.disconnectasync) del objeto **CastingConnection**. Esta llamada se debe enviar al subproceso de interfaz de usuario mediante una llamada a [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows).
+Por último, implementa el controlador para el botón Desconectar. Detén la conversión de tipos de medios y desconecta el dispositivo de conversión mediante una llamada al método [**DisconnectAsync**](https://docs.microsoft.com/uwp/api/windows.media.casting.castingconnection.disconnectasync) del objeto **CastingConnection**. Esta llamada se debe enviar al subproceso de interfaz de usuario mediante una llamada a [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync).
 
 [!code-cs[DisconnectButton](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetDisconnectButton)]
 

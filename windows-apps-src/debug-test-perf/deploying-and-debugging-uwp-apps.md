@@ -6,12 +6,12 @@ ms.date: 4/8/2019
 ms.topic: article
 keywords: windows 10, uwp, test, rendimiento, performance, depuración, debug, pruebas
 ms.localizationpriority: medium
-ms.openlocfilehash: 3263f7a0f1c353cfd15bf83e6fe1b0004b3bcc94
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 96e6f712f1a9882a10cf0706452628329c0c085d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362682"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317953"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 
@@ -41,7 +41,7 @@ Además, cualquier paquete de la aplicación instalado se puede asociar y depura
 
 Al seleccionar **No iniciar, pero depurar mi código al empezar**, el depurador de Visual Studio se asociará a la aplicación para UWP cuando se inicie a la hora personalizada. Esta es una forma eficaz de depurar las rutas de acceso de control a partir de [distintos métodos de inicio](../xbox-apps/automate-launching-uwp-apps.md), como la activación de protocolos con parámetros personalizados.  
 
-Las aplicaciones para UWP se pueden desarrollar y compilar en Windows 8.1 o posterior, pero requieren Windows 10 para ejecutarse. Si estás desarrollando una aplicación para UWP en un equipo con Windows 8.1, puedes depurar de forma remota una aplicación para UWP que se ejecute en otro dispositivo de Windows 10, siempre que el equipo host y el equipo de destino se encuentren en la misma LAN. Para hacerlo, descarga e instala [Herramientas remotas para Visual Studio](https://www.visualstudio.com/downloads/) en ambos equipos. La versión instalada debe coincidir con la versión existente de Visual Studio que hayas instalado y la arquitectura que selecciones (x86, x64) también debe coincidir con la de aplicación de destino.
+Las aplicaciones para UWP se pueden desarrollar y compilar en Windows 8.1 o posterior, pero requieren Windows 10 para ejecutarse. Si estás desarrollando una aplicación para UWP en un equipo con Windows 8.1, puedes depurar de forma remota una aplicación para UWP que se ejecute en otro dispositivo de Windows 10, siempre que el equipo host y el equipo de destino se encuentren en la misma LAN. Para hacerlo, descarga e instala [Herramientas remotas para Visual Studio](https://visualstudio.microsoft.com/downloads/) en ambos equipos. La versión instalada debe coincidir con la versión existente de Visual Studio que hayas instalado y la arquitectura que selecciones (x86, x64) también debe coincidir con la de aplicación de destino.
 
 ## <a name="package-layout"></a>Diseño del paquete
 
@@ -94,7 +94,7 @@ Para ello, busca **Depurador remoto** en el menú **Inicio**, ábrelo y, si te l
 
 Para cambiarlo a **sin autenticación**, en el **Remote Debugger**, vaya a **herramientas**  - &gt; **opciones**, y Vuelva a establecerla en **sin autenticación**. Tras configurar el depurador remoto, también debes asegurarte de que has configurado el dispositivo host en [Modo de desarrollador](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). Después de esto, puedes implementar desde la máquina de desarrollo.
 
-Para obtener más información, consulta la página [Centro de descarga para Visual Studio](https://www.visualstudio.com/downloads/).
+Para obtener más información, consulta la página [Centro de descarga para Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
 ## <a name="passing-command-line-debug-arguments"></a>Pasar argumentos de depuración de la línea de comandos
 

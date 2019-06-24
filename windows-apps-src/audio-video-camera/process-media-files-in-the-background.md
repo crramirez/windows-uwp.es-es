@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d3530861175c8d9b70683926393b5adfdd59407
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 992648c8c90a8ad62b772d417b2b1beeb6087c53
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361557"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318536"
 ---
 # <a name="process-media-files-in-the-background"></a>Procesar archivos multimedia en segundo plano
 
@@ -55,7 +55,7 @@ Agrega las siguientes variables de miembro a tu clase:
 
 [!code-cs[BackgroundMembers](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundMembers)]
 
-Una vez hecho esto, el sistema llamará al método [**Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.) de una tarea en segundo plano cuando se inicie la tarea. Debes establecer el objeto [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) que se pasó al método de la variable de miembro correspondiente. A continuación, registra un controlador para el evento [**Canceled**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.canceled), que se producirá si el sistema lo necesita para cerrar la tarea en segundo plano. Seguidamente, establece la propiedad [**Progress**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) en cero.
+Una vez hecho esto, el sistema llamará al método [**Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) de una tarea en segundo plano cuando se inicie la tarea. Debes establecer el objeto [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) que se pasó al método de la variable de miembro correspondiente. A continuación, registra un controlador para el evento [**Canceled**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.canceled), que se producirá si el sistema lo necesita para cerrar la tarea en segundo plano. Seguidamente, establece la propiedad [**Progress**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) en cero.
 
 Deberás llamar al método [**GetDeferral**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.getdeferral) del objeto de la tarea en segundo plano para obtener un aplazamiento. Esta acción le dice al sistema que no cierre la tarea porque estás realizando operaciones asincrónicas.
 

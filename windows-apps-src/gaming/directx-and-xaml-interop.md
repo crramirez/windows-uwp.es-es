@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx, interoperabilidad de xaml, xaml interop
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a7b9800bbcc9746db03eae50a99b701bfbfa815
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ad03a86ba18f11d8d63c2c98649e7f159f3d4f52
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368877"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321294"
 ---
 # <a name="directx-and-xaml-interop"></a>Interoperabilidad de DirectX y XAML
 
@@ -32,7 +32,7 @@ DirectX proporciona dos bibliotecas eficaces para gráficos 2D y 3D: Direct2D y 
 Si vas a implementar interoperabilidad entre XAML y DirectX personalizada, debes conocer estos dos conceptos:
 
 -   Las superficies compartidas son regiones de la pantalla con un tamaño establecido y definidas por XAML, en las que puedes usar DirectX para dibujar indirectamente, con los tipos [Windows::UI::Xaml::Media::ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagesource). En las superficies compartidas no controlas el momento preciso en el que el nuevo contenido aparece en pantalla. En lugar de eso, las actualizaciones de una superficie compartida se sincronizan con las actualizaciones del marco XAML.
--   Las [cadenas de intercambio ](https://msdn.microsoft.com/library/windows/desktop/bb206356(v=vs.85).aspx) representan un conjunto de búferes usados para mostrar gráficos con una latencia mínima. Por lo general, las cadenas de intercambio se actualizan a 60 fotogramas por segundo, independientes del subproceso de la interfaz de usuario. Sin embargo, las cadenas de intercambio usan más recursos de memoria y CPU para permitir actualizaciones rápidas y son más difíciles de usar, ya que se deben administrar varios subprocesos.
+-   Las [cadenas de intercambio ](https://docs.microsoft.com/windows/desktop/direct3d9/what-is-a-swap-chain-) representan un conjunto de búferes usados para mostrar gráficos con una latencia mínima. Por lo general, las cadenas de intercambio se actualizan a 60 fotogramas por segundo, independientes del subproceso de la interfaz de usuario. Sin embargo, las cadenas de intercambio usan más recursos de memoria y CPU para permitir actualizaciones rápidas y son más difíciles de usar, ya que se deben administrar varios subprocesos.
 
 Piensa para qué vas a usar DirectX. ¿Lo usarás para componer o animar un control único que se ajuste a las dimensiones de la ventana de presentación? ¿Contiene salida que tenga que representarse y controlarse en tiempo real, como sucede en un juego? Si es así, probablemente tendrás que implementar una cadena de intercambio. De lo contrario, debería bastar con usar una superficie compartida.
 
@@ -72,7 +72,7 @@ El procedimiento básico para crear y actualizar un objeto [SurfaceImageSource](
         (void **)&m_sisNativeWithD2D);
     ```
 
-3.  Crea los dispositivos DXGI y D2D llamando primero a [D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) y [D2D1CreateDevice](https://msdn.microsoft.com/library/windows/desktop/hh404272(v=vs.85).aspx) y, a continuación, pasa el dispositivo y el contexto a [ISurfaceImageSourceNativeWithD2D::SetDevice](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-setdevice). 
+3.  Crea los dispositivos DXGI y D2D llamando primero a [D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) y [D2D1CreateDevice](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nf-d2d1_1-d2d1createdevice) y, a continuación, pasa el dispositivo y el contexto a [ISurfaceImageSourceNativeWithD2D::SetDevice](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-setdevice). 
 
     > [!NOTE]
     > Si vas a dibujar en tu **SurfaceImageSource** desde un subproceso en segundo plano, también tendrás que asegurarte de que el dispositivo DXGI ha habilitado el acceso multiproceso. Solo debe hacerse si vas a dibujar desde un subproceso en segundo plano, por motivos de rendimiento.

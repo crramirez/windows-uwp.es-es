@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: Windows 10, UWP, accesibilidad, juegos
 ms.localizationpriority: medium
-ms.openlocfilehash: a3ef82db2d0ddb7883179279fd7e48c1acf38dd3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 74ff2c25d38f20b94f50cc05a548778ee212bad0
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369175"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321361"
 ---
 #  <a name="making-games-accessible"></a>Hacer que los juegos sean accesibles
 
@@ -19,11 +19,11 @@ La accesibilidad puede permitir que cada persona y cada organización del planet
 
 ## <a name="gaming-for-everyone"></a>Juegos para todas las edades
 
-En Microsoft, creemos que los juegos deberían ser divertidos para todos. "Nos sentimos motivados a hacer de los juegos un entorno inclusivo para todo el mundo. Básicamente, creemos en lo que compilamos para nuestros seguidores y lo que hacemos (dentro y fuera de Microsoft) es el reflejo de lo que somos. Diseñamos el programa para reflejar los valores principales que tenemos como organización y creemos que el programa podría ocasionar cambios positivos, no solo en el área de trabajo, sino en los productos que creamos para los jugadores para los que trabajamos". ([Entrada de blog](https://blogs.microsoft.com/blog/2016/06/13/gaming-for-everyone) de Phil Spencer)
+En Microsoft, creemos que los juegos deberían ser divertidos para todos. "Nos sentimos motivados a hacer de los juegos un entorno inclusivo para todo el mundo. Básicamente, creemos en lo que compilamos para nuestros seguidores y lo que hacemos (dentro y fuera de Microsoft) es el reflejo de lo que somos. Diseñamos el programa para reflejar los valores principales que tenemos como organización y creemos que el programa podría ocasionar cambios positivos, no solo en el área de trabajo, sino en los productos que creamos para los jugadores para los que trabajamos". ([Entrada de blog](https://blogs.microsoft.com/blog/2016/06/13/gaming-for-everyone/) de Phil Spencer)
 
-Queremos crear un entorno divertido, variado e inclusivo donde todo el mundo puede jugar. "Para lograr un impacto permanente es necesario un cambio cultural, uno que no se produzca de un día para el otro. Sin embargo, nuestro equipo se compromete a mejorar cada día, y a aprender juntos a detenernos al tomar decisiones y pensar en la increíble diversidad de necesidades, capacidades e intereses entre los jugadores de todo el mundo". ([Entrada de blog](https://blogs.microsoft.com/blog/2016/06/13/gaming-for-everyone) de Phil Spencer)
+Queremos crear un entorno divertido, variado e inclusivo donde todo el mundo puede jugar. "Para lograr un impacto permanente es necesario un cambio cultural, uno que no se produzca de un día para el otro. Sin embargo, nuestro equipo se compromete a mejorar cada día, y a aprender juntos a detenernos al tomar decisiones y pensar en la increíble diversidad de necesidades, capacidades e intereses entre los jugadores de todo el mundo". ([Entrada de blog](https://blogs.microsoft.com/blog/2016/06/13/gaming-for-everyone/) de Phil Spencer)
 
-Esperamos que tu unas a nosotros en este viaje para hacer realidad los [Juegos para todas las edades](https://news.microsoft.com/gamingforeveryone). 
+Esperamos que tu unas a nosotros en este viaje para hacer realidad los [Juegos para todas las edades](https://news.microsoft.com/gamingforeveryone/). 
 
 ##  <a name="why-make-games-accessible"></a>¿Por qué hacer que los juegos sean accesibles?
 
@@ -69,7 +69,7 @@ Si las respuestas son principalmente no, o no sabes responderlas, es el momento 
 
 ## <a name="defining-disability"></a>Definir discapacidad
 
-La discapacidad se define como "un desajuste entre las necesidades de la persona y las del servicio, producto o entorno que se ofrece". ([Vídeo inclusivo](https://www.microsoft.com/design/inclusive), Microsoft.com.) Esto significa que cualquier usuario puede experimentar una discapacidad y que puede ser una condición a corto plazo o conocimiento. Imagina qué desafíos pueden encontrarse los jugadores con estos problemas cuando jueguen al juego y piensa en cómo se puede mejorar el juego pensando en ellos. A continuación se enumeran algunas discapacidades por considerar:
+La discapacidad se define como "un desajuste entre las necesidades de la persona y las del servicio, producto o entorno que se ofrece". ([Vídeo inclusivo](https://www.microsoft.com/design/inclusive/), Microsoft.com.) Esto significa que cualquier usuario puede experimentar una discapacidad y que puede ser una condición a corto plazo o conocimiento. Imagina qué desafíos pueden encontrarse los jugadores con estos problemas cuando jueguen al juego y piensa en cómo se puede mejorar el juego pensando en ellos. A continuación se enumeran algunas discapacidades por considerar:
 
 ### <a name="vision"></a>Visual
 
@@ -196,7 +196,7 @@ Si el título permite a los jugadores comunicarse por voz y enviar mensajes de t
 
 Las personas que no tienen micrófonos conectados a su dispositivo de juegos aun pueden tener una conversación con alguien que está hablando. Pueden escribir texto en la ventana del chat y convertir esos mensajes en voz. También permite que alguien con dificultades auditivas pueda leer la transcripción de los mensajes de texto de la persona con la que están hablando.
 
-Para desarrolladores ID@Xbox y asociados administrados del programa, las funciones de texto a voz y voz a texto están disponibles como parte de las [funciones de accesibilidad Game Chat 2](https://docs.microsoft.com/gaming/xbox-live//multiplayer/chat/using-game-chat-2.md#accessibility) en el servicio de Xbox Live. Para obtener más información, consulta [Game Chat 2 Overview](https://docs.microsoft.com/gaming/xbox-live//multiplayer/chat/game-chat-2-overview.md).
+Para desarrolladores ID@Xbox y asociados administrados del programa, las funciones de texto a voz y voz a texto están disponibles como parte de las [funciones de accesibilidad Game Chat 2](https://docs.microsoft.com/gaming/xbox-live/multiplayer/chat/using-game-chat-2.md#accessibility) en el servicio de Xbox Live. Para obtener más información, consulta [Game Chat 2 Overview](https://docs.microsoft.com/gaming/xbox-live/multiplayer/chat/game-chat-2-overview.md).
 
 ### <a name="sound-feedback"></a>Información de sonido
 
@@ -225,7 +225,7 @@ Retocar el nivel de dificultad del juego es un proceso delicado. Si está muy f�
 
 ### <a name="photosensitivity-epilepsy-testing"></a>Pruebas de epilepsia fotosensible
 
-La epilepsia fotosensible es una enfermedad en la que se producen ataques a causa de estímulos visuales, incluyendo las exposiciones a luces parpadeantes o a determinadas formas y patrones visuales en movimiento. Esto ocurre en aproximadamente el tres por ciento de la población y es más común en niños y adolescentes. En números absolutos, esto supone [1 de cada 4000 personas con edades entre los 5 y los 24 años](https://www.epilepsy.com/information/professionals/about-epilepsy-seizures/reflex-seizures-and-related-epileptic-syndromes-3).
+La epilepsia fotosensible es una enfermedad en la que se producen ataques a causa de estímulos visuales, incluyendo las exposiciones a luces parpadeantes o a determinadas formas y patrones visuales en movimiento. Esto ocurre en aproximadamente el tres por ciento de la población y es más común en niños y adolescentes. En números absolutos, esto supone [1 de cada 4000 personas con edades entre los 5 y los 24 años](https://www.epilepsy.com/learn/professionals/about-epilepsy-seizures/reflex-seizures-and-related-epileptic-syndromes-0).
 
 Hay muchos factores que pueden causar una reacción fotosensible al jugar a videojuegos, incluida la duración del juego, la frecuencia del parpadeo, la intensidad de la luz, el contraste del fondo y la luz, la distancia entre la pantalla y el jugador y la longitud de onda de la luz.
 
@@ -253,7 +253,7 @@ Estos son algunos sitios externos que proporcionan información adicional sobre 
 
 ### <a name="game-accessibility-guidelines"></a>Directrices sobre accesibilidad a juegos
 * [Directrices de accesibilidad de juegos](https://gameaccessibilityguidelines.com/)
-* [Directrices de AbleGamers Foundation](https://www.includification.com/)
+* [Directrices de AbleGamers Foundation](https://accessible.games/accessible-player-experiences/)
 * [Diseñar juegos universalmente accesible (UA)](https://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
 
 ### <a name="custom-input-controllers"></a>Mandos de entrada personalizados
@@ -262,14 +262,14 @@ Estos son algunos sitios externos que proporcionan información adicional sobre 
 
 ## <a name="references-used"></a>Referencias usadas
 * [Directrices de accesibilidad de juegos](https://gameaccessibilityguidelines.com/)
-* [Directrices de AbleGamers Foundation](https://www.includification.com/)
+* [Directrices de AbleGamers Foundation](https://accessible.games/accessible-player-experiences/)
 * [Reconocimiento de color ciegos, una empresa de interés de la Comunidad](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
 * [Cómo hacer subtítulos bien de un artículo de blog sobre Gamasutra por Ian Hamilton](https://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
 * [Innovación para todos los programas](https://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
 * [Foundation epilepsia](https://www.epilepsy.com/)
 
 ## <a name="related-links"></a>Vínculos relacionados
-* [Diseño inclusivo](https://www.microsoft.com/design/inclusive)
+* [Diseño inclusivo](https://www.microsoft.com/design/inclusive/)
 * [Centro de accesibilidad de Microsoft para desarrolladores](https://developer.microsoft.com/windows/accessible-apps)
 * [Desarrollo de aplicaciones UWP accesible](https://docs.microsoft.com/windows/uwp/accessibility/accessibility)
 * [Libro electrónico de Software de accesibilidad de ingeniería](https://www.microsoft.com/download/details.aspx?id=19262)

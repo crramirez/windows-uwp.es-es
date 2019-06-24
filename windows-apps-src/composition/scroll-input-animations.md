@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 118b3f6e306e60d1d8d569f0d58f2d77ea30d9a8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 25b0732b7c29653d18f0e018698ab4b6398d402a
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57635070"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318073"
 ---
 # <a name="enhance-existing-scrollviewer-experiences"></a>Mejorar las experiencias existentes de ScrollViewer
 
@@ -61,7 +61,7 @@ Pasos generales para empezar:
 
 ## <a name="example"></a>Ejemplo
 
-Echemos un vistazo a cómo se crea el ejemplo de Parallax que se muestra anteriormente. Como referencia, todo el código fuente de la aplicación se encuentra en el [repositorio de Windows UI Dev Labs en GitHub](https://github.com/Microsoft/WindowsUIDevLabs).
+Echemos un vistazo a cómo se crea el ejemplo de Parallax que se muestra anteriormente. Como referencia, todo el código fuente de la aplicación se encuentra en el [repositorio de Windows UI Dev Labs en GitHub](https://github.com/microsoft/WindowsCompositionSamples).
 
 Lo primero es obtener una referencia al ScrollManipulationPropertySet.
 

@@ -4,12 +4,12 @@ description: En este artículo se incluye una descripción general de la API de 
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
-ms.openlocfilehash: 49662d476d6d022ca05d53e9358fc547fda92a32
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 693abe68fcc7e4a341d773c6fa1af0d777c60c15
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625670"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322156"
 ---
 # <a name="cpusets-for-game-development"></a>CPUSets para el desarrollo de juegos
 
@@ -53,7 +53,7 @@ La información de cada instancia de esta estructura de datos que devuelve **Get
 | ------------- | ------------- | ------------- |
 | Tipo  | CPU_SET_INFORMATION_TYPE  | Tipo de información de la estructura. Si su valor no es **CpuSetInformation**, debe omitirse.  |
 | Id  | unsigned long  | Identificador de conjunto de CPU especificado. Este es el identificador que debe usarse con las funciones de conjunto de CPU como **SetThreadSelectedCpuSets**.  |
-| Grupo  | unsigned short  | Especifica el "grupo de procesadores" del conjunto de CPU. Los grupos de procesadores permiten que un equipo tenga más de 64 núcleos lógicos, así como el intercambio directo de las CPU mientras se ejecuta el sistema. Es poco común ver un equipo que no es un servidor con más de un grupo. A menos que escribas aplicaciones destinadas a ejecutarse en servidores grandes o granjas de servidores, es mejor usar conjuntos de CPU en un solo grupo porque la mayoría de equipos de consumo solo tienen un grupo de procesadores. Todos los demás valores de esta estructura guardan relación con el miembro Group.  |
+| Agrupar  | unsigned short  | Especifica el "grupo de procesadores" del conjunto de CPU. Los grupos de procesadores permiten que un equipo tenga más de 64 núcleos lógicos, así como el intercambio directo de las CPU mientras se ejecuta el sistema. Es poco común ver un equipo que no es un servidor con más de un grupo. A menos que escribas aplicaciones destinadas a ejecutarse en servidores grandes o granjas de servidores, es mejor usar conjuntos de CPU en un solo grupo porque la mayoría de equipos de consumo solo tienen un grupo de procesadores. Todos los demás valores de esta estructura guardan relación con el miembro Group.  |
 | LogicalProcessorIndex  | unsigned char  | Índice relativo de grupo del conjunto de CPU.  |
 | CoreIndex  | unsigned char  | Índice relativo de grupo del núcleo de la CPU física donde se encuentra el conjunto de CPU.  |
 | LastLevelCacheIndex  | unsigned char  | Índice relativo de grupo de la última memoria caché asociada a este conjunto de CPU. Esta es la memoria caché más lenta, a menos que el sistema use nodos NUMA, normalmente la caché L2 o L3.  |
@@ -191,7 +191,7 @@ El diseño de caché que se muestra en la figura 1 es un ejemplo del tipo de dis
 La API de CPUSets disponible para el desarrollo de UWP proporciona una cantidad considerable de información y control sobre las opciones de multithreading. La complejidad adicional en comparación con las API multiproceso de desarrollo de Windows presenta alguna curva de aprendizaje, pero la mayor flexibilidad permite, en última instancia, un rendimiento superior en una amplia gama de equipos de consumo y otros destinos de hardware.
 
 ## <a name="additional-resources"></a>Recursos adicionales
-- [Conjuntos de CPU (MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
+- [Conjuntos de CPU (MSDN)](https://docs.microsoft.com/windows/desktop/ProcThread/cpu-sets)
 - [Ejemplo de CPUSets proporcionada por ATG](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
 - [UWP en Xbox One](index.md)
 

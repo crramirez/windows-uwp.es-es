@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c61a35f0ad35cf85afcba564eb676aa171b0243
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c25fc09d606c0f143f357dd7f89026fa94b80922
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360842"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318357"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>Crear, editar y guardar imágenes de mapa de bits
 
@@ -65,7 +65,7 @@ Para mostrar una imagen dentro de una página XAML con el control [**Image**](ht
 
 [!code-xml[ImageControl](./code/ImagingWin10/cs/MainPage.xaml#SnippetImageControl)]
 
-Actualmente, el control **Image** solo admite imágenes que usan la codificación BGRA8 y el canal alfa premultiplicado o ningún canal alfa. Antes de intentar mostrar una imagen, asegúrate de que tiene el formato correcto y, si no es así, usa el método estático [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows) de **SoftwareBitmap** para convertir la imagen al formato compatible.
+Actualmente, el control **Image** solo admite imágenes que usan la codificación BGRA8 y el canal alfa premultiplicado o ningún canal alfa. Antes de intentar mostrar una imagen, asegúrate de que tiene el formato correcto y, si no es así, usa el método estático [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert) de **SoftwareBitmap** para convertir la imagen al formato compatible.
 
 Crea un nuevo objeto [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource). Establece el contenido del objeto de origen mediante una llamada a [**SetBitmapAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync) y pásale un elemento **SoftwareBitmap**. Después puedes establecer la propiedad [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) del control **Image** al objeto **SoftwareBitmapSource** recién creado.
 
@@ -89,7 +89,7 @@ Para usar la interoperabilidad COM, debes incluir una referencia al espacio de n
 
 [!code-cs[InteropNamespace](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetInteropNamespace)]
 
-Inicializa la interfaz COM [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions//mt297505(v=vs.85)) agregando el código siguiente dentro del espacio de nombres.
+Inicializa la interfaz COM [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85)) agregando el código siguiente dentro del espacio de nombres.
 
 [!code-cs[COMImport](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCOMImport)]
 
@@ -111,7 +111,7 @@ Llama a [**CreateCopyFromSurfaceAsync**](https://docs.microsoft.com/uwp/api/wind
 
 ## <a name="convert-a-softwarebitmap-to-a-different-pixel-format"></a>Convertir un objeto SoftwareBitmap a un formato de píxel diferente
 
-La clase **SoftwareBitmap** proporciona el método estático [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.windows) que permite crear fácilmente un nuevo objeto **SoftwareBitmap** que use el modo alfa y el formato de píxel que se especifique desde un objeto **SoftwareBitmap** existente. Ten en cuenta que el mapa de bits recién creado tiene una copia de los datos de imagen. Las modificaciones en el nuevo mapa de bits no afectarán al mapa de bits de origen.
+La clase **SoftwareBitmap** proporciona el método estático [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert) que permite crear fácilmente un nuevo objeto **SoftwareBitmap** que use el modo alfa y el formato de píxel que se especifique desde un objeto **SoftwareBitmap** existente. Ten en cuenta que el mapa de bits recién creado tiene una copia de los datos de imagen. Las modificaciones en el nuevo mapa de bits no afectarán al mapa de bits de origen.
 
 [!code-cs[Convert](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
 

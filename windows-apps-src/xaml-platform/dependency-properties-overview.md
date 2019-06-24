@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bdd859a922cf3252f5896da2652a0b73e20a079
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a07fae7920bbcddd4c68b052aa82c072312b4995
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371195"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322153"
 ---
 # <a name="dependency-properties-overview"></a>Introducción a las propiedades de dependencia
 
@@ -194,7 +194,7 @@ Puedes establecer deliberadamente una propiedad en el valor predeterminado inclu
 
 ## <a name="dependencyobject-and-threading"></a>**DependencyObject** y subprocesos
 
-Todas las instancias de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) deben crearse en el subproceso de interfaz de usuario asociado a [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) actual que muestra la aplicación de Windows Runtime. Aunque cada **DependencyObject** debe crearse en el subproceso de interfaz de usuario principal, se puede acceder a los objetos mediante una referencia de distribuidor desde otros subprocesos, accediendo a la propiedad [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher). Posteriormente se puede llamar a métodos como [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.windows) en el objeto [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) y ejecutar el código dentro de las reglas de restricción de subprocesos en el subproceso de la interfaz de usuario.
+Todas las instancias de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) deben crearse en el subproceso de interfaz de usuario asociado a [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) actual que muestra la aplicación de Windows Runtime. Aunque cada **DependencyObject** debe crearse en el subproceso de interfaz de usuario principal, se puede acceder a los objetos mediante una referencia de distribuidor desde otros subprocesos, accediendo a la propiedad [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher). Posteriormente se puede llamar a métodos como [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) en el objeto [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) y ejecutar el código dentro de las reglas de restricción de subprocesos en el subproceso de la interfaz de usuario.
 
 Los aspectos de subprocesos de [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) son relevantes porque, por lo general, significa que solo el código que se ejecuta en el subproceso de interfaz de usuario puede cambiar o incluso leer el valor de una propiedad de dependencias. Los problemas de subprocesos normalmente se pueden evitar en el código típico de la interfaz de usuario que haga un uso correcto de los patrones **async** y de los subprocesos de trabajo en segundo plano. Normalmente, solo te encontrarás con problemas de subprocesos relacionados con **DependencyObject** si vas a definir tipos de **DependencyObject** e intentas usarlos para los orígenes de datos u otros escenarios donde un **DependencyObject** no es necesariamente lo adecuado.
 

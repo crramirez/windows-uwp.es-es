@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c32fee5d9cbe5d40b9fe324eb8d6bad6d87eb9b3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4a6f182ab5f34f7bbb99e54626001126b3741522
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371078"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320278"
 ---
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
@@ -29,7 +29,7 @@ Los objetos de enlace creados por **{x: enlace}** y **{Binding}** son prácticam
 **Aplicaciones de ejemplo que muestran {x: Bind}**
 
 -   [{x:Bind} sample](https://go.microsoft.com/fwlink/p/?linkid=619989)
--   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)
+-   [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper)
 -   [Ejemplo de conceptos básicos de la interfaz de usuario de XAML](https://go.microsoft.com/fwlink/p/?linkid=619992)
 
 ## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
@@ -127,7 +127,7 @@ En el código subyacente generado, el enlace compilado controla el evento y lo e
 
 Para obtener más información sobre la sintaxis de cadena de una ruta de acceso de propiedades, consulta [Property-path syntax](property-path-syntax.md) y ten en cuenta las diferencias que se describen aquí para **{x:Bind}** .
 
-## <a name="properties-that-you-can-set-with-xbind"></a> Propiedades que se pueden establecer con {x: enlace}
+## <a name="properties-that-you-can-set-with-xbind"></a>Propiedades que se pueden establecer con {x: enlace}
 
 **{x:Bind}** se explica a través de la sintaxis de marcadores de posición *bindingProperties* porque hay muchas propiedades de lectura y escritura que se pueden establecer en la extensión de marcado. Las propiedades pueden establecerse en cualquier orden con pares separados por comas *propName*=*value*. Ten en cuenta que no puedes incluir saltos de línea en la expresión de enlace. Algunas de las propiedades requieren tipos que no tienen una conversión de tipos, por lo que requieren sus propias extensiones de marcado anidadas dentro de **{x:Bind}** .
 

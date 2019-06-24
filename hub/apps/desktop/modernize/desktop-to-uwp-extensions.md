@@ -289,7 +289,7 @@ Puede asegurarse de que los usuarios abran la aplicación empaquetada nuevo de f
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 

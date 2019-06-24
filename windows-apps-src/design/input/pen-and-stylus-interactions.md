@@ -8,12 +8,12 @@ keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, I
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d60c85efe8f0a959ac66ffbd3dc8a05f312d0f2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 427d359676bd064e577ab4f13f7b0a17f61d7e3e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365647"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317163"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interacciones de lápiz y Windows Ink en aplicaciones para UWP
 
@@ -64,8 +64,7 @@ De manera predeterminada, el control [**InkCanvas**](https://docs.microsoft.com/
 En este ejemplo, un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) se superpone a una imagen en segundo plano.
 
 > [!NOTE]
-> Tiene un valor predeterminado un InkCanvas [ **alto** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) y [ **ancho** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) propiedades de cero, a menos que sea el elemento secundario de un elemento es automáticamente los tamaños sus elementos secundarios, como [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel
-) o [cuadrícula](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) controles.
+> Tiene un valor predeterminado un InkCanvas [ **alto** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) y [ **ancho** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) propiedades de cero, a menos que sea el elemento secundario de un elemento es automáticamente los tamaños sus elementos secundarios, como [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel) o [cuadrícula](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) controles.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">

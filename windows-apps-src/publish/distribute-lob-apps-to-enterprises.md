@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, lob, línea de negocio, aplicaciones para empresas, store para empresas, store para educación, empresa
 ms.localizationpriority: medium
-ms.openlocfilehash: d44d2b248ddc2bff6ffa91860621fe315fb22c47
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
+ms.openlocfilehash: cf970c1812b4200cea4e4902ad883ef8b0b5e141
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826151"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320002"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicaciones de línea de negocio a empresas
 
@@ -71,7 +71,7 @@ Para las aplicaciones de LOB, el paso [clasificación por edades](age-ratings.md
 Después de hacer clic **Enviar a la Tienda**, la aplicación pasará por el proceso de certificación. Cuando esté lista, un administrador de la empresa debe agregarla a su tienda privada en el portal de la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación. Luego la empresa puede implementar la aplicación para sus usuarios.
 
 > [!NOTE]
-> Para obtener la aplicación de línea de negocio, la organización debe encontrarse en un [mercado admitido](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets), y no debes haber [excluido ese mercado](define-pricing-and-market-selection.md) al enviar la aplicación. 
+> Para obtener la aplicación de línea de negocio, la organización debe encontrarse en un [mercado admitido](https://docs.microsoft.com/windows/whats-new/windows-store-for-business-overview#supported-markets), y no debes haber [excluido ese mercado](define-pricing-and-market-selection.md) al enviar la aplicación. 
 
 Para obtener más información, consulta [Trabajar con aplicaciones de línea de negocio](https://go.microsoft.com/fwlink/p/?LinkId=698846) y [Distribuir aplicaciones a través de la tienda privada](https://go.microsoft.com/fwlink/p/?LinkId=698847).
 

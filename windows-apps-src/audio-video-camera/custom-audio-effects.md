@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: f34b2cdbb538d121c1c6182b2c02042d6c0047ed
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6bebf9533ab045822902d44f87f68eec55c11074
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360927"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318572"
 ---
 # <a name="custom-audio-effects"></a>Efectos de audio personalizados
 
@@ -51,7 +51,7 @@ El sistema comprueba la propiedad [**SupportedEncodingProperties**](https://docs
 
 ### <a name="setencodingproperties-method"></a>Método SetEncodingProperties
 
-El sistema llama a [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties.windows) en el efecto para comunicarte las propiedades de codificación de la secuencia de audio a que se aplica el efecto. Para implementar un efecto de eco, este ejemplo usa un búfer para almacenar un segundo de datos de audio. Este método permite inicializar el tamaño del búfer según el número de muestras en un segundo de audio, en función de la frecuencia de muestreo con la que se codifica el audio. El efecto de retraso también usa un contador entero para realizar un seguimiento de la posición actual en el búfer de retraso. Dado que **SetEncodingProperties** se llama siempre que el efecto se agrega a la canalización de audio, este es un buen momento para inicializar ese valor a 0. Puede que también quieras capturar el objeto **AudioEncodingProperties** que se ha pasado a este método para usarlo en otro lugar del efecto.
+El sistema llama a [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties) en el efecto para comunicarte las propiedades de codificación de la secuencia de audio a que se aplica el efecto. Para implementar un efecto de eco, este ejemplo usa un búfer para almacenar un segundo de datos de audio. Este método permite inicializar el tamaño del búfer según el número de muestras en un segundo de audio, en función de la frecuencia de muestreo con la que se codifica el audio. El efecto de retraso también usa un contador entero para realizar un seguimiento de la posición actual en el búfer de retraso. Dado que **SetEncodingProperties** se llama siempre que el efecto se agrega a la canalización de audio, este es un buen momento para inicializar ese valor a 0. Puede que también quieras capturar el objeto **AudioEncodingProperties** que se ha pasado a este método para usarlo en otro lugar del efecto.
 
 [!code-cs[DeclareEchoBuffer](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetDeclareEchoBuffer)]
 [!code-cs[SetEncodingProperties](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetSetEncodingProperties)]

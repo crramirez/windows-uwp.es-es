@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9dfd86d53805573d002984aaf33ba5f1bf17241c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 3a55ea95f5c67a4184e1fd1592c4b6ac3356a75c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583095"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317692"
 ---
 # <a name="app-to-app-communication"></a>Comunicación entre aplicaciones
 
@@ -36,4 +36,4 @@ Además del contrato para compartir contenido, las aplicaciones también pueden 
 | [Arrastrar y colocar](../design/input/drag-and-drop.md) | En este artículo se explica cómo agregar la funcionalidad de arrastrar y colocar elementos en la aplicación para UWP. Arrastrar y soltar es una forma clásica y natural de interactuar con contenido, como imágenes y archivos. Una vez implementada, la opción para arrastrar y colocar elementos funciona perfectamente en todos los sentidos; por ejemplo, de una aplicación a otra, de una aplicación al escritorio y del escritorio a una aplicación. |
 
 ## <a name="see-also"></a>Consulte también
-- [Desarrollar aplicaciones para UWP](https://developer.microsoft.com/windows/develop)
+- [Desarrollar aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/develop/)

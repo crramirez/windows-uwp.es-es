@@ -9,12 +9,12 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: 265e034b264cf82bacfa5a32141eb5d999d57108
-ms.sourcegitcommit: aa5a055e3ff9ee9defc73ed9567196d59f59542a
+ms.openlocfilehash: 3f24d91231b4da1a4a456846faceb604d9ee450d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66825036"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319851"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Empaquetar una aplicación para UWP con Visual Studio
 
@@ -46,7 +46,7 @@ Después de completar los pasos anteriores, estás listo para distribuir tu apli
 
 1.  **Pruebe la aplicación.** Antes de empaquetar la aplicación para enviarla de centro de partners, asegúrese de que funciona según lo previsto en todas las familias de dispositivos que va a admitir. Estas familias de dispositivos pueden incluir los equipos de escritorio, móviles, Surface Hub, Xbox, dispositivos de IoT, etc. Para obtener más información sobre cómo implementar y probar la aplicación con Visual Studio, consulte [implementación y depuración de aplicaciones para UWP](../debug-test-perf/deploying-and-debugging-uwp-apps.md).
 2.  **Optimizar la aplicación.** Puedes usar las herramientas de generación de perfiles y depuración de Visual Studio para optimizar el rendimiento de tu aplicación para UWP. Por ejemplo, la herramienta Línea de tiempo para la capacidad de respuesta de la interfaz de usuario, la herramienta Uso de memoria, la herramienta Uso de CPU, etc. Para obtener más información acerca de estas herramientas de línea de comandos, consulta el tema [Recorrido por las funciones de perfiles](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour):
-3.  **Comprobar la compatibilidad de .NET Native (para VB y C# aplicaciones).** En la Plataforma universal de Windows, hay un compilador nativo que mejorará el rendimiento en tiempo de ejecución de la aplicación. Una vez hecho este cambio, debe probar la aplicación en este entorno de compilación. De manera predeterminada, la configuración de compilación **Release** habilita la cadena de herramientas de .NET nativa, por lo que es importante probar la aplicación con esta configuración **Release** y comprobar que se comporta según lo esperado. Algunos problemas de depuración comunes que pueden producirse con .NET Native se explican con más detalle en [Depuración de aplicaciones universales de .NET Native](https://blogs.msdn.microsoft.com/devops/2015/07/29/debugging-net-native-windows-universal-apps/).
+3.  **Comprobar la compatibilidad de .NET Native (para VB y C# aplicaciones).** En la Plataforma universal de Windows, hay un compilador nativo que mejorará el rendimiento en tiempo de ejecución de la aplicación. Una vez hecho este cambio, debe probar la aplicación en este entorno de compilación. De manera predeterminada, la configuración de compilación **Release** habilita la cadena de herramientas de .NET nativa, por lo que es importante probar la aplicación con esta configuración **Release** y comprobar que se comporta según lo esperado. Algunos problemas de depuración comunes que pueden producirse con .NET Native se explican con más detalle en [Depuración de aplicaciones universales de .NET Native](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/).
 
 ## <a name="configure-an-app-package"></a>Configurar un paquete de la aplicación
 

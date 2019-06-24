@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b4e05a1f24e6192d25c80c043cdb4a51e7ac61ec
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b9fcdff5b8648822bb5cc22771daded23f6d52a5
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372367"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322231"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>Distribuir un componente de Windows Runtime administrado
 
@@ -53,7 +53,7 @@ Normalmente, un componente complejo incluye los recursos de Windows, pero debes 
 
 **Para crear un SDK de extensión**
 
-1.  Asegúrate de tener instalado el SDK de Visual Studio. Puedes descargar el SDK de Visual Studio desde la página [Descargas de Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs).
+1.  Asegúrate de tener instalado el SDK de Visual Studio. Puedes descargar el SDK de Visual Studio desde la página [Descargas de Visual Studio](https://visualstudio.microsoft.com/downloads/download-visual-studio-vs).
 2.  Crear un nuevo proyecto usando la plantilla VSIX Project. Puedes encontrar la plantilla en Visual C# o Visual Basic, en la categoría de extensibilidad. Esta plantilla se instala como parte del SDK de Visual Studio. ([Tutorial: Creación de un SDK con C# o Visual Basic](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic?view=vs-2015) o [Tutorial: Creación de un SDK con C++](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-creating-an-sdk-using-cpp?view=vs-2015), se muestra el uso de esta plantilla en un escenario muy sencillo. ) simple
 3.  Determinar la estructura de carpetas para tu SDK. La estructura de carpetas comienza en el nivel de raíz de tu proyecto VSIX, con las carpetas **Referencias**, **Redist**, y **DesignTime**.
 

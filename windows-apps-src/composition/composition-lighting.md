@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 733ce75942a05482ade88c1510e788f1cbd515d4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c23de238a0004066b44cfe962e2de72216eb7a6d
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57602210"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318467"
 ---
 # <a name="using-lights-in-windows-ui"></a>Uso de las luces en la interfaz de usuario de Windows
 
@@ -38,7 +38,7 @@ Iluminación de composición es compatible con tres conceptos clave: **Luz**, **
 | [AmbientLight](/uwp/api/windows.ui.composition.ambientlight) | Una fuente de luz que emite luz no direccional que aparece se refleja en todos los elementos de la escena. |
 | [DistantLight](/uwp/api/windows.ui.composition.distantlight) | Una gran infinitamente fuente de luz distante que emite luz en una dirección única. Al igual que el sol. |
 | [PointLight](/uwp/api/windows.ui.composition.pointlight) | Punto de fuente de luz que emite luz en todas las direcciones. Al igual que una bombilla. |
-| [Contenido destacado](/uwp/api/windows.ui.composition.spotlight) | Una fuente de luz que emite conos internas y externas de la luz. Al igual que una linterna. |
+| [SpotLight](/uwp/api/windows.ui.composition.spotlight) | Una fuente de luz que emite conos internas y externas de la luz. Al igual que una linterna. |
 
 ## <a name="targets"></a>Destinos
 
@@ -63,7 +63,7 @@ Mediante la adición de animación para el desplazamiento de la luz puntual, un 
 _pointLight.Offset = new Vector3(-(float)TextBlock.ActualWidth, (float)TextBlock.ActualHeight / 2, (float)TextBlock.FontSize);
 ```
 
-Consulte la sección completa [texto de reflejos](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SampleGallery/Samples/SDK%2014393/TextShimmer) ejemplo en la cocina de ejemplo WindowUIDevLabs para obtener más información.
+Consulte la sección completa [texto de reflejos](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK 14393/TextShimmer) ejemplo en la cocina de ejemplo WindowUIDevLabs para obtener más información.
 
 ## <a name="restrictions"></a>Restricciones
 
@@ -81,20 +81,20 @@ Concepto | Detalles
 
 Según el tipo de luz utilizado, una luz puede tener propiedades de atenuación y espacio. No todos los tipos de luces usan todas las propiedades.
 
-Propiedad | Descripción
+Property | Descripción
 --- | ---
 **Color** | El [Color](/uwp/api/windows.ui.color) de la luz. Define valores de color de iluminación [D3D](https://docs.microsoft.com/windows/uwp/graphics-concepts/light-properties) difuso, ambiente y especular que define el color que se emiten. Iluminación utiliza valores RGBA de luces; no se utiliza el componente alfa del color.
 **Dirección** | La dirección de la luz. Se especifica la dirección en la que señala la luz relativo a su [CoordinateSpace](/uwp/api/windows.ui.composition.distantlight.coordinatespace) Visual.
 **Espacio de coordenadas** | Cada objeto Visual tiene un espacio de coordenadas 3D implícito. Dirección del eje X es de izquierda a derecha. Dirección del eje Y es de arriba a abajo. Dirección Z es un punto fuera del plano. El punto de estas coordenadas original es la esquina superior izquierda del objeto visual y la unidad es píxeles independientes de dispositivo (DIP). Desplazamiento de la luz definido en estas coordenadas.
 **Conos internas y externas** | Los focos de luz emiten un cono de luz que tiene dos partes: un cono interno brillante y un cono externo. Composición permite que controlar a través de color y los ángulos de cono interno y externo.
-**Desplazamiento** | Desplazamiento de la fuente de luz en relación con su espacio de coordenadas Visual.
+**Offset** | Desplazamiento de la fuente de luz en relación con su espacio de coordenadas Visual.
 
 > [!NOTE]
 > Cuando varios luces alcanza el mismo objeto Visual, o cada vez que el valor de color de la luz obtiene suficientemente grande como para superar 1.0, puede cambiar el color de la luz a causa de bloqueo de un canal de color de las luces.
 
 ### <a name="advanced-lighting-properties"></a>Propiedades de iluminación de avanzada
 
-Propiedad | Descripción
+Property | Descripción
 --- | ---
 **Intensidad** | Controla el brillo de la luz.
 **Atenuación** | La atenuación controla cómo disminuye la intensidad de la luz hacia la máxima distancia especificada por la propiedad de intervalo.  Constante, pueden se usar propiedades de atenuación Quadradic y lineal.
@@ -117,11 +117,11 @@ Siga estos pasos generales para agregar las luces:
 > Iluminación de la escena no genera sombras; es un efecto que se centra en la representación 2D.  Esto no tiene en escenarios de iluminación 3D consideración que incluyen modelos de iluminación real, incluidas las sombras.
 
 
-Propiedad | Descripción
+Property | Descripción
 --- | ---
 **Mapa normal** | NormalMaps crear un efecto de una textura donde un normal apuntando hacia la luz estarán más brillante e inmediatamente un señalando normal será tenue. Para agregar un NormalMap al destino visual uso un [CompositionSurfaceBrush](/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) utilizando LoadedImageSurface para cargar un recurso NormalMap.
-**Ambiente** | Las propiedades de ambiente se utilizan principalmente para controlar la reflexión de color general.
-**Reflexión especular** | Reflexión especular crea resaltes en objetos, haciéndolos aparecer brillante. Puede controlar el nivel de reflexión especular, así como el nivel de brillo.  Estas propiedades se manipulan para crear efectos materiales como shinny metales o papel satinado.
+**Ambient** | Las propiedades de ambiente se utilizan principalmente para controlar la reflexión de color general.
+**Specular** | Reflexión especular crea resaltes en objetos, haciéndolos aparecer brillante. Puede controlar el nivel de reflexión especular, así como el nivel de brillo.  Estas propiedades se manipulan para crear efectos materiales como shinny metales o papel satinado.
 **Color difuso** | Reflexión difusa esparce la luz en todas las direcciones.
 **Modelo de reflectancia** | [Modelo de reflectancia](/uwp/api/windows.ui.composition.effects.scenelightingeffectreflectancemodel) le permite elegir entre [Blinn Phong](https://docs.microsoft.com/visualstudio/designers/how-to-create-a-basic-phong-shader) y basa Blinn Phong físicamente.  Elegiría físicamente en función Blinn Phong cuando desee ha condensado resaltes especulares.
 
@@ -167,4 +167,4 @@ CompositionBrush CreateNormalMapBrush(ICompositionSurface normalMapImage)
 - [CompositionCapabilities API](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositioncapabilities)
 - [Matemáticas de iluminación](https://docs.microsoft.com/windows/uwp/graphics-concepts/mathematics-of-lighting)
 - [SceneLightingEffect](https://docs.microsoft.com/uwp/api/windows.ui.composition.effects.scenelightingeffect)
-- [Repositorio de GitHub WindowsUIDevLabs](https://github.com/Microsoft/WindowsUIDevLabs)
+- [Repositorio de GitHub WindowsUIDevLabs](https://github.com/microsoft/WindowsCompositionSamples)

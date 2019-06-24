@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bfd84d5e0e41f07b53be0c0afce4b881a8a75d59
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4a171df5312d6c4613dfca1215f5ddd948153a8f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359220"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67317862"
 ---
 # <a name="receive-data"></a>Recibir datos
 
@@ -47,7 +47,7 @@ Para establecer los formatos de datos:
 
 ## <a name="handle-share-activation"></a>Controlar la activación de recursos compartidos
 
-Cuando un usuario selecciona tu aplicación (por lo general, la selecciona desde la lista de aplicaciones de destino disponibles en la interfaz de usuario del recurso compartido), se genera un evento [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs)). Tu aplicación debe controlar este evento para procesar los datos que el usuario quiere compartir.
+Cuando un usuario selecciona tu aplicación (por lo general, la selecciona desde la lista de aplicaciones de destino disponibles en la interfaz de usuario del recurso compartido), se genera un evento [**OnShareTargetActivated**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application#Windows_UI_Xaml_Application_OnShareTargetActivated_Windows_ApplicationModel_Activation_ShareTargetActivatedEventArgs_). Tu aplicación debe controlar este evento para procesar los datos que el usuario quiere compartir.
 
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -87,7 +87,7 @@ Con un recurso compartido extendido, es posible que el usuario quiera descartar 
 shareOperation.ReportSubmittedBackgroundTask(); 
 ```
 
-Si se produce algún problema, llama a [**ReportError**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportError(System.String)) para enviar un mensaje de error al sistema. El usuario verá el mensaje al comprobar el estado del recurso compartido. En ese momento, se cierra la aplicación y finaliza el recurso compartido. El usuario tendrá que iniciar de nuevo para compartir el contenido de la aplicación. Según el escenario, es posible que decidas que un error en particular no es lo suficientemente grave como para terminar la operación de compartir. En ese caso, puedes optar por no llamar a **ReportError** y continuar con la acción de compartir.
+Si se produce algún problema, llama a [**ReportError**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation#Windows_ApplicationModel_DataTransfer_ShareTarget_ShareOperation_ReportError_System_String_) para enviar un mensaje de error al sistema. El usuario verá el mensaje al comprobar el estado del recurso compartido. En ese momento, se cierra la aplicación y finaliza el recurso compartido. El usuario tendrá que iniciar de nuevo para compartir el contenido de la aplicación. Según el escenario, es posible que decidas que un error en particular no es lo suficientemente grave como para terminar la operación de compartir. En ese caso, puedes optar por no llamar a **ReportError** y continuar con la acción de compartir.
 
 ```cs
 shareOperation.ReportError("Could not reach the server! Try again later."); 

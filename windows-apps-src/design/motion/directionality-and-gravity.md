@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ef005ffd018bf52d70067cdfedbb9c98b079bd89
-ms.sourcegitcommit: cc0ef75f314658b14376eb60ef8e5bb4d7726e04
+ms.openlocfilehash: 3cdb20516d4f21933c7770f43701af322e09c886
+ms.sourcegitcommit: 7effecb544952b493250337fc622848232fa5995
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65444207"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67325883"
 ---
 # <a name="directionality-and-gravity"></a>Direccionalidad y gravedad
 
@@ -30,7 +30,7 @@ El movimiento direccional está sujeto a fuerzas como la gravedad. Aplicar fuerz
 <tr>
 <td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
 <td>
-    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/category/Motion">abra la aplicación y ver el movimiento en acción</a>.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/category/Motion">abrir la aplicación y ver Motion en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -44,7 +44,6 @@ El movimiento direccional está sujeto a fuerzas como la gravedad. Aplicar fuerz
 :::row:::
     :::column:::
         Direction of movement corresponds to physical motion. Just like in nature, objects can move in any world axis - X,Y,Z. This is how we think of the movement of objects on the screen.
-
         When you move objects, avoid unnatural collisions. Keep in mind where objects come from and go to, and alway support higher level constructs that may be used in the scene, such as scroll direction or layout hierarchy.
     :::column-end:::
     :::column:::
@@ -77,7 +76,6 @@ Existen 4 direcciones de navegación discretas a tener en cuenta.
 :::row:::
     :::column:::
         **Forward-In**
-
         Celebrate content entering the scene in a manner that does not collide with outgoing content. Content decelerates into the scene.
     :::column-end:::
     :::column:::
@@ -87,7 +85,6 @@ Existen 4 direcciones de navegación discretas a tener en cuenta.
 :::row:::
     :::column:::
         **Forward-Out**
-
         Content exits quickly. Objects accelerate off screen.
     :::column-end:::
     :::column:::
@@ -97,7 +94,6 @@ Existen 4 direcciones de navegación discretas a tener en cuenta.
 :::row:::
     :::column:::
         **Backward-In**
-
         Same as Forward-In, but reversed.
     :::column-end:::
     :::column:::
@@ -107,7 +103,6 @@ Existen 4 direcciones de navegación discretas a tener en cuenta.
 :::row:::
     :::column:::
         **Backward-Out**
-
         Same as Forward-Out, but reversed.
     :::column-end:::
     :::column:::

@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, importar descripciones de store, exportar descripciones de store, importar exportar, descripción de store csv
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d98795d6ab43f92ad2927553b037524e2fc1ec7
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: b45f12a9ef7212ddb23b647894189491bfa73549
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63784777"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320634"
 ---
 # <a name="import-and-export-store-listings"></a>Importar y exportar descripciones de la Tienda
 
@@ -27,7 +27,7 @@ Tenga en cuenta que siempre puede crear o actualizar programas directamente en e
 
 En la página de información general de envíos, haz clic en **Exportar descripción** (en la sección **Descripciones de la Tienda**) para generar un archivo .csv codificado en UTF-8. Guarda este archivo en tu equipo.
 
-Puedes usar Microsoft Excel u otro editor para editar este archivo. Ten en cuenta que las versiones de Excel de Office 365 te permiten guardar un archivo .csv como **CSV UTF-8 (delimitado por comas) (*.csv)**, pero otras versiones puede que no lo admitan. Puedes encontrar información sobre las versiones de Excel compatibles con esta característica en [Boletín de nuevas características de Excel 2016](https://support.office.com/en-us/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73), así como más información sobre la codificación de UTF-8 en diversos editores [aquí](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
+Puedes usar Microsoft Excel u otro editor para editar este archivo. Ten en cuenta que las versiones de Excel de Office 365 te permiten guardar un archivo .csv como **CSV UTF-8 (delimitado por comas) (*.csv)** , pero otras versiones puede que no lo admitan. Puedes encontrar información sobre las versiones de Excel compatibles con esta característica en [Boletín de nuevas características de Excel 2016](https://support.office.com/article/what-s-new-in-excel-for-office-365-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-001&ad=US), así como más información sobre la codificación de UTF-8 en diversos editores [aquí](https://help.surveygizmo.com/help/encode-an-excel-file-to-utf-8-or-utf-16).
       
 Si aún no has creado las descripciones para tu producto, el archivo .csv que exportaste no incluirá los datos personalizados. Aparecerán las columnas **Campo**, **ID**, **Tipo** y **predeterminado**, así como las filas que corresponden a cada elemento que puede aparecer en una descripción de la Tienda.
 
@@ -36,7 +36,7 @@ Si ya has creado descripciones (o has cargado paquetes), también aparecerán co
 Aquí tienes información general del contenido de cada una de las columnas en el archivo .csv exportado:
 - La columna **Campo** incluye un nombre que está asociado a cada parte de una descripción de la Tienda. Estos se corresponden con los mismos elementos que puede proporcionar al crear anuncios Store en el centro de partners, aunque algunos de los nombres son ligeramente diferentes. En los elementos en los que puedes escribir más de un mismo tipo de elemento, aparecerán varias filas, hasta el número máximo que puedas especificar. Por ejemplo, en la opción **Características de la aplicación**, aparecerán las opciones **Feature1**, **Feature2**, etc., hasta un máximo de **Feature20** (ya que has especificado un máximo de 20 características de la aplicación).
 - El **ID** columna contiene un número que el centro de partners se asocia a cada campo. 
-- El **tipo** columna proporciona instrucciones generales acerca de qué tipo de información para proporcionar para ese campo, como **texto** o **ruta de acceso relativa (o dirección URL al archivo en el centro de partners)**. 
+- El **tipo** columna proporciona instrucciones generales acerca de qué tipo de información para proporcionar para ese campo, como **texto** o **ruta de acceso relativa (o dirección URL al archivo en el centro de partners)** . 
 - La columna **predeterminado** (y cualquier otra columna etiquetada con códigos de idioma y configuración regional) representa el texto o los activos asociados a cada parte de la descripción de la Tienda. Puedes editar los campos de estas columnas para realizar actualizaciones en la descripciones de la Tienda.
 
 >[!IMPORTANT]
@@ -65,7 +65,7 @@ Eliminar la información de un campo para un idioma, sin quitar toda la fila, fu
 
 Muchos de los campos de tus descripciones exportadas requieren la entrada de texto, como por ejemplo, los que aparecen en el ejemplo anterior, **Descripción** y **ReleaseNotes**. En estos tipos de campos, simplemente escribe el texto correspondiente en el campo de cada idioma. Asegúrate de seguir la longitud y otros requisitos establecidos para cada campo. Para obtener más información sobre estos requisitos, consulta [Crear descripciones de la Tienda de aplicaciones](create-app-store-listings.md).
 
-Indicar información para los campos que corresponden a los activos, como por ejemplo, imágenes y tráileres, resulta un poco más complicado. En lugar de **texto**, **tipo** para estos recursos es **ruta de acceso relativa (o dirección URL al archivo en el centro de partners)**. 
+Indicar información para los campos que corresponden a los activos, como por ejemplo, imágenes y tráileres, resulta un poco más complicado. En lugar de **texto**, **tipo** para estos recursos es **ruta de acceso relativa (o dirección URL al archivo en el centro de partners)** . 
      
 Si ya has cargado activos para tus descripciones de la Tienda, estos activos se representarán mediante una dirección URL. Estas direcciones URL pueden reutilizarse en varias descripciones de un producto, o incluso en diferentes productos de la misma cuenta de desarrollador, de modo que puedes copiarlas para volver a utilizarlas en un campo diferente si lo deseas.
 
@@ -84,7 +84,7 @@ Por ejemplo, si la carpeta raíz se denomina **my_folder** y quieres usar una im
 
 ## <a name="import-listings"></a>Importar descripciones
 
-Una vez que hayas introducido todos los cambios en el archivo .csv (y hayas incluido los activos que quieras cargar), tendrás que guardar el archivo antes de cargarlo. Si usas una versión de Microsoft Excel compatible con la codificación UTF-8, asegúrate de seleccionar **Guardar como** y usar el formato **CSV UTF-8 (delimitado por comas) (*.csv)**. Si usas un editor diferente para ver y editar el archivo .csv, asegúrate de que el archivo se codifique en UTF-8 antes de cargarlo.
+Una vez que hayas introducido todos los cambios en el archivo .csv (y hayas incluido los activos que quieras cargar), tendrás que guardar el archivo antes de cargarlo. Si usas una versión de Microsoft Excel compatible con la codificación UTF-8, asegúrate de seleccionar **Guardar como** y usar el formato **CSV UTF-8 (delimitado por comas) (*.csv)** . Si usas un editor diferente para ver y editar el archivo .csv, asegúrate de que el archivo se codifique en UTF-8 antes de cargarlo.
 
 Cuando estés listo para cargar el archivo .csv actualizado e importar los datos de la descripción, selecciona **Importar descripciones** en la página de información general de envíos. Si solo vas a importar un archivo .csv, elige **Importar .csv**, busca el archivo y haz clic en **Abrir**. Si vas a importar una carpeta con archivos de imagen, elige Importar carpeta, busca la carpeta y haz clic en **Seleccionar carpeta**. Asegúrate de que hay un solo archivo .csv en la carpeta, junto con todos los activos que estás cargando. 
 

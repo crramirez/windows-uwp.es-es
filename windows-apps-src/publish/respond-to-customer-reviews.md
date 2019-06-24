@@ -6,19 +6,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: revisión de Windows 10, uwp, responder, respuestas,
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d45b5144bb13e66c506c4a55115bf252288064d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fa73c8f43c449e8cf7b1c5aa67574f6ff00e7a15
+ms.sourcegitcommit: 7effecb544952b493250337fc622848232fa5995
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633970"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67325860"
 ---
 # <a name="respond-to-customer-reviews"></a>Responder a las opiniones de los clientes
 
 
 Puede responder a las revisiones de la aplicación para permitir que los clientes sepan que está escuchando a sus comentarios. Con la respuesta a una crítica, puedes contar a los clientes las funciones que has agregado o los errores que has corregido basándote en sus comentarios, u obtener comentarios más específicos sobre cómo mejorar la aplicación. Sus respuestas se mostrará en la Microsoft Store para todos los clientes de Windows 10 ver. También puede enviar la respuesta por correo electrónico al cliente (si aún no ha optado por deshabilitarlo y está usando un dispositivo con Windows 10, versión 1803 o posterior).
 
-Para ver las revisiones de la aplicación y proporcionar las respuestas, busque la aplicación en [centro de partners](https://partner.microsoft.com/dashboard). En el menú de navegación izquierdo, expanda *Analytics** y, a continuación, haga clic en **revisiones** para mostrar el [revisa el informe](reviews-report.md). Seleccione **responden a revisar** para proporcionar la respuesta.
+Para ver las revisiones de la aplicación y proporcionar las respuestas, busque la aplicación en [centro de partners](https://partner.microsoft.com/dashboard). En el menú de navegación izquierdo, expande **Análisis** y, después, haz clic en **Críticas** para mostrar el [informe Críticas](reviews-report.md). Seleccione **responden a revisar** para proporcionar la respuesta.
 
 > [!TIP]
 > Además de usar el centro de partners para responder a las revisiones, puede responder a las revisiones [mediante programación](../monetize/submit-responses-to-app-reviews.md).

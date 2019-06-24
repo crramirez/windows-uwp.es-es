@@ -6,12 +6,12 @@ ms.date: 08/01/2018
 ms.topic: article
 keywords: windows 10, uwp, API de colección de Microsoft Store, API de compra de Microsoft Store, ver productos, conceder productos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0bf85a73cb35044b4be2282c9a13c1e65b836a92
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 184937133b85ae2cac7a21bb6002af70b06d34da
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57604010"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319919"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>Administrar los derechos de producto desde un servicio
 
@@ -25,7 +25,7 @@ Estas API constan de métodos REST diseñados para que los desarrolladores los u
 > [!NOTE]
 > La API de colecciones y la API de compras de Microsoft Store usan autenticación de Azure Active Directory (Azure AD) para acceder a la información de propiedad del cliente. Para usar estas API, tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](https://go.microsoft.com/fwlink/?LinkId=746654) para el directorio. Si ya usas Office 365 u otros servicios empresariales de Microsoft, ya tienes un directorio de Azure AD.
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Los siguientes pasos describen el proceso de principio a fin para usar la API de colecciones y la API de compras de Microsoft Store:
 
@@ -107,7 +107,7 @@ Dependiendo de los métodos con los que quieras llamar en la API de colecciones 
 
 ### <a name="create-the-tokens"></a>Crear los tokens
 
-Para crear los tokens de acceso, usa la API de OAuth 2.0 en tu servicio siguiendo las instrucciones de [Llamadas entre servicios mediante las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
+Para crear los tokens de acceso, usa la API de OAuth 2.0 en tu servicio siguiendo las instrucciones de [Llamadas entre servicios mediante las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
 ``` syntax
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
@@ -122,7 +122,7 @@ grant_type=client_credentials
 
 Para cada token, especifica los siguientes datos de parámetros:
 
-* Para el *cliente\_id* y *cliente\_secreto* parámetros, especifique el identificador de aplicación y el secreto de cliente para la aplicación que obtuvo en el [Portal de administración de azure](https://manage.windowsazure.com). Ambos parámetros se necesitan para crear un token de acceso con el nivel de autenticación que requieren la API de colecciones o la API de compras de Microsoft Store.
+* Para el *cliente\_id* y *cliente\_secreto* parámetros, especifique el identificador de aplicación y el secreto de cliente para la aplicación que obtuvo en el [Portal de administración de azure](https://portal.azure.com/). Ambos parámetros se necesitan para crear un token de acceso con el nivel de autenticación que requieren la API de colecciones o la API de compras de Microsoft Store.
 
 * Para el parámetro *recursos*, especifica uno de los URI de público enumerados en la [sección anterior](#access-tokens), según el tipo de token de acceso que está creando.
 

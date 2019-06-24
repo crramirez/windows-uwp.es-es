@@ -5,20 +5,20 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, Game Hubs, hubs de juegos
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f9e8440384dfac755a4791e71b42dafa80cb957
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: 83f86f4c7dc5fba10650701d2830a7dce809e4ce
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162860"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321800"
 ---
 # <a name="get-xbox-live-game-hub-data"></a>Obtener datos del hub de juegos de Xbox Live
 
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de hub de juegos de tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live//index.md). Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de hub de juegos de tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md). Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
 
 > [!IMPORTANT]
-> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -50,8 +50,8 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|---------------|------|
 | applicationId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de hub de juegos de Xbox Live.  |  Sí  |
 | metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **communitymanagergamehub**.  |  Sí  |
-| startDate | fecha | La fecha de inicio del intervalo de fechas de los datos del hub de juegos que se van a recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
-| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos del hub de juegos que se van a recuperar. El valor predeterminado es la fecha actual. |  No  |
+| startDate | date | La fecha de inicio del intervalo de fechas de los datos del hub de juegos que se van a recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
+| endDate | date | Fecha de finalización del intervalo de fechas de los datos del hub de juegos que se van a recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
 
@@ -79,7 +79,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| fecha                | string | La fecha de los datos del hub de juegos de este objeto. |
+| date                | string | La fecha de los datos del hub de juegos de este objeto. |
 | applicationId       | string | El Id de Store del juego sobre la que estás recuperando los datos del hub de juegos.     |
 | gameHubLikeCount     | número |   El número de "Me gusta" agregados a la página del hub de juegos en la fecha especificada.   |
 | gameHubCommentCount          | número |  El número de comentarios agregados a la página del hub de juegos en la fecha especificada.  |

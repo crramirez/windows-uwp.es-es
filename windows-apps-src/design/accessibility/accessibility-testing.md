@@ -8,12 +8,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8af03b32453bcdacb3da95678cf23a988c375f1b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 60be53bfcb351866a0cf124fe4ef6f21ff889f88
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359640"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318966"
 ---
 # <a name="accessibility-testing"></a>Pruebas de accesibilidad  
 
@@ -95,7 +95,7 @@ Usa tu aplicación mientras esté activo un tema de contraste alto para comproba
 
 ## <a name="verify-your-app-with-display-settings"></a>Comprobar la aplicación con configuración de pantalla  
 
-Usa las opciones de pantalla del sistema para ajustar el valor de puntos por pulgada (ppp) de la pantalla y asegúrate de que la interfaz de usuario de la aplicación se escala correctamente cuando cambie el valor de ppp. (Algunos usuarios cambian valores de PPP como una opción de accesibilidad, está disponible en **de accesibilidad** , así como mostrar las propiedades.) Si encuentra algún problema, siga el [directrices para el diseño escalado](https://developer.microsoft.com/windows/design) y proporcionar recursos adicionales para diferentes factores de escala.
+Usa las opciones de pantalla del sistema para ajustar el valor de puntos por pulgada (ppp) de la pantalla y asegúrate de que la interfaz de usuario de la aplicación se escala correctamente cuando cambie el valor de ppp. (Algunos usuarios cambian valores de PPP como una opción de accesibilidad, está disponible en **de accesibilidad** , así como mostrar las propiedades.) Si encuentra algún problema, siga el [directrices para el diseño escalado](https://developer.microsoft.com/windows/apps/design) y proporcionar recursos adicionales para diferentes factores de escala.
 
 <span id="verify_main_app_scenarios_by_using_narrator"/>
 <span id="VERIFY_MAIN_APP_SCENARIOS_BY_USING_NARRATOR"/>
@@ -164,4 +164,4 @@ Un aspecto que puedes probar es si en la vista de elementos de Automatización d
 * [Prácticas que se deben evitar](practices-to-avoid.md)
 * [Automatización de la interfaz de usuario](https://docs.microsoft.com/windows/desktop/WinAuto/entry-uiauto-win32)
 * [Accesibilidad en Windows](https://go.microsoft.com/fwlink/p/?LinkId=320802)
-* [Empezar a trabajar con Narrador](https://support.microsoft.com/help/22798/windows-10-narrator-get-started)
+* [Empezar a trabajar con Narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

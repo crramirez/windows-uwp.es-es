@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a44a1adb8685ad182620b4c68024176628b9204d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 087192160fd098d63042f3d1ad16fe7a811de337
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369667"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321508"
 ---
 # <a name="enterprise"></a>Empresas
 
@@ -156,8 +156,8 @@ Tienes varias opciones para distribuir aplicaciones a los usuarios de la organiz
 | Tema | Descripción |
 |-------|-------------|
 | [Distribuir aplicaciones de LOB para empresas](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) | Puedes publicar aplicaciones de línea de negocio directamente para que las empresas las compren por volumen a través de Microsoft Store para Empresas, sin necesidad de que las aplicaciones estén disponibles de forma general. |
-| [Aplicaciones en instalación de prueba](https://technet.microsoft.com/library/mt269549) | Al realizar la instalación de prueba de una aplicación, se implementa un paquete de la aplicación firmado en un dispositivo. Es necesario mantener la firma, el hospedaje y la implementación de estas aplicaciones. Se ha simplificado el proceso de instalación de prueba de aplicaciones para Windows 10.             |
-| [Publicar aplicaciones en Microsoft Store](https://dev.windows.com/publish) | El panel unificado de Microsoft Store te permite publicar y administrar todas las aplicaciones de todos los dispositivos Windows. Personaliza la disponibilidad de la aplicación con el precio de cada mercado, los controles de distribución y visibilidad y otras opciones. |
+| [Aplicaciones en instalación de prueba](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) | Al realizar la instalación de prueba de una aplicación, se implementa un paquete de la aplicación firmado en un dispositivo. Es necesario mantener la firma, el hospedaje y la implementación de estas aplicaciones. Se ha simplificado el proceso de instalación de prueba de aplicaciones para Windows 10.             |
+| [Publicar aplicaciones en Microsoft Store](https://developer.microsoft.com/store/publish-apps) | El panel unificado de Microsoft Store te permite publicar y administrar todas las aplicaciones de todos los dispositivos Windows. Personaliza la disponibilidad de la aplicación con el precio de cada mercado, los controles de distribución y visibilidad y otras opciones. |
 
 ## <a name="enterprise-uwp-samples"></a>Ejemplos de UWP de empresa
 

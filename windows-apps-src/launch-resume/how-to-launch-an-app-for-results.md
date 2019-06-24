@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 23d4a4e0159fc18ac524937326e69d6fbc3a627e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 64a093ddd8a53d72ccb6780b73f280e7b2874612
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370712"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320954"
 ---
 # <a name="launch-an-app-for-results"></a>Iniciar una aplicación para obtener resultados
 
@@ -20,10 +20,10 @@ ms.locfileid: "66370712"
 
 **API importantes**
 
--   [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows)
+-   [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync)
 -   [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet)
 
-Aprende a iniciar una aplicación desde otra aplicación y a intercambiar datos entre las dos. Esto se denomina *iniciar una aplicación para obtener resultados*. En el siguiente ejemplo se muestra cómo usar [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows) para iniciar una aplicación para obtener resultados.
+Aprende a iniciar una aplicación desde otra aplicación y a intercambiar datos entre las dos. Esto se denomina *iniciar una aplicación para obtener resultados*. En el siguiente ejemplo se muestra cómo usar [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync) para iniciar una aplicación para obtener resultados.
 
 Nuevas comunicaciones de aplicación a las API de Windows 10 permiten aplicaciones de Windows (y las aplicaciones Web de Windows) iniciar una aplicación y exchange de los datos y archivos. Esto te permite crear soluciones combinadas a partir de varias aplicaciones. Con estas nuevas API, las tareas complejas que hubieran requerido que el usuario usara varias aplicaciones ahora se pueden controlar sin problemas. Por ejemplo, la aplicación podría iniciar una aplicación de redes sociales para elegir un contacto o iniciar una aplicación de confirmación de compra para completar un proceso de pago.
 
@@ -36,8 +36,8 @@ En el archivo Package.appxmanifest de la aplicación iniciada, agrega una extens
 
 El atributo **ReturnResults** de la extensión de protocolo acepta uno de estos valores:
 
--   **optional**: es posible iniciar la aplicación para obtener resultados mediante el método [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows) o para no obtenerlos, con [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync). Cuando se usa **optional**, la aplicación iniciada debe determinar si se inició para obtener resultados. Puede hacerlo si comprueba el argumento del evento [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated). Si la propiedad [**IActivatedEventArgs.Kind**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind) del argumento devuelve [**ActivationKind.ProtocolForResults**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind)o si el tipo del argumento del evento es [**ProtocolActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs), la aplicación se inició mediante **LaunchUriForResultsAsync**.
--   **always**: la aplicación solo se puede iniciar para obtener resultados, es decir, solo puede responder a [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows).
+-   **optional**: es posible iniciar la aplicación para obtener resultados mediante el método [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync) o para no obtenerlos, con [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync). Cuando se usa **optional**, la aplicación iniciada debe determinar si se inició para obtener resultados. Puede hacerlo si comprueba el argumento del evento [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated). Si la propiedad [**IActivatedEventArgs.Kind**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind) del argumento devuelve [**ActivationKind.ProtocolForResults**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind)o si el tipo del argumento del evento es [**ProtocolActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs), la aplicación se inició mediante **LaunchUriForResultsAsync**.
+-   **always**: la aplicación solo se puede iniciar para obtener resultados, es decir, solo puede responder a [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync).
 -   **none**: la aplicación no se puede iniciar para obtener resultados; solo puede responder a [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync).
 
 En este ejemplo de extensión de protocolo, la aplicación solo puede iniciarse para obtener resultados. Esto simplifica la lógica dentro del método **OnActivated**, que se explica a continuación, ya que solo hay que controlar el caso "iniciado para obtener resultados" y no el resto de maneras mediante las que se pudo activar la aplicación.
@@ -186,7 +186,7 @@ string familyName = Windows.ApplicationModel.Package.Current.Id.FamilyName;
 ## <a name="remarks"></a>Comentarios
 
 
-En el ejemplo de este procedimiento se ofrece una introducción de tipo "hola a todos" a fin de iniciar una aplicación para obtener resultados. Los conceptos clave que se deben tener en cuenta son que la nueva API [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows) permite iniciar una aplicación de manera asincrónica y comunicarse a través de la clase [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet). La transmisión de datos a través de un elemento **ValueSet** está limitada a 100 KB. Si necesitas transmitir mayores volúmenes de datos, puedes compartir archivos mediante la clase [**SharedStorageAccessManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) para crear tokens de archivo que se puedan pasar entre aplicaciones. Por ejemplo, si existe un elemento **ValueSet** denominado `inputData`, podrías almacenar el token en un archivo que quieras compartir con la aplicación iniciada:
+En el ejemplo de este procedimiento se ofrece una introducción de tipo "hola a todos" a fin de iniciar una aplicación para obtener resultados. Los conceptos clave que se deben tener en cuenta son que la nueva API [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync) permite iniciar una aplicación de manera asincrónica y comunicarse a través de la clase [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet). La transmisión de datos a través de un elemento **ValueSet** está limitada a 100 KB. Si necesitas transmitir mayores volúmenes de datos, puedes compartir archivos mediante la clase [**SharedStorageAccessManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) para crear tokens de archivo que se puedan pasar entre aplicaciones. Por ejemplo, si existe un elemento **ValueSet** denominado `inputData`, podrías almacenar el token en un archivo que quieras compartir con la aplicación iniciada:
 
 ```cs
 inputData["ImageFileToken"] = SharedStorageAccessManager.AddFile(myFile);
@@ -198,7 +198,7 @@ Después, pásalo a la aplicación iniciada mediante **LaunchUriForResultsAsync*
 
 
 * [**LaunchUri**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)
-* [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.windows)
+* [**LaunchUriForResultsAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync)
 * [**ValueSet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.ValueSet)
 
  

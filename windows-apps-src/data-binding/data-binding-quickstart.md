@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cppcx
-ms.openlocfilehash: 48ba9bb410588b2c4b31f1bb0bb190aeeeb05edf
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: dfe17fc64fd3e97f7562a7feca760b3a5d918f2e
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360167"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318011"
 ---
 # <a name="data-binding-overview"></a>Introducción al enlace de datos
 
@@ -23,7 +23,7 @@ En este tema se muestra cómo enlazar un control (o cualquier otro elemento de i
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-En este tema suponemos que sabes cómo crear una aplicación básica para UWP. Para obtener instrucciones sobre cómo crear tu primera aplicación para UWP, consulta [Introducción a las aplicaciones de Windows](https://developer.microsoft.com/windows/getstarted).
+En este tema suponemos que sabes cómo crear una aplicación básica para UWP. Para obtener instrucciones sobre cómo crear tu primera aplicación para UWP, consulta [Introducción a las aplicaciones de Windows](https://docs.microsoft.com/windows/uwp/get-started/).
 
 ## <a name="create-the-project"></a>Crear el proyecto
 

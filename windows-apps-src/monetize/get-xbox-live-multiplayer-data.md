@@ -5,20 +5,20 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, multiplayer, multijugador
 ms.localizationpriority: medium
-ms.openlocfilehash: 58f470abdf7cbf0770bf01dd123a8fdfd2c2cbea
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
+ms.openlocfilehash: b80a9dc8828459e7734370061e960fad64ab7015
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58163000"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321774"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a>Obtener datos de multijugador de Xbox Live
 
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de multijugador de tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live//index.md) diaria o mensualmente. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
+Usa este método en la API de análisis de Microsoft Store para obtener datos de multijugador de tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md) diaria o mensualmente. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
 
 > [!IMPORTANT]
-> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live//developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live//get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -51,8 +51,8 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|---------------|------|
 | applicationId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para el que quieres recuperar los datos de multijugador de Xbox Live.  |  Sí  |
 | metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **multiplayerdaily** para obtener datos de multijugador diarios o **multiplayermonthly** para obtener datos de multijugador mensuales.  |  Sí  |
-| startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de multijugador que se han de recuperar. Para **multiplayerdaily**, el valor predeterminado es 3 meses antes de la fecha actual. Para **multiplayermonthly**, el valor predeterminado es 1 año antes de la fecha actual. |  No  |
-| endDate | fecha | Fecha de finalización del intervalo de fechas de los datos de multijugador que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
+| startDate | date | La fecha de inicio del intervalo de fechas de los datos de multijugador que se han de recuperar. Para **multiplayerdaily**, el valor predeterminado es 3 meses antes de la fecha actual. Para **multiplayermonthly**, el valor predeterminado es 1 año antes de la fecha actual. |  No  |
+| endDate | date | Fecha de finalización del intervalo de fechas de los datos de multijugador que se han de recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
 | filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Puedes especificar los campos siguientes del cuerpo de respuesta:<p/><ul><li><strong>deviceType</strong></li><li><strong>packageVersion</strong></li><li><strong>market</strong></li><li><strong>subscriptionName</strong></li></ul> | No   |
@@ -84,7 +84,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores cuando solic
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| fecha                | string | La fecha de los datos de multijugador. |
+| date                | string | La fecha de los datos de multijugador. |
 | applicationId       | string | El Id de Store del juego sobre la que estás recuperando los datos de multijugador.     |
 | applicationName       | string |  El nombre del juego sobre la que estás recuperando los datos de multijugador.     |
 | market       | string | El código de país ISO 3166 de dos letras del mercado de donde proceden los datos de multijugador.       |
@@ -107,7 +107,7 @@ Los elementos de la matriz *Value* contienen los siguientes valores cuando solic
 
 | Valor               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| fecha                | string | La primera fecha del mes de los datos de multijugador. |
+| date                | string | La primera fecha del mes de los datos de multijugador. |
 | applicationId       | string | El Id de Store del juego sobre la que estás recuperando los datos de multijugador.     |
 | applicationName       | string |  El nombre del juego sobre la que estás recuperando los datos de multijugador.     |
 | market       | string | El código de país ISO 3166 de dos letras del mercado de donde proceden los datos de multijugador.       |

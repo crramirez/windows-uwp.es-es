@@ -5,12 +5,12 @@ ms.date: 04/21/2017
 ms.topic: article
 keywords: Windows 10, uwp, actualización, la tarea en segundo plano, updatetask, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 3683595926f20fdd9f9af5929db65396b0001bcc
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d943623a9978d39fd3930edc07e7524fe1cadf55
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371487"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321788"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>Ejecutar una tarea en segundo plano cuando se actualice la aplicación para UWP
 
@@ -27,7 +27,7 @@ Al igual que ocurre con otros tipos de tareas en segundo plano, la tarea en segu
 - Agregar un proyecto de componente de Windows Runtime a la solución.
 - Creación de una referencia al componente desde la aplicación.
 - Crear una clase sellada pública en el componente que implemente [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask).
-- Implementar el método [**Ejecutar**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.), que es el punto de entrada necesario al que se llama cuando se ejecuta la tarea de actualización. Si vas a hacer llamadas asincrónicas desde tu tarea en segundo plano, en [Crear y registrar una tarea en segundo plano fuera de proceso](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task) explica cómo usar un aplazamiento en tu método **Ejecutar**.
+- Implementar el método [**Ejecutar**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run), que es el punto de entrada necesario al que se llama cuando se ejecuta la tarea de actualización. Si vas a hacer llamadas asincrónicas desde tu tarea en segundo plano, en [Crear y registrar una tarea en segundo plano fuera de proceso](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task) explica cómo usar un aplazamiento en tu método **Ejecutar**.
 
 No tienes que registrar esta tarea en segundo plano (la sección "Registrar la tarea en segundo plano por ejecutar" del tema **Crear y registrar una tarea en segundo plano fuera de proceso** tema) para usar la tarea de actualización. Este es el motivo principal para usar una tarea de actualización porque no es necesario agregar ningún código a la aplicación para registrar la tarea y no es necesario que la aplicación tenga que ejecutarse al menos una vez antes de actualizarse para registrar la tarea en segundo plano.
 
