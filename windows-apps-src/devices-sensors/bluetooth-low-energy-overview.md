@@ -5,12 +5,12 @@ ms.date: 03/19/2017
 ms.topic: article
 keywords: windows 10, uwp, bluetooth, bluetooth LE, low energy, gatt, gap, central, peripheral, periférico, client, cliente, server, servidor, watcher, monitor, publisher, editor
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f23bdc658d2a82e3edeefd0a7be471ca9620d33
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 7921094c55944b4cfed4fdb3f3e6d895eb7fe0a4
+ms.sourcegitcommit: 58d35b89662d4ad240650933e43fee0b00e9a962
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321610"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344512"
 ---
 # <a name="bluetooth-low-energy"></a>Bluetooth Low Energy
 Bluetooth Low Energy (LE) es una especificación que define los protocolos de detección y comunicación entre dispositivos de consumo eficiente. La detección de dispositivos se hace a través del protocolo de perfil de acceso genérico (GAP). Después de la detección, la comunicación de dispositivo a dispositivo se hace a través del protocolo de atributo genérico (GATT). En este tema se proporciona una introducción rápida de Bluetooth LE en aplicaciones para UWP. Para ver más detalles sobre Bluetooth LE, consulta [Bluetooth Core Specification](https://www.bluetooth.com/specifications/bluetooth-core-specification/) versión 4.0, donde se presentó Bluetooth LE. 
@@ -21,7 +21,7 @@ Bluetooth Low Energy (LE) es una especificación que define los protocolos de de
 
 Los protocolos GATT y GAP se pueden implementar en tu aplicación para UWP usando los siguientes espacios de nombres.
 - [Windows.Devices.Bluetooth.GenericAttributeProfile](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)
-- [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)
+- [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.advertisement)
 
 ## <a name="central-and-peripheral"></a>Central y periféricos
 Los dos roles principales de detección se llaman Central y Periférico. En general, Windows funciona en modo Central y se conecta a distintos dispositivos periféricos. 
@@ -41,5 +41,5 @@ Además de los roles Central y Periférico, existen los roles Observador y Emiso
 
 ## <a name="see-also"></a>Vea también
 - [Windows.Devices.Bluetooth.GenericAttributeProfile](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)
-- [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.genericattributeprofile)
-- [Especificación principal de Bluetooth](https://www.bluetooth.com/specifications/bluetooth-core-specification/)
+- [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.advertisement)
+- [Especificación principal de Bluetooth](https://www.bluetooth.com/specifications/bluetooth-core-specification)

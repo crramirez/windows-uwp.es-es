@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 150ea5fc9f5e91171f29cc985351856487e91d4a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f3cdb9cbb1aa3f62fb711be747c44a0df10fb1ee
+ms.sourcegitcommit: f7e3782e24d46b2043023835c5b59d12d3b4ed4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318757"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345721"
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 
@@ -526,6 +526,18 @@ Si enlazas un control de texto con un valor que no es una cadena, el motor de en
 {x: Bind} permite que el paso final de una ruta de acceso de enlace sea una función. Esto puede usarse para realizar conversiones y para realizar enlaces que dependen de más de una propiedad. Consulte [ **las funciones de x: Bind**](function-bindings.md)
 
 <span id="resource-dictionaries-with-x-bind"/>
+
+## <a name="element-to-element-binding"></a>Enlace de elemento a elemento
+
+Puede enlazar la propiedad de un elemento XAML para la propiedad de otro elemento XAML. Este es un ejemplo de cómo que se muestra en el marcado.
+
+```xaml
+<TextBox x:Name="myTextBox" />
+<TextBlock Text="{x:Bind myTextBox.Text, Mode=OneWay}" />
+```
+
+> [!IMPORTANT]
+> El flujo de trabajo necesarios para el uso de enlace de elemento a elemento C++/WinRT, consulte [enlace de elemento a elemento](/windows/uwp/cpp-and-winrt-apis/binding-property#element-to-element-binding).
 
 ## <a name="resource-dictionaries-with-xbind"></a>Diccionarios de recursos con {x:Bind}
 

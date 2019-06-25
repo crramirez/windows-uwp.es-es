@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e26908839204c67a4746f602acc08c6776e889c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7223123ef6f71a45acc967aa60feffa1003b66d1
+ms.sourcegitcommit: 58d35b89662d4ad240650933e43fee0b00e9a962
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370252"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344528"
 ---
 # <a name="device-information-properties"></a>Propiedades de información de dispositivo
 
@@ -42,7 +42,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 
 **DeviceInterface** es el objeto de [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind) predeterminado y más común que se usa en escenarios de aplicaciones. Este es el tipo de objeto que se debe usar, a menos que la API del dispositivo indique un **DeviceInformationKind** específico distinto.
 
-| Nombre                                  | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                               |
+| Name                                  | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                               |
 |---------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **System.Devices.ContainerId**        | GUID    | Identidad de **DeviceInformationKind.DeviceContainer** que contiene el **Device** que contiene esta **DeviceInterface**. Puedes pasar este valor a [**CreateFromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createfromidasync) junto con **DeviceInformationKind.DeviceContainer** para encontrar el contenedor adecuado.                                                                                    |
 | **System.Devices.InterfaceClassGuid** | GUID    | GUID de clase de interfaz que representa esta interfaz.                                                                                                                                                                                                                                                                                                                                                       |
@@ -57,7 +57,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 
 ## <a name="device-properties"></a>Propiedades de dispositivo
 
-| Name                                  | Tipo       | Descripción                                                                                                                                                                                                                                                                              |
+| Nombre                                  | Tipo       | Descripción                                                                                                                                                                                                                                                                              |
 |---------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **System.Devices.ClassGuid**          | GUID       | Clase de dispositivo que se usa durante la instalación de dispositivos. Para obtener más información, consulta [Clases de configuración de dispositivos](https://docs.microsoft.com/windows-hardware/drivers/install/device-setup-classes).                                                                                                                                                            |
 | **System.Devices.CompatibleIds**      | String\[\] | Identificadores compatibles del dispositivo. Estos se usan cuando Windows está determinando cuál es el controlador más adecuado para instalar en el dispositivo. Para obtener más información, consulta [Identificador Compatible](https://docs.microsoft.com/windows-hardware/drivers/install/compatible-ids).                                                                                                |
@@ -75,7 +75,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 
 ## <a name="devicecontainer-properties"></a>Propiedades de DeviceContainer
 
-| Nombre                              | Tipo       | Descripción                                                                                                                                                        |
+| Name                              | Tipo       | Descripción                                                                                                                                                        |
 |-----------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **System.Devices.Category**       | String\[\] | Lista de descripciones de las categorías a las que pertenece el dispositivo. Esta lista se proporciona como categorías singulares. Por ejemplo, "Mostrar", "Teléfono" o "Dispositivo de Audio".  |
 | **System.Devices.CategoryIds**    | String\[\] | Contiene una lista de las categorías a las que pertenece este dispositivo. Por ejemplo, **Audio.Headphone**, **Display.Monitor** o **Input.Gaming**.                                  |
@@ -101,6 +101,15 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 
  
 
+## <a name="devicepanel-properties"></a>Propiedades de DevicePanel
+
+| Name                                            | Tipo    | Descripción                                                                                                      |
+|-------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------|
+| **System.Devices.Panel.PanelId**                | Cadena  | El identificador de la **DevicePanel** objeto.                                                                    |
+| **System.Devices.Panel.PanelGroup**             | Cadena  | El identificador del elemento primario **PanelGroup**.                                                                      |
+ 
+ 
+ 
 ## <a name="associationendpoint-properties"></a>Propiedades de AssociationEndpoint
 
 | Nombre                                  | Tipo       | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -146,7 +155,7 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 
 ## <a name="associationendpointservice-properties"></a>Propiedades de AssociationEndpointService
 
-| Name                                            | Tipo    | Descripción                                                                                                      |
+| Nombre                                            | Tipo    | Descripción                                                                                                      |
 |-------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------|
 | **System.Devices.AepService.AepId**             | Cadena  | Identificador del objeto primario **AssociationEndpoint**.                                                     |
 | **System.Devices.AepService.ContainerId**       | GUID    | El identificador del objeto primario **AssociationEndpointContainer**.                                            |
@@ -155,9 +164,3 @@ Algunas propiedades son comunes a todos los objetos [**DeviceInformationKind**](
 | **System.Devices.AepService.ServiceClassId**    | GUID    | Identidad del servicio representado por este dispositivo.                                                             |
 | **System.Devices.AepService.ServiceId**         | Cadena  | Identidad de este servicio. Este también es el valor de [**DeviceInformation.Id**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id). |
 | **System.ItemNameDisplay**                      | Cadena  | El mejor nombre para mostrar para este servicio.                                                                           |
-
- 
-
- 
-
- 

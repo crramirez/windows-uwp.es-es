@@ -5,12 +5,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10 s, siempre conectado, emulación x86 en ARM, solución de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f40c53c70a457057f678cdc227a98fc694e2273
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3c29151ae2823aa70711bf002e8954148cc0861b
+ms.sourcegitcommit: f7e3782e24d46b2043023835c5b59d12d3b4ed4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319668"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345671"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>Solución de problemas de aplicaciones de escritorio x86
 >[!IMPORTANT]
@@ -47,3 +47,8 @@ Para investigar el comportamiento de la aplicación con más detalle, consulta [
 
 ## <a name="virtual-machines"></a>Máquinas virtuales
 La plataforma de hipervisor de Windows no se admite en la plataforma de PC de Qualcomm Snapdragon 835 Mobile. Además, ejecutar máquinas virtuales con Hyper-V no funcionará. Continuamos invirtiendo en estas tecnologías en futuros conjuntos de chips de Qualcomm. 
+
+## <a name="dynamic-code-generation"></a>Generación de código dinámico
+X86 las aplicaciones de escritorio se emulan en ARM64 por el sistema para generar instrucciones ARM64 en tiempo de ejecución. Esto significa que si un x86 una aplicación de escritorio evita la generación de código dinámico o no se admite la modificación en su proceso, esa aplicación para ejecutarse como x86 en ARM64. 
+
+Se trata de una solución de seguridad habilitar algunas aplicaciones en su proceso con [SetProcessMitigationPolicy](https://docs.microsoft.com/en-us/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setprocessmitigationpolicy) API con el `ProcessDynamicCodePolicy` marca. Para ejecutar correctamente en ARM64 como un x86 proceso, esta directiva de mitigación tendrá va a deshabilitar. 
