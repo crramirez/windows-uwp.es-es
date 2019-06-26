@@ -11,18 +11,20 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, uwp, WNS, el servicio de notificaciones de windows, notificación, windows, firewall, solución de problemas, IP, el tráfico, enterprise, red, IPv4, VIP, FQDN, dirección IP pública
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ed4ad6ed828abda9d487ef96beca9b655c92421
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 23a9b11cd961e03217aba8ca3d1d988447a2f80b
+ms.sourcegitcommit: b0edd3c09f931b9b62f9c2d17037fb58d826174f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366675"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67349860"
 ---
 # <a name="allowing-windows-notification-traffic-through-enterprise-firewalls"></a>Permitir el tráfico de notificación de Windows a través de firewalls empresariales
 
 ## <a name="background"></a>Background
 Muchas empresas usan los servidores de seguridad para bloquear el tráfico de red no deseado; Lamentablemente, esto puede bloquear también cosas importantes como las comunicaciones de servicios de notificación de Windows. Esto significa que se eliminarán todas las notificaciones enviadas a través de WNS. Para evitar esto, los administradores de red pueden agregar la lista de canales WNS aprobadas a su lista de exención para permitir el tráfico WNS pasar a través del firewall. A continuación se muestran más detalles sobre cómo y qué se va a agregar. 
 
+> [!Note] 
+A partir del 24/6/2019, los clientes de Windows **no** compatibilidad con servidores proxy, la conexión a WNS deben ser una conexión directa.
 
 ## <a name="what-information-should-be-added-to-the-allowlist"></a>¿Qué información debe agregarse a la lista de permitidos
 A continuación es una lista que contiene el FQDN, la VIP y IP intervalos de direcciones usados por el servicio de notificación de Windows. 

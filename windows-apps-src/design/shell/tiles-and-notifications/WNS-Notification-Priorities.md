@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: API de Windows 10, uwp, WinRT, WNS
 localizationpriority: medium
-ms.openlocfilehash: 2719c3228c95075eb2a940d12b6c91049b67f524
-ms.sourcegitcommit: 82edc63a5b3623abce1d5e70d8e200a58dec673c
+ms.openlocfilehash: f5c4b9f1db58a091dc4f9389888ad3739c4439e5
+ms.sourcegitcommit: b0edd3c09f931b9b62f9c2d17037fb58d826174f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58291793"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67349870"
 ---
 # <a name="wns-notification-priorities"></a>Prioridades de notificación de WNS
 Al establecer la prioridad de una notificación con un encabezado simple en mensajes POST WNS, puede controlar cómo se entregan las notificaciones en situaciones confidenciales de la batería.
@@ -41,7 +41,7 @@ Tenga en cuenta que muchas aplicaciones tendrán las notificaciones de prioridad
 
 ## <a name="setting-the-priority"></a>Establecer la prioridad
 
-Establecer la prioridad en la solicitud de notificación se realiza a través de un encabezado adicional en la solicitud POST, `X-WNS-PRIORITY`. Se trata de un valor entero comprendido entre 0 y 3 que se asigna a una prioridad: 
+Establecer la prioridad en la solicitud de notificación se realiza a través de un encabezado adicional en la solicitud POST, `X-WNS-PRIORITY`. Se trata de un valor entero entre 1 y 4 que se asigna a una prioridad: 
 
 | Nombre de prioridad | Valor de X-WNS-prioridad | Valor predeterminado para: |
 |---------------|----------------------|------------------|
