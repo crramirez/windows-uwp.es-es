@@ -1,5 +1,5 @@
 ---
-description: Para continuar la comunicación de red mientras no esté en segundo plano, una aplicación puede usar tareas en segundo plano y cualquier agente de socket o desencadenadores de canal de control.
+description: Para continuar la comunicación de red mientras no está en segundo plano, una aplicación puede usar tareas en segundo plano y un agente de socket o desencadenadores de canal de control.
 title: Comunicaciones de red en segundo plano
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
 ms.date: 06/14/2018
@@ -7,26 +7,26 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b0246e338c13027f8afc8da4aa919faa0911b39c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66371623"
 ---
 # <a name="network-communications-in-the-background"></a>Comunicaciones de red en segundo plano
 Para continuar con la comunicación de red mientras no está en primer plano, la aplicación puede usar tareas en segundo plano y una de estas dos opciones.
-- Agente de socket. Si su aplicación usa sockets para las conexiones a largo plazo, a continuación, cuando sale de primer plano, puede delegar la propiedad de un socket a un agente de socket del sistema. A continuación, el agente: la aplicación se activa cuando llega el tráfico en el socket; transfiere la propiedad a la aplicación; y la aplicación, a continuación, procesa el tráfico entrante.
-- Desencadenadores de canal de control. 
+- Agente de socket. Las aplicaciones que usan sockets para conexiones a largo plazo pueden delegar la propiedad de un socket a un agente de sockets del sistema cuando abandonan el primer plano. A continuación, el agente activa la aplicación cuando llega el tráfico al socket, vuelve a transferir la propiedad a la aplicación y esta procesa el tráfico que llega.
+- Desencadenadores del canal de control. 
 
 ## <a name="performing-network-operations-in-background-tasks"></a>Realizar operaciones de red en tareas en segundo plano
-- Usa un [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.socketactivitytrigger) para activar la tarea en segundo plano cuando se recibe un paquete y necesitas realizar una tarea de corta duración. Después de realizar la tarea, debe finalizar la tarea en segundo plano con el fin de ahorrar energía.
-- Usa un [ControlChannelTrigger](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) para activar la tarea en segundo plano cuando se recibe un paquete y necesitas realizar una tarea de larga duración.
+- Use un [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.socketactivitytrigger) para activar la tarea en segundo plano cuando se recibe un paquete y necesite realizar una tarea de corta duración. Después de realizar la tarea, debe finalizar la tarea en segundo plano para ahorrar potencia.
+- Use un [ControlChannelTrigger](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger) para activar la tarea en segundo plano cuando se recibe un paquete y necesite realizar una tarea de larga duración.
 
-**Las marcas y condiciones relacionados con la red**
+**Marcas y condiciones relacionadas con la red**
 
-- Agrega la condición **InternetAvailable** a tu tarea en segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para retrasar la activación de la tarea en segundo plano hasta que la pila de red se ejecute. Esta condición ahorra energía porque la tarea en segundo plano no se ejecutará hasta que al red esté conectada. Esta condición no proporciona una activación en tiempo real.
+- Agregue la condición **InternetAvailable** a su tarea en segundo plano [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para retrasar la activación de la tarea en segundo plano hasta que la pila de red se ejecute. Esta condición ahorra potencia porque la tarea en segundo plano no se ejecutará hasta que al red esté conectada. Esta condición no proporciona una activación en tiempo real.
 
-Independientemente del desencadenador que uses, establece [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder) en la tarea en segundo plano para garantizar que la red se mantenga conectada mientras se ejecuta la tarea en segundo plano. Esto indica a la infraestructura de tareas en segundo plano que debe mantener conectada la red mientras se esté ejecutando la tarea, incluso si el dispositivo ha entrado en modo de espera conectado. Si no utiliza la tarea en segundo plano **IsNetworkRequested**, la tarea en segundo plano no podrán acceder a la red en modo conectado en espera (por ejemplo, cuando se desactiva la pantalla de un teléfono).
+Independientemente del desencadenador que use, establezca [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder) en la tarea en segundo plano para garantizar que la red se mantenga conectada mientras se ejecuta la tarea en segundo plano. Esto indica a la infraestructura de tareas en segundo plano que debe mantener la red mientras se esté ejecutando la tarea, incluso si el dispositivo ha entrado en modo de espera conectado. Si la tarea en segundo plano no usa **IsNetworkRequested**, la tarea en segundo plano no podrá tener acceso a la red cuando esté en modo de espera conectado (por ejemplo, cuando se deshabilite la pantalla del teléfono).
 
 ## <a name="socket-broker-and-the-socketactivitytrigger"></a>El agente de sockets y SocketActivityTrigger
 Si la aplicación usa las conexiones [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) o [**StreamSocketListener**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener), debes usar [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger) y el agente de sockets para recibir una notificación cuando llegue el tráfico de la aplicación mientras no esté en primer plano.
@@ -150,14 +150,14 @@ case SocketActivityTriggerReason.SocketClosed:
   deferral.Complete();
 ```
 
-Para obtener un ejemplo completo que demuestre el uso de la clase [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger) y del agente de sockets, consulta la muestra de [SocketActivityStreamSocket](https://go.microsoft.com/fwlink/p/?LinkId=620606). Se realiza la inicialización del socket Escenario1\_Connect.xaml.cs y la implementación de la tarea en segundo plano está en SocketActivityTask.cs.
+Para obtener un ejemplo completo que demuestre el uso de la clase [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger) y del agente de sockets, consulta la muestra de [SocketActivityStreamSocket](https://go.microsoft.com/fwlink/p/?LinkId=620606). La inicialización del socket se realiza en Scenario1\_Connect\_Connect.xaml.cs y la implementación de la tarea en segundo plano está en SocketActivityTask.cs.
 
 Probablemente observes que la muestra llama a **TransferOwnership** en cuanto crea un nuevo socket o adquiere un socket existente, en lugar de usar el controlador de eventos **OnSuspending** para llevar a cabo esta opción tal y como se describe en este tema. Esto ocurre porque la muestra se centra en demostrar la clase [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger) y no usa el socket para ninguna otra actividad mientras se está ejecutando. Es probable que la aplicación sea más compleja, por lo que debería usar **OnSuspending** para determinar cuándo llamar a **TransferOwnership**.
 
 ## <a name="control-channel-triggers"></a>Desencadenadores del canal de control
-Primero, asegúrate de que estás usando los desencadenadores del canal de control (CCTs) correctamente. Si usas [ **DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [ **StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket), o [ **StreamSocketListener** ](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener) conexiones, a continuación, se recomienda usar [ **SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger). Puedes usar CCT para el elemento **StreamSocket**, pero ten en cuenta que usan más recursos y podrían no funcionar en el modo de espera conectado.
+Primero, asegúrate de que estás usando los desencadenadores del canal de control (CCTs) correctamente. Si está usando las conexiones [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) o [**StreamSocketListener**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener), te recomendamos que use [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger). Puedes usar CCT para el elemento **StreamSocket**, pero ten en cuenta que usan más recursos y podrían no funcionar en el modo de espera conectado.
 
-Si usa WebSockets, [ **IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2), [ **System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient), o [  **Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient), a continuación, debe usar [ **ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger).
+Si usa los WebSockets, [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2), [**System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) o [**Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient), debe usar [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger).
 
 ## <a name="controlchanneltrigger-with-websockets"></a>WebSockets con ControlChannelTrigger
 Debes tener en cuenta algunos aspectos especiales cuando uses [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) o [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) con [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger). Existen algunos patrones de uso y procedimientos recomendados específicos de transporte que debes seguir al usar la clase **MessageWebSocket** o **StreamWebSocket** con **ControlChannelTrigger**. Asimismo, estos aspectos también afectan la manera en que se controlan las solicitudes para que reciban paquetes en la clase **StreamWebSocket**. Las solicitudes que reciban paquetes en la clase **MessageWebSocket** no se verán afectadas.
@@ -259,7 +259,7 @@ public void OnDataReadCompletion(uint bytesRead, DataReader readPacket)
 
 Otro detalle que ofrece Websocket es el controlador de conexión persistente. El protocolo WebSocket define un modelo estándar para mensajes de conexión persistente.
 
-Cuando uses [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) o [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket), debes registrar una instancia de clase [**WebSocketKeepAlive**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.WebSocketKeepAlive) como [**TaskEntryPoint**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.taskentrypoint) para KeepAliveTrigger para permitir que se anule la suspensión de la aplicación y que esta pueda enviar mensajes de conexión persistente al servidor (punto de conexión remoto) de forma periódica. Esto debe hacerse como parte del código de registro de la aplicación en segundo plano, así como en el manifiesto del paquete.
+Cuando use [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) o [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket), debe registrar una instancia de clase [**WebSocketKeepAlive**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.WebSocketKeepAlive) como [**TaskEntryPoint**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.taskentrypoint) en KeepAliveTrigger, para así permitir que se anule la suspensión de la aplicación y que esta pueda enviar mensajes de conexión persistente al servidor (punto de conexión remoto) de forma periódica. Esto debe hacerse como parte del código de registro de la aplicación en segundo plano, así como en el manifiesto del paquete.
 
 Este punto de entrada de tarea de la clase [**Windows.Sockets.WebSocketKeepAlive**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.WebSocketKeepAlive) debe especificarse en dos lugares:
 

@@ -1,21 +1,21 @@
 ---
 title: Cambios en la API de Windows 10, versión 1607
 description: Los desarrolladores pueden usar la siguiente lista para identificar los espacios de nombres nuevos o cambiados en Windows 10, versión 1607
-keywords: novedades, novedad, actualizar, actualizaciones, Windows 10, 1607, 14393, aniversario
+keywords: novedades, novedad, actualizar, actualizaciones, Windows 10, 1607, 14393, aniversario
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 40335c70-46cc-40fd-9fe0-3cc8e6200482
 ms.localizationpriority: medium
 ms.openlocfilehash: fa390123389b20564a94d1e59f9248adcf673061
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66372925"
 ---
-# <a name="new-apis-in-windows-10-build-14393"></a>Nuevas API en la compilación 14393 de Windows 10
+# <a name="new-apis-in-windows-10-build-14393"></a>Nuevas API en la compilación 14393 de Windows 10
 
-Hay espacios de nombres de API nuevos y actualizados que se han puesto a disposición de los desarrolladores de la compilación 14393 de Windows 10 (también conocida como Actualización de aniversario o versión 1607. Esta tabla enumera los espacios de nombres que se han agregado o cambiado en esta versión.
+Hay espacios de nombres de API nuevos y actualizados que se han puesto a disposición de los desarrolladores de la compilación 14393 de Windows 10 (también conocida como actualización de aniversario o versión 1607. Esta tabla enumera los espacios de nombres que se han agregado o cambiado en esta versión.
 
 
 **Item**
@@ -910,7 +910,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventAr
 
 **Item**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxproposenewtimeformeetingrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxproposenewtimeformeetingrequest)
 
 **Propiedades**
 
@@ -920,7 +920,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeeting
 
 **Item**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxproposenewtimeformeetingrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxproposenewtimeformeetingrequesteventargs)
 
 **Propiedades**
 
@@ -1070,7 +1070,7 @@ Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo <br /> 
 
 **Item**
 
-[Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.licensemanagement.licensesatisfactionresult)
+[Windows.ApplicationModel.Store.LicenseManagement.LicenseManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.licensemanagement.licensesatisfactionresult)
 
 **Propiedades**
 
