@@ -1,45 +1,45 @@
 ---
-title: Pista de aprendizaje - Mostrar clientes en una lista
-description: Información sobre lo que necesitas hacer para mostrar una colección de objetos de cliente en una lista.
+title: 'Pista de aprendizaje: mostrar clientes en una lista'
+description: Información sobre lo que necesitas para mostrar una colección de objetos de cliente en una lista.
 ms.date: 05/07/2018
 ms.topic: article
-keywords: introducción, uwp, windows 10, pista de aprendizaje, enlace de datos, lista
+keywords: introducción;uwp;windows 10;pista de aprendizaje;enlace de datos;lista;get started;learning track;data binding;list
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bd4a1f6747ea68623039b7eac22ac08aaa15d9ea
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.openlocfilehash: a949479a021d4f8de592d1991773dd2e31e9769c
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651380"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "64564482"
 ---
 # <a name="display-customers-in-a-list"></a>Mostrar clientes en una lista
 
-Mostrar y manipular datos reales en la interfaz de usuario es fundamental para la funcionalidad de muchas aplicaciones. En este artículo se mostrará a lo que necesitas saber para mostrar una colección de objetos de cliente en una lista.
+La visualización y manipulación de datos reales en la interfaz de usuario es fundamental para la funcionalidad de muchas aplicaciones. En este artículo se mostrará lo que necesitas saber para mostrar una colección de objetos de cliente en una lista.
 
-Este no es un tutorial. Si quieres uno, consulta nuestro [tutorial de enlace de datos](../data-binding/xaml-basics-data-binding.md), que te proporcionará una experiencia paso a paso guiada.
+Este no es un tutorial. Si estás buscando uno, consulta nuestro [tutorial de enlace de datos](../data-binding/xaml-basics-data-binding.md), que te proporcionará una experiencia paso a paso guiada.
 
-Empezaremos con una descripción rápida del enlace de datos - qué es y cómo funciona. A continuación, agregaremos una **ListView** a la interfaz de usuario, agregaremos el enlace de datos y personalizaremos el enlace de datos con características adicionales. 
+Empezaremos con una descripción rápida del enlace de datos: qué es y cómo funciona. A continuación, agregaremos una **ListView** a la interfaz de usuario, agregaremos el enlace de datos y personalizaremos el enlace de datos con características adicionales.
 
 ## <a name="what-do-you-need-to-know"></a>¿Qué debes saber?
 
-El enlace de datos es una forma de mostrar los datos de la aplicación en su interfaz de usuario. Esto permite *separación de problemas* en tu aplicación, mantener la interfaz de usuario independiente de otro código. Esto crea un modelo conceptual más limpio que es más fácil de leer y mantener.
+El enlace de datos es una forma de mostrar los datos de la aplicación en su interfaz de usuario. Esto permite la *separación de problemas* en tu aplicación, y se la interfaz de usuario se mantiene independiente del resto del código. Esto crea un modelo conceptual más limpio que es más fácil de leer y mantener.
 
 Cada enlace de datos tiene dos partes:
 
 * Un origen que proporciona los datos que se van a enlazar.
-* Un destino en la interfaz de usuario donde se muestran los datos.
+* Un destino en la interfaz de usuario donde se van a mostrar los datos.
 
-Para implementar un enlace de datos, tendrás que agregar código a su origen que proporciona datos para el enlace. También tendrás que agregar una de las dos extensiones de marcado en XAML para especificar las propiedades de origen de datos. Esta es la diferencia principal entre las dos:
+Para implementar un enlace de datos, tendrás que agregar código al origen que proporciona datos para el enlace. También tendrás que agregar una de las dos extensiones de marcado al archivo XAML para especificar las propiedades de origen de datos. Esta es la diferencia principal entre las dos:
 
-* [**x: Bind** ](../xaml-platform/x-bind-markup-extension.md) están fuertemente tipadas y genera el código en tiempo de compilación para mejorar el rendimiento. x: Bind se establece de forma predeterminada de un enlace puntual, que se optimiza para la visualización rápida de datos de solo lectura que no cambian.
-* [**Enlace** ](../xaml-platform/binding-markup-extension.md) es débilmente tipados y ensamblar en tiempo de ejecución. El resultado es rendimiento más pobre que con x:Bind. En casi todos los casos, debes usar x:Bind en lugar de Binding. Sin embargo, es probable que los encuentres en código anterior. Binding se establece de forma predeterminada en transferencia de datos unidireccional, que se optimiza para datos de solo lectura que pueden cambiar en el origen.
+* [**x:Bind**](../xaml-platform/x-bind-markup-extension.md) está fuertemente tipado y genera código en tiempo de compilación para un mejor rendimiento. x:Bind se establece de forma predeterminada para enlaces de un solo uso, por lo que está optimizado para la visualización rápida de datos de solo lectura que no cambian.
+* [**Binding**](../xaml-platform/binding-markup-extension.md) está poco tipado y se ensambla en tiempo de ejecución. Como resultado, su rendimiento es más pobre que el de x:Bind. En casi todos los casos, debes usar x:Bind en lugar de Binding. Sin embargo, es probable que lo encuentres en código antiguo. Binding se establece de forma predeterminada en transferencia de datos unidireccional, por lo que está optimizado para datos de solo lectura que pueden cambiar en el origen.
 
-Te recomendamos que uses **x: Bind** siempre que sea posible y lo mostraremos en los fragmentos de código de este artículo. Para obtener más información sobre las diferencias, consulta [Comparación de características de {x:Bind} y {Binding}](../data-binding/data-binding-in-depth.md#xbind-and-binding-feature-comparison).
+Te recomendamos que uses **x:Bind** siempre que sea posible y lo mostraremos en los fragmentos de código de este artículo. Para obtener más información sobre las diferencias, consulta [Comparación de características de {x:Bind} y {Binding}](../data-binding/data-binding-in-depth.md#xbind-and-binding-feature-comparison).
 
 ## <a name="create-a-data-source"></a>Crear un origen de datos
 
-En primer lugar, necesitarás una clase para represente los datos del cliente. Para ofrecer un punto de referencia, te enseñaremos el proceso en este ejemplo básico:
+En primer lugar, necesitarás una clase para representar los datos del cliente. Como punto de referencia, te enseñaremos el proceso en este ejemplo básico:
 
 ```csharp
 public class Customer
@@ -50,7 +50,7 @@ public class Customer
 
 ## <a name="create-a-list"></a>Crear una lista
 
-Antes de mostrar cualquier cliente, debes crear la lista para que los contenga. La [vista de lista](../design/controls-and-patterns/listview-and-gridview.md) es un control XAML básico ideal para esta tarea. Tu ListView actualmente requiere una posición en la página y pronto necesitará un valor para su propiedad **ItemSource**.
+Antes de mostrar a los clientes, debes crear la lista que va a contenerlos. La [vista de lista](../design/controls-and-patterns/listview-and-gridview.md) es un control XAML básico ideal para esta tarea. Tu ListView actualmente requiere una posición en la página y pronto necesitará un valor para su propiedad **ItemSource**.
 
 ```xaml
 <ListView ItemsSource=""
@@ -92,25 +92,25 @@ public sealed partial class MainPage : Page
 </ListView>
 ```
 
-La [Introducción de enlace de datos](../data-binding/data-binding-quickstart.md#binding-to-a-collection-of-items) te guía a través de un problema similar, en su sección sobre el enlace a una colección de elementos. Este ejemplo muestra los siguientes pasos fundamentales:
+La [Introducción al enlace de datos](../data-binding/data-binding-quickstart.md#binding-to-a-collection-of-items) te guía a través de un problema similar, en su sección sobre el enlace a una colección de elementos. Este ejemplo muestra los siguientes pasos fundamentales:
 
 * En el código subyacente de la interfaz de usuario, crea una propiedad de tipo **ObservableCollection<T>** que contenga los objetos de cliente.
-* Enlaza tu **ItemSource** de ListView a dicha propiedad.
-* Proporciona una **ItemTemplate** básica para la ListView que configurará cómo se muestra cada elemento de la lista.
+* Enlaza el elemento **ItemSource** de ListView a dicha propiedad.
+* Proporciona una plantilla **ItemTemplate** básica para la ListView, que configurará cómo se muestra cada elemento de la lista.
 
-No dudes en volver a examinar en los documentos de la [vista de lista](../design/controls-and-patterns/listview-and-gridview.md) si quieres personalizar el diseño, agregar la selección de elementos o ajustar la **DataTemplate** que acabas de hacer. Pero, ¿qué ocurre si quieres editar tus clientes?
+No dudes en volver a examinar los documentos de la [vista de lista](../design/controls-and-patterns/listview-and-gridview.md) si quieres personalizar el diseño, agregar la selección de elementos o hacer ajustes a la **DataTemplate** que acabas de hacer. Pero, ¿qué ocurre si quieres editar a los clientes?
 
-## <a name="edit-your-customers-through-the-ui"></a>Editar tus clientes a través de la interfaz de usuario
+## <a name="edit-your-customers-through-the-ui"></a>Editar a tus clientes a través de la interfaz de usuario
 
-Has mostrado los clientes en una lista, pero los datos B=binding permiten hacer más. ¿Qué ocurriría si pudieras editar los datos directamente desde la interfaz de usuario? Para ello, primero hablemos sobre los tres modos de enlace de datos:
+Ya mostraste los clientes en una lista, pero el enlace de datos te permite hacer más. ¿Qué ocurriría si pudieras editar los datos directamente desde la interfaz de usuario? Para ello, primero hablemos sobre los tres modos de enlace de datos:
 
-* *Un solo uso*: Este enlace de datos solo se activa una vez y no reacciona a los cambios.
-* *Unidireccional*: Este enlace de datos se actualizará la interfaz de usuario con los cambios realizados en el origen de datos.
-* *Bidireccional*: Este enlace de datos actualizará la interfaz de usuario con los cambios realizados en el origen de datos y también se actualizan los datos con los cambios realizados en la interfaz de usuario.
+* *One-Time*: este enlace de datos solo se activa una vez y no reacciona ante cambios.
+* *One-Way*: este enlace de datos actualizará la interfaz de usuario con los cambios realizados en el origen de datos.
+* *Two-Way*: este enlace de datos actualizará la interfaz de usuario con los cambios realizados en el origen de datos y también actualizará los datos con los cambios realizados en la interfaz de usuario.
 
-Si has seguido los fragmentos de código anteriores, el enlace realizado usa x:Bind y no especifica un modo, lo que hace que sea un enlace puntual. Si quieres editar tus clientes directamente desde la interfaz de usuario, deberás cambiarlo a un enlace bidireccional, para que los cambios de los datos se pasen a los objetos de cliente. Consulta [Enlace de datos en profundidad](../data-binding/data-binding-in-depth.md) para más información.
+Si seguiste los fragmentos de código anteriores, el enlace creado usa x:Bind y no especifica un modo, por lo que es un enlace de un solo uso. Si quieres editar a tus clientes directamente desde la interfaz de usuario, deberás cambiarlo a un enlace bidireccional, a fin de que los cambios de los datos se pasen a los objetos de cliente. Consulta [Enlace de datos en profundidad](../data-binding/data-binding-in-depth.md) para más información.
 
-El enlace bidireccional también actualizará la interfaz de usuario si se cambia el origen de datos. Para que funcione, debes implementar [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged(d=robot).aspx) en el origen y asegurarte de que los establecedores de propiedades generan el evento **PropertyChanged**. Es una práctica habitual que llamen a un método auxiliar como el método **OnPropertyChanged**, tal como se muestra a continuación:
+El enlace bidireccional también actualizará la interfaz de usuario si se cambia el origen de datos. Para que esto funcione, debes implementar [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged(d=robot).aspx) en el origen y asegurarte de que los establecedores de propiedades generan el evento **PropertyChanged**. Es una práctica habitual que llamen a un método auxiliar como **OnPropertyChanged**, tal como se muestra a continuación:
 
 ```csharp
 public class Customer : INotifyPropertyChanged
@@ -134,7 +134,7 @@ public class Customer : INotifyPropertyChanged
         this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 }
 ```
-A continuación, haz que el texto en tu ListView sea editable utilizando un **TextBox** en lugar de un **TextBlock**y asegúrate de establecer **Mode** en los enlaces de datos en **TwoWay**.
+A continuación, haz que el texto en tu ListView sea editable utilizando un **TextBox** en lugar de un **TextBlock** y asegúrate de establecer el valor de **Mode** de los enlaces de datos en **TwoWay**.
 
 ```xaml
 <ListView ItemsSource="{x:Bind Customers}"
@@ -151,40 +151,40 @@ A continuación, haz que el texto en tu ListView sea editable utilizando un **Te
 Una forma rápida de asegurarte de que funciona es agregar una segunda ListView con controles TextBox y enlaces OneWay. Los valores en la segunda lista cambiarán automáticamente mientras se edita la primera.
 
 > [!NOTE]
-> Editar directamente dentro de una ListView es una forma sencilla de mostrar un enlace bidireccional en acción, pero puede llevar a complicaciones de usabilidad. Si buscar llevar tu aplicación más lejos, considera usar [otros controles XAML](../design/controls-and-patterns/controls-and-events-intro.md) para editar tus datos y conservar tu ListView como solo de visualización.
+> La edición directamente desde dentro de una ListView es una forma sencilla de mostrar un enlace bidireccional en acción, pero puede ocasionar a complicaciones de usabilidad. Si buscas llevar tu aplicación más lejos, considera usar [otros controles XAML](../design/controls-and-patterns/controls-and-events-intro.md) para editar tus datos y conservar tu ListView como de solo visualización.
 
 ## <a name="going-further"></a>Ir más allá
 
-Ahora que has creado una lista de clientes con un enlace bidireccional, no dudes en volver a través de los documentos a los que te hemos vinculado y experimenta. También puedes ver nuestro [tutorial de enlace de datos](../data-binding/xaml-basics-data-binding.md) si quieres un tutorial paso a paso de enlaces básicos y avanzados, o investigar controles, como [patrón principal/de detalles](../design/controls-and-patterns/master-details.md) para hacer una interfaz de usuario más sólida.
+Ahora que has creado una lista de clientes con un enlace bidireccional, no dudes en examinar los documentos a los que te vinculamos y experimentar. También puedes ver nuestro [tutorial de enlace de datos](../data-binding/xaml-basics-data-binding.md) si quieres un tutorial paso a paso de enlaces básicos y avanzados, o investigar controles como el [patrón de maestro y detalles](../design/controls-and-patterns/master-details.md) para hacer una interfaz de usuario más sólida.
 
 ## <a name="useful-apis-and-docs"></a>API y documentos de utilidad
 
-Este es un resumen rápido de las API y otra documentación útiles que te ayudarán a comenzar a trabajar con enlace de datos.
+Este es un resumen rápido de las API y otra documentación útiles que te ayudarán a comenzar a trabajar con los enlaces de datos.
 
 ### <a name="useful-apis"></a>API útiles
 
 | API | Descripción |
 |------|---------------|
 | [Plantilla de datos](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) | Describe la estructura visual de un objeto de datos, lo que permite la visualización de elementos específicos de la interfaz de usuario. |
-| [x: Bind](../xaml-platform/x-bind-markup-extension.md) | Documentación sobre la extensión de marcado x:Bind recomendada. |
-| [enlace](../xaml-platform/binding-markup-extension.md) | Documentación sobre la extensión de marcado Binding antigua. |
-| [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | Un control de interfaz de usuario que muestra los elementos de datos en una pila vertical. |
-| [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Un control de texto básico para mostrar datos de texto editable en la interfaz de usuario. |
-| [INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged(d=robot).aspx) | La interfaz para hacer que los datos sean observables, proporcionándolos a un enlace de datos. |
+| [x:Bind](../xaml-platform/x-bind-markup-extension.md) | Documentación sobre la extensión de marcado x:Bind recomendada. |
+| [Binding](../xaml-platform/binding-markup-extension.md) | Documentación sobre la extensión de marcado Binding antigua. |
+| [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | Control de interfaz de usuario que muestra los elementos de datos en una pila vertical. |
+| [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Control de texto básico para mostrar datos de texto editable en la interfaz de usuario. |
+| [INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged(d=robot).aspx) | Interfaz para hacer que los datos sean observables al proporcionárselos a un enlace de datos. |
 | [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) | La propiedad **ItemsSource** de esta clase permite enlazar una ListView a un origen de datos. |
 
 ### <a name="useful-docs"></a>Documentos útiles
 
 | Tema | Descripción |
 |-------|----------------|
-| [Enlace de datos en profundidad](../data-binding/data-binding-in-depth.md) | Una introducción básica de los principios de enlace de datos |
-| [Información general sobre el enlace de datos](../data-binding/data-binding-quickstart.md) | Información conceptual detallada sobre el enlace de datos. |
+| [Enlace de datos en profundidad](../data-binding/data-binding-in-depth.md) | Introducción básica a los principios del enlace de datos. |
+| [Introducción al enlace de datos](../data-binding/data-binding-quickstart.md) | Información conceptual detallada sobre el enlace de datos. |
 | [Vista de lista](../design/controls-and-patterns/listview-and-gridview.md) | Información sobre cómo crear y configurar una ListView, incluida la implementación de una **DataTemplate** |
 
-## <a name="useful-code-samples"></a>Muestras de código útiles
+## <a name="useful-code-samples"></a>Ejemplos de código útiles
 
 | Ejemplo de código | Descripción |
 |-----------------|---------------|
-| [Tutorial de enlace de datos](../data-binding/xaml-basics-data-binding.md) | Una experiencia paso a paso guiada a través de los conceptos básicos del enlace de datos. |
-| [ListView y GridView](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView) | Explora más ListViews elaboradas con enlace de datos. |
-| [QuizGame](https://github.com/Microsoft/Windows-appsample-networkhelper) | Consulta el enlace de datos en acción, incluida la clase **BindableBase** (en la carpeta "Common") para una implementación estándar de **INotifyPropertyChanged**. |
+| [Tutorial de enlace de datos](../data-binding/xaml-basics-data-binding.md) | Experiencia paso a paso guiada a través de los conceptos básicos del enlace de datos. |
+| [ListView y GridView](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView) | Explora ListViews con enlace de datos más complejas. |
+| [QuizGame](https://github.com/Microsoft/Windows-appsample-networkhelper) | Mira al enlace de datos en acción, incluida la clase **BindableBase** (en la carpeta "Common") para una implementación estándar de **INotifyPropertyChanged**. |
