@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 72b7f168c9f4e812b1cfb459ebea91f61a988122
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 24ae3fb7442ac955b5edf4127dfdf66176c81a43
+ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371305"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399629"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Crear una aplicación de inicio de sesión de Windows Hello
 
@@ -224,10 +224,14 @@ En este ejercicio aprenderás a comprobar si Windows Hello está configurado en 
     }
     ```
 
--   Necesitarás un medio para controlar las cuentas. Para esta práctica de laboratorio, dado que no hay ningún servidor ni base de datos, una lista de usuarios se guardará y se cargará localmente. Haz clic con el botón secundario en la carpeta Utils y agrega una nueva clase denominada "AccountHelper.cs". Cambia la definición de clase para que sea estática pública. AccountHelper es una clase estática que contendrá todos los métodos necesarios para guardar y cargar la lista de cuentas localmente. La acción de guardar y cargar funcionará si se usa un XmlSerializer. También deberá recordar el archivo que guardó y dónde lo guardó. Será necesario hacer referencia a espacios de nombres adicionales.
+-   Necesitarás un medio para controlar las cuentas. Para esta práctica de laboratorio, dado que no hay ningún servidor ni base de datos, una lista de usuarios se guardará y se cargará localmente. Haz clic con el botón secundario en la carpeta Utils y agrega una nueva clase denominada "AccountHelper.cs". Cambia la definición de clase para que sea estática pública. AccountHelper es una clase estática que contendrá todos los métodos necesarios para guardar y cargar la lista de cuentas localmente. La acción de guardar y cargar funcionará si se usa un XmlSerializer. También deberá recordar el archivo que guardó y dónde lo guardó.
     
     ```cs
+    using System;
+    using System.Collections.Generic;
     using System.IO;
+    using System.Text;
+    using System.Threading.Tasks;
     using System.Xml.Serialization;
     using Windows.Storage;
     using PassportLogin.Models;
