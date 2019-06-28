@@ -1,16 +1,16 @@
 ---
 title: Realizar un seguimiento de los cambios del sistema de archivos en segundo plano
-description: Describe cómo realizar el seguimiento de cambios en archivos y carpetas en segundo plano como usuarios moverlos por el sistema.
+description: Describe cómo realizar el seguimiento de cambios en archivos y carpetas en segundo plano a medida que los usuarios los mueven por el sistema.
 ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b0ec7762fd64f0f0b8de65faa1aaf079bdaba3a3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621580"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63807017"
 ---
 # <a name="track-file-system-changes-in-the-background"></a>Realizar un seguimiento de los cambios del sistema de archivos en segundo plano
 
@@ -21,32 +21,32 @@ ms.locfileid: "57621580"
 -   [**StorageLibraryChangedTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger)
 -   [**StorageLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary)
 
-El [ **StorageLibraryChangeTracker** ](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageLibraryChangeTracker) clase permite que las aplicaciones realizar un seguimiento de cambios en archivos y carpetas a los usuarios les desplazarse por el sistema. Mediante el **StorageLibraryChangeTracker** (clase), una aplicación puede realizar un seguimiento:
+La clase [ **StorageLibraryChangeTracker** ](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageLibraryChangeTracker) permite a las aplicaciones realizar un seguimiento de cambios en archivos y carpetas a medida que los usuarios los mueven por el sistema. Mediante la clase **StorageLibraryChangeTracker**, una aplicación puede realizar un seguimiento:
 
-- Operaciones de agregar archivos, eliminar, modificar.
-- Operaciones de carpeta, como cambios de nombre y las eliminaciones.
-- Los archivos y carpetas mover en la unidad.
+- Operaciones con archivos, incluidas agregar, eliminar, modificar.
+- Operaciones con carpetas como cambios de nombre y eliminaciones.
+- Archivos y carpetas que se mueven en la unidad de disco.
 
-Utilice esta guía para conocer el modelo de programación para trabajar con el seguimiento de cambios, ver algunos ejemplos de código y comprender los distintos tipos de operaciones de archivo que realiza el seguimiento **StorageLibraryChangeTracker**.
+Utilice esta guía para conocer el modelo de programación para trabajar con el seguimiento de cambios, ver algunos ejemplos de código y comprender los distintos tipos de operaciones de archivo cuyo seguimiento realiza **StorageLibraryChangeTracker**.
 
-**StorageLibraryChangeTracker** funciona para las bibliotecas de usuario, o para cualquier carpeta en el equipo local. Esto incluye unidades secundarias o las unidades extraíbles, pero no incluye las unidades NAS o unidades de red.
+**StorageLibraryChangeTracker** funciona para las bibliotecas de usuario o para cualquier carpeta en el equipo local. Esto incluye unidades secundarias o las unidades extraíbles, pero no incluye las unidades de servidor NAS o unidades de red.
 
-## <a name="using-the-change-tracker"></a>Usar el seguimiento de cambios
+## <a name="using-the-change-tracker"></a>Uso del seguimiento de cambios
 
-El seguimiento de cambios se implementa en el sistema como un búfer circular almacenar la última *N* las operaciones de sistema de archivos. Las aplicaciones pueden leer los cambios en el búfer y, a continuación, procesarlos en sus propias experiencias. Una vez finalizada la aplicación con los cambios marca los cambios como procesado y nunca verlos nuevamente.
+El seguimiento de cambios se implementa en el sistema como un búfer circular que almacena las últimas operaciones de sistema de archivos *N*. Las aplicaciones pueden leer los cambios en el búfer y, a continuación, procesarlos en sus propias experiencias. Una vez que la aplicación termina con los cambios, los marca como procesados y nunca se verán nuevamente.
 
 Para usar el seguimiento de cambios en una carpeta, siga estos pasos:
 
-1. Habilitar el seguimiento de cambios para la carpeta.
-2. Espere a que los cambios.
-3. Leer los cambios.
-4. Aceptar cambios.
+1. Habilite el seguimiento de cambios para la carpeta.
+2. Espere los cambios.
+3. Lea los cambios.
+4. Acepte los cambios.
 
-Las secciones siguientes se guiarán a través de cada uno de los pasos con algunos ejemplos de código. Ejemplo de código completo se proporciona al final del artículo.
+Las secciones siguientes lo guiarán a través de cada uno de los pasos con algunos ejemplos de código. El ejemplo de código completo se proporciona al final del artículo.
 
 ### <a name="enable-the-change-tracker"></a>Habilitar el seguimiento de cambios
 
-Lo primero que la aplicación debe hacer es indicar al sistema que está interesada en una biblioteca concreta de seguimiento de cambios. Esto hace una llamada a la [ **habilitar** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) método en el seguimiento de cambios para la biblioteca de interés.
+Lo primero que la aplicación debe hacer es indicar al sistema que está interesada en una biblioteca concreta de seguimiento de cambios. Esto hace una llamada al método [ **Enable** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) en el seguimiento de cambios para la biblioteca de interés.
 
 ```csharp
 StorageLibrary videosLib = await StorageLibrary.GetLibraryAsync(KnownLibraryId.Videos);
@@ -54,20 +54,20 @@ StorageLibraryChangeTracker videoTracker = videosLib.ChangeTracker;
 videoTracker.Enable();
 ```
 
-Algunas notas importantes:
+Otras notas importantes:
 
-- Asegúrese de que la aplicación tiene permiso para la biblioteca en el manifiesto correcta antes de crear el [ **StorageLibrary** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary) objeto. Consulte [permisos de acceso de archivo](https://docs.microsoft.com/en-us/windows/uwp/files/file-access-permissions) para obtener más detalles.
-- [**Habilitar** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) es seguro para subprocesos, no se restablecerá el puntero y pueden llamarse tantas veces como sea necesario (volveremos sobre esto más adelante).
+- Asegúrese de que la aplicación tiene permiso para la biblioteca correcta en el manifiesto antes de crear el objeto [ **StorageLibrary** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary). Para más información, consulte [Permisos de acceso de archivos](https://docs.microsoft.com/en-us/windows/uwp/files/file-access-permissions).
+- [**Habilitar** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) es seguro para subprocesos, no se restablecerá el puntero y puede llamarse tantas veces como sea necesario (volveremos sobre esto más adelante).
 
 ![Habilitar un seguimiento de cambios vacío](images/changetracker-enable.png)
 
-### <a name="wait-for-changes"></a>Espere a que los cambios
+### <a name="wait-for-changes"></a>Espere los cambios
 
-Una vez inicializado el seguimiento de cambios, comenzará a registrar todas las operaciones que se producen dentro de una biblioteca, aunque no se está ejecutando la aplicación. Las aplicaciones pueden registrarse para activarse siempre que hay un cambio al registrarse para obtener el [ **StorageLibraryChangedTrigger** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger) eventos.
+Una vez inicializado el seguimiento de cambios, comenzará a registrar todas las operaciones que se producen dentro de una biblioteca, aunque no se está ejecutando la aplicación. Las aplicaciones pueden registrarse para activarse siempre que hay un cambio al registrarse para obtener el evento [ **StorageLibraryChangedTrigger** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger).
 
-![Cambios que se va a agregar al seguimiento de cambios sin la aplicación leerlos](images/changetracker-waiting.png)
+![Los cambios se agregan al seguimiento de cambios sin que la aplicación los lea.](images/changetracker-waiting.png)
 
-### <a name="read-the-changes"></a>Leer los cambios
+### <a name="read-the-changes"></a>Lea los cambios
 
 La aplicación puede sondear en busca de cambios desde el seguimiento de cambios y recibir una lista de los cambios desde la última vez que se registró. El código siguiente muestra cómo obtener una lista de cambios desde el seguimiento de cambios.
 
@@ -83,53 +83,53 @@ La aplicación es responsable de procesar los cambios en su propia experiencia o
 ![Lectura de los cambios desde el seguimiento de cambios en una base de datos de aplicación](images/changetracker-reading.png)
 
 > [!TIP]
-> Es la segunda llamada a habilitar para defenderse contra una condición de carrera si el usuario agrega otra carpeta a la biblioteca mientras la aplicación lee los cambios. Sin la llamada adicional a **habilitar** el código se producirá un error con ecSearchFolderScopeViolation (0 x 80070490) si el usuario está cambiando las carpetas en la biblioteca
+> La segunda llamada a habilitar es para defenderse contra una condición de carrera si el usuario agrega otra carpeta a la biblioteca mientras la aplicación lee los cambios. Sin la llamada adicional para **Habilitar** el código se producirá un error con ecSearchFolderScopeViolation (0 x 80070490) si el usuario está cambiando las carpetas en la biblioteca.
 
-### <a name="accept-the-changes"></a>Aceptar los cambios
+### <a name="accept-the-changes"></a>Acepte los cambios
 
-Después de realiza la aplicación de procesamiento de los cambios, debe indicar al sistema nunca volver a mostrar esos cambios llamando el [ **AcceptChangesAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.acceptchangesasync) método.
+Después de que la aplicación terminó de procesar los cambios, debe indicar al sistema nunca volver a mostrar esos cambios llamando el método [ **AcceptChangesAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.acceptchangesasync).
 
 ```csharp
 await changeReader.AcceptChangesAsync();
 ```
 
-![Marcar los cambios como leídos por lo que nunca se mostrarán nuevo](images/changetracker-accepting.png)
+![Marcar los cambios como leídos para que nunca se muestren de nuevo.](images/changetracker-accepting.png)
 
 La aplicación ahora solo recibirá nuevos cambios al leer el seguimiento de cambios en el futuro.
 
-- Si se han producido cambios entre llamar a [ **ReadBatchAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.readbatchasync) y [AcceptChangesAsync](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.acceptchangesasync), será el puntero solo avanza hasta el último cambio que ha visto la aplicación. Esos otros cambios todavía estará disponibles la próxima vez que llama a **ReadBatchAsync**.
-- No acepta los cambios harán que el sistema devolver el mismo conjunto de cambios la próxima vez las llamadas de aplicación **ReadBatchAsync**.
+- Si se han producido cambios entre la llamada a [ **ReadBatchAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.readbatchasync) y [AcceptChangesAsync](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader.acceptchangesasync), el puntero solo avanzará hasta el último cambio que ha visto la aplicación. Esos otros cambios todavía estarán disponibles la próxima vez que llama a **ReadBatchAsync**.
+- No aceptar los cambios hará que el sistema devuelva el mismo conjunto de cambios la próxima vez que la aplicación llame a **ReadBatchAsync**.
 
-## <a name="important-things-to-remember"></a>Cosas importantes que recordar
+## <a name="important-things-to-remember"></a>Cosas que recordar
 
 Al usar el seguimiento de cambios, hay algunas cosas que debe tener en cuenta para asegurarse de que todo funciona correctamente.
 
 ### <a name="buffer-overruns"></a>Saturaciones del búfer
 
-Aunque se intenta reservar suficiente espacio en el seguimiento de cambios para contener todas las operaciones que se producen en el sistema hasta que la aplicación puede leerlas, es muy fácil imaginar un escenario donde la aplicación no lee los cambios antes de que el búfer circular sobrescribe propio. Especialmente si el usuario es restaurar datos desde una copia de seguridad o la sincronización de una colección grande de imágenes desde su teléfono con cámara.
+Aunque intentamos reservar suficiente espacio en el seguimiento de cambios para contener todas las operaciones que se producen en el sistema hasta que la aplicación puede leerlas, es muy fácil imaginar un escenario donde la aplicación no lee los cambios antes de que el búfer circular se sobrescriba. Especialmente si el usuario restaura datos desde una copia de seguridad o sincroniza una colección grande de imágenes desde su teléfono con cámara.
 
-En este caso, **ReadBatchAsync** devolverá el código de error [ **StorageLibraryChangeType.ChangeTrackingLost**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetype). Si la aplicación recibe este código de error, significa que un par de cosas:
+En este caso, **ReadBatchAsync** devolverá el código de error [ **StorageLibraryChangeType.ChangeTrackingLost**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetype). Si la aplicación recibe este código de error, significa un par de cosas:
 
-* El búfer ha sobrescrito a sí mismo desde la última vez que se ve. La mejor forma de acción es volver a rastrear la biblioteca, porque toda la información de la herramienta de seguimiento estará incompleta.
-* El seguimiento de cambios no devolverá más cambios hasta que llame a [ **restablecer**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.reset). Después de la aplicación llama a restablecer, se moverá el puntero para el cambio más reciente y seguimiento se reanudará con normalidad.
+* El búfer se ha sobrescrito desde la última vez que lo notó. El mejor procedimiento es volver a rastrear la biblioteca, porque toda la información de la herramienta de seguimiento estará incompleta.
+* El seguimiento de cambios no devolverá más cambios hasta que llame a [ **Restablecer**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.reset). Después de que la aplicación llama a restablecer, el puntero se moverá al cambio más reciente y el seguimiento se reanudará con normalidad.
 
-Debería ser excepcional para obtener estos casos, pero en escenarios donde el usuario está moviendo un gran número de archivos en su disco no queremos que el seguimiento de cambios para aumentar y tardar demasiado almacenamiento. Esto debe permitir que las aplicaciones reaccionar a las operaciones del sistema de archivos grandes y no dañar la experiencia del cliente en Windows.
+Debería ser excepcional llegar a estos casos, pero en escenarios donde el usuario está moviendo un gran número de archivos en su disco no queremos que el seguimiento de cambios se hinche y ocupe demasiado espacio de almacenamiento. Esto debe permitir que las aplicaciones reaccionen a las operaciones del sistema de archivos grandes y no dañen la experiencia del cliente en Windows.
 
 ### <a name="changes-to-a-storagelibrary"></a>Cambios realizados en un StorageLibrary
 
-El [ **StorageLibrary** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary) clase existe como un grupo virtual de las carpetas raíz que contiene otras carpetas. Para conciliar esto con un seguimiento de cambios de archivo del sistema, hemos realizado las siguientes opciones:
+La clase [ **StorageLibrary** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary) existe como un grupo virtual de las carpetas raíz que contiene otras carpetas. Para conciliar esto con un seguimiento de cambios sistema de archivos, hemos realizado las siguientes opciones:
 
-- Los cambios realizados en los descendientes de las carpetas raíz de la biblioteca se representará en el seguimiento de cambios. Las carpetas raíz de la biblioteca se pueden encontrar mediante el [ **carpetas** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) propiedad.
-- Agregar o quitar carpetas raíz de un **StorageLibrary** (a través de [ **RequestAddFolderAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestaddfolderasync) y [ **RequestRemoveFolderAsync**  ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestremovefolderasync)) no creará una entrada en el seguimiento de cambios. Se pueden realizar el seguimiento de estos cambios a través de la [ **DefinitionChanged** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.definitionchanged) eventos, o bien recorriendo las carpetas raíz de la biblioteca con el [ **carpetas** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) propiedad.
-- Si una carpeta con contenido en él se agrega a la biblioteca, no habrá un cambio de notificación o cambio entradas de seguimiento generadas. Los cambios subsiguientes a los descendientes de esa carpeta generará las notificaciones y cambiar las entradas de seguimiento.
+- Los cambios en los descendientes de las carpetas raíz de la biblioteca se representarán en el seguimiento de cambios. Las carpetas raíz de la biblioteca se pueden encontrar mediante la propiedad [ **Carpetas** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders).
+- Agregar o quitar carpetas raíz de un **StorageLibrary** (a través de [ **RequestAddFolderAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestaddfolderasync) y [ **RequestRemoveFolderAsync**  ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestremovefolderasync)) no creará una entrada en el seguimiento de cambios. Se pueden realizar el seguimiento de estos cambios a través del evento [ **DefinitionChanged** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.definitionchanged) o bien recorriendo las carpetas raíz de la biblioteca con la propiedad [ **carpetas** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders).
+- Si una carpeta con contenido en ella se agrega a la biblioteca, no habrá una notificación de cambio ni se generarán entradas de seguimiento de cambio. Los cambios subsiguientes a los descendientes de esa carpeta generarán notificaciones y cambiarán las entradas de seguimiento.
 
-### <a name="calling-the-enable-method"></a>Una llamada al método Enable
+### <a name="calling-the-enable-method"></a>Llamada al método Enable
 
-Las aplicaciones deben llamar [ **habilitar** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) en cuanto inicie el sistema de archivos de seguimiento y antes de cada enumeración de los cambios. Así se asegurará de que se capturarán todos los cambios realizados por el seguimiento de cambios.  
+Las aplicaciones deben llamar [ **Enable** ](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker.enable) en cuanto inicie seguimiento del sistema de archivos y antes de cada enumeración de los cambios. Así asegurará que se capturarán todos los cambios realizados por el seguimiento de cambios.  
 
-## <a name="putting-it-together"></a>Incorporación de todos
+## <a name="putting-it-together"></a>Reunión de todo
 
-Aquí está todo el código que se usa para registrar los cambios de la biblioteca de vídeos y extraer los cambios desde el seguimiento de cambios.
+Aquí está todo el código que se usa para registrar los cambios de la biblioteca de vídeos e iniciar a extraer los cambios desde el seguimiento de cambios.
 
 ```csharp
 private async void EnableChangeTracker()
