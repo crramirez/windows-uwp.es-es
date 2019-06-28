@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 4846a29e914ffed15e4c3dea938cc51cefd566e0
-ms.sourcegitcommit: b9e2cd5232ad98f4ef367881b92000a3ae610844
+ms.openlocfilehash: 0545ea525b96d3a9310f3a761fd60a644f21baeb
+ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67131946"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414080"
 ---
 # <a name="call-uwp-apis-in-desktop-apps"></a>Llamar a las API de UWP en aplicaciones de escritorio
 
@@ -29,20 +29,46 @@ Tendrás que realizar algunos cambios en tu proyecto para usar las API de UWP.
 
 ### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Modificar un proyecto de .NET para usar Windows Runtime APIs
 
+Hay dos opciones para proyectos de. NET:
+
+* Si la aplicación tiene como destino Windows 10, versión 1803 o posterior, puede instalar un paquete de NuGet que proporciona todas las referencias necesarias.
+* Como alternativa, puede agregar manualmente las referencias.
+
+#### <a name="to-use-the-nuget-option"></a>Para usar la opción de NuGet
+
+1. Asegúrese de que [referencias de paquete](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) están habilitadas:
+
+    1. En Visual Studio, haga clic en **Herramientas -> Administrador de paquetes NuGet -> configuración del Administrador de paquetes**.
+    2. Asegúrese de que **PackageReference** está seleccionada para **formato de administración de paquetes predeterminado**.
+
+2. Con el proyecto abierto en Visual Studio, haga clic en el proyecto en **el Explorador de soluciones** y elija **administrar paquetes de NuGet**.
+
+3. En el **Administrador de paquetes de NuGet** ventana, seleccione el **examinar** pestaña y busque `Microsoft.Windows.SDK.Contracts`.
+
+4. Después de la `Microsoft.Windows.SDK.Contracts` paquete se encuentra en el panel derecho de la **Administrador de paquetes de NuGet** ventana Seleccione el **versión** del paquete que desea instalar en función de la versión de Windows 10 como destino:
+
+    * **10.0.18362.xxxx-preview**: Elija esta opción para Windows 10, versión 1903.
+    * **10.0.17763.xxxx-preview**: Elija esta opción para Windows 10, versión 1809.
+    * **10.0.17134.xxxx-preview**: Elija esta opción para Windows 10, versión 1803.
+
+5. Haga clic en **Instalar**.
+
+#### <a name="to-add-the-required-references-manually"></a>Para agregar manualmente las referencias necesarias
+
 1. Abre el cuadro de diálogo **Administrador de referencias**, elige el botón **Examinar** y, a continuación, selecciona **Todos los archivos**.
 
     ![Cuadro de diálogo Agregar referencia](images/desktop-to-uwp/browse-references.png)
 
 2. Agregue una referencia a estos archivos.
 
-  |Archivo|Location|
-  |--|--|
-  |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-  |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-  |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-  |windows.winmd|C:\Program archivos (x86) \Windows Kits\10\UnionMetadata\\<*sdk versión*> \Facade|
-  |Windows.Foundation.UniversalApiContract.winmd|C:\Program archivos (x86) \Windows Kits\10\References\\<*sdk versión*> \Windows.Foundation.UniversalApiContract\<*versión*>|
-  |Windows.Foundation.FoundationContract.winmd|C:\Program archivos (x86) \Windows Kits\10\References\\<*sdk versión*> \Windows.Foundation.FoundationContract\<*versión*>|
+    |Archivo|Location|
+    |--|--|
+    |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+    |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+    |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+    |windows.winmd|C:\Program archivos (x86) \Windows Kits\10\UnionMetadata\\<*sdk versión*> \Facade|
+    |Windows.Foundation.UniversalApiContract.winmd|C:\Program archivos (x86) \Windows Kits\10\References\\<*sdk versión*> \Windows.Foundation.UniversalApiContract\<*versión*>|
+    |Windows.Foundation.FoundationContract.winmd|C:\Program archivos (x86) \Windows Kits\10\References\\<*sdk versión*> \Windows.Foundation.FoundationContract\<*versión*>|
 
 3. En la ventana **Propiedades**, establece el campo **Copia local** de cada archivo *.winmd* en **False**.
 
