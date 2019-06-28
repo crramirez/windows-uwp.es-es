@@ -1,26 +1,26 @@
 ---
 title: Obtener muestras de aplicaciones para UWP
-description: Aprende a descargar las muestras de código de UWP desde GitHub.
+description: Aprende a descargar muestras de código de UWP desde GitHub
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, Windows 10, uwp, UWP, sample code, código de muestra, code samples, muestras de código
+keywords: windows 10, uwp, código de ejemplo, ejemplos de código
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cdf38a4bd77c4f6affb813c9e1de68463c43100
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598540"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63772204"
 ---
 # <a name="get-uwp-app-samples"></a>Obtener muestras de aplicaciones para UWP
 
-Las muestras de aplicaciones para la Plataforma universal de Windows (UWP) están disponibles en los repositorios de GitHub. Consulta [Muestras](https://developer.microsoft.com/windows/samples "Muestras del Centro de desarrollo") para una lista categorizada que permite búsquedas, o examina el repositorio [Microsoft/Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples "Universal Windows Platform app samples GitHub repository"), que contiene ejemplos que demuestran todas las características de UWP y sus patrones de uso de API.  
-![Repositorio de ejemplo de GitHub UWP](images/GitHubUWPSamplesPage.png)
+Las muestras de aplicaciones para Plataforma Universal de Windows (UWP) están disponibles en los repositorios de GitHub. Consulta [Muestras](https://developer.microsoft.com/windows/samples "Muestras del Centro de desarrollo") para obtener una lista categorizada que permite búsquedas, o bien examina el repositorio [Microsoft/Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples "Repositorio de GitHub de muestras de aplicaciones para Plataforma Universal de Windows"), que contiene ejemplos que demuestran todas las características de UWP y sus patrones de uso de API.  
+![Repositorio de muestras de UWP de GitHub](images/GitHubUWPSamplesPage.png)
 
 ## <a name="download-the-code"></a>Descarga del código
 
-Para descargar las muestras, dirígete al [repositorio](https://github.com/Microsoft/Windows-universal-samples "Repositorio de GitHub de muestras de aplicaciones de la Plataforma universal de Windows"), selecciona **Clone or download** y **Download ZIP**. O bien, haz clic [aquí](https://github.com/Microsoft/Windows-universal-samples/archive/master.zip "Descarga de archivos ZIP de muestras de aplicaciones de la Plataforma universal de Windows").
+Para descargar las muestras, dirígete al [repositorio](https://github.com/Microsoft/Windows-universal-samples "Repositorio de GitHub de muestras de aplicaciones para Plataforma Universal de Windows"), selecciona **Clone or download** y, luego, **Download ZIP**. También puedes hacer clic [aquí](https://github.com/Microsoft/Windows-universal-samples/archive/master.zip "Descarga de archivos ZIP de muestras de aplicaciones para Plataforma Universal de Windows").
 
 El archivo zip siempre incluirá las muestras más recientes. No necesitas una cuenta de GitHub para descargarlo. Si se publica una actualización SDK o si quieres aprovechar adiciones o cambios recientes, vuelve a descargar el archivo zip más reciente.
 
@@ -28,7 +28,7 @@ El archivo zip siempre incluirá las muestras más recientes. No necesitas una c
 
 
 > [!NOTE]
-> Las muestras de la UWP requieren Visual Studio 2015 o posterior y Windows SDK para abrirlas, compilarlas y ejecutarlas. Puedes obtener una copia gratuita de Visual Studio Community con compatibilidad para crear aplicaciones para UWP [aquí](https://go.microsoft.com/fwlink/p/?LinkID=280676 "Descargas de herramientas de desarrollo de Windows").  
+> Las muestras de UWP requieren Visual Studio 2015 o posterior, y Windows SDK para poder abrirlas, compilarlas y ejecutarlas. Puedes obtener una copia gratuita de Visual Studio Community con compatibilidad para crear aplicaciones para UWP [aquí](https://go.microsoft.com/fwlink/p/?LinkID=280676 "Descargas de herramientas de desarrollo de Windows").  
 >
 > Asegúrate también de descomprimir todo el archivo y no solo algunos ejemplos. Todas las muestras dependen de la carpeta SharedContent del archivo. Los ejemplos de características de UWP usan archivos vinculados de Visual Studio para reducir la duplicación de archivos comunes, incluidos los archivos de plantillas de muestra y activos de imagen. Estos archivos comunes se almacenan en la carpeta SharedContent de la raíz del repositorio y se hace referencia a ellos en los archivos de proyecto que incluyen vínculos.
 
@@ -45,7 +45,7 @@ Cuando hayas descargado el archivo zip, abre las muestras en Visual Studio:
 
     ![Carpetas de idioma](images/SamplesUnzip3.png)
 
-4.  Seleccione el idioma que le gustaría utilizar, como CS para C\#, y verá un archivo de solución de Visual Studio, que puede abrir en Visual Studio.
+4.  Selecciona el idioma que quieres usar (por ejemplo, CS para C\#) y verás un archivo de la solución Visual Studio que puedes abrir en Visual Studio.
 
     ![Solución VS](images/SamplesUnzip4.png)
 

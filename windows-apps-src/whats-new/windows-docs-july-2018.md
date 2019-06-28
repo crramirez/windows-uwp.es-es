@@ -1,100 +1,100 @@
 ---
-title: 'Novedades de Windows Docs en julio de 2018: desarrollar aplicaciones para UWP'
-description: Instrucciones para desarrolladores, vídeos, ejemplos y las nuevas características se agregaron a la documentación para desarrolladores de Windows 10 de julio de 2018.
-keywords: Novedades, update, características, instrucciones para desarrolladores, Windows 10, julio
+title: 'Novedades en los documentos de Windows de julio de 2018: desarrollar aplicaciones para UWP'
+description: Se han agregado nuevas características, vídeos, ejemplos e instrucciones para desarrolladores en la documentación de julio de 2018 para desarrolladores de Windows 10.
+keywords: novedades, actualización, características, instrucciones para desarrolladores, Windows 10, julio
 ms.date: 07/11/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 22a3a9614a4488791a36f81a3d4dedac572111b4
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596840"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63780260"
 ---
-# <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novedades en la documentación para desarrolladores de Windows de julio de 2018
+# <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novedades en los documentos para desarrolladores de Windows de julio de 2018
 
-La documentación del desarrollador de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general de características, instrucciones para desarrolladores, vídeos y ejemplos disponibles en el mes de julio.
+La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. Las siguientes descripciones de características, instrucciones para desarrolladores, vídeos y ejemplos se han puesto a disposición de los desarrolladores en el mes de julio.
 
 [Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
-### <a name="progressive-web-apps-on-windows"></a>Aplicaciones Web progresiva en Windows
+### <a name="progressive-web-apps-on-windows"></a>Aplicaciones web progresivas en Windows
 
-[Aplicaciones de Web progresiva (PWA)](https://developer.microsoft.com/windows/pwa) son simplemente las aplicaciones web que están [mejorada progresivamente](https://wikipedia.org/wiki/Progressive_enhancement) con características similares a aplicación nativas sobre la compatibilidad con plataformas y los motores de explorador, como la instalación de inicio de homescreen, sin conexión soporte técnico y notificaciones de inserción. En el motor Microsoft Edge (EdgeHTML) de Windows 10, PWA disfrutar de la ventaja añadida de la ejecución [independientemente de la ventana del explorador como aplicaciones para UWP.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
+Las [aplicaciones web progresivas (PWA)](https://developer.microsoft.com/windows/pwa) son simplemente aplicaciones web que [se mejoran progresivamente](https://wikipedia.org/wiki/Progressive_enhancement) con características similares a las aplicaciones nativas en cuanto a compatibilidad con plataformas y motores de explorador; por ejemplo, la instalación con inicio desde la pantalla principal, la compatibilidad para el uso sin conexión y las notificaciones de inserción. En Windows 10, con el motor de Microsoft Edge (EdgeHTML), las PWA cuentan con la ventaja agregada de ejecutarse [independientemente de la ventana del explorador como aplicaciones para UWP](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features).
 
-![Una imagen de PWA en acción](images/progressive-web-apps.jpg)
+![Imagen de las PWA en acción](images/progressive-web-apps.jpg)
 
-Consulte nuestras guías de PWA para:
+Consulta nuestras guías de PWA para lo siguiente:
 
 * [Compilar una aplicación web simple como PWA](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started)
-* [Mejore su PWA con el tiempo de ejecución de Windows](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/windows-features)
-* [Publicar su PWA en la Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store)
+* [Mejorar tu PWA con Windows Runtime](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/windows-features)
+* [Publicar la PWA en Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store)
 
 ### <a name="notepad"></a>Bloc de notas
 
-Disponible en Windows 10 Insider Preview compilar 17713, [se ha actualizado el Bloc de notas con muchas características nuevas](https://aka.ms/ant-man). Zoom, circulares buscar y reemplazar y soporte técnico para finales de línea (LF) de Unix/Linux y Mac (CR) ahora están disponibles para [Windows Insiders](https://insider.windows.com/). 
+A partir de la compilación 17713 de Windows 10 Insider Preview, [hemos actualizado el Bloc de notas con muchas características nuevas](https://aka.ms/ant-man). Ahora, las opciones de zoom, buscar y reemplazar de ajuste automático, así como la compatibilidad para finales de línea de Unix/Linux (LF) y Mac (CR) están disponibles para los [usuarios de Windows Insider](https://insider.windows.com/). 
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="design-landing-page"></a>Página de aterrizaje de diseño
+### <a name="design-landing-page"></a>Página de aterrizaje de Diseño
 
-Consulte la [actualiza el diseño de página de aterrizaje](https://developer.microsoft.com/windows/apps/design) para obtener información general de un vistazo de UWP diseñar áreas e información sobre las últimas incorporaciones a diseño Fluent.
+Consulta la [página de aterrizaje actualizada de Diseño](https://developer.microsoft.com/windows/apps/design) para obtener información general de un vistazo sobre las áreas de diseño de UWP y detalles sobre las últimas incorporaciones en Fluent Design.
 
 ### <a name="design-toolkits"></a>Kits de herramientas de diseño
 
-Se han actualizado con nuevas características de los kits de herramientas de Adobe XD y Adobe Illustrator. Estos kits de herramientas de diseño proporcionan controles y plantillas de diseño para diseñar aplicaciones para UWP. [Écheles un vistazo aquí.](../design/downloads/index.md)
+Los kits de herramientas de Adobe XD y Adobe Illustrator se han actualizado con nuevas características. En estos kits de herramientas de diseño proporcionan controles y plantillas de diseño destinados a crear aplicaciones para UWP. [Conócelos](../design/downloads/index.md).
 
 ### <a name="webvr"></a>WebVR
 
-Hemos agregado varios temas nuevos a la [WebVR documentación](https://docs.microsoft.com/microsoft-edge/webvr/
+Hemos agregado varios temas nuevos a la [documentación de WebVR](https://docs.microsoft.com/microsoft-edge/webvr/
 ):
 
-* [¿Qué es WebVR?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr
-) Explica qué es WebVR, ¿por qué debería usarlo y cómo comenzar a desarrollar para ella.
+* [What is WebVR?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr
+) (¿Qué es WebVR?): en este artículo se explica qué es WebVR, por qué deberías usarla y cómo empezar a desarrollar para esta API.
 
-* [WebVR en las aplicaciones Web progresiva](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): Obtenga información sobre cómo agregar WebVR a una aplicación Web progresiva (PWA).
+* [WebVR in Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas) (WebVR en las aplicaciones web progresivas): aprende a agregar WebVR a una aplicación web progresiva (PWA).
 
-* [WebVR en WebView](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview): Obtenga información sobre cómo agregar WebVR a un control WebView en una aplicación de Windows 10.
+* [WebVR in WebView](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview) (WebVR en WebView): descubre cómo agregar WebVR a un control WebView en una aplicación de Windows 10.
 
-* [Demostraciones de WebVR](https://docs.microsoft.com/microsoft-edge/webvr/demos): Consulte algunas demostraciones WebVR mediante Microsoft Edge y auriculares Windows Mixed Reality envolventes.
+* [WebVR demos](https://docs.microsoft.com/microsoft-edge/webvr/demos) (Demostraciones de WebVR): echa un vistazo a algunas demostraciones de WebVR mediante Microsoft Edge y un casco envolvente de Windows Mixed Reality.
 
-Además, hemos realizado algunas actualizaciones a las páginas existentes:
+Además, hemos realizado algunas actualizaciones en las páginas existentes:
 
-* La tabla de contenido ahora está mejor organizada en cuatro depósitos distintos de nivel superior: **Aspectos básicos de**, **desarrollo**, **recursos**, y **demostraciones**.
+* La tabla de contenido ahora está mejor organizada en cuatro cubos distintos de nivel superior: **Conceptos básicos**, **Desarrollo**, **Recursos** y **Demostraciones**.
 
-* [Guía del desarrollador WebVR (página de aterrizaje)](https://docs.microsoft.com/microsoft-edge/webvr/): Renovarse, con iconos y las imágenes más grandes y demostración nuevo.
+* [WebVR Developer's Guide (landing page)](https://docs.microsoft.com/microsoft-edge/webvr/) (Guía del desarrollador WebVR [página de aterrizaje]): apariencia renovada, con iconos e imágenes más grandes, y una nueva demostración.
 
-* [Uso de WebVR con Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): Actualizado para incluir información sobre las ventanas de actualizar el 10 de abril de 2018.
+* [Using WebVR with Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge) (Usar WebVR con Microsoft Edge): hemos actualizado esta página para incluir información sobre la Actualización de abril de 2018 de Windows 10.
 
 ## <a name="videos"></a>Vídeos
 
-### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>Introducción para desarrolladores: Crear y personalizar un formulario en Windows 10
+### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>Introducción para desarrolladores: crear y personalizar un formulario en Windows 10
 
-Nuestro [comenzar docs](../get-started/index.md) para Windows a los desarrolladores ahora proporcionan la experiencia práctica con la tarea de desarrollo de aplicaciones básica. Este vídeo le guía a través de uno de estos temas y cubre los aspectos básicos de la creación de un formulario de interfaz de usuario en la aplicación. [Vea el vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver el código en acción, a continuación, [consulte el tema.](https://aka.ms/CreateForms)
+Nuestros [documentos de Introducción](../get-started/index.md) para los desarrolladores de Windows ahora ofrecen experiencia práctica para el desarrollo de aplicaciones básicas. Este vídeo te guiará a través de uno de estos temas. En él se describen los aspectos básicos de la creación de la interfaz de usuario de un formulario en la aplicación. [Mira el vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver el código en acción y, después, [consulta el tema](https://aka.ms/CreateForms).
 
-### <a name="enhance-your-bot-with-project-personality-chat"></a>Mejore su Bot de chat de personalidad del proyecto
+### <a name="enhance-your-bot-with-project-personality-chat"></a>Mejorar tu bot con Project Personality Chat
 
-Chat de personalidad del proyecto le permite agregar un rol personalizable a sus bots de chat. Mediante la integración con Microsoft Bot Framework SDK, puede agregar capacidades de charla para una conversación más forma de interactuar con los clientes. [Vea el vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para aprender a implementar, a continuación, [pruebe la demostración interactiva](https://aka.ms/PersonalityChat) para obtener experiencia práctica.
+El laboratorio Project Personality Chat te permite agregar un rol personalizable a tus bots de chat. Gracias a la integración con el SDK de Microsoft Bot Framework, puedes agregar funcionalidades de charla breve para interactuar con los clientes de un modo más informal. [Mira el vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para descubrir cómo implementarlo y, luego, [prueba la demostración interactiva](https://aka.ms/PersonalityChat) para obtener una experiencia práctica.
 
-### <a name="one-dev-question"></a>Una pregunta de desarrollo
+### <a name="one-dev-question"></a>Una pregunta de desarrollador
 
-En la serie de vídeos de una pregunta de desarrollo, los desarrolladores de Microsoft ha cubren una serie de preguntas acerca del desarrollo de Windows, referencia cultural del equipo y el historial. Aquí es que hemos respondido a las preguntas más recientes.
+En la serie de vídeos de una pregunta de desarrollador, los desarrolladores de Microsoft cubren una serie de preguntas acerca del desarrollo de Windows, la cultura del equipo y el historial. A continuación encontrarás las preguntas más recientes que hemos respondido.
 
 Raymond Chen:
 
-* [¿Por qué se aplicó a Microsoft?](https://www.youtube.com/watch?v=oL8ymamkEMU&feature=youtu.be)
+* [¿Por qué solicitó trabajo en Microsoft?](https://www.youtube.com/watch?v=oL8ymamkEMU&feature=youtu.be)
 
 Larry Osterman:
 
-* [¿Por qué no se permiten a los desarrolladores cambiar el dispositivo de audio predeterminado?](https://www.youtube.com/watch?v=6aNUoVfbnmg&feature=youtu.be)
-* [¿Por qué tantas async de funciones UWP?](https://www.youtube.com/watch?v=5M724QIy1Mk&feature=youtu.be)
+* [¿Por qué no se permite a los desarrolladores cambiar el dispositivo de audio predeterminado?](https://www.youtube.com/watch?v=6aNUoVfbnmg&feature=youtu.be)
+* [¿Por qué hay tantas funciones de UWP asincrónicas?](https://www.youtube.com/watch?v=5M724QIy1Mk&feature=youtu.be)
 
 ## <a name="samples"></a>Muestras
 
-### <a name="photo-editor-cwinrt"></a>Photo Editor C++ / c++ / WinRT
+### <a name="photo-editor-cwinrt"></a>C++/WinRT para Photo Editor
 
-La aplicación de ejemplo de Photo Editor presenta el desarrollo con el [C++ / c++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) proyección de lenguaje. La aplicación le permite recuperar fotos desde el **imágenes** biblioteca y, a continuación, edite una imagen seleccionada con efectos de fotografía asociada. [Clonar o descargar el ejemplo aquí.](https://github.com/Microsoft/Windows-appsample-photo-editor)
+En la aplicación de ejemplo de Photo Editor se muestra el desarrollo con el lenguaje de proyección [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md). La aplicación permite recuperar fotos de la biblioteca **Imágenes** y, luego, editar una imagen seleccionada con los efectos fotográficos asociados. [Clona o descarga el ejemplo aquí](https://github.com/Microsoft/Windows-appsample-photo-editor).
 
-![Un ejemplo del ejemplo en acción](images/photo-editor-banner.png)
+![Ejemplo de la muestra en acción](images/photo-editor-banner.png)
