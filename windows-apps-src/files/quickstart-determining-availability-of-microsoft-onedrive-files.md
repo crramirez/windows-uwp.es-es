@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: effb28fa453ec884152dbc404245f00f4893ef5a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369423"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Determinación de la disponibilidad de los archivos de Microsoft OneDrive
@@ -19,18 +19,18 @@ ms.locfileid: "66369423"
 **API importantes**
 
 -   [**Clase FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO)
--   [**Clase de StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)
+-   [**Clase StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)
 -   [**Propiedad StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable)
 
 Determina si un archivo de Microsoft OneDrive está disponible mediante la propiedad [**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
--   **Comprender la programación asincrónica para las aplicaciones de la plataforma Universal de Windows (UWP)**
+-   **Comprender la programación asincrónica de las aplicaciones para Plataforma universal de Windows (UWP)**
 
     Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
--   **Declaraciones de capacidad para la aplicación**
+-   **Declaraciones de funcionalidades de la aplicación**
 
     Consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
@@ -38,7 +38,7 @@ Determina si un archivo de Microsoft OneDrive está disponible mediante la propi
 
 Los usuarios pueden marcar los archivos de OneDrive como disponibles sin conexión (valor predeterminado) o disponibles solo en línea. Esta función les permite mover archivos grandes (como imágenes y vídeos) a OneDrive, marcarlos como disponibles solo en línea y ahorrar espacio en disco (lo único que se guarda de manera local es un archivo de metadatos).
 
-[**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable), se usa para determinar si un archivo está disponible actualmente. En la siguiente tabla se muestra el valor de la propiedad **StorageFile.IsAvailable** en diversos escenarios.
+[**StorageFile.IsAvailable**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.isavailable) se usa para determinar si un archivo está disponible actualmente. En la siguiente tabla se muestra el valor de la propiedad **StorageFile.IsAvailable** en diversos escenarios.
 
 | Tipo de archivo                              | Online | Red de uso medido        | Desconectado |
 |-------------------------------------------|--------|------------------------|---------|

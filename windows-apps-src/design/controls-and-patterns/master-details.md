@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b9d8d8a381c0fce186b39853f57d35c1dce4b8f8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601260"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63773380"
 ---
 # <a name="masterdetails-pattern"></a>Patrón de maestro y detalles
 
@@ -21,7 +21,7 @@ ms.locfileid: "57601260"
 
 El patrón de maestro y detalles tiene un panel maestro (normalmente con una [vista de lista](lists.md)) y un panel de detalles para el contenido. Cuando se selecciona un elemento en la lista maestra, se actualiza el panel de detalles. Este patrón se usa con frecuencia para libretas de direcciones y de correos electrónicos.
 
-> **API importantes**: [Clase de ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView clase](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+> **API importantes**: [clase ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Ejemplo del patrón de maestro y detalles](images/HIGSecOne_MasterDetail.png)
 
@@ -53,13 +53,13 @@ El usuario comienza en el patrón de panel y "explora en profundidad" hasta el p
 
 ### <a name="create-a-stacked-masterdetails-pattern"></a>Crear un patrón de maestro y detalles apilado
 
-Una forma de crear el patrón de maestro y detalles apilado es usar páginas independientes para la vista maestra y de detalles. Coloca la vista maestra en una sola página y el panel de detalles en otra página independiente.
+Una forma de crear el patrón de maestro y detalles apilado es usar páginas independientes para la vista maestra y de detalles. Coloca la vista maestra en una página, y el panel de detalles en una página independiente.
 
 ![Partes de la vista de maestro y detalles con estilo apilado](images/patterns-md-stacked-parts.png)
 
 En la página de vista maestra, un control de [vista de lista](lists.md) funciona bien para presentar listas que pueden contener imágenes y texto. 
 
-En la página de vista de detalles, usa el [elemento de contenido](../layout/layout-panels.md) que sea más apropiado. Si tienes muchos campos independientes, plantéate usar un diseño de **cuadrícula** para organizar los elementos en un formulario.
+En la página de vista de detalles, usa el [elemento de contenido](../layout/layout-panels.md) que sea más apropiado. Si tienes muchos campos independientes, considera la posibilidad de usar un diseño de **cuadrícula** para organizar los elementos en un formulario.
 
 Para la navegación entre páginas, consulta el [historial de navegación y navegación hacia atrás para las aplicaciones para UWP](../basics/navigation-history-and-backwards-navigation.md).
 
@@ -73,36 +73,36 @@ La lista del panel de maestro usa una selección visual para indicar el elemento
 
 ### <a name="create-a-side-by-side-masterdetails-pattern"></a>Crear un patrón de maestro y detalles en paralelo
 
-Una forma de crear un patrón de maestro y detalles en paralelo es usar el control [vista en dos paneles](split-view.md). Coloca la vista maestra en el panel de vista en dos paneles y la vista de detalles en el contenido de vista en dos paneles.
+Una forma de crear un patrón de maestro y detalles en paralelo es usar el control [vista en dos paneles](split-view.md). Coloca la vista maestra en el panel de vista en dos paneles, y la vista de detalles en el contenido de vista en dos paneles.
 
 ![partes de la vista en dos paneles de la vista maestra y detalles](images/patterns_md_splitview_parts.png)
 
 En el panel maestro, un control de [vista de lista](lists.md) funciona bien para presentar listas que pueden contener imágenes y texto.
 
-En el contenido de detalles, usa el [elemento de contenido](../layout/layout-panels.md) que sea más apropiado. Si tienes muchos campos independientes, plantéate usar un diseño de **cuadrícula** para organizar los elementos en un formulario.
+En el contenido de detalles, usa el [elemento de contenido](../layout/layout-panels.md) que sea más apropiado. Si tienes muchos campos independientes, considera la posibilidad de usar un diseño de **cuadrícula** para organizar los elementos en un formulario.
 
 ## <a name="adaptive-layout"></a>Diseño adaptativo
 
-Para implementar un patrón de maestro y detalles de cualquier tamaño de pantalla, crea una interfaz de usuario con capacidad de respuesta y con [diseño adaptativo](../layout/layouts-with-xaml.md).
+Para implementar un patrón de maestro y detalles para cualquier tamaño de pantalla, crea una interfaz de usuario con capacidad de respuesta y con [diseño adaptativo](../layout/layouts-with-xaml.md).
 
-![diseño de vista maestra y detalles adaptativo](images/patterns_masterdetail.png)
+![diseño adaptativo de vista maestra y detalles](images/patterns_masterdetail.png)
 
-### <a name="create-an-adaptive-masterdetails-pattern"></a>Crear un patrón de maestro y detalles adaptativo
+### <a name="create-an-adaptive-masterdetails-pattern"></a>Crear un patrón adaptativo de maestro y detalles
 Para crear un diseño adaptativo, define diferentes [**VisualStates**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.visualstate) para la interfaz de usuario y declara puntos de interrupción para los distintos estados con [**AdaptiveTriggers**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-Las siguientes muestras implementan el patrón de maestro y detalles con diseños adaptativos y muestran datos enlazados a recursos estáticos, de bases de datos y en línea: 
-- [Ejemplo de principal-detalle](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
-- [Ejemplo de selección además de detalles y maestras](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
-- [Ejemplo de plantilla de Windows Studio maestro y detalles](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
-- [Ejemplo de base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
+Los siguientes ejemplos implementan el patrón de maestro y detalles con diseños adaptativos, y muestran datos enlazados a recursos estáticos, de bases de datos y en línea: 
+- [Ejemplo de maestro y detalles](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
+- [Ejemplo de panel maestro y detalles con selección](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)
+- [Ejemplo de panel maestro y detalles de Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
+- [Ejemplo de base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
 - [Ejemplo de lector RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Listas](lists.md)
 - [Buscar](search.md)
-- [Barras de comandos y de aplicación](app-bars.md)
-- [Clase de ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
-- [Clase de SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+- [Barras de la aplicación y de comandos](app-bars.md)
+- [Clase ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [Clase SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)

@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 97ad2485abab0bd4733699bc4ffcf29e17a22844
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369446"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Seguimiento de los archivos y carpetas usados recientemente
@@ -25,11 +25,11 @@ Realiza un seguimiento de los archivos a los que el usuario accede con mayor fre
 La lista de MRU de una aplicación se representa mediante la clase [**StorageItemMostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList), que se obtiene a partir de la propiedad estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist). Los elementos MRU se almacenan como objetos [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem), lo que significa que los objetos [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) (que representan archivos) y los objetos [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) (que representan carpetas) pueden agregarse a la lista de MRU.
 
 > [!NOTE]
-> Para obtener ejemplos completos, consulte el [ejemplo del selector de archivos](https://go.microsoft.com/fwlink/p/?linkid=619994) y [ejemplo de acceso de archivo](https://go.microsoft.com/fwlink/p/?linkid=619995).
+> Para ver muestras completas, consulte la [ muestra de selector de archivos](https://go.microsoft.com/fwlink/p/?linkid=619994) y la [muestra de acceso de archivos ](https://go.microsoft.com/fwlink/p/?linkid=619995).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
--   **Comprender la programación asincrónica para las aplicaciones de la plataforma Universal de Windows (UWP)**
+-   **Comprender la programación asincrónica de las aplicaciones para Plataforma universal de Windows (UWP)**
 
     Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
@@ -52,10 +52,10 @@ La lista de MRU de una aplicación se representa mediante la clase [**StorageIte
     string mruToken = mru.Add(file, "profile pic");
     ```
 
-    [**StorageItemMostRecentlyUsedList.Add** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) está sobrecargado. En el ejemplo, se usa [**Add(IStorageItem, String)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) para poder asociar metadatos al archivo. La configuración de metadatos permite grabar el propósito del elemento como, por ejemplo, "imagen de perfil". También puedes agregar el archivo sin metadatos a la lista de MRU, llamando al método [**Add(IStorageItem)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add). Cuando se agrega un elemento a la lista de MRU, el método devuelve una cadena de identificación única, denominada token, que se usa para recuperar el elemento.
+    [**StorageItemMostRecentlyUsedList.Add**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) está sobrecargado. En el ejemplo, se usa [**Add(IStorageItem, String)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add) para poder asociar metadatos al archivo. La configuración de metadatos permite grabar el propósito del elemento como, por ejemplo, "imagen de perfil". También puedes agregar el archivo sin metadatos a la lista de MRU, llamando al método [**Add(IStorageItem)** ](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.add). Cuando se agrega un elemento a la lista de MRU, el método devuelve una cadena de identificación única, denominada token, que se usa para recuperar el elemento.
 
 > [!TIP]
-> Necesitarás el token para recuperar un elemento de la lista de MRU, así que insiste hasta encontrarlo. Para más información sobre los datos de aplicación, consulta [Administrar datos de la aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh465109(v=win.10)).
+> Necesitará el token para recuperar un elemento de la lista de utilizado recientemente, así que consérvelo en algún lugar. Para más información sobre los datos de aplicación, consulta [Administrar datos de la aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh465109(v=win.10)).
 
 ## <a name="use-a-token-to-retrieve-an-item-from-the-mru"></a>Usar un token para recuperar elementos de la lista de MRU
 

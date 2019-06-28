@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 07d94f5b11acfe14bf55392c5cbf2c1b7bcfbeef
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369394"
 ---
 # <a name="accessing-homegroup-content"></a>Acceso a contenido de Grupo Hogar
@@ -25,22 +25,22 @@ Obtén acceso al contenido almacenado en la carpeta Grupo Hogar, que incluye im�
 
 ## <a name="prerequisites"></a>Requisitos previos
 
--   **Comprender la programación asincrónica para las aplicaciones de la plataforma Universal de Windows (UWP)**
+-   **Comprender la programación asincrónica de las aplicaciones para Plataforma universal de Windows (UWP)**
 
     Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
--   **Declaraciones de capacidad para la aplicación**
+-   **Declaraciones de funcionalidades de la aplicación**
 
     Para acceder al contenido del Grupo Hogar, el equipo del usuario debe tener un Grupo Hogar configurado y la aplicación debe contar con al menos una de las siguientes funcionalidades: **picturesLibrary**, **musicLibrary** o **videosLibrary**. Cuando la aplicación obtiene acceso a la carpeta Grupo Hogar, podrá ver solamente las bibliotecas que corresponden a las funcionalidades declaradas en el manifiesto de la aplicación. Para más información, consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
     > [!NOTE]
-    > Contenido de la biblioteca de documentos de un grupo hogar no es visible para la aplicación, independientemente de las funciones declaradas en el manifiesto de la aplicación e independientemente de la configuración de uso compartido del usuario.     
+    > El contenido de la biblioteca de documentos de un Grupo en el Hogar no está visible para su aplicación independientemente de las funcionalidades declaradas en el manifiesto de su aplicación y de la configuración de uso compartido del usuario.     
 
--   **Descubra cómo utilizar los selectores de archivos**
+-   **Comprender cómo usar los selectores de archivos**
 
     Generalmente, el selector de archivos se usa para tener acceso a los archivos y carpetas del Grupo Hogar. Para aprender a usar el selector de archivo, consulta [Apertura de archivos y carpetas con un selector](quickstart-using-file-and-folder-pickers.md).
 
--   **Comprender las consultas de archivo y carpeta**
+-   **Descripción de las consultas de archivos y carpetas**
 
     Puedes usar las consultas para enumerar los archivos y carpetas del Grupo Hogar. Para más información sobre consultas de archivos y carpetas, consulta [Enumeración y consulta de archivos y carpetas](quickstart-listing-files-and-folders.md).
 
@@ -90,7 +90,7 @@ En esta sección se muestra cómo buscar elementos del Grupo Hogar que coinciden
     string queryTerm = this.searchQueryTextBox.Text;    
     ```
 
-2.  **Establecer las opciones de consulta y filtro de búsqueda.**
+2.  **Establecer las opciones de consulta y el filtro de búsqueda.**
 
     Las opciones de consulta determinan de qué manera se ordenan los resultados de la búsqueda, mientras que el filtro de búsqueda determina qué elementos se incluyen en los resultados de la búsqueda.
 
@@ -104,7 +104,7 @@ En esta sección se muestra cómo buscar elementos del Grupo Hogar que coinciden
             Windows.Storage.KnownFolders.HomeGroup.CreateFileQueryWithOptions(queryOptions);    
     ```
 
-3.  **Ejecute la consulta y procesar los resultados.**
+3.  **Ejecutar la consulta y procesar los resultados.**
 
     En el siguiente ejemplo se ejecuta la consulta de búsqueda en el Grupo Hogar y se guardan los nombres de cualquier archivo coincidente como una lista de cadenas.
     ```cs
@@ -126,7 +126,7 @@ En esta sección se muestra cómo buscar elementos del Grupo Hogar que coinciden
 
 En esta sección se muestra cómo buscar archivos del Grupo Hogar que comparte un usuario en particular.
 
-1.  **Obtiene una colección de usuarios del grupo hogar.**
+1.  **Obtener una colección de usuarios del Grupo en el Hogar.**
 
     Cada una de las carpetas de primer nivel del Grupo Hogar representa un usuario de Grupo Hogar individual. Por lo tanto, para obtener una colección de usuarios de Grupo Hogar, llama a [**GetFoldersAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfoldersasync) para recuperar las carpetas de Grupo Hogar de nivel superior.
     ```cs
@@ -134,7 +134,7 @@ En esta sección se muestra cómo buscar archivos del Grupo Hogar que comparte u
         await Windows.Storage.KnownFolders.HomeGroup.GetFoldersAsync();    
     ```
 
-2.  **Busque la carpeta del usuario de destino y, a continuación, cree un archivo de consulta con ámbito en la carpeta del usuario.**
+2.  **Buscar la carpeta del usuario de destino y crear una consulta de archivo específica para la carpeta del usuario en particular.**
 
     El ejemplo siguiente itera a través de las carpetas recuperadas para buscar la carpeta del usuario de destino. Después, establece las opciones de consulta para buscar todos los archivos de la carpeta, ordenados primero por importancia y posteriormente por la fecha de modificación. El ejemplo crea una cadena que informa acerca del número de archivos encontrados, junto con los nombres de los archivos.
     ```cs
@@ -171,7 +171,7 @@ En esta sección se muestra cómo buscar archivos del Grupo Hogar que comparte u
 
 Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
 
-1.  **Incluya un control MediaElement en la aplicación.**
+1.  **Incluir un elemento MediaElement en su aplicación.**
 
     [  **MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) te permite reproducir contenido de audio y vídeo en tu aplicación. Para obtener información sobre la reproducción de audio y vídeo, consulta [Crear controles de transporte personalizados](https://docs.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls) y [Audio, vídeo y cámara](https://docs.microsoft.com/windows/uwp/audio-video-camera/index).
     ```HTML
@@ -180,7 +180,7 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
     </Grid>    
     ```
 
-2.  **Abrir un selector de archivos en el hogar y aplicar un filtro que incluya los archivos de vídeo en los formatos que admite la aplicación.**
+2.  **Abra un selector de archivos en el Grupo en el Hogar y aplique un filtro que incluya archivos de vídeo con los formatos que admite su aplicación.**
 
     Este ejemplo incluye archivos .mp4 y .wmv en el selector para abrir archivos.
     ```cs
@@ -193,7 +193,7 @@ Sigue estos pasos para transmitir contenido de vídeo del Grupo Hogar:
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Abra la selección de archivos del usuario para el acceso de lectura y establezca la secuencia de archivos como origen para la** [ **MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement), y, a continuación, reproduzca el archivo.
+3.  **Abra la selección de archivos del usuario para el acceso de lectura y establezca la secuencia de archivos como origen para el** [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement), y luego reproduzca el archivo.
     ```cs
     if (file != null)
     {

@@ -13,19 +13,19 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a23a7a7da9605c0ffb5a537c75d63e3f06705881
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625470"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63775158"
 ---
 # <a name="toggle-switches"></a>Modificadores para alternar
 
-El modificador para alternar representa un interruptor físico que permite a los usuarios activar o desactivar, cosas como un conmutador de luz. Usa los controles del modificador para alternar para presentar a los usuarios dos opciones que se excluyan mutuamente (como activar/desactivar). Cuando elijan una opción, se producirá un resultado inmediato.
+El modificador para alternar representa un conmutador físico que permite a los usuarios activar o desactivar opciones, como un interruptor de la luz. Usa los controles del modificador para alternar para presentar a los usuarios dos opciones que se excluyan mutuamente (como activar/desactivar). Cuando elijan una opción, se producirá un resultado inmediato.
 
 Para crear un control de modificador para alternar, usa la [clase ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch).
 
-> **API importantes**: [Clase de objeto ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [IsOn propiedad](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled eventos](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
+> **API importantes**: [clase ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [propiedad IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [evento Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -35,12 +35,12 @@ Usa un modificador para alternar operaciones binarias que surten efecto inmediat
 
 Piensa en el modificador para alternar como un interruptor de alimentación físico para un dispositivo: lo activas o desactivas cuando quieres habilitar o deshabilitar la acción que lleva a cabo el dispositivo.
 
-Para que que el modificador para alternar sea sencillo de comprender, etiquétalo con una o dos palabras, preferiblemente nombres, que describan la funcionalidad que controla. Por ejemplo, "Wi-Fi" o "Luces de cocina". 
+Para que el modificador para alternar sea sencillo de comprender, etiquétalo con una o dos palabras, preferiblemente nombres, que describan la funcionalidad que controla. Por ejemplo, "Wi-Fi" o "Luces de cocina". 
 
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -65,11 +65,11 @@ Para algunas acciones, tanto un modificador para alternar como una casilla podr�
 
 - Usa casillas para los elementos opcionales (deseables).
 - Usa una casilla cuando el usuario tiene que realizar algunos pasos más antes de que los cambios surtan efecto. Por ejemplo, si el usuario tiene que hacer clic en un botón "enviar" o "siguiente" para aplicar los cambios, usa una casilla.
-- Usa casillas cuando el usuario pueda seleccionar varios elementos que están relacionados con un único valor o característica.
+- Usa casillas cuando el usuario pueda seleccionar varios elementos que estén relacionados con un único valor o característica.
 
-## <a name="toggle-switches-in-the-windows-ui"></a>Modificadores de alternancia en la interfaz de usuario de Windows
+## <a name="toggle-switches-in-the-windows-ui"></a>Modificadores para alternar en la interfaz de usuario de Windows
 
-Estas imágenes muestran cómo la interfaz de usuario de Windows usa modificadores para alternar. Así es como la pantalla de configuración de almacenamiento inteligente usa los modificadores para alternar:
+En estas imágenes se muestra cómo la interfaz de usuario de Windows usa modificadores para alternar. Así es como la pantalla de configuración de almacenamiento inteligente usa los modificadores para alternar:
 
 ![Modificadores para alternar en el almacenamiento inteligente](images/SmartStorageToggle.png)
 
@@ -166,16 +166,16 @@ También puedes usar contenido más complejo si configuras las propiedades [OnCo
 
 ## <a name="recommendations"></a>Recomendaciones
 
-- Usa las etiquetas predeterminadas On y Off cuando sea posible; reemplázalas solo cuando sea necesario para que el modificador para alternar tenga sentido. Si las reemplaza, usa una sola palabra que describa con mayor precisión la alternancia. En general, si las palabras "On" y "Off" no describen la acción vinculada a un modificador para alternar, probablemente necesites un control diferentes.
+- Usa las etiquetas predeterminadas On y Off cuando sea posible; reemplázalas solo cuando sea necesario para que el modificador para alternar tenga sentido. Si las reemplaza, usa una sola palabra que describa con mayor precisión la alternancia. En general, si las palabras "On" y "Off" no describen la acción vinculada a un modificador para alternar, probablemente necesites un control diferente.
 - Evita reemplazar las etiquetas On y Off a menos que debas hacerlo; usa las etiquetas predeterminadas a menos que la situación requiera que las personalices.
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
+- [Ejemplos de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase de objeto ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
+- [Clase ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
 - [Botones de radio](radio-button.md)
-- [Modificadores de alternancia](toggles.md)
-- [Casillas de verificación](checkbox.md)
+- [Modificadores para alternar](toggles.md)
+- [Casillas](checkbox.md)

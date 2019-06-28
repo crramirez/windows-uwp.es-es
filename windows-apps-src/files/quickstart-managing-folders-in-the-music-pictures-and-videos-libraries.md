@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f9dba57d8e75ba105a2154be5add5b101a4a6aa4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66369333"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Archivos y carpetas de las bibliotecas de música, imágenes y vídeos
@@ -22,7 +22,7 @@ Una biblioteca es una colección virtual de carpetas que incluye una carpeta con
 ## <a name="prerequisites"></a>Requisitos previos
 
 
--   **Comprender la programación asincrónica para las aplicaciones de la plataforma Universal de Windows (UWP)**
+-   **Comprender la programación asincrónica de las aplicaciones para Plataforma universal de Windows (UWP)**
 
     Puedes aprender a escribir aplicaciones asincrónicas en C# o Visual Basic. Consulta [Llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Para aprender a escribir aplicaciones asincrónicas en C++, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
@@ -30,16 +30,16 @@ Una biblioteca es una colección virtual de carpetas que incluye una carpeta con
 
     En Visual Studio, abre el archivo de manifiesto de la aplicación en el Diseñador de manifiestos. En la página **Capacidades**, selecciona las bibliotecas que la aplicación administra.
 
-    -   **Biblioteca de música**
+    -   **Biblioteca de Música**
     -   **Biblioteca de imágenes**
-    -   **Videos Library**
+    -   **Biblioteca de vídeos**
 
     Para más información, consulta [Permisos de acceso de archivos](file-access-permissions.md).
 
 ## <a name="get-a-reference-to-a-library"></a>Obtener una referencia a una biblioteca
 
 > [!NOTE]
-> Recuerda que debes declarar la funcionalidad apropiada. Para más información, consulta [Declaraciones de funcionalidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+> Recuerde que debe declarar la funcionalidad apropiada. Para más información, consulte [Declaraciones de funcionalidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
  
 
 Para obtener una referencia a la biblioteca de música, imágenes o vídeos del usuario, llama al método [**StorageLibrary.GetLibraryAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.getlibraryasync). Proporciona el valor correspondiente de la enumeración [**KnownLibraryId**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownLibraryId).
@@ -173,7 +173,7 @@ En dispositivos en los que la cámara guarda dos imágenes por cada foto, una en
 
 El Álbum de cámara y la carpeta Imágenes guardadas no admiten consultas profundas.
 
-**Abrir una foto en la aplicación que se capturaron**
+**Abrir una foto en la aplicación que la capturó**
 
 Si quieres que el usuario pueda volver a abrir una foto en la aplicación que la capturó, puedes guardar el **CreatorAppId** con los metadatos de la foto; usa para ello un código similar al del ejemplo siguiente. En este ejemplo, **testPhoto** es un objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile).
 
