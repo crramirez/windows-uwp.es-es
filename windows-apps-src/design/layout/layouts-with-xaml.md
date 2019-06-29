@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 749466e8ebce798f68295df28ad9f11a15e46702
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 69facfe9b1cdac408fe1fd63dfa144de072dfdfd
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365020"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468978"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Diseños adaptativos con XAML
 
@@ -22,7 +22,7 @@ La base de un diseño adaptativo es hacer un uso adecuado de las propiedades y l
 
 El sistema de diseño de XAML admite diseños tanto estáticos como fluidos. En un diseño estático, se definen en los controles tamaños de píxeles y posiciones explícitas. Cuando el usuario cambia la resolución u orientación de su dispositivo, la interfaz de usuario no cambia. Los diseños estáticos pueden recortarse en distintos factores de forma y tamaños de pantalla. Por otro lado, los diseños fluidos se reducen, crecen y vuelven a fluir para responder al espacio visual disponible en un dispositivo. 
 
-En la práctica, usa una combinación de elementos estáticos y fluidos para crear la interfaz de usuario. Seguirás usando elementos y valores estáticos en algunas partes, pero debes asegurarte de que el conjunto de la interfaz de usuario tenga capacidad de respuesta y se adapte a las distintas resoluciones, tamaños de pantalla y vistas.
+En la práctica, usa una combinación de elementos estáticos y fluidos para crear la interfaz de usuario. Todavía use elementos estáticos y los valores en algunos lugares, pero asegúrese de que la interfaz de usuario general sigue respondiendo a las diferentes resoluciones, tamaños de pantalla y vistas.
 
 Aquí describimos cómo usar las propiedades de XAML y los paneles de diseño para crear un diseño fluido.
 
