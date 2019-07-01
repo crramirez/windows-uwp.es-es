@@ -6,18 +6,18 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 6153a0a094d03081388c15ec31696ef277ef7081
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.openlocfilehash: 47cb292b1f5aeed9473cac0f27074f449dc67032
+ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66215214"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414108"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernización de las aplicaciones de escritorio
 
 Windows 10 y la Plataforma universal de Windows (UWP) ofrecen muchas características que puedes usar para ofrecer una experiencia moderna en las aplicaciones de escritorio. La mayoría de estas características están disponibles como componentes modulares que puedes adoptar en las aplicaciones de escritorio a tu propio ritmo sin tener que volver a escribir la aplicación para una plataforma diferente. Puedes mejorar las aplicaciones de escritorio existentes eligiendo qué partes de Windows 10 y UWP adoptar.
 
-En este artículo se describen las características de Windows 10 y UWP que puedes usar en las aplicaciones de escritorio hoy mismo.
+En este artículo se describen las características de Windows 10 y UWP que puedes usar en las aplicaciones de escritorio hoy mismo. Para ver un tutorial que muestra cómo modernizar una aplicación existente para que pueda usar muchas de las características descritas en este artículo, consulte [Modernización de una aplicación WPF](modernize-wpf-tutorial.md).
 
 > [!NOTE]
 > ¿Necesitas ayuda para migrar las aplicaciones de escritorio a Windows 10? El servicio [Asesoría de aplicaciones de escritorio](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) proporciona soporte directo y gratuito a los desarrolladores que porten sus aplicaciones a Windows 10. Este programa está disponible para todos los fabricantes de software independiente y las empresas aptas. Para más información sobre los requisitos que hay que cumplir y sobre el propio programa, visita [https://aka.ms/DesktopAppAssure](https://aka.ms/DesktopAppAssure). Para empezar a trabajar ahora, [envía la solicitud](https://aka.ms/DesktopAppAssureRequest).
