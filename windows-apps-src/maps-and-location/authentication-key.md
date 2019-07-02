@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, clave de autenticación de mapa, control de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f62ecfab5bd8d09092e5264831327b8c63666bc
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bb6cf66a6725e8231fac693a81a39bc2f0b15fd2
+ms.sourcegitcommit: 68051d2adcf3facc036c9f4c76d82bb4d342a75f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370510"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67498898"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar una clave de autenticación de mapas
 
@@ -48,7 +48,7 @@ Para crear una nueva clave
     -   **Nombre de la aplicación:** El nombre de la aplicación.
     -   **Dirección URL de aplicación (opcional):** La dirección URL de la aplicación.
     -   **Tipo de clave:** Seleccione **básica** o **Enterprise**.
-    -   **Tipo de aplicación:** Seleccione **aplicación Universal de Windows** para su uso en la aplicación Windows Universal.
+    -   **Tipo de aplicación:** Seleccione **aplicación Windows** para su uso en la aplicación Windows Universal.
 
     A continuación se muestra un ejemplo del aspecto del formulario.
 

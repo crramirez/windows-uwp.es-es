@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d25cd3f8a963d85f704e32482475827462ddba58
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3d2d95711196a9bf2ab113527e5fc8f44459dc3d
+ms.sourcegitcommit: d8ce1a25ac0373acafb394837eb5c0737f6efec8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318261"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486429"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproducir audio y vídeo con MediaPlayer
 
@@ -189,7 +189,7 @@ Ten en cuenta que si el valor de desplazamiento de un reproductor se asigna a un
 ## <a name="play-spherical-video-with-mediaplayer"></a>Reproducir vídeo esférico con MediaPlayer
 A partir de Windows 10, versión 1703, **MediaPlayer** admite la proyección equirectangular para la reproducción de vídeo esférico. El contenido de vídeo esférico no es diferente del vídeo plano normal en el sentido que **MediaPlayer** representará el vídeo siempre y cuando se admita la codificación correspondiente. En el caso de vídeo esférico que contiene una etiqueta de metadatos que especifica que el vídeo usa la proyección equirectangular, **MediaPlayer** puede representar el vídeo con un campo de vista y orientación de vista especificados. Esto permite escenarios como, por ejemplo, la reproducción de vídeo de realidad virtual con una pantalla montada en la cabeza o simplemente permitir al usuario hacer un paneo dentro del contenido de vídeo esférico mediante el mouse o entrada de teclado.
 
-Para reproducir vídeo esférico, sigue los pasos de reproducción de contenido de vídeo que se describe anteriormente en este artículo. El otro paso consiste en registrar un controlador para el evento [**MediaPlayer.MediaOpened**])https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer#Windows_Media_Playback_MediaPlayer_MediaOpened). Este evento proporciona una oportunidad para habilitar y controlar los parámetros de reproducción de vídeo esférico.
+Para reproducir vídeo esférico, sigue los pasos de reproducción de contenido de vídeo que se describe anteriormente en este artículo. Es un paso adicional registrar un controlador para el [ **MediaPlayer.MediaOpened** ](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer#Windows_Media_Playback_MediaPlayer_MediaOpened) eventos. Este evento proporciona una oportunidad para habilitar y controlar los parámetros de reproducción de vídeo esférico.
 
 [!code-cs[OpenSphericalVideo](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetOpenSphericalVideo)]
 

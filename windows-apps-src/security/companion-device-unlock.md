@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: f653ebe874bfa4d4ad8bb608acf9495f02191de7
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 8bba51627445c553c67b2c02bd66d65486f9caf6
+ms.sourcegitcommit: 68051d2adcf3facc036c9f4c76d82bb4d342a75f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320623"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67498909"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hello
 
 Un dispositivo complementario Windows Hello es un dispositivo que puede actuar de forma conjunta con tu escritorio Windows 10 para mejorar la experiencia de autenticación del usuario. Con el marco del dispositivo complementario de Windows Hello, un dispositivo complementario puede proporcionar una experiencia enriquecida para Windows Hello, incluso cuando la biometría no está disponible (por ejemplo, si el equipo con Windows 10 no tiene una cámara para la autenticación facial o un dispositivo lector de huellas digitales).
 
-> **Tenga en cuenta** se quedará en desuso del marco de dispositivos de Windows Hello complementario en el futuro de Microsoft y se publicará pronto la fecha para asegurarse de que los clientes tienen tiempo suficiente para implementar soluciones alternativas.
+> **Tenga en cuenta** Microsoft se quedará en desuso la API de Windows Hello complementaria dispositivo framework en la primera mitad de 2020.
 
 > **Nota** El marco del dispositivo complementario Windows Hello es una característica especializada no disponible para todos los desarrolladores de aplicaciones. Para usar este marco, la aplicación debe estar aprovisionada específicamente por Microsoft e incluir la funcionalidad *secondaryAuthenticationFactor* restringida en su manifiesto. Para obtener su autorización, ponte en contacto con [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
 

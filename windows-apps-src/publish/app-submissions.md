@@ -6,12 +6,12 @@ keywords: lista de comprobación, windows, uwp, envío, enviar, juego, aplicaci�
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fe5d44823821208a2384aec9d66037c4da3865f
-ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
+ms.openlocfilehash: 7c535b77c68f4375f70fe344165f96d66a551eaf
+ms.sourcegitcommit: d8ce1a25ac0373acafb394837eb5c0737f6efec8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468927"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486423"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
@@ -96,10 +96,8 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 | **Capturas de pantalla**               | Obligatorio (al menos una captura de pantalla; se recomienda que sean cuatro o más)          | [Capturas de pantalla](app-screenshots-and-images.md#screenshots)          |
 | **Logotipos de Store**               | Recomendado; necesario para algunas versiones de sistemas operativos | [Logotipos de Store](app-screenshots-and-images.md#store-logos)             |
 | **Finalizadores**                  | Opcional                                    | [Finalizadores](app-screenshots-and-images.md#trailers)                | 
-| **Imagen de Windows 10 y Xbox (art héroe de 16:9)**     | Recomendado        | [10 de Windows y Xbox image (art héroe de 16:9)
-](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
-| **Imágenes de Xbox**     | Necesario para la visualización adecuada si publica en Xbox        | [Imágenes de Xbox
-](app-screenshots-and-images.md#xbox-images) |
+| **Imagen de Windows 10 y Xbox (art héroe de 16:9)**     | Recomendado        | [Imagen de Windows 10 y Xbox (art héroe de 16:9)](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+| **Imágenes de Xbox**     | Necesario para la visualización adecuada si publica en Xbox        | [Imágenes de Xbox](app-screenshots-and-images.md#xbox-images) |
 | **Campos adicionales**  | Opcional                                    | [Campos adicionales](create-app-store-listings.md#supplemental-fields) 
 | **Términos de búsqueda**              | Opcional                                    | [Términos de búsqueda](create-app-store-listings.md#search-terms)         |
 | **Información de copyright y marca comercial** | Opcional                                 | [Información de copyright y marca comercial](create-app-store-listings.md#copyright-and-trademark-info) |
