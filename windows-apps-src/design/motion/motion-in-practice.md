@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bc879e43d7e117a4e61e8b6de4bb5437d126e84b
-ms.sourcegitcommit: 7effecb544952b493250337fc622848232fa5995
+ms.openlocfilehash: 8cf010533d2d62559bb8dc0d214e04ab917e62bd
+ms.sourcegitcommit: d534f81590d881a18d677a648c59913029837a84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67325852"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535437"
 ---
 # <a name="bringing-it-together"></a>Reunión de todo
 
@@ -26,16 +26,13 @@ Hay 3 maneras de aplicar los conceptos básicos del movimiento de Fluent en tu a
 
 :::row:::
     :::column:::
-        **Implicit animation**
-        Automatic tween and timing between values in a parameter change to achieve very simple Fluent motion using the standardized values.
+**Animación implícito** interpolación automática y los intervalos entre los valores de un cambio de parámetro para lograr el movimiento de Fluent muy sencilla con los valores normalizados.
     :::column-end:::
     :::column:::
-        **Built-in animation**
-        System components, such as common controls and shared motion, are "Fluent by default". Fundamentals have been applied in a manner consistent with their implied usage.
+**Animación integrada** componentes del sistema, como los controles comunes y movimiento compartido, son "Fluent de forma predeterminada". Se han aplicado los aspectos básicos de manera coherente con su uso implícito.
     :::column-end:::
     :::column:::
-        **Custom animation following guidance recommendations**
-        There may be times when the system does not yet provide an exact motion solution for your scenario. In those cases, use the baseline fundamental recommendations as a starting point for your experiences.
+**Si sigue las recomendaciones de orientación de animación personalizada** puede haber ocasiones cuando el sistema no aún proporciona una solución de movimiento exactos para su escenario. En esos casos, use las recomendaciones fundamentales de la línea de base como punto de partida para sus experiencias.
     :::column-end:::
 :::row-end:::
 
@@ -45,16 +42,14 @@ Hay 3 maneras de aplicar los conceptos básicos del movimiento de Fluent en tu a
 
 :::row:::
     :::column:::
-        <b>Direction Forward Out:</b><br>
-        Fade out: 150m; Easing: Default Accelerate
-        <b>Direction Forward In:</b><br>
-        Slide up 150px: 300ms; Easing: Default Decelerate
+<b>Dirección de salida hacia delante:</b><br>
+Fundido de salida: 150m; Aceleración: Acelere predeterminada <b>avanzando en:</b><br>
+Diapositiva de 150px: 300 ms; Aceleración: Reducir la velocidad predeterminada
     :::column-end:::
     :::column:::
-         <b>Direction Backward Out:</b><br>
-        Slide down 150px: 150ms; Easing: Default Accelerate
-        <b>Direction Backward In:</b><br>
-        Fade in: 300ms; Easing: Default Decelerate
+<b>Con versiones anteriores a la dirección:</b><br>
+Deslice hacia abajo 150 px: 150 MS; Aceleración: Acelere predeterminada <b>dirección hacia atrás en:</b><br>
+Fundido de entrada: 300 ms; Aceleración: Reducir la velocidad predeterminada
     :::column-end:::
 :::row-end:::
 
@@ -64,12 +59,12 @@ Hay 3 maneras de aplicar los conceptos básicos del movimiento de Fluent en tu a
 
 :::row:::
     :::column:::
-        <b>Direction Expand:</b><br>
-        Grow: 300ms; Easing: Standard
+<b>Expanda la dirección:</b><br>
+Crecimiento: 300 ms; Aceleración: Standard
     :::column-end:::
     :::column:::
-        <b>Direction Contract:</b><br>
-        Grow: 150ms; Easing: Default Accelerate
+<b>Contrato de dirección:</b><br>
+Crecimiento: 150 MS; Aceleración: Acelerar la predeterminada
     :::column-end:::
 :::row-end:::
 
