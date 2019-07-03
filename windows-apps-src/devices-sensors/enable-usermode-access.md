@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dbb06f53f760724da312e00f545d799d6a24200
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 991d86dd61c660553e5b0a3fdbbdec0336c7fb8b
+ms.sourcegitcommit: d63e5a4fd24434068067cae5b8fb3bed4931247e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321571"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67515155"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>Habilitar el acceso de modo usuario a GPIO, I2C, y SPI
 
@@ -268,7 +268,7 @@ Si una señal GPIO pasa por un desfasador de nivel antes de alcanzar un encabeza
 Windows admite dos esquemas de numeración de patillas:
 
 * Numeración de patillas secuencial: los usuarios ven números como 0, 1, 2... hasta el número de patillas expuestas. 0 es el primer recurso GpioIo declarado en ASL, 1 es el segundo recurso GpioIo declarado en ASL, y así sucesivamente.
-* Numeración de patillas nativa: los usuarios verán los números de patilla especificados en los descriptores GpioIo, por ejemplo, 4, 5, 12, 13…
+* Numeración de Pin nativo: los usuarios ver los números pin especificado en los descriptores de GpioIo, por ejemplo, 4, 5, 12, 13,...
 
 ```cpp
 Package (2) { “GPIO-UseDescriptorPinNumbers”, 1 },
