@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3cdb20516d4f21933c7770f43701af322e09c886
-ms.sourcegitcommit: 7effecb544952b493250337fc622848232fa5995
+ms.openlocfilehash: 8f1e36f0febeeaac5a12d408d7be8a717f0ab398
+ms.sourcegitcommit: 7c3b88198178d6f6a535f35e1bf8665410d41d92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67325883"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569123"
 ---
 # <a name="directionality-and-gravity"></a>Direccionalidad y gravedad
 
@@ -43,8 +43,8 @@ El movimiento direccional está sujeto a fuerzas como la gravedad. Aplicar fuerz
 
 :::row:::
     :::column:::
-        Direction of movement corresponds to physical motion. Just like in nature, objects can move in any world axis - X,Y,Z. This is how we think of the movement of objects on the screen.
-        When you move objects, avoid unnatural collisions. Keep in mind where objects come from and go to, and alway support higher level constructs that may be used in the scene, such as scroll direction or layout hierarchy.
+Dirección del movimiento corresponde al movimiento físico. Al igual que en la naturaleza, los objetos se pueden mover en cualquier eje del mundo - X, Y, Z. Así es cómo consideramos el movimiento de objetos en la pantalla.
+Al mover objetos, evitar colisiones no naturales. Tenga en cuenta que objetos proceden de y vayan a y siempre admiten construcciones de nivel superior que se pueden usar en la escena, como la jerarquía de dirección o el diseño de desplazamiento.
     :::column-end:::
     :::column:::
         ![direction backward in](images/Direction.gif)
@@ -75,8 +75,7 @@ Existen 4 direcciones de navegación discretas a tener en cuenta.
 
 :::row:::
     :::column:::
-        **Forward-In**
-        Celebrate content entering the scene in a manner that does not collide with outgoing content. Content decelerates into the scene.
+**Avance en** celebrar contenido introducir la escena de manera que no entren en conflicto con el contenido saliente. Contenido disminuye la velocidad a la escena.
     :::column-end:::
     :::column:::
         ![direction forward in](images/forwardIN.gif)
@@ -84,8 +83,7 @@ Existen 4 direcciones de navegación discretas a tener en cuenta.
 :::row-end:::
 :::row:::
     :::column:::
-        **Forward-Out**
-        Content exits quickly. Objects accelerate off screen.
+**Avance horizontal** contenido se cierra rápidamente. Aceleran los objetos fuera de la pantalla.
     :::column-end:::
     :::column:::
         ![direction forward out](images/forwardOUT.gif)
@@ -93,8 +91,7 @@ Existen 4 direcciones de navegación discretas a tener en cuenta.
 :::row-end:::
 :::row:::
     :::column:::
-        **Backward-In**
-        Same as Forward-In, but reversed.
+**Con versiones anteriores de** igual que avance en, pero puede revertir.
     :::column-end:::
     :::column:::
         ![direction backward in](images/backwardIN.gif)
@@ -102,8 +99,7 @@ Existen 4 direcciones de navegación discretas a tener en cuenta.
 :::row-end:::
 :::row:::
     :::column:::
-        **Backward-Out**
-        Same as Forward-Out, but reversed.
+**Con versiones anteriores de salida** igual que el reenvío de salida, pero puede revertir.
     :::column-end:::
     :::column:::
         ![direction backward out](images/backwardOUT.gif)
