@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 814d8c04943e32ff4d2f0c81bd847e78becd5ebb
-ms.sourcegitcommit: a4fe508e62827a10471e2359e81e82132dc2ac5a
+ms.openlocfilehash: 38a5a6fae3e6477321a8879a50dff21e10fd92e2
+ms.sourcegitcommit: 48ca9c99b52f93a805d5afeb7045ba4bf6597371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66468326"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67622944"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Integre su aplicación de escritorio empaquetado con Windows 10 y UWP
 
@@ -120,10 +120,10 @@ Para ello, especifica el [identificador de programación (ProgID)](https://docs.
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación. |
+|Name |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación. |
 |MigrationProgId |El [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) que describe la aplicación, el componente y la versión de la aplicación de escritorio desde la que desea heredar las asociaciones de archivo.|
 
 #### <a name="example"></a>Ejemplo
@@ -179,7 +179,7 @@ La aplicación empaquetada puede asociar extensiones de tipo de archivo. Si un u
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Name |Identificador único de la aplicación. Este identificador se usa internamente para crear un [identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) con hash relacionado con la asociación de tipos de archivo. Puede utilizar este identificador para administrar los cambios en versiones futuras de la aplicación.   |
@@ -288,8 +288,8 @@ Puede asegurarse de que los usuarios abran la aplicación empaquetada nuevo de f
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
+* http:\//schemas.microsoft.com/appx/manifest/uap/windows10
+* http:\//schemas.microsoft.com/appx/manifest/uap/windows10/3"
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -305,7 +305,7 @@ Puede asegurarse de que los usuarios abran la aplicación empaquetada nuevo de f
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
@@ -496,7 +496,7 @@ Especifique cómo se comporta la aplicación cuando un usuario abre varios archi
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
 |Nombre |Identificador único de la aplicación. |
@@ -574,7 +574,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. |
+|Name |Identificador único de la aplicación. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid   |Identificador de clase de la aplicación. |
 
@@ -633,10 +633,10 @@ Permite que los usuarios obtengan una vista previa del contenido de un archivo e
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. |
+|Name |Identificador único de la aplicación. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid   |Identificador de clase de la aplicación. |
 
@@ -698,10 +698,10 @@ Para obtener más información sobre el campo **Kind** y los valores que puedes 
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Nombre |Identificador único de la aplicación. |
+|Name |Identificador único de la aplicación. |
 |FileType |Extensiones de archivo relevantes. |
 |value |[Valor Kind](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names) válido |
 
@@ -762,7 +762,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|Name |Identificador único de la aplicación. |
+|Nombre |Identificador único de la aplicación. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid  |Identificador de clase de la aplicación. |
 
@@ -915,7 +915,7 @@ Registra los controladores que se implementan en la aplicación. También puedes
 
 ```
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.cloudfiles``
 |iconResource |El icono que representa tu servicio de proveedor de archivos en la nube. Este icono aparece en el panel Navegación del Explorador de archivos.  Los usuarios eligen este icono para mostrar archivos desde tu servicio en la nube. |
@@ -985,7 +985,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.protocol``
 |Nombre |Nombre del protocolo. |
@@ -1158,7 +1158,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
   </AutoPlayHandler>
 ```
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.autoPlayHandler``
 |ActionDisplayName |Una cadena que representa la acción que los usuarios pueden realizar con un dispositivo que se conectan a un equipo (por ejemplo: "Importar archivos" o "Reproducir vídeo"). |
@@ -1245,7 +1245,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter).
 
-|Nombre |Descripción |
+|Name |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.appPrinter``
 |DisplayName |Es el nombre que quieres que aparezcan en la lista de destinos de impresión de una aplicación. |
@@ -1341,7 +1341,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Extension>
 ```
 
-|Name |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fullTrustProcess``
 |GroupID |Cadena que identifica el conjunto de parámetros que quieres pasar al archivo ejecutable. |

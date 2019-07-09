@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 20cb1e3162f0c852a60c620be92afd37ad9f8232
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: eef1c3dd50f06d38023102122cc7fc63a36df25c
+ms.sourcegitcommit: 3ec8c1d0ea3798cdb2745e7a941a025cf3cf21c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317271"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650782"
 ---
 # <a name="keyboard-interactions"></a>Interacciones de teclado
 
@@ -369,7 +369,7 @@ El Narrador es una herramienta de accesibilidad de la interfaz de usuario dirigi
 Algunas de las diferencias entre los comportamientos del teclado para UWP y los admitidos por el Narrador incluyen:
 -   Combinaciones de teclas adicionales para la navegación a elementos de la interfaz de usuario que no están expuestos a través de la navegación habitual mediante el teclado, como Bloq Mayús+teclas de dirección para leer las etiquetas de los controles.
 -   Navegación a los elementos deshabilitados. De manera predeterminada, los elementos deshabilitados no se exponen a través de la navegación habitual mediante el teclado.
-    -   "Vistas" de controles para la navegación más rápida en función de la granularidad de la interfaz de usuario. Los usuarios pueden navegar a los elementos, caracteres, palabras, líneas, párrafos, vínculos, encabezados, tablas, puntos de referencia y sugerencias. La navegación habitual mediante el teclado expone estos objetos como una lista plana, lo que podría hacer que la navegación fuese engorrosa, a menos que proporciones teclas de método abreviado.
+-   "Vistas" de controles para la navegación más rápida en función de la granularidad de la interfaz de usuario. Los usuarios pueden navegar a los elementos, caracteres, palabras, líneas, párrafos, vínculos, encabezados, tablas, puntos de referencia y sugerencias. La navegación habitual mediante el teclado expone estos objetos como una lista plana, lo que podría hacer que la navegación fuese engorrosa, a menos que proporciones teclas de método abreviado.
 
 #### <a name="case-study--autosuggestbox-control"></a>Caso práctico: control AutoSuggestBox
 
@@ -485,16 +485,21 @@ En el orden column-major (donde los elementos se rellenan de arriba abajo y de i
 
 Como se mencionó, debe intentar garantizar la navegación direccional corresponde al orden visual de los controles de interfaz de usuario de la aplicación.
 
-Algunos controles, como ContextMenu, AppBarOverflowMenu y AutoSuggest, incluyen un menú emergente que se muestra en una ubicación y dirección relativa al control principal (según el espacio disponible en pantalla). Por ejemplo, cuando no hay espacio suficiente para que el menú se abra hacia abajo (la dirección predeterminada), se abre hacia arriba. No hay ninguna garantía de que el menú se abra en la misma dirección cada vez.
+Algunos controles (por ejemplo, el menú contextual, el menú de desbordamiento de la barra de comandos y el menú de AutoSuggest) mostrar un menú emergente en una ubicación y dirección (hacia abajo de forma predeterminada) en relación con el control principal y el espacio disponible en pantalla. Tenga en cuenta que la dirección de apertura puede verse afectada por diversos factores en tiempo de ejecución.
 
 <table>
   <td><img src="images/keyboard/command-bar-open-down.png" alt="command bar opens down with down arrow key" /></td>
   <td><img src="images/keyboard/command-bar-open-up.png" alt="command bar opens up with down arrow key" /></td>
 </table>
 
-Para estos controles, cuando se abre el menú por primera vez (y no hay ningún elemento seleccionado por el usuario), la tecla de flecha abajo siempre establece el foco en el primer elemento y la tecla de flecha arriba siempre establece el foco en el último elemento del menú. Del mismo modo, cuando se selecciona el último elemento y se presiona la tecla de flecha abajo, el foco se mueve al primer elemento del menú y, cuando se selecciona el primer elemento y se presiona la tecla de flecha arriba, el foco se mueve al último elemento del menú.
+Para estos controles, cuando se abre el menú por primera vez (y no se ha seleccionado ningún elemento por el usuario), la tecla de flecha abajo siempre establece el foco al primer elemento mientras la tecla flecha arriba siempre establece el foco al último elemento en el menú. 
 
-Deberías intentar emular estos mismos comportamientos en tus controles personalizados. Ejemplo de código sobre cómo implementar este comportamiento puede encontrarse en [navegación del foco mediante programación](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) documentación.
+Si el último elemento tiene el foco y se presiona la tecla de flecha abajo, el foco se mueve al primer elemento en el menú. De forma similar, si el primer elemento tiene el foco y se presiona la tecla flecha arriba, el foco se desplaza al último elemento en el menú. Este comportamiento se conoce como *ciclismo* y es útil para navegar por los menús emergentes que pueden abrir en direcciones impredecibles.
+
+> [!NOTE]
+> Ciclismo debe evitarse en las interfaces de usuario que no sean emergente donde los usuarios pueden llegar a sentirse capturados en un bucle infinito. 
+
+Se recomienda que emulan estos mismos comportamientos en los controles personalizados. Ejemplo de código sobre cómo implementar este comportamiento puede encontrarse en [navegación del foco mediante programación](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) documentación.
 
 ## <a name="test-your-app"></a>Probar la aplicación
 
