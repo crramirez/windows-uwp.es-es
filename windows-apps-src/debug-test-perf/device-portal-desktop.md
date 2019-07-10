@@ -2,16 +2,16 @@
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Portal de dispositivos para dispositivos de escritorio Windows
 description: Aprende cómo Windows Device Portal abre diagnóstico y automatización en el escritorio de Windows.
-ms.date: 02/6/2019
+ms.date: 02/06/2019
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fe1f2a51199dd12cd1d285c17c5d48c9a25b969
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 00cf497d5d57f5a3cdc5c52ecfeead7885ff7d56
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654530"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713810"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de dispositivos para dispositivos de escritorio Windows
 
@@ -71,7 +71,7 @@ El Portal de dispositivos en un dispositivo de escritorio Windows proporciona el
 - Características
 - Realidad mixta
 - Depurador de instalación en streaming
-- Ubicación
+- Location
 - Borrador
 
 ## <a name="more-device-portal-options"></a>Más opciones del Portal de dispositivos
@@ -115,9 +115,9 @@ Puede obtener este error al intentar instalar los paquetes de desarrollador en u
 
 1. Vaya a **configuración > actualización y seguridad > Windows Insider programa** y confirme que la **cuenta de Windows Insider** sección tiene la información de cuenta correcto. Si no ve esa sección, seleccione **vincular una cuenta de Windows Insider**, agregue su cuenta de correo electrónico y confirme que se muestra en el **cuenta de Windows Insider** encabezado (es posible que deba seleccionar **Vincular una cuenta de Windows Insider** un segundo tiempo de vínculo realmente una cuenta recién agregada).
  
-2. En **qué tipo de contenido desearía recibir?**, asegúrese de que **desarrollo activo de Windows** está seleccionada.
+2. En **qué tipo de contenido desearía recibir?** , asegúrese de que **desarrollo activo de Windows** está seleccionada.
  
-3. En **el ritmo desea obtener nuevas compilaciones?**, asegúrese de que **Windows Insider rápido** está seleccionada.
+3. En **el ritmo desea obtener nuevas compilaciones?** , asegúrese de que **Windows Insider rápido** está seleccionada.
  
 4. Ahora podrá instalar el FoDs. Si ha confirmado que está en Windows Insider rápido y todavía no se puede instalar el FoDs, por favor, proporcionar comentarios y adjuntar archivos de registro en **C:\Windows\Logs\CBS**.
 
@@ -129,7 +129,7 @@ Puede obtener este error si no se instalan los paquetes de desarrollador. Sin lo
 
 Puede obtener este error si se encuentra en una conexión de internet de uso medido. No podrá descargar los paquetes de desarrollador en una conexión de uso medido.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Información general de Windows Device Portal](device-portal.md)
 * [Núcleo de Portal de dispositivo referencia de API](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

@@ -2,16 +2,16 @@
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: Introducción a Windows Device Portal
 description: Obtén información sobre cómo Windows Device Portal te permite configurar y administrar de forma remota el dispositivo mediante una red o una conexión USB.
-ms.date: 4/9/2019
+ms.date: 04/09/2019
 ms.topic: article
 keywords: Windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 59e7e46ea68f6bb5fe7fd63e6ac35b9256103c38
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1f776a9d0ffe15f4bec26fbf8a26ce52a73345e9
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317900"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713867"
 ---
 # <a name="windows-device-portal-overview"></a>Introducción a Windows Device Portal
 
@@ -46,10 +46,10 @@ Phone | Habilitar dentro del modo de desarrollador | 80| 443 | http://127.0.0.1:
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
 
 - [Portal de dispositivos para HoloLens](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens)
-- [Portal de dispositivo de IoT](https://go.microsoft.com/fwlink/?LinkID=616499)
+- [Portal de dispositivos para IoT](https://go.microsoft.com/fwlink/?LinkID=616499)
 - [Portal de dispositivos para dispositivos móviles](device-portal-mobile.md)
 - [Portal de dispositivos para Xbox](../xbox-apps/device-portal-xbox.md)
-- [Portal de dispositivo de escritorio](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
+- [Portal de dispositivos para dispositivos de escritorio](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
 
 ## <a name="features"></a>Características
 

@@ -3,16 +3,16 @@ Description: Obtenga información sobre cómo usar una barra de progreso dentro 
 title: Enlace de datos y barra de progreso de notificación del sistema
 label: Toast progress bar and data binding
 template: detail.hbs
-ms.date: 12/7/2017
+ms.date: 12/07/2017
 ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, barra de progreso, barra de progreso de notificación del sistema, notificación, enlace de datos de notificación del sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: f955f2a71fed6444c65f9550e1f4fa3baeabe092
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 742270a4cdc6cbbc9eed0879e30b3e7066722f05
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57624830"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714111"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>Enlace de datos y barra de progreso de notificación del sistema
 
@@ -32,9 +32,9 @@ La siguiente imagen muestra una barra de progreso determinada con todas sus prop
 
 <img alt="Toast with progress bar properties labeled" src="images/toast-progressbar-annotated.png" width="626"/>
 
-| Propiedad | Tipo | Requerido | Descripción |
+| Property | Tipo | Requerido | Descripción |
 |---|---|---|---|
-| **Título** | cadena o [BindableString](toast-schema.md#bindablestring) | falso | Obtiene o establece una cadena de título opcional. Admite el enlace de datos. |
+| **Title** | cadena o [BindableString](toast-schema.md#bindablestring) | falso | Obtiene o establece una cadena de título opcional. Admite el enlace de datos. |
 | **Valor** | doble o [AdaptiveProgressBarValue](toast-schema.md#adaptiveprogressbarvalue) o [BindableProgressBarValue](toast-schema.md#bindableprogressbarvalue) | falso | Obtiene o establece el valor de la barra de progreso. Admite el enlace de datos. El valor predeterminado es 0. Puede ser uno doble entre 0,0 y 1,0, `AdaptiveProgressBarValue.Indeterminate`, o `new BindableProgressBarValue("myProgressValue")`. |
 | **ValueStringOverride** | cadena o [BindableString](toast-schema.md#bindablestring) | falso | Obtiene o establece una cadena opcional que se mostrará en lugar de la cadena de porcentaje predeterminada. Si no se proporciona, se mostrará algo similar a "70 %". |
 | **Estado** | cadena o [BindableString](toast-schema.md#bindablestring) | true | Obtiene o establece una cadena de estado (obligatoria), que se muestra debajo de la barra de progreso a la izquierda. Esta cadena debe reflejar el estado de la operación, como "Descargando…" o "Instalando..." |

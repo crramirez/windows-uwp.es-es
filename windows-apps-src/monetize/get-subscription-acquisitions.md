@@ -1,15 +1,15 @@
 ---
 description: Utilice este método en la API de análisis de Microsoft Store para obtener datos de adquisición de una suscripción durante un intervalo de fechas determinado y los demás filtros opcionales del complemento.
 title: Obtener adquisiciones de complementos de suscripción
-ms.date: 01/25/18
+ms.date: 01/25/2018
 ms.topic: article
 keywords: Windows 10, uwp, servicios de Store, API, las suscripciones de análisis de Microsoft Store
-ms.openlocfilehash: e33a3ded219fb4d223137b40ebe871f66589addf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c77cab76aa070e21288e93e5264e70325bb4d616
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57594780"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714096"
 ---
 # <a name="get-subscription-add-on-acquisitions"></a>Obtener adquisiciones de complementos de suscripción
 
@@ -34,7 +34,7 @@ Para usar este método, primero debes hacer lo siguiente:
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado        | Tipo   | Descripción          |
+| Header        | Tipo   | Descripción          |
 |---------------|--------|--------------|
 | Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
 
@@ -45,14 +45,14 @@ Para usar este método, primero debes hacer lo siguiente:
 |---------------|--------|---------------|------|
 | applicationId | string | El [Store ID](in-app-purchases-and-trials.md#store-ids) de la aplicación para la que desea recuperar datos de adquisición de complemento de suscripción. |  Sí  |
 | subscriptionProductId  | string | El [Store ID](in-app-purchases-and-trials.md#store-ids) del complemento de suscripción para la que desea recuperar datos de adquisición. Si no especifica este valor, este método devuelve datos de adquisición para todos los complementos de suscripción para la aplicación especificada.  | No  |
-| startDate | fecha | La fecha de inicio del intervalo de fechas de los datos de adquisición de complemento de suscripción para recuperar. El valor predeterminado es la fecha actual. |  No  |
-| endDate | fecha | La fecha de finalización del intervalo de fechas de los datos de adquisición de complemento de suscripción para recuperar. El valor predeterminado es la fecha actual. |  No  |
+| startDate | date | La fecha de inicio del intervalo de fechas de los datos de adquisición de complemento de suscripción para recuperar. El valor predeterminado es la fecha actual. |  No  |
+| endDate | date | La fecha de finalización del intervalo de fechas de los datos de adquisición de complemento de suscripción para recuperar. El valor predeterminado es la fecha actual. |  No  |
 | top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado si no se especifica es 100. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
 | skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=100 y skip=0 recuperan las primeras 100 filas de datos, los valores top=100 y skip=100 recuperan las siguientes 100 filas de datos, y así sucesivamente. |  No  |
-| filter | string  | Una o más instrucciones que filtran el cuerpo de respuesta. Cada instrucción puede utilizar los operadores **eq** o **ne**, y las instrucciones se pueden combinar mediante **and** u **or**. Puede especificar las siguientes cadenas en las instrucciones de filtro (estos se corresponden con [valores en el cuerpo de respuesta](#subscription-acquisition-values)): <ul><li><strong>Fecha</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>ApplicationName</strong></li><li><strong>SkuId</strong></li><li><strong>mercado</strong></li><li><strong>tipo de dispositivo</strong></li></ul><p>Este es un ejemplo *filtro* parámetro: <em>Filtro = fecha eq "2017-07-08'</em>.</p> | No   |
+| filter | string  | Una o más instrucciones que filtran el cuerpo de respuesta. Cada instrucción puede utilizar los operadores **eq** o **ne**, y las instrucciones se pueden combinar mediante **and** u **or**. Puede especificar las siguientes cadenas en las instrucciones de filtro (estos se corresponden con [valores en el cuerpo de respuesta](#subscription-acquisition-values)): <ul><li><strong>date</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>applicationName</strong></li><li><strong>skuId</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li></ul><p>Este es un ejemplo *filtro* parámetro: <em>Filtro = fecha eq "2017-07-08'</em>.</p> | No   |
 | aggregationLevel | string | Especifica el intervalo de tiempo necesario para el que quieres recuperar datos agregados. Puede ser una de las siguientes cadenas: <strong>día</strong>, <strong>semana</strong> o <strong>mes</strong>. Si no se especifica, el valor predeterminado es <strong>día</strong>. | No |
-| orderby | string | Una instrucción que ordena el resultado de los valores de datos para cada adquisición de complemento de la suscripción. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>Fecha</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>ApplicationName</strong></li><li><strong>SkuId</strong></li><li><strong>mercado</strong></li><li><strong>tipo de dispositivo</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
-| groupby | string | Una instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<ul><li><strong>Fecha</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>ApplicationName</strong></li><li><strong>SkuId</strong></li><li><strong>mercado</strong></li><li><strong>tipo de dispositivo</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>groupby = mercado&amp;aggregationLevel = semana</em></p> |  No  |
+| orderby | string | Una instrucción que ordena el resultado de los valores de datos para cada adquisición de complemento de la suscripción. La sintaxis es <em>orderby=field [order],field [order],...</em>. El parámetro <em>field</em> puede ser una de las siguientes cadenas:<ul><li><strong>date</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>applicationName</strong></li><li><strong>skuId</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li></ul><p>El parámetro <em>order</em>, en cambio, es opcional y puede ser <strong>asc</strong> o <strong>desc</strong> para especificar el orden ascendente o descendente de cada campo. El valor predeterminado es <strong>asc</strong>.</p><p>Aquí tienes un ejemplo de una cadena <em>orderby</em>: <em>orderby=date,market</em></p> |  No  |
+| groupby | string | Una instrucción que aplica la agregación de datos únicamente a los campos especificados. Puedes especificar los siguientes campos:<ul><li><strong>date</strong></li><li><strong>subscriptionProductName</strong></li><li><strong>applicationName</strong></li><li><strong>skuId</strong></li><li><strong>market</strong></li><li><strong>deviceType</strong></li></ul><p>Puedes usar el parámetro <em>groupby</em> con <em>aggregationLevel</em>. Por ejemplo: <em>groupby = mercado&amp;aggregationLevel = semana</em></p> |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
@@ -84,13 +84,13 @@ Los elementos de la matriz *Value* contienen los siguientes valores.
 
 | Valor               | Tipo    | Descripción        |
 |---------------------|---------|---------------------|
-| fecha                | string  | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
+| date                | string  | Es la primera fecha del intervalo de fechas de los datos de compra. Si la solicitud especifica un solo día, este valor será esa fecha. Si, por el contrario, la solicitud especifica una semana, un mes u otro intervalo de fechas, este valor será la primera fecha de ese intervalo de fechas. |
 | subscriptionProductId      | string  | El [Store ID](in-app-purchases-and-trials.md#store-ids) del complemento de suscripción para el que va a recuperar datos de adquisición.    |
 | subscriptionProductName    | string  | El nombre para mostrar del complemento de suscripción.         |
 | applicationId       | string  | El [Store ID](in-app-purchases-and-trials.md#store-ids) de la aplicación para el que va a recuperar datos de adquisición de complemento de suscripción.   |
 | applicationName     | string  | El nombre para mostrar de la aplicación.     |
 | skuId     | string  | El identificador de la [SKU](in-app-purchases-and-trials.md#products-skus) del complemento de suscripción para el que va a recuperar datos de adquisición.     |
-| deviceType          | string  |  Una de las cadenas siguientes que especifica el tipo de dispositivo que ha completado la adquisición:<ul><li><strong>PC</strong></li><li><strong>Teléfono</strong></li><li><strong>Consola de</strong></li><li><strong>IoT</strong></li><li><strong>Holográfica</strong></li><li><strong>Desconocido</strong></li></ul>       |
+| deviceType          | string  |  Una de las cadenas siguientes que especifica el tipo de dispositivo que ha completado la adquisición:<ul><li><strong>PC</strong></li><li><strong>Teléfono</strong></li><li><strong>Consola de</strong></li><li><strong>IoT</strong></li><li><strong>Holográfica</strong></li><li><strong>Unknown</strong></li></ul>       |
 | market           | string  | Código de país ISO 3166 del mercado donde se realizó la compra.     |
 | currencyCode         | string  | El código de divisa en formato ISO 4217 para ventas brutas antes de impuestos.       |
 | grossSalesBeforeTax           | número entero  | Las ventas brutas en la moneda local especificada por el *currencyCode* valor.     |
