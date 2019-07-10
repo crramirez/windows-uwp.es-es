@@ -13,15 +13,15 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 91903365a258d54804b420cd217dd7c25d79406a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57606140"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63813685"
 ---
 # <a name="radio-buttons"></a>Botones de radio
 
-> **API importantes**: [Clase de RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [evento activado](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [propiedad IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
+> **API importantes**: [Clase RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [Evento Checked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked) y [Propiedad IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
 Los botones de radio permiten a los usuarios seleccionar una opción entre un conjunto. Cada opción aparece representada por un botón de radio y los usuarios solo pueden seleccionar un único botón de radio en un grupo de botones de radio.
 
@@ -37,34 +37,34 @@ Usa botones de radio para presentar a los usuarios dos o más opciones mutuament
 
 Usa botones de radio cuando los usuarios necesiten ver todas las opciones para realizar una selección. Puesto que los botones de radio enfatizan todas las opciones por igual, atraen más atención de la necesaria sobre las opciones. Salvo que las opciones se merezcan una atención extra por parte del usuario, deberías plantearte utilizar otros controles. Por ejemplo, si la opción predeterminada se recomienda a la mayoría de los usuarios en la mayoría de las situaciones, usa en su lugar una [lista desplegable](lists.md).
 
-![lista desplegable](images/combo_box_collapsed.png)
+![Lista desplegable](images/combo_box_collapsed.png)
 
 Si únicamente hay dos opciones que se excluyen mutuamente, combínalas en una [casilla](checkbox.md) o [modificador para alternar](toggles.md). Por ejemplo, usa una casilla para "Acepto", en lugar de dos botones de radio para "Acepto" y "No acepto".
 
 ![Dos formas de presentar una selección binaria](images/radiobutton_vs_checkbox.png)
 
-Cuando el usuario puede seleccionar varias opciones, usa una [casilla](checkbox.md).
+Utiliza una [casilla](checkbox.md) cuando el usuario pueda seleccionar varias opciones.
 
 ![Seleccionar varias opciones con casillas](images/checkbox2.png)
 
-Cuando las opciones sean números separados por intervalos (10, 20, 30), usa un [control deslizante](slider.md).
+Utiliza un [control deslizante](slider.md) cuando las opciones sean números separados por intervalos (10, 20, 30).
 
-![control deslizante](images/controls/slider.png)
+![Control deslizante](images/controls/slider.png)
 
-Si hay más de ocho opciones, usa una [lista desplegable](lists.md) o [cuadro de lista](lists.md).
+Si hay más de ocho opciones, usa una [lista desplegable](lists.md) o un [cuadro de lista](lists.md).
 
-![cuadro combinado](images/combo_box_scroll.png)
+![Cuadro combinado](images/combo_box_scroll.png)
 
-Si las opciones disponibles se basan en el contexto actual de la aplicación o pueden variar de forma dinámica, usa un [cuadro de lista](lists.md) de selección única.
+Si las opciones disponibles se basan en el contexto actual de la aplicación o pueden variar dinámicamente, usa un [cuadro de lista](lists.md) de selección única.
 
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/RadioButton">abrir la aplicación y ver RadioButton en acción</a>.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/RadioButton">abrir la aplicación y ver RadioButton en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -81,7 +81,7 @@ Botones de radio en la configuración del navegador Microsoft Edge.
 
 Los botones de radio funcionan en grupos. Hay dos formas de agrupar los controles de botón de radio:
 - Colocarlos dentro del mismo contenedor principal.
-- Establece la propiedad [GroupName](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton.GroupName) en cada botón de radio en el mismo valor.
+- Establece la propiedad [GroupName](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton.GroupName) de cada botón de radio en el mismo valor.
 
 En este ejemplo, el primer grupo de botones de radio se agrupará implícitamente al estar en el mismo panel de pila. El segundo grupo se divide entre dos paneles de pila, por lo que explícitamente están agrupados por GroupName.
 
@@ -185,16 +185,16 @@ En esta ilustración, se muestra el modo correcto de colocar y espaciar botones 
 
 ![Un grupo de botones de radio.](images/radiobutton-layout.png)
 
-![directrices de espaciado para botones de radio](images/radiobutton-redlines.png)
+![Directrices de espaciado para botones de radio](images/radiobutton-redlines.png)
 
 ## <a name="related-topics"></a>Temas relacionados
 
 **Para diseñadores**
 - [Botones](buttons.md)
-- [Modificadores de alternancia](toggles.md)
-- [Casillas de verificación](checkbox.md)
-- [Las listas y cuadros combinados](lists.md)
+- [Modificadores para alternar](toggles.md)
+- [Casillas](checkbox.md)
+- [Listas y cuadros combinados](lists.md)
 - [Controles deslizantes](slider.md)
 
 **Para desarrolladores (XAML)**
-- [Clase de RadioButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.radiobutton)
+- [Clase RadioButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.radiobutton)
