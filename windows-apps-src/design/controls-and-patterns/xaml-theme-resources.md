@@ -12,15 +12,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9544988837d44f42d963b268a2ce3d37cce83952
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364110"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
-Los recursos de tema en XAML son un conjunto de recursos que aplican distintos valores según el tema del sistema que esté activo. Hay 3 temas que admite el marco de trabajo XAML: "Light", "Oscuro" y "Contraste alto".
+Los recursos de tema en XAML son un conjunto de recursos que aplican distintos valores según el tema del sistema que esté activo. Existen 3 temas que admiten el marco XAML: "Light", "Dark" y "HighContrast".
 
 **Requisitos previos**: Para este tema se presupone que has leído [Referencias a ResourceDictionary y a recursos XAML](resourcedictionary-and-xaml-resource-references.md).
 
@@ -34,21 +34,21 @@ En cambio, una [extensión de marcado {StaticResource}](../../xaml-platform/stat
 
 ## <a name="theme-resources-in-the-resource-dictionary-structure"></a>Recursos de temas en la estructura del diccionario de recursos
 
-Cada recurso de tema es parte del archivo XAML themeresources.xaml. Para fines de diseño, themeresources.xaml está disponible en el \\(archivos de programa)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP \\ &lt;Versión del SDK&gt;\\carpeta genérico desde una instalación del Kit de desarrollo de Software (SDK) de Windows. Los diccionarios de recursos de themeresources.xaml también se reproducen en generic.xaml en el mismo directorio.
+Cada recurso de tema es parte del archivo XAML themeresources.xaml. Por cuestiones de diseño, themeresources.xaml está disponible en la carpeta \\(Archivos de programa)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;Versión del SDK&gt;\\Generic de una instalación del Kit de desarrollo de software (SDK) de Windows. Los diccionarios de recursos de themeresources.xaml también se reproducen en generic.xaml en el mismo directorio.
 
 Windows Runtime no usa estos archivos físicos para la búsqueda en tiempo de ejecución. Por este motivo, están específicamente en una carpeta DesignTime y no se copian a aplicaciones de forma predeterminada. En cambio, estos diccionarios de recursos existen en la memoria como parte del propio Windows Runtime y las referencias de los recursos XAML de la aplicación a recursos de tema (o recursos del sistema) se resuelven allí en tiempo de ejecución.
 
 ## <a name="guidelines-for-custom-theme-resources"></a>Directrices para recursos de temas personalizados
 
-Sigue estas instrucciones cuando definas y consumas tus propios recursos de temas personalizados:
+Sigue estas instrucciones al definir y consumir tus propios recursos de tema personalizados:
 
 - Especifica los diccionarios de temas para "Light" y "Dark", además de tu diccionario "HighContrast". Aunque puedes crear un objeto [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) con "Predeterminado" como clave, se prefiere que seas explícito y en su lugar uses "Light", "Dark" y "HighContrast".
 
-- Use la [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) en: Los estilos, los establecedores, controlar las plantillas, los establecedores de propiedades y las animaciones.
+- Usa la [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) en: Estilos, Establecedores, Plantillas de controles, Establecedores de propiedades y Animaciones.
 
 - No uses la [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) en las definiciones de recursos dentro de [ThemeDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries). Usa la [extensión de marcado {StaticResource}](../../xaml-platform/staticresource-markup-extension.md) en su lugar.
 
-    EXCEPCIÓN: Puede usar el [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) referencias a los recursos que son válidos para el tema de la aplicación en su [ThemeDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries). Algunos ejemplos de estos recursos son recursos de color de énfasis como `SystemAccentColor`, o los recursos de color del sistema, que normalmente llevan el prefijo SystemColor como `SystemColorButtonFaceColor`.
+    EXCEPCIÓN: Se puede usar la [extensión de marcado {ThemeResource}](../../xaml-platform/themeresource-markup-extension.md) como referencia para los recursos independientes del tema de la aplicación en tus [ThemeDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries). Algunos ejemplos de estos recursos son recursos de color de énfasis como `SystemAccentColor`, o los recursos de color del sistema, que normalmente llevan el prefijo SystemColor como `SystemColorButtonFaceColor`.
 
 > [!CAUTION]
 > Si no sigues estas directrices es posible que veas un comportamiento inesperado con relación a los temas de tu aplicación. Para más información, consulta la sección [Solución de problemas de recursos de tema](#troubleshooting-theme-resources).
@@ -63,9 +63,9 @@ Para obtener más información acerca de cómo aplicar color en tu aplicación p
 
 El marco XAML proporciona un conjunto de recursos [Color](/uwp/api/Windows.UI.Color) designados con valores diseñados exclusivamente para los temas "Light" y "Dark". Las claves que usas para hacer referencia a estos tienen un formato de nombre de tipo: `System[Simple Light/Dark Name]Color`.
 
-Esta tabla enumeran la clave, un nombre simple y representación de cadena del color (mediante el \#aarrggbb formato) para los recursos de "Claro" y "Oscuro" proporcionados por el marco de trabajo XAML. La clave se usa para hacer referencia al recurso en una aplicación. El "Nombre simple claro/oscuro" se usa como parte de la convención de nomenclatura de pincel que explicaremos más adelante.
+Esta tabla enumera la clave, el nombre simple y la representación de cadena del color (con el formato \#aarrggbb) para los recursos "Light" y "Dark" que proporciona el marco XAML. La clave se usa para hacer referencia al recurso en una aplicación. El "Nombre simple claro/oscuro" se usa como parte de la convención de nomenclatura de pincel que explicaremos más adelante.
 
-| Key                             | Nombre simple claro/oscuro | Claro      | Oscuro       |
+| Tecla                             | Nombre simple claro/oscuro | Claro      | Oscuro       |
 |---------------------------------|------------------------|------------|------------|
 | SystemAltHighColor              | AltHigh                | \#FFFFFFFF | \#FF000000 |
 | SystemAltLowColor               | AltLow                 | \#33FFFFFF | \#33000000 |
@@ -147,11 +147,11 @@ Esta tabla enumeran la clave, un nombre simple y representación de cadena del c
 
 ### <a name="windows-system-high-contrast-colors"></a>Colores en contraste alto del sistema de Windows
 
-Además del conjunto de recursos proporcionados por el marco XAML, hay un conjunto de valores de color derivado de la paleta del sistema de Windows. Estos colores no son específicos de las aplicaciones de Windows Runtime o de la Plataforma universal de Windows (UWP). Sin embargo, muchos de los recursos XAML [Brush](/uwp/api/Windows.UI.Xaml.Media.Brush) consumen estos colores cuando el sistema está funcionando (y la aplicación está ejecutándose) usando el tema "HighContrast". El marco XAML proporciona estos colores de todo el sistema como recursos con clave. Las claves siguen el formato de nombre: `SystemColor[name]Color`.
+Además del conjunto de recursos proporcionados por el marco XAML, hay un conjunto de valores de color derivado de la paleta del sistema de Windows. Estos colores no son específicos de las aplicaciones de Windows Runtime o de la Plataforma universal de Windows (UWP). Sin embargo, muchos de los recursos XAML [Brush](/uwp/api/Windows.UI.Xaml.Media.Brush) consumen estos colores cuando el sistema está funcionando (y la aplicación está ejecutándose) con el tema "HighContrast". El marco XAML proporciona estos colores de todo el sistema como recursos con clave. Las claves siguen el formato de nombre: `SystemColor[name]Color`.
 
 Esta tabla enumera los colores de todo el sistema que XAML proporciona como objetos de recursos derivados de la paleta del sistema de Windows. La columna "Nombre de accesibilidad" muestra cómo se etiqueta el color en la interfaz de usuario de la configuración de Windows. La columna "Nombre simple de contraste alto" es una descripción en una palabra de cómo se aplica el color en los controles comunes de XAML. Se usa como parte de la convención de nomenclatura de pincel que explicaremos más adelante. La columna "Predeterminado inicial" muestra los valores que se obtendrían si el sistema no se ejecutara en contraste alto.
 
-| Key                           | Nombre de accesibilidad            | Nombre simple de contraste alto | Predeterminado inicial |
+| Tecla                           | Nombre de accesibilidad            | Nombre simple de contraste alto | Predeterminado inicial |
 |-------------------------------|--------------------------------|--------------------------|-----------------|
 | SystemColorButtonFaceColor    | **Texto del botón** (segundo plano)   | Background               | \#FFF0F0F0      |
 | SystemColorButtonTextColor    | **Texto del botón** (primer plano)   | Primer plano               | \#FF000000      |
@@ -159,7 +159,7 @@ Esta tabla enumera los colores de todo el sistema que XAML proporciona como obje
 | SystemColorHighlightColor     | **Texto seleccionado** (segundo plano) | Resaltar                | \#FF3399FF      |
 | SystemColorHighlightTextColor | **Texto seleccionado** (primer plano) | HighlightAlt             | \#FFFFFFFF      |
 | SystemColorHotlightColor      | **Hipervínculos**                 | Hyperlink                | \#FF0066CC      |
-| SystemColorWindowColor        | **En segundo plano**                 | PageBackground           | \#FFFFFFFF      |
+| SystemColorWindowColor        | **Fondo**                 | PageBackground           | \#FFFFFFFF      |
 | SystemColorWindowTextColor    | **Texto**                       | PageText                 | \#FF000000      |
 
 Windows proporciona distintos temas de contraste alto y permite al usuario establecer los colores específicos para su configuración de contraste alto a través del Centro de accesibilidad, como se muestra aquí. Por lo tanto, no es posible proporcionar una lista definitiva de valores de color de contraste alto.
@@ -173,11 +173,11 @@ Para más información acerca de la compatibilidad los temas de contraste alto, 
 Además de los colores de tema de contraste alto del sistema, el color de énfasis del sistema se proporciona como un recurso de color especial con la clave `SystemAccentColor`. En tiempo de ejecución, este recurso toma el color que el usuario haya especificado como color de énfasis en la configuración de personalización de Windows.
 
 > [!NOTE]
-> Si bien es posible reemplazar los recursos de color del sistema, se recomienda respetar los colores elegidos por el usuario, especialmente para la configuración de contraste alto.
+> Si bien es posible invalidar los recursos de color del sistema, se recomienda respetar los colores elegidos por el usuario, especialmente para la configuración de contraste alto.
 
 ### <a name="theme-dependent-brushes"></a>Pinceles dependientes del tema
 
-Los recursos de color que se muestra en las secciones anteriores se usan para establecer la propiedad [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) de los recursos [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) en los diccionarios de recursos de temas del sistema. Usa los recursos de pincel para aplicar el color a elementos XAML. Las claves para los recursos de pincel tienen el siguiente formato de nombre: `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. Por ejemplo: `SystemControlBackroundAltHighBrush`.
+Los recursos de color que se muestran en las secciones anteriores se usan para establecer la propiedad [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) de los recursos [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) en los diccionarios de recursos de temas del sistema. Usa los recursos de pincel para aplicar el color a elementos XAML. Las claves para los recursos de pincel tienen el siguiente formato de nombre: `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. Por ejemplo, `SystemControlBackroundAltHighBrush`.
 
 Veamos cómo se determina el valor de color de este pincel en tiempo de ejecución. En los diccionarios de recursos "Light" y "Dark", el pincel se define así:
 
@@ -202,7 +202,7 @@ For many examples of how the brushes are used in the XAML control templates, see
 -->
 
 > [!NOTE]
-> No todas las combinaciones de \[ *contraste alto Simple nombre*\]\[*nombre claro/oscuro Simple* \] se proporciona como un recurso de pincel.
+> No todas las combinaciones de \[*Nombre simple de contraste alto*\]\[*Nombre simple claro/oscuro*\] se proporcionan como recurso de pincel.
 
 ## <a name="the-xaml-type-ramp"></a>La rampa de tipos XAML
 
@@ -210,7 +210,7 @@ El archivo themeresources.xaml define varios recursos que definen un [Style](htt
 
 Estos estilos son para atributos de texto que quieres aplicar a todo el contenedor de texto. Si quieres que los estilos se apliquen solo a secciones del texto, debes establecer los atributos en los elementos de texto dentro del contenedor, como en [Run](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Run) para [TextBlock.Inlines](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.inlines) o en [Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph) para [RichTextBlock.Blocks](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.blocks).
 
-Los estilos tienen este aspecto cuando se aplican a un [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock):
+Los estilos tienen este aspecto cuando se aplican a un elemento [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock):
 
 ![estilos de bloque de texto](../style/images/type/text-block-type-ramp.svg)
 
@@ -224,7 +224,7 @@ Los estilos tienen este aspecto cuando se aplican a un [TextBlock](https://docs.
 <TextBlock Text="Caption" Style="{StaticResource CaptionTextBlockStyle}"/>
 ```
 
-Para obtener instrucciones sobre cómo usar la tabla de tipos UWP en la aplicación, consulta [Tipografía en aplicaciones para UWP](../style/typography.md).
+Para obtener instrucciones sobre cómo usar la rampa de tipos UWP en la aplicación, consulta [Tipografía en aplicaciones para UWP](../style/typography.md).
 
 ### <a name="basetextblockstyle"></a>BaseTextBlockStyle
 
@@ -375,21 +375,21 @@ Proporciona las propiedades comunes para todos los demás estilos contenedores d
 </Style>
 ```
 
-**Nota**:  El [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) estilos no tienen todo el texto rampa que diseña [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) hace, principalmente porque el objeto de documento basado en bloques de modelo para **RichTextBlock** facilita más fácil de establecer los atributos en los elementos de texto individuales. Además, al establecer [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text) mediante la propiedad de contenido XAML se crea una situación en la que no hay ningún elemento de texto para el estilo y, por tanto, tendrías que aplicar estilo al contenedor. Esto no supone ningún problema para **RichTextBlock**, porque su contenido de texto siempre tiene que estar en elementos de texto específicos, como [Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph), que es donde probablemente aplicarás los estilos XAML para el encabezado de página, el subtítulo de página y las definiciones de rampa de texto similares.
+**Nota**:  Los estilos [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) no tienen todos los estilos de rampa de texto que tiene [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), principalmente porque el modelo de objetos de documento basado en bloques de **RichTextBlock** permite establecer atributos con mayor facilidad en los elementos de texto individuales. Además, al establecer [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text) mediante la propiedad de contenido XAML se crea una situación en la que no hay ningún elemento de texto para el estilo y, por tanto, tendrías que aplicar estilo al contenedor. Esto no supone ningún problema para **RichTextBlock**, porque su contenido de texto siempre tiene que estar en elementos de texto específicos, como [Paragraph](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Paragraph), que es donde probablemente aplicarás los estilos XAML para el encabezado de página, el subtítulo de página y las definiciones de rampa de texto similares.
 
 ## <a name="miscellaneous-named-styles"></a>Varios estilos con nombre
 
-Existe un conjunto adicional de definiciones [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) con clave que se puede usar para aplicar estilo a un [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) de forma diferente a su estilo implícito predeterminado.
+Existe un conjunto adicional de definiciones [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) con clave que se puede usar para aplicar estilo a un elemento [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) de forma diferente a su estilo implícito predeterminado.
 
 ### <a name="textblockbuttonstyle"></a>TextBlockButtonStyle
 
 **TargetType**: [ButtonBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase)
 
-Aplicar este estilo para un [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) cuando necesites mostrar texto en el que un usuario pueda hacer clic para realizar una acción. Al texto se le aplica estilo con el color de énfasis actual para distinguirlo como interactivo y tiene rectángulos de foco que funcionan bien con texto. A diferencia del estilo implícito de un [HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton), el **TextBlockButtonStyle** no subraya el texto.
+Aplicar este estilo para un elemento [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) cuando necesites mostrar texto en el que un usuario pueda hacer clic para realizar una acción. Al texto se le aplica estilo con el color de énfasis actual para distinguirlo como interactivo y tiene rectángulos de foco que funcionan bien con texto. A diferencia del estilo implícito de un elemento [HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton), **TextBlockButtonStyle** no subraya el texto.
 
 La plantilla también aplica estilo al texto presentado para usar **SystemControlHyperlinkBaseMediumBrush** (para el estado "PointerOver"), **SystemControlHighlightBaseMediumLowBrush** (para el estado "Pressed") y **SystemControlDisabledBaseLowBrush** (para el estado "Disabled").
 
-Este es un [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) al que se le ha aplicado el recurso **TextBlockButtonStyle**.
+Este es un elemento [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) al que se le ha aplicado el recurso **TextBlockButtonStyle**.
 
 ```XAML
 <Button Content="Clickable text" Style="{StaticResource TextBlockButtonStyle}"
@@ -404,9 +404,9 @@ Tiene esta apariencia:
 
 **TargetType**: [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
 
-Este [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) proporciona una plantilla completa para un [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) que puede ser el botón de retroceso en la navegación para una aplicación de navegación. Las dimensiones predeterminadas son 40 x 40 píxeles. Para personalizar el estilo puedes establecer explícitamente la [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height), [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), [FontSize](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontsize) y otras propiedades en tu **Button** o crear un estilo derivado mediante [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon).
+Este elemento [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) proporciona una plantilla completa para un elemento [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) que puede ser el botón de retroceso en la navegación para una aplicación de navegación. Las dimensiones predeterminadas son 40 x 40 píxeles. Para personalizar el estilo puedes establecer explícitamente [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height), [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), [FontSize](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontsize) y otras propiedades en tu elemento **Button** o crear un estilo derivado mediante [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon).
 
-Este es un [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) al que se ha aplicado el recurso **NavigationBackButtonNormalStyle**.
+Este es un elemento [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) al que se ha aplicado el recurso **NavigationBackButtonNormalStyle**.
 
 ```XAML
 <Button Style="{StaticResource NavigationBackButtonNormalStyle}" />
@@ -420,9 +420,9 @@ Tiene esta apariencia:
 
 **TargetType**: [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
 
-Este [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) proporciona una plantilla completa para un [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) que puede ser el botón de retroceso en la navegación para una aplicación de navegación. Es similar a **NavigationBackButtonNormalStyle**, pero con unas dimensiones de 30 x 30 píxeles.
+Este elemento [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) proporciona una plantilla completa para un elemento [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) que puede ser el botón de retroceso en la navegación para una aplicación de navegación. Es similar a **NavigationBackButtonNormalStyle**, pero con unas dimensiones de 30 x 30 píxeles.
 
-Este es un [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) al que se ha aplicado el recurso **NavigationBackButtonSmallStyle**.
+Este es un elemento [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) al que se ha aplicado el recurso **NavigationBackButtonSmallStyle**.
 
 ```XAML
 <Button Style="{StaticResource NavigationBackButtonSmallStyle}" />

@@ -12,10 +12,10 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: c552109b243688c2618425adce797c4d208eac31
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364777"
 ---
 # <a name="inverted-lists"></a>Listas invertidas
@@ -24,7 +24,7 @@ ms.locfileid: "66364777"
 
 Puedes usar una vista de lista para presentar una conversación en una experiencia de chat con elementos que sean visualmente distintos para representar al remitente y al receptor.  El uso de colores diferentes y la alineación horizontal para separar los mensajes del remitente y el receptor ayuda al usuario a orientarse rápidamente en una conversación.
 
-> **API importantes**:  [Clase de ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [ItemsStackPanel clase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel), [ItemsUpdatingScrollMode propiedad](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode)
+> **API importantes**:  [Clase ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [Clase ItemsStackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel) y [Propiedad ItemsUpdatingScrollMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode)
  
 Por lo general, deberás presentar la lista de manera que parezca que crece de abajo arriba en lugar de hacerlo de arriba abajo.  Cuando llega un nuevo mensaje y se agrega al final, los mensajes anteriores se deslizan hacia arriba para dejar espacio, de modo que el usuario centre su atención en este último mensaje.  Sin embargo, si un usuario se desplaza hacia arriba para ver respuestas anteriores, la llegada de un nuevo mensaje no causará ningún cambio visual que afecte a su atención.
 
@@ -59,4 +59,4 @@ En este ejemplo se muestra cómo alinear los elementos de la vista de lista en l
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de lista de abajo a arriba XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlBottomUpList)
+- [Ejemplo de lista XAML de abajo a arriba](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlBottomUpList)

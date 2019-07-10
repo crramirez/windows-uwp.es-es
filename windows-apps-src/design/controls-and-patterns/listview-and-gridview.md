@@ -1,5 +1,5 @@
 ---
-Description: Utilice los controles ListView y GridView para mostrar y manipular conjuntos de datos, como una galería de imágenes o un conjunto de mensajes de correo electrónico.
+Description: Usa los controles ListView and GridView para mostrar y manipular conjuntos de datos, como una galería de imágenes o un conjunto de mensajes de correo electrónico.
 title: Vista de lista y vista de cuadrícula
 label: List view and grid view
 template: detail.hbs
@@ -13,17 +13,17 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1664da65beed21dededb481aadd56f793af20f01
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364677"
 ---
 # <a name="list-view-and-grid-view"></a>Vista de lista y vista de cuadrícula
 
 La mayoría de las aplicaciones manipulan y muestran conjuntos de datos, como una galería de imágenes o un conjunto de mensajes de correo electrónico. El marco de trabajo de la interfaz de usuario de XAML proporciona los controles ListView y GridView que hacen más fácil mostrar y manipular datos en la aplicación.  
 
-> **API importantes**: [Clase de ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [clase GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [propiedad ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [propiedad Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items)
+> **API importantes**: [clase ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [clase GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [propiedad ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [propiedad Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items)
 
 ListView y GridView derivan ambos de la clase ListViewBase, por lo que tienen la misma funcionalidad, pero muestran los datos de manera diferente. En este artículo, cuando hablamos de ListView, la información corresponde a ambos controles, ListView y GridView, a menos que se indique lo contrario. Podemos hacer mención a clases como ListView o ListViewItem, pero el prefijo "List" se puede sustituir por "Grid" para el equivalente de cuadrícula correspondiente (GridView o GridViewItem). 
 
@@ -42,11 +42,11 @@ Para ver una comparación y orientación más detalladas sobre qué control usar
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ListView">ListView</a> o <a href="xamlcontrolsgallery:/item/GridView">GridView</a> en acción.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ListView">ListView</a> o <a href="xamlcontrolsgallery:/item/GridView">GridView</a> en acción.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -165,7 +165,7 @@ La plantilla de datos de un elemento define cómo se visualizan los datos. De ma
 
 No obstante, seguramente quieras mostrar una presentación más enriquecida de los datos. Para especificar con exactitud cómo se mostrarán los elementos en la vista de lista, debes crear una clase [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate). El lenguaje XAML de la clase DataTemplate define el diseño y la apariencia de los controles usados para mostrar un elemento individual. Los controles del diseño se pueden enlazar a las propiedades de un objeto de datos o pueden tener contenido estático definido en línea. Debes asignar la clase DataTemplate a la propiedad [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) del control de lista.
 
-En este ejemplo, el elemento de datos es una cadena simple. Puedes usan una clase DataTemplate para agregar una imagen a la izquierda de la cadena y mostrar la cadena en verde azulado.
+En este ejemplo, el elemento de datos es una cadena simple. Puedes usar una clase DataTemplate para agregar una imagen a la izquierda de la cadena y mostrar la cadena en verde azulado.
 
 > **Nota**&nbsp;&nbsp;Cuando usas la [extensión de marcado x:Bind](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) en una clase DataTemplate, debes especificar el objeto DataType (`x:DataType`) en la clase DataTemplate.
 
@@ -198,16 +198,16 @@ Este es el aspecto de los elementos de datos cuando se muestran con esta plantil
 
 ![Elementos de la vista de lista con una plantilla de datos](images/listview-itemstemplate.png)
 
-Las plantillas de datos son la forma principal de definir la apariencia de la vista de lista. También pueden tener un impacto significativo en el rendimiento si la lista muestra una gran cantidad de elementos. En este artículo, usamos datos de cadena simple para la mayoría de los ejemplos y no se especifica una plantilla de datos. Para obtener más información y ejemplos de cómo usar las plantillas de datos y contenedores de elementos para definir la apariencia de los elementos en la lista o cuadrícula, consulta [Plantillas y contenedores de elementos](item-containers-templates.md). 
+Las plantillas de datos son la forma principal de definir la apariencia de la vista de lista. También pueden tener un impacto significativo en el rendimiento si la lista muestra una gran cantidad de elementos. En este artículo, usamos datos de cadena simple para la mayoría de los ejemplos y no se especifica una plantilla de datos. Para obtener más información y ejemplos de cómo usar las plantillas de datos y los contenedores de elementos para definir la apariencia de los elementos de la lista o cuadrícula, consulta [Plantillas y contenedores de elementos](item-containers-templates.md). 
 
 ## <a name="change-the-layout-of-items"></a>Cambiar el diseño de elementos
 
-Al agregar elementos a una vista de lista o vista de cuadrícula, el control ajusta automáticamente cada elemento en un contenedor de elementos y luego dispone todos los contenedores de elementos. Cómo se disponen estos contenedores de elementos depende de la propiedad [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) del control.  
+Al agregar elementos a una vista de lista o vista de cuadrícula, el control ajusta automáticamente cada elemento en un contenedor de elementos y luego dispone todos los contenedores de elementos. La manera en que se disponen estos contenedores de elementos depende de la propiedad [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) del control.  
 - De manera predeterminada, **ListView** usa una clase [ItemsStackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel), lo cual genera una lista vertical, como esta.
 
 ![Una vista de lista simple](images/listview-simple.png)
 
-- **GridView** usa una clase [ItemsWrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemswrapgrid), que agrega los elementos horizontalmente, y se ajusta y desplaza verticalmente, de la siguiente manera.
+- **GridView** usa una clase [ItemsWrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemswrapgrid), que agrega los elementos horizontalmente, y se ajusta y desplaza verticalmente, como se muestra a continuación.
 
 ![Una vista de cuadrícula simple](images/gridview-simple.png)
 
@@ -215,14 +215,14 @@ Para modificar el diseño de elementos, puedes ajustar las propiedades en el pan
 
 > Nota&nbsp;&nbsp;Ten cuidado de no deshabilitar la virtualización si cambias la propiedad ItemsPanel. Tanto **ItemsStackPanel** como **ItemsWrapGrid** admiten la virtualización, por lo que son seguras. Si usas otro panel, es posible que deshabilites la virtualización y ralentices el rendimiento de la vista de lista. Para obtener más información, consulta los artículos sobre la vista de lista en [Performance](https://docs.microsoft.com/windows/uwp/debug-test-perf/performance-and-xaml-ui) (Rendimiento). 
 
-En este ejemplo se muestra cómo hacer que un **ListView** disponga sus contenedores de elementos en una lista horizontal cambiando la propiedad [Orientation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.orientation) de la clase **ItemsStackPanel**.
-Dado que la vista de lista se desplaza verticalmente de manera predeterminada, también debes ajustar algunas propiedades de la clase [ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) de la vista de lista interna para que se desplace horizontalmente.
+En este ejemplo se muestra cómo hacer que una clase **ListView** disponga sus contenedores de elementos en una lista horizontal al cambiar la propiedad [Orientation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel.orientation) de la clase **ItemsStackPanel**.
+Dado que la vista de lista se desplaza verticalmente de manera predeterminada, también debes ajustar algunas propiedades de la clase [ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) interna de la vista de lista para que se desplace horizontalmente.
 - [ScrollViewer.HorizontalScrollMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode) en **Enabled** o **Auto**
 - [ScrollViewer.HorizontalScrollBarVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility) en **Auto** 
 - [ScrollViewer.VerticalScrollMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollmode) en **Disabled** 
 - [ScrollViewer.VerticalScrollBarVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility) en **Hidden** 
 
-> **Nota**&nbsp;&nbsp;Estos ejemplos se muestran con el ancho de la vista de lista sin ninguna restricción, por lo que no se muestran las barras de desplazamiento horizontal. Si ejecutas este código, puedes establecer `Width="180"` en el control ListView para que muestre las barras de desplazamiento.
+> **Nota**&nbsp;&nbsp;En estos ejemplos el ancho de la vista de lista no tiene ninguna restricción, por lo que no se muestran las barras de desplazamiento horizontal. Si ejecutas este código, puedes establecer `Width="180"` en el control ListView para que muestre las barras de desplazamiento.
 
 **XAML**
 ```xaml
@@ -282,7 +282,7 @@ Si muestras datos agrupados en la vista de lista, la propiedad ItemsPanel determ
 
 ## <a name="item-selection-and-interaction"></a>Selección e interacción de elementos
 
-Puedes elegir entre varias maneras para permitir que el usuario interactúe con una vista de lista. De manera predeterminada, un usuario puede seleccionar un único elemento. Puedes cambiar la propiedad [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) para habilitar la selección múltiple o para deshabilitar la selección. Puedes establecer la propiedad [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) para que un usuario haga clic en un elemento para invocar una acción (por ejemplo, un botón) en lugar de seleccionar el elemento.
+Puedes elegir entre varias maneras para permitir que el usuario interactúe con una vista de lista. De manera predeterminada, un usuario puede seleccionar un único elemento. Puedes cambiar la propiedad [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) para habilitar la selección múltiple o para deshabilitar la selección. Puedes establecer la propiedad [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled) de modo que un usuario haga clic en un elemento para invocar una acción (por ejemplo, un botón) en lugar de seleccionar el elemento.
 
 > **Nota**&nbsp;&nbsp;Tanto ListView como GridView usan la enumeración [ListViewSelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewselectionmode) en sus propiedades SelectionMode. IsItemClickEnabled es **False** de manera predeterminada, por lo que deberás establecerla únicamente para permitir el modo de clic.
 
@@ -296,7 +296,7 @@ Selección múltiple | SelectionMode = **Multiple**, IsItemClickEnabled = **Fals
 Selección extendida | SelectionMode = **Extended**, IsItemClickEnabled = **False** | [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) | [SelectedItems](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selecteditems)  
 Haz clic | SelectionMode = **None**, IsItemClickEnabled = **True** | [ItemClick](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.itemclick) | N/D 
 
-> **Nota**&nbsp;&nbsp;A partir de Windows 10, puedes habilitar IsItemClickEnabled para generar un evento ItemClick mientras SelectionMode también está establecido en Single, Multiple o Extended. Si haces esto, primero se genera el evento ItemClick y luego se genera el evento SelectionChanged. En algunos casos, como si navegaras a otra página en el controlador de eventos ItemClick, no se genera el evento SelectionChanged y no se selecciona el elemento.
+> **Nota**&nbsp;&nbsp;A partir de Windows 10, puedes habilitar IsItemClickEnabled para generar un evento ItemClick mientras SelectionMode también está establecido en Single, Multiple o Extended. Si haces esto, primero se genera el evento ItemClick y luego se genera el evento SelectionChanged. En algunos casos, como si navegaras a otra página en el controlador de eventos ItemClick, no se genera el evento SelectionChanged y no se selecciona el elemento.
 
 Puedes establecer estas propiedades en XAML o en el código, como se muestra aquí.
 
@@ -465,15 +465,15 @@ private void ListView1_ItemClick(object sender, ItemClickEventArgs e)
 
 A veces, es necesario manipular la selección de un elemento de la vista de lista mediante programación. Por ejemplo, es posible que tengas un botón **Seleccionar todo** para permitir al usuario seleccionar todos los elementos en una lista. En este caso, normalmente no resulta muy eficaz agregar y quitar elementos de la colección SelectedItems uno por uno. Cada cambio en un elemento produce un evento SelectionChanged, y cuando trabajas con los elementos directamente en lugar de trabajar con los valores de índice, el elemento se desvirtualiza.
 
-Los métodos [SelectAll](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectall), [SelectRange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectrange) y [DeselectRange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.deselectrange) proporcionan una manera más eficaz de modificar la selección que usar la propiedad SelectedItems. Estos métodos seleccionan o anulan la selección mediante los intervalos de índices de elementos. Los elementos que están virtualizados permanecen virtualizados, porque solo se usa el índice. Se seleccionan todos los elementos en el intervalo especificado (o se anula la selección) independientemente de su estado de selección original. El evento SelectionChanged se produce solo una vez para cada llamada a estos métodos.
+Los métodos [SelectAll](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectall), [SelectRange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectrange) y [DeselectRange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.deselectrange) proporcionan una manera más eficaz de modificar la selección que el uso de la propiedad SelectedItems. Estos métodos seleccionan o anulan la selección mediante los intervalos de índices de elementos. Los elementos que están virtualizados permanecen virtualizados, porque solo se usa el índice. Se seleccionan todos los elementos en el intervalo especificado (o se anula la selección) independientemente de su estado de selección original. El evento SelectionChanged se produce solo una vez para cada llamada a estos métodos.
 
 > **Importante**&nbsp;&nbsp;Debes llamar a estos métodos solo cuando la propiedad SelectionMode esté establecida en Multiple o Extended. Si llamas a SelectRange cuando SelectionMode es Single o None, se produce una excepción.
 
-Cuando seleccionas elementos usando intervalos de índices, usa la propiedad [SelectedRanges](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectedranges) para obtener todos los intervalos seleccionados en la lista.
+Cuando seleccionas elementos mediante intervalos de índices, usa la propiedad [SelectedRanges](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectedranges) para obtener todos los intervalos seleccionados en la lista.
 
 Si ItemsSource implementa [IItemsRangeInfo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.iitemsrangeinfo) y usas estos métodos para modificar la selección, las propiedades **AddedItems** y **RemovedItems** no se establecen en la propiedad SelectionChangedEventArgs. Establecer estas propiedades requiere la desvirtualización del objeto del elemento. En su lugar, usa la propiedad **SelectedRanges** para obtener estos elementos.
 
-Para seleccionar todos los elementos en una colección, puedes llamar al método SelectAll. Sin embargo, no hay ningún método correspondiente para anular la selección de todos los elementos. Para anular la selección de todos los elementos, puedes llamar a DeselectRange y pasar una clase [ItemIndexRange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange) con un valor [FirstIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange.firstindex) de 0 y un valor de [Length](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange.length) igual al número de elementos de la colección. 
+Para seleccionar todos los elementos en una colección, puedes llamar al método SelectAll. Sin embargo, no hay ningún método correspondiente para anular la selección de todos los elementos. Para anular la selección de todos los elementos, puedes llamar a DeselectRange y pasar una clase [ItemIndexRange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange) con un valor [FirstIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange.firstindex) de 0 y un valor [Length](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.itemindexrange.length) igual al número de elementos de la colección. 
 
 **XAML**
 ```xaml
@@ -519,12 +519,12 @@ Los controles ListView y GridView permiten arrastrar y colocar elementos en sí 
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Muestra de ListView y GridView en XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView): muestra los controles ListView y GridView.
+- [Ejemplo de ListView y GridView en XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView): muestra los controles ListView y GridView.
 - [Ejemplo de arrastrar y colocar en XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlDragAndDrop): muestra cómo arrastrar y colocar con el control ListView.
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
+- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Listas](lists.md)
-- [Las plantillas y los contenedores de elementos](item-containers-templates.md)
+- [Plantillas y contenedores de elementos](item-containers-templates.md)
 - [Arrastrar y colocar](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)

@@ -13,10 +13,10 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a409c4b940ad0e194428981f536823d880e56302
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364492"
 ---
 # <a name="progress-controls"></a>Controles de progreso
@@ -25,7 +25,7 @@ ms.locfileid: "66364492"
 
 Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga. Esto puede significar que el usuario no puede interactuar con la aplicación cuando el indicador de progreso está visible y también puede indicar el tiempo de espera aproximado, según el indicador que usa.
 
-> **API importantes**: [Clase ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [propiedad IsIndeterminate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [ProgressRing clase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [propiedad IsActive](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive)
+> **API importantes**: [clase ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [propiedad IsIndeterminate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [clase ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [propiedad IsActive](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive)
 
 ## <a name="types-of-progress"></a>Tipos de progreso
 
@@ -39,20 +39,20 @@ Además, un control de progreso es de solo lectura y no es interactivo. Esto sig
 
 ![Estados de la clase ProgressBar](images/ProgressBar_TwoStates.png)
 
-*Arriba a abajo - barra de progreso indeterminada y una barra de progreso determinada*
+*De arriba abajo: ProgressBar indeterminada y determinada*
 
 ![Estado de la clase ProgressRing](images/ProgressRing_SingleState.png)
 
-*Un ProgressRing indeterminado*
+*ProgressRing indeterminado*
 
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ProgressBar">ProgressBar</a> o <a href="xamlcontrolsgallery:/item/ProgressRing">ProgressRing</a> en acción.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ProgressBar">ProgressBar</a> o <a href="xamlcontrolsgallery:/item/ProgressRing">ProgressRing</a> en acción.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -66,7 +66,7 @@ Además, un control de progreso es de solo lectura y no es interactivo. Esto sig
 No siempre resulta obvio qué control o qué estado (determinado o indeterminado) se debe usar cuando se intenta mostrar que algo está sucediendo. A veces, una tarea es tan obvia que no necesita un control de progreso, y a veces, incluso si se usa un control de progreso, una línea de texto sigue siendo necesaria para explicar al usuario qué operación está en curso.
 
 ### <a name="progressbar"></a>ProgressBar
--   **¿El control tiene una duración definida o al final de predicción?**
+-   **¿El control tiene una duración definida o una finalización predecible?**
 
     Entonces, usa una clase ProgressBar determinada y actualiza el porcentaje o el valor según corresponda.
 
@@ -79,16 +79,16 @@ No siempre resulta obvio qué control o qué estado (determinado o indeterminado
     Si la operación usa estas palabras clave o si aparece texto junto con la operación de progreso que coincida con estas palabras clave, considera la posibilidad de usar una clase ProgressBar:
 
     - *Cargando...*
-    - *Retrieving*
+    - *Recuperando*
     - *Trabajando...*
 
 ### <a name="progressring"></a>ProgressRing
 
--   **¿La operación provocará que el usuario debe esperar para continuar?**
+-   **¿La operación hará que el usuario tenga que esperar para continuar?**
 
     Si una operación necesita que toda la interacción (o una gran parte) con la aplicación espere hasta que se haya completado, la clase ProgressRing es la mejor opción. El control ProgressRing se usa para las interacciones modales, lo que significa que el usuario se bloquea hasta que desaparezca el control ProgressRing.
 
--   **¿Es la aplicación espera que el usuario completar una tarea?**
+-   **¿La aplicación espera a que el usuario complete una tarea?**
 
     Si es así, usa una clase ProgressRing, ya que está pensada para indicar un tiempo de espera desconocido para el usuario.
 
@@ -96,20 +96,20 @@ No siempre resulta obvio qué control o qué estado (determinado o indeterminado
 
     Si la operación usa estas palabras clave o si aparece texto junto con la operación de progreso que coincida con estas palabras clave; considera la posibilidad de usar una clase ProgressRing:
 
-    - *Refreshing*
+    - *Actualizando*
     - *Iniciando sesión...*
     - *Conectando...*
 
 ### <a name="no-progress-indication-necessary"></a>No es necesaria ninguna indicación de progreso
--   **¿Necesita el usuario sabe que está ocurriendo algo?**
+-   **¿El usuario necesita saber que está ocurriendo algo?**
 
     Por ejemplo, si la aplicación está descargando algo en segundo plano y el usuario no inició la descarga, no tiene por qué saberlo necesariamente.
 
--   **¿Es una actividad en segundo plano que no bloquea la actividad del usuario y es de interés mínimo (aunque todavía algunos) para el usuario de la operación?**
+-   **¿La operación es una actividad en segundo plano que no bloquea la actividad del usuario y tiene poco interés (aunque lo tenga en parte) para el usuario?**
 
     Usa texto si la aplicación está realizando tareas que no tienen que estar visibles constantemente, pero necesitas mostrar el estado igualmente.
 
--   **¿El usuario solo se preocupa por sobre la finalización de la operación?**
+-   **¿Al usuario solo le interesa la finalización de la operación?**
 
     A veces, es mejor mostrar un aviso solo cuando la operación se completa o proporcionar inmediatamente un elemento visual cuando la operación haya finalizado y ejecutar los toques finales en segundo plano.
 
@@ -117,23 +117,23 @@ No siempre resulta obvio qué control o qué estado (determinado o indeterminado
 
 A veces, es mejor ver algunas representaciones visuales de cuándo y dónde se usarán los distintos controles de progreso:
 
-**ProgressBar - determinada**
+**ProgressBar: determinada**
 
 ![Ejemplo de clase ProgressBar determinada](images/PB_DeterminateExample.png)
 
 El primer ejemplo es una clase ProgressBar determinada. Cuando se conoce la duración de la operación, cuando se instala, descarga, configura, etc.; es mejor usar una clase ProgressBar determinada.
 
-**ProgressBar - indeterminado**
+**ProgressBar: indeterminada**
 
 ![Ejemplo de clase ProgressBar indeterminada](images/PB_IndeterminateExample.png)
 
 Cuando se desconoce cuánto tardará la operación, usa una clase ProgressBar indeterminada. Las clases ProgressBar indeterminadas también son útiles cuando se debe rellenar una lista virtualizada y crear una transición visual suave de una clase ProgressBar indeterminada a una determinada.
 
--   **¿Es la operación en una colección virtualizada?**
+-   **¿La operación está en una colección virtualizada?**
 
     Si es así, no coloques un indicador de progreso en cada elemento de lista cuando aparezcan. En su lugar, usa una clase ProgressBar y colócala en la parte superior de la colección de elementos en la que se carga para mostrar que se capturan los elementos.
 
-**ProgressRing - indeterminado**
+**ProgressRing: indeterminada**
 
 ![Ejemplo de la clase ProgressRing indeterminada](images/PR_IndeterminateExample.png)
 
@@ -143,10 +143,10 @@ La clase ProgressRing indeterminada se usa cuando cualquier interacción del usu
 
 Ambos controles de progreso son bastante simples, pero algunas características visuales de los controles no son fáciles de personalizar.
 
-**Ajustar el tamaño de la ProgressRing**
+**Cambiar el tamaño de la clase ProgressRing**
 
 Se puede cambiar el tamaño de la clase ProgressRing y ampliarlo tanto como quieras, pero su tamaño mínimo es 20x20epx. Para cambiar el tamaño de una clase ProgressRing, debes establecer su alto y ancho. Si solo se establece el alto o el ancho, el control supone que se usa el tamaño mínimo (20x20epx). Por el contrario, si se establecen dos tamaños distintos para el alto y el ancho, se aplica el tamaño más pequeño.
-Para garantizar que la clase ProgressRing sea la correcta para tus necesidades, configura tanto el alto como el ancho con el mismo valor:
+Para garantizar que la clase ProgressRing sea la correcta para tus necesidades, establece tanto el alto como el ancho con el mismo valor:
 
 ```XAML
 <ProgressRing Height="100" Width="100"/>
@@ -162,7 +162,7 @@ Para hacer la clase ProgressRing visible y animarla, debes establecer la propied
 progressRing.IsActive = true;
 ```
 
-**Color de los controles de progreso**
+**Colorear los controles de progresos**
 
 De manera predeterminada, se establece el color principal de los controles de progreso en el color de énfasis del sistema. Para invalidar este pincel, simplemente, cambia la propiedad Foreground en uno de los controles.
 
@@ -173,7 +173,7 @@ De manera predeterminada, se establece el color principal de los controles de pr
 
 Al cambiar el color del primer plano de la clase ProgressRing, cambiarán los colores de los puntos. La propiedad Foreground de la clase ProgressBar cambiará el color de relleno de la barra. Para modificar la parte de la barra sin rellenar, simplemente, invalida la propiedad Background.
 
-**Que muestra un cursor de espera**
+**Mostrar un cursor de espera**
 
 En algunas ocasiones, resulta mejor mostrar solo un breve cursor de espera, cuando la operación o la aplicación necesite tiempo para pensar y tengas que indicar al usuario que no debe interactuar con la aplicación o el área donde el cursor de espera está visible hasta que el cursor de espera haya desaparecido.
 
@@ -183,7 +183,7 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
+- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
@@ -192,4 +192,4 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 
 **Para desarrolladores (XAML)**
 - [Agregar controles de progreso](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10))
-- [Cómo crear una barra de progreso indeterminada personalizado para Windows Phone](https://go.microsoft.com/fwlink/p/?LinkID=392426)
+- [Cómo crear una barra de progreso indeterminado personalizada para Windows Phone](https://go.microsoft.com/fwlink/p/?LinkID=392426)

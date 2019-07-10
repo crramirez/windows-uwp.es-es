@@ -10,21 +10,21 @@ dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c227629ace1f3fdbb2af8582401f9273cf11c2e
-ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913985"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63799624"
 ---
 # <a name="contact-card"></a>Tarjeta de contacto
 
 La tarjeta de contacto muestra información de contacto, como el nombre, el número de teléfono y la dirección, para un [Contacto](/uwp/api/Windows.ApplicationModel.Contacts.Contact) (el mecanismo que usa UWP para representar personas y empresas).  La tarjeta de contacto también permite al usuario editar información de contacto. Puedes elegir entre mostrar una tarjeta de contacto compacta o una tarjeta de contacto completa que contenga información adicional.
 
-> **API importantes**: [Método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [ShowFullContactCard método](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard), [IsShowContactCardSupported método](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [póngase en contacto con la clase](/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
+> **API importantes**: [método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [clase Contact](/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
 
 Hay dos formas de mostrar la tarjeta de contacto:  
-* Como una tarjeta de contacto estándar que aparece en un control flotante descartable por cambio de foco: la tarjeta de contacto desaparece cuando el usuario hace clic fuera de ella. 
-* Como una tarjeta de contacto completa que ocupa más espacio y no es descartable por cambio de foco: el usuario debe hacer clic en **cerrar** para cerrarla. 
+* Como una tarjeta de contacto estándar que aparece en un control flotante con cierre del elemento por cambio de foco: la tarjeta de contacto desaparece cuando el usuario hace clic fuera de ella. 
+* Como una tarjeta de contacto completa que ocupa más espacio y no tiene cierre del elemento por cambio de foco: el usuario debe hacer clic en **cerrar** para cerrarla. 
 
 
 <figure>
@@ -61,9 +61,9 @@ Usa la tarjeta de contacto cuando quieras mostrar la información de contacto de
 </tr>
 </table> -->
 
-## <a name="show-a-standard-contact-card"></a>Muestra una tarjeta de contacto estándar
+## <a name="show-a-standard-contact-card"></a>Muestra de una tarjeta de contacto estándar
 
-1. Por lo general, se muestra una tarjeta de contacto porque el usuario hizo clic en algo: un botón o quizás el [control de imagen de la persona](person-picture.md). No queremos ocultar el elemento. Para evitar ocultarla, necesitamos crear una [Rect](/uwp/api/windows.foundation.rect) que describa la ubicación y el tamaño del elemento. 
+1. Por lo general, se muestra una tarjeta de contacto porque el usuario ha hecho clic en algo: un botón o quizás el [control de imagen de la persona](person-picture.md). No queremos ocultar el elemento. Para evitar ocultarla, necesitamos crear un elemento [Rect](/uwp/api/windows.foundation.rect) que describa la ubicación y el tamaño del elemento. 
 
     Vamos a crear una función de utilidad que lo haga por nosotros: la usaremos más adelante.
     ```csharp
@@ -78,7 +78,7 @@ Usa la tarjeta de contacto cuando quieras mostrar la información de contacto de
 
     ```
 
-2. Determina si puedes mostrar la tarjeta de contacto mediante una llamada al método [ContactManager.IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported). Si no es compatible, muestra un mensaje de error. (En este ejemplo se supone que se va a mostrar la tarjeta de contacto en respuesta a un evento de clic.)
+2. Determina si puedes mostrar la tarjeta de contacto mediante una llamada al método [ContactManager.IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported). Si no es compatible, muestra un mensaje de error. (En este ejemplo se supone que se va a mostrar la tarjeta de contacto en respuesta a un evento de clic).
     ```csharp
     // Contact and Contact Managers are existing classes 
     private void OnUserClickShowContactCard(object sender, RoutedEventArgs e) 
@@ -88,13 +88,13 @@ Usa la tarjeta de contacto cuando quieras mostrar la información de contacto de
 
     ```
 
-3. Usa la función de utilidad que creaste en el paso 1 para obtener los límites del control que provocó el evento (para no taparlo con la tarjeta de contacto).
+3. Usa la función de utilidad que has creado en el paso 1 para obtener los límites del control que ha provocado el evento (para no taparlo con la tarjeta de contacto).
 
     ```csharp
             Rect selectionRect = GetElementRect((FrameworkElement)sender); 
     ```
 
-4. Obtén el objeto [Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) que quieres mostrar. Este ejemplo solo crea un contacto simple, pero el código debe recuperar un contacto real. 
+4. Obtén el objeto [Contact](//docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) que quieres mostrar. Este ejemplo solo crea un contacto sencillo, pero el código debe recuperar un contacto real. 
 
     ```csharp
                 // Retrieve the contact to display
@@ -144,7 +144,7 @@ private void OnUserClickShowContactCard(object sender, RoutedEventArgs e)
 
 ```
 
-## <a name="show-a-full-contact-card"></a>Muestra una tarjeta de contacto completa
+## <a name="show-a-full-contact-card"></a>Muestra de una tarjeta de contacto completa
 
 Para mostrar la tarjeta de contacto completa, llama al método [ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard) en lugar de [ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard).
 
@@ -174,12 +174,12 @@ private void onUserClickShowContactCard()
 
 ## <a name="retrieving-real-contacts"></a>Recuperación de contactos "reales"
 
-Los ejemplos de este artículo crean un contacto simple. En una aplicación real, seguramente quieras recuperar un contacto existente. Para obtener instrucciones, consulta el [Artículo de contactos y calendario](/windows/uwp/contacts-and-calendar/).
+En los ejemplos de este artículo se crea un contacto sencillo. En una aplicación real, seguramente quieras recuperar un contacto existente. Para obtener instrucciones, consulta el [Artículo sobre contactos y calendario](/windows/uwp/contacts-and-calendar/).
 
 
 
 
 ## <a name="related-articles"></a>Artículos relacionados
 - [Contactos y calendario](/windows/uwp/contacts-and-calendar/)
-- [Muestra de tarjetas de contacto](https://go.microsoft.com/fwlink/p/?LinkId=624040)
+- [Ejemplo de tarjetas de contacto](https://go.microsoft.com/fwlink/p/?LinkId=624040)
 - [Control de imagen de personas](/windows/uwp/controls-and-patterns/person-picture/)

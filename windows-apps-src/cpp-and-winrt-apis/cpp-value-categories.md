@@ -1,31 +1,31 @@
 ---
 description: En este tema se describen las distintas categorías de valores que existen en C++. Sin duda habrás oído hablar de lvalues y rvalues, pero existen también otros tipos.
-title: Categorías de valor y las referencias a ellos
+title: Categorías de valor y referencias a estas
 ms.date: 08/11/2018
 ms.topic: article
-keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, mover, reenvío, categorías de valor, semántica de movimiento, reenvío directo, lvalue, rvalue, glvalue, prvalue, xvalue
+keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, movimiento, reenvío, categorías de valor, semántica de movimiento, reenvío directo, lvalue, rvalue, glvalue, prvalue, xvalue
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1860f562233ceefa6d9ebb3741378b3265b4c3a9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593020"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63797106"
 ---
-# <a name="value-categories-and-references-to-them"></a>Categorías de valor y las referencias a ellos
-En este tema se describe las distintas categorías de valores (y las referencias a valores) que existen en C++. Sin duda habrá oído hablar de *lvalues* y *rvalues*, pero es posible que no piensa en ellos en los términos de este tema se presenta. Y hay otros tipos de valores.
+# <a name="value-categories-and-references-to-them"></a>Categorías de valor y referencias a estas
+En este tema se describen las distintas categorías de valores (y referencias a los valores) que existen en C++. Seguro que has oído hablar de *lvalues* y *rvalues*, pero puede que no pienses en ellos de la forma que presenta este tema. Y también hay otros tipos de valores.
 
-Todas las expresiones de C++, produce un valor que pertenece a una de las categorías que se tratan en este tema. Hay aspectos del lenguaje C++, su facilies y reglas, que exigen una comprensión apropiada de estas categorías de valor y las referencias a ellos. Por ejemplo, tomar la dirección de un valor, copiar un valor, pasar un valor y un valor a otra función de reenvío. Este tema no entra en todos esos aspectos en profundidad, pero proporciona información básica para una comprensión sólida de ellos.
+Todas las expresiones de C++ dan como resultado un valor que pertenece a una de las categorías que se tratan en este tema. Hay aspectos del lenguaje C++, sus instalaciones y reglas, que exigen una comprensión apropiada de estas categorías de valor y las referencias a estas. Por ejemplo, tomar la dirección de un valor, copiarlo, moverlo y reenviarlo a otra función. En este tema no se tratan todos esos aspectos en profundidad, pero se proporciona información básica para una comprensión sólida.
 
-La información de este tema se encuadra en términos de análisis de Stroustrup de categorías de valor en las dos propiedades independientes de la identidad y movability [Stroustrup, 2013].
+La información de este tema se encuadra en términos de análisis de Stroustrup de categorías de valor mediante las dos propiedades independientes de identidad y movilidad [Stroustrup, 2013].
 
-## <a name="an-lvalue-has-identity"></a>Un valor l tiene identidad
-¿Qué significa tener un valor *identidad*? Si tiene la dirección de memoria de un valor (o puede tomar) y su uso con la seguridad y, a continuación, el valor tiene identidad. De este modo, se puede hacer más que compare el contenido de los valores: puede comparar o distinguirlas por su identidad.
+## <a name="an-lvalue-has-identity"></a>Un valor lvalue tiene identidad
+¿Qué significa que un valor tiene *identidad*? Si tienes la dirección de memoria de un valor (o la puedes tomar) y la usas con seguridad, el valor tiene identidad. De este modo, puedes hacer algo más que comparar el contenido de los valores: puedes compararlos o distinguirlos por su identidad.
 
-Un *lvalue* tiene identidad. Ahora es una cuestión de interés histórico solo que la "l" de "valor l" es una abreviatura de "left" (como en el izquierdo lado de una asignación). En C++, puede aparecer un valor l a la izquierda *o* a la derecha de una asignación. La "l" de "valores l", a continuación, no realmente le ayuda a comprender ni definir qué son. Solo tendrá que entender que lo que llamamos un valor l es un valor que tiene identidad.
+Un valor *lvalue* tiene identidad. Como apunte de interés únicamente histórico, la "l" en "lvalue" es una abreviación de "left" (izquierda), como en el lado izquierdo de una asignación. En C++, un valor lvalue puede aparecer a la izquierda *o* a la derecha de una asignación. La "l" de "lvalues" realmente no ayuda a comprender ni definir lo que son. Solo tienes que entender que lo que llamamos lvalue es un valor que tiene identidad.
 
-Ejemplos de expresiones que son valores l: una variable con nombre o una constante; o una función que devuelve una referencia. Ejemplos de expresiones que son *no* incluye valores l: un archivo temporal; o una función que devuelve por valor.
+Entre los ejemplos de expresiones que son lvalues se incluyen: una variable o una constante con nombre, o una función que devuelve una referencia. Entre los ejemplos de expresiones que *no* son lvalues se incluyen: un archivo temporal o una función que devuelve por valor.
 
 ```cppwinrt
 int& get_by_ref() { ... }
@@ -42,53 +42,53 @@ int main()
 }
 ```
 
-Ahora, si bien es una instrucción verdadera que valores l tiene identidad, también lo hacen xvalues. Vamos a más en lo que un *xvalue* es más adelante en este tema. Por ahora, simplemente tenga en cuenta que hay una categoría de valor denominada glvalue, para "generalizado lvalue". El supraconjunto de glvalues contiene ambos valores l (también conocido como *lvalues clásicas*) y xvalues. Por lo tanto, mientras que "identidad de tiene un valor l" es true, el conjunto completo de las cosas que tienen identidad es el conjunto de glvalues, tal como se muestra en esta ilustración.
+Ahora, si bien la afirmación de que lvalues tiene identidad es una instrucción verdadera, lo es también para xvalues. Veremos más en detalle lo que es un valor *xvalue* más adelante en este tema. Por ahora, simplemente ten en cuenta que hay una categoría de valor llamada glvalue, para "lvalue generalizado". El supraconjunto de glvalues contiene ambos valores lvalues (también conocidos como *lvalues clásicos*) y xvalues. De este modo, mientras "un valor lvalue tiene identidad" es verdadero, el conjunto completo de cosas que tienen identidades es el conjunto de glvalues, tal como se muestra en esta ilustración.
 
-![Un valor l tiene identidad](images/has-identity1.png)
+![Un valor lvalue tiene identidad](images/has-identity1.png)
 
-## <a name="an-rvalue-is-movable-an-lvalue-is-not"></a>Es móvil; un valor r un valor l no es
-Sin embargo, hay valores que no son glvalues. Por lo tanto, hay valores que usted *no* obtener una dirección de memoria para (o no puede depender de que sea válido). Vimos que algunos de estos valores en el ejemplo de código anterior. Esto parece una desventaja. Pero en realidad la ventaja de un valor como este es el que se puede *mover* (lo que es normalmente barato), en lugar de copia de él (que es costoso por lo general). Pasar de un valor significa que ya no está en el lugar en que solía ser. Por lo tanto, intenta obtener acceso a él en el lugar en que solía ser es algo que deben evitarse. Una explicación de cuándo y *cómo* para mover un valor está fuera del ámbito de este tema. Este tema, nos basta con saber que se denomina un valor que se puede mover un *rvalue* (o *rvalue clásica*).
+## <a name="an-rvalue-is-movable-an-lvalue-is-not"></a>Un valor rvalue es móvil; un elemento lvalue no lo es
+Sin embargo, hay valores que no son glvalues. Por lo tanto, hay valores para los que *no* se puede obtener una dirección de memoria (o no puedes basarte en ella para que sean válidos). Hemos visto algunos de estos valores en el ejemplo de código anterior. Esto parece una desventaja. Pero, en realidad, la ventaja de un valor como este es que te puedes *mover* desde él (lo que es normalmente barato), en lugar de copiar desde él (que normalmente es costoso). Moverse desde un valor significa que ya no está en el lugar en el que solía estar. Por lo tanto, intentar acceder a él en el lugar en el que solía estar es algo que se debe evitar hacer. En el ámbito de este tema no se explica cuándo y *cómo* mover un valor. Para ello, nos basta con saber que un valor que se puede mover es conocido como un valor *rvalue* (o *rvalue clásico*).
 
-La "r" de "rvalue" es una abreviatura de "right" (como en el derecho lado de una asignación). Pero puede usar valores r y las referencias a valores r, fuera de las asignaciones. La "r" de "valores r", a continuación, no es lo centrarse. Solo tendrá que entender que lo que llamamos un valor r es un valor que se puede mover.
+La "r" de "rvalue" es una abreviatura de "right" (derecha), como en el lado derecho de una asignación. Pero puedes usar rvalues y referencias a rvalues fuera de las asignaciones. Por tanto, la "r" de "rvalues" no es el elemento en el que centrarse. Solo tienes que entender que lo que llamamos rvalue es un valor que es móvil.
 
-Un valor l, por el contrario, no puede mover, tal como se muestra en esta ilustración. Un valor l que movió sería Enfréntese a la definición de *lvalue*, y sería un problema inesperado para el código que espera muy razonable para poder seguir teniendo acceso a lvalue.
+Un valor lvalue, por el contrario, no es móvil, tal como se muestra en esta ilustración. Un valor lvalue que se ha movido desafiaría a la propia definición de *lvalue*, y sería un problema inesperado para el código, que de forma muy razonable esperaría poder seguir teniendo acceso a lvalue.
 
-![Es móvil; un valor r un valor l no es](images/is-movable.png)
+![Un valor rvalue es móvil; un elemento lvalue no lo es](images/is-movable.png)
 
-No se puede mover un valor l. Sin embargo, existen *es* una especie de glvalue (el conjunto de las cosas con identidad) que se puede mover&mdash;si sabe lo que está haciendo (incluido con cuidado de no tener acceso a él después del desplazamiento)&mdash;y que es el xvalue. Volveremos a esta idea una vez más a continuación, cuando nos centramos en la imagen completa de las categorías de valor.
+No se puede mover un valor lvalue. Sin embargo, *existe* un tipo de valores glvalue (el conjunto de cosas con identidad) que se puede mover, si sabes lo que estás haciendo (incluido tener cuidado de no acceder a él después de moverlo), y se llama xvalue. Más adelante retomaremos esta idea cuando nos centremos en la imagen completa de las categorías de valor.
 
-## <a name="rvalue-references-and-reference-binding-rules"></a>Las referencias rvalue y reglas de enlace de referencia
-Esta sección presenta la sintaxis para una referencia a un valor r. Tendremos que esperar otro tema a entrar en un tratamiento sustancial de mover y reenvío, pero son problemas que resolver por las referencias rvalue. Antes de adentrarnos en las referencias rvalue, sin embargo, primero es necesario ser más claro sobre `T&` &mdash;lo que nos hemos anteriormente ha estado llamando solo "una referencia". Es realmente "una (distinta de const) referencia lvalue", que hace referencia a un valor al que se puede escribir el usuario de la referencia.
+## <a name="rvalue-references-and-reference-binding-rules"></a>Referencias rvalue y reglas de enlace de referencias
+En esta sección se presenta la sintaxis para una referencia a un valor rvalue. Tendremos que esperar a que otro tema reciba un tratamiento detallado del movimiento y reenvío, pero esos son problemas que las referencias rvalue resuelven. Aunque, antes de adentrarnos en las referencias rvalue, primero es necesario ser más claros sobre `T&`, lo que anteriormente hemos llamado simplemente "una referencia". Realmente es "una referencia lvalue (distinta de const)", que se refiere a un valor en el que el usuario de la referencia puede escribir.
 
 ```cppwinrt
 template<typename T> T& get_by_lvalue_ref() { ... } // Get by lvalue (non-const) reference.
 template<typename T> void set_by_lvalue_ref(T&) { ... } // Set by lvalue (non-const) reference.
 ```
 
-Puede enlazar una referencia lvalue a un valor l, pero no a un valor r.
+Una referencia lvalue puede enlazar a un valor lvalue, pero no a uno rvalue.
 
-A continuación, hay referencias constantes lvalue (`T const&`), que hacen referencia a objetos a los que el usuario de la referencia *no* escritura (por ejemplo, una constante).
+Luego, hay referencias const de lvalue (`T const&`), que hacen referencia a objetos en los que el usuario de la referencia *no* puede escribir (por ejemplo, una constante).
 
 ```cppwinrt
 template<typename T> T const& get_by_lvalue_cref() { ... } // Get by lvalue const reference.
 template<typename T> void set_by_lvalue_cref(T const&) { ... } // Set by lvalue const reference.
 ```
 
-Una referencia const lvalue puede enlazar a un valor l o un valor r.
+Una referencia const de lvalue puede enlazar a un valor lvalue o a uno rvalue.
 
-La sintaxis para una referencia a un valor r del tipo `T` se escribe como `T&&`. Una referencia rvalue hace referencia a un valor de bienes muebles&mdash;un valor cuyo contenido no es necesario conservar una vez que hemos usado lo (por ejemplo, un archivo temporal). Desde el objetivo es mover de (con lo que modificar) el valor enlazado a una referencia rvalue, `const` y `volatile` calificadores (también conocido como calificadores cv) no se aplican a las referencias rvalue.
+La sintaxis para una referencia a un valor rvalue de tipo `T` se escribe como `T&&`. Una referencia rvalue hace referencia a un valor móvil (un valor cuyo contenido no es necesario conservar una vez que lo hemos usado; por ejemplo, un archivo temporal). Puesto que el objetivo es moverlo desde el valor enlazado a una referencia rvalue (y de esta forma, modificarlo), los calificadores `const` y `volatile` (también conocidos como calificadores cv) no se aplican a las referencias rvalue.
 
 ```cppwinrt
 template<typename T> T&& get_by_rvalue_ref() { ... } // Get by rvalue reference.
 struct A { A(A&& other) { ... } }; // A move constructor takes an rvalue reference.
 ```
 
-Una referencia rvalue se enlaza a un valor r. De hecho, en términos de la resolución de sobrecarga, un valor r *prefiere* enlazar una referencia rvalue que a una referencia const lvalue. Pero una referencia rvalue no se puede enlazar a un valor l porque, como ya habíamos dicho, una referencia rvalue hace referencia a un valor cuyo contenido se supone que no es necesario conservar (por ejemplo, el parámetro para un constructor de movimiento).
+Una referencia rvalue se enlaza a un valor rvalue. De hecho, en términos de resolución de sobrecarga, un valor rvalue *prefiere* enlazarse a una referencia rvalue más que a una referencia const de lvalue. Pero una referencia rvalue no se puede enlazar a un valor lvalue porque, como ya hemos dicho, una referencia rvalue hace referencia a un valor cuyo contenido se supone que no es necesario conservar (por ejemplo, el parámetro para un constructor de movimiento).
 
-También puede pasar un valor r donde se esperaba un argumento por valor, a través de la construcción de copia (o a través de la construcción de movimiento, si el valor de r es un xvalue).
+También puedes pasar un valor rvalue donde se espera un argumento por valor, con la construcción de copia (o con la construcción de movimiento, si el valor rvalue es un valor xvalue).
 
-## <a name="a-glvalue-has-identity-a-prvalue-does-not"></a>Un glvalue tiene identidad; no es así un prvalue
-En esta fase, sabemos lo que tiene identidad. Y sabemos qué es móvil y qué no. Pero no hemos aún denominamos el conjunto de valores que *no* tienen identidad. Este conjunto se conoce como el *prvalue*, o *rvalue puro*.
+## <a name="a-glvalue-has-identity-a-prvalue-does-not"></a>Un valor glvalue tiene identidad; un valor prvalue no
+En esta etapa ya sabemos lo que tiene identidad. Y sabemos lo que es móvil y lo que no. Pero aún no hemos denominado el conjunto de valores que *no* tiene identidad. Este conjunto se conoce como el valor *prvalue* o *rvalue puro*.
 
 ```cppwinrt
 int& get_by_ref() { ... }
@@ -101,21 +101,21 @@ int main()
 }
 ```
 
-![Un valor l tiene identidad; no es así un prvalue](images/has-identity2.png)
+![Un valor lvalue tiene identidad; un valor prvalue no](images/has-identity2.png)
 
 ## <a name="the-complete-picture-of-value-categories"></a>La imagen completa de las categorías de valor
-Sólo se guardan combinar la información y las ilustraciones anteriormente en una sola imagen ampliada.
+Solo queda combinar la información y las ilustraciones anteriores en una sola imagen general.
 
 ![La imagen completa de las categorías de valor](images/value-categories.png)
 
 ### <a name="glvalue-i"></a>glvalue (i)
-Un glvalue (generalizado lvalue) tiene identidad.
+Un valor glvalue (lvalue generalizado) tiene identidad.
 
-### <a name="lvalue-im"></a>valor l (\&\!m)
-Un valor l (un tipo de glvalue) tiene identidad, pero no puede mover. Estos son los valores normalmente de lectura y escritura que se pasan en torno a por referencia o referencia constante o valor si es barato copiar. No se puede enlazar un valor l en una referencia rvalue.
+### <a name="lvalue-im"></a>lvalue (i\&\!m)
+Un valor lvalue (un tipo de glvalue) tiene identidad, pero no es móvil. Normalmente estos son los valores de lectura y escritura que distribuyes por referencia o referencia de tipo const, o por valor si copiar es barato. No se puede enlazar un valor lvalue a una referencia rvalue.
 
-### <a name="xvalue-im"></a>xValue (\&m)
-Un xvalue (una especie de glvalue, pero también un tipo de valor r) tiene identidad y también puede mover. Esto podría ser un lvalue erstwhile que ha decidido mover porque la copia es costosa y podrá cuidado de no tener acceso a él posteriormente. Aquí es cómo puede convertir un valor l en una xvalue.
+### <a name="xvalue-im"></a>xvalue (i\&m)
+Un valor xvalue (un tipo de glvalue, pero también un tipo de rvalue) tiene identidad y también es móvil. Esto podría ser un valor antiguo lvalue que has decidido mover porque la copia es costosa. En este caso, tendrás que tener cuidado de no acceder a él posteriormente. Aquí se muestra cómo puedes convertir un valor lvalue en uno xvalue.
 
 ```cppwinrt
 struct A { ... };
@@ -123,9 +123,9 @@ A a; // a is an lvalue...
 static_cast<A&&>(a); // ...but this expression is an xvalue.
 ```
 
-En el ejemplo de código anterior, no hemos pasamos nada todavía. Simplemente creamos una xvalue al convertir un valor de l en una referencia rvalue sin nombre. Todavía puede identificarse por su nombre de valor l; pero, como un xvalue, ahora es *capaz* de que se va a mover. Los motivos para hacerlo, y qué mover aspecto realmente, tendrá que esperar otro tema. Pero se puede considerar la "x" en "xvalue" significado "experto sólo" si ayuda a. Al convertir un valor l en una xvalue (un tipo de valor r), el valor, a continuación, pasa a ser capaz de que se enlaza a una referencia rvalue.
+En el ejemplo de código anterior, todavía no hemos movido nada. Simplemente hemos creado un valor xvalue al convertir un valor lvalue en una referencia rvalue sin nombre. Todavía puede identificarse por su nombre de lvalue; pero, como un valor xvalue, ahora se *puede* mover. Los motivos para hacerlo y el aspecto que tiene realmente el movimiento se tratarán en otro tema. Pero se puede pensar que el significado de la "x" en "xvalue" es "solo experto", si esto ayuda. Al convertir un valor lvalue en uno xvalue (un tipo de valor rvalue), el valor pasa a poder enlazarse a una referencia rvalue.
 
-Estos son dos otros ejemplos de xvalues&mdash;llamar a una función que devuelve una referencia rvalue sin nombre y el acceso a un miembro de un xvalue.
+Estos son dos ejemplos más de xvalues, que llaman a una función que devuelve una referencia rvalue sin nombre y acceden a un miembro de un valor xvalue.
 
 ```cppwinrt
 struct A { int m; };
@@ -134,13 +134,13 @@ f(); // This expression is an xvalue...
 f().m; // ...and so is this.
 ```
 
-### <a name="prvalue-im"></a>prvalue (\!\&m)
-Un prvalue (rvalue pura; un tipo de valor r) no tiene identidad, pero es móvil. Estos suelen ser objetos temporales, el resultado de llamar a una función que devuelve por valor o el resultado de evaluar cualquier otra expresión que no sea un glvalue,
+### <a name="prvalue-im"></a>prvalue (\!i\&m)
+Un valor prvalue (rvalue puro; un tipo de valor rvalue) no tiene identidad, pero es móvil. Normalmente son temporales, el resultado de llamar a una función que devuelve por valor o el resultado de evaluar cualquier otra expresión que no es un valor glvalue.
 
-### <a name="rvalue-m"></a>valor de r (m)
-Un valor r es móvil. Un valor r *referencia* siempre hace referencia a un valor r (un valor cuyo contenido se supone que no es necesario conservar).
+### <a name="rvalue-m"></a>rvalue (m)
+Un valor rvalue es móvil. Una *referencia* rvalue siempre hace referencia a un valor rvalue (un valor cuyo contenido se supone que no es necesario conservar).
 
-¿Sin embargo, es una referencia rvalue propio un valor r? Un *sin nombre* referencia rvalue (como las que se muestra en los ejemplos de código xvalue anteriores) es un xvalue por lo tanto, sí, es un valor r. Prefiere a enlazarse a un parámetro de función de referencia rvalue, como los de un constructor de movimiento. A la inversa (y quizás counter-intuitively), si una referencia rvalue tiene un nombre, la expresión formada por ese nombre es un valor l. Por lo que lo *no* enlazarse a un parámetro de referencia rvalue. Pero es fácil hacerlo hacerlo&mdash;simplemente convertirlo en una referencia de valor r sin nombre (un xvalue) nuevo.
+Sin embargo, ¿una referencia rvalue no es en sí misma un valor rvalue? Una referencia rvalue *sin nombre* (como las que se muestran en los ejemplos de código xvalue anteriores) es un valor xvalue, por lo tanto, es un valor rvalue. Prefiere enlazarse a un parámetro de función de referencia rvalue, como el de un constructor de movimiento. En cambio, y quizás contra toda lógica, si una referencia rvalue tiene un nombre, la expresión que forma ese nombre es un valor lvalue. Por tanto, *no se puede* enlazar a un parámetro de referencia rvalue. Es sencillo: simplemente conviértelo otra vez en una referencia de rvalue sin nombre (un valor xvalue).
 
 ```cppwinrt
 void foo(A&) { ... }
@@ -153,40 +153,40 @@ void bar(A&& a) // a is a named rvalue reference; it's an lvalue.
 A&& get_by_rvalue_ref() { ... } // This unnamed rvalue reference is an xvalue.
 ```
 
-### <a name="im"></a>\!\&\!m
-El tipo de valor que no tiene la identidad y no puede mover es la combinación de uno que no se han analizado. Pero nos podemos pasarlo por alto, porque esa categoría no es una idea útil del lenguaje C++.
+### <a name="im"></a>\!i\&\!m
+El tipo de valor que no tiene identidad y no es móvil es la combinación que todavía no hemos analizado. Pero podemos pasarlo por alto, porque esa categoría no es una idea útil en el lenguaje C++.
 
 ## <a name="reference-collapsing-rules"></a>Reglas de contracción de referencia
-Varias referencias like en una expresión (una referencia lvalue a una referencia lvalue o una referencia rvalue en una referencia rvalue) cancelación una salida de otro.
+Varias referencias de tipo like en una expresión (una referencia lvalue a una referencia lvalue o una referencia rvalue en una referencia rvalue) se anulan mutuamente.
 
-- `A& &` contrae en `A&`.
-- `A&& &&` contrae en `A&&`.
+- `A& &` se contrae en `A&`.
+- `A&& &&` se contrae en `A&&`.
 
-Contraer varias a diferencia de las referencias en una expresión a una referencia lvalue.
+Varias referencias de tipo unlike en una expresión se contraen a una referencia lvalue.
 
-- `A& &&` contrae en `A&`.
-- `A&& &` contrae en `A&`.
+- `A& &&` se contrae en `A&`.
+- `A&& &` se contrae en `A&`.
 
 ## <a name="forwarding-references"></a>Referencias de reenvío
-Esta última sección contrasta las referencias rvalue, que ya se ha explicado, con el concepto diferentes de un *reenvío referencia*.
+En esta última sección se contrastan las referencias rvalue, que ya se han analizado, con el concepto distinto de una *referencia de reenvío*.
 
 ```cppwinrt
 void foo(A&& a) { ... }
 ```
 
-- `A&&` es una referencia rvalue, como hemos visto. Const y volatile no son aplicables a las referencias rvalue.
-- `foo` acepta solo los valores de tipo **A**.
-- Referencias rvalue razón (como `A&&`) existe es por lo que puede crear una sobrecarga que está optimizada para el caso de un archivo temporal (o en otro rvalue) que se pasa.
+- `A&&` es una referencia rvalue, tal como hemos visto. Los tipos const y volatile no se aplican a las referencias rvalue.
+- `foo` solo acepta valores rvalue de tipo **A**.
+- Las referencias rvalue (como `A&&`) existen para que puedas crear una sobrecarga que esté optimizada en el caso de que se pase un archivo temporal (u otro valor rvalue).
 
 ```cppwinrt
 template <typename _Ty> void bar(_Ty&& ty) { ... }
 ```
 
-- `_Ty&&` es un *reenvío referencia*. Dependiendo de lo pasará a `bar`, tipo **_Ty** podría ser const/no constante independientemente volátil, no-volátil.
-- `bar` acepta cualquier lvalue o rvalue de tipo **_Ty**.
-- Si se pasa un valor l, la referencia de reenvío para convertirse en `_Ty& &&`, que se contrae a la referencia lvalue `_Ty&`.
-- Si se pasa un valor r, la referencia de reenvío para convertirse en `_Ty&& &&`, que se contrae en la referencia rvalue `_Ty&&`.
-- El motivo por el reenvío de las referencias (como `_Ty&&`) existe es *no* para la optimización, pero para aprovechar lo pasará a ellas y reenviarlo en forma transparente y eficaz. Es probable que encuentre una referencia de reenvío sólo si escribir (o estrechamente estudiar) código de biblioteca&mdash;por ejemplo, una función de generador que reenvía los argumentos de constructor.
+- `_Ty&&` es una *referencia de reenvío*. En función de lo que pases a `bar`, el tipo **_Ty** puede ser de tipo const o no const independientemente de si es de tipo volatile o no volatile.
+- `bar` acepta cualquier valor lvalue o rvalue de tipo **_Ty**.
+- Pasar un valor lvalue provoca que la referencia de reenvío se convierta en `_Ty& &&`, que se contrae a la referencia lvalue `_Ty&`.
+- Pasar un valor rvalue provoca que la referencia de reenvío se convierta en `_Ty&& &&`, que se contrae a la referencia rvalue `_Ty&&`.
+- Las referencias de reenvío (como `_Ty&&`) *no* existen para la optimización, sino para que puedas tomar lo que les pasas y reenviarlo de forma transparente y eficiente. Es probable que encuentres una referencia de reenvío solo si escribes (o estudias de cerca) código de biblioteca; por ejemplo, una función de generador que reenvía argumentos de constructor.
 
 ## <a name="sources"></a>Orígenes
-* \[Stroustrup, 2013\] Stroustrup B.: El lenguaje de programación de C++, cuarta edición. Addison-Wesley. 2013.
+* \[Stroustrup, 2013\] B. Stroustrup: The C++ Programming Language, Fourth Edition. Addison-Wesley. 2013.

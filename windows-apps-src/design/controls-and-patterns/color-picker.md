@@ -12,35 +12,35 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 215a15e3a8e1b0264987adcf6228ec52a696f50c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57654480"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63801337"
 ---
 # <a name="color-picker"></a>Selector de colores
 
 Un selector de colores se usa para explorar y seleccionar colores. De manera predeterminada, permite a un usuario navegar por los colores en un espectro de colores o especificar un color en los cuadros de texto rojo, verde y azul (RGB), valor de matiz-saturación (HSV) o hexadecimal.
 
-> **API importantes**: [Clase ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker), [propiedad de Color](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [ColorChanged eventos](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
+> **API importantes**: [Clase ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker), [propiedad Color](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [evento ColorChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
 
 ![Selector de colores predeterminado](images/color-picker-default.png)
 
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-Usa el selector de colores para permitir que un usuario seleccione colores en tu aplicación. Por ejemplo, úsalo para cambiar la configuración de color, como los colores de fuente, el fondo o los colores de tema de la aplicación.
+Usa el selector de colores para permitir que un usuario seleccione colores en tu aplicación. Por ejemplo, úsalo para cambiar la configuración de color, como los colores de fuente, el fondo o los colores del tema de la aplicación.
 
-Si tu aplicación está dibujando o realizando tareas similares con el lápiz, piensa en la posibilidad de usar [Controles de entrada manuscrita](inking-controls.md) junto con el selector de colores.
+Si tu aplicación está pensada para dibujar o realizar tareas similares con el lápiz, considera la posibilidad de usar [controles de entrada manuscrita](inking-controls.md) junto con el selector de colores.
 
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ColorPicker">abrir la aplicación y ver ColorPicker en acción</a>.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ColorPicker">abrir la aplicación y ver ColorPicker en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -57,11 +57,11 @@ En este ejemplo se muestra cómo crear un selector de colores predeterminado en 
 <ColorPicker x:Name="myColorPicker"/>
 ```
 
-De manera predeterminada, el selector de colores muestra una vista previa del color seleccionado en la barra rectangular que se encuentra junto al espectro de colores. Puedes usar el evento [ColorChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged) o la propiedad [Color](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color) para obtener acceso al color seleccionado y usarlo en tu aplicación. Consulta los siguientes ejemplos de código detallado.
+De manera predeterminada, el selector de colores muestra una vista previa del color seleccionado en la barra rectangular que se encuentra junto al espectro de colores. Puedes usar el evento [ColorChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged) o la propiedad [Color](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color) para acceder al color seleccionado y usarlo en tu aplicación. Consulta los siguientes ejemplos de código detallado.
 
 ### <a name="bind-to-the-chosen-color"></a>Enlazar al color elegido
 
-Cuando la selección de colores debe surtir efecto inmediatamente, puedes usar el enlace de datos para enlazar a la propiedad Color o bien, controlar el evento ColorChanged para obtener acceso al color seleccionado en el código.
+Cuando la selección de colores debe surtir efecto inmediatamente, puedes usar el enlace de datos para enlazar a la propiedad Color o controlar el evento ColorChanged para acceder al color seleccionado en el código.
 
 En este ejemplo, enlazas la propiedad Color de un SolidColorBrush que se usa como el relleno de un rectángulo directamente al color seleccionado del selector de colores. Cualquier cambio en el selector de colores produce un cambio dinámico en la propiedad enlazada.
 
@@ -83,7 +83,7 @@ En este ejemplo se usa un selector de colores simplificado únicamente con el c�
 
 ### <a name="save-the-chosen-color"></a>Guardar el color elegido
 
-En algunos casos, no quieres aplicar el cambio de color inmediatamente. Por ejemplo, cuando hospedes un selector de colores en un control flotante, te recomendamos aplicar el color seleccionado únicamente después de que el usuario confirme la selección o cierre el control flotante. También puedes guardar el valor del color seleccionado para usarlo más adelante.
+En algunos casos, no te interesa aplicar el cambio de color inmediatamente. Por ejemplo, cuando hospedes un selector de colores en un control flotante, te recomendamos que apliques el color seleccionado únicamente después de que el usuario confirme la selección o cierre el control flotante. También puedes guardar el valor del color seleccionado para usarlo más adelante.
 
 En este ejemplo, hospedas un selector de colores en un control flotante con botones Confirmar y Cancelar. Cuando el usuario confirma su elección del color, puedes guardar el color seleccionado para usarlo más adelante en la aplicación.
 
@@ -155,13 +155,13 @@ En este ejemplo se muestra cómo usar la propiedad [ColorSpectrumShape](https://
              ColorSpectrumShape="Ring"/>
 ```
 
-![Un selector de colores con un espectro de círculo](images/color-picker-ring.png)
+![Selector de colores con un espectro de círculo](images/color-picker-ring.png)
 
-Cuando se deba elegir entre el espectro de colores de cuadrado y círculo, la precisión será una cuestión principal que se deberá tener en cuenta. Un usuario tiene un mayor control cuando selecciona un color específico con un cuadrado porque se muestra más de la gama de colores. Debes pensar en el espectro de círculo como más de la experiencia de elección de color informal.
+Cuando se deba elegir entre el espectro de colores de cuadrado y círculo, la precisión será una cuestión principal que se deberá tener en cuenta. Un usuario tiene un mayor control cuando selecciona un color específico con un cuadrado, ya que se muestra más de la gama de colores. Debes considerar el espectro de círculo una parte más de la experiencia de elección de color informal.
 
 #### <a name="show-the-alpha-channel"></a>Mostrar el canal alfa
 
-En este ejemplo, habilitas un control deslizante de opacidad y cuadro de texto en el selector de colores.
+En este ejemplo, habilitas un control deslizante de opacidad y un cuadro de texto en el selector de colores.
 
 ```xaml
 <ColorPicker x:Name="myColorPicker"
@@ -197,23 +197,23 @@ Valores de opacidad | IsAlphaEnabled, IsAlphaSliderVisible, IsAlphaTextInputVisi
 Valores hexadecimales | IsHexInputVisible
 
 > [!NOTE]
-> IsAlphaEnabled debe ser **true** para mostrar el control deslizante y el cuadro de texto de opacidad. La visibilidad de los controles de entrada se puede modificar a continuación con las propiedades IsAlphaTextInputVisible y IsAlphaSliderVisible. Consulta la documentación sobre API para obtener más información.
+> IsAlphaEnabled debe ser **true** para mostrar el control deslizante y el cuadro de texto de opacidad. La visibilidad de los controles de entrada se puede modificar después con las propiedades IsAlphaTextInputVisible e IsAlphaSliderVisible. Consulta la documentación sobre API para obtener más información.
 
-## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
-- Piensa acerca de qué tipo de experiencia de selección de colores es adecuada para tu aplicación. Es posible que algunos escenarios no requieran la selección de colores detallada y que se beneficien de un selector simplificado.
-- Para lograr la experiencia de selección de colores más precisa, usa el espectro de cuadrado y asegúrate de que el tamaño es de al menos 256 x 256 píxeles, o incluye los campos de entrada de texto para permitir a los usuarios que ajusten su color seleccionado.
-- Cuando se usa en un control flotante, pulsar en el espectro o ajustar solo el control deslizante no debe confirmar la selección de colores. Para confirmar la selección:
+- Piensa en qué tipo de experiencia de selección de colores es adecuada para tu aplicación. Es posible que algunos escenarios no requieran la selección de colores detallada y que se beneficien de un selector simplificado.
+- Para lograr la experiencia de selección de colores más precisa, usa el espectro de cuadrado y asegúrate de que el tamaño es de al menos 256 x 256 píxeles, o incluye los campos de entrada de texto para permitir que los usuarios ajusten el color seleccionado.
+- Cuando se usa en un control flotante, la acción de pulsar en el espectro o ajustar solo el control deslizante no debe confirmar la selección de colores. Para confirmar la selección:
   - Proporciona botones de confirmar y cancelar para aplicar o cancelar la selección. Se descartará al presionar el botón Atrás o pulsar fuera del control flotante y no se guardará la selección del usuario.
-  - O bien, confirma la selección tras descartar el control flotante pulsando fuera del control flotante o presionando el botón Atrás.
+  - También se puede confirmar la selección tras descartar el control flotante al pulsar fuera del control flotante o al presionar el botón Atrás.
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
+- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Interacciones del lápiz y el lápiz óptico en aplicaciones para UWP](../input/pen-and-stylus-interactions.md)
+- [Interacciones de lápiz en aplicaciones para UWP](../input/pen-and-stylus-interactions.md)
 - [Entrada manuscrita](inking-controls.md)
 
 <!--

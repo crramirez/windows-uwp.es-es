@@ -13,11 +13,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f04d364aac79ed232f35cbdd8378bc50393d2c74
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57614380"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63789046"
 ---
 # <a name="sound"></a>Sonido
 
@@ -29,24 +29,24 @@ Hay muchas formas de usar sonido para mejorar tu aplicación. Puedes usar sonido
 
 UWP proporciona un sistema de sonido fácilmente accesible que te permite simplemente "invertir un cambio" y obtener una experiencia de sonido envolvente en toda la aplicación.
 
-La clase [**ElementSoundPlayer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer) es un sistema de sonido integrado dentro de XAML y, cuando está activada en todos los controles predeterminados, se reproducen sonidos automáticamente.
+[**ElementSoundPlayer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer) es un sistema de sonido integrado dentro de XAML y, cuando está activado en todos los controles predeterminados, se reproducen sonidos automáticamente.
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
-El **ElementSoundPlayer** tiene tres estados diferentes: **En** **desactivar** y **automática**.
+**ElementSoundPlayer** tiene tres estados distintos: **Activado**, **Desactivado** y **Automático**.
 
 Si se establece en **Desactivado**, independientemente de dónde se ejecute la aplicación, el sonido no se reproducirá nunca. Si se establece en **Activado**, los sonidos de tu aplicación se reproducirán en todas las plataformas.
 
-Al habilitar ElementSoundPlayer, se habilitará también automáticamente el audio espacial (sonido 3D). Para deshabilitar el sonido 3D (y seguir manteniendo el sonido activado), deshabilita el **SpatialAudioMode** de la clase ElementSoundPlayer: 
+Al habilitar ElementSoundPlayer, se habilitará también automáticamente el audio espacial (sonido 3D). Para deshabilitar el sonido 3D (y seguir manteniendo el sonido activado), deshabilita **SpatialAudioMode** del elemento ElementSoundPlayer: 
 
 ```C#
 ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 ```
 
 La propiedad **SpatialAudioMode** puede aceptar estos valores: 
-- **Automático**: Audio espacial se activará cuando sonido está activado. 
-- **Off**: Audio espacial siempre está desactivado, incluso si el sonido está activado.
-- **Activado**: Siempre se reproducirá audio espacial.
+- **Automático**: el audio espacial se activará cuando el sonido esté activado. 
+- **Off**: el audio espacial siempre está desactivado, incluso si el sonido está activado.
+- **Activado**: siempre se reproducirá audio espacial.
 
 Para obtener más información acerca del audio espacial y de cómo XAML lo controla, consulta [AudioGraph: audio espacial](/windows/uwp/audio-video-camera/audio-graphs#spatial-audio).
 
@@ -69,7 +69,7 @@ Donde el volumen máximo (en relación con el volumen del sistema) es 1.0 y el m
 
 Si no se desea un sonido predeterminado de un control, se puede deshabilitar. Esto se realiza mediante el **ElementSoundMode** en el control.
 
-El **ElementSoundMode** tiene dos estados: **Desactivar** y **predeterminado**. Cuando no se establece, es **Predeterminado**. Si se establece en **Desactivado**, cada sonido que reproduzca el control se silenciará *excepto para foco*.
+**ElementSoundMode** tiene dos estados: **Desactivado** y **Predeterminado**. Cuando no se establece, es **Predeterminado**. Si se establece en **Desactivado**, cada sonido que reproduzca el control se silenciará *excepto para foco*.
 
 ```XAML
 <Button Name="ButtonName" Content="More Info" ElementSoundMode="Off"/>
@@ -118,7 +118,7 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
 ### <a name="navigation-within-a-page"></a>Navegación dentro de una página
 
-Al navegar entre paneles o vistas en página de una aplicación (consulte [pestañas y elementos dinámicos](../controls-and-patterns/pivot.md)), suele haber movimiento bidireccional. Esto significa que puedes pasar al siguiente panel o vista, o bien al anterior, sin salir de la página actual de la aplicación en la que te encuentras.
+Cuando se navega entre paneles o vistas en la página de una aplicación (consulta [Pestañas y tablas dinámicas](../controls-and-patterns/pivot.md)), normalmente hay un movimiento bidireccional. Esto significa que puedes pasar al siguiente panel o vista, o bien al anterior, sin salir de la página actual de la aplicación en la que te encuentras.
 
 La experiencia de sonido con relación a este concepto de navegación está incluida en los sonidos **MovePrevious** y **MoveNext**.
 

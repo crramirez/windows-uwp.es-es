@@ -12,10 +12,10 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5996fb15c0d7302c7360c2e45613f0da2720d415
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364653"
 ---
 # <a name="labels"></a>Etiquetas
@@ -24,9 +24,9 @@ ms.locfileid: "66364653"
 
 Una etiqueta es el nombre o título de un control o un grupo de controles relacionados.
 
-> **API importantes**: Propiedad de encabezado, [clase TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
+> **API importantes**: propiedad Header, [Clase TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
-En XAML, muchos controles tienen una propiedad Header integrada que sirve para mostrar la etiqueta. En los controles sin propiedad Header o para etiquetar grupos de controles, puedes usar un [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) en su lugar.
+En XAML, muchos controles tienen una propiedad Header integrada que sirve para mostrar la etiqueta. En los controles sin una propiedad Header, o para etiquetar grupos de controles, puedes usar un [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) en su lugar.
 
 ![Captura de pantalla que muestra un control de etiqueta estándar](images/label-standard.png)
 
@@ -39,7 +39,7 @@ En XAML, muchos controles tienen una propiedad Header integrada que sirve para m
 
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
-* [Ejemplo de conceptos básicos de XAML UI](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Ejemplo de conceptos básicos de interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Controles de texto](text-controls.md)
@@ -51,7 +51,7 @@ En XAML, muchos controles tienen una propiedad Header integrada que sirve para m
 * [Propiedad Slider.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider.header)
 * [Propiedad ComboBox.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox.header)
 * [Propiedad RichEditBox.Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.header)
-* [Clase de TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
+* [Clase TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
  
 

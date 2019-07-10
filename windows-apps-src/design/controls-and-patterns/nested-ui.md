@@ -12,10 +12,10 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: aa672c99dc83e7955c4d4f91b5bc34620c48ed01
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364549"
 ---
 # <a name="nested-ui-in-list-items"></a>Interfaz de usuario anidada en elementos de lista
@@ -26,7 +26,7 @@ La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los co
 
 Puedes usar la interfaz de usuario anidada para presentar a un usuario las opciones adicionales que le ayudarán a acelerar la realización de acciones importantes. Sin embargo, cuantas más acciones expongas, más complicada será la interfaz de usuario. Debes prestar especial atención si decides usar este patrón de interfaz de usuario. En este artículo se proporcionan directrices para ayudar a determinar el mejor curso de acción para tu interfaz de usuario concreta.
 
-> **API importantes**: [Clase de ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [clase GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview)
+> **API importantes**: [clase ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [clase GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview)
 
 En este artículo, se trata la creación de la interfaz de usuario anidada en los elementos [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) y [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview). Aunque en esta sección no se tratan otros casos de interfaz de usuario anidada, estos conceptos son transferibles. Antes de comenzar, debes estar familiarizado con las instrucciones generales para usar los controles ListView o GridView en la interfaz de usuario, que encontrarás en los artículos [Listas](lists.md) y [Vista de lista y vista de cuadrícula](listview-and-gridview.md).
 
@@ -109,7 +109,7 @@ Si la interfaz de usuario de la lista con elementos anidados admite acciones com
 
 ![Partes de la interfaz de usuario anidada](images/nested-ui-navigation.png)
 
-**Gamepad**
+**Controlador para juegos**
 
 Cuando la entrada proviene de un controlador para juegos, proporciona esta experiencia del usuario:
 
@@ -167,7 +167,7 @@ Para conseguir esta interfaz de usuario, establece las siguientes propiedades en
 
 Cuando los elementos de lista no realizan ninguna acción, se recomienda seguir estas instrucciones para controlar la navegación con un controlador para juegos o un teclado.
 
-**Gamepad**
+**Controlador para juegos**
 
 Cuando la entrada proviene de un controlador para juegos, proporciona esta experiencia del usuario:
 

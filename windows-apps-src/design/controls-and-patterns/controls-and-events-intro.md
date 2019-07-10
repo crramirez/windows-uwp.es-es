@@ -9,19 +9,19 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 671f33cf106eabf11b317b00d5c2a6cd9abcf3d0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363035"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introducción a los controles y patrones
 
 En el desarrollo de aplicaciones para UWP, un *control* es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario.
 
-> **API importantes**: [Espacio de nombres Windows.UI.Xaml.Controls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
+> **API importantes**: [espacio de nombres Windows.UI.Xaml.Controls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 
-Un *patrón* es una receta para modificar un control o combinar varios controles con el fin de hacer algo nuevo. Por ejemplo, el [principal-detalle](master-details.md) patrón es una forma que puede usar un [SplitView](split-view.md) control para la navegación de la aplicación. De forma similar, puede personalizar la plantilla de un [NavigationView](navigationview.md) control para implementar el patrón de ficha.
+Un *patrón* es una receta para modificar un control o combinar varios controles con el fin de hacer algo nuevo. Por ejemplo, el patrón de [maestro y detalles](master-details.md) es una manera de usar un control [SplitView](split-view.md) para la navegación de la aplicación. Del mismo modo, puedes personalizar la plantilla de un control de [NavigationView](navigationview.md) para implementar el patrón de la pestaña.
 
 En muchos casos, puedes usar el control tal cual. Sin embargo, los controles de XAML separan la función de la estructura y la apariencia, por lo que puedes realizar varios niveles de modificaciones que se adapten a tus necesidades. En la sección [Estilo](../style/index.md), aprenderás cómo usar [Estilos XAML](xaml-styles.md) y [plantillas de control](control-templates.md) para modificar un control.
 

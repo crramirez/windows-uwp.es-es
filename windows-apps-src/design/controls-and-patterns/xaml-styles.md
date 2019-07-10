@@ -11,10 +11,10 @@ template: detail.hbs
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cd11427ed1b53641a25c32742ca114b121efcfe8
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363962"
 ---
 # <a name="xaml-styles"></a>Estilos XAML
@@ -27,15 +27,15 @@ El marco XAML te permite personalizar la apariencia de tus aplicaciones de varia
 
 ## <a name="style-basics"></a>Conceptos básicos de estilos
 
-Los estilos te permiten extraer opciones de configuración de propiedades visuales en recursos reutilizables. Este es un ejemplo que muestra 3 botones con un estilo que establece las propiedades [BorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.borderbrush), [BorderThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.borderthickness) y [Foreground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.foreground). Al aplicar un estilo, puedes hacer que todos los controles tengan el mismo aspecto no tener que establecer estas propiedades en cada control de manera independiente.
+Los estilos te permiten extraer opciones de configuración de propiedades visuales en recursos reutilizables. Este es un ejemplo en el que se muestran tres botones con un estilo que establece las propiedades [BorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.borderbrush), [BorderThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.borderthickness) y [Foreground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.foreground). Al aplicar un estilo, puedes hacer que todos los controles tengan el mismo aspecto no tener que establecer estas propiedades en cada control de manera independiente.
 
 ![botones con estilo](images/styles-rainbow-buttons.png)
 
 Puedes definir un estilo en línea en el lenguaje XAML para un control o como una fuente reutilizable. Define recursos en un archivo XAML de una página individual, en el archivo App.xaml o en un archivo XAML de diccionario de recursos independiente. Varias aplicaciones pueden compartir un mismo archivo XAML de diccionario de recursos y se pueden combinar varios diccionarios de recursos en una sola aplicación. El lugar donde se define el recurso determina el ámbito en el que puede usarse. Los recursos de nivel de página se encuentran disponibles solo en la página donde se definen. Si tanto en App.xaml como en la página se definen con la misma clave, el recurso de la página invalida al recurso de App.xaml. Si un recurso se define en un archivo de diccionario de recursos diferente, su ámbito se determina por el lugar donde se hace referencia al diccionario de recursos.
 
-En la definición de [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style), necesitas un atributo [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype) y una colección de uno o más elementos [Setter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter). El atributo **TargetType** es una cadena que especifica un tipo [FrameworkElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement) para aplicarle el estilo. El valor **TargetType** debe especificar un tipo derivado de **FrameworkElement** definido por Windows Runtime o un tipo personalizado que esté disponible en un ensamblado referido. Si intentas aplicar un estilo a un control y el tipo del control no coincide con el atributo **TargetType** de dicho estilo, se produce una excepción.
+En la definición de [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style), necesitas un atributo [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype) y una colección de uno o más elementos [Setter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter). El atributo **TargetType** es una cadena que especifica un tipo [FrameworkElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement) al que aplicarle el estilo. El valor **TargetType** debe especificar un tipo derivado de **FrameworkElement** definido por Windows Runtime o un tipo personalizado que esté disponible en un ensamblado referido. Si intentas aplicar un estilo a un control y el tipo del control no coincide con el atributo **TargetType** de dicho estilo, se produce una excepción.
 
-Cada elemento [Setter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) requiere una [Property](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter.property) y un [Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter.value). Esta configuración de las propiedades indica a qué propiedades del control se aplica la configuración, y el valor que se fija para esa propiedad. Puedes establecer **Setter.Value** con sintaxis de atributo o elemento de propiedad. El XAML muestra el estilo que se aplica a los botones que se mostraron anteriormente. En este XAML, los dos primeros elementos **Setter** usan sintaxis de atributo, pero el último **Setter**, para la propiedad [BorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.borderbrush), usa sintaxis de elemento de propiedad. En el ejemplo no se usa el atributo [x:Key](../../xaml-platform/x-key-attribute.md), por lo que el estilo se aplica implícitamente a los botones. La aplicación de estilos de manera implícita o explícita se explica en la siguiente sección.
+Cada elemento [Setter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) requiere una propiedad [Property](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter.property) y una propiedad [Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter.value). Esta configuración de las propiedades indica a qué propiedades del control se aplica la configuración, y el valor que se fija para esa propiedad. Puedes establecer **Setter.Value** con sintaxis de atributo o elemento de propiedad. El XAML muestra el estilo que se aplica a los botones que se mostraron anteriormente. En este XAML, los dos primeros elementos **Setter** usan la sintaxis de atributo, pero el último **Setter**, para la propiedad [BorderBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.borderbrush), usa la sintaxis de elemento de propiedad. En el ejemplo no se usa el atributo [x:Key](../../xaml-platform/x-key-attribute.md), por lo que el estilo se aplica implícitamente a los botones. La aplicación de estilos de manera implícita o explícita se explica en la siguiente sección.
 
 ```XAML
 <Page.Resources>
@@ -66,16 +66,16 @@ Cada elemento [Setter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter
 
 Si defines un estilo como un recurso, puedes aplicarlo a los controles de dos maneras:
 
--   De manera implícita, especificando solo un [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype) para el [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style).
--   De manera explícita, especificando un [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype) y un atributo [x:Key](../../xaml-platform/x-key-attribute.md) para el [Estilo](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) y después estableciendo la propiedad [Estilo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) del control de destino con una referencia [extensión de marcado {StaticResource}](https://docs.microsoft.com/windows/uwp/xaml-platform/staticresource-markup-extension) que usa clave explícita.
+-   De manera implícita, al especificar únicamente de un [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype) para [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style).
+-   De manera explícita, al especificar un [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype) y un [atributo x:Key](../../xaml-platform/x-key-attribute.md) para [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) y, después, establecer la propiedad [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) del control de destino con una referencia de [extensión de marcado {StaticResource}](https://docs.microsoft.com/windows/uwp/xaml-platform/staticresource-markup-extension) que usa clave explícita.
 
-Si un estilo contiene el atributo [x:Key](../../xaml-platform/x-key-attribute.md), solo puedes aplicarlo a un control estableciendo la propiedad [Estilo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) del control en el estilo con clave. Por el contrario, un estilo sin un atributo x:Key se aplica automáticamente a cada control de su tipo de destino si el control no tiene una opción de estilo explícita.
+Si un estilo contiene el [atributo x:Key](../../xaml-platform/x-key-attribute.md), solo puedes aplicarlo a un control mediante el establecimiento de la propiedad [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) del control en el estilo con clave. Por el contrario, un estilo sin un atributo x:Key se aplica automáticamente a cada control de su tipo de destino si el control no tiene una opción de estilo explícita.
 
 Aquí hay dos botones que muestran los estilos implícitos y explícitos.
 
 ![botones con estilos implícitos y explícitos.](images/styles-buttons-implicit-explicit.png)
 
-En este ejemplo, el primer estilo tiene un atributo [Atributo x:Key](../../xaml-platform/x-key-attribute.md) y su tipo de destino es [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button). La propiedad [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) del primer botón se establece en su clave, por lo que este estilo se aplica de manera explícita. El segundo estilo se aplica de manera implícita al segundo botón porque su tipo de destino es **Botón** y el estilo no tiene un atributo x:Key.
+En este ejemplo, el primer estilo tiene un [atributo x:Key](../../xaml-platform/x-key-attribute.md) y su tipo de destino es [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button). La propiedad [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) del primer botón se establece en esta clave, por lo que este estilo se aplica de manera explícita. El segundo estilo se aplica de manera implícita al segundo botón porque su tipo de destino es **Botón** y el estilo no tiene un atributo x:Key.
 
 ```XAML
 <Page.Resources>
@@ -107,7 +107,7 @@ En este ejemplo, el primer estilo tiene un atributo [Atributo x:Key](../../xaml-
 
 ## <a name="use-based-on-styles"></a>Usar estilos heredados
 
-Para crear estilos que sean más fáciles de mantener y optimizar la reutilización de estilos, puedes crear estilos que hereden de otros estilos. Usa la propiedad [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon) para crear estilos heredados. Los estilos que heredan de otros estilos deben apuntar al mismo tipo de control o a uno que derive del tipo al que apunta el estilo base. Por ejemplo, si un estilo base apunta a [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl), los estilos que estén basados en este estilo pueden apuntar a **ContentControl** o a tipos que deriven de **ContentControl**, como [Botón](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) y [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer). Si no se establece un valor en el estilo heredado, se hereda del estilo base. Para cambiar un valor del estilo base, el estilo heredado invalida ese valor. En el siguiente ejemplo se muestra un **Button** y una [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) con estilos heredados del mismo estilo base.
+Para crear estilos que sean más fáciles de mantener y optimizar la reutilización de estilos, puedes crear estilos que hereden de otros estilos. Usa la propiedad [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon) para crear estilos heredados. Los estilos que heredan de otros estilos deben apuntar al mismo tipo de control o a uno que derive del tipo al que apunta el estilo base. Por ejemplo, si un estilo base apunta a [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl), los estilos que estén basados en este estilo pueden apuntar a **ContentControl** o a tipos que deriven de **ContentControl**, como [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) y [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer). Si no se establece un valor en el estilo heredado, se hereda del estilo base. Para cambiar un valor del estilo base, el estilo heredado invalida ese valor. En el siguiente ejemplo se muestra un elemento **Button** y un elemento [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) con estilos que heredan del mismo estilo base.
 
 ![botones con estilos que usan estilos heredados.](images/styles-buttons-based-on.png)
 
@@ -147,7 +147,7 @@ Una manera rápida de aplicar estilos a los controles es hacer clic con el botó
 
 ## <a name="lightweight-styling"></a>Estilos ligeros
 
-En general, los pinceles del sistema se reemplazan al nivel de página o aplicación y, en cualquier caso, la sustitución del color afectará a todos los controles que hacen referencia a ese pincel; además, en XAML, muchos controles pueden hacer referencia el mismo pincel del sistema.
+Por norma general, los pinceles del sistema se reemplazan en el nivel de página o aplicación y, en cualquier caso, la sustitución del color afectará a todos los controles que hacen referencia a ese pincel. Además, en XAML, muchos controles pueden hacer referencia al mismo pincel del sistema.
 
 ![botones con estilo](images/LightweightStyling_ButtonStatesExample.png)
 
@@ -165,7 +165,7 @@ En general, los pinceles del sistema se reemplazan al nivel de página o aplicac
 </Page.Resources>
 ```
 
-Para estados como PointerOver (se sitúa el mouse sobre el botón), **PointerPressed** (se ha invocado el botón), o Disabled (el botón no es interactivos). Estas finales se anexan los nombres de estilo ligera original: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etcetera. Los modificación de pinceles, también se asegurará de que los controles están coloreados de forma coherente al tema de la aplicación.
+Para estados como PointerOver (se sitúa el mouse sobre el botón), **PointerPressed** (se ha invocado el botón), o Disabled (el botón no es interactivos). Estos finales se anexan a los nombres de estilo ligero originales: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etc. Al modificar esos pinceles, te asegurarás de que tus controles tengan colores homogéneos en el tema de la aplicación.
 
 Al colocar estos reemplazos de pincel en el nivel de **recursos de la aplicación**, se modificarán todos los botones de toda la aplicación, en lugar de en una sola página.
 
@@ -208,4 +208,4 @@ Debes usar los estilos que vienen con los recursos XAML predeterminados de Windo
 
 ## <a name="the-template-property"></a>La propiedad Template
 
-Se puede usar un establecedor de estilo para la propiedad [Template](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.template) de [Control](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) y, de hecho, esto conforma la mayor parte de un estilo XAML típico y los recursos XAML de una aplicación. Esto se explica con más detalle en el tema [Plantillas de control](control-templates.md).
+Se puede usar un establecedor de estilo para la propiedad [Template](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.template) de [Control](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control). De hecho, esto conforma la mayor parte de un estilo XAML típico y los recursos XAML de una aplicación. Esto se explica con más detalle en el tema [Plantillas de control](control-templates.md).

@@ -1,6 +1,6 @@
 ---
 Description: La navegación en las aplicaciones para la Plataforma universal de Windows (UWP) se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema.
-title: Conceptos básicos de navegación para las aplicaciones para UWP
+title: Conceptos básicos de navegación para las aplicaciones para UWP
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
@@ -11,17 +11,17 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1c764eeb57ec8046a93e7fb58e156fa68daea8df
-ms.sourcegitcommit: 13fe5d04bdb43c75d0fc4de18c2c3d4ae58ff982
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "64564524"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
 
 ![Encabezado de conceptos básicos de navegación](images/nav/navigation-basics-header.jpg)
 
-Si se piensa en una aplicación como si fuera una colección de páginas, el término *navegación* describe la acción de moverse entre las páginas y dentro de una página. Es el punto de partida de la experiencia del usuario, y es el modo en el que los usuarios encuentran el contenido y las características que les interesan. Es muy importante y puede ser difícil conseguir que sea la correcta.
+Si se piensa en una aplicación como si fuera una colección de páginas, el término *navegación* describe la acción de moverse entre las páginas y dentro de una página. Se trata del punto de partida de la experiencia del usuario, además del modo en el que los usuarios encuentran el contenido y las características que les interesan. Es muy importante y puede ser algo difícil de conseguir.
 
 Contamos con un número elevado de opciones entre las que elegir para la navegación. Podríamos:
 
@@ -29,17 +29,17 @@ Contamos con un número elevado de opciones entre las que elegir para la navegac
     :::column:::
         ![navigation example 1](images/nav/nav-1.svg)
 
-Los usuarios deben pasar por una serie de páginas en orden.
+Exigir que el usuario pase por una serie de páginas en orden.
     :::column-end:::
     :::column:::
         ![navigation example 2](images/nav/nav-2.svg)
 
-Proporcionar un menú que permite a los usuarios saltar directamente a cualquier página.
+Ofrecer un menú que permitiera a los usuarios saltar directamente a cualquier página.
     :::column-end:::
     :::column:::
         ![navigation example 3](images/nav/nav-3.svg)
 
-Todo lo que coloque en una sola página y proporcionar mecanismos de filtrado para ver el contenido.
+Situarlo todo en una sola página y facilitar mecanismos de filtrado para ver el contenido.
     :::column-end:::
 :::row-end:::
 
@@ -50,12 +50,12 @@ Aunque no hay ningún diseño de navegación único que funcione para todas las 
 Empecemos con los principios básicos de diseño de buena navegación:
 
 - **Coherencia:** Cumplir las expectativas del usuario.
-- **Simplicidad:** No más de lo necesario.
-- **Mayor claridad:** Proporcionar opciones y trayectorias claras.
+- **Simplicidad:** No hagas más de lo que necesites hacer.
+- **Claridad:** Ofrece rutas de acceso y opciones claras.
 
 ### <a name="consistency"></a>Consistency
 
-La navegación debería ser coherente con las expectativas del usuario. Uso de [controles estándar](#use-the-right-controls) que los usuarios siguientes y está familiarizadas con convenciones estándar para los iconos, ubicación, y estilo hará navegación predecible e intuitiva para los usuarios.
+La navegación debería ser coherente con las expectativas del usuario. El uso de [controles estándar](#use-the-right-controls) que los usuarios conozcan y de las siguientes convenciones estándar para iconos, ubicación y estilo hará que la navegación sea predecible e intuitiva para los usuarios.
 
 ![imagen de componentes de la página](images/nav/page-components.svg)
 
@@ -71,7 +71,7 @@ Una menor cantidad de elementos de navegación simplifica la toma de decisiones 
 
         ![navview good](images/nav/navview-good.svg)
 
-Presentar los elementos de navegación en un menú de navegación conocida.
+Presentar los elementos de navegación en un menú de navegación conocido.
     :::column-end:::
     :::column:::
         ![don't example](images/nav/dont.svg)
@@ -96,7 +96,7 @@ Ahora vamos a tomar nuestros principios de diseño, coherencia, simplicidad y cl
 
 1. Piensa en tus usuarios. Traza rutas habituales que podrían tomar en la aplicación, y en cada página, piensa en por qué está ahí el usuario y dónde podría querer ir.
 
-2. Evite las jerarquías de exploración profunda. Si vas más allá de tres niveles de navegación, existe el riesgo de hacer encallar al usuario en una jerarquía profunda de la que tenga dificultades para salir.
+2. Evita las jerarquías de navegación profundas. Si vas más allá de tres niveles de navegación, existe el riesgo de hacer encallar al usuario en una jerarquía profunda de la que tenga dificultades para salir.
 
 3. Evita el "pogo-sticking". El "pogo-sticking" se produce cuando hay contenido relacionado, pero navegar hasta él requiere que el usuario suba un nivel y después vuelva a bajar.
 
@@ -117,8 +117,8 @@ Te recomendamos que uses una estructura plana en los siguientes casos:
 
 - las páginas se pueden ver en cualquier orden;
 - las páginas son claramente distintas entre sí y no tienen una relación primaria-secundaria obvia.
-- Hay menos de 8 páginas en el grupo. <br>
-(Si hay más páginas, a los usuarios les puede resultar difícil comprender el modo en que las páginas son únicas o entender su ubicación actual dentro del grupo. Si no crees que eso es un problema para tu aplicación, organiza las páginas como elementos del mismo nivel. De lo contrario, piensa en la posibilidad de usar una estructura jerárquica para separar las páginas en dos o más grupos pequeños).
+- Hay menos de 8 páginas en el grupo. <br>
+(Si hay más páginas, a los usuarios les puede resultar difícil comprender el modo en que las páginas son únicas o entender su ubicación actual dentro del grupo. Si no crees que eso es un problema para tu aplicación, organiza las páginas como elementos del mismo nivel. Por otro lado, puedes tener en cuenta la posibilidad de usar una estructura jerárquica para separar las páginas en dos o más grupos pequeños.
 
     :::column-end:::
 :::row-end:::
@@ -134,7 +134,7 @@ En una estructura jerárquica, las páginas se organizan en una estructura parec
 
 Las estructuras jerárquicas sirven para organizar un contenido complejo que ocupe una gran cantidad de páginas. La desventaja es que se produce cierta sobrecarga de navegación: cuanto más profunda es la estructura, más clics se necesitan para que los usuarios vayan de una página otra.
 
-Se recomienda jerárquica estructura cuando:
+Te recomendamos una estructura jerárquica en los siguientes casos:
         
 - Las páginas deben recorrerse en un orden específico.
 - Hay una relación primaria-secundaria clara entre las páginas.
@@ -150,9 +150,9 @@ Se recomienda jerárquica estructura cuando:
     :::column span="2":::
         ### Combining structures
 
-No se opta por una estructura o la otra; muchas aplicaciones de diseño también usan ambos. Una aplicación puede usar estructuras planas para las páginas de nivel superior, que pueden verse en cualquier orden, y estructuras jerárquicas para las páginas que tienen relaciones más complejas.
+No tienes que elegir una estructura u otra; muchas aplicaciones bien diseñadas usan ambas. Una aplicación puede usar estructuras planas para las páginas de nivel superior, que pueden verse en cualquier orden, y estructuras jerárquicas para las páginas que tienen relaciones más complejas.
 
-Si la estructura de navegación tiene varios niveles, te recomendamos que los elementos de navegación punto a punto solo se vinculen con los elementos del mismo nivel dentro de su subárbol. Tenga en cuenta la ilustración adyacente, que muestra una estructura de navegación que tiene dos niveles:
+Si la estructura de navegación tiene varios niveles, te recomendamos que los elementos de navegación punto a punto solo se vinculen con los elementos del mismo nivel dentro de su subárbol. Ten en cuenta la ilustración adyacente, que muestra una estructura de navegación con dos niveles:
 
 - En el nivel 1, el elemento de navegación punto a punto debe proporcionar acceso a las páginas A, B, C y D.
 - En el nivel 2, los elementos de navegación punto a punto de las páginas A2 solo deben vincularse a otras páginas A2. No se deben vincular a páginas de nivel 2 del subárbol C.
@@ -161,7 +161,7 @@ Si la estructura de navegación tiene varios niveles, te recomendamos que los el
 
 ## <a name="use-the-right-controls"></a>Uso de los controles correctos
 
-Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo navegarán los usuarios a través de esas páginas. La UWP proporciona una variedad de controles de navegación para ayudar a garantizar una experiencia de navegación coherente y fiable en la aplicación.
+Cuando hayas decidido la estructura de las páginas, tendrás que decidir cómo navegarán los usuarios a través de esas páginas. UWP ofrece diversos controles de navegación para ayudar a garantizar una experiencia de navegación coherente y fiable en la aplicación.
 
 :::row:::
     :::column:::
@@ -180,18 +180,18 @@ Con algunas excepciones, cualquier aplicación que tiene varias páginas usa un 
     :::column span="2":::
         [**Top navigation and tabs**](../controls-and-patterns/navigationview.md)
 
-Muestra una lista horizontal de vínculos a páginas del mismo nivel. El [NavigationView](../controls-and-patterns/navigationview.md) control implementa el panel de navegación superior y patrones de pestañas.
+Muestra una lista horizontal de vínculos a páginas del mismo nivel. El control [NavigationView](../controls-and-patterns/navigationview.md) implementa los patrones de navegación superior y de pestañas.
         
-Usar la navegación superior cuando:
+Usa navegación superior en estos casos:
 
-- Desea mostrar todas las opciones de navegación en la pantalla.
-- Desean más espacio para el contenido de la aplicación.
+- Quieres mostrar todas las opciones de navegación en la pantalla.
+- Quieres más espacio para el contenido de tu aplicación.
 - Los iconos no pueden describir claramente las categorías de exploración.
         
-Use las pestañas cuando:
+Usa pestañas en estos casos:
 
-- Desea conservar el estado de página y el historial de navegación.
-- Se espera que los usuarios cambiar entre pestañas con frecuencia.
+- Quieres conservar el estado de página y el historial de navegación.
+- Esperas que los usuarios cambien a menudo de una pestaña a otra;
 
 :::row-end:::
 
@@ -200,14 +200,14 @@ Use las pestañas cuando:
          ![tabs and pivot image](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
         :::column span="2":::
-    [**Pivot**](../controls-and-patterns/pivot.md)
+    [**Tabla dinámica**](../controls-and-patterns/pivot.md)
     
-Similar a [vista de navegación](../controls-and-patterns/navigationview.md), pero con compatibilidad adicional para tecnología táctil y el comportamiento de navegación ligeramente diferente.
+Similar a [Vista de navegación](../controls-and-patterns/navigationview.md), pero con soporte adicional de función táctil y comportamiento de navegación ligeramente diferente.
     
-Usar una tabla dinámica cuando:
-- Quiere que su aplicación para permitir la interacción de deslizar rápidamente entre las categorías
-- Desea que las opciones de navegación en carrusel infintely
-- No es necesario un amplio control sobre el comportamiento de navegación entre las categorías
+Usa una tabla dinámica en estos casos:
+- Quieres que tu aplicación permita el deslizamiento táctil rápido entre categorías
+- Quieres que las opciones de navegación se muestren infinitamente en carrusel
+- No necesitas un amplio control sobre el comportamiento de navegación entre las categorías
 
 :::row-end:::
 
@@ -218,10 +218,10 @@ Usar una tabla dinámica cuando:
     :::column span="2":::
         [**Left navigation**](../controls-and-patterns/navigationview.md)
 
-Muestra una lista vertical de vínculos a páginas de nivel superior. Úsalo en estos casos:
+Muestra una lista vertical de vínculos a páginas de nivel superior. Úsala en estos casos:
         
 - Las páginas existan en el nivel superior.
-- Hay muchos elementos de navegación (más de 5)
+- Existen muchos elementos de navegación (más de 5).
 - No se espera que los usuarios cambien entre las páginas con frecuencia.
 
 :::row-end:::
@@ -233,7 +233,7 @@ Muestra una lista vertical de vínculos a páginas de nivel superior. Úsalo en 
     :::column span="2":::
         [**Master/details**](../controls-and-patterns/master-details.md)
 
-Muestra una lista (vista maestra) de elementos. Al seleccionar un elemento, se muestra su página correspondiente en la sección de detalles. Úsalo en estos casos:
+Muestra una lista (vista maestra) de elementos. Al seleccionar un elemento, se muestra su página correspondiente en la sección de detalles. Úsala en estos casos:
         
 - no se espera que los usuarios cambien entre elementos secundarios con frecuencia;
 - si desea permitir al usuario realizar operaciones de alto nivel, como eliminar u ordenar, en elementos individuales o grupos de elementos, y también quieres que el usuario pueda ver o actualizar los detalles de cada elemento.
@@ -248,9 +248,9 @@ El patrón de maestro y detalles es ideal para las bandejas de entrada de correo
     :::column span="2":::
         [**Hyperlinks**](../controls-and-patterns/hyperlinks.md)
 
-En el contenido de una página pueden aparecer elementos de navegación incrustados. A diferencia de otros elementos de navegación, que deben ser coherentes en todas las páginas, los elementos de navegación incrustados de contenido son exclusivos en cada página.
+En el contenido de una página pueden aparecer elementos de navegación incrustados. A diferencia de otros elementos de navegación, que deben ser coherentes en todas las páginas, los elementos de navegación de contenido incrustado son exclusivos en cada página.
 :::row-end:::
 
-## <a name="next-add-navigation-code-to-your-app"></a>Siguiente: Agregue el código de navegación a la aplicación
+## <a name="next-add-navigation-code-to-your-app"></a>Siguiente: Agregar código de navegación a la aplicación
 
 En el siguiente artículo, [Implementación de la navegación básica](navigate-between-two-pages.md), se muestra el código necesario para usar un control Frame para habilitar en tu aplicación la navegación básica entre dos páginas.

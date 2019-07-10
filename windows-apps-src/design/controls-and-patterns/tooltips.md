@@ -13,10 +13,10 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1dabfee25df08d933fc892c3ed6e46f3cc6f4513
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364033"
 ---
 # <a name="tooltips"></a>Información sobre herramientas
@@ -25,7 +25,7 @@ La información sobre herramientas es una breve descripción que está vinculada
 
 ![Una información sobre herramientas](images/controls/tool-tip.png)
 
-> **API importantes**: [Clase de información sobre herramientas](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [clase ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
+> **API importantes**: [Clase ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) y [Clase ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -33,35 +33,35 @@ Usa información sobre herramientas para ofrecer más información sobre un cont
 
 ¿Cuándo deberías usar información sobre herramientas? Para decidirte, intenta responder a estas preguntas:
 
-- **¿Debe información que se hacen visible en función de puntero?**
+- **¿Debe ser visible la información en función del desplazamiento del puntero?**
     Si no es así, usa otro control. Las sugerencias deben aparecer como resultado de la interacción del usuario, y nunca deben mostrarse de forma indiscriminada.
 
-- **¿Un control tiene una etiqueta de texto?**
+- **¿Tiene el control una etiqueta de texto?**
     Si no es así, usa la información sobre herramientas para proporcionar la etiqueta que no tiene. Una buena práctica de diseño de la experiencia de usuario consiste en etiquetar la mayoría de los controles en línea, y para esos no necesitarás usar información sobre herramientas. Los controles de la barra de herramientas y los botones de comando que muestran solo iconos necesitan información sobre herramientas.
 
-- **¿Un objeto se beneficia una descripción o información adicional?**
+- **¿Se beneficiaría el objeto de una descripción o de cierta información adicional?**
     Si es así, usa la información sobre herramientas. Pero el texto debe ser complementario, es decir, no debe ser algo esencial para la tarea principal. Si es un concepto esencial, deberías ponerlo directamente en la UI para que los usuarios no tengan que descubrirlo ni buscarlo.
 
-- **¿La información complementaria es un error, advertencia o estado?**
+- **¿Es la información complementaria un error, una advertencia o un estado?**
     Si es así, usa otro elemento de UI, como un control flotante.
 
-- **¿Los usuarios deben interactuar con la sugerencia?**
+- **¿Es necesario que los usuarios interactúen con el texto de información?**
     Si es así, usa otro control. Los usuarios no pueden interactuar con el texto de información ya que en cuanto se mueve el mouse el texto desaparece.
 
-- **¿Los usuarios necesitan imprimir la información complementaria?**
+- **¿Necesitan los usuarios imprimir la información complementaria?**
     Si es así, usa otro control.
 
-- **¿Los usuarios encontrarán las sugerencias molestos o distrayéndolos?**
+- **¿Es posible que el texto de información estorbe o distraiga a los usuarios?**
     Si es así, plantéate la opción de usar otra solución, sin descartar la idea de no hacer nada. Si vas a usar sugerencias en lugares donde pueden resultar una distracción, permite que los usuarios puedan desactivarlas.
 
 ## <a name="example"></a>Ejemplo
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ToolTip">abrir la aplicación y ver ToolTip en acción</a>.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ToolTip">abrir la aplicación y ver ToolTip en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -98,7 +98,7 @@ ToolTipService.SetToolTip(submitButton, toolTip);
 
 ### <a name="content"></a>Contenido
 
-Puedes usar cualquier objeto como el [Contenido](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) de una información sobre herramientas. Este es un ejemplo del uso de una [Imagen](/uwp/api/windows.ui.xaml.controls.image) en una información sobre herramientas.
+Puedes usar cualquier objeto como [Contenido](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) de una información sobre herramientas. Este es un ejemplo del uso de una [Imagen](/uwp/api/windows.ui.xaml.controls.image) en una información sobre herramientas.
 
 ```xaml
 <TextBlock Text="store logo">
@@ -110,9 +110,9 @@ Puedes usar cualquier objeto como el [Contenido](/uwp/api/windows.ui.xaml.contro
 
 ### <a name="placement"></a>Colocación
 
-De manera predeterminada, una información sobre herramientas aparece centrada encima del puntero. La ubicación no está restringida por la ventana de la aplicación, por lo que es posible que la información sobre herramientas se muestre parcialmente o completamente fuera de los límites de la ventana de la aplicación.
+De manera predeterminada, una información sobre herramientas aparece centrada encima del puntero. La ubicación no está restringida por la ventana de la aplicación, por lo que es posible que la información sobre herramientas se muestre parcial o completamente fuera de los límites de la ventana de la aplicación.
 
-Los ajustes generales, use el [colocación](/uwp/api/windows.ui.xaml.controls.tooltip.placement) propiedad o **ToolTipService.Placement** propiedad adjunta para especificar si la información sobre herramientas se debe dibujar encima, debajo, izquierda o derecha del puntero. Puede establecer el [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) o [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) propiedades para cambiar la distancia entre el puntero y la información sobre herramientas. Solo uno de los dos valores de desplazamiento influirá en la posición final - VerticalOffset cuando la ubicación es superior o inferior, HorizontalOffset cuando se deja la selección de ubicación o a la derecha.
+Para realizar ajustes amplios, usa la propiedad [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) o la propiedad adjunta **ToolTipService.Placement** para especificar si la información sobre herramientas se debe dibujar encima, debajo, a la izquierda o la derecha del puntero. Puedes establecer las propiedades [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) u [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) para cambiar la distancia entre el puntero y la información sobre herramientas. Solo uno de los dos valores de desplazamiento influirá en la posición final: VerticalOffset cuando el valor de Placement es Top o Bottom, HorizontalOffset cuando el valor de Placement es Left o Right.
 
 ```xaml
 <!-- An Image with an offset ToolTip. -->
@@ -125,7 +125,7 @@ Los ajustes generales, use el [colocación](/uwp/api/windows.ui.xaml.controls.to
 </Image>
 ```
 
-Si una información sobre herramientas oculta el contenido que se hace referencia a, puede ajustar su posición exactamente con el nuevo **PlacementRect** propiedad. PlacementRect ancla la posición de información sobre herramientas y también sirve como un área que no se occlude información sobre herramientas, siempre que haya suficiente espacio en pantalla para dibujar la información sobre herramientas fuera de esta área. Puede especificar el origen del rectángulo en relación con el propietario de información sobre herramientas y el alto y ancho del área de exclusión. El [colocación](/uwp/api/windows.ui.xaml.controls.tooltip.placement) propiedad definirá si la información sobre herramientas se debe dibujar encima, debajo, izquierda o derecha de la PlacementRect. 
+Si una información sobre herramientas oculta el contenido al que hace referencia, puedes ajustar su colocación de forma precisa con la nueva propiedad **PlacementRect**. PlacementRect ancla la posición de la información sobre herramientas y también sirve como un área que esa información sobre herramientas no obstruye, siempre y cuando haya suficiente espacio en la pantalla para dibujar la información sobre herramientas fuera de esta área. Puedes especificar el origen del rectángulo con relación al propietario de la información sobre herramientas, además del alto y ancho del área de exclusión. La propiedad [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) definirá si la información sobre herramientas se debe dibujar encima, debajo a la izquierda o a la derecha del área de PlacementRect. 
 
 ```xaml
 <!-- An Image with a non-occluding ToolTip. -->
@@ -149,8 +149,8 @@ Si una información sobre herramientas oculta el contenido que se hace referenci
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
+- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase de información sobre herramientas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip)
+- [Clase ToolTip](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip)

@@ -1,5 +1,5 @@
 ---
-Description: El control Pivot permite pasar a la interacción entre un pequeño conjunto de secciones de contenido.
+Description: El control Pivot permite el deslizamiento táctil rápido entre un pequeño conjunto de secciones de contenido.
 title: Pivot
 template: detail.hbs
 ms.date: 06/19/2018
@@ -11,26 +11,26 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 232da8afeccf5d82f65b51ae0a40905b3433d412
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364541"
 ---
 # <a name="pivot"></a>Pivot
 
-El [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) control permite pasar a la interacción entre un pequeño conjunto de secciones de contenido.
+El control [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) permite el deslizamiento táctil rápido entre un pequeño conjunto de secciones de contenido.
 
-> **API importantes**: [Clase de tabla dinámica](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [clase del control NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
+> **API importantes**: [Clase Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [Clase NavigationView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para <a href="xamlcontrolsgallery:/item/Pivot">abra la aplicación y ver el control Pivot en acción</a>.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/Pivot">abrir la aplicación y ver PivotControl en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -39,26 +39,26 @@ El [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) co
 </tr>
 </table>
 
-Controlar la dinamización, al igual que [NavigationView](navigationview.md), subraya el elemento seleccionado.
+El control Pivot, al igual que [NavigationView](navigationview.md), subraya el elemento seleccionado.
 
 ![El foco predeterminado subraya el encabezado seleccionado](images/pivot_focus_selectedHeader.png)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-Para lograr la navegación superior común y patrones de pestañas, se recomienda usar [NavigationView](navigationview.md), que automáticamente se adapta a diferentes tamaños de pantalla y permite la mayor personalización.
+Para lograr patrones comunes de navegación superior y de pestañas, se recomienda utilizar [NavigationView](navigationview.md), que se adapta automáticamente a diferentes tamaños de pantalla y permite una mayor personalización.
 
-Sin embargo, si la navegación requiere Deslizar rápidamente el toque, se recomienda usar Pivot.
+Sin embargo, si la navegación requiere el deslizamiento táctil rápido, se recomienda usar Pivot.
 
-Las otras diferencias clave entre los controles NavigationView y dinámica son el comportamiento de desbordamiento predeterminado y la API de exploración:
+Otras diferencias importantes entre los controles NavigationView y Pivot son el comportamiento de desbordamiento predeterminado y la API de navegación:
 
-- Desbordamiento carruseles elementos, mientras que NavigationView usa una lista desplegable del menú de desbordamiento para que los usuarios puedan ver todos los elementos de tabla dinámica.
+- Pivot muestra los elementos de desbordamiento en vistas de carrusel, mientras que NavigationView utiliza un menú desplegable de desbordamiento para que los usuarios puedan ver todos los elementos.
 - Pivot controla la navegación entre las secciones de contenido, mientras que el control NavigationView permite más control sobre el comportamiento de navegación.
 
-## <a name="use-navigationview-instead-of-pivot"></a>Use el control NavigationView en lugar de Pivot
+## <a name="use-navigationview-instead-of-pivot"></a>Usar el control NavigationView en lugar de Pivot
 
-Si la interfaz de usuario de la aplicación usa el control Pivot, puede convertir Pivot en NavigationView con el código siguiente.
+Si la interfaz de usuario de la aplicación usa el control Pivot, puedes convertir Pivot en NavigationView con el código siguiente.
 
-Este XAML crea un control NavigationView con 3 secciones de contenido, como en el ejemplo Pivot en [crear un control pivot](#create-a-pivot-control).
+Este lenguaje XAML crea un control NavigationView con tres secciones de contenido, como en el ejemplo de Pivot en [Crear un control Pivot](#create-a-pivot-control).
 
 ```xaml
 <NavigationView x:Name="rootNavigationView" Header="Category Title"
@@ -83,7 +83,7 @@ Este XAML crea un control NavigationView con 3 secciones de contenido, como en e
 </Page>
 ```
 
-Control NavigationView proporciona más control sobre la personalización de la navegación y requiere de código subyacente correspondiente. Para acompañar el XAML anterior, use el siguiente código:
+NavigationView ofrece mayor control sobre la personalización de la navegación y requiere el correspondiente código subyacente. Para acompañar el lenguaje XAML anterior, utiliza el siguiente código subyacente:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -112,11 +112,11 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Este código simula la experiencia de navegación integrada del control Pivot, menos la experiencia de deslizar rápidamente la interacción entre las secciones de contenido. Sin embargo, como puede ver, también puede personalizar varios puntos, incluida la transición animado, parámetros de navegación y las capacidades de la pila.
+Este código simula la experiencia de navegación integrada del control Pivot, menos la experiencia de deslizamiento táctil rápido entre secciones de contenido. Sin embargo, como puedes ver, también puedes personalizar varios aspectos, entre los que se incluyen el comportamiento de transición animada, los parámetros de navegación y las funcionalidades de la pila.
 
 ## <a name="create-a-pivot-control"></a>Crear un control dinámico
 
-Este código crea un control Pivot básico con 3 secciones de contenido.
+Este código crea un control Pivot básico con tres secciones de contenido.
 
 ```xaml
 <Pivot x:Name="rootPivot" Title="Category Title">
@@ -137,15 +137,15 @@ Este código crea un control Pivot básico con 3 secciones de contenido.
 
 ### <a name="pivot-items"></a>Elementos de tabla dinámica
 
-La tabla dinámica es un [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl), de modo que puede contener una colección de elementos de cualquier tipo. Cualquier elemento que agregues a la tabla dinámica que no sea explícitamente un [PivotItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PivotItem) se encapsula implícitamente en un PivotItem. Dado que una tabla dinámica a menudo se usa para navegar entre páginas de contenido, es común para rellenar la colección [Elementos](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) directamente con los elementos de la interfaz de usuario de XAML. O puedes establecer la propiedad [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) en un origen de datos. Los elementos enlazados en ItemsSource pueden ser de cualquier tipo, pero si no son explícitamente PivotItems, debes definir una [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) y [HeaderTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.headertemplate) para especificar cómo se muestran los elementos.
+Pivot es un [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl), por lo que puede contener una colección de elementos de cualquier tipo. Cualquier elemento que agregues a Pivot que no sea explícitamente un [PivotItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PivotItem) se encapsula implícitamente en un PivotItem. Dado que Pivot suele utilizarse para navegar entre páginas de contenido, es habitual rellenar la colección [Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) directamente con los elementos de la interfaz de usuario de XAML. También puedes establecer la propiedad [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) en un origen de datos. Los elementos enlazados en ItemsSource pueden ser de cualquier tipo, pero si no son explícitamente PivotItems, debes definir las propiedades [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) y [HeaderTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.headertemplate) para especificar cómo se muestran los elementos.
 
-Puedes usar la propiedad [SelectedItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.selecteditem) para obtener o configurar el elemento activo de la tabla dinámica. Usa la propiedad [SelectedIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.selectedindex) para obtener o configurar el índice del elemento activo.
+Puedes usar la propiedad [SelectedItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.selecteditem) para obtener o establecer el elemento activo de Pivot. Usa la propiedad [SelectedIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.selectedindex) para obtener o establecer el índice del elemento activo.
 
 ### <a name="pivot-headers"></a>Encabezados dinámicos
 
-Puedes usar las propiedades [LeftHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.leftheader) y [RightHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.rightheader) para agregar otros controles al encabezado dinámico.
+Puedes usar las propiedades [LeftHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.leftheader) y [RightHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.rightheader) para agregar otros controles al encabezado de Pivot.
 
-Por ejemplo, puedes agregar un [CommandBar](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/app-bars) en RightHeader del control dinámico.
+Por ejemplo, puedes agregar una clase [CommandBar](https://docs.microsoft.com/en-us/windows/uwp/controls-and-patterns/app-bars) en la propiedad RightHeader de Pivot.
 
 ```xaml
 <Pivot>
@@ -183,7 +183,7 @@ El control tiene dos modos:
 - Al tocar una etiqueta de control dinámico se navega a la página correspondiente y, después, la etiqueta de control dinámico activa gira a la primera posición.
 - Elementos de control dinámico en un bucle de carrusel de la última a la primera sección de control dinámico.
 
-> **Nota:** los encabezados dinámicos no se ven en carrusel en un [entorno de 10 pies](../devices/designing-for-tv.md). Establece la propiedad [IsHeaderItemsCarouselEnabled](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot.IsHeaderItemsCarouselEnabled) en **false** si la aplicación se ejecuta en Xbox.
+> **Nota:** Los encabezados de tabla dinámica no deben mostrarse en carrusel en un [entorno de 10 pies](../devices/designing-for-tv.md). Establece la propiedad [IsHeaderItemsCarouselEnabled](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot.IsHeaderItemsCarouselEnabled) en **false** si la aplicación se ejecuta en Xbox.
 
 ## <a name="recommendations"></a>Recomendaciones
 
@@ -191,9 +191,9 @@ El control tiene dos modos:
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
+- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Clase dinámica](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot)
-- [Conceptos básicos del diseño de navegación](../basics/navigation-basics.md)
+- [Clase Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot)
+- [Conceptos básicos de diseño de la navegación](../basics/navigation-basics.md)

@@ -1,41 +1,41 @@
 ---
 title: Estilo de escritura
-description: Usar un tono y voz adecuados es fundamental para que el texto de la aplicación parezca una parte natural de su diseño.
-keywords: UWP, Windows 10, texto, escritura, voz, tono, diseño, IU, UX
+description: El uso del tono y la voz adecuados es fundamental para que el texto de la aplicación parezca una parte natural de su diseño.
+keywords: UWP, Windows 10, texto, escritura, voz, tono, diseño, IU, UX
 ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: aaaf13c455d3d05d5ccfac6b2bd61418f3e8e5bb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662350"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63820520"
 ---
 # <a name="writing-style"></a>Estilo de escritura
 
-![imagen de encabezado](images/header-writing-style.gif)
+![Imagen de encabezado](images/header-writing-style.gif)
 
 La forma en la que elaboras un mensaje de error, la manera en que escribes la documentación de ayuda e incluso el texto que eliges para un botón tienen un gran impacto en la facilidad de uso de la aplicación. El estilo de escritura puede suponer una gran diferencia entre una experiencia de usuario terrible y otra mejor.
 
 ## <a name="voice-and-tone-principles"></a>Principios de voz y tono
 
-La investigación muestra que las personas responden mejor a un estilo de escritura descriptivo, útil y conciso. Como parte de esta investigación, Microsoft ha desarrollado tres principios de voz y tono que aplicamos en todo nuestro contenido y que forman parte integral de Fluent Design.
+La investigación muestra que las personas responden mejor a un estilo de escritura descriptivo, útil y conciso. Como parte de esta investigación, Microsoft ha desarrollado tres principios de voz y tono que aplicamos en todo nuestro contenido y que forman parte integral de Fluent Design.
 
-### <a name="be-warm-and-relaxed"></a>Sé amable y distendido
+### <a name="be-warm-and-relaxed"></a>Ser amable y distendido
 
-Por encima de todo, no quieres ahuyentar al usuario. Se informal y no usen términos que no se vayan a entender. Incluso cuando las cosas se rompen, no culpes al usuario de ningún problema. En vez de eso, tu aplicación debe asumir la responsabilidad y ofrecer instrucciones amables que sitúen las acciones del usuario en primer lugar.
+Por encima de todo, no quieres ahuyentar al usuario. Mantén un tono coloquial y desenfadado y no uses términos que no se vayan a entender. Aunque las cosas se rompan, no culpes al usuario de los problemas. En vez de eso, tu aplicación debe asumir la responsabilidad y ofrecer instrucciones amables que sitúen las acciones del usuario en primer lugar.
 
 ### <a name="be-ready-to-lend-a-hand"></a>Estar preparado para echar una mano
 
-Muestra siempre empatía al escribir. Céntrate en explicar lo que está sucediendo y en proporcionar la información que el usuario necesita, sin sobrecargarla con información innecesaria. Y si es posible, proporciona siempre una solución cuando haya un problema.
+Muestra siempre empatía al escribir. Céntrate en explicar lo que sucede y en ofrecer la información que el usuario necesita, sin sobrecargarlo con información innecesaria. Y, si es posible, ofrece siempre una solución cuando haya un problema.
 
-### <a name="be-crisp-and-clear"></a>Sé claro y nítido
+### <a name="be-crisp-and-clear"></a>Ser claro y nítido
 
-La mayoría de las veces, el texto no es el foco de una aplicación. Está ahí para guiar a los usuarios, para enseñarles qué está sucediendo y qué hacer a continuación. No pierdas esto de vista al escribir texto en la aplicación y no des por hecho que los usuarios leen cada palabra. Usa un lenguaje que conozca tu público y asegúrate de que es fácil de comprender de un vistazo.
+La mayoría de las veces, el texto no es el foco de una aplicación. Está ahí para guiar a los usuarios, para enseñarles lo que sucede y qué hacer a continuación. No pierdas esto de vista al escribir texto en la aplicación y no des por hecho que los usuarios leen cada palabra. Usa un lenguaje que conozca tu público y asegúrate de que es fácil de comprender de un vistazo.
 
-## <a name="lead-with-whats-important"></a>Comienza con lo que es importante
+## <a name="lead-with-whats-important"></a>Comenzar con lo que es importante
 
 Los usuarios deben poder leer y comprender el texto de un solo vistazo. No rellenes el texto con introducciones innecesarias. Da la máxima visibilidad a los puntos principales y siempre presenta el fundamento de una idea antes de agregarla.
 
@@ -50,7 +50,7 @@ Los usuarios deben poder leer y comprender el texto de un solo vistazo. No relle
     :::column-end:::
 :::row-end:::
 
-## <a name="emphasize-action"></a>Enfatiza la acción
+## <a name="emphasize-action"></a>Enfatizar la acción
 
 Las aplicaciones se definen mediante acciones. Los usuarios realizan una acción cuando usan la aplicación y esta realiza una acción cuando responde a los usuarios. Asegúrate de que el texto usa la *voz activa* en toda la aplicación. Las personas y las funciones deben describirse usando la forma activa, en lugar de la forma pasiva.
 
@@ -65,9 +65,9 @@ Las aplicaciones se definen mediante acciones. Los usuarios realizan una acción
     :::column-end:::
 :::row-end:::
 
-## <a name="short-and-sweet"></a>Breve y simple
+## <a name="short-and-sweet"></a>Breve y amable
 
-Los usuarios echan un vistazo al texto y a menudo pasarán por alto bloques más grandes de palabras. No sacrifiques información ni presentaciones necesarias, pero no uses más palabras de las que necesites. En ocasiones, esto significa usar numerosas frases o fragmentos más cortos. Otras veces, esto significa ser muy selectivo a la hora de elegir palabras y estructuras de frases más largas.
+Los usuarios echan un vistazo al texto y a menudo pasarán por alto bloques más grandes de palabras. No sacrifiques información ni presentaciones necesarias, pero no uses más palabras de las que necesites. En ocasiones, esto significa usar numerosos fragmentos y frases más cortos. Otras veces, esto significa ser muy selectivo a la hora de elegir palabras y estructuras de frases más largas.
 
 :::row:::
     :::column:::
@@ -82,14 +82,14 @@ Los usuarios echan un vistazo al texto y a menudo pasarán por alto bloques más
 
 ## <a name="style-conventions"></a>Convenciones de estilo
 
-Si no te consideras escritor, puede que te resulte intimidante intentar implementar estos principios y recomendaciones. Pero no te preocupes, usar un lenguaje sencillo y directo es una manera fantástica de proporcionar una buena experiencia de usuario. Y si aun así, no estás seguro de cómo estructurar tus palabras, aquí te indicamos algunas instrucciones útiles. Y si quieres obtener más información, consulta la [Guía de estilo de Microsoft](https://docs.microsoft.com/style-guide/welcome/).
+Si no te consideras escritor, puede que te resulte intimidante intentar implementar estos principios y recomendaciones. Pero no te preocupes, usar un lenguaje sencillo y directo es una manera fantástica de proporcionar una buena experiencia de usuario. Y si aun así no estás seguro de cómo estructurar tus palabras, aquí te indicamos algunas instrucciones útiles. Y si quieres obtener más información, consulta la [Guía de estilo de Microsoft](https://docs.microsoft.com/style-guide/welcome/).
 
 ### <a name="addressing-the-user"></a>Tratamiento del usuario
 
 Habla directamente al usuario.
-* Trate siempre al usuario de"tú".
+* Trata siempre al usuario de "tú".
 * Para hacer referencia a tu propia perspectiva, usa "nosotros". Resulta amable y ayuda al usuario a sentirse parte de la experiencia.
-* No uses "yo" para hacer referencia a la perspectiva de la aplicación, incluso si eres el único que la ha creado.
+* No uses "yo" para hacer referencia a la perspectiva de la aplicación, aunque seas el único que la ha creado.
 
 :::row:::
     :::column:::
@@ -102,10 +102,10 @@ Habla directamente al usuario.
 
 ### <a name="abbreviations"></a>Abreviaturas
 
- Las abreviaturas pueden ser útiles cuando se necesita hacer referencia a productos, lugares o conceptos técnicos varias veces en toda la aplicación. Pueden ahorrar espacio y ser más naturales, siempre y cuando el usuario los comprenda.
-* No asumas que los usuarios ya están familiarizados con las abreviaturas, incluso si crees que son habituales.
-* Define siempre lo que significa una abreviatura nueva la primera vez que el usuario la vea.
-* No uses abreviaturas muy parecidos entre sí.
+ Las abreviaturas pueden ser útiles cuando tienes que hacer referencia a productos, lugares o conceptos técnicos varias veces en toda la aplicación. Pueden ahorrar espacio y ser más naturales, siempre y cuando el usuario las comprenda.
+* No des por sentado que los usuarios ya están familiarizados con las abreviaturas, aunque creas que son habituales.
+* Define siempre lo que significa una nueva abreviatura la primera vez que el usuario la vea.
+* No uses abreviaturas muy parecidas entre sí.
 * No uses abreviaturas si estás localizando tu aplicación o si los usuarios hablan inglés como segundo idioma.
 
 :::row:::
@@ -121,7 +121,7 @@ Habla directamente al usuario.
 
 Usa un tono informal para dirigirte a los usuarios. Si usas un tono formal, la aplicación parecerá demasiado formal o incluso forzada.
 * Usa contracciones cuando resulten naturales en el texto.
-* No uses contracciones forzadas solo para ahorrar espacio o cuando parezca que, al usarlas, el texto sea menos informal.
+* No uses contracciones forzadas solo para ahorrar espacio o cuando parezca que, al usarlas, el texto sea menos coloquial.
 
 :::row:::
     :::column:::
@@ -171,15 +171,15 @@ Aunque las letras mayúsculas son importantes, es fácil caer en un uso excesivo
 
 ## <a name="error-messages"></a>Mensajes de error
 
-Cuando se produce un error en la aplicación, los usuarios prestan atención. Dado que los usuarios pueden estar confusos o sentirse frustrados cuando ven un mensaje de error, se encuentra en una zona donde usar un buen tono puede tener un impacto particularmente importante.
+Cuando se produce un error en la aplicación, los usuarios prestan atención. Dado que los usuarios pueden estar confusos o sentirse frustrados cuando ven un mensaje de error, se trata de un área donde usar un buen tono puede tener un impacto particularmente importante.
 
-Sobre todo, es importante que el mensaje de error no culpe al usuario. Pero también es importante no abrumarles con información que no comprendes. La mayoría de las veces un usuario que encuentra un mensaje de error solo desea volver a lo que estaba haciendo de la manera más rápida y sencilla posible. Por lo tanto, cualquier mensaje de error que escribas debería:
+Sobre todo, es importante que el mensaje de error no culpe al usuario. Pero también es importante no abrumarles con información que no comprenden. La mayoría de las veces un usuario que encuentra un mensaje de error solo desea volver a lo que estaba haciendo de la manera más rápida y sencilla posible. Por lo tanto, cualquier mensaje de error que escribas debería:
 
-* **Sé amable y distendido**; usa un tono de conversación y evita términos desconocidos y una jerga técnica.
+* **Ser amable y distendido**; usa un tono coloquial y evita términos desconocidos y una jerga técnica.
 
-* **Está preparado para echar una mano**; indica al usuario qué ha ocurrido de la manera más sencilla posible y qué sucederá a continuación, y ofrécele una solución realista que pueda realizar.
+* **Estar preparado para echar una mano**; dile al usuario lo que ha ido mal de la manera más sencilla posible y lo que sucederá a continuación, y ofrécele una solución realista que pueda realizar.
 
-* **Sé claro y nítido**; elimina información superflua.
+* **Ser claro y nítido**; elimina información superflua.
 
 :::row:::
     :::column:::
@@ -229,29 +229,29 @@ Sobre todo, es importante que el mensaje de error no culpe al usuario. Pero tamb
 
 Se aplican los mismos principios generales y recomendaciones al escribir texto para experiencias con voz, como Cortana. En esas características, los principios de la buena escritura son aún más importantes, porque no se puede proporcionar a los usuarios otros elementos de diseño visual para complementar las palabras habladas.
 
-* **Sé amable y distendido**, interactúa con los usuarios con un tono de conversación. Más que en cualquier otra área, resulta fundamental que una experiencia con voz resulte amable y accesible, y que sea algo a lo que los usuarios no tengan miedo de hablar.
+* **Ser amable y distendido**; interactúa con los usuarios con un tono coloquial. Más que en ninguna otra área, resulta fundamental que una experiencia con voz resulte amable y accesible, y que sea algo a lo que los usuarios no tengan miedo de hablar.
 
-* **Está preparado para echar una mano**; proporciona sugerencias alternativas cuando el usuario pida lo imposible. De manera muy similar a un mensaje de error, si algo salió mal y tu aplicación no puede completar la solicitud, debes dar al usuario una alternativa realista que pueda intentar pedir, en su lugar.
+* **Estar preparado para echar una mano**; proporciona sugerencias alternativas cuando el usuario pida lo imposible. De manera muy similar a un mensaje de error, si algo salió mal y tu aplicación no puede completar la solicitud, debes dar en su lugar al usuario una alternativa realista que pueda intentar pedir.
 
-* **Sé claro y nítido**; mantén un lenguaje sencillo. Las experiencias con voz no son adecuados para frases largas o palabras complicadas.
+* **Ser claro y nítido**; mantén un lenguaje sencillo. Las experiencias con voz no son adecuadas para frases largas o palabras complicadas.
 
 ## <a name="accessibility-and-localization"></a>Accesibilidad y localización
 
 Tu aplicación puede llegar a un público más amplio si se crea teniendo presentes la accesibilidad y la localización. Esto es algo que no solo se puede lograr a través del texto, aunque el lenguaje sencillo y amable es un buen comienzo. Para obtener más información, consulta nuestra [información general sobre accesibilidad](https://docs.microsoft.com/windows/uwp/design/accessibility/accessibility-overview) y las [instrucciones para localización](https://docs.microsoft.com/windows/uwp/design/globalizing/globalizing-portal).
 
-* **Está preparado para echar una mano**; ten en cuenta diferentes experiencias. Evita las frases que podrían no tener sentido para un público internacional y no uses palabras que hagan suposiciones sobre lo que el usuario puede y no puede hacer.
+* **Estar preparado para echar una mano**; ten en cuenta diferentes experiencias. Evita las frases que podrían no tener sentido para un público internacional y no uses palabras que hagan suposiciones sobre lo que el usuario puede y no puede hacer.
 
-* **Sé claro y nítido**; evita palabras inusuales y especializadas cuando no sean necesarias. Cuanto más sencillo sea el texto, más fácil será de localizar.
+* **Ser claro y nítido**; evita palabras inusuales y especializadas cuando no sean necesarias. Cuanto más sencillo sea el texto, más fácil será de localizar.
 
 
 ## <a name="techniques-for-non-writers"></a>Técnicas para no escritores
 
 No es necesario ser un escritor con formación o experiencia para proporcionar a los usuarios una buena experiencia. Elige palabras que te resulten cómodas: el usuario también se sentirá cómodo con ellas. Pero a veces, no es tan sencillo como parece. Si sigues teniendo problemas, estas técnicas pueden ayudarte. 
 
-* Imagina que estás hablando a un amigo acerca de la aplicación. ¿Cómo les explicarías en qué consiste la aplicación? ¿Cómo hablarías de sus características o les darías instrucciones? Aún mejor, explica la aplicación a una persona real que no la haya usado todavía. 
+* Imagina que estás hablando a un amigo acerca de la aplicación. ¿Cómo le explicarías en qué consiste la aplicación? ¿Cómo hablarías de sus características o le darías instrucciones? Aún mejor, explica la aplicación a una persona real que no la haya usado todavía. 
 
-* Imagina cómo describías una aplicación totalmente diferente. Por ejemplo, si vas a crear un juego, piensa en lo que dirías o escribirías para describir una aplicación financiera o de noticias. El contraste en el lenguaje y la estructura que usas puede darte más información sobre las palabras adecuadas para aquello sobre los que escribes realmente.
+* Imagina cómo describirías una aplicación totalmente diferente. Por ejemplo, si vas a crear un juego, piensa en lo que dirías o escribirías para describir una aplicación financiera o de noticias. El contraste en el lenguaje y la estructura que usas puede darte más información sobre las palabras adecuadas para aquello sobre los que escribes realmente.
 
 * Echa un vistazo a aplicaciones similares para obtener inspiración. 
 
-Encontrar las palabras adecuadas es un problema que muchas personas tratan de hacer frente, así que no te sientas mal si no te resulta fácil encontrar algo que suene natural.
+Encontrar las palabras adecuadas es un problema al que muchas personas se enfrentan, así que no te sientas mal si no te resulta fácil encontrar algo que suene natural.

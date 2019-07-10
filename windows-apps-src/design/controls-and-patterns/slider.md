@@ -13,10 +13,10 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 841903f9bc998af5ead2a3486c500487cb070855
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364303"
 ---
 # <a name="sliders"></a>Controles deslizantes
@@ -25,7 +25,7 @@ ms.locfileid: "66364303"
 
 Un control deslizante es un control que permite que el usuario seleccione entre un intervalo de valores moviendo un control de posición por una pista.
 
-> **API importantes**: [Clase de control deslizante](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider), [propiedad Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [evento ValueChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
+> **API importantes**: [clase Slider](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider), [propiedad Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [evento ValueChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
 
 ![Control deslizante](images/controls/slider.png)
 
@@ -40,10 +40,10 @@ No uses un control deslizante para una configuración binaria. En lugar de ello,
 
 A continuación encontrarás algunos factores adicionales que deberás tener en cuenta a la hora de decidirte a usar un control deslizante:
 
--   **¿La configuración parece una cantidad relativa?** Si no es así, usa [botones de radio](radio-button.md) o un [cuadro de lista](lists.md).
--   **¿Es la configuración exacta, conoce el valor numérico?** Si es así, usa un [cuadro de texto](text-box.md).
--   **¿Beneficiaría un usuario de comentarios instantáneos sobre el efecto de los cambios de configuración?** Si es así, usa un control deslizante. Por ejemplo, los usuarios pueden elegir un color más fácilmente si ven de forma inmediata el efecto de los cambios en los valores de matiz, saturación o luminosidad.
--   **¿Tiene la configuración de un intervalo de valores de cuatro o más?** Si no es así, usa [botones de radio](radio-button.md).
+-   **¿El valor de configuración parece una cantidad relativa?** Si no es así, usa [botones de radio](radio-button.md) o un [cuadro de lista](lists.md).
+-   **¿El valor de configuración es un valor numérico exacto y conocido?** Si es así, usa un [cuadro de texto](text-box.md).
+-   **¿Sería bueno que el usuario obtuviera una respuesta inmediata sobre el efecto de los cambios realizados en la configuración?** Si es así, usa un control deslizante. Por ejemplo, los usuarios pueden elegir un color más fácilmente si ven de forma inmediata el efecto de los cambios en los valores de matiz, saturación o luminosidad.
+-   **¿La configuración tiene un intervalo de cuatro o más valores?** Si no es así, usa [botones de radio](radio-button.md).
 -   **¿El usuario puede cambiar el valor?** Los controles deslizantes están destinados a la interacción del usuario. Si un usuario no puede cambiar el valor, usa texto de solo lectura.
 
 Si intentas decidir entre un control deslizante y un cuadro de texto numérico, usa el cuadro de texto numérico si:
@@ -58,11 +58,11 @@ Usa el control deslizante si:
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/Slider">abrir la aplicación y ver el control deslizante en acción</a>.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/Slider">abrir la aplicación y ver Slider en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -100,7 +100,7 @@ volumeSlider.ValueChanged += Slider_ValueChanged;
 stackPanel1.Children.Add(volumeSlider);
 ```
 
-Obtienes y configuras el valor del control deslizante de la propiedad [Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value). Para responder a los cambios de valor, puedes usar el enlace de datos para enlazar la propiedad de valor o controlar los eventos [ValueChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged).
+Obtienes y configuras el valor del control deslizante de la propiedad [Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value). Para responder a los cambios de valor, puedes usar el enlace de datos para enlazar la propiedad Value o controlar el evento [ValueChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged).
 
 ```csharp
 private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -117,7 +117,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 -   Da al control el tamaño que facilite a los usuarios el establecimiento del valor que quieran. En el caso de opciones con valores discretos, asegúrate de que al usuario le resulte fácil seleccionar cualquier valor mediante el mouse. Asegúrate de que los extremos del control deslizante caben siempre en los límites de una vista.
 -   Proporciona una respuesta inmediata mientras el usuario hace una selección, o a continuación (siempre que resulte práctico). Por ejemplo, el control de volumen de Windows emite un sonido para indicar el volumen de audio seleccionado.
--   Usa etiquetas para mostrar el intervalo de valores. Excepción: Si el control deslizante está orientado verticalmente y la etiqueta superior es máxima, alto, más, o equivalente, puede omitir las otras etiquetas porque el significado está desactivado.
+-   Usa etiquetas para mostrar el intervalo de valores. Excepción: Si el control deslizante está orientado verticalmente y la etiqueta superior es Máximo, Alto, Más o equivalente, puedes omitir las demás etiquetas porque el significado queda claro.
 -   Deshabilita todas las etiquetas asociadas o los indicadores visuales de respuesta cuando deshabilites el control deslizante.
 -   Ten en cuenta la dirección del texto al establecer la dirección del flujo y/o la orientación del control deslizante. El texto va de izquierda a derecha en algunos idiomas, y de derecha a izquierda en otros.
 -   No uses un control deslizante como indicador de progreso.
@@ -154,7 +154,7 @@ La dirección del intervalo es la dirección hacia la que mueves el control desl
 
 ### <a name="labels"></a>Etiquetas
 
--   **Etiquetas del control deslizante**
+-   **Etiquetas de control deslizante**
 
     La etiqueta del control deslizante indica para qué se usa el control.
 
@@ -169,7 +169,7 @@ La dirección del intervalo es la dirección hacia la que mueves el control desl
     -   Etiqueta los dos extremos del intervalo del control deslizante, a menos que la orientación vertical haga que resulte innecesario.
     -   Si es posible, usa solo una palabra para cada etiqueta.
     -   No uses puntuación final.
-    -   Asegúrate de que las etiquetas sean descriptivas y estén paralelas. Ejemplos: Máximo y mínimo, más o menos, alta o baja, suave o fuerte.
+    -   Asegúrate de que las etiquetas sean descriptivas y estén paralelas. Ejemplos: Máximo/Mínimo, Más/Menos, Bajo/Alto, Suave/Fuerte.
 -   **Etiquetas de valor**
 
     Una etiqueta de valor muestra el valor actual del control deslizante.
@@ -188,8 +188,8 @@ Al diseñar un control deslizante personalizado, piensa en la manera de presenta
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
+- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
 
 ## <a name="related-topics"></a>Temas relacionados
-- [Modificadores de alternancia](toggles.md)
+- [Modificadores para alternar](toggles.md)
 - [Clase de control deslizante](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider)

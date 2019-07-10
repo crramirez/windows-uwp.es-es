@@ -13,10 +13,10 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: a574ff858f8eab3fa1984ecd883a786fa0e0f19c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364719"
 ---
 # <a name="lists"></a>Listas
@@ -30,14 +30,14 @@ Mostrar listas y habilitar la interacción con el contenido basado en la colecci
 
 Se proporcionan directrices de diseño, características y ejemplos para cada patrón de lista.
 
-> **API importantes**: [Clase de ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [ComboBox (clase)](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+> **API importantes**: [Clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [Clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) y [Clase ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
 
 > <div id="main">
-> <strong>Windows 10 Fall Creators Update - cambio de comportamiento</strong>
+> <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong>
 > </div>
-> De manera predeterminada, en lugar de llevar a cabo la selección, ahora un lápiz activo ahora se desplaza/realiza movimiento panorámico en aplicaciones para UWP (como la entrada táctil, el panel táctil y el lápiz pasivo).
-> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, vea el tema de referencia de API para el <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer clase</a>.
+> De manera predeterminada, en lugar de llevar a cabo la selección, ahora un lápiz activo se desplaza/realiza movimiento panorámico por una lista en aplicaciones para UWP (como la entrada táctil, el panel táctil y el lápiz pasivo).
+> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, consulta el tema de referencia de API <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Clase ScrollViewer</a>.
 
 ## <a name="list-views"></a>Vistas de lista
 
@@ -80,23 +80,23 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 <td align="left"><p>Aprende los conceptos básicos del uso de una vista de lista o una vista de cuadrícula en tu aplicación.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="item-containers-templates.md">Las plantillas y los contenedores de elementos</a></p></td>
+<td align="left"><p><a href="item-containers-templates.md">Plantillas y contenedores de elementos</a></p></td>
 <td align="left"><p>Los elementos que se muestran en una lista o cuadrícula pueden tener un papel importante en el aspecto general de la aplicación. Modifica las plantillas de control y las plantillas de datos para definir la apariencia de los elementos y mejorar el aspecto de tu aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="item-templates-listview.md">Plantillas de elemento de vista de lista</a></p></td>
-<td align="left"><p>Usa estas plantillas de elemento de lista para una clase ListView y obtén así la apariencia de los tipos de aplicación más comunes.</p></td>
+<td align="left"><p><a href="item-templates-listview.md">Plantillas de elemento para vistas de lista</a></p></td>
+<td align="left"><p>Usa estas plantillas de elemento de ejemplo para una clase ListView y obtén así la apariencia de los tipos de aplicación más comunes.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="inverted-lists.md">Listas invertidas</a></p></td>
 <td align="left"><p>Las listas invertidas tienen nuevos elementos agregados en la parte inferior, al igual que en una aplicación de chat. Sigue estas instrucciones para usar una lista invertida en tu aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="pull-to-refresh.md">Pull-to-refresh</a></p></td>
+<td align="left"><p><a href="pull-to-refresh.md">Deslizar para actualizar</a></p></td>
 <td align="left"><p>El patrón extraer para actualizar permite al usuario desplegar una lista de datos con la entrada táctil para recuperar más datos. Usa estas instrucciones para implementar el patrón extraer para actualizar en tu vista de lista.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="nested-ui.md">Interfaz de usuario anidado</a></p></td>
+<td align="left"><p><a href="nested-ui.md">Interfaz de usuario anidada</a></p></td>
 <td align="left"><p>La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los controles accionables incluidos en un contenedor sobre el que un usuario puede actuar. Por ejemplo, es posible que tengas un elemento de la vista de lista que contenga un botón y que el usuario pueda seleccionar el elemento de lista o presionar el botón anidado en este. Sigue estos procedimientos recomendados para proporcionar la mejor experiencia de interfaz de usuario anidada a los usuarios.</p></td>
 </tr>
 </tbody>
@@ -147,15 +147,15 @@ Una vista de cuadrícula es una solución ideal para una biblioteca de contenido
 <td align="left"><p>Aprende los conceptos básicos del uso de una vista de lista o una vista de cuadrícula en tu aplicación.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="item-containers-templates.md">Las plantillas y los contenedores de elementos</a></p></td>
+<td align="left"><p><a href="item-containers-templates.md">Plantillas y contenedores de elementos</a></p></td>
 <td align="left"><p>Los elementos que se muestran en una lista o cuadrícula pueden tener un papel importante en el aspecto general de la aplicación. Modifica las plantillas de control y las plantillas de datos para definir la apariencia de los elementos y mejorar el aspecto de tu aplicación.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="item-templates-gridview.md">Plantillas de elemento de vista de cuadrícula</a></p></td>
-<td align="left"><p>Usa estas plantillas de elemento de lista para una clase GridView y obtén así la apariencia de los tipos de aplicación más comunes.</p></td>
+<td align="left"><p><a href="item-templates-gridview.md">Plantillas de elemento para vistas de cuadrícula</a></p></td>
+<td align="left"><p>Usa estas plantillas de elemento de ejemplo para una clase GridView y obtén así la apariencia de los tipos de aplicación más comunes.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="nested-ui.md">Interfaz de usuario anidado</a></p></td>
+<td align="left"><p><a href="nested-ui.md">Interfaz de usuario anidada</a></p></td>
 <td align="left"><p>La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los controles accionables incluidos en un contenedor sobre el que un usuario puede actuar. Por ejemplo, es posible que tengas un elemento de la vista de lista que contenga un botón y que el usuario pueda seleccionar el elemento de lista o presionar el botón anidado en este. Sigue estos procedimientos recomendados para proporcionar la mejor experiencia de interfaz de usuario anidada a los usuarios.</p></td>
 </tr>
 </tbody>
@@ -229,9 +229,9 @@ El modo de selección permite a los usuarios seleccionar uno o varios elementos 
 
 Existen tres modos de selección diferentes:
 
--   soltero: El usuario puede seleccionar sólo un elemento a la vez.
+-   Simple: El usuario puede seleccionar un solo elemento a la vez.
 -   Varios: El usuario puede seleccionar varios elementos sin usar un modificador.
--   Extendido: El usuario puede seleccionar varios elementos con un modificador, como manteniendo presionada la tecla MAYÚS.
+-   Extendido: El usuario puede seleccionar varios elementos con un modificador, por ejemplo, manteniendo presionada la tecla Mayús.
 
 Al tocar en cualquier parte de un elemento, este se selecciona. Tocar sobre la acción de la barra de comandos afecta a todos los elementos seleccionados. Si no se selecciona ningún elemento, las acciones de la barra de comandos deberían estar desactivadas, excepto "Seleccionar todo".
 
@@ -269,7 +269,7 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 - [Imágenes en miniatura](../../files/thumbnails.md)
 
 **Para desarrolladores**
-- [Clase de ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [Clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [Clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
-- [ComboBox (clase)](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
-- [Clase de cuadro de lista](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)
+- [Clase ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+- [Clase ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)

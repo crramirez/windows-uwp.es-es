@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 76196add0829dcfa0aa638a2d8ae6995fafce69e
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244391"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63820606"
 ---
 # <a name="typography"></a>Tipografía
 
@@ -25,7 +25,7 @@ Debes usar una fuente en toda la interfaz de usuario de la aplicación y te reco
 
 ![Texto de muestra de la fuente Segoe UI](images/type/segoe-sample.svg)
 
-Para mostrar idiomas que no son inglés o para seleccionar una fuente diferente para tu aplicación, consulta [Idiomas](#Languages) y [Fuentes](#Fonts) para nuestras fuentes recomendadas para aplicaciones para UWP.
+Con el fin de mostrar idiomas que no son inglés o seleccionar una fuente diferente para tu aplicación, consulta [Idiomas](#Languages) y [Fuentes](#Fonts) para nuestras fuentes recomendadas para aplicaciones para UWP.
 
 :::row:::
     :::column:::
@@ -38,13 +38,13 @@ Para mostrar idiomas que no son inglés o para seleccionar una fuente diferente 
     :::column-end:::
 :::row-end:::
 
-## <a name="size-and-scaling"></a>Tamaño y ajuste de escala
+## <a name="size-and-scaling"></a>Tamaño y escalado
 
-Los tamaños de fuente en las aplicaciones para UWP ajustan la escala automáticamente en todos los dispositivos. El algoritmo de escalado garantiza que una fuente de 24 px en un dispositivo Surface Hub a 3 metros de distancia sea tan legible como una fuente de 24 px en un teléfono de 5 pulgadas a unos centímetros de distancia.
+Los tamaños de fuente en las aplicaciones para UWP se escalan automáticamente en todos los dispositivos. El algoritmo de escalado garantiza que una fuente de 24px en un dispositivo Surface Hub a 3 metros de distancia sea tan legible como una fuente de 24px en un teléfono de 5 pulgadas a unos centímetros de distancia.
 
 ![distancias de visualización para diferentes dispositivos](images/type/scaling-chart.svg)
 
-Debido a cómo funciona el sistema de ajuste de escala, estás diseñando en píxeles efectivos, no píxeles físicos reales y no debes tener que modificar los tamaños de fuente para las resoluciones y los tamaños de pantallas diferentes.
+Debido a cómo funciona el sistema de escalado, diseñas en píxeles efectivos, no píxeles físicos reales y no tienes por qué modificar los tamaños de fuente para las resoluciones y los tamaños de pantallas diferentes.
 
 :::row:::
     :::column:::
@@ -70,11 +70,11 @@ Debido a cómo funciona el sistema de ajuste de escala, estás diseñando en pí
 
 ### <a name="type-ramp"></a>Rampa de tipografías
 
-La tabla de tipos UWP establece relaciones cruciales entre los estilos de tipos de una página, ayudando a los usuarios a leer fácilmente el contenido. Todos los tamaños se encuentran en píxeles efectivos y están optimizados para aplicaciones para UWP que se ejecutan en todos los dispositivos.
+La rampa de tipos para UWP establece relaciones cruciales entre los estilos de tipos de una página, ayudando a los usuarios a leer fácilmente el contenido. Todos los tamaños se encuentran en píxeles efectivos y están optimizados para aplicaciones para UWP que se ejecutan en todos los dispositivos.
 
 ![Rampa de tipografías](images/type/type-ramp.png)
 
-### <a name="using-the-type-ramp"></a>Usar la rampa de tipos
+### <a name="using-the-type-ramp"></a>Uso de la rampa de tipos
 
 :::row:::
     :::column:::
@@ -112,7 +112,7 @@ La tabla de tipos UWP establece relaciones cruciales entre los estilos de tipos 
 
 ## <a name="alignment"></a>Alineación
 
-El valor predeterminado [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) es Left y, en la mayoría de los casos, la alineación del texto a la izquierda con un margen irregular a la derecha proporciona un anclaje coherente del contenido y un diseño uniforme. Para idiomas RTL, consulta [Ajustar el diseño y las fuentes, y admitir la escritura RTL](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).
+El valor predeterminado [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) es Left y, en la mayoría de los casos, la alineación del texto a la izquierda con un margen irregular a la derecha proporciona un anclaje coherente del contenido y un diseño uniforme. Para idiomas de derecha a izquierda, consulta [Ajustar el diseño y las fuentes para admitir globalización](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).
 
 ![Muestra el texto alineado a la izquierda.](images/type/alignment.svg)
 
@@ -135,7 +135,7 @@ El valor predeterminado [TextAlignment](https://docs.microsoft.com/uwp/api/windo
 
 ## <a name="clipping-and-ellipses"></a>Recortes y puntos suspensivos
 
-Cuando la cantidad de texto se extiende más allá del espacio disponible, se recomienda recortar texto, que es el comportamiento predeterminado de la mayor parte de [controles de texto UWP](../controls-and-patterns/text-controls.md).
+Cuando la cantidad de texto se extiende más allá del espacio disponible, se recomienda recortar texto, que es el comportamiento predeterminado de la mayor parte de [controles de texto de UWP](../controls-and-patterns/text-controls.md).
 
 ![Muestra el marco de un dispositivo con texto recortado](images/type/clipping.svg)
 
@@ -154,7 +154,7 @@ Cuando la cantidad de texto se extiende más allá del espacio disponible, se re
     :::column-end:::
 :::row-end:::
 
-**Nota**: Si los contenedores no están bien definidos (por ejemplo, no hay diferenciador color de fondo), o cuando hay un vínculo para ver más texto, a continuación, utilice el botón de puntos suspensivos.
+**Nota**: Si los contenedores no están bien definidos (por ejemplo, no hay ningún color de fondo diferenciador), o cuando hay un vínculo para ver más texto, usa puntos suspensivos.
 
 ## <a name="languages"></a>Idiomas 
 

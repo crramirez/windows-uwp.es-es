@@ -13,10 +13,10 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3905ef8786a06d4221ce42511f786927c3173ba6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66363171"
 ---
 # <a name="check-boxes"></a>Casillas
@@ -25,7 +25,7 @@ ms.locfileid: "66363171"
 
 Una casilla se usa para seleccionar o anular la selección de elementos de acción. Puede usarse para un solo elemento o para una lista de varios elementos que un usuario puede elegir. El control tiene tres estados de selección: no seleccionado, seleccionado e indeterminado. Usa el estado indeterminado cuando una colección de opciones secundarias presente los estados seleccionado y no seleccionado.
 
-> **API importantes**: [Clase de casilla de verificación](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox), [evento activado](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked), [propiedad IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked)
+> **API importantes**: [clase CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox), [evento Checked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked), [propiedad IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked)
 
 ![Ejemplo de los estados de una casilla](images/templates-checkbox-states-default.png)
 
@@ -56,7 +56,7 @@ Ambos controles **Casilla** y **Botón de radio** permiten que el usuario pueda 
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/CheckBox">abrir la aplicación y ver CheckBox en acción</a>.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/CheckBox">abrir la aplicación y ver CheckBox en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -67,7 +67,7 @@ Ambos controles **Casilla** y **Botón de radio** permiten que el usuario pueda 
 
 ## <a name="create-a-checkbox"></a>Crear una casilla
 
-Para asignar una etiqueta a la casilla, configura la propiedad [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content). La etiqueta se muestra junto a la casilla.
+Para asignar una etiqueta a la casilla, establece la propiedad [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content). La etiqueta se muestra junto a la casilla.
 
 Este código XAML crea una casilla que se usa para aceptar los términos del servicio antes de poder enviar un formulario. 
 
@@ -87,9 +87,9 @@ checkBox1.Content = "I agree to the terms of service.";
 
 Usa la propiedad [IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) para determinar si la casilla está activada o desactivada. Puedes enlazar el valor de la propiedad IsChecked en otro valor binario. Sin embargo, dado que IsChecked es un valor booleano [que acepta valores NULL](https://docs.microsoft.com/dotnet/api/system.nullable-1?redirectedfrom=MSDN), debes usar un convertidor de valores para enlazarlo a un valor booleano.
 
-En este ejemplo, la propiedad de la casilla **IsChecked** para aceptar los términos de servicio está enlazada a la propiedad [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) de un botón Enviar. El botón Enviar se habilita únicamente si se han aceptado los términos del servicio.
+En este ejemplo, la propiedad **IsChecked** de la casilla para aceptar los términos de servicio está enlazada a la propiedad [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) de un botón Enviar. El botón Enviar se habilita únicamente si se han aceptado los términos del servicio.
 
-> Nota&nbsp;&nbsp;Aquí solo mostramos el código relevante. Para obtener más información sobre los convertidores de valores y de enlaces de datos, consulta el tema [Introducción al enlace de datos](../../data-binding/data-binding-quickstart.md).
+> Nota&nbsp;&nbsp;Aquí solo mostramos el código pertinente. Para obtener más información sobre los convertidores de valores y de enlaces de datos, consulta el tema [Introducción al enlace de datos](../../data-binding/data-binding-quickstart.md).
 
 ```xaml
 ...
@@ -185,7 +185,7 @@ private void toppingsCheckbox_Click(object sender, RoutedEventArgs e)
 
 El control CheckBox hereda del elemento [ToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton) y puede tener tres estados: 
 
-Estado | Property | Valor
+Estado | Propiedad | Valor
 ------|----------|------
 activado | IsChecked | **true** 
 sin activar | IsChecked | **false** 
@@ -294,16 +294,16 @@ private void SetCheckedState()
 
     ![Casilla indeterminada](images/checkbox4_spicy.png)
 
-    En su lugar, use un grupo de botones de radio que tiene tres opciones: No picantes, picantes y adicional picantes.
+    En su lugar, usa un grupo de botones de radio con tres opciones: Sin picante, Picante y Muy picante.
 
-    ![Grupo de botones de radio con tres opciones: No picantes, picantes y adicional picantes](images/spicyoptions.png)
+    ![Grupo de botones de radio con tres opciones: Sin picante, Picante y Muy picante](images/spicyoptions.png)
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
+- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Clase de casilla de verificación](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 
+- [Clase CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 
 - [Botones de radio](radio-button.md)
 - [Modificador para alternar](toggles.md)
