@@ -1,59 +1,59 @@
 ---
 ms.openlocfilehash: f8e74688d0f7048276b12680237b85663d7e2b81
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66214736"
 ---
-# <a name="contributing-to-uwp-conceptual-documentation"></a>Contribuir a la documentación conceptual para UWP
+# <a name="contributing-to-uwp-conceptual-documentation"></a>Contribución a la documentación conceptual de UWP
 
-Gracias por tu interés en la documentación para la Plataforma universal de Windows (UWP). Agradecemos tus comentarios, modificaciones y adiciones a nuestros documentos.
+Gracias por tu interés en la documentación de la Plataforma universal de Windows (UWP). Agradecemos tus comentarios, modificaciones y adiciones a nuestros documentos.
 
-## <a name="writing-content"></a>Escribir el contenido
+## <a name="writing-content"></a>Escritura de contenido
 
-Nuestra documentación se escribe en Markdown, una sintaxis de estilo de texto ligero. Si no está familiarizado con Markdown, puede [aprender los conceptos básicos en GitHub](https://guides.github.com/features/mastering-markdown/). Cuando no está seguro, siempre puede copiar el estilo de formato de las otras páginas en nuestra documentación.
+Nuestra documentación se escribe en Markdown, una sintaxis de estilo de texto ligero. Si no estás familiarizado con Markdown, puedes [conocer los conceptos básicos en GitHub](https://guides.github.com/features/mastering-markdown/). Si no estás seguro, siempre puedes copiar el estilo de formato de otras páginas de nuestros documentos.
 
-## <a name="public-contributions"></a>Sus contribuciones públicas
+## <a name="public-contributions"></a>Contribuciones públicas
 
-Si estás **no** empleado de Microsoft, que puede contribuir a través de la [repositorio de contenido público](https://github.com/MicrosoftDocs/windows-uwp). Sus contribuciones públicas son adecuadas para los cambios y aclaraciones para las páginas existentes.
+Si **no** eres empleado de Microsoft, puedes contribuir mediante el [repositorio de contenido público](https://github.com/MicrosoftDocs/windows-uwp). Las contribuciones públicas son adecuadas para realizar cambios y aclaraciones en las páginas existentes.
 
 ### <a name="editing-a-file"></a>Edición de un archivo
 
-Si ya está en el repositorio de contenido público, comience por navegar al archivo que desea cambiar. Desde allí, seleccione el icono de lápiz situado encima el contenido que se muestra para comenzar a editar.
+Si ya estás en el repositorio de contenido público, para comenzar ve hasta el archivo que quieres cambiar. Desde allí, selecciona el icono de lápiz situado encima del contenido para empezar a editarlo.
 
-Como alternativa, si está viendo una página en docs.microsoft.com, puede seleccionar la **editar** botón en la parte superior derecha de la página. Esto le redirigirá al archivo en el repositorio de código fuente asociado.
+Si estás viendo una página en docs.microsoft.com, una alternativa es seleccionar el botón **Editar** de la parte superior derecha de la página. Esta acción te redirigirá al archivo de origen asociado del repositorio.
 
-Cuando empiece a editar, GitHub automáticamente bifurque el repositorio oficial en su cuenta personal de GitHub, donde puede realizar los cambios. Cuando haya terminado, envíe una solicitud de incorporación de cambios a la **docs** rama.
+Al comenzar a editar, GitHub bifurca automáticamente el repositorio oficial en tu cuenta personal de GitHub, donde puedes realizar los cambios. Cuando hayas terminado, envía una solicitud de incorporación de cambios a la rama **docs**.
 
 ### <a name="pull-requests"></a>Solicitudes de incorporación de cambios
 
-Después de enviar la solicitud de incorporación de cambios, se evalúa una lista de comprobación de la calidad del contenido para asegurarse de cumple con nuestros estándares básicos. Si se aprueba, se asigna a un miembro del equipo de documentación de UWP para su revisión. Si se produce un error, se le indicará qué cambios se deben para realizar.
+Después de enviar la solicitud de incorporación de cambios, se evalúa con una lista de comprobación de calidad del contenido para garantizar que cumple nuestros estándares básicos. Si se aprueba, se asigna a un miembro del equipo de documentación de UWP para su revisión. Si no pasa la evaluación, se te indicarán los cambios que debes hacer.
 
-Los revisores asignados pueden aprobar o rechazar la solicitud o trabajan con usted para realizar más cambios.
+Los revisores asignados pueden aprobar o rechazar la solicitud o trabajar contigo para realizar más cambios.
 
 ## <a name="internal-contributions"></a>Contribuciones internas
 
-Si es empleado de Microsoft, que puede contribuir a través de la [repositorio de contenido privado](https://github.com/microsoftdocs/windows-uwp-pr). Puede encontrar instrucciones sobre cómo usar este repositorio en el [Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/?branch=master). Documentación sobre las próximas características debe aportarse mediante el repositorio privado solo.
+Si eres empleado de Microsoft, puedes contribuir mediante el [repositorio de contenido privado](https://github.com/microsoftdocs/windows-uwp-pr). Puedes encontrar instrucciones sobre cómo usar este repositorio en la [Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/?branch=master). Para contribuir a la documentación de próximas características, solo debe usarse el repositorio privado.
 
 ### <a name="editing-a-file"></a>Edición de un archivo
 
-Como se muestra en el repositorio público, puede realizar pequeños cambios en el repositorio privado en el explorador, sin necesidad de crear un clon local. Le **debe** asegurarse de que va colaborar en la rama adecuada. Para obtener más información sobre la creación de la rama de personal, consulte [las instrucciones de la Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/conceptual/branches?branch=master).
+Al igual que en el repositorio público, puedes realizar pequeños cambios en el repositorio privado en el explorador, sin necesidad de crear un clon local. **Debes** asegurarte de que tus contribuciones están en la rama correcta. Para más información sobre la creación de una rama personal, consulta las [instrucciones de la Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/conceptual/branches?branch=master).
 
-### <a name="making-substantial-changes"></a>Realizar cambios importantes
+### <a name="making-substantial-changes"></a>Realización de cambios importantes
 
-Para realizar cambios más extensivos en un artículo existente, agregar o cambiar imágenes, o contribuir con un artículo nuevo, crear un clon local del repositorio de contenido privado. Para obtener más información, siga [las instrucciones de la Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/conceptual/).
+Para realizar cambios más profundos en un artículo existente, agregar o cambiar imágenes o contribuir a un artículo nuevo, crea un clon local del repositorio de contenido privado. Para más información, sigue las [instrucciones de la Guía de creación de Windows](https://review.docs.microsoft.com/windows-authoring-guide/uwp/conceptual/).
 
 ### <a name="pull-requests"></a>Solicitudes de incorporación de cambios
 
-Al crear una solicitud de incorporación de cambios en el repositorio interno, asegúrese de que se va a combinar la rama de personal en la rama que desde donde se ha creado.
+Al crear una solicitud de incorporación de cambios en el repositorio interno, asegúrate de combinar la rama personal con la rama desde la que se creó.
 
-Después de enviar la solicitud de incorporación de cambios, se evalúa un [lista de comprobación de calidad del contenido](https://review.docs.microsoft.com/windows-authoring-guide/managing-contributions/editorial-checklist?branch=master) para asegurarse de cumple con nuestros estándares básicos. Si se aprueba, se asigna a un miembro del equipo de documentación de UWP para su revisión. Si se produce un error, se le indicará qué cambios se deben para realizar.
+Después de enviar la solicitud de incorporación de cambios, se evalúa con una [lista de comprobación de calidad del contenido](https://review.docs.microsoft.com/windows-authoring-guide/managing-contributions/editorial-checklist?branch=master) para garantizar que cumple nuestros estándares básicos. Si se aprueba, se asigna a un miembro del equipo de documentación de UWP para su revisión. Si no pasa la evaluación, se te indicarán los cambios que debes hacer.
 
-Los revisores asignados pueden aprobar o rechazar la solicitud o trabajan con usted para realizar más cambios. Los revisores no combinará PR hasta que se ha aprobado usted mismo.
+Los revisores asignados pueden aprobar o rechazar la solicitud o trabajar contigo para realizar más cambios. Los revisores no combinarán la solicitud de incorporación de cambios hasta que la hayas aprobado tú mismo.
 
-## <a name="using-issues-to-provide-feedback-on-uwp-conceptual-documentation"></a>Usar problemas para proporcionar comentarios en la documentación conceptual para UWP
+## <a name="using-issues-to-provide-feedback-on-uwp-conceptual-documentation"></a>Uso de problemas para proporcionar comentarios sobre la documentación conceptual de UWP
 
-Si desea proporcionar comentarios sobre los documentos en lugar de realizar modificaciones usted mismo, también puede [crear un problema en el repositorio público](https://github.com/MicrosoftDocs/windows-uwp/issues). Seleccione el **problemas** pestaña y seleccione el **nuevo problema** botón. Asegúrate de incluir el título del tema y la dirección URL de la página. El problema se asignará a los miembros del equipo de documentación de UWP para su revisión.
+Si quieres proporcionar comentarios sobre los documentos en lugar de realizar modificaciones por tu cuenta, puedes [crear un problema en el repositorio público](https://github.com/MicrosoftDocs/windows-uwp/issues). Selecciona la pestaña **Issues** (Problemas) y haz clic en el botón **New issue** (Nuevo problema). Asegúrate de incluir el título del tema y la dirección URL de la página. El problema se asignará a los miembros del equipo de documentación de UWP para que lo revisen.
 
-* Para problemas internos, use el [WDG contenido de la herramienta solicitud](https://aka.ms/pubrequest).
+* Para problemas internos, usa la [herramienta de solicitud de contenido de WDG](https://aka.ms/pubrequest).

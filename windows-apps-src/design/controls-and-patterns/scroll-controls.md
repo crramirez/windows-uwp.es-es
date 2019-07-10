@@ -1,6 +1,6 @@
 ---
 Description: El movimiento panorámico y el desplazamiento permiten a los usuarios acceder a contenido que va más allá de los límites de la pantalla.
-title: Controles de visor de desplazamiento
+title: Controles del visor de desplazamiento
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scrollbars
 template: detail.hbs
@@ -13,32 +13,32 @@ dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e401e700728e1d481fd2142281fe81524d146f94
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66364429"
 ---
-# <a name="scroll-viewer-controls"></a>Controles de visor de desplazamiento
+# <a name="scroll-viewer-controls"></a>Controles del visor de desplazamiento
 
 
 
-Cuando haya más contenido de la interfaz de usuario para mostrar del que puedas ajustar en un área, usa el control del visor de desplazamiento.
+Cuando la interfaz de usuario tenga más contenido que el que se pueda mostrar en un área, usa el control del visor de desplazamiento.
 
-> **API importantes**: [Clase de ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [clase ScrollBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.scrollbar)
+> **API importantes**: [Clase ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [Clase ScrollBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.scrollbar)
 
-Los visores de desplazamiento permiten que el contenido se amplíe más allá de los límites de la ventanilla (área visible). Los usuarios acceden a este contenido manipulando la superficie del visor de desplazamiento a través de la entrada táctil, la rueda del mouse, el teclado o un controlador para juegos, o mediante el cursor del mouse o lápiz para interactuar con la barra de desplazamiento del visor de desplazamiento. Esta imagen muestra varios ejemplos de controles de visor de desplazamiento.
+Los visores de desplazamiento permiten que el contenido se extienda más allá de los límites de la ventanilla (área visible). Para acceder a dicho contenido, los usuario manipulan la superficie del visor de desplazamiento mediante entrada táctil, la rueda del mouse, el teclado o un controlador para juegos, o bien mediante el uso del cursor del ratón o del lápiz óptico para interactuar con la barra de desplazamiento del visor de desplazamiento. Esta imagen muestra varios ejemplos de controles del visor de desplazamiento.
 
 ![Captura de pantalla que ilustra el control de barra de desplazamiento estándar](images/ScrollBar_Standard.jpg)
 
-Según la situación, la barra de desplazamiento del visor de desplazamiento usa dos visualizaciones diferentes, que se muestran en la siguiente ilustración: el indicador de movimiento panorámico (izquierda) y la barra de desplazamiento tradicional (derecha).
+En función de la situación, la barra de desplazamiento del visor de desplazamiento usa dos visualizaciones diferentes, que se muestran en la siguiente ilustración: el indicador de movimiento panorámico (izquierda) y la barra de desplazamiento tradicional (derecha).
 
-![Muestra del aspecto de los controles de barra de desplazamiento e indicador de movimiento panorámico estándar](images/SCROLLBAR.png)
+![Un ejemplo de la apariencia de la barra de desplazamiento y el indicador de movimiento panorámico estándar](images/SCROLLBAR.png)
 
-El visor de desplazamiento es consciente del método de entrada del usuario y lo usa para determinar qué visualización se mostrará.
+El visor de desplazamiento es consciente del método de entrada del usuario y lo usa para determinar la visualización que se va a usar.
 
-* Cuando la región se desplaza sin manipular directamente la barra de desplazamiento, por ejemplo, de manera táctil, aparece el indicador de movimiento panorámico y muestra la posición de desplazamiento actual.
-* Cuando se mueve el cursor del mouse o lápiz sobre el indicador de movimiento panorámico, se transforma en la barra de desplazamiento tradicional.  Arrastrando la barra de desplazamiento, la región de desplazamiento se manipula con el pulgar.
+* Cuando la región se desplaza sin manipular directamente la barra de desplazamiento, por ejemplo de manera táctil, aparece el indicador de movimiento panorámico y muestra la posición de desplazamiento actual.
+* Cuando se mueve el cursor del ratón o del lápiz sobre el indicador de movimiento panorámico, se transforma en la barra de desplazamiento tradicional.  Al arrastrar la barra de desplazamiento, la región de desplazamiento se manipula con el pulgar.
 
 <!--
 <div class="microsoft-internal-note">
@@ -49,16 +49,16 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 ![Barras de desplazamiento en acción](images/conscious-scroll.gif)
 
 > [!NOTE]
-> Cuando la barra de desplazamiento está visible, se superpone como 16 píxeles encima del contenido dentro del ScrollViewer. Para garantizar un buen diseño de experiencia del usuario, querrás asegurarte de que ningún contenido interactivo esté oculto por esta superposición. Además, si prefieres que no se superponga la experiencia del usuario, deja 16 píxeles de espaciado interno en el borde de la ventanilla para permitir la barra de desplazamiento.
+> Cuando la barra de desplazamiento está visible, se superpone como 16 píxeles al contenido dentro del ScrollViewer. Para garantizar un buen diseño de la experiencia del usuario, querrás asegurarte de que ningún contenido interactivo queda oculto por esta superposición. Además, si prefieres que no se superponga la experiencia del usuario, deja 16 píxeles de espaciado interno en el borde de la ventanilla para la barra de desplazamiento.
 
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ScrollViewer">abrir la aplicación y ver ScrollViewer en acción</a>.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ScrollViewer">abrirla y ver ScrollViewer en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -87,7 +87,7 @@ Para agregar el desplazamiento vertical a la página, ajusta el contenido de la 
 </Page>
 ```
 
-Este XAML muestra cómo habilitar el desplazamiento horizontal, coloque una imagen en un visor de desplazamiento y habilitar el zoom.
+Este XAML muestra cómo habilitar el desplazamiento horizontal, colocar una imagen en un visor de desplazamiento y habilitar el zoom.
 
 ```xaml
 <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"
@@ -99,13 +99,13 @@ Este XAML muestra cómo habilitar el desplazamiento horizontal, coloque una imag
 
 ## <a name="scrollviewer-in-a-control-template"></a>ScrollViewer en una plantilla de control
 
-Es habitual que exista un control ScrollViewer como elemento compuesto de otros controles. Un elemento ScrollViewer, junto con la clase [ScrollContentPresenter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollContentPresenter) para compatibilidad, mostrará una ventanilla junto con las barras de desplazamiento solo cuando el espacio de diseño del control de host tenga una limitación menor que el tamaño del contenido expandido. Esto suele ser así en el caso de las listas, por lo que las plantillas [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) y [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) siempre incluyen un ScrollViewer. [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) y [RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox) también incluyen un ScrollViewer en sus plantillas.
+Es habitual que exista un control ScrollViewer como elemento compuesto de otros controles. Un elemento ScrollViewer, junto con la clase [ScrollContentPresenter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollContentPresenter) para compatibilidad, mostrará una ventanilla junto con las barras de desplazamiento solo cuando el espacio de diseño del control de host tenga una limitación menor que el tamaño del contenido expandido. Esto suele suceder con las listas, por lo que las plantillas [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) y [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) siempre incluyen un ScrollViewer. [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) y [RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox) también incluyen un ScrollViewer en sus plantillas.
 
-Cuando un elemento **ScrollViewer** existe en un control, el control de host a menudo tiene el control de eventos integrado para ciertos eventos de entrada y manipulaciones que permiten que el contenido se desplace. Por ejemplo, un GridView interpreta un gesto de deslizamiento del dedo y esto hace que el contenido se desplace horizontalmente. Los eventos de entrada y manipulaciones sin procesar que recibe el control de host se consideran administradas por el control, y los eventos de nivel inferior, como [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed), no subirán de nivel y tampoco se propagarán a los contenedores principales. Puedes cambiar parte de la administración de los controles integrados reemplazando una clase de control y los métodos virtuales **On*** por eventos o volver a crear plantillas del control. Pero, en cualquier caso, reproducir el comportamiento predeterminado original no es algo trivial, que suele estar allí para que el control reaccione de formas esperadas a los eventos y a las acciones de entrada y los gestos de un usuario. Por lo tanto, debes considerar si realmente necesitas que ese evento de entrada se active. Es posible que desee investigar si hay otros eventos de entrada o gestos que no administra el control y usarlos en el diseño de interacción de control o de la aplicación.
+Cuando un elemento **ScrollViewer** existe en un control, el control de host a menudo tiene el control de eventos integrado para ciertos eventos de entrada y manipulaciones que permiten que el contenido se desplace. Por ejemplo, un GridView interpreta un gesto de deslizamiento del dedo y esto hace que el contenido se desplace horizontalmente. Se considera que tanto de los eventos de entrada como de las manipulaciones sin procesar que recibe el control de host se encarga el control y los eventos de nivel inferior, como [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed), no subirán de nivel ni se propagarán a los contenedores principales. Puedes cambiar parte de la administración de los controles integrados reemplazando una clase de control y los métodos virtuales **On***por eventos o volver a crear plantillas del control. Pero, en cualquier caso, reproducir el comportamiento predeterminado original no es algo trivial, que suele estar allí para que el control reaccione de formas esperadas a los eventos y a las acciones de entrada y los gestos de un usuario. Por lo tanto, debes considerar si realmente necesitas que ese evento de entrada se active. Es posible que desee investigar si hay otros eventos de entrada o gestos que no administra el control y usarlos en el diseño de interacción de control o de la aplicación.
 
 Para que los controles que incluyen un ScrollViewer puedan influir en algunos de los comportamientos y las propiedades que están dentro del elemento ScrollViewer, ScrollViewer define un número de propiedades adjuntas de XAML que pueden establecerse en los estilos y usarse en enlaces de plantillas. Para obtener más información sobre las propiedades adjuntas, consulta [Introducción a las propiedades adjuntas](../../xaml-platform/attached-properties-overview.md).
 
-**Las propiedades adjuntas de ScrollViewer XAML**
+**Propiedades adjuntas de XAML de ScrollViewer**
 
 ScrollViewer define las siguientes propiedades adjuntas de XAML:
 
@@ -126,7 +126,7 @@ ScrollViewer define las siguientes propiedades adjuntas de XAML:
 
 Estas propiedades adjuntas de XAML están destinadas para los casos donde ScrollViewer es implícito, como cuando ScrollViewer existe en la plantilla predeterminada para un ListView o GridView y quieres poder influir en el comportamiento de desplazamiento del control sin tener acceso a elementos de plantilla.
 
-Por ejemplo, aquí te mostramos cómo hacer que las barras de desplazamiento vertical estén siempre visibles para un visor de desplazamiento integrado de ListView.
+Por ejemplo, así que como se hace que las barras de desplazamiento vertical estén siempre visibles en un visor de desplazamiento integrado de ListView.
 
 ```xaml
 <ListView ScrollViewer.VerticalScrollBarVisibility="Visible"/>
@@ -147,10 +147,10 @@ En los casos donde un ScrollViewer es explícito en el XAML, como se muestra en 
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 **Para desarrolladores (XAML)**
 
-* [Clase de ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)
+* [Clase ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)

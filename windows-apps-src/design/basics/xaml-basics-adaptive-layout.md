@@ -1,16 +1,16 @@
 ---
 title: Crear tutoriales sobre diseños adaptativos
 description: Este artículo describe los conceptos básicos del diseño adaptativo en XAML
-keywords: XAML, UWP, Introducción
+keywords: XAML, UWP, Getting Started
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b444a11ab032034976d2f1b269bd10a89bf339e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593080"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63798595"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Crear diseños adaptables
 
@@ -28,42 +28,42 @@ La **página de detalles**, que muestra una sola foto después de que se haya se
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Visual Studio 2017: [Descargar Visual Studio 2017 Community (gratis)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
-* SDK de Windows 10 (10.0.15063.468 o posterior):  [Descargue el último SDK de Windows (gratis)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Emulador de Windows mobile: [Descargar el emulador de Windows 10 mobile (gratis)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
+* Visual Studio 2017: [Descargar Visual Studio 2017 Community (gratuito)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
+* SDK de Windows 10 (10.0.15063.468 o posterior):  [Descargar el último SDK de Windows (gratuito)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* Emulador para Windows Mobile: [Descargar el emulador para Windows 10 Mobile (gratuito)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
 
-## <a name="part-0-get-the-starter-code-from-github"></a>Parte 0: Obtener el código de inicio de github
+## <a name="part-0-get-the-starter-code-from-github"></a>Parte 0: Obtener el código de inicio de GitHub
 
 En este tutorial, empezaremos con una versión simplificada del ejemplo PhotoLab. 
 
-1. Vaya a [ https://github.com/Microsoft/Windows-appsample-photo-lab ](https://github.com/Microsoft/Windows-appsample-photo-lab). Esto te llevará a la página de GitHub que contiene el ejemplo. 
+1. Ve a [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). Esto te llevará a la página de GitHub que contiene el ejemplo. 
 2. A continuación deberás clonar o descarga dicho ejemplo. Haz clic en el botón **Clone or download**. Aparecerá un submenú.
     <figure>
         <img src="../basics/images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">
         <figcaption>El menú <b>Clone or download</b> de la página de GitHub del ejemplo de PhotoLab.</figcaption>
     </figure>
 
-    **Si no está familiarizado con GitHub:**
+    **Si no conoces GitHub muy bien:**
     
     a. Haz clic en **Download ZIP** y guarda el archivo localmente. Esto descargará un archivo .zip que contiene todos los archivos de proyecto que necesitas.
-    b. Extrae el archivo. Usa el Explorador de archivos para ir al archivo .zip que acabas de descargar, haz clic en él con el botón derecho y selecciona **Extraer todo...**. c. Dirígete a la copia local del ejemplo y ve al directorio `Windows-appsample-photo-lab-master\xaml-basics-starting-points\adaptive-layout`.    
+    b. Extrae el archivo. Usa el Explorador de archivos para ir al archivo .zip que acabas de descargar, haz clic en él con el botón derecho y selecciona **Extraer todo...** . c. Dirígete a la copia local del ejemplo y ve al directorio `Windows-appsample-photo-lab-master\xaml-basics-starting-points\adaptive-layout`.    
 
-    **Si está familiarizado con GitHub:**
+    **Si ya conoces GitHub:**
 
     a. Clona la bifurcación principal del repositorio localmente.
-    b. Dirígete al directorio `Windows-appsample-photo-lab\xaml-basics-starting-points\adaptive-layout`.
+    b. Navegue al directorio `Windows-appsample-photo-lab\xaml-basics-starting-points\adaptive-layout`.
 
 3. Abre el proyecto haciendo clic en `Photolab.sln`.
 
-## <a name="part-1-run-the-mobile-emulator"></a>1ª parte: Ejecutar el emulador de dispositivos móvil
+## <a name="part-1-run-the-mobile-emulator"></a>1ª parte: Ejecutar el emulador de dispositivo móvil
 
-En la barra de herramientas de Visual Studio, asegúrate de que la plataforma de soluciones esté establecida en x86 o x64, no ARM y, a continuación, cambia el dispositivo de destino del equipo local a uno de los emuladores móviles que tengas instalados (por ejemplo, el Emulador de Windows Mobile 10.0.15063 WVGA de 5 pulgadas y 1 GB). Prueba a ejecutar la aplicación Galería fotográfica en el emulador móvil que hayas seleccionado presionando **F5**.
+En la barra de herramientas de Visual Studio, asegúrate de que la plataforma de soluciones esté establecida en x86 o x64, no ARM y, a continuación, cambia el dispositivo de destino del equipo local a uno de los emuladores de dispositivo móvil que tengas instalados (por ejemplo, el emulador para Windows Mobile 10.0.15063 WVGA de 5 pulgadas y 1 GB). Prueba a ejecutar la aplicación Galería fotográfica en el emulador de dispositivo móvil que hayas seleccionado presionando **F5**.
 
 En cuanto se inicie la aplicación, probablemente observarás que, mientras la aplicación funciona, no queda muy bien en una ventanilla tan pequeña. El elemento de cuadrícula líquida intenta acomodarse al el espacio real de pantalla limitada, reduciendo el número de columnas que se muestran, pero queda con un diseño que parece carente de inspiración y muy mal adaptado a una ventanilla tan pequeña.
 
-![Diseño móvil: después](../basics/images/xaml-basics/adaptive-layout-mobile-before.png)
+![Diseño para dispositivos móviles: después](../basics/images/xaml-basics/adaptive-layout-mobile-before.png)
 
-## <a name="part-2-build-a-tailored-mobile-layout"></a>2ª parte: Crear un diseño móvil adaptado
+## <a name="part-2-build-a-tailored-mobile-layout"></a>2ª parte: Crear un diseño personalizado para dispositivos móviles
 Para lograr que esta aplicación quede bien en dispositivos más pequeños, vamos a crear un conjunto de estilos distinto en nuestra página XAML, que se usará solo si se detecta un dispositivo móvil.
 
 ### <a name="create-a-new-datatemplate"></a>Crear una nueva DataTemplate
@@ -89,8 +89,8 @@ Vamos a adaptar la vista de galería de la aplicación mediante la creación de 
 
 Esta plantilla de galería ahorra espacio real en pantalla al eliminar el borde alrededor de imágenes y deshaciéndose de los metadatos de imagen (nombre de archivo, clasificaciones y demás) de debajo de cada miniatura. En su lugar, mostramos cada miniatura como un simple cuadrado.
 
-### <a name="add-metadata-to-a-tooltip"></a>Agregar metadatos a una herramienta
-Seguimos queriendo que el usuario pueda acceder a los metadatos de cada imagen, por lo que agregamos una herramienta a cada elemento de imagen. Agrega el siguiente código dentro de las etiquetas **Imagen** de la DataTemplate que acabas de crear.
+### <a name="add-metadata-to-a-tooltip"></a>Agregar metadatos a una información sobre herramientas
+Seguimos queriendo que el usuario pueda acceder a los metadatos de cada imagen, por lo que agregamos una información sobre herramientas a cada elemento de imagen. Agrega el siguiente código dentro de las etiquetas **Imagen** de la DataTemplate que acabas de crear.
 
 ```XAML
 <Image ...>
@@ -129,7 +129,7 @@ Seguimos queriendo que el usuario pueda acceder a los metadatos de cada imagen, 
 </Image>
 ```
 
-Esto mostrará el título, tipo de archivo y dimensiones de una imagen cuando se coloque el ratón sobre la miniatura (o pulsar y mantener en una pantalla táctil).
+Esto mostrará el título, tipo de archivo y dimensiones de una imagen cuando se coloque el ratón sobre la miniatura (o mantenga presionado en una pantalla táctil).
 
 ### <a name="add-a-visualstatemanager-and-statetrigger"></a>Agregar un VisualStateManager y un StateTrigger
 
@@ -152,10 +152,10 @@ Ahora hemos creado un nuevo diseño para nuestros datos, pero la aplicación act
 </VisualStateManager.VisualStateGroups>
 ```
 
-Esto agrega unos nuevos **VisualState** y **StateTrigger**, que se activarán cuando la aplicación detecte que se está ejecutando en un dispositivo móvil (la lógica para esta operación puede encontrarse en MobileScreenTrigger.cs, que viene incluida automáticamente en el directorio de PhotoLab). Cuando se inicie **StateTrigger**, la aplicación usará todos los atributos de diseño asignados a este **VisualState**.
+Esto agrega nuevas instancias de **VisualState** y **StateTrigger**, que se activarán cuando la aplicación detecte que se está ejecutando en un dispositivo móvil (la lógica para esta operación puede encontrarse en MobileScreenTrigger.cs, que viene incluida automáticamente en el directorio de PhotoLab). Cuando se inicie **StateTrigger**, la aplicación usará todos los atributos de diseño asignados a este **VisualState**.
 
 ### <a name="add-visualstate-setters"></a>Agregar establecedores de VisualState
-A continuación, usaremos establecedores **VisualState** para indicar al **VisualStateManager** qué atributos deben aplicarse cuando se desencadena el estado. Cada establecedor apunta a una propiedad de un elemento XAML determinado y lo establece al valor dado. Agrega este código a la **VisualState** móvil que acabas de crear, a continuación del elemento **VisualState.StateTriggers**. 
+A continuación, usaremos establecedores **VisualState** para indicar al **VisualStateManager** qué atributos deben aplicarse cuando se desencadena el estado. Cada establecedor apunta a una propiedad de un elemento XAML determinado y lo establece al valor dado. Agrega este código a la instancia de **VisualState** para dispositivo móvil que acabas de crear, debajo del elemento **VisualState.StateTriggers**. 
 
 ```XAML
 <VisualStateManager.VisualStateGroups>
@@ -204,15 +204,15 @@ A continuación, usaremos establecedores **VisualState** para indicar al **Visua
 
 ```
 
-Estos establecedores ponen la **ItemTemplate** de la galería de imágenes conforme a la nueva **DataTemplate** que creamos en la primera parte y alinean la barra de comandos y el control deslizante del zoom con la parte inferior de la pantalla, por lo que son fáciles de alcanzar con el pulgar en una pantalla de teléfono móvil.
+Estos establecedores establecen la plantilla de elementos **ItemTemplate** de la galería de imágenes en la nueva plantilla de datos **DataTemplate** que creamos en la primera parte, y alinean la barra de comandos y el control deslizante del zoom con la parte inferior de la pantalla, por lo que son fáciles de alcanzar con el pulgar en una pantalla de teléfono móvil.
 
-### <a name="run-the-app"></a>Ejecutar la aplicación
-Ahora intenta ejecutar la aplicación con un emulador móvil. ¿Se muestra correctamente el nuevo diseño? Deberías ver una cuadrícula de miniaturas como aparece a continuación. Si sigues viendo el diseño antiguo, puede haber un error tipográfico en tu código de **VisualStateManager**.
+### <a name="run-the-app"></a>Ejecuta la aplicación.
+Ahora intenta ejecutar la aplicación con un emulador de dispositivo móvil. ¿Se muestra correctamente el nuevo diseño? Deberías ver una cuadrícula de miniaturas como aparece a continuación. Si sigues viendo el diseño antiguo, puede haber un error tipográfico en tu código de **VisualStateManager**.
 
-![Diseño móvil: después](../basics/images/xaml-basics/adaptive-layout-mobile-after.png)
+![Diseño para dispositivos móviles: después](../basics/images/xaml-basics/adaptive-layout-mobile-after.png)
 
-## <a name="part-3-adapt-to-multiple-window-sizes-on-a-single-device"></a>Parte 3: Adaptarse a varios tamaños de ventana en un único dispositivo
-Crear un nuevo diseño personalizado resuelve el problema de diseño con capacidad de respuesta para dispositivos móviles pero, ¿qué pasa con los equipos de escritorio y las tabletas? La aplicación puede quedar bien a pantalla completa, pero si el usuario reduce la ventana, puede acabar con una interfaz incómoda. Es posible garantizar que la experiencia del usuario final siempre tenga una apariencia y sensación correctas usando el **VisualStateManager** para adaptarse a varios tamaños de ventana en un solo dispositivo.
+## <a name="part-3-adapt-to-multiple-window-sizes-on-a-single-device"></a>3\.ª parte: Adaptarse a varios tamaños de ventana en un solo dispositivo
+Crear un nuevo diseño personalizado resuelve el problema de diseño dinámico para dispositivos móviles pero, ¿qué pasa con los equipos de escritorio y las tabletas? La aplicación puede quedar bien a pantalla completa, pero si el usuario reduce la ventana, puede acabar con una interfaz incómoda. Es posible garantizar que la experiencia del usuario final siempre tenga una apariencia y sensación correctas usando el **VisualStateManager** para adaptarse a varios tamaños de ventana en un solo dispositivo.
 
 ![Ventana pequeña: antes](../basics/images/xaml-basics/adaptive-layout-small-before.png)
 
@@ -234,7 +234,7 @@ Esto nos da tres puntos de acoplamiento, que nos permiten crear nuevos **VisualS
 + Grande (> 1007 píxeles de ancho)
 
 ### <a name="create-new-visualstates-and-statetriggers"></a>Crear nuevos VisualStates y StateTriggers
-A continuación, creamos los **VisualStates** y **StateTriggers** que corresponden a cada punto de acoplamiento. En MainPage.xaml, agrega el siguiente código al **VisualStateManager** creado en la parte 2.
+A continuación, creamos los **VisualStates** y **StateTriggers** que corresponden a cada punto de acoplamiento. En MainPage.xaml, agrega el siguiente código al **VisualStateManager** creado en la segunda parte.
 
 ```XAML
 <VisualStateManager.VisualStateGroups>
@@ -307,21 +307,21 @@ Por último, agrega estos establecedores al estado **SmallWindow**.
 
 ```
 
-Estos establecedores aplican la **DataTemplate** móvil y estilos a la aplicación de escritorio, siempre que la ventanilla sea inferior a 641 píxeles de ancho. También ajustan el control deslizante de zoom para una mejor adecuación a la pantalla pequeña.
+Estos establecedores aplican la plantilla de datos **DataTemplate** para dispositivo móvil y los estilos a la aplicación de escritorio, siempre que la ventanilla sea inferior a 641 píxeles de ancho. También ajustan el control deslizante de zoom para una mejor adecuación a la pantalla pequeña.
 
-### <a name="run-the-app"></a>Ejecutar la aplicación
+### <a name="run-the-app"></a>Ejecución de la aplicación
 
-En la barra de herramientas de Visual Studio, establece el dispositivo de destino en **Máquina local**, y ejecuta la aplicación. Cuando se cargue la aplicación, intenta cambiar el tamaño de la ventana. Al reducir la ventana a un tamaño pequeño, deberías ver cómo la aplicación cambia al diseño móvil que creaste en la parte 2.
+En la barra de herramientas de Visual Studio, establece el dispositivo de destino en **Máquina local**, y ejecuta la aplicación. Cuando se cargue la aplicación, intenta cambiar el tamaño de la ventana. Si la ventana se reduce a un tamaño pequeño, verás cómo la aplicación cambia al diseño para dispositivo móvil que creaste en la segunda parte.
 
 ![Ventana pequeña: después](../basics/images/xaml-basics/adaptive-layout-small-after.png)
 
 ## <a name="going-further"></a>Ir más allá
 
-Ahora que has completado este laboratorio, tienes suficiente información de diseño adaptable para experimentar más por tu cuenta. Intenta agregar un control de clasificación a la herramienta solo para móviles que agregaste anteriormente. O bien, para enfrentarte a un desafío más grande, intenta optimizar el diseño para tamaños de pantalla mayores (piensa en pantallas de televisión o Surface Studio)
+Ahora que has completado este laboratorio, tienes suficiente información de diseño adaptable para experimentar más por tu cuenta. Intenta agregar un control de calificación a la información sobre herramientas solo para dispositivos móviles que agregaste anteriormente. O bien, para enfrentarte a un desafío más grande, intenta optimizar el diseño para tamaños de pantalla mayores (piensa en pantallas de televisión o Surface Studio)
 
 Si te quedas bloqueado, puedes encontrar más información en estas secciones de [Definir diseños de página con XAML](../layout/layouts-with-xaml.md).
 
-+ [Estados visuales y los desencadenadores de estado](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#visual-states-and-state-triggers)
++ [Estados visuales y desencadenadores de estado](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#visual-states-and-state-triggers)
 + [Diseños personalizados](https://docs.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#tailored-layouts)
 
 Como alternativa, si quieres obtener más información sobre cómo se creó la aplicación inicial de edición de fotos, consulta estos tutoriales de XAML, [interfaces de usuario](../basics/xaml-basics-ui.md) y [enlace de datos](../../data-binding/xaml-basics-data-binding.md).

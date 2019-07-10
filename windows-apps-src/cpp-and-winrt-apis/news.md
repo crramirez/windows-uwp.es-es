@@ -1,53 +1,53 @@
 ---
 description: Noticias y cambios en C++/WinRT.
-title: Novedades de C / c++ / WinRT
+title: Novedades de C++/WinRT
 ms.date: 04/23/2019
 ms.topic: article
-keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, noticias, lo que de, new
+keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, news, what's, new
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 11249335f9d29d37bb0824fa779d3ae151c74799
-ms.sourcegitcommit: 1f39b67f2711b96c6b4e7ed7107a9a47127d4e8f
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66721652"
 ---
-# <a name="whats-new-in-cwinrt"></a>Novedades de C / c++ / WinRT
+# <a name="whats-new-in-cwinrt"></a>Novedades de C++/WinRT
 
-## <a name="news-and-changes-in-cwinrt-20"></a>Noticias y los cambios, en C++WinRT 2.0
+## <a name="news-and-changes-in-cwinrt-20"></a>Noticias y cambios en C++/WinRT 2.0
 
-Para obtener más información acerca de la [ C++extensión Visual Studio (VSIX) de WinRT](https://aka.ms/cppwinrt/vsix), el [paquete Microsoft.Windows.CppWinRT NuGet](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)y el `cppwinrt.exe` herramienta&mdash;incluido cómo adquirir e instalarlas&mdash;vea [compatibilidad con Visual Studio C++/WinRT, XAML, la extensión VSIX y el paquete NuGet](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+Para más información sobre la [Extensión de Visual Studio (VSIX) de C++/WinRT](https://aka.ms/cppwinrt/vsix), el [paquete NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) y la herramienta `cppwinrt.exe`, incluido cómo adquirirlos e instalarlos, consulta [Compatibilidad de Visual Studio con C++/WinRT, XAML, la extensión VSIX y el paquete NuGet](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
-### <a name="changes-to-the-cwinrt-visual-studio-extension-vsix-for-version-20"></a>Cambia a la C++WinRT extensión Visual Studio (VSIX) para la versión 2.0
+### <a name="changes-to-the-cwinrt-visual-studio-extension-vsix-for-version-20"></a>Cambios de la Extensión de Visual Studio (VSIX) de C++/WinRT para la versión 2.0
 
-- El visualizador de depuración ahora es compatible con Visual Studio de 2019; Además de continuar la compatibilidad con Visual Studio 2017.
+- El visualizador de depuración ahora es compatible con Visual Studio 2019, así como con Visual Studio 2017.
 - Se han realizado numerosas correcciones de errores.
 
-### <a name="changes-to-the-microsoftwindowscppwinrt-nuget-package-for-version-20"></a>Cambios realizados en el paquete Microsoft.Windows.CppWinRT NuGet para la versión 2.0
+### <a name="changes-to-the-microsoftwindowscppwinrt-nuget-package-for-version-20"></a>Cambios realizados en el paquete NuGet Microsoft.Windows.CppWinRT para la versión 2.0
 
-- El `cppwinrt.exe` herramienta ahora se incluye en el paquete Microsoft.Windows.CppWinRT NuGet y la herramienta genera los encabezados de la proyección de Frameworks para cada proyecto bajo demanda. Por lo tanto, el `cppwinrt.exe` herramienta ya no depende del SDK de Windows (aunque todavía, la herramienta se distribuye con el SDK por motivos de compatibilidad).
-- `cppwinrt.exe` Ahora genera los encabezados de proyección debajo de cada carpeta intermedio específicas de la plataforma y configuración ($IntDir) para habilitar las compilaciones en paralelo.
-- El C++/WinRT de soporte técnico de compilación (archivos props/targets) está ahora totalmente documentada, en caso de que desea personalizar manualmente los archivos de proyecto. Consulte [paquete de NuGet Microsoft.Windows.CppWinRT](https://github.com/Microsoft/xlang/blob/master/src/package/cppwinrt/nuget/readme.md).
+- La herramienta `cppwinrt.exe` ahora se incluye en el paquete NuGet Microsoft.Windows.CppWinRT y la herramienta genera a petición encabezados de proyección de la plataforma para cada proyecto. Por lo tanto, la herramienta `cppwinrt.exe` ya no depende de Windows SDK (aunque la herramienta todavía se distribuye con el SDK por motivos de compatibilidad).
+- `cppwinrt.exe` ahora genera los encabezados de proyección debajo de cada carpeta intermedia específica de la plataforma y de la configuración ($IntDir) para permitir las compilaciones en paralelo.
+- La compatibilidad con la compilación de C++/WinRT (propiedades y destinos) está ahora completamente documentada, en caso de que quieras personalizar manualmente tus archivos de proyecto. Consulta el [Paquete NuGet Microsoft.Windows.CppWinRT](https://github.com/Microsoft/xlang/blob/master/src/package/cppwinrt/nuget/readme.md).
 - Se han realizado numerosas correcciones de errores.
 
-### <a name="changes-to-cwinrt-for-version-20"></a>Cambia a C++/WinRT para la versión 2.0
+### <a name="changes-to-cwinrt-for-version-20"></a>Cambios en C++/WinRT para la versión 2.0
 
 #### <a name="open-source"></a>Código abierto
 
-El `cppwinrt.exe` herramienta toma los metadatos de un Runtime de Windows (`.winmd`) de archivo y genera a partir de él un estándar basado en archivos de encabezado C++ biblioteca que *proyectos* las API descritas en los metadatos. De este modo, puede consumir estas API desde su C++/WinRT código.
+La herramienta `cppwinrt.exe` toma un archivo de metadatos de Windows Runtime (`.winmd`) y genera desde él una biblioteca de C++ estándar basada en archivos de encabezado que *proyecta* las API descritas en los metadatos. De este modo, puedes consumir estas API desde tu código de C++/WinRT.
 
-Esta herramienta es ahora un proyecto de código completamente abierto, disponible en GitHub. Visite [Microsoft\/xlang](https://github.com/Microsoft/xlang)y, a continuación, haga clic en a **src** > **herramienta** > **cppwinrt**.
+Esta herramienta es ahora un proyecto de código completamente abierto, disponible en GitHub. Visita [Microsoft\/xlang](https://github.com/Microsoft/xlang) y, después, haz clic en **src** > **tool** > **cppwinrt**.
 
-#### <a name="xlang-libraries"></a>bibliotecas de XLANG
+#### <a name="xlang-libraries"></a>Bibliotecas de xlang
 
-Una biblioteca solo de encabezados completamente portátil (para analizar el formato de metadatos ECMA-335 utilizado por el tiempo de ejecución de Windows) constituye la base de todas las herramientas en el futuro de xlang y en tiempo de ejecución de Windows. En concreto, también se reescribe el `cppwinrt.exe` herramienta a desde el principio mediante las bibliotecas de xlang. Esto ofrece mucho más precisas consultas de metadatos, solucionar algunos viejos problemas con la C++/WinRT proyección del lenguaje.
+Una biblioteca completamente portátil de solo encabezados (para analizar el formato de metadatos ECMA-335 utilizado por Windows Runtime) constituye la base de todas las herramientas de Windows Runtime y xlang en el futuro. En particular, también reescribimos la herramienta `cppwinrt.exe` desde cero mediante las bibliotecas de xlang. Esto proporciona consultas de metadatos mucho más precisas, que resuelven algunos problemas antiguos con la proyección del lenguaje C++/WinRT.
 
 #### <a name="fewer-dependencies"></a>Menos dependencias
 
-Debido al lector de metadatos xlang, el `cppwinrt.exe` propia herramienta tiene menos dependencias. Esto facilita mucho más flexible, además de ser utilizable en escenarios más&mdash;especialmente en restringida a crear entornos. En concreto, que ya no se basa en `RoMetadata.dll`.
+Debido al lector de metadatos de xlang, la herramienta `cppwinrt.exe` tiene menos dependencias. Esto la hace mucho más flexible, además de poderse utilizar en más escenarios, especialmente en entornos de compilación restringidos. En concreto, ya no depende de `RoMetadata.dll`.
  
-Estas son las dependencias para `cppwinrt.exe` 2.0.
+Estos servicios son las dependencias para `cppwinrt.exe` 2.0.
  
 - api-ms-win-core-processenvironment-l1-1-0.dll
 - api-ms-win-core-libraryloader-l1-2-0.dll
@@ -64,7 +64,7 @@ Estas son las dependencias para `cppwinrt.exe` 2.0.
 - api-ms-win-core-console-l1-1-0.dll
 - api-ms-win-core-localization-l1-2-0.dll
 
-Contraste con estas dependencias, que `cppwinrt.exe` tiene 1.0.
+Contraste con estas dependencias, que tiene `cppwinrt.exe` 1.0.
 
 - ADVAPI32.dll
 - SHELL32.dll
@@ -91,17 +91,17 @@ Contraste con estas dependencias, que `cppwinrt.exe` tiene 1.0.
 - api-ms-win-core-com-l1-1-1.dll
 - api-ms-win-core-synch-l1-2-0.dll 
 
-#### <a name="the-windows-runtime-noexcept-attribute"></a>El tiempo de ejecución de Windows `noexcept` atributo
+#### <a name="the-windows-runtime-noexcept-attribute"></a>El atributo `noexcept` de Windows Runtime
 
-El tiempo de ejecución de Windows tiene un nuevo `[noexcept]` atributo, que puede utilizar para decorar sus métodos y propiedades de [MIDL 3.0](/uwp/midl-3/predefined-attributes). Indica la presencia del atributo para que su implementación no genere una excepción de herramientas de compatibilidad (ni devuelva un error HRESULT). Esto permite que las proyecciones de lenguaje optimizar la generación de código, ya que evita la sobrecarga de control de excepciones que se necesita para admitir llamadas (ABI) de interfaz binaria de aplicación que podrían producir errores.
+Windows Runtime tiene un nuevo atributo `[noexcept]`, que puedes utilizar para decorar tus métodos y propiedades en [MIDL 3.0](/uwp/midl-3/predefined-attributes). La presencia del atributo indica a las herramientas auxiliares que su implementación no inicia ninguna excepción (ni devuelve un HRESULT con error). Esto permite que las proyecciones de lenguaje optimicen la generación de código al evitar la sobrecarga del control de excepciones que se requiere para admitir las llamadas de interfaz binaria de aplicaciones (ABI) que podrían producir errores.
 
-C++/ WinRT aprovecha las ventajas de esto mediante la generación de C++ `noexcept` implementaciones de consumo y creación de código. Si dispone de métodos de API o las propiedades que son libres de errores y usted le preocupa sobre el tamaño del código, a continuación, puede investigar este atributo.
+C+++/WinRT se aprovecha de esto al producir implementaciones `noexcept` de C++ tanto del código de consumo como de creación. Si tienes métodos o propiedades de API sin errores y te preocupa el tamaño del código, puedes investigar este atributo.
 
 #### <a name="optimized-code-generation"></a>Generación de código optimizada
 
-C++/ WinRT genera ahora aún más eficaz C++ origen código (en segundo plano) hasta que el C++ compilador puede generar más pequeño y más eficaz código binario posibles. Muchas de las mejoras están orientados a reducir el costo de control de excepciones, ya que evita innecesaria de información de desenredo. Los archivos binarios que usan grandes cantidades de C++/WinRT código verá aproximadamente una reducción 4% del tamaño del código. El código también es más eficaz (se ejecuta más rápido) porque el recuento de instrucciones reducido.
+C++/WinRT ahora genera un código fuente C++ aún más eficaz (en segundo plano) para que el compilador de C++ pueda producir el código binario más pequeño y eficiente posible. Muchas de las mejoras están orientadas a reducir el costo del control de excepciones al evitar la información innecesaria. Los archivos binarios que utilizan grandes cantidades de código C++/WinRT verán una reducción de aproximadamente un 4 % en el tamaño del código. El código también es más eficaz (se ejecuta más rápido) debido al reducido número de instrucciones.
 
-Estas mejoras se basan en una nueva característica de interoperabilidad que también está disponible para usted. Todos los C++/tipos de WinRT que son propietarios de recursos ahora incluyen un constructor para tomar posesión directamente, evitar el enfoque de dos pasos anteriores.
+Estas mejoras dependen de una nueva característica de interoperabilidad que también tienes disponible. Todos los tipos de C++/WinRT que son propietarios de recursos ahora incluyen un constructor para asumir la propiedad directamente, con lo que se evita el enfoque anterior de dos pasos.
 
 ```cppwinrt
 ABI::Windows::Foundation::IStringable* raw = ...
@@ -111,9 +111,9 @@ IStringable projected(raw, take_ownership_from_abi);
 printf("%ls\n", projected.ToString().c_str());
 ```
 
-#### <a name="optimized-exception-handling-eh-code-generation"></a>Control de excepciones (EH) código-generación optimizada
+#### <a name="optimized-exception-handling-eh-code-generation"></a>Generación de código optimizada para el control de excepciones
 
-Este cambio complementa el trabajo que se ha realizado por Microsoft C++ equipo optimizador para reducir el costo del control de excepciones. Si usa mucho interfaces binarias de aplicación (ABI) (por ejemplo, COM) en el código, observará una gran cantidad de código que se sigue este patrón.
+Este cambio complementa el trabajo realizado por el equipo de optimizadores de Microsoft C++ para reducir el costo del control de excepciones. Si usas mucho las interfaces binarias de aplicaciones (ABI) (como COM) en tu código, entonces observarás mucho código que sigue este patrón.
 
 ```cpp
 int32_t Function() noexcept
@@ -129,42 +129,42 @@ int32_t Function() noexcept
 }
 ```
 
-C++/ WinRT propio genera este patrón para todas las API que se implementa. Con miles de funciones de la API, aquí cualquier optimización puede ser considerable. En el pasado, el optimizador no detecta que los bloques catch todos sean idénticos, por lo que era duplicar una gran cantidad de código alrededor de cada ABI (que a su vez han contribuido a la creencia de que el uso de excepciones en código del sistema genera archivos binarios grandes). Sin embargo, desde Visual Studio de 2019, el C++ compilador contrae todas esas catch funclets y almacena solo aquellos que son únicos. El resultado es una reducción de 18% adicional y el tamaño del código para archivos binarios que dependen en gran medida de este patrón. No solo código EH ahora es más eficaz que usar códigos de retorno, sino también la preocupación acerca de los archivos binarios de mayor tamaño es ahora una cosa del pasado.
+El propio C++/WinRT genera este patrón para cada API que se implementa. Con miles de funciones de API, cualquier optimización aquí puede ser significativa. En el pasado, el optimizador no detectaría que esos bloques de captura son todos idénticos, así que estaba duplicando una gran cantidad de código alrededor de cada ABI (lo que a su vez contribuía a la creencia de que usar excepciones en el código del sistema producía archivos binarios grandes). Sin embargo, a partir de Visual Studio 2019, el compilador C++ pliega todos los funclets de captura y solo almacena aquellos que son únicos. El resultado es una reducción del 18 % en el tamaño del código para los archivos binarios que dependen en gran medida de este patrón. No solo el código de control de excepciones es ahora más eficaz que el uso de códigos de retorno, sino que también la preocupación por los binarios más grandes es cosa del pasado.
 
-#### <a name="incremental-build-improvements"></a>Mejoras de generación incremental
+#### <a name="incremental-build-improvements"></a>Mejoras en la compilación incremental
 
-El `cppwinrt.exe` herramienta ahora compara la salida de un archivo de encabezado/código fuente generado con el contenido de los archivos existentes en el disco, y solo escribe el archivo si el archivo ha cambiado en realidad. Esto ahorra mucho tiempo con E/S de disco y se garantiza que los archivos no se consideran "sucios" por el C++ compilador. El resultado es que la recompilación es evitar, o se reduce, en muchos casos.
+La herramienta `cppwinrt.exe` ahora compara la salida de un archivo de encabezado o código fuente generado con el contenido de cualquier archivo existente en el disco, y solo escribe en el archivo si este ha cambiado. Esto ahorra mucho tiempo con la E/S de disco y asegura que los archivos no se consideren "sucios" por el compilador de C++. El resultado es que se evita la recompilación, o se reduce, en muchos casos.
 
-#### <a name="generic-interfaces-are-now-all-generated"></a>Ahora, las interfaces genéricas son todos generado
+#### <a name="generic-interfaces-are-now-all-generated"></a>Ahora se generan todas las interfaces genéricas
 
-Debido al lector de metadatos xlang, C++/WinRT genera ahora todas las interfaces con parámetros o genéricas, de los metadatos. Las interfaces como [Windows::Foundation::Collections::IVector\<T\> ](/uwp/api/windows.foundation.collections.ivector_t_) están ahora generado a partir de los metadatos en lugar de escrito a mano `winrt/base.h`. El resultado es que el tamaño de `winrt/base.h` se ha eliminado en la mitad, y que se generan las optimizaciones del botón secundario en el código (que era difícil de hacer con el enfoque escribimos).
+Gracias al lector de metadatos de xlang, C++/WinRT genera ahora todas las interfaces parametrizadas o genéricas a partir de los metadatos. Las interfaces como [Windows::Foundation::Collections::IVector\<T\> ](/uwp/api/windows.foundation.collections.ivector_t_) ahora se generan a partir de los metadatos en lugar de escribirse a mano en `winrt/base.h`. El resultado es que el tamaño de `winrt/base.h` se ha reducido a la mitad y que las optimizaciones se generan directamente en el código (lo que era difícil de hacer con el enfoque de escritura a mano).
 
 > [!IMPORTANT]
-> Interfaces, como el ejemplo presentado aparecen ahora en los encabezados del espacio de nombres correspondientes, en lugar de en `winrt/base.h`. Por lo tanto, si aún no lo ha hecho, tendrá que incluir el encabezado del espacio de nombres adecuado para usar la interfaz.
+> Las interfaces, como el ejemplo presentado, ahora aparecen en sus respectivos encabezados de espacio de nombres, en lugar de en `winrt/base.h`. Por lo tanto, si aún no lo has hecho, tendrás que incluir el encabezado del espacio de nombres apropiado para poder usar la interfaz.
 
-#### <a name="component-optimizations"></a>Optimizaciones de componente
+#### <a name="component-optimizations"></a>Optimizaciones de componentes
 
-Esta actualización agrega compatibilidad para varias participar en las optimizaciones adicionales para C++/WinRT, se describe en las secciones siguientes. Dado que estas optimizaciones son los últimos cambios (que es posible que deba realizar cambios menores para admitir), deberá activar de forma explícita mediante la `cppwinrt.exe` la herramienta `-opt` marca.
+Esta actualización agrega soporte para varias optimizaciones adicionales de participación para C++/WinRT, descritas en las secciones siguientes. Debido a que estas optimizaciones son cambios importantes (que puede que tengas que hacer cambios menores en el soporte), tendrás que activarlas explícitamente con la marca `-opt` de la herramienta `cppwinrt.exe`.
 
-Usará un nuevo proyecto (desde una plantilla de proyecto) `-opt` de forma predeterminada.
+Un nuevo proyecto (de una plantilla de proyecto) utilizará `-opt` de manera predeterminada.
 
-##### <a name="uniform-construction-and-direct-implementation-access"></a>Construcción uniforme y el acceso de implementación directa
+##### <a name="uniform-construction-and-direct-implementation-access"></a>Construcción uniforme y acceso de implementación directa
 
-Estos dos optimizaciones permiten el acceso directo a sus propios tipos de implementación, incluso cuando se usa solo los tipos proyectados. No hay ninguna necesidad de usar [ **realizar**](/uwp/cpp-ref-for-winrt/make), [ **make_self**](/uwp/cpp-ref-for-winrt/make-self), ni [ **get_self** ](/uwp/cpp-ref-for-winrt/get-self) si desea usar la superficie de API pública. Las llamadas se compilarán como llamadas directas a la implementación y, incluso los que podrían ser completamente insertados.
+Estas dos optimizaciones permiten a tu componente acceder directamente a sus propios tipos de implementación, incluso cuando solo utiliza los tipos proyectados. No hay necesidad de usar [**make**](/uwp/cpp-ref-for-winrt/make), [**make_self**](/uwp/cpp-ref-for-winrt/make-self) ni [**get_self**](/uwp/cpp-ref-for-winrt/get-self) si simplemente quieres utilizar la superficie de la API pública. Tus llamadas se compilarán para dirigir las llamadas a la implementación e incluso podrían estar completamente insertadas.
 
-##### <a name="type-erased-factories"></a>Generadores de tipo borrado
+##### <a name="type-erased-factories"></a>Generadores de borrado de tipos
 
-Esta optimización se evita la #include dependencias en `module.g.cpp` para que no necesitan compilarse cada vez que se produce cualquier clase de implementación solo cambiar. El resultado es el rendimiento de la compilación mejorada.
+Esta optimización evita las dependencias #include en `module.g.cpp` de modo que no es necesario volver a compilarlas cada vez que se produce un cambio en una clase de implementación. El resultado es un mejor rendimiento de la compilación.
 
-#### <a name="smarter-and-more-efficient-modulegcpp-for-large-projects-with-multiple-libs"></a>Más inteligentes y más eficaz `module.g.cpp` para proyectos grandes con varias bibliotecas
+#### <a name="smarter-and-more-efficient-modulegcpp-for-large-projects-with-multiple-libs"></a>`module.g.cpp` más inteligente y eficaz para grandes proyectos con varias bibliotecas
 
-El `module.g.cpp` archivo también contiene ahora dos asistentes que se pueden componer adicionales, denominados **winrt_can_unload_now**, y **winrt_get_activation_factory**. Estos se han diseñado para proyectos grandes, donde un archivo DLL se compone de un número de bibliotecas, cada uno con sus propias clases de tiempo de ejecución. En esa situación, debe unir manualmente la DLL **DllGetActivationFactory** y **DllCanUnloadNow**. Estos elementos auxiliares facilitan mucho más fácil de hacer eso, al evitar errores falsos de origen. El `cppwinrt.exe` la herramienta `-lib` marca también puede utilizarse para proporcionar su propio preámbulo a cada lib individual (en lugar de `winrt_xxx`) para que las funciones de cada lib tenga nombre individualmente y, por tanto, se combinan de forma inequívoca.
+El archivo `module.g.cpp` también contiene ahora dos aplicaciones auxiliares adicionales que admiten composición, denominadas **winrt_can_unload_now** y **winrt_get_activation_factory**. Se han diseñado para proyectos más grandes donde un archivo DLL está compuesto de un número de bibliotecas, cada una con sus propias clases de entorno de ejecución. En esa situación, debes unir manualmente **DllGetActivationFactory** y **DllCanUnloadNow** de la DLL. Estas aplicaciones auxiliares hacen que sea mucho más fácil para ti hacer esto, al evitar errores de origen falsos. La marca `-lib` de la herramienta `cppwinrt.exe` también se puede utilizar para dar a cada biblioteca individual su propio preámbulo (en lugar de `winrt_xxx`), de modo que las funciones de cada biblioteca se puedan nombrar individualmente y, por lo tanto, combinarse de forma inequívoca.
 
 #### <a name="coroutine-support"></a>Compatibilidad con corrutinas
 
-Compatibilidad con corrutinas se incluye automáticamente. Anteriormente, la compatibilidad con residía en varios lugares, lo que pensamos fue muy restrictivo. Y, a continuación, temporalmente para la versión 2.0, un `winrt/coroutine.h` era necesario el archivo de encabezado, pero que ya no es necesario. Puesto que ahora se generan las interfaces asincrónicas de Windows en tiempo de ejecución, en lugar de escritos a mano, que ahora residen en `winrt/Windows.Foundation.h`. Aparte de ser más fácil de mantener y dar soporte, significa que esa corrutina aplicaciones auxiliares como [ **resume_foreground** ](/uwp/cpp-ref-for-winrt/resume-foreground) ya no se ha agregado al final de un encabezado de espacio de nombres específico. En su lugar, pueden incluir más de forma natural sus dependencias. Esto permite que más **resume_foreground** para admitir no solo reanudar en un determinado [ **Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher), pero puede ahora también admite reanudar en un determinado [ **Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue). Anteriormente, solo uno podría tener soporte técnico; pero no ambos, ya que la definición solo puede residir en un espacio de nombres.
+La compatibilidad con corrutinas se incluye automáticamente. Anteriormente, la compatibilidad residía en varios lugares, lo que nos parecía demasiado restrictivo. Y luego, temporalmente para la versión 2.0, era necesario un archivo de encabezado `winrt/coroutine.h`, pero ya no lo es. Dado que ahora se generan las interfaces asincrónicas de Windows Runtime, en lugar de escribirse a mano, ahora residen en `winrt/Windows.Foundation.h`. Aparte de ser más fácil de mantener y de dar soporte, significa que las aplicaciones auxiliares de las corrutinas como [**resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) ya no tienen que agregarse al final de un encabezado de espacio de nombres específico. En cambio, pueden incluir de forma más natural sus dependencias. Esto permite además a **resume_foreground** admitir no solo la reanudación en una función [**Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher) determinada, sino que ahora también puede admitir la reanudación en una función [**Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue) determinada. Anteriormente, solo se podía admitir una, pero no ambas, ya que la definición solo podía residir en un espacio de nombres.
 
-Este es un ejemplo de la **DispatcherQueue** admite.
+Este es un ejemplo de la compatibilidad de **DispatcherQueue**.
 
 ```cppwinrt
 ...
@@ -184,23 +184,23 @@ fire_and_forget Async(DispatcherQueueController controller)
 }
 ```
 
-Las aplicaciones auxiliares de corrutina ahora se representan también con `[[nodiscard]]`, lo que mejora su facilidad de uso. Si olvida (o no se dan cuenta deberá) `co_await` ellos para que funcione, después, debido a `[[nodiscard]]`, tales errores de regla ahora producen una advertencia del compilador.
+Las aplicaciones auxiliares de la corrutina ahora se representan también con `[[nodiscard]]`, lo que mejora su facilidad de uso. Si te olvidas de aplicar `co_await` (o no te das cuenta de hacerlo) para que funcionen, debido a `[[nodiscard]]`, esos errores ahora producen una advertencia del compilador.
 
-#### <a name="help-with-diagnosing-stack-allocations"></a>Ayudar a diagnosticar las asignaciones de la pila
+#### <a name="help-with-diagnosing-stack-allocations"></a>Ayuda con el diagnóstico de las asignaciones de pilas
 
-Dado que los nombres de clase proyectados y la implementación son (de forma predeterminada), los mismos y solo difieren en el espacio de nombres, es posible confundir el uno del otro y crear accidentalmente una implementación en la pila, en lugar de mediante el [ **realizar** ](/uwp/cpp-ref-for-winrt/make) familia de aplicaciones auxiliares. Esto puede ser difícil de diagnosticar en algunos casos, porque es posible que se destruya el objeto mientras haya referencias pendientes de vuelo. Una aserción ahora toma esto, para las compilaciones de depuración. Mientras que la aserción no detecta la asignación de pila dentro de una corrutina, sin embargo, es útil para detectar la mayoría de estos errores.
+Dado que los nombres de las clases de proyección y de implementación son (de manera predeterminada) los mismos y solo difieren por espacio de nombres, es posible confundir el uno con el otro y crear accidentalmente una implementación en la pila, en lugar de utilizar la familia de aplicaciones auxiliares [**make**](/uwp/cpp-ref-for-winrt/make). Esto puede ser difícil de diagnosticar en algunos casos, porque el objeto puede destruirse mientras las referencias pendientes aún están presentes. Una aserción ahora recoge esto para las compilaciones de depuración. Aunque la aserción no detecta la asignación de pilas dentro de una corrutina, es útil para detectar la mayoría de estos errores.
 
-#### <a name="improved-capture-helpers-and-variadic-delegates"></a>Las aplicaciones auxiliares de captura mejorada y delegados variádicas
+#### <a name="improved-capture-helpers-and-variadic-delegates"></a>Aplicaciones auxiliares de captura mejoradas y delegados variádicos
 
-Esta actualización corrige la limitación con las aplicaciones auxiliares de captura, permitiendo así tipos proyectados. Esto aparece ahora y, a continuación, con la API de interoperabilidad de Windows en tiempo de ejecución, cuando se devuelven un tipo proyectado.
+Esta actualización corrige la limitación con las aplicaciones auxiliares de captura al admitir también los tipos proyectados. Esto aparece de vez en cuando con las API de interoperabilidad de Windows Runtime, cuando devuelven un tipo proyectado.
 
-Esta actualización también agrega compatibilidad para [ **get_strong** ](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) y [ **get_weak** ](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) al crear un delegado variádicas (no Windows en tiempo de ejecución).
+Esta actualización también agrega compatibilidad para [**get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) y [**get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) al crear un delegado variádico (que no sea de Windows Runtime).
 
-#### <a name="support-for-deferred-destruction-and-safe-qi-during-destruction"></a>Compatibilidad con QI seguro durante la destrucción y la destrucción aplazada
+#### <a name="support-for-deferred-destruction-and-safe-qi-during-destruction"></a>Compatibilidad con la destrucción diferida y con QueryInterface seguro durante la destrucción
 
-Una aplicación XAML se puede obtener en dificultades debido a su necesidad de realizar una [ **QueryInterface** ](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) (QI) en un destructor, para poder llamar a alguna implementación limpieza hacia arriba o hacia abajo en la jerarquía. Sin embargo, que llamada implica un QI después de recuento de referencias del objeto ya ha había llegado a cero. Esta actualización agrega compatibilidad para contra rebotes el recuento de referencias, lo que garantiza una vez que llega a cero que nunca se pueden recuperar; mientras sigue permitiendo el QI para temporales que se necesita durante la destrucción. Este procedimiento es inevitable en ciertas aplicaciones/controles de XAML, y C++/WinRT ahora es resistente a él.
+Una aplicación XAML puede tener dificultades debido a su necesidad de realizar [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) en un destructor, con el fin de llamar a una implementación de limpieza arriba o abajo en la jerarquía. Pero, esa llamada implica a QueryInterface después de que el recuento de referencias del objeto ya haya llegado a cero. Esta actualización agrega compatibilidad para eliminar el rebote del recuento de referencias, lo que garantiza que una vez que llegue a cero nunca se pueda recuperar; al mismo tiempo permite llamar a QueryInterface para cualquier archivo temporal que se requiera durante la destrucción. Este procedimiento no se puede evitar en ciertas aplicaciones o controles XAML, y C++/WinRT es ahora resistente a él.
 
-Se puede aplazar la destrucción proporcionando estático **final_release** de función y pasar la propiedad de la **unique_ptr** a algún otro contexto.
+Se puede aplicar la destrucción proporcionando una función estática **final_release** y trasladando la propiedad de **unique_ptr** a otro contexto.
 
 ```cppwinrt
 struct Sample : implements<Sample, IStringable>
@@ -222,7 +222,7 @@ struct Sample : implements<Sample, IStringable>
 };
 ```
 
-En el ejemplo siguiente, una vez el **MainPage** se libera (por última vez), **final_release** se llama. Que invierte en función de cinco segundos de espera (en el grupo de subprocesos), y, a continuación, se reanuda mediante la página **distribuidor** (que requiere el QI, AddRef/Release funcione). A continuación, borra el **unique_ptr**, lo que hace que el **MainPage** destructor llama realmente a obtener. Incluso aquí, **DataContext** se llama, lo que requiere un QI para **IFrameworkElement**. Obviamente, no tiene que implementar su **final_release** como una corrutina. Pero eso funciona y resulta muy sencillo mover la destrucción a un subproceso diferente.
+En el ejemplo siguiente, cuando **MainPage** se libera (por última vez), se llama a **final_release**. Esa función pasa cinco segundos esperando (en el grupo de subprocesos) y después se reanuda mediante el **distribuidor** de la página (que requiere QueryInterface, AddRef o Release para funcionar). A continuación, borra **unique_ptr**, lo que hace que se llame al destructor **MainPage**. Incluso aquí, se llama a **DataContext**, que requiere QueryInterface para **IFrameworkElement**. Obviamente, no tiene que implementar **final_release** como una corrutina. Pero eso funciona y hace que sea muy sencillo mover la destrucción a un subproceso diferente.
 
 ```cppwinrt
 struct MainPage : PageT<MainPage>
@@ -247,80 +247,80 @@ struct MainPage : PageT<MainPage>
 };
 ```
 
-#### <a name="improved-support-for-com-style-single-interface-inheritance"></a>Compatibilidad mejorada para la herencia única interfaz de estilo com.
+#### <a name="improved-support-for-com-style-single-interface-inheritance"></a>Compatibilidad mejorada para la herencia de interfaz única de estilo COM
 
-Así como para la programación de Windows en tiempo de ejecución, C++/WinRT también se utiliza para crear y consumir API COM solo. Esta actualización hace posible implementar un servidor COM donde existe una jerarquía de la interfaz. Esto no es necesario para el tiempo de ejecución de Windows; pero es necesario para algunas implementaciones de COM.
+Al igual que para la programación de Windows Runtime, C++/WinRT también se utiliza para crear y consumir API solo COM. Esta actualización permite implementar un servidor COM donde existe una jerarquía de interfaces. Esto no es necesario para Windows Runtime, pero sí para algunas implementaciones COM.
 
-#### <a name="correct-handling-of-out-params"></a>Correcto control de `out` params
+#### <a name="correct-handling-of-out-params"></a>Control correcto de parámetros `out`
 
-Puede ser complicado trabajar con `out` params; especialmente las matrices de Windows en tiempo de ejecución. Con esta actualización, C++/WinRT es considerablemente más sólida y resistente a errores en cuanto a `out` params y matrices; si esos parámetros llegan a través de una proyección de lenguaje, o de un desarrollador de COM quién está usando la ABI sin procesar y quién está realizando Error de no inicializar las variables de forma coherente. En cualquier caso, C++/WinRT ahora hace lo correcto en cuanto a entregar tipos proyectados a la ABI (recordando liberar cualquier recurso) y en cuanto a pone a cero o borrarlos de los parámetros que llegan a través de ABI.
+Puede ser difícil trabajar con parámetros `out`, en particular con matrices de Windows Runtime. Con esta actualización, C++/WinRT es considerablemente más sólido y resistente a errores cuando se trata de parámetros y matrices `out`; ya sea que esos parámetros lleguen a través de una proyección de lenguaje, o de un desarrollador COM que esté usando ABI básico, y que esté cometiendo el error de no inicializar las variables de forma coherente. En cualquier caso, C++/WinRT ahora hace lo correcto cuando se trata de entregar los tipos proyectados a ABI (recordando liberar cualquier recurso) y cuando se trata de poner a cero o borrar los parámetros que llegan a través de ABI.
 
-#### <a name="events-now-handle-invalid-tokens-reliably"></a>Eventos ahora controlan forma confiable los tokens no válidos
+#### <a name="events-now-handle-invalid-tokens-reliably"></a>Los eventos ahora controlan de forma confiable los tokens no válidos
 
-El [ **winrt::event** ](/uwp/cpp-ref-for-winrt/event) implementación ahora controla correctamente el caso donde su **quitar** se llama al método con un valor de token no válido (un valor que no está presente en el matriz).
+La implementación de [**winrt::event**](/uwp/cpp-ref-for-winrt/event) ahora controla correctamente el caso en el que se llama al método **remove** con un valor de token no válido (un valor que no está presente en la matriz).
 
-#### <a name="coroutine-locals-are-now-destroyed-before-the-coroutine-returns"></a>Variables locales de corrutina ahora se destruyen antes de que la corrutina
+#### <a name="coroutine-locals-are-now-destroyed-before-the-coroutine-returns"></a>Las variables locales de la corrutina ahora se destruyen antes de que regrese la corrutina.
 
-La forma tradicional de la implementación de un tipo de corrutina puede permitir que las variables locales dentro de la corrutina se destruye *después* la corrutina Devuelve o se completa (en lugar de antes de la suspensión final). La reanudación de cualquier objeto waiter ahora se aplaza hasta que la suspensión final, con el fin de evitar este problema y se acumulan otras ventajas.
+La forma tradicional de implementar un tipo de corrutina puede permitir que se destruyan las variables locales dentro de la corrutina *después de*  que la corrutina regrese o se complete (en lugar de antes de la suspensión final). La reanudación de cualquier objeto waiter se aplaza hasta la suspensión final, con el fin de evitar este problema y acumular otras ventajas.
 
-## <a name="news-and-changes-in-windows-sdk-version-100177630-windows-10-version-1809"></a>Noticias y los cambios, en la versión 10.0.17763.0 del SDK de Windows (Windows 10, versión 1809)
+## <a name="news-and-changes-in-windows-sdk-version-100177630-windows-10-version-1809"></a>Noticias y cambios de la versión 10.0.17763.0 de Windows SDK (Windows 10, versión 1809)
 
-En la tabla siguiente contiene las noticias y los cambios para C++/WinRT en la versión 10.0.17763.0 del SDK de Windows (Windows 10, versión 1809).
+En la tabla siguiente se incluyen las noticias y los cambios de C++/WinRT en la versión 10.0.17763.0 de Windows SDK (Windows 10, versión 1809).
 
-| Características nuevas o modificadas | Más información |
+| Característica nueva o modificada | Más información |
 | - | - |
-| **Cambio importante**. Para que se compile, C++ / c++ / WinRT no depende de los encabezados del SDK de Windows. | Consulte [aislada con respecto a los archivos de encabezado de Windows SDK](#isolation-from-windows-sdk-header-files), a continuación. |
-| Ha cambiado el formato de sistema de proyecto de Visual Studio. | Consulte [cómo redestinar C++ / c++ / WinRT proyecto a una versión posterior del SDK de Windows](#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk), a continuación. |
-| Existen nuevas funciones y clases base para ayudarle a pasar un objeto de colección a una función en tiempo de ejecución de Windows, o para implementar sus propias propiedades de la colección y los tipos de colección. | Consulte [colecciones con C++ / c++ / WinRT](collections.md). |
-| Puede usar el [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) extensión de marcado con C++ / c++ / WinRT clases de tiempo de ejecución. | Para obtener más información y ejemplos de código, vea [información general sobre el enlace de datos](/windows/uwp/data-binding/data-binding-quickstart). |
-| Soporte técnico para la cancelación de una corrutina permite registrar una devolución de llamada de cancelación. | Para obtener más información y ejemplos de código, vea [cancelar una operación asincrónica y las devoluciones de llamada de cancelación](concurrency.md#canceling-an-asychronous-operation-and-cancellation-callbacks). |
-| Al crear un delegado que apunta a una función miembro, puede establecer un fuerte o una referencia débil al objeto actual (en lugar de sin formato *esto* puntero) en el punto donde se registra el controlador. | Para obtener más información y ejemplos de código, vea el **si usa una función miembro como un delegado** subsección en la sección [con seguridad de acceso a la *esto* puntero con un delegado de control de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate). |
-| Se corrigieron errores que estaban descubiertos por conformidad mejorada de Visual Studio con el estándar de C++. La cadena de herramientas LLVM y Clang se aprovecha mejor también para validar C++conformidad con los estándares de /WinRT. | Ya no nos encontramos el problema descrito en [¿por qué no mi nuevo proyecto se compilará? Estoy usando Visual Studio 2017 (versión 15.8.0 o superior) y el SDK versión 17134](faq.md#why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134) |
+| **Cambio importante**. Para que se compile, C++/WinRT no depende de los encabezados de Windows SDK. | Consulta [Aislamiento de los archivos de encabezado de Windows SDK](#isolation-from-windows-sdk-header-files), más abajo. |
+| Ha cambiado el formato del sistema de proyecto de Visual Studio. | Consulta [Procedimientos para redestinar el proyecto de C++/WinRT a una versión posterior de Windows SDK](#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
+| Hay nuevas funciones y clases base para ayudar a pasar un objeto de colección a una función de Windows Runtime o implementar tus propias propiedades de la colección y los tipos de colección. | Consulta [Colecciones con C++/WinRT](collections.md). |
+| Puedes usar la extensión de marcado [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) con tus clases del entorno de ejecución de C++/WinRT. | Para obtener más información y ejemplos de código, consulta [Introducción al enlace de datos](/windows/uwp/data-binding/data-binding-quickstart). |
+| La compatibilidad con la cancelación de una corrutina te permite registrar una devolución de llamada de cancelación. | Para obtener más información y ejemplos de código, consulta [Cancelación de una operación asincrónica y devoluciones de llamadas de cancelación](concurrency.md#canceling-an-asychronous-operation-and-cancellation-callbacks). |
+| Al crear un delegado que apunta a una función de miembro, puedes establecer una referencia fuerte o débil al objeto actual (en lugar de un puntero *this* básico) en el punto en el que se registra el controlador. | Para obtener información y ejemplos de código, consulta la subsección **Si usas una función miembro como delegado** en la sección [Acceso seguro al puntero *this* con un delegado de control de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate). |
+| Se han corregido los errores que se detectaron por la mejor conformidad de Visual Studio con el estándar C++. La cadena de herramientas LLVM y Clang también se aprovechan mejor para validar la conformidad con los estándares de C++/WinRT. | Ya no te encontrarás con el problema descrito en [¿Por qué no se va a compilar mi nuevo proyecto? Estoy usando Visual Studio 2017 (versión 15.8.0 o superior) y el SDK versión 17134](faq.md#why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134) |
 
 Otros cambios.
 
-- **Cambio importante**. [**winrt::get_abi(winrt::hstring const&)** ](/uwp/cpp-ref-for-winrt/get-abi) ahora devuelve `void*` en lugar de `HSTRING`. Puede usar `static_cast<HSTRING>(get_abi(my_hstring));` para obtener una cadena HSTRING.
-- **Cambio importante**. [**winrt::put_abi(winrt::hstring&)** ](/uwp/cpp-ref-for-winrt/put-abi) ahora devuelve `void**` en lugar de `HSTRING*`. Puede usar `reinterpret_cast<HSTRING*>(put_abi(my_hstring));` para obtener una cadena HSTRING *.
-- **Cambio importante**. HRESULT ahora se proyecta como **winrt::hresult**. Si necesita un valor HRESULT (para la comprobación de tipos, o para admitir rasgos de tipo), puede `static_cast` un **winrt::hresult**. En caso contrario, **winrt::hresult** convierte a HRESULT, siempre y cuando incluya `unknwn.h` antes de incluir cualquier C++ / c++ / WinRT encabezados.
-- **Cambio importante**. GUID ahora se proyecta como **winrt::guid**. Para las API que implementan, debe usar **winrt::guid** para los parámetros GUID. En caso contrario, **winrt::guid** convierte en GUID, siempre y cuando incluya `unknwn.h` antes de incluir cualquier C++/WinRT encabezados.
-- **Cambio importante**. El [ **winrt::handle_type constructor** ](/uwp/cpp-ref-for-winrt/handle-type#handle_typehandle_type-constructor) se ha protegido mediante la realización de explícita (es ahora más difícil para escribir código incorrecto con él). Si tiene que asignar un valor de identificador sin formato, llame a la [ **handle_type::attach función** ](/uwp/cpp-ref-for-winrt/handle-type#handle_typeattach-function) en su lugar.
-- **Cambio importante**. Las firmas de **WINRT_CanUnloadNow** y **WINRT_GetActivationFactory** han cambiado. No debe declarar estas funciones en absoluto. En su lugar, incluya `winrt/base.h` (que se incluye automáticamente si se incluye C++ / c++ / archivos de encabezado del espacio de nombres de WinRT Windows) para incluir las declaraciones de estas funciones.
-- Para el [ **winrt::clock struct**](/uwp/cpp-ref-for-winrt/clock), **from_FILETIME/to_FILETIME** están en desuso en favor de **from_file_time/to_file_time**.
-- API que esperan **IBuffer** se simplifican los parámetros. Aunque la mayoría de las API prefiere colecciones o matrices, suficiente API se basan en **IBuffer** que debían ser más fácil usar estas API desde C++. Esta actualización proporciona acceso directo a los datos detrás de un **IBuffer** implementación, con la misma convención de nomenclatura de datos utilizada por los contenedores de la biblioteca estándar de C++. Esto evita también chocar con nombres de los metadatos que convencionalmente comienzan con una letra mayúscula.
-- Generación de código mejorada: varias mejoras para reducir el tamaño del código, mejorar la inserción y optimizar la caché del generador.
-- Quita la recursividad innecesaria. Cuando la hace la línea de comandos de referencia a una carpeta, en lugar de a un determinado `.winmd`, `cppwinrt.exe` herramienta ya no busca de forma recursiva `.winmd` archivos. El `cppwinrt.exe` herramienta también ahora controla los duplicados de manera más inteligente, lo que sea más resistente a errores del usuario y mal formado a `.winmd` archivos.
-- Punteros inteligentes reforzados. Anteriormente, el revokers de evento no se pudo revocar cuando move-asignan un nuevo valor. Esto ayudó a descubrir un problema donde las clases de puntero inteligente no estaban Gestión fiable de asignación automática; ha modificado en el [ **winrt::com_ptr struct plantilla**](/uwp/cpp-ref-for-winrt/com-ptr). **winrt::com_ptr** se ha corregido, y el revokers de evento se ha corregido para controlar la semántica de transferencia correctamente para que estos revocarán tras la asignación.
+- **Cambio importante**. [**winrt::get_abi(winrt::hstring const&)** ](/uwp/cpp-ref-for-winrt/get-abi) ahora devuelve `void*` en lugar de `HSTRING`. Puedes usar `static_cast<HSTRING>(get_abi(my_hstring));` para obtener una cadena HSTRING.
+- **Cambio importante**. [**winrt::put_abi(winrt::hstring&)** ](/uwp/cpp-ref-for-winrt/put-abi) ahora devuelve `void**` en lugar de `HSTRING*`. Puede usar `reinterpret_cast<HSTRING*>(put_abi(my_hstring));` para obtener una cadena HSTRING*.
+- **Cambio importante**. HRESULT ahora se proyecta como **winrt::hresult**. Si necesitas un valor HRESULT (para la comprobación de tipos o para admitir rasgos de tipo), puedes `static_cast` un **winrt::hresult**. De lo contrario, **winrt::hresult** se convierte en HRESULT, siempre y cuando incluyas `unknwn.h` antes de incluir cualquier encabezado de C++/WinRT.
+- **Cambio importante**. La GUID ahora se proyecta como **winrt::guid**. Para las API que implementes, debes usar **winrt::guid** para los parámetros GUID. De lo contrario, **winrt::guid** se convierte en GUID, siempre y cuando incluyas `unknwn.h` antes de incluir cualquier encabezado de C++/WinRT.
+- **Cambio importante**. El [**constructor winrt::handle_type**](/uwp/cpp-ref-for-winrt/handle-type#handle_typehandle_type-constructor) se ha protegido haciéndose explícito (ahora es más difícil escribir código incorrecto con él). Si tienes que asignar un valor básico de controlador, llama a la [**función handle_type::attach** ](/uwp/cpp-ref-for-winrt/handle-type#handle_typeattach-function) en su lugar.
+- **Cambio importante**. Las firmas de **WINRT_CanUnloadNow** y **WINRT_GetActivationFactory** han cambiado. No debes declarar estas funciones. En su lugar, contiene `winrt/base.h` (que se incluye automáticamente si contiene cualquier archivo de encabezado del espacio de nombres de Windows de C++/WinRT) para incluir las declaraciones de estas funciones.
+- Para la [**estructura winrt::clock**](/uwp/cpp-ref-for-winrt/clock), **from_FILETIME/to_FILETIME** están en desuso a favor de **from_file_time/to_file_time**.
+- Las API que esperan los parámetros **IBuffer** se simplifican. Aunque la mayoría de las API prefieren colecciones o matrices, hay suficientes API que dependen de **IBuffer** para que sea más fácil utilizarlas desde C++. Esta actualización proporciona acceso directo a los datos que se encuentran detrás de una implementación **IBuffer**, mediante la misma convención de nomenclatura de datos utilizada por los contenedores de la biblioteca estándar de C++. Esto también evita chocar con nombres de metadatos que normalmente comienzan con una letra mayúscula.
+- Generación del código mejorada: varias mejoras para reducir el tamaño del código, mejorar la inserción y optimizar el almacenamiento en caché del generador.
+- Recursividad innecesaria retirada. Cuando la línea de comandos se refiere a una carpeta, en lugar de a un `.winmd` específico, la herramienta `cppwinrt.exe` ya no busca recursivamente archivos `.winmd`. La herramienta `cppwinrt.exe` también controla ahora los duplicados de forma más inteligente, que la hace más resistente a los errores del usuario y a los archivos `.winmd` mal formados.
+- Punteros inteligentes protegidos. Anteriormente, los revocadores de eventos no se pudieron revocar cuando se movía o asignaba un nuevo valor. Esto ayudó a descubrir un problema en el que las clases de punteros inteligentes no estaban tratando de forma confiable la autoasignación, con raíz en la [**plantilla de estructura winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr). **winrt::com_ptr** se ha corregido y los revocadores de eventos resueltos para controlar la semántica de movimiento correctamente para que se revoquen en el momento de la asignación.
 
 > [!IMPORTANT]
-> Se realizaron cambios importantes en el [C++ / c++ / extensión de Visual Studio (VSIX) de WinRT](https://aka.ms/cppwinrt/vsix), tanto en la versión 1.0.181002.2 y, a continuación, más adelante en la versión 1.0.190128.4. Para obtener información detallada de estos cambios y cómo afectan a los proyectos existentes, [compatibilidad con Visual Studio C++ / c++ / WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) y [versiones anteriores de la extensión VSIX](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension).
+> Se realizaron cambios importantes en la [Extensión de Visual Studio (VSIX) de C++/WinRT](https://aka.ms/cppwinrt/vsix), tanto en la versión 1.0.181002.2 como después en la versión 1.0.190128.4. Para obtener más información sobre estos cambios y cómo afectan a los proyectos existentes, consulta [Compatibilidad de Visual Studio con C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) y [Versiones anteriores de la extensión VSIX](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension).
 
 ### <a name="isolation-from-windows-sdk-header-files"></a>Aislamiento de los archivos de encabezado de Windows SDK
 
-Potencialmente, esto es un cambio importante para el código.
+Esto es posiblemente un cambio importante para el código.
 
-Para que se compile, C++ / c++ / WinRT ya no depende de los archivos de encabezado desde el SDK de Windows. Archivos de encabezado de la biblioteca de tiempo de ejecución de C (CRT) y la biblioteca de plantillas estándar (STL) de C++ también no incluyen los encabezados del SDK de Windows. Y que mejora el cumplimiento de estándares, evita la dependencia involuntario y reduce en gran medida el número de macros que se deben protegerse.
+Para su compilación, C++/WinRT ya no depende de los archivos de encabezado de Windows SDK. Los archivos de encabezado de la biblioteca de tiempo de ejecución de C (CRT) y de la biblioteca de plantillas estándar de C++ (STL) tampoco incluyen ningún encabezado de Windows SDK. Y eso mejora el cumplimiento de los estándares, evita dependencias inadvertidas y reduce en gran medida el número de macros contra las que debes protegerte.
 
-Esta independencia significa que C++ / c++ / WinRT es ahora más portátil y con las normas y contribuye a mejorar la posibilidad de que se convierta en una biblioteca multiplataforma y compilador cruzado. También significa que C++ / c++ / WinRT encabezados no están afectadas negativamente macros.
+Esta independencia significa que C++/WinRT es ahora más portátil y cumple con los estándares, y aumenta la posibilidad de que se convierta en una biblioteca multiplataforma y multicompiladores. También significa que los encabezados de C++/WinRT no se ven afectados negativamente por las macros.
 
-Si previamente ha dejado a C++ / c++ / WinRT para incluir los encabezados de Windows en el proyecto, ahora deberá incluir usted mismo. Es, en cualquier caso, siempre recomendado para incluir explícitamente los encabezados que depende y no lo deja a otra biblioteca para incluirlas en el.
+Si anteriormente has dejado que C++/WinRT incluyera cualquier encabezado de Windows en tu proyecto, ahora tendrás que incluirlo tú mismo. En cualquier caso, siempre se recomienda incluir explícitamente los encabezados de los que dependes y no dejar que otra biblioteca los incluya por ti.
 
-Actualmente, las únicas excepciones a aislamiento de archivo de encabezado de Windows SDK son intrínsecos y valores numéricos. No hay ningún problema conocido con estas últimas dependencias restantes.
+Actualmente, las únicas excepciones al aislamiento de los archivos de encabezado de Windows SDK son intrínsecas y numéricas. No hay problemas conocidos con estas últimas dependencias.
 
-En el proyecto, puede habilitar volver a la interoperabilidad con los encabezados del SDK de Windows si necesita. Por ejemplo, podría implementar una interfaz COM (arraigada en [ **IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)). Por ejemplo, incluye `unknwn.h` antes de incluir cualquier C++ / c++ / WinRT encabezados. Si lo hace C / c++ / WinRT biblioteca base para habilitar varios enlaces admitir las interfaces COM clásicas. Para obtener un ejemplo de código, vea [componentes COM de autor con C++ / c++ / WinRT](author-coclasses.md). De forma similar, incluir explícitamente los encabezados de Windows SDK que declaran tipos o funciones que desea llamar.
+En el proyecto, puedes volver a habilitar la interoperabilidad con los encabezados de Windows SDK si lo necesitas. Por ejemplo, podrías implementar una interfaz COM (con raíz en [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)). Por ejemplo, incluye `unknwn.h` antes de incluir cualquier encabezado de C++/WinRT. Esto hace que la biblioteca base de C++/WinRT permita que varios enlaces admitan las interfaces COM clásicas. Para ver un ejemplo de código, consulta [Crear componentes COM con C++/WinRT](author-coclasses.md). Del mismo modo, incluye explícitamente cualquier otro encabezado de Windows SDK que declare los tipos o funciones que deseas llamar.
 
-### <a name="how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>Cómo redirigir C++ / c++ / WinRT proyecto a una versión posterior del SDK de Windows
+### <a name="how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>Procedimientos para redestinar el proyecto de C++/WinRT a una versión posterior de Windows SDK
 
-El método para redestinar el proyecto que es probable que produzca el problema del compilador y vinculador menor también es más trabajosa. Ese método implica crear un nuevo proyecto (como destino la versión del SDK de Windows de su elección) y, a continuación, copiar archivos a través el nuevo proyecto desde el antiguo. Habrá secciones de la antigua `.vcxproj` y `.vcxproj.filters` archivos que basta con que copie en Guardar, agregar archivos en Visual Studio.
+El método para redestinar tu proyecto que probablemente tenga como resultado un menor número de problemas con el compilador y el enlazador es también el que requiere más trabajo. Este método implica la creación de un nuevo proyecto (dirigido a la versión de Windows SDK que prefieras) y, después, la copia de archivos de tu antiguo proyecto al nuevo. Habrá secciones de tus antiguos archivos `.vcxproj` y `.vcxproj.filters` que puedes copiar para guardar y agregar archivos en Visual Studio.
 
-Sin embargo, hay otras dos maneras de redirigir el proyecto en Visual Studio.
+Sin embargo, hay otras dos maneras de redestinar el proyecto en Visual Studio.
 
-- Vaya a la propiedad del proyecto **General** \> **Windows SDK versión**y seleccione **todas las configuraciones de** y **todas las plataformas**. Establecer **Windows SDK versión** a la versión que desea tener como destino.
-- En **el Explorador de soluciones**, haga clic en el nodo del proyecto, haga clic en **redestinar proyectos**, elija las versiones que desea tener como destino y, a continuación, haga clic en **Aceptar**.
+- En la propiedad del proyecto **General** \> **Versión del SDK de Windows**, selecciona **Todas las configuraciones** y **Todas las plataformas**. Establece la **versión de Windows SDK** en la que quieres tener como destino.
+- En el **Explorador de soluciones**, haz clic con el botón derecho en el nodo del proyecto, haz clic en **Redestinar proyectos**, selecciona la versión o versiones que quieras utilizar como destino y, a continuación, haz clic en **Aceptar**.
 
-Si aparecen errores del vinculador o compilador después de usar cualquiera de estos dos métodos, puede probar la solución de limpieza (**compilar** > **Limpiar solución** o elimine manualmente todos archivos y carpetas temporales) antes de intentar volver a crearla.
+Si encuentras algún error del compilador o del enlazador después de usar cualquiera de estos dos métodos, puedes intentar limpiar la solución (**Compilar** > **Limpiar solución** o eliminar manualmente todas las carpetas y archivos temporales) antes de intentar volver a realizar la compilación.
 
-Si genera el compilador de C++ "*error C2039: 'IUnknown': no es un miembro de '\`espacio de nombres global''* ", a continuación, agregue `#include <unknwn.h>` a la parte superior de su `pch.h` archivo (antes de incluir cualquier C++ / c++ / WinRT encabezados).
+Si el compilador de C++ genera el "*error C2039: IUnknown': no es miembro de "\`espacio de nombres global''* ", agregue después `#include <unknwn.h>` a la parte superior del archivo `pch.h` (antes de incluir cualquier encabezado de C++/WinRT).
 
-También es posible que deba agregar `#include <hstring.h>` después de eso.
+También es posible que debas agregar `#include <hstring.h>` después de eso.
 
-Si genera el vinculador de C++ "*error LNK2019: símbolo externo sin resolver _WINRT_CanUnloadNow@0 hace referencia en la función _VSDesignerCanUnloadNow@0* ", a continuación, se puede resolver mediante la adición de `#define _VSDESIGNER_DONT_LOAD_AS_DLL` a su `pch.h` archivo.
+Si el enlazador de C++ genera un "*error LNK2019: símbolo externo sin resolver_WINRT_CanUnloadNow@0 al que se hace referencia en la función _VSDesignerCanUnloadNow@0* ", entonces podrás resolverlo mediante la adición de `#define _VSDESIGNER_DONT_LOAD_AS_DLL` al archivo `pch.h`.

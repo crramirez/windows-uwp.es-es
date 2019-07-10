@@ -1,5 +1,5 @@
 ---
-Description: Información general de los patrones comunes de página y elementos de interfaz de usuario para mostrar el contenido en su aplicación para UWP.
+Description: Introducción a los patrones de página y elementos de interfaz de usuario comunes para mostrar el contenido en tu aplicación para UWP.
 title: Conceptos básicos del diseño de contenido para aplicaciones para la Plataforma universal de Windows (UWP)
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e5b46223ea7dfa5e43b5a50a04a4c3f31307d49
-ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913965"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "63796323"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de contenido para las aplicaciones para UWP
 
@@ -41,7 +41,7 @@ Las colecciones permiten a los usuarios examinar grupos de contenido o datos. La
 
 ### <a name="masterdetail"></a>Maestro y detalles
 
-![maestro y detalles](images/content-basics/master-detail.png)
+![Maestro/detalles](images/content-basics/master-detail.png)
 
 El modelo [maestro y detalles](../controls-and-patterns/master-details.md) consta de una vista de lista (maestra) y una vista de contenido (detalles). Ambos paneles son fijos y tienen un desplazamiento vertical. Hay una relación clara entre el elemento de lista y la vista de contenido: el elemento de la vista maestra se selecciona y la vista de detalles se actualiza en consonancia. Además de proporcionar navegación por la vista de detalles, los elementos de la vista maestra pueden agregarse y quitarse.
 

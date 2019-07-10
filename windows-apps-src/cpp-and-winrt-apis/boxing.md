@@ -1,27 +1,27 @@
 ---
 description: Un valor escalar debe estar encapsulado dentro de un objeto de clase de referencia antes de pasarlo a una función que espera **IInspectable**. Dicho proceso de encapsulación se conoce como la *conversión boxing* del valor.
-title: Conversión boxing y unboxing de valores escalar a IInspectable con C++/WinRT
+title: Conversión boxing y unboxing de valores escalares a IInspectable con C++/WinRT
 ms.date: 04/23/2019
 ms.topic: article
-keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, XAML, control, conversión boxing, escalar, valor
+keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, XAML, control, boxing, scalar, value
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bd69e07f2285b6c05581a60ddbaf4b394d0b6d0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66361202"
 ---
-# <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>Conversión boxing y unboxing de valores escalar a IInspectable con C++/WinRT
+# <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>Conversión boxing y unboxing de valores escalares a IInspectable con C++/WinRT
  
-La [**interfaz IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) es la interfaz de raíz de cada clase en tiempo de ejecución de Windows Runtime (WinRT). Esto es una idea análoga de [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) que se encuentra en la raíz de cada interfaz y clase COM; y **System.Object** que se encuentra en la raíz de cada clase con [sistema de tipo común](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system).
+La [**interfaz IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) es la interfaz de raíz de todas las clases en tiempo de ejecución de Windows Runtime (WinRT). Esto es una idea análoga a que [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) se encuentra en la raíz de todas las clases e interfaces COM y a que **System.Object** se encuentra en la raíz de todas las clases [Common Type System ](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system).
 
-En otras palabras, una función que espera **IInspectable** se puede pasar a una instancia de cualquier clase en tiempo de ejecución. Pero no puedes pasar directamente un valor escalar, como un valor numérico o de texto, a este tipo de función. En su lugar, un valor escalar debe estar encapsulado dentro de un objeto de clase de referencia. Dicho proceso de encapsulación se conoce como la *conversión boxing* del valor.
+En otras palabras, una función que espera **IInspectable** se puede pasar a una instancia de cualquier clase en tiempo de ejecución. Sin embargo, no se puede pasar directamente un valor escalar, como un valor numérico o de texto, a dicha función. En su lugar, los valores escalares deben encapsularse dentro de un objeto de clase de referencia. Dicho proceso de encapsulación se conoce como la *conversión boxing* del valor.
 
-[C++/ WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) proporciona el [ **winrt::box_value** ](/uwp/cpp-ref-for-winrt/box-value) función, que toma un valor escalar y devuelve el valor en la caja en una **IInspectable**. Para realizar la conversión unboxing de una **IInspectable** de vuelta a un valor escalar, están las funciones [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) y [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or).
+[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) proporciona la función [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value), que toma un valor escalar y devuelve el valor de conversión boxing a **IInspectable**. Para realizar la conversión unboxing de **IInspectable** en un valor escalar se usan las funciones [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) y [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or).
 
-## <a name="examples-of-boxing-a-value"></a>Ejemplos de conversiones boxing de un valor
-La función de descriptor de acceso [**LaunchActivatedEventArgs::Arguments**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.Arguments) devuelve un [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring), que es un valor escalar. Podemos hacer la conversión boxing de dicho valor **hstring** y pasarlo a una función que espera **IInspectable** de este modo.
+## <a name="examples-of-boxing-a-value"></a>Ejemplos de conversión boxing de un valor
+La función del descriptor de acceso [**LaunchActivatedEventArgs::Arguments**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.Arguments) devuelve [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring), que es un valor escalar. Podemos hacer la conversión boxing del valor **hstring** y pasarlo a una función que espera **IInspectable** de este modo.
 
 ```cppwinrt
 void App::OnLaunched(LaunchActivatedEventArgs const& e)
@@ -32,16 +32,16 @@ void App::OnLaunched(LaunchActivatedEventArgs const& e)
 }
 ```
 
-Para establecer la propiedad de contenido de un [**Button**](/uwp/api/windows.ui.xaml.controls.button) XAML, llama a la función de mutación [**Button::Content**](/uwp/api/windows.ui.xaml.controls.contentcontrol.content?). Para establecer la propiedad de contenido a un valor de cadena, puedes usar este código.
+Para establecer la propiedad de contenido de una clase [**Button**](/uwp/api/windows.ui.xaml.controls.button) de XAML, llama a la función de mutación [**Button::Content**](/uwp/api/windows.ui.xaml.controls.contentcontrol.content?). Para establecer la propiedad de contenido a un valor de cadena, puedes usar este código.
 
 ```cppwinrt
 Button().Content(winrt::box_value(L"Clicked"));
 ```
 
-Primero, el constructor de cadenas [**hstring**](/uwp/cpp-ref-for-winrt/hstring) convierte la cadena literal en un **hstring**. A continuación, se invoca la sobrecarga de **winrt::box_value** que toma un **hstring**.
+En primer lugar, el constructor de conversión [**hstring**](/uwp/cpp-ref-for-winrt/hstring) convierte el literal de la cadena en un **hstring**. Luego, se invoca la sobrecarga de **winrt::box_value** que toma un **hstring**.
 
-## <a name="examples-of-unboxing-an-iinspectable"></a>Ejemplos de conversiones unboxing de una IInspectable
-En tus propias funciones que esperan **IInspectable**, puedes usar [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) para realizar una conversión unboxing, y puedes usar [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or) para realizar una conversión unboxing con un valor predeterminado.
+## <a name="examples-of-unboxing-an-iinspectable"></a>Ejemplos de conversiones unboxing de IInspectable
+En tus propias funciones que esperan **IInspectable**, puedes usar [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) para realizar una conversión unboxing y [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or) para realizar una conversión unboxing con un valor predeterminado.
 
 ```cppwinrt
 void Unbox(winrt::Windows::Foundation::IInspectable const& object)
@@ -52,8 +52,8 @@ void Unbox(winrt::Windows::Foundation::IInspectable const& object)
 }
 ```
 
-## <a name="determine-the-type-of-a-boxed-value"></a>Determinar el tipo de un valor empaquetado
-Si recibes un valor empaquetado y no estás seguro de qué tipo contiene (es necesario conocer su tipo para aplicar la conversión unboxing), a continuación, puedes consultar el valor empaquetado para su interfaz [**IPropertyValue**](/uwp/api/windows.foundation.ipropertyvalue) interfaz y llamar a **Type** en él. Aquí tienes un ejemplo de código.
+## <a name="determine-the-type-of-a-boxed-value"></a>Determinación del tipo de un valor de conversión boxing
+Si recibes un valor de conversión boxing y no estás seguro de qué tipo contiene (necesitas conocer su tipo para aplicar la conversión unboxing), puedes consultar el valor de conversión boxing en su interfaz de [**IPropertyValue**](/uwp/api/windows.foundation.ipropertyvalue) y, después, llamar a **Type** en él. Aquí tienes un ejemplo de código.
 
 ```cppwinrt
 float pi = 3.14f;
@@ -64,7 +64,7 @@ WINRT_ASSERT(piPropertyValue.Type() == winrt::Windows::Foundation::PropertyType:
 
 ## <a name="important-apis"></a>API importantes
 * [Interfaz IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
-* [plantilla de función winrt::box_value](/uwp/cpp-ref-for-winrt/box-value)
-* [struct winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
-* [plantilla de función winrt::unbox_value](/uwp/cpp-ref-for-winrt/unbox-value)
-* [plantilla de función winrt::unbox_value_or](/uwp/cpp-ref-for-winrt/unbox-value-or)
+* [Plantilla de función winrt::box_value](/uwp/cpp-ref-for-winrt/box-value)
+* [Estructura winrt::hstring](/uwp/cpp-ref-for-winrt/hstring)
+* [Plantilla de función winrt::unbox_value](/uwp/cpp-ref-for-winrt/unbox-value)
+* [Plantilla de función winrt::unbox_value_or](/uwp/cpp-ref-for-winrt/unbox-value-or)

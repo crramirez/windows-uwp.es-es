@@ -13,10 +13,10 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: b17220a039612e0b13cd9842800c37c39bf194dd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66362758"
 ---
 # <a name="hyperlinks"></a>Hipervínculos
@@ -25,7 +25,7 @@ ms.locfileid: "66362758"
 
 Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente. Existen dos formas mediante las que se puede agregar un hipervínculo a una aplicación XAML: el elemento de texto **Hyperlink** y el control **HyperlinkButton**.
 
-> **API importantes**: [Elemento de texto de hipervínculo](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [control HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
+> **API importantes**: [Elemento de texto Hyperlink](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [Control HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
 
 ![Botón de hipervínculo](images/controls/hyperlink-button.png)
 
@@ -43,11 +43,11 @@ Elige el tipo correcto de hipervínculo según tus necesidades:
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/HyperlinkButton">abrir la aplicación y ver HyperlinkButton en acción</a>.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/HyperlinkButton">abrirla y ver HyperlinkButton en acción</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -73,7 +73,7 @@ El hipervínculo aparece en línea y fluye con el texto que le rodea:
 
 ![Ejemplo de un hipervínculo como elemento de texto](images/controls_hyperlink-element.png) 
 
-> **Sugerencia**&nbsp;&nbsp;Cuando uses un elemento Hyperlink en un control de texto con otros elementos de texto en XAML, coloca el contenido en un contenedor [Span](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span) y aplica el atributo `xml:space="preserve"` al contenedor Span para mantener el espacio en blanco entre el elemento Hyperlink y otros elementos.
+> **Sugerencia**&nbsp;&nbsp;Cuando uses una clase Hyperlink en un control de texto con otros elementos de texto en XAML, coloca el contenido en un contenedor[Span](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span) y aplica el atributo `xml:space="preserve"` a dicho contenedor para mantener el espacio en blanco entre Hyperlink y otros elementos.
 
 ## <a name="create-a-hyperlinkbutton"></a>Crear un elemento HyperlinkButton
 
@@ -97,7 +97,7 @@ Los botones de hipervínculo con contenido de texto aparecen como texto marcado.
 
 ![Ejemplo de un hipervínculo como control de botón](images/controls_hyperlink-button-image.png)
 
-En este ejemplo se muestra cómo crear un HyperlinkButton en el código.
+En este ejemplo se muestra cómo crear una clase HyperlinkButton en el código.
 
 ```csharp
 var helpLinkButton = new HyperlinkButton();
@@ -109,21 +109,21 @@ helpLinkButton.NavigateUri = new Uri("http://www.contoso.com");
 
 En los dos tipos de hipervínculos, puedes controlar la navegación del mismo modo; puedes establecer la propiedad **NavigateUri** o controlar el evento **Click**.
 
-**Vaya a un URI**
+**Navegación a un identificador URI**
 
 Para usar el hipervínculo para navegar a un URI, establece la propiedad NavigateUri. Cuando un usuario hace clic en el hipervínculo o lo pulsa, el URI especificado se abre en el explorador predeterminado. El explorador predeterminado se ejecuta en un proceso independiente de la aplicación.
 
 > [!NOTE]
-> Un URI se representa mediante la clase [Windows.Foundation.Uri](/uwp/api/windows.foundation.uri). Cuando se programa con .NET, esta clase está oculta y se debe usar la [System.Uri](https://docs.microsoft.com/dotnet/api/system.uri). Para obtener más información, consulta las páginas de referencia de estas clases.
+> Un identificador URI se representa mediante la clase [Windows.Foundation.Uri](/uwp/api/windows.foundation.uri). Cuando se programa con .NET, esta clase está oculta y se debe usar la [System.Uri](https://docs.microsoft.com/dotnet/api/system.uri). Para más información, consulta las páginas de referencia de estas clases.
 
-No es necesario usar esquemas **http:** o **https:** . Se pueden usar esquemas como **ms-appx:** , **ms-appdata:** o **ms-resources:** , si hay contenido de recursos en estas ubicaciones que sea adecuado para cargarlo en un explorador. Sin embargo, se bloquea específicamente el esquema **file:** . Para más información, consulta [Esquemas de URI](https://docs.microsoft.com/previous-versions/windows/apps/jj655406(v=win.10)).
+No es necesario usar esquemas **http:** o **https:** . Esquemas como **ms-appx:** , **ms-appdata:** o **ms-resources:** se pueden usar si hay contenido de recursos en estas ubicaciones que sea adecuado para cargarlo en un explorador. Sin embargo, el esquema **file:** se bloquea específicamente. Para más información, consulta [Esquemas de URI](https://docs.microsoft.com/previous-versions/windows/apps/jj655406(v=win.10)).
 
 Cuando un usuario hace clic en el hipervínculo, el valor de la propiedad NavigateUri se pasa a un controlador de sistema para esquemas y tipos de URI. El sistema inicia entonces la aplicación que esté registrada para el esquema del URI proporcionado para NavigateUri.
 
 Si no quieres que el hipervínculo cargue contenido en un explorador web predeterminado (y no quieres que aparezca un explorador), no establezcas un valor para NavigateUri. En su lugar, controla el evento Click y escribe código que haga lo que quieres.
 
 
-**Controlar el evento de clic**
+**Control del evento Click**
 
 Usa el evento Click para las acciones que no sean iniciar un URI en un explorador, como la navegación dentro de la aplicación. Por ejemplo, si quieres cargar una nueva página de la aplicación, en lugar de abrir un explorador, llama a un método [Frame.Navigate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate) en el controlador de eventos Click para navegar a la nueva página de la aplicación. Si quieres que un URI absoluto y externo se cargue dentro de un control [WebView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview) que también exista en la aplicación, llama a [WebView.Navigate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigate) como parte de la lógica del controlador de eventos Click.
 
@@ -134,7 +134,7 @@ No hay nada que se pueda hacer en el controlador de eventos Click para impedir q
 ## <a name="hyperlink-underlines"></a>Subrayados de los hipervínculos
 De manera predeterminada, los hipervínculos aparecen subrayados. Este subrayado es importante porque ayuda a cumplir los requisitos de accesibilidad. Los usuarios daltónicos se ayudan del subrayado para distinguir entre hipervínculos y otros tipos de texto. Si deshabilita los subrayados, considera la posibilidad de agregar algún otro tipo de diferencia de formato para distinguir los hipervínculos de otros tipos de texto, como FontWeight o FontStyle.
 
-**Elementos de texto de hipervínculo**
+**Elementos de texto Hyperlink**
 
 Puedes establecer la propiedad [UnderlineStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.hyperlink.underlinestyle) para deshabilitar el subrayado. Si lo haces, considera la posibilidad de usar [FontWeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement.fontweight) o [FontStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement.fontstyle) para diferenciar el texto de los vínculos.
 
@@ -160,7 +160,7 @@ Como un elemento Hyperlink no es un [UIElement](https://docs.microsoft.com/uwp/a
 
 El elemento Hyperlink tiene restricciones respecto al contenido que puede existir en su colección de [elementos Inline](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span.inlines). En concreto, un elemento Hyperlink solo permite la clase [Run](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.run) y otros tipos de [Span](/uwp/api/windows.ui.xaml.documents.span) que no sean otro elemento Hyperlink. [InlineUIContainer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.inlineuicontainer) no puede estar en la colección de elementos Inlines de un elemento Hyperlink. Si se intenta agregar contenido restringido, se genera una excepción de argumento no válido o una excepción de análisis XAML.
 
-**Comportamiento de hipervínculo y estilo del tema**
+**Comportamiento de Hyperlink y el tema y estilo**
 
 Hyperlink no hereda de [Control](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control), de modo que no tiene una propiedad [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.style) ni una [Template](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.template). Se pueden modificar las propiedades que se heredan de [TextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement) como, por ejemplo, Foreground o FontFamily, para cambiar la apariencia de un elemento Hyperlink, pero no se puede usar una plantilla ni un estilo comunes para aplicar los cambios. En lugar de usar una plantilla, considere la posibilidad de usar recursos comunes para los valores de las propiedades de Hyperlink a fin de ofrecer una experiencia coherente. Algunas propiedades de Hyperlink usan valores predeterminados de un valor de extensión de marcado {ThemeResource} que proporciona el sistema. Esto permite que la apariencia del elemento Hyperlink cambie de forma adecuada cuando el usuario modifique el tema del sistema en tiempo de ejecución.
 
@@ -169,18 +169,18 @@ El color predeterminado del hipervínculo es el color de énfasis del sistema. P
 ## <a name="recommendations"></a>Recomendaciones
 
 -   Usa los hipervínculos solo para la navegación; no los uses para otras acciones.
--   Usa el estilo Body de la tabla de tipos para los hipervínculos basados en texto. Obtén información sobre [fuentes y la tabla de tipos de Windows 10](../style/typography.md).
+-   Usa el estilo Body de la tabla de tipos para los hipervínculos basados en texto. Obtén información acerca de las [fuentes y la tabla de tipos de Windows 10](../style/typography.md).
 -   Mantén los hipervínculos discretos y suficientemente separados para que el usuario pueda diferenciarlos y seleccionarlos con facilidad.
 -   Agrega información sobre herramientas a los hipervínculos que indican dónde se dirigirá al usuario. Si se dirige al usuario a un sitio externo, incluye el nombre de dominio de nivel superior dentro de la información sobre herramientas y un estilo de texto con un color de fuente secundario.
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplo de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): ve todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Controles de texto](text-controls.md)
-- [Directrices para información sobre herramientas](tooltips.md)
+- [Directrices de información sobre herramientas](tooltips.md)
 
 **Para desarrolladores (XAML)**
 - [Clase Windows.UI.Xaml.Documents.Hyperlink](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink)
