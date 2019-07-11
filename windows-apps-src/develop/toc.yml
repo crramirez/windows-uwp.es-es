@@ -822,6 +822,8 @@
           href: ../cpp-and-winrt-apis/binding-collection.md
         - name: Controles personalizados (con plantilla) de XAML
           href: ../cpp-and-winrt-apis/xaml-cust-ctrl.md
+        - name: Pasar parámetros a los límites de la ABI
+          href: ../cpp-and-winrt-apis/pass-parms-to-abi.md
         - name: Consumir componentes COM
           href: ../cpp-and-winrt-apis/consume-com.md
         - name: Crear componentes COM
