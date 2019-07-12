@@ -6,12 +6,12 @@ ms.date: 08/22/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, muestra, directx, conceptos básicos, games, sample, fundamentals
 ms.localizationpriority: medium
-ms.openlocfilehash: 21dcbbcc1fde25877592fafe9e8372e269a72a42
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f04c17609976e8bd8f6c1c6143ed7b992b0bb3c5
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368493"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820620"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Conceptos básicos sobre la muestra de Marble Maze
 
@@ -25,7 +25,7 @@ En este tema se describen las características fundamentales del proyecto Marble
 
 Estos son algunos de los puntos principales que se tratan en este documento para cuando se planea y se desarrolla un juego para la Plataforma universal de Windows (UWP).
 
--   Usa la plantilla de Visual C++ **DirectX 11 App (Windows universal)** en Visual Studio para crear tu juego para UWP con DirectX.
+-   Use la **aplicación de DirectX 11 (Windows Universal - C++/CX)** plantilla en Visual Studio para crear tu juego DirectX UWP.
 -   Windows Runtime proporciona clases e interfaces para que puedas desarrollar aplicaciones para UWP de una manera más moderna y orientada a los objetos.
 -   Usar referencias a objetos con el símbolo de acento circunflejo (^) para administrar la duración de las variables en tiempo de ejecución de Windows, [Microsoft::WRL::ComPtr](https://docs.microsoft.com/cpp/windows/comptr-class) para administrar la vigencia de objetos COM, y [std::shared\_ptr](https://docs.microsoft.com/cpp/standard-library/shared-ptr-class) o [std::unique\_ptr](https://docs.microsoft.com/cpp/standard-library/unique-ptr-class) para administrar la duración de todos los demás asignados por montón C++ objetos.
 -   En la mayoría de los casos, usa el controlador de excepciones en vez de los códigos de resultados para tratar los errores inesperados.
@@ -36,19 +36,19 @@ Estos son algunos de los puntos principales que se tratan en este documento para
 
 Si has descargado y extraído el ejemplo, puedes abrir el archivo **MarbleMaze_VS2017.sln** (en la carpeta **C++** ) en Visual Studio, con lo que te aparecerá el código.
 
-Cuando creamos el proyecto de Visual Studio para Marble Maze, empezamos con un proyecto existente. Sin embargo, si aún no tienes un proyecto existente que proporcione la funcionalidad básica que requiere tu juego para UWP con DirectX, recomendamos que crees un proyecto basado en la plantilla **DirectX 11 (Windows universal)** de Visual Studio, porque proporciona una aplicación 3D de trabajo básica. Para ello, realice los pasos siguientes:
+Cuando creamos el proyecto de Visual Studio para Marble Maze, empezamos con un proyecto existente. Sin embargo, si no dispone de un proyecto existente que proporciona la funcionalidad básica que necesita su juego DirectX UWP, recomendamos que cree un proyecto basado en Visual Studio **aplicación de DirectX 11 (Windows Universal - C++/CX)** plantilla porque proporciona una aplicación 3D básica. Para ello, realice los pasos siguientes:
 
-1. En Visual Studio 2017, selecciona **Archivo > Nuevo > Proyecto...**
+1. En Visual Studio 2019, seleccione **archivo > Nuevo > proyecto...**
 
-2. En la ventana **Nuevo proyecto**, en la barra lateral izquierda, selecciona **Instalado > Plantillas > Visual C++** .
+2. En el **crear un nuevo proyecto** ventana, seleccione **aplicación de DirectX 11 (Windows Universal - C++/CX)** . Si no ve esta opción, puede que no tenga instalados los componentes necesarios&mdash;vea [modificar Visual Studio 2019 agregando o quitando las cargas de trabajo y componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener información acerca de cómo instalar componentes adicionales .
 
-3. En la lista central, selecciona **Aplicación DirectX 11 (Windows Universal )** . Si no ves esta opción, puede que no tengas instalados los componentes necesarios&mdash;consulta [Modificar Visual Studio 2017 agregando o quitando cargas de trabajo y componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener información sobre cómo instalar componentes adicionales.
+![Nuevo proyecto](images/vs2019-marble-maze-sample-fundamentals-1.png)
 
-4. Da a tu proyecto un **Nombre**, una **Ubicación** para los archivos a almacenar y un **Nombre de la solución**, y haz clic en **Aceptar**.
+3. Seleccione **siguiente**y, a continuación, escriba un **nombre del proyecto**, un **ubicación** para los archivos que se almacenan y un **nombre de la solución**y, a continuación, seleccione  **Crear**.
 
-![Proyecto nuevo](images/marble-maze-sample-fundamentals-1.png)
 
-Un valor importante del proyecto en la plantilla **DirectX 11 App (Windows universal)** es la opción **/ZW**, que permite que el programa pueda usar las extensiones del lenguaje de Windows Runtime. Esta opción está habilitada de manera predeterminada al usar la plantilla de Visual Studio. Consulta [Configuración de opciones del compilador](https://docs.microsoft.com/cpp/build/reference/setting-compiler-options) para obtener más información sobre cómo establecer las opciones del compilador en Visual Studio.
+
+Una configuración importante del proyecto en el **aplicación de DirectX 11 (Windows Universal - C++/CX)** plantilla es la **/ZW** opción, que permite al programa usar las extensiones de lenguaje de Windows en tiempo de ejecución. Esta opción está habilitada de manera predeterminada al usar la plantilla de Visual Studio. Consulta [Configuración de opciones del compilador](https://docs.microsoft.com/cpp/build/reference/setting-compiler-options) para obtener más información sobre cómo establecer las opciones del compilador en Visual Studio.
 
 > **Precaución**    el **/ZW** opción no es compatible con opciones como **/CLR**. En el caso de **/clr**, esto significa que no puedes tener como objetivo .NET Framework ni Windows Runtime desde el mismo proyecto de Visual C++.
 
@@ -56,13 +56,13 @@ Un valor importante del proyecto en la plantilla **DirectX 11 App (Windows unive
 
 Todas las aplicaciones para UWP que se obtienen de la Microsoft Store viene en forma de un paquete de aplicación. El paquete de la aplicación incluye un manifiesto del paquete, que contiene información sobre tu aplicación. Por ejemplo, puedes especificar las funcionalidades (es decir, el acceso requerido a recursos del sistema protegidos o datos del usuario) de tu aplicación. Si tu aplicación necesita algún tipo de funcionalidad, usa el manifiesto del paquete para declarar la funcionalidad necesaria. El manifiesto también te permite especificar propiedades del proyecto, como las rotaciones admitidas del dispositivo, las imágenes de los iconos y la pantalla de presentación. Puedes editar el manifiesto abriendo **Package.appxmanifest** en el proyecto. Para más información sobre los paquetes de la aplicación, consulta [Empaquetado de aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/index).
 
-##  <a name="building-deploying-and-running-the-game"></a> Compilar, implementar y ejecutar el juego
+##  <a name="building-deploying-and-running-the-game"></a>Compilar, implementar y ejecutar el juego
 
 En los menús de lista desplegable de la parte superior de Visual Studio, a la izquierda del botón verde de reproducción, selecciona tu configuración de implementación. Recomendamos establecerla como objetivo **Debug** de la arquitectura de tu dispositivo (**x86** para 32 bits, **x64** para 64 bits) y para tu **máquina local**. También puedes probar en un **equipo remoto**, o en un **dispositivo** que esté conectado mediante USB. A continuación, haz clic en el botón verde de reproducción e implementa en tu dispositivo.
 
 ![Depurar; x64; equipo local](images/marble-maze-sample-fundamentals-2.png)
 
-###  <a name="controlling-the-game"></a> Control del juego
+###  <a name="controlling-the-game"></a>Control del juego
 
 Puedes usar la entrada táctil, el acelerómetro, el mando de la Xbox One o el ratón para controlar Marble Maze.
 
@@ -74,7 +74,7 @@ Puedes usar la entrada táctil, el acelerómetro, el mando de la Xbox One o el r
 -   Usa el botón Back del mando o la tecla Inicio del teclado para reiniciar el juego.
 -   Cuando la tabla de puntuaciones máximas esté visible, usa el botón Atrás del mando o la tecla Inicio del teclado para borrar todas las puntuaciones.
 
-##  <a name="code-conventions"></a> Convenciones del código
+##  <a name="code-conventions"></a>Convenciones del código
 
 
 Windows Runtime es una interfaz de programación que puedes usar para crear aplicaciones para UWP que se ejecutan solo en un entorno de aplicación especial. Dichas aplicaciones usan funciones, tipos de datos y dispositivos autorizados y se distribuyen desde la Microsoft Store. En el nivel inferior, Windows Runtime consta de una interfaz binaria de aplicaciones (ABI). La ABI es un contrato binario de nivel inferior que hace que varios lenguajes de programación, como JavaScript, los lenguajes .NET y Visual C++, puedan acceder a las API de Windows Runtime.
@@ -113,7 +113,7 @@ Recomendamos que uses las siguientes convenciones en tu modelo de administració
 
 -   Aunque recomendamos que evites el uso de **HRESULT** para los errores inesperados, es más importante evitar el uso del controlador de excepciones para controlar el flujo de código. Por lo tanto, se prefiere usar un valor de retorno **HRESULT** cuando sea necesario para controlar el flujo de código.
 
-###  <a name="sal-annotations"></a> Anotaciones de SAL
+###  <a name="sal-annotations"></a>Anotaciones de SAL
 
 Usa anotaciones de SAL junto con herramientas de análisis de código para detectar errores en tu aplicación.
 
