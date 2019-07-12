@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, test, rendimiento, performance, depuración, debug, pruebas
 ms.localizationpriority: medium
-ms.openlocfilehash: 0bd1c15a971beca0b0015e774865808310138fd0
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: c75eec01a41d31270e55b0da6f11ed38c971e8cb
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713817"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820331"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 
@@ -65,7 +65,7 @@ Para especificar una máquina remota para aplicaciones de C# o Microsoft Visual 
 
 ![Cuadro de diálogo Conexiones remotas](images/debug-remote-connections.png)
 
-Para volver a este cuadro de diálogo, puedes abrir las propiedades del proyecto e ir a la pestaña **Depurar**. Allí, selecciona **Buscar** junto a **Máquina remota:**
+Para volver a este cuadro de diálogo, puedes abrir las propiedades del proyecto e ir a la pestaña **Depurar**. Allí, selecciona Buscar junto a **Máquina remota:**
 
 ![Pestaña Depurar](images/debug-remote-machine-config.png)
 
@@ -98,10 +98,10 @@ Para obtener más información, consulta la página [Centro de descarga para Vis
 
 ## <a name="passing-command-line-debug-arguments"></a>Pasar argumentos de depuración de la línea de comandos
 
-En Visual Studio 2017, puedes pasar argumentos de depuración de la línea de comandos al iniciar la depuración de las aplicaciones para UWP. Puedes acceder a los argumentos de depuración de la línea de comandos desde el parámetro *args* del método **OnLaunched** de la clase [**Application**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application). Para especificar los argumentos de depuración de la línea de comandos, abre las propiedades del proyecto y navega a la pestaña **Depurar**.
+En Visual Studio 2019, puede pasar argumentos de depuración de la línea de comandos al iniciar la depuración de aplicaciones de UWP. Puedes acceder a los argumentos de depuración de la línea de comandos desde el parámetro *args* del método **OnLaunched** de la clase [**Application**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application). Para especificar los argumentos de depuración de la línea de comandos, abre las propiedades del proyecto y navega a la pestaña **Depurar**.
 
 > [!NOTE]
-> Esta característica está disponible en Visual Studio 2017 (versión 15.1) para C#, VB y C++. JavaScript está disponible en versiones posteriores de Visual Studio 2017. Los argumentos de depuración de la línea de comandos están disponibles para todos los tipos de implementación, excepto el simulador.
+> Esta característica está disponible en Visual Studio 2017 (versión 15.1) para C#, VB y C++. JavaScript está disponible en versiones posteriores. Los argumentos de depuración de la línea de comandos están disponibles para todos los tipos de implementación, excepto el simulador.
 
 En el caso de proyectos C# y VB para la UWP, verás un campo **Argumentos de la línea de comandos:** en **Opciones de inicio**.
 
