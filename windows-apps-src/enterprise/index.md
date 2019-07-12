@@ -6,12 +6,12 @@ ms.date: 08/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 087192160fd098d63042f3d1ad16fe7a811de337
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: baac4498fcc6dd65d106166f73ca89db89cbfc6b
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321508"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821004"
 ---
 # <a name="enterprise"></a>Empresas
 
@@ -21,7 +21,7 @@ En este artículo se proporciona información general sobre las características
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio es una extensión de Visual Studio 2017 que acelera la creación de aplicaciones de la Plataforma universal de Windows (UWP) mediante una experiencia basada en asistentes. El proyecto UWP resultante es código legible, con el formato correcto, que incorpora las últimas características de Windows 10, al tiempo que se implementan patrones probados y procedimientos recomendados.
+Windows Template Studio es una extensión de Visual Studio 2017 y Visual Studio 2019 que acelera la creación de aplicaciones de la Plataforma universal de Windows (UWP) mediante una experiencia basada en asistentes. El proyecto UWP resultante es código legible, con el formato correcto, que incorpora las últimas características de Windows 10, al tiempo que se implementan patrones probados y procedimientos recomendados.
 
 ![Windows Template Studio](images/windows-template-studio.png)
 
