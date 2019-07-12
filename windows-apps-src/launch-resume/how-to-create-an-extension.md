@@ -5,12 +5,12 @@ keywords: extensión de aplicación, servicio de la aplicación, en segundo plan
 ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a7bb6f719f95766c07c1e5f92b50148cf0f2cce
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 2cfb3be556cb681bc9ed2d9d46bb86304182e5ca
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57642370"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821026"
 ---
 # <a name="create-and-host-an-app-extension"></a>Crear y hospedar una extensión de aplicación
 
@@ -18,7 +18,7 @@ En este artículo se muestra cómo crear una extensión de aplicación para UWP 
 
 Este artículo se incluye con un ejemplo de código:
 - Descarga y descomprime [ejemplo de código de extensión de matemáticas](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip).
-- En Visual Studio 2017, abre MathExtensionSample.sln. Establece el tipo de compilación en x86 (**Compilación** > **Configuration Manager** y, a continuación, cambia **Plataforma** a **x86** para ambos proyectos).
+- En Visual Studio 2019, abra MathExtensionSample.sln. Establece el tipo de compilación en x86 (**Compilación** > **Configuration Manager** y, a continuación, cambia **Plataforma** a **x86** para ambos proyectos).
 - Implementar la solución: **Compilar** > **implementar solución**.
 
 ## <a name="introduction-to-app-extensions"></a>Introducción a las extensiones para aplicaciones
@@ -31,7 +31,7 @@ Dado que las extensiones de aplicaciones son solo aplicaciones para UWP, tambié
 
 Al crear un host de extensión de aplicación, se crea una oportunidad de desarrollar un ecosistema alrededor de la aplicación en la que otros desarrolladores pueden mejorar tu aplicación de formas que es posible que no esperaras o para las que no tuvieras los recursos. Considere la posibilidad de extensiones de Microsoft Office, extensiones de Visual Studio, las extensiones del explorador, etcetera. Estos crean experiencias enriquecidas para aquellas aplicaciones que van más allá de la funcionalidad que se incluye con. Las extensiones pueden agregar valor y longevidad a tu aplicación.
 
-**Introducción**
+**Información general**
 
 En un nivel alto, para configurar una relación de extensión de aplicación, tenemos que:
 
@@ -41,7 +41,7 @@ En un nivel alto, para configurar una relación de extensión de aplicación, te
 4. Definir cómo se comunicarán los hosts y sus extensiones.
 5. Usar la API [Windows.ApplicationModel.AppExtensions](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppExtensions) en la aplicación host para tener acceso a las extensiones.
 
-Veamos cómo se hace esto examinando el [ejemplo de código de extensión de matemáticas](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip) que implementa una calculadora hipotética a la que puedes agregar nuevas características mediante extensiones. En Microsoft Visual Studio 2017, carga **MathExtensionSample.sln** del ejemplo de código.
+Veamos cómo se hace esto examinando el [ejemplo de código de extensión de matemáticas](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip) que implementa una calculadora hipotética a la que puedes agregar nuevas características mediante extensiones. En Microsoft de Visual Studio 2019, cargue **MathExtensionSample.sln** desde el código de ejemplo.
 
 ![Ejemplo de código de extensión de matemáticas](images/mathextensionhost-calctab.png)
 
@@ -120,13 +120,13 @@ De nuevo, observe la línea `xmlns:uap3="http://..."` y la presencia de `uap3` e
 
 El significado de los atributos `<uap3:AppExtension>` son los que se muestran a continuación:
 
-|Atributo|Descripción|Requerido|
+|Atributo|Descripción|Obligatorio|
 |---------|-----------|:------:|
-|**Nombre**|Este es el nombre de contrato de extensión. Cuando coincida con el **Name** declarado en un host, ese host podrá encontrar esta extensión.| :heavy_check_mark: |
-|**ID.**| Identifica esta extensión de manera única. Dado que puede haber varias extensiones que usen el mismo nombre de contrato de extensión (imagina una app de pintura que admite varias extensiones), puedes usar el identificador para diferenciarlas. Los hosts de extensión de aplicación pueden usar el identificador para deducir algo sobre el tipo de extensión. Por ejemplo, podrías tener una extensión diseñada para escritorio y otra para móvil, siendo el identificador el diferenciador. También podrías usar el elemento **Properties** , que se explica a continuación, para ello.| :heavy_check_mark: |
+|**Name**|Este es el nombre de contrato de extensión. Cuando coincida con el **Name** declarado en un host, ese host podrá encontrar esta extensión.| :heavy_check_mark: |
+|**ID**| Identifica esta extensión de manera única. Dado que puede haber varias extensiones que usen el mismo nombre de contrato de extensión (imagina una app de pintura que admite varias extensiones), puedes usar el identificador para diferenciarlas. Los hosts de extensión de aplicación pueden usar el identificador para deducir algo sobre el tipo de extensión. Por ejemplo, podrías tener una extensión diseñada para escritorio y otra para móvil, siendo el identificador el diferenciador. También podrías usar el elemento **Properties** , que se explica a continuación, para ello.| :heavy_check_mark: |
 |**DisplayName**| Se puede usar desde la app host para identificar la extensión al usuario. Se puede consultar desde, y puede usar, el [nuevo sistema de administración de recursos](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para la localización. El contenido localizado se carga desde el paquete de extensión de app, no desde la app host. | |
 |**Descripción** | Se puede usar desde la app host para describir la extensión al usuario. Se puede consultar desde, y puede usar, el [nuevo sistema de administración de recursos](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para la localización. El contenido localizado se carga desde el paquete de extensión de app, no desde la app host. | |
-|**Carpetas públicas**|El nombre de una carpeta, en relación con la raíz del paquete, donde puedes compartir contenido con el host de extensión. Por convención, el nombre es "Public", pero puedes usar cualquier nombre que coincida con una carpeta de la extensión.| :heavy_check_mark: |
+|**PublicFolder**|El nombre de una carpeta, en relación con la raíz del paquete, donde puedes compartir contenido con el host de extensión. Por convención, el nombre es "Public", pero puedes usar cualquier nombre que coincida con una carpeta de la extensión.| :heavy_check_mark: |
 
 `<uap3:Properties>` es un elemento opcional que contiene los metadatos personalizados que pueden leer los hosts en tiempo de ejecución. En el ejemplo de código, la extensión se implementa como servicio de app para que el host necesite una manera de obtener el nombre de dicho servicio de app para que pueda llamarle. El nombre del servicio de la app se define en el elemento <Service>, que hemos definido (podríamos haberlo llamado de cualquier manera que quisiéramos). El host del ejemplo de código busca esta propiedad en tiempo de ejecución para obtener el nombre del servicio de la app.
 
@@ -413,7 +413,7 @@ Un paquete de expansión para un juego sería un buen candidato para un paquete 
 
 Si ese mismo juego tenía temas o complementos de interfaz de usuario personalizables, una extensión de la aplicación podría ser una buena elección porque la app que proporciona la extensión podría ejecutarse por sí sola y cualquiera tercera parte podría crearla.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 En este tema se proporciona una introducción a extensiones de aplicaciones. Los conceptos clave que se deben tener en cuenta son la creación del host y su marcado como tal en su archivo Package.appxmanifest, creando la extensión y marcándola como tal en su archivo Package.appxmanifest, determinando cómo implementar la extensión (por ejemplo, servicio de aplicaciones, tarea en segundo plano u otros medios), definiendo cómo se comunicará el host con las extensiones y usado la [API de AppExtensions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions) para tener acceso a extensiones y administrarlas.
 

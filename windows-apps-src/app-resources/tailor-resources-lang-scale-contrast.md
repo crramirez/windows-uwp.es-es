@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e5ba7ddb6ef37b4aa54584602fc890bbabc8998
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: db5ba7fb6e13d2a5aab4b74014458073aa88e7f4
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359350"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820213"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, escala, contraste alto y otros calificadores
 
@@ -25,7 +25,7 @@ Para obtener más información sobre la propuesta de valor de localizar tu aplic
 
 Un nombre de calificador es una clave que se asigna a un conjunto de valores de calificador. Estos son el nombre de calificador y los valores de calificador de contraste.
 
-| Contexto | Nombre de calificador | Valores de calificador |
+| Context | Nombre de calificador | Valores de calificador |
 | :--------------- | :--------------- | :--------------- |
 | Configuración de contraste alto | contraste | estándar, alto, negro y blanco |
 
@@ -61,7 +61,7 @@ El archivo cuyo nombre contiene el calificador más apropiado para la configurac
 
 ## <a name="reference-a-string-or-image-resource-by-name"></a>Hacer referencia a un recurso de cadena o imagen por nombre
 
-Consulta [Hacer referencia a un identificador de recursos de cadena desde el marcado XAML](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-xaml-markup), [Hacer referencia a un identificador de recursos de cadena desde código](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-code) y [Hacer referencia a un recurso de imagen u otro activo en el marcado y código XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code).
+Consulta [Hacer referencia a un identificador de recursos de cadena desde el marcado XAML](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-xaml), [Hacer referencia a un identificador de recursos de cadena desde código](localize-strings-ui-manifest.md#refer-to-a-string-resource-identifier-from-code) y [Hacer referencia a un recurso de imagen u otro activo en el marcado y código XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code).
 
 ## <a name="actual-and-neutral-qualifier-matches"></a>Los calificadores real y neutro concuerdan
 No es necesario proporcionar un archivo de recursos para *cada* valor de calificador. Por ejemplo, si te encuentras con que solo necesitas un activo visual para contraste alto y uno para contraste estándar, puedes ponerles nombres a esos activos de esta forma.

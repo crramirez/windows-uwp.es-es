@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 58bf8df4551c8bcfc663d2c832bef3a879ff6350
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 67a96b8423d589036ef1c6896f056d097282dc33
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317975"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820227"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Agregar compatibilidad con Mis allegados a una aplicación
 
@@ -20,7 +20,7 @@ La función Mis allegados permite a los usuarios a anclar contactos desde una ap
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 y Microsoft Visual Studio 2017. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
++ Windows 10 y Microsoft Visual Studio 2019. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
 + Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="overview"></a>Información general
@@ -37,7 +37,7 @@ Cuando lo hayas hecho, la aplicación aparecerá en el panel de contactos de con
 
 Para declarar la compatibilidad para el contrato de Mis allegados, abre tu aplicación en Visual Studio. En el **Explorador de soluciones**, haz clic con el botón derecho en **Package.appxmanifest** y selecciona **Abrir con**. En el menú, selecciona **Editor XML (texto)** y haz clic en **Aceptar**. Realiza los siguientes cambios en el manifiesto:
 
-**Antes de**
+**Antes**
 
 ```xml
 <Package
@@ -53,7 +53,7 @@ Para declarar la compatibilidad para el contrato de Mis allegados, abre tu aplic
 
 ```
 
-**Después de**
+**Después**
 
 ```xml
 <Package
@@ -107,7 +107,7 @@ El "appId" es el nombre de familia de paquete, seguido por '!' y el identificado
 
 De forma predeterminada, la aplicación solo aparecerá en el panel de contactos para los contactos que hayas anotado específicamente.  Esto es para evitar confusiones con los contactos con los que no se puede interactuar a través de la aplicación.  Si quieres que la aplicación se muestre para contactos que la aplicación no conoce (para invitar a los usuarios a agregar determinado contacto con su cuenta, por ejemplo), puedes agregar lo siguiente al manifiesto:
 
-**Antes de**
+**Antes**
 
 ```Csharp
 <Applications>
@@ -121,7 +121,7 @@ De forma predeterminada, la aplicación solo aparecerá en el panel de contactos
 </Applications>
 ```
 
-**Después de**
+**Después**
 
 ```Csharp
 <Applications>
@@ -185,11 +185,11 @@ Si quieres que los contactos anclados a la barra de tareas se identifiquen cuand
 
 Para identificar un contacto, el nodo del sistema de nivel superior debe incluir el parámetro hint-people para indicar el contacto remitente o relacionado. Este parámetro puede tener cualquiera de los valores siguientes:
 + **Dirección de correo electrónico** 
-    + P. ej. mailto:johndoe@mydomain.com
+    + Por ejemplo, [https://doi.org/10.13012/J8PN93H8](mailto:johndoe@mydomain.com)
 + **Número de teléfono** 
-    + P. ej. tel:888-888-8888
+    + Por ejemplo, tel:888-888-8888
 + **Id. remoto** 
-    + P. ej. remoteid:1234
+    + Por ejemplo, remoteid:1234
 
 Este es un ejemplo de cómo identificar una notificación del sistema relacionada con una persona determinada:
 ```XML

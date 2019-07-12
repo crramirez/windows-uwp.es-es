@@ -6,12 +6,12 @@ keywords: entrada de lápiz, entrada manuscrita, tutorial
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: be7005e64a431d65006315fbee551e5c6c3a2a6f
-ms.sourcegitcommit: 7676d4b4c323e665302c2dfca3c763751a47afa3
+ms.openlocfilehash: 929d72da46c52cfdb510f1e1b6a97ddcbbe066d5
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343284"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820570"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Tutorial: Compatibilidad con la entrada de lápiz en tu aplicación para UWP
 
@@ -36,7 +36,7 @@ Con Windows Ink, puedes proporcionar a tus clientes el equivalente digital de ca
 ## <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo (o máquina virtual) que ejecute la versión actual de Windows 10.
-* [Visual Studio 2017 y el RS2 SDK](https://developer.microsoft.com/windows/downloads)
+* [2019 de Visual Studio y el RS2 SDK](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Según la configuración, es posible que deba instalar el [Microsoft.NETCore.UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) NuGet empaquetar y habilitar **modo de programador** en la configuración del sistema (configuración -> Update & Seguridad -> para los desarrolladores -> características de uso para desarrolladores).
 * Si no estás familiarizado con el desarrollo de aplicaciones para la Plataforma universal de Windows (UWP) con Visual Studio, echa un vistazo a estos temas antes de empezar este tutorial:  
@@ -464,7 +464,7 @@ Enhorabuena, ha completado la **entrada: Compatibilidad con entrada de lápiz en
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Las interacciones del lápiz y entrada de lápiz de Windows en aplicaciones para UWP](pen-and-stylus-interactions.md)
+* [Interacciones de lápiz y Windows Ink en aplicaciones para UWP](pen-and-stylus-interactions.md)
 
 ### <a name="samples"></a>Muestras
 

@@ -6,12 +6,12 @@ keywords: dial, radial, tutorial
 ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a16b455d692eaf9f73b7dc90200bd0f021025e52
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4cf27f6f9893b3d4cc68c899bf3ff1902320a910
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365657"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820561"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Tutorial: Compatibilidad con Surface Dial (y otros dispositivos de rueda) en tu aplicación para UWP
 
@@ -41,7 +41,7 @@ El Dial es compatible con tres gestos básicos:
 ## <a name="prerequisites"></a>Requisitos previos
 
 * Un ordenador (o máquina virtual) que ejecute Windows 10 Creators Update o posterior
-* [Visual Studio 2017 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads)
+* [Visual Studio 2019](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * Un dispositivo de rueda (solo [Surface Dial](https://aka.ms/purchasesurfacedial) en este momento)
 * Si no estás familiarizado con el desarrollo de aplicaciones para la Plataforma universal de Windows (UWP) con Visual Studio, echa un vistazo a estos temas antes de empezar este tutorial:  
@@ -641,6 +641,6 @@ Enhorabuena, ha completado la *Tutorial introductorio: Admitir la Surface Dial (
 #### <a name="other-samples"></a>Otras muestras
 [Ejemplo de libro de color](https://github.com/Microsoft/Windows-appsample-coloringbook)
 
-[Ejemplos de la plataforma de Windows universales (C# y C++)](https://go.microsoft.com/fwlink/?linkid=832713)
+[Muestras de la Plataforma universal de Windows (C# y C++)](https://go.microsoft.com/fwlink/?linkid=832713)
 
 [Ejemplo de escritorio clásico de Windows](https://aka.ms/radialcontrollerclassicsample)

@@ -1,21 +1,21 @@
 ---
-Description: El Kit de herramientas para aplicaciones multilingües (MAT) 4.0 se integra con Microsoft Visual Studio 2017 para proporcionar a las aplicaciones UWP compatibilidad con traducción, administración de archivos de traducción y herramientas de editor.
+Description: Multilingüe aplicación Kit de herramientas (MAT) 4.0 se integra con Microsoft Visual Studio 2019 para proporcionar aplicaciones para UWP con compatibilidad para traducción, administración de archivos de traducción y herramientas del editor.
 title: Usar el Kit de herramientas para aplicaciones multilingües
 template: detail.hbs
 ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 49f03a1ae5ed0ea1a602103e2181c252c8c29c2f
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 428238f9d8a3468ab308841850ac13e8da22961f
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319329"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820581"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Usar el Kit de herramientas para aplicaciones multilingües 4.0
 
-El Kit de herramientas para aplicaciones multilingües (MAT) 4.0 se integra con Microsoft Visual Studio 2017 para proporcionar a las aplicaciones UWP compatibilidad con traducción, administración de archivos de traducción y herramientas de editor. Estas son algunas de las propuestas de valor del kit de herramientas.
+Multilingüe aplicación Kit de herramientas (MAT) 4.0 se integra con Microsoft Visual Studio 2019 para proporcionar aplicaciones para UWP con compatibilidad para traducción, administración de archivos de traducción y herramientas del editor. Estas son algunas de las propuestas de valor del kit de herramientas.
 
 - Te ayuda a administrar el estado de la traducción y cambios en los recursos durante el desarrollo.
 - Ofrece una interfaz de usuario para elegir idiomas en función de proveedores de traducción configurados.
@@ -38,10 +38,10 @@ Consulta también [Directrices para globalización](guidelines-and-checklist-for
 
 El Kit de herramientas para aplicaciones multilingües 4.0 (MAT 4.0) tiene dos partes, cada una con su propio instalador.
 
-- [Kit de herramientas para aplicaciones multilingües 4.0, extensión para Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308). Contiene la extensión de MAT 4.0 para Visual Studio 2017 en un instalador .vsix.
+- [Multilingüe Toolkit 4.0 extensión de la aplicación para Visual Studio 2017 y versiones posteriores](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308). Esto contiene la extensión de MAT 4.0 de Visual Studio del 2019, en forma de un instalador de VSIX.
 - [Editor del Kit de herramientas para aplicaciones multilingües 4.0](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit). Contiene el editor multilingüe independiente MAT 4.0 en un instalador .msi. También incluye la extensión MAT 4.0 para Visual Studio 2015 y Visual Studio 2013.
 
-Si usas Visual Studio de 2017, descarga y ejecuta ambos instaladores, uno tras otro. Si usas Visual Studio 2015 o Visual Studio 2013, descarga y ejecuta el instalador .msi.
+Si usa Visual Studio 2017 o Visual Studio de 2019, a continuación, descargue y ejecute a los dos instaladores, uno tras otro. Si usas Visual Studio 2015 o Visual Studio 2013, descarga y ejecuta el instalador .msi.
 
 ### <a name="step-3-enable-the-multilingual-app-toolkit-for-your-project"></a>Paso 3. Habilita el Kit de herramientas de aplicaciones multilingües para el proyecto
 

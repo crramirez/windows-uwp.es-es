@@ -6,12 +6,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 956e4050e3077ac827cf8107470698b42878a5e1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 182a2862589ef5b6b0bd5d76cb1b9ef9599b2ed6
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370874"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820631"
 ---
 # <a name="add-a-splash-screen"></a>Agregar una pantalla de presentación
 
@@ -27,7 +27,7 @@ Cuando usas una plantilla de Visual Studio para crear tu aplicación, se agrega 
 
     En la siguiente captura de pantalla se muestra la ventana "Package.appxmanifest" en Visual Studio. Según el tipo de proyecto, verás un conjunto de activos visuales ligeramente distinto.
 
-    ![captura de pantalla de la ventana "package.appxmanifest" en Visual Studio 2017](images/appmanifest.png)
+    ![una captura de pantalla de la ventana "package.appxmanifest" en Visual Studio de 2019](images/appmanifest.png)
 
     Si abres "Package.appxmanifest" en un editor de texto, se muestra el elemento [**SplashScreen**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-splashscreen) como secundario del elemento [**VisualElements**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements). El marcado de la pantalla de presentación predeterminada del archivo de manifiesto tiene el siguiente aspecto en un editor de texto:
 

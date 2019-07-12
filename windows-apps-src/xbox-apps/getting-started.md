@@ -5,35 +5,35 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c94d27e87853b570268e3a39fe941c817b3eda6a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 19756730177485c6d16ad9a42ff1174eba8ca3b9
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57590980"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820309"
 ---
 # <a name="getting-started-with-uwp-app-development-on-xbox-one"></a>Introducción al desarrollo de aplicaciones para UWP en Xbox One
 
 Sigue estos pasos **atentamente** para configurar correctamente el equipo y Xbox One para el desarrollo para la Plataforma universal de Windows (UWP). Una vez lo hayas configurado todo, podrás obtener más información sobre el modo de desarrollador en Xbox One y la compilación de aplicaciones para UWP en la página [UWP para Xbox One](index.md). 
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 Antes de empezar, debes hacer lo siguiente:
 -   Configurar un equipo con la versión más reciente de Windows 10.
-<!-- -  Install Microsoft Visual Studio 2015 Update 3 or Microsoft Visual Studio 2017.
+<!-- -  Install Microsoft Visual Studio 2015 Update 3 or Microsoft Visual Studio 2019.
 
     > [!NOTE]
-    > Visual Studio 2017 is required if you are using the Windows 10, build 15063 SDK. -->
+    > Visual Studio 2019 is required if you are using the Windows 10, build 15063 SDK. -->
 
 - Disponer, como mínimo, de cinco gigabytes de espacio libre en la consola Xbox One.
 
 ## <a name="setting-up-your-development-pc"></a>Configurar el equipo de desarrollo
 
-1.  Instale Visual Studio 2015 Update 3 o Visual Studio 2017.
+1.  Instale Visual Studio 2015 Update 3, Visual Studio 2017 o Visual Studio de 2019.
 
-    Si va a instalar Visual Studio 2015 Update 3, asegúrese de que elige **personalizado** instalar y seleccione el **herramientas de desarrollo de aplicaciones Windows universales** casilla de verificación: no es parte del valor predeterminado de instalación. Si eres un desarrollador de C++, asegúrate de elegir **Instalación personalizada** y seleccionar **C++**.
+    Si va a instalar Visual Studio 2015 Update 3, asegúrese de que elige **personalizado** instalar y seleccione el **herramientas de desarrollo de aplicaciones Windows universales** casilla de verificación: no es parte del valor predeterminado de instalación. Si eres un desarrollador de C++, asegúrate de elegir **Instalación personalizada** y seleccionar **C++** .
 
-    Si estás instalando Visual Studio 2017, debes asegurarte de que eliges la carga de trabajo **Desarrollo de la Plataforma universal de Windows**. Si es desarrollador de C++, en el **resumen** panel de la derecha, bajo **desarrollo de plataforma Universal de Windows**, asegúrese de que selecciona el **herramientas de C++ Universal Windows Platform** casilla de verificación. No es parte de la instalación predeterminada.
+    Si va a instalar Visual Studio 2017 o Visual Studio de 2019, asegúrese de que elige el **desarrollo de plataforma Universal de Windows** carga de trabajo. Si es desarrollador de C++, en el **resumen** panel de la derecha, bajo **desarrollo de plataforma Universal de Windows**, asegúrese de que selecciona el **herramientas de C++ Universal Windows Platform** casilla de verificación. No es parte de la instalación predeterminada.
 
     Para obtener más información, consulte [configurar su UWP en el entorno de desarrollo de Xbox](development-environment-setup.md).
 
@@ -78,11 +78,11 @@ Para obtener más información, consulte [configurar su UWP en el entorno de des
 
 7. Siéntate y relájate. Disfruta de la primera aplicación que se ejecuta en la consola.  
 
-## <a name="thats-it"></a>Eso es todo.
+## <a name="thats-it"></a>Ya está.
 
 ![Hello World](images/getting-started-hello-world.png)
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 - [Preguntas más frecuentes](frequently-asked-questions.md)  
 - [Problemas conocidos de UWP en el programa para desarrolladores de Xbox](known-issues.md)
 - [UWP en Xbox One](index.md) 

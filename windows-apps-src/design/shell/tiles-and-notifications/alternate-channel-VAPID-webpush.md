@@ -1,26 +1,29 @@
 ---
-title: Canales de inserción alternativo mediante Webpush y VAPID en UWP
+title: Canales de inserción alternativo mediante VAPID en UWP
 description: Instrucciones para utilizar los canales de inserción alternativo con el protocolo VAPID desde una aplicación para UWP
 ms.date: 01/10/2017
 ms.topic: article
 keywords: API de Windows 10, uwp, WinRT, WNS
 localizationpriority: medium
-ms.openlocfilehash: bf224b6c0997ce8af86ab2919a1d0513f619a8a3
-ms.sourcegitcommit: 681c1e3836d2a51cd3b31d824ece344281932bcd
+ms.openlocfilehash: 6512eb891967b6c17bc4845d5e47639ae3c97d31
+ms.sourcegitcommit: 0c97c025d751082db3424cb9941bf6688d9b7381
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59067830"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67835025"
 ---
-# <a name="alternate-push-channels-using-webpush-and-vapid-in-uwp"></a>Canales de inserción alternativo mediante Webpush y VAPID en UWP 
-A partir de la actualización Fall Creators Update, las aplicaciones para UWP pueden usar inserción web con autenticación VAPID para enviar notificaciones push.  
+# <a name="alternate-push-channels-using-vapid-in-uwp"></a>Canales de inserción alternativo mediante VAPID en UWP 
+A partir de la actualización Fall Creators Update, las aplicaciones para UWP pueden usar autenticación VAPID para enviar notificaciones de inserción.  
+
+> [!NOTE]
+> Estas API están pensadas para los exploradores web que se hospeda otros sitios Web y crear los canales en su nombre.  Si desea para agregar webpush notificaciones a la aplicación web, se recomienda que siga los estándares W3C y WhatWG para crear un trabajo de servicio y enviar una notificación.
 
 ## <a name="introduction"></a>Introducción
 La introducción del estándar web inserción permite que los sitios Web pueden actuar más igual que las aplicaciones, enviar notificaciones, incluso cuando los usuarios no están en el sitio Web.
 
 El protocolo de autenticación VAPID se creó para permitir que los sitios Web para autenticarse con los servidores de inserción en un proveedor de manera independiente. Con todos los proveedores mediante el protocolo VAPID, sitios Web pueden enviar notificaciones de inserción sin conocer el explorador en el que se está ejecutando. Esto es una mejora considerable sobre la implementación de un protocolo de inserción diferentes para cada plataforma. 
 
-Las aplicaciones para UWP pueden usar webpush y VAPID para enviar notificaciones push con estas ventajas, también. Estos protocolos pueden ahorrar tiempo de desarrollo de nuevas aplicaciones y simplificar el soporte técnico de multiplataforma para aplicaciones existentes. Además, las aplicaciones empresariales o las aplicaciones ahora pueden enviar notificaciones sin necesidad de registrarse en la Microsoft Store. Con suerte, esto abre nuevas formas de ponerse en contacto con los usuarios en todas las plataformas.  
+Las aplicaciones para UWP pueden usar VAPID para enviar notificaciones push con estas ventajas, también. Estos protocolos pueden ahorrar tiempo de desarrollo de nuevas aplicaciones y simplificar el soporte técnico de multiplataforma para aplicaciones existentes. Además, las aplicaciones empresariales o las aplicaciones ahora pueden enviar notificaciones sin necesidad de registrarse en la Microsoft Store. Con suerte, esto abre nuevas formas de ponerse en contacto con los usuarios en todas las plataformas.  
 
 ## <a name="alternate-channels"></a>Canales alternativos 
 En UWP, estos canales VAPID se denominan canales alternativos y proporcionan una funcionalidad similar a un canal de inserción de la web. Puede desencadenar una tarea en segundo plano de aplicación para ejecutar, habilite el cifrado de mensajes y permiten varios canales desde una única aplicación. Para obtener más información sobre la diferencia entre los tipos de canal diferentes, consulte [elegir el canal derecho](channel-types.md).
@@ -106,8 +109,8 @@ Puede utilizar cualquier esquema de cifrado que considere más útiles para la a
 Si desea usar otra forma de cifrado, la clave es el uso sin formato. Propiedad Headers. Contiene todos los encabezados de cifrado que se incluyeron en la solicitud POST para el servidor de inserción. Desde allí, la aplicación puede usar las claves para descifrar el mensaje.  
 
 ## <a name="related-topics"></a>Temas relacionados
-- [Tipos de canales de notificaciones](channel-types.md)
-- [Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
+- [Tipos de canal de notificación](channel-types.md)
+- [Servicios de notificación de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
 - [Clase PushNotificationChannel](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannel)
 - [Clase PushNotificationChannelManager](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager)
 

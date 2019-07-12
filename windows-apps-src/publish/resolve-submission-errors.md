@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1df93195578c1e7c6fd87ab7403375a1a3dcc825
-ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
+ms.openlocfilehash: 8ec2b10b402db7398dad6643355e064c26318170
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468909"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820602"
 ---
 # <a name="resolve-submission-errors"></a>Resolver errores de envío
 
@@ -25,7 +25,7 @@ Si se muestra un error de compilación, asegúrate de que eres capaz de generar 
 
 ## <a name="desktop-application"></a>Aplicación de escritorio
 
-Si va a enviar un paquete que contiene los archivos binarios de Win32 y UWP, asegúrese de que cree que el paquete con el proyecto de empaquetado de Windows que está disponible en Visual Studio 2017 Update 4. Si crea el paquete mediante una plantilla de proyecto UWP, es posible que no pueda enviar que empaqueta el Store o transferirla localmente a los otros equipos. Incluso si el paquete se publica correctamente, es posible que se comportan de manera inesperada en el equipo del usuario. Para obtener más información, consulte [empaquetar una aplicación mediante Visual Studio (puente de escritorio)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Si va a enviar un paquete que contiene los archivos binarios de Win32 y UWP, asegúrese de que cree que el paquete con el proyecto de empaquetado de Windows que está disponible en Visual Studio 2017 Update 4 y versiones posteriores. Si crea el paquete mediante una plantilla de proyecto UWP, es posible que no pueda enviar que empaqueta el Store o transferirla localmente a los otros equipos. Incluso si el paquete se publica correctamente, es posible que se comportan de manera inesperada en el equipo del usuario. Para obtener más información, consulte [empaquetar una aplicación mediante Visual Studio (puente de escritorio)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x y versiones anteriores
 

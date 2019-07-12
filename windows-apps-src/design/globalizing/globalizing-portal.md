@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 91396051ec822f469e300f51217191fc4e704cac
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 466747cbbfe6f599f42a39f0d2766f78775ec6c8
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714046"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820589"
 ---
 # <a name="globalization-and-localization"></a>Globalización y localización
 
@@ -67,6 +67,6 @@ La mayoría de los equipos de localización usa herramientas especiales para fac
 | [Hacer que la aplicación sea localizable](prepare-your-app-for-localization.md) | Una aplicación localizada es aquella que puede localizarse a otros mercados, idiomas o regiones sin descubrir defectos funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de sus recursos localizables. |
 | [Fuentes internacionales](loc-international-fonts.md) | Este tema enumeran las fuentes disponibles para las aplicaciones UWP que están localizadas en idiomas distintos de EE. UU. Inglés. |
 | [Al diseñar la aplicación para texto bidireccional](design-for-bidi-text.md) | Diseña tu aplicación para proporcionar compatibilidad con texto bidireccional (BiDi) de manera que puedas combinar script desde sistemas de escritura de izquierda a derecha y de derecha a izquierda. |
-| [Usar el Kit de herramientas de la aplicación multilingüe 4.0](use-mat.md) | El Kit de herramientas para aplicaciones multilingües (MAT) 4.0 se integra con Microsoft Visual Studio 2017 para proporcionar a las aplicaciones UWP compatibilidad con traducción, administración de archivos de traducción y herramientas de editor. |
+| [Usar el Kit de herramientas de la aplicación multilingüe 4.0](use-mat.md) | Multilingüe aplicación Kit de herramientas (MAT) 4.0 se integra con Microsoft Visual Studio 2017 y versiones posteriores para proporcionar aplicaciones para UWP con compatibilidad para traducción, administración de archivos de traducción y herramientas del editor. |
 | [Multilingüe aplicación Toolkit 4.0 Preguntas más frecuentes y solución de problemas](mat-faq-troubleshooting.md) | Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el Kit de herramientas para aplicaciones multilingües (MAT) 4.0. |
 | [Preparar la aplicación para que el cambio era japonés](japanese-era-change.md) | Obtén información sobre el cambio de la era japonesa de mayo de 2019 y cómo preparar la aplicación. |

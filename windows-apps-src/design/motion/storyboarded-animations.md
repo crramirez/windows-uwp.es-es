@@ -6,12 +6,12 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 62f603a6ff5aadc1c3e5342db6a7d771f8c37a7b
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: cc5b3598f2d50a49aa9d51721c2c1eb1261c8aa8
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320842"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820509"
 ---
 # <a name="storyboarded-animations"></a>Animaciones con guion gráfico
 
@@ -265,7 +265,7 @@ El requisito para habilitar animaciones dependientes que recae sobre el desarrol
 Como desarrollador de una aplicación, también puedes optar por aplicar una configuración en toda la aplicación que siempre deshabilite las animaciones dependientes, incluso aquellas que tienen la opción **EnableDependentAnimation** establecida como **true**. Consulta [**Timeline.AllowDependentAnimations**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.allowdependentanimations).
 
 > [!TIP]
-> Si usa el panel animación en Blend para Visual Studio 2017, siempre que intente aplicar una animación dependiente a una propiedad de estado visual, se mostrarán advertencias en el diseñador. No se mostrarán advertencias en la salida de compilación o la lista de errores. Si edita manualmente XAML, el diseñador no mostrará una advertencia. En tiempo de ejecución durante la depuración, salida de depuración del panel de salida mostrará una advertencia de que la animación no es independiente y se omitirá.
+> Si usa el panel animación en Blend para Visual Studio 2019, siempre que intente aplicar una animación dependiente a una propiedad de estado visual, se mostrarán advertencias en el diseñador. No se mostrarán advertencias en la salida de compilación o la lista de errores. Si edita manualmente XAML, el diseñador no mostrará una advertencia. En tiempo de ejecución durante la depuración, salida de depuración del panel de salida mostrará una advertencia de que la animación no es independiente y se omitirá.
 
 
 ## <a name="starting-and-controlling-an-animation"></a>Iniciar y controlar una animación

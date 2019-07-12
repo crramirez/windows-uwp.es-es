@@ -6,12 +6,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: Windows 10, uwp, asignación de grupo de contenido, instalación en streaming, instalación en streaming de la app para uwp, asignación de grupo de contenido de origen
 ms.localizationpriority: medium
-ms.openlocfilehash: 882db0a6a97c5ee203a072156ca3eb82615607bb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7e25f30a2288f6be76ce108de2056ab6407187de
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57647950"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821032"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Crear y convertir una asignación de grupo de contenido de origen
 
@@ -143,7 +143,7 @@ También puedes usar caracteres comodín con texto para los nombres de archivo. 
 
 ## <a name="convert-sourceappxcontentgroupmapxml-to-appxcontentgroupmapxml"></a>Convert SourceAppxContentGroupMap.xml to AppxContentGroupMap.xml
 
-Para convertir `SourceAppxContentGroupMap.xml` a su versión final `AppxContentGroupMap.xml`, puedes usar Visual Studio 2017 o la herramienta de línea de comandos **MakeAppx.exe**.
+Para convertir el `SourceAppxContentGroupMap.xml` a la versión final, `AppxContentGroupMap.xml`, puede usar Visual Studio de 2019 o **MakeAppx.exe** herramienta de línea de comandos.
 
 Para usar Visual Studio y así convertir la asignación de grupos de contenido:
 1. Agrega `SourceAppxContentGroupMap.xml` a la carpeta del proyecto

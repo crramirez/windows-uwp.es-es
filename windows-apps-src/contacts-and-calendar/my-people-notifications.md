@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cfd970b3ca070218adcea86612016e567df3879
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: bd9071eaaea0dd88a3dad06de78eff82b29725ec
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318019"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820238"
 ---
 # <a name="my-people-notifications"></a>Notificaciones de Mis allegados
 
@@ -20,7 +20,7 @@ Las notificaciones de Mis allegados proporcionan una nueva forma para que los us
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 y Microsoft Visual Studio 2017. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
++ Windows 10 y Microsoft Visual Studio 2019. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
 + Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="how-it-works"></a>Cómo funciona
@@ -68,11 +68,11 @@ El nodo de la imagen del interior del enlace debe incluir los siguientes paráme
 Además, el nodo del sistema de nivel superior debe incluir el parámetro **hint-people** para especificar el contacto remitente. Este parámetro puede tener cualquiera de los valores siguientes:
 
 + **Dirección de correo electrónico** 
-    + P. ej. ` mailto:johndoe@mydomain.com `
+    + Por ejemplo, ` mailto:johndoe@mydomain.com `
 + **Número de teléfono** 
-    + P. ej. tel:888-888-8888
+    + Por ejemplo, tel:888-888-8888
 + **Id. remoto** 
-    + P. ej. remoteid:1234
+    + Por ejemplo, remoteid:1234
 
 > [!NOTE]
 > Si tu aplicación utiliza las [API ContactStore](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) y la propiedad [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para vincular contactos almacenados en el PC con contactos almacenados de forma remota, es esencial que el valor de la propiedad RemoteId sea único y estable. Esto significa que el identificador remoto debe identificar de forma consistente una sola cuenta de usuario y debería contener una etiqueta única que no entre en conflicto con los identificadores remotos de otros contactos del PC, incluidos los contactos propiedad de otras aplicaciones.
