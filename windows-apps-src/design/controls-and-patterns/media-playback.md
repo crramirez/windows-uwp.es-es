@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b212ff435e58bdb8766972d1832bbf0690db3ed1
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 5e93a1806d1d2add4b3b1c3ee02417a43d574d3c
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364741"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319387"
 ---
 # <a name="media-player"></a>Reproductor multimedia
 
@@ -143,7 +143,7 @@ private void LoadMediaFromString(string path)
 }
 ```
 
-Para establecer el origen del contenido multimedia en un archivo multimedia insertado en la aplicación, inicializa un constructor [Uri](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) con la ruta de acceso con el prefijo **ms-appx:///** , crea una clase [MediaSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource) con el Uri y luego establece la propiedad [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) en dicho Uri. Por ejemplo, para un archivo llamado **video1.mp4** que se encuentra en una subcarpeta **Vídeos**, la ruta de acceso tendría este aspecto: **ms-appx:///Videos/video1.mp4**
+Para establecer el origen del contenido multimedia en un archivo multimedia insertado en la aplicación, inicializa un constructor [Uri](https://docs.microsoft.com/uwp/api/windows.foundation.uri) con la ruta de acceso con el prefijo **ms-appx:///** , crea una clase [MediaSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource) con el Uri y luego establece la propiedad [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) en dicho Uri. Por ejemplo, para un archivo llamado **video1.mp4** que se encuentra en una subcarpeta **Vídeos**, la ruta de acceso tendría este aspecto: **ms-appx:///Videos/video1.mp4**
 
 Este código establece la propiedad [Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) de la clase [MediaPlayerElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) previamente definida en XAML como **ms-appx:///Videos/video1.mp4**.
 
@@ -392,7 +392,7 @@ Los controles predeterminados se han optimizado para la reproducción de conteni
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

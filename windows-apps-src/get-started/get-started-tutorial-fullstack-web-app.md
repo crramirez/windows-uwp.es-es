@@ -5,12 +5,12 @@ keywords: hosted web app;aplicación web hospedada;HWA;REST API;API REST;single-
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c38a7182cd27abcfb0de66c721f0e06b95b695d5
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: b1b837d6585507311dc2246d42f3094ce8b07421
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66366985"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321177"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Crear una aplicación web de una sola página con back-end de API REST
 
@@ -233,7 +233,7 @@ En este nivel de nuestro programa se representan las cartas de memoria y se prop
  - El código de [guess.js](https://raw.githubusercontent.com/Microsoft/Windows-tutorials-web/master/Single-Page-App-with-REST-API/backend/data/guess.js?token=ACEfkvY69Zr1AZQ4iXgfCgDxeinT21bBks5ZFhYBwA%3D%3D) en tu archivo **data\guess.js**
  - El código de [new.js](https://raw.githubusercontent.com/Microsoft/Windows-tutorials-web/master/Single-Page-App-with-REST-API/backend/data/new.js?token=ACEfkiqeDN0HjZ4-gIKRh3wfVZPSlEmgks5ZFhYPwA%3D%3D) en tu archivo **data\new.js**
 
-Para simplificar el proceso, almacenamos nuestro tablero del juego en una variable global (`global.board`) en el servidor Node. Aunque en realidad deberías usar almacenamiento en la nube (como Google [Cloud Datastore](https://cloud.google.com/datastore/) o Azure [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/)) para convertirlo en un servicio de API de juego de memoria viable que admita simultáneamente varios juegos y jugadores.
+Para simplificar el proceso, almacenamos nuestro tablero del juego en una variable global (`global.board`) en el servidor Node. Aunque en realidad deberías usar almacenamiento en la nube (como Google [Cloud Datastore](https://cloud.google.com/datastore/) o Azure [DocumentDB](https://azure.microsoft.com/services/cosmos-db/)) para convertirlo en un servicio de API de juego de memoria viable que admita simultáneamente varios juegos y jugadores.
 
 Asegúrate de haber guardado todos los cambios en VS Code, vuelve a iniciar el servidor (F5 en VS Code o `npm start` desde el shell y, a continuación, ve a [https://localhost:8000](https://localhost:8000)) para probar la API del juego.
 
@@ -284,7 +284,7 @@ Si has llegado hasta aquí y Azure es ahora el servidor de tu interfaz de usuari
 
 ### <a name="going-further"></a>Ir más allá
 
-Para que la API del juego de memoria sea un servicio de back-end viable para una aplicación de producción, puedes extender el código para admitir varios jugadores y juegos. Para esto, probablemente tendrás que asociarle [autenticación](https://swagger.io/docs/specification/authentication/) (para la administración de identidades de jugadores), una [base de datos NoSQL](https://docs.microsoft.com/en-us/azure/documentdb/) (para el seguimiento de los jugadores y los juegos) y algunas [pruebas unitarias](https://apigee.com/about/blog/developer/swagger-test-templates-test-your-apis) básicas para la API.
+Para que la API del juego de memoria sea un servicio de back-end viable para una aplicación de producción, puedes extender el código para admitir varios jugadores y juegos. Para esto, probablemente tendrás que asociarle [autenticación](https://swagger.io/docs/specification/authentication/) (para la administración de identidades de jugadores), una [base de datos NoSQL](https://azure.microsoft.com/blog/dear-documentdb-customers-welcome-to-azure-cosmos-db/) (para el seguimiento de los jugadores y los juegos) y algunas [pruebas unitarias](https://apigee.com/about/blog/api-technology/swagger-test-templates-test-your-apis) básicas para la API.
 
 Estos son algunos recursos útiles para ir más allá:
 
@@ -292,7 +292,7 @@ Estos son algunos recursos útiles para ir más allá:
 
  - [Documentación web y móvil de Azure](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=web)
 
- - [Documentación de Azure DocumentDB](https://docs.microsoft.com/en-us/azure/documentdb/index)
+ - [Documentación de Azure DocumentDB](https://azure.microsoft.com/blog/dear-documentdb-customers-welcome-to-azure-cosmos-db/)
 
 ## <a name="part-ii-build-a-single-page-web-application"></a>Parte II: crear una aplicación web de una sola página
 
@@ -575,7 +575,7 @@ El sistema de cuadrículas permite hasta 12 columnas. Dado que queremos solo 4�
 ### <a name="5-add-a-card-flip-animation-with-css-transforms"></a>5. Agregar una animación de volteo de carta con transformaciones CSS
 Reemplaza el archivo style.css en memory\public\stylesheets por el archivo style.css de la carpeta Start.
 
-La adición de un movimiento de volteo con [transformaciones CSS](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/css/transforms) proporciona a las cartas un movimiento de volteo 3D realista. Las cartas del juego se crean con la siguiente estructura HTML y se agregan mediante programación al tablero del juego (en la función `drawGameBoard()` mostrada anteriormente).
+La adición de un movimiento de volteo con [transformaciones CSS](https://developer.mozilla.org/docs/Web/CSS/CSS_Transforms) proporciona a las cartas un movimiento de volteo 3D realista. Las cartas del juego se crean con la siguiente estructura HTML y se agregan mediante programación al tablero del juego (en la función `drawGameBoard()` mostrada anteriormente).
 
 ``` html
 <div class="flipContainer">
@@ -642,6 +642,6 @@ Estos son algunos recursos útiles para ir más allá:
 
  - [Implementar el proyecto de desarrollo de la aplicación en Azure Websites](https://docs.microsoft.com/azure/cosmos-db/documentdb-nodejs-application#_Toc395783182)
 
- - [Convertir tu aplicación web en una aplicación para la Plataforma universal de Windows (UWP)](https://docs.microsoft.com/en-us/windows/uwp/porting/hwa-create-windows)
+ - [Convertir tu aplicación web en una aplicación para la Plataforma universal de Windows (UWP)](https://docs.microsoft.com/microsoft-edge/progressive-web-apps)
 
- - [Publicar aplicaciones de Windows](https://developer.microsoft.com/en-us/store/publish-apps)
+ - [Publicar aplicaciones de Windows](https://docs.microsoft.com/windows/uwp/publish/)

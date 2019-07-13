@@ -3,15 +3,15 @@ ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: Habilitar el dispositivo para el desarrollo
 description: Configura el dispositivo Windows 10 para el desarrollo y la depuración.
 keywords: Introducción a Visual Studio con licencia de desarrollador, dispositivo con licencia de desarrollador habilitada
-ms.date: 4/9/2019
+ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f927d8bce1e59ba9a8ed9b0f3f08ce3575c6d7bd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 9c1979f8e8232ee3bfd2e2961307608bf8da7836
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66367021"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714147"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -56,7 +56,7 @@ De manera predeterminada, solo puedes instalar aplicaciones para Plataforma univ
 
 ### <a name="sideload-apps"></a>Instalación de prueba de aplicaciones
 
-Por lo general, la opción de aplicaciones transferidas localmente la usan las empresas y centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store, o cualquier otra persona que necesite ejecutar aplicaciones de fuentes distintas a Microsoft. En este caso, la organización suele aplicar una directiva que deshabilita el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para obtener más información, consulta los artículos de TechNet [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://technet.microsoft.com/library/mt269549.aspx) e [Introducción a la implementación de aplicaciones en Microsoft Intune](https://technet.microsoft.com/library/dn646955.aspx).
+Por lo general, la opción de aplicaciones transferidas localmente la usan las empresas y centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store, o cualquier otra persona que necesite ejecutar aplicaciones de fuentes distintas a Microsoft. En este caso, la organización suele aplicar una directiva que deshabilita el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para obtener más información, consulta los artículos de TechNet [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) e [Introducción a la implementación de aplicaciones en Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/add-apps).
 
 Información específica de la familia de dispositivos
 
@@ -94,7 +94,7 @@ Para obtener más información sobre el Portal de dispositivos, consulta [Introd
 
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
 - [Portal de dispositivos para dispositivos de escritorio](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Portal de dispositivos para HoloLens](https://developer.microsoft.com/windows/holographic/using_the_windows_device_portal)
+- [Portal de dispositivos para HoloLens](https://developer.microsoft.com/mixed-reality)
 - [Portal de dispositivos para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [Portal de dispositivos para dispositivos móviles](../debug-test-perf/device-portal-mobile.md)
 - [Portal de dispositivos para Xbox](../xbox-apps/device-portal-xbox.md)
@@ -238,8 +238,8 @@ Error: DEP0700: Error en el registro de la aplicación.
 ## <a name="see-also"></a>Consulta también
 
 * [Tu primera aplicación](your-first-app.md)
-* [Publicar tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps)
-* [Artículos sobre el desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
+* [Publicar tu aplicación para UWP](https://docs.microsoft.com/windows/uwp/publish/)
+* [Artículos sobre el desarrollo de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/develop/)
 * [Ejemplos de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
 * [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md)
 * [Registrarse para obtener una cuenta de Windows](sign-up.md)

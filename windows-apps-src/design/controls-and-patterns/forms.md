@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 8a57f13e168a248569bca1beeceed7b4f6c89f69
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: ff071a2a98c533ad7c089b28165f026de00ba68f
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63794299"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319092"
 ---
 # <a name="forms"></a>Formularios
 Un formulario es un grupo de controles que recopila y envía datos de los usuarios. Los formularios se usan normalmente para páginas de configuración, encuestas, creación de cuentas y mucho más. 
@@ -149,7 +149,7 @@ Control | Use
 ### <a name="additional-controls"></a>Controles adicionales 
 Para obtener una lista completa de controles UWP, consulta el [índice de controles por función](controls-by-function.md).
 
-Para ver otros controles de interfaz de usuario más complejos y personalizados, consulta los recursos disponibles en empresas como [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/products/uwp), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) y [ActiPro](https://www.actiprosoftware.com/products/controls/universal).
+Para ver otros controles de interfaz de usuario más complejos y personalizados, consulta los recursos disponibles en empresas como [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/uwp-ui-controls), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) y [ActiPro](https://www.actiprosoftware.com/products/controls/universal).
 
 ## <a name="one-column-form-example"></a>Ejemplo de formulario de una columna
 En este ejemplo se usa una [vista de lista](lists.md) [maestro/detalles](master-details.md) Acrylic y un control [NavigationView](navigationview.md).

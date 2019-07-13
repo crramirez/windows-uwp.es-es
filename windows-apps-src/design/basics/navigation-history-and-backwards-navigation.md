@@ -3,16 +3,16 @@ Description: Obtén información sobre cómo implementar la navegación hacia at
 title: Historial de navegación y navegación hacia atrás (aplicaciones de Windows)
 template: detail.hbs
 op-migration-status: ready
-ms.date: 4/9/2019
+ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e3ab6760ed3eff1d284e51205de261796db0fb2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: de2e70a09f75ed5380a47bed225c0689eb029e89
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63799166"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713797"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
 
@@ -31,7 +31,17 @@ Para crear un botón Atrás, usa el control [Button](../controls-and-patterns/bu
 ![Botón Atrás en la parte superior izquierda de la interfaz de usuario de la aplicación](images/back-nav/BackEnabled.png)
 
 ```xaml
-<Button Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+<Page>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+
+    </Grid>
+</Page>
 ```
 
 Si la aplicación tiene un elemento [CommandBar](../controls-and-patterns/app-bars.md) superior, el control Button que tiene 44px de altura no se alineará muy bien con los AppBarButtons de 48px. Sin embargo, para evitar incoherencias, alinea la parte superior del control Button dentro de los límites de 48px.
@@ -39,8 +49,23 @@ Si la aplicación tiene un elemento [CommandBar](../controls-and-patterns/app-ba
 ![Botón Atrás en la barra de comandos superior](images/back-nav/CommandBar.png)
 
 ```xaml
-<Button VerticalAlignment="Top" HorizontalAlignment="Left" 
-Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+<Page>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <CommandBar>
+            <CommandBar.Content>
+                <Button Style="{StaticResource NavigationBackButtonNormalStyle}" VerticalAlignment="Top"/>
+            </CommandBar.Content>
+        
+            <AppBarButton Icon="Delete" Label="Delete"/>
+            <AppBarButton Icon="Save" Label="Save"/>
+        </CommandBar>
+    </Grid>
+</Page>
 ```
 
 Para minimizar los elementos de la interfaz de usuario que se mueven por la aplicación, muestra un botón Atrás deshabilitado cuando no haya nada en la pila de retroceso (consulta el ejemplo de código siguiente). Sin embargo, si esperas que la aplicación nunca va a tener una pila de retroceso, no es necesario mostrar el botón Atrás para nada.
@@ -287,17 +312,6 @@ Anteriormente, las aplicaciones para UWP usaban [AppViewBackButtonVisibility](ht
 Si la aplicación continúa usando [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), el sistema de la interfaz de usuario representará el botón Atrás del sistema en la barra de título. (Las interacciones de apariencia y de usuario para el botón Atrás son iguales que en las compilaciones anteriores).
 
 ![Botón Atrás de la barra de título](images/nav-back-pc.png)
-
-### <a name="system-back-bar"></a>Barra Atrás del sistema
-
-> [!NOTE]
-> "Barra Atrás del sistema" es solo una descripción, no es un nombre válido.
-
-La barra Atrás del sistema es una "banda" que se inserta entre la banda de la pestaña y el área de contenido de la aplicación. La banda recorre el ancho de la aplicación, con el botón Atrás en el borde izquierdo. La banda tiene una altura vertical de 32 píxeles para garantizar el tamaño adecuado de la función táctil para el botón Atrás.
-
-La barra Atrás del sistema se muestra dinámicamente, en función de la visibilidad del botón Atrás. Cuando el botón Atrás está visible, se inserta la barra Atrás del sistema, desplazando 32 píxeles por debajo de la banda de la pestaña el contenido de la aplicación. Cuando se oculta el botón Atrás, la barra Atrás del sistema se quita dinámicamente, desplazando el contenido de la aplicación 32 píxeles hacia arriba para que coincida con la banda de la pestaña. Para evitar tener que subir y bajar la interfaz de usuario de la aplicación, te recomendamos que dibujes un [botón Atrás en la aplicación](#back-button).
-
-Se realizan [personalizaciones de la barra de título](../shell/title-bar.md) en la pestaña de la aplicación y en la barra Atrás del sistema. Si la aplicación especifica las propiedades de color de fondo y de primer plano con [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), los colores se aplicarán a la pestaña y a la barra Atrás del sistema.
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>Guía para el comportamiento personalizado de la navegación hacia atrás
 

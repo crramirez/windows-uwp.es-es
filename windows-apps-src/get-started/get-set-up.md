@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d0f3e7ca98f01750d7d05cc06b56783e3b32359
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 30ffec0f2a5e771e649eda6240d9e7ef90f50890
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564462"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318797"
 ---
 # <a name="get-set-up"></a>Preparación
 
@@ -34,7 +34,7 @@ Al instalar Visual Studio, asegúrate de seleccionar la opción Herramientas de
 
 ![Visual Studio Tools para UWP](images/vs-2017-community-setup.png)
 
-¿Necesitas ayuda con Visual Studio? Consulta [Introducción a Visual Studio](https://www.visualstudio.com/vs/getting-started).
+¿Necesitas ayuda con Visual Studio? Consulta [Introducción a Visual Studio](https://visualstudio.microsoft.com/vs/getting-started/).
 
 Si ya usas Visual Studio, pero detectaste que te faltan algunos componentes, puedes volver a iniciar el instalador desde el cuadro de diálogo *Nuevo proyecto*:
 

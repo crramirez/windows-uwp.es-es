@@ -5,12 +5,12 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: webvr;edge;desarrollo web;babylon;babylonjs;babylon.js;javascript;web development
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d8029752790e19adc5eb4266615372fb346e001
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 5f212e4e06035134b0ac5b5ea69381ed0d985783
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63798219"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321162"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>Agregar compatibilidad con WebVR a un juego 3D de Babylon.js
 
@@ -23,7 +23,7 @@ Agregaremos compatibilidad con WebVR al juego que se muestra aquí. ¡Adelante, 
 </iframe>
 
 Este es un juego 3D que funciona bien en una pantalla plana, pero ¿funcionará en VR?
-En este tutorial, te guiaremos a través de los pocos pasos que se necesitan para que funcione con WebVR. Vamos a usar un casco de [Windows Mixed Reality](https://developer.microsoft.com/en-us/windows/mixed-reality) que puede aprovechar la compatibilidad agregada para WebVR en Microsoft Edge. Después de aplicar estos cambios al juego, es posible que también funcione con otras combinaciones de explorador y casco de realidad mixta compatibles con WebVR.
+En este tutorial, te guiaremos a través de los pocos pasos que se necesitan para que funcione con WebVR. Vamos a usar un casco de [Windows Mixed Reality](https://developer.microsoft.com/mixed-reality) que puede aprovechar la compatibilidad agregada para WebVR en Microsoft Edge. Después de aplicar estos cambios al juego, es posible que también funcione con otras combinaciones de explorador y casco de realidad mixta compatibles con WebVR.
 
 
 
@@ -132,12 +132,12 @@ Con la información almacenada en la variable `headset`, ahora podremos elegir l
 
 ## <a name="creating-and-selecting-the-initial-camera"></a>Creación y selección de la cámara inicial
 
-Con Babylon.js, se puede agregar WebVR rápidamente mediante la clase [`WebVRFreeCamera`](https://doc.babylonjs.com/classes/3.1/webvrfreecamera). Esta cámara puede interpretar la entrada del teclado y permite usar un casco de realidad mixta VR para controlar la rotación de la "cabeza".
+Con Babylon.js, se puede agregar WebVR rápidamente mediante la clase [`WebVRFreeCamera`](https://doc.babylonjs.com/api/classes/babylon.webvrfreecamera). Esta cámara puede interpretar la entrada del teclado y permite usar un casco de realidad mixta VR para controlar la rotación de la "cabeza".
 
 
 ### <a name="step-1-checking-for-headsets"></a>Paso 1: comprobación del casco
 
-Como cámara de reserva, usaremos la cámara [`UniversalCamera`](https://doc.babylonjs.com/classes/3.1/universalcamera) que se usa actualmente en el juego original.
+Como cámara de reserva, usaremos la cámara [`UniversalCamera`](https://doc.babylonjs.com/api/classes/babylon.universalcamera) que se usa actualmente en el juego original.
 
 Comprobaremos la variable `headset` para determinar si podemos usar la cámara `WebVRFreeCamera`.
 

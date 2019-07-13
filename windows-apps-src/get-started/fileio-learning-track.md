@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción;uwp;windows 10;pista de aprendizaje;archivos;e/s de archivos;leer archivo;escribir archivo;crear archivo;escribir texto;leer texto;get started;learning track;files;file io;read file;write file;create file;write text;read text
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5480638e201dca8a5eb5363d7a5944422c626f67
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 29cfeef852f240548f1cd961f73766346da7afa4
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66366891"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321131"
 ---
 # <a name="work-with-files"></a>Trabajar con archivos
 
@@ -145,4 +145,4 @@ Este es un resumen rápido de las API y otra documentación de utilidad que te a
 | [Ejemplo de acceso a archivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | Muestra cómo crear, leer, escribir, copiar y eliminar un archivo. |
 | [Ejemplo de selector de archivos](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Muestra cómo acceder a archivos y carpetas al permitir que el usuario los elija con la interfaz de usuario. Además, muestra cómo guardar un archivo para que el usuario pueda especificar el nombre, el tipo de archivo y la ubicación de un archivo que va a guardarse. |
 | [JSON sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) (ejemplo de JSON) | Muestra cómo codificar y descodificar objetos, matrices, cadenas, números y booleanos de notación de objetos JavaScript (JSON) mediante el [Espacio de nombres Windows.Data.Json](https://docs.microsoft.com/uwp/api/Windows.Data.Json). |
-| [Ejemplos de código adicionales](https://developer.microsoft.com//windows/samples) | Elige **Files, folder, and libraries** (Archivos, carpeta y bibliotecas) en la lista desplegable de categorías. |
+| [Ejemplos de código adicionales](https://developer.microsoft.com/windows/samples) | Elige **Files, folder, and libraries** (Archivos, carpeta y bibliotecas) en la lista desplegable de categorías. |

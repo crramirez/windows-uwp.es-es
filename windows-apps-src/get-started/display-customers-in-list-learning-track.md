@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción;uwp;windows 10;pista de aprendizaje;enlace de datos;lista;get started;learning track;data binding;list
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a949479a021d4f8de592d1991773dd2e31e9769c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c4d339a1eedb798f11d5567be6a48ec2269cf8ac
+ms.sourcegitcommit: 280193dfe5a106fc6b4c85df3ac40535547b855c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564482"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67235158"
 ---
 # <a name="display-customers-in-a-list"></a>Mostrar clientes en una lista
 
@@ -110,7 +110,7 @@ Ya mostraste los clientes en una lista, pero el enlace de datos te permite hacer
 
 Si seguiste los fragmentos de código anteriores, el enlace creado usa x:Bind y no especifica un modo, por lo que es un enlace de un solo uso. Si quieres editar a tus clientes directamente desde la interfaz de usuario, deberás cambiarlo a un enlace bidireccional, a fin de que los cambios de los datos se pasen a los objetos de cliente. Consulta [Enlace de datos en profundidad](../data-binding/data-binding-in-depth.md) para más información.
 
-El enlace bidireccional también actualizará la interfaz de usuario si se cambia el origen de datos. Para que esto funcione, debes implementar [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged(d=robot).aspx) en el origen y asegurarte de que los establecedores de propiedades generan el evento **PropertyChanged**. Es una práctica habitual que llamen a un método auxiliar como **OnPropertyChanged**, tal como se muestra a continuación:
+El enlace bidireccional también actualizará la interfaz de usuario si se cambia el origen de datos. Para que esto funcione, debes implementar [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN) en el origen y asegurarte de que los establecedores de propiedades generan el evento **PropertyChanged**. Es una práctica habitual que llamen a un método auxiliar como **OnPropertyChanged**, tal como se muestra a continuación:
 
 ```csharp
 public class Customer : INotifyPropertyChanged
@@ -170,7 +170,7 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 | [Binding](../xaml-platform/binding-markup-extension.md) | Documentación sobre la extensión de marcado Binding antigua. |
 | [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) | Control de interfaz de usuario que muestra los elementos de datos en una pila vertical. |
 | [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Control de texto básico para mostrar datos de texto editable en la interfaz de usuario. |
-| [INotifyPropertyChanged](https://msdn.microsoft.com/library/system.componentmodel.inotifypropertychanged(d=robot).aspx) | Interfaz para hacer que los datos sean observables al proporcionárselos a un enlace de datos. |
+| [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN) | Interfaz para hacer que los datos sean observables al proporcionárselos a un enlace de datos. |
 | [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) | La propiedad **ItemsSource** de esta clase permite enlazar una ListView a un origen de datos. |
 
 ### <a name="useful-docs"></a>Documentos útiles

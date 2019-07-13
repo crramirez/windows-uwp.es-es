@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a9d3b4b9b404ab2c0828ea302f0c564ae1c8e7b4
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: bc422f57cdc268ea517aff729a9c3e57c80acf69
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66372784"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67320609"
 ---
 # <a name="rssatom-feeds"></a>Fuentes RSS y Atom
 
@@ -60,7 +60,7 @@ Para asegurarte de que la aplicación para UWP está lista para la red, debes es
 
 Ahora revisaremos el código que demuestra cómo recuperar una fuente y luego mostraremos cada elemento en particular de la fuente. Para poder configurar y enviar la solicitud, definiremos algunas variables que usaremos durante la operación e inicializaremos una instancia de [**SyndicationClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationClient), que define los métodos y las propiedades para recuperar y mostrar la fuente.
 
-El constructor [**URI**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) inicia una excepción si el valor *uriString* que se pasó al constructor no es un URI válido. Así que validamos *uriString* mediante un bloque try/catch.
+El constructor [**URI**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_) inicia una excepción si el valor *uriString* que se pasó al constructor no es un URI válido. Así que validamos *uriString* mediante un bloque try/catch.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -93,13 +93,13 @@ try {
 }
 ```
 
-Después, para configurar la solicitud definimos las credenciales del servidor (la propiedad [**ServerCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.servercredential)), las credenciales de proxy (la propiedad [**ProxyCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.proxycredential)) y los encabezados HTTP (el método [**SetRequestHeader**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.setrequestheader)) necesarios. Con los parámetros de solicitud básicos configurados, creamos un objeto [**URI**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) válido mediante una cadena de URI de fuente proporcionada por la aplicación. Después, se pasa el objeto **URI** a la función [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) para solicitar la fuente.
+Después, para configurar la solicitud definimos las credenciales del servidor (la propiedad [**ServerCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.servercredential)), las credenciales de proxy (la propiedad [**ProxyCredential**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.proxycredential)) y los encabezados HTTP (el método [**SetRequestHeader**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.setrequestheader)) necesarios. Con los parámetros de solicitud básicos configurados, creamos un objeto [**URI**](https://docs.microsoft.com/uwp/api/windows.foundation.uri) válido mediante una cadena de URI de fuente proporcionada por la aplicación. Después, se pasa el objeto **URI** a la función [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) para solicitar la fuente.
 
 Suponiendo que se devolvió el contenido deseado de la fuente, el código de ejemplo itera en cada elemento llamando a **displayCurrentItem** (definido a continuación) para mostrar elementos y su contenido en una lista a través de la interfaz de usuario.
 
 Debes escribir código para controlar las excepciones cuando llamas a la mayoría de los métodos de red asincrónicos. Tu controlador de excepciones puede recuperar información más detallada sobre la causa de la excepción para comprender mejor el error y tomar las decisiones adecuadas.
 
-El método [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) inicia una excepción si no se puede establecer una conexión con el servidor HTTP o si el objeto [**URI**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.) no señala a una fuente AtomPub o RSS válida. En el código de muestra en Javascript se usa una función **onError** para captar las excepciones e imprimir información más detallada sobre la excepción si se produce un error.
+El método [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync) inicia una excepción si no se puede establecer una conexión con el servidor HTTP o si el objeto [**URI**](https://docs.microsoft.com/uwp/api/windows.foundation.uri) no señala a una fuente AtomPub o RSS válida. En el código de muestra en Javascript se usa una función **onError** para captar las excepciones e imprimir información más detallada sobre la excepción si se produce un error.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp

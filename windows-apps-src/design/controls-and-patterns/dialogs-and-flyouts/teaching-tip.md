@@ -10,18 +10,18 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ea4dc1d77c5cf7199d084d4646b5862599a1d54
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: dc696c9a57e84e2caade6a2623a72a6048b65621
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63794366"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319107"
 ---
 # <a name="teaching-tip"></a>Sugerencia de enseñanza
 
 Una sugerencia de enseñanza es un control flotante parcialmente persistente y con mucho contenido que proporciona información contextual. A menudo se utiliza para informar, recordar y enseñar a los usuarios sobre características importantes y nuevas que pueden mejorar su experiencia.
 
-**API importantes:** [Clase TeachingTip](https://docs.microsoft.com/en-us/uwp/api/microsoft.ui.xaml.controls.teachingtip)
+**API importantes:** [Clase TeachingTip](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.teachingtip?view=winui-2.2)
 
 Una sugerencia de enseñanza puede ser descartable por cambio de foco, o bien puede requerir una acción explícita para cerrarse. Además, puede apuntar a un elemento específico de la interfaz de usuario con su delta y también se puede utilizar sin una delta o destino.
 

@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5996fb15c0d7302c7360c2e45613f0da2720d415
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 2b642f1d6c3f2a04bacdf293858492ea095af1a8
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364653"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67319528"
 ---
 # <a name="labels"></a>Etiquetas
 
@@ -39,7 +39,7 @@ En XAML, muchos controles tienen una propiedad Header integrada que sirve para m
 
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
-* [Ejemplo de conceptos básicos de interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Ejemplo de conceptos básicos de interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Controles de texto](text-controls.md)

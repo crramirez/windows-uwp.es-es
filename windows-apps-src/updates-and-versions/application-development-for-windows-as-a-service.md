@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: 0629201b695f6df6f7f3e2084a73d72b10b82be5
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 478c4a16902329e1dd9267e0339dca0e0dcf3539
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63813610"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321971"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Desarrollo de aplicaciones para Windows como servicio
 
@@ -160,4 +160,4 @@ Infórmanos del rendimiento de tu aplicación en las compilaciones piloto. A med
 El sitio web [Ready For Windows](https://go.microsoft.com/fwlink/?LinkID=780580) es un directorio del software compatible con Windows 10. Está destinado a los administradores de TI de empresas y organizaciones de todo el mundo que están pensando en la implementación de Windows 10. Los administradores de TI pueden consultar el sitio para ver que si el software implementado en su empresa es compatible con Windows 10.
 
 ## <a name="related-topics"></a>Temas relacionados
-[Opciones de mantenimiento de Windows 10 para actualizaciones](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)
+[Opciones de mantenimiento de Windows 10 para actualizaciones](https://docs.microsoft.com/windows/manage/introduction-to-windows-10-servicing)

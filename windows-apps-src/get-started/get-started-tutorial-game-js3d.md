@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e1eba68d1046892a67d779d353fd9b2e6bf224e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: b4ce91e32b14bdf81b40b24e810e0bd86bcaa99b
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66366940"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321089"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Crear un juego en 3D en JavaScript con three.js
 
@@ -1086,5 +1086,5 @@ Ahora que tienes una aplicación para UWP, podrás publicarla en Microsoft Store
 1.  Tienes que estar [registrado](https://developer.microsoft.com/store/register) como desarrollador de Windows.
 2.  Debes usar la [lista de comprobación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) del envío de la aplicación.
 3.  La aplicación debe enviarse para su [certificación](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
-Para obtener más información, consulta [Publicar tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps).
+Para obtener más información, consulte [Publicar su aplicación para UWP](https://docs.microsoft.com/windows/uwp/publish/).
 

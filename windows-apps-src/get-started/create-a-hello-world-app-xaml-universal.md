@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10;uwp;first app;hello world;primera aplicación;hola mundo
 ms.localizationpriority: medium
-ms.openlocfilehash: d9a7f0302dfdc9f9fa980f0fe93a3371328f9e5c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 65dfc7b5f9a870f3ccdd5c0c046b996a01c06a00
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66367435"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67321207"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Creación de una aplicación "Hello, world" (XAML)
 
@@ -57,11 +57,11 @@ Aquí aprenderás a:
     ![La ventana Nuevo proyecto](images/win10-cs-01.png)
 
 > [!NOTE]
-> Si es la primera vez que usas Visual Studio, es posible que se te solicite habilitar el **Modo de desarrollador** en un cuadro de diálogo de configuración. El modo de desarrollador es una opción de configuración especial que habilita determinadas funciones, como permiso para ejecutar aplicaciones directamente, en lugar de solo desde la Store. Para obtener más información, lee [Habilitar el dispositivo para el desarrollo](enable-your-device-for-development.md). Para continuar con esta guía, selecciona **Modo de desarrollador**, haz clic en **Sí** y cierra el cuadro de diálogo.
+> Si es la primera vez que usa Visual Studio, es posible que se le solicite habilitar el **Modo desarrollador** en el diálogo de configuración. El modo de desarrollador es una opción de configuración especial que habilita determinadas funciones, como permiso para ejecutar aplicaciones directamente, en lugar de solo desde la Store. Para obtener más información, lea [Habilitar el dispositivo para el desarrollo](enable-your-device-for-development.md). Para continuar con esta guía, seleccione **Modo desarrollador**, haga clic en **Sí** y cierre el diálogo.
 
- ![Cuadro de diálogo para activar el modo de desarrollador](images/win10-cs-00.png)
+ ![Diálogo para activar el modo de desarrollador.](images/win10-cs-00.png)
 
-5.  Se visualiza el cuadro de diálogo de versión mínima/de destino. La configuración predeterminada es correcta para este tutorial, por lo tanto, selecciona **Aceptar** para crear el proyecto.
+5.  Se visualiza el cuadro de diálogo de versión mínima/de destino. La configuración predeterminada es correcta para este tutorial, por lo tanto, seleccione **Aceptar** para crear el proyecto.
 
     ![La ventana de Explorador de soluciones](images/win10-cs-02.png)
 
@@ -240,8 +240,8 @@ Para aprender a usar XAML el diseño de los controles que usará la aplicación,
 ## <a name="see-also"></a>Consulta también
 
 * [Tu primera aplicación](your-first-app.md)
-* [Publicar tu aplicación para UWP](https://developer.microsoft.com/store/publish-apps)
-* [Artículos sobre el desarrollo de aplicaciones para UWP](https://developer.microsoft.com/windows/apps/develop)
+* [Publicar tu aplicación para UWP](https://docs.microsoft.com/windows/uwp/publish/)
+* [Artículos sobre el desarrollo de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/develop/)
 * [Ejemplos de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
 * [¿Qué es una aplicación universal de Windows?](universal-application-platform-guide.md)
 * [Registrarse para obtener una cuenta de Windows](sign-up.md)

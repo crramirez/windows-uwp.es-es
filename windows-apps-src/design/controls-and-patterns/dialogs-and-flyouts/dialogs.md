@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1277d9089e900451ac4c537805079ff479f808fa
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 67ba9f5c9bc4a5e723eb2696d88804df5300eda0
+ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66748453"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468986"
 ---
 # <a name="dialog-controls"></a>Controles de cuadro de diálogo
 
@@ -254,7 +254,7 @@ Un cuadro de diálogo de confirmación típico tiene dos botones: un botón de a
 
 > Nota: Esta sección es aplicable a las aplicaciones diseñadas para Windows 10, versión 1903 o posterior. Las Islas de XAML y AppWindow no están disponibles en versiones anteriores. Para obtener más información acerca de las versiones, consulte el [aplicaciones de versión adaptable](../../../debug-test-perf/version-adaptive-apps.md).
 
-De manera predeterminada, los cuadros de diálogo muestran de forma modal con respecto a la raíz [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview). Cuando use ContentDialog dentro de cualquiera isla [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) o [XAML](/apps/desktop/modernize/xaml-islands), deberá establecer manualmente la [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) en el cuadro de diálogo a la raíz del host XAML.
+De manera predeterminada, los cuadros de diálogo muestran de forma modal con respecto a la raíz [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview). Cuando use ContentDialog dentro de cualquiera isla [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) o [XAML](/windows/apps/desktop/modernize/xaml-islands), deberá establecer manualmente la [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) en el cuadro de diálogo a la raíz del host XAML.
 
 Para ello, establezca la propiedad de XamlRoot del ContentDialog a la misma XamlRoot como un elemento que ya está en el AppWindow o isla de XAML, como se muestra aquí.
 
@@ -284,7 +284,7 @@ private async void DisplayNoWifiDialog()
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplos de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): vea todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 - [Información sobre herramientas](../tooltips.md)

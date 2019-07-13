@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción, uwp, windows 10, pista de aprendizaje, diseño, formulario
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: cd3fb1c294ac81f42bb53c23d307eed49a6708fd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 2e64392e1de5f6061b802acc0a2eed81c3e750fb
+ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564580"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67318804"
 ---
 # <a name="create-and-customize-a-form"></a>Crear y personalizar un formulario
 
@@ -182,4 +182,4 @@ Este es un resumen rápido de las API y otra documentación útiles que te ayuda
 | [Tutorial de diseño adaptativo](../design/basics/xaml-basics-adaptive-layout.md) | Una experiencia guiada paso a paso a través de diseños adaptativos y diseño dinámico. |
 | [Base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database) | Consulte el diseño y los formularios en acción en un ejemplo empresarial de varias páginas. |
 | [XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery) | Consulte una selección de controles XAML y cómo se implementan. |
-| [Ejemplos de código adicionales](https://developer.microsoft.com//windows/samples) | Elija **Controles, diseño y texto** en la lista desplegable de categorías para ver ejemplos de códigos relacionados. |
+| [Ejemplos de código adicionales](https://developer.microsoft.com/windows/samples) | Elija **Controles, diseño y texto** en la lista desplegable de categorías para ver ejemplos de códigos relacionados. |
