@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aacf51cc320a0835f906e91806b686a88907640e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f46967cd26f10510e2620229fee0eec13ca7f52a
+ms.sourcegitcommit: 7bbc24d770bf23a8d7e2b234503aad743eb354f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317616"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67852053"
 ---
 # <a name="optimize-your-xaml-markup"></a>Optimizar el marcado XAML
 
@@ -159,7 +159,7 @@ Usa el [atributo x:Key](../xaml-platform/x-key-attribute.md) para hacer referenc
 
 ### <a name="resourcedictionary-in-a-usercontrol"></a>ResourceDictionary en un elemento UserControl.
 
-Un elemento ResourceDictionary definido en un objeto [UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) resulta en una penalización. La plataforma crea una copia de este tipo de objeto ResourceDictionary para todas las instancias del objeto UserControl. Si tienes un objeto UserControl que se usa con mucha frecuencia, saca el objeto ResourceDictionary del objeto UserControl y ponlo en el nivel de página.
+Un elemento ResourceDictionary definido en un objeto [UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) resulta en una penalización. La plataforma crea una copia de este tipo de objeto ResourceDictionary para todas las instancias del objeto UserControl. Si tiene un control de usuario que se usa mucho, mover ResourceDictionary fuera de la clase UserControl y colóquelo en el nivel de página.
 
 ### <a name="resource-and-resourcedictionary-scope"></a>Ámbito de Resource y ResourceDictionary
 
