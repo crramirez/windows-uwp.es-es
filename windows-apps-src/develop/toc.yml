@@ -840,6 +840,8 @@
           href: ../cpp-and-winrt-apis/weak-references.md
         - name: Objetos ágiles
           href: ../cpp-and-winrt-apis/agile-objects.md
+        - name: Un ejemplo sencillo de WinUI en C++/WinRT
+          href: ../cpp-and-winrt-apis/simple-winui-example.md
         - name: Lenguaje C++
           items:
             - name: Categorías de valor y referencias
