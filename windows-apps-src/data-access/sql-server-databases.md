@@ -1,16 +1,16 @@
 ---
 title: Uso de una base de datos de SQL Server en una aplicación para UWP
 description: Usa una base de datos SQL Server en una aplicación para UWP.
-ms.date: 3/28/2019
+ms.date: 03/28/2019
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, database
 ms.localizationpriority: medium
-ms.openlocfilehash: f8986f14872d4e5de2c45bba264de6619ef07141
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 487497fd3b715f6d497eb76b8da6a3e60903772a
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66360150"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713778"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Uso de una base de datos de SQL Server en una aplicación para UWP
 Tu aplicación puede conectarse directamente a una base de datos de SQL Server y a continuación almacenar y recuperar datos mediante clases en el espacio de nombres [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN).
@@ -238,7 +238,7 @@ A continuación, asegúrate de que se está ejecutando el servicio de SQL Server
 
 **Usar una base de datos ligera para almacenar datos en el dispositivo del usuario**
 
-Consulta [Usar una base de datos de SQLite en una aplicación para UWP.](sqlite-databases.md).
+Consulta [Usar una base de datos de SQLite en una aplicación para UWP](sqlite-databases.md).
 
 **Compartir código entre diferentes aplicaciones de distintas plataformas**
 
