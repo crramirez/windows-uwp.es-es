@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 61525e2a4a088e37184bb93526722e0bf23fbd56
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5837674f2cb20710a59eeac0af59498bf28b197e
+ms.sourcegitcommit: a86d0bd1c2f67e5986cac88a98ad4f9e667cfec5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319809"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229373"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -64,11 +64,21 @@ steps:
 
 La plantilla predeterminada intenta firmar el paquete con el certificado especificado en el archivo .csproj. Si desea firmar el paquete durante la compilación debe tener acceso a la clave privada. En caso contrario, se puede deshabilitar la firma agregando el parámetro `/p:AppxPackageSigningEnabled=false` a la `msbuildArgs` sección en el archivo YAML.
 
-## <a name="add-your-project-certificate-to-a-repository"></a>Agregar el certificado de proyecto a un repositorio
+## <a name="add-your-project-certificate-to-the-secure-files-library"></a>Agregar el certificado de proyecto a la biblioteca de archivos seguros
 
-Canalizaciones funciona con repositorios de Azure repositorios Git y TFVC. Si usas un repositorio de Git, agrega el archivo de certificado del proyecto al repositorio para que el agente de compilación pueda firmar el paquete de aplicación. Si no haces esto, el repositorio de Git omitirá el archivo de certificado. Para agregar el archivo de certificado en el repositorio, haga clic en el archivo de certificado en **el Explorador de soluciones**y, a continuación, en el menú contextual, elija el **Add File omite al Control de código fuente** comando.
+No se deben enviar los certificados en el repositorio si es posible, y los omite git de forma predeterminada. Para administrar el tratamiento seguro de archivos confidenciales, como certificados, es compatible con Azure DevOps [proteger archivos](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops).
 
-![cómo incluir un certificado](images/building-screen1.png)
+Para cargar un certificado para la compilación automatizada:
+
+1. En las canalizaciones de Azure, expanda **canalizaciones** en el panel de navegación y haga clic en **biblioteca**.
+2. Haga clic en el **proteger archivos** pestaña y, a continuación, haga clic en **+ archivo seguro**.
+
+    ![cómo cargar un archivo seguro](images/secure-file1.png)
+
+3. Busque el archivo de certificado y haga clic en **Aceptar**.
+4. Después de cargar el certificado, selecciónelo para ver sus propiedades. En **canalización permisos**, habilitar la **autorizar para su uso en todas las canalizaciones** alternar.
+
+    ![cómo cargar un archivo seguro](images/secure-file2.png)
 
 ## <a name="configure-the-build-solution-build-task"></a>Configurar la tarea de compilación de compilación de soluciones
 
@@ -82,7 +92,12 @@ Esta tarea usa argumentos de MSBuild. Tendrás que especificar el valor de los a
 | AppxBundle | Siempre | Crea un.msixbundle/.appxbundle con los archivos.msix/.appx para la plataforma especificada. |
 | UapAppxPackageBuildMode | StoreUpload | Genera el archivo.msixupload/.appxupload y **_probar** carpeta de instalación de prueba. |
 | UapAppxPackageBuildMode | CI | Genera el archivo.msixupload/.appxupload solo. |
-| UapAppxPackageBuildMode | SideloadOnly | Genera el **_probar** carpeta sólo la instalación de prueba |
+| UapAppxPackageBuildMode | SideloadOnly | Genera el **_probar** carpeta sólo la instalación de prueba. |
+| AppxPackageSigningEnabled | true | Habilita la firma del paquete. |
+| PackageCertificateThumbprint | Huella digital del certificado | Este valor **debe** coincide con la huella digital del certificado de firma, o ser una cadena vacía. |
+| PackageCertificateKeyFile | Path | La ruta de acceso para el certificado que se usará. Este valor se recupera de los metadatos de archivo seguro. |
+
+### <a name="configure-the-build"></a>Configure la compilación
 
 Si desea compilar la solución mediante el uso de la línea de comandos, o mediante cualquier otro sistema de compilación, puede ejecutar MSBuild con estos argumentos.
 
@@ -92,6 +107,41 @@ Si desea compilar la solución mediante el uso de la línea de comandos, o media
 /p:AppxBundlePlatforms="$(Build.BuildPlatform)"
 /p:AppxBundle=Always
 ```
+
+### <a name="configure-package-signing"></a>Configurar la firma del paquete
+
+La canalización debe recuperar el certificado de firma para firmar el paquete MSIX (o APPX). Para ello, agregue una tarea DownloadSecureFile antes de la tarea VSBuild.
+Esto le dará acceso para el certificado de firma a través de ```signingCert```.
+
+```yml
+- task: DownloadSecureFile@1
+  name: signingCert
+  displayName: 'Download CA certificate'
+  inputs:
+    secureFile: '[Your_Pfx].pfx'
+```
+
+A continuación, actualice la tarea VSBuild para hacer referencia el certificado de firma:
+
+```yml
+- task: VSBuild@1
+  inputs:
+    platform: 'x86'
+    solution: '$(solution)'
+    configuration: '$(buildConfiguration)'
+    msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" 
+                  /p:AppxPackageDir="$(appxPackageDir)" 
+                  /p:AppxBundle=Always 
+                  /p:UapAppxPackageBuildMode=StoreUpload 
+                  /p:AppxPackageSigningEnabled=true
+                  /p:PackageCertificateThumbprint="" 
+                  /p:PackageCertificateKeyFile="$(signingCert.secureFilePath)"'
+```
+
+> [!NOTE]
+> El argumento PackageCertificateThumbprint intencionadamente se establece en una cadena vacía como medida de precaución. Si la huella digital se establece en el proyecto pero no coincide con el certificado de firma, se producirá un error en la compilación con el error: `Certificate does not match supplied signing thumbprint`.
+
+### <a name="review-parameters"></a>Revise los parámetros
 
 Los parámetros definidos con el `$()` sintaxis son variables definidas en la definición de compilación y compilará el cambio en otros sistemas.
 
@@ -131,7 +181,7 @@ Si agrega más de un proyecto UWP a la solución y, a continuación, intente cre
 
 Este error aparece porque en el nivel de la solución, no está claro qué aplicación debería aparecer en el lote. Para resolver este problema, abra cada archivo de proyecto y agregue las siguientes propiedades al final de la primera `<PropertyGroup>` elemento.
 
-|**Project**|**Propiedades**|
+|**proyecto**|**Propiedades**|
 |-------|----------|
 |Aplicación|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|

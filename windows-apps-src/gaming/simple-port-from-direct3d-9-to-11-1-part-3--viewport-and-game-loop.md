@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, migración, bucle del juego, direct3d 9, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: bd6a17b5e1684fbee21965158295dba123737bd6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9b3a18d9ee63a2ecded07f8b779195d5274b6210
+ms.sourcegitcommit: 734aa941dc675157c07bdeba5059cb76a5626b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141828"
 ---
 # <a name="port-the-game-loop"></a>Migrar el bucle del juego
 
@@ -33,7 +33,7 @@ Para configurar una ventana de escritorio con una ventanilla de Direct3D 9, tuvi
 
 El entorno de UWP ofrece un sistema mucho más simple. En lugar de configurar una ventana tradicional, un juego de Microsoft Store que usa DirectX implementa [**IFrameworkView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView). Esta interfaz existe para que los juegos y las aplicaciones de DirectX se ejecuten directamente en una clase [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) en el interior del contenedor de la aplicación.
 
-> **Tenga en cuenta**    Windows proporciona punteros administrados a los recursos como el objeto de aplicación de origen y el [ **CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow). Consulte [**identificador de operador de objeto (^)** ]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Tenga en cuenta**    Windows proporciona punteros administrados a los recursos como el objeto de aplicación de origen y el [ **CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow). Consulte [ **identificador de operador de objeto (^)** ](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx).
 
  
 

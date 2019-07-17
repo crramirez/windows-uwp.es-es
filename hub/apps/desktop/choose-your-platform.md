@@ -7,20 +7,20 @@ ms.date: 03/18/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 996bbaf4dd05ce5b24e536459c6d7d009a53fa19
-ms.sourcegitcommit: f167775291cbc566b72b0859ae6b426d848c5c89
+ms.openlocfilehash: 2a4de1a43e60250e7efc2faf70f3c49e8253beb3
+ms.sourcegitcommit: 734aa941dc675157c07bdeba5059cb76a5626b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141798"
 ---
 # <a name="choose-your-app-platform"></a>Elección de la plataforma de aplicaciones
 
 Cuando desea crear una nueva aplicación de escritorio para equipos Windows, la primera decisión que tome es la plataforma de aplicación para usar. Windows proporciona cuatro plataformas de aplicación principal, cada uno con diversos puntos fuertes:
 
 * [Plataforma universal de Windows (UWP)](#uwp)
-* [WPF (.NET)](#wpf)
-* [Windows Forms (.NET)](#windows-forms)
+* [WPF (. NET)](#wpf)
+* [Windows Forms (. NET)](#windows-forms)
 * [Win32](#win32)
 
 Todas estas plataformas de aplicaciones le permiten crear aplicaciones de escritorio como Word, Excel y Photoshop que se ejecutan en el clásico Windows desktop y completa Aproveche características específicas de ese entorno. Sin embargo, algunas de estas plataformas comparten algunos rasgos y son más adecuados para determinados tipos de aplicaciones:
@@ -65,7 +65,7 @@ La siguiente tabla compara las diversas características de Windows Forms, WPF y
 | **En tiempo de ejecución de la interfaz de usuario** |    Native (C++/WinRT y C++/CX) y administrados (.NET Native)  |  Administrado (.NET Framework)<br/><br/>Próximamente se admitirá para .NET Core 3  |   Administrado (.NET Framework)<br/><br/>Próximamente se admitirá para .NET Core 3    |
 | **Código abierto** | [Sí (sólo biblioteca de interfaz de usuario de Windows)](https://github.com/Microsoft/microsoft-ui-xaml)  |  [Sí (solo .NET Core)](https://github.com/dotnet/wpf) | [Sí (solo .NET Core)](https://github.com/dotnet/winforms)  |
 | **Es compatible con XAML** |   Sí   |  Sí  |   No   |
-| **Puntos fuertes**  |  <ul><li>Marcado XAML para la interfaz de usuario</li><li>Experiencia de usuario enriquecido y personalizable</li><li>Las bases de código existentes son compatibles con .NET Standard</li><li>Compatibilidad con PPP elevado</li><li>Compatibilidad con varios tipos de entrada en todos los dispositivos de Windows (incluido toque, lápiz, gamepad, mouse y teclado)</li><li>Compatibilidad con Xbox, HoloLens, IoT o Surface Hub</li><li>Compatibilidad con nativoC++</li><li>Duración de la batería optimizado</li><li>Compatibilidad de accesibilidad moderno (por ejemplo, los lectores de pantalla)</li><li>Capacidades de datos de texto enriquecido (por ejemplo, revisión ortográfica integrada)</li><li>Compatibilidad de tinta</li><li>Proteger la ejecución a través de contenedores de aplicación (por ejemplo, no es de confianza contenido es un espacio aislado)</li></ul>  |  <ul><li>Marcado XAML para la interfaz de usuario</li><li>Experiencia de usuario enriquecido y personalizable</li><li>Gran colección de controles de Microsoft y asociados</li><li>Dense UI</li><li>Compatibilidad con Windows 7</li><li>La plataforma admite para la validación de entrada</li></ul> | <ul><li>desarrollo rápido de aplicaciones</li><li>Editor WYSIWYG para crear la interfaz de usuario</li><li>Gran colección de controles de Microsoft y asociados</li><li>Dense UI</li><li>Compatibilidad con Windows 7</li><li>Teclado y mouse de entrada</li></ul>          |
+| **Puntos fuertes**  |  <ul><li>Marcado XAML para la interfaz de usuario</li><li>Experiencia de usuario enriquecido y personalizable</li><li>Las bases de código existentes son compatibles con .NET Standard</li><li>Compatibilidad con PPP elevado</li><li>Compatibilidad con varios tipos de entrada en todos los dispositivos de Windows (incluido toque, lápiz, gamepad, mouse y teclado)</li><li>Compatibilidad con Xbox, HoloLens, IoT o Surface Hub</li><li>Compatibilidad con nativoC++</li><li>Duración de la batería optimizado</li><li>Compatibilidad de accesibilidad moderno (por ejemplo, los lectores de pantalla)</li><li>Capacidades de datos de texto enriquecido (por ejemplo, revisión ortográfica integrada)</li><li>Compatibilidad de tinta</li><li>Proteger la ejecución a través de contenedores de aplicación (por ejemplo, no es de confianza contenido es un espacio aislado)</li></ul>  |  <ul><li>Marcado XAML para la interfaz de usuario</li><li>Experiencia de usuario enriquecido y personalizable</li><li>Gran colección de controles de Microsoft y asociados</li><li>Interfaz de usuario con gran densidad</li><li>Compatibilidad con Windows 7</li><li>La plataforma admite para la validación de entrada</li></ul> | <ul><li>desarrollo rápido de aplicaciones</li><li>Editor WYSIWYG para crear la interfaz de usuario</li><li>Gran colección de controles de Microsoft y asociados</li><li>Interfaz de usuario con gran densidad</li><li>Compatibilidad con Windows 7</li><li>Teclado y mouse de entrada</li></ul>          |
 | **Escenarios que tienen compatibilidad limitada** |  <ul><li>Interfaz de usuario densa (crear una IU con gran densidad requiere estilos personalizados)<sup>1</sup></li><li>Compatibilidad con las múltiples ventanas<sup>1</sup></li><li>Compatibilidad con la plataforma para la validación de entrada<sup>1</sup></li><li>No se admite Windows 7</li><li>Algunas API de UWP necesitan versiones específicas de mínimas de Windows 10</li><li>Integración de shell y de soporte técnico de plataforma completa (por ejemplo, UWP actualmente no admite la integración de bandeja del sistema o acceso completo a todos los dispositivos)</li><li>Acceso directo a todos los archivos en disco</li><li>ADO.NET</li><li>Bibliotecas de clases de base de código existentes que usan no en estándar .NET o API compatibles no - Windows App Certification Kit</li><li>Soporte técnico de bucle invertido de red local (es decir, si la aplicación necesita para comunicarse con el host local sin necesidad de crear una exención de bucle invertido en el dispositivo de destino)</li><li>E/S de archivos de alto rendimiento</li></ul>     |  <ul><li>Compatibilidad con PPP elevado<sup>2</sup></li><li>Entrada táctil<sup>2</sup></li></ul>  |  <ul><li>Compatibilidad con PPP elevado<sup>2</sup></li><li>Entrada táctil<sup>2</sup></li><li>Interfaz de usuario personalizable</li><li>Experiencias de usuario y gráficos enriquecidos (por ejemplo, la función táctil y animaciones)</li><li>Abstracción enriquecido de vistas y modelos de datos</li></ul>    |   |
 
 <sup>1</sup> públicamente hemos anunciado las características que lo solucionará este escenario en una versión futura de Windows 10.

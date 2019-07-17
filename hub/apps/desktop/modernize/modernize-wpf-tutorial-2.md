@@ -1,6 +1,6 @@
 ---
 description: Este tutorial muestra cómo agregar interfaces de usuario de UWP XAML y crear paquetes MSIX para incorporar otros componentes modernos en su aplicación WPF.
-title: Agregar un control de UWP InkCanvas mediante islas de XAML
+title: Incorporación de un control InkCanvas en UWP mediante islas XAML
 ms.topic: article
 ms.date: 06/27/2019
 ms.author: mcleans
@@ -8,14 +8,14 @@ author: mcleanbyron
 keywords: Windows 10, uwp, formularios windows forms, wpf, Islas de xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 2f8cf18bce7bec880a2cb0bef298c0b565e20208
-ms.sourcegitcommit: 1eec0e4fd8a5ba82803fdce6e23fcd01b9488523
+ms.openlocfilehash: 35b6886389640c7960c4120772c169161779ab68
+ms.sourcegitcommit: 734aa941dc675157c07bdeba5059cb76a5626b39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141842"
 ---
-# <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2ª parte: Agregar un control de UWP InkCanvas mediante islas de XAML
+# <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>Parte 2: Incorporación de un control InkCanvas en UWP mediante islas XAML
 
 Se trata de la segunda parte de un tutorial que muestra cómo modernizar una aplicación de escritorio de WPF de ejemplo denominada Contoso gastos. Para obtener información general del tutorial, los requisitos previos y las instrucciones para descargar la aplicación de ejemplo, vea [Tutorial: Modernizar una aplicación de WPF](modernize-wpf-tutorial.md). En este artículo se da por supuesto que ya ha completado [parte 1](modernize-wpf-tutorial-1.md).
 
@@ -38,20 +38,20 @@ Antes de poder agregar un **InkCanvas** control a la aplicación de gastos de Co
 
 4. Seleccione **el archivo de manifiesto de aplicación**, asígnele el nombre **app.manifest**y haga clic en **agregar**.
 
-5. En el archivo de manifiesto abierto, busque el **compatibilidad** sección e identificar la siguiente entrada comentada.
+5. En el archivo de manifiesto abierto, busque el **compatibilidad** sección e identificar los siguientes comentados **supportedOS** (elemento) para Windows 10.
 
     ```xml
     <!-- Windows 10 -->
     <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
     ```
 
-6. Debajo de esta entrada, agregue el siguiente elemento.
+6. Debajo de este elemento, agregue el siguiente **maxversiontested** elemento.
 
     ```xml
     <maxversiontested Id="10.0.18362.0"/>
     ```
 
-7. Quite el **supportedOS** entrada para Windows 10. En esta sección ahora debería parecerse a esto.
+7. Quite el **supportedOS** (elemento) para Windows 10. En esta sección ahora debería parecerse a esto.
 
     ```xml
     <!-- Windows 10 -->
@@ -60,7 +60,7 @@ Antes de poder agregar un **InkCanvas** control a la aplicación de gastos de Co
     ```
 
     > [!NOTE]
-    > Esta entrada especifica que la aplicación requiere Windows 10, versión 1903 (compilación 18362) o una versión posterior. Se trata de la primera versión de Windows 10 que admita islas de XAML. Sin esta entrada del manifiesto de aplicación, la aplicación iniciará una excepción en tiempo de ejecución.
+    > El **maxversiontested** elemento especifica que la aplicación requiere Windows 10, versión 1903 (compilación 18362) o una versión posterior. Se trata de la primera versión de Windows 10 que admita islas de XAML. Sin esta entrada del manifiesto de aplicación, la aplicación iniciará una excepción en tiempo de ejecución. Después de agregar este elemento puede ver la siguiente advertencia de compilación en el proyecto: `manifest authoring warning 81010002: Unrecognized Element "maxversiontested" in namespace "urn:schemas-microsoft-com:compatibility.v1"`. Esta advertencia no indica que algo va mal en el proyecto y puede omitirse.
 
 8. En el archivo de manifiesto, busque los siguientes comentados **aplicación** sección.
 
