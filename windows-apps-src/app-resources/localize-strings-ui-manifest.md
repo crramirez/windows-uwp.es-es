@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 23cd899a196fbe3d28b7156890d65e90ac88cdad
-ms.sourcegitcommit: 9f097438937539f94b6a14a09ee65d30f71da9c6
-ms.translationtype: HT
+ms.openlocfilehash: 6412416fe2d73c4fc313a32fdc2929fff9dc51c4
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223963"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270085"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de aplicación
 
@@ -303,7 +303,7 @@ Para usar recursos en aplicaciones no embalados, debe hacer algunas cosas:
 
 1. Use [GetForViewIndependentUse](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforviewindependentuse) en lugar de [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) al resolver los recursos desde el código porque no hay ningún *vista actual* en escenarios no empaquetados. La siguiente excepción se produce si se llama a [GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.resourceloader.getforcurrentview) en escenarios no empaquetado: *Contextos de recurso no se pueden crear en subprocesos que no tienen una CoreWindow.*
 1. Use [MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/compile-resources-manually-with-makepri) para generar manualmente el archivo resources.pri de la aplicación.
-    - Ejecute `makepri new /pr <PROJECTROOT> /cf <PRICONFIG> /dq <DEFAULTLANGUAGEQUALIFIER> /of resources.pri`:
+    - Ejecute `makepri new /pr <PROJECTROOT> /cf <PRICONFIG> /of resources.pri`:
     - El &lt;PRICONFIG&gt; debe omitir el "&lt;empaquetado&gt;" sección para que todos los recursos están agrupados en un archivo resources.pri único. Si usa el valor predeterminado [archivo de configuración de MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) creado por [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command), deberá eliminar el "&lt;empaquetado&gt;" sección manualmente después de crearlo.
     - El &lt;PRICONFIG&gt; debe contener todos los indizadores relevantes necesarios para combinar todos los recursos en el proyecto en un archivo resources.pri único. El valor predeterminado [archivo de configuración de MakePri.exe](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-configuration) creado por [createconfig](https://docs.microsoft.com/windows/uwp/app-resources/makepri-exe-command-options#createconfig-command) incluye todos los indizadores.
     - Si no usa la configuración predeterminada, asegúrese de que está habilitado el indizador PRI (Revise la configuración predeterminada para saber cómo hacerlo) para combinar adoptados de referencias de proyecto para UWP, referencias de NuGet etc., que se encuentran en la raíz del proyecto.
