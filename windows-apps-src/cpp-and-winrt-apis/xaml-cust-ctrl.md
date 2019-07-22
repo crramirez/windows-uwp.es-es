@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, proyección, XAML, personalizado, basado en modelo, control
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 01ace91737602d768e71c564abceb28a7d19f9fb
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c0b2d8fb17b90bc55834f6bf2200b22af9352ef6
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64745023"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270084"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>Controles (basados en modelo) personalizados de XAML con C++/WinRT
 
 > [!IMPORTANT]
-> Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) y [Crear API con C++/WinRT ](consume-apis.md).
+> Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), consulta [Consumir API con C++/WinRT](author-apis.md) y [Crear API con C++/WinRT ](consume-apis.md).
 
 Una de las características más eficaces de la plataforma Universal de Windows (UWP) es la flexibilidad que ofrece la pila de la interfaz de usuario (UI) para crear controles personalizados basados en el tipo [**Control**](/uwp/api/windows.ui.xaml.controls.control) de XAML. El marco de interfaz de usuario de XAML ofrece características tales como [propiedades de dependencia personalizadas](/windows/uwp/xaml-platform/custom-dependency-properties) y [propiedades adjuntas](/windows/uwp/xaml-platform/custom-attached-properties), así como [plantillas de control](/windows/uwp/design/controls-and-patterns/control-templates), que facilitan la creación de controles repletos de características y personalizables. Este tema te guía por los pasos de creación de un control (basado en modelo) personalizado con C++/WinRT.
 
