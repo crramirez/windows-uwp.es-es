@@ -1,6 +1,7 @@
 - name: Compilación de aplicaciones para Windows
-  href: apps/index.md
   items:
+    - name: Introducción
+      href: apps/index.md
     - name: Compilación de aplicaciones de escritorio
       items:
         - name: Introducción
@@ -63,3 +64,19 @@
       href: apps/accessibility.md
     - name: Características y tecnologías
       href: apps/features-and-technologies.md
+- name: Compilación con Windows
+  items:
+    - name: Desarrollo con Python
+      items:
+        - name: Introducción
+          href: python/index.md
+        - name: Introducción para principiantes
+          href: python/get-started/python-for-education.md
+        - name: Introducción al desarrollo web
+          href: python/get-started/python-for-web.md
+        - name: Introducción a la automatización
+          href: python/get-started/python-for-scripting.md
+        - name: P+F
+          href: python/faqs.md
+        - name: Recursos
+          href: python/resources.md

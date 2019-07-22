@@ -9,12 +9,12 @@ ms.topic: hub-page
 title: Documentación de Windows
 description: Obtén documentos para profesionales de TI, hardware y desarrollador que te ayudarán a crear y mantener tu solución de Windows.
 localizationpriority: medium
-ms.openlocfilehash: a58310793dd43f3c1970ced7d9365690670bb6a2
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 8bd9a7e4e9575c725830481339438912af193ee3
+ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317716"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68349193"
 ---
 <div id="main" class="v2">
   <div class="container">
@@ -82,7 +82,7 @@ ms.locfileid: "67317716"
             <a data-default="true" href="#developer">Desarrollador</a>
             <ul id="developer">
                 <li>
-                    <a href="#developer-all">Todas</a>
+                    <a href="#developer-all">todo</a>
                     <ul id="developer-all" class="cardsC">
                         <li>
                             <div class="container intro">
@@ -222,7 +222,49 @@ ms.locfileid: "67317716"
                                 </div>
                             </a>
                         </li>
-                       <li>
+                        <li>
+                            <div class="container">
+                                <p>Compilación con Windows</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/windows/python/index">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img data-scaleimage="/media/hubs/windows/win_developer-uwp.svg?branch=master" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Desarrollo con Python</h3>
+                                                <p>Tanto si vas a compilar aplicaciones web multiplataforma, automatizar tareas habituales con un script o si estás en un entorno educativo aprendiendo Python por primera vez, te ayudaremos con todo lo necesario para que empieces a desarrollar con Python en Windows.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="/windows/nodejs/index">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img data-scaleimage="/media/hubs/windows/win_developer-desktop.svg?branch=master" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Develop with NodeJS<</h3>
+                                                <p>If you love JavaScript and want to build a quick web app with Express, a server-side app with Meteor, a data-heavy enterprise app with Sails, a desktop app with Electron, or an online multi-player game with Socket.io, we'll help you get set up to develop using Node.js on Windows.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li> -->
                     </ul>
                 </li>
             </ul>
