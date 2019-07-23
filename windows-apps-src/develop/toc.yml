@@ -432,7 +432,7 @@
               href: ../monetize/set-up-ad-units-in-your-app.md
             - name: Servicio de mediación de anuncios de Microsoft
               href: ../monetize/ad-mediation-service.md
-            - name: Procedimiento recomendado
+            - name: Procedimientos recomendados
               href: ../monetize/best-practices-for-ads-in-apps.md
               items:
                 - name: Directrices de la interfaz de usuario y de la experiencia del usuario
@@ -786,13 +786,13 @@
       items:
         - name: Introducción
           href: ../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md
-        - name: Comenzar
+        - name: Introducción
           href: ../cpp-and-winrt-apis/get-started.md
         - name: Novedades
           href: ../cpp-and-winrt-apis/news.md
         - name: Preguntas frecuentes
           href: ../cpp-and-winrt-apis/faq.md
-        - name: Solución de problemas
+        - name: Solucionar problemas
           href: ../cpp-and-winrt-apis/troubleshooting.md
         - name: Aplicación de ejemplo de Photo Editor
           href: ../cpp-and-winrt-apis/photo-editor-sample.md
@@ -842,6 +842,10 @@
           href: ../cpp-and-winrt-apis/weak-references.md
         - name: Objetos ágiles
           href: ../cpp-and-winrt-apis/agile-objects.md
+        - name: Diagnóstico de asignaciones directas
+          href: ../cpp-and-winrt-apis/diag-direct-alloc.md
+        - name: Detalles acerca de los destructores
+          href: ../cpp-and-winrt-apis/details-about-destructors.md
         - name: Un ejemplo sencillo de WinUI en C++/WinRT
           href: ../cpp-and-winrt-apis/simple-winui-example.md
         - name: Lenguaje C++
@@ -1241,7 +1245,7 @@
       items:
         - name: Migración del proyecto
           href: ../porting/w8x-to-uwp-porting-to-a-uwp-project.md
-        - name: Solución de problemas
+        - name: Solucionar problemas
           href: ../porting/w8x-to-uwp-troubleshooting.md
         - name: Migración de XAML y la interfaz de usuario
           href: ../porting/w8x-to-uwp-porting-xaml-and-ui.md
@@ -1286,7 +1290,7 @@
           href: ../porting/wpsl-to-uwp-namespace-and-class-mappings.md
         - name: Migración del proyecto
           href: ../porting/wpsl-to-uwp-porting-to-a-uwp-project.md
-        - name: Solución de problemas
+        - name: Solucionar problemas
           href: ../porting/wpsl-to-uwp-troubleshooting.md
         - name: Migración de XAML y la interfaz de usuario
           href: ../porting/wpsl-to-uwp-porting-xaml-and-ui.md

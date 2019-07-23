@@ -1,37 +1,37 @@
 ---
 title: Configurar compilaciones automatizadas para la aplicación para UWP
 description: Cómo configurar las compilaciones automatizadas para producir paquetes de instalaciones de prueba o paquetes de la Store.
-ms.date: 09/30/2018
+ms.date: 07/17/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 5837674f2cb20710a59eeac0af59498bf28b197e
-ms.sourcegitcommit: a86d0bd1c2f67e5986cac88a98ad4f9e667cfec5
+ms.openlocfilehash: de623240e275dda5b6fc4df9afee31e1adf9fd4f
+ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229373"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340855"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
-Puede utilizar las canalizaciones de Azure para crear compilaciones automatizadas para los proyectos de UWP. En este artículo, daremos un vistazo en diferentes formas de hacerlo. También le mostraremos cómo realizar estas tareas mediante el uso de la línea de comandos para que pueda integrar con cualquier otro sistema de compilación.
+Puede usar Azure Pipelines para crear compilaciones automatizadas para proyectos de UWP. En este artículo, veremos diferentes maneras de hacerlo. También le mostraremos cómo realizar estas tareas mediante la línea de comandos para que pueda integrar con cualquier otro sistema de compilación.
 
-## <a name="create-a-new-azure-pipeline"></a>Crear una nueva canalización de Azure
+## <a name="create-a-new-azure-pipeline"></a>Creación de una nueva canalización de Azure
 
-Empiece por [registrarse en las canalizaciones de Azure](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up) si no lo ha hecho ya.
+Empiece por [registrarse en Azure pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up) si aún no lo ha hecho.
 
-A continuación, cree una canalización que puede usar para compilar el código fuente. Para ver un tutorial sobre la creación de una canalización para crear un repositorio de GitHub, consulte [crear su primera canalización](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml). Las canalizaciones de Azure es compatible con los tipos de repositorio enumerados [en este artículo](https://docs.microsoft.com/azure/devops/pipelines/repos).
+A continuación, cree una canalización que pueda usar para compilar el código fuente. Para ver un tutorial sobre la creación de una canalización para compilar un repositorio de GitHub, consulte [creación de la primera canalización](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml). Azure Pipelines admite los tipos de repositorios que se enumeran [en este artículo](https://docs.microsoft.com/azure/devops/pipelines/repos).
 
 ## <a name="set-up-an-automated-build"></a>Configurar una compilación automatizada
 
-Comenzaremos con el valor predeterminado para UWP compilar definición que está disponible en las operaciones de desarrollo de Azure y, a continuación, se muestra cómo configurar la canalización.
+Comenzaremos con la definición de compilación predeterminada de UWP que está disponible en las operaciones de desarrollo de Azure y, después, le mostraremos cómo configurar la canalización.
 
 En la lista de plantillas de definición de compilación, elige la plantilla **Plataforma universal de Windows**.
 
-![Seleccione la plantilla UWP](images/select-yaml-template.png)
+![Selección de la plantilla UWP](images/select-yaml-template.png)
 
-Esta plantilla incluye la configuración básica para compilar el proyecto UWP:
+Esta plantilla incluye la configuración básica para compilar el proyecto de UWP:
 
 ```yml
 trigger:
@@ -62,44 +62,49 @@ steps:
 
 ```
 
-La plantilla predeterminada intenta firmar el paquete con el certificado especificado en el archivo .csproj. Si desea firmar el paquete durante la compilación debe tener acceso a la clave privada. En caso contrario, se puede deshabilitar la firma agregando el parámetro `/p:AppxPackageSigningEnabled=false` a la `msbuildArgs` sección en el archivo YAML.
+La plantilla predeterminada intenta firmar el paquete con el certificado especificado en el archivo. csproj. Si desea firmar el paquete durante la compilación, debe tener acceso a la clave privada. De lo contrario, puede deshabilitar la firma agregando el `msbuildArgs` parámetro `/p:AppxPackageSigningEnabled=false` a la sección en el archivo YAML.
 
 ## <a name="add-your-project-certificate-to-the-secure-files-library"></a>Agregar el certificado de proyecto a la biblioteca de archivos seguros
 
-No se deben enviar los certificados en el repositorio si es posible, y los omite git de forma predeterminada. Para administrar el tratamiento seguro de archivos confidenciales, como certificados, es compatible con Azure DevOps [proteger archivos](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops).
+Debe evitar el envío de certificados al repositorio si es posible, y git los omite de forma predeterminada. Para administrar el control seguro de archivos confidenciales como los certificados, Azure DevOps admite la característica de [archivos seguros](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops) .
 
 Para cargar un certificado para la compilación automatizada:
 
-1. En las canalizaciones de Azure, expanda **canalizaciones** en el panel de navegación y haga clic en **biblioteca**.
-2. Haga clic en el **proteger archivos** pestaña y, a continuación, haga clic en **+ archivo seguro**.
+1. En Azure Pipelines, expanda **canalizaciones** en el panel de navegación y haga clic en **biblioteca**.
+2. Haga clic en la pestaña **archivos seguros** y, a continuación, haga clic en **+ archivo seguro**.
 
-    ![cómo cargar un archivo seguro](images/secure-file1.png)
+    ![Cómo cargar un archivo seguro](images/secure-file1.png)
 
 3. Busque el archivo de certificado y haga clic en **Aceptar**.
-4. Después de cargar el certificado, selecciónelo para ver sus propiedades. En **canalización permisos**, habilitar la **autorizar para su uso en todas las canalizaciones** alternar.
+4. Después de cargar el certificado, selecciónelo para ver sus propiedades. En **permisos**de canalización, active la alternancia **autorizar para usar en todas las canalizaciones** .
 
-    ![cómo cargar un archivo seguro](images/secure-file2.png)
+    ![Cómo cargar un archivo seguro](images/secure-file2.png)
+
+5. Si el certificado tiene una contraseña, se recomienda que almacene la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y, a continuación, vincule la contraseña a un [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puede usar la variable para tener acceso a la contraseña desde la canalización.
+
+> [!NOTE]
+> A partir de Visual Studio 2019, ya no se genera un certificado temporal en los proyectos de UWP. Para crear o exportar certificados, use los cmdlets de PowerShell que se describen en [este artículo](create-certificate-package-signing.md).
 
 ## <a name="configure-the-build-solution-build-task"></a>Configurar la tarea de compilación de compilación de soluciones
 
-Esta tarea compila cualquier solución que se encuentra en la carpeta de trabajo a los archivos binarios y genera el archivo de paquete de aplicación de salida.
-Esta tarea usa argumentos de MSBuild. Tendrás que especificar el valor de los argumentos. Usa la siguiente tabla como guía.
+Esta tarea compila cualquier solución que se encuentra en la carpeta de trabajo en archivos binarios y genera el archivo de paquete de aplicación de salida. Esta tarea usa argumentos de MSBuild. Tendrás que especificar el valor de los argumentos. Usa la siguiente tabla como guía.
 
 |**Argumento de MSBuild**|**Valor**|**Descripción**|
 |--------------------|---------|---------------|
 | AppxPackageDir | $(Build.ArtifactStagingDirectory)\AppxPackages | Define la carpeta en la que almacenar los artefactos generados. |
-| AppxBundlePlatforms | $(Build.BuildPlatform) | Permite definir las plataformas para incluir en el paquete. |
-| AppxBundle | Siempre | Crea un.msixbundle/.appxbundle con los archivos.msix/.appx para la plataforma especificada. |
-| UapAppxPackageBuildMode | StoreUpload | Genera el archivo.msixupload/.appxupload y **_probar** carpeta de instalación de prueba. |
-| UapAppxPackageBuildMode | CI | Genera el archivo.msixupload/.appxupload solo. |
-| UapAppxPackageBuildMode | SideloadOnly | Genera el **_probar** carpeta sólo la instalación de prueba. |
-| AppxPackageSigningEnabled | true | Habilita la firma del paquete. |
-| PackageCertificateThumbprint | Huella digital del certificado | Este valor **debe** coincide con la huella digital del certificado de firma, o ser una cadena vacía. |
-| PackageCertificateKeyFile | Path | La ruta de acceso para el certificado que se usará. Este valor se recupera de los metadatos de archivo seguro. |
+| AppxBundlePlatforms | $(Build.BuildPlatform) | Permite definir las plataformas que se van a incluir en la agrupación. |
+| AppxBundle | Siempre | Crea un archivo. msixbundle/. appxbundle con los archivos. msix/. appx para la plataforma especificada. |
+| UapAppxPackageBuildMode | StoreUpload | Genera el archivo. msixupload/. appxupload y la carpeta **_Test** para la instalación de prueba. |
+| UapAppxPackageBuildMode | CI | Genera el archivo. msixupload/. appxupload únicamente. |
+| UapAppxPackageBuildMode | SideloadOnly | Genera la carpeta **_Test** solo para la instalación de prueba. |
+| AppxPackageSigningEnabled | true | Habilita la firma de paquetes. |
+| PackageCertificateThumbprint | Huella digital del certificado | Este valor **debe** coincidir con la huella digital del certificado de firma o ser una cadena vacía. |
+| PackageCertificateKeyFile | Path | Ruta de acceso al certificado que se va a usar. Esto se recupera de los metadatos de archivo seguros. |
+| PackageCertificatePassword | Contraseña | Contraseña del certificado. Se recomienda que almacene la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y vincule la contraseña al [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puede pasar la variable a este argumento. |
 
-### <a name="configure-the-build"></a>Configure la compilación
+### <a name="configure-the-build"></a>Configurar la compilación
 
-Si desea compilar la solución mediante el uso de la línea de comandos, o mediante cualquier otro sistema de compilación, puede ejecutar MSBuild con estos argumentos.
+Si desea compilar la solución mediante la línea de comandos o con cualquier otro sistema de compilación, ejecute MSBuild con estos argumentos.
 
 ```powershell
 /p:AppxPackageDir="$(Build.ArtifactStagingDirectory)\AppxPackages\\"
@@ -108,10 +113,10 @@ Si desea compilar la solución mediante el uso de la línea de comandos, o media
 /p:AppxBundle=Always
 ```
 
-### <a name="configure-package-signing"></a>Configurar la firma del paquete
+### <a name="configure-package-signing"></a>Configurar la firma de paquetes
 
-La canalización debe recuperar el certificado de firma para firmar el paquete MSIX (o APPX). Para ello, agregue una tarea DownloadSecureFile antes de la tarea VSBuild.
-Esto le dará acceso para el certificado de firma a través de ```signingCert```.
+Para firmar el paquete MSIX (o APPX), la canalización debe recuperar el certificado de firma. Para ello, agregue una tarea DownloadSecureFile antes de la tarea VSBuild.
+Esto le proporcionará acceso al certificado de firma a ```signingCert```través de.
 
 ```yml
 - task: DownloadSecureFile@1
@@ -121,7 +126,7 @@ Esto le dará acceso para el certificado de firma a través de ```signingCert```
     secureFile: '[Your_Pfx].pfx'
 ```
 
-A continuación, actualice la tarea VSBuild para hacer referencia el certificado de firma:
+A continuación, actualice la tarea VSBuild para que haga referencia al certificado de firma:
 
 ```yml
 - task: VSBuild@1
@@ -139,19 +144,19 @@ A continuación, actualice la tarea VSBuild para hacer referencia el certificado
 ```
 
 > [!NOTE]
-> El argumento PackageCertificateThumbprint intencionadamente se establece en una cadena vacía como medida de precaución. Si la huella digital se establece en el proyecto pero no coincide con el certificado de firma, se producirá un error en la compilación con el error: `Certificate does not match supplied signing thumbprint`.
+> El argumento PackageCertificateThumbprint se establece intencionadamente en una cadena vacía como precaución. Si la huella digital está establecida en el proyecto pero no coincide con el certificado de firma, se producirá un error en `Certificate does not match supplied signing thumbprint`la compilación:.
 
-### <a name="review-parameters"></a>Revise los parámetros
+### <a name="review-parameters"></a>Revisar parámetros
 
-Los parámetros definidos con el `$()` sintaxis son variables definidas en la definición de compilación y compilará el cambio en otros sistemas.
+Los parámetros definidos con la `$()` sintaxis son variables definidas en la definición de compilación y cambiarán en otros sistemas de compilación.
 
 ![variables predeterminadas](images/building-screen5.png)
 
-Para ver todas las variables predefinidas, vea [variables de compilación predefinidos](https://docs.microsoft.com/azure/devops/pipelines/build/variables).
+Para ver todas las variables predefinidas, vea [variables de compilación](https://docs.microsoft.com/azure/devops/pipelines/build/variables)predefinidas.
 
-## <a name="configure-the-publish-build-artifacts-task"></a>Configurar la tarea de publicar artefactos de compilación
+## <a name="configure-the-publish-build-artifacts-task"></a>Configurar la tarea publicar artefactos de compilación
 
-La canalización UWP predeterminada no guarda los artefactos generados. Para agregar las capacidades de publicación a la definición de YAML, agregue las siguientes tareas.
+La canalización de UWP predeterminada no guarda los artefactos generados. Para agregar las capacidades de publicación a la definición de YAML, agregue las siguientes tareas.
 
 ```yml
 - task: CopyFiles@2
@@ -167,30 +172,30 @@ La canalización UWP predeterminada no guarda los artefactos generados. Para agr
     PathtoPublish: '$(build.artifactstagingdirectory)'
 ```
 
-Puede ver los artefactos generados en el **artefactos** página resultados de la opción de la compilación.
+Puede ver los artefactos generados en la  opción artefactos de la página resultados de la compilación.
 
 ![artefactos](images/building-screen6.png)
 
-Dado que hemos establecido el `UapAppxPackageBuildMode` argumento `StoreUpload`, la carpeta de artefactos incluye el paquete para enviarlo a la Store (.msixupload/.appxupload). Tenga en cuenta que también puede enviar un paquete de aplicación normal (.msix/.appx) o un grupo de aplicaciones (.msixbundle/.appxbundle/) para el Store. Para este artículo, usaremos el archivo .appxupload.
+Dado que hemos establecido el `UapAppxPackageBuildMode` argumento en `StoreUpload`, la carpeta artefactos incluye el paquete para enviarlo al almacén (. msixupload/. appxupload). Tenga en cuenta que también puede enviar un paquetes de aplicación normal (. msix/. appx) o un lote de aplicaciones (. msixbundle/. appxbundle/) al almacén. Para este artículo, usaremos el archivo .appxupload.
 
-## <a name="address-bundle-errors"></a>Errores de lote de dirección
+## <a name="address-bundle-errors"></a>Errores de agrupación de direcciones
 
-Si agrega más de un proyecto UWP a la solución y, a continuación, intente crear un paquete, puede recibir un error similar a ésta.
+Si agrega más de un proyecto de UWP a la solución y, a continuación, intenta crear un paquete, es posible que reciba un error similar al siguiente.
 
   `MakeAppx(0,0): Error : Error info: error 80080204: The package with file name "AppOne.UnitTests_0.1.2595.0_x86.appx" and package full name "8ef641d1-4557-4e33-957f-6895b122f1e6_0.1.2595.0_x86__scrj5wvaadcy6" is not valid in the bundle because it has a different package family name than other packages in the bundle`
 
-Este error aparece porque en el nivel de la solución, no está claro qué aplicación debería aparecer en el lote. Para resolver este problema, abra cada archivo de proyecto y agregue las siguientes propiedades al final de la primera `<PropertyGroup>` elemento.
+Este error aparece porque en el nivel de la solución, no está claro qué aplicación debería aparecer en el lote. Para resolver este problema, abra cada archivo de proyecto y agregue las propiedades siguientes al final del primer `<PropertyGroup>` elemento.
 
-|**proyecto**|**Propiedades**|
+|**Proyecto**|**Propiedades**|
 |-------|----------|
 |Aplicación|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|
 
-A continuación, quite el `AppxBundle` argumento de MSBuild desde el paso de compilación.
+A continuación, quite `AppxBundle` el argumento de MSBuild del paso de compilación.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Compile la aplicación de .NET para Windows](https://docs.microsoft.com/vsts/build-release/get-started/dot-net)
-- [Empaquetado de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
-- [Transferir localmente aplicaciones LOB de Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10)
-- [Crear un certificado de firma del paquete](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)
+- [Compilar la aplicación .NET para Windows](https://docs.microsoft.com/vsts/build-release/get-started/dot-net)
+- [Empaquetar aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
+- [Transferir localmente aplicaciones de LOB en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10)
+- [Crear un certificado para la firma de paquetes](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)

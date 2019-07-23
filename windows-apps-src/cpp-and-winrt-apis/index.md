@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection
 ms.localizationpriority: medium
-ms.openlocfilehash: 7be1fe8f23d51ecff6dbee30ad6ebecc6d65b4d8
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 5a65fe882057370f9d0ca603157279b3aa7429fb
+ms.sourcegitcommit: 02cc7aaa408efe280b089ff27484e8bc879adf23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270028"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387020"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -65,6 +65,8 @@ C++/WinRT funciona mejor y produce archivos binarios más pequeños que cualquie
 | [Interoperabilidad entre C++/WinRT y la ABI](interop-winrt-abi.md) | En este tema se muestra cómo realizar la conversión entre la interfaz binaria de aplicaciones (ABI) y objetos de C++/WinRT. |
 | [Referencias fuertes y débiles de C++/WinRT](weak-references.md) | Windows Runtime es un sistema con recuento de referencias y en este tipo de sistemas es importante conocer el significado de referencias fuertes y débiles y la diferencia entre ellas. |
 | [Objetos ágiles](agile-objects.md) | Un objeto ágil es aquel al que se puede acceder desde cualquier subproceso. Los tipos de C++/WinRT son ágiles de manera predeterminada, pero puedes excluirlos. |
+| [Diagnóstico de asignaciones directas](diag-direct-alloc.md) | Este tema analiza en profundidad una característica de C++/WinRT 2.0 que le ayuda a diagnosticar el error que se produce al crear un objeto de tipo de implementación en la pila, en lugar de usar la familia [**winrt::make**](/uwp/cpp-ref-for-winrt/make) de aplicaciones auxiliares como correspondería. |
+| [Detalles acerca de los destructores](details-about-destructors.md) | C++/WinRT 2.0 le permite aplazar la destrucción de los tipos de implementación y realizar consultas de forma segura durante la destrucción. En este tema se describen esas características y se explica cuándo usarlas. |
 | [Un ejemplo sencillo de biblioteca de interfaz de usuario de Windows para C++/WinRT](simple-winui-example.md) | Este tema te ayudará durante el proceso de adición de compatibilidad simple con WinUI en un proyecto de C++/WinRT. |
 
 ### <a name="topics-about-the-c-language"></a>Temas sobre el lenguaje C++
