@@ -6,18 +6,18 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2b172844e75d9af3d0112e03f155708af3ca6bed
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d393ee92be8768861da0fb0783372c8bafc6f815
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63780349"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67821110"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Novedades para desarrolladores en Windows 10, compilación 17763
 
-La compilación 17763 de Windows 10 (también conocida como Actualización de octubre de 2018 o versión 1809), en combinación con Visual Studio 2017 y el SDK actualizado, proporcionan las herramientas, las características y las experiencias necesarias para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+La compilación 17763 de Windows 10 (también conocida como Actualización de octubre de 2018 o versión 1809), en combinación con Visual Studio 2019 y el SDK actualizado, proporcionan las herramientas, las características y las experiencias necesarias para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
-A continuación, ofrecemos una recopilación de características e instrucciones nuevas y mejoradas de interés para los desarrolladores de Windows en esta versión. Para obtener una lista completa de los nuevos espacios de nombres agregados a Windows SDK, consulta [Cambios en las API de Windows 10, compilación 17763](windows-10-build-17763-api-diff.md). Para obtener más información sobre las características más destacadas de Windows 10, consulta [Lo más destacado de Windows 10](https://go.microsoft.com/fwlink/?LinkId=823181). También puedes consultar [Windows Developer Platform features](https://developer.microsoft.com/windows/platform/features) (Características de la plataforma para desarrolladores de Windows) si quieres tener una descripción general de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
+A continuación, ofrecemos una recopilación de características e instrucciones nuevas y mejoradas de interés para los desarrolladores de Windows en esta versión. Para obtener una lista completa de los nuevos espacios de nombres agregados a Windows SDK, consulta [Cambios en las API de Windows 10, compilación 17763](windows-10-build-17763-api-diff.md). Para obtener más información sobre las características más destacadas de Windows 10, consulta [Lo más destacado de Windows 10](https://go.microsoft.com/fwlink/?LinkId=823181). También puedes consultar [Windows Developer Platform features](https://developer.microsoft.com/windows/platform/features) (Características de la plataforma para desarrolladores de Windows) si quieres tener una introducción de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
 
 ## <a name="design--ui"></a>Diseño e interfaz de usuario
 
@@ -105,7 +105,7 @@ El laboratorio Project Personality Chat te permite agregar un rol personalizable
 
 ### <a name="multi-instance-uwp-apps"></a>Aplicaciones para UWP de varias instancias
 
-Windows ahora te permite ejecutar varias instancias de la aplicación para UWP, cada una en su propio proceso independiente. [Mira el vídeo](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) para descubrir cómo crear una nueva aplicación que admita esta característica y, después, [lee los documentos para desarrolladores](../launch-resume/multi-instance-uwp.md) para obtener instrucciones sobre cómo y por qué usar esta característica.
+Windows ahora le permite ejecutar varias instancias de la aplicación para UWP, cada una en su propio proceso independiente. [Mira el vídeo](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) para descubrir cómo crear una nueva aplicación que admita esta característica y, después, [lee los documentos para desarrolladores](../launch-resume/multi-instance-uwp.md) para obtener instrucciones sobre cómo y por qué usar esta característica.
 
 ### <a name="xbox-live-unity-plugin"></a>Complemento de Xbox Live para Unity
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, news, what's, new
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 11249335f9d29d37bb0824fa779d3ae151c74799
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 537150f6fc000794b11ef9236bfd88469d3f6b19
+ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721652"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67800585"
 ---
 # <a name="whats-new-in-cwinrt"></a>Novedades de C++/WinRT
 
@@ -144,13 +144,13 @@ Gracias al lector de metadatos de xlang, C++/WinRT genera ahora todas las interf
 
 #### <a name="component-optimizations"></a>Optimizaciones de componentes
 
-Esta actualización agrega soporte para varias optimizaciones adicionales de participación para C++/WinRT, descritas en las secciones siguientes. Debido a que estas optimizaciones son cambios importantes (que puede que tengas que hacer cambios menores en el soporte), tendrás que activarlas explícitamente con la marca `-opt` de la herramienta `cppwinrt.exe`.
+Esta actualización agrega soporte para varias optimizaciones adicionales de participación para C++/WinRT, descritas en las secciones siguientes. Debido a que estas optimizaciones son cambios importantes (puede que tengas que hacer cambios menores en el soporte), tendrás que activarlas explícitamente. En Visual Studio, debes establecer la propiedad de proyecto **Propiedades comunes** > **C++/WinRT** > **Optimizado** en *Sí*. Esto agregará `<CppWinRTOptimized>true</CppWinRTOptimized>` al archivo de proyecto. Y tiene el mismo efecto que agregar el modificador `-opt[imize]` al invocar `cppwinrt.exe` desde la línea de comandos.
 
 Un nuevo proyecto (de una plantilla de proyecto) utilizará `-opt` de manera predeterminada.
 
 ##### <a name="uniform-construction-and-direct-implementation-access"></a>Construcción uniforme y acceso de implementación directa
 
-Estas dos optimizaciones permiten a tu componente acceder directamente a sus propios tipos de implementación, incluso cuando solo utiliza los tipos proyectados. No hay necesidad de usar [**make**](/uwp/cpp-ref-for-winrt/make), [**make_self**](/uwp/cpp-ref-for-winrt/make-self) ni [**get_self**](/uwp/cpp-ref-for-winrt/get-self) si simplemente quieres utilizar la superficie de la API pública. Tus llamadas se compilarán para dirigir las llamadas a la implementación e incluso podrían estar completamente insertadas.
+Estas dos optimizaciones permiten a tu componente acceder directamente a sus propios tipos de implementación, incluso cuando solo utiliza los tipos proyectados. No hay necesidad de usar [**make**](/uwp/cpp-ref-for-winrt/make), [**make_self**](/uwp/cpp-ref-for-winrt/make-self) ni [**get_self**](/uwp/cpp-ref-for-winrt/get-self) si simplemente quieres utilizar la superficie de la API pública. Tus llamadas se compilarán para dirigir las llamadas a la implementación e incluso podrían estar completamente insertadas. Para obtener más información sobre la construcción uniforme, consulte la sección de preguntas más frecuentes [¿Por qué obtengo una excepción de "clase no registrada"?](faq.md#why-am-i-getting-a-class-not-registered-exception).
 
 ##### <a name="type-erased-factories"></a>Generadores de borrado de tipos
 
@@ -198,9 +198,13 @@ Esta actualización también agrega compatibilidad para [**get_strong**](/uwp/cp
 
 #### <a name="support-for-deferred-destruction-and-safe-qi-during-destruction"></a>Compatibilidad con la destrucción diferida y con QueryInterface seguro durante la destrucción
 
-Una aplicación XAML puede tener dificultades debido a su necesidad de realizar [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) en un destructor, con el fin de llamar a una implementación de limpieza arriba o abajo en la jerarquía. Pero, esa llamada implica a QueryInterface después de que el recuento de referencias del objeto ya haya llegado a cero. Esta actualización agrega compatibilidad para eliminar el rebote del recuento de referencias, lo que garantiza que una vez que llegue a cero nunca se pueda recuperar; al mismo tiempo permite llamar a QueryInterface para cualquier archivo temporal que se requiera durante la destrucción. Este procedimiento no se puede evitar en ciertas aplicaciones o controles XAML, y C++/WinRT es ahora resistente a él.
+No es raro que el destructor de un objeto de clase de tiempo de ejecución llame a un método que supera temporalmente el recuento de referencias. Cuando el recuento de referencias vuelve a cero, el objeto se destruye una segunda vez. En una aplicación XAML, es posible que necesites aplicar un elemento [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) (QI) en un destructor, para llamar a alguna implementación de limpieza que suba o baje por la jerarquía. Aún así, el recuento de referencias del objeto ya habrá llegado a cero, por lo que QI también devolverá el recuento de referencias.
 
-Se puede aplicar la destrucción proporcionando una función estática **final_release** y trasladando la propiedad de **unique_ptr** a otro contexto.
+Esta actualización agrega compatibilidad para eliminar el rebote del recuento de referencias, lo que garantiza que una vez que llegue a cero nunca se pueda recuperar; al mismo tiempo permite llamar a QueryInterface para cualquier archivo temporal que se requiera durante la destrucción. Este procedimiento no se puede evitar en ciertas aplicaciones o controles XAML, y C++/WinRT es ahora resistente a él.
+
+Puedes aplazar la destrucción al proporcionar una función estática **final_release** en el tipo de implementación. El último puntero al objeto, que tiene un formato de **std::unique_ptr**, se pasa a **final_release**. A continuación, puedes optar por mover la propiedad de ese puntero a otro contexto. Es seguro que QI use el puntero sin desencadenar una doble destrucción. Pero el cambio neto en el recuento de referencias debe ser cero en el punto en que se destruye el objeto.
+
+El valor devuelto de **final_release** puede ser `void`, un objeto de operación asincrónica como [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction), o **winrt::fire_and_forget**.
 
 ```cppwinrt
 struct Sample : implements<Sample, IStringable>
@@ -215,14 +219,16 @@ struct Sample : implements<Sample, IStringable>
         // Called when the unique_ptr below is reset.
     }
 
-    static void final_release(std::unique_ptr<Sample> ptr) noexcept
+    static void final_release(std::unique_ptr<Sample> self) noexcept
     {
-        // Move 'ptr' as needed to delay destruction.
+        // Move 'self' as needed to delay destruction.
     }
 };
 ```
 
-En el ejemplo siguiente, cuando **MainPage** se libera (por última vez), se llama a **final_release**. Esa función pasa cinco segundos esperando (en el grupo de subprocesos) y después se reanuda mediante el **distribuidor** de la página (que requiere QueryInterface, AddRef o Release para funcionar). A continuación, borra **unique_ptr**, lo que hace que se llame al destructor **MainPage**. Incluso aquí, se llama a **DataContext**, que requiere QueryInterface para **IFrameworkElement**. Obviamente, no tiene que implementar **final_release** como una corrutina. Pero eso funciona y hace que sea muy sencillo mover la destrucción a un subproceso diferente.
+En el ejemplo siguiente, cuando **MainPage** se libera (por última vez), se llama a **final_release**. Esa función pasa cinco segundos esperando (en el grupo de subprocesos) y después se reanuda mediante el **distribuidor** de la página (que requiere QueryInterface, AddRef o Release para funcionar). A continuación, se limpia un recurso en ese subproceso de interfaz de usuario. Por último, se borra **unique_ptr**, lo que hace que se llame al destructor **MainPage**. Incluso en ese destructor, se llama a **DataContext**, que requiere un elemento QI para **IFrameworkElement**.
+
+Obviamente, no tienes que implementar **final_release** como una corrutina. Pero eso funciona y hace que sea muy simple mover la destrucción a un subproceso diferente, que es lo que está sucediendo en este ejemplo.
 
 ```cppwinrt
 struct MainPage : PageT<MainPage>
@@ -236,13 +242,17 @@ struct MainPage : PageT<MainPage>
         DataContext(nullptr);
     }
 
-    static IAsyncAction final_release(std::unique_ptr<MainPage> ptr)
+    static IAsyncAction final_release(std::unique_ptr<MainPage> self)
     {
         co_await 5s;
 
-        co_await resume_foreground(ptr->Dispatcher());
+        co_await resume_foreground(self->Dispatcher());
+        co_await self->resource.CloseAsync();
 
-        ptr = nullptr;
+        // The object is destructed normally at the end of final_release,
+        // when the std::unique_ptr<MyClass> destructs. If you want to destruct
+        // the object earlier than that, then you can set *self* to `nullptr`.
+        self = nullptr;
     }
 };
 ```
@@ -279,10 +289,10 @@ En la tabla siguiente se incluyen las noticias y los cambios de C++/WinRT en la 
 
 Otros cambios.
 
-- **Cambio importante**. [**winrt::get_abi(winrt::hstring const&)** ](/uwp/cpp-ref-for-winrt/get-abi) ahora devuelve `void*` en lugar de `HSTRING`. Puedes usar `static_cast<HSTRING>(get_abi(my_hstring));` para obtener una cadena HSTRING.
-- **Cambio importante**. [**winrt::put_abi(winrt::hstring&)** ](/uwp/cpp-ref-for-winrt/put-abi) ahora devuelve `void**` en lugar de `HSTRING*`. Puede usar `reinterpret_cast<HSTRING*>(put_abi(my_hstring));` para obtener una cadena HSTRING*.
+- **Cambio importante**. [**winrt::get_abi(winrt::hstring const&)** ](/uwp/cpp-ref-for-winrt/get-abi) ahora devuelve `void*` en lugar de `HSTRING`. Puedes usar `static_cast<HSTRING>(get_abi(my_hstring));` para obtener una cadena HSTRING. Consulta [Interoperaciones con el valor HSTRING de ABI](interop-winrt-abi.md#interoperating-with-the-abis-hstring).
+- **Cambio importante**. [**winrt::put_abi(winrt::hstring&)** ](/uwp/cpp-ref-for-winrt/put-abi) ahora devuelve `void**` en lugar de `HSTRING*`. Puede usar `reinterpret_cast<HSTRING*>(put_abi(my_hstring));` para obtener una cadena HSTRING*. Consulta [Interoperaciones con el valor HSTRING de ABI](interop-winrt-abi.md#interoperating-with-the-abis-hstring).
 - **Cambio importante**. HRESULT ahora se proyecta como **winrt::hresult**. Si necesitas un valor HRESULT (para la comprobación de tipos o para admitir rasgos de tipo), puedes `static_cast` un **winrt::hresult**. De lo contrario, **winrt::hresult** se convierte en HRESULT, siempre y cuando incluyas `unknwn.h` antes de incluir cualquier encabezado de C++/WinRT.
-- **Cambio importante**. La GUID ahora se proyecta como **winrt::guid**. Para las API que implementes, debes usar **winrt::guid** para los parámetros GUID. De lo contrario, **winrt::guid** se convierte en GUID, siempre y cuando incluyas `unknwn.h` antes de incluir cualquier encabezado de C++/WinRT.
+- **Cambio importante**. La GUID ahora se proyecta como **winrt::guid**. Para las API que implementes, debes usar **winrt::guid** para los parámetros GUID. De lo contrario, **winrt::guid** se convierte en GUID, siempre y cuando incluyas `unknwn.h` antes de incluir cualquier encabezado de C++/WinRT. Consulta [Interoperaciones con la estructura GUID de ABI](interop-winrt-abi.md#interoperating-with-the-abis-guid-struct).
 - **Cambio importante**. El [**constructor winrt::handle_type**](/uwp/cpp-ref-for-winrt/handle-type#handle_typehandle_type-constructor) se ha protegido haciéndose explícito (ahora es más difícil escribir código incorrecto con él). Si tienes que asignar un valor básico de controlador, llama a la [**función handle_type::attach** ](/uwp/cpp-ref-for-winrt/handle-type#handle_typeattach-function) en su lugar.
 - **Cambio importante**. Las firmas de **WINRT_CanUnloadNow** y **WINRT_GetActivationFactory** han cambiado. No debes declarar estas funciones. En su lugar, contiene `winrt/base.h` (que se incluye automáticamente si contiene cualquier archivo de encabezado del espacio de nombres de Windows de C++/WinRT) para incluir las declaraciones de estas funciones.
 - Para la [**estructura winrt::clock**](/uwp/cpp-ref-for-winrt/clock), **from_FILETIME/to_FILETIME** están en desuso a favor de **from_file_time/to_file_time**.

@@ -5,18 +5,18 @@ keywords: novedad, novedades, actualización, actualizaciones, características,
 ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b7fe830e07c1daf95928ab747259cb57aaa7a9f
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: dc35dc50b8dc523aff5478b3ec19c3daeed9dafb
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66371341"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820454"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novedades para desarrolladores en Windows 10, compilación 17134
 
-La compilación 17134 de Windows 10 (también conocida como Actualización de abril o versión 1803), en combinación con Visual Studio 2017 y el SDK actualizado, te proporciona las herramientas, las características y las experiencias que necesitas para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+La compilación 17134 de Windows 10 (también conocida como Actualización de abril o versión 1803), en combinación con Visual Studio 2019 y el SDK actualizado, te proporciona las herramientas, las características y las experiencias que necesitas para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
-A continuación, te ofrecemos una colección de características e instrucciones nuevas y mejoradas de interés para los desarrolladores de Windows en esta versión. Para obtener una lista completa de los nuevos espacios de nombres agregados a Windows SDK, consulta [Nuevas API en la compilación 17134 de Windows 10](windows-10-build-17134-api-diff.md). Para obtener más información sobre las características más destacadas de Windows 10, consulta [Lo más destacado de Windows 10](https://go.microsoft.com/fwlink/?LinkId=823181). También puedes consultar [Windows Developer Platform features](https://developer.microsoft.com/windows/platform/features) (Características de la plataforma para desarrolladores de Windows) si quieres tener una descripción general de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
+A continuación, te ofrecemos una colección de características e instrucciones nuevas y mejoradas de interés para los desarrolladores de Windows en esta versión. Para obtener una lista completa de los nuevos espacios de nombres agregados a Windows SDK, consulta [Nuevas API en la compilación 17134 de Windows 10](windows-10-build-17134-api-diff.md). Para obtener más información sobre las características más destacadas de Windows 10, consulta [Lo más destacado de Windows 10](https://go.microsoft.com/fwlink/?LinkId=823181). También puedes consultar [Windows Developer Platform features](https://developer.microsoft.com/windows/platform/features) (Características de la plataforma para desarrolladores de Windows) si quieres tener una introducción de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
 
 ## <a name="design--ui"></a>Diseño e interfaz de usuario
 
@@ -102,7 +102,7 @@ Windows Machine Learning te permite crear aplicaciones que evalúen modelos de M
 
 ### <a name="motion-controller-tracking"></a>Seguimiento del controlador de movimiento
 
-Los controladores de movimiento representan las manos de un usuario en Windows Mixed Reality. [Mira el vídeo](https://www.youtube.com/watch?v=rkDpRllbLII) para obtener información sobre el funcionamiento de los controladores de movimiento cuando se encuentran tanto dentro como fuera del campo de visión de los auriculares de Mixed Reality y [lee más información acerca del seguimiento del controlador aquí.](https://developer.microsoft.com/windows/mixed-reality/motion_controllers#controller_tracking_state%E2%80%9D)
+Los controladores de movimiento representan las manos de un usuario en Windows Mixed Reality. [Mira el vídeo](https://www.youtube.com/watch?v=rkDpRllbLII) para obtener información sobre el funcionamiento de los controladores de movimiento cuando se encuentran tanto dentro como fuera del campo de visión de los auriculares de Mixed Reality y [lee más información acerca del seguimiento del controlador aquí.](https://docs.microsoft.com/windows/mixed-reality/motion-controllers#controller_tracking_state%E2%80%9D)
 
 ### <a name="package-a-net-app-in-visual-studio"></a>Empaquetar una aplicación .NET en Visual Studio
 

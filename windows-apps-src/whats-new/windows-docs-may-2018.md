@@ -5,16 +5,16 @@ keywords: novedades, actualización, características, directrices para desarrol
 ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 69df2bbe8bc91fcf4a2631c0f257fc44851c24f2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 9adf5a80595e00a30098044536d1ecfe4fd62279
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63805867"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820490"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novedades en la documentación para desarrolladores de Windows de mayo de 2018
 
-La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general de características, instrucciones para desarrolladores, vídeos y ejemplos se encuentra disponibles en el mes de mayo para que coincida con el congreso para desarrolladores [Microsoft Build 2018](https://www.microsoft.com/build).
+La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general de características, instrucciones para desarrolladores, vídeos y ejemplos se encuentra disponibles en el mes de mayo para que coincida con el congreso para desarrolladores [Microsoft Build 2018](https://www.microsoft.com/build/).
 
 [Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
@@ -55,7 +55,7 @@ Además, hemos vuelto a redactar las siguientes páginas con información nueva 
 
 ### <a name="app-installer-files-in-visual-studio"></a>Archivos de instalador de aplicación en Visual Studio
 
-Ahora se pueden crear archivos de instalador de aplicaciones con Visual Studio 2017, versión 15.7 de actualización. [Aprenda a usar Visual Studio para crear un archivo de instalador de la aplicación](../packaging/create-appinstallerfile-vs.md) y habilitar las actualizaciones automáticas a las aplicaciones. Si experimenta problemas, consulte [solucionar problemas de instalación con el archivo instalador de la aplicación](../packaging/troubleshoot-appinstaller-issues.md) para ver los problemas y soluciones comunes.
+Ahora se pueden crear archivos de instalador de aplicaciones con Visual Studio 2017, versión 15.7 de actualización y otras versiones posteriores. [Aprenda a usar Visual Studio para crear un archivo de instalador de la aplicación](../packaging/create-appinstallerfile-vs.md) y habilitar las actualizaciones automáticas a las aplicaciones. Si experimenta problemas, consulte [solucionar problemas de instalación con el archivo instalador de la aplicación](../packaging/troubleshoot-appinstaller-issues.md) para ver los problemas y soluciones comunes.
 
 ### <a name="edge-webview-control-for-windows-forms-and-wpf-applications"></a>Control WebView de Edge para aplicaciones de Windows Forms y WPF
 

@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 31b90866a0f612fb8f488d11e7d989380f14da99
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 0352e01363fc077439325eba4f74fe97febac33c
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63784991"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820550"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e iconos de aplicaciones 
 
@@ -105,18 +105,18 @@ For more information, see [App screenshots, images, and trailers in the Microsof
 
 Visual Studio proporciona una herramienta muy útil para administrar los iconos de app denominado **Diseñador de manifiestos**. 
 
-> Si aún no tienes Visual Studio 2017, hay varias versiones disponibles, incluida una versión gratuita, (Visual Studio 2017 Community Edition) y las demás versiones ofrecen evaluaciones gratuitas. Puedes descargarlas aquí: [https://developer.microsoft.com/windows/downloads](https://developer.microsoft.com/windows/downloads)
+> Si aún no tienes Visual Studio 2019, hay varias versiones disponibles, incluida una versión gratuita, (Visual Studio 2019 Community Edition) y las demás versiones ofrecen evaluaciones gratuitas. Puedes descargarlas aquí: [https://developer.microsoft.com/windows/downloads](https://developer.microsoft.com/windows/downloads)
 
 
 Para iniciar el Diseñador de manifiestos:
 <!-- 1. Use Visual Studio to open a UWP project.
 2. In the **Solution Explorer**, double-click the package.appmanifest file. 
 
-    ![The Visual Studio 2017 Solution Explorer](images/icons/vs-solution-explorer.png)
+    ![The Visual Studio 2019 Solution Explorer](images/icons/vs-solution-explorer.png)
 
     Visual Studio displays the manifest designer.
 
-    ![The Visual Studio 2017 manifest designer](images/icons/vs-manfiest-designer.png)
+    ![The Visual Studio 2019 manifest designer](images/icons/vs-manfiest-designer.png)
 3. Click the **Visual Assets** tab.
 
     ![The Visual Assets tab](images/icons/vs-manfiest-designer-visual-assets.png) -->
@@ -135,7 +135,7 @@ Para iniciar el Diseñador de manifiestos:
         2. En el **Explorador de soluciones**, haz doble clic en el archivo Package.appmxanifest.
     :::column-end:::
     :::column:::
-        ![The Visual Studio 2017 Manifest Designer](images/icons/vs-solution-explorer.png)
+        ![The Visual Studio 2019 Manifest Designer](images/icons/vs-solution-explorer.png)
     :::column-end:::
 :::row-end:::
 :::row:::

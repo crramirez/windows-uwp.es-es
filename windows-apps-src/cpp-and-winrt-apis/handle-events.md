@@ -5,19 +5,28 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: 00870a196517f975d2736298513be7567f3dd29e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 194fd9041b76acb1ef76288fed21c8098462b406
+ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64745057"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67844344"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Control de eventos mediante delegados en C++/WinRT
 
 En este tema se muestra cómo registrar y revocar delegados de control de eventos con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Puedes controlar un evento mediante cualquier objeto de tipo función de C++ estándar.
 
 > [!NOTE]
-> Para más información sobre cómo instalar y usar C++/WinRT Visual Studio Extension (VSIX) y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para más información sobre cómo instalar y usar la Extensión de Visual Studio (VSIX) para C++/WinRT y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+
+## <a name="using-visual-studio-2019-to-add-an-event-handler"></a>Usar Visual Studio 2019 para agregar un controlador de eventos
+
+Una manera cómoda de agregar un controlador de eventos al proyecto es mediante la interfaz de usuario (IU) del diseñador XAML en Visual Studio 2019. Con la página XAML abierta en el diseñador XAML, selecciona el control cuyo evento quieres controlar. En la página de propiedades de ese control, haz clic en el icono con forma de rayo para enumerar todos los eventos que provienen de ese control. A continuación, haz doble clic en el evento que quieres administrar; por ejemplo, *OnClicked*.
+
+El diseñador XAML agrega el prototipo apropiado de la función del controlador de eventos (además de una implementación de código auxiliar) a tus archivos de origen, que ya estarán listos para que los reemplaces con tu propia implementación.
+
+> [!NOTE]
+> Normalmente, no es necesario describir los controladores de eventos en el archivo Midl (`.idl`). Por lo tanto, el diseñador XAML no agrega prototipos de función del controlador de eventos a tu archivo Midl. Solo les agrega los archivos `.h` y `.cpp`.
 
 ## <a name="register-a-delegate-to-handle-an-event"></a>Registro de un delegado para controlar un evento
 
@@ -49,7 +58,7 @@ MainPage::MainPage()
 ```
 
 > [!IMPORTANT]
-> Al registrar el delegado, el ejemplo de código anterior pasa sin formato el puntero *this* (que apunta al objeto actual). Para obtener información sobre cómo establecer una referencia fuerte o débil al objeto actual, consulta la subsección **Si usas una función miembro como un delegado** en la sección [Acceso seguro al puntero *this* con un delegado de control de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+> Al registrar el delegado, el ejemplo de código anterior pasa sin formato el puntero *this* (que apunta al objeto actual). Para saber cómo establecer una referencia segura o poco segura al objeto actual, consulta [If you use a member function as a delegate](weak-references.md#if-you-use-a-member-function-as-a-delegate) (Si usas una función miembro como delegado).
 
 Hay otras formas de construir un **RoutedEventHandler**. Debajo te mostramos el bloque de sintaxis extraído del tema de documentación relativo al [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) (elige *C++/WinRT* en la lista desplegable **Lenguaje** situada en la esquina superior izquierda de la página web). Ten en cuenta los diversos constructores: uno toma una expresión lambda, otro una función libre y otro (el que hemos usado anteriormente) toma un objeto y un puntero a función miembro.
 
@@ -177,8 +186,11 @@ Button::Click_revoker Click(winrt::auto_revoke_t,
 > [!NOTE]
 > En el ejemplo de código anterior, `Button::Click_revoker` es un alias de tipo para `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. Un patrón similar se aplica a todos los eventos C++/WinRT. Cada evento de Windows Runtime tiene una sobrecarga de función revoke que devuelve un revocador de eventos y ese tipo de revocador es un miembro del origen del evento. Por lo tanto, para mostrar otro ejemplo, el evento [**CoreWindow::SizeChanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) tiene una sobrecarga de función de registro que devuelve un valor de tipo **CoreWindow::SizeChanged_revoker**.
 
-
 Puede que tengas que considerar la posibilidad de revocar controladores en un escenario de navegación de páginas. Si vas a navegar varias veces por una página y luego vas a volver atrás, podrías revocar los controladores cuando salgas de la página. Como alternativa, si vuelves a usar la misma instancia de página, comprueba el valor de tu token y regístralo solo si no se ha establecido todavía (`if (!m_token){ ... }`). Una tercera opción es almacenar un revocador de eventos en la página como un miembro de datos. Y una cuarta opción, tal y como se describe más adelante en este tema, es capturar una referencia fuerte o débil al objeto *this* en tu función lambda.
+
+### <a name="if-your-auto-revoke-delegate-fails-to-register"></a>Si el delegado de revocación automática no se registra
+
+Si intentas especificar [**winrt::auto_revoke**](/uwp/cpp-ref-for-winrt/auto-revoke-t) al registrar un delegado y el resultado es una excepción [**winrt::hresult_no_interface**](/uwp/cpp-ref-for-winrt/error-handling/hresult-no-interface), eso generalmente significa que el origen del evento no admite referencias poco seguras. Esta situación es común en el espacio de nombres [**Windows.UI.Composition**](/uwp/api/windows.ui.composition), por ejemplo. En esta situación, no puedes usar la función de revocación automática. Tendrás que recurrir a la revocación manual de tus controladores de eventos.
 
 ## <a name="delegate-types-for-asynchronous-actions-and-operations"></a>Tipos de delegados para acciones y operaciones asincrónicas
 
@@ -221,7 +233,7 @@ void ProcessFeedAsync()
 Como sugiere el comentario de corrutina anterior, en lugar de usar un delegado con los eventos completados de acciones y operaciones asincrónicas, posiblemente te resulte más natural usar las corrutinas. Para obtener información detallada y ejemplos de código, consulta [Operaciones simultáneas y asincrónicas con C++/WinRT](concurrency.md).
 
 > [!NOTE]
-> No es correcto implementar más de un *controlador de finalización* para una operación o acción asincrónica. Puedes tener un solo delegado para su evento completado o bien lo puedes `co_await`. Si tienes ambos, se producirá un error en la segunda.
+> No es correcto implementar más de un *controlador de finalización* para una operación o acción asincrónica. Puedes tener un solo delegado para su evento completado o bien puedes aplicar `co_await`. Si tienes ambos, se producirá un error en la segunda.
 
 Si continúas con delegados en lugar de con una corrutina, podrás optar por una sintaxis más sencilla.
 

@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, string
 ms.localizationpriority: medium
-ms.openlocfilehash: d66cdcff8eff8c620d58a5948cbcf081acea2f45
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 004aa3e267bab86527ac3d5c3fe0383ccd4ad904
+ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66360181"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67844307"
 ---
 # <a name="string-handling-in-cwinrt"></a>Control de cadenas en C++/WinRT
 
@@ -137,6 +137,8 @@ Se ha implementado una gran cantidad de constructores, operadores, funciones e i
 
 Reconocemos que muchas de las bibliotecas de C++ usan **std::string** y funcionan exclusivamente con texto UTF-8. Para mayor comodidad, proporcionamos aplicaciones auxiliares, como [**winrt::to_string**](/uwp/cpp-ref-for-winrt/to-string) y [**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring), para convertir y revertir.
 
+`WINRT_ASSERT` es una definición de macro y se expande a [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).
+
 ```cppwinrt
 winrt::hstring w{ L"Hello, World!" };
 
@@ -152,7 +154,7 @@ Para más ejemplos e información sobre las funciones y los operadores de **hstr
 ## <a name="the-rationale-for-winrthstring-and-winrtparamhstring"></a>Lógica de **winrt::hstring** y **winrt::param::hstring**
 Windows Runtime se implementa en términos de caracteres **wchar_t**, pero la interfaz binaria de aplicaciones (ABI) de Windows Runtime no es un subconjunto que proporcionen **std::wstring** o **std::wstring_view**. Usarlos provocaría ineficiencias significativas. En su lugar, C++/WinRT proporciona **winrt::hstring**, que representa una cadena inmutable coherente con el subyacente [HSTRING](https://docs.microsoft.com/windows/desktop/WinRT/hstring) y se implementa detrás de una interfaz similar a la de **std::wstring**. 
 
-Es posible que observes que los parámetros de entrada de C++/WinRT, que deben aceptar lógicamente **winrt::hstring**, en realidad esperan **winrt::param::hstring**. El espacio de nombres **param** contiene un conjunto de tipos que se usa exclusivamente para optimizar los parámetros de entrada para el enlace natural a tipos de la biblioteca estándar de C++ y para evitar la copia y otras ineficiencias. No deberías usar estos tipos directamente. Si quieres usar una optimización para tus propias funciones, usa **std::wstring_view**.
+Es posible que observes que los parámetros de entrada de C++/WinRT, que deben aceptar lógicamente **winrt::hstring**, en realidad esperan **winrt::param::hstring**. El espacio de nombres **param** contiene un conjunto de tipos que se usa exclusivamente para optimizar los parámetros de entrada para el enlace natural a tipos de la biblioteca estándar de C++ y para evitar la copia y otras ineficiencias. No deberías usar estos tipos directamente. Si quieres usar una optimización para tus propias funciones, usa **std::wstring_view**. Consulta también [Pasar parámetros a los límites de la ABI](/windows/uwp/cpp-and-winrt-apis/pass-parms-to-abi).
 
 El resultado es que puedes omitir en gran medida las características específicas de gestión de cadenas de Windows Runtime y trabajar así eficazmente con aquello que conoces. Y esto es importante, teniendo en cuenta la gran cantidad de cadenas que se utilizan en Windows Runtime.
 
@@ -169,6 +171,22 @@ void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
     wstringstream << L"Pointer pressed at (" << point.x << L"," << point.y << L")" << std::endl;
     ::OutputDebugString(wstringstream.str().c_str());
 }
+```
+
+## <a name="the-correct-way-to-set-a-property"></a>La forma correcta para establecer una propiedad
+
+Establece una propiedad pasando un valor a una función de establecimiento. A continuación te mostramos un ejemplo.
+
+```cppwinrt
+// The right way to set the Text property.
+myTextBlock.Text(L"Hello!");
+```
+
+El código siguiente no es correcto. Se compila, pero todo lo que hace es modificar el elemento **winrt::hstring** temporal que devuelve la función de acceso **Text()** , para luego descartar el resultado.
+
+```cppwinrt
+// *Not* the right way to set the Text property.
+myTextBlock.Text() = L"Hello!";
 ```
 
 ## <a name="important-apis"></a>API importantes

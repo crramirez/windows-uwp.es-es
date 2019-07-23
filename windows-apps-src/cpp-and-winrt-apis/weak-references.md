@@ -6,18 +6,20 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, strong, weak, reference
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 46a0e21295ba430671be4e36ab213e182c2b1737
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 77fcd8369b2df3fdb42facf9d2b2a1d93188322b
+ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721634"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67844320"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Referencias fuertes y débiles de C++/WinRT
 
 Windows Runtime es un sistema con recuento de referencias y en este tipo de sistemas es importante conocer el significado de referencias fuertes y débiles y la diferencia entre ellas (y referencias que no son ninguna de ellas, como el puntero implícito *this*). Como verás en este tema, saber cómo administrar correctamente estas referencias puede significar la diferencia entre un sistema confiable que funciona sin problemas y otro que se bloquea de forma impredecible. Al proporcionar funciones auxiliares que cuentan con compatibilidad completa en la proyección del lenguaje, [C+++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) se encuentra a medio camino en su trabajo de crear sistemas más complejos de forma sencilla y correcta.
 
 ## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>Acceso de forma segura al puntero *this* en una corrutina de miembro de clase
+
+Para obtener más información sobre las corrutinas y ejemplos de código, consulta [Operaciones simultáneas y asincrónicas con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).
 
 En la lista de código siguiente se muestra un ejemplo típico de una corrutina que es una función miembro de una clase. Puedes copiar y pegar este ejemplo en los archivos especificados en un nuevo proyecto de la **aplicación de consola Windows (C++/WinRT)** .
 
@@ -59,16 +61,18 @@ int main()
 
 **MyClass::RetrieveValueAsync** pasa algún tiempo trabajando, y, finalmente, devuelve una copia del miembro de datos `MyClass::m_value`. Una llamada a **RetrieveValueAsync** hace que se cree un objeto asincrónico, y ese objeto tiene un puntero *this* implícito (a través del cual, eventualmente, se accede a `m_value`).
 
+Recuerde que, en una corrutina, la ejecución es sincrónica hasta el primer punto de suspensión, donde el control se devuelve al autor de la llamada. En **RetrieveValueAsync**, la primera `co_await` es el primer punto de suspensión. Para cuando se reanude la corrutina (unos cinco segundos más tarde, en este caso), podría haber ocurrido algo implícito con el obtjeto *this* del puntero que usamos para obtener acceso a `m_value`.
+
 Esta es la secuencia completa de eventos.
 
 1. En **main**, se crea una instancia de **MyClass** (`myclass_instance`).
 2. Se crea el objeto `async`, que señala (mediante el puntero *this*) a `myclass_instance`.
-3. La función **winrt::Windows::Foundation::IAsyncAction::get** se bloquea durante unos segundos y, a continuación, devuelve el resultado de **RetrieveValueAsync**.
+3. La función **winrt::Windows::Foundation::IAsyncAction::get** alcanza su primer punto de suspensión, se bloquea durante unos segundos y luego devuelve el resultado **RetrieveValueAsync**.
 4. **RetrieveValueAsync** devuelve el valor de `this->m_value`.
 
-El paso 4 es seguro, siempre que *this* sea válido.
+El paso 4 es seguro solo mientras *este* siga siendo válido.
 
-Pero, ¿qué ocurre si se destruye la instancia de clase antes de que finalice la operación asincrónica? Hay todo tipo de formas en las que la instancia de clase podría estar fuera del ámbito de aplicación antes de que el método asíncrono se haya completado. Pero, podemos simularlo al establecer la instancia de clase en `nullptr`.
+Pero, ¿qué ocurre si se destruye la instancia de clase antes de que finalice la operación asincrónica? Hay todo tipo de formas en las que la instancia de clase podría estar fuera del ámbito de aplicación antes de que el método asíncrono se haya completado. Aún así, podemos simularla al establecer la instancia de clase en `nullptr`.
 
 ```cppwinrt
 int main()
@@ -193,7 +197,9 @@ int main()
 }
 ```
 
-El patrón es que el receptor del evento tiene un controlador de eventos lambda con dependencias en su puntero *this*. Cada vez que el destinatario del evento sobrevive al origen del evento, sobrevive a esas dependencias. Y en esos casos, que son comunes, el patrón funciona bien. Algunos de estos casos son evidentes, por ejemplo, cuando una página de interfaz de usuario controla un evento generado por un control que se encuentra en la página. La página sobrevive al botón, por lo que el controlador también lo sobrevive. Esto es válido siempre que el destinatario posea el origen (como un miembro de datos, por ejemplo), o cada vez que el destinatario y el origen estén relacionados o pertenezcan directamente a otro objeto. Si estás seguro de que tienes un caso en el que el controlador no sobrevivirá al objeto *this* del que depende, puedes capturar *this* de forma normal, sin tener en cuenta una duración fuerte o débil.
+El patrón es que el receptor del evento tiene un controlador de eventos lambda con dependencias en su puntero *this*. Cada vez que el destinatario del evento sobrevive al origen del evento, sobrevive a esas dependencias. Y en esos casos, que son comunes, el patrón funciona bien. Algunos de estos casos son evidentes, por ejemplo, cuando una página de interfaz de usuario controla un evento generado por un control que se encuentra en la página. La página sobrevive al botón, por lo que el controlador también lo sobrevive. Esto es válido siempre que el destinatario posea el origen (como un miembro de datos, por ejemplo), o cada vez que el destinatario y el origen estén relacionados o pertenezcan directamente a otro objeto. Otro caso seguro es cuando el origen del evento genera sus eventos de forma síncrona; a continuación, puedes revocar el controlador con la confianza de que no se recibirán más eventos.
+
+Cuando estés seguro de que tienes un caso en el que el controlador no sobrevivirá al objeto *this* del que depende, puedes capturar *this* de forma normal, sin tener en cuenta una duración segura o no segura.
 
 Pero todavía hay casos donde *this* no sobrevive a su uso en un controlador (incluidos los controladores para eventos de finalización y progreso generados por acciones y operaciones asincrónicas) y es importante saber cómo lidiar con ellos.
 

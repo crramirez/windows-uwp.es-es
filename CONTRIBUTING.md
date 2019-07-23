@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f8e74688d0f7048276b12680237b85663d7e2b81
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: a91c080805bca5d536aad3755ca7edf052d1fe0e
+ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66214736"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414058"
 ---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>Contribución a la documentación conceptual de UWP
 
@@ -48,7 +48,7 @@ Para realizar cambios más profundos en un artículo existente, agregar o cambia
 
 Al crear una solicitud de incorporación de cambios en el repositorio interno, asegúrate de combinar la rama personal con la rama desde la que se creó.
 
-Después de enviar la solicitud de incorporación de cambios, se evalúa con una [lista de comprobación de calidad del contenido](https://review.docs.microsoft.com/windows-authoring-guide/managing-contributions/editorial-checklist?branch=master) para garantizar que cumple nuestros estándares básicos. Si se aprueba, se asigna a un miembro del equipo de documentación de UWP para su revisión. Si no pasa la evaluación, se te indicarán los cambios que debes hacer.
+Después de enviar la solicitud de incorporación de cambios, se evalúa con la aplicación [PR Merger](https://review.docs.microsoft.com/help/contribute/prmerger-overview?branch=master) para asegurarse de que cumple con nuestros estándares básicos. Si se aprueba, puedes comentar `#sign-off` para pasarla al miembro del equipo de documentación de UWP para su revisión. Si no se aprueba, se te indicarán los cambios se debes realizar antes de poder aprobarla.
 
 Los revisores asignados pueden aprobar o rechazar la solicitud o trabajar contigo para realizar más cambios. Los revisores no combinarán la solicitud de incorporación de cambios hasta que la hayas aprobado tú mismo.
 

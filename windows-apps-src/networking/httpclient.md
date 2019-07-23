@@ -2,16 +2,16 @@
 description: Usa HttpClient y el resto de la API del espacio de nombres Windows.Web.Http para enviar y recibir información mediante los protocolos HTTP 2.0 y HTTP 1.1.
 title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
-ms.date: 6/5/2019
+ms.date: 06/05/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb098aae346c7a81771262793f5f6a042d62d5a3
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 877901deeec4da7674c6c8431e5b11f5eae075ed
+ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66721612"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67714124"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -57,7 +57,7 @@ El espacio de nombres [**Windows.Web.Http.Headers**](https://docs.microsoft.com/
 
 ## <a name="send-a-simple-get-request-over-http"></a>Enviar una solicitud GET sencilla a través de HTTP
 
-Como se mencionó anteriormente en este artículo, el espacio de nombres [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) permite que las aplicaciones para UWP envíen solicitudes GET. En el siguiente fragmento de código se muestra cómo enviar una solicitud GET a http://www.contoso.com con la clase [ **Windows.Web.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)y la clase [**Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) para leer la respuesta de la solicitud GET.
+Como se mencionó anteriormente en este artículo, el espacio de nombres [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) permite que las aplicaciones para UWP envíen solicitudes GET. En el siguiente fragmento de código se muestra cómo enviar una solicitud GET a http:\//www.contoso.com mediante la clase [**Windows.Web.Http.Http.Client**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) y la clase [**Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) para leer la respuesta de la solicitud GET.
 
 ```csharp
 //Create an HTTP client object

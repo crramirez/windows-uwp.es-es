@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, author, event
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a3c834a1696b65099549aa001338a8a02f60e50
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: fc3b07848215699afe971674acfa7606ffb21bce
+ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64745228"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660172"
 ---
 # <a name="author-events-in-cwinrt"></a>Crear eventos en C++/WinRT
 
@@ -91,7 +91,10 @@ namespace winrt::BankAccountWRC::implementation
 }
 ```
 
-No tienes que implementar la sobrecarga del revocador del evento (para obtener más información, consulta [Revocar un delegado registrado](handle-events.md#revoke-a-registered-delegate))&mdash;de las que se ocupa la proyección de C++/WinRT por ti. Las demás sobrecargas no se incorporan en la proyección, con el fin de ofrecerte la flexibilidad para implementarlas de forma óptima para tu escenario. Una llamada a [**event::add**](/uwp/cpp-ref-for-winrt/event#eventadd-function) y [**event::remove**](/uwp/cpp-ref-for-winrt/event#eventremove-function) como esta es un configuración predeterminada eficaz y segura para subprocesos/concurrencia. Pero si tienes un gran número de eventos, es posible que no desees un campo de evento para cada uno, sino optar en su lugar por algún tipo de implementación dispersa.
+> [!NOTE]
+> Para conocer de qué se trata un revocador automático de eventos, consulta [Revocación de un delegado registrado](handle-events.md#revoke-a-registered-delegate). La implementación del revocador automático de eventos se incluye de forma gratuita para el evento. Es decir, no es necesario implementar la sobrecarga para el revocador de eventos &mdash;que la proyección de C++/WinRT proporciona automáticamente.
+
+Las otras sobrecargas (las sobrecargas de revocación manual y registro) *no* se incluyen en la proyección. Esto te proporciona la flexibilidad para implementarlas de forma óptima para tu escenario. Una llamada a [**event::add**](/uwp/cpp-ref-for-winrt/event#eventadd-function) y a [**event::remove**](/uwp/cpp-ref-for-winrt/event#eventremove-function) tal como se muestra en estas implementaciones es un valor predeterminado eficaz y seguro para simultaneidad o subprocesos. Pero si tienes un gran número de eventos, es posible que no desees un campo de evento para cada uno, sino optar en su lugar por algún tipo de implementación dispersa.
 
 También puedes ver por encima la implementación de la función **AdjustBalance** genera el evento **AccountIsInDebit** si el saldo pasa a ser negativo.
 
@@ -112,6 +115,8 @@ Incluye dicho encabezado en `App.cpp`.
 ```
 
 También en `App.cpp`, agrega el siguiente código para crear una instancia de un BankAccount (usando el constructor predeterminado del tipo proyectado), registra un controlador de eventos y, a continuación, haz que la cuenta pase a estar en débito.
+
+`WINRT_ASSERT` es una definición de macro y se expande a [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).
 
 ```cppwinrt
 struct App : implements<App, IFrameworkViewSource, IFrameworkView>

@@ -6,24 +6,24 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 682a69726b20be52a3217f49bed4947b8b621230
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 0b5423c9aae607d4f6ffe14b755c8f73e013d8b6
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564506"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820978"
 ---
 # <a name="create-a-hello-world-app-js"></a>Crear una aplicación "Hello, world" (JS)
 
 Este tutorial le enseña a usar JavaScript y HTML para crear una aplicación sencilla "Hello, world" para la Plataforma universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puede compilar una aplicación que se ejecute en cualquier dispositivo Windows 10.
 
 > [!NOTE]
-> En este tutorial se usa Visual Studio Community 2017. Si usa otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
+> En este tutorial se usa Visual Studio Community 2019. Si usa otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
 
 
 Aquí aprenderás a:
 
--   Crear un nuevo proyecto de **Visual Studio** para **Windows 10** y **UWP**.
+-   Creación de un nuevo proyecto de **Visual Studio 2019** diseñado para **Windows 10** y **UWP**.
 -   Agregar contenido HTML y JavaScript.
 -   Ejecutar el proyecto en el escritorio local en Visual Studio
 
@@ -35,17 +35,15 @@ Aquí aprenderás a:
 
 ## <a name="step-1-create-a-new-project-in-visual-studio"></a>Paso 1: Crear un nuevo proyecto en Visual Studio.
 
-1.  Inicia Visual Studio.
+1.  Inicia Visual Studio 2019.
 
-2.  En el menú **Archivo**, selecciona **Nuevo > Proyecto...** para abrir el cuadro de diálogo *Nuevo proyecto*.
+2.  En el menú **Archivo**, selecciona **Nuevo > Proyecto...** para abrir el cuadro de diálogo *Crear nuevo proyecto*.
 
-3.  En la lista de plantillas del lado izquierdo, abra **Instalado > Plantillas > JavaScript** y, después, elija **Windows Universal** para ver la lista de plantillas de proyecto para UWP.
+3.  Selecciona **Aplicación en blanco (Windows universal) de JavaScript** y luego **Siguiente**.
 
-    (Si no ve ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP). Puede repetir el proceso de instalación y agregar soporte para UWP al hacer clic en **Abrir el instalador de Visual Studio** en el diálogo *Nuevo proyecto*. Consulte [Prepárate](get-set-up.md)
+    (Si no ve ninguna plantilla Universal, es posible que falten los componentes para crear aplicaciones para UWP). Puedes repetir el proceso de instalación y agregar soporte técnico para UWP al hacer clic en **Abrir el instalador de Visual Studio** en el diálogo *Crear nuevo proyecto*. Consulte [Prepárate](get-set-up.md)
 
-4.  Elige la plantilla **Aplicación vacía (Windows Universal)** y escribe "HelloWorld" como **Nombre**. Selecciona **Aceptar**.
-
-    ![La ventana Nuevo proyecto](images/win10-js-01.png)
+4.  En el cuadro de diálogo *Configura tu nuevo proyecto*, escribe "HelloWorld" como **nombre del proyecto** y selecciona **Crear**.
 
 > [!NOTE]
 > Si es la primera vez que usa Visual Studio, es posible que se le solicite habilitar el **Modo desarrollador** en el diálogo de configuración. El modo de desarrollador es una opción de configuración especial que habilita determinadas funciones, como permiso para ejecutar aplicaciones directamente, en lugar de solo desde la Store. Para obtener más información, lea [Habilitar el dispositivo para el desarrollo](enable-your-device-for-development.md). Para continuar con esta guía, seleccione **Modo desarrollador**, haga clic en **Sí** y cierre el diálogo.

@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1bae8455f1062b3ad62aeac3807c6c58ae274a1b
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d4da7e661b0a9c1f389ae93fe4da4782629014f4
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63794779"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820524"
 ---
 # <a name="tutorial-create-a-user-interface"></a>Tutorial: Crear una interfaz de usuario
 
@@ -32,7 +32,7 @@ La **página de detalles**, que muestra una sola foto después de que se haya se
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Visual Studio 2017: [Descargar Visual Studio 2017 Community (gratuito)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
+* Visual Studio 2019: [Descargar Visual Studio 2019 Community (gratuito)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
 * SDK de Windows 10 (10.0.15063.468 o posterior):  [Descargar el último SDK de Windows (gratuito)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 
 ## <a name="part-0-get-the-starter-code-from-github"></a>Parte 0: Obtener el código de inicio de GitHub
@@ -510,7 +510,7 @@ Para obtener más información sobre alineación, consulta [Alineación, márgen
 
 3. Quitar la configuración **HorizontalAlignment** del paso anterior.
 
-4. En Esquema del documento, haz clic con el botón derecho en **ImageGridView**. En el menú contextual, selecciona **Editar plantillas adicionales > Editar el diseño de elementos (ItemsPanel) > Editar una copia...** . Se abrirá el cuadro de diálogo **Crear recurso**. Se abre el cuadro de diálogo **Crear recurso**.
+4. En Esquema del documento, haz clic con el botón derecho en **ImageGridView**. En el menú contextual, selecciona **Editar plantillas adicionales > Editar el diseño de elementos (ItemsPanel) > Editar una copia...** . Se abrirá el cuadro de diálogo Crear recurso. Se abre el cuadro de diálogo **Crear recurso**.
 
 5. En el cuadro de diálogo, cambia el valor de Nombre (clave) a **ImageGridView_ItemsPanelTemplate**y, a continuación, haz clic en **Aceptar**.
 

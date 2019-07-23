@@ -6,16 +6,64 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, author, COM, component
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3badcd59155bc4bb5ef8d9e29271b853c245c24e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 7e3101147f31f630ed6d7d23916eb675f8bc2d21
+ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66360322"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67800528"
 ---
 # <a name="author-com-components-with-cwinrt"></a>Crear componentes COM con C++/WinRT
 
-[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) puede ayudarte a crear componentes del Modelo de objetos componentes (COM) clásicos, igual que te ayuda a crear clases de Windows Runtime. Esta es una ilustración simple, que puedes probar si pegas el código en `pch.h` y `main.cpp` de un nuevo proyecto de la **aplicación de consola Windows (C++/WinRT)** .
+[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) puede ayudarte a crear componentes del Modelo de objetos componentes (COM) clásicos, igual que te ayuda a crear clases de Windows Runtime. En este tema te mostramos cómo.
+
+## <a name="how-cwinrt-behaves-by-default-with-respect-to-com-interfaces"></a>Cómo se comporta C++/WinRT de manera predeterminada, con respecto a las interfaces COM
+
+La plantilla [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) de C++/WinRT es la base desde la cual se derivan directa o indirectamente las clases de tiempo de ejecución y las factorías de activación.
+
+De manera predeterminada, **winrt::implements** solo admite interfaces basadas en [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable), e ignora silenciosamente las interfaces COM clásicas. Cualquier elemento **QueryInterface** (QI) de las interfaces COM clásicas creará un error con **E_NOINTERFACE**.
+
+En un momento verás cómo se puede solucionar esa situación, pero primero, aquí tienes un ejemplo de código para ilustrar lo que sucede de manera predeterminada.
+
+```idl
+// Sample.idl
+runtimeclass Sample
+{
+    Sample();
+    void DoWork();
+}
+
+// Sample.h
+#include "pch.h"
+#include <shobjidl.h> // Needed only for this file.
+
+namespace winrt::MyProject
+{
+    struct Sample : implements<Sample, IInitializeWithWindow>
+    {
+        IFACEMETHOD(Initialize)(HWND hwnd);
+        void DoWork();
+    }
+}
+```
+
+Asimismo, aquí está el código del cliente para consumir la clase **Sample**.
+
+```cppwinrt
+// Client.cpp
+Sample sample; // Construct a Sample object via its projection.
+
+// This next line crashes, because the QI for IInitializeWithWindow fails.
+sample.as<IInitializeWithWindow>()->Initialize(hwnd); 
+```
+
+La buena noticia es que todo lo que se necesita para que **winrt::implements** sea compatible con las interfaces COM clásicas es que solo hay que incluir `unknwn.h` antes de incluir cualquier encabezado de C++/WinRT.
+
+Puedes hacerlo explícitamente o indirectamente, incluyendo algún otro archivo de encabezado como `ole2.h`. Te recomendamos que incluyas el archivo de encabezado `wil\cppwinrt.h`, que forma parte de las [Bibliotecas de implementación de Windows (WIL)](https://github.com/Microsoft/wil). El archivo de encabezado `wil\cppwinrt.h` no solo se asegura de que `unknwn.h` esté incluido antes de `winrt/base.h`, sino que también configura lo necesario para que C++/WinRT y WIL entiendan las excepciones y los códigos de error de cada uno.
+
+## <a name="a-simple-example-of-a-com-component"></a>Un ejemplo simple de un componente COM
+
+Aquí tienes un ejemplo sencillo de un componente COM escrito con C++/WinRT. Esta es una lista completa de una miniaplicación, por lo que puedes eliminar el código si lo pegas en `pch.h` y `main.cpp` de un nuevo proyecto de la **aplicación de consola Windows (C++/WinRT)** .
 
 ```cppwinrt
 // pch.h

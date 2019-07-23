@@ -5,22 +5,22 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d540b41620110a41676d08f5e6239efd0ef4ca46
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 804f1994e187d3b09ed4dcb2186105cf615f5de0
+ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66361233"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67820501"
 ---
 # <a name="tutorial-create-custom-styles"></a>Tutorial: Creación de estilos personalizados
 
 Este tutorial muestra cómo personalizar la interfaz de usuario de nuestra aplicación XAML. Advertencia: este tutorial podría implicar a un unicornio. (¡Lo hace!)  
 
 ## <a name="prerequisites"></a>Requisitos previos
-* [Visual Studio 2017 y el SDK de Windows 10 (10.0.15063.468 o posterior)](https://developer.microsoft.com/windows/downloads)
+* [Visual Studio 2019 y el SDK de Windows 10 (10.0.15063.468 o posterior)](https://developer.microsoft.com/windows/downloads)
 
 ## <a name="part-0-get-the-code"></a>Parte 0: Obtener el código
-El punto de partida de este laboratorio se encuentra en el repositorio de ejemplo PhotoLab, en la [carpeta xaml-basics-starting-points/style/](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/style). Después de clonar o descargar el repositorio, puedes editar el proyecto abriendo PhotoLab.sln con Visual Studio 2017.
+El punto de partida de este laboratorio se encuentra en el repositorio de ejemplo PhotoLab, en la [carpeta xaml-basics-starting-points/style/](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/style). Después de clonar o descargar el repositorio, puedes editar el proyecto abriendo PhotoLab.sln con Visual Studio 2019.
 
 La aplicación PhotoLab tiene dos páginas principales:
 
@@ -54,7 +54,7 @@ El control deslizante de exposición ajusta la exposición de la imagen: si se d
 
 2. En el panel del Explorador de soluciones, haz doble clic en **DetailPage.xaml** para abrirlo. 
 
-    ![El archivo DetailPage.xaml en el Explorador de soluciones de Visual Studio 2017.](../basics/images/xaml-basics/style-detail-page-explorer.png)
+    ![El archivo DetailPage.xaml en el Explorador de soluciones de Visual Studio 2019.](../basics/images/xaml-basics/style-detail-page-explorer.png)
 
 3. Usa un elemento Polígono para crear una forma de fondo para el control deslizante de exposición.
 
@@ -63,7 +63,7 @@ El control deslizante de exposición ajusta la exposición de la imagen: si se d
     <!-- TODO reduce size -->
     ![Un unicornio](../basics/images/xaml-basics/unicorn.png)
     
-    > **Información al respecto:** en el artículo [Dibujo de formas](https://docs.microsoft.com/en-us/windows/uwp/graphics/drawing-shapes) se explica todo lo necesario acerca de las formas XAML. 
+    > **Información al respecto:** en el artículo [Dibujo de formas](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/shapes) se explica todo lo necesario acerca de las formas XAML. 
     
     Queremos crear un widget con aspecto de triángulo, algo parecido a la forma que verías en el control de volumen de un equipo de música estéreo.
     

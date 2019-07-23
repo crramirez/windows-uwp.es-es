@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 78f6fe36fb8955b6234cdf3cb42e4db02a602f4a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 00a65324b799b0cf974271da23fdbcb36aa6c8e2
+ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364347"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399615"
 ---
 # <a name="rich-edit-box"></a>Cuadro de texto enriquecido
 
@@ -29,8 +29,7 @@ Puedes usar un control RichEditBox para escribir y editar documentos de texto en
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un **RichEditBox** para mostrar y editar los archivos de texto. No uses un RichEditBox para que el usuario haga entradas en la aplicación de la manera que usas otros cuadros de entrada de texto estándar. En su lugar, úsalo para trabajar con archivos de texto que sean independientes de la aplicación. En general, el texto que se escribe en un RichEditBox se guarda en un archivo .rtf.
--   Si el principal propósito del cuadro de texto multilínea es la creación de documentos (como entradas de blog o el contenido de un mensaje de correo electrónico), y dichos documentos necesitan texto enriquecido, usa un cuadro de texto enriquecido.
--   Si deseas que los usuarios puedan dar formato a su texto, usa un cuadro de texto enriquecido.
+-   Si el principal propósito del cuadro de texto multilínea es la creación de documentos de solo lectura (como entradas de blog o contenidos de un mensaje de correo electrónico), y dichos documentos necesitan texto enriquecido, usa un [bloque de texto enriquecido](/windows/uwp/design/controls-and-patterns/rich-text-block).
 -   Para capturar texto que solo se va a consumir sin mostrárselo a los usuarios, usa un control de texto sin formato.
 -   Para cualquier otro escenario, usa un control de entrada de texto sin formato.
 

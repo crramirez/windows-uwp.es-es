@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1c764eeb57ec8046a93e7fb58e156fa68daea8df
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 6290b142eee4aff7287b9542b645df89164d173b
+ms.sourcegitcommit: 34671182c26f5d0825c216a6cededc02b0059a9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564524"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67286942"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de navegación para las aplicaciones para UWP
 
@@ -150,7 +150,7 @@ Te recomendamos una estructura jerárquica en los siguientes casos:
     :::column span="2":::
         ### Combining structures
 
-No tienes que elegir una estructura u otra; muchas aplicaciones bien diseñadas usan ambas. Una aplicación puede usar estructuras planas para las páginas de nivel superior, que pueden verse en cualquier orden, y estructuras jerárquicas para las páginas que tienen relaciones más complejas.
+No es necesario que elijas entre una estructura y otra, ya que muchas aplicaciones bien diseñadas usan ambas. Una aplicación puede usar estructuras planas para las páginas de nivel superior, que pueden verse en cualquier orden, y estructuras jerárquicas para las páginas que tienen relaciones más complejas.
 
 Si la estructura de navegación tiene varios niveles, te recomendamos que los elementos de navegación punto a punto solo se vinculen con los elementos del mismo nivel dentro de su subárbol. Ten en cuenta la ilustración adyacente, que muestra una estructura de navegación con dos niveles:
 

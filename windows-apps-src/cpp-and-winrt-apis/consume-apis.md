@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projected, projection, implementation, runtime class, activation
 ms.localizationpriority: medium
-ms.openlocfilehash: e6bf1e7fb32533aa9d7b865ac7c8afc374290e54
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 88a4c65b20c2fb805baecb8a90498e8e4ec9b229
+ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66360353"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67717625"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumo de API con C++/WinRT
 
@@ -79,6 +79,8 @@ En otras palabras, algunas API se declaran más adelante en un encabezado que ha
 ## <a name="accessing-members-via-the-object-via-an-interface-or-via-the-abi"></a>Acceso a miembros a través del objeto, de una interfaz o de la ABI
 Con la proyección de C++/WinRT, la representación del runtime de una clase de Windows Runtime no es más que las interfaces ABI subyacentes. Sin embargo, para tu comodidad, puedes escribir código frente a las clases de la manera que el autor pretendía. Por ejemplo, puedes llamar al método **ToString** de un [**identificador URI**](/uwp/api/windows.foundation.uri) como si fuese un método de la clase (de hecho, en modo no visible, es un método en la otra interfaz **IStringable**).
 
+`WINRT_ASSERT` es una definición de macro y se expande a [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).
+
 ```cppwinrt
 Uri contosoUri{ L"http://www.contoso.com" };
 WINRT_ASSERT(contosoUri.ToString() == L"http://www.contoso.com/"); // QueryInterface is called at this point.
@@ -107,15 +109,17 @@ int main()
     winrt::init_apartment();
     Uri contosoUri{ L"http://www.contoso.com" };
 
-    int port = contosoUri.Port(); // Access the Port "property" accessor via C++/WinRT.
+    int port{ contosoUri.Port() }; // Access the Port "property" accessor via C++/WinRT.
 
-    winrt::com_ptr<ABI::Windows::Foundation::IUriRuntimeClass> abiUri = contosoUri.as<ABI::Windows::Foundation::IUriRuntimeClass>();
+    winrt::com_ptr<ABI::Windows::Foundation::IUriRuntimeClass> abiUri{
+        contosoUri.as<ABI::Windows::Foundation::IUriRuntimeClass>() };
     HRESULT hr = abiUri->get_Port(&port); // Access the get_Port ABI function.
 }
 ```
 
 ## <a name="delayed-initialization"></a>Inicialización demorada
-Incluso el constructor predeterminado de un tipo proyectado hace que se cree un objeto de respaldo de Windows Runtime. Si quieres crear una variable de un tipo proyectado sin ella y construir en su lugar un objeto de Windows Runtime (con el fin de poder retrasar ese trabajo hasta más adelante), puedes hacerlo. Declara la variable o el campo usando el constructor especial `nullptr_t` de C++/WinRT del tipo proyectado.
+
+Incluso el constructor predeterminado de un tipo proyectado hace que se cree un objeto de respaldo de Windows Runtime. Si quieres crear una variable de un tipo proyectado sin ella y construir en su lugar un objeto de Windows Runtime (con el fin de poder retrasar ese trabajo hasta más adelante), puedes hacerlo. Declara la variable o el campo usando el constructor especial de C++/WinRT **std::nullptr_t** del tipo proyectado. La proyección de C++/WinRT inserta este constructor en todas las clases en tiempo de ejecución.
 
 ```cppwinrt
 #include <winrt/Windows.Storage.Streams.h>
@@ -144,7 +148,7 @@ int main()
 }
 ```
 
-Todos los constructores del tipo proyectado *excepto* el constructor `nullptr_t` hacen que se cree un objeto de Windows Runtime de respaldo. El constructor `nullptr_t` no es básicamente ninguna operación. Espera que el objeto proyectado se inicialice más adelante. Por tanto, independientemente de que una clase en tiempo de ejecución tenga un constructor predeterminado, puedes usar esta técnica para que una inicialización retrasada sea eficiente.
+Todos los constructores del tipo proyectado *excepto* el constructor **std::nullptr_t** hacen que se cree un objeto de Windows Runtime de respaldo. El constructor **std:: nullptr_t** es básicamente una operación nula. Espera que el objeto proyectado se inicialice más adelante. Por tanto, independientemente de que una clase en tiempo de ejecución tenga un constructor predeterminado, puedes usar esta técnica para que una inicialización retrasada sea eficiente.
 
 Esta consideración afecta a otros lugares en los que se invocando al constructor predeterminado, como en vectores y mapas. Fíjate en este ejemplo de código, para el que necesitarás un proyecto de **Aplicación vacía (C++/WinRT)** .
 
@@ -158,6 +162,98 @@ La asignación crea un objeto **TextBlock**e inmediatamente lo sobrescribe con `
 ```cppwinrt
 std::map<int, TextBlock> lookup;
 lookup.insert_or_assign(2, value);
+```
+
+### <a name="dont-delay-initialize-by-mistake"></a>No inicializar con retraso por error
+
+Ten cuidado de no invocar el constructor **std:: nullptr_t** por error. La resolución de conflictos del compilador favorece dicho constructor por sobre los constructores de fábrica. Por ejemplo, observa estas dos definiciones de clase en tiempo de ejecución.
+
+```idl
+// GiftBox.idl
+runtimeclass GiftBox
+{
+    GiftBox();
+}
+
+// Gift.idl
+runtimeclass Gift
+{
+    Gift(GiftBox giftBox); // You can create a gift inside a box.
+}
+```
+
+Supongamos que queremos construir un objeto **Gift** que no está dentro de un cuadro (un **Gift** que se construye con un tipo **GiftBox** sin inicializar). En primer lugar, echemos un vistazo a la forma *incorrecta* de hacerlo. Sabemos que hay un constructor de **Gift** que usa un tipo **GiftBox**. Sin embargo, nos tienta pasar un valor **GiftBox** nulo (invocar el constructor de **Gift** a través de la inicialización uniforme tal como lo hacemos a continuación), pero *no* obtendremos el resultado que deseamos.
+
+```cppwinrt
+// These are *not* what you intended. Doing it in one of these two ways
+// actually *doesn't* create the intended backing Windows Runtime Gift object;
+// only an empty smart pointer.
+
+Gift gift{ nullptr };
+auto gift{ Gift(nullptr) };
+```
+
+Lo que obtenemos aquí es un objeto **Gift** sin inicializar. No obtenemos un **Gift** con un tipo **GiftBox** sin inicializar. Esta es la forma *correcta* de hacerlo.
+
+```cppwinrt
+// Doing it in one of these two ways creates an initialized
+// Gift with an uninitialized GiftBox.
+
+Gift gift{ GiftBox{ nullptr } };
+auto gift{ Gift(GiftBox{ nullptr }) };
+```
+
+En el ejemplo incorrecto, pasar un valor `nullptr` literal se resuelve en favor del constructor de inicialización con retraso. Para resolver en favor del constructor de fábrica, el tipo del parámetro debe ser un valor **GiftBox**. Aun así, tienes la opción de pasar un valor **GiftBox** con inicialización demorada de forma explícita, tal y como se muestra en el ejemplo correcto.
+
+El siguiente ejemplo *también* es correcto, ya que el parámetro tiene el tipo GiftBox en vez de **std::nullptr_t**.
+
+```cppwinrt
+GiftBox giftBox{ nullptr };
+Gift gift{ giftBox }; // Calls factory constructor.
+```
+
+La ambigüedad se produce únicamente cuando pasas un valor `nullptr` literal.
+
+## <a name="dont-copy-construct-by-mistake"></a>No construir con copia por error
+
+Esta advertencia es similar a la descrita en la sección [No inicializar con retraso por error](#dont-delay-initialize-by-mistake) anterior.
+
+Además del constructor de inicialización con retraso, la proyección de C++/WinRT también inserta un constructor de copia en todas las clases en tiempo de ejecución. Se trata de un constructor de parámetro único que acepta el mismo tipo que el objeto que se va a construir. El puntero inteligente resultante apunta al mismo objeto de Windows Runtime que apunta su parámetro de constructor. El resultado es que dos objetos de puntero inteligente apuntan al mismo objeto de respaldo.
+
+Esta es una definición de clase en tiempo de ejecución que vamos a usar en los ejemplos de código.
+
+```idl
+// GiftBox.idl
+runtimeclass GiftBox
+{
+    GiftBox(GiftBox biggerBox); // You can place a box inside a bigger box.
+}
+```
+
+Supongamos que queremos construir un tipo **GiftBox** dentro de un **GiftBox** más grande.
+
+```cppwinrt
+GiftBox bigBox{ ... };
+
+// These are *not* what you intended. Doing it in one of these two ways
+// copies bigBox's backing-object-pointer into smallBox.
+// The result is that smallBox == bigBox.
+
+GiftBox smallBox{ bigBox };
+auto smallBox{ GiftBox(bigBox) };
+```
+
+La forma *correcta* de hacerlo es llamar explícitamente al generador de activación.
+
+```cppwinrt
+GiftBox bigBox{ ... };
+
+// These two ways call the activation factory explicitly.
+
+GiftBox smallBox{
+    winrt::get_activation_factory<GiftBox, IGiftBoxFactory>().CreateInstance(bigBox) };
+auto smallBox{
+    winrt::get_activation_factory<GiftBox, IGiftBoxFactory>().CreateInstance(bigBox) };
 ```
 
 ## <a name="if-the-api-is-implemented-in-a-windows-runtime-component"></a>Si la API se implementa en un componente de Windows Runtime
@@ -185,7 +281,7 @@ Para obtener más detalles, el código y un tutorial acerca de consumir API en u
 ## <a name="if-the-api-is-implemented-in-the-consuming-project"></a>Si la API se implementa en el proyecto de consumo
 Un tipo que se consume desde la interfaz de usuario de XAML debe ser una clase en tiempo de ejecución, aunque se encuentre en el mismo proyecto que el XAML.
 
-Para este escenario, genera un tipo proyectado desde los metadatos de Windows Runtime de la clase en tiempo de ejecución (`.winmd`). Una vez más, incluye uns encabezado, pero esta vez construye el tipo proyectado mediante su constructor `nullptr`. Dicho constructor no realiza ninguna inicialización, por lo que debes asignar un valor a la instancia a través de la función auxiliar [**winrt::make**](/uwp/cpp-ref-for-winrt/make), pasando todos los argumentos de constructor necesarios. Las clases en tiempo de ejecución implementadas en el mismo proyecto que el código de consumo no es preciso registrarlas ni crear instancias de ellas a través de la activación de Windows Runtime/COM.
+Para este escenario, genera un tipo proyectado desde los metadatos de Windows Runtime de la clase en tiempo de ejecución (`.winmd`). Una vez más, incluye un encabezado, pero esta vez construye el tipo proyectado mediante su constructor **std::nullptr_t**. Dicho constructor no realiza ninguna inicialización, por lo que debes asignar un valor a la instancia a través de la función auxiliar [**winrt::make**](/uwp/cpp-ref-for-winrt/make), pasando todos los argumentos de constructor necesarios. Las clases en tiempo de ejecución implementadas en el mismo proyecto que el código de consumo no es preciso registrarlas ni crear instancias de ellas a través de la activación de Windows Runtime/COM.
 
 Necesitarás un proyecto de **Aplicación vacía (C++/WinRT)** para este código de ejemplo.
 
