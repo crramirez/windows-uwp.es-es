@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, troubleshooting, HRESULT, error
 ms.localizationpriority: medium
-ms.openlocfilehash: e53fb74b8287b6aee25ddbdd4563846403ff087e
-ms.sourcegitcommit: a7a1e27b04f0ac51c4622318170af870571069f6
+ms.openlocfilehash: add3875e15ad747422b2e53e5d8f8438b61b3b20
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67717550"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270099"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>Solución de problemas de C++/WinRT
 
