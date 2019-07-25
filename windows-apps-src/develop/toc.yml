@@ -432,7 +432,7 @@
               href: ../monetize/set-up-ad-units-in-your-app.md
             - name: Servicio de mediación de anuncios de Microsoft
               href: ../monetize/ad-mediation-service.md
-            - name: Procedimientos recomendados
+            - name: Procedimiento recomendado
               href: ../monetize/best-practices-for-ads-in-apps.md
               items:
                 - name: Directrices de la interfaz de usuario y de la experiencia del usuario
@@ -786,13 +786,13 @@
       items:
         - name: Introducción
           href: ../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md
-        - name: Introducción
+        - name: Comenzar
           href: ../cpp-and-winrt-apis/get-started.md
         - name: Novedades
           href: ../cpp-and-winrt-apis/news.md
         - name: Preguntas frecuentes
           href: ../cpp-and-winrt-apis/faq.md
-        - name: Solucionar problemas
+        - name: Solución de problemas
           href: ../cpp-and-winrt-apis/troubleshooting.md
         - name: Aplicación de ejemplo de Photo Editor
           href: ../cpp-and-winrt-apis/photo-editor-sample.md
@@ -816,6 +816,8 @@
           href: ../cpp-and-winrt-apis/collections.md
         - name: Operaciones simultáneas y asincrónicas
           href: ../cpp-and-winrt-apis/concurrency.md
+        - name: Simultaneidad y asincronía más avanzados
+          href: ../cpp-and-winrt-apis/concurrency-2.md
         - name: Controles de XAML; enlazar a una propiedad
           href: ../cpp-and-winrt-apis/binding-property.md
         - name: Controles de elementos XAML; enlazar a una colección
@@ -1245,7 +1247,7 @@
       items:
         - name: Migración del proyecto
           href: ../porting/w8x-to-uwp-porting-to-a-uwp-project.md
-        - name: Solucionar problemas
+        - name: Solución de problemas
           href: ../porting/w8x-to-uwp-troubleshooting.md
         - name: Migración de XAML y la interfaz de usuario
           href: ../porting/w8x-to-uwp-porting-xaml-and-ui.md
@@ -1290,7 +1292,7 @@
           href: ../porting/wpsl-to-uwp-namespace-and-class-mappings.md
         - name: Migración del proyecto
           href: ../porting/wpsl-to-uwp-porting-to-a-uwp-project.md
-        - name: Solucionar problemas
+        - name: Solución de problemas
           href: ../porting/wpsl-to-uwp-troubleshooting.md
         - name: Migración de XAML y la interfaz de usuario
           href: ../porting/wpsl-to-uwp-porting-xaml-and-ui.md
