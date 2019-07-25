@@ -7,17 +7,17 @@ ms.author: mattwoj
 manager: jken
 ms.topic: landing-page
 ms.date: 07/19/2019
-keywords: windows, python development
-ms.openlocfilehash: efaa587578fef891f9b870c9f357f19c5f8e5bb7
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+keywords: windows, python development, how do I start with python on windows, python on windows subystem for linux, python with wsl, set up development environment for python on windows, IDE for python on Windows, where is python installed on windows, run python on windows, python for beginners on windows
+ms.openlocfilehash: 7711230b141c57135e1cda3f68416f0ed5287eac
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68349320"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473649"
 ---
 # <a name="develop-with-python-on-windows"></a>Desarrollo con Python en Windows
 
-Tanto si eres un desarrollador experimentado como si acabas de empezar, una de las decisiones más importantes que debes tomar es el tipo de hardware y entorno de desarrollo que vas a usar. Windows está realizando importantes avances para ofrecer una mejor compatibilidad para los desarrolladores de Python. Empieza por aquí para obtener instrucciones sobre cómo configurar el entorno de desarrollo, sobre si instalar las herramientas en Windows nativo o en un subsistema de Windows para Linux y sobre cómo integrar herramientas como VS Code y Git.
+Tanto si eres un desarrollador experimentado como si acabas de empezar con la codificación con Python, una de las decisiones más importantes que debes tomar es el entorno de desarrollo que vas a usar. Empieza por aquí para obtener instrucciones sobre cómo configurar el entorno de desarrollo, sobre si instalar las herramientas en Windows nativo o en un subsistema de Windows para Linux y sobre cómo integrar herramientas como VS Code y Git. Windows está realizando mejoras importantes para los desarrolladores de Python y nos gustaría ayudarle a empezar.
 
 <ul class="cardsK panelContent">
     <li>
