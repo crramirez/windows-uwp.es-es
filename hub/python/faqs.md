@@ -10,12 +10,12 @@ ms.technology: hub
 keywords: Python, Windows 10, Microsoft, PIP, py. exe, rutas de acceso de archivo, PYTHONPATH, implementación de Python, empaquetado de Python
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 4f7f5c325dfd114093e1434259489459a8c78151
-ms.sourcegitcommit: 161eac985af11faaff78797d86343d4fa7d6a05f
+ms.openlocfilehash: fd08061858fc97f1427e94c6a92a4c3a9511967d
+ms.sourcegitcommit: 210034519678ba1a59744bc3a0b613b000921537
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68366731"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473661"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Preguntas más frecuentes sobre el uso de Python en Windows
 
@@ -29,9 +29,11 @@ Algunos paquetes incluyen código nativo que requiere un C o C++ un compilador p
 
 [Siga la explicación de stackoverflow](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379).
 
-## <a name="what-is-pyexe"></a>¿Qué es py. exe?
+### <a name="what-is-pyexe"></a>¿Qué es py. exe?
 
-Puede acabar con varias versiones de Python instaladas en el equipo porque está trabajando en diferentes tipos de proyectos de Python. Dado que todos usan el `python` comando, es posible que no sea obvio cuál es el que está usando. El [iniciador de py. exe](https://docs.python.org/3/using/windows.html#launcher) seleccionará automáticamente la versión más reciente de Python que haya instalado. También puede usar comandos como `py -3.7` para seleccionar una versión determinada o `py --list` para ver qué versiones se pueden usar. **Sin embargo**, el iniciador de py. exe solo funcionará si usa una versión de Python instalada desde [Python.org](https://www.python.org/downloads/windows/). Al instalar Python desde el Microsoft Store, no se `py` **incluye**el comando. Para Linux, MacOS, WSL y la versión Microsoft Store de Python, debe usar el `python3` comando.
+Puede acabar con varias versiones de Python instaladas en el equipo porque está trabajando en diferentes tipos de proyectos de Python. Dado que todos usan el `python` comando, es posible que no sea obvio qué versión de Python está usando. Como norma, se recomienda usar el `python3` comando (o `python3.7` para seleccionar una versión específica).
+
+El [iniciador de py. exe](https://docs.python.org/3/using/windows.html#launcher) seleccionará automáticamente la versión más reciente de Python que haya instalado. También puede usar comandos como `py -3.7` para seleccionar una versión determinada o `py --list` para ver qué versiones se pueden usar. **Sin embargo**, el iniciador de py. exe solo funcionará si usa una versión de Python instalada desde [Python.org](https://www.python.org/downloads/windows/). Al instalar Python desde el Microsoft Store, no se `py` **incluye**el comando. Para Linux, MacOS, WSL y la versión Microsoft Store de Python, debe usar el `python3` comando (o `python3.7`).
 
 ## <a name="why-dont-file-paths-work-in-python-when-i-copy-paste-them"></a>¿Por qué no funcionan las rutas de acceso de archivo en Python cuando las copia y las pega?
 
