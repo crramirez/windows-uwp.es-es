@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f04d364aac79ed232f35cbdd8378bc50393d2c74
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d0955e7a018472141b137935c5bc87a9f75a5c6d
+ms.sourcegitcommit: 0c5f81100986cc4b74b54cd1ca2debd283c5b7f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63789046"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375273"
 ---
 # <a name="sound"></a>Sonido
 
@@ -91,7 +91,6 @@ Actualmente, el sonido activado por el control más común en nuestro sistema es
 
 Por lo general, este sonido solo se reproduce cuando un usuario destina explícitamente un control simple o una parte del control a través de un [dispositivo de entrada](../input/index.md).
 
-<clic de sonido SelectButtonClick.mp3 aquí>
 
 Para reproducir este sonido en cualquier evento de control, solo tienes que llamar al método de reproducción de **ElementSoundPlayer** y pasar **ElementSound.Invoke**:
 ```C#
@@ -104,14 +103,10 @@ Hay muchos controles flotantes, cuadros de diálogo e interfaces de usuario desc
 
 Cuando una ventana de contenido de superposición se incluye en la vista, debe llamarse al sonido **Mostrar**:
 
-<clip de sonido OverlayIn.mp3 aquí>
-
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Show);
 ```
 Por el contrario, cuando se cierra una ventana de contenido de superposición (o se cierra el elemento por cambio de foco), debe llamarse al sonido **Ocultar**:
-
-<clip de sonido OverlayOut.mp3 aquí>
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Hide);
@@ -124,14 +119,10 @@ La experiencia de sonido con relación a este concepto de navegación está incl
 
 Al pasar a un vista o panel que se considera el *siguiente elemento* de una lista, llama a:
 
-<clip de sonido PageTransitionRight.mp3 aquí>
-
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MoveNext);
 ```
 Y al pasar a un vista o panel anterior de una lista que se considera el *elemento anterior*, llama a:
-
-<clip de sonido PageTransitionLeft.mp3 aquí>
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
@@ -139,8 +130,6 @@ ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
 ### <a name="back-navigation"></a>Volver a la navegación
 
 Al navegar desde la página actual a la página anterior dentro de una aplicación, debe llamarse al sonido **GoBack**:
-
-<clip de sonido BackButtonClick.mp3 aquí>
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.GoBack);
@@ -153,8 +142,6 @@ El enfoque ocurre cuando un usuario navega a través de una aplicación, bien co
 
 Para configurar un control para que reproduzca el sonido de **Foco** cuando el control recibe el foco, llama a:
 
-<clip de sonido ElementFocus1.mp3 aquí>
-
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Focus);
 ```
@@ -166,5 +153,5 @@ La finalidad de esta característica de recorrido consiste en evitar que los son
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Diseño para Xbox y televisión](https://go.microsoft.com/fwlink/?LinkId=760736)
-* [Documentación de la clase ElementSoundPlayer](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer)
+* [Diseño para Xbox y televisión](/windows/uwp/design/devices/designing-for-tv)
+* [Documentación de la clase ElementSoundPlayer](/uwp/api/windows.ui.xaml.elementsoundplayer)
