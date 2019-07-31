@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++, cpp, winrt, proyección, introducción
 ms.localizationpriority: medium
-ms.openlocfilehash: da8452329e353c0bbb4b0cedbfe269fd239f9c78
-ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
+ms.openlocfilehash: 87ab033ddd9de92922f043a069b793ca101307d0
+ms.sourcegitcommit: 6cc8b231c1b970112d26a7696cc3e907082ef2be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67800567"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68308443"
 ---
 # <a name="introduction-to-cwinrt"></a>Introducción a C++/WinRT
 &nbsp;
@@ -62,7 +62,7 @@ A partir de la versión 2.0, el paquete NuGet **Microsoft.Windows.CppWinRT** in
 
 Con C++/WinRT, también puedes implementar tus propias clases en tiempo de ejecución con C++ estándar, sin tener que recurrir a la programación de estilo COM. Para una clase en tiempo de ejecución, solo tienes que describir tus tipos en un archivo IDL, y `midl.exe` y `cppwinrt.exe` generarán para ti tus archivos de código fuente de implementación reutilizable. Como alternativa, puedes simplemente implementar interfaces si derivas de una clase base de C++/WinRT. Para obtener más información, consulta [Crear API con C++/WinRT](author-apis.md).
 
-Para obtener una lista de las opciones de personalización para la herramienta `cppwinrt.exe` que está establecida a través de las propiedades del proyecto, consulte [https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing ].
+Para conocer una lista de opciones de personalización para la herramienta `cppwinrt.exe`, a través de las propiedades del proyecto, consulta [readme](https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing) del paquete NuGet Microsoft.Windows.CppWinRT.
 
 Puedes identificar que un proyecto usa compatibilidad de MSBuild con C++WinRT porque el paquete NuGet **Microsoft.Windows.CppWinRT** está instalado en el proyecto.
 
@@ -71,7 +71,7 @@ Estas son las plantillas de proyecto de Visual Studio proporcionadas por la exte
 ### <a name="blank-app-cwinrt"></a>Aplicación vacía (C++/WinRT)
 Plantilla de proyecto para una aplicación de la Plataforma universal de Windows (UWP) que tiene una interfaz de usuario XAML.
 
-Visual Studio proporciona compatibilidad con el compilador XAML para generar los códigos auxiliares de los encabezados y las implementaciones a partir del archivo basado en lenguaje de definición de interfaz (IDL) (`.idl`) que se encuentra detrás de cada archivo de marcado XAML. En un archivo IDL, define las clases en tiempo de ejecución locales a las que quieras hacer referencia en las páginas XAML de tu aplicación y, después, compila el proyecto una sola vez para generar las plantillas de implementación en `Generated Files` y las definiciones del tipo de código auxiliar en `Generated Files\sources`. Luego, usa estas definiciones del tipo de código auxiliar como referencia para implementar tus clases en tiempo de ejecución locales. Te recomendamos que declares cada clase en tiempo de ejecución en su propio archivo IDL.
+Visual Studio proporciona compatibilidad con el compilador XAML para generar los códigos auxiliares de los encabezados y las implementaciones a partir del archivo basado en lenguaje de definición de interfaz (IDL) (`.idl`) que se encuentra detrás de cada archivo de marcado XAML. En un archivo IDL, define las clases en tiempo de ejecución locales a las que quieras hacer referencia en las páginas XAML de tu aplicación y, después, compila el proyecto una sola vez para generar las plantillas de implementación en `Generated Files` y las definiciones del tipo de código auxiliar en `Generated Files\sources`. Luego, usa estas definiciones del tipo de código auxiliar como referencia para implementar tus clases en tiempo de ejecución locales. Consulta [Factorizar clases en tiempo de ejecución en archivos Midl (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
 La compatibilidad de la superficie de diseño XAML en Visual Studio 2019 con C++/WinRT es casi igual a la de C#. En Visual Studio 2019, puedes usar la pestaña **Eventos** de la ventana **Propiedades** para agregar controladores de eventos en un proyecto de C++/WinRT. También puedes agregar controladores de eventos en el código manualmente. Consulta [Controlar eventos usando delegados en C++/WinRT](handle-events.md) para obtener más información.
 
@@ -91,7 +91,7 @@ Plantilla de proyecto para un componente, normalmente para el consumo desde una 
 
 Esta plantilla muestra la cadena de herramientas `midl.exe` > `cppwinrt.exe`, donde se generan los metadatos de Windows Runtime (`.winmd`) a partir de IDL y, después, se generan los códigos auxiliares de los encabezados y las implementaciones a partir de los metadatos de Windows Runtime.
 
-En un archivo IDL, define las clases en tiempo de ejecución de tu componente, su interfaz predeterminada y cualquier otra interfaz que implementen. Compila el proyecto una sola vez para generar `module.g.cpp`, `module.h.cpp`, plantillas de implementación en `Generated Files` y la definición del tipo de código auxiliar en `Generated Files\sources`. Luego, usa estas definiciones del tipo de código auxiliar como referencia para implementar las clases en tiempo de ejecución en tu componente. Te recomendamos que declares cada clase en tiempo de ejecución en su propio archivo IDL.
+En un archivo IDL, define las clases en tiempo de ejecución de tu componente, su interfaz predeterminada y cualquier otra interfaz que implementen. Compila el proyecto una sola vez para generar `module.g.cpp`, `module.h.cpp`, plantillas de implementación en `Generated Files` y la definición del tipo de código auxiliar en `Generated Files\sources`. Luego, usa estas definiciones del tipo de código auxiliar como referencia para implementar las clases en tiempo de ejecución en tu componente. Consulta [Factorizar clases en tiempo de ejecución en archivos Midl (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
 Agrupa el binario compilado de componente de Windows Runtime y su `.winmd` con la aplicación para UWP consumiéndolos.
 
