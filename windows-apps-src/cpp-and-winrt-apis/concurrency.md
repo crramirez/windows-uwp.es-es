@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, concurrency, async, asynchronous, asynchrony
 ms.localizationpriority: medium
-ms.openlocfilehash: cbabf38f41ae940f5c92944154638eae7016e043
-ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
+ms.openlocfilehash: f7db1e5810de478f1c6198860100409d79d4f5d5
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660095"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270141"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Operaciones simultáneas y asincrónicas con C++/WinRT
 
@@ -224,13 +224,13 @@ IASyncAction DoWorkAsync(Param const& value)
 {
     // While it's ok to access value here...
 
-    co_await DoOtherWorkAsync();
+    co_await DoOtherWorkAsync(); // (this is the first suspension point)...
 
     // ...accessing value here carries no guarantees of safety.
 }
 ```
 
-En una corrutina, la ejecución es sincrónica hasta el primer punto de suspensión, donde el control se devuelve al autor de la llamada. Cuando se reanuda la corrutina, puede haber ocurrido cualquier cosa en el valor de origen que hace referencia a un parámetro de referencia. Desde la perspectiva de la corrutina, un parámetro de referencia tiene un ciclo de vida incontrolado. Por tanto, en el ejemplo anterior, estamos seguros al acceder a *value* hasta `co_await`, pero no tras él. En caso de que el autor de llamada destruya *value*, intenta acceder a él dentro de la corrutina después de que eso provoque un daño de memoria. Tampoco podemos pasar con seguridad *value* a **DoOtherWorkAsync** si hay algún riesgo de que esa función se suspenda e intente usar *value* después de que se reanude.
+En una corrutina, la ejecución es sincrónica hasta el primer punto de suspensión, donde el control se devuelve al autor de la llamada, y el marco de la llamada sale del ámbito. Cuando se reanuda la corrutina, puede haber ocurrido cualquier cosa en el valor de origen que hace referencia a un parámetro de referencia. Desde la perspectiva de la corrutina, un parámetro de referencia tiene un ciclo de vida incontrolado. Por tanto, en el ejemplo anterior, estamos seguros al acceder a *value* hasta `co_await`, pero no tras él. En caso de que el autor de llamada destruya *value*, intenta acceder a él dentro de la corrutina después de que eso provoque un daño de memoria. Tampoco podemos pasar con seguridad *value* a **DoOtherWorkAsync** si hay algún riesgo de que esa función se suspenda e intente usar *value* después de que se reanude.
 
 Para que los parámetros sean seguros de usar tras suspenderse y reanudarse, las corrutinas deben usar paso-por-valor de manera predeterminada para garantizar que capturen por valor y eviten los problemas de ciclo de vida. Serán excepcionales los casos en los que puedas desviarte de esa orientación porque estés convencido de que sea seguro hacerlo.
 
@@ -776,6 +776,68 @@ winrt::fire_and_forget MyClass::MyMediaBinder_OnBinding(MediaBinder const&, Medi
 ```
 
 El primer argumento (el *remitente*) queda sin nombre, porque no se utiliza nunca. Por este motivo, estamos seguros si lo dejamos como una referencia. Pero observa que *args* se pasa por valor. Consulta la sección [Paso de parámetros](#parameter-passing) más arriba.
+
+## <a name="awaiting-a-kernel-handle"></a>Esperar un controlador de kernel
+
+C++/WinRT proporciona una clase **resume_on_signal**, que puedes usar para suspender hasta que se señale un evento de kernel. Es tu responsabilidad asegurar que el controlador siga siendo válido hasta que se devuelva tu `co_await resume_on_signal(h)`. **resume_on_signal** mismo no puede hacerlo por ti, porque es posible que hayas perdido el controlador incluso antes de que se inicie **resume_on_signal**, como en este primer ejemplo.
+
+```cppwinrt
+IAsyncAction Async(HANDLE event)
+{
+    co_await DoWorkAsync();
+    co_await resume_on_signal(event); // The incoming handle is not valid here.
+}
+```
+
+El **HANDLE** de entrada solo es válido hasta que vuelve la función, y esta función (que es una corrutina) vuelve en el primer punto de suspensión (el primer `co_await` en este caso). Mientras esperas **DoWorkAsync**, el control ha vuelto al autor de la llamada, el marco de la llamada ha salido del ámbito y ya no sabes si el identificador será válido cuando se reanude la corrutina.
+
+Técnicamente, la corrutina recibe los parámetros por valor, como debería (consulta [Paso de parámetros](#parameter-passing) anteriormente). Sin embargo, en este caso, debemos dar un paso más para seguir el *espíritu* de esa guía (en lugar de solo la letra). Debemos pasar una referencia segura (en otras palabras, la propiedad) junto con el controlador. A continuación se muestra cómo hacerlo.
+
+```cppwinrt
+IAsyncAction Async(winrt::handle event)
+{
+    co_await DoWorkAsync();
+    co_await resume_on_signal(event); // The incoming handle *is* not valid here.
+}
+```
+
+Pasar [**winrt::handle**](/uwp/cpp-ref-for-winrt/handle) por valor proporciona la semántica de propiedad, lo que garantiza que el controlador de kernel siga siendo válido durante la vigencia de la corrutina.
+
+Aquí se muestra cómo puedes llamar a esa corrutina.
+
+```cppwinrt
+namespace
+{
+    winrt::handle duplicate(winrt::handle const& other, DWORD access)
+    {
+        winrt::handle result;
+        if (other)
+        {
+            winrt::check_bool(::DuplicateHandle(::GetCurrentProcess(),
+                other.get(), ::GetCurrentProcess(), result.put(), access, FALSE, 0));
+        }
+        return result;
+    }
+
+    winrt::handle make_manual_reset_event(bool initialState = false)
+    {
+        winrt::handle event{ ::CreateEvent(nullptr, true, initialState, nullptr) };
+        winrt::check_bool(static_cast<bool>(event));
+        return event;
+    }
+}
+
+IAsyncAction SampleCaller()
+{
+    handle event{ make_manual_reset_event() };
+    auto async{ Async(duplicate(event)) };
+
+    ::SetEvent(event.get());
+    event.close(); // Our handle is closed, but Async still has a valid handle.
+
+    co_await async; // Will wake up when *event* is signaled.
+}
+```
 
 ## <a name="important-apis"></a>API importantes
 * [Clase concurrency::task](/cpp/parallel/concrt/reference/task-class)

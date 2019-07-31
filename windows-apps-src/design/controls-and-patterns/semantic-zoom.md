@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c8cc237dec082096eb235237490e4f5d29cc6dd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c655fbf5582ae5abbb3f415e6e0778b9c64ca7fd
+ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364318"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340830"
 ---
 # <a name="semantic-zoom"></a>Zoom semántico
 
@@ -76,7 +76,7 @@ Una libreta de direcciones es otro ejemplo de un conjunto de datos por el que pu
 El control **SemanticZoom** no tiene una representación visual de sí mismo. Es un control de host que administra la transición entre otros 2 controles que proporcionan las vistas de tu contenido, normalmente los controles **ListView** o **GridView**.  Puedes establecer los controles de vista en las propiedades [ZoomedInView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedinview) y [ZoomedOutView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedoutview) de SemanticZoom.
 
 Los 3 elementos que necesitas para un zoom semántico son:
-- Un origen de datos agrupados
+- Un origen de datos agrupados. (Los grupos se definen mediante la definición de GroupStyle en la vista ampliada).
 - Una vista ampliada que muestre los datos a nivel de elemento.
 - Una vista alejada que muestre los datos a nivel de grupo.
 

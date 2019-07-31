@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: 194fd9041b76acb1ef76288fed21c8098462b406
-ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
+ms.openlocfilehash: b64fbe93198af95402161873c1d68d0da41f33f7
+ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67844344"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270114"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Control de eventos mediante delegados en C++/WinRT
 
@@ -126,7 +126,9 @@ MainPage::MainPage()
 
 ## <a name="revoke-a-registered-delegate"></a>Revocación de un delegado registrado
 
-Cuando registras un delegado, normalmente recibes un token a cambio. Posteriormente podrás usar dicho token para revocar tu delegado; lo que significa que se elimina el registro del delegado desde el evento y no se llamará en caso de que el evento vuelva a generarse. Para mayor sencillez, ninguno de los ejemplos de código anteriores muestra cómo hacerlo. Pero el siguiente ejemplo de código almacena el token en el miembro de datos privados de la estructura y revoca su controlador en el destructor.
+Cuando registras un delegado, normalmente recibes un token a cambio. Posteriormente podrás usar dicho token para revocar tu delegado; lo que significa que se elimina el registro del delegado desde el evento y no se llamará en caso de que el evento vuelva a generarse.
+
+Para mayor sencillez, ninguno de los ejemplos de código anteriores muestra cómo hacerlo. Pero el siguiente ejemplo de código almacena el token en el miembro de datos privados de la estructura y revoca su controlador en el destructor.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -150,6 +152,9 @@ private:
 ```
 
 En lugar de una referencia fuerte, como se muestra en el ejemplo anterior, puedes almacenar una referencia débil al botón (consulta [Referencias fuertes y débiles en C++/WinRT](weak-references.md)).
+
+> [!NOTE]
+> Cuando un origen de eventos genera sus eventos sincrónicamente, puedes revocar el controlador y estar seguro de que no recibirás más eventos. Pero para los eventos asincrónicos, incluso después de la revocación (y especialmente al revocar dentro del destructor), un evento en curso podría alcanzar el objeto después de que se haya iniciado la destrucción. Buscar un lugar para cancelar la suscripción antes de la destrucción puede mitigar el problema o, para una solución más estable, consulta [Acceso de forma segura al puntero *this* con un delegado de control de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 Como alternativa, cuando registras un delegado, puedes especificar **winrt::auto_revoke** (que es un valor de tipo [**winrt::auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) para solicitar un revocador de eventos (de tipo [**winrt::event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)). El revocador de eventos mantiene una referencia débil al origen del evento (el objeto que genera el evento) para ti. Puedes revocar manualmente mediante una llamada a la función miembro **event_revoker::revoke**, pero el revocador de eventos llama a la propia función automáticamente cuando sale del ámbito. La función **revoke** comprueba si el origen del evento aún existe y, si es así, revoca el delegado. En este ejemplo, no es necesario almacenar el origen del evento y no se necesita ningún destructor.
 
