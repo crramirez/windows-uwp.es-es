@@ -738,45 +738,15 @@
         - name: Simplificar los pagos con la API de solicitud de pago
           href: ../monetize/payment-request.md
     - name: Empaquetado de aplicaciones
-      href: ../packaging/index.md
       items:
-        - name: "Empaquetar una aplicación para UWP con Visual\_Studio"
-          href: ../packaging/packaging-uwp-apps.md
-        - name: Empaquetado manual de aplicaciones
-          href: ../packaging/manual-packaging-root.md
-          items:
-            - name: Crear un paquete de la aplicación con la herramienta MakeAppx.exe
-              href: ../packaging/create-app-package-with-makeappx-tool.md
-            - name: Crear un certificado para la firma de paquetes
-              href: ../packaging/create-certificate-package-signing.md
-            - name: Firmar un paquete de la aplicación con SignTool
-              href: ../packaging/sign-app-package-using-signtool.md
-            - name: Desarrollar con paquetes de activos y plegado de paquetes
-              href: ../packaging/package-folding.md
-            - name: Paquetes de aplicaciones de conjuntos planos
-              href: ../packaging/flat-bundles.md
-            - name: Introducción a los paquetes de activos
-              href: ../packaging/asset-packages.md
-            - name: Creación de paquetes con el diseño del empaquetado
-              href: ../packaging/packaging-layout.md
-        - name: Arquitecturas de paquetes de aplicaciones
-          href: ../packaging/device-architecture.md
-        - name: Instalación en streaming de aplicaciones para UWP
-          href: ../packaging/streaming-install.md
-          items:
-            - name: Crear y convertir una asignación de grupo de contenido de origen
-              href: ../packaging/create-cgm.md
-        - name: Creación de paquetes opcionales y conjuntos relacionados
-          href: ../packaging/optional-packages.md
-          items:
-            - name: Paquetes opcionales con código ejecutable
-              href: ../packaging/optional-packages-with-executable-code.md
-        - name: Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
-          href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
+        - name: Introducción
+          href: ../packaging/index.md
         - name: Declaraciones de funcionalidades de las aplicaciones
           href: ../packaging/app-capability-declarations.md
         - name: Configurar compilaciones automatizadas para la aplicación para UWP
           href: ../packaging/auto-build-package-uwp-apps.md
+        - name: Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
+          href: ../packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md
         - name: Descargar e instalar actualizaciones de paquetes desde Store
           href: ../packaging/self-install-package-updates.md
 - name: Plataforma
