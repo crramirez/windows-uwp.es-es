@@ -190,4 +190,4 @@ Si no hay una imagen, el control muestra el nombre o las iniciales del contacto;
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Contactos y calendario](../../contacts-and-calendar/index.md)
-* Ejemplo de tarjetas de contacto
+* [Ejemplo de tarjetas de contacto](https://go.microsoft.com/fwlink/p/?LinkId=624040)
