@@ -5,16 +5,16 @@ ms.date: 07/12/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, biblioteca de interfaz de usuario de Windows, WinUI
 ms.localizationpriority: medium
-ms.openlocfilehash: 082e7ca0684495e1f67c2fa79b448866f68a059c
-ms.sourcegitcommit: cba3ba9b9a9f96037cfd0e07d05bd4502753c809
+ms.openlocfilehash: 5d0066abb2a6eb15f1d31aaf930ed2c0f0faf81a
+ms.sourcegitcommit: 4e74c920f1fef507c5cdf874975003702d37bcbb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2019
-ms.locfileid: "67870350"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68372711"
 ---
 # <a name="a-simple-cwinrt-windows-ui-library-example"></a>Un ejemplo sencillo de biblioteca de interfaz de usuario de Windows para C++/WinRT
 
-Este tema te ayudará durante el proceso de adición de compatibilidad simple para la biblioteca de UI de Windows (WinUI) a un proyecto de C++/WinRT.
+Este tema te ayudará durante el proceso de adición de compatibilidad simple para la [biblioteca de la interfaz de usuario de Windows (WinUI)](https://github.com/Microsoft/microsoft-ui-xaml) a tu proyecto de C++/WinRT. Casualmente, la biblioteca de la interfaz de usuario de Windows está escrita en C++/WinRT.
 
 > [!NOTE]
 > El kit de herramientas de la biblioteca de UI de Windows (WinUI) está disponible como paquetes NuGet que puedes agregar a cualquier proyecto nuevo o existente mediante Visual Studio, como veremos en este tema. Para más información sobre el contexto, la configuración y la compatibilidad, consulta [Getting started with the Windows UI Library](/uwp/toolkits/winui/getting-started) (Introducción a la biblioteca de interfaz de usuario de Windows).
@@ -49,7 +49,9 @@ A continuación, abre `MainPage.xaml`. En la etiqueta de apertura existente de *
 
 ## <a name="edit-mainpageh-and-cpp-as-necessary"></a>Editar MainPage.h y .cpp según sea necesario
 
-En `MainPage.h`, edita los elementos include para que tengan el aspecto siguiente.
+Al agregar un paquete NuGet a un proyecto de C++/WinRT (como el paquete **Microsoft.UI.Xaml** que agregaste antes), las herramientas generan un conjunto de encabezados de proyección en la carpeta `\Generated Files\winrt` del proyecto. Para incorporar esos archivos de encabezados al proyecto, de modo que se resuelvan las referencias a esos nuevos tipos, deberás incluirlos.
+
+Por lo tanto, en `MainPage.h`, edita los elementos que has incluido para que tengan el mismo aspecto que los que aparecen en la lista siguiente. Si quisieras usar WinUI desde más de una página XAML, podrías ir al archivo de encabezado precompilado (normalmente, `pch.h`) e incluir los elementos allí.
 
 ```cppwinrt
 #include "MainPage.g.h"
