@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: de623240e275dda5b6fc4df9afee31e1adf9fd4f
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 838bd9cb790893ea24b57bb2b0bad49aa262fdbc
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340855"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682531"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -83,7 +83,7 @@ Para cargar un certificado para la compilación automatizada:
 5. Si el certificado tiene una contraseña, se recomienda que almacene la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y, a continuación, vincule la contraseña a un [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puede usar la variable para tener acceso a la contraseña desde la canalización.
 
 > [!NOTE]
-> A partir de Visual Studio 2019, ya no se genera un certificado temporal en los proyectos de UWP. Para crear o exportar certificados, use los cmdlets de PowerShell que se describen en [este artículo](create-certificate-package-signing.md).
+> A partir de Visual Studio 2019, ya no se genera un certificado temporal en los proyectos de UWP. Para crear o exportar certificados, use los cmdlets de PowerShell que se describen en [este artículo](/windows/msix/package/create-certificate-package-signing).
 
 ## <a name="configure-the-build-solution-build-task"></a>Configurar la tarea de compilación de compilación de soluciones
 
@@ -172,7 +172,7 @@ La canalización de UWP predeterminada no guarda los artefactos generados. Para 
     PathtoPublish: '$(build.artifactstagingdirectory)'
 ```
 
-Puede ver los artefactos generados en la  opción artefactos de la página resultados de la compilación.
+Puede ver los artefactos generados en la opción artefactos de la página resultados de la compilación.
 
 ![artefactos](images/building-screen6.png)
 
@@ -196,6 +196,6 @@ A continuación, quite `AppxBundle` el argumento de MSBuild del paso de compilac
 ## <a name="related-topics"></a>Temas relacionados
 
 - [Compilar la aplicación .NET para Windows](https://docs.microsoft.com/vsts/build-release/get-started/dot-net)
-- [Empaquetar aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/packaging/packaging-uwp-apps)
+- [Empaquetar aplicaciones para UWP](/windows/msix/package/packaging-uwp-apps)
 - [Transferir localmente aplicaciones de LOB en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10)
-- [Crear un certificado para la firma de paquetes](https://docs.microsoft.com/windows/uwp/packaging/create-certificate-package-signing)
+- [Crear un certificado para la firma de paquetes](/windows/msix/package/create-certificate-package-signing)
