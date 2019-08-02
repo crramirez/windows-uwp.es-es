@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: Windows 10, UWP, Windows Forms, WPF, Islas XAML
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 07d2c957dff61a8b1ec9f9541ffeb9706da8a0e9
-ms.sourcegitcommit: 2062d06567ef087ad73507a03ecc726a7d848361
+ms.openlocfilehash: 4d504686e2ff50700e3f4bf242ef5d16be814894
+ms.sourcegitcommit: 3cc6eb3bab78f7e68c37226c40410ebca73f82a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68303569"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68729481"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>Parte 2: Incorporación de un control InkCanvas en UWP mediante islas XAML
 
@@ -29,7 +29,7 @@ Antes de poder agregar un control **InkCanvas** a la aplicación de gastos de Co
 
     ![Menú administrar paquetes NuGet en Visual Studio](images/wpf-modernize-tutorial//ManageNuGetPackages.png)
 
-2. En la ventana **Administrador de paquetes NuGet** , haga clic en **examinar**. Seleccione la opción **incluir versión** preliminar, busque el `Microsoft.Toolkit.Wpf.UI.Controls` paquete e instale la versión preliminar más reciente del paquete que se muestra en los resultados. Asegúrese de instalar la versión 6.0.0-Preview 6.4 o una versión posterior.
+2. En la ventana **Administrador de paquetes NuGet** , haga clic en **examinar**. Seleccione la opción **incluir versión** preliminar, busque el `Microsoft.Toolkit.Wpf.UI.Controls` paquete e instale la versión preliminar más reciente del paquete que se muestra en los resultados. Asegúrese de instalar la versión 6.0.0-preview7 o una versión posterior.
 
     > [!NOTE]
     > Este paquete contiene toda la infraestructura necesaria para hospedar islas XAML de UWP en una aplicación WPF, incluido el control de UWP ajustado por **InkCanvas** . Un paquete similar denominado `Microsoft.Toolkit.Forms.UI.Controls` está disponible para Windows Forms aplicaciones.
@@ -82,7 +82,7 @@ Antes de poder agregar un control **InkCanvas** a la aplicación de gastos de Co
 
 Ahora que ha configurado el proyecto para que use las islas XAML de UWP, ahora está listo para agregar un control de UWP ajustado por [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) a la aplicación.
 
-1. En **Explorador de soluciones**, expanda  la carpeta views del proyecto **ContosoExpenses. Core** y haga doble clic en el archivo **ExpenseDetail. Xaml** .
+1. En **Explorador de soluciones**, expanda la carpeta views del proyecto **ContosoExpenses. Core** y haga doble clic en el archivo **ExpenseDetail. Xaml** .
 
 2. En el elemento **Window** situado cerca de la parte superior del archivo XAML, agregue el siguiente atributo. Esto hace referencia al espacio de nombres XAML para el control UWP ajustado por [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) .
 
@@ -125,7 +125,7 @@ Ahora que ha configurado el proyecto para que use las islas XAML de UWP, ahora e
 
     Si tiene un dispositivo que admite un lápiz digital, como una superficie, y está ejecutando este laboratorio en una máquina física, continúe e intente usarlo. Verá que la entrada de lápiz digital aparece en la pantalla. Sin embargo, si no tiene un dispositivo compatible con el lápiz y intenta iniciar sesión con el mouse, no ocurrirá nada. Esto sucede porque el control **InkCanvas** solo está habilitado para los lápices digitales de forma predeterminada. Sin embargo, podemos cambiar este comportamiento.
 
-8. Cierre la aplicación y haga doble clic en el archivo **ExpenseDetail.Xaml.CS** en  la carpeta views del proyecto **ContosoExpenses. Core** .
+8. Cierre la aplicación y haga doble clic en el archivo **ExpenseDetail.Xaml.CS** en la carpeta views del proyecto **ContosoExpenses. Core** .
 
 9. Agregue la siguiente declaración de espacio de nombres en la parte superior de la clase:
 
