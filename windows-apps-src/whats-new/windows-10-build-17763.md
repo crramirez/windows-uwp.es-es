@@ -6,12 +6,12 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d393ee92be8768861da0fb0783372c8bafc6f815
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: faf3cdc1a3fab3bd0332b995c25b081d296a55bb
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821110"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682776"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Novedades para desarrolladores en Windows 10, compilación 17763
 
@@ -83,7 +83,7 @@ Característica | Descripción
 MSIX | [MSIX](https://docs.microsoft.com/windows/msix/overview) es el nuevo formato de paquete de la aplicación de Windows que ofrece una experiencia de empaquetado moderna para todas las aplicaciones de Windows. El formato de código abierto MSIX conserva la funcionalidad de los paquetes existentes, a la vez que habilita las funciones de implementación modernas.
 Herramienta de empaquetado MSIX | La nueva [herramienta de empaquetado MSIX](https://docs.microsoft.com/windows/msix/mpt-overview)) te permite volver a empaquetar las aplicaciones de escritorio existentes en el formato MSIX, incluso si no tienes acceso a su código fuente. Se puede ejecutar en la línea de comandos o a través de su interfaz de usuario interactiva.
 Compatibilidad de Desktop App Converter con MSIX | Puedes usar [Desktop App Converter](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) para generar un paquete MSIX, mediante el parámetro `-MakeMSIX`.
-Compatibilidad de la herramienta MakeAppx.exe con MSIX | Puedes usar la herramienta MakeAppx.exe para crear un paquete MSIX destinado a aplicaciones para UWP o aplicaciones de escritorio tradicionales. Esta herramienta se incluye en el SDK de Windows 10 y puede usarse desde un símbolo del sistema o un archivo de script. </br> En el caso de las aplicaciones para UWP, consulta [Crear un paquete de la aplicación con la herramienta MakeAppx.exe](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). </br> En el caso de las aplicaciones de escritorio, consulta [Package a desktop application manually](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion) (Empaquetar una aplicación de escritorio manualmente).
+Compatibilidad de la herramienta MakeAppx.exe con MSIX | Puedes usar la herramienta MakeAppx.exe para crear un paquete MSIX destinado a aplicaciones para UWP o aplicaciones de escritorio tradicionales. Esta herramienta se incluye en el SDK de Windows 10 y puede usarse desde un símbolo del sistema o un archivo de script. </br> En el caso de las aplicaciones para UWP, consulta [Crear un paquete de la aplicación con la herramienta MakeAppx.exe](/windows/msix/package/create-app-package-with-makeappx-tool). </br> En el caso de las aplicaciones de escritorio, consulta [Package a desktop application manually](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion) (Empaquetar una aplicación de escritorio manualmente).
 Marco de compatibilidad de paquete | El [Marco de compatibilidad de paquete](https://docs.microsoft.com/windows/msix/package-support-framework-overview) es un kit de código abierto que te permite aplicar correcciones a tu aplicación de escritorio existente cuando no tienes acceso al código fuente, de modo que pueda ejecutarse en un contenedor de MSIX.
 API de análisis de Store | La [API de análisis de Microsoft Store](../monetize/access-analytics-data-using-windows-store-services.md) ahora incluye los siguientes métodos nuevos: </br> * [Get insights data for your UWP app](../monetize/get-insights-data-for-your-app.md) (Obtener información importante para la aplicación para UWP) </br> * [Get insights data for your desktop application](../monetize/get-insights-data-for-your-desktop-app.md) (Obtener información importante para la aplicación de escritorio) </br>* [Get upgrade blocks for your desktop application](../monetize/get-desktop-block-data.md) (Obtener bloques de actualización para la aplicación de escritorio) </br> * [Get upgrade block details for your desktop application](../monetize/get-desktop-block-data-details.md) (Obtener detalles de bloques de actualización para la aplicación de escritorio)
 

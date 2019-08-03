@@ -6,12 +6,12 @@ keywords: Introducción a Visual Studio con licencia de desarrollador, dispositi
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c1979f8e8232ee3bfd2e2961307608bf8da7836
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 09f115cad236582ccb0008c2274a7472ed4c0d55
+ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714147"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682665"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -60,7 +60,7 @@ Por lo general, la opción de aplicaciones transferidas localmente la usan las e
 
 Información específica de la familia de dispositivos
 
--   En la familia de dispositivos de escritorio: puedes instalar un paquete de la aplicación (.appx) y cualquier certificado necesario para ejecutar la aplicación. Para hacerlo, ejecuta el script de Windows PowerShell que se creó con el paquete ("Add-AppDevPackage.ps1"). Para más información, consulta [Empaquetado de aplicaciones para UWP](../packaging/packaging-uwp-apps.md).
+-   En la familia de dispositivos de escritorio: puedes instalar un paquete de la aplicación (.appx) y cualquier certificado necesario para ejecutar la aplicación. Para hacerlo, ejecuta el script de Windows PowerShell que se creó con el paquete ("Add-AppDevPackage.ps1"). Para más información, consulta [Empaquetado de aplicaciones para UWP](/windows/msix/package/packaging-uwp-apps).
 
 -   En la familia de dispositivos móviles: si el certificado necesario ya está instalado, puedes pulsar en el archivo para instalar cualquier archivo .appx que te hayan enviado por correo electrónico o que tengas en una tarjeta SD.
 
