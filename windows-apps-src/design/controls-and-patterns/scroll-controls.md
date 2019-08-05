@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e401e700728e1d481fd2142281fe81524d146f94
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 3a3a2adee262a521bde77d657aa4f5283b68ddcf
+ms.sourcegitcommit: e0ae346eadda864dcad1453cd1644668549e66e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364429"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68603429"
 ---
 # <a name="scroll-viewer-controls"></a>Controles del visor de desplazamiento
 
@@ -101,7 +101,7 @@ Este XAML muestra cómo habilitar el desplazamiento horizontal, colocar una imag
 
 Es habitual que exista un control ScrollViewer como elemento compuesto de otros controles. Un elemento ScrollViewer, junto con la clase [ScrollContentPresenter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollContentPresenter) para compatibilidad, mostrará una ventanilla junto con las barras de desplazamiento solo cuando el espacio de diseño del control de host tenga una limitación menor que el tamaño del contenido expandido. Esto suele suceder con las listas, por lo que las plantillas [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) y [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) siempre incluyen un ScrollViewer. [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) y [RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox) también incluyen un ScrollViewer en sus plantillas.
 
-Cuando un elemento **ScrollViewer** existe en un control, el control de host a menudo tiene el control de eventos integrado para ciertos eventos de entrada y manipulaciones que permiten que el contenido se desplace. Por ejemplo, un GridView interpreta un gesto de deslizamiento del dedo y esto hace que el contenido se desplace horizontalmente. Se considera que tanto de los eventos de entrada como de las manipulaciones sin procesar que recibe el control de host se encarga el control y los eventos de nivel inferior, como [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed), no subirán de nivel ni se propagarán a los contenedores principales. Puedes cambiar parte de la administración de los controles integrados reemplazando una clase de control y los métodos virtuales **On***por eventos o volver a crear plantillas del control. Pero, en cualquier caso, reproducir el comportamiento predeterminado original no es algo trivial, que suele estar allí para que el control reaccione de formas esperadas a los eventos y a las acciones de entrada y los gestos de un usuario. Por lo tanto, debes considerar si realmente necesitas que ese evento de entrada se active. Es posible que desee investigar si hay otros eventos de entrada o gestos que no administra el control y usarlos en el diseño de interacción de control o de la aplicación.
+Cuando un elemento **ScrollViewer** existe en un control, el control de host a menudo tiene el control de eventos integrado para ciertos eventos de entrada y manipulaciones que permiten que el contenido se desplace. Por ejemplo, un GridView interpreta un gesto de deslizamiento del dedo y esto hace que el contenido se desplace horizontalmente. Se considera que tanto de los eventos de entrada como de las manipulaciones sin procesar que recibe el control de host se encarga el control y los eventos de nivel inferior, como [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed), no subirán de nivel ni se propagarán a los contenedores principales. Puedes cambiar parte de la administración de los controles integrados reemplazando una clase de control y los métodos virtuales **On**_Event_ por eventos o volver a crear plantillas del control. Pero, en cualquier caso, reproducir el comportamiento predeterminado original no es algo trivial, que suele estar allí para que el control reaccione de formas esperadas a los eventos y a las acciones de entrada y los gestos de un usuario. Por lo tanto, debes considerar si realmente necesitas que ese evento de entrada se active. Es posible que desee investigar si hay otros eventos de entrada o gestos que no administra el control y usarlos en el diseño de interacción de control o de la aplicación.
 
 Para que los controles que incluyen un ScrollViewer puedan influir en algunos de los comportamientos y las propiedades que están dentro del elemento ScrollViewer, ScrollViewer define un número de propiedades adjuntas de XAML que pueden establecerse en los estilos y usarse en enlaces de plantillas. Para obtener más información sobre las propiedades adjuntas, consulta [Introducción a las propiedades adjuntas](../../xaml-platform/attached-properties-overview.md).
 
