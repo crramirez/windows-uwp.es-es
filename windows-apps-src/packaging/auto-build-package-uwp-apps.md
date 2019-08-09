@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 838bd9cb790893ea24b57bb2b0bad49aa262fdbc
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 9df150d4a8873630a371fa2ad02e8c88bed7f42e
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682531"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867741"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -80,7 +80,7 @@ Para cargar un certificado para la compilación automatizada:
 
     ![Cómo cargar un archivo seguro](images/secure-file2.png)
 
-5. Si el certificado tiene una contraseña, se recomienda que almacene la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y, a continuación, vincule la contraseña a un [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puede usar la variable para tener acceso a la contraseña desde la canalización.
+5. Si la clave privada del certificado tiene una contraseña, se recomienda que almacene la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y, a continuación, vincule la contraseña a un [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puede usar la variable para tener acceso a la contraseña desde la canalización. Tenga en cuenta que solo se admite una contraseña para la clave privada; Actualmente no se admite el uso de un archivo de certificado protegido por contraseña.
 
 > [!NOTE]
 > A partir de Visual Studio 2019, ya no se genera un certificado temporal en los proyectos de UWP. Para crear o exportar certificados, use los cmdlets de PowerShell que se describen en [este artículo](/windows/msix/package/create-certificate-package-signing).
@@ -100,7 +100,7 @@ Esta tarea compila cualquier solución que se encuentra en la carpeta de trabajo
 | AppxPackageSigningEnabled | true | Habilita la firma de paquetes. |
 | PackageCertificateThumbprint | Huella digital del certificado | Este valor **debe** coincidir con la huella digital del certificado de firma o ser una cadena vacía. |
 | PackageCertificateKeyFile | Path | Ruta de acceso al certificado que se va a usar. Esto se recupera de los metadatos de archivo seguros. |
-| PackageCertificatePassword | Contraseña | Contraseña del certificado. Se recomienda que almacene la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y vincule la contraseña al [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puede pasar la variable a este argumento. |
+| PackageCertificatePassword | Contraseña | La contraseña de la clave privada en el certificado. Se recomienda que almacene la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y vincule la contraseña al [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puede pasar la variable a este argumento. |
 
 ### <a name="configure-the-build"></a>Configurar la compilación
 
