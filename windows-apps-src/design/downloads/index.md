@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5fababa6903880c4c4aa70d93d36e49fd4ea89b5
-ms.sourcegitcommit: f4b64245cf784793b431f2c9d8bded6f321e7788
+ms.openlocfilehash: 63af76e0ee7faa757798f71c63b141e6b2262007
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412112"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867643"
 ---
 ![Conceptos básicos de diseño](../images/downloads-2x.png)
 
@@ -96,7 +96,7 @@ Funciones auxiliares, controles personalizados y servicios de aplicaciones.<br /
 
 :::row:::
     :::column:::
-        <a href="https://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
+<a href="https://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
       **Generador de iconos para Adobe Photoshop** Este conjunto de acciones de Adobe Photoshop genera los 68 activos de iconos recomendados a partir de solo 7 archivos. <br/><a href="https://go.microsoft.com/fwlink/p/?LinkId=760394">Descargar el generador de ventanas iconos</a></p>
