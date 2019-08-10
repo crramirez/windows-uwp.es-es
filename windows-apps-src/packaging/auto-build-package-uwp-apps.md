@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 9df150d4a8873630a371fa2ad02e8c88bed7f42e
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 08ad21d3ddc73499bb2b97b300e635fe0a6c148d
+ms.sourcegitcommit: 698a86640b365dc1ca772fb6f53ca556dc284ed6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867741"
+ms.locfileid: "68935780"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -176,7 +176,7 @@ Puede ver los artefactos generados en la opción artefactos de la página result
 
 ![artefactos](images/building-screen6.png)
 
-Dado que hemos establecido el `UapAppxPackageBuildMode` argumento en `StoreUpload`, la carpeta artefactos incluye el paquete para enviarlo al almacén (. msixupload/. appxupload). Tenga en cuenta que también puede enviar un paquetes de aplicación normal (. msix/. appx) o un lote de aplicaciones (. msixbundle/. appxbundle/) al almacén. Para este artículo, usaremos el archivo .appxupload.
+Dado que hemos establecido el `UapAppxPackageBuildMode` argumento en `StoreUpload`, la carpeta artefactos incluye el paquete para enviarlo al almacén (. msixupload/. appxupload). Tenga en cuenta que también puede enviar un paquete de aplicación normal (. msix/. appx) o un lote de aplicaciones (. msixbundle/. appxbundle/) al almacén. Para este artículo, usaremos el archivo .appxupload.
 
 ## <a name="address-bundle-errors"></a>Errores de agrupación de direcciones
 
