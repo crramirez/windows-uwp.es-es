@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8f8d4172389fc2778fda4e335a29b3bae7d90fd0
-ms.sourcegitcommit: 5fcd3a595efd3686009505602c34e10163fd0aa5
+ms.openlocfilehash: e454bed6dc1a9429fe313e305dc9ba818d86e765
+ms.sourcegitcommit: 802699ce8d21e7fa4639f0b19b1c5b6c46c2c727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558764"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68835641"
 ---
 # <a name="buttons"></a>Botones
 
@@ -36,6 +36,7 @@ Control | Descripción
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Un botón con un botón de contenido adicional para abrir un control flotante adjunto.
 [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | Un botón con dos lados. Uno de los lados inicia una acción y el otro abre un menú.
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | Un botón de alternancia con dos lados. Un lado alterna entre activado/desactivado y el otro abre un menú.
+[ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton) | Un botón que puede estar activado o desactivado.
 
 | **Obtención de la biblioteca de la interfaz de usuario de Windows** |
 | - |
@@ -59,6 +60,8 @@ Usa un control **RepeatButton** cuando el usuario pueda querer desencadenar una 
 Usa un control **DropDownButton** cuando el botón tenga un control flotante que con más opciones. El botón de contenido adicional predeterminado proporciona una indicación visual de que el botón incluye un control flotante.
 
 Usa un control **SplitButton** cuando quieras que el usuario pueda iniciar una acción inmediata o elegir opciones adicionales por separado.
+
+Usa un control **ToggleButton** si quieres que el usuario pueda cambiar inmediatamente entre dos estados mutuamente excluyentes y un botón es lo mejor para las necesidades de tu interfaz de usuario. A menos que la interfaz de usuario se beneficie de un botón, quizás sea una mejor opción usar [AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [CheckBox](checkbox.md), [RadioButton](radio-button.md) o [ToggleSwitch](toggles.md).
 
 ## <a name="examples"></a>Ejemplos
 

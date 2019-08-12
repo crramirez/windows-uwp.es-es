@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4731ab089189a8a03656281d1a9a6da6e4d24e89
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 7ed9feb6edae58b906d4f37f0e1f011d4fa42ee9
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "65984258"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867732"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -27,12 +27,10 @@ Acrílico es un tipo de [pincel](https://docs.microsoft.com/en-us/uwp/api/Window
 
 :::row:::
     :::column:::
-        Acrylic in light theme
-        ![Acrylic in light theme](images/Acrylic_LightTheme_Base.png)
+Acrílico en el tema claro ![Acrílico en el tema claro](images/Acrylic_LightTheme_Base.png)
     :::column-end:::
     :::column:::
-        Acrylic in dark theme
-        ![Acrylic in dark theme](images/Acrylic_DarkTheme_Base.png)
+Acrílico en el tema oscuro ![Acrílico en el tema oscuro](images/Acrylic_DarkTheme_Base.png)
     :::column-end:::
 :::row-end:::
 
@@ -334,7 +332,7 @@ Ajustamos los componentes clave de Acrylic para llegar a sus propiedades y aspec
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

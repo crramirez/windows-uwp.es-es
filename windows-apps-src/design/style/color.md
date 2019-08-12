@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e5cd8ecafd3557719e70c50890da4c3eade18f52
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 5f040060b1c3931e9ef1634fddd65febb1be7dbc
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714137"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867727"
 ---
 # <a name="color"></a>Color
 
@@ -26,23 +26,23 @@ En aplicaciones para UWP, los colores vienen determinados principalmente por el 
 
 :::row:::
     :::column:::
-        **Use color meaningfully.**
-        When color is used sparingly to highlight important elements, it can help create a user interface that is fluid and intuitive.
+**Usar el color con sentido.**
+Cuando se usa color con moderación para resaltar elementos importantes, puede ayudar a crear una interfaz de usuario que sea fluida e intuitiva.
     :::column-end:::
     :::column:::
-        **Use color to indicate interactivity.**
-        It's a good idea to choose one color to indicate elements of your application that are interactive. For example, many web pages use blue text to denote a hyperlink.
+**Usar color para indicar interactividad.**
+Es aconsejable elegir un color para indicar qué elementos de tu aplicación son interactivos. Por ejemplo, muchas páginas web usan texto azul para indicar un hipervínculo.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        **Color is personal.**
-        In Windows, users can choose an accent color and a light or dark theme, which are reflected throughout their experience. You can choose how to incorporate the user's accent color and theme into your application, personalizing their experience.
+**El color es personal.**
+En Windows, los usuarios pueden elegir un color de énfasis y un tema claro u oscuro, que se reflejan en toda su experiencia. Puedes elegir cómo incorporar el tema y el color de énfasis del usuario en la aplicación, personalizando su experiencia.
     :::column-end:::
     :::column:::
-        **Color is cultural.**
-        Consider how the colors you use will be interpreted by people from different cultures. For example, in some cultures the color blue is associated with virtue and protection, while in others it represents mourning.
+**El color es cultural.**
+Ten en cuenta cómo las personas de diferentes culturas interpretarán los colores que usas. Por ejemplo, en algunas culturas el color azul se asocia a virtud y protección, mientras que en otras representa duelo.
     :::column-end:::
 :::row-end:::
 
@@ -105,12 +105,12 @@ Los pinceles de temas se usan para los fines siguientes:
 
 :::row:::
     :::column:::
-        When creating templates for custom controls, use theme brushes rather than hard code color values. This way, your app can easily adapt to any theme.
+Al crear plantillas para controles personalizados, usa pinceles de temas en lugar de valores de color codificados. De esta forma, tu aplicación se puede adaptar con facilidad a cualquier tema.
 
-        For example, these [item templates for ListView](../controls-and-patterns/item-templates-listview.md) demonstrate how to use theme brushes in a custom template.
+Por ejemplo, estas [plantillas de elementos para ListView](../controls-and-patterns/item-templates-listview.md) muestran cómo usar los pinceles de tema en una plantilla personalizada.
     :::column-end:::
     :::column:::
-         ![double line list item with icon example](images/color/list-view.svg)
+ ![ejemplo de elemento de lista de línea doble con icono](images/color/list-view.svg)
     :::column-end:::
 :::row-end:::
 
@@ -144,12 +144,12 @@ Los controles comunes usan un color de énfasis para transmitir información de 
 
 :::row:::
     :::column:::
-        ![user-selected accent header](images/color/user-accent.svg)
-        ![user-selected accent color](images/color/user-selected-accent.svg)
+![encabezado de énfasis seleccionado por el usuario](images/color/user-accent.svg)
+![color de énfasis seleccionado por el usuario](images/color/user-selected-accent.svg)
     :::column-end:::
     :::column:::
-        ![custom accent header](images/color/custom-accent.svg)
-        ![custom brand accent color](images/color/brand-color.svg)
+![encabezado de énfasis personalizado](images/color/custom-accent.svg)
+![color de énfasis con personalización de marca](images/color/brand-color.svg)
     :::column-end:::
 :::row-end:::
 
@@ -408,36 +408,36 @@ ColorPaletteResources también permite colocar y definir colores del sistema dir
 
 :::row:::
     :::column:::
-        ![contrast illustration](images/color/illo-contrast.svg)
+![ilustración de contraste](images/color/illo-contrast.svg)
     :::column-end:::
     :::column span="2":::
-        **Contrast**
+**Contraste**
 
-        Make sure that elements and images have sufficient contrast to differentiate between them, regardless of the accent color or theme.
+Asegúrate de que los elementos e imágenes tienen un contraste suficiente para diferenciarlos, independientemente del color o el tema de énfasis.
 
-        When considering what colors to use in your application, accessibility should be a primary concern. Use the guidance below to make sure your application is accessible to as many users as possible.
+Al pensar qué colores usarás en la aplicación, la accesibilidad deberá ser uno de los principales objetivos. Sigue las instrucciones que se indican a continuación para asegurarte de que la aplicación sea lo más accesible posible para todos los usuarios.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![contrast illustration](images/color/illo-lighting.svg)
+![ilustración de contraste](images/color/illo-lighting.svg)
     :::column-end:::
     :::column span="2":::
-        **Lighting**
+**Iluminación**
 
-        Be aware that variation in ambient lighting can affect the usability of your app. For example, a page with a black background might unreadable outside due to screen glare, while a page with a white background might be painful to look at in a dark room.
+Ten en cuenta que la variación de la iluminación ambiente puede afectar a la facilidad de uso de la aplicación. Por ejemplo, una página con un fondo negro podría no ser ilegible en el exterior debido al brillo de la pantalla, mientras que una página con un fondo blanco podría ser molesta de mirar en una sala oscura.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![contrast illustration](images/color/illo-colorblindness.svg)
+![ilustración de contraste](images/color/illo-colorblindness.svg)
     :::column-end:::
     :::column span="2":::
-        **Colorblindness**
+**Daltonismo**
 
-        Be aware of how colorblindness could affect the usability of your application. For example, a user with red-green colorblindness will have difficulty distinguishing red and green elements from each other. About **8 percent of men** and **0.5 percent of women** are red-green colorblind, so avoid using these color combinations as the sole differentiator between application elements.
+Ten en cuenta que el daltonismo puede afectar a la facilidad de uso de la aplicación. Por ejemplo, un usuario con daltonismo rojo-verde tendrá dificultades para distinguir entre sí los elementos rojos y verdes. Aproximadamente el **8 por ciento de los hombres** y el **0,5 por ciento de las mujeres** tienen daltonismo rojo-verde. Evita usar estas combinaciones de colores como único diferenciador entre los elementos de la aplicación.
     :::column-end:::
 :::row-end:::
 

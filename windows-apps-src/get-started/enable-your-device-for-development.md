@@ -6,12 +6,12 @@ keywords: Introducción a Visual Studio con licencia de desarrollador, dispositi
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 09f115cad236582ccb0008c2274a7472ed4c0d55
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 705ff7fab00d13123211feb747ea9a9f95b0cc43
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682665"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867611"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -46,6 +46,9 @@ Esta es la página de configuración de la familia de dispositivos de escritorio
 
 ## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a>¿Qué opción de configuración debo elegir: transferencia local de aplicaciones o modo de desarrollador?
 
+> [!NOTE]
+> A partir de la compilación 18956 de Windows Insider, se ha retirado la opción de instalación de prueba y el modo de desarrollador ahora es un comando de alternancia. Consulta más información sobre la instalación de prueba en la sección siguiente. 
+
  Puedes habilitar un dispositivo para el desarrollo o solo para transferir aplicaciones localmente.
 
 -   El valor predeterminado es *aplicaciones de Microsoft Store*. Si no vas a desarrollar aplicaciones ni estás usando aplicaciones internas especiales emitidas por tu compañía, mantén esta configuración activa.
@@ -55,6 +58,9 @@ Esta es la página de configuración de la familia de dispositivos de escritorio
 De manera predeterminada, solo puedes instalar aplicaciones para Plataforma universal de Windows (UWP) desde Microsoft Store. Si modificas esta configuración para usar las funciones de desarrollador, puede cambiar el nivel de seguridad de tu dispositivo. No debes instalar aplicaciones proveniente de orígenes sin comprobar.
 
 ### <a name="sideload-apps"></a>Instalación de prueba de aplicaciones
+
+> [!NOTE]
+> A partir de la compilación 18956 de Windows Insider, la instalación de prueba está habilitada de forma predeterminada. Ahora, puedes implementar un paquete MSIX firmado en un dispositivo sin una configuración especial. 
 
 Por lo general, la opción de aplicaciones transferidas localmente la usan las empresas y centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store, o cualquier otra persona que necesite ejecutar aplicaciones de fuentes distintas a Microsoft. En este caso, la organización suele aplicar una directiva que deshabilita el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para obtener más información, consulta los artículos de TechNet [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) e [Introducción a la implementación de aplicaciones en Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/add-apps).
 
