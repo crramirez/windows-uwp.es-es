@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7d5da19fc9fdab324db2c162a3cb6792fa91f120
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: f7cf1001333c1df2cd7e1906f57444b982814d25
+ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065368"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68867693"
 ---
 # <a name="style-for-uwp-apps"></a>Estilo de aplicaciones para UWP
 
@@ -22,60 +22,60 @@ El estilo es lo que hace que tu aplicación destaque. Las instrucciones de estil
 
 :::row:::
     :::column:::
-        ![hero image](images/header-color.svg)
-        ### [Color](color.md)
-        Color provides intuitive wayfinding through an app's various levels of information and serves as a crucial tool for reinforcing the interaction model.
+![imagen principal](images/header-color.svg)
+### <a name="colorcolormd"></a>[Color](color.md)
+El color ofrece una forma intuitiva de orientarse entre los distintos niveles de información de una aplicación y resulta una herramienta crucial para reforzar el modelo de interacción.
     :::column-end:::
     :::column:::
-        ![hero image](images/header-typography.svg)
-        ### [Typography](typography.md)
-       Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. Las siguientes instrucciones se centran en cómo usar la tipografía para ayudar a los usuarios a comprender fácilmente el contenido. 
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-        ![hero image](images/header-icons.svg)
-        ### [Icons](icons.md)
-        Good icons harmonize with typography and with the rest of the design language. They don’t mix metaphors, and they communicate only what’s needed, as speedily and simply as possible.
-    :::column-end:::
-    :::column:::
-        ![hero image](images/header-acrylic.svg)
-        ### [Acrylic](acrylic.md)
-        Create a sense of depth with acrylic, a brush that creates stunning, translucent surfaces.
+![imagen principal](images/header-typography.svg)
+### <a name="typographytypographymd"></a>[Tipografía](typography.md)
+Como representación visual del lenguaje, la tarea principal de la tipografía es ser clara. Su estilo nunca debe obstaculizar ese objetivo. Las siguientes instrucciones se centran en cómo usar la tipografía para ayudar a los usuarios a comprender fácilmente el contenido. 
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![hero image](images/header-reveal-highlight.svg)
-        ### [Reveal highlight](reveal.md)
-        Use light to illuminate important elements.
+![imagen principal](images/header-icons.svg)
+### <a name="iconsiconsmd"></a>[Iconos](icons.md)
+Los iconos adecuados armonizan con la tipografía y con el resto del lenguaje de diseño. No mezclan metáforas y comunican solo lo necesario de la manera más rápida y simple posible.
     :::column-end:::
     :::column:::
-        ![hero image](images/header-reveal-focus.svg)
-        ### [Reveal focus](reveal-focus.md)
-        Reveal focus is a lighting effect for 10 foot experiences, such as Xbox One and television screens, and animates the border of focusable elements.
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-        ![hero image](images/header-sound.svg)
-        ### [Sound](sound.md)
-        Sound helps complete an application's user experience, and gives them that extra audio edge they need to match the feel of Windows across all platforms.
-    :::column-end:::
-    :::column:::
-        ![hero image](images/header-writing-style.gif)
-        ### [Writing style](writing-style.md)
-        Writing style can make a big difference between an awful user experience and a better one.
+![imagen principal](images/header-acrylic.svg)
+### <a name="acrylicacrylicmd"></a>[Acrílico](acrylic.md)
+Crea una sensación de profundidad con el acrílico, un pincel que crea superficies translúcidas impactantes.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ### [XAML styles](../controls-and-patterns/xaml-styles.md)
-        You can customize the appearance of your apps in many ways by using the XAML framework. Styles let you set control properties and reuse those settings for a consistent appearance across multiple controls.
+![imagen principal](images/header-reveal-highlight.svg)
+### <a name="reveal-highlightrevealmd"></a>[Mostrar resaltado](reveal.md)
+Usa luz para iluminar elementos importantes.
+    :::column-end:::
+    :::column:::
+![imagen principal](images/header-reveal-focus.svg)
+### <a name="reveal-focusreveal-focusmd"></a>[Reveal focus](reveal-focus.md)
+Reveal Focus es un efecto de iluminación para experiencias de 3 metros, como las pantallas de televisión y la Xbox One, que anima el borde de los elementos activables.
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+![imagen principal](images/header-sound.svg)
+### <a name="soundsoundmd"></a>[Sonido](sound.md)
+El sonido ayuda a completar la experiencia de usuario de una aplicación y ofrece el toque de audio extra que se ajusta a la percepción de Windows en todas las plataformas.
+    :::column-end:::
+    :::column:::
+![imagen principal](images/header-writing-style.gif)
+### <a name="writing-stylewriting-stylemd"></a>[Estilo de escritura](writing-style.md)
+El estilo de escritura puede suponer una gran diferencia entre una experiencia de usuario terrible y otra mejor.
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+### <a name="xaml-stylescontrols-and-patternsxaml-stylesmd"></a>[Estilos XAML](../controls-and-patterns/xaml-styles.md)
+El marco XAML te permite personalizar la apariencia de tus aplicaciones de varias maneras. Los estilos te permiten establecer propiedades de control y reusar esa configuración para mantener un aspecto uniforme en varios controles.
     :::column-end:::
     :::column:::
     :::column-end:::
