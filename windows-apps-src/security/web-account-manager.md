@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c1a7de0e9e6817fc4b0bf1ada113f49e798641e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f567637f3d38ce80c320bfe92fff392efadeda8d
+ms.sourcegitcommit: 7803f11ba4c9194c350217cc06069a4707f15ed6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320544"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69017428"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
@@ -76,7 +76,7 @@ Si ejecutas la aplicación y haces clic en el botón "Iniciar sesión", debería
 El panel está vacío porque el sistema solo proporciona un shell de interfaz de usuario. El desarrollador es quien rellena mediante programación el panel con los proveedores de identidades. 
 
 > [!TIP]
-> Si lo desea, puede usar **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** en lugar de  **[mostrar](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)** , que devolverá una  **[ IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)** , para consultar el estado de la operación. 
+> Opcionalmente, puede usar **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** en lugar de **[Show](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)** , que devolverá un **[IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)** para consultar el estado de la operación. 
 
 ## <a name="register-for-accountcommandsrequested"></a>Registrarse para AccountCommandsRequested
 
@@ -116,7 +116,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-A continuación, obtén un proveedor con el método WebAuthenticationCoreManager.FindAccountProviderAsync. La dirección URL del proveedor varía según el proveedor y puede encontrarse en la documentación del proveedor. Para cuentas de Microsoft y Azure Active Directory, es "https://login.microsoft.com". 
+A continuación, obtén un proveedor con el método WebAuthenticationCoreManager.FindAccountProviderAsync. La dirección URL del proveedor varía según el proveedor y puede encontrarse en la documentación del proveedor. En el caso de las cuentas de Microsoft y Azure Active Directory\:, es "https//login.Microsoft.com". 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -178,7 +178,7 @@ En este ejemplo, pasamos la cadena "wl.basic" al parámetro _scope_. El ámbito 
 * Para ámbitos de OneDrive, consulta [OneDrive authentication and sign-in](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes) (Autenticación e inicio de sesión de OneDrive). 
 
 > [!TIP]
-> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminado) u otra propiedad especial relacionadas con la experiencia de inicio de sesión, una lista en el **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** propiedad. Esto hará que el sistema omitir la propiedad al almacenar en caché la cuenta de web, lo que impide que las discordancias de la cuenta en la memoria caché.
+> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminada) u otra propiedad especial relacionada con la experiencia de inicio de sesión, escríbala en la propiedad **[WebTokenRequest. AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema omita la propiedad al almacenar en caché la cuenta Web, lo que evita que se produzcan discrepancias de la cuenta en la memoria caché.
 
 Si estás desarrollando una aplicación de empresa, probablemente querrás conectarte a una instancia de Azure Active Directory (AAD) y usar la API de Microsoft Graph en lugar de los servicios de MSA habituales. En este escenario, usa el siguiente código en su lugar: 
 
@@ -338,7 +338,7 @@ Dado que es muy sencillo obtener un token de forma silenciosa, debes usar este p
 
 ## <a name="remove-a-stored-account"></a>Quitar una cuenta almacenada
 
-Si conservas una cuenta web, es recomendable que los usuarios tengan la capacidad de desasociar su cuenta con tu aplicación. De este modo, puede eficazmente "salir" de la aplicación: su información de cuenta ya no se cargarán automáticamente al iniciarse. Para ello, quita primero cualquier cuenta guardada, así como la información del proveedor del almacenamiento. A continuación, llama a **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** para borrar la memoria caché e invalidar los tokens existentes que la aplicación pueda tener. 
+Si conservas una cuenta web, es recomendable que los usuarios tengan la capacidad de desasociar su cuenta con tu aplicación. De esta manera, pueden "cerrar sesión" de la aplicación: la información de su cuenta ya no se cargará automáticamente al iniciarse. Para ello, quita primero cualquier cuenta guardada, así como la información del proveedor del almacenamiento. A continuación, llama a **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** para borrar la memoria caché e invalidar los tokens existentes que la aplicación pueda tener. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)
@@ -422,14 +422,14 @@ En teoría, puedes usar comandos de configuración para cualquier cosa. Sin emba
 
 ## <a name="see-also"></a>Vea también
 
-[Espacio de nombres Windows.Security.Authentication.Web.Core](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
+[Espacio de nombres Windows. Security. Authentication. Web. Core](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
 
-[Espacio de nombres Windows.Security.Credentials](https://docs.microsoft.com/uwp/api/windows.security.credentials)
+[Espacio de nombres Windows. Security. Credentials](https://docs.microsoft.com/uwp/api/windows.security.credentials)
 
 [Clase AccountsSettingsPane](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane)
 
 [Agente de autenticación web](web-authentication-broker.md)
 
-[Ejemplo de administración de cuenta de Web](https://go.microsoft.com/fwlink/p/?LinkId=620621)
+[Ejemplo de administración de cuentas web](https://go.microsoft.com/fwlink/p/?LinkId=620621)
 
-[Aplicación de programador de comidas](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)
+[Aplicación del programador del almuerzo](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)
