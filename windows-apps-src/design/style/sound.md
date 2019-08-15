@@ -138,7 +138,7 @@ ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 
 El sonido de **Foco** es el único sonido implícito en nuestro sistema. Esto significa que, aunque un usuario no interactúe directamente con nada, seguirá escuchando un sonido.
 
-El enfoque ocurre cuando un usuario navega a través de una aplicación, bien con el mando de juegos, el teclado, el control remoto o el kinect. Normalmente, el sonido de **Foco***no se reproduce en eventos PointerEntered o al pasar el mouse por encima*.
+El enfoque ocurre cuando un usuario navega a través de una aplicación, bien con el mando de juegos, el teclado, el control remoto o el kinect. Normalmente, el sonido de **Foco** *no se reproduce en eventos PointerEntered o al pasar el mouse por encima*.
 
 Para configurar un control para que reproduzca el sonido de **Foco** cuando el control recibe el foco, llama a:
 

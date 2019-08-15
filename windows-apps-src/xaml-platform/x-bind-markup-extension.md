@@ -148,7 +148,7 @@ Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedade
 > [!NOTE]
 > Si quieres convertir el marcado de **{Binding}** a **{x:Bind}** , debes tener en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
  
-> [**x: DefaultBindMode** ](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute) puede usarse para cambiar el modo predeterminado para x: Bind para un segmento específico del árbol de marcado. El modo seleccionado aplicará las expresiones de x:Bind en ese elemento y sus elementos secundarios, que no especifican explícitamente un modo como parte del enlace. OneTime tiene un mejor rendimiento que OneWay ya que utilizar OneWay hará que se genere más código para el enlace y gestión de la detección de cambios.
+> [**x:DefaultBindMode**](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute) puede usarse para cambiar el modo predeterminado para x: Bind para un segmento específico del árbol de marcado. El modo seleccionado aplicará las expresiones de x:Bind en ese elemento y sus elementos secundarios, que no especifican explícitamente un modo como parte del enlace. OneTime tiene un mejor rendimiento que OneWay ya que utilizar OneWay hará que se genere más código para el enlace y gestión de la detección de cambios.
 
 ## <a name="remarks"></a>Comentarios
 
