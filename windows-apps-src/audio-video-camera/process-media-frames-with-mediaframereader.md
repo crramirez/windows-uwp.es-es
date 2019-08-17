@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b77fb147ab614b19993700d5d99572f0247d54e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3f2442647d39c4142b50c0a2a9b1fbc2c0eb66ca
+ms.sourcegitcommit: be519a7ecff53696b853754c879db32be9a53289
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318268"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69544917"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Procesar fotogramas multimedia con MediaFrameReader
 
@@ -32,7 +32,7 @@ Si, simplemente, estás interesado en capturar vídeo o fotos, como una aplicaci
 ## <a name="setting-up-your-project"></a>Configurar tu proyecto
 Al igual que con cualquier aplicación que use **MediaCapture**, debes declarar que tu aplicación usa la funcionalidad *cámara web* antes de intentar acceder a cualquier dispositivo de cámara. Si la aplicación captura desde un dispositivo de audio, también debes declarar la funcionalidad *micrófono* del dispositivo. 
 
-**Agregar capacidades al manifiesto de aplicación**
+**Agregar funcionalidades al manifiesto de la aplicación**
 
 1.  En Microsoft Visual Studio, en el **Explorador de soluciones**, abre el diseñador para el manifiesto de la aplicación haciendo doble clic en el elemento **package.appxmanifest**.
 2.  Selecciona la pestaña **Funcionalidades**.
@@ -44,11 +44,11 @@ En el código de ejemplo de este artículo se usan las API de los siguientes esp
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>Seleccionar orígenes de fotogramas y grupos de orígenes de fotogramas
-Muchas aplicaciones que procesan los fotogramas multimedia necesitan obtener fotogramas de distintos orígenes al mismo tiempo, como cámaras de profundidad y de color de un dispositivo. El [ **MediaFrameSourceGroup** ](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) objeto representa un conjunto de orígenes de marco de medios que puede usarse simultáneamente. Llama al método estático [**MediaFrameSourceGroup.FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.findallasync) para obtener una lista de todos los grupos de orígenes de fotogramas que admite el dispositivo actual.
+Muchas aplicaciones que procesan los fotogramas multimedia necesitan obtener fotogramas de distintos orígenes al mismo tiempo, como cámaras de profundidad y de color de un dispositivo. El objeto [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) representa un conjunto de orígenes de fotogramas multimedia que se pueden usar simultáneamente. Llama al método estático [**MediaFrameSourceGroup.FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.findallasync) para obtener una lista de todos los grupos de orígenes de fotogramas que admite el dispositivo actual.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-También puede crear un [ **DeviceWatcher** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) mediante [ **DeviceInformation.CreateWatcher** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) y devuelve el valor de [ **MediaFrameSourceGroup.GetDeviceSelector** ](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) para recibir notificaciones cuando el origen del marco disponible se agrupa en el dispositivo cambia, por ejemplo, cuando se conecta una cámara externa de. Para obtener más información, consulta [**Enumerar dispositivos**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+También puede crear una [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) mediante [**DeviceInformation. CreateWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) y el valor devuelto por [**MediaFrameSourceGroup. GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) para recibir notificaciones cuando los grupos de orígenes de fotogramas disponibles en el dispositivo cambios, como cuando una cámara externa está enchufada. Para obtener más información, consulta [**Enumerar dispositivos**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Una clase [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) tiene una colección de objetos [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceInfo) que describen los orígenes de fotogramas que se incluyen en el grupo. Después de recuperar los grupos de origen de fotogramas disponibles en el dispositivo, puedes seleccionar el grupo que expone los orígenes de fotogramas que te interesan.
 
@@ -79,12 +79,12 @@ El objeto **MediaCapture** se usa normalmente desde varias ubicaciones dentro de
 
 [!code-cs[DeclareMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareMediaCapture)]
 
-Para crear una instancia del objeto **MediaCapture**, llama al constructor. A continuación, crea un objeto [**MediaCaptureSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSettings) que se usará para inicializar el objeto **MediaCapture**. En este ejemplo, se usan los siguientes valores:
+Para crear una instancia del objeto **MediaCapture**, llama al constructor. A continuación, cree un objeto [**MediaCaptureInitializationSettings**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings) que se usará para inicializar el objeto **MediaCapture** . En este ejemplo, se usan los siguientes valores:
 
-* [**Grupo de origen** ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sourcegroup) -esto indica que el sistema a qué grupo de origen que se va a usar para obtener fotogramas. Recuerda que el grupo de orígenes define un conjunto de orígenes de fotogramas multimedia que se pueden usar simultáneamente.
-* [**SharingMode** ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) -esto indica al sistema si necesita control exclusivo sobre los dispositivos de captura de origen. Si lo estableces en [**ExclusiveControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode), significa que puedes cambiar la configuración del dispositivo de captura, como el formato de los fotogramas que produce, pero también significa que si otra aplicación ya tiene un control exclusivo, se producirá un error en la aplicación al intentar inicializar el dispositivo de captura multimedia. Si lo estableces en [**SharedReadOnly**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode), puede recibir fotogramas de los orígenes de fotogramas incluso si otra aplicación los usa, pero no puedes cambiar la configuración de los dispositivos.
-* [**MemoryPreference** ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.memorypreference) : si especifica [ **CPU**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureMemoryPreference), el sistema usará la memoria de CPU que garantiza que cuando llegan marcos, estarán disponibles como [  **SoftwareBitmap** ](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) objetos. Si especificas [**Auto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureMemoryPreference), el sistema elegirá dinámicamente la ubicación de memoria óptima para almacenar los fotogramas. Si el sistema elige usar la memoria de la GPU, los fotogramas multimedia llegarán como un objeto [**IDirect3DSurface**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) y no como un objeto **SoftwareBitmap**.
-* [**StreamingCaptureMode** ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) : establezca esta opción en [ **vídeo** ](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.StreamingCaptureMode) para indicar que el audio no es necesario transmitir.
+* [**SourceGroup**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sourcegroup) : indica al sistema el grupo de origen que se va a usar para obtener los fotogramas. Recuerda que el grupo de orígenes define un conjunto de orígenes de fotogramas multimedia que se pueden usar simultáneamente.
+* [**SharingMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) : indica al sistema si necesita un control exclusivo sobre los dispositivos de origen de captura. Si lo estableces en [**ExclusiveControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode), significa que puedes cambiar la configuración del dispositivo de captura, como el formato de los fotogramas que produce, pero también significa que si otra aplicación ya tiene un control exclusivo, se producirá un error en la aplicación al intentar inicializar el dispositivo de captura multimedia. Si lo estableces en [**SharedReadOnly**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode), puede recibir fotogramas de los orígenes de fotogramas incluso si otra aplicación los usa, pero no puedes cambiar la configuración de los dispositivos.
+* [**MemoryPreference**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.memorypreference) : Si especifica [**CPU**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureMemoryPreference), el sistema usará la memoria de la CPU, lo que garantiza que cuando lleguen los fotogramas, estarán disponibles como objetos [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) . Si especificas [**Auto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureMemoryPreference), el sistema elegirá dinámicamente la ubicación de memoria óptima para almacenar los fotogramas. Si el sistema elige usar la memoria de la GPU, los fotogramas multimedia llegarán como un objeto [**IDirect3DSurface**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) y no como un objeto **SoftwareBitmap**.
+* [**StreamingCaptureMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) : establezca este valor en [**vídeo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.StreamingCaptureMode) para indicar que no es necesario transmitir por secuencias el audio.
 
 Llama al método [**InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync) para inicializar la clase **MediaCapture** con la configuración que quieras. Asegúrate de llamar a este método dentro de un bloque *try* por si se produce un error de inicialización.
 
@@ -252,8 +252,8 @@ Para obtener más información sobre el uso de perfiles de cámara, consulta [Pe
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
-* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Ejemplo de marcos de cámara](https://go.microsoft.com/fwlink/?LinkId=823230)
+* [Captura básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Ejemplo de fotogramas de la cámara](https://go.microsoft.com/fwlink/?LinkId=823230)
  
 
  
