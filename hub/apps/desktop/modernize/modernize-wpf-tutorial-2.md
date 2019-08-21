@@ -2,18 +2,18 @@
 description: En este tutorial se muestra cómo agregar interfaces de usuario XAML de UWP, crear paquetes de MSIX e incorporar otros componentes modernos en la aplicación WPF.
 title: Incorporación de un control InkCanvas en UWP mediante islas XAML
 ms.topic: article
-ms.date: 07/17/2019
+ms.date: 08/15/2019
 ms.author: mcleans
 author: mcleanbyron
 keywords: Windows 10, UWP, Windows Forms, WPF, Islas XAML
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 4d504686e2ff50700e3f4bf242ef5d16be814894
-ms.sourcegitcommit: 3cc6eb3bab78f7e68c37226c40410ebca73f82a9
+ms.openlocfilehash: fb7bb6d4e5af8992571f9740c1321e271b2e1672
+ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68729481"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69643424"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>Parte 2: Incorporación de un control InkCanvas en UWP mediante islas XAML
 
