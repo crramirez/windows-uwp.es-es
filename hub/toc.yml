@@ -22,7 +22,11 @@
           items:
             - name: Introducción
               href: apps/desktop/modernize/xaml-islands.md
-            - name: Usar la API de hospedaje XAML de UWP
+            - name: Hospedaje de un control estándar de UWP en una aplicación WPF
+              href: apps/desktop/modernize/host-standard-control-with-xaml-islands.md
+            - name: Hospedaje de un control personalizado de UWP en una aplicación WPF
+              href: apps/desktop/modernize/host-custom-control-with-xaml-islands.md
+            - name: Uso de la API de hospedaje XAML de UWP en una aplicación Win32 de C++
               href: apps/desktop/modernize/using-the-xaml-hosting-api.md
         - name: Uso de la capa visual (Windows.UI.Composition)
           items:
