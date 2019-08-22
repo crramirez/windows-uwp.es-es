@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, troubleshooting, HRESULT, error
 ms.localizationpriority: medium
-ms.openlocfilehash: add3875e15ad747422b2e53e5d8f8438b61b3b20
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 7c34ca6da522726f07e3f4ff5092b011bd15dd93
+ms.sourcegitcommit: 260d1a0b73ef422eb6875a3e3b52495a82630f06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270099"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560160"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>Solución de problemas de C++/WinRT
 
@@ -41,7 +41,7 @@ Si tu aplicación finaliza y todo lo que sabes es que se ha producido una excepc
 | Las pruebas del Kit de certificación de aplicaciones de Windows generan un error de que una de las clases en tiempo de ejecución "*no se deriva de una clase base de Windows. Todas las clases que admiten composición deben derivar en última instancia de un tipo en el espacio de nombres de Windows*".|Cualquier clase en tiempo de ejecución (que declares en la aplicación) que se deriva de una clase base se conoce como una clase *que admite composición*. La clase base fundamental de una clase que admite composición debe ser un tipo que se origina en un espacio de nombres de Windows.*; por ejemplo, [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject). Consulta [Controles XAML; enlazar a una propiedad C++/WinRT](binding-property.md) para más información.|
 | El compilador de C++ genera un error "*debe ser de tipo WinRT*" para una especialización del delegado EventHandler o TypedEventHandler.|Considera la posibilidad de utilizar **winrt::delegate&lt;... T&gt;** en su lugar. Consulta [Crear eventos en C++/WinRT](author-events.md).|
 | El compilador de C++ genera un error "*debe ser de tipo WinRT*" para una especialización de la operación asincrónica de Windows Runtime.|Considera la posibilidad de devolver una [**tarea**](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class) de la biblioteca de patrones de procesamiento paralelo (PPL) en su lugar. Consulta [Operaciones simultáneas y asincrónicas](concurrency.md).|
-| El compilador de C++ genera el "*error C2220: advertencia tratada como error - ningún archivo 'objeto' generado*".|Corrige la advertencia o establece **C/C++**  > **General** > **Tratar advertencias como errores** en **No (/WX-)** .|
+| El compilador de C++ genera el "*error C2220: advertencia tratada como error - ningún archivo 'objeto' generado*".|Corrige la advertencia o establece **C/C++**  > **General** > **Tratar advertencias como errores** en **No (/WX-)** .|
 | La aplicación se bloquea porque se llama a un controlador de eventos en el objeto C++/WinRT un vez destruido el objeto.|Consulta [Acceso de forma segura al puntero *this* con un delegado de control de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).|
 | El compilador de C++ genera el "*error C2338: This is only for weak ref support (Esto es solo para compatibilidad con referencia débil)* ".|Estás solicitando una referencia débil para un tipo que ha pasado la estructura de marcador **winrt::no_weak_ref** como argumento de plantilla a su clase base. Consulta [Rechazar el soporte de referencia débil](weak-references.md#opting-out-of-weak-reference-support).|
 | El enlazador de C++ genera el "*error LNK2019: símbolo externo sin resolver*"|Consulta [¿Por qué el enlazador me da un "error LNK2019: símbolo externo sin resolver"?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)|
