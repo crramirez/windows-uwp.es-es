@@ -18,7 +18,7 @@ Puedes utilizar las funciones de la biblioteca [C++/WinRT](/windows/uwp/cpp-and-
 
 Al final de este tema, encontrarás una lista del código fuente completo de una aplicación de Direct2D mínima. Extraeremos partes de ese código y las usaremos para ilustrar cómo consumir componentes COM mediante C++/WinRT con varias facilidades de la biblioteca C++/WinRT.
 
-## <a name="com-smart-pointers-winrtcomptruwpcpp-ref-for-winrtcom-ptr"></a>Punteros inteligentes de COM ([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
+## <a name="com-smart-pointers-winrtcom_ptruwpcpp-ref-for-winrtcom-ptr"></a>Punteros inteligentes de COM ([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
 
 Cuando se programa con COM, se trabaja directamente con interfaces en lugar de con objetos (esto también se puede aplicar para las API de Windows Runtime, que son una evolución de COM). Para llamar a una función en una clase COM, por ejemplo, tienes que activar la clase, volver a obtener una interfaz y, después, llamar a las funciones en esa interfaz. Para acceder al estado de un objeto, no se accede directamente a sus miembros de datos, sino que se llaman a las funciones de acceso y mutador en una interfaz.
 
@@ -60,7 +60,7 @@ D3D11CreateDevice(
     ...);
 ```
 
-En el ejemplo de código de la sección anterior, se muestra cómo llamar a la función **D2D1CreateFactory** básica. Pero de hecho, cuando el ejemplo de código para este tema llama a **D2D1CreateFactory**, utiliza una plantilla de función auxiliar que envuelve la API básica, de modo que el ejemplo de código realmente utiliza [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function).
+En el ejemplo de código de la sección anterior, se muestra cómo llamar a la función **D2D1CreateFactory** básica. Pero de hecho, cuando el ejemplo de código para este tema llama a **D2D1CreateFactory**, utiliza una plantilla de asistente que envuelve la API básica, de modo que el ejemplo de código realmente utiliza [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function).
 
 ```cppwinrt
 winrt::com_ptr<ID2D1Factory1> factory;
@@ -81,7 +81,7 @@ DWriteCreateFactory(
     reinterpret_cast<IUnknown**>(dwriteFactory2.put()));
 ```
 
-## <a name="re-seat-a-winrtcomptr"></a>Volver a sentar un **winrt::com_ptr**
+## <a name="re-seat-a-winrtcom_ptr"></a>Volver a sentar un **winrt::com_ptr**
 
 > [!IMPORTANT]
 > Si tienes una función [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que ya se ha sentado (el puntero básico interno ya tiene un destino) y quieres volver a sentarla para que señale a un objeto distinto, en primer lugar deberás asignar `nullptr` en esta, tal como se muestra en el ejemplo de código siguiente. Si no lo haces, una función **com_ptr** ya sentada llamará la atención sobre el problema (cuando llames a [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function) o [**com_ptr:: put_void**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput_void-function)) mediante la declaración de que el puntero interno no es null.

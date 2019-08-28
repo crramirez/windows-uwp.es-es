@@ -135,7 +135,7 @@ Se ha implementado una gran cantidad de constructores, operadores, funciones e i
 
 **hstring** es un intervalo, así que puedes usarlo con `for` basado en intervalo o con `std::for_each`. También proporciona los operadores de comparación para compararlos de forma natural y eficaz con sus homólogos en la biblioteca estándar de C++. E incluye todo lo que necesitas para usar **hstring** como clave para contenedores asociativos.
 
-Reconocemos que muchas de las bibliotecas de C++ usan **std::string** y funcionan exclusivamente con texto UTF-8. Para mayor comodidad, proporcionamos aplicaciones auxiliares, como [**winrt::to_string**](/uwp/cpp-ref-for-winrt/to-string) y [**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring), para convertir y revertir.
+Reconocemos que muchas de las bibliotecas de C++ usan **std::string** y funcionan exclusivamente con texto UTF-8. Para mayor comodidad, proporcionamos asistentes, como [**winrt::to_string**](/uwp/cpp-ref-for-winrt/to-string) y [**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring), para convertir y revertir.
 
 `WINRT_ASSERT` es una definición de macro y se expande a [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).
 

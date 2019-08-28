@@ -105,7 +105,7 @@ IAsyncAction ProcessFeedAsync()
 }
 ```
 
-La razón por la que puedes confiar en este comportamiento es que C++/WinRT proporciona código para adaptar estos tipos de la operación asincrónica de Windows Runtime a la compatibilidad del lenguaje de corrutinas C++ (estos fragmentos de código se denominan adaptadores de espera). El resto de tipos que admite await en C++/WinRT simplemente son contenedores del grupo de subprocesos o aplicaciones auxiliares, por lo que se completan en el grupo de subprocesos.
+La razón por la que puedes confiar en este comportamiento es que C++/WinRT proporciona código para adaptar estos tipos de la operación asincrónica de Windows Runtime a la compatibilidad del lenguaje de corrutinas C++ (estos fragmentos de código se denominan adaptadores de espera). El resto de tipos que admite await en C++/WinRT simplemente son contenedores del grupo de subprocesos o aasistentes, por lo que se completan en el grupo de subprocesos.
 
 ```cppwinrt
 using namespace std::chrono_literals;
@@ -219,7 +219,7 @@ co_await static_cast<no_switch>(async);
 
 En lugar de buscar las tres funciones **await_xxx** que coincidan con **IAsyncXxx**, el compilador de C++ busca funciones que coincidan con **no_switch**.
 
-## <a name="a-deeper-dive-into-winrtresumeforeground"></a>Análisis más profundo de **winrt::resume_foreground**
+## <a name="a-deeper-dive-into-winrtresume_foreground"></a>Análisis más profundo de **winrt::resume_foreground**
 
 A partir de [C++/WinRT 2.0](/windows/uwp/cpp-and-winrt-apis/newsnews#news-and-changes-in-cwinrt-20), la función [**winrt::resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) se suspende incluso si se llama desde el subproceso del distribuidor (en versiones anteriores, podía introducir interbloqueos en algunos escenarios porque solo se suspendía si aún no estaba en el subproceso del distribuidor).
 

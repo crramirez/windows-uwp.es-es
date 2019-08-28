@@ -232,9 +232,9 @@ Las técnicas para el control de errores y para la administración de recursos p
 
 Sin embargo, no debes permitir excepciones para escapar las implementaciones del método COM. Puedes garantizarlo mediante el especificador `noexcept` en los métodos COM. Es correcto que las excepciones se inicien en cualquier parte del gráfico de llamadas del método, siempre y cuando las controles antes de que el método salga. Si usas `noexcept`, pero permites que una excepción se escape al método, en este caso, finalizará la aplicación.
 
-## <a name="add-helper-types-and-functions"></a>Adición de funciones y tipos auxiliares
+## <a name="add-helper-types-and-functions"></a>Adición de funciones y tipos asistentes
 
-En este paso, vamos a agregar algunos tipos y funciones auxiliares que el resto del código utiliza. Por tanto, inmediatamente antes de `main`, agregue lo siguiente.
+En este paso, vamos a agregar algunos tipos y funciones de asistentes que el resto del código utiliza. Por tanto, inmediatamente antes de `main`, agregue lo siguiente.
 
 ```cppwinrt
 struct prop_variant : PROPVARIANT
