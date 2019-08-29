@@ -5,36 +5,36 @@ title: 'Facilidad de uso para aplicaciones para UWP: desarrollo de aplicaciones 
 layout: LandingPage
 template: detail.hbs
 ms.date: 10/18/2017
-ms.topic: landing-page
+ms.topic: article
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
-ms.openlocfilehash: f218df3b4118508049023218b64e6c7321fbbda9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a6912932b7ad71fd3d04c038eab7e0aa4dd6cb11
+ms.sourcegitcommit: 2fa2d2236870eaabc95941a95fd4e358d3668c0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583262"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70076387"
 ---
 # <a name="usability-for-uwp-apps"></a>Facilidad de uso para aplicaciones para UWP
-
-
 
 Los pequeños toques, una especial atención a los detalles, pueden transformar una buena experiencia del usuario en una experiencia del usuario realmente inclusiva que satisfaga las necesidades de usuarios de todo el mundo.
 
 Las instrucciones de diseño y codificación de esta sección pueden hacer que tu aplicación para UWP resulte más inclusiva al agregar características de accesibilidad, habilitar la globalización y la localización, permitir a los usuarios personalizar su experiencia y proporcionarles ayuda cuando lo necesiten.
 
-
-## <a name="accessiblity"></a>Accesibilidad
+## <a name="accessibility"></a>Accesibilidad
 
 La accesibilidad consiste en hacer que el uso de una aplicación resulte más fácil para personas que presentan limitaciones que les impiden el uso de interfaces de usuario convencionales. En algunos casos, los requisitos de accesibilidad están impuestos por ley. Sin embargo, resulta buena idea abordar los problemas de accesibilidad independientemente de los requisitos legales, de modo que tus aplicaciones lleguen al mayor público posible.
 
+[Portal de accesibilidad](../accessibility/accessibility.md)
+
+<!--
 <ul class="panelContent cardsH" style="margin-left: 1px">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessibility-overview.md">Información general sobre accesibilidad</a></b> <br/> Este artículo es una descripción general de los conceptos y las tecnologías relacionados con escenarios de accesibilidad para aplicaciones para UWP.</p>
+<p><b><a href="../accessibility/accessibility-overview.md">Accessibility overview</a></b> <br/> This article is an overview of the concepts and technologies related to accessibility scenarios for UWP apps.</p>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/designing-inclusive-software.md">Diseño de software inclusivo</a></b><br/>Aprende sobre la evolución del diseño inclusivo con aplicaciones de la Plataforma universal de Windows (UWP) para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.</p>
+<p><b><a href="../accessibility/designing-inclusive-software.md">Designing inclusive software</a></b><br/>Learn about evolving inclusive design with Universal Windows Platform (UWP) apps for Windows 10.  Design and build inclusive software with accessibility in mind.</p>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/developing-inclusive-windows-apps.md">Desarrollo de aplicaciones inclusivas de Windows</a></b><br/> Este artículo es una guía básica para desarrollar aplicaciones para UWP accesibles.</p>
+<p><b><a href="../accessibility/developing-inclusive-windows-apps.md">Developing inclusive Windows apps</a></b><br/> This article is a roadmap for developing accessible UWP apps.</p>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessibility-testing.md">Pruebas de accesibilidad</a> </b><br/>Procedimientos de prueba que te permitirán asegurarte de que la aplicación para UWP es accesible.</p>
+<p><b><a href="../accessibility/accessibility-testing.md">Accessibility testing</a> </b><br/>Testing procedures to follow to ensure that your UWP app is accessible.</p>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessibility-in-the-store.md">Accesibilidad en Store</a></b><br/>Se describen los requisitos para declarar que tu aplicación para UWP es accesible en Microsoft Store.</p>
+<p><b><a href="../accessibility/accessibility-in-the-store.md">Accessibility in the Store</a></b><br/>Describes the requirements for declaring your UWP app as accessible in the Microsoft Store.</p>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessibility-checklist.md">Lista de comprobación de accesibilidad</a></b><br/>Proporciona una lista de comprobación que te ayudará a garantizar que tu aplicación para UWP sea accesible.</p>
+<p><b><a href="../accessibility/accessibility-checklist.md">Accessibility checklist</a></b><br/>Provides a checklist to help you ensure that your UWP app is accessible.</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/basic-accessibility-information.md">Exponer información básica de accesibilidad</a></b><br/>La información de accesibilidad básica se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a que tu aplicación exponga la información básica requerida por las tecnologías de asistencia.</p>
+<p><b><a href="../accessibility/basic-accessibility-information.md">Expose basic accessibility information</a></b><br/>Basic accessibility info is often categorized into name, role, and value. This topic describes code to help your app expose the basic information that assistive technologies need.</p>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/keyboard-accessibility.md">Accesibilidad de teclado</a></b><br/>Si tu aplicación no proporciona un buen acceso de teclado, los usuarios invidentes o con problemas de motricidad pueden llegar a tener dificultades para usar tu aplicación o, probablemente, no puedan usarla.</p>
+<p><b><a href="../accessibility/keyboard-accessibility.md">Keyboard accessibility</a></b><br/>If your app does not provide good keyboard access, users who are blind or have mobility issues can have difficulty using your app or may not be able to use it at all.</p>
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/high-contrast-themes.md">Temas de contraste alto</a></b><br/>Describe los pasos necesarios para asegurarte de que tu aplicación para UWP pueda usarse cuando esté activo un tema de contraste alto. </p>
+<p><b><a href="../accessibility/high-contrast-themes.md">High-contrast themes</a></b><br/>Describes the steps needed to ensure your UWP app is usable when a high-contrast theme is active. </p>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/accessible-text-requirements.md">Requisitos de texto accesible</a></b><br/>En este tema se describen los procedimientos recomendados sobre accesibilidad de texto en una aplicación mediante la configuración de los colores de texto y fondo, de forma que cumplan con la relación de contraste necesaria. También se analizan los roles de Automatización de la interfaz de usuario de Microsoft que pueden tener los elementos de texto en una aplicación para UWP y los procedimientos recomendados para texto en elementos gráficos.</p>                    
+<p><b><a href="../accessibility/accessible-text-requirements.md">Accessible text requirements</a></b><br/>This topic describes best practices for accessibility of text in an app, by assuring that colors and backgrounds satisfy the necessary contrast ratio. This topic also discusses the Microsoft UI Automation roles that text elements in a UWP app can have, and best practices for text in graphics.</p>                    
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/practices-to-avoid.md">Procedimientos de accesibilidad que deben evitarse</a></b><br/>Enumera los procedimientos que se deben evitar si quieres crear una aplicación accesible para UWP.</p>                    
+<p><b><a href="../accessibility/practices-to-avoid.md">Accessibility practices to avoid</a></b><br/>Lists the practices to avoid if you want to create an accessible UWP app.</p>                    
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/custom-automation-peers.md">Automatización del mismo nivel personalizado</a></b><br/>Describe el concepto de automatización del mismo nivel para la Automatización de la interfaz de usuario y cómo puedes proporcionar compatibilidad de automatización para tu propia clase de interfaz de usuario personalizada.</p>                    
+<p><b><a href="../accessibility/custom-automation-peers.md">Custom automation peers</a></b><br/>Describes the concept of automation peers for UI Automation, and how you can provide automation support for your own custom UI class.</p>                    
                     </div>
                 </div>
             </div>
@@ -166,20 +166,14 @@ La accesibilidad consiste en hacer que el uso de una aplicación resulte más f�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/control-patterns-and-interfaces.md">Interfaces y patrones de control</a></b><br/>Enumera los patrones de control de Automatización de la interfaz de usuario de Microsoft, las clases que los clientes usan para acceder a ellos y las interfaces que los proveedores usan para implementarlos.</p>                    
+<p><b><a href="../accessibility/control-patterns-and-interfaces.md">Control patterns and interfaces</a></b><br/>Lists the Microsoft UI Automation control patterns, the classes that clients use to access them, and the interfaces providers use to implement them.</p>                    
                     </div>
                 </div>
             </div>
         </div>
     </li>     
 </ul>
-
-
-## <a name="globalization-and-localization"></a>Globalización y localización
-
-Windows se usa en todo el mundo por personas de diferentes culturas, regiones e idiomas. Los usuarios hablan varios idiomas diferentes y en una diversidad de países y regiones diferentes. Algunos usuarios hablan más de un idioma. Por lo tanto, tu aplicación se ejecuta en configuraciones que implican muchas permutaciones en la configuración del sistema para el idioma, la región y la referencia cultural. Diseña tu aplicación para que sea fácilmente adaptable mediante la *globalización* y la *localización* y así aumentar su mercado potencial.
-
-<a href="../globalizing/globalizing-portal.md">Portal de globalización y localización</a>
+-->
 
 ## <a name="app-settings"></a>Configuración de aplicaciones
 
@@ -210,6 +204,11 @@ Configuración de aplicaciones permite al usuario personalizar la aplicación co
     </li>
 </ul>
 
+## <a name="globalization-and-localization"></a>Globalización y localización
+
+Windows se usa en todo el mundo por personas de diferentes culturas, regiones e idiomas. Los usuarios hablan varios idiomas diferentes y en una diversidad de países y regiones diferentes. Algunos usuarios hablan más de un idioma. Por lo tanto, tu aplicación se ejecuta en configuraciones que implican muchas permutaciones en la configuración del sistema para el idioma, la región y la referencia cultural. Diseña tu aplicación para que sea fácilmente adaptable mediante la *globalización* y la *localización* y así aumentar su mercado potencial.
+
+<a href="../globalizing/globalizing-portal.md">Portal de globalización y localización</a>
 
 ## <a name="in-app-help"></a>Ayuda desde la aplicación
 Por muy bien que hayas diseñado una aplicación, algunos usuarios necesitarán un poco más de ayuda.

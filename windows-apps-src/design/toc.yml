@@ -533,13 +533,11 @@
           href: accessibility/practices-to-avoid.md
         - name: Automatización del mismo nivel personalizada
           href: accessibility/custom-automation-peers.md
-          items:
-            - name: Interfaces y patrones de control
-              href: accessibility/control-patterns-and-interfaces.md
+        - name: Interfaces y patrones de control
+          href: accessibility/control-patterns-and-interfaces.md
     - name: Configuración de aplicaciones
-      href: app-settings/app-settings-and-data.md
       items:
-        - name: Instrucciones
+        - name: Directrices para la configuración de una aplicación
           href: app-settings/guidelines-for-app-settings.md
         - name: Almacenar y recuperar la configuración y los datos de una aplicación
           href: app-settings/store-and-retrieve-app-data.md
@@ -572,9 +570,10 @@
           href: globalizing/use-utf8-code-page.md
         - name: Preparar la aplicación para el cambio de la era japonesa
           href: globalizing/japanese-era-change.md
-    - name: Directrices para la ayuda de la aplicación
-      href: in-app-help/guidelines-for-app-help.md
+    - name: Ayuda desde la aplicación
       items:
+        - name: Directrices para la ayuda de la aplicación
+          href: in-app-help/guidelines-for-app-help.md
         - name: Interfaz de usuario informativa
           href: in-app-help/instructional-ui.md
         - name: Ayuda desde la aplicación
