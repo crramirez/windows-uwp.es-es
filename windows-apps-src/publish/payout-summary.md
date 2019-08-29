@@ -6,12 +6,12 @@ ms.date: 08/02/2019
 ms.topic: article
 keywords: windows 10, uwp, resumen de pago, extracto, pagos, ganancias, pagos, pago, beneficios
 ms.localizationpriority: medium
-ms.openlocfilehash: 777ee4201b435f17cdc4fc3650a2d33645ff56b9
-ms.sourcegitcommit: 769ec7811aaaa79fe521e3e984a2e1a2a9671caf
+ms.openlocfilehash: 68a7de0692d05ffe8d1b489e75a58c16b3c826df
+ms.sourcegitcommit: 9779be4a1075e924dca7585808722d95cda99aff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057822"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70118061"
 ---
 # <a name="payout-summary"></a>Resumen de pago
 
@@ -75,7 +75,6 @@ Siga las instrucciones de esta página para exportar los datos que desee.
 
 Notas:
 
-- Cuando se accede a esta página desde la página de pagos o del historial de transacciones, los filtros no se llevan a cabo. Tendrá que rehacerlos en la página exportar datos.
 - La página exportar datos no se actualiza por sí misma. Es posible que tenga que actualizar la página manualmente para ver los datos más recientes.
 - El filtro puede producir un error no hay datos disponibles. Probablemente significa que ha dejado el período de tiempo predeterminado seleccionado en tres meses y, a continuación, ha seleccionado un ID. de pago de una ganancia que está fuera de ese período. Expanda el período de tiempo y vuelva a intentarlo.
 
@@ -83,124 +82,98 @@ Notas:
 
 Esta opción proporciona una descarga de los pagos que ha recibido en el Banco para un programa determinado, los impuestos asociados y el importe de la ganancia agregada. Este informe se usa para muchos programas del centro de Partners, por lo que es posible que algunas columnas no sean aplicables a su informe. Estas columnas se marcan a continuación.
 
-| Nombre de columna              | Descripción                                                                                                                             |
-|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| participantID            | La identidad principal del socio que gana en el programa                                                                           |
-| participantIDType        | Por lo general, identificador de programa para programas de incentivos e identificador de vendedor para programas de tienda                                                              |
-| participantName          | Nombre del asociado que gana                                                                                                             |
-| nombreprograma              | Nombre del programa de incentivos/tienda                                                                                                            |
-| recibido                   | Cantidad acumulada en el pago por moneda para ese programa/participantID                                                                     |
-| earnedUSD                | Cantidad ganada para el ID. de programa/participante, en USD                                                                                    |
-| withheldTax              | Cantidad de impuestos retenidos en el pago por moneda para el programa/participantID                                                             |
-| salesTax                 | Importe total del impuesto de ventas en el pago por moneda para el programa/participantID                                                          |
-| totalPayment             | Pago total en moneda local excluyendo el impuesto de retención e incluyendo el impuesto de venta (si procede) para el programa/participantID |
-| currencyCode             | Pago a código de divisa                                                                                                                    |
-| paymentMethod            | El método que se usa para pagar al socio comercial (transferencia bancaria electrónica, nota de crédito)                                                              |
-| paymentID                | Identificador único para el pago. Este número normalmente es visible en la instrucción Bank.                                               |
-| paymentStatus            | Estado del pago                                                                                                                          |
-| paymentStatusDescription | Descripción detallada del estado de pago                                                                                                  |
-| paymentDate              | Fecha de envío del pago de Microsoft                                                                                                    |
+| Nombre de columna              | Descripción                                                                                                                               |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------  |
+| participantID            | La identidad principal del socio que gana en el programa                                                                             |
+| participantIDType        | Por lo general, identificador de programa para programas de incentivos e identificador de vendedor para programas de tienda                                                                |
+| participantName          | Nombre del asociado que gana                                                                                                               |
+| nombreprograma              | Nombre del programa de incentivos/tienda                                                                                                              |
+| recibido                   | Cantidad acumulada en el pago por moneda para ese programa/participantID                                                                       |
+| earnedUSD                | Cantidad ganada para el ID. de programa/participante, en USD                                                                                      |
+| withheldTax              | Cantidad de impuestos retenidos en el pago por moneda para el programa/participantID                                                               |
+| salesTax                 | Importe total del impuesto de ventas en el pago por moneda para el programa/participantID (aplicable solo para programas de incentivos)                   |
+| serviceFeeTax            | Cantidad total de serviceFeeTax de pago a divisa para el programa/participantID (aplicable solo para programas de tienda y Azure Marketplace) |
+| totalPayment             | Pago total en moneda local excluyendo el impuesto de retención e incluyendo el impuesto de venta (si procede) para el programa/participantID   |
+| currencyCode             | Pago a código de divisa                                                                                                                      |
+| paymentMethod            | El método que se usa para pagar al socio comercial, por ejemplo, la transferencia electrónica bancaria, la nota de crédito                                                             |
+| paymentID                | Identificador único para el pago. Este número normalmente es visible en la instrucción Bank. (aplicable solo para pagos de SAP)              |
+| paymentStatus            | Estado del pago                                                                                                                            |
+| paymentStatusDescription | Descripción detallada del estado de pago                                                                                                    |
+| paymentDate              | Fecha de envío del pago de Microsoft                                                                                                      |
 
 ## <a name="transaction-history-download-export"></a>Exportación de descarga de historial de transacciones
 
 Esta opción proporciona una descarga de cada elemento de línea que se ve en la página historial de transacciones, ganando el tipo, la fecha, el importe de la transacción asociada, el cliente, el producto y otros detalles transaccionales aplicables a los programas.
 
-| Nombre de columna                    | Descripción                                                                                                                              |
-|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| earningId                      | Identificador único para cada obtención                                                                                                       |
-| participantId                  | La identidad principal del socio que gana en el programa                                                                            |
-| participantIdType              | IDENTIFICADOR de vendedor                                                                                                                                |
-| participantName                | Nombre del asociado que gana                                                                                                              |
-| partnerCountryCode             | Ubicación/país del asociado que gana                                                                                                  |
-| nombreprograma                    | Nombre del programa de incentivos/tienda                                                                                                             |
-| transactionId                  | Identificador único de la transacción                                                                                                    |
-| transactionCurrency            | Moneda en la que se produjo la transacción de cliente original                                                                             |
-| transactionDate                | Fecha de la transacción. Útil para programas en los que muchas transacciones contribuyen a una ganancia                                           |
-| transactionExchangeRate        | Fecha de la tasa de cambio usada para mostrar la cantidad de USD correspondiente                                                                             |
-| transactionAmount              | Importe de la transacción en la moneda de la transacción original en función de la obtención generada                                              |
-| transactionAmountUSD           | Importe de la transacción en USD                                                                                                                |
-| Leverling                          | Indica la regla de negocios para la obtención                                                                                                  |
-| earningRate                    | Tasa de incentivos aplicada en el importe de la transacción para generar una ganancia                                                                      |
-| quantity                       | Varía en función del programa. Indica la cantidad facturada de programas transaccionales                                                            |
-| earningType                    | Indica si es tarifa, descuento, Coop, venta, etc.                                                                                          |
-| earningAmount                  | Ganar importe en la moneda de la transacción original                                                                                      |
-| earningAmountUSD               | Importe en USD                                                                                                                    |
-| earningDate                    | Fecha de la obtención                                                                                                                      |
-| calculationDate                | Fecha en que se calculó la ganancia en el sistema                                                                                            |
-| earningExchangeRate            | Tasa de cambio usada para mostrar la cantidad de USD correspondiente                                                                                  |
-| exchangeRateDate               | Fecha de la tasa de cambio usada para calcular EarningAmount USD                                                                                   |
-| claimId                        | Siempre estará en blanco                                                                                                                     |
-| paymentId                      | Identificador único para el pago. Este número suele estar visible en la instrucción Bank.                                                 |
-| paymentStatus                  | Estado del pago                                                                                                                           |
-| paymentStatusDescription       | Descripción detallada del estado de pago                                                                                                   |
-| Identificador                     | Siempre estará en blanco                                                                                                                     |
-| customerName                   | Siempre estará en blanco                                                                                                                     |
-| partNumber                     | Siempre estará en blanco                                                                                                                     |
-| productName                    | Nombre del producto vinculado a la transacción                                                                                                       |
-| productId                      | Identificador único del producto                                                                                                                |
-| parentProductId                | Identificador único del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el identificador del producto principal es igual al identificador del producto. |
-| parentProductName              | Nombre del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el nombre del producto principal es igual al nombre del producto.   |
-| productType                    | Tipo de producto (por ejemplo aplicación, complemento, juego, etc.)                                                                                        |
-| invoiceNumber                  | Siempre estará en blanco                                                                                                                     |
-| subscriptionId                 | Siempre estará en blanco                                                                                                                     |
-| subscriptionStartDate          | Siempre estará en blanco                                                                                                                     |
-| subscriptionEndDate            | Siempre estará en blanco                                                                                                                     |
-| resellerId                     | Siempre estará en blanco                                                                                                                     |
-| resellerName                   | Siempre estará en blanco                                                                                                                     |
-| distributorId                  | Siempre estará en blanco                                                                                                                     |
-| distributorName                | Siempre estará en blanco                                                                                                                     |
-| agreementNumber                | Siempre estará en blanco                                                                                                                     |
-| agreementStartDate             | Siempre estará en blanco                                                                                                                     |
-| agreementEndDate               | Siempre estará en blanco                                                                                                                     |
-| duplica                       | Siempre estará en blanco                                                                                                                     |
-| transactionType                | Tipo de transacción (por ejemplo, compra, reembolso, inversión, anulación, etc.)                                                               |
-| localProviderSeller            | Proveedor o vendedor local de registro                                                                                                          |
-| taxRemitted                    | Importe de impuestos enviados (de ventas, de uso o impuestos sobre bienes y servicios o IVA)                                                                                   |
-| taxRemitModel                  | Parte responsable de la remesa de impuestos (de ventas, de uso o impuestos sobre bienes y servicios o IVA)                                                                    |
-| storeFee                       | La cantidad retenida por Microsoft como una cuota para que la aplicación o el complemento estén disponibles en la tienda.                                           |
-| transactionPaymentMethod       | Instrumento de pago del cliente usado para la transacción (por ejemplo, tarjeta, facturación del operador de telefonía móvil, PayPal, etc.)                                |
-| tpan                           | Indica la red de ad de terceros                                                                                                     |
-| purchaseTypeCode               | Siempre estará en blanco                                                                                                                     |
-| purchaseOrderType              | Siempre estará en blanco                                                                                                                     |
-| purchaseOrderCoverageStartDate | Siempre estará en blanco                                                                                                                     |
-| purchaseOrderCoverageEndDate   | Siempre estará en blanco                                                                                                                     |
-| externalReferenceId            | Siempre estará en blanco                                                                                                                     |
-| externalReferenceIdLabel       | Siempre estará en blanco                                                                                                                     |
-
-## <a name="payout-statement-download-export-legacy"></a>Exportación de la instrucción de pago (heredado)
-
-Durante un tiempo limitado en la página de Resumen de pago anterior, las instrucciones de pago estarán disponibles para su descarga. Este informe contiene los campos siguientes.
-
-> [!NOTE]
-> El historial de transacciones heredadas tiene una columna denominada "reservada" que corresponde a la columna "beneficios" en el historial moderno, con la salvedad de que excluye todas las ganancias con estado = "pago enviado".
-
-| Nombre del campo              | Descripción                                                                                                                                                             |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Fuente de ingresos          | La fuente de tus ingresos, que se basa en el lugar en el que se ha producido la transacción (por ejemplo, Microsoft Store, Windows Phone Store, Windows Store 8, publicidad, etc.)                  |
-| Id. de pedido                | Un identificador de pedido exclusivo. Este id. permite identificar las transacciones de compra con sus respectivas transacciones que no son de compra (como las devoluciones, la anulaciones, etc.). Ambas tendrá el mismo id. de pedido. Además, en el caso de un cargo dividido en el que se hayan usado varios métodos de pago para una sola compra, te permitirá vincular las transacciones de compra. |
-| Id. de transacción          | Identificador único de la transacción.                                                                                                                                          |
-| Fecha y hora de transacción   | Fecha y hora en que se realizó la transacción (hora UTC).                                                                                                                       |
-| Id. de producto principal       | Identificador único del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el identificador del producto principal es igual al identificador del producto.                                |
-| Id. del producto              | Identificador único del producto.                                                                                                                                              |
-| Nombre del producto principal     | Nombre del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el nombre del producto principal es igual al nombre del producto.                                  |
-| Nombre del producto            | Nombre del producto.                                                                                                                                                    |
-| Tipo de producto            | Tipo de producto (por ejemplo aplicación, complemento, juego, etc.)                                                                                                                       |
-| Cantidad                | Si el valor de Fuente de ingresos es la Microsoft Store para Empresas, Cantidad representa el número de licencias adquiridas. Para otras fuentes de ingresos, el valor de Cantidad siempre será 1. Nota: Aunque una misma transacción esté dividida en dos artículos de línea debido al uso de dos métodos de pago distintos, cada artículo de línea mostrará un valor de 1 en Cantidad. |
-| Tipo de transacción        | Tipo de transacción (por ejemplo, compra, reembolso, inversión, anulación, etc.)                                                                                              |
-| Método de pago          | Instrumento de pago del cliente usado para la transacción (por ejemplo, tarjeta, facturación del operador de telefonía móvil, PayPal, etc.)                                                               |
-| País o región        | País o región donde se realizó la transacción.                                                                                                                          |
-| Proveedor o vendedor local | Proveedor o vendedor local del registro.                                                                                                                                        |
-| Moneda de transacción    | Moneda de la transacción.                                                                                                                                            |
-| Importe de la transacción      | Importe de la transacción.                                                                                                                                              |
-| Impuestos enviados            | Importe de impuestos enviados (de ventas, de uso o impuestos sobre bienes y servicios o IVA)                                                                                                                  |
-| Ingresos netos            | Importe de la transacción menos impuestos.                                                                                                                                   |
-| Honorarios de la Tienda               | Porcentaje de los ingresos netos retenido por Microsoft en concepto de honorarios por hacer que la aplicación o el complemento esté disponible en la Tienda.                                                      |
-| Ganancias por la aplicación            | Ingresos netos menos los honorarios de la Tienda.                                                                                                                                       |
-| Impuestos retenidos          | Importe de impuestos retenido. (No se incluye en el archivo .csv **Reservado**).                                                                                                |
-| Pago                 | Ganancias por la aplicación menos la retención de impuestos aplicables (es el importe que aparece en Moneda de transacción). (No se incluye en el archivo .csv **Reservado**).                               |
-| Tipo de cambio                 | Tipo de cambio usado para convertir la moneda de la transacción a la moneda de pago.                                                                                         |
-| Moneda de pago        | Moneda en que se realiza el pago.                                                                                                                                       |
-| Pago convertido       | Importe del pago convertido a la moneda de pago con el tipo de cambio.                                                                                                         |
-| Modelo de remesa de impuestos         | Parte responsable de la remesa de impuestos (de ventas, de uso o impuestos sobre bienes y servicios o IVA)                                                                                                   |
-| Fecha y hora de elegibilidad   | Fecha y hora en las que las ganancias por las transacciones sean aptas para el pago (hora UTC). Cuando se crea un pago, incluye las ganancias de las transacciones que tienen una fecha y hora de elegibilidad anterior a la fecha de creación del pago. (Solo se incluye en el archivo .csv **Reservado**). |
-| Cargos                 | Muestra un desglose de todos los detalles de los cargos agregados en la columna Importe de la transacción. (Solo se incluye para Azure Marketplace; no se incluye en el archivo .csv **Reservado**). |
+| Nombre de columna                    | Descripción                                                                                                                              | Aplicabilidad de incentivos/tienda/Azure Marketplace           |
+|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| earningId                      | Identificador único para cada obtención                                                                                                       | Todo                                                            |
+| participantId                  | La identidad principal del socio que gana en el programa                                                                            | Todo                                                            |
+| participantIdType              | Principalmente el identificador de programa para programas de incentivos y el vendedor si tiene programas de tienda y Azure Marketplace                                          | Todo                                                            |
+| participantName                | Nombre del asociado que gana                                                                                                              | Todo                                                            |
+| partnerCountryCode             | Ubicación/país del asociado que gana                                                                                                  | Todo                                                            |
+| nombreprograma                    | Nombre del programa de incentivos/tienda                                                                                                             | Todo                                                            |
+| transactionId                  | Identificador único de la transacción                                                                                                    | Todo                                                            |
+| transactionCurrency            | Moneda en la que se produjo la transacción de cliente original (no es una moneda de ubicación de socio comercial)                                     | Todo                                                            |
+| transactionDate                | Fecha de la transacción. Útil para programas en los que muchas transacciones contribuyen a una ganancia                                           | Todo                                                            |
+| transactionExchangeRate        | Fecha de la tasa de cambio usada para mostrar la cantidad de transacción USD correspondiente                                                                 | Todo                                                            |
+| transactionAmount              | Importe de la transacción en la moneda de la transacción original en función de la obtención generada                                              | Todo                                                            |
+| transactionAmountUSD           | Importe de la transacción en USD                                                                                                                | Todo                                                            |
+| Leverling                          | Indica la regla de negocios para la obtención                                                                                                  | Todo                                                            |
+| earningRate                    | Tasa de incentivos aplicada en el importe de la transacción para generar una ganancia                                                                      | Todo                                                            |
+| quantity                       | Varía en función del programa. Indica la cantidad facturada de programas transaccionales                                                            | Todo                                                            |
+| quantityType                   | Indica el tipo de cantidad, por ejemplo, cantidad facturada, MAU                                                                                     | Todo                                                            |
+| earningType                    | Indica si es tarifa, descuento, Coop, venta, etc.                                                                                          | Todo                                                            |
+| earningAmount                  | Ganar importe en la moneda de la transacción original                                                                                      | Todo                                                            |
+| earningAmountUSD               | Importe en USD                                                                                                                    | Todo                                                            |
+| earningDate                    | Fecha de la obtención                                                                                                                      | Todo                                                            |
+| calculationDate                | Fecha en que se calculó la ganancia en el sistema                                                                                            | Todo                                                            |
+| earningExchangeRate            | Tasa de cambio usada para mostrar la cantidad de USD correspondiente                                                                                  | Todo                                                            |
+| exchangeRateDate               | Fecha de la tasa de cambio usada para calcular EarningAmount USD                                                                                   | Todo                                                            |
+| paymentAmountWOTax             | Importe de la ganancia (sin impuestos) en pago a moneda por pagos "enviados"                                                                 | Todo                                                            |
+| paymentCurrency                | Pague a la moneda seleccionada por el socio en el perfil de pago. Solo se muestra para los pagos enviados                                                   | Todo                                                            |
+| paymentExchangeRate            | Tasa de cambio usada para calcular paymentAmountWOTax en moneda de pago mediante ExchangeRateDate                                            | Todo                                                            |
+| claimId                        | Identificador único para la demanda                                                                                                              | Incentivos: solo algunos programas                                |
+| planId                         | Identificador único para el plan                                                                                                               | Incentivos: solo algunos programas                                |
+| paymentId                      | Identificador único para el pago. Este número suele estar visible en la instrucción Bank.                                                 | Solo pagos de SAP                                              |
+| paymentStatus                  | Estado del pago                                                                                                                           | Todo                                                            |
+| paymentStatusDescription       | Descripción detallada del estado de pago                                                                                                   | Todo                                                            |
+| Identificador                     | Siempre estará en blanco                                                                                                                     | Solo programas de incentivos (excepción: OEM) y Azure Marketplace |
+| customerName                   | Siempre estará en blanco                                                                                                                     | Solo programas de incentivos (excepción: OEM) y Azure Marketplace |
+| partNumber                     | Siempre estará en blanco                                                                                                                     | Algunos incentivos y programas de tienda y Azure Marketplace        |
+| productName                    | Nombre del producto vinculado a la transacción                                                                                                       | Todo                                                            |
+| productId                      | Identificador único del producto                                                                                                                | Tienda y Azure Marketplace                                    |
+| parentProductId                | Identificador único del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el identificador del producto principal es igual al identificador del producto. | Tienda y Azure Marketplace                                    |
+| parentProductName              | Nombre del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el nombre del producto principal es igual al nombre del producto.   | Tienda y Azure Marketplace                                    |
+| productType                    | Tipo de producto (por ejemplo aplicación, complemento, juego, etc.)                                                                                        | Tienda y Azure Marketplace                                    |
+| invoiceNumber                  | Número de factura (aplicable solo para EA)                                                                                                  | Incentivos y Azure Marketplace: solo algunos programas           |
+| subscriptionId                 | Identificador de suscripción asociado al cliente                                                                                         | Incentivos: solo algunos programas                                 |
+| subscriptionStartDate          | Fecha de inicio de suscripción                                                                                                                  | Incentivos: solo algunos programas                                 |
+| subscriptionEndDate            | Fecha de finalización de suscripción                                                                                                                    | Incentivos: solo algunos programas                                 |
+| resellerId                     | Identificador reseller                                                                                                                      | Incentivos: solo algunos programas                                 |
+| resellerName                   | Nombre del distribuidor                                                                                                                            | Incentivos: solo algunos programas                                 |
+| distributorId                  | Identificador del distribuidor                                                                                                                   | Incentivos: solo algunos programas                                 |
+| distributorName                | Nombre del distribuidor                                                                                                                         | Incentivos: solo algunos programas                                 |
+| agreementNumber                | Número de contrato                                                                                                                         | Incentivos: solo algunos programas                                 |
+| agreementStartDate             | Fecha de inicio de contrato                                                                                                                     | Incentivos: solo algunos programas                                 |
+| agreementEndDate               | Fecha de finalización de contrato                                                                                                                       | Incentivos: solo algunos programas                                 |
+| duplica                       | Carga de trabajo                                                                                                                                 | Incentivos: solo algunos programas                                 |
+| transactionType                | Tipo de transacción (por ejemplo, compra, reembolso, inversión, anulación, etc.)                                                               | Tienda y Azure Marketplace                                    |
+| localProviderSeller            | Proveedor o vendedor local de registro                                                                                                          | Solo almacenamiento                                                     |
+| taxRemitted                    | Importe de impuestos enviados (de ventas, de uso o impuestos sobre bienes y servicios o IVA)                                                                                   | Tienda y Azure Marketplace                                    |
+| taxRemitModel                  | Parte responsable de la remesa de impuestos (de ventas, de uso o impuestos sobre bienes y servicios o IVA)                                                                    | Solo almacenamiento                                                     |
+| storeFee                       | La cantidad retenida por Microsoft como una cuota para que la aplicación o el complemento estén disponibles en la tienda.                                           | Solo almacenamiento                                                     |
+| transactionPaymentMethod       | Instrumento de pago del cliente usado para la transacción (por ejemplo, tarjeta, facturación del operador de telefonía móvil, PayPal, etc.)                                | Tienda y Azure Marketplace                                    |
+| tpan                           | Indica la red de ad de terceros                                                                                                     | Tienda: solo anuncios                                               |
+| customerCountry                | País del cliente                                                                                                                         | Tienda y Azure Marketplace                                    |
+| customerCity                   | Ciudad del cliente                                                                                                                            | Tienda y Azure Marketplace                                    |
+| customerState                  | Estado del cliente                                                                                                                           | Tienda y Azure Marketplace                                    |
+| customerZip                    | Código postal del cliente                                                                                                                 | Tienda y Azure Marketplace                                    |
+| purchaseTypeCode               | Siempre estará en blanco                                                                                                                     | Programa de incentivos: CRI                                        |
+| purchaseOrderType              | Siempre estará en blanco                                                                                                                     | Programa de incentivos: CRI                                        |
+| purchaseOrderCoverageStartDate | Siempre estará en blanco                                                                                                                     | Programa de incentivos: CRI                                        |
+| purchaseOrderCoverageEndDate   | Siempre estará en blanco                                                                                                                     | Programa de incentivos: CRI                                        |
+| programOfferingLevel           |                                                                                                                                          | Programa de incentivos: CRI                                        |
+| TenantID                       |                                                                                                                                          | Programas de incentivos                                             |
+| externalReferenceId            | Identificador único para el programa                                                                                                        | Programas de pago directo (incentivos y tienda)                      |
+| externalReferenceIdLabel       | Etiqueta de identificador único                                                                                                                  | Programas de pago directo (incentivos y tienda)                      |
