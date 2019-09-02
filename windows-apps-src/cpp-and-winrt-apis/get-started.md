@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, get, getting, started
 ms.localizationpriority: medium
-ms.openlocfilehash: 346877178b4450df5fb0151656d58e203ea0be63
-ms.sourcegitcommit: 4e74c920f1fef507c5cdf874975003702d37bcbb
+ms.openlocfilehash: e900cdddaa86857554c11605d00f59fd45a7e5ee
+ms.sourcegitcommit: b186f70f0b1601b6b6a5db91d87d034f6b155e3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68372737"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063781"
 ---
 # <a name="get-started-with-cwinrt"></a>Introducción a C++/WinRT
 
@@ -22,7 +22,7 @@ Para ponerte al día con el uso de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/i
 ## <a name="a-cwinrt-quick-start"></a>Inicio rápido de C++/WinRT
 
 > [!NOTE]
-> Para más información sobre cómo instalar y usar la Extensión de Visual Studio (VSIX) para C++/WinRT y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para más información sobre cómo instalar Visual Studio para la implementación de C++/WinRT &mdash;incluida la instalación y el uso de la Extensión de Visual Studio (VSIX) para C++/WinRT y el paquete NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación)&mdash;, consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 Crea un nuevo proyecto de la **aplicación de consola Windows (C++/WinRT)** .
 
