@@ -5,15 +5,15 @@ ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 14cb42e0bd0f1bac307a9dfc1ac188d8b11d8cb8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cc2aaaf4e9779cb2be712119fb1dacdf946952c5
+ms.sourcegitcommit: 0dec04de501a3db6b22dfd4a320fc09b5c4a21b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610330"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243323"
 ---
 # <a name="symbologies"></a>Simbologías
-Este tema proporciona para cada uno de los Simbologías admitidas por el descodificador de código de barras de software que se incluye con Windows 10, incluidos códigos de barras de ejemplo: UPC/EAN, código 39, código 128, 2 intercalados de 5, barras de datos Multidireccionales, barras de datos apiladas, GS1DWCode y código QR.
+En este tema se proporcionan códigos de barras de ejemplo para cada una de las simbologías admitidas por el descodificador de códigos de barras del software que se incluye con Windows 10, incluidos: UPC/EAN, código 39, código 128, entrelazado 2 de 5, barra de códigos omnidireccional, barra de códigos apilada, código QR y GS1DWCode.
 
 ## <a name="1d-symbologies"></a>Simbologías 1D
 
@@ -56,3 +56,9 @@ Escanea la imagen de uno de los paquetes siguientes con la aplicación de escán
 
 > [!NOTE]
 > El descodificador de software integrado en Windows 10 es cortesía de [*Digimarc Corporation*](https://www.digimarc.com/)
+
+## <a name="see-also"></a>Vea también
+
+### <a name="samples"></a>Muestras
+
+- [Ejemplo de escáner de código de barras](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
