@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0148e1a997cf97942fbbb80eff2b42b1c71d4e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5fd8fa2b5264328619619df862d21f02f70f52e0
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359529"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393761"
 ---
 # <a name="keyboard-accessibility"></a>Accesibilidad de teclado  
 
@@ -103,7 +103,7 @@ Un *método abreviado* es una combinación de teclas que mejora la productividad
 
 Es fundamental que proporciones a los usuarios que dependen de los lectores de pantalla y otra tecnología de asistencia un método sencillo para descubrir las teclas de los métodos abreviados de la aplicación. Comunica las teclas de método abreviado mediante la información sobre herramientas, los nombres accesibles, las descripciones accesibles o alguna otra forma de comunicación en pantalla. Como mínimo, las teclas de método abreviado deben estar correctamente documentadas en el contenido de la ayuda de la aplicación.
 
-Puedes documentar las teclas de acceso mediante lectores de pantalla configurando la propiedad adjunta [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) como una cadena que describe la tecla de método abreviado. También existe una propiedad adjunta [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey?view=netframework-4.8) para documentar las teclas de método abreviado no mnemotécnicas, aunque los lectores de pantalla generalmente tratan ambas propiedades de la misma manera. Intenta documentar las teclas de método abreviado de diferentes maneras, mediante documentación de ayuda escrita, propiedades de automatización e información sobre herramientas.
+Puedes documentar las teclas de acceso mediante lectores de pantalla configurando la propiedad adjunta [**AutomationProperties.AccessKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accesskeyproperty) como una cadena que describe la tecla de método abreviado. También existe una propiedad adjunta [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.acceleratorkeyproperty) para documentar las teclas de método abreviado no mnemotécnicas, aunque los lectores de pantalla generalmente tratan ambas propiedades de la misma manera. Intenta documentar las teclas de método abreviado de diferentes maneras, mediante documentación de ayuda escrita, propiedades de automatización e información sobre herramientas.
 
 En el siguiente ejemplo se muestra cómo documentar las teclas de método abreviado para botones de detención, pausa y reproducción de medios.
 
@@ -144,7 +144,7 @@ XAML
 ```
 
 > [!IMPORTANT]
-> Establecer [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.acceleratorkey?view=netframework-4.8) o [**AutomationProperties.AccessKey**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) no habilita la funcionalidad de teclado. Únicamente notifica al marco de trabajo de automatización de la interfaz de usuario qué teclas se deben usar para poder pasar esta información a los usuarios mediante las tecnologías de asistencia. La implementación de la administración de teclas debe hacerse en el código, no en XAML. Deberás adjuntar controladores para los eventos [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) o [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) en el control correspondiente para implementar realmente el comportamiento de los métodos abreviados de teclado en tu aplicación. Además, el detalle de texto subrayado en una tecla de acceso no se proporciona de manera automática. Si quieres mostrar texto subrayado en la interfaz de usuario, debes subrayar explícitamente el texto de la tecla de acceso específica como formato [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) en línea.
+> Establecer [**AutomationProperties. AcceleratorKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.acceleratorkeyproperty) o [**AutomationProperties. AccessKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accesskeyproperty) no habilita la funcionalidad del teclado. Únicamente notifica al marco de trabajo de automatización de la interfaz de usuario qué teclas se deben usar para poder pasar esta información a los usuarios mediante las tecnologías de asistencia. La implementación de la administración de teclas debe hacerse en el código, no en XAML. Deberás adjuntar controladores para los eventos [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) o [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) en el control correspondiente para implementar realmente el comportamiento de los métodos abreviados de teclado en tu aplicación. Además, el detalle de texto subrayado en una tecla de acceso no se proporciona de manera automática. Si quieres mostrar texto subrayado en la interfaz de usuario, debes subrayar explícitamente el texto de la tecla de acceso específica como formato [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) en línea.
 
 Por cuestiones de simplicidad, el ejemplo anterior omite el uso de recursos para cadenas como Ctrl+A. No obstante, también debes tener en cuenta las teclas de método abreviado durante la localización. La localización de las teclas de método abreviado es relevante porque la elección de la tecla que se usa como método abreviado suele depender de la etiqueta de texto visible del elemento.
 
@@ -175,7 +175,7 @@ Por lo general, para implementar un control de teclas personalizado para control
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>Un ejemplo de un estado visual para un indicador de foco  
 Ya hemos mencionado que los controles personalizados que el usuario habilite para que tengan el foco deben tener un indicador de foco visual. Normalmente, ese indicador de foco es tan simple como dibujar un rectángulo justo alrededor del rectángulo de límite normal del control. La clase [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) del foco visual es un elemento del mismo nivel que el resto de la composición del control en una plantilla de control, pero se establece inicialmente con un valor [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) en **Collapsed** porque el control aún no tiene el foco. Después, cuando el control obtiene el foco, se invoca un estado visual que establece específicamente el valor de **Visibility** en **Visible**. Cuando el foco se mueve a otro lugar, se llama a otro estado visual y **Visibility** pasa a ser **Collapsed**.
 
-Todos los controles XAML predeterminados mostrarán un indicador de foco visual adecuado cuando reciban el foco (si es que pueden recibirlo). También hay busca potencialmente diferente según el tema del usuario seleccionado el (especialmente si el usuario está utilizando un modo de contraste alto). Si usa los controles XAML en la interfaz de usuario y no reemplazar las plantillas de control, no es necesario hacer nada más para obtener indicadores de foco visuales de los controles que se comportan y se muestren correctamente. Si lo que intentas es volver a crear la plantilla de un control, o si tienes curiosidad sobre cómo los controles XAML proporcionan sus indicadores de foco visual, en el resto de esta sección se explica cómo se logra en XAML y la lógica de control.
+Todos los controles XAML predeterminados mostrarán un indicador de foco visual adecuado cuando reciban el foco (si es que pueden recibirlo). También hay una apariencia potencialmente diferente en función del tema seleccionado del usuario (especialmente si el usuario usa un modo de contraste alto). Si usa los controles XAML en la interfaz de usuario y no reemplaza las plantillas de control, no es necesario hacer nada más para obtener indicadores visuales de foco en los controles que se comportan y muestran correctamente. Si lo que intentas es volver a crear la plantilla de un control, o si tienes curiosidad sobre cómo los controles XAML proporcionan sus indicadores de foco visual, en el resto de esta sección se explica cómo se logra en XAML y la lógica de control.
 
 Aquí incluimos un código XAML de ejemplo que procede de la plantilla XAML predeterminada de una clase [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) .
 
@@ -203,7 +203,7 @@ XAML
 </ControlTemplate>
 ```
 
-De momento, esto es solo la composición. Para controlar la visibilidad del indicador de foco, tienes que definir los estados visuales que alternan la propiedad [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility). Para hacerlo, usa la propiedad [**VisualStateManager.VisualStateGroups**](https://docs.microsoft.com/dotnet/api/system.windows.visualstatemanager?view=netframework-4.8) adjunta, tal y como se aplica al elemento raíz que define la composición
+De momento, esto es solo la composición. Para controlar la visibilidad del indicador de foco, tienes que definir los estados visuales que alternan la propiedad [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility). Esto se hace mediante [VisualStateManager](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager) y la propiedad adjunta VisualStateManager. VisualStateGroups, tal y como se aplica al elemento raíz que define la composición.
 
 XAML
 ```xml
@@ -245,9 +245,9 @@ Los métodos abreviados de teclado no suelen ser relevantes para las aplicacione
 
 <span id="related_topics"/>
 
-## <a name="related-topics"></a>Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados
+
 * [Accesibilidad](accessibility.md)
 * [Interacciones de teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
 * [Ejemplo de teclado táctil](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
 * [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
-

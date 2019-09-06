@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows 10, uwp, juegos, games, desarrollo de juegos, game development
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a4e151851ef663055a4199b7ec9b8c1b168b578
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: db510c1dc084fd1af986d618716854ed09cfc618
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682598"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393611"
 ---
 # <a name="windows-10-game-development-guide"></a>Guía de desarrollo de juegos para Windows 10
 
@@ -560,9 +560,9 @@ Las aplicaciones JavaScript de Windows pueden tener acceso a las funciones efica
 </table>
 
 
-#### <a name="use-windows-runtime-components-to-combine-languages"></a>Usar componentes de Windows Runtime para combinar lenguajes
+#### <a name="use-windows-runtime-components-to-combine-languages"></a>Usar componentes de Windows Runtime para combinar idiomas
 
-Con la Plataforma universal de Windows, es fácil combinar componentes escritos en lenguajes diferentes. Crea componentes de Windows Runtime en C++, C# o Visual Basic y, a continuación, llámalos desde JavaScript, C#, C++ o Visual Basic. De esta manera, puedes programar partes de tu juego en el lenguaje que elijas. Los componentes también te permiten usar bibliotecas externas que solo están disponibles en un lenguaje en particular, así como usar código heredado que ya has escrito.
+Con la Plataforma universal de Windows, es fácil combinar componentes escritos en lenguajes diferentes. Cree Windows Runtime componentes en C++, C#o Visual Basic y, a continuación, llame a ellos desde JavaScript C#, C++, o Visual Basic. De esta manera, puedes programar partes de tu juego en el lenguaje que elijas. Los componentes también te permiten usar bibliotecas externas que solo están disponibles en un lenguaje en particular, así como usar código heredado que ya has escrito.
 
 <table>
     <colgroup>
@@ -571,7 +571,7 @@ Con la Plataforma universal de Windows, es fácil combinar componentes escritos 
     </colgroup>
     <tr>
         <td>Cómo crear componentes de Windows Runtime</td>
-        <td><a href="https://docs.microsoft.com/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp">Crear componentes de Windows Runtime</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp">Windows Runtime componentes con C++/CX</a></td>
     </tr>
 </table>
 

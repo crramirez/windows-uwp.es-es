@@ -1,20 +1,20 @@
 ---
 title: Usar objetos de Windows Runtime en un entorno multiproceso | Microsoft Docs
-description: En este artículo se describe la manera en que .NET Framework controla las llamadas de código C# y Visual Basic a los objetos que proporcionan Windows Runtime o los componentes de Windows Runtime.
+description: En este artículo se describe la forma en que el .NET Framework C# controla las llamadas desde y Visual Basic código a los objetos proporcionados por el Windows Runtime o por los componentes de Windows Runtime.
 ms.date: 01/14/2017
 ms.topic: article
 ms.assetid: 43ffd28c-c4df-405c-bf5c-29c94e0d142b
 keywords: windows 10, uwp, temporizador, subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: 3afa1720ede9728e9cc25af434a431300faf26d6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4fc4f704d8e9f53282ab09dbc61bc5e625d00da9
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371217"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393529"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usar objetos de Windows Runtime en un entorno multiproceso
-En este artículo se describe la manera en que .NET Framework controla las llamadas de código C# y Visual Basic a los objetos que proporcionan Windows Runtime o los componentes de Windows Runtime.
+En este artículo se describe la forma en que el .NET Framework C# controla las llamadas desde y Visual Basic código a los objetos proporcionados por el Windows Runtime o por los componentes de Windows Runtime.
 
 En .NET Framework, puedes acceder a cualquier objeto desde varios subprocesos de manera predeterminada, sin un control especial. Lo único que necesitas es una referencia al objeto. En Windows Runtime, estos objetos se denominan *ágiles*. La mayoría de las clases de Windows Runtime son ágiles, pero algunas clases no lo son, e incluso las clases ágiles pueden exigir un control especial.
 

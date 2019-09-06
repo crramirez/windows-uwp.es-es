@@ -5,14 +5,14 @@ Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
 ms.date: 01/11/2018
 ms.topic: article
-keywords: Windows 10, uwp, tareas en segundo plano
+keywords: Windows 10, UWP, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: 280f2253fda7de816ee753798dcab754d58ae847
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: df2fad68fd1aab9b3b056e962736f3d37f749e63
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370553"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393534"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Actualizar un icono dinámico desde una tarea en segundo plano
 
@@ -29,7 +29,7 @@ Este vídeo te muestra cómo agregar iconos dinámicos a tus aplicaciones.
 
 ## <a name="create-the-background-task-project"></a>Crear el proyecto de tareas en segundo plano  
 
-Para habilitar un icono dinámico para tu aplicación, agrega un nuevo proyecto de componente de Windows en tiempo de ejecución a tu solución. Este es un ensamblado independiente que el sistema operativo carga y ejecuta en segundo plano cuando un usuario instala tu aplicación.
+Para habilitar un icono dinámico para la aplicación, agregue un nuevo Windows Runtime proyecto de componente a la solución. Este es un ensamblado independiente que el sistema operativo carga y ejecuta en segundo plano cuando un usuario instala tu aplicación.
 
 1.  En el Explorador de soluciones, haz clic con el botón secundario en la solución, haz clic en **Agregar** y luego haz clic en **Nuevo proyecto**.
 2.  En el diálogo **Agregar nuevo proyecto**, selecciona la plantilla **Componente de Windows en tiempo de ejecución** en la sección **Instalado &gt; Otros lenguajes &gt; Visual C# &gt; Windows Universal**
@@ -152,7 +152,7 @@ Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declara
 6.  Haz clic o pulsa en la pestaña **IU de la aplicación**.
 7.  Establece **Notificaciones de pantallas de bloqueo** en **Distintivo y texto de imagen**.
 8.  Establece una ruta de acceso en un icono de 24 x 24 píxeles en el campo **Logotipo del distintivo** .
-    **Importante**  este icono debe usar sólo los píxeles monocromáticos y transparentes.
+    **Importante este icono**debeusarsolopíxelesmonocromáticosytransparentes  .
 9.  En el campo **Logotipo pequeño**, establece una ruta de acceso en un icono de 30 x 30 píxeles.
 10. En el campo **Logotipo ancho** , establece una ruta de acceso a un icono de 310 x 150 píxeles.
 
@@ -161,7 +161,7 @@ Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declara
 
 Crea un [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para registrar tu tarea.
 
-> **Tenga en cuenta**  a partir de Windows 8.1, se validan los parámetros de registro de tarea en segundo plano en el momento del registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. La aplicación debe poder enfrentarse a los escenarios en que se produce un error en el registro de tareas en segundo plano. Por ejemplo, usa una instrucción condicional para comprobar si hay errores de registro y después vuelve a probar el registro con errores con valores de parámetros diferentes.
+> **Nota:**   a partir de Windows 8.1, los parámetros de registro de tareas en segundo plano se validan en el momento del registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. La aplicación debe poder enfrentarse a los escenarios en que se produce un error en el registro de tareas en segundo plano. Por ejemplo, usa una instrucción condicional para comprobar si hay errores de registro y después vuelve a probar el registro con errores con valores de parámetros diferentes.
  
 
 En la página principal de tu aplicación, agrega el método **RegisterBackgroundTask** y llámalo en el controlador de eventos **OnNavigatedTo**.
@@ -260,7 +260,7 @@ Para depurar la tarea en segundo plano, establece un punto de interrupción en e
 * [**TileUpdateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdateManager)
 * [**TileNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification)
 * [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md)
-* [Directrices y lista de comprobación para iconos y notificaciones](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)
+* [Instrucciones y listas de comprobación para iconos y distintivos](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)
 
  
 

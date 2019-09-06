@@ -9,12 +9,12 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, servicio de notificaciones de Windows, notificación, Windows, firewall, solución de problemas, IP, tráfico, empresa, red, IPv4, VIP, FQDN, dirección IP pública
 ms.localizationpriority: medium
-ms.openlocfilehash: 817dec616a88f0b374bc019cbbf23f56fad94484
-ms.sourcegitcommit: 820704a73174e81da3dc00cf0603c0c82471cdfe
+ms.openlocfilehash: 0ba6d2e678eee0d851b4f2e3897f9fc067b74580
+ms.sourcegitcommit: 3360db6bc975516e01913d3d73599c964a411052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69908452"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70296982"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configuraciones de firewall y proxy de empresa para admitir el tráfico de WNS
 
@@ -23,8 +23,8 @@ Muchas empresas usan firewalls para bloquear el tráfico de red no deseado; Desa
 
 ## <a name="proxy-support"></a>Compatibilidad con proxy
 
-> [!Note] 
-Los clientes de Windows **no** admiten todos los servidores proxy, la conexión a WNS debe ser una conexión directa.
+> [!Note]
+> Los clientes de Windows **no** admiten todos los servidores proxy, la conexión a WNS debe ser una conexión directa.
 
 **¡Próximamente!** Estamos investigando activamente diferentes configuraciones de red, servidores proxy y firewalls. Esta página se actualizará con más detalles sobre escenarios empresariales comunes y la compatibilidad con WNS en breve.
 
@@ -40,7 +40,7 @@ A continuación se muestra una lista que contiene los FQDN, las VIP y los interv
 
 
 ### <a name="fqdns-vips-and-ips"></a>FQDN, VIP e IP
-Cada uno de los elementos del siguiente documento XML se explica en la tabla siguiente (en [términos y notaciones](#terms-and-notations)). Los intervalos IP se dejaron intencionadamente en este documento para que se le recomiende usar solo los FQDN, ya que los FQDN permanecerán constantes. Sin embargo, puede descargar el archivo XML que contiene la lista completa del centro de descarga: [Intervalos IP y VIP del servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Las nuevas VIP o intervalos IP entrarán en **vigor una semana después**de cargarse.
+Cada uno de los elementos del siguiente documento XML se explica en la tabla siguiente (en [términos y notaciones](#terms-and-notations)). Los intervalos IP se dejaron intencionadamente en este documento para que se le recomiende usar solo los FQDN, ya que los FQDN permanecerán constantes. Sin embargo, puede descargar el archivo XML que contiene la lista completa del centro de descarga: [Intervalos IP y VIP del servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Las nuevas VIP o intervalos IP entrarán en **vigor una semana después de cargarse**.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
