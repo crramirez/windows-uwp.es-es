@@ -1,23 +1,23 @@
 ---
-Description: Obtenga información sobre la recepción de pagos para las aplicaciones, complementos (productos de la aplicación) y el anuncio de ganancias.
+Description: Obtenga información sobre cómo recibir los pagos de sus aplicaciones, complementos (productos en la aplicación) y beneficios publicitarios.
 title: Recibir pagos
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, pagos, ventas de aplicaciones, ganancias por la aplicación, pago, tarifa de la store, suspensión de pago, porcentaje
 ms.localizationpriority: medium
-ms.openlocfilehash: f0e9439ee31c25657aac1f55dc277123f901209a
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 8a3c8bf0d2d203b650b2706c24dc4c20e88e2576
+ms.sourcegitcommit: 36f502e2449f49e82bd593d6aea0b71ac48d6bec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63790982"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70750561"
 ---
 # <a name="getting-paid"></a>Recibir pagos
-Aquí es alguna información importante acerca de la recepción de pago para sus aplicaciones, complementos y utilidades de publicidad.
+Esta es una información importante sobre cómo recibir el pago de las aplicaciones, los complementos y los ingresos publicitarios.
 
 > [!IMPORTANT]
-> Para poder recibir dinero por las ventas de la aplicación en la Microsoft Store, deberá [configurar la cuenta de pago y rellene los formularios de impuestos es necesario](setting-up-your-payout-account-and-tax-forms.md).
+> Antes de que pueda recibir dinero de las ventas de aplicaciones en el Microsoft Store, debe [configurar la cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Comisión de la Tienda
 
@@ -46,7 +46,7 @@ Recuerda que el precio que seleccionaste puede incluir el impuesto sobre el valo
 
 ## <a name="payout-reporting"></a>Informes de pago
 
-Puede obtener acceso a información acerca de la información de pago y descargar los informes en el **resumen de pagos** de [centro de partners](https://partner.microsoft.com/dashboard). Para obtener más información sobre la información que se muestra aquí, y sobre cómo que clasificamos el dinero que ganas, consulta [Resumen de pago](payout-summary.md).
+Puede obtener acceso a los detalles sobre la información de pago y descargar informes en el **Resumen de pagos** del [centro de Partners](https://partner.microsoft.com/dashboard). Para obtener más información sobre la información que se muestra aquí, y sobre cómo que clasificamos el dinero que ganas, consulta [Resumen de pago](payout-summary.md).
 
 
 ## <a name="payout-timeframe"></a>Período de pago
@@ -56,14 +56,14 @@ Los pagos se realizan de forma mensual (siempre que hayas alcanzado el umbral de
 
 ##  <a name="payout-hold-status"></a>Estado de suspensión de pago
 
-De manera predeterminada, te enviaremos pagos mensualmente como se describe más arriba. Sin embargo, tienes la opción de suspender los pagos, lo que evitará que te enviemos pagos a tu cuenta. Si optas por suspender los pagos, continuaremos registrando los ingresos que obtengas y proporcionándote detalles en tu **Resumen de pagos**. Sin embargo, no enviaremos los pagos a tu cuenta hasta que quitas la suspensión. 
+De manera predeterminada, te enviaremos pagos mensualmente como se describe más arriba. Sin embargo, tiene la opción de poner los pagos para un programa en espera, lo que nos impedirá enviar pagos a su cuenta. Si optas por suspender los pagos, continuaremos registrando los ingresos que obtengas y proporcionándote detalles en tu **Resumen de pagos**. Sin embargo, no enviaremos los pagos a tu cuenta hasta que quitas la suspensión.
 
-Para seleccionar la opción de pagos en suspensión, ve a **Configuración de la cuenta**. En **Detalles financieros**, en la sección **Estado de suspensión de pagos**, cambia el control deslizante por **Activado**. Puedes cambiar el estado de suspensión de pagos en cualquier momento, pero ten en cuenta que tu decisión afectará al pago mensual siguiente. Por ejemplo, si quieres suspender el pago de abril, asegúrate de que estableces el estado de suspensión de pagos en **Activado** antes de final de marzo.
+Para poner los pagos en espera, vaya a **configuración del desarrollador**. En **pago e impuestos**, en la sección **asignación de Perfil de pago y impuestos** , busque el programa para el que desea conservar los pagos. Haga clic en la casilla **suspender mi pago** para conservar los pagos de este programa. Puedes cambiar el estado de suspensión de pagos en cualquier momento, pero ten en cuenta que tu decisión afectará al pago mensual siguiente. Por ejemplo, si quieres suspender el pago de abril, asegúrate de que estableces el estado de suspensión de pagos en **Activado** antes de final de marzo.
 
-Una vez hayas establecido el estado de suspensión de pago en **Activado**, todos los pagos estarán en suspensión hasta que cambies el control deslizante por **Desactivado**. Al hacerlo, se te incluirá durante el próximo ciclo de pagos mensual (siempre que se hayas cumplido los umbrales de pago aplicables). Por ejemplo, si has tenido los pagos en suspensión, pero te gustaría que se generara un pago en junio, asegúrate de definir el estado de suspensión del pago en **Desactivado** antes de final de mayo.
+Una vez que haya establecido el estado de retención de pago en **activado**, todos los pagos de este programa estarán en espera hasta que vuelva a activar el control deslizante **.** Al hacerlo, se te incluirá durante el próximo ciclo de pagos mensual (siempre que se hayas cumplido los umbrales de pago aplicables). Por ejemplo, si has tenido los pagos en suspensión, pero te gustaría que se generara un pago en junio, asegúrate de definir el estado de suspensión del pago en **Desactivado** antes de final de mayo.
 
 > [!NOTE]
-> Su **estado de suspensión del pago** selección es válida para **todas** fuentes de ingresos que se pagan a través del programa para desarrolladores de Windows en el centro de partners (Microsoft Store, publicidad, Azure Marketplace, etcetera.). No puedes seleccionar diferentes estados de suspensión para cada fuente de ingresos.
+> El **Estado** de la retención de pago se aplica individualmente a cada programa (Microsoft Store, publicidad, Azure Marketplace, etc.). Si desea conservar los pagos en todos los programas, debe mantener los pagos en cada programa individualmente.
 
 
  
