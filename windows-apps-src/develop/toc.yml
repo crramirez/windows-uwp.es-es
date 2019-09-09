@@ -351,7 +351,7 @@
               href: ../debug-test-perf/optimize-suspend-resume.md
             - name: Optimizar el acceso a archivos
               href: ../debug-test-perf/optimize-file-access.md
-            - name: Componentes de Windows Runtime y optimización de la interoperabilidad
+            - name: "Componentes de Windows\_Runtime y optimización de la interoperabilidad"
               href: ../debug-test-perf/windows-runtime-components-and-optimizing-interop.md
             - name: Herramientas de creación de perfiles y rendimiento
               href: ../debug-test-perf/tools-for-profiling-and-performance.md
@@ -933,11 +933,11 @@
     - name: Componentes de Windows Runtime
       href: ../winrt-components/index.md
       items:
-        - name: "Crear componentes de Windows\_Runtime en C++/CX"
+        - name: "Componentes de Windows\_Runtime con C++/CX"
           href: ../winrt-components/creating-windows-runtime-components-in-cpp.md
-        - name: "Tutorial: Crear un componente básico de Windows\_Runtime en C++/CX y llamarlo desde JavaScript o C#"
+        - name: "Tutorial de un C++componente de Windows\_Runtime de C++/CX"
           href: ../winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md
-        - name: 'Creación de componentes de Windows Runtime en C# y Visual Basic'
+        - name: "Componentes de Windows\_Runtime con C# y Visual\_Basic"
           href: ../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md
           items:
             - name: Eventos y descriptores de acceso de eventos personalizados en componentes de Windows Runtime
@@ -948,9 +948,9 @@
               href: ../winrt-components/diagnosing-windows-runtime-component-error-conditions.md
             - name: Distribuir un componente de Windows Runtime administrado
               href: ../winrt-components/distributing-a-managed-windows-runtime-component.md
-            - name: Asignaciones de .NET Framework de tipos de Windows Runtime
+            - name: "Asignaciones de .NET de tipos de Windows\_Runtime"
               href: ../winrt-components/net-framework-mappings-of-windows-runtime-types.md
-        - name: 'Tutorial: Creación de un componente simple de Windows Runtime y llamada a este desde JavaScript'
+        - name: "Tutorial de un componente de Windows\_Runtime de C# O Visual\_Basic"
           href: ../winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md
         - name: Generación de eventos en componentes de Windows Runtime
           href: ../winrt-components/raising-events-in-windows-runtime-components.md
