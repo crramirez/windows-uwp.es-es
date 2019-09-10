@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, author, event
 ms.localizationpriority: medium
-ms.openlocfilehash: 4499b2191734c6ae66131ce92aa2654188313d5e
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: e8bb86bd8d52ff96f010bf41758f1e4602330d52
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270178"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393478"
 ---
 # <a name="author-events-in-cwinrt"></a>Crear eventos en C++/WinRT
 
@@ -22,7 +22,7 @@ Este tema muestra cómo crear un componente de Windows Runtime con una clase en 
 > [!IMPORTANT]
 > Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
 
-## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Crea un componente de Windows Runtime (BankAccountWRC)
+## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Crear un componente de Windows Runtime (BankAccountWRC)
 
 Para empezar, crea un proyecto en Microsoft Visual Studio. Crea un proyecto **Componente de Windows Runtime (C++/WinRT)** y asígnale el nombre *BankAccountWRC* (de "componente de cuenta bancaria de Windows Runtime"). No compiles aún el proyecto.
 

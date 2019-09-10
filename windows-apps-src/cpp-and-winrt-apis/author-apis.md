@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, estándar, c++, cpp, winrt, projected, proyectado, projection, proyección, implementation, implementación, implement, implementar, runtime class, clase en tiempo de ejecución, activation, activación
 ms.localizationpriority: medium
-ms.openlocfilehash: 18dc65198d476204cfd54bd241fbd3c9ac401155
-ms.sourcegitcommit: 7ece8a9a9fa75e2e92aac4ac31602237e8b7fde5
+ms.openlocfilehash: ae8aca92d7eb7bc93ba4be99449d5e813238d744
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485175"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393497"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
@@ -126,7 +126,7 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 ## <a name="if-youre-authoring-a-runtime-class-in-a-windows-runtime-component"></a>Si vas a crear una clase en tiempo de ejecución en un componente de Windows Runtime
 
-Si tu tipo está incluido en un componente de Windows Runtime para el consumo desde una app, es necesario que sea una clase en tiempo de ejecución. Declaras una clase en tiempo de ejecución en un archivo de Lenguaje de definición de interfaz de Microsoft (IDL) (.idl) (consulta [Factorizar clases en tiempo de ejecución en archivos Midl [.idl]](#factoring-runtime-classes-into-midl-files-idl)).
+Si tu tipo está incluido en un componente de Windows Runtime para el consumo desde una aplicación, es necesario que sea una clase en tiempo de ejecución. Declaras una clase en tiempo de ejecución en un archivo de Lenguaje de definición de interfaz de Microsoft (IDL) (.idl) (consulta [Factorizar clases en tiempo de ejecución en archivos Midl [.idl]](#factoring-runtime-classes-into-midl-files-idl)).
 
 Cada archivo IDL genera un archivo `.winmd`, y Visual Studio los combina todos en un único archivo con el mismo nombre que el espacio de nombres raíz. Ese archivo `.winmd` final será al que harán referencia los consumidores de tu componente.
 

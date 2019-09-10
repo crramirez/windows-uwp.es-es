@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 760beb6b9baf63b23efb531567f4b5319f95845c
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: 0801ba9036f69aef340881b9c92807e80af6b09f
+ms.sourcegitcommit: e43bc20c2f6e9375f61931c2fce95f06fd1f31df
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979360"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212073"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e iconos de aplicaciones 
 
@@ -59,14 +59,13 @@ Para asegurarte de que estos iconos se muestren de manera nítida en todas las p
 El factor de escala determina el tamaño de los elementos de interfaz de usuario, como texto. Los factores de escala varían del 100 % al 400 %. Los valores mayores crean elementos de interfaz de usuario más grandes, por lo que son más fáciles de ver en pantallas de ppp elevados. 
 
 :::row:::
-    :::column:::
-        Windows automatically sets the scale factor for each display based on its DPI (dots-per-inch) and the viewing distance of the device. 
-
-        (Users can override the default value by going to the **Settings &gt; Display &gt; Scale and layout** page.)
-    :::column-end:::
-    :::column:::
-        ![](images/icons/display-settings-screen.png)
-    :::column-end:::
+   :::column:::
+      Windows establece automáticamente el factor de escala para cada pantalla en función de su valor de PPP (puntos por pulgada) y la distancia de visualización del dispositivo. 
+      (Los usuarios pueden reemplazar el valor predeterminado a través de **Configuración &gt; Pantalla &gt; Escala y distribución**).
+   :::column-end:::
+   :::column:::
+      ![](images/icons/display-settings-screen.png)
+   :::column-end:::
 :::row-end:::  
 
 

@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, port, migrate, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 404a6985c95718363f3dbbc3b8f27a7793b28e86
-ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
+ms.openlocfilehash: 92088906078a3a705e5fae052a50fc914561c77c
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68328855"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393456"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>Migrar a C++/WinRT desde C++/CX
 
@@ -18,7 +18,7 @@ En este tema se muestra cómo trasladar el código de un proyecto de [C++/CX](/c
 
 ## <a name="porting-strategies"></a>Estrategias de portabilidad
 
-Si deseas trasladar gradualmente tu código de C++/CX a C++/WinRT, puedes hacerlo. El código de C++/CX y de C++/WinRT puede coexistir en el mismo proyecto, a excepción del soporte para el compilador XAML y los componentes de Windows Runtime. Para estos dos casos necesitarás tener como destino C++/CX o C++/WinRT dentro del mismo proyecto.
+Si deseas trasladar gradualmente tu código de C++/CX a C++/WinRT, puedes hacerlo. El código de C++/CX y de C++/WinRT puede coexistir en el mismo proyecto, a excepción de la compatibilidad con el compilador XAML y los componentes de Windows Runtime. Para estos dos casos necesitarás tener como destino C++/CX o C++/WinRT dentro del mismo proyecto.
 
 > [!IMPORTANT]
 > Si el proyecto compila una aplicación XAML, uno de los flujos de trabajo recomendados es crear primero un proyecto en Visual Studio mediante una de las plantillas de proyecto de C++/WinRT (consulta el artículo de [soporte de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Después, empieza a copiar código fuente y revisa desde el proyecto de C++/CX. Puedes agregar nuevas páginas XAML con **proyecto** \> **Agregar nuevo elemento...** \> **Visual C++**  > **Página en blanco (C++/WinRT)** .
@@ -471,11 +471,11 @@ Además, C++/CX te permite desreferenciar una **String^** null, en cuyo caso se 
 | Operación | C++/CX | C++/WinRT|
 |-|-|-|
 | Categoría de tipo de cadena | Tipo de referencia | Tipo de valor |
-| **HSTRING** null se proyecta como | `(String^)nullptr` | `hstring{ nullptr }` |
+| **HSTRING** null se proyecta como | `(String^)nullptr` | `hstring{}` |
 | ¿Son null y `""` idénticos? | Sí | Sí |
 | Validez de null | `s = nullptr;`<br>`s->Length == 0` (válido) | `s = nullptr;`<br>`s.size() == 0` (válido) |
 | Aplicar boxing a una cadena | `o = s;` | `o = box_value(s);` |
-| Si `s` es `null` | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{nullptr});`<br>`o != nullptr` |
+| Si `s` es `null` | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{});`<br>`o != nullptr` |
 | Si `s` es `""` | `o = "";`<br>`o == nullptr` | `o = box_value(hstring{L""});`<br>`o != nullptr;` |
 | Aplicar boxing a una cadena, conservando null | `o = s;` | `o = s.empty() ? nullptr : box_value(s);` |
 | Forzar boxing a una cadena | `o = PropertyValue::CreateString(s);` | `o = box_value(s);` |
@@ -514,7 +514,7 @@ C++/CX proporciona varios tipos de datos en el espacio de nombres **Plataforma**
 | **Platform::Object\^** | **winrt::Windows::Foundation::IInspectable** |
 | **Platform::String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
 
-### <a name="port-platformagile-to-winrtagileref"></a>Migración de **Platform::Agile\^** a **winrt::agile_ref**
+### <a name="port-platformagile-to-winrtagile_ref"></a>Migración de **Platform::Agile\^** a **winrt::agile_ref**
 
 La escritura de **Platform::Agile\^** en C++/CX representa una clase de Windows Runtime que se puede acceder desde cualquier subproceso. El equivalente de C++/WinRT es [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref).
 
@@ -534,7 +534,7 @@ winrt::agile_ref<Windows::UI::Core::CoreWindow> m_window;
 
 Las opciones incluyen el uso de una lista de inicializadores, **std::array** o **std::vector**. Para más información y ejemplos de código, consulta [Standard initializer lists](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-initializer-lists) (Listas de inicializadores estándar) y [Standard arrays and vectors](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-arrays-and-vectors) (Vectores y matrices estándar).
 
-### <a name="port-platformexception-to-winrthresulterror"></a>Migración de **Platform::Exception\^** a **winrt::hresult_error**
+### <a name="port-platformexception-to-winrthresult_error"></a>Migración de **Platform::Exception\^** a **winrt::hresult_error**
 
 El tipo **Platform::Exception\^** se produce en C++/CX cuando una API de Windows Runtime devuelve un HRESULT que no es S\_OK. El equivalente de C++/WinRT es [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error).
 
