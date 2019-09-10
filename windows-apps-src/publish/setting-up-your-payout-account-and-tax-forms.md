@@ -6,12 +6,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0253bb85358e7385f1dbddc726a9179c78451eb7
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 1827f24e467c113034c5d0303aaebce0e603da2a
+ms.sourcegitcommit: 68121f21c899975f3634456a651ae8e1e53c19f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340821"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70841861"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar la cuenta de pago y los formularios fiscales
 
@@ -46,10 +46,19 @@ Puede completar y enviar los formularios fiscales electrónicamente en el centro
 
 1. En el [centro de Partners](https://partner.microsoft.com/dashboard), seleccione el icono de configuración de la **cuenta** en la esquina superior derecha y, a continuación, seleccione Configuración del **desarrollador**.
 2. En el menú de navegación izquierdo, seleccione **pago e impuestos**y, a continuación, seleccione **pago y asignaciones de impuestos**.
+
+    ![Asignación de Perfil de pago y de impuestos](images/payout-tax-profile-assignment.png)
+
 3. Seleccione el programa y la combinación de ID. de vendedor para los que desea configurar la información fiscal.
+
+    ![Pago-seleccionar ID. de vendedor](images/payout-select-seller-id.png)
+
 4. Si desea utilizar un perfil fiscal existente, selecciónelo en la lista desplegable. En caso contrario, seleccione **crear nuevo perfil** y presione **Enviar**. Se le dirigirá a la página perfiles de impuestos.
 5. Haga clic en el botón **Editar** para editar la información fiscal.
 6. Seleccione el botón de radio adecuado y seleccione su país si se le solicita. Este paso determina la entidad empresarial de Microsoft que se usará para realizar pagos en su cuenta.
+
+    ![País de selección fiscal de pago](images/payout-select-tax-country.png)
+
 7. En función de sus selecciones en el paso 6, se le pedirá que proporcione la información fiscal necesaria para su país.
 
 > [!NOTE]
@@ -76,13 +85,16 @@ Una cuenta de pago es la cuenta bancaria a la que te enviamos las ganancias por 
 ### <a name="create-a-payment-profile"></a>Crear un perfil de pago
 
 1. En el [centro de Partners](https://partner.microsoft.com/dashboard), seleccione el icono de engranaje **configuración** en la esquina superior derecha y, a continuación, seleccione Configuración del **desarrollador**.
-2. Debajo del encabezado *pago e impuestos* , seleccione **pago y asignaciones de impuestos**.
+2. Debajo del encabezado *pago e impuestos* , seleccione **asignación de perfil fiscal y de pago**.
 
     > [!NOTE]
     > Dado que se trata de información confidencial, se te pedirá que vuelvas a iniciar sesión.
 
 3. Seleccione el método de pago que quiere configurar.
-4. Seleccione un perfil de pago existente o haga clic en **crear un nuevo perfil de pago** para crear un nuevo perfil.
+
+    ![Selección de tipo de cuenta de pago](images/payout-account-type-selection.png)
+
+4. Seleccione un perfil de pago existente o haga clic en **crear un nuevo perfil de pago** para crear un nuevo perfil para el método de pago elegido.
 
 ### <a name="create-a-bank-based-payment-profile"></a>Creación de un perfil de pago basado en Banco
 
@@ -94,6 +106,8 @@ Si ha elegido usar una cuenta bancaria para recibir pagos, completará el siguie
     > [!NOTE]
     > Los campos que usas para proporcionar la información de tu cuenta solo aceptan caracteres alfanuméricos.
 
+    ![Información del Banco de pago](images/payout-bank-info.png)
+
 3. Proporcione los detalles del beneficiario.
 4. De nuevo en la página *asignación de perfiles* , seleccione la moneda que desea usar cuando emita sus pagos.
 
@@ -101,10 +115,19 @@ Si ha elegido usar una cuenta bancaria para recibir pagos, completará el siguie
     > Asegúrese de que el Banco acepte la moneda de pago que seleccione.
 
 5. Tendrá que seleccionar un perfil de pago para cada programa en el que participe, aunque puede usar el mismo perfil para varios programas.
+
+    ![Perfil de banco de uso de pago](images/payout-use-bank-profile.png)
+
 6. Haga clic en Submit (enviar) para guardar los cambios.
 
 > [!NOTE]
 > Microsoft puede tardar hasta 48 horas en validar la información de su perfil. Cuando se complete este proceso, se mostrará el *Estado* **completado**
+
+Para garantizar que el pago se realiza correctamente, ten en cuenta los siguientes puntos:
+
+- El **nombre del titular** de la cuenta especificado para su cuenta de pago en el centro de Partners debe ser exactamente el mismo nombre asociado a su cuenta bancaria. Por ejemplo, si en el nombre de tu cuenta bancaria está incluido un segundo nombre, escribe dicho segundo nombre en el **nombre de la cuenta bancaria**.
+- Los pagos se abonan directamente de Microsoft a tu cuenta bancaria en USD.
+- La información bancaria introducida en el centro de Partners en caracteres latinos se traduce en caracteres cirílicos.
 
 ### <a name="editing-existing-payment-profiles"></a>Edición de perfiles de pago existentes
 
@@ -121,8 +144,8 @@ Puede editar los perfiles de pago existentes si necesita realizar cambios o corr
 
 En ciertos países y regiones, puedes crear una cuenta de pago con tu información de PayPal. Sin embargo, antes de elegir PayPal como opción de cuenta de pago:
 
-- Compruebe los umbrales de [pago, los métodos y los períodos de tiempo](payment-thresholds-methods-and-timeframes.md) para confirmar si PayPal es un método de pago admitido en su país o región.
- Revisa las siguientes P+F. Según tu situación, PayPal puede no ser la mejor opción de cuenta de pago y tal vez sea preferible que uses una cuenta bancaria.
+- Compruebe los [umbrales de pago, los métodos y los períodos de tiempo](payment-thresholds-methods-and-timeframes.md) para confirmar si PayPal es un método de pago admitido en su país o región.
+- Revisa las siguientes P+F. Según tu situación, PayPal puede no ser la mejor opción de cuenta de pago y tal vez sea preferible que uses una cuenta bancaria.
 
 Preguntas comunes acerca del uso de PayPal como método de pago:
 
@@ -168,8 +191,19 @@ Si eres un desarrollador que vive en Ucrania, puede que tengas que proporcionar 
 
 Microsoft proporciona los tres documentos con el primer pago. En los pagos posteriores, solo recibirás el documento AC. Guarda los documentos ADA y AA. Podrías necesitarlos para recibir pagos de tu banco en el futuro.
 
-Para garantizar que el pago se realiza correctamente, ten en cuenta los siguientes puntos:
+### <a name="create-a-paypal-payment-profile"></a>Crear un perfil de pago de PayPal
 
-- El **nombre del titular** de la cuenta especificado para su cuenta de pago en el centro de Partners debe ser exactamente el mismo nombre asociado a su cuenta bancaria. Por ejemplo, si en el nombre de tu cuenta bancaria está incluido un segundo nombre, escribe dicho segundo nombre en el **nombre de la cuenta bancaria**.
-- Los pagos se abonan directamente de Microsoft a tu cuenta bancaria en USD.
-- La información bancaria introducida en el centro de Partners en caracteres latinos se traduce en caracteres cirílicos.
+Si ha elegido usar una cuenta bancaria para recibir pagos, completará el siguiente proceso para configurar su cuenta bancaria.
+
+1. En la página *PayPal* , proporcione la información necesaria sobre su cuenta de PayPal.
+2. Proporcione los detalles de su cuenta de PayPal.
+
+    > [!NOTE]
+    > Los campos que usas para proporcionar la información de tu cuenta solo aceptan caracteres alfanuméricos.
+
+    ![Información de pago de PayPal](images/payout-paypal-info.png)
+
+3. Proporcione los detalles del beneficiario.
+4. De nuevo en la página *asignación de perfiles* , seleccione la moneda que desea usar cuando emita sus pagos.
+5. Tendrá que seleccionar un perfil de pago para cada programa en el que participe, aunque puede usar el mismo perfil para varios programas.
+6. Haga clic en Submit (enviar) para guardar los cambios.

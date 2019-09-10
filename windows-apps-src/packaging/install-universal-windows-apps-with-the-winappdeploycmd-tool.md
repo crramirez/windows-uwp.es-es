@@ -6,15 +6,14 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 79e92cd781a83295a8cbbee4fe4b25022295568a
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: d6c8383a5b0041d5edf6e0c2c8d94acf82572d13
+ms.sourcegitcommit: afc25d41229d4e340c9557651b35e016d7595c3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682653"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808442"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Instalar aplicaciones con la herramienta WinAppDeployCmd.exe
-
 
 Implementación de aplicaciones para Windows (WinAppDeployCmd. exe) es una herramienta de línea de comandos que puede usar para implementar una aplicación Plataforma universal de Windows (UWP) desde un equipo con Windows 10 en cualquier dispositivo con Windows 10. Puede usar esta herramienta para implementar un paquete de la aplicación cuando el dispositivo Windows 10 está conectado mediante USB o disponible en la misma subred sin necesidad de Microsoft Visual Studio o de la solución para esa aplicación. También puedes implementar la aplicación sin empaquetarla primero en un equipo remoto o en Xbox One. Este artículo describe cómo instalar aplicaciones para UWP con esta herramienta.
 
@@ -22,21 +21,24 @@ Solo necesita el SDK de Windows 10 instalado para ejecutar la herramienta WinApp
 
 Para implementar en dispositivos móviles, primero debes crear un paquete. Puedes obtener más información [aquí](/windows/msix/package/packaging-uwp-apps).
 
-La herramienta **WinAppDeployCmd. exe** se encuentra aquí en el equipo con Windows 10: **C:\\archivos de programa (x86\\) kits\\de\\Windows\\10 bin&lt;SDK versión&gt;\\x86WinAppDeployCmd.exe(basadoen\\** la ruta de instalación del SDK). 
+La herramienta **WinAppDeployCmd. exe** se encuentra aquí en el equipo con Windows 10: **C:\\archivos de programa (x86\\) kits\\de\\Windows\\10 bin&lt;SDK versión&gt;\\x86WinAppDeployCmd.exe(basadoen\\** la ruta de instalación del SDK).
+
 > [!NOTE]
-> En la versión 15063 y posteriores del SDK, el SDK se instala en paralelo dentro de carpetas específicas de la versión.  Los SDK anteriores (antes de 14393 incluido) se escriben directamente en la carpeta principal.
+> En la versión 15063 y posteriores del SDK, el SDK se instala en paralelo dentro de carpetas específicas de la versión. Los SDK anteriores (antes de 14393 incluido) se escriben directamente en la carpeta principal.
 
 En primer lugar, conecte el dispositivo Windows 10 a la misma subred o conéctelo directamente a su máquina con Windows 10 con una conexión USB. A continuación, usa la siguiente sintaxis y los ejemplos de este comando que se incluyen más adelante en este artículo para implementar la aplicación para UWP:
 
 ## <a name="winappdeploycmd-syntax-and-options"></a>Opciones y sintaxis de WinAppDeployCmd
 
 Esta es la sintaxis general que se usa para **WinAppDeployCmd.exe**:
-```syntax
+
+```CMD
 WinAppDeployCmd command -option <argument>
 ```
 
 Estos son algunos ejemplos de sintaxis adicionales para el uso de distintos comandos:
-```syntax
+
+```CMD
 WinAppDeployCmd devices
 WinAppDeployCmd devices <x>
 WinAppDeployCmd install -file <path> -ip <address>
@@ -59,7 +61,6 @@ Puedes instalar o desinstalar una aplicación en el dispositivo de destino, o bi
 
 La siguiente tabla describe los comandos de **WinAppDeployCmd.exe**.
 
-
 | **Command**  | **Descripción**                                                     |
 |--------------|---------------------------------------------------------------------|
 | dispositivos      | Muestra la lista de dispositivos de red disponibles.                         |
@@ -73,9 +74,7 @@ La siguiente tabla describe los comandos de **WinAppDeployCmd.exe**.
 | getcreds     | Obtiene credenciales de red para los usos de destino cuando se ejecuta una aplicación desde un recurso compartido de red.|
 | deletecreds  | Elimina credenciales de red que el destino usa cuando ejecuta una aplicación desde un recurso compartido de red.|
 
-
 La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
-
 
 | **Command**  | **Descripción**  |
 |--------------|------------------|
@@ -93,7 +92,6 @@ La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
 | -remotedeploydir | Ruta de acceso y nombre del directorio relativo en la que copiar los archivos en el dispositivo remoto; se trata de una carpeta de implementación remota conocida determinada automáticamente. |
 | -deleteextrafile | Cambia para indicar si se deben purgar los archivos existentes en el directorio remoto para que coincidan con los del directorio de origen. |
 
-
 La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
 
 | **Argumento**           | **Descripción**                                                              |
@@ -109,44 +107,43 @@ La siguiente tabla describe las opciones de **WinAppDeployCmd.exe**.
 | &lt;password&gt;       | La contraseña para las credenciales con acceso al servidor de la red de archivos. |
 | &lt;remotedeploydir&gt;| El directorio del dispositivo relativo a la ubicación de implementación                      |
 
- 
 ## <a name="winappdeploycmdexe-examples"></a>Ejemplos de WinAppDeployCmd.exe
 
-Estos son algunos ejemplos de implementación desde la línea de comandos mediante la sintaxis de **WinAppDeployCmd.exe**.
+Estos son algunos ejemplos de cómo implementar desde la línea de comandos mediante la sintaxis de **WinAppDeployCmd. exe**.
 
 Muestra los dispositivos que están disponibles para la implementación. El comando expira en 3 segundos.
 
-``` syntax
+``` CMD
 WinAppDeployCmd devices 3
 ```
 
 Instala la aplicación desde el paquete MyApp. appx que se encuentra en el directorio de descargas de su equipo en un dispositivo de Windows 10 con una dirección IP de 192.168.0.1 con un PIN de A1B2C3 para establecer una conexión con el dispositivo.
 
-``` syntax
+``` CMD
 WinAppDeployCmd install -file "Downloads\MyApp.appx" -ip 192.168.0.1 -pin A1B2C3
 ```
 
 Desinstala el paquete especificado (basado en su nombre completo) de un dispositivo con Windows 10 y la dirección IP 192.168.0.1. Puedes usar el comando list para ver los nombres completos de todos los paquetes que están instalados en un dispositivo.
 
-``` syntax
+``` CMD
 WinAppDeployCmd uninstall -package Company.MyApp_1.0.0.1_x64__qwertyuiop -ip 192.168.0.1
 ```
 
 Actualiza la aplicación que ya está instalada en el dispositivo de Windows 10 con una dirección IP de 192.168.0.1 mediante el paquete de aplicación especificado.
 
-``` syntax
+``` CMD
 WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1
 ```
 
 Implementa los archivos de una aplicación que esté en un equipo o Xbox con la dirección IP 192.168.0.1 y en la misma carpeta que AppxManifest en el directorio app1_F5, en la ruta de implementación del dispositivo.
 
-``` syntax
+``` CMD
 WinAppDeployCmd deployfiles -file "C:\apps\App1\AppxManifest.xml" -remotedeploydir app1_F5 -ip 192.168.0.1
 ```
 
 Registra la aplicación que está en el directorio app1_F5 en la ruta de acceso de implementación del equipo o Xbox en 192.168.0.1.
 
-``` syntax
+``` CMD
 WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 ```
 
@@ -155,7 +152,8 @@ WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 Run from PC permite implementar una aplicación para UWP en una consola Xbox One sin copiar los archivos binarios; en su lugar, los archivos binarios se hospedan en un recurso compartido de red en la misma red que la consola Xbox.  Para hacerlo, necesitas una consola Xbox One desbloqueada por el desarrollador y una aplicación para UWP de archivos sueltos en una unidad de red a la que pueda acceder la consola Xbox.
 
 Ejecuta lo siguiente para registrar la aplicación:
-``` syntax
+
+``` CMD
 WinAppDeployCmd registerfiles -ip <Xbox One IP> -remotedeploydir <location of app> -username <user for network> -password <password for user>
 
 ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myAppLocation -username admin -password A1B2C3
