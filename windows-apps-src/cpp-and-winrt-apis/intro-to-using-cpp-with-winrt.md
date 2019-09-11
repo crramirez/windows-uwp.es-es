@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++, cpp, winrt, proyección, introducción
 ms.localizationpriority: medium
-ms.openlocfilehash: 197f53df200026541a15120dfc97c187e5aa2e5b
-ms.sourcegitcommit: b186f70f0b1601b6b6a5db91d87d034f6b155e3b
+ms.openlocfilehash: 4b6fd3f3085449c57dafdcedc60f63997e3ec807
+ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063789"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70393432"
 ---
 # <a name="introduction-to-cwinrt"></a>Introducción a C++/WinRT
 &nbsp;
@@ -93,7 +93,7 @@ Esta plantilla muestra la cadena de herramientas `midl.exe` > `cppwinrt.exe`, do
 
 En un archivo IDL, define las clases en tiempo de ejecución de tu componente, su interfaz predeterminada y cualquier otra interfaz que implementen. Compila el proyecto una sola vez para generar `module.g.cpp`, `module.h.cpp`, plantillas de implementación en `Generated Files` y la definición del tipo de código auxiliar en `Generated Files\sources`. Luego, usa estas definiciones del tipo de código auxiliar como referencia para implementar las clases en tiempo de ejecución en tu componente. Consulta [Factorizar clases en tiempo de ejecución en archivos Midl (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
-Agrupa el binario compilado de componente de Windows Runtime y su `.winmd` con la aplicación para UWP consumiéndolos.
+Agrupa el binario compilado de componente de Windows Runtime y su `.winmd` con la aplicación para UWP que los consume.
 
 ## <a name="earlier-versions-of-the-vsix-extension"></a>Versiones anteriores de la extensión VSIX
 Te recomendamos que instales la versión más reciente de la [extensión VSIX](https://aka.ms/cppwinrt/vsix) (o que actualices a esta). Está configurada de forma predeterminada para actualizarse automáticamente. Si lo haces y tienes proyectos creados con una versión de la extensión VSIX anterior a 1.0.190128.4, encontrarás en esta sección información importante sobre cómo actualizar esos proyectos para que funcionen con la nueva versión. Aunque no lleves a cabo la actualización, la información de esta sección te resultará útil.
