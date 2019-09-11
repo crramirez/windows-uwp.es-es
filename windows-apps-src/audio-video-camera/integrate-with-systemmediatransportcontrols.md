@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 81065c214cc2b0583a99ac88cf1c3e4cd784658a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d2c8e05d2b01b110085ed82c19cecd251c9c6971
+ms.sourcegitcommit: c95915f8a13736705eab74951a12b2cf528ea612
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361684"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70876245"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>Integrar con los controles de transporte de contenido multimedia del sistema
 
@@ -34,6 +34,11 @@ Si quieres agregar o modificar los metadatos que se muestran para los elementos 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
 [!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
+
+
+> [!Note]
+> Las aplicaciones deben establecer un valor para la propiedad [**Type**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaitemdisplayproperties.type) aunque no suministren otros metadatos multimedia para que los controles de transporte de medios del sistema los muestren. Este valor ayuda a que el sistema controle el contenido multimedia correctamente, lo que incluye impedir que el protector de pantalla se active durante la reproducción.
+
 
 ## <a name="use-commandmanager-to-modify-or-override-the-default-smtc-commands"></a>Usar CommandManager para modificar o invalidar los comandos de SMTC predeterminados
 La aplicación puede modificar o invalidar completamente el comportamiento de los controles SMTC con la clase [**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager). Se puede obtener una instancia del administrador de comandos para cada instancia de la clase **MediaPlayer** mediante el acceso a la propiedad [**CommandManager**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.commandmanager).
@@ -79,7 +84,7 @@ Como se mencionó anteriormente en este artículo, los SMTC detectarán y mostra
 * [Reproducción de multimedia](media-playback.md)
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
 * [Control manual de los controles de transporte de medios del sistema](system-media-transport-controls.md)
-* [Ejemplo de controles de transporte de medios del sistema en github](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
+* [Ejemplo System media tranport Controls en github](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
  
 
  

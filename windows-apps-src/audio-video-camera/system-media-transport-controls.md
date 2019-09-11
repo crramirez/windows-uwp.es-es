@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e306cfe1ee03e9ef4a0688145c2db7b3addd68e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 0a4163105b934f5c1e2970fab9f51b76d69d1bd8
+ms.sourcegitcommit: c95915f8a13736705eab74951a12b2cf528ea612
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318504"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70876226"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a>Control manual de los controles de transporte de contenido multimedia del sistema
 
@@ -66,6 +66,11 @@ Si el escenario lo requiere, puedes actualizar los metadatos que se muestran med
 
 [!code-cs[SystemMediaTransportControlsUpdaterManual](./code/SMTCWin10/cs/MainPage.xaml.cs#SystemMediaTransportControlsUpdaterManual)]
 
+> [!Note]
+> Las aplicaciones deben establecer un valor para [la propiedad SystemMediaTransportControlsDisplayUpdater](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolsdisplayupdater.type#Windows_Media_SystemMediaTransportControlsDisplayUpdater_Type
+) . Type aunque no suministren otros metadatos multimedia para que los controles de transporte de medios del sistema los muestren. Este valor ayuda a que el sistema controle el contenido multimedia correctamente, lo que incluye impedir que el protector de pantalla se active durante la reproducción.
+
+
 ## <a name="update-the-system-media-transport-controls-timeline-properties"></a>Actualizar las propiedades de escala de tiempo de los controles de transporte de medios del sistema
 
 Los controles de transporte del sistema muestran información acerca de la escala de tiempo del elemento multimedia que se está reproduciendo, incluida la posición de reproducción actual, la hora de inicio y la hora de finalización del elemento multimedia. Para actualizar el sistema de propiedades de escala de tiempo de controles de transporte del sistema, crea un nuevo objeto [**SystemMediaTransportControlsTimelineProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControlsTimelineProperties). Establecer las propiedades del objeto para reflejar el estado actual del elemento multimedia que se está reproduciendo. Llama a [**SystemMediaTransportControls.UpdateTimelineProperties**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.updatetimelineproperties) para hacer que los controles actualicen la escala de tiempo.
@@ -74,7 +79,7 @@ Los controles de transporte del sistema muestran información acerca de la escal
 
 -   Debes proporcionar un valor para los objetos [**StartTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.starttime), [**EndTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.endtime) y [**Posición**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.playbackpositionchangerequested) para que de los controles del sistema muestren una escala de tiempo para el elemento que se reproduce.
 
--   [**MinSeekTime** ](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.minseektime) y [ **MaxSeekTime** ](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.maxseektime) le permiten especificar el intervalo dentro de la escala de tiempo que el usuario puede buscar. Un escenario típico sobre esto es permitir que los proveedores de contenido incluyan pausas de anuncios en sus elementos multimedia.
+-   [**MinSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.minseektime) y [**MaxSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.maxseektime) permiten especificar el intervalo dentro de la escala de tiempo que el usuario puede buscar. Un escenario típico sobre esto es permitir que los proveedores de contenido incluyan pausas de anuncios en sus elementos multimedia.
 
     Debes establecer [**MinSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.minseektime) y [**MaxSeekTime**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.maxseektime) para que se genere [**PositionChangeRequest**](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols.playbackpositionchangerequested).
 
@@ -111,8 +116,8 @@ Para obtener más información sobre la reproducción de audio en segundo plano,
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Reproducción de multimedia](media-playback.md)
-* [Integrar con los medios del sistema de controles de transporte](integrate-with-systemmediatransportcontrols.md) 
-* [Ejemplo de transporte de medios del sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
+* [Integración con los controles de transporte de medios del sistema](integrate-with-systemmediatransportcontrols.md) 
+* [Ejemplo de tranport de medios del sistema](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
  
 
