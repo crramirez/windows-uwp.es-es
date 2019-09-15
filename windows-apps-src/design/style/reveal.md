@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cb076de6cd9c44280bf7030a59c645f601487bd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 0810365eeb0023a31862d31213862e2b3bce8db8
+ms.sourcegitcommit: 5687e5340f8d78da95c3ac28304d1c9b8960c47d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66370431"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70930344"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
@@ -88,7 +88,7 @@ Estos controles no tienen Reveal de manera predeterminada, ya que son controles 
 Para aplicar estos estilos, solo tienes que establecer la propiedad [Style](/uwp/api/Windows.UI.Xaml.Style) del control:
 
 ```xaml
-<Button Content="Button Content" Style="{StaticResource ButtonRevealStyle}"/>
+<Button Content="Button Content" Style="{ThemeResource ButtonRevealStyle}"/>
 ```
 
 ### <a name="reveal-in-themes"></a>Reveal en temas
