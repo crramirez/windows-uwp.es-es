@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo usar los encabezados para agrupar visualmente sus notificaciones del sistema en el centro de actividades.
+Description: Aprenda a usar encabezados para agrupar visualmente las notificaciones del sistema en el centro de actividades.
 title: Encabezados de notificaciones del sistema
 label: Toast headers
 template: detail.hbs
@@ -7,19 +7,19 @@ ms.date: 12/07/2017
 ms.topic: article
 keywords: windows 10, uwp, notificación del sistema, encabezado, encabezados de notificación del sistema, notificación, notificaciones del sistema de grupo, Centro de actividades
 ms.localizationpriority: medium
-ms.openlocfilehash: c7d1e3ce0a012d36bea671f87efb8df3a5d49b5f
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: af94b501b0e98515a1d3b3216f3a76a28fedab67
+ms.sourcegitcommit: 6e7665b457ec4585db19b70acfa2554791ad6e10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714083"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987211"
 ---
 # <a name="toast-headers"></a>Encabezados de notificaciones del sistema
 
 Puedes agrupar visualmente un conjunto de notificaciones relacionadas dentro del Centro de actividades usando un encabezado de notificación del sistema en las notificaciones.
 
 > [!IMPORTANT]
-> **Requiere escritorio Creators Update y 1.4.0 de biblioteca de notificaciones**: Debe ejecutar los encabezados de escritorio compilación 15063 o superior para ver la notificación del sistema. Debes usar la versión 1.4.0 o superior de la [Biblioteca NuGet de notificaciones del Kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para construir el encabezado en el contenido de tu notificación del sistema. Los encabezados solo se admiten en Escritorio.
+> **Requiere Desktop Creators Update y 1.4.0 de la biblioteca de notificaciones**: Debe ejecutar la compilación de escritorio 15063 o superior para ver los encabezados del sistema. Debes usar la versión 1.4.0 o superior de la [Biblioteca NuGet de notificaciones del Kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para construir el encabezado en el contenido de tu notificación del sistema. Los encabezados solo se admiten en Escritorio.
 
 Tal como se muestra a continuación, esta conversación de grupo se unifica bajo un encabezado único, "Camping!!" (¡¡Acampada!!). Cada mensaje individual de la conversación es una notificación del sistema independiente que comparte el mismo encabezado del sistema.
 
@@ -77,7 +77,7 @@ Los usuarios pueden hacer clic en los encabezados para obtener más información
 
 Por lo tanto, las aplicaciones pueden proporcionar **Arguments** en el encabezado, de manera similar a los argumentos de inicio de la propia notificación del sistema.
 
-La activación se controla de manera idéntica a la [activación de notificación del sistema normal](send-local-toast.md#handling-activation-1), lo que significa que puedes recuperar estos argumentos en el método **OnActivated**`App.xaml.cs` como lo harías si el usuario hace clic en el cuerpo de tu notificación del sistema o en un botón de tu notificación del sistema.
+La activación se controla de manera idéntica a la [activación de notificación del sistema normal](send-local-toast.md#activation-handling), lo que significa que puedes recuperar estos argumentos en el método **OnActivated**`App.xaml.cs` como lo harías si el usuario hace clic en el cuerpo de tu notificación del sistema o en un botón de tu notificación del sistema.
 
 ```csharp
 protected override void OnActivated(IActivatedEventArgs e)
@@ -96,7 +96,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 El encabezado separa visualmente las notificaciones y las agrupa. No cambia ninguna otra logística sobre el número máximo de notificaciones que una aplicación puede tener (20) y el comportamiento del primero en entrar es el primero en salir de la lista de notificaciones.
 
-El orden de las notificaciones dentro de los encabezados son las siguientes: Para una aplicación determinada, aparecerá primera la notificación más reciente de la aplicación (y el grupo de encabezado completa si forma parte de un encabezado).
+El orden de las notificaciones dentro de los encabezados es el siguiente... En el caso de una aplicación determinada, la notificación más reciente de la aplicación (y el grupo de encabezado completo si es parte de un encabezado) aparecerá en primer lugar.
 
 El valor de **Id** puede ser cualquier cadena que elijas. No existen restricciones de caracteres o longitud en cualquiera de las propiedades de **ToastHeader**. La única restricción es que el contenido de notificación del sistema XML completo no puede ser superior a 5 KB.
 
@@ -107,5 +107,5 @@ Al hacer clic en el encabezado, igual que al hacer clic en el título de la apli
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Enviar una activación local del sistema y de identificador](send-local-toast.md)
-- [Documentación de contenido de notificación del sistema](adaptive-interactive-toasts.md)
+- [Enviar una notificación del sistema local y controlar la activación](send-local-toast.md)
+- [Documentación del contenido del sistema](adaptive-interactive-toasts.md)
