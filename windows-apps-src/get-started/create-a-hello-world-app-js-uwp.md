@@ -2,28 +2,30 @@
 ms.assetid: 3a17e682-40be-41b4-8bd3-fbf0b15259d6
 title: Crear una aplicación "Hello, world" (JS)
 description: Este tutorial le enseña a usar JavaScript y HTML para crear una aplicación sencilla &\#0034;Hello, world&\#0034; para la Plataforma universal de Windows (UWP) en Windows 10.
-ms.date: 03/06/2017
+ms.date: 09/12/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b5423c9aae607d4f6ffe14b755c8f73e013d8b6
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 3f4ab5b177539bc286ce24d480cd949d43a51e17
+ms.sourcegitcommit: bd41fb6f59dfbd7021b14ff749b8b0f83f883c0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820978"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70963625"
 ---
 # <a name="create-a-hello-world-app-js"></a>Crear una aplicación "Hello, world" (JS)
 
 Este tutorial le enseña a usar JavaScript y HTML para crear una aplicación sencilla "Hello, world" para la Plataforma universal de Windows (UWP) en Windows 10. Con un único proyecto en Microsoft Visual Studio, puede compilar una aplicación que se ejecute en cualquier dispositivo Windows 10.
 
 > [!NOTE]
-> En este tutorial se usa Visual Studio Community 2019. Si usa otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
+> En este tutorial se usa Visual Studio Community 2017. Si usa otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
 
+> [!WARNING]
+> El desarrollo de aplicaciones para UWP de JavaScript no se admite en Visual Studio 2019. Debes usar Visual Studio 2017 para desarrollar una aplicación para UWP de JavaScript.
 
 Aquí aprenderás a:
 
--   Creación de un nuevo proyecto de **Visual Studio 2019** diseñado para **Windows 10** y **UWP**.
+-   Creación de un nuevo proyecto de **Visual Studio 2017** diseñado para **Windows 10** y **UWP**.
 -   Agregar contenido HTML y JavaScript.
 -   Ejecutar el proyecto en el escritorio local en Visual Studio
 
@@ -35,7 +37,7 @@ Aquí aprenderás a:
 
 ## <a name="step-1-create-a-new-project-in-visual-studio"></a>Paso 1: Crear un nuevo proyecto en Visual Studio.
 
-1.  Inicia Visual Studio 2019.
+1.  Inicia Visual Studio 2017.
 
 2.  En el menú **Archivo**, selecciona **Nuevo > Proyecto...** para abrir el cuadro de diálogo *Crear nuevo proyecto*.
 
