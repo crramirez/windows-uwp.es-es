@@ -1,0 +1,69 @@
+### YamlMime:Hub
+title: Documentación de Windows
+summary: Información para desarrolladores de software, ingenieros de hardware y profesionales de TI.
+brand: windows
+metadata:
+  title: Documentación de Windows | Microsoft Docs
+  titleSuffix: ''
+  author: tedhudek
+  ms.author: tedhudek
+  ms.topic: hub-page
+  uhfHeaderId: MSDocsHeader-DocsL1
+  ms.openlocfilehash: 0cdab14a7301cdb20ca6986854523c5b6e834b21
+  ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 09/18/2019
+  ms.locfileid: "71100829"
+highlightedContent:
+  items:
+  - title: Obtener Visual Studio y Windows SDK
+    itemType: download
+    url: https://developer.microsoft.com/windows/downloads
+  - title: Descargar WDK
+    itemType: download
+    url: https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk
+  - title: Únete al Programa Insider.
+    itemType: overview
+    url: https://docs.microsoft.com/windows-insider
+  - title: Mejora tus habilidades
+    itemType: learn
+    url: https://docs.microsoft.com/learn/browse/?products=m365%2Cwindows
+additionalContent:
+  sections:
+  - items:
+    - title: Desarrollo de aplicaciones
+      links:
+      - text: Empezar a escribir aplicaciones de Windows 10
+        url: https://docs.microsoft.com/windows/apps
+      - text: Agregar características de Windows 10 a las aplicaciones
+        url: https://docs.microsoft.com/windows/apps/desktop/modernize/
+      - text: Desarrollo con Python en Windows
+        url: https://docs.microsoft.com/windows/python/index
+      - text: Configurar el subsistema de Windows para Linux
+        url: https://docs.microsoft.com/windows/wsl/about
+      - text: Buscar ejemplos de código
+        url: https://developer.microsoft.com/windows/samples
+    - title: Desarrollo de hardware
+      links:
+      - text: Información sobre la compilación de dispositivos
+        url: https://docs.microsoft.com/windows-hardware/get-started/index
+      - text: Desarrollar controladores de dispositivos
+        url: https://docs.microsoft.com/windows-hardware/drivers
+      - text: Crear imágenes de Windows
+        url: https://docs.microsoft.com/windows-hardware/manufacture/
+      - text: Probar el rendimiento y la compatibilidad
+        url: https://docs.microsoft.com/windows-hardware/test
+      - text: Buscar ejemplos de controladores
+        url: https://docs.microsoft.com/samples/browse/?products=windows-wdk
+    - title: Administrador de TI
+      links:
+      - text: Configurar e implementar Windows 10
+        url: https://docs.microsoft.com/windows/windows-10/
+      - text: Buscar información de la versión de Windows 10
+        url: https://docs.microsoft.com/windows/release-information/
+      - text: Administrar Windows Server
+        url: https://docs.microsoft.com/windows-server/
+      - text: Empezar a usar Microsoft Store para Empresas
+        url: https://docs.microsoft.com/microsoft-store/
+  footer: '[Blogs](https://blogs.windows.com/) - [Twitter](https://twitter.com/windowsdocs) - [Stack Overflow](https://stackoverflow.com/questions/tagged/windows) - [Developer Community ](https://social.msdn.microsoft.com/Forums/windowsdesktop)'
