@@ -7,12 +7,12 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: windows 10, uwp, win32, escritorio, notificaciones del sistema, puente de dispositivo de escritorio, opciones para enviar notificaciones del sistema, servidor com, activador com, com, falso com, no com, sin com, enviar notificaciones del sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: ef4810ec594173f3cc4da35d63143909f4859e3c
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 030f8b1380dc28a41e65989ccbda688523fad965
+ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340812"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71100817"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificaciones del sistema desde aplicaciones de escritorio
 
@@ -54,7 +54,7 @@ Con la opción de activador COM, puedes usar las siguientes plantillas de notifi
 > [!NOTE]
 > Si agregas el activador COM a tu aplicación existente del Puente de dispositivo de escritorio, las activaciones de notificaciones heredadas de primer y segundo plano activarán ahora el activador COM en lugar de la línea de comandos.
 
-Para obtener información acerca de cómo usar esta opción, consulta [Enviar una notificación del sistema local desde aplicaciones de C# de escritorio](send-local-toast-desktop.md) o [Enviar una notificación del sistema local desde aplicaciones de C++ (WRL) de escritorio](send-local-toast-desktop-cpp-wrl.md).
+Para obtener información sobre cómo usar esta opción, consulte [enviar una notificación del sistema local C# desde aplicaciones de escritorio](send-local-toast-desktop.md) o [enviar una notificación del C++ sistema local desde aplicaciones de webwrl de escritorio](send-local-toast-desktop-cpp-wrl.md).
 
 
 ## <a name="alternative-option---no-com--stub-clsid"></a>Opción alternativa: Ningún COM/CLSID de rutas internas
