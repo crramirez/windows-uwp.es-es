@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: bc591f66505fa6e7019cb37fed636700d8dec709
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 5905c494babfcbbe8dd93b85e30602ef490fcc81
+ms.sourcegitcommit: f0588a086cf2499968bf03b10c6bce5f518e90cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393600"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71141945"
 ---
 # <a name="app-capability-declarations"></a>Declaraciones de funcionalidades de las aplicaciones
 
@@ -31,7 +31,10 @@ Hay varios tipos de funcionalidades.
 
 ## <a name="general-use-capabilities"></a>Funcionalidades de uso general
 
-Las funcionalidades de uso general se aplican a los escenarios más comunes de las aplicaciones.
+Las funcionalidades de uso general se especifican mediante el uso de elementos de **funcionalidad** en el manifiesto del paquete de la aplicación. Estas funcionalidades se aplican a los escenarios de aplicación más comunes.
+
+> [!NOTE]
+> Todos los elementos de **funcionalidad** deben estar delante de los elementos [CustomCapability](#custom-capabilities) y [DeviceCapability](#device-capabilities) del nodo **Capabilities** en el manifiesto del paquete.
 
 | Escenario de funcionalidad | Uso de la funcionalidad |
 |---------------------|------------------|
@@ -59,10 +62,10 @@ Las funcionalidades de uso general se aplican a los escenarios más comunes de l
 
 ## <a name="device-capabilities"></a>Funcionalidades del dispositivo
 
-Las funcionalidades de dispositivo permiten a tu aplicación acceder a los periféricos y a los dispositivos internos. Las funcionalidades de dispositivo se especifican mediante el elemento **DeviceCapability** en el manifiesto del paquete de la aplicación. Este elemento puede necesitar elementos secundarios adicionales y algunas funcionalidades de dispositivos deben agregarse al manifiesto del paquete manualmente. Para más información, consulta [Cómo especificar funcionalidades de dispositivos en un manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-specify-device-capabilities-in-a-package-manifest) y la [**referencia de esquema DeviceCapability**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-devicecapability).
+Las funcionalidades de dispositivo permiten a tu aplicación acceder a los periféricos y a los dispositivos internos. Las funcionalidades del dispositivo se especifican mediante elementos **DeviceCapability** en el manifiesto del paquete de la aplicación. Este elemento puede necesitar elementos secundarios adicionales y algunas funcionalidades de dispositivos deben agregarse al manifiesto del paquete manualmente. Para más información, consulta [Cómo especificar funcionalidades de dispositivos en un manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-specify-device-capabilities-in-a-package-manifest) y la [**referencia de esquema DeviceCapability**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-devicecapability).
 
 > [!NOTE]
-> Puede tener varios elementos **devicecapability** y **Capability** en el elemento **Capabilities** , pero todos los elementos **devicecapability** deben aparecer después de los elementos de **funcionalidad** .
+> Puede tener varios elementos **DeviceCapability** en el elemento **Capabilities** en el manifiesto del paquete. Todos los elementos **DeviceCapability** deben aparecer después de cualquier elemento **Capability** y [CustomCapability](#custom-capabilities) .
 
 | Escenario de funcionalidad | Uso de la funcionalidad |
 |---------------------|------------------|
@@ -107,6 +110,9 @@ Para declarar una capacidad restringida, modifique el archivo de origen del mani
 </Capabilities>
 </Package>
 ```
+
+> [!NOTE]
+> Todos los elementos de capacidad restringida deben estar delante de los elementos [CustomCapability](#custom-capabilities) y [DeviceCapability](#device-capabilities) en el nodo **Capabilities** del manifiesto del paquete.
 
 ### <a name="restricted-capability-approval-process"></a>Proceso de aprobación de la funcionalidad restringida
 
@@ -243,6 +249,9 @@ Para declarar una funcionalidad personalizada, modifique el archivo de origen de
 </Capabilities>
 </Package>
 ```
+
+> [!NOTE]
+> Todos los elementos **CustomCapability** deben aparecer después de cualquier elemento de **funcionalidad** y antes de cualquier elemento [DeviceCapability](#device-capabilities) en el nodo **Capabilities** del manifiesto del paquete.
 
 ## <a name="related-topics"></a>Temas relacionados
 
