@@ -27,7 +27,7 @@ Una sugerencia de enseñanza puede ser descartable por cambio de foco, o bien pu
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado? 
 
-Usa un control **TeachingTip** para centrar la atención de un usuario en actualizaciones y características nuevas o importantes, para recordarle de opciones no esenciales que podrían mejorar su experiencia, o para enseñarle cómo se debe completar una tarea. 
+Usa un control **TeachingTip** para centrar la atención de un usuario en actualizaciones y características nuevas o importantes, para recordarle opciones no esenciales que podrían mejorar su experiencia, o para enseñarle cómo se debe completar una tarea. 
 
 Ya que las sugerencias de enseñanza son transitorias, no es un control recomendado para informar a los usuarios sobre los errores o cambios de estado importantes.
 
@@ -58,7 +58,7 @@ Cuando la información presentada no pertenece a un elemento determinado de la i
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza en la esquina inferior derecha. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú). Hay un botón Cerrar en la esquina superior derecha de la sugerencia de enseñanza.](../images/teaching-tip-non-targeted.png)
 
-Una sugerencia de enseñanza puede exigir al usuario que use un botón "X" en la esquina superior para descartarla o un botón "Cerrar" en la parte inferior. También es posible que la sugerencia de enseñanza se descarte por cambio de foco si no se agrega un botón Descartar. En su lugar, la sugerencia de enseñanza se cerrará cuando un usuario se desplace o interactúe con otros elementos de la aplicación. Debido a este comportamiento, las sugerencias descartables por cambio de foco son la mejor solución cuando una sugerencia debe colocarse en un área desplazable. 
+Una sugerencia de enseñanza puede exigir al usuario que use un botón "X" en la esquina superior para descartarla o un botón "Cerrar" en la parte inferior. También es posible que la sugerencia de enseñanza se cierre por cambio de foco si no se agrega un botón Descartar. En su lugar, la sugerencia de enseñanza se cerrará cuando un usuario se desplace o interactúe con otros elementos de la aplicación. Debido a este comportamiento, las sugerencias descartables por cambio de foco son la mejor solución cuando una sugerencia debe colocarse en un área desplazable. 
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza descartable por cambio de foco en la esquina inferior derecha. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú).](../images/teaching-tip-light-dismiss.png)
 
