@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c85eaacd62de9a2efe380197ba467c5009cd0c5
-ms.sourcegitcommit: 9f8f431fcacdb519126a0d831ba93baab21459f8
+ms.sourcegitcommit: f0588a086cf2499968bf03b10c6bce5f518e90cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 09/20/2019
 ms.locfileid: "68757437"
 ---
 # <a name="launch-the-windows-maps-app"></a>Iniciar la aplicación Mapas de Windows
@@ -72,7 +72,7 @@ Hay muchas opciones para controlar qué parte del mapa mostrar. Puedes usar el p
 Para controlar el tipo de vista, usa los parámetros *sty* (estilo) y *ss* (Streetside). El parámetro *sty* te permite cambiar entre las vistas de carretera y aérea. El parámetro *ss* coloca el mapa en una vista de Streetside. Para obtener más información sobre estos y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps-param-reference).
 
 
-| Ejemplo de URI                                                                 | Resultados                                                                                                                                                                                        |
+| Ejemplo de URI                                                                 | Results                                                                                                                                                                                        |
 |----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | bingmaps:?                                                                 | Abre la aplicación Mapas.                                                                                                                                                                            |
 | bingmaps:?cp=40.726966~-74.006076                                          | Muestra un mapa centrado sobre la ciudad de Nueva York.                                                                                                                                                    |
@@ -92,7 +92,7 @@ Para controlar el tipo de vista, usa los parámetros *sty* (estilo) y *ss* (Stre
 Al buscar lugares usando el parámetro *q*, recomendamos escribir los términos más específicos posibles y usar los parámetros *cp*, *bb* o *where* para especificar una ubicación de búsqueda. Si no especificas una ubicación de búsqueda y la ubicación del usuario actual no está disponible, es posible que la búsqueda no devuelva ningún resultado significativo. Los resultados de búsqueda se muestran en la vista de mapa más adecuada. Para obtener más información sobre estos y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps-param-reference).
 
 
-| Ejemplo de URI                                                    | Resultados                                                                            |
+| Ejemplo de URI                                                    | Results                                                                            |
 |---------------------------------------------------------------|------------------------------------------------------------------------------------|
 | bingmaps:?q=1600%20Pennsylvania%20Ave,%20Washington,%20DC     | Muestra un mapa y busca la dirección de la Casa Blanca en Washington, D.C. |
 | bingmaps:?q=coffee&where=Seattle                              | Busca cafeterías en Seattle.                                                    |
@@ -105,7 +105,7 @@ Al buscar lugares usando el parámetro *q*, recomendamos escribir los términos 
 
 Usa el parámetro *collection* para mostrar un conjunto de puntos personalizado en el mapa. Si hay más de un punto, se muestra una lista de puntos. Puede haber hasta 25 puntos en una colección, los cuales se enumeran en el orden indicado. La colección tiene prioridad sobre las solicitudes de búsqueda e indicaciones. Para obtener más información sobre este y otros parámetros, consulta la [referencia del parámetro bingmaps:](#bingmaps-param-reference).
 
-| Ejemplo de URI | Resultados                                                                                                                   |
+| Ejemplo de URI | Results                                                                                                                   |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | bingmaps:? Collection = Point. 36.116584\_-115,176753\_Caesars% 20Palace                                                                                                | Busca Caesar's Palace en Las Vegas y muestra los resultados en un mapa en la vista de mapa óptima.                         |
 | bingmaps:? Collection = Point. 36.116584\_-115,176753\_Caesars% 20Palace &ISM = 16                                                                                         | Muestra un marcador denominado Caesars Palace en Las Vegas y establece el nivel de zoom en 16.                                               |
@@ -122,7 +122,7 @@ Puedes mostrar indicaciones entre dos puntos con el parámetro *rtp*; estos punt
 
 ![Un ejemplo de indicaciones](images/windowsmapgcdirections.png)
 
-| Ejemplo de URI                                                                                                              | Resultados                                                                                                                                                         |
+| Ejemplo de URI                                                                                                              | Results                                                                                                                                                         |
 |-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | bingmaps:? RTP = pos. 44.9160\_-110.4158 ~ pos. 45.0475\_-109,4187                                                             | Muestra un mapa con indicaciones de un punto a otro. Puesto que *mode* no se especificó, se proporcionarán indicaciones con el modo de preferencia de transporte del usuario. |
 | bingmaps:?cp=43.0332~-87.9167&trfc=1                                                                                    | Muestra un mapa centrado sobre la ciudad de Milwaukee, WI, con tráfico.                                                                                                        |
@@ -142,7 +142,7 @@ Puedes mostrar indicaciones entre dos puntos con el parámetro *rtp*; estos punt
 
 ![Un ejemplo de indicaciones paso a paso](images/windowsmapsappdirections.png)
 
-| Ejemplo de URI                                                                                                | Resultados                                                                                       |
+| Ejemplo de URI                                                                                                | Results                                                                                       |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | ms-drive-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake | Muestra un mapa con indicaciones paso a paso para ir en coche a Green Lake de tu ubicación actual. |
 | ms-walk-to:?destination.latitude=47.680504&destination.longitude=-122.328262&destination.name=Green Lake  | Muestra un mapa con indicaciones paso a paso para ir a pie a Green Lake de tu ubicación actual. |
@@ -152,7 +152,7 @@ Puedes mostrar indicaciones entre dos puntos con el parámetro *rtp*; estos punt
 
 **MS-Settings:** El esquema de URI le permite iniciar directamente en una página determinada de la aplicación de configuración. Mientras el **valor de MS-Settings:** El esquema de URI no se inicia en la aplicación Maps, le permite iniciar directamente en la página mapas sin conexión de la aplicación de configuración y muestra un cuadro de diálogo de confirmación para descargar las asignaciones sin conexión que usa la aplicación Maps. El esquema de URI acepta un punto especificado por una latitud y longitud y determina automáticamente si hay mapas sin conexión disponibles para una región que contenga ese punto.  Si la latitud y longitud pasadas se incluyen en varias regiones de descarga, el cuadro de diálogo de confirmación permite al usuario elegir cuál de las regiones descargar. Si los mapas sin conexión no están disponibles para una región que contenga ese punto, se muestra la página Mapas sin conexión en la aplicación Configuración con un cuadro de diálogo de error.
 
-| Ejemplo de URI  | Resultados |
+| Ejemplo de URI  | Results |
 |-------------|---------|
 | ms-settings:maps-downloadmaps?latlong=47.6,-122.3 | Abre la aplicación Configuración en la página Mapas sin conexión con un cuadro de diálogo de confirmación que se muestra para descargar mapas para la región que contiene el punto especificado de latitud y longitud. |
 
@@ -263,7 +263,7 @@ La sintaxis de cada parámetro de esta tabla se muestra usando la Notación de B
 </tr>
 <tr class="even">
 <td align="left"><p><b>pozo</b></p></td>
-<td align="left"><p>Rotación alrededor del eje x (pitch)</p></td>
+<td align="left"><p>Cabeceo</p></td>
 <td align="left"><p>pit = "pit=" rotación alrededor del eje x (pitch)</p>
 <p>Ejemplo:</p>
 <p>pit=60</p></td>
