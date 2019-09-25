@@ -8,15 +8,14 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cad33c0f1b72bbd379be9b8f13ed648231f1a1ca
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 799913688f04421cae6b47f0d4b7db2fb1074ed4
+ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319359"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061928"
 ---
 # <a name="web-view"></a>Vista web
- 
 
 Un control de vista web inserta una vista en la aplicación que representa al contenido web, mediante el motor de representación de Microsoft Edge. En un control de vista web también pueden aparecer y funcionar hipervínculos.
 
@@ -25,6 +24,22 @@ Un control de vista web inserta una vista en la aplicación que representa al co
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un control de vista web para mostrar contenido HTML de formato enriquecido desde un servidor web remoto, código generado dinámicamente o archivos de contenido de tu paquete de la aplicación. El contenido enriquecido también puede contener código de script y comunicarse entre el script y el código de tu aplicación.
+
+## <a name="examples"></a>Ejemplos
+
+<table>
+<th align="left">XAML Controls Gallery<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/WebView">abrirla y ver WebView en acción</a>.</p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
 
 ## <a name="create-a-web-view"></a>Crear una vista web
 
@@ -319,15 +334,10 @@ Una vista web que hospeda contenido en el subproceso de la interfaz de usuario n
 -   Los campos de entrada deberían cambiar el tamaño de forma apropiada. Los usuarios podrían no darse cuenta de que pueden acercar la imagen para escribir texto.
 -   Si una vista web no se parece al resto de tu aplicación, considera la posibilidad de usar controles alternativos u otras maneras de realizar las tareas relevantes. Si tu vista web coincide con el resto de la aplicación, los usuarios considerarán el conjunto una experiencia óptima.
 
+## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Clase WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView)
- 
-
- 
-
-
-
-
+- [Clase WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción;uwp;windows 10;pista de aprendizaje;enlace de datos;lista;get started;learning track;data binding;list
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c4d339a1eedb798f11d5567be6a48ec2269cf8ac
-ms.sourcegitcommit: 280193dfe5a106fc6b4c85df3ac40535547b855c
+ms.openlocfilehash: a63bcc73be0146a9f580ae3afe3684f85e51d00e
+ms.sourcegitcommit: 88431e67d282d9a2a4fe4afcb254310f90c7cd7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67235158"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127449"
 ---
 # <a name="display-customers-in-a-list"></a>Mostrar clientes en una lista
 

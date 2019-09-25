@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, concurrency, async, asynchronous, asynchrony
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a275d5c91e03f9eb5b6348cda673d93e7132d7a
-ms.sourcegitcommit: 7ece8a9a9fa75e2e92aac4ac31602237e8b7fde5
+ms.openlocfilehash: 1170b8e1291afd166f210feb291b644d1c7ed546
+ms.sourcegitcommit: e5a154c7b6c1b236943738febdb17a4815853de5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485142"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71164826"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>Simultaneidad y asincronía más avanzadas con C++/WinRT
 
@@ -731,7 +731,7 @@ int main()
 
 La función **get** se bloquea de forma indefinida, mientras se completa el objeto asincrónico. Los objetos asincrónicos tienden a tener una duración muy corta, de modo que esto suele ser todo lo que necesitas.
 
-Pero hay casos en los que no es suficiente y debes abandonar la espera una vez que ha transcurrido algo de tiempo. Escribir ese código siempre ha sido posible gracias a los bloques de compilación que proporciona Windows Runtime. Pero ahora C++/WinRT hace que sea mucho más fácil al proporcionar la función **wait_for**. También se ha implementado en **IAsyncAction** y, de nuevo, es similar a la que proporciona **std::function**.
+Pero hay casos en los que no es suficiente y debes abandonar la espera una vez que ha transcurrido algo de tiempo. Escribir ese código siempre ha sido posible gracias a los bloques de compilación que proporciona Windows Runtime. Pero ahora C++/WinRT hace que sea mucho más fácil mediante la función **wait_for**. También se ha implementado en **IAsyncAction** y, de nuevo, es similar a la que proporciona **std::function**.
 
 ```cppwinrt
 using namespace std::chrono_literals;
@@ -745,6 +745,9 @@ int main()
     }
 }
 ```
+
+> [!NOTE]
+> **wait_for** usa **std::chrono::duration** en la interfaz, pero está limitado a un intervalo menor que el que proporciona **std::chrono::duration** (aproximadamente 49,7 días).
 
 La función **wait_for** del siguiente ejemplo espera unos cinco segundos y después comprueba si se ha completado. Si la comparación es favorable, sabrás que el objeto asincrónico se ha completado correctamente y que ya has terminado. Si esperas algún resultado, solo tienes que seguirlo con una llamada a la función **get** para recuperar el resultado.
 
