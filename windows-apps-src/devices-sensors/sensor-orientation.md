@@ -6,34 +6,37 @@ ms.date: 05/24/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e75ab94c6f1c8c4560854fd4f5264c313657ba9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bfd84cd2f2255138b738ecb6dd7f6dab824d7ec4
+ms.sourcegitcommit: d1ef530ef4dfa34db7bc429ab5a0c19fc405885f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369891"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71247448"
 ---
 # <a name="sensor-orientation"></a>Orientación del sensor
 
-
-**API importantes**
-
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**Windows.Devices.Sensors.Custom**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Custom)
-
 Los datos de sensor procedentes de las clases [**Accelerometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer), [**Gyrometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer), [**Compass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Compass), [**Inclinometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer) y [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante el marco de referencia del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea. Si tu aplicación admite el giro automático y cambia su orientación para amoldarse al dispositivo cuando el usuario lo gire, deberás ajustar los datos de sensor para el giro antes de usarlos.
+
+### <a name="important-apis"></a>API importantes
+
+- [**Windows. Devices. sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+- [**Windows. Devices. Sensors. Custom**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Custom)
 
 ## <a name="display-orientation-vs-device-orientation"></a>Orientación de la pantalla y orientación del dispositivo
 
-Para poder comprender los ejes de referencia de los sensores, debes distinguir entre la orientación de la pantalla y la orientación del dispositivo. La orientación de la pantalla es la dirección en la que se muestran las imágenes y el texto en la pantalla, mientras que la orientación del dispositivo es el posicionamiento físico del dispositivo. En la siguiente imagen, la orientación del dispositivo y de la pantalla está en **horizontal** (ten en cuenta que los ejes de sensor que se muestran solo se aplican a dispositivos con orientación horizontal predeterminada).
+Para poder comprender los ejes de referencia de los sensores, debes distinguir entre la orientación de la pantalla y la orientación del dispositivo. La orientación de la pantalla es la dirección en la que se muestran las imágenes y el texto en la pantalla, mientras que la orientación del dispositivo es el posicionamiento físico del dispositivo.
+
+En los diagramas siguientes, tanto el dispositivo como la orientación de la pantalla están en [horizontal](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations) (los ejes del sensor que se muestran son específicos de la orientación horizontal), con el eje z positivo que se extiende desde el dispositivo.
+
+En este diagrama se muestra la orientación de pantalla y de dispositivo en [horizontal](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations).
 
 ![Orientación de la pantalla y del dispositivo en horizontal](images/sensor-orientation-a.PNG)
 
-En la siguiente imagen se muestran ambas orientaciones (de la pantalla y del dispositivo) en **LandscapeFlipped**.
+En el diagrama siguiente se muestra la orientación de pantalla y de dispositivo en [LandscapeFlipped](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations).
 
 ![Orientación de la pantalla y del dispositivo en LandscapeFlipped](images/sensor-orientation-b.PNG)
 
-En la siguiente imagen se muestra la orientación de pantalla en Landscape y la orientación del dispositivo en LandscapeFlipped.
+Este diagrama final muestra la orientación de la pantalla en horizontal mientras que la orientación del dispositivo es [LandscapeFlipped](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations).
 
 ![Orientación de pantalla en Landscape con la orientación del dispositivo en LandscapeFlipped](images/sensor-orientation-c.PNG)
 
@@ -45,7 +48,7 @@ Los fabricantes producen dispositivos tanto con orientación horizontal predeter
 
 | Orientación | Con orientación horizontal predeterminada | Con orientación vertical predeterminada |
 |-------------|-----------------|----------------|
-| **Landscape** | ![Dispositivo con orientación horizontal predeterminada en orientación Landscape](images/sensor-orientation-0.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Landscape](images/sensor-orientation-1.PNG) |
+| **Horiz** | ![Dispositivo con orientación horizontal predeterminada en orientación Landscape](images/sensor-orientation-0.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Landscape](images/sensor-orientation-1.PNG) |
 | **Vertical** | ![Dispositivo con orientación horizontal predeterminada en orientación Portrait](images/sensor-orientation-2.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Portrait](images/sensor-orientation-3.PNG) |
 | **LandscapeFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación LandscapeFlipped](images/sensor-orientation-4.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación LandscapeFlipped](images/sensor-orientation-5.PNG) | 
 | **PortraitFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación PortraitFlipped](images/sensor-orientation-6.PNG)| ![Dispositivo con orientación vertical predeterminada en orientación PortraitFlipped](images/sensor-orientation-7.PNG) |
@@ -58,47 +61,45 @@ Además, algunos dispositivos no disponen de una pantalla. Con estos dispositivo
 
 ## <a name="display-orientation-and-compass-heading"></a>Orientación de la pantalla y encabezado de brújula
 
-
 El encabezado de brújula depende de los ejes de referencia, de modo que cuando la orientación del dispositivo lo hace. La compensación se efectúa siguiendo esta tabla (suponiendo que el usuario mira al norte).
 
 | Orientación de la pantalla | Eje de referencia y encabezado de brújula | Encabezado de brújula de API al mirar al norte (landscape-first) | Encabezado de brújula de API al mirar al norte (portrait-first) |Compensación del encabezado de brújula (landscape-first) | Compensación del encabezado de brújula (portrait-first) |
 |---------------------|------------------------------------|---------------------------------------------------------|--------------------------------------------------------|------------------------------------------------|-----------------------------------------------|
 | Landscape           | -Z | 0   | 270 | Encabezado               | (Encabezado+90) % 360  |
-| Portrait            |  esté | 90  | 0   | (Encabezado+270) % 360 |  Encabezado              |
+| Portrait            |  Y | 90  | 0   | (Encabezado+270) % 360 |  Encabezado              |
 | LandscapeFlipped    |  Z | 180 | 90  | (Encabezado+180) % 360 | (Encabezado+270) % 360 |
-| PortraitFlipped     |  esté | 270 | 180 | (Encabezado+90) % 360  | (Encabezado+180) % 360 |
+| PortraitFlipped     |  Y | 270 | 180 | (Encabezado+90) % 360  | (Encabezado+180) % 360 |
 
 Modifica el encabezado de brújula como se indica en la tabla para que dicho encabezado se muestre correctamente. En el siguiente fragmento de código, se muestra cómo hacerlo.
 
 ```csharp
 private void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
 {
-    double heading = e.Reading.HeadingMagneticNorth;        
+    double heading = e.Reading.HeadingMagneticNorth;
     double displayOffset;
-    
+
     // Calculate the compass heading offset based on
     // the current display orientation.
     DisplayInformation displayInfo = DisplayInformation.GetForCurrentView();
-    
-    switch (displayInfo.CurrentOrientation) 
-    { 
-        case DisplayOrientations.Landscape: 
-            displayOffset = 0; 
+
+    switch (displayInfo.CurrentOrientation)
+    {
+        case DisplayOrientations.Landscape:
+            displayOffset = 0;
             break;
-        case DisplayOrientations.Portrait: 
-            displayOffset = 270; 
-            break; 
-        case DisplayOrientations.LandscapeFlipped: 
-            displayOffset = 180; 
-            break; 
-        case DisplayOrientations.PortraitFlipped: 
-            displayOffset = 90; 
-            break; 
-     } 
-    
+        case DisplayOrientations.Portrait:
+            displayOffset = 270;
+            break;
+        case DisplayOrientations.LandscapeFlipped:
+            displayOffset = 180;
+            break;
+        case DisplayOrientations.PortraitFlipped:
+            displayOffset = 90;
+            break;
+     }
 
     double displayCompensatedHeading = (heading + displayOffset) % 360;
-    
+
     // Update the UI...
 }
 ```
@@ -107,10 +108,10 @@ private void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
 
 Esta tabla convierte los datos de acelerómetro y girómetro para los datos de la pantalla.
 
-| Ejes de referencia        |  X |  esté | Z |
+| Ejes de referencia        |  X |  Y | Z |
 |-----------------------|----|----|---|
-| **Landscape**         |  X |  esté | Z |
-| **Vertical**          |  esté | -X | Z |
+| **Horiz**         |  X |  Y | Z |
+| **Vertical**          |  Y | -X | Z |
 | **LandscapeFlipped**  | -X | -Y | Z |
 | **PortraitFlipped**   | -Y |  X | Z |
 
@@ -124,42 +125,41 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
     double z_Axis;
 
     GyrometerReading reading = e.Reading;  
-    
+
     // Calculate the gyrometer axes based on
     // the current display orientation.
     DisplayInformation displayInfo = DisplayInformation.GetForCurrentView();
-    switch (displayInfo.CurrentOrientation) 
-    { 
-        case DisplayOrientations.Landscape: 
+    switch (displayInfo.CurrentOrientation)
+    {
+        case DisplayOrientations.Landscape:
             x_Axis = reading.AngularVelocityX;
             y_Axis = reading.AngularVelocityY;
             z_Axis = reading.AngularVelocityZ;
             break;
-        case DisplayOrientations.Portrait: 
+        case DisplayOrientations.Portrait:
             x_Axis = reading.AngularVelocityY;
             y_Axis = -1 * reading.AngularVelocityX;
             z_Axis = reading.AngularVelocityZ;
-            break; 
-        case DisplayOrientations.LandscapeFlipped: 
+            break;
+        case DisplayOrientations.LandscapeFlipped:
             x_Axis = -1 * reading.AngularVelocityX;
             y_Axis = -1 * reading.AngularVelocityY;
             z_Axis = reading.AngularVelocityZ;
-            break; 
-        case DisplayOrientations.PortraitFlipped: 
+            break;
+        case DisplayOrientations.PortraitFlipped:
             x_Axis = -1 * reading.AngularVelocityY;
             y_Axis = reading.AngularVelocityX;
             z_Axis = reading.AngularVelocityZ;
-            break; 
-     } 
-    
-    
+            break;
+     }
+
     // Update the UI...
 }
 ```
 
 ## <a name="display-orientation-and-device-orientation"></a>Orientación de la pantalla y orientación del dispositivo
 
-Los datos de [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) se cambian de otra forma. Pensemos en estas distintas orientaciones al girar en el sentido contrario al de las agujas del reloj hacia el eje Z, deberemos revertir el giro para regresar a la orientación del usuario. En el caso de los datos de cuaternión, podemos emplear la fórmula de Euler para definir un giro con un cuaternión de referencia. También podemos usar una matriz de giro de referencia.
+Los datos de [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) se cambian de otra forma. Considere estas orientaciones diferentes como giros en sentido contrario a las agujas del reloj al eje Z, por lo que es necesario invertir la rotación para obtener la orientación del usuario. En el caso de los datos de cuaternión, podemos emplear la fórmula de Euler para definir un giro con un cuaternión de referencia. También podemos usar una matriz de giro de referencia.
 
 ![Fórmula de Euler](images/eulers-formula.png)
 
@@ -169,11 +169,9 @@ Para obtener la orientación relativa que deseas, multiplica el objeto de refere
 
 En la expresión anterior, los datos de sensor devuelven el objeto absoluto.
 
-
-| Orientación de la pantalla  | Giro en el sentido contrario a las agujas del reloj en torno a Z | Cuaternión de referencia (giro inverso) | Matriz de giro de referencia (giro inverso) | 
+| Orientación de la pantalla  | Giro en el sentido contrario a las agujas del reloj en torno a Z | Cuaternión de referencia (giro inverso) | Matriz de giro de referencia (giro inverso) |
 |----------------------|------------------------------------|-----------------------------------------|----------------------------------------------|
-| **Landscape**        | 0                                  | 1 + 0i + 0j + 0k                        | \[1 0 0<br/> 0 1 0<br/> 0 0 1\]               |
+| **Horiz**        | 0                                  | 1 + 0i + 0j + 0k                        | \[1 0 0<br/> 0 1 0<br/> 0 0 1\]               |
 | **Vertical**         | 90                                 | cos(-45⁰) + (i + j + k)*sin(-45⁰)       | \[0 1 0<br/>-1 0 0<br/>0 0 1]              |
 | **LandscapeFlipped** | 180                                | 0 - i - j - k                           | \[1 0 0<br/> 0 1 0<br/> 0 0 1]               |
 | **PortraitFlipped**  | 270                                | cos(-135⁰) + (i + j + k)*sin(-135⁰)     | \[0 -1 0<br/> 1  0 0<br/> 0  0 1]             |
-

@@ -73,7 +73,7 @@
     - name: Desarrollo con Python
       items:
         - name: Introducción
-          href: python/index.md
+          href: python/index.yml
         - name: Introducción para principiantes
           href: python/get-started/python-for-education.md
         - name: Introducción al desarrollo web
