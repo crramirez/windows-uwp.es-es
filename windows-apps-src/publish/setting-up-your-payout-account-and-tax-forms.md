@@ -6,12 +6,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1827f24e467c113034c5d0303aaebce0e603da2a
-ms.sourcegitcommit: 68121f21c899975f3634456a651ae8e1e53c19f7
+ms.openlocfilehash: 974d96f6ba2daf275ffd346f50571787d4eee925
+ms.sourcegitcommit: ad2940a12a7ee59ee7696cd23a03743eef84ca31
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70841861"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71275750"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Configurar la cuenta de pago y los formularios fiscales
 
@@ -96,6 +96,9 @@ Una cuenta de pago es la cuenta bancaria a la que te enviamos las ganancias por 
 
 4. Seleccione un perfil de pago existente o haga clic en **crear un nuevo perfil de pago** para crear un nuevo perfil para el método de pago elegido.
 
+> [!NOTE]
+> Si, por alguna razón, su cuenta no está lista para recibir fondos de Microsoft, puede activar la casilla **suspender mi pago** . Continuará ganando a partir de las ventas, pero los pagos no se distribuirán hasta que deshabilite **la retención del pago.**
+
 ### <a name="create-a-bank-based-payment-profile"></a>Creación de un perfil de pago basado en Banco
 
 Si ha elegido usar una cuenta bancaria para recibir pagos, completará el siguiente proceso para configurar su cuenta bancaria.
@@ -144,7 +147,7 @@ Puede editar los perfiles de pago existentes si necesita realizar cambios o corr
 
 En ciertos países y regiones, puedes crear una cuenta de pago con tu información de PayPal. Sin embargo, antes de elegir PayPal como opción de cuenta de pago:
 
-- Compruebe los [umbrales de pago, los métodos y los períodos de tiempo](payment-thresholds-methods-and-timeframes.md) para confirmar si PayPal es un método de pago admitido en su país o región.
+- Compruebe los umbrales de [pago, los métodos y los períodos de tiempo](payment-thresholds-methods-and-timeframes.md) para confirmar si PayPal es un método de pago admitido en su país o región.
 - Revisa las siguientes P+F. Según tu situación, PayPal puede no ser la mejor opción de cuenta de pago y tal vez sea preferible que uses una cuenta bancaria.
 
 Preguntas comunes acerca del uso de PayPal como método de pago:
