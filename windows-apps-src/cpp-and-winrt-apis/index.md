@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection
 ms.localizationpriority: medium
-ms.openlocfilehash: 7554b635f76f7d00901ecb7936fdd0351d8dee75
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 61a54edc236f94bec44420471a176a2014fcdb0d
+ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393470"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71329574"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -67,7 +67,7 @@ C++/WinRT funciona mejor y produce archivos binarios más pequeños que cualquie
 | [Referencias fuertes y débiles de C++/WinRT](weak-references.md) | Windows Runtime es un sistema con recuento de referencias y en este tipo de sistemas es importante conocer el significado de referencias fuertes y débiles y la diferencia entre ellas. |
 | [Objetos ágiles](agile-objects.md) | Un objeto ágil es aquel al que se puede acceder desde cualquier subproceso. Los tipos de C++/WinRT son ágiles de manera predeterminada, pero puedes excluirlos. |
 | [Diagnóstico de asignaciones directas](diag-direct-alloc.md) | Este tema analiza en profundidad una característica de C++/WinRT 2.0 que le ayuda a diagnosticar el error que se produce al crear un objeto de tipo de implementación en la pila, en lugar de usar la familia [**winrt::make**](/uwp/cpp-ref-for-winrt/make) de aplicaciones auxiliares como correspondería. |
-| [Detalles acerca de los destructores](details-about-destructors.md) | C++/WinRT 2.0 le permite aplazar la destrucción de los tipos de implementación y realizar consultas de forma segura durante la destrucción. En este tema se describen esas características y se explica cuándo usarlas. |
+| [Puntos de extensión para los tipos de implementación](details-about-destructors.md) | Estos puntos de extensión en C++/WinRT 2.0 permiten aplazar la destrucción de los tipos de implementación, a fin de realizar consultas de forma segura durante la destrucción y enlazar la entrada y salida de los métodos proyectados. |
 | [Un ejemplo sencillo de biblioteca de interfaz de usuario de Windows para C++/WinRT](simple-winui-example.md) | Este tema te ayudará durante el proceso de adición de compatibilidad simple con WinUI en un proyecto de C++/WinRT. |
 
 ### <a name="topics-about-the-c-language"></a>Temas sobre el lenguaje C++
