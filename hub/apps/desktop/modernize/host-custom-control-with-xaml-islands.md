@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: ab9bff69ac9ac0eaf1f02c943229829e726a0b9d
-ms.sourcegitcommit: 8cbc9ec62a318294d5acfea3dab24e5258e28c52
+ms.openlocfilehash: 3c14cfaefcf10aa051e3054d5df2e6da9fd77602
+ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70911570"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71317068"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar un control personalizado de UWP en una aplicación WPF con islas XAML
 
@@ -40,7 +40,7 @@ Antes de comenzar, siga estas instrucciones para crear un proyecto de WPF y conf
 > [!NOTE]
 > Si tiene un proyecto existente que tiene como destino el .NET Framework, deberá migrar el proyecto a .NET Core 3. Para obtener más información, vea [esta serie de blogs](https://devblogs.microsoft.com/dotnet/migrating-a-sample-wpf-app-to-net-core-3-part-1/).
 
-1. Si todavía no lo ha hecho, instale la versión preliminar más reciente disponible del [SDK de .net Core 3 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+1. Si todavía no lo ha hecho, instale la versión más reciente del [SDK de .net Core 3](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 2. En Visual Studio 2019, cree un nuevo proyecto de **aplicación de WPF (.net Core)** .
 

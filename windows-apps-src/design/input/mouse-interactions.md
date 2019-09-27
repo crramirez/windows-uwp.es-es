@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a02d562b73f61094f820e74a213614d80c4fb5e1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b68e736cc6d413196205f84467b7e159c53cb98e
+ms.sourcegitcommit: e7589fa25d8de86c36b6ce6d90d360337718ef93
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365843"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71311237"
 ---
 # <a name="mouse-interactions"></a>Interacciones de mouse
 
@@ -59,7 +59,7 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 <td align="left"><p>Clic con el botón secundario para seleccionar y ordenar</p></td>
 <td align="left"><p>Haz clic con el botón secundario para mostrar la barra de navegación (si está disponible) y la barra de la aplicación con comandos globales. Haz clic con el botón secundario en un elemento para seleccionarlo y mostrar la barra de la aplicación con comandos contextuales para el elemento seleccionado.</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>  con el botón secundario para mostrar un menú contextual si la selección o la aplicación de la barra de comandos no es los comportamientos de la interfaz de usuario adecuados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
+<strong></strong>Nota  : haga clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de la aplicación no son comportamientos de interfaz de usuario apropiados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
 </div>
 <div>
  
@@ -86,7 +86,7 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 
 ## <a name="mouse-input-events"></a>Eventos de entrada del mouse
 
-La mayoría de mouse de entrada puede controlarse a través de los eventos de entrada enrutados comunes admitidos por todos los [ **UIElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) objetos. Entre ellos se incluyen los siguientes:
+La mayoría de la entrada del mouse se puede controlar a través de los eventos de entrada enrutados comunes admitidos por todos los objetos [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) . Entre ellas se incluyen las siguientes:
 
 - [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
 - [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
@@ -97,12 +97,12 @@ La mayoría de mouse de entrada puede controlarse a través de los eventos de en
 - [**DragLeave**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragleave)
 - [**DragOver**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
 - [**DragStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragstarting)
-- [**Drop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
+- [**Omisiones**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
 - [**DropCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dropcompleted)
 - [**GettingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
-- [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
-- [**Que contiene**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
-- [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
+- [**Primero**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
+- [**Esa**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
+- [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
 - [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup)
 - [**LosingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.losingfocus)
 - [**LostFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus)
@@ -122,13 +122,12 @@ La mayoría de mouse de entrada puede controlarse a través de los eventos de en
 - [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
 - [**PreviewKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown)
 - [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup)
-- [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
 - [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
-- [**Punteado**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
+- [**Derivados**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
 
-Sin embargo, puede aprovechar las capacidades específicas de cada dispositivo (por ejemplo, eventos de la rueda del mouse) mediante los eventos de puntero, gestos y manipulación de [Windows.UI.Input](https://docs.microsoft.com/uwp/api/windows.ui.input).
+Sin embargo, puede aprovechar las capacidades específicas de cada dispositivo (como los eventos de la rueda del mouse) mediante el puntero, el gesto y los eventos de manipulación de [Windows. UI. Input](https://docs.microsoft.com/uwp/api/windows.ui.input).
 
-**Ejemplos:** Consulte nuestra [BasicInput ejemplo](https://go.microsoft.com/fwlink/p/?LinkID=620302), para.
+**Assembl** Vea nuestro [ejemplo de BasicInput](https://go.microsoft.com/fwlink/p/?LinkID=620302), para.
 
 ## <a name="guidelines-for-visual-feedback"></a>Directrices para información visual
 
@@ -163,7 +162,7 @@ Si necesitas personalizar el cursor del mouse:
 
 ### <a name="samples"></a>Muestras
 
-- [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+- [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
 - [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
 - [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
 - [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)

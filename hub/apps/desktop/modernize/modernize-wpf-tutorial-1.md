@@ -8,21 +8,18 @@ author: mcleanbyron
 keywords: Windows 10, UWP, Windows Forms, WPF, Islas XAML
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 97488a913605916c067861b5941d7aa127b00917
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
+ms.openlocfilehash: 6a52e12f9d60ee4abb4b1aed3043a69c25845267
+ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643410"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71317108"
 ---
-# <a name="part-1-migrate-the-contoso-expenses-app-to-net-core-3"></a>Parte 1: Migración de la aplicación Contoso Expenses a .NET Core 3
+# <a name="part-1-migrate-the-contoso-expenses-app-to-net-core-3"></a>1ª parte: Migración de la aplicación Contoso Expenses a .NET Core 3
 
 Esta es la primera parte de un tutorial que muestra cómo modernizar una aplicación de escritorio WPF de ejemplo denominada gastos de contoso. Para obtener información general sobre el tutorial, los requisitos previos y las instrucciones para descargar la aplicación de [ejemplo, vea Tutorial: Modernizar una aplicación](modernize-wpf-tutorial.md)de WPF.
   
-En esta parte del tutorial, migrará toda la aplicación de gastos de Contoso del .NET Framework 4.7.2 a [.net Core 3](modernize-wpf-tutorial.md#net-core-3). Antes de comenzar esta parte del tutorial, asegúrese de hacer lo siguiente:
-
-* [Abra y compile el ejemplo ContosoExpenses](modernize-wpf-tutorial.md#get-the-contoso-expenses-sample-app) en Visual Studio 2019.
-* Si usa una versión de lanzamiento de Visual Studio 2019, habilite las versiones preliminares del SDK de .NET Core. En Visual Studio, vaya a **herramientas > opciones**, escriba "vista previa" en el cuadro de búsqueda y seleccione **usar vistas previas del SDK de .net Core**. Si usa una [versión preliminar de Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/), no es necesario que seleccione esta opción, ya que las vistas previas de .net Core están habilitadas de forma predeterminada.
+En esta parte del tutorial, migrará toda la aplicación de gastos de Contoso del .NET Framework 4.7.2 a [.net Core 3](modernize-wpf-tutorial.md#net-core-3). Antes de iniciar esta parte del tutorial, asegúrese de [abrir y compilar el ejemplo ContosoExpenses](modernize-wpf-tutorial.md#get-the-contoso-expenses-sample-app) en Visual Studio 2019.
 
 > [!NOTE]
 > Para obtener más información sobre cómo migrar una aplicación WPF desde el .NET Framework a .NET Core 3, vea [esta serie de blogs](https://devblogs.microsoft.com/dotnet/migrating-a-sample-wpf-app-to-net-core-3-part-1/).
@@ -95,7 +92,7 @@ Al migrar los proyectos **ContosoExpenses. Core** y **ContosoExpenses. Data** en
 
 Para configurar paquetes NuGet para el proyecto **ContosoExpenses. Data** :
 
-1. En el proyecto **ContosoExpenses. Data** , expanda el nodo dependencias. Tenga en cuenta que falta la sección **NuGet** .
+1. En el proyecto **ContosoExpenses. Data** , expanda el nodo **dependencias** . Tenga en cuenta que falta la sección **NuGet** .
 
     ![Paquetes NuGet](images/wpf-modernize-tutorial/NuGetPackages.png)
 
@@ -115,7 +112,7 @@ Para configurar paquetes NuGet para el proyecto **ContosoExpenses. Data** :
 
 2. En el proyecto **ContosoExpenses. Data** , elimine el archivo **packages. config** .
 
-4. En el proyecto **ContosoExpenses. Data** , haga clic con el botón derecho en el nodo dependencias y elija **administrar paquetes NuGet**.
+4. En el proyecto **ContosoExpenses. Data** , haga clic con el botón derecho en el nodo **dependencias** y elija **administrar paquetes NuGet**.
 
   ![Administrar paquetes de NuGet...](images/wpf-modernize-tutorial/ManageNugetNETCORE3.png)
 
@@ -167,7 +164,7 @@ Para configurar paquetes NuGet para el proyecto **ContosoExpenses. Core** :
 
     ![Paquete MvvmLightsLibs](images/wpf-modernize-tutorial/MvvmLightsLibsPackage.png)
 
-6. En el proyecto **ContosoExpenses. Core** , haga clic con el botón derecho en el nodo dependencias y elija **Agregar referencia**.
+6. En el proyecto **ContosoExpenses. Core** , haga clic con el botón derecho en el nodo **dependencias** y elija **Agregar referencia**.
 
 7. En la categoría **proyectos > solución** , seleccione **ContosoExpenses. Data** y haga clic en **Aceptar**.
 
@@ -239,7 +236,7 @@ Para resolver estos errores, instale el paquete NuGet de [compatibilidad de Wind
 
     ![](images/wpf-modernize-tutorial/WindowsCompatibilityPack.png)
 
-4. Ahora intente compilar el proyecto de nuevo; para ello, haga clic con el botón derechoen el proyecto **ContosoExpenses. Data** y elija compilar.
+4. Ahora intente compilar el proyecto de nuevo; para ello, haga clic con el botón derecho en el proyecto **ContosoExpenses. Data** y elija **compilar**.
 
 Esta vez el proceso de compilación se completará sin errores.
 
