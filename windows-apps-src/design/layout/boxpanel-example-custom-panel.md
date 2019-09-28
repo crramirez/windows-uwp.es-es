@@ -12,12 +12,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fdde8c5af2120786f215480cc7e7ae422d77c5c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3fe1389e3c3db28f834217b4f163c48633c32d14
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365058"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340168"
 ---
 # <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, un ejemplo de panel personalizado
 
@@ -25,7 +25,7 @@ ms.locfileid: "66365058"
 
 Aprende a escribir código para una clase [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel) personalizada, con la implementación de métodos [**ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride) y [**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride), y el uso de la propiedad [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.children). 
 
-> **API importantes**: [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel), [ **ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride),[**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride) 
+> **API importantes**: [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel), [**ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride),[**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride) 
 
 En el código de ejemplo se muestra la implementación de un panel personalizado, pero no nos detenemos demasiado en explicar los conceptos de diseño que influyen en la forma en que un panel se puede personalizar para distintos escenarios de diseño. Si quieres más información sobre estos conceptos de diseño y su aplicación a escenarios concretos, consulta [Introducción a los paneles personalizados de XAML](custom-panels-overview.md).
 
@@ -134,7 +134,7 @@ La forma en la que `BoxPanel` divide el tamaño es bastante sencilla: divide su 
 Este panel se puede usar cuando el componente de altura de *availableSize* no esté enlazado. Si esto es así, el panel no tiene una altura conocida que dividir. En este caso, la lógica del paso de medición informa a cada elemento secundario de que todavía carece de una altura enlazada, y lo hace pasando un elemento [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) a la llamada de [**Measure**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) de los elementos secundarios en los que [**Size.Height**](https://docs.microsoft.com/uwp/api/windows.foundation.size.height) es infinito. Esto puede hacerse. Cuando se llama a **Measure**, la lógica consiste en que [**DesiredSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.desiredsize) se establece en el mínimo de lo siguiente: lo que se pasó a **Measure**, o bien el tamaño natural de dicho elemento de factores como [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) y [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) expresamente definidos.
 
 > [!NOTE]
-> La lógica interna de [ **StackPanel** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) también tiene este comportamiento: **StackPanel** pasa un valor infinito de dimensión y [ **medida** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) en elementos secundarios, que indica que no hay ninguna restricción en los elementos secundarios en la dimensión de orientación. Normalmente, **StackPanel** establece su tamaño dinámicamente para dar cabida a todos los elementos secundarios de una pila que crece en esa dimensión.
+> La lógica interna de [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) también tiene este comportamiento: **StackPanel** pasa un valor de dimensión infinito para [**medir**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) en los elementos secundarios, lo que indica que no hay ninguna restricción en los elementos secundarios de la dimensión de orientación. Normalmente, **StackPanel** establece su tamaño dinámicamente para dar cabida a todos los elementos secundarios de una pila que crece en esa dimensión.
 
 Sin embargo, el panel en sí no puede devolver un objeto [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) con un valor infinito de [**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride); esto generaría una excepción durante el diseño. Por lo tanto, parte de la lógica irá dirigida a averiguar la altura máxima que cada elemento secundario necesita para, luego, usar esa altura como altura de celda en caso de que esta no se haya obtenido ya de las propias limitaciones de tamaño del panel. Aquí te mostramos la función auxiliar `LimitUnboundedSize` a la que se hizo referencia en el código anterior, que toma la altura de celda máxima y la usa para dar al panel una altura finita que devolver, al tiempo que garantiza que `cellheight` sea un número finito antes de que se inicie el paso de organización:
 
@@ -182,7 +182,7 @@ Este panel se organiza siguiendo el concepto de filas y columnas. El número de 
 
 A veces, los paneles necesitan recortar su contenido. De hacerlo, el tamaño recortado es aquel que está presente en [**DesiredSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.desiredsize), dado que la lógica de [**Measure**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) lo establece como el mínimo de lo que se ha pasado a **Measure**, o cualquier otro factor de tamaño natural. Lo normal, pues, es que no sea necesario comprobar expresamente los recortes de tamaño durante el método [**Arrange**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange); el recorte sencillamente se producirá en función del pase de **DesiredSize** a cada llamada de **Arrange**.
 
-No siempre hay que hacer un recuento mientras se avanza por el bucle, si toda la información necesaria para definir la posición de representación se conoce por otros métodos. Por ejemplo, en la lógica de diseño de [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), la posición de la colección [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.children) es irrelevante. Toda la información necesaria para ubicar cada elemento en un **Canvas** se conoce con la lectura de los valores [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left?view=netframework-4.8) y [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top?view=netframework-4.8) de elementos secundarios como parte de la lógica de organización. Resulta que la lógica `BoxPanel` necesita un recuento que comparar con *colcount*, de modo que se sepa cuándo empezar una nueva fila y desplazar el valor de *y*.
+No siempre hay que hacer un recuento mientras se avanza por el bucle, si toda la información necesaria para definir la posición de representación se conoce por otros métodos. Por ejemplo, en la lógica de diseño de [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas), la posición de la colección [**Children**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.children) es irrelevante. Toda la información necesaria para ubicar cada elemento en un **Canvas** se conoce con la lectura de los valores [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) y [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) de elementos secundarios como parte de la lógica de organización. Resulta que la lógica `BoxPanel` necesita un recuento que comparar con *colcount*, de modo que se sepa cuándo empezar una nueva fila y desplazar el valor de *y*.
 
 Es normal que el objeto *finalSize* de entrada y el objeto [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) que se devuelven de una implementación de [**ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride) sean iguales. Para obtener más información sobre los motivos de esto, consulta la sección "**ArrangeOverride**" en [Introducción a los paneles personalizados de XAML](custom-panels-overview.md).
 
@@ -209,7 +209,7 @@ if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 
 ## <a name="the-scenario-for-boxpanel"></a>El escenario para BoxPanel
 
-El escenario particular para `BoxPanel` es un panel en el que uno de los principales factores determinantes de cómo se divide el espacio consiste en conocer el número de elementos secundarios y dividir el espacio disponible existente del panel. La forma de los paneles es rectangular por naturaleza. Muchos paneles funcionan dividiendo ese espacio rectangular en más rectángulos, que es lo que [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) hace para sus celdas. En el caso de **Grid**, el tamaño de las celdas se establece por medio de los valores de [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) y [**RowDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RowDefinition), mientras que los elementos declaran la celda exacta en la que se van a situar mediante las propiedades adjuntas [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row?view=netframework-4.8) y [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column?view=netframework-4.8). Para lograr un buen diseño a partir de un elemento **Grid**, normalmente es necesario conocer el número de elementos secundarios de antemano, de modo que haya suficientes celdas y cada elemento secundario defina sus propiedades adjuntas para caber en su propia celda.
+El escenario particular para `BoxPanel` es un panel en el que uno de los principales factores determinantes de cómo se divide el espacio consiste en conocer el número de elementos secundarios y dividir el espacio disponible existente del panel. La forma de los paneles es rectangular por naturaleza. Muchos paneles funcionan dividiendo ese espacio rectangular en más rectángulos, que es lo que [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) hace para sus celdas. En el caso de **Grid**, el tamaño de las celdas se establece por medio de los valores de [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) y [**RowDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RowDefinition), mientras que los elementos declaran la celda exacta en la que se van a situar mediante las propiedades adjuntas [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row) y [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column). Para lograr un buen diseño a partir de un elemento **Grid**, normalmente es necesario conocer el número de elementos secundarios de antemano, de modo que haya suficientes celdas y cada elemento secundario defina sus propiedades adjuntas para caber en su propia celda.
 
 Pero, ¿y si el número de elementos secundarios es dinámico? Es totalmente factible: el código de tu aplicación puede agregar elementos a colecciones, como respuesta a cualquier condición de tiempo de ejecución dinámica que consideres que sea lo suficientemente importante como para actualizar la interfaz de usuario. Si usas enlaces de datos a objetos de negocios/colecciones de respaldo, la obtención de esas actualizaciones y la actualización de la interfaz de usuario se controla automáticamente, de modo que esta es a menudo la técnica preferida (consulta el tema de [Introducción al enlace de datos](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)).
 
@@ -223,10 +223,10 @@ Te estarás preguntando por qué el panel no elige 5x2 para diez elementos, ya q
 
 **Referencia**
 
-* [**FrameworkElement.ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride)
-* [**FrameworkElement.MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride)
-* [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel)
+* [**FrameworkElement. ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride)
+* [**FrameworkElement. MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride)
+* [**Plana**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel)
 
 **Conceptos**
 
-* [Alineación, márgenes y relleno](alignment-margin-padding.md)
+* [Alineación, margen y relleno](alignment-margin-padding.md)

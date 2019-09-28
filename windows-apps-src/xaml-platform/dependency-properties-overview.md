@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a07fae7920bbcddd4c68b052aa82c072312b4995
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: adb80c3396002a76b3c22a9ce8a8e2893ea728ac
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322153"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340500"
 ---
 # <a name="dependency-properties-overview"></a>Introducción a las propiedades de dependencia
 
@@ -21,7 +21,7 @@ En este tema se explica el sistema de propiedades de dependencia de que dispones
 
 Una propiedad de dependencia es un tipo especializado de propiedad. Se trata de una propiedad para la cual un sistema de propiedades dedicado que forma parte de Windows Runtime hace un seguimiento de su valor e influye en él.
 
-Para poder admitir una propiedad de dependencia, el objeto que define la propiedad debe ser un [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) (dicho de otro modo, una clase que tenga la clase base **DependencyObject** en algún lugar de su herencia). Muchos de los tipos que se usa para las definiciones de interfaz de usuario para una aplicación para UWP con XAML será un **DependencyObject** subclase y será compatible con las propiedades de dependencia. Pero cualquier tipo que provenga de un espacio de nombres de Windows Runtime que no tenga "XAML" en su nombre no admitirá propiedades de dependencia. Las propiedades de estos tipos son propiedades normales que no sufrirán el comportamiento de dependencia de un sistema de propiedades.
+Para poder admitir una propiedad de dependencia, el objeto que define la propiedad debe ser un [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) (dicho de otro modo, una clase que tenga la clase base **DependencyObject** en algún lugar de su herencia). Muchos de los tipos que se usan para las definiciones de interfaz de usuario de una aplicación de UWP con XAML serán la subclase **DependencyObject** y admitirán las propiedades de dependencia. Pero cualquier tipo que provenga de un espacio de nombres de Windows Runtime que no tenga "XAML" en su nombre no admitirá propiedades de dependencia. Las propiedades de estos tipos son propiedades normales que no sufrirán el comportamiento de dependencia de un sistema de propiedades.
 
 El propósito de las propiedades de dependencia es proporcionar un modo sistémico de calcular el valor de una propiedad según otras entradas (otras propiedades, eventos y estados que se produzcan en tu aplicación mientras se ejecuta). Estas otras entradas podrían ser:
 
@@ -30,7 +30,7 @@ El propósito de las propiedades de dependencia es proporcionar un modo sistémi
 - Plantillas de usos múltiples como recursos y estilos
 - Valores que se conocen a través de relaciones de elementos principales y secundarios con otros elementos del árbol de objetos
 
-Una propiedad de dependencia representan o admiten una característica específica del modelo de programación para definir una aplicación en tiempo de ejecución de Windows con XAML para la interfaz de usuario y C#, extensiones de componentes de Microsoft Visual Basic o Visual C++ (C++ / c++ / CX) para el código. Estas características incluyen:
+Una propiedad de dependencia representa o admite una característica específica del modelo de programación para definir una aplicación Windows Runtime con XAML para la C#interfaz de usuario y, C++ Microsoft Visual Basic oC++las extensiones de componentes visuales (/CX) para el código. Estas características incluyen:
 
 - Enlace de datos
 - Estilos
@@ -86,10 +86,10 @@ Por ejemplo, el propósito de los estilos y las plantillas es ser un punto de in
 
 El siguiente es el orden definitivo que el sistema de propiedades usa para asignar el valor de tiempo de ejecución de una propiedad de dependencia. La prioridad mayor es la primera de la lista. Al final de esta lista, encontrarás explicaciones más detalladas.
 
-1. **Valores animados:** Animaciones activas visuales estado animaciones o animaciones con un [ **HoldEnd** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FillBehavior) comportamiento. Para lograr un efecto práctico, una animación aplicada a una propiedad debe tener prioridad sobre el valor base (no animado), aunque ese valor se haya establecido localmente.
-1. **Valor local:** Un valor local se puede establecer a través de la comodidad de contenedor de propiedad, que también equivale a establecerlo como un atributo o elemento de propiedad en XAML, o mediante una llamada a la [ **SetValue** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) método utilizando una propiedad de una instancia específica. Si estableces un valor local con un enlace o un recurso estático, cada uno de ellos actúa en el orden de prioridad como si se estableciera un valor local, y los enlaces y referencias a recursos se borran si se establece un valor local nuevo.
-1. **Propiedades con plantilla:** Un elemento tiene las siguientes si se ha creado como parte de una plantilla (desde un [ **ControlTemplate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) o [ **DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)).
-1. **Establecedores de estilo:** Los valores de un [ **establecedor** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) dentro de los estilos de los recursos de página o aplicación.
+1. **Valores animados:** Animaciones activas, animaciones de estado visual o animaciones con un comportamiento [**HoldEnd**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FillBehavior) . Para lograr un efecto práctico, una animación aplicada a una propiedad debe tener prioridad sobre el valor base (no animado), aunque ese valor se haya establecido localmente.
+1. **Valor local:** Un valor local se puede establecer a través de la comodidad del contenedor de propiedades, que también equivale a establecer como un atributo o elemento de propiedad en XAML, o mediante una llamada al método [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) mediante una propiedad de una instancia específica. Si estableces un valor local con un enlace o un recurso estático, cada uno de ellos actúa en el orden de prioridad como si se estableciera un valor local, y los enlaces y referencias a recursos se borran si se establece un valor local nuevo.
+1. **Propiedades con plantilla:** Un elemento tiene estos si se creó como parte de una plantilla (desde [**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) o [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)).
+1. **Establecedores de estilo:** Valores de un [**establecedor**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) dentro de los estilos de los recursos de página o aplicación.
 1. **Valor predeterminado:** Una propiedad de dependencia puede tener un valor predeterminado como parte de sus metadatos.
 
 ### <a name="templated-properties"></a>Propiedades con plantilla
@@ -129,7 +129,7 @@ Las propiedades de dependencia siguen teniendo valores predeterminados, incluso 
 - Una propiedad que use un valor básico como números o un valor booleano (un *tipo de valor*) usa un valor predeterminado esperado. Por ejemplo, 0 para números enteros y de punto flotante, y **false** para un valor booleano.
 - Una propiedad que use una estructura de Windows Runtime tiene un valor predeterminado que se obtiene de llamar al constructor predeterminado implícito de esa estructura. Este constructor usa los valores predeterminados de cada campo de valor básico de la estructura. Por ejemplo, un valor predeterminado de un valor [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) se inicializa con sus valores **X** e **Y** en 0.
 - Una propiedad que use una enumeración tiene un valor predeterminado del primer miembro definido de esa enumeración. Comprueba la referencia de las enumeraciones específicas para ver el valor predeterminado.
-- Una propiedad que use una cadena ([**System.String**](https://docs.microsoft.com/dotnet/api/system.string?redirectedfrom=MSDN) para .NET, [**Platform::String**](https://docs.microsoft.com/cpp/cppcx/platform-string-class) para C++/CX) tiene un valor predeterminado de una cadena vacía ( **""** ).
+- Una propiedad que use una cadena ([**System.String**](https://docs.microsoft.com/dotnet/api/system.string) para .NET, [**Platform::String**](https://docs.microsoft.com/cpp/cppcx/platform-string-class) para C++/CX) tiene un valor predeterminado de una cadena vacía ( **""** ).
 - Las propiedades de colección normalmente se implementan como propiedades de dependencia, por razones que se tratan más a fondo en este tema. Pero si implementas una propiedad de colección personalizada y quieres que sea una propiedad de dependencia, asegúrate de que evitas que se produzca un *singleton no intencionado* como se describe hacia el final del tema [Propiedades de dependencia personalizadas](custom-dependency-properties.md).
 
 ## <a name="property-functionality-provided-by-a-dependency-property"></a>Funcionalidad de la propiedad suministrada por una propiedad de dependencia
@@ -149,7 +149,7 @@ En el siguiente ejemplo se establece el valor [**Text**](https://docs.microsoft.
 También puedes establecer enlaces con códigos y no con XAML. Consulta [**SetBinding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.setbinding).
 
 > [!NOTE]
-> Enlaces así se tratan como un valor local para propósitos de prioridad del valor de propiedad de dependencia. Si estableces otro valor local para una propiedad que originalmente tenía un valor [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding), sobrescribirás el enlace por completo, no solo el valor en tiempo de ejecución del enlace. Los enlaces {x: Bind} se implementan mediante código generado que establecerá un valor local para la propiedad. Si estableces un valor local para una propiedad que está usando {x: Bind}, ese valor se reemplazará la próxima vez que se evalúe el enlace, por ejemplo, cuando observe que una propiedad cambia en su objeto de origen.
+> Los enlaces como este se tratan como un valor local a efectos de la prioridad de los valores de propiedad de dependencia. Si estableces otro valor local para una propiedad que originalmente tenía un valor [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding), sobrescribirás el enlace por completo, no solo el valor en tiempo de ejecución del enlace. Los enlaces {x: Bind} se implementan mediante código generado que establecerá un valor local para la propiedad. Si estableces un valor local para una propiedad que está usando {x: Bind}, ese valor se reemplazará la próxima vez que se evalúe el enlace, por ejemplo, cuando observe que una propiedad cambia en su objeto de origen.
 
 ### <a name="binding-sources-binding-targets-the-role-of-frameworkelement"></a>Orígenes de enlace, destinos de enlace, el rol de FrameworkElement
 
@@ -159,10 +159,10 @@ Si estás creando un enlace en código, ten en cuenta que la API [**SetBinding**
 
 Tanto en código como en XAML, recuerda que [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) es una propiedad [**FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement). Mediante el uso de una forma de herencia de propiedad principal/secundaria (normalmente establecida en marcado XAML), el sistema de enlace puede resolver un **DataContext** que exista en un elemento principal. Esta herencia puede evaluar incluso si el objeto secundario (que tiene la propiedad de destino) no es un **FrameworkElement** y, por lo tanto, no guarda su propio valor de **DataContext**. Pero el elemento principal que se hereda debe ser un **FrameworkElement** para poder establecer y guardar el **DataContext**. Otra opción es definir el enlace de manera tal que pueda funcionar con un valor **null** para **DataContext**.
 
-Conectar el enlace no es lo único que se necesita en la mayoría de casos de enlace de datos. Para que el enlace unidireccional o bidireccional sea efectivo, la propiedad de origen debe admitir notificaciones de cambio que se propaguen al sistema de enlace y, por consiguiente, al destino. En el caso de orígenes de enlace personalizados, esto significa que la propiedad debe ser una propiedad de dependencia o el objeto debe admitir [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?redirectedfrom=MSDN). Las colecciones deben admitir [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?redirectedfrom=MSDN). Ciertas clases admiten estas interfaces en sus implementaciones para que sean útiles como clases base en escenarios de enlace de datos; un ejemplo de dicha clase es [**ObservableCollection&lt;T&gt;** ](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1?redirectedfrom=MSDN). Para obtener más información sobre el enlace de datos y la forma en que se relaciona con el sistema de propiedades, consulta [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
+Conectar el enlace no es lo único que se necesita en la mayoría de casos de enlace de datos. Para que el enlace unidireccional o bidireccional sea efectivo, la propiedad de origen debe admitir notificaciones de cambio que se propaguen al sistema de enlace y, por consiguiente, al destino. En el caso de orígenes de enlace personalizados, esto significa que la propiedad debe ser una propiedad de dependencia o el objeto debe admitir [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged). Las colecciones deben admitir [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged). Ciertas clases admiten estas interfaces en sus implementaciones para que sean útiles como clases base en escenarios de enlace de datos; un ejemplo de dicha clase es [**ObservableCollection&lt;T&gt;** ](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1). Para obtener más información sobre el enlace de datos y la forma en que se relaciona con el sistema de propiedades, consulta [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
 
 > [!NOTE]
-> Los orígenes de datos de Microsoft .NET de tipos enumerados de soporte técnico aquí. Los orígenes de datos de C++/CX usan interfaces diferentes para las notificaciones de cambios o un comportamiento observable. Consulta la sección [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
+> Los tipos enumerados aquí admiten Microsoft .NET orígenes de datos. Los orígenes de datos de C++/CX usan interfaces diferentes para las notificaciones de cambios o un comportamiento observable. Consulta la sección [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
 
 ### <a name="styles-and-templates"></a>Estilos y plantillas
 
@@ -174,7 +174,7 @@ Los valores que provienen de estilos o plantillas son valores aplazados, similar
 
 Puedes animar el valor de una propiedad de dependencia con una animación con guion gráfico. Las animaciones con guion gráfico de Windows Runtime no son simples decoraciones visuales. Es más útil pensar en las animaciones como una técnica de máquina de estado que puede establecer los valores de propiedades individuales o de todas las propiedades y vistas de un control, y cambiar estos valores con el tiempo.
 
-Para que pueda animarse, la propiedad de destino de la animación debe ser una propiedad de dependencia. Además, para que sea animado, el tipo de valor de la propiedad de destino debe ser compatible con uno de los tipos de animación derivados de [**Timeline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Timeline) existentes. Los valores de [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color), [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) y [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) se pueden animar con técnicas de interpolación o de fotograma clave. El resto de valores, en su mayoría, se pueden animar con fotogramas clave de **Object** discretos.
+Para que pueda animarse, la propiedad de destino de la animación debe ser una propiedad de dependencia. Además, para que sea animado, el tipo de valor de la propiedad de destino debe ser compatible con uno de los tipos de animación derivados de [**Timeline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Timeline) existentes. Los valores de [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color), [**Double**](https://docs.microsoft.com/dotnet/api/system.double) y [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) se pueden animar con técnicas de interpolación o de fotograma clave. El resto de valores, en su mayoría, se pueden animar con fotogramas clave de **Object** discretos.
 
 Cuando se aplica una animación y está en funcionamiento, el valor animado opera con una prioridad mayor que cualquier otro valor (como un valor local) que la propiedad tenga. Las animaciones también tienen un comportamiento [**HoldEnd**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FillBehavior) opcional que puede hacer las que las animaciones se apliquen a valores de propiedad aún si visualmente parece que la animación se detuvo.
 
@@ -188,7 +188,7 @@ Windows 10 incorpora el método [**RegisterPropertyChangedCallback**](https://do
 
 ### <a name="default-value-and-clearvalue"></a>Valor predeterminado y **ClearValue**
 
-Una propiedad de dependencia puede tener un valor predeterminado definido como parte de los metadatos de la propiedad. En el caso de una propiedad de dependencia, su valor predeterminado no se convierte en irrelevante después de establecer la propiedad por primera vez. El valor predeterminado se puede aplicar de nuevo en tiempo de ejecución siempre que desaparezca algún otro determinante en la prioridad de valores. (Prioridad del valor de propiedad de dependencia se describe en la sección siguiente). Por ejemplo, deliberadamente podría quitar un valor de estilo o una animación que se aplica a una propiedad, pero desea que el valor sea un valor predeterminado razonable después de hacerlo. El valor predeterminado de la propiedad de dependencia puede proporcionar este valor, sin necesidad de establecer específicamente cada valor de la propiedad como paso adicional.
+Una propiedad de dependencia puede tener un valor predeterminado definido como parte de los metadatos de la propiedad. En el caso de una propiedad de dependencia, su valor predeterminado no se convierte en irrelevante después de establecer la propiedad por primera vez. El valor predeterminado se puede aplicar de nuevo en tiempo de ejecución siempre que desaparezca algún otro determinante en la prioridad de valores. (La prioridad de los valores de propiedad de dependencia se describe en la sección siguiente). Por ejemplo, puede quitar deliberadamente un valor de estilo o una animación que se aplica a una propiedad, pero desea que el valor sea un valor predeterminado razonable después de hacerlo. El valor predeterminado de la propiedad de dependencia puede proporcionar este valor, sin necesidad de establecer específicamente cada valor de la propiedad como paso adicional.
 
 Puedes establecer deliberadamente una propiedad en el valor predeterminado incluso después de establecerla con un valor local. Para restablecer el valor predeterminado y para que otros participantes anteriores puedan invalidar el valor predeterminado pero no un valor local, llama al método [**ClearValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.clearvalue) (referencia a la propiedad para borrar como parámetro de método). No siempre querrás que la propiedad use literalmente el valor predeterminado, pero borrar el valor local y revertir al valor predeterminado puede habilitar otro elemento anterior que quieras que actúe ahora, como usar el valor que venía de un establecedor de estilo en una plantilla de control.
 
@@ -205,7 +205,7 @@ Los aspectos de subprocesos de [**DependencyObject**](https://docs.microsoft.com
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
 - [Introducción a las propiedades adjuntas](attached-properties-overview.md)
 - [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
-- [Animaciones amplía su información](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)
+- [Animaciones con guion gráfico](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)
 - [Crear componentes de Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
 - [Muestra de controles de usuario y personalizados de XAML](https://go.microsoft.com/fwlink/p/?linkid=238581)
 

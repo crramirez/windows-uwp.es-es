@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b27c5a0446bc9b329b09855f06d58a13723ece1c
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f73bb15d2746dbac4403ca6daffb603588cf7a58
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317383"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340093"
 ---
 # <a name="access-keys"></a>Teclas de acceso
 
@@ -44,7 +44,7 @@ Las aplicaciones de Microsoft Office admiten una amplia variedad de teclas de ac
 
 ![Indicaciones de KeyTips de las teclas de acceso en Microsoft Word](images/accesskeys/keytip-badges-word.png)
 
-_KeyTip distintivos de las claves de acceso de Microsoft Word_
+_Distintivos de KeyTip para las claves de acceso en Microsoft Word_
 
 Para agregar una tecla de acceso a un control, usa la **propiedad AccessKey**. El valor de esta propiedad especifica la secuencia de teclas de acceso, el acceso directo (si se trata de un único carácter alfanumérico) y la sugerencia de teclas.
 
@@ -72,11 +72,9 @@ Por ejemplo, Microsoft Word proporciona dos ámbitos de teclas de acceso: un ám
 
 Las imágenes siguientes muestran los dos ámbitos de teclas de acceso en Word. La primera muestra las teclas de acceso principales que permiten al usuario seleccionar una pestaña y otros comandos de nivel superior, mientras que la segunda muestra las claves de acceso secundarias de la pestaña Inicio.
 
-![Las claves de acceso principal en Microsoft Word](images/accesskeys/primary-access-keys-word.png)
-_las claves de acceso principal en Microsoft Word_
+claves de acceso de ![Primary en_las claves de acceso principal_ de Microsoft Word @ no__t-1 en Microsoft Word
 
-![Las claves de acceso secundaria en Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
-_las claves de acceso secundaria en Microsoft Word_
+claves de acceso de ![Secondary en_las claves de acceso secundaria_ de Microsoft Word @ no__t-1 en Microsoft Word
 
 Las teclas de acceso pueden duplicarse para elementos de distintos ámbitos. En el ejemplo anterior, "2" es la tecla de acceso para Deshacer en el ámbito principal y también es "Cursiva" en el ámbito secundario.
 
@@ -110,11 +108,11 @@ Aquí te mostramos cómo definir un ámbito de las teclas de acceso.
 
 ![Teclas de acceso principales para CommandBar](images/accesskeys/primary-access-keys-commandbar.png)
 
-_Ámbito principal de barra de comandos y las claves de acceso admitidas_
+_Ámbito principal de CommandBar y claves de acceso admitidas_
 
 ![Teclas de acceso secundarias para CommandBar](images/accesskeys/secondary-access-keys-commandbar.png)
 
-_Ámbito secundario de barra de comandos y las claves de acceso admitidas_
+_Ámbito secundario de CommandBar y claves de acceso admitidas_
 
 ### <a name="windows-10-creators-update-and-older"></a>Windows 10 Fall Creators Update y anteriores
 
@@ -233,13 +231,13 @@ Los recursos para cada idioma se agregan a las carpetas String correspondientes 
 
 ![Carpetas String de recursos para inglés y español](images/accesskeys/resource-string-folders.png)
 
-_Carpetas de cadena de recursos de inglés y español_
+_Carpetas de cadenas de recursos en inglés y español_
 
 Las teclas de acceso localizadas se especifican en el archivo resources.resw del proyecto:
 
 ![Especificar la propiedad AccessKey especificada en el archivo resources.resw](images/accesskeys/resource-resw-file.png)
 
-_Especifique la propiedad AccessKey especificada en el archivo resources.resw_
+_Especifique la propiedad AccessKey especificada en el archivo resources. resw._
 
 Para obtener más información, consulta [Traducir recursos de la interfaz de usuario](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10)).
 
@@ -251,21 +249,21 @@ Por lo general, alcanza con la ubicación predeterminada de las sugerencias de t
 
 ![Ejemplo de ubicación automática de sugerencias de teclas](images/accesskeys/auto-keytip-position.png)
 
-_Ejemplo de selección de ubicación automática KeyTip_
+_Ejemplo de ubicación automática de la sugerencia de teclas_
 
 Sin embargo, en caso de necesitar más control sobre la ubicación de las sugerencias de teclas, se recomienda lo siguiente:
 
-1.  **Principio de la asociación obvia**: El usuario puede asociar fácilmente el control con la sugerencia de teclas.
+1.  **Principio de asociación obvio**: El usuario puede asociar el control con la información sobre herramientas fácilmente.
 
     a.  El KeyTip debe estar **cerca** del elemento que tiene la tecla de acceso (el propietario).  
     b.  El KeyTip debe **evitar cubrir los elementos habilitados** que tienen teclas de acceso.   
     c.  Si no se puede ubicar un KeyTip cerca de su propietario, debe superponerse con este. 
 
-2.  **Detectabilidad**: El usuario puede detectar rápidamente el control con la sugerencia de teclas.
+2.  **Detectabilidad**: El usuario puede detectar rápidamente el control con la información sobre herramientas.
 
     a.  El KeyTip nunca se **superpone** con otras sugerencias de teclas.  
 
-3.  **Fácil de análisis:** El usuario puede ojear fácilmente las sugerencias de teclas.
+3.  **Análisis sencillo:** El usuario puede hojear fácilmente las sugerencias clave.
 
     a.  Los KeyTips deben estar **alineados** entre sí y con el elemento de la interfaz de usuario.
     b.  Los KeyTips deben estar **agrupados** tanto como sea posible. 
@@ -274,11 +272,11 @@ Sin embargo, en caso de necesitar más control sobre la ubicación de las sugere
 
 Usa la propiedad **KeyTipPlacementMode** para personalizar la ubicación de la sugerencia de teclas por elemento o por grupo.
 
-Los modos de selección de ubicación son: Parte superior, inferior, derecha, izquierda, oculto, centro y automática.
+Los modos de colocación son: Superior, inferior, derecha, izquierda, oculto, centro y automático.
 
 ![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytip-postion-modes.png)
 
-_Modos de selección de ubicación de keytips_
+_Modos de colocación de las sugerencias de teclas_
 
 La línea central del control se usa para calcular la alineación vertical y horizontal del KeyTip.
 
@@ -303,7 +301,7 @@ La propiedad KeyTipHorizontalOffset indica cuánto mover la sugerencia de teclas
 
 ![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytip-offsets.png)
 
-_Establecer los desplazamientos horizontales y verticales para un KeyTip._
+_Establecer desplazamientos verticales y horizontales para una información sobre herramientas_
 
 ``` xaml
 <Button
@@ -320,7 +318,7 @@ La ubicación de una sugerencia de teclas se ajusta automáticamente según el b
 
 ![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytips-screen-edge.png)
 
-_Hace que el borde de la pantalla la KeyTip reposicionarse automáticamente_
+_El margen de la pantalla hace que la sugerencia de teclas se cambie automáticamente de posición_
 
 ## <a name="key-tip-style"></a>Estilos de las sugerencias de teclas
 
@@ -330,7 +328,7 @@ Si necesitas especificar tus propios estilos de sugerencias de teclas, usa los r
 
 ![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytip-customization.png)
 
-_Opciones de personalización de keytips_
+_Opciones de personalización de la sugerencia de clave_
 
 En este ejemplo se muestra cómo cambiar estos recursos de aplicación:
 
@@ -353,7 +351,7 @@ En este ejemplo se muestra cómo cambiar estos recursos de aplicación:
 
 El marco XAML expone las propiedades de automatización que permiten a los clientes de automatización de la interfaz de usuario detectar información sobre los elementos en la interfaz de usuario.
 
-Si especificas la propiedad AccessKey en un control UIElement o TextElement, puedes usar la propiedad [AutomationProperties.AccessKey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey?view=netframework-4.8) para obtener este valor. Los clientes de accesibilidad, como el Narrador, leen el valor de esta propiedad cada vez que un elemento tiene el foco.
+Si especificas la propiedad AccessKey en un control UIElement o TextElement, puedes usar la propiedad [AutomationProperties.AccessKey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey) para obtener este valor. Los clientes de accesibilidad, como el Narrador, leen el valor de esta propiedad cada vez que un elemento tiene el foco.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
@@ -361,6 +359,6 @@ Si especificas la propiedad AccessKey en un control UIElement o TextElement, pue
 * [Aceleradores de teclado](keyboard-accelerators.md)
 
 **Ejemplos**
-* [Galería de controles de XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+* [Galería de controles XAML (también conocido como XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 

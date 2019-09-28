@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f87ecf0c3c90976295d85c1a995f1de091491974
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e0f6ef206dc836e48bfc904767ff8c8c7bdca9db
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359176"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340045"
 ---
 # <a name="adaptive-streaming-with-playready"></a>Streaming adaptable con PlayReady
 
@@ -274,7 +274,7 @@ async void LicenseAcquisitionRequest(
 
 ## <a name="initializing-the-adaptivemediasource"></a>Inicializar el objeto AdaptiveMediaSource
 
-Por último, necesitarás una función para inicializar el objeto [AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource), que se creó a partir de una clase [Uri](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) y una clase [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) concretas. La clase **Uri** debe ser el vínculo al archivo multimedia (HLS o DASH), y la clase **MediaElement** debe estar definida en el código XAML.
+Por último, necesitarás una función para inicializar el objeto [AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource), que se creó a partir de una clase [Uri](https://docs.microsoft.com/dotnet/api/system.uri) y una clase [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) concretas. La clase **Uri** debe ser el vínculo al archivo multimedia (HLS o DASH), y la clase **MediaElement** debe estar definida en el código XAML.
 
 ```csharp
 async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)

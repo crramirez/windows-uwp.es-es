@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fba78a619f18d7da2e190758d73ac7a56b12fb9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1f35cbab511912bd9cf6616330f3e9e7737189fd
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360654"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339740"
 ---
 # <a name="display-the-camera-preview"></a>Mostrar la vista previa de la cámara
 
@@ -24,7 +24,7 @@ Para obtener información sobre cómo escribir una aplicación de cámara que ca
 
 Para que tu aplicación tenga acceso a la cámara de un dispositivo, debes declarar que esta usa las funcionalidades *webcam* y *microphone* del dispositivo. 
 
-**Agregar capacidades al manifiesto de aplicación**
+**Agregar funcionalidades al manifiesto de la aplicación**
 
 1.  En Microsoft Visual Studio, en el **Explorador de soluciones**, abre el diseñador para el manifiesto de la aplicación haciendo doble clic en el elemento **package.appxmanifest**.
 2.  Selecciona la pestaña **Funcionalidades**.
@@ -40,7 +40,7 @@ Usa una clase [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI
 
 ## <a name="use-mediacapture-to-start-the-preview-stream"></a>Usar MediaCapture para iniciar el flujo de vista previa
 
-El objeto [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) es la interfaz de la aplicación para la cámara del dispositivo. Esta clase es un miembro del espacio de nombres Windows.Media.Capture. En el ejemplo de este artículo también se usan las API de los espacios de nombres [**Windows.ApplicationModel**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel) y [System.Threading.Tasks](https://docs.microsoft.com/dotnet/api/system.threading.tasks?redirectedfrom=MSDN), además de las que se incluyen con la plantilla de proyecto predeterminada.
+El objeto [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) es la interfaz de la aplicación para la cámara del dispositivo. Esta clase es un miembro del espacio de nombres Windows.Media.Capture. En el ejemplo de este artículo también se usan las API de los espacios de nombres [**Windows.ApplicationModel**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel) y [System.Threading.Tasks](https://docs.microsoft.com/dotnet/api/system.threading.tasks), además de las que se incluyen con la plantilla de proyecto predeterminada.
 
 Agrega con directivas para incluir los siguientes espacios de nombres en el archivo .cs de tu página.
 
@@ -99,5 +99,5 @@ En el controlador de eventos **Suspending**, comprueba primero que la página es
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
-* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Obtener un fotograma de vista previa](get-a-preview-frame.md)
+* [Captura básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Obtención de un marco de vista previa](get-a-preview-frame.md)

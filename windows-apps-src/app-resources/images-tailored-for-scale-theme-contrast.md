@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: f069899da69e4689e21fa578ff7124fbaf453ea3
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 236365bc729bb6b9a2615720c4b69aea21296e5f
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317724"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339464"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Cargar imágenes y recursos adaptados a escala, tema, contraste alto y otros
 La aplicación puede cargar archivos de recursos de imagen (u otros archivos de activos) adaptados para [factor de escala de visualización](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), tema, contraste alto y otros contextos de tiempo de ejecución. Estas imágenes pueden referenciarse desde código imperativo o desde marcado XAML, por ejemplo como la propiedad **Origen** de una **Imagen**. También pueden aparecer en el archivo de origen del manifiesto del paquete de la aplicación (el archivo `Package.appxmanifest`), por ejemplo, como el valor de icono de la aplicación en la pestaña de activos visuales del Diseñador de manifiestos de Visual Studio en los iconos y notificaciones del sistema. Con calificadores en los nombres de archivo de las imágenes y, opcionalmente, cargándolas dinámicamente con ayuda de un [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live), puedes hacer que se cargue el archivo de imagen más adecuado que coincida mejor con la configuración de tiempo de ejecución del usuario en lo relativo a escala de la pantalla, tema, contraste alto, idioma y otros contextos.
@@ -86,12 +86,12 @@ El esquema `ms-appx-web` accede a los mismos archivos que `ms-appx`, pero en el 
 this.myXAMLWebViewElement.Source = new Uri("ms-appx-web:///Pages/default.html");
 ```
 
-Para cualquiera de los escenarios que se muestran en estos ejemplos, usa la sobrecarga [constructor Uri](https://docs.microsoft.com/en-us/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) que infiere el [UriKind](https://docs.microsoft.com/dotnet/api/system.urikind?view=netframework-4.8). Especifica un URI absoluto válido, incluido el esquema y autoridad, o simplemente deja que la autoridad sea predeterminada para el paquete de la aplicación, como en el ejemplo anterior.
+Para cualquiera de los escenarios que se muestran en estos ejemplos, usa la sobrecarga [constructor Uri](https://docs.microsoft.com/en-us/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) que infiere el [UriKind](https://docs.microsoft.com/dotnet/api/system.urikind). Especifica un URI absoluto válido, incluido el esquema y autoridad, o simplemente deja que la autoridad sea predeterminada para el paquete de la aplicación, como en el ejemplo anterior.
 
 Observa cómo en estos URI de ejemplo, el esquema ("`ms-appx`" o "`ms-appx-web`") va seguido de "`://`", seguido a su vez por una ruta de acceso absoluta. En una ruta de acceso absoluta, el símbolo "`/`" al comienzo hace que la ruta de acceso se interprete desde la raíz del paquete.
 
 > [!NOTE]
-> El `ms-resource` (para [recursos de cadena](localize-strings-ui-manifest.md)) y `ms-appx(-web)` (para imágenes y otros activos) esquemas de URI coincidencias calificador automática para encontrar el recurso que es más adecuado para el contexto actual. El esquema de URI `ms-appdata` (que se usa para cargar datos de la aplicación) no realiza ninguna confrontación automática de este tipo, pero puede responderse al contenido de [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) y cargar explícitamente los activos adecuados desde los datos de la aplicación mediante su nombre completo del archivo físico en el URI. Para más información sobre los datos de aplicaciones, consulta [Almacenar y recuperar la configuración y otros datos de aplicaciones](../design/app-settings/store-and-retrieve-app-data.md). Los esquemas de URI web (por ejemplo, `http`, `https` y `ftp`) no realizan tampoco la comparación automática. Para obtener información sobre qué debes hacer en ese caso, consulta [Alojar y cargar imágenes en la nube](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud).
+> Los esquemas de URI `ms-resource` (para [los recursos de cadena](localize-strings-ui-manifest.md)) y `ms-appx(-web)` (para imágenes y otros activos) realizan la coincidencia automática del calificador para buscar el recurso más adecuado para el contexto actual. El esquema de URI `ms-appdata` (que se usa para cargar datos de la aplicación) no realiza ninguna confrontación automática de este tipo, pero puede responderse al contenido de [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) y cargar explícitamente los activos adecuados desde los datos de la aplicación mediante su nombre completo del archivo físico en el URI. Para más información sobre los datos de aplicaciones, consulta [Almacenar y recuperar la configuración y otros datos de aplicaciones](../design/app-settings/store-and-retrieve-app-data.md). Los esquemas de URI web (por ejemplo, `http`, `https` y `ftp`) no realizan tampoco la comparación automática. Para obtener información sobre qué debes hacer en ese caso, consulta [Alojar y cargar imágenes en la nube](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud).
 
 Las rutas de acceso absolutas son una buena opción si los archivos de imagen semantienen donde están en la estructura del proyecto. Si quieres poder mover un archivo de imagen, pero te importa que permanezca en la misma ubicación en relación con su archivo de marcado XAML de referencia, a continuación, en lugar de una ruta absoluta, podría convenirte usar una ruta relativa al archivo de marcado que lo contiene. Si lo haces, no necesitas usar un esquema de URI. En este caso, seguirás beneficiándote de la coincidencia de calificadores automática, pero solo porque estás usando la ruta de acceso relativa en el marcado XAML.
 
@@ -205,14 +205,14 @@ private void RefreshUIImages()
 
 ## <a name="important-apis"></a>API importantes
 * [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)
-* [ResourceContext.SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
+* [ResourceContext. SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Adaptar los recursos de idioma, la escala y otros calificadores](tailor-resources-lang-scale-contrast.md)
+* [Adapte los recursos para el idioma, la escala y otros calificadores](tailor-resources-lang-scale-contrast.md)
 * [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md)
 * [Almacenar y recuperar la configuración y otros datos de aplicación](../design/app-settings/store-and-retrieve-app-data.md)
-* [Icono y notificaciones del sistema compatibilidad con lenguaje, escala y contraste alto](tile-toast-language-scale-contrast.md)
-* [Elementos localizables de manifiesto](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
-* [Creación de reflejo de imágenes](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md#mirroring-images)
+* [Compatibilidad de iconos y notificaciones del sistema para el idioma, la escala y el contraste alto](tile-toast-language-scale-contrast.md)
+* [Elementos de manifiesto traducible](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)
+* [Imágenes de creación de reflejo](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md#mirroring-images)
 * [Globalización y localización](../design/globalizing/globalizing-portal.md)

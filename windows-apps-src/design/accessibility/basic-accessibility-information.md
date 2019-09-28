@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a50ca6eaeecd2528eaa0d8558ef70552ae49944a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 77b2c76b446332ae78024618b04ffbc1b66ffb75
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317291"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339582"
 ---
 # <a name="expose-basic-accessibility-information"></a>Exponer información básica de accesibilidad  
 
@@ -32,9 +32,9 @@ En esta tabla, se describe cómo definir un nombre accesible para varios tipos d
 | Tipo de elemento | Descripción |
 |--------------|-------------|
 | Texto estático | En los elementos [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) y [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), se determina automáticamente un nombre accesible del texto visible (interno). Todo el texto incluido en ese elemento se usa como nombre. Consulta [Nombre del texto interno](#name_from_inner_text). |
-| Imágenes | El elemento XAML [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) no tiene un equivalente directo con el atributo **alt** de HTML de **img** y elementos similares. Usa [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8) para proporcionar un nombre o usa la técnica de subtítulos. Consulta [Nombres accesibles para imágenes](#images). |
+| Imágenes | El elemento XAML [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) no tiene un equivalente directo con el atributo **alt** de HTML de **img** y elementos similares. Usa [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) para proporcionar un nombre o usa la técnica de subtítulos. Consulta [Nombres accesibles para imágenes](#images). |
 | Elementos de formulario | El nombre accesible para un elemento de formulario debe ser el mismo que la etiqueta que se muestra para ese elemento. Consulta [Etiquetas y LabeledBy](#labels). |
-| Botones y vínculos | De manera predeterminada, el nombre accesible de un botón o vínculo se basa en el texto visible, usando las mismas reglas descritas en [Nombre del texto interno](#name_from_inner_text). En los casos en los que un botón incluye solo una imagen, usa [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8) para proporcionar un equivalente de solo texto de la acción prevista del botón. |
+| Botones y vínculos | De manera predeterminada, el nombre accesible de un botón o vínculo se basa en el texto visible, usando las mismas reglas descritas en [Nombre del texto interno](#name_from_inner_text). En los casos en los que un botón incluye solo una imagen, usa [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) para proporcionar un equivalente de solo texto de la acción prevista del botón. |
 
 Las mayoría de los elementos contenedores, como paneles, no promueven su contenido como nombre accesible. Esto se debe a que el contenido del elemento debe notificar un nombre y su respectivo rol, no su contenedor. El elemento contenedor puede notificar que se trata de un elemento que tiene elementos secundarios en una representación de automatización de la interfaz de usuario de Microsoft para que la lógica de las tecnologías de asistencia pueda recorrerlo. Pero los usuarios de tecnologías de asistencia, por lo general, no necesitan saber sobre los contenedores y, por consiguiente, la mayoría de los contenedores no llevan nombre.
 
@@ -47,7 +47,7 @@ Los controles y otros elementos de la interfaz de usuario que forman parte del v
 No todos los controles tienen un valor. Los controles que tienen un valor proporcionan esta información a la automatización de la interfaz de usuario mediante los modelos y sistemas del mismo nivel admitidos por ese control. Por ejemplo, un elemento de formulario [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) tiene un valor. Una tecnología de asistencia puede ser un cliente de automatización de la interfaz de usuario y puede descubrir que un valor existe y cuál es su valor. En este caso concreto, **TextBox** es compatible con el patrón [**IValueProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IValueProvider) mediante las definiciones [**TextBoxAutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.TextBoxAutomationPeer).
 
 > [!NOTE]
-> En los casos en los que usas [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8) u otras técnicas para proporcionar el nombre accesible de forma explícita, no incluyas el mismo texto que usa el rol de control ni escribas información en el nombre accesible. Por ejemplo, no incluyas cadenas como "botón" o "lista" en el nombre. La información sobre el rol y el tipo proviene de otra propiedad de automatización de la interfaz de usuario (**LocalizedControlType**) que es proporcionada por la compatibilidad predeterminada del control para la automatización de la interfaz de usuario. Muchas tecnologías de asistencia anexan **LocalizedControlType** al nombre accesible, por lo que duplican el rol en el nombre accesible que puede provocar la repetición innecesaria de palabras. Por ejemplo, si asignas a un control [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) un nombre accesible de "botón" o incluyes "botón" como la parte final del nombre, los lectores de pantalla podrían leer esto como "botón botón". Debes probar este aspecto de tu información de accesibilidad usando el Narrador.
+> En los casos en los que usas [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) u otras técnicas para proporcionar el nombre accesible de forma explícita, no incluyas el mismo texto que usa el rol de control ni escribas información en el nombre accesible. Por ejemplo, no incluyas cadenas como "botón" o "lista" en el nombre. La información sobre el rol y el tipo proviene de otra propiedad de automatización de la interfaz de usuario (**LocalizedControlType**) que es proporcionada por la compatibilidad predeterminada del control para la automatización de la interfaz de usuario. Muchas tecnologías de asistencia anexan **LocalizedControlType** al nombre accesible, por lo que duplican el rol en el nombre accesible que puede provocar la repetición innecesaria de palabras. Por ejemplo, si asignas a un control [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) un nombre accesible de "botón" o incluyes "botón" como la parte final del nombre, los lectores de pantalla podrían leer esto como "botón botón". Debes probar este aspecto de tu información de accesibilidad usando el Narrador.
 
 <span id="Influencing_the_UI_Automation_tree_views"/>
 <span id="influencing_the_ui_automation_tree_views"/>
@@ -64,7 +64,7 @@ De manera predeterminada, cualquier clase derivada de [**Control**](https://docs
 ## <a name="name-from-inner-text"></a>Nombre del texto interno  
 Para simplificar el uso de cadenas que ya existen en la interfaz de usuario visible para los valores de nombres accesibles, muchos de los controles y otros elementos de la interfaz de usuario permiten determinar automáticamente un nombre accesible predeterminado en función del texto interno del elemento o a partir de los valores de cadena de las propiedades de contenido.
 
-* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [ **RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [ **TextBox** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) y **RichTextBlock** cada promocionar el valor de la **texto** propiedad como el nombre accesible predeterminado.
+* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [**richtextblock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) y **RichTextBlock** promueven el valor de la propiedad **Text** como el nombre accesible predeterminado.
 * Todas las subclases [**ContentControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) usan una técnica iterativa "ToString" para encontrar cadenas en su valor [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) y promueven estas cadenas como nombre accesible predeterminado.
 
 > [!NOTE]
@@ -74,7 +74,7 @@ Para simplificar el uso de cadenas que ya existen en la interfaz de usuario visi
 <span id="IMAGES"/>
 
 ## <a name="accessible-names-for-images"></a>Nombres accesibles para imágenes
-Para admitir lectores de pantalla y proporcionar información de identificación básica de cada elemento de la interfaz de usuario, en ocasiones debes proporcionar alternativas de texto a información no textual, como imágenes o gráficos (y excluir todo elemento meramente decorativo o estructural). Estos elementos no tienen texto interno, por lo que el nombre accesible no tendrá un valor calculado. Puedes definir el nombre accesible configurando la propiedad adjunta [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8) como se muestra en este ejemplo.
+Para admitir lectores de pantalla y proporcionar información de identificación básica de cada elemento de la interfaz de usuario, en ocasiones debes proporcionar alternativas de texto a información no textual, como imágenes o gráficos (y excluir todo elemento meramente decorativo o estructural). Estos elementos no tienen texto interno, por lo que el nombre accesible no tendrá un valor calculado. Puedes definir el nombre accesible configurando la propiedad adjunta [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) como se muestra en este ejemplo.
 
 XAML
 ```xml
@@ -125,7 +125,7 @@ Una descripción accesible proporciona información de accesibilidad adicional a
 
 El lector de pantalla Narrador lee la descripción accesible de un elemento solamente cuando el usuario solicita más información acerca del elemento presionando Bloq Mayús+F.
 
-El nombre accesible está destinado a identificar el control, en lugar de documentar su comportamiento. Si una pequeña descripción no es suficiente para explicar el control, podrás establecer la propiedad adjunta [**AutomationProperties.HelpText**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.helptext?view=netframework-4.8) además de [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8).
+El nombre accesible está destinado a identificar el control, en lugar de documentar su comportamiento. Si una pequeña descripción no es suficiente para explicar el control, podrás establecer la propiedad adjunta [**AutomationProperties.HelpText**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.helptext) además de [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name).
 
 <span id="Testing_accessibility_early_and_often"/>
 <span id="testing_accessibility_early_and_often"/>
@@ -148,14 +148,14 @@ Windows admite muchos controles que se pueden usar para mostrar valores que prov
 <span id="ACCESSIBLE_NAMES_AND_LOCALIZATION"/>
 
 ## <a name="accessible-names-and-localization"></a>Nombres accesibles y localización  
-Para asegurarte de que el nombre accesible también sea un elemento que está localizado, deberías usar técnicas adecuadas para almacenar las cadenas localizables como recursos y después hacer referencia a las conexiones de los recursos con valores [directiva x:Uid](https://docs.microsoft.com/windows/uwp/xaml-platform/x-uid-directive). Si el nombre accesible proviene de un uso de [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8) establecido de manera explícita, asegúrate de que esa cadena también sea localizable.
+Para asegurarte de que el nombre accesible también sea un elemento que está localizado, deberías usar técnicas adecuadas para almacenar las cadenas localizables como recursos y después hacer referencia a las conexiones de los recursos con valores [directiva x:Uid](https://docs.microsoft.com/windows/uwp/xaml-platform/x-uid-directive). Si el nombre accesible proviene de un uso de [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) establecido de manera explícita, asegúrate de que esa cadena también sea localizable.
 
-Ten en cuenta que las propiedades adjuntas, como las propiedades [**AutomationProperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties), usan una sintaxis de calificación especial para el nombre del recurso, de manera que el recurso hace referencia a la propiedad adjunta como si se aplicara a un elemento específico. Por ejemplo, el nombre de recurso [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8) tal y como se aplica a un elemento de la interfaz de usuario denominado `MediumButton` es: `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`.
+Ten en cuenta que las propiedades adjuntas, como las propiedades [**AutomationProperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties), usan una sintaxis de calificación especial para el nombre del recurso, de manera que el recurso hace referencia a la propiedad adjunta como si se aplicara a un elemento específico. Por ejemplo, el nombre de recurso [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) tal y como se aplica a un elemento de la interfaz de usuario denominado `MediumButton` es: `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`.
 
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
-* [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name?view=netframework-4.8)
+* [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)
 * [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
 * [Pruebas de accesibilidad](accessibility-testing.md)

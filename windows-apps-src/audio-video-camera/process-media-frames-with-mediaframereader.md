@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f2442647d39c4142b50c0a2a9b1fbc2c0eb66ca
-ms.sourcegitcommit: be519a7ecff53696b853754c879db32be9a53289
+ms.openlocfilehash: ddd35e0365efcc8c224e717b66f53734af32123d
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69544917"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339753"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Procesar fotogramas multimedia con MediaFrameReader
 
@@ -129,7 +129,7 @@ Ahora es el momento de implementar el controlador de eventos **FrameArrived**. C
 
 El control **Image** solo puede mostrar imágenes en formato BRGA8 con valores alfa premultiplicados o sin valores alfa. Si el fotograma de llegada no está en ese formato, el método estático [**Convert**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.softwarebitmap.convert) se usa para convertir el mapa de bits de software al formato correcto.
 
-A continuación, se usa el método [**Interlocked.Exchange**](https://docs.microsoft.com/dotnet/api/system.threading.interlocked.exchange?redirectedfrom=MSDN#System_Threading_Interlocked_Exchange__1___0____0_) para intercambiar la referencia del mapa de bits de llegada con el mapa de bits del búfer de reserva. Este método intercambia estas referencias en una operación atómica segura para subprocesos. Después del intercambio, se desecha la imagen anterior del búfer de reserva, ubicada ahora en la variable *softwareBitmap*, para limpiar los recursos.
+A continuación, se usa el método [**Interlocked.Exchange**](https://docs.microsoft.com/dotnet/api/system.threading.interlocked.exchange#System_Threading_Interlocked_Exchange__1___0____0_) para intercambiar la referencia del mapa de bits de llegada con el mapa de bits del búfer de reserva. Este método intercambia estas referencias en una operación atómica segura para subprocesos. Después del intercambio, se desecha la imagen anterior del búfer de reserva, ubicada ahora en la variable *softwareBitmap*, para limpiar los recursos.
 
 A continuación, se usa la clase [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) asociada al elemento **Image** para crear una tarea que se ejecutará en el subproceso de la interfaz de usuario mediante una llamada al método [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync). Ya que las tareas asincrónicas se realizarán dentro de la tarea, la expresión lambda que se pasa al método **RunAsync** se declara con la palabra clave *async*.
 
@@ -169,7 +169,7 @@ La clase auxiliar **FrameRenderer** implementa los métodos siguientes.
 ## <a name="use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources"></a>Usa MultiSourceMediaFrameReader para obtener fotogramas correlacionados de tiempo de varios orígenes.
 A partir de Windows 10, versión 1607, puedes usar [**MultiSourceMediaFrameReader**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader) para recibir fotogramas correlacionados de tiempo de varios orígenes. Con esta API es más fácil realizar el procesamiento, que requiere fotogramas desde varias fuentes y que se han tomado cercanas en el tiempo, como el uso de la clase [**DepthCorrelatedCoordinateMapper**](https://docs.microsoft.com/uwp/api/windows.media.devices.core.depthcorrelatedcoordinatemapper). Una limitación del uso de este nuevo método es que solo los eventos de llegada de fotogramas se generan a la velocidad de la fuente más lenta de captura. Los fotogramas adicionales de fuentes más rápidas se eliminarán. Además, dado que el sistema espera que los fotogramas lleguen desde orígenes diferentes a diferentes velocidades, no reconoce automáticamente si un origen ha dejado de generar fotogramas por completo. El código de ejemplo en esta sección muestra cómo usar un evento para crear tu propia lógica de tiempo de espera, que se invoca si los fotogramas correlacionados no llegan dentro del límite de tiempo definido por la aplicación.
 
-Los pasos para usar [**MultiSourceMediaFrameReader**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader) son similares a los pasos para usar [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) descrito anteriormente en este artículo. En este ejemplo se usa una fuente de color y un origen de profundidad. Declara algunas variables de cadena para almacenar los identificadores del origen de fotogramas multimedia que se usan para seleccionar fotogramas de cualquier fuente. A continuación, declara una clase [**ManualResetEventSlim**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim?view=netframework-4.7), una [**CancellationTokenSource**](https://docs.microsoft.com/dotnet/api/system.threading.cancellationtokensource?redirectedfrom=MSDN)y una [**EventHandler**](https://docs.microsoft.com/dotnet/api/system.eventhandler?redirectedfrom=MSDN) que se usarán para implementar la lógica de tiempo de espera para el ejemplo. 
+Los pasos para usar [**MultiSourceMediaFrameReader**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader) son similares a los pasos para usar [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) descrito anteriormente en este artículo. En este ejemplo se usa una fuente de color y un origen de profundidad. Declara algunas variables de cadena para almacenar los identificadores del origen de fotogramas multimedia que se usan para seleccionar fotogramas de cualquier fuente. A continuación, declara una clase [**ManualResetEventSlim**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim), una [**CancellationTokenSource**](https://docs.microsoft.com/dotnet/api/system.threading.cancellationtokensource)y una [**EventHandler**](https://docs.microsoft.com/dotnet/api/system.eventhandler) que se usarán para implementar la lógica de tiempo de espera para el ejemplo. 
 
 [!code-cs[MultiFrameDeclarations](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMultiFrameDeclarations)]
 
@@ -187,7 +187,7 @@ Después de inicializar el objeto de **MediaCapture**, recupera los objetos de [
 
 Crea e inicializa la clase **MultiSourceMediaFrameReader** llamando a [**CreateMultiSourceFrameReaderAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.createmultisourceframereaderasync) y pasando una matriz de orígenes de fotogramas que usará el lector. Registra un controlador de eventos para el evento [**FrameArrived**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader.FrameArrived). Este ejemplo crea una instancia de la clase auxiliar **FrameRenderer**, descrita anteriormente en este artículo, para representar fotogramas de un control de **imagen**. Inicia el lector de fotogramas llamando a [**StartAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader.StartAsync).
 
-Registra un controlador de eventos para el evento **CorellationFailed**, explicado anteriormente en el ejemplo. Señalaremos este evento si uno de los orígenes de fotogramas multimedia utilizados deja de producir fotogramas. Por último, llama a [**Task.Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run?redirectedfrom=MSDN#System_Threading_Tasks_Task_Run_System_Action_) para llamar al método auxiliar de tiempo de espera, **NotifyAboutCorrelationFailure**, en un subproceso independiente. La implementación de este método se muestra más adelante en este artículo.
+Registra un controlador de eventos para el evento **CorellationFailed**, explicado anteriormente en el ejemplo. Señalaremos este evento si uno de los orígenes de fotogramas multimedia utilizados deja de producir fotogramas. Por último, llama a [**Task.Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run#System_Threading_Tasks_Task_Run_System_Action_) para llamar al método auxiliar de tiempo de espera, **NotifyAboutCorrelationFailure**, en un subproceso independiente. La implementación de este método se muestra más adelante en este artículo.
 
 [!code-cs[InitMultiFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMultiFrameReader)]
 
@@ -195,7 +195,7 @@ El evento **FrameArrived** se genera siempre que esté disponible un nuevo marco
 
 Obtén la clase [**MultiSourceMediaFrameReference**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereference) asociada al evento mediante una llamada a [**TryAcquireLatestFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader.TryAcquireLatestFrame). Obtén la clase **MediaFrameReference** asociada a cada origen de fotogramas multimedia llamando a [**TryGetFrameReferenceBySourceId**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereference.trygetframereferencebysourceid) y pasando las cadenas de identificador almacenadas al iniciar el lector de fotogramas.
 
-Llama al método [**Set**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim.set?redirectedfrom=MSDN#System_Threading_ManualResetEventSlim_Set) del objeto **ManualResetEventSlim** para indicar que los fotogramas han llegado. Comprobaremos este evento en el método **NotifyCorrelationFailure**, que se ejecuta en un subproceso independiente. 
+Llama al método [**Set**](https://docs.microsoft.com/dotnet/api/system.threading.manualreseteventslim.set#System_Threading_ManualResetEventSlim_Set) del objeto **ManualResetEventSlim** para indicar que los fotogramas han llegado. Comprobaremos este evento en el método **NotifyCorrelationFailure**, que se ejecuta en un subproceso independiente. 
 
 Por último, realiza cualquier tipo de proceso en los fotogramas multimedia correlacionados en el tiempo. Este ejemplo muestra simplemente el fotograma desde el origen de profundidad.
 

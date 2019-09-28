@@ -1,30 +1,30 @@
 ---
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
-description: Utilice estos métodos en la API de envío de Microsoft Store para administrar los envíos de vuelos de paquete para las aplicaciones que están registrados en su cuenta del centro de partners.
+description: Use estos métodos en la API de envío de Microsoft Store para administrar los envíos de paquetes para las aplicaciones registradas en su cuenta del centro de Partners.
 title: Manage package flight submissions (Administrar envíos de paquetes piloto)
 ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submissions, envíos piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 11fb2427ece0f0e37fb2a5f2759094d6e04930c8
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 813b1375b3bdba42f0568cb7d961f8108d5828a1
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320148"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340413"
 ---
 # <a name="manage-package-flight-submissions"></a>Manage package flight submissions (Administrar envíos de paquetes piloto)
 
 La API de envío de Microsoft Store proporciona métodos que puedes usar para administrar envíos de paquete piloto para tus aplicaciones, incluidos los lanzamientos de paquetes graduales. Para obtener una introducción a la API de envío de Microsoft Store, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Si usa la API de envío de Microsoft Store para crear una presentación para un vuelo de paquete, asegúrese de realizar más cambios en el envío solo mediante la API, en lugar de centro de partners. Si usas el panel para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
+> Si usa la API de envío de Microsoft Store para crear un envío para un paquete piloto, asegúrese de realizar más cambios en el envío solo mediante la API, en lugar del centro de Partners. Si usas el panel para cambiar un envío que creaste originalmente mediante la API, ya no podrás cambiar o confirmar el envío con la API. En algunos casos, el envío podría quedar en un estado de error en el que no se puede continuar con el proceso de envío. Si esto ocurre, debes eliminar el envío y crear uno nuevo.
 
 <span id="methods-for-package-flight-submissions" />
 
 ## <a name="methods-for-managing-package-flight-submissions"></a>Métodos para administrar envíos de paquetes piloto
 
-Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de paquete piloto. Para poder usar estos métodos, el vuelo paquete ya debe existir en el centro de partners. Puede crear un vuelo paquete [en el centro de partners](https://docs.microsoft.com/windows/uwp/publish/package-flights) o mediante los métodos de API de envío de Microsoft Store en que se describen en [administrar paquete vuelos](manage-flights.md).
+Usa los siguientes métodos para obtener, crear, actualizar, confirmar o eliminar un envío de paquete piloto. Antes de poder usar estos métodos, el paquete piloto debe existir en el centro de Partners. Puede crear un paquete piloto [en el centro de Partners](https://docs.microsoft.com/windows/uwp/publish/package-flights) o mediante el Microsoft Store métodos de API de envío descritos en [administrar paquetes piloto](manage-flights.md).
 
 <table>
 <colgroup>
@@ -43,32 +43,32 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 <tr>
 <td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
-<td align="left"><a href="get-a-flight-submission.md">Obtener un envío de vuelos de paquete existente</a></td>
+<td align="left"><a href="get-a-flight-submission.md">Obtener un envío de paquete piloto existente</a></td>
 </tr>
 <tr>
 <td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status</td>
-<td align="left"><a href="get-status-for-a-flight-submission.md">Obtener el estado de un envío de vuelos de paquete existente</a></td>
+<td align="left"><a href="get-status-for-a-flight-submission.md">Obtener el estado de un envío de paquete piloto existente</a></td>
 </tr>
 <tr>
 <td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions</td>
-<td align="left"><a href="create-a-flight-submission.md">Crear un nuevo envío de vuelos de paquete</a></td>
+<td align="left"><a href="create-a-flight-submission.md">Creación de un nuevo envío de paquetes piloto</a></td>
 </tr>
 <tr>
 <td align="left">PUT</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
-<td align="left"><a href="update-a-flight-submission.md">Actualizar un envío de vuelos de paquete existente</a></td>
+<td align="left"><a href="update-a-flight-submission.md">Actualización de un envío de paquete piloto existente</a></td>
 </tr>
 <tr>
 <td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit</td>
-<td align="left"><a href="commit-a-flight-submission.md">Confirme el envío de vuelo de un paquete nuevo o actualizado</a></td>
+<td align="left"><a href="commit-a-flight-submission.md">Confirmar un envío de paquete de paquetes nuevo o actualizado</a></td>
 </tr>
 <tr>
 <td align="left">SUPRIMIR</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
-<td align="left"><a href="delete-a-flight-submission.md">Eliminar el envío de un vuelo de paquetes</a></td>
+<td align="left"><a href="delete-a-flight-submission.md">Eliminación de un envío de paquetes piloto</a></td>
 </tr>
 </tbody>
 </table>
@@ -79,7 +79,7 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 
 Para crear un envío de un paquete piloto, sigue este proceso.
 
-1. Si aún no lo ha hecho, complete los requisitos previos se describen en [crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md), incluida la asociación de una aplicación de Azure AD con su cuenta de centro de partners y obtener su Id. de cliente y la clave. Solo tienes que hacerlo una vez; cuando tengas el identificador y la clave de cliente, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.  
+1. Si todavía no lo ha hecho, complete los requisitos previos descritos en [creación y administración de envíos con Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md), incluida la Asociación de una aplicación Azure ad con la cuenta del centro de Partners y la obtención del identificador de cliente y la clave. Solo tienes que hacerlo una vez; cuando tengas el identificador y la clave de cliente, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.  
 
 2. [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
@@ -92,7 +92,7 @@ Para crear un envío de un paquete piloto, sigue este proceso.
     El cuerpo de la respuesta contiene un recurso [envío de piloto](#flight-submission-object) que incluye el identificador del nuevo envío, el URI de firma de acceso compartido (SAS) para cargar paquetes para el envío a Azure Blob Storage y los datos del nuevo envío (incluidas todas las listas y la información sobre precios).
 
     > [!NOTE]
-    > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure Blob storage, consulte [firmas de acceso compartido, parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) y [firmas de acceso compartido, parte 2: Crear y usar una SAS con Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+    > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure BLOB Storage, consulte firmas de acceso [Shared, parte 1: Descripción del modelo SAS @ no__t-0 y las firmas de acceso [Shared, parte 2: Cree y use una SAS con almacenamiento de blobs @ no__t-0.
 
 4. Si estás agregando nuevos paquetes para el envío, [prepara los paquetes](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) y agrégalos a un archivo ZIP.
 
@@ -107,10 +107,10 @@ Para crear un envío de un paquete piloto, sigue este proceso.
 4. Si estás agregando nuevos paquetes para el envío, carga el archivo ZIP en [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage) usando el URI de SAS que se proporcionó en el cuerpo de la respuesta del método POST que llamaste antes. Hay varias bibliotecas de Azure, que puedes usar para hacer esto en una variedad de plataformas, como:
 
     * [Biblioteca de cliente de Azure Storage para .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-    * [Almacenamiento de Azure SDK para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-    * [Almacenamiento de Azure SDK para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
+    * [SDK de Azure Storage para Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [SDK de Azure Storage para Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
-    En el siguiente ejemplo de código C# se muestra cómo cargar el archivo ZIP en Azure Blob Storage usando la clase [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob?redirectedfrom=MSDN) en la biblioteca de cliente de Azure Storage para. NET. En este ejemplo se supone que el archivo ZIP ya se ha escrito en un objeto de secuencia.
+    En el siguiente ejemplo de código C# se muestra cómo cargar el archivo ZIP en Azure Blob Storage usando la clase [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) en la biblioteca de cliente de Azure Storage para. NET. En este ejemplo se supone que el archivo ZIP ya se ha escrito en un objeto de secuencia.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -119,7 +119,7 @@ Para crear un envío de un paquete piloto, sigue este proceso.
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Ejecuta el siguiente método para [confirmar el envío de paquete piloto](commit-a-flight-submission.md). Se enviará una alerta centro de partners que haya terminado con el envío y que ahora se deben aplicar las actualizaciones a su cuenta.
+5. Ejecuta el siguiente método para [confirmar el envío de paquete piloto](commit-a-flight-submission.md). Esto le avisará al centro de Partners de que ha terminado con el envío y que las actualizaciones deben aplicarse ahora a su cuenta.
 
     ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
@@ -133,7 +133,7 @@ Para crear un envío de un paquete piloto, sigue este proceso.
 
     Para confirmar el estado del envío, revisa el valor de *status* en el cuerpo de la respuesta. Este valor debe cambiar de **CommitStarted** a **PreProcessing** si la solicitud se realiza correctamente o a **CommitFailed** si hay errores en la solicitud. Si hay errores, el campo *statusDetails* contendrá más detalles sobre el error.
 
-7. Después de completarse correctamente la confirmación, el envío se remite a la Tienda para su ingesta. Puede continuar supervisar el progreso de envío mediante el método anterior, o visitando el centro de partners.
+7. Después de completarse correctamente la confirmación, el envío se remite a la Tienda para su ingesta. Puede seguir supervisando el progreso del envío con el método anterior o visitando el centro de Partners.
 
 <span/>
 
@@ -155,7 +155,7 @@ Para obtener más información, consulta nuestra [página de StoreBroker en GitH
 
 ## <a name="manage-a-gradual-package-rollout-for-a-package-flight-submission"></a>Administrar un lanzamiento de paquete gradual para un envío de paquete piloto
 
-Puedes lanzar gradualmente los paquetes actualizados de un envío de paquete piloto para un porcentaje de los clientes de tu aplicación en Windows 10. Esto te permite supervisar los comentarios y los datos analíticos de los paquetes específicos para asegurarte de que estás seguro sobre la actualización antes de hacer un lanzamiento más amplio. Puedes cambiar el porcentaje de lanzamiento (o detener la actualización) para un envío publicado sin tener que crear un nuevo envío. Para obtener más detalles, incluidas las instrucciones sobre cómo habilitar y administrar una implementación gradual de paquete en el centro de partners, consulte [en este artículo](../publish/gradual-package-rollout.md).
+Puedes lanzar gradualmente los paquetes actualizados de un envío de paquete piloto para un porcentaje de los clientes de tu aplicación en Windows 10. Esto te permite supervisar los comentarios y los datos analíticos de los paquetes específicos para asegurarte de que estás seguro sobre la actualización antes de hacer un lanzamiento más amplio. Puedes cambiar el porcentaje de lanzamiento (o detener la actualización) para un envío publicado sin tener que crear un nuevo envío. Para obtener más información, incluidas las instrucciones para habilitar y administrar una implementación de paquetes gradual en el centro de Partners, consulte [este artículo](../publish/gradual-package-rollout.md).
 
 Para habilitar un lanzamiento de paquete gradual mediante programación para un envío de paquete piloto, sigue este proceso usando los siguientes métodos en la API de envío de Microsoft Store:
 
@@ -182,22 +182,22 @@ Después de habilitar un lanzamiento de paquete gradual para un envío de paquet
 <tr>
 <td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/packagerollout</td>
-<td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">Obtener la información de implementación gradual de envío de vuelo de un paquete</a></td>
+<td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">Obtención de la información de implementación gradual para un envío de paquetes piloto</a></td>
 </tr>
 <tr>
 <td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
-<td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">El porcentaje de implementación gradual para el envío de vuelo de un paquete de actualización</a></td>
+<td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">Actualización del porcentaje de lanzamiento gradual para un envío de paquetes piloto</a></td>
 </tr>
 <tr>
 <td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout</td>
-<td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">Detener la implementación gradual para el envío de un vuelo de paquetes</a></td>
+<td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">Detener la implementación gradual para un envío de paquetes piloto</a></td>
 </tr>
 <tr>
 <td align="left">EXPONER</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout</td>
-<td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">Finalizar la implementación gradual para el envío de un vuelo de paquetes</a></td>
+<td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">Finalización de la implementación gradual para un envío de paquetes piloto</a></td>
 </tr>
 </tbody>
 </table>
@@ -301,7 +301,7 @@ Este recurso proporciona acceso a los datos del informe de certificación de un 
 
 | Valor           | Tipo    | Descripción         |
 |-----------------|---------|------|
-|     date            |    string     |  La fecha y hora que se generó el informe, en formato ISO 8601.    |
+|     date            |    string     |  Fecha y hora en que se generó el informe, en formato ISO 8601.    |
 |     reportUrl            |    string     |  Dirección URL en la que puedes obtener acceso al informe.    |
 
 
@@ -331,13 +331,13 @@ Este recurso proporciona detalles sobre un paquete en un envío.
 Este recurso tiene los siguientes valores.
 
 > [!NOTE]
-> Al llamar al método para [actualizar un envío de paquete piloto](update-a-flight-submission.md), solo los valores *fileName*, *fileStatus*, *minimumDirectXVersion* y *minimumSystemRam* de este objeto son necesarios en el cuerpo de la solicitud. Los demás valores se rellenan con el centro de partners.
+> Al llamar al método para [actualizar un envío de paquete piloto](update-a-flight-submission.md), solo los valores *fileName*, *fileStatus*, *minimumDirectXVersion* y *minimumSystemRam* de este objeto son necesarios en el cuerpo de la solicitud. Los demás valores se rellenan con el centro de Partners.
 
 | Valor           | Tipo    | Descripción              |
 |-----------------|---------|------|
 | fileName   |   string      |  Nombre del paquete.    |  
 | fileStatus    | string    |  Estado del paquete. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  string   |  Id. que identifica de manera exclusiva el paquete. Este valor se usa por centro de partners.   |     
+| id    |  string   |  Id. que identifica de manera exclusiva el paquete. Este valor lo utiliza el centro de Partners.   |     
 | version    |  string   |  Versión del paquete de aplicación. Para obtener más información, consulta [Numeración de la versión del paquete](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
 | architecture    |  string   |  Arquitectura del paquete de aplicación (por ejemplo, ARM).   |     
 | languages    | array    |  Matriz de códigos de idioma para los idiomas que admite la aplicación. Para obtener más información, consulta [Idiomas admitidos](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
@@ -372,7 +372,7 @@ Este recurso tiene los siguientes valores.
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
 | packageRollout   |   object      |   Un [recurso de lanzamiento de paquete](#package-rollout-object) que contiene la configuración del lanzamiento de paquete gradual para el envío.    |  
-| isMandatoryUpdate    | boolean    |  Indica si vas a tratar los paquetes de este envío como obligatorios para la instalación automática de actualizaciones de la aplicación. Para obtener más información sobre los paquetes obligatorios para la instalación automática de actualizaciones de la aplicación, consulta [Descargar e instalar actualizaciones de paquete para tu aplicación](../packaging/self-install-package-updates.md).    |  
+| isMandatoryUpdate    | booleano    |  Indica si vas a tratar los paquetes de este envío como obligatorios para la instalación automática de actualizaciones de la aplicación. Para obtener más información sobre los paquetes obligatorios para la instalación automática de actualizaciones de la aplicación, consulta [Descargar e instalar actualizaciones de paquete para tu aplicación](../packaging/self-install-package-updates.md).    |  
 | mandatoryUpdateEffectiveDate    |  date   |  La fecha y la hora en que los paquetes de este envío se convierten en obligatorios, en formato ISO 8601 y zona horaria UTC.   |        
 
 <span id="package-rollout-object" />
@@ -383,13 +383,13 @@ Este recurso contiene la [configuración de lanzamiento de paquete](#manage-grad
 
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
-| isPackageRollout   |   boolean      |  Indica si el lanzamiento de paquete gradual está habilitado para el envío.    |  
+| isPackageRollout   |   booleano      |  Indica si el lanzamiento de paquete gradual está habilitado para el envío.    |  
 | packageRolloutPercentage    | flotante    |  El porcentaje de usuarios que recibirá los paquetes en el lanzamiento gradual.    |  
 | packageRolloutStatus    |  string   |  Una de las siguientes cadenas, que indica el estado del lanzamiento de paquete gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
 | fallbackSubmissionId    |  string   |  El identificador del envío que recibirán los clientes que no obtengan los paquetes de lanzamiento gradual.   |          
 
 > [!NOTE]
-> El *packageRolloutStatus* y *fallbackSubmissionId* valores se asignan por centro de partners y no están diseñados para ser establecido por el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.
+> Los valores *packageRolloutStatus* y *fallbackSubmissionId* se asignan por el centro de Partners y no están diseñados para que los establezca el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.
 
 <span/>
 
@@ -424,11 +424,11 @@ Los siguientes códigos de representan el estado de un envío.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Administrar los vuelos de paquete mediante la API de envío de Microsoft Store](manage-flights.md)
-* [Obtener el envío de un vuelo de paquetes](get-a-flight-submission.md)
-* [Crear una presentación de vuelos de paquete](create-a-flight-submission.md)
-* [Envío de vuelo de un paquete de actualización](update-a-flight-submission.md)
-* [Confirme el envío de un vuelo de paquetes](commit-a-flight-submission.md)
-* [Eliminar el envío de un vuelo de paquetes](delete-a-flight-submission.md)
-* [Obtener el estado de envío de vuelo de un paquete](get-status-for-a-flight-submission.md)
+* [Crear y administrar envíos con Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md)
+* [Administración de paquetes piloto mediante el Microsoft Store API de envío](manage-flights.md)
+* [Obtener un envío de paquete piloto](get-a-flight-submission.md)
+* [Crear un envío de paquete piloto](create-a-flight-submission.md)
+* [Actualización de un envío de paquetes piloto](update-a-flight-submission.md)
+* [Confirmar el envío de un paquete piloto](commit-a-flight-submission.md)
+* [Eliminación de un envío de paquetes piloto](delete-a-flight-submission.md)
+* [Obtención del estado de un envío de paquete piloto](get-status-for-a-flight-submission.md)

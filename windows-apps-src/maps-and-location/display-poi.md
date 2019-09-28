@@ -6,18 +6,18 @@ ms.date: 08/11/2017
 ms.topic: article
 keywords: Windows 10, uwp, mapa, map, ubicación, location, marcadores, pushpins
 ms.localizationpriority: medium
-ms.openlocfilehash: 2aca8f4daea39a190af4dd1007a6b961198994dd
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b8e14693dd6ef23714da53d652b9083f202cd62d
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370545"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340433"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>Mostrar puntos de interés en un mapa
 
 Agrega puntos de interés a un mapa con marcadores, imágenes, formas y elementos de la interfaz de usuario de XAML. Un punto de interés es un punto concreto del mapa que representa algo de interés. Por ejemplo, la ubicación de un negocio, ciudad o amigo.
 
-Para más información acerca de cómo mostrar POI en su aplicación, descargue el ejemplo siguiente la [repositorio de ejemplos de Windows universal](https://go.microsoft.com/fwlink/p/?LinkId=619979) en GitHub: [Ejemplo de asignación de universal Windows Platform (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
+Para obtener más información sobre cómo mostrar el interés en la aplicación, descargue el siguiente ejemplo del [repositorio Windows-universal-samples](https://go.microsoft.com/fwlink/p/?LinkId=619979) en github: [Ejemplo de mapa de plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
 
 Para mostrar marcadores, imágenes y formas en el mapa añadiendo objetos [**MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon), [**MapBillboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard),  [**MapPolygon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolygon) y [**MapPolyline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolyline) a una colección **MapElements** de un objeto [**MapElementsLayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelementslayer). A continuación, agrega ducho nivel a la colección **Layers** de un control de mapa.
 
@@ -163,7 +163,7 @@ public void AddLandmarkPhoto()
 }
 ```
 
-Hay tres partes de este código, vale la pena examinar investigarlo más en profundidad: La imagen, la cámara de referencia y el [ **NormalizedAnchorPoint** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.NormalizedAnchorPoint) propiedad.
+Hay tres partes de este código que merece la pena examinar un poco más cerca: La imagen, la cámara de referencia y la propiedad [**NormalizedAnchorPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapbillboard.NormalizedAnchorPoint) .
 
 ### <a name="image"></a>Image
 
@@ -352,7 +352,7 @@ En este ejemplo se muestra una colección de elementos XAML enlazados a la clase
 </maps:MapControl>
 ```
 
-La propiedad ``ItemsSource`` en el ejemplo anterior se enlaza a una propiedad de tipo [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist?view=netframework-4.70) en el archivo de código subyacente.
+La propiedad ``ItemsSource`` en el ejemplo anterior se enlaza a una propiedad de tipo [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) en el archivo de código subyacente.
 
 ```csharp
 public sealed partial class Scenario1 : Page
@@ -478,6 +478,6 @@ En la página XAML, enlaza a la propiedad en la clase de modelo de vista que dev
 * [Directrices de diseño para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
 * Vídeo de [Build 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757) (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en las aplicaciones de Windows)
 * [Ejemplo de aplicación de tráfico para UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
-* [**MapIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon)
+* [**Mapicon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon)
 * [**MapPolygon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolygon)
 * [**MapPolyline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolyline)
