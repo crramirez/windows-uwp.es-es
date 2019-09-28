@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3905ef8786a06d4221ce42511f786927c3173ba6
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c69c5e64d75e03ce5bb2ef0d82c3b816fe78a770
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363171"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339423"
 ---
 # <a name="check-boxes"></a>Casillas
 
@@ -85,7 +85,7 @@ checkBox1.Content = "I agree to the terms of service.";
 
 ### <a name="bind-to-ischecked"></a>Enlazar a IsChecked
 
-Usa la propiedad [IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) para determinar si la casilla está activada o desactivada. Puedes enlazar el valor de la propiedad IsChecked en otro valor binario. Sin embargo, dado que IsChecked es un valor booleano [que acepta valores NULL](https://docs.microsoft.com/dotnet/api/system.nullable-1?redirectedfrom=MSDN), debes usar un convertidor de valores para enlazarlo a un valor booleano.
+Usa la propiedad [IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) para determinar si la casilla está activada o desactivada. Puedes enlazar el valor de la propiedad IsChecked en otro valor binario. Sin embargo, dado que IsChecked es un valor booleano [que acepta valores NULL](https://docs.microsoft.com/dotnet/api/system.nullable-1), debes usar un convertidor de valores para enlazarlo a un valor booleano.
 
 En este ejemplo, la propiedad **IsChecked** de la casilla para aceptar los términos de servicio está enlazada a la propiedad [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) de un botón Enviar. El botón Enviar se habilita únicamente si se han aceptado los términos del servicio.
 
@@ -300,7 +300,7 @@ private void SetCheckedState()
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

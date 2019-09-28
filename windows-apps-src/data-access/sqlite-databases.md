@@ -5,12 +5,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, SQLite, base de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: 465376214f1bf1b390ec6db8609783e4e7872196
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 1cc8cfe696d35872469d97dba24f5388ff6833b5
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362788"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339786"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Usar una base de datos de SQLite en una aplicación para UWP
 Puedes usar SQLite para almacenar y recuperar datos en una base de datos ligera en el dispositivo del usuario. Esta guía te muestra cómo hacerlo.
@@ -39,7 +39,7 @@ Para probarlo, consulta [Introducción a EF Core en la Plataforma universal de 
 
 ### <a name="sqlite-library"></a>Biblioteca de SQLite
 
-La biblioteca [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) implementa las interfaces en el espacio de nombres [System.Data.Common](https://docs.microsoft.com/dotnet/api/system.data.common?redirectedfrom=MSDN). Microsoft mantiene estas implementaciones de forma activa y ofrece un contenedor intuitivo en torno a la API de SQLite nativa de bajo nivel.
+La biblioteca [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) implementa las interfaces en el espacio de nombres [System.Data.Common](https://docs.microsoft.com/dotnet/api/system.data.common). Microsoft mantiene estas implementaciones de forma activa y ofrece un contenedor intuitivo en torno a la API de SQLite nativa de bajo nivel.
 
 El resto de esta guía te ayudará a usar esta biblioteca.
 
@@ -323,8 +323,8 @@ Consulta [Usar una base de datos de SQL Server en una aplicación para UWP](sql-
 
 **Compartir código entre diferentes aplicaciones de distintas plataformas**
 
-Consulta [Compartir código entre una aplicación de escritorio y una aplicación para UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).
+Consulta [Compartir código entre una aplicación de escritorio y una aplicación para UWP](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate).
 
-**Agregar páginas de maestro y detalles con bases de datos back-end de SQL Azure**
+**Agregar páginas de detalles maestras con servidores back-end de Azure SQL**
 
 Consulta [Ejemplo de base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database).

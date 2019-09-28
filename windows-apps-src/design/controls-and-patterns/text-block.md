@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b60fbe26de6a3400972bdd216f292a45cb89df9e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 18c402b321c073b8b3450b14ca124e82b0fb9b1c
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319502"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340212"
 ---
 # <a name="text-block"></a>Bloque de texto
 
@@ -200,4 +200,4 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 - [Directrices sobre la entrada de texto](text-controls.md)
 - [Clase TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Clase Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [Propiedad String.Length](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)
+- [Propiedad String.Length](https://docs.microsoft.com/dotnet/api/system.string.length)

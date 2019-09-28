@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 02206d1f237eeeb113910aece7345ae35f22a80b
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 716f785ff6b2151913f57208068e783320292613
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363087"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339457"
 ---
 # <a name="calendar-view"></a>Vista de calendario
 
@@ -71,7 +71,7 @@ La vista de calendario resultante tiene este aspecto:
 
 De manera predeterminada, la propiedad [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selectionmode) se establece en **Single**. Esto permite al usuario seleccionar una fecha determinada en el calendario. Establece SelectionMode en **None** para deshabilitar la selección de fecha. 
 
-Establece SelectionMode en **Multiple** para permitir al usuario seleccionar varias fechas. Puedes seleccionar varias fechas mediante programación agregando objetos [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?redirectedfrom=MSDN)/[DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset?redirectedfrom=MSDN) a la colección [SelectedDates](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selecteddates), tal y como se muestra aquí:
+Establece SelectionMode en **Multiple** para permitir al usuario seleccionar varias fechas. Puedes seleccionar varias fechas mediante programación agregando objetos [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime)/[DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset) a la colección [SelectedDates](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selecteddates), tal y como se muestra aquí:
 
 ```csharp
 calendarView1.SelectedDates.Add(DateTimeOffset.Now);
@@ -210,7 +210,7 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

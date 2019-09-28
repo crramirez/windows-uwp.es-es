@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 317f373b64b1a15a9baa8310c06d6b8037ced745
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 662f23c5ab201a44669b2e4e4a454aa73ebd3b43
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364447"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340204"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>Referencias a ResourceDictionary y a los recursos XAML
 
@@ -449,9 +449,9 @@ Un [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Resou
 
 La mayoría de los escenarios de una clase [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) se controlan exclusivamente en XAML. Declaras el contenedor **ResourceDictionary** y los recursos que incluye como un archivo XAML o un conjunto de nodos XAML en un archivo de definición de interfaz de usuario. Y, a continuación, usas referencias a recursos XAML para solicitar esos recursos de otras partes del código XAML. Aun así, hay ciertos casos en que tu aplicación podría querer ajustar el contenido de un **ResourceDictionary** con código que se ejecute mientras se ejecute la aplicación, o, al menos, consultar el contenido de un **ResourceDictionary** para ver si ya se definió un recurso. Las llamadas a este código se realizan en una instancia de **ResourceDictionary**, por lo que primero tienes que recuperar una, bien un **ResourceDictionary** inmediato en algún lugar del árbol de objetos mediante la obtención de [FrameworkElement.Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.resources), o bien, `Application.Current.Resources`.
 
-En el código de C\# o Microsoft Visual Basic, puedes hacer referencia a un recurso en una clase [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) determinada, mediante el indexador ([Item](https://docs.microsoft.com/dotnet/api/system.windows.resourcedictionary.item?view=netframework-4.8)). Un **ResourceDictionary** es un diccionario de claves de cadena, por lo que el indexador usa la clave de cadena en lugar de un índice de entero. En extensiones de componentes de Visual C++ (C++/CX), usa [Lookup](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.lookup).
+En el código de C\# o Microsoft Visual Basic, puedes hacer referencia a un recurso en una clase [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) determinada, mediante el indexador ([Item](https://docs.microsoft.com/dotnet/api/system.windows.resourcedictionary.item)). Un **ResourceDictionary** es un diccionario de claves de cadena, por lo que el indexador usa la clave de cadena en lugar de un índice de entero. En extensiones de componentes de Visual C++ (C++/CX), usa [Lookup](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.lookup).
 
-Cuando uses código para examinar o cambiar un objeto [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), el comportamiento de API como [Lookup](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.lookup) o [Item](https://docs.microsoft.com/dotnet/api/system.windows.resourcedictionary.item?view=netframework-4.8), no se desvía de los recursos inmediatos a los recursos de la aplicación, ya que ese es un comportamiento del analizador XAML que solo tiene lugar al cargar las páginas XAML. En tiempo de ejecución, el ámbito de las claves es independiente en la instancia **ResourceDictionary** que se usa en ese momento, De todos modos, cabe señalar que ese ámbito sí se extiende a la propiedad [MergedDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.mergeddictionaries).
+Cuando uses código para examinar o cambiar un objeto [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), el comportamiento de API como [Lookup](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.lookup) o [Item](https://docs.microsoft.com/dotnet/api/system.windows.resourcedictionary.item), no se desvía de los recursos inmediatos a los recursos de la aplicación, ya que ese es un comportamiento del analizador XAML que solo tiene lugar al cargar las páginas XAML. En tiempo de ejecución, el ámbito de las claves es independiente en la instancia **ResourceDictionary** que se usa en ese momento, De todos modos, cabe señalar que ese ámbito sí se extiende a la propiedad [MergedDictionaries](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.mergeddictionaries).
 
 Además, si solicitas una clave que no existe en la clave [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), puede que no se produzca un error, sino que el valor devuelto sea simplemente **null**. Pero aún obtendrás un error si intentas usar el **null** devuelto como valor. El error se originará en el establecedor de la propiedad, no en la llamada de **ResourceDictionary**. La única forma de evitar el error es si la propiedad acepta **null** como valor válido. Este comportamiento contrasta con el comportamiento de búsqueda del XAML en tiempo de análisis del XAML: si no se puede resolver la clave proporcionada desde el XAML en tiempo de análisis, se produce un error de análisis del XAML, incluso aunque la propiedad haya aceptado el valor **null**.
 

@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c3076e9a098ff62ba9000b4337417013e400375e
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 86386c75407cb1132cc71766e4e126b7e0e3c81b
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66361095"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339472"
 ---
 # <a name="auto-suggest-box"></a>Cuadro de sugerencias automáticas
 
@@ -186,4 +186,4 @@ Aquí se muestra un AutoSuggestBox con un icono 'Buscar'.
 - [Buscar](search.md)
 - [Clase TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Clase Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [Propiedad String.Length](https://docs.microsoft.com/dotnet/api/system.string.length?redirectedfrom=MSDN#System_String_Length)
+- [Propiedad String.Length](https://docs.microsoft.com/dotnet/api/system.string.length)

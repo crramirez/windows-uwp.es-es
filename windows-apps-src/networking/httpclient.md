@@ -6,12 +6,12 @@ ms.date: 06/05/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 877901deeec4da7674c6c8431e5b11f5eae075ed
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 8dd1fce4e8a5c18af93df32b12ce8b20c8bc69f9
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714124"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340568"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -277,15 +277,15 @@ private async Task TryPostJsonAsync()
 
 Se inicia una excepción cuando se pasa una cadena no válida del identificador uniforme de recursos (URI) al constructor del objeto [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri).
 
-**.NET:**   el tipo[**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) aparece como [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) en C# y VB.
+**.NET:**   el tipo[**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) aparece como [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri) en C# y VB.
 
-En C# y Visual Basic, este error puede evitarse si se usa la clase [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) en .NET 4.5 y uno de los métodos [**System.Uri.TryCreate**](https://docs.microsoft.com/dotnet/api/system.uri.trycreate?redirectedfrom=MSDN#overloads) para probar la cadena recibida del usuario antes de que se cree el URI.
+En C# y Visual Basic, este error puede evitarse si se usa la clase [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri) en .NET 4.5 y uno de los métodos [**System.Uri.TryCreate**](https://docs.microsoft.com/dotnet/api/system.uri.trycreate#overloads) para probar la cadena recibida del usuario antes de que se cree el URI.
 
 En C++, no hay ningún método para probar y analizar una cadena en un URI. Si una aplicación recibe información del usuario relativa a [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri), el constructor debe estar en un bloque Try/Catch. Si se genera una excepción, la aplicación podrá notificar al usuario y solicitar otro nombre de host.
 
 [  **Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) no tiene una función conveniente. Por este motivo, una aplicación que use [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) y otras clases de este espacio de nombres debe usar el valor **HRESULT**.
 
-En las aplicaciones que usan .NET Framework 4.5 en C#, VB.NET, [System.Exception](https://docs.microsoft.com/dotnet/api/system.exception?redirectedfrom=MSDN) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](https://docs.microsoft.com/dotnet/api/system.exception.hresult?redirectedfrom=MSDN#System_Exception_HResult) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](https://docs.microsoft.com/dotnet/api/system.exception.message?redirectedfrom=MSDN#System_Exception_Message) devuelve el mensaje que describe la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
+En las aplicaciones que usan .NET Framework 4.5 en C#, VB.NET, [System.Exception](https://docs.microsoft.com/dotnet/api/system.exception) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [System.Exception.HResult](https://docs.microsoft.com/dotnet/api/system.exception.hresult#System_Exception_HResult) devuelve el valor **HRESULT** asignado a la excepción específica. La propiedad [System.Exception.Message](https://docs.microsoft.com/dotnet/api/system.exception.message#System_Exception_Message) devuelve el mensaje que describe la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
 En las aplicaciones que usan C++ administrado, [Platform::Exception](https://docs.microsoft.com/cpp/cppcx/platform-exception-class) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [Platform::Exception::HResult](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#hresult) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [Platform::Exception::Message](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#message) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 

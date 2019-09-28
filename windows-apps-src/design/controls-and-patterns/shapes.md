@@ -6,12 +6,12 @@ ms.date: 11/16/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06f5ce8ad7576114137adb862f89720e27d3802b
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: e78fddf1a0dae39d4479a4a1786a36687337c75e
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364290"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340232"
 ---
 # <a name="draw-shapes"></a>Dibujar formas
 
@@ -147,7 +147,7 @@ Y aquí tienes el [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) represe
 
 Una [**Línea**](/uwp/api/Windows.UI.Xaml.Shapes.Line) es simplemente una línea dibujada entre dos puntos en un espacio de coordenadas. Una **línea** omite cualquier valor proporcionado para [**Fill**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.fill), ya que no tiene espacio interior. Si vas a realizar una **línea**, asegúrate de especificar los valores de las propiedades [**Stroke**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.stroke) y [**StrokeThickness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.strokethickness), ya que de lo contrario no se podrá representar esa **línea**.
 
-No uses valores de la estructura [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) para especificar una [**línea**](/uwp/api/Windows.UI.Xaml.Shapes.Line); en vez de eso, puedes usar valores discretos de la estructura [**Double**](https://docs.microsoft.com/dotnet/api/system.double?redirectedfrom=MSDN) para las propiedades [**X1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x1), [**Y1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y1), [**X2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x2) y [**Y2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y2). Esto permite usar un número mínimo de marcas para líneas horizontales o verticales. Por ejemplo, `<Line Stroke="Red" X2="400"/>` define una línea horizontal de 400 píxeles de largo. Las otras propiedades X e Y tienen el valor 0 de manera predeterminada, por lo que, en términos de puntos, este XAML dibujaría una línea de `(0,0)` a `(400,0)`. A continuación, puedes usar la clase [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) para mover toda la **línea**, si quieres que se inicie en un punto que no sea (0,0).
+No uses valores de la estructura [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) para especificar una [**línea**](/uwp/api/Windows.UI.Xaml.Shapes.Line); en vez de eso, puedes usar valores discretos de la estructura [**Double**](https://docs.microsoft.com/dotnet/api/system.double) para las propiedades [**X1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x1), [**Y1**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y1), [**X2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.x2) y [**Y2**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.line.y2). Esto permite usar un número mínimo de marcas para líneas horizontales o verticales. Por ejemplo, `<Line Stroke="Red" X2="400"/>` define una línea horizontal de 400 píxeles de largo. Las otras propiedades X e Y tienen el valor 0 de manera predeterminada, por lo que, en términos de puntos, este XAML dibujaría una línea de `(0,0)` a `(400,0)`. A continuación, puedes usar la clase [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) para mover toda la **línea**, si quieres que se inicie en un punto que no sea (0,0).
 
 ```xaml
 <Line Stroke="Red" X2="400"/>
@@ -165,7 +165,7 @@ line1.X2 = 400;
 layoutRoot.Children.Add(line1);
 ```
 
-## <a name="span-idpolylinespanspan-idpolylinespanspan-idpolylinespan-polyline"></a><span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> Polilínea
+## <a name="span-id_polylinespanspan-id_polylinespanspan-id_polylinespan-polyline"></a><span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> Polilínea
 
 Una [**Polilínea**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline) es similar a un [**polígono**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) ya que el límite de la forma está definido por un conjunto de puntos, pero hay que tener en cuenta que el último punto de la **polilínea** no está conectado al primero.
 

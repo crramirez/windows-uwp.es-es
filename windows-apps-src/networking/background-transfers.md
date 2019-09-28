@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 00cf409177ae077d5df9739321c4464c2c56843d
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 7d06d91d2195c483f5453aeadbc5523a8935003c
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66371413"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71340573"
 ---
 # <a name="background-transfers"></a>Transferencias en segundo plano
 Usa la API de transferencia en segundo plano para copiar archivos de forma confiable en la red. La API de transferencia en segundo plano proporciona funciones de carga y descarga avanzadas que se ejecutan en segundo plano durante la suspensión de la aplicación y que persisten tras la finalización de esta. La API supervisa el estado de red, y suspende y reanuda automáticamente las transferencias cuando se pierde la conexión. Además, las transferencias son compatibles con el sensor de datos y el de batería, lo que significa que la actividad de descarga se ajusta según la conectividad y el estado de la batería actuales del dispositivo. La API es ideal para cargar y descargar archivos grandes mediante HTTP(S). También se admite FTP, pero solo para descargas.
@@ -282,9 +282,9 @@ Para evitar este problema, desinstala completamente todas las versiones de la ap
 ## <a name="exceptions-in-windowsnetworkingbackgroundtransfer"></a>Excepciones en Windows.Networking.BackgroundTransfer
 Se inicia una excepción cuando se pasa una cadena no válida del identificador uniforme de recursos (URI) al constructor del objeto [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri).
 
-**.NET:** El tipo [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) aparece como [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) en C# y VB.
+**.NET:** El tipo [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) aparece como [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri) en C# y VB.
 
-En C# y Visual Basic, este error puede evitarse si se usa la clase [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri?redirectedfrom=MSDN) en .NET 4.5 y uno de los métodos [**System.Uri.TryCreate**](https://docs.microsoft.com/dotnet/api/system.uri.trycreate?redirectedfrom=MSDN#overloads) para probar la cadena recibida del usuario de la aplicación antes de que se cree el URI.
+En C# y Visual Basic, este error puede evitarse si se usa la clase [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri) en .NET 4.5 y uno de los métodos [**System.Uri.TryCreate**](https://docs.microsoft.com/dotnet/api/system.uri.trycreate#overloads) para probar la cadena recibida del usuario de la aplicación antes de que se cree el URI.
 
 En C++, no hay ningún método para probar y analizar una cadena en un URI. Si una aplicación recibe información del usuario relativa a [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri), el constructor debe estar en un bloque Try/Catch. Si se genera una excepción, la aplicación podrá notificar al usuario y solicitar otro nombre de host.
 
