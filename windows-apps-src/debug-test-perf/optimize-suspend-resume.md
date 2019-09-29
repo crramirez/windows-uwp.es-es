@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f94fcdf33267ab352f5cdc274e07373952b0939b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 610b6237071c9d7435ca167c1a89b4ef7c40b333
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362164"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339576"
 ---
 # <a name="optimize-suspendresume"></a>Optimizar la suspensión y reanudación
 
@@ -60,11 +60,11 @@ Cuando serializas tus datos, debes evitar volver a hacerlo si no han sufrido cam
 
 ### <a name="serializing-data-in-c-and-visual-basic"></a>Serializar datos en C# y Visual Basic
 
-Las opciones disponibles en cuanto a la tecnología de serialización para aplicaciones .NET son las clases [**System.Xml.Serialization.XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer?redirectedfrom=MSDN), [**System.Runtime.Serialization.DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer?redirectedfrom=MSDN) y [**System.Runtime.Serialization.Json.DataContractJsonSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer?redirectedfrom=MSDN).
+Las opciones disponibles en cuanto a la tecnología de serialización para aplicaciones .NET son las clases [**System.Xml.Serialization.XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer), [**System.Runtime.Serialization.DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer) y [**System.Runtime.Serialization.Json.DataContractJsonSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer).
 
-Desde el punto de vista del rendimiento, te recomendamos usar la clase [**XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer?redirectedfrom=MSDN). La clase **XmlSerializer** cuenta con los tiempos más bajos de serialización y deserialización, y mantiene una superficie de memoria baja. Asimismo, **XmlSerializer** tiene menos dependencias en .NET Framework. Esto significa que, en comparación con otras tecnologías de serialización, deben cargarse menos módulos en la aplicación para usar **XmlSerializer**.
+Desde el punto de vista del rendimiento, te recomendamos usar la clase [**XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer). La clase **XmlSerializer** cuenta con los tiempos más bajos de serialización y deserialización, y mantiene una superficie de memoria baja. Asimismo, **XmlSerializer** tiene menos dependencias en .NET Framework. Esto significa que, en comparación con otras tecnologías de serialización, deben cargarse menos módulos en la aplicación para usar **XmlSerializer**.
 
-[**DataContractSerializer** ](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer?redirectedfrom=MSDN) resulta más fácil serializar las clases personalizadas, aunque tiene un mayor impacto de rendimiento que **XmlSerializer**. Si necesitas mejorar el rendimiento, considera cambiar de opciones. En general, no debes cargar más de un serializador y te recomendamos que uses **XmlSerializer**, a menos que necesites usar las características de otro serializador.
+[**DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer) facilita la serialización de clases personalizadas, aunque tiene un mayor impacto en el rendimiento que **XmlSerializer**. Si necesitas mejorar el rendimiento, considera cambiar de opciones. En general, no debes cargar más de un serializador y te recomendamos que uses **XmlSerializer**, a menos que necesites usar las características de otro serializador.
 
 ### <a name="reduce-memory-footprint"></a>Reducir la superficie de memoria
 
@@ -85,7 +85,7 @@ La mayoría de las aplicaciones no necesitan controlar el evento [**Resuming**](
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Directrices para la aplicación, suspensión y reanudar](https://docs.microsoft.com/windows/uwp/launch-resume/index)
+* [Directrices para suspender y reanudar aplicaciones](https://docs.microsoft.com/windows/uwp/launch-resume/index)
  
 
  

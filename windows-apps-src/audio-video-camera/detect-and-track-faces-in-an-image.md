@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: be6780851c05f59abc373318f0746c8e436b74ac
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 2f9a253d8470407141c9ae56367d123d638d12c6
+ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318408"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71339825"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>Detectar rostros en imágenes o vídeos
 
 
 
-\[Parte de la información está relacionada con productos preliminares que pueden modificarse sustancialmente antes de su lanzamiento comercial. Microsoft no ofrece ninguna garantía, expresa ni implícita, con respecto a la información proporcionada aquí.\]
+la información \[Some está relacionada con el producto publicado previamente que puede modificarse sustancialmente antes de que se publique comercialmente. Microsoft no otorga ninguna garantía, ni expresa ni implícita, con respecto a la información que se proporciona aquí. \]
 
 Este tema muestra cómo usar el [**FaceDetector**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceDetector) para detectar los rostros de una imagen El [**FaceTracker**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceTracker) está optimizado para realizar el seguimiento facial durante una secuencia de fotogramas de vídeo.
 
@@ -77,7 +77,7 @@ Si quieres detectar rostros en un vídeo, es más eficaz usar la clase [**FaceTr
 
 [!code-cs[FaceTrackingUsing](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFaceTrackingUsing)]
 
-Declara una variable de clase para el objeto **FaceTracker**. En este ejemplo se usa un [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer) para iniciar el seguimiento facial en un intervalo definido. Una clase [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?redirectedfrom=MSDN) se usa para garantizar que solo se ejecute una operación de seguimiento facial a la vez.
+Declara una variable de clase para el objeto **FaceTracker**. En este ejemplo se usa un [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer) para iniciar el seguimiento facial en un intervalo definido. Una clase [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim) se usa para garantizar que solo se ejecute una operación de seguimiento facial a la vez.
 
 [!code-cs[ClassVariables3](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetClassVariables3)]
 
@@ -91,15 +91,15 @@ La clase [**FaceTracker**](https://docs.microsoft.com/uwp/api/Windows.Media.Face
 
 Al igual que con **FaceDetector**, el **FaceTracker** admite un conjunto limitado de formatos de píxel. En este ejemplo se abandona la detección de rostro si el fotograma suministrado no está en el formato Nv12.
 
-Llama a [**ProcessNextFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facetracker.processnextframeasync) para recuperar una lista de objetos [**DetectedFace**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.DetectedFace) que representen los rostros del fotograma. Cuando tengas la lista de rostros, puedes mostrarlos del mismo modo descrito anteriormente para la detección de rostros. Tenga en cuenta que, dado que la cara del método de aplicación auxiliar de seguimiento no se llama en el subproceso de interfaz de usuario, debe realizar las actualizaciones de la interfaz de usuario en dentro de una llamada [ **CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync).
+Llama a [**ProcessNextFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.facetracker.processnextframeasync) para recuperar una lista de objetos [**DetectedFace**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.DetectedFace) que representen los rostros del fotograma. Cuando tengas la lista de rostros, puedes mostrarlos del mismo modo descrito anteriormente para la detección de rostros. Tenga en cuenta que, dado que no se llama al método auxiliar de seguimiento facial en el subproceso de interfaz de usuario, debe realizar todas las actualizaciones de la interfaz de usuario en dentro de una llamada a [**CoreDispatcher. RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync).
 
 [!code-cs[ProcessCurrentVideoFrame](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetProcessCurrentVideoFrame)]
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Análisis de la escena para captura de medios](scene-analysis-for-media-capture.md)
-* [Ejemplo básico de detección de caras](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
-* [Ejemplo básico de seguimiento de caras](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
+* [Análisis de escenas para captura multimedia](scene-analysis-for-media-capture.md)
+* [Ejemplo de Detección de caras básica](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
+* [Ejemplo de seguimiento de caras básico](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
 * [Cámara](camera.md)
-* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Captura básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Reproducción de multimedia](media-playback.md)
