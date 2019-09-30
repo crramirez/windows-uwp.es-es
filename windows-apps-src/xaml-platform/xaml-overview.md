@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 5c846d0e0110a1285e67f6f21e1eeb7a0d9c2624
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 6d45e70afa5b0dc6e903dbd253c09042bb2046c2
+ms.sourcegitcommit: f7ef7e894d7b7fc24483b4485605686abf8f2e93
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339278"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679209"
 ---
 # <a name="xaml-overview"></a>Introducción a XAML
 
@@ -144,10 +144,10 @@ XAML es un lenguaje declarativo para objetos y sus propiedades, pero también in
 Este es un ejemplo sencillo. La clase <xref:Windows.UI.Xaml.Controls.Button> admite un evento denominado <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click>. Puedes escribir un controlador para **Click** que ejecute un código que debe invocarse después de que el usuario haga clic en el **Button**. En XAML, **Click** se especifica como un atributo en el **Button**. Para el valor del atributo, proporciona una cadena que sea el nombre de método de tu controlador.
 
 ```xml
-<Button Click="showUpdatesButton-Click">Show updates</Button>
+<Button Click="showUpdatesButton_Click">Show updates</Button>
 ```
 
-A la hora de compilar, el compilador espera que haya un método denominado `showUpdatesButton-Click` definido en el archivo de código subyacente, en el espacio de nombres declarado en el valor [x:Class](x-class-attribute.md) de la página XAML. Además, ese método debe cumplir el contrato de delegado para el evento <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click>. Por ejemplo:
+A la hora de compilar, el compilador espera que haya un método denominado `showUpdatesButton_Click` definido en el archivo de código subyacente, en el espacio de nombres declarado en el valor [x:Class](x-class-attribute.md) de la página XAML. Además, ese método debe cumplir el contrato de delegado para el evento <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click>. Por ejemplo:
 
 ```csharp
 namespace App1
