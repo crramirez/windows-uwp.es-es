@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cppcx
-ms.openlocfilehash: 0832e46794302a3ccc9eba81d4b0e9d93dd9be8c
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 0a967c923d9f8616a3a05af5bb0ebb612251d3b8
+ms.sourcegitcommit: 035b03f1247eae4e9359ee7db66429d4e1c1d09b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339669"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71674545"
 ---
 # <a name="data-binding-overview"></a>Introducción al enlace de datos
 
@@ -704,7 +704,8 @@ public:
 ...
 ```
 
-> [Nota] Para la C++lista de códigos/WinRT anterior, en `StringFormatter.idl`, usamos el [atributo predeterminado](https://docs.microsoft.com/windows/desktop/midl/default) para declarar **IValueConverter** como la interfaz predeterminada. En la lista, **StringFormatter** solo tiene un constructor y ningún método, por lo que no se genera ninguna interfaz predeterminada para él. El atributo `default` es óptimo si no va a agregar miembros de instancia a **StringFormatter**, porque no se requerirá QueryInterface para llamar a los métodos de **IValueConverter** . Como alternativa, puede solicitar que se genere una interfaz **IStringFormatter** predeterminada y hacerlo anotando la propia clase en tiempo de ejecución con el [atributo default_interface](https://docs.microsoft.com/uwp/midl-3/predefined-attributes#the-default_interface-attribute). Esa opción es óptima si agrega miembros de instancia a **StringFormatter** a los que se llama con más frecuencia que los métodos de **IValueConverter** , ya que no será necesario que QueryInterface llame a los miembros de instancia.
+> [!NOTE]
+> Para la C++lista de códigos/WinRT anterior, en `StringFormatter.idl`, usamos el [atributo predeterminado](https://docs.microsoft.com/windows/desktop/midl/default) para declarar **IValueConverter** como la interfaz predeterminada. En la lista, **StringFormatter** solo tiene un constructor y ningún método, por lo que no se genera ninguna interfaz predeterminada para él. El atributo `default` es óptimo si no va a agregar miembros de instancia a **StringFormatter**, porque no se requerirá QueryInterface para llamar a los métodos de **IValueConverter** . Como alternativa, puede solicitar que se genere una interfaz **IStringFormatter** predeterminada y hacerlo anotando la propia clase en tiempo de ejecución con el [atributo default_interface](https://docs.microsoft.com/uwp/midl-3/predefined-attributes#the-default_interface-attribute). Esa opción es óptima si agrega miembros de instancia a **StringFormatter** a los que se llama con más frecuencia que los métodos de **IValueConverter** , ya que no será necesario que QueryInterface llame a los miembros de instancia.
 
 Ahora podemos agregar una instancia de **StringFormatter** como un recurso de página y usarla en el enlace del **TextBlock** que muestra la propiedad **ReleaseDateTime** .
 

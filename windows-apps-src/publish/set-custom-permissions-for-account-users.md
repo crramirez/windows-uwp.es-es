@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, roles de usuario, permiso de usuario, personalizar roles, acceso de usuario, personalizar permisos, roles estándar
 ms.localizationpriority: medium
 ms.openlocfilehash: ead8012c6d4b9243e70dcc09f7ef174a3d907356
-ms.sourcegitcommit: afb5157ec4bcb6588ac4cf74352688b30ed32257
+ms.sourcegitcommit: 035b03f1247eae4e9359ee7db66429d4e1c1d09b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 09/30/2019
 ms.locfileid: "68349220"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Establecer roles o permisos personalizados para usuarios de cuentas
@@ -43,7 +43,7 @@ A menos que decidas definir [permisos personalizados](#custom) seleccionando **P
 
 | Rol                 | Descripción              |
 |----------------------|--------------------------|
-| Administrador              | Tiene acceso completo a la cuenta, excepto para cambiar la configuración fiscal y de pago. Esto incluye la administración de usuarios en el centro de Partners, pero tenga en cuenta que la capacidad de crear y eliminar usuarios en el inquilino de Azure AD depende del permiso de la cuenta en Azure AD. Es decir, si un usuario tiene asignado el rol de administrador, pero no tiene permisos de administrador global en el Azure AD de la organización, no podrá crear nuevos usuarios ni eliminar usuarios del directorio (aunque pueden cambiar el rol del centro de Partners de un usuario). <p> Tenga en cuenta que si la cuenta del centro de Partners está asociada a más de un inquilino Azure AD, un administrador no podrá ver los detalles completos de un usuario (incluido el nombre, el apellido, el correo electrónico de recuperación de la contraseña y si se trata de un administrador global Azure AD) a menos que estén ha iniciado sesión en el mismo inquilino que ese usuario con una cuenta que tiene permisos de administrador global para ese inquilino. Sin embargo, pueden agregar y quitar usuarios de cualquier inquilino que esté asociado a la cuenta del centro de Partners. |
+| Manager              | Tiene acceso completo a la cuenta, excepto para cambiar la configuración fiscal y de pago. Esto incluye la administración de usuarios en el centro de Partners, pero tenga en cuenta que la capacidad de crear y eliminar usuarios en el inquilino de Azure AD depende del permiso de la cuenta en Azure AD. Es decir, si un usuario tiene asignado el rol de administrador, pero no tiene permisos de administrador global en el Azure AD de la organización, no podrá crear nuevos usuarios ni eliminar usuarios del directorio (aunque pueden cambiar el rol del centro de Partners de un usuario). <p> Tenga en cuenta que si la cuenta del centro de Partners está asociada a más de un inquilino Azure AD, un administrador no podrá ver los detalles completos de un usuario (incluido el nombre, el apellido, el correo electrónico de recuperación de la contraseña y si se trata de un administrador global Azure AD) a menos que estén ha iniciado sesión en el mismo inquilino que ese usuario con una cuenta que tiene permisos de administrador global para ese inquilino. Sin embargo, pueden agregar y quitar usuarios de cualquier inquilino que esté asociado a la cuenta del centro de Partners. |
 | Desarrollador            | Puede cargar paquetes y enviar aplicaciones y complementos, así como ver el [Informe de uso](usage-report.md) para obtener información detallada de telemetría. Puede tener acceso a [la funcionalidad de experiencias entre dispositivos](https://go.microsoft.com/fwlink/?linkid=874042) . No puede ver la configuración de la cuenta ni la información financiera.   |
 | Colaborador empresarial | Puede ver informes de [estado](health-report.md) y de [uso](usage-report.md). No puede crear ni enviar productos, cambiar la configuración de cuenta ni ver información financiera.   |
 | Colaborador financiero  | Puede ver [informes de pago](payout-summary.md), información financiera e informes de adquisición. No puede modificar las aplicaciones, los complementos ni la configuración de la cuenta.    |
@@ -51,14 +51,14 @@ A menos que decidas definir [permisos personalizados](#custom) seleccionando **P
 
 La siguiente tabla muestra algunas de las características específicas disponibles para cada rol (y para el propietario de la cuenta).
 
-|                                                       |    Propietario de la cuenta                 |    Administrador                       |    Desarrollador                     |    Colaborador empresarial    |    Colaborador financiero    |    Vendedor                      |
+|                                                       |    Propietario de la cuenta                 |    Manager                       |    Desarrollador                     |    Colaborador empresarial    |    Colaborador financiero    |    Vendedor                      |
 |-------------------------------------------------------|----------------------------------|----------------------------------|----------------------------------|----------------------------|---------------------------|----------------------------------|
 |    Informe de adquisición (incluidos los datos casi en tiempo real) |    Puede ver                      |    Puede ver                      |    Sin acceso                     |    Sin acceso               |    Puede ver               |    Sin acceso                     |
 |    Respuestas/informe de comentarios                          |    Puede ver y enviar comentarios    |    Puede ver y enviar comentarios    |    Puede ver y enviar comentarios    |    Sin acceso               |    Sin acceso              |    Puede ver y enviar comentarios    |
 |    Informe de mantenimiento (incluidos los datos casi en tiempo real)      |    Puede ver                      |    Puede ver                      |    Puede ver                      |    Puede ver                |    Sin acceso              |    Sin acceso                     |
 |    Informe de uso                                       |    Puede ver                      |    Puede ver                      |    Puede ver                      |    Puede ver                |    Sin acceso              |    Sin acceso                     |
 |    Cuenta de pago                                     |    Puede actualizar                    |    Sin acceso                     |    Sin acceso                     |    Sin acceso               |    Puede actualizar             |    Sin acceso                     |
-|    Perfil impositivo                                        |    Puede actualizar                    |    Sin acceso                     |    Sin acceso                     |    Sin acceso               |    Puede actualizar             |    Sin acceso                     |
+|    Perfil fiscal                                        |    Puede actualizar                    |    Sin acceso                     |    Sin acceso                     |    Sin acceso               |    Puede actualizar             |    Sin acceso                     |
 |    Resumen de pago                                     |    Puede ver                      |    Sin acceso                     |    Sin acceso                     |    Sin acceso               |    Puede ver               |    Sin acceso                     |
 
 Si ninguno de los roles estándar es adecuado o si quieres limitar el acceso a complementos o aplicaciones determinados, puedes seleccionar **Personalizar permisos** para conceder permisos personalizados al usuario, tal y como se describe a continuación.
@@ -95,7 +95,7 @@ Los permisos de esta sección no se pueden limitar a productos específicos. La 
     </colgroup>
     <thead>
     <tr class="header">
-    <th align="left">Nombre del permiso</th>
+    <th align="left">Nombre de permiso</th>
     <th align="left">Solo lectura</th>
     <th align="left">Lectura y escritura</th>
     </tr>
@@ -103,11 +103,11 @@ Los permisos de esta sección no se pueden limitar a productos específicos. La 
     <tbody>
 <tr><td align="left">    <b>Configuración de la cuenta</b>                    </td><td align="left">  Permite ver todas las páginas de la sección <b>Configuración de la cuenta</b>, incluida la <a href="managing-your-profile.md">información de contacto</a>.       </td><td align="left">  Permite ver todas las páginas de la sección <b>Configuración de la cuenta</b>. Permite realizar cambios en la <a href="managing-your-profile.md">información de contacto</a> y en otras páginas, pero no en la cuenta de pago ni en el perfil fiscal (a menos que este permiso se haya concedido por separado).            </td></tr>
 <tr><td align="left">    <b>Usuarios de cuenta</b>                       </td><td align="left">  Permite ver los usuarios que se han agregado a la cuenta en la sección <b>Usuarios</b>.          </td><td align="left">  Permite agregar usuarios a la cuenta y realizar cambios en los usuarios existentes en la sección <b>Usuarios</b>.             </td></tr>
-<tr><td align="left">    <b>Informe de rendimiento de ad de nivel de cuenta</b> </td><td align="left">  Permite ver el <a href="advertising-performance-report.md">Informe Rendimiento de la publicidad</a> de nivel de cuenta.      </td><td align="left">  N/D   </td></tr>
+<tr><td align="left">    <b>Informe de rendimiento de ad de nivel de cuenta</b> </td><td align="left">  Permite ver el <a href="advertising-performance-report.md">Informe de rendimiento de la publicidad</a> de nivel de cuenta.      </td><td align="left">  N/D   </td></tr>
 <tr><td align="left">    <b>Campañas de ad</b>                        </td><td align="left">  Permite ver las <a href="create-an-ad-campaign-for-your-app.md">campañas de anuncios</a> que se han creado en la cuenta.      </td><td align="left">  Permite crear, administrar y ver las <a href="create-an-ad-campaign-for-your-app.md">campañas de anuncios</a> que se han creado en la cuenta.          </td></tr>
 <tr><td align="left">    <b>Mediación de anuncios</b>                        </td><td align="left">  Puede ver las configuraciones de mediación de anuncios de todos los productos de la cuenta.    </td><td align="left">  Puede ver y cambiar las configuraciones de mediación de anuncios de todos los productos de la cuenta.        </td></tr>
 <tr><td align="left">    <b>Informes de mediación de anuncios</b>                </td><td align="left">  Permite ver el <a href="ad-mediation-report.md">informe de mediación de anuncios</a> de todos los productos de la cuenta.    </td><td align="left">  N/D    </td></tr>
-<tr><td align="left">    <b>Informes de rendimiento de ad</b>              </td><td align="left">  Permite ver los <a href="advertising-performance-report.md">Informes Rendimiento de la publicidad</a> de todos los productos de la cuenta.       </td><td align="left">  N/D         </td></tr>
+<tr><td align="left">    <b>Informes de rendimiento de ad</b>              </td><td align="left">  Permite ver los <a href="advertising-performance-report.md">informes de rendimiento de la publicidad</a> de todos los productos de la cuenta.       </td><td align="left">  N/D         </td></tr>
 <tr><td align="left">    <b>Unidades de anuncio</b>                            </td><td align="left">  Permite ver las <a href="in-app-ads.md">unidades de anuncios</a> que se han creado para la cuenta.    </td><td align="left">  Permite crear, administrar y ver las <a href="in-app-ads.md">unidades de anuncios</a> de la cuenta.             </td></tr>
 <tr><td align="left">    <b>Anuncios afiliados</b>                       </td><td align="left">  Permite ver la utilización de <a href="about-affiliate-ads.md">anuncios de filiales</a> de todos los productos de la cuenta.    </td><td align="left">  Permite administrar y ver la utilización de los <a href="about-affiliate-ads.md">anuncios de filiales</a> de todos los productos de la cuenta.                </td></tr>
 <tr><td align="left">    <b>Informes de rendimiento de afiliados</b>      </td><td align="left">  Permite ver el <a href="affiliates-performance-report.md">informe de rendimiento de filiales</a> de todos los productos de la cuenta.   </td><td align="left">  N/D   </td></tr>
@@ -123,7 +123,7 @@ Los permisos de esta sección no se pueden limitar a productos específicos. La 
 <tr><td align="left">    <b>Cuenta de pago</b>                      </td><td align="left">  Permite ver la <a href="setting-up-your-payout-account-and-tax-forms.md#payout-account">información de la cuenta de pago</a> en <b>Configuración de la cuenta</b>.     </td><td align="left">  Permite editar y ver la <a href="setting-up-your-payout-account-and-tax-forms.md#payout-account">información de la cuenta de pago</a> en <b>Configuración de la cuenta</b>.       </td></tr>
 <tr><td align="left">    <b>Resumen de pagos</b>                      </td><td align="left">  Permite ver el <a href="payout-summary.md">resumen de pago</a> para acceder y descargar información de informes de pago.       </td><td align="left">  Permite ver el <a href="payout-summary.md">resumen de pago</a> para acceder y descargar información de informes de pago.   </td></tr>
 <tr><td align="left">    <b>Usuarios de confianza</b>&nbsp;*                   </td><td align="left">  Permite ver los usuarios de confianza para recuperar XTokens.    </td><td align="left">  Permite administrar y ver los usuarios de confianza para recuperar XTokens.     </td></tr>
-<tr><td align="left">    <b>Espacios aislados</b>&nbsp;*                         </td><td align="left">  Permite acceder a la página de <b>Espacios aislados</b> y ver los espacios aislados de la cuenta y cualquier configuración que se aplique a dichos espacios. No permite ver los productos ni los envíos de cada espacio aislado a menos que se otorguen los permisos de nivel de producto oportunos. </td><td align="left">  Permite acceder a la página de <b>espacios aislados</b>, y ver y administrar los espacios aislados en la cuenta, incluida la creación y la eliminación de espacios aislados y la administración de sus configuraciones. No permite ver los productos ni los envíos de cada espacio aislado a menos que se otorguen los permisos de nivel de producto oportunos.    </td></tr>
+<tr><td align="left">    <b>Espacios aislados</b>&nbsp;*                         </td><td align="left">  Permite acceder a la página de <b>espacios aislados</b>, y ver los espacios aislados de la cuenta y cualquier configuración que se aplique a dichos espacios. No permite ver los productos ni los envíos de cada espacio aislado a menos que se otorguen los permisos de nivel de producto oportunos. </td><td align="left">  Permite acceder a la página de <b>espacios aislados</b>, y ver y administrar los espacios aislados en la cuenta, incluida la creación y la eliminación de espacios aislados y la administración de sus configuraciones. No permite ver los productos ni los envíos de cada espacio aislado a menos que se otorguen los permisos de nivel de producto oportunos.    </td></tr>
 <tr><td align="left">    <b>Eventos de ventas de la Store</b>&nbsp;*                            </td><td align="left">  N/D    </td><td align="left">  Permite configurar la opción de incluir productos automáticamente en los eventos de venta de la Store.     </td></tr>
 <tr><td align="left">    <b>Perfil de impuestos</b>                         </td><td align="left">  Permite ver la <a href="setting-up-your-payout-account-and-tax-forms.md#tax-forms">información del perfil fiscal y los formularios</a> en <b>Configuración de la cuenta</b>.     </td><td align="left">  Permite rellenar formularios fiscales y actualizar la <a href="setting-up-your-payout-account-and-tax-forms.md#tax-forms">información del perfil fiscal</a> en <b>Configuración de la cuenta</b>.     </td></tr>
 <tr><td align="left">    <b>Cuentas de prueba</b>&nbsp;*                     </td><td align="left">  Permite ver las cuentas de la configuración de Xbox Live de prueba.      </td><td align="left">  Permite crear, administrar y ver las cuentas de configuración de Xbox Live de prueba.      </td></tr>
@@ -157,7 +157,7 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nombre&nbsp;del permiso</th>
+    <th align="left">Nombre&nbsp;de permiso</th>
     <th align="left">Solo&nbsp;lectura</th>
     <th align="left">Lectura y escritura</th>
     <th align="left">Solo&nbsp;lectura&nbsp;(complemento) </th>
@@ -165,10 +165,10 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>Adquisiciones</b> (incluidos los datos casi en tiempo real) </td><td>    Permite ver los informes de <a href="acquisitions-report.md">adquisiciones</a> y de <a href="add-on-acquisitions-report.md">adquisiciones de complementos</a> del producto.        </td><td>    N/D    </td><td>    N/A (la configuración de producto principal incluye  el informe de adquisiciones de complementos)        </td><td>    N/D                         </td></tr>
+    <tr><td align="left">    <b>Adquisiciones</b> (incluidos los datos casi en tiempo real) </td><td>    Permite ver los informes de <a href="acquisitions-report.md">adquisiciones</a> y de <a href="add-on-acquisitions-report.md">adquisiciones de complementos</a> del producto.        </td><td>    N/D    </td><td>    N/A (la configuración de producto principal incluye el informe de adquisiciones de complementos)        </td><td>    N/D                         </td></tr>
     <tr><td align="left">    <b>Uso</b> </td><td>    Permite ver el <a href="usage-report.md">informe de utilización</a> del producto.     </td><td>    N/D       </td><td>    N/D     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Mantenimiento</b> de (incluidos los datos casi en tiempo real) </td><td>    Permite ver el <a href="health-report.md">informe Mantenimiento</a> del producto.    </td><td>    N/D     </td><td>    N/D     </td><td>    N/D         </td></tr>
-    <tr><td align="left">    <b>Comentarios del cliente</b>    </td><td>    Permite ver los informes <a href="reviews-report.md">Valoraciones</a> y <a href="feedback-report.md">Comentarios</a> del producto.       </td><td>    N/D (para responder a los comentarios o a las valoraciones, se debe conceder el permiso correspondiente para <b>ponerse en contacto con los clientes</b>)   </td><td>    N/D     </td><td>    N/D         </td></tr>
+    <tr><td align="left">    <b>Comentarios del cliente</b>    </td><td>    Permite ver los informes <a href="reviews-report.md">Valoraciones</a> y <a href="feedback-report.md">Comentarios</a> del producto.       </td><td>    N/D (para responder a los comentarios o a las críticas, se debe conceder el permiso correspondiente para <b>ponerse en contacto con los clientes</b>)   </td><td>    N/D     </td><td>    N/D         </td></tr>
     <tr><td align="left">    <b>Análisis de Xbox</b> </td><td>    Puede ver el <a href="xbox-analytics-report.md">Informe de análisis de Xbox</a> del producto.    </td><td>    N/D   </td><td>    N/D       </td><td>    N/D          </td></tr>
     </tbody>
     </table>
@@ -178,7 +178,7 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nombre&nbsp;del permiso</th>
+    <th align="left">Nombre&nbsp;de permiso</th>
     <th align="left">Solo&nbsp;lectura</th>
     <th align="left">Lectura y escritura</th>
     <th align="left">Solo&nbsp;lectura&nbsp;(complemento) </th>
@@ -194,12 +194,12 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     </tbody>
     </table>
 
-### <a name="publishing"></a>Publicación 
+### <a name="publishing"></a>Publishing 
 
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nombre&nbsp;del permiso</th>
+    <th align="left">Nombre&nbsp;de permiso</th>
     <th align="left">Solo&nbsp;lectura</th>
     <th align="left">Lectura y escritura</th>
     <th align="left">Solo&nbsp;lectura&nbsp;(complemento) </th>
@@ -227,7 +227,7 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
 <table>
     <thead>
     <tr class="header">
-    <th align="left">Nombre&nbsp;del permiso</th>
+    <th align="left">Nombre&nbsp;de permiso</th>
     <th align="left">Solo&nbsp;lectura</th>
     <th align="left">Lectura y escritura</th>
     <th align="left">Solo&nbsp;lectura&nbsp;(complemento) </th>
@@ -239,7 +239,7 @@ Ten en cuenta que algunos permisos no se pueden establecer para los complementos
     <tr><td align="left">    <b>Servicios de asociados</b>&nbsp;*</td><td>    Puede ver la página servicios Web de una cuenta.  </td><td>    Puede ver y editar la página servicios Web de una cuenta.      </td><td>    N/D    </td><td>    N/D                      </td></tr>
     <tr><td align="left">    <b>Cuentas de prueba de Xbox</b>&nbsp;*</td><td>    Puede ver la página cuentas de prueba de Xbox de una cuenta.  </td><td>    Puede ver y editar la página de cuentas de prueba de Xbox de una cuenta.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
     <tr><td align="left">    <b>Cuentas de prueba de Xbox por espacio aislado</b>&nbsp;*</td><td>    Puede ver la página cuentas de prueba de Xbox solo para los espacios aislados especificados de una cuenta.  </td><td>    Puede ver y editar la prueba de Xbox.   <tr><td align="left">    <b>Página cuentas solo para los espacios aislados especificados de una cuenta    </td><td>    N/D    </td><td>    N/D                      </td></tr>
-    <tr><td align="left">    <b>Dispositivos Xbox</b>&nbsp;*</td><td>    Puede ver la página de las consolas de desarrollo de Xbox One de una cuenta.  </td><td>    Puede ver y editar la página de las consolas de desarrollo de Xbox One de una cuenta.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
+    <tr><td align="left"><b>dispositivos Xbox</b>&nbsp; @ no__t-3</td><td>    Puede ver la página de las consolas de desarrollo de Xbox One de una cuenta.  </td><td>    Puede ver y editar la página de las consolas de desarrollo de Xbox One de una cuenta.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
     <tr><td align="left">    <b>Dispositivos Xbox por espacio aislado</b>&nbsp;*</td><td>    Puede ver la página de consolas de desarrollo de Xbox One solo para los espacios aislados especificados de una cuenta.  </td><td>    Puede ver y editar la página de consolas de desarrollo de Xbox One solo para los espacios aislados especificados de una cuenta.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
     <tr><td align="left">    <b>Canales de aplicación</b>&nbsp;*</td><td>    N/D  </td><td>    Permite publicar promocionales canales de vídeo en la consola Xbox para su visualización a través de OneGuide.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
     <tr><td align="left">    <b>Configuración del servicio</b>&nbsp;*</td><td>    Puede ver la página de configuración del servicio Xbox Live de un producto.  </td><td>    Puede ver y editar la página de configuración del servicio Xbox Live de un producto.    </td><td>    N/D    </td><td>    N/D                      </td></tr>
