@@ -6,12 +6,12 @@ keywords: Introducción a Visual Studio con licencia de desarrollador, dispositi
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 705ff7fab00d13123211feb747ea9a9f95b0cc43
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 1a4c1f90c0fa8304f95b1dc958fe5a75e74301dd
+ms.sourcegitcommit: 7791596c25baf9d222729e057ecdf81b45a59f0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867611"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71205932"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -47,7 +47,7 @@ Esta es la página de configuración de la familia de dispositivos de escritorio
 ## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a>¿Qué opción de configuración debo elegir: transferencia local de aplicaciones o modo de desarrollador?
 
 > [!NOTE]
-> A partir de la compilación 18956 de Windows Insider, se ha retirado la opción de instalación de prueba y el modo de desarrollador ahora es un comando de alternancia. Consulta más información sobre la instalación de prueba en la sección siguiente. 
+> A partir de la compilación 18956 de Windows Insider, se ha retirado la opción de instalación de prueba y el modo de desarrollador ahora es un comando de alternancia. Consulta más información sobre la instalación de prueba en la sección siguiente.
 
  Puedes habilitar un dispositivo para el desarrollo o solo para transferir aplicaciones localmente.
 
@@ -60,7 +60,7 @@ De manera predeterminada, solo puedes instalar aplicaciones para Plataforma univ
 ### <a name="sideload-apps"></a>Instalación de prueba de aplicaciones
 
 > [!NOTE]
-> A partir de la compilación 18956 de Windows Insider, la instalación de prueba está habilitada de forma predeterminada. Ahora, puedes implementar un paquete MSIX firmado en un dispositivo sin una configuración especial. 
+> A partir de la compilación 18956 de Windows Insider, la instalación de prueba está habilitada de forma predeterminada. Ahora, puedes implementar un paquete MSIX firmado en un dispositivo sin una configuración especial.
 
 Por lo general, la opción de aplicaciones transferidas localmente la usan las empresas y centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store, o cualquier otra persona que necesite ejecutar aplicaciones de fuentes distintas a Microsoft. En este caso, la organización suele aplicar una directiva que deshabilita el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para obtener más información, consulta los artículos de TechNet [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) e [Introducción a la implementación de aplicaciones en Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/add-apps).
 
@@ -100,7 +100,7 @@ Para obtener más información sobre el Portal de dispositivos, consulta [Introd
 
 Para obtener instrucciones específicas sobre la configuración del dispositivo, consulta:
 - [Portal de dispositivos para dispositivos de escritorio](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [Portal de dispositivos para HoloLens](https://developer.microsoft.com/mixed-reality)
+- [Portal de dispositivos para HoloLens](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal)
 - [Portal de dispositivos para IoT](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
 - [Portal de dispositivos para dispositivos móviles](../debug-test-perf/device-portal-mobile.md)
 - [Portal de dispositivos para Xbox](../xbox-apps/device-portal-xbox.md)
@@ -207,26 +207,26 @@ Puedes usar gpedit.msc para definir las directivas de grupo necesarias para habi
 1.  Ejecuta **regedit**.
 2.  Para habilitar la instalación de prueba, establece el valor de este DWORD en 1:
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps**
+    -   `HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps`
 
     - O bien
 
     Para habilitar el modo de desarrollador, establece los valores de este DWORD en 1:
 
-    -   **HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense**
+    -   `HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense`
 
 **Usar PowerShell para habilitar el dispositivo**
 
 1.  Ejecuta PowerShell con privilegios de administrador.
 2.  Para habilitar la instalación de prueba, ejecuta el siguiente comando:
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"**
+    -   `PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"`
 
     - O bien
 
     Para habilitar el modo de desarrollador, ejecuta el siguiente comando:
 
-    -   **PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"**
+    -   `PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"`
 
 ## <a name="upgrade-your-device-from-windows-81-to-windows-10"></a>Actualizar el dispositivo de Windows 8.1 a Windows 10
 
@@ -235,7 +235,7 @@ Si creas o transfieres localmente aplicaciones en un dispositivo con Windows 8.1
 **Para anular el registro de una licencia de desarrollador**
 
 1.  Ejecuta PowerShell con privilegios de administrador.
-2.  Ejecutar este comando: **unregister-windowsdeveloperlicense**.
+2.  Ejecuta este comando: `unregister-windowsdeveloperlicense`.
 
 Después debes habilitar el dispositivo para el desarrollo, tal como se describe en este tema, para que puedas seguir desarrollando en este dispositivo. Si no lo haces, es posible que obtengas un error al depurar la aplicación o intentar crear un paquete para ella. Este es un ejemplo de este error:
 
