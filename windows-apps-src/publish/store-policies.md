@@ -7,19 +7,19 @@ ms.topic: article
 keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: 3511fb221e1e087f7ced5ce11aca8d53bd027079
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 26c7a7a123d8892bf1c3584685db49f2d86c654a
+ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66826482"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705552"
 ---
 # <a name="microsoft-store-policies"></a>Directivas de Microsoft Store
 
 
-**Versión del documento: 7.11**
+**Versión del documento: 7.12**
 
-**Fecha del documento: 5 de marzo de 2019**
+**Fecha del documento: 1 de octubre de 2019**
 
 > [!NOTE]
 > Para ver un resumen de los cambios recientes en este acuerdo, consulte [Historial de cambios](store-policies-change-history.md).
@@ -72,9 +72,9 @@ Si tiene comentarios sobre las directivas, podrá publicarlos en [nuestro foro](
 - [11.9 Blasfemias excesivas y contenido inapropiado](#119-excessive-profanity-and-inappropriate-content)
 - [11.10 Requisitos específicos de país o región](#1110-countryregion-specific-requirements)
 - [11.11 Clasificaciones por edad](#1111-age-ratings)
+- [11.12 Contenido generado por el usuario](#1112-user-generated-content)
 
 ## <a name="product-policies"></a>Directivas del producto
-
 
 ### <a name="101-distinct-function--value-accurate-representation"></a>10.1 Función y valor diferenciados; representación precisa
 
@@ -128,6 +128,9 @@ El producto puede depender de software no integrado (como por ejemplo, otro prod
 
 Todas las ofertas del producto y dentro del producto que están disponibles para su compra en Store se deben instalar y actualizar únicamente a través de la Store.
 
+**10.2.6**
+
+No se permiten las aplicaciones que habilitan la minería de criptomoneda en el dispositivo. Se permiten las aplicaciones que permiten la administración remota de la minería de criptodivisa.
 
 ### <a name="103-product-is-testable"></a>10.3 El producto se puede probar
 
@@ -238,7 +241,9 @@ Si el producto requiere información de cuentas financieras, debe enviar ese pro
 
 **10.8.4**
 
-El producto y sus metadatos asociados deben proporcionar información sobre los tipos de compras desde el producto ofrecidos y la gama de precios. No debería inducir a error a los clientes, debiendo ser claro sobre la naturaleza de las promociones y ofertas que aparecen en el producto, incluyendo el ámbito y los términos de las experiencias de prueba. Si el producto restringe el acceso a contenidos creados por los usuarios durante una prueba o después de esta, debe notificar a los usuarios por adelantado. Además, el producto debe indicar claramente a los usuarios que están iniciando una opción de compra en el producto. 
+El producto y sus metadatos asociados deben proporcionar información sobre los tipos de compras desde el producto ofrecidos y la gama de precios. No debería inducir a error a los clientes, debiendo ser claro sobre la naturaleza de las promociones y ofertas que aparecen en el producto, incluyendo el ámbito y los términos de las experiencias de prueba. Si el producto restringe el acceso a contenidos creados por los usuarios durante una prueba o después de esta, debe notificar a los usuarios por adelantado. Además, el producto debe indicar claramente a los usuarios que están iniciando una opción de compra en el producto.
+
+Si el juego ofrece "cofres de botín" u otros mecanismos que proporcionan elementos virtuales aleatorios, es necesario revelar a los clientes antes de la compra las probabilidades de recibir cada artículo. Estas revelaciones pueden aparecer: en el producto, como en una tienda en la aplicación; en la página de descripción del producto de Microsoft Store; o en el sitio web del desarrollador o editor, con un vínculo desde la página de descripción del producto de Microsoft Store o desde la aplicación.
 
 **10.8.6**
 
@@ -246,6 +251,9 @@ Debe usar la API de facturación periódica de Microsoft para facturar suscripci
 - Puede agregar valor a una suscripción, pero no se puede quitar el valor para los usuarios que la han adquirido anteriormente.
 - Si cancela una suscripción activa, debe seguir proporcionando los servicios o bienes digitales adquiridos hasta que caduque la suscripción.
 
+**10.8.7**
+
+Los precios, incluidas las ventas y los descuentos, de todos los productos o servicios digitales deben cumplir todas las leyes, regulaciones y directrices regulatorias vigentes, incluidas las [guías contra precios engañosos](https://www.ecfr.gov/cgi-bin/text-idx?SID=676bd39fe43a808fcb417973b3d0247e&mc=true&tpl=/ecfrbrowse/Title16/16cfr233_main_02.tpl) de la Comisión Federal de Comercio (FTC), entre otras. 
 
 ### <a name="109-notifications"></a>10.9 Notificaciones
 
@@ -279,6 +287,7 @@ Para todas las actividades relacionadas con la publicidad, se aplican los requis
 - La principal finalidad de este producto no debe ser hacer que los usuarios hagan clic en los anuncios.
 - El producto no puede hacer nada que interfiera con o disminuya la visibilidad, el valor o la calidad de los anuncios que muestra.
 - El producto debe respetar la configuración del id. de publicidad que el usuario seleccionó.
+- Toda la publicidad debe ser veraz, no engañosa y cumplir todas las leyes, regulaciones y directrices regulatorias vigentes.
 
 **10.10.2**
 
@@ -302,11 +311,9 @@ En la declaración de privacidad o los términos de uso se debe informar a los u
 
 Si el producto está dirigida a niños menores de 13 años (tal y como se define en la [Ley de Protección de la Privacidad Infantil en Internet](http://go.microsoft.com/fwlink/p/?LinkID=623015)), debe notificárselo a Microsoft en el Centro de partners y asegurarse de que todos los anuncios que se muestran en el producto son apropiados para niños menores de 13 años.
 
-
 ### <a name="1011-mobile-voice-plans"></a>10.11 Planes de voz móviles
 
 El producto no venderá planes de voz móviles, ni se vinculará a ningún plan ni tampoco los promocionará de ninguna otra manera.
-
 
 ### <a name="1012-edge-extensions"></a>10.12 Extensiones de Edge
 
@@ -317,14 +324,13 @@ Las Extensiones de Edge están sujetas a los siguientes requisitos adicionales:
 - Si la extensión recopila la actividad de exploración web, debe hacerlo solo si es necesario y solo para su uso en una característica orientada al usuario que esté en un lugar claramente visible.
 - La extensión no debe modificar, ni parecer que modifica, mediante programación la funcionalidad o la configuración del navegador, lo que incluye, entre otros, el proveedor de búsquedas y las sugerencias de la barra de direcciones, el inicio o la página principal, la página de nueva pestaña, la función de agregar o quitar favoritos y los elementos de la lista de lectura.
 
-
 ### <a name="1013-gaming-and-xbox"></a>10.13 Juegos y Xbox
 
 En el caso de los productos que constituyen experiencias de juego principalmente o que están destinadas a Xbox One, se aplican los requisitos siguientes:
 
 **10.13.1**
 
-Los productos de juegos destinados a Xbox One deben usar los servicios de Xbox Live a través de los programas [Xbox Live Creators](https://go.microsoft.com/fwlink/?linkid=844722) o [ID@Xbox](http://go.microsoft.com/fwlink/?LinkId=821742).
+Los productos de juegos, incluidos los productos que ofrecen principalmente funcionalidad de reproducción o control remoto de juegos que se ejecutan en otros dispositivos o plataformas, y que tienen como destino Xbox One, deben usar los servicios de Xbox Live a través del programa [Xbox Live Creators](https://go.microsoft.com/fwlink/?linkid=844722) o [ID@Xbox](http://go.microsoft.com/fwlink/?LinkId=821742).
 
 **10.13.2**
 
@@ -379,11 +385,9 @@ Los siguientes requisitos de privacidad se aplican a los datos de usuario de Xbo
 - Los servicios y los datos de usuarios deben usarse correctamente en los juegos. Estos datos incluyen (sin limitación): datos de uso, identificadores de cuenta y cualquier otro dato de identificación personal, estadísticas, puntuaciones, calificaciones, clasificaciones, conexiones con otros usuarios y otros datos relacionados con la actividad social del usuario.
 - No almacene ningún dato de gráficos sociales de Xbox Live (por ejemplo, listas de amigos), excepto los identificadores de cuenta de los usuarios que han vinculado su cuenta de Xbox Live con su juego.
 - Elimine todos los identificadores de cuenta cuando quite el juego de nuestro servicio o cuando un usuario desvincule su cuenta de Xbox Live del juego. No comparta servicios ni datos de usuario (aunque sean anónimos, agregados o derivados) con redes de anuncios, agentes de datos ni otros servicios de publicidad o relacionados con la monetización.
-- Cuando Microsoft reciba solicitudes de usuarios finales para eliminar sus datos personales, le comunicaremos las solicitudes, facilitándole una lista de los identificadores de los usuarios finales. Debe comprobar la lista al menos cada 30 días, para garantizar que reciba todas las solicitudes de eliminación, y debe usar la información proporcionada en la lista solo para satisfacer las solicitudes de eliminación de los usuarios finales. Puede encontrar detalles sobre este proceso en [Herramientas de listas de cuentas eliminadas](https://aka.ms/xbox-deleted). 
+- Cuando Microsoft reciba solicitudes de usuarios finales para eliminar sus datos personales, le comunicaremos las solicitudes, facilitándole una lista de los identificadores de los usuarios finales. Debe comprobar la lista al menos cada 30 días, para garantizar que reciba todas las solicitudes de eliminación, y debe usar la información proporcionada en la lista solo para satisfacer las solicitudes de eliminación de los usuarios finales. Puede encontrar detalles sobre este proceso en [Herramientas de listas de cuentas eliminadas](https://aka.ms/xbox-deleted).
 
 ### <a name="1014-account-type"></a>10.14 Tipo de cuenta
-
-A partir del 17 de abril de 2018, los productos recién publicados que requieran autenticación para acceder a la funcionalidad principal deben usar un proveedor de autenticación de terceros dedicado y seguro o publicarse desde un tipo de cuenta de empresa. Tenga en cuenta que todas las aplicaciones deben usar una cuenta de empresa si requieren información de cuentas financieras, conforme se describe en la directiva 10.8.3.
 
 Si un consumidor razonable interpreta que el nombre de su cuenta de editor es el de una entidad empresarial, debe publicar desde un tipo de cuenta de empresa, no desde un tipo de cuenta individual.
 
@@ -400,7 +404,6 @@ Los metadatos y otro contenido que presente como acompañamiento del producto so
 ### <a name="112-content-including-names-logos-original-and-third-party"></a>11.2 Contenido que incluye nombres, logotipos, contenido original y contenido de terceros
 
 El proveedor del producto debe haber creado originalmente todo el contenido de la aplicación y los metadatos asociados, debe haber obtenido correctamente la licencia del titular de los derechos de terceros y los debe usar de acuerdo con lo permitido por el titular de los derechos o según permita la ley.
-
 
 ### <a name="113-risk-of-harm"></a>11.3 Riesgo de daño
 
@@ -443,7 +446,6 @@ El producto no debe tener contenido ni funcionalidades que alienten, faciliten o
 - El producto no debe contener blasfemias excesivas o innecesarias.
 - El producto no debe tener ni mostrar contenido que una persona razonable consideraría obsceno.
 
-
 ### <a name="1110-countryregion-specific-requirements"></a>11.10 Requisitos específicos de país o región
 
 No se permite contenido que sea ofensivo en cualquier país o región al que esté destinada el producto. El contenido se puede considerar ofensivo en determinados países/regiones debido a las leyes locales o normas culturales. A continuación se indican ejemplos de contenido que podría ser ofensivo en determinados países/regiones:
@@ -454,7 +456,6 @@ China
 - Referencias a territorios o regiones en conflicto
 - Proporcionar o permitir el acceso a contenido o servicios que son ilegales de acuerdo con la legislación local aplicable
 
-
 ### <a name="1111-age-ratings"></a>11.11 Clasificaciones por edad
 
 Debe obtener una clasificación por edades para su producto cuando lo envíe al Centro de partners. Usted es responsable de completar correctamente el cuestionario de clasificación para obtener la clasificación de edad apropiada.
@@ -463,6 +464,12 @@ Debe obtener una clasificación por edades para su producto cuando lo envíe al 
 
 Si el producto ofrece contenido (por ejemplo, generado por el usuario, comercial u otro tipo de contenido web) que puede ser apropiado para una clasificación por edades superior a la que tiene asignada, deberá permitir que los usuarios opten por recibir dicho contenido por medio de un filtro de contenido o mediante el inicio de sesión con una cuenta preexistente.
 
+### <a name="1112-user-generated-content"></a>11.12 Contenido generado por el usuario
+
+El contenido generado por el usuario es contenido que los usuarios aportan a una aplicación o un producto, y al que algunos o todos los usuarios pueden acceder o pueden ver. Si el producto incluye contenido generado por el usuario, se deberá:
+
+- Publicar y poner a disposición de los usuarios los términos y condiciones del producto y las directrices sobre el contenido.
+- Proporcionar un medio para que los usuarios notifiquen el contenido inadecuado dentro del producto.
 
 ---
 <sup>1</sup>"Store" o "Microsoft Store" significa una plataforma que controla o es propiedad de Microsoft, independientemente de su nombre, a través de la cual las aplicaciones pueden ofrecerse a los clientes o ser adquiridas por ellos. A menos que se especifique lo contrario, Store incluye Microsoft Store, Tienda Windows, Tienda Xbox, Tienda Microsoft para Empresas y Microsoft Store para Educación.

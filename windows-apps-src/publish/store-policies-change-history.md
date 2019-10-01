@@ -7,12 +7,12 @@ ms.topic: article
 keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: D451D271-A6CA-4B46-AE99-C2269E8A078C
-ms.openlocfilehash: a846b48565a6029656ecfdd21763931df74b5375
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 879a400d22b3032bb4ee3f3f378a85f04ad73355
+ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66826462"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705565"
 ---
 # <a name="change-history-for-microsoft-store-policies"></a>Historial de cambios de las directivas de Microsoft Store
 
@@ -31,6 +31,18 @@ ms.locfileid: "66826462"
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>1 de octubre de 2019</td>
+<td>7.12</td>
+<td><p>Se ha agregado la nueva directiva 10.2.6 que impide que las aplicaciones con funciones de minería de criptodivisa en el dispositivo.</p>
+<p>Se ha actualizado el apartado 10.8.4 para agregar el requisito de revelación de las probabilidades para los productos que ofrecen "cofres de botín" u otros elementos virtuales aleatorios.</p>
+<p>Se ha actualizado el apartado 10.8.7 para agregar requisitos relativos a las regulaciones de precios.</p>
+<p>Se ha actualizado el apartado 10.10.1 para agregar requisitos relativos a la veracidad en la publicidad.</p>
+<p>Se ha actualizado el apartado 10.13.1 para aclarar que los productos de juego incluyen productos que ofrecen principalmente funcionalidad de reproducción o control remoto de juegos.</p>
+<p>Se ha quitado del apartado 10.14 el requisito de cuenta de empresa para determinados tipos de aplicaciones. </p>
+<p>Se actualizado el apartado 11.12 para agregar requisitos para el contenido generado por el usuario.</p>
+</td>
+</tr>
 <tr class="even">
 <td>5 de marzo de 2019</td>
 <td>7.11</td>
