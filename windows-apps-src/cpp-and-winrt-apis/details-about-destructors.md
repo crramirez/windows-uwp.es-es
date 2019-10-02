@@ -1,20 +1,24 @@
 ---
-description: C++/WinRT 2.0 le permite aplazar la destrucción de los tipos de implementación y realizar consultas de forma segura durante la destrucción. En este tema se describen esas características y se explica cuándo usarlas.
-title: Detalles acerca de los destructores
-ms.date: 07/19/2019
+description: Estos puntos de extensión en C++/WinRT 2.0 permiten aplazar la destrucción de los tipos de implementación, a fin de realizar consultas de forma segura durante la destrucción y enlazar la entrada y salida de los métodos proyectados.
+title: Puntos de extensión para los tipos de implementación
+ms.date: 09/26/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, destrucción diferida, consultas seguras
 ms.localizationpriority: medium
-ms.openlocfilehash: 9806ea54665b24c246f2023714a14d94ec3bcc8e
-ms.sourcegitcommit: 02cc7aaa408efe280b089ff27484e8bc879adf23
+ms.openlocfilehash: 76068ffc655c20aa13b50cce9ac49af9afd50805
+ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387802"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71329566"
 ---
-# <a name="details-about-destructors"></a>Detalles acerca de los destructores
+# <a name="extension-points-for-your-implementation-types"></a>Puntos de extensión para los tipos de implementación
 
-C++/WinRT 2.0 le permite aplazar la destrucción de los tipos de implementación y realizar consultas de forma segura durante la destrucción. En este tema se describen esas características y se explica cuándo usarlas.
+La [plantilla struct winrt::implements](/uwp/cpp-ref-for-winrt/implements) es la base desde la cual se derivan directa o indirectamente las implementaciones de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) (de las clases de tiempo de ejecución y las factorías de activación).
+
+En este tema se describen los puntos de extensión de **winrt::implements** en C++/WinRT 2.0. Puedes optar por implementar estos puntos de extensión en los tipos de implementación, con el fin de personalizar el comportamiento predeterminado de los objetos inspeccionables (*inspeccionables* en el sentido de la interfaz [IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable).
+
+Estos puntos de extensión permiten aplazar la destrucción de los tipos de implementación, a fin de realizar consultas de forma segura durante la destrucción y enlazar la entrada y salida de los métodos proyectados. En este tema se describen esas características y se proporciona más información sobre cuándo y cómo deberías usarlas.
 
 ## <a name="deferred-destruction"></a>Destrucción diferida
 
@@ -89,7 +93,11 @@ struct Sample : implements<Sample, IStringable>
 };
 ```
 
-Piensa en esto como un recolector de elementos no utilizados más determinista. Quizás sea más práctico y eficaz que conviertas la función **final_release** en una corrutina y controles su posible destrucción en un lugar, al tiempo que puedes suspender y cambiar los subprocesos según sea necesario.
+Piensa en esto como un recolector de elementos no utilizados más determinista.
+
+Normalmente, el objeto se destruye cuando se destruye **std::unique_ptr** , pero puedes acelerar su destrucción si llamas a **std::unique_ptr::reset**; o bien, puedes posponerla si guardas **std::unique_ptr** en algún sitio.
+
+Quizás sea más práctico y eficaz que conviertas la función **final_release** en una corrutina y controles su posible destrucción en un lugar, al tiempo que puedes suspender y cambiar los subprocesos según sea necesario.
 
 ```cppwinrt
 struct Sample : implements<Sample, IStringable>
@@ -111,7 +119,7 @@ Un punto de suspensión hace que vuelva el subproceso de llamada, que ha iniciad
 
 Basarse en la noción de la destrucción diferida es la capacidad de consultar de forma segura las interfaces durante la destrucción.
 
-El COM clásico se basa en dos conceptos principales. El primero es el recuento de referencias y el segundo es la consulta de interfaces. Además de **AddRef** y **Release**, la interfaz **IUnknown** proporciona [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(refiid_void). Ese método se usa mucho en determinados marcos de trabajo de la interfaz de usuario, como XAML, para recorrer la jerarquía XAML mientras simula su sistema de tipos que admite composición. Fíjate en este ejemplo sencillo.
+El COM clásico se basa en dos conceptos principales. El primero es el recuento de referencias y el segundo es la consulta de interfaces. Además de AddRef y Release, la interfaz IUnknown proporciona QueryInterface. Ese método se usa mucho en determinados marcos de trabajo de la interfaz de usuario &mdash;como XAML, para recorrer la jerarquía XAML mientras simula su sistema de tipos que admite composición. Fíjate en este ejemplo sencillo.
 
 ```cppwinrt
 struct MainPage : PageT<MainPage>
@@ -172,3 +180,59 @@ En primer lugar, se llama a la función **final_release** y se informa a la impl
 Dentro del destructor, borramos el contexto de datos que, como sabemos, requiere una consulta para la clase base **FrameworkElement**.
 
 Todo esto es posible gracias a la eliminación del rebote del recuento de referencias (o a la estabilización del recuento de referencias) que proporciona C++/WinRT 2.0.
+
+## <a name="method-entry-and-exit-hooks"></a>Enlaces de entrada y salida de método
+
+Un punto de extensión de uso menos frecuente es el struct  **abi_guard** y las funciones **abi_enter** y **abi_exit**.
+
+Si el tipo de implementación define una función abi_enter, se llama a esa función en la entrada de cada uno de los métodos de interfaz proyectados (sin contar los métodos de IInspectable).
+
+Del mismo modo, si defines **abi_exit**, se llamará al salir de cada método de este tipo, pero no se llamará si **abi_enter** lanza una excepción. Se *seguirá* llamando si el propio método de la interfaz proyectado produce una excepción.
+
+Por ejemplo, puedes usar **abi_enter** para generar una excepción hipotética  **invalid_state_error** si un cliente intenta usar un objeto una vez que el objeto se ha puesto en un estado inutilizable, por ejemplo, después de un método de llamada  **Shut­Down** o **Disconnect** . Las clases de iterador de C++/WinRT usan esta característica para generar una excepción de estado no válida en la función  **abi_enter** si la colección subyacente ha cambiado.
+
+Además de las funciones simples **abi_enter** y **abi_exit**, puedes definir un tipo anidado llamado **abi_guard**. En ese caso, se crea una instancia de **abi_guard** en la entrada de cada uno **no IInspectable**) de tus métodos de interfaz proyectados, con una referencia al objeto como su parámetro constructor. A continuación,  **abi_guard** se destruye al salir del método. Puedes colocar cualquier estado adicional que quieras en el tipo**abi_guard**.
+
+Si no defines tu función **abi_guard**, hay una predeterminada que llama a **abi_enter** en la construcción, y a  **abi_exit** en la destrucción.
+
+Estas restricciones solo se usan cuando se invoca un método *mediante la interfaz proyectada*. Si se invocan métodos directamente en el objeto de implementación, esas llamadas pasan directamente a la implementación, sin ninguna restricción.
+
+Aquí tienes un ejemplo de código.
+
+```cppwinrt
+struct Sample : SampleT<Sample, IClosable>
+{
+    void abi_enter();
+    void abi_exit();
+
+    void Close();
+};
+
+void example1()
+{
+    auto sampleObj1{ winrt::make<Sample>() };
+    sampleObj1.Close(); // Calls abi_enter and abi_exit.
+}
+
+void example2()
+{
+    auto sampleObj2{ winrt::make_self<Sample>() };
+    sampleObj2->Close(); // Doesn't call abi_enter nor abi_exit.
+}
+
+// A guard is used only for the duration of the method call.
+// If the method is a coroutine, then the guard applies only until
+// the IAsyncXxx is returned; not until the coroutine completes.
+
+IAsyncAction CloseAsync()
+{
+    // Guard is active here.
+    DoWork();
+
+    // Guard becomes inactive once DoOtherWorkAsync
+    // returns an IAsyncAction.
+    co_await DoOtherWorkAsync();
+
+    // Guard is not active here.
+}
+```
