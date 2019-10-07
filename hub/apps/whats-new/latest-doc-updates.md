@@ -6,25 +6,26 @@ ms.date: 09/23/2019
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: 37e771d12dd2cb49cc9f82ea1ef3a0db25de9a54
-ms.sourcegitcommit: 571467a27884ef51fa802cee6a238dafb84dbb6d
+ms.openlocfilehash: e74b04525524593d0134587bd09b2334882a138e
+ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71409191"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71982209"
 ---
 # <a name="latest-updates-to-the-windows-developer-docs"></a>Actualizaciones más recientes de los documentos para desarrolladores de Windows
 
-Los documentos para desarrolladores de Windows se actualizan periódicamente con información y contenido nuevos y mejorados. En los documentos siguientes se han detectado actualizaciones significativas en la última semana a finales del 27 de septiembre de 2019:
+
+Los documentos para desarrolladores de Windows se actualizan periódicamente con información y contenido nuevos y mejorados. Los documentos siguientes han detectado actualizaciones significativas en la última semana que finaliza el 4 de octubre de 2019:
+
 
 ## <a name="uwp-conceptual"></a>Conceptual de UWP
 
 <ul>
-<li><a href="https://docs.microsoft.com/windows/uwp/design/layout/layout-panels">Paneles de diseño para aplicaciones Plataforma universal de Windows (UWP)</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/design/style/sound">Sonido</a></li>
 <li><a href="https://docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">Cree aplicaciones con el Plataforma universal de Windows</a></li>
-<li><a href="https://docs.microsoft.com/windows/uwp/get-started/index">Introducción al Plataforma universal de Windows (UWP)</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/get-started/index">Introducción al Plataforma universal de Windows (UWP)</a></li></ul>
 </ul>
+
 
 
 ## <a name="win32-conceptual"></a>Conceptos de Win32
@@ -47,6 +48,6 @@ Los documentos para desarrolladores de Windows se actualizan periódicamente con
 <li><a href="https://docs.microsoft.com/windows/desktop/com/aggregation">Concentrado</a></li>
 <li><a href="https://docs.microsoft.com/windows/desktop/com/com-error-codes-9">Códigos de error COM (WPN, MBN, P2P, Bluetooth)</a></li>
 <li><a href="https://docs.microsoft.com/windows/desktop/direct3dtools/pixelhistoryoperation">Estructura PixelHistoryOperation</a></li>
-<li><a href="https://docs.microsoft.com/windows/desktop/wic/-wic-codec-native-pixel-formats">Información general sobre formatos de píxeles nativos</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/wic/-wic-codec-native-pixel-formats">Información general sobre formatos de píxeles nativos</a></li></ul>
 </ul>
 

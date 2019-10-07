@@ -6,19 +6,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
-ms.openlocfilehash: 92f657386c3a5d1ca6815b9b0a9e56b4d6f2578b
-ms.sourcegitcommit: 35a511c2b29ae3d5008612a5fc13d3eb6370d2d0
+ms.openlocfilehash: b8a02079e7589d7c92ececa03496600a82ef427e
+ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67495747"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71982243"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
-Programar el Windows en [centro de partners](https://partner.microsoft.com/dashboard) ofrece ambos individuales y cuentas de empresa de muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta proporciona que acceso para publicar aplicaciones en el Store y participar en otros programas de Microsoft.
+El programa de Windows del [centro de Partners](https://partner.microsoft.com/dashboard) ofrece cuentas individuales y de empresa en muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta le proporciona acceso para publicar aplicaciones en la tienda y participar en otros programas de Microsoft.
 
 > [!NOTE]
-> Al abrir la cuenta de desarrollador, asegúrese de iniciar sesión en [centro de partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que se va a utilizar para la cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
+> Al abrir la cuenta de desarrollador, asegúrese de iniciar sesión en el [centro de Partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que desea usar para la cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
 
 Cuando [comiences el proceso de suscripción](https://go.microsoft.com/fwlink/p/?LinkId=615100), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, juegos, complementos y servicios.
 
@@ -33,30 +33,19 @@ Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 |--------------------|-----------------|
 | <ul><li>Cuesta aproximadamente 19 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
-Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Por el [Store directivas](store-policies.md#1014-account-type), información de la cuenta de aplicaciones con cierta funcionalidad, como las que tienen acceso a financiero o que requieren autenticación para acceder a la funcionalidad principal (sin usar un tercero seguro dedicado proveedor de autenticación), solo se pueden publicar las cuentas de empresa.
+Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Según las [directivas](store-policies.md#1014-account-type)de la tienda, aplicaciones con cierta funcionalidad, como las que tienen acceso a la información de la cuenta financiera o que requieren autenticación para acceder a la funcionalidad principal (sin usar un proveedor de autenticación de terceros dedicado seguro), solo se puede publicar en cuentas de empresa.
 
 ## <a name="account-verification"></a>Comprobación de cuentas
 
-Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No se puede enviar aplicaciones desde una cuenta de empresa hasta que se haya comprobado, pero mientras espera, puede [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) continuar compilar y probar aplicaciones y trabajar sobre cómo preparar sus envíos.
+Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No puede enviar aplicaciones desde una cuenta de empresa hasta que se haya comprobado, pero mientras espera, puede [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) para continuar compilando y probar aplicaciones, y trabajar en la preparación de los envíos.
 
 Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**. 
-
 
 ## <a name="developer-account-and-app-submission-markets"></a>Cuenta de desarrollador y mercados de envío de aplicaciones
 
 Puedes registrarte con una cuenta de desarrollador y enviar aplicaciones si resides o diriges un negocio en uno de los países o regiones indicados a continuación.
 
 En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el registro de la cuenta de desarrollador. Se trata de una tarifa única y no se aplica ningún cargo por renovación. Ten en cuenta que los precios que se indican a continuación están sujetos a cambios.
-
-> [!NOTE]
-> Aplicaremos cualquier impuesto o tarifas aplicables a la tarifa de registro cuando te registres. Además, cuando te paguemos, es posible que el banco te cobre un cargo por recibir el pago.
-
-En la columna **Pago** se describe cómo [te pagaremos](getting-paid-apps.md) el dinero que ganes con tus aplicaciones. Podrás elegir la [cuenta de pago](setting-up-your-payout-account-and-tax-forms.md) en la que te depositaremos este dinero.
-
-> [!NOTE]
-> Algunos mercados no admiten aplicaciones pagadas (**pago**). En esos mercados, solo se pueden enviar aplicaciones gratuitas.
-
-La columna **PayPal** indica si PayPal es un método de pago admitido que puede usarse para tu [cuenta de pago](setting-up-your-payout-account-and-tax-forms.md) (y, salvo que se indique lo contrario, para la tarifa de registro de la cuenta de desarrollador).
 
 | País o región                    | Tarifa de reg. individual | Tarifa de reg. de empresa |
 |-----------------------------------|---------------------|------------------|
@@ -162,7 +151,7 @@ La columna **PayPal** indica si PayPal es un método de pago admitido que puede 
 | Lituania                         | 14 EUR              | 75 EUR           |  
 | Luxemburgo                        | 14 EUR              | 75 EUR           |  
 | RAE de Macao                         | 19 USD              | 99 USD           |  
-| Macedonia del Norte                 | 19 USD              | 99 USD           |  
+| ERY de Macedonia                 | 19 USD              | 99 USD           |  
 | Madagascar                        | 19 USD              | 99 USD           |  
 | Malawi                            | 19 USD              | 99 USD           |  
 | Malasia                          | 62 MYR              | 300 MYR          |  

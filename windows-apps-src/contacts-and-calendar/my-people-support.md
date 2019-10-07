@@ -5,14 +5,17 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 67a96b8423d589036ef1c6896f056d097282dc33
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: f54cb261f6ef94545d656d5bd4f624622cc6dfff
+ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820227"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71982228"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Agregar compatibilidad con Mis allegados a una aplicación
+
+> [!Note]
+> A partir de la actualización de Windows 10 de mayo de 2019 (versión 1903), las instalaciones nuevas de Windows 10 ya no mostrarán "personas en la barra de tareas" de forma predeterminada. Para habilitar la característica, los clientes pueden hacer clic con el botón derecho en la barra de tareas y presionar "Mostrar personas en la barra de tareas". No se recomienda que los desarrolladores agreguen soporte técnico a sus aplicaciones y visite el blog para [desarrolladores de Windows](https://blogs.windows.com/windowsdeveloper/) para obtener más información sobre la optimización de aplicaciones para Windows 10.
 
 La función Mis allegados permite a los usuarios a anclar contactos desde una aplicación directamente a la barra de tareas, creando un nuevo objeto de contacto con el que pueden interactuar de varias maneras. Este artículo muestra cómo se puede agregar compatibilidad para esta función, permitiendo a los usuarios anclar contactos directamente desde tu aplicación. Cuando se anclan contactos se dispone de nuevos tipos de interacción, como [Compartir con Mis allegados](my-people-sharing.md) y [notificaciones](my-people-notifications.md).
 
@@ -27,8 +30,8 @@ La función Mis allegados permite a los usuarios a anclar contactos desde una ap
 
 Hay tres cosas que debes hacer para habilitar la aplicación para usar la función Mis allegados:
 
-1. [Declarar la compatibilidad con el contrato de activación shareTarget en el manifiesto de aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [Anotar los contactos que los usuarios pueden compartir al uso de la aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [Declare la compatibilidad con el contrato de activación shareTarget en el manifiesto de aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [Anote los contactos que los usuarios pueden compartir para usar la aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3.  Admitir varias instancias de tu aplicación en ejecución al mismo tiempo. Los usuarios deben poder interactuar con una versión completa de la aplicación mientras la usan en un panel de contactos.  Pueden incluso usarla en varios paneles de contactos a la vez.  Para admitir esto, la aplicación debe poder ejecutar varias vistas al mismo tiempo. Para obtener información sobre cómo hacerlo, consulta el artículo ["Mostrar varias vistas en una aplicación"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views).
 
 Cuando lo hayas hecho, la aplicación aparecerá en el panel de contactos de contactos marcados.
@@ -185,11 +188,11 @@ Si quieres que los contactos anclados a la barra de tareas se identifiquen cuand
 
 Para identificar un contacto, el nodo del sistema de nivel superior debe incluir el parámetro hint-people para indicar el contacto remitente o relacionado. Este parámetro puede tener cualquiera de los valores siguientes:
 + **Dirección de correo electrónico** 
-    + Por ejemplo, [https://doi.org/10.13012/J8PN93H8](mailto:johndoe@mydomain.com)
+    + P. ej. [https://doi.org/10.13012/J8PN93H8](mailto:johndoe@mydomain.com)
 + **Número de teléfono** 
-    + Por ejemplo, tel:888-888-8888
-+ **Id. remoto** 
-    + Por ejemplo, remoteid:1234
+    + P. ej. tel:888-888-8888
++ **ID. remoto** 
+    + P. ej. remoteid:1234
 
 Este es un ejemplo de cómo identificar una notificación del sistema relacionada con una persona determinada:
 ```XML
@@ -250,9 +253,9 @@ async Task PinMultipleContacts(Contact[] contacts)
 
 ## <a name="see-also"></a>Vea también
 + [Uso compartido de Mis allegados](my-people-sharing.md)
-+ [Mis notificaciones de personas](my-people-notifications.md)
-+ [Vídeo de Channel 9 sobre cómo agregar personas de mi soporte técnico a una aplicación](https://channel9.msdn.com/Events/Build/2017/P4056)
-+ [Mi ejemplo de integración de las personas](https://aka.ms/mypeoplebuild2017)
-+ [Póngase en contacto con el ejemplo de tarjeta](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
++ [Mis personas notificatons](my-people-notifications.md)
++ [Vídeo de Channel 9 sobre cómo agregar soporte técnico para mis usuarios a una aplicación](https://channel9.msdn.com/Events/Build/2017/P4056)
++ [Ejemplo de integración de mis personas](https://aka.ms/mypeoplebuild2017)
++ [Ejemplo de tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [Documentación de la clase PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
 + [Conectar la aplicación a acciones en una tarjeta de contacto](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)
