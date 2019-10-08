@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 08ad21d3ddc73499bb2b97b300e635fe0a6c148d
-ms.sourcegitcommit: 698a86640b365dc1ca772fb6f53ca556dc284ed6
+ms.openlocfilehash: b7d38464a26af0df03c1aa381b16fbddf1de55cc
+ms.sourcegitcommit: e0644abf76a2535ea24758d1904ff00dfcd86a51
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68935780"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008044"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -38,7 +38,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'VS2017-Win2016'
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
@@ -62,7 +62,7 @@ steps:
 
 ```
 
-La plantilla predeterminada intenta firmar el paquete con el certificado especificado en el archivo. csproj. Si desea firmar el paquete durante la compilación, debe tener acceso a la clave privada. De lo contrario, puede deshabilitar la firma agregando el `msbuildArgs` parámetro `/p:AppxPackageSigningEnabled=false` a la sección en el archivo YAML.
+La plantilla predeterminada intenta firmar el paquete con el certificado especificado en el archivo. csproj. Si desea firmar el paquete durante la compilación, debe tener acceso a la clave privada. De lo contrario, puede deshabilitar la firma agregando el parámetro `/p:AppxPackageSigningEnabled=false` a la sección `msbuildArgs` del archivo YAML.
 
 ## <a name="add-your-project-certificate-to-the-secure-files-library"></a>Agregar el certificado de proyecto a la biblioteca de archivos seguros
 
@@ -76,7 +76,7 @@ Para cargar un certificado para la compilación automatizada:
     ![Cómo cargar un archivo seguro](images/secure-file1.png)
 
 3. Busque el archivo de certificado y haga clic en **Aceptar**.
-4. Después de cargar el certificado, selecciónelo para ver sus propiedades. En **permisos**de canalización, active la alternancia **autorizar para usar en todas las canalizaciones** .
+4. Después de cargar el certificado, selecciónelo para ver sus propiedades. En **permisos de canalización**, active la alternancia **autorizar para usar en todas las canalizaciones** .
 
     ![Cómo cargar un archivo seguro](images/secure-file2.png)
 
@@ -116,7 +116,7 @@ Si desea compilar la solución mediante la línea de comandos o con cualquier ot
 ### <a name="configure-package-signing"></a>Configurar la firma de paquetes
 
 Para firmar el paquete MSIX (o APPX), la canalización debe recuperar el certificado de firma. Para ello, agregue una tarea DownloadSecureFile antes de la tarea VSBuild.
-Esto le proporcionará acceso al certificado de firma a ```signingCert```través de.
+Esto le proporcionará acceso al certificado de firma a través de ```signingCert```.
 
 ```yml
 - task: DownloadSecureFile@1
@@ -144,15 +144,15 @@ A continuación, actualice la tarea VSBuild para que haga referencia al certific
 ```
 
 > [!NOTE]
-> El argumento PackageCertificateThumbprint se establece intencionadamente en una cadena vacía como precaución. Si la huella digital está establecida en el proyecto pero no coincide con el certificado de firma, se producirá un error en `Certificate does not match supplied signing thumbprint`la compilación:.
+> El argumento PackageCertificateThumbprint se establece intencionadamente en una cadena vacía como precaución. Si la huella digital está establecida en el proyecto pero no coincide con el certificado de firma, se producirá un error en la compilación: `Certificate does not match supplied signing thumbprint`.
 
 ### <a name="review-parameters"></a>Revisar parámetros
 
-Los parámetros definidos con la `$()` sintaxis son variables definidas en la definición de compilación y cambiarán en otros sistemas de compilación.
+Los parámetros definidos con la sintaxis `$()` son variables definidas en la definición de compilación y cambiarán en otros sistemas de compilación.
 
 ![variables predeterminadas](images/building-screen5.png)
 
-Para ver todas las variables predefinidas, vea [variables de compilación](https://docs.microsoft.com/azure/devops/pipelines/build/variables)predefinidas.
+Para ver todas las variables predefinidas, vea [variables de compilación predefinidas](https://docs.microsoft.com/azure/devops/pipelines/build/variables).
 
 ## <a name="configure-the-publish-build-artifacts-task"></a>Configurar la tarea publicar artefactos de compilación
 
@@ -172,11 +172,11 @@ La canalización de UWP predeterminada no guarda los artefactos generados. Para 
     PathtoPublish: '$(build.artifactstagingdirectory)'
 ```
 
-Puede ver los artefactos generados en la opción artefactos de la página resultados de la compilación.
+Puede ver los artefactos generados en la opción **artefactos** de la página resultados de la compilación.
 
 ![artefactos](images/building-screen6.png)
 
-Dado que hemos establecido el `UapAppxPackageBuildMode` argumento en `StoreUpload`, la carpeta artefactos incluye el paquete para enviarlo al almacén (. msixupload/. appxupload). Tenga en cuenta que también puede enviar un paquete de aplicación normal (. msix/. appx) o un lote de aplicaciones (. msixbundle/. appxbundle/) al almacén. Para este artículo, usaremos el archivo .appxupload.
+Dado que hemos establecido el argumento `UapAppxPackageBuildMode` en `StoreUpload`, la carpeta artefactos incluye el paquete para enviarlo al almacén (. msixupload/. appxupload). Tenga en cuenta que también puede enviar un paquete de aplicación normal (. msix/. appx) o un lote de aplicaciones (. msixbundle/. appxbundle/) al almacén. Para este artículo, usaremos el archivo .appxupload.
 
 ## <a name="address-bundle-errors"></a>Errores de agrupación de direcciones
 
@@ -184,14 +184,14 @@ Si agrega más de un proyecto de UWP a la solución y, a continuación, intenta 
 
   `MakeAppx(0,0): Error : Error info: error 80080204: The package with file name "AppOne.UnitTests_0.1.2595.0_x86.appx" and package full name "8ef641d1-4557-4e33-957f-6895b122f1e6_0.1.2595.0_x86__scrj5wvaadcy6" is not valid in the bundle because it has a different package family name than other packages in the bundle`
 
-Este error aparece porque en el nivel de la solución, no está claro qué aplicación debería aparecer en el lote. Para resolver este problema, abra cada archivo de proyecto y agregue las propiedades siguientes al final del primer `<PropertyGroup>` elemento.
+Este error aparece porque en el nivel de la solución, no está claro qué aplicación debería aparecer en el lote. Para resolver este problema, abra cada archivo de proyecto y agregue las propiedades siguientes al final del primer elemento `<PropertyGroup>`.
 
 |**Proyecto**|**Propiedades**|
 |-------|----------|
 |Aplicación|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|
 
-A continuación, quite `AppxBundle` el argumento de MSBuild del paso de compilación.
+A continuación, quite el argumento de MSBuild `AppxBundle` del paso de compilación.
 
 ## <a name="related-topics"></a>Temas relacionados
 
