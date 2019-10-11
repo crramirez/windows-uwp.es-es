@@ -6,12 +6,12 @@ ms.date: 07/10/2018
 ms.topic: article
 keywords: windows 10, uwp, API de compra de Microsoft Store, suscripciones
 ms.localizationpriority: medium
-ms.openlocfilehash: b568531ce0807ebc5be0d27a78b94547e8473ae6
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f6ff6ea5a5daac1a6412c26c76dad899ca1f5881
+ms.sourcegitcommit: 74c674c70b86bafeac7c8c749b1662fae838c428
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57651630"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252322"
 ---
 # <a name="get-subscriptions-for-a-user"></a>Obtener suscripciones para un usuario
 
@@ -36,14 +36,14 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Método | URI de la solicitud                                            |
 |--------|--------------------------------------------------------|
-| POST   | ```https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/query``` |
+| EXPONER   | ```https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/query``` |
 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Encabezado         | Tipo   | Descripción      |
+| Header         | Tipo   | Descripción      |
 |----------------|--------|-------------------|
-| Autorización  | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;.                           |
+| Autorización  | string | Obligatorio. El token de acceso de Azure AD con el formato **portador** @no__t-*1 @no__t*-3.                           |
 | Host           | string | Debe establecerse en el valor **purchase.mp.microsoft.com**.                                            |
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
@@ -114,7 +114,7 @@ Cada objeto de la matriz *items* contiene los siguientes valores.
 | autoRenew | Booleano |  Indica si la suscripción está configurada para renovarse automáticamente al final del período de suscripción actual.   |
 | beneficiary | string |  El identificador del beneficiario del derecho que está asociado con esta suscripción.   |
 | expirationTime | string | La fecha y la hora a las que expirará la suscripción, en formato ISO 8601. Este campo solo está disponible cuando la suscripción esté en determinados estados. El momento de expiración normalmente indica cuándo expira el estado actual. Por ejemplo, para una suscripción activa, la fecha de expiración indica cuándo se producirá la próxima renovación automática.    |
-| expirationTimeWithGrace | string | La fecha y hora en que la suscripción caducará incluido el período de gracia, en formato ISO 8601. Este valor indica que cuando el usuario perderá el acceso a la suscripción después de la suscripción no ha podido renovar automáticamente.    |
+| expirationTimeWithGrace | string | Fecha y hora de expiración de la suscripción, incluido el período de gracia, en formato ISO 8601. Este valor indica si el usuario perderá el acceso a la suscripción después de que la suscripción no haya podido renovar automáticamente.    |
 | id | string |  El identificador de la suscripción. Usa este valor para indicar qué suscripción quieres modificar cuando llamas al método [cambiar el estado de facturación de la suscripción de un usuario](change-the-billing-state-of-a-subscription-for-a-user.md).    |
 | isTrial | Booleano |  Indica si la suscripción es una versión de prueba.     |
 | lastModified | string |  La fecha y la hora de la última modificación de la suscripción, en formato ISO 8601.      |
@@ -128,8 +128,8 @@ Cada objeto de la matriz *items* contiene los siguientes valores.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Administrar los derechos de producto de un servicio](view-and-grant-products-from-a-service.md)
+* [Administrar derechos de producto desde un servicio](view-and-grant-products-from-a-service.md)
 * [Cambiar el estado de facturación de una suscripción para un usuario](change-the-billing-state-of-a-subscription-for-a-user.md)
-* [Consultar productos](query-for-products.md)
-* [Informe de productos consumibles que cumpla](report-consumable-products-as-fulfilled.md)
-* [Renovar una clave de Id. de Microsoft Store](renew-a-windows-store-id-key.md)
+* [Consulta de productos](query-for-products.md)
+* [Notificar productos consumibles como entregados](report-consumable-products-as-fulfilled.md)
+* [Renovar una clave de identificador de Microsoft Store](renew-a-windows-store-id-key.md)

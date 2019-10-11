@@ -86,7 +86,7 @@
           href: controls-and-patterns/buttons.md
         - name: Casilla
           href: controls-and-patterns/checkbox.md
-        - name: Cuadro combinado
+        - name: Cuadros combinados y cuadros de lista
           href: controls-and-patterns/combo-box.md
         - name: Hipervínculos
           href: controls-and-patterns/hyperlinks.md
@@ -102,16 +102,15 @@
       items:
         - name: Introducción
           href: controls-and-patterns/lists.md
-        - name: Comandos de colecciones
-          href: controls-and-patterns/collection-commanding.md
-        - name: Vistas de colección personalizadas
-          href: controls-and-patterns/items-repeater.md
-        - name: Inversión de la vista
-          href: controls-and-patterns/flipview.md
-        - name: Listas invertidas
-          href: controls-and-patterns/inverted-lists.md
         - name: Vista de lista y vista de cuadrícula
           href: controls-and-patterns/listview-and-gridview.md
+        - name: Inversión de la vista
+          href: controls-and-patterns/flipview.md
+        - name: Vista de árbol
+          href: controls-and-patterns/tree-view.md
+        - name: ItemsRepeater
+          href: controls-and-patterns/items-repeater.md
+        - name: Plantillas y contenedores de elementos
           items:
             - name: Plantillas y contenedores de elementos
               href: controls-and-patterns/item-containers-templates.md
@@ -119,14 +118,22 @@
               href: controls-and-patterns/item-templates-listview.md
             - name: Plantillas de elemento para vistas de cuadrícula
               href: controls-and-patterns/item-templates-gridview.md
-        - name: Interfaz de usuario anidada
-          href: controls-and-patterns/nested-ui.md
-        - name: Extraer para actualizar
-          href: controls-and-patterns/pull-to-refresh.md
-        - name: Deslizar rápidamente
-          href: controls-and-patterns/swipe.md
-        - name: Vista de árbol
-          href: controls-and-patterns/tree-view.md
+        - name: Selección e interacción
+          items:
+            - name: Comandos de colecciones
+              href: controls-and-patterns/collection-commanding.md
+            - name: Introducción al modo de selección
+              href: controls-and-patterns/selection-modes.md
+            - name: Deslizar rápidamente
+              href: controls-and-patterns/swipe.md
+            - name: Extraer para actualizar
+              href: controls-and-patterns/pull-to-refresh.md
+        - name: Personalizaciones y opciones de colección adicionales
+          items:
+            - name: Listas invertidas
+              href: controls-and-patterns/inverted-lists.md
+            - name: Interfaz de usuario anidada
+              href: controls-and-patterns/nested-ui.md
     - name: Cuadros de diálogo y controles flotantes
       items:
         - name: Introducción

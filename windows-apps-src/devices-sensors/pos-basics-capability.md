@@ -5,18 +5,18 @@ ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c09a9093389fc0a917243773eae6803220ed610
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f120e093ab65224ca4c32b64640100b6abd1a36a
+ms.sourcegitcommit: 0301f794f994e604ffc131de7e40ffcede3530c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634690"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72036262"
 ---
 # <a name="pointofservice-device-capability"></a>Capacidad de dispositivo de PointOfService
 Solicitas acceso a las API de PointOfService declarando la funcionalidad en el manifiesto del paquete de la aplicación]. Para declarar la mayoría de las funcionalidades, usa el Diseñador de manifiestos, en Microsoft Visual Studio, o puedes agregarlas manualmente.  
 
 > [!Important]
-> Recibirás el error **System.UnauthorizedAccessException** al intentar usar una API en el espacio de nombres Winodws.Devices.PointOfService si no declaras la funcionalidad **pointOfService** en el manifiesto de la aplicación. 
+> Recibirá el error **System. UnauthorizedAccessException** cuando intente usar una API en el espacio de nombres Windows. Devices. PointOfService si no declara la funcionalidad **PointOfService** en el manifiesto de aplicación. 
 
 ## <a name="declare-capability-using-manifest-designer"></a>Declarar la funcionalidad con el Diseñador de manifiestos
 

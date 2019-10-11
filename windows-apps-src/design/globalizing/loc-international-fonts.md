@@ -1,29 +1,29 @@
 ---
-Description: Este tema enumeran las fuentes disponibles para las aplicaciones UWP que están localizadas en idiomas distintos de EE. UU. Inglés.
+Description: En este tema se enumeran las fuentes disponibles para las aplicaciones UWP que están localizadas en idiomas distintos de EE. UU. Inglés.
 title: Fuentes internacionales
 template: detail.hbs
 ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f1d618a111ee207eacfceb52680859c8272e0ed
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 06284481ccecbc3c9cd7d7a78d83ccd6e97a49a7
+ms.sourcegitcommit: f3c1a81b50f4a372a15996ac71b3f408a8ee1409
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601140"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237527"
 ---
 # <a name="international-fonts"></a>Fuentes internacionales
 
-Este tema enumeran las fuentes disponibles para las aplicaciones UWP que están localizadas en idiomas distintos de EE. UU. Inglés.
+En este tema se enumeran las fuentes disponibles para las aplicaciones UWP que están localizadas en idiomas distintos de EE. UU. Inglés.
 
 En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) del idioma. Para ver una lista de etiquetas de idioma que se admiten específicamente en la Microsoft Store, consulta [Idiomas admitidos](../../publish/supported-languages.md).
 
-| Idioma | Etiqueta de idioma | Fuente usada en Windows |
+| Lenguaje | Etiqueta de idioma | Fuente usada en Windows |
 | --------- | ----------- | -------------------- |
 | Afrikáans | af-ZA | Segoe UI |
 | Albano | sq-AL | Segoe UI |
-| Amhárico | am-ET | Ebrima |
+| Amárico | am-ET | Ebrima |
 | Árabe | ar-SA | Segoe UI |
 | Armenio | hy-AM | Segoe UI |
 | Asamés | as-IN | Nirmala UI |
@@ -37,9 +37,9 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Catalán | ca-ES | Segoe UI |
 | Kurdo central (árabe) | ku-ARAB-IQ | Segoe UI |
 | Cheroqui (cheroqui) | chr-CHER-US | Gadugi |
-| Chino simplificado | zh-CN | MS YaHei UI |
-| Chino tradicional (RAE de Hong Kong) | zh-HK | MS JhengHei UI |
-| Chino tradicional (Taiwán) | zh-TW | MS JhengHei UI |
+| Chino simplificado | zh-CN | Microsoft YaHei UI |
+| Chino tradicional (Hong Kong) | zh-HK | Microsoft JhengHei UI |
+| Chino tradicional (Taiwán) | zh-TW | Microsoft JhengHei UI |
 | Croata | hr-HR | Segoe UI |
 | Checo | cs-CZ | Segoe UI |
 | Danés | da-DK | Segoe UI |
@@ -66,7 +66,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | isiXhosa | xh-ZA | Segoe UI |
 | isiZulu | zu-ZA | Segoe UI |
 | Italiano | it-IT | Segoe UI |
-| Japonés | ja-JP | Meiryo UI (consulta las observaciones, a continuación) |
+| Japonés | ja-JP | Yu Gothic UI |
 | Kannada | kn-IN | Nirmala UI |
 | Kazajo | kk-KZ | Segoe UI |
 | Khmer | km-KH | Leelawadee UI |
@@ -86,7 +86,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Maorí | mi-NZ | Segoe UI |
 | Marathi | mr-IN | Nirmala UI |
 | Mongol (cirílico) | mn-MN | Segoe UI |
-| Nepalí | ne-NP | Nirmala UI |
+| Nepali | ne-NP | Nirmala UI |
 | Noruego (Bokmål) | nb-NO | Segoe UI |
 | Noruego (Nynorsk) | nn-NO | Segoe UI |
 | Odia | or-IN | Nirmala UI |
@@ -128,10 +128,6 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Galés | cy-GB | Segoe UI |
 | Wolof | wo-SN | Segoe UI |
 | Yoruba | yo-NG | Segoe UI |
-
-## <a name="japanese-fonts"></a>Fuentes japonesas
-
-La fuente Meiryo UI se usa en Windows. Windows incluye Yu Gothic y Yu Mincho, dos familias de fuentes para admitir la edición y visualización de documentos en japonés. No se recomienda Yu Gothic para la interfaz de usuario de la aplicación.
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 330cbaab4a1c8313fb0b298dea55176eb66d4803
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 55bf6360f09ba4ab6c7878543ecfa0c80c4558e3
+ms.sourcegitcommit: 74c674c70b86bafeac7c8c749b1662fae838c428
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340525"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252313"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnosticar condiciones de error del componente de Windows Runtime
 
@@ -69,7 +69,7 @@ En la UWP los métodos sobrecargados pueden tener el mismo número de parámetro
 
 En la Plataforma universal de Windows, todos los tipos públicos en un archivo de metadatos (.winmd) de Windows deben estar en un espacio de nombres que comparta el nombre del archivo .winmd o en subespacios de nombres del nombre de archivo. Por ejemplo, si el proyecto de Visual Studio se denomina A.B (es decir, el componente de Windows Runtime es A.B.winmd), puede contener las clases públicas A.B.Class1 y A.B.C.Class2, pero no la A.Class3 (WME0006) o D.Class4 (WME1044).
 
-> **Tenga en cuenta**  El restricciones solo se aplican a los tipos públicos, no a los tipos privados usados en la implementación.
+> **Nota**  Estas restricciones se aplican solo a los tipos públicos, no a los tipos privados usados en tu implementación.
 
 En el caso de A.Class3, puedes o bien mover Class3 a otro espacio de nombres o bien cambiar el nombre del componente de Windows Runtime a A.winmd. Aunque WME0006 es una advertencia, debes tratarla como un error. En el ejemplo anterior, el código que llama a A.B.winmd no podrá encontrar A.Class3.
 
@@ -81,7 +81,7 @@ El componente debe contener al menos un tipo **public sealed** (**Public NotInhe
 
 Un tipo en un componente de Windows Runtime no puede tener un nombre idéntico al de un espacio de nombres (WME1068).
 
-> **Precaución**  Si se llama a Winmdexp. exe directamente y no se usa la opción/out para especificar un nombre para el componente Windows Runtime, Winmdexp. exe intenta generar un nombre que incluya todos los espacios de nombres del componente. Cambiar el nombre de los espacios de nombres puede alterar el nombre de tu componente.
+> **Precaución**  Si llamas directamente a Winmdexp.exe y no usas la opción /out para especificar un nombre para el componente de Windows Runtime, Winmdexp.exe intenta generar un nombre que incluya todos los espacios de nombres en el componente. Cambiar el nombre de los espacios de nombres puede alterar el nombre de tu componente.
 
  
 
@@ -102,9 +102,9 @@ Muchas de estas asignaciones son interfaces. Por ejemplo, [IList&lt;T&gt;](https
 
 En general, la mejor opción es la interfaz que más se asemeje al tipo. Por ejemplo, para Dictionary&lt;int, string&gt;, la mejor opción es probablemente IDictionary&lt;int, string&gt;.
 
-> **Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces implementadas por un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
+> **Importante**  JavaScript usa la interfaz que aparece en primer lugar en la lista de interfaces que implementa un tipo administrado. Por ejemplo, si devuelves Dictionary&lt;int, string&gt; al código JavaScript, aparece como IDictionary&lt;int, string&gt; independientemente de qué interfaz especifiques como tipo devuelto. Esto significa que si la primera interfaz no incluye a un miembro que aparece en las últimas interfaces, ese miembro no es visible para JavaScript.
 
-> **Precaución**@no__t 1Avoid con las interfaces no genéricas [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) e [IEnumerable](https://docs.microsoft.com/dotnet/api/system.collections.ienumerable) si JavaScript va a usar el componente. Estas interfaces se asignan a [IBindableVector](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindablevector) y [IBindableIterator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindableiterator), respectivamente. Se admiten los enlaces para los controles de XAML y no son visibles para JavaScript. JavaScript emite el error de tiempo de ejecución "La función 'X' tiene una firma no válida y no se puede llamar".
+> **Precaución**  Evita el uso de las interfaces no genéricas [IList](https://docs.microsoft.com/dotnet/api/system.collections.ilist) o [IEnumerable](https://docs.microsoft.com/dotnet/api/system.collections.ienumerable) si JavaScript usará tu componente. Estas interfaces se asignan a [IBindableVector](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindablevector) y [IBindableIterator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.interop.ibindableiterator), respectivamente. Se admiten los enlaces para los controles de XAML y no son visibles para JavaScript. JavaScript emite el error de tiempo de ejecución "La función 'X' tiene una firma no válida y no se puede llamar".
 
  
 
@@ -131,7 +131,7 @@ En general, la mejor opción es la interfaz que más se asemeje al tipo. Por eje
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>El método ' {0} ' tiene un parámetro de tipo ' {1} ' en su signatura. Aunque este tipo genérico no es un tipo válido de Windows Runtime, el tipo o sus parámetros genéricos implementan interfaces que son tipos válidos de Windows Runtime. [https://doi.org/10.13012/J8PN93H8]({2})</p>
-> **Note @ no__t-1 @ no__t-2For {2}, Winmdexp. exe anexa una lista de alternativas, como "considere la posibilidad de cambiar el tipo ' System. Collections. Generic. List @ no__t-4T @ no__t-5 ' en la Signatura del método a uno de los siguientes tipos en su lugar: ' System. Collections. Generic. IList @ no__t-0T @ no__t-1, System. Collections. Generic. IReadOnlyList @ no__t-2T @ no__t-3, System. Collections. Generic. IEnumerable @ no__t-4T @ no__t-5 '. '
+> **Note @ no__t-1 para {2}, Winmdexp. exe anexa una lista de alternativas, como "considere la posibilidad de cambiar el tipo ' System. Collections. Generic. List @ no__t-3T @ no__t-4 ' en la Signatura del método a uno de los siguientes tipos: ' System. Collections. Generic. IList @ no__t-0T @ no__t-1, System. Collections. Generic. IReadOnlyList @ no__t-2T @ no__t-3, System. Collections. Generic. IEnumerable @ no__t-4T @ no__t-5 '. '
 </td>
 </tr>
 <tr class="even">
@@ -210,7 +210,7 @@ En el UWP, los valores devueltos se considera que son parámetros de salida y lo
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> **Nota**  SI cambia el nombre del valor devuelto y el nuevo nombre entra en conflicto con el nombre de otro parámetro, obtendrá el error WME1091.
+> **Nota**  Si cambias el nombre del valor devuelto y el nuevo nombre entra en conflicto con el nombre de otro parámetro, obtendrás el error WME1091.
 
 El código de JavaScript puede acceder a los parámetros de salida de un método por nombre, incluido el valor devuelto. Por ejemplo, consulta el atributo [ReturnValueNameAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.returnvaluenameattribute).
 
@@ -219,7 +219,7 @@ El código de JavaScript puede acceder a los parámetros de salida de un método
 | WME1091 | El método ' \{0} ' tiene el valor devuelto con el nombre ' \{1} ', que es igual que un nombre de parámetro. Los parámetros de método de Windows Runtime y el valor devuelto deben tener nombres únicos. |
 | WME1092 | El método ' \{0} ' tiene un parámetro denominado ' \{1} ', que es igual que el nombre del valor devuelto predeterminado. Considera la posibilidad de usar otro nombre para el parámetro o usa System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute para especificar explícitamente el nombre del valor devuelto. |
 
-**Tenga en cuenta**  El nombre predeterminado es "ReturnValue" para los descriptores de acceso de propiedad y "Value" para todos los demás métodos.
+**Nota**  El nombre predeterminado es "returnValue" para los descriptores de acceso de propiedad y "value" para todos los otros métodos.
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 87483c5d34cfb2b0bb266fb3d903e15d1b492187
-ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
+ms.openlocfilehash: 316682ba136b5b3249d26abd0a5c5a877abbcf12
+ms.sourcegitcommit: 76357092f90b70bdb21ee43a5a416fe1fbfd9b89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68959049"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72257931"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Integración de la aplicación de escritorio empaquetada con Windows 10 y UWP
 
@@ -60,7 +60,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-rescap3-desktopappmigration).
 
-|NOMBRE | Descripción |
+|Nombre | Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.desktopAppMigration``
 |AumID |Identificador de modelo de usuario de aplicación de la aplicación empaquetada. |
@@ -110,7 +110,7 @@ Para ello, especifica el [identificador de programación (ProgID)](https://docs.
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
-<FileTypeAssociation Name="[Name]">
+    <FileTypeAssociation Name="[Name]">
          <MigrationProgIds>
             <MigrationProgId>"[ProgID]"</MigrationProgId>
         </MigrationProgIds>
@@ -120,10 +120,10 @@ Para ello, especifica el [identificador de programación (ProgID)](https://docs.
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|NOMBRE |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
+|Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |MigrationProgId |[Identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) que describe la aplicación, el componente y la versión de la aplicación de escritorio desde la que se van a heredar las asociaciones de archivo.|
 
 #### <a name="example"></a>Ejemplo
@@ -179,10 +179,10 @@ Puede asociar la aplicación empaquetada a las extensiones de tipo de archivo. S
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|NOMBRE | Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios.   |
+|Nombre | Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios.   |
 |FileType |Es el archivo de extensión compatible con la aplicación. |
 
 #### <a name="example"></a>Ejemplo
@@ -240,10 +240,10 @@ Puedes agregar opciones a ese menú. Estas opciones ofrecen a los usuarios difer
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category | Siempre ``windows.fileTypeAssociation``
-|NOMBRE |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
+|Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |Verb |Es el nombre que aparece en el menú contextual del Explorador de archivos. Esta cadena se puede localizar mediante ```ms-resource```.|
 |Id |Es el identificador único del verbo. Si la aplicación es una aplicación de UWP, se pasa a la aplicación como parte de sus argumentos de evento de activación para que pueda controlar la selección del usuario de manera adecuada. Si su aplicación es una aplicación empaquetada de plena confianza, recibirá parámetros en su lugar (consulte la siguiente viñeta). |
 |Parámetros |Es la lista de parámetros de argumento y valores asociados con el verbo. Si la aplicación es una aplicación empaquetada de plena confianza, estos parámetros se pasan a la aplicación como argumentos del evento cuando se activa la aplicación. Puede personalizar el comportamiento de la aplicación en función de los distintos verbos de activación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. Si la aplicación es una aplicación de UWP, no se pueden pasar parámetros. En su lugar, la aplicación recibirá el identificador (consulta el punto anterior).|
@@ -287,8 +287,8 @@ Puede asegurarse de que los usuarios abran la nueva aplicación empaquetada de f
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-* http:\//schemas.Microsoft.com/appx/manifest/UAP/windows10
-* http:\//schemas.Microsoft.com/appx/manifest/UAP/windows10/3 "
+* http: \//schemas. Microsoft. com/appx/manifest/UAP/windows10
+* http: \//schemas. Microsoft. com/appx/manifest/UAP/windows10/3 "
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -304,10 +304,10 @@ Puede asegurarse de que los usuarios abran la nueva aplicación empaquetada de f
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|NOMBRE |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
+|Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |UseUrl |Indica si se deben abrir archivos directamente desde una dirección URL de destino. Si no establece este valor, los intentos de la aplicación para abrir un archivo mediante una dirección URL hacen que el sistema descargue primero el archivo localmente. |
 |Parámetros | Parámetros opcionales. |
 |FileType |Extensiones de archivo relevantes. |
@@ -370,9 +370,9 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
-|Category |Deben``windows.firewallRules``|
+|Category |Siempre ``windows.firewallRules``|
 |Archivo ejecutable |Nombre del archivo ejecutable que quieras agregar a la lista de excepciones del firewall |
 |Direction |Indica si la regla es entrante o saliente |
 |IPProtocol |Protocolo de comunicación |
@@ -430,7 +430,7 @@ Declara esta extensión en el nivel de paquete del manifiesto de la aplicación.
 
 ```
 
-|NOMBRE | Descripción |
+|Nombre | Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.loaderSearchPathOverride``
 |FolderPath | La ruta de la carpeta que contiene tus archivos dll. Especifica una ruta de acceso relativa a la carpeta raíz del paquete. En una extensión puedes especificar hasta cinco rutas de acceso. Si quieres que el sistema busque archivos en la carpeta raíz del paquete, usa una cadena vacía para una de estas rutas de acceso. No incluyas rutas de acceso duplicados y asegúrate de que las rutas de acceso no contengan barras diagonales iniciales y finales o barras diagonales inversas. <br><br> El sistema no buscará en subcarpetas, por tanto asegúrate de indicar explícitamente cada carpeta que contenga archivos DLL que quieres que cargue el sistema.|
@@ -495,10 +495,10 @@ Especifique cómo se comporta la aplicación cuando un usuario abre varios archi
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|NOMBRE |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
+|Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |MultiSelectModel |Consulta la información que tienes a continuación. |
 |FileType |Extensiones de archivo relevantes. |
 
@@ -570,10 +570,10 @@ Permite que los usuarios vean una imagen en miniatura del contenido del archivo 
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|NOMBRE |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
+|Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid   |Identificador de clase de la aplicación. |
 
@@ -632,10 +632,10 @@ Permite que los usuarios obtengan una vista previa del contenido de un archivo e
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|NOMBRE |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
+|Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid   |Identificador de clase de la aplicación. |
 
@@ -697,10 +697,10 @@ Para obtener más información sobre el campo **Kind** y los valores que puedes 
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|NOMBRE |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
+|Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |FileType |Extensiones de archivo relevantes. |
 |valor |[Valor Kind](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names) válido |
 
@@ -758,10 +758,10 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fileTypeAssociation``
-|NOMBRE |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
+|Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid  |Identificador de clase de la aplicación. |
 
@@ -914,7 +914,7 @@ Registra los controladores que se implementan en la aplicación. También puedes
 
 ```
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.cloudfiles``
 |iconResource |El icono que representa tu servicio de proveedor de archivos en la nube. Este icono aparece en el panel Navegación del Explorador de archivos.  Los usuarios eligen este icono para mostrar archivos desde tu servicio en la nube. |
@@ -984,10 +984,10 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.protocol``
-|NOMBRE |Nombre del protocolo. |
+|Nombre |Nombre del protocolo. |
 |Parámetros |Lista de parámetros y valores que se van a pasar a la aplicación como argumentos de evento cuando se activa la aplicación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. |
 
 ### <a name="example"></a>Ejemplo
@@ -995,17 +995,16 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 ```XML
 <Package
   xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-  IgnorableNamespaces="uap3">
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  IgnorableNamespaces="uap3, desktop">
   <Applications>
     <Application>
       <Extensions>
-         <uap3:Extension
-                Category="windows.appExecutionAlias"
-                Executable="exes\launcher.exe"
-                EntryPoint="Windows.FullTrustApplication">
-            <uap3:AppExecutionAlias>
-                <desktop:ExecutionAlias Alias="Contoso.exe" />
-            </uap3:AppExecutionAlias>
+        <uap3:Extension
+          Category="windows.protocol">
+          <uap3:Protocol
+            Name="myapp-cmd"
+            Parameters="/p &quot;%1&quot;" />
         </uap3:Extension>
       </Extensions>
     </Application>
@@ -1037,7 +1036,7 @@ Los usuarios y otros procesos pueden usar un alias para iniciar la aplicación s
 </Extension>
 ```
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.appExecutionAlias``
 |Archivo ejecutable |Ruta de acceso relativa al archivo ejecutable que se iniciará cuando se llame al alias. |
@@ -1049,23 +1048,21 @@ Los usuarios y otros procesos pueden usar un alias para iniciar la aplicación s
 ```XML
 <Package
   xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
-  IgnorableNamespaces="uap3, desktop">
+  IgnorableNamespaces="uap3">
   <Applications>
     <Application>
       <Extensions>
-        <uap3:Extension
-          Category="windows.protocol">
-          <uap3:Protocol
-            Name="myapp-cmd"
-            Parameters="/p &quot;%1&quot;" />
+         <uap3:Extension
+                Category="windows.appExecutionAlias"
+                Executable="exes\launcher.exe"
+                EntryPoint="Windows.FullTrustApplication">
+            <uap3:AppExecutionAlias>
+                <desktop:ExecutionAlias Alias="Contoso.exe" />
+            </uap3:AppExecutionAlias>
         </uap3:Extension>
       </Extensions>
     </Application>
   </Applications>
-</Package>
- 
-...
 </Package>
 ```
 
@@ -1102,7 +1099,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Extension>
 ```
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.startupTask``|
 |Archivo ejecutable |Ruta de acceso relativa para que se inicie el archivo ejecutable. |
@@ -1157,7 +1154,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
   </AutoPlayHandler>
 ```
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.autoPlayHandler``
 |ActionDisplayName |Una cadena que representa la acción que los usuarios pueden realizar con un dispositivo que se conectan a un equipo (por ejemplo: "Importar archivos" o "reproducir vídeo"). |
@@ -1244,7 +1241,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.appPrinter``
 |DisplayName |Es el nombre que quieres que aparezcan en la lista de destinos de impresión de una aplicación. |
@@ -1294,7 +1291,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 Puedes encontrar la referencia de esquema completa [aquí](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts).
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.sharedFonts``
 |Archivo |Es el archivo que contiene las fuentes que quieres compartir. |
@@ -1340,7 +1337,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Extension>
 ```
 
-|NOMBRE |Descripción |
+|Nombre |Descripción |
 |-------|-------------|
 |Category |Siempre ``windows.fullTrustProcess``
 |GroupID |Cadena que identifica el conjunto de parámetros que quieres pasar al archivo ejecutable. |
