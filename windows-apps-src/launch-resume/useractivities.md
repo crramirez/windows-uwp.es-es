@@ -5,12 +5,12 @@ keywords: actividad del usuario, actividades del usuario, línea de tiempo, cort
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ed268dd4ba07604db468ee24e5ea348acf806b39
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 7ddceda3457ef5251cb2b1e384dbb880725103fa
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321808"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282312"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Continuar la actividad del usuario, incluso en diferentes dispositivos
 
@@ -32,14 +32,14 @@ Cuando interactúas con una **UserActivity** llamando a [UserActivity.CreateSess
 
 Una [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity) es la unidad de participación del usuario en Windows. Tiene tres partes: un URI que se usa para activar la aplicación a la que pertenece la actividad, elementos visuales y metadatos que describen la actividad.
 
-1. La [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri) se usa para reanudar la aplicación con un contexto específico. Por lo general, este vínculo adopta la forma de un controlador de protocolo de un esquema (por ejemplo, "my-app://page2?action=edit") o de un AppUriHandler (por ejemplo, http://constoso.com/page2?action=edit).
+1. La [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri#Windows_ApplicationModel_UserActivities_UserActivity_ActivationUri) se usa para reanudar la aplicación con un contexto específico. Normalmente, este vínculo adopta la forma de controlador de protocolo para un esquema (por ejemplo, "My-App://Page2? action = edit") o de un AppUriHandler (por ejemplo, http://constoso.com/page2?action=edit).
 2. [VisualElements](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.visualelements) expone una clase que permite al usuario identificar visualmente una actividad con un título, una descripción o elementos de la tarjeta adaptable.
 3. Por último, [Content](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.content#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_Content) es donde puedes almacenar metadatos para la actividad que se pueden usar para agrupar y recuperar las actividades en un contexto específico. A menudo, esto adopta la forma de datos de [https://schema.org](https://schema.org).
 
 Para agregar una **UserActivity** a la aplicación:
 
 1. Genera objetos de **UserActivity** cuando cambie el contexto del usuario en la aplicación (por ejemplo, la navegación de una página, un nuevo nivel de juego, etc.)
-2. Rellenar **UserActivity** objetos con el conjunto mínimo de los campos obligatorios: [ActivityId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activityid#Windows_ApplicationModel_UserActivities_UserActivity_ActivityId), [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri), y [UserActivity.VisualElements.DisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.displaytext#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_DisplayText).
+2. Rellene los objetos **UserActivity** con el conjunto mínimo de campos obligatorios: [ActivityID](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activityid#Windows_ApplicationModel_UserActivities_UserActivity_ActivityId), [ActivationUri](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity.activationuri)y [UserActivity. VisualElements. DisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivityvisualelements.displaytext#Windows_ApplicationModel_UserActivities_UserActivityVisualElements_DisplayText).
 3. Agrega un controlador de esquema personalizado a tu aplicación para que se pueda volver a activar mediante una **UserActivity** .
 
 Una **UserActivity** puede integrarse en una aplicación con tan solo unas pocas líneas de código. Por ejemplo, vamos a suponer que tenemos este código de MainPage.xaml.cs dentro de la clase MainPage (nota: se da por hecho `using Windows.ApplicationModel.UserActivities;`):
@@ -99,7 +99,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-Lo que hace este código es detectar si la aplicación se ha activado mediante un protocolo. Si es así, comprueba qué debe hacer la aplicación para reanudar la tarea para la que se está activando. Que se va a una aplicación sencilla, la única actividad que esta aplicación se reanuda es colocar, en la página secundaria cuando aparezca la aplicación.
+Lo que hace este código es detectar si la aplicación se ha activado mediante un protocolo. Si es así, comprueba qué debe hacer la aplicación para reanudar la tarea para la que se está activando. Al ser una aplicación sencilla, la única actividad que esta aplicación reanuda es colocarlo en la página secundaria cuando la aplicación aparece.
 
 ## <a name="use-adaptive-cards-to-improve-the-timeline-experience"></a>Usar tarjetas adaptables para mejorar la experiencia de la línea de tiempo
 
@@ -155,7 +155,7 @@ Una vez que la aplicación o el servicio se autentica con una cuenta de Microsof
 ## <a name="summary"></a>Resumen
 
 Puedes usar la API [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities) para que tu aplicación aparezca en la línea de tiempo y Cortana.
-* Obtenga más información sobre la [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
+* Más información sobre la [API de **UserActivity**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * Echa un vistazo al [código de ejemplo](https://github.com/Microsoft/project-rome).
 * Consulta [tarjetas adaptables más sofisticadas](https://adaptivecards.io/).
 * Publicar una **UserActivity** de iOS, Android o el servicio web a través de [Microsoft Graph](https://developer.microsoft.com/graph).
@@ -167,9 +167,9 @@ Puedes usar la API [UserActivity](https://docs.microsoft.com/uwp/api/windows.app
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Actividades del usuario (docs Roma del proyecto)](https://docs.microsoft.com/windows/project-rome/user-activities/)
+* [Actividades de usuario (documentos de proyecto de Roma)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/)
-* [Visualizador de las tarjetas adaptables, ejemplos](https://adaptivecards.io/)
+* [Visualizador de tarjetas adaptables, ejemplos](https://adaptivecards.io/)
 * [Controlar la activación de URI](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-* [Interactuar con sus clientes en cualquier plataforma mediante Microsoft Graph, fuente de actividades y las tarjetas adaptables](https://channel9.msdn.com/Events/Connect/2017/B111)
+* [Interacción con sus clientes en cualquier plataforma mediante el Microsoft Graph, la fuente de actividades y las tarjetas adaptables](https://channel9.msdn.com/Events/Connect/2017/B111)
 * [Microsoft Graph](https://developer.microsoft.com/graph)

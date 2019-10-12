@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: 16996a8706018bde89d3eb08249ee496d7e25bb9
-ms.sourcegitcommit: e7c95c156f970fe9fdf7ff98ea81508360a64c12
+ms.openlocfilehash: f6eda179a3fea0c24f3a9de0d674800bd3d2015c
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172842"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282321"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes de Windows Runtime asincrónicos para una aplicación para UWP cargada en paralelo
 
@@ -181,7 +181,7 @@ La categoría es inProcessServer porque hay varias entradas en la categoría out
 
 La sección <ActivatableClass> es la misma que una RuntimeClass que está realmente dentro del proceso, preferida por un componente de Windows Runtime en el paquete de la aplicación. <ActivatableClassAttribute> es un nuevo elemento y los atributos name = "DesktopApplicationPath" y Type = "String" son obligatorios e invariables. El atributo Value apunta a la ubicación donde se encuentra el archivo winmd de implementación del componente de escritorio (encontrarás más información sobre esto en la siguiente sección). Cada clase RuntimeClass preferida por el componente de escritorio debe tener su propio árbol de elementos <ActivatableClass>. ActivatableClassId debe coincidir con el nombre completo en el espacio de nombres de la RuntimeClass.
 
-Como se indicó en la sección "Definición del contrato", se debe crear una referencia de proyecto al archivo winmd de referencia del componente de escritorio. El sistema de proyectos de Visual Studio normalmente crea una estructura de directorios de dos niveles con el mismo nombre. En el ejemplo, es EnterpriseIPCApplication @ no__t-0EnterpriseIPCApplication. El archivo de referencia **winmd** se copia manualmente a este directorio de segundo nivel y, a continuación, se usa el cuadro de diálogo Referencias de proyectos (haga clic en el botón **Examinar...** ) para ubicar y hacer referencia a este archivo **winmd**. Después, el espacio de nombres de nivel superior del componente de escritorio (por ejemplo, Fabrikam) debe aparecer como nodo de nivel superior en la parte Referencias del proyecto.
+Como se indicó en la sección "Definición del contrato", se debe crear una referencia de proyecto al archivo winmd de referencia del componente de escritorio. El sistema de proyectos de Visual Studio normalmente crea una estructura de directorios de dos niveles con el mismo nombre. En el ejemplo, es EnterpriseIPCApplication @ no__t-0EnterpriseIPCApplication. El archivo de referencia **winmd** se copia manualmente a este directorio de segundo nivel y, a continuación, se usa el cuadro de diálogo Referencias de proyectos (haga clic en el botón **Examinar...** ) para ubicar y hacer referencia a este archivo **winmd**. Después, el espacio de nombres de nivel superior del componente de escritorio (por ejemplo, Fabrikam) debe aparecer como un nodo de nivel superior en la parte referencias del proyecto.
 
 >**Nota** Es muy importante usar el archivo de **referencia winmd** en la aplicación de prueba. Si trasladas accidentalmente el archivo de **implementación winmd** al directorio de la aplicación de prueba y haces referencia a él, probablemente recibirás un error del tipo "no se encuentra IStringable". Esta es una señal segura de que se hizo referencia al archivo **winmd** incorrecto. Las reglas posteriores a la compilación en la aplicación del servidor IPC (que se detallan en la sección siguiente) segregan cuidadosamente estos dos archivos **winmd** en directorios diferentes.
 
@@ -491,7 +491,7 @@ En los pasos siguientes, damos por hecho que el componente de servidor se llama 
 
 a) Dlldata.c
 
-b) Un archivo de encabezado (por ejemplo, MyWinRTComponent.h)
+b) un archivo de encabezado (por ejemplo, MyWinRTComponent. h)
 
 c) un archivo \* @ no__t-1I. c (por ejemplo, MyWinRTComponent @ no__t-2i. c)
 

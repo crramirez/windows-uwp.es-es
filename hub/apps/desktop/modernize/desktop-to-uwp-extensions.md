@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 316682ba136b5b3249d26abd0a5c5a877abbcf12
-ms.sourcegitcommit: 76357092f90b70bdb21ee43a5a416fe1fbfd9b89
+ms.openlocfilehash: c99d05a701f41e24663d116773b000017b805d81
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72257931"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72281805"
 ---
 # <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Integración de la aplicación de escritorio empaquetada con Windows 10 y UWP
 
@@ -247,7 +247,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 |Verb |Es el nombre que aparece en el menú contextual del Explorador de archivos. Esta cadena se puede localizar mediante ```ms-resource```.|
 |Id |Es el identificador único del verbo. Si la aplicación es una aplicación de UWP, se pasa a la aplicación como parte de sus argumentos de evento de activación para que pueda controlar la selección del usuario de manera adecuada. Si su aplicación es una aplicación empaquetada de plena confianza, recibirá parámetros en su lugar (consulte la siguiente viñeta). |
 |Parámetros |Es la lista de parámetros de argumento y valores asociados con el verbo. Si la aplicación es una aplicación empaquetada de plena confianza, estos parámetros se pasan a la aplicación como argumentos del evento cuando se activa la aplicación. Puede personalizar el comportamiento de la aplicación en función de los distintos verbos de activación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. Si la aplicación es una aplicación de UWP, no se pueden pasar parámetros. En su lugar, la aplicación recibirá el identificador (consulta el punto anterior).|
-|Extendido |Especifica que el verbo solo debe aparecer si el usuario mantiene presionada la tecla **Mayús** para mostrar el menú contextual, antes de hacer clic con el botón derecho en el archivo. Este atributo es opcional y su valor predeterminado es **False** (por ejemplo, mostrar siempre el verbo) si no se incluye. Este comportamiento se especifica de forma individual para cada verbo (excepto "Abrir", que siempre es **False**).|
+|Extendido |Especifica que el verbo solo debe aparecer si el usuario mantiene presionada la tecla **Mayús** para mostrar el menú contextual, antes de hacer clic con el botón derecho en el archivo. Este atributo es opcional y su valor predeterminado es **false** (por ejemplo, Mostrar siempre el verbo) si no aparece en la lista. Este comportamiento se especifica de forma individual para cada verbo (excepto "Abrir", que siempre es **False**).|
 
 #### <a name="example"></a>Ejemplo
 

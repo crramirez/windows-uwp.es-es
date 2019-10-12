@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: 991d86dd61c660553e5b0a3fdbbdec0336c7fb8b
-ms.sourcegitcommit: d63e5a4fd24434068067cae5b8fb3bed4931247e
+ms.openlocfilehash: 0a1356003c86040cfa51872b802ba070a685789b
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67515155"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72281842"
 ---
 # <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>Habilitar el acceso de modo usuario a GPIO, I2C, y SPI
 
@@ -26,7 +26,7 @@ El acceso de modo de usuario a buses de nivel bajo en Windows se asocia a travé
 
 ## <a name="asl-by-example"></a>ASL como ejemplo
 
-Vamos a examinar la declaración de nodo de dispositivo rhproxy en Raspberry Pi 2. En primer lugar, cree la declaración de dispositivo ACPI en el \\ámbito _SB.
+Vamos a examinar la declaración de nodo de dispositivo rhproxy en Raspberry Pi 2. En primer lugar, cree la declaración de dispositivo ACPI en el ámbito de @no__t -0 _SB.
 
 ```cpp
 Device(RHPX)
@@ -159,7 +159,7 @@ De este modo se crea un bus denominado "SPI1" y se asocia al índice 2 del recur
 * Debes haber pasado las [Pruebas MITT SPI](https://docs.microsoft.com/windows-hardware/drivers/spb/spi-tests-in-mitt)
 * Debes admitir la velocidad de reloj de 4Mhz
 * Debe ser compatible con la longitud de datos de 8 bits
-* Debe admitir todos los modos de SPI: 0, 1, 2, 3
+* Debe ser compatible con todos los modos SPI: 0, 1, 2, 3
 
 ### <a name="i2c"></a>I2C
 
@@ -268,7 +268,7 @@ Si una señal GPIO pasa por un desfasador de nivel antes de alcanzar un encabeza
 Windows admite dos esquemas de numeración de patillas:
 
 * Numeración de patillas secuencial: los usuarios ven números como 0, 1, 2... hasta el número de patillas expuestas. 0 es el primer recurso GpioIo declarado en ASL, 1 es el segundo recurso GpioIo declarado en ASL, y así sucesivamente.
-* Numeración de Pin nativo: los usuarios ver los números pin especificado en los descriptores de GpioIo, por ejemplo, 4, 5, 12, 13,...
+* Numeración de PIN nativa: los usuarios ven los números de PIN especificados en los descriptores de GpioIo, por ejemplo, 4, 5, 12, 13,...
 
 ```cpp
 Package (2) { “GPIO-UseDescriptorPinNumbers”, 1 },
@@ -516,7 +516,7 @@ Cuando el cliente cierra su identificador de recurso, las patillas se vuelven a 
 
 Esta sección describe cómo un servidor de multiplexación de patillas expone su funcionalidad a los clientes. Esto no se aplica a controladores de minipuerto `GpioClx`, ya que el marco de trabajo implementa este protocolo en nombre de los controladores de cliente. Para obtener información detallada sobre cómo admitir multiplexación de patillas en controladores de cliente `GpioClx`, consulta [implementación de compatibilidad de multiplexación de patillas con controladores de cliente GpioClx](#supporting-muxing-support-in-gpioclx-client-drivers).
 
-#### <a name="handling-irpmjcreate-requests"></a>Controlar solicitudes de IRP_MJ_CREATE
+#### <a name="handling-irp_mj_create-requests"></a>Controlar solicitudes de IRP_MJ_CREATE
 
 Los clientes abren un identificador para un recurso cuando quieren reservar un recurso de multiplexación de patillas. Un servidor de multiplexación de patillas recibe solicitudes *IRP_MJ_CREATE* por medio de una operación de análisis del concentrador de recursos. El componente de ruta de acceso final de la solicitud *IRP_MJ_CREATE* contiene el identificador de concentrador de recursos, que es un entero de 64 bits en formato hexadecimal. El servidor debe extraer el identificador de concentrador de recursos del nombre de archivo mediante `RESOURCE_HUB_ID_FROM_FILE_NAME()` desde reshub.h y enviar *IOCTL_RH_QUERY_CONNECTION_PROPERTIES* al concentrador de recursos para obtener el descriptor `MsftFunctionConfig()`.
 
@@ -534,7 +534,7 @@ Si se produce un error en el arbitraje de uso compartido, la solicitud debería 
 
 Ten en cuenta que el modo de uso compartido de la solicitud entrante debe obtenerse del descriptor de MsftFunctionConfig, no de [IrpSp -> Parameters.Create.ShareAccess](https://docs.microsoft.com/windows-hardware/drivers/ifs/irp-mj-create).
 
-#### <a name="handling-ioctlgpiocommitfunctionconfigpins-requests"></a>Controlar solicitudes de IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS
+#### <a name="handling-ioctl_gpio_commit_function_config_pins-requests"></a>Controlar solicitudes de IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS
 
 Después de que el cliente haya reservado correctamente un recurso MsftFunctionConfig abriendo un controlador, puede enviar *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para solicitar al servidor que realice la operación de multiplexación de hardware real. Cuando el servidor recibe *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* para cada patilla de la lista de patillas debe
 
@@ -547,13 +547,13 @@ El significado de FunctionNumber lo define el servidor, y se entiende que el des
 
 Recuerda que cuando se cierra el identificador, el servidor tendrá que revertir las patillas a la configuración en la que estaban cuando se recibió IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS, por lo que es posible que el servidor tenga que guardar el estado de las patillas antes de modificarlas.
 
-#### <a name="handling-irpmjclose-requests"></a>Controlar solicitudes de IRP_MJ_CLOSE
+#### <a name="handling-irp_mj_close-requests"></a>Controlar solicitudes de IRP_MJ_CLOSE
 
 Cuando un cliente ya no necesita un recurso de multiplexación, cierra su identificador. Cuando un servidor recibe una solicitud *IRP_MJ_CLOSE*, debe revertir las patillas al estado en el que estaban cuando se recibió *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*. Si el cliente nunca envía *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*, no es necesario realizar ninguna acción. El servidor debe marcar las patillas como disponible en función del arbitraje de uso compartido y completar la solicitud con *STATUS_SUCCESS*. Asegúrate de sincronizar correctamente el control de *IRP_MJ_CLOSE* con el control de *IRP_MJ_CREATE*.
 
 ### <a name="authoring-guidelines-for-acpi-tables"></a>Directrices para crear tablas ACPI
 
-Esta sección describe cómo proporcionar recursos de multiplexación a los controladores de cliente. Ten en cuenta que necesitarás la versión de compilación de Microsoft ASL 14327 o posterior para compilar tablas que contengan recursos `MsftFunctionConfig()`. `MsftFunctionConfig()` los recursos se proporcionan a los clientes de pin muxing como recursos de hardware. `MsftFunctionConfig()` los recursos se deben proporcionar a los controladores de serie y los controladores que requieren cambios de pin muxing, que suelen ser HPB, pero no deben especificarse para HPB y controladores periféricos de serie, desde la configuración del controlador de controlador identificadores muxing.
+Esta sección describe cómo proporcionar recursos de multiplexación a los controladores de cliente. Ten en cuenta que necesitarás la versión de compilación de Microsoft ASL 14327 o posterior para compilar tablas que contengan recursos `MsftFunctionConfig()`. `MsftFunctionConfig()` se proporcionan recursos para anclar los clientes de multiplexación como recursos de hardware. se deben proporcionar recursos `MsftFunctionConfig()` a los controladores que requieran cambios de multiplexación de PIN, que normalmente son controladores de SPB y de controlador serie, pero no se deben proporcionar a los controladores de dispositivos periféricos de SPB y serie, ya que el controlador de controlador controla la configuración de multiplexación.
 La macro ACPI `MsftFunctionConfig()` se define del siguiente modo:
 
 ```cpp
@@ -605,11 +605,11 @@ Device(I2C1)
 }
 ```
 
-Además de los recursos de memoria e interrupción que suelen requerir los controladores de controladora, también se especifica un recurso `MsftFunctionConfig()`. Este recurso permite que el controlador I2C colocar los pines 2 y 3 - administrados por el nodo de dispositivo en \\_SB. GPIO0: en la función 4 con resistencia de ascenso habilitado.
+Además de los recursos de memoria e interrupción que suelen requerir los controladores de controladora, también se especifica un recurso `MsftFunctionConfig()`. Este recurso permite que el controlador de controlador I2C ponga los pines 2 y 3 administrados por el nodo de dispositivo en @no__t -0 _SB. GPIO0: en la función 4 con resistencia de extracción habilitada.
 
 ## <a name="supporting-muxing-support-in-gpioclx-client-drivers"></a>Compatibilidad de soporte de multiplexación en los controladores de cliente GpioClx
 
-`GpioClx` tiene compatibilidad integrada para muxing pin. Controladores de minipuerto GpioClx (también denominados "Controladores de cliente GpioClx"), hardware del controlador GPIO. A partir de Windows 10 compilación 14327, los controladores de minipuerto GpioClx pueden agregar compatibilidad para multiplexación de patillas implementando dos DDI nuevas:
+`GpioClx` tiene compatibilidad integrada con multiplexación de PIN. Controladores de minipuerto GpioClx (también denominados "Controladores de cliente GpioClx"), hardware del controlador GPIO. A partir de Windows 10 compilación 14327, los controladores de minipuerto GpioClx pueden agregar compatibilidad para multiplexación de patillas implementando dos DDI nuevas:
 
 * CLIENT_ConnectFunctionConfigPins: `GpioClx` lo llama para requerir que el controlador de minipuerto aplique la configuración de multiplexación especificada.
 * CLIENT_DisconnectFunctionConfigPins: `GpioClx` lo llama para requerir que el controlador de minipuerto revierta la configuración de multiplexación.
@@ -633,11 +633,11 @@ El siguiente diagrama muestra las dependencias entre cada uno de estos component
 
 En el tiempo de inicialización del dispositivo, los marcos `SpbCx` y `SerCx` analizan todos los recursos `MsftFunctionConfig()` suministrados como recursos de hardware para el dispositivo. A continuación, SpbCx/SerCx adquieren y liberan los recursos de multiplexación de patillas bajo petición.
 
-`SpbCx` aplica la configuración de pin muxing en su *IRP_MJ_CREATE* controlador, justo antes de llamar a los controladores de cliente [EvtSpbTargetConnect()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) devolución de llamada. Si no se pudo aplicar la configuración de la multiplexación, no se realizará la devolución de llamada a `EvtSpbTargetConnect()` del controlador de controladora. Por lo tanto, un controlador SPB puede suponer que las patillas se multiplexan en la función SPB en el momento en que se llama a `EvtSpbTargetConnect()`.
+`SpbCx` aplica la configuración de multiplexación de PIN en su controlador de *IRP_MJ_CREATE* , justo antes de llamar a la devolución de llamada [EvtSpbTargetConnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) del controlador cliente. Si no se pudo aplicar la configuración de la multiplexación, no se realizará la devolución de llamada a `EvtSpbTargetConnect()` del controlador de controladora. Por lo tanto, un controlador SPB puede suponer que las patillas se multiplexan en la función SPB en el momento en que se llama a `EvtSpbTargetConnect()`.
 
-`SpbCx` revierte la configuración de pin muxing en su *IRP_MJ_CLOSE* controlador, justo después de invocar el controlador [EvtSpbTargetDisconnect()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) devolución de llamada. El resultado es que las patillas se multiplexan en la función SPB siempre que un controlador periférico abra un identificador para el controlador de controladora SPB, y se multiplexan inmediatamente cuando el controlador periférico cierra su identificador.
+`SpbCx` revierte la configuración de multiplexación de PIN en su controlador de *IRP_MJ_CLOSE* , justo después de invocar la devolución de llamada [EvtSpbTargetDisconnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) del controlador del controlador. El resultado es que las patillas se multiplexan en la función SPB siempre que un controlador periférico abra un identificador para el controlador de controladora SPB, y se multiplexan inmediatamente cuando el controlador periférico cierra su identificador.
 
-`SerCx` se comporta de forma similar. `SerCx` adquiere toda `MsftFunctionConfig()` recursos en su *IRP_MJ_CREATE* controlador justo antes de invocar el controlador [EvtSerCx2FileOpen()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) devolución de llamada y libera todos los recursos en su IRP_MJ_CLOSE controlador, justo después de invocar el controlador [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) devolución de llamada.
+`SerCx` se comporta de forma similar. `SerCx` adquiere todos los recursos `MsftFunctionConfig()` en su controlador *IRP_MJ_CREATE* justo antes de invocar la devolución de llamada [EvtSerCx2FileOpen ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) del controlador del controlador y libera todos los recursos en su controlador IRP_MJ_CLOSE, justo después de invocar el controlador devolución de llamada de [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) del controlador.
 
 La implicación de la multiplexación dinámica de patillas para los controladores de controladora `SerCx` y `SpbCx` consiste en que deben ser capaces de tolerar las patillas que se multiplexan desde la función SPB/UART a horas determinadas. Los controladores de controladora deben asumir que las patillas no se multiplexarán hasta que se llame a `EvtSpbTargetConnect()` o `EvtSerCx2FileOpen()`. No es necesaria la multiplexación de las patillas en la función SPB/UART durante las siguientes devoluciones de llamada. La siguiente no es una lista completa, pero representa las rutinas de PNP más comunes implementadas por los controladores de controladora.
 
@@ -652,7 +652,7 @@ Cuando estés listo para probar rhproxy, es útil usar el siguiente procedimient
 
 1. Comprueba que cada controlador de la controladora `SpbCx`, `GpioClx`, y `SerCx` está cargando y funcionando correctamente
 1. Comprueba que `rhproxy` está en el sistema. Algunas ediciones y compilaciones de Windows no lo tienen.
-1. Compilar y cargar el nodo de rhproxy mediante `ACPITABL.dat`
+1. Compilar y cargar el nodo rhproxy mediante `ACPITABL.dat`
 1. Comprueba que el nodo del dispositivo `rhproxy` existe
 1. Comprueba que `rhproxy` está cargándose e iniciándose
 1. Comprueba que los dispositivos esperados están expuestos al modo usuario
@@ -701,7 +701,7 @@ DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
 }
 ```
 
-2. Descargue el [WDK](https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk) y encontrar `asl.exe` en `C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify`
+2. Descargue el [WDK](https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk) y busque `asl.exe` en `C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify`
 3. Ejecuta el siguiente comando para generar ACPITABL.dat:
 
 ```ps
@@ -737,14 +737,14 @@ devcon status *msft8000
 
 Si el resultado indica que rhproxy se ha iniciado, rhproxy se ha cargado e iniciado correctamente. Si ves un código de problema, debes investigar. Estos son algunos códigos de problemas comunes:
 
-* Problema 51: `CM_PROB_WAITING_ON_DEPENDENCY` El sistema no está iniciando rhproxy porque una de sus dependencias no se ha podido cargar. Esto significa que los recursos han pasado al punto de rhproxy y a nodos ACPI no válidos, o que no se inician los dispositivos de destino. En primer lugar, vuelve a comprobar que todos los dispositivos se están ejecutando correctamente (consulta la sección anterior 'Comprobar los controladores de controladora'). A continuación, vuelve a comprobar tu ASL, asegúrate de que las rutas de recurso (por ejemplo, `\_SB.I2C1`) son correctas, y apunta a nodos válidos en tu DSDT.
+* Problema 51: `CM_PROB_WAITING_ON_DEPENDENCY` El sistema no está iniciando rhproxy porque una de sus dependencias no se ha podido cargar. Esto significa que los recursos han pasado al punto de rhproxy y a nodos ACPI no válidos, o que no se inician los dispositivos de destino. En primer lugar, vuelve a comprobar que todos los dispositivos se están ejecutando correctamente (consulta la sección anterior 'Comprobar los controladores de controladora'). Después, compruebe el ASL y asegúrese de que todas las rutas de acceso de recursos (por ejemplo, `\_SB.I2C1`) son correctas y apunte a los nodos válidos de su DSDT.
 * Problema 10: `CM_PROB_FAILED_START` Rhproxy no se pudo iniciar, probablemente por un problema en el análisis del recurso. Repasa tu ASL, vuelve a comprobar los índices de recurso en el DSD y verifica que los recursos GPIO se hayan especificado en orden de número de patilla ascendente.
 
 ### <a name="verify-that-the-expected-devices-are-exposed-to-usermode"></a>Comprueba que los dispositivos esperados están expuestos al modo usuario
 
 Ahora que se está ejecutando rhproxy, debería haber creado interfaces de dispositivos que se puedan acceder por el modo usuario. Usaremos varias herramientas de líneas de comandos para enumerar los dispositivos y ver si están presentes.
 
-Clone el [ https://github.com/ms-iot/samples ](https://github.com/ms-iot/samples) repositorio y compilación la `GpioTestTool`, `I2cTestTool`, `SpiTestTool`, y `Mincomm` ejemplos. Copia las herramientas al dispositivo que estás probando y usa los siguientes comandos para enumerar los dispositivos.
+Clone el repositorio [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) y compile los ejemplos `GpioTestTool`, `I2cTestTool`, `SpiTestTool` y `Mincomm`. Copia las herramientas al dispositivo que estás probando y usa los siguientes comandos para enumerar los dispositivos.
 
 ```ps
 I2cTestTool.exe -list
@@ -811,15 +811,15 @@ Usa las siguientes muestras para validar que los dispositivos funcionan desde UW
 
 Descarga el [Hardware Lab Kit (HLK)](https://docs.microsoft.com/windows-hardware/test/hlk/windows-hardware-lab-kit). Las siguientes pruebas están disponibles:
 
-* [GPIO WinRT funcional y las pruebas de esfuerzo](https://docs.microsoft.com/windows-hardware/test/hlk/testref/f1fc0922-1186-48bd-bfcd-c7385a2f6f96)
-* [Pruebas de escritura de WinRT i2c (EEPROM necesario)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2ab0df1b-3369-4aaf-a4d5-d157cb7bf578)
-* [Pruebas de lectura de WinRT i2c (EEPROM necesario)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/ca91c2d2-4615-4a1b-928e-587ab2b69b04)
-* [Pruebas de dirección de i2c WinRT subordinado que no existe](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2746ad72-fe5c-4412-8231-f7ed53d95e71)
-* [I2C WinRT avanzada pruebas funcionales (mbed LPC1768 necesarios)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/a60f5a94-12b2-4905-8416-e9774f539f1d)
-* [Pruebas de comprobación SPI WinRT de frecuencia de reloj (mbed LPC1768 necesarios)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/50cf9ccc-bbd3-4514-979f-b0499cb18ed8)
-* [SPI WinRT E/S transferir las pruebas (mbed LPC1768 necesarios)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/00c892e8-c226-4c71-9c2a-68349fed7113)
-* [Pruebas de comprobación de SPI WinRT Stride](https://docs.microsoft.com/windows-hardware/test/hlk/testref/20c6b079-62f7-4067-953f-e252bd271938)
-* [Pruebas de Gap transferir SPI WinRT detección (mbed LPC1768 necesarios)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/6da79d04-940b-4c49-8f00-333bf0cfbb19)
+* [Pruebas funcionales y de esfuerzo de WinRT de GPIO](https://docs.microsoft.com/windows-hardware/test/hlk/testref/f1fc0922-1186-48bd-bfcd-c7385a2f6f96)
+* [Pruebas de escritura de I2C WinRT (se requiere EEPROM)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2ab0df1b-3369-4aaf-a4d5-d157cb7bf578)
+* [Pruebas de lectura de I2C WinRT (se requiere EEPROM)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/ca91c2d2-4615-4a1b-928e-587ab2b69b04)
+* [Pruebas de direcciones secundarias no existentes de I2C WinRT](https://docs.microsoft.com/windows-hardware/test/hlk/testref/2746ad72-fe5c-4412-8231-f7ed53d95e71)
+* [Pruebas funcionales avanzadas de I2C WinRT (mbed LPC1768 obligatorio)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/a60f5a94-12b2-4905-8416-e9774f539f1d)
+* [Pruebas de comprobación de frecuencia del reloj de SPI (mbed LPC1768 obligatorio)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/50cf9ccc-bbd3-4514-979f-b0499cb18ed8)
+* [Pruebas de transferencia de e/s de WinRT de SPI (mbed LPC1768 obligatorio)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/00c892e8-c226-4c71-9c2a-68349fed7113)
+* [Pruebas de comprobación de STRIDE WinRT de SPI](https://docs.microsoft.com/windows-hardware/test/hlk/testref/20c6b079-62f7-4067-953f-e252bd271938)
+* [Pruebas de detección de brechas de la transferencia de WinRT de SPI (mbed LPC1768 obligatorio)](https://docs.microsoft.com/windows-hardware/test/hlk/testref/6da79d04-940b-4c49-8f00-333bf0cfbb19)
 
 Cuando selecciones el nodo de dispositivo rhproxy en el administrador de HLK, se seleccionarán automáticamente las pruebas aplicables.
 

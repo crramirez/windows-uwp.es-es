@@ -6,25 +6,25 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 24ae3fb7442ac955b5edf4127dfdf66176c81a43
-ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
+ms.openlocfilehash: 8248e17a342563a0746e3c54c3a69a52f027d072
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399629"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282429"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Crear una aplicación de inicio de sesión de Windows Hello
 
 Esta es primera parte de un tutorial completo acerca de cómo crear una aplicación para UWP (Plataforma universal de Windows) de Windows 10 que use Windows Hello como una alternativa a los sistemas tradicionales de autenticación de nombre de usuario y contraseña. La aplicación usa un nombre de usuario para iniciar sesión y crear una clave de Hello para cada cuenta. Estas cuentas estarán protegidas por el PIN configurado en Configuración de Windows en la configuración de Windows Hello.
 
-Este tutorial se divide en dos partes: creación de la aplicación y conexión al servicio back-end. Cuando haya terminado con este artículo, continúe con la parte 2: [Servicio de inicio de sesión Windows Hello](microsoft-passport-login-auth-service.md).
+Este tutorial se divide en dos partes: creación de la aplicación y conexión al servicio back-end. Cuando haya terminado con este artículo, continúe con la parte 2: [Servicio de inicio de sesión de Windows Hello](microsoft-passport-login-auth-service.md).
 
 Antes de comenzar, debes leer la introducción a [Windows Hello](microsoft-passport.md) para obtener una descripción general de cómo funciona Windows Hello.
 
 ## <a name="get-started"></a>Comenzar
 
 
-Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También tendrá que usar Visual Studio 2015 (Community Edition o superior), o una versión posterior de Visual Studio, en un equipo Windows 10. Aunque Visual Studio 2015 es la versión mínima requerida, se recomienda que utilice la versión más reciente de Visual Studio para las actualizaciones más recientes para desarrolladores y la seguridad.
+Para crear este proyecto, necesitarás algo de experiencia con C# y XAML. También debe usar Visual Studio 2015 (Community Edition o superior) o una versión posterior de Visual Studio en un equipo con Windows 10. Aunque Visual Studio 2015 es la versión mínima requerida, se recomienda usar la versión más reciente de Visual Studio para las últimas actualizaciones de seguridad y desarrolladores.
 
 -   Abra Visual Studio y seleccione Archivo > Nuevo > proyecto.
 -   Se abrirá una ventana de "Nuevo proyecto". Navegación a Plantillas > Visual C#.
@@ -490,7 +490,7 @@ En este ejercicio aprenderás a comprobar si Windows Hello está configurado en 
 
     ![Petición de PIN de inicio de sesión de Windows Hello](images/passport-login-8.png)
 
-## <a name="exercise-2-welcome-and-user-selection-pages"></a>Ejercicio 2: Bienvenida y páginas de selección de usuario
+## <a name="exercise-2-welcome-and-user-selection-pages"></a>Ejercicio 2: Páginas de bienvenida y selección de usuario
 
 
 En este ejercicio, partirás del ejercicio anterior. Cuando una persona inicia sesión correctamente, debería mostrarse una página de bienvenida donde se puede cerrar sesión o eliminar la cuenta. Dado que Windows Hello crea una clave para cada equipo, se puede crear una pantalla de selección del usuario, que muestra todos los usuarios que tienen una sesión iniciada en el equipo. Un usuario puede seleccionar una de estas cuentas e ir directamente a la pantalla de bienvenida sin tener que volver a escribir una contraseña, porque ya se autenticó para acceder a la máquina.
@@ -577,7 +577,7 @@ En este ejercicio, partirás del ejercicio anterior. Cuando una persona inicia s
         if (keyOpenResult.Status == KeyCredentialStatus.Success)
         {
             // In the real world you would send key information to server to unregister
-            //e.g. RemovePassportAccountOnServer(account);
+            //for example, RemovePassportAccountOnServer(account);
         }
 
         // Then delete the account from the machines list of Passport Accounts
@@ -815,7 +815,7 @@ En este ejercicio, partirás del ejercicio anterior. Cuando una persona inicia s
             // If it does here you would Request a challenge from the Server. The client would sign this challenge and the server
             // would check the signed challenge. If it is correct it would allow the user access to the backend.
             // You would likely make a new method called RequestSignAsync to handle all this
-            // e.g. RequestSignAsync(openKeyResult);
+            // for example, RequestSignAsync(openKeyResult);
             // Refer to the second Microsoft Passport sample for information on how to do this.
 
             // For this sample there is not concept of a server implemented so just return true.
@@ -876,7 +876,7 @@ En este ejercicio, partirás del ejercicio anterior. Cuando una persona inicia s
 
     ![Seleccionar de la lista de usuarios de Windows Hello](images/passport-login-10.png)
 
-## <a name="exercise-3-registering-a-new-windows-hello-user"></a>Ejercicio 3: Registrar un usuario nuevo de Windows Hello
+## <a name="exercise-3-registering-a-new-windows-hello-user"></a>Ejercicio 3: Registrar un nuevo usuario de Windows Hello
 
 
 En este ejercicio crearás una nueva página, que a su vez creará una nueva cuenta con Windows Hello. El funcionamiento es similar al de la página Login. La página Login se implementa para un usuario existente que está realizando la migración para usar Windows Hello. Una página PassportRegister creará el registro de Windows Hello para un usuario nuevo.
@@ -970,4 +970,4 @@ En esta práctica has aprendido las habilidades esenciales que necesitas para us
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Windows Hello](microsoft-passport.md)
-* [Servicio de inicio de sesión Windows Hello](microsoft-passport-login-auth-service.md)
+* [Servicio de inicio de sesión de Windows Hello](microsoft-passport-login-auth-service.md)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fdb4e80d7f8da022e2ceb5496cbad592d7d22716
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: f9e7cc16b65f4ee2727fae5a711da9372ee91c01
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339624"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282189"
 ---
 # <a name="improve-garbage-collection-performance"></a>Mejorar el rendimiento de la recolección de elementos no usados
 
@@ -74,7 +74,7 @@ Los objetos de 85 KB o mayores se asignan al montón de objetos grandes (LOH) y
 
 ### <a name="avoid-reference-rich-objects"></a>Evitar objetos con muchas referencias
 
-El recolector de elementos no utilizados sigue las referencias entre los objetos desde las raíces de la aplicación para determinar qué objetos están activos. Para más información, consulta el tema que explica [lo que sucede durante una recolección de elementos no utilizados](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals). Si un objeto contiene muchas referencias, el recolector de elementos no utilizados deberá realizar una mayor cantidad de trabajo. Una técnica común (especialmente con los objetos grandes) consiste en convertir los objetos con muchas referencias en objetos sin referencias (por ejemplo, en lugar de almacenar una referencia, almacena un índice). Obviamente, esta técnica solo funciona cuando es posible hacerlo de forma lógica.
+El recolector de elementos no utilizados sigue las referencias entre los objetos desde las raíces de la aplicación para determinar qué objetos están activos. Para más información, consulta el tema que explica [lo que sucede durante una recolección de elementos no utilizados](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals). Si un objeto contiene muchas referencias, el recolector de elementos no utilizados deberá realizar una mayor cantidad de trabajo. Una técnica común (especialmente con objetos grandes) consiste en convertir objetos enriquecidos de referencia en objetos sin referencias (por ejemplo, en lugar de almacenar una referencia, almacenar un índice). Obviamente, esta técnica solo funciona cuando es posible hacerlo de forma lógica.
 
 El reemplazo de referencias de objeto por índices puede implicar una modificación complicada y perjudicial en la aplicación, y es más eficaz en objetos grandes con una gran cantidad de referencias. Hazlo solamente si notas tiempos de recolección de elementos no utilizados prolongados en la aplicación relacionados con objetos con muchas referencias.
 

@@ -1,5 +1,5 @@
 ---
-Description: Puede definir un adjunto diseños para su uso con contenedores, como el control ItemsRepeater.
+Description: Puede definir un diseño adjunto para su uso con contenedores como el control ItemsRepeater.
 title: AttachedLayout
 label: AttachedLayout
 template: detail.hbs
@@ -7,22 +7,22 @@ ms.date: 03/13/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ff73b13acb5f5970bb79755b0bf5706fb12545a
-ms.sourcegitcommit: c10d7843ccacb8529cb1f53948ee0077298a886d
+ms.openlocfilehash: dc23e86f85c5db3dd10c5cec152047be387d4513
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913995"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282292"
 ---
 # <a name="attached-layouts"></a>Diseños adjuntos
 
-Un contenedor (por ejemplo, el Panel) que delega su lógica de diseño a otro objeto se basa en el objeto de diseño conectados para proporcionar el comportamiento de diseño para su elemento secundario de los elementos.  Un modelo de diseño adjunta proporciona flexibilidad para una aplicación modificar el diseño de elementos en tiempo de ejecución, o compartir más fácilmente los aspectos de diseño entre las distintas partes de la interfaz de usuario (por ejemplo, los elementos de las filas de una tabla que parecen estar alineado dentro de una columna).
+Un contenedor (por ejemplo, el panel) que delega su lógica de diseño a otro objeto se basa en el objeto de diseño adjunto para proporcionar el comportamiento de diseño de sus elementos secundarios.  Un modelo de diseño adjunto proporciona flexibilidad a una aplicación para modificar el diseño de los elementos en tiempo de ejecución, o compartir más fácilmente aspectos del diseño entre diferentes partes de la interfaz de usuario (por ejemplo, los elementos de las filas de una tabla que parecen estar alineados dentro de una columna).
 
-En este tema, se explica lo que implica la creación de un diseño adjunto (virtualización y sin virtualizar), los conceptos y las clases, deberá entender, y las ventajas y desventajas deberá tener en cuenta al decidir entre ellos.
+En este tema, trataremos lo que implica la creación de un diseño adjunto (virtualización y no virtualización), los conceptos y las clases que debe comprender y las ventajas y desventajas que debe tener en cuenta a la hora de decidir entre ellos.
 
-| **Obtener la biblioteca de interfaz de usuario de Windows** |
+| **Obtención de la biblioteca de la interfaz de usuario de Windows** |
 | - |
-| Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete de NuGet que contiene los nuevos controles y características de interfaz de usuario para aplicaciones UWP. Para obtener más información, incluidas las instrucciones de instalación, consulte el [Introducción a la biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 > **API importantes**:
 
@@ -38,33 +38,33 @@ En este tema, se explica lo que implica la creación de un diseño adjunto (virt
 
 ## <a name="key-concepts"></a>Conceptos clave
 
-Realiza el diseño requiere que para cada elemento responderse dos preguntas:
+La realización del diseño requiere que se respondan dos preguntas para cada elemento:
 
-1. ¿Qué ***tamaño*** será este elemento?
+1. ¿Qué ***tamaño*** tendrá este elemento?
 
-2. ¿Qué le el ***posición*** de este elemento ser?
+2. ¿Cuál será la ***posición*** de este elemento?
 
-Sistema de diseño de XAML, que responde a estas preguntas, se trata brevemente como parte de la discusión de [paneles personalizados](/windows/uwp/design/layout/custom-panels-overview).
+El sistema de diseño de XAML, que responde a estas preguntas, se trata brevemente como parte de la discusión de los [paneles personalizados](/windows/uwp/design/layout/custom-panels-overview).
 
 ### <a name="containers-and-context"></a>Contenedores y contexto
 
-Del conceptualmente, XAML [Panel](/uwp/api/windows.ui.xaml.controls.panel) rellena dos funciones importantes en el marco de trabajo:
+Conceptualmente, el [Panel](/uwp/api/windows.ui.xaml.controls.panel) de XAML rellena dos roles importantes en el marco de trabajo:
 
 1. Puede contener elementos secundarios y presenta la bifurcación en el árbol de elementos.
-2. Una estrategia de diseño específico se aplica a los elementos secundarios.
+2. Aplica una estrategia de diseño específica a esos elementos secundarios.
 
-Por este motivo, un Panel en XAML a veces ha sido un sinónimo de diseño, aunque técnicamente hablando, hace algo más que el diseño.
+Por esta razón, un panel de XAML suele ser sinónimo del diseño, pero técnicamente hablando, hace algo más que el diseño.
 
-El [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater) también se comporta igual que el Panel, pero, a diferencia del Panel, no expone una propiedad Children que permitiría mediante programación, agregue o quite elementos secundarios de UIElement.  En su lugar, la duración de sus elementos secundarios se administran automáticamente por el marco de trabajo para que coincida con una colección de elementos de datos.  Aunque no se deriva de Panel, se comporta y se trata como un Panel en el marco de trabajo.
+El [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater) también se comporta como panel, pero, a diferencia del panel, no expone una propiedad secundaria que permita agregar o quitar mediante programación los elementos secundarios de UIElement.  En su lugar, el marco de trabajo administra automáticamente la duración de sus elementos secundarios para que corresponda a una colección de elementos de datos.  Aunque no se deriva del panel, se comporta y se trata en el marco de trabajo como un panel.
 
 > [!NOTE]
-> El [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel) es un contenedor, derivado de Panel, que delega su lógica para el archivo adjunto [diseño](/uwp/api/microsoft.ui.xaml.controls.layoutpanel.layout) objeto.  LayoutPanel está en *Preview* y solo está disponible actualmente en el *Prerelease* quita del paquete WinUI.
+> [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel) es un contenedor, derivado de panel, que delega su lógica en el objeto de [diseño](/uwp/api/microsoft.ui.xaml.controls.layoutpanel.layout) adjunto.  LayoutPanel está en *versión preliminar* y actualmente solo está disponible en las gotas de *versiones preliminares* del paquete WinUI.
 
 #### <a name="containers"></a>Contenedores
 
-Conceptualmente, [Panel](/uwp/api/windows.ui.xaml.controls.panel) es un contenedor de elementos que también tiene la capacidad de representar píxeles para un [en segundo plano](/uwp/api/windows.ui.xaml.controls.panel.background).  Los paneles proporcionan una manera de encapsular la lógica de diseño común en un paquete fácil de usar.
+Conceptualmente, [Panel](/uwp/api/windows.ui.xaml.controls.panel) es un contenedor de elementos que también tiene la capacidad de representar píxeles para un [fondo](/uwp/api/windows.ui.xaml.controls.panel.background).  Los paneles proporcionan una manera de encapsular la lógica de diseño común en un paquete fácil de usar.
 
-El concepto de **adjunta diseño** hace que la distinción entre las dos funciones de contenedor y el diseño más clara.  Si el contenedor delega su lógica de diseño a otro objeto se llamaría a ese objeto el diseño adjuntado tal como se muestra en el siguiente fragmento. Los contenedores que heredan de [FrameworkElement](/uwp/api/windows.ui.xaml.frameworkelement), como el LayoutPanel, expone automáticamente las propiedades comunes que proporcionan la entrada proceso de diseño del XAML (por ejemplo, alto y ancho).
+El concepto de **diseño adjunto** hace que la distinción entre los dos roles de contenedor y diseño sea más clara.  Si el contenedor delega su lógica de diseño a otro objeto, se llamaría a ese objeto como se muestra en el siguiente fragmento de código. Los contenedores que heredan de [FrameworkElement](/uwp/api/windows.ui.xaml.frameworkelement), como LayoutPanel, exponen automáticamente las propiedades comunes que proporcionan la entrada al proceso de diseño de XAML (por ejemplo, alto y ancho).
 
 ```xaml
 <LayoutPanel>
@@ -77,11 +77,11 @@ El concepto de **adjunta diseño** hace que la distinción entre las dos funcion
 </LayoutPanel>
 ```
 
-Durante el proceso de diseño del contenedor se basa en el archivo adjunto *UniformGridLayout* para medir y organizar sus elementos secundarios.
+Durante el proceso de diseño, el contenedor se basa en el *UniformGridLayout* adjunto para medir y organizar sus elementos secundarios.
 
-#### <a name="per-container-state"></a>Estado de cada contenedor
+#### <a name="per-container-state"></a>Por estado de contenedor
 
-Con un diseño adjuntado, una única instancia del objeto de diseño se puede asociar *muchos* contenedores, como en el siguiente fragmento; por lo tanto, no debe depender o hacer referencia directamente el contenedor del host.  Por ejemplo:
+Con un diseño adjunto, una única instancia del objeto de diseño puede estar asociada a *muchos* contenedores como en el siguiente fragmento de código; por lo tanto, no debe depender del contenedor host ni hacer referencia directamente a él.  Por ejemplo:
 
 ```xaml
 <!-- ... --->
@@ -94,74 +94,74 @@ Con un diseño adjuntado, una única instancia del objeto de diseño se puede as
 <!-- ... --->
 ```
 
-En esta situación *ExampleLayout* deben considerar detenidamente el estado que se usa en sus cálculos de diseño y se guarda en ese estado para evitar el impacto en el diseño de elementos en un panel con las demás.  Es análogo a un Panel personalizado cuya lógica MeasureOverride y ArrangeOverride depende de los valores de sus *estático* propiedades.
+En esta situación, *ExampleLayout* debe considerar detenidamente el estado que usa en el cálculo del diseño y dónde se almacena el estado para evitar que afecte al diseño de los elementos de un panel con el otro.  Sería análogo a un panel personalizado cuya lógica MeasureOverride y ArrangeOverride depende de los valores de sus propiedades *estáticas* .
 
 #### <a name="layoutcontext"></a>LayoutContext
 
-El propósito de la [LayoutContext](/uwp/api/microsoft.ui.xaml.controls.layoutcontext) es afrontar estos desafíos.  Proporciona el diseño adjuntado la capacidad de interactuar con el contenedor del host, como la recuperación de elementos secundarios, sin introducir una dependencia directa entre los dos. El contexto también permite que el diseño almacenar cualquier estado requiere que puede estar relacionados con los elementos secundarios del contenedor.
+El propósito de la [LayoutContext](/uwp/api/microsoft.ui.xaml.controls.layoutcontext) es tratar estos desafíos.  Proporciona el diseño adjunto de la capacidad de interactuar con el contenedor host, como recuperar elementos secundarios, sin introducir una dependencia directa entre ambos. El contexto también permite que el diseño almacene cualquier Estado que requiera y que pueda estar relacionado con los elementos secundarios del contenedor.
 
-Diseños simples, no virtualización a menudo es necesario mantener cualquier estado, lo que un problema. Sin embargo, un diseño más complejo, por ejemplo, la cuadrícula, puede elegir mantener el estado entre la medida y organizar la llamada para evitar volver a calcular un valor.
+Los diseños simples y no virtualizados no suelen necesitar mantener ningún Estado, por lo que no es un problema. Sin embargo, un diseño más complejo, como Grid, puede optar por mantener el estado entre la medida y la llamada a Arrange para evitar volver a calcular un valor.
 
-Virtualizar distribuciones *a menudo* debe mantener algún estado entre la medida y organizar, así como entre las fases de diseño iterativo.
+*A menudo* , la virtualización de los diseños necesita mantener un estado entre la medida y la organización, así como entre las fases de diseño iterativo.
 
-#### <a name="initializing-and-uninitializing-per-container-state"></a>Estado de cada contenedor inicializando y cancelar la inicialización
+#### <a name="initializing-and-uninitializing-per-container-state"></a>Inicialización y anulación de la inicialización de un estado por contenedor
 
-Cuando se adjunta un diseño en un contenedor, su [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore) método se llama y proporciona una oportunidad para inicializar un objeto para almacenar el estado.
+Cuando se adjunta un diseño a un contenedor, se llama a su método [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore) y proporciona la oportunidad de inicializar un objeto para almacenar el estado.
 
-De forma similar, cuando el diseño se está quitando de un contenedor, el [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore) se llamará al método.  Esto proporciona el diseño de una oportunidad para limpiar cualquier estado que tenía asociada con ese contenedor.
+Del mismo modo, cuando se quita el diseño de un contenedor, se llamará al método [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore) .  Esto proporciona al diseño una oportunidad para limpiar cualquier estado asociado a ese contenedor.
 
-Se puede almacenar con objeto de estado del diseño y recuperar desde el contenedor con el [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate) propiedad del contexto.
+El objeto de estado del diseño se puede almacenar y recuperar del contenedor con la propiedad [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate) en el contexto.
 
-### <a name="ui-virtualization"></a>Virtualización de interfaz de usuario
+### <a name="ui-virtualization"></a>Virtualización de la interfaz de usuario
 
-Virtualización de interfaz de usuario significa retrasar la creación de un objeto de interfaz de usuario hasta que _cuando sea necesario_.  Es una optimización del rendimiento.  Para determinar los escenarios sin desplazamiento _cuando sea necesario_ puede basarse en cualquier número de cosas que son específicos de la aplicación.  En esos casos, las aplicaciones deben considerar el uso del [x: Load](../../xaml-platform/x-load-attribute.md). No se requiere ningún control especial en su diseño.
+La virtualización de la interfaz de usuario significa retrasar la creación de un objeto de interfaz de usuario hasta que _sea necesario_.  Es una optimización del rendimiento.  En escenarios en los que no se puede desplazar, determinar _si es necesario_ pueden basarse en cualquier número de elementos que sean específicos de la aplicación.  En esos casos, las aplicaciones deben considerar el uso de [x:Load](../../xaml-platform/x-load-attribute.md). No requiere ningún control especial en el diseño.
 
-En escenarios basados en el desplazamiento como una lista, determinar _cuando sea necesario_ a menudo se basa en "será visible para el usuario" que depende en gran medida en donde se colocó durante el proceso de diseño y requiere consideraciones especiales.  Este escenario es un enfoque de este documento.
+En escenarios basados en desplazamiento, como una lista, la determinación de _cuando sea necesario_ a menudo se basa en "¿será visible para un usuario", que depende en gran medida de dónde se colocó durante el proceso de diseño y requiere consideraciones especiales.  Este escenario es un enfoque para este documento.
 
 > [!NOTE]
-> Aunque no se tratan en este documento, se pueden aplicar las mismas funcionalidades que permiten la virtualización de interfaz de usuario en el desplazamiento de escenarios en los escenarios no se pueden desplazar.  Por ejemplo, un controladas por datos control ToolBar que administra la duración de los comandos presenta y responde a los cambios en el espacio disponible por reciclaje o mover elementos entre un área visible y un menú de desbordamiento.
+> Aunque no se trata en este documento, las mismas capacidades que permiten la virtualización de la interfaz de usuario en escenarios de desplazamiento se pueden aplicar en escenarios que no son de desplazamiento.  Por ejemplo, un control de barra de herramientas controlada por datos que administra la duración de los comandos que presenta y responde a los cambios en el espacio disponible al reciclar o mover elementos entre un área visible y un menú de desbordamiento.
 
 ## <a name="getting-started"></a>Introducción
 
-En primer lugar, decida si el diseño, deberá crear debe admitir la virtualización de interfaz de usuario.
+En primer lugar, decida si el diseño que necesita crear debe admitir la virtualización de la interfaz de usuario.
 
-**Algunas cosas a tener en cuenta...**
+**Algunos aspectos que hay que tener en cuenta...**
 
-1. Los diseños de virtualización de no son más fáciles de autor. A continuación, crear un diseño que no sea virtualización se recomienda si el número de elementos siempre será pequeño.
-2. La plataforma proporciona un conjunto de diseños adjuntos que funcionan con el [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater#change-the-layout-of-items) y [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel) para cubrir necesidades comunes.  Familiarícese con los que antes de decidir si es necesario definir un diseño personalizado.
-3. Los diseños de virtualización siempre tienen algunas CPU adicional y el costo o complejidad y sobrecarga de memoria en comparación con un diseño que no sea virtualización.  Como una regla general si los elementos secundarios el diseño necesitará administrar es probable que quepan en un área que es 3 veces el tamaño de la ventanilla, que no haya ganancia desde un diseño de virtualización. El tamaño 3 x se describe con más detalle más adelante en este documento, pero es debido a la naturaleza asincrónica de desplazamiento en Windows y su impacto en la virtualización.
+1. Los diseños no virtualizados son más fáciles de crear. Si el número de elementos siempre será pequeño, se recomienda crear un diseño que no sea de virtualización.
+2. La plataforma proporciona un conjunto de diseños asociados que funcionan con [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater#change-the-layout-of-items) y [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel) para cubrir las necesidades comunes.  Familiarícese con ellos antes de decidir que debe definir un diseño personalizado.
+3. La virtualización de diseños siempre tiene un costo adicional de CPU y memoria, complejidad y sobrecarga en comparación con un diseño no virtualizado.  Como norma general, si los elementos secundarios que el diseño debe administrar probablemente quepan en un área que sea el triple del tamaño de la ventanilla, puede que no haya mucha ganancia de un diseño de virtualización. El tamaño de tres veces se describe con más detalle más adelante en este documento, pero se debe a la naturaleza asincrónica del desplazamiento en Windows y su impacto en la virtualización.
 
 > [!TIP]
-> Como un punto de referencia, la configuración predeterminada para el [ListView](/uwp/api/windows.ui.xaml.controls.listview) (y [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)) son que el reciclaje no comienza hasta que el número de elementos es suficientes para llenar 3 veces el tamaño de la ventanilla actual.
+> Como punto de referencia, la configuración predeterminada de [ListView](/uwp/api/windows.ui.xaml.controls.listview) (y [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)) es que el reciclaje no comienza hasta que el número de elementos es suficiente para llenar el tamaño de la ventanilla actual.
 
-**Elija el tipo base**
+**Elegir el tipo base**
 
-![jerarquía de diseño adjunto](images/xaml-attached-layout-hierarchy.png)
+![jerarquía de diseño adjunta](images/xaml-attached-layout-hierarchy.png)
 
-La base de [diseño](/uwp/api/microsoft.ui.xaml.controls.layout) tipo tiene dos tipos derivados que sirven como punto de inicio para la creación de un diseño adjunto:
+El tipo de [diseño](/uwp/api/microsoft.ui.xaml.controls.layout) base tiene dos tipos derivados que sirven como punto de partida para crear un diseño adjunto:
 
 1. [NonVirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout)
 2. [VirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout)
 
-## <a name="non-virtualizing-layout"></a>Diseño no virtualización
+## <a name="non-virtualizing-layout"></a>Diseño no virtualizado
 
-El enfoque para crear un diseño que no sea virtualización debería resultarle familiar a cualquier persona que ha creado un [Panel personalizado](/windows/uwp/design/layout/custom-panels-overview).  Se aplican los mismos conceptos.  La principal diferencia es que un [NonVirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext) se usa para tener acceso a la [elementos secundarios](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext.children) colección y el diseño pueden optar por almacenar el estado.
+El enfoque para crear un diseño no virtualizado debe sentirse familiarizado con cualquier usuario que haya creado un [panel personalizado](/windows/uwp/design/layout/custom-panels-overview).  Se aplican los mismos conceptos.  La principal diferencia es que se usa un [NonVirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext) para tener acceso a la colección de [elementos secundarios](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext.children) y el diseño puede optar por almacenar el estado.
 
-1. Derivar del tipo base [NonVirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout) (en lugar del Panel).
-2. *(Opcional)*  Definir las propiedades de dependencia que, cuando cambia will invalidar el diseño.
-3. _(**New**/opcional)_ inicializar cualquier objeto de estado requerido por el diseño como parte de la [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore). Guardar provisionalmente con el contenedor del host mediante el uso de la [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate) proporciona el contexto.
-4. Invalidar el [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.measureoverride) y llamar a la [medida](/uwp/api/windows.ui.xaml.uielement.measure) método en todos los elementos secundarios.
-5. Invalidar el [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.arrangeoverride) y llamar a la [organizar](/uwp/api/windows.ui.xaml.uielement.arrange) método en todos los elementos secundarios.
-6. *(**New**/opcional)* limpiar cualquier estado guardado como parte de la [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore).
+1. Derive del tipo base [NonVirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout) (en lugar del panel).
+2. *(Opcional)* Defina las propiedades de dependencia que, cuando se cambian, invalidará el diseño.
+3. _(**Nuevo**/Optional)_ Inicializa cualquier objeto de Estado requerido por el diseño como parte de [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore). Guardarlo en el contenedor host mediante el [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate) proporcionado con el contexto.
+4. Invalide el [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.measureoverride) y llame al método [Measure](/uwp/api/windows.ui.xaml.uielement.measure) en todos los elementos secundarios.
+5. Invalide el [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.arrangeoverride) y llame al método [Arrange](/uwp/api/windows.ui.xaml.uielement.arrange) en todos los elementos secundarios.
+6. *(**Nuevo**/Optional)* Limpie cualquier estado guardado como parte de [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore).
 
-### <a name="example-a-simple-stack-layout-varying-sized-items"></a>Por ejemplo: Un diseño de pila Simple (elementos de diferentes tamaños)
+### <a name="example-a-simple-stack-layout-varying-sized-items"></a>Ejemplo: Un diseño de pila simple (elementos de tamaño variable)
 
 ![MyStackLayout](images/xaml-attached-layout-mystacklayout.png)
 
-Este es un diseño de pila que no sea virtualización muy básica de los elementos de tamaño variables. Carece de las propiedades para ajustar el comportamiento de diseño. La implementación siguiente muestra cómo el diseño se basa en el objeto de contexto proporcionado por el contenedor para:
+Este es un diseño de pila no virtualizado muy básico de elementos de tamaño variable. Faltan propiedades para ajustar el comportamiento del diseño. En la implementación siguiente se muestra cómo el diseño se basa en el objeto de contexto proporcionado por el contenedor para:
 
-1. Obtener el recuento de elementos secundarios, y
-2. Acceso a cada elemento secundario por índice.
+1. Obtiene el recuento de elementos secundarios y
+2. Obtener acceso a cada elemento secundario por índice.
 
 ```csharp
 public class MyStackLayout : NonVirtualizingLayout
@@ -207,101 +207,101 @@ public class MyStackLayout : NonVirtualizingLayout
 </LayoutPanel>
 ```
 
-## <a name="virtualizing-layouts"></a>Diseños de virtualización
+## <a name="virtualizing-layouts"></a>Virtualizar diseños
 
-Los pasos generales para un diseño de virtualización similar a un diseño sin virtualización, son el mismo.  La complejidad es en gran medida de determinar qué elementos se encuentran dentro de la ventanilla y deben llevarse a cabo.
+De forma similar a un diseño no virtualizado, los pasos de alto nivel para un diseño de virtualización son los mismos.  La complejidad es en gran medida a la hora de determinar qué elementos se incluirán en la ventanilla y se deben realizar.
 
-1. Derivar del tipo base [VirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout).
-2. (Opcional) Definir sus propiedades de dependencia que, cuando cambia will invalidar el diseño.
-3. Inicializar cualquier objeto de estado que tendrá el diseño como parte de la [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore). Guardar provisionalmente con el contenedor del host mediante el uso de la [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate) proporciona el contexto.
-4. Invalidar el [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.measureoverride) y llamar a la [medida](/uwp/api/windows.ui.xaml.uielement.measure) método para cada elemento secundario que debe llevarse a cabo.
-   1. El [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) método se usa para recuperar un elemento de IU que se ha preparado el marco de trabajo (por ejemplo, los enlaces datos aplicados).
-5. Invalidar el [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.arrangeoverride) y llamar a la [organizar](/uwp/api/windows.ui.xaml.uielement.arrange) método para cada elemento secundario realizada.
-6. (Opcional) Limpiar cualquier estado guardado como parte de la [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore).
+1. Derive del tipo base [VirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout).
+2. Opta Defina las propiedades de dependencia que, cuando se cambie, invalidará el diseño.
+3. Inicialice cualquier objeto de estado que el diseño requerirá como parte de [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore). Guardarlo en el contenedor host mediante el [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate) proporcionado con el contexto.
+4. Invalide el [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.measureoverride) y llame al método [Measure](/uwp/api/windows.ui.xaml.uielement.measure) para cada elemento secundario que se debe realizar.
+   1. El método [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) se usa para recuperar un UIElement que ha sido preparado por el marco (por ejemplo, los enlaces de datos aplicados).
+5. Invalide el [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.arrangeoverride) y llame al método [Arrange](/uwp/api/windows.ui.xaml.uielement.arrange) para cada elemento secundario realizado.
+6. Opta Limpie cualquier estado guardado como parte de [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore).
 
 > [!TIP]
-> El valor devuelto por la [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout) se utiliza como el tamaño del contenido virtualizado.
+> El valor devuelto por [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout) se usa como tamaño del contenido virtualizado.
 
-Hay dos enfoques generales para tener en cuenta al crear un diseño de virtualización.  Si se selecciona en gran medida de una u otra depende de "¿cómo se determinará el tamaño de un elemento".  Si su suficiente para conocer el índice de un elemento en el conjunto de datos o los propios datos dicta su tamaño final, a continuación, se consideraría **dependiente de los datos**.  Estos son más sencillos de crear.  Si, sin embargo, es la única manera de determinar el tamaño de un elemento consiste en crear y medir la interfaz de usuario, a continuación, nos diría **contenido dependiente**.  Estos son más complejos.
+Hay dos enfoques generales que se deben tener en cuenta al crear un diseño de virtualización.  El hecho de elegir uno u otro depende en gran medida de "¿cómo se determinará el tamaño de un elemento".  Si lo suficiente para conocer el índice de un elemento en el conjunto de datos o los propios datos indican su tamaño eventual, se consideraría **dependiente de los datos**.  Son más fáciles de crear.  Sin embargo, si la única manera de determinar el tamaño de un elemento es crear y medir la interfaz de usuario, se indicaría que **depende del contenido**.  Estos son más complejos.
 
 ### <a name="the-layout-process"></a>El proceso de diseño
 
-Si va a crear un diseño de contenido dependiente o de datos, es importante comprender el proceso de diseño y el impacto de desplazamiento de asincrónica de Windows.
+Tanto si va a crear un diseño dependiente de contenido como de datos, es importante comprender el proceso de diseño y el impacto del desplazamiento asincrónico de Windows.
 
-(Sobre) es una vista simplificada de los pasos realizados por el marco de trabajo de inicio para mostrar la interfaz de usuario en la pantalla que:
+Una vista simplificada de los pasos realizados por el marco desde el principio para mostrar la interfaz de usuario en la pantalla es la siguiente:
 
 1. Analiza el marcado.
 
 2. Genera un árbol de elementos.
 
-3. Realiza una fase de diseño.
+3. Realiza un paso de diseño.
 
 4. Realiza una fase de representación.
 
-Con la virtualización de interfaz de usuario, creación de los elementos que normalmente se realizarían en el paso 2 se retrase o terminó al principio de una vez su ha determinado que el contenido suficiente se ha creado para rellenar el área de visualización. Un contenedor de virtualización (por ejemplo, ItemsRepeater) aplaza a su diseño adjunto para controlar este proceso. Proporciona el diseño adjunto con un [VirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext) que presenta la información adicional que necesita un diseño de virtualización.
+Con la virtualización de la interfaz de usuario, la creación de los elementos que se harían normalmente en el paso 2 se retrasa o finaliza al principio una vez que se ha determinado que se ha creado contenido suficiente para rellenar la ventanilla. Un contenedor de virtualización (por ejemplo, ItemsRepeater) se pospone a su diseño adjunto para impulsar este proceso. Proporciona el diseño adjunto con un [VirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext) que muestra la información adicional que necesita un diseño de virtualización.
 
-**El RealizationRect (es decir, la ventanilla)**
+**RealizationRect (es decir, viewport)**
 
-Desplazamiento en Windows ocurre asincrónica al subproceso de interfaz de usuario. No se controla mediante el diseño de .NET framework.  En su lugar, la interacción y el movimiento se produce en el compositor del sistema. La ventaja de este enfoque es que el movimiento panorámico contenido siempre se realice a 60fps.  El reto, sin embargo, es que la "ventanilla", tal como lo ve el diseño, podría estar ligeramente obsoleta en relación con lo que es visible en pantalla. Si un usuario se desplaza rápidamente, que es posible que superan la velocidad del subproceso de interfaz de usuario para generar nuevos contenidos y "realizar una panorámica en negro". Por este motivo, a menudo es necesario para un diseño de virtualización generar un búfer adicional del preparada elementos suficientes para rellenar un área mayor que la ventanilla. Cuando más pesada carga durante el desplazamiento del usuario seguirá encontrando con contenido.
+El desplazamiento en Windows se produce de un proceso asincrónico al subproceso de interfaz de usuario. No se controla mediante el diseño del marco.  En su lugar, la interacción y el movimiento se producen en el compositor del sistema. La ventaja de este enfoque es que el contenido de movimiento panorámico siempre se puede realizar en 60FPS.  El reto, sin embargo, es que la "ventanilla", tal como la ve el diseño, podría estar ligeramente desactualizada respecto a lo que realmente está visible en la pantalla. Si un usuario se desplaza rápidamente, puede sobrepasar la velocidad del subproceso de la interfaz de usuario para generar contenido nuevo y "desplazarse a negro". Por esta razón, a menudo es necesario que un diseño de virtualización genere un búfer adicional de elementos preparados suficiente para rellenar un área más grande que la ventanilla. Cuando se mantiene una carga más pesada durante el desplazamiento, el usuario sigue apareciendo con el contenido.
 
-![Rect realización](images/xaml-attached-layout-realizationrect.png)
+![Desrealización de Rect](images/xaml-attached-layout-realizationrect.png)
 
-Puesto que la creación del elemento es costosa, virtualizar contenedores (por ejemplo, [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater)) proporcionará inicialmente el diseño adjunto con un [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect) que coincida con la ventanilla. En tiempo de inactividad, el contenedor puede alcanzar el búfer de contenido preparada mediante la realización de llamadas repetidas al diseño del uso de un objeto Rect. cada vez mayores de realización Este comportamiento es una optimización del rendimiento que intenta lograr un equilibrio entre la hora de inicio rápido y una buena experiencia panorámica. El tamaño máximo del búfer que generará el ItemsRepeater se controla mediante su [VerticalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength) y [HorizontalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength) propiedades.
+Dado que la creación de elementos es costosa, la virtualización de contenedores (por ejemplo, [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater)) proporcionará inicialmente el diseño adjunto con un [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect) que coincida con la ventanilla. En tiempo de inactividad, el contenedor puede aumentar el tamaño del búfer de contenido preparado realizando llamadas repetidas al diseño mediante un rectángulo de realización cada vez mayor. Este comportamiento es una optimización del rendimiento que intenta lograr un equilibrio entre el tiempo de inicio rápido y una buena experiencia de movimiento panorámico. El tamaño de búfer máximo que generará ItemsRepeater se controla mediante sus propiedades [VerticalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength) y [HorizontalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength) .
 
-**Volver a usar elementos (reciclar)**
+**Reutilizar elementos (reciclaje)**
 
-Se espera que el diseño del tamaño y posición de los elementos que se va a rellenar la [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect) cada vez que se ejecute. De forma predeterminada el [VirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout) reciclará todos los elementos no utilizados al final de cada fase de diseño.
+Se espera que el diseño cambie de tamaño y coloque los elementos para rellenar el [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect) cada vez que se ejecuta. De forma predeterminada, el [VirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout) reciclará los elementos no usados al final de cada fase de diseño.
 
-El [VirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext) que se pasa al diseño como parte de la [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.measureoverride) y [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.arrangeoverride) proporciona la información adicional un se necesita el diseño de virtualización. Algunas de las cosas más usadas proporciona son la capacidad de:
+El [VirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext) que se pasa al diseño como parte de [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.measureoverride) y [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.arrangeoverride) proporciona la información adicional que necesita un diseño de virtualización. Algunas de las cosas que se usan con más frecuencia son la capacidad de:
 
-1. El número de elementos de los datos de consulta ([ItemCount](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.itemcount)).
-2. Recuperar un determinado elemento mediante el [GetItemAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getitemat) método.
-3. Recuperar un [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect) que representa el área de visualización y producidas de búfer que el diseño debe rellenar con los elementos.
-4. Solicitar el UIElement para un elemento específico con el [GetOrCreateElement](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) método.
+1. Consultar el número de elementos de los datos ([ItemCount](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.itemcount)).
+2. Recupere un elemento específico mediante el método [GetItemAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getitemat) .
+3. Recupera un [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect) que representa la ventanilla y el búfer que el diseño debe rellenar con los elementos realizados.
+4. Solicite el objeto UIElement para un elemento específico con el método [GetOrCreateElement](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) .
 
-Solicitar un elemento de un determinado índice hará que ese elemento se marquen como "en uso" para esa fase del diseño. Si el elemento no existe ya, a continuación, se dio cuenta y se preparan automáticamente para su uso (por ejemplo, lo que infla el árbol de la interfaz de usuario definido en una plantilla de datos, procesamiento de cualquier enlace de datos, etcetera.).  En caso contrario, se obtendrá de un grupo de instancias existentes.
+La solicitud de un elemento para un índice determinado hará que ese elemento se marque como "en uso" para ese paso del diseño. Si el elemento todavía no existe, se realizará y se preparará automáticamente para su uso (por ejemplo, al aumentar el árbol de la interfaz de usuario definido en un DataTemplate, procesar cualquier enlace de datos, etc.).  De lo contrario, se recuperará de un grupo de instancias existentes.
 
-Al final de cada paso de medida existente, dimos cuenta de elemento que no se marcó como "en uso" automáticamente se considera disponible para su reutilización, a menos que la opción de [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions) se usó cuando el elemento se ha recuperado a través de la [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) método. El marco de trabajo mueve a un grupo de reciclaje y hace que esté disponible automáticamente. Posteriormente puede extraerse para su uso por un contenedor diferente. El marco de trabajo intenta evitar esta situación si es posible que haya algún coste asociado puede volver a ser el primario de un elemento.
+Al final de cada paso de medida, cualquier elemento existente, realizado que no se haya marcado como "en uso", se considerará automáticamente disponible para su reutilización, a menos que se use la opción para [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions) cuando el elemento se recuperó mediante el [ Método GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) . El marco de trabajo lo mueve automáticamente a un grupo de reciclaje y lo pone a disposición. Posteriormente, se puede extraer para que lo use un contenedor diferente. El marco de trabajo intenta evitar esto cuando es posible, ya que hay algún costo asociado a la reutilización de un elemento.
 
-Si sabe que un diseño de virtualización al principio de cada medida que los elementos ya no se encuentran dentro del rectángulo de realización puede optimizar su reutilización. En lugar de confiar en el comportamiento del marco de forma predeterminada. El diseño de forma preventiva puede mover elementos para el grupo de reciclaje mediante el [RecycleElement](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recycleelement) método.  Llamar a este método antes de solicitar nuevos elementos hace que los elementos existentes que estén disponibles cuando el diseño más adelante se emite un [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) solicitud para un índice que ya no está asociado con un elemento.
+Si un diseño de virtualización conoce al principio de cada medida qué elementos dejarán de estar dentro del rectángulo de realización, puede optimizar su reutilización. En lugar de confiar en el comportamiento predeterminado del marco de trabajo. El diseño puede desplazar de forma preferente los elementos al grupo de reciclaje mediante el método [RecycleElement](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recycleelement) .  Llamar a este método antes de solicitar nuevos elementos hace que estos elementos existentes estén disponibles cuando el diseño emite posteriormente una solicitud [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) para un índice que no está asociado a un elemento.
 
-El VirtualizingLayoutContext proporciona dos propiedades adicionales que se ha diseñado para que los autores de diseño para crear un diseño de contenido dependiente. Se tratan con más detalle más adelante.
+VirtualizingLayoutContext proporciona dos propiedades adicionales diseñadas para los autores de diseño que crean un diseño dependiente del contenido. Se describen con más detalle más adelante.
 
-1. Un [RecommendedAnchorIndex](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recommendedanchorindex) que proporciona un elemento opcional _entrada_ al diseño.
-2. Un [LayoutOrigin](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.layoutorigin) que es opcional _salida_ del diseño.
+1. [RecommendedAnchorIndex](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recommendedanchorindex) que proporciona una _entrada_ opcional al diseño.
+2. Un [LayoutOrigin](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.layoutorigin) que es una _salida_ opcional del diseño.
 
-## <a name="data-dependent-virtualizing-layouts"></a>Diseños de virtualización dependiente de datos
+## <a name="data-dependent-virtualizing-layouts"></a>Diseños de virtualización dependientes de datos
 
-Un diseño de virtualización es más fácil si sabe cuál debe ser el tamaño de todos los elementos sin necesidad de medir el contenido para mostrar.  En este documento simplemente nos referiremos a esta categoría de virtualizar distribuciones como **diseños datos** ya que normalmente implican inspeccionar los datos.  En función de los datos de una aplicación puede seleccionar una representación visual con un tamaño conocido: quizás porque su parte de los datos o se ha determinado previamente por diseño.
+Un diseño de virtualización es más fácil si sabe cuál debe ser el tamaño de cada elemento sin necesidad de medir el contenido que se va a mostrar.  En este documento, simplemente haremos referencia a esta categoría de los diseños de virtualización como **diseños de datos** , ya que normalmente implican inspeccionar los datos.  En función de los datos, una aplicación puede elegir una representación visual con un tamaño conocido, quizás porque su parte de los datos o se ha determinado previamente por diseño.
 
-Es el enfoque general para el diseño para:
+El enfoque general es para el diseño:
 
-1. Calcule un tamaño y posición de cada elemento.
-2. Como parte de la [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.measureoverride):
-   1. Use la [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect) para determinar qué elementos deben aparecer dentro de la ventanilla.
-   2. Recuperar el UIElement que debe representar el elemento con el [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) método.
-   3. [Medida](/uwp/api/windows.ui.xaml.uielement.measure) el UIElement con el tamaño calculado previamente.
-3. Como parte de la [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.arrangeoverride), [organizar](/uwp/api/windows.ui.xaml.uielement.arrange) cada producidas UIElement con la posición precalculada.
+1. Calcular el tamaño y la posición de cada elemento.
+2. Como parte de [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.measureoverride):
+   1. Use [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect) para determinar qué elementos deben aparecer dentro de la ventanilla.
+   2. Recupere el UIElement que debe representar el elemento con el método [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) .
+   3. [Mida](/uwp/api/windows.ui.xaml.uielement.measure) el UIElement con el tamaño precalculado.
+3. Como parte de [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.arrangeoverride), [organice](/uwp/api/windows.ui.xaml.uielement.arrange) cada UIElement realizado con la posición precalculada.
 
 > [!NOTE]
-> A menudo no es compatible con un enfoque de diseño de datos _virtualización_.  En concreto, donde los datos solo se cargan en memoria es que los datos necesarios para rellenar lo que es visible para el usuario.  Virtualización de datos no es que hace referencia a la carga diferida o incremental de datos como un usuario se desplaza hacia abajo donde los datos quedan residentes.  En su lugar, se refiere a cuando los elementos se liberan de la memoria a medida que van apareciendo por desplazamiento fuera de la vista.  Tener un diseño de datos que inspecciona cada elemento de datos como parte de un diseño de datos podría impedir la virtualización de datos funcionen según lo previsto.  Una excepción es un diseño similar a la UniformGridLayout que supone que todo lo que tiene el mismo tamaño.
+> Un enfoque de diseño de datos suele ser incompatible con la _virtualización de datos_.  En concreto, donde los únicos datos que se cargan en la memoria son los datos necesarios para rellenar lo que está visible para el usuario.  La virtualización de datos no hace referencia a la carga diferida o incremental de los datos a medida que un usuario se desplaza hacia abajo donde esos datos permanecen residentes.  En su lugar, se refiere a cuando los elementos se liberan de la memoria a medida que se desplazan fuera de la vista.  Tener un diseño de datos que inspeccione todos los elementos de datos como parte de un diseño de datos impide que la virtualización de datos funcione según lo previsto.  Una excepción es un diseño como UniformGridLayout, que presupone que todo tiene el mismo tamaño.
 
 > [!TIP]
-> Si va a crear un control personalizado para una biblioteca de controles que se utilizará por otros usuarios en una amplia variedad de situaciones un diseño de datos no puede ser una buena opción.
+> Si va a crear un control personalizado para una biblioteca de controles que utilizarán otros en una amplia variedad de situaciones, es posible que el diseño de los datos no sea una opción.
 
-### <a name="example-xbox-activity-feed-layout"></a>Por ejemplo: Diseño de la fuente de actividades de Xbox
+### <a name="example-xbox-activity-feed-layout"></a>Ejemplo: Diseño de fuente de actividad de Xbox
 
-La interfaz de usuario para la fuente de actividades de Xbox usa un patrón de repetición donde cada línea tiene un icono amplio, seguido de dos iconos estrechos que se invierte en la línea siguiente. En este diseño, el tamaño de cada elemento es una función de la posición del elemento en el conjunto de datos y el tamaño conocido de los iconos (vs amplias restringir).
+La interfaz de usuario de la fuente de actividades de Xbox usa un patrón de repetición donde cada línea tiene un mosaico ancho, seguido de dos mosaicos estrechos que se invierten en la línea siguiente. En este diseño, el tamaño de cada elemento es una función de la posición del elemento en el conjunto de datos y el tamaño conocido para los mosaicos (ancho y estrecho).
 
 ![Fuente de actividades de Xbox](images/xaml-attached-layout-activityfeedscreenshot.png)
 
-El código siguiente le guía a través de qué un personalizado virtualizar podría ser la interfaz de usuario para la fuente de actividades mostrar general enfoque que puede tardar una **diseño datos**.
+El código siguiente le guía por lo que una interfaz de usuario de virtualización personalizada para la fuente de actividades podría ser ilustrar el enfoque general que podría tomar para un **diseño de datos**.
 
 <table>
 <td>
-    <p>Si tiene la <strong style="font-weight: semi-bold">Galería de controles XAML</strong> aplicación instalada, haga clic aquí para abrir la aplicación y ver el <a href="xamlcontrolsgallery:/item/ItemsRepeater">ItemsRepeater</a> en acción con este diseño de ejemplo.</p>
+    <p>Si tiene instalada la aplicación de <strong style="font-weight: semi-bold">Galería de controles de XAML</strong> , haga clic aquí para abrir la aplicación y ver el <a href="xamlcontrolsgallery:/item/ItemsRepeater">ItemsRepeater</a> en acción con este diseño de ejemplo.</p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación Galería de controles XAML (Microsoft Store)</a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Obtener el código fuente (GitHub)</a></li>
     </ul>
 </td>
@@ -582,13 +582,13 @@ internal class ActivityFeedLayoutState
 }
 ```
 
-### <a name="optional-managing-the-item-to-uielement-mapping"></a>(Opcional) Administrar el elemento de asignación de UIElement
+### <a name="optional-managing-the-item-to-uielement-mapping"></a>Opta Administrar el elemento para la asignación de UIElement
 
-De forma predeterminada, el [VirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext) mantiene una asignación entre los elementos realizados y el índice del origen de datos que representan.  Puede elegir un diseño administrar esta asignación de la propia solicitando siempre la opción de [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions) al recuperar un elemento a través de la [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) método lo que impide que el valor predeterminado comportamiento de reciclaje automático.  Puede elegir un diseño hacer esto, por ejemplo, si solo se usará cuando el desplazamiento está restringido a una dirección y los elementos que se considera que siempre sean contiguos (es decir, sabiendo que el índice del primer y último elemento es suficiente para conocer todos los elementos que se deben leer lized).
+De forma predeterminada, [VirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext) mantiene una asignación entre los elementos realizados y el índice del origen de datos que representan.  Un diseño puede optar por administrar esta propia asignación solicitando siempre la opción de [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions) al recuperar un elemento a través del método [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) , lo que impide el comportamiento de reciclaje automático predeterminado.  Un diseño puede elegir hacer esto, por ejemplo, si solo se va a usar cuando el desplazamiento está restringido a una dirección y los elementos que considera siempre serán contiguos (es decir, conocer el índice del primer y el último elemento es suficiente para conocer todos los elementos que deben ser rea lized).
 
-#### <a name="example-xbox-activity-feed-measure"></a>Por ejemplo: Medida de la fuente de actividades de Xbox
+#### <a name="example-xbox-activity-feed-measure"></a>Ejemplo: Medida de fuente de actividad de Xbox
 
-El siguiente fragmento muestra la lógica adicional que se puede agregar a la MeasureOverride, en el ejemplo anterior, para administrar la asignación.
+En el fragmento de código siguiente se muestra la lógica adicional que se podría agregar al MeasureOverride en el ejemplo anterior para administrar la asignación.
 
 ```csharp
     protected override Size MeasureOverride(VirtualizingLayoutContext context, Size availableSize)
@@ -660,59 +660,59 @@ internal class ActivityFeedLayoutState
 }
 ```
 
-## <a name="content-dependent-virtualizing-layouts"></a>Diseños de virtualización contenido dependiente
+## <a name="content-dependent-virtualizing-layouts"></a>Diseños de virtualización dependientes del contenido
 
-Si primero se debe medir el contenido de la interfaz de usuario de un elemento para averiguar su tamaño exacto, entonces es un **contenido dependiente diseño**.  También puede considerar del mismo como un diseño donde cada elemento debe dimensionar en lugar del diseño que le indica el elemento de su tamaño. Diseños de virtualización que entran en esta categoría son más complejas.
+Si primero debe medir el contenido de la interfaz de usuario de un elemento para averiguar su tamaño exacto, se trata de un **diseño dependiente del contenido**.  También puede considerarse como un diseño en el que cada elemento debe tener el mismo tamaño en lugar del diseño que indica el tamaño del elemento. La virtualización de los diseños que entran en esta categoría es más complicada.
 
 > [!NOTE]
-> Diseños de contenido dependiente no (no debería) interrumpir la virtualización de datos.
+> Los diseños dependientes del contenido no deben interrumpir la virtualización de datos.
 
 ### <a name="estimations"></a>Estimaciones
 
-Diseños de contenido dependiente dependen de estimación que adivinar el tamaño del contenido no realizado y la posición del contenido realizada. A medida que cambian las estimaciones provocará el contenido producido se desplacen con regularidad las posiciones dentro del área desplazable. Esto puede dar lugar a una experiencia de usuario muy frustrante y discordante si no mitiga. Los posibles problemas y las mitigaciones se tratan aquí.
+Los diseños dependientes del contenido dependen de la estimación para adivinar el tamaño del contenido no realizado y la posición del contenido realizado. A medida que estas estimaciones cambian, hará que el contenido realizado desplace regularmente las posiciones dentro del área desplazable. Esto puede dar lugar a una experiencia de usuario muy frustrante y discordante si no se soluciona. Los posibles problemas y mitigaciones se tratan aquí.
 
 > [!NOTE]
-> Los diseños de datos que tenga en cuenta todos los elementos y conocer el tamaño exacto de todos los elementos, o no, realizados y sus posiciones pueden evitar estos problemas por completo.
+> Los diseños de datos que tienen en cuenta cada elemento y saben el tamaño exacto de todos los elementos, realizados o no, y sus posiciones pueden evitar estos problemas por completo.
 
 **Delimitación de desplazamiento**
 
-XAML proporciona un mecanismo para mitigar los turnos de ventanilla repentino manteniendo la compatibilidad con controles el desplazamiento [desplazamiento delimitación](/uwp/api/windows.ui.xaml.controls.iscrollanchorprovider) implementando la [IScrollAnchorPovider](/uwp/api/windows.ui.xaml.controls.iscrollanchorprovider) interfaz. Si el usuario manipula el contenido, el control de desplazamiento continuamente selecciona un elemento del conjunto de candidatos que estaban suscritas en realizar un seguimiento. Si desplaza la posición del elemento delimitador durante el diseño, a continuación, el control de desplazamiento cambiará automáticamente su ventanilla para mantener la ventanilla.
+XAML proporciona un mecanismo para mitigar los cambios bruscos de la ventanilla mediante el uso de controles de desplazamiento para admitir la [delimitación de desplazamiento](/uwp/api/windows.ui.xaml.controls.iscrollanchorprovider) mediante la implementación de la interfaz [IScrollAnchorPovider](/uwp/api/windows.ui.xaml.controls.iscrollanchorprovider) . A medida que el usuario manipula el contenido, el control de desplazamiento selecciona continuamente un elemento del conjunto de candidatos en los que se ha optado por el seguimiento. Si la posición del elemento delimitador se desplaza durante el diseño, el control de desplazamiento desplaza automáticamente su ventanilla para mantener la ventanilla.
 
-El valor de la [RecommendedAnchorIndex](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recommendedanchorindex) proporcionado para el diseño puede reflejar ese elemento seleccionado actualmente delimitador elegido por el control de desplazamiento. Como alternativa, si un desarrollador solicita explícitamente que llevarse a cabo un elemento de un índice con el [GetOrCreateElement](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.getorcreateelement) método en el [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater), a continuación, se indica que el índice como el [ RecommendedAnchorIndex](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recommendedanchorindex) en la siguiente fase de diseño. Esto permite que el diseño estar preparado para el escenario probable que un desarrollador de un elemento de realización y posteriormente solicita poner en la vista a través de la [StartBringIntoView](/uwp/api/windows.ui.xaml.uielement.startbringintoview) método.
+El valor de [RecommendedAnchorIndex](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recommendedanchorindex) proporcionado al diseño puede reflejar el elemento delimitador seleccionado actualmente por el control de desplazamiento. Como alternativa, si un desarrollador solicita explícitamente que se haga un elemento para un índice con el método [GetOrCreateElement](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.getorcreateelement) en [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater), ese índice se proporciona como [RecommendedAnchorIndex](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recommendedanchorindex) en el siguiente paso de diseño. Esto permite preparar el diseño para el escenario probable en el que un desarrollador realiza un elemento y, posteriormente, solicita que se ponga en vista a través del método [StartBringIntoView](/uwp/api/windows.ui.xaml.uielement.startbringintoview) .
 
-El [RecommendedAnchorIndex](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recommendedanchorindex) es el índice del elemento en el origen de datos que un diseño de contenido dependiente debe colocar en primer lugar al estimar la posición de sus elementos. Debería servir como punto de partida para el posicionamiento de otros elementos realizados.
+[RecommendedAnchorIndex](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recommendedanchorindex) es el índice del elemento del origen de datos que un diseño dependiente del contenido debe colocar primero al estimar la posición de sus elementos. Debe actuar como punto de partida para colocar otros elementos realizados.
 
 **Impacto en las barras de desplazamiento**
 
-Incluso con delimitación de desplazamiento, si las estimaciones del diseño variarán considerablemente, quizás debido a las variaciones importantes en el tamaño del contenido, a continuación, en la posición del control de posición para la barra de desplazamiento puede parecer que cambian de posición.  Esto puede ser discordante para un usuario si no aparece el cuadro de desplazamiento realizar un seguimiento de la posición del puntero del mouse cuando está arrastrándola.
+Incluso con la delimitación de desplazamiento, si las estimaciones del diseño varían mucho, quizás debido a variaciones significativas en el tamaño del contenido, es posible que la posición del control de la barra de desplazamiento parezca que se salta.  Esto puede ser Discordante para un usuario si no parece que el control de posición haga un seguimiento de la posición del puntero del mouse cuando lo arrastra.
 
-A continuación, más precisos que puede ser el diseño en sus estimaciones el menos probable que un usuario vea saltar de control de posición de la barra de desplazamiento.
+Cuanto más preciso sea el diseño en sus estimaciones, menor probabilidad de que un usuario vea el salto del control de la barra de desplazamiento.
 
 ### <a name="layout-corrections"></a>Correcciones de diseño
 
-Un diseño de contenido dependiente debe estar preparado para racionalizar su estimación con la realidad.  Por ejemplo, cuando el usuario se desplaza a la parte superior del contenido y el diseño de realización del primer elemento, quizás encuentre que la posición del elemento prevista en relación con el elemento desde el que inició provocaría que aparezca en algún lugar que no sea el origen de (x: 0 y:0). Cuando esto ocurre, puede usar el diseño de la [LayoutOrigin](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.layoutorigin) propiedad para establecer la posición calcula como el nuevo origen de diseño.  El resultado neto es similar para desplazarse de delimitación en el que se ajusta automáticamente ventanilla del control de desplazamiento a la cuenta para la posición del contenido devuelto por el diseño.
+Un diseño dependiente del contenido debe estar preparado para racionalizar su estimación con realidad.  Por ejemplo, a medida que el usuario se desplaza a la parte superior del contenido y el diseño realiza el primer elemento, es posible que la posición prevista del elemento en relación con el elemento desde el que se inició hiciera que aparezca en otro lugar distinto del origen de (x:0 , y:0). Cuando esto ocurre, el diseño puede utilizar la propiedad [LayoutOrigin](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.layoutorigin) para establecer la posición calculada como el nuevo origen de diseño.  El resultado neto es similar a la delimitación de desplazamiento en la que la ventanilla del control de desplazamiento se ajusta automáticamente para tener en cuenta la posición del contenido según lo indicado por el diseño.
 
-![Corregir el LayoutOrigin](images/xaml-attached-layout-origincorrection.png)
+![Corrección de LayoutOrigin](images/xaml-attached-layout-origincorrection.png)
 
-### <a name="disconnected-viewports"></a>Ventanillas desconectado
+### <a name="disconnected-viewports"></a>Ventanillas desconectadas
 
-Devuelve el tamaño del diseño [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.measureoverride) método representa la mejor aproximación con el tamaño del contenido que puede cambiar con cada diseño sucesivo.  Cuando un usuario se desplaza el diseño estará continuamente vuelve a evaluar con un controlador actualizado [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect).
+El tamaño devuelto desde el método [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.measureoverride) del diseño representa la mejor estimación en el tamaño del contenido que puede cambiar con cada diseño sucesivo.  A medida que un usuario se desplaza, el diseño se volverá a evaluar continuamente con una [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect)actualizada.
 
-Si un usuario arrastra el control de posición muy rápidamente, a continuación, es posible que para la ventanilla, desde la perspectiva del diseño, parece que grande salta donde la posición anterior no superponga a la posición actual.  Esto es debido a la naturaleza asincrónica de desplazamiento. También es posible que una aplicación que consume el diseño para solicitar que se puede poner un elemento en la vista para un elemento que no se realiza actualmente y se calcula que para diseñar fuera del intervalo actual que hace un seguimiento mediante el diseño.
+Si un usuario arrastra el control de posición muy rápidamente, es posible que la ventanilla, desde la perspectiva del diseño, parezca hacer grandes saltos en los que la posición anterior no se superponga a la posición actual.  Esto se debe a la naturaleza asincrónica del desplazamiento. También es posible que una aplicación que consume el diseño solicite que un elemento se presente en la vista de un elemento que no se haya realizado actualmente y que se estime que está fuera del intervalo actual del que el diseño realiza el seguimiento.
 
-Cuando el diseño descubre su suposición es correcta o ve un desplazamiento de la ventanilla inesperado, debe volver a orientar su posición inicial.  Los diseños de virtualización que se incluyen como parte de los controles XAML se desarrollan como diseños de contenido dependiente como colocan menos restricciones en la naturaleza del contenido que se mostrará.
+Cuando el diseño detecta su estimación es incorrecto y/o ve un cambio de ventanilla inesperado, debe reorientar su posición inicial.  Los diseños de virtualización que se incluyen como parte de los controles XAML se desarrollan como diseños dependientes del contenido, ya que colocan menos restricciones en la naturaleza del contenido que se va a mostrar.
 
 
-### <a name="example-simple-virtualizing-stack-layout-for-variable-sized-items"></a>Por ejemplo: Diseño de pila de virtualización simple para los elementos de tamaño Variable
+### <a name="example-simple-virtualizing-stack-layout-for-variable-sized-items"></a>Ejemplo: Diseño de pila de virtualización simple para elementos de tamaño variable
 
-El ejemplo siguiente muestra un diseño de pila simple para elementos de tamaño variable:
+En el ejemplo siguiente se muestra un diseño de pila simple para elementos de tamaño variable que:
 
-* admite la virtualización de interfaz de usuario,
-* usa las estimaciones para estimar el tamaño de los elementos no realizados,
-* sea consciente de los turnos de ventanilla discontinuos posibles, y
-* aplica las correcciones de diseño para tener en cuenta los turnos.
+* admite la virtualización de la interfaz de usuario,
+* utiliza estimaciones para adivinar el tamaño de los elementos no realizados.
+* es consciente de los posibles desplazamientos de la ventanilla descontinuada y
+* aplica correcciones de diseño para tener en cuenta esos turnos.
 
-**Uso: Marcado**
+@no__t 0Usage: Marcado @ no__t-0
 
 ```xaml
 <ScrollViewer>
@@ -741,7 +741,7 @@ El ejemplo siguiente muestra un diseño de pila simple para elementos de tamaño
 </ScrollViewer>
 ```
 
-**Código subyacente: Main.cs**
+@no__t 0Codebehind: Main. CS @ no__t-0
 
 ```csharp
 string _lorem = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet erat vel massa rutrum, eget mollis massa vulputate. Vivamus semper augue leo, eget faucibus nulla mattis nec. Donec scelerisque lacus at dui ultricies, eget auctor ipsum placerat. Integer aliquet libero sed nisi eleifend, nec rutrum arcu lacinia. Sed a sem et ante gravida congue sit amet ut augue. Donec quis pellentesque urna, non finibus metus. Proin sed ornare tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet erat vel massa rutrum, eget mollis massa vulputate. Vivamus semper augue leo, eget faucibus nulla mattis nec. Donec scelerisque lacus at dui ultricies, eget auctor ipsum placerat. Integer aliquet libero sed nisi eleifend, nec rutrum arcu lacinia. Sed a sem et ante gravida congue sit amet ut augue. Donec quis pellentesque urna, non finibus metus. Proin sed ornare tellus.";
@@ -757,7 +757,7 @@ var data = new ObservableCollection<Recipe>(Enumerable.Range(0, 300).Select(k =>
 repeater.ItemsSource = data;
 ```
 
-**Código: VirtualizingStackLayout.cs**
+@no__t 0Code: VirtualizingStackLayout. CS @ no__t-0
 
 ```csharp
 // This is a sample layout that stacks elements one after

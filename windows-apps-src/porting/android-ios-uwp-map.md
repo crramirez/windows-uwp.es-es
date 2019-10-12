@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: ebfaab1c8fe3ec3cf8893022a8f4e8dae7deac63
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: f8ace0d56e6e647ed5f977cbe6860d8f91bb2b5f
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340585"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282359"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Asignación del concepto de aplicaciones de Windows para desarrolladores de Android e iOS
 
@@ -87,7 +87,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <td align="left">Puedes crear <strong><a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style">estilos</a></strong> reutilizables, que se puede aplicar a varios controles y almacenar en un <strong><a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary">ResourceDictionary</a></strong> para facilitar su reutilización.<br/><br/><a href="https://docs.microsoft.com/previous-versions/windows/apps/hh465381(v=win.10)">Inicio rápido: Aplicar estilos a controles @ no__t-0</td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>Editar la estructura visual de los controles.</strong>  <br><br>Personaliza la estructura visual de un control más allá de la simple modificación de propiedades o atributos; por ejemplo, al mover el texto de una casilla por debajo de esta.</td>
+<td align="left"><strong>Editar la estructura visual de los controles.</strong>  <br><br>Personalice la estructura visual de un control más allá simplemente modificando las propiedades o los atributos, por ejemplo, desplazando el texto de la casilla debajo de la casilla.</td>
 <td align="left">En Android no existe ningún método simple para editar la estructura visual de los controles.</td>
 <td align="left">En iOS no existe ningún método simple para editar la estructura visual de los controles.</td>
 <td align="left">Para personalizar la estructura visual de un control, puedes copiar y editar su <strong><a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate">plantilla de control</a></strong> en el marcado XAML.<br/><br/><a href="https://docs.microsoft.com/previous-versions/windows/apps/hh465374(v=win.10)">Inicio rápido: Plantillas de control @ no__t-0</td>
@@ -348,7 +348,7 @@ Consulta también el contenido de migración en [Migrar de iOS a UWP](ios-to-uwp
 <td align="left"><strong>Programación asincrónica.</strong>  <br><br>Evita la complejidad de los subprocesos al sacar partido de modelos de programación asincrónica para mantener la capacidad de respuesta del subproceso de interfaz de usuario.</td>
 <td align="left">El uso de <strong>subprocesos es necesario</strong> para crear clases asincrónicas propias. Algunas clases integradas son asincrónicas.</td>
 <td align="left">El uso de <strong>subprocesos es necesario</strong> para crear clases asincrónicas propias. Algunas clases integradas son asincrónicas.</td>
-<td align="left">Puedes usar patrones asincrónicos para evitar bloquear el subproceso principal al crear API propias, por ejemplo, con objetos <strong>async</strong> y <strong>await</strong> en C# y Visual Basic. Puedes usar las API asincrónicas integradas que terminan con la palabra <strong>Async</strong>.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps">Programación asincrónica</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic">Llamar a API asincrónicas en C# o Visual Basic</a></td>
+<td align="left">Puede usar patrones asincrónicos para evitar el bloqueo del subproceso principal cuando cree sus propias API, por ejemplo, mediante <strong>Async</strong> y <strong>await</strong> en C# y Visual Basic. Puedes usar las API asincrónicas integradas que terminan con la palabra <strong>Async</strong>.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps">Programación asincrónica</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic">Llamar a API asincrónicas en C# o Visual Basic</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Optimización de la vista de lista.</strong>  <br><br>Patrones integrados para ayudar en la optimización de las listas de datos, que con frecuencia tienen un rendimiento deficiente cuando se necesitan mostrar grandes cantidades de datos.</td>

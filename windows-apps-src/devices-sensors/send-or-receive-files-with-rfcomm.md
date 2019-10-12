@@ -10,19 +10,19 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: a63272f9d301fba094a17af0408841db62731586
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f38adc3de17c699c7a19bc28d201c6a78c000688
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369793"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72281815"
 ---
 # <a name="bluetooth-rfcomm"></a>Bluetooth RFCOMM
 
 **API importantes**
 
--   [**Windows.Devices.Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
--   [**Windows.Devices.Bluetooth.Rfcomm**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm)
+-   [**Windows. Devices. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
+-   [**Windows. Devices. Bluetooth. RFCOMM**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm)
 
 En este artículo se proporciona información general de Bluetooth RFCOMM en aplicaciones para la Plataforma universal de Windows (UWP), junto con el código de ejemplo sobre cómo enviar o recibir un archivo.
 
@@ -40,7 +40,7 @@ Para obtener un ejemplo de código completo que detalle la operación de RFCOMM,
 
 Al enviar archivos, el escenario de aplicación básico consiste en conectarse a un dispositivo emparejado según el dispositivo deseado. Esto implica los pasos siguientes:
 
--   Use la **RfcommDeviceService.GetDeviceSelector\***  funciones para ayudar a generar una consulta AQS que puede usarse para enumerado emparejan instancias de dispositivo del servicio deseado.
+-   Use las funciones **RfcommDeviceService. GetDeviceSelector @ no__t-1** para ayudar a generar una consulta AQS que se puede usar para enumerar las instancias de dispositivo emparejadas del servicio deseado.
 -   Selecciona un dispositivo enumerado, crea una clase [**RfcommDeviceService**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService) y lee los atributos SDP según sea necesario (usando [**established data helpers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) para analizar los datos del atributo).
 -   Crea un socket y usa las propiedades [**RfcommDeviceService.ConnectionHostName**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname) y [**RfcommDeviceService.ConnectionServiceName**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename) en el método [**StreamSocket.ConnectAsync**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.connectasync) para realizar el mantenimiento del dispositivo remoto con los parámetros adecuados.
 -   Sigue los patrones de flujo de datos establecidos para leer grupos de datos desde el archivo y enviarlos a la propiedad [**StreamSocket.OutputStream**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.outputstream) del socket al dispositivo.
@@ -76,7 +76,7 @@ async void Initialize()
                     .BluetoothEncryptionAllowNullAuthentication);
 
             // The socket is connected. At this point the App can wait for
-            // the user to take some action, e.g. click a button to send a
+            // the user to take some action, for example, click a button to send a
             // file to the device, which could invoke the Picker and then
             // send the picked file. The transfer itself would use the
             // Sockets API and not the Rfcomm API, and so is omitted here for
@@ -176,7 +176,7 @@ Windows::Foundation::IAsyncAction Initialize()
                 Windows::Networking::Sockets::SocketProtectionLevel::BluetoothEncryptionAllowNullAuthentication);
 
             // The socket is connected. At this point the App can
-            // wait for the user to take some action, e.g. click
+            // wait for the user to take some action, for example, click
             // a button to send a file to the device, which could
             // invoke the Picker and then send the picked file.
             // The transfer itself would use the Sockets API and
@@ -276,7 +276,7 @@ void Initialize()
                     .then([](void)
                     {
                         // The socket is connected. At this point the App can
-                        // wait for the user to take some action, e.g. click
+                        // wait for the user to take some action, for example, click
                         // a button to send a file to the device, which could
                         // invoke the Picker and then send the picked file.
                         // The transfer itself would use the Sockets API and
@@ -402,7 +402,7 @@ void OnConnectionReceived(
     _socket = args.Socket;
 
     // The client socket is connected. At this point the App can wait for
-    // the user to take some action, e.g. click a button to receive a file
+    // the user to take some action, for example, click a button to receive a file
     // from the device, which could invoke the Picker and then save the
     // received file to the picked location. The transfer itself would use
     // the Sockets API and not the Rfcomm API, and so is omitted here for
@@ -466,7 +466,7 @@ void OnConnectionReceived(
     m_socket = args.Socket();
 
     // The client socket is connected. At this point the application can wait for
-    // the user to take some action, e.g. click a button to receive a
+    // the user to take some action, for example, click a button to receive a
     // file from the device, which could invoke the Picker and then save
     // the received file to the picked location. The transfer itself
     // would use the Sockets API and not the Rfcomm API, and so is
@@ -532,7 +532,7 @@ void OnConnectionReceived(
         _socket = args->Socket;
 
         // The client socket is connected. At this point the App can wait for
-        // the user to take some action, e.g. click a button to receive a
+        // the user to take some action, for example, click a button to receive a
         // file from the device, which could invoke the Picker and then save
         // the received file to the picked location. The transfer itself
         // would use the Sockets API and not the Rfcomm API, and so is

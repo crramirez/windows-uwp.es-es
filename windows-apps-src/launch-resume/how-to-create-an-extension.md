@@ -5,12 +5,12 @@ keywords: extensión de aplicación, servicio de la aplicación, en segundo plan
 ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bdd6d3fb875e95f251e02f07e7af563c95a400a6
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 1cb5395238ad6813556b7ae254ca4a86bc8f5b28
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682785"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282395"
 ---
 # <a name="create-and-host-an-app-extension"></a>Crear y hospedar una extensión de aplicación
 
@@ -19,7 +19,7 @@ En este artículo se muestra cómo crear una extensión de aplicación para UWP 
 Este artículo se incluye con un ejemplo de código:
 - Descarga y descomprime [ejemplo de código de extensión de matemáticas](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip).
 - En Visual Studio 2019, abra MathExtensionSample. sln. Establece el tipo de compilación en x86 (**Compilación** > **Configuration Manager** y, a continuación, cambia **Plataforma** a **x86** para ambos proyectos).
-- Implemente la solución: > Implementación de la**solución**de compilación.
+- Implemente la solución: **Cree**una solución de**implementación** > .
 
 ## <a name="introduction-to-app-extensions"></a>Introducción a las extensiones para aplicaciones
 
@@ -74,7 +74,7 @@ _Package. appxmanifest en el proyecto MathExtensionHost_
 
 Observe `xmlns:uap3="http://..."` y la presencia de `uap3` en `IgnorableNamespaces`. Son necesarios porque estamos usando el espacio de nombres uap3.
 
-`<uap3:Extension Category="windows.appExtensionHost">`identifica esta aplicación como un host de extensión.
+`<uap3:Extension Category="windows.appExtensionHost">` identifica esta aplicación como un host de extensión.
 
 El elemento **Name** de `<uap3:AppExtensionHost>` es el nombre de _contrato de extensión_. Cuando una extensión especifica el mismo nombre de contrato de extensión, el host podrá encontrarlo. Por convención, se recomienda crear el nombre del contrato de extensión con el nombre del editor o la aplicación para evitar posibles conflictos con otros nombres de contrato de extensión.
 
@@ -116,11 +116,11 @@ _Package. appxmanifest en el proyecto MathExtension:_
 
 De nuevo, observe la línea `xmlns:uap3="http://..."` y la presencia de `uap3` en `IgnorableNamespaces`. Son necesarios porque estamos usando el espacio de nombres `uap3`.
 
-`<uap3:Extension Category="windows.appExtension">`identifica esta aplicación como una extensión.
+`<uap3:Extension Category="windows.appExtension">` identifica esta aplicación como una extensión.
 
 El significado de los atributos `<uap3:AppExtension>` son los que se muestran a continuación:
 
-|Atributo|Descripción|Obligatorio|
+|Atributo|Descripción|Requerido|
 |---------|-----------|:------:|
 |**Name**|Este es el nombre de contrato de extensión. Cuando coincida con el **Name** declarado en un host, ese host podrá encontrar esta extensión.| :heavy_check_mark: |
 |**SESIÓN**| Identifica esta extensión de manera única. Dado que puede haber varias extensiones que usen el mismo nombre de contrato de extensión (imagina una app de pintura que admite varias extensiones), puedes usar el identificador para diferenciarlas. Los hosts de extensión de aplicación pueden usar el identificador para deducir algo sobre el tipo de extensión. Por ejemplo, podrías tener una extensión diseñada para escritorio y otra para móvil, siendo el identificador el diferenciador. También podrías usar el elemento **Properties** , que se explica a continuación, para ello.| :heavy_check_mark: |
@@ -128,7 +128,7 @@ El significado de los atributos `<uap3:AppExtension>` son los que se muestran a 
 |**Descripción** | Se puede usar desde la app host para describir la extensión al usuario. Se puede consultar desde, y puede usar, el [nuevo sistema de administración de recursos](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para la localización. El contenido localizado se carga desde el paquete de extensión de app, no desde la app host. | |
 |**PublicFolder**|El nombre de una carpeta, en relación con la raíz del paquete, donde puedes compartir contenido con el host de extensión. Por convención, el nombre es "Public", pero puedes usar cualquier nombre que coincida con una carpeta de la extensión.| :heavy_check_mark: |
 
-`<uap3:Properties>`es un elemento opcional que contiene metadatos personalizados que los hosts pueden leer en tiempo de ejecución. En el ejemplo de código, la extensión se implementa como servicio de app para que el host necesite una manera de obtener el nombre de dicho servicio de app para que pueda llamarle. El nombre del servicio de la app se define en el elemento <Service>, que hemos definido (podríamos haberlo llamado de cualquier manera que quisiéramos). El host del ejemplo de código busca esta propiedad en tiempo de ejecución para obtener el nombre del servicio de la app.
+`<uap3:Properties>` es un elemento opcional que contiene metadatos personalizados que los hosts pueden leer en tiempo de ejecución. En el ejemplo de código, la extensión se implementa como servicio de app para que el host necesite una manera de obtener el nombre de dicho servicio de app para que pueda llamarle. El nombre del servicio de la app se define en el elemento <Service>, que hemos definido (podríamos haberlo llamado de cualquier manera que quisiéramos). El host del ejemplo de código busca esta propiedad en tiempo de ejecución para obtener el nombre del servicio de la app.
 
 ## <a name="decide-how-you-will-implement-the-extension"></a>Decida cómo implementará la extensión.
 
@@ -211,7 +211,7 @@ Puedes definir tu propio XML en el elemento `<uap3:Properties>`. En este caso, d
 
 Cuando el host carga una extensión, código como este extrae el nombre del servicio de las propiedades definidas en Package.appxmanifest de la extensión:
 
-_`Update()`en ExtensionManager.cs, en el proyecto MathExtensionHost_
+_`Update()` en ExtensionManager.cs, en el proyecto MathExtensionHost_
 ```cs
 ...
 var properties = await ext.GetExtensionPropertiesAsync() as PropertySet;
@@ -233,13 +233,13 @@ if (_properties != null)
 
 Con el nombre del servicio de aplicaciones almacenado en `_serviceName`, el host puede usarlo para invocar el servicio de aplicaciones.
 
-Llamar a un servicio de aplicaciones también requiere el nombre de familia del paquete que contiene el servicio de aplicaciones. Afortunadamente, la API de extensión de la aplicación proporciona esta información, que se obtiene en la línea:`connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;`
+Llamar a un servicio de aplicaciones también requiere el nombre de familia del paquete que contiene el servicio de aplicaciones. Afortunadamente, la API de extensión de la aplicación proporciona esta información, que se obtiene en la línea: `connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;`
 
 ### <a name="define-how-the-host-and-the-extension-will-communicate"></a>Definir cómo se comunicará el host y la extensión
 
 Los servicios de aplicaciones usan un elemento [ValueSet](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset) para intercambiar información. Como el autor del host, debes presentar un protocolo para la comunicación con extensiones que sea flexible. En el ejemplo de código, eso significa dar cuenta de extensiones que podrían tomar 1, 2 o más argumentos en el futuro.
 
-Para este ejemplo, el protocolo de los argumentos es un **ValueSet** que contiene los pares clave-valor denominado "Arg" + el número de argumento, por ejemplo, `Arg1` y `Arg2`. El host pasa todos los argumentos de **ValueSet** y la extensión usa los que necesita. Si la extensión puede calcular un resultado, el host espera el valor de **ValueSet** devuelto de la extensión para tener una clave denominada `Result` que contiene el valor del cálculo. Si esa clave no está presente, el host da por sentando que la extensión no ha podido completar el cálculo.
+En este ejemplo, el protocolo para los argumentos es un objeto **ValueSet** que contiene los pares clave-valor denominados ' arg ' + el número de argumento, por ejemplo, `Arg1` y `Arg2`. El host pasa todos los argumentos de **ValueSet** y la extensión usa los que necesita. Si la extensión puede calcular un resultado, el host espera el valor de **ValueSet** devuelto de la extensión para tener una clave denominada `Result` que contiene el valor del cálculo. Si esa clave no está presente, el host da por sentando que la extensión no ha podido completar el cálculo.
 
 ### <a name="extension-app-service-code"></a>Código de servicio de aplicaciones de extensión
 

@@ -5,18 +5,18 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, ampliar, separar por componentes, servicio de aplicaciones, paquete, ampliación
 ms.localizationpriority: medium
-ms.openlocfilehash: 038f78182095546219152298b043fe876c2c18c8
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: a72b175e672b44d0dace0b4bf04956792edfadd0
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682718"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282516"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Ampliar la aplicación con servicios, extensiones y paquetes
 
 Hay muchas tecnologías en Windows 10 para extender y componen la aplicación. Esta tabla debe ayudarle a determinar qué tecnología debe usar en función de los requisitos. Le sigue un breve descripción de los escenarios y las tecnologías.
 
-| Escenario                           | Paquete de recursos   | Paquete de activos      | Paquete opcional   | Lote plano        | Extensión de aplicación      | App Service        | Instalación en streaming  |
+| Escenario                           | Paquete de recursos   | Paquete de activos      | Paquete opcional   | Lote plano        | Extensión de aplicación      | Servicio de aplicaciones        | Instalación en streaming  |
 |------------------------------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
 | Complementos de código de terceros            |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
 | Complementos de código dentro del proceso              |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |

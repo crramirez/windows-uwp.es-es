@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ab2ed7bea6a353ae30bb3c245e00c77365fb5af
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: b70a3f9f9fad2d81716c22ab2f383e72ea363341
+ms.sourcegitcommit: cbd900f350569a3901086a44b2d5007bb6fb7bed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339914"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276306"
 ---
 # <a name="xaml-syntax-guide"></a>Guía de sintaxis XAML
 
@@ -105,7 +105,7 @@ Hay algunas propiedades en objetos que no se pueden establecer en XAML de ningun
 
 Una propiedad de solo lectura no se puede establecer en XAML. Incluso en el código, el tipo propietario debería admitir alguna otra forma de establecerla, como una sobrecarga de constructor, un método auxiliar o compatibilidad con propiedades calculadas. Una propiedad calculada depende de los valores de otras propiedades configurables y, en ocasiones, también de un evento con control integrado; estas características están disponibles en el sistema de propiedades de dependencia. Para obtener más información sobre el modo en que las propiedades de dependencia son útiles para la compatibilidad con propiedades calculadas, consulta [Introducción a las propiedades de dependencia](dependency-properties-overview.md).
 
-La sintaxis de colección en XAML da la sensación de que estás estableciendo una propiedad de solo lectura, pero en realidad no es así. Consulta la sección "Establecer una propiedad con una sintaxis de colección" más adelante en este tema.
+La sintaxis de colección en XAML da la sensación de que estás estableciendo una propiedad de solo lectura, pero en realidad no es así. Vea "[Sintaxis de colección](#collection-syntax)" más adelante en este tema.
 
 ### <a name="setting-a-property-by-using-attribute-syntax"></a>Establecer una propiedad con una sintaxis de atributo
 

@@ -5,12 +5,12 @@ ms.date: 05/09/2018
 ms.topic: article
 keywords: windows 10 s, siempre conectado, emulación x86 en ARM, solución de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 480d9cd6508b149e0d4966bae8835c05d30db7af
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 20aa5943fc1f3f0176cde33983da1fceca8a49ba
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682740"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282351"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>Solución de problemas de aplicaciones de escritorio x86
 >[!IMPORTANT]
@@ -40,7 +40,7 @@ Una aplicación puede colocar las claves del registro en la vista del registro n
 Todos los controladores modo kernel, los controladores [Marco de controlador de modo usuario (UMDF)](https://docs.microsoft.com/windows-hardware/drivers/wdf/overview-of-the-umdf) y los controladores de impresión deben compilarse para que coincidan con la arquitectura del sistema operativo. Si una aplicación x86 tiene un controlador, ese controlador debe compilarse para ARM64. La aplicación x86 puede funcionar bien en modo de emulación, sin embargo, su controlador tendrá que recompilarse para ARM64 y cualquier experiencia de aplicación que dependa del controlador no estará disponible. Para obtener más información sobre la compilación del controlador para ARM64, consulta [Compilar controladores de ARM64 con el WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers).
 
 ## <a name="shell-extensions"></a>Extensiones de Shell de : 
-Aplicaciones que intentan enlazar componentes de Windows o cargar sus archivos DLL en procesos de Windows tendrán que volver a compilar los archivos DLL para que coincida con la arquitectura del sistema; es decir, ARM64. Por lo general, estos los usan los editores de métodos de entrada (IME), las tecnologías de asistencia y aplicaciones del shell de extensión (por ejemplo, para mostrar los iconos de almacenamiento en la nube en el Explorador o un menú contextual). Para obtener información sobre cómo volver a compilar las aplicaciones o archivos DLL para ARM64, consulta la entrada de blog [Early preview of Visual Studio support for Windows 10 on ARM development](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) (Vista previa de compatibilidad de Visual Studio para Windows 10 en el desarrollo de ARM). 
+Aplicaciones que intentan enlazar componentes de Windows o cargar sus archivos DLL en procesos de Windows tendrán que volver a compilar los archivos DLL para que coincida con la arquitectura del sistema; es decir, ARM64. Normalmente, se usan en los editores de métodos de entrada (IME), las tecnologías de asistencia y las aplicaciones de extensión de Shell (por ejemplo, para mostrar los iconos de almacenamiento en la nube en el explorador o en un menú contextual). Para obtener información sobre cómo volver a compilar las aplicaciones o archivos DLL para ARM64, consulta la entrada de blog [Early preview of Visual Studio support for Windows 10 on ARM development](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) (Vista previa de compatibilidad de Visual Studio para Windows 10 en el desarrollo de ARM). 
 
 ## <a name="debugging"></a>Depuración
 Para investigar el comportamiento de la aplicación con más detalle, consulta [Depuración en ARM](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-arm64) para obtener más información sobre herramientas y estrategias para la depuración en ARM.

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: f567637f3d38ce80c320bfe92fff392efadeda8d
-ms.sourcegitcommit: 7803f11ba4c9194c350217cc06069a4707f15ed6
+ms.openlocfilehash: 557f5c03bda68d11507ba3b3b3b12823dbe6fd9f
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69017428"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282402"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
@@ -80,7 +80,7 @@ El panel está vacío porque el sistema solo proporciona un shell de interfaz de
 
 ## <a name="register-for-accountcommandsrequested"></a>Registrarse para AccountCommandsRequested
 
-Para agregar comandos al panel, empezamos por el registro para el controlador de eventos AccountCommandsRequested. Este indica al sistema que ejecute nuestra lógica de compilación cuando el usuario solicite ver el panel (por ejemplo, hace clic en nuestro botón XAML). 
+Para agregar comandos al panel, empezamos por el registro para el controlador de eventos AccountCommandsRequested. Esto indica al sistema que ejecute la lógica de compilación cuando el usuario le pida ver el panel (por ejemplo, haga clic en nuestro botón XAML). 
 
 En el código subyacente, invalida los eventos OnNavigatedTo y OnNavigatedFrom y agrégales el siguiente código: 
 
@@ -116,7 +116,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-A continuación, obtén un proveedor con el método WebAuthenticationCoreManager.FindAccountProviderAsync. La dirección URL del proveedor varía según el proveedor y puede encontrarse en la documentación del proveedor. En el caso de las cuentas de Microsoft y Azure Active Directory\:, es "https//login.Microsoft.com". 
+A continuación, obtén un proveedor con el método WebAuthenticationCoreManager.FindAccountProviderAsync. La dirección URL del proveedor varía según el proveedor y puede encontrarse en la documentación del proveedor. En el caso de las cuentas de Microsoft y Azure Active Directory, es "https @ no__t-0//login. Microsoft. com". 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,
