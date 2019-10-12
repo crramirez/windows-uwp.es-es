@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción, uwp, windows 10, pista de aprendizaje, diseño, formulario
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2e64392e1de5f6061b802acc0a2eed81c3e750fb
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 9542151a8104ade77d8311ed1f16eba2809ecf7a
+ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318804"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163687"
 ---
 # <a name="create-and-customize-a-form"></a>Crear y personalizar un formulario
 
@@ -51,7 +51,7 @@ Deberá rellenar su formulario con una variedad de [Controles de XAML](../design
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md) permite al usuario elegir entre dos opciones.
 * [DatePicker](../design/controls-and-patterns/date-picker.md) permite al usuario seleccionar un valor de fecha.
 * [TimePicker](../design/controls-and-patterns/time-picker.md) permite al usuario seleccionar un valor de hora.
-* [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox) se expande para mostrar una lista de elementos seleccionables. Puede aprender más sobre ellos [aquí](../design/controls-and-patterns/lists.md#drop-down-lists)
+* [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox) se expande para mostrar una lista de elementos seleccionables. Puede aprender más sobre ellos [aquí](../design/controls-and-patterns/combo-box.md)
 
 También es posible que desee agregar [ botones ](../design/controls-and-patterns/buttons.md), para que el usuario pueda guardar o cancelar.
 
