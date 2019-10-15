@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Microsoft, Windows 10, tutoriales, cursos en línea, blogs, eventos
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 3320cef0d3aaf48a2f93d65d93bf8876f1f997d6
-ms.sourcegitcommit: 7104ad5d01ad1c69a4ea0b3ba6732c1b2a98ec09
+ms.openlocfilehash: 64d4fc1c85ae4056da02f987ca654305a883d2c6
+ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249244"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313409"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Recursos para el desarrollo con Python en Windows
 
@@ -21,7 +21,7 @@ Una lista de vínculos que se recomienda para los desarrolladores de Python que 
 
 ## <a name="general"></a>General
 
-- [Blogs de desarrollo de Microsoft: Python](https://devblogs.microsoft.com/python/): Lea las últimas actualizaciones sobre todas las cosas de Python en Microsoft.
+- Blogs de desarrollo de @no__t 0Microsoft: Python @ no__t-0: Lea las últimas actualizaciones sobre todas las cosas de Python en Microsoft.
 
 - [Un tutorial detallado sobre el desarrollo de Linux en Windows con WSL y Visual Studio Code](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/): Tutorial sobre cómo configurar el entorno de desarrollo, crear una aplicación de Python y realizar alguna depuración.
 
@@ -49,7 +49,7 @@ Una lista de vínculos que se recomienda para los desarrolladores de Python que 
 
 - [Introducción a Python en Microsoft Learn](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/): Pruebe la plataforma de Microsoft Learn interactiva y Gane puntos de experiencia para completar este módulo, donde se describen los aspectos básicos sobre cómo escribir código de Python básico, declarar variables y trabajar con la entrada y salida de la consola. El entorno de espacio aislado interactivo lo convierte en un buen punto de partida para las personas que aún no tienen su entorno de desarrollo de Python configurado.
 
-- [Python en Pluralsight: 8 cursos, 29 horas](https://app.pluralsight.com/paths/skills/python): La ruta de aprendizaje de Python en Pluralsight ofrece cursos en línea que abarcan una gran variedad de temas relacionados con Python, incluida una herramienta para medir su habilidad y encontrar los huecos.
+- [Python en Pluralsight: 8 cursos, 29 horas @ no__t-0: La ruta de aprendizaje de Python en Pluralsight ofrece cursos en línea que abarcan una gran variedad de temas relacionados con Python, incluida una herramienta para medir su habilidad y encontrar los huecos.
 
 - [Tutoriales de LearnPython.org](https://www.learnpython.org/): Comience a usar el aprendizaje de Python sin necesidad de instalar o configurar nada con estos tutoriales gratuitos de Python interactivos de la gente en el elemento de información.
 
@@ -65,7 +65,7 @@ Una lista de vínculos que se recomienda para los desarrolladores de Python que 
 
 - [Otros marcos Web de Python](https://wiki.python.org/moin/WebFrameworks): Una lista de Marcos Web de Python con breves descripciones de Python.org.
 
-- [Tutorial: Cree una aplicación de frasco con Azure](https://docs.microsoft.com/azure/cognitive-services/translator/tutorial-build-flask-app-translation-synthesis)Cognitive Services: Cree una aplicación Web de frasco que use Azure Cognitive Services para traducir texto, analizar opiniones y sintetizar texto traducido en voz.
+- [Tutorial: Cree una aplicación de frasco con Azure Cognitive Services @ no__t-0: Cree una aplicación Web de frasco que use Azure Cognitive Services para traducir texto, analizar opiniones y sintetizar texto traducido en voz.
 
 - [Implemente una aplicación Web de Python en una máquina virtual en Azure Stack](https://docs.microsoft.com/azure-stack/user/azure-stack-dev-start-howto-vm-python): Cree una máquina virtual para hospedar la aplicación Web de Python en Azure Stack.
 
@@ -75,21 +75,4 @@ Una lista de vínculos que se recomienda para los desarrolladores de Python que 
 
 - [Cree aplicaciones de Python Django con Microsoft Graph](https://docs.microsoft.com/graph/tutorials/python): Cree una aplicación Web de Python Django que use la API de Microsoft Graph para recuperar información de calendario para un usuario.
 
-- [Tutorial: Aplicación Web de la API de Bing](https://docs.microsoft.com/advertising/guides/walkthrough-web-application-python?view=bingads-13)ADS en Python: Introducción a la ejecución de una aplicación web Microsoft Advertising mediante el SDK de Python para Bing ADS, el IDE de Visual Studio Code y el marco de trabajo web Django.
-
-<!-- ## Data Science and Machine Learning
-
-- Anaconda - brief description
-- Canopy - brief description
-- TensorFlow - brief description
-- Scikit-Learn, Keras, PyTorch, etc - brief descriptions
-
-## Desktop GUI app and IoT development
-
-- PyQT - brief description
-- PyJs - brief description
-- PyGUI - brief descriptio
-- Kivy - brief descriptio
-- PyGTK - brief descriptio
-- WxPython - brief description
-- PyGame - brief description (with links to our internal games once they're done?) -->
+- [Tutorial: Aplicación Web de la API de Bing ADS en Python @ no__t-0: Introducción a la ejecución de una aplicación web Microsoft Advertising mediante el SDK de Python para Bing ADS, el IDE de Visual Studio Code y el marco de trabajo web Django.

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, PIP, py. exe, rutas de acceso de archivo, PYTHONPATH, implementación de Python, empaquetado de Python
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: f2dbc455578a3fbe79c2558e2ba16c8f82cea522
-ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
+ms.openlocfilehash: 4132ef0089ee707367666b4d6340333e538b1130
+ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68959043"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313374"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Preguntas más frecuentes sobre el uso de Python en Windows
 
@@ -29,33 +29,33 @@ Algunos paquetes incluyen código nativo que requiere un C o C++ un compilador p
 
 ## <a name="what-is-pyexe"></a>¿Qué es py. exe?
 
-Puede acabar con varias versiones de Python instaladas en el equipo porque está trabajando en diferentes tipos de proyectos de Python. Dado que todos usan el `python` comando, es posible que no sea obvio qué versión de Python está usando. Como norma, se recomienda usar el `python3` comando (o `python3.7` para seleccionar una versión específica).
+Puede acabar con varias versiones de Python instaladas en el equipo porque está trabajando en diferentes tipos de proyectos de Python. Dado que todos usan el comando `python`, puede que no sea obvio qué versión de Python está usando. Como norma, se recomienda usar el comando `python3` (o `python3.7` para seleccionar una versión específica).
 
-El [iniciador de py. exe](https://docs.python.org/3/using/windows.html#launcher) seleccionará automáticamente la versión más reciente de Python que haya instalado. También puede usar comandos como `py -3.7` para seleccionar una versión determinada o `py --list` para ver qué versiones se pueden usar. **Sin embargo**, el iniciador de py. exe solo funcionará si usa una versión de Python instalada desde [Python.org](https://www.python.org/downloads/windows/). Al instalar Python desde el Microsoft Store, no se `py` **incluye**el comando. Para Linux, MacOS, WSL y la versión Microsoft Store de Python, debe usar el `python3` comando (o `python3.7`).
+El [iniciador de py. exe](https://docs.python.org/3/using/windows.html#launcher) seleccionará automáticamente la versión más reciente de Python que haya instalado. También puede usar comandos como `py -3.7` para seleccionar una versión determinada o `py --list` para ver qué versiones se pueden usar. **Sin embargo**, el iniciador de py. exe solo funcionará si usa una versión de Python instalada desde [Python.org](https://www.python.org/downloads/windows/). Al instalar Python desde el Microsoft Store, **no se incluye**el comando `py`. Para Linux, macOS, WSL y la versión Microsoft Store de Python, debe usar el comando `python3` (o `python3.7`).
 
 ## <a name="why-does-running-pythonexe-open-the-microsoft-store"></a>¿Por qué la ejecución de Python. exe abre el Microsoft Store?
 
-Para ayudar a los nuevos usuarios a encontrar una buena instalación de Python, hemos agregado un acceso directo a Windows que le llevará directamente a la versión más reciente del paquete de la comunidad Publicada en el Microsoft Store. Este paquete se puede instalar fácilmente, sin permisos de administrador, y reemplazará los `python` comandos `python3` y predeterminados por los reales.
+Para ayudar a los nuevos usuarios a encontrar una buena instalación de Python, hemos agregado un acceso directo a Windows que le llevará directamente a la versión más reciente del paquete de la comunidad Publicada en el Microsoft Store. Este paquete se puede instalar fácilmente, sin permisos de administrador, y reemplazará los comandos predeterminados `python` y `python3` por los reales.
 
 La ejecución del archivo ejecutable de acceso directo con los argumentos de línea de comandos devolverá un código de error para indicar que Python no se instaló. Esto es para evitar que los archivos por lotes y los scripts abran la aplicación de la tienda cuando probablemente no se haya previsto.
 
-Si instala Python con los instaladores de [Python.org](https://www.python.org/downloads/windows/) y selecciona la opción "Agregar a ruta de acceso", el `python` nuevo comando tendrá prioridad sobre el acceso directo. Tenga en cuenta que otros instaladores `python` pueden agregar una prioridad _inferior_ a la del acceso directo integrado.
+Si instala Python con los instaladores de [Python.org](https://www.python.org/downloads/windows/) y selecciona la opción "Agregar a ruta de acceso", el nuevo comando `python` tendrá prioridad sobre el acceso directo. Tenga en cuenta que otros instaladores pueden agregar `python` con una prioridad _inferior_ a la del acceso directo integrado.
 
 Puede deshabilitar los accesos directos sin instalar Python si abre "administrar alias de ejecución de la aplicación" desde Inicio, busca las entradas de Python "instalador de la aplicación" y las cambia a "desactivado".
 
 ## <a name="why-dont-file-paths-work-in-python-when-i-copy-paste-them"></a>¿Por qué no funcionan las rutas de acceso de archivo en Python cuando las copia y las pega?
 
-Las cadenas de Python usan "secuencias de escape" para los caracteres especiales. Por ejemplo, para insertar un nuevo carácter de línea en una cadena, debe escribir `\n`. Dado que las rutas de acceso de archivo en Windows usan barras diagonales inversas, es posible que algunas partes se conviertan en caracteres especiales.
+Las cadenas de Python usan "secuencias de escape" para los caracteres especiales. Por ejemplo, para insertar un carácter de nueva línea en una cadena, debe escribir `\n`. Dado que las rutas de acceso de archivo en Windows usan barras diagonales inversas, es posible que algunas partes se conviertan en caracteres especiales.
 
-Para pegar una ruta de acceso como una cadena en Python, `r` agregue el prefijo. Esto indica que es una `raw` cadena y que no se usarán caracteres de escape excepto \ "(es posible que tenga que quitar la última barra diagonal inversa de la ruta de acceso). Por lo tanto, la ruta de acceso podría ser similar a la siguiente: r "C:\Users\MyName\Documents\Document.txt"
+Para pegar una ruta de acceso como una cadena en Python, agregue el prefijo `r`. Esto indica que se trata de una cadena `raw` y no se usarán caracteres de escape excepto \ "(es posible que tenga que quitar la última barra diagonal inversa de la ruta de acceso). Por lo tanto, la ruta de acceso podría ser similar a la siguiente: r "C:\Users\MyName\Documents\Document.txt"
 
 Al trabajar con rutas de acceso en Python, se recomienda usar el módulo estándar pathlib. Esto le permitirá convertir la cadena en un objeto de trazado enriquecido que puede realizar manipulaciones de ruta de acceso de forma coherente tanto si usa barras diagonales inversas como barras diagonales inversas, lo que hace que el código funcione mejor en distintos sistemas operativos.
 
 ## <a name="what-is-pythonpath"></a>¿Qué es PYTHONPATH?
 
-Python usa la variable de entorno PYTHONPATH para especificar una lista de directorios desde los que se pueden importar los módulos. Al ejecutar, puede inspeccionar la `sys.path` variable para ver los directorios en los que se buscará al importar algo.
+Python usa la variable de entorno PYTHONPATH para especificar una lista de directorios desde los que se pueden importar los módulos. Al ejecutar, puede inspeccionar la variable `sys.path` para ver los directorios en los que se buscará al importar algo.
 
-Para establecer esta variable desde el símbolo del sistema, use `set PYTHONPATH=list;of;paths`:.
+Para establecer esta variable desde el símbolo del sistema, use: `set PYTHONPATH=list;of;paths`.
 
 Para establecer esta variable desde PowerShell, use: `$env:PYTHONPATH=’list;of;paths’` justo antes de iniciar Python.
 
@@ -77,4 +77,4 @@ La extensión VSCode [keymaps](https://marketplace.visualstudio.com/search?targe
 
 ## <a name="how-do-mac-shortcut-keys-map-to-windows-shortcut-keys"></a>¿Cómo se asignan las teclas de método abreviado a Windows?
 
-Algunos de los botones del teclado y los métodos abreviados del sistema son ligeramente diferentes entre una máquina de Windows y un equipo Macintosh. Esta [Guía de asignación de teclado](https://support.microsoft.com/help/970299/keyboard-mappings-using-a-pc-keyboard-on-a-macintosh) de soporte técnico de Microsoft trata los aspectos básicos.
+Algunos de los botones del teclado y los métodos abreviados del sistema son ligeramente diferentes entre una máquina de Windows y un equipo Macintosh. Esta [Guía de transición de Mac a Windows](../dev-environment/mac-to-windows.md) cubre los aspectos básicos.

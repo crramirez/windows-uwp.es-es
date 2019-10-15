@@ -6,14 +6,14 @@ ms.topic: article
 keywords: Windows 10, UWP, Windows Forms, WPF, Islas XAML
 ms.author: mcleans
 author: mcleanbyron
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: bd49417d110759dc9fec4ff4c9003e842bf1d7bb
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
-ms.translationtype: MT
+ms.openlocfilehash: 52287576dbc395af60e15b5f4b4a403db7e92900
+ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643351"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313452"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Hospedar controles XAML de UWP en aplicaciones de escritorio (Islas XAML)
 
@@ -81,7 +81,7 @@ Tenga en cuenta los siguientes detalles:
 
 * Si hospeda un control personalizado de UWP, el proyecto de WPF o Windows Forms debe tener como destino .NET Core 3. No se admite el hospedaje de controles de UWP personalizados en aplicaciones destinadas a la .NET Framework. También necesitará realizar algunos pasos adicionales para hacer referencia al control personalizado. Para obtener más información, vea [hospedar un control de UWP personalizado en una aplicación WPF con islas XAML](host-custom-control-with-xaml-islands.md).
 
-* Las versiones anteriores de estas instrucciones tenían que agregar `maxversiontested` el elemento a un manifiesto de aplicación en el proyecto de WPF o Windows Forms. Siempre que esté usando las versiones preliminares más recientes de los paquetes de NuGet mencionados anteriormente, ya no tendrá que agregar este elemento al manifiesto.
+* Las versiones anteriores de estas instrucciones tenían que agregar el elemento `maxversiontested` a un manifiesto de aplicación en el proyecto de WPF o Windows Forms. Siempre que esté usando las versiones preliminares más recientes de los paquetes de NuGet mencionados anteriormente, ya no tendrá que agregar este elemento al manifiesto.
 
 ### <a name="architecture-of-xaml-island-net-controls"></a>Arquitectura de controles .NET de la isla de XAML
 
@@ -93,12 +93,12 @@ Las API que aparecen en la parte inferior de este diagrama se incluye con el Win
 
 ### <a name="web-view-controls"></a>Controles de vista Web
 
-El kit de herramientas de la comunidad de Windows también proporciona los siguientes controles .NET para hospedar contenido web en WPF y aplicaciones Windows Forms. Estos controles se usan a menudo en escenarios de modernización de aplicaciones de escritorio similares a los controles de la isla de XAML y se mantienen en el mismo repositorio de repositorios de [Microsoft. Toolkit. Win32](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32) que los controles de la isla XAML.
+El kit de herramientas de la comunidad de Windows también proporciona los siguientes controles .NET para hospedar contenido web en WPF y aplicaciones Windows Forms. Estos controles se usan a menudo en escenarios de modernización de aplicaciones de escritorio similares a los controles de la isla de XAML y se mantienen en el mismo repositorio de [repositorios de Microsoft. Toolkit. Win32](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32) que los controles de la isla XAML.
 
 | Control | Sistema operativo mínimo admitido | Descripción |
 |-----------------|-------------------------------|-------------|
 | [WebView](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webview) | Windows 10, versión 1803 | Usa el motor de representación de Microsoft Edge para mostrar el contenido Web. |
-| [WebViewCompatible](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webviewcompatible) | Windows 7 | Proporciona una versión de **WebView** que es compatible con más versiones del sistema operativo. Este control usa el motor de representación de Microsoft Edge para mostrar el contenido web en Windows 10 versión 1803 y versiones posteriores, y el motor de representación de Internet Explorer para mostrar el contenido web en versiones anteriores de Windows 10, Windows 8. x y Windows 7. |
+| [WebViewCompatible](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webviewcompatible) | Windows 7 | Proporciona una versión de **WebView** que es compatible con más versiones del sistema operativo. Este control usa el motor de representación de Microsoft Edge para mostrar el contenido web en Windows 10 versión 1803 y versiones posteriores, y el motor de representación de Internet Explorer para mostrar el contenido web en versiones anteriores de Windows 10, Windows 8. x y Windows 7. |
 
 Para usar estos controles, instale uno de estos paquetes NuGet:
 
