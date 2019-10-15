@@ -1,7 +1,7 @@
 ---
 Description: Un cuadro de entrada de texto que proporciona sugerencias como tipos de usuarios.
-title: Cuadro combinado (lista desplegable)
-label: Combo box
+title: Cuadro combinado y cuadro de lista
+label: Combo box and list box
 template: detail.hbs
 ms.date: 10/02/2018
 ms.topic: article
@@ -10,16 +10,16 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f053be1aeb88454b94d7c04ba2627818ea43736
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 351e234577b1a07b33bdcdbb92642c3697342503
+ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339407"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163698"
 ---
-# <a name="combo-box"></a>Cuadro combinado
+# <a name="combo-box-and-list-box"></a>Cuadro combinado y cuadro de lista
 
-Usa un cuadro combinado (también conocido como lista desplegable) para presentar una lista de elementos entre los que un usuario puede seleccionar. Un cuadro combinado se inicia en un estado compacto y se amplía para mostrar una lista de elementos seleccionables.
+Usa un cuadro combinado (también conocido como lista desplegable) para presentar una lista de elementos entre los que un usuario puede seleccionar. Un cuadro combinado se inicia en un estado compacto y se amplía para mostrar una lista de elementos seleccionables. Un cuadro de lista es similar a un cuadro combinado, pero no es contraíble y no tiene un estado compacto. Puedes obtener más información sobre los cuadros de lista al final de este artículo.
 
 Cuando se cierra el cuadro combinado, o bien se muestra la selección actual o bien está vacío si no hay ningún elemento seleccionado. Cuando el usuario amplía el cuadro combinado, este muestra la lista de elementos seleccionables.
 
@@ -294,6 +294,32 @@ bool IsValid(string Text)
 
 - El texto de los elementos del cuadro combinado no debe ocupar más de una línea.
 - Ordena los elementos de un cuadro combinado en el orden más lógico. Agrupa opciones relacionadas y coloca las opciones más comunes en la parte superior. Ubica los nombres en orden alfabético, los números en orden numérico y las fechas en orden cronológico.
+
+## <a name="list-boxes"></a>Cuadros de lista
+
+Un cuadro de lista permite al usuario seleccionar uno o varios elementos de una colección. Son similares a las listas desplegables, salvo por que los cuadros de lista estén siempre abiertos y no dispongan de estado compacto (no expandido). Si no hay espacio para mostrar todos los elementos de un cuadro de lista, es posible desplazarse por ellos.
+
+### <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
+
+- Un cuadro de lista puede ser útil cuando los elementos de la lista son lo suficientemente importantes como para mostrarse en un lugar destacado y cuando hay suficiente espacio en la pantalla para mostrar la lista completa.
+- Un cuadro de lista debe atraer la atención del usuario hacia el conjunto de alternativas de una elección importante. Por el contrario, una lista desplegable inicialmente capta la atención del usuario hacia el elemento seleccionado.
+- Evita usar un cuadro de lista si:
+    - Existe un número muy pequeño de elementos de la lista. Si el cuadro de lista siempre tiene las mismas 2 opciones y solo se puede elegir una, es mejor usar [botones de radio](radio-button.md). Considera también la posibilidad de usar los botones de radio cuando hay 3 o 4 elementos estáticos en la lista.
+    - El cuadro de lista siempre tiene las mismas 2 opciones de las que solo se puede seleccionar una y, además, una supone la imposibilidad de la otra (por ejemplo, “on” y “off”). Usa una única casilla o un conmutador de alternancia.
+    - El número de elementos es muy elevado. Para listas largas, es mejor usar vistas de cuadrícula y de lista. Para listas muy largas de datos agrupados, se recomienda usar zoom semántico.
+    - Los elementos son valores numéricos contiguos. Si ese es el caso, considera la posibilidad de usar un [control deslizante](slider.md).
+    - Los elementos de la selección tienen una importancia secundaria en el flujo de la aplicación o la opción predeterminada es la recomendada para la mayoría de usuarios y situaciones. Usa una lista desplegable.
+
+### <a name="recommendations"></a>Recomendaciones
+
+- El intervalo ideal de elementos en un cuadro de lista es de 3 a 9.
+- El cuadro de lista funciona mejor si sus elementos pueden variar dinámicamente.
+- Si puedes, establece el tamaño del cuadro de lista de modo que no haya que desplazarse para ver todos los elementos.
+- Comprueba que la finalidad del cuadro de lista sea evidente y que los elementos seleccionados se distingan con claridad.
+- Reserva los efectos visuales y las animaciones para la información táctil y para los elementos con estado “seleccionado”.
+- El texto de los elementos del cuadro de lista no debe ocupar más de una línea. Si los elementos son visuales, puedes personalizar el tamaño. Si un elemento contiene varias líneas de texto o imágenes, es preferible usar una vista de cuadrícula o de lista.
+- Utiliza la fuente predeterminada, salvo que se indique lo contrario en las directrices de tu marca.
+- No uses un cuadro de lista para los comandos ni para mostrar u ocultar dinámicamente otros controles.
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 

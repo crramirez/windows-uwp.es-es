@@ -1,36 +1,42 @@
 ---
 Description: Mostrar listas y habilitar la interacción con el contenido basado en la colección.
-title: Listas
+title: Colecciones y listas
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
-label: Lists
+label: Collections and Lists
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 10/08/2019
 ms.topic: article
 keywords: windows 10, uwp
-pm-contact: predavid
+pm-contact: anawish
 design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f45edc213d8abdfc43e834d023993b89249844d
-ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
+ms.openlocfilehash: e1167a57da6a3f54cabcc946cfbf7a592f301d2c
+ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71061952"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163741"
 ---
-# <a name="lists"></a>Listas
+# <a name="collections-and-lists"></a>Colecciones y listas
 
-Mostrar listas y habilitar la interacción con el contenido basado en la colección. Los cuatro patrones de lista tratados en este artículo son:
+Las colecciones y listas hacen referencia a la representación de varios elementos de datos relacionados que aparecen juntos. Las colecciones se pueden representar de varias maneras, mediante diferentes controles de colección (también se pueden denominar vistas de colección). Los controles de colección muestran y permiten las interacciones con el contenido basado de la colección, como una lista de contactos, una lista de fechas, una colección de imágenes, etc.  Los controles tratados en este artículo son:
 
 - Vistas de lista, que se usan principalmente para mostrar colecciones de contenido con mucho texto
 - Vistas de cuadrícula, que se usan principalmente para mostrar colecciones de contenido con muchas imágenes
-- Listas desplegables, que permiten que los usuarios elijan un elemento desde una lista ampliable
-- Cuadros de lista, que permiten que los usuarios elijan uno o varios elementos desde un cuadro que se puede desplazar
+- Vistas con función de pasar de página, que se usan principalmente para mostrar colecciones de contenido con una gran cantidad de imágenes y que requieren que solo un elemento esté en el foco cada vez
+- Vistas de árbol, que se usan principalmente para mostrar colecciones de contenido con mucho texto en una jerarquía específica
+- ItemsRepeater, que es un bloque de creación personalizable para crear controles de colección personalizados
 
-Se proporcionan directrices de diseño, características y ejemplos para cada patrón de lista.
 
-> **API importantes**: [Clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [Clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) y [Clase ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+A continuación, se proporcionan directrices de diseño, características y ejemplos para cada control.
+
+Cada uno de estos controles (a excepción de ItemsRepeater) proporciona las funciones de aplicación de estilos e interacción integradas. Sin embargo, para personalizar aún más el aspecto visual de la vista de colección y de los elementos que contiene, se usa [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate). Puedes encontrar información detallada sobre las plantillas de datos y la personalización del aspecto de una vista de colección en la página [Plantillas y contenedores de elementos](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/item-containers-templates).
+
+Cada uno de estos controles (a excepción de ItemsRepeater) también tiene un comportamiento integrado para permitir la selección de uno o de varios elementos. Consulta [Selection modes overview](selection-modes.md) (Información general sobre los modos de selección) para obtener más información.
+
+> **API importantes**: [clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [clase FlipView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [clase TreeView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview) y [clase ItemsRepeater](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
 
 > <div id="main">
 > <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong>
@@ -45,7 +51,7 @@ Se proporcionan directrices de diseño, características y ejemplos para cada pa
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, ve <a href="xamlcontrolsgallery:/item/ListView">ListView</a>, <a href="xamlcontrolsgallery:/item/GridView">GridView</a>, <a href="xamlcontrolsgallery:/item/ComboBox">ComboBox</a> y <a href="xamlcontrolsgallery:/item/ListBox">ListBox</a> en acción.</p>
+    <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, puedes ver <a href="xamlcontrolsgallery:/item/ListView">ListView</a>, <a href="xamlcontrolsgallery:/item/GridView">GridView</a>, <a href="xamlcontrolsgallery:/item/FlipView">FlipView</a>, <a href="xamlcontrolsgallery:/item/TreeView">TreeView</a> y <a href="xamlcontrolsgalley:/item/ItemsRepeater">ItemsRepeater</a> en acción.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Obtener la aplicación XAML Controls Gallery (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">Obtener el código fuente (GitHub)</a></li>
@@ -56,28 +62,31 @@ Se proporcionan directrices de diseño, características y ejemplos para cada pa
 
 ## <a name="list-views"></a>Vistas de lista
 
-Las vistas de lista te permiten clasificar elementos y asignar encabezados de grupo, arrastrar y colocar elementos, mantener el contenido y reordenar los elementos.
+Las vistas de lista representan elementos con mucho texto, normalmente en un diseño de una sola columna y apilada verticalmente. Te permiten clasificar elementos y asignar encabezados de grupo, arrastrar y colocar elementos, mantener el contenido y reordenar los elementos.
 
 ### <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa una vista de lista para:
 
-- Mostrar una colección de contenido que está compuesta principalmente por texto.
-- Navegar por una colección única o por categorías de contenido.
-- Crear el panel maestro en la [vista maestro y detalles](master-details.md). Maestro y detalles es el patrón que se suele usar en aplicaciones de correo electrónico, en las que un panel (el maestro) tiene una lista de elementos seleccionables, mientras que el otro panel tiene una vista detallada del elemento seleccionado.
+- Mostrar una colección que conste principalmente de elementos basados en texto, donde todos los elementos deben tener el mismo comportamiento visual y de interacción.
+- Representar una colección de contenido único o por categorías.
+- Acomodar una variedad de casos de uso, incluidos los casos comunes siguientes:
+    - Crear una lista de mensajes o un registro de mensajes.
+    - Crear una lista de contactos.
+    - Crear el panel maestro en la [vista maestro y detalles](master-details.md). Maestro y detalles es el patrón que se suele usar en aplicaciones de correo electrónico, en las que un panel (el maestro) tiene una lista de elementos seleccionables, mientras que el otro panel tiene una vista detallada del elemento seleccionado.
+    
 
 ### <a name="examples"></a>Ejemplos
 
-Esta es una vista de lista simple que muestra los datos agrupados en un teléfono.
+Esta es una vista de lista simple en la que se muestra una lista de contactos y se agrupan los elementos de datos alfabéticamente. Los encabezados de grupo (las letras del alfabeto en este ejemplo) también se pueden personalizar para que permanezcan "adheridos" y aparezcan siempre en la parte superior de la vista de lista al desplazar.
 
-![Vista de lista con datos agrupados](images/simple-list-view-phone.png)
+![Vista de lista con datos agrupados](images/listview-grouped-example-resized-final.png)
 
-### <a name="recommendations"></a>Recomendaciones
+Esta es una vista de lista que se ha invertido para mostrar un registro de mensajes, con los mensajes más recientes en la parte inferior. En una vista de lista invertida, los elementos aparecen en la parte inferior de la pantalla con una animación integrada.
 
-- Los elementos de una lista deben tener el mismo comportamiento.
-- Si tu lista está dividida en grupos, puedes usar el [zoom semántico](semantic-zoom.md), que facilita a los usuarios la navegación por los contenidos agrupados.
+![Vista de lista invertida](images/listview-inverted-2.png)
 
-### <a name="list-view-articles"></a>Artículos de vista de lista
+### <a name="related-articles"></a>Artículos relacionados
 <table>
 <colgroup>
 <col width="50%" />
@@ -96,7 +105,7 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 </tr>
 <tr class="even">
 <td align="left"><p><a href="item-containers-templates.md">Plantillas y contenedores de elementos</a></p></td>
-<td align="left"><p>Los elementos que se muestran en una lista o cuadrícula pueden tener un papel importante en el aspecto general de la aplicación. Modifica las plantillas de control y las plantillas de datos para definir la apariencia de los elementos y mejorar el aspecto de tu aplicación.</p></td>
+<td align="left"><p>Los elementos que se muestran en una vista de lista o cuadrícula pueden tener un rol importante en el aspecto general de la aplicación. Haz que tu aplicación tenga un magnífico aspecto mediante la personalización de la apariencia de los elementos de la colección con la modificación de las plantillas de control y las plantillas de datos.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="item-templates-listview.md">Plantillas de elemento para vistas de lista</a></p></td>
@@ -104,11 +113,11 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 </tr>
 <tr class="even">
 <td align="left"><p><a href="inverted-lists.md">Listas invertidas</a></p></td>
-<td align="left"><p>Las listas invertidas tienen nuevos elementos agregados en la parte inferior, al igual que en una aplicación de chat. Sigue estas instrucciones para usar una lista invertida en tu aplicación.</p></td>
+<td align="left"><p>Las listas invertidas tienen nuevos elementos agregados en la parte inferior, al igual que en una aplicación de chat. Sigue las instrucciones de este artículo para usar una lista invertida en tu aplicación.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="pull-to-refresh.md">Deslizar para actualizar</a></p></td>
-<td align="left"><p>El patrón extraer para actualizar permite al usuario desplegar una lista de datos con la entrada táctil para recuperar más datos. Usa estas instrucciones para implementar el patrón extraer para actualizar en tu vista de lista.</p></td>
+<td align="left"><p>El mecanismo de extraer para actualizar permite al usuario desplegar una lista de datos con la entrada táctil para recuperar más datos. Usa este artículo para implementar el mecanismo de extraer para actualizar en tu vista de lista.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="nested-ui.md">Interfaz de usuario anidada</a></p></td>
@@ -119,15 +128,18 @@ Esta es una vista de lista simple que muestra los datos agrupados en un teléfon
 
 ## <a name="grid-views"></a>Vistas de cuadrícula
 
-Las vistas de cuadrícula son adecuadas para organizar y explorar las colecciones de contenido basado en imágenes. Un diseño de la vista de cuadrícula se desplaza verticalmente y se extiende en panorámica horizontal. Los elementos se disponen en un orden de lectura de izquierda a derecha y de arriba abajo.
+Las vistas de cuadrícula son adecuadas para organizar y explorar las colecciones de contenido basado en imágenes. Un diseño de la vista de cuadrícula se desplaza verticalmente y se extiende en panorámica horizontal. Los elementos están colocados en un diseño ajustado, aparecen en un orden de lectura de izquierda a derecha y de arriba abajo.
 
 ### <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-Usa una vista de lista para:
+Usa una vista de cuadrícula para:
 
-- Mostrar una colección de contenido que está compuesta principalmente por imágenes.
+- Mostrar una colección de contenido en la que el punto focal de cada elemento sea una imagen y cada elemento deba tener el mismo comportamiento visual y de interacción.
 - Mostrar las bibliotecas de contenido.
 - Dar formato a las dos vistas de contenido asociadas con el [zoom semántico](semantic-zoom.md).
+- Acomodar una variedad de casos de uso, incluidos los casos comunes siguientes:
+    - Interfaz de usuario de tipo escaparate (es decir, exploración de aplicaciones, canciones, productos)
+    - Bibliotecas fotográficas interactivas
 
 ### <a name="examples"></a>Ejemplos
 
@@ -137,14 +149,9 @@ Este ejemplo muestra un diseño de la vista de cuadrícula típico, en este caso
 
 Una vista de cuadrícula es una solución ideal para una biblioteca de contenido, que a menudo se usa para presentar elementos multimedia, como imágenes y vídeos. En una biblioteca de contenido, los usuarios esperan poder presionar un elemento para invocar una acción.
 
-![Ejemplo de una biblioteca de contenido](images/controls_list_contentlibrary.png)
+![Ejemplo de una biblioteca de contenido](images/gridview-simple-example-final.png)
 
-### <a name="recommendations"></a>Recomendaciones
-
-- Los elementos de una lista deben tener el mismo comportamiento.
-- Si tu lista está dividida en grupos, puedes usar el [zoom semántico](semantic-zoom.md), que facilita a los usuarios la navegación por los contenidos agrupados.
-
-### <a name="grid-view-articles"></a>Artículos de la vista de cuadrícula
+### <a name="related-articles"></a>Artículos relacionados
 <table>
 <colgroup>
 <col width="50%" />
@@ -163,7 +170,7 @@ Una vista de cuadrícula es una solución ideal para una biblioteca de contenido
 </tr>
 <tr class="even">
 <td align="left"><p><a href="item-containers-templates.md">Plantillas y contenedores de elementos</a></p></td>
-<td align="left"><p>Los elementos que se muestran en una lista o cuadrícula pueden tener un papel importante en el aspecto general de la aplicación. Modifica las plantillas de control y las plantillas de datos para definir la apariencia de los elementos y mejorar el aspecto de tu aplicación.</p></td>
+<td align="left"><p>Los elementos que se muestran en una vista de lista o cuadrícula pueden tener un rol importante en el aspecto general de la aplicación. Haz que tu aplicación tenga un magnífico aspecto mediante la personalización de la apariencia de los elementos de la colección con la modificación de las plantillas de control y las plantillas de datos.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="item-templates-gridview.md">Plantillas de elemento para vistas de cuadrícula</a></p></td>
@@ -171,94 +178,131 @@ Una vista de cuadrícula es una solución ideal para una biblioteca de contenido
 </tr>
 <tr class="even">
 <td align="left"><p><a href="nested-ui.md">Interfaz de usuario anidada</a></p></td>
-<td align="left"><p>La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los controles accionables incluidos en un contenedor sobre el que un usuario puede actuar. Por ejemplo, es posible que tengas un elemento de la vista de lista que contenga un botón y que el usuario pueda seleccionar el elemento de lista o presionar el botón anidado en este. Sigue estos procedimientos recomendados para proporcionar la mejor experiencia de interfaz de usuario anidada a los usuarios.</p></td>
+<td align="left"><p>La interfaz de usuario anidada es una interfaz de usuario (IU) que expone los controles accionables incluidos en un contenedor sobre el que un usuario puede actuar. Por ejemplo, es posible que tengas un elemento de la vista de cuadrícula que contenga un botón y que el usuario pueda seleccionar el elemento de cuadrícula o presionar el botón anidado en este. Sigue estos procedimientos recomendados para proporcionar la mejor experiencia de interfaz de usuario anidada a los usuarios.</p></td>
 </tr>
 </tbody>
 </table>
 
-## <a name="drop-down-lists"></a>Listas desplegables
+## <a name="flip-views"></a>Vistas con función de pasar página
 
-Las listas desplegables, también conocidas como cuadros combinados, se inician en un estado compacto y se expanden para mostrar una lista de elementos seleccionables. Los elementos seleccionados siempre son visibles y los elementos no visibles pueden aparecer en la vista cuando el usuario presione el cuadro combinado para expandirlo.
+Las vistas con función de pasar página son adecuadas para examinar colecciones de contenido basadas en imágenes, en concreto, donde la experiencia deseada es que solo una imagen esté visible cada vez. Una vista con función de pasar página permite al usuario desplazarse o "pasar página" a través de los elementos de la colección (vertical u horizontalmente), de modo que solo aparezca un elemento después de la interacción del usuario.
 
 ### <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-- Usa una lista desplegable para que los usuarios puedan seleccionar un único valor en un conjunto de elementos que pueden representarse correctamente con una línea de texto.
-- Usa una vista de lista o cuadrícula en lugar de un cuadro combinado para mostrar elementos que contengan varias líneas de texto o imágenes.
-- Cuando haya menos de cinco elementos, considera el uso de [botones de radio](radio-button.md) (si solo se puede seleccionar un elemento) o [casillas](checkbox.md) (si se pueden seleccionar varios elementos).
-- Usa un cuadro combinado cuando los elementos de selección sean de importancia secundaria en el flujo de tu aplicación. Si la opción predeterminada es la recomendada para la mayoría de los usuarios en la mayoría de situaciones, mostrar todos los elementos usando una vista de lista podría atraer más atención de la necesaria sobre las opciones. Usar un cuadro combinado te permite ahorrar espacio y minimizar la distracción.
+Usa una vista con función de pasar página para:
+
+- Mostar una colección pequeña o mediana (menos de 25 elementos), donde la colección esté formada por imágenes con pocos o sin metadatos.
+- Mostrar los elementos de uno en uno y permitir que el usuario final pase página por los elementos a su propio ritmo.
+- Acomodar una variedad de casos de uso, incluidos los casos comunes siguientes:
+    - Galerías fotográficas
+    - Galerías o presentaciones de productos
 
 ### <a name="examples"></a>Ejemplos
 
-Un cuadro combinado en su estado compacto puede mostrar un encabezado.
+En los dos ejemplos siguientes se muestra una vista con función de pasar página horizontal y vertical, respectivamente.
 
-![Ejemplo de una lista desplegable en su estado compacto](images/combo_box_collapsed.png)
+![Vista con función de pasar página horizontal](images/controls_flipview_horizonal.jpg)
 
-Aunque los cuadros combinados se expanden para admitir mayores longitudes de cadena, evita cadenas que sean demasiado largas y difíciles de leer.
+![Vista con función de pasar página vertical](images/controls_flipview_vertical.jpg)
 
-![Ejemplo de una lista desplegable con cadena de texto larga](images/combo_box_listitemstate.png)
+### <a name="related-articles"></a>Artículos relacionados
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tema</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="flipview.md">Vista para alternar</a></p></td>
+<td align="left"><p>Obtén información de los aspectos básicos del uso de una vista con función de pasar página en la aplicación, junto con cómo personalizar la apariencia de los elementos en una vista con función de pasar página.</p></td>
+</tr>
+</tbody>
+</table>
 
-Si la colección en un cuadro combinado es lo suficientemente larga, aparecerá una barra de desplazamiento para albergarla. Agrupa los elementos de la lista de forma lógica.
+## <a name="tree-views"></a>Vistas de árbol
 
-![Ejemplo de una barra de desplazamiento en una lista desplegable](images/combo_box_scroll.png)
-
-### <a name="recommendations"></a>Recomendaciones
-
-- El texto de los elementos del cuadro combinado no debe ocupar más de una línea.
-- Ordena los elementos de un cuadro combinado en el orden más lógico. Agrupa opciones relacionadas y coloca las opciones más comunes en la parte superior. Ubica los nombres en orden alfabético, los números en orden numérico y las fechas en orden cronológico.
-- Para crear un cuadro combinado que se actualice en directo mientras el usuario usa las teclas de dirección (como un menú desplegable de fuente), establece SelectionChangedTrigger en "Siempre".  
-
-### <a name="text-search"></a>Búsqueda de texto
-
-Los cuadros combinados admiten automáticamente la búsqueda dentro de sus colecciones. A medida que los usuarios escriben caracteres en un teclado físico mientras se centran en un cuadro combinado abierto o cerrado, los candidatos que coincidan con la cadena del usuario se incluyen en la vista. Esta funcionalidad es especialmente útil cuando se navega en una lista larga. Por ejemplo, cuando se interactúa con una lista desplegable que contiene una lista de estados, los usuarios pueden presionar la tecla "w" para mostrar "Washington" para la selección rápida.
-
-
-## <a name="list-boxes"></a>Cuadros de lista
-
-Un cuadro de lista permite al usuario seleccionar uno o varios elementos de una colección. Son similares a las listas desplegables, salvo por que los cuadros de lista estén siempre abiertos y no dispongan de estado compacto (no expandido). Si no hay espacio para mostrar todos los elementos de un cuadro de lista, es posible desplazarse por ellos.
+Las vistas de árbol son adecuadas para mostrar colecciones basadas en texto con una jerarquía importante que se tiene que presentar. Los elementos de la vista de árbol se pueden contraer o expandir, se muestran en una jerarquía visual, se pueden complementar con iconos y se pueden arrastrar y colocar entre las vistas de árbol. Las vistas de árbol permiten el anidamiento de n niveles.
 
 ### <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-- Un cuadro de lista puede ser útil cuando los elementos de la lista son lo suficientemente importantes como para mostrarse en un lugar destacado y cuando hay suficiente espacio en la pantalla para mostrar la lista completa.
-- Un cuadro de lista debe atraer la atención del usuario hacia el conjunto de alternativas de una elección importante. Por el contrario, una lista desplegable inicialmente capta la atención del usuario hacia el elemento seleccionado.
-- Evita usar un cuadro de lista si:
-    - Existe un número muy pequeño de elementos de la lista. Si el cuadro de lista siempre tiene las mismas 2 opciones y solo se puede elegir una, es mejor usar [botones de radio](radio-button.md). Considera también la posibilidad de usar los botones de radio cuando hay 3 o 4 elementos estáticos en la lista.
-    - El cuadro de lista siempre tiene las mismas 2 opciones de las que solo se puede seleccionar una y, además, una supone la imposibilidad de la otra (por ejemplo, “on” y “off”). Usa una única casilla o un conmutador de alternancia.
-    - El número de elementos es muy elevado. Para listas largas, es mejor usar vistas de cuadrícula y de lista. Para listas muy largas de datos agrupados, se recomienda usar zoom semántico.
-    - Los elementos son valores numéricos contiguos. Si ese es el caso, considera la posibilidad de usar un [control deslizante](slider.md).
-    - Los elementos de la selección tienen una importancia secundaria en el flujo de la aplicación o la opción predeterminada es la recomendada para la mayoría de usuarios y situaciones. Usa una lista desplegable.
+Usa una vista de árbol para:
 
-### <a name="recommendations"></a>Recomendaciones
+- Mostrar una colección de elementos anidados cuyo contexto y significado depende de una jerarquía o una cadena organizativa específica.
+- Acomodar una variedad de casos de uso, incluidos los casos comunes siguientes:
+    - Explorador de archivos
+    - Organigrama de la compañía
 
-- El intervalo ideal de elementos en un cuadro de lista es de 3 a 9.
-- El cuadro de lista funciona mejor si sus elementos pueden variar dinámicamente.
-- Si puedes, establece el tamaño del cuadro de lista de modo que no haya que desplazarse para ver todos los elementos.
-- Comprueba que la finalidad del cuadro de lista sea evidente y que los elementos seleccionados se distingan con claridad.
-- Reserva los efectos visuales y las animaciones para la información táctil y para los elementos con estado “seleccionado”.
-- El texto de los elementos del cuadro de lista no debe ocupar más de una línea. Si los elementos son visuales, puedes personalizar el tamaño. Si un elemento contiene varias líneas de texto o imágenes, es preferible usar una vista de cuadrícula o de lista.
-- Utiliza la fuente predeterminada, salvo que se indique lo contrario en las directrices de tu marca.
-- No uses un cuadro de lista para los comandos ni para mostrar u ocultar dinámicamente otros controles.
+### <a name="examples"></a>Ejemplos
 
-## <a name="selection-mode"></a>Modo de selección
+Este es un ejemplo de una vista de árbol que representa un explorador de archivos y en el que se muestran muchos elementos anidados diferentes que se complementan por iconos.
 
-El modo de selección permite a los usuarios seleccionar uno o varios elementos y actuar sobre ellos. Se puede invocar a través de un menú contextual, mediante el uso de CTRL+clic o MAYÚS+clic en un elemento, o pasando sobre un elemento en una vista de galería. Cuando el modo de selección está activado, aparecen casillas junto a cada elemento de lista y pueden aparecer acciones en la parte superior o inferior de la pantalla.
+![Vista de árbol con iconos](images/treeview-icons.png)
 
-Existen tres modos de selección diferentes:
+### <a name="related-articles"></a>Artículos relacionados
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tema</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="tree-view.md">Vista de árbol</a></p></td>
+<td align="left"><p>Obtén información sobre los aspectos básicos del uso de una vista de árbol en tu aplicación, junto con cómo personalizar la apariencia y el comportamiento de la interacción de los elementos en una vista de árbol.</p></td>
+</tr>
+</tbody>
+</table>
 
-- Simple: El usuario puede seleccionar un solo elemento a la vez.
-- Varios: El usuario puede seleccionar varios elementos sin usar un modificador.
-- Extendido: El usuario puede seleccionar varios elementos con un modificador, por ejemplo, manteniendo presionada la tecla Mayús.
+## <a name="itemsrepeater"></a>ItemsRepeater
 
-Al tocar en cualquier parte de un elemento, este se selecciona. Tocar sobre la acción de la barra de comandos afecta a todos los elementos seleccionados. Si no se selecciona ningún elemento, las acciones de la barra de comandos deberían estar desactivadas, excepto "Seleccionar todo".
+ItemsRepeater es diferente del resto de los controles de colección que se muestran en esta página, ya que no proporciona ni aplicación de estilos ni interacción integradas cuando, por ejemplo, simplemente se coloca en una página sin definir ninguna propiedad. ItemsRepeater es más bien un bloque de creación que puedes usar para crear tu propio control de colecciones personalizado, específicamente uno que no se pueda conseguir mediante el uso de los otros controles de este artículo. ItemsRepeater es un panel controlado por datos y de alto rendimiento que se puede personalizar para adaptarlo a tus necesidades exactas.
 
-El modo de selección no tiene un modelo de cierre del elemento por cambio de foco; al presionar fuera del marco en el que el modo de selección está activo, no se cancelará el modo. De este modo, se evita la desactivación fortuita del modo. Al hacer clic en el botón Atrás se descarta el modo de selección múltiple.
+### <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
-Se muestra una confirmación visual al seleccionar una acción. Considera la posibilidad de mostrar un cuadro de diálogo de confirmación para determinadas acciones, especialmente las destructivas, como la eliminación.
+Usa un control ItemsRepeater si:
 
-El modo de selección se limita a la página en la que está activo y no puede afectar a los elementos fuera de esa página.
+- Tienes una interfaz de usuario y una experiencia de usuario específicas que no se pueden crear con los controles de colección existentes.
+- Tienes un origen de datos para tus elementos (por ejemplo, datos extraídos de Internet, una base de datos o una colección preexistente en el código subyacente).
 
-El punto de entrada para el modo de selección debe estar yuxtapuesto en relación con el contenido sobre el que incide.
+### <a name="examples"></a>Ejemplos
 
-Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices para barras de comandos](app-bars.md).
+Los tres ejemplos siguientes son controles ItemsRepeater que están enlazados al mismo origen de datos (una colección de números). La colección de números se representa de tres maneras y cada uno de los controles ItemsRepeaters siguientes usa una clase [Layout](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.layout) personalizada distinta y una propiedad [ItemTemplate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate?view=winui-2.2) personalizada diferente.
+
+![ItemsRepeater con barras horizontales](images/itemsrepeater-1.png)
+![ItemsRepeater con barras verticales](images/itemsrepeater-2.png)
+![ItemsRepeater con representación circular](images/itemsrepeater-3.png)
+
+### <a name="related-articles"></a>Artículos relacionados
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tema</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="items-repeater.md">ItemsRepeater</a></p></td>
+<td align="left"><p>Obtén información de los aspectos básicos del uso de un control ItemsRepeater en la aplicación, junto con cómo implementar todos los componentes de interacción y visuales necesarios para la vista de colección.</p></td>
+</tr>
+</tbody>
+</table>
+
 
 ## <a name="globalization-and-localization-checklist"></a>Lista de comprobación Globalización y localización
 
@@ -267,7 +311,7 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 <th>Ajuste</th><td>Permitir dos líneas para la etiqueta de la lista.</td>
 </tr>
 <tr>
-<th>Expansión horizontal</th><td>Asegúrate de que los campos pueden acomodar la expansión de texto y de que son desplazables.</td>
+<th>Expansión horizontal</th><td>Asegurarse de que los campos pueden acomodar la expansión del texto y de que son desplazables.</td>
 </tr>
 <tr>
 <th>Espaciado vertical</th><td>Usar caracteres no latinos para el espaciado vertical para garantizar que los scripts no latinos se muestren correctamente.</td>
@@ -280,13 +324,14 @@ Para obtener recomendaciones sobre la barra de comandos, consulta [Directrices p
 
 ## <a name="related-articles"></a>Artículos relacionados
 
+**Directrices para el diseño y la experiencia de usuario**
 - [Maestro/detalles](master-details.md)
 - [Panel de navegación](navigationview.md)
 - [Zoom semántico](semantic-zoom.md)
 - [Arrastrar y colocar](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 - [Imágenes en miniatura](../../files/thumbnails.md)
 
-**Para desarrolladores**
+**Referencia de las API**
 - [Clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [Clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [Clase ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)

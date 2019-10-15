@@ -7,12 +7,12 @@ ms.topic: article
 keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: 26c7a7a123d8892bf1c3584685db49f2d86c654a
-ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
+ms.openlocfilehash: ba99abd906bd84a91fae5da1505ac8845dd5b99c
+ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71705552"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72282472"
 ---
 # <a name="microsoft-store-policies"></a>Directivas de Microsoft Store
 
@@ -383,7 +383,7 @@ No se permiten los productos que emulan un sistema de juego en ninguna familia d
 Los siguientes requisitos de privacidad se aplican a los datos de usuario de Xbox Live:
 - Solo usted debe usar los servicios y los datos de usuario en su juego. No venda, licencie ni comparta ningún dato que obtenga de nosotros ni de nuestros servicios. Si recibe datos personales de los usuarios finales a través de Xbox Live, pasa a ser controlador independiente de tales datos y debe disponer de una declaración de privacidad (o directiva) en lugar adecuado, de manera que sean los usuarios finales quienes gobiernen el uso que usted haga de los datos personales, como lo requiere el Acuerdo para desarrolladores de aplicaciones. Recomendamos incluir un vínculo a la declaración de privacidad en su sitio web y en las páginas de Microsoft Store de sus juegos.
 - Los servicios y los datos de usuarios deben usarse correctamente en los juegos. Estos datos incluyen (sin limitación): datos de uso, identificadores de cuenta y cualquier otro dato de identificación personal, estadísticas, puntuaciones, calificaciones, clasificaciones, conexiones con otros usuarios y otros datos relacionados con la actividad social del usuario.
-- No almacene ningún dato de gráficos sociales de Xbox Live (por ejemplo, listas de amigos), excepto los identificadores de cuenta de los usuarios que han vinculado su cuenta de Xbox Live con su juego.
+- No almacenes ningún dato de gráficos sociales de Xbox Live (por ejemplo, listas de amigos), excepto los identificadores de cuenta de los usuarios que han vinculado su cuenta de Xbox Live con tu juego.
 - Elimine todos los identificadores de cuenta cuando quite el juego de nuestro servicio o cuando un usuario desvincule su cuenta de Xbox Live del juego. No comparta servicios ni datos de usuario (aunque sean anónimos, agregados o derivados) con redes de anuncios, agentes de datos ni otros servicios de publicidad o relacionados con la monetización.
 - Cuando Microsoft reciba solicitudes de usuarios finales para eliminar sus datos personales, le comunicaremos las solicitudes, facilitándole una lista de los identificadores de los usuarios finales. Debe comprobar la lista al menos cada 30 días, para garantizar que reciba todas las solicitudes de eliminación, y debe usar la información proporcionada en la lista solo para satisfacer las solicitudes de eliminación de los usuarios finales. Puede encontrar detalles sobre este proceso en [Herramientas de listas de cuentas eliminadas](https://aka.ms/xbox-deleted).
 
