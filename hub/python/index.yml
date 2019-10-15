@@ -10,51 +10,59 @@ metadata:
   ms.prod: dev-environment
   ms.technology: windows-python
   ms.topic: landing-page
-  ms.openlocfilehash: 60c0905a87d5089cccf5a525a6d29f87c327fd62
-  ms.sourcegitcommit: 7104ad5d01ad1c69a4ea0b3ba6732c1b2a98ec09
+  ms.openlocfilehash: 568c8f2eb6d7dc9c6f010e8a7c2c5d6d71fda9c7
+  ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/25/2019
-  ms.locfileid: "71251122"
+  ms.lasthandoff: 10/15/2019
+  ms.locfileid: "72313402"
 landingContent:
 - title: Introducción para principiantes
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Configurar el entorno de desarrollo
-      url: get-started/python-for-education.md#set-up-your-development-environment
+      url: ./beginners.md
   - linkListType: tutorial
     links:
     - text: Ejecutar cierto código Python básico
-      url: get-started/python-for-education.md#hello-world-tutorial-for-some-python-basics
+      url: ./beginners.md#hello-world-tutorial-for-some-python-basics
     - text: HelloWorld mediante VS Code
-      url: get-started/python-for-education.md#hello-world-tutorial-for-using-python-with-vs-code
+      url: ./beginners.md#hello-world-tutorial-for-using-python-with-vs-code
     - text: Crear un juego sencillo con Pygame
-      url: get-started/python-for-education.md#create-a-simple-game-with-pygame
+      url: ./beginners.md#create-a-simple-game-with-pygame
 - title: Introducción al desarrollo web
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Configurar el entorno de desarrollo
-      url: get-started/python-for-web.md#set-up-your-development-environment
+      url: ./web-frameworks.md#set-up-your-development-environment
   - linkListType: tutorial
     links:
     - text: HelloWorld con Flask
-      url: get-started/python-for-web.md#hello-world-tutorial-for-flask
+      url: ./web-frameworks.md#hello-world-tutorial-for-flask
     - text: HelloWorld con Django
-      url: get-started/python-for-web.md#hello-world-tutorial-for-django
+      url: ./web-frameworks.md#hello-world-tutorial-for-django
 - title: Introducción a los scripts de automatización
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Configurar el entorno de desarrollo
-      url: get-started/python-for-scripting.md#set-up-your-development-environment
+      url: ./scripting.md#set-up-your-development-environment
   - linkListType: tutorial
     links:
     - text: 'Script de ejemplo: mostrar el sistema de archivos'
-      url: get-started/python-for-scripting.md#example-script-to-display-the-structure-of-your-file-system-directory
+      url: ./scripting.md#example-script-to-display-the-structure-of-your-file-system-directory
     - text: 'Script de ejemplo: modificar todos los archivos de un directorio'
-      url: get-started/python-for-scripting.md#example-script-to-modify-all-files-in-a-directory
+      url: ./scripting.md#example-script-to-modify-all-files-in-a-directory
+- title: Introducción a las bases de datos
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Instalación y ejecución de PostgreSQL
+      url: ./databases.md#install-postgresql
+    - text: Instalación y ejecución de MongoDB
+      url: ./databases.md#install-mongodb
 - title: Recursos adicionales
   linkLists:
   - linkListType: reference
@@ -71,17 +79,3 @@ landingContent:
       url: resources.md#online-courses
     - text: Vínculos de desarrollo web recomendados
       url: resources.md#web-development
-- title: Guía de soporte técnico de Mac a Windows
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Cambiar el entorno de desarrollo
-      url: ../mac-to-windows.md
-    - text: Accesos rápidos de teclado
-      url: ../mac-to-windows.md#keyboard-shortcuts
-    - text: Accesos directos de panel táctil
-      url: ../mac-to-windows.md#trackpad-shortcuts
-    - text: Terminal y shell
-      url: ../mac-to-windows.md#terminal-and-shell
-    - text: Aplicaciones y utilidades
-      url: ../mac-to-windows.md#apps-and-utilities

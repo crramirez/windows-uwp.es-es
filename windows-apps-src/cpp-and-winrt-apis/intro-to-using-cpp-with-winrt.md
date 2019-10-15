@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++, cpp, winrt, proyección, introducción
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b6fd3f3085449c57dafdcedc60f63997e3ec807
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 1a9bb432ce7c856a6c54305f657f06a23dab14f1
+ms.sourcegitcommit: 805420bb7ec6850ec3576b21193a3681054c9754
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393432"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71976334"
 ---
 # <a name="introduction-to-cwinrt"></a>Introducción a C++/WinRT
 &nbsp;
@@ -71,7 +71,7 @@ Estas son las plantillas de proyecto de Visual Studio proporcionadas por la exte
 ### <a name="blank-app-cwinrt"></a>Aplicación vacía (C++/WinRT)
 Plantilla de proyecto para una aplicación de la Plataforma universal de Windows (UWP) que tiene una interfaz de usuario XAML.
 
-Visual Studio proporciona compatibilidad con el compilador XAML para generar los códigos auxiliares de los encabezados y las implementaciones a partir del archivo basado en lenguaje de definición de interfaz (IDL) (`.idl`) que se encuentra detrás de cada archivo de marcado XAML. En un archivo IDL, define las clases en tiempo de ejecución locales a las que quieras hacer referencia en las páginas XAML de tu aplicación y, después, compila el proyecto una sola vez para generar las plantillas de implementación en `Generated Files` y las definiciones del tipo de código auxiliar en `Generated Files\sources`. Luego, usa estas definiciones del tipo de código auxiliar como referencia para implementar tus clases en tiempo de ejecución locales. Consulta [Factorizar clases en tiempo de ejecución en archivos Midl (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
+Visual Studio proporciona compatibilidad con el compilador XAML para generar los códigos auxiliares de los encabezados y las implementaciones a partir del archivo basado en lenguaje de definición de interfaz (IDL) (`.idl`) que se encuentra detrás de cada archivo de marcado XAML. En un archivo IDL, define las clases en tiempo de ejecución locales a las que quieras hacer referencia en las páginas XAML de tu aplicación y, después, compila el proyecto una sola vez para generar las plantillas de implementación en `Generated Files` y las definiciones del tipo de código auxiliar en `Generated Files\sources`. Luego, usa estas definiciones de subtipo de código auxiliar como referencia para implementar tus clases en tiempo de ejecución locales. Consulta [Factorizar clases en tiempo de ejecución en archivos Midl (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
 La compatibilidad de la superficie de diseño XAML en Visual Studio 2019 con C++/WinRT es casi igual a la de C#. En Visual Studio 2019, puedes usar la pestaña **Eventos** de la ventana **Propiedades** para agregar controladores de eventos en un proyecto de C++/WinRT. También puedes agregar controladores de eventos en el código manualmente. Consulta [Controlar eventos usando delegados en C++/WinRT](handle-events.md) para obtener más información.
 
