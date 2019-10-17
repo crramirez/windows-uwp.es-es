@@ -8,14 +8,14 @@ ms.topic: article
 keywords: NodeJS, node. js, Windows 10, Microsoft, Learning NodeJS, nodo en Windows, nodo en WSL, nodo en Linux en Windows, nodo de instalación en Windows, NodeJS con vs Code, desarrollar con nodo en Windows, desarrollar con NodeJS en Windows, instalar nodo en WSL, NodeJS en Windows Subsistema para Linux
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: bdc3e3c944c4aeb25f5cf880fc4d31df1019da5a
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 63c47107538d8744201f83ea1be24cfaf3193f4f
+ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315119"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517818"
 ---
-# <a name="get-started-connecting-nodejs-apps-to-a-database"></a>Introducción a la conexión de aplicaciones de node. js a una base de datos
+# <a name="get-started-using-mongodb-or-postgresql-with-nodejs-on-windows"></a>Introducción al uso de MongoDB o PostgreSQL con node. js en Windows
 
 A menudo, las aplicaciones node. js necesitan conservar los datos, lo que puede ocurrir a través de archivos, almacenamiento local, servicios en la nube o bases de datos. Esta guía paso a paso le ayudará a comenzar a conectar la aplicación node. js a una base de datos de. Decidimos centrarnos en dos opciones populares: MongoDB y PostgreSQL.
 
@@ -41,14 +41,14 @@ En esta guía se da por supuesto que ya ha completado los pasos para [configurar
 
 VS Code admite el trabajo con bases de datos de MongoDB a través de la [extensión CosmosDB de Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb), puede crear, administrar y consultar bases de datos de mongodb desde vs Code.
 
-Para obtener más información, visite el VS Code docs: [Trabajar con MongoDB](https://code.visualstudio.com/docs/azure/mongodb).
+Para obtener más información, visite el VS Code docs: [trabajar con MongoDB](https://code.visualstudio.com/docs/azure/mongodb).
 
 Obtenga más información en los documentos de MongoDB:
 
 - [Introducción al uso de MongoDB](https://docs.mongodb.com/manual/introduction/)
 - [Crear usuarios](https://docs.mongodb.com/manual/tutorial/create-users/)
 - [Conexión a una instancia de MongoDB en un host remoto](https://docs.mongodb.com/manual/mongo/#mongodb-instance-on-a-remote-host)
-- @NO__T 0CRUD: Crear, leer, actualizar, eliminar @ no__t-0
+- [CRUD: crear, leer, actualizar, eliminar](https://docs.mongodb.com/manual/crud/)
 - [Documentos de referencia](https://docs.mongodb.com/manual/reference/)
 
 ## <a name="install-postgresql"></a>Instalación de PostgreSQL
