@@ -1,24 +1,24 @@
 ---
 title: Programación de juegos
-description: La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Descubre cómo comenzar un nuevo juego o migrar uno existente.
+description: La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Obtén información acerca de iniciar un juego nuevo o la migración de un juego existente.
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
-ms.date: 06/13/2017
+ms.date: 10/17/2019
 ms.topic: article
 keywords: windows 10, uwp, games, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dddead7dcc2eedbe4e32fa4bfd749bed60ba796
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: db551135fab4e29b49b3031ad3338fa9a2e58379
+ms.sourcegitcommit: 00cd8a6616e358479a63e56126c62ef02b8da75b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583302"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72548394"
 ---
 # <a name="game-programming"></a>Programación de juegos
 
 La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear, distribuir y rentabilizar los juegos. Aprende sobre la creación de juegos para Windows 10.
 
 | Tema | Descripción |
-|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-|-|
 | [Guía de desarrollo de juegos de Windows 10](e2e.md) | Una guía completa con recursos e información para el desarrollo de juegos para UWP. |
 | [Planeamiento](planning.md) | Este tema contiene una lista de artículos sobre la fase de planeamiento de juegos. |
 | [Programación para UWP](uwp-programming.md) | Aprende a usar las API de Windows Runtime para desarrollar juegos para UWP. |
@@ -26,17 +26,9 @@ La Plataforma universal de Windows (UWP) ofrece nuevas oportunidades para crear,
 
 Para información sobre el desarrollo de juegos para UWP con DirectX, consulta [Programación con DirectX ](directx-programming.md).
 
-Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo de juegos, debes estar familiarizado con los siguientes temas:
+Para aprovechar al máximo las explicaciones y los tutoriales sobre desarrollo de juegos, te recomendamos que estés familiarizado con estos temas.
 
--   Microsoft C++ con Component Extensions (C++/CX). Es una actualización a Microsoft C++ que incorpora el recuento automático de referencias, y es el lenguaje de desarrollo de juegos para UWP con DirectX 11.1 o versiones posteriores.
--   Terminología básica de programación de gráficos
--   Conceptos básicos de programación en Windows
--   Conocimiento básico de las API de Direct3D 9 u 11
-
- 
-
- 
-
-
-
-
+- [C++/WinRT ](/windows/uwp/cpp-and-winrt-apis/index) es la proyección del lenguaje que se recomienda para desarrollar juegos para UWP con DirectX. C++/WinRT es una proyección del lenguaje C++ 17 moderna y estándar para API de Windows Runtime (WinRT). Sustituye a Microsoft C++ con Component Extensions (C++/CX). Para obtener un ejemplo de código, mediante C++/WinRT para llamar a las API de DirectX, consulta [Lista del código fuente completo de una aplicación de Direct2D mínima](/windows/uwp/cpp-and-winrt-apis/consume-com#full-source-code-listing-of-a-minimal-direct2d-application).
+- Terminología básica de programación de gráficos.
+- Conceptos básicos de programación en Windows.
+- Conocimiento básico de las API de Direct3D 9 (o posterior).
