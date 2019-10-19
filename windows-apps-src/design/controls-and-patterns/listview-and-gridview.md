@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ff5d0831e918c0399bccb1dac9bb4fca8a6d408
-ms.sourcegitcommit: c079388634cbd328d0d43e7a6185e09bb4bca65b
+ms.openlocfilehash: a85edf0caa429d95d376af6fbc93bc7e8134340c
+ms.sourcegitcommit: 00cd8a6616e358479a63e56126c62ef02b8da75b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71939650"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72548457"
 ---
 # <a name="list-view-and-grid-view"></a>Vista de lista y vista de cuadrícula
 
@@ -604,7 +604,7 @@ Para obtener información sobre cómo cambiar la apariencia de los elementos sel
 
 ### <a name="drag-and-drop"></a>Arrastrar y colocar
 
-Los controles ListView y GridView permiten arrastrar y colocar elementos en sí mismos, entre sí y en otros controles ListView y GridView. Para obtener más información acerca de cómo implementar el patrón de arrastrar y colocar, consulta [Arrastrar y colocar](https://docs.microsoft.com/windows/uwp/design/input/drag-and-drop). 
+Los controles ListView y GridView permiten arrastrar y colocar elementos en sí mismos, entre sí y en otros controles ListView y GridView. Para obtener más información acerca de cómo implementar el patrón de arrastrar y colocar, consulta [Arrastrar y colocar](../input/drag-and-drop.md).
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
@@ -616,4 +616,4 @@ Los controles ListView y GridView permiten arrastrar y colocar elementos en sí 
 
 - [Listas](lists.md)
 - [Plantillas y contenedores de elementos](item-containers-templates.md)
-- [Arrastrar y colocar](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
+- [Arrastrar y colocar](../input/drag-and-drop.md)

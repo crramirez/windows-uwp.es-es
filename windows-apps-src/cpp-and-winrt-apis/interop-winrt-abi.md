@@ -5,12 +5,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, port, migrate, interop, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: d1def649772f94a03d5a1f352dcec1d32c7b0868
-ms.sourcegitcommit: 5d71c97b6129a4267fd8334ba2bfe9ac736394cd
+ms.openlocfilehash: 91602c75cdaddc325407529ab4d231db46ecca39
+ms.sourcegitcommit: 412bf5bb90e1167d118699fbf71d0e6864ae79bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67800575"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586716"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>Interoperabilidad entre C++/WinRT y la ABI
 
@@ -161,17 +161,17 @@ Para las conversiones de nivel más bajo, que solo copian direcciones, puedes us
     WINRT_ASSERT(uri);
 ```
 
-## <a name="convertfromabi-function"></a>Función convert_from_abi
+## <a name="convert_from_abi-function"></a>Función convert_from_abi
 Esta función auxiliar convierte un puntero de interfaz ABI sin procesar en un objeto equivalente C++/WinRT con una sobrecarga mínima.
 
 ```cppwinrt
 template <typename T>
 T convert_from_abi(::IUnknown* from)
 {
-    T to{ nullptr };
+    T to{ nullptr }; // `T` is a projected type.
 
     winrt::check_hresult(from->QueryInterface(winrt::guid_of<T>(),
-        reinterpret_cast<void**>(winrt::put_abi(to))));
+        winrt::put_abi(to)));
 
     return to;
 }
@@ -181,7 +181,7 @@ La función simplemente llama a [**QueryInterface**](https://docs.microsoft.com/
 
 Como hemos visto, no es necesaria la función auxiliar para convertir de un objeto C++/WinRT al puntero de interfaz ABI equivalente. Solo tienes que usar la función miembro [**winrt::Windows::Foundation::IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (o [**try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function)) para consultar la interfaz solicitada. Las funciones **as** y **try_as** devuelven un objeto [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) que encapsula el tipo ABI solicitado.
 
-## <a name="code-example-using-convertfromabi"></a>Ejemplo de código con convert_from_abi
+## <a name="code-example-using-convert_from_abi"></a>Ejemplo de código con convert_from_abi
 Aquí tienes un ejemplo de código que muestra esta función auxiliar en práctica.
 
 ```cppwinrt
@@ -213,10 +213,10 @@ namespace sample
     template <typename T>
     T convert_from_abi(::IUnknown* from)
     {
-        T to{ nullptr };
+        T to{ nullptr }; // `T` is a projected type.
 
         winrt::check_hresult(from->QueryInterface(winrt::guid_of<T>(),
-            reinterpret_cast<void**>(winrt::put_abi(to))));
+            winrt::put_abi(to)));
 
         return to;
     }

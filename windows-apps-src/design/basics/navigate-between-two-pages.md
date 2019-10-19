@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 3bc377e87d01106a1a2e7157dbe08f1ab022f52a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: c35795eeb6afa32e77acb507c687e334e454d0d5
+ms.sourcegitcommit: e0f6150c8f45b69a3e114d0556c2c3d5aed7238f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66361055"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72560806"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementación del desplazamiento entre dos páginas
 
@@ -452,5 +452,5 @@ Page1::Page1()
 
 ## <a name="related-articles"></a>Artículos relacionados
 * [Conceptos básicos del diseño de navegación para las aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/layout/navigation-basics)
-* [Directrices para pestañas y tablas dinámicas](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tabs-pivot)
-* [Directrices sobre paneles de navegación](https://docs.microsoft.com/windows/uwp/controls-and-patterns/nav-pane)
+* [Pivot](../controls-and-patterns/pivot.md)
+* [Vista de navegación](../controls-and-patterns/navigationview.md)
