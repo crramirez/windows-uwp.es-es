@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, get, getting, started
 ms.localizationpriority: medium
-ms.openlocfilehash: e900cdddaa86857554c11605d00f59fd45a7e5ee
-ms.sourcegitcommit: b186f70f0b1601b6b6a5db91d87d034f6b155e3b
+ms.openlocfilehash: ab582d0528d6af8c9a8ae97e43fda2714f8e2fe6
+ms.sourcegitcommit: 2442a5f5b0c4275204063162f0f379fa90ff13b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063781"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72292774"
 ---
 # <a name="get-started-with-cwinrt"></a>Introducción a C++/WinRT
 
@@ -113,7 +113,7 @@ std::wcout << titleAsHstring.c_str() << std::endl;
 
 Obtiene el texto del título de la fuente, como objeto [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (consulta más detalles en [Control de cadenas en C++/WinRT](strings.md)). Entonces se genera **hstring**, mediante la función **c_str**, que refleja el patrón utilizado con cadenas de la biblioteca estándar de C++.
 
-Como puedes ver, C++/WinRT fomenta expresiones de C++ modernas y de tipo clase, como `syndicationItem.Title().Text()`. Es un estilo de programación diferente y más limpio que la tradicional programación COM. No tienes que inicializar COM directamente, puedes trabajar con punteros COM.
+Como puedes ver, C++/WinRT fomenta expresiones de C++ modernas y de tipo clase, como `syndicationItem.Title().Text()`. Es un estilo de programación diferente y más limpio que la tradicional programación COM. No tienes que inicializar COM directamente, ni trabajar con punteros COM.
 
 Tampoco necesitas controlar códigos de devolución HRESULT. C++/WinRT convierte los errores HRESULT en excepciones como [**winrt::hresult-error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) para lograr un estilo de programación natural y moderno. Para más información acerca del control de errores y ejemplos de código, consulta [Gestión de errores con C++/WinRT](error-handling.md).
 

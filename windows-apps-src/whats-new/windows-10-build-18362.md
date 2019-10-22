@@ -6,12 +6,12 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 935d7f787d0cc23965c0fd51747b7687adb80a3f
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 4e92afd112ce7600bcfa650e0bb3bbeffabd7bd0
+ms.sourcegitcommit: f120968069702a7210756b508dabc4a1a8c20d53
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66468314"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72438220"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-18362"></a>Novedades para desarrolladores en Windows 10, compilación 18362
 
@@ -87,7 +87,7 @@ El nuevo sitio de Microsoft Learn ofrece nuevos conocimientos prácticos y las o
 
 ### <a name="progressive-web-apps"></a>Aplicaciones web progresivas
 
-Las aplicaciones web progresiva son sitios web que funcionan como aplicaciones nativas en distintos exploradores y una amplia variedad de dispositivos de Windows 10. [Mire el vídeo](https://youtu.be/ugAewC3308Y) para obtener información sobre cómo se hace y luego [eche un vistazo a los documentos](https://aka.ms/Windows-PWA) para obtener más información.
+Las aplicaciones web progresivas son sitios web que funcionan como aplicaciones nativas en distintos exploradores y una amplia variedad de dispositivos Windows 10. [Mire el vídeo](https://youtu.be/ugAewC3308Y) para conocer más y luego [eche un vistazo a los documentos](https://aka.ms/Windows-PWA) para obtener más información.
 
 ### <a name="vs-code-series"></a>Serie de código de VS
 

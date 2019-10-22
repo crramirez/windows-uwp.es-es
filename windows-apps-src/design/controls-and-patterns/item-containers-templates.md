@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2402be26a14d2e57a482a68cf8d5b587f4e65dd1
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 761cd9e6d1fc92b4919f701fdd9f8f62078faedf
+ms.sourcegitcommit: b8a4b0d5a65da297290b93d73c641df3c135a086
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364952"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72531666"
 ---
 # <a name="item-containers-and-templates"></a>Plantillas y contenedores de elementos
 
@@ -25,13 +25,20 @@ ms.locfileid: "66364952"
 
 Los controles **ListView** y **GridView** administran la organización de sus elementos (horizontal, vertical, ajuste, etc.) y la interacción del usuario con los elementos, pero no la visualización de elementos individuales en la pantalla. Administran la visualización de elementos los contenedores de elementos. Cuando agregas elementos a una vista de lista, estos se colocan automáticamente en un contenedor. El contenedor de elementos predeterminado de ListView es [ListViewItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewItem); para GridView, es [GridViewItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridViewItem).
 
-> **API importantes**: [Clase ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [Clase GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [Propiedad ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) y [Propiedad ItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)
+> **API importantes**: [Clase ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [clase GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [clase ListViewItem](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listviewitem), [clase GridViewItem](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.gridviewitem), [propiedad ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate), [propiedad ItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)
 
 
 > [!NOTE]
 > Las clases ListView y GridView se derivan ambas de la clase [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase), por lo que tienen la misma funcionalidad, pero muestran los datos de manera diferente. En este artículo, cuando hablamos de la vista de lista, la información corresponde a ambos controles, ListView y GridView, a menos que se indique lo contrario. Podemos hacer mención a clases como ListView o ListViewItem, pero el prefijo *List* se puede reemplazar por *Grid* para el equivalente de cuadrícula correspondiente (GridView o GridViewItem). 
 
-Estos controles de contenedor constan de dos partes importantes que se combinan para crear los elementos visuales finales que se muestran para un elemento: la *plantilla de datos* y la *plantilla de control*.
+## <a name="listview-items-and-gridview-items"></a>Elementos ListView y elementos GridView
+Como se mencionó anteriormente, los elementos ListView se colocan automáticamente en el contenedor ListViewItem, y los elementos GridView se colocan en el contenedor GridViewItem. Estos contenedores de elementos son controles que tienen su propio estilo e interacción integrados, pero también pueden personalizarse en gran medida. Sin embargo, antes de la personalización, asegúrate de familiarizarte con el estilo y las directrices recomendados para ListViewItem y GridViewItem:
+
+- **ListViewItems**: Los elementos principalmente se enfocan en el texto y tienen una forma más alargada. Los iconos o las imágenes pueden aparecer a la izquierda del texto.
+- **GridViewItems**: Los elementos suelen tener una forma cuadrada o, al menos, una forma de rectángulo menos alargada. Los elementos se enfocan en la imagen y pueden tener texto alrededor de la imagen o superpuesto a esta. 
+
+## <a name="introduction-to-customization"></a>Introducción a la personalización
+Los controles de contenedor (como ListViewItem y GridViewItem) constan de dos partes importantes que se combinan para crear los elementos visuales finales que se muestran para un elemento: la *plantilla de datos* y la *plantilla de control*.
 
 - **Plantilla de datos**: debes asignar una clase [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) a la propiedad [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) de la vista de lista para especificar cómo se muestran los elementos de datos individuales.
 - **Plantilla de control**: la plantilla de control proporciona la parte de la visualización de elementos de la que el marco es responsable, como los estados visuales. Puedes usar la propiedad [ItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) para modificar la plantilla de control. Por lo general, puedes hacerlo para modificar los colores de la vista de lista de modo que coincidan con tu personalización de marca, o bien para cambiar cómo se muestran los elementos seleccionados.
@@ -72,6 +79,9 @@ Este es el código XAML que crea este elemento. Explicaremos las plantillas más
     <x:String>Item 5</x:String>
 </ListView>
 ```
+
+> [!IMPORTANT]
+> Las plantillas de datos y las plantillas de control se usan para personalizar el estilo de muchos controles distintos de ListView y GridView. Entre otros, se incluyen controles con su propio estilo integrado, como FlipView, y controles creados de forma personalizada, como ItemsRepeater. Aunque el ejemplo siguiente es específico de ListView y GridView, los conceptos se pueden aplicar a muchos otros controles. 
  
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -177,7 +187,7 @@ Aquí, debes definir una clase DataTemplate que muestre un objeto [Rectangle](ht
 > Cuando uses la [extensión de marcado x:Bind](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) en DataTemplate, debes especificar DataType (`x:DataType`) en DataTemplate.
 
 **XAML**
-```XAML
+```xaml
 <ListView x:Name="colorsListView">
     <ListView.ItemTemplate>
         <DataTemplate x:DataType="local:NamedColor">
@@ -207,6 +217,19 @@ Aquí, debes definir una clase DataTemplate que muestre un objeto [Rectangle](ht
 Esta es la apariencia de los elementos de datos cuando se muestran con esta plantilla de datos.
 
 ![Elementos de la vista de lista con una plantilla de datos](images/listview-data-template-0.png)
+
+> [!IMPORTANT]
+> De manera predeterminada, el contenido de los controles ListViewItems se alinea a la izquierda, es decir, el valor de [HorizontalContentAlignmentProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment#Windows_UI_Xaml_Controls_Control_HorizontalContentAlignment) está establecido en Left. Si tiene varios elementos dentro de un ListViewItem que son adyacentes horizontalmente, como elementos apilados horizontalmente o elementos colocados en la misma fila de la cuadrícula, todos se alinearán a la izquierda y solo se separan por su margen definido. 
+<br/><br/> Para que los elementos se expandan para rellenar el cuerpo completo de un ListItem, debe establecer el valor de HorizontalContentAlignmentProperty en [Stretch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.horizontalalignment) mediante un [Setter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter) dentro de su ListView:
+
+```xaml
+<ListView.ItemContainerStyle>
+    <Style TargetType="ListViewItem">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+    </Style>
+</ListView.ItemContainerStyle>
+```
+
 
 Es posible que quieras mostrar los datos en un control GridView. Esta es otra plantilla de datos que muestra los datos de manera más adecuada para un diseño de cuadrícula. Esta vez, la plantilla de datos está definida como un recurso en lugar de en línea con el código XAML del control GridView.
 
@@ -281,6 +304,9 @@ Se crea una instancia de cada elemento XAML en una plantilla de datos para cada 
  - En primer lugar, el diseño usa un solo elemento Grid. Podrías tener un elemento Grid de una sola columna y colocar estos tres elementos TextBlock en una clase StackPanel, pero en una plantilla de datos que se crea muchas veces, debes buscar maneras de evitar la incrustación de paneles de diseño en otros paneles de diseño.
  - En segundo lugar, puedes usar un control Border para representar un fondo sin colocar elementos realmente dentro del elemento Border. Un elemento Border puede tener solo un elemento secundario, por lo que deberías agregar un panel de diseño adicional para hospedar los tres elementos TextBlock dentro del elemento Border en XAML. Si los elementos TextBlock no se convierten en elementos secundarios del elemento Border, se elimina la necesidad de un panel que contenga los elementos TextBlock.
  - Por último, podrías colocar los elementos TextBlock dentro de un elemento StackPanel y establecer las propiedades de borde en el elemento StackPanel, en lugar de usar un elemento Border explícito. Sin embargo, el elemento Border es un control más ligero que un elemento StackPanel, por lo que tiene un impacto mucho menor en el rendimiento cuando se representa.
+
+### <a name="using-different-layouts-for-different-items"></a>Usar diseños diferentes para los distintos elementos
+
 
 ## <a name="control-template"></a>Plantilla de control
 La plantilla de control de un elemento contiene los elementos visuales que muestran el estado, como la selección, el paso del puntero y el foco. Estos elementos visuales se representan encima o debajo de la plantilla de datos. Aquí se muestran algunos de los elementos visuales predeterminados comunes que se dibujan en la plantilla del control ListView.
