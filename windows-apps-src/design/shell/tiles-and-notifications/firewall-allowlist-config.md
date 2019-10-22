@@ -9,17 +9,17 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, servicio de notificaciones de Windows, notificación, Windows, firewall, solución de problemas, IP, tráfico, empresa, red, IPv4, VIP, FQDN, dirección IP pública
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ba6d2e678eee0d851b4f2e3897f9fc067b74580
-ms.sourcegitcommit: 3360db6bc975516e01913d3d73599c964a411052
+ms.openlocfilehash: c3774164d16e86a88f45eb50030beec099629d6f
+ms.sourcegitcommit: 738bab9a088a244a7a212dcac6fb3560c547b8d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70296982"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72695768"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configuraciones de firewall y proxy de empresa para admitir el tráfico de WNS
 
 ## <a name="background"></a>Background
-Muchas empresas usan firewalls para bloquear el tráfico de red no deseado; Desafortunadamente, esto también puede bloquear aspectos importantes como las comunicaciones del servicio de notificaciones de Windows. Esto significa que todas las notificaciones enviadas a través de WNS se quitarán en determinadas configuraciones de red. Para evitar esto, los administradores de red pueden agregar la lista de canales WNS aprobados a su lista de exenciones para permitir que el tráfico de WNS pase a través del firewall. A continuación se muestran más detalles sobre cómo y qué agregar, así como la compatibilidad con distintos tipos de proxy.
+Muchas empresas usan firewalls para bloquear el tráfico de red no deseado; Desafortunadamente, esto también puede bloquear aspectos importantes como las comunicaciones del servicio de notificaciones de Windows. Esto significa que todas las notificaciones enviadas a través de WNS se quitarán en determinadas configuraciones de red. Para evitar esto, los administradores de red pueden agregar la lista de FQDN o VIP de WNS aprobados a su lista de exenciones para permitir que el tráfico de WNS pase a través del firewall. A continuación se muestran más detalles sobre cómo y qué agregar, así como la compatibilidad con distintos tipos de proxy.
 
 ## <a name="proxy-support"></a>Compatibilidad con proxy
 
@@ -36,11 +36,11 @@ A continuación se muestra una lista que contiene los FQDN, las VIP y los interv
 > Se recomienda encarecidamente que permita la lista por FQDN, ya que estos no cambiarán. Si permite la lista por FQDN, no es necesario permitir también los intervalos de direcciones IP.
 
 > [!IMPORTANT]
-> Los intervalos de direcciones IP cambiarán periódicamente; por este motivo, no se incluyen en esta página. Si desea ver la lista de intervalos IP, puede descargar el archivo desde el centro de descarga: [Intervalos IP y VIP del servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Consulte periódicamente para asegurarse de que dispone de la información más actualizada. 
+> Los intervalos de direcciones IP cambiarán periódicamente; por este motivo, no se incluyen en esta página. Si desea ver la lista de intervalos IP, puede descargar el archivo desde el centro de descarga: [VIP e intervalos IP de servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Consulte periódicamente para asegurarse de que dispone de la información más actualizada. 
 
 
 ### <a name="fqdns-vips-and-ips"></a>FQDN, VIP e IP
-Cada uno de los elementos del siguiente documento XML se explica en la tabla siguiente (en [términos y notaciones](#terms-and-notations)). Los intervalos IP se dejaron intencionadamente en este documento para que se le recomiende usar solo los FQDN, ya que los FQDN permanecerán constantes. Sin embargo, puede descargar el archivo XML que contiene la lista completa del centro de descarga: [Intervalos IP y VIP del servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Las nuevas VIP o intervalos IP entrarán en **vigor una semana después de cargarse**.
+Cada uno de los elementos del siguiente documento XML se explica en la tabla siguiente (en [términos y notaciones](#terms-and-notations)). Los intervalos IP se dejaron intencionadamente en este documento para que se le recomiende usar solo los FQDN, ya que los FQDN permanecerán constantes. Sin embargo, puede descargar el archivo XML que contiene la lista completa desde el centro de descarga: [VIP e intervalos IP de servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Las nuevas VIP o intervalos IP entrarán en **vigor una semana después de cargarse**.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -78,12 +78,12 @@ A continuación se muestran explicaciones sobre las notaciones y los elementos u
 
 
 ## <a name="microsoft-push-notifications-service-mpns-public-ip-ranges"></a>Intervalos IP públicos del servicio de notificaciones de envío de Microsoft (MPNS)
-Si usa el servicio de notificación heredado, MPNS, los intervalos de direcciones IP que necesitará agregar a la lista de permitidos están disponibles en el centro de descarga: [Intervalos IP públicos del servicio de notificaciones de envío de Microsoft (MPNS)](https://www.microsoft.com/download/details.aspx?id=44535).
+Si usa el servicio de notificación heredado, MPNS, los intervalos de direcciones IP que necesitará agregar a la lista de permitidos están disponibles en el centro de descarga: [intervalos de IP pública del servicio de notificaciones de envío de Microsoft (MPNS)](https://www.microsoft.com/download/details.aspx?id=44535).
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Inicio rápido: Envío de una notificación de extracción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [Inicio rápido: envío de una notificación de extracción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
 * [Solicitud, creación y guardado de un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
 * [Cómo interceptar notificaciones para la ejecución de aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
 * [Cómo autenticarse con el servicio de notificaciones de extracción de Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))

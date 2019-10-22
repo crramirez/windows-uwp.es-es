@@ -1,19 +1,19 @@
 ---
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
 description: Use estos métodos en la API de envío de Microsoft Store para administrar los envíos de paquetes para las aplicaciones registradas en su cuenta del centro de Partners.
-title: Manage package flight submissions (Administrar envíos de paquetes piloto)
+title: Administración de envíos de paquetes piloto
 ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submissions, envíos piloto
 ms.localizationpriority: medium
-ms.openlocfilehash: 813b1375b3bdba42f0568cb7d961f8108d5828a1
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 50596fdadae2ac4a0625687e7c8acaf985ccfaa7
+ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340413"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690374"
 ---
-# <a name="manage-package-flight-submissions"></a>Manage package flight submissions (Administrar envíos de paquetes piloto)
+# <a name="manage-package-flight-submissions"></a>Administración de envíos de paquetes piloto
 
 La API de envío de Microsoft Store proporciona métodos que puedes usar para administrar envíos de paquete piloto para tus aplicaciones, incluidos los lanzamientos de paquetes graduales. Para obtener una introducción a la API de envío de Microsoft Store, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
@@ -51,7 +51,7 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 <td align="left"><a href="get-status-for-a-flight-submission.md">Obtener el estado de un envío de paquete piloto existente</a></td>
 </tr>
 <tr>
-<td align="left">EXPONER</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions</td>
 <td align="left"><a href="create-a-flight-submission.md">Creación de un nuevo envío de paquetes piloto</a></td>
 </tr>
@@ -61,12 +61,12 @@ Usa los siguientes métodos para obtener, crear, actualizar, confirmar o elimina
 <td align="left"><a href="update-a-flight-submission.md">Actualización de un envío de paquete piloto existente</a></td>
 </tr>
 <tr>
-<td align="left">EXPONER</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-a-flight-submission.md">Confirmar un envío de paquete de paquetes nuevo o actualizado</a></td>
 </tr>
 <tr>
-<td align="left">SUPRIMIR</td>
+<td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
 <td align="left"><a href="delete-a-flight-submission.md">Eliminación de un envío de paquetes piloto</a></td>
 </tr>
@@ -81,18 +81,18 @@ Para crear un envío de un paquete piloto, sigue este proceso.
 
 1. Si todavía no lo ha hecho, complete los requisitos previos descritos en [creación y administración de envíos con Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md), incluida la Asociación de una aplicación Azure ad con la cuenta del centro de Partners y la obtención del identificador de cliente y la clave. Solo tienes que hacerlo una vez; cuando tengas el identificador y la clave de cliente, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.  
 
-2. [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+2. [Obtener un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
 
 3. [Crea un envío de paquete piloto](create-a-flight-submission.md) ejecutando el siguiente método en la API de envío de Microsoft Store. Este método crea un nuevo envío en curso, que es una copia de tu último envío publicado.
 
     ```json
-    POST https://manage.devcenter.microsoft.com/v1.0/my/applications{applicationId}/flights/{flightId}/submissions
+    POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions
     ```
 
     El cuerpo de la respuesta contiene un recurso [envío de piloto](#flight-submission-object) que incluye el identificador del nuevo envío, el URI de firma de acceso compartido (SAS) para cargar paquetes para el envío a Azure Blob Storage y los datos del nuevo envío (incluidas todas las listas y la información sobre precios).
 
     > [!NOTE]
-    > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure BLOB Storage, consulte firmas de acceso [Shared, parte 1: Descripción del modelo SAS @ no__t-0 y las firmas de acceso [Shared, parte 2: Cree y use una SAS con almacenamiento de blobs @ no__t-0.
+    > Un URI de SAS proporciona acceso a un recurso seguro en el almacenamiento de Azure sin necesidad de claves de cuenta. Para obtener información general sobre los URI de SAS y su uso con Azure Blob Storage, consulta [Shared Access Signatures, Part 1: Understanding the SAS model (Firmas de acceso compartido, parte 1: información sobre el modelo SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) y [Firmas de acceso compartido, Parte 2: Creación y uso de una SAS con Almacenamiento de blobs](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
 
 4. Si estás agregando nuevos paquetes para el envío, [prepara los paquetes](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) y agrégalos a un archivo ZIP.
 
@@ -133,7 +133,7 @@ Para crear un envío de un paquete piloto, sigue este proceso.
 
     Para confirmar el estado del envío, revisa el valor de *status* en el cuerpo de la respuesta. Este valor debe cambiar de **CommitStarted** a **PreProcessing** si la solicitud se realiza correctamente o a **CommitFailed** si hay errores en la solicitud. Si hay errores, el campo *statusDetails* contendrá más detalles sobre el error.
 
-7. Después de completarse correctamente la confirmación, el envío se remite a la Tienda para su ingesta. Puede seguir supervisando el progreso del envío con el método anterior o visitando el centro de Partners.
+7. Después de completarse correctamente la confirmación, el envío se remite a la Store para su ingesta. Puede seguir supervisando el progreso del envío con el método anterior o visitando el centro de Partners.
 
 <span/>
 
@@ -185,17 +185,17 @@ Después de habilitar un lanzamiento de paquete gradual para un envío de paquet
 <td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">Obtención de la información de implementación gradual para un envío de paquetes piloto</a></td>
 </tr>
 <tr>
-<td align="left">EXPONER</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
 <td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">Actualización del porcentaje de lanzamiento gradual para un envío de paquetes piloto</a></td>
 </tr>
 <tr>
-<td align="left">EXPONER</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout</td>
 <td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">Detener la implementación gradual para un envío de paquetes piloto</a></td>
 </tr>
 <tr>
-<td align="left">EXPONER</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout</td>
 <td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">Finalización de la implementación gradual para un envío de paquetes piloto</a></td>
 </tr>
@@ -255,18 +255,18 @@ Este recurso describe un envío de paquete piloto.
 
 Este recurso tiene los siguientes valores.
 
-| Valor      | Tipo   | Descripción              |
+| Valor      | Escribe   | Descripción              |
 |------------|--------|------------------------------|
-| id            | string  | Identificador del envío.  |
-| flightId           | string  |  Identificador del paquete piloto al que está asociado el envío.  |  
-| status           | string  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Publicación</li><li>ReleaseFailed</li></ul>   |
+| id            | cadena  | Identificador del envío.  |
+| flightId           | cadena  |  Identificador del paquete piloto al que está asociado el envío.  |  
+| status           | cadena  | Estado del envío. Este puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Lanzamiento</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores.  |
-| flightPackages           | array  | Contiene [recursos de paquete piloto](#flight-package-object) que proporcionan detalles acerca de cada paquete del envío.   |
+| flightPackages           | matriz  | Contiene [recursos de paquete piloto](#flight-package-object) que proporcionan detalles acerca de cada paquete del envío.   |
 | packageDeliveryOptions    | object  | Un [recurso de opciones de entrega de paquete](#package-delivery-options-object) que contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria para el envío.   |
-| fileUploadUrl           | string  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes para el envío, carga el archivo ZIP que contiene los paquetes en este URI. Para obtener más información, consulta [Crear un envío de paquete piloto](#create-a-package-flight-submission).  |
-| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
-| notesForCertification           | string  |  Proporciona información adicional de los evaluadores de certificación como, por ejemplo, las credenciales de la cuenta de prueba y los pasos para obtener acceso y comprobar las características. Para obtener más información, consulta [Notas para la certificación](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification). |
+| fileUploadUrl           | cadena  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes para el envío, carga el archivo ZIP que contiene los paquetes en este URI. Para obtener más información, consulta [Crear un envío de paquete piloto](#create-a-package-flight-submission).  |
+| targetPublishMode           | cadena  | Modo de publicación del envío. Este puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | cadena  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
+| notesForCertification           | cadena  |  Proporciona información adicional de los evaluadores de certificación como, por ejemplo, las credenciales de la cuenta de prueba y los pasos para obtener acceso y comprobar las características. Para obtener más información, consulta [Notas para la certificación](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification). |
 
 <span id="status-details-object" />
 
@@ -274,7 +274,7 @@ Este recurso tiene los siguientes valores.
 
 Este recurso contiene detalles adicionales sobre el estado de un envío. Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción                   |
+| Valor           | Escribe    | Descripción                   |
 |-----------------|---------|------|
 |  errors               |    object     |   Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de errores del envío.   |     
 |  warnings               |   object      | Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de advertencias del envío.     |
@@ -287,10 +287,10 @@ Este recurso contiene detalles adicionales sobre el estado de un envío. Este re
 
 Este recurso contiene información adicional acerca de las advertencias o los errores relacionados de un envío. Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción       |
+| Valor           | Escribe    | Descripción       |
 |-----------------|---------|------|
-|  code               |    string     |   Un [código de estado de envío](#submission-status-code) que describe el tipo de error o advertencia. |  
-|  detalles               |     string    |  Mensaje con más detalles sobre el problema.     |
+|  code               |    cadena     |   Un [código de estado de envío](#submission-status-code) que describe el tipo de error o advertencia. |  
+|  details               |     cadena    |  Mensaje con más detalles sobre el problema.     |
 
 
 <span id="certification-report-object" />
@@ -299,10 +299,10 @@ Este recurso contiene información adicional acerca de las advertencias o los er
 
 Este recurso proporciona acceso a los datos del informe de certificación de un envío. Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción         |
+| Valor           | Escribe    | Descripción         |
 |-----------------|---------|------|
-|     date            |    string     |  Fecha y hora en que se generó el informe, en formato ISO 8601.    |
-|     reportUrl            |    string     |  Dirección URL en la que puedes obtener acceso al informe.    |
+|     date            |    cadena     |  Fecha y hora en que se generó el informe, en formato ISO 8601.    |
+|     reportUrl            |    cadena     |  Dirección URL en la que puedes obtener acceso al informe.    |
 
 
 <span id="flight-package-object" />
@@ -333,17 +333,17 @@ Este recurso tiene los siguientes valores.
 > [!NOTE]
 > Al llamar al método para [actualizar un envío de paquete piloto](update-a-flight-submission.md), solo los valores *fileName*, *fileStatus*, *minimumDirectXVersion* y *minimumSystemRam* de este objeto son necesarios en el cuerpo de la solicitud. Los demás valores se rellenan con el centro de Partners.
 
-| Valor           | Tipo    | Descripción              |
+| Valor           | Escribe    | Descripción              |
 |-----------------|---------|------|
-| fileName   |   string      |  Nombre del paquete.    |  
-| fileStatus    | string    |  Estado del paquete. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  string   |  Id. que identifica de manera exclusiva el paquete. Este valor lo utiliza el centro de Partners.   |     
-| version    |  string   |  Versión del paquete de aplicación. Para obtener más información, consulta [Numeración de la versión del paquete](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
-| architecture    |  string   |  Arquitectura del paquete de aplicación (por ejemplo, ARM).   |     
-| languages    | array    |  Matriz de códigos de idioma para los idiomas que admite la aplicación. Para obtener más información, consulta [Idiomas admitidos](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  array   |  Matriz de funcionalidades necesarias para el paquete. Para obtener más información acerca de las funcionalidades, consulta [Declaraciones de funcionalidades de las aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
-| minimumDirectXVersion    |  string   |  Versión mínima de DirectX que admite el paquete de aplicación. Solo se puede establecer para las aplicaciones diseñadas para Windows 8.x; se omite para las aplicaciones diseñadas para otras versiones. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
-| minimumSystemRam    | string    |  RAM mínima que requiere el paquete de aplicación. Solo se puede establecer para las aplicaciones diseñadas para Windows 8.x; se omite para las aplicaciones diseñadas para otras versiones. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Memory2GB</li></ul>   |    
+| fileName   |   cadena      |  El nombre del paquete.    |  
+| fileStatus    | cadena    |  Estado del paquete. Este puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
+| id    |  cadena   |  Id. que identifica de manera exclusiva el paquete. Este valor lo utiliza el centro de Partners.   |     
+| versión    |  cadena   |  Versión del paquete de aplicación. Para obtener más información, consulta [Numeración de la versión del paquete](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
+| architecture    |  cadena   |  Arquitectura del paquete de aplicación (por ejemplo, ARM).   |     
+| languages    | matriz    |  Matriz de códigos de idioma para los idiomas que admite la aplicación. Para obtener más información, consulta [Idiomas admitidos](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
+| capabilities    |  matriz   |  Matriz de funcionalidades necesarias para el paquete. Para obtener más información acerca de las funcionalidades, consulta [Declaraciones de funcionalidades de las aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
+| minimumDirectXVersion    |  cadena   |  Versión mínima de DirectX que admite el paquete de aplicación. Solo se puede establecer para las aplicaciones diseñadas para Windows 8.x; se omite para las aplicaciones diseñadas para otras versiones. Este puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
+| minimumSystemRam    | cadena    |  RAM mínima que requiere el paquete de aplicación. Solo se puede establecer para las aplicaciones diseñadas para Windows 8.x; se omite para las aplicaciones diseñadas para otras versiones. Este puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Memory2GB</li></ul>   |    
 
 
 <span id="package-delivery-options-object" />
@@ -369,10 +369,10 @@ Este recurso contiene ajustes de lanzamiento de paquete gradual y de actualizaci
 
 Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción        |
+| Valor           | Escribe    | Descripción        |
 |-----------------|---------|------|
 | packageRollout   |   object      |   Un [recurso de lanzamiento de paquete](#package-rollout-object) que contiene la configuración del lanzamiento de paquete gradual para el envío.    |  
-| isMandatoryUpdate    | booleano    |  Indica si vas a tratar los paquetes de este envío como obligatorios para la instalación automática de actualizaciones de la aplicación. Para obtener más información sobre los paquetes obligatorios para la instalación automática de actualizaciones de la aplicación, consulta [Descargar e instalar actualizaciones de paquete para tu aplicación](../packaging/self-install-package-updates.md).    |  
+| isMandatoryUpdate    | boolean    |  Indica si vas a tratar los paquetes de este envío como obligatorios para la instalación automática de actualizaciones de la aplicación. Para obtener más información sobre los paquetes obligatorios para la instalación automática de actualizaciones de la aplicación, consulta [Descargar e instalar actualizaciones de paquete para tu aplicación](../packaging/self-install-package-updates.md).    |  
 | mandatoryUpdateEffectiveDate    |  date   |  La fecha y la hora en que los paquetes de este envío se convierten en obligatorios, en formato ISO 8601 y zona horaria UTC.   |        
 
 <span id="package-rollout-object" />
@@ -381,12 +381,12 @@ Este recurso tiene los siguientes valores.
 
 Este recurso contiene la [configuración de lanzamiento de paquete](#manage-gradual-package-rollout) gradual para el envío. Este recurso tiene los siguientes valores.
 
-| Valor           | Tipo    | Descripción        |
+| Valor           | Escribe    | Descripción        |
 |-----------------|---------|------|
-| isPackageRollout   |   booleano      |  Indica si el lanzamiento de paquete gradual está habilitado para el envío.    |  
+| isPackageRollout   |   boolean      |  Indica si el lanzamiento de paquete gradual está habilitado para el envío.    |  
 | packageRolloutPercentage    | flotante    |  El porcentaje de usuarios que recibirá los paquetes en el lanzamiento gradual.    |  
-| packageRolloutStatus    |  string   |  Una de las siguientes cadenas, que indica el estado del lanzamiento de paquete gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
-| fallbackSubmissionId    |  string   |  El identificador del envío que recibirán los clientes que no obtengan los paquetes de lanzamiento gradual.   |          
+| packageRolloutStatus    |  cadena   |  Una de las siguientes cadenas, que indica el estado del lanzamiento de paquete gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
+| fallbackSubmissionId    |  cadena   |  El id. del envío que recibirán los clientes que no obtengan los paquetes de lanzamiento gradual.   |          
 
 > [!NOTE]
 > Los valores *packageRolloutStatus* y *fallbackSubmissionId* se asignan por el centro de Partners y no están diseñados para que los establezca el desarrollador. Si incluyes estos valores en el cuerpo de una solicitud, se ignorarán.

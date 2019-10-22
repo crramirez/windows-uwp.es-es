@@ -8,18 +8,18 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3958d69dc3142702eb2d2a41d6dba5ebeb9fa8ce
-ms.sourcegitcommit: 2fa2d2236870eaabc95941a95fd4e358d3668c0c
+ms.openlocfilehash: 0eb7ef49d0ce1876635dc36e84f43432c13e1791
+ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70076378"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690367"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Almacenar y recuperar la configuración y otros datos de aplicación
 
 Los datos de la *aplicación* son datos mutables creados y administrados por una aplicación específica. Incluye el estado de tiempo de ejecución, la configuración de la aplicación, las preferencias del usuario, el contenido de referencia (como las definiciones de diccionario en una aplicación de diccionario) y otros valores de configuración. Los datos de la aplicación son diferentes de los *datos de usuario*, los datos que el usuario crea y administra al usar una aplicación. Entre los datos de usuario se incluyen archivos multimedia o documentos, correos electrónicos o transcripciones de comunicaciones, o registros de bases de datos que contienen contenido creado por el usuario. Los datos de usuario pueden ser útiles o significativos a más de una aplicación. Con frecuencia, se trata de datos que el usuario quiere manipular o transmitir como entidad independiente de la propia aplicación (como, por ejemplo, un documento).
 
-**Nota importante acerca de los datos de la aplicación:** La duración de los datos de la aplicación está vinculada a la de la aplicación. Si una aplicación se quita, todos sus datos se perderán en consecuencia. No uses datos de la aplicación para almacenar datos del usuario o cualquier elemento que se considere valioso o irreemplazable. Recomendamos almacenar este tipo de información en las bibliotecas del usuario o en Microsoft OneDrive. Los datos de la aplicación son perfectos para almacenar la configuración, las preferencias de usuario específicas de la aplicación y los favoritos.
+**Nota importante sobre los datos de la aplicación:** La duración de los datos de la aplicación está vinculada a la duración de la aplicación. Si una aplicación se quita, todos sus datos se perderán en consecuencia. No uses datos de la aplicación para almacenar datos del usuario o cualquier elemento que se considere valioso o irreemplazable. Recomendamos almacenar este tipo de información en las bibliotecas del usuario o en Microsoft OneDrive. Los datos de la aplicación son perfectos para almacenar la configuración, las preferencias de usuario específicas de la aplicación y los favoritos.
 
 ## <a name="types-of-app-data"></a>Tipos de datos de aplicación
 
@@ -33,10 +33,11 @@ Estos son los tipos de datos que puedes usar para la configuración de la aplica
 
 - **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
 - **Booleano**
-- **Char16**, **Cadena**
-- [**DateTime**](https://docs.microsoft.com/uwp/api/Windows.Foundation.DateTime), [ **TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan)
+- **Char16**, **String**
+- [**DateTime**](/uwp/api/Windows.Foundation.DateTime), [ **TimeSpan**](/uwp/api/Windows.Foundation.TimeSpan)
+    - Para C#/.net, use: [**System. DateTimeOffset**](/dotnet/api/system.datetimeoffset?view=dotnet-uwp-10.0), [**System. TimeSpan.** ](/dotnet/api/system.timespan?view=dotnet-uwp-10.0)
 - **GUID**, [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size), [**Rect**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect)
-- [**ApplicationDataCompositeValue**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue): Conjunto de opciones de configuración de aplicaciones relacionadas que se deben serializar y deserializar de forma atómica. Usa configuraciones compuestas para procesar fácilmente las actualizaciones atómicas de configuraciones interdependientes. El sistema se encarga de garantizar la integridad de las configuraciones compuestas durante el acceso simultáneo y la itinerancia. Las configuraciones compuestas se optimizan para pequeñas cantidades de datos, y el rendimiento puede ser deficiente si se usan para grandes conjuntos de datos.
+- [**ApplicationDataCompositeValue**](/uwp/api/Windows.Storage.ApplicationDataCompositeValue): un conjunto de opciones de configuración de aplicaciones relacionadas que se deben serializar y deserializar de forma atómica. Usa configuraciones compuestas para procesar fácilmente las actualizaciones atómicas de configuraciones interdependientes. El sistema se encarga de garantizar la integridad de las configuraciones compuestas durante el acceso simultáneo y la itinerancia. Las configuraciones compuestas se optimizan para pequeñas cantidades de datos, y el rendimiento puede ser deficiente si se usan para grandes conjuntos de datos.
 
 ### <a name="files"></a>Archivos
 
@@ -172,7 +173,7 @@ Los datos móviles de una aplicación están disponibles en la nube siempre que 
 
 ### <a name="roaming-pre-requisites"></a>Requisitos previos para el uso de los datos móviles
 
-Todos los usuarios pueden beneficiarse de los datos de las aplicaciones de itinerancia si usan una cuenta de Microsoft para iniciar sesión en su dispositivo. Sin embargo, tanto los usuarios como los administradores de directivas de grupo pueden desactivar los datos móviles de aplicaciones de un dispositivo en cualquier momento. Si un usuario decide no usar una cuenta de Microsoft o deshabilita las capacidades de datos móviles, podrá seguir usando la aplicación, pero los datos de la aplicación serán locales para cada dispositivo.
+Todos los usuarios pueden beneficiarse de los datos de las aplicaciones de itinerancia si usan una cuenta Microsoft para iniciar sesión en su dispositivo. Sin embargo, tanto los usuarios como los administradores de directivas de grupo pueden desactivar los datos móviles de aplicaciones de un dispositivo en cualquier momento. Si un usuario decide no usar una cuenta de Microsoft o deshabilita las capacidades de datos móviles, podrá seguir usando la aplicación, pero los datos de la aplicación serán locales para cada dispositivo.
 
 Los datos almacenados en [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault) solo se transferirán si un usuario ha marcado el dispositivo como "de confianza". Si un dispositivo no es de confianza, los datos guardados en este almacén no se transferirán.
 
@@ -365,7 +366,7 @@ async void ReadTimestamp()
 ## <a name="organize-app-data-with-containers"></a>Organizar los datos de aplicación con contenedores
 
 
-Para que tengas tus archivos y la configuración de datos de la aplicación organizados, crea contenedores (representados por objetos [**ApplicationDataContainer**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataContainer)) en lugar de trabajar directamente con directorios. Puedes agregar contenedores a los almacenes de datos de aplicaciones locales, de itinerancia y temporales. Los contenedores se pueden anidar hasta en 32 niveles de profundidad.
+Para ayudar a organizar tus archivos y configuración de datos de la aplicación, crea contenedores (representados por objetos [**ApplicationDataContainer**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataContainer)) en lugar de trabajar directamente con directorios. Puedes agregar contenedores a los almacenes de datos de aplicaciones locales, de itinerancia y temporales. Los contenedores se pueden anidar hasta en 32 niveles de profundidad.
 
 Para crear un contenedor de configuraciones, llama al método [**ApplicationDataContainer.CreateContainer**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer.createcontainer). En este ejemplo se crea un contenedor de configuraciones local denominado `exampleContainer` y se agrega una configuración llamada `exampleSetting`. El valor **Siempre** de la enumeración [**ApplicationDataCreateDisposition**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCreateDisposition) indica que el contenedor se crea si no existe ya.
 
@@ -430,7 +431,7 @@ localSettings.DeleteContainer("exampleContainer");
 ## <a name="versioning-your-app-data"></a>Control de versiones de los datos de aplicación
 
 
-Opcionalmente, puedes crear versiones de los datos de aplicación para la aplicación. Esto te permitiría crear una versión futura de la aplicación que cambie el formato de sus datos de aplicación sin provocar problemas de compatibilidad con la versión anterior de la aplicación. La aplicación comprueba la versión de los datos de la aplicación en el almacén de datos y, si la versión es anterior a la que la aplicación espera, la aplicación debe actualizar los datos de la aplicación al nuevo formato y actualizar la versión. Para obtener más información, consulta la propiedad [**Application.Version**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.version) y el método [**ApplicationData.SetVersionAsync**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.setversionasync).
+Opcionalmente, puedes crear versiones de los datos de aplicación para la aplicación. Esto te permitiría crear una versión futura de la aplicación que cambie el formato de sus datos de aplicación sin provocar problemas de compatibilidad con la versión anterior de la aplicación. La aplicación comprueba la versión de los datos de la aplicación en el almacén de datos y, si la versión es anterior a la que la aplicación espera, la aplicación debe actualizar los datos de la aplicación al nuevo formato y actualizar la versión. Para más información, consulta la propiedad [**Application.Version**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.version) y el método [**ApplicationData.SetVersionAsync**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.setversionasync).
 
 ## <a name="related-articles"></a>Artículos relacionados
 
