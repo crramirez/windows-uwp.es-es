@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eeb56dce1984afd67e7a44bbfce1453a1d9f531a
-ms.sourcegitcommit: 3360db6bc975516e01913d3d73599c964a411052
+ms.openlocfilehash: a25797f50ee76542b8f9543cb76453d2916368ac
+ms.sourcegitcommit: 82d202478ab4d3011c5ddd2e852958c34336830d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70296995"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72715859"
 ---
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
-**Nota:**   para obtener información general sobre el uso del enlace de datos en la aplicación con **{x:Bind}** (y para una comparación completa entre **{x:Bind}** y **{Binding}** ), consulte [enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
+**Nota**  For información general sobre el uso del enlace de datos en la aplicación con **{x:Bind}** (y para una comparación completa entre **{x:Bind}** y **{Binding}** ), consulte [enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
 
 La extensión de marcado **{x:Bind}** , nueva para Windows 10, es una alternativa a **{Binding}** . **{x:Bind}** se ejecuta en menos tiempo y menos memoria que **{Binding}** y admite una mejor depuración.
 
@@ -50,7 +50,7 @@ Los objetos de enlace creados por **{x: enlace}** y **{Binding}** son prácticam
 |------|-------------|
 | _propertyPath_ | Una cadena que especifica la ruta de acceso de la propiedad para el enlace. Para obtener más información, consulta la sección [Ruta de acceso de propiedades](#property-path) que aparece más adelante. |
 | _bindingProperties_ |
-| =_valor_ de propName, valorde=propName\[\]* | Una o más propiedades de enlace que se especifican con una sintaxis de par de nombre-valor. |
+| _propname_ =_valor_ \[, _propName_ =_valor_ \] * | Una o más propiedades de enlace que se especifican con una sintaxis de par de nombre-valor. |
 | _propName_ | El nombre de cadena de la propiedad que se establecerá en el objeto Binding. Por ejemplo, "Converter". |
 | _value_ | El valor en el que se establecerá la propiedad. La sintaxis del argumento depende de la propiedad que se establece. A continuación, se muestra un ejemplo de uso de _propName_=_value_ en el que el valor es en sí mismo una extensión de marcado: `Converter={StaticResource myConverterClass}`. Para obtener más información, consulta la sección [Propiedades que se pueden establecer con {x: enlace}](#properties-that-you-can-set-with-xbind) que se incluye más adelante. |
 
@@ -83,31 +83,31 @@ En este XAML de ejemplo se usa **{x:Bind}** con una propiedad **ListView.ItemTem
 
 Por ejemplo: en una página, **Text="{x:Bind Employee.FirstName}"** buscará un miembro **Employee** de la página y, a continuación, un miembro **FirstName** en el objeto devuelto por **Employee**. Si estás enlazando un control de elemento a una propiedad que contiene las personas a cargo del empleado, la ruta de acceso de la propiedad podría ser "Employee.Dependents" y la plantilla del elemento del control de elementos se ocuparía de mostrar los elementos en "Dependents".
 
-En el caso de C++/CX, **{x:Bind}** no se puede enlazar a propiedades y campos privados en el modelo de datos o página: debes tener una propiedad pública para que se pueda enlazar. El área de superficie del enlace se debe exponer como clases o interfaces de CX para que podamos obtener los metadatos relevantes. No debe ser necesario el **\[atributo enlazable\]** .
+En el caso de C++/CX, **{x:Bind}** no se puede enlazar a propiedades y campos privados en el modelo de datos o página: debes tener una propiedad pública para que se pueda enlazar. El área de superficie del enlace se debe exponer como clases o interfaces de CX para que podamos obtener los metadatos relevantes. No es necesario el atributo **\] de \[Bindable** .
 
 Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. En su lugar, puede usar el nombre del elemento como la primera parte de la ruta de acceso para el enlace, ya que los elementos con nombre se convierten en campos dentro de la página o control de usuario que representa el origen de enlace raíz. 
 
 
 ### <a name="collections"></a>Colecciones
 
-Si el origen de datos es una colección, una ruta de acceso de propiedad puede especificar los elementos de la colección por su posición o índice. Por ejemplo, "equipos\[0\]. Reproductores ", donde el\[literal"\]"incluye el" 0 "que solicita el primer elemento de una colección con índice cero.
+Si el origen de datos es una colección, una ruta de acceso de propiedad puede especificar los elementos de la colección por su posición o índice. Por ejemplo, "Teams \[0 \]. Players", donde el literal "\[ \]" incluye el "0" que solicita el primer elemento en una colección con índice cero.
 
-Para usar un indexador, el modelo debe implementar **IList&lt;T&gt;** o **IVector&lt;T&gt;** en el tipo de la propiedad que se va a indexar. (Tenga en cuenta&lt;que&gt; IReadOnlyList t&lt;y&gt; IVectorView t no admiten la sintaxis del indexador). Si el tipo de la propiedad indexada admite **INotifyCollectionChanged** o **IObservableVector** y el enlace es OneWay o TwoWay, registrará y escuchará notificaciones de cambio en esas interfaces. La lógica de detección de cambios se actualizará en función de todos los cambios de colección, incluso aunque no afecten al valor indizado específico. Esto es porque la lógica de escucha es común en todas las instancias de la colección.
+Para usar un indexador, el modelo debe implementar **IList&lt;T&gt;** o **IVector&lt;T&gt;** en el tipo de la propiedad que se va a indexar. (Tenga en cuenta que IReadOnlyList &lt;T &gt; y IVectorView &lt;T &gt; no admiten la sintaxis del indexador). Si el tipo de la propiedad indizada admite **INotifyCollectionChanged** o **IObservableVector** y el enlace es OneWay o TwoWay, se registrará y escuchará las notificaciones de cambio en esas interfaces. La lógica de detección de cambios se actualizará en función de todos los cambios de colección, incluso aunque no afecten al valor indizado específico. Esto es porque la lógica de escucha es común en todas las instancias de la colección.
 
-Si el origen de datos es un diccionario o un mapa, una ruta de acceso de propiedad puede especificar los elementos de la colección según el nombre de la cadena. Por ejemplo  **&lt;, TextBlock Text = "{x:Bind\[Players ' John\]Smith '&gt; "/** buscará un elemento en el Diccionario denominado "John Smith". Ten en cuenta que el nombre debe estar entrecomillado y que puedes usar comillas simples o dobles. Asimismo, puedes usar el acento circunflejo (^) para evitar las comillas de las cadenas. De todos modos, suele ser más fácil usar comillas alternativas a aquellas que se usan en el atributo XAML. (Tenga en cuenta&lt;que&gt; IReadOnlyDictionary t&lt;y&gt; IMapView t no admiten la sintaxis del indexador).
+Si el origen de datos es un diccionario o un mapa, una ruta de acceso de propiedad puede especificar los elementos de la colección según el nombre de la cadena. Por ejemplo **&lt;TextBlock Text = "{x:Bind Reproductores \[ ' John Smith ' \] '/&gt;** buscará un elemento en el Diccionario denominado" John Smith ". Ten en cuenta que el nombre debe estar entrecomillado y que puedes usar comillas simples o dobles. Asimismo, puedes usar el acento circunflejo (^) para evitar las comillas de las cadenas. De todos modos, suele ser más fácil usar comillas alternativas a aquellas que se usan en el atributo XAML. (Tenga en cuenta que IReadOnlyDictionary &lt;T &gt; y IMapView &lt;T &gt; no admiten la sintaxis del indexador).
 
 Para usar un indexador de cadenas, el modelo debe implementar**IDictionary&lt;string, T&gt;** o **IMap&lt;string, T&gt;** en el tipo de la propiedad que se va a indexar. Si el tipo de propiedad indexada admite **IObservableMap** y el enlace es OneWay o TwoWay, registrará y escuchará notificaciones de cambio en esas interfaces. La lógica de detección de cambios se actualizará en función de todos los cambios de colección, incluso aunque no afecten al valor indizado específico. Esto es porque la lógica de escucha es común en todas las instancias de la colección.
 
-### <a name="attached-properties"></a>Propiedades asociadas
+### <a name="attached-properties"></a>Propiedades adjuntas
 
 Para enlazar a [las propiedades adjuntas](./attached-properties-overview.md), debe colocar el nombre de la clase y la propiedad entre paréntesis después del punto. Por ejemplo, **Text="{x:Bind Button22.(Grid.Row)}"** . Si la propiedad no está declarada en un espacio de nombres XAML, necesitarás agregar un prefijo al espacio de nombres XML, que debes asignar a un espacio de nombres de código al principio del documento.
 
 ### <a name="casting"></a>Conversión
 
 El establecimiento de tipos de los enlaces compilados es inflexible y resuelve el tipo de cada paso en una ruta de acceso. Si el tipo devuelto no incluye el miembro, se producirá un error durante la compilación. Puedes especificar una conversión para indicar el tipo real del objeto al enlace. En el siguiente caso, **obj** es una propiedad del objeto de tipo, pero contiene un cuadro de texto, por lo que podemos usar **Text="{x:Bind ((TextBox)obj).Text}"** o **Text="{x:Bind obj.(TextBox.Text)}"** .
-El campo **groups3** en **Text = "{x:BIND ((Data: SampleDataGroup) groups3\[0\]). Title} "** es un diccionario de objetos, por lo que debe convertirlo en **Data: SampleDataGroup**. Recuerda que puedes usar el prefijo del espacio de nombres XML **data:** para asignar el tipo de objeto a un espacio de nombres de código que no forme parte del espacio de nombres XAML predeterminado.
+El campo **groups3** de **Text = "{x:BIND ((Data: SampleDataGroup) groups3 \[0 \]). Title} "** es un diccionario de objetos, por lo que debe convertirlo en **Data: SampleDataGroup**. Recuerda que puedes usar el prefijo del espacio de nombres XML **data:** para asignar el tipo de objeto a un espacio de nombres de código que no forme parte del espacio de nombres XAML predeterminado.
 
-_Nota: La C#sintaxis de conversión de estilo es más flexible que la sintaxis de la propiedad adjunta y es la sintaxis recomendada en el futuro._
+_Nota: la C#sintaxis de conversión de estilo es más flexible que la sintaxis de la propiedad adjunta y es la sintaxis recomendada en el futuro._
 
 ## <a name="functions-in-binding-paths"></a>Funciones en rutas de acceso de enlace
 
@@ -115,7 +115,7 @@ A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una f
 
 ## <a name="event-binding"></a>Enlace de eventos
 
-El enlace de eventos es una característica única del enlace compilado. Te permite especificar el controlador de un evento mediante un enlace, en lugar de tener que especificar un método en el código subyacente. Por ejemplo: **Haga clic en = "{X:Bind rootFrame. GoForward}"** .
+El enlace de eventos es una característica única del enlace compilado. Te permite especificar el controlador de un evento mediante un enlace, en lugar de tener que especificar un método en el código subyacente. Por ejemplo: **Click="{x:Bind rootFrame.GoForward}"** .
 
 Para los eventos, el método de destino no debe estar sobrecargado y también debe:
 
@@ -129,28 +129,27 @@ Para obtener más información sobre la sintaxis de cadena de una ruta de acceso
 
 ## <a name="properties-that-you-can-set-with-xbind"></a>Propiedades que se pueden establecer con {x: enlace}
 
-**{x:Bind}** se explica a través de la sintaxis de marcadores de posición *bindingProperties* porque hay muchas propiedades de lectura y escritura que se pueden establecer en la extensión de marcado. Las propiedades pueden establecerse en cualquier orden con pares separados por comas *propName*=*value*. Ten en cuenta que no puedes incluir saltos de línea en la expresión de enlace. Algunas de las propiedades requieren tipos que no tienen una conversión de tipos, por lo que requieren sus propias extensiones de marcado anidadas dentro de **{x:Bind}** .
+**{x:Bind}** se explica a través de la sintaxis de marcadores de posición *bindingProperties*, ya que hay muchas propiedades de lectura y escritura que se pueden establecer en la extensión de marcado. Las propiedades pueden establecerse en cualquier orden con pares separados por comas *propName*=*value*. Ten en cuenta que no puedes incluir saltos de línea en la expresión de enlace. Algunas de las propiedades requieren tipos que no tienen una conversión de tipos, por lo que requieren sus propias extensiones de marcado anidadas dentro de **{x:Bind}** .
 
 Estas propiedades funcionan de forma muy parecida a como lo hacen las propiedades de la clase [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding).
 
-| Property | Descripción |
+| Propiedad | Descripción |
 |----------|-------------|
-| **Camino** | Consulta la sección [Ruta de acceso de propiedades](#property-path) anteriormente. |
+| **Camino** | Consulta la sección [Ruta de acceso de propiedades](#property-path) anterior. |
 | **Convertidor** | Especifica el objeto convertidor que llama el motor de enlace. El convertidor puede establecerse en XAML, pero solo si se hace referencia a una instancia de objeto que hayas asignado en una referencia de [extensión de marcado {StaticResource}](staticresource-markup-extension.md) a ese objeto en el diccionario de recursos. |
-| **ConverterLanguage** | Especifica la referencia cultural que usará el convertidor. (Si está estableciendo **ConverterLanguage** , también debe establecer el **convertidor**). La referencia cultural se establece como un identificador basado en estándares. Para obtener más información, consulta [**ConverterLanguage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage). |
-| **ConverterParameter** | Especifica el parámetro del convertidor que se puede usar en la lógica del convertidor. (Si está estableciendo **ConverterParameter** , también debe establecer el **convertidor**). La mayoría de los convertidores usan una lógica simple que obtiene toda la información que necesitan del valor que se pasa a convertir y no necesita un valor de **ConverterParameter** . El parámetro **ConverterParameter** es para las implementaciones de convertidor moderadamente avanzado con más de una lógica que controla lo que se pasa en **ConverterParameter**. Puedes escribir un convertidor que use valores que no sean cadenas, aunque no es lo habitual. Consulta las observaciones de [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter) para obtener más información. |
-| **FallbackValue** | Especifica un valor que se mostrará cuando no se pueda resolver el origen o la ruta de acceso. |
-| **Modo** | Especifica el modo de enlace, como una de estas cadenas: "OneTime", "OneWay" o "TwoWay". El valor predeterminado es "OneTime". Ten en cuenta que esto difiere del valor predeterminado de **{Binding}** , que es "OneWay" en la mayoría de los casos. |
-| **TargetNullValue** | Especifica el valor que se mostrará cuando se resuelva el valor de origen, pero es explícitamente **null**. |
+| **ConverterLanguage** | Especifica la referencia cultural que usará el convertidor. (Si estableces **ConverterLanguage**, también deberías establecer **Converter**). La cultura se establece como un identificador basado en estándares. Para obtener más información, consulta [**ConverterLanguage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage). |
+| **ConverterParameter** | Especifica el parámetro del convertidor que se puede usar en la lógica del convertidor. (Si estableces **ConverterParameter**, también deberías establecer **Converter**). La mayoría de convertidores usan una lógica simple que obtiene toda la información que necesitan del valor pasado para convertir, y no necesitan un valor **ConverterParameter**. El parámetro **ConverterParameter** es para las implementaciones de convertidor moderadamente avanzado con más de una lógica que controla lo que se pasa en **ConverterParameter**. Puedes escribir un convertidor que use valores que no sean cadenas, aunque no es lo habitual. Consulta las observaciones de [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter) para obtener más información. |
+| **FallbackValue** | Especifica un valor que se mostrará cuando no se puede resolver el origen o la ruta de acceso. |
+| **Modo** | Especifica el modo de enlace como una de las siguientes cadenas: "OneTime", "OneWay" o "TwoWay". El valor predeterminado es "OneTime". Ten en cuenta que esto difiere del valor predeterminado de **{Binding}** , que es "OneWay" en la mayoría de los casos. |
+| **TargetNullValue** | Especifica un valor que se mostrará cuando se resuelva el valor de origen, pero es explícitamente **null**. |
 | **BindBack** | Especifica una función que se usará en la dirección inversa de un enlace bidireccional. |
 | **UpdateSourceTrigger** | Especifica cuándo volver a insertar los cambios desde el control al modelo en los enlaces de TwoWay. El valor predeterminado para todas las propiedades excepto TextBox. Text es PropertyChanged; TextBox. Text es LostFocus.|
 
 > [!NOTE]
 > Si quieres convertir el marcado de **{Binding}** a **{x:Bind}** , debes tener en cuenta las diferencias en los valores predeterminados de la propiedad **Mode**.
- 
-> [**x:DefaultBindMode**](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute) puede usarse para cambiar el modo predeterminado para x: Bind para un segmento específico del árbol de marcado. El modo seleccionado aplicará las expresiones de x:Bind en ese elemento y sus elementos secundarios, que no especifican explícitamente un modo como parte del enlace. OneTime tiene un mejor rendimiento que OneWay ya que utilizar OneWay hará que se genere más código para el enlace y gestión de la detección de cambios.
+> [**x:DefaultBindMode**](https://docs.microsoft.com/windows/uwp/xaml-platform/x-defaultbindmode-attribute) se puede usar para cambiar el modo predeterminado para x:BIND para un segmento específico del árbol de marcado. El modo seleccionado aplicará las expresiones de x:Bind en ese elemento y sus elementos secundarios, que no especifican explícitamente un modo como parte del enlace. OneTime tiene un mejor rendimiento que OneWay ya que utilizar OneWay hará que se genere más código para el enlace y gestión de la detección de cambios.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Dado que **{x:Bind}** usa código generado para lograr sus ventajas, necesita la información de tipo en el momento de compilación. Esto significa que no puedes enlazar a propiedades de las que no conoces el tipo antes de tiempo. Por este motivo, no puedes usar **{x:Bind}** con la propiedad **DataContext**, que es de tipo **Object** y también está sujeta a cambios en el tiempo de ejecución.
 
@@ -165,9 +164,9 @@ Las páginas y los controles de usuario que incluyen enlaces de tipo Compiled, t
 - **StopTracking()** : este método desconectará todos los agentes de escucha creados para los enlaces tanto unidireccionales como bidireccionales. Recuerda que puedes volver a inicializarlos mediante el método Update().
 
 > [!NOTE]
-> A partir de la versión 1607 de Windows 10, el marco XAML proporciona un valor booleano integrado para el convertidor Visibility. El convertidor asigna **true** al valor de la enumeración **Visible** y **false** a **Collapsed**, para que puedas enlazar una propiedad Visibility a un valor booleano sin necesidad de crear un convertidor. Ten en cuenta que esta no es una característica de enlace de función, solo enlace de propiedad. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Version adaptive code (Código adaptativo para versiones)](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> A partir de la versión 1607 de Windows 10, el marco XAML proporciona un valor booleano integrado para el convertidor Visibility. El convertidor asigna **true** al valor de la enumeración **Visible** y **false** a **Collapsed**, para que puedas enlazar una propiedad Visibility a un valor booleano sin necesidad de crear un convertidor. Ten en cuenta que esta no es una característica de enlace de función, solo enlace de propiedad. Para usar el convertidor integrado, la versión mínima del SDK de destino de la aplicación debe ser 14393 o posterior. No puedes usarlo si la aplicación está destinada a versiones anteriores de Windows 10. Para obtener más información sobre las versiones de destino, consulta [Código adaptativo para versiones](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-Sugerencia   si tiene que especificar una sola llave para un valor, como en [**ruta de acceso**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) o [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter), debe ir precedida de una barra diagonal `\{`inversa:. Como alternativa, escribe la cadena completa que contiene las llaves que necesitan escape entre un conjunto de comillas secundario, por ejemplo, `ConverterParameter='{Mix}'`.
+**Sugerencia**   si tiene que especificar una sola llave para un valor, como en [**path**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.path) o [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter), debe ir precedida de una barra diagonal inversa: `\{`. Como alternativa, escribe la cadena completa que contiene las llaves que necesitan escape entre un conjunto de comillas secundario, por ejemplo, `ConverterParameter='{Mix}'`.
 
 [**Converter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converter), [**ConverterLanguage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage) y **ConverterLanguage** están relacionados con el escenario de conversión de un valor o tipo del origen de enlace en un tipo o valor que es compatible con la propiedad de destino de enlace. Para obtener más información y ejemplos, consulta la sección “Conversiones de datos” de [Enlaces de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
 
