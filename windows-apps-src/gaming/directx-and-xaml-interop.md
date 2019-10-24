@@ -6,28 +6,25 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, games, directx, interoperabilidad de xaml, xaml interop
 ms.localizationpriority: medium
-ms.openlocfilehash: ad03a86ba18f11d8d63c2c98649e7f159f3d4f52
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 174cb7f2608c1da89ebacc21e5032d03f7701f15
+ms.sourcegitcommit: 0179e2ccb59a14abc1676da0662e2def54af24ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321294"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796224"
 ---
 # <a name="directx-and-xaml-interop"></a>Interoperabilidad de DirectX y XAML
-
-
 
 Puedes usar el lenguaje XAML y Microsoft DirectX juntos en tu juego para la Plataforma universal de Windows (UWP). La combinación de XAML y DirectX te permite crear marcos de interfaz de usuario flexibles que interoperan con el contenido representado en DirectX; además, es especialmente útil para aplicaciones que hacen un uso intensivo de los elementos gráficos. En este tema explicamos la estructura de una aplicación para UWP que usa DirectX y enumeramos los tipos importantes que se deben usar al generar una aplicación para UWP de modo que funcione con DirectX.
 
 Si la aplicación se centra principalmente en la representación 2D, es aconsejable usar la biblioteca [Win2D](https://github.com/microsoft/win2d) de Windows Runtime. Esta biblioteca la mantiene Microsoft y se basa en las tecnologías básicas de Direct2D . Simplifica en gran medida el modelo de uso para implementar gráficos 2D e incluye abstracciones útiles para algunas de las técnicas descritas en este documento. Consulta la página del proyecto para obtener más detalles. Este documento ofrece orientación para aquellos desarrolladores de aplicaciones que decidan *no* utilizar Win2D.
 
-> **Tenga en cuenta**  DirectX APIs no están definidos como tipos en tiempo de ejecución de Windows, por lo que suele usar extensiones de componentes de Visual C++ (C++ / c++ / CX) para desarrollar componentes de XAML UWP que interoperan con DirectX. También puedes crear una aplicación para UWP con C# y XAML que use DirectX. Para ello, debes encapsular las llamadas a DirectX en un archivo de metadatos de Windows Runtime independiente.
-
- 
+> [!NOTE]
+> Las API de DirectX no se definen como tipos Windows Runtime, pero normalmente puede usar [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) para desarrollar componentes de UWP para XAML que interoperen con DirectX. También puedes crear una aplicación para UWP con C# y XAML que use DirectX. Para ello, debes encapsular las llamadas a DirectX en un archivo de metadatos de Windows Runtime independiente.
 
 ## <a name="xaml-and-directx"></a>XAML y DirectX
 
-DirectX proporciona dos bibliotecas eficaces para gráficos 2D y 3D: Direct2D y Direct3D de Microsoft. Aunque XAML proporciona compatibilidad con primitivas y efectos 2D, muchas aplicaciones (como las de modelado o los juegos) necesitan funcionalidades gráficas más complejas. En estas aplicaciones, puedes usar Direct2D y Direct3D para representar una parte, o la totalidad, de los elementos gráficos y emplear XAML para todo lo demás.
+DirectX proporciona dos bibliotecas muy eficaces para gráficos 2D y 3D: Direct2D y Microsoft Direct3D. Aunque XAML proporciona compatibilidad con primitivas y efectos 2D, muchas aplicaciones (como las de modelado o los juegos) necesitan funcionalidades gráficas más complejas. En estas aplicaciones, puedes usar Direct2D y Direct3D para representar una parte, o la totalidad, de los elementos gráficos y emplear XAML para todo lo demás.
 
 Si vas a implementar interoperabilidad entre XAML y DirectX personalizada, debes conocer estos dos conceptos:
 
@@ -45,7 +42,6 @@ Una vez que hayas determinado cómo quieres usar DirectX, usarás uno de estos t
 -   Si usas DirectX para presentar gráficos actualizados en tiempo real o en una situación en la que las actualizaciones deben llegar en intervalos regulares de baja latencia, usa la clase [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) para poder actualizar los elementos gráficos sin tener que sincronizar el temporizador de actualizaciones del marco XAML. Este tipo te permite obtener acceso a la cadena de intercambio del dispositivo gráfico ([IDXGISwapChain1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)) directamente y disponer XAML como una capa sobre el destino de la representación. Funciona muy bien en juegos y aplicaciones DirectX de pantalla completa que requieren una interfaz de usuario basada en XAML. Para usar este método debes ser bastante ducho en DirectX, incluidas las tecnologías Infraestructura de gráficos de Microsoft DirectX (DXGI), Direct2D y Direct3D. Para obtener más información, consulta [Programming Guide for Direct3D 11 (Guía de programación para Direct3 11)](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews).
 
 ## <a name="surfaceimagesource"></a>SurfaceImageSource
-
 
 [SurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) proporciona superficies compartidas de DirectX para dibujar en ellas y luego compone los bits en contenido de aplicación.
 
@@ -116,7 +112,7 @@ El procedimiento básico para crear y actualizar un objeto [SurfaceImageSource](
     m_sisNativeWithD2D->SetDevice(m_d2dDevice.Get());
     ```
 
-4.  Proporciona un puntero para el objeto [ID2D1DeviceContext](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface) a [ISurfaceImageSourceNativeWithD2D::BeginDraw](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-begindraw), y usa el contexto de dibujo devuelto para dibujar el contenido del rectángulo deseado dentro de **SurfaceImageSource**. **ISurfaceImageSourceNativeWithD2D::BeginDraw** y los comandos de dibujo se pueden llamar desde un subproceso en segundo plano. Solo se dibujará el área especificada para su actualización en el parámetro *updateRect*.
+4.  Proporciona un puntero para el objeto [ID2D1DeviceContext](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface) a [ISurfaceImageSourceNativeWithD2D::BeginDraw](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-begindraw), y usa el contexto de dibujo devuelto para dibujar el contenido del rectángulo deseado dentro de **SurfaceImageSource**. **ISurfaceImageSourceNativeWithD2D::BeginDraw** y los comandos de dibujo se pueden llamar desde un subproceso en segundo plano. Solo se dibujará el área especificada para actualización en el parámetro *updateRect*.
 
     Este método devuelve el desplazamiento del punto (x,y) del rectángulo de destino actualizado en el parámetro *offset*. Puedes usar este desplazamiento para determinar dónde se debe dibujar el contenido actualizado con **ID2D1DeviceContext**.
 
@@ -176,7 +172,7 @@ El procedimiento básico para crear y actualizar un objeto [SurfaceImageSource](
 
 [VirtualSurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) extiende el elemento [SurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) cuando el contenido es potencialmente superior al espacio en pantalla, por lo que hay que virtualizar el contenido para representarlo de forma óptima.
 
-[VirtualSurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) difiere de [SurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) en que usa una devolución de llamada, [IVirtualSurfaceImageSourceCallbacksNative::UpdatesNeeded](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative-updatesneeded), que se implementa para actualizar regiones de la superficie a medida que se visualizan en la pantalla. No tienes que borrar regiones que estén ocultas; el marco XAML se encarga de ello.
+[VirtualSurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) difiere de [SurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) en que usa una devolución de llamada, [IVirtualSurfaceImageSourceCallbacksNative::UpdatesNeeded](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative-updatesneeded), que se implementa para actualizar regiones de la superficie a medida que se visualizan en la pantalla. No tienes que borrar las regiones que están ocultas; el marco XAML se encarga de ello.
 
 A continuación, encontrarás el procedimiento básico para crear y actualizar un objeto [VirtualSurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) en el código subyacente:
 
@@ -317,7 +313,7 @@ A continuación, encontrarás el procedimiento básico para crear y actualizar u
 
 6.  Por último, debes realizar lo siguiente para cada región que hay que actualizar:
 
-    1.  Proporciona un puntero para el objeto **ID2D1DeviceContext** a **ISurfaceImageSourceNativeWithD2D::BeginDraw**, y usa el contexto de dibujo devuelto para dibujar el contenido del rectángulo deseado dentro de **SurfaceImageSource**. **ISurfaceImageSourceNativeWithD2D::BeginDraw** y los comandos de dibujo se pueden llamar desde un subproceso en segundo plano. Solo se dibujará el área especificada para su actualización en el parámetro *updateRect*.
+    1.  Proporciona un puntero para el objeto **ID2D1DeviceContext** a **ISurfaceImageSourceNativeWithD2D::BeginDraw**, y usa el contexto de dibujo devuelto para dibujar el contenido del rectángulo deseado dentro de **SurfaceImageSource**. **ISurfaceImageSourceNativeWithD2D::BeginDraw** y los comandos de dibujo se pueden llamar desde un subproceso en segundo plano. Solo se dibujará el área especificada para actualización en el parámetro *updateRect*.
 
         Este método devuelve el desplazamiento del punto (x,y) del rectángulo de destino actualizado en el parámetro *offset*. Puedes usar este desplazamiento para determinar dónde se debe dibujar el contenido actualizado con **ID2D1DeviceContext**.
 
@@ -354,7 +350,7 @@ A continuación, encontrarás el procedimiento básico para crear y actualizar u
         }
         ```
 
-    2.  Dibuja el contenido específico de la región, pero restringe el dibujo a las regiones enlazadas, lo que mejora el rendimiento.
+    2.  Dibuja el contenido específico de la región, pero restringe el dibujo a las regiones delimitadas para mejorar el rendimiento.
 
     3.  Llama a **ISurfaceImageSourceNativeWithD2D::EndDraw**. El resultado es un mapa de bits.
 
@@ -369,9 +365,8 @@ A continuación, encontrarás el procedimiento básico para crear y actualizar u
 Para garantizar un buen rendimiento, el tipo [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) tiene algunas limitaciones:
 
 -   No hay más de 4 instancias de [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) por aplicación.
--   Debe establecer el alto y ancho de la cadena de intercambio de DirectX (en [DXGI\_intercambio\_cadena\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) para las dimensiones actuales del elemento de cadena de intercambio. Si no lo hace, se escalará el contenido de pantalla (mediante **DXGI\_ESCALADO\_STRETCH**) para ajustarse.
--   Debe establecer el modo de escalado de la cadena de intercambio de DirectX (en [DXGI\_intercambio\_cadena\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) a **DXGI\_ESCALADO\_STRETCH**.
--   No se puede establecer el modo alfa de la cadena de intercambio de DirectX (en [DXGI\_intercambio\_cadena\_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) a **DXGI\_alfa\_modo\_ PREMULTIPLICADO**.
+-   Debe establecer el alto y el ancho de la cadena de intercambio de DirectX (en [DXGI \_SWAP \_CHAIN \_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) en las dimensiones actuales del elemento de la cadena de intercambio. Si no lo hace, se escalará el contenido de la pantalla (con **DXGI \_SCALING \_STRETCH**) para ajustarse.
+-   Debe establecer el modo de escalado de la cadena de intercambio de DirectX (en [dxgi \_SWAP \_CHAIN \_DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1)) en **dxgi \_SCALING \_STRETCH**.
 -   Debes crear la cadena de intercambio de DirectX llamando a [IDXGIFactory2::CreateSwapChainForComposition](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition).
 
 Debes actualizar la clase [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) en función de las necesidades de la aplicación y no de las actualizaciones del marco XAML. Si necesitas sincronizar las actualizaciones de **SwapChainPanel** con las del marco XAML, regístrate para el evento [Windows::UI::Xaml::Media::CompositionTarget::Rendering](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.compositiontarget.rendering). En caso contrario, deberás tener en cuenta los posibles problemas entre subprocesos al intentar actualizar los elementos XAML de un subproceso distinto al que actualiza el objeto **SwapChainPanel**.
@@ -465,12 +460,4 @@ El procedimiento básico para crear y actualizar un objeto [SwapChainPanel](http
 * [VirtualSurfaceImageSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource)
 * [SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)
 * [ISwapChainPanelNative](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-iswapchainpanelnative)
-* [Guía de programación de Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews)
-
- 
-
- 
-
-
-
-
+* [Guía de programación para Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews)
