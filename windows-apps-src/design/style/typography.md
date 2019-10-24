@@ -203,7 +203,7 @@ Usa las [API de asignación de fuentes LanguageFont](https://docs.microsoft.com/
 <tr class="even">
 <td align="left" style="font-family: Nirmala UI;">Nirmala UI</td>
 <td align="left">Normal, semidelgada, negrita</td>
-<td align="left">Fuente de interfaz de usuario para alfabetos del sur asiático (bangla, devanagari, gujarati, gurmukhi, kannada, malayalam, odia, ol chiki, sinhala, sora sompeng, tamil, telugu)</td>
+<td align="left">Fuente de interfaz de usuario para alfabetos del sur asiático (bengalí, devanagari, gujarati, gurmukhi, kannada, malayalam, odia, ol chiki, cingalés, sora sompeng, tamil, telugu)</td>
 </tr>
 <tr class="odd">
 <td align="left" style="font-family: SimSun;">SimSun</td>

@@ -78,7 +78,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Bahamas</td>
     <td>Baréin</td>
-    <td>Bangladesh</td>
+    <td>Bangladés</td>
     <td>Barbados</td>
   </tr>
   <tr>
@@ -121,7 +121,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Chad</td>
     <td>Chile</td>
     <td>China</td>
-    <td>Isla Christmas</td>
+    <td>Isla de Navidad</td>
   </tr>
   <tr>
     <td>Islas Cocos</td>
@@ -187,7 +187,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Guadalupe</td>
     <td>Guam</td>
     <td>Guatemala</td>
-    <td>Guernesey</td>
+    <td>Guernsey</td>
   </tr>
   <tr>
     <td>Guinea</td>
@@ -317,7 +317,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>Reunión</td>
-    <td>Rumania</td>
+    <td>Rumanía</td>
     <td>Rusia *</td>
     <td>Ruanda</td>
   </tr>
@@ -503,7 +503,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   </tr>
   <tr>
     <td>Bahamas</td>
-    <td>Bangladesh</td>
+    <td>Bangladés</td>
     <td>Barbados</td>
     <td>Belarús</td>
   </tr>
@@ -538,7 +538,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Chad</td>
   </tr>
   <tr>
-    <td>Isla Christmas</td>
+    <td>Isla de Navidad</td>
     <td>Islas Cocos</td>
     <td>Comoras</td>
     <td>Congo</td>
@@ -586,7 +586,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Guatemala</td>
   </tr>
   <tr>
-    <td>Guernesey</td>
+    <td>Guernsey</td>
     <td>Guinea</td>
     <td>Guinea-Bisáu</td>
     <td>Guyana</td>

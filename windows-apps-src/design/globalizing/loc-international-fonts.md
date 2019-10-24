@@ -28,8 +28,8 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Armenio | hy-AM | Segoe UI |
 | Asamés | as-IN | Nirmala UI |
 | Azerbaiyano (latino) | az-Latn-AZ | Segoe UI |
-| Bangla (Bangladesh) | bn-BD | Nirmala UI |
-| Bangla (India) | bn-IN | Nirmala UI |
+| Bengalí (Bangladés) | bn-BD | Nirmala UI |
+| Bengalí (India) | bn-IN | Nirmala UI |
 | Euskera (Euskera) | eu-ES | Segoe UI |
 | Bielorruso | be-BY | Segoe UI |
 | Bosnio (latino) | bs-Latn-BA | Segoe UI |
@@ -106,7 +106,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Sesotho sa leboa | nso-ZA | Segoe UI |
 | Setsuana | tn-ZA | Segoe UI |
 | Sindhi (árabe) | sd-Arab-PK | Segoe UI |
-| Sinhala | si-LK | Nirmala UI |
+| Cingalés | si-LK | Nirmala UI |
 | Eslovaco | sk-SK | Segoe UI |
 | Esloveno | sl-SI | Segoe UI |
 | Español | es-ES | Segoe UI |

@@ -92,7 +92,7 @@ En este momento, los desarrolladores ubicados en los siguientes países y region
 - Noruega
 - Polonia
 - Portugal
-- Rumania
+- Rumanía
 - Eslovaquia
 - Eslovenia
 - España

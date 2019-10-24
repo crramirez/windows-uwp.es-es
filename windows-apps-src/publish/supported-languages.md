@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 716a6e86e03feb6edcbc5cde5aa37d0282df6aca
 ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/08/2019
 ms.locfileid: "59244291"
@@ -38,7 +38,7 @@ Los códigos de idioma que no se incluyen aquí no se admiten el Store. Se recom
 | Azerbaiyano           | AZ árabes, árabes-az-az, az-cyrl, az-cyrl-az, az-latn, az-latn-az                                                                                                                                     |
 | Euskera (Euskera)       | eu, eu-es                                                                                                                                                                                             |
 | Bielorruso            | be, be-by                                                                                                                                                                                             |
-| Bangla                | bn, bn-bd, bn-in                                                                                                                                                                                      |
+| Bengalí                | bn, bn-bd, bn-in                                                                                                                                                                                      |
 | Bosnio               | bs, bs-cyrl, bs-cyrl-ba, bs-latn, bs-latn-ba                                                                                                                                                          |
 | Búlgaro             | bg, bg-bg                                                                                                                                                                                             |
 | Catalán               | ca, ca-es, ca-es-valencia                                                                                                                                                                             |
@@ -111,7 +111,7 @@ Los códigos de idioma que no se incluyen aquí no se admiten el Store. Se recom
 | Sesotho sa leboa      | nso, nso-za                                                                                                                                                                                           |
 | Setsuana              | tn, tn-bw, tn-za                                                                                                                                                                                      |
 | Sindhi                | sd-arab, sd-arab-pk, sd-deva                                                                                                                                                                          |
-| Sinhala               | si, si-lk                                                                                                                                                                                             |
+| Cingalés               | si, si-lk                                                                                                                                                                                             |
 | Eslovaco                | sk, sk-sk                                                                                                                                                                                             |
 | Esloveno             | sl, sl-si                                                                                                                                                                                             |
 | Español               | es, es-cl, es-co, es-es, es-mx, es-ar, es-bo, es-cr, es-do, es-ec, es-gt, es-hn, es-ni, es-pa, es-pe, es-pr, es-py, es-sv, es-us, es-uy, es-ve, es-019, es-419                                        |

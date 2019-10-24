@@ -53,7 +53,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 | Austria                          | Sí               | Sí                                      | Sí    | Sí             |
 | Azerbaiyán                       | Sí               | Sí                                      | Sí    | No              |
 | Baréin                          | Sí               | Sí                                      | Sí    | Sí             |
-| Bangladesh                       | Sí               | Sí                                      | Sí    | No              |
+| Bangladés                       | Sí               | Sí                                      | Sí    | No              |
 | Belarús                          | Sí               | Sí                                      | Sí    | No              |
 | Bélgica                          | Sí               | Sí                                      | Sí    | Sí             |
 | Benín                            | Sí               | Sí                                      | Sí    | No              |
@@ -154,7 +154,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 | Portugal                         | Sí               | Sí                                      | Sí    | Sí             |
 | Puerto Rico                      | No                | No                                       | Sí    | No              |
 | Catar                            | Sí               | Sí                                      | Sí    | Sí             |
-| Rumania                          | Sí               | Sí                                      | Sí    | No              |
+| Rumanía                          | Sí               | Sí                                      | Sí    | No              |
 | Rusia                           | Sí               | Sí                                      | No     | Sí             |
 | Ruanda                           | Sí               | Sí                                      | Sí    | No              |
 | San Vicente y las Granadinas | No                | Sí                                      | No     | No              |

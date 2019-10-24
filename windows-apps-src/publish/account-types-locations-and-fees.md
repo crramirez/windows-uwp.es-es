@@ -62,7 +62,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Azerbaiyán                        | 19 USD              | 99 USD           |  
 | Bahamas                       | 19 USD              | 99 USD           |  
 | Baréin                           | 7 BHD               | 38 BHD           |  
-| Bangladesh                        | 1468 BDT            | 7600 BDT         |  
+| Bangladés                        | 1468 BDT            | 7600 BDT         |  
 | Barbados                          | 19 USD              | 99 USD           |  
 | Belarús                           | 19 USD              | 99 USD           |  
 | Bélgica                           | 14 EUR              | 75 EUR           |  
@@ -189,7 +189,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Polonia                            | 59 PLN              | 280 PLN          |  
 | Portugal                          | 14 EUR              | 75 EUR           |  
 | Catar                             | 69 QAR              | 360 QAR          |  
-| Rumania                           | 14 EUR              | 75 EUR           |  
+| Rumanía                           | 14 EUR              | 75 EUR           |  
 | Rusia                            | 626 RUB             | 3000 RUB         |  
 | Ruanda                            | 19 USD              | 99 USD           |  
 | San Cristóbal y Nieves             | 19 USD              | 99 USD           |  

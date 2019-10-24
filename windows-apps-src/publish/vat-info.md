@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d8b11815d7762179ad982edaf3985c06f9f54e4
 ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57648980"
@@ -194,7 +194,7 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 <li>Por ejemplo: 123456789</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">Rumania</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Rumanía</td><td data-th="VAT info">
 <ul>
 <li>Formato de número de IVA: 2 letras y dígitos 8-10</li>
 <li>Código de país o región: RO</li>
