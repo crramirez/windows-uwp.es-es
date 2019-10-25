@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: ed8d6572fb280b2cfecf1cf035d68a739c5bc92d
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 349326ba458999b2b1e299e8260d52d608d5af1f
+ms.sourcegitcommit: e189166dea855ce330bd0634cc158b51cb4fbd69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393521"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811640"
 ---
 # <a name="process-bitmaps-with-opencv"></a>Procesar mapas de bits con OpenCV
 
@@ -29,25 +29,25 @@ Los ejemplos de este artículo le guiarán a través de la creación de un códi
 
 ## <a name="create-a-helper-windows-runtime-component-for-opencv-interop"></a>Crear un componente de Windows Runtime auxiliar para la interoperabilidad de OpenCV
 
-### <a name="1-add-a-new-native-code-windows-runtime-component-project-to-your-solution"></a>1. Agregar un nuevo proyecto de componente de Windows Runtime de código nativo a la solución
+### <a name="1-add-a-new-native-code-windows-runtime-component-project-to-your-solution"></a>1. agregar un nuevo código nativo Windows Runtime proyecto de componente a la solución
 
 1. Agrega un nuevo proyecto a la solución en Visual Studio haciendo clic con el botón derecho en la solución en Explorador de soluciones y seleccionando **Agregar->Nuevo proyecto**. 
 2. En la categoría **Visual C++** , selecciona **Componente de Windows Runtime (Windows universal)** . Para este ejemplo, asigna al proyecto el nombre de "OpenCVBridge" y haz clic en **Aceptar**. 
 3. En el cuadro de diálogo **New Windows Universal Project**, selecciona el destino y la versión mínima del SO de la aplicación y haz clic en **Aceptar**.
 4. Haz clic con el botón derecho en el archivo generado automáticamente Class1.cpp en el Explorador de soluciones y selecciona **Quitar**, cuando aparezca el cuadro de diálogo de confirmación, elige **Eliminar**. Luego eliminar el archivo de encabezado Class1.h.
-5. Haga clic con el botón derecho en el icono del proyecto OpenCVBridge y seleccione **agregar > clase..** .. En el cuadro de diálogo **Agregar clase** , escriba "OpenCVHelper" en el campo **nombre de clase** y, a continuación, haga clic en **Aceptar**. El código se agregará a los archivos de clase creados en un paso posterior.
+5. Haz clic con el botón derecho en el icono del proyecto OpenCVBridge y selecciona **Agregar->Clase...** . En el cuadro de diálogo **Agregar clase**, escribe "OpenCVHelper" en el campo **Nombre de clase** y luego haz clic en **Aceptar**. El código se agregará a los archivos de clase creados en un paso posterior.
 
-### <a name="2-add-the-opencv-nuget-packages-to-your-component-project"></a>2. Agregar los paquetes de NuGet de OpenCV al proyecto de componente
+### <a name="2-add-the-opencv-nuget-packages-to-your-component-project"></a>2. Agrega los paquetes de NuGet OpenCV al proyecto de componente
 
 1. Haz clic con el botón derecho en el icono de proyecto OpenCVBridge en el Explorador de soluciones y selecciona **Administrar paquetes de NuGet...**
 2. Cuando aparezca el cuadro de diálogo Administrador de paquetes de NuGet, selecciona la pestaña **Examinar** y escribe "OpenCV.Win" en el cuadro de búsqueda.
 3. Selecciona "OpenCV.Win.Core" y haz clic en **Instalar**. En el cuadro de diálogo **Vista previa**, haz clic en **Aceptar**.
 4. Usa el mismo procedimiento para instalar el paquete "OpenCV.Win.ImgProc".
 
-> [!NOTE]
-> OpenCV.Win.Core y OpenCV.Win.ImgProc no se actualizan periódicamente, pero siguen siendo recomendables para crear un valor de OpenCVHelper tal como se describe en esta página.
+>[!NOTE]
+>OpenCV. win. Core y OpenCV. win. ImgProc no se actualizan con regularidad y no superan las comprobaciones de cumplimiento del almacén, por lo que estos paquetes solo están diseñados para la experimentación.
 
-### <a name="3-implement-the-opencvhelper-class"></a>3. Implementación de la clase OpenCVHelper
+### <a name="3-implement-the-opencvhelper-class"></a>3. Implementa la clase OpenCVHelper
 
 Pega el siguiente código en el archivo de encabezado OpenCVHelper.h. Este código incluye archivos de encabezado OpenCV para los paquetes *Core* e *ImgProc* que instalamos e indica tres métodos que se mostrarán en los siguientes pasos.
 
@@ -82,7 +82,7 @@ Por último, este ejemplo de clase auxiliar implementa un único método de proc
 
 
 ## <a name="a-simple-softwarebitmap-opencv-example-using-the-helper-component"></a>Un ejemplo sencillo de SoftwareBitmap OpenCV mediante el componente auxiliar
-Ahora que el componente OpenCVBridge se ha creado, podemos crear una aplicación sencilla C# que usa el método **desenfoque** de OpenCV para modificar un **SoftwareBitmap**. Para acceder al componente de Windows Runtime desde la aplicación de UWP, primero debe agregar una referencia al componente. En Explorador de soluciones, haga clic con el botón secundario en el nodo **referencias** en el proyecto de aplicación de UWP y seleccione **Agregar referencia..** .. En el cuadro de diálogo Administrador de referencias, seleccione **proyectos-> solución**. Activa la casilla situada junto al proyecto OpenCVBridge y haz clic en **Aceptar**.
+Ahora que el componente OpenCVBridge se ha creado, podemos crear una aplicación sencilla C# que usa el método **desenfoque** de OpenCV para modificar un **SoftwareBitmap**. Para acceder al componente de Windows Runtime desde la aplicación de UWP, primero debe agregar una referencia al componente. En el Explorador de soluciones, haz clic con el botón derecho en el nodo **Referencias** en el proyecto de aplicación para UWP y selecciona **Agregar referencia...** . En el cuadro de diálogo Administrador de referencias, selecciona **Proyectos->Solución**. Activa la casilla situada junto al proyecto OpenCVBridge y haz clic en **Aceptar**.
 
 El siguiente código de ejemplo permite al usuario seleccionar un archivo de imagen y luego usa **[BitmapDecoder](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapencoder)** para crear una representación **SoftwareBitmap** de la imagen. Para obtener más información sobre cómo trabajar con **SoftwareBitmap**, consulta [Crear, editar y guardar imágenes de mapa de bits](https://docs.microsoft.com/windows/uwp/audio-video-camera/imaging).
 

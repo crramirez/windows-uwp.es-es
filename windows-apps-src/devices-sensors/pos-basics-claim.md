@@ -1,55 +1,55 @@
 ---
-title: Dispositivo PointOfService de notificación y habilitar el modelo
-description: Obtenga información acerca de la notificación PointOfService y habilitar el modelo
+title: Notificaciones de dispositivo PointOfService y habilitar modelo
+description: Más información sobre la declaración de PointOfService y el modelo de habilitación
 ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e7d60c0b612a8067ac4c225dff9da5da428f1a1
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0f3fc2b2aa10fedf143c55158e521b2c1cd5b75d
+ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57639320"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816692"
 ---
-# <a name="point-of-service-device-claim-and-enable-model"></a>Dispositivo de punto de servicio de notificación y habilitar el modelo
+# <a name="point-of-service-device-claim-and-enable-model"></a>Notificaciones de dispositivo de punto de servicio y habilitar modelo
 
-## <a name="claiming-for-exclusive-use"></a>Reclamar para su uso exclusivo
+## <a name="claiming-for-exclusive-use"></a>Reclamar para uso exclusivo
 
 Después de haber creado un objeto de dispositivo PointOfService correctamente, debes reclamarlo mediante el método de notificación adecuado para el tipo de dispositivo para poder usar el dispositivo para la entrada o salida.  La notificación concede a la aplicación acceso exclusivo a muchas de las funciones del dispositivo para garantizar que una aplicación no interfiere con el uso del dispositivo por parte de otra aplicación.  Solo una aplicación puede reclamar un dispositivo PointOfService para uso exclusivo cada vez. 
 
 > [!Note]
-> La acción de notificación establece un bloqueo exclusivo en un dispositivo, pero no ponerlo en un estado operativo.  Consulte [habilitar dispositivos para las operaciones de E/S](#enable-device-for-io-operations) para obtener más información.
+> La acción de la demanda establece un bloqueo exclusivo en un dispositivo, pero no lo pone en un estado operativo.  Vea [Habilitar el dispositivo para operaciones de e/s](#enable-device-for-io-operations) para obtener más información.
 
-### <a name="apis-used-to-claim--release"></a>Las API que se usan para la notificación / versión
+### <a name="apis-used-to-claim--release"></a>API usadas para notificar o liberar
 
-|Dispositivo|Notificación | Publicación | 
+|Dispositivo|Notificación | Lanzamiento | 
 |-|:-|:-|
-|BarcodeScanner | [BarcodeScanner.ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync) | [ClaimedBarcodeScanner.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.close) |
-|CashDrawer | [CashDrawer.ClaimDrawerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.cashdrawer.claimdrawerasync) | [ClaimedCashDrawer.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.close) | 
-|LineDisplay | [LineDisplay.ClaimAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.linedisplay.claimasync) |  [ClaimedineDisplay.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedlinedisplay.close) | 
-|MagneticStripeReader | [MagneticStripeReader.ClaimReaderAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.claimreaderasync) |  [ClaimedMagneticStripeReader.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.close) | 
-|PosPrinter | [PosPrinter.ClaimPrinterAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.claimprinterasync) |  [ClaimedPosPrinter.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.close) | 
+|BarcodeScanner | [BarcodeScanner.ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync) | [ClaimedBarcodeScanner. Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.close) |
+|CashDrawer | [CashDrawer.ClaimDrawerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.cashdrawer.claimdrawerasync) | [ClaimedCashDrawer. Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.close) | 
+|LineDisplay | [LineDisplay.ClaimAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.linedisplay.claimasync) |  [ClaimedineDisplay. Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedlinedisplay.close) | 
+|MagneticStripeReader | [MagneticStripeReader.ClaimReaderAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.claimreaderasync) |  [ClaimedMagneticStripeReader. Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.close) | 
+|PosPrinter | [PosPrinter.ClaimPrinterAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.claimprinterasync) |  [ClaimedPosPrinter. Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.close) | 
  | 
 
-## <a name="enable-device-for-io-operations"></a>Habilitar el dispositivo para las operaciones de E/S
+## <a name="enable-device-for-io-operations"></a>Habilitar dispositivo para operaciones de e/s
 
-La acción de notificación simplemente establece un derechos exclusivos para el dispositivo, pero no ponerlo en un estado operativo.  Con el fin de recibir eventos o realizar operaciones de salida debe habilitar el dispositivo mediante **EnableAsync**.  Por el contrario, puede llamar a **DisableAsync** deje de escuchar los eventos desde el dispositivo o la realización de salida.  También puede usar **IsEnabled** para determinar el estado del dispositivo.
+La acción de la demanda simplemente establece derechos exclusivos en el dispositivo, pero no lo pone en un estado operativo.  Para recibir eventos o realizar operaciones de salida, debe habilitar el dispositivo mediante **EnableAsync**.  Por el contrario, puede llamar a **DisableAsync** para dejar de escuchar los eventos del dispositivo o realizar la salida.  También puede usar **IsEnabled** para determinar el estado del dispositivo.
 
-### <a name="apis-used-enable--disable"></a>API que se usan habilitar / deshabilitar
+### <a name="apis-used-enable--disable"></a>API usadas habilitada/deshabilitada
 
-| Dispositivo | Habilitar | Deshabilitar | ¿IsEnabled? |
+| Dispositivo | Habilitar | Deshabilitas | IsEnabled? |
 |-|:-|:-|:-|
 |ClaimedBarcodeScanner | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isenabled) | 
 |ClaimedCashDrawer | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.isenabled) |
-|ClaimedLineDisplay | No Applicable¹ | No Applicable¹ | No Applicable¹ | 
+|ClaimedLineDisplay | No aplicable ¹ | No aplicable ¹ | No aplicable ¹ | 
 |ClaimedMagneticStripeReader | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.isenabled) |  
-|ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasyc) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
+|ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
 |
 
-¹ visualización de la línea no requiere que habilite explícitamente el dispositivo para las operaciones de E/S.  Habilitar la realiza automáticamente el PointOfService LineDisplay APIs que realizar operaciones de E/S.
+¹ la presentación de líneas no requiere habilitar explícitamente el dispositivo para las operaciones de e/s.  La habilitación se realiza automáticamente mediante las API de LineDisplay de PointOfService que realizan la e/s.
 
-## <a name="code-sample-claim-and-enable"></a>Ejemplo de código: notificación y habilitar
+## <a name="code-sample-claim-and-enable"></a>Ejemplo de código: Claim y enable
 
 Este ejemplo muestra cómo reclamar un dispositivo de escáner de códigos de barras después de haber creado correctamente un objeto de escáner de códigos de barras.
 
@@ -93,7 +93,7 @@ Cuando una segunda aplicación del mismo equipo solicita una notificación para 
 
 Si la aplicación con la notificación activa no responde con **RetainDevice** al instante, se supone que la aplicación se ha suspendido o que no necesita el dispositivo y la notificación se revoca y se da a la nueva aplicación. 
 
-El primer paso es crear un controlador de eventos que responde a la **ReleaseDeviceRequested** eventos con **RetainDevice**.  
+El primer paso es crear un controlador de eventos que responda al evento **ReleaseDeviceRequested** con **RetainDevice**.  
 
 ```Csharp
     /// <summary>
@@ -107,7 +107,7 @@ El primer paso es crear un controlador de eventos que responde a la **ReleaseDev
     }
 ```
 
-A continuación, registrar el controlador de eventos en asociación con el dispositivo de asignación
+Después, registre el controlador de eventos en asociación con el dispositivo reclamado.
 
 ```Csharp
     BarcodeScanner barcodeScanner = await BarcodeScanner.FromIdAsync(DeviceId);
