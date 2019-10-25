@@ -18,7 +18,7 @@ ms.locfileid: "72695768"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configuraciones de firewall y proxy de empresa para admitir el tráfico de WNS
 
-## <a name="background"></a>Background
+## <a name="background"></a>Información preliminar:
 Muchas empresas usan firewalls para bloquear el tráfico de red no deseado; Desafortunadamente, esto también puede bloquear aspectos importantes como las comunicaciones del servicio de notificaciones de Windows. Esto significa que todas las notificaciones enviadas a través de WNS se quitarán en determinadas configuraciones de red. Para evitar esto, los administradores de red pueden agregar la lista de FQDN o VIP de WNS aprobados a su lista de exenciones para permitir que el tráfico de WNS pase a través del firewall. A continuación se muestran más detalles sobre cómo y qué agregar, así como la compatibilidad con distintos tipos de proxy.
 
 ## <a name="proxy-support"></a>Compatibilidad con proxy
