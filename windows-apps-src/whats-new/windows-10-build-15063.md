@@ -1,17 +1,17 @@
 ---
-title: Novedades de Windows 10 para desarrolladores; herramientas y características
+title: Novedades de Windows 10, compilación 15063
 description: Tanto la compilación 15063 de Windows 10 como las nuevas herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la tecnología de la Plataforma universal de Windows.
 keywords: novedades, novedad, actualizar, actualizaciones, características, nuevo, Windows 10, 1703, marzo, más reciente, 15063
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: ea855480-874d-431f-94bf-13d81eacc010
 ms.localizationpriority: medium
-ms.openlocfilehash: 5faa3beb0837553f50d73f7af454ee6bd0502aa3
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 4395ed9113b85d53ce464bd085b168c806fc281c
+ms.sourcegitcommit: a7740ebb14c98cd5afadd52db5cf714522821b49
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682460"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72893052"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-15063"></a>Novedades para desarrolladores en Windows 10, compilación 15063
 

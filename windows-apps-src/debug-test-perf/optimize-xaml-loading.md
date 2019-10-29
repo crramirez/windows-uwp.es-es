@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f46967cd26f10510e2620229fee0eec13ca7f52a
-ms.sourcegitcommit: 7bbc24d770bf23a8d7e2b234503aad743eb354f3
+ms.openlocfilehash: beb6dde4036019e004d94e5f60e8f3583c78d775
+ms.sourcegitcommit: de34aabd90a92a083dfa17d4f8a98578597763f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67852053"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72980023"
 ---
 # <a name="optimize-your-xaml-markup"></a>Optimizar el marcado XAML
 
@@ -126,7 +126,7 @@ ListView y sus elementos secundarios no se cargan en la memoria.
 
 Los paneles de diseño tienen una propiedad [Background](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.background), por lo tanto, no es necesario colocar una clase [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) delante de un panel solo para colorearlo.
 
-**Inefficient**
+**Ineficaz**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -159,7 +159,7 @@ Usa el [atributo x:Key](../xaml-platform/x-key-attribute.md) para hacer referenc
 
 ### <a name="resourcedictionary-in-a-usercontrol"></a>ResourceDictionary en un elemento UserControl.
 
-Un elemento ResourceDictionary definido en un objeto [UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) resulta en una penalización. La plataforma crea una copia de este tipo de objeto ResourceDictionary para todas las instancias del objeto UserControl. Si tiene un control de usuario que se usa mucho, mover ResourceDictionary fuera de la clase UserControl y colóquelo en el nivel de página.
+Un elemento ResourceDictionary definido en un objeto [UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) resulta en una penalización. La plataforma crea una copia de este tipo de objeto ResourceDictionary para todas las instancias del objeto UserControl. Si tiene un UserControl que se usa mucho, mueva el ResourceDictionary fuera del UserControl y colóquelo en el nivel de página.
 
 ### <a name="resource-and-resourcedictionary-scope"></a>Ámbito de Resource y ResourceDictionary
 
@@ -167,7 +167,7 @@ Si una página hace referencia a un control de usuario o un recurso definido en 
 
 Aquí, debido a que_InitialPage.xaml_ usa un recurso de _ExampleResourceDictionary.xaml_, la totalidad de _ExampleResourceDictionary.xaml_ debe analizarse en el inicio.
 
-**InitialPage.xaml.**
+**InitialPage. Xaml.**
 
 ```xaml
 <Page x:Class="ExampleNamespace.InitialPage" ...>
@@ -185,7 +185,7 @@ Aquí, debido a que_InitialPage.xaml_ usa un recurso de _ExampleResourceDictiona
 </Page>
 ```
 
-**ExampleResourceDictionary.xaml.**
+**ExampleResourceDictionary. Xaml.**
 
 ```xaml
 <ResourceDictionary>
@@ -198,7 +198,7 @@ Aquí, debido a que_InitialPage.xaml_ usa un recurso de _ExampleResourceDictiona
 
 Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _App.xaml_ es una buena práctica y evita la duplicación. Sin embargo, _App.xaml_ se analiza en el inicio de la aplicación por lo tanto, cualquier recurso que se use en únicamente una página (a menos que esa página sea la página inicial) se debe colocar en los recursos locales de la página. Este ejemplo de contador muestra _App.xaml_ que contiene recursos usados en únicamente una página (que no es la página inicial). Esto aumenta innecesariamente el tiempo de inicio de la aplicación.
 
-**App.xaml**
+**App. Xaml**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -212,7 +212,7 @@ Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _Ap
 </Application>
 ```
 
-**InitialPage.xaml.**
+**InitialPage. Xaml.**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -223,7 +223,7 @@ Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _Ap
 </Page>
 ```
 
-**SecondPage.xaml.**
+**SecondPage. Xaml.**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -234,7 +234,7 @@ Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _Ap
 </Page>
 ```
 
-La manera de hacer que el ejemplo anterior de contador sea más eficiente es mover `SecondPageTextBrush` a _SecondPage.xaml_ y mover `ThirdPageTextBrush` a _ThirdPage.xaml_. `InitialPageTextBrush` puede permanecer en _App.xaml_ porque los recursos de la aplicación deben analizarse durante el inicio de la aplicación en cualquier caso.
+La manera de hacer que el ejemplo anterior de contador sea más eficiente es mover `SecondPageTextBrush` a _SecondPage.xaml_ y mover `ThirdPageTextBrush` a _ThirdPage.xaml_. `InitialPageTextBrush` puede permanecer en _app. Xaml_ porque los recursos de la aplicación deben analizarse en el inicio de la aplicación en cualquier caso.
 
 ### <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>Consolidar varios pinceles que tengan el mismo aspecto en un recurso
 
@@ -250,7 +250,7 @@ La plataforma XAML trata de almacenar en caché los objetos usados frecuentement
             <TextBlock.Foreground>
                 <SolidColorBrush Color="#FFFFA500"/>
             </TextBlock.Foreground>
-        </TextBox>
+        </TextBlock>
         <Button Content="Submit">
             <Button.Foreground>
                 <SolidColorBrush Color="#FFFFA500"/>
@@ -319,7 +319,7 @@ Usa un elemento compuesto en lugar de disponer varios elementos para crear un ef
 
 ### <a name="layout-panels"></a>Paneles de diseño
 
-Un panel de diseño puede tener dos propósitos: colorear un área y diseñar elementos secundarios. Si un elemento de atrás correspondiente al orden z ya está coloreando un área, no será necesario que un panel de diseño de la parte frontal pinte esa área. En su lugar, puede centrarse en el diseño de los elementos secundarios. A continuación te mostramos un ejemplo.
+Un panel de diseño puede tener dos propósitos: colorear un área y diseñar elementos secundarios. Si un elemento de atrás correspondiente al orden z ya está coloreando un área, no será necesario que un panel de diseño de la parte frontal pinte esa área. En su lugar, puede centrarse en el diseño de los elementos secundarios. Aquí tienes un ejemplo.
 
 **Ineficaz.**
 
@@ -425,7 +425,7 @@ Para comprobar si tienes XBF2, abre la aplicación en un editor de código binar
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Procedimientos recomendados para el rendimiento de inicio de la aplicación](best-practices-for-your-app-s-startup-performance.md)
+- [Prácticas recomendadas para el rendimiento de inicio de la aplicación](best-practices-for-your-app-s-startup-performance.md)
 - [Optimiza tu diseño XAML](optimize-your-xaml-layout.md)
 - [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md)
-- [Herramientas de generación de perfiles y rendimiento](tools-for-profiling-and-performance.md)
+- [Herramientas para la generación de perfiles y el rendimiento](tools-for-profiling-and-performance.md)

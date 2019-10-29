@@ -1,17 +1,17 @@
 ---
-title: Novedades de Windows 10 para desarrolladores; herramientas y características
+title: Novedades de Windows 10, compilación 17763
 description: Tanto la compilación 17763 de Windows 10 como las nuevas herramientas para desarrolladores proporcionan las herramientas, las características y las experiencias con tecnología de Plataforma universal de Windows.
 keywords: novedad, novedades, actualización, actualizaciones, características, nuevo, nueva, Windows 10, más reciente, desarrolladores, 17763
 ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: faf3cdc1a3fab3bd0332b995c25b081d296a55bb
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: c7387a7a66d2492bf6f228c662a48b19a19afe3d
+ms.sourcegitcommit: a7740ebb14c98cd5afadd52db5cf714522821b49
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682776"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72893015"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Novedades para desarrolladores en Windows 10, compilación 17763
 

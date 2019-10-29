@@ -1,17 +1,17 @@
 ---
-title: Novedades de Windows 10 para desarrolladores
+title: Novedades de Windows 10, compilación 18362
 description: Tanto la compilación 18362 de Windows 10 como las nuevas herramientas para desarrolladores le proporcionan las herramientas, características y experiencias que ofrece la tecnología de la Plataforma universal de Windows.
 keywords: novedad, novedades, actualización, actualizaciones, características, nuevo, Windows 10, más reciente, desarrolladores, 18362, mayo
 ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 4e92afd112ce7600bcfa650e0bb3bbeffabd7bd0
-ms.sourcegitcommit: f120968069702a7210756b508dabc4a1a8c20d53
+ms.openlocfilehash: f95193b1bbf50165619fb6c7b7222ed36853d2e2
+ms.sourcegitcommit: a7740ebb14c98cd5afadd52db5cf714522821b49
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72438220"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72893035"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-18362"></a>Novedades para desarrolladores en Windows 10, compilación 18362
 

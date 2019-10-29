@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, concurrency, async, asynchronous, asynchrony
 ms.localizationpriority: medium
-ms.openlocfilehash: 1dd6ac2760189578932fc22db89c7091f2e527ab
-ms.sourcegitcommit: 8179902299df0f124dd770a09a5a332397970043
+ms.openlocfilehash: 06fadae3e33da3289726f45e7222617d51843015
+ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428636"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816679"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Operaciones simultáneas y asincrónicas con C++/WinRT
 
@@ -112,7 +112,7 @@ Puedes agregar una corrutina en otras corrutinas. O puedes llamar a **get** para
 
 También es posible controlar los eventos de acciones y operaciones asincrónicas completados o en progreso mediante delegados. Para información más detallada y ejemplos de código, consulta [Tipos de delegados para acciones y operaciones asincrónicas](handle-events.md#delegate-types-for-asynchronous-actions-and-operations).
 
-## <a name="asychronously-return-a-windows-runtime-type"></a>Devolución de forma asincrónica de un tipo de Windows Runtime
+## <a name="asynchronously-return-a-windows-runtime-type"></a>Devolución de forma asincrónica de un tipo de Windows Runtime
 
 En el siguiente ejemplo, encapsulamos una llamada a **RetrieveFeedAsync** de un URI específico para que nos dé una función **RetrieveBlogFeedAsync** que devuelve asincrónicamente [**SyndicationFeed** ](/uwp/api/windows.web.syndication.syndicationfeed).
 
@@ -170,7 +170,7 @@ IAsyncOperation<winrt::hstring> ReadAsync()
 }
 ``` 
 
-## <a name="asychronously-return-a-non-windows-runtime-type"></a>Devolución de forma asincrónica de un tipo que no sea de Windows Runtime
+## <a name="asynchronously-return-a-non-windows-runtime-type"></a>Devolución de forma asincrónica de un tipo que no sea de Windows Runtime
 
 Si vas a devolver de forma asincrónica un tipo que *no* sea de Windows Runtime, debes devolver una biblioteca de patrones de procesamiento paralelo (PPL) [**concurrency::task**](/cpp/parallel/concrt/reference/task-class). Te recomendamos utilizar **concurrency::task** porque te proporcionará un mejor rendimiento (y una mejor compatibilidad en el futuro) que **std::future**.
 

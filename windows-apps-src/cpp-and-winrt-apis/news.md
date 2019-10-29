@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, news, what's, new
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fb869f4705210ab1fec28186b377ad68068b5877
-ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
+ms.openlocfilehash: 525110a09c56f48f9f9ce3d2521c98e2297a8372
+ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71329581"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72816710"
 ---
 # <a name="whats-new-in-cwinrt"></a>Novedades de C++/WinRT
 
@@ -154,11 +154,11 @@ Esta optimización evita las dependencias #include en `module.g.cpp` de modo que
 
 #### <a name="smarter-and-more-efficient-modulegcpp-for-large-projects-with-multiple-libs"></a>`module.g.cpp` más inteligente y eficaz para grandes proyectos con varias bibliotecas
 
-El archivo `module.g.cpp` también contiene ahora dos aplicaciones auxiliares adicionales que admiten composición, denominadas **winrt_can_unload_now** y **winrt_get_activation_factory**. Se han diseñado para proyectos más grandes donde un archivo DLL está compuesto de un número de bibliotecas, cada una con sus propias clases de entorno de ejecución. En esa situación, debes unir manualmente **DllGetActivationFactory** y **DllCanUnloadNow** de la DLL. Estas aplicaciones auxiliares hacen que sea mucho más fácil para ti hacer esto, al evitar errores de origen falsos. La marca `-lib` de la herramienta `cppwinrt.exe` también se puede utilizar para dar a cada biblioteca individual su propio preámbulo (en lugar de `winrt_xxx`), de modo que las funciones de cada biblioteca se puedan nombrar individualmente y, por lo tanto, combinarse de forma inequívoca.
+El archivo `module.g.cpp` también contiene ahora dos asistentes adicionales que admiten composición, denominados **winrt_can_unload_now** y **winrt_get_activation_factory**. Se han diseñado para proyectos más grandes donde un archivo DLL está compuesto de un número de bibliotecas, cada una con sus propias clases de entorno de ejecución. En esa situación, debes unir manualmente **DllGetActivationFactory** y **DllCanUnloadNow** de la DLL. Estos asistentes hacen que sea mucho más fácil para ti hacer esto, al evitar errores de origen falsos. La marca `-lib` de la herramienta `cppwinrt.exe` también se puede utilizar para dar a cada biblioteca individual su propio preámbulo (en lugar de `winrt_xxx`), de modo que las funciones de cada biblioteca se puedan nombrar individualmente y, por lo tanto, combinarse de forma inequívoca.
 
 #### <a name="coroutine-support"></a>Compatibilidad con corrutinas
 
-La compatibilidad con corrutinas se incluye automáticamente. Anteriormente, la compatibilidad residía en varios lugares, lo que nos parecía demasiado restrictivo. Y luego, temporalmente para la versión 2.0, era necesario un archivo de encabezado `winrt/coroutine.h`, pero ya no lo es. Dado que ahora se generan las interfaces asincrónicas de Windows Runtime, en lugar de escribirse a mano, ahora residen en `winrt/Windows.Foundation.h`. Aparte de ser más fácil de mantener y de dar soporte, significa que las aplicaciones auxiliares de las corrutinas como [**resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) ya no tienen que agregarse al final de un encabezado de espacio de nombres específico. En cambio, pueden incluir de forma más natural sus dependencias. Esto permite además a **resume_foreground** admitir no solo la reanudación en una función [**Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher) determinada, sino que ahora también puede admitir la reanudación en una función [**Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue) determinada. Anteriormente, solo se podía admitir una, pero no ambas, ya que la definición solo podía residir en un espacio de nombres.
+La compatibilidad con corrutinas se incluye automáticamente. Anteriormente, la compatibilidad residía en varios lugares, lo que nos parecía demasiado restrictivo. Y luego, temporalmente para la versión 2.0, era necesario un archivo de encabezado `winrt/coroutine.h`, pero ya no lo es. Dado que ahora se generan las interfaces asincrónicas de Windows Runtime, en lugar de escribirse a mano, ahora residen en `winrt/Windows.Foundation.h`. Aparte de ser más fácil de mantener y de dar soporte, significa que los asistentes de corrutinas como [**resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) ya no tienen que agregarse al final de un encabezado de espacio de nombres específico. En cambio, pueden incluir de forma más natural sus dependencias. Esto permite además a **resume_foreground** admitir no solo la reanudación en una función [**Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher) determinada, sino que ahora también puede admitir la reanudación en una función [**Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue) determinada. Anteriormente, solo se podía admitir una, pero no ambas, ya que la definición solo podía residir en un espacio de nombres.
 
 Este es un ejemplo de la compatibilidad de **DispatcherQueue**.
 
@@ -180,7 +180,7 @@ fire_and_forget Async(DispatcherQueueController controller)
 }
 ```
 
-Las aplicaciones auxiliares de la corrutina ahora se representan también con `[[nodiscard]]`, lo que mejora su facilidad de uso. Si te olvidas de aplicar `co_await` (o no te das cuenta de hacerlo) para que funcionen, debido a `[[nodiscard]]`, esos errores ahora producen una advertencia del compilador.
+Los asistentes de corrutina ahora se representan también con `[[nodiscard]]`, lo que mejora su facilidad de uso. Si te olvidas de aplicar `co_await` (o no te das cuenta de hacerlo) para que funcionen, debido a `[[nodiscard]]`, esos errores ahora producen una advertencia del compilador.
 
 #### <a name="help-with-diagnosing-direct-stack-allocations"></a>Ayuda con el diagnóstico de las asignaciones directas (de pilas)
 
@@ -190,7 +190,7 @@ Para obtener más información, consulta [Diagnóstico de asignaciones directas]
 
 #### <a name="improved-capture-helpers-and-variadic-delegates"></a>Aplicaciones auxiliares de captura mejoradas y delegados variádicos
 
-Esta actualización corrige la limitación con las aplicaciones auxiliares de captura al admitir también los tipos proyectados. Esto aparece de vez en cuando con las API de interoperabilidad de Windows Runtime, cuando devuelven un tipo proyectado.
+Esta actualización corrige la limitación con los asistentes de captura al admitir también los tipos proyectados. Esto aparece de vez en cuando con las API de interoperabilidad de Windows Runtime, cuando devuelven un tipo proyectado.
 
 Esta actualización también agrega compatibilidad para [**get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) y [**get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function) al crear un delegado variádico (que no sea de Windows Runtime).
 
@@ -255,7 +255,7 @@ struct MainPage : PageT<MainPage>
 };
 ```
 
-Para obtener más información, consulta Destrucción diferida](/windows/uwp/cpp-and-winrt-apis/details-about-destructors#deferred-destruction).
+Para obtener más información, consulta [Destrucción diferida](/windows/uwp/cpp-and-winrt-apis/details-about-destructors#deferred-destruction).
 
 #### <a name="improved-support-for-com-style-single-interface-inheritance"></a>Compatibilidad mejorada para la herencia de interfaz única de estilo COM
 
@@ -283,7 +283,7 @@ En la tabla siguiente se incluyen las noticias y los cambios de C++/WinRT en la 
 | Ha cambiado el formato del sistema de proyecto de Visual Studio. | Consulta [Procedimientos para redestinar el proyecto de C++/WinRT a una versión posterior de Windows SDK](#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
 | Hay nuevas funciones y clases base para ayudar a pasar un objeto de colección a una función de Windows Runtime o implementar tus propias propiedades de la colección y los tipos de colección. | Consulta [Colecciones con C++/WinRT](collections.md). |
 | Puedes usar la extensión de marcado [{Binding}](/windows/uwp/xaml-platform/binding-markup-extension) con tus clases del entorno de ejecución de C++/WinRT. | Para obtener más información y ejemplos de código, consulta [Introducción al enlace de datos](/windows/uwp/data-binding/data-binding-quickstart). |
-| La compatibilidad con la cancelación de una corrutina te permite registrar una devolución de llamada de cancelación. | Para obtener más información y ejemplos de código, consulta [Cancelación de una operación asincrónica y devoluciones de llamadas de cancelación](concurrency-2.md#canceling-an-asychronous-operation-and-cancellation-callbacks). |
+| La compatibilidad con la cancelación de una corrutina te permite registrar una devolución de llamada de cancelación. | Para obtener más información y ejemplos de código, consulta [Cancelación de una operación asincrónica y devoluciones de llamadas de cancelación](concurrency-2.md#canceling-an-asynchronous-operation-and-cancellation-callbacks). |
 | Al crear un delegado que apunta a una función de miembro, puedes establecer una referencia fuerte o débil al objeto actual (en lugar de un puntero *this* básico) en el punto en el que se registra el controlador. | Para obtener información y ejemplos de código, consulta la subsección **Si usas una función miembro como delegado** en la sección [Acceso seguro al puntero *this* con un delegado de control de eventos](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate). |
 | Se han corregido los errores que se detectaron por la mejor conformidad de Visual Studio con el estándar C++. La cadena de herramientas LLVM y Clang también se aprovechan mejor para validar la conformidad con los estándares de C++/WinRT. | Ya no te encontrarás con el problema descrito en [¿Por qué no se va a compilar mi nuevo proyecto? Estoy usando Visual Studio 2017 (versión 15.8.0 o superior) y el SDK versión 17134](faq.md#why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134) |
 

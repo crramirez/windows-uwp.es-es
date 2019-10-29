@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 804f1994e187d3b09ed4dcb2186105cf615f5de0
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: f2c63c90170a633ae718db618c502efa41fb3f7d
+ms.sourcegitcommit: 807dadf5eceb576aba3ad898a6e9bf12129e94a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820501"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72680762"
 ---
 # <a name="tutorial-create-custom-styles"></a>Tutorial: Creación de estilos personalizados
 
@@ -36,10 +36,7 @@ La Plataforma universal de Windows (UWP) proporciona varias maneras de personali
 
 Para la primera parte del tutorial, vamos a animar algunos de los controles de edición de fotos. 
 
-<figure>
-    <img src="../basics/images/xaml-basics/slider-start.png" />
-    <figure>*Un sencillo control deslizante con el estilo predeterminado.*</figure>
-</figure>
+![Un sencillo control deslizante con el estilo predeterminado.](../basics/images/xaml-basics/slider-start.png)
 
 Estos controles deslizantes son útiles, hacen todas las cosas que debiera hacer un control deslizante, pero no son muy sofisticados. Vamos a solucionarlo. 
 
@@ -748,8 +745,7 @@ Eso ya lo hicimos, pero hay una forma mejor de lograr el mismo efecto: crear una
             Grid.Row="2" Background="Transparent" Foreground="Transparent"
             Value="{x:Bind item.Exposure, Mode=TwoWay}"
             Minimum="-2"
-            Maximum="2"
-            Template="{StaticResource FancySliderControlTemplate}"/>    
+            Maximum="2" />    
     ```
     
     **Después**

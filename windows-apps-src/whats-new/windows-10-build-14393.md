@@ -1,17 +1,17 @@
 ---
-title: Novedades de Windows 10 para desarrolladores; herramientas y características
+title: Novedades de Windows 10, compilación 14393
 description: Tanto la compilación 14393 de Windows 10 como las nuevas herramientas para desarrolladores le proporcionan las herramientas, características y experiencias que ofrece la tecnología de la nueva Plataforma universal de Windows.
 keywords: conoce las novedades, novedades, actualizar, actualización, actualizaciones, características, nuevo, Windows 10, 1607, julio, el más novedoso, 14393
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
 ms.localizationpriority: medium
-ms.openlocfilehash: b4b887ad49cfdbdea89397105809db0fe6a5ab57
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 713a3f709863fbc073bf48ac4a5de30c737d782b
+ms.sourcegitcommit: a7740ebb14c98cd5afadd52db5cf714522821b49
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282328"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72893061"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-14393"></a>Novedades para desarrolladores en Windows 10, compilación 14393
 
