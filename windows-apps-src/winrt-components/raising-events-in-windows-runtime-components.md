@@ -6,12 +6,12 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6af0df62b3f9b305778460a53e2247e76cce3d97
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 78bc43c26a73a6184e5788ad7d003813e567a8d0
+ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393680"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73052019"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Generación de eventos en componentes de Windows Runtime
 > [!NOTE]
@@ -120,7 +120,7 @@ toastCompletedEventHandler: function (event) {
 
 Para posibles mejoras de rendimiento en los tipos de eventos definidos por el usuario que tienen información de tipo totalmente conservada, tienes que crear tus propios objetos proxy y de código auxiliar e incrustarlos en el paquete de la aplicación. Por lo general, tienes que usar esta opción solo en raras ocasiones donde ninguna de las dos opciones sea adecuada. Además, no hay ninguna garantía de que esta opción proporcione un mejor rendimiento que las otras dos opciones. El rendimiento real depende de muchos factores. Usar el generador de perfiles de Visual Studio u otras herramientas de generación de perfiles para determinar el rendimiento real de tu aplicación y si el evento es en realidad un cuello de botella.
 
-En el resto de este artículo se muestra cómo usar C# para crear un componente básico de Windows Runtime y, a continuación, usar C++ para crear un archivo DLL para que el proxy y el código auxiliar que habilitarán JavaScript puedan consumir un evento Windows.Foundation.TypedEventHandler&lt;TSender, TResult&gt; generado por el componente en una operación asincrónica. (También puedes usar C++ o Visual Basic para crear el componente. Los pasos relacionados con la creación de los proxies y códigos auxiliares son los mismos). Este tutorial se basa en la creación de una Windows Runtime ejemplo de componente enC++proceso (/CX) y ayuda a explicar sus propósitos.
+En el resto de este artículo se muestra cómo usar C# para crear un componente básico de Windows Runtime y, a continuación, usar C++ para crear un archivo DLL para que el proxy y el código auxiliar que habilitarán JavaScript puedan consumir un evento Windows.Foundation.TypedEventHandler&lt;TSender, TResult&gt; generado por el componente en una operación asincrónica. (También puedes usar C++ o Visual Basic para crear el componente. Los pasos que se relacionan con la creación de los servidores proxy y código auxiliar son los mismos). Este tutorial se basa en la creación de una muestra de componente en el proceso de Windows Runtime (C++ / CX) y ayuda a explica sus objetivos.
 
 Este tutorial tiene las siguientes partes:
 
@@ -134,11 +134,11 @@ Este tutorial tiene las siguientes partes:
 
 En la barra de menús de Visual Studio, elige **Archivo &gt; Nuevo proyecto**. En el cuadro de diálogo **Nuevo proyecto** , expande **JavaScript &gt; Universal de Windows** y, a continuación, selecciona **Aplicación vacía**. Nombra el proyecto ToasterApplication y después selecciona el botón **Aceptar**.
 
-Agregue un C# componente de Windows Runtime a la solución: En explorador de soluciones, abra el menú contextual de la solución y, a continuación, elija  **&gt; agregar nuevo proyecto**. Expanda **Visual C# &gt; Microsoft Store** y, a continuación, seleccione **Windows Runtime componente**. Asigna al proyecto el nombre de ToasterComponent y después selecciona el botón **Aceptar** . ToasterComponent será el espacio de nombres de raíz para los componentes que crearás en pasos posteriores.
+Agregar un componente de Windows Runtime de C# a la solución: en el Explorador de soluciones, abre el menú contextual de la solución y, a continuación, elige **Agregar &gt; Nuevo proyecto**. Expanda **Visual C#&gt;Microsoft Store** y seleccione **Windows Runtime componente**. Asigna al proyecto el nombre de ToasterComponent y después selecciona el botón **Aceptar** . ToasterComponent será el espacio de nombres de raíz para los componentes que crearás en pasos posteriores.
 
 En el Explorador de soluciones, abre el menú contextual para la solución y, a continuación, elige **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, selecciona **Propiedades de configuración** en el panel izquierdo y luego, en la parte superior del cuadro de diálogo, establece **Configuración** en **Depurar** y **Plataforma** en x86, x64 o ARM. Elige el botón **Aceptar**.
 
-**Plataforma importante** = cualquier CPU no funcionará porque no es válido para el archivo dll de Win32 de código nativo que agregará a la solución más adelante.
+**Importante** plataforma = cualquier CPU no funcionará porque no es válido para el archivo dll de Win32 de código nativo que agregará a la solución más adelante.
 
 En el Explorador de soluciones, cambia el nombre class1.cs por ToasterComponent.cs para que coincida con el nombre del proyecto. Visual Studio cambia automáticamente el nombre de la clase en el archivo para que coincida con el nuevo nombre de archivo.
 
@@ -146,7 +146,7 @@ En el archivo .cs, agrega una directiva using para el espacio de nombres Windows
 
 Cuando necesitas proxies y códigos auxiliares, tu componente debe utilizar interfaces para exponer sus miembros públicos. En ToasterComponent.cs, define una interfaz para el notificador y otra para la notificación del sistema que produce el notificador.
 
-**Tenga** en C# cuenta que en puede omitir este paso. En su lugar, crea primero una clase y, a continuación, abre su menú contextual y elige **Refactorizar &gt; Extraer interfaz**. En el código que se genera, otorga manualmente acceso público a las interfaces.
+**Tenga** en cuenta C# en puede omitir este paso. En su lugar, crea primero una clase y, a continuación, abre su menú contextual y elige **Refactorizar &gt; Extraer interfaz**. En el código que se genera, otorga manualmente acceso público a las interfaces.
 
 ```csharp
     public interface IToaster
@@ -214,7 +214,7 @@ A continuación, necesitamos clases que implementen estas interfaces y sean púb
 
 En el código anterior, creamos la notificación del sistema y, a continuación, hacemos girar un elemento de trabajo del grupo de subprocesos para iniciar la notificación. Aunque el IDE podría sugerir que apliques la palabra clave "await" para la llamada asincrónica, no es necesario en este caso porque el método no realiza ningún trabajo que dependa de los resultados de la operación.
 
-**Tenga en cuenta** que la llamada asincrónica del código anterior usa ThreadPool. RunAsync únicamente para mostrar una manera sencilla de desencadenar el evento en un subproceso en segundo plano. Este método en concreto se podría escribir como se muestra en el ejemplo siguiente y funcionaría correctamente porque el programador de tareas de .NET automáticamente calcula la referencia de las llamadas asincrónicas y "await" al subproceso de IU.
+**Nota** la llamada asincrónica en el código anterior usa ThreadPool. RunAsync únicamente para mostrar una manera sencilla de desencadenar el evento en un subproceso en segundo plano. Este método en concreto se podría escribir como se muestra en el ejemplo siguiente y funcionaría correctamente porque el programador de tareas de .NET automáticamente calcula la referencia de las llamadas asincrónicas y "await" al subproceso de IU.
   
 ```csharp
     public async void MakeToast(string message)
@@ -279,7 +279,7 @@ El primer paso para crear un proxy y un código auxiliar para un componente, es 
 
 ## <a name="to-generate-guids-for-the-components-interfaces-c-and-other-net-languages"></a>Generar GUID para las interfaces del componente (C# y otros lenguajes. NET)
 
-En la barra de menús, elige Herramientas &gt; Crear GUID. En el cuadro de diálogo, selecciona 5. \[GUID ("xxxxxxxx-xxxx... XXXX)\]. Elige el botón Nuevo GUID y, a continuación, elige el botón Copiar.
+En la barra de menús, elige Herramientas &gt; Crear GUID. En el cuadro de diálogo, selecciona 5. GUID \[("xxxxxxxx-xxxx... XXXX ")\]. Elige el botón Nuevo GUID y, a continuación, elige el botón Copiar.
 
 ![herramienta del generador de GUID](./images/guidgeneratortool.png)
 
@@ -326,10 +326,10 @@ winmdidl /outdir:output "$(TargetPath)"
 midl /metadata_dir "%WindowsSdkDir%References\CommonConfiguration\Neutral" /iid "$(ProjectDir)$(TargetName)_i.c" /env win32 /h "$(ProjectDir)$(TargetName).h" /winmd "Output\$(TargetName).winmd" /W1 /char signed /nologo /winrt /dlldata "$(ProjectDir)dlldata.c" /proxy "$(ProjectDir)$(TargetName)_p.c" "Output\$(TargetName).idl"
 ```
 
-**Importante para una**configuración de proyecto ARM o x64, cambie el parámetro MIDL/env a x64 o ARM32.  
+  **importante** para una configuración de proyecto ARM o x64, cambie el parámetro MIDL/env a x64 o ARM32.
 
 Para asegurarte de que el archivo IDL se vuelve a generar cada vez que se modifica el archivo .winmd, cambia **Ejecutar el evento posterior a la compilación** por **Cuando la compilación actualiza el resultado del proyecto**.
-La página de propiedades eventos de compilación debe ser similar ![a esta: eventos de compilación](./images/buildevents.png)
+La página de propiedades eventos de compilación debe ser similar a esta: ![eventos de compilación](./images/buildevents.png)
 
 Volver a compilar la solución para generar y compilar el archivo IDL.
 
@@ -337,11 +337,11 @@ Puedes verificar que MIDL compila correctamente la solución buscando ToasterCom
 
 ## <a name="to-compile-the-proxy-and-stub-code-into-a-dll"></a>Para compilar el proxy y el código auxiliar en un archivo DLL
 
-Ahora que tienes los archivos necesarios, puedes compilarlos para generar un archivo DLL, que es un archivo de C++. Para que esto sea lo más fácil posible, agrega un nuevo proyecto compatible con la compilación de proxies. Abre el menú contextual para la solución ToasterApplication y, a continuación, selecciona **Agregar > Nuevo Proyecto**. En el panel izquierdo del cuadro de diálogo **nuevo proyecto** , expanda  **C++ &gt; visual &gt; Windows**Windows y, a continuación, en el panel central, seleccione **dll (aplicaciones para UWP)** . (Tenga en cuenta que esto no C++ es un proyecto de componente de Windows Runtime). Asigne un nombre a los servidores proxy del proyecto y elija el botón **Aceptar** . Estos archivos se actualizarán según los eventos posteriores a la compilación cuando cambie algo en la clase de C#.
+Ahora que tienes los archivos necesarios, puedes compilarlos para generar un archivo DLL, que es un archivo de C++. Para que esto sea lo más fácil posible, agrega un nuevo proyecto compatible con la compilación de proxies. Abre el menú contextual para la solución ToasterApplication y, a continuación, selecciona **Agregar > Nuevo Proyecto**. En el panel izquierdo del cuadro de diálogo **nuevo proyecto** , expanda **Visual C++&gt;Windows&gt;ventanas uniuniversales**y, a continuación, en el panel central, seleccione **dll (aplicaciones para UWP)** . (Ten en cuenta que este NO es un proyecto de componente de Windows Runtime de C++). Denomina a este proyecto "Proxies" y selecciona **Aceptar**. Estos archivos se actualizarán según los eventos posteriores a la compilación cuando cambie algo en la clase de C#.
 
 De forma predeterminada, el proyecto Proxies genera archivos de encabezado .h y archivos .cpp de C++. Dado que se compila la DLL a partir de los archivos generados desde MIDL, los archivos .h y .cpp no son necesarios. En el Explorador de soluciones, abre el menú contextual para estos, elige **Quitar**y, a continuación, confirma la eliminación.
 
-Ahora que el proyecto está vacío, puedes volver a agregar los archivos generados por MIDL. Abre el menú contextual del proyecto Proxies y selecciona **Agregar > Elemento existente.** En el cuadro de diálogo, navegue hasta el directorio del proyecto ToasterComponent y seleccione estos archivos: Archivos ToasterComponent. h, ToasterComponent_i. c, ToasterComponent_p. c y dlldata. c. Elige el botón **Agregar**.
+Ahora que el proyecto está vacío, puedes volver a agregar los archivos generados por MIDL. Abre el menú contextual del proyecto Proxies y selecciona **Agregar > Elemento existente.** En el cuadro de diálogo, desplázate hasta el directorio de proyecto ToasterComponent y selecciona estos archivos: archivos ToasterComponent.h, ToasterComponent_i.c, ToasterComponent_p.c y dlldata.c. Elige el botón **Agregar**.
 
 En el proyecto Proxies, crea un archivo .def para definir las exportaciones DLL descritas en dlldata.c. Abre el menú contextual para el proyecto y, a continuación, selecciona **Agregar > Nuevo elemento**. En el panel izquierdo del cuadro de diálogo, selecciona Código y, a continuación, en el panel central, selecciona el archivo de definición de módulos. Asigna en nombre de proxies.def al archivo y, a continuación, elige el botón **Agregar**. Abre este archivo .def y modifícalo para incluir las EXPORTACIONES definidas en dlldata.c:
 
@@ -410,10 +410,10 @@ Pega el nodo de Extensiones XML como un elemento secundario directo del nodo Pac
 
 Antes de continuar, es importante asegurarse de que:
 
--   El classid ProxyStub se establece en el primer GUID del archivo ToasterComponent\_i. c. Se usa el primer GUID que se define en este archivo en el identificador de clase. (Puede ser el mismo que el GUID para ITypedEventHandler2.)
+-   El ClassId ProxyStub se establece en el primer GUID del archivo ToasterComponent\_i. c. Se usa el primer GUID que se define en este archivo en el identificador de clase. (Puede ser el mismo que el GUID para ITypedEventHandler2.)
 -   La ruta de acceso es el paquete de la ruta de acceso relativa del proxy binario. (En este tutorial, proxies.dll está en la misma carpeta que ToasterApplication.winmd).
 -   Los GUID están en el formato correcto. (Es fácil equivocarse en este paso).
--   Los identificadores de interfaz del manifiesto coinciden con los\_IID del archivo ToasterComponent i. c.
+-   Los identificadores de interfaz del manifiesto coinciden con los IID de ToasterComponent\_archivo i. c.
 -   Los nombres de interfaz son únicos en el manifiesto. Como el sistema no los usa, puedes elegir los valores. Es una buena práctica para elegir nombres de interfaz que claramente coincidan con las interfaces que has definido. En cuanto a las interfaces generadas, los nombres deben ser indicativos de esas interfaces generadas. Puede usar el archivo ToasterComponent\_i. c para ayudarle a generar nombres de interfaz.
 
 Si intentas ejecutar la solución ahora, obtendrás un error según el cual proxies.dll no forma parte de la carga. Abre el menú contextual para la carpeta **Referencias** en el proyecto ToasterApplications y, a continuación, elige **Agregar referencia**. Selecciona la casilla de verificación situada junto al proyecto Proxy. Además, asegúrate de que la casilla de verificación junto a ToasterComponent también se selecciona. Elige el botón **Aceptar**.
@@ -422,4 +422,4 @@ Ahora debería compilarse el proyecto. Ejecuta el proyecto y verifica que puedes
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Windows Runtime componentes con C++/CX](creating-windows-runtime-components-in-cpp.md)
+* [Componentes de Windows Runtime con C++/CX](creating-windows-runtime-components-in-cpp.md)

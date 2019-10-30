@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e00aa383bcce17b7cd6b67514647c2f6137cc32
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f86ab8b3e55b7680c5ba3e47c37d1cda8c42cebb
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601950"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73062005"
 ---
 # <a name="spring-animations"></a>Animaciones de muelle
 
@@ -20,14 +20,14 @@ En este artículo se muestra cómo usar NaturalMotionAnimations de muelle.
 
 En este artículo damos por hecho que estás familiarizado con los conceptos tratados en estos artículos:
 
-- [Animaciones de movimiento natural](natural-animations.md)
+- [Animaciones de movimiento naturales](natural-animations.md)
 
 ## <a name="why-springs"></a>¿Por qué los muelles?
 
 Los muelles son una experiencia de movimiento común que todos hemos experimentado en algún momento en nuestras vidas; desde juguetes ondulantes a experimentos en clase de física con un bloque atado a un muelle. El movimiento oscilante de un muelle a menudo provoca una respuesta emocional alegre y desenfadada de quienes lo ven. Como resultado, el movimiento de un muelle se traslada bien a la interfaz de usuario de la aplicación para quienes quieren crear una experiencia de movimiento más alegre que sorprenda más al usuario final que un Cubic Bezier tradicional. En estos casos, el movimiento del muelle no solo crea una experiencia de movimiento más alegre, sino que también puede ayudar a llamar la atención respecto a un contenido nuevo o que se anime en ese momento. En función el idioma de personalización de marca o movimiento de la aplicación, la oscilación es más pronunciada y visible, pero en otros casos es más sutil.
 
-![Movimiento con animaciones de muelle](images/animation/offset-spring.gif)
-![movimiento con la animación de Bézier cúbica](images/animation/offset-cubic-bezier.gif)
+![movimiento con animación Spring](images/animation/offset-spring.gif)
+movimiento de![con animación Bézier cúbica](images/animation/offset-cubic-bezier.gif)
 
 ## <a name="using-springs-in-your-ui"></a>Uso de muelles en la interfaz de usuario
 
@@ -92,12 +92,12 @@ private void Button_Clicked(object sender, RoutedEventArgs e)
  {
  _expanded = true;
  _propSet.InsertBoolean("expanded", true);
- _springAnimation.InitialValueExpression[“FinalValue”] = “this.StartingValue + 250”;
+ _springAnimation.InitialValueExpression["FinalValue"] = "this.StartingValue + 250";
  } else
  {
  _expanded = false;
  _propSet.InsertBoolean("expanded", false);
-_springAnimation.InitialValueExpression[“FinalValue”] = “this.StartingValue - 250”;
+_springAnimation.InitialValueExpression["FinalValue"] = "this.StartingValue - 250";
  }
  _naviPane.StartAnimation("Offset.X", _springAnimation);
 }
@@ -152,9 +152,9 @@ En resumen, los pasos para usar una animación de muelle en la aplicación son:
 1. Crea tu SpringAnimation en el compositor.
 1. Define las propiedades de la SpringAnimation si deseas valores que no sean los predeterminados:
     - DampingRatio
-    - Período
+    - Period
     - Final Value
-    - Valor inicial
+    - Initial Value
     - Initial Velocity
 1. Asigna a un destino.
     - Si vas a animar una propiedad de CompositionObject, pasa SpringAnimation como parámetro a StartAnimation.

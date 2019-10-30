@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd9071eaaea0dd88a3dad06de78eff82b29725ec
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 41f1c19f62482dc28bc067adb2e60b2c6fafa509
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820238"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061895"
 ---
 # <a name="my-people-notifications"></a>Notificaciones de Mis allegados
 
@@ -21,7 +21,7 @@ Las notificaciones de Mis allegados proporcionan una nueva forma para que los us
 ## <a name="requirements"></a>Requisitos
 
 + Windows 10 y Microsoft Visual Studio 2019. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++ Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="how-it-works"></a>Cómo funciona
 
@@ -42,24 +42,24 @@ Como alternativa a las notificaciones del sistema genéricas, ahora puedes envia
 Las notificaciones de Mis allegados usan el marco de [notificaciones del sistema](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md), pero requieren un nodo de enlace adicional en la carga de notificaciones. Este segundo enlace debe incluir el parámetro siguiente:
 
 ```xml
-experienceType=”shoulderTap”
+experienceType="shoulderTap"
 ```
 
 Esto indica que la notificación del sistema debe tratarse como una notificación de Mis allegados.
 
 El nodo de la imagen del interior del enlace debe incluir los siguientes parámetros:
 
-+ **src**
++ **diez**
     + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local.
-+ **spritesheet-src**
++ **spritesheet: src**
     + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local. Solo es necesaria para animaciones de spritesheet.
-+ **spritesheet-height**
++ **spritesheet: alto**
     + Altura del fotograma (en píxeles). Solo es necesaria para animaciones de spritesheet.
 + **spritesheet-fps**
     + Fotogramas por segundo (FPS). Solo es necesaria para animaciones de spritesheet. Solo se admiten los valores 1-120.
 + **spritesheet-startingFrame**
     + Número de fotogramas para comenzar la animación. Solo se usa para animaciones de spritesheet y, de no facilitarse, su valor predeterminado es 0.
-+ **alt**
++ **alternativa**
     + Cadena de texto que se usa para la narración del lector de pantalla.
 
 > [!NOTE]
@@ -68,11 +68,11 @@ El nodo de la imagen del interior del enlace debe incluir los siguientes paráme
 Además, el nodo del sistema de nivel superior debe incluir el parámetro **hint-people** para especificar el contacto remitente. Este parámetro puede tener cualquiera de los valores siguientes:
 
 + **Dirección de correo electrónico** 
-    + Por ejemplo, ` mailto:johndoe@mydomain.com `
+    + P. ej. ` mailto:johndoe@mydomain.com `
 + **Número de teléfono** 
-    + Por ejemplo, tel:888-888-8888
-+ **Id. remoto** 
-    + Por ejemplo, remoteid:1234
+    + P. ej. tel:888-888-8888
++ **ID. remoto** 
+    + P. ej. remoteid:1234
 
 > [!NOTE]
 > Si tu aplicación utiliza las [API ContactStore](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) y la propiedad [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para vincular contactos almacenados en el PC con contactos almacenados de forma remota, es esencial que el valor de la propiedad RemoteId sea único y estable. Esto significa que el identificador remoto debe identificar de forma consistente una sola cuenta de usuario y debería contener una etiqueta única que no entre en conflicto con los identificadores remotos de otros contactos del PC, incluidos los contactos propiedad de otras aplicaciones.
@@ -150,8 +150,8 @@ No obstante, hay algunos casos en los que una notificación de Mis allegados se 
 
 Si una notificación de Mis allegados vuelve a ser notificación del sistema, se omite el segundo enlace específico de Mis allegados, y solo se usa el primer enlace para visualizar la notificación del sistema. Por eso es fundamental proporcionar una carga de reserva en el primer enlace de notificación del sistema.
 
-## <a name="see-also"></a>Vea también
-+ [Mi ejemplo de notificaciones de personas](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
-+ [Admitir agregar personas de mi](my-people-support.md)
-+ [Notificaciones del sistema adaptable](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
+## <a name="see-also"></a>Consulta también
++ [Ejemplo de notificaciones de mis personas](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
++ [Incorporación de compatibilidad con mis personas](my-people-support.md)
++ [Notificaciones del sistema adaptables](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
 + [Clase ToastNotification](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification)

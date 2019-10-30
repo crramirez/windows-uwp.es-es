@@ -1,82 +1,82 @@
 ---
-title: Agregar características de demostración (RDX) de venta directa a la aplicación
-description: Preparación de la aplicación para el modo de demostración de minoristas, ayudando a exhibir su aplicación en el piso de ventas minoristas.
+title: Agregar características de demostración comercial (RDX) a la aplicación
+description: Prepare la aplicación para el modo de demostración comercial, ayudando a exhibir su aplicación en el piso de ventas minoristas.
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, aplicación de demostración comercial
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c9f31da8e2509c41715a13fbc0bb0322782340a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5be39760ee2b8837cfb9b0809a354262e790970b
+ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366525"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73052001"
 ---
-# <a name="add-retail-demo-rdx-features-to-your-app"></a>Agregar características de demostración (RDX) de venta directa a la aplicación
+# <a name="add-retail-demo-rdx-features-to-your-app"></a>Agregar características de demostración comercial (RDX) a la aplicación
 
 Incluye un modo de prueba comercial en la aplicación de Windows para que los clientes que prueben equipos PC y dispositivos en la zona de ventas puedan comenzar de inmediato.
 
-Cuando los clientes están en una tienda minorista, esperan poder probar las demostraciones de equipos y dispositivos. A menudo dedican un fragmento considerable de su tiempo a jugar con las aplicaciones a través de la [venta por menor experiencia de demostración (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience).
+Cuando los clientes están en una tienda, esperan poder probar demostraciones de equipos y dispositivos. A menudo, emplean un fragmento considerable de su tiempo jugando con las aplicaciones a través de la [experiencia de demostración comercial (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience).
 
-Puede configurar la aplicación para proporcionar experiencias diferentes de _normal_ o _retail_ modos. Por ejemplo, si la aplicación se inicia con un proceso de instalación, puede omitir en el modo de venta directa y rellenar previamente la aplicación con la configuración predeterminada y los datos de ejemplo, por lo que puede comenzar de inmediato.
+Puede configurar la aplicación para proporcionar diferentes experiencias en los modos _normal_ o _comercial_ . Por ejemplo, si la aplicación se inicia con un proceso de instalación, puede omitirla en modo comercial y rellenar previamente la aplicación con los datos de ejemplo y la configuración predeterminada para que puedan saltarse de inmediato.
 
-Desde la perspectiva de nuestros clientes, hay solo una aplicación. Para ayudar a los clientes distinguir entre los dos modos, se recomienda que mientras la aplicación está en modo de venta directa, muestra la palabra "Comercial" forma destacada en la barra de título o en una ubicación adecuada.
+Desde la perspectiva de nuestros clientes, solo hay una aplicación. Para ayudar a los clientes a distinguir entre los dos modos, se recomienda que, mientras la aplicación esté en modo comercial, se muestre la palabra "Retail" de forma destacada en la barra de título o en una ubicación adecuada.
 
-Además de los requisitos de Microsoft Store para aplicaciones, aplicaciones basadas en RDX también deben ser compatibles con el programa de instalación RDX, limpieza y procesos de actualización para asegurarse de que los clientes tengan una experiencia positiva en la tienda.
+Además de los requisitos de Microsoft Store para las aplicaciones, las aplicaciones compatibles con RDX también deben ser compatibles con los procesos de instalación, limpieza y actualización de RDX para asegurarse de que los clientes tienen una experiencia sistemáticamente positiva en la tienda.
 
 ## <a name="design-principles"></a>Principios de diseño
 
-* **Mostrar la mejor**. Usar la experiencia de demostración de venta directa a showcase por qué la aplicación es impresionante. Esto es probable que la primera vez que sus clientes podrán ver su aplicación, por lo que muestran lo mejor!
+* **Mostrar el mejor**. Utilice la experiencia de demostración comercial para mostrar el motivo de la aplicación. Es probable que sea la primera vez que el cliente vea la aplicación, por lo que debe mostrarle la mejor opción.
 
-* **Mostrar rápido**. Los clientes pueden impacientarse. Por eso, cuanto más rápido puedan experimentar el valor real de la aplicación, mejor.
+* **Mostrarlo rápidamente**. Los clientes pueden impacientarse. Por eso, cuanto más rápido puedan experimentar el valor real de la aplicación, mejor.
 
-* **Simplificar la historia**. La experiencia de demostración de venta directa es una propuesta de elevador para el valor de la aplicación.
+* **Conserve la historia en simple**. La experiencia de demostración comercial es un paso de montacargas para el valor de la aplicación.
 
-* **Centrarse en la experiencia**. Permite que el usuario tenga tiempo para asimilar el contenido. Si bien es importante llevarlo a la mejor parte rápido, diseñar pausas adecuadas puede ayudarlo a disfrutar completamente de la experiencia.
+* **Céntrese en la experiencia**. Permite que el usuario tenga tiempo para asimilar el contenido. Si bien es importante llevarlo a la mejor parte rápido, diseñar pausas adecuadas puede ayudarlo a disfrutar completamente de la experiencia.
 
 ## <a name="technical-requirements"></a>Requisitos técnicos
 
-Como aplicaciones dependientes del RDX están diseñadas para presentar mejor de su aplicación a los clientes por menor, deben cumplir los requisitos técnicos y cumplir las normas de privacidad que tiene la Microsoft Store para todas las aplicaciones de experiencia de demostración de venta directa.
+Dado que las aplicaciones compatibles con RDX están pensadas para exhibir lo mejor de su aplicación a los clientes minoristas, deben cumplir los requisitos técnicos y cumplir los reglamentos de privacidad que el Microsoft Store tiene para todas las aplicaciones de la experiencia de demostración comercial.
 
-Esto puede usarse como una lista de comprobación para ayudarle a prepararse para el proceso de validación y para proporcionar mayor claridad en el proceso de pruebas. Ten en cuenta que estos requisitos deben mantenerse no solo para el proceso de validación, sino para toda la duración de la aplicación de experiencia de demostración comercial, siempre que la aplicación se siga ejecutando en los dispositivos de demostración comercial.
+Se puede usar como una lista de comprobación para ayudarle a preparar el proceso de validación y para proporcionar claridad en el proceso de prueba. Ten en cuenta que estos requisitos deben mantenerse no solo para el proceso de validación, sino para toda la duración de la aplicación de experiencia de demostración comercial, siempre que la aplicación se siga ejecutando en los dispositivos de demostración comercial.
 
 ### <a name="critical-requirements"></a>Requisitos críticos
 
-Tan pronto como sea posible RDX compatible con aplicaciones que no cumplen estos requisitos críticos se quitará de todos los dispositivos de demostración de venta directa.
+Las aplicaciones compatibles con RDX que no cumplan estos requisitos críticos se quitarán de todos los dispositivos de demostración de venta directa lo antes posible.
 
-* **No pedir información personal identificable (PII)** . Esto incluye información de inicio de sesión, información de cuenta Microsoft o póngase en contacto con los detalles.
+* **No pida información de identificación personal (PII)** . Esto incluye la información de inicio de sesión, la información de cuenta de Microsoft o los detalles de contacto.
 
-* **Experiencia sin errores**. La aplicación debe ejecutarse sin errores. Además, no deben mostrarse mensajes emergentes o notificaciones de error a los clientes que usan los dispositivos de demostración comercial. Errores reflejan negativamente en la aplicación propia, su marca, marca del dispositivo, marca del fabricante del dispositivo y marca de Microsoft.
+* **Experiencia sin errores**. La aplicación debe ejecutarse sin errores. Además, no deben mostrarse mensajes emergentes o notificaciones de error a los clientes que usan los dispositivos de demostración comercial. Los errores reflejan negativamente en la propia aplicación, en la marca, en la marca del dispositivo, en la marca de manufacturer's del dispositivo y en la marca de Microsoft.
 
-* **Aplicaciones de pago deben tener un modo de prueba**. La aplicación o bien debe una segunda oportunidad o incluir un [modo de prueba](https://docs.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app). Los clientes no esperan tener que pagar por una experiencia en una tienda comercial.
+* Las **aplicaciones de pago deben tener un modo de prueba**. La aplicación debe ser gratuita o incluir un [modo de prueba](https://docs.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app). Los clientes no esperan tener que pagar por una experiencia en una tienda comercial.
 
 ### <a name="high-priority-requirements"></a>Requisitos de alta prioridad
 
-Deben investigarse inmediatamente por una corrección de aplicaciones RDX dependientes que no cumplen estos requisitos de alta prioridad. Si no se encuentra ninguna corrección inmediata, es posible que la aplicación se quite de todos los dispositivos de demostración comercial.
+Las aplicaciones compatibles con RDX que no cumplen estos requisitos de prioridad alta deben investigarse de inmediato para una corrección. Si no se encuentra ninguna corrección inmediata, es posible que la aplicación se quite de todos los dispositivos de demostración comercial.
 
-* **Experiencia sin conexión fácil de recordar**. La aplicación necesita para demostrar una gran experiencia sin conexión como aproximadamente el 50% de los dispositivos están sin conexión en establecimientos comerciales. Esto sirve para garantizar que los clientes que interactúen con la aplicación sin conexión también puedan tener una experiencia positiva y significativa.
+* **Experiencia sin conexión memorable**. La aplicación debe demostrar una excelente experiencia sin conexión, ya que el 50% de los dispositivos están sin conexión en las ubicaciones comerciales. Esto sirve para garantizar que los clientes que interactúen con la aplicación sin conexión también puedan tener una experiencia positiva y significativa.
 
-* **Actualiza la experiencia de contenido**. La aplicación nunca debe ser prompt actualizaciones al estar en línea. Si las actualizaciones son necesarias, debe realizarse en modo silencioso.
+* **Experiencia de contenido actualizada**. La aplicación nunca debe solicitar actualizaciones cuando está en línea. Si se necesitan actualizaciones, deben realizarse de forma silenciosa.
 
-* **No hay comunicación anónima**. Dado que un cliente que usa un dispositivo comercial de demostración es un usuario anónimo, no debe ser capaz de contenido de mensaje o un recurso compartido desde el dispositivo.
+* **Sin comunicación anónima**. Dado que un cliente que usa un dispositivo de demostración comercial es un usuario anónimo, no debe ser capaz de enviar o compartir contenido desde el dispositivo.
 
-* **Entregue experiencias coherentes mediante el proceso de limpieza**. Todos los clientes deben tener la misma experiencia cuando usan un dispositivo de demostración comercial. La aplicación debe usar [proceso de limpieza](#cleanup-process) para volver al estado predeterminado después de cada uso. No queremos que el cliente siguiente para ver lo que el cliente última quedan atrás. Esto incluye marcadores, logros y desbloqueos.
+* **Ofrezca experiencias coherentes mediante el proceso de limpieza**. Todos los clientes deben tener la misma experiencia cuando usan un dispositivo de demostración comercial. La aplicación debe usar el [proceso de limpieza](#cleanup-process) para volver al mismo estado predeterminado después de cada uso. No queremos que el siguiente cliente vea lo que dejó el último cliente. Esto incluye marcadores, logros y desbloqueos.
 
-* **Antigüedad del contenido correspondiente**. Todo el contenido de aplicación debe ser asignada una adolescente o categoría de clasificación inferior. Para obtener más información, consulte [publique su aplicación clasificados por IARC](https://www.globalratings.com/for-developers.aspx) y [clasificaciones ESRB](https://www.esrb.org/ratings/ratings_guide.aspx).
+* **Contenido adecuado de edad**. Todo el contenido de la aplicación debe tener asignado un adolescente o una categoría de clasificación inferior. Para obtener más información, consulte [obtención de la aplicación clasificada por IARC](https://www.globalratings.com/for-developers.aspx) y [ESRB ratings](https://www.esrb.org/ratings/ratings_guide.aspx).
 
-### <a name="medium-priority-requirements"></a>Requisitos de prioridad Media
+### <a name="medium-priority-requirements"></a>Requisitos de prioridad media
 
 Es posible que el equipo de la tienda comercial de Windows se ponga en contacto directamente con los desarrolladores para analizar cómo solucionar estos problemas.
 
-* **Capacidad de ejecutar correctamente a través de una variedad de dispositivos**. Las aplicaciones deben ejecutar también en todos los dispositivos, incluidos los dispositivos con las especificaciones de bajo perfil. Si la aplicación se instala en dispositivos que no cumple las especificaciones mínimas, la aplicación necesita claramente informar al usuario sobre esto. Los requisitos mínimos del dispositivo deben notificarse para que la aplicación siempre pueda ejecutarse con un alto rendimiento.
+* **Capacidad para ejecutarse correctamente en una variedad de dispositivos**. Las aplicaciones deben ejecutarse correctamente en todos los dispositivos, incluidos los dispositivos con especificaciones de low-end. Si la aplicación está instalada en dispositivos que no cumplen las especificaciones mínimas, la aplicación debe informar claramente al usuario sobre esto. Los requisitos mínimos del dispositivo deben notificarse para que la aplicación siempre pueda ejecutarse con un alto rendimiento.
 
-* **Cumplir requisitos de tamaño de aplicación de tienda minorista**. El tamaño de la aplicación debe ser inferior a 800 MB. Póngase en contacto con el equipo de Windows Retail Store directamente para obtener más información sobre si la aplicación compatible con RDX no cumple los requisitos de tamaño.
+* **Cumplir los requisitos de tamaño**de la aplicación de la tienda minorista. El tamaño de la aplicación debe ser inferior a 800 MB. Póngase en contacto directamente con el equipo de la tienda Windows para obtener más información si su aplicación compatible con RDX no cumple los requisitos de tamaño.
 
-## <a name="retailinfo-api-preparing-your-code-for-demo-mode"></a>RetailInfo API: Preparar el código para el modo de demostración
+## <a name="retailinfo-api-preparing-your-code-for-demo-mode"></a>RetailInfo API: preparación del código para el modo de demostración
 
 ### <a name="isdemomodeenabled"></a>IsDemoModeEnabled
-El [ **IsDemoModeEnabled** ](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) propiedad en el [ **RetailInfo** ](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo) clase de utilidad, que forma parte de la [ Windows.System.Profile](https://docs.microsoft.com/uwp/api/windows.system.profile) espacio de nombres en el SDK de Windows 10, se usa como un valor booleano que indica para especificar qué ruta de acceso de código que se ejecuta la aplicación - la _normal_ modo o la _retail_ modo.
+La propiedad [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) de la clase de utilidad [**RetailInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo) , que forma parte del espacio de nombres [Windows. System. Profile](https://docs.microsoft.com/uwp/api/windows.system.profile) en el SDK de Windows 10, se usa como un indicador booleano para especificar la ruta de acceso de código en la que se ejecuta la aplicación: la _normal_ o el modo de _venta directa_ .
 
 ``` csharp
 using Windows.Storage;
@@ -86,10 +86,10 @@ StorageFolder folder = ApplicationData.Current.LocalFolder;
 if (Windows.System.Profile.RetailInfo.IsDemoModeEnabled) 
 {
     // Use the demo specific directory
-    folder = await folder.GetFolderAsync(“demo”);
+    folder = await folder.GetFolderAsync("demo");
 }
 
-StorageFile file = await folder.GetFileAsync(“hello.txt”);
+StorageFile file = await folder.GetFileAsync("hello.txt");
 // Now read from file
 ```
 
@@ -101,9 +101,9 @@ StorageFolder^ localFolder = ApplicationData::Current->LocalFolder;
 if (Windows::System::Profile::RetailInfo::IsDemoModeEnabled) 
 {
     // Use the demo specific directory
-    create_task(localFolder->GetFolderAsync(“demo”).then([this](StorageFolder^ demoFolder)
+    create_task(localFolder->GetFolderAsync("demo").then([this](StorageFolder^ demoFolder)
     {
-        return demoFolder->GetFileAsync(“hello.txt”);
+        return demoFolder->GetFileAsync("hello.txt");
     }).then([this](task<StorageFile^> fileTask)
     {
         StorageFile^ file = fileTask.get();
@@ -112,7 +112,7 @@ if (Windows::System::Profile::RetailInfo::IsDemoModeEnabled)
 }
 else
 {
-    create_task(localFolder->GetFileAsync(“hello.txt”).then([this](StorageFile^ file)
+    create_task(localFolder->GetFileAsync("hello.txt").then([this](StorageFile^ file)
     {
         // Do something with file
     });
@@ -121,13 +121,13 @@ else
 
 ``` javascript
 if (Windows.System.Profile.retailInfo.isDemoModeEnabled) {
-    console.log(“Retail mode is enabled.”);
+    console.log("Retail mode is enabled.");
 } else {
-    Console.log(“Retail mode is not enabled.”);
+    Console.log("Retail mode is not enabled.");
 }
 ```
 
-### <a name="retailinfoproperties"></a>RetailInfo.Properties
+### <a name="retailinfoproperties"></a>RetailInfo. Properties
 
 Cuando [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) devuelve "true", puedes consultar un conjunto de propiedades sobre el dispositivo mediante el uso de [**RetailInfo.Properties**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.properties) para crear una experiencia de demostración comercial más personalizada. Estas propiedades incluyen [**ManufacturerName**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.manufacturername), [**Screensize**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.screensize), [**Memory**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.memory), etcétera.
 
@@ -229,29 +229,29 @@ namespace Windows.System.Profile
 
 ## <a name="cleanup-process"></a>Proceso de limpieza
 
-Limpieza comienza a dos minutos después de un comprador deja de interactuar con el dispositivo. Reproduce la demostración de venta directa, y Windows iniciará al restablecer los datos de ejemplo en los contactos, fotografías y otras aplicaciones. En función del dispositivo, esta operación puede tardar entre 1 y 5 minutos totalmente Restablecer todo a la normalidad. Esto garantiza que todos los clientes en la tienda pueden acercarse a un dispositivo y tener la misma experiencia al interactuar con el dispositivo.
+La limpieza comienza dos minutos después de que un comprador deja de interactuar con el dispositivo. La demostración comercial se reproduce y Windows comienza a restablecer los datos de ejemplo de los contactos, las fotografías y otras aplicaciones. En función del dispositivo, esto podría tardar entre 1-5 minutos en restablecer todo de nuevo a normal. Esto garantiza que todos los clientes de la tienda de venta directa pueden hacer frente a un dispositivo y tener la misma experiencia al interactuar con el dispositivo.
 
-Paso 1: Limpieza
-* Se cierran todas las aplicaciones de Win32 y de la Tienda.
+Paso 1: limpieza
+* Se cierran todas las aplicaciones de Win32 y de la Store.
 * Se eliminan todos los archivos que se encuentran en carpetas conocidas como __Imágenes__, __Vídeos__, __Música__, __Documentos__, __Imágenes guardadas__, __Álbum de cámara__, __Escritorio__ y __Descargas__.
 * Se eliminan los estados de itinerancia estructurados y no estructurados.
 * Se eliminan los estados locales estructurados.
 
-Paso 2:  Programa de instalación
-* Para dispositivos sin conexión: Carpetas permanecen vacías
-* Para dispositivos en línea: Activos de demostración de venta directa se pueden insertar en el dispositivo desde la Microsoft Store
+Paso 2: configuración
+* Para dispositivos sin conexión: las carpetas permanecen vacías
+* Para dispositivos en línea: los activos de demostración comercial pueden insertarse en el dispositivo de Microsoft Store
 
-### <a name="store-data-across-user-sessions"></a>Store datos entre sesiones de usuario
+### <a name="store-data-across-user-sessions"></a>Almacenar datos entre sesiones de usuario
 
-Para almacenar datos en las sesiones de usuario, puede almacenar información en __ApplicationData.Current.TemporaryFolder__ como valor predeterminado el proceso de limpieza no eliminar automáticamente los datos en esta carpeta. Tenga en cuenta esa información almacenada mediante *LocalState* se elimina durante el proceso de limpieza.
+Para almacenar datos en las sesiones de usuario, puede almacenar información en __ApplicationData. Current. TemporaryFolder__ , ya que el proceso de limpieza predeterminado no elimina automáticamente los datos de esta carpeta. Tenga en cuenta que la información almacenada mediante *LocalState* se elimina durante el proceso de limpieza.
 
 ### <a name="customize-the-cleanup-process"></a>Personalizar el proceso de limpieza
 
-Para personalizar el proceso de limpieza, implemente el `Microsoft-RetailDemo-Cleanup` servicio de aplicación en la aplicación.
+Para personalizar el proceso de limpieza, implemente el `Microsoft-RetailDemo-Cleanup` App Service en la aplicación.
 
-Escenarios donde es necesaria una lógica de limpieza personalizada incluye la ejecución de una configuración amplia, descargar y almacenar datos en caché o no que deseen *LocalState* datos va a eliminar.
+Los escenarios en los que se necesita una lógica de limpieza personalizada incluyen la ejecución de una amplia configuración, la descarga y el almacenamiento en caché de los datos, o no la eliminación de los datos de *LocalState* .
 
-Paso 1: Declare el _RetailDemo-Microsoft-limpieza_ servicio en el manifiesto de aplicación.
+Paso 1: declarar el servicio _Microsoft-RetailDemo-Cleanup_ en el manifiesto de la aplicación.
 ``` CSharp
   <Applications>
       <Extensions>
@@ -264,7 +264,7 @@ Paso 1: Declare el _RetailDemo-Microsoft-limpieza_ servicio en el manifiesto de 
 
 ```
 
-Paso 2: Implementar la lógica de limpieza personalizado en el _AppdataCleanup_ función case mediante la plantilla de ejemplo siguiente.
+Paso 2: implemente la lógica de limpieza personalizada en la función _AppdataCleanup_ Case mediante la siguiente plantilla de ejemplo.
 ``` CSharp
 using System;
 using System.IO;
@@ -359,7 +359,7 @@ namespace MyCompany.MyApp
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Store y recuperar datos de la aplicación](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
-* [Cómo crear y consumir un servicio de aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [Almacenar y recuperar datos de la aplicación](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
+* [Cómo crear y usar un servicio de aplicaciones](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
 * [Localizar el contenido de la aplicación](https://docs.microsoft.com/windows/uwp/globalizing/globalizing-portal)
-* [Experiencia de demostración de venta directa (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)
+* [Experiencia de demostración comercial (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)

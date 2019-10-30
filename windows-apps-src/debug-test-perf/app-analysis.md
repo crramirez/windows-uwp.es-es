@@ -5,12 +5,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 138bb762b9b1d424ac8f9c2148b43f230f096458
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e2977877b839f40e07b3eaa03b8349fb8439a401
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362429"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73062750"
 ---
 # <a name="app-analysis-overview"></a>Información general sobre el análisis de la aplicación
 
@@ -22,7 +22,7 @@ Las reglas del análisis de la aplicación se refieren a una directriz o a un pr
 
 ## <a name="decoded-image-size-larger-than-render-size"></a>Tamaño de la imagen descodificada mayor que el tamaño de representación
 
-Las imágenes se capturan en resoluciones muy altas, lo que puede provocar un mayor uso de la CPU por parte de las aplicaciones cuando descodifican los datos de imagen y de más memoria tras su descarga del disco. Pero no tiene sentido descodificar y guardar una imagen de alta resolución en la memoria si se va a mostrar únicamente en un tamaño menor que su tamaño nativo. En su lugar, crea una versión de la imagen que tenga el tamaño exacto que se mostrará en la pantalla mediante las propiedades DecodePixelWidth y DecodePixelHeight.
+Las imágenes se capturan en resoluciones muy altas, lo que puede provocar un mayor uso de la CPU por parte de las aplicaciones cuando descodifican los datos de imagen y más memoria después de que se hayan descargado del disco. Pero no tiene sentido descodificar y guardar una imagen de alta resolución en la memoria si se va a mostrar únicamente en un tamaño menor que su tamaño nativo. En su lugar, crea una versión de la imagen que tenga el tamaño exacto que se mostrará en la pantalla mediante las propiedades DecodePixelWidth y DecodePixelHeight.
 
 ### <a name="impact"></a>Impacto
 
@@ -36,9 +36,9 @@ La aplicación está usando SetSource() en lugar de SetSourceAsync(). Evita usar
 
 #### <a name="image-is-being-called-when-the-imagesource-is-not-in-the-live-tree"></a>Se llama a la imagen cuando la propiedad ImageSource no está en el árbol activo
 
-La clase BitmapImage se conecta al árbol XAML activo después de configurar el contenido con SetSourceAsync o con UriSource. Te recomendamos que asocies siempre una clase [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) al árbol activo antes de establecer el origen. Esto sucederá siempre que especifiques un elemento o pincel de imagen en el marcado. A continuación se proporcionan ejemplos. 
+La clase BitmapImage se conecta al árbol XAML activo después de configurar el contenido con SetSourceAsync o con UriSource. Te recomendamos que asocies siempre una clase [**BitmapImage**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) al árbol activo antes de establecer el origen. Este será el caso que se aplique cada vez que especifiques un elemento o pincel de imagen en el marcado. A continuación se proporcionan ejemplos. 
 
-**Ejemplos de árbol en vivo**
+**Ejemplos de árbol dinámico**
 
 Ejemplo 1 (bueno): Se especifica el identificador uniforme de recursos (URI) en el marcado.
 
@@ -60,7 +60,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-Ejemplo 2 de código subyacente (malo): configuración UriSource del BitmapImage antes de conectarlo al árbol.
+Ejemplo 2 de código subyacente (malo): establecer UriSource de BitmapImage antes de conectarlo al árbol.
 
 ```vb
 var bitmapImage = new BitmapImage();
@@ -70,7 +70,7 @@ myImage.Source = bitmapImage;
 
 #### <a name="image-brush-is-non-rectangular"></a>El pincel de imagen no es rectangular 
 
-Cuando se usa una imagen para un pincel no rectangular, la imagen usará una ruta de acceso de rasterización de software, que en ningún momento escalará las imágenes. Además, debe almacenar una copia de la imagen tanto en la memoria de software como en la de hardware. Por ejemplo, si se usa una imagen como el pincel de una elipse, la totalidad de la imagen potencialmente grande se almacenará internamente dos veces. Al usar un pincel no rectangular, la aplicación debería escalar previamente sus imágenes a aproximadamente el tamaño en el que se presentarán.
+Cuando se usa una imagen para un pincel no rectangular, la imagen usará una ruta de acceso de rasterización de software, que en ningún momento escalará las imágenes. Además, debe almacenar una copia de la imagen tanto en la memoria de software como de hardware. Por ejemplo, si se usa una imagen como el pincel de una elipse, la totalidad de la imagen potencialmente grande se almacenará internamente dos veces. Al usar un pincel no rectangular, la aplicación debería escalar previamente sus imágenes a aproximadamente el tamaño en el que se presentarán.
 
 Como alternativa, puedes establecer un tamaño de descodificación explícito para crear una versión de la imagen con el tamaño exacto que se mostrará en la pantalla mediante las propiedades [**DecodePixelWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelwidth) y [**DecodePixelHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.decodepixelheight).
 
@@ -105,7 +105,7 @@ Para ocultar la imagen, se establece la propiedad Opacity en 0 o Visibility en C
 
 #### <a name="image-is-using-ninegrid-property"></a>La imagen usa la propiedad NineGrid
 
-Cuando se usa una imagen para una propiedad [**NineGrid**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.ninegrid), dicha imagen usará una ruta de acceso de rasterización de software, que en ningún momento escalará las imágenes. Además, debe almacenar una copia de la imagen tanto en la memoria de software como en la de hardware. Si se usa **NineGrid**, la aplicación deberá escalar previamente sus imágenes a aproximadamente el tamaño en el que se presentarán.
+Cuando se usa una imagen para una propiedad [**NineGrid**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.ninegrid), dicha imagen usará una ruta de acceso de rasterización de software, que en ningún momento escalará las imágenes. Además, debe almacenar una copia de la imagen tanto en la memoria de software como de hardware. Si se usa **NineGrid**, la aplicación deberá escalar previamente sus imágenes a aproximadamente el tamaño en el que se presentarán.
 
 Las imágenes que usan la propiedad NineGrid volverán a la descodificación a tamaño natural. Considera la posibilidad de agregar el efecto de ninegrid a la imagen original.
 
@@ -119,7 +119,7 @@ Establece un tamaño de descodificación explícito para crear una versión de l
 
 ## <a name="collapsed-elements-at-load-time"></a>Elementos contraídos en el tiempo de carga
 
-Es un patrón común en las aplicaciones ocultar inicialmente elementos de la interfaz de usuario y mostrarlos en un momento posterior. En la mayoría de los casos, estos elementos deben aplazarse con x:Load o x:DeferLoadStrategy para evitar tener que pagar el costo de crear el elemento en el tiempo de carga.
+Es un patrón común en las aplicaciones es ocultar inicialmente los elementos de la interfaz de usuario y mostrarlos en un momento posterior. En la mayoría de los casos, estos elementos deben aplazarse con x:Load o x:DeferLoadStrategy para evitar tener que pagar el costo de crear el elemento en el tiempo de carga.
 
 Esto incluye los casos donde se usa un valor booleano para el convertidor de visibilidad con el fin de ocultar los elementos hasta un momento posterior.
 
@@ -133,7 +133,7 @@ Esta regla se ha desencadenado porque un elemento se ha contraído en el tiempo 
 
 ### <a name="solution"></a>Solución
 
-Con [x:Load attribute](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute), puedes retrasar la carga de un fragmento de la interfaz de usuario y cargarlo cuando se necesite. Esto es una buena manera de retrasar el procesamiento de la interfaz de usuario que no es visible en el primer fotograma. Puedes optar por cargar el elemento cuando sea necesario o como parte de un conjunto de lógica retrasada. Para activar la carga, llama a findName en el elemento que deseas cargar. x:Load amplía las capacidades de x:DeferLoadStrategy al permitir la descarga de elementos y que el estado de carga se pueda controlar a través de x:Bind.
+Con [x:Load attribute](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute), puedes retrasar la carga de un fragmento de la interfaz de usuario y cargarlo cuando se necesite. Esto es una buena manera de retrasar el procesamiento de la interfaz de usuario que no es visible en el primer fotograma. Puedes optar por cargar el elemento cuando sea necesario o como parte de un conjunto de lógica retrasada. Para activar la carga, llama a findName en el elemento que quieras cargar. x:Load amplía las capacidades de x:DeferLoadStrategy al permitir la descarga de elementos y que el estado de carga se pueda controlar a través de x:Bind.
 
 En algunos casos, el uso de findName para mostrar un elemento de la interfaz de usuario puede que no sea la respuesta. Esto sucede si esperas que una parte importante de la interfaz de usuario se muestre al hacer clic en un botón con una latencia muy baja. En este caso, puedes compensar la latencia de interfaz de usuario más rápida a costa de memoria adicional. De ser así, deberías usar x:DeferLoadStrategy y establecer los objetos Visibility en Collapsed en el elemento que quieras obtener. Una vez que se haya cargado la página y el subproceso de la interfaz de usuario esté libre, puedes llamar a findName cuando sea necesario para cargar los elementos. Los elementos no será visibles para el usuario hasta que establezcas la propiedad Visibility del elemento en Visible.
 
@@ -171,7 +171,7 @@ El código de la plataforma para la interfaz de usuario y el código de la aplic
 
 ### <a name="solution"></a>Solución
 
-La aplicación puede ser interactiva aunque algunas de sus partes no sean totalmente funcionales. Por ejemplo, si la aplicación muestra datos que tardan un poco recuperarse, puedes hacer que ese código se ejecute de forma independiente del código de inicio de la aplicación. Para hacerlo, recupera los datos de forma asincrónica. Cuando los datos estén disponibles, úsalos para rellenar la interfaz de usuario de la aplicación. Para ayudar a mantener la capacidad de respuesta de la aplicación, la plataforma proporciona versiones asincrónicas de muchas de sus API. Una API asincrónica asegura que el subproceso de ejecución activa nunca se bloquee durante un período de tiempo largo. Cuando llames a una API desde el subproceso de la interfaz de usuario, usa la versión asincrónica si está disponible.
+La aplicación puede ser interactiva aunque algunas de sus partes no sean totalmente funcionales. Por ejemplo, si la aplicación muestra datos que tardan un poco recuperarse, puedes hacer que ese código se ejecute de forma independiente del código de inicio de la aplicación. Para hacerlo, recupera los datos de forma asincrónica. Cuando los datos estén disponibles, úsalos para rellenar la interfaz de usuario de la aplicación. Para ayudar a mantener la capacidad de respuesta de la aplicación, la plataforma proporciona versiones asincrónicas de muchas de las API que usa. Una API asincrónica asegura que el subproceso de ejecución activa nunca se bloquee durante un período de tiempo largo. Cuando llames a una API desde el subproceso de interfaz de usuario, usa la versión asincrónica si está disponible.
 
 ## <a name="binding-is-being-used-instead-of-xbind"></a>Se usa {Binding} en lugar de {x: Bind}
 
@@ -209,7 +209,7 @@ Usa x: Key en lugar de x: Name cuando no se haga referencia a recursos desde el 
 
 ## <a name="collections-control-is-using-a-non-virtualizing-panel"></a>El control de colecciones usa un panel sin virtualización
 
-Si proporcionas una plantilla del panel de elementos personalizada (consulta ItemsPanel), asegúrate de usar un panel de virtualización, como ItemsWrapGrid o ItemsStackPanel. Si usas VariableSizedWrapGrid, WrapGrid o StackPanel, no conseguirás virtualización. Además, se generan los siguientes eventos de ListView solo cuando se usa un ItemsWrapGrid o un ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer y ContainerContentChanging.
+Si proporcionas una plantilla del panel de elementos personalizada (consulta ItemsPanel), asegúrate de usar un panel de virtualización, como ItemsWrapGrid o ItemsStackPanel. Si usas VariableSizedWrapGrid, WrapGrid o StackPanel, no conseguirás virtualización. Además, los siguientes eventos de ListView se generan únicamente cuando se usa una clase ItemsWrapGrid o ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer y ContainerContentChanging.
 
 La virtualización de la interfaz de usuario es la mejora más importante que puedes realizar para mejorar el rendimiento de las colecciones. Esto significa que los elementos de la interfaz de usuario que representan los elementos se crean a petición. Para un control de elementos enlazado a una colección de 1000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque todos no pueden mostrarse a la vez. ListView y GridView (y otros controles estándar derivados de ItemsControl) realizan la virtualización de la interfaz de usuario por ti. Cuando los elementos están a punto de desplazarse hacia la vista (a una páginas de distancia), el marco de trabajo genera la interfaz de usuario de los elementos y los almacena. Asimismo, cuando sea improbable que los elementos se muestren de nuevo, el marco de trabajo recuperará la memoria.
 
@@ -227,7 +227,7 @@ Usas un panel que no admite la virtualización.
 
 Usa un panel de virtualización como ItemsWrapGrid o ItemsStackPanel.
 
-## <a name="accessibility-uia-elements-with-no-name"></a>Accesibilidad: Elementos de la UIA sin nombre
+## <a name="accessibility-uia-elements-with-no-name"></a>Accesibilidad: Elementos UIA sin nombre
 
 En XAML, puedes proporcionar un nombre si estableces AutomationProperties.Name. Muchos elementos de automatización del mismo nivel proporcionan un nombre predeterminado para UIA si no se establece AutomationProperties.Name. 
 
@@ -243,9 +243,9 @@ El nombre de UIA del elemento es nulo o está vacío. Esta regla comprueba qué 
 
 Establece la propiedad AutomationProperties.Name en el XAML del control a una cadena localizada adecuada.
 
-A veces la corrección de la aplicación adecuada no es proporcionar un nombre, sino quitar el elemento UIA de todos los árboles excepto los árboles sin procesar. Para hacer eso en XAML, establece AutomationProperties.AccessibilityView = "Raw".
+A veces la corrección de la aplicación adecuada no es proporcionar un nombre, sino quitar el elemento UIA de todos los árboles excepto los árboles sin procesar. Puede hacerlo en XAML estableciendo `AutomationProperties.AccessibilityView = "Raw"`.
 
-## <a name="accessibility-uia-elements-with-the-same-controltype-should-not-have-the-same-name"></a>Accesibilidad: Elementos de la UIA con el mismo Controltype no deben tener el mismo nombre
+## <a name="accessibility-uia-elements-with-the-same-controltype-should-not-have-the-same-name"></a>Accesibilidad: Los elementos UIA con el mismo Controltype no deben tener el mismo nombre
 
 Dos elementos UIA con el mismo elemento primario UIA no deben tener los mismos Name y ControlType. Está bien tener dos controles con el mismo Name si tienen ControlTypes diferentes. 
 

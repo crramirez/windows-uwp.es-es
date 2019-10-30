@@ -4,14 +4,14 @@ title: Esquemas de URI
 template: detail.hbs
 ms.date: 10/16/2017
 ms.topic: article
-keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
+keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: f199d70fc9194f211533820a7b23e20de929752d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7564060e28d3e78608c6f30b1400179087db2b86
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359337"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061850"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -112,7 +112,7 @@ Por supuesto, podrías recuperar también ese mismo archivo físico haciendo ref
 
 El componente de ruta de acceso de `ms-appx(-web)` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. Sin embargo, cuando el sistema de archivos subyacente mediante el cual se accede al recurso distingue entre mayúsculas y minúsculas, como para NTFS, la recuperación del recurso se realiza sin distinguir entre mayúsculas y minúsculas.
 
-La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y '”' (carácter de comilla doble) deben codificarse con caracteres de porcentaje en las rutas de acceso para representar datos como los nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. De esta manera, para recuperar un archivo llamado Hello#World.html, usa este URI.
+La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y "" "(el carácter de comillas dobles) deben estar codificados por porcentaje en una ruta de acceso para representar datos como nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. De esta manera, para recuperar un archivo llamado Hello#World.html, usa este URI.
 
 ```xml
 ms-appx:///Hello%23World.html
@@ -185,7 +185,7 @@ ms-appdata:///roaming/
 
 El componente de ruta de acceso de `ms-appdata` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. Sin embargo, cuando el sistema de archivos subyacente mediante el cual se accede al recurso distingue entre mayúsculas y minúsculas, como para NTFS, la recuperación del recurso se realiza sin distinguir entre mayúsculas y minúsculas.
 
-La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y '”' (carácter de comilla doble) deben codificarse con caracteres de porcentaje en las rutas de acceso para representar datos como los nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. De esta manera, para recuperar un archivo local denominado Hello#World.html, usa este URI.
+La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y "" "(el carácter de comillas dobles) deben estar codificados por porcentaje en una ruta de acceso para representar datos como nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. De esta manera, para recuperar un archivo local denominado Hello#World.html, usa este URI.
 
 ```xml
 ms-appdata://local/Hello%23World.html
@@ -253,9 +253,9 @@ La ruta de acceso identifica la ubicación jerárquica del subárbol [ResourceMa
 
 Para obtener ejemplos y más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md) y [Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).
 
-El componente de ruta de acceso de `ms-resource` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. Sin embargo, la recuperación subyacente no un [CompareStringOrdinal](https://docs.microsoft.com/windows/desktop/api/winstring/nf-winstring-windowscomparestringordinal) con *ignoreCase* establecido en `true`.
+El componente de ruta de acceso de `ms-resource` distingue entre mayúsculas y minúsculas, al igual que los URI genéricos. Sin embargo, la recuperación subyacente realiza una [comparestringordinal (](https://docs.microsoft.com/windows/desktop/api/winstring/nf-winstring-windowscomparestringordinal) con *ignoreCase* establecida en `true`.
 
-La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y '”' (carácter de comilla doble) deben codificarse con caracteres de porcentaje en las rutas de acceso para representar datos como los nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. Por lo tanto, para recuperar un recurso de cadena de un archivo de recursos denominado `Hello#World.resw`, usar este URI.
+La forma normalizada del URI mantiene mayúsculas y minúsculas y decodifica mediante el símbolo de porcentaje (un símbolo "%" seguido de la representación hexadecimal de dos dígitos) los caracteres RFC 3986 no reservados. Los caracteres "?", "#", "/", "*" y "" "(el carácter de comillas dobles) deben estar codificados por porcentaje en una ruta de acceso para representar datos como nombres de archivo o carpeta. Todos los caracteres codificados con símbolos de porcentaje se decodifican antes de la recuperación. Por lo tanto, para recuperar un recurso de cadena de un archivo de recursos denominado `Hello#World.resw`, use este URI.
 
 ```xml
 ms-resource:///Hello%23World/String1
@@ -271,8 +271,8 @@ Los desarrolladores de componentes específicos con capas por encima de este an�
 
 * [Identificador uniforme de recursos (URI): Sintaxis genérica](https://go.microsoft.com/fwlink/p/?LinkId=263444)
 * [Empaquetado de aplicaciones](../packaging/index.md)
-* [Hacer referencia a una imagen u otros activos de código y marcado XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
+* [Referencia a una imagen u otro recurso desde el marcado y el código XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Almacenar y recuperar la configuración y otros datos de aplicación](../design/app-settings/store-and-retrieve-app-data.md)
 * [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md)
 * [Sistema de administración de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))
-* [Icono y notificaciones del sistema compatibilidad con las notificaciones para el idioma, la escala y el contraste alto](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
+* [Compatibilidad con las notificaciones de icono y del sistema para el idioma, la escala y el contraste alto](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
