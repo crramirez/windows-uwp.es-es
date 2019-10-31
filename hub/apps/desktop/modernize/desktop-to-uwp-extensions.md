@@ -8,23 +8,23 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: c99d05a701f41e24663d116773b000017b805d81
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: f51fc081c5cc18132a386197feb2ae76a22d2088
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281805"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142498"
 ---
-# <a name="integrate-your-packaged-desktop-app-with-windows-10-and-uwp"></a>Integración de la aplicación de escritorio empaquetada con Windows 10 y UWP
+# <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>Integración de la aplicación de escritorio con Windows 10 y UWP
 
-Si [empaqueta la aplicación de escritorio en un contenedor de MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root), puede usar extensiones para integrar la aplicación de escritorio empaquetada con Windows 10 mediante el uso de extensiones predefinidas en el [manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root)de la aplicación.
+Si la aplicación de escritorio tiene una [identidad de paquete](modernize-packaged-apps.md), puede usar extensiones para integrar la aplicación con Windows 10 mediante el uso de extensiones predefinidas en el [manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root).
 
-Por ejemplo, use una extensión para crear una excepción de firewall, haga que la aplicación sea la aplicación predeterminada para un tipo de archivo o apunte los iconos de inicio a la versión empaquetada de la aplicación. Para usar una extensión, solo tienes que agregar algunos archivos XML al archivo de manifiesto de paquete de la aplicación. No se requiere ningún tipo de código.
+Por ejemplo, use una extensión para crear una excepción de firewall, haga que la aplicación sea la aplicación predeterminada para un tipo de archivo o coloque iconos de inicio en la aplicación. Para usar una extensión, solo tienes que agregar algunos archivos XML al archivo de manifiesto de paquete de la aplicación. No se requiere ningún tipo de código.
 
 En este artículo se describen estas extensiones y las tareas que puede realizar mediante su uso.
 
 > [!NOTE]
-> Las características descritas en este artículo requieren la creación de un paquete de aplicación de Windows para la aplicación de escritorio. Si todavía no lo ha hecho, consulte [empaquetar aplicaciones de escritorio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root).
+> Las características descritas en este artículo requieren que la aplicación de escritorio tenga la [identidad del paquete](modernize-packaged-apps.md), ya sea [empaquetando la aplicación de escritorio en un paquete MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) o [concediendo la identidad de la aplicación mediante un paquete disperso](grant-identity-to-nonpackaged-apps.md).
 
 ## <a name="transition-users-to-your-app"></a>Proceso de transición de usuarios a la aplicación
 
@@ -44,7 +44,7 @@ Es posible que los usuarios hayan anclado la aplicación de escritorio en la bar
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
-http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3
+`http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -62,7 +62,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre | Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.desktopAppMigration``
+|Categoría |Siempre ``windows.desktopAppMigration``
 |AumID |Identificador de modelo de usuario de aplicación de la aplicación empaquetada. |
 |ShortcutPath |Ruta de acceso a archivos .ink que inician la versión de escritorio de la aplicación. |
 
@@ -103,8 +103,8 @@ Para ello, especifica el [identificador de programación (ProgID)](https://docs.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-* http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
+* `http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -122,7 +122,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.fileTypeAssociation``
+|Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |MigrationProgId |[Identificador de programación (ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids) que describe la aplicación, el componente y la versión de la aplicación de escritorio desde la que se van a heredar las asociaciones de archivo.|
 
@@ -160,10 +160,10 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 Puede asociar la aplicación empaquetada a las extensiones de tipo de archivo. Si un usuario hace clic con el botón secundario en un archivo y, a continuación, selecciona la opción **abrir con** , la aplicación aparece en la lista de sugerencias.
 
-#### <a name="xml-namespace"></a>Espacio de nombres XML
+#### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -181,7 +181,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.fileTypeAssociation``
+|Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre | Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios.   |
 |FileType |Es el archivo de extensión compatible con la aplicación. |
 
@@ -222,9 +222,9 @@ Puedes agregar opciones a ese menú. Estas opciones ofrecen a los usuarios difer
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/2
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/2`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -242,12 +242,12 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category | Siempre ``windows.fileTypeAssociation``
+|Categoría | Siempre ``windows.fileTypeAssociation``
 |Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |Verb |Es el nombre que aparece en el menú contextual del Explorador de archivos. Esta cadena se puede localizar mediante ```ms-resource```.|
 |Id |Es el identificador único del verbo. Si la aplicación es una aplicación de UWP, se pasa a la aplicación como parte de sus argumentos de evento de activación para que pueda controlar la selección del usuario de manera adecuada. Si su aplicación es una aplicación empaquetada de plena confianza, recibirá parámetros en su lugar (consulte la siguiente viñeta). |
 |Parámetros |Es la lista de parámetros de argumento y valores asociados con el verbo. Si la aplicación es una aplicación empaquetada de plena confianza, estos parámetros se pasan a la aplicación como argumentos del evento cuando se activa la aplicación. Puede personalizar el comportamiento de la aplicación en función de los distintos verbos de activación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. Si la aplicación es una aplicación de UWP, no se pueden pasar parámetros. En su lugar, la aplicación recibirá el identificador (consulta el punto anterior).|
-|Extendido |Especifica que el verbo solo debe aparecer si el usuario mantiene presionada la tecla **Mayús** para mostrar el menú contextual, antes de hacer clic con el botón derecho en el archivo. Este atributo es opcional y su valor predeterminado es **false** (por ejemplo, Mostrar siempre el verbo) si no aparece en la lista. Este comportamiento se especifica de forma individual para cada verbo (excepto "Abrir", que siempre es **False**).|
+|Extended |Especifica que el verbo solo debe aparecer si el usuario mantiene presionada la tecla **Mayús** para mostrar el menú contextual, antes de hacer clic con el botón derecho en el archivo. Este atributo es opcional y su valor predeterminado es **false** (por ejemplo, Mostrar siempre el verbo) si no aparece en la lista. Este comportamiento se especifica de forma individual para cada verbo (excepto "Abrir", que siempre es **False**).|
 
 #### <a name="example"></a>Ejemplo
 
@@ -287,8 +287,8 @@ Puede asegurarse de que los usuarios abran la nueva aplicación empaquetada de f
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-* http: \//schemas. Microsoft. com/appx/manifest/UAP/windows10
-* http: \//schemas. Microsoft. com/appx/manifest/UAP/windows10/3 "
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -306,7 +306,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.fileTypeAssociation``
+|Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |UseUrl |Indica si se deben abrir archivos directamente desde una dirección URL de destino. Si no establece este valor, los intentos de la aplicación para abrir un archivo mediante una dirección URL hacen que el sistema descargue primero el archivo localmente. |
 |Parámetros | Parámetros opcionales. |
@@ -349,7 +349,7 @@ Si su aplicación requiere comunicación a través de un puerto, puede Agregar l
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -372,7 +372,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.firewallRules``|
+|Categoría |Siempre ``windows.firewallRules``|
 |Archivo ejecutable |Nombre del archivo ejecutable que quieras agregar a la lista de excepciones del firewall |
 |Direction |Indica si la regla es entrante o saliente |
 |IPProtocol |Protocolo de comunicación |
@@ -415,7 +415,7 @@ Cada paquete puede contener solo una de estas extensiones. Esto significa que pu
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
-http://schemas.microsoft.com/appx/manifest/uap/windows10/6
+`http://schemas.microsoft.com/appx/manifest/uap/windows10/6`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -432,7 +432,7 @@ Declara esta extensión en el nivel de paquete del manifiesto de la aplicación.
 
 |Nombre | Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.loaderSearchPathOverride``
+|Categoría |Siempre ``windows.loaderSearchPathOverride``
 |FolderPath | La ruta de la carpeta que contiene tus archivos dll. Especifica una ruta de acceso relativa a la carpeta raíz del paquete. En una extensión puedes especificar hasta cinco rutas de acceso. Si quieres que el sistema busque archivos en la carpeta raíz del paquete, usa una cadena vacía para una de estas rutas de acceso. No incluyas rutas de acceso duplicados y asegúrate de que las rutas de acceso no contengan barras diagonales iniciales y finales o barras diagonales inversas. <br><br> El sistema no buscará en subcarpetas, por tanto asegúrate de indicar explícitamente cada carpeta que contenga archivos DLL que quieres que cargue el sistema.|
 
 #### <a name="example"></a>Ejemplo
@@ -475,9 +475,9 @@ Especifique cómo se comporta la aplicación cuando un usuario abre varios archi
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/2
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/2`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -497,7 +497,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.fileTypeAssociation``
+|Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |MultiSelectModel |Consulta la información que tienes a continuación. |
 |FileType |Extensiones de archivo relevantes. |
@@ -506,9 +506,9 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 Las aplicaciones de escritorio empaquetadas tienen las mismas tres opciones que las aplicaciones de escritorio normales.
 
-* ``Player``: La aplicación se activa una vez. Todos los archivos seleccionados se pasan a la aplicación como parámetros de argumento.
-* ``Single``: La aplicación se activa una vez para el primer archivo seleccionado. Otros archivos se omiten.
-* ``Document``: Se activa una instancia nueva e independiente de la aplicación para cada archivo seleccionado.
+* ``Player``: la aplicación se activa una vez. Todos los archivos seleccionados se pasan a la aplicación como parámetros de argumento.
+* ``Single``: la aplicación se activa una vez para el primer archivo seleccionado. Otros archivos se omiten.
+* ``Document``: se activa una instancia nueva e independiente de la aplicación para cada archivo seleccionado.
 
  Puedes establecer preferencias diferentes para distintos tipos de archivo y acciones. Por ejemplo, si deseas abrir *documentos* en el modo *Document* y las *imágenes* en el modo *Player*.
 
@@ -549,10 +549,10 @@ Permite que los usuarios vean una imagen en miniatura del contenido del archivo 
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/2
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/2`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -572,7 +572,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.fileTypeAssociation``
+|Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid   |Identificador de clase de la aplicación. |
@@ -612,10 +612,10 @@ Permite que los usuarios obtengan una vista previa del contenido de un archivo e
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/2
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/2`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -634,7 +634,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.fileTypeAssociation``
+|Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid   |Identificador de clase de la aplicación. |
@@ -677,8 +677,8 @@ Para obtener más información sobre el campo **Kind** y los valores que puedes 
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -699,10 +699,10 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.fileTypeAssociation``
+|Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |FileType |Extensiones de archivo relevantes. |
-|valor |[Valor Kind](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names) válido |
+|value |[Valor Kind](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names) válido |
 
 #### <a name="example"></a>Ejemplo
 
@@ -739,9 +739,9 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10`
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -760,7 +760,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.fileTypeAssociation``
+|Categoría |Siempre ``windows.fileTypeAssociation``
 |Nombre |Nombre de la Asociación de tipo de archivo. Puede usar este nombre para organizar y agrupar los tipos de archivo. El nombre debe contener todos los caracteres en minúsculas, sin espacios. |
 |FileType |Extensiones de archivo relevantes. |
 |Clsid  |Identificador de clase de la aplicación. |
@@ -798,8 +798,8 @@ Si la aplicación de escritorio define un [controlador de menú contextual](http
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/foundation/windows10
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10/4
+* `http://schemas.microsoft.com/appx/manifest/foundation/windows10`
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10/4`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -896,7 +896,7 @@ Registra los controladores que se implementan en la aplicación. También puedes
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -916,7 +916,7 @@ Registra los controladores que se implementan en la aplicación. También puedes
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.cloudfiles``
+|Categoría |Siempre ``windows.cloudfiles``
 |iconResource |El icono que representa tu servicio de proveedor de archivos en la nube. Este icono aparece en el panel Navegación del Explorador de archivos.  Los usuarios eligen este icono para mostrar archivos desde tu servicio en la nube. |
 |Clsid CustomStateHandler |IDENTIFICADOR de clase de la aplicación que implementa CustomStateHandler. El sistema usa este id. de clase para solicitar estados personalizados y columnas para archivos de la nube. |
 |Clsid ThumbnailProviderHandler |IDENTIFICADOR de clase de la aplicación que implementa ThumbnailProviderHandler. El sistema usa este id. de clase para solicitar imágenes en miniatura para archivos de la nube. |
@@ -969,7 +969,7 @@ Las asociaciones de protocolos permiten que otros programas y componentes del si
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
-http://schemas.microsoft.com/appx/manifest/uap/windows10/3
+`http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -986,7 +986,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.protocol``
+|Categoría |Siempre ``windows.protocol``
 |Nombre |Nombre del protocolo. |
 |Parámetros |Lista de parámetros y valores que se van a pasar a la aplicación como argumentos de evento cuando se activa la aplicación. Si una variable puede contener una ruta de acceso de archivo, escribe el valor del parámetro entre comillas. Así evitarás cualquier problema si la ruta de acceso incluye espacios. |
 
@@ -1020,8 +1020,8 @@ Los usuarios y otros procesos pueden usar un alias para iniciar la aplicación s
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-* http://schemas.microsoft.com/appx/manifest/uap/windows10/3
-* http://schemas.microsoft.com/appx/manifest/desktop/windows10
+* `http://schemas.microsoft.com/appx/manifest/uap/windows10/3`
+* `http://schemas.microsoft.com/appx/manifest/desktop/windows10`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -1038,7 +1038,7 @@ Los usuarios y otros procesos pueden usar un alias para iniciar la aplicación s
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.appExecutionAlias``
+|Categoría |Siempre ``windows.appExecutionAlias``
 |Archivo ejecutable |Ruta de acceso relativa al archivo ejecutable que se iniciará cuando se llame al alias. |
 |Alias |Nombre corto de la aplicación. Siempre debe acabar con la extensión ".exe". Solo puedes especificar un único alias de ejecución de la aplicación para cada aplicación del paquete. Si varias aplicaciones se registran para el mismo alias, el sistema llamará a la última que se haya registrado, así que asegúrate de elegir un alias exclusivo que sea bastante improbable que otras aplicaciones sustituyan.
 |
@@ -1083,7 +1083,7 @@ Los usuarios pueden deshabilitar manualmente las tareas de inicio de la aplicaci
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -1101,10 +1101,10 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.startupTask``|
+|Categoría |Siempre ``windows.startupTask``|
 |Archivo ejecutable |Ruta de acceso relativa para que se inicie el archivo ejecutable. |
 |TaskId |Identificador único de la tarea. Con este identificador, la aplicación puede llamar a las API de la clase [Windows. ApplicationModel. StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) para habilitar o deshabilitar una tarea de inicio mediante programación. |
-|Enabled |Indica si la tarea que se inicia primero está habilitada o deshabilitada. Las tareas habilitadas se ejecutarán la próxima vez que el usuario inicie sesión (a menos que el usuario las deshabilite). |
+|Habilitado |Indica si la tarea que se inicia primero está habilitada o deshabilitada. Las tareas habilitadas se ejecutarán la próxima vez que el usuario inicie sesión (a menos que el usuario las deshabilite). |
 |DisplayName |Nombre de la tarea que aparece en el Administrador de tareas. Puedes localizar esta cadena mediante ```ms-resource```. |
 
 #### <a name="example"></a>Ejemplo
@@ -1139,7 +1139,7 @@ La reproducción automática puede presentar la aplicación como una opción cua
 
 #### <a name="xml-namespace"></a>Espacio de nombres XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10/3`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -1156,9 +1156,9 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.autoPlayHandler``
-|ActionDisplayName |Una cadena que representa la acción que los usuarios pueden realizar con un dispositivo que se conectan a un equipo (por ejemplo: "Importar archivos" o "reproducir vídeo"). |
-|ProviderDisplayName | Cadena que representa la aplicación o el servicio (por ejemplo: "Reproductor de vídeo de Contoso"). |
+|Categoría |Siempre ``windows.autoPlayHandler``
+|ActionDisplayName |Una cadena que representa la acción que los usuarios pueden realizar con un dispositivo que conectan a un PC (por ejemplo: "Importar archivos" o "Reproducir vídeo"). |
+|ProviderDisplayName | Cadena que representa la aplicación o el servicio (por ejemplo: "Contoso Video Player"). |
 |ContentEvent |El nombre de un evento de contenido que hace que a los usuarios les aparezca tu ``ActionDisplayName`` y ``ProviderDisplayName``. Se genera un evento de contenido cuando se inserta en el PC un dispositivo de volumen, como una tarjeta de memoria de cámara, una unidad USB o un DVD. Puedes encontrar la lista completa de esos eventos [aquí](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).  |
 |Verb |La configuración de verbo identifica un valor que se pasa a la aplicación para la opción seleccionada. Puedes especificar varias acciones de inicio para un evento de Reproducción automática y usar la configuración Verbo para determinar qué opción seleccionó un usuario para tu aplicación. Para saber qué opción seleccionó el usuario, comprueba la propiedad verb de los argumentos del evento de inicio que se pasaron a la aplicación. Puedes usar cualquier valor para la configuración Verbo a excepción de open, que está reservado. |
 |DropTargetHandler |IDENTIFICADOR de clase de la aplicación que implementa la interfaz [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) . Los archivos del medio extraíble se pasan al método [Colocar](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) de tu implementación [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017).  |
@@ -1227,7 +1227,7 @@ Tendrá que modificar la aplicación para que reciba los datos de impresión en 
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -1243,7 +1243,7 @@ Puedes encontrar la referencia de esquema completa [aquí](https://docs.microsof
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.appPrinter``
+|Categoría |Siempre ``windows.appPrinter``
 |DisplayName |Es el nombre que quieres que aparezcan en la lista de destinos de impresión de una aplicación. |
 |Parámetros |Los parámetros que requiere la aplicación para controlar correctamente la solicitud. |
 
@@ -1277,7 +1277,7 @@ Comparte tus fuentes personalizadas con otras aplicaciones de Windows.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -1293,7 +1293,7 @@ Puedes encontrar la referencia de esquema completa [aquí](/uwp/schemas/appxpack
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.sharedFonts``
+|Categoría |Siempre ``windows.sharedFonts``
 |Archivo |Es el archivo que contiene las fuentes que quieres compartir. |
 
 #### <a name="example"></a>Ejemplo
@@ -1325,7 +1325,7 @@ Inicia un proceso de Win32 que se ejecute en plena confianza.
 
 #### <a name="xml-namespaces"></a>Espacios de nombres XML
 
-http://schemas.microsoft.com/appx/manifest/desktop/windows10
+`http://schemas.microsoft.com/appx/manifest/desktop/windows10`
 
 #### <a name="elements-and-attributes-of-this-extension"></a>Elementos y atributos de esta extensión
 
@@ -1339,7 +1339,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
 |Nombre |Descripción |
 |-------|-------------|
-|Category |Siempre ``windows.fullTrustProcess``
+|Categoría |Siempre ``windows.fullTrustProcess``
 |GroupID |Cadena que identifica el conjunto de parámetros que quieres pasar al archivo ejecutable. |
 |Parámetros |Parámetros que quieres pasar al archivo ejecutable. |
 

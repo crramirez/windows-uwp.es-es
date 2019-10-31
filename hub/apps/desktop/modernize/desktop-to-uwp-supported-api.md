@@ -9,52 +9,49 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 3deb89a8eba60e5c4f67b18091d78d24d9179aa3
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: 481b326c3f4b3608d0d3f5f7a8cec943f1d6c437
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979339"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142529"
 ---
 # <a name="uwp-apis-available-to-desktop-apps"></a>API de UWP disponibles para aplicaciones de escritorio
 
 Las aplicaciones de escritorio pueden usar una amplia gama de API de Plataforma universal de Windows (UWP), incluso si no han pasado por completo a una aplicación de UWP. En este artículo se enumeran las clases disponibles que puede usar la aplicación de escritorio.
 
-> [!NOTE]
-> Muchas API de UWP requieren la [identidad del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) que se va a usar en una aplicación de escritorio. La identidad del paquete está disponible cuando la aplicación de escritorio está empaquetada en un [paquete MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root). En este artículo, estas aplicaciones se denominan *aplicaciones empaquetadas*.
-
-La mayoría de las API de UWP funcionan bien en aplicaciones empaquetadas. Sin embargo, algunas áreas de características aún no están totalmente probadas o no funcionan actualmente según lo previsto.
+Muchas API de UWP requieren la [identidad del paquete](modernize-packaged-apps.md) que se va a usar en una aplicación de escritorio. La mayoría de las API de UWP funcionan bien aplicaciones que tienen identidad de paquete. Sin embargo, algunas áreas de características aún no están totalmente probadas o no funcionan actualmente según lo previsto.
 
 | Área de función | Detalles |
 |--------------|---------|
-| Citas, contactos y mensajes de correo electrónico | No todas las API se admiten actualmente en aplicaciones empaquetadas. |
-| Autenticación e identidad de usuario | No todas las API se admiten actualmente en aplicaciones empaquetadas. |
-| Tareas en segundo plano | Mientras que las aplicaciones empaquetadas pueden registrar tareas en segundo plano, solo las aplicaciones que sean completamente para UWP se pueden ejecutar <i>como</i> una tarea en segundo plano. Para obtener más información, consulta la [muestra de tarea en segundo plano en GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample). |
-| Bluetooth | No todas las API se admiten actualmente en aplicaciones empaquetadas. |
-| Chat y llamadas de teléfono | Las aplicaciones empaquetadas no se pueden ejecutar en dispositivos móviles hasta que se porten completamente a UWP. |
+| Citas, contactos y mensajes de correo electrónico | No todas las API se admiten actualmente. |
+| Autenticación e identidad de usuario | No todas las API se admiten actualmente. |
+| Tareas en segundo plano | Aunque las aplicaciones de escritorio pueden registrar tareas en segundo plano, solo se pueden ejecutar <i>como</i> una tarea en segundo plano. Para obtener más información, consulta la [muestra de tarea en segundo plano en GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample). |
+| Bluetooth, | No todas las API se admiten actualmente. |
+| Chat y llamadas de teléfono | Las aplicaciones de escritorio no se pueden ejecutar en Mobile hasta que se portan por completo a UWP. |
 | Activación del contrato | Un contrato solo puede activar las aplicaciones de UWP completas. |
-| Criptografía | No todas las API se admiten actualmente en aplicaciones empaquetadas. |
-| Geolocalización | No todas las API se admiten actualmente en aplicaciones empaquetadas. |
-| Selectores de archivos y carpetas | Las aplicaciones empaquetadas tienen acceso completo al sistema de archivos y no necesitas selectores de UWP. |
-| Multimedia | No todas las API se admiten actualmente en aplicaciones empaquetadas. |
-| Punto de servicio | No todas las API se admiten actualmente en aplicaciones empaquetadas. |
-| Tarjetas inteligentes | No todas las API se admiten actualmente en aplicaciones empaquetadas. |
-| PlayReady | No todas las API se admiten actualmente en aplicaciones empaquetadas. |
-| VPN | No todas las API se admiten actualmente en aplicaciones empaquetadas. |
-| Cartera | Las aplicaciones empaquetadas no se pueden ejecutar en dispositivos móviles hasta que se porten completamente a UWP. |
+| Criptografía | No todas las API se admiten actualmente. |
+| Geolocalización | No todas las API se admiten actualmente. |
+| Selectores de archivos y carpetas | Las aplicaciones con identidad tienen acceso total al sistema de archivos y no necesitan selectores de UWP. |
+| Multimedia | No todas las API se admiten actualmente. |
+| Punto de servicio | No todas las API se admiten actualmente. |
+| Tarjetas inteligentes | No todas las API se admiten actualmente. |
+| PlayReady | No todas las API se admiten actualmente. |
+| VPN | No todas las API se admiten actualmente. |
+| Cartera | Las aplicaciones de escritorio no se pueden ejecutar en Mobile hasta que se portan por completo a UWP. |
 | Interfaz de usuario XAML | Windows 10, versión 1809 y versiones anteriores no admiten el hospedaje de contenido XAML de UWP en aplicaciones de escritorio. A partir de Windows 10, versión 1903, puede usar [islas XAML](xaml-islands.md) para hospedar contenido XAML de UWP.  |
 
 En ocasiones, puede parecer que las API en estas áreas funcionen correctamente. Sin embargo, si una API no se muestra explícitamente como compatible, debes evitar usarla, ya que puede tener efectos secundarios o comportamientos no deseados. Es posible que la compatibilidad para estas API esté disponible en futuras versiones. Mientras tanto, la aplicación debe usar las API de Win32 o .NET pertinentes en su lugar.
 
 ## <a name="list-of-apis"></a>Lista de API
 
-A continuación se muestra una lista completa de las API de UWP compatibles con las aplicaciones de escritorio. Puede ver las [API admitidas solo en aplicaciones empaquetadas](#new) o [API compatibles con aplicaciones empaquetadas y aplicaciones de escritorio](#both).
+A continuación se muestra una lista completa de las API de UWP compatibles con las aplicaciones de escritorio. Puede ver las [API que solo se admiten en aplicaciones con identidad de paquete](#new) o [API admitidas en todas las aplicaciones de escritorio](#both).
 
 Para obtener ejemplos sobre cómo usar las API de UWP, consulte los ejemplos de [puente de escritorio](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) y los ejemplos de [aplicaciones de plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) en github. También puedes consultar la aplicación de compilación de la entrada de blog de Windows [Calling Windows 10 APIs From a Desktop Application (Llamar a API de Windows 10 desde una aplicación de escritorio)](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/).
 
 <a id="new" />
 
-### <a name="apis-supported-only-in-packaged-apps"></a>API admitidas solo en aplicaciones empaquetadas
+### <a name="apis-supported-only-in-apps-with-package-identity"></a>API admitidas solo en aplicaciones con identidad de paquete
 
 * [Windows. ApplicationModel. datatransfer. DataProviderHandler](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.dataproviderhandler)
 * [Windows. ApplicationModel. datatransfer. datatransfer](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataRequest)
@@ -134,9 +131,9 @@ Para obtener ejemplos sobre cómo usar las API de UWP, consulte los ejemplos de 
 * [Windows. Devices. SmartCards. SmartCardConnection](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardConnection)
 * [Windows. Devices. SmartCards. SmartCardReader](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardReader)
 * [Windows. Foundation. AsyncActionCompletedHandler](https://docs.microsoft.com/uwp/api/windows.foundation.asyncactioncompletedhandler)
-* [Windows. Foundation. AsyncActionProgressHandler<TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionProgressHandler<TProgress>)
-* [Windows. Foundation. AsyncActionWithProgressCompletedHandler<TProgress>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress>)
-* [Windows. Foundation. AsyncOperationCompletedHandler<TResult>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncOperationCompletedHandler<TResult>)
+* [<TProgress> de Windows. Foundation. AsyncActionProgressHandler](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionProgressHandler<TProgress>)
+* [<TProgress> de Windows. Foundation. AsyncActionWithProgressCompletedHandler](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncActionWithProgressCompletedHandler<TProgress>)
+* [<TResult> de Windows. Foundation. AsyncOperationCompletedHandler](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.AsyncOperationCompletedHandler<TResult>)
 * [Windows. Foundation. Collections. VectorChangedEventHandler<T>](https://docs.microsoft.com/uwp/api/windows.foundation.collections.vectorchangedeventhandler)
 * [Windows. Foundation. DeferralCompletedHandler](https://docs.microsoft.com/uwp/api/windows.foundation.deferralcompletedhandler)
 * [Windows. Foundation. Diagnostics. FileLoggingSession](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.FileLoggingSession)
@@ -147,7 +144,7 @@ Para obtener ejemplos sobre cómo usar las API de UWP, consulte los ejemplos de 
 * [Windows. Foundation. Diagnostics. LoggingFields](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingFields)
 * [Windows. Foundation. Diagnostics. LoggingOptions](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingOptions)
 * [Windows. Foundation. Diagnostics. LoggingSession](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingSession)
-* [Windows. Foundation. EventHandler<T>](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.EventHandler<T>)
+* [<T> Windows. Foundation. EventHandler](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.EventHandler<T>)
 * [Windows. Foundation. MemoryBuffer](https://docs.microsoft.com/uwp/api/Windows.Foundation.MemoryBuffer)
 * [Windows. Globalization. ApplicationLanguages](https://docs.microsoft.com/uwp/api/Windows.Globalization.ApplicationLanguages)
 * [Windows. Globalization. JapanesePhoneme](https://docs.microsoft.com/uwp/api/Windows.Globalization.JapanesePhoneme)
@@ -380,9 +377,9 @@ Para obtener ejemplos sobre cómo usar las API de UWP, consulte los ejemplos de 
 
 <a id="both" />
 
-### <a name="apis-supported-in-both-packaged-apps-and-desktop-applications"></a>API admitidas tanto en aplicaciones empaquetadas como en aplicaciones de escritorio
+### <a name="apis-supported-in-all-desktop-applications"></a>API admitidas en todas las aplicaciones de escritorio
 
-Las API que tienen el [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) se admiten en aplicaciones empaquetadas y aplicaciones de escritorio desempaquetadas. Para determinar si se admite una API a la que desea llamar desde su aplicación de escritorio, busque el artículo de referencia para la clase o el miembro que le interese en la [documentación de referencia de los espacios de nombres de WinRT](https://docs.microsoft.com/uwp/api/). A continuación, compruebe si la sección **atributos** del artículo de referencia incluye el atributo [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) .
+Las API que tienen [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) se admiten en todas las aplicaciones de escritorio, incluidas las que tienen la identidad del paquete y las sin identidad del paquete. Para determinar si se admite una API a la que desea llamar desde su aplicación de escritorio, busque el artículo de referencia para la clase o el miembro que le interese en la [documentación de referencia de los espacios de nombres de WinRT](https://docs.microsoft.com/uwp/api/). A continuación, compruebe si la sección **atributos** del artículo de referencia incluye el atributo [DualApiPartition](https://docs.microsoft.com/uwp/api/Windows.Foundation.Metadata.DualApiPartitionAttribute) .
 
 ## <a name="next-steps"></a>Pasos siguientes
 

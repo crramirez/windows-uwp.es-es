@@ -1,0 +1,205 @@
+---
+Description: Obtenga información sobre cómo conceder identidades a aplicaciones de escritorio no empaquetadas para poder usar las características modernas de Windows 10 en esas aplicaciones.
+title: Concesión de identidad a aplicaciones de escritorio no empaquetadas
+ms.date: 10/25/2019
+ms.topic: article
+keywords: Windows 10, escritorio, paquete, identidad, MSIX, Win32
+ms.author: mcleans
+author: mcleanbyron
+ms.localizationpriority: medium
+ms.custom: RS5
+ms.openlocfilehash: f355bba3087f58ed20800052371804048bc0006c
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73145620"
+---
+# <a name="grant-identity-to-non-packaged-desktop-apps"></a>Concesión de identidad a aplicaciones de escritorio no empaquetadas
+
+<!--
+> [!NOTE]
+> The features described in this article require Windows 10 Insider Preview Build 10.0.19000.0 or a later release.
+-->
+
+Muchas de las características de extensibilidad de Windows 10 requieren que la [identidad del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) se use desde aplicaciones de escritorio que no son de UWP, incluidas tareas en segundo plano, notificaciones, iconos dinámicos y destinos de recursos compartidos. En estos casos, el sistema operativo requiere identidad para que pueda identificar al llamador de la API correspondiente.
+
+En las versiones de SO anteriores a la compilación de Windows 10 Insider Preview 10.0.19000.0, la única manera de conceder la identidad a una aplicación de escritorio es [empaquetarla en un paquete MSIX firmado](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root). Para estas aplicaciones, la identidad se especifica en el manifiesto del paquete y el registro de identidades se controla mediante la canalización de implementación de MSIX en función de la información del manifiesto. Todo el contenido al que se hace referencia en el manifiesto del paquete está presente en el paquete MSIX.
+
+A partir de Windows 10 Insider Preview compilación 10.0.19000.0, puede conceder la identidad del paquete a las aplicaciones de escritorio que no están empaquetadas en un paquete MSIX mediante la creación y el registro de un *paquete disperso* con la aplicación. Esta compatibilidad permite que las aplicaciones de escritorio que todavía no pueden adoptar el empaquetado de MSIX para la implementación usen características de extensibilidad de Windows 10 que requieran la identidad del paquete. Para obtener más información general, consulte [esta entrada de blog](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97).
+
+Para compilar y registrar un paquete disperso que conceda la identidad del paquete a la aplicación de escritorio, siga estos pasos.
+
+1. [Crear un manifiesto del paquete para el paquete disperso](#create-a-package-manifest-for-the-sparse-package)
+2. [Compilar y firmar el paquete disperso](#build-and-sign-the-sparse-package)
+3. [Agregar los metadatos de identidad del paquete al manifiesto de aplicación de escritorio](#add-the-package-identity-metadata-to-your-desktop-application-manifest)
+4. [Registrar el paquete disperso en tiempo de ejecución](#register-your-sparse-package-at-run-time)
+
+## <a name="important-concepts"></a>Conceptos importantes
+
+Las siguientes características permiten a las aplicaciones de escritorio no empaquetadas adquirir la identidad del paquete.
+
+### <a name="sparse-packages"></a>Paquetes dispersos
+
+Un *paquete disperso* contiene un manifiesto del paquete, pero ningún otro código binario y contenido de la aplicación. El manifiesto de un paquete disperso puede hacer referencia a archivos que están fuera del paquete en una ubicación externa predeterminada. Esto permite que las aplicaciones que aún no pueden adoptar el empaquetado de MSIX para toda la aplicación adquieran la identidad del paquete según lo requieran algunas características de extensibilidad de Windows 10.
+
+> [!NOTE]
+> Una aplicación de escritorio que usa un paquete disperso no recibe algunas ventajas de implementarse por completo a través de un paquete MSIX. Estas ventajas incluyen la protección contra alteraciones, la instalación en una ubicación bloqueada y la administración completa del sistema operativo en la implementación, el tiempo de ejecución y la desinstalación.
+
+### <a name="package-external-location"></a>Ubicación externa del paquete
+
+Para admitir paquetes dispersos, el esquema del manifiesto del paquete admite ahora un elemento opcional **\<AllowExternalContent\>** en el elemento [ **\<Properties\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-properties) . Esto permite que el manifiesto del paquete haga referencia al contenido fuera del paquete, en una ubicación específica en el disco.
+
+Por ejemplo, si tiene una aplicación de escritorio no empaquetada existente que instala el ejecutable de la aplicación y otro contenido en C:\Archivos de Files\MyDesktopApp\, puede crear un paquete disperso que incluya el **\<AllowExternalContent\>** elemento del manifiesto. Durante el proceso de instalación de la aplicación o la primera vez que las aplicaciones, puede instalar el paquete disperso y declarar C:\Program Files\MyDesktopApp\ como la ubicación externa que usará la aplicación.
+
+## <a name="create-a-package-manifest-for-the-sparse-package"></a>Crear un manifiesto del paquete para el paquete disperso
+
+Antes de poder compilar un paquete disperso, primero debe crear un [manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest) (un archivo denominado AppxManifest. xml) que declare los metadatos de identidad del paquete para la aplicación de escritorio y otros detalles necesarios. La forma más fácil de crear un manifiesto del paquete para el paquete disperso es usar el ejemplo siguiente y personalizarlo para la aplicación mediante la [referencia de esquema](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root).
+
+Asegúrese de que el manifiesto del paquete incluye estos elementos:
+
+* Un elemento [ **\<identity\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) que describe los atributos de identidad de la aplicación de escritorio.
+* Un **\<elemento de\>AllowExternalContent** en el elemento de [ **\>propiedades\<** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-properties) . Este elemento debe tener asignado el valor `true`, lo que permite que el manifiesto del paquete haga referencia al contenido fuera del paquete, en una ubicación específica en el disco. En un paso posterior, especificará la ruta de acceso de la ubicación externa al registrar el paquete disperso desde el código que se ejecuta en el instalador o en la aplicación. Cualquier contenido al que se haga referencia en el manifiesto que no se encuentre en el propio paquete debe instalarse en la ubicación externa.
+* El atributo **MinVersion** del elemento [ **\<TargetDeviceFamily\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) debe establecerse en `10.0.19000.0` o en una versión posterior.
+* Los atributos **trustLevel = mediumIL** y **RuntimeBehavior = Win32App** del elemento [ **\<\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) de la aplicación declaran que la aplicación de escritorio asociada al paquete disperso se ejecutará de forma similar a un escritorio sin empaquetar estándar aplicación, sin la virtualización del registro y del sistema de archivos, y otros cambios en tiempo de ejecución.
+
+En el ejemplo siguiente se muestra el contenido completo de un manifiesto de paquete disperso (AppxManifest. xml). Este manifiesto incluye una extensión de `windows.sharetarget`, que requiere la identidad del paquete.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Package 
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10"
+  IgnorableNamespaces="uap uap2 uap3 rescap desktop uap10">
+  <Identity Name="ContosoPhotoStore" ProcessorArchitecture="x64" Publisher="CN=Contoso" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>ContosoPhotoStore</DisplayName>
+    <PublisherDisplayName>Contoso</PublisherDisplayName>
+    <Logo>Assets\storelogo.png</Logo>
+    <uap10:AllowExternalContent>true</uap10:AllowExternalContent>
+  </Properties>
+  <Resources>
+    <Resource Language="en-us" />
+  </Resources>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19000.0" MaxVersionTested="10.0.19000.0" />
+  </Dependencies>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <rescap:Capability Name="unvirtualizedResources"/>
+  </Capabilities>
+  <Applications>
+    <Application Id="ContosoPhotoStore" Executable="ContosoPhotoStore.exe" uap10:TrustLevel="mediumIL" uap10:RuntimeBehavior="win32App"> 
+      <uap:VisualElements AppListEntry="none" DisplayName="Contoso PhotoStore" Description="Demonstrate photo app" BackgroundColor="transparent" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png"></uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.shareTarget">
+          <uap:ShareTarget Description="Send to ContosoPhotoStore">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.jpg</uap:FileType>
+              <uap:FileType>.png</uap:FileType>
+              <uap:FileType>.gif</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DataFormat>StorageItems</uap:DataFormat>
+            <uap:DataFormat>Bitmap</uap:DataFormat>
+          </uap:ShareTarget>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+</Package>
+```
+
+## <a name="build-and-sign-the-sparse-package"></a>Compilar y firmar el paquete disperso
+
+Después de crear el manifiesto del paquete, compile el paquete disperso con la [herramienta MakeAppx. exe](https://docs.microsoft.com/windows/msix/package/create-app-package-with-makeappx-tool) en el Windows SDK. Dado que el paquete disperso no contiene los archivos a los que se hace referencia en el manifiesto, debe especificar la opción `/nv`, que omite la validación semántica para el paquete.
+
+En el ejemplo siguiente se muestra cómo crear un paquete disperso desde la línea de comandos.  
+
+```Console
+MakeAppx.exe  pack  /d  <path to directory that contains manifest>  /p  <output path>\MyPackage.msix  /nv
+```
+
+Antes de que el paquete disperso pueda instalarse correctamente en un equipo de destino, debe firmarlo con un certificado que sea de confianza en el equipo de destino. Puede crear un nuevo certificado autofirmado para fines de desarrollo y firmar el paquete disperso mediante [SignTool](https://docs.microsoft.com/windows/msix/package/sign-app-package-using-signtool), que está disponible en el Windows SDK.
+
+En el ejemplo siguiente se muestra cómo firmar un paquete disperso desde la línea de comandos.
+
+```Console
+SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx  /p <certificate password>  <path to sparse package>\MyPackage.msix
+```
+
+### <a name="add-the-package-identity-metadata-to-your-desktop-application-manifest"></a>Agregar los metadatos de identidad del paquete al manifiesto de aplicación de escritorio
+
+También debe incluir un [manifiesto de aplicación en paralelo](https://docs.microsoft.com/windows/win32/sbscs/application-manifests) con la aplicación de escritorio e incluir un\<elemento de **\>msix** con atributos que declaren los atributos de identidad de la aplicación. El sistema operativo usa los valores de estos atributos para determinar la identidad de la aplicación cuando se inicia el archivo ejecutable.
+
+En el ejemplo siguiente se muestra un manifiesto de aplicación en paralelo con un elemento **\<msix\>** .
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <assemblyIdentity version="1.0.0.0" name="Contoso.PhotoStoreApp"/>
+  <msix xmlns="urn:schemas-microsoft-com:msix.v1"
+          publisher="CN=Contoso"
+          packageName="ContosoPhotoStore"
+          applicationId="ContosoPhotoStore"
+        />
+</assembly>
+```
+
+Los atributos del elemento **\<msix\>** deben coincidir con estos valores en el manifiesto del paquete para el paquete disperso:
+
+* Los atributos **packageName** y **Publisher** deben coincidir con los atributos **Name** y **Publisher** del elemento [ **\<Identity\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) en el manifiesto del paquete, respectivamente.
+* El atributo **ApplicationID** debe coincidir con el atributo **Id** del elemento [ **\<Application\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) en el manifiesto del paquete.
+
+El manifiesto de aplicación en paralelo debe existir en el mismo directorio que el archivo ejecutable de la aplicación de escritorio y, por Convención, debe tener el mismo nombre que el archivo ejecutable de la aplicación con la extensión `.manifest` anexada a él. Por ejemplo, si el nombre del archivo ejecutable de la aplicación es `ContosoPhotoStore`, se debe `ContosoPhotoStore.exe.manifest`el nombre de archivo del manifiesto de aplicación.
+
+## <a name="register-your-sparse-package-at-run-time"></a>Registrar el paquete disperso en tiempo de ejecución
+
+Para conceder la identidad del paquete a la aplicación de escritorio, la aplicación debe registrar el paquete disperso mediante la clase [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) . Puede agregar código a la aplicación para registrar el paquete disperso cuando la aplicación se ejecuta por primera vez, o puede ejecutar código para registrar el paquete mientras se instala la aplicación de escritorio (por ejemplo, si usa MSI para instalar la aplicación de escritorio. , puede ejecutar este código desde una acción personalizada).
+
+En el ejemplo siguiente se muestra cómo registrar un paquete disperso. Este código crea un objeto **AddPackageOptions** que contiene la ruta de acceso a la ubicación externa donde el manifiesto del paquete puede hacer referencia al contenido fuera del paquete. Después, el código pasa este objeto al método **PackageManager. AddPackageByUriAsync** para registrar el paquete disperso. Este método también recibe la ubicación del paquete disperso firmado como un URI. Para obtener un ejemplo más completo, vea el archivo de código `StartUp.cs` en el [ejemplo](#sample)relacionado.
+
+```csharp
+private static bool registerSparsePackage(string externalLocation, string sparsePkgPath)
+{
+    bool registration = false;
+    try
+    {
+        Uri externalUri = new Uri(externalLocation);
+        Uri packageUri = new Uri(sparsePkgPath);
+
+        Console.WriteLine("exe Location {0}", externalLocation);
+        Console.WriteLine("msix Address {0}", sparsePkgPath);
+
+        Console.WriteLine("  exe Uri {0}", externalUri);
+        Console.WriteLine("  msix Uri {0}", packageUri);
+
+        PackageManager packageManager = new PackageManager();
+
+        // Declare use of an external location
+        var options = new AddPackageOptions();
+        options.ExternalLocationUri = externalUri;
+
+        Windows.Foundation.IAsyncOperationWithProgress<DeploymentResult, DeploymentProgress> deploymentOperation = packageManager.AddPackageByUriAsync(packageUri, options);
+
+        // Other progress and error-handling code omitted for brevity...
+    }
+}
+```
+
+## <a name="sample"></a>Muestra
+
+Para obtener una aplicación de ejemplo totalmente funcional que muestra cómo conceder la identidad del paquete a una aplicación de escritorio mediante un paquete disperso, consulte [https://aka.ms/sparsepkgsample](https://aka.ms/sparsepkgsample). En [esta entrada de blog](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97)se proporciona más información sobre la compilación y la ejecución del ejemplo.
+
+En este ejemplo se incluyen los siguientes:
+
+* Código fuente de una aplicación WPF denominada PhotoStoreDemo. Durante el inicio, la aplicación comprueba si se está ejecutando con la identidad. Si no se ejecuta con la identidad, registra el paquete disperso y, a continuación, reinicia la aplicación. Vea `StartUp.cs` del código que realiza estos pasos.
+* Un manifiesto de aplicación en paralelo denominado `PhotoStoreDemo.exe.manifest`.
+* Un manifiesto del paquete denominado `AppxManifest.xml`.

@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 44ea01bbc2200c1b028ed41e7c6a2845c7a1568b
-ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
+ms.openlocfilehash: bcdeafc3f30f5b385c6feeddee78cf31635177a0
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69643363"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142535"
 ---
 # <a name="call-uwp-apis-in-desktop-apps"></a>Llamada a las API de UWP en aplicaciones de escritorio
 
@@ -21,7 +21,7 @@ Puede usar las API de Plataforma universal de Windows (UWP) para agregar experie
 
 En primer lugar, configure el proyecto con las referencias necesarias. A continuación, llame a las API de UWP desde el código para agregar experiencias de Windows 10 a la aplicación de escritorio. Puede compilar de forma independiente para los usuarios de Windows 10 o distribuir los mismos archivos binarios a todos los usuarios, independientemente de la versión de Windows que ejecuten.
 
-Algunas API de UWP solo se admiten en aplicaciones de escritorio que se empaquetan en un [paquete MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root). Para obtener más información, consulte [API de UWP disponibles](desktop-to-uwp-supported-api.md).
+Algunas API de UWP solo se admiten en aplicaciones de escritorio que tienen la [identidad del paquete](modernize-packaged-apps.md). Para obtener más información, consulte [API de UWP disponibles](desktop-to-uwp-supported-api.md).
 
 ## <a name="set-up-your-project"></a>Configurar el proyecto
 
@@ -45,13 +45,13 @@ Hay dos opciones para los proyectos de .NET:
 
 3. En la ventana **Administrador de paquetes NuGet** , asegúrese de que esté seleccionada la opción **incluir versión preliminar** . A continuación, seleccione la pestaña **examinar** y busque `Microsoft.Windows.SDK.Contracts`.
 
-4. Una vez `Microsoft.Windows.SDK.Contracts` encontrado el paquete, en el panel derecho de la ventana **Administrador de paquetes NuGet** , seleccione la **versión** del paquete que desea instalar en función de la versión de Windows 10 a la que desea dirigirse:
+4. Una vez encontrado el paquete de `Microsoft.Windows.SDK.Contracts`, en el panel derecho de la ventana **Administrador de paquetes NuGet** , seleccione la **versión** del paquete que desea instalar en función de la versión de Windows 10 a la que desea dirigirse:
 
-    * **10.0.18362. xxxx-Preview**: Elija esta opción para Windows 10, versión 1903.
-    * **10.0.17763. xxxx-Preview**: Elija esta opción para Windows 10, versión 1809.
-    * **10.0.17134. xxxx-Preview**: Elija esta opción para Windows 10, versión 1803.
+    * **10.0.18362. xxxx-Preview**: elija esta opción para Windows 10, versión 1903.
+    * **10.0.17763. xxxx-Preview**: elija esta opción para Windows 10, versión 1809.
+    * **10.0.17134. xxxx-Preview**: elija esta opción para Windows 10, versión 1803.
 
-5. Haga clic en **Instalar**.
+5. Haz clic en **Instalar**.
 
 #### <a name="to-add-the-required-references-manually"></a>Para agregar manualmente las referencias necesarias
 
@@ -61,14 +61,14 @@ Hay dos opciones para los proyectos de .NET:
 
 2. Agregue una referencia a estos archivos.
 
-    |Archivo|Location|
+    |Archivo|Ubicación|
     |--|--|
     |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
     |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
     |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-    |Windows. winmd|C:\Archivos de programa (x86) \Windows\\Kits\10\UnionMetadata<*SDK version*> \Facade|
-    |Windows.Foundation.UniversalApiContract.winmd|C:\Archivos de programa (x86) \Windows\\<Kits\10\References*SDK versión*>\<\Windows.Foundation.UniversalApiContract*versión*>|
-    |Windows.Foundation.FoundationContract.winmd|C:\Archivos de programa (x86) \Windows\\<Kits\10\References*SDK versión*>\<\Windows.Foundation.FoundationContract*versión*>|
+    |Windows. winmd|C:\Archivos de programa (x86) \Windows Kits\10\UnionMetadata\\<*versión del sdk*> \Facade|
+    |Windows.Foundation.UniversalApiContract.winmd|C:\Archivos de programa (x86) \Windows Kits\10\References\\<*SDK version*> \Windows.Foundation.UniversalApiContract\<*version*>|
+    |Windows.Foundation.FoundationContract.winmd|C:\Archivos de programa (x86) \Windows Kits\10\References\\<*SDK version*> \Windows.Foundation.FoundationContract\<*version*>|
 
 3. En la ventana **Propiedades**, establece el campo **Copia local** de cada archivo *.winmd* en **False**.
 
@@ -76,7 +76,7 @@ Hay dos opciones para los proyectos de .NET:
 
 ### <a name="modify-a-c-win32-project-to-use-windows-runtime-apis"></a>Modificar un C++ proyecto de Win32 para usar Windows Runtime API
 
-Use [ C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) para consumir Windows Runtime API. C++/WinRT es una completa proyección de lenguaje C++17 estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivo de encabezado y diseñada para darte acceso de primera clase a la moderna API de Windows.
+Use [ C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) para consumir Windows Runtime API. C++/WinRT es una moderna proyección de lenguaje C++17 totalmente estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivos de encabezado y diseñada para darte acceso de primera clase a la API moderna de Windows.
 
 Para configurar el proyecto para C++/WinRT:
 
@@ -89,9 +89,9 @@ Para obtener más información sobre estas opciones, consulte [este artículo](/
 
 Ya estás listo para agregar experiencias modernas que dan a conocer cuándo los usuarios ejecutan tu aplicación en Windows 10. Usa este flujo de diseño.
 
-: white_check_mark: **En primer lugar, decida qué experiencias desea agregar**
+:white_check_mark: **En primer lugar, decide qué experiencias quieres agregar**
 
-Hay muchas entre las que elegir. Por ejemplo, puede simplificar el flujo de pedidos mediante las [API](/windows/uwp/monetize)de monetización o [dirigir la atención a la aplicación](/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts) cuando tenga algo interesante de compartir, como una nueva imagen que haya publicado otro usuario.
+Hay muchas entre las que elegir. Por ejemplo, puede simplificar el flujo de pedidos mediante las [API de monetización](/windows/uwp/monetize)o [dirigir la atención a la aplicación](/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts) cuando tenga algo interesante de compartir, como una nueva imagen que haya publicado otro usuario.
 
 ![Notificación del sistema](images/desktop-to-uwp/toast.png)
 
@@ -99,7 +99,7 @@ Incluso si los usuarios ignoran o descartar el mensaje, pueden verlo de nuevo en
 
 Para más ideas, visite la [documentación de UWP](/windows/uwp/get-started/) .
 
-: white_check_mark: **Decida si desea mejorar o extender**
+:white_check_mark: **Decidir si quieres mejorar o ampliar**
 
 A menudo nos encantará usar los términos *mejorar* y *ampliar*, por lo que dedicaremos un momento a explicar exactamente lo que significa cada uno de estos términos.
 
@@ -110,7 +110,7 @@ Usamos el término *mejorar* para describir Windows Runtime API a las que puede 
 
 Si ha elegido empaquetar la aplicación de escritorio en un paquete de MSIX, otra opción es *ampliar* la aplicación agregando un proyecto de UWP a la solución. El proyecto de escritorio sigue siendo el punto de entrada de la aplicación, pero el proyecto de UWP le proporciona acceso a todas las API que no aparecen en [esta lista](desktop-to-uwp-supported-api.md). La aplicación de escritorio puede comunicarse con el proceso UWP mediante un servicio de aplicación y tenemos muchas instrucciones sobre cómo configurarlo. Si desea agregar una experiencia que requiera un proyecto de UWP, vea [extender con componentes de UWP](desktop-to-uwp-extend.md).
 
-: white_check_mark: **Contratos de API de referencia**
+:white_check_mark: **Contratos de API de referencia**
 
 Si puede llamar a la API directamente desde la aplicación de escritorio, abra un explorador y busque el tema de referencia de esa API.
 Debajo del resumen de la API, encontrarás una tabla en la que se describe el contrato de API para esa API. Este es un ejemplo de esa tabla:
@@ -119,7 +119,7 @@ Debajo del resumen de la API, encontrarás una tabla en la que se describe el co
 
 Si tienes una aplicación de escritorio basada en .NET, agrega una referencia a ese contrato de API y luego establece la propiedad **Copia local** de ese archivo en **False**. Si tienes un proyecto basado en C++, agrega a **Directorios de inclusión adicionales**, una ruta de acceso a la carpeta que contiene este contrato.
 
-: white_check_mark: **Llame a las API para agregar su experiencia**
+:white_check_mark: **Llama a las API para agregar tu experiencia**
 
 Este es el código que usarías para mostrar la ventana de notificación que hemos visto anteriormente. Estas API aparecen en esta [lista](desktop-to-uwp-supported-api.md) , por lo que puede Agregar este código a la aplicación de escritorio y ejecutarlo en este momento.
 
@@ -243,7 +243,7 @@ El compilador compila ese código solo si esa constante se define en la configur
 
 Puedes compilar un conjunto de archivos binarios para todos tus usuarios de Windows independientemente de qué versión de Windows ejecuten. La aplicación llama a Windows Runtime API solo si el usuario ejecuta la aplicación como una aplicación empaquetada en Windows 10.
 
-La forma más fácil de agregar comprobaciones en tiempo de ejecución al código es instalar este paquete Nuget: Las [aplicaciones auxiliares de puente de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y ``IsRunningAsUWP()`` , a continuación, usan el método para activar todo el código que llama a las API de Windows Runtime. vea esta entrada de blog para obtener más detalles: [Puente de escritorio: identifique el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
+La forma más fácil de agregar comprobaciones en tiempo de ejecución al código es instalar este paquete de Nuget: [aplicaciones auxiliares de puente de escritorio](https://www.nuget.org/packages/DesktopBridge.Helpers/) y, a continuación, usar el método ``IsRunningAsUWP()`` para activar todo el código que llama a las api de Windows Runtime. Consulta esta entrada de blog para obtener más información: [Puente de dispositivo de escritorio: identificar el contexto de la aplicación](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
 ## <a name="related-samples"></a>Muestras relacionadas
 

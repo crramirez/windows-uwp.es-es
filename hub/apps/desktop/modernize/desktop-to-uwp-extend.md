@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 7359d28d968a2948e9f4049e2acc3c655edcfcb3
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 0a404f2d9f58fc283cf47f47860362c0f5bc8164
+ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339206"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142545"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>Amplíe su aplicación de escritorio con los componentes modernos de UWP
 
@@ -21,7 +21,7 @@ Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usua
 En muchos casos, puede llamar a Windows Runtime API directamente desde la aplicación de escritorio, por lo que antes de revisar esta guía, consulte [mejorar para Windows 10](desktop-to-uwp-enhance.md).
 
 > [!NOTE]
-> Las características descritas en este artículo requieren la creación de un paquete de aplicación de Windows para la aplicación de escritorio. Si todavía no lo ha hecho, consulte [empaquetar aplicaciones de escritorio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root).
+> Las características descritas en este artículo requieren que la aplicación de escritorio tenga la [identidad del paquete](modernize-packaged-apps.md), ya sea [empaquetando la aplicación de escritorio en un paquete MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) o [concediendo la identidad de la aplicación mediante un paquete disperso](grant-identity-to-nonpackaged-apps.md).
 
 Si estás listo, comencemos.
 
@@ -100,15 +100,15 @@ Esta imagen muestra una aplicación de Windows Forms que abre una interfaz de us
 
 Para mostrar una interfaz de usuario basada en XAML, deberás hacer lo siguiente:
 
-:one: [Configurar la solución](#solution-setup)
+:uno: [Configurar la solución](#solution-setup)
 
-:two: [Crear una interfaz de usuario XAML](#xaml-UI)
+:dos: [Crear una interfaz de usuario de XAML](#xaml-UI)
 
-:three: [Agregar una extensión de protocolo al proyecto de UWP](#add-a-protocol-extension)
+:tres: [Agregar una extensión de protocolo al proyecto de UWP](#add-a-protocol-extension)
 
-:four: [Inicio de la aplicación de UWP desde la aplicación de escritorio](#start)
+:cuatro: [Iniciar la aplicación para UWP desde tu aplicación de escritorio](#start)
 
-:five: [En el proyecto de UWP, muestre la página que desee.](#parse)
+:cinco: [En el proyecto de UWP, muestra la página que quieres](#parse)
 
 <a id="solution-setup" />
 
@@ -261,15 +261,15 @@ Vea el ejemplo completo [aquí](https://github.com/Microsoft/Windows-Packaging-S
 
 Para que la aplicación sea un destino de recursos compartidos, deberás hacer lo siguiente:
 
-:one: [Agregar una extensión de destino de recurso compartido](#share-extension)
+:uno: [Agrega una extensión de destino de recursos compartidos](#share-extension)
 
-:two: [Invalidar el controlador de eventos OnShareTargetActivated](#override)
+: dos: [invalidar el controlador de eventos OnShareTargetActivated](#override)
 
-:three: [Agregar extensiones de escritorio al proyecto de UWP](#desktop-extensions)
+: tres: [Agregar extensiones de escritorio al proyecto de UWP](#desktop-extensions)
 
-:four: [Agregar la extensión de proceso de plena confianza](#full-trust)
+: cuatro: [Agregar la extensión de proceso de plena confianza](#full-trust)
 
-:five: [Modificación de la aplicación de escritorio para obtener el archivo compartido](#modify-desktop)
+: cinco: [modificación de la aplicación de escritorio para obtener el archivo compartido](#modify-desktop)
 
 <a id="share-extension" />
 
@@ -295,7 +295,7 @@ En **Explorador de soluciones**, abra el archivo **Package. appxmanifest** del p
 </Extensions>  
 ```
 
-Proporciona el nombre del archivo ejecutable generado por el proyecto de UWP y el nombre de la clase del punto de entrada. En este marcado se supone que el nombre del archivo ejecutable de la aplicación para UWP es `ShareTarget.exe`.
+Proporciona el nombre del archivo ejecutable generado por el proyecto de UWP y el nombre de la clase del punto de entrada. Este marcado supone que el nombre del archivo ejecutable de la aplicación para UWP es `ShareTarget.exe`.
 
 También tendrás que especificar qué tipos de archivos se pueden compartir con la aplicación. En este ejemplo, vamos a convertir la aplicación de escritorio de [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) en un destino de recurso compartido para las imágenes de mapa de bits, por lo que especificamos `Bitmap` para el tipo de archivo compatible.
 
@@ -408,11 +408,11 @@ Vea el ejemplo completo [aquí](https://github.com/Microsoft/Windows-Packaging-S
 
 Para crear un servicio en segundo plano, deberás hacer lo siguiente:
 
-:one: [Implementar la tarea en segundo plano](#implement-task)
+:uno: [Implementar la tarea en segundo plano](#implement-task)
 
-:two: [Configuración de la tarea en segundo plano](#configure-background-task)
+:dos: [Configurar la tarea en segundo plano](#configure-background-task)
 
-:three: [Registro de la tarea en segundo plano](#register-background-task)
+:tres: [Registrar la tarea en segundo plano](#register-background-task)
 
 <a id="implement-task" />
 
