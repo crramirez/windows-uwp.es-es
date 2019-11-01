@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, ampliar, separar por componentes, servicio de aplicaciones, paquete, ampliación
 ms.localizationpriority: medium
-ms.openlocfilehash: a72b175e672b44d0dace0b4bf04956792edfadd0
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: d9a98ef8e0ec53668277face05d83c08f6421cb7
+ms.sourcegitcommit: c7e10793cbef55ace959ac8fc6ddd08e683602bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282516"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329507"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Ampliar la aplicación con servicios, extensiones y paquetes
 
@@ -37,7 +37,7 @@ Código que se puede descargar de la tienda y ejecutarse desde tu aplicación. P
 
 **Complementos de código en proceso**  
 
-Código que se ejecuta dentro de proceso con la aplicación. Solo se admite C++. También puede incluir contenido. Dado que el código se ejecuta en proceso, se supone un mayor nivel de confianza. Puede optar por no exponer este tipo de extensibilidad a un tercero.
+Código que se ejecuta dentro de proceso con la aplicación. También puede incluir contenido. Dado que el código se ejecuta en proceso, se supone un mayor nivel de confianza. Puede optar por no exponer este tipo de extensibilidad a un tercero.
 
 **Recursos de experiencia del usuario (cadena/imágenes)**  
 
@@ -98,7 +98,7 @@ Los servicios de aplicaciones son aplicaciones para UWP que ofrecen servicios a 
 
 La transmisión en streaming es una forma de optimizar la forma en que se entrega la aplicación a los usuarios. En lugar de esperar a que se descargue toda la aplicación antes de usarla, los usuarios pueden interactuar con la aplicación tan pronto como se haya descargado una parte necesaria. Depende de ti, como desarrollador, segmentar la aplicación en una sección requerida para el lanzamiento y la activación básica y contenido adicional para el resto de la aplicación. Consulta [Instalación en streaming para aplicaciones para UWP](/windows/msix/package/streaming-install) para obtener más detalles de implementación e información.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 [Crear y usar un servicio de aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
 [Introducción a los paquetes de activos](/windows/msix/package/asset-packages)  
