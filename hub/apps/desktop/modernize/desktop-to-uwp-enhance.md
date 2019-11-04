@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: bcdeafc3f30f5b385c6feeddee78cf31635177a0
-ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
+ms.openlocfilehash: ca9e91233206f0e97d17fdbdd7b0fd09a2897cd8
+ms.sourcegitcommit: 3710117f24adb8555aa94b372db814e5d30ae45a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142535"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73427092"
 ---
 # <a name="call-uwp-apis-in-desktop-apps"></a>Llamada a las API de UWP en aplicaciones de escritorio
 
@@ -43,13 +43,13 @@ Hay dos opciones para los proyectos de .NET:
 
 2. Con el proyecto abierto en Visual Studio, haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y elija **administrar paquetes de NuGet**.
 
-3. En la ventana **Administrador de paquetes NuGet** , asegúrese de que esté seleccionada la opción **incluir versión preliminar** . A continuación, seleccione la pestaña **examinar** y busque `Microsoft.Windows.SDK.Contracts`.
+3. En la ventana **Administrador de paquetes NuGet** , seleccione la pestaña **examinar** y busque `Microsoft.Windows.SDK.Contracts`.
 
 4. Una vez encontrado el paquete de `Microsoft.Windows.SDK.Contracts`, en el panel derecho de la ventana **Administrador de paquetes NuGet** , seleccione la **versión** del paquete que desea instalar en función de la versión de Windows 10 a la que desea dirigirse:
 
-    * **10.0.18362. xxxx-Preview**: elija esta opción para Windows 10, versión 1903.
-    * **10.0.17763. xxxx-Preview**: elija esta opción para Windows 10, versión 1809.
-    * **10.0.17134. xxxx-Preview**: elija esta opción para Windows 10, versión 1803.
+    * **10.0.18362. xxxx**: elija esta opción para Windows 10, versión 1903.
+    * **10.0.17763. xxxx**: elija esta opción para Windows 10, versión 1809.
+    * **10.0.17134. xxxx**: elija esta opción para Windows 10, versión 1803.
 
 5. Haz clic en **Instalar**.
 

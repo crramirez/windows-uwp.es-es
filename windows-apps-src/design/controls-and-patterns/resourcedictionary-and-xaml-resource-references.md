@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 662f23c5ab201a44669b2e4e4a454aa73ebd3b43
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 31b4a02f3307909f325b71cdc0540d44054adf4c
+ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340204"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73061971"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>Referencias a ResourceDictionary y a los recursos XAML
 
@@ -77,7 +77,7 @@ Aquí, un pincel y una cadena se declaran como recursos y los controles los usan
 </Page>
 ```
 
-Todos los recursos deben tener una clave. Por lo general, esa clave es una cadena definida con `x:Key=”myString”`. Sin embargo, existen otras maneras de especificar una clave:
+Todos los recursos deben tener una clave. Por lo general, esa clave es una cadena definida con `x:Key="myString"`. Sin embargo, existen otras maneras de especificar una clave:
 
 -   [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) y [ControlTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) requieren un elemento **TargetType**, y usarán el elemento **TargetType** como clave si no se especifica [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute). En este caso, la clave es el objeto Tipo en sí, no una cadena. (Ver ejemplos abajo)
 -   Los recursos [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) que tengan un elemento **TargetType** usarán este elemento **TargetType** como clave si no se especifica [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute). En este caso, la clave es el objeto Tipo en sí, no una cadena.
