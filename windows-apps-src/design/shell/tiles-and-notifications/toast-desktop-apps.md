@@ -7,12 +7,12 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: windows 10, uwp, win32, escritorio, notificaciones del sistema, puente de dispositivo de escritorio, opciones para enviar notificaciones del sistema, servidor com, activador com, com, falso com, no com, sin com, enviar notificaciones del sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: 030f8b1380dc28a41e65989ccbda688523fad965
-ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
+ms.openlocfilehash: 31501d2dc3ac255897e374ca81b05558be7bc2fc
+ms.sourcegitcommit: 545d5d864d89650a00a496ac4e52def9a13b14cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71100817"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560657"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificaciones del sistema desde aplicaciones de escritorio
 
@@ -81,6 +81,6 @@ Para aplicaciones clásicas de Win32, configura el AUMID para que puedas enviar 
 
 ## <a name="resources"></a>Recursos
 
-* [Envío de una notificación del sistema local C# desde aplicaciones de escritorio](send-local-toast-desktop.md)
-* [Envío de una notificación del sistema local C++ desde las aplicaciones de escritorio WRL](send-local-toast-desktop-cpp-wrl.md)
+* [Enviar una notificación del sistema local desde C# aplicaciones de escritorio](send-local-toast-desktop.md)
+* [Enviar una notificación del sistema local desde C++ las aplicaciones de webwrl de escritorio](send-local-toast-desktop-cpp-wrl.md)
 * [Documentación del contenido del sistema](adaptive-interactive-toasts.md)
