@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, news, what's, new
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 525110a09c56f48f9f9ce3d2521c98e2297a8372
-ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
+ms.openlocfilehash: 24abdb26cf884367d9a9521d30b09b443d2e4e00
+ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816710"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72998616"
 ---
 # <a name="whats-new-in-cwinrt"></a>Novedades de C++/WinRT
 
@@ -269,9 +269,9 @@ Puede ser difícil trabajar con parámetros `out`, en particular con matrices de
 
 La implementación de [**winrt::event**](/uwp/cpp-ref-for-winrt/event) ahora controla correctamente el caso en el que se llama al método **remove** con un valor de token no válido (un valor que no está presente en la matriz).
 
-#### <a name="coroutine-locals-are-now-destroyed-before-the-coroutine-returns"></a>Las variables locales de la corrutina ahora se destruyen antes de que regrese la corrutina.
+#### <a name="coroutine-local-variables-are-now-destroyed-before-the-coroutine-returns"></a>Las variables locales de la corrutina ahora se destruyen antes de que regrese la corrutina.
 
-La forma tradicional de implementar un tipo de corrutina puede permitir que se destruyan las variables locales dentro de la corrutina *después de*  que la corrutina regrese o se complete (en lugar de antes de la suspensión final). La reanudación de cualquier objeto waiter se aplaza hasta la suspensión final, con el fin de evitar este problema y acumular otras ventajas.
+La forma tradicional de implementar un tipo de corrutina puede permitir que se destruyan las variables locales dentro de la corrutina *después* de que la corrutina regrese o se complete (en lugar de antes de la suspensión final). La reanudación de cualquier objeto waiter se aplaza hasta la suspensión final, con el fin de evitar este problema y acumular otras ventajas.
 
 ## <a name="news-and-changes-in-windows-sdk-version-100177630-windows-10-version-1809"></a>Noticias y cambios de la versión 10.0.17763.0 de Windows SDK (Windows 10, versión 1809)
 
@@ -296,7 +296,7 @@ Otros cambios.
 - **Cambio importante**. El [**constructor winrt::handle_type**](/uwp/cpp-ref-for-winrt/handle-type#handle_typehandle_type-constructor) se ha protegido haciéndose explícito (ahora es más difícil escribir código incorrecto con él). Si tienes que asignar un valor básico de controlador, llama a la [**función handle_type::attach** ](/uwp/cpp-ref-for-winrt/handle-type#handle_typeattach-function) en su lugar.
 - **Cambio importante**. Las firmas de **WINRT_CanUnloadNow** y **WINRT_GetActivationFactory** han cambiado. No debes declarar estas funciones. En su lugar, contiene `winrt/base.h` (que se incluye automáticamente si contiene cualquier archivo de encabezado del espacio de nombres de Windows de C++/WinRT) para incluir las declaraciones de estas funciones.
 - Para la [**estructura winrt::clock**](/uwp/cpp-ref-for-winrt/clock), **from_FILETIME/to_FILETIME** están en desuso a favor de **from_file_time/to_file_time**.
-- Las API que esperan los parámetros **IBuffer** se simplifican. Aunque la mayoría de las API prefieren colecciones o matrices, hay suficientes API que dependen de **IBuffer** para que sea más fácil utilizarlas desde C++. Esta actualización proporciona acceso directo a los datos que se encuentran detrás de una implementación **IBuffer**, mediante la misma convención de nomenclatura de datos utilizada por los contenedores de la biblioteca estándar de C++. Esto también evita chocar con nombres de metadatos que normalmente comienzan con una letra mayúscula.
+- Las API simplificadas que esperan los parámetros **IBuffer**. La mayoría de las API prefiere colecciones o matrices. Pero pensamos que debíamos facilitar las llamadas a las API que se basan en **IBuffer**. Esta actualización proporciona acceso directo a los datos que hay detrás de una implementación de **IBuffer**. Usa la misma convención de nomenclatura de datos que la usada por los contenedores de la biblioteca estándar de C++. Esta convención también evita chocar con nombres de metadatos que normalmente comienzan con una letra mayúscula.
 - Generación del código mejorada: varias mejoras para reducir el tamaño del código, mejorar la inserción y optimizar el almacenamiento en caché del generador.
 - Recursividad innecesaria retirada. Cuando la línea de comandos se refiere a una carpeta, en lugar de a un `.winmd` específico, la herramienta `cppwinrt.exe` ya no busca recursivamente archivos `.winmd`. La herramienta `cppwinrt.exe` también controla ahora los duplicados de forma más inteligente, que la hace más resistente a los errores del usuario y a los archivos `.winmd` mal formados.
 - Punteros inteligentes protegidos. Anteriormente, los revocadores de eventos no se pudieron revocar cuando se movía o asignaba un nuevo valor. Esto ayudó a descubrir un problema en el que las clases de punteros inteligentes no estaban tratando de forma confiable la autoasignación, con raíz en la [**plantilla de estructura winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr). **winrt::com_ptr** se ha corregido y los revocadores de eventos resueltos para controlar la semántica de movimiento correctamente para que se revoquen en el momento de la asignación.
