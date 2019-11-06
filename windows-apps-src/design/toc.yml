@@ -114,6 +114,8 @@
           items:
             - name: Plantillas y contenedores de elementos
               href: controls-and-patterns/item-containers-templates.md
+            - name: Selección de plantillas de datos
+              href: controls-and-patterns/data-template-selector.md
             - name: Plantillas de elemento para vistas de lista
               href: controls-and-patterns/item-templates-listview.md
             - name: Plantillas de elemento para vistas de cuadrícula
