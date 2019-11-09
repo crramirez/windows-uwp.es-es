@@ -1,23 +1,26 @@
 ---
-Description: Use la codificación de caracteres UTF-8 para ofrecer una compatibilidad óptima entre las aplicaciones web y otras plataformas basadas en * Nix (UNIX, Linux y variantes), minimizar los errores de localización y reducir la sobrecarga de las pruebas.
+Description: Use la codificación de caracteres UTF-8 para ofrecer una compatibilidad óptima entre las aplicaciones web y otras plataformas basadas en \*Nix (UNIX, Linux y variantes), minimizar los errores de localización y reducir la sobrecarga de las pruebas.
 title: Usar la página de códigos UTF-8 de Windows
 template: detail.hbs
 ms.date: 06/12/2019
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: be3aade0289911f878d960fb62bde49b8ef840a8
-ms.sourcegitcommit: 3a06cf3f8bd00e5e6eac3b38ee7e3c7cf4bc5197
+ms.openlocfilehash: 4b4050dfea1589fbe79db08061bcc56e392173f1
+ms.sourcegitcommit: 13ce25364201223e21e2e5e89f99bc7aa4d93f56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888747"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73847598"
 ---
 # <a name="use-the-utf-8-code-page"></a>Usa la página de códigos UTF-8
 
-Use la codificación de caracteres [UTF-8](http://www.utf-8.com/) para ofrecer una compatibilidad óptima entre las aplicaciones web y otras plataformas basadas en * Nix (UNIX, Linux y variantes), minimizar los errores de localización y reducir la sobrecarga de las pruebas.
+Use la codificación de caracteres [UTF-8](http://www.utf-8.com/) para ofrecer una compatibilidad óptima entre las aplicaciones web y otras plataformas basadas en \*Nix (UNIX, Linux y variantes), minimizar los errores de localización y reducir la sobrecarga de las pruebas.
 
-UTF-8 es la página de códigos universal para la internacionalización y admite todos los puntos de código Unicode con codificación de ancho variable de 1-6 bytes. Se usa de forma generalizada en la web y es el valor predeterminado para las plataformas basadas en * nix.
+UTF-8 es la página de códigos universal para la internacionalización y puede codificar todo el juego de caracteres Unicode. Se usa de forma generalizada en la web y es el valor predeterminado para las plataformas basadas en * nix.
+
+> [!NOTE]
+> Un carácter codificado toma entre 1 y 4 bytes. La codificación UTF-8 admite secuencias de bytes más largas, hasta 6 bytes, pero el punto de código más grande de Unicode 6,0 (U + 10FFFF) solo toma 4 bytes.
 
 ## <a name="-a-vs--w-apis"></a>-Una API de vs.-W
   
@@ -80,7 +83,8 @@ Como Windows funciona de forma nativa en UTF-16 (`WCHAR`), es posible que tenga 
 [MultiByteToWideChar](https://docs.microsoft.com/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) y [WideCharToMultiByte](https://docs.microsoft.com/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) permiten realizar conversiones entre UTF-8 y utf-16 (`WCHAR`) (y otras páginas de códigos). Esto es especialmente útil cuando una API de Win32 heredada solo puede comprender `WCHAR`. Estas funciones permiten convertir la entrada UTF-8 en `WCHAR` para pasarla a una API-W y, a continuación, volver a convertir los resultados si es necesario.
 Al usar estas funciones con `CodePage` establecido en `CP_UTF8`, utilice `dwFlags` de `0` o `MB_ERR_INVALID_CHARS`, de lo contrario se produce una `ERROR_INVALID_FLAGS`.
 
-Nota: `CP_ACP` equivale a `CP_UTF8` solo si se ejecuta en la versión 1903 de Windows (actualización 2019 de mayo) o superior y la propiedad ActiveCodePage descrita anteriormente está establecida en UTF-8. De lo contrario, respeta la página de códigos del sistema heredado. Se recomienda usar `CP_UTF8` explícitamente.
+> [!NOTE]
+> `CP_ACP` equivale a `CP_UTF8` solo si se ejecuta en la versión 1903 de Windows (actualización 2019 de mayo) o superior y la propiedad ActiveCodePage descrita anteriormente está establecida en UTF-8. De lo contrario, respeta la página de códigos del sistema heredado. Se recomienda usar `CP_UTF8` explícitamente.
 
 ## <a name="related-topics"></a>Temas relacionados
 
