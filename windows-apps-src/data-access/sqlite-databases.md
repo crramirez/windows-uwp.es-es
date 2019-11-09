@@ -5,12 +5,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, SQLite, base de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cc8cfe696d35872469d97dba24f5388ff6833b5
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 5b9c26710dfc5f71a9709fa93de4b369f6281e8c
+ms.sourcegitcommit: 545d5d864d89650a00a496ac4e52def9a13b14cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339786"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560694"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Usar una base de datos de SQLite en una aplicación para UWP
 Puedes usar SQLite para almacenar y recuperar datos en una base de datos ligera en el dispositivo del usuario. Esta guía te muestra cómo hacerlo.
@@ -177,10 +177,12 @@ using System.Collections.Generic;
 Agrega un método a la clase **DataAccess** que inicialice la base de datos de SQLite.
 
 ```csharp
-public static void InitializeDatabase()
-{
-    using (SqliteConnection db =
-        new SqliteConnection("Filename=sqliteSample.db"))
+public async static void InitializeDatabase()
+{ 
+     await ApplicationData.Current.LocalFolder.CreateFileAsync("sqliteSample.db", CreationCollisionOption.OpenIfExists);
+     string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "sqliteSample.db");
+     using (SqliteConnection db =
+        new SqliteConnection($"Filename={dbpath}"))
     {
         db.Open();
 
@@ -221,8 +223,9 @@ Agrega un método a la clase **DataAccess** que inserte datos en la base de dato
 ```csharp
 public static void AddData(string inputText)
 {
+    string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "sqliteSample.db");
     using (SqliteConnection db =
-        new SqliteConnection("Filename=sqliteSample.db"))
+      new SqliteConnection($"Filename={dbpath}"))
     {
         db.Open();
 
@@ -252,8 +255,9 @@ public static List<String> GetData()
 {
     List<String> entries = new List<string>();
 
-    using (SqliteConnection db =
-        new SqliteConnection("Filename=sqliteSample.db"))
+   string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "sqliteSample.db");
+   using (SqliteConnection db =
+      new SqliteConnection($"Filename={dbpath}"))
     {
         db.Open();
 
