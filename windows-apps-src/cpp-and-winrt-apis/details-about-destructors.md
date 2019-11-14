@@ -119,7 +119,7 @@ Un punto de suspensión hace que vuelva el subproceso de llamada, que ha iniciad
 
 Basarse en la noción de la destrucción diferida es la capacidad de consultar de forma segura las interfaces durante la destrucción.
 
-El COM clásico se basa en dos conceptos principales. El primero es el recuento de referencias y el segundo es la consulta de interfaces. Además de AddRef y Release, la interfaz IUnknown proporciona QueryInterface. Ese método se usa mucho en determinados marcos de trabajo de la interfaz de usuario &mdash;como XAML, para recorrer la jerarquía XAML mientras simula su sistema de tipos que admite composición. Fíjate en este ejemplo sencillo.
+El COM clásico se basa en dos conceptos principales. El primero es el recuento de referencias y el segundo es la consulta de interfaces. Además de **AddRef** y **Release**, la interfaz **IUnknown** proporciona [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(refiid_void)). Ese método se usa mucho en determinados marcos de trabajo de la interfaz de usuario &mdash;como XAML, para recorrer la jerarquía XAML mientras simula su sistema de tipos que admite composición. Fíjate en este ejemplo sencillo.
 
 ```cppwinrt
 struct MainPage : PageT<MainPage>
@@ -185,7 +185,7 @@ Todo esto es posible gracias a la eliminación del rebote del recuento de refere
 
 Un punto de extensión de uso menos frecuente es el struct  **abi_guard** y las funciones **abi_enter** y **abi_exit**.
 
-Si el tipo de implementación define una función abi_enter, se llama a esa función en la entrada de cada uno de los métodos de interfaz proyectados (sin contar los métodos de IInspectable).
+Si el tipo de implementación define una función **abi_enter**, se llama a esa función en la entrada de cada uno de los métodos de interfaz proyectados (sin contar los métodos de  [IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable)).
 
 Del mismo modo, si defines **abi_exit**, se llamará al salir de cada método de este tipo, pero no se llamará si **abi_enter** lanza una excepción. Se *seguirá* llamando si el propio método de la interfaz proyectado produce una excepción.
 
