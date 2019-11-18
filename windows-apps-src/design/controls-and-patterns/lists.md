@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e1167a57da6a3f54cabcc946cfbf7a592f301d2c
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.openlocfilehash: d309ce7e18a8dc62a24bc0e7f51f0015042a5f84
+ms.sourcegitcommit: 3bb982f35c057e30c742ab9f1eea119bae627a5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163741"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74086863"
 ---
 # <a name="collections-and-lists"></a>Colecciones y listas
 
@@ -38,11 +38,11 @@ Cada uno de estos controles (a excepción de ItemsRepeater) también tiene un co
 
 > **API importantes**: [clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [clase FlipView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [clase TreeView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview) y [clase ItemsRepeater](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
 
-> <div id="main">
-> <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong>
-> </div>
-> De manera predeterminada, en lugar de llevar a cabo la selección, ahora un lápiz activo se desplaza/realiza movimiento panorámico por una lista en aplicaciones para UWP (como la entrada táctil, el panel táctil y el lápiz pasivo).
-> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, consulta el tema de referencia de API <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Clase ScrollViewer</a>.
+> <div id="main">  
+> <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong>  
+> </div>  
+> De manera predeterminada, en lugar de llevar a cabo la selección, ahora un lápiz activo se desplaza/realiza movimiento panorámico por una lista en aplicaciones para UWP (como la entrada táctil, el panel táctil y el lápiz pasivo).  
+> Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, consulta en el tema de referencia de API la <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">clase ScrollViewer</a>.  
 
 ## <a name="examples"></a>Ejemplos
 

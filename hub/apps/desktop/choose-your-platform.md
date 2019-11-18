@@ -3,16 +3,17 @@ Description: Cuando quieres crear una nueva aplicación de escritorio, la primer
 ms.assetid: 82705644-F1F0-40F3-99B1-7A97BFB32831
 title: Elección de la plataforma de aplicaciones
 ms.topic: article
-ms.date: 03/18/2019
+ms.date: 11/04/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 57f3101b1134b4fdceb6a38f392e54677d2b884d
-ms.sourcegitcommit: f3dd633a3149d2e206981fa52ad424d408e5508c
+keywords: windows win32, desarrollo de escritorio
+ms.openlocfilehash: c931991c283bb0b31f55c3e5539eac5ddeda9575
+ms.sourcegitcommit: cf88f5e8e1de476ed2635e791a5e5e82ae4bd8cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73799580"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056851"
 ---
 # <a name="choose-your-app-platform"></a>Elección de la plataforma de aplicaciones
 
@@ -40,19 +41,57 @@ UWP es la plataforma más vanguardista para juegos y aplicaciones de Windows 10
 
 No solo puedes usar UWP para crear aplicaciones de escritorio para equipos Windows, sino que también es la única plataforma compatible con las aplicaciones de Xbox, HoloLens y Surface Hub. UWP es nuestra plataforma de aplicaciones más reciente y vanguardista.
 
-Para más información sobre UWP, consulta [Introducción a las aplicaciones de Windows 10](/windows/uwp/get-started/).
+Para obtener más información sobre UWP, consulta los artículos siguientes:
+
+* [Introducción](/windows/uwp/get-started/)
+* [Diseño e interfaz de usuario](/windows/uwp/design/)
+* [Tecnologías y características](/windows/uwp/develop/)
+* [Referencia de las API](/uwp/)
+* [Ejemplos](https://github.com/Microsoft/Windows-universal-samples)
 
 ## <a name="wpf"></a>WPF
 
-WPF es la plataforma establecida para las aplicaciones para Windows administradas con acceso a todo .NET Framework y también usa el marcado XAML para separar la interfaz de usuario del código. Esta plataforma está diseñada para aplicaciones de escritorio que requieren una interfaz de usuario sofisticada, personalización de estilos y escenarios de uso intensivo de gráficos. Las aptitudes de desarrollo en WPF son similares a las de UWP, por lo que migrar aplicaciones de WPF a UWP es más fácil que migrar desde Windows Forms.
+WPF es la plataforma establecida para las aplicaciones Windows administradas con acceso a .NET Core y a la instancia completa de .NET Framework, y también usa el marcado XAML para separar la interfaz de usuario del código. Esta plataforma está diseñada para aplicaciones de escritorio que requieren una interfaz de usuario sofisticada, personalización de estilos y escenarios de uso intensivo de gráficos. Las aptitudes de desarrollo en WPF son similares a las de UWP, por lo que migrar aplicaciones de WPF a UWP es más fácil que migrar desde Windows Forms.
 
-Para más información acerca de WPF, consulta [Introducción (WPF)](https://docs.microsoft.com/dotnet/framework/wpf/getting-started/).
+Para obtener más información sobre WPF, consulta los artículos siguientes:
+
+* [Introducción [WPF]](https://docs.microsoft.com/dotnet/framework/wpf/getting-started/)
+* [Creación de la primera aplicación (.NET Core)](/visualstudio/get-started/csharp/tutorial-wpf/)
+* [Creación de la primera aplicación (.NET Framework)](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application/)
+* [Migración de aplicaciones de WPF a .NET Core](/dotnet/desktop-wpf/migration/convert-project-from-net-framework/)
+* [Referencia de API (.NET)](https://docs.microsoft.com/dotnet/api/index)
+* [Ejemplos](https://github.com/Microsoft/WPF-Samples)
 
 ## <a name="windows-forms"></a>Windows Forms
 
-Windows Forms es la plataforma original para aplicaciones Windows administradas, con un modelo de interfaz de usuario ligero y acceso a la totalidad de .NET Framework. Esta plataforma es más adecuada para que los desarrolladores puedan empezar a compilar aplicaciones rápidamente, incluso para aquellos que no están familiarizados con ella. Se trata de una plataforma de desarrollo de aplicaciones rápida, basada en formularios, con una gran colección integrada de controles visuales y de arrastrar y colocar que no son visuales. Windows Forms no usa XAML, por lo que si decides más adelante llevar tu aplicación a UWP, tendrás que reescribir completamente la interfaz de usuario.
+Windows Forms es la plataforma original para aplicaciones Windows administradas, con un modelo de interfaz de usuario ligero y acceso a .NET Core y a la instancia completa de .NET Framework. Esta plataforma es más adecuada para que los desarrolladores puedan empezar a compilar aplicaciones rápidamente, incluso para aquellos que no están familiarizados con ella. Se trata de una plataforma de desarrollo de aplicaciones rápida, basada en formularios, con una gran colección integrada de controles visuales y de arrastrar y colocar que no son visuales. Windows Forms no usa XAML, por lo que si decides más adelante llevar tu aplicación a UWP, tendrás que reescribir completamente la interfaz de usuario.
 
-Para más información sobre Windows Forms, consulta [Introducción a Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms).
+Para obtener más información sobre Windows Forms, consulta los siguientes artículos:
+
+* [Introducción a Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms)
+* [Crea tu primera aplicación.](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application/)
+* [Referencia de API (.NET)](https://docs.microsoft.com/dotnet/api/index)
+* [Mejorar las aplicaciones de Windows Forms](/dotnet/framework/winforms/advanced/)
+
+## <a name="win32"></a>Win32
+
+El uso de Win32 API con C++ permite lograr los niveles más altos de rendimiento y eficiencia y tomar un mayor control de la plataforma de destino con código no administrado de lo que es posible en un entorno de ejecución administrado como WinRT y .NET. Sin embargo, ejercer este nivel de control sobre la ejecución de la aplicación requiere un mayor cuidado y atención para hacerlo bien, y sacrifica productividad durante el desarrollo a cambio de rendimiento en tiempo de ejecución.
+
+Estos son algunos aspectos destacados de lo que ofrece Win32 API y C++ que te permitirán crear aplicaciones de alto rendimiento.
+
+* Optimizaciones de nivel de hardware, como un estrecho control sobre la asignación de recursos, la duración de los objetos, el diseño de los datos, la alineación, el empaquetado de bytes, etc.
+* Acceso a conjuntos de instrucciones orientadas al rendimiento como SSE y AVX a través de funciones intrínsecas.
+* Programación genérica eficaz y con seguridad de tipos mediante el uso de plantillas.
+* Contenedores y algoritmos eficaces y seguros.
+* DirectX, concretamente Direct3D y DirectCompute (ten en cuenta que UWP también ofrece interoperabilidad de DirectX).
+
+Para obtener más información, consulta los artículos siguientes:
+
+* [Introducción](/windows/win32/desktop-programming/)
+* [Creación de su primera aplicación C++ y Win32](/windows/win32/learnwin32/learn-to-program-for-windows/)
+* [Tecnologías y características](/windows/win32/desktop-app-technologies)
+* [Referencia de las API](/windows/win32/apiindex/windows-api-list/)
+* [Ejemplos](https://github.com/Microsoft/Windows-classic-samples)
 
 ## <a name="platform-comparison-uwp-wpf-and-windows-forms"></a>Comparación de las plataformas: UWP, WPF y Windows Forms
 
@@ -71,29 +110,6 @@ En la tabla siguiente se comparan las distintas características de Windows Form
 <sup>1</sup> Hemos anunciado públicamente características que abordarán este escenario en una versión futura de Windows 10.
 
 <sup>2</sup> Aunque la plataforma no es compatible con la API de primera clase de este escenario, los desarrolladores pueden sortear este inconveniente mediante soluciones alternativas.
-
-## <a name="win32"></a>Win32
-
-El uso de Win32 API con C++ permite lograr los niveles más altos de rendimiento y eficiencia y tomar un mayor control de la plataforma de destino con código no administrado de lo que es posible en un entorno de ejecución administrado como WinRT y .NET. Sin embargo, ejercer este nivel de control sobre la ejecución de la aplicación requiere un mayor cuidado y atención para hacerlo bien, y sacrifica productividad durante el desarrollo a cambio de rendimiento en tiempo de ejecución.
-
-Estos son algunos aspectos destacados de lo que ofrece Win32 API y C++ que te permitirán crear aplicaciones de alto rendimiento.
-
--   Optimizaciones de nivel de hardware, como un estrecho control sobre la asignación de recursos, la duración de los objetos, el diseño de los datos, la alineación, el empaquetado de bytes, etc.
--   Acceso a conjuntos de instrucciones orientadas al rendimiento como SSE y AVX a través de funciones intrínsecas.
--   Programación genérica eficaz y con seguridad de tipos mediante el uso de plantillas.
--   Contenedores y algoritmos eficaces y seguros.
--   DirectX, concretamente Direct3D y DirectCompute (ten en cuenta que UWP también ofrece interoperabilidad de DirectX).
--   C++ AMP.
-
-Para más información, consulta [Introducción a las aplicaciones Windows de escritorio que utilizan Win32 API](/windows/desktop/desktop-programming) y [Tecnología de aplicaciones de escritorio](/windows/desktop/desktop-app-technologies).
-
-### <a name="win32-and-c-for-traditional-desktop-applications"></a>Win32 y C++ para aplicaciones de escritorio tradicionales
-
-Cuando escribes una aplicación de escritorio en C++, puedes elegir Win32 o MFC para la interfaz de usuario, o un host de plataformas de aplicaciones de terceros que también admita plataformas que no sean de Windows.
-
--   **Win32:** esta es la API de la plataforma Windows, en lenguaje C y basada en identificadores que incluye, entre otras, una funcionalidad de interfaz de usuario con ventanas, dibujos y controles. Dado que es una API de bajo nivel, escrita en lenguaje C y basada en identificadores, es una opción poco frecuente para crear aplicaciones modernas con uso intensivo de la interfaz de usuario. Sin embargo, proporciona las API básicas necesarias para interactuar con la plataforma de Windows y es una opción adecuada para aplicaciones que necesitan una interfaz de usuario sencilla o que simplemente quieren que la interfaz de usuario de Windows aparezca lo menos posible como, por ejemplo, en el caso de los juegos.
--   **Biblioteca MFC (Microsoft Foundation Class):** esta es la venerable plataforma de aplicaciones y biblioteca de interfaz de usuario que los desarrolladores de Windows llevan utilizando desde 1992. Es un contenedor fino de C++ sobre Win32 API, la API en lenguaje C basada en identificadores, que proporciona interfaces orientadas a objetos para muchas de las ventanas predefinidas, los controles comunes y otros objetos de Windows. Aunque muchas plataformas modernas de interfaz de usuario del ecosistema de .NET superan a MFC en comodidad, sigue siendo la plataforma de interfaz de usuario nativa de referencia para muchos desarrolladores de C++ que crean aplicaciones para el escritorio de Windows.
--   **Plataformas de aplicaciones de terceros:** como C++ se puede ejecutar en una amplia variedad de plataformas y no está ligado a Windows ni al entorno en tiempo de ejecución de .NET, hay terceros que han desarrollado nuevas aplicaciones y plataformas de interfaz de usuario para C++ con el fin de facilitar el desarrollo de aplicaciones multiplataforma con interfaces de usuario enriquecidas. Algunas de estas plataformas ofrecen una apariencia propia mientras que otras, como wxWidgets o Qt, usan o emulan el conjunto de controles nativos de la plataforma. Con estas bibliotecas, es posible compartir casi todo el código fuente de una aplicación entre las versiones de la aplicación que se ejecutan en Windows o en otras plataformas, como OSX o Linux.
 
 ## <a name="other-app-platforms"></a>Otras plataformas de aplicaciones
 
