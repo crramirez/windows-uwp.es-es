@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 92511c1f5b7ad8991900d80d4ec52659d6e74f88
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4b122aa6436e55c80276cdd684b7c10cc3c47d28
+ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361413"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74153712"
 ---
 # <a name="supported-codecs"></a>Códecs admitidos
 
@@ -65,7 +65,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1/AAC+</td>
+<td align="left">HE-AAC v1 / AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -80,7 +80,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2/eAAC+</td>
+<td align="left">HE-AAC v2 / eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -339,7 +339,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 
  
 
-### <a name="mobile"></a>Móvil
+### <a name="mobile"></a>Dispositivo móvil
 
 <table>
 <colgroup>
@@ -376,7 +376,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1/AAC+</td>
+<td align="left">HE-AAC v1 / AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -391,7 +391,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2/eAAC+</td>
+<td align="left">HE-AAC v2 / eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -687,7 +687,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1/AAC+</td>
+<td align="left">HE-AAC v1 / AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -702,7 +702,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2/eAAC+</td>
+<td align="left">HE-AAC v2 / eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -998,7 +998,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1/AAC+</td>
+<td align="left">HE-AAC v1 / AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1013,7 +1013,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2/eAAC+</td>
+<td align="left">HE-AAC v2 / eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1309,7 +1309,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1/AAC+</td>
+<td align="left">HE-AAC v1 / AAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1324,7 +1324,7 @@ Las siguientes tablas muestran la compatibilidad con formatos y códecs de audio
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2/eAAC+</td>
+<td align="left">HE-AAC v2 / eAAC+</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1812,7 +1812,7 @@ Las siguientes tablas muestran la compatibilidad con los formatos y los códecs 
 
  
 
-### <a name="mobile"></a>Móvil
+### <a name="mobile"></a>Dispositivo móvil
 
 <table>
 <colgroup>
