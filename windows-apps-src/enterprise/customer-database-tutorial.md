@@ -1,76 +1,76 @@
 ---
 title: Crear una aplicación de base de datos de clientes
-description: Crear una aplicación de base de datos de clientes y obtenga información sobre cómo implementar funciones de aplicaciones empresariales básicos.
-keywords: cliente de empresa, tutorial, datos, crear autenticación de eliminación, REST, leer, actualizar
+description: Create a customer database application, and learn how to implement basic enterprise app functions.
+keywords: enterprise, tutorial, customer, data, create read update delete, REST, authentication
 ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: med
-ms.openlocfilehash: 7bd3a180762c3ef06d7c24ae001fb2c7fb7fc55e
-ms.sourcegitcommit: 6df46d7d5b5522805eab11a9c0e07754f28673c6
+ms.openlocfilehash: b8cf0554464b56337e3d57b58db543092682ffa3
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58808303"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258616"
 ---
 # <a name="tutorial-create-a-customer-database-application"></a>Tutorial: Crear una aplicación de base de datos de clientes
 
-Este tutorial crea una aplicación sencilla para administrar una lista de clientes. De esta forma, presenta una selección de los conceptos básicos para aplicaciones empresariales en UWP. Aquí aprenderás a hacer lo siguiente:
+This tutorial creates a simple app for managing a list of customers. In doing so, it introduces a selection of basic concepts for enterprise apps in UWP. Aquí aprenderás a hacer lo siguiente:
 
-* Implementar la creación, lectura, actualización y eliminar operaciones en una base de datos SQL local.
-* Agregar una cuadrícula de datos, para mostrar y editar datos del cliente en la interfaz de usuario.
-* Organiza los elementos de interfaz de usuario juntos en un diseño de forma más básica.
+* Implement Create, Read, Update, and Delete operations against a local SQL database.
+* Add a data grid, to display and edit customer data in your UI.
+* Arrange UI elements together in a basic form layout.
 
-El punto de partida para este tutorial es una aplicación de página única con un mínimo de interfaz de usuario y funcionalidad, basada en una versión simplificada de la [aplicación de ejemplo de la base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database). Se ha escrito C# y XAML y se espera que tiene un conocimiento básico ambos de esos lenguajes.
+The starting point for this tutorial is a single-page app with minimal UI and functionality, based on a simplified version of the [Customer Orders Database sample app](https://github.com/Microsoft/Windows-appsample-customers-orders-database). It's written in C# and XAML, and we're expecting that you've got a basic familiarity with both those languages.
 
-![La página principal de la aplicación en funcionamiento](images/customer-database-tutorial/customer-list.png)
+![The main page of the working app](images/customer-database-tutorial/customer-list.png)
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-* [Asegúrese de que tener la versión más reciente de Visual Studio y el SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* [Clonar o descargar el ejemplo de Tutorial de base de datos de cliente](https://aka.ms/customer-database-tutorial)
+* [Ensure you have the latest version of Visual Studio and the Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* [Clone or download the Customer Database Tutorial sample](https://github.com/microsoft/windows-tutorials-customer-database)
 
-Después de clonar o descargar el repositorio, puede editar el proyecto, abra **CustomerDatabaseTutorial.sln** con Visual Studio.
+After you've cloned/downloaded the repo, you can edit the project by opening **CustomerDatabaseTutorial.sln** with Visual Studio.
 
 > [!NOTE]
-> Consulte la [ejemplo completo de base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) para ver la aplicación en este tutorial se basa en.
+> Check out the [full Customer Orders Database sample](https://github.com/Microsoft/Windows-appsample-customers-orders-database) to see the app this tutorial was based on.
 
-## <a name="part-1-code-of-interest"></a>1ª parte: Código de interés
+## <a name="part-1-code-of-interest"></a>Part 1: Code of Interest
 
-Si ejecuta la aplicación inmediatamente después de abrirla, verá algunos botones en la parte superior de una pantalla en blanco. Aunque no es visible para usted, la aplicación ya incluye una base de datos SQLite local aprovisionado con algunos clientes de prueba. Desde aquí, deberá iniciar mediante la implementación de un control de interfaz de usuario para mostrar a los clientes y, a continuación, continuar y agregar en las operaciones en la base de datos. Antes de comenzar, aquí es donde podrá seguir trabajando.
+If you run your app immediately after opening it, you'll see a few buttons at the top of a blank screen. Though it's not visible to you, the app already includes a local SQLite database provisioned with a few test customers. From here, you'll start by implementing a UI control to display those customers, and then move on to adding in operations against the database. Before you begin, here's where you'll be working.
 
 ### <a name="views"></a>Vistas
 
-**CustomerListPage.xaml** es la vista de la aplicación, que define la interfaz de usuario de la única página en este tutorial. Cada vez que necesite agregar o cambiar un elemento visual en la interfaz de usuario, deberá hacerlo en este archivo. Este tutorial le guiará a través de agregar estos elementos:
+**CustomerListPage.xaml** is the app's View, which defines the UI for the single page in this tutorial. Any time you need to add or change a visual element in the UI, you'll do it in this file. This tutorial will walk you through adding these elements:
 
-* Un **RadDataGrid** para mostrar y editar sus clientes. 
-* Un **StackPanel** para establecer los valores iniciales de un cliente nuevo.
+* A **RadDataGrid** for displaying and editing your customers. 
+* A **StackPanel** to set the initial values for a new customer.
 
 ### <a name="viewmodels"></a>ViewModels
 
-**ViewModels\CustomerListPageViewModel.cs** es donde se encuentra la lógica fundamental de la aplicación. Cada acción del usuario realizada en la vista se pasarán a este archivo para su procesamiento. En este tutorial, deberá agregar determinado código nuevo e implementar los métodos siguientes:
+**ViewModels\CustomerListPageViewModel.cs** is where the fundamental logic of the app is located. Every user action taken in the view will be passed into this file for processing. In this tutorial, you'll add some new code, and implement the following methods:
 
-* **CreateNewCustomerAsync**, que inicializa un nuevo objeto CustomerViewModel.
-* **DeleteNewCustomerAsync**, lo que elimina un cliente nuevo antes de que se muestre en la interfaz de usuario.
-* **DeleteAndUpdateAsync**, que controla la lógica del botón de eliminación.
-* **GetCustomerListAsync**, que recupera una lista de clientes de la base de datos.
-* **SaveInitialChangesAsync**, que agrega información de un cliente nuevo a la base de datos.
-* **UpdateCustomersAsync**, que actualiza la interfaz de usuario para reflejar los clientes agregan o eliminan.
+* **CreateNewCustomerAsync**, which initializes a new CustomerViewModel object.
+* **DeleteNewCustomerAsync**, which removes a new customer before it's displayed in the UI.
+* **DeleteAndUpdateAsync**, which handles the delete button's logic.
+* **GetCustomerListAsync**, which retrieves a list of customers from the database.
+* **SaveInitialChangesAsync**, which adds a new customer's information to the database.
+* **UpdateCustomersAsync**, which refreshes the UI to reflect any customers added or deleted.
 
-**CustomerViewModel** es un contenedor de información de un cliente que realiza el seguimiento de si se ha modificado recientemente. No tendrá que agregar nada a esta clase, pero la parte del código que se va a agregar en otro lugar harán referencia a él.
+**CustomerViewModel** is a wrapper for a customer's information, which tracks whether or not it's been recently modified. You won't need to add anything to this class, but some of the code you'll add elsewhere will reference it.
 
-Para obtener más información acerca de cómo está construido en el ejemplo, consulte el [información general de la estructura de aplicación](../enterprise/customer-database-app-structure.md).
+For more information on how the sample is constructed, check out the [app structure overview](../enterprise/customer-database-app-structure.md).
 
-## <a name="part-2-add-the-datagrid"></a>2ª parte: Agregar el control DataGrid
+## <a name="part-2-add-the-datagrid"></a>Part 2: Add the DataGrid
 
-Antes de empezar a trabajar en los datos de cliente, deberá agregar un control de interfaz de usuario para mostrar a los clientes. Para ello, vamos a usar un tercero prefabricado **RadDataGrid** control. El **Telerik.UI.for.UniversalWindowsPlatform** paquete NuGet ya se ha incluido en este proyecto. Vamos a agregar la cuadrícula a nuestro proyecto.
+Before you begin to operate on customer data, you'll need to add a UI control to display those customers. To do this, we'll be using a pre-made third-party **RadDataGrid** control. The **Telerik.UI.for.UniversalWindowsPlatform** NuGet package has already been included in this project. Let's add the grid to our project.
 
-1. Abra **Views\CustomerListPage.xaml** desde el Explorador de soluciones. Agregue la siguiente línea de código dentro de la **página** etiqueta para declarar una asignación para el espacio de nombres de Telerik que contiene la cuadrícula de datos.
+1. Open **Views\CustomerListPage.xaml** from the Solution Explorer. Add the following line of code within the **Page** tag to declare a mapping to the Telerik namespace containing the data grid.
 
     ```xaml
         xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
     ```
 
-2. A continuación el **CommandBar** dentro de los principales **RelativePanel** de la vista, agregue un **RadDataGrid** control, con algunas opciones de configuración básica:
+2. Below the **CommandBar** within the main **RelativePanel** of the View, add a **RadDataGrid** control, with some basic configuration options:
 
     ```xaml
     <Grid
@@ -96,21 +96,21 @@ Antes de empezar a trabajar en los datos de cliente, deberá agregar un control 
     </Grid>
     ```
 
-3. Se ha agregado a la cuadrícula de datos, pero necesita datos para mostrar. Agregue las siguientes líneas de código en él:
+3. You've added the data grid, but it needs data to display. Add the following lines of code to it:
 
     ```xaml
     ItemsSource="{x:Bind ViewModel.Customers}"
     UserEditMode="Inline"
     ```
-    Ahora que ha definido un origen de datos para mostrar, **RadDataGrid** controlará la mayor parte de la lógica de la interfaz de usuario para usted. Sin embargo, si ejecuta el proyecto, todavía no ve ningún dato en pantalla. Eso es porque el modelo de vista no está cargando aún.
+    Now that you have defined a source of data to display, **RadDataGrid** will handle most of the UI logic for you. However, if you run your project, you still won't see any data on display. That's because the ViewModel isn't loading it yet.
 
-![Aplicación en blanco, con ningún cliente](images/customer-database-tutorial/blank-customer-list.png)
+![Blank app, with no customers](images/customer-database-tutorial/blank-customer-list.png)
 
-## <a name="part-3-read-customers"></a>Parte 3: Clientes de lectura
+## <a name="part-3-read-customers"></a>Part 3: Read customers
 
-Cuando se inicializa, **ViewModels\CustomerListPageViewModel.cs** llamadas la **GetCustomerListAsync** método. Que las necesidades de método para recuperar la datos del cliente de prueba de la SQLite base de datos se incluye en el tutorial.
+When it's initialized, **ViewModels\CustomerListPageViewModel.cs** calls the **GetCustomerListAsync** method. That method needs to retrieve the test Customer data from the SQLite database that's included in the tutorial.
 
-1. En **ViewModels\CustomerListPageViewModel.cs**, actualice su **GetCustomerListAsync** método con este código:
+1. In **ViewModels\CustomerListPageViewModel.cs**, update your **GetCustomerListAsync** method with this code:
 
     ```csharp
     public async Task GetCustomerListAsync()
@@ -130,23 +130,23 @@ Cuando se inicializa, **ViewModels\CustomerListPageViewModel.cs** llamadas la **
         });
     }
     ```
-    El **GetCustomerListAsync** método se llama cuando se carga el modelo de vista, pero antes de este paso, no hace nada. En este caso, hemos agregado una llamada a la **GetAsync** método **repositorio/SqlCustomerRepository**. Esto le permite ponerse en contacto con el repositorio para recuperar una colección enumerable de objetos Customer. , A continuación, analiza en objetos individuales, antes de agregarlos a su internal **ObservableCollection** para que se puedan mostrar y editar.
+    The **GetCustomerListAsync** method is called when the ViewModel is loaded, but before this step, it didn't do anything. Here, we've added a call to the **GetAsync** method in **Repository/SqlCustomerRepository**. This allows it to contact the repository to retrieve an enumerable collection of Customer objects. It then parses them into individual objects, before adding them to its internal **ObservableCollection** so they can be displayed and edited.
 
-2. Ejecutar la aplicación: ahora verá la cuadrícula de datos donde se muestra la lista de clientes.
+2. Run your app - you'll now see the data grid displaying the list of customers.
 
-![Lista inicial de los clientes](images/customer-database-tutorial/initial-customers.png)
+![Initial list of customers](images/customer-database-tutorial/initial-customers.png)
 
-## <a name="part-4-edit-customers"></a>Parte 4: Editar clientes
+## <a name="part-4-edit-customers"></a>Part 4: Edit customers
 
-Puede editar las entradas de la cuadrícula de datos haciendo doble clic en ellos, pero debe asegurarse de que los cambios que realice en la interfaz de usuario también se realizan en la colección de clientes en el código subyacente. Esto significa que tendrá que implementar el enlace de datos bidireccional. Si desea más información al respecto, consulte nuestra [Introducción al enlace de datos](../get-started/display-customers-in-list-learning-track.md).
+You can edit the entries in the data grid by double-clicking them, but you need to ensure that any changes you make in the UI are also made to your collection of customers in the code-behind. This means you'll have to implement two-way data binding. If you want more information about this, check out our [introduction to data binding](../get-started/display-customers-in-list-learning-track.md).
 
-1. Primero, declare que **ViewModels\CustomerListPageViewModel.cs** implementa el **INotifyPropertyChanged** interfaz:
+1. First, declare that **ViewModels\CustomerListPageViewModel.cs** implements the **INotifyPropertyChanged** interface:
 
     ```csharp
     public class CustomerListPageViewModel : INotifyPropertyChanged
     ```
 
-2. A continuación, en el cuerpo principal de la clase, agregue el evento y el método siguiente:
+2. Then, within the main body of the class, add the following event and method:
 
     ```csharp
     public event PropertyChangedEventHandler PropertyChanged;
@@ -155,9 +155,9 @@ Puede editar las entradas de la cuadrícula de datos haciendo doble clic en ello
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     ```
 
-    El **OnPropertyChanged** método facilita a los establecedores generar el **PropertyChanged** eventos, que es necesario para el enlace de datos bidireccional.
+    The **OnPropertyChanged** method makes it easy for your setters to raise the **PropertyChanged** event, which is necessary for two-way data binding.
 
-3. Actualizar el establecedor para **SelectedCustomer** con esta llamada de función:
+3. Update the setter for **SelectedCustomer** with this function call:
 
     ```csharp
     public CustomerViewModel SelectedCustomer
@@ -174,23 +174,23 @@ Puede editar las entradas de la cuadrícula de datos haciendo doble clic en ello
     }
     ```
 
-4. En **Views\CustomerListPage.xaml**, agregue el **SelectedCustomer** propiedad a la cuadrícula de datos.
+4. In **Views\CustomerListPage.xaml**, add the **SelectedCustomer** property to your data grid.
 
     ```xaml
     SelectedItem="{x:Bind ViewModel.SelectedCustomer, Mode=TwoWay}"
     ```
 
-    Esto asocia la selección del usuario en la cuadrícula de datos con el objeto de cliente correspondiente en el código subyacente. El modo de enlace TwoWay permite que los cambios realizados en la interfaz de usuario en reflejarse en ese objeto.
+    This associates the user's selection in the data grid with the corresponding Customer object in the code-behind. The TwoWay binding mode allows the changes made in the UI to be reflected on that object.
 
-5. Ejecute la aplicación. Ahora puede ver a los clientes que se muestran en la cuadrícula y realizar cambios en los datos subyacentes a través de la interfaz de usuario.
+5. Run your app. You can now see the customers displayed in the grid, and make changes to the underlying data through your UI.
 
-![Edición de un cliente en la cuadrícula de datos](images/customer-database-tutorial/edit-customer-inline.png)
+![Editing a customer in the data grid](images/customer-database-tutorial/edit-customer-inline.png)
 
-## <a name="part-5-update-customers"></a>Parte 5: Actualizar clientes
+## <a name="part-5-update-customers"></a>Part 5: Update customers
 
-Ahora que puede ver y editar a sus clientes, deberá poder insertar los cambios en la base de datos y para extraer las actualizaciones que se han realizado otros usuarios.
+Now that you can see and edit your customers, you'll need to be able to push your changes to the database, and to pull any updates that have been made by others.
 
-1. Vuelva a **ViewModels\CustomerListPageViewModel.cs**y navegue hasta la **UpdateCustomersAsync** método. Actualícelo con este código, para insertar los cambios en la base de datos y recuperar cualquier información nueva:
+1. Return to **ViewModels\CustomerListPageViewModel.cs**, and navigate to the **UpdateCustomersAsync** method. Update it with this code, to push changes to the database and to retrieve any new information:
 
     ```csharp
     public async Task UpdateCustomersAsync()
@@ -203,15 +203,15 @@ Ahora que puede ver y editar a sus clientes, deberá poder insertar los cambios 
         await GetCustomerListAsync();
     }
     ```
-    Este código utiliza el **IsModified** propiedad de **ViewModels\CustomerViewModel.cs**, que se actualiza automáticamente cada vez que se cambia el cliente. Esto le permite evitar llamadas innecesarias y solo insertar cambios de los clientes actualizados en la base de datos.
+    This code utilizes the **IsModified** property of **ViewModels\CustomerViewModel.cs**, which is automatically updated whenever the customer is changed. This allows you to avoid unnecessary calls, and to only push changes from updated customers to the database.
 
-## <a name="part-6-create-a-new-customer"></a>Parte 6: Crear un nuevo cliente
+## <a name="part-6-create-a-new-customer"></a>Part 6: Create a new customer
 
-Agregar a un nuevo cliente presenta un desafío, como el cliente aparecerá como una fila en blanco si se agrega a la interfaz de usuario antes de proporcionar valores para sus propiedades. Esto no es un problema, pero aquí le lo hacemos más fácil establecer valores iniciales de un cliente. En este tutorial, vamos a agregar un panel que puede contraerse simple, pero si tuviera más información para agregar podría crear una página independiente para este propósito.
+Adding a new customer presents a challenge, as the customer will appear as a blank row if you add it to the UI before providing values for its properties. That's not a problem, but here we'll make it easier to set a customer's initial values. In this tutorial, we'll add a simple collapsible panel, but if you had more information to add you could create a separate page for this purpose.
 
-### <a name="update-the-code-behind"></a>Actualizar el código subyacente
+### <a name="update-the-code-behind"></a>Update the code-behind
 
-1. Agregar un nuevo campo privado y una propiedad pública para **ViewModels\CustomerListPageViewModel.cs**. Esto se usará para controlar o no está visible el panel.
+1. Add a new private field and public property to **ViewModels\CustomerListPageViewModel.cs**. This will be used to control whether or not the panel is visible.
 
     ```csharp
     private bool _addingNewCustomer = false;
@@ -230,14 +230,14 @@ Agregar a un nuevo cliente presenta un desafío, como el cliente aparecerá como
     }
     ```
 
-2. Agregar una nueva propiedad pública para el modelo de vista, un inverso del valor de **AddingNewCustomer**. Esto se usará para deshabilitar los botones de barra de comandos normal cuando está visible el panel.
+2. Add a new public property to the ViewModel, an inverse of the value of **AddingNewCustomer**. This will be used to disable the regular command bar buttons when the panel is visible.
 
     ```csharp
     public bool EnableCommandBar => !AddingNewCustomer;
     ```
-    Ahora, necesitará una forma de mostrar el panel que se pueden contraer y para crear un cliente para editar dentro de él. 
+    You'll now need a way to display the collapsible panel, and to create a customer to edit within it. 
 
-3. Agregue un nuevo estudioso privada y una propiedad pública al ViewModel, para contener al cliente recién creado.
+3. Add a new private fiend and public property to the ViewModel, to hold the newly created customer.
 
     ```csharp
     private CustomerViewModel _newCustomer;
@@ -256,7 +256,7 @@ Agregar a un nuevo cliente presenta un desafío, como el cliente aparecerá como
     }
     ```
 
-2.  Actualización de su **CreateNewCustomerAsync** método para crear un nuevo cliente, agregarlo en el repositorio y establézcalo como el cliente seleccionado:
+2.  Update your **CreateNewCustomerAsync** method to create a new customer, add it to the repository, and set it as the selected customer:
 
     ```csharp
     public async Task CreateNewCustomerAsync()
@@ -268,7 +268,7 @@ Agregar a un nuevo cliente presenta un desafío, como el cliente aparecerá como
     }
     ```
 
-3. Actualizar el **SaveInitialChangesAsync** método para agregar un cliente recién creado en el repositorio, actualizar la interfaz de usuario y cierre el panel.
+3. Update the **SaveInitialChangesAsync** method to add a newly-created customer to the repository, update the UI, and close the panel.
 
     ```csharp
     public async Task SaveInitialChangesAsync()
@@ -278,17 +278,17 @@ Agregar a un nuevo cliente presenta un desafío, como el cliente aparecerá como
         AddingNewCustomer = false;
     }
     ```
-4. Agregue la siguiente línea de código como la última línea en el establecedor para **AddingNewCustomer**:
+4. Add the following line of code as the final line in the setter for **AddingNewCustomer**:
 
     ```csharp
     OnPropertyChanged(nameof(EnableCommandBar));
     ```
 
-    Esto garantizará que **EnableCommandBar** se actualiza automáticamente cada vez que **AddingNewCustomer** se cambia.
+    This will ensure that **EnableCommandBar** is automatically updated whenever **AddingNewCustomer** is changed.
 
-### <a name="update-the-ui"></a>Actualización de la interfaz de usuario
+### <a name="update-the-ui"></a>Update the UI
 
-1. Vuelva a **Views\CustomerListPage.xaml**y agregue un **StackPanel** con las siguientes propiedades entre su **CommandBar** y la cuadrícula de datos:
+1. Navigate back to **Views\CustomerListPage.xaml**, and add a **StackPanel** with the following properties between your **CommandBar** and your data grid:
 
     ```xaml
     <StackPanel
@@ -298,15 +298,15 @@ Agregar a un nuevo cliente presenta un desafío, como el cliente aparecerá como
         RelativePanel.Below="mainCommandBar">
     </StackPanel>
     ```
-    El **x: Load** atributo garantiza que este panel solo aparece cuando va a agregar un nuevo cliente.
+    The **x:Load** attribute ensures that this panel only appears when you're adding a new customer.
 
-2. Realice el siguiente cambio en la posición de la cuadrícula de datos, para asegurarse de que se desplaza hacia abajo cuando aparece el nuevo panel:
+2. Make the following change to the position of your data grid, to ensure that it moves down when the new panel appears:
 
     ```xaml
     RelativePanel.Below="newCustomerPanel"
     ```
 
-3. Actualizar el panel de apilamiento con cuatro **TextBox** controles. Podrá enlazar a las propiedades individuales del nuevo cliente y permitirle modificar sus valores antes de agregarlo a la cuadrícula de datos.
+3. Update your stack panel with four **TextBox** controls. They'll bind to the individual properties of the new customer, and allow you to edit its values before you add it to the data grid.
 
     ```xaml
     <StackPanel
@@ -341,7 +341,7 @@ Agregar a un nuevo cliente presenta un desafío, como el cliente aparecerá como
     </StackPanel>
     ```
 
-4. Agregue un botón simple a su panel de pila nuevo para guardar al cliente recién creado:
+4. Add a simple button to your new stack panel to save the newly-created customer:
 
     ```xaml
     <StackPanel>
@@ -353,7 +353,7 @@ Agregar a un nuevo cliente presenta un desafío, como el cliente aparecerá como
     </StackPanel>
     ```
 
-5. Actualizar el **CommandBar**, por lo que el regular create, delete y update botones están deshabilitados cuando está visible el panel de pila:
+5. Update the **CommandBar**, so the regular create, delete, and update buttons are disabled when the stack panel is visible:
 
     ```xaml
     <CommandBar
@@ -365,15 +365,15 @@ Agregar a un nuevo cliente presenta un desafío, como el cliente aparecerá como
     </CommandBar>
     ```
 
-6. Ejecute la aplicación. Ahora puede crear a un cliente y sus datos en el panel de apilamiento de entrada.
+6. Run your app. You can now create a customer and input its data in the stack panel.
 
-![Crear un nuevo cliente](images/customer-database-tutorial/add-new-customer.png)
+![Creating a new customer](images/customer-database-tutorial/add-new-customer.png)
 
-## <a name="part-7-delete-a-customer"></a>Parte 7: Eliminar un cliente
+## <a name="part-7-delete-a-customer"></a>Part 7: Delete a customer
 
-Eliminación de un cliente es la operación final básica que necesita para implementar. Cuando se elimina un cliente que ha seleccionado en la cuadrícula de datos, conviene llama inmediatamente a **UpdateCustomersAsync** con el fin de actualizar la interfaz de usuario. Sin embargo, no es necesario llamar a ese método, si elimina a un cliente que acaba de crear.
+Deleting a customer is the final basic operation that you need to implement. When you delete a customer you've selected within the data grid, you'll want to immediately call **UpdateCustomersAsync** in order to update the UI. However, you don't need to call that method if you're deleting a customer you've just created.
 
-1. Vaya a **ViewModels\CustomerListPageViewModel.cs**y actualizar el **DeleteAndUpdateAsync** método:
+1. Navigate to **ViewModels\CustomerListPageViewModel.cs**, and update the **DeleteAndUpdateAsync** method:
 
     ```csharp
     public async void DeleteAndUpdateAsync()
@@ -386,7 +386,7 @@ Eliminación de un cliente es la operación final básica que necesita para impl
     }
     ```
 
-2. En **Views\CustomerListPage.xaml**, actualizar el panel de pila para agregar un nuevo cliente de manera que contenga un segundo botón:
+2. In **Views\CustomerListPage.xaml**, update the stack panel for adding a new customer so it contains a second button:
 
     ```xaml
     <StackPanel>
@@ -402,7 +402,7 @@ Eliminación de un cliente es la operación final básica que necesita para impl
     </StackPanel>
     ```
 
-3. En **ViewModels\CustomerListPageViewModel.cs**, actualice el **DeleteNewCustomerAsync** método para eliminar el nuevo cliente:
+3. In **ViewModels\CustomerListPageViewModel.cs**, update the **DeleteNewCustomerAsync** method to delete the new customer:
 
     ```csharp
     public async Task DeleteNewCustomerAsync()
@@ -415,50 +415,50 @@ Eliminación de un cliente es la operación final básica que necesita para impl
     }
     ```
 
-4. Ejecute la aplicación. Ahora puede eliminar a los clientes, dentro de la cuadrícula de datos o en el panel de apilamiento.
+4. Run your app. You can now delete customers, either within the data grid or in the stack panel.
 
-![Eliminar a un cliente nuevo](images/customer-database-tutorial/delete-new-customer.png)
+![Delete a new customer](images/customer-database-tutorial/delete-new-customer.png)
 
 ## <a name="conclusion"></a>Conclusión
 
-¡Enhorabuena! Con todo esto hace, la aplicación tiene ahora una gama completa de las operaciones de base de datos local. Puede crear, leer, actualizar y eliminar a clientes dentro de la interfaz de usuario, y estos cambios se guardan en la base de datos y se conservarán entre distintas lanzamientos de la aplicación.
+Enhorabuena. With all this done, your app now has a full range of local database operations. You can create, read, update, and delete customers within your UI, and these changes are saved to your database and will persist across different launches of your app.
 
-Ahora que haya terminado, tenga en cuenta lo siguiente:
-* Si no lo ha hecho ya, consulte el [información general de la estructura de aplicación](../enterprise/customer-database-app-structure.md) para obtener más información sobre por qué se compila la aplicación, cómo lo está.
-* Explore la [ejemplo completo de base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) para ver la aplicación en este tutorial se basa en.
+Now that you're finished, consider the following:
+* If you haven't already, check out the [app structure overview](../enterprise/customer-database-app-structure.md) for more information on why the app is built how it is.
+* Explore the [full Customer Orders Database sample](https://github.com/Microsoft/Windows-appsample-customers-orders-database) to see the app this tutorial was based on.
 
-O bien, si está en un desafío, puede continuar y versiones posteriores...
+Or if you're up for a challenge, you can continue onwards...
 
-## <a name="going-further-connect-to-a-remote-database"></a>Si continúa: Conectarse a una base de datos remoto
+## <a name="going-further-connect-to-a-remote-database"></a>Going further: Connect to a remote database
 
-Hemos proporcionado un tutorial paso a paso de cómo implementar estas llamadas en una base de datos SQLite local. Pero ¿qué ocurre si desea usar una base de datos remota, en su lugar?
+We've provided a step-by-step walkthrough of how to implement these calls against a local SQLite database. But what if you want to use a remote database, instead?
 
-Si desea probarlo, necesitará su propia cuenta de Azure Active Directory (AAD) y la capacidad de hospedar su propio origen de datos.
+If you want to give this a try, you'll need your own Azure Active Directory (AAD) account and the ability to host your own data source.
 
-Deberá agregar funciones para controlar las llamadas REST y, a continuación, cree una base de datos remoto para interactuar con la autenticación. Hay código en el completo [ejemplo de la base de datos de pedidos de cliente](https://github.com/Microsoft/Windows-appsample-customers-orders-database) que puede hacer referencia para cada operación necesaria.
+You'll need to add authentication, functions to handle REST calls, and then create a remote database to interact with. There's code in the full [Customer Orders Database sample](https://github.com/Microsoft/Windows-appsample-customers-orders-database) that you can reference for each necessary operation.
 
-### <a name="settings-and-configuration"></a>Opciones y configuración
+### <a name="settings-and-configuration"></a>Settings and configuration
 
-Los pasos necesarios para conectarse a su propia base de datos remota se establece en el [archivo Léame del ejemplo](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/README.md). Deberá hacer lo siguiente:
+The necessary steps to connect to your own remote database are spelled out in the [sample's readme](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/README.md). You'll need to do the following:
 
-* Proporcione su Id. de cliente de cuenta de Azure para [Constants.cs](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoRepository/Constants.cs).
-* Proporcione la dirección url de la base de datos remoto [Constants.cs](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoRepository/Constants.cs).
-* Proporcionar la cadena de conexión de la base de datos [Constants.cs](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoRepository/Constants.cs).
-* Asociar la aplicación a la Microsoft Store.
-* Copiar a través de la [proyecto de servicio](https://github.com/Microsoft/Windows-appsample-customers-orders-database/tree/master/ContosoService) en su aplicación e implementarla en Azure.
+* Provide your Azure account client Id to [Constants.cs](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoRepository/Constants.cs).
+* Provide the url of the remote database to [Constants.cs](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoRepository/Constants.cs).
+* Provide the connection string for the database to [Constants.cs](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoRepository/Constants.cs).
+* Associate your app with the Microsoft Store.
+* Copy over the [Service project](https://github.com/Microsoft/Windows-appsample-customers-orders-database/tree/master/ContosoService) into your app, and deploy it to Azure.
 
-### <a name="authentication"></a>Autenticación
+### <a name="authentication"></a>Authentication
 
-Deberá crear un botón para iniciar una secuencia de autenticación y un elemento emergente o una página independiente para recopilar información del usuario. Una vez se haya creado, deberá proporcionar código que solicita la información del usuario y lo usa para adquirir un token de acceso. El ejemplo de la base de datos de pedidos de cliente encapsula las llamadas de Microsoft Graph con el **WebAccountManager** biblioteca para adquirir un token y controlar la autenticación en una cuenta de AAD.
+You'll need to create a button to start an authentication sequence, and a popup or a separate page to gather a user's information. Once you've created that, you'll need to provide code that requests a user's information and uses it to acquire an access token. The Customer Orders Database sample wraps Microsoft Graph calls with the **WebAccountManager** library to acquire a token and handle the authentication to an AAD account.
 
-* Se implementa la lógica de autenticación en [ **AuthenticationViewModel.cs**](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoApp/ViewModels/AuthenticationViewModel.cs).
-* Se muestra el proceso de autenticación personalizado [ **AuthenticationControl.xaml** ](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoApp/UserControls/AuthenticationControl.xaml) control.
+* The authentication logic is implemented in [**AuthenticationViewModel.cs**](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoApp/ViewModels/AuthenticationViewModel.cs).
+* The authentication process is displayed in the custom [**AuthenticationControl.xaml**](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoApp/UserControls/AuthenticationControl.xaml) control.
 
-### <a name="rest-calls"></a>Llamadas de REST
+### <a name="rest-calls"></a>REST calls
 
-No tendrá que modificar cualquiera del código se ha agregado en este tutorial para implementar las llamadas REST. En su lugar, deberá hacer lo siguiente:
+You won't need to modify any of the code we added in this tutorial in order to implement REST calls. Instead, you'll need to do the following:
 
-* Creación de nuevas implementaciones de la **ICustomerRepository** y **ITutorialRepository** interfaces, implementar el mismo conjunto de funciones a través de REST en lugar de SQLite. Se debe serializar y deserializar JSON y puede ajustar las llamadas REST en otro **HttpHelper** si necesita la clase. Consulte [el ejemplo completo](https://github.com/Microsoft/Windows-appsample-customers-orders-database/tree/master/ContosoRepository/Rest) para obtener información específica.
-* En **App.xaml.cs**, cree una nueva función para inicializar el repositorio REST y llámelo en lugar de **SqliteDatabase** cuando se inicializa la aplicación. Nuevamente, consulte [el ejemplo completo](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoApp/App.xaml.cs).
+* Create new implementations of the **ICustomerRepository** and **ITutorialRepository** interfaces, implementing the same set of functions through REST instead of SQLite. You'll need to serialize and deserialize JSON, and can wrap your REST calls in a separate **HttpHelper** class if you need to. Refer to [the full sample](https://github.com/Microsoft/Windows-appsample-customers-orders-database/tree/master/ContosoRepository/Rest) for specifics.
+* In **App.xaml.cs**, create a new function to initialize the REST repository, and call it instead of **SqliteDatabase** when the app is initialized. Again, refer to [the full sample](https://github.com/Microsoft/Windows-appsample-customers-orders-database/blob/master/ContosoApp/App.xaml.cs).
 
-Una vez completados todos los tres pasos, debe poder autenticarse en su cuenta AAD a través de la aplicación. Llamadas de REST a la base de datos remoto reemplazará las llamadas de SQLite locales, pero la experiencia del usuario debe ser el mismo. Si se siente más ambicioso, puede agregar una página de configuración para permitir al usuario cambiar dinámicamente entre los dos.
+Once all three of these steps are complete, you should be able to authenticate to your AAD account through your app. REST calls to the remote database will replace the local SQLite calls, but the user experience should be the same. If you're feeling even more ambitious, you can add a settings page to allow the user to dynamically switch between the two.

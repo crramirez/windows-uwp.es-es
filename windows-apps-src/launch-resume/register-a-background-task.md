@@ -4,23 +4,23 @@ description: Aprende a crear una función que pueda reutilizarse para registrar 
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, tareas en segundo plano
+keywords: windows 10, uwp, background task
 ms.localizationpriority: medium
-ms.openlocfilehash: 087f60ae3a16ad4cd38137d692fe079ce6c58bf4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c80419a5353386872356eee7a677f10d616a9f6a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371743"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259423"
 ---
 # <a name="register-a-background-task"></a>Registrar una tarea en segundo plano
 
 
 **API importantes**
 
--   [**Clase BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration)
--   [**Clase BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
--   [**Clase SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition)
+-   [**BackgroundTaskRegistration class**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration)
+-   [**BackgroundTaskBuilder class**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+-   [**SystemCondition class**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition)
 
 Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano.
 
@@ -28,7 +28,7 @@ Este tema se aplica a las tareas en segundo plano dentro de proceso y a las tare
 
 En este tema se recorre una función de utilidad que registra tareas en segundo plano. Antes de registrar una tarea varias veces, esta función de utilidad primero comprueba registros existentes para evitar los problemas que pueden surgir por registros repetidos. Además puede aplicar una condición del sistema a la tarea en segundo en plano. El tutorial incluye un ejemplo completo de funcionamiento de esta función de utilidad.
 
-**Nota:**  
+**Note**  
 
 Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar cualquier tipo de desencadenador en segundo plano.
 
@@ -39,7 +39,7 @@ Para garantizar que la aplicación universal de Windows continúe funcionando co
 Este método toma el punto de entrada de la tarea, el nombre de la tarea y un desencadenador de tarea en segundo plano preconstruido y, de forma opcional, un objeto [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) para la tarea en segundo plano. Este método devuelve un objeto [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration).
 
 > [!Important]
-> `taskEntryPoint` -para las tareas en segundo plano que se ejecutan en fuera de proceso, debe crearse como el espacio de nombres '.' y el nombre de la clase que contiene la clase en segundo plano. La cadena distingue mayúsculas de minúsculas.  Por ejemplo, si tuvieses un espacio de nombres "MyBackgroundTasks" y una clase "BackgroundTask1" que contenga el código de la clase de segundo plano, la cadena para `taskEntryPoint` sería "MyBackgroundTasks.BackgroundTask1".
+> `taskEntryPoint` - for background tasks that run in out of process, this must be constructed as the namespace name, '.', and the name of the class containing your background class. La cadena distingue mayúsculas de minúsculas.  Por ejemplo, si tuvieses un espacio de nombres "MyBackgroundTasks" y una clase "BackgroundTask1" que contenga el código de la clase de segundo plano, la cadena para `taskEntryPoint` sería "MyBackgroundTasks.BackgroundTask1".
 > Si la tarea en segundo plano se ejecuta en el mismo proceso que la aplicación (es decir, una tarea en segundo plano en proceso), no se debe establecer `taskEntryPoint`.
 
 > [!div class="tabbedCodeSnippets"]
@@ -74,7 +74,7 @@ Comprueba si la tarea ya está registrada. Es importante que compruebes esto por
 
 Puedes comprobar registros existentes consultando la propiedad [**BackgroundTaskRegistration.AllTasks**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks) e iterando en el resultado. Comprueba el nombre de cada instancia. Si coincide con el nombre de la tarea que estás registrando, entonces interrumpe el bucle y coloca una variable de marca para que tu código pueda elegir otra ruta en el siguiente paso.
 
-> **Tenga en cuenta**  usar nombres de las tareas en segundo plano que son exclusivos de la aplicación. Asegúrate de que cada tarea en segundo plano tenga un nombre exclusivo.
+> **Note**  Use background task names that are unique to your app. Asegúrate de que cada tarea en segundo plano tenga un nombre exclusivo.
 
 El siguiente código registra una tarea en segundo plano usando [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTrigger), que creamos en el último paso:
 
@@ -147,7 +147,7 @@ Comprueba si se encontró la tarea en la lista de registros de tareas en segundo
 
 Después registra la tarea con un nuevo objeto [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder). Este código debe comprobar si el parámetro de la condición es nulo y, si no lo es, agregar la condición al objeto de registro. Devuelve el [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) devuelto por el método [**BackgroundTaskBuilder.Register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register).
 
-> **Tenga en cuenta**  se validan los parámetros de registro de tarea en segundo plano en el momento del registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se ocupe correctamente de los escenarios en los que se produce un error en el registro de tareas en segundo plano. Si, en cambio, la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
+> **Note**  Background task registration parameters are validated at the time of registration. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 > **Nota** Si vas a registrar una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación, envía `String.Empty` o `null` para el parámetro `taskEntryPoint`.
 
 El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código que registra la tarea en segundo plano (incluida la condición del sistema opcional si la hubiera):
@@ -387,4 +387,4 @@ Ese ejemplo muestra la función de registro de tareas en segundo plano completa.
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar suspender, reanudar y en segundo plano de los eventos en aplicaciones para UWP (al depurar)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [How to trigger suspend, resume, and background events in UWP apps (when debugging)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

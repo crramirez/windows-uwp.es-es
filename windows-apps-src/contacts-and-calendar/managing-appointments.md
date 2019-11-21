@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, citas, calendario, appointments, calendar
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fd4fc62a393e6439458ddc38f37bbb0680fb9b1
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 52200d7896c9edea727bf31c69c04c4c1bd02bb2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282229"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255493"
 ---
 # <a name="manage-appointments"></a>Administrar citas
 
@@ -282,7 +282,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Tenga en cuenta**  Para Windows Phone las aplicaciones de la tienda, [**ShowAddAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) funciona igual que [**ShowEditNewAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) en que el cuadro de diálogo que se muestra para agregar la cita es editable.
+**Note**  For Windows Phone Store apps, [**ShowAddAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) functions just like [**ShowEditNewAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) in that the dialog displayed for adding the appointment is editable.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>Reemplazar una cita en el calendario del usuario
 
@@ -507,7 +507,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 
 ## <a name="add-a-new-editable-appointment"></a>Agregar una nueva cita editable
 
-[**ShowEditNewAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) funciona igual que [**ShowAddAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) , salvo que el cuadro de diálogo para agregar la cita es editable para que el usuario pueda modificar los datos de la cita antes de guardarlos.
+[**ShowEditNewAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) works just like [**ShowAddAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) except that the dialog for adding the appointment is editable so that the user can modify the appointment data before saving it.
 
 ``` cs
 private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
@@ -542,7 +542,7 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
 
 ## <a name="show-appointment-details"></a>Mostrar detalles de la cita
 
-[**ShowAppointmentDetailsAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) hace que el sistema muestre los detalles de la cita especificada. Una aplicación que implementa calendarios de aplicación puede elegir activarse para mostrar los detalles de las citas en los calendarios que posee. De lo contrario, el sistema mostrará los detalles de la cita. Aquí te mostramos una sobrecarga del método que acepta un argumento de fecha de inicio para que veas los detalles de una instancia de una cita periódica.
+[**ShowAppointmentDetailsAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) causes the system to show details for the specified appointment. Una aplicación que implementa calendarios de aplicación puede elegir activarse para mostrar los detalles de las citas en los calendarios que posee. De lo contrario, el sistema mostrará los detalles de la cita. Aquí te mostramos una sobrecarga del método que acepta un argumento de fecha de inicio para que veas los detalles de una instancia de una cita periódica.
 
 ```cs
 private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e)
@@ -565,11 +565,11 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Con esto deberías tener nociones básicas sobre cómo administrar citas. Descarga las [muestras de aplicaciones universales de Windows](https://go.microsoft.com/fwlink/p/?linkid=619979) de GitHub para ver más ejemplos sobre la administración de citas.
+Con esto deberías tener nociones básicas sobre cómo administrar citas. Descarga las [muestras de aplicaciones universales de Windows](https://github.com/Microsoft/Windows-universal-samples) de GitHub para ver más ejemplos sobre la administración de citas.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejemplo de API de citas](https://go.microsoft.com/fwlink/p/?linkid=309836)
+* [Ejemplo de API de citas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Appointments)
  
 
  

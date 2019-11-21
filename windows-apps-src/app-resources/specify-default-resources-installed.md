@@ -1,21 +1,21 @@
 ---
-Description: Si la aplicación no tiene recursos que coincidan con la configuración concreta de un dispositivo de cliente, se usan recursos predeterminados de la aplicación. Este tema explica cómo especificar cuáles son esos recursos predeterminados.
+Description: Si la aplicación no tiene recursos que coincidan con la configuración concreta de un dispositivo de cliente, se usan los recursos predeterminados de la aplicación. En este tema se explica cómo especificar cuáles son esos recursos predeterminados.
 title: Especificar los recursos predeterminados que la aplicación usa
 template: detail.hbs
 ms.date: 11/14/2017
 ms.topic: article
-keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
+keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: b11f6dfec2941ae4eaa277f37de66965bd1ea4aa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5dfd09f2a1a3ab326c09434ee2c613ae57214d59
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593990"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254642"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a>Especificar los recursos predeterminados que la aplicación usa
 
-Si la aplicación no tiene recursos que coincidan con la configuración concreta de un dispositivo de cliente, se usan recursos predeterminados de la aplicación. Este tema explica cómo especificar cuáles son esos recursos predeterminados.
+Si la aplicación no tiene recursos que coincidan con la configuración concreta de un dispositivo de cliente, se usan los recursos predeterminados de la aplicación. En este tema se explica cómo especificar cuáles son esos recursos predeterminados.
 
 Cuando un usuario instala tu aplicación desde la Microsoft Store, la configuración del dispositivo del cliente se compara con los recursos disponibles de la aplicación. Esta coincidencia se realiza solo de manera que los recursos adecuados tengan que descargarse e instalarse para ese usuario. Por ejemplo, se usan las cadenas e imágenes más adecuadas para las preferencias de idioma del usuario, además de la configuración de PPP y la resolución del dispositivo. Por ejemplo, `200` es el valor predeterminado de `scale`, pero puedes invalidar ese valor predeterminado si lo deseas.
 
@@ -44,7 +44,7 @@ Puedes configurar qué son estos valores predeterminados de una de dos maneras d
    </default>
    ```
    
-   **Note** El valor `LANGUAGE-TAG(S)` debe estar sincronizado con el idioma predeterminado de la aplicación. Si es una única [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302), el idioma predeterminado de la aplicación debe ser la misma etiqueta. Si es una lista separada por comas de etiquetas de idioma, el idioma predeterminado de la aplicación debe ser la primera etiqueta de la lista. Establece el idioma predeterminado de la aplicación en el campo **Idioma predeterminado** de la pestaña **Aplicación** del archivo de origen del manifiesto del paquete de la aplicación (`Package.appxmanifest`).
+   **Note** El valor `LANGUAGE-TAG(S)` debe estar sincronizado con el idioma predeterminado de la aplicación. Si es una única [etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47), el idioma predeterminado de la aplicación debe ser la misma etiqueta. Si es una lista separada por comas de etiquetas de idioma, el idioma predeterminado de la aplicación debe ser la primera etiqueta de la lista. Establece el idioma predeterminado de la aplicación en el campo **Idioma predeterminado** de la pestaña **Aplicación** del archivo de origen del manifiesto del paquete de la aplicación (`Package.appxmanifest`).
 
 4. Cada elemento `<qualifier>` indica a Visual Studio qué valor usar como el valor predeterminado para cada nombre de calificador. Con el contenido del archivo que tiene hasta el momento, realmente no ha cambiado el comportamiento de Visual Studio. Es decir, Visual Studio *ya se comportó como si* este archivo estuviera presentes con este contenido, ya que estos son los valores predeterminados. Por lo tanto, para invalidar un valor predeterminado con tu propio valor predeterminado, tendrás que cambiar un valor en el archivo. Este es un ejemplo de qué aspecto podría tener el archivo si editara los tres primeros valores.
    ```xml
@@ -64,7 +64,7 @@ Puedes configurar qué son estos valores predeterminados de una de dos maneras d
 
 Para confirmar que se están teniendo en cuenta tus valores predeterminados invalidados, busca el archivo `<ProjectFolder>\obj\<ReleaseConfiguration folder>\priconfig.xml` y confirmar que su contenido coincide con tus invalidaciones. Si es así, has configurado correctamente los valores de calificador de los recursos que tu aplicación usará de manera predeterminada. Si no se encuentra una coincidencia para la configuración del usuario, se usarán los recursos cuyos nombres de archivo o carpeta contengan los valores de calificador predeterminados que has establecido aquí.
 
-### <a name="how-does-this-work"></a>¿Cómo funciona esto?
+### <a name="how-does-this-work"></a>¿Cómo funciona?
 
 En segundo plano, Visual Studio inicia una herramienta denominada `MakePri.exe` para generar un archivo conocido como un índice de recursos del paquete (PRI), que describe todos los recursos de la aplicación, incluyendo la indicación de cuáles son los recursos predeterminados. Para obtener más información acerca de esta herramienta, consulta [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md). Visual Studio pasa un archivo de configuración a `MakePri.exe`. El contenido de tu archivo `priconfig.default.xml` se usa como el elemento `<default>` de ese archivo de configuración, que es la parte que especifica el conjunto de valores de calificador que se consideran predeterminados. Por lo tanto, agregar y editar `priconfig.default.xml` en última instancia influye en el contenido del archivo de índice de recursos del paquete que Visual Studio genera para tu aplicación e incluye en su paquete de la aplicación.
 
@@ -103,5 +103,5 @@ Guarda, cierra y recompila el proyecto.
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](tailor-resources-lang-scale-contrast.md)
-* [Etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47 language tag](https://tools.ietf.org/html/bcp47)
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)

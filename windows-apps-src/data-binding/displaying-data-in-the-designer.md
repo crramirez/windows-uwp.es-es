@@ -6,26 +6,26 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e7b3cd9185e64d701571532d0b632c270476492
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5f08c2cc39bb4cdf9a49351f70143a0f86df1fb7
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362563"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254722"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Datos de muestra sobre la superficie de diseño y para la creación de prototipos
 =============================================================================================
 
 
 
-**Tenga en cuenta**  el grado al que se necesita muestrear los datos, y cuánto le servirá de ayuda: depende de si utiliza los enlaces el [extensión de marcado {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) o el [extensión de marcado {x: Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension). Las técnicas que se describen en este tema se basan en el uso de la propiedad [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext), por lo que solo son apropiadas para la extensión **{Binding}** . Sin embargo, si usas **{x:Bind}** tus enlaces mostrarán, como mínimo, valores de marcador de posición sobre la superficie de diseño (incluso para controles de elementos); así no necesitarás recopilar tantos datos de muestra.
+**Note**  The degree to which you need sample data—and how much it will help you—depends on whether your bindings use the [{Binding} markup extension](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) or the [{x:Bind} markup extension](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension). Las técnicas que se describen en este tema se basan en el uso de la propiedad [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext), por lo que solo son apropiadas para la extensión **{Binding}** . Sin embargo, si usas **{x:Bind}** tus enlaces mostrarán, como mínimo, valores de marcador de posición sobre la superficie de diseño (incluso para controles de elementos); así no necesitarás recopilar tantos datos de muestra.
 
 Quizás no sea posible o no desees (puede que por motivos de privacidad o rendimiento) que la aplicación muestre datos dinámicos sobre la superficie de diseño en Microsoft Visual Studio o Blend para Visual Studio. Para hacer que los controles se rellenen con datos (de modo que puedas trabajar en el diseño de la aplicación, las plantillas y otras propiedades visuales), puedes usar los datos de ejemplo en tiempo de diseño de distintas maneras. Los datos de ejemplo también pueden ser muy útiles y ahorrarte tiempo si creas una aplicación de diseño de bocetos (o prototipos). Puedes usar los datos de ejemplo del boceto o el prototipo en tiempo de ejecución para ilustrar tus ideas sin tener que conectarte a los datos dinámicos reales.
 
-**Aplicaciones de ejemplo que muestran {Binding}**
+**Sample apps that demonstrate {Binding}**
 
--   Descarga la aplicación [Bookstore1](https://go.microsoft.com/fwlink/?linkid=532950).
--   Descarga la aplicación [Bookstore2](https://go.microsoft.com/fwlink/?linkid=532952).
+-   Descarga la aplicación [Bookstore1](https://codeload.github.com/MicrosoftDocs/windows-topic-specific-samples/zip/Bookstore1Universal_10).
+-   Descarga la aplicación [Bookstore2](https://codeload.github.com/MicrosoftDocs/windows-topic-specific-samples/zip/Bookstore2Universal_10).
 
 <a name="setting-datacontext-in-markup"></a>Configuración de DataContext en el marcado
 -----------------------------
@@ -44,7 +44,7 @@ Al hacerlo, la página no presenta tantas posibilidades de diseño. El motivo es
 
 ![Interfaz de usuario de diseño dispersa.](images/displaying-data-in-the-designer-01.png)
 
-La primera solución es intentar evitar que se ejecute la asignación de **DataContext** y, en su lugar, establecer la propiedad **DataContext** en el marcado de página. De este modo, los datos dinámicos aparecen tanto en tiempo de diseño como en tiempo de ejecución. Para hacerlo, abre primero la página XAML. A continuación, en el **esquema del documento** ventana, haga clic en el elemento raíz puede diseñar (normalmente con la etiqueta  **\[página\]** ) para seleccionarlo. En la ventana **Propiedades**, busca la propiedad **DataContext** (dentro de la categoría Common) y, a continuación, haz clic en **Nueva**. Haz clic en el tipo de modelo de vista del cuadro de diálogo **Seleccionar objeto** y, después, en **Aceptar**.
+La primera solución es intentar evitar que se ejecute la asignación de **DataContext** y, en su lugar, establecer la propiedad **DataContext** en el marcado de página. De este modo, los datos dinámicos aparecen tanto en tiempo de diseño como en tiempo de ejecución. Para hacerlo, abre primero la página XAML. Then, in the **Document Outline** window, click the root designable element (usually with the label **\[Page\]** ) to select it. En la ventana **Propiedades**, busca la propiedad **DataContext** (dentro de la categoría Common) y, a continuación, haz clic en **Nueva**. Haz clic en el tipo de modelo de vista del cuadro de diálogo **Seleccionar objeto** y, después, en **Aceptar**.
 
 ![Interfaz de usuario para establecer DataContext.](images/displaying-data-in-the-designer-02.png)
 
@@ -97,9 +97,9 @@ Todo lo que debes hacer es especificar una clase para el comando que deseas usar
 
 Las distintas declaraciones xmlns que aparecen indican que los atributos con el prefijo **d:** se interpretan solo en tiempo de diseño y se omiten en tiempo de ejecución. Por tanto, el atributo **d:DataContext** solo afecta al valor de la propiedad [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) en tiempo de diseño; no tiene ningún efecto en tiempo de ejecución. Puedes establecer tanto **d:DataContext** como **DataContext** en el marcado, si quieres. **d:DataContext** realizará el reemplazo en tiempo de diseño y **DataContext** lo realizará en tiempo de ejecución. Estas mismas reglas de reemplazo se aplican a todos los atributos en tiempo de diseño y tiempo de ejecución.
 
-El atributo **d:DataContext** y todos los demás atributos en tiempo de diseño, se documentan en el tema [Atributos en tiempo de diseño](https://go.microsoft.com/fwlink/p/?LinkId=272504), que sigue siendo válido para las aplicaciones para la Plataforma universal de Windows (UWP).
+El atributo **d:DataContext** y todos los demás atributos en tiempo de diseño, se documentan en el tema [Atributos en tiempo de diseño](https://msdn.microsoft.com/library/ff602277(v=VS.95).aspx), que sigue siendo válido para las aplicaciones para la Plataforma universal de Windows (UWP).
 
-[**CollectionViewSource** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) no tiene un **DataContext** propiedad, pero tienen un **origen** propiedad. En consecuencia, existe una propiedad **d:Source** que puedes usar para establecer datos de muestra solo en tiempo de diseño en una clase **CollectionViewSource**.
+[**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) doesn't have a **DataContext** property, but it does have a **Source** property. En consecuencia, existe una propiedad **d:Source** que puedes usar para establecer datos de muestra solo en tiempo de diseño en una clase **CollectionViewSource**.
 
 ``` xaml
     <Page.Resources>
@@ -132,14 +132,14 @@ Si usas un archivo de datos de muestra JSON en lugar de XAML, debes establecer l
     d:Source="{d:DesignData /SampleData/RecordingsSampleData.json, Type=local:Recordings}"
 ```
 
-Hasta ahora, hemos usado **d:DesignData** para cargar datos de muestra en tiempo de diseño de un archivo XAML o JSON. Una alternativa a ello es la extensión de marcado **d:DesignInstance**, que indica que el origen en tiempo de diseño se basa en la clase especificada por la propiedad **Type**. A continuación te mostramos un ejemplo.
+Hasta ahora, hemos usado **d:DesignData** para cargar datos de muestra en tiempo de diseño de un archivo XAML o JSON. Una alternativa a ello es la extensión de marcado **d:DesignInstance**, que indica que el origen en tiempo de diseño se basa en la clase especificada por la propiedad **Type**. Aquí tienes un ejemplo.
 
 ``` xaml
     <CollectionViewSource x:Name="RecordingsCollection" Source="{Binding Recordings}"
         d:Source="{d:DesignInstance Type=local:Recordings, IsDesignTimeCreatable=True}"/>
 ```
 
-La propiedad **IsDesignTimeCreatable** indica que la herramienta de diseño debe crear una instancia de la clase, lo que implica que la clase tiene un constructor predeterminado público y que se rellena automáticamente con datos (de ejemplo o reales). Si no estableces **IsDesignTimeCreatable** (o si lo estableces en **False**), no se mostrarán datos de ejemplo en la superficie de diseño. Todas la herramienta de diseño hace que es el caso analizar la clase para sus propiedades enlazables y mostrar estas opciones en el **datos** panel y en el **crear enlace de datos** cuadro de diálogo.
+La propiedad **IsDesignTimeCreatable** indica que la herramienta de diseño debe crear una instancia de la clase, lo que implica que la clase tiene un constructor predeterminado público y que se rellena automáticamente con datos (de ejemplo o reales). Si no estableces **IsDesignTimeCreatable** (o si lo estableces en **False**), no se mostrarán datos de ejemplo en la superficie de diseño. All the design tool does in that case is to parse the class for its bindable properties and display these in the **Data** panel and in the **Create Data Binding** dialog.
 
 <a name="sample-data-for-prototyping"></a>Datos de ejemplo para la creación de prototipos
 --------------------------------------------------------

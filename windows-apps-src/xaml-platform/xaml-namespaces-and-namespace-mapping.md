@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a8a9a4e5b79950cb15b5d364598c72b8a190d8c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1da466cf12a8a5f959af7e863f7a300f3c713961
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366647"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258716"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>Espacios de nombres XAML y asignación de espacios de nombres
 
@@ -49,9 +49,9 @@ La relación entre estas declaraciones es que XAML es una definición de lenguaj
 
 El lenguaje XAML especifica determinados elementos de lenguaje, cada uno de los cuales debe ser accesible mediante implementaciones del procesador XAML que trabajan con el espacio de nombres XAML. Las plantillas de proyecto, el código de muestra y la documentación de las características del lenguaje siguen la convención por la que se asigna "x:" al espacio de nombres XAML del lenguaje XAML. El espacio de nombres del lenguaje XAML define varias características de uso común, incluso para aplicaciones básicas de Windows en tiempo de ejecución con C++, C# o Visual Basic. Por ejemplo, para unir un código subyacente con un archivo XAML mediante una clase parcial, debes asignar un nombre a esa clase como el [atributo x:Class](x-class-attribute.md) en el elemento raíz del archivo XAML correspondiente. O bien, cualquier elemento que se defina en una página XAML como un recurso con clave de un [ResourceDictionary y referencias a recursos XAML](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references) debe tener establecido el [atributo x:Key](x-key-attribute.md) en el elemento de objeto en cuestión.
 
-## <a name="code-namespaces-that-map-to-the-default-xaml-namespace"></a>Espacios de nombres de código que se asignan al espacio de nombres XAML predeterminado
+## <a name="code-namespaces-that-map-to-the-default-xaml-namespace"></a>Code namespaces that map to the default XAML namespace
 
-Lo siguiente es una lista de espacios de nombres de código que están asignadas actualmente al espacio de nombres XAML predeterminado.
+The folowing is a list of code namespaces that are currently mapped to the default XAML namespace.
 
 * Windows.UI
 * Windows.UI.Xaml
@@ -84,15 +84,15 @@ Además del espacio de nombres predeterminado y del espacio de nombres XAML del 
 
 ### <a name="d-httpschemasmicrosoftcomexpressionblend2008"></a>**d: (`http://schemas.microsoft.com/expression/blend/2008`)**
 
-El "d:" Espacio de nombres XAML está diseñado para la compatibilidad con el diseñador, compatibilidad del diseñador específicamente en las superficies de diseño XAML de Microsoft Visual Studio. El"d:" Espacio de nombres XAML permite que el diseñador o atributos en elementos XAML en tiempo de diseño. Estos atributos de diseñador solo afectan a los aspectos de diseño relativos al comportamiento de XAML. Los atributos de diseñador se ignoran cuando el analizador XAML de Windows en tiempo de ejecución carga el mismo código XAML al ejecutarse una aplicación. Por lo general, los atributos de diseñador son válidos en cualquier elemento XAML pero, en la práctica, hay determinados escenarios en los que resulta apropiado aplicar uno mismo un atributo de diseñador. En particular, muchos de los atributos de diseñador están destinados a proporcionar una mejor experiencia de interacción con contextos de datos y orígenes de datos mientras desarrollas código XAML y otro código que use enlace de datos.
+El espacio de nombres XAML "d:" se usa para la compatibilidad con diseñadores, concretamente para la compatibilidad con diseñadores en las superficies de diseño de XAML de Microsoft Visual Studio. El espacio de nombres XAML "d:" permite el uso de atributos de diseñador o en tiempo de diseño en elementos XAML. Estos atributos de diseñador solo afectan a los aspectos de diseño relativos al comportamiento de XAML. Los atributos de diseñador se ignoran cuando el analizador XAML de Windows en tiempo de ejecución carga el mismo código XAML al ejecutarse una aplicación. Por lo general, los atributos de diseñador son válidos en cualquier elemento XAML pero, en la práctica, hay determinados escenarios en los que resulta apropiado aplicar uno mismo un atributo de diseñador. En particular, muchos de los atributos de diseñador están destinados a proporcionar una mejor experiencia de interacción con contextos de datos y orígenes de datos mientras desarrollas código XAML y otro código que use enlace de datos.
 
--   **atributos d:DesignHeight y d:DesignWidth:** A veces, estos atributos se aplican a la raíz de un archivo XAML que Visual Studio u otra superficie del Diseñador XAML crea automáticamente. Por ejemplo, estos atributos se establecen en la raíz de [**UserControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) del XAML que se crea al agregar un nuevo **UserControl** al proyecto de la aplicación. Estos atributos facilitan el diseño de la composición del contenido XAML, de forma que se pueden anticipar las limitaciones de contenido que podrían existir al usar el contenido XAML en una instancia de control o en otra parte de una página de interfaz de usuario mayor.
+-   **Atributos d:DesignHeight y d:DesignWidth:** a veces, estos atributos se aplican a la raíz de un archivo XAML que Visual Studio u otra superficie de diseñador XAML crean automáticamente. Por ejemplo, estos atributos se establecen en la raíz de [**UserControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) del XAML que se crea al agregar un nuevo **UserControl** al proyecto de la aplicación. Estos atributos facilitan el diseño de la composición del contenido XAML, de forma que se pueden anticipar las limitaciones de contenido que podrían existir al usar el contenido XAML en una instancia de control o en otra parte de una página de interfaz de usuario mayor.
 
-   **Tenga en cuenta**  si está migrando XAML de Microsoft Silverlight podría tener estos atributos en elementos raíz que representan una página completa de la interfaz de usuario. En ese caso, es posible que quieras quitar los atributos. Otras características de los diseñadores de XAML, como el simulador, son probablemente más útiles para crear diseños de página que controlen la escala y muestren los estados mejor que en un diseño de página de tamaño fijo con **d:DesignHeight** y **d:DesignWidth**.
+   **Note**  If you are migrating XAML from Microsoft Silverlight you might have these attributes on root elements that represent an entire UI page. En ese caso, es posible que quieras quitar los atributos. Otras características de los diseñadores de XAML, como el simulador, son probablemente más útiles para crear diseños de página que controlen la escala y muestren los estados mejor que en un diseño de página de tamaño fijo con **d:DesignHeight** y **d:DesignWidth**.
 
--   **d: DataContext atributo:** Puede establecer este atributo en una raíz de la página o un control para invalidar cualquier explícito o heredado [ **DataContext** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) tiene ese objeto en caso contrario.
--   **d: DesignSource atributo:** Especifica un origen de datos de tiempo de diseño para un [ **CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource), reemplazo [ **origen**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.source).
--   **d: DesignInstance con y d: DesignData extensiones de marcado:** Estas extensiones de marcado se usan para proporcionar los recursos de datos de tiempo de diseño para cualquier **d:DataContext** o **d:DesignSource**. En este tema no explicaremos en detalle cómo usar los recursos de datos en tiempo de diseño. Para obtener más información, consulta [Atributos en tiempo de diseño](https://go.microsoft.com/fwlink/p/?LinkId=272504). Para obtener algunos ejemplos de uso, consulta [Datos de muestra sobre la superficie de diseño y para la creación de prototipos](https://docs.microsoft.com/windows/uwp/data-binding/displaying-data-in-the-designer).
+-   **Atributo d:DataContext:** puedes establecer este atributo en una raíz de página o en un control para invalidar cualquier elemento [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) explícito o heredado que tenga el objeto.
+-   **Atributo d:DesignSource:** especifica un origen de datos en tiempo de diseño para un elemento [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource), lo que invalida la propiedad [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.source).
+-   **Extensiones de marcado d:DesignInstance y d:DesignData:** estas extensiones de marcado se usan para proporcionar recursos de datos en tiempo de diseño para **d:DataContext** o **d:DesignSource**. En este tema no explicaremos en detalle cómo usar los recursos de datos en tiempo de diseño. Para obtener más información, consulta [Atributos en tiempo de diseño](https://msdn.microsoft.com/library/ff602277(v=VS.95).aspx). Para obtener algunos ejemplos de uso, consulta [Datos de muestra sobre la superficie de diseño y para la creación de prototipos](https://docs.microsoft.com/windows/uwp/data-binding/displaying-data-in-the-designer).
 
 ### <a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>**mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
@@ -104,7 +104,7 @@ El "d:" Espacio de nombres XAML está diseñado para la compatibilidad con el di
 
 ### <a name="vsm"></a>**vsm:**
 
-No usar. "vsm:" es un prefijo que a veces se ve en plantillas XAML más antiguas importadas de otras tecnologías de Microsoft. El espacio de nombres en principio solucionaba un problema de utillaje de los espacios de nombres heredados. Deberías eliminar las definiciones de espacios de nombres XAML de "vsm:" en el código XAML que uses para Windows Runtime, y cambiar el uso de prefijos de [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState), [**VisualStateGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateGroup) y otros objetos relacionados para usar en su lugar el espacio de nombres XAML predeterminado. Para obtener más información sobre la migración de XAML, consulta [Migrar código XAML de WPF o Silverlight a una aplicación de Windows en tiempo de ejecución](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10)).
+No las uses. "vsm:" es un prefijo que a veces se ve en plantillas XAML más antiguas importadas de otras tecnologías de Microsoft. El espacio de nombres en principio solucionaba un problema de utillaje de los espacios de nombres heredados. Deberías eliminar las definiciones de espacios de nombres XAML de "vsm:" en el código XAML que uses para Windows Runtime, y cambiar el uso de prefijos de [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState), [**VisualStateGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateGroup) y otros objetos relacionados para usar en su lugar el espacio de nombres XAML predeterminado. Para obtener más información sobre la migración de XAML, consulta [Migrar código XAML de WPF o Silverlight a una aplicación de Windows en tiempo de ejecución](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10)).
 
 ## <a name="mapping-custom-types-to-xaml-namespaces-and-prefixes"></a>Asignación de tipos personalizados a espacios de nombres XAML y prefijos
 
@@ -137,9 +137,9 @@ Si haces referencia a propiedades adjuntas, el fragmento del tipo de propietario
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Introducción a XAML](xaml-overview.md)
-* [Guía de sintaxis XAML](xaml-syntax-guide.md)
-* [Creación de componentes de Windows Runtime en C# y Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
-* [C#, VB y C++ plantillas de proyecto para las aplicaciones de Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10))
-* [Migrar Silverlight o WPF XAML y código a una aplicación de Windows en tiempo de ejecución](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10))
+* [XAML syntax guide](xaml-syntax-guide.md)
+* [Creating Windows Runtime components in C# and Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
+* [C#, VB, and C++ project templates for Windows Runtime apps](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10))
+* [Migrating Silverlight or WPF XAML/code to a Windows Runtime app](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10))
  
 

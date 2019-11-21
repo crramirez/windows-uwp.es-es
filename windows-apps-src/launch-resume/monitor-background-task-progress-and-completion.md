@@ -1,21 +1,21 @@
 ---
 title: Supervisar el progreso y la finalización de tareas en segundo plano
-description: Aprende el modo en que la aplicación puede reconocer el progreso y finalización notificados por una tarea en segundo plano.
+description: Obtén información sobre el modo en que la aplicación puede reconocer el progreso y finalización notificados por una tarea en segundo plano.
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 ms.date: 07/06/2018
 ms.topic: article
-keywords: Windows 10, uwp, tareas en segundo plano
+keywords: windows 10, uwp, background task
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: d8e4a84b0e927be8e1b89e6189e80acd2d3e4266
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 79e511d20874470dfea8413bdf88365bba86d087
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371315"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260471"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>Supervisar el progreso y la finalización de tareas en segundo plano
 
@@ -34,9 +34,9 @@ El código de la aplicación puede supervisar el progreso y la finalización de 
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>Crear un controlador de eventos para controlar las tareas en segundo plano finalizadas
 
 ### <a name="step-1"></a>Paso 1
-Crea una función de controlador de eventos para controlar las tareas en segundo plano finalizadas. Este código debe seguir una superficie específica, que toma un [ **IBackgroundTaskRegistration** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskRegistration) objeto y un [ **BackgroundTaskCompletedEventArgs** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs) objeto.
+Crea una función de controlador de eventos para controlar las tareas en segundo plano finalizadas. This code needs to follow a specific footprint, which takes an [**IBackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskRegistration) object and a [**BackgroundTaskCompletedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs) object.
 
-Utilice la siguiente superficie para el **OnCompleted** método de controlador de eventos de tarea en segundo plano.
+Use the following footprint for the **OnCompleted** background task event handler method.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -61,10 +61,10 @@ auto completed = [this](BackgroundTaskRegistration^ task, BackgroundTaskComplete
 };
 ```
 
-### <a name="step-2"></a>Paso 2
+### <a name="step-2"></a>Paso 2
 Agrega código al controlador de eventos que se encarga de la finalización de la tarea en segundo plano.
 
-Por ejemplo, la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) actualiza la interfaz de usuario.
+Por ejemplo, la [muestra de tarea en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) actualiza la interfaz de usuario.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -119,10 +119,10 @@ auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressE
 };
 ```
 
-### <a name="step-2"></a>Paso 2
+### <a name="step-2"></a>Paso 2
 Agrega código al controlador de eventos que se encarga de la finalización de la tarea en segundo plano.
 
-Por ejemplo, la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) actualiza la interfaz de usuario con el estado de progreso pasado a través del parámetro *args*:
+Por ejemplo, la [muestra de tarea en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) actualiza la interfaz de usuario con el estado de progreso pasado a través del parámetro *args*:
 
 ```csharp
 private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
@@ -158,7 +158,7 @@ auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressE
 ### <a name="step-1"></a>Paso 1
 Cuando la aplicación registra una tarea en segundo plano por primera vez, debería registrarla para recibir actualizaciones de progreso y finalización referentes a ella, en caso de que la tarea se ejecute mientras la aplicación sigue activa en primer plano.
 
-Por ejemplo, la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) llama a la siguiente función en todas las tareas en segundo plano que registra:
+Por ejemplo, la [muestra de tarea en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) llama a la siguiente función en todas las tareas en segundo plano que registra:
 
 ```csharp
 private void AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration task)
@@ -214,10 +214,10 @@ void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskReg
 }
 ```
 
-### <a name="step-2"></a>Paso 2
+### <a name="step-2"></a>Paso 2
 Cuando la aplicación se ejecuta o navega a una página nueva en la que es relevante el estado de la tarea en segundo plano, debería obtener una lista de las tareas en segundo plano registradas actualmente y asociarlas con las funciones del controlador de eventos de progreso y finalización. La lista de tareas en segundo plano actualmente registradas por la aplicación se conserva en la propiedad [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration).[**AllTasks**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks).
 
-Por ejemplo, la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666) usa el siguiente código para adjuntar controladores de eventos cuando se navega por la página SampleBackgroundTask para:
+Por ejemplo, la [muestra de tarea en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) usa el siguiente código para adjuntar controladores de eventos cuando se navega por la página SampleBackgroundTask para:
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -299,4 +299,4 @@ void SampleBackgroundTask::OnNavigatedTo(NavigationEventArgs^ e)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar suspender, reanudar y en segundo plano de los eventos en aplicaciones para UWP (al depurar)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [How to trigger suspend, resume, and background events in UWP apps (when debugging)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

@@ -6,12 +6,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 36ebabbfd8f7e5f40e31be44d6dc7e4483a199ee
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 833949effd311c707de8dd1823ec6eee06e91e87
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363712"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257977"
 ---
 # <a name="guidelines-for-cross-slide"></a>Instrucciones para el deslizamiento transversal
 
@@ -26,14 +26,14 @@ ms.locfileid: "66363712"
 
 Usa el gesto de deslizamiento transversal para admitir la selección con el gesto de deslizar rápidamente y las interacciones de arrastrar (mover) con el gesto de deslizar.
 
-## <a name="span-iddosanddontsspanspan-iddosanddontsspanspan-iddosanddontsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Consejos
+## <a name="span-iddos_and_don_tsspanspan-iddos_and_don_tsspanspan-iddos_and_don_tsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Dos and don'ts
 
 
 -   Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección.
 -   Usa el deslizamiento transversal para la selección de elementos cuando la interacción de pulsar se utilice con otra finalidad.
 -   No uses el deslizamiento transversal para agregar elementos a una cola.
 
-## <a name="span-idadditionalusageguidancespanspan-idadditionalusageguidancespanspan-idadditionalusageguidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Instrucciones de uso adicionales
+## <a name="span-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Additional usage guidance
 
 
 Las interacciones de seleccionar y arrastrar solo se pueden realizar dentro de un área de contenido que sea desplazable en una dirección (vertical u horizontal). Para que funcionen, una dirección de movimiento panorámico debe estar bloqueada y el gesto se debe realizar en la dirección perpendicular a la del movimiento panorámico.
@@ -56,7 +56,7 @@ Aquí encontrarás algunas directrices que debes tener en cuenta a la hora de in
 
 Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección. Para más información, consulta [Agregar controles ListView](https://docs.microsoft.com/previous-versions/windows/apps/hh465382(v=win.10)).
 
-**Tenga en cuenta**  en casos donde el área de contenido puede estar distribuido en dos direcciones, como los exploradores web o lectores electrónicos, la interacción con hora presione y mantenga debe usarse para invocar el menú contextual para los objetos como imágenes e hipervínculos.
+**Note**  In cases where the content area can be panned in two directions, such as web browsers or e-readers, the press-and-hold timed interaction should be used to invoke the context menu for objects such as images and hyperlinks.
 
  
 
@@ -97,7 +97,7 @@ Las siguientes capturas de pantalla muestran el funcionamiento de la animación 
 
 Usa una sola pulsación para la selección en las aplicaciones en que esta es la única acción principal. La animación reveladora se muestra al deslizar transversalmente para eliminar la ambigüedad entre esta función y la interacción de pulsar estándar empleada para activar y navegar.
 
-**Cesta de selección**
+**Selection basket**
 
 La cesta de selección es una representación dinámica y visualmente clara de elementos que se seleccionaron en la lista o colección primarias de la aplicación. Esta funciones se usa para realizar un seguimiento de los elementos seleccionados y debe usarse en las aplicaciones donde:
 
@@ -111,7 +111,7 @@ Si en una aplicación no se usa cesta de selección, es necesario borrar la sele
 
 También es necesario borrar la selección actual cuando no se usa una cesta de selección y se activa otro elemento de la lista o colección. Por ejemplo, si seleccionas un mensaje de la bandeja de entrada, se actualiza el panel de vista previa. Si después seleccionas otro mensaje de la bandeja de entrada, la selección del mensaje anterior se cancela y se actualiza el panel de vista previa.
 
-**Colas**
+**Queues**
 
 Una cola no equivale a la lista de la cesta de selección y no se debe tratar como tal. Entre las distinciones primarias se incluyen:
 
@@ -123,29 +123,29 @@ Por estas razones, la interacción de selección mediante el deslizamiento trans
 
 ### <span id="draganddrop"></span><span id="DRAGANDDROP"></span>
 
-**Arrastre**
+**Drag**
 
 Usa la acción de arrastrar para mover uno o más objetos de un lugar a otro.
 
 Si es necesario mover más de un objeto, deja que los usuarios seleccionen varios elementos y los arrastren todos al mismo tiempo.
 
-## <a name="span-idrelatedtopicsspanrelated-articles"></a><span id="related_topics"></span>Artículos relacionados
+## <a name="span-idrelated_topicsspanrelated-articles"></a><span id="related_topics"></span>Related articles
 
 
 **Ejemplos**
-* [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Ejemplos de archivo**
-* [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: Ejemplo de pruebas de posicionamiento táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: Ejemplo de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: Ejemplo de gestos de Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: Las manipulaciones y ejemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Ejemplo de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Basic input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Low latency input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [Muestra de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+**Muestras de archivo**
+* [Input: XAML user input events sample](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Input: Device capabilities sample](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Input: Touch hit testing sample](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+* [XAML scrolling, panning, and zooming sample](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Input: Simplified ink sample](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+* [Input: Windows 8 gestures sample](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+* [Input: Manipulations and gestures (C++) sample](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [DirectX touch input sample](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
  
 
  
