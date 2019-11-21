@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 41c42a058398539701cc1df003717eec99d1b2cd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 74735b15ec53cf04e33dcb850c6cb174082ac438
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362854"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257258"
 ---
 # <a name="create-custom-transport-controls"></a>Crear controles de transporte personalizados
 
@@ -26,7 +26,7 @@ La clase MediaPlayerElement tiene controles de transporte de XAML personalizable
 Antes de empezar, debes estar familiarizado con las clases MediaPlayerElement y MediaTransportControls. Para obtener más información, consulta la guía de control de MediaPlayerElement.
 
 > [!TIP]
-> Los ejemplos de este tema se basan en la [muestra de controles de transporte de contenido multimedia](https://go.microsoft.com/fwlink/p/?LinkId=620023). Puedes descargar la muestra para ver y ejecutar el código completo.
+> Los ejemplos de este tema se basan en la [muestra de controles de transporte de contenido multimedia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCustomMediaTransportControls). Puedes descargar la muestra para ver y ejecutar el código completo.
 
 > [!NOTE]
 > **MediaPlayerElement** solo está disponible en Windows 10, versión 1607 y posteriores. Si vas a desarrollar una aplicación para una versión anterior de Windows 10, tendrás que usar [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) en su lugar. Todos los ejemplos de esta página también funcionan con **MediaElement**.
@@ -95,7 +95,7 @@ Para obtener más información sobre cómo modificar estilos y plantillas, consu
 
 ### <a name="create-a-derived-control"></a>Crear un control derivado
 
-Para agregar o modificar la funcionalidad de los controles de transporte, debes crear una nueva clase derivada de MediaTransportControls. Una clase derivada llamada `CustomMediaTransportControls` se muestra en la [muestra de controles de transporte multimedia](https://go.microsoft.com/fwlink/p/?LinkId=620023) y los ejemplos restantes en esta página.
+Para agregar o modificar la funcionalidad de los controles de transporte, debes crear una nueva clase derivada de MediaTransportControls. Una clase derivada llamada `CustomMediaTransportControls` se muestra en la [muestra de controles de transporte multimedia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCustomMediaTransportControls) y los ejemplos restantes en esta página.
 
 **Para crear una nueva clase derivada de MediaTransportControls**
 1. Agrega un nuevo archivo de clase al proyecto.
@@ -202,7 +202,7 @@ Dado que el menú de desbordamiento se compone de botones de texto, tienes que a
 
 ### <a name="adding-a-custom-button"></a>Agregar un botón personalizado
 
-Una razón por la que quizás quieras personalizar MediaTransportControls es para agregar un comando personalizado al control. Ya sea para agregarlo como un comando principal o secundario, el procedimiento para crear el botón de comando y modificar su comportamiento es el mismo. En la [muestra de controles de transporte multimedia](https://go.microsoft.com/fwlink/p/?LinkId=620023), se agrega un botón "rating" a los comandos principales.
+Una razón por la que quizás quieras personalizar MediaTransportControls es para agregar un comando personalizado al control. Ya sea para agregarlo como un comando principal o secundario, el procedimiento para crear el botón de comando y modificar su comportamiento es el mismo. En la [muestra de controles de transporte multimedia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCustomMediaTransportControls), se agrega un botón "rating" a los comandos principales.
 
 **Para agregar un botón de comando personalizado**
 1. Crea un objeto AppBarButton y agrégalo a CommandBar de la plantilla de control.

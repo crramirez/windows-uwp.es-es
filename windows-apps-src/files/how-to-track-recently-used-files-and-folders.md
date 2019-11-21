@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 97ad2485abab0bd4733699bc4ffcf29e17a22844
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 318c58b393a33916df7bab51a4ef2690494d14fb
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369446"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259607"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Seguimiento de los archivos y carpetas usados recientemente
 
@@ -25,7 +25,7 @@ Realiza un seguimiento de los archivos a los que el usuario accede con mayor fre
 La lista de MRU de una aplicación se representa mediante la clase [**StorageItemMostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList), que se obtiene a partir de la propiedad estática [**StorageApplicationPermissions.MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist). Los elementos MRU se almacenan como objetos [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem), lo que significa que los objetos [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) (que representan archivos) y los objetos [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) (que representan carpetas) pueden agregarse a la lista de MRU.
 
 > [!NOTE]
-> Para ver muestras completas, consulte la [ muestra de selector de archivos](https://go.microsoft.com/fwlink/p/?linkid=619994) y la [muestra de acceso de archivos ](https://go.microsoft.com/fwlink/p/?linkid=619995).
+> Para ver muestras completas, consulte la [ muestra de selector de archivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FilePicker) y la [muestra de acceso de archivos ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

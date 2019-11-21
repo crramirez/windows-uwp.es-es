@@ -6,12 +6,12 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 65436d7efd1de6e9c3649ad27b29b925bc632d95
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 13e6f4ac59a99463cd891e936f51449baf4ea7c2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820659"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259537"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Crear una aplicación "Hello world" en C++/CX
 
@@ -25,7 +25,7 @@ Con Microsoft Visual Studio, puede usar C ++ / CX para desarrollar una aplicaci�
 
 ## <a name="before-you-start"></a>Antes de empezar
 
--   Para completar este tutorial, debe usar Visual Studio Community, o una de las versiones que no son de la comunidad de Visual Studio, en un ordenador que ejecute Windows 10. Para su descarga, consulta [Obtener las herramientas](https://go.microsoft.com/fwlink/p/?LinkId=532666)
+-   Para completar este tutorial, debe usar Visual Studio Community, o una de las versiones que no son de la comunidad de Visual Studio, en un ordenador que ejecute Windows 10. Para su descarga, consulta [Obtener las herramientas](https://visualstudio.microsoft.com/downloads/)
 -   Damos por hecho que tiene conocimientos básico de C ++ / CX, XAML y que esta familiarizado con los conceptos de la[introducción a XAML ](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview).
 -   Se supone que estás usando el diseño de ventana predeterminado en Visual Studio. Para restablecer el diseño predeterminado, en la barra de menús, elige **Ventana** > **Restablecer diseño de la ventana**.
 
@@ -231,7 +231,7 @@ Aunque todavía no hace muchas cosas, te felicitamos por haber compilado tu prim
 
 Para detener la depuración y cerrar la aplicación, vuelve a Visual Studio y presiona Mayús+F5.
 
-Si quieres más información, consulta el tema sobre cómo [ejecutar una aplicación de la Tienda en Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=619619).
+Si quieres más información, consulta el tema sobre cómo [ejecutar una aplicación de la Tienda en Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/Hh441477(v=VS.140).aspx).
 
 En la aplicación puedes escribir en el [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), pero si haces clic en el [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button), no se realiza ninguna acción. En los pasos posteriores, crearás un controlador de eventos para el evento [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) del botón que muestra un saludo personalizado.
 
@@ -397,6 +397,6 @@ Felicidades, has completado el primer tutorial. En él aprendiste cómo se agreg
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si tiene un proyecto de aplicación universal de Windows que apunta a Windows 8.1 y/o Windows Phone 8.1, puede transferirlo a Windows 10. No hay ningún proceso automático para ello, pero puede hacerlo manualmente. Empieza con un nuevo proyecto de Windows Universal para obtener la estructura del sistema de proyecto más reciente y los archivos de manifiesto, copia los archivos de código en la estructura de directorios del proyecto, agrega los elementos al proyecto y reescribe el XAML con [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager), como se indica en este tema. Para obtener más información, consulta [Migración de un proyecto de Windows Runtime 8 a un proyecto de la Plataforma universal de Windows (UWP)](https://docs.microsoft.com/windows/uwp/porting/w8x-to-uwp-porting-to-a-uwp-project) y [Migrar a la Plataforma universal de Windows (C++)](https://go.microsoft.com/fwlink/p/?LinkId=619525).
+Si tiene un proyecto de aplicación universal de Windows que apunta a Windows 8.1 y/o Windows Phone 8.1, puede transferirlo a Windows 10. No hay ningún proceso automático para ello, pero puede hacerlo manualmente. Empieza con un nuevo proyecto de Windows Universal para obtener la estructura del sistema de proyecto más reciente y los archivos de manifiesto, copia los archivos de código en la estructura de directorios del proyecto, agrega los elementos al proyecto y reescribe el XAML con [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager), como se indica en este tema. Para obtener más información, consulta [Migración de un proyecto de Windows Runtime 8 a un proyecto de la Plataforma universal de Windows (UWP)](https://docs.microsoft.com/windows/uwp/porting/w8x-to-uwp-porting-to-a-uwp-project) y [Migrar a la Plataforma universal de Windows (C++)](https://msdn.microsoft.com/library/mt186164.aspx).
 
-Si tienes código C++ que desees integrar en una aplicación para UWP, por ejemplo, para crear una nueva interfaz de usuario de UWP para una aplicación existente, consulta [Cómo: Usar existente C++ código en un proyecto de Windows Universal](https://go.microsoft.com/fwlink/p/?LinkId=619623).
+Si tienes código C++ que desees integrar en una aplicación para UWP, por ejemplo, para crear una nueva interfaz de usuario de UWP para una aplicación existente, consulta [Cómo: Usar existente C++ código en un proyecto de Windows Universal](https://msdn.microsoft.com/library/mt186162.aspx).

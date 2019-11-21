@@ -6,12 +6,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c1c23bc205c5f9e2ad24e201e9583e19f2d6ec35
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 8d6bafc9a21e3950974615078af24989aab7da9e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320671"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259190"
 ---
 # <a name="networking-basics"></a>Conceptos básicos de redes
 Cosas que debes hacer para cualquier aplicación habilitada para la red
@@ -45,7 +45,7 @@ El agente de socket está pensado para reemplazar los desencadenadores de canal 
 ### <a name="choosing-a-network-trigger"></a>Elección de un desencadenador de red
 Hay algunos escenarios donde cualquier tipo de desencadenador sería adecuado. Cuando elijas qué tipo de desencadenador usar en tu aplicación, ten en cuenta lo siguiente.
 
--   SI estás usando [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2), [**System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) o [System.Net.Http.HttpClientHandler](https://go.microsoft.com/fwlink/p/?linkid=241638), debes usar [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger).
+-   SI estás usando [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2), [**System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) o [System.Net.Http.HttpClientHandler](https://msdn.microsoft.com/library/system.net.http.httpclienthandler(VS.110).aspx), debes usar [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger).
 -   Si estás usando elementos **StreamSockets** habilitados para la inserción, puedes usar desencadenadores de canal de control, pero deberías tener como preferencia la clase [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger). La última opción permite que el sistema tenga más espacio en la memoria y reduzca los requisitos de energía cuando la conexión no se use activamente.
 -   Si deseas minimizar la superficie de memoria de la aplicación cuando no está dando servicio activamente a las solicitudes de red, ten como preferencia [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger), cuando te sea posible.
 -   Si quieres que tu aplicación pueda recibir datos mientras el sistema está en modo de espera conectado, usa [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger).

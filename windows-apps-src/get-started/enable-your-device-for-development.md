@@ -6,12 +6,12 @@ keywords: Introducción a Visual Studio con licencia de desarrollador, dispositi
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a4c1f90c0fa8304f95b1dc958fe5a75e74301dd
-ms.sourcegitcommit: 7791596c25baf9d222729e057ecdf81b45a59f0c
+ms.openlocfilehash: a2d1719379302dd8e996c37e05d7ddaf35a0cf18
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71205932"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258416"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -74,7 +74,7 @@ Información específica de la familia de dispositivos
 **Transferir localmente aplicaciones** es una opción más segura que el modo de desarrollador porque no permite instalar en el dispositivo aplicaciones que no tengan un certificado de confianza.
 
 > [!NOTE]
-> Aunque transfieras aplicaciones localmente, solo deberías instalar aplicaciones procedentes de orígenes de confianza. Cuando instalas una aplicación transferida localmente que no tiene el certificado de Microsoft Store, confirmas que tienes todos los derechos necesarios para transferir localmente la aplicación y que eres el único responsable de los daños que la instalación y la ejecución de esta aplicación puedan causar. Consulta la sección Windows &gt; Microsoft Store de esta [declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=521839).
+> Aunque transfieras aplicaciones localmente, solo deberías instalar aplicaciones procedentes de orígenes de confianza. Cuando instalas una aplicación transferida localmente que no tiene el certificado de Microsoft Store, confirmas que tienes todos los derechos necesarios para transferir localmente la aplicación y que eres el único responsable de los daños que la instalación y la ejecución de esta aplicación puedan causar. Consulta la sección Windows &gt; Microsoft Store de esta [declaración de privacidad](https://privacy.microsoft.com/privacystatement).
 
 
 ### <a name="developer-mode"></a>Modo de desarrollador

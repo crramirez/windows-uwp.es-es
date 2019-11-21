@@ -6,12 +6,12 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: windows 10, uwp, monetize, engage, promote, Store services
 ms.localizationpriority: medium
-ms.openlocfilehash: 460179f7f57e17f78fdb3fd3bd289e761a8a7b4f
-ms.sourcegitcommit: 2dba9b4e81151d14ca90d36341274a3b59926197
+ms.openlocfilehash: 7beee974bceceab02984ae6499a9c5db0b0281b9
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057460"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259300"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de Store
 
@@ -72,7 +72,7 @@ Ya cobres un precio por la aplicación o la ofrezcas de manera gratuita, puedes 
 Permitimos una amplia variedad de experiencias de anuncios que se adaptan a la mayoría de las necesidades, incluidos anuncios de banners, anuncios intersticiales (banner y vídeo), anuncios en vídeo lineales y anuncios nativos. Nuestra plataforma es compatible con los estándares OpenRTB, VAST 2.x, MRAID 2 y VPAID 3, y con MOAT e IAS.
 
 [Explorar las opciones de anuncios](../publish/create-an-ad-campaign-for-your-app.md)
-[instalar el SDK de anuncios](https://aka.ms/ads-sdk-uwp)
+[instalar el SDK de anuncios](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)
     :::column-end:::
 :::row-end:::
 
@@ -85,7 +85,7 @@ Permitimos una amplia variedad de experiencias de anuncios que se adaptan a la m
 
 Maximiza los ingresos publicitarios de tus aplicaciones usando el servicio de mediación de anuncios de Microsoft para ofrecer anuncios de múltiples redes de anuncios populares. Puedes configurar los ajustes de mediación en el Centro de partners, sin necesidad de tocar una sola línea de código. Si dejas que configuremos la mediación por ti, nuestros algoritmos de aprendizaje automático te ayudarán a maximizar los ingresos por anuncios en los mercados que tu aplicación admita.
 
-[Usar el servicio de anuncios](https://aka.ms/admediationblog)
+[Usar el servicio de anuncios](https://blogs.windows.com/windowsdeveloper/2017/05/08/announcing-microsofts-ad-mediation-service/)
     :::column-end:::
 :::row-end:::
 
@@ -110,8 +110,8 @@ Los informes de análisis detallados te permiten ver el rendimiento de los anunc
 
  Tema                | Descripción                 |
 |--------------------|-----------------------------|
-| [Programa de afiliados de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=617665) | Consigue comisiones vinculando productos de Microsoft desde la aplicación, el blog, la página web u otras comunicaciones. Puedes vincular productos a aplicaciones, juegos, música, películas, hardware, accesorios y otros productos que se vendan en Microsoft Store.
-| [Experimentación A/B](https://go.microsoft.com/fwlink/p/?LinkId=722784) | Ejecuta pruebas A/B en tus aplicaciones para medir la eficacia de los cambios de características en algunos clientes antes de habilitar los cambios de forma generalizada.
+| [Programa de afiliados de Microsoft](https://www.microsoftaffiliates.com/) | Consigue comisiones vinculando productos de Microsoft desde la aplicación, el blog, la página web u otras comunicaciones. Puedes vincular productos a aplicaciones, juegos, música, películas, hardware, accesorios y otros productos que se vendan en Microsoft Store.
+| [Experimentación A/B](https://docs.microsoft.com/windows/uwp/monetize/run-app-experiments-with-a-b-testing) | Ejecuta pruebas A/B en tus aplicaciones para medir la eficacia de los cambios de características en algunos clientes antes de habilitar los cambios de forma generalizada.
 | [Conectar con clientes con Microsoft Store Services SDK](microsoft-store-services-sdk.md) | Microsoft Store Services SDK proporciona bibliotecas y herramientas que puedes usar para agregar características a las aplicaciones que te ayudarán a atraer a los clientes. Estas características incluyen notificaciones dirigidas, pruebas A/B e inicio del Centro de opiniones desde la aplicación.
 | [Iniciar el Centro de opiniones desde la aplicación](launch-feedback-hub-from-your-app.md) | Agrega código a tus aplicaciones para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas y sugerencias, así como votar. A continuación, administra estas opiniones en el [Informe de comentarios](../publish/feedback-report.md) del Centro de partners. Esta característica requiere Microsoft Store Services SDK. 
 | [Configurar la aplicación para notificaciones de inserción dirigidas](configure-your-app-to-receive-dev-center-notifications.md) | Registra un canal de notificaciones para que tu aplicación para UWP pueda recibir [notificaciones de inserción del Centro de partners](../publish/send-push-notifications-to-your-apps-customers.md) y realizar un seguimiento de la tasa de inicios de la aplicación derivados de estas notificaciones. Esta característica requiere Microsoft Store Services SDK.

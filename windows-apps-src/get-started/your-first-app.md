@@ -6,12 +6,12 @@ ms.date: 01/25/2017
 ms.topic: article
 keywords: windows 10, uwp, primera aplicación, c#, c++, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: c6f66d90e96b0dfe941e4311ebf79cd3b9b5f4ae
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f386de7ebf9aae2f49a2709d8c1c8ce2595cbf1d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318748"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260523"
 ---
 # <a name="create-your-first-app"></a>Crea tu primera aplicación
 
@@ -27,9 +27,9 @@ Usa tus conocimientos de .NET, WPF o Silverlight para compilar aplicaciones medi
 
 Si quiere aprender los aspectos básicos o simplemente refrescar su memoria, consulte la siguiente documentación:
 
-* [Conceptos básicos de C# para principiantes](https://go.microsoft.com/fwlink/?linkid=850801)
-* [Conceptos básicos de VB para principiantes](https://go.microsoft.com/fwlink/?linkid=850802)
-* [Guía del desarrollador de Windows 10](https://go.microsoft.com/fwlink/?linkid=850804)
+* [Conceptos básicos de C# para principiantes](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners?l=Lvld4EQIC_2706218949)
+* [Conceptos básicos de VB para principiantes](https://docs.microsoft.com/learn/?l=jqMOvLKbC_9206218965)
+* [Guía del desarrollador de Windows 10](https://docs.microsoft.com/learn/)
 
 Si está listo para intentar algo un poco más divertido que "Hello, World!", pruebe estos tutoriales:
 

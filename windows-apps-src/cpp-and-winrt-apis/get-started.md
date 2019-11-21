@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, get, getting, started
 ms.localizationpriority: medium
-ms.openlocfilehash: ab582d0528d6af8c9a8ae97e43fda2714f8e2fe6
-ms.sourcegitcommit: 2442a5f5b0c4275204063162f0f379fa90ff13b4
+ms.openlocfilehash: c058a727e09f00e01664c314d8c198f3f25e841e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72292774"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255129"
 ---
 # <a name="get-started-with-cwinrt"></a>Introducción a C++/WinRT
 
@@ -121,7 +121,7 @@ Tampoco necesitas controlar códigos de devolución HRESULT. C++/WinRT convierte
 
 En esta sección se muestra cómo agregar compatibilidad de C++/WinRT a un proyecto de aplicación de escritorio de Windows que puedas tener. Si no tienes ningún proyecto de aplicación de escritorio de Windows, puedes seguir estos pasos para crear uno. Por ejemplo, abre Visual Studio y crea un proyecto de **Visual C++**  \> **Escritorio de Windows** \> **Aplicación de escritorio de Windows**.
 
-También puedes instalar opcionalmente la [Extensión de Visual Studio (VSIX) para C++/WinRT](https://aka.ms/cppwinrt/vsix) y el paquete NuGet. Para más información, consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+También puedes instalar opcionalmente la [Extensión de Visual Studio (VSIX) para C++/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) y el paquete NuGet. Para más información, consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ### <a name="set-project-properties"></a>Configuración de propiedades del proyecto
 

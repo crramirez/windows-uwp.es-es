@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 ms.localizationpriority: medium
-ms.openlocfilehash: f8f31630fed64e2a22b21e4572eaba76440a82fc
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 0b5ca136b969ca238226d6f6b63b8e2fcff3207f
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334773"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259737"
 ---
 # <a name="uwp-on-xbox-one"></a>UWP en Xbox One
 
@@ -40,7 +40,7 @@ Esta sección incluye pasos de configuración, una guía por el proceso de auten
 |[Introducción a las aplicaciones multiusuario](multi-user-applications.md)| Describe las aplicaciones multiusuario en Xbox One. |
 | [Automatizar tareas de desarrollo de Xbox One](https://github.com/Microsoft/WindowsDevicePortalWrapper/tree/v0.9.4) | El proyecto WindowsDevicePortalWrapper en GitHub proporciona una biblioteca que te permite automatizar tareas comunes de desarrollo, como la implementación o el inicio de una aplicación. El proyecto incluye un ejemplo, XboxWdpDriver.exe, que muestra cómo usar las API para tareas comunes. |
 |[Llevar los juegos existentes a Xbox](development-lanes-landing.md)|En función de en qué tecnología se base el juego, podemos dirigirte a instrucciones paso a paso que pueden acelerar el proceso de incorporación de tu juego a Xbox mediante UWP.|
-|[Características UWP que aún no se admiten en Xbox One](https://go.microsoft.com/fwlink/p/?LinkId=760755)|  Describe las áreas de características de UWP que aún no son totalmente funcionales en Xbox One.|
+|[Características UWP que aún no se admiten en Xbox One](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN)|  Describe las áreas de características de UWP que aún no son totalmente funcionales en Xbox One.|
 
 ## <a name="videos"></a>Vídeos
 

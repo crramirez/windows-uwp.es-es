@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: 478c4a16902329e1dd9267e0339dca0e0dcf3539
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1a2b22df2610191636d258dc48838e0bc5be6ee4
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321971"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259790"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Desarrollo de aplicaciones para Windows como servicio
 
@@ -50,7 +50,7 @@ El método tradicional para que las aplicaciones fueran compatibles era publicar
 
 En el modelo Windows como servicio, Microsoft se compromete a mantener la compatibilidad del sistema operativo subyacente. Esto significa que Microsoft hará un esfuerzo coordinado para garantizar que no se produzcan cambios importantes que afecten negativamente al ecosistema de las aplicaciones. En este escenario, cuando se publique una compilación de Windows, la mayoría de las aplicaciones (aquellas que no tengan dependencias de kernel) seguirán funcionando.
 
-En vista de este cambio, Microsoft recomienda a sus ISV asociados que desacoplen la versión y la compatibilidad de sus aplicaciones con compilaciones específicas de Windows. Los clientes reciben un mejor servicio si el enfoque se centra en el ciclo de vida de las aplicaciones. Esto significa que cuando se publique una versión de la aplicación, esta se admitirá durante un determinado período de tiempo independientemente del modo en que muchas compilaciones de Windows se publiquen de forma provisional. El ISV se compromete a proporcionar compatibilidad para esa versión específica de la aplicación mientras esta se admita en el ciclo de vida. Microsoft sigue un enfoque similar del ciclo de vida para Windows, que se puede consultar [aquí](https://go.microsoft.com/fwlink/?LinkID=780549).
+En vista de este cambio, Microsoft recomienda a sus ISV asociados que desacoplen la versión y la compatibilidad de sus aplicaciones con compilaciones específicas de Windows. Los clientes reciben un mejor servicio si el enfoque se centra en el ciclo de vida de las aplicaciones. Esto significa que cuando se publique una versión de la aplicación, esta se admitirá durante un determinado período de tiempo independientemente del modo en que muchas compilaciones de Windows se publiquen de forma provisional. El ISV se compromete a proporcionar compatibilidad para esa versión específica de la aplicación mientras esta se admita en el ciclo de vida. Microsoft sigue un enfoque similar del ciclo de vida para Windows, que se puede consultar [aquí](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy?C2=14019).
 
 Este enfoque reduce la carga que supone mantener una programación de la aplicación que se alinee con las versiones de Windows. Los ISV asociados deberían poder publicar características o actualizaciones a su propio ritmo. Creemos que nuestros partners pueden tener al día a todos sus clientes con las últimas actualizaciones de sus aplicaciones, con independencia de la versión de Windows. Además, nuestros clientes no tienen que buscar una declaración de compatibilidad explícita siempre que se publique una compilación de Windows. Este es un ejemplo de una declaración de compatibilidad que abarca cómo puede ser la compatibilidad de una aplicación en diferentes versiones del sistema operativo:
 
@@ -90,7 +90,7 @@ Algunas aplicaciones realizan una comprobación de la versión y simplemente tra
 -   Si la aplicación depende de la funcionalidad de una API específica, asegúrate de que apuntas a la versión correcta de dicha API.
 -   Asegúrate de detectar el cambio a través de APISet o de otra API pública y de no utilizar la versión como proxy de alguna característica o corrección. Si hay cambios importantes y no se expone una comprobación adecuada, se trata de un error.
 -   Asegúrate de que la aplicación NO comprueba la versión de formas extrañas, como a través del registro, versiones de archivos, desplazamientos, el modo kernel, controladores ni otros medios. Si es absolutamente necesario que la aplicación compruebe la versión, usa las API GetVersion, que deberían devolver el número de la versión principal, de la secundaria y de la compilación.
--   Si utilizas la API [GetVersion](https://go.microsoft.com/fwlink/?LinkID=780555), recuerda que el comportamiento de esta API ha cambiado desde Windows 8.1.
+-   Si utilizas la API [GetVersion](https://docs.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversion?redirectedfrom=MSDN), recuerda que el comportamiento de esta API ha cambiado desde Windows 8.1.
 
 Si tienes aplicaciones como aplicaciones antimalware o de firewall, deberías utilizar los canales de comentarios habituales y el programa Windows Insider.
 
@@ -100,9 +100,9 @@ Las aplicaciones no deben llamar a API de Windows sin documentar ni depender de 
 
 ### <a name="develop-universal-windows-platform-uwp-and-centennial-apps"></a>Desarrollo de aplicaciones para la plataforma universal de Windows (UWP) y Centennial
 
-Animamos a todos los ISV de aplicaciones de Win32 a que en el futuro desarrollen aplicaciones para la [plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/?LinkID=780560) y, específicamente, para [Centennial](https://go.microsoft.com/fwlink/?LinkID=780562). Desarrollar estos paquetes de aplicación en lugar de utilizar los instaladores de Win32 tradicionales supone unas enormes ventajas. Las aplicaciones para UWP también se admiten en [Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=780563), por lo que es más fácil actualizar automáticamente a los usuarios a una versión coherente, y esto reduce los costos de soporte técnico.
+Animamos a todos los ISV de aplicaciones de Win32 a que en el futuro desarrollen aplicaciones para la [plataforma universal de Windows (UWP)](https://blogs.windows.com/windowsdeveloper/2016/02/25/an-update-on-the-developer-opportunity-and-windows-10/) y, específicamente, para [Centennial](https://channel9.msdn.com/Events/Build/2015/2-692). Desarrollar estos paquetes de aplicación en lugar de utilizar los instaladores de Win32 tradicionales supone unas enormes ventajas. Las aplicaciones para UWP también se admiten en [Microsoft Store](https://blogs.windows.com/windowsdeveloper/2016/02/04/windows-store-trends-february-2016/), por lo que es más fácil actualizar automáticamente a los usuarios a una versión coherente, y esto reduce los costos de soporte técnico.
 
-Si los tipos de aplicaciones de Win32 no funcionan con el modelo Centennial, es muy recomendable utilizar el instalador correcto y asegurarse de que este se prueba de forma exhaustiva. Un instalador es la primera experiencia del usuario o el cliente con la aplicación, por lo que deberías asegurarte de que funciona bien. Con demasiada frecuencia, el instalador no funciona correctamente o no se ha probado de forma completa en todos los escenarios. El [Kit para la certificación de aplicaciones en Windows](https://go.microsoft.com/fwlink/?LinkID=780565) puede ayudarte a probar la instalación y la desinstalación de la aplicación de Win32, así como a identificar el uso de API sin documentar y otros problemas básicos de procedimientos recomendados relativos al rendimiento, antes de que lo hagan los usuarios.
+Si los tipos de aplicaciones de Win32 no funcionan con el modelo Centennial, es muy recomendable utilizar el instalador correcto y asegurarse de que este se prueba de forma exhaustiva. Un instalador es la primera experiencia del usuario o el cliente con la aplicación, por lo que deberías asegurarte de que funciona bien. Con demasiada frecuencia, el instalador no funciona correctamente o no se ha probado de forma completa en todos los escenarios. El [Kit para la certificación de aplicaciones en Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) puede ayudarte a probar la instalación y la desinstalación de la aplicación de Win32, así como a identificar el uso de API sin documentar y otros problemas básicos de procedimientos recomendados relativos al rendimiento, antes de que lo hagan los usuarios.
 
 **Procedimiento recomendado:**
 -   Usa instaladores que funcionen para versiones de Windows de 32 bits y de 64 bits.
@@ -117,7 +117,7 @@ La distribución de paquetes piloto del SO Windows se refiere a las compilacione
 Si tu aplicación está en la Tienda, puedes distribuir paquetes piloto de ella a través de la propia Tienda, lo que significará que tu aplicación estará disponible para que la instalen los usuarios de Windows Insider. Los usuarios podrán instalar la aplicación y tú podrás recibir comentarios preliminares sobre ella antes de su lanzamiento al gran público. Las siguientes secciones describen los pasos para probar las aplicaciones en compilaciones piloto de Windows.
 
 ### <a name="step-1-become-a-windows-insider-and-participate-in-flighting"></a>Paso 1: Conviértete en usuario de Windows Insider y participa en la distribución de paquetes piloto
-Como usuario de [Windows Insider,](https://go.microsoft.com/fwlink/p/?LinkId=521639) podrás ayudar a determinar el futuro de Windows: tus comentarios nos ayudarán a mejorar las características y la funcionalidad de la plataforma. Se trata de una comunidad dinámica en la que podrás conectarte con otros entusiastas, unirte a foros, intercambiar consejos y enterarte de los próximos eventos solo para usuarios de Insider.
+Como usuario de [Windows Insider,](https://insider.windows.com/) podrás ayudar a determinar el futuro de Windows: tus comentarios nos ayudarán a mejorar las características y la funcionalidad de la plataforma. Se trata de una comunidad dinámica en la que podrás conectarte con otros entusiastas, unirte a foros, intercambiar consejos y enterarte de los próximos eventos solo para usuarios de Insider.
 
 Dado que tendrás acceso a versiones preliminares de Windows 10 y Windows 10 Mobile y a los más recientes SDK y emuladores de Windows, tendrás a tu disposición todas las herramientas necesarias para desarrollar excelentes aplicaciones y explorar las novedades de la Plataforma universal de Windows y la Microsoft Store.
 
@@ -157,7 +157,7 @@ Cuando hayas actualizado a una compilación piloto, a continuación hay algunos 
 Infórmanos del rendimiento de tu aplicación en las compilaciones piloto. A medida que descubras problemas en la aplicación durante las pruebas, registra los errores a través del portal para partners, si tienes acceso a él, o a través de tu representante de Microsoft. Te animamos a que nos traslades esta información para poder crear juntos una experiencia de calidad para nuestros usuarios.
 
 ### <a name="step-4-register-on-ready-for-windows"></a>Paso 4: Regístrate en Ready For Windows
-El sitio web [Ready For Windows](https://go.microsoft.com/fwlink/?LinkID=780580) es un directorio del software compatible con Windows 10. Está destinado a los administradores de TI de empresas y organizaciones de todo el mundo que están pensando en la implementación de Windows 10. Los administradores de TI pueden consultar el sitio para ver que si el software implementado en su empresa es compatible con Windows 10.
+El sitio web [Ready For Windows](https://docs.microsoft.com/configmgr/desktop-analytics/ready-for-windows) es un directorio del software compatible con Windows 10. Está destinado a los administradores de TI de empresas y organizaciones de todo el mundo que están pensando en la implementación de Windows 10. Los administradores de TI pueden consultar el sitio para ver que si el software implementado en su empresa es compatible con Windows 10.
 
 ## <a name="related-topics"></a>Temas relacionados
 [Opciones de mantenimiento de Windows 10 para actualizaciones](https://docs.microsoft.com/windows/manage/introduction-to-windows-10-servicing)

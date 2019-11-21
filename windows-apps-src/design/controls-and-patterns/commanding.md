@@ -5,12 +5,12 @@ author: Karl-Bridge-Microsoft
 ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
-ms.openlocfilehash: 1d176f90af4a3d601e44ce7e3e0ac708bcb7dd45
-ms.sourcegitcommit: e5ed95f8252ddc7f39055d8f7276e82167bb9891
+ms.openlocfilehash: cd34c9444c68b8e959f449124fe4ae294ec14fc4
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973695"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257711"
 ---
 # <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Uso de comandos en aplicaciones de la Plataforma universal de Windows (UWP) con ICommand, XamlUICommand y StandardUICommand
 
@@ -1114,5 +1114,5 @@ Para ver un ejemplo completo que muestra una implementación de [XamlUICommand](
 
 #### <a name="other-samples"></a>Otras muestras
 
-- [Muestras de la Plataforma universal de Windows (C# y C++)](https://go.microsoft.com/fwlink/?linkid=832713)
+- [Muestras de la Plataforma universal de Windows (C# y C++)](https://github.com/Microsoft/Windows-universal-samples/tree/b78d95134ce2d57c848e0a8dc339fc362748fb9c/Samples/RadialController)
 - [XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery)

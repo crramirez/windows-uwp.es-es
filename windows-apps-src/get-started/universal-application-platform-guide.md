@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows 10, UWP, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b1f6e0e04cdf81512918e0cd3e33ec0f93e2245
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5b0d226a9492a2218edf20e68b8216ea513ca12a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321000"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260541"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>¿Qué es una aplicación para la Plataforma universal de Windows (UWP)?
 
@@ -115,7 +115,7 @@ Consulte [Preparación](get-set-up.md) para descargar las herramientas que neces
 
 El sistema de diseño de Microsoft se llama Fluent. El sistema Fluent Design es un conjunto de características para UWP combinado con procedimientos recomendados para crear aplicaciones que funcionan a la perfección en todo tipo de dispositivos con Windows. Las experiencias Fluent se adaptan y se usan naturalmente en todos los dispositivos, desde tabletas a portátiles o PC a televisiones, y en dispositivos de realidad virtual. Consulte [El sistema Fluent Design para aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/design/fluent-design-system) para ver una introducción a Fluent Design.
 
-Un buen [diseño](https://go.microsoft.com/fwlink/?LinkId=258848) consiste en decidir cómo interactuarán los usuarios con la aplicación, además de qué aspecto tendrá y cómo funcionará. La experiencia del usuario tiene un papel clave a la hora de determinar la satisfacción de los usuarios con tu aplicación, así que no ahorres esfuerzos en este paso. [Conceptos básicos de diseño](https://developer.microsoft.com/en-us/windows/apps/design) es una introducción al diseño de aplicación universal de Windows. Consulta [Introducción a las aplicaciones de la Plataforma universal de Windows (UWP) para diseñadores](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro) para obtener información sobre cómo diseñar aplicaciones para UWP que encandilen a los usuarios. Antes de empezar a escribir código, consulta la [Información básica de dispositivos](../design/devices/index.md) , que te ayudará a reflexionar sobre la experiencia de interacción que ofrecerá la aplicación en los diferentes factores de forma a los que quieras destinarla.
+Un buen [diseño](http://design.windows.com/) consiste en decidir cómo interactuarán los usuarios con la aplicación, además de qué aspecto tendrá y cómo funcionará. La experiencia del usuario tiene un papel clave a la hora de determinar la satisfacción de los usuarios con tu aplicación, así que no ahorres esfuerzos en este paso. [Conceptos básicos de diseño](https://developer.microsoft.com/en-us/windows/apps/design) es una introducción al diseño de aplicación universal de Windows. Consulta [Introducción a las aplicaciones de la Plataforma universal de Windows (UWP) para diseñadores](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro) para obtener información sobre cómo diseñar aplicaciones para UWP que encandilen a los usuarios. Antes de empezar a escribir código, consulta la [Información básica de dispositivos](../design/devices/index.md) , que te ayudará a reflexionar sobre la experiencia de interacción que ofrecerá la aplicación en los diferentes factores de forma a los que quieras destinarla.
 
 Además de la interacción en diferentes dispositivos, [planea la aplicación](https://docs.microsoft.com/windows/uwp/get-started/plan-your-app) para incorporar las ventajas de trabajar en varios dispositivos. Por ejemplo:
 
@@ -125,7 +125,7 @@ Además de la interacción en diferentes dispositivos, [planea la aplicación](h
 
 ### <a name="add-services"></a>Agrega servicios
 
-- Usa [servicios en la nube](https://go.microsoft.com/fwlink/?LinkId=526377) para sincronizarla entre dispositivos.
+- Usa [servicios en la nube](https://azure.microsoft.com/documentation/services/cloud-services) para sincronizarla entre dispositivos.
 - Más información sobre cómo [conectarte a servicios web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10)) para el soporte de la aplicación.
 - Incluya [notificaciones push](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) y [compras desde la aplicación](https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases) en el planeamiento. Estas características deberían funcionar en todos los dispositivos.
 

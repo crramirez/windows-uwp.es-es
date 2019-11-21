@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7942839b43739ca5fb15106abbfa1877ead81dc2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: ff6031878b9189ca3794e2a9c68c85b76e5d21a7
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362773"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257440"
 ---
 # <a name="flip-view"></a>Inversión de la vista
 
@@ -204,7 +204,7 @@ En el caso de colecciones más grandes (de 10 a 25 elementos), considera la posi
 
 ![Ejemplo de indicador de contexto](images/controls_contextindicator.jpg)
 
-Para obtener un ejemplo de código que muestre cómo agregar un indicador de contexto a FlipView, consulta [Muestra de FlipView XAML](https://go.microsoft.com/fwlink/p/?LinkID=311760).
+Para obtener un ejemplo de código que muestre cómo agregar un indicador de contexto a FlipView, consulta [Muestra de FlipView XAML](https://code.msdn.microsoft.com/windowsapps/XAML-FlipView-control-0ae45312).
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 

@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, frequently, asked, questions, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 5bb19e406df98a24a6d65fc774a29e44ef267272
-ms.sourcegitcommit: c079388634cbd328d0d43e7a6185e09bb4bca65b
+ms.openlocfilehash: b0ec2c5a05e7c4e9309311fa22ad863d06597a53
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71939587"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254996"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Preguntas más frecuentes sobre C++/WinRT
 Respuestas a preguntas que probablemente tengas acerca de la creación y del consumo de las API de Windows Runtime con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -51,7 +51,7 @@ Solo si la clase en tiempo de ejecución se ha diseñado para consumirse desde f
 ## <a name="why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error"></a>¿Por qué el enlazador me da un "error LNK2019: símbolo externo sin resolver"?
 Si el símbolo no resuelto es una API de los encabezados de espacio de nombres de Windows para la proyección de C++/WinRT (en el espacio de nombres **winrt**), la API se declara más adelante en un encabezado que hayas incluido, pero su definición está en un encabezado que todavía no has incluido. Incluye el encabezado nombrado para el espacio de nombres de la API y vuelve a compilar. Para más información, consulta [Encabezados de proyección de C++/WinRT](consume-apis.md#cwinrt-projection-headers).
 
-Si el símbolo no resuelto es una función libre de Windows Runtime, como [RoInitialize](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roinitialize), tendrás que vincular explícitamente la biblioteca paraguas [WindowsApp.lib](/uwp/win32-and-com/win32-apis) en el proyecto. La proyección de C++/WinRT depende de algunas de estas funciones y puntos de entrada libres (no miembros). Si usas una de las plantillas de proyecto de la [Extensión de Visual Studio (VSIX) para C++/WinRT](https://aka.ms/cppwinrt/vsix) para la aplicación, `WindowsApp.lib` se vincula automáticamente. De lo contrario, puedes usar la configuración de vínculo del proyecto para incluirla o hacerlo en el código fuente.
+Si el símbolo no resuelto es una función libre de Windows Runtime, como [RoInitialize](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roinitialize), tendrás que vincular explícitamente la biblioteca paraguas [WindowsApp.lib](/uwp/win32-and-com/win32-apis) en el proyecto. La proyección de C++/WinRT depende de algunas de estas funciones y puntos de entrada libres (no miembros). Si usas una de las plantillas de proyecto de la [Extensión de Visual Studio (VSIX) para C++/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) para la aplicación, `WindowsApp.lib` se vincula automáticamente. De lo contrario, puedes usar la configuración de vínculo del proyecto para incluirla o hacerlo en el código fuente.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")

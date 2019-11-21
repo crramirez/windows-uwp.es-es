@@ -6,12 +6,12 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8278e02de4d0f9a0efa301051a57bf59bce8d520
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 49e126ea0212499361fea58b58237ee13fb76ca2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66363301"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259177"
 ---
 # <a name="sockets"></a>Sockets
 Los sockets son una tecnología de transferencia de datos de bajo nivel sobre la que se implementan muchos protocolos de red. UWP ofrece las clases de socket TCP y UDP para aplicaciones cliente-servidor o de punto a punto, tanto si las conexiones son de larga duración o no se necesita una conexión establecida.
@@ -521,7 +521,7 @@ void StreamSocketListener_ConnectionReceived(Windows::Networking::Sockets::Strea
 }
 ```
 
-Desde la perspectiva de la **StreamSocket**, el controlador de finalización se realiza en ejecución (y el socket es apto para su eliminación) antes de que se ejecuta el cuerpo de la continuación. Por lo tanto, para evitar que el socket se elimine si quiere usarlo dentro de esa continuación, necesita hacer referencia al socket directamente (a través de la captura de lambda) y usarla, o indirectamente (continuar accediendo a `args->Socket` dentro de continuaciones), o forzar tareas de continuación para que estar en línea. Puede ver la primera técnica (captura de lambda) en acción en la [muestra de StreamSocket ](https://go.microsoft.com/fwlink/p/?LinkId=620609). El código C++/CX de la sección [Compilar un servidor y cliente básico de socket TCP](#build-a-basic-tcp-socket-client-and-server) anterior usa la segunda técnica:&mdash; refleja la solicitud como una respuesta y accede a `args->Socket` desde dentro de una de las continuaciones más internas.
+Desde la perspectiva de la **StreamSocket**, el controlador de finalización se realiza en ejecución (y el socket es apto para su eliminación) antes de que se ejecuta el cuerpo de la continuación. Por lo tanto, para evitar que el socket se elimine si quiere usarlo dentro de esa continuación, necesita hacer referencia al socket directamente (a través de la captura de lambda) y usarla, o indirectamente (continuar accediendo a `args->Socket` dentro de continuaciones), o forzar tareas de continuación para que estar en línea. Puede ver la primera técnica (captura de lambda) en acción en la [muestra de StreamSocket ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/StreamSocket). El código C++/CX de la sección [Compilar un servidor y cliente básico de socket TCP](#build-a-basic-tcp-socket-client-and-server) anterior usa la segunda técnica:&mdash; refleja la solicitud como una respuesta y accede a `args->Socket` desde dentro de una de las continuaciones más internas.
 
 La tercera técnica es apropiada cuando no está reproduciendo una respuesta. Use la opción `task_continuation_context::use_synchronous_execution()` para forzar PPL a ejecutar el cuerpo de continuación en línea. Este es un ejemplo de código que muestra cómo hacerlo.
 
@@ -1346,7 +1346,7 @@ Se encontró un error en una operación [**DatagramSocket**](/uwp/api/Windows.Ne
 
 La mayoría de los valores de enumeración **SocketErrorStatus** corresponden a un error devuelto por la operación de Windows Sockets nativa. Su aplicación puede cambiar en valores de enumeración **WebErrorStatus** para modificar el comportamiento de la aplicación en función de la causa de la excepción.
 
-Para los errores de validación de parámetros, puede usar el **HRESULT** de la excepción para obtener información más detallada del error. Los posibles valores de **HRESULT** se muestran en `Winerror.h`, que se puede encontrar en la instalación de SDK (por ejemplo, en la carpeta `C:\Program Files (x86)\Windows Kits\10\Include\<VERSION>\shared`). Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E\_INVALIDARG**.
+Para los errores de validación de parámetros, puede usar el **HRESULT** de la excepción para obtener información más detallada del error. Los posibles valores **HRESULT** se muestran en `Winerror.h`, que se puede encontrar en la instalación del SDK (por ejemplo, en la carpeta `C:\Program Files (x86)\Windows Kits\10\Include\<VERSION>\shared`). Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E\_INVALIDARG**.
 
 El constructor [**HostName**](/uwp/api/Windows.Networking.HostName) puede arrojar una excepción si la cadena pasada no es un nombre de host válido. Por ejemplo, contiene caracteres no permitidos, lo cual es probable si el usuario escribe el nombre de host en su aplicación. Construya un **HostName** dentro de un bloque try/catch. De esa forma, si se arroja una excepción, la aplicación puede notificar al usuario y solicitar un nuevo nombre de host.
 
@@ -1384,4 +1384,4 @@ El constructor [**HostName**](/uwp/api/Windows.Networking.HostName) puede arroja
 * [Windows Sockets 2 (Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)
 
 ## <a name="samples"></a>Muestras
-* [Muestra StreamSocket](https://go.microsoft.com/fwlink/p/?LinkId=620609)
+* [Muestra StreamSocket](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/StreamSocket)

@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 82e05880dc8b0a983f4f8005b40939e5ffe0cbe4
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 67c729455c6eb2d8f5e8b07db5e1be7ac13f59b8
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340394"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258174"
 ---
 # <a name="text-box"></a>Cuadro de texto
 
@@ -215,7 +215,7 @@ Pegar | el Portapapeles contiene texto.
 Seleccionar todos | el TextBox contiene texto.
 Deshacer | se ha cambiado el texto.
 
-Para modificar los comandos mostrados en el menú contextual, controle el evento [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening). Para obtener un ejemplo de esto, consulta el escenario 2 de la [muestra de ContextMenu](https://go.microsoft.com/fwlink/p/?linkid=234891). Para obtener la información de diseño, consulta las directrices para menús contextuales.
+Para modificar los comandos mostrados en el menú contextual, controle el evento [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening). Para obtener un ejemplo de esto, consulta el escenario 2 de la [muestra de ContextMenu](https://code.msdn.microsoft.com/windowsapps/Context-menu-sample-40840351). Para obtener la información de diseño, consulta las directrices para menús contextuales.
 
 ### <a name="select-copy-and-paste"></a>Seleccionar, copiar y pegar
 

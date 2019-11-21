@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5559e4204dd50ff989d48ff4508862489f9d3180
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 9f5fd3408657047c3d1d102c65f6264954983134
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66361238"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257743"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
@@ -278,7 +278,7 @@ Las barras de comandos pueden colocarse en las siguientes regiones de la pantall
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
 - [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
-- [Ejemplo de comandos XAML](https://go.microsoft.com/fwlink/p/?LinkId=620019)
+- [Ejemplo de comandos XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ## <a name="related-articles"></a>Artículos relacionados
 

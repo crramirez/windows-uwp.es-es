@@ -8,12 +8,12 @@ keywords: dispositivo, entrada, interacción
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6333345a79d92394539d337f1f2390118cff1153
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: 0808b5173f697fcca8d5e117f857d3861c327ae3
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065338"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258119"
 ---
 #  <a name="ui-considerations-for-uwp-devices"></a>Consideraciones sobre la interfaz de usuario para dispositivos de UWP
 
@@ -131,7 +131,7 @@ Funcionalidades típicas del dispositivo
 
 Los más usados de todos los dispositivos informáticos, los teléfonos pueden hacer muchas cosas con la superficie de pantalla limitada y las entradas básicas. Los teléfonos están disponibles en una amplia variedad de tamaños; los teléfonos más grandes se denominan tabléfonos. Las experiencias de la aplicación en tabléfonos son similares a las de los teléfonos, pero debido a que la superficie de pantalla de los tabléfonos es mayor, se pueden producir algunos cambios clave en el consumo de contenido.
 
-Con Continuum para teléfonos, una nueva experiencia para dispositivos móviles Windows 10 compatibles, los usuarios pueden conectar sus teléfonos a un monitor e incluso usar un mouse y un teclado para que los teléfonos funcionen como un portátil. (Para obtener más información, consulta el [artículo Continuum para teléfonos](https://go.microsoft.com/fwlink/p/?LinkID=699431)).
+Con Continuum para teléfonos, una nueva experiencia para dispositivos móviles Windows 10 compatibles, los usuarios pueden conectar sus teléfonos a un monitor e incluso usar un mouse y un teclado para que los teléfonos funcionen como un portátil. (Para obtener más información, consulta el [artículo Continuum para teléfonos](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN)).
 
 Tamaños de pantalla
 -   Entre 4 y 5 pulgadas para teléfono

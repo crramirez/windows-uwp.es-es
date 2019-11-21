@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 97407ec48eaac3415980b9313092b21e9532250a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 834bea47a566789926648098086c05c0a47b6065
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321107"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260553"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Compilación de una aplicación compleja de la Plataforma universal de Windows (UWP)
 
@@ -65,7 +65,7 @@ El término "embudo" se debe a su forma. En la parte ancha del embudo entran muc
 
 Cuando estés contento con tu concepto, estarás preparado para la siguiente etapa: crear el plano de la aplicación. La arquitectura de información (AI) proporciona al contenido la integridad estructural que necesita. Te ayudará a definir el modelo de navegación de la aplicación y, en última instancia, la identidad de la aplicación. Si planeas la organización de tu contenido y cómo descubrirán los usuarios dicho contenido, podrás hacerte una idea más aproximada del modo en que los usuarios usarán tu aplicación.
 
-Una buena AI no solo facilita los escenarios de usuario, sino que también te ayuda a prever las pantallas clave con las que empezar. La aplicación [Audible](https://go.microsoft.com/fwlink/p/?LinkID=268089), por ejemplo, se inicia directamente en un concentrador que proporciona acceso a las estadísticas, noticias, tienda y biblioteca del usuario. La experiencia se ha concretado con el fin de que los usuarios puedan obtener libros sonoros y disfrutar de ellos rápidamente. Los niveles más profundos de la aplicación se centran en tareas más específicas.
+Una buena AI no solo facilita los escenarios de usuario, sino que también te ayuda a prever las pantallas clave con las que empezar. La aplicación [Audible](https://www.windowsphone.com/store/app/audible-for-windows-phone/bdc813dd-c20b-41f8-8646-de72fa0b365d), por ejemplo, se inicia directamente en un concentrador que proporciona acceso a las estadísticas, noticias, tienda y biblioteca del usuario. La experiencia se ha concretado con el fin de que los usuarios puedan obtener libros sonoros y disfrutar de ellos rápidamente. Los niveles más profundos de la aplicación se centran en tareas más específicas.
 
 Para obtener directrices relacionadas, consulta [Patrones de diseño básicos](../design/basics/navigation-basics.md).
 

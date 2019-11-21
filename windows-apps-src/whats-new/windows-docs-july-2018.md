@@ -5,18 +5,18 @@ keywords: novedades, actualización, características, instrucciones para desarr
 ms.date: 07/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4030796e942c76ccf32e04dbf951cac68718a6a5
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3c92de1901c9cc67a30f495e34289bac5d7d2b94
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320385"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258795"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novedades en los documentos para desarrolladores de Windows de julio de 2018
 
 La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. Las siguientes descripciones de características, instrucciones para desarrolladores, vídeos y ejemplos se han puesto a disposición de los desarrolladores en el mes de julio.
 
-[Instala las herramientas y el SDK](https://go.microsoft.com/fwlink/?LinkId=821431) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
@@ -34,7 +34,7 @@ Consulta nuestras guías de PWA para lo siguiente:
 
 ### <a name="notepad"></a>Bloc de notas
 
-A partir de la compilación 17713 de Windows 10 Insider Preview, [hemos actualizado el Bloc de notas con muchas características nuevas](https://aka.ms/ant-man). Ahora, las opciones de zoom, buscar y reemplazar de ajuste automático, así como la compatibilidad para finales de línea de Unix/Linux (LF) y Mac (CR) están disponibles para los [usuarios de Windows Insider](https://insider.windows.com/). 
+A partir de la compilación 17713 de Windows 10 Insider Preview, [hemos actualizado el Bloc de notas con muchas características nuevas](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/). Ahora, las opciones de zoom, buscar y reemplazar de ajuste automático, así como la compatibilidad para finales de línea de Unix/Linux (LF) y Mac (CR) están disponibles para los [usuarios de Windows Insider](https://insider.windows.com/). 
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
@@ -70,11 +70,11 @@ Además, hemos realizado algunas actualizaciones en las páginas existentes:
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>Introducción para desarrolladores: crear y personalizar un formulario en Windows 10
 
-Nuestros [documentos de Introducción](../get-started/index.md) para los desarrolladores de Windows ahora ofrecen experiencia práctica para el desarrollo de aplicaciones básicas. Este vídeo te guiará a través de uno de estos temas. En él se describen los aspectos básicos de la creación de la interfaz de usuario de un formulario en la aplicación. [Mira el vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver el código en acción y, después, [consulta el tema](https://aka.ms/CreateForms).
+Nuestros [documentos de Introducción](../get-started/index.md) para los desarrolladores de Windows ahora ofrecen experiencia práctica para el desarrollo de aplicaciones básicas. Este vídeo te guiará a través de uno de estos temas. En él se describen los aspectos básicos de la creación de la interfaz de usuario de un formulario en la aplicación. [Mira el vídeo](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) para ver el código en acción y, después, [consulta el tema](https://docs.microsoft.com/windows/uwp/get-started/construct-form-learning-track).
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Mejorar tu bot con Project Personality Chat
 
-El laboratorio Project Personality Chat te permite agregar un rol personalizable a tus bots de chat. Gracias a la integración con el SDK de Microsoft Bot Framework, puedes agregar funcionalidades de charla breve para interactuar con los clientes de un modo más informal. [Mira el vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para descubrir cómo implementarlo y, luego, [prueba la demostración interactiva](https://aka.ms/PersonalityChat) para obtener una experiencia práctica.
+El laboratorio Project Personality Chat te permite agregar un rol personalizable a tus bots de chat. Gracias a la integración con el SDK de Microsoft Bot Framework, puedes agregar funcionalidades de charla breve para interactuar con los clientes de un modo más informal. [Mira el vídeo](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) para descubrir cómo implementarlo y, luego, [prueba la demostración interactiva](https://www.microsoft.com/research/project/personality-chat/) para obtener una experiencia práctica.
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollador
 
