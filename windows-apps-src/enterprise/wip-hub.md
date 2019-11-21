@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp, Windows Information Protection, datos empresariales, protección de datos empresariales, edp, aplicaciones habilitadas
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
-ms.openlocfilehash: 42f08127567704b1c8623ac64857cc5afe0ef882
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f6e3839ac2c15c1f976a9135b121ffea26174d41
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321390"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259614"
 ---
 # <a name="windows-information-protection-wip"></a>Windows Information Protection (WIP)
 
@@ -41,9 +41,9 @@ Si los usuarios anulan la inscripción de su dispositivo del sistema MDM de la o
 
 ![Ciclo de vida de WIP](images/wip-lifecycle.png)
 
-> **Obtenga más información acerca de WIP** <br>
+> **Más información sobre WIP** <br>
 * [Introducción a Windows Information Protection](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
-* [Proteger los datos de empresa con Windows Information Protection (WIP)](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
+* [Proteger los datos de la empresa mediante Windows Information Protection (WIP)](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
 
 Si la aplicación está en la lista de aplicaciones permitidas, todos los datos generados por la aplicación están sujetos a las restricciones de la directiva. Esto significa que si los administradores revocan el acceso del usuario a los datos de empresa, dichos usuarios perderán el acceso a todos los datos de la aplicación que has creado.
 
@@ -61,13 +61,13 @@ Por ejemplo, si la directiva permite a los usuarios pegar datos de empresa en un
 
 Si estás listo para optimizar tu aplicación, consulta una de estas guías:
 
-**Para las aplicaciones de plataforma Universal de Windows (UWP) que se crean mediante el uso deC#**
+**Para las aplicaciones Plataforma universal de Windows (UWP) que se compilan conC#**
 
 [Guía para desarrolladores sobre Windows Information Protection (WIP)](wip-dev-guide.md).
 
-**Para aplicaciones de escritorio que se crean mediante el uso de C++**
+**Para las aplicaciones de escritorio que se compilan conC++**
 
-[Guía para desarrolladores sobre Windows Information Protection (WIP)](https://go.microsoft.com/fwlink/?LinkId=822192).
+[Guía para desarrolladores sobre Windows Information Protection (WIP)](https://docs.microsoft.com/previous-versions/windows/desktop/EDP/wip-developer-guide?redirectedfrom=MSDN).
 
 
 ## <a name="create-non-enlightened-enterprise-app"></a>Crear una aplicación empresarial no habilitada

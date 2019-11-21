@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1aa57af7e51fd7d6ef151909eccc444da2c44707
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 200fe265390d10a12a8e1b3a1abf7cd8164238d6
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062045"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258238"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar el idioma del reconocedor de voz
 
@@ -100,7 +100,7 @@ Una gramática SRGS es un formato XML estándar abierto representado por la clas
 
 **Ejemplos**
 
-* [Ejemplo de reconocimiento de voz y síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Ejemplo de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  
 
  

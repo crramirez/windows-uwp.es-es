@@ -6,17 +6,17 @@ keywords: dial, radial, tutorial
 ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cf27f6f9893b3d4cc68c899bf3ff1902320a910
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 79503f38941fd6fd54c47582811c5e28c4d89db2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820561"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258282"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Tutorial: Compatibilidad con Surface Dial (y otros dispositivos de rueda) en tu aplicación para UWP
 
-![Imagen Surface Dial con superficie Studio](images/radialcontroller/dial-pen-studio-600px.png)  
-*Surface Dial con Surface Studio y Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://aka.ms/purchasesurfacedial)).
+![imagen de Surface dial con Surface Studio](images/radialcontroller/dial-pen-studio-600px.png)  
+*Surface Dial con Surface Studio y Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://www.microsoft.com/store/d/Surface-Dial/925R551SKTGN?icid=Surface_Accessories_ModB_Surface_Dial_103116)).
 
 En este tutorial se indica cómo personalizar las experiencias de interacción del usuario compatibles con dispositivos de rueda como Surface Dial. Usamos fragmentos de código de una aplicación de muestra, que puedes descargar de GitHub (consulta [Código de muestra](#sample-code)), para mostrar las diferentes características y las API de [**RadialController**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller) asociadas que se explican en cada paso.
 
@@ -42,11 +42,11 @@ El Dial es compatible con tres gestos básicos:
 
 * Un ordenador (o máquina virtual) que ejecute Windows 10 Creators Update o posterior
 * [Visual Studio 2019](https://developer.microsoft.com/windows/downloads)
-* [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Un dispositivo de rueda (solo [Surface Dial](https://aka.ms/purchasesurfacedial) en este momento)
+* [SDK de Windows 10 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* Un dispositivo de rueda (solo [Surface Dial](https://www.microsoft.com/store/d/Surface-Dial/925R551SKTGN?icid=Surface_Accessories_ModB_Surface_Dial_103116) en este momento)
 * Si no estás familiarizado con el desarrollo de aplicaciones para la Plataforma universal de Windows (UWP) con Visual Studio, echa un vistazo a estos temas antes de empezar este tutorial:  
     * [Prepárate](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
-    * [Crear un "Hello, world" app (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+    * [Crear una aplicación "Hello, World" (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 
 ## <a name="set-up-your-devices"></a>Configurar los dispositivos
 
@@ -58,28 +58,28 @@ El Dial es compatible con tres gestos básicos:
 6. Vuelve a tu dispositivo Windows y selecciona **Agregar Bluetooth u otro dispositivo**.
 7. En el cuadro de diálogo **Agregar un dispositivo**, selecciona **Bluetooth** > **Surface Dial**. Ahora tu Surface Dial debería conectarse y agregarse a la lista de dispositivos de **Mouse, teclado y lápiz** en la página de configuración de **Bluetooth y otros dispositivos**.
 8. Para probar el Dial, mantenlo presionado durante unos segundos para ver el menú integrado.
-9. Si el menú no aparece en la pantalla (también debe vibrar el Dial), vaya a la configuración de Bluetooth, quite el dispositivo y, intente conectarse de nuevo el dispositivo.
+9. Si el menú no se muestra en la pantalla (el marcado también debe vibrar), vuelva a la configuración de Bluetooth, quite el dispositivo y vuelva a intentar la conexión del dispositivo.
 
 > [!NOTE]
 > Los dispositivos de rueda pueden configurarse con la configuración **Rueda**:
 > 1. En el menú **Inicio**, selecciona **Configuración**.
 > 2. Selecciona **Dispositivos** > **Rueda**.    
-> ![Pantalla de configuración de la rueda](images/radialcontroller/wheel-settings.png)
+> ![pantalla de configuración de la rueda](images/radialcontroller/wheel-settings.png)
 
 Ya estás listo para empezar este tutorial. 
 
 ## <a name="sample-code"></a>Código de ejemplo
 En este tutorial, usamos una aplicación de muestra para mostrar los conceptos y la funcionalidad analizada.
 
-Descarga este código de muestra y origen de Visual Studio de [GitHub](https://github.com/) en [windows-appsample-get-started-radialcontroller sample](https://aka.ms/appsample-radialcontroller):
+Descarga este código de muestra y origen de Visual Studio de [GitHub](https://github.com/) en [windows-appsample-get-started-radialcontroller sample](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-RadialController):
 
 1. Selecciona el botón verde **Clone or download**.  
-![Clonación del repositorio](images/radialcontroller/wheel-clone.png)
+![clonación del repositorio](images/radialcontroller/wheel-clone.png)
 2. Si tienes una cuenta de GitHub, puedes clonar el repositorio en el equipo local seleccionando **Abrir en Visual Studio**. 
 3. Si no tienes una cuenta de GitHub, o solo quieres una copia local del proyecto, elige **Download ZIP** (tendrás que irlo comprobando con regularidad para descargar las actualizaciones más recientes).
 
 > [!IMPORTANT]
-> La mayoría del código de la muestra contiene marcas de comentario. Cuando realicemos cada paso de este tema, se te pedirá que quites las marcas de comentario de varias secciones del código. En Visual Studio, simplemente resalta las líneas de código y presiona CTRL-K y, a continuación, CTRL-U.
+> La mayoría del código del ejemplo comentado. Conforme vayamos siguiendo cada paso de este tema, se te pedirá que quites los comentarios de diversas secciones del código. En Visual Studio, simplemente resalta las líneas de código y presiona CTRL-K y, a continuación, CTRL-U.
 
 ## <a name="components-that-support-wheel-functionality"></a>Componentes compatibles con la funcionalidad de rueda
 
@@ -87,10 +87,10 @@ Estos objetos proporcionan la mayor parte de la experiencia de dispositivo de ru
 
 | Componente | Descripción |
 | --- | --- |
-| [**RadialController** clase](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController) relacionado | Representa un dispositivo o accesorio de entrada de rueda como Surface Dial. |
-| [**IRadialControllerConfigurationInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop) / [**IRadialControllerInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>Esta funcionalidad no se explica aquí, para más información, consulta [Muestra de escritorio clásico de Windows](https://aka.ms/radialcontrollerclassicsample). | Habilita la interoperabilidad con una aplicación para UWP. |
+| [Clase **RadialController** ](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController) y relacionada | Representa un dispositivo o accesorio de entrada de rueda como Surface Dial. |
+| [**IRadialControllerConfigurationInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop) / [ **IRadialControllerInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>Esta funcionalidad no se explica aquí, para más información, consulta [Muestra de escritorio clásico de Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController). | Habilita la interoperabilidad con una aplicación para UWP. |
 
-## <a name="step-1-run-the-sample"></a>Paso 1: Ejecutar el ejemplo
+## <a name="step-1-run-the-sample"></a>Paso 1: ejecutar la muestra
 
 Después de descargar la aplicación de muestra RadialController, comprueba que se ejecuta:
 1. Abre el proyecto de muestra en Visual Studio.
@@ -98,7 +98,7 @@ Después de descargar la aplicación de muestra RadialController, comprueba que 
 3. Presiona F5 para compilar, implementar y ejecutar. 
 
 > [!NOTE]
-> Como alternativa, puede seleccionar **depurar** > **iniciar la depuración** elemento de menú, o bien seleccione la **máquina Local** ejecutar botón se muestra aquí: ![Botón de proyecto Visual Studio Build](images/radialcontroller/wheel-vsrun.png)
+> Como alternativa, puede seleccionar **Depurar** > elemento de menú **iniciar depuración** o seleccionar el botón ejecutar **equipo local** que se muestra aquí: ![botón compilar proyecto de Visual Studio](images/radialcontroller/wheel-vsrun.png)
 
 Se abre la ventana de la aplicación y, después de que aparezca una pantalla de presentación durante unos segundos, verás esta pantalla inicial.
 
@@ -106,9 +106,9 @@ Se abre la ventana de la aplicación y, después de que aparezca una pantalla de
 
 Bien, ahora tenemos la aplicación para UWP básica que usaremos en el resto de este tutorial. En los pasos siguientes, agregaremos la funcionalidad **RadialController**.
 
-## <a name="step-2-basic-radialcontroller-functionality"></a>Paso 2: Funcionalidad básica de RadialController
+## <a name="step-2-basic-radialcontroller-functionality"></a>Paso 2: funcionalidad RadialController básica
 
-Con la aplicación que se ejecuta en primer plano y mantenga presionada la Surface Dial para mostrar el **RadialController** menú.
+Con la aplicación en ejecución y en primer plano, mantenga presionado el marcado de Surface para mostrar el menú de **RadialController** .
 
 Aún no hemos personalizado la aplicación, por lo que el menú contiene un conjunto predeterminado de las herramientas contextuales. 
 
@@ -120,12 +120,12 @@ En estas imágenes se muestran dos variaciones del menú predeterminado. Hay muc
 
 Ahora empezaremos a realizar alguna personalización básica.
 
-## <a name="step-3-add-controls-for-wheel-input"></a>Paso 3: Agregar controles para la entrada de la rueda
+## <a name="step-3-add-controls-for-wheel-input"></a>Paso 3: agregar controles para la entrada de rueda
 
 Primero, vamos a agregar la interfaz de usuario para la aplicación:
 
 1. Abre el archivo MainPage_Basic.xaml.
-2. Encontrar el código marcado con el título de este paso ("\<!--Step 3: Agregar controles para la entrada de la rueda--> ").
+2. Busque el código marcado con el título de este paso ("\<!--paso 3: agregar controles para la entrada de la rueda-->").
 3. Quita las marcas de comentario de las siguientes líneas.
 
     ```xaml
@@ -159,12 +159,12 @@ En este punto, solo están habilitados el botón **Inicializar muestra**, el con
 
 ![Interfaz de usuario de aplicación básica](images/radialcontroller/wheel-app-step3-basicui.png)
 
-## <a name="step-4-customize-the-basic-radialcontroller-menu"></a>Paso 4: Personalizar el menú RadialController básico
+## <a name="step-4-customize-the-basic-radialcontroller-menu"></a>Paso 4: personalizar el menú RadialController básico
 
 Ahora vamos a agregar el código necesario para habilitar el acceso de **RadialController** a los controles.
 
 1. Abre el archivo MainPage_Basic.xaml.cs.
-2. Encontrar el código marcado con el título de este paso ("/ / paso 4: Personalización de menús de RadialController básica").
+2. Busca el código marcado con el título "// Step 4: Basic RadialController menu customization".
 3. Quita las marcas de comentario de las siguientes líneas:
     - Las referencias de tipo [Windows.UI.Input](https://docs.microsoft.com/uwp/api/windows.ui.input) y [Windows.Storage.Streams](https://docs.microsoft.com/uwp/api/windows.storage.streams) se usan para la funcionalidad en pasos posteriores:  
     
@@ -282,12 +282,12 @@ Ahora vamos a agregar el código necesario para habilitar el acceso de **RadialC
 
 Ahora vamos a enlazar los botones.
 
-## <a name="step-5-configure-menu-at-runtime"></a>Paso 5: Configurar el menú en tiempo de ejecución
+## <a name="step-5-configure-menu-at-runtime"></a>Paso 5: configurar el menú en tiempo de ejecución
 
 En este paso, enlazamos los botones **Add/Remove item** y **Reset RadialController menu** para mostrar cómo se puede personalizar el menú dinámicamente.
 
 1. Abre el archivo MainPage_Basic.xaml.cs.
-2. Encontrar el código marcado con el título de este paso ("/ / paso 5: Configuración de menú en tiempo de ejecución").
+2. Busca el código marcado con el título "// Step 5: Configure menu at runtime".
 3. Quita las marcas de comentario del código en los siguientes métodos y vuelve a ejecutar la aplicación, pero no selecciones ningún botón (lo harás en el siguiente paso).  
 
     ``` csharp
@@ -340,7 +340,7 @@ En este paso, enlazamos los botones **Add/Remove item** y **Reset RadialControll
 
     Observa que el menú vuelve a su estado original.
 
-## <a name="step-6-customize-the-device-haptics"></a>Paso 6: Personalizar el haptics de dispositivo
+## <a name="step-6-customize-the-device-haptics"></a>Paso 6: personalizar el dispositivo háptico
 Surface Dial y otros dispositivos de rueda pueden proporcionar a los usuarios comentarios hápticos correspondientes a la interacción actual (basada en un clic o rotación).
 
 En este paso, te mostramos cómo personalizar los comentarios hápticos asociando el control deslizante y el modificador para alternar, y usándolos para especificar dinámicamente el comportamiento de los comentarios hápticos. Para este ejemplo, se debe activar el modificador para alternar para que los comentarios se habiliten, mientras que el valor del control deslizante especifica la frecuencia con la que se repiten los comentarios de clic. 
@@ -349,7 +349,7 @@ En este paso, te mostramos cómo personalizar los comentarios hápticos asociand
 > El usuario puede deshabilitar los comentarios hápticos en la página **Configuración** >  **Dispositivos** > **Rueda**.
 
 1. Abre el archivo App.xaml.cs.
-2. Encontrar el código marcado con el título de este paso ("paso 6: Personalizar el haptics de dispositivo").
+2. Busca el código marcado con el título "Step 6: Customize the device haptics".
 3. Convierte en comentario la primera y tercera líneas ("MainPage_Basic" y "MainPage") y quita la marca de comentario de la segunda ("MainPage_Haptics").  
 
     ``` csharp
@@ -358,7 +358,7 @@ En este paso, te mostramos cómo personalizar los comentarios hápticos asociand
     rootFrame.Navigate(typeof(MainPage), e.Arguments);
     ```
 4. Abre el archivo MainPage_Haptics.xaml.
-5. Encontrar el código marcado con el título de este paso ("\<!--Step 6: Personalizar el dispositivo haptics--> ").
+5. Busque el código marcado con el título de este paso ("\<!--paso 6: personalizar los hápticos del dispositivo-->").
 6. Quita las marcas de comentario de las siguientes líneas. (Este código de interfaz de usuario simplemente indica qué características hápticas son compatibles con el dispositivo actual).    
 
     ```xaml
@@ -431,7 +431,7 @@ En este paso, te mostramos cómo personalizar los comentarios hápticos asociand
     </StackPanel>
     ```
 7. Abre el archivo MainPage_Haptics.xaml.cs
-8. Encontrar el código marcado con el título de este paso ("paso 6: Personalización de Haptics")
+8. Busca el código marcado con el título "Step 6: Haptics customization".
 9. Quita las marcas de comentario de las siguientes líneas:  
 
     - La referencia de tipo [Windows.Devices.Haptics](https://docs.microsoft.com/uwp/api/windows.devices.haptics) se usa para la funcionalidad en pasos posteriores.  
@@ -580,7 +580,7 @@ En este paso, te mostramos cómo personalizar los comentarios hápticos asociand
 
 Ahora ejecuta la aplicación otra vez para probar la háptica personalizada cambiando el valor del control deslizante y el estado del modificador para alternar.
 
-## <a name="step-7-define-on-screen-interactions-for-surface-studio-and-similar-devices"></a>Paso 7: En la pantalla definir interacciones para la superficie de Studio y dispositivos similares
+## <a name="step-7-define-on-screen-interactions-for-surface-studio-and-similar-devices"></a>Paso 7: definir interacciones en pantalla para Surface Studio y dispositivos similares
 Combinado con Surface Studio, Surface Dial puede proporcionar una experiencia de usuario aún más distintiva. 
 
 Además de la experiencia predeterminada del menú de pulsar y sostener, Surface Dial también puede colocarse directamente sobre la pantalla de Surface Studio. Esto activa un menú especial "en pantalla". 
@@ -594,7 +594,7 @@ Para verlo en acción (necesitarás Surface Studio):
 1. Descarga la muestra en un dispositivo Surface Studio (con Visual Studio instalado)
 2. Abre de muestra en Visual Studio.
 3. Abre el archivo App.xaml.cs.
-4. Encontrar el código marcado con el título de este paso ("paso 7: En la pantalla definir interacciones para la superficie de Studio y dispositivos similares ")
+4. Busca el código marcado con el título "Step 7: Define on-screen interactions for Surface Studio and similar devices".
 5. Convierte en comentario la primera y segunda líneas ("MainPage_Basic" y "MainPage_Haptics") y quita la marca de comentario de la tercera("MainPage").  
 
     ``` csharp
@@ -611,26 +611,26 @@ Para verlo en acción (necesitarás Surface Studio):
 
 ## <a name="summary"></a>Resumen
 
-Enhorabuena, ha completado la *Tutorial introductorio: Admitir la Surface Dial (y otros dispositivos de la rueda) en su aplicación para UWP*! Te hemos mostramos el código básico necesario para la compatibilidad con un dispositivo de rueda en tus aplicaciones para UWP y cómo proporcionar algunas de las mejores experiencias de usuario compatibles con las API de **RadialController**.
+Enhorabuena, has completado el *Tutorial de introducción: Compatibilidad con Surface Dial (y otros dispositivos de rueda) en tu aplicación para UWP*! Te hemos mostramos el código básico necesario para la compatibilidad con un dispositivo de rueda en tus aplicaciones para UWP y cómo proporcionar algunas de las mejores experiencias de usuario compatibles con las API de **RadialController**.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-[Superficies interacciones de acceso telefónico](windows-wheel-interactions.md)
+[Interacciones de marcado de Surface](windows-wheel-interactions.md)
 
 ### <a name="api-reference"></a>Referencia de la API
 
-- [**RadialController** clase](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController)
-- [**RadialControllerButtonClickedEventArgs** class](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
-- [**RadialControllerConfiguration** clase](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerConfiguration) 
-- [**RadialControllerControlAcquiredEventArgs** class](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
-- [**RadialControllerMenu** clase](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenu) 
-- [**RadialControllerMenuItem** clase](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenuItem) 
-- [**RadialControllerRotationChangedEventArgs** class](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
-- [**RadialControllerScreenContact** clase](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerScreenContact) 
-- [**RadialControllerScreenContactContinuedEventArgs** class](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
-- [**RadialControllerScreenContactStartedEventArgs** class](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
-- [**RadialControllerMenuKnownIcon** enum](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenuKnownIcon) 
-- [**RadialControllerSystemMenuItemKind** enum](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
+- [Clase **RadialController**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController)
+- [Clase **RadialControllerButtonClickedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
+- [Clase **RadialControllerConfiguration**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerConfiguration) 
+- [Clase **RadialControllerControlAcquiredEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerControlAcquiredEventArgs) 
+- [Clase **RadialControllerMenu**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenu) 
+- [Clase **RadialControllerMenuItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenuItem) 
+- [Clase **RadialControllerRotationChangedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerRotationChangedEventArgs) 
+- [Clase **RadialControllerScreenContact**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerScreenContact) 
+- [Clase **RadialControllerScreenContactContinuedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs) 
+- [Clase **RadialControllerScreenContactStartedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerScreenContactStartedEventArgs)
+- [Enumeración **RadialControllerMenuKnownIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenuKnownIcon) 
+- [Enumeración **RadialControllerSystemMenuItemKind**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
 
 ### <a name="samples"></a>Muestras
 
@@ -641,6 +641,6 @@ Enhorabuena, ha completado la *Tutorial introductorio: Admitir la Surface Dial (
 #### <a name="other-samples"></a>Otras muestras
 [Ejemplo de libro de color](https://github.com/Microsoft/Windows-appsample-coloringbook)
 
-[Muestras de la Plataforma universal de Windows (C# y C++)](https://go.microsoft.com/fwlink/?linkid=832713)
+[Muestras de la Plataforma universal de Windows (C# y C++)](https://github.com/Microsoft/Windows-universal-samples/tree/b78d95134ce2d57c848e0a8dc339fc362748fb9c/Samples/RadialController)
 
-[Ejemplo de escritorio clásico de Windows](https://aka.ms/radialcontrollerclassicsample)
+[Ejemplo de escritorio clásico de Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController)

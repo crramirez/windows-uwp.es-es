@@ -8,12 +8,12 @@ keywords: panel táctil,PTP,táctil,función táctil,puntero,entrada,interacció
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a4c3c5e2c3041aef3e2223e3bb45c1c3d3d37ad
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 991d85edd9c0a51412d33b48e364974d2095410e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365272"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258230"
 ---
 # <a name="touchpad-design-guidelines"></a>Directrices para el diseño de panel táctil
 
@@ -55,11 +55,11 @@ Los usuarios pueden establecer muchos más comportamientos de interacción y ges
 
 ![configuración del panel táctil estándar](images/mouse-touchpad-settings-standard.png)
 
-<sup>Estándar\\ panel táctil\\ configuración</sup>
+<sup>Configuración de\\ de\\ Touchpad estándar</sup>
 
 ![configuración del panel táctil de precisión de Windows](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Windows\\ precisión\\ panel táctil\\ configuración</sup>
+<sup>Configuración de\\ de\\ Touchpad de Windows\\ Precision</sup>
 
 Estos son algunos ejemplos de gestos optimizados para panel táctil para realizar tareas comunes.
 
@@ -155,15 +155,15 @@ Si necesitas personalizar el cursor del mouse:
 * [Control de la entrada con puntero](handle-pointer-input.md)
 * [Identificar dispositivos de entrada](identify-input-devices.md)
 **Muestras**
-* [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Focus visuals sample (Muestra de elementos visuales de foco)](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [Focus visuals sample (Muestra de elementos visuales de foco)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 **Muestras de archivo**
-* [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: Los gestos y manipulaciones con GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: ejemplo de eventos de entrada de usuario de XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Entrada: gestos y manipulaciones con GestureRecognizer](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
  
 
 

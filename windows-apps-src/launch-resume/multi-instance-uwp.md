@@ -5,12 +5,12 @@ keywords: uwp de instancias múltiples
 ms.date: 09/21/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 175ef3a3199440bf4ed6b3ee0dc91726b52e5043
-ms.sourcegitcommit: 38884ab90d5ad775c97cd880e1933b73a68750a5
+ms.openlocfilehash: 9be9b5eec70bc98bc2c44beaf1dcfbba00876f20
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544205"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259435"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Crear una aplicación universal de Windows de instancias múltiples
 
@@ -23,11 +23,11 @@ Desde Windows 10, versión 1803 (10,0; Compilación 17134) en adelante, la aplic
 
 ## <a name="opt-in-to-multi-instance-behavior"></a>Participación en el comportamiento de varias instancias
 
-Si vas a crear una nueva aplicación de instancias múltiples, puedes instalar el [proyecto de aplicación de instancias múltiples Templates.VSIX](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.MultiInstanceApps), disponible en [Visual Studio Marketplace ](https://aka.ms/E2nzbv). Después de instalar las plantillas, estarán disponibles en el cuadro de diálogo **Nuevo proyecto** en **Visual C# > Windows Universal** (o **Otros lenguajes > Visual C++ > Windows Universal**).
+Si vas a crear una nueva aplicación de instancias múltiples, puedes instalar el [proyecto de aplicación de instancias múltiples Templates.VSIX](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.MultiInstanceApps), disponible en [Visual Studio Marketplace ](https://marketplace.visualstudio.com/). Después de instalar las plantillas, estarán disponibles en el cuadro de diálogo **Nuevo proyecto** en **Visual C# > Windows Universal** (o **Otros lenguajes > Visual C++ > Windows Universal**).
 
-Se instalan dos plantillas: **Aplicación UWP de varias**instancias, que proporciona la plantilla para crear una aplicación de varias instancias y una **aplicación UWP de redirección de varias instancias**, que proporciona lógica adicional en la que puede crear una nueva instancia o activar de forma selectiva un instancia de que ya se ha iniciado. Por ejemplo, quizás solo desea una instancia de cada vez editando el mismo documento, de modo que la instancia que tiene ese archivo se abre en primer plano en lugar de iniciar una nueva instancia.
+Se instalan dos plantillas: **Aplicaciones para UWP de varias instancias**, que proporciona la plantilla para crear una aplicación de instancias múltiples y **Aplicación para UWP de redireccionamiento de instancias múltiples**, que proporciona lógica adicional que se puede generar para iniciar una nueva instancia o para activar de forma selectiva una instancia que ya se ha iniciado. Por ejemplo, quizás solo desea una instancia de cada vez editando el mismo documento, de modo que la instancia que tiene ese archivo se abre en primer plano en lugar de iniciar una nueva instancia.
 
-Ambas plantillas `SupportsMultipleInstances` `package.appxmanifest` se agregan al archivo. Tenga en cuenta el `desktop4` prefijo de espacio de nombres y `iot2`: solo los proyectos que tienen como destino los proyectos de escritorio o Internet de las cosas (IOT) admiten la creación de instancias múltiples.
+Ambas plantillas agregan `SupportsMultipleInstances` al archivo de `package.appxmanifest`. Tenga en cuenta el prefijo de espacio de nombres `desktop4` y `iot2`: solo los proyectos que tienen como destino los proyectos de escritorio o Internet de las cosas (IoT) admiten la creación de instancias múltiples.
 
 ```xml
 <Package
@@ -58,7 +58,7 @@ Para verlo en acción, vea este vídeo sobre cómo crear aplicaciones para UWP d
 
 La plantilla **Aplicación para UWP de varias instancias** agrega `SupportsMultipleInstances`al archivo package.appxmanifest, como se ha mostrado anteriormente, y también agrega un **Program.cs** (o **Program.cpp**, si estás usando la versión C++ de la plantilla) al proyecto que contiene una función `Main()`. La lógica para redirigir la activación se incluye en la función `Main`. La plantilla para **Program.CS** se muestra a continuación.
 
-La propiedad [**AppInstance. RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa la instancia preferida proporcionada por el shell para esta solicitud de activación, si hay alguna `null` (o si no hay ninguna). Si el Shell proporciona una preferencia, puede redirigir la activación a esa instancia o puede omitirla si lo desea.
+La propiedad [**AppInstance. RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) representa la instancia preferida proporcionada por el shell para esta solicitud de activación, si hay alguna (o `null` si no hay ninguna). Si el Shell proporciona una preferencia, puede redirigir la activación a esa instancia o puede omitirla si lo desea.
 
 ``` csharp
 public static class Program
@@ -108,9 +108,9 @@ public static class Program
 }
 ```
 
-`Main()`es lo primero que se ejecuta. Se ejecuta antes de [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) y [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Esto permite determinar si hay que activar esta u otra instancia antes de que se ejecute cualquier otro código de inicialización de la aplicación.
+`Main()` es lo primero que se ejecuta. Se ejecuta antes de [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) y [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_). Esto permite determinar si hay que activar esta u otra instancia antes de que se ejecute cualquier otro código de inicialización de la aplicación.
 
-El código anterior determina si se activa una instancia existente o nueva de la aplicación. Se usa una clave se usa para determinar si hay una instancia que deseas activar. Por ejemplo, si la aplicación se puede iniciar con [Administrar la activación de archivos](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-file-activation), podrías usar el nombre de archivo como clave. A continuación, puedes comprobar si una instancia de la aplicación ya está registrada con esa clave y activarla en lugar de abrir una nueva instancia. Esta es la idea detrás del código:`var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
+El código anterior determina si se activa una instancia existente o nueva de la aplicación. Se usa una clave se usa para determinar si hay una instancia que deseas activar. Por ejemplo, si la aplicación se puede iniciar con [Administrar la activación de archivos](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-file-activation), podrías usar el nombre de archivo como clave. A continuación, puedes comprobar si una instancia de la aplicación ya está registrada con esa clave y activarla en lugar de abrir una nueva instancia. Esta es la idea detrás del código: `var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
 
 Si se encuentra una instancia registrada con la clave, esa instancia se activa. Si no se encuentra la clave, la instancia actual (la instancia que actualmente está ejecutando `Main`) crea su objeto de aplicación y comienza a ejecutarse.
 
@@ -132,9 +132,9 @@ Si se encuentra una instancia registrada con la clave, esa instancia se activa. 
 
 ## <a name="sample"></a>Muestra
 
-Vea [el ejemplo de varias instancias](https://aka.ms/Kcrqst) para obtener un ejemplo de redirección de activación de varias instancias.
+Vea [el ejemplo de varias instancias](https://github.com/Microsoft/AppModelSamples/tree/master/Samples/BananaEdit) para obtener un ejemplo de redirección de activación de varias instancias.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [AppInstance.FindOrRegisterInstanceForKey](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appinstance#Windows_ApplicationModel_AppInstance_FindOrRegisterInstanceForKey_System_String_)
 [AppInstance.GetActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appinstance#Windows_ApplicationModel_AppInstance_GetActivatedEventArgs)

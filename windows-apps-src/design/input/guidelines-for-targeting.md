@@ -8,41 +8,41 @@ ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 34f8d15b971cc9ed286471010a21d1b44b84af13
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9b1cac04405f18aaf3c8f39f9bfce2b965577807
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363470"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257938"
 ---
-# <a name="guidelines-for-touch-targets"></a>Directrices para los destinos de toque
+# <a name="guidelines-for-touch-targets"></a>Directrices para los destinos táctiles
 
-Todos los elementos de interfaz de usuario interactivos en la aplicación de plataforma Universal de Windows (UWP) deben ser lo suficientemente grandes como para los usuarios acceso con precisión y utilizar, independientemente del método de entrada o el tipo de dispositivo.
+Todos los elementos interactivos de la interfaz de usuario de la aplicación Plataforma universal de Windows (UWP) deben ser lo suficientemente grandes como para que los usuarios accedan y utilicen con precisión, independientemente del tipo de dispositivo o del método de entrada.
 
-Compatibilidad con entrada táctil (y la naturaleza relativamente imprecisa del área de contacto táctil) requiere una optimización adicional con respecto al diseño de tamaño y el control de destino como el conjunto más grande y complejo de datos de entrada notificados por el digitalizador táctil se usa para determinar el destino de previsto (o el más probable) del usuario.
+La compatibilidad con la entrada táctil (y la naturaleza relativamente poco precisa del área de contacto táctil) requiere una optimización adicional con respecto al tamaño de destino y al diseño del control, ya que el modo más grande y más complejo de datos de entrada que se comunica mediante el digitalizador táctil se usa para determinar el destino previsto (o más probable) del usuario.
 
-Todos los controles UWP se han diseñado con tamaños de destino táctil predeterminados y diseños que permiten crear aplicaciones visualmente atractivas y equilibradas que son fáciles de usar, cómodo e inspiran confianza.
+Todos los controles de UWP se han diseñado con diseños y tamaños de destino táctil predeterminados que le permiten crear aplicaciones visualmente equilibradas y atractivas, fáciles de usar e inspirar confianza.
 
-En este tema, se describen estos comportamientos predeterminados, por lo que puede diseñar la aplicación para la máxima facilidad de uso mediante los controles de plataforma y los controles personalizados (la aplicación, es necesario ellos).
+En este tema, se describen estos comportamientos predeterminados para que pueda diseñar su aplicación para obtener el máximo uso mediante controles de plataforma y controles personalizados (si la aplicación los necesita).
 
 > **API importantes**: [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
-## <a name="fluent-standard-sizing"></a>Ajuste de tamaño estándar Fluent
+## <a name="fluent-standard-sizing"></a>Tamaño Fluent Standard
 
-*Ajuste de tamaño estándar Fluent* fue creado para proporcionar un equilibrio entre la comodidad de usuario y la densidad de la información. De hecho, todos los elementos en la pantalla se alinean a un destino de 40 x 40 píxeles efectivos (epx), que permite elementos de interfaz de usuario se alineen con una cuadrícula y escalar de forma adecuada en función de escalado del nivel de sistema.
+El *tamaño Fluent Standard* se ha creado para proporcionar un equilibrio entre la densidad de la información y la comodidad del usuario. De hecho, todos los elementos de la pantalla se alinean con un destino de 40 x 40 píxeles efectivos (epx), que permite que los elementos de la interfaz de usuario se alineen con una cuadrícula y se escalen de forma adecuada en función del escalado de nivel de sistema.
 
 > [!NOTE]
->Para obtener más información sobre los píxeles efectivos y el escalado, consulte [Introducción al diseño de aplicaciones para UWP](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
+>Para obtener más información sobre los píxeles efectivos y el escalado, consulta [Introducción al diseño de aplicaciones para UWP](../basics/design-and-ui-intro.md#effective-pixels-and-scaling).
 >
-> Para obtener más información sobre el escalado del nivel de sistema, consulte [alineación, márgenes y relleno](../layout/alignment-margin-padding.md).
+> Para obtener más información sobre el escalado de nivel de sistema, consulta [Alineación, margen, espaciado interno](../layout/alignment-margin-padding.md).
 
-## <a name="fluent-compact-sizing"></a>Ajuste de tamaño compacto Fluent
+## <a name="fluent-compact-sizing"></a>Tamaño Fluent Compact
 
-Las aplicaciones pueden mostrar un mayor nivel de densidad de la información con *sizing Fluent Compact*. Ajuste de tamaño compacto alinea los elementos de interfaz de usuario a un destino de 32 x 32 epx, que permite a los elementos de interfaz de usuario para alinearse con una cuadrícula más estricto y una escala adecuadamente en función de escalado del nivel de sistema.
+Las aplicaciones pueden mostrar un nivel más alto de densidad de información con *ajuste de tamaño compacto fluida*. El ajuste de tamaño compacto alinea los elementos de la interfaz de usuario con un destino de 32x32 EPX, lo que permite que los elementos de la interfaz de usuario se alineen con una cuadrícula más estrecha y se escalen adecuadamente según el escalado del nivel
 
 ### <a name="examples"></a>Ejemplos
 
-Ajuste de tamaño compacto puede aplicarse en el nivel de página o una cuadrícula.
+El ajuste de tamaño compacto se puede aplicar en el nivel de página o de cuadrícula.
 
 ### <a name="page-level"></a>Nivel de página
 
@@ -64,37 +64,37 @@ Ajuste de tamaño compacto puede aplicarse en el nivel de página o una cuadríc
 
 ## <a name="target-size"></a>Tamaño de destino
 
-En general, establezca el tamaño de destino táctil al intervalo de 7,5 mm cuadrado (40 x 40 píxeles en una pantalla PPI 135 en un 1,0 x escalado meseta). Normalmente, los controles UWP se alinean con destino táctil para 7,5 mm (Esto puede variar según el control específico y los patrones de uso común). Consulte [controlar el tamaño y la densidad](../style/spacing.md) para obtener más detalles.
+En general, establezca el tamaño del destino táctil en un intervalo de cuadrados de 7,5 mm (40 x 40 píxeles en una pantalla de 135 PPP con un nivel de ajuste de escala de 1,0 x). Normalmente, los controles de UWP se alinean con un destino táctil de 7,5 mm (esto puede variar en función del control específico y de cualquier patrón de uso común). Consulte [control de tamaño y densidad](../style/spacing.md) para obtener más detalles.
 
-Estas recomendaciones del tamaño de destino pueden ajustarse según sea necesario para un escenario en particular. Estos son algunos aspectos a tener en cuenta:
+Estas recomendaciones del tamaño de destino pueden ajustarse según sea necesario para un escenario en particular. Estos son algunos aspectos que se deben tener en cuenta:
 
-- Frecuencia de toques - considere convertir los destinos que están varias veces con frecuencia presionados o mayores que el tamaño mínimo.
-- Error consecuencia - destinos que tiene consecuencias graves si tocadas error debe tener mayor relleno y colocarse más lejos del borde del área de contenido. Esto se aplica especialmente a destinos que se tocan con frecuencia.
+- Frecuencia de los toques: considere la posibilidad de hacer que los destinos se presionen de forma repetida o más grande que el tamaño mínimo.
+- Consecuencias de error: los destinos que tienen consecuencias graves si se tocan en un error deben tener un relleno mayor y colocarse más lejos del borde del área de contenido. Esto se aplica especialmente a destinos que se tocan con frecuencia.
 - Posición en el área de contenido.
-- Tamaño de pantalla y el factor de formulario.
-- Posición del dedo.
-- Pulse en visualizaciones.
+- Factor de forma y tamaño de la pantalla.
+- Postura de dedo.
+- Visualizaciones táctiles.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Introducción al diseño de aplicaciones para UWP](../basics/design-and-ui-intro.md)
-- [Tamaño del control y la densidad](../style/spacing.md)
-- [Alineación, márgenes y relleno](../layout/alignment-margin-padding.md)
+- [Tamaño y densidad del control](../style/spacing.md)
+- [Alineación, margen, espaciado interno](../layout/alignment-margin-padding.md)
 
 ### <a name="samples"></a>Muestras
 
-- [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-- [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
-### <a name="archive-samples"></a>Ejemplos de archivo
+### <a name="archive-samples"></a>Muestras de archivo
 
-- [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-- [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-- [Entrada: Ejemplo de pruebas de posicionamiento táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
-- [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-- [Entrada: Ejemplo de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
-- [Entrada: Ejemplo de gestos de Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-- [Entrada: Las manipulaciones y ejemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-- [Ejemplo de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+- [Entrada: ejemplo de eventos de entrada de usuario de XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+- [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+- [Entrada: ejemplo de prueba de posicionamiento táctil](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+- [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+- [Entrada: ejemplo de entrada de lápiz simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+- [Entrada: ejemplo de gestos de Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [Entrada: ejemplo de manipulaciones y gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+- [Ejemplo de entrada táctil de DirectX](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)

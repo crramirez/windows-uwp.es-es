@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fce2c9230add569c4494b01546f1b3ced81d488b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 37d0ca71adf43891628a02d60d6873e7934d749b
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612930"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258188"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamaños de pantalla y puntos de interrupción
 
-Las aplicaciones para UWP pueden ejecutarse en cualquier dispositivo que ejecute Windows 10, esto es, teléfonos, tabletas, equipos de escritorio, televisores y mucho más. Con un gran número de destinos de dispositivos y tamaños de pantalla en el ecosistema de Windows 10, en lugar de optimizar la IU para cada dispositivo, se recomienda diseñar para algunas categorías de ancho de clave (también denominado "puntos de interrupción"): 
+Las aplicaciones para UWP pueden ejecutarse en cualquier dispositivo que ejecute Windows 10, esto es, teléfonos, tabletas, equipos de escritorio, televisores y mucho más. Con un gran número de destinos de dispositivo y tamaños de pantalla en el ecosistema de Windows 10, en lugar de optimizar la interfaz de usuario para cada dispositivo, se recomienda diseñar para unas cuantas categorías de ancho de clave (también denominadas "puntos de interrupción"): 
 - Pequeño (menos de 640 píxeles)
 - Medio (de 641 a 1007 píxeles)
 - Grande (1008 píxeles o más)
@@ -90,7 +90,7 @@ Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para g
 - Usa hasta dos columnas o regiones.
 - Muestra el cuadro de búsqueda.
 - Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo de franja para que siempre se muestre en una tira estrecha de iconos.
-- Considera la posibilidad de realizar más adaptaciones para las [experiencias con televisores](https://go.microsoft.com/fwlink/?LinkId=760736).
+- Considera la posibilidad de realizar más adaptaciones para las [experiencias con televisores](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN).
 
 ### <a name="large"></a>Grande
 - Establece los márgenes izquierdo y derecho de la ventana en 24 píxeles para crear una separación visual entre los bordes izquierdo y derecho de la ventana de la aplicación.
@@ -100,6 +100,6 @@ Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para g
 - Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo acoplado para que siempre se muestre.
 
 >[!TIP] 
-> Con [ **Continuum para teléfonos**](https://go.microsoft.com/fwlink/p/?LinkID=699431), los usuarios pueden conectarse los dispositivos móviles Windows 10 compatibles con un monitor, mouse y teclado para que sus teléfonos funcione, como equipos portátiles. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, un teléfono móvil no se mantendrá siempre en la clase de tamaño pequeño.
+> Con [**continuum para teléfonos**](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), los usuarios pueden conectar dispositivos Windows 10 Mobile compatibles con un monitor, mouse y teclado para que sus teléfonos funcionen como equipos portátiles. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, un teléfono móvil no se mantendrá siempre en la clase de tamaño pequeño.
 
 

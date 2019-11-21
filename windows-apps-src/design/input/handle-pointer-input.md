@@ -1,5 +1,5 @@
 ---
-Description: Recibir, proceso así como administrar datos de entrada desde dispositivos señaladores como táctil, lápiz o de lápiz, mouse y teclado táctil, en las aplicaciones de plataforma Universal de Windows (UWP).
+Description: Reciba, procese y administre los datos de entrada desde dispositivos que apunten, como la entrada táctil, el mouse, el lápiz/lápiz y el panel táctil, en las aplicaciones de Plataforma universal de Windows (UWP).
 title: Controlar la entrada de puntero
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
@@ -8,12 +8,12 @@ keywords: lápiz, mouse, panel táctil, función táctil, puntero, entrada, inte
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 596e9221fac686964b4faaa8a75f112dbb8ddf5a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 7f3d5480c0fa12366afe02cc31cdb994fdd4a842
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57619370"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257902"
 ---
 # <a name="handle-pointer-input"></a>Controlar la entrada de puntero
 
@@ -131,7 +131,7 @@ A continuación se muestran algunos fragmentos de código de una aplicación bá
 
 ![Interfaz de usuario de la aplicación de puntero](images/pointers/pointers1.gif)
 
-**Descargar este ejemplo de [puntero de entrada de ejemplo (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)**
+**Descargar este ejemplo del [ejemplo de entrada de puntero (Basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)**
 
 ### <a name="create-the-ui"></a>Crear la interfaz de usuario
 
@@ -196,7 +196,7 @@ Este es el lenguaje de marcado de aplicaciones extensible (XAML) para la interfa
 
 En la mayoría de los casos, es recomendable que obtengas la información del puntero mediante el elemento [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) del controlador de eventos.
 
-Si el argumento de evento no expone los datos de puntero exigidos, se pueden obtener acceso a extendidos [ **PointerPoint** ](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) expone información a través de la [ **GetCurrentPoint** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**]https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) métodos de [ **PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
+Si el argumento del evento no expone los detalles de puntero necesarios, puedes acceder a la información extendida de [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) que se expone a través de los métodos [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) de [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs).
 
 El siguiente código configura el objeto de diccionario global para hacer un seguimiento de cada puntero activo e identifica los diversas escuchas de eventos de puntero para el objeto de destino.
 
@@ -243,7 +243,7 @@ Después, se usan comentarios de interfaz de usuario para mostrar controladores 
 -   Este controlador administra el evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). Se agrega el evento al registro de eventos, se agrega el puntero al diccionario de puntero activo y se muestran los detalles del puntero.
 
     > [!NOTE]
-    > [**PointerPressed** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) y [ **PointerReleased** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) no siempre se producen eventos en pares. La aplicación debe escuchar y controlar cualquier evento que pueda concluir una acción de puntero hacia abajo (como [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited), [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled) y [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)).      
+    > Los eventos [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) y [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) no siempre se producen en pares. La aplicación debe escuchar y controlar cualquier evento que pueda concluir una acción de puntero hacia abajo (como [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited), [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled) y [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)).      
 
 ```csharp
 /// <summary>
@@ -531,7 +531,7 @@ private void Target_PointerCanceled(object sender, PointerRoutedEventArgs e)
 -   Este controlador administra el evento [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost). Se agrega el evento al registro de eventos, se quita el puntero de la matriz de punteros y se actualizan los detalles del puntero.
 
     > [!NOTE]
-    > [**PointerCaptureLost** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost) puede producirse en lugar de [ **PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased). La captura del puntero se puede perder por varios motivos, entre los que se incluyen la interacción del usuario, la captura mediante programación de otro puntero o la llamada a [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased).     
+    > [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost) puede producirse en lugar de [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased). La captura del puntero se puede perder por varios motivos, entre los que se incluyen la interacción del usuario, la captura mediante programación de otro puntero o la llamada a [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased).     
 
 ```csharp
 /// <summary>
@@ -572,7 +572,7 @@ private void Target_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
 
 ### <a name="get-pointer-properties"></a>Obtener las propiedades del puntero
 
-Como se indicó anteriormente, debe obtener más información extendida de puntero de un [ **Windows.UI.Input.PointerPoint** ](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) objeto obtenido a través de la [ **GetCurrentPoint** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**]https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) métodos de [ **PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). Los siguientes fragmentos de código muestran cómo.
+Como se indicó anteriormente, debes obtener la información más extendida del puntero desde un objeto [**Windows.UI.Input.PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) obtenido a través de los métodos [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) y [**GetIntermediatePoints**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) de [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs). Los siguientes fragmentos de código muestran cómo.
 
 -   Primero, se crea un nuevo elemento [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) para cada puntero.
 
@@ -696,13 +696,13 @@ Esta aplicación particular usa color y animación para resaltar el puntero prin
 
 ![Aplicación de puntero con comentarios visuales animados](images/pointers/pointers-usercontrol-animation.gif)
 
-**Descargar este ejemplo de [ejemplo de entrada de puntero (UserControl con animación)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)**
+**Descargar este ejemplo del [ejemplo de entrada de puntero (UserControl con animación)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)**
 
 ### <a name="visual-feedback"></a>Información visual
 
-Definimos un **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)**, basado en un objeto **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** de XAML, que resalta dónde está cada puntero en el lienzo y usa un **[Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** para animar la elipse que corresponde al puntero principal.
+Definimos un **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)** , basado en un objeto **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** de XAML, que resalta dónde está cada puntero en el lienzo y usa un **[Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** para animar la elipse que corresponde al puntero principal.
 
-**Este es el XAML:**
+**Este es el código XAML:**
 
 ```xaml
 <UserControl
@@ -949,20 +949,20 @@ Por último, definimos nuestros controladores de eventos de puntero básicos en 
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-**Ejemplos de tema**
-* [Ejemplo de entrada de puntero (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)
+**Ejemplos de temas**
+* [Ejemplo de entrada de puntero (Basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)
 * [Ejemplo de entrada de puntero (UserControl con animación)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
 
 **Otros ejemplos**
-* [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Ejemplos de archivo**
-* [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: Las manipulaciones y ejemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Entrada: Ejemplo de pruebas de posicionamiento táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: Ejemplo de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Entrada: ejemplo de eventos de entrada de usuario de XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: ejemplo de manipulaciones y gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [Entrada: ejemplo de prueba de posicionamiento táctil](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+* [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Entrada: ejemplo de entrada de lápiz simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)

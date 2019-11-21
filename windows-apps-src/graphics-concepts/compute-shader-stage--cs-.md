@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5660e2e75bbad7d5c2ee1f9c31ed4538ac55fe75
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bce484921a987f06ed79ad65007eb38d646c3227
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370441"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259508"
 ---
 # <a name="compute-shader-cs-stage"></a>Fase del sombreador de cálculo (CS)
 
@@ -21,7 +21,7 @@ La fase del sombreador de cálculo (CS) proporciona cálculos de uso general de 
 
 Un sombreador de cálculo puede ejecutarse en muchos subprocesos en paralelo.
 
-Un sombreador de cálculo es una fase del sombreador programable por [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl) que expande Direct3D más allá de la programación de gráficos gracias a la tecnología [DirectCompute](https://go.microsoft.com/fwlink/p/?linkid=209544).
+Un sombreador de cálculo es una fase del sombreador programable por [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl) que expande Direct3D más allá de la programación de gráficos gracias a la tecnología [DirectCompute](https://blogs.msdn.com/b/chuckw/archive/2010/07/14/directcompute.aspx).
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 

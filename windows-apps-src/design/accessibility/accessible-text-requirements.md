@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f5b87590736c4875214819f5c60a05edd47b1476
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 8b566b1960435a856b82a7be605ef5e1f7ba86e2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339515"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257791"
 ---
 # <a name="accessible-text-requirements"></a>Requisitos de texto accesible  
 
@@ -28,7 +28,7 @@ En este tema se describen los procedimientos recomendados sobre accesibilidad de
 ## <a name="contrast-ratios"></a>Relaciones de contraste  
 Aunque los usuarios siempre tienen la opción de cambiar a un modo de contraste alto, el diseño de la aplicación para el texto debe considerar esa opción como último recurso. Un procedimiento mucho más recomendable es asegurarse de que el texto de la aplicación cumpla con ciertos criterios establecidos para el nivel de contraste entre el texto y su fondo. La evaluación del nivel de contraste se basa en técnicas deterministas que no tienen en cuenta el matiz del color. Por ejemplo, si hay texto rojo sobre un fondo verde, es posible que un usuario daltónico no pueda leer el texto. Si se comprueba y corrige la relación de contraste, se puede evitar este tipo de problemas de accesibilidad.
 
-Las recomendaciones para el contraste de texto que se documentan aquí se basan en un estándar de accesibilidad web, @no__t 0G18: Asegurarse de que existe una relación de contraste de al menos 4.5:1 entre el texto (y las imágenes de texto) y el fondo detrás del texto @ no__t-0. Este criterio se encuentra en la especificación sobre las *técnicas de W3C para WCAG 2.0*.
+Las recomendaciones de contraste de texto aquí documentadas se basan en un estándar de accesibilidad web, [G18: asegurarse de que exista una relación de contraste de al menos 4.5:1 entre el texto (e imágenes de texto) y el fondo que se encuentra detrás de él](https://www.w3.org/TR/WCAG20-TECHS/G18.html). Este criterio se encuentra en la especificación sobre las *técnicas de W3C para WCAG 2.0*.
 
 Para considerarse accesible, el texto visible debe tener una relación de contraste de luminosidad mínima de 4.5:1 si se lo compara con el fondo. Algunas excepciones son los logotipos y el texto ocasional, como el texto que forma parte de un componente inactivo de la interfaz de usuario.
 
@@ -70,7 +70,7 @@ Narrador se ha actualizado para que este tipo de experiencia sea accesible con u
 * Mover el foco de Narrador a la lista.
 * Navegar por una sugerencia con todos los demás modos de lectura.
 
-![Suggestion List @ no__t-1<br/>
+![lista de sugerencias](images/autosuggest-list.png)<br/>
 _Ejemplo de una lista de sugerencias_
 
 <span id="Implementing_auto-suggest"/>
@@ -85,13 +85,13 @@ En un nivel alto, existen 2 tipos de experiencias de sugerencias automáticas.
 **Selección predeterminada**  
 Si se realiza una selección predeterminada en la lista, Narrador busca un evento [**UIA_SelectionItem_ElementSelectedEventId**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-event-ids) en una aplicación de escritorio o que se genere el evento [**AutomationEvents.SelectionItemPatternOnElementSelected**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) en una aplicación para UWP. Cada vez que cambia la selección, cuando el usuario escribe otra letra y las sugerencias se actualizan o cuando un usuario navega por la lista, debería activarse el evento **ElementSelected**.
 
-![List con una selección predeterminada @ no__t-1<br/>
+![lista con una selección predeterminada](images/autosuggest-default-selection.png)<br/>
 _Ejemplo en el que hay una selección predeterminada_
 
 **No hay selección predeterminada**  
 Si no hay ninguna selección predeterminada, como en el cuadro de ubicación de la aplicación El Tiempo, Narrador busca que cada vez que se actualice la lista, en dicha lista se genere el evento [**UIA_LayoutInvalidatedEventId**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-event-ids) en una aplicación de escritorio o el evento [**LayoutInvalidated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) en una aplicación para UWP.
 
-![List sin selección predeterminada @ no__t-1<br/>
+![lista sin selección predeterminada](images/autosuggest-no-default-selection.png)<br/>
 _Ejemplo en el que no hay ninguna selección predeterminada_
 
 ### <a name="xaml-implementation"></a>Implementación de XAML  
@@ -126,7 +126,7 @@ Siempre que sea posible, evita incluir texto en un gráfico. Por ejemplo, las te
 
 Los usuarios pueden tener dificultades para leer texto en una aplicación cuando los usos de las fuentes son simplemente demasiado pequeños, por lo que debe asegurarse de que todo el texto de la aplicación tenga un tamaño razonable en primer lugar.
 
-Una vez que haya hecho lo obvio, Windows incluye varias herramientas de accesibilidad y configuraciones en las que los usuarios pueden aprovechar las ventajas y adaptarse a sus propias necesidades y preferencias para leer texto. Entre ellas se incluyen las siguientes:
+Una vez que haya hecho lo obvio, Windows incluye varias herramientas de accesibilidad y configuraciones en las que los usuarios pueden aprovechar las ventajas y adaptarse a sus propias necesidades y preferencias para leer texto. Entre ellos se incluyen los siguientes:
 
 * La herramienta ampliador, que amplía un área seleccionada de la interfaz de usuario. Debe asegurarse de que el diseño de texto de la aplicación no dificulta el uso de la lupa para la lectura.
 * Configuración de escala y resolución global en **Configuración-> > de pantalla-> de la escala y el diseño**. Exactamente las opciones de ajuste de tamaño disponibles pueden variar, ya que depende de las capacidades del dispositivo de pantalla.
@@ -169,7 +169,7 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 }
 ```
 
-El valor de **TextScaleFactor** es un Double en el intervalo \[1, 2,25 @ no__t-2. El texto más pequeño se aumenta según esta cantidad. El valor se podría usar para, por ejemplo, escalar elementos gráficos para que vayan a tono con el texto. Recuerda, de todas formas, que no todo el texto escala mediante el mismo factor. En términos generales, el texto más grande es el que menos se ve afectado por el ajuste de escala.
+El valor de **TextScaleFactor** es un valor Double en el intervalo \[1, 2,25\]. El texto más pequeño se aumenta según esta cantidad. El valor se podría usar para, por ejemplo, escalar elementos gráficos para que vayan a tono con el texto. Recuerda, de todas formas, que no todo el texto escala mediante el mismo factor. En términos generales, el texto más grande es el que menos se ve afectado por el ajuste de escala.
 
 Estos tipos tienen una propiedad **IsTextScaleFactorEnabled**:  
 * [**ContentPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter)
@@ -186,6 +186,6 @@ Estos tipos tienen una propiedad **IsTextScaleFactorEnabled**:
 * [Escalado de texto](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [Accesibilidad](accessibility.md)
 * [Información básica de accesibilidad](basic-accessibility-information.md)
-* [Ejemplo de presentación de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=238579)
-* [Ejemplo de edición de texto XAML](https://go.microsoft.com/fwlink/p/?linkid=251417)
-* [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570) 
+* [Ejemplo de presentación de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
+* [Ejemplo de edición de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
+* [Ejemplo de accesibilidad XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d) 

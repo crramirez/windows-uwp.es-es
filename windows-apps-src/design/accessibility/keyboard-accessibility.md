@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fd8fa2b5264328619619df862d21f02f70f52e0
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 1fd0f00d74d62816ff347265936f6b066a0316b0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393761"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257753"
 ---
 # <a name="keyboard-accessibility"></a>Accesibilidad de teclado  
 
@@ -148,7 +148,7 @@ XAML
 
 Por cuestiones de simplicidad, el ejemplo anterior omite el uso de recursos para cadenas como Ctrl+A. No obstante, también debes tener en cuenta las teclas de método abreviado durante la localización. La localización de las teclas de método abreviado es relevante porque la elección de la tecla que se usa como método abreviado suele depender de la etiqueta de texto visible del elemento.
 
-Para obtener más información sobre la implementación de las teclas de método abreviado, consulta [Teclas de método abreviado](https://go.microsoft.com/fwlink/p/?linkid=221825) en las Directrices para la interacción de la experiencia de usuarios de Windows.
+Para obtener más información sobre la implementación de las teclas de método abreviado, consulta [Teclas de método abreviado](https://docs.microsoft.com/windows/win32/uxguide/inter-keyboard?redirectedfrom=MSDN) en las Directrices para la interacción de la experiencia de usuarios de Windows.
 
 <span id="Implementing_a_key_event_handler"/>
 <span id="implementing_a_key_event_handler"/>
@@ -175,7 +175,7 @@ Por lo general, para implementar un control de teclas personalizado para control
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>Un ejemplo de un estado visual para un indicador de foco  
 Ya hemos mencionado que los controles personalizados que el usuario habilite para que tengan el foco deben tener un indicador de foco visual. Normalmente, ese indicador de foco es tan simple como dibujar un rectángulo justo alrededor del rectángulo de límite normal del control. La clase [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) del foco visual es un elemento del mismo nivel que el resto de la composición del control en una plantilla de control, pero se establece inicialmente con un valor [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) en **Collapsed** porque el control aún no tiene el foco. Después, cuando el control obtiene el foco, se invoca un estado visual que establece específicamente el valor de **Visibility** en **Visible**. Cuando el foco se mueve a otro lugar, se llama a otro estado visual y **Visibility** pasa a ser **Collapsed**.
 
-Todos los controles XAML predeterminados mostrarán un indicador de foco visual adecuado cuando reciban el foco (si es que pueden recibirlo). También hay una apariencia potencialmente diferente en función del tema seleccionado del usuario (especialmente si el usuario usa un modo de contraste alto). Si usa los controles XAML en la interfaz de usuario y no reemplaza las plantillas de control, no es necesario hacer nada más para obtener indicadores visuales de foco en los controles que se comportan y muestran correctamente. Si lo que intentas es volver a crear la plantilla de un control, o si tienes curiosidad sobre cómo los controles XAML proporcionan sus indicadores de foco visual, en el resto de esta sección se explica cómo se logra en XAML y la lógica de control.
+Todos los controles XAML predeterminados mostrarán un indicador de foco visual adecuado cuando reciban el foco (si es que pueden recibirlo). También hay distintos aspectos potenciales según el tema seleccionado por el usuario (en especial si el usuario usa un modo de contraste alto). Si usas los controles XAML en la interfaz de usuario y no reemplazas las plantillas de control, no tienes que hacer nada más para obtener indicadores de foco visual en los controles que se comportan y se muestran correctamente. Si lo que intentas es volver a crear la plantilla de un control, o si tienes curiosidad sobre cómo los controles XAML proporcionan sus indicadores de foco visual, en el resto de esta sección se explica cómo se logra en XAML y la lógica de control.
 
 Aquí incluimos un código XAML de ejemplo que procede de la plantilla XAML predeterminada de una clase [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) .
 
@@ -250,4 +250,4 @@ Los métodos abreviados de teclado no suelen ser relevantes para las aplicacione
 * [Accesibilidad](accessibility.md)
 * [Interacciones de teclado](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
 * [Ejemplo de teclado táctil](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Ejemplo de accesibilidad XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)

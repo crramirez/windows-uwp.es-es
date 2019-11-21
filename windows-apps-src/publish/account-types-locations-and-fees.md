@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
-ms.openlocfilehash: b8a02079e7589d7c92ececa03496600a82ef427e
-ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
+ms.openlocfilehash: 1ac6c3e7c89c091d1080364b8fbbb35d484aee49
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71982243"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260060"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
@@ -20,7 +20,7 @@ El programa de Windows del [centro de Partners](https://partner.microsoft.com/da
 > [!NOTE]
 > Al abrir la cuenta de desarrollador, asegúrese de iniciar sesión en el [centro de Partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que desea usar para la cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
 
-Cuando [comiences el proceso de suscripción](https://go.microsoft.com/fwlink/p/?LinkId=615100), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, juegos, complementos y servicios.
+Cuando [comiences el proceso de suscripción](https://developer.microsoft.com/store/register), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, juegos, complementos y servicios.
 
 Las cuentas de empresa están pensadas para empresas y organizaciones. Para las cuentas de empresa, debemos [comprobar](#account-verification) con más atención para confirmar que tienes autorización para configurar la cuenta de tu empresa. Las cuentas individuales son normalmente adecuadas para un único desarrollador que trabaja por su cuenta, aunque tienes la opción de agregar usuarios adicionales a cualquier tipo de cuenta.
 
@@ -33,7 +33,7 @@ Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 |--------------------|-----------------|
 | <ul><li>Cuesta aproximadamente 19 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
-Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Según las [directivas](store-policies.md#1014-account-type)de la tienda, aplicaciones con cierta funcionalidad, como las que tienen acceso a la información de la cuenta financiera o que requieren autenticación para acceder a la funcionalidad principal (sin usar un proveedor de autenticación de terceros dedicado seguro), solo se puede publicar en cuentas de empresa.
+Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Según las [directivas](store-policies.md#1014-account-type)de la tienda, las aplicaciones con cierta funcionalidad, como las que tienen acceso a la información de la cuenta financiera o que requieren autenticación para acceder a la funcionalidad principal (sin usar un proveedor de autenticación de terceros dedicado seguro), solo pueden ser publicadas por las cuentas de la empresa.
 
 ## <a name="account-verification"></a>Comprobación de cuentas
 
@@ -123,7 +123,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Guyana                            | 19 USD              | 99 USD           |  
 | Haití                             | 19 USD              | 99 USD           |  
 | Honduras                          | 19 USD              | 99 USD           |  
-| Hong Kong SAR                     | 147 HKD             | 760 HKD          |  
+| Región Administrativa Especial de Hong Kong                     | 147 HKD             | 760 HKD          |  
 | Hungría                           | 4237 HUF            | 18 800 HUF        |  
 | Islandia                           | 2319 ISK            | 11929 ISK        |
 | India                             | 1201 INR            | 4500 INR         |  
@@ -168,7 +168,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Montenegro                        | 14 EUR              | 75 EUR           |  
 | Marruecos                           | 158 MAD             | 800 MAD          |  
 | Mozambique                        | 19 USD              | 99 USD           |  
-| Myanmar                           | 19 USD              | 99 USD           |  
+| Birmano                           | 19 USD              | 99 USD           |  
 | Namibia                           | 19 USD              | 99 USD           |  
 | Nauru                             | 19 USD              | 99 USD           |  
 | Nepal                             | 19 USD              | 99 USD           |  

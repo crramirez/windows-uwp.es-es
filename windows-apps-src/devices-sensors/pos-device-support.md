@@ -5,36 +5,36 @@ ms.date: 06/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d67dd7bc7d2f6323679dd7c69a98df841b2848c
-ms.sourcegitcommit: 769ec7811aaaa79fe521e3e984a2e1a2a9671caf
+ms.openlocfilehash: 11dadd91c3106f6881c357d5a13e09b451f2a1e8
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057816"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259657"
 ---
 # <a name="supported-point-of-service-peripherals"></a>Punto admitido de periféricos de servicio
 
 ## <a name="barcode-scanner"></a>Escáner de código de barras
-| Conectividad | Soporte técnico |
+| Conectividad | Soporte |
 | -------------|-------------|
-| USB          | <p>Windows contiene un controlador de clase integrada para los escáneres de códigos de barras conectados USB, que se basa en la especificación de tabla de uso de escáneres de POS HID (8C) definida por [USB.org](https://www.usb.org/hid). Consulta la siguiente tabla para obtener una lista de los dispositivos compatibles conocidos.  Consulta el manual del escáner de códigos de barras o ponte en contacto con el fabricante para determinar cómo configurar el escáner en modo **USB.HID.POS Scanner**. </p><p>Windows también admite la implementación de controladores específicos del proveedor para admitir escáneres de códigos de barras adicionales que no admiten el estándar de escáner USB.HID.POS. Ponte en contacto con el fabricante del escáner de códigos de barras para información sobre la disponibilidad de controladores específicos del proveedor.</p><p>Los fabricantes de escáneres de códigos de barras pueden consultar la [Guía de diseño de controladores de escáner de códigos de barras](https://aka.ms/pointofservice-drv) para obtener información sobre cómo crear un controlador de escáner de códigos de barras personalizado</p> |
+| USB          | <p>Windows contiene un controlador de clases integrado para escáneres de códigos de barras conectados por USB que se basa en la especificación la tabla de uso de escáneres HID POS (8c) definida por [USB.org](https://www.usb.org/hid). Consulta la tabla siguiente para ver una lista de los dispositivos compatibles conocidos.  Consulta el manual del escáner de códigos de barras o ponte en contacto con el fabricante para determinar cómo configurar el escáner en modo **USB.HID.POS Scanner**. </p><p>Windows también admite la implementación de controladores específicos del proveedor para admitir escáneres de códigos de barras adicionales que no admiten el estándar de escáner USB.HID.POS. Ponte en contacto con el fabricante del escáner de códigos de barras para información sobre la disponibilidad de controladores específicos del proveedor.</p><p>Los fabricantes de escáneres de códigos de barras pueden consultar la [Guía de diseño de controladores de escáner de códigos de barras](https://docs.microsoft.com/windows-hardware/drivers/ddi/_pos/index) para obtener información sobre cómo crear un controlador de escáner de códigos de barras personalizado</p> |
 | Bluetooth    | <p>Windows admite el protocolo de puerto serie: escáneres de códigos de barras de Bluetooth con interfaz serie única (SPP SSI). Consulta la siguiente tabla para obtener una lista de los dispositivos compatibles conocidos. Consulta el manual del escáner de código de barras o ponte en contacto con el fabricante para determinar cómo configurar el escáner en modo **SPP-SSI**.</p> |
 | Cámara web       | <p>A partir de la versión 1803 de Windows 10, se pueden leer códigos de barras a través del objetivo de una cámara estándar desde una aplicación Universal de Windows. Se recomienda que uses una cámara con enfoque automático y una resolución mínima de 1920 x 1440.  Algunas cámaras de resolución más baja pueden leer códigos de barras estándar si la impresión es lo suficientemente grande.  Los códigos de barras con elementos más estrechos pueden requerir cámaras de mayor resolución.</p>| 
 |
 
 
-| Fabricante  | Modelo                          | Capacidad | Conexión    | Type         | Modo                      |
+| Fabricante  | Modelo                          | Capacidad | Conexión    | Tipo         | Modo                      |
 |---------------|--------------------------------|------------|--------------|--------------|---------------------------|
 | Código          | Lector™ 950                    | 2D         | USB          | X30     | Escáner de PDV HID           |
 | Código          | Lector™ 1021                   | 2D         | USB          | X30     | Escáner de PDV HID           |
 | Código          | Lector™ 1421                   | 2D         | USB          | X30     | Escáner de PDV HID           |
-| Código          | Lector™ 5000                   | 2D         | USB          | Presentación | Escáner de PDV HID           |
-| Honeywell     | Genesis 7580g                  | 2D         | USB          | Presentación | Escáner de PDV HID           |
+| Código          | Lector™ 5000                   | 2D         | USB          | Representacional | Escáner de PDV HID           |
+| Honeywell     | Genesis 7580g                  | 2D         | USB          | Representacional | Escáner de PDV HID           |
 | Honeywell     | Granit 198Xi                   | 2D         | USB          | X30     | Escáner de PDV HID           |
 | Honeywell     | Granit 191Xi                   | 2D         | USB          | X30     | Escáner de PDV HID           |
 | Honeywell     | N5680                          | 2D         | Interno     | Componente    | Escáner de PDV HID           |
 | Honeywell     | N3680                          | 2D         | Interno     | Componente    | Escáner de PDV HID           |
-| Honeywell     | 7190g orbital                    | 2D         | USB          | Presentación | Escáner de PDV HID           |
+| Honeywell     | 7190g orbital                    | 2D         | USB          | Representacional | Escáner de PDV HID           |
 | Honeywell     | Stratos 2700                   | 2D         | USB          | En el contador   | Escáner de PDV HID           |
 | Honeywell     | Voyager 1200g                  | 1D         | USB          | X30     | Escáner de PDV HID           |
 | Honeywell     | Voyager 1202g                  | 1D         | USB          | X30     | Escáner de PDV HID           |
@@ -70,7 +70,7 @@ ms.locfileid: "70057816"
 <sup>1</sup> actualizable para admitir códigos de barras 2D a través de Honeywell <br/>
 <sup>2</sup> firmware mínimo 009 (2018.07.09) obligatorio. Actualizable con Zebra [123Scan](http://www.zebra.com/123scan).<br/>
 <sup>3</sup> se requiere el firmware mínimo 016 (2018.01.18). Actualizable con Zebra [123Scan](http://www.zebra.com/123scan).<br/> 
-<sup>4</sup> firmware mínimo 023 (2019.03.11) obligatorio. Actualizable con Zebra [123Scan](http://www.zebra.com/123scan).<br/>
+<sup>4</sup> : se requiere el firmware mínimo 023 (2019.03.11). Actualizable con Zebra [123Scan](http://www.zebra.com/123scan).<br/>
 
 <hr>
 
@@ -98,9 +98,9 @@ ms.locfileid: "70057816"
 
 
 ## <a name="cash-drawer"></a>Caja registradora
-| Conectividad | Soporte técnico |
+| Conectividad | Soporte |
 | -------------|-------------|
-| Red o Bluetooth | <p> La conexión directa a la caja registradora se puede establecer a través de la red o Bluetooth, según las funcionalidades de la unidad de caja registradora. </p><p>Cajón de caja de APG:  NetPRO, BluePRO</p> |
+| Red o Bluetooth | <p> La conexión directa a la caja registradora se puede establecer a través de la red o Bluetooth, según las funcionalidades de la unidad de caja registradora. </p><p>Caja registradora APG : NetPRO, BluePRO</p> |
 | Puerto DK | <p> Las cajas registradoras que no tienen funcionalidades de red o Bluetooth se pueden conectar a través del puerto DK en una impresora de recibos o en el accesorio Star Micronics DK-AirCash. </p>
 | OPOS    | <p> Admite cualquier caja registradora compatible con OPOS a través de objetos de servicio OPOS proporcionados por el fabricante. Instala los controladores OPOS según las instrucciones de instalación del fabricante del dispositivo. </p> |
 
@@ -118,12 +118,12 @@ Windows ofrece compatibilidad con los siguientes lectores de bandas magnéticas 
 | Magtek | MagneSafe (VID:0801 PID:0011) |  210730xx |
 | | Dynamag (VID:0801 PID:0002) |   210401xx |
 
- Windows admite la implementación de controladores adicionales específicos de proveedores para la compatibilidad con lectores de bandas magnéticas adicionales. Ponte en contacto con el fabricante del lector de bandas magnéticas para conocer la disponibilidad. Los fabricantes de lectores de bandas magnéticas pueden consultar la [Guía de diseño de controladores de lectores de bandas magnéticas](https://aka.ms/pointofservice-drv) para obtener información sobre cómo crear un controlador de lector de bandas magnéticas personalizado.
+ Windows admite la implementación de controladores adicionales específicos de proveedores para la compatibilidad con lectores de bandas magnéticas adicionales. Ponte en contacto con el fabricante del lector de bandas magnéticas para conocer la disponibilidad. Los fabricantes de lectores de bandas magnéticas pueden consultar la [Guía de diseño de controladores de lectores de bandas magnéticas](https://docs.microsoft.com/windows-hardware/drivers/ddi/_pos/index) para obtener información sobre cómo crear un controlador de lector de bandas magnéticas personalizado.
 
 ## <a name="receipt-printer-posprinter"></a>Impresora de recibos (POSPrinter)
-| Conectividad | Soporte técnico |
+| Conectividad | Soporte |
 | -------------|-------------|
-| Red y Bluetooth | <p>Windows admite impresoras de recibos conectadas a la red y por Bluetooth, usando el lenguaje de control de impresora Epson ESC/POS.  Las impresoras que se indican a continuación se detectan automáticamente con las API de POSPrinter. Las impresoras de recibos adicionales que proporcionen emulación ESC/POS también pueden funcionar, pero sería necesario asociarlas usando un proceso de [emparejamiento fuera de banda](https://aka.ms/pointofservice-oobpairing).</p><p>Nota: las estaciones de resguardos y diarios no se admiten a través de este método.</p> |
+| Red y Bluetooth | <p>Windows admite impresoras de recibos conectadas a la red y por Bluetooth, usando el lenguaje de control de impresora Epson ESC/POS.  Las impresoras que se indican a continuación se detectan automáticamente con las API de POSPrinter. Las impresoras de recibos adicionales que proporcionen emulación ESC/POS también pueden funcionar, pero sería necesario asociarlas usando un proceso de [emparejamiento fuera de banda](https://docs.microsoft.com/windows/uwp/devices-sensors/point-of-service#out-of-band-pairing).</p><p>Nota: las estaciones de resguardos y diarios no se admiten a través de este método.</p> |
 | OPOS    | <p> Admite las impresoras de recibos compatibles con OPOS a través de objetos de servicio OPOS. Instala los controladores OPOS según las instrucciones de instalación del fabricante del dispositivo. </p> |
 
 ### <a name="stationary-receipt-printers-networkbluetooth"></a>Impresoras de recibos inmóviles (Red, Bluetooth)

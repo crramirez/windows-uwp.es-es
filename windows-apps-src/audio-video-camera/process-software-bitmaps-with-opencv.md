@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, opencv, softwarebitmap
 ms.localizationpriority: medium
-ms.openlocfilehash: 349326ba458999b2b1e299e8260d52d608d5af1f
-ms.sourcegitcommit: e189166dea855ce330bd0634cc158b51cb4fbd69
+ms.openlocfilehash: 68d5ba1c12a3c7dc5531934835f47af35c269b57
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811640"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256703"
 ---
 # <a name="process-bitmaps-with-opencv"></a>Procesar mapas de bits con OpenCV
 
@@ -22,7 +22,7 @@ Los ejemplos de este artículo le guiarán a través de la creación de un códi
 * Para obtener una introducción sobre el uso de **SoftwareBitmap**, consulta [Crear, editar y guardar imágenes de mapa de bits](imaging.md). 
 * Para obtener información sobre cómo usar la biblioteca OpenCV, ve a [https://opencv.org](https://opencv.org).
 * Para ver cómo usar el componente auxiliar OpenCV que se muestra en este artículo con **[MediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader)** para implementar el procesamiento de imágenes en tiempo real de fotogramas de una cámara, consulta [Use OpenCV with MediaFrameReader](use-opencv-with-mediaframereader.md).
-* Para ver un ejemplo de código completo que implementa algunos efectos diferentes, consulta [Fotogramas de Cámara + Muestra de OpenCV](https://go.microsoft.com/fwlink/?linkid=854003) en el repositorio de GitHub de muestras universales de Windows.
+* Para ver un ejemplo de código completo que implementa algunos efectos diferentes, consulta [Fotogramas de Cámara + Muestra de OpenCV](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraOpenCV) en el repositorio de GitHub de muestras universales de Windows.
 
 > [!NOTE] 
 > La técnica usada por el componente OpenCVHelper, que se describe con detalle en este artículo, requiere que los datos de imagen que se procesarán residen en la memoria de CPU, no en la memoria de GPU. Por tanto, en el caso de las API que te permiten solicitar la ubicación de memoria de imágenes, como la clase **[MediaCapture](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture)** , debes especificar la memoria de CPU.

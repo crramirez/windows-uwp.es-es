@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 14f5fa06cfa0a6a7e393f3e2d513af0898d1f822
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 617b5d013c8452733fae2a1fa7c16180d37fbe57
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360938"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259720"
 ---
 # <a name="periodic-notification-overview"></a>Introducción a las notificaciones periódicas
  
@@ -25,7 +25,7 @@ Las notificaciones periódicas, también denominadas notificaciones de sondeo, a
 
 Las notificaciones periódicas permiten a la aplicación obtener actualizaciones activas de icono con niveles mínimos de inversión de clientes y servicio de nube. También son un excelente método para distribuir el mismo contenido a una audiencia amplia.
 
-**Tenga en cuenta**    más descargando el [Push y ejemplo de notificaciones periódicas](https://go.microsoft.com/fwlink/p/?linkid=231476) para Windows 8.1 y volver a usar su código fuente en la aplicación de Windows 10.
+**Tenga en cuenta**   puede obtener más información si descarga el [ejemplo de notificaciones de extracción y periódicas](https://code.msdn.microsoft.com/windowsapps/push-and-periodic-de225603) para Windows 8.1 y vuelve a usar su código fuente en su aplicación de Windows 10.
 
  
 
@@ -48,9 +48,9 @@ La respuesta del servidor de nube incluye el contenido descargado. El contenido 
 
 Para comenzar a sondear llama a uno de estos métodos:
 
--   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (icono)
--   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (Badge)
--   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (Tile)
+-   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (mosaico)
+-   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (distintivo)
+-   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (mosaico)
 
 Cuando se llama a uno de estos métodos, se sondea inmediatamente el URI y el icono o distintivo se actualiza con el contenido recibido. Después de este sondeo inicial, Windows continúa proporcionando actualizaciones con el intervalo solicitado. El sondeo continúa hasta que lo detienes explícitamente (con [**TileUpdater.StopPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater.StopPeriodicUpdate)), se desinstala tu aplicación o, en el caso de un icono secundario, se quita el icono. En caso contrario, Windows sigue sondeando las actualizaciones del icono o distintivo aunque la aplicación no vuelva a iniciarse nunca.
 
@@ -77,7 +77,7 @@ Si publicas una actualización de la aplicación que cambie el URI de sondeo, de
 
 De forma predeterminada, las notificaciones de icono y de distintivo periódicas expiran tres días después del momento en que se descargaron. Cuando una notificación expira, el contenido se quita del distintivo, el icono o la cola y no se vuelve a mostrar al usuario. Por lo tanto, se recomienda establecer un tiempo de caducidad explícito en todas las notificaciones de icono y de distintivo periódicas, con un tiempo apropiado para tu aplicación o notificación, para garantizar que el contenido persistirá solo mientras sea relevante. El tiempo de caducidad explícito resulta esencial para contenido con una vida útil definida. También garantiza la eliminación de contenido obsoleto si el servicio de nube se vuelve inaccesible, o si el usuario se desconecta de la red durante un período de tiempo prolongado.
 
-El servicio de nube establece una hora y una fecha de caducidad para una notificación incluyendo el encabezado X-WNS-Expires HTTP en la carga de respuesta. El encabezado HTTP X-WNS-Expires sigue el [formato de fecha de HTTP](https://go.microsoft.com/fwlink/p/?linkid=253706). Para obtener más información, consulta [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) o [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_).
+El servicio de nube establece una hora y una fecha de caducidad para una notificación incluyendo el encabezado X-WNS-Expires HTTP en la carga de respuesta. El encabezado HTTP X-WNS-Expires sigue el [formato de fecha de HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1). Para obtener más información, consulta [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) o [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_).
 
 Por ejemplo, durante un día de gran actividad en el mercado de valores, puedes establecer la caducidad para la actualización del precio de unas acciones en el doble del intervalo de sondeo (por ejemplo, una hora después de la recepción si estás sondeando cada media hora). Otro ejemplo sería una aplicación de noticias, que podría determinar que un día es un tiempo de caducidad apropiado para una actualización diaria del icono de noticias.
 
@@ -104,6 +104,6 @@ Debes proporcionar un URI único para cada notificación que quieras que Windows
 
 
 * [Directrices para las notificaciones periódicas](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-periodic-notification-overview)
-* [Cómo configurar las notificaciones periódicas para notificaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
-* [Cómo configurar las notificaciones periódicas para iconos](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
+* [Configuración de notificaciones periódicas para distintivos](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
+* [Configuración de notificaciones periódicas para iconos](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
  

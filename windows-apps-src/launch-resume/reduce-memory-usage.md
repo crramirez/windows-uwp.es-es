@@ -6,14 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a660512abe5f18f7b1955853dc5389dc902fd2e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0b5e0ea6deef7dfe3531c8d0406e08bfae80f0e2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371277"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260458"
 ---
-# <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memoria cuando la aplicación pasa a segundo plano
+# <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memoria cuando la aplicación pase a segundo plano
 
 En este artículo se muestra cómo reducir la cantidad de memoria que usa la aplicación cuando pasa al estado de segundo plano para evitar su suspensión o, posiblemente, su finalización.
 
@@ -40,7 +40,7 @@ Dado que la ejecución en segundo plano reducirá los recursos de memoria que la
 
 [!code-cs[RegisterEvents](./code/ReduceMemory/cs/App.xaml.cs#SnippetRegisterEvents)]
 
-Cuando se genera el evento [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground), establece la variable de seguimiento para indicar que actualmente estás ejecutando en segundo plano. Esto será útil cuando escribas el código para reducir el uso de memoria.
+Cuando se genera el evento [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground), establece la variable de seguimiento para indicar que actualmente se está ejecutando en segundo plano. Esto será útil cuando escribas el código para reducir el uso de memoria.
 
 [!code-cs[EnteredBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetEnteredBackground)]
 
@@ -103,5 +103,5 @@ Cuando una aplicación pasa de segundo plano a primer plano, primero obtiene un 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de reproducción de contenido multimedia en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=800141): enseña cómo liberar memoria cuando la aplicación pasa al estado de segundo plano.
+* [Muestra de reproducción de contenido multimedia en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback): enseña cómo liberar memoria cuando la aplicación pasa al estado de segundo plano.
 * [Herramientas de diagnóstico](https://devblogs.microsoft.com/devops/diagnostic-tools-debugger-window-in-visual-studio-2015/): usa las herramientas de diagnóstico para observar los eventos de recolección de elementos no utilizados y validar que la aplicación esté liberando memoria según lo previsto.

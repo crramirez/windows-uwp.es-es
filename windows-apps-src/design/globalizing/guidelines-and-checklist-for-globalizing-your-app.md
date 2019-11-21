@@ -8,12 +8,12 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: bdc7e5de3be941f2622c04d515e5e1211247b9a2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 18c68baf991b3fd939a6e6ee681700977a5a5eb9
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648250"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258090"
 ---
 # <a name="guidelines-for-globalization"></a>Directrices sobre globalización
 
@@ -29,30 +29,30 @@ Diseña y desarrolla tu aplicación de manera que funcione correctamente en sist
 | Admite tamaños de papel internacionales. | El tamaño de papel más común difiere de un país a otro. Por ello, si incluyes funciones que dependen del tamaño de papel, como la impresión, asegúrate de admitir y probar tamaños internacionales comunes. |
 | Registra el idioma del teclado o el IME. | Cuando tu aplicación le pide al usuario una entrada de texto, registro la etiqueta de idioma para la distribución de teclado habilitadas actualmente o el Editor de métodos de entrada (IME). Esto garantiza que cuando se muestre la entrada más adelante, se presente al usuario con el formato apropiado. Usa la propiedad [**Language.CurrentInputMethodLanguageTag**](/uwp/api/windows.globalization.language.CurrentInputMethodLanguageTag) para obtener el idioma de entrada actual. |
 | No te guíes por el idioma para deducir la región de un usuario, y no uses la región para deducir su idioma. | El idioma y la región son conceptos independientes. Un usuario puede hablar una variedad regional de un idioma, como el en-GB para el inglés del Reino Unido, pero puede estar en una región o país totalmente diferente. Considera si las aplicaciones necesitan obtener información sobre idioma del usuario (por ejemplo, para el texto de la interfaz de usuario) o sobre su región (por ejemplo, para la concesión de licencias). Para obtener más información, consulta [Comprender los idiomas del perfil del usuario y los idiomas del manifiesto de la aplicación](manage-language-and-region.md). |
-| Las reglas para comparar etiquetas de idioma son no triviales. | Las [etiquetas de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) son complejas. Existen algunos problemas al comparar etiquetas de idioma, como problemas con la coincidencia de información del script, etiquetas heredadas y múltiples variedades regionales. El Sistema de administración de recursos de Windows se encarga de las coincidencias por ti. Puedes especificar un conjunto de recursos en cualquier idioma, y el sistema elige el apropiado para el usuario y la aplicación. Consulta [Recursos de aplicaciones y sistema de administración de recursos](../../app-resources/index.md) y [Cómo compara etiquetas de idioma el sistema de administración de recursos](../../app-resources/how-rms-matches-lang-tags.md). |
+| Las reglas para comparar etiquetas de idioma son no triviales. | Las [etiquetas de idioma BCP-47](https://tools.ietf.org/html/bcp47) son complejas. Existen algunos problemas al comparar etiquetas de idioma, como problemas con la coincidencia de información del script, etiquetas heredadas y múltiples variedades regionales. El Sistema de administración de recursos de Windows se encarga de las coincidencias por ti. Puedes especificar un conjunto de recursos en cualquier idioma, y el sistema elige el apropiado para el usuario y la aplicación. Consulta [Recursos de aplicaciones y sistema de administración de recursos](../../app-resources/index.md) y [Cómo compara etiquetas de idioma el sistema de administración de recursos](../../app-resources/how-rms-matches-lang-tags.md). |
 | Diseña la interfaz de usuario para que se adapte a distintas longitudes de texto y tamaños de fuente para etiquetas y controles de entrada de texto. | Las cadenas traducidas en diferentes idiomas pueden variar mucho en longitud, por lo que los controles de interfaz de usuario tendrán que adaptar su tamaño al contenido de manera dinámica. Los caracteres comunes en otros idiomas incluyen marcas por encima o debajo de lo que se usa normalmente en inglés (como Å o Ņ). Usa los valores estándar de tamaños de fuente y alturas de línea para ofrecer el espacio vertical adecuado. Ten en cuenta que las fuentes para otros idiomas pueden requerir que los tamaños de fuente mínimos se puedan leer. Consulta las clases en el espacio de nombres [Windows.Globalization.Fonts](/uwp/api/windows.globalization.fonts?branch=live). |
 | Admite la creación de reflejo del orden de lectura. | La alineación de texto y el orden de lectura pueden ser de izquierda a derecha (por ejemplo, como en inglés) o de derecha a izquierda (como en árabe o hebreo). Si estás localizando tu producto a idiomas que usan un orden de lectura diferente del tuyo, asegúrate de que el diseño de los elementos de tu interfaz de usuario admita la creación de reflejos. Es posible que incluso los elementos como los botones de retroceso, los efectos de transición de interfaz de usuario y las imágenes deban reflejarse. Para obtener más información, consulta [Ajustar el diseño y las fuentes, y admitir la escritura RTL](adjust-layout-and-fonts--and-support-rtl.md). |
-| Muestra el texto y las fuentes de forma correcta. | La dirección del texto, el tamaño de fuente y la fuente ideales varían de un mercado a otro. Para obtener más información, consulta [**Ajustar el diseño y las fuentes y admitir la escritura RTL**](adjust-layout-and-fonts--and-support-rtl.md) y [Fuentes internacionales](loc-international-fonts.md). |
+| Muestra el texto y las fuentes de forma correcta. | Las opciones ideales de dirección de texto, tamaño de fuente y fuente varían de un mercado a otro. Para obtener más información, consulta [**Ajustar el diseño y las fuentes y admitir la escritura RTL**](adjust-layout-and-fonts--and-support-rtl.md) y [Fuentes internacionales](loc-international-fonts.md). |
 
 ## <a name="important-apis"></a>API importantes
  
 * [Globalización](/uwp/api/Windows.Globalization?branch=live)
 * [GeographicRegion.CurrenciesInUse](/uwp/api/windows.globalization.geographicregion.CurrenciesInUse)
-* [Language.CurrentInputMethodLanguageTag](/uwp/api/windows.globalization.language.CurrentInputMethodLanguageTag)
-* [Windows.Globalization.Fonts](/uwp/api/windows.globalization.fonts?branch=live)
+* [Language. CurrentInputMethodLanguageTag](/uwp/api/windows.globalization.language.CurrentInputMethodLanguageTag)
+* [Windows. Globalization. Fonts](/uwp/api/windows.globalization.fonts?branch=live)
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Recomendaciones de uso de cadenas](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)
-* [Globalizar sus formatos de fecha/hora y números](use-global-ready-formats.md)
-* [Comprender los idiomas de perfil de usuario y los idiomas del manifiesto de aplicación](manage-language-and-region.md)
-* [Etiquetas de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Recomendaciones para el uso de cadenas](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)
+* [Globalizar los formatos de fecha, hora y número](use-global-ready-formats.md)
+* [Descripción de los idiomas de Perfil de usuario y los lenguajes de manifiesto de aplicación](manage-language-and-region.md)
+* [Etiquetas de lenguaje BCP-47](https://tools.ietf.org/html/bcp47)
 * [Recursos de la aplicación y el sistema de administración de recursos](../../app-resources/index.md)
 * [Cómo el sistema de administración de recursos compara etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 * [Ajustar el diseño y las fuentes, y admitir la escritura de derecha a izquierda](adjust-layout-and-fonts--and-support-rtl.md)
 * [Fuentes internacionales](loc-international-fonts.md)
-* [Hacer que la aplicación sea localizable](prepare-your-app-for-localization.md)
+* [Haga que su aplicación sea localizable](prepare-your-app-for-localization.md)
 
 ## <a name="samples"></a>Muestras
 
-* [Ejemplo de las preferencias de globalización](https://go.microsoft.com/fwlink/p/?linkid=231608)
+* [Ejemplo de preferencias de globalización](https://code.msdn.microsoft.com/windowsapps/Globalization-preferences-6654eb36)

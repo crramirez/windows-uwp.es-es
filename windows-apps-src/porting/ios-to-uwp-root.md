@@ -7,12 +7,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d66962971844f1983b527c6cea436dba03d63b8b
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 266a5f147b57e522088dab2ec298b54596ef77b7
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322331"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260156"
 ---
 # <a name="move-from-ios-to-uwp"></a>Migrar de iOS a UWP
 
@@ -26,12 +26,12 @@ En la actualidad, Windows se ejecuta en un gran número de dispositivos. La UWP 
 
 | Tema | Descripción |
 |-------|-------------|
-| [Seleccionar un enfoque para el desarrollo de aplicaciones UWP y iOS](selecting-an-approach-to-ios-and-uwp-app-development.md) | ¿Cuáles son las opciones al desarrollar aplicaciones multiplataforma? |
+| [Selección de un enfoque para el desarrollo de aplicaciones para iOS y UWP](selecting-an-approach-to-ios-and-uwp-app-development.md) | ¿Cuáles son las opciones al desarrollar aplicaciones multiplataforma? |
 | [Introducción a UWP para desarrolladores de iOS](getting-started-with-uwp-for-ios-developers.md) | Si eres desarrollador de iOS y estás pensando en desarrollar aplicaciones para Windows 10, estos documentos son un excelente punto de partida. |
-| [Cómo configurar su equipo Mac con Windows 10](setting-up-your-mac-with-windows-10.md) | Usa tu Mac actual para desarrollar aplicaciones para Windows. |
+| [Configuración del equipo Mac con Windows 10](setting-up-your-mac-with-windows-10.md) | Usa tu Mac actual para desarrollar aplicaciones para Windows. |
 
 ## <a name="related-topics"></a>Temas relacionados
 
-**Para los diseñadores y desarrolladores**
-* [Creación de aplicaciones de Windows Universal para todos los dispositivos de Windows](https://go.microsoft.com/fwlink/p/?LinkID=397871)
-* [Descargar activos de diseño para aplicaciones UWP](https://docs.microsoft.com/windows/uwp/design/downloads/index)
+**Para diseñadores y desarrolladores**
+* [Compilación de aplicaciones universales de Windows para todos los dispositivos Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+* [Descargar recursos de diseño para aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/design/downloads/index)

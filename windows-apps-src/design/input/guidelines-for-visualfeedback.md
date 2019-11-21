@@ -8,18 +8,18 @@ keywords: información visual,información de foco,información táctil,informac
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 56260eb09bc834b2a71e9889b91f0bc439edaa30
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: bba80403934987569c25b96eced9a610226431b5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340464"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257909"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Directrices para información visual
 
 Usa la información visual para mostrar a los usuarios cuándo se detectan, se interpretan y se controlan sus interacciones. La información visual puede ayudar a los usuarios al promover la interacción. Indica si una interacción se ha realizado correctamente, lo que mejora la sensación de control del usuario. También transmite los estados del sistema y reduce los errores.
 
-> **API importantes**:  [**Windows. Devices. Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows. UI. Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows. UI. Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
+> **API importantes**: [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
 
 ## <a name="recommendations"></a>Recomendaciones
 
@@ -65,7 +65,7 @@ Para la **experiencia de 10 pies** típica del uso de la Xbox y la televisión, 
 **Propiedades de borde**
 
 Los elementos visuales de enfoque de alta visibilidad constan de dos partes: el borde principal y el borde secundario. El borde principal es de **2px** de espesor y se ejecuta alrededor de la parte de *fuera* del borde secundario. El borde secundario es de **1px** de espesor y se ejecuta alrededor de la parte de *dentro* del borde primario.
-![High visibilidad del foco visual de los elementos visuales @ no__t-1
+![elementos visuales visuales de foco de alta visibilidad](images/FocusRectRedlines.png)
 
 Para cambiar el grosor del tipo de borde (principal o secundario) usa **FocusVisualPrimaryThickness** o **FocusVisualSecondaryThickness**, respectivamente:
 ```XAML
@@ -73,7 +73,7 @@ Para cambiar el grosor del tipo de borde (principal o secundario) usa **FocusVis
 ```
 ![Grosores de los márgenes visuales de foco de alta visibilidad](images/FocusMargin.png)
 
-El margen es una propiedad de tipo [**Grosor**](https://docs.microsoft.com/dotnet/api/system.windows.thickness)y, por lo tanto, el margen se puede personalizar para que aparezca únicamente en determinadas partes del control. Consulta a continuación: ![High visibilidad del margen visual del grosor del margen solo inferior a no__t-1
+El margen es una propiedad de tipo [**Grosor**](https://docs.microsoft.com/dotnet/api/system.windows.thickness)y, por lo tanto, el margen se puede personalizar para que aparezca únicamente en determinadas partes del control. Vea a continuación: ![enfoque de alta visibilidad el margen visual de grosor del margen solo](images/FocusThicknessSide.png)
 
 El margen es el espacio entre los límites de los elementos visuales de control y el inicio del *borde secundario* de los elementos visuales de foco. El margen predeterminado está **1px** por encima de los límites del control. Puedes editar este margen según el control, cambiando la propiedad **FocusVisualMargin**:
 ```XAML
@@ -115,20 +115,20 @@ Para cambiar los colores según el control, modifica las propiedades de los elem
 * [Interacciones del usuario personalizadas](https://docs.microsoft.com/windows/uwp/design/layout/index)
 
 **Ejemplos**
-* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Ejemplos de archivo**
-* @no__t 0Input: Ejemplo de eventos de entrada de usuario de XAML @ no__t-0
-* @no__t 0Input: Ejemplo de funcionalidades de dispositivo @ no__t-0
-* @no__t 0Input: Ejemplo de prueba de posicionamiento táctil @ no__t-0
-* [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* @no__t 0Input: Ejemplo de entrada de lápiz simplificada @ no__t-0
-* @no__t 0Input: Ejemplo de gestos de Windows 8 @ no__t-0
-* @no__t 0Input: Ejemplo de manipulaciones y gestos (C++) @ no__t-1
-* [Ejemplo de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Entrada: ejemplo de eventos de entrada de usuario de XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: ejemplo de prueba de posicionamiento táctil](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+* [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Entrada: ejemplo de entrada de lápiz simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+* [Entrada: ejemplo de gestos de Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+* [Entrada: ejemplo de manipulaciones y gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [Ejemplo de entrada táctil de DirectX](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
  
 
  

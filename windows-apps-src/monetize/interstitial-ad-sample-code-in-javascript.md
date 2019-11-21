@@ -6,16 +6,16 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, intersticial, javascript, código de muestra, ads, advertising, interstitial, sample code
 ms.localizationpriority: medium
-ms.openlocfilehash: 641a3bfc2c2869cab6f3bbf480aa599cadd955a2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 742d10f7e49557435a6249e65cf66960d338b784
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57618560"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260253"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>Código de ejemplo de anuncios intersticiales en JavaScript
 
-En este tema se proporciona el código de ejemplo completo para una aplicación básica para la Plataforma universal de Windows (UWP) en JavaScript y HTML que muestra un anuncio intersticial. Para obtener instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](https://aka.ms/githubads).
+En este tema se proporciona el código de ejemplo completo para una aplicación básica para la Plataforma universal de Windows (UWP) en JavaScript y HTML que muestra un anuncio intersticial. Para obtener instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 
 ## <a name="code-example"></a>Ejemplo de código
 
@@ -23,7 +23,7 @@ En esta sección se muestra el contenido de los archivos HTML y JavaScript en un
 
 Esta aplicación de muestra usa dos botones para solicitar y, después, iniciar un anuncio intersticial. Los archivos main.js y index.html generados por Visual Studio se han modificado y se muestran a continuación. El archivo script.js que se muestra a continuación contiene la mayor parte del código de la muestra y debes agregar este archivo a la carpeta **js** del proyecto.
 
-Reemplace los valores de la ```applicationId``` y ```adUnitId``` variables con valores en vivo desde el centro de partners antes de enviar la aplicación a la Store. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+Reemplace los valores de las variables ```applicationId``` y ```adUnitId``` por valores dinámicos del centro de Partners antes de enviar la aplicación a la tienda. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
 > [!NOTE]
 > Para modificar este ejemplo y mostrar un anuncio de banner intersticial en lugar de un anuncio de vídeo intersticial, pasa el valor **InterstitialAdType.display** al primer parámetro del método [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) en lugar de **InterstitialAdType.video**. Para obtener más información, consulta [Anuncios intersticiales](interstitial-ads.md).
@@ -45,6 +45,6 @@ Reemplace los valores de la ```applicationId``` y ```adUnitId``` variables con v
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestras de publicidad en GitHub](https://aka.ms/githubads)
+* [Muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
 
  

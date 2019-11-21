@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: adb80c3396002a76b3c22a9ce8a8e2893ea728ac
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 279f0d007be927e29632986ce8178c4e0b9778b3
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340500"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259853"
 ---
 # <a name="dependency-properties-overview"></a>Introducción a las propiedades de dependencia
 
@@ -86,11 +86,11 @@ Por ejemplo, el propósito de los estilos y las plantillas es ser un punto de in
 
 El siguiente es el orden definitivo que el sistema de propiedades usa para asignar el valor de tiempo de ejecución de una propiedad de dependencia. La prioridad mayor es la primera de la lista. Al final de esta lista, encontrarás explicaciones más detalladas.
 
-1. **Valores animados:** Animaciones activas, animaciones de estado visual o animaciones con un comportamiento [**HoldEnd**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FillBehavior) . Para lograr un efecto práctico, una animación aplicada a una propiedad debe tener prioridad sobre el valor base (no animado), aunque ese valor se haya establecido localmente.
-1. **Valor local:** Un valor local se puede establecer a través de la comodidad del contenedor de propiedades, que también equivale a establecer como un atributo o elemento de propiedad en XAML, o mediante una llamada al método [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) mediante una propiedad de una instancia específica. Si estableces un valor local con un enlace o un recurso estático, cada uno de ellos actúa en el orden de prioridad como si se estableciera un valor local, y los enlaces y referencias a recursos se borran si se establece un valor local nuevo.
-1. **Propiedades con plantilla:** Un elemento tiene estos si se creó como parte de una plantilla (desde [**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) o [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)).
-1. **Establecedores de estilo:** Valores de un [**establecedor**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) dentro de los estilos de los recursos de página o aplicación.
-1. **Valor predeterminado:** Una propiedad de dependencia puede tener un valor predeterminado como parte de sus metadatos.
+1. **Valores animados:** animaciones activas, animaciones de estado visual o animaciones con un comportamiento [**HoldEnd**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FillBehavior). Para lograr un efecto práctico, una animación aplicada a una propiedad debe tener prioridad sobre el valor base (no animado), aunque ese valor se haya establecido localmente.
+1. **Valor local:** un valor local podría establecerse mediante el contenedor de propiedades, que también equivale a establecer como atributo o elemento de propiedad en XAML, o al llamar al método [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) mediante la propiedad de una instancia específica. Si estableces un valor local con un enlace o un recurso estático, cada uno de ellos actúa en el orden de prioridad como si se estableciera un valor local, y los enlaces y referencias a recursos se borran si se establece un valor local nuevo.
+1. **Propiedades con plantilla:** un elemento las tiene si se creó como parte de una plantilla (a partir de una clase [**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) o [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)).
+1. **Establecedores de estilo:** valores de una clase [**Setter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) incluidos en los estilos de los recursos de la página o la aplicación.
+1. **Valor predeterminado:** una propiedad de dependencia puede tener un valor predeterminado como parte de sus metadatos.
 
 ### <a name="templated-properties"></a>Propiedades con plantilla
 
@@ -188,7 +188,7 @@ Windows 10 incorpora el método [**RegisterPropertyChangedCallback**](https://do
 
 ### <a name="default-value-and-clearvalue"></a>Valor predeterminado y **ClearValue**
 
-Una propiedad de dependencia puede tener un valor predeterminado definido como parte de los metadatos de la propiedad. En el caso de una propiedad de dependencia, su valor predeterminado no se convierte en irrelevante después de establecer la propiedad por primera vez. El valor predeterminado se puede aplicar de nuevo en tiempo de ejecución siempre que desaparezca algún otro determinante en la prioridad de valores. (La prioridad de los valores de propiedad de dependencia se describe en la sección siguiente). Por ejemplo, puede quitar deliberadamente un valor de estilo o una animación que se aplica a una propiedad, pero desea que el valor sea un valor predeterminado razonable después de hacerlo. El valor predeterminado de la propiedad de dependencia puede proporcionar este valor, sin necesidad de establecer específicamente cada valor de la propiedad como paso adicional.
+Una propiedad de dependencia puede tener un valor predeterminado definido como parte de los metadatos de la propiedad. En el caso de una propiedad de dependencia, su valor predeterminado no se convierte en irrelevante después de establecer la propiedad por primera vez. El valor predeterminado se puede aplicar de nuevo en tiempo de ejecución siempre que desaparezca algún otro determinante en la prioridad de valores. (La prioridad de valores de la propiedad de dependencia se analiza en la siguiente sección). Por ejemplo, podrías quitar deliberadamente un valor de estilo o una animación que se aplique a una propiedad, pero desear que, después de hacerlo, el valor sea un valor predeterminado razonable. El valor predeterminado de la propiedad de dependencia puede proporcionar este valor, sin necesidad de establecer específicamente cada valor de la propiedad como paso adicional.
 
 Puedes establecer deliberadamente una propiedad en el valor predeterminado incluso después de establecerla con un valor local. Para restablecer el valor predeterminado y para que otros participantes anteriores puedan invalidar el valor predeterminado pero no un valor local, llama al método [**ClearValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.clearvalue) (referencia a la propiedad para borrar como parámetro de método). No siempre querrás que la propiedad use literalmente el valor predeterminado, pero borrar el valor local y revertir al valor predeterminado puede habilitar otro elemento anterior que quieras que actúe ahora, como usar el valor que venía de un establecedor de estilo en una plantilla de control.
 
@@ -207,7 +207,7 @@ Los aspectos de subprocesos de [**DependencyObject**](https://docs.microsoft.com
 - [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
 - [Animaciones con guion gráfico](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)
 - [Crear componentes de Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
-- [Muestra de controles de usuario y personalizados de XAML](https://go.microsoft.com/fwlink/p/?linkid=238581)
+- [Muestra de controles de usuario y personalizados de XAML](https://code.msdn.microsoft.com/windowsapps/XAML-user-and-custom-a8a9505e)
 
 ## <a name="apis-related-to-dependency-properties"></a>API relacionadas con las propiedades de dependencia
 

@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, lob, línea de negocio, aplicaciones para empresas, store para empresas, store para educación, empresa
 ms.localizationpriority: medium
-ms.openlocfilehash: cf970c1812b4200cea4e4902ad883ef8b0b5e141
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: accf4e8dbc19e5858148bcf0cf62d0e1cc95ab82
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320002"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260003"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Distribuir aplicaciones de línea de negocio a empresas
 
@@ -22,7 +22,7 @@ Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que la
 > Por ahora, solo las aplicaciones gratuitas pueden distribuirse de forma exclusiva a las empresas a través de la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación. Si envías una aplicación de pago como LOB, esta no estará disponible para la empresa. 
 
 > [!IMPORTANT]
-> No puedes usar la [API de envío de Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para publicar aplicaciones de LOB directamente en las empresas. Todos los envíos de aplicaciones de LOB se deben publicar a través del centro de partners.
+> No puedes usar la [API de envío de Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para publicar aplicaciones de LOB directamente en las empresas. Todos los envíos de aplicaciones de LOB deben publicarse a través del centro de Partners.
 
 
 ## <a name="set-up-the-enterprise-association"></a>Configurar la asociación de empresa
@@ -30,7 +30,7 @@ Puedes publicar aplicaciones de línea de negocio (LOB) directamente para que la
 El primer paso para publicar aplicaciones LOB exclusivamente para una empresa es establecer la asociación entre tu cuenta y la tienda privada de la empresa.
 
 > [!IMPORTANT]
-> Este proceso de asociación debe comenzarlo la empresa y debe usarse la dirección de correo electrónico asociada a la cuenta de Microsoft que se usó para crear la cuenta de desarrollador. Para obtener más información, consulta el artículo [Working with line-of-business apps (Trabajar con aplicaciones de línea de negocio)](https://go.microsoft.com/fwlink/p/?LinkId=698846).
+> Este proceso de asociación debe comenzarlo la empresa y debe usarse la dirección de correo electrónico asociada a la cuenta de Microsoft que se usó para crear la cuenta de desarrollador. Para obtener más información, consulta el artículo [Working with line-of-business apps (Trabajar con aplicaciones de línea de negocio)](https://docs.microsoft.com/microsoft-store/working-with-line-of-business-apps).
 
 Si una empresa decide invitarte para que publiques aplicaciones para su uso exclusivo, recibirás un correo electrónico con un vínculo para confirmar la asociación. También puedes confirmar estas asociaciones si te diriges a la sección **Asociaciones de empresa** de la **Configuración de la cuenta** (siempre que hayas iniciado sesión con la cuenta de Microsoft que usaste para abrir la cuenta de desarrollador).
 
@@ -73,7 +73,7 @@ Después de hacer clic **Enviar a la Tienda**, la aplicación pasará por el pro
 > [!NOTE]
 > Para obtener la aplicación de línea de negocio, la organización debe encontrarse en un [mercado admitido](https://docs.microsoft.com/windows/whats-new/windows-store-for-business-overview#supported-markets), y no debes haber [excluido ese mercado](define-pricing-and-market-selection.md) al enviar la aplicación. 
 
-Para obtener más información, consulta [Trabajar con aplicaciones de línea de negocio](https://go.microsoft.com/fwlink/p/?LinkId=698846) y [Distribuir aplicaciones a través de la tienda privada](https://go.microsoft.com/fwlink/p/?LinkId=698847).
+Para obtener más información, consulta [Trabajar con aplicaciones de línea de negocio](https://docs.microsoft.com/microsoft-store/working-with-line-of-business-apps) y [Distribuir aplicaciones a través de la tienda privada](https://docs.microsoft.com/microsoft-store/distribute-apps-from-your-private-store).
 
 
 ## <a name="update-lob-apps"></a>Actualizar aplicaciones de LOB
@@ -92,9 +92,9 @@ Después de que el envío pase por el proceso de certificación, la aplicación 
 
 La creación de aplicaciones para una empresa a través de la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación garantiza que la aplicación esté firmada por la Tienda y que cumpla con las directivas estándar de esta.
 
-En algunos casos, las empresas que no desee que sus aplicaciones LOB para enviarse a través del centro de partners (por motivos de cumplimiento o para aplicaciones que necesitan funcionalidades adicionales). En este caso, la empresa puede implementar aplicaciones directamente en las máquinas a través de la instalación de prueba, sin necesidad de usar la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación.
+En algunos casos, es posible que las empresas no quieran que sus aplicaciones LOB se envíen a través del centro de Partners (por ejemplo, por motivos de cumplimiento o para aplicaciones que necesiten funcionalidades adicionales). En este caso, la empresa puede implementar aplicaciones directamente en las máquinas a través de la instalación de prueba, sin necesidad de usar la Tienda Microsoft para Empresas o la Tienda Microsoft para Educación.
 
-Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows 10](https://go.microsoft.com/fwlink/p/?LinkId=623433).
+Para obtener más información, consulta [Transferir localmente aplicaciones de LOB en Windows 10](https://docs.microsoft.com/windows/application-management/sideload-apps-in-windows-10).
 
  
 

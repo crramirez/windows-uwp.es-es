@@ -1,19 +1,19 @@
 ---
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
-title: Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
+title: Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
 description: Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows 10 Mobile.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e87fba21f74140e14688194864ccdc416ea227d
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 4f2cb92dca3da2d1f8e3eccfade6558f363c5b13
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062308"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257867"
 ---
-# <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
+# <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
 
 Simula la interacción en el mundo real con un dispositivo y prueba las funciones de tu aplicación con las herramientas que se incluyen en el Emulador de Microsoft para Windows 10 Mobile. El emulador es una aplicación de escritorio que simula un dispositivo móvil que ejecuta Windows 10. Proporciona un entorno virtualizado en el que puedes depurar y probar aplicaciones de Windows sin un dispositivo físico. También proporciona un entorno aislado para prototipos de la aplicación.
 
@@ -52,7 +52,7 @@ Emulador de Microsoft para Windows 10 Mobile no puede cargar las aplicaciones or
 ## <a name="installing-uninstalling-and-running-the-emulator"></a>Instalar, desinstalar y ejecutar el emulador
 
 ### <a name="installing"></a>Instalación
-El Emulador de Microsoft para Windows 10 Mobile se incluye como parte del SDK de Windows 10. El SDK de Windows 10 y el emulador se pueden instalar como parte de la instalación de Visual Studio. Consulta la [página de descarga de Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
+El Emulador de Microsoft para Windows 10 Mobile se incluye como parte del SDK de Windows 10. El SDK de Windows 10 y el emulador se pueden instalar como parte de la instalación de Visual Studio. Consulta la [página de descarga de Visual Studio](https://developer.microsoft.com/windows/downloads).
 
 También puedes instalar el Emulador de Microsoft para Windows 10 Mobile con el [programa de configuración del Emulador de Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=615095).
 
@@ -60,9 +60,9 @@ También puedes instalar el Emulador de Microsoft para Windows 10 Mobile con el 
 
 Puedes desinstalar el Emulador de Microsoft para Windows 10 Mobile con el programa de configuración/reparación de Visual Studio. O puedes usar **Programas y características** de **Panel de control** para quitar el emulador.
 
-Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador virtual de Ethernet para Hyper-V que se creó para que lo use el emulador no se elimina automáticamente. Puedes quitar manualmente este adaptador virtual desde **Conexiones de red** en **Panel de control**.
+Al desinstalar el Emulador de Microsoft para Windows 10 Mobile, el adaptador virtual de Ethernet para Hyper-V que se creó para que lo use el emulador no se elimina automáticamente. Puedes eliminar manualmente este adaptador virtual desde **Conexiones de red** en **Panel de control**.
 
-### <a name="running"></a>Running
+### <a name="running"></a>En ejecución
 
 Para ejecutar una aplicación en el emulador, solo tiene que seleccionar un dispositivo emulado en el menú desplegable **Ejecutar** de Visual Studio.
 
@@ -94,7 +94,7 @@ Además de las nuevas funciones que se mencionan en la sección anterior, puedes
 
     En el emulador en ejecución, ve a la aplicación **Configuración** , selecciona las opciones del **sistema** y después, selecciona **idioma** o **región**. Cambia la configuración que quieras probar. Si se te solicita, haz clic en **reiniciar teléfono** para aplicar la configuración nueva y reinicia el emulador.
 
--   **Marcación de estado y ciclo de vida de la aplicación**. Prueba el comportamiento de tu aplicación cuando esté desactivada o marcada para exclusión cambiando el valor de la opción **Marcador de exclusión tras la desactivación durante la depuración** en la página **Depurar** de las propiedades del proyecto.
+-   **Marcación de exclusión y ciclo de vida de la aplicación**. Prueba el comportamiento de tu aplicación cuando esté desactivada o marcada para exclusión cambiando el valor de la opción **Marcador de exclusión tras la desactivación durante la depuración** en la página **Depurar** de las propiedades del proyecto.
 
 -   **Almacenamiento de la carpeta local (anteriormente conocido como almacenamiento aislado)** . Los datos en el almacenamiento aislado persisten mientras el emulador se ejecuta, pero se pierden cuando el emulador se cierra.
 
@@ -237,7 +237,7 @@ También puedes usar la herramienta del simulador del terminal de MasterCard ([h
 -   Marca la casilla del agente de escucha **Habilitar MasterCard** debajo de las ventanas del editor de scripts e inicia el simulador desde MasterCard.
 -   Mediante la herramienta, puedes generar comandos que se transmiten a la aplicación que se está ejecutando en el emulador a través de la herramienta de NFC.
 
-Para más información sobre el soporte técnico de HCE y sobre cómo desarrollar aplicaciones HCE en Windows 10 Mobile, consulta el [Blog del equipo de Microsoft NFC](https://go.microsoft.com/fwlink/?LinkId=534749).
+Para más información sobre el soporte técnico de HCE y sobre cómo desarrollar aplicaciones HCE en Windows 10 Mobile, consulta el [Blog del equipo de Microsoft NFC](https://blogs.msdn.com/b/nfc/).
 
 ### <a name="how-to-create-scripts-for-hce-testing"></a>Cómo crear scripts para las pruebas de HCE
 
@@ -362,10 +362,10 @@ En modo **Route**, puedes seleccionar uno de los perfiles de velocidad siguiente
 
 | Perfil | Velocidad por hora               | Velocidad por segundo | Descripción | 
 |---------|------------------------------|------------------|-------------|
-| Speed Limit | Límite de velocidad de la ruta | No corresponde   | Atraviesa la ruta con el límite de velocidad publicado. |
+| Speed Limit | Límite de velocidad de la ruta | No disponible   | Atraviesa la ruta con el límite de velocidad publicado. |
 | Walking     | 5 km/h                   | 1,39 m           | Atraviesa la ruta a un ritmo normal a pie de 5 km/h. |
 | Biking      | 25 km/h                  | 6,94 m           | Atraviesa la ruta a un ritmo normal en bicicleta de 25 km/h. |
-| Anticipado        |                          |                  |Atraviesa la ruta más rápidamente que el límite de velocidad publicado. | 
+| Fast        |                          |                  |Atraviesa la ruta más rápidamente que el límite de velocidad publicado. | 
 
 **Modo de enrutamiento**
 
@@ -407,8 +407,8 @@ La característica de simulación de red te ayuda a garantizar que tu aplicació
     -   4G
 
 3.  En la lista desplegable **Signal strength**, selecciona una de las opciones siguientes:
-    -   Good
-    -   Average
+    -   Bien
+    -   Media
     -   Poor
 
 4.  Desactiva **Enable network simulation** para restaurar el comportamiento predeterminado, que usa la configuración de red de tu equipo de desarrollo.
@@ -492,7 +492,7 @@ Puedes probar fácilmente las notificaciones de inserción sin crear el servicio
             Cuando tu aplicación usa notificaciones WNS y seleccionas el tipo de notificación del sistema **Toast**, la pestaña de simulación muestra los campos **Tag** y **Group**. Puedes seleccionar estas opciones y entrar los valores **Tag** y **Group** para administrar las notificaciones del sistema en el centro de notificaciones.
 
         -   Tile
-        -   Notificación
+        -   Insignia
 
     -   Se admiten los siguientes tipos de notificación MPN.
 
@@ -561,11 +561,11 @@ También puedes seleccionar uno de los perfiles de cámara siguientes de la list
 
 Aquí te presentamos la lista de las características de cámara compatibles con cada uno de los perfiles.
 
-| Función            | Cámara de Windows Phone 8.0 | Cámara de Windows Phone 8.1  |
+| Característica            | Cámara de Windows Phone 8.0 | Cámara de Windows Phone 8.1  |
 |--------------------|--------------------------|---------------------------|
 | Resolución         | 640 x 480 (VGA)          | 640 x 480 (VGA) o superior |
 | Autofoco          | Sí                      | Sí                       |
-| Flash              | No                       | Sí                       |
+| Flash              | Sin                       | Sí                       |
 | Zoom               | 2x (digital u óptico)  | 2x (digital u óptico)   |
 | Resolución de vídeo   | 640 x 480 (VGA)          | 640 x 480 (VGA) o superior |
 | Resolución de la vista previa | 640 x 480 (VGA)          | 640 x 480 (VGA)           |
@@ -645,7 +645,7 @@ De forma predeterminada, el emulador de Windows 10 Mobile usa gráficos acelerad
 
 Para deshabilitar la aceleración de hardware:
 
-1. Inicia el Editor del registro.
+1. Inicia el Editor del Registro.
 2. Crea la siguiente subclave del Registro si no existe: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
 3. Haz clic con el botón secundario en la carpeta 10.0, apunta a **Nuevo** y luego haz clic en **Valor DWORD**.
 4. Escribe **DisableRemoteFx** y luego presiona Entrar.
@@ -656,7 +656,7 @@ Para deshabilitar la aceleración de hardware:
 
 ## <a name="support-resources"></a>Recursos de soporte técnico
 
-Para encontrar respuestas y solucionar problemas al empezar a trabajar con las herramientas de Windows 10, visita el [Foro de herramientas de Windows 10](https://go.microsoft.com/fwlink/?LinkId=534765). Para ver todos los foros de desarrollo de Windows 10, visita [este vínculo](https://go.microsoft.com/fwlink/?LinkId=535000).
+Para encontrar respuestas y solucionar problemas al empezar a trabajar con las herramientas de Windows 10, visita el [Foro de herramientas de Windows 10](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues). Para ver todos los foros de desarrollo de Windows 10, visita [este vínculo](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop).
 
 ## <a name="related-topics"></a>Temas relacionados
 

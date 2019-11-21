@@ -6,19 +6,19 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, anuncios, publicidad, instalar, SDK, biblioteca de publicidad
 ms.localizationpriority: medium
-ms.openlocfilehash: d348b1b7a7b057388b437fab9952bb8eaffe9957
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 37e57d49ba40814891154aef2ec0de6b3b7e560c
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320231"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260268"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instala el SDK de Microsoft Advertising
 
-Para mostrar anuncios en las aplicaciones para UWP en Windows 10, instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp). Este SDK es una extensión de Visual Studio 2015 y versiones posteriores.
+Para mostrar anuncios en las aplicaciones para UWP en Windows 10, instala el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK). Este SDK es una extensión de Visual Studio 2015 y versiones posteriores.
 
 > [!NOTE]
-> Si está desarrollando una aplicación para UWP de JavaScript/HTML y ha instalado el SDK de Windows 10 versión 10.0.14393 (actualización de aniversario) o versiones posteriores, también debe instalar el [WinJS](https://github.com/winjs/winjs) biblioteca. Antes, esta biblioteca estaba incluida en versiones anteriores del SDK de Windows 10 pero desde la versión 10.0.14393 del SDK de Windows 10 (Actualización de aniversario), debe instalarse por separado.
+> Si está desarrollando una aplicación de UWP JavaScript/HTML y ha instalado el SDK de Windows 10 versión 10.0.14393 (actualización de aniversario) o posterior, también debe instalar la biblioteca [WinJS](https://github.com/winjs/winjs) . Antes, esta biblioteca estaba incluida en versiones anteriores del SDK de Windows 10 pero desde la versión 10.0.14393 del SDK de Windows 10 (Actualización de aniversario), debe instalarse por separado.
 
 <span id="install-msi" />
 
@@ -35,7 +35,7 @@ Para instalar el SDK de Microsoft Advertising mediante el instalador MSI:
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
     ```
 
-3.  Descarga e instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp). Puede tardar unos minutos en instalarse. Espera a que finalice el proceso.
+3.  Descarga e instala el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK). Puede tardar unos minutos en instalarse. Espera a que finalice el proceso.
 
 4.  Reinicia Visual Studio.
 
@@ -94,14 +94,14 @@ Para ver tutoriales que muestran cómo comenzar a usar las API de publicidad, co
 
 * [Anuncios intersticiales](interstitial-ads.md)
 * [Anuncios nativos](native-ads.md)
-* [Elemento AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md)
-* [Elemento AdControl en HTML 5 y Javascript](adcontrol-in-html-5-and-javascript.md)
+* [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md)
+* [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md)
 
 <span id="framework" />
 
 ## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk"></a>Descripción de los paquetes de marcos en el SDK de Microsoft Advertising
 
-La biblioteca Microsoft.Advertising.dll en el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) (para aplicaciones para UWP) está configurada como un *paquete de marcos*. Esta biblioteca contiene las API de publicidad en los espacios de nombres [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) y [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui).
+La biblioteca Microsoft.Advertising.dll en el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) (para aplicaciones para UWP) está configurada como un *paquete de marcos*. Esta biblioteca contiene las API de publicidad en los espacios de nombres [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) y [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui).
 
 Dado que esta biblioteca es un paquete de marcos, después de que un usuario instale una versión de tu aplicación que use esta biblioteca, esta se actualizará automáticamente en su dispositivo a través de Windows Update cada vez que publiquemos una nueva versión de la biblioteca con correcciones y mejoras de rendimiento. Esto ayuda a garantizar que tus clientes tengan siempre instalada en sus dispositivos la versión más reciente de la biblioteca.
 

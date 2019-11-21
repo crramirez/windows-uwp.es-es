@@ -6,18 +6,18 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, ads, publicidad, advertising, control de errores, error handling, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: df33dc84823d5bcdc02d892820967b74ff0e5f65
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9b68979bfa6b1f661ca7765ebc2598b201f013e2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645910"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260299"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>Tutorial de control de errores en JavaScript
 
 En este tutorial se muestra cómo detectar errores relacionados con los anuncios en la aplicación JavaScript. Este tutorial usa un objeto [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un anuncio de banner, pero los conceptos generales en él también se aplican a anuncios intersticiales y anuncios nativos.
 
-En estos ejemplos se da por hecho que tienes una aplicación JavaScript que contiene un objeto **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md). Para obtener un ejemplo de proyecto completo que muestre cómo agregar anuncios en banner a una aplicación JavaScript o HTML, consulta los [ejemplos de publicidad en GitHub](https://aka.ms/githubads).
+En estos ejemplos se da por hecho que tienes una aplicación JavaScript que contiene un objeto **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md). Para obtener un ejemplo de proyecto completo que muestre cómo agregar anuncios en banner a una aplicación JavaScript o HTML, consulta los [ejemplos de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 
 1.  En el archivo default.html, agrega un valor para el evento **onErrorOccurred** en el que definas la propiedad **data-win-options** en el elemento **div** para el objeto **AdControl**. Encuentra el siguiente código en el archivo default.html.
     ``` HTML
@@ -66,4 +66,4 @@ En estos ejemplos se da por hecho que tienes una aplicación JavaScript que cont
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestras de publicidad en GitHub](https://aka.ms/githubads)
+* [Muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)

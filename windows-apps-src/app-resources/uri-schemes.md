@@ -4,14 +4,14 @@ title: Esquemas de URI
 template: detail.hbs
 ms.date: 10/16/2017
 ms.topic: article
-keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
+keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: 7564060e28d3e78608c6f30b1400179087db2b86
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 8627bd7f9f405509cb1bff40d94f10552241f4ce
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061850"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254595"
 ---
 # <a name="uri-schemes"></a>Esquemas de URI
 
@@ -19,9 +19,9 @@ Existen varios esquemas de URI (identificador uniforme de recursos) que puedes u
 
 ## <a name="common-features-of-the-uri-schemes"></a>Características comunes de los esquemas de URI
 
-Todos los esquemas descritos en este tema siguen las reglas de esquema URI típicas para la normalización y la recuperación de recursos. Consulta [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444) para conocer la sintaxis genérica de un URI.
+Todos los esquemas descritos en este tema siguen las reglas de esquema URI típicas para la normalización y la recuperación de recursos. Consulta [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt) para conocer la sintaxis genérica de un URI.
 
-Todos los esquemas de URI definen la parte jerárquica conforme a [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444), como los componentes de ruta y de autoridad del URI.
+Todos los esquemas de URI definen la parte jerárquica conforme a [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt), como los componentes de ruta y de autoridad del URI.
 
 ```syntax
 URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
@@ -269,7 +269,7 @@ Los desarrolladores de componentes específicos con capas por encima de este an�
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Identificador uniforme de recursos (URI): Sintaxis genérica](https://go.microsoft.com/fwlink/p/?LinkId=263444)
+* [Identificador uniforme de recursos (URI): Sintaxis genérica](https://www.ietf.org/rfc/rfc3986.txt)
 * [Empaquetado de aplicaciones](../packaging/index.md)
 * [Referencia a una imagen u otro recurso desde el marcado y el código XAML](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [Almacenar y recuperar la configuración y otros datos de aplicación](../design/app-settings/store-and-retrieve-app-data.md)

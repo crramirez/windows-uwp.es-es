@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, in-app purchases, compras desde la aplicación, IAPs, IAP, receipts, recibos, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cae88e57a61e6d4e982f1eac7e65582861ef5d2
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: a26d98de58c954f1bec588b335483de08404862b
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335013"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259222"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para comprobar la compra de productos
 
@@ -106,9 +106,9 @@ El elemento raíz de este archivo es el elemento **Recibo** que contiene informa
 
 |  Elemento  |  Requerido  |  Cantidad  |  Descripción   |
 |-------------|------------|--------|--------|
-|  [AppReceipt](#appreceipt)  |    No        |  0 o 1  |  Contiene información de compra de la aplicación actual.            |
-|  [ProductReceipt](#productreceipt)  |     No       |  0 o más    |   Contiene información sobre una compra desde la aplicación de la aplicación actual.     |
-|  Firma  |      Sí      |  1   |   Este elemento es un estándar de [construcción XML DSIG](https://go.microsoft.com/fwlink/p/?linkid=251093). Contiene un elemento de **SignatureValue**, que contiene la firma que puedes usar para validar el recibo, y un elemento de **SignedInfo**.      |
+|  [AppReceipt](#appreceipt)  |    Sin        |  0 o 1  |  Contiene información de compra de la aplicación actual.            |
+|  [ProductReceipt](#productreceipt)  |     Sin       |  0 o más    |   Contiene información sobre una compra desde la aplicación de la aplicación actual.     |
+|  Firma  |      Sí      |  1   |   Este elemento es un estándar de [construcción XML DSIG](https://www.w3.org/TR/xmldsig-core/). Contiene un elemento de **SignatureValue**, que contiene la firma que puedes usar para validar el recibo, y un elemento de **SignedInfo**.      |
 
 **Receipt** tiene los atributos siguientes.
 
@@ -146,7 +146,7 @@ Este elemento contiene información sobre una compra desde la aplicación de la 
 |-------------|-------------------|
 |  **Id**  |    Identifica la compra.           |
 |  **AppId**  |     Identifica la aplicación a través del cual el usuario realizó la compra.           |
-|  **ProductId**  |     Identifica el producto comprado.           |
+|  **IdProducto**  |     Identifica el producto comprado.           |
 |  **ProductType**  |    Determina el tipo de producto. Actualmente solo admite un valor de **Duradero**.          |  
 |  **PurchaseDate**  |    Fecha cuando se realizó la compra.          |  |
 

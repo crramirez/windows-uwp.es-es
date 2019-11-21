@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f54cb261f6ef94545d656d5bd4f624622cc6dfff
-ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
+ms.openlocfilehash: 7ba05e958a8746874becd4cfa17ec0e8f255ff00
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71982228"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255141"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Agregar compatibilidad con Mis allegados a una aplicación
 
@@ -24,9 +24,9 @@ La función Mis allegados permite a los usuarios a anclar contactos desde una ap
 ## <a name="requirements"></a>Requisitos
 
 + Windows 10 y Microsoft Visual Studio 2019. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++ Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Hay tres cosas que debes hacer para habilitar la aplicación para usar la función Mis allegados:
 
@@ -104,7 +104,7 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el nombre de familia de paquete, abre **Package.appxmanifest** mediante el editor predeterminado y busca en la pestaña "Empaquetado". Aquí, "Aplicación" es la clase activable correspondiente a la vista de inicio de la aplicación.
+El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el Nombre de familia de paquete, abre **Package.appxmanifest** mediante el editor predeterminado y busca en la pestaña "Empaquetado". Aquí, "Aplicación" es la clase activable correspondiente a la vista de inicio de la aplicación.
 
 ## <a name="allow-contacts-to-invite-new-potential-users"></a>Permitir a los contactos invitar a nuevos usuarios potenciales
 
@@ -188,7 +188,7 @@ Si quieres que los contactos anclados a la barra de tareas se identifiquen cuand
 
 Para identificar un contacto, el nodo del sistema de nivel superior debe incluir el parámetro hint-people para indicar el contacto remitente o relacionado. Este parámetro puede tener cualquiera de los valores siguientes:
 + **Dirección de correo electrónico** 
-    + P. ej. [https://doi.org/10.13012/J8PN93H8](mailto:johndoe@mydomain.com)
+    + P. ej. mailto:johndoe@mydomain.com
 + **Número de teléfono** 
     + P. ej. tel:888-888-8888
 + **ID. remoto** 
@@ -251,11 +251,11 @@ async Task PinMultipleContacts(Contact[] contacts)
 
 **Nota:** 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 + [Uso compartido de Mis allegados](my-people-sharing.md)
 + [Mis personas notificatons](my-people-notifications.md)
 + [Vídeo de Channel 9 sobre cómo agregar soporte técnico para mis usuarios a una aplicación](https://channel9.msdn.com/Events/Build/2017/P4056)
-+ [Ejemplo de integración de mis personas](https://aka.ms/mypeoplebuild2017)
++ [Ejemplo de integración de mis personas](https://github.com/tonyPendolino/MyPeopleBuild2017)
 + [Ejemplo de tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
 + [Documentación de la clase PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
 + [Conectar la aplicación a acciones en una tarjeta de contacto](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

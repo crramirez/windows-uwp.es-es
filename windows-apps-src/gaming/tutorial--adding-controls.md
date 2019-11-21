@@ -6,19 +6,19 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ff7088ec4062973d0b9d1ff6d20d7992e4135c3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9c2b7031bf8afb047fcfc869e23ee1c398218af8
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367955"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258426"
 ---
 # <a name="add-controls"></a>Agregar controles
 
 
-\[ Se actualizó con las aplicaciones para UWP en Windows 10. Para artículos de Windows 8.x, consulte el [archive](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ actualizado para aplicaciones para UWP en Windows 10. Para artículos de Windows 8. x, consulte el [archivo](https://docs.microsoft.com/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN) \]
 
-Un buen juego de la plataforma universal de Windows (UWP) admite una amplia variedad de interfaces. Un reproductor posibles podría tener Windows 10 en una tableta con ningún botón físico, un equipo con un controlador Xbox asociado o la plataforma de juegos de escritorio más reciente con un mouse de alto rendimiento y el teclado de juegos. En nuestro juego los controles se implementan en la clase [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp). Esta clase concentra los tres tipos de entrada (mouse y teclado, táctil y controlador para juegos) en un único controlador. El resultado final es un tiros en primera persona que usa controles de movimiento y vista estándares en el género y que funcionan con varios dispositivos.
+Un buen juego de la plataforma universal de Windows (UWP) admite una amplia variedad de interfaces. Un posible reproductor podría tener Windows 10 en una tableta sin botones físicos, un equipo con una controladora Xbox conectada o la plataforma de juegos de escritorio más reciente con un mouse y un teclado de juegos de alto rendimiento. En nuestro juego los controles se implementan en la clase [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp). Esta clase concentra los tres tipos de entrada (mouse y teclado, táctil y controlador para juegos) en un único controlador. El resultado final es un tiros en primera persona que usa controles de movimiento y vista estándares en el género y que funcionan con varios dispositivos.
 
 > [!NOTE]
 > Para obtener más información acerca de los controles, consulta [Controles de movimiento y vista para juegos](tutorial--adding-move-look-controls-to-your-directx-game.md) y [Controles táctiles para juegos](tutorial--adding-touch-controls-to-your-directx-game.md).
@@ -43,11 +43,11 @@ Cuando la clase **MoveLookController** en la muestra de juego se inicializa, reg
 
 Evento | Descripción
 :------ | :-------
-[**CoreWindow::PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed) | Se presionó (o se mantuvo presionado) el botón izquierdo o derecho del mouse o se tocó la superficie táctil.
-[**CoreWindow::PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) |El mouse se movió, o se realizó una acción de arrastrar en la superficie táctil.
-[**CoreWindow::PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) |Se soltó el botón izquierdo del mouse, o se retiró el objeto que estaba en contacto con la superficie táctil.
-[**CoreWindow::PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerexited) |El puntero se movió fuera de la ventana principal.
-[**Windows::Devices::Input::MouseMoved**](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) | El mouse se desplazó una distancia determinada. Ten en cuenta que solo nos interesan los valores delta del movimiento de ratón, no la posición actual en las coordenadas X-Y.
+[**CoreWindow::P ointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed) | Se presionó (o se mantuvo presionado) el botón izquierdo o derecho del mouse o se tocó la superficie táctil.
+[**CoreWindow::P ointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) |El mouse se movió, o se realizó una acción de arrastrar en la superficie táctil.
+[**CoreWindow::P ointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerreleased) |Se soltó el botón izquierdo del mouse, o se retiró el objeto que estaba en contacto con la superficie táctil.
+[**CoreWindow::P ointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerexited) |El puntero se movió fuera de la ventana principal.
+[**Windows::D evices:: Input:: MouseMoved**](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) | El mouse se desplazó una distancia determinada. Ten en cuenta que solo nos interesan los valores delta del movimiento de ratón, no la posición actual en las coordenadas X-Y.
 
 
 Estos controladores de eventos se establecen para empezar a escuchar la entrada del usuario en cuanto **MoveLookController** se inicializa en la ventana de la aplicación.
@@ -95,7 +95,7 @@ Estado | Descripción
 El juego entra en el estado **WaitForInput** cuando se ha pausado. Esto ocurre si el jugador mueve el puntero fuera de la ventana principal del juego o presiona el botón de pausa (la tecla P o el botón **Inicio** del controlador para juegos). **MoveLookController** registra dicha presión e informa al bucle de juego cuando llama al método [**IsPauseRequested**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L107-L127). En ese punto, si **IsPauseRequested** devuelve **verdadero**, el bucle de juego llama a **WaitForPress** en **MoveLookController** para mover el controlador al estado **WaitForInput**. 
 
 
-Una vez en el estado **WaitForInput**, el juego detiene el procesamiento de casi todos los eventos de entrada de juego hasta que regrese al estado **Activo**. La excepción es el botón de pausa, al presionarlo, el juego vuelve al estado activo. Que no sea el botón de pausa, en orden del juego volver a la **Active** estado necesita el Reproductor seleccionar un elemento de menú. 
+Una vez en el estado **WaitForInput**, el juego detiene el procesamiento de casi todos los eventos de entrada de juego hasta que regrese al estado **Activo**. La excepción es el botón de pausa, al presionarlo, el juego vuelve al estado activo. Aparte del botón pausa, para que el juego vuelva al estado **activo** , el reproductor debe seleccionar un elemento de menú. 
 
 
 
@@ -113,7 +113,7 @@ Cuando se recibe un evento [**PointerPressed**](https://docs.microsoft.com/uwp/a
 
 Una vez que los eventos de puntero se han asignado a una acción específica del juego, es hora de actualizar los datos que el objeto **MoveLookController** comparte con el bucle de juego principal.
 
-Cuando se llama, el [ **actualización** ](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1005-L1096) método en el ejemplo de juego procesa la entrada y actualiza las variables de dirección de velocidad y el aspecto (**m\_velocity** y **m\_lookdirection**), que, a continuación, recupera el bucle de juego mediante una llamada a público [ **Velocity** ](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L906-L909) y [ **LookDirection** ](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L913-L923) métodos.
+Cuando se llama, el método [**Update**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1005-L1096) en el ejemplo Game procesa la entrada y actualiza las variables de velocidad y apariencia (**m\_velocidad** y **m\_LookDirection**), que el bucle de juego recupera a continuación llamando a los métodos de [**velocidad**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L906-L909) pública y [**LookDirection**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L913-L923) .
 
 > [!NOTE]
 > Más detalles sobre el método [**Update**](#the-update-method) se pueden ver más adelante en esta página.
@@ -240,7 +240,7 @@ Después de configurar esto, al pulsar el controlador de disparo en el cuadrante
 Los métodos [**SetMoveRect**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L843-L853) y [**SetFireRect**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L857-L867) crearán nuestros rectángulos de entrada, con dos vectores 2D para especificar las posiciones de las esquinas superior izquierda e inferior derecha de cada rectángulos en la pantalla. 
 
 
-Los parámetros se asignan a **m\_fireUpperLeft** y **m\_fireLowerRight** que nos ayudarán a determinar si el usuario toca dentro los rectángulos. 
+A continuación, los parámetros se asignan a **m\_fireUpperLeft** y **m\_fireLowerRight** , que nos ayudarán a determinar si el usuario está tocando dentro de los rectángulos. 
 ```cpp
 m_fireUpperLeft  = upperLeft;
 m_fireLowerRight = lowerRight;
@@ -266,9 +266,9 @@ window->PointerReleased +=
 
 En primer lugar determinaremos lo que sucede cuando el usuario pulsa dentro de los rectángulos de disparo o movimiento por primera vez, usando el método [**OnPointerPressed**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L179-L313).
 Aquí comprobamos dónde se está tocando un control y si un puntero ya está en ese controlador. Si este es el primer dedo que toca el control específico, hacemos lo siguiente.
-- Store a la ubicación de la touchdown en **m\_moveFirstDown** o **m\_fireFirstDown** como un vector 2D.
-- Asignar el identificador de puntero a **m\_movePointerID** o **m\_firePointerID**.
-- Establecer adecuada **InUse** marca (**m\_moveInUse** o **m\_fireInUse**) a `true` puesto que ahora tenemos un puntero de activo para que control.
+- Almacene la ubicación de touchdown en **m\_moveFirstDown** o **m\_FireFirstDown** como vector 2D.
+- Asigne el ID. de puntero a **m\_movePointerID** o **m\_firePointerID**.
+- Establezca la marca de **inuse** adecuada (**m\_moveInUse** o **m\_fireInUse**) en `true`, ya que ahora tenemos un puntero activo para ese control.
 
 
 ```cpp
@@ -357,7 +357,7 @@ Una vez que el usuario ha realizado sus gestos dentro de los controles, liberan 
 
 Si se ha liberado el control de movimiento, hacemos lo siguiente.
 - Establecer la velocidad del jugador a `0` en todas las direcciones para impedir que se muevan en el juego.
-- Conmutador **m\_moveInUse** a `false` puesto que el usuario ya no esté tocando el controlador de movimiento.
+- Cambie **m\_moveInUse** a `false` porque el usuario ya no toca el controlador de movimiento.
 - Establecer el identificador de puntero de movimiento a `0`, puesto que ya no hay un puntero en el controlador de movimiento.
 
 ```cpp
@@ -399,13 +399,13 @@ Puedes ver el código completo para el método **MoveLookController::OnPointerPr
 
 
 
-Aquí, **MoveLookController** asigna el identificador de puntero para el puntero que provocó el evento en una variable que corresponda a la región de vista. En el caso de una entrada táctil que se producen en la región de aspecto, el **m\_lookPointerID** variable se establece en el identificador de puntero que desencadenó el evento. Una variable booleana, **m\_lookInUse**, también se establece para indicar que el control tiene no se han publicado.
+Aquí, **MoveLookController** asigna el identificador de puntero para el puntero que provocó el evento en una variable que corresponda a la región de vista. En el caso de que se produzca una entrada táctil en la región de búsqueda, la variable **m\_lookPointerID** se establece en el identificador de puntero que desencadenó el evento. También se establece una variable booleana, **m\_lookInUse**, para indicar que aún no se ha liberado el control.
 
 Veamos ahora cómo la muestra de juego controla el evento de pantalla táctil [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved).
 
 
 Dentro del método **MoveLookController::OnPointerMoved**, se comprueba qué tipo de Id. de puntero se asignó al evento. Si es **m_lookPointerID**, calculamos el cambio de posición del puntero.
-A continuación, usamos este delta para calcular cuánto debe cambiar la rotación. Finalmente estamos en un punto donde podemos actualizar el **m\_pitch** y **m\_guiñada** para usarse en el juego para cambiar la rotación del Reproductor. 
+A continuación, usamos este delta para calcular cuánto debe cambiar la rotación. Por último, vamos a un punto en el que podemos actualizar el **tono m\_** y **m\_guiñada** que se usará en el juego para cambiar la rotación del jugador. 
 
 ```cpp
     else if (pointerID == m_lookPointerID)     // This is the look pointer.
@@ -575,7 +575,7 @@ Botón de menú/inicio | Pausar o reanudar el juego
 
 
 
-En el método [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103), agregamos dos nuevos eventos para determinar si un controlador para juegos se ha [agregado](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) o [quitado](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114). Estos eventos actualizan la propiedad **m_gamepadsChanged**. Esto se usa en el **UpdatePollingDevices** método para comprobar si ha cambiado la lista de configuración conocido de los controles. 
+En el método [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103), agregamos dos nuevos eventos para determinar si un controlador para juegos se ha [agregado](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) o [quitado](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114). Estos eventos actualizan la propiedad **m_gamepadsChanged**. Se usa en el método **UpdatePollingDevices** para comprobar si la lista de controladores de mandos conocidos ha cambiado. 
 
 ```cpp
     // Detect gamepad connection and disconnection events.
@@ -587,7 +587,7 @@ En el método [**InitWindow**](https://github.com/Microsoft/Windows-universal-sa
 ```
 
 > [!NOTE]
-> Las aplicaciones para UWP no pueden recibir entradas de un controlador de una Xbox mientras la aplicación no tiene el foco.
+> Las aplicaciones UWP no pueden recibir la entrada desde un controlador de Xbox One mientras la aplicación no está en el foco.
 
 ### <a name="the-updatepollingdevices-method"></a>El método UpdatePollingDevices
 
@@ -727,7 +727,7 @@ El método **Actualizar** empieza llamado a [**UpdatePollingDevices**](#the-upda
 
 En nuestro método **Actualizar**, a continuación, realizamos las siguientes comprobaciones de entrada.
 - Si el jugador usa el rectángulo de controlador de movimiento, determinaremos el cambio de posición de puntero y lo usaremos para calcular si el usuario movió el puntero fuera de la zona muerta del controlador. Si está fuera de la zona muerta, la propiedad de vector **m_moveCommand** se actualiza con el valor de joystick virtual.
-- Si cualquiera de las entradas de teclado de movimiento se presionan, un valor de `1.0f` o `-1.0f` se agregan en el componente correspondiente de la **m_moveCommand** vector &mdash; `1.0f` para reenviar y `-1.0f`para versiones anteriores.
+- Si se presiona cualquiera de las entradas de teclado de movimiento, se agrega un valor de `1.0f` o `-1.0f` en el componente correspondiente del vector de **m_moveCommand** &mdash; `1.0f` para reenviar y `-1.0f` para retroceder.
 
 
 Una vez que todas las entradas de movimiento se han tenido en cuenta, ejecutamos el vector **m_moveCommand** a través de algunos cálculos para generar un nuevo vector que representa la dirección del jugador en relación con el mundo del juego.

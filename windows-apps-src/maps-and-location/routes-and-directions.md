@@ -6,12 +6,12 @@ ms.date: 09/20/2017
 ms.topic: article
 keywords: windows 10, uwp, ruta, mapa, ubicación, indicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 196cb4801436e8094dae4ead363ff86cc746034e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e9e464f9a3b49d3a94edbc8593df58e1e7c24515
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371691"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259338"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>Mostrar rutas e indicaciones en un mapa
 
@@ -20,7 +20,7 @@ ms.locfileid: "66371691"
 Solicita rutas e indicaciones y muéstralas en tu aplicación.
 
 >[!Note]
->Para más información sobre el uso de mapas en tu aplicación, descarga el [ejemplo de mapa para la Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977).
+>Para más información sobre el uso de mapas en tu aplicación, descarga el [ejemplo de mapa para la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl).
 >Si los mapas no son una característica principal de tu aplicación, considera la posibilidad de iniciar la aplicación de mapas de Windows en su lugar. Puedes usar los esquemas URI `bingmaps:`, `ms-drive-to:` y `ms-walk-to:` para iniciar la aplicación Mapas de Windows para mostrar mapas específicos e indicaciones paso a paso. Para obtener más información, consulta [Iniciar la aplicación Mapas de Windows](https://docs.microsoft.com/windows/uwp/launch-resume/launch-maps-app).
 
  
@@ -242,7 +242,7 @@ private async void ShowRouteOnMap()
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
-* [Ejemplo de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Ejemplo de mapa de UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [Directrices de diseño para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* Vídeo de [Build 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757) (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en las aplicaciones de Windows)
-* [Ejemplo de aplicación de tráfico para UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Vídeo de compilación 2015: uso de mapas y ubicación en el teléfono, la tableta y el PC de las aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Ejemplo de aplicación de tráfico para UWP](https://github.com/Microsoft/Windows-appsample-trafficapp)

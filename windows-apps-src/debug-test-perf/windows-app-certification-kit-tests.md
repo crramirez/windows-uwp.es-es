@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f0fe5219ad6e1401e189c27fec898cb8e56c6de
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 32ece54ef17c97b1cb16b3f0a706c86eb2858556
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281770"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257857"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Pruebas del Kit para la certificación de aplicaciones en Windows
 
@@ -28,7 +28,7 @@ Las aplicaciones que dejan de responder o se bloquean pueden originar pérdidas 
 
 Esperamos que las aplicaciones funcionen correctamente sin usar los modos de compatibilidad de Windows, mensajes de AppHelp o archivos de compatibilidad.
 
-Las aplicaciones no deben enumerar los archivos DLL para cargarlos en la clave HKEY @ no__t-0LOCAL @ no__t-1MACHINE @ no__t-2Software @ no__t-3Microsoft @ no__t-4Windows NT @ no__t-5CurrentVersion @ no__t-6Windows @ no__t-7AppInit @ no__t-8DLLs.
+Las aplicaciones no deben enumerar los archivos DLL para cargarlos en la\-HKEY LOCAL\-MACHINE\\software\\la\\Windows NT\\CurrentVersion\\Windows\\AppInit\-dll del registro.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
@@ -44,8 +44,8 @@ Asegúrate de ejecutar la prueba en un equipo que tenga una pantalla lo suficien
 
 Si tu aplicación no puede iniciarse aun cuando la plataforma de prueba cumple con los requisitos de [**ActivateApplication**](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication), puedes solucionar el problema revisando el registro de eventos de activación. Para encontrar estas entradas en el registro de eventos:
 
-1.  Abra eventvwr. exe y navegue hasta la carpeta Application and Services log @ no__t-0Microsoft @ no__t-1Windows @ no__t-2Immersive-Shell.
-2.  Filtre la vista para mostrar los identificadores de evento: 5900-6000.
+1.  Abra eventvwr. exe y navegue hasta el registro de la aplicación y los servicios\\carpeta Microsoft\\Windows\\el shell envolvente.
+2.  Filtra la vista para que se muestren los identificadores de eventos: 5900-6000.
 3.  Revisa las entradas del registro para encontrar información que pueda explicar por qué la aplicación no se inicia.
 
 Soluciona los problemas del archivo mediante identificación y corrección. Recompila y vuelve a probar la aplicación. También puedes comprobar si en la carpeta de registro del Kit para la certificación de aplicaciones de Windows se generó un archivo de volcado que se pueda usar para depurar la aplicación.
@@ -164,7 +164,7 @@ Las pruebas del analizador binario BinScope comprueban el uso correcto de estas 
 
 ### <a name="span-idbinscope-1spanallowpartiallytrustedcallersattribute"></a><span id="binscope-1"></span>Atributo
 
-**Mensaje de error del kit de certificación de aplicaciones de Windows:** Error de prueba de APTCACheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows :** error en la prueba APTCACheck
 
 El atributo AllowPartiallyTrustedCallersAttribute (APTCA) habilita el acceso a los códigos de plena confianza desde los códigos de confianza parcial en los ensamblados con signo. Cuando apliques el atributo APTCA en un ensamblado, los llamadores de confianza parcial pueden obtener acceso a ese ensamblado durante su vigencia, lo que puede comprometer la seguridad.
 
@@ -178,7 +178,7 @@ Esta prueba solo se realiza en código administrado (C#, .NET, etc.).
 
 ### <a name="span-idbinscope-2spansafeseh-exception-handling-protection"></a><span id="binscope-2"></span>Protección de control de excepciones de/SafeSEH
 
-**Mensaje de error del kit de certificación de aplicaciones de Windows:** Error de prueba de SafeSEHCheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba SafeSEHCheck
 
 Un controlador de excepciones se ejecuta cuando la aplicación encuentra una condición de excepción, como un error de división entre cero. Dado que la dirección del controlador de excepciones se almacena en la pila cuando se llama una función, podría quedar expuesta a un atacante de desbordamiento de búfer si algún software malintencionado quisiera sobrescribir la pila.
 
@@ -192,7 +192,7 @@ La prueba no se realiza en binarios de 64 bits ni en binarios de conjunto de ch
 
 ### <a name="span-idbinscope-3spandata-execution-prevention"></a><span id="binscope-3"></span>Prevención de ejecución de datos
 
-**Mensaje de error del kit de certificación de aplicaciones de Windows:** Error de prueba de NXCheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** error en la prueba NXCheck
 
 Esta prueba comprueba que la aplicación no ejecute el código que se almacena en el segmento de datos.
 
@@ -206,7 +206,7 @@ Te recomendamos que pruebes tus aplicaciones en una CPU con funcionalidad DEP y 
 
 ### <a name="span-idbinscope-4spanaddress-space-layout-randomization"></a><span id="binscope-4"></span>Selección aleatoria del diseño del espacio de direcciones
 
-**Mensaje de error del kit de certificación de aplicaciones de Windows:** Error de prueba de DBCheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba DBCheck.
 
 La selección aleatoria del diseño del espacio de direcciones (ASLR) carga imágenes ejecutables en ubicaciones impredecibles de la memoria, lo que dificulta la tarea del software malintencionado La aplicación y todos los componentes que usa la aplicación deben admitir ASLR.
 
@@ -222,7 +222,7 @@ Esta prueba se realiza solamente en aplicaciones escritas en lenguajes no admini
 
 ### <a name="span-idbinscope-5spanreadwrite-shared-pe-section"></a><span id="binscope-5"></span>Sección de PE compartida de lectura/escritura
 
-**Mensaje de error del kit de certificación de aplicaciones de Windows:** Error de prueba de SharedSectionsCheck.
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba SharedSectionsCheck.
 
 Los archivos binarios con secciones grabables marcadas como compartidas son una amenaza de seguridad. No compiles aplicaciones con secciones compartidas grabables a menos que sea necesario. Usa [**CreateFileMapping**](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-createfilemappinga) o [**MapViewOfFile**](https://docs.microsoft.com/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile) para crear un objeto de memoria compartida debidamente asegurado.
 
@@ -236,7 +236,7 @@ Esta prueba se realiza solamente en aplicaciones escritas en lenguajes no admini
 
 ### <a name="appcontainercheck"></a>AppContainerCheck
 
-**Mensaje de error del kit de certificación de aplicaciones de Windows:** Error de prueba de AppContainerCheck.
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba AppContainerCheck.
 
 AppContainerCheck comprueba que esté establecido el bit **appcontainer** en el encabezado portable ejecutable (PE) de un binario ejecutable. Las aplicaciones deben tener el bit **appcontainer** establecido en todos los archivos .exe y en todas las DLL no administradas para ejecutarse correctamente.
 
@@ -252,7 +252,7 @@ Esta prueba se realiza en todos los archivos .exe y en DLL no administrados.
 
 ### <a name="span-idbinscope-7spanexecutableimportscheck"></a><span id="binscope-7"></span>ExecutableImportsCheck
 
-**Mensaje de error del kit de certificación de aplicaciones de Windows:** Error de prueba de ExecutableImportsCheck.
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba ExecutableImportsCheck.
 
 Una imagen portable ejecutable (PE) no pasa esta prueba si su tabla de importación se colocó en una sección de código ejecutable. Esto puede producirse si habilitaste la combinación de .rdata para la imagen PE estableciendo la marca */merge* del enlazador de Visual C++ en */merge:.rdata=.text*.
 
@@ -266,13 +266,13 @@ Esta prueba se realiza en todo el código binario excepto en los ensamblados pur
 
 ### <a name="span-idbinscope-8spanwxcheck"></a><span id="binscope-8"></span>WXCheck
 
-**Mensaje de error del kit de certificación de aplicaciones de Windows:** Error de prueba de WXCheck.
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba WXCheck.
 
-La comprobación ayuda a garantizar que un binario no tenga ninguna página asignada como de escritura y ejecutable. Esto puede ocurrir si el binario tiene una sección grabable y ejecutable, o si el *alineación* del archivo binario es menor que la *Página @ no__t-2SIZE*.
+La comprobación ayuda a garantizar que un binario no tenga ninguna página asignada como de escritura y ejecutable. Esto puede ocurrir si el binario tiene una sección grabable y ejecutable, o si el *alineación* del archivo binario es menor que el tamaño de la *Página\-* .
 
 **Qué hacer si se produce un error en la aplicación en esta prueba**
 
-Asegúrese de que el archivo binario no tiene una sección grabable o ejecutable y que el valor de *alineación* del archivo binario es al menos igual que su *Página @ no__t-2SIZE*.
+Asegúrese de que el archivo binario no tiene una sección grabable o ejecutable y que el valor de *alineación* del archivo binario es al menos igual que su *Página\-tamaño*.
 
 **Sección**
 
@@ -280,7 +280,7 @@ Esta prueba se realiza en todos los archivos .exe y en DLL nativos no administra
 
 Un ejecutable puede tener una sección de escritura y ejecutable si se compiló con Editar y continuar habilitado (/ZI). Deshabilitar Editar y continuar hará que la sección no válida no esté presente.
 
-*Page @ no__t-1size* es el valor predeterminado de *alineación* para los ejecutables.
+El *tamaño de\-de página* es el valor predeterminado de *alineación* para los ejecutables.
 
 ### <a name="private-code-signing"></a>Firma de código privado
 
@@ -315,11 +315,11 @@ Las aplicaciones deben usar las API para que las aplicaciones UWP (Windows Runti
 
 Asegúrate de que la aplicación se haya compilado como una versión de lanzamiento y no con una versión de depuración.
 
-> **Tenga en cuenta**  El compilación de depuración de una aplicación producirá un error en esta prueba, aunque la aplicación solo use las [API para las aplicaciones UWP](https://docs.microsoft.com/uwp/).
+> **Tenga en cuenta**  la compilación de depuración de una aplicación producirá un error en esta prueba, aunque la aplicación solo use las [API para las aplicaciones UWP](https://docs.microsoft.com/uwp/).
 
 Revise los mensajes de error para identificar la API que usa la aplicación y que no es una [API para aplicaciones UWP](https://docs.microsoft.com/uwp/).
 
-> **Tenga en cuenta**@no__tC++ -1 las aplicaciones que se compilan en una configuración de depuración producirán un error en esta prueba aunque la configuración solo use las API del Windows SDK para las aplicaciones para UWP. Consulte [alternativas a las API de Windows en aplicaciones para UWP](https://go.microsoft.com/fwlink/p/?LinkID=244022) para obtener más información.
+> **Tenga** en C++ cuenta  las aplicaciones que se compilan en una configuración de depuración producirán un error en esta prueba aunque la configuración solo use las API del Windows SDK para las aplicaciones para UWP. Consulte [alternativas a las API de Windows en aplicaciones para UWP](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) para obtener más información.
 
 ## <a name="performance-tests"></a>Pruebas de rendimiento
 
@@ -461,17 +461,17 @@ Usa esta tabla como guía.
 <p>Asegúrate de que el manifiesto de la aplicación tenga recursos definidos en dicho archivo.</p>
 </td></tr>
 <tr><td>
-<p>El archivo de imagen {FILENAME} debe ser inferior a 204800 bytes. \* @ no__t-1</p>
+<p>El archivo de imagen {FILENAME} debe ser inferior a 204800 bytes.\*\*</p>
 </td><td>
 <p>Reduce el tamaño de las imágenes especificadas.</p>
 </td></tr>
 <tr><td>
-<p>El archivo {filename} no debe contener una sección de asignación inversa. \* @ no__t-1</p>
+<p>El archivo {filename} no debe contener una sección de asignación inversa.\*\*</p>
 </td><td>
 <p>Aunque el mapa inverso se genera durante la tarea "F5 debugging" de Visual Studio al llamar a makepri.exe, se puede quitar ejecutando makepri.exe sin el parámetro /m al generar un archivo pri.</p>
 </td></tr>
 <tr><td colspan="2">
-<p>\* @ no__t-1 indica que se ha agregado una prueba en el kit de certificación de aplicaciones de Windows 3,3 para Windows 8.1 y solo es aplicable cuando se usa la versión del kit o posterior.</p>
+<p>\*\* indica que se ha agregado una prueba en el kit de certificación de aplicaciones de Windows 3,3 para Windows 8.1 y solo es aplicable cuando se usa esa versión del kit o posterior.</p>
 </td></tr>
 </table>
 
@@ -533,21 +533,21 @@ Prueba las aplicaciones de Microsoft Direct3D para garantizar que no se bloquear
 
 ### <a name="background"></a>Background
 
-Microsoft Store requiere que todas las aplicaciones que usan Direct3D se representen correctamente o con errores en tarjetas de gráficos de nivel de característica 9 @ no__t-01.
+Microsoft Store requiere que todas las aplicaciones que usan Direct3D se representen correctamente o con errores en las tarjetas gráficas de nivel de característica 9\-1.
 
-Dado que los usuarios pueden cambiar el hardware gráfico en el dispositivo después de instalar la aplicación, si elige un nivel de característica mínimo superior a 9 @ no__t-01, la aplicación debe detectar en el inicio si el hardware actual cumple o no los requisitos mínimos. Si no se cumplen los requisitos mínimos, la aplicación debe mostrar un mensaje al usuario en el que se detallan todos los requisitos de Direct3D. Asimismo, si se descarga una aplicación en un dispositivo con el que no es compatible, debe detectarlo en el inicio y mostrar al cliente un mensaje en el que se detallan los requisitos.
+Dado que los usuarios pueden cambiar el hardware gráfico en el dispositivo después de instalar la aplicación, si elige un nivel de característica mínimo superior a 9\-1, la aplicación debe detectar en el inicio si el hardware actual cumple o no los requisitos mínimos. Si no se cumplen los requisitos mínimos, la aplicación debe mostrar un mensaje al usuario en el que se detallan todos los requisitos de Direct3D. Asimismo, si se descarga una aplicación en un dispositivo con el que no es compatible, debe detectarlo en el inicio y mostrar al cliente un mensaje en el que se detallan los requisitos.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
-La prueba se validará si las aplicaciones se representan con precisión en el nivel de características 9 @ no__t-01.
+La prueba se validará si las aplicaciones se representan con precisión en el nivel de características 9\-1.
 
 ### <a name="corrective-action"></a>Acción correctiva
 
-Asegúrese de que la aplicación se representa correctamente en el nivel de características de Direct3D 9 @ no__t-01, incluso si espera que se ejecute en un nivel de características superior. Consulta [Desarrollar para distintos niveles de funciones de Direct3D](https://go.microsoft.com/fwlink/p/?LinkID=253575) para obtener más información.
+Asegúrese de que la aplicación se representa correctamente en el nivel de características de Direct3D 9\-1, incluso si espera que se ejecute en un nivel de características superior. Consulta [Desarrollar para distintos niveles de funciones de Direct3D](https://msdn.microsoft.com/library/windows/apps/hh994923.aspx) para obtener más información.
 
 ### <a name="direct3d-trim-after-suspend"></a>Recorte Direct3D tras suspensión
 
-> **Tenga en cuenta**@no__t la prueba 1This solo se aplica a las aplicaciones UWP desarrolladas para Windows 8.1 y versiones posteriores.
+> **Tenga en cuenta**  esta prueba solo se aplica a las aplicaciones UWP desarrolladas para Windows 8.1 y versiones posteriores.
 
 ### <a name="background"></a>Background
 
@@ -595,11 +595,11 @@ Comprueba que los archivos **.winmd** del paquete cumplen las reglas de UWP.
 
 ### <a name="corrective-actions"></a>Acciones correctivas
 
--   **Prueba de atributo de exclusiva:** Asegúrese de que las clases de UWP no implementan interfaces que estén marcadas como exclusivas de otra clase.
--   **Prueba de ubicación de tipos:** Asegúrese de que los metadatos de todos los tipos UWP se encuentran en el archivo winmd que tiene el nombre de coincidencia de espacio de nombres más largo en el paquete de la aplicación.
--   **Nombre de tipo prueba de distinción de mayúsculas y minúsculas:** Comprueba que todos los tipos de UWP tengan nombres únicos con distinción entre mayúsculas y minúsculas en el paquete de la aplicación. Asegúrate también de que ningún nombre de tipo UWP se use además como espacio de nombres de tu paquete de la aplicación.
--   **Prueba de corrección del nombre de tipo:** Comprueba que no hay tipos de UWP en el espacio de nombres global ni en el espacio de nombres de nivel superior de Windows.
--   **Prueba de corrección de metadatos generales:** Asegúrese de que el compilador que usa para generar los tipos está actualizado con las especificaciones de UWP.
+-   **Prueba del atributo ExclusiveTo:** comprueba que las clases de UWP no implementen interfaces de otra clase marcadas como exclusivas (ExclusiveTo).
+-   **Prueba de ubicación de tipo:** comprueba que los metadatos de todos los tipos de UWP estén ubicados en el archivo .winmd cuyo nombre en longitud presente la mayor coincidencia con el espacio de nombres en el paquete de la aplicación.
+-   **Prueba de distinción entre mayúsculas y minúsculas del nombre de tipo:** comprueba que todos los tipos de UWP tengan nombres únicos sin distinción de mayúsculas y minúsculas en el paquete de la aplicación. Asegúrate también de que ningún nombre de tipo UWP se use además como espacio de nombres de tu paquete de la aplicación.
+-   **Prueba de exactitud del nombre de tipo:** comprueba que no haya tipos de UWP en el espacio de nombres global ni en el espacio de nombres de nivel superior de Windows.
+-   **Prueba de exactitud de metadatos general:** comprueba que el compilador que usas para generar los tipos de UWP cumpla con las especificaciones actuales de Windows Runtime.
 -   **Prueba de propiedades:** comprueba que las propiedades de una clase de UWP tengan un método get (los métodos set son opcionales). Asegúrate de que el método get devuelva un tipo de valor que coincida con el tipo del parámetro de entrada del método set, para todas las propiedades de los tipos de UWP.
 
 ## <a name="package-sanity-tests"></a>Pruebas de integridad del paquete
@@ -632,15 +632,15 @@ Sigue estas directrices para que el paquete de la aplicación contenga únicamen
 
 ### <a name="supported-directory-structure-test"></a>Prueba de estructura de directorios admitida
 
-Valida que las aplicaciones no están creando subdirectorios como parte de la instalación de más de un máximo de @ no__t-0PATH.
+Valida que las aplicaciones no crean subdirectorios como parte de la instalación que superan el máximo\-ruta de acceso.
 
 ### <a name="background"></a>Background
 
-Los componentes del sistema operativo (incluido Trident, WWAHost, etc.) están limitados internamente a MAX @ no__t-0PATH para las rutas de acceso del sistema de archivos y no funcionarán correctamente para rutas de acceso más largas.
+Los componentes del sistema operativo (incluido Trident, WWAHost, etc.) se limitan internamente a la ruta de acceso máxima\-para las rutas del sistema de archivos y no funcionarán correctamente para rutas de acceso más largas.
 
 ### <a name="test-details"></a>Detalles de la prueba
 
-Comprueba que ninguna ruta de acceso dentro del directorio de instalación de la aplicación supera el máximo de @ no__t-0PATH.
+Comprueba que ninguna ruta de acceso dentro del directorio de instalación de la aplicación supera el máximo\-ruta de acceso.
 
 ### <a name="corrective-action"></a>Acción correctiva
 

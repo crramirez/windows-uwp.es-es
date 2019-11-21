@@ -6,20 +6,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, temporizador, subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: fb375f280c474ce5a23e10977f96659480cdbb53
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 7bd870858bbccffa07b082384ae6ddea987b67f2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320514"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258927"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Enviar un elemento de trabajo con un temporizador
 
 
 <b>API importantes</b>
 
--   [**Espacio de nombres Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
--   [**Espacio de nombres Windows.System.Threading**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
+-   [**Espacio de nombres Windows. UI. Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
+-   [**Espacio de nombres Windows. System. Threading**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
 
 Obtén información acerca de cómo crear un elemento de trabajo que se ejecute después de que transcurra un temporizador.
 
@@ -27,7 +27,7 @@ Obtén información acerca de cómo crear un elemento de trabajo que se ejecute 
 
 Usa el método [**CreateTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) para crear un temporizador para el elemento de trabajo. Envía un lambda que realice el trabajo y usa el parámetro *delay* para especificar cuánto tiempo espera el grupo de subprocesos antes de poder asignar el elemento de trabajo a un subproceso disponible. El retraso se especifica con una estructura [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan).
 
-> **Tenga en cuenta**  puede usar [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+> **Tenga en cuenta**  puede usar [**CoreDispatcher. RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta en tres minutos:
 
@@ -217,11 +217,11 @@ Si el temporizador sigue contando el tiempo restante pero ya no se necesita el e
 > DelayTimer->Cancel();
 > ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Las aplicaciones de la Plataforma universal de Windows (UWP) no pueden usar **Thread.Sleep** porque puede bloquear el subproceso de interfaz de usuario. En su lugar, puedes usar un [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer) para crear un elemento de trabajo, y esto retrasará la tarea realizada por el elemento de trabajo sin bloquear el subproceso de interfaz de usuario.
 
-Consulta la [muestra de grupo de subprocesos](https://go.microsoft.com/fwlink/p/?linkid=255387) para obtener una muestra de código completa de elementos de trabajo, elementos de trabajo de temporizador y elementos de trabajo periódicos. El ejemplo de código se escribió originalmente para Windows 8.1, pero el código se puede volver a usar en Windows 10.
+Consulta la [muestra de grupo de subprocesos](https://code.msdn.microsoft.com/windowsapps/Pool-Sample-5aa60454) para obtener una muestra de código completa de elementos de trabajo, elementos de trabajo de temporizador y elementos de trabajo periódicos. El código de ejemplo se escribió originalmente para Windows 8.1 pero el código se puede volver a usar en Windows 10.
 
 Para obtener información sobre cómo repetir temporizadores, consulta [Crear un elemento de trabajo periódico](create-a-periodic-work-item.md).
 

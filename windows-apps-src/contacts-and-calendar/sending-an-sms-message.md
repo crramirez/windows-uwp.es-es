@@ -6,18 +6,18 @@ keywords: contactos, SMS, enviar
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 01f6bd595de369afae8ac091a70c857bbd198519
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ea262e026f31e1d690673f9b1d88e882d88ee4aa
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360340"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255002"
 ---
 # <a name="send-an-sms-message"></a>Enviar un mensaje SMS
 
 En este tema se muestra cómo iniciar el cuadro de diálogo de redacción de mensajes SMS para que el usuario pueda enviar un mensaje SMS. Puedes rellenar previamente los campos del SMS con datos antes de mostrar el diálogo. El mensaje no se enviará hasta que el usuario pulse el botón de enviar.
 
-Para llamar a este código, declare el **chat**, **smsSend**, y **chatSystem** funcionalidades en el manifiesto del paquete. Estos son [capacidades restringidas](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) pero puede usar en la aplicación. Necesita aprobación solo si tiene la intención de publicar la aplicación en el Store. Consulte [cuenta tipos, ubicaciones y precios](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).
+Para llamar a este código, declare las capacidades **chat**, **smsSend**y **chatSystem** en el manifiesto del paquete. Se trata de [funcionalidades restringidas](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) , pero se pueden usar en la aplicación. Solo necesita aprobación si tiene previsto publicar la aplicación en la tienda. Consulte [tipos de cuenta, ubicaciones y tarifas](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).
 
 ## <a name="launch-the-compose-sms-dialog"></a>Iniciar el cuadro de diálogo de redacción de SMS
 
@@ -52,7 +52,7 @@ private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipien
 }
 ```
 
-Puede usar el código siguiente para determinar si el dispositivo que se está ejecutando la aplicación es capaz de enviar mensajes SMS.
+Puede usar el siguiente código para determinar si el dispositivo que ejecuta la aplicación puede enviar mensajes SMS.
 
 ```csharp
 if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.ApplicationModel.Chat"))
@@ -63,7 +63,7 @@ if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Applicatio
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de SMS. Para información sobre cómo seleccionar contactos y usarlos como destinatarios de un mensaje SMS, consulta [Seleccionar contactos](selecting-contacts.md). Descarga las [muestras de aplicaciones universales de Windows](https://go.microsoft.com/fwlink/p/?linkid=619979) de GitHub para ver más ejemplos de cómo enviar y recibir mensajes SMS mediante una tarea en segundo plano.
+Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de SMS. Para información sobre cómo seleccionar contactos y usarlos como destinatarios de un mensaje SMS, consulta [Seleccionar contactos](selecting-contacts.md). Descarga las [muestras de aplicaciones universales de Windows](https://github.com/Microsoft/Windows-universal-samples) de GitHub para ver más ejemplos de cómo enviar y recibir mensajes SMS mediante una tarea en segundo plano.
 
 ## <a name="related-topics"></a>Temas relacionados
 

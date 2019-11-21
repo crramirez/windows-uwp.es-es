@@ -5,12 +5,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de anuncios, anuncio nativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cb77f7f2622a06334ee35ec61e18b3b01f98bdb
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 83c174dc682af27a4811a44c826c572f91ec1f06
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335023"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260219"
 ---
 # <a name="native-ads"></a>Anuncios nativos
 
@@ -23,7 +23,7 @@ Para los anunciantes, los anuncios nativos proporcionan ubicaciones de alto rend
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Instala el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp) con Visual Studio 2015 o una versión posterior de Visual Studio. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
+* Instala el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) con Visual Studio 2015 o una versión posterior de Visual Studio. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="integrate-a-native-ad-into-your-app"></a>Integrar un anuncio nativo en la aplicación
 
@@ -47,7 +47,7 @@ Sigue estas instrucciones para integrar un anuncio nativo en la aplicación y co
 
 5.  En una ubicación adecuada de tu aplicación (por ejemplo, en ```MainPage``` o en otra página), declara un objeto [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) y varios campos de cadenas que representen el id. de aplicación y el id. de unidad del anuncio nativo. En el siguiente ejemplo de código, se asignan los campos `myAppId` y `myAdUnitId` a los [valores de prueba](set-up-ad-units-in-your-app.md#test-ad-units) para anuncios nativos.
     > [!NOTE]
-    > Cada **NativeAdsManagerV2** tiene una *unidad de anuncio* correspondiente que se usa por nuestros servicios para proporcionar anuncios al control de anuncio nativo y cada unidad de anuncio consta de un *Id. de unidad de anuncio* e *Id. de aplicación*. En estos pasos, asignas los valores del Id. de la unidad de anuncios de prueba y del Id. de aplicación a tu control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en el Store, primero debe [reemplazar estos valores con los valores en vivo de prueba](#release) desde el centro de partners.
+    > Cada **NativeAdsManagerV2** tiene una *unidad de anuncio* correspondiente que se usa por nuestros servicios para proporcionar anuncios al control de anuncio nativo y cada unidad de anuncio consta de un *Id. de unidad de anuncio* e *Id. de aplicación*. En estos pasos, asignas los valores del Id. de la unidad de anuncios de prueba y del Id. de aplicación a tu control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la tienda, debe [reemplazar estos valores de prueba con valores dinámicos](#release) del centro de Partners.
 
     [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
 
@@ -109,17 +109,17 @@ Después de confirmar que la implementación de anuncios nativo muestra correcta
 
 1.  Asegúrate de que la implementación de anuncio nativo sigue nuestras [directrices para anuncios nativos](ui-and-user-experience-guidelines.md#guidelines-for-native-ads).
 
-2.  En el centro de partners, vaya a la [anuncios en la aplicación](../publish/in-app-ads.md) página y [crear una unidad de anuncio](set-up-ad-units-in-your-app.md#live-ad-units). Especifica el tipo de unidad de anuncio **Nativo**. Anota el identificador de unidad de anuncio y el identificador de la aplicación.
+2.  En el centro de Partners, vaya a la página [anuncios en la aplicación](../publish/in-app-ads.md) y [cree una unidad de anuncio](set-up-ad-units-in-your-app.md#live-ad-units). Especifica el tipo de unidad de anuncio **Nativo**. Anota el identificador de unidad de anuncio y el identificador de la aplicación.
     > [!NOTE]
-    > Los valores de id. de la aplicación para unidades de anuncios de prueba y unidades de anuncios dinámicas de UWP tienen diferentes formatos. Los valores de id. de la aplicación de prueba son GUID. Cuando se crea una unidad de anuncio UWP en vivo en el centro de partners, el valor de identificador de aplicación para la unidad de ad siempre coincide con el identificador de Store para su aplicación (un valor de Id. de Store de ejemplo similar a 9NBLGGH4R315).
+    > Los valores de id. de la aplicación para unidades de anuncios de prueba y unidades de anuncios dinámicas de UWP tienen diferentes formatos. Los valores de id. de la aplicación de prueba son GUID. Cuando se crea una unidad de ad de UWP activa en el centro de Partners, el valor de identificador de la aplicación de la unidad de anuncio coincide siempre con el identificador de almacén de la aplicación (un valor de identificador de almacén de ejemplo es similar a 9NBLGGH4R315).
 
 3. También tienes la opción de habilitar la mediación de anuncios para el anuncio nativo mediante la configuración de las opciones de la sección [Configuración de la mediación](../publish/in-app-ads.md#mediation) de la página [Anuncios desde la aplicación](../publish/in-app-ads.md). La mediación de anuncios te permite maximizar las funcionalidades de ingresos por anuncios y de promoción de la aplicación mostrando anuncios de múltiples redes de anuncio.
 
-4.  En el código, reemplace los valores de unidad de prueba de ad (es decir, el *applicationId* y *adUnitId* parámetros de la [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) constructor) con live valores se genera en el centro de partners.
+4.  En el código, reemplace los valores de unidad de ad de prueba (es decir, los parámetros *ApplicationID* y *AdUnitId* del constructor [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) ) con los valores activos generados en el centro de Partners.
 
-5.  [Enviar la aplicación](../publish/app-submissions.md) para el Store mediante el centro de partners.
+5.  [Envíe la aplicación](../publish/app-submissions.md) a la tienda mediante el centro de Partners.
 
-6.  Revise su [publicidad informes de rendimiento](../publish/advertising-performance-report.md) en el centro de partners.
+6.  Revise los [informes de rendimiento de publicidad](../publish/advertising-performance-report.md) en el centro de Partners.
 
 ## <a name="manage-ad-units-for-multiple-native-ads-in-your-app"></a>Administrar unidades de anuncios para varios anuncios nativos en tu aplicación
 
@@ -132,4 +132,4 @@ Puedes usar varias colocaciones de anuncios nativos en una sola aplicación. En 
 
 * [Directrices para anuncios nativos](ui-and-user-experience-guidelines.md#guidelines-for-native-ads)
 * [Anuncios en aplicaciones](../publish/in-app-ads.md)
-* [Configurar las unidades de anuncios para la aplicación](set-up-ad-units-in-your-app.md)
+* [Configurar unidades de anuncio para la aplicación](set-up-ad-units-in-your-app.md)

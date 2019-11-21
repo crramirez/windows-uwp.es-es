@@ -6,24 +6,24 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f9a253d8470407141c9ae56367d123d638d12c6
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: d23d33eb98f5ed01cf48eebd63a46aba2f923c65
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339825"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257108"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>Detectar rostros en imágenes o vídeos
 
 
 
-la información \[Some está relacionada con el producto publicado previamente que puede modificarse sustancialmente antes de que se publique comercialmente. Microsoft no otorga ninguna garantía, ni expresa ni implícita, con respecto a la información que se proporciona aquí. \]
+\[parte de la información está relacionada con el producto publicado previamente que puede modificarse sustancialmente antes de que se publique comercialmente. Microsoft no otorga ninguna garantía, ni expresa ni implícita, con respecto a la información que se proporciona aquí.\]
 
 Este tema muestra cómo usar el [**FaceDetector**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceDetector) para detectar los rostros de una imagen El [**FaceTracker**](https://docs.microsoft.com/uwp/api/Windows.Media.FaceAnalysis.FaceTracker) está optimizado para realizar el seguimiento facial durante una secuencia de fotogramas de vídeo.
 
 Para conocer un método alternativo de seguimiento facial mediante el [**FaceDetectionEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectionEffect), consulta [Análisis de la escena para la captura multimedia](scene-analysis-for-media-capture.md).
 
-El código de este artículo se adaptó de los ejemplos de [detección de rostro](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) y [seguimiento facial básico](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409). Puedes descargar estos ejemplos para ver el código usado en contexto o para usarlos como punto de partida para tu propia aplicación.
+El código de este artículo se adaptó de los ejemplos de [detección de rostro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicFaceDetection) y [seguimiento facial básico](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicFaceTracking). Puedes descargar estos ejemplos para ver el código usado en contexto o para usarlos como punto de partida para tu propia aplicación.
 
 ## <a name="detect-faces-in-a-single-image"></a>Detectar rostros en una sola imagen
 
@@ -98,8 +98,8 @@ Llama a [**ProcessNextFrameAsync**](https://docs.microsoft.com/uwp/api/windows.m
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Análisis de escenas para captura multimedia](scene-analysis-for-media-capture.md)
-* [Ejemplo de Detección de caras básica](https://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
-* [Ejemplo de seguimiento de caras básico](https://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
+* [Ejemplo de Detección de caras básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicFaceDetection)
+* [Ejemplo de seguimiento de caras básico](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicFaceTracking)
 * [Cámara](camera.md)
 * [Captura básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Reproducción de multimedia](media-playback.md)

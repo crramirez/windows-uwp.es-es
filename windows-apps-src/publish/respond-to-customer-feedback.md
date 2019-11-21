@@ -6,23 +6,23 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
-ms.openlocfilehash: 93d4da26dbb4c5eee1856b3a594214aabbbbaa00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9bc305834381fcdddac6e4eacf12144fd9f189c2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645080"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259942"
 ---
 # <a name="respond-to-customer-feedback"></a>Responder a los comentarios de los clientes
 
 Puedes usar el [informe de comentarios](feedback-report.md) para revisar los comentarios que los clientes de Windows 10 dejaron sobre tu aplicación en el Centro de opiniones y luego responder directamente a los comentarios. Puedes publicar tus respuestas en el Centro de opiniones para que todos lo vean (como comentarios individuales o al actualizar el estado de un comentario y agregar una descripción), para indicar a los clientes sobre nuevas funciones o correcciones de errores o para pedir comentarios más específicos sobre cómo mejorar la aplicación. También puedes enviar tu respuesta por correo electrónico directamente al cliente que envió el comentario.
 
 > [!TIP]
-> Puedes animar a los clientes a que dejen comentarios con la API de comentarios en el [Microsoft Store Services SDK](https://aka.ms/store-em-sdk) para agregar un control que permite que los clientes [inicien el Centro de opiniones desde tu aplicación para UWP](../monetize/launch-feedback-hub-from-your-app.md) directamente. Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella directamente mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
+> Puedes animar a los clientes a que dejen comentarios con la API de comentarios en el [Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) para agregar un control que permite que los clientes [inicien el Centro de opiniones desde tu aplicación para UWP](../monetize/launch-feedback-hub-from-your-app.md) directamente. Ten en cuenta que cualquier cliente que haya descargado tu aplicación en un dispositivo con Windows 10 que admita el Centro de opiniones tiene la posibilidad de dejar comentarios sobre ella directamente mediante la aplicación Centro de opiniones. Por este motivo, es posible que veas comentarios de los clientes en este informe, aunque no hayas solicitado específicamente que te envíen comentarios desde dentro de tu aplicación.
 
 Para proporcionar una respuesta a cualquier comentario, haz clic en el vínculo **Responder a los comentarios** que aparece junto al comentario en tu **informe de comentarios**.
 
-[Centro de partners](https://partner.microsoft.com/dashboard) admite tres opciones para responder a los clientes que proporcionan comentarios sobre la aplicación. Independientemente de la opción que elijas, ten en cuenta que hay un límite de 1000 caracteres para cada respuesta.
+El [centro de Partners](https://partner.microsoft.com/dashboard) admite tres opciones para responder a los clientes que proporcionan comentarios sobre la aplicación. Independientemente de la opción que elijas, ten en cuenta que hay un límite de 1000 caracteres para cada respuesta.
 
 ## <a name="public-comments-in-feedback-hub"></a>Comentarios públicos del Centro de opiniones
 
@@ -44,9 +44,9 @@ Una tercera opción para una respuesta pública es establecer el estado de un co
 
 Para usar esta opción, selecciona el botón de radio **Actualizar estado**. A continuación, selecciona una de las siguientes opciones:
 
-- **Investigar**: Esté al tanto de un problema y busca en él.
-- **Trabajando en ello**: Está en el proceso de solucionar un problema o agregar una característica solicitada.
-- **Completado**: Ha publicado una actualización para corregir el problema o agregar la característica solicitada.
+- **Investigando**: eres consciente de un problema y lo estás investigando.
+- **Trabajando en ello**: estás en proceso de solución de un problema o agregando una característica solicitada.
+- **Completado**: has publicado una actualización para solucionar el problema o agregar una característica solicitada.
 
 Junto con la actualización de estado, puedes escribir un comentario para proporcionar más información, como una estimación de cuándo crees que se habrá solucionado un problema o más información sobre los últimos cambios. Esta descripción aparecerá en la parte superior de la lista de comentarios (y el informe de comentarios mostrará el estado actual y la descripción).
 
@@ -66,4 +66,4 @@ Independientemente del método que uses para responder a los comentarios de un c
 > [!NOTE]
 > Los clientes pueden notificar a Microsoft sobre la recepción de una respuesta inapropiada de un desarrollador a un comentario. Pueden también optar por no recibir las respuestas de los comentarios por correo electrónico.
 
-La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. No obstante, si crees que el contenido de los comentarios de un cliente sobre tu producto es inadecuado, envía una [incidencia de soporte técnico](https://go.microsoft.com/fwlink/p/?LinkID=401178).
+La relación con tus clientes depende de ti. Microsoft no se involucra en las discusiones entre los desarrolladores y los clientes. No obstante, si crees que el contenido de los comentarios de un cliente sobre tu producto es inadecuado, envía una [incidencia de soporte técnico](https://developer.microsoft.com/windows/support).

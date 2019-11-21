@@ -6,27 +6,27 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: a0b81d966dedb9cebaca747eb68cb8815088b6f6
-ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
+ms.openlocfilehash: 03bd2740022864008e87b448682c1025c46d2f2d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816700"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260287"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store
 
 Puedes usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) para agregar las funcionalidades de pruebas y compras desde la aplicación a tu aplicación para la Plataforma universal de Windows (UWP) con el fin de rentabilizar la aplicación y agregar nuevas funcionalidades. Estas API también proporcionan acceso a la información de licencia de la aplicación.
 
-En los artículos de esta sección se ofrecen instrucciones detalladas y ejemplos de código para usar los miembros del espacio de nombres **Windows.ApplicationModel.Store** para varios escenarios comunes. Para obtener una introducción a los conceptos básicos relacionados con las compras desde la aplicación en las aplicaciones para UWP, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md). Para obtener una muestra completa que demuestre cómo implementar pruebas y compras desde la aplicación con el espacio de nombres **Windows.ApplicationModel.Store**, consulta la [muestra de la Store](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
+En los artículos de esta sección se ofrecen instrucciones detalladas y ejemplos de código para usar los miembros del espacio de nombres **Windows.ApplicationModel.Store** para varios escenarios comunes. Para obtener una introducción a los conceptos básicos relacionados con las compras desde la aplicación en las aplicaciones para UWP, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md). Para obtener una muestra completa que demuestre cómo implementar pruebas y compras desde la aplicación con el espacio de nombres **Windows.ApplicationModel.Store**, consulta la [muestra de la Tienda](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
 
 > [!IMPORTANT]
-> El espacio de nombres **Windows.ApplicationModel.Store** ya no se está actualizando con las nuevas características. Si el proyecto de la aplicación está destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio (es decir, está destinado a Windows 10, versión 1607 o posterior), te recomendamos que uses uno el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) en su lugar. Para obtener más información, consulta [Pruebas y compras desde la aplicación](https://docs.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). El espacio de nombres **Windows. ApplicationModel. Store** no se admite en las aplicaciones de escritorio de Windows que usan el [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en aplicaciones o juegos que usan un espacio aislado de desarrollo en el centro de Partners (por ejemplo, este es el caso de cualquier juego que se integra con Xbox Live). Estos productos deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
+> El espacio de nombres **Windows.ApplicationModel.Store** ya no se está actualizando con las nuevas características. Si el proyecto de la aplicación está destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio (es decir, está destinado a Windows 10, versión 1607 o posterior), te recomendamos que uses uno el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) en su lugar. Para obtener más información, consulta [Pruebas y compras desde la aplicación](https://docs.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials). El espacio de nombres **Windows. ApplicationModel. Store** no se admite en las aplicaciones de escritorio de Windows que usan el [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop) o en aplicaciones o juegos que usan un espacio aislado de desarrollo en el centro de Partners (por ejemplo, este es el caso de cualquier juego que se integre con Xbox Live). Estos productos deben usar el espacio de nombres **Windows.Services.Store** para implementar compras desde la aplicación y periodos de prueba.
 
 ## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Introducción a las clases CurrentApp y CurrentAppSimulator
 
 El punto de entrada principal al espacio de nombres **Windows.ApplicationModel.Store** es la clase [CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp). Esta clase proporciona métodos y propiedades estáticas que puedes usar para obtener información acerca de la aplicación actual y sus complementos disponibles, obtener información de licencia de la aplicación actual o sus complementos, comprar una aplicación o un complemento para el usuario actual y realizar otras tareas.
 
-La clase [CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp) obtiene los datos de Microsoft Store, por lo que debes tener una cuenta de desarrollador y la aplicación debe publicarse en la Store antes de poder usar esta clase correctamente en la aplicación. Antes de enviar tu aplicación a la Store, puedes probar el código con una versión simulada de esta clase denominada [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator). Tras probar la aplicación y antes de enviarla a Microsoft Store, debes reemplazar las instancias de **CurrentAppSimulator** por **CurrentApp**. La aplicación no conseguirá la certificación si usa **CurrentAppSimulator**.
+La clase [CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp) obtiene los datos de Microsoft Store, por lo que debes tener una cuenta de desarrollador y la aplicación debe publicarse en la Store antes de poder usar esta clase correctamente en la aplicación. Antes de enviar tu aplicación a la Tienda, puedes probar el código con una versión simulada de esta clase denominada [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator). Tras probar la aplicación y antes de enviarla a Microsoft Store, debes reemplazar las instancias de **CurrentAppSimulator** por **CurrentApp**. La aplicación no conseguirá la certificación si usa **CurrentAppSimulator**.
 
 Cuando se usa **CurrentAppSimulator**, el estado inicial de la licencias y los productos desde la aplicación de tu aplicación se describe en un archivo local en el equipo de desarrollo denominado WindowsStoreProxy.xml. Para obtener más información sobre este archivo, consulta [Uso del archivo WindowsStoreProxy.xml con CurrentAppSimulator](#proxy).
 
@@ -35,8 +35,8 @@ Para obtener más información sobre las tareas comunes que puedes realizar con 
 | Tema       | Descripción                 |
 |----------------------------|-----------------------------|
 | [Excluye o limita características en una versión de prueba](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | Si permites que los clientes puedan usar la aplicación gratis durante un período de prueba, puedes animarles a actualizar a la versión completa de la aplicación excluyendo o limitando algunas características durante el período de prueba. |
-| [Habilitar las compras de productos desde la aplicación](enable-in-app-product-purchases.md)      |  Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí mostramos cómo habilitar estos productos en la aplicación.  |
-| [Habilita las compras de productos desde la aplicación consumibles](enable-consumable-in-app-product-purchases.md)      | Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar) a través de la plataforma de comercio de la Store para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas. |
+| [Habilitar las compras de productos desde la aplicación](enable-in-app-product-purchases.md)      |  Independientemente de que la aplicación sea gratuita o no, puedes vender contenido, otras aplicaciones o nuevas funcionalidades de la aplicación (como el desbloqueo del nivel siguiente de un juego) desde la misma aplicación. Aquí te mostramos cómo habilitar estos productos en la aplicación.  |
+| [Habilita las compras de productos desde la aplicación consumibles](enable-consumable-in-app-product-purchases.md)      | Ofrece productos consumibles desde la aplicación (artículos que se pueden comprar, usar y volver a comprar), a través de la plataforma de comercio de la Tienda para proporcionar a tus clientes una experiencia de compra sólida y de confianza. Esto es especialmente útil para cosas como monedas de juego (oro, monedas, etc.) que se pueden comprar y usar para comprar bonificaciones concretas. |
 | [Administrar un catálogo grande de productos en la aplicación](manage-a-large-catalog-of-in-app-products.md)      |   Si tu aplicación ofrece un catálogo de productos de gran tamaño en la aplicación, también puedes seguir el proceso descrito en este tema para ayudar a administrar dicho catálogo.    |
 | [Usar confirmaciones para comprobar las compras de productos](use-receipts-to-verify-product-purchases.md)      |   Cada transacción de Microsoft Store que tiene como resultado una compra de producto satisfactoria también puede devolver un recibo de transacción que proporcione información sobre el producto enumerado y el coste abonado por el cliente. El acceso a esta información resulta útil en aquellos casos en los que la aplicación debe comprobar que un usuario compró tu aplicación o ha realizado compras de productos desde la aplicación en Microsoft Store. |
 
@@ -48,7 +48,7 @@ Cuando se usa **CurrentAppSimulator**, el estado inicial de la licencias y los p
 
 De forma predeterminada, se crea un archivo WindowsStoreProxy. XML en la siguiente ubicación:%UserProfile%\AppData\Local\Packages\\&lt;carpeta de paquete de aplicación&gt;\LocalState\Microsoft\Windows Store\ApiData. Puedes editar este archivo para definir el escenario que quieres simular las propiedades **CurrentAppSimulator**.
 
-Aunque se pueden modificar los valores de este archivo, te recomendamos que crees tu propio archivo WindowsStoreProxy.xml (en una carpeta de datos de tu proyecto de Visual Studio) para que **CurrentAppSimulator** lo use en su lugar. Al simular la transacción, llama a [ReloadSimulatorAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync) para cargar el archivo. Si no llamas a **ReloadSimulatorAsync** para cargar tu propio archivo WindowsStoreProxy.xml, **CurrentAppSimulator** creará o cargará (pero no sobrescribirá) siempre el archivo WindowsStoreProxy.xml.
+Aunque se pueden modificar los valores de este archivo, te recomendamos que crees tu propio archivo WindowsStoreProxy.xml (en una carpeta de datos de tu proyecto de Visual Studio) para que **CurrentAppSimulator** lo use en su lugar. Al simular la transacción, llama a [ReloadSimulatorAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync) para cargar el archivo. Si no llamas a **ReloadSimulatorAsync** para cargar tu propio archivo WindowsStoreProxy.xml, **CurrentAppSimulator** creará o cargará (pero no sobrescribirá) el archivo WindowsStoreProxy.xml predeterminado.
 
 > [!NOTE]
 > Ten en cuenta que **CurrentAppSimulator** no se inicializa completamente hasta que se completa **ReloadSimulatorAsync**. Y, dado que **ReloadSimulatorAsync** es un método asincrónico, debe tenerse cuidado para evitar la condición de carrera de consultar **CurrentAppSimulator** en un subproceso mientras se inicializa en otro. Una técnica es usar una marca para indicar que la inicialización se ha completado. Debes usar una aplicación que se instale desde Microsoft Store debe usar **CurrentApp** en lugar de **CurrentAppSimulator**, y en ese caso, no se llama a **ReloadSimulatorAsync** y, por tanto, la condición de carrera recién mencionada no se aplica. Por esta razón, diseñe el código para que funcione en ambos casos, tanto de forma asincrónica como sincrónica.
@@ -155,7 +155,7 @@ Esta sección muestra el archivo XSD que define la estructura del archivo Window
 5. Cambia a tu archivo WindowsStoreProxy.xml en Visual Studio.
 6. En el menú **XML**, haz clic en **Esquemas** y busca la fila en la lista del archivo WindowsStoreProxy.xsd. Si la ubicación del archivo es no la que deseas (por ejemplo, si todavía se muestra el archivo temporal), haz clic en **Agregar**. Navega al archivo derecho y haz clic en **Aceptar**. Ahora deberías ver ese archivo en la lista. Asegúrate de que aparece una marca de verificación en la columna **Uso** para ese esquema.
 
-Una vez hayas hecho esto, las modificaciones que realices en WindowsStoreProxy.xml estarán sujetas al esquema. Para obtener más información, consulta [Cómo: Seleccionar los esquemas XML que se van a usar](https://go.microsoft.com/fwlink/p/?LinkId=403014).
+Una vez hayas hecho esto, las modificaciones que realices en WindowsStoreProxy.xml estarán sujetas al esquema. Para obtener más información, consulta [Cómo: Seleccionar los esquemas XML que se van a usar](https://msdn.microsoft.com/library/ms255816).
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -355,12 +355,12 @@ Esta sección describe los elementos y atributos del archivo WindowsStoreProxy.x
 
 El elemento raíz de este archivo es el elemento **CurrentApp**, que representa la aplicación actual. Este elemento contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Necesario  |  Cantidad  |  Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  |  Descripción   |
 |-------------|------------|--------|--------|
 |  [ListingInformation](#listinginformation)  |    Sí        |  1  |  Contiene datos de la descripción de la aplicación.            |
 |  [LicenseInformation](#licenseinformation)  |     Sí       |   1    |   Describe las licencias disponibles para esta aplicación y sus complementos duraderos.     |
-|  [ConsumableInformation](#consumableinformation)  |      No      |   0 o 1   |   Describe los complementos consumibles que están disponibles para esta aplicación.      |
-|  [Mecaniza](#simulation)  |     No       |      0 o 1      |   Describe cómo las llamadas a diversos métodos [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator) funcionarán en la aplicación durante las pruebas.    |
+|  [ConsumableInformation](#consumableinformation)  |      Sin      |   0 o 1   |   Describe los complementos consumibles que están disponibles para esta aplicación.      |
+|  [Mecaniza](#simulation)  |     Sin       |      0 o 1      |   Describe cómo las llamadas a diversos métodos [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator) funcionarán en la aplicación durante las pruebas.    |
 
 <span id="listinginformation" />
 
@@ -370,10 +370,10 @@ Este elemento contiene datos de la descripción de la aplicación. **ListingInfo
 
 **ListingInformation** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Necesario  |  Cantidad  |  Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  |  Descripción   |
 |-------------|------------|--------|--------|
 |  [Aplicaciones](#app-child-of-listinginformation)  |    Sí   |  1   |    Proporciona datos sobre la aplicación.         |
-|  [Producto](#product-child-of-listinginformation)  |    No  |  0 o más   |      Describe un complemento de la aplicación.     |     |
+|  [Producto](#product-child-of-listinginformation)  |    Sin  |  0 o más   |      Describe un complemento de la aplicación.     |     |
 
 <span id="app-child-of-listinginformation"/>
 
@@ -383,12 +383,12 @@ Este elemento describe la licencia de la aplicación. **App** es un elemento sec
 
 **App** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Necesario  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
-|  **AppId**  |    Sí   |  1   |   El GUID que identifica la aplicación en la Store. Puede ser cualquier GUID para pruebas.        |
-|  **LinkUri**  |    Sí  |  1   |    El URI de la página de descripción en la Store. Puede ser cualquier identificador URI válido para pruebas.         |
+|  **AppId**  |    Sí   |  1   |   El GUID que identifica la aplicación en la Tienda. Puede ser cualquier GUID para pruebas.        |
+|  **LinkUri**  |    Sí  |  1   |    El URI de la página de descripción en la Tienda. Puede ser cualquier identificador URI válido para pruebas.         |
 |  **CurrentMarket**  |    Sí  |  1   |    El país o la región del cliente.         |
-|  **AgeRating**  |    Sí  |  1   |     Un número entero que representa la clasificación por edades mínima de la aplicación. Este es el mismo valor que especificaría en el centro de Partners al enviar la aplicación. Los valores usados por la Store son: 3, 7, 12 y 16. Para obtener más información sobre estas clasificaciones, consulta [Clasificación por edades](../publish/age-ratings.md).        |
+|  **AgeRating**  |    Sí  |  1   |     Un número entero que representa la clasificación por edades mínima de la aplicación. Este es el mismo valor que especificaría en el centro de Partners al enviar la aplicación. Los valores usados por la Tienda son: 3, 7, 12 y 16. Para obtener más información sobre estas clasificaciones, consulta [Clasificación por edades](../publish/age-ratings.md).        |
 |  [MarketData](#marketdata-child-of-app)  |    Sí  |  1 o más      |    Contiene información sobre la aplicación para un país o una región determinados. Para cada país o región en que se muestra la aplicación, debes incluir un elemento **MarketData**.       |    |
 
 <span id="marketdata-child-of-app"/>
@@ -399,19 +399,19 @@ Este elemento, proporciona información acerca de la aplicación para un país o
 
 **MarketData** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Necesario  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  **Nombre**  |    Sí   |  1   |   El nombre de la aplicación en este país o región.        |
 |  **Descripción**  |    Sí  |  1   |      La descripción de la aplicación para este país o región.       |
 |  **Tarifas**  |    Sí  |  1   |     El precio de la aplicación en este país o región.        |
 |  **CurrencySymbol**  |    Sí  |  1   |     El símbolo de la moneda que se usa en este país o región.        |
-|  **CurrencyCode**  |    No  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  |
+|  **CurrencyCode**  |    Sin  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  |
 
 **MarketData** tiene los atributos siguientes.
 
-|  Atributo  |  Necesario  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
-|  **XML: lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
+|  **xml:lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
 <span id="product-child-of-listinginformation"/>
 
@@ -421,11 +421,11 @@ Este elemento describe un complemento de la aplicación. **Product** es un eleme
 
 **Product** tiene los atributos siguientes.
 
-|  Atributo  |  Necesario  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **IdProducto**  |    Sí        |    Contiene la cadena usada por la aplicación para identificar el complemento.           |
-|  **LicenseDuration**  |    No        |    Indica el número de días durante los cuales la licencia será válida tras adquirir el artículo. La fecha de caducidad de la nueva licencia creada por la compra de un producto es la fecha de compra más la duración de la licencia. Este atributo se usa solo si el atributo **ProductType ofrece** atributo es **Durable**; este atributo se omite en el caso de complementos consumibles.           |
-|  **ProductType**  |    No        |    Contiene un valor para identificar la persistencia del producto desde la aplicación. Los valores admitidos son **Durable** (el predeterminado) y **Consumible**. En el caso de los tipos duraderos (Durable), un elemento [Product](#product-child-of-licenseinformation) identifica información adicional bajo [LicenseInformation](#licenseinformation); en el caso los tipos consumibles, un elemento [Product](#product-child-of-consumableinformation) muestra información adicional bajo [ConsumableInformation](#consumableinformation).           |  |
+|  **LicenseDuration**  |    Sin        |    Indica el número de días durante los cuales la licencia será válida tras adquirir el artículo. La fecha de caducidad de la nueva licencia creada por la compra de un producto es la fecha de compra más la duración de la licencia. Este atributo se usa solo si el atributo **ProductType ofrece** atributo es **Durable**; este atributo se omite en el caso de complementos consumibles.           |
+|  **ProductType**  |    Sin        |    Contiene un valor para identificar la persistencia del producto desde la aplicación. Los valores admitidos son **Durable** (el predeterminado) y **Consumible**. En el caso de los tipos duraderos (Durable), un elemento [Product](#product-child-of-licenseinformation) identifica información adicional bajo [LicenseInformation](#licenseinformation); en el caso los tipos consumibles, un elemento [Product](#product-child-of-consumableinformation) muestra información adicional bajo [ConsumableInformation](#consumableinformation).           |  |
 
 <span id="marketdata-child-of-product"/>
 
@@ -435,22 +435,22 @@ Este elemento, proporciona información acerca del complemento para un país o u
 
 **MarketData** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Necesario  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  **Nombre**  |    Sí   |  1   |   El nombre del complemento en este país o región.        |
 |  **Tarifas**  |    Sí  |  1   |     El precio del complemento en este país o región.        |
 |  **CurrencySymbol**  |    Sí  |  1   |     El símbolo de la moneda que se usa en este país o región.        |
-|  **CurrencyCode**  |    No  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  
-|  **Descripción**  |    No  |   0 o 1   |      La descripción del complemento para este país o región.       |
-|  **Etiqueta**  |    No  |   0 o 1   |      Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) (también denominados etiqueta) para el complemento.       |
-|  **Palabras clave**  |    No  |   0 o 1   |      Contiene hasta 10 elementos **Keyword** que contienen las [palabras clave](../publish/enter-add-on-properties.md#keywords) para el complemento.       |
-|  **ImageUri**  |    No  |   0 o 1   |      El [identificador URI de la imagen](../publish/create-add-on-store-listings.md#icon) en la descripción del complemento.           |  |
+|  **CurrencyCode**  |    Sin  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  
+|  **Descripción**  |    Sin  |   0 o 1   |      La descripción del complemento para este país o región.       |
+|  **Etiqueta**  |    Sin  |   0 o 1   |      Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) (también denominados etiqueta) para el complemento.       |
+|  **Palabras clave**  |    Sin  |   0 o 1   |      Contiene hasta 10 elementos **Keyword** que contienen las [palabras clave](../publish/enter-add-on-properties.md#keywords) para el complemento.       |
+|  **ImageUri**  |    Sin  |   0 o 1   |      El [identificador URI de la imagen](../publish/create-add-on-store-listings.md#icon) en la descripción del complemento.           |  |
 
 **MarketData** tiene los atributos siguientes.
 
-|  Atributo  |  Necesario  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
-|  **XML: lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
+|  **xml:lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
 <span id="licenseinformation"/>
 
@@ -460,10 +460,10 @@ Este elemento describe las licencias disponibles para esta aplicación y sus pro
 
 **LicenseInformation** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Necesario  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  [Aplicaciones](#app-child-of-licenseinformation)  |    Sí   |  1   |    Describe la licencia de la aplicación.         |
-|  [Producto](#product-child-of-licenseinformation)  |    No  |  0 o más   |      Describe el estado de la licencia de un complemento duradero en la aplicación.         |   |
+|  [Producto](#product-child-of-licenseinformation)  |    Sin  |  0 o más   |      Describe el estado de la licencia de un complemento duradero en la aplicación.         |   |
 
 La tabla siguiente muestra cómo simular algunas condiciones comunes mediante la combinación de valores que estén en los elementos **App** y **Product**.
 
@@ -482,11 +482,11 @@ Este elemento describe la licencia de la aplicación. **App** es un elemento sec
 
 **App** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Necesario  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Sí   |  1   |    Describe el estado actual de la licencia de esta aplicación. El valor **true** indica que la licencia es válida; **false** indica que la licencia no es válida. Normalmente, este valor es **true** tanto si la aplicación tiene un modo de prueba como si no.  Establece este valor en **false** para probar cómo se comporta la aplicación cuando tiene una licencia no válida.           |
 |  **IsTrial**  |    Sí  |  1   |      Describe el estado actual del período de prueba de esta aplicación. El valor **true** indica que la aplicación se está usando durante el período de prueba; **false** indica que la aplicación no está en el período de prueba, bien porque se ha adquirido la aplicación o bien porque ha expirado dicho período de prueba.         |
-|  **ExpirationDate**  |    No  |  0 o 1       |     La fecha en la que expira el período de prueba de esta aplicación, en hora universal coordinada (UTC). La fecha debe expresarse como: aaaa-mm-ddThh:mm:ss.ssZ. Por ejemplo, las 05:00 del 19 de enero de 2015 se especificaría como 2015-01-19T05:00:00.00Z. Este elemento es obligatorio si **IsTrial** es **true**. De lo contrario, no es obligatorio.          |  |
+|  **ExpirationDate**  |    Sin  |  0 o 1       |     La fecha en la que expira el período de prueba de esta aplicación, en hora universal coordinada (UTC). La fecha debe expresarse como: aaaa-mm-ddThh:mm:ss.ssZ. Por ejemplo, las 05:00 del 19 de enero de 2015 se especificaría como 2015-01-19T05:00:00.00Z. Este elemento es obligatorio si **IsTrial** es **true**. De lo contrario, no es obligatorio.          |  |
 
 <span id="product-child-of-licenseinformation"/>
 
@@ -496,17 +496,17 @@ Este elemento describe el estado de la licencia de un complemento duradero en la
 
 **Product** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Necesario  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Sí   |  1     |    Describe el estado actual de la licencia de este complemento. El valor **true** indica que el complemento se puede usar; por su parte, **false** indica que el complemento no se puede usar o no se ha adquirido.           |
-|  **ExpirationDate**  |    No   |  0 o 1     |     La fecha en la que caduca el complemento, en hora universal coordinada (UTC). La fecha debe expresarse como: aaaa-mm-ddThh:mm:ss.ssZ. Por ejemplo, las 05:00 del 19 de enero de 2015 se especificaría como 2015-01-19T05:00:00.00Z. Si este elemento está presente, el complemento tiene una fecha de caducidad. Si no está presente, el complemento no caduca.  |  
+|  **ExpirationDate**  |    Sin   |  0 o 1     |     La fecha en la que caduca el complemento, en hora universal coordinada (UTC). La fecha debe expresarse como: aaaa-mm-ddThh:mm:ss.ssZ. Por ejemplo, las 05:00 del 19 de enero de 2015 se especificaría como 2015-01-19T05:00:00.00Z. Si este elemento está presente, el complemento tiene una fecha de caducidad. Si no está presente, el complemento no caduca.  |  
 
 **Product** tiene los atributos siguientes.
 
-|  Atributo  |  Necesario  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **IdProducto**  |    Sí        |   Contiene la cadena usada por la aplicación para identificar el complemento.            |
-|  **OfferId**  |     No       |   Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el complemento. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
+|  **OfferId**  |     Sin       |   Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el complemento. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
 
 <span id="simulation"/>
 
@@ -516,9 +516,9 @@ Este elemento describe cómo las llamadas a diversos métodos [CurrentAppSimulat
 
 **Simulation** tiene los atributos siguientes.
 
-|  Atributo  |  Necesario  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
-|  **SimulationMode**  |    No        |      Los valores pueden ser **Interactive** o **Automatic**. Cuando este atributo se establece en **Automatic**, los métodos devolverán automáticamente los códigos de error HRESULT especificados. Esto puede usarse cuando se ejecutan casos de prueba automatizados.       |
+|  **SimulationMode**  |    Sin        |      Los valores pueden ser **Interactive** o **Automatic**. Cuando este atributo se establece en **Automatic**, los métodos devolverán automáticamente los códigos de error HRESULT especificados. Esto puede usarse cuando se ejecutan casos de prueba automatizados.       |
 
 <span id="defaultresponse"/>
 
@@ -528,7 +528,7 @@ Este elemento describe el código de error predeterminado devuelto por un métod
 
 **DefaultResponse** tiene los atributos siguientes.
 
-|  Atributo  |  Necesario  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **MethodName**  |    Sí        |   Asigna este atributo a uno de los valores de enumeración que se muestran para el tipo **StoreMethodName** en el [esquema](#schema). Cada uno de estos valores de enumeración representa un método **CurrentAppSimulator** para el que deseas simular un valor devuelto de código de error en la aplicación durante las pruebas. Por ejemplo, el valor **RequestAppPurchaseAsync_GetResult** indica que deseas simular el valor devuelto de código de error del método [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.requestapppurchaseasync).            |
 |  **Valor**  |     Sí       |   Asigna este atributo a uno de los valores de enumeración que se muestran para el tipo **ResponseCodes** en el [esquema](#schema). Cada uno de estos valores de enumeración representa el código de error que deseas recuperar para el método asignado al atributo **MethodName** para este elemento **DefaultResponse**.           |
@@ -547,9 +547,9 @@ Este elemento describe un complemento consumible. **Product** es un elemento sec
 
 **Product** tiene los atributos siguientes.
 
-|  Atributo  |  Necesario  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **IdProducto**  |    Sí        |   Contiene la cadena usada por la aplicación para identificar el complemento consumible.            |
 |  **TransactionId**  |     Sí       |   Contiene un GUID (en forma de cadena) usado por la aplicación para realizar un seguimiento de la transacción de compra de un consumible por el proceso de suministro. Consulta [Habilita compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)            |
 |  **Estado**  |      Sí      |  Contiene la cadena usada por la aplicación para indicar el estado de suministro de un consumible. Los valores pueden ser **Active**, **PurchaseReverted**, **PurchasePending** o **ServerError**.             |
-|  **OfferId**  |     No       |    Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el consumible. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
+|  **OfferId**  |     Sin       |    Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el consumible. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |

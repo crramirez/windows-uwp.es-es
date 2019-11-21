@@ -6,19 +6,19 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, problemas conocidos, solución de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 029d595c41301e62f74c9b08b633bb22bfb12786
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 51192e13c63bf3141989cfbf5d9ebd7fbaf13641
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641070"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260246"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
 
 En este tema se muestran los problemas conocidos con la versión actual del SDK de Microsoft Advertising. Para obtener una guía sobre la solución de problemas, consulta los temas siguientes.
 
-* [Guía de solución de JavaScript y HTML](html-and-javascript-troubleshooting-guide.md)
-* [XAML y C# Guía de solución de problemas](xaml-and-c-troubleshooting-guide.md)
+* [Guía de solución de problemas de HTML y JavaScript](html-and-javascript-troubleshooting-guide.md)
+* [Guía de C# solución de problemas y XAML](xaml-and-c-troubleshooting-guide.md)
 
 ## <a name="adcontrol-interface-unknown-in-xaml"></a>Interfaz de AdControl desconocida en XAML
 
@@ -40,15 +40,15 @@ Si has creado un anuncio recientemente (menos de un día), podría no estar disp
 
 Existen muchos motivos para que no veas anuncios, incluidos errores de red. Entre otros motivos se incluyen:
 
-* Seleccionar una unidad de anuncio en el centro de partners con un tamaño que sea mayor o menor que el tamaño de la **elemento AdControl** en el código de la aplicación.
+* Seleccionar una unidad de anuncio en el centro de Partners con un tamaño mayor o menor que el tamaño del **control** de la aplicación en el código de la aplicación.
 
 * Los anuncios no aparecerán si usas un [valor del modo de prueba](set-up-ad-units-in-your-app.md#test-ad-units) para tu identificador de unidad de anuncio cuando se ejecuta una aplicación dinámica.
 
 * Si has creado un nuevo identificador de unidad de anuncio en última media hora, puede que no veas un anuncio hasta que los servidores propaguen nuevos datos a través del sistema. Los identificadores existentes que han mostrado anuncios antes deberían mostrar anuncios de inmediato.
 
-Si puedes ver anuncios de prueba en la aplicación, el código funciona y es capaz de mostrar anuncios. Si tienes problemas, ponte en contacto con [soporte técnico](https://developer.microsoft.com/en-us/windows/support). En la página, elija **póngase en contacto con nosotros**.
+Si puedes ver anuncios de prueba en la aplicación, el código funciona y es capaz de mostrar anuncios. Si tienes problemas, ponte en contacto con [soporte técnico](https://developer.microsoft.com/en-us/windows/support). En esa página, elija **póngase en contacto con nosotros**.
 
-También puedes publicar una pregunta en el [foro](https://go.microsoft.com/fwlink/p/?LinkId=401266).
+También puedes publicar una pregunta en el [foro](https://go.microsoft.com/fwlink/?LinkID=401264).
 
 ## <a name="test-ads-are-showing-in-your-app-instead-of-live-ads"></a>En la aplicación se muestran anuncios de prueba, en lugar de anuncios dinámicos
 
@@ -58,7 +58,7 @@ Pueden mostrarse anuncios de prueba, incluso cuando esperas anuncios dinámicos.
 
 * Las aplicaciones de prueba o las aplicaciones que se ejecutan en el emulador no mostrará anuncios dinámicos.
 
-Cuando una unidad de anuncios en directo está atendiendo a los anuncios de prueba, se muestra el estado de la unidad del anuncio **activo y los servidores de prueba anuncios** en el centro de partners. Esto no corresponde actualmente a las aplicaciones para teléfonos.
+Cuando una unidad de anuncios en directo está atendiendo a los anuncios de prueba, el estado de la unidad de anuncio muestra los **anuncios de prueba activos y de servicio** en el centro de Partners. Esto no corresponde actualmente a las aplicaciones para teléfonos.
 
 
 <span id="reference_errors"/>
@@ -67,7 +67,7 @@ Cuando una unidad de anuncios en directo está atendiendo a los anuncios de prue
 
 Al usar el SDK de Microsoft Advertising, no puedes dirigirte a **Cualquier CPU** en tu proyecto. Si el proyecto se dirige a la plataforma **Cualquier CPU**, puede que veas una advertencia después de agregar la referencia similar a esta.
 
-![ReferenceError\-Explorador de soluciones](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
+![ReferenceError\-solutionexplorer](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
 
 Para quitar esta advertencia, actualiza el proyecto para usar una salida de compilación específica de la arquitectura (por ejemplo, **x86**). Usa **Configuration Manager** para establecer los destinos de la plataforma para configuraciones de depuración y lanzamiento.
 
@@ -91,7 +91,7 @@ Establecer las propiedades relacionadas con los bordes heredados por **AdControl
 
 ## <a name="more-information"></a>Más información
 
-Para obtener más información acerca de los últimos problemas conocidos y para publicar preguntas relacionadas con el SDK de Microsoft Advertising, visita el [foro](https://go.microsoft.com/fwlink/p/?LinkId=401266).
+Para obtener más información acerca de los últimos problemas conocidos y para publicar preguntas relacionadas con el SDK de Microsoft Advertising, visita el [foro](https://go.microsoft.com/fwlink/?LinkID=401264).
 
  
 

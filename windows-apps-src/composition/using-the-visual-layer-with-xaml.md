@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c11a812aaa62e9fa4d27fddc1d55739fe491bd20
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 1d6c1b4c477bfe5c4f584227491ef5a94e375fa2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340847"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255658"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>Uso de la capa visual con XAML
 
@@ -47,10 +47,10 @@ Para ver ejemplos de código, consulta [**XamlLight**](https://docs.microsoft.co
 
 [**ElementCompositionPreview**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview) es una clase estática que proporciona funcionalidad de interoperabilidad de capa visual y XAML. Para obtener información general sobre la capa visual y sus funcionalidades, consulta [Capa visual](https://docs.microsoft.com/windows/uwp/graphics/visual-layer). La clase **ElementCompositionPreview** proporciona los siguientes métodos:
 
--   [**GetElementVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Obtener un elemento visual de "documentos" que se usa para representar este elemento
--   [**SetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): Establece un elemento visual "Hand" como el último elemento secundario del árbol visual de este elemento. Este objeto visual se dibujará encima del resto del elemento. 
--   [**GetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Recuperación del conjunto visual mediante **SetElementChildVisual**
--   [**GetScrollViewerManipulationPropertySet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): Obtiene un objeto que se puede usar para crear animaciones 60fps basadas en el desplazamiento de desplazamiento en un **ScrollViewer** .
+-   [**GetElementVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): obtener un elemento visual de "documentos" que se usa para representar este elemento
+-   [**SetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): establece un elemento visual "Hand" como el último elemento secundario del árbol visual de este elemento. Este objeto visual se dibujará encima del resto del elemento. 
+-   [**GetElementChildVisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): recuperar el conjunto visual mediante **SetElementChildVisual**
+-   [**GetScrollViewerManipulationPropertySet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): obtiene un objeto que se puede usar para crear animaciones 60fps basadas en el desplazamiento de desplazamiento en un **ScrollViewer** .
 
 ## <a name="remarks-on-elementcompositionpreviewgetelementvisual"></a>Comentarios sobre ElementCompositionPreview.GetElementVisual
 
@@ -151,7 +151,7 @@ Aplica una sombra paralela con píxeles perfectos a un **UIElement**, por ejempl
 3. Configura la **DropShadow** para que obtenga su forma del elemento de destino a través de una máscara.
     - De manera predeterminada, la **DropShadow** es rectangular, por lo que esto no es necesario si el destino es rectangular.
 4. Adjunta la sombras a un nuevo objeto **SpriteVisual**y establece dicho objeto **SpriteVisual** como elemento secundario del elemento host.
-5. Enlaza el tamaño del objeto **SpriteVisual** con el tamaño del host mediante **ExpressionAnimation**.
+5. Enlaza el tamaño del objeto **SpriteVisual** con el tamaño del host mediante una **ExpressionAnimation**.
 
 ```xaml
 <Grid Width="200" Height="200">
@@ -199,7 +199,7 @@ private void InitializeDropShadow(UIElement shadowHost, Shape shadowTarget)
 }
 ```
 
-Las siguientes dos descripciones muestran los equivalentes [C++ / WinRT](https://aka.ms/cppwinrt) y [C++ / CX](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx) del código de C&#35 anterior con la misma estructura XAML.
+Las siguientes dos descripciones muestran los equivalentes [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) y [C++ / CX](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx) del código de C&#35 anterior con la misma estructura XAML.
 
 ```cppwinrt
 #include <winrt/Windows.UI.Composition.h>
@@ -292,7 +292,7 @@ Crea un efecto que desenfoque y aporte tonos al contenido en segundo plano. Ten 
 3.  Crea un **CompositionEffectBrush** basado en el árbol de efectos.
 4.  Establece la entrada del **CompositionEffectBrush** en un **CompositionBackdropBrush**, lo que permite aplicar un efecto al contenido que hay detrás de un objeto **SpriteVisual**.
 5.  Establece el objeto **CompositionEffectBrush** como el contenido de un nuevo objeto **SpriteVisual** y establece el objeto **SpriteVisual** como el elemento secundario del elemento host. Como alternativa, podrías usar un objeto XamlCompositionBrushBase.
-6.  Enlaza el tamaño del objeto **SpriteVisual** con el tamaño del host mediante **ExpressionAnimation**.
+6.  Enlaza el tamaño del objeto **SpriteVisual** con el tamaño del host mediante una **ExpressionAnimation**.
 
 ```xaml
 <Grid Width="300" Height="300" Grid.Column="1">

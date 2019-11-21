@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ff0eca18eeab72dbf0a2f9a539e452a5923392d
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: d3dcd162e0a139328ef5885ac26edec04a279134
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322016"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259808"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
-\[ Se actualizó con las aplicaciones para UWP en Windows 10. Para artículos de Windows 8.x, consulte el [archive](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ actualizado para aplicaciones para UWP en Windows 10. Para artículos de Windows 8. x, consulte el [archivo](https://docs.microsoft.com/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN) \]
 
 <b>API importantes</b>
 
@@ -31,7 +31,7 @@ Crea un elemento de trabajo mediante una llamada a [**RunAsync**](https://docs.m
 Hay tres versiones de [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync) disponibles para que puedas especificar opcionalmente la prioridad del elemento de trabajo, así como controlar si se ejecuta simultáneamente con otros elementos de trabajo.
 
 >[!NOTE]
->Use [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso el subproceso de UI y mostrar el progreso del elemento de trabajo.
+>Use [**CoreDispatcher. RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso al subproceso de la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda para que realice el trabajo:
 
@@ -350,7 +350,7 @@ Ten en cuenta que el controlador de finalización comprueba si el elemento de tr
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Para más información, descargue el código de este inicio rápido en el [creación un grupo de subprocesos de trabajo de ejemplo de elemento](https://go.microsoft.com/fwlink/p/?LinkID=328569) escrita para Windows 8.1 y volver a usar el código fuente en un archivo de win\_aplicación unap Windows 10.
+Puede obtener más información si descarga el código de esta guía de inicio rápido en el [ejemplo de creación de un elemento de trabajo ThreadPool](https://code.msdn.microsoft.com/windowsapps/Creating-a-ThreadPool-work-9665cdff) escrito para Windows 8.1 y vuelve a usar el código fuente en una aplicación Win\_Unap de Windows 10.
 
 ## <a name="related-topics"></a>Temas relacionados
 

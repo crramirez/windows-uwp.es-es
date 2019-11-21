@@ -8,12 +8,12 @@ keywords: dispositivo, digitalizador, entrada, interacción
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 982f787aaef05dabdc356af906e80b28085b5a2d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b2a17d1f4664326cb54d9c53d828eb372ef93fe4
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363392"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257893"
 ---
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 
@@ -27,7 +27,7 @@ Identifica los dispositivos de entrada que se conectan a un dispositivo de la Pl
 
 El espacio de nombres [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) contiene la clase [**MouseCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseCapabilities) que se usa para recuperar las propiedades expuestas por uno o varios dispositivos mouse conectados. Solo es necesario crear un nuevo objeto **MouseCapabilities** y obtener las propiedades que te interesan.
 
-**Tenga en cuenta**  los valores devueltos por las propiedades que se tratan aquí se basan en todos los mouse detectados: Las propiedades booleanas devuelven distinto de cero si al menos un mouse es compatible con una función específica, y las propiedades numéricas devuelven el valor máximo expuesto por cualquier un mouse.
+**Nota**  los valores devueltos por las propiedades que se describen aquí se basan en todos los ratones detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un mouse admite una capacidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un mouse.
 
  
 
@@ -65,7 +65,7 @@ private void GetKeyboardProperties()
 
 El espacio de nombres [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) contiene la clase [**TouchCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.TouchCapabilities) que se usa para recuperar si hay algún digitalizador táctil conectado. Solo es necesario crear un nuevo objeto **TouchCapabilities** y obtener las propiedades que te interesan.
 
-**Tenga en cuenta**  los valores devueltos por las propiedades que se tratan aquí se basan en todos los digitalizadores táctiles detectados: Las propiedades booleanas devuelven distinto de cero si al menos un digitalizador admite una función específica, y las propiedades numéricas devuelven el valor máximo expuesto por cualquier un digitalizador.
+**Nota**  los valores devueltos por las propiedades que se describen aquí se basan en todos los digitalizadores táctiles detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un digitalizador admite una funcionalidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un digitalizador.
 
  
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 El espacio de nombres [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) contiene la clase [**PointerDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) que se usa para recuperar si hay dispositivos detectados compatibles con la entrada de puntero (táctil, teclado táctil, mouse o pluma). Solo tienes que crear un nuevo objeto **PointerDevice** y obtener las propiedades que te interesan.
 
-**Tenga en cuenta**  los valores devueltos por las propiedades que se tratan aquí se basan en todos los dispositivos detectados puntero: Las propiedades booleanas devuelven distinto de cero si al menos un dispositivo es compatible con una función específica, y las propiedades numéricas devuelven el valor máximo expuesto por cualquier dispositivo de un puntero.
+**Nota**  los valores devueltos por las propiedades que se describen aquí se basan en todos los dispositivos de puntero detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un dispositivo admite una funcionalidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un dispositivo de puntero.
 
 En el código siguiente se usa una tabla para mostrar las propiedades y los valores correspondientes a cada dispositivo señalador.
 
@@ -178,12 +178,12 @@ private void GetPointerDevices()
 
 
 **Ejemplos**
-* [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
 
 **Ejemplos de archivo**
-* [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
  
 
  

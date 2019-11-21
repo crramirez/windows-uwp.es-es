@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cc13470c1f07d1ee420253c8a147ff7a5c3fc40
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: ab690fa3964fd9e9c517aedb6adb9e05154fad15
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318765"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259464"
 ---
-# <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Inicio automático con la reproducción automática
+# <a name="span-iddev_launch_resumeauto-launching_with_autoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Inicio automático con reproducción automática
 
 Puedes usar **Reproducción automática** para ofrecer tu aplicación como una opción cuando un usuario conecte un dispositivo a su PC. Esto incluye dispositivos que no son de volumen, como una cámara o un reproductor multimedia, o dispositivos de volumen, como una unidad USB, una tarjeta SD o un DVD. También puedes usar **Reproducción automática** para ofrecer tu aplicación como una opción cuando los usuarios compartan archivos entre dos equipos mediante proximidad (pulsación).
 
-> **Tenga en cuenta**  si es un fabricante de dispositivos y desea asociar su [aplicación de dispositivo de Microsoft Store](https://go.microsoft.com/fwlink/p/?LinkID=301381) como un **reproducción automática** controlador para el dispositivo, puede identificar que la aplicación en el metadatos del dispositivo. Para obtener más información, consulta [AutoPlay for Microsoft Store device apps](https://go.microsoft.com/fwlink/p/?LinkId=306684) (Reproducción automática de aplicaciones para dispositivo de Microsoft Store).
+> **Tenga en cuenta**  si es un fabricante de dispositivos y desea asociar la [aplicación de dispositivo Microsoft Store](https://msdn.microsoft.com/library/windows/hardware/Dn265154(v=vs.85).aspx) como un controlador de **reproducción automática** para el dispositivo, puede identificar esa aplicación en los metadatos del dispositivo. Para obtener más información, consulta [AutoPlay for Microsoft Store device apps](https://msdn.microsoft.com/library/windows/hardware/dn265136(v=vs.85).aspx) (Reproducción automática de aplicaciones para dispositivo de Microsoft Store).
 
 ## <a name="register-for-autoplay-content"></a>Registrar una aplicación para el contenido de Reproducción automática
 
@@ -35,21 +35,21 @@ Reproducción automática también genera eventos de contenido para contenido co
  
 Cuando se comparten archivos mediante proximidad, la propiedad **Files** del objeto **FileActivatedEventArgs** contiene una referencia a una carpeta raíz que incluye todos los archivos compartidos.
 
-### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>Paso 1: Cree un nuevo proyecto y agregue las declaraciones de reproducción automática
+### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>Paso 1: Crear un nuevo proyecto y agregar declaraciones de Reproducción automática
 
 1.  Abre Microsoft Visual Studio y selecciona **Nuevo proyecto** en el menú **Archivo**. En la sección **Visual C#** , en **Windows**, selecciona **Aplicación vacía (Windows universal)** . Asigna un nombre a la aplicación **AutoPlayDisplayOrCopyImages** y haz clic en **Aceptar**.
-2.  Abre el archivo Package.appxmanifest y selecciona la pestaña **Capacidades**. Selecciona las funcionalidades **Almacenamiento extraíble** y **Biblioteca de imágenes**. Esta acción otorga a la aplicación acceso a dispositivos de almacenamiento extraíbles para la memoria de la cámara y acceso a las imágenes locales.
-3.  En el archivo de manifiesto, selecciona la pestaña **Declaraciones**. En la lista desplegable **Declaraciones disponibles**, selecciona **Contenido de Reproducción automática** y después haz clic en **Agregar**. Selecciona el elemento **Contenido de Reproducción automática** que se agregó a la lista **Declaraciones admitidas**.
-4.  Una declaración de **Contenido de Reproducción automática** identifica tu aplicación como opción cuando Reproducción automática genera un evento de contenido. El evento se basa en el contenido de un dispositivo de volumen como un DVD o una unidad USB. Reproducción automática examina el contenido del dispositivo de volumen y determina qué evento de contenido generará. Si la raíz del volumen contiene un DCIM, AVCHD o PRIVATE\\carpeta ACHD, o si un usuario ha habilitado **elegir qué hacer con cada tipo de medio** en el Panel de Control de reproducción automática y las imágenes se encuentran en la raíz del volumen, a continuación, Reproducción automática provoca la **ShowPicturesOnArrival** eventos. En la sección **Acciones de inicio**, especifica los valores de la Tabla 1 a continuación para la primera acción de inicio.
+2.  Abre el archivo Package.appxmanifest y selecciona la pestaña **Funcionalidades**. Selecciona las funcionalidades **Almacenamiento extraíble** y **Biblioteca de imágenes**. Esta acción otorga a la aplicación acceso a dispositivos de almacenamiento extraíbles para la memoria de la cámara y acceso a las imágenes locales.
+3.  En el archivo de manifiesto, selecciona la pestaña **Declaraciones**. En la lista desplegable **Declaraciones disponibles**, selecciona **Contenido de Reproducción automática** y haz clic en **Agregar**. Selecciona el elemento **Contenido de Reproducción automática** que se agregó a la lista **Declaraciones admitidas**.
+4.  Una declaración de **Contenido de Reproducción automática** identifica tu aplicación como opción cuando Reproducción automática genera un evento de contenido. El evento se basa en el contenido de un dispositivo de volumen como un DVD o una unidad USB. Reproducción automática examina el contenido del dispositivo de volumen y determina qué evento de contenido generará. Si la raíz del volumen contiene una carpeta DCIM, AVCHD o PRIVAte\\ACHD, o si un usuario ha habilitado **elegir qué hacer con cada tipo de medio** en el panel de control de reproducción automática, y las imágenes se encuentran en la raíz del volumen, la reproducción automática genera el evento **ShowPicturesOnArrival** . En la sección **Acciones de inicio**, especifica los valores de la Tabla 1 a continuación para la primera acción de inicio.
 5.  En la sección **Acciones de inicio** del elemento **Contenido de reproducción automática**, haz clic en **Agregar nuevo** para agregar una segunda acción de inicio. Escribe los valores de la Tabla 2 a continuación para la segunda acción de inicio.
-6.  En la lista desplegable **Declaraciones disponibles**, selecciona **Asociaciones de tipo de archivo** y haz clic en **Agregar**. En las propiedades del nuevo **asociaciones de tipo de archivo** declaración, establezca el **nombre para mostrar** campo **copia reproducción automática o mostrar imágenes** y el **nombre** campo **imagen\_association1**. En la sección **Tipos de archivo admitidos**, haz clic en **Agregar nuevo**. Establece el campo **Tipo de archivo** en **.jpg**. En la sección **Tipos de archivo admitidos**, establece el campo **Tipo de archivo** de la nueva asociación de archivo en **.png**. Para los eventos de contenido, Reproducción automática filtra todos los tipos de archivo que no están asociados explícitamente a la aplicación.
+6.  En la lista desplegable **Declaraciones disponibles**, selecciona **Asociaciones de tipo de archivo** y haz clic en **Agregar**. En las propiedades de la nueva declaración de **asociaciones de tipo de archivo** , establezca el campo nombre para **Mostrar** en **copia de reproducción automática o mostrar imágenes** y el campo **nombre** en **Image\_association1**. En la sección **Tipos de archivo admitidos**, haz clic en **Agregar nuevo**. Establece el campo **Tipo de archivo** en **.jpg**. En la sección **Tipos de archivo admitidos**, establece el campo **Tipo de archivo** de la nueva asociación de archivo en **.png**. Para los eventos de contenido, Reproducción automática filtra todos los tipos de archivo que no están asociados explícitamente a la aplicación.
 7.  Guarda y cierra el archivo de manifiesto.
 
 **Tabla 1**
 
-| Parámetro             | Valor                 |
+| Valor             | Valor                 |
 |---------------------|-----------------------|
-| Verb                | mostrar                  |
+| Verbo                | mostrar                  |
 | Nombre para mostrar de la acción | Mostrar imágenes         |
 | Evento de contenido       | ShowPicturesOnArrival |
 
@@ -57,13 +57,13 @@ La configuración **Nombre para mostrar de la acción** identifica la cadena que
 
 **Tabla 2**  
 
-| Parámetro             | Valor                      |
+| Valor             | Valor                      |
 |--------------------:|----------------------------|
-| Verb                | copy                       |
+| Verbo                | copy                       |
 | Nombre para mostrar de la acción | Copiar imágenes en la biblioteca |
 | Evento de contenido       | ShowPicturesOnArrival      |
 
-### <a name="step-2-add-xaml-ui"></a>Paso 2: Agregar la interfaz de usuario de XAML
+### <a name="step-2-add-xaml-ui"></a>Paso 2: Agregar la interfaz de usuario XAML
 
 Abre el archivo MainPage.xaml y agrega el siguiente XAML a la sección &lt;Grid&gt; predeterminada.
 
@@ -106,9 +106,9 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **Tenga en cuenta**  el `DisplayImages` y `CopyImages` se agregan métodos en los pasos siguientes.
+> **Tenga en cuenta**  se agregan los métodos `DisplayImages` y `CopyImages` en los pasos siguientes.
 
-### <a name="step-4-add-code-to-display-images"></a>Paso 4: Agregue código para mostrar imágenes
+### <a name="step-4-add-code-to-display-images"></a>Paso 4: Agregar código para mostrar imágenes
 
 En el archivo MainPage.xaml.cs, agrega el siguiente código a la clase **MainPage**.
 
@@ -168,7 +168,7 @@ private async void WriteMessageText(string message, bool overwrite = false)
 }
 ```
 
-### <a name="step-5-add-code-to-copy-images"></a>Paso 5: Agregue código para copiar imágenes
+### <a name="step-5-add-code-to-copy-images"></a>Paso 5: Agregar código para copiar imágenes
 
 En el archivo MainPage.xaml.cs, agrega el siguiente código a la clase **MainPage**.
 
@@ -214,41 +214,41 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 }
 ```
 
-### <a name="step-6-build-and-run-the-app"></a>Paso 6: Compilar y ejecutar la aplicación
+### <a name="step-6-build-and-run-the-app"></a>Paso 6: Compila y ejecuta la aplicación
 
 1.  Presiona F5 para compilar e implementar la aplicación (en modo de depuración).
-2.  Para ejecutar la aplicación, inserta una tarjeta de memoria de una cámara u otro dispositivo de almacenamiento de una cámara en el equipo. A continuación, selecciona una de las opciones de evento de contenido que especificaste en el archivo package.appxmanifest de la lista de opciones de Reproducción automática. Este código de muestra solo muestra o copia imágenes de la carpeta DCIM de una tarjeta de memoria de una cámara. Si la tarjeta de memoria de la cámara almacena imágenes en un AVCHD o PRIVATE\\carpeta ACHD, deberá actualizar el código en consecuencia.
-    **Tenga en cuenta**  si no tiene una tarjeta de memoria, puede usar una unidad flash, si tiene una carpeta denominada **DCIM** en la raíz y si la carpeta DCIM tiene una subcarpeta que contiene imágenes.
+2.  Para ejecutar la aplicación, inserta una tarjeta de memoria de una cámara u otro dispositivo de almacenamiento de una cámara en el equipo. A continuación, selecciona una de las opciones de evento de contenido que especificaste en el archivo package.appxmanifest de la lista de opciones de Reproducción automática. Este código de muestra solo muestra o copia imágenes de la carpeta DCIM de una tarjeta de memoria de una cámara. En caso de que la tarjeta de memoria de la cámara almacene imágenes en una carpeta de ACHD de almacenamiento AVCHD o\\PRIVAte, deberá actualizar el código en consecuencia.
+    **Tenga en cuenta**  si no tiene una tarjeta de memoria de cámara, puede usar una unidad flash si tiene una carpeta llamada **DCIM** en la raíz y si la carpeta DCIM tiene una subcarpeta que contiene imágenes.
 
 ## <a name="register-for-an-autoplay-device"></a>Registro para el dispositivo de reproducción automática
 
 
 Puedes registrar aplicaciones como opciones para eventos de dispositivo de **Reproducción automática**. Los eventos de dispositivo de **Reproducción automática** se generan cuando se conecta un dispositivo a un equipo.
 
-Aquí te enseñamos a identificar tu aplicación como una opción de **Reproducción automática** cuando una cámara se conecta a un equipo. La aplicación se registra como un controlador para el **WPD\\ImageSourceAutoPlay** eventos. Esto es un evento común que genera el sistema de dispositivos portátiles de Windows (WPD) cuando las cámaras y otros dispositivos de imagen notifican que son un ImageSource con MTP. Para obtener más información, consulta [Dispositivos portátiles de Windows](https://docs.microsoft.com/previous-versions/ff597729(v=vs.85)).
+Aquí te enseñamos a identificar tu aplicación como una opción de **Reproducción automática** cuando una cámara se conecta a un equipo. La aplicación se registra como un controlador para el evento **WPD\\ImageSourceAutoPlay** . Esto es un evento común que genera el sistema de dispositivos portátiles de Windows (WPD) cuando las cámaras y otros dispositivos de imagen notifican que son un ImageSource con MTP. Para obtener más información, consulta [Dispositivos portátiles de Windows](https://docs.microsoft.com/previous-versions/ff597729(v=vs.85)).
 
-**Importante**  el [ **Windows.Devices.Portable.StorageDevice** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice) API forman parte de la [familia de dispositivos de escritorio](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide). Las aplicaciones pueden usar estas API solo en dispositivos Windows 10 en la familia de dispositivos de escritorio, como los equipos.
+**Importante**  las API de [**Windows. Devices. portable. StorageDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice) forman parte de la [familia de dispositivos de escritorio](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide). Las aplicaciones pueden usar estas API solo en dispositivos Windows 10 de la familia de dispositivos de escritorio, como equipos.
 
  
 
-### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>Paso 1: Cree un nuevo proyecto y agregue las declaraciones de reproducción automática
+### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>Paso 1: Crear un nuevo proyecto y agregar declaraciones de Reproducción automática
 
-1.  Abre Visual Studio y selecciona **Nuevo proyecto** en el menú **Archivo**. En la sección **Visual C#** , en **Windows**, selecciona **Aplicación vacía (Windows universal)** . Nombre de la aplicación **AutoPlayDevice\_cámara** y haga clic en **Aceptar.**
-2.  Abre el archivo Package.appxmanifest y selecciona la pestaña **Capacidades**. Selecciona la funcionalidad **Almacenamiento extraíble**. Esto proporcionar a la aplicación acceso a los datos de la cámara dispositivo de volumen de almacenamiento extraíble.
+1.  Abre Visual Studio y selecciona **Nuevo proyecto** en el menú **Archivo**. En la sección **Visual C#** , en **Windows**, selecciona **Aplicación vacía (Windows universal)** . Asigne a la aplicación el nombre **AutoPlayDevice\_cámara** y haga clic en **Aceptar.**
+2.  Abre el archivo Package.appxmanifest y selecciona la pestaña **Funcionalidades**. Selecciona la funcionalidad **Almacenamiento extraíble**. Esto proporcionar a la aplicación acceso a los datos de la cámara dispositivo de volumen de almacenamiento extraíble.
 3.  En el archivo de manifiesto, selecciona la pestaña **Declaraciones**. En la lista desplegable **Declaraciones disponibles**, selecciona **Dispositivo de Reproducción automática** y haz clic en **Agregar**. Selecciona el nuevo elemento **Dispositivo de Reproducción automática** que se agregó a la lista **Declaraciones admitidas**.
 4.  Una declaración **Dispositivo de Reproducción automática** identifica a la aplicación como opción cuando Reproducción automática genera un evento de dispositivo para eventos conocidos. En la sección **Acciones de inicio**, especifica los valores de la tabla a continuación para la primera acción de inicio.
-5.  En la lista desplegable **Declaraciones disponibles**, selecciona **Asociaciones de tipo de archivo** y haz clic en **Agregar**. En las propiedades de la nueva **asociaciones de tipo de archivo** declaración, establezca el **nombre para mostrar** campo **mostrar imágenes desde la cámara** y **nombre**campo **cámara\_association1**. En la sección **Tipos de archivo admitidos**, haz clic en **Agregar nuevo** (si es necesario). Establece el campo **Tipo de archivo** en **.jpg**. En la sección **Tipos de archivo admitidos**, vuelve a hacer clic en **Agregar nuevo**. Establece el campo **Tipo de archivo** de la nueva asociación de archivos en **.png**. Para los eventos de contenido, Reproducción automática filtra todos los tipos de archivo que no están asociados explícitamente a la aplicación.
+5.  En la lista desplegable **Declaraciones disponibles**, selecciona **Asociaciones de tipo de archivo** y haz clic en **Agregar**. En las propiedades de la nueva declaración de **asociaciones de tipo de archivo** , establezca el campo nombre para **Mostrar** en **Mostrar imágenes de la cámara** y el campo **nombre** en **cámara\_association1**. En la sección **Tipos de archivo admitidos**, haz clic en **Agregar nuevo** (si es necesario). Establece el campo **Tipo de archivo** en **.jpg**. En la sección **Tipos de archivo admitidos**, vuelve a hacer clic en **Agregar nuevo**. Establece el campo **Tipo de archivo** de la nueva asociación de archivos en **.png**. Para los eventos de contenido, Reproducción automática filtra todos los tipos de archivo que no están asociados explícitamente a la aplicación.
 6.  Guarda y cierra el archivo de manifiesto.
 
-| Parámetro             | Valor            |
+| Valor             | Valor            |
 |---------------------|------------------|
-| Verb                | mostrar             |
+| Verbo                | mostrar             |
 | Nombre para mostrar de la acción | Mostrar imágenes    |
-| Evento de contenido       | WPD\\ImageSource |
+| Evento de contenido       | \\ImageSource de WPD |
 
 La configuración **Nombre para mostrar de la acción** identifica la cadena que Reproducción automática muestra para tu aplicación. La configuración **Verbo** identifica un valor que se pasa a la aplicación para la opción seleccionada. Puedes especificar varias acciones de inicio para un evento de Reproducción automática y usar la configuración **Verbo** para determinar qué opción seleccionó un usuario para tu aplicación. Para saber qué opción seleccionó el usuario, comprueba la propiedad **verb** de los argumentos del evento de inicio que se pasaron a la aplicación. Puedes usar cualquier valor para la configuración **Verbo** a excepción de **open**, que está reservado. Para ver un ejemplo del uso de varios verbos en una sola aplicación, consulta [Registrar una aplicación para el contenido de Reproducción automática](#register-for-autoplay-content).
 
-### <a name="step-2-add-assembly-reference-for-the-desktop-extensions"></a>Paso 2: Agregar referencia de ensamblado para las extensiones de escritorio
+### <a name="step-2-add-assembly-reference-for-the-desktop-extensions"></a>Paso 2: Agregar una referencia de ensamblado para las extensiones de escritorio
 
 Las API necesarias para obtener acceso al almacenamiento en un dispositivo portátil de Windows, [**Windows.Devices.Portable.StorageDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice), forman parte de la [familia de dispositivos de escritorio](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide). Esto significa que se necesita un ensamblado especial para usar las API y esas llamadas solo funcionarán en un dispositivo de la familia de dispositivos de escritorio (por ejemplo, un equipo).
 
@@ -256,7 +256,7 @@ Las API necesarias para obtener acceso al almacenamiento en un dispositivo port�
 2.  Expande **Windows universal** y haz clic en **Extensiones**.
 3.  Después, selecciona **extensiones de escritorio de Windows para la UWP** y haz clic en **Aceptar**.
 
-### <a name="step-3-add-xaml-ui"></a>Paso 3: Agregar la interfaz de usuario de XAML
+### <a name="step-3-add-xaml-ui"></a>Paso 3: Agregar la interfaz de usuario XAML
 
 Abre el archivo MainPage.xaml y agrega el siguiente XAML a la sección &lt;Grid&gt; predeterminada.
 
@@ -284,7 +284,7 @@ Abre el archivo MainPage.xaml y agrega el siguiente XAML a la sección &lt;Grid&
 </StackPanel>
 ```
 
-### <a name="step-4-add-activation-code"></a>Paso 4: Agregue el código de activación
+### <a name="step-4-add-activation-code"></a>Paso 4: Agregar código de activación
 
 El código de este paso hace referencia a la cámara como [**StorageDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice) al pasar el identificador de información del dispositivo de la cámara al método [**FromId**](https://docs.microsoft.com/uwp/api/windows.devices.portable.storagedevice.fromid). El identificador de información del dispositivo de la cámara se obtiene difundiendo primero los argumentos del evento como [**DeviceActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.DeviceActivatedEventArgs) y después obteniendo el valor de la propiedad [**DeviceInformationId**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.deviceactivatedeventargs.deviceinformationid).
 
@@ -336,9 +336,9 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-> **Tenga en cuenta**  el `ShowImages` método se agrega en el paso siguiente.
+> **Tenga en cuenta**  el método `ShowImages` se agrega en el paso siguiente.
 
-### <a name="step-5-add-code-to-display-device-information"></a>Paso 5: Agregue código para mostrar información del dispositivo
+### <a name="step-5-add-code-to-display-device-information"></a>Paso 5: Agregar código para mostrar información de dispositivo
 
 Puedes obtener información de la cámara en las propiedades de la clase [**StorageDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice). El código de este paso muestra al usuario el nombre del dispositivo y otra información cuando la aplicación se ejecuta. El código llama después a los métodos GetImageList y GetThumbnail, que agregarás en el paso siguiente, para mostrar miniaturas de las imágenes almacenadas en la cámara.
 
@@ -364,9 +364,9 @@ internal async void ShowImages(Windows.Storage.StorageFolder folder)
 }
 ```
 
-> **Tenga en cuenta**  el `GetImageList` y `GetThumbnail` se agregan métodos en el paso siguiente.
+> **Tenga en cuenta**  se agregan los métodos `GetImageList` y `GetThumbnail` en el paso siguiente.
 
-### <a name="step-6-add-code-to-display-images"></a>Paso 6: Agregue código para mostrar imágenes
+### <a name="step-6-add-code-to-display-images"></a>Paso 6: Agregar código para mostrar imágenes
 
 El código de este paso muestra las miniaturas de las imágenes almacenadas en la cámara. El código realiza llamadas asincrónicas a la cámara para obtener la imagen de miniatura. Sin embargo, la siguiente llamada asincrónica no ocurre hasta que se complete la anterior. Esto garantiza que solo se haga una solicitud a la cámara cada vez.
 
@@ -403,11 +403,11 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 }
 ```
 
-### <a name="step-7-build-and-run-the-app"></a>Paso 7: Compilar y ejecutar la aplicación
+### <a name="step-7-build-and-run-the-app"></a>Paso 7: Compila y ejecuta la aplicación
 
 1.  Presiona F5 para compilar e implementar la aplicación (en modo de depuración).
 2.  Para ejecutar la aplicación, conecta una cámara al equipo. Después, selecciona la aplicación en la lista de opciones de Reproducción automática.
-    **Tenga en cuenta**  no todas las cámaras anuncian el **WPD\\ImageSource** eventos de dispositivo de reproducción automática.
+    **Tenga en cuenta**  no todas las cámaras se anuncian para el evento de dispositivo de reproducción automática de la\\de la de **WPD**
 
 ## <a name="configure-removable-storage"></a>Configurar el almacenamiento extraíble
 
@@ -426,26 +426,26 @@ En la unidad raíz del dispositivo de volumen, agrega un archivo denominado auto
 CustomEvent=AutoPlayCustomEventQuickstart
 ```
 
-### <a name="step-2-create-a-new-project-and-add-autoplay-declarations"></a>Paso 2: Cree un nuevo proyecto y agregue las declaraciones de reproducción automática
+### <a name="step-2-create-a-new-project-and-add-autoplay-declarations"></a>Paso 2: Crear un nuevo proyecto y agregar declaraciones de Reproducción automática
 
 1.  Abre Visual Studio y selecciona **Nuevo proyecto** en el menú **Archivo**. En la sección **Visual C#** , en **Windows**, selecciona **Aplicación vacía (Windows universal)** . Asigna el nombre **AutoPlayCustomEvent** a la aplicación y haz clic en**Aceptar**.
-2.  Abre el archivo Package.appxmanifest y selecciona la pestaña **Capacidades**. Selecciona la funcionalidad **Almacenamiento extraíble**. Esto permite que la aplicación tenga acceso a los archivos y carpetas de los dispositivos de almacenamiento extraíble.
-3.  En el archivo de manifiesto, selecciona la pestaña **Declaraciones**. En la lista desplegable **Declaraciones disponibles**, selecciona **Contenido de Reproducción automática** y después haz clic en **Agregar**. Selecciona el elemento **Contenido de Reproducción automática** que se agregó a la lista **Declaraciones admitidas**.
+2.  Abre el archivo Package.appxmanifest y selecciona la pestaña **Funcionalidades**. Selecciona la funcionalidad **Almacenamiento extraíble**. Esto permite que la aplicación tenga acceso a los archivos y carpetas de los dispositivos de almacenamiento extraíble.
+3.  En el archivo de manifiesto, selecciona la pestaña **Declaraciones**. En la lista desplegable **Declaraciones disponibles**, selecciona **Contenido de Reproducción automática** y haz clic en **Agregar**. Selecciona el elemento **Contenido de Reproducción automática** que se agregó a la lista **Declaraciones admitidas**.
 
-    **Tenga en cuenta**  como alternativa, también puede elegir agregar un **dispositivo de reproducción automática** declaración para el evento personalizado de reproducción automática.  
+    **Tenga en cuenta**  alternativamente, también puede optar por agregar una declaración de **dispositivo de reproducción automática** para el evento personalizado de reproducción automática.  
 4.  En la sección **Acciones de inicio** de tu declaración de evento de **contenido de Reproducción automática**, especifica los valores en la siguiente tabla para la primera acción de inicio.
-5.  En la lista desplegable **Declaraciones disponibles**, selecciona **Asociaciones de tipo de archivo** y haz clic en **Agregar**. En las propiedades de la nueva **asociaciones de tipo de archivo** declaración, establezca el **nombre para mostrar** campo **.ms mostrar todos los archivos** y **nombre** campo **ms\_asociación**. En la sección **Tipos de archivo admitidos**, haz clic en **Agregar nuevo**. Establece el campo **Tipo de archivo** en **.ms**. Para los eventos de contenido, Reproducción automática filtra todos los tipos de archivo que no están asociados explícitamente a la aplicación.
+5.  En la lista desplegable **Declaraciones disponibles**, selecciona **Asociaciones de tipo de archivo** y haz clic en **Agregar**. En las propiedades de la nueva declaración de **asociaciones de tipo de archivo** , establezca el campo nombre para **Mostrar** en **Mostrar archivos. ms** y el campo **nombre** en **MS\_Association**. En la sección **Tipos de archivo admitidos**, haz clic en **Agregar nuevo**. Establece el campo **Tipo de archivo** en **.ms**. Para los eventos de contenido, Reproducción automática filtra todos los tipos de archivo que no están asociados explícitamente a la aplicación.
 6.  Guarda y cierra el archivo de manifiesto.
 
-| Parámetro             | Valor                         |
+| Valor             | Valor                         |
 |---------------------|-------------------------------|
-| Verb                | mostrar                          |
+| Verbo                | mostrar                          |
 | Nombre para mostrar de la acción | Mostrar archivos                    |
 | Evento de contenido       | AutoPlayCustomEventQuickstart |
 
 El valor **Evento de contenido** es el texto que suministraste para la clave **CustomEvent** en el archivo autorun.inf. La configuración **Nombre para mostrar de la acción** identifica la cadena que Reproducción automática muestra para tu aplicación. La configuración **Verbo** identifica un valor que se pasa a la aplicación para la opción seleccionada. Puedes especificar varias acciones de inicio para un evento de Reproducción automática y usar la configuración **Verbo** para determinar qué opción seleccionó un usuario para tu aplicación. Para saber qué opción seleccionó el usuario, comprueba la propiedad **verb** de los argumentos del evento de inicio que se pasaron a la aplicación. Puedes usar cualquier valor para la configuración **Verbo** a excepción de **open**, que está reservado.
 
-### <a name="step-3-add-xaml-ui"></a>Paso 3: Agregar la interfaz de usuario de XAML
+### <a name="step-3-add-xaml-ui"></a>Paso 3: Agregar la interfaz de usuario XAML
 
 Abre el archivo MainPage.xaml y agrega el siguiente XAML a la sección &lt;Grid&gt; predeterminada.
 
@@ -456,7 +456,7 @@ Abre el archivo MainPage.xaml y agrega el siguiente XAML a la sección &lt;Grid&
 </StackPanel>
 ```
 
-### <a name="step-4-add-activation-code"></a>Paso 4: Agregue el código de activación
+### <a name="step-4-add-activation-code"></a>Paso 4: Agregar código de activación
 
 El código de este paso llama a un método para que muestre las carpetas en la unidad raíz del dispositivo de volumen. Para los eventos de contenido de Reproducción automática, Reproducción automática transmite la carpeta raíz del dispositivo de almacenamiento en los argumentos de inicio que se transmiten a la aplicación durante el evento **OnFileActivated**. Puedes recuperar esta carpeta del primer elemento de la propiedad **Files**.
 
@@ -475,11 +475,11 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **Tenga en cuenta**  el `DisplayFiles` método se agrega en el paso siguiente.
+> **Tenga en cuenta**  el método `DisplayFiles` se agrega en el paso siguiente.
 
  
 
-### <a name="step-5-add-code-to-display-folders"></a>Paso 5: Agregue código para mostrar carpetas
+### <a name="step-5-add-code-to-display-folders"></a>Paso 5: Agregar código para mostrar carpetas
 
 En el archivo MainPage.xaml.cs, agrega el siguiente código a la clase **MainPage**.
 
@@ -504,7 +504,7 @@ internal async System.Threading.Tasks.Task<IReadOnlyList<Windows.Storage.Storage
 }
 ```
 
-### <a name="step-6-build-and-run-the-qpp"></a>Paso 6: Compilar y ejecutar el pl.
+### <a name="step-6-build-and-run-the-qpp"></a>Paso 6: Compilar y ejecutar la aplicación
 
 1.  Presiona F5 para compilar e implementar la aplicación (en modo de depuración).
 2.  Para ejecutar la aplicación, inserta una tarjeta de memoria u otro dispositivo de almacenamiento en el equipo. Luego, selecciona la aplicación en la lista de opciones de controlador de Reproducción automática.
@@ -536,7 +536,7 @@ El sistema **Reproducción automática** permite registrar las aplicaciones para
 
 Puedes especificar que Reproducción automática genere un evento de contenido personalizado con la entrada **CustomEvent** en el archivo autorun.inf para un volumen. Para obtener más información, consulta [Entradas en autorun.inf](https://docs.microsoft.com/windows/desktop/shell/autorun-cmds).
 
-Puedes agregar una extensión al archivo package.appxmanifest de tu aplicación para registrarla como controlador de eventos de Contenido de Reproducción automática o Dispositivo de Reproducción automática. Si usas Visual Studio, puedes agregar una declaración **Contenido de Reproducción automática** o **Dispositivo de Reproducción automática** en la pestaña **Declaraciones**. Si estás editando directamente el archivo package.appxmanifest de tu aplicación, agrega un elemento [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-extension) al manifiesto de la aplicación que especifique **windows.autoPlayContent** o **windows.autoPlayDevice** como la **Categoría**. Por ejemplo, la siguiente entrada del manifiesto del paquete agrega una extensión de **Contenido de Reproducción automática** para registrar la aplicación como controlador del evento **ShowPicturesOnArrival**.
+Puedes agregar una extensión al archivo package.appxmanifest de tu aplicación para registrarla como controlador de eventos de Contenido de Reproducción automática o Dispositivo de Reproducción automática. Si usas Visual Studio, puedes agregar un **contenido de reproducción automática** o un **dispositivo de reproducción automática** en la pestaña **Declaraciones**. Si editas directamente el archivo package.appxmanifest de tu aplicación, agrega un elemento [**Extensión**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-extension) en el manifiesto del paquete que especifique **windows.autoPlayContent** o **windows.autoPlayDevice** en **Categoría** . Por ejemplo, la siguiente entrada del manifiesto del paquete agrega una extensión de **Contenido de Reproducción automática** para registrar la aplicación como controlador del evento **ShowPicturesOnArrival**.
 
 ```xml
   <Applications>

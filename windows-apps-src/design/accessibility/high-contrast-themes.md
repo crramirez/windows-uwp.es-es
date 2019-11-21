@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c37ceb63a5d9d9f83d3f1ebca0b0584f1092b7f6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 617511d23bcabe342abe7477f617d81cd01182e6
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359577"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257781"
 ---
 # <a name="high-contrast-themes"></a>Temas de contraste alto  
 
@@ -20,7 +20,7 @@ Windows admite temas de contraste alto para el sistema operativo y las aplicacio
 
 ![Calculadora con el tema claro y el tema Negro en contraste alto.](images/high-contrast-calculators.png)
 
-*Calculadora que se muestra en el tema claro y tema negro en alto contraste.*
+*Calculadora que se muestra en el tema claro y contraste alto tema negro.*
 
 Puedes cambiar a un tema de contraste alto desde *Configuración > Accesibilidad > Contraste alto*.
 
@@ -87,15 +87,15 @@ En la página *Configuración > Accesibilidad > Contraste alto*, hay 4 temas de 
 
 ![Configuración de contraste alto](images/high-contrast-settings.png)  
 
-*Después de que el usuario selecciona una opción, la página muestra una vista previa.*  
+*Una vez que el usuario selecciona una opción, la página muestra una vista previa.*  
 
 ![Recursos de contraste alto](images/high-contrast-resources.png)  
 
-*Cada muestra de color en la versión preliminar se puede hacer clic para cambiar su valor. Cada muestra se asigna también directamente a un recurso de color XAML.*  
+*Se puede hacer clic en todas las muestras de colores de la vista previa para cambiar su valor. Cada muestra también se asigna directamente a un recurso de color XAML.*  
 
 Cada recurso **SystemColor*Color** es una variable que actualiza automáticamente el color cuando el usuario cambia los temas de contraste alto. A continuación se muestran directrices sobre dónde y cuándo usar cada recurso.
 
-Resource | Uso |
+Recurso | Uso |
 |--------|-------|
 **SystemColorWindowTextColor** | Copia del cuerpo, encabezados, listas; cualquier texto con el que no se pueda interactuar |
 | **SystemColorHotlightColor** | Hipervínculos |
@@ -108,7 +108,7 @@ Resource | Uso |
 
 A menudo resulta útil observar las aplicaciones existentes, Inicio o los controles comunes para ver cómo han resuelto otras personas problemas de diseño de contraste alto similares a los tuyos.
 
-**hacer**
+**No**
 
 * Respetar los pares de fondo/primer plano siempre que sea posible.
 * Probar los 4 temas de contraste alto mientras se ejecuta la aplicación. El usuario no debería tener que reiniciar la aplicación al cambiar los temas.
@@ -154,7 +154,7 @@ Más adelante, en la aplicación, puedes establecer el fondo.
 <Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
 ```
 
-Tenga en cuenta cómo **\{ThemeResource\}** se usa dos veces, una vez a la referencia **SystemColorWindowColor** y otra para referencia **BrandedPageBackgroundBrush**. Ambos son necesarios para que la aplicación use el tema correctamente en tiempo de ejecución. Este es un buen momento para probar la funcionalidad en la aplicación. El fondo de Grid se actualizará automáticamente al cambiar a un tema de contraste alto. También se actualizará al cambiar entre los distintos temas de contraste alto.
+Observe cómo **\{\}de ThemeResource** se usa dos veces, una para hacer referencia a **SystemColorWindowColor** y otra para hacer referencia a **BrandedPageBackgroundBrush**. Ambos son necesarios para que la aplicación use el tema correctamente en tiempo de ejecución. Este es un buen momento para probar la funcionalidad en la aplicación. El fondo de Grid se actualizará automáticamente al cambiar a un tema de contraste alto. También se actualizará al cambiar entre los distintos temas de contraste alto.
 
 ## <a name="when-to-use-borders"></a>Cuándo usar bordes
 
@@ -162,7 +162,7 @@ Las páginas, los paneles, los elementos emergentes y las barras deberían usar 
 
 ![Un panel de navegación separado del resto de la página](images/high-contrast-actions-content.png)  
 
-*El panel de navegación y la página comparten el mismo color de fondo de contraste alto. Un borde solo contraste alto para dividirlos es esencial.*
+*El panel de navegación y la página comparten el mismo color de fondo en contraste alto. Es esencial un borde de solo contraste alto para dividirlos.*
 
 
 ## <a name="list-items"></a>Elementos de lista
@@ -171,7 +171,7 @@ En contraste alto, los elementos de una clase [ListView](https://docs.microsoft.
 
 ![Lista simple con el tema claro y el tema Negro en contraste alto](images/high-contrast-list1.png)
 
-*Una lista simple en el tema claro (izquierda) y el tema de negro en alto contraste (derecho). El segundo elemento está seleccionado; Tenga en cuenta cómo se invierte el color del texto en contraste alto.*
+*Una lista simple en el tema claro (izquierda) y contraste alto tema negro (derecha). El segundo elemento está seleccionado; Observe cómo se invierte el color del texto en contraste alto.*
 
 
 ### <a name="list-items-with-colored-text"></a>Elementos de lista con texto de color
@@ -180,7 +180,7 @@ Una causa es establecer TextBlock.Foreground en la clase [DataTemplate](https://
 
 ![Lista compleja con el tema claro y el tema Negro en contraste alto](images/high-contrast-list2.png)
 
-*Lista compleja en el tema claro (izquierda) y el tema de negro en alto contraste (derecho). En contraste alto, la segunda línea del elemento seleccionado no se pudo invertir.*  
+*Lista compleja en el tema claro (izquierda) y contraste alto tema negro (derecha). En contraste alto, no se pudo invertir la segunda línea del elemento seleccionado.*  
 
 Para resolverlo establece Foreground de manera condicional a través de un objeto Style de una colección de **ThemeDictionaries**. Dado que **SecondaryBodyTextBlockStyle** no ha establecido **Foreground** en **HighContrast**, su color se invertirá correctamente.
 
@@ -235,7 +235,7 @@ Puedes comprobar mediante programación si el tema actual es un tema de contrast
 
 ## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
-* [Ejemplo de contraste y la configuración de la interfaz de usuario](https://go.microsoft.com/fwlink/p/?linkid=231539)
-* [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
-* [Ejemplo de contraste alto de XAML](https://go.microsoft.com/fwlink/p/?linkid=254993)
+* [Ejemplo de contraste y configuración de la interfaz de usuario](https://code.msdn.microsoft.com/windowsapps/High-Contrast-UI-Settings-9a310961)
+* [Ejemplo de accesibilidad XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
+* [Ejemplo de contraste alto de XAML](https://code.msdn.microsoft.com/windowsapps/XAML-high-contrast-style-c0ce936f)
 * [**AccessibilitySettings**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.AccessibilitySettings)

@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: d6be00fdbfc7ef5950f6cc35ba35d4afd0dc2791
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 4772edb9c99426396b7fa3a8734e2f45391c3a0f
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682454"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257833"
 ---
 # <a name="windows-app-certification-kit"></a>Kit para la certificación de aplicaciones en Windows
 
 
 
-Para certificar la aplicación de [Windows](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) o prepararla para su [publicación en el Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/app-submissions), debe validarla y probarla en primer lugar localmente. En este tema se muestra cómo instalar y ejecutar el [Kit de certificación de aplicaciones de Windows](https://go.microsoft.com/fwlink/p/?LinkID=309666) para asegurarse de que la aplicación sea segura y eficaz.
+Para [certificar](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) la aplicación de Windows o prepararla para su [publicación en el Microsoft Store](https://docs.microsoft.com/windows/uwp/publish/app-submissions), debe validarla y probarla en primer lugar localmente. En este tema se muestra cómo instalar y ejecutar el [Kit de certificación de aplicaciones de Windows](https://msdn.microsoft.com/en-US/windows/apps/bg127575) para asegurarse de que la aplicación sea segura y eficaz.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -36,7 +36,7 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 1.  En el menú **Inicio**, ve a **Aplicaciones**, **Kits de Windows** y haz clic en **Kit para la certificación de aplicaciones en Windows**.
 
-2.  En el Kit para la certificación de aplicaciones de Windows, selecciona la categoría de validación que quieras ejecutar. Por ejemplo: Si va a validar una aplicación de Windows, seleccione **validar una aplicación de Windows**.
+2.  En el Kit para la certificación de aplicaciones de Windows, selecciona la categoría de validación que quieras ejecutar. Por ejemplo, si vas a validar una aplicación de Windows, selecciona **Validar una aplicación de Windows**.
 
     Puedes ir directamente a la aplicación que vas a probar o elegir la aplicación de una lista de la interfaz de usuario. Al ejecutar por primera vez el Kit para la certificación de aplicaciones de Windows, la interfaz de usuario enumera todas las aplicaciones de Windows instaladas en el equipo. En todas las ejecuciones posteriores, la interfaz de usuario mostrará las últimas aplicaciones de Windows validadas. Si la aplicación que quieres probar no aparece en la lista, puedes hacer clic en **Mi aplicación no está en la lista** para obtener la lista completa de todas las aplicaciones instaladas en el sistema.
 
@@ -64,7 +64,7 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 1.  En la ventana de comandos, navega hacia el directorio que contiene el Kit para la certificación de aplicaciones en Windows.
 
-    **Tenga en cuenta**    que la ruta de\\acceso predeterminada es C:\\archivos\\de programa\\Windows kits\\de certificación de aplicaciones 10.
+    **Tenga en cuenta**   la ruta de acceso predeterminada es C:\\archivos de programa\\kits de Windows\\10\\kit de certificación de aplicaciones\\.
 
 2.  Escribe los siguientes comandos en este orden para probar una aplicación que ya está instalada en el equipo de prueba:
 
@@ -80,15 +80,15 @@ La instalación de un [Kit para la certificación de aplicaciones en Windows]( h
 
 3.  Una vez que finalice la prueba, abre el archivo del informe `[report file name]` y revisa los resultados de la prueba.
 
-**Tenga en cuenta**  que el kit para la certificación de aplicaciones de Windows se puede ejecutar desde un servicio, pero el servicio debe iniciar el proceso del kit en una sesión de usuario activa y no se puede ejecutar en Session0.
+**Tenga en cuenta**  el kit de certificación de aplicaciones de Windows se puede ejecutar desde un servicio, pero el servicio debe iniciar el proceso del kit en una sesión de usuario activa y no se puede ejecutar en Session0.
 
-**Nota:**    para obtener más información sobre la línea de comandos del kit para la certificación de aplicaciones de Windows, escriba el comando.`appcert.exe /?`
+**Nota**   para obtener más información sobre la línea de comandos del kit para la certificación de aplicaciones de Windows, escriba el comando `appcert.exe /?`
 
 ## <a name="testing-with-a-low-power-computer"></a>Prueba de un equipo de bajo consumo
 
 Los umbrales de la prueba de rendimiento del Kit para la certificación de aplicaciones en Windows se basan en el rendimiento de un equipo de bajo consumo.
 
-Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumple las [directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies), se recomienda que pruebe la aplicación en un equipo de bajo consumo, como un equipo basado en procesador Intel Atom con una resolución de pantalla de 1366x768 (o superior) y un disco duro de rotación. unidad (en lugar de una unidad de disco duro de estado sólido).
+Las características del equipo en el que se realiza la prueba pueden afectar a los resultados. Para determinar si el rendimiento de la aplicación cumple las [directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies), se recomienda que pruebe la aplicación en un equipo de bajo consumo, como un equipo basado en procesador Intel Atom con una resolución de pantalla de 1366x768 (o posterior) y una unidad de disco duro de rotación (en lugar de una unidad de disco duro de estado sólido).
 
 A medida que evolucionan los equipos de bajo consumo, las características de rendimiento podrían cambiar con el tiempo. Consulte las [directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies) más recientes y pruebe la aplicación con la versión más reciente del kit de certificación de aplicaciones de Windows para asegurarse de que la aplicación cumple los requisitos de rendimiento más recientes.
 

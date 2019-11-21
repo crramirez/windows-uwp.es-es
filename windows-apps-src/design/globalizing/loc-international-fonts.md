@@ -1,25 +1,25 @@
 ---
-Description: En este tema se enumeran las fuentes disponibles para las aplicaciones UWP que están localizadas en idiomas distintos de EE. UU. Inglés.
+Description: En este tema se enumeran las fuentes disponibles para las aplicaciones para UWP que se localizan en otros idiomas además de inglés de EE. UU.
 title: Fuentes internacionales
 template: detail.hbs
 ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 06284481ccecbc3c9cd7d7a78d83ccd6e97a49a7
-ms.sourcegitcommit: f3c1a81b50f4a372a15996ac71b3f408a8ee1409
+ms.openlocfilehash: eb12ea0bb7966813413d29908c4974a7c4c97486
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72237527"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258079"
 ---
 # <a name="international-fonts"></a>Fuentes internacionales
 
-En este tema se enumeran las fuentes disponibles para las aplicaciones UWP que están localizadas en idiomas distintos de EE. UU. Inglés.
+En este tema se enumeran las fuentes disponibles para las aplicaciones para UWP que se localizan en otros idiomas además de inglés de EE. UU.
 
-En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) del idioma. Para ver una lista de etiquetas de idioma que se admiten específicamente en la Microsoft Store, consulta [Idiomas admitidos](../../publish/supported-languages.md).
+En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47) del idioma. Para ver una lista de etiquetas de idioma que se admiten específicamente en la Microsoft Store, consulta [Idiomas admitidos](../../publish/supported-languages.md).
 
-| Lenguaje | Etiqueta de idioma | Fuente usada en Windows |
+| Idioma | Etiqueta de idioma | Fuente usada en Windows |
 | --------- | ----------- | -------------------- |
 | Afrikáans | af-ZA | Segoe UI |
 | Albano | sq-AL | Segoe UI |
@@ -86,7 +86,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Maorí | mi-NZ | Segoe UI |
 | Marathi | mr-IN | Nirmala UI |
 | Mongol (cirílico) | mn-MN | Segoe UI |
-| Nepali | ne-NP | Nirmala UI |
+| Nepalí | ne-NP | Nirmala UI |
 | Noruego (Bokmål) | nb-NO | Segoe UI |
 | Noruego (Nynorsk) | nn-NO | Segoe UI |
 | Odia | or-IN | Nirmala UI |
@@ -131,5 +131,5 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [Etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47)
 * [Idiomas admitidos](../../publish/supported-languages.md)

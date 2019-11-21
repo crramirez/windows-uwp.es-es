@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: teclado, accesibilidad, navegación, foco, texto, entrada, interacciones del usuario, keyboard, accessibility, navigation, focus, text, input, user interactions
 ms.date: 07/13/2018
 ms.topic: article
-ms.openlocfilehash: 192c016dfa61f39074d99bccf58ff9371f16d16f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c752a5df96c22b945865c0c3a465f22391aa54bc
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365427"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258280"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder a la presencia del teclado táctil
 
@@ -25,17 +25,17 @@ Aprende a adaptar la interfaz de usuario de la aplicación al mostrar u ocultar 
 
 ![teclado táctil en el modo de diseño predeterminado](images/keyboard/default.png)
 
-<sup>La interacción de teclado de forma predeterminada en el modo de diseño</sup>
+<sup>Teclado táctil en el modo de diseño predeterminado</sup>
 
 El teclado táctil permite la entrada de texto para dispositivos que admiten la entrada táctil. Controles de entrada de texto de plataforma de Windows (UWP) universal invocan al teclado táctil de manera predeterminada cuando un usuario pulsa en un campo de entrada editable. El teclado táctil normalmente permanece visible mientras el usuario navega por los controles en cierta forma, pero este comportamiento puede variar en función de los otros tipos de control dentro de la forma.
 
-Para admitir el comportamiento del teclado táctil correspondiente en un control de entrada de texto personalizado que no se deriva de un control de entrada de texto estándar, debe usar el <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer">AutomationPeer</a> clase para exponer sus controles a la automatización de interfaz de usuario de Microsoft y implementar los patrones de control de automatización de interfaz de usuario correctos. Consulta [accesibilidad de teclado](https://docs.microsoft.com/windows/uwp/design/accessibility/keyboard-accessibility) y [automatización del mismo nivel personalizado](https://docs.microsoft.com/windows/uwp/design/accessibility/custom-automation-peers).
+Para admitir el comportamiento del teclado táctil correspondiente en un control de entrada de texto personalizado que no se deriva de un control de entrada de texto estándar, debe usar la clase <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer">AutomationPeer</a> para exponer los controles a la automatización de la interfaz de usuario de Microsoft e implementar los patrones de control de automatización de la interfaz de usuario correctos. Consulta [accesibilidad de teclado](https://docs.microsoft.com/windows/uwp/design/accessibility/keyboard-accessibility) y [automatización del mismo nivel personalizado](https://docs.microsoft.com/windows/uwp/design/accessibility/custom-automation-peers).
 
 Una vez que esta compatibilidad esté agregada a tu control personalizado, puedes responder adecuadamente a la presencia del teclado táctil.
 
-**Requisitos previos:**
+**Requisitos previos**
 
-Este tema se basa en [interacciones de teclado](keyboard-interactions.md).
+En este tema se basa en [interacciones de teclado](keyboard-interactions.md).
 
 Debes tener un conocimiento básico de las interacciones de teclado estándar, el control de la entrada de teclado y los eventos, y la automatización de la interfaz de usuario.
 
@@ -44,9 +44,9 @@ Si acabas de empezar a desarrollar aplicaciones para la Plataforma universal de 
 - [Crea tu primera aplicación.](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
 - Encontrarás más información acerca de los eventos, en [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
 
-**Instrucciones para la experiencia de usuario:**
+**Instrucciones para la experiencia del usuario:**
 
-Para obtener sugerencias útiles sobre cómo diseñar una aplicación útil y atractiva optimizada para la entrada de teclado, consulte [interacciones de teclado](https://docs.microsoft.com/windows/uwp/design/input/keyboard-interactions) .
+Para obtener sugerencias útiles sobre cómo diseñar una aplicación útil y atractiva optimizada para la entrada de teclado, consulte [interacciones](https://docs.microsoft.com/windows/uwp/design/input/keyboard-interactions) con el teclado.
 
 ## <a name="touch-keyboard-and-a-custom-ui"></a>Teclado táctil y una interfaz de usuario personalizada
 
@@ -54,7 +54,7 @@ Estas son algunas recomendaciones básicas para los controles de entrada de text
 
 - Muestra el teclado táctil manteniendo la plena interacción con el formulario.
 
-- Asegúrese de que los controles personalizados tienen la automatización de interfaz de usuario adecuada [AutomationControlType](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) para el teclado conservar cuando el foco se desplaza de un campo de entrada de texto en el contexto de entrada de texto. Por ejemplo, si tienes un menú que se abre en medio de una situación de entrada de texto y quieres que se mantenga el teclado, el menú debe tener el menú **AutomationControlType**.
+- Asegúrese de que los controles personalizados tienen el [AutomationControlType](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) de automatización de la interfaz de usuario adecuado para que el teclado se mantenga cuando el foco se mueve de un campo de entrada de texto en el contexto de la entrada de texto. Por ejemplo, si tienes un menú que se abre en medio de una situación de entrada de texto y quieres que se mantenga el teclado, el menú debe tener el menú **AutomationControlType**.
 
 - No manipules las propiedades de automatización de la interfaz de usuario para controlar el teclado táctil. Otras herramientas de accesibilidad dependen de la precisión de las propiedades de automatización de la interfaz de usuario.
 
@@ -62,7 +62,7 @@ Estas son algunas recomendaciones básicas para los controles de entrada de text
 
     Dado que el teclado táctil tapa una gran parte de la pantalla, el UWP garantiza que el campo de entrada con el foco se desplace en la vista como un usuario navega por los controles del formulario, incluidos los controles que no estén en la vista.
 
-    Al personalizar la interfaz de usuario, proporcionar un comportamiento similar en la apariencia del teclado táctil controlando el [mostrando](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.showing) y [ocultar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.hiding) eventos expuestos por el [ **InputPane** ](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.InputPane) objeto.
+    Al personalizar la interfaz de usuario, proporcione un comportamiento similar en la apariencia del teclado táctil mediante el control de los eventos de [visualización](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.showing) y [ocultación](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.hiding) expuestos por el objeto [**InputPane**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.InputPane) .
 
     ![Formulario con y sin el teclado táctil visible](images/touch-keyboard-pan1.png)
 
@@ -72,7 +72,7 @@ Estas son algunas recomendaciones básicas para los controles de entrada de text
 
 ## <a name="handling-the-showing-and-hiding-events"></a>Control de eventos Showing y Hiding
 
-Este es un ejemplo de adjuntar controladores de eventos para el [mostrando](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.showing) y [ocultar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.hiding) eventos del teclado táctil.
+Este es un ejemplo de cómo adjuntar controladores de eventos para [Mostrar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.showing) y [ocultar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.hiding) eventos del teclado táctil.
 
 ```csharp
 using Windows.UI.ViewManagement;
@@ -220,7 +220,7 @@ void Scenario2_ShowHideEvents::OnHiding(InputPane^ /*sender*/, InputPaneVisibili
 
 **Ejemplos de archivo**
 
-- [Entrada: Ejemplo de teclado táctil](https://go.microsoft.com/fwlink/p/?linkid=246019)
-- [Responder a la apariencia del teclado en pantalla de ejemplo](https://go.microsoft.com/fwlink/p/?linkid=231633)
-- [Ejemplo de edición de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
-- [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
+- [Entrada: ejemplo de teclado táctil](https://code.msdn.microsoft.com/windowsapps/Touch-keyboard-sample-43532fda)
+- [Responder a la apariencia de la muestra de teclado en pantalla](https://code.msdn.microsoft.com/windowsapps/keyboard-events-sample-866ba41c)
+- [Ejemplo de edición de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
+- [Ejemplo de accesibilidad XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)

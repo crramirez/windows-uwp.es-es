@@ -5,12 +5,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, AdControl, anuncios de banner
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8aea8f204127a0f783f9b751a9f4178667753e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cd3e57ebf5a7f7770adf2a8defcd92e66ad1e3a0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627250"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260335"
 ---
 # <a name="banner-ads"></a>Anuncios de banner
 
@@ -24,12 +24,12 @@ Los anuncios de banner son los anuncios de visualización estática que usan una
 
 |  Tema    | Descripción |               
 |----------|-------|
-| [Elemento AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md)     | Agrega un anuncio en banner a la aplicación XAML o .NET.        |
-| [Elemento AdControl en HTML 5 y Javascript](adcontrol-in-html-5-and-javascript.md)     | Agrega un anuncio en banner a la aplicación HTML5 o JavaScript.        |
-| [Tamaños de anuncio de banner admitidos](supported-ad-sizes-for-banner-ads.md)    |  Revisa los tamaños admitidos para los anuncios de banner en aplicaciones para UWP.        |
+| [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md)     | Agrega un anuncio en banner a la aplicación XAML o .NET.        |
+| [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md)     | Agrega un anuncio en banner a la aplicación HTML5 o JavaScript.        |
+| [Tamaños de banner de banner admitidos](supported-ad-sizes-for-banner-ads.md)    |  Revisa los tamaños admitidos para los anuncios de banner en aplicaciones para UWP.        |
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestras de publicidad en GitHub](https://aka.ms/githubads)
-* [Configurar las unidades de anuncios para la aplicación](set-up-ad-units-in-your-app.md)
+* [Muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
+* [Configurar unidades de anuncio para la aplicación](set-up-ad-units-in-your-app.md)

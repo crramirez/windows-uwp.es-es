@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 044d759d2e62dedf9660f2536eca9064dbf8315b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 031f3f8f5b15f839348c05c1fd26b7711856d659
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361402"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256243"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Establecer el formato, la resolución y la velocidad de fotogramas para MediaCapture
 
@@ -21,7 +21,7 @@ En este artículo se muestra cómo usar la interfaz [**IMediaEncodingProperties*
 
 Los perfiles de cámara ofrecen una forma más avanzada de descubrir y establecer las propiedades de la secuencia de la cámara, pero no se admiten en todos los dispositivos. Para más información, consulta [Perfiles de cámara](camera-profiles.md).
 
-El código de este artículo es una adaptación de la [muestra de CameraResolution](https://go.microsoft.com/fwlink/p/?LinkId=624252&clcid=0x409). Puedes descargar la muestra para ver el código usado en contexto o para emplearla como punto de partida para tu propia aplicación.
+El código de este artículo es una adaptación de la [muestra de CameraResolution](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraResolution). Puedes descargar la muestra para ver el código usado en contexto o para emplearla como punto de partida para tu propia aplicación.
 
 > [!NOTE] 
 > Este artículo se basa en los conceptos y el código analizados en [Captura básica de fotos, audio y vídeo con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md), donde se describen los pasos para implementar la captura básica de fotos y vídeo. Se recomienda que te familiarices con el patrón de captura de multimedia básico de ese artículo antes de pasar a escenarios más avanzados de captura. El código que encontrarás en este artículo se ha agregado suponiendo que la aplicación ya tiene una instancia de MediaCapture inicializada correctamente.
@@ -30,7 +30,7 @@ El código de este artículo es una adaptación de la [muestra de CameraResoluti
 
 Crear una clase auxiliar simple para encapsular la funcionalidad de la interfaz [**IMediaEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.IMediaEncodingProperties) facilita la selección de un conjunto de propiedades de codificación que cumplan criterios particulares. Esta clase auxiliar resulta especialmente útil debido al comportamiento de la característica de propiedades de codificación siguiente:
 
-**Advertencia**    el [ **VideoDeviceController.GetAvailableMediaStreamProperties** ](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getavailablemediastreamproperties) método toma un miembro de la [ **MediaStreamType**  ](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) enumeración, como **VideoRecord** o **Photo**y devuelve una lista de uno de ellos [ **ImageEncodingProperties** ](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) o [ **VideoEncodingProperties** ](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties) objetos que contienen la secuencia de valores de codificación, como la resolución de la foto capturado o el vídeo. Los resultados de la llamada a **GetAvailableMediaStreamProperties** puede incluir **ImageEncodingProperties** o **VideoEncodingProperties**, independientemente de qué valor **MediaStreamType** se especifique. Por este motivo, siempre debe comprobar el tipo de cada valor devuelto y convertirlo al tipo apropiado antes de intentar acceder a cualquiera de los valores de propiedad.
+**Advertencia**   el método [**VideoDeviceController. GetAvailableMediaStreamProperties**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getavailablemediastreamproperties) toma un miembro de la enumeración [**MediaStreamType**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) , como **VideoRecord** o **Photo**, y devuelve una lista de objetos [**ImageEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) o [**VideoEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties) que transmiten la configuración de la codificación de la secuencia, como la resolución de la fotografía o el vídeo capturado. Los resultados de la llamada a **GetAvailableMediaStreamProperties** puede incluir **ImageEncodingProperties** o **VideoEncodingProperties**, independientemente de qué valor **MediaStreamType** se especifique. Por este motivo, siempre debe comprobar el tipo de cada valor devuelto y convertirlo al tipo apropiado antes de intentar acceder a cualquiera de los valores de propiedad.
 
 La clase auxiliar que se define a continuación controla la comprobación y la conversión del tipo de [**ImageEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) o [**VideoEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties) para que el código de la aplicación no tenga que distinguir entre los dos tipos. Además, la clase auxiliar expone las propiedades de la relación de aspecto de las propiedades, la velocidad de fotogramas (solo de las propiedades de codificación de vídeo) y un nombre descriptivo que facilita la visualización de las propiedades de codificación en la interfaz de usuario de la aplicación.
 
@@ -74,7 +74,7 @@ Una aplicación de cámara típica proporcionará la interfaz de usuario para el
 
 -   Selecciona la resolución de vista previa más cercana al tamaño del objeto [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement), de modo que no se canalicen en la secuencia de vista previa más píxeles que los que se necesiten.
 
-**Importante**    es posible, en algunos dispositivos, para establecer una relación de aspecto diferente para la secuencia de vista previa de la cámara y capturar la secuencia. El recorte de fotogramas que provoca este error de coincidencia puede dar como resultado contenido presente en los archivos multimedia capturados que no eran visibles en la vista previa, lo que puede provocar una experiencia de usuario negativa. Se recomienda encarecidamente usar la misma relación de aspecto, con un período de tolerancia reducido, para las secuencias de vista previa y captura. Se pueden tener resoluciones totalmente diferentes habilitadas para la captura y la vista previa, siempre que la relación de aspecto sea muy aproximada.
+**Importante**   es posible, en algunos dispositivos, establecer una relación de aspecto diferente para la secuencia de vista previa y el flujo de captura de la cámara. El recorte de fotogramas que provoca este error de coincidencia puede dar como resultado contenido presente en los archivos multimedia capturados que no eran visibles en la vista previa, lo que puede provocar una experiencia de usuario negativa. Se recomienda encarecidamente usar la misma relación de aspecto, con un período de tolerancia reducido, para las secuencias de vista previa y captura. Se pueden tener resoluciones totalmente diferentes habilitadas para la captura y la vista previa, siempre que la relación de aspecto sea muy aproximada.
 
 
 Para garantizar que las secuencias de captura de foto o vídeo coincidan con la relación de aspecto de la secuencia de vista previa, este ejemplo llama a [**VideoDeviceController.GetMediaStreamProperties**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getmediastreamproperties) y pasa el valor de enumeración **VideoPreview** para solicitar las propiedades de secuencia actuales de la secuencia de vista previa. A continuación, se define un período de tolerancia de relación de aspecto reducido para que se puedan incluir relaciones de aspecto que no sean exactamente iguales que las de la secuencia de vista previa, siempre que sean aproximadas. A continuación, se usa un método de extensión Linq para seleccionar solo los objetos **StreamPropertiesHelper** donde la relación de aspecto se encuentra dentro del intervalo de tolerancia definido de la secuencia de vista previa.

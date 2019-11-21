@@ -6,18 +6,18 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: Windows 10, UWP, map, mapa, location, ubicación, images, imágenes, overlay, superponer
 ms.localizationpriority: medium
-ms.openlocfilehash: e9b4d439958e6cfbf0845aaf5bcd31644ff39432
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 501e28f88d07a85c1ded3ae880d1e679169ac36a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371682"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260373"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Superponer imágenes en mosaico en un mapa
 
 Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo.
 
-**Sugerencia** Para más información sobre el uso de mapas en tu aplicación, descarga el ejemplo de mapa para la [Plataforma universal de Windows (UWP)](https://go.microsoft.com/fwlink/p/?LinkId=619977) en GitHub.
+**Sugerencia** Para más información sobre el uso de mapas en tu aplicación, descarga el ejemplo de mapa para la [Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) en GitHub.
 
 <a id="tileintro" />
 
@@ -25,7 +25,7 @@ Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante 
 
 Los servicios de mapa, como Nokia Maps y Mapas de Bing, dividen los mapas en iconos cuadrados para una rápida recuperación y presentación. Estos iconos tienen un tamaño de 256 x 256 píxeles y se representan previamente con varios niveles de detalle. Muchos de los servicios de terceros también proporcionan datos basados en mapas que están divididos en iconos. Usa los orígenes de icono para recuperar iconos de terceros o para crear tus propios iconos personalizados y superponerlos en el mapa que se muestra en [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl).
 
-**Importante**    al usar orígenes de mosaico, no tendrá que escribir código para solicitar o para colocar los iconos individuales. La clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) se encarga de solicitar los iconos a medida que los necesita. Cada solicitud especifica las coordenadas X e Y, y el nivel de zoom para el icono individual. Solo debes indicar el formato del URI o el nombre de archivo que se debe usar para recuperar los iconos en la propiedad **UriFormatString**. Es decir, se insertan los parámetros reemplazables en el URI base o en el nombre de archivo para indicar dónde se deben pasar las coordenadas X e Y, y el nivel de zoom para cada icono.
+**Importante**   cuando se usan orígenes de mosaicos, no es necesario escribir código para solicitar o colocar mosaicos individuales. La clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) se encarga de solicitar los iconos a medida que los necesita. Cada solicitud especifica las coordenadas X e Y, y el nivel de zoom para el icono individual. Solo debes indicar el formato del URI o el nombre de archivo que se debe usar para recuperar los iconos en la propiedad **UriFormatString**. Es decir, se insertan los parámetros reemplazables en el URI base o en el nombre de archivo para indicar dónde se deben pasar las coordenadas X e Y, y el nivel de zoom para cada icono.
 
 Este es un ejemplo de la propiedad [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring) de una clase [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource) que muestra los parámetros reemplazables para las coordenadas X e Y, y el nivel de zoom.
 
@@ -35,7 +35,7 @@ http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
 
 (Las coordenadas X e Y representan la ubicación del icono individual en el mapa del mundo con el nivel de detalle especificado. El sistema de numeración del icono empieza desde {0, 0} en la esquina superior izquierda del mapa. Por ejemplo, el icono en {1, 2} es la segunda columna de la tercera fila de la cuadrícula de iconos).
 
-Para obtener más información acerca del sistema de iconos que usan los servicios de asignación, consulta [Bing Maps Tile System (Sistema de iconos de Mapas de Bing)](https://go.microsoft.com/fwlink/p/?LinkId=626692).
+Para obtener más información acerca del sistema de iconos que usan los servicios de asignación, consulta [Bing Maps Tile System (Sistema de iconos de Mapas de Bing)](https://docs.microsoft.com/bingmaps/articles/bing-maps-tile-system?redirectedfrom=MSDN).
 
 ### <a name="overlay-tiles-from-a-tile-source"></a>Superponer los iconos de un origen de iconos
 
@@ -421,7 +421,7 @@ Reemplazar todo el mapa con iconos personalizados o de terceros:
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
-* [Ejemplo de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Ejemplo de mapa de UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [Directrices de diseño para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* Vídeo de [Build 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757) (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en las aplicaciones de Windows)
-* [Ejemplo de aplicación de tráfico para UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Vídeo de compilación 2015: uso de mapas y ubicación en el teléfono, la tableta y el PC de las aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Ejemplo de aplicación de tráfico para UWP](https://github.com/Microsoft/Windows-appsample-trafficapp)

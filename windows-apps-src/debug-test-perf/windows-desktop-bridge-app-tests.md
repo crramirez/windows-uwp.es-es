@@ -1,29 +1,29 @@
 ---
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
-title: Pruebas de aplicación Puente de dispositivo de escritorio de Windows
-description: Usar pruebas integradas del puente de escritorio para asegurarse de que su aplicación de escritorio está optimizada para su conversión a una aplicación para UWP.
+title: Pruebas de la aplicación Puente de dispositivo de escritorio de Windows
+description: Use las pruebas integradas del puente de escritorio para asegurarse de que la aplicación de escritorio está optimizada para su conversión en una aplicación de UWP.
 ms.date: 12/18/2017
 ms.topic: article
-keywords: Windows 10, uwp, certificación de aplicaciones
+keywords: Windows 10, UWP, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: a28c344ed7c8645f3788719185aac71c7a036d5c
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: dcdac5130af673d1b0d1ab1a9713902e9ab22830
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317416"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257820"
 ---
-# <a name="windows-desktop-bridge-app-tests"></a>Pruebas de aplicación Puente de dispositivo de escritorio de Windows
+# <a name="windows-desktop-bridge-app-tests"></a>Pruebas de la aplicación Puente de dispositivo de escritorio de Windows
 
-[Desktop Bridge aplicaciones](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) son Windows convierten aplicaciones de escritorio a aplicaciones de plataforma Universal de Windows (UWP) mediante el [Desktop Bridge](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows 10.
+Las aplicaciones de [puente de escritorio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) son aplicaciones de escritorio de Windows convertidas en aplicaciones plataforma universal de Windows (UWP) mediante el [puente de escritorio](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows 10.
 
 ## <a name="required-versus-optional-tests"></a>Pruebas obligatorias vs. pruebas opcionales
-Pruebas opcionales para aplicaciones de Windows Desktop Bridge sólo son informativas y no se usará para evaluar la aplicación durante la incorporación de Microsoft Store. Se recomienda investigar estos resultados para generar aplicaciones de mejor calidad de prueba. Los criterios de aprobación o no aprobación general para la incorporación de la tienda se determinan según las pruebas obligatorias y no según estas pruebas opcionales.
+Las pruebas opcionales para las aplicaciones de puente de escritorio de Windows son meramente informativos y no se usarán para evaluar la aplicación durante la incorporación de Microsoft Store. Se recomienda investigar estos resultados de pruebas para generar aplicaciones de mejor calidad. Los criterios de aprobación o no aprobación general para la incorporación de la tienda se determinan según las pruebas obligatorias y no según estas pruebas opcionales.
 
 ## <a name="current-optional-tests"></a>Pruebas opcionales actuales
 
-### <a name="1-digitally-signed-file-test"></a>1. Prueba de los archivos de firma digital 
-**En segundo plano**  
+### <a name="1-digitally-signed-file-test"></a>1. Prueba de archivo firmado digitalmente 
+**Fondo**  
 Esta prueba verifica que todos los archivos portables ejecutables (PE) contienen una firma válida. La presencia de archivos firmados digitalmente permite a los usuarios saber que el software es original.
 
 **Detalles de la prueba**  
@@ -32,34 +32,34 @@ La prueba examina todos los archivos portables ejecutables en el paquete y compr
 **Acciones correctivas**  
 Siempre se recomienda tener archivos firmados digitalmente. Para más información, consulta [Introducción a la firma de código](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)).
 
-### <a name="2-file-association-verbs"></a>2. Verbos de asociación de archivo 
-**En segundo plano**  
+### <a name="2-file-association-verbs"></a>2. Verbos de asociación de archivos 
+**Fondo**  
 Esta prueba examina el Registro de paquete para comprobar si los verbos de asociación de archivo están registrados. 
 
 **Detalles de la prueba**  
 Las aplicaciones de escritorio convertidas pueden mejorarse con una amplia gama de API para la Plataforma universal de Windows. Esta prueba verifique que los archivos binarios para UWP en la aplicación no llaman a las API que no sean para UWP. Los archivos binarios para UWP tienen el indicador **AppContainer** establecido.
 
 **Acciones correctivas**  
-Consulte [escritorio al puente de UWP: Extensiones de aplicación](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions) para obtener una explicación de estas extensiones y cómo usarlas correctamente. 
+Consulta [Puente de dispositivo de escritorio a UWP: extensiones de aplicación](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions) para ver una explicación de estas extensiones y cómo usarlas correctamente. 
 
 ### <a name="3-debug-configuration-test"></a>3. Prueba de configuración de depuración
 Esta prueba verifica que la appx no es una versión de depuración.
  
-**En segundo plano**  
-Para conseguir la certificación de la Microsoft Store, no se deben compilar las aplicaciones para la depuración y no debe hacer referencia las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
+**Fondo**  
+Para que se certifique el Microsoft Store, las aplicaciones no se deben compilar para depurar y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
  
 **Detalles de la prueba**  
 Prueba la aplicación para asegurarte de que no sea una versión de depuración y no esté vinculada con ningún marco de depuración.
  
 **Acciones correctivas**  
-* Compile la aplicación como una versión de lanzamiento antes de enviarla a la Microsoft Store.
+* Compile la aplicación como una compilación de versión antes de enviarla a la Microsoft Store.
 * Asegúrate de tener instalada la versión correcta de .NET Framework.
 * Asegúrate de que la aplicación no esté vinculada a versiones de depuración de un marco de trabajo y que esté creada con una versión de lanzamiento. Si la aplicación incluye componentes .NET, comprueba si has instalado la versión correcta de .NET Framework.
 
-### <a name="4-package-sanity-test"></a>4. Prueba de integridad del paquete
+### <a name="4-package-sanity-test"></a>4. Pruebas de integridad del paquete
 #### <a name="41-archive-files-usage"></a>4.1 Uso de los archivos de almacenamiento
 
-**En segundo plano**  
+**Fondo**  
 Esta prueba te ayuda a crear aplicaciones mejoradas del Puente de dispositivo de escritorio para que se ejecuten en equipos con [Windows 10 S](https://www.microsoft.com/windows/windows-10-s).
 
 **Detalles de la prueba**  
@@ -71,7 +71,7 @@ Esta prueba busca todos los archivos ejecutables dentro de los archivos almacena
 
 #### <a name="42-blocked-executables"></a>4.2 Ejecutables bloqueados
 
-**En segundo plano**  
+**Fondo**  
 Esta prueba te ayuda a crear aplicaciones mejoradas del Puente de dispositivo de escritorio para que se ejecuten en equipos con [Windows 10 S](https://www.microsoft.com/windows/windows-10-s). 
 
 **Detalles de la prueba**  
@@ -84,9 +84,9 @@ Esta prueba comprueba si la aplicación está intentando iniciar archivos ejecut
 
 ## <a name="current-required-tests"></a>Pruebas obligatorias actuales
 
-### <a name="1-app-capabilities-test-special-use-capabilities"></a>1. Probar las capacidades de la aplicación (capacidades de uso especial)
+### <a name="1-app-capabilities-test-special-use-capabilities"></a>1. Prueba de funcionalidades de la aplicación (funcionalidades de uso especial)
 
-**En segundo plano**  
+**Fondo**  
 Las funcionalidades de uso especial están indicadas para escenarios muy específicos. Estas funcionalidades solo pueden usarse en cuentas de empresa. 
 
 **Detalles de la prueba**  
@@ -100,17 +100,17 @@ Si se declara alguna de estas funcionalidades, la prueba muestra una advertencia
 **Acciones correctivas**  
 Piensa en la posibilidad de quitar la función de uso especial si la aplicación no la necesita. Además, el uso de estas funcionalidades está sujeto a otras revisiones de las directivas de incorporación.
 
-### <a name="2-app-manifest-resources-tests"></a>2. Las pruebas de los recursos de manifiesto de aplicación 
+### <a name="2-app-manifest-resources-tests"></a>2. Pruebas de recursos del manifiesto de la aplicación 
 #### <a name="21-app-resources-validation"></a>2.1 Validación de recursos de la aplicación
 Es posible que la aplicación no se instale correctamente si las cadenas o imágenes declaradas en el manifiesto de la aplicación son incorrectas. Si se instala con estos errores, es posible que el logotipo de la aplicación u otras imágenes no se muestren correctamente.    
 
 **Detalles de la prueba**  
 Inspecciona los recursos definidos en el manifiesto de la aplicación para asegurarse de que estén presentes y sean válidos.
 
-**Acción correctora**  
+**Acción correctiva**  
 Usa la siguiente tabla como guía.
 
-Mensaje de error | Observaciones
+Mensaje de error | Comentarios
 --------------|---------
 La imagen {image name} define ambos calificadores Scale y TargetSize; puedes definir un calificador por vez. | Puedes personalizar imágenes para distintas resoluciones. En el mensaje en sí, {image name}contiene el nombre de la imagen que presenta el error. Asegúrate de que cada imagen defina Scale o TargetSize como calificador. 
 La imagen {image name} no cumple con las restricciones de tamaño.  | Asegúrate de que todas las imágenes de la aplicación cumplan con las restricciones de tamaño apropiado. En el mensaje en sí, {image name}contiene el nombre de la imagen que presenta el error. 
@@ -121,7 +121,7 @@ La imagen "BadgeLogo" tiene un valor ABGR {value} en la posición (x, y) que no 
 La imagen debe definir al menos una variante sin un calificador TargetSize. Debe definir un calificador Scale o dejar Scale y TargetSize sin especificar, para que de manera predeterminada se establezca Scale-100.  | Para más información, consulta las guías sobre el [diseño adaptativo](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) y los [recursos de la aplicación](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data). 
 Al paquete le falta un archivo "resources.pri".  | Si tienes contenido localizable en el manifiesto de la aplicación, asegúrate de que el paquete de la aplicación incluya un archivo resources.pri válido. 
 El archivo "resources.pri" debe tener un mapa de recursos cuyo nombre coincida con el nombre del paquete {package full name}.  | Este error puede obtenerse si el manifiesto cambió y el nombre del mapa de recursos del archivo resources.pri deja de coincidir con el nombre del paquete en el manifiesto. En el mensaje en sí, {package full name} contiene el nombre del paquete que resources.pri debe tener. Para corregir esto, debes reconstruir resources.pri y la forma más fácil de hacerlo es reconstruyendo el paquete de la aplicación. 
-El archivo "resources.pri" no debe tener habilitado Combinar automáticamente.  | MakePRI.exe admite una opción denominada Combinar automáticamente. El valor predeterminado de Combinar automáticamente es desactivado. Cuando está habilitado, Combinar automáticamente combina los recursos del paquete de idioma de una aplicación en un solo resources.pri en tiempo de ejecución. No se recomienda para las aplicaciones que se va a distribuir a través de la Microsoft Store. El resources.pri de una aplicación que se distribuye a través de la Microsoft Store deben estar en la raíz del paquete de la aplicación y contienen todas las referencias del lenguaje que admita la aplicación. 
+El archivo "resources.pri" no debe tener habilitado Combinar automáticamente.  | MakePRI.exe admite una opción denominada Combinar automáticamente. El valor predeterminado de Combinar automáticamente es desactivado. Cuando está habilitado, Combinar automáticamente combina los recursos del paquete de idioma de una aplicación en un solo resources.pri en tiempo de ejecución. No se recomienda para las aplicaciones que desea distribuir a través de la Microsoft Store. Los recursos. PRI de una aplicación distribuida a través de la Microsoft Store deben estar en la raíz del paquete de la aplicación y contener todas las referencias de lenguaje que admite la aplicación. 
 La cadena {string} no cumple la restricción de longitud máxima de {number} caracteres.  | Consulta los [requisitos de metadatos del paquete](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). En el mensaje en sí, {string} se reemplaza por la cadena que tiene el error y {number} contiene la longitud máxima. 
 La cadena {string} no debe tener espacios en blanco iniciales ni finales.  | El esquema de los elementos en el manifiesto de la aplicación no permite caracteres de espacio en blanco inicial ni final. En el mensaje en sí, {string} se reemplaza por la cadena que tiene el error. Asegúrate de que ninguno de los valores localizados en los campos del manifiesto en resources.pri tenga caracteres de espacio en blanco inicial o final. 
 La cadena debe ser no vacía (mayor que cero en longitud).  | Consulta el tema sobre los [requisitos del paquete de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements) para más información. 
@@ -133,7 +133,7 @@ El archivo {filename} no debe contener una sección de mapa inverso.  | Aunque e
 
 
 #### <a name="22-branding-validation"></a>2.2 Validación de la personalización de marca
-**En segundo plano**  
+**Fondo**  
 Se espera que las aplicaciones Puente de dispositivo de escritorio estén completas y sean absolutamente funcionales. Las aplicaciones que usan imágenes predeterminadas (de plantillas o muestras del SDK) ofrecen una experiencia mediocre al usuario y son difíciles de identificar en el catálogo de la tienda.
 
 **Detalles de la prueba**  
@@ -142,30 +142,30 @@ La prueba corrobora que las imágenes usadas por la aplicación no sean imágene
 **Acciones correctivas**  
 Reemplaza las imágenes predeterminadas con otras más distintivas y representativas de tu aplicación.
 
-### <a name="3-package-compliance-tests"></a>3. Pruebas de cumplimiento de paquete
+### <a name="3-package-compliance-tests"></a>3. Pruebas de cumplimiento del paquete
 #### <a name="31-app-manifest"></a>3.1 Manifiesto de la aplicación
 Prueba el contenido del manifiesto de la aplicación para asegurarte de que su contenido es correcto.
 
-**En segundo plano**  
+**Fondo**  
 Las aplicaciones deben tener un manifiesto de la aplicación con el formato correcto.
 
 **Detalles de la prueba**  
 Examina el manifiesto de la aplicación para comprobar que el contenido sea correcto, según se describe en los [Requisitos del paquete de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). En esta prueba se realizan las siguientes comprobaciones:
 * **Extensiones de archivo y protocolos**  
 La aplicación puede declarar los tipos de archivo a los que se puede asociar. Una declaración de un gran número de tipos de archivo poco comunes provoca una experiencia de usuario deficiente. Esta prueba limita el número de extensiones de archivo con las que puede asociarse una aplicación.
-* **Regla de dependencia de marco de trabajo**  
+* **Regla de dependencia de marco**  
 Esta prueba aplica el requisito de que las aplicaciones declaren las dependencias adecuadas en UWP. Si se encuentra una dependencia inadecuada, la aplicación no pasará la prueba. Si hay un error de coincidencia entre la versión del sistema operativo a la que se dirige la aplicación y las dependencias de marco establecidas, la aplicación no superará la prueba. Tampoco lo hará si hace referencia a alguna "versión preliminar " de los archivos dll del marco.
 * **Comprobación de la comunicación entre procesos (IPC)**  
 Esta prueba impone el requisito de que las aplicaciones Puente de dispositivo de escritorio no se comunican fuera del contenedor de la aplicación con componentes del escritorio. La comunicación entre procesos está pensada exclusivamente para las aplicaciones de prueba. Las aplicaciones en las que el nombre especificado en [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) sea `DesktopApplicationPath` no superarán esta prueba.  
 
-**Acción correctora**  
+**Acción correctiva**  
 Compara el manifiesto de la aplicación con los requisitos descritos en la página sobre los [Requisitos del paquete de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements).
 
 
 #### <a name="32-application-count"></a>3.2 Recuento de aplicaciones
 Esta prueba verifica que el paquete de aplicaciones (.appx, lote de aplicaciones) contiene una aplicación. 
 
-**En segundo plano**  
+**Fondo**  
 Esta prueba se implementa según la directiva de la Tienda. 
 
 **Detalles de la prueba**  
@@ -176,7 +176,7 @@ Asegúrese de que el paquete de la aplicación y el lote cumplen con requisitos 
 
 
 #### <a name="33-registry-checks"></a>3.3 Comprobaciones del Registro
-**En segundo plano**  
+**Fondo**  
 Esta prueba verifica si la aplicación instala o actualiza nuevos servicios o controladores.
 
 **Detalles de la prueba**  
@@ -189,7 +189,7 @@ Revisa los errores y quita los servicios o controladores en cuestión, si no son
 ### <a name="4-platform-appropriate-files-test"></a>4. Prueba de archivos apropiados para la plataforma
 Las aplicaciones que instalan binarios mixtos pueden bloquearse o no ejecutarse correctamente en la arquitectura del procesador que tenga el usuario. 
 
-**En segundo plano**  
+**Fondo**  
 Esta prueba examina los binarios de un paquete de la aplicación para ver si existen conflictos de arquitectura. Un paquete de la aplicación no debe contener binarios que no se puedan usar en la arquitectura de procesador especificada en el manifiesto. De haberlos, existe la posibilidad de que la aplicación se bloquee o de que el tamaño del paquete de la aplicación se incremente sin necesidad. 
 
 **Detalles de la prueba**  
@@ -205,76 +205,76 @@ Sigue estas directrices para que el paquete de la aplicación contenga únicamen
 ### <a name="5-supported-api-test"></a>5. Prueba de API admitidas
 Comprueba la aplicación para detectar el uso de cualquier API no compatible. 
 
-**En segundo plano**  
+**Fondo**  
 Las aplicaciones Puente de dispositivo de escritorio pueden aprovechar algunas API de Win32 heredadas junto con API modernas (componentes para UWP). Esta prueba identifica los archivos binarios administrados que usan API no compatibles.
  
 **Detalles de la prueba**  
 Esta prueba verifica todos los componentes para UWP en la aplicación:
-* Comprueba que cada archivo binario administrado dentro del paquete de aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP mediante la comprobación de la tabla de direcciones de importación del archivo binario.
+* Comprueba que cada binario administrado del paquete de la aplicación no tiene una dependencia en una API de Win32 que no se admite para el desarrollo de aplicaciones para UWP comprobando la tabla de direcciones de importación del archivo binario.
 * Comprueba que cada binario administrado en el paquete de la aplicación no toma una dependencia de una función fuera del perfil aprobado. 
 
 **Acciones correctivas**  
 Esto puede corregirse al asegurarte de que la aplicación se haya compilado como una versión de lanzamiento y no como una versión de depuración. 
 
 > [!NOTE]
-> La compilación de depuración de una aplicación se producirá un error de esta prueba incluso si la aplicación solo usa [API para aplicaciones UWP](https://docs.microsoft.com/uwp/). Revise los mensajes de error para identificar la API presente que no es una API para aplicaciones UWP permitida. 
+> La compilación de depuración de una aplicación producirá un error en esta prueba, aunque la aplicación solo use las [API para las aplicaciones UWP](https://docs.microsoft.com/uwp/). Revise los mensajes de error para identificar la API presente que no es una API permitida para aplicaciones UWP. 
 
 > [!NOTE]
-> Las aplicaciones de C++ que se compilan en una configuración de depuración se producirá un error de esta prueba incluso si la configuración solo usa las API de Windows SDK para aplicaciones UWP. Consulte [alternativas a las API de Windows en aplicaciones para UWP](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps) para obtener más información.
+> C++las aplicaciones que se compilan en una configuración de depuración no podrán realizar esta prueba, aunque la configuración solo use las API del Windows SDK para las aplicaciones para UWP. Para más información, consulte [alternativas a las API de Windows en aplicaciones para UWP](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps) .
 
-### <a name="6-user-account-control-uac-test"></a>6. Prueba de control (UAC) de cuenta de usuario  
+### <a name="6-user-account-control-uac-test"></a>6. Prueba de control de cuentas de usuario (UAC)  
 
-**En segundo plano**  
+**Fondo**  
 Asegura que la aplicación no solicita el control de cuentas de usuario en tiempo de ejecución.
 
 **Detalles de la prueba**  
-Una aplicación no puede solicitar la elevación de administrador o UIAccess según la directiva de Microsoft Store. No se admiten permisos de seguridad con privilegios elevados. 
+Una aplicación no puede solicitar elevación de administración ni UIAccess por Microsoft Store Directiva. No se admiten permisos de seguridad con privilegios elevados. 
 
 **Acciones correctivas**  
-Las aplicaciones deben ejecutarse como usuario interactivo. Para más información, consulta [UI Automation Security Overview (Introducción a la seguridad de la automatización de la interfaz de usuario](https://go.microsoft.com/fwlink/?linkid=839440).
+Las aplicaciones deben ejecutarse como usuario interactivo. Para más información, consulta [UI Automation Security Overview (Introducción a la seguridad de la automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-security-overview?redirectedfrom=MSDN).
 
  
 ### <a name="7-windows-runtime-metadata-validation"></a>7. Validación de metadatos de Windows Runtime
-**En segundo plano**  
+**Fondo**  
 Comprueba que los componentes suministrados en una aplicación corresponden al sistema de tipo de UWP.
 
 **Detalles de la prueba**  
 Esta prueba produce un número de indicadores relacionados al uso de tipo adecuado.
 
 **Acciones correctivas**  
-* **Atributo ExclusiveTo**  
+* **Exclusive (atributo)**  
 Asegúrate de que las clases UWP no implementen interfaces marcadas como ExclusiveTo para otra clase.
-* **Corrección de general Metadata**  
+* **Corrección general de los metadatos**  
 Comprueba que el compilador que usas para generar los tipos esté actualizado con las especificaciones de UWP.
 * **Propiedades**  
 Asegúrate de que todas las propiedades de una clase de UWP tengan un método `get` (los métodos `set` son opcionales). Para todas las propiedades, asegúrate de que el tipo que el método `get`devuelve coincide con el tipo del parámetro de entrada del método `set`.
-* **Ubicación de tipo**  
+* **Ubicación del tipo**  
 Comprueba que los metadatos de todos los tipos de UWP estén ubicados en el archivo .winmd cuyo nombre coincida en longitud con el espacio de nombres del paquete de la aplicación.
-* **Minúsculas del nombre de tipo**  
+* **Distinción de mayúsculas y minúsculas en el nombre de tipo**  
 Comprueba que todos los tipos de UWP tengan nombres únicos con distinción entre mayúsculas y minúsculas en el paquete de la aplicación. Asegúrate también de que ningún nombre de tipo UWP se use además como espacio de nombres de tu paquete de la aplicación.
 * **Corrección del nombre de tipo**  
 Comprueba que no hay tipos de UWP en el espacio de nombres global ni en el espacio de nombres de nivel superior de Windows.
  
 
-### <a name="8-windows-security-features-tests"></a>8. Pruebas de las características de seguridad de Windows
+### <a name="8-windows-security-features-tests"></a>8. Pruebas de características de seguridad de Windows
 Cambiar las protecciones de seguridad de Windows predeterminadas puede causar grandes riesgos a los clientes. 
 
 #### <a name="81-banned-file-analyzer"></a>8.1 Analizador de archivos prohibidos
-**En segundo plano**  
+**Fondo**  
 Algunos archivos se actualizaron con importantes mejoras de seguridad, confiabilidad y otras. Las aplicaciones Puente de dispositivo de escritorio de Windows deben contener las versiones más recientes estos archivos, dado que las versiones obsoletas presentan un riesgo. El Kit para la certificación de aplicaciones en Windows bloquea estos archivos con el fin de garantizar que todas las aplicaciones usen una versión actual.
 
 **Detalles de la prueba**  
 La comprobación de archivos prohibidos del Kit para la certificación de aplicaciones en Windows comprueba actualmente los siguientes archivos:
-* *Bing.Maps.JavaScript\js\veapicore.js*  
+* *Bing. Maps. JavaScript\js\veapicore.js*  
 Esta comprobación suele producir un error cuando una aplicación usa una versión preliminar del archivo en lugar de la versión oficial más reciente. 
 
 **Acciones correctivas**  
-Para corregir este problema, utilice la versión más reciente de la [SDK de Bing Maps](https://go.microsoft.com/fwlink/p/?linkid=614880) para aplicaciones UWP.
+Para corregir esto, use la versión más reciente del [SDK de mapas de Bing](https://www.bingmapsportal.com/) para aplicaciones de UWP.
 
 #### <a name="82-private-code-signing"></a>8.2 Firma de código privado
 Prueba la existencia de archivos binarios de firma de código privado en el paquete de la aplicación. 
 
-**En segundo plano**  
+**Fondo**  
 Los archivos de firma de código privado se deben conservar de forma privada, ya que podrían usarse de forma malintencionada en caso de que se pongan en riesgo. 
 
 **Detalles de la prueba**  

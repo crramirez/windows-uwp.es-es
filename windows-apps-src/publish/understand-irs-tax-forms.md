@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, impuestos, irs, servicio de impuestos internos, impuesto, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: dc967961be7a96d04dfc744a229b4ca1f8f23a73
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 55143f109398aae1988b7ac0d060cda138e7e48e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282460"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258965"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 
@@ -41,10 +41,10 @@ Los formularios fiscales se le enviarán desde las siguientes direcciones:
 **Ciudadanos no estadounidenses:**
 <table>
 <tr><th>Grupo de negocios</th><th>Entidad jurídica</th><th>Dirección</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Corporation a través de Microsoft Ireland actuando como intermediario calificado para Microsoft Corporation)</td><td>Una ubicación de Microsoft<br>South @ no__t-0County @ no__t-1Business @ no__t-2Park<br>Leopardstown, Dublín 18 Irlanda</td></tr>
-<tr><td>Anunciar</td><td>Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Online Inc. a través de Microsoft Ireland actuando como agente de pago para Microsoft Online Inc).</td><td>Una ubicación de Microsoft<br>South @ no__t-0County @ no__t-1Business @ no__t-2Park<br>Leopardstown, Dublín 18 Irlanda</td></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Corporation a través de Microsoft Ireland actuando como intermediario calificado para Microsoft Corporation)</td><td>Una ubicación de Microsoft<br>&nbsp;del sur&nbsp;&nbsp;de la empresa<br>Leopardstown, Dublín 18 Irlanda</td></tr>
+<tr><td>Anunciar</td><td>Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Online Inc. a través de Microsoft Ireland actuando como agente de pago para Microsoft Online Inc).</td><td>Una ubicación de Microsoft<br>&nbsp;del sur&nbsp;&nbsp;de la empresa<br>Leopardstown, Dublín 18 Irlanda</td></tr>
 <tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EE. UU.</td></tr>
-<tr><td colspan="3">* Los ciudadanos de los siguientes países que obtienen ingresos publicitarios se pagarán a través de Microsoft Ireland Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda, isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, Países Bajos, Noruega, Polonia, Portugal Rumania, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza, Reino Unido</td></tr>
+<tr><td colspan="3">* Los ciudadanos de los siguientes países que obtienen ingresos publicitarios se pagarán a través de Microsoft Ireland Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda Isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, Países Bajos, Noruega, Polonia, Portugal, Rumania, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza y Reino Unido</td></tr>
 </table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para los desarrolladores que se encuentran en los Estados Unidos
@@ -56,15 +56,15 @@ Los formularios fiscales se le enviarán desde las siguientes direcciones:
   </tr>
   <tr> 
      <td valign="top">Tuve <b>ventas superiores a 200 aplicaciones</b> con un importe total de compra de estas ventas <b>superior a 20 000 USD</b> en el año fiscal aplicable (<b>sin</b> contar las ventas realizadas en Brasil y China a través de la Microsoft Store en Windows 10).</td>
-    <td valign="top"><b>1099-K</b>:<br>Almacenamiento Microsoft Corporation<br>EIN: * * * * * 4442<br><br><b>Importantes</b>: El Formulario 1099-K contiene importes de <b>compra brutas</b> , no los pagos realizados.</td>
+    <td valign="top"><b>1099-K</b>:<br>Contribuyente: Microsoft Corporation<br>EIN: * * * * * 4442<br><br><b>Importante</b>: el Formulario 1099-K contiene importes de <b>compra brutas</b> , no los pagos realizados.</td>
   </tr>
   <tr> 
      <td valign="top">Recibí <b>al menos 10 USD por pagos</b> de (i) ventas de aplicaciones realizadas en Brasil y China a través de la Microsoft Store en Windows 10 o (ii) ventas en el Minecraft Marketplace.<br>
 <br>
-<b>OR @ NO__T-1<br>
+<b>DE</b><br>
 <br>
 Recibí al menos $600 en los pagos no relacionados con las ventas de las aplicaciones de Microsoft en el año fiscal aplicable (por ejemplo, los pagos de incentivos o los pagos de un concurso o promoción)</td>
-    <td valign="top"><b>1099-MISC</b>:<br>Paga Microsoft Corporation<br>EIN: * * * * * 4442<br><br><b>Importantes</b>: Ciertas entidades comerciales no recibirán los formularios 1099, independientemente de los importes de pago que se hayan recibido de Microsoft.  Para obtener más información, consulta a tu profesional en materia fiscal.</td>
+    <td valign="top"><b>1099-MISC</b>:<br>Pagador: Microsoft Corporation<br>EIN: * * * * * 4442<br><br><b>Importante</b>: algunas entidades empresariales no recibirán los formularios 1099, independientemente de los importes de pago recibidos de Microsoft.  Para obtener más información, consulta a tu profesional en materia fiscal.</td>
   </tr>
   <tr>
     <td valign="top">No se aplica ninguna de las anteriores.</td>
@@ -80,7 +80,7 @@ Recibí al menos $600 en los pagos no relacionados con las ventas de las aplicac
   </tr>
   <tr> 
      <td valign="top">Recibí <b>al menos 600 USD en pagos</b> provenientes de anuncios en aplicaciones en el año fiscal aplicable.</td>
-    <td valign="top"><b>1099-MISC</b>:<br>Paga Microsoft Online Inc<br>EIN: * * * * * 0505<br><br><b>Importantes</b>: Ciertas entidades comerciales no recibirán los formularios 1099, independientemente de los importes de pago que se hayan recibido de Microsoft.  Para obtener más información, consulta a tu profesional en materia fiscal.</td>
+    <td valign="top"><b>1099-MISC</b>:<br>Pagador: Microsoft Online, Inc.<br>EIN: * * * * * 0505<br><br><b>Importante</b>: algunas entidades empresariales no recibirán los formularios 1099, independientemente de los importes de pago recibidos de Microsoft.  Para obtener más información, consulta a tu profesional en materia fiscal.</td>
   </tr>
   <tr> 
      <td valign="top">Recibí <b>menos de 600 USD en pagos</b> provenientes de anuncios en aplicaciones en el año fiscal aplicable.</td>
@@ -93,7 +93,7 @@ Recibí al menos $600 en los pagos no relacionados con las ventas de las aplicac
 
 <table>
   <tr>
-    <td valign="top"><b>I recibió un formulario 1042-S de Microsoft. ¿Para qué sirve? </b></td>
+    <td valign="top"><b>Recibí un formulario 1042-S de Microsoft. ¿Para qué sirve?</b></td>
     <td valign="top">Microsoft te ha proporcionado uno o varios formularios 1042-S porque se te han pagado ingresos que deben declararse a las autoridades fiscales de los Estados Unidos y estaban sujetos a retención de impuestos.  El formulario 1042-S se usa para este requisito de declaración fiscal.</td>
   </tr>
   <tr>
@@ -104,10 +104,10 @@ Recibí al menos $600 en los pagos no relacionados con las ventas de las aplicac
     <td valign="top"><b>¿Por qué se han retenido impuestos en mis pagos cuando he completado un formulario de W8?</b></td>
     <td valign="top">La retención de impuestos se realiza si:<br>
      1. no completó la sección del tratado fiscal del W8 correctamente, o bien<br>
-     2. está residente en un país que no tiene un tratado fiscal con el Estados Unidos.<br><br>Puede visitar el centro de Partners en cualquier momento para enviar un formulario de W8 actualizado.<br><br><b>Nota</b>: No todos los ingresos están sujetos a la retención de impuestos.</td>
+     2. está residente en un país que no tiene un tratado fiscal con la Estados Unidos.<br><br>Puede visitar el centro de Partners en cualquier momento para enviar un formulario de W8 actualizado.<br><br><b>Nota</b>: no todos los ingresos están sujetos a la retención de impuestos.</td>
   </tr>
   <tr>
-    <td valign="top"><b>I envió un formulario W8 actualizado con información de tratados válida. ¿Puede Microsoft reembolsar los impuestos que se han retenido? </b></td>
+    <td valign="top"><b>He enviado un formulario W8 actualizado con información de tratados válida. ¿Puede Microsoft reembolsar los impuestos que se han retenido?</b></td>
     <td valign="top">Una vez que se han retenido los impuestos, no pueden reembolsarse. Debes consultar con tus asesores fiscales si puedes solicitar un crédito local por estos impuestos o si puedes solicitar un reembolso al IRS.</td>
   </tr>
   <tr>
@@ -127,4 +127,4 @@ Recibí al menos $600 en los pagos no relacionados con las ventas de las aplicac
 
 
 > [!NOTE]
-> Si tienes más preguntas o dudas relacionadas con los **formularios fiscales del IRS**,crea una [incidencia de soporte técnico](https://aka.ms/storesupport). Microsoft no puede responder preguntas relacionadas con tus circunstancias fiscales específicas. Para tales preguntas, consulta a tu profesional en materia fiscal.
+> Si tienes más preguntas o dudas relacionadas con los **formularios fiscales del IRS**,crea una [incidencia de soporte técnico](https://developer.microsoft.com/windows/support). Microsoft no puede responder preguntas relacionadas con tus circunstancias fiscales específicas. Para tales preguntas, consulta a tu profesional en materia fiscal.

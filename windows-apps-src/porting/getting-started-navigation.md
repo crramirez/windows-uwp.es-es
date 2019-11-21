@@ -6,23 +6,23 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: de9c5261afb7b76b2409599c9c1f88814d1dd6a1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: dcbc8f6737c2b7450e42ed01a752087d6e9034c1
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371779"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259146"
 ---
-# <a name="getting-started-navigation"></a>Introducción: Navegación
+# <a name="getting-started-navigation"></a>Introducción: navegación
 
 
 ## <a name="adding-navigation"></a>Agregar navegación
 
 iOS ofrece la clase **UINavigationController** para ayudar con la navegación en la aplicación: puedes insertar y extraer vistas para crear la jerarquía de elementos **UIViewController** que definen la aplicación.
 
-En cambio, una aplicación de Windows 10 que contiene varias vistas tarda más de un enfoque del sitio web a la navegación. Puedes esperar que los usuarios pasen de una página a otra conforme hacen clic en controles para abrirse camino por la aplicación. Para obtener información, consulta [Conceptos básicos de diseño de la navegación](https://docs.microsoft.com/windows/uwp/layout/navigation-basics).
+Por el contrario, una aplicación de Windows 10 que contiene varias vistas toma más de un enfoque de sitio web para la navegación. Puedes esperar que los usuarios pasen de una página a otra conforme hacen clic en controles para abrirse camino por la aplicación. Para obtener información, consulta [Conceptos básicos de diseño de la navegación](https://docs.microsoft.com/windows/uwp/layout/navigation-basics).
 
-Una de las formas para administrar esta navegación en una aplicación de Windows 10 consiste en usar el [ **marco** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) clase. En el tutorial siguiente se muestra cómo puedes probarlo.
+Una de las formas de administrar esta navegación en una aplicación de Windows 10 es usar la clase [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) . En el tutorial siguiente se muestra cómo puedes probarlo.
 
 Para seguir con la solución que iniciaste anteriormente, abre el archivo **MainPage.xaml** y agrega un botón en la vista **Diseño**. Cambia la propiedad **Content** del botón de "Botón" a "Ir a la página". A continuación, crea un controlador para el evento **Click** del botón, como se muestra en la siguiente ilustración. Si no recuerdas cómo hacerlo, revisa el tutorial de la sección anterior (sugerencia: haz doble clic en el botón de la vista **Diseño**).
 
@@ -34,7 +34,7 @@ Vamos a agregar una página nueva. En la vista **Solución**, pulsa el menú **P
 
 A continuación, agrega un botón al archivo BlankPage.xaml. Se usará el control AppBarButton y le asignaremos una imagen de flecha atrás: en la vista **XAML**, agrega ` <AppBarButton Icon="Back"/>` entre los elementos `<Grid> </Grid>`.
 
-Ahora, vamos a agregar un controlador de eventos al botón: haga doble clic en el control en el **diseño** vista y Microsoft Visual Studio agrega el texto "AppBarButton\_haga clic en" a la **haga clic en** cuadro, como se muestra en el Figura, siguiente y, a continuación, agrega y muestra el controlador de eventos correspondiente en el archivo BlankPage.xaml.cs.
+Ahora, vamos a agregar un controlador de eventos al botón: haga doble clic en el control en la vista de **diseño** y Microsoft Visual Studio agrega el texto "AppBarButton\_clic" en el cuadro de **clic** , como se muestra en la ilustración siguiente y, a continuación, agrega y muestra el controlador de eventos correspondiente en el archivo BlankPage.Xaml.cs.
 
 ![agregar un botón atrás y su evento click en visual studio](images/ios-to-uwp/vs-add-back-button.png)
 
@@ -64,7 +64,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 
 Ahora, ejecuta el programa. Pulsa el botón "Ir a la página" para ir a la otra página y después pulsa el botón de flecha atrás para volver a la página anterior.
 
-La clase [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) administra la navegación de páginas. Como el **UINavigationController** clase usa iOS **pushViewController** y **popViewController** métodos, el **marco** clase Proporciona aplicaciones para UWP [ **Navigate** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate) y [ **GoBack** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goback) métodos. La clase **Frame** también tiene un método denominado [**GoForward**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goforward), que hace lo que su nombre en inglés (ir adelante) sugiere.
+La clase [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) administra la navegación de páginas. Como la clase **UINavigationController** de iOS usa los métodos **pushViewController** y **popViewController** , la clase **Frame** para aplicaciones UWP proporciona métodos [**Navigate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate) y [**GoBack**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goback) . La clase **Frame** también tiene un método denominado [**GoForward**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goforward), que hace lo que su nombre en inglés (ir adelante) sugiere.
 
 En este tutorial se crea una nueva instancia de BlankPage cada vez que el usuario navega a ella. (Se *liberará* la instancia anterior automáticamente). Si no quieres que se cree una nueva instancia cada vez, agrega este código al constructor de la clase de BlankPage en el archivo BlankPage.xaml.cs. Así se habilitará el comportamiento [**NavigationCacheMode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.navigationcachemode).
 
@@ -77,13 +77,13 @@ public BlankPage()
 }
 ```
 
-También puedes obtener o establecer la propiedad [**CacheSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.cachesize) de la clase **Frame** para administrar el número de páginas del historial de navegación que se pueden almacenar en caché.
+También puedes obtener o establecer la propiedadCacheSize[**de la clase**Frame](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.cachesize) para administrar el número de páginas del historial de navegación que se pueden almacenar en caché.
 
-Para más información sobre la navegación, consulta [Navegación](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) y [Ejemplo de animaciones de personalidad XAML](https://go.microsoft.com/fwlink/p/?LinkID=242401).
+Para más información sobre la navegación, consulta [Navegación](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) y [Ejemplo de animaciones de personalidad XAML](https://code.msdn.microsoft.com/windowsapps/Personality-Animations-3f857919).
 
-**Tenga en cuenta**  para obtener información sobre la navegación para aplicaciones UWP con JavaScript y HTML, consulte [inicio rápido: Usar la navegación de página única](https://docs.microsoft.com/previous-versions/windows/apps/hh452768(v=win.10)).
+**Nota**  para obtener información sobre la navegación en aplicaciones para UWP con JavaScript y HTML, consulte [Inicio rápido: usar la navegación de una página](https://docs.microsoft.com/previous-versions/windows/apps/hh452768(v=win.10)).
  
 ### <a name="next-step"></a>Paso siguiente
 
-[Introducción: Animación](getting-started-animation.md)
+[Introducción: animación](getting-started-animation.md)
 

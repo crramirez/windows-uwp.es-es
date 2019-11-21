@@ -1,47 +1,47 @@
 ---
 ms.assetid: ''
-description: Este artículo muestra cómo conectarse a cámaras remotas y obtener un MediaFrameSourceGroup para recuperar los marcos de cada cámara.
-title: Conectarse a cámaras remotas
+description: En este artículo se muestra cómo conectarse a cámaras remotas y obtener un MediaFrameSourceGroup para recuperar fotogramas de cada cámara.
+title: Conexión a cámaras remotas
 ms.date: 04/19/2019
 ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc719b8dad2adef0542edf284d257846052eac21
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 253eea00ba6c4188197224111909c28a53932b88
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63789588"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257348"
 ---
-# <a name="connect-to-remote-cameras"></a>Conectarse a cámaras remotas
+# <a name="connect-to-remote-cameras"></a>Conexión a cámaras remotas
 
-En este artículo se muestra cómo conectarse a uno o más cámaras remotas y obtener un [ **MediaFrameSourceGroup** ](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) objeto que permite leer los marcos de cada cámara. Para obtener más información en la lectura de marcos de un origen de medios, consulte [procesar fotogramas media con MediaFrameReader](process-media-frames-with-mediaframereader.md). Para obtener más información sobre el emparejamiento con dispositivos, consulte [emparejar los dispositivos](https://docs.microsoft.com/windows/uwp/devices-sensors/pair-devices).
+En este artículo se muestra cómo conectarse a una o varias cámaras remotas y cómo obtener un objeto [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) que le permita leer fotogramas de cada cámara. Para obtener más información sobre cómo leer fotogramas de un origen multimedia, consulte [procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md). Para obtener más información sobre el emparejamiento con dispositivos, consulte [Pair Devices](https://docs.microsoft.com/windows/uwp/devices-sensors/pair-devices).
 
 > [!NOTE] 
-> Las características tratadas en este artículo solo están disponibles a partir de Windows 10, versión 1903.
+> Las características que se describen en este artículo solo están disponibles a partir de Windows 10, versión 1903.
 
-## <a name="create-a-devicewatcher-class-to-watch-for-available-remote-cameras"></a>Cree una clase DeviceWatcher para inspeccionar los cámaras remotas disponibles
+## <a name="create-a-devicewatcher-class-to-watch-for-available-remote-cameras"></a>Cree una clase DeviceWatcher para ver las cámaras remotas disponibles
 
-El [ **DeviceWatcher** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher) clase supervisa los dispositivos disponibles para la aplicación y notifica a la aplicación cuando se agregan o quitan dispositivos. Obtener una instancia de **DeviceWatcher** mediante una llamada a [ **DeviceInformation.CreateWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher#Windows_Devices_Enumeration_DeviceInformation_CreateWatcher_System_String_), pasando una cadena de sintaxis de consulta avanzada (AQS) que identifica el tipo de dispositivos que desea supervisar. La cadena AQS que especifica los dispositivos de cámara de red es la siguiente:
+La clase [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher) supervisa los dispositivos disponibles para la aplicación y notifica a la aplicación cuando se agregan o quitan dispositivos. Obtenga una instancia de **DeviceWatcher** llamando a [**DeviceInformation. CreateWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher#Windows_Devices_Enumeration_DeviceInformation_CreateWatcher_System_String_), pasando una cadena de sintaxis de consulta avanzada (AQS) que identifica el tipo de dispositivos que desea supervisar. La cadena AQS que especifica dispositivos de cámara de red es la siguiente:
 
 ```
 @"System.Devices.InterfaceClassGuid:=""{B8238652-B500-41EB-B4F3-4234F7F5AE99}"" AND System.Devices.InterfaceEnabled:=System.StructuredQueryType.Boolean#True"
 ```
 
 > [!NOTE] 
-> El método auxiliar [ **MediaFrameSourceGroup.GetDeviceSelector** ](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) devuelve una cadena AQS que supervisará las cámaras de red conectados de forma local y remota. Para supervisar sólo las cámaras de red, debe usar la cadena AQS mostrada anteriormente.
+> El método auxiliar [**MediaFrameSourceGroup. GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) devuelve una cadena AQS que supervisará las cámaras de red remotas y conectadas localmente. Para supervisar solo las cámaras de red, debe usar la cadena AQS mostrada anteriormente.
 
 
-Al iniciar el valor devuelto **DeviceWatcher** mediante una llamada a la [ **iniciar** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start) método, se producirá la [ **Added** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added) eventos para cada cámara de red que está disponible actualmente. Hasta que se detenga el monitor mediante una llamada a [ **detener**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.stop), **Added** evento se genera cuando surgen nuevos dispositivos de cámara de red y la [ **Quitado** ](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.devicewatcher.removed) evento se genera cuando un dispositivo de la cámara no está disponible.
+Al iniciar la **DeviceWatcher** devuelta llamando al método [**Start**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start) , se generará el evento [**Added**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added) para cada cámara de red que esté disponible actualmente. Hasta que detenga el monitor mediante una llamada a [**Stop**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.stop), el evento **agregado** se generará cuando haya nuevos dispositivos de cámara de red disponibles y el evento [**eliminado**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.devicewatcher.removed) se generará cuando un dispositivo de cámara deje de estar disponible.
 
-Los argumentos del evento pasan a la **Added** y **quitado** controladores de eventos son un [ **DeviceInformation** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) o un [  **DeviceInformationUpdate** ](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.deviceinformationupdate) objeto, respectivamente. Cada uno de estos objetos tiene un **Id** propiedad que es el identificador de la cámara de red para el que se desencadenó el evento. Pase este identificador en el [ **MediaFrameSourceGroup.FromIdAsync** ](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) método para obtener un [ **MediaFrameSourceGroup** ](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) objeto que puede usar para recuperar los marcos de la cámara.
+Los argumentos del evento que se pasan a los controladores de eventos **agregados** y **quitados** son un objeto [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) o [**DeviceInformationUpdate**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.deviceinformationupdate) , respectivamente. Cada uno de estos objetos tiene una propiedad **ID** que es el identificador de la cámara de red para la que se activó el evento. Pase este identificador al método [**MediaFrameSourceGroup. FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) para obtener un objeto [**MediaFrameSourceGroup**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) que pueda usar para recuperar fotogramas de la cámara.
 
-## <a name="remote-camera-pairing-helper-class"></a>Clase auxiliar de emparejamiento cámara remota
+## <a name="remote-camera-pairing-helper-class"></a>Clase auxiliar de emparejamiento de cámara remoto
 
-El ejemplo siguiente muestra una clase auxiliar que usa un **DeviceWatcher** para crear y actualizar una **ObservableCollection** de **MediaFrameSourceGroup** objetos para admitir enlace de datos a la lista de las cámaras. Las aplicaciones habituales se ajustan la **MediaFrameSourceGroup** en una clase de modelo personalizado. Tenga en cuenta que la clase auxiliar mantiene una referencia a la aplicación [ **CoreDispatcher** ](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) y actualiza la colección de las cámaras en las llamadas a [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para asegurarse de que se actualiza la interfaz de usuario enlaza a la colección en el subproceso de interfaz de usuario.
+En el ejemplo siguiente se muestra una clase auxiliar que utiliza un objeto **DeviceWatcher** para crear y actualizar un **ObservableCollection** de objetos **MediaFrameSourceGroup** para admitir el enlace de datos a la lista de cámaras. Las aplicaciones típicas encapsularían **MediaFrameSourceGroup** en una clase de modelo personalizado. Tenga en cuenta que la clase auxiliar mantiene una referencia al [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) de la aplicación y actualiza la colección de cámaras dentro de las llamadas a [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para asegurarse de que la interfaz de usuario enlazada a la colección se actualiza en el subproceso de la interfaz de usuario.
 
-Además, en este ejemplo se atiende la [ **DeviceWatcher.Updated** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) eventos además el **Added** y **quitado** eventos. En el **Updated** controlador, el dispositivo de la cámara remota asociada se quitan y, a continuación, volver a agregar a la colección.
+Además, este ejemplo controla el evento [**DeviceWatcher. Updated**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) , además de los eventos **agregados** y **quitados** . En el controlador **actualizado** , el dispositivo de cámara remota asociado se quita de y, a continuación, se vuelve a agregar a la colección.
 
 [!code-cs[SnippetRemoteCameraPairingHelper](./code/Frames_Win10/Frames_Win10/RemoteCameraPairingHelper.cs#SnippetRemoteCameraPairingHelper)]
 
@@ -49,9 +49,9 @@ Además, en este ejemplo se atiende la [ **DeviceWatcher.Updated** ](https://doc
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
-* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Ejemplo de marcos de cámara](https://go.microsoft.com/fwlink/?LinkId=823230)
-* [Marcos de procesamiento multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
+* [Captura básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Ejemplo de fotogramas de la cámara](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)
+* [Procesar fotogramas multimedia con MediaFrameReader](process-media-frames-with-mediaframereader.md)
  
 
  

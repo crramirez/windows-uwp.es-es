@@ -6,18 +6,18 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, control de mapa, map control, vistas de mapa, map views
 ms.localizationpriority: medium
-ms.openlocfilehash: 366a6212f8974ef3d3fedffa8f2d657e08a1b549
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: cc12f6c9b9177bce9a91288fdd2c43c118be5f61
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318672"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260427"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Mostrar mapas con vistas 2D, 3D y Streetside
 
 Puedes mostrar un mapa en una ventana de cierre del elemento por cambio de foco llamada *colocar tarjeta* o en un control de mapa completo.
 
-Descarga la [muestra de mapa](https://go.microsoft.com/fwlink/p/?LinkId=619977) para probar algunas de las características descritas en esta guía.
+Descarga la [muestra de mapa](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) para probar algunas de las características descritas en esta guía.
 
 <a id="placecard" />
 
@@ -137,7 +137,7 @@ pageGrid.Children.Add(MapControl2);
 
 ### <a name="get-and-set-a-maps-authentication-key"></a>Obtener y establecer una clave de autenticación de mapas
 
-Para poder usar la clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa, debes especificar la clave de autenticación de mapas como el valor de la propiedad [**MapServiceToken**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken). En los ejemplos anteriores, reemplaza `EnterYourAuthenticationKeyHere` por la clave que obtuviste en [Bing Maps Developer Center](https://www.bingmapsportal.com/). El texto **advertencia: MapServiceToken no se especifica** sigue apareciendo debajo del control hasta que se especifique la clave de autenticación de asignaciones. Para obtener más información sobre cómo obtener y establecer una clave de autenticación de mapas, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
+Para poder usar la clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa, debes especificar la clave de autenticación de mapas como el valor de la propiedad [**MapServiceToken**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken). En los ejemplos anteriores, reemplaza `EnterYourAuthenticationKeyHere` por la clave que obtuviste en [Bing Maps Developer Center](https://www.bingmapsportal.com/). El texto **Advertencia: no se especificó el elemento MapServiceToken** seguirá apareciendo debajo del control hasta que se especifique la clave de autenticación de mapas. Para obtener más información sobre cómo obtener y establecer una clave de autenticación de mapas, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
 
 ## <a name="set-the-location-of-a-map"></a>Establecer la ubicación de un mapa
 Señala en el mapa cualquier ubicación que desees o usa la ubicación actual del usuario.  
@@ -222,7 +222,7 @@ myMap.StyleSheet = MapStyleSheet.RoadDark();
 
 Puedes usar también JSON para definir estilos personalizados y luego usar ese JSON para crear un objeto [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet).
 
-Hoja de estilos JSON se puede crear interactivamente mediante el [Editor de hojas de estilo de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) aplicación.
+El JSON de la hoja de estilos se puede crear de forma interactiva mediante la aplicación del [Editor de hojas de estilos de mapa](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) .
 
 ```csharp
 myMap.StyleSheet = MapStyleSheet.ParseFromJson(@"
@@ -323,7 +323,7 @@ Para mostrar una vista de Streetside
 
 Este ejemplo indica cómo mostrar una vista de Streetside similar a la imagen anterior.
 
-**Tenga en cuenta**  el mapa general no aparecerá si el control de mapa tiene un tamaño demasiado pequeño.
+**Tenga en cuenta**  el mapa de información general no aparecerá si el tamaño del control de mapa es demasiado pequeño.
 
  
 
@@ -421,10 +421,10 @@ private async void display3DLocation()
 
 Para obtener información sobre las ubicaciones en el mapa, llama a los siguientes métodos de la clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl).
 
--   [**TryGetLocationFromOffset** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.getlocationfromoffset) método - Get, la ubicación geográfica que se corresponde con el punto especificado en la ventanilla del control de mapa.
--   [**GetOffsetFromLocation** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.getoffsetfromlocation) método - Get, el punto en la ventanilla del control de mapa que corresponde a la ubicación geográfica especificada.
--   [**IsLocationInView** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.islocationinview) método - determinar si la ubicación geográfica especificada está actualmente visible en la ventanilla del control de mapa.
--   [**FindMapElementsAtOffset** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.findmapelementsatoffset) método - Get, los elementos en el mapa situados en el punto especificado en la ventanilla del control de mapa.
+-   Método [**TryGetLocationFromOffset**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.getlocationfromoffset) : obtenga la ubicación geográfica que corresponde al punto especificado en la ventanilla del control de mapa.
+-   Método [**GetOffsetFromLocation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.getoffsetfromlocation) : obtenga el punto de la ventanilla del control de mapa que corresponde a la ubicación geográfica especificada.
+-   Método [**IsLocationInView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.islocationinview) : Determine si la ubicación geográfica especificada está visible actualmente en la ventanilla del control de mapa.
+-   Método [**FindMapElementsAtOffset**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.findmapelementsatoffset) : obtenga los elementos de la asignación que se encuentra en el punto especificado en la ventanilla del control de mapa.
 
 ## <a name="handle-interaction-and-changes"></a>Controlar la interacción y los cambios
 
@@ -455,10 +455,10 @@ Puedes controlar los siguientes eventos de la clase [**MapControl**](https://doc
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
-* [Ejemplo de mapa de UWP](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Ejemplo de mapa de UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [Obtener la ubicación actual](get-location.md)
 * [Directrices de diseño para las aplicaciones con reconocimiento de ubicación](https://docs.microsoft.com/windows/uwp/maps-and-location/guidelines-and-checklist-for-detecting-location)
 * [Directrices de diseño para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* Vídeo de [Build 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757) (Aprovechamiento de mapas y ubicación entre teléfonos, tabletas y equipos en las aplicaciones de Windows)
-* [Ejemplo de aplicación de tráfico para UWP](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Vídeo de compilación 2015: uso de mapas y ubicación en el teléfono, la tableta y el PC de las aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Ejemplo de aplicación de tráfico para UWP](https://github.com/Microsoft/Windows-appsample-trafficapp)
 * [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)

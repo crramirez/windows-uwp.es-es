@@ -6,26 +6,26 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 19b3aa80bee643087a0aa92f714349004f6ec1c1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fb43e5b7006c7c81875651a926e87eb8f76621fe
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359158"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254299"
 ---
 # <a name="play-media-in-the-background"></a>Reproducir elementos multimedia en segundo plano
-En este artículo se muestra cómo configurar la aplicación para que sigan reproduciéndose los elementos multimedia cuando la aplicación se mueva del primer plano al segundo plano. Esto significa que, incluso después de que el usuario haya minimizado la aplicación, regresado a la pantalla principal o salido de la aplicación de alguna otra manera, la aplicación podrá seguir reproduciendo audio. 
+En este artículo se muestra cómo configurar la aplicación para que sigan reproduciéndose los elementos multimedia cuando la aplicación se mueva del primer plano al segundo plano. Esto significa que incluso después de que el usuario haya minimizado la aplicación, haya regresado a la pantalla principal o haya salido de la aplicación de alguna otra manera, la aplicación podrá seguir reproduciendo audio. 
 
 Entre los escenarios para reproducir audio en segundo plano encontramos:
 
--   **Listas de reproducción de larga ejecución:** El usuario aparecerá brevemente una aplicación en primer plano para seleccionar e iniciar una lista de reproducción, tras el cual el usuario espera que la lista de reproducción para seguir reproduciendo en segundo plano.
+-   **Listas de reproducción de larga duración** El usuario selecciona brevemente una aplicación en primer plano para elegir e iniciar una lista de reproducción. Con ello, el usuario espera que dicha lista de reproducción siga sonando en segundo plano.
 
--   **Uso de conmutador de tareas:** El usuario abre una aplicación en primer plano para empezar a reproducir audio brevemente y luego cambia a otra aplicación abierta mediante el selector de tareas. El usuario espera que el audio siga reproduciéndose en segundo plano.
+-   **Uso del conmutador de tareas:** el usuario abre rápidamente una aplicación en primer plano para iniciar la reproducción de audio y, después, cambia a otra aplicación que ya estaba abierta mediante el conmutador de tareas. El usuario espera que el audio siga reproduciéndose en segundo plano.
 
 La implementación de audio en segundo plano que se describe en este artículo te permitirá que la aplicación se ejecute universalmente en todos los dispositivos Windows, incluidos los dispositivos móviles, los dispositivos de escritorio y Xbox.
 
 > [!NOTE]
-> El código de este artículo es una adaptación de la [Background Audio sample](https://go.microsoft.com/fwlink/p/?LinkId=800141) (Muestra de audio en segundo plano) para la UWP.
+> El código de este artículo es una adaptación de la [Background Audio sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback) (Muestra de audio en segundo plano) para la UWP.
 
 ## <a name="explanation-of-one-process-model"></a>Explicación del modelo de proceso único
 Con Windows 10, versión 1607, se ha introducido un nuevo modelo de proceso único que simplifica enormemente el proceso de habilitar el audio en segundo plano. Anteriormente, la aplicación debía administrar un proceso en segundo plano además de la aplicación en primer plano y, a continuación, comunicar manualmente los cambios de estado entre los dos procesos. En el nuevo modelo, simplemente debe agregarse la funcionalidad de audio en segundo plano al manifiesto de la aplicación y dicha aplicación continuará reproduciendo audio automáticamente cuando se mueva a segundo plano. Dos nuevos eventos de ciclo de vida de la aplicación, [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) y [**LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground) permiten a tu aplicación saber cuándo entra y sale del segundo plano. Cuando la aplicación se mueve a las transiciones al segundo plano o desde este, las restricciones de memoria que impone el sistema pueden cambiar, así que puedes usar estos eventos para comprobar el consumo de memoria actual y liberar recursos para que permanezcan por debajo del límite.
@@ -42,7 +42,7 @@ La aplicación debe cumplir los siguientes requisitos para reproducir audio mien
 ## <a name="background-media-playback-manifest-capability"></a>Funcionalidad de manifiesto de reproducción de elementos multimedia en segundo plano
 Para habilitar el audio en segundo plano, debes agregar la funcionalidad de reproducción de elementos multimedia en segundo plano al archivo de manifiesto de la aplicación, Package.appxmanifest. 
 
-**Para agregar funciones para el manifiesto de aplicación mediante el Diseñador de manifiestos**
+**Para agregar funcionalidades al manifiesto de la aplicación mediante el diseñador de manifiestos**
 
 1.  En Microsoft Visual Studio, en el **Explorador de soluciones**, abre el diseñador para el manifiesto de la aplicación haciendo doble clic en el elemento **package.appxmanifest**.
 2.  Selecciona la pestaña **Funcionalidades**.
@@ -74,7 +74,7 @@ Crea una variable para realizar el seguimiento de si actualmente estás ejecutan
 
 [!code-cs[DeclareBackgroundMode](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetDeclareBackgroundMode)]
 
-Cuando se genera el evento [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground), establece la variable de seguimiento para indicar que actualmente estás ejecutando en segundo plano. No se deben realizar tareas de larga duración en el evento **EnteredBackground** porque esto puede causar que al usuario la transición a segundo plano le parezca lenta.
+Cuando se genera el evento [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground), establece la variable de seguimiento para indicar que actualmente se está ejecutando en segundo plano. No se deben realizar tareas de larga duración en el evento **EnteredBackground** porque esto puede causar que al usuario la transición a segundo plano le parezca lenta.
 
 [!code-cs[EnteredBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetEnteredBackground)]
 
@@ -86,15 +86,15 @@ En el controlador del evento [**LeavingBackground**](https://docs.microsoft.com/
 La parte más importante de controlar la transición entre el primer y segundo plano es administrar la memoria que usa tu aplicación. Como la ejecución en segundo plano reducirá los recursos de memoria que el sistema permite retener a la aplicación, también debes registrar los eventos [**AppMemoryUsageIncreased**](https://docs.microsoft.com/uwp/api/windows.system.memorymanager.appmemoryusageincreased) y [**AppMemoryUsageLimitChanging**](https://docs.microsoft.com/uwp/api/windows.system.memorymanager.appmemoryusagelimitchanging). Cuando se generan estos eventos, debes comprobar el límite actual y el uso de memoria actual de la aplicación y, a continuación, reducir el uso de memoria si es necesario. Para obtener información acerca de cómo reducir el uso de memoria mientras se ejecuta en segundo plano, consulta [Liberar memoria cuando la aplicación pasa a segundo plano](../launch-resume/reduce-memory-usage.md).
 
 ## <a name="network-availability-for-background-media-apps"></a>Disponibilidad de la red para las aplicaciones multimedia en segundo plano
-Todos los orígenes multimedia con reconocimiento de red, aquellos que no se crean a partir de una emisión o un archivo, mantendrán la conexión de red activa mientras recuperan contenido remoto y la liberarán cuando no lo estén haciendo. [**MediaStreamSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaStreamSource), concretamente, se basa en la aplicación informe correctamente el intervalo almacenado en búfer correcto a la plataforma mediante [ **SetBufferedRange**](https://docs.microsoft.com/uwp/api/windows.media.core.mediastreamsource.setbufferedrange). Una vez que todo el contenido esté almacenado en búfer, la red ya no estará reservada en nombre de la aplicación.
+Todos los orígenes multimedia con reconocimiento de red, aquellos que no se crean a partir de una emisión o un archivo, mantendrán la conexión de red activa mientras recuperan contenido remoto y la liberarán cuando no lo estén haciendo. [**MediaStreamSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaStreamSource), en concreto, se basa en la aplicación para notificar correctamente el intervalo almacenado en búfer correcto a la plataforma con [**SetBufferedRange**](https://docs.microsoft.com/uwp/api/windows.media.core.mediastreamsource.setbufferedrange). Una vez que todo el contenido esté almacenado en búfer, la red ya no estará reservada en nombre de la aplicación.
 
 Si necesitas realizar llamadas de red que se produzcan en segundo plano cuando no se está descargando contenido multimedia, estas deben estar encapsuladas en una tarea apropiada, como [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) o [**TimeTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.TimeTrigger). Para obtener más información, consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](https://docs.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks).
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Reproducción de multimedia](media-playback.md)
 * [Reproducir audio y vídeo con MediaPlayer](play-audio-and-video-with-mediaplayer.md)
-* [Integrar con los medios del sistema de controles de transporte](integrate-with-systemmediatransportcontrols.md)
-* [Ejemplo de Audio en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
+* [Integración con los controles de transporte de medios del sistema](integrate-with-systemmediatransportcontrols.md)
+* [Ejemplo de audio de fondo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
 
  
 

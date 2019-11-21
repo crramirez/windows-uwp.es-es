@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dec80e4b79a93fc5b6f1e2990ad89570d62c5f1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 406af54cfaae8710cea2d989278a16f28c8dd619
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361437"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256215"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>Efectos para analizar fotogramas de cámara
 
@@ -29,7 +29,7 @@ Si el efecto recomienda usar HDR, puedes hacerlo de las siguientes maneras:
 
 -   Usa la clase [**HdrVideoControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.HdrVideoControl) para capturar vídeo con el algoritmo de procesamiento HDR integrado de Windows. Para obtener más información, consulta [Controles de dispositivo de captura para captura de vídeos](capture-device-controls-for-video-capture.md).
 
--   Usa la clase [**VariablePhotoSequenceControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.Core.VariablePhotoSequenceController) para capturar una secuencia de fotogramas que después puedas componer mediante una implementación personalizada de HDR. Para obtener más información, consulta [Secuencia de fotos variable](variable-photo-sequence.md).
+-   Usa [**VariablePhotoSequenceControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.Core.VariablePhotoSequenceController) para capturar una secuencia de fotogramas que después puedas componer mediante una implementación personalizada de HDR. Para obtener más información, consulta [Secuencia de fotos variable](variable-photo-sequence.md).
 
 ### <a name="scene-analysis-namespaces"></a>Espacios de nombres de análisis de escena
 
@@ -45,7 +45,7 @@ Efectos de vídeo se implementan mediante dos API, una definición de efecto, qu
 
 En la aplicación, después de inicializar el objeto **MediaCapture**, crea una nueva instancia de [**SceneAnalysisEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffectDefinition).
 
-Registra el efecto con el dispositivo de captura llamando a [**AddVideoEffectAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) en el objeto **MediaCapture** mediante **SceneAnalysisEffectDefinition** y especificando [**MediaStreamType.VideoPreview**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType), para indicar que el efecto debe aplicarse en la secuencia de vista previa del vídeo, en lugar de en la secuencia de captura. **AddVideoEffectAsync** devuelve una instancia del efecto agregado. Dado que este método puede usarse con varios tipos de efecto, se debe convertir la instancia devuelta a un objeto [**SceneAnalysisEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffect).
+Registra el efecto con el dispositivo de captura llamando a [**AddVideoEffectAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) en tu objeto **MediaCapture** mediante **SceneAnalysisEffectDefinition** y especificando [**MediaStreamType.VideoPreview**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) para indicar que el efecto debe aplicarse en la secuencia de vista previa de vídeo, en lugar de la secuencia de captura. **AddVideoEffectAsync** devuelve una instancia del efecto agregado. Dado que este método puede usarse con varios tipos de efecto, se debe convertir la instancia devuelta a un objeto [**SceneAnalysisEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffect).
 
 Para recibir los resultados del análisis de la escena, debes registrar un controlador para el evento [**SceneAnalyzed**](https://docs.microsoft.com/uwp/api/windows.media.core.sceneanalysiseffect.sceneanalyzed).
 
@@ -97,7 +97,7 @@ Si quieres realizar alguna acción cuando se detectan rostros, como dibujar un c
 
 [!code-cs[RegisterFaceDetectionHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterFaceDetectionHandler)]
 
-En el controlador para el evento, puedes obtener una lista de todos los rostros detectados en un marco si accedes a la propiedad [**FaceDetectionEffectFrame.DetectedFaces**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffectframe.detectedfaces) de la clase [**FaceDetectedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectedEventArgs). La propiedad [**FaceBox**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.detectedface.facebox) es una estructura [**BitmapBounds**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBounds) que describe el rectángulo que contiene el rostro detectado en unidades con respecto a las dimensiones de la secuencia de vista previa. Para ver código de ejemplo que transforma las coordenadas de la secuencia de vista previa en coordenadas de pantalla, consulta [face detection UWP sample](https://go.microsoft.com/fwlink/?LinkId=619486) (Muestra de UWP de detección de rostro).
+En el controlador para el evento, puedes obtener una lista de todos los rostros detectados en un marco si accedes a la propiedad [**FaceDetectionEffectFrame.DetectedFaces**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffectframe.detectedfaces) de la clase [**FaceDetectedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectedEventArgs). La propiedad [**FaceBox**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.detectedface.facebox) es una estructura [**BitmapBounds**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBounds) que describe el rectángulo que contiene el rostro detectado en unidades con respecto a las dimensiones de la secuencia de vista previa. Para ver código de ejemplo que transforma las coordenadas de la secuencia de vista previa en coordenadas de pantalla, consulta [face detection UWP sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFaceDetection) (Muestra de UWP de detección de rostro).
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 
@@ -116,7 +116,7 @@ No todos los dispositivos tienen un dispositivo de captura que puede ajustar el 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Cámara](camera.md)
-* [Capturar básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Captura básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

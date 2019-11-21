@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 55879c33e30564f4639b8880c3a12f4b4181245e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2f9aab8c4b627b9a4952e7e3e292f1e4b528f992
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365919"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258390"
 ---
 # <a name="interaction-primer"></a>Información básica sobre interacción
 
@@ -43,7 +43,7 @@ Realiza un seguimiento de la mirada, la atención y la presencia del usuario en 
 
 ### <a name="more-info"></a>Más información
 
-[Observación de las interacciones y seguimiento de los ojos](gaze-interactions.md)
+[Interacciones de mirada y seguimiento ocular](gaze-interactions.md)
 
 ## <a name="surface-dial"></a>Surface Dial
 
@@ -60,11 +60,11 @@ Con un factor de forma que se basa en una acción (o gesto) de giro, Surface Dia
 
 ### <a name="more-info"></a>Más información
 
-[Exponer instrucciones de diseño de acceso telefónico](windows-wheel-interactions.md)
+[Directrices para el diseño de marcado de Surface](windows-wheel-interactions.md)
 
 ## <a name="cortana"></a>Cortana
 
-En Windows 10, **Cortana** extensibilidad le permite controlar los comandos de voz de un usuario e iniciar la aplicación para llevar a cabo una sola acción.
+En Windows 10, la extensibilidad de **Cortana** permite controlar comandos de voz de un usuario e iniciar la aplicación para llevar a cabo una sola acción.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -234,7 +234,7 @@ Para admitir estas interacciones, es necesario proporcionar comandos de interfaz
 
 Un teclado es el principal dispositivo de entrada de texto y, a menudo, resulta indispensable para personas con ciertas discapacidades o para los usuarios que lo consideran una manera más rápida y eficaz de interactuar con una aplicación.
 
-Con [Continuum para teléfonos](https://go.microsoft.com/fwlink/p/?LinkID=699431), una nueva experiencia para dispositivos móviles compatibles de Windows 10, los usuarios pueden conectar sus teléfonos a un mouse y teclado para que sus teléfonos funcione como un equipo portátil.
+Con [continuum para teléfono](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), una nueva experiencia para dispositivos Windows 10 Mobile compatibles, los usuarios pueden conectar sus teléfonos a un mouse y un teclado para que sus teléfonos funcionen como un portátil.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -256,7 +256,7 @@ El teclado en pantalla es un teclado de software visual que puedes usar en lugar
 
 El teclado táctil es un teclado de software visual que se usa para escribir texto con entrada táctil. El teclado táctil no reemplaza al teclado en pantalla, ya que se usa únicamente para escribir texto (no simula el teclado de hardware) y solo aparece cuando se hace foco en un campo editable o en otro control de texto editable. El teclado táctil no admite comandos de aplicación ni del sistema.
 
-**Tenga en cuenta**  The OSK tiene prioridad sobre el teclado táctil, que no se muestra si está presente el OSK.
+**Tenga en cuenta**  el Osk tiene prioridad sobre el teclado táctil, que no se mostrará si el Osk está presente.
 
 En general, un teclado:
 

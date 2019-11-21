@@ -6,20 +6,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d8695a385dbc6d550a8002a5f64b7d777e95594e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 14b6ab96ac5423d1811618c6a3c91ccf56645664
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360030"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255122"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>Enlazar datos jerárquicos y crear una vista de tipo maestro/detalles
 
 
 
-> **Tenga en cuenta**  Consulte también el [ejemplo de principal-detalle](https://go.microsoft.com/fwlink/p/?linkid=619991).
+> **Nota**  vea también el [ejemplo de maestro y detalles](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail).
 
-Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) que están enlazadas juntas en una cadena. En este tema se usa la [extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) donde es posible y la extensión más flexible (pero menos eficaz) [de marcado {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) cuando es necesario.
+Puedes hacer una vista de tipo maestro-detalles (también conocida como list-details) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) que están enlazadas juntas en una cadena. En este tema se usa la [extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) donde es posible y la extensión más flexible (pero menos eficaz) [de marcado {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) cuando es necesario.
 
 Una estructura común de las aplicaciones de Plataforma de Windows universal (UWP) es navegar a distintas páginas de detalles cuando un usuario realiza una selección en una lista maestra. Esto es útil cuando quieres ofrecer una representación visual rica de cada elemento en cada nivel de una jerarquía. Otra opción es mostrar varios niveles de datos en una sola página. Esto es útil cuando quieres mostrar unas pocas listas sencillas que permitirán al usuario navegar rápidamente hasta el elemento que le interesa. En este tema se describe cómo implementar esta interacción. Las instancias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) hacen un seguimiento de la selección actual en cada nivel jerárquico.
 
@@ -110,7 +110,7 @@ namespace MasterDetailsBinding
 
 ## <a name="create-the-view"></a>Crear la vista
 
-Después, expón la clase de origen de enlace desde la clase que representa la página de marcado. Para ello, agrega una propiedad de tipo **LeagueList** a **MainPage**.
+Después, expón la clase del origen de enlace desde la clase que representa la página de marcado. Para ello, agrega una propiedad de tipo **LeagueList** a **MainPage**.
 
 ```cs
 namespace MasterDetailsBinding
@@ -220,7 +220,7 @@ Por último, reemplaza el contenido del archivo MainPage.xaml por el marcado sig
 </Page>
 ```
 
-Ten en cuenta que mediante un enlace directo al elemento [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource), estás dando por sentado que quieres enlazar al elemento actual en los enlaces en los que la ruta de acceso no se encuentre en la propia colección. No es necesario especificar la propiedad **CurrentItem** como la ruta de acceso del enlace, aunque sí puedes hacerlo si encuentras alguna ambigüedad. Por ejemplo, el elemento [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl), que representa la vista del equipo, tiene la propiedad [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) enlazada al elemento **CollectionViewSource** de `Teams`. No obstante, los controles del elemento [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) se enlazan a las propiedades de la clase `Team`, porque el elemento **CollectionViewSource** facilita de forma automática el equipo seleccionado actualmente de la lista de equipos cuando es necesario.
+Ten en cuenta que mediante un enlace directo al elemento [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource), estás dando por sentado que quieres enlazar al elemento actual en los enlaces en los que la ruta de acceso no se encuentre en la propia colección. No es necesario especificar la propiedad **CurrentItem** como la ruta de acceso del enlace, aunque sí puedes hacerlo si encuentras alguna ambigüedad. Por ejemplo, el elemento [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl), que representa la vista del equipo, tiene la propiedad [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) enlazada al elemento `Teams`CollectionViewSource**de**. No obstante, los controles del elemento [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate) se enlazan a las propiedades de la clase `Team`, porque el elemento **CollectionViewSource** facilita de forma automática el equipo seleccionado actualmente de la lista de equipos cuando es necesario.
 
  
 

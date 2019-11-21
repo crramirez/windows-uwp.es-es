@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ecb325566733e57c1ae9d1a13c68b25794e9e87
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ae37ab763b6705fbb3f341569904972ebb181412
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360038"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254685"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación
 
@@ -32,7 +32,7 @@ Evidentemente, debes realizar mediciones representativas de la experiencia que t
 
 En el siguiente procedimiento se describe cómo ejecutar Ngen.exe para precompilar la aplicación.
 
-**Para ejecutar Ngen.exe**
+**Para ejecutar Ngen. exe**
 
 1.  Ejecuta la aplicación una vez, como mínimo, para asegurarte de que Ngen.exe la detecte.
 2.  Realiza una de las siguientes acciones para abrir el **Programador de tareas**:
@@ -323,7 +323,7 @@ Es fundamental que una aplicación con un período de inicialización extendido 
 > End Class
 > ```
 
-Para ver un ejemplo del uso de pantallas de presentación extendidas, consulta el tema sobre la [muestra de pantalla de presentación](https://go.microsoft.com/fwlink/p/?linkid=234889).
+Para ver un ejemplo del uso de pantallas de presentación extendidas, consulta el tema sobre la [muestra de pantalla de presentación](https://code.msdn.microsoft.com/windowsapps/Splash-screen-sample-89c1dc78).
 
 ### <a name="phase-3"></a>Fase 3
 
@@ -339,7 +339,7 @@ El modo exacto en que una aplicación responde a cada fase del inicio depende de
 
 El código reutilizable por lo general consiste en incluir módulos (DLL) en un proyecto. Para cargar estos módulos, es necesario tener acceso al disco y, como puedes imaginar, esto puede consumir una gran cantidad de recursos. Esto provoca un mayor impacto en el inicio en frío, pero también puede tenerlo en el inicio en caliente. En el caso de C# y Visual Basic, CLR trata de retrasar este alto consumo la mayor cantidad de tiempo posible mediante la carga de ensamblados a petición. Es decir, CLR no carga un módulo hasta que un método ejecutado hace referencia a él. Por este motivo, solo debes hacer referencia a los ensamblados que sean necesarios para el arranque de tu aplicación en el código de inicio, para que CLR no cargue módulos innecesarios. Si en tu ruta de acceso de inicio hay rutas de código sin usar que tienen referencias innecesarias, puedes moverlas a otros métodos para evitar las cargas innecesarias.
 
-Otro modo de reducir las cargas de módulos consiste en combinar los módulos de las aplicaciones. Por lo general, lleva menos tiempo cargar un ensamblado grande que dos pequeños. No siempre es posible hacerlo y solo debes combinar los módulos si esto no supone una diferencia material para la productividad del desarrollador o la reusabilidad del código. Puedes usar herramientas, como [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) o el [Windows Performance Analyzer (WPA)](https://docs.microsoft.com/previous-versions/windows/desktop/xperf/windows-performance-analyzer--wpa-) para averiguar qué módulos se cargan en el inicio.
+Otro modo de reducir las cargas de módulos consiste en combinar los módulos de las aplicaciones. Por lo general, lleva menos tiempo cargar un ensamblado grande que dos pequeños. No siempre es posible hacerlo y solo debes combinar los módulos si esto no supone una diferencia material para la productividad del desarrollador o la reusabilidad del código. Puedes usar herramientas, como [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) o el [Windows Performance Analyzer (WPA)](https://docs.microsoft.com/previous-versions/windows/desktop/xperf/windows-performance-analyzer--wpa-) para averiguar qué módulos se cargan en el inicio.
 
 ### <a name="make-smart-web-requests"></a>Realizar solicitudes web inteligentes
 

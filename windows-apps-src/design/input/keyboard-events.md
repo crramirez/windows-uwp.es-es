@@ -1,5 +1,5 @@
 ---
-Description: Responde a las acciones de pulsación de tecla desde teclados de hardware o de software en tus aplicaciones, usando para ello controladores de eventos tanto de clase como de teclado.
+Description: Responde a las acciones de pulsación de tecla desde teclados hardware o software en tus aplicaciones, usando para ello controladores de eventos tanto de clase como de teclado.
 title: Eventos de teclado
 ms.assetid: ac500772-d6ed-4a3a-825b-210a9c3c8f59
 label: Keyboard events
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 89257a4ec64458f5734c2b04c1e654a7c0c44f27
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 2800db96177f77648d2d2a98f5cd87c930f6840a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339900"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258338"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -298,7 +298,7 @@ Observa el siguiente ejemplo de XAML, que controla eventos [**KeyUp**](https://d
 </StackPanel>
 ```
 
-El siguiente ejemplo muestra cómo implementar el controlador de eventos [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) para el contenido en XAML correspondiente al ejemplo anterior.
+El siguiente ejemplo muestra cómo implementar el controlador de eventos [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) para el contenido XAML correspondiente del ejemplo anterior.
 
 ```csharp
 void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
@@ -319,7 +319,7 @@ El propósito de la propiedad [**Handled**](https://docs.microsoft.com/uwp/api/w
 
 ### <a name="addhandler-and-already-handled-keyboard-events"></a>AddHandler y eventos de teclado ya controlados
 
-Puedes usar una técnica especial para adjuntar controladores que pueden actuar sobre eventos que ya están marcados como controlados. Esta técnica usa el método [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) para registrar un controlador, en lugar de usar atributos XAML o la sintaxis específica del lenguaje para agregar controladores, como + = en C @ no__t-2.
+Puedes usar una técnica especial para adjuntar controladores que pueden actuar sobre eventos que ya están marcados como controlados. Esta técnica usa el método [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) para registrar un controlador, en lugar de usar atributos XAML o la sintaxis específica del lenguaje para agregar controladores, como + = en C\#.
 
 Una limitación general de esta técnica es que la API **AddHandler** toma un parámetro de tipo [**RoutedEvent**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEvent) que identifica el evento enrutado en cuestión. No todos los eventos enrutados proporcionan un identificador **RoutedEvent**. Por lo tanto, esta consideración, influye en qué eventos enrutados es posible controlar en el caso [**Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled). Los eventos [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) y [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) tienen identificadores de evento enrutado ([**KeyDownEvent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydownevent) y [**KeyUpEvent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyupevent)) en [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement). Sin embargo, otros eventos como [**TextBox.TextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) no tienen identificadores de evento enrutado y, por lo tanto, no pueden usarse con la técnica **AddHandler**.
 
@@ -393,16 +393,16 @@ Es posible conseguir que los usuarios escriban datos en la aplicación de forma 
 
 **Ejemplos**
 * [Ejemplo de teclado táctil](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Ejemplos de archivo**
-* [Ejemplo de entrada](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* @no__t 0Input: Ejemplo de funcionalidades de dispositivo @ no__t-0
-* @no__t 0Input: Ejemplo de teclado táctil @ no__t-0
-* [Responder a la apariencia de la muestra de teclado en pantalla](https://go.microsoft.com/fwlink/p/?linkid=231633)
-* [Ejemplo de edición de texto XAML](https://go.microsoft.com/fwlink/p/?LinkID=251417)
+* [Ejemplo de entrada](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: ejemplo de teclado táctil](https://code.msdn.microsoft.com/windowsapps/Touch-keyboard-sample-43532fda)
+* [Responder a la apariencia de la muestra de teclado en pantalla](https://code.msdn.microsoft.com/windowsapps/keyboard-events-sample-866ba41c)
+* [Ejemplo de edición de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
  
 
  

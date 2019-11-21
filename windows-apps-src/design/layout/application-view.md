@@ -5,18 +5,18 @@ ms.date: 07/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc01894311badd9bb6e88f05c0f8b49c5824736b
-ms.sourcegitcommit: 3cc6eb3bab78f7e68c37226c40410ebca73f82a9
+ms.openlocfilehash: 1a89596979f84c1ec4d698d14deacf8f852a7fbd
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68730533"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258196"
 ---
 # <a name="show-multiple-views-with-applicationview"></a>Mostrar varias vistas con ApplicationView
 
 Ayuda a tus usuarios a ser más productivos al permitirles ver partes independientes de la aplicación en ventanas distintas. Si creas varias ventanas para una aplicación, cada una de ellas se comporta de manera independiente. La barra de tareas muestra cada ventana por separado. Los usuarios pueden mover, cambiar de tamaño, mostrar y ocultar ventanas de la aplicación de manera independiente, así como cambiar entre ventanas de la aplicación como si usaran aplicaciones distintas. Cada ventana funciona en su propio subproceso.
 
-> **API importantes**: [**ApplicationViewSwitcher**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher), [ **CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)
+> **API importantes**: [**ApplicationViewSwitcher**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher), [**CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)
 
 ## <a name="what-is-a-view"></a>¿Qué es una vista?
 
@@ -63,7 +63,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 2.  Realiza un seguimiento del [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id) de la nueva vista. Úsalo para mostrar la vista más adelante.
 
-    Es posible que desees considerar la posibilidad de crear infraestructura en tu aplicación para facilitar el seguimiento de las vistas que crees. Consulta la clase `ViewLifetimeControl` en la [muestra de varias vistas](https://go.microsoft.com/fwlink/p/?LinkId=620574) para ver un ejemplo.
+    Es posible que desees considerar la posibilidad de crear infraestructura en tu aplicación para facilitar el seguimiento de las vistas que crees. Consulta la clase `ViewLifetimeControl` en la [muestra de varias vistas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MultipleViews) para ver un ejemplo.
 
     ```csharp
     int newViewId = 0;
@@ -71,11 +71,11 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 3.  En el nuevo subproceso, rellena la ventana.
 
-    Debes usar el método [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para programar el trabajo de la conversación de la interfaz de usuario para la nueva vista. Debes usar una [expresión lambda](https://go.microsoft.com/fwlink/p/?LinkId=389615) para pasar una función como un argumento para el método **RunAsync**. El trabajo que realices en la función lambda se realizará en el subproceso de la nueva vista.
+    Debes usar el método [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para programar el trabajo de la conversación de la interfaz de usuario para la nueva vista. Debes usar una [expresión lambda](https://msdn.microsoft.com/library/bb397687.aspx) para pasar una función como un argumento para el método **RunAsync**. El trabajo que realices en la función lambda se realizará en el subproceso de la nueva vista.
 
-    En XAML, lo normal es agregar un elemento [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) a la propiedad [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content) del elemento [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) y luego desplazar al elemento **Frame** a una [**página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) XAML donde has definido el contenido de la aplicación. Para obtener más información sobre los marcos y las páginas, consulte [navegación punto a punto entre dos páginas](../basics/navigate-between-two-pages.md).
+    En XAML, lo normal es agregar un elemento [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) a la propiedad [**Content**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) del elemento [**Window**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content) y luego desplazar al elemento **Frame** a una [**página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) XAML donde has definido el contenido de la aplicación. Para obtener más información sobre los marcos y las páginas, consulte [navegación punto a punto entre dos páginas](../basics/navigate-between-two-pages.md).
 
-    Después de rellenar el elemento nuevo [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) debes llamar al método [**Activate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate) del elemento **Window** para mostrar el elemento **Window** más adelante. Este trabajo se realiza en la conversación de la nueva vista, de modo que la nueva **Ventana** se activa.
+    Después de rellenar el elemento nuevo [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) debes llamar al métodoActivate[**del elemento**Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate) para mostrar el elemento **Window** más adelante. Este trabajo se realiza en la conversación de la nueva vista, de modo que la nueva **Ventana** se activa.
 
     Por último, obtén el [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id) de la nueva vista que vas a usar para mostrar la vista más adelante. De nuevo, este trabajo se realiza en la conversación de la nueva vista, por lo que [**ApplicationView.GetForCurrentView**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.getforcurrentview) obtiene el **Id** de la nueva vista.
 
@@ -105,7 +105,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 La primera vista que se crea al iniciar la aplicación se denomina *vista principal*. Esta vista se almacena en la propiedad [**CoreApplication.MainView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.mainview) y su propiedad [**IsMain**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.ismain) es true. El usuario no crea esta vista, sino que la crea la aplicación. El subproceso de la vista principal sirve de administrador de la aplicación, y todos los eventos de activación de la aplicación se entregan en este subproceso.
 
-Si se abren vistas secundarias, se puede ocultar la ventana de la vista principal (por ejemplo, con un clic en el botón de cierre (x) de la barra de título de la ventana), pero su subproceso permanece activo. Al llamar a [**Cerrar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.close) en la [**Ventana**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) de la vista principal se produce una **InvalidOperationException**. (Use [**Application. Exit**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.exit) para cerrar la aplicación). Si finaliza el subproceso de la vista principal, la aplicación se cierra.
+Si se abren vistas secundarias, se puede ocultar la ventana de la vista principal (por ejemplo, con un clic en el botón de cierre (x) de la barra de título de la ventana), pero su subproceso permanece activo. Al llamar a [**Cerrar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.close) en la [**Ventana**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) de la vista principal se produce una **InvalidOperationException**. (Usa [**Application.Exit**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.exit) para cerrar la aplicación). Si finaliza la conversación principal de la vista, se cierra la aplicación.
 
 ## <a name="secondary-views"></a>Vistas secundarias
 

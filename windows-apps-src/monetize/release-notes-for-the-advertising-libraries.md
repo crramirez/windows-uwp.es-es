@@ -6,24 +6,24 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, release notes, notas de la versión
 ms.localizationpriority: medium
-ms.openlocfilehash: d7a250880d148dd4ca3ced522312904f2786715e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 04d3554620cde44fc9907845a7765d023e1ed03e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601230"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260205"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de la versión de las bibliotecas de publicidad
 
 
 
 
-En esta sección se proporcionan las notas de la versión para la versión actual de las bibliotecas de Microsoft Advertising. Estas bibliotecas admiten las aplicaciones XAML y JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8.1 y Windows Phone 8.
+En esta sección se proporcionan las notas de la versión para la versión actual de las bibliotecas de Microsoft Advertising. Estas bibliotecas admiten aplicaciones XAML y JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8,1 y Windows Phone 8.
 
 ## <a name="installation"></a>Instalación
 
 
-Las bibliotecas de publicidad de Microsoft están disponibles como parte del [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp). Para más información sobre cómo instalar el SDK, consulta [Instalar el SDK de Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
+Las bibliotecas de publicidad de Microsoft están disponibles como parte del [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK). Para más información sobre cómo instalar el SDK, consulta [Instalar el SDK de Microsoft Advertising](install-the-microsoft-advertising-libraries.md).
 
 ## <a name="uninstall-previous-versions"></a>Desinstalar versiones anteriores
 
@@ -39,7 +39,7 @@ Las bibliotecas de Microsoft Advertising (que incluyen las clases **AdControl** 
 
 ## <a name="no-toolbox-control"></a>Ningún control de cuadro de herramientas
 
-En la versión actual de las bibliotecas de publicidad de Microsoft en el [SDK de Microsoft Advertising](https://aka.ms/ads-sdk-uwp), no hay ningún control de cuadro de herramientas para arrastrar una clase **AdControl** o **InterstitialAd** a una superficie de diseño de la aplicación. Para obtener instrucciones sobre cómo agregar estos controles en el marcado y el código, consulta los [tutoriales de desarrollo](developer-walkthroughs.md).
+En la versión actual de las bibliotecas de publicidad de Microsoft en el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK), no hay ningún control de cuadro de herramientas para arrastrar una clase **AdControl** o **InterstitialAd** a una superficie de diseño de la aplicación. Para obtener instrucciones sobre cómo agregar estos controles en el marcado y el código, consulta los [tutoriales de desarrollo](developer-walkthroughs.md).
 
 ## <a name="latitude-and-longitude-properties-no-longer-available"></a>Las propiedades de latitud y longitud ya no está disponibles
 

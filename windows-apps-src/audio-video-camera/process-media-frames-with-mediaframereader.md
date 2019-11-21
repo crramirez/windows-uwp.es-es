@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ddd35e0365efcc8c224e717b66f53734af32123d
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 2a13f0779414f60784ac1703fa32ac1ef5c89635
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339753"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256539"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Procesar fotogramas multimedia con MediaFrameReader
 
@@ -23,7 +23,7 @@ Si, simplemente, estás interesado en capturar vídeo o fotos, como una aplicaci
 > Las características descritas en este artículo solo están disponibles a partir de Windows 10, versión 1607.
 
 > [!NOTE] 
-> Hay una muestra de aplicación universal de Windows que muestra el uso de **MediaFrameReader** para mostrar fotogramas de distintos orígenes de fotogramas, lo que incluye cámaras a color, de profundidad y de infrarrojos. Para obtener más información, consulta [Camera frames sample (Muestra de fotogramas de cámara)](https://go.microsoft.com/fwlink/?LinkId=823230).
+> Hay una muestra de aplicación universal de Windows que muestra el uso de **MediaFrameReader** para mostrar fotogramas de distintos orígenes de fotogramas, lo que incluye cámaras a color, de profundidad y de infrarrojos. Para obtener más información, consulta [Camera frames sample (Muestra de fotogramas de cámara)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames).
 
 > [!NOTE] 
 > En Windows 10, versión 1803, se introdujo un nuevo conjunto de API para usar **MediaFrameReader** con datos de audio. Para obtener más información, consulta [Procesar tramas de audio con MediaFrameReader](process-audio-frames-with-mediaframereader.md).
@@ -48,11 +48,11 @@ Muchas aplicaciones que procesan los fotogramas multimedia necesitan obtener fot
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-También puede crear una [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) mediante [**DeviceInformation. CreateWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) y el valor devuelto por [**MediaFrameSourceGroup. GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) para recibir notificaciones cuando los grupos de orígenes de fotogramas disponibles en el dispositivo cambios, como cuando una cámara externa está enchufada. Para obtener más información, consulta [**Enumerar dispositivos**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+También puede crear una [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) mediante [**DeviceInformation. CreateWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) y el valor devuelto por [**MediaFrameSourceGroup. GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) para recibir notificaciones cuando cambien los grupos de orígenes de fotogramas disponibles en el dispositivo, como cuando una cámara externa esté conectada. Para obtener más información, consulta [**Enumerar dispositivos**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Una clase [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) tiene una colección de objetos [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceInfo) que describen los orígenes de fotogramas que se incluyen en el grupo. Después de recuperar los grupos de origen de fotogramas disponibles en el dispositivo, puedes seleccionar el grupo que expone los orígenes de fotogramas que te interesan.
 
-El siguiente ejemplo muestra la forma más sencilla de seleccionar un grupo de orígenes de fotogramas. Este código, simplemente, recorre todos los grupos disponibles y, a continuación, recorre cada elemento de la colección [**SourceInfos**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.sourceinfos). Cada objeto **MediaFrameSourceInfo** se comprueba para ver si admite las características que nos interesan. En este caso, se comprueba el valor [**VideoPreview**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) de la propiedad [**MediaStreamType**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.mediastreamtype), lo que significa que el dispositivo proporciona una secuencia de vista previa de vídeo, y se comprueba el valor [**Color**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceKind) de la propiedad [**SourceKind**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.sourcekind), que indica que el origen proporciona fotogramas de color.
+El siguiente ejemplo muestra la forma más sencilla de seleccionar un grupo de orígenes de fotogramas. Este código, simplemente, recorre todos los grupos disponibles y, a continuación, recorre cada elemento de la colección [**SourceInfos**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.sourceinfos). Cada objeto **MediaFrameSourceInfo** se comprueba para ver si admite las características que nos interesan. En este caso, se comprueba el valor [**VideoPreview**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.mediastreamtype) de la propiedad [**MediaStreamType**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType), lo que significa que el dispositivo proporciona una secuencia de vista previa de vídeo, y se comprueba el valor [**Color**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.sourcekind) de la propiedad [**SourceKind**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceKind), que indica que el origen proporciona fotogramas de color.
 
 [!code-cs[SimpleSelect](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetSimpleSelect)]
 
@@ -151,7 +151,7 @@ Cuando hayas terminado de leer fotogramas, asegúrate de detener el lector de fo
 Para obtener más información sobre cómo limpiar los objetos de captura multimedia cuando se suspende la aplicación, consulta [**Acceso fácil a la vista previa de cámara**](simple-camera-preview-access.md).
 
 ## <a name="the-framerenderer-helper-class"></a>La clase auxiliar FrameRenderer
-[Camera frames sample (Muestra de fotogramas de cámara)](https://go.microsoft.com/fwlink/?LinkId=823230) universal de Windows proporciona una clase auxiliar que facilita mostrar los fotogramas de orígenes a color, de infrarrojos y en profundidad en la aplicación. Normalmente, querrás hacer más cosas con los datos en profundidad y de infrarrojos que solo mostrarlos en la pantalla, pero esta clase auxiliar es una herramienta útil para demostrar la característica de lector de fotogramas y para depurar tu propia implementación del lector de fotogramas.
+[Camera frames sample (Muestra de fotogramas de cámara)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames) universal de Windows proporciona una clase auxiliar que facilita mostrar los fotogramas de orígenes a color, de infrarrojos y en profundidad en la aplicación. Normalmente, querrás hacer más cosas con los datos en profundidad y de infrarrojos que solo mostrarlos en la pantalla, pero esta clase auxiliar es una herramienta útil para demostrar la característica de lector de fotogramas y para depurar tu propia implementación del lector de fotogramas.
 
 La clase auxiliar **FrameRenderer** implementa los métodos siguientes.
 
@@ -235,7 +235,7 @@ Inicializa el objeto **MediaCapture** para usar el **MediaFrameSourceGroup** sel
 
 [!code-cs[MediaSourceInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceInitMediaCapture)]
 
-Por último, llama a **[MediaSource.CreateFromMediaFrameSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfrommediaframesource)** para crear un **MediaSource** para cada origen de marco usando la propiedad **[Id](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.Id)** del objeto **MediaFrameSourceInfo** asociado para seleccionar uno de los orígenes de marco de la colección **[FrameSources](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)** del objeto **MediaCapture** del objeto. Inicializa un nuevo objeto **MediaPlayer** y asígnalo a un **MediaPlayerElement** llamando a **[SetMediaPlayer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.MediaPlayer)** . Después establece la propiedad **[Source](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Source)** en el objeto **MediaSource** recién creado.
+Por último, llama a **[MediaSource.CreateFromMediaFrameSource](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfrommediaframesource)** para crear un **MediaSource** para cada origen de marco usando la propiedad **[Id](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo.Id)** del objeto **MediaFrameSourceInfo** asociado para seleccionar uno de los orígenes de marco de la colecciónFrameSources **[ del objeto ](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.FrameSources)MediaCapture** del objeto. Inicializa un nuevo objeto **MediaPlayer** y asígnalo a un **MediaPlayerElement** llamando a **[SetMediaPlayer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.MediaPlayer)** . Después establece la propiedad **[Source](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Source)** en el objeto **MediaSource** recién creado.
 
 [!code-cs[MediaSourceMediaPlayer](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetMediaSourceMediaPlayer)]
 
@@ -253,7 +253,7 @@ Para obtener más información sobre el uso de perfiles de cámara, consulta [Pe
 
 * [Cámara](camera.md)
 * [Captura básica de fotos, vídeo y audio con MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [Ejemplo de fotogramas de la cámara](https://go.microsoft.com/fwlink/?LinkId=823230)
+* [Ejemplo de fotogramas de la cámara](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)
  
 
  

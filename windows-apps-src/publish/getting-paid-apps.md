@@ -6,12 +6,12 @@ ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, pagos, ventas de aplicaciones, ganancias por la aplicación, pago, tarifa de la store, suspensión de pago, porcentaje
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a3c8bf0d2d203b650b2706c24dc4c20e88e2576
-ms.sourcegitcommit: 36f502e2449f49e82bd593d6aea0b71ac48d6bec
+ms.openlocfilehash: 853554a0a3a0507f1a8b9d8994618d16aa44bccc
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70750561"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259992"
 ---
 # <a name="getting-paid"></a>Recibir pagos
 Esta es una información importante sobre cómo recibir el pago de las aplicaciones, los complementos y los ingresos publicitarios.
@@ -21,7 +21,7 @@ Esta es una información importante sobre cómo recibir el pago de las aplicacio
 
 ## <a name="store-fee"></a>Comisión de la Tienda
 
-Cuando te [registras para obtener una cuenta de desarrollador](https://go.microsoft.com/fwlink/p/?LinkID=615100), aceptas el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Este acuerdo explica la relación que tienes con Microsoft en cuanto a la venta de aplicaciones en la Microsoft Store, incluida la comisión de la Store que Microsoft cobra por cada venta realizada.
+Cuando te [registras para obtener una cuenta de desarrollador](https://developer.microsoft.com/store/register), aceptas el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Este acuerdo explica la relación que tienes con Microsoft en cuanto a la venta de aplicaciones en la Microsoft Store, incluida la comisión de la Store que Microsoft cobra por cada venta realizada.
 
 Las comisiones están establecidas oficialmente en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Revisa siempre ese documento si tienes alguna duda.
 

@@ -8,12 +8,12 @@ keywords: táctil, función táctil,puntero,entrada,interacción del usuario
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d5de2af483ca000909e60e94fc41d2a88a405219
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 25398f0b48e88e2cebe81f62cc62ac1d9bd92d5c
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365183"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258215"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 
@@ -74,13 +74,13 @@ En la tabla siguiente, se muestran algunas de las diferencias entre los disposit
 
 
 
-**Tenga en cuenta**    entrada indirecta ha tenido el beneficio de más de 25 años de refinamiento. Algunas funciones, como la información sobre herramientas desencadenada al mantener el mouse sobre un elemento, se diseñaron para explorar la interfaz de usuario específicamente con entrada de panel táctil, mouse, pluma o lápiz y teclado. Funciones de UI como esta se han rediseñado para lograr la experiencia completa que reporta la entrada táctil, sin poner en riesgo la experiencia de usuario de estos otros dispositivos.
+**Tenga en cuenta**   la entrada indirecta ha tenido la ventaja de más de 25 años de refinamiento. Algunas funciones, como la información sobre herramientas desencadenada al mantener el mouse sobre un elemento, se diseñaron para explorar la interfaz de usuario específicamente con entrada de panel táctil, mouse, pluma o lápiz y teclado. Funciones de UI como esta se han rediseñado para lograr la experiencia completa que reporta la entrada táctil, sin poner en riesgo la experiencia de usuario de estos otros dispositivos.
 
  
 
 ## <a name="use-touch-feedback"></a>Usar la información táctil
 
-Información visual apropiada durante las interacciones con la aplicación ayuda a los usuarios a reconocer, aprender y adaptarse a la interpretación de sus interacciones por la aplicación y la plataforma Windows. La información visual puede indicar interacciones satisfactorias y el estado del sistema relé, mejorar la sensación de control, reducir errores, ayudar a los usuarios a entender el sistema y el dispositivo de entrada, y alentar la interacción.
+Los comentarios visuales adecuados durante las interacciones con la aplicación ayudan a los usuarios a reconocer, aprender y adaptarse a cómo se interpretan sus interacciones tanto en la aplicación como en la plataforma Windows. La información visual puede indicar interacciones satisfactorias y el estado del sistema relé, mejorar la sensación de control, reducir errores, ayudar a los usuarios a entender el sistema y el dispositivo de entrada, y alentar la interacción.
 
 La información visual es esencial cuando el usuario usa la entrada táctil para llevar a cabo actividades que requieren exactitud y precisión en lo que respecta a ubicación. Muestra información siempre que se detecte entrada táctil para ayudar al usuario a entender cualquier regla personalizada de selección de destinos que defina la aplicación y los controles correspondientes.
 
@@ -110,7 +110,7 @@ La selección de destinos se optimiza mediante:
 Diseña teniendo en cuenta las interacciones descuidadas mediante:
 
 -   Puntos de acoplamiento que permitan detenerse en las ubicaciones deseadas con mayor facilidad cuando los usuarios interactúan con el contenido.
--   "Guías" direccionales que ayuden con el movimiento panorámico vertical y horizontal, incluso cuando la mano se mueve ligeramente en arco. Si deseas obtener más información, consulta las [directrices para movimiento panorámico](guidelines-for-panning.md).
+-   "Guías" direccionales que ayuden con el movimiento panorámico vertical y horizontal, incluso cuando la mano se mueve ligeramente en arco. Para obtener más información, consulta [Directrices sobre el movimiento panorámico](guidelines-for-panning.md).
 
 ## <a name="occlusion"></a>Oclusión
 
@@ -151,7 +151,7 @@ Además, te recomendamos lo siguiente:
 -   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
 -   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
-    **Tenga en cuenta**  una excepción a esto es donde se usa interacciones con hora específicas para ayudar en el aprendizaje y exploración (por ejemplo, mantenga presionada).
+    **Tenga en cuenta**  una excepción es el lugar en el que se usan interacciones de tiempo específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
 
      
 
@@ -436,7 +436,7 @@ Un gesto consiste en una serie de eventos de manipulación. Cada gesto se inicia
 
 A continuación, se desencadenan uno o más eventos [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta). Por ejemplo, si tocas la pantalla y luego arrastras el dedo por la pantalla. Por último, cuando termina la interacción, tiene lugar un evento [**ManipulationCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted).
 
-**Tenga en cuenta**  si no tiene un monitor de pantalla táctil, puede probar el código de eventos de manipulación en el simulador con un mouse (ratón) y la interfaz de rueda del mouse.
+**Tenga en cuenta**  si no dispone de un monitor de pantalla táctil, puede probar el código de evento de manipulación en el simulador mediante una interfaz de rueda del mouse y el mouse.
 
  
 
@@ -591,17 +591,17 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 
 **Ejemplos**
 
-* [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Ejemplos de archivo**
 
-* [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: Los gestos y manipulaciones con GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: ejemplo de eventos de entrada de usuario de XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Entrada: gestos y manipulaciones con GestureRecognizer](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
  
 
  

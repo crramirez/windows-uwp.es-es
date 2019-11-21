@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++, cpp, winrt, proyección, introducción
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a9bb432ce7c856a6c54305f657f06a23dab14f1
-ms.sourcegitcommit: 805420bb7ec6850ec3576b21193a3681054c9754
+ms.openlocfilehash: fd267f96ca6931252ab3130d363447ae79820108
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71976334"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255100"
 ---
 # <a name="introduction-to-cwinrt"></a>Introducción a C++/WinRT
 &nbsp;
@@ -37,7 +37,7 @@ Para obtener compatibilidad con Visual Studio, necesitarás Visual Studio 2019 
 
 Aunque se recomienda que realices el desarrollo con las versiones más recientes de Visual Studio y Windows SDK, si usas una versión de C++/WinRT incluida con Windows SDK anterior a 10.0.17763.0 (Windows 10, versión 1809), para usar los encabezados de los espacios de nombres de Windows mencionados anteriormente, necesitarás en el proyecto una versión de destino de Windows SDK como mínimo 10.0.17134.0 (Windows 10, versión 1803).
 
-Te conviene descargar e instalar la versión más reciente de la [Extensión de Visual Studio (VSIX) de C++/WinRT](https://aka.ms/cppwinrt/vsix) desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+Te conviene descargar e instalar la versión más reciente de la [Extensión de Visual Studio (VSIX) de C++/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
 - La extensión VSIX incluye plantillas de proyecto y elemento de C++/WinRT en Visual Studio, por lo que puedes empezar a trabajar en el desarrollo de C++/WinRT.
 - Además, ofrece visualización de depuración nativa de Visual Studio (natvis) de tipos proyectados de C++/ WinRT, con lo que proporciona una experiencia similar a la depuración de C#. Natvis es automático para compilaciones de depuración. Puedes participar en el lanzamiento de versiones si defines el símbolo WINRT_NATVIS.
@@ -96,7 +96,7 @@ En un archivo IDL, define las clases en tiempo de ejecución de tu componente, s
 Agrupa el binario compilado de componente de Windows Runtime y su `.winmd` con la aplicación para UWP que los consume.
 
 ## <a name="earlier-versions-of-the-vsix-extension"></a>Versiones anteriores de la extensión VSIX
-Te recomendamos que instales la versión más reciente de la [extensión VSIX](https://aka.ms/cppwinrt/vsix) (o que actualices a esta). Está configurada de forma predeterminada para actualizarse automáticamente. Si lo haces y tienes proyectos creados con una versión de la extensión VSIX anterior a 1.0.190128.4, encontrarás en esta sección información importante sobre cómo actualizar esos proyectos para que funcionen con la nueva versión. Aunque no lleves a cabo la actualización, la información de esta sección te resultará útil.
+Te recomendamos que instales la versión más reciente de la [extensión VSIX](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) (o que actualices a esta). Está configurada de forma predeterminada para actualizarse automáticamente. Si lo haces y tienes proyectos creados con una versión de la extensión VSIX anterior a 1.0.190128.4, encontrarás en esta sección información importante sobre cómo actualizar esos proyectos para que funcionen con la nueva versión. Aunque no lleves a cabo la actualización, la información de esta sección te resultará útil.
 
 En lo que respecta a las versiones admitidas de Windows SDK y Visual Studio, así como a la configuración de Visual Studio, la información contenida en la sección anterior ([Compatibilidad de Visual Studio con C++/WinRT, XAML, la extensión VSIX y el paquete NuGet](#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)) se aplica a versiones anteriores de la extensión VSIX. La información siguiente describe diferencias importantes relacionadas con el comportamiento y la configuración de proyectos creados con anteriores versiones (o actualizados para funcionar con estas).
 
@@ -147,7 +147,7 @@ En tu programación de C++/WinRT, puedes usar características del lenguaje C++ 
 
 ## <a name="related-topics"></a>Temas relacionados
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [Extensión de Visual Studio (VSIX) de C++/WinRT](https://aka.ms/cppwinrt/vsix)
+* [Extensión de Visual Studio (VSIX) de C++/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264)
 * [Introducción a C++/WinRT](get-started.md)
 * [Tipos de datos de C++ estándar y C++/WinRT](std-cpp-data-types.md)
 * [Control de cadenas en C++/WinRT](strings.md)

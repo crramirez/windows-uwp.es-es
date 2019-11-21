@@ -6,18 +6,18 @@ ms.date: 08/02/2019
 ms.topic: article
 keywords: windows 10, uwp, resumen de pago, extracto, pagos, ganancias, pagos, pago, beneficios
 ms.localizationpriority: medium
-ms.openlocfilehash: 89cb689f0dce4f7dbaec96e9ce109e60d4292f92
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: d609af268cfe304b34797cea4bf91e36d1475c29
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282477"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259003"
 ---
 # <a name="payout-summary"></a>Resumen de pago
 
 El **Resumen de pagos** muestra detalles sobre el dinero que ha obtenido con Microsoft. También se muestra información que te permite saber cuándo recibirás los pagos y cuánto te pagarán.
 
-Si vendes productos en Azure Marketplace, también verás información sobre los pagos efectuados en **Resumen de pago**. Para obtener más detalles sobre el pago en Azure Marketplace, consulta la página [Microsoft Azure Marketplace Participation Policies (Directivas de participación de Microsoft Azure Marketplace)](https://go.microsoft.com/fwlink/p/?LinkId=722436) y el documento [Microsoft Azure Marketplace Publisher Agreement (Acuerdo del publicador de Microsoft Azure Marketplace)](https://go.microsoft.com/fwlink/p/?LinkID=699560 ).
+Si vendes productos en Azure Marketplace, también verás información sobre los pagos efectuados en **Resumen de pago**. Para obtener más detalles sobre el pago en Azure Marketplace, consulta la página [Microsoft Azure Marketplace Participation Policies (Directivas de participación de Microsoft Azure Marketplace)](https://docs.microsoft.com/legal/marketplace/participation-policy) y el documento [Microsoft Azure Marketplace Publisher Agreement (Acuerdo del publicador de Microsoft Azure Marketplace)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3ypvt).
 
 > [!NOTE]
 > Para ser válidos para el pago, el avance debe alcanzar el [umbral de pago](payment-thresholds-methods-and-timeframes.md) de $50. Para obtener más información sobre el umbral de pago, consulte esta página y revise el contrato para desarrolladores de aplicaciones.
@@ -53,20 +53,20 @@ Para exportar cualquiera de los datos de la transacción en esta página, selecc
 
 ## <a name="payment-status"></a>Estado del pago
 
-| Obteniendo estado           | Reason                                                                                                                                      | ¿Es necesaria la acción del asociado?                                   |
+| Obteniendo estado           | Razón                                                                                                                                      | ¿Es necesaria la acción del asociado?                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
-| Sin procesar              | La ganancia es válida para el pago. Permanece en este estado durante un período de enfriamiento, tal como se define en la guía de programas para el programa de incentivos. | No                                                         |
-| Próximo                 | El pedido de pago generó revisiones internas pendientes antes de que se procese el pago.                                                               | No                                                         |
+| Sin procesar              | La ganancia es válida para el pago. Permanece en este estado durante un período de enfriamiento, tal como se define en la guía de programas para el programa de incentivos. | Sin                                                         |
+| Próximo                 | El pedido de pago generó revisiones internas pendientes antes de que se procese el pago.                                                               | Sin                                                         |
 | Factura de impuestos pendiente      | La factura de impuestos está incompleta o no es válida.                                                                                                  | Debe actualizar la factura de impuestos antes de que se le pague |
 | Rechazado durante la revisión   | Se rechazó el pago durante la revisión.                                                                                                     | Póngase en contacto [con el soporte técnico de Microsoft](https://developer.microsoft.com/en-us/windows/support) para obtener detalles                      |
 | Failed                   | No se pudo realizar el pago debido a un error del sistema de Microsoft.                                                                                         | Póngase en contacto [con el soporte técnico de Microsoft](https://developer.microsoft.com/en-us/windows/support) para obtener detalles                      |
-| En curso              | El pago está en curso.                                                                                                                 | No                                                         |
-| Pago incorrecto        | La regresión del pago está en curso.                                                                                                       | No                                                         |
-| Envió                     | Se ha enviado el pago al Banco.                                                                                                     | No                                                         |
-| Reprocesamiento             | El pago encontró un error del sistema de Microsoft y se está reprocesando.                                                                  | No                                                         |
-| Invertida                 | El banco invirtió el pago y se enviará de nuevo en el siguiente ciclo de pago.                                                     | No                                                         |
+| En curso              | El pago está en curso.                                                                                                                 | Sin                                                         |
+| Pago incorrecto        | La regresión del pago está en curso.                                                                                                       | Sin                                                         |
+| Envió                     | Se ha enviado el pago al Banco.                                                                                                     | Sin                                                         |
+| Reprocesamiento             | El pago encontró un error del sistema de Microsoft y se está reprocesando.                                                                  | Sin                                                         |
+| Invertida                 | El banco invirtió el pago y se enviará de nuevo en el siguiente ciclo de pago.                                                     | Sin                                                         |
 | Factura de impuestos rechazada     | La factura de impuestos se rechazó durante la revisión. Todos los pagos pendientes estarán en espera hasta que se complete la revisión de la factura de impuestos.                 | Póngase en contacto [con el soporte técnico de Microsoft](https://developer.microsoft.com/en-us/windows/support) para obtener detalles                      |
-| Factura de impuestos en revisión | Se está revisando la factura de impuestos. El pago se publicará una vez que se haya aprobado la factura de impuestos.                                   | No                                                         |
+| Factura de impuestos en revisión | Se está revisando la factura de impuestos. El pago se publicará una vez que se haya aprobado la factura de impuestos.                                   | Sin                                                         |
 | Aceptado                 | El Banco rechazó el pago.                                                                                                      | Póngase en contacto con su banco para obtener más información.                             |
 
 ## <a name="export-data-page"></a>Página exportar datos

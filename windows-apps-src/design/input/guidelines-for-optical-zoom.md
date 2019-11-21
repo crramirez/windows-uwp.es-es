@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b63c9191489ecae54b17cb75b8aa1af32f09fcb8
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fbcb4510a5b3ecca80b388172fe30028ac511452
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363600"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257987"
 ---
 # <a name="optical-zoom-and-resizing"></a>Zoom óptico y cambio de tamaño
 
@@ -29,15 +29,15 @@ Tanto la interacción de zoom óptico como la de cambio de tamaño se ejecutan c
 
 Los siguientes diagramas muestran las diferencias entre cambio de tamaño y zoom óptico.
 
-**Zoom óptico**: El usuario selecciona un área y, a continuación, aumenta el tamaño de todo el área.
+**Zoom óptico**: el usuario selecciona un área y después acerca o aleja el área completa.
 
 ![juntar los dedos acerca el área de contenido, y separarlos la aleja.](images/areazoom.png)
 
-**Cambiar el tamaño de**: El usuario selecciona un objeto dentro de un área y cambia el tamaño de ese objeto.
+**Cambio de tamaño**: el usuario selecciona un objeto dentro de un área y cambia el tamaño del objeto.
 
 ![juntar los dedos reduce el objeto, y alejarlos lo amplía.](images/objectresize.png)
 
-**Tenga en cuenta**    zoom óptico no se deben confundir con [Zoom semántico](../controls-and-patterns/semantic-zoom.md). Aunque en las dos interacciones se usan los mismos gestos, el zoom semántico se refiere a la presentación y navegación de datos o contenido estructurados en una única vista (como la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos).
+**Tenga en cuenta**   el zoom óptico no se debe confundir con el [zoom semántico](../controls-and-patterns/semantic-zoom.md). Aunque en las dos interacciones se usan los mismos gestos, el zoom semántico se refiere a la presentación y navegación de datos o contenido estructurados en una única vista (como la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos).
 
  
 
@@ -56,8 +56,8 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
     -   Proximidad: después de levantar el dedo, se selecciona un punto de acoplamiento si la inercia se detiene dentro del umbral de distancia del punto de acoplamiento. Los puntos de acoplamiento en proximidad aún permiten que el zoom y el cambio de tamaño finalicen entre los puntos de acoplamiento.
     -   Obligatorio: el punto de acoplamiento seleccionado es el que precede o sigue inmediatamente al último punto de acoplamiento que se cruzó antes de levantar el contacto (en función de la dirección y velocidad del gesto). Una manipulación debe finalizar en un punto de acoplamiento obligatorio.
 -   Usa física de inercia. A continuación se enumeran algunas:
-    -   Desaceleración: Se produce cuando el usuario deja de reducir o expandir. Es similar a la acción de dejar de deslizarse en una superficie resbaladiza.
-    -   Rechazo: Un efecto de rebote back ligero se produce cuando una restricción de tamaño o se pasa el límite.
+    -   Desaceleración: ocurre cuando el usuario deja de reducir o ampliar. Es similar a la acción de dejar de deslizarse en una superficie resbaladiza.
+    -   Rebote: se produce un ligero efecto de rebote cuando se supera un límite o una restricción de cambio de tamaño.
 -   Distribuye los controles de acuerdo con las [directrices para destinos](guidelines-for-targeting.md).
 -   Proporciona controladores de ajuste de escala para cambiar el tamaño de manera restringida. Si no se especifican controladores, el cambio de tamaño predeterminado es el isométrico o proporcional.
 -   No uses el zoom para navegar por la interfaz de usuario ni exponer otros controles en la aplicación; en su lugar, usa una región de movimiento panorámico. Para obtener más información sobre el movimiento panorámico, consulta las [instrucciones del movimiento panorámico](guidelines-for-panning.md).
@@ -65,7 +65,7 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
     -   Las aplicaciones de dibujo en las que pueden aparecer elementos redimensionables en un elemento canvas redimensionable.
     -   Las páginas web con un objeto incrustado, como por ejemplo un mapa.
 
-    **Tenga en cuenta**    en todos los casos, el área de contenido se cambia el tamaño a menos que todos los puntos táctiles que están dentro del objeto puede cambiar el tamaño.
+    **Tenga en cuenta**   en todos los casos, se cambia el tamaño del área de contenido a menos que todos los puntos táctiles estén dentro del objeto de tamaño variable.
 
      
 
@@ -73,20 +73,20 @@ Sigue las directrices que se indican a continuación para las aplicaciones que a
 
 
 **Ejemplos**
-* [Ejemplo básico de entrada](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Ejemplos de archivo**
-* [Entrada: Ejemplo de eventos de entrada de usuario XAML](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Entrada: Ejemplo de las capacidades de dispositivo](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Entrada: Ejemplo de pruebas de posicionamiento táctil](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [Desplazamiento, panorámica y zoom de ejemplo XAML](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Entrada: Ejemplo de tinta simplificada](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Entrada: Ejemplo de gestos de Windows 8](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [Entrada: Las manipulaciones y ejemplo de gestos (C++)](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [Ejemplo de entrada táctil de DirectX](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [Entrada: ejemplo de eventos de entrada de usuario de XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Entrada: ejemplo de prueba de posicionamiento táctil](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+* [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Entrada: ejemplo de entrada de lápiz simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+* [Entrada: ejemplo de gestos de Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+* [Entrada: ejemplo de manipulaciones y gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [Ejemplo de entrada táctil de DirectX](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
  
 
  

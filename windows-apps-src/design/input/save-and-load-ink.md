@@ -8,12 +8,12 @@ keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, I
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7eb7f085c5e4daa46cfa6c256ec3938be3c13d82
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2919a2f61f3185d85b91bdf6fd6be22402eb77d0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365345"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258267"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Almacenar y recuperar datos de trazos de lápiz de Windows Ink
 
@@ -29,7 +29,7 @@ Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializ
 
 Aquí se muestra cómo guardar trazos de lápiz dibujados en un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
-**Descargar este ejemplo de [guardar y cargar los trazos de tinta de un archivo de formato serializado de tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
+**Descargue este ejemplo de [Guardar y cargar trazos de entrada de lápiz desde un archivo de formato serializado de tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip) .**
 
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
@@ -161,7 +161,7 @@ public MainPage()
 
 Aquí se muestra cómo cargar trazos de lápiz de un archivo y representarlos en un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
-**Descargar este ejemplo de [guardar y cargar los trazos de tinta de un archivo de formato serializado de tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
+**Descargue este ejemplo de [Guardar y cargar trazos de entrada de lápiz desde un archivo de formato serializado de tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip) .**
 
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
@@ -277,7 +277,7 @@ Para admitir la funcionalidad de Portapapeles, los comandos Cortar y Copiar inte
 
 Para este ejemplo, habilitamos la selección de trazo cuando se modifica la entrada con el botón de menú contextual del lápiz (o el botón secundario del mouse). Para obtener un ejemplo completo de cómo implementar la selección de trazo, consulta Entrada de paso a través para el procesamiento avanzado en [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md).
 
-**Descargar este ejemplo de [guardar y cargar los trazos de tinta desde el Portapapeles](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)**
+**Descargar este ejemplo de [Guardar y cargar trazos de entrada de lápiz desde el portapapeles](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)**
 
 1.  En primer lugar, debemos configurar la interfaz de usuario.
 
@@ -436,17 +436,17 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 * [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md)
 
-**Ejemplos de tema**
-* [Guardar y cargar los trazos de tinta de un archivo de formato serializado de tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
-* [Guardar y cargar los trazos de tinta desde el Portapapeles](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
+**Ejemplos de temas**
+* [Guardar y cargar trazos de entrada de lápiz desde un archivo de formato serializado de tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
+* [Guardar y cargar trazos de entrada de lápiz desde el portapapeles](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
 
 **Otros ejemplos**
-* [Ejemplo simple de tinta (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Ejemplo de tinta complejos (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Ejemplo de entrada deC#lápizC++simple (/)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
+* [Ejemplo de tinta complejaC++()](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
 * [Ejemplo de entrada de lápiz (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Tutorial de inicio: Compatibilidad con entrada de lápiz en su aplicación para UWP](https://aka.ms/appsample-ink)
-* [Ejemplo de libro de color](https://aka.ms/cpubsample-coloringbook)
-* [Ejemplo de notas de la familia](https://aka.ms/cpubsample-familynotessample)
+* [Tutorial de introducción: compatibilidad con la entrada manuscrita en la aplicación para UWP](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
+* [Ejemplo de libro de color](https://github.com/Microsoft/Windows-appsample-coloringbook)
+* [Ejemplo de notas de la familia](https://github.com/Microsoft/Windows-appsample-familynotes)
 
 
 

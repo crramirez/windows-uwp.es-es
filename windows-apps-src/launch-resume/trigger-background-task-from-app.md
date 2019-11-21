@@ -3,20 +3,20 @@ title: Desencadenar una tarea en segundo plano desde dentro de la aplicación
 description: Describe cómo desencadenar una tarea en segundo plano desde dentro de una aplicación
 ms.date: 07/06/2018
 ms.topic: article
-keywords: tarea en segundo plano, el desencadenador de tarea en segundo plano
+keywords: desencadenador de tarea en segundo plano, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: d5d163d36b51e414a403986d1fdd73db7925cc0b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3d8917c6ed181607459d6126aa295d270cfea838
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371894"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259402"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>Desencadenar una tarea en segundo plano desde dentro de la aplicación
 
 Aprende a usar el [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger) para activar una tarea en segundo plano desde dentro de la aplicación.
 
-Para obtener un ejemplo de cómo crear un desencadenador de aplicación, consulte este [ejemplo](https://github.com/Microsoft/Windows-universal-samples/blob/v2.0.0/Samples/BackgroundTask/cs/BackgroundTask/Scenario5_ApplicationTriggerTask.xaml.cs).
+Para obtener un ejemplo de cómo crear un desencadenador de aplicación, vea este [ejemplo](https://github.com/Microsoft/Windows-universal-samples/blob/v2.0.0/Samples/BackgroundTask/cs/BackgroundTask/Scenario5_ApplicationTriggerTask.xaml.cs).
 
 En este tema suponemos que tienes una tarea en segundo plano que quieres activar desde la aplicación. Si aún no tienes una tarea en segundo plano, hay una tarea en segundo plano de muestra en [BackgroundActivity.cs](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackgroundActivation/cs/BackgroundActivity.cs). O bien, sigue los pasos de [Crear y registrar una tarea en segundo plano fuera de proceso](create-and-register-a-background-task.md) para crear una.
 
@@ -26,7 +26,7 @@ Usa un **ApplicationTrigger** para ejecutar código en un proceso independiente 
 
 ## <a name="create-an-application-trigger"></a>Crear un desencadenador de aplicaciones
 
-Crea un nuevo [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger). Puedes almacenarlo en un campo como se hace en el fragmento de código siguiente. Esto es por comodidad para que no tenemos que crear una nueva instancia más adelante cuando queramos señalar el desencadenador. Pero puedes usar cualquier instancia de **ApplicationTrigger** para indicar el desencadenador.
+Crea un nuevo [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger). Puedes almacenarlo en un campo como se hace en el fragmento de código siguiente. Esto es así por comodidad, por lo que no tenemos que crear una nueva instancia más adelante cuando queremos señalar el desencadenador. Pero puedes usar cualquier instancia de **ApplicationTrigger** para indicar el desencadenador.
 
 ```csharp
 // _AppTrigger is an ApplicationTrigger field defined at a scope that will keep it alive
@@ -56,7 +56,7 @@ ApplicationTrigger ^ _AppTrigger = ref new ApplicationTrigger();
 
 Puedes crear una condición de la tarea en segundo plano para controlar cuándo debe ejecutarse la tarea. Una condición evita que se ejecute la tarea en segundo plano hasta que se cumpla la condición. Para obtener más información, consulta [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md).
 
-En este ejemplo se establece la condición en **InternetAvailable** para que se desencadena una vez, la tarea se ejecuta solo una vez que el acceso a internet está disponible. Para obtener una lista de posibles condiciones, consulta [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType).
+En este ejemplo, la condición se establece en **InternetAvailable** para que, una vez desencadenada, la tarea solo se ejecute una vez que el acceso a Internet esté disponible. Para obtener una lista de posibles condiciones, consulta [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType).
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -71,7 +71,7 @@ Windows::ApplicationModel::Background::SystemCondition internetCondition{
 SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionType::InternetAvailable)
 ```
 
-Para obtener información más detallada sobre las condiciones y los tipos de desencadenadores en segundo plano, vea [respaldar la aplicación con tareas en segundo plano con](support-your-app-with-background-tasks.md).
+Para obtener información más detallada sobre las condiciones y los tipos de desencadenadores en segundo plano, consulte [compatibilidad con la aplicación con tareas en segundo plano](support-your-app-with-background-tasks.md).
 
 ##  <a name="call-requestaccessasync"></a>Llamar a RequestAccessAsync()
 
@@ -88,9 +88,9 @@ if (requestStatus != BackgroundAccessStatus.AlwaysAllowed)
 
 ## <a name="register-the-background-task"></a>Registrar la tarea en segundo plano
 
-Registra la tarea en segundo plano llamando a tu función de registro de tareas en segundo plano. Para obtener más información sobre cómo registrar tareas en segundo plano y para ver la definición de la **RegisterBackgroundTask()** método en el código de ejemplo siguiente, vea [registrar una tarea en segundo plano](register-a-background-task.md).
+Registra la tarea en segundo plano llamando a tu función de registro de tareas en segundo plano. Para obtener más información sobre el registro de tareas en segundo plano y ver la definición del método **RegisterBackgroundTask ()** en el código de ejemplo siguiente, vea [registrar una tarea en segundo plano](register-a-background-task.md).
 
-Si se va a utilizar un desencadenador de aplicación para ampliar la duración del proceso de primer plano, considere el uso de [ejecución extendidos](run-minimized-with-extended-execution.md) en su lugar. El desencadenador de aplicaciones está diseñado para crear un proceso hospedado por separado en el que realizar trabajos. El siguiente fragmento de código registra un desencadenador en segundo plano fuera de proceso.
+Si está pensando en utilizar un desencadenador de aplicación para ampliar la duración del proceso en primer plano, considere la posibilidad de usar la [ejecución extendida](run-minimized-with-extended-execution.md) en su lugar. El desencadenador de aplicaciones está diseñado para crear un proceso hospedado por separado en el que realizar trabajos. El siguiente fragmento de código registra un desencadenador en segundo plano fuera de proceso.
 
 ```csharp
 string entryPoint = "Tasks.ExampleBackgroundTaskClass";
@@ -114,7 +114,7 @@ String ^ taskName   = "Example application trigger";
 BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, appTrigger, internetCondition);
 ```
 
-Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se ocupe correctamente de los escenarios en los que se produce un error en el registro de tareas en segundo plano. Si, en cambio, la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
+Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
 ## <a name="trigger-the-background-task"></a>Desencadenar la tarea en segundo plano
 
@@ -122,8 +122,8 @@ Antes de desencadenar la tarea en segundo plano, usa [BackgroundTaskRegistration
 
 Desencadena la tarea en segundo plano llamando a [ApplicationTrigger.RequestAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger). Cualquier **ApplicationTrigger** servirá.
 
-Tenga en cuenta que **ApplicationTrigger.RequestAsync** no se puede llamar desde la propia tarea en segundo plano, o cuando la aplicación está en segundo plano en estado de ejecución (consulte [ciclo de vida de aplicación](app-lifecycle.md) para obtener más información acerca de Estados de la aplicación).
-Se pueden devolver [DisabledByPolicy](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtriggerresult) si el usuario ha establecido las directivas de energía o la privacidad que impide que la aplicación se realice la actividad en segundo plano.
+Tenga en cuenta que no se puede llamar a **ApplicationTrigger. RequestAsync** desde la propia tarea en segundo plano o cuando la aplicación está en el estado de ejecución en segundo plano (consulte [ciclo de vida](app-lifecycle.md) de la aplicación para obtener más información sobre los Estados de la aplicación).
+Puede devolver [DisabledByPolicy](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtriggerresult) si el usuario ha establecido directivas de energía o de privacidad que impiden que la aplicación realice la actividad en segundo plano.
 Además, solo AppTrigger puede ejecutarse cada vez. Si intentas ejecutar un AppTrigger mientras que otro ya se está ejecutando, la función devolverá [CurrentlyRunning](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtriggerresult).
 
 ```csharp
@@ -134,16 +134,16 @@ var result = await _AppTrigger.RequestAsync();
 
 Usa [BackgroundExecutionManager.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager) para determinar si el usuario ha decidido que la actividad en segundo plano de la aplicación debe ser limitada. Ten en cuenta el uso de la batería y ejecuta aplicaciones en segundo plano solo cuando sea necesario completar una acción que requiera el usuario. Consulta [Optimizar la actividad en segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) para obtener más información sobre las formas en que los usuarios pueden controlar la configuración para la actividad en segundo plano.  
 
-- Memoria: Optimizar el uso de memoria y la energía de la aplicación es esencial para garantizar que el sistema operativo permitirá la ejecución de tarea en segundo plano. Usa las [API de administración de memoria](https://docs.microsoft.com/uwp/api/windows.system.memorymanager) para ver cuánta memoria está usando la tarea en segunda plano. Cuando más memoria use la tarea en segundo plano, más difícil será para el sistema operativo mantenerla en ejecución cuando otra aplicación esté en primer plano. El usuario es, en última instancia, quien controla toda la actividad en segundo plano que la aplicación puede llevar a cabo y quien tiene visibilidad sobre el impacto que la aplicación tiene sobre el uso de la batería.  
-- Tiempo de CPU: Tareas en segundo plano están limitadas por la cantidad de tiempo de uso de reloj que obtengan en función de tipo de desencadenador. Tareas en segundo plano desencadenadas por el desencadenador de aplicación están limitadas a unos 10 minutos.
+- Memoria: optimización del uso de la energía y la memoria de la aplicación para garantizar que el sistema operativo permitirá la ejecución de su tarea en segundo plano. Usa las [API de administración de memoria](https://docs.microsoft.com/uwp/api/windows.system.memorymanager) para ver cuánta memoria está usando la tarea en segunda plano. Cuando más memoria use la tarea en segundo plano, más difícil será para el sistema operativo mantenerla en ejecución cuando otra aplicación esté en primer plano. El usuario es, en última instancia, quien controla toda la actividad en segundo plano que la aplicación puede llevar a cabo y quien tiene visibilidad sobre el impacto que la aplicación tiene sobre el uso de la batería.  
+- Tiempo de CPU: las tareas en segundo plano están limitadas por la cantidad de tiempo de uso de reloj que obtienen según el tipo de desencadenador. Las tareas en segundo plano desencadenadas por el desencadenador de la aplicación se limitan a unos 10 minutos.
 
 Consulta [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md) para conocer las restricciones de recursos que se aplican a las tareas en segundo plano.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-A partir de Windows 10, ya no es necesario para el usuario agregar la aplicación a la pantalla de bloqueo para poder utilizar las tareas en segundo plano.
+A partir de Windows 10, ya no es necesario que el usuario agregue la aplicación a la pantalla de bloqueo para poder utilizar tareas en segundo plano.
 
-Solo se ejecutará una tarea en segundo plano mediante una **ApplicationTrigger** si ha llamado a [ **RequestAccessAsync** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) primero.
+Una tarea en segundo plano solo se ejecutará con un **ApplicationTrigger** si se ha llamado a [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) en primer lugar.
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -155,7 +155,7 @@ Solo se ejecutará una tarea en segundo plano mediante una **ApplicationTrigger*
 * [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 * [Liberar memoria cuando la aplicación pasa a segundo plano](reduce-memory-usage.md)
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
-* [Cómo desencadenar suspender, reanudar y en segundo plano de los eventos en aplicaciones para UWP (al depurar)](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Cómo desencadenar eventos de suspensión, reanudación y en segundo plano en aplicaciones UWP (durante la depuración)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
 * [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 * [Aplazar la suspensión de aplicaciones con ejecución ampliada](run-minimized-with-extended-execution.md)
 * [Registrar una tarea en segundo plano](register-a-background-task.md)

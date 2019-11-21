@@ -1,27 +1,27 @@
 ---
-title: Planear la migración de DirectX
+title: Planea tu migración de DirectX
 description: 'Planea un proyecto para migrar un juego de DirectX 9 a DirectX 11 y a la Plataforma universal de Windows (UWP): actualiza el código de gráficos y coloca el juego en el entorno de Windows Runtime.'
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, DirectX, port, migración
 ms.localizationpriority: medium
-ms.openlocfilehash: 247c7cb05027520cb7a39e04ff65579297b66dc9
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 032eeaf2a17ef244287e25e6d9ff32a12c61e137
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368302"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258466"
 ---
-# <a name="plan-your-directx-port"></a>Planear la migración de DirectX
+# <a name="plan-your-directx-port"></a>Planea tu migración de DirectX
 
 
 
 **Resumen**
 
--   Planear la migración de DirectX
+-   Planea tu migración de DirectX
 -   [Cambios importantes de Direct3D 9 a Direct3D 11](understand-direct3d-11-1-concepts.md)
--   [Asignación de función](feature-mapping.md)
+-   [Asignación de características](feature-mapping.md)
 
 
 Planea un proyecto para migrar un juego de DirectX 9 a DirectX 11 y a la Plataforma universal de Windows (UWP): actualiza el código de gráficos y coloca el juego en el entorno de Windows Runtime.
@@ -35,11 +35,11 @@ Actualizar de Direct3D 9 a Direct3D 11 es más que un cambio de buscar y reempla
 
 Debes reemplazar las bibliotecas auxiliares de D3DX y DXUT con tus propias bibliotecas auxiliares o con herramientas de la comunidad. Consulta la sección [Asignación de características](feature-mapping.md) para obtener más información.
 
-> **Tenga en cuenta**    puede usar el [Kit de herramientas DirectX](https://go.microsoft.com/fwlink/p/?LinkID=248929) o [DirectXTex](https://go.microsoft.com/fwlink/p/?LinkID=248926) reemplazar alguna funcionalidad anteriormente proporcionada por D3DX y DXUT.
+> **Tenga en cuenta**   puede usar el [Kit de herramientas de DirectX](https://github.com/Microsoft/DirectXTK) o [DirectXTex](https://github.com/Microsoft/DirectXTex) para reemplazar alguna funcionalidad que anteriormente proporcionó D3DX y DXUT.
 
  
 
-Los sombreadores escritos en lenguaje de ensamblado deben actualizarse a HLSL con nivel de modelo 4 sombreador 9\_1 o 9\_3 funcionalidad y los sombreadores escritos para la biblioteca de efectos deberá actualizarse a una versión más reciente de la sintaxis HLSL. Consulta la sección [Asignación de características](feature-mapping.md) para obtener más información.
+Los sombreadores escritos en lenguaje de ensamblado deben actualizarse a HLSL mediante la funcionalidad del modelo de sombreador 4 de nivel 9\_1 o 9\_3, y los sombreadores escritos para la biblioteca de efectos deberán actualizarse a una versión más reciente de la sintaxis de HLSL. Consulta la sección [Asignación de características](feature-mapping.md) para obtener más información.
 
 Conoce los distintos [Niveles de característica de Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro). Los niveles de característica clasifican una amplia gama de hardware de vídeo al definir conjuntos de funciones conocidas. Cada conjunto corresponde, a grandes rasgos, a versiones de Direct3D, de 9.1 a 11.2. Todas los niveles de característica usan la API de DirectX 11.
 

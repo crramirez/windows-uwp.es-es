@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b68e736cc6d413196205f84467b7e159c53cb98e
-ms.sourcegitcommit: e7589fa25d8de86c36b6ce6d90d360337718ef93
+ms.openlocfilehash: 0d54ab79926ef20bb54a83346c12df2ea383167d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71311237"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258350"
 ---
 # <a name="mouse-interactions"></a>Interacciones de mouse
 
@@ -59,7 +59,7 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 <td align="left"><p>Clic con el botón secundario para seleccionar y ordenar</p></td>
 <td align="left"><p>Haz clic con el botón secundario para mostrar la barra de navegación (si está disponible) y la barra de la aplicación con comandos globales. Haz clic con el botón secundario en un elemento para seleccionarlo y mostrar la barra de la aplicación con comandos contextuales para el elemento seleccionado.</p>
 <div class="alert">
-<strong></strong>Nota  : haga clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de la aplicación no son comportamientos de interfaz de usuario apropiados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
+<strong>Nota</strong>  haga clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de la aplicación no son comportamientos adecuados de la interfaz de usuario. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
 </div>
 <div>
  
@@ -86,7 +86,7 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 
 ## <a name="mouse-input-events"></a>Eventos de entrada del mouse
 
-La mayoría de la entrada del mouse se puede controlar a través de los eventos de entrada enrutados comunes admitidos por todos los objetos [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) . Entre ellas se incluyen las siguientes:
+La mayoría de la entrada del mouse se puede controlar a través de los eventos de entrada enrutados comunes admitidos por todos los objetos [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) . Entre ellos se incluyen los siguientes:
 
 - [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
 - [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
@@ -127,7 +127,7 @@ La mayoría de la entrada del mouse se puede controlar a través de los eventos 
 
 Sin embargo, puede aprovechar las capacidades específicas de cada dispositivo (como los eventos de la rueda del mouse) mediante el puntero, el gesto y los eventos de manipulación de [Windows. UI. Input](https://docs.microsoft.com/uwp/api/windows.ui.input).
 
-**Assembl** Vea nuestro [ejemplo de BasicInput](https://go.microsoft.com/fwlink/p/?LinkID=620302), para.
+**Ejemplos:** Vea nuestro [ejemplo de BasicInput](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput), para.
 
 ## <a name="guidelines-for-visual-feedback"></a>Directrices para información visual
 
@@ -162,7 +162,7 @@ Si necesitas personalizar el cursor del mouse:
 
 ### <a name="samples"></a>Muestras
 
-- [Ejemplo de entrada básica](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [Ejemplo de entrada de baja latencia](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-- [Ejemplo de modo de interacción del usuario](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [Ejemplo de elementos visuales de foco](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)

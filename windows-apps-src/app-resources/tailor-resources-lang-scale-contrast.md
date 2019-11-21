@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
 ms.localizationpriority: medium
-ms.openlocfilehash: db5ba7fb6e13d2a5aab4b74014458073aa88e7f4
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 0d6af9d532ecabe517983e8b56cdf8e1b2a2d812
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820213"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254521"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, escala, contraste alto y otros calificadores
 
@@ -25,7 +25,7 @@ Para obtener más información sobre la propuesta de valor de localizar tu aplic
 
 Un nombre de calificador es una clave que se asigna a un conjunto de valores de calificador. Estos son el nombre de calificador y los valores de calificador de contraste.
 
-| Context | Nombre de calificador | Valores de calificador |
+| Contexto | Nombre de calificador | Valores de calificador |
 | :--------------- | :--------------- | :--------------- |
 | Configuración de contraste alto | contraste | estándar, alto, negro y blanco |
 
@@ -124,7 +124,7 @@ Es poco probable que necesites el nombre de calificador `configuration`. Puede u
 
 El calificador `configuration` se usa para cargar un recurso que coincida en la mayor medida posible con el valor de la variable de entorno `MS_CONFIGURATION_ATTRIBUTE_VALUE`. Por tanto, puedes poner la variable al valor de la cadena que se ha asignado a los recursos relevantes, por ejemplo `designer` o `test`.
 
-## <a name="contrast"></a>Compare
+## <a name="contrast"></a>Contraste
 
 El calificador `contrast` se usa para proporcionar recursos que se ajusten mejor a la configuración de contraste alto.
 
@@ -191,11 +191,11 @@ Es poco probable que necesites el nombre de calificador `dxfeaturelevel`. Fue di
 
 ## <a name="homeregion"></a>HomeRegion
 
-El calificador `homeregion` corresponde a la configuración del usuario para el país o región. Representa la ubicación principal del usuario. Los valores incluyen cualquier [etiqueta de región BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) que sea válida. Es decir, cualquier código de región de dos letras **ISO 3166-1 alpha-2**, además del conjunto de códigos geográficos de tres dígitos **numérico ISO 3166-1** para regiones compuestas (consulta la [Composición M49 de códigos de región de la División de Estadística de las Naciones Unidas](https://go.microsoft.com/fwlink/p/?linkid=247929)). Los códigos de "Agrupaciones económicas seleccionadas y otras" no son válidos.
+El calificador `homeregion` corresponde a la configuración del usuario para el país o región. Representa la ubicación principal del usuario. Los valores incluyen cualquier [etiqueta de región BCP-47](https://tools.ietf.org/html/bcp47) que sea válida. Es decir, cualquier código de región de dos letras **ISO 3166-1 alpha-2**, además del conjunto de códigos geográficos de tres dígitos **numérico ISO 3166-1** para regiones compuestas (consulta la [Composición M49 de códigos de región de la División de Estadística de las Naciones Unidas](https://unstats.un.org/unsd/methods/m49/m49regin.htm)). Los códigos de "Agrupaciones económicas seleccionadas y otras" no son válidos.
 
-## <a name="language"></a>Lenguaje
+## <a name="language"></a>Idioma
 
-Un calificador `language` corresponde a la configuración de idioma de la pantalla. Los valores incluyen cualquier [etiqueta de idioma BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302) que sea válida. Para obtener una lista de idiomas, consulta el [Registro de subetiquetas de idioma de IANA](https://go.microsoft.com/fwlink/p/?linkid=227303).
+Un calificador `language` corresponde a la configuración de idioma de la pantalla. Los valores incluyen cualquier [etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47) que sea válida. Para obtener una lista de idiomas, consulta el [Registro de subetiquetas de idioma de IANA](https://www.iana.org/assignments/language-subtag-registry).
 
 Si quieres que tu aplicación admita diferentes idiomas de pantalla y tienes literales de cadena en el código o en el marcado XAML, entonces mueve esas cadenas fuera del código o marcado y a un archivo de recursos (`.resw`). A continuación, puedes hacer una copia traducida de ese archivo de recursos para cada idioma que admita la aplicación.
 
@@ -261,34 +261,34 @@ Para obtener información sobre la calificación de un recurso tanto para `scale
 El calificador `theme` se usa para proporcionar recursos que coincidan mejor con la configuración predeterminada del modo de aplicación o la invalidación de la aplicación usando [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme).
 
 
-## <a name="shell-light-theme-and-unplated-resources"></a>Tema claro de shell y los recursos sin placa
-El *Windows 10 puede actualizar 2019* introdujo un nuevo tema "claro" para el Shell de Windows. Como resultado, algunos activos de la aplicación que se mostraban anteriormente en un fondo oscuro ahora se mostrará en un fondo claro. Para las aplicaciones que las aplicaciones que proporcionan los activos sin placa altform para la barra de tareas y la ventana de los conmutadores (Alt + Tab, vista de tareas, etcetera), debe comprobar que tienen contraste aceptable en un fondo claro.
+## <a name="shell-light-theme-and-unplated-resources"></a>Subtema claro de Shell y recursos desplanchados
+La *actualización de Windows 10 de mayo de 2019* presentó un nuevo tema "claro" para el shell de Windows. Como resultado, algunos recursos de aplicación que se mostraron anteriormente en un fondo oscuro se mostrarán ahora en un fondo claro. En el caso de las aplicaciones que proporcionan recursos sin placa de altform para los conmutadores de barra de tareas y de ventanas (Alt + Tab, vista de tareas, etc.), debe comprobar que tienen un contraste aceptable en un fondo claro.
 
-### <a name="providing-light-theme-specific-assets"></a>Proporcionar recursos específicos del tema claro
-Las aplicaciones que desean proporcionar un recurso adaptado para el tema claro shell puede usar un nuevo calificador de recursos de forma alternativa: `altform-lightunplated`. Este calificador refleja el calificador sin placa altform existente. 
+### <a name="providing-light-theme-specific-assets"></a>Proporcionar recursos específicos del tema ligeros
+Las aplicaciones que quieren proporcionar un recurso personalizado para el tema claro de Shell pueden usar un nuevo calificador de recurso de formulario alternativo: `altform-lightunplated`. Este calificador refleja el calificador altform-unplated existente. 
 
 ### <a name="downlevel-considerations"></a>Consideraciones de nivel inferior
-Las aplicaciones no deben usar el `theme-light` calificador con el `altform-unplated` calificador. Esto provocará un comportamiento impredecible en RS5 y versiones anteriores de Windows debido a los recursos de manera que se cargan para la barra de tareas. En versiones anteriores de windows, puede utilizarse la versión del tema claro incorrectamente. El `altform-lightunplated` calificador evita este problema. 
+Las aplicaciones no deben usar el calificador `theme-light` con el calificador `altform-unplated`. Esto producirá un comportamiento imprevisible en RS5 y versiones anteriores de Windows debido a la manera en que se cargan los recursos de la barra de tareas. En versiones anteriores de Windows, la versión de tema claro se puede usar de forma incorrecta. El calificador `altform-lightunplated` evita este problema. 
 
 ### <a name="compatibility-behavior"></a>Comportamiento de compatibilidad
-Para versiones anteriores compatibilidad, Windows incluye lógica para detectar una iconos monocromática y comprobar si contrasta con el fondo deseado. Si se produce un error en el icono cumplir los requisitos de contraste, Windows buscará una versión de blanco en contraste del recurso. Si no está disponible, Windows recurrirá a con la versión recubierta del recurso.
+Por compatibilidad con versiones anteriores, Windows incluye la lógica para detectar iconos monocromáticos y comprueba si se compara con el fondo previsto. Si el icono no cumple los requisitos de contraste, Windows buscará una versión en blanco de contraste del recurso. Si no está disponible, Windows revertirá al uso de la versión recubierta del recurso.
 
 
 
 ## <a name="important-apis"></a>API importantes
 
-* [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
+* [ResourceContext. QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
 * [SetGlobalQualifierValue](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue)
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Los píxeles efectivos y el factor de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
+* [Píxeles efectivos y factor de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
 * [Sistema de administración de recursos](resource-management-system.md)
 * [Preparación para la localización](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))
-* [Detectar la plataforma de la aplicación se ejecuta](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [Información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-* [Localizar sus cadenas de interfaz de usuario](localize-strings-ui-manifest.md)
-* [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [M49 de división de estadística de las Naciones Unidas de composición de los códigos de región](https://go.microsoft.com/fwlink/p/?linkid=247929)
-* [Registro de subetiquetas del lenguaje IANA](https://go.microsoft.com/fwlink/p/?linkid=227303)
+* [Detección de la plataforma en la que se ejecuta la aplicación](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
+* [Información general de las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+* [Localizar las cadenas de la interfaz de usuario](localize-strings-ui-manifest.md)
+* [BCP-47](https://tools.ietf.org/html/bcp47)
+* [División de estadísticas de Naciones Unidas M49 composición de códigos de región](https://unstats.un.org/unsd/methods/m49/m49regin.htm)
+* [Registro de subetiqueta del lenguaje IANA](https://www.iana.org/assignments/language-subtag-registry)
 * [Ajustar el diseño y las fuentes, y admitir la escritura de derecha a izquierda](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

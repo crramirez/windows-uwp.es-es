@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e5ff5d8e1a63522a70b37c3226b01a2fc680c368
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 30f361aad321feb44240e66c03003646c560a4f5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318973"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257812"
 ---
 # <a name="accessibility-overview"></a>Información general sobre accesibilidad  
 
@@ -188,11 +188,11 @@ Cuando crees un control personalizado, te recomendamos que también implementes 
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_APPS_THAT_SUPPORT_XAML___MICROSOFT_DIRECTX_INTEROP"/>
 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>Compatibilidad para tecnología de asistencia en aplicaciones que admiten la interoperabilidad XAML/Microsoft DirectX  
-No se puede acceder de manera predeterminada al contenido de Microsoft DirectX hospedado en una interfaz de usuario XAML (mediante [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) o [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource)). El [ejemplo de interoperabilidad XAML SwapChainPanel DirectX](https://go.microsoft.com/fwlink/p/?LinkID=309155) muestra cómo crear sistemas del mismo nivel de automatización de la interfaz de usuario para el contenido de DirectX hospedado. Esta técnica permite que se pueda acceder al contenido hospedado a través de la automatización de la interfaz de usuario.
+No se puede acceder de manera predeterminada al contenido de Microsoft DirectX hospedado en una interfaz de usuario XAML (mediante [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) o [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource)). El [ejemplo de interoperabilidad XAML SwapChainPanel DirectX](https://code.msdn.microsoft.com/windowsapps/XAML-SwapChainPanel-00cb688b) muestra cómo crear sistemas del mismo nivel de automatización de la interfaz de usuario para el contenido de DirectX hospedado. Esta técnica permite que se pueda acceder al contenido hospedado a través de la automatización de la interfaz de usuario.
 
 ## <a name="related-topics"></a>Temas relacionados  
-* [**Windows.UI.Xaml.Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
-* [Diseño para mejorar la accesibilidad](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
-* [Ejemplo de accesibilidad XAML](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [**Windows. UI. Xaml. Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
+* [Diseño para accesibilidad](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
+* [Ejemplo de accesibilidad XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
 * [Accesibilidad](accessibility.md)
-* [Empezar a trabajar con Narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)
+* [Introducción a narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

@@ -1,19 +1,19 @@
 ---
 ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
 description: Aprende a detectar errores de AdControl en la aplicación.
-title: Tutorial de control de errores en XAML y C#
+title: Tutorial de gestión de errores en XAML/C#
 ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de errores, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: c0b8389d2319a670dd314417726b24e98378cd49
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 0c9f29cacd740392e3cfd4b5b4b63d1f7ce9c5cd
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334481"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260277"
 ---
-# <a name="error-handling-in-xamlc-walkthrough"></a>Tutorial de control de errores en XAML y C#
+# <a name="error-handling-in-xamlc-walkthrough"></a>Tutorial de gestión de errores en XAML/C#
 
 En este tutorial se muestra cómo detectar errores relacionados con los anuncios en la aplicación. Este tutorial usa un objeto [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un anuncio de banner, pero los conceptos generales en él también se aplican a anuncios intersticiales y anuncios nativos.
 
@@ -68,11 +68,11 @@ En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que conti
     }
     ```
 
-4.  Compile y ejecute el proyecto. Una vez que se ejecute la aplicación, verás un mensaje similar al siguiente en la ventana **Resultados** de Visual Studio.
+4.  Compilar y ejecutar el proyecto. Una vez que se ejecute la aplicación, verás un mensaje similar al siguiente en la ventana **Resultados** de Visual Studio.
     ```json
     AdControl error (): MicrosoftAdvertising.Shared.AdException: all ad requests must use the same application ID within a single application (0, d25517cb-12d4-4699-8bdc-52040c712cab) ErrorCode: ClientConfiguration
     ```
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestras de publicidad en GitHub](https://aka.ms/githubads)
+* [Muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)

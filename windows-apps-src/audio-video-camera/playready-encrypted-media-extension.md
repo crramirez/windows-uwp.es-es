@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f4d72050ca30271a0ad2c6c2c39c857e2c10550
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: b673122d707e152d24c49d3bacf71ed52cdb0ae5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061948"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256813"
 ---
 # <a name="playready-encrypted-media-extension"></a>Encrypted Media Extension (EME) de PlayReady
 
@@ -29,12 +29,12 @@ En la siguiente lista se describen las nuevas características y los cambios rea
 
 -   Se ha agregado la administración de derechos digitales (DRM) de hardware.
 
-    La compatibilidad con la protección de contenido basado en hardware permite la reproducción segura de contenido de alta definición (HD) y altísima definición (UHD) en diversas plataformas de dispositivo. Se protege el material de clave (incluyendo claves privadas, claves de contenido y cualquier otro material de clave que se use para derivar o desbloquear dichas claves), así como muestras de vídeo descifradas comprimidas y descomprimidas mediante el aprovechamiento de la seguridad de hardware.
+    La compatibilidad con la protección de contenido basada en hardware permite la reproducción segura de contenido de alta definición (HD) y altísima definición (UHD) en diversas plataformas de dispositivos. Se protege el material de clave (incluyendo claves privadas, claves de contenido y cualquier otro material de clave que se use para derivar o desbloquear dichas claves), así como muestras de vídeo descifradas comprimidas y descomprimidas mediante el aprovechamiento de la seguridad de hardware.
 
 -   Proporciona la adquisición proactiva de licencias no persistentes.
 -   Proporciona la adquisición de varias licencias en un mensaje.
 
-    Puede usar un objeto PlayReady con varios identificadores de clave (KeyIDs) como en Windows 8.1, o bien usar [datos del modelo de descifrado de contenido (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) con varios KeyIDs.
+    Puede usar un objeto PlayReady con varios identificadores de clave (KeyIDs) como en Windows 8.1, o bien usar [datos del modelo de descifrado de contenido (CDMData)](https://docs.microsoft.com/previous-versions/windows/apps/dn457361(v=ieb.10)?redirectedfrom=MSDN) con varios KeyIDs.
 
     > [!NOTE]
     > En Windows 10, se admiten varios identificadores de clave en &lt;ID. de clave&gt; en CDMData.
@@ -268,7 +268,7 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 
 En esta sección se enumeran las consideraciones de programación que debería tener en cuenta al crear la aplicación web habilitada para PlayReady para Windows 10.
 
-Los objetos **MSMediaKeys** y **MSMediaKeySession** creados por la aplicación deben mantenerse activos hasta que se cierre la aplicación. Una manera de garantizar que estos objetos se mantengan activos, consiste en asignarlos como variables globales (las variables estarían fuera del ámbito y sujetas a la recolección de elementos no usados si se declaran como una variable local dentro de una función). Por ejemplo, en el ejemplo siguiente se asignan las variables *g\_msMediaKeys* y *g\_mediaKeySession* como variables globales, que se asignan a los objetos **msMediaKeys** y **MSMediaKeySession** en el funcionalidad.
+Los objetos **MSMediaKeys** y **MSMediaKeySession** creados por la aplicación deben mantenerse activos hasta que se cierre la aplicación. Una manera de garantizar que estos objetos se mantengan activos, consiste en asignarlos como variables globales (las variables estarían fuera del ámbito y sujetas a la recolección de elementos no usados si se declaran como una variable local dentro de una función). Por ejemplo, en el ejemplo siguiente se asignan las variables *g\_msMediaKeys* y *g\_mediaKeySession* como variables globales, que se asignan a los objetos **msMediaKeys** y **MSMediaKeySession** de la función.
 
 ``` syntax
 var g_msMediaKeys;
@@ -298,7 +298,7 @@ function foo() {
 
 Para obtener más información, consulta las [aplicaciones de muestra](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [DRM de PlayReady](playready-client-sdk.md)
 
 

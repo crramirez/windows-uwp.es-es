@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: cf114ed3d2ffce95f9e9aba6ceb222029d23819c
-ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
+ms.openlocfilehash: 53fb8c0b213705a5a79680356bb4f1773594dcdc
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73052028"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260488"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tareas en segundo plano en el manifiesto de la aplicación
 
@@ -37,7 +37,7 @@ Este tema supone que has creado una o más clases de tareas en segundo plano y q
 
 Abre el manifiesto de la aplicación (Package.appxmanifest) y ve al elemento Application. Crea un elemento Extensions (si no existe uno ya).
 
-El siguiente fragmento de código está tomado de la [muestra de tarea en segundo plano](https://go.microsoft.com/fwlink/p/?LinkId=618666):
+El siguiente fragmento de código está tomado de la [muestra de tarea en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask):
 
 ```xml
 <Application Id="App"

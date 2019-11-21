@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ef8cdad247a57ce5fab461e70c2725fda4231efd
-ms.sourcegitcommit: ed32219e04f814a12ea018348e9cf678fcfd5e3a
+ms.openlocfilehash: 4d36368fab267370e2301e52731d99bc7b146fbd
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67253060"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258245"
 ---
 # <a name="speech-interactions"></a>Interacciones de voz
 
@@ -58,7 +58,7 @@ Detén el reconocimiento si se detecta entrada desde un dispositivo que no sea e
 
 Especifica el intervalo de tiempo sin entrada de voz que indica que el reconocimiento ha finalizado. No reinicies automáticamente el reconocimiento después de este período de tiempo, ya que suele indicar que el usuario ha dejado de interactuar con la aplicación.
 
-Deshabilita la interfaz de usuario de reconocimiento continuo y finaliza la sesión de reconocimiento si no hay disponible una conexión de red. Reconocimiento continua requiere una conexión de red.
+Deshabilita la interfaz de usuario de reconocimiento continuo y finaliza la sesión de reconocimiento si no hay disponible una conexión de red. El reconocimiento continuo requiere una conexión de red.
 
 ## <a name="commanding"></a>Comandos
 
@@ -157,7 +157,7 @@ Estas gramáticas predefinidas pueden usarse para reconocer hasta 10 segundos de
 Una gramática personalizada se ha diseñado y creado por el usuario y se instala con la aplicación. El reconocimiento de voz con una restricción personalizada se realiza en el dispositivo.
 
 -   Las restricciones de lista mediante programación ofrecen un enfoque ligero para la creación de gramáticas sencillas como, por ejemplo, una lista de palabras o frases. Una restricción de lista es efectiva para reconocer frases cortas y distintas. Especificar explícitamente todas las palabras en una gramática también mejora la precisión del reconocimiento, porque el motor de reconocimiento de voz debe procesar la voz únicamente para confirmar una coincidencia. La lista también se puede actualizar mediante programación.
--   Una gramática SRGS es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formato XML definido por [SRGS versión 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
+-   Una gramática SRGS es un documento estático que, a diferencia de una restricción de lista mediante programación, usa el formato XML definido por [SRGS versión 1.0](https://www.w3.org/TR/speech-grammar/). Una gramática SRGS proporciona el máximo control sobre la funcionalidad de reconocimiento de voz al permitir capturar varios significados semánticos en un solo reconocimiento.
 
     Estas son algunas sugerencias para crear gramáticas SRGS:
 
@@ -179,7 +179,7 @@ Para una pequeña lista de palabras y frases, o una lista de palabras o frases p
 
 En el caso de listas de palabras y frases más largas, o palabras o frases usadas con frecuencia, puedes crear documentos de lexicón de pronunciación independiente. Consulta [Acerca de los lexicones y los alfabetos fonéticos](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361646(v=office.14)) para obtener más información.
 
-## <a name="testing"></a>Pruebas
+## <a name="testing"></a>Probándose
 
 Prueba la precisión del reconocimiento de voz y la interfaz de usuario compatible con el público objetivo de la aplicación. Esta es la mejor manera de determinar la eficacia de la funcionalidad de interacción de voz en la aplicación. Por ejemplo, ¿los usuarios obtienen resultados de reconocimiento inexactos porque la aplicación no puede escuchar una frase común?
 
@@ -200,7 +200,7 @@ Debes escuchar todas las cadenas de TTS para garantizar que son inteligibles y s
 -   Encadenar una secuencia de palabras inusuales o dictar números o signos de puntuación puede provocar que una frase sea ininteligible.
 -   La voz puede sonar forzada cuando la prosodia o cadencia es diferente a cómo un hablante nativo diría una frase.
 
-Ambos problemas pueden resolverse mediante el uso de SSML instead of plain text como entrada para el sintetizador de voz. Para obtener más información sobre SSML, consulta [Usar SSML para controlar la voz sintetizada](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) y [Referencia de Lenguaje de marcado de síntesis de voz](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
+Ambos problemas se pueden solucionar mediante el uso de SSML en lugar de texto sin formato como entrada para el sintetizador de voz. Para obtener más información sobre SSML, consulta [Usar SSML para controlar la voz sintetizada](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) y [Referencia de Lenguaje de marcado de síntesis de voz](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14)).
 
 ## <a name="other-articles-in-this-section"></a>Otros artículos de esta sección 
 
@@ -210,7 +210,7 @@ Ambos problemas pueden resolverse mediante el uso de SSML instead of plain text 
 | [Especificar el idioma del reconocedor de voz](specify-the-speech-recognizer-language.md) | Obtén información sobre cómo seleccionar un idioma instalado para usarlo en el reconocimiento de voz. |
 | [Definir restricciones de reconocimiento personalizadas](define-custom-recognition-constraints.md) | Aprende a definir y usar restricciones personalizadas para el reconocimiento de voz. |
 | [Habilitar el dictado continuo](enable-continuous-dictation.md) |Obtén información sobre cómo capturar y reconocer la entrada de voz de dictado continuo de larga duración. |
-| [Administrar los problemas con la entrada de audio](manage-issues-with-audio-input.md) | Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio. |
+| [Administrar problemas con la entrada de audio](manage-issues-with-audio-input.md) | Aprende a administrar los problemas con la precisión del reconocimiento de voz causados por la calidad de la entrada de audio. |
 | [Establecer tiempos de espera de reconocimiento de voz](set-speech-recognition-timeouts.md) | Establece durante cuánto tiempo un reconocedor de voz pasa por alto el silencio o los sonidos irreconocibles (balbuceo) y continúa escuchando la entrada de voz. |
 
 ## <a name="related-articles"></a>Artículos relacionados
@@ -220,7 +220,7 @@ Ambos problemas pueden resolverse mediante el uso de SSML instead of plain text 
 
  **Ejemplos**
 
-* [Reconocimiento de voz y ejemplo de síntesis de voz](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Ejemplo de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  
 
  

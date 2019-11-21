@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: afcb94ca0e6692d5dfede526f1368b71920ab771
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 57236b6780a7afe996fb1e68ac474d8d8077ca69
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318200"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255901"
 ---
 # <a name="composition-effects"></a>Efectos de composición
 
@@ -27,11 +27,11 @@ Los efectos también se pueden aplicar a objetos UIElements de XAML mediante un 
 
 ## <a name="effect-features"></a>Características de los efectos
 
-- [Biblioteca de efecto](./composition-effects.md#effect-library)
-- [Encadenamiento de efectos](./composition-effects.md#chaining-effects)
+- [Biblioteca de efectos](./composition-effects.md#effect-library)
+- [Encadenar efectos](./composition-effects.md#chaining-effects)
 - [Compatibilidad con animaciones](./composition-effects.md#animation-support)
-- [Vs constantes. Propiedades de los efectos animados](./composition-effects.md#constant-vs-animated-effect-properties)
-- [Varias instancias de efecto con propiedades independientes](./composition-effects.md#multiple-effect-instances-with-independent-properties)
+- [Propiedades de los efectos constantes y animaciones](./composition-effects.md#constant-vs-animated-effect-properties)
+- [Varias instancias de efectos con propiedades independientes](./composition-effects.md#multiple-effect-instances-with-independent-properties)
 
 ### <a name="effect-library"></a>Biblioteca de efectos
 
@@ -39,12 +39,12 @@ La composición admite actualmente los siguientes efectos:
 
 | Efecto               | Descripción                                                                                                                                                                                                                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Transformación afín 2D  | Aplica una matriz de transformación afín 2D a una imagen. Este efecto se usa para animar la máscara alfa en las [muestras](https://go.microsoft.com/fwlink/?LinkId=785341) de efectos.       |
-| Compuesta aritmética | Combina dos imágenes mediante una ecuación flexible. La compuesta aritmética se usa para crear un efecto de encadenado en las [muestras](https://go.microsoft.com/fwlink/?LinkId=785341). |
+| Transformación afín 2D  | Aplica una matriz de transformación afín 2D a una imagen. Este efecto se usa para animar la máscara alfa en las [muestras](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/BasicCompositonEffects) de efectos.       |
+| Compuesta aritmética | Combina dos imágenes mediante una ecuación flexible. La compuesta aritmética se usa para crear un efecto de encadenado en las [muestras](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/BasicCompositonEffects). |
 | Efecto de fusión         | Crea un efecto de fusión que combina dos imágenes. La composición proporciona 21 de los 26 [modos de fusión](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) que se admiten en Win2D.        |
 | Fuente de color         | Genera una imagen con un color sólido.                                                                                                                                                                               |
 | Compuesta            | Combina dos imágenes. La composición proporciona los 13 [modos compuestos](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm) que se admiten en Win2D.                                              |
-| Compare             | Aumenta o disminuye el contraste de una imagen.                                                                                                                                                                           |
+| Contraste             | Aumenta o disminuye el contraste de una imagen.                                                                                                                                                                           |
 | Exposure             | Aumenta o disminuye la exposición de una imagen.                                                                                                                                                                           |
 | Escala de grises            | Convierte una imagen a gris monocromático.                                                                                                                                                                                   |
 | Transferencia gama       | Modifica los colores de una imagen mediante la aplicación de una función de transferencia gama por canal.                                                                                                                                           |
@@ -54,7 +54,7 @@ La composición admite actualmente los siguientes efectos:
 | Sepia                | Convierte una imagen a tonos sepia.                                                                                                                                                                                          |
 | Temperatura y tono | Ajusta la temperatura y/o el tono de una imagen.                                                                                                                                                                           |
 
-Consulta el espacio de nombres [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) de Win2D para obtener información más detallada. No se admite en la composición de los efectos se indican como \[NoComposition\].
+Consulta el espacio de nombres [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) de Win2D para obtener información más detallada. Los efectos no admitidos en la composición se indican como \[\]Composition.
 
 ### <a name="chaining-effects"></a>Encadenamiento de efectos
 
@@ -123,11 +123,11 @@ Inicia la animación en la propiedad de saturación del efecto como este:
 catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimation);
 ```
 
-Consulta la [Muestra Desaturación - Animación](https://go.microsoft.com/fwlink/?LinkId=785342) para las propiedades de efectos animados con fotogramas clave y la [muestra AlphaMask](https://go.microsoft.com/fwlink/?LinkId=785343) para el uso de efectos y expresiones.
+Consulta la [Muestra Desaturación - Animación](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/BasicCompositonEffects/Desaturation - Animation) para las propiedades de efectos animados con fotogramas clave y la [muestra AlphaMask](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/BasicCompositonEffects/AlphaMask) para el uso de efectos y expresiones.
 
 ### <a name="multiple-effect-instances-with-independent-properties"></a>Varias instancias de efecto con propiedades independientes
 
-Al especificar que un parámetro debe ser dinámico durante la compilación del efecto, el parámetro se puede cambiar para cada instancia del efecto. Esto permite que dos objetos visuales usen el mismo efecto, pero se representen con propiedades de efecto diferentes. Consulta la [muestra](https://go.microsoft.com/fwlink/?LinkId=785344) ColorSource and Blend para obtener más información.
+Al especificar que un parámetro debe ser dinámico durante la compilación del efecto, el parámetro se puede cambiar para cada instancia del efecto. Esto permite que dos objetos visuales usen el mismo efecto, pero se representen con propiedades de efecto diferentes. Consulta la [muestra](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/BasicCompositonEffects/ColorSource and Blend) ColorSource and Blend para obtener más información.
 
 ## <a name="getting-started-with-composition-effects"></a>Introducción a los efectos de composición
 
@@ -135,16 +135,16 @@ Este tutorial de inicio rápido muestra cómo usar algunas de las funciones bás
 
 - [Instalación de Visual Studio](./composition-effects.md#installing-visual-studio)
 - [Crear un nuevo proyecto](./composition-effects.md#creating-a-new-project)
-- [Instalar Win2D](./composition-effects.md#installing-win2d)
-- [Configuración de los conceptos básicos de composición](./composition-effects.md#setting-your-composition-basics)
-- [Crear un pincel CompositionSurface](./composition-effects.md#creating-a-compositionsurface-brush)
+- [Instalación de Win2D](./composition-effects.md#installing-win2d)
+- [Configuración de los aspectos básicos de la composición](./composition-effects.md#setting-your-composition-basics)
+- [Creación de un pincel CompositionSurface](./composition-effects.md#creating-a-compositionsurface-brush)
 - [Crear, compilar y aplicar efectos](./composition-effects.md#creating-compiling-and-applying-effects)
 
 ### <a name="installing-visual-studio"></a>Instalación de Visual Studio
 
 - Si no tienes una versión compatible de Visual Studio instalada, dirígete a la página de descargas de Visual Studio [aquí](https://visualstudio.microsoft.com/downloads/download-visual-studio-vs).
 
-### <a name="creating-a-new-project"></a>Crear un nuevo proyecto
+### <a name="creating-a-new-project"></a>Creación de un nuevo proyecto
 
 - Ve a Archivo -> Nuevo -> Proyecto...
 - Selecciona "Visual C#".
@@ -168,7 +168,7 @@ En los siguientes pasos usaremos las API de composición para aplicar un efecto 
 ![Imagen de origen](images/composition-cat-source.png)
 ### <a name="setting-your-composition-basics"></a>Configuración de los conceptos básicos de la composición
 
-Consulta la [muestra del árbol de objetos visuales de composición](https://go.microsoft.com/fwlink/?LinkId=785345) en GitHub para ver un ejemplo de cómo configurar el compositor Windows.UI.Composition, del elemento raíz ContainerVisual y de cómo asociarlo a la ventana principal.
+Consulta la [muestra del árbol de objetos visuales de composición](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/CompositionImageSample) en GitHub para ver un ejemplo de cómo configurar el compositor Windows.UI.Composition, del elemento raíz ContainerVisual y de cómo asociarlo a la ventana principal.
 
 ```cs
 _compositor = new Compositor();
@@ -237,12 +237,12 @@ LoadImage(surfaceBrush);
 
 ## <a name="more-information"></a>Más información
 
-- [Microsoft – GitHub de composición](https://github.com/microsoft/WindowsCompositionSamples)
-- [**Windows.UI.Composition**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
+- [Microsoft: composición de GitHub](https://github.com/microsoft/WindowsCompositionSamples)
+- [**Windows. UI. Composition**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
 - [Equipo de composición de Windows en Twitter](https://twitter.com/wincomposition)
-- [Información general de composición](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
-- [Conceptos básicos del árbol Visual](composition-visual-tree.md)
+- [Información general sobre composición](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
+- [Aspectos básicos del árbol visual](composition-visual-tree.md)
 - [Pinceles de composición](composition-brushes.md)
 - [XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)
 - [Información general sobre animaciones](composition-animation.md)
-- [Interoperación nativo de DirectX y Direct2D de composición con BeginDraw y EndDraw](composition-native-interop.md)
+- [Interoperación nativa de DirectX y Direct2D de composición con BeginDraw y EndDraw](composition-native-interop.md)

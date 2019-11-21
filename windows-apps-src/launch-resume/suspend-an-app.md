@@ -11,18 +11,18 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 6d1b97e76dc1bf15bded6f44c38a67f40babf7b6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f912e6212346a4019d8421c542a81eb2318dc5d9
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370534"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260407"
 ---
 # <a name="handle-app-suspend"></a>Controlar la suspensión de aplicaciones
 
 **API importantes**
 
-- [**La suspensión**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending)
+- [**Suspender**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending)
 
 Aprende a guardar datos importantes de la aplicación cuando el sistema la suspende. El ejemplo registra un controlador de eventos para el evento [**Suspensión**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) y guarda una cadena en un archivo.
 
@@ -129,7 +129,7 @@ void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
 
 Conviene que liberes los recursos exclusivos y los identificadores de archivos para que otras aplicaciones puedan tener acceso a ellos cuando la aplicación esté suspendida. Algunos ejemplos de recursos exclusivos son las cámaras, los dispositivos de E/S, los dispositivos externos y los recursos de red. Liberar de forma explícita recursos exclusivos e identificadores de archivos sirve para que otras aplicaciones puedan acceder a ellos cuando la aplicación esté suspendida. Cuando la aplicación se reanude, deberá volver a adquirir sus recursos exclusivos y sus identificadores de archivos.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El sistema suspende la aplicación cuando el usuario cambia a otra aplicación, al escritorio o a la pantalla Inicio. El sistema reanuda la aplicación cuando el usuario vuelve a cambiar a ella. Cuando el sistema reanuda la aplicación, el contenido de las variables y las estructuras de datos es el mismo que antes de que el sistema la suspendiera. El sistema restaura la aplicación en el punto exacto en el que estaba, para que parezca al usuario que se ejecutaba en segundo plano
 
@@ -137,21 +137,21 @@ El sistema intenta mantener la aplicación y sus datos en la memoria mientras es
 
 El sistema no notifica a una aplicación cuando se cierra, con lo cual la aplicación deberá guardar sus datos de aplicación y liberar los recursos exclusivos y los identificadores de archivos cuando se suspenda y restaurarlos cuando vuelva a activarse.
 
-Si realizas una llamada asincrónica en el controlador, el control vuelve inmediatamente de esa llamada asincrónica. Eso significa que, a continuación, la ejecución puede volver del controlador de eventos y la aplicación se moverá al siguiente estado aunque aún no haya completado la llamada asincrónica. Usa el método [**GetDeferral**](https://aka.ms/Kt66iv) en el objeto [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) que se pasa al controlador de eventos para retrasar la suspensión hasta después de llamar al método [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) en el objeto [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) devuelto.
+Si realizas una llamada asincrónica en el controlador, el control vuelve inmediatamente de esa llamada asincrónica. Eso significa que, a continuación, la ejecución puede volver del controlador de eventos y la aplicación se moverá al siguiente estado aunque aún no haya completado la llamada asincrónica. Usa el método [**GetDeferral**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel?redirectedfrom=MSDN) en el objeto [**EnteredBackgroundEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel?redirectedfrom=MSDN) que se pasa al controlador de eventos para retrasar la suspensión hasta después de llamar al método [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) en el objeto [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) devuelto.
 
 Un aplazamiento no aumenta la cantidad que tienes que ejecutar el código antes de que finalice la aplicación. Solo retrasa su terminación hasta que se llama al método *Complete* del aplazamiento o hasta que pasa la fecha límite, *lo que ocurra primero*. Para ampliar el tiempo en el estado de suspensión, usa [**ExtendedExecutionSession**](run-minimized-with-extended-execution.md)
 
 > [!NOTE]
-> Para mejorar la capacidad de respuesta del sistema en Windows 8.1, las aplicaciones tienen acceso de baja prioridad a los recursos después de que se suspenden. Para admitir esta nueva prioridad, se ha ampliado el tiempo de espera de la operación de suspensión para que la aplicación tenga el equivalente al tiempo de espera de 5 segundos para la prioridad normal en Windows o entre 1 y 10 segundos en Windows Phone. No puedes ampliar ni modificar este período de tiempo de espera.
+> Para mejorar la capacidad de respuesta del sistema en Windows 8.1, a las aplicaciones se les concede un acceso de prioridad baja a los recursos una vez suspendidos. Para admitir esta nueva prioridad, se ha ampliado el tiempo de espera de la operación de suspensión para que la aplicación tenga el equivalente al tiempo de espera de 5 segundos para la prioridad normal en Windows o entre 1 y 10 segundos en Windows Phone. No puedes ampliar ni modificar este período de tiempo de espera.
 
-**Una nota sobre la depuración con Visual Studio:** Visual Studio impide que Windows la suspensión de una aplicación que está asociada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
+**Una nota sobre la depuración con Visual Studio:** Visual Studio impide que Windows suspenda una aplicación que esté conectada al depurador. Esto permite que el usuario vea la interfaz de usuario de depuración de Visual Studio mientras se ejecuta la aplicación. Mientras depuras una aplicación, puedes enviarle un evento de suspensión mediante Visual Studio. Asegúrate de que se muestra la barra de herramientas **Ubicación de depuración** y luego haz clic en el botón **Suspender**.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Ciclo de vida de la aplicación](app-lifecycle.md)
 * [Controlar la activación de aplicaciones](activate-an-app.md)
 * [Controlar la reanudación de aplicaciones](resume-an-app.md)
-* [Directrices de experiencia de usuario para iniciar, suspender y reanudar](https://docs.microsoft.com/windows/uwp/launch-resume/index)
+* [Directrices de la experiencia del usuario para el lanzamiento, la suspensión y la reanudación](https://docs.microsoft.com/windows/uwp/launch-resume/index)
 * [Ejecución ampliada](run-minimized-with-extended-execution.md)
 
  

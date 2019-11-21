@@ -6,12 +6,12 @@ keywords: contactos, selección seleccionar un solo contacto seleccionar varios 
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: facad25446dca286ac150e59d0418c2dd8bfc896
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 634b72032b37fe4a6bc4ea44a2e4fe27abede47d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361268"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255072"
 ---
 # <a name="select-contacts"></a>Seleccionar contactos
 
@@ -230,4 +230,4 @@ public class ContactItemAdapter
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Con esto deberías tener nociones básicas sobre cómo usar el selector de contactos para recuperar información de contacto. Descarga las [muestras de aplicaciones universales de Windows](https://go.microsoft.com/fwlink/p/?linkid=619979) de GitHub para ver más ejemplos de cómo usar contactos y el selector de contactos.
+Con esto deberías tener nociones básicas sobre cómo usar el selector de contactos para recuperar información de contacto. Descarga las [muestras de aplicaciones universales de Windows](https://github.com/Microsoft/Windows-universal-samples) de GitHub para ver más ejemplos de cómo usar contactos y el selector de contactos.

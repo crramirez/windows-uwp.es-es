@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e02d74df59bae4dd4bdaa909c97866da754db93
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 1af36b43e02c9ee08373098f57ba29c10badb6c8
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339926"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259070"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>Windows Phone Silverlight a las asignaciones de API de UWP
 
@@ -22,10 +22,10 @@ La tabla de asignación le ayudará al trabajar en un proyecto de UWP y volverá
 
 **Cómo usar la tabla:  ** En primer lugar, busque el nombre de la clase que está usando. Las clases se muestran siempre que la asignación es más complicada que simplemente cambiar el nombre del espacio de nombres. Si la clase no aparece en la lista, significa que la asignación es simplemente un cambio de espacio de nombres. Por lo tanto, busca el nombre del espacio de nombres de la clase y encontrarás el nombre del espacio de nombres de UWP equivalente. La clase estará en ese espacio de nombres. Si el espacio de nombres no figura en la lista, su nombre no ha cambiado.
 
-**Tenga en cuenta**  Windows 10 admite mucho más .NET Framework que una aplicación de Windows Phone Store. Por ejemplo, Windows 10 tiene varios espacios de nombres System. ServiceModel. \*, así como System.Net, System .net. NetworkInformation y System .net. Sockets.
+**Tenga en cuenta**  Windows 10 admite mucho más de la .NET Framework que una aplicación de Windows Phone Store. Por ejemplo, Windows 10 tiene varios System. ServiceModel.\* espacios de nombres, así como System.Net, System .net. NetworkInformation y System .net. Sockets.
 Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que es una tecnología de compilación de antemano que convierte el MSIL en código máquina que se puede ejecutar de forma nativa. Las aplicaciones de .NET Native se inician más rápido, usan menos memoria y usan menos batería que sus equivalentes MSIL.
 
-| Windows Phone Silverlight | Windows en tiempo de ejecución |
+| Windows Phone Silverlight | Windows Runtime |
 | ------------------------- | --------------- |
 | Publicidad | |
 | Clase **Microsoft.Advertising.Mobile.UI.AdControl** | Clase [AdControl](https://docs.microsoft.com/windows/uwp/monetize/display-ads-using-the-microsoft-advertising-libraries) |
@@ -52,11 +52,11 @@ Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que e
 | (SWT = **System.Windows.Threading**) <br/> Clase **SWT.DispatcherTimer** | Clase [**DispatcherTimer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DispatcherTimer) |
 | Blend para Visual Studio | |
 | (MEDC = **Microsoft.Expression.Drawing.Core**) <br/> Clase **MEDC.GeometryHelper** | No hay equivalente directo. |
-| Espacio de nombres **Microsoft.Expression.Interactivity** | Espacio de nombres[Microsoft.Xaml.Interactivity](https://go.microsoft.com/fwlink/p/?LinkId=328776) |
-| Espacio de nombres **Microsoft.Expression.Interactivity.Core** | Espacio de nombres [Microsoft.Xaml.Interactions.Core](https://go.microsoft.com/fwlink/p/?LinkId=328773) |
+| Espacio de nombres **Microsoft.Expression.Interactivity** | Espacio de nombres[Microsoft.Xaml.Interactivity](https://msdn.microsoft.com/library/windows/apps/microsoft.xaml.interactivity.aspx) |
+| Espacio de nombres **Microsoft.Expression.Interactivity.Core** | Espacio de nombres [Microsoft.Xaml.Interactions.Core](https://msdn.microsoft.com/library/windows/apps/microsoft.xaml.interactions.core.aspx) |
 | (MEIC = **Microsoft.Expression.Interactivity.Core**) <br/> Clase **MEIC.ExtendedVisualStateManager** | No hay equivalente directo. |
 | Espacio de nombres **Microsoft.Expression.Interactivity.Input** | No hay equivalente directo. |
-| Espacio de nombres **Microsoft.Expression.Interactivity.Media** | Espacio de nombres [Microsoft.Xaml.Interactions.Media](https://go.microsoft.com/fwlink/p/?LinkId=328775) |
+| Espacio de nombres **Microsoft.Expression.Interactivity.Media** | Espacio de nombres [Microsoft.Xaml.Interactions.Media](https://msdn.microsoft.com/library/windows/apps/microsoft.xaml.interactions.media.aspx) |
 | Espacio de nombres **Microsoft.Expression.Shapes** | No hay equivalente directo. |
 | (MI = **Microsoft.Internal**) <br/> Interfaz **MI.IManagedFrameworkInternalHelper** | No hay equivalente directo. |
 | Datos de contactos y calendarios | |
@@ -121,7 +121,7 @@ Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que e
 | (ST = **System.Threading**) <br/> Propiedad **ST.Thread.CurrentCulture** | (SG = **System.Globalization**) <br/> Propiedad **S.CultureInfo.CurrentCulture** |
 | (ST = **System.Threading**) <br/> Propiedad **ST.Thread.CurrentUICulture** | (SG = **System.Globalization**) <br/> Propiedad **S.CultureInfo.CurrentUICulture** |
 | Elementos gráficos y animación | |
-| Espacios **de nombres Microsoft. XNA. Framework. \*** , biblioteca de [clases de XNA framework](https://go.microsoft.com/fwlink/p/?LinkId=263769), [biblioteca de clases de canalización de contenido](https://go.microsoft.com/fwlink/p/?LinkId=263770) | No hay equivalente directo. En general, se usa [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/directx) con C++. Consulta [Desarrollo de juegos](https://docs.microsoft.com/previous-versions/windows/apps/hh452744(v=win.10)) e [Interoperabilidad de DirectX y XAML](https://docs.microsoft.com/previous-versions/windows/apps/hh825871(v=win.10)). |
+| **Microsoft. XNA. Framework.\*** (espacios de nombres), [biblioteca de clases de XNA framework](https://msdn.microsoft.com/library/bb203940.aspx), [biblioteca de clases de canalización de contenido](https://msdn.microsoft.com/library/bb195587(v=XNAGameStudio.40).aspx) | No hay equivalente directo. En general, se usa [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/directx) con C++. Consulta [Desarrollo de juegos](https://docs.microsoft.com/previous-versions/windows/apps/hh452744(v=win.10)) e [Interoperabilidad de DirectX y XAML](https://docs.microsoft.com/previous-versions/windows/apps/hh825871(v=win.10)). |
 | Clase **Microsoft.Xna.Framework.Audio.Microphone** | [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) (clase) |
 | Clase **Microsoft.Xna.Framework.Audio.SoundEffect** | [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) (clase) |
 | Espacio de nombres **Microsoft.Xna.Framework.GamerServices** | (WPS = **Windows.Phone.System**) <br/> [**Wps. Espacio de nombres UserProfile. GameServices. Core**](https://docs.microsoft.com/uwp/api/Windows.Phone.System.UserProfile.GameServices.Core) |
@@ -154,7 +154,7 @@ Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que e
 | Clases **Microsoft.Phone.Tasks.SaveContactTask**, **SaveEmailAddressTask**, **SavePhoneNumberTask** | Clase [**StoredContact**](https://docs.microsoft.com/uwp/api/Windows.Phone.PersonalInformation.StoredContact) (solo Windows Phone) | 
 | Clase **Microsoft.Phone.Tasks.SaveRingtoneTask** | No hay equivalente directo. |
 | Clases **Microsoft.Phone.Tasks.ShareLinkTask**, **ShareMediaTask**, **ShareStatusTask** | Clase de [**paquete de paquetes**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) |
-| Location | |
+| Ubicación | |
 | Espacio de nombres **System.Device.Location** | Espacio de nombres [**Windows. Devices. geolocation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation) |
 | Clase **System.Device.GeoCoordinateWatcher** | [**Geolocator**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator) (clase) |
 | Maps | |
@@ -189,7 +189,7 @@ Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que e
 | Clase **System.Net.Sockets.Socket** | Todavía se admite, pero usa Dispose() en lugar de Close(). Alternativamente, migra a la clase [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket). |
 | Clase **System.Net.Sockets.SocketException** | Se sigue admitiendo, pero usa la propiedad SocketErrorCode en lugar de ErrorCode. |
 | Clases **System.Net.Sockets.UdpAnySourceMulticastClient**, **UdpSingleSourceMulticastClient** | [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket) (clase) |
-| Clase **System.Net.UploadProgressChangedEventArgs** y clases similares relacionadas con **System.Net.WebClient** | Clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
+| Clase **System.Net.UploadProgressChangedEventArgs** y otras clases similares relacionadas con **System.Net.WebClient** | Clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
 | Clase **System.Net.WebClient** | Clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
 | Clase **System.Net.WebRequest** | Se admite parcialmente (un conjunto de propiedades diferente), pero la alternativa recomendada y vanguardista es la clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Estas API usan [System.Net.Http.HttpRequestMessage](https://docs.microsoft.com/previous-versions/visualstudio/hh159020(v=vs.118)) para representar una solicitud HTTP. |
 | Clase **System.Net.WebResponse** | Todavía se admite, pero usa Dispose() en lugar de Close(). No obstante, la alternativa recomendada y vanguardista es la clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Estas API usan [System.Net.Http.HttpResponseMessage](https://docs.microsoft.com/dotnet/api/system.net.http.httpresponsemessage) para representar una respuesta HTTP. |
@@ -242,7 +242,7 @@ Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que e
 | Clase **System.IO.Stream** | Se sigue admitiendo, pero usa ReadAsync() y WriteAsync() en lugar de BeginRead()/EndRead() y BeginWrite()/EndWrite(). |
 | Cartera | |
 | Espacio de nombres **Microsoft.Phone.Wallet** | Espacio de nombres [**Windows. ApplicationModel. wallet**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Wallet) |
-| xml | |
+| Xml | |
 | (SX = **System.Xml**) | Método **SX.XmlConvert.ToDateTime** |
 | (SX = **System.Xml**) | Método **SX.XmlConvert.ToDateTimeOffset** |
 
