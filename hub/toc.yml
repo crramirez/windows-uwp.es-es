@@ -1,7 +1,7 @@
 - name: Compilación de aplicaciones para Windows
   items:
     - name: Introducción
-      href: apps/index.md
+      href: apps/index.yml
     - name: Compilación de aplicaciones de escritorio
       items:
         - name: Introducción
