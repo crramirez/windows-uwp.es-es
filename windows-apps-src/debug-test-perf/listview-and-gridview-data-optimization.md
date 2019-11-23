@@ -16,7 +16,7 @@ ms.locfileid: "71339612"
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualización de datos de ListView y GridView
 
 
-**Nota**  Para obtener más detalles, consulte la sesión de Congreso//Build/ [aumentar drásticamente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos en GridView y ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
+**Nota**  para obtener más detalles, consulte la sesión de Congreso//Build/ [aumentar drásticamente el rendimiento cuando los usuarios interactúan con grandes cantidades de datos en GridView y ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
 Mejora el rendimiento y el tiempo de inicio de las clases [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) y [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) mediante la virtualización de datos. Para la virtualización de la interfaz de usuario, reducción de elementos y la actualización progresiva de elementos, consulta el tema [Optimización de ListView y GridView UI](optimize-gridview-and-listview.md).
 
@@ -27,7 +27,7 @@ Si dispones de un conjunto de datos que es tan grande que no se puede o no se de
 -   El origen del conjunto de datos (disco local, red o nube)
 -   El consumo de memoria total de la aplicación
 
-**Tenga**en cuenta   Be tenga en cuenta que una característica está habilitada de forma predeterminada para ListView y GridView que muestra los objetos visuales de marcador de posición temporales, mientras que el usuario se desplaza rápidamente. A medida que se cargan los datos, estos elementos visuales de marcador de posición se reemplazan por la plantilla de elemento. Para desactivar la característica, puedes establecer [**ListViewBase.ShowsScrollingPlaceholders**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) en false, aunque si lo haces, te recomendamos que uses el atributo x:Phase para representar de manera progresiva los elementos de la plantilla de elemento. Consulta [Actualizar los elementos ListView y GridView de forma progresiva](optimize-gridview-and-listview.md#update-items-incrementally).
+**Tenga** en cuenta  tenga en cuenta que una característica está habilitada de forma predeterminada para ListView y GridView, que muestra los objetos visuales de marcador de posición temporales, mientras que el usuario se desplaza o se desplaza rápidamente. A medida que se cargan los datos, estos elementos visuales de marcador de posición se reemplazan por la plantilla de elemento. Para desactivar la característica, puedes establecer [**ListViewBase.ShowsScrollingPlaceholders**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) en false, aunque si lo haces, te recomendamos que uses el atributo x:Phase para representar de manera progresiva los elementos de la plantilla de elemento. Consulta [Actualizar los elementos ListView y GridView de forma progresiva](optimize-gridview-and-listview.md#update-items-incrementally).
 
 Aquí encontrarás más información acerca de las técnicas de virtualización de datos incremental y de acceso aleatorio.
 
@@ -36,7 +36,7 @@ Aquí encontrarás más información acerca de las técnicas de virtualización 
 La virtualización de datos incremental carga los datos en secuencia. Un [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) que usa la virtualización de datos incremental puede usarse para ver una colección de un millón de elementos, pero solo 50 elementos se cargan inicialmente. A medida que el usuario realiza un movimiento panorámico/desplazamiento, se cargan los 50 siguientes. A medida que se cargan los elementos, se reduce el tamaño del control de la barra de desplazamiento. Para este tipo de virtualización de datos, debes escribir una clase de origen de datos que implemente estas interfaces.
 
 -   [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist)
--   [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/VB) o [IObservableVector @ no__t-5T @ no__t-6](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
+-   [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/VB) o [**IObservableVector&lt;t&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
 -   [**ISupportIncrementalLoading**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ISupportIncrementalLoading)
 
 Un origen de datos como el siguiente, es una lista en memoria que se puede extender continuamente. El control de elementos solicitará elementos con el indexador [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist) estándar y las propiedades de recuento. El recuento debe representar el número de elementos localmente, no el tamaño real del conjunto de datos.
@@ -48,7 +48,7 @@ Cuando el control de elementos se acerque al final de los datos existentes, llam
 La virtualización de datos de acceso aleatorio permite cargar desde un punto arbitrario del conjunto de datos. Un [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) que usa la virtualización de datos de acceso aleatorio, usado para ver una colección de un millón de elementos, puede cargar los elementos del 100 000 al 100 050. Si el usuario se mueve al principio de la lista, el control carga los elementos del 1 al 50. En cualquier momento, el control de la barra de desplazamiento indica que **ListView** contiene un millón de elementos. El control de posición de la barra de desplazamiento se ubica en relación con el lugar donde se encuentran los elementos visibles en el conjunto de datos completo de la colección. Este tipo de virtualización de datos puede reducir significativamente los requisitos de memoria y los tiempos de carga de la colección. Para habilitarla, debes escribir una clase de origen de datos que recupere los datos a petición y administre una memoria caché local e implemente estas interfaces.
 
 -   [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist)
--   [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/VB) o [IObservableVector @ no__t-5T @ no__t-6](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
+-   [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/VB) o [**IObservableVector&lt;t&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/CX)
 -   (Opcional) [**IItemsRangeInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IItemsRangeInfo)
 -   (Opcional) [**ISelectionInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ISelectionInfo)
 

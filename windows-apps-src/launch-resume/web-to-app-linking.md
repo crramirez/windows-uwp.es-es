@@ -46,7 +46,7 @@ Por ejemplo, si la dirección del sitio web es "msn.com", realizarías la siguie
 </Applications>
 ```
 
-La declaración anterior registra la aplicación para que controle los vínculos del host especificado. Si el sitio web tiene varias direcciones (por ejemplo: m.example.com, www\.example.com y example.com), agregue una entrada `<uap3:Host Name=... />` independiente en el `<uap3:AppUriHandler>` para cada dirección.
+La declaración anterior registra la aplicación para que controle los vínculos del host especificado. Si el sitio web tiene varias direcciones (por ejemplo: m.example.com, www\.example.com y example.com), agregue una entrada de `<uap3:Host Name=... />` independiente dentro del `<uap3:AppUriHandler>` de cada dirección.
 
 ## <a name="associate-your-app-and-website-with-a-json-file"></a>Asociar la aplicación y el sitio web con un archivo JSON
 
@@ -76,7 +76,7 @@ El ejemplo de archivo JSON anterior muestra el uso de caracteres comodín. Los c
 | **\***       | Representa cualquier subcadena      |
 | **?**        | Representa un carácter único |
 
-Por ejemplo, dado `"excludePaths" : [ "/news/*", "/blog/*" ]` en el ejemplo anterior, la aplicación admitirá todas las rutas de acceso que empiecen por la dirección del sitio web (por ejemplo, msn.com), **excepto** las que se encontraban en `/news/` y `/blog/`. se admitirá **MSN.com/Weather.html** , pero no **MSN.com/news/TopNews.html**.
+Por ejemplo, dado `"excludePaths" : [ "/news/*", "/blog/*" ]` en el ejemplo anterior, la aplicación admitirá todas las rutas de acceso que comienzan por la dirección del sitio web (por ejemplo, msn.com), **excepto** las de `/news/` y `/blog/`. se admitirá **MSN.com/Weather.html** , pero no **MSN.com/news/TopNews.html**.
 
 ### <a name="multiple-apps"></a>Varias aplicaciones
 
@@ -96,7 +96,7 @@ Si tienes dos aplicaciones que quieres vincular a tu sitio web, lista ambos nomb
 
 Para proporcionar la mejor experiencia para los usuarios, usa excluir rutas para asegurarte de que el contenido solo en línea se excluye de las rutas de acceso admitidas en el archivo JSON.
 
-Las rutas excluidas se comprueban en primer lugar y, si hay una coincidencia, se abrirá la página correspondiente con el navegador en lugar de con la aplicación designada. En el ejemplo anterior, '/News/\* ' incluye todas las páginas bajo esa ruta de acceso, mientras que '/News @ no__t-1 ' (ninguna barra diagonal hacia delante) incluye las rutas de acceso en ' News @ no__t-2 ' como ' NewsLocal/', ' newsinternational/', etc.
+Las rutas excluidas se comprueban en primer lugar y, si hay una coincidencia, se abrirá la página correspondiente con el navegador en lugar de con la aplicación designada. En el ejemplo anterior, '/News/\*' incluye todas las páginas bajo esa ruta de acceso mientras que '/News\*' (no hay ninguna barra diagonal hacia delante) incluye las rutas de acceso en ' News\*', como ' NewsLocal/', ' newsinternational/', etc.
 
 ## <a name="handle-links-on-activation-to-link-to-content"></a>Administrar vínculos en la activación para vincular con contenido
 
@@ -150,19 +150,19 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 **Importante** Asegúrate de sustituir la lógica final `if (rootFrame.Content == null)` por `rootFrame.Navigate(deepLinkPageType, e);` como se muestra en el ejemplo anterior.
 
-## <a name="test-it-out-local-validation-tool"></a>Pruébelo: Herramienta de validación local
+## <a name="test-it-out-local-validation-tool"></a>Prueba de la aplicación: Herramienta de validación local
 
 Puedes probar la configuración de la aplicación y el sitio web mediante la ejecución de la herramienta de comprobador de registro de host de la aplicación, que está disponible en:
 
-% WINDIR% \\system32 @ no__t-1**AppHostRegistrationVerifier. exe**
+% WINDIR%\\system32\\**AppHostRegistrationVerifier. exe**
 
 Prueba la configuración de la aplicación y el sitio web mediante la ejecución de esta herramienta con los siguientes parámetros:
 
 **AppHostRegistrationVerifier. exe** *hostname packagefamilyname FilePath*
 
--   Nombre de host: Su sitio web (por ejemplo, microsoft.com)
--   Nombre de familia de paquete (PFN): PFN de la aplicación
--   Ruta de acceso de archivo: El archivo JSON para la validación local (por ejemplo, C: \\SomeFolder @ no__t-1Windows-App-web-link)
+-   Hostname: su sitio web (por ejemplo, microsoft.com)
+-   Nombre de familia de paquete (PFN): El PFN de la aplicación
+-   Ruta de acceso de archivo: el archivo JSON para la validación local (por ejemplo, C:\\SomeFolder\\Windows-App-web-link)
 
 Si la herramienta no devuelve nada, la validación funcionará en ese archivo cuando se carga. Si hay un código de error, no funcionará.
 
@@ -171,9 +171,9 @@ Puedes habilitar la siguiente clave de registro para forzar la coincidencia de r
 `HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
 AppModel\SystemAppData\YourApp\AppUriHandlers`
 
-Clave `ForceValidation` valor: `1`
+KeyName: `ForceValidation` valor: `1`
 
-## <a name="test-it-web-validation"></a>Pruébelo: Validación Web
+## <a name="test-it-web-validation"></a>Prueba de la aplicación: Validación web
 
 Cierra la aplicación para comprobar que se activa al hacer clic en un vínculo. A continuación, copia la dirección de una de las rutas de acceso admitidas en tu sitio web. Por ejemplo, si la dirección del sitio web es "msn.com" y una de las rutas de acceso de soporte técnico es "ruta1", usaría `http://msn.com/path1`
 
@@ -193,7 +193,7 @@ Si quieres seguir la lógica de activación de protocolo, establece un punto de 
 - Todas las aplicaciones transferidas localmente con AppUriHandlers contarán con vínculos validados para el host en su instalación. No es necesario cargar un archivo JSON para probar la característica.
 - Esta característica funciona siempre que la aplicación sea una aplicación para UWP iniciada con [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) o una aplicación de escritorio de Windows que se inicie con [ShellExecuteEx](https://docs.microsoft.com/windows/desktop/api/shellapi/nf-shellapi-shellexecuteexa). Si la dirección URL se corresponde con un controlador de URI de aplicación registrado, se iniciará dicha aplicación en lugar del navegador.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Proyecto de ejemplo de web a aplicación](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
 [windows.protocol registration](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-protocol)

@@ -67,7 +67,7 @@ Para comprobar la distribución de Linux que está usando actualmente, escriba: 
 WSL 2 es una [nueva versión de la arquitectura](https://docs.microsoft.com/windows/wsl/wsl2-about) en WSL que cambia el modo en que Linux distribuciones interactuar con Windows, mejorando el rendimiento y agregando compatibilidad completa con llamadas al sistema.
 
 1. En PowerShell, escriba el comando: `wsl -l` para ver la lista de distribuciones de WSL que ha instalado en la máquina. Ahora debería ver Ubuntu-18,04 en esta lista.
-2. Ahora, escriba el comando: `wsl --set-version Ubuntu-18.04 2` para establecer que la instalación de Ubuntu use WSL 2.
+2. Ahora, escriba el comando: `wsl --set-version Ubuntu-18.04 2` para configurar la instalación de Ubuntu para que use WSL 2.
 3. Compruebe la versión de WSL que cada una de las distribuciones instaladas usa con: `wsl --list --verbose` (o `wsl -l -v`).
 
     ![Versión del conjunto de sistema de Windows para Linux](../images/wsl-versions.png)
@@ -80,24 +80,24 @@ WSL 2 es una [nueva versión de la arquitectura](https://docs.microsoft.com/wind
 Hay varias maneras de instalar node. js. Se recomienda el uso de un administrador de versiones a medida que las versiones cambian con mucha rapidez. Probablemente tendrá que cambiar entre varias versiones en función de las necesidades de los distintos proyectos en los que está trabajando. Node version Manager, más comúnmente denominado NVM, es la forma más habitual de instalar varias versiones de node. js. Se le guiará por los pasos necesarios para instalar NVM y usarlo para instalar node. js y node Package Manager (NPM). Hay [administradores de versiones alternativos](#alternative-version-managers) que se deben tener en cuenta, tal y como se describe en la sección siguiente.
 
 > [!IMPORTANT]
-> Siempre se recomienda quitar cualquier instalación existente de node. js o NPM del sistema operativo antes de instalar un administrador de versiones, ya que los distintos tipos de instalación pueden provocar conflictos extraños y confusos. Por ejemplo, la versión del nodo que se puede instalar con el comando `apt-get` de Ubuntu está actualmente obsoleta. Para obtener ayuda con la eliminación de instalaciones anteriores, consulte [Cómo quitar NodeJS de Ubuntu](https://askubuntu.com/questions/786015/how-to-remove-nodejs-from-ubuntu-16-04).
+> Siempre se recomienda quitar cualquier instalación existente de node. js o NPM del sistema operativo antes de instalar un administrador de versiones, ya que los distintos tipos de instalación pueden provocar conflictos extraños y confusos. Por ejemplo, la versión del nodo que se puede instalar con el comando de `apt-get` de Ubuntu está obsoleta actualmente. Para obtener ayuda con la eliminación de instalaciones anteriores, consulte [Cómo quitar NodeJS de Ubuntu](https://askubuntu.com/questions/786015/how-to-remove-nodejs-from-ubuntu-16-04).
 
 1. Abra la línea de comandos de Ubuntu 18,04.
-2. Instalar rizo (una herramienta que se usa para descargar contenido de Internet en la línea de comandos) con: `sudo apt-get install curl`
+2. Instale rizo (una herramienta que se usa para descargar contenido de Internet en la línea de comandos) con: `sudo apt-get install curl`
 3. Instale NVM con: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
 4. Para comprobar la instalación, escriba: `command -v nvm`... Esto debería devolver ' NVM ', si recibe ' comando no encontrado ' o ninguna respuesta, cierre el terminal actual, vuelva a abrirlo e inténtelo de nuevo. [Obtenga más información en el repositorio de github de NVM](https://github.com/nvm-sh/nvm).
-5. Enumerar las versiones del nodo que están instaladas actualmente (no debe ser ninguna en este momento): `nvm ls`
+5. Enumerar las versiones de node actualmente instaladas (no debe ser ninguna en este momento): `nvm ls`
 
     ![Lista de NVM que no muestra ninguna versión de nodo](../images/nvm-no-node.png)
 
 6. Instale la versión actual de node. js (para probar las mejoras de las características más recientes, pero lo más probable es que tenga problemas): `nvm install node`
 7. Instale la versión LTS estable más reciente de node. js (recomendado): `nvm install --lts`
-8. Enumerar las versiones de node instaladas: `nvm ls`... ahora debería ver las dos versiones que acaba de instalar.
+8. Enumerar qué versiones del nodo están instaladas: `nvm ls`... ahora debería ver las dos versiones que acaba de instalar.
 
     ![Lista de NVM que muestra las versiones de LTS y el nodo actual](../images/nvm-node-installed.png)
 
 9. Compruebe que está instalado node. js y la versión predeterminada actual con: `node --version`. Después, compruebe que tiene NPM, con: `npm --version` (también puede usar `which node` o `which npm` para ver la ruta de acceso que se usa para las versiones predeterminadas).
-10. Para cambiar la versión de node. js que desea usar para un proyecto, cree un nuevo directorio de proyecto `mkdir NodeTest` y escriba el directorio `cd NodeTest`, a continuación, escriba @no__t 2 para cambiar a la versión actual o `nvm use --lts` para cambiar a la versión de LTS. También puede usar el número específico para cualquier versión adicional que haya instalado, como `nvm use v8.2.1`. (Para obtener una lista de todas las versiones de node. js disponibles, use el comando: `nvm ls-remote`).
+10. Para cambiar la versión de node. js que desea usar para un proyecto, cree un nuevo directorio de proyecto `mkdir NodeTest`, escriba el directorio `cd NodeTest`, escriba `nvm use node` para cambiar a la versión actual o `nvm use --lts` para cambiar a la versión de LTS. También puede usar el número específico para cualquier versión adicional que haya instalado, como `nvm use v8.2.1`. (Para enumerar todas las versiones de node. js disponibles, use el comando: `nvm ls-remote`).
 
 > [!TIP]
 > Si usa NVM para instalar node. js y NPM, no es necesario usar el comando SUDO para instalar nuevos paquetes.
@@ -114,7 +114,7 @@ Aunque NVM es actualmente el administrador de versiones más popular para node, 
 - [FNM](https://github.com/Schniz/fnm#using-a-script) es un administrador de versiones más reciente, lo que exige que sea mucho más rápido que `nvm`. (También utiliza [Azure pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops)).
 - [Volta](https://github.com/volta-cli/volta#installing-volta) es un nuevo administrador de versiones del equipo de LinkedIn que notifica la velocidad mejorada y la compatibilidad entre plataformas.
 - [ASDF-VM](https://asdf-vm.com/#/core-manage-asdf-vm) es una única CLI para varios idiomas, como IKE GVM, NVM, rbenv & pyenv (y más) en uno solo.
-- [NVS](https://github.com/jasongin/nvs) (conmutador de versión de nodo) es una alternativa multiplataforma `nvm` con la capacidad de [integrarse con vs Code](https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md).
+- [NVS](https://github.com/jasongin/nvs) (conmutador de versión de nodo) es una alternativa `nvm` multiplataforma con la capacidad de [integrarse con vs Code](https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md).
 
 ## <a name="install-your-favorite-code-editor"></a>Instalar su editor de código favorito
 
@@ -127,7 +127,7 @@ Se recomienda usar **Visual Studio Code** con la **extensión Remote-WSL** para 
 Los editores de texto basados en terminal (VIM, Emacs y nano) también son útiles para realizar cambios rápidos desde el interior de la consola. (En[este artículo se](https://medium.com/linode-cube/emacs-nano-or-vim-choose-your-terminal-based-text-editor-wisely-8f3826c92a68) explican las diferencias y un poco más sobre cómo usar cada uno de ellos).
 
 > [!NOTE]
-> Algunos editores de GUI (Atom, Sublime Text, Eclipse) pueden tener problemas para acceder a la ubicación de red compartida de WSL (\\wsl $ \Ubuntu\home @ no__t-1 e intentarán compilar los archivos de Linux mediante herramientas de Windows, que puede que no sean los deseados. La extensión Remote-WSL en VS Code controlará esta compatibilidad.
+> Algunos editores de GUI (Atom, Sublime Text, Eclipse) pueden tener problemas para acceder a la ubicación de red compartida WSL (\\WSL $ \Ubuntu\home\) e intentarán compilar los archivos de Linux mediante herramientas de Windows, que puede que no sean los deseados. La extensión Remote-WSL en VS Code controlará esta compatibilidad.
 
 Para instalar VS Code y la extensión Remote-WSL:
 
@@ -165,11 +165,11 @@ Algunas de las extensiones adicionales que puede considerar son las siguientes:
 
 ## <a name="install-windows-terminal-optional"></a>Instalar terminal de Windows (opcional)
 
-El nuevo terminal de Windows habilita varias pestañas (Cambie rápidamente entre el símbolo del sistema, PowerShell o varias distribuciones de Linux), enlaces de teclado personalizados (cree sus propias teclas de método abreviado para abrir o cerrar pestañas, copiar y pegar, etc.), emojis ☺ y temas personalizados ( combinaciones de colores, estilos y tamaños de fuente, imagen/desenfoque/transparencia de fondo). [Más información](https://devblogs.microsoft.com/commandline/).
+El nuevo terminal de Windows habilita varias pestañas (Cambie rápidamente entre el símbolo del sistema, PowerShell o varias distribuciones de Linux), enlaces de teclado personalizados (cree sus propias teclas de método abreviado para abrir o cerrar pestañas, copiar y pegar, etc.), emojis ☺ y temas personalizados (esquemas de colores, estilos y tamaños de fuente, imagen de fondo [Más información](https://devblogs.microsoft.com/commandline/).
 
 1. Obtener [Windows terminal (versión preliminar) en el Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701): al instalar a través de la tienda, las actualizaciones se controlan automáticamente.
 
-2. Una vez instalado, abra Windows terminal y seleccione **configuración** para personalizar el terminal con el archivo `profile.json`. [Más información sobre la edición de la configuración de terminal de Windows](https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md).
+2. Una vez instalado, abra Windows terminal y seleccione **configuración** para personalizar el terminal mediante el archivo de `profile.json`. [Más información sobre la edición de la configuración de terminal de Windows](https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md).
 
     ![Configuración de terminal de Windows](../images/windows-terminal-settings.png)
 

@@ -31,13 +31,13 @@ El lenguaje XAML para Windows Runtime proporciona compatibilidad en el nivel de 
 
 Estos tipos primitivos de lenguaje XAML generalmente son los únicos casos en los que definirás un elemento de objeto que usa el prefijo **x:** en el código XAML. Todas las otras características del lenguaje XAML se suelen usar en forma de atributo, o como extensión de marcado.
 
-**Tenga en cuenta**@no__t Convención 1By, los primitivos del lenguaje para XAML y todos los demás elementos del lenguaje XAML se muestran con el prefijo "x:". Así es como suelen usarse los elementos del lenguaje XAML en el marcado en el mundo real. Esta convención se sigue en la documentación de XAML y también en la especificación XAML.
+**Nota**  por Convención, los primitivos del lenguaje para XAML y todos los demás elementos del lenguaje XAML se muestran con el prefijo "x:". Así es como suelen usarse los elementos del lenguaje XAML en el marcado en el mundo real. Esta convención se sigue en la documentación de XAML y también en la especificación XAML.
 
 ## <a name="other-xaml-primitives"></a>Otros tipos primitivos de XAML
 
 La especificación XAML 2009 indica otros tipos primitivos en el nivel de lenguaje XAML, como **x:Uri** y **x:Single**. A menos que se indique en la tabla de este tema, los otros tipos primitivos de lenguaje XAML, tal y como los definen otros vocabularios XAML o la especificación XAML 2009, no se admiten actualmente en el XAML para Windows Runtime.
 
-**Tenga en cuenta**  Dates y Times (las propiedades que usan [**DateTime**](https://docs.microsoft.com/uwp/api/Windows.Foundation.DateTime) o [**DateTimeOffset**](https://docs.microsoft.com/dotnet/api/system.datetimeoffset), [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan) o [**System. TimeSpan**](https://docs.microsoft.com/dotnet/api/system.timespan)) no se pueden establecer con un primitivo de XAML. Por lo general, estas propiedades son imposibles de establecer en XAML porque en el analizador de XAML de Windows Runtime no hay ningún comportamiento predeterminado de conversión desde cadenas para fechas y horas. Para los valores de inicialización de cualquier propiedad de fecha y hora, tendrás que usar código subyacente que se ejecute al cargarse una página o un elemento.
+**Nota**  fechas y horas (las propiedades que usan [**DateTime**](https://docs.microsoft.com/uwp/api/Windows.Foundation.DateTime) o [**DateTimeOffset**](https://docs.microsoft.com/dotnet/api/system.datetimeoffset), [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan) o [**System. TimeSpan**](https://docs.microsoft.com/dotnet/api/system.timespan)) no se pueden establecer con un primitivo de XAML. Por lo general, estas propiedades son imposibles de establecer en XAML porque en el analizador de XAML de Windows Runtime no hay ningún comportamiento predeterminado de conversión desde cadenas para fechas y horas. Para los valores de inicialización de cualquier propiedad de fecha y hora, tendrás que usar código subyacente que se ejecute al cargarse una página o un elemento.
 
 ## <a name="related-topics"></a>Temas relacionados
 

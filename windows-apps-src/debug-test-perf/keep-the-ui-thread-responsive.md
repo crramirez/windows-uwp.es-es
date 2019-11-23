@@ -22,7 +22,7 @@ La aplicación se controla mediante eventos, lo que significa que el código rea
 
 Deberás usar el subproceso de la interfaz de usuario para que realice casi todos los cambios en el subproceso de la interfaz de usuario, incluida la creación de tipos de interfaz de usuario y el acceso a sus miembros. La interfaz de usuario no se puede actualizar desde un subproceso, aunque puedes publicar un mensaje con [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para hacer que el código se ejecute allí.
 
-> **Tenga en cuenta**@no__t: 1La excepción es que hay un subproceso de representación independiente que puede aplicar cambios en la interfaz de usuario que no afectarán al modo en que se controla la entrada ni al diseño básico. Por ejemplo, muchas animaciones y transiciones que no afectan al diseño pueden ejecutarse en este subproceso de representación.
+> **Tenga en cuenta**  la única excepción es que hay un subproceso de representación independiente que puede aplicar cambios en la interfaz de usuario que no afecten al modo en que se controla la entrada o el diseño básico. Por ejemplo, muchas animaciones y transiciones que no afectan al diseño pueden ejecutarse en este subproceso de representación.
 
 ## <a name="delay-element-instantiation"></a>Retrasar la creación de instancias de elementos
 
@@ -41,7 +41,7 @@ Para ayudar a mantener la capacidad de respuesta de la aplicación, la plataform
 
 Programa los controladores de eventos para volver rápidamente. En los casos en los que se deba realizar una cantidad de trabajo no trivial, prográmalo en un subproceso en segundo plano que vuelva.
 
-Puedes programar el trabajo de manera asincrónica mediante el operador **await** en C#, el operador **Await** en Visual Basic o delegados en C++. Pero esto no garantiza que el trabajo que programes se ejecutará en un subproceso en segundo plano. Muchas de las API de la Plataforma universal de Windows (UWP) programan el trabajo en el subproceso en segundo plano automáticamente, pero si llamas al código de tu aplicación usando únicamente **await** o un delegado, ejecutarás dicho método o delegado en el subproceso de interfaz de usuario. Debes indicar de manera explícita cuándo quieres ejecutar el código de tu aplicación en un subproceso en segundo plano. En C# y Visual Basic puede hacerlo pasando código a [Task. Run](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run).
+Puedes programar el trabajo de manera asincrónica mediante el operador **await** en C#, el operador **Await** en Visual Basic o delegados en C++. Pero esto no garantiza que el trabajo que programes se ejecutará en un subproceso en segundo plano. Muchas de las API de la Plataforma universal de Windows (UWP) programan el trabajo en el subproceso en segundo plano automáticamente, pero si llamas al código de tu aplicación usando únicamente **await** o un delegado, ejecutarás dicho método o delegado en el subproceso de interfaz de usuario. Debes indicar de manera explícita cuándo quieres ejecutar el código de tu aplicación en un subproceso en segundo plano. En C# y Visual Basic puede hacerlo pasando código a [**Task. Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run).
 
 Recuerda que solo se puede tener acceso a los elementos de la interfaz de usuario desde el subproceso de interfaz de usuario. Usa el subproceso de interfaz de usuario para tener acceso a los elementos de interfaz de usuario antes de iniciar el trabajo en segundo plano, o bien usa [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) o [**CoreDispatcher.RunIdleAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runidleasync) en el subproceso en segundo plano.
 
@@ -101,7 +101,7 @@ public class AsyncExample
 
 En este ejemplo, el controlador `NextMove_Click` vuelve a **await** para mantener la capacidad de respuesta del subproceso de la interfaz de usuario. Sin embargo, la ejecución se retoma en dicho controlador después de completar `ComputeNextMove` (que se ejecuta en un subproceso en segundo plano). El código restante del controlador actualiza la interfaz de usuario con los resultados.
 
-> **Tenga en cuenta**  There's también es una API [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) y [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer) para UWP, que se puede usar para escenarios similares. Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://docs.microsoft.com/windows/uwp/threading-async/index).
+> **Tenga en cuenta**  también hay una API [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) y [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer) para UWP, que se puede usar para escenarios similares. Para obtener más información, consulta [Subprocesamiento y programación asincrónica](https://docs.microsoft.com/windows/uwp/threading-async/index).
 
 ## <a name="related-topics"></a>Temas relacionados
 

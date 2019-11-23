@@ -22,7 +22,7 @@ Conoce los comandos de movimiento y dibujo (un minilenguaje) que podrás usar pa
 
 La sintaxis de comandos de movimiento y dibujo es compatible con un convertidor de tipos interno para XAML, que analiza los comandos y genera una representación de gráficos en tiempo de ejecución. Esta representación es básicamente un conjunto acabado de vectores que están listos para su presentación. Los propios vectores no definen por completo los detalles de la presentación, sino que es necesario definir otros valores en los elementos. En cuanto al objeto [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path), necesitas valores para las propiedades [**Fill**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill) y [**Stroke**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.shape.stroke) entre otras y, a continuación, debes conectar ese objeto **Path** al árbol visual. En cambio, para el objeto [**PathIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PathIcon), debes establecer la propiedad [**Foreground**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.iconelement.foreground).
 
-Hay dos propiedades en el Windows Runtime que pueden usar una cadena que representa los comandos de movimiento y dibujo: [**Path. Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data) y [**PathIcon. Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon.data). Si especificas comandos de movimiento y dibujo para establecer una de estas propiedades, normalmente la especificarás como un valor de atributo XAML junto con otros atributos obligatorios de ese elemento. Sin entrar en más detalles, este es el aspecto que tiene:
+Hay dos propiedades en Windows Runtime que pueden usar una cadena que represente comandos de movimiento y dibujo: [**Path.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.path.data) y [**PathIcon.Data**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon.data). Si especificas comandos de movimiento y dibujo para establecer una de estas propiedades, normalmente la especificarás como un valor de atributo XAML junto con otros atributos obligatorios de ese elemento. Sin entrar en más detalles, este es el aspecto que tiene:
 
 ```xml
 <Path x:Name="Arrow" Fill="White" Height="11" Width="9.67"
@@ -33,7 +33,7 @@ Hay dos propiedades en el Windows Runtime que pueden usar una cadena que represe
 
 ## <a name="using-move-and-draw-commands-versus-using-a-pathgeometry"></a>Usar comandos de movimiento y dibujo y usar la clase **PathGeometry**
 
-Para XAML en Windows Runtime, los comandos de movimiento y dibujo crean una clase [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) que consta de un solo objeto [**PathFigure**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure) con un valor de propiedad [**Figures**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathgeometry.figures). Cada comando de dibujo crea una clase derivada [**PathSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathSegment) en cada colección de [**segmentos**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments) del objeto **PathFigure**, el comando de movimiento cambia la propiedad [**StartPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.startpoint) y la existencia de un comando próximo establece [**IsClosed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.isclosed) en **true**. Puedes examinar esta estructura como si fuera un modelo de objetos si examinas los valores de **Data** en tiempo de ejecución.
+Para XAML en Windows Runtime, los comandos de movimiento y dibujo crean una clase [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry) que consta de un solo objeto [**PathFigure**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure) con un valor de propiedad [**Figures**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathgeometry.figures). Cada comando de dibujo crea una clase derivada [**PathSegment**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathSegment) en cada colección desegmentos[**del objeto**PathFigure](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments), el comando de movimiento cambia la propiedad [**StartPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.startpoint) y la existencia de un comando próximo establece [**IsClosed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.isclosed) en **true**. Puedes examinar esta estructura como si fuera un modelo de objetos si examinas los valores de **Data** en tiempo de ejecución.
 
 ## <a name="the-basic-syntax"></a>Sintaxis básica
 
@@ -51,9 +51,9 @@ Estas son las reglas generales de esta sintaxis:
 -   Cada comando, excepto el de cierre, suele ir seguido de uno o varios números.
 -   Si un comando tiene varios números, sepáralos con comas o espacios.
 
-**\[** _fillRule_ **\]** _moveCommand_ _drawCommand_ **\[** _drawCommand_**1 @ no__t-12** **4**_closeCommand_**7**
+**\[** _fillRule_ **\]** _moveCommand_ _drawCommand_ **\[** _drawCommand_ **\*\]** **\[** _closeCommand_ **\]**
 
-Muchos de los comandos de dibujo usan puntos en los que puedes proporcionar un valor _x,y_. Siempre que vea un marcador de posición \*_puntos_ , puede suponer que está ofreciendo dos valores decimales para el valor _x, y_ de un punto.
+Muchos de los comandos de dibujo usan puntos en los que puedes proporcionar un valor _x,y_. Siempre que vea un marcador de posición de \*_puntos_ , puede suponer que está ofreciendo dos valores decimales para el valor _x, y_ de un punto.
 
 Con frecuencia se pueden omitir los espacios en blanco, siempre que el resultado no sea ambiguo. De hecho, puedes omitir todos los espacios en blanco si usas comas como separador para todos los conjuntos de números (puntos y tamaño). Por ejemplo, este uso es aceptable: `F1M0,58L2,56L6,60L13,51L15,53L6,64z`. Pero es más habitual incluir espacios en blanco entre los comandos por motivos de claridad.
 
@@ -63,7 +63,7 @@ No uses la coma como separador decimal. Recuerda que la cadena de comandos se in
 
 **Regla de relleno**
 
-Hay dos valores posibles para la regla de relleno opcional: **F0** o **F1**. (La **F** siempre está en mayúsculas). **F0** es el valor predeterminado; genera un comportamiento de relleno **EvenOdd** , por lo que normalmente no se especifica. Usa **F1** para obtener el comportamiento de relleno **Nonzero**. Estos valores de relleno se alinean con los valores de la enumeración [**FillRule**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.FillRule).
+Existen dos posibles valores para la regla de relleno opcional: **F0** o **F1**. (El valor **F** siempre aparece en mayúsculas). **F0** es el valor predeterminado y crea el comportamiento de relleno **EvenOdd** fill behavior, así que normalmente no se especifica. Usa **F1** para obtener el comportamiento de relleno **Nonzero**. Estos valores de relleno se alinean con los valores de la enumeración [**FillRule**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.FillRule).
 
 **Comando de movimiento**
 
@@ -79,7 +79,7 @@ Especifica el punto de inicio de una nueva figura.
 
 Una **M** mayúscula indica que *startPoint* es una coordenada absoluta; en cambio, una **m** minúscula indica que *startPoint* es el desplazamiento de un punto anterior o (0,0) si no había punto anterior.
 
-**Tenga en cuenta**  It's legal para especificar varios puntos después del comando de movimiento. Se dibuja una línea por esos puntos como si especificaras el comando de línea. Pero no te recomendamos seguir este estilo, mejor usa el comando de línea específico para ello.
+**Tenga en cuenta**  es legal especificar varios puntos después del comando de movimiento. Se dibuja una línea por esos puntos como si especificaras el comando de línea. Pero no te recomendamos seguir este estilo, mejor usa el comando de línea específico para ello.
 
 **Dibujar comandos**
 
@@ -95,7 +95,7 @@ Crea una línea directa entre el punto actual y el extremo especificado. `l 20 3
 
 | Sintaxis |
 |--------|
-| _punto de conexión_ `L` <br/>O bien<br/>_punto de conexión_ `l` |
+| `L` _extremo_ <br/>O bien<br/>`l` _extremo_ |
 
 | Término | Descripción |
 |------|-------------|
@@ -131,7 +131,7 @@ Crea una curva Bézier cúbica entre el punto actual y el extremo especificado, 
 
 | Sintaxis |
 |--------|
-| `C ` *controlPoint1* *controlPoint2* <br/> O bien <br/> `c ` *controlPoint1* *controlPoint2* |
+| `C ` *punto de conexión* de *controlPoint1* *controlPoint2* <br/> O bien <br/> `c ` *punto de conexión* de *controlPoint1* *controlPoint2* |
 
 | Término | Descripción |
 |------|-------------|
@@ -219,9 +219,9 @@ Describe las coordenadas x e y de un punto. Consulta también [**Point**](https:
 
 En lugar de usar un valor numérico estándar, puedes usar estos valores especiales. Estos valores distinguen entre mayúsculas y minúsculas.
 
--   **Infinito**: Representa **PositiveInfinity**.
--   **@no__t 1Infinity**: Representa **NegativeInfinity**.
--   **Nan**: Representa **Nan**.
+-   **Infinity**: representa **PositiveInfinity**.
+-   **\-Infinity**: representa **NegativeInfinity**.
+-   **NaN**: representa **NaN**.
 
 En lugar de usar valores decimales o enteros, puedes usar la notación científica. Por ejemplo, `+1.e17` es un valor válido.
 

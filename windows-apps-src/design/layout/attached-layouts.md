@@ -20,7 +20,7 @@ Un contenedor (por ejemplo, el panel) que delega su lógica de diseño a otro ob
 
 En este tema, trataremos lo que implica la creación de un diseño adjunto (virtualización y no virtualización), los conceptos y las clases que debe comprender y las ventajas y desventajas que debe tener en cuenta a la hora de decidir entre ellos.
 
-| **Obtención de la biblioteca de la interfaz de usuario de Windows** |
+| **Obtener la biblioteca de interfaz de usuario de Windows** |
 | - |
 | Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
@@ -154,7 +154,7 @@ El enfoque para crear un diseño no virtualizado debe sentirse familiarizado con
 5. Invalide el [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.arrangeoverride) y llame al método [Arrange](/uwp/api/windows.ui.xaml.uielement.arrange) en todos los elementos secundarios.
 6. *(**Nuevo**/Optional)* Limpie cualquier estado guardado como parte de [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore).
 
-### <a name="example-a-simple-stack-layout-varying-sized-items"></a>Ejemplo: Un diseño de pila simple (elementos de tamaño variable)
+### <a name="example-a-simple-stack-layout-varying-sized-items"></a>Ejemplo: un diseño de pila simple (elementos de tamaño variable)
 
 ![MyStackLayout](images/xaml-attached-layout-mystacklayout.png)
 
@@ -261,7 +261,7 @@ El [VirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.virtualizingl
 
 La solicitud de un elemento para un índice determinado hará que ese elemento se marque como "en uso" para ese paso del diseño. Si el elemento todavía no existe, se realizará y se preparará automáticamente para su uso (por ejemplo, al aumentar el árbol de la interfaz de usuario definido en un DataTemplate, procesar cualquier enlace de datos, etc.).  De lo contrario, se recuperará de un grupo de instancias existentes.
 
-Al final de cada paso de medida, cualquier elemento existente, realizado que no se haya marcado como "en uso", se considerará automáticamente disponible para su reutilización, a menos que se use la opción para [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions) cuando el elemento se recuperó mediante el [ Método GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) . El marco de trabajo lo mueve automáticamente a un grupo de reciclaje y lo pone a disposición. Posteriormente, se puede extraer para que lo use un contenedor diferente. El marco de trabajo intenta evitar esto cuando es posible, ya que hay algún costo asociado a la reutilización de un elemento.
+Al final de cada paso de medida, cualquier elemento existente, realizado que no se haya marcado como "en uso", se considerará automáticamente disponible para su reutilización, a menos que se use la opción de [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions) cuando se recuperó el elemento mediante el método [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) . El marco de trabajo lo mueve automáticamente a un grupo de reciclaje y lo pone a disposición. Posteriormente, se puede extraer para que lo use un contenedor diferente. El marco de trabajo intenta evitar esto cuando es posible, ya que hay algún costo asociado a la reutilización de un elemento.
 
 Si un diseño de virtualización conoce al principio de cada medida qué elementos dejarán de estar dentro del rectángulo de realización, puede optimizar su reutilización. En lugar de confiar en el comportamiento predeterminado del marco de trabajo. El diseño puede desplazar de forma preferente los elementos al grupo de reciclaje mediante el método [RecycleElement](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recycleelement) .  Llamar a este método antes de solicitar nuevos elementos hace que estos elementos existentes estén disponibles cuando el diseño emite posteriormente una solicitud [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) para un índice que no está asociado a un elemento.
 
@@ -289,7 +289,7 @@ El enfoque general es para el diseño:
 > [!TIP]
 > Si va a crear un control personalizado para una biblioteca de controles que utilizarán otros en una amplia variedad de situaciones, es posible que el diseño de los datos no sea una opción.
 
-### <a name="example-xbox-activity-feed-layout"></a>Ejemplo: Diseño de fuente de actividad de Xbox
+### <a name="example-xbox-activity-feed-layout"></a>Ejemplo: diseño de fuente de actividad de Xbox
 
 La interfaz de usuario de la fuente de actividades de Xbox usa un patrón de repetición donde cada línea tiene un mosaico ancho, seguido de dos mosaicos estrechos que se invierten en la línea siguiente. En este diseño, el tamaño de cada elemento es una función de la posición del elemento en el conjunto de datos y el tamaño conocido para los mosaicos (ancho y estrecho).
 
@@ -586,7 +586,7 @@ internal class ActivityFeedLayoutState
 
 De forma predeterminada, [VirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext) mantiene una asignación entre los elementos realizados y el índice del origen de datos que representan.  Un diseño puede optar por administrar esta propia asignación solicitando siempre la opción de [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions) al recuperar un elemento a través del método [GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) , lo que impide el comportamiento de reciclaje automático predeterminado.  Un diseño puede elegir hacer esto, por ejemplo, si solo se va a usar cuando el desplazamiento está restringido a una dirección y los elementos que considera siempre serán contiguos (es decir, conocer el índice del primer y el último elemento es suficiente para conocer todos los elementos que deben ser rea lized).
 
-#### <a name="example-xbox-activity-feed-measure"></a>Ejemplo: Medida de fuente de actividad de Xbox
+#### <a name="example-xbox-activity-feed-measure"></a>Ejemplo: medida de fuente de actividad de Xbox
 
 En el fragmento de código siguiente se muestra la lógica adicional que se podría agregar al MeasureOverride en el ejemplo anterior para administrar la asignación.
 
@@ -703,7 +703,7 @@ Si un usuario arrastra el control de posición muy rápidamente, es posible que 
 Cuando el diseño detecta su estimación es incorrecto y/o ve un cambio de ventanilla inesperado, debe reorientar su posición inicial.  Los diseños de virtualización que se incluyen como parte de los controles XAML se desarrollan como diseños dependientes del contenido, ya que colocan menos restricciones en la naturaleza del contenido que se va a mostrar.
 
 
-### <a name="example-simple-virtualizing-stack-layout-for-variable-sized-items"></a>Ejemplo: Diseño de pila de virtualización simple para elementos de tamaño variable
+### <a name="example-simple-virtualizing-stack-layout-for-variable-sized-items"></a>Ejemplo: diseño de pila de virtualización simple para elementos de tamaño variable
 
 En el ejemplo siguiente se muestra un diseño de pila simple para elementos de tamaño variable que:
 
@@ -712,7 +712,7 @@ En el ejemplo siguiente se muestra un diseño de pila simple para elementos de t
 * es consciente de los posibles desplazamientos de la ventanilla descontinuada y
 * aplica correcciones de diseño para tener en cuenta esos turnos.
 
-@no__t 0Usage: Marcado @ no__t-0
+**Uso: marcado**
 
 ```xaml
 <ScrollViewer>
@@ -741,7 +741,7 @@ En el ejemplo siguiente se muestra un diseño de pila simple para elementos de t
 </ScrollViewer>
 ```
 
-@no__t 0Codebehind: Main. CS @ no__t-0
+**Codebehind: Main.cs**
 
 ```csharp
 string _lorem = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet erat vel massa rutrum, eget mollis massa vulputate. Vivamus semper augue leo, eget faucibus nulla mattis nec. Donec scelerisque lacus at dui ultricies, eget auctor ipsum placerat. Integer aliquet libero sed nisi eleifend, nec rutrum arcu lacinia. Sed a sem et ante gravida congue sit amet ut augue. Donec quis pellentesque urna, non finibus metus. Proin sed ornare tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet erat vel massa rutrum, eget mollis massa vulputate. Vivamus semper augue leo, eget faucibus nulla mattis nec. Donec scelerisque lacus at dui ultricies, eget auctor ipsum placerat. Integer aliquet libero sed nisi eleifend, nec rutrum arcu lacinia. Sed a sem et ante gravida congue sit amet ut augue. Donec quis pellentesque urna, non finibus metus. Proin sed ornare tellus.";
@@ -757,7 +757,7 @@ var data = new ObservableCollection<Recipe>(Enumerable.Range(0, 300).Select(k =>
 repeater.ItemsSource = data;
 ```
 
-@no__t 0Code: VirtualizingStackLayout. CS @ no__t-0
+**Código: VirtualizingStackLayout.cs**
 
 ```csharp
 // This is a sample layout that stacks elements one after

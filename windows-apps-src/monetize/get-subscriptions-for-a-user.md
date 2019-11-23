@@ -36,14 +36,14 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Método | URI de la solicitud                                            |
 |--------|--------------------------------------------------------|
-| EXPONER   | ```https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/query``` |
+| POST   | ```https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/query``` |
 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Header         | Tipo   | Descripción      |
+| Encabezado         | Tipo   | Descripción      |
 |----------------|--------|-------------------|
-| Autorización  | string | Obligatorio. El token de acceso de Azure AD con el formato **portador** @no__t-*1 @no__t*-3.                           |
+| Autorización  | string | Obligatorio. El token de acceso de Azure AD con el formato **portador** &lt;&gt;de *token* .                           |
 | Host           | string | Debe establecerse en el valor **purchase.mp.microsoft.com**.                                            |
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
 | Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |

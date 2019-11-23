@@ -125,13 +125,13 @@ El punto en el nombre de la propiedad adjunta es una parte fundamental del patr�
 > [!WARNING]
 > Una limitación existente de la implementación de XAML Windows Runtime es que no se puede animar una propiedad adjunta personalizada.
 
-- Para especificar una propiedad adjunta como la propiedad de destino de una referencia de recurso de un archivo de recursos a **x:UID**, use una sintaxis especial que inserte una declaración de estilo de código con el nombre completo **mediante:** declaration entre corchetes ("\[ @ no__t-3"), para Cree un salto de ámbito deliberado. Por ejemplo, suponiendo que existe un elemento `<TextBlock x:Uid="Title" />`, la clave de recurso en el archivo de recursos que tiene como destino el valor **Canvas. Top** en esa instancia es "Title. \[using: Windows.UI.Xaml.Controls\]Canvas.Top". Para obtener más información sobre los archivos de recursos y XAML, vea [Quickstart: Trasladar recursos de la interfaz de usuario @ no__t-0.
+- Para especificar una propiedad adjunta como la propiedad de destino de una referencia de recurso de un archivo de recursos a **x:UID**, use una sintaxis especial que inserte una declaración de estilo de código con el nombre de tipo **:** declaration entre corchetes ("\[\]"), para crear un salto de ámbito deliberado. Por ejemplo, suponiendo que existe un elemento `<TextBlock x:Uid="Title" />`, la clave de recurso en el archivo de recursos que tiene como destino el valor **Canvas. Top** en esa instancia es "title.\[mediante: Windows. UI. Xaml. Controls\]Canvas. Top ". Para obtener más información sobre archivos de recursos y XAML, consulta [Inicio rápido: traducción de recursos de interfaz de usuario](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10)).
 
 ## <a name="related-topics"></a>Temas relacionados
 
 - [Propiedades adjuntas personalizadas](custom-attached-properties.md)
 - [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
 - [Definir diseños con XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)
-- [Inicio rápido: Trasladar recursos de la interfaz de usuario @ no__t-0
+- [Inicio rápido: traducir recursos de la interfaz de usuario](https://docs.microsoft.com/previous-versions/windows/apps/hh943060(v=win.10))
 - [**EstablecerValor**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue)
 - [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue)

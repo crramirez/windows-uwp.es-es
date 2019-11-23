@@ -804,7 +804,7 @@ En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares
     }
     ```
 
--   Como va a usar la AuthService al quitar una cuenta, se puede quitar la referencia a AccountHelper en el método Button @ no__t-0Forget @ no__t-1User @ no__t-2Click. El método debería ser ahora similar al siguiente.
+-   Como va a usar la AuthService al quitar una cuenta, la referencia a AccountHelper en el botón\_olvidar\_usuario\_se puede quitar el método click. El método debería ser ahora similar al siguiente.
 
     ```cs
     private void Button_Forget_User_Click(object sender, RoutedEventArgs e)
@@ -1060,7 +1060,7 @@ En este ejercicio cambiarás las vistas del lado cliente y las clases auxiliares
     }
     ```
 
--   Habrás observado que, en el método GetKeyAttestationAsync que acabas de agregar, la última línea estaba comentada. La última línea será un nuevo método que crees, que enviará toda la información de Windows Hello a la clase AuthService. En el mundo real, deberías enviar esta información a un servidor real con una API web.
+-   Habrás observado en el método GetKeyAttestationAsync que acabas de agregar que la última línea estaba comentada. Esta última línea será un método nuevo que crearás que enviará toda la información de Windows Hello a AuthService. En el mundo real, deberías enviar esta información a un servidor real con una API web.
 
     ```cs
     using System.Runtime.InteropServices.WindowsRuntime;

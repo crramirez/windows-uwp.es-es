@@ -83,7 +83,7 @@ El tipo de material predeterminado es **material base**, que tiene un valor **ma
 [!code-cs[BaseMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetBaseMaterialGroup)]
 
 > [!NOTE]
->@no__t el dispositivo de fabricación 3D 0The determinará qué material físico disponible se asignará a los elementos de material virtual almacenados en 3MF. La asignación de materiales no tiene que ser 1:1: si una impresora 3D solo usa un material, imprimirá todo el modelo en ese material, independientemente de las caras o los objetos a los que se asignaron distintos materiales.
+> el dispositivo de fabricación 3D determinará qué material físico disponible se asignará a los elementos de material virtual almacenados en 3MF. La asignación de materiales no tiene que ser 1:1: si una impresora 3D solo usa un material, imprimirá todo el modelo en ese material, independientemente de las caras o los objetos a los que se asignaron distintos materiales.
 
 ### <a name="color-materials"></a>Materiales de color
 

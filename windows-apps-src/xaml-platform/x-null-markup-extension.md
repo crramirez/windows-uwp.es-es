@@ -24,17 +24,17 @@ En el marcado XAML, especifica un valor **null** para una propiedad.
 <object property="{x:Null}" .../>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 **null** es la palabra clave de referencia NULL para C# y C++. La palabra clave de Microsoft Visual Basic para una referencia NULL es **Nothing**.
 
 El valor predeterminado inicial puede variar entre las propiedades de dependencia y no es necesariamente **null**. Además, muchas propiedades de dependencia no aceptarán **null** como valor, ya sea a través del marcado o del código, debido a su implementación interna. En estos casos, establecer un valor de atributo XAML con **{x:Null}** puede provocar una excepción del analizador.
 
-Algunos tipos de Windows Runtime aceptan valores NULL. En los casos en los que un tipo que acepta valores NULL no tenga ya un valor **null** como predeterminado, podrías usar **{x:Null}** en XAML para establecer el valor **null**. Si se usan C++ las extensiones deC++componentes de Visual (/CX), los tipos que aceptan valores NULL se representan como [Platform:: IBox @ no__t-4](https://docs.microsoft.com/cpp/cppcx/platform-ibox-interface). Si usas lenguajes de Microsoft .NET, los tipos que aceptan valores NULL se representan como [**Nullable<T>** ](https://docs.microsoft.com/dotnet/api/system.nullable-1).
+Algunos tipos de Windows Runtime aceptan valores NULL. En los casos en los que un tipo que acepta valores NULL no tenga ya un valor **null** como predeterminado, podrías usar **{x:Null}** en XAML para establecer el valor **null**. Si se usan C++ las extensiones deC++componentes de Visual (/CX), los tipos que aceptan valores NULL se representan como [**Platform:: IBox<T>** ](https://docs.microsoft.com/cpp/cppcx/platform-ibox-interface). Si usas lenguajes de Microsoft .NET, los tipos que aceptan valores NULL se representan como [**Nullable<T>** ](https://docs.microsoft.com/dotnet/api/system.nullable-1).
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [**Nullable @ no__t-2**](https://docs.microsoft.com/dotnet/api/system.nullable-1)
-* [**IReference @ no__t-2**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IReference_T_)
+* [ **<T> que aceptan valores NULL**](https://docs.microsoft.com/dotnet/api/system.nullable-1)
+* [ **<T> IReference**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IReference_T_)
  
 

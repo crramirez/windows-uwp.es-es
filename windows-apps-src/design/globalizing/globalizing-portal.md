@@ -18,9 +18,9 @@ ms.locfileid: "72302253"
 ---
 # <a name="globalization-and-localization"></a>Globalización y localización
 
-Windows se usa en todo el mundo por personas de diferentes culturas, regiones e idiomas. Los usuarios hablan varios idiomas diferentes y en una diversidad de países y regiones diferentes. Algunos usuarios hablan más de un idioma. Por lo tanto, tu aplicación se ejecuta en configuraciones que implican muchas permutaciones de configuración de sistema para idioma, región y cultura. Puedes aumentar el mercado potencial de la aplicación diseñándola para que sea fácilmente adaptable mediante la *globalización* y la *localización*.
+Windows se usa en todo el mundo, lo que incluye a personas de diferentes culturas, regiones e idiomas. Los usuarios hablan varios idiomas diferentes y en una variedad de países y regiones diferentes. Algunos usuarios hablan más de un idioma. Por lo tanto, tu aplicación se ejecuta en configuraciones que implican muchas permutaciones de configuración de sistema para idioma, región y cultura. Puedes aumentar el mercado potencial de la aplicación diseñándola para que sea fácilmente adaptable mediante la *globalización* y la *localización*.
 
-Este vídeo proporciona una breve introducción sobre cómo preparar su aplicación para el mundo: [Introducción a la globalización y la localización](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
+Este vídeo proporciona una introducción breve sobre cómo preparar la aplicación para todo el mundo: [Introducción a la globalización y la localización](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
 
 **Globalización** es el proceso de diseñar y desarrollar tu aplicación de manera que funciona correctamente en diferentes mercados globales (en sistemas con diferentes configuraciones de idioma y referencias culturales) sin necesidad de cambios específicos de referencia cultural ni personalización.
 
@@ -38,7 +38,7 @@ El código debe funcionar igual de bien en cualquiera de las referencias cultura
 - Reglas de ordenación
 
 >[!NOTE]
-> Para obtener una lista de los nombres de configuración regional admitidos por la versión del sistema operativo Windows, vea la columna etiqueta de idioma de la tabla en [Appendix A: Comportamiento del producto @ no__t-0 en la [Referencia del identificador de código de idioma (LCID) de Windows](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f).
+> Para obtener una lista de los nombres de configuración regional admitidos por la versión del sistema operativo Windows, consulte la columna etiqueta de idioma de la tabla en el [apéndice a: comportamiento del producto](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) en la [Referencia del identificador de idioma de Windows (LCID)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f).
 
 **Localizabilidad** es el proceso de preparación de una aplicación globalizada para la localización y/o la comprobación de que la aplicación está lista para la localización. Hacer que una aplicación sea localizable significa que el proceso de localización siguiente no descubrirá ningún defecto funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de los recursos localizables de la aplicación.
 
@@ -64,7 +64,7 @@ La mayoría de los equipos de localización usa herramientas especiales para fac
 | [Ajustar el diseño y las fuentes, y admitir la escritura de derecha a izquierda](adjust-layout-and-fonts--and-support-rtl.md) | Diseña tu aplicación para admitir los diseños y fuentes de varios idiomas, incluida la dirección de flujo de derecha a izquierda (RTL). |
 | [Valores de NumeralSystem](glob-numeralsystem-values.md) | En este tema se enumeran los valores disponibles en la propiedad **NumeralSystem** de diversas clases en el espacio de nombres [**Windows.Globalization**](/uwp/api/windows.globalization?branch=live). |
 | [Haga que su aplicación sea localizable](prepare-your-app-for-localization.md) | Una aplicación localizada es aquella que puede localizarse a otros mercados, idiomas o regiones sin descubrir defectos funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de sus recursos localizables. |
-| [Fuentes internacionales](loc-international-fonts.md) | En este tema se enumeran las fuentes disponibles para las aplicaciones UWP que están localizadas en idiomas distintos de EE. UU. Inglés. |
+| [Fuentes internacionales](loc-international-fonts.md) | En este tema se enumeran las fuentes disponibles para las aplicaciones para UWP que se localizan en otros idiomas además de inglés de EE. UU. |
 | [Diseño de la aplicación para texto bidireccional](design-for-bidi-text.md) | Diseña tu aplicación para proporcionar compatibilidad con texto bidireccional (BiDi) de manera que puedas combinar script desde sistemas de escritura de izquierda a derecha y de derecha a izquierda. |
 | [Usar el kit de herramientas de aplicaciones multilingüe 4,0](use-mat.md) | El kit de herramientas de aplicaciones multilingües (PASPARTÚ) 4,0 se integra con Microsoft Visual Studio 2017 y versiones posteriores para proporcionar a las aplicaciones UWP compatibilidad con traducción, administración de archivos de traducción y herramientas del editor. |
 | [Preguntas más frecuentes sobre el kit de herramientas multilingües 4,0 & solución de problemas](mat-faq-troubleshooting.md) | Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el Kit de herramientas para aplicaciones multilingües (MAT) 4.0. |

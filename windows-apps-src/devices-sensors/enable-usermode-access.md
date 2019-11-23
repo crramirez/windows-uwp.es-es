@@ -26,7 +26,7 @@ El acceso de modo de usuario a buses de nivel bajo en Windows se asocia a travé
 
 ## <a name="asl-by-example"></a>ASL como ejemplo
 
-Vamos a examinar la declaración de nodo de dispositivo rhproxy en Raspberry Pi 2. En primer lugar, cree la declaración de dispositivo ACPI en el ámbito de @no__t -0 _SB.
+Vamos a examinar la declaración de nodo de dispositivo rhproxy en Raspberry Pi 2. En primer lugar, cree la declaración de dispositivo ACPI en el ámbito de _SB de \\.
 
 ```cpp
 Device(RHPX)
@@ -37,9 +37,9 @@ Device(RHPX)
 }
 ```
 
-* _HID – Id. de hardware Se debe establecer en un id. de hardware específico del proveedor.
-* _CID – Id. compatible Debe ser “MSFT8000”.
-* _UID: id. único Establecer en 1.
+* _HID – Id. de hardware. Se debe establecer en un id. de hardware específico del proveedor.
+* _CID – Id. compatible. Debe ser “MSFT8000”.
+* _UID – Id. único. Establecer a 1.
 
 Después, declaramos cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario. El orden en que se declaran los recursos es importante porque los índices de recursos se usan para asociar las propiedades con los recursos. Si hay varios buses de I2C o SPI expuestos, el primero declarado se considera el bus 'predeterminado' para ese tipo de bus y será la instancia devuelta por los métodos `GetDefaultAsync()` de [Windows.Devices.I2c.I2cController](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2ccontroller) y [Windows.Devices.Spi.SpiController](https://docs.microsoft.com/uwp/api/windows.devices.spi.spicontroller).
 
@@ -159,7 +159,7 @@ De este modo se crea un bus denominado "SPI1" y se asocia al índice 2 del recur
 * Debes haber pasado las [Pruebas MITT SPI](https://docs.microsoft.com/windows-hardware/drivers/spb/spi-tests-in-mitt)
 * Debes admitir la velocidad de reloj de 4Mhz
 * Debe ser compatible con la longitud de datos de 8 bits
-* Debe ser compatible con todos los modos SPI: 0, 1, 2, 3
+* Debe ser compatible con todos los modos de SPI: 0, 1, 2, 3
 
 ### <a name="i2c"></a>I2C
 
@@ -553,7 +553,7 @@ Cuando un cliente ya no necesita un recurso de multiplexación, cierra su identi
 
 ### <a name="authoring-guidelines-for-acpi-tables"></a>Directrices para crear tablas ACPI
 
-Esta sección describe cómo proporcionar recursos de multiplexación a los controladores de cliente. Ten en cuenta que necesitarás la versión de compilación de Microsoft ASL 14327 o posterior para compilar tablas que contengan recursos `MsftFunctionConfig()`. `MsftFunctionConfig()` se proporcionan recursos para anclar los clientes de multiplexación como recursos de hardware. se deben proporcionar recursos `MsftFunctionConfig()` a los controladores que requieran cambios de multiplexación de PIN, que normalmente son controladores de SPB y de controlador serie, pero no se deben proporcionar a los controladores de dispositivos periféricos de SPB y serie, ya que el controlador de controlador controla la configuración de multiplexación.
+Esta sección describe cómo proporcionar recursos de multiplexación a los controladores de cliente. Ten en cuenta que necesitarás la versión de compilación de Microsoft ASL 14327 o posterior para compilar tablas que contengan recursos `MsftFunctionConfig()`. se proporcionan `MsftFunctionConfig()` recursos para anclar los clientes de multiplexación como recursos de hardware. se deben proporcionar `MsftFunctionConfig()` recursos a los controladores que requieren cambios en la multiplexación de PIN, que normalmente son controladores de SPB y de controlador serie, pero no se deben proporcionar a los controladores de los periféricos de SPB y serie, ya que el controlador de controlador controla la configuración de multiplexación.
 La macro ACPI `MsftFunctionConfig()` se define del siguiente modo:
 
 ```cpp
@@ -605,11 +605,11 @@ Device(I2C1)
 }
 ```
 
-Además de los recursos de memoria e interrupción que suelen requerir los controladores de controladora, también se especifica un recurso `MsftFunctionConfig()`. Este recurso permite que el controlador de controlador I2C ponga los pines 2 y 3 administrados por el nodo de dispositivo en @no__t -0 _SB. GPIO0: en la función 4 con resistencia de extracción habilitada.
+Además de los recursos de memoria e interrupción que suelen requerir los controladores de controladora, también se especifica un recurso `MsftFunctionConfig()`. Este recurso permite que el controlador de controlador I2C ponga los pines 2 y 3 administrados por el nodo de dispositivo en \\_SB. GPIO0: en la función 4 con resistencia de extracción habilitada.
 
 ## <a name="supporting-muxing-support-in-gpioclx-client-drivers"></a>Compatibilidad de soporte de multiplexación en los controladores de cliente GpioClx
 
-`GpioClx` tiene compatibilidad integrada con multiplexación de PIN. Controladores de minipuerto GpioClx (también denominados "Controladores de cliente GpioClx"), hardware del controlador GPIO. A partir de Windows 10 compilación 14327, los controladores de minipuerto GpioClx pueden agregar compatibilidad para multiplexación de patillas implementando dos DDI nuevas:
+`GpioClx` tiene compatibilidad integrada con la multiplexación de PIN. Controladores de minipuerto GpioClx (también denominados "Controladores de cliente GpioClx"), hardware del controlador GPIO. A partir de Windows 10 compilación 14327, los controladores de minipuerto GpioClx pueden agregar compatibilidad para multiplexación de patillas implementando dos DDI nuevas:
 
 * CLIENT_ConnectFunctionConfigPins: `GpioClx` lo llama para requerir que el controlador de minipuerto aplique la configuración de multiplexación especificada.
 * CLIENT_DisconnectFunctionConfigPins: `GpioClx` lo llama para requerir que el controlador de minipuerto revierta la configuración de multiplexación.
@@ -637,7 +637,7 @@ En el tiempo de inicialización del dispositivo, los marcos `SpbCx` y `SerCx` an
 
 `SpbCx` revierte la configuración de multiplexación de PIN en su controlador de *IRP_MJ_CLOSE* , justo después de invocar la devolución de llamada [EvtSpbTargetDisconnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) del controlador del controlador. El resultado es que las patillas se multiplexan en la función SPB siempre que un controlador periférico abra un identificador para el controlador de controladora SPB, y se multiplexan inmediatamente cuando el controlador periférico cierra su identificador.
 
-`SerCx` se comporta de forma similar. `SerCx` adquiere todos los recursos `MsftFunctionConfig()` en su controlador *IRP_MJ_CREATE* justo antes de invocar la devolución de llamada [EvtSerCx2FileOpen ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) del controlador del controlador y libera todos los recursos en su controlador IRP_MJ_CLOSE, justo después de invocar el controlador devolución de llamada de [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) del controlador.
+`SerCx` se comporta de forma similar. `SerCx` adquiere todos los recursos de `MsftFunctionConfig()` en su controlador de *IRP_MJ_CREATE* justo antes de invocar la devolución de llamada [EvtSerCx2FileOpen ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) del controlador de controlador y libera todos los recursos en su controlador de IRP_MJ_CLOSE, justo después de invocar la devolución de llamada [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) del controlador del controlador.
 
 La implicación de la multiplexación dinámica de patillas para los controladores de controladora `SerCx` y `SpbCx` consiste en que deben ser capaces de tolerar las patillas que se multiplexan desde la función SPB/UART a horas determinadas. Los controladores de controladora deben asumir que las patillas no se multiplexarán hasta que se llame a `EvtSpbTargetConnect()` o `EvtSerCx2FileOpen()`. No es necesaria la multiplexación de las patillas en la función SPB/UART durante las siguientes devoluciones de llamada. La siguiente no es una lista completa, pero representa las rutinas de PNP más comunes implementadas por los controladores de controladora.
 
@@ -652,7 +652,7 @@ Cuando estés listo para probar rhproxy, es útil usar el siguiente procedimient
 
 1. Comprueba que cada controlador de la controladora `SpbCx`, `GpioClx`, y `SerCx` está cargando y funcionando correctamente
 1. Comprueba que `rhproxy` está en el sistema. Algunas ediciones y compilaciones de Windows no lo tienen.
-1. Compilar y cargar el nodo rhproxy mediante `ACPITABL.dat`
+1. Compile y cargue el nodo rhproxy mediante `ACPITABL.dat`
 1. Comprueba que el nodo del dispositivo `rhproxy` existe
 1. Comprueba que `rhproxy` está cargándose e iniciándose
 1. Comprueba que los dispositivos esperados están expuestos al modo usuario
@@ -737,14 +737,14 @@ devcon status *msft8000
 
 Si el resultado indica que rhproxy se ha iniciado, rhproxy se ha cargado e iniciado correctamente. Si ves un código de problema, debes investigar. Estos son algunos códigos de problemas comunes:
 
-* Problema 51: `CM_PROB_WAITING_ON_DEPENDENCY` El sistema no está iniciando rhproxy porque una de sus dependencias no se ha podido cargar. Esto significa que los recursos han pasado al punto de rhproxy y a nodos ACPI no válidos, o que no se inician los dispositivos de destino. En primer lugar, vuelve a comprobar que todos los dispositivos se están ejecutando correctamente (consulta la sección anterior 'Comprobar los controladores de controladora'). Después, compruebe el ASL y asegúrese de que todas las rutas de acceso de recursos (por ejemplo, `\_SB.I2C1`) son correctas y apunte a los nodos válidos de su DSDT.
+* Problema 51: `CM_PROB_WAITING_ON_DEPENDENCY` El sistema no está iniciando rhproxy porque una de sus dependencias no se ha podido cargar. Esto significa que los recursos han pasado al punto de rhproxy y a nodos ACPI no válidos, o que no se inician los dispositivos de destino. En primer lugar, vuelve a comprobar que todos los dispositivos se están ejecutando correctamente (consulta la sección anterior 'Comprobar los controladores de controladora'). Después, compruebe el ASL y asegúrese de que todas las rutas de acceso a los recursos (por ejemplo, `\_SB.I2C1`) son correctas y apunte a los nodos válidos de su DSDT.
 * Problema 10: `CM_PROB_FAILED_START` Rhproxy no se pudo iniciar, probablemente por un problema en el análisis del recurso. Repasa tu ASL, vuelve a comprobar los índices de recurso en el DSD y verifica que los recursos GPIO se hayan especificado en orden de número de patilla ascendente.
 
 ### <a name="verify-that-the-expected-devices-are-exposed-to-usermode"></a>Comprueba que los dispositivos esperados están expuestos al modo usuario
 
 Ahora que se está ejecutando rhproxy, debería haber creado interfaces de dispositivos que se puedan acceder por el modo usuario. Usaremos varias herramientas de líneas de comandos para enumerar los dispositivos y ver si están presentes.
 
-Clone el repositorio [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) y compile los ejemplos `GpioTestTool`, `I2cTestTool`, `SpiTestTool` y `Mincomm`. Copia las herramientas al dispositivo que estás probando y usa los siguientes comandos para enumerar los dispositivos.
+Clone el repositorio de [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) y compile los ejemplos de `GpioTestTool`, `I2cTestTool`, `SpiTestTool`y `Mincomm`. Copia las herramientas al dispositivo que estás probando y usa los siguientes comandos para enumerar los dispositivos.
 
 ```ps
 I2cTestTool.exe -list

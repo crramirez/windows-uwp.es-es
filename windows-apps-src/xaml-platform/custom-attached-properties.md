@@ -42,7 +42,7 @@ Defina la propiedad adjunta como una propiedad de dependencia; para ello, declar
 La principal diferencia entre una propiedad adjunta personalizada y una propiedad de dependencia personalizada es la manera de definir los descriptores de acceso o contenedores. En lugar de usar la técnica de contenedor descrita en [Propiedades de dependencia personalizadas](custom-dependency-properties.md), también debes proporcionar los métodos **Get**_PropertyName_ y **Set**_PropertyName_ estáticos como descriptores de acceso para la propiedad adjunta. Los descriptores de acceso son usados principalmente por el analizador XAML, aunque algunos otros llamadores pueden usarlos para establecer valores en escenarios que no sean de XAML.
 
 > [!IMPORTANT]
-> Si no define los descriptores de acceso correctamente, el procesador XAML no podrá tener acceso a la propiedad adjunta y cualquier persona que intente utilizarla probablemente obtendrá un error del analizador de XAML. Además, las herramientas de diseño y codificación suelen depender de las convenciones "@no__t 0Property" para los identificadores de nomenclatura cuando encuentran una propiedad de dependencia personalizada en un ensamblado al que se hace referencia.
+> Si no define los descriptores de acceso correctamente, el procesador XAML no podrá tener acceso a la propiedad adjunta y cualquier persona que intente utilizarla probablemente obtendrá un error del analizador de XAML. Además, las herramientas de diseño y codificación suelen depender de las convenciones de "propiedad\*" para los identificadores de nomenclatura cuando encuentran una propiedad de dependencia personalizada en un ensamblado al que se hace referencia.
 
 ## <a name="accessors"></a>Descriptores de acceso
 
@@ -235,7 +235,7 @@ Si estableces la propiedad en un elemento que también está en el mismo espacio
 ```
 
 > [!NOTE]
-> Si está escribiendo una interfaz de usuario XAML C++con/CX, debe incluir el encabezado para el tipo personalizado que define la propiedad adjunta, siempre que una página XAML use ese tipo. Cada página XAML tiene un encabezado de código subyacente asociado (. Xaml. h). Aquí es donde debe incluir (mediante **\#include**) el encabezado para la definición del tipo de propietario de la propiedad adjunta.
+> Si está escribiendo una interfaz de usuario XAML C++con/CX, debe incluir el encabezado para el tipo personalizado que define la propiedad adjunta, siempre que una página XAML use ese tipo. Cada página XAML tiene un encabezado de código subyacente asociado (. Xaml. h). Aquí es donde debe incluir (mediante **\#include**) el encabezado de la definición del tipo de propietario de la propiedad adjunta.
 
 ## <a name="setting-your-custom-attached-property-imperatively-with-cwinrt"></a>Establecer la propiedad adjunta personalizada de forma imperativa C++con/WinRT
 

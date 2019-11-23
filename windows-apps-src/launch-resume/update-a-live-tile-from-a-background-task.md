@@ -152,7 +152,7 @@ Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declara
 6.  Haz clic o pulsa en la pestaña **IU de la aplicación**.
 7.  Establece **Notificaciones de pantallas de bloqueo** en **Distintivo y texto de imagen**.
 8.  Establece una ruta de acceso en un icono de 24 x 24 píxeles en el campo **Logotipo del distintivo** .
-    **Importante este icono**debeusarsolopíxelesmonocromáticosytransparentes  .
+    **Importante**  este icono debe usar solo píxeles monocromáticos y transparentes.
 9.  En el campo **Logotipo pequeño**, establece una ruta de acceso en un icono de 30 x 30 píxeles.
 10. En el campo **Logotipo ancho** , establece una ruta de acceso a un icono de 310 x 150 píxeles.
 
@@ -161,7 +161,7 @@ Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declara
 
 Crea un [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para registrar tu tarea.
 
-> **Nota:**   a partir de Windows 8.1, los parámetros de registro de tareas en segundo plano se validan en el momento del registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. La aplicación debe poder enfrentarse a los escenarios en que se produce un error en el registro de tareas en segundo plano. Por ejemplo, usa una instrucción condicional para comprobar si hay errores de registro y después vuelve a probar el registro con errores con valores de parámetros diferentes.
+> **Nota**  a partir de Windows 8.1, los parámetros de registro de tareas en segundo plano se validan en el momento del registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. La aplicación debe poder enfrentarse a los escenarios en que se produce un error en el registro de tareas en segundo plano. Por ejemplo, usa una instrucción condicional para comprobar si hay errores de registro y después vuelve a probar el registro con errores con valores de parámetros diferentes.
  
 
 En la página principal de tu aplicación, agrega el método **RegisterBackgroundTask** y llámalo en el controlador de eventos **OnNavigatedTo**.

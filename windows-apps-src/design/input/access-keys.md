@@ -29,7 +29,7 @@ Consulta el tema [Teclas de aceleración](keyboard-accelerators.md) para obtener
 
 La Plataforma universal de Windows (UWP) ofrece compatibilidad integrada en los controles de la plataforma tanto para teclas de acceso basadas en el teclado como para comentarios de la interfaz de usuario asociada a través de indicaciones visuales llamadas sugerencias de teclas.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Una tecla de acceso es una combinación de la tecla Alt y una o más teclas alfanuméricas, lo que sirve como ayuda *mnemotécnica*, y que en general se presionan en secuencia y no de forma simultánea.
 
@@ -72,9 +72,11 @@ Por ejemplo, Microsoft Word proporciona dos ámbitos de teclas de acceso: un ám
 
 Las imágenes siguientes muestran los dos ámbitos de teclas de acceso en Word. La primera muestra las teclas de acceso principales que permiten al usuario seleccionar una pestaña y otros comandos de nivel superior, mientras que la segunda muestra las claves de acceso secundarias de la pestaña Inicio.
 
-claves de acceso de ![Primary en_las claves de acceso principal_ de Microsoft Word @ no__t-1 en Microsoft Word
+![claves de acceso principales en Microsoft Word](images/accesskeys/primary-access-keys-word.png)
+_claves de acceso principales en Microsoft Word_
 
-claves de acceso de ![Secondary en_las claves de acceso secundaria_ de Microsoft Word @ no__t-1 en Microsoft Word
+![claves de acceso secundarias en Microsoft Word](images/accesskeys/secondary-access-keys-word.png)
+_claves de acceso secundarias en Microsoft Word_
 
 Las teclas de acceso pueden duplicarse para elementos de distintos ámbitos. En el ejemplo anterior, "2" es la tecla de acceso para Deshacer en el ámbito principal y también es "Cursiva" en el ámbito secundario.
 
@@ -253,17 +255,17 @@ _Ejemplo de ubicación automática de la sugerencia de teclas_
 
 Sin embargo, en caso de necesitar más control sobre la ubicación de las sugerencias de teclas, se recomienda lo siguiente:
 
-1.  **Principio de asociación obvio**: El usuario puede asociar el control con la información sobre herramientas fácilmente.
+1.  **Principio de asociación obvia**: El usuario puede asociar el control a la sugerencia de teclas fácilmente.
 
     a.  El KeyTip debe estar **cerca** del elemento que tiene la tecla de acceso (el propietario).  
     b.  El KeyTip debe **evitar cubrir los elementos habilitados** que tienen teclas de acceso.   
     c.  Si no se puede ubicar un KeyTip cerca de su propietario, debe superponerse con este. 
 
-2.  **Detectabilidad**: El usuario puede detectar rápidamente el control con la información sobre herramientas.
+2.  **Detectabilidad**: El usuario puede detectar rápidamente el control con la sugerencia de teclas.
 
     a.  El KeyTip nunca se **superpone** con otras sugerencias de teclas.  
 
-3.  **Análisis sencillo:** El usuario puede hojear fácilmente las sugerencias clave.
+3.  **Vistazo sencillo:** El usuario puede echar un vistazo fácilmente a las sugerencias de teclas.
 
     a.  Los KeyTips deben estar **alineados** entre sí y con el elemento de la interfaz de usuario.
     b.  Los KeyTips deben estar **agrupados** tanto como sea posible. 
@@ -272,7 +274,7 @@ Sin embargo, en caso de necesitar más control sobre la ubicación de las sugere
 
 Usa la propiedad **KeyTipPlacementMode** para personalizar la ubicación de la sugerencia de teclas por elemento o por grupo.
 
-Los modos de colocación son: Superior, inferior, derecha, izquierda, oculto, centro y automático.
+Los modos de ubicación son: Top, Bottom, Right, Left, Hidden, Center y Auto.
 
 ![Modos de ubicación de sugerencia de teclas](images/accesskeys/keytip-postion-modes.png)
 

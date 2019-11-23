@@ -71,7 +71,7 @@ El Portal de dispositivos en un dispositivo de escritorio Windows proporciona el
 - Características
 - Realidad mixta
 - Depurador de instalación en streaming
-- Location
+- Ubicación
 - Borrador
 
 ## <a name="more-device-portal-options"></a>Más opciones del Portal de dispositivos
@@ -81,12 +81,12 @@ El Portal de dispositivos en un dispositivo de escritorio Windows proporciona el
 Si quieres seleccionar los números de puerto para Device Portal (como 80 y 443), puedes establecer las siguientes claves de registro:
 
 - En `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service`
-    - `UseDynamicPorts`: Un DWORD requerido. Establécelo en 0 para conservar los números de puerto que hayas elegido.
-    - `HttpPort`: Un DWORD requerido. Contiene el número de puerto que escuchará Device Portal para las conexiones HTTP.    
-    - `HttpsPort`: Un DWORD requerido. Contiene el número de puerto que escuchará Device Portal para las conexiones HTTPS.
+    - `UseDynamicPorts`: un valor DWORD obligatorio. Establécelo en 0 para conservar los números de puerto que hayas elegido.
+    - `HttpPort`: un valor DWORD obligatorio. Contiene el número de puerto que escuchará Device Portal para las conexiones HTTP.    
+    - `HttpsPort`: un valor DWORD obligatorio. Contiene el número de puerto que escuchará Device Portal para las conexiones HTTPS.
     
 En la misma ruta de acceso de regkey, también puedes desactivar el requisito de autenticación:
-- `UseDefaultAuthorizer` @ no__t-1 @ no__t-2 para deshabilitado, `1` para habilitado.  
+- `UseDefaultAuthorizer` - `0` para deshabilitar `1` para habilitado.  
     - Esto controla tanto el requisito de autenticación básica para cada conexión como el redireccionamiento de HTTP a HTTPS.  
     
 ### <a name="command-line-options-for-device-portal"></a>Opciones de línea de comandos para el Portal de dispositivos
@@ -113,7 +113,7 @@ A continuación se muestran algunos errores comunes que pueden surgir al configu
 
 Puede obtener este error al intentar instalar los paquetes para desarrolladores en una versión preliminar de Windows 10. Estos paquetes de características a petición (du) se hospedan en Windows Update y su descarga en las compilaciones preliminares requiere la participación en el vuelo. Si la instalación no ha optado por el lanzamiento de la combinación correcta de compilación y anillo, la carga no se podrá descargar. Haga doble comprobación de lo siguiente:
 
-1. Vaya a **configuración > actualizar & seguridad > programa de Windows Insider** y confirme que la sección **cuenta de Windows Insider** tiene la información de la cuenta correcta. Si no ve esa sección, seleccione **vincular una cuenta de Windows Insider**, agregue su cuenta de correo electrónico y confirme que aparece en el encabezado de la **cuenta de Windows Insider** (es posible que deba seleccionar **vincular una cuenta de Windows Insider** una segunda vez a en realidad, vincule una cuenta recién agregada).
+1. Vaya a **configuración > actualizar & seguridad > programa de Windows Insider** y confirme que la sección **cuenta de Windows Insider** tiene la información de la cuenta correcta. Si no ve esa sección, seleccione **vincular una cuenta de Windows Insider**, agregue su cuenta de correo electrónico y confirme que aparece en el encabezado de la **cuenta de Windows Insider** (es posible que deba seleccionar **vincular una cuenta de Windows Insider** una segunda vez para vincular una cuenta recién agregada).
  
 2. En **¿Qué tipo de contenido desea recibir?** , asegúrese de que está seleccionado el **desarrollo activo de Windows** .
  
@@ -121,15 +121,15 @@ Puede obtener este error al intentar instalar los paquetes para desarrolladores 
  
 4. Ahora debería poder instalar el FoDs. Si ha confirmado que está en Windows Insider rápido y todavía no puede instalar FoDs, proporcione comentarios y adjunte los archivos de registro en **C:\Windows\Logs\CBS**.
 
-### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>SEGURO StartService ERROR de OpenService 1060: El servicio especificado no existe como servicio instalado
+### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>SEGURO StartService: OpenService no se pudo 1060: el servicio especificado no existe como servicio instalado
 
 Puede obtener este error si los paquetes para desarrolladores no están instalados. Sin los paquetes para desarrolladores, no hay ningún servicio de administración web. Intente volver a instalar los paquetes para desarrolladores.
 
-### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbs_e_metered_network"></a>CBS no puede iniciar la descarga porque el sistema está en la red de uso medido (CBS_E_METERED_NETWORK)
+### <a name="cbs-cannot-start-download-because-the-system-is-on-metered-network-cbs_e_metered_network"></a>CBS no puede iniciar la descarga porque el sistema está en una red de uso medido (CBS_E_METERED_NETWORK)
 
 Puede recibir este error si está en una conexión a Internet de uso medido. No podrá descargar los paquetes para desarrolladores en una conexión de uso medido.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Información general de Windows Device portal](device-portal.md)
 * [Referencia de API principal del portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

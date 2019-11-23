@@ -54,7 +54,7 @@ El marco XAML no representa directamente el contenido web de un control [**WebVi
 
 Tampoco es buena idea animar una clase [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement). Además de la disminución del rendimiento, puede causar la desactivación u otras anomalías en las imágenes del vídeo que se reproduzca.
 
-> **Nota**   las recomendaciones de este artículo para **MediaPlayerElement** también se aplican a [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement). **MediaPlayerElement** solo está disponible en Windows 10, versión 1607, por lo que si vas a crear una aplicación para una versión anterior de Windows, debes usar **MediaElement**.
+> **Tenga en cuenta**   las recomendaciones de este artículo para **MediaPlayerElement** también se aplican a [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement). **MediaPlayerElement** solo está disponible en Windows 10, versión 1607, por lo que si vas a crear una aplicación para una versión anterior de Windows, debes usar **MediaElement**.
 
 ### <a name="use-infinite-animations-sparingly"></a>Usar las aplicaciones infinitas moderadamente
 
@@ -66,7 +66,7 @@ La adición de un controlador de [**CompositionTarget.Rendering**](https://docs.
 
 El espacio de nombres [**Windows.UI.Xaml.Media.Animation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation) incluye una biblioteca de alto rendimiento y animaciones suaves que tienen una apariencia coherente con otras animaciones de Windows. Las clases relevantes tienen "Tema" en el nombre, y se describen en [Información general sobre animaciones](https://docs.microsoft.com/windows/uwp/graphics/animations-overview) Esta biblioteca admite muchos escenarios habituales de animación, como la animación de la primera vista de la aplicación y la creación de transiciones de estado y de contenido. Te recomendamos que uses esta biblioteca de animaciones siempre que te sea posible, para mejorar el rendimiento y la coherencia de la interfaz de usuario de las aplicaciones para UWP.
 
-> **Nota**   la biblioteca de animaciones no puede animar todas las propiedades posibles. Para escenarios XAML en los que no se aplica la biblioteca de animaciones, consulta [Animaciones con guion gráfico](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations).
+> **Tenga en cuenta**   la biblioteca de animaciones no puede animar todas las propiedades posibles. Para escenarios XAML en los que no se aplica la biblioteca de animaciones, consulta [Animaciones con guion gráfico](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations).
 
 
 ### <a name="animate-compositetransform3d-properties-independently"></a>Animar propiedades CompositeTransform3D de forma independiente

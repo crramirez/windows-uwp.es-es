@@ -22,7 +22,7 @@ En la Plataforma universal de Windows (UWP), los parámetros son o bien para la 
 
 -   Para el valor devuelto o para un parámetro de salida (un parámetro **ByRef** con el atributo [OutAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.outattribute) en Visual Basic), la matriz siempre es solo de salida. No apliques el atributo ReadOnlyArrayAttribute. El atributo WriteOnlyArrayAttribute se permite en los parámetros de salida, pero es redundante.
 
-    > **Precaución**  El compilador de Visual Basic no aplica reglas de solo salida. Nunca debes leer desde un parámetro de salida; puesto es posible que no contenga **nada**. Asigna siempre una nueva matriz.
+    > **Precaución**  el compilador de Visual Basic no aplica reglas de solo salida. Nunca debes leer desde un parámetro de salida; puesto es posible que no contenga **nada**. Asigna siempre una nueva matriz.
  
 -   Los parámetros que tienen el modificador **ref** (**ByRef** en Visual Basic) no están permitidos. Winmdexp.exe genera un error.
 -   Para un parámetro que se pasa por valor, debes especificar si el contenido de la matriz es para la entrada o la salida aplicando el atributo [ReadOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.readonlyarrayattribute) o el atributo [WriteOnlyArrayAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute). Especificar ambos atributos es un error.
@@ -55,8 +55,8 @@ Te recomendamos que hagas una copia de la matriz de entrada inmediatamente y man
 
 Los parámetros que tienen el atributo ReadOnlyArrayAttribute o el atributo WriteOnlyArrayAttribute se comportan de forma diferente dependiendo de si el llamador está escrito en código nativo o código administrado. Si el llamador está en código nativo (extensiones de componentes de JavaScript o Visual C++), el contenido de la matriz se trata como sigue:
 
--   ReadOnlyArrayAttribute: La matriz se copia cuando la llamada cruza el límite de la interfaz binaria de la aplicación (ABI). Si es necesario, se convierten los elementos. Por lo tanto, los cambios accidentales que realiza el método en una matriz solo de entrada no son visibles para el llamador.
--   WriteOnlyArrayAttribute: El método llamado no puede hacer ninguna suposición sobre el contenido de la matriz original. Por ejemplo, la matriz que recibe el método podría no inicializarse o es posible que contenga valores predeterminados. Se espera que el método establezca valores de todos los elementos en la matriz.
+-   ReadOnlyArrayAttribute: la matriz se copia cuando la llamada cruza los límites de la interfaz binaria (ABI) de la aplicación. Si es necesario, se convierten los elementos. Por lo tanto, los cambios accidentales que realiza el método en una matriz solo de entrada no son visibles para el llamador.
+-   WriteOnlyArrayAttribute: el método llamado no puede hacer ninguna suposición sobre el contenido de la matriz original. Por ejemplo, la matriz que recibe el método podría no inicializarse o es posible que contenga valores predeterminados. Se espera que el método establezca valores de todos los elementos en la matriz.
 
 Si el autor de la llamada es código administrado, la matriz original está disponible para el método llamado, como sería en cualquier llamada al método en .NET. El contenido de la matriz es mutable en el código .NET, por lo que cualquier cambio que realice el método en la matriz es visible para el autor de la llamada. Esto debe recordarse porque afecta a pruebas unitarias escritas para un componente de Windows Runtime. Si las pruebas se escriben en código administrado, el contenido de una matriz aparecerá como mutable durante las pruebas.
 
