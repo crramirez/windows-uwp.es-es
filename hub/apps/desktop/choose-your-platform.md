@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, desarrollo de escritorio
-ms.openlocfilehash: c931991c283bb0b31f55c3e5539eac5ddeda9575
-ms.sourcegitcommit: cf88f5e8e1de476ed2635e791a5e5e82ae4bd8cf
+ms.openlocfilehash: d0d87f8e4b6524471ff5e2ada9012a22641b06d7
+ms.sourcegitcommit: ddf0137929945eddf01041a81aa4d26038e70f46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056851"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74392089"
 ---
 # <a name="choose-your-app-platform"></a>Elección de la plataforma de aplicaciones
 
@@ -69,7 +69,8 @@ Windows Forms es la plataforma original para aplicaciones Windows administradas,
 Para obtener más información sobre Windows Forms, consulta los siguientes artículos:
 
 * [Introducción a Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms)
-* [Crea tu primera aplicación.](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application/)
+* [Crear tu primera aplicación de Windows Forms](/dotnet/framework/winforms/creating-a-new-windows-form)
+* [Tutorial: Crear un visor de imágenes](/visualstudio/ide/tutorial-1-create-a-picture-viewer?view=vs-2019)
 * [Referencia de API (.NET)](https://docs.microsoft.com/dotnet/api/index)
 * [Mejorar las aplicaciones de Windows Forms](/dotnet/framework/winforms/advanced/)
 
