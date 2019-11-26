@@ -33,7 +33,7 @@ En la sección **Detalles de la cuenta**, puedes ver el estado y el tipo de tu c
 
 La sección **Información de contacto** muestra la información suministrada al configurar la cuenta. Usaremos esta información para ponernos en contacto contigo en relación con tu cuenta. El nombre para mostrar del editor que se muestra a los clientes en Store también se muestra aquí.
 
-Puedes editar esta sección si la información de contacto cambia. Para ello, haz clic en **Actualizar** (o selecciona **Información de contacto** en el menú de navegación izquierdo), realiza los cambios y luego haz clic en **Guardar**.
+Puedes editar esta sección si alguno de tus datos de contacto cambia. Para ello, haz clic en **Actualizar** (o selecciona **Información de contacto** en el menú de navegación izquierdo), realiza los cambios y luego haz clic en **Guardar**.
 
 Es posible que al cambiar esta información de contacto debamos comprobar de nuevo tu cuenta, en especial si tienes una cuenta de empresa. El estado de verificación volverá a **Pendiente** mientras llevamos a cabo este proceso. El proceso de verificación puede tardar entre unos días y un par de semanas, y suele incluir una llamada telefónica de nuestro partner de verificación Dun & Bradstreet.
 

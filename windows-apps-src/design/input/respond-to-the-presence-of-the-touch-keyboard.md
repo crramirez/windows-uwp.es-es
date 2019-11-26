@@ -35,7 +35,7 @@ Una vez que esta compatibilidad esté agregada a tu control personalizado, puede
 
 **Requisitos previos**
 
-En este tema se basa en [interacciones de teclado](keyboard-interactions.md).
+Este tema se basa en [interacciones de teclado](keyboard-interactions.md).
 
 Debes tener un conocimiento básico de las interacciones de teclado estándar, el control de la entrada de teclado y los eventos, y la automatización de la interfaz de usuario.
 

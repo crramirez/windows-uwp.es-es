@@ -18,102 +18,102 @@ ms.locfileid: "74260024"
 
 Una vez que hayas [creado tu aplicación reservando un nombre](create-your-app-by-reserving-a-name.md), puedes empezar a trabajar en conseguir que se publique. El primer paso es crear un **envío**.
 
-Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Updates you make to your submission are saved, so you can come back and work on it whenever you're ready.
+Puedes iniciar el envío cuando la aplicación está completa y lista para publicar o puedes empezar a escribir información incluso antes de que hayas escrito una sola línea de código. Las actualizaciones que realice en el envío se guardarán, por lo que puede volver y trabajar en ella siempre que esté listo.
 
 > [!NOTE]
-> You must have an active [developer account](https://developer.microsoft.com/store/register) in [Partner Center](https://partner.microsoft.com/dashboard) in order to submit apps to the Microsoft Store.
+> Debe tener una cuenta de [desarrollador](https://developer.microsoft.com/store/register) activa en el [centro de Partners](https://partner.microsoft.com/dashboard) para poder enviar aplicaciones a la Microsoft Store.
 
-After your app is published, you can publish an updated version by creating another submission in Partner Center. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. To create a new submission for a published app, click **Update** next to the most recent submission shown on its **Overview** page. You can also [remove an app from the Store](guidance-for-app-package-management.md#removing-an-app-from-the-store) if you need to do so (and then make it available again later, if you'd like).
+Una vez publicada la aplicación, puede publicar una versión actualizada mediante la creación de otro envío en el centro de Partners. Crear un nuevo envío permite hacer y publicar los cambios que son necesarios, tanto si cargas nuevos paquetes como si tan solo cambias detalles como el precio o la categoría. Para crear un nuevo envío para una aplicación publicada, haga clic en **Actualizar** junto al envío más reciente que se muestra en su página de **información general** . También puede [quitar una aplicación de la tienda](guidance-for-app-package-management.md#removing-an-app-from-the-store) si tiene que hacerlo (y, a continuación, volver a estar disponible más adelante, si lo desea).
 
 > [!NOTE]
-> This section of the documentation describes how to create an app submission in Partner Center. Como alternativa, puedes usar la [API de envío de Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.
+> En esta sección de la documentación se describe cómo crear un envío de aplicación en el centro de Partners. Como alternativa, puedes usar la [API de envío de Microsoft Store](../monetize/create-and-manage-submissions-using-windows-store-services.md) para automatizar los envíos de aplicaciones.
 
 > [!IMPORTANT]
-> As of October 31, 2018, newly-created products cannot include packages targeting Windows 8.x/Windows Phone 8.x or earlier. For more info, see this [blog post](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
+> A partir del 31 de octubre de 2018, los productos recién creados no pueden incluir paquetes destinados a Windows 8. x/Windows Phone 8. x o una versión anterior. Para obtener más información, consulte esta [entrada de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
-## <a name="app-submission-checklist"></a>Lista de comprobación de envío de aplicaciones
+## <a name="app-submission-checklist"></a>Lista de comprobación de envío de la aplicación
 
 A continuación se incluyen los detalles que puedes proporcionar al crear el envío de tu aplicación, con vínculos a más información.
 
-Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees. You don't have to work on these sections in the order listed here.
+Los elementos que debes proporcionar o especificar se indican a continuación. Algunas áreas son opcionales o tienen valores predeterminados proporcionados que puedes cambiar según lo desees. No tiene que trabajar en estas secciones en el orden que se muestra aquí.
 
 ### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
-| Nombre del campo                    | Notas                                       | Más información                                                             |
+| Nombre del campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Markets**                   | Opción predeterminada: Todos los mercados posibles  | [Define pricing and market selection](define-pricing-and-market-selection.md)         |
-| **Audience**                | Valor predeterminado: Audiencia pública | [Audience](choose-visibility-options.md#audience) |
-| **Discoverability**                | Valor predeterminado: Hacer esta aplicación disponible y detectable en Store | [Discoverability](choose-visibility-options.md#discoverability) |
-| **Schedule**                  | Opción predeterminada: Se lanzará lo antes posible        | [Configure precise release scheduling](configure-precise-release-scheduling.md) |
-| **Base price**                | Necesario                                    | [Set and schedule app pricing](set-and-schedule-app-pricing.md)              |
-| **Prueba gratuita**                | Predeterminado: sin prueba gratuita                      | [Prueba gratuita](set-app-pricing-and-availability.md#free-trial)              |
+| **Mercado**                   | Opción predeterminada: Todos los mercados posibles  | [Definir precios y selección de mercado](define-pricing-and-market-selection.md)         |
+| **Dirigido**                | Valor predeterminado: Audiencia pública | [Dirigido](choose-visibility-options.md#audience) |
+| **Detectabilidad**                | Valor predeterminado: Hacer esta aplicación disponible y detectable en Store | [Detectabilidad](choose-visibility-options.md#discoverability) |
+| **Planea**                  | Opción predeterminada: Se lanzará lo antes posible        | [Configuración de la programación de versiones precisa](configure-precise-release-scheduling.md) |
+| **Precio base**                | Requerido                                    | [Establecimiento y programación de precios de aplicaciones](set-and-schedule-app-pricing.md)              |
+| **Prueba gratuita**                | Valor predeterminado: sin prueba gratuita                      | [Prueba gratuita](set-app-pricing-and-availability.md#free-trial)              |
 | **Precio de oferta**              | Opcional                                    | [Poner aplicaciones y complementos a la venta](put-apps-and-add-ons-on-sale.md)           |
-| **Organizational licensing**    | Valor predeterminado: Permitir que las organizaciones adquieran licencias por volumen | [Organizational licensing options](organizational-licensing.md)        |
+| **Licencias organizativas**    | Valor predeterminado: Permitir que las organizaciones adquieran licencias por volumen | [Opciones de licencia de la organización](organizational-licensing.md)        |
       |
 
 
 ### <a name="properties-page"></a>Página Propiedades
 
-| Nombre del campo                    | Notas                                       | Más información                                                             |
+| Nombre del campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Category and subcategory**  | Necesario                                    | [Category and subcategory table](category-and-subcategory-table.md)       |
-| **Privacy policy URL**            | Obligatorio para muchas aplicaciones. Consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](store-policies.md#105-personal-information) | [Privacy policy URL](enter-app-properties.md#privacy-policy-url)        |
-| **Website**                   | Opcional                                    | [Website](enter-app-properties.md#website)                   |
-| **Support contact info**      | Obligatorio si tu producto está disponible en Xbox; de lo contrario, opcional (pero recomendado)                                   | [Support contact info](enter-app-properties.md#support-contact-info)              |
-| **Game settings**             | Opcional (solo aplicable a los juegos)         | [Game settings](enter-app-properties.md#game-settings) |
-| **Display mode**             | Opcional                   | [Display mode](enter-app-properties.md#display-mode) |
-| **Product declarations**          | Predeterminado: Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble; Windows puede incluir datos de la aplicación en las copias de seguridad automáticas en OneDrive | [Product declarations](app-declarations.md) |
+| **Categoría y Subcategoría**  | Requerido                                    | [Tabla de categoría y Subcategoría](category-and-subcategory-table.md)       |
+| **Dirección URL de la Directiva de privacidad**            | Obligatorio para muchas aplicaciones. Consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](store-policies.md#105-personal-information) | [Dirección URL de la Directiva de privacidad](enter-app-properties.md#privacy-policy-url)        |
+| **Bsitio**                   | Opcional                                    | [Bsitio](enter-app-properties.md#website)                   |
+| **Información de contacto de soporte técnico**      | Obligatorio si tu producto está disponible en Xbox; de lo contrario, opcional (pero recomendado)                                   | [Información de contacto de soporte técnico](enter-app-properties.md#support-contact-info)              |
+| **Configuración del juego**             | Opcional (solo aplicable a los juegos)         | [Configuración del juego](enter-app-properties.md#game-settings) |
+| **Modo de presentación**             | Opcional                   | [Modo de presentación](enter-app-properties.md#display-mode) |
+| **Declaraciones de productos**          | Valor predeterminado: Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble; Windows puede incluir datos de la aplicación en las copias de seguridad automáticas en OneDrive | [Declaraciones de productos](app-declarations.md) |
 | **Requisitos del sistema**      | Opcional                                    | [Requisitos del sistema](enter-app-properties.md#system-requirements)      |
 
 <span/>
 
 ### <a name="age-ratings-page"></a>Página de clasificación por edades
 
-| Nombre del campo                    | Notas                                       | Más información                          |
+| Nombre del campo                    | Notas                                       | Para obtener más información                          |
 |-------------------------------|---------------------------------------------|----------------------------------------|
-| **Age ratings**               | Necesario                                    | [Age ratings](age-ratings.md)          |
+| **Clasificaciones por edades**               | Requerido                                    | [Clasificaciones por edades](age-ratings.md)          |
 
 <span/>
 
 ### <a name="packages-page"></a>Página de paquetes
 
-| Nombre del campo                    | Notas                                  | Más información                          |
+| Nombre del campo                    | Notas                                  | Para obtener más información                          |
 |-------------------------------|----------------------------------------|----------------------------------------|
-| **Package upload control**    | Obligatorio (al menos un paquete)        | [Upload app packages](upload-app-packages.md) |
-| **Device family availability** | Valor predeterminado: En función de los paquetes       | [Device family availability](device-family-availability.md) |
-| **Gradual package rollout**   | Opcional (solo para actualizaciones)            | [Gradual package rollout](gradual-package-rollout.md) |
-| **Mandatory update**          | Opcional (solo para actualizaciones)            | [Mandatory update](upload-app-packages.md#mandatory-update)
+| **Control de carga de paquetes**    | Obligatorio (al menos un paquete)        | [Cargar paquetes de aplicaciones](upload-app-packages.md) |
+| **Disponibilidad de la familia de dispositivos** | Valor predeterminado: En función de los paquetes       | [Disponibilidad de la familia de dispositivos](device-family-availability.md) |
+| **Implementación gradual de paquetes**   | Opcional (solo para actualizaciones)            | [Implementación gradual de paquetes](gradual-package-rollout.md) |
+| **Actualización obligatoria**          | Opcional (solo para actualizaciones)            | [Actualización obligatoria](upload-app-packages.md#mandatory-update)
 
 
-### <a name="store-listings"></a>Descripciones de Store
+### <a name="store-listings"></a>Descripciones de la Tienda
 
-Necesitarás toda la información necesaria como mínimo para uno de los idiomas que admita la aplicación. Te recomendamos que proporciones [descripciones de Store](create-app-store-listings.md) en todos los idiomas que admita la aplicación, y también puedes [proporcionar descripciones de Store en idiomas adicionales](create-app-store-listings.md#store-listing-languages). Para que sea más fácil administrar descripciones múltiples del mismo producto, puedes [importar y exportar descripciones de Store](import-and-export-store-listings.md).
+Necesitarás toda la información necesaria como mínimo para uno de los idiomas que admita la aplicación. Te recomendamos que proporciones [descripciones de la Tienda](create-app-store-listings.md) en todos los idiomas que admita la aplicación, y también puedes [proporcionar descripciones de la Tienda en idiomas adicionales](create-app-store-listings.md#store-listing-languages). Para que sea más fácil administrar descripciones múltiples del mismo producto, puedes [importar y exportar descripciones de Store](import-and-export-store-listings.md).
 
-| Nombre del campo                    | Notas                                       | Más información                                                     |
+| Nombre del campo                    | Notas                                       | Para obtener más información                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
-| **Descripción**               | Necesario                                    | [Write a great app description](write-a-great-app-description.md) |
-| **What's new in this version**   | Opcional                                 | [Notas de la versión](create-app-store-listings.md#whats-new-in-this-version)       |
-| **App features**              | Opcional                                    | [Product features](create-app-store-listings.md#product-features)         |
-| **Screenshots**               | Obligatorio (al menos una captura de pantalla; se recomienda que sean cuatro o más)          | [Screenshots](app-screenshots-and-images.md#screenshots)          |
-| **Store logos**               | Recomendado; necesario para algunas versiones de sistemas operativos | [Store logos](app-screenshots-and-images.md#store-logos)             |
-| **Trailers**                  | Opcional                                    | [Trailers](app-screenshots-and-images.md#trailers)                | 
-| **Windows 10 and Xbox image (16:9 Super hero art)**     | Recomendaciones        | [Windows 10 and Xbox image (16:9 Super hero art)](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
-| **Xbox images**     | Required for proper display if you publish to Xbox        | [Xbox images](app-screenshots-and-images.md#xbox-images) |
-| **Supplemental fields**  | Opcional                                    | [Supplemental fields](create-app-store-listings.md#supplemental-fields) 
-| **Search terms**              | Opcional                                    | [Search terms](create-app-store-listings.md#search-terms)         |
-| **Copyright and trademark info** | Opcional                                 | [Copyright and trademark info](create-app-store-listings.md#copyright-and-trademark-info) |
-| **Additional license terms**  | Opcional                                    | [Additional license terms](create-app-store-listings.md#additional-license-terms) |
-| **Developed by**              | Opcional                                    | [Developed by](create-app-store-listings.md#developed-by)                   |
+| **Descripción**               | Requerido                                    | [Escribir una excelente descripción de la aplicación](write-a-great-app-description.md) |
+| **Novedades de esta versión**   | Opcional                                 | [Notas de la versión](create-app-store-listings.md#whats-new-in-this-version)       |
+| **Características de la aplicación**              | Opcional                                    | [Características del producto](create-app-store-listings.md#product-features)         |
+| **Ventanas**               | Obligatorio (al menos una captura de pantalla; se recomienda que sean cuatro o más)          | [Ventanas](app-screenshots-and-images.md#screenshots)          |
+| **Logotipos de la tienda**               | Recomendado; necesario para algunas versiones de sistemas operativos | [Logotipos de la tienda](app-screenshots-and-images.md#store-logos)             |
+| **Clip**                  | Opcional                                    | [Clip](app-screenshots-and-images.md#trailers)                | 
+| **Imagen de Windows 10 y Xbox (ilustración de 16:9 Super Hero)**     | Recomendado        | [Imagen de Windows 10 y Xbox (ilustración de 16:9 Super Hero)](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+| **Imágenes de Xbox**     | Necesario para la presentación adecuada si se publica en Xbox        | [Imágenes de Xbox](app-screenshots-and-images.md#xbox-images) |
+| **Campos adicionales**  | Opcional                                    | [Campos adicionales](create-app-store-listings.md#supplemental-fields) 
+| **Términos de búsqueda**              | Opcional                                    | [Términos de búsqueda](create-app-store-listings.md#search-terms)         |
+| **Información de copyright y marca comercial** | Opcional                                 | [Información de copyright y marca comercial](create-app-store-listings.md#copyright-and-trademark-info) |
+| **Términos de licencia adicionales**  | Opcional                                    | [Términos de licencia adicionales](create-app-store-listings.md#additional-license-terms) |
+| **Desarrollado por**              | Opcional                                    | [Desarrollado por](create-app-store-listings.md#developed-by)                   |
 
 
 <span/>
 
 ### <a name="submission-options-page"></a>Página de opciones de envío
 
-| Nombre del campo                    | Notas                                       | Más información                                                     |
+| Nombre del campo                    | Notas                                       | Para obtener más información                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
-| **Publishing hold options**     | Valor predeterminado: Publicar este envío tan pronto como supere la certificación (o siguiendo las fechas seleccionadas en la sección Programación)      | [Publishing hold options](manage-submission-options.md#publishing-hold-options)    
-| **Notes for certification**     | Recomendaciones          | [Notes for certification](notes-for-certification.md)             |
-| **Restricted capabilities**     | Required if your product declares any [restricted capabilities](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Restricted capabilities](manage-submission-options.md#publishing-hold-options)       
+| **Opciones de retención de publicación**     | Valor predeterminado: Publicar este envío tan pronto como supere la certificación (o siguiendo las fechas seleccionadas en la sección Programación)      | [Opciones de retención de publicación](manage-submission-options.md#publishing-hold-options)    
+| **Notas para la certificación**     | Recomendado          | [Notas para la certificación](notes-for-certification.md)             |
+| **Funcionalidades restringidas**     | Obligatorio si el producto declara cualquier [funcionalidad restringida](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Funcionalidades restringidas](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

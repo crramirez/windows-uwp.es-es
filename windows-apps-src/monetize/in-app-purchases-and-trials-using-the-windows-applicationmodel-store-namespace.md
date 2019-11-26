@@ -359,8 +359,8 @@ El elemento raíz de este archivo es el elemento **CurrentApp**, que representa 
 |-------------|------------|--------|--------|
 |  [ListingInformation](#listinginformation)  |    Sí        |  1  |  Contiene datos de la descripción de la aplicación.            |
 |  [LicenseInformation](#licenseinformation)  |     Sí       |   1    |   Describe las licencias disponibles para esta aplicación y sus complementos duraderos.     |
-|  [ConsumableInformation](#consumableinformation)  |      Sin      |   0 o 1   |   Describe los complementos consumibles que están disponibles para esta aplicación.      |
-|  [Mecaniza](#simulation)  |     Sin       |      0 o 1      |   Describe cómo las llamadas a diversos métodos [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator) funcionarán en la aplicación durante las pruebas.    |
+|  [ConsumableInformation](#consumableinformation)  |      No      |   0 o 1   |   Describe los complementos consumibles que están disponibles para esta aplicación.      |
+|  [Mecaniza](#simulation)  |     No       |      0 o 1      |   Describe cómo las llamadas a diversos métodos [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator) funcionarán en la aplicación durante las pruebas.    |
 
 <span id="listinginformation" />
 
@@ -373,7 +373,7 @@ Este elemento contiene datos de la descripción de la aplicación. **ListingInfo
 |  Elemento  |  Requerido  |  Cantidad  |  Descripción   |
 |-------------|------------|--------|--------|
 |  [Aplicaciones](#app-child-of-listinginformation)  |    Sí   |  1   |    Proporciona datos sobre la aplicación.         |
-|  [Producto](#product-child-of-listinginformation)  |    Sin  |  0 o más   |      Describe un complemento de la aplicación.     |     |
+|  [Producto](#product-child-of-listinginformation)  |    No  |  0 o más   |      Describe un complemento de la aplicación.     |     |
 
 <span id="app-child-of-listinginformation"/>
 
@@ -405,13 +405,13 @@ Este elemento, proporciona información acerca de la aplicación para un país o
 |  **Descripción**  |    Sí  |  1   |      La descripción de la aplicación para este país o región.       |
 |  **Tarifas**  |    Sí  |  1   |     El precio de la aplicación en este país o región.        |
 |  **CurrencySymbol**  |    Sí  |  1   |     El símbolo de la moneda que se usa en este país o región.        |
-|  **CurrencyCode**  |    Sin  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  |
+|  **CurrencyCode**  |    No  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  |
 
 **MarketData** tiene los atributos siguientes.
 
 |  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
-|  **xml:lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
+|  **XML: lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
 <span id="product-child-of-listinginformation"/>
 
@@ -424,8 +424,8 @@ Este elemento describe un complemento de la aplicación. **Product** es un eleme
 |  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **IdProducto**  |    Sí        |    Contiene la cadena usada por la aplicación para identificar el complemento.           |
-|  **LicenseDuration**  |    Sin        |    Indica el número de días durante los cuales la licencia será válida tras adquirir el artículo. La fecha de caducidad de la nueva licencia creada por la compra de un producto es la fecha de compra más la duración de la licencia. Este atributo se usa solo si el atributo **ProductType ofrece** atributo es **Durable**; este atributo se omite en el caso de complementos consumibles.           |
-|  **ProductType**  |    Sin        |    Contiene un valor para identificar la persistencia del producto desde la aplicación. Los valores admitidos son **Durable** (el predeterminado) y **Consumible**. En el caso de los tipos duraderos (Durable), un elemento [Product](#product-child-of-licenseinformation) identifica información adicional bajo [LicenseInformation](#licenseinformation); en el caso los tipos consumibles, un elemento [Product](#product-child-of-consumableinformation) muestra información adicional bajo [ConsumableInformation](#consumableinformation).           |  |
+|  **LicenseDuration**  |    No        |    Indica el número de días durante los cuales la licencia será válida tras adquirir el artículo. La fecha de caducidad de la nueva licencia creada por la compra de un producto es la fecha de compra más la duración de la licencia. Este atributo se usa solo si el atributo **ProductType ofrece** atributo es **Durable**; este atributo se omite en el caso de complementos consumibles.           |
+|  **ProductType**  |    No        |    Contiene un valor para identificar la persistencia del producto desde la aplicación. Los valores admitidos son **Durable** (el predeterminado) y **Consumible**. En el caso de los tipos duraderos (Durable), un elemento [Product](#product-child-of-licenseinformation) identifica información adicional bajo [LicenseInformation](#licenseinformation); en el caso los tipos consumibles, un elemento [Product](#product-child-of-consumableinformation) muestra información adicional bajo [ConsumableInformation](#consumableinformation).           |  |
 
 <span id="marketdata-child-of-product"/>
 
@@ -440,17 +440,17 @@ Este elemento, proporciona información acerca del complemento para un país o u
 |  **Nombre**  |    Sí   |  1   |   El nombre del complemento en este país o región.        |
 |  **Tarifas**  |    Sí  |  1   |     El precio del complemento en este país o región.        |
 |  **CurrencySymbol**  |    Sí  |  1   |     El símbolo de la moneda que se usa en este país o región.        |
-|  **CurrencyCode**  |    Sin  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  
-|  **Descripción**  |    Sin  |   0 o 1   |      La descripción del complemento para este país o región.       |
-|  **Etiqueta**  |    Sin  |   0 o 1   |      Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) (también denominados etiqueta) para el complemento.       |
-|  **Palabras clave**  |    Sin  |   0 o 1   |      Contiene hasta 10 elementos **Keyword** que contienen las [palabras clave](../publish/enter-add-on-properties.md#keywords) para el complemento.       |
-|  **ImageUri**  |    Sin  |   0 o 1   |      El [identificador URI de la imagen](../publish/create-add-on-store-listings.md#icon) en la descripción del complemento.           |  |
+|  **CurrencyCode**  |    No  |  0 o 1      |      El código de la moneda que se usa en este país o región.         |  
+|  **Descripción**  |    No  |   0 o 1   |      La descripción del complemento para este país o región.       |
+|  **Etiqueta**  |    No  |   0 o 1   |      Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) (también denominados etiqueta) para el complemento.       |
+|  **Palabras clave**  |    No  |   0 o 1   |      Contiene hasta 10 elementos **Keyword** que contienen las [palabras clave](../publish/enter-add-on-properties.md#keywords) para el complemento.       |
+|  **ImageUri**  |    No  |   0 o 1   |      El [identificador URI de la imagen](../publish/create-add-on-store-listings.md#icon) en la descripción del complemento.           |  |
 
 **MarketData** tiene los atributos siguientes.
 
 |  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
-|  **xml:lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
+|  **XML: lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
 <span id="licenseinformation"/>
 
@@ -463,7 +463,7 @@ Este elemento describe las licencias disponibles para esta aplicación y sus pro
 |  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  [Aplicaciones](#app-child-of-licenseinformation)  |    Sí   |  1   |    Describe la licencia de la aplicación.         |
-|  [Producto](#product-child-of-licenseinformation)  |    Sin  |  0 o más   |      Describe el estado de la licencia de un complemento duradero en la aplicación.         |   |
+|  [Producto](#product-child-of-licenseinformation)  |    No  |  0 o más   |      Describe el estado de la licencia de un complemento duradero en la aplicación.         |   |
 
 La tabla siguiente muestra cómo simular algunas condiciones comunes mediante la combinación de valores que estén en los elementos **App** y **Product**.
 
@@ -486,7 +486,7 @@ Este elemento describe la licencia de la aplicación. **App** es un elemento sec
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Sí   |  1   |    Describe el estado actual de la licencia de esta aplicación. El valor **true** indica que la licencia es válida; **false** indica que la licencia no es válida. Normalmente, este valor es **true** tanto si la aplicación tiene un modo de prueba como si no.  Establece este valor en **false** para probar cómo se comporta la aplicación cuando tiene una licencia no válida.           |
 |  **IsTrial**  |    Sí  |  1   |      Describe el estado actual del período de prueba de esta aplicación. El valor **true** indica que la aplicación se está usando durante el período de prueba; **false** indica que la aplicación no está en el período de prueba, bien porque se ha adquirido la aplicación o bien porque ha expirado dicho período de prueba.         |
-|  **ExpirationDate**  |    Sin  |  0 o 1       |     La fecha en la que expira el período de prueba de esta aplicación, en hora universal coordinada (UTC). La fecha debe expresarse como: aaaa-mm-ddThh:mm:ss.ssZ. Por ejemplo, las 05:00 del 19 de enero de 2015 se especificaría como 2015-01-19T05:00:00.00Z. Este elemento es obligatorio si **IsTrial** es **true**. De lo contrario, no es obligatorio.          |  |
+|  **ExpirationDate**  |    No  |  0 o 1       |     La fecha en la que expira el período de prueba de esta aplicación, en hora universal coordinada (UTC). La fecha debe expresarse como: aaaa-mm-ddThh:mm:ss.ssZ. Por ejemplo, las 05:00 del 19 de enero de 2015 se especificaría como 2015-01-19T05:00:00.00Z. Este elemento es obligatorio si **IsTrial** es **true**. De lo contrario, no es obligatorio.          |  |
 
 <span id="product-child-of-licenseinformation"/>
 
@@ -499,14 +499,14 @@ Este elemento describe el estado de la licencia de un complemento duradero en la
 |  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Sí   |  1     |    Describe el estado actual de la licencia de este complemento. El valor **true** indica que el complemento se puede usar; por su parte, **false** indica que el complemento no se puede usar o no se ha adquirido.           |
-|  **ExpirationDate**  |    Sin   |  0 o 1     |     La fecha en la que caduca el complemento, en hora universal coordinada (UTC). La fecha debe expresarse como: aaaa-mm-ddThh:mm:ss.ssZ. Por ejemplo, las 05:00 del 19 de enero de 2015 se especificaría como 2015-01-19T05:00:00.00Z. Si este elemento está presente, el complemento tiene una fecha de caducidad. Si no está presente, el complemento no caduca.  |  
+|  **ExpirationDate**  |    No   |  0 o 1     |     La fecha en la que caduca el complemento, en hora universal coordinada (UTC). La fecha debe expresarse como: aaaa-mm-ddThh:mm:ss.ssZ. Por ejemplo, las 05:00 del 19 de enero de 2015 se especificaría como 2015-01-19T05:00:00.00Z. Si este elemento está presente, el complemento tiene una fecha de caducidad. Si no está presente, el complemento no caduca.  |  
 
 **Product** tiene los atributos siguientes.
 
 |  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **IdProducto**  |    Sí        |   Contiene la cadena usada por la aplicación para identificar el complemento.            |
-|  **OfferId**  |     Sin       |   Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el complemento. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
+|  **OfferId**  |     No       |   Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el complemento. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
 
 <span id="simulation"/>
 
@@ -518,7 +518,7 @@ Este elemento describe cómo las llamadas a diversos métodos [CurrentAppSimulat
 
 |  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
-|  **SimulationMode**  |    Sin        |      Los valores pueden ser **Interactive** o **Automatic**. Cuando este atributo se establece en **Automatic**, los métodos devolverán automáticamente los códigos de error HRESULT especificados. Esto puede usarse cuando se ejecutan casos de prueba automatizados.       |
+|  **SimulationMode**  |    No        |      Los valores pueden ser **Interactive** o **Automatic**. Cuando este atributo se establece en **Automatic**, los métodos devolverán automáticamente los códigos de error HRESULT especificados. Esto puede usarse cuando se ejecutan casos de prueba automatizados.       |
 
 <span id="defaultresponse"/>
 
@@ -552,4 +552,4 @@ Este elemento describe un complemento consumible. **Product** es un elemento sec
 |  **IdProducto**  |    Sí        |   Contiene la cadena usada por la aplicación para identificar el complemento consumible.            |
 |  **TransactionId**  |     Sí       |   Contiene un GUID (en forma de cadena) usado por la aplicación para realizar un seguimiento de la transacción de compra de un consumible por el proceso de suministro. Consulta [Habilita compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)            |
 |  **Estado**  |      Sí      |  Contiene la cadena usada por la aplicación para indicar el estado de suministro de un consumible. Los valores pueden ser **Active**, **PurchaseReverted**, **PurchasePending** o **ServerError**.             |
-|  **OfferId**  |     Sin       |    Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el consumible. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
+|  **OfferId**  |     No       |    Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el consumible. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |

@@ -89,7 +89,7 @@ Los cambios realizados a [**GridView**](https://docs.microsoft.com/uwp/api/Windo
 -   En SeZoUC.xaml, en `ZoomedInItemsPanelTemplate`, establece `Orientation="Horizontal"` y `GroupPadding="0,0,0,20"`.
 -   En SeZoUC.xaml, elimina `ZoomedOutItemsPanelTemplate` y quitar el atributo `ItemsPanel` de la vista alejada.
 
-¡Eso es todo!
+Y eso es todo.
 
 ## <a name="adaptive-ui"></a>Interfaz de usuario adaptativa
 

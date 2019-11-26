@@ -106,8 +106,8 @@ El elemento raíz de este archivo es el elemento **Recibo** que contiene informa
 
 |  Elemento  |  Requerido  |  Cantidad  |  Descripción   |
 |-------------|------------|--------|--------|
-|  [AppReceipt](#appreceipt)  |    Sin        |  0 o 1  |  Contiene información de compra de la aplicación actual.            |
-|  [ProductReceipt](#productreceipt)  |     Sin       |  0 o más    |   Contiene información sobre una compra desde la aplicación de la aplicación actual.     |
+|  [AppReceipt](#appreceipt)  |    No        |  0 o 1  |  Contiene información de compra de la aplicación actual.            |
+|  [ProductReceipt](#productreceipt)  |     No       |  0 o más    |   Contiene información sobre una compra desde la aplicación de la aplicación actual.     |
 |  Firma  |      Sí      |  1   |   Este elemento es un estándar de [construcción XML DSIG](https://www.w3.org/TR/xmldsig-core/). Contiene un elemento de **SignatureValue**, que contiene la firma que puedes usar para validar el recibo, y un elemento de **SignedInfo**.      |
 
 **Receipt** tiene los atributos siguientes.
@@ -129,7 +129,7 @@ Este elemento contiene la información de compra de la aplicación actual.
 
 |  Atributo  |  Descripción   |
 |-------------|-------------------|
-|  **Id**  |    Identifica la compra.           |
+|  **Sesión**  |    Identifica la compra.           |
 |  **AppId**  |     El valor de Nombre de familia de paquete que usa el sistema operativo para la aplicación.           |
 |  **LicenseType**  |    **Completa**, si el usuario ha comprado la versión completa de la aplicación. **Prueba**, si el usuario ha descargado una versión de prueba de la aplicación.           |  
 |  **PurchaseDate**  |    Fecha cuando se adquirió la aplicación.          |  |
@@ -144,7 +144,7 @@ Este elemento contiene información sobre una compra desde la aplicación de la 
 
 |  Atributo  |  Descripción   |
 |-------------|-------------------|
-|  **Id**  |    Identifica la compra.           |
+|  **Sesión**  |    Identifica la compra.           |
 |  **AppId**  |     Identifica la aplicación a través del cual el usuario realizó la compra.           |
 |  **IdProducto**  |     Identifica el producto comprado.           |
 |  **ProductType**  |    Determina el tipo de producto. Actualmente solo admite un valor de **Duradero**.          |  

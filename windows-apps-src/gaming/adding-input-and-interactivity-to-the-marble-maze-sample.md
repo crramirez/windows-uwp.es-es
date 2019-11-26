@@ -413,7 +413,7 @@ while (!m_windowClosed)
 }
 ```
 
-Si la ventana es visible, pasamos **CoreProcessEventsOption::ProcessAllIfPresent** a **ProcessEvents** para procesar todos los eventos en cola y regresar inmediatamente; de lo contrario, pasamos **CoreProcessEventsOption::ProcessOneAndAllPending** para procesar todos los eventos en cola y esperar al siguiente evento nuevo. Una vez que se han procesado los eventos, Marble Maze representa y presenta la siguiente trama.
+Si la ventana es visible, pasamos **CoreProcessEventsOption::ProcessAllIfPresent** a **ProcessEvents** para procesar todos los eventos en cola y regresar inmediatamente; de lo contrario, pasamos **CoreProcessEventsOption::ProcessOneAndAllPending** para procesar todos los eventos en cola y esperar al siguiente evento nuevo. Una vez que se han procesado los eventos, Marble Maze representa y presenta el siguiente marco.
 
 Windows en tiempo de ejecución llama al controlador registrado para cada evento que ha ocurrido. El método **App::SetWindow** registra eventos y reenvía la información del puntero a la clase **MarbleMazeMain**.
 

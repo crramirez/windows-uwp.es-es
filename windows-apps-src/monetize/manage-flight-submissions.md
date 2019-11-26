@@ -1,7 +1,7 @@
 ---
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
 description: Use estos métodos en la API de envío de Microsoft Store para administrar los envíos de paquetes para las aplicaciones registradas en su cuenta del centro de Partners.
-title: Administración de envíos de paquetes piloto
+title: Manage package flight submissions (Administrar envíos de paquetes piloto)
 ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submissions, envíos piloto
@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74259252"
 ---
-# <a name="manage-package-flight-submissions"></a>Administración de envíos de paquetes piloto
+# <a name="manage-package-flight-submissions"></a>Manage package flight submissions (Administrar envíos de paquetes piloto)
 
 La API de envío de Microsoft Store proporciona métodos que puedes usar para administrar envíos de paquete piloto para tus aplicaciones, incluidos los lanzamientos de paquetes graduales. Para obtener una introducción a la API de envío de Microsoft Store, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
@@ -81,7 +81,7 @@ Para crear un envío de un paquete piloto, sigue este proceso.
 
 1. Si todavía no lo ha hecho, complete los requisitos previos descritos en [creación y administración de envíos con Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md), incluida la Asociación de una aplicación Azure ad con la cuenta del centro de Partners y la obtención del identificador de cliente y la clave. Solo tienes que hacerlo una vez; cuando tengas el identificador y la clave de cliente, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.  
 
-2. [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+2. [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 3. [Crea un envío de paquete piloto](create-a-flight-submission.md) ejecutando el siguiente método en la API de envío de Microsoft Store. Este método crea un nuevo envío en curso, que es una copia de tu último envío publicado.
 
@@ -260,9 +260,9 @@ Este recurso tiene los siguientes valores.
 | id            | string  | Identificador del envío.  |
 | flightId           | string  |  Identificador del paquete piloto al que está asociado el envío.  |  
 | status           | string  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Publicación</li><li>ReleaseFailed</li></ul>   |
-| statusDetails           | objeto  |  Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores.  |
+| statusDetails           | object  |  Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores.  |
 | flightPackages           | array  | Contiene [recursos de paquete piloto](#flight-package-object) que proporcionan detalles acerca de cada paquete del envío.   |
-| packageDeliveryOptions    | objeto  | Un [recurso de opciones de entrega de paquete](#package-delivery-options-object) que contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria para el envío.   |
+| packageDeliveryOptions    | object  | Un [recurso de opciones de entrega de paquete](#package-delivery-options-object) que contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria para el envío.   |
 | fileUploadUrl           | string  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes para el envío, carga el archivo ZIP que contiene los paquetes en este URI. Para obtener más información, consulta [Crear un envío de paquete piloto](#create-a-package-flight-submission).  |
 | targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
@@ -276,9 +276,9 @@ Este recurso contiene detalles adicionales sobre el estado de un envío. Este re
 
 | Valor           | Tipo    | Descripción                   |
 |-----------------|---------|------|
-|  errors               |    objeto     |   Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de errores del envío.   |     
-|  warnings               |   objeto      | Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de advertencias del envío.     |
-|  certificationReports               |     objeto    |   Una matriz de [recursos de informe de certificación](#certification-report-object) que proporcionan acceso a los datos del informe de certificación del envío. Si se produce un error en la certificación, puedes examinar estos informes para obtener más información.    |  
+|  errors               |    object     |   Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de errores del envío.   |     
+|  warnings               |   object      | Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de advertencias del envío.     |
+|  certificationReports               |     object    |   Una matriz de [recursos de informe de certificación](#certification-report-object) que proporcionan acceso a los datos del informe de certificación del envío. Si se produce un error en la certificación, puedes examinar estos informes para obtener más información.    |  
 
 
 <span id="status-detail-object" />
@@ -371,7 +371,7 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
-| packageRollout   |   objeto      |   Un [recurso de lanzamiento de paquete](#package-rollout-object) que contiene la configuración del lanzamiento de paquete gradual para el envío.    |  
+| packageRollout   |   object      |   Un [recurso de lanzamiento de paquete](#package-rollout-object) que contiene la configuración del lanzamiento de paquete gradual para el envío.    |  
 | isMandatoryUpdate    | boolean    |  Indica si vas a tratar los paquetes de este envío como obligatorios para la instalación automática de actualizaciones de la aplicación. Para obtener más información sobre los paquetes obligatorios para la instalación automática de actualizaciones de la aplicación, consulta [Descargar e instalar actualizaciones de paquete para tu aplicación](../packaging/self-install-package-updates.md).    |  
 | mandatoryUpdateEffectiveDate    |  fecha   |  La fecha y la hora en que los paquetes de este envío se convierten en obligatorios, en formato ISO 8601 y zona horaria UTC.   |        
 

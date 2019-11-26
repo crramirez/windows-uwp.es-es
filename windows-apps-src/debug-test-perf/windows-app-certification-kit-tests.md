@@ -371,7 +371,7 @@ Inspecciona los recursos definidos en el manifiesto de la aplicación para asegu
 Usa esta tabla como guía.
 
 <table>
-<tr><th>Mensaje de error</th><th>Comentarios</th></tr>
+<tr><th>Mensaje de error</th><th>Observaciones</th></tr>
 <tr><td>
 <p>La imagen {image name} define ambos calificadores Scale y TargetSize; puedes definir un calificador por vez.</p>
 </td><td>

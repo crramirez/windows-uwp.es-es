@@ -29,7 +29,7 @@ Si el efecto recomienda usar HDR, puedes hacerlo de las siguientes maneras:
 
 -   Usa la clase [**HdrVideoControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.HdrVideoControl) para capturar vídeo con el algoritmo de procesamiento HDR integrado de Windows. Para obtener más información, consulta [Controles de dispositivo de captura para captura de vídeos](capture-device-controls-for-video-capture.md).
 
--   Usa [**VariablePhotoSequenceControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.Core.VariablePhotoSequenceController) para capturar una secuencia de fotogramas que después puedas componer mediante una implementación personalizada de HDR. Para obtener más información, consulta [Secuencia de fotos variable](variable-photo-sequence.md).
+-   Usa la clase [**VariablePhotoSequenceControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.Core.VariablePhotoSequenceController) para capturar una secuencia de fotogramas que después puedas componer mediante una implementación personalizada de HDR. Para obtener más información, consulta [Secuencia de fotos variable](variable-photo-sequence.md).
 
 ### <a name="scene-analysis-namespaces"></a>Espacios de nombres de análisis de escena
 
@@ -45,7 +45,7 @@ Efectos de vídeo se implementan mediante dos API, una definición de efecto, qu
 
 En la aplicación, después de inicializar el objeto **MediaCapture**, crea una nueva instancia de [**SceneAnalysisEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffectDefinition).
 
-Registra el efecto con el dispositivo de captura llamando a [**AddVideoEffectAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) en tu objeto **MediaCapture** mediante **SceneAnalysisEffectDefinition** y especificando [**MediaStreamType.VideoPreview**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) para indicar que el efecto debe aplicarse en la secuencia de vista previa de vídeo, en lugar de la secuencia de captura. **AddVideoEffectAsync** devuelve una instancia del efecto agregado. Dado que este método puede usarse con varios tipos de efecto, se debe convertir la instancia devuelta a un objeto [**SceneAnalysisEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffect).
+Registra el efecto con el dispositivo de captura llamando a [**AddVideoEffectAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) en el objeto **MediaCapture** mediante **SceneAnalysisEffectDefinition** y especificando [**MediaStreamType.VideoPreview**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType), para indicar que el efecto debe aplicarse en la secuencia de vista previa del vídeo, en lugar de en la secuencia de captura. **AddVideoEffectAsync** devuelve una instancia del efecto agregado. Dado que este método puede usarse con varios tipos de efecto, se debe convertir la instancia devuelta a un objeto [**SceneAnalysisEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffect).
 
 Para recibir los resultados del análisis de la escena, debes registrar un controlador para el evento [**SceneAnalyzed**](https://docs.microsoft.com/uwp/api/windows.media.core.sceneanalysiseffect.sceneanalyzed).
 

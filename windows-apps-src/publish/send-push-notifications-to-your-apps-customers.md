@@ -70,7 +70,7 @@ Siga estos pasos para crear una notificación en el centro de Partners y enviarl
     * **Add image query (Agregar consulta de imagen)** (tipo de notificación del sistema interactiva). Para obtener más información, consulta [addImageQuery](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual#attributes-and-elements).
     * **Visual (Objeto visual)** . Una imagen, un vídeo o un sonido. Para obtener más información, consulta [visual](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual).
     * **Input (Entrada)** /**Action (Acción)** /**Selection (Selección)** (tipo de notificación del sistema interactivas). De esta forma puedes permitir a los usuarios interactuar con la notificación. Para obtener más información, consulta [Notificaciones del sistema interactivas y adaptables](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md).
-    * **Binding (Enlace)** (tipo de icono interactivo). La plantilla de la notificación del sistema. Para obtener más información, consulta [binding](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding) (en inglés).
+    * **Binding (Enlace)** (tipo de icono interactivo). La plantilla de la notificación del sistema. Para obtener más información, consulta [binding](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-binding).
 
     > [!TIP]
     > Prueba la aplicación [Notifications Visualizer](https://www.microsoft.com/store/apps/9nblggh5xsl1) para diseñar y probar tus iconos adaptables y notificaciones del sistema interactivas.
@@ -125,7 +125,7 @@ Para revisar los datos detallados de cada notificación:
     * **Error de expiración del canal**: no se pudo entregar la notificación porque el canal entre la aplicación y el centro de Partners ha expirado. Por ejemplo, esto puede suceder si el cliente no abre la aplicación en mucho tiempo.
     * **Sending (Enviando)** : la notificación está en la cola de envío.
     * **Sent (Enviada)** : la notificación se ha enviado.
-    * **Launched (Iniciada)** : se ha enviado la notificación, el cliente ha hecho clic en ella y, como resultado, se ha abierto la aplicación. Ten en cuenta solo se realiza el seguimiento de los inicios de las aplicaciones. Las notificaciones que invitan al cliente a realizar otras acciones, como iniciar la Store para dejar una calificación, no se incluyen en este estado.
+    * **Launched (Iniciada)** : se ha enviado la notificación, el cliente ha hecho clic en ella y, como resultado, se ha abierto la aplicación. Ten en cuenta solo se realiza el seguimiento de los inicios de las aplicaciones. Las notificaciones que invitan al cliente a realizar otras acciones, como iniciar la Tienda para dejar una calificación, no se incluyen en este estado.
     * **Unknown (Desconocido)** : no se ha podido determinar el estado de esta notificación.
 
 Para analizar los datos de actividad de los usuarios de todas las notificaciones:

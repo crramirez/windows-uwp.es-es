@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74259795"
 ---
-# <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usar objetos de Windows Runtime en un entorno multiproceso
+# <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a>Usar objetos de Windows Runtime en un entorno multiproceso
 En este artículo se describe la forma en que el .NET Framework C# controla las llamadas desde y Visual Basic código a los objetos proporcionados por el Windows Runtime o por los componentes de Windows Runtime.
 
 En .NET Framework, puedes acceder a cualquier objeto desde varios subprocesos de manera predeterminada, sin un control especial. Lo único que necesitas es una referencia al objeto. En Windows Runtime, estos objetos se denominan *ágiles*. La mayoría de las clases de Windows Runtime son ágiles, pero algunas clases no lo son, e incluso las clases ágiles pueden exigir un control especial.

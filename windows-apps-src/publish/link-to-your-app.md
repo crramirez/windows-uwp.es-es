@@ -1,5 +1,5 @@
 ---
-Description: You can help customers discover your app by linking to your app's listing in the Microsoft Store.
+Description: Puede ayudar a los clientes a detectar la aplicación mediante un vínculo a la lista de la aplicación en el Microsoft Store.
 title: Vincular a la aplicación
 ms.assetid: 5420B65C-7ECE-4364-8959-D1683684E146
 ms.date: 10/31/2018
@@ -16,7 +16,7 @@ ms.locfileid: "74259985"
 # <a name="link-to-your-app"></a>Vincular a la aplicación
 
 
-You can help customers discover your app by linking to your app's listing in the Microsoft Store.
+Puede ayudar a los clientes a detectar la aplicación mediante un vínculo a la lista de la aplicación en el Microsoft Store.
 
 ## <a name="getting-the-link-to-your-apps-store-listing"></a>Obtener el vínculo a la descripción de la aplicación en la Tienda
 
@@ -25,27 +25,27 @@ Para obtener la dirección URL de la descripción de la Tienda de tu aplicación
 Cuando un cliente hace clic en este vínculo, se abre la página de descripción basada en web de la aplicación. En los dispositivos Windows, la aplicación Tienda también se iniciará y mostrará la descripción de tu aplicación.
 
 
-## <a name="linking-to-your-apps-store-listing-with-the-microsoft-store-badge"></a>Linking to your app's Store listing with the Microsoft Store badge
+## <a name="linking-to-your-apps-store-listing-with-the-microsoft-store-badge"></a>Vinculación a la lista de tiendas de la aplicación con el distintivo de Microsoft Store
 
-You can link directly to your app's listing with a custom badge to let customers know your app is in the Microsoft Store.
+Puede vincular directamente a la lista de la aplicación con un distintivo personalizado para que los clientes sepan que la aplicación está en el Microsoft Store.
 
-To create your badge, visit the [Microsoft Store badges](https://developer.microsoft.com/store/badges) page. Debes tener el **Id. de la Tienda** de 12 caracteres de la aplicación para generar el distintivo y un vínculo. Encontrarás el **Id. de la Tienda** de la aplicación en la página [Identidad de la aplicación](view-app-identity-details.md) en la sección **Administración de aplicaciones**.
+Para crear su distintivo, visite la página de [distintivos de Microsoft Store](https://developer.microsoft.com/store/badges) . Debes tener el **Id. de la Tienda** de 12 caracteres de la aplicación para generar el distintivo y un vínculo. Encontrarás el **Id. de la Tienda** de la aplicación en la página [Identidad de la aplicación](view-app-identity-details.md) en la sección **Administración de aplicaciones**.
 
 > [!NOTE]
-> See [App marketing guidelines](app-marketing-guidelines.md) for info and requirements related to your use of the Microsoft Store badge.
+> Consulte las [directrices de marketing de aplicaciones](app-marketing-guidelines.md) para obtener información y conocer los requisitos relacionados con el uso del distintivo de Microsoft Store.
 
 
-## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Linking directly to your app in the Microsoft Store
+## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Vincular directamente a la aplicación en el Microsoft Store
 
-You can create a link that launches the Microsoft Store and goes directly to your app's listing page without opening a browser by using the **ms-windows-store:** URI scheme.
+Puede crear un vínculo que inicie el Microsoft Store y irá directamente a la página de lista de la aplicación sin abrir un explorador mediante el esquema de URI **MS-Windows-Store:** .
 
 Estos vínculos son muy útiles cuando sabes que los usuarios usan un dispositivo Windows y quieres que lleguen directamente a la página de descripción en la Tienda. Por ejemplo, es posible que quieras usar este vínculo después de comprobar las cadenas de agente de usuario en un navegador para confirmar que el sistema operativo del usuario es compatible con la Tienda, o cuando ya te estás comunicando a través de una aplicación para UWP.
 
-To use this URI scheme to link directly to your app's Store listing, append your app's Store ID to this link:
+Para usar este esquema de URI para vincular directamente a la lista de tiendas de la aplicación, Anexe el identificador de almacén de la aplicación a este vínculo:
 
 `ms-windows-store://pdp/?ProductId=`
 
-For more about using the Microsoft Store protocol, see [Launch the Microsoft app](../launch-resume/launch-store-app.md).
+Para obtener más información sobre el uso del Protocolo de Microsoft Store, consulte [Inicio de la aplicación de Microsoft](../launch-resume/launch-store-app.md).
 
  
 

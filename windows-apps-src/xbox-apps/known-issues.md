@@ -17,7 +17,7 @@ ms.locfileid: "74259727"
 
 En este tema se describen los problemas conocidos de UWP en el Programa para desarrolladores de Xbox One. Para obtener más información acerca de este programa, consulta [UWP en Xbox](index.md). 
 
-\[If you came here from a link in an API reference topic, and are looking for Universal device family API information, please see [UWP features that aren't yet supported on Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN).\]
+\[si llegó aquí desde un vínculo en un tema de referencia de API y busca información sobre la API de la familia de dispositivos universales, consulte [características de UWP que todavía no se admiten en Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN).\]
 
 La siguiente lista destaca algunos problemas conocidos que puedes encontrarte, aunque esta no es una lista exhaustiva. 
 
@@ -115,6 +115,6 @@ namespace TestDNLA {
 }
 ```
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [Preguntas más frecuentes](frequently-asked-questions.md)
 - [UWP en Xbox One](index.md)

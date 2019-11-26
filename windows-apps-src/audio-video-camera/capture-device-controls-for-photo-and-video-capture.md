@@ -104,7 +104,7 @@ Por último, en el controlador de la casilla de la linterna de vídeo, define la
 > [!NOTE] 
 >  En algunos dispositivos, la linterna no emite luz, incluso si el objeto [**TorchControl.Enabled**](https://docs.microsoft.com/uwp/api/windows.media.devices.torchcontrol.enabled) se establece en true, a menos que el dispositivo tenga una secuencia de vista previa en ejecución y esté capturando vídeo activamente. El orden de operaciones recomendado es activar la vista previa de vídeo, activar la linterna estableciendo **Enabled** en true y, a continuación, iniciar la captura de vídeo. En algunos dispositivos la linterna se enciende después de iniciar la vista previa. En otros dispositivos, es posible que la linterna no se encienda hasta que se inicie la captura de vídeo.
 
-## <a name="focus"></a>Enfoque
+## <a name="focus"></a>Focus
 
 El objeto [**FocusControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FocusControl) admite tres métodos diferentes usados con frecuencia para ajustar el enfoque de la cámara: autoenfoque continuo, pulsar para enfocar y enfoque manual. Una aplicación de cámara puede admitir los tres métodos, pero para fines de simplificación, en este artículo se explican las tres técnicas por separado. En esta sección también se describe cómo habilitar la luz de la ayuda de foco.
 

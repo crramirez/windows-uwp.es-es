@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74258145"
 ---
-# <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>Preguntas frecuentes y solución de problemas del kit de herramientas para aplicaciones multilingües 4.0
+# <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>Preguntas frecuentes y solución de problemas del Kit de herramientas para aplicaciones multilingües 4.0
 
 Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el Kit de herramientas para aplicaciones multilingües (MAT) 4.0.
 

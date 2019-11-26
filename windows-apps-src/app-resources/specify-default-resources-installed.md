@@ -1,5 +1,5 @@
 ---
-Description: Si la aplicación no tiene recursos que coincidan con la configuración concreta de un dispositivo de cliente, se usan los recursos predeterminados de la aplicación. En este tema se explica cómo especificar cuáles son esos recursos predeterminados.
+Description: Si la aplicación no tiene recursos que coincidan con la configuración concreta de un dispositivo de cliente, se usan los recursos predeterminados de la aplicación. Este tema explica cómo especificar cuáles son esos recursos predeterminados.
 title: Especificar los recursos predeterminados que la aplicación usa
 template: detail.hbs
 ms.date: 11/14/2017
@@ -15,7 +15,7 @@ ms.locfileid: "74254642"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a>Especificar los recursos predeterminados que la aplicación usa
 
-Si la aplicación no tiene recursos que coincidan con la configuración concreta de un dispositivo de cliente, se usan los recursos predeterminados de la aplicación. En este tema se explica cómo especificar cuáles son esos recursos predeterminados.
+Si la aplicación no tiene recursos que coincidan con la configuración concreta de un dispositivo de cliente, se usan los recursos predeterminados de la aplicación. Este tema explica cómo especificar cuáles son esos recursos predeterminados.
 
 Cuando un usuario instala tu aplicación desde la Microsoft Store, la configuración del dispositivo del cliente se compara con los recursos disponibles de la aplicación. Esta coincidencia se realiza solo de manera que los recursos adecuados tengan que descargarse e instalarse para ese usuario. Por ejemplo, se usan las cadenas e imágenes más adecuadas para las preferencias de idioma del usuario, además de la configuración de PPP y la resolución del dispositivo. Por ejemplo, `200` es el valor predeterminado de `scale`, pero puedes invalidar ese valor predeterminado si lo deseas.
 
@@ -103,5 +103,5 @@ Guarda, cierra y recompila el proyecto.
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](tailor-resources-lang-scale-contrast.md)
-* [BCP-47 language tag](https://tools.ietf.org/html/bcp47)
+* [Etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47)
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)

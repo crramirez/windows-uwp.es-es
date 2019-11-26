@@ -28,7 +28,7 @@ Este tema se aplica a las tareas en segundo plano dentro de proceso y a las tare
 
 En este tema se recorre una función de utilidad que registra tareas en segundo plano. Antes de registrar una tarea varias veces, esta función de utilidad primero comprueba registros existentes para evitar los problemas que pueden surgir por registros repetidos. Además puede aplicar una condición del sistema a la tarea en segundo en plano. El tutorial incluye un ejemplo completo de funcionamiento de esta función de utilidad.
 
-**Nota:**  
+**Note**  
 
 Las aplicaciones universales de Windows deben llamar a [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) antes de registrar cualquier tipo de desencadenador en segundo plano.
 
@@ -147,7 +147,7 @@ Comprueba si se encontró la tarea en la lista de registros de tareas en segundo
 
 Después registra la tarea con un nuevo objeto [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder). Este código debe comprobar si el parámetro de la condición es nulo y, si no lo es, agregar la condición al objeto de registro. Devuelve el [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) devuelto por el método [**BackgroundTaskBuilder.Register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register).
 
-> **Tenga en cuenta**  los parámetros de registro de tareas en segundo plano se validan en el momento del registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
+> **Tenga en cuenta**  los parámetros de registro de tareas en segundo plano se validan en el momento del registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se ocupe correctamente de los escenarios en los que se produce un error en el registro de tareas en segundo plano. Si, en cambio, la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 > **Nota** Si vas a registrar una tarea en segundo plano que se ejecuta en el mismo proceso que la aplicación, envía `String.Empty` o `null` para el parámetro `taskEntryPoint`.
 
 El siguiente ejemplo, o bien devuelve la tarea existente, o bien agrega código que registra la tarea en segundo plano (incluida la condición del sistema opcional si la hubiera):

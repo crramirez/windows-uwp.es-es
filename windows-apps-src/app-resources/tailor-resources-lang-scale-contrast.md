@@ -4,7 +4,7 @@ title: Adaptar los recursos al idioma, escala, contraste alto y otros calificado
 template: detail.hbs
 ms.date: 10/10/2017
 ms.topic: article
-keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
+keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
 ms.openlocfilehash: 0d6af9d532ecabe517983e8b56cdf8e1b2a2d812
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
@@ -15,7 +15,7 @@ ms.locfileid: "74254521"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Adaptar los recursos al idioma, escala, contraste alto y otros calificadores
 
-Este tema explica el concepto general de calificadores de recursos, cómo usarlos y la finalidad de cada uno de los nombres de calificador. Consulta [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) para ver una tabla de referencia de todos los valores de calificador posibles.
+En este tema se explica el concepto general de calificadores de recursos, cómo usarlos y la finalidad de cada uno de los nombres de calificador. Consulta [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) para ver una tabla de referencia de todos los valores de calificador posibles.
 
 La aplicación puede cargar activos y recursos adaptados a contextos de tiempo de ejecución, como el idioma de la pantalla, contraste alto, [mostrar el factor de escala](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)y muchos otros. La manera de hacerlo es dar nombres a las carpetas o los archivos de los recursos para que coincidan con los nombres de calificador y valores de calificador que correspondan a esos contextos. Por ejemplo, puede que quieras que tu aplicación cargue un conjunto diferente de activos de imagen en modo de contraste alto.
 
@@ -124,7 +124,7 @@ Es poco probable que necesites el nombre de calificador `configuration`. Puede u
 
 El calificador `configuration` se usa para cargar un recurso que coincida en la mayor medida posible con el valor de la variable de entorno `MS_CONFIGURATION_ATTRIBUTE_VALUE`. Por tanto, puedes poner la variable al valor de la cadena que se ha asignado a los recursos relevantes, por ejemplo `designer` o `test`.
 
-## <a name="contrast"></a>Contraste
+## <a name="contrast"></a>Compare
 
 El calificador `contrast` se usa para proporcionar recursos que se ajusten mejor a la configuración de contraste alto.
 

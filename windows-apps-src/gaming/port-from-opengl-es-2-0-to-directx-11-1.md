@@ -1,6 +1,6 @@
 ---
 title: Migrar de OpenGL ES 2.0 a Direct3D 11
-description: Incluye artículos, información general y tutoriales para portar una canalización de gráficos de OpenGL ES 2.0 a Direct3D 11 y Windows Runtime.
+description: Incluye artículos, información general y tutoriales para portar una canalización de elementos gráficos de OpenGL ES 2.0 a Direct3D 11 y Windows Runtime.
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
 ms.date: 02/08/2017
 ms.topic: article
@@ -17,7 +17,7 @@ ms.locfileid: "74258454"
 
 
 
-Incluye artículos, información general y tutoriales para portar una canalización de gráficos de OpenGL ES 2.0 a Direct3D 11 y Windows Runtime.
+Incluye artículos, información general y tutoriales para portar una canalización de elementos gráficos de OpenGL ES 2.0 a Direct3D 11 y Windows Runtime.
 
 > **Tenga en cuenta**   un paso intermedio para migrar el proyecto de opengl es 2,0 es usar el ángulo para Microsoft Store. ANGLE te permite ejecutar contenido de OpenGL ES en Windows mediante la conversión de llamadas a la API de OpenGL ES en llamadas a la API de DirectX 11. Para obtener más información acerca de ANGLE, ve a [ANGLE para Wiki de Microsoft Store](https://github.com/microsoft/angle/wiki).
 
@@ -37,7 +37,7 @@ Incluye artículos, información general y tutoriales para portar una canalizaci
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="map-concepts-and-infrastructure.md">Asignar OpenGL ES 2,0 a Direct3D 11,1</a></p></td>
-<td align="left"><p>Cuando comiences el proceso de migrar tu arquitectura de gráficos desde OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las diferencias clave entre las API. Los temas de esta sección te ayudarán a planear tu estrategia de migración y los cambios de API que debes realizar cuando traslades el procesamiento de gráficos a Direct3D.</p></td>
+<td align="left"><p>Cuando comiences el proceso para portar la arquitectura de gráficos de OpenGL ES 2.0 a Direct3D por primera vez, familiarízate con las principales diferencias entre las API. Los temas de esta sección te ayudarán a planear tu estrategia de migración y los cambios de API que debes realizar cuando traslades el procesamiento de gráficos a Direct3D.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md">Cómo: trasladar un representador simple de OpenGL ES 2,0 a Direct3D 11,1</a></p></td>

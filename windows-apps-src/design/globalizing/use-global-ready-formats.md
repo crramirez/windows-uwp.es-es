@@ -1,6 +1,6 @@
 ---
 Description: Diseña una aplicación que todo el mundo pueda usar empleando el formato adecuado en fechas, horas, números de teléfono y divisas. Así podrás adaptar la aplicación más adelante a otras culturas, regiones e idiomas del mercado global.
-title: Globalizar los formatos de fecha/hora/número
+title: Globalizar los formatos de fecha, hora y número
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 template: detail.hbs
 ms.date: 11/07/2017
@@ -14,7 +14,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74258050"
 ---
-# <a name="globalize-your-datetimenumber-formats"></a>Globalizar los formatos de fecha/hora/número
+# <a name="globalize-your-datetimenumber-formats"></a>Globalizar los formatos de fecha, hora y número
 
 Diseña una aplicación que todo el mundo pueda usar empleando el formato adecuado en fechas, horas, números de teléfono y divisas. Así podrás adaptar la aplicación más adelante a otras culturas, regiones e idiomas del mercado global.
 

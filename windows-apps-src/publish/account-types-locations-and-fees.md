@@ -168,7 +168,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Montenegro                        | 14 EUR              | 75 EUR           |  
 | Marruecos                           | 158 MAD             | 800 MAD          |  
 | Mozambique                        | 19 USD              | 99 USD           |  
-| Birmano                           | 19 USD              | 99 USD           |  
+| Myanmar                           | 19 USD              | 99 USD           |  
 | Namibia                           | 19 USD              | 99 USD           |  
 | Nauru                             | 19 USD              | 99 USD           |  
 | Nepal                             | 19 USD              | 99 USD           |  

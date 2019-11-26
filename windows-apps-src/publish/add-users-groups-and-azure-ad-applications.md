@@ -179,9 +179,9 @@ Después de agregar o crear una aplicación de Azure AD, puedes volver a la secc
 
 <span id="manage-keys" />
 
-### <a name="manage-keys-for-an-azure-ad-application"></a>Administrar claves para una aplicación de Azure AD
+### <a name="manage-keys-for-an-azure-ad-application"></a>Administrar claves para una aplicación de Azure AD
 
-Si la aplicación de Azure AD lee y escribe datos en Microsoft Azure AD, necesitará una clave. Puede crear claves para una aplicación Azure AD editando su información en el centro de Partners. También puedes quitar las claves que ya no sean necesarias.
+Si la aplicación de Azure AD lee y escribe datos en Microsoft Azure AD, necesitará una clave. Puede crear claves para una aplicación Azure AD editando su información en el centro de Partners. También puedes quitar las claves que ya no sean necesarias.
 
 1.  En la página **usuarios** (en **configuración**de la cuenta), seleccione el nombre de la aplicación Azure ad.
     > [!TIP]

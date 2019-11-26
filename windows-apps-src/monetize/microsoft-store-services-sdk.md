@@ -121,7 +121,7 @@ Después de instalar Microsoft Store Services SDK a través del instalador MSI o
 
 3. En el **Administrador de referencias**, expande **Windows Universal**, haz clic en **Extensiones** y luego selecciona la casilla junto a **Microsoft Engagement Framework**. Esto te permite usar las API en el espacio de nombres [Microsoft.Services.Store.Engagement](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement).
 
-3. Haz clic en **Aceptar**.
+3. Haga clic en **Aceptar**.
 
 > [!NOTE]
 > Si instalaste las bibliotecas del SDK a través de NuGet, el proyecto contendrá una referencia **Microsoft.Services.Store.Engagement**. La referencia **Microsoft.Services.Store.Engagement** representa el paquete de NuGet (en lugar de las bibliotecas que contiene) y puedes omitirla.

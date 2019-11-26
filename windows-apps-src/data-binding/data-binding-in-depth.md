@@ -596,7 +596,7 @@ MainPage.xaml
 
 ## <a name="event-binding-and-icommand"></a>Enlace de eventos e ICommand
 
-[{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) admite una característica denominada enlace de eventos. Con esta característica, puede especificar el controlador para un evento con un enlace, que es una opción adicional sobre el control de eventos con un método en el archivo de código subyacente. Supongamos que tienes una propiedad **RootFrame** en tu clase **MainPage**.
+[{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) admite una característica llamada enlace de eventos. Con esta característica, puede especificar el controlador para un evento con un enlace, que es una opción adicional sobre el control de eventos con un método en el archivo de código subyacente. Supongamos que tienes una propiedad **RootFrame** en tu clase **MainPage**.
 
 ```csharp
 public sealed partial class MainPage : Page

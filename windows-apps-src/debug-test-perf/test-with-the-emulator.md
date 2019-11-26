@@ -565,7 +565,7 @@ Aquí te presentamos la lista de las características de cámara compatibles con
 |--------------------|--------------------------|---------------------------|
 | Resolución         | 640 x 480 (VGA)          | 640 x 480 (VGA) o superior |
 | Autofoco          | Sí                      | Sí                       |
-| Flash              | Sin                       | Sí                       |
+| Flash              | No                       | Sí                       |
 | Zoom               | 2x (digital u óptico)  | 2x (digital u óptico)   |
 | Resolución de vídeo   | 640 x 480 (VGA)          | 640 x 480 (VGA) o superior |
 | Resolución de la vista previa | 640 x 480 (VGA)          | 640 x 480 (VGA)           |

@@ -4,7 +4,7 @@ title: Esquemas de URI
 template: detail.hbs
 ms.date: 10/16/2017
 ms.topic: article
-keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
+keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
 ms.openlocfilehash: 8627bd7f9f405509cb1bff40d94f10552241f4ce
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1

@@ -1,7 +1,7 @@
 ---
 ms.assetid: B071F6BC-49D3-4E74-98EA-0461A1A55EFB
 description: Si tienes un catálogo de aplicaciones y complementos, puedes usar la API de colecciones de Microsoft Store y la API de compras de Microsoft Store para acceder a la información de propiedad de estos productos desde tus servicios.
-title: Administrar los derechos de producto desde un servicio
+title: Administrar los derechos de producto de un servicio
 ms.date: 08/01/2018
 ms.topic: article
 keywords: windows 10, uwp, API de colección de Microsoft Store, API de compra de Microsoft Store, ver productos, conceder productos
@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74259215"
 ---
-# <a name="manage-product-entitlements-from-a-service"></a>Administrar los derechos de producto desde un servicio
+# <a name="manage-product-entitlements-from-a-service"></a>Administrar los derechos de producto de un servicio
 
 Si tienes un catálogo de aplicaciones y complementos, puedes usar la *API de colecciones de Microsoft Store* y la *API de compras de Microsoft Store* para obtener acceso a la información de derechos de estos productos desde tus servicios. Un *derecho* representa el derecho de un cliente de usar una aplicación o complemento que se publica a través de Microsoft Store.
 

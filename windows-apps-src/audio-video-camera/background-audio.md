@@ -14,7 +14,7 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74254299"
 ---
 # <a name="play-media-in-the-background"></a>Reproducir elementos multimedia en segundo plano
-En este artículo se muestra cómo configurar la aplicación para que sigan reproduciéndose los elementos multimedia cuando la aplicación se mueva del primer plano al segundo plano. Esto significa que incluso después de que el usuario haya minimizado la aplicación, haya regresado a la pantalla principal o haya salido de la aplicación de alguna otra manera, la aplicación podrá seguir reproduciendo audio. 
+En este artículo se muestra cómo configurar la aplicación para que sigan reproduciéndose los elementos multimedia cuando la aplicación se mueva del primer plano al segundo plano. Esto significa que, incluso después de que el usuario haya minimizado la aplicación, regresado a la pantalla principal o salido de la aplicación de alguna otra manera, la aplicación podrá seguir reproduciendo audio. 
 
 Entre los escenarios para reproducir audio en segundo plano encontramos:
 
@@ -74,7 +74,7 @@ Crea una variable para realizar el seguimiento de si actualmente estás ejecutan
 
 [!code-cs[DeclareBackgroundMode](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetDeclareBackgroundMode)]
 
-Cuando se genera el evento [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground), establece la variable de seguimiento para indicar que actualmente se está ejecutando en segundo plano. No se deben realizar tareas de larga duración en el evento **EnteredBackground** porque esto puede causar que al usuario la transición a segundo plano le parezca lenta.
+Cuando se genera el evento [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground), establece la variable de seguimiento para indicar que actualmente estás ejecutando en segundo plano. No se deben realizar tareas de larga duración en el evento **EnteredBackground** porque esto puede causar que al usuario la transición a segundo plano le parezca lenta.
 
 [!code-cs[EnteredBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetEnteredBackground)]
 

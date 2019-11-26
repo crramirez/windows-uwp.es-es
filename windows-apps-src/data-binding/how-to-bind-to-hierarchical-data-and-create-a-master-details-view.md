@@ -19,7 +19,7 @@ ms.locfileid: "74255122"
 
 > **Nota**  vea también el [ejemplo de maestro y detalles](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail).
 
-Puedes hacer una vista de tipo maestro-detalles (también conocida como list-details) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) que están enlazadas juntas en una cadena. En este tema se usa la [extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) donde es posible y la extensión más flexible (pero menos eficaz) [de marcado {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) cuando es necesario.
+Puedes hacer una vista de tipo maestro/detalles (también conocida como lista/detalles) de varios niveles de datos jerárquicos al enlazar controles de elementos a instancias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) que están enlazadas juntas en una cadena. En este tema se usa la [extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) donde es posible y la extensión más flexible (pero menos eficaz) [de marcado {Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) cuando es necesario.
 
 Una estructura común de las aplicaciones de Plataforma de Windows universal (UWP) es navegar a distintas páginas de detalles cuando un usuario realiza una selección en una lista maestra. Esto es útil cuando quieres ofrecer una representación visual rica de cada elemento en cada nivel de una jerarquía. Otra opción es mostrar varios niveles de datos en una sola página. Esto es útil cuando quieres mostrar unas pocas listas sencillas que permitirán al usuario navegar rápidamente hasta el elemento que le interesa. En este tema se describe cómo implementar esta interacción. Las instancias de [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) hacen un seguimiento de la selección actual en cada nivel jerárquico.
 
@@ -110,7 +110,7 @@ namespace MasterDetailsBinding
 
 ## <a name="create-the-view"></a>Crear la vista
 
-Después, expón la clase del origen de enlace desde la clase que representa la página de marcado. Para ello, agrega una propiedad de tipo **LeagueList** a **MainPage**.
+Después, expón la clase de origen de enlace desde la clase que representa la página de marcado. Para ello, agrega una propiedad de tipo **LeagueList** a **MainPage**.
 
 ```cs
 namespace MasterDetailsBinding

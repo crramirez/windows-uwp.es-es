@@ -1,12 +1,12 @@
 ---
-title: Help moving from Mac (Unix) to Windows
-description: A guide to help you transition from a Mac (Unix) to a Windows development environment, including shortcut key mapping and a brief overview of concepts that differ between Mac and Windows.
+title: Ayuda para pasar de Mac (UNIX) a Windows
+description: Una guía para ayudarle a realizar la transición de un equipo Mac (UNIX) a un entorno de desarrollo de Windows, incluida la asignación de teclas de método abreviado y una breve descripción de los conceptos que difieren entre Mac y Windows.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
 ms.technology: windows-nodejs
-keywords: Mac to Windows, shortcut key mapping, move from Unix to Windows, transition from Mac to Windows, help moving from MacBook to Surface, how to use Windows for a Macintosh user, switching from Macintosh to Windows, help changing dev environments, Mac OS X to Windows, help moving from Mac to PC
+keywords: Mac a Windows, asignación de teclas de método abreviado, migración de UNIX a Windows, transición de Mac a Windows, ayuda a pasar de MacBook a Surface, cómo usar Windows para un usuario de Macintosh, cambiar de Macintosh a Windows, ayuda para cambiar los entornos de desarrollo, Mac OS X a Windows, ayuda mover de Mac a PC
 ms.localizationpriority: medium
 ms.date: 09/19/2019
 ms.openlocfilehash: 563a8ad659cfff1396049aae78342642d1db3e72
@@ -16,79 +16,79 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74309156"
 ---
-# <a name="guide-for-changing-your-dev-environment-from-mac-to-windows"></a>Guide for changing your dev environment from Mac to Windows
+# <a name="guide-for-changing-your-dev-environment-from-mac-to-windows"></a>Guía para cambiar el entorno de desarrollo de Mac a Windows
 
-The following tips and control equivalents should help you in your transition between a Mac and Windows (or WSL/Linux) development environment.
+Los siguientes consejos y equivalentes de control deben ayudarle en la transición entre un entorno de desarrollo de Mac y Windows (o WSL/Linux).
 
-For app development, the nearest equivalent to Xcode would be [Visual Studio](https://visualstudio.microsoft.com). There is also a version of [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/), if you ever feel the need to go back. For cross-platform source code editing (and a huge number of plug-ins) [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=DX_841432) is the most popular choice.
+Para el desarrollo de aplicaciones, el equivalente más cercano a Xcode sería [Visual Studio](https://visualstudio.microsoft.com). También hay una versión de [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/), si alguna vez se siente la necesidad de volver atrás. En la edición de código fuente multiplataforma (y un gran número de complementos) [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=DX_841432) es la opción más popular.
 
 ## <a name="keyboard-shortcuts"></a>Accesos rápidos de teclado
 
-| **Operation** | **Mac** | **Windows** |
+| **Sesión** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
-| Copiar | Command+C | Ctr+C |
-| Cortar | Command+X | Ctr+X |
-| Pegar | Command+V | Ctr+V |
-| Deshacer | Command+Z | Ctrl+Z |
-| Guardar | Command+S | Ctrl+S |
-| Abre | Command+O | Ctrl+O |
-| Lock computer | Command+Control+Q | WindowKey+L |
-| Show desktop | Command+F3 | WindowKey+D |
-| Minimize windows | COMMAND +M | Windows key+M |
-| Buscar | Command+Space | Tecla Windows |
-| Close active window | Command+W | Control+W |
-| Switch current task | Command+Tab | Alt+Tab |
-| Save screen (Screenshot) | Command+Shift+3 | Windows+Shift+S |
-| Save window | Command+Shift+4 | Windows+Shift+S |
-| View item information or properties | Command+I | Alt+ENTRAR |
- | Select all items | Command+A | Ctrl+E |
-| Select more than one item in a list (noncontiguous) | Command, then click each item | Control, then click each item |
-| Type special characters | Option+ character key | Alt+ character key|
+| Copiar | Comando + C | CTR + C |
+| Cortar | Comando + X | CTR + X |
+| Pegar | Comando + V | CTR + V |
+| Deshacer | Comando + Z | Ctrl+Z |
+| Guardar | Comando + S | Ctrl+S |
+| Abrir | Comando + O | Ctrl+O |
+| Bloquear equipo | Comando + control + Q | WindowKey + L |
+| Mostrar escritorio | Comando + F3 | WindowKey + D |
+| Minimizar ventanas | COMANDO + M | Tecla Windows + M |
+| Buscar | Comando + espacio | Tecla Windows |
+| Cerrar la ventana activa | Comando + W | Control + W |
+| Cambiar tarea actual | Comando + Tab | Alt+Tab |
+| Guardar pantalla (captura de pantalla) | Comando + Mayús + 3 | Windows + Mayús + S |
+| Guardar ventana | Comando + Mayús + 4 | Windows + Mayús + S |
+| Ver información o propiedades del elemento | Comando + I | Alt+ENTRAR |
+ | Seleccionar todos los elementos | Comando + A | Ctrl+A |
+| Seleccionar más de un elemento en una lista (no contiguo) | Y, a continuación, haga clic en cada elemento | Control y, a continuación, haga clic en cada elemento |
+| Escribir caracteres especiales | Opción + tecla de carácter | Alt + tecla de carácter|
 
 ## <a name="trackpad-shortcuts"></a>Accesos directos de panel táctil
 
-Note: Some of these shortcuts require a “Precision Trackpad”, such as the trackpad on Surface devices and some other third party laptops.
+Nota: algunos de estos métodos abreviados requieren un "menú de paneles de precisión", como el de los dispositivos de Surface y otros equipos portátiles de terceros.
 
- **Operation** | **Mac** | **Windows** |
+ **Sesión** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
-| Scroll | Two finger vertical swipe | Two finger vertical swipe |
-| Zoom | Two finger pinch in and out | Two finger pinch in and out |
-| Swipe back and forward between views | Two finger sideways swipe | Two finger sideways swipe |
-| Switch virtual workspaces | Four fingers sideways swipe | Four fingers sideways swipe |
-| Display currently open apps | Four fingers upward swipe | Three fingers upward swipe |
-| Switch between apps | N/D | Slow three finger sideways swipe |
-| Go to desktop | Spread out four fingers | Three finger swipe downwards |
-| Open Cortana / Action center | Two finger slide from right | Three finger tap |
-| Open extra information | Three finger tap | N/D |
-|Show launchpad / start an app | Pinch with four fingers | Tap with four fingers |
+| Scroll | Deslizamiento vertical con dos dedos | Deslizamiento vertical con dos dedos |
+| Zoom | Dos dedos hacia dentro y fuera | Dos dedos hacia dentro y fuera |
+| Deslizar hacia atrás y hacia delante entre las vistas | Deslizar el dedo lateral de dos dedos | Deslizar el dedo lateral de dos dedos |
+| Cambiar áreas de trabajo virtuales | Cuatro dedos en el lado de la derecha | Cuatro dedos en el lado de la derecha |
+| Mostrar aplicaciones abiertas actualmente | Cuatro dedos hacia arriba | Tres dedos hacia arriba |
+| Cambiar entre aplicaciones | N/D | Deslizar rápidamente tres dedos de lado |
+| Ir al escritorio | Distribuir cuatro dedos | Deslizar tres dedos hacia abajo |
+| Abrir Cortana/centro de actividades | Diapositiva con dos dedos de la derecha | Pulsación de tres dedos |
+| Abrir información adicional | Pulsación de tres dedos | N/D |
+|Mostrar Launchpad/iniciar una aplicación | Pinch con cuatro dedos | Puntee con cuatro dedos |
 
-Note: Trackpad options are configurable on both platforms.
+Nota: las opciones de paneles de configuración se pueden configurar en ambas plataformas.
 
 ## <a name="terminal-and-shell"></a>Terminal y shell
 
-Windows provides several alternatives to the Mac's terminal emulator.
+Windows proporciona varias alternativas al emulador de terminal de Mac.
 
-1. The Windows Command Line
+1. La línea de comandos de Windows
 
-The Windows command line will accept DOS commands, and is the most commonly used command line tool on Windows. To open it: Press **Windows+R** to open the **Run** box, then type **cmd** and then click **OK**. To open an administrator command line, type **cmd** and then press **Ctrl+Shift+Enter**. 
+La línea de comandos de Windows aceptará comandos de DOS y es la herramienta de línea de comandos que se usa con más frecuencia en Windows. Para abrirlo: Presione **Windows + R** para abrir el cuadro **Ejecutar** , escriba **cmd** y, a continuación, haga clic en **Aceptar**. Para abrir una línea de comandos de administrador, escriba **cmd** y, a continuación, presione **Ctrl + Mayús + entrar**. 
 
 2. PowerShell
 
-[PowerShell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-6) is a "PowerShell is a task-based command-line shell and scripting language built on .NET. PowerShell helps system administrators and power-users rapidly automate tasks that manage operating systems". In other words, it's a very powerful command line, and is especially loved by system admins.
+[PowerShell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-6) es un "PowerShell es un shell de línea de comandos basado en tareas y un lenguaje de scripting integrado en .net. PowerShell ayuda a los administradores del sistema y a los usuarios avanzados a automatizar rápidamente las tareas que administran los sistemas operativos. En otras palabras, se trata de una línea de comandos muy eficaz y es especialmente querido por los administradores del sistema.
 
-Incidentally, PowerShell is [also available for Mac](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6).
+Casualmente, PowerShell [también está disponible para Mac](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6).
 
 3. Subsistema de Windows para Linux (WSL)
 
-WSL allows you to run a Linux shell within Windows. This means you can run *bash** or other shell, depending on choice and the specific Linux distro installed. Using WSL will provide the kind of environment most familiar to Mac users. For example, you will **ls** to list the files in a current directory, not **dir** as you would with the Windows command line. To learn about instaling and using WSL, see the [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+WSL permite ejecutar un shell de Linux en Windows. Esto significa que puede ejecutar *Bash** u otro Shell, en función de la elección y el distribución de Linux específico instalado. El uso de WSL proporcionará el tipo de entorno más conocido para los usuarios de Mac. Por ejemplo, **LS** para enumerar los archivos en un directorio actual, no en **dir** como lo haría con la línea de comandos de Windows. Para obtener información sobre cómo instalar y usar WSL, consulte la [Guía de instalación del subsistema de Windows para Linux para Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
 ## <a name="apps-and-utilities"></a>Aplicaciones y utilidades
 
- **App** | **Mac** | **Windows** |
+ **Aplicaciones** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
-| Settings and Preferences | System Preferences | Configuración |
-| Administrador de tareas | Activity Monitor | Administrador de tareas |
-| Disk formatting | Disk Utility | Administración de discos |
-| Text editing | TextEdit | Bloc de notas |
-| Event viewing | Console | Visor de eventos |
-| Find files/apps | Command+Space | Tecla Windows |
+| Configuración y preferencias | Preferencias del sistema | Configuración |
+| Administrador de tareas | Monitor de actividad | Administrador de tareas |
+| Formato de disco | Utilidad de disco | Administración de discos |
+| Edición de texto | TextEdit | Bloc de notas |
+| Visualización de eventos | Console | Visor de eventos |
+| Buscar archivos y aplicaciones | Comando + espacio | Tecla Windows |

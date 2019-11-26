@@ -1,6 +1,6 @@
 ---
 ms.assetid: DD8FFA8C-DFF0-41E3-8F7A-345C5A248FC2
-description: En este tema se describe cómo agregar contenido multimedia protegido con PlayReady, a una aplicación para la Plataforma universal de Windows (UWP).
+description: En este tema se describe cómo agregar contenido multimedia protegido con PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
 title: DRM de PlayReady
 ms.date: 02/08/2017
 ms.topic: article
@@ -17,7 +17,7 @@ ms.locfileid: "74256912"
 
 
 
-En este tema se describe cómo agregar contenido multimedia protegido con PlayReady, a una aplicación para la Plataforma universal de Windows (UWP).
+En este tema se describe cómo agregar contenido multimedia protegido con PlayReady a una aplicación para la Plataforma universal de Windows (UWP).
 
 DRM de PlayReady permite a los desarrolladores crear aplicaciones para UWP preparadas para proporcionar contenido de PlayReady al usuario mientras se aplican las reglas de acceso definidas por el proveedor de contenido. En esta sección se describen los cambios realizados en DRM de Microsoft PlayReady para Windows 10 y cómo modificar la aplicación para UWP de PlayReady para admitir los cambios realizados desde la versión de Windows 8.1 anterior a la versión de Windows 10.
  

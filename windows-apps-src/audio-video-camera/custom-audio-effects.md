@@ -27,9 +27,9 @@ Un efecto de audio personalizado se define en una clase que implementa la interf
 1.  En Microsoft Visual Studio, con la solución abierta, ve al menú **Archivo** y selecciona **Agregar-&gt;Nuevo proyecto**.
 2.  Selecciona el tipo de proyecto **Componente de Windows Runtime (Windows Universal)** .
 3.  Para este ejemplo, asigna al proyecto el nombre *AudioEffectComponent*. Se hará referencia a este nombre en el código más adelante.
-4.  Haz clic en **Aceptar**.
+4.  Haga clic en **Aceptar**.
 5.  La plantilla de proyecto crea una clase denominada Class1.cs. En el **Explorador de soluciones**, haz clic con el botón derecho en el icono de Class1.cs y selecciona **Cambiar nombre**.
-6.  Cambia el nombre del archivo a *ExampleAudioEffect.cs*. Visual Studio mostrará un mensaje que pregunta si quieres actualizar todas las referencias con el nuevo nombre. Haz clic en **Sí**.
+6.  Cambia el nombre del archivo a *ExampleAudioEffect.cs*. Visual Studio mostrará un mensaje que pregunta si quieres actualizar todas las referencias con el nuevo nombre. Haga clic en **Sí**.
 7.  Abre **ExampleAudioEffect.cs** y actualiza la definición de clase para implementar la interfaz [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect).
 
 

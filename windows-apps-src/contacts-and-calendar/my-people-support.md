@@ -24,7 +24,7 @@ La función Mis allegados permite a los usuarios a anclar contactos desde una ap
 ## <a name="requirements"></a>Requisitos
 
 + Windows 10 y Microsoft Visual Studio 2019. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++ Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="overview"></a>Introducción
 

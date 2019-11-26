@@ -81,7 +81,7 @@ Para crear un envío de un complemento, sigue este proceso.
 
 1. Si todavía no lo ha hecho, complete los requisitos previos descritos en [creación y administración de envíos con Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md), incluida la Asociación de una aplicación Azure ad con la cuenta del centro de Partners y la obtención del identificador de cliente y la clave. Solo tienes que hacerlo una vez; cuando tengas el identificador y la clave de cliente, puedes volver a usarlos siempre que necesites crear un nuevo token de acceso de Azure AD.  
 
-2. [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. De todos modos, una vez que el token expire, puedes obtener uno nuevo.
+2. [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Debes pasar este token de acceso a los métodos de la API de envío de Microsoft Store. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 3. Ejecuta el siguiente método en la API de envío de Microsoft Store. Este método crea un nuevo envío en curso, que es una copia de tu último envío publicado. Para obtener más información, consulta [Crear un envío de complemento](create-an-add-on-submission.md).
 
@@ -234,14 +234,14 @@ Este recurso tiene los siguientes valores.
 | contentType           | string  |  [Tipo de contenido](../publish/enter-add-on-properties.md#content-type) que se proporciona en el complemento. Puede ser uno de los valores siguientes: <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
 | keywords           | array  | Matriz de cadenas que contienen hasta 10 [palabras clave](../publish/enter-add-on-properties.md#keywords) para el complemento. Gracias a estas palabras clave, la aplicación puede consultar complementos.   |
 | lifetime           | string  |  Duración del complemento. Puede ser uno de los valores siguientes: <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
-| listings           | objeto  |  Diccionario de pares clave-valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es un [recurso de lista](#listing-object) que contiene la información de lista del complemento.  |
-| pricing           | objeto  | Un [recurso de precios](#pricing-object) que contiene información sobre precios para el complemento.   |
+| listings           | object  |  Diccionario de pares clave-valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es un [recurso de lista](#listing-object) que contiene la información de lista del complemento.  |
+| pricing           | object  | Un [recurso de precios](#pricing-object) que contiene información sobre precios para el complemento.   |
 | targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
 | tag           | string  |  Los [datos del desarrollador personalizados](../publish/enter-add-on-properties.md#custom-developer-data) para el complemento (esta información se denominaba anteriormente *tag*).   |
 | visibility  | string  |  Visibilidad del complemento. Puede ser uno de los valores siguientes: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>  |
 | status  | string  |  Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Publicación</li><li>ReleaseFailed</li></ul>   |
-| statusDetails           | objeto  |  Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores. |
+| statusDetails           | object  |  Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores. |
 | fileUploadUrl           | string  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes para el envío, carga el archivo ZIP que contiene los paquetes en este URI. Para obtener más información, consulta [Crear un envío de complemento](#create-an-add-on-submission).  |
 | friendlyName  | string  |  Nombre descriptivo del envío, tal como se muestra en el centro de Partners. Generas este valor cuando creas el envío.  |
 
@@ -254,7 +254,7 @@ Este recurso contiene la [información de lista de un complemento](../publish/cr
 | Valor           | Tipo    | Descripción       |
 |-----------------|---------|------|
 |  description               |    string     |   Descripción de la lista de complementos.   |     
-|  icono               |   objeto      |Un [recurso de icono](#icon-object) que contiene los datos para el icono de la lista de complementos.    |
+|  icono               |   object      |Un [recurso de icono](#icon-object) que contiene los datos para el icono de la lista de complementos.    |
 |  title               |     string    |   Título de la lista de complementos.   |  
 
 <span id="icon-object" />
@@ -276,7 +276,7 @@ Este recurso contiene información sobre precios del complemento. Este recurso t
 
 | Valor           | Tipo    | Descripción    |
 |-----------------|---------|------|
-|  marketSpecificPricings               |    objeto     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados del complemento en mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Los elementos de este diccionario reemplazan el precio base especificado por el valor de *priceId* para el mercado especificado.     |     
+|  marketSpecificPricings               |    object     |  Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados del complemento en mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Los elementos de este diccionario reemplazan el precio base especificado por el valor de *priceId* para el mercado especificado.     |     
 |  sales               |   array      |  **En desuso**. Una matriz de [recursos de venta](#sale-object) que contienen información de ventas del complemento.     |     
 |  priceId               |   string      |  [Franja de precios](#price-tiers) que especifica el [precio base](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability) del complemento.    |    
 |  isAdvancedPricingModel               |   boolean      |  Si está en **true**, tu cuenta de desarrollador tiene acceso al conjunto expandido de franjas de precios de 0,99 USD a 1999,99 USD. Si está en **false**, tu cuenta de desarrollador tiene acceso al conjunto original de franjas de precios de 0,99 USD a 999,99 USD. Para obtener más información sobre las diferentes franjas de precios, consulta [franjas de precios](#price-tiers).<br/><br/>**Nota**&nbsp;&nbsp;este campo es de solo lectura.   |
@@ -301,7 +301,7 @@ Este recurso tiene los siguientes valores.
 |  basePriceId               |   string      |  [Franja de precios](#price-tiers) que se usará para el precio base de la venta.    |     
 |  startDate               |   string      |   Fecha de inicio de la venta en formato ISO 8601.  |     
 |  endDate               |   string      |  Fecha de finalización de la venta en formato ISO 8601.      |     
-|  marketSpecificPricings               |   objeto      |   Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados del complemento en mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Los elementos de este diccionario reemplazan el precio base especificado por el valor *basePriceId* para el mercado especificado.    |
+|  marketSpecificPricings               |   object      |   Diccionario de pares de clave y valor, donde cada clave es un código de país de dos letras ISO 3166-1 alpha-2 y cada valor es una [franja de precios](#price-tiers). Estos elementos representan los [precios personalizados del complemento en mercados específicos](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability). Los elementos de este diccionario reemplazan el precio base especificado por el valor *basePriceId* para el mercado especificado.    |
 
 <span id="status-details-object" />
 
@@ -311,9 +311,9 @@ Este recurso contiene detalles adicionales sobre el estado de un envío. Este re
 
 | Valor           | Tipo    | Descripción       |
 |-----------------|---------|------|
-|  errors               |    objeto     |   Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de errores del envío.   |     
-|  warnings               |   objeto      | Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de advertencias del envío.     |
-|  certificationReports               |     objeto    |   Una matriz de [recursos de informe de certificación](#certification-report-object) que proporcionan acceso a los datos del informe de certificación del envío. Si se produce un error en la certificación, puedes examinar estos informes para obtener más información.    |  
+|  errors               |    object     |   Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de errores del envío.   |     
+|  warnings               |   object      | Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de advertencias del envío.     |
+|  certificationReports               |     object    |   Una matriz de [recursos de informe de certificación](#certification-report-object) que proporcionan acceso a los datos del informe de certificación del envío. Si se produce un error en la certificación, puedes examinar estos informes para obtener más información.    |  
 
 <span id="status-detail-object" />
 

@@ -16,19 +16,19 @@ ms.locfileid: "74258738"
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Configurar el entorno de desarrollo de UWP en Xbox
 
 El entorno de desarrollo de la Plataforma universal de Windows (UWP) en Xbox consta de un equipo de desarrollo conectado a una consola Xbox One a través de una red local.
-The development PC requires Visual Studio 2015 Update 3, Visual Studio 2017, or Visual Studio 2019.
-The development PC also requires Windows 10, the Windows 10 SDK build 14393 or later, and a range of supporting tools.
+El equipo de desarrollo requiere Visual Studio 2015 Update 3, Visual Studio 2017 o Visual Studio 2019.
+El equipo de desarrollo también requiere Windows 10, el SDK de Windows 10 compilación 14393 o posterior, y una variedad de herramientas de soporte técnico.
 
 En este artículo se describen los pasos para configurar y probar el entorno de desarrollo.
 
 ## <a name="visual-studio-setup"></a>Instalación de Visual Studio
 
-1. Install Visual Studio 2015 Update 3, Visual Studio 2017, or Visual Studio 2019. Para obtener más información, consulta [Descargas y herramientas para Windows 10](https://dev.windows.com/downloads). We recommend that you use the latest version of Visual Studio so that you can receive the latest updates for developers and security.
+1. Instale Visual Studio 2015 Update 3, Visual Studio 2017 o Visual Studio 2019. Para obtener más información, consulta [Descargas y herramientas para Windows 10](https://dev.windows.com/downloads). Se recomienda usar la versión más reciente de Visual Studio para poder recibir las actualizaciones más recientes de los desarrolladores y la seguridad.
 
 
-2. If you're installing Visual Studio 2017 or Visual Studio 2019, make sure that you choose the **Universal Windows Platform development** workload. Si eres un desarrollador de C++, asegúrate de que también seleccionas la casilla de verificación **Herramientas de la Plataforma universal de Windows de C++** en el panel **Resumen** de la derecha, bajo **Desarrollo de la Plataforma universal de Windows**. No es parte de la instalación predeterminada.
+2. Si va a instalar Visual Studio 2017 o Visual Studio 2019, asegúrese de elegir la carga de trabajo de **desarrollo de plataforma universal de Windows** . Si eres un desarrollador de C++, asegúrate de que también seleccionas la casilla de verificación **Herramientas de la Plataforma universal de Windows de C++** en el panel **Resumen** de la derecha, bajo **Desarrollo de la Plataforma universal de Windows**. No es parte de la instalación predeterminada.
 
-    ![Install Visual Studio 2019](images/development-environment-setup-1.png)
+    ![Instalar Visual Studio 2019](images/development-environment-setup-1.png)
 
     Si instalas Visual Studio 2015 Update 3, asegúrate de seleccionar la casilla **Herramientas de desarrollo de aplicaciones universales de Windows**.
 
@@ -47,7 +47,7 @@ Antes de poder implementar aplicaciones desde el PC de desarrollo, debes habilit
 
 Para poder implementar una aplicación en tu Xbox One, un usuario debe haber iniciado sesión en la consola. Puedes usar tu cuenta de Xbox Live existente o crear una cuenta nueva para la consola en el modo de desarrollador. 
 
-## <a name="create-your-first-app"></a>Crear tu primera aplicación
+## <a name="create-your-first-app"></a>Crea tu primera aplicación
 
 1. Asegúrate de que el equipo de desarrollo esté en la misma red local que la consola Xbox One de destino. Por lo general, esto significa que deben usar el mismo enrutador y estar en la misma subred. Se recomienda una conexión de red con cable.
 
@@ -113,7 +113,7 @@ Para poder implementar una aplicación en tu Xbox One, un usuario debe haber ini
   
     ![Cuadro de diálogo Emparejar con Visual Studio](images/development-environment-setup-5.png)
 
-    c. Introduce el PIN en el cuadro de diálogo **Emparejar con Visual Studio**. El PIN siguiente es solo un ejemplo; el tuyo será diferente.
+    c. Introduce el PIN en el cuadro de diálogo **Pair with Visual Studio**. El PIN siguiente es solo un ejemplo; el tuyo será diferente.
 
     ![Cuadro de diálogo Emparejar con PIN de Visual Studio](images/devhome_pin.png)
 
@@ -121,9 +121,9 @@ Para poder implementar una aplicación en tu Xbox One, un usuario debe haber ini
 
 Enhorabuena, has creado e implementado tu primera aplicación para UWP en Xbox correctamente.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [Activación del modo de desarrollador de Xbox One](devkit-activation.md)  
-- [Downloads and tools for Windows 10](https://developer.microsoft.com/windows/downloads)  
+- [Descargas y herramientas para Windows 10](https://developer.microsoft.com/windows/downloads)  
 - [Programa Windows Insider](https://insider.windows.com/)  
-- [Introduction to Xbox One tools](introduction-to-xbox-tools.md) 
+- [Introducción a las herramientas de Xbox One](introduction-to-xbox-tools.md) 
 - [UWP en Xbox One](index.md)

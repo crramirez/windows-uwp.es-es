@@ -49,7 +49,7 @@ Cuando se comparten archivos mediante proximidad, la propiedad **Files** del obj
 
 | Valor             | Valor                 |
 |---------------------|-----------------------|
-| Verbo                | mostrar                  |
+| Verb                | mostrar                  |
 | Nombre para mostrar de la acción | Mostrar imágenes         |
 | Evento de contenido       | ShowPicturesOnArrival |
 
@@ -59,7 +59,7 @@ La configuración **Nombre para mostrar de la acción** identifica la cadena que
 
 | Valor             | Valor                      |
 |--------------------:|----------------------------|
-| Verbo                | copy                       |
+| Verb                | copy                       |
 | Nombre para mostrar de la acción | Copiar imágenes en la biblioteca |
 | Evento de contenido       | ShowPicturesOnArrival      |
 
@@ -242,7 +242,7 @@ Aquí te enseñamos a identificar tu aplicación como una opción de **Reproducc
 
 | Valor             | Valor            |
 |---------------------|------------------|
-| Verbo                | mostrar             |
+| Verb                | mostrar             |
 | Nombre para mostrar de la acción | Mostrar imágenes    |
 | Evento de contenido       | \\ImageSource de WPD |
 
@@ -439,7 +439,7 @@ CustomEvent=AutoPlayCustomEventQuickstart
 
 | Valor             | Valor                         |
 |---------------------|-------------------------------|
-| Verbo                | mostrar                          |
+| Verb                | mostrar                          |
 | Nombre para mostrar de la acción | Mostrar archivos                    |
 | Evento de contenido       | AutoPlayCustomEventQuickstart |
 

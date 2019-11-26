@@ -456,7 +456,7 @@ Al crear una propiedad de dependencia, puedes establecer un valor predeterminado
 
 ### <a name="change-notifications"></a>Notificación de cambios
 
-Definir la colección como una propiedad de dependencia no proporciona automáticamente notificaciones para los elementos de la colección cuando el sistema de propiedades invoca el método de devolución de llamadas "PropertyChanged". Si deseas notificaciones para colecciones o elementos de colección, por ejemplo, un escenario de enlace de datos, implementa la interfaz **INotifyPropertyChanged** o **INotifyCollectionChanged**. Para obtener más información, consulta el tema sobre el [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
+Definir la colección como una propiedad de dependencia no proporciona automáticamente notificaciones para los elementos de la colección cuando el sistema de propiedades invoca el método de devolución de llamadas "PropertyChanged". Si deseas notificaciones para colecciones o elementos de colección, por ejemplo, un escenario de enlace de datos, implementa la interfaz **INotifyPropertyChanged** o **INotifyCollectionChanged**. Para obtener más información, consulta el tema [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth).
 
 ### <a name="dependency-property-security-considerations"></a>Consideraciones de seguridad de las propiedades de dependencia
 

@@ -59,15 +59,15 @@ Consulta el tema [Desactivación del modo de desarrollador de Xbox One](devkit-d
 
 ### <a name="i-sold-my-xbox-one-and-left-it-in-developer-mode-how-do-i-deactivate-developer-mode"></a>He vendido mi consola Xbox One y la he dejado en el modo de desarrollador. ¿Cómo puedo desactivar el modo de desarrollador?
 
-If you no longer have access to your Xbox One, you can deactivate it in Windows Partner Center. For details, see the **Deactivate your console using Partner Center** section in the [Xbox One Developer Mode Deactivation](devkit-deactivation.md#deactivate-your-console-using-partner-center) topic. 
+Si ya no tiene acceso a la consola Xbox One, puede desactivarla en el centro de Partners de Windows. Para obtener más información, consulte la sección **desactivación de la consola mediante el centro de Partners** del tema [desactivación del modo de desarrollador de Xbox One](devkit-deactivation.md#deactivate-your-console-using-partner-center) . 
 
-### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>I left the Developer Program using Partner Center but I'm in still Developer Mode. ¿Qué puedo hacer?
+### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>Dejo el programa para desarrolladores con el centro de Partners, pero estoy en modo de desarrollador. ¿Qué puedo hacer?
 
 Inicia la Página principal para desarrolladores y selecciona el botón **Leave developer mode**. La consola se reiniciará en modo comercial. 
 
 ### <a name="can-i-publish-my-app"></a>¿Puedo publicar mi aplicación?
 
-You can [publish apps](../publish/index.md) through Partner Center if you have a [developer account](https://developer.microsoft.com/store/register). Las aplicaciones para UWP creadas y probadas en una consola Xbox One comercial pasarán por el mismo proceso de ingesta, revisión y publicación que Windows realiza hoy en día, con revisiones adicionales para cumplir los estándares actuales de Xbox One.
+Puede [publicar aplicaciones](../publish/index.md) a través del centro de partners si tiene una [cuenta de desarrollador](https://developer.microsoft.com/store/register). Las aplicaciones para UWP creadas y probadas en una consola Xbox One comercial pasarán por el mismo proceso de ingesta, revisión y publicación que Windows realiza hoy en día, con revisiones adicionales para cumplir los estándares actuales de Xbox One.
 
 ### <a name="can-i-publish-my-game"></a>¿Puedo publicar mi juego?
 
@@ -116,7 +116,7 @@ TVHelpers es un conjunto de muestras y bibliotecas de JavaScript y XAML/C# para 
 
 Para obtener más información, consulta el proyecto [TVHelpers](https://github.com/Microsoft/TVHelpers) y la [wiki](https://github.com/Microsoft/TVHelpers/wiki) del proyecto.
 
-## <a name="see-also"></a>Consulta también
-- [Known issues with UWP on Xbox One](known-issues.md)
+## <a name="see-also"></a>Consulte también
+- [Problemas conocidos de UWP en Xbox One](known-issues.md)
 - [UWP en Xbox One](index.md)
 - [UWP en Xbox One](index.md)

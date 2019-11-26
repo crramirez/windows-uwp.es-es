@@ -570,7 +570,7 @@ if (sound == RollingEvent)
 }
 ```
 
-No obstante, para la música de fondo, Marble Maze administra los búferes directamente a fin de tener mayor control sobre la cantidad de memoria utilizada. Si los archivos de música son grandes, puedes secuenciar los datos de música en búferes más pequeños. Hacer esto te ayudará a equilibrar el tamaño del a memoria con la frecuencia de la capacidad del juego para procesar y secuenciar datos de audio.
+No obstante, para la música de fondo, Marble Maze administra los búferes directamente a fin de tener mayor control sobre la cantidad de memoria utilizada. Si los archivos de música son grandes, puedes secuenciar los datos de música en búferes más pequeños. Si haces esto te ayudará a equilibrar el tamaño de la memoria con la frecuencia de la capacidad del juego para procesar y hacer streaming de datos de audio.
 
 > [!TIP]
 > Si el juego tiene una frecuencia de fotogramas baja o variable, procesar el audio en el subproceso principal puede generar pausas o reproducciones inesperadas en el audio porque el motor no tiene suficientes datos de audio en el búfer con los que trabajar. Si el juego es sensible a este problema, considera la posibilidad de procesar audio en un subproceso independiente que no realice representación. Este enfoque es especialmente útil en equipos con varios procesadores, porque el juego puede usar procesadores inactivos.
@@ -583,7 +583,7 @@ La clase **Audio** proporciona métodos como **PlaySoundEffect**, **IsSoundEffec
 m_audio.PlaySoundEffect(FallingEvent);
 ```
 
-El método **Audio::PlaySoundEffect** llama al método [IXAudio2SourceVoice::Start](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-start) para comenzar la reproducción del sonido. Si ya se ha llamado al método **IXAudio2SourceVoice::Start**, la reproducción no se inicia de nuevo. Luego **Audio::PlaySoundEffect** realiza una lógica personalizada para determinados sonidos.
+El método **Audio::PlaySoundEffect** llama al método [IXAudio2SourceVoice::Start](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-start) para comenzar la reproducción del sonido. Si ya se ha llamado al método **IXAudio2SourceVoice::Start**, la reproducción no se inicia de nuevo. De este modo, **Audio::PlaySoundEffect** ejecuta una lógica personalizada para determinados sonidos.
 
 ```cpp
 void Audio::PlaySoundEffect(SoundEvent sound)

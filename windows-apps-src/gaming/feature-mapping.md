@@ -1,6 +1,6 @@
 ---
 title: Asignar características de DirectX 9 a las API de DirectX 11
-description: Comprende cómo se trasladarán las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP).
+description: Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP).
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
 ms.date: 02/08/2017
 ms.topic: article
@@ -24,7 +24,7 @@ ms.locfileid: "74259529"
 -   Asignación de características
 
 
-Comprende cómo se trasladarán las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP).
+Aprende a trasladar las características de tu juego Direct3D 9 a Direct3D 11 y a la Plataforma universal de Windows (UWP).
 
 ## <a name="mapping-direct3d-9-to-directx-11-apis"></a>Asignar Direct3D 9 a las API de DirectX 11
 
@@ -40,7 +40,7 @@ Para obtener una lista completa de las características de  Direct3D 11, consult
 ## <a name="moving-from-direct2d-9-to-direct2d-11"></a>Pasar de Direct2D 9 a Direct2D 11
 
 
-[Direct2D (Windows)](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) sigue siendo una parte importante de los gráficos DirectX y Windows. Todavía puedes usar Direct2D para dibujar juegos 2D y dibujar superposiciones (HUD) sobre Direct3D.
+[Direct2D (Windows)](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) sigue siendo parte importante de los gráficos DirectX y Windows. Todavía puedes usar Direct2D para dibujar juegos 2D y dibujar superposiciones (HUD) sobre Direct3D.
 
 Direct2D se ejecuta encima de Direct3D. Los juegos 2D pueden implementarse en cualquiera de sus API. Por ejemplo, un juego 2D implementado con Direct3D puede usar la proyección ortográfica, establecer valores Z para controlar el orden de dibujo de primitivos y usar sombreadores de píxeles para agregar efectos especiales.
 

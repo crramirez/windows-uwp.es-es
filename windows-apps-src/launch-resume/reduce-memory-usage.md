@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74260458"
 ---
-# <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memoria cuando la aplicación pase a segundo plano
+# <a name="free-memory-when-your-app-moves-to-the-background"></a>Liberar memoria cuando la aplicación pasa a segundo plano
 
 En este artículo se muestra cómo reducir la cantidad de memoria que usa la aplicación cuando pasa al estado de segundo plano para evitar su suspensión o, posiblemente, su finalización.
 
@@ -40,7 +40,7 @@ Dado que la ejecución en segundo plano reducirá los recursos de memoria que la
 
 [!code-cs[RegisterEvents](./code/ReduceMemory/cs/App.xaml.cs#SnippetRegisterEvents)]
 
-Cuando se genera el evento [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground), establece la variable de seguimiento para indicar que actualmente se está ejecutando en segundo plano. Esto será útil cuando escribas el código para reducir el uso de memoria.
+Cuando se genera el evento [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground), establece la variable de seguimiento para indicar que actualmente estás ejecutando en segundo plano. Esto será útil cuando escribas el código para reducir el uso de memoria.
 
 [!code-cs[EnteredBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetEnteredBackground)]
 

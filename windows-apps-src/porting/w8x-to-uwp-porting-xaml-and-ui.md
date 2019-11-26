@@ -116,7 +116,7 @@ Estos son algunos ejemplos más específicos de los cambios en los controles.
 | [**Mytextbox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | En una aplicación Windows Runtime 8. x, la revisión ortográfica está desactivada de forma predeterminada para un [**cuadro de texto**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox). En una aplicación de la tienda de Windows Phone y en una aplicación de Windows 10, está activada de forma predeterminada. |
 | [**Mytextbox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | El tamaño de fuente predeterminado para [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) ha cambiado de 11 a 15. |
 | [**Mytextbox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | El valor predeterminado de [**TextBox.TextReadingOrder**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.textreadingorder) ha cambiado de **Default** a **DetectFromContent**. Si no es lo que quieres, usa **UseFlowDirection**. **Default** está en desuso. |
-| Varios | El color de énfasis se aplica a las aplicaciones de la tienda de Windows Phone y a las aplicaciones de Windows 10, pero no a las aplicaciones de Windows Runtime 8. x.  |
+| Diversos | El color de énfasis se aplica a las aplicaciones de la tienda de Windows Phone y a las aplicaciones de Windows 10, pero no a las aplicaciones de Windows Runtime 8. x.  |
 
 Para obtener más información sobre los controles de aplicaciones para UWP, consulta [Controles por función](https://docs.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function), [Lista de controles](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/) y [Directrices sobre controles](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/index).
 
@@ -194,12 +194,12 @@ En esta tabla se describen los cambios en los estados visuales y los grupos de e
 |                     | PointerOver             |                   | PointerOver         |
 |                     | Pressed                 |                   | Pressed             |
 |                     | PointerOverPressed      |                   | [no disponible]       |
-|                     | Deshabilitado                |                   | [no disponible]       |
+|                     | Deshabilitada                |                   | [no disponible]       |
 |                     | [no disponible]           |                   | PointerOverSelected |
 |                     | [no disponible]           |                   | Selected            |
 |                     | [no disponible]           |                   | PressedSelected     |
 | [no disponible]       |                         | DisabledStates    |                     |
-|                     | [no disponible]           |                   | Deshabilitado            |
+|                     | [no disponible]           |                   | Deshabilitada            |
 |                     | [no disponible]           |                   | Habilitado             |
 | SelectionHintStates |                         | [no disponible]     |                     |
 |                     | VerticalSelectionHint   |                   | [no disponible]       |

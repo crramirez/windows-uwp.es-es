@@ -280,7 +280,7 @@ La tabla siguiente es una pequeña muestra de los métodos abreviados de teclado
 
 | Acción                               | Comando de tecla                                      |
 |--------------------------------------|--------------------------------------------------|
-| Seleccionar todos                           | Ctrl+E                                           |
+| Seleccionar todos                           | Ctrl+A                                           |
 | Seleccionar continuamente                  | Mayús+Tecla de flecha                                  |
 | Guardar                                 | Ctrl+S                                           |
 | Buscar                                 | Ctrl+F                                           |
@@ -403,7 +403,7 @@ A continuación se muestran algunas asignaciones clave entre el teclado, el cont
 | **Teclado**  | **Controlador para juegos**                         | **Control remoto**  |
 |---------------|-------------------------------------|---------------------|
 | Barra espaciadora         | Botón A                            | Botón de selección       |
-| ENTRAR         | Botón A                            | Botón de selección       |
+| Entrar         | Botón A                            | Botón de selección       |
 | Escape        | Botón B                            | Botón Atrás         |
 | Inicio/Fin      | N/D                                 | N/D                 |
 | RePág/AvPág  | Botón de gatillo para desplazamiento vertical, botón superior para desplazamiento horizontal   | N/D                 |
@@ -569,7 +569,7 @@ Puede activarse desde la página Teclado, que se encuentra en Configuración &gt
 
 **NOTA** El teclado en pantalla tiene prioridad sobre el teclado táctil, que no se mostrará si el primero está presente.
 
-![teclado en pantalla](images/keyboard/osk.png)
+![Teclado en pantalla](images/keyboard/osk.png)
 
 ***Teclado en pantalla***
 

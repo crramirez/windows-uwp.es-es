@@ -1,6 +1,6 @@
 ---
 Description: Una aplicación localizada es aquella que puede localizarse a otros mercados, idiomas o regiones sin descubrir defectos funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de sus recursos localizables.
-title: Hacer que tu aplicación sea localizable
+title: Hacer que la aplicación sea localizable
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 template: detail.hbs
 ms.date: 11/07/2017
@@ -14,7 +14,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74258100"
 ---
-# <a name="make-your-app-localizable"></a>Hacer que tu aplicación sea localizable
+# <a name="make-your-app-localizable"></a>Hacer que la aplicación sea localizable
 
 Una aplicación localizada es aquella que puede localizarse para otros mercados, idiomas o regiones sin descubrir defectos funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de sus recursos localizables. Por lo tanto, debes determinar qué recursos de la aplicación deben localizarse. Pregúntate qué tiene que cambiarse si tu aplicación debe localizarse para otros mercados.
 
@@ -101,7 +101,7 @@ Deshabilite la generación automática del. appxbundle estableciendo el atributo
 
 ## <a name="geopolitical-awareness"></a>Reconocimiento geopolítico
 
-Evita agresiones políticas en mapas o cuando hagas referencia a regiones. Los mapas pueden incluir fronteras nacionales e internacionales controvertidas, lo que frecuentemente es un origen de ofensa política. Ten cuidado de hacer que cualquier interfaz de usuario usada para seleccionar una nación haga referencia a ella como &quot;país o región&quot;. Colocar un territorio en disputa en una lista llamada &quot;países&quot;, como en un formulario de direcciones, puede generarte problemas.
+Evita agresiones políticas en mapas o cuando hagas referencia a regiones. Los mapas pueden incluir fronteras nacionales e internacionales controvertidas, lo que frecuentemente es un origen de ofensa política. Ten cuidado de hacer que cualquier UI usada para seleccionar una nación haga referencia a ella como &quot;país o región&quot;. Colocar un territorio en disputa en una lista llamada &quot;países&quot;, como en un formulario de direcciones, puede generarte problemas.
 
 ## <a name="language--and-region-changed-events"></a>Eventos de cambio de idioma y región
 
@@ -171,7 +171,7 @@ Los caracteres en kanji japonés tienen la propiedad de tener más de una lectur
 
 De esta manera, el usuario puede buscar el nombre de la aplicación "希蒼" usando tanto el valor furigana "のあ" (noa) como el valor fonético (mediante la función **GetPhonetic** del Editor de métodos de entrada (IME)) "まれあお" (mare-ao).
 
-El método de ordenación sigue el formato del **Panel de control regional**:
+El método de ordenación sigue el formato del **panel de control regional**:
 
 - En una configuración regional del usuario en japonés,
   - Si está habilitado el furigana, "希蒼" se ordena conforme a "の".

@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74259146"
 ---
-# <a name="getting-started-navigation"></a>Introducción: navegación
+# <a name="getting-started-navigation"></a>Introducción: Navegación
 
 
 ## <a name="adding-navigation"></a>Agregar navegación

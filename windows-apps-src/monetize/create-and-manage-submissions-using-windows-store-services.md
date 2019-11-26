@@ -20,7 +20,7 @@ Use la *API de envío de Microsoft Store* para consultar y crear envíos de apli
 Los siguientes pasos describen el proceso de principio a fin del uso de la API de envío de Microsoft Store:
 
 1.  Asegúrate de que se hayan completado todos los [requisitos previos](#prerequisites).
-3.  Antes de llamar a un método en la API de envío de Microsoft Store, [consigue un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Después de obtener un token, tienes 60 minutos para utilizar este token en llamadas a la API de envío de Microsoft Store antes de que el token expire. Una vez que el token expire, puedes generar uno nuevo.
+3.  Antes de llamar a un método en la API de envío de Microsoft Store, [consigue un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Después de obtener un token, tienes 60 minutos para utilizar este token en llamadas a la API de envío de Microsoft Store antes de que el token expire. Después de que el token expire, puedes generar uno nuevo.
 4.  [Llama a la API de envío de Microsoft Store](#call-the-windows-store-submission-api).
 
 <span id="not_supported" />
@@ -77,7 +77,7 @@ Antes de poder usar la API de envío de Microsoft Store, debe asociar una aplica
 
 ## <a name="step-2-obtain-an-azure-ad-access-token"></a>Paso 2: Obtención de un token de acceso de Azure AD
 
-Antes de llamar a cualquiera de los métodos en la API de envío de Microsoft Store, primero debes obtener un token de acceso de Azure AD para pasarlo al encabezado **Autorización** de cada método en la API. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
+Antes de llamar a cualquiera de los métodos en la API de envío de Microsoft Store, primero debes obtener un token de acceso de Azure AD para pasarlo al encabezado **Autorización** de cada método en la API. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
 
 Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 

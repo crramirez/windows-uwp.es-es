@@ -1,5 +1,5 @@
 ---
-Description: Responde a las acciones de pulsación de tecla desde teclados hardware o software en tus aplicaciones, usando para ello controladores de eventos tanto de clase como de teclado.
+Description: Responde a las acciones de pulsación de tecla desde teclados de hardware o de software en tus aplicaciones, usando para ello controladores de eventos tanto de clase como de teclado.
 title: Eventos de teclado
 ms.assetid: ac500772-d6ed-4a3a-825b-210a9c3c8f59
 label: Keyboard events
@@ -99,7 +99,7 @@ Todos los eventos de teclado usan [**KeyRoutedEventArgs**](https://docs.microsof
 -   [**Reciben**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled)
 -   [**OriginalSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource) (heredado de [**RoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEventArgs))
 
-### <a name="key"></a>Key
+### <a name="key"></a>Tecla
 
 El evento [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) se genera si se presiona una tecla. De igual modo, [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) se genera si se libera una tecla. Por lo general, los eventos se escuchan para procesar un valor de tecla específico. Para determinar qué tecla se presiona o se libera, comprueba el valor [**Key**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key) en los datos del evento. La propiedad **Key** devuelve un valor [**VirtualKey**](https://docs.microsoft.com/uwp/api/Windows.System.VirtualKey). La enumeración **VirtualKey** incluye todas las teclas compatibles.
 
@@ -298,7 +298,7 @@ Observa el siguiente ejemplo de XAML, que controla eventos [**KeyUp**](https://d
 </StackPanel>
 ```
 
-El siguiente ejemplo muestra cómo implementar el controlador de eventos [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) para el contenido XAML correspondiente del ejemplo anterior.
+El siguiente ejemplo muestra cómo implementar el controlador de eventos [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) para el contenido en XAML correspondiente al ejemplo anterior.
 
 ```csharp
 void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)

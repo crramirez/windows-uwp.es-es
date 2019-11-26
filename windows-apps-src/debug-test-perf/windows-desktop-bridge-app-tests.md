@@ -110,7 +110,7 @@ Inspecciona los recursos definidos en el manifiesto de la aplicación para asegu
 **Acción correctiva**  
 Usa la siguiente tabla como guía.
 
-Mensaje de error | Comentarios
+Mensaje de error | Observaciones
 --------------|---------
 La imagen {image name} define ambos calificadores Scale y TargetSize; puedes definir un calificador por vez. | Puedes personalizar imágenes para distintas resoluciones. En el mensaje en sí, {image name}contiene el nombre de la imagen que presenta el error. Asegúrate de que cada imagen defina Scale o TargetSize como calificador. 
 La imagen {image name} no cumple con las restricciones de tamaño.  | Asegúrate de que todas las imágenes de la aplicación cumplan con las restricciones de tamaño apropiado. En el mensaje en sí, {image name}contiene el nombre de la imagen que presenta el error. 

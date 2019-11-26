@@ -33,7 +33,7 @@ La clase **XamlCompositionBrush** proporciona una clase base para los pinceles X
 
 Consulta la sección [**Pinceles**](/windows/uwp/design/style/brushes#xamlcompositionbrushbase) para más información sobre cómo usar pinceles con la interfaz de usuario de XAML.
 
-Para ver ejemplos de código, consulta [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase) en la página de referencia.
+Para ver ejemplos de código, consulta la página de referencia correspondiente a [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
 
 ## <a name="the-xamllight-class"></a>Clase XamlLight
 

@@ -1,5 +1,5 @@
 ---
-Description: This topic defines the terms user profile language list, app manifest language list, and app runtime language list. Utilizaremos estos términos en este y otros temas en esta área de funciones, por lo que es importante que sepas lo que significan.
+Description: En este tema se definen los términos lista de idioma del perfil de usuario, lista de idiomas del manifiesto de la aplicación y lista de idiomas del tiempo de ejecución de la aplicación. Utilizaremos estos términos en este y otros temas en esta área de funciones, por lo que es importante que sepas lo que significan.
 title: Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 template: detail.hbs
@@ -70,7 +70,7 @@ La tercera lista de idiomas de interés es la intersección entre las dos listas
 
 Más concretamente, la lista de idiomas de la aplicación en tiempo de ejecución se compone de estos elementos.
 
-1.  **(Opcional) Invalidación del idioma principal**. La [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride) es una sencilla configuración de invalidación para las aplicaciones que ofrecen a los usuarios su propia elección de idioma independiente, o bien para las aplicaciones con un motivo fundado para invalidar las opciones de idioma predeterminado. Para más información, echa un vistazo a la [Muestra de recursos de la aplicación y localización](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa).
+1.  **(Opcional) Invalidación del idioma principal**. La [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride) es una sencilla configuración de invalidación para las aplicaciones que ofrecen a los usuarios su propia elección de idioma independiente, o bien para las aplicaciones con un motivo fundado para invalidar las opciones de idioma predeterminado. Para más información, echa un vistazo a la [muestra de recursos de la aplicación y localización](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa).
 2.  **Los idiomas del usuario son compatibles con la aplicación**. Esta es la lista de idiomas del perfil de usuario filtrada por la lista de idiomas del manifiesto de la aplicación. Si los idiomas del usuario se filtran en función de aquellos que la aplicación admite, se mantendrá la coherencia en los kits de desarrollo de software (SDK), las bibliotecas de clases, los paquetes de marcos dependientes y la aplicación.
 3.  **Si 1 y 2 están vacíos, entonces el idioma predeterminado o el primer idioma admitido por la aplicación**. Si la lista de idiomas del perfil de usuario no contiene ninguno de los idiomas que admite la aplicación, entonces el idioma de la aplicación en tiempo de ejecución es el primer idioma admitido por la aplicación.
 
@@ -93,29 +93,29 @@ La lista de idiomas de la aplicación en tiempo de ejecución determina los recu
 **Nota** Si el idioma del perfil de usuario y el idioma del manifiesto de la aplicación son variantes regionales de cada uno, se usa la variante regional del usuario como el idioma de la aplicación en tiempo de ejecución. Por ejemplo, si el usuario prefiere en-GB, pero la aplicación admite en-US, el idioma de la aplicación en tiempo de ejecución es en-GB. Esto garantiza que las fechas, las horas y los números tengan un formato más cercano a las expectativas del usuario (en-GB), pero los recursos localizados siguen cargándose (debido a la coincidencia de idiomas) en el idioma admitido por la aplicación (en-US).
 
 ## <a name="qualify-resource-files-with-their-language"></a>Calificar los archivos de recursos con sus idiomas
-Nombra los archivos de recursos o sus carpetas con calificadores de recursos de idiomas. Para saber más sobre los calificadores de recursos, consulta [Adaptar los recursos para idioma, escala, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)). A resource file can be an image (or other asset), or it can be a resource container file, such as a *.resw* that contains text strings.
+Nombra los archivos de recursos o sus carpetas con calificadores de recursos de idiomas. Para saber más sobre los calificadores de recursos, consulta [Adaptar los recursos para idioma, escala, contraste alto y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)). Un archivo de recursos puede ser una imagen (u otro recurso), o puede ser un archivo contenedor de recursos, como un archivo *. resw* que contiene cadenas de texto.
 
-**Note** Even resources in your app's default language must specify the language qualifier. For example, if your app's default language is English (United States), then qualify your assets as `\Assets\Images\en-US\logo.png`.
+**Nota:** Incluso los recursos del idioma predeterminado de la aplicación deben especificar el calificador de idioma. Por ejemplo, si el idioma predeterminado de la aplicación es el inglés (Estados Unidos), califique los recursos como `\Assets\Images\en-US\logo.png`.
 
-- Windows performs complex matching, including across regional variants such as en-US and en-GB. So include the region sub-tag as appropriate. Consulta [Cómo el sistema de gestión de recursos hace coincidir las etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md).
-- Specify a language script sub-tag in the qualifier when there is no Suppress-Script value defined for the language. For example, instead of zh-CN or zh-TW, use zh-Hant, zh-Hant-TW, or zh-Hans (for more detail, see the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry)).
-- For languages that have a single standard dialect, there is no need to include the region qualifier. For example, use ja instead of ja-JP.
+- Windows realiza una coincidencia compleja, incluidas las variantes regionales como en-US y en-GB. Por tanto, incluya la subetiqueta region según corresponda. Consulta [Cómo el sistema de gestión de recursos hace coincidir las etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md).
+- Especifique una subetiqueta de script de idioma en el calificador cuando no haya definido ningún valor de suprimir script para el idioma. Por ejemplo, en lugar de zh-CN o zh-TW, use ZH-hant, ZH-hant-TW o ZH-Hans (para obtener más información, consulte el [registro de subetiquetas del lenguaje IANA](https://www.iana.org/assignments/language-subtag-registry)).
+- En el caso de los idiomas que tienen un único dialecto estándar, no es necesario incluir el calificador region. Por ejemplo, use ja en lugar de ja-JP.
 - Algunas herramientas y otros componentes como los traductores automáticos pueden buscar etiquetas de idioma específicas, como información de dialectos, que son útiles para comprender los datos.
 
-### <a name="not-all-resources-need-to-be-localized"></a>Not all resources need to be localized
+### <a name="not-all-resources-need-to-be-localized"></a>No es necesario localizar todos los recursos
 
-Localization might not be required for all resources.
+La localización podría no ser necesaria para todos los recursos.
 
-- At a minimum, ensure all resources exist in the default language.
-- A subset of some resources might suffice for a closely related language (partial localization). Por ejemplo, puede ser que no toda la interfaz de usuario de tu aplicación se localice en catalán si tu aplicación tiene un conjunto de recursos completo en español. For users who speak Catalan and then Spanish, the resources that are not available in Catalan appear in Spanish.
-- Some resources might require exceptions for specific languages, while the majority of other resources map to a common resource. In this case, mark the resource intended to be used for all languages with the undetermined language tag 'und'. Windows interprets the 'und' language tag as a wildcard (similar to '\*') in that it matches the top app language after any other specific match. Por ejemplo, si algunos recursos son distintos para el finés pero los demás recursos son iguales para todos los idiomas, el recurso de finés debería marcarse con la etiqueta de idioma finés y el resto debería marcarse con 'und'.
-- For resources that are based on a language script, such as a font or height of text, use the undetermined language tag with a specified script: 'und-&lt;script&gt;'. Por ejemplo, para las fuentes latinas `und-Latn\\fonts.css` y cirílicas usa `und-Cryl\\fonts.css`.
+- Como mínimo, asegúrese de que todos los recursos existen en el idioma predeterminado.
+- Un subconjunto de algunos recursos puede bastar para un lenguaje estrechamente relacionado (localización parcial). Por ejemplo, puede ser que no toda la interfaz de usuario de tu aplicación se localice en catalán si tu aplicación tiene un conjunto de recursos completo en español. En el caso de los usuarios que hablan catalán y en español, los recursos que no están disponibles en catalán aparecen en español.
+- Algunos recursos pueden requerir excepciones para lenguajes específicos, mientras que la mayoría de los demás recursos se asignan a un recurso común. En este caso, marque el recurso que se va a usar para todos los idiomas con la etiqueta de idioma sin determinar ' und '. Windows interpreta la etiqueta de idioma ' und ' como un carácter comodín (similar a '\*') en que coincide con el idioma de la aplicación superior después de cualquier otra coincidencia específica. Por ejemplo, si algunos recursos son distintos para el finés pero los demás recursos son iguales para todos los idiomas, el recurso de finés debería marcarse con la etiqueta de idioma finés y el resto debería marcarse con 'und'.
+- En el caso de los recursos que se basan en un script de idioma, como una fuente o un alto de texto, use la etiqueta de idioma indeterminada con un script especificado: ' und&lt;script&gt;'. Por ejemplo, para las fuentes latinas `und-Latn\\fonts.css` y cirílicas usa `und-Cryl\\fonts.css`.
 
 ## <a name="set-the-http-accept-language-request-header"></a>Establecer el encabezado de solicitud Accept Language HTTP
 Considera si los servicios web a los que llamas tienen el mismo grado de localización que tu aplicación. Las solicitudes HTTP realizadas desde aplicaciones UWP y aplicaciones de escritorio en solicitudes web típicas y XMLHttpRequest (XHR) usan el encabezado estándar de solicitud Accept-Language HTTP. De manera predeterminada, el encabezado HTTP se establece en la lista de idiomas del perfil de usuario. Cada idioma de la lista se expande aún más para incluir valores independientes del idioma y una ponderación (q). Por ejemplo, la lista de idiomas de un usuario de fr-FR y en-US da como resultado un encabezado de solicitud Accept-Language HTTP de fr-FR, fr, en-US, en ("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3"). Pero si tu aplicación del tiempo (por ejemplo) muestra una interfaz de usuario en francés (Francia), pero el idioma que está en primer lugar de la lista de preferencias del usuario es el alemán, a continuación, deberás solicitar explícitamente francés (Francia) desde el servicio para que siga siendo coherente dentro de la aplicación.
 
 ## <a name="apis-in-the-windowsglobalization-namespace"></a>API en el espacio de nombres Windows.Globalization.
-Generalmente, las API del espacio de nombres [**Windows.Globalization**](/uwp/api/windows.globalization?branch=live) utilizan la lista de idiomas de la aplicación en tiempo de ejecución para determinar el idioma. Si ninguno tiene un formato que coincida, se utiliza la configuración regional del usuario, Es la misma que se utiliza para el reloj del sistema. La configuración regional del usuario está disponible en **Configuración** > **Hora e idioma** > **Región e idioma** > **Opciones adicionales de fecha, hora y configuración regional** > **Región: Cambiar formatos de fecha, hora o número**. Las API de **Windows.Globalization** también tienen invalidación para especificar una lista de idiomas que se usará en lugar de la lista de idiomas de la aplicación en tiempo de ejecución.
+Generalmente, las API del espacio de nombres [**Windows.Globalization**](/uwp/api/windows.globalization?branch=live) utilizan la lista de idiomas de la aplicación en tiempo de ejecución para determinar el idioma. Si ninguno tiene un formato que coincida, se utiliza la configuración regional del usuario, que es la misma que se usa para el reloj del sistema. La configuración regional del usuario está disponible en **Configuración** > **Hora e idioma** > **Región e idioma** > **Opciones adicionales de fecha, hora y configuración regional** > **Región: Cambiar formatos de fecha, hora o número**. Las API de **Windows.Globalization** también tienen invalidación para especificar una lista de idiomas que se usará en lugar de la lista de idiomas de la aplicación en tiempo de ejecución.
 
 Al utilizar la clase [**Idioma**](/uwp/api/windows.globalization.language?branch=live), puedes inspeccionar detalles acerca de un idioma en particular como el script del idioma, el nombre para mostrar y el nombre nativo.
 
@@ -193,27 +193,27 @@ En la siguiente tabla se incluyen ejemplos de lo que el usuario vería en la int
 </table>
 
 >[!NOTE]
-> For a list of standard country/region codes used by Microsoft, see the [Official Country/Region List](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
+> Para obtener una lista de los códigos de país o región estándar usados por Microsoft, consulte la [lista de países o regiones oficiales](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
 
 ## <a name="important-apis"></a>API importantes
-* [GlobalizationPreferences.Languages](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)
+* [GlobalizationPreferences. Languages](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)
 * [ApplicationLanguages.ManifestLanguages](/uwp/api/windows.globalization.applicationlanguages.ManifestLanguages)
 * [PrimaryLanguageOverride](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride)
-* [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
-* [ResourceContext.Languages](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.Languages)
-* [ApplicationLanguages.Languages](/uwp/api/windows.globalization.applicationlanguages.Languages)
+* [ResourceContext. QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
+* [ResourceContext. Languages](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.Languages)
+* [ApplicationLanguages. Languages](/uwp/api/windows.globalization.applicationlanguages.Languages)
 * [Windows.Globalization](/uwp/api/windows.globalization?branch=live)
 * [Idioma](/uwp/api/windows.globalization.language?branch=live)
 * [GlobalizationPreferences.HomeGeographicRegion](/uwp/api/windows.system.userprofile.globalizationpreferences.HomeGeographicRegion)
 * [GeographicRegion](/uwp/api/windows.globalization.geographicregion?branch=live)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [BCP-47 language tag](https://tools.ietf.org/html/bcp47)
-* [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry)
+* [Etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47)
+* [Registro de subetiqueta del lenguaje IANA](https://www.iana.org/assignments/language-subtag-registry)
 * [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
-* [Supported languages](../../publish/supported-languages.md)
-* [Globalize your date/time/number formats](use-global-ready-formats.md)
+* [Idiomas admitidos](../../publish/supported-languages.md)
+* [Globalizar los formatos de fecha, hora y número](use-global-ready-formats.md)
 * [Cómo el sistema de administración de recursos compara etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 
-## <a name="samples"></a>Ejemplos
-* [Application resources and localization sample](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa)
+## <a name="samples"></a>Muestras
+* [Ejemplo de recursos de aplicación y localización](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa)

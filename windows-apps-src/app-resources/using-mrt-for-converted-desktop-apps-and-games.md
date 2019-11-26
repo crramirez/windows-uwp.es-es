@@ -1,6 +1,6 @@
 ---
 title: Uso de MRT para juegos y aplicaciones de escritorio convertidos
-description: Al empaquetar la aplicación o juego .NET o Win32 como un paquete AppX, puedes aprovechar el sistema de administración de recursos para cargar recursos de una aplicación adaptados al contexto en tiempo de ejecución. Este tema detallado describe las técnicas.
+description: Al empaquetar la aplicación o juego .NET o Win32 como un paquete AppX, puedes aprovechar el sistema de administración de recursos para cargar recursos de una aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. recursos, juegos, centennial, convertidor de aplicaciones de escritorio, mui, ensamblado satélite
@@ -14,7 +14,7 @@ ms.locfileid: "74254749"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Usar el sistema de administración de recursos de Windows 10 en una aplicación o juego heredado.
 
-Con frecuencia, las aplicaciones .NET y Win32 están localizadas en diferentes idiomas, para así ampliar el mercado al que pueden dirigirse. Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación o el juego de .NET o Win32 como un paquete MSIX o AppX, puede aprovechar el sistema de administración de recursos para cargar los recursos de la aplicación adaptados al contexto en tiempo de ejecución. Este tema detallado describe las técnicas.
+Con frecuencia, las aplicaciones .NET y Win32 están localizadas en diferentes idiomas, para así ampliar el mercado al que pueden dirigirse. Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación o el juego de .NET o Win32 como un paquete MSIX o AppX, puede aprovechar el sistema de administración de recursos para cargar los recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
 
 Existen muchas formas para localizar las aplicaciones Win32 tradicionales, pero Windows 8 introdujo un nuevo [sistema de administración de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)) que funciona entre lenguajes de programación y tipos de aplicaciones, además de proporcionar funcionalidad que va más allá de una simple localización. Este sistema se denominará "MRT" en este tema. Históricamente, eso significaba "Tecnología de recursos modernos", pero ha dejado de usarse el término "Modernos". También se puede llamar al administrador de recursos MRM (administrador de recursos modernos) o PRI (índice de recursos del paquete).
 

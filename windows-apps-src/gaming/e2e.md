@@ -528,7 +528,7 @@ C++/CX es un lenguaje con poca sobrecarga y de alto rendimiento que proporciona 
 
 #### <a name="c"></a>C#
 
-C# (pronunciado "si sharp") es un lenguaje moderno e innovador, además de sencillo, eficaz, con seguridad de tipos y orientado a objetos. C# permite desarrollar rápidamente mientras conserva la familiaridad y la expresividad de los lenguajes de estilo C. Aunque es fácil de usar, C# tiene muchas funciones avanzadas de lenguaje como polimorfismo, delegados, expresiones lambda, clausuras, métodos iterador, covarianza y expresiones de Language Integrated Query (LINQ). C# es una excelente opción si te interesa XAML, quieres empezar rápidamente a desarrollar tu juego o tienes experiencia previa con C#. C# se usa principalmente con XAML, así que si quieres usar DirectX, elige C++ en su lugar o escribe parte de tu juego como un componente de C++ que interactúe con DirectX. O bien, ten en cuenta [Win2D](https://github.com/Microsoft/Win2D), una biblioteca de gráficos de modo inmediato de Direct2D para C# y C++.
+C# (pronunciado "si sharp") es un lenguaje moderno e innovador, además de sencillo, eficaz, con seguridad de tipos y orientado a objetos. C# permite desarrollar rápidamente mientras conserva la familiaridad y la expresividad de los lenguajes de estilo C. Aunque es fácil de usar, C# tiene muchas funciones avanzadas de lenguaje como polimorfismo, delegados, expresiones lambda, clausuras, métodos iterador, covarianza y expresiones de Language Integrated Query (LINQ). C# es una excelente opción si te interesa XAML, quieres empezar rápidamente a desarrollar tu juego o tienes experiencia previa con C#. C# se usa principalmente con XAML, así que si quieres usar DirectX, elige C++ en su lugar, o escribe parte de tu juego como un componente de C++ que interactúe con DirectX. O bien, ten en cuenta [Win2D](https://github.com/Microsoft/Win2D), una biblioteca de gráficos de modo inmediato de Direct2D para C# y C++.
 
 <table>
     <colgroup>
@@ -645,7 +645,7 @@ Ahora como parte de la familia de Microsoft, PlayFab es una plataforma back-end 
         <td><a href="https://playfab.com/">Información general de herramientas y servicios</a></td>
     </tr>
     <tr>
-        <td>Tareas iniciales</td>
+        <td>Introducción</td>
         <td><a href="https://api.playfab.com/docs/general-getting-started">Guía de introducción general</a></td>
     </tr>
     <tr>
@@ -1081,7 +1081,7 @@ Aparte del diseño de la experiencia de usuario, el diseño mismo del juego (com
         <td><a href="https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv">Diseño para Xbox y televisión</a></td>
     </tr>
     <tr>
-        <td>Dirigirse a múltiples factores de forma de dispositivos (vídeo)</td>
+        <td>Dirigirse a varios factores de forma de dispositivo (vídeo)</td>
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World">Diseño de juegos para un mundo de Windows Core</a></td>
     </tr>   
 </table>
@@ -1739,7 +1739,7 @@ Para actualizar tu juego publicado, envía un nuevo paquete de la aplicación co
 
 ## <a name="adding-xbox-live-to-your-game"></a>Agregar Xbox Live a tu juego
 
-Xbox Live es una red de juegos de calidad que conecta a millones de jugadores en todo el mundo. Los desarrolladores obtienen acceso a características de Xbox Live que pueden hacer crecer orgánicamente el número de jugadores, incluyendo la presencia en Xbox Live, los marcadores, el almacenamiento en la nube, el hub de juegos, los clubs, las charlas de grupo, Game DVR y mucho más.
+Xbox Live es una red de juegos líder que conecta a millones de jugadores de todo el mundo. Los desarrolladores obtienen acceso a características de Xbox Live que pueden hacer crecer orgánicamente el número de jugadores, incluyendo la presencia en Xbox Live, los marcadores, el almacenamiento en la nube, el hub de juegos, los clubs, las charlas de grupo, Game DVR y mucho más.
 
 > [!Note]
 > Si quieres desarrollar juegos habilitados para Xbox Live, dispones de varias opciones. Para obtener información sobre los distintos programas, consulta [Información general del programa de desarrolladores](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview).

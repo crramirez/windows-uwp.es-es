@@ -99,7 +99,7 @@ Puedes cambiar la propiedad Visibility de un elemento en código o en un estado 
 
 ### <a name="style-resources"></a>Recursos de estilo
 
-No hace falta establecer cada valor individualmente en un control. Suele ser más eficiente agrupar valores de propiedad en un recurso [**Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) y aplicar el Style a un control. Esto suele ocurrir cuando necesites aplicar los mismos valores de propiedad a muchos controles. Para obtener más información sobre los estilos, consulta [Controles de estilo](../controls-and-patterns/xaml-styles.md).
+No hace falta establecer cada valor individualmente en un control. Suele ser más eficiente agrupar valores de propiedad en un recurso [**Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) y aplicar el Style a un control. Esto es especialmente cierto cuando necesites aplicar los mismos valores de propiedad a muchos controles. Para obtener más información sobre los estilos, consulta [Controles de estilo](../controls-and-patterns/xaml-styles.md).
 
 ### <a name="layout-panels"></a>Paneles de diseño
 

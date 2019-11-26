@@ -1,10 +1,10 @@
 ---
 title: Establecer condiciones para ejecutar una tarea en segundo plano
-description: Aprende a establecer condiciones que controlan cuándo se ejecutará tu tarea en segundo plano.
+description: Aprende a establecer condiciones que controlen cuándo se ejecutará tu tarea en segundo plano.
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
 ms.date: 07/06/2018
 ms.topic: article
-keywords: windows 10, uwp, background task
+keywords: Windows 10, UWP, tarea en segundo plano
 ms.localizationpriority: medium
 dev_langs:
 - csharp
@@ -25,7 +25,7 @@ ms.locfileid: "74260417"
 - [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)
 - [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
-Aprende a establecer condiciones que controlan cuándo se ejecutará tu tarea en segundo plano.
+Aprende a establecer condiciones que controlen cuándo se ejecutará tu tarea en segundo plano.
 
 En ocasiones, las tareas en segundo plano requieren que se cumplan ciertas condiciones para que la tarea en segundo plano se desarrolle correctamente. Puedes especificar una o más de las condiciones especificadas por [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) al registrar tu tarea en segundo plano. La condición se comprobará después de que se haya activado el desencadenador. La tarea en segundo plano se pondrá en cola, pero no se ejecutará hasta que se satisfagan todas las condiciones.
 
@@ -98,16 +98,16 @@ BackgroundTaskRegistration ^ task = taskBuilder->Register();
 Para garantizar que la aplicación universal de Windows continúe funcionando correctamente después de publicar una actualización, se debe llamar a [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) y luego a [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) cuando se inicia la aplicación tras su actualización. Para obtener más información, consulta [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md).
 
 > [!NOTE]
-> Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se enfrente correctamente a los escenarios en que se produce un error en el registro de tareas en segundo plano. Si la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
+> Los parámetros de registro de tareas en segundo plano se validan en el momento en que se realiza el registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. Asegúrate de que la aplicación se ocupe correctamente de los escenarios en los que se produce un error en el registro de tareas en segundo plano. Si, en cambio, la aplicación depende de que haya un objeto de registro válido después de intentar registrar una tarea, es posible que se bloquee.
 
 ## <a name="place-multiple-conditions-on-your-background-task"></a>Colocar varias condiciones en tu tarea en segundo plano
 
 Para agregar varias condiciones, tu aplicación realiza varias llamadas al método [**AddCondition**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.addcondition) . Estas llamadas deben recibirse antes de que el registro de la tarea entre en vigor.
 
 > [!NOTE]
-> Take care not to add conflicting conditions to a background task.
+> Tenga cuidado de no agregar condiciones en conflicto a una tarea en segundo plano.
 
-The following snippet shows multiple conditions in the context of creating and registering a background task.
+En el fragmento de código siguiente se muestran varias condiciones en el contexto de la creación y el registro de una tarea en segundo plano.
 
 ```csharp
 // Set up the background task.
@@ -178,7 +178,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>Observaciones
 
 > [!NOTE]
-> Choose conditions for your background task so that it only runs when it's needed, and doesn't run when it shouldn't. Consulta [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) para obtener descripciones de las diferentes condiciones de las tareas en segundo plano.
+> Elija las condiciones de la tarea en segundo plano para que solo se ejecute cuando sea necesario y no se ejecute cuando no sea necesario. Consulta [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) para obtener descripciones de las diferentes condiciones de las tareas en segundo plano.
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -194,4 +194,4 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [How to trigger suspend, resume, and background events in UWP apps (when debugging)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+* [Cómo desencadenar eventos de suspensión, reanudación y en segundo plano en aplicaciones UWP (durante la depuración)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

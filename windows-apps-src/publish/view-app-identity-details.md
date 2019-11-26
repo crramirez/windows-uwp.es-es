@@ -39,7 +39,7 @@ Juntos, estos elementos declaran la identidad de la aplicación y establecen la 
 Los siguientes valores son valores adicionales que hacen referencia a la familia del paquete de la aplicación, pero que no se incluyen en el manifiesto.
 
 -   **Nombre de familia de paquete (PFN)** : este valor se usa con ciertas API de Windows.
--   **SID de paquete**: necesitarás este valor para enviar notificaciones de WNS a la aplicación. Para más información, consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
+-   **Package SID**: necesitarás este valor para enviar notificaciones de WNS a la aplicación. Para más información, consulta [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
 
 
 ## <a name="link-to-your-apps-listing"></a>Vincular a la descripción de la aplicación

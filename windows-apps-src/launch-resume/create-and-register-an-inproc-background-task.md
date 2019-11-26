@@ -1,9 +1,9 @@
 ---
-title: Crear y registrar una tarea en segundo plano dentro de proceso
+title: Crear y registrar una tarea en segundo plano dentro del proceso
 description: Crea y registra una tarea dentro del proceso que se ejecuta en el mismo proceso que la aplicación en primer plano.
 ms.date: 11/03/2017
 ms.topic: article
-keywords: windows 10, uwp, background task
+keywords: Windows 10, UWP, tarea en segundo plano
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ee8a0e6538abd879921dd9d1496d29a61054a02
@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74260505"
 ---
-# <a name="create-and-register-an-in-process-background-task"></a>Crear y registrar una tarea en segundo plano dentro de proceso
+# <a name="create-and-register-an-in-process-background-task"></a>Crear y registrar una tarea en segundo plano dentro del proceso
 
 **API importantes**
 
@@ -68,7 +68,7 @@ El siguiente código de muestra asigna una condición que requiere que el usuari
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>Colocación del código de la actividad en segundo plano en OnBackgroundActivated()
 
-Put your background activity code in [OnBackgroundActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated) to respond to your background trigger when it fires. **OnBackgroundActivated** puede tratarse como [IBackgroundTask.Run](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run?f=255&MSPPError=-2147217396). The method has a [BackgroundActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.backgroundactivatedeventargs) parameter, which contains everything that the **Run** method delivers. For example, in App.xaml.cs:
+Coloque el código de actividad en segundo plano en [OnBackgroundActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated) para responder a su desencadenador en segundo plano cuando se active. **OnBackgroundActivated** puede tratarse como [IBackgroundTask.Run](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run?f=255&MSPPError=-2147217396). El método tiene un parámetro [BackgroundActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.backgroundactivatedeventargs) , que contiene todo lo que entrega el método **Run** . Por ejemplo, en App.xaml.cs:
 
 ``` cs
 using Windows.ApplicationModel.Background;
@@ -88,7 +88,7 @@ sealed partial class App : Application
 }
 ```
 
-For a richer **OnBackgroundActivated** example, see [Convert an app service to run in the same process as its host app](convert-app-service-in-process.md).
+Para obtener un ejemplo más completo de **OnBackgroundActivated** , consulte [conversión de un servicio de aplicaciones para que se ejecute en el mismo proceso que su aplicación host](convert-app-service-in-process.md).
 
 ## <a name="handle-background-task-progress-and-completion"></a>Administración del progreso y la finalización de tareas en segundo plano
 
@@ -110,11 +110,11 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 
 ## <a name="related-topics"></a>Temas relacionados
 
-**Detailed background task instructional topics**
+**Temas de instrucciones de tareas en segundo plano detallados**
 
-* [Convert an out-of-process background task to an in-process background task](convert-out-of-process-background-task.md)
+* [Convertir una tarea en segundo plano fuera de proceso en una tarea en segundo plano en proceso](convert-out-of-process-background-task.md)
 * [Crear y registrar una tarea en segundo plano fuera del proceso](create-and-register-a-background-task.md)
-* [Play media in the background](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)
+* [Reproducir contenido multimedia en segundo plano](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)
 * [Registrar una tarea en segundo plano](register-a-background-task.md)
 * [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)
@@ -123,12 +123,12 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 * [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
 
-**Background task guidance**
+**Guía de tareas en segundo plano**
 
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [How to trigger suspend, resume, and background events in UWP apps (when debugging)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+* [Cómo desencadenar eventos de suspensión, reanudación y en segundo plano en aplicaciones UWP (durante la depuración)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
 
-**Background Task API Reference**
+**Referencia de la API de tareas en segundo plano**
 
-* [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+* [**Windows. ApplicationModel. Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)

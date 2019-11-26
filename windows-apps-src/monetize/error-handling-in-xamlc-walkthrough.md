@@ -1,7 +1,7 @@
 ---
 ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
 description: Aprende a detectar errores de AdControl en la aplicación.
-title: Tutorial de gestión de errores en XAML/C#
+title: Tutorial de control de errores en XAML y C#
 ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de errores, XAML, c#
@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74260277"
 ---
-# <a name="error-handling-in-xamlc-walkthrough"></a>Tutorial de gestión de errores en XAML/C#
+# <a name="error-handling-in-xamlc-walkthrough"></a>Tutorial de control de errores en XAML y C#
 
 En este tutorial se muestra cómo detectar errores relacionados con los anuncios en la aplicación. Este tutorial usa un objeto [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un anuncio de banner, pero los conceptos generales en él también se aplican a anuncios intersticiales y anuncios nativos.
 

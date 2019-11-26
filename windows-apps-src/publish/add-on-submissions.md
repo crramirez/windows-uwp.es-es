@@ -62,7 +62,7 @@ A continuación verás una lista de la información que se proporciona al crear 
 | [**Precios de venta**](put-apps-and-add-ons-on-sale.md)               | Opcional                    |
 
 
-### <a name="store-listings"></a>Descripciones de Store
+### <a name="store-listings"></a>Descripciones de la Tienda
 
 Es obligatoria una descripción de la Tienda. Se recomienda proporcionar descripciones de la Tienda para cada [idioma](create-add-on-store-listings.md#store-listing-languages) que admita la aplicación.
 

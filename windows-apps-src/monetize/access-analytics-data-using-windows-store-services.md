@@ -21,7 +21,7 @@ Use la *API de análisis de Microsoft Store* para recuperar mediante programaci�
 Los siguientes pasos describen el proceso de principio a fin:
 
 1.  Asegúrate de que se hayan completado todos los [requisitos previos](#prerequisites).
-2.  Antes de llamar a un método en la API de análisis de Microsoft Store [obtén un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Después de obtener un token, tienes 60 minutos para utilizar dicho token en llamadas a la API de análisis de Microsoft Store antes de que expire. Una vez que el token expire, puedes generar uno nuevo.
+2.  Antes de llamar a un método en la API de análisis de Microsoft Store [obtén un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Después de obtener un token, tienes 60 minutos para utilizar dicho token en llamadas a la API de análisis de Microsoft Store antes de que expire. Después de que el token expire, puedes generar uno nuevo.
 3.  [Llama a la API de análisis de Microsoft Store](#call-the-windows-store-analytics-api).
 
 <span id="prerequisites" />
@@ -50,7 +50,7 @@ Para asociar una aplicación Azure AD a la cuenta del centro de Partners y recup
 
 ## <a name="step-2-obtain-an-azure-ad-access-token"></a>Paso 2: Obtención de un token de acceso de Azure AD
 
-Antes de llamar a cualquiera de los métodos en la API de análisis de Microsoft Store, debes obtener un token de acceso de Azure AD para pasarlo al encabezado **Authorization** de cada método en la API. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
+Antes de llamar a cualquiera de los métodos en la API de análisis de Microsoft Store, debes obtener un token de acceso de Azure AD para pasarlo al encabezado **Authorization** de cada método en la API. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
 
 Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
