@@ -1,12 +1,12 @@
 ---
 Description: Si quieres que tu aplicación admita diferentes idiomas de pantalla y tienes literales de cadena en el código o en el marcado XAML, o bien en el manifiesto de paquete de la aplicación, en ese caso mueve esas cadenas a un archivo de recursos (.resw). A continuación, puedes hacer una copia traducida de ese archivo de recursos para cada idioma que admita la aplicación.
-title: Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de aplicación
+title: Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 ms.assetid: E420B9BB-C0F6-4EC0-BA3A-BA2875B69722
 label: Localize strings in your UI and app package manifest
 template: detail.hbs
 ms.date: 11/01/2017
 ms.topic: article
-keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
+keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
 ms.openlocfilehash: c40e909f0f6411be054a5e534325d801656002c5
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
@@ -15,7 +15,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74254702"
 ---
-# <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de aplicación
+# <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación
 
 Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md).
 

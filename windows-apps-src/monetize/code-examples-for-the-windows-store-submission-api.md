@@ -1,7 +1,7 @@
 ---
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
 description: Use los ejemplos de código de esta sección para obtener más información sobre el uso de la API de envío de Microsoft Store.
-title: Ejemplos de código para la API de envío
+title: Ejemplos de código de la API de envío
 ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows 10, UWP, API de envío de Microsoft Store, ejemplos de código
@@ -13,7 +13,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74258696"
 ---
-# <a name="code-examples-for-the-submission-api"></a>Ejemplos de código para la API de envío
+# <a name="code-examples-for-the-submission-api"></a>Ejemplos de código de la API de envío
 
 En esta sección se proporcionan ejemplos de código para usar el [Microsoft Store API de envío](create-and-manage-submissions-using-windows-store-services.md) en varios lenguajes de programación diferentes.
 

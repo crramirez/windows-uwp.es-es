@@ -39,7 +39,7 @@ También puedes expandir la opción **Filtros** para filtrar todos los datos de 
 - **Tipo de comentarios**: la opción predeterminada es **Todos**. Puedes seleccionar **Problema** o **Sugerencia** para mostrar solo este tipo de comentarios.
 - **Tipo de dispositivo**: la opción predeterminada es **Todos los dispositivos**. Puedes elegir un tipo de dispositivo específico si quieres que esta página solo muestre comentarios aportados por clientes que usen ese tipo de dispositivo.
 - **Versión del paquete**: el valor predeterminado es **Todos los paquetes**. Puedes seleccionar uno de los paquetes para que solo se muestren los comentarios enviados por clientes que usaban este paquete concreto en el momento de enviar los comentarios.
-- **Mercado**: El valor predeterminado es **Todos los mercados**. Puedes elegir uno determinado para mostrar solo los comentarios de los clientes de ese mercado.
+- **Mercado**: el valor predeterminado es **Todos los mercados**. Puedes elegir uno determinado para mostrar solo los comentarios de los clientes de ese mercado.
 - **Grupo**: el valor predeterminado es **Todos**. Puedes optar por ver solo los comentarios enviados por [usuarios de Windows Insider](https://insider.windows.com).
 
 > [!TIP]

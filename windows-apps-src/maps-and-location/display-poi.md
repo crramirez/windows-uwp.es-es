@@ -409,7 +409,7 @@ var pikePlaceIcon = new MapIcon
 myMap.MapElements.Add(pikePlaceIcon);
 ```
 
-Aunque aún puedes usar este enfoque, puede que te pierdas algunas de las ventajas del nuevo modelo del nivel de mapa. Al agrupar los elementos en niveles, puede manipular cada nivel de forma independiente entre sí. Por ejemplo, cada capa tiene su propio conjunto de eventos para que puedas responder a un evento en una capa específica y realizar una acción específica para dicho evento.
+Aunque aún puedes usar este enfoque, puede que te pierdas algunas de las ventajas del nuevo modelo del nivel de mapa. Al agrupar los elementos en niveles, puede manipular cada nivel de forma independiente entre sí. Por ejemplo, cada capa tiene su propio conjunto de eventos para que puedas responder a un evento en un nivel específico y realizar una acción específica para dicho evento.
 
 Asimismo, puede enlazar XAML directamente a [MapLayer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maplayer). Esto es algo que no se puede hacer con la colección [MapElements](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.MapElements).
 
