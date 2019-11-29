@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, microsoft, windows 10, tutoriales, cursos en línea, blogs, eventos
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 64d4fc1c85ae4056da02f987ca654305a883d2c6
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 8870c1e269eb2c5f049c5431d6360e8c11570c0b
+ms.sourcegitcommit: 4cb3ee28baa8020ec925b0bdd896ab197a1ddadb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313409"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74309170"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Recursos para el desarrollo con Python en Windows
 
@@ -56,6 +56,8 @@ Lista de vínculos que recomendamos para los desarrolladores de Python que traba
 - [Tutoriales de Python.org](https://docs.python.org/3/tutorial/index.html): introduce al lector los conceptos básicos y las características del lenguaje y el sistema de Python de una manera informativa.
 
 - [Aprendizaje de Python en Lynda.com](https://www.lynda.com/Python-tutorials/Learning-Python/661773-2.html): introducción básica a Python.
+
+- [Real Python](https://realpython.com/): un centro de recursos para desarrolladores de Python, que incluye tutoriales de Python, cursos de vídeo, cuestionarios, libros, ejemplos de código, etc.
 
 ## <a name="web-development"></a>Desarrollo web
 
