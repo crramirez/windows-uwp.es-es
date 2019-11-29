@@ -1,31 +1,31 @@
 ---
-title: Accesibilidad en Windows 10
-description: En esta página se proporciona información para empezar a desarrollar aplicaciones de Windows accesibles.
+title: Accesibilidad en Windows 10
+description: En esta página se proporciona la información necesaria para empezar a desarrollar aplicaciones de Windows accesibles.
 ms.topic: article
 ms.date: 09/12/2019
-keywords: Accesibilidad en Windows 10, accesibilidad, compilar aplicaciones de Win32 accesibles, compilar aplicaciones de UWP accesibles, compilar aplicaciones de WPF accesibles, compilar aplicaciones de WinForms accesibles
+keywords: Accesibilidad en Windows 10, Accesibilidad, compilación de aplicaciones de Win32 accesibles, compilación de aplicaciones para UWP accesibles, compilación de aplicaciones para WPF accesibles, compilación de aplicaciones de WinForms accesibles
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
 ms.openlocfilehash: 76bbd3f0e04bbb2f729ad0950bae190b2fffb6ac
 ms.sourcegitcommit: 6e7665b457ec4585db19b70acfa2554791ad6e10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/14/2019
 ms.locfileid: "70987194"
 ---
-# <a name="accessibility-in-windows-10"></a>Accesibilidad en Windows 10
+# <a name="accessibility-in-windows-10"></a>Accesibilidad en Windows 10
 
-![Hero-Accessibility-bar-smaller. png](images/hero-accessibility-bar-smaller.png)
+![hero-accessibility-bar-smaller.png](images/hero-accessibility-bar-smaller.png)
 
-## <a name="build-accessibility-into-your-applications-to-empower-people-of-all-abilities"></a>Cree accesibilidad en sus aplicaciones para permitir a los usuarios de todas las capacidades
+## <a name="build-accessibility-into-your-applications-to-empower-people-of-all-abilities"></a>Agrega accesibilidad en tus aplicaciones para que las puedan utilizar todos los usuarios, independientemente de sus capacidades
 
 Los productos y servicios, incluidos los medios electrónicos, son accesibles cuando están diseñados para proporcionar experiencias completas y correctas para tantas personas como sea posible.
 
-Cree aplicaciones de Windows inclusivas y accesibles, con funcionalidad y facilidad de uso mejoradas, para personas con discapacidades (tanto temporales como permanentes), preferencias personales, estilos de trabajo específicos o restricciones de situación (como espacios de trabajo compartidos, conducción, cocina, deslumbramiento, etc.). Algunas soluciones comunes incluyen proporcionar información en formatos alternativos (como leyendas en un vídeo) o habilitar el uso de tecnologías de asistencia (como lectores de pantalla).
+Compila aplicaciones de Windows inclusivas y accesibles, que ofrezcan funcionalidades y una facilidad de uso mejoradas, para personas con discapacidades (tanto temporales como permanentes) y según las preferencias personales, los estilos de trabajo específicos o las restricciones de los sitios (como, por ejemplo, si se está en espacios de trabajo compartidos, se conduce, se cocina o si hay deslumbramiento, etc.). Entre otras soluciones comunes, se incluyen aquellas para proporcionar información en formatos alternativos (como leyendas en un vídeo) o habilitar el uso de tecnologías de asistencia (como lectores de pantalla).
 
-**Todos deben tener acceso a los mismos salones en un edificio, tanto si necesitan usar las escaleras como el ascensor.**
+**Todas las personas deben tener acceso a las mismas salas de un edificio, tanto si necesitan usar las escaleras como el ascensor.**
 
-En esta página se proporciona información sobre el modo en que los distintos marcos de desarrollo de Windows proporcionan compatibilidad de accesibilidad para desarrolladores que crean aplicaciones de Windows, desarrolladores de tecnología de asistencia, como lectores de pantalla y ampliadores, y software Ingenieros de prueba que crean scripts automatizados para probar aplicaciones.
+En esta página se proporciona información sobre cómo los distintos marcos de desarrollo de Windows proporcionan compatibilidad con la accesibilidad para los desarrolladores que crean aplicaciones de Windows, los desarrolladores de tecnología de asistencia que compilan, por ejemplo, lectores de pantalla y lupas, y los ingenieros de pruebas de software que crean scripts automatizados para probar aplicaciones.
 
 ## <a name="platform-specific-documentation"></a>Documentación específica de la plataforma
 
@@ -35,7 +35,7 @@ En esta página se proporciona información sobre el modo en que los distintos m
 
       **Plataforma universal de Windows (UWP)**
 
-      Desarrolle aplicaciones y herramientas accesibles en la plataforma moderna para aplicaciones y juegos de Windows 10 en cualquier dispositivo de Windows (incluidos PC, teléfonos, Xbox One, HoloLens, etc.) y publíquelos en el Microsoft Store.
+      Desarrolla aplicaciones y herramientas accesibles en la plataforma moderna para aplicaciones y juegos de Windows 10 en cualquier dispositivo de Windows (incluidos equipos, teléfonos, Xbox One, HoloLens, etc.) y publícalos en Microsoft Store.
 
       [Diseño de software inclusivo](https://docs.microsoft.com/windows/uwp/accessibility/designing-inclusive-software)
 
@@ -50,7 +50,7 @@ En esta página se proporciona información sobre el modo en que los distintos m
 
       **Plataforma Win32**
 
-      Desarrolle aplicaciones y herramientas accesibles en la plataforma original para aplicacionesC++ de C/Windows.
+      Desarrolla aplicaciones y herramientas accesibles en la plataforma original para aplicaciones en C++ y C de Windows.
 
       [Novedades de la automatización y la accesibilidad de Windows](https://docs.microsoft.com/windows/desktop/accessibility-whatsnew)
 
@@ -60,7 +60,7 @@ En esta página se proporciona información sobre el modo en que los distintos m
 
       [Desarrollo de tecnología de asistencia para Windows](https://docs.microsoft.com/windows/desktop/accessibility-atdev)
 
-      [Probar la accesibilidad](https://docs.microsoft.com/windows/desktop/accessibility-testwithuia)
+      [Pruebas de accesibilidad](https://docs.microsoft.com/windows/desktop/accessibility-testwithuia)
 
       [Tecnología de automatización y accesibilidad heredada: MSAA en automatización de la interfaz de usuario](https://docs.microsoft.com/windows/desktop/accessibility-legacy)
 
@@ -75,109 +75,109 @@ En esta página se proporciona información sobre el modo en que los distintos m
 
       **Windows Presentation Foundation (WPF)**
 
-      Desarrolle aplicaciones y herramientas accesibles en la plataforma establecida para aplicaciones Windows administradas con un modelo de interfaz de usuario XAML y el .NET Framework.
+      Desarrolla aplicaciones y herramientas accesibles en la plataforma establecida para las aplicaciones de Windows administradas con un modelo de interfaz de usuario de XAML y .NET Framework.
 
-      [Prácticas recomendadas de accesibilidad](https://docs.microsoft.com/dotnet/framework/ui-automation/accessibility-best-practices)
+      [Procedimientos recomendados de accesibilidad](https://docs.microsoft.com/dotnet/framework/ui-automation/accessibility-best-practices)
 
       [Aspectos básicos de la automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/index)
 
-      [Proveedores de UI Automation para código administrado](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-providers-for-managed-code)
+      [Proveedores de Automatización de la interfaz de usuario para código administrado](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-providers-for-managed-code)
 
-      [Clientes de UI Automation para código administrado](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-clients-for-managed-code)
+      [Clientes de Automatización de la interfaz de usuario para código administrado](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-clients-for-managed-code)
 
-      [Patrones de control de UI Automation](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-patterns)
+      [Patrones de control de Automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-patterns)
 
-      [Patrón de texto de automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-text-pattern)
+      [Patrón de texto de Automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-text-pattern)
 
-      [Tipos de control de UI Automation](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-types)
+      [Tipos de control de Automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-types)
 
-      [Especificación de UI Automation y compromiso de la comunidad](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-specification-and-community-promise)
+      [Especificación de Automatización de la interfaz de usuario y compromiso de la comunidad](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-specification-and-community-promise)
    :::column-end:::
    :::column:::
-      ![Aplicaciones de Windows Forms Platform](images/platform-winforms.png)
+      ![Aplicaciones de la plataforma Windows Forms](images/platform-winforms.png)
 
       **Windows Forms (WinForms)**
 
-      Desarrolle aplicaciones y herramientas de acceso para aplicaciones Windows administradas con un modelo de interfaz de usuario XAML y el .NET Framework.
+      Desarrolla aplicaciones y herramientas accesibles para las aplicaciones de Windows administradas con un modelo de interfaz de usuario de XAML y .NET Framework.
 
-      [Accesibilidad Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/advanced/windows-forms-accessibility)
+      [Accesibilidad de formularios de Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/advanced/windows-forms-accessibility)
 
       [Creación de una aplicación de Windows accesible](https://docs.microsoft.com/dotnet/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application)
 
-      [Propiedades de los controles de Windows Forms que admiten instrucciones de accesibilidad](https://docs.microsoft.com/dotnet/framework/winforms/advanced/properties-on-windows-forms-controls-that-support-accessibility-guidelines)
+      [Propiedades de los controles de formularios de Windows Forms que admiten las directrices de accesibilidad](https://docs.microsoft.com/dotnet/framework/winforms/advanced/properties-on-windows-forms-controls-that-support-accessibility-guidelines)
 
-      [Proporcionar información de accesibilidad para los controles de Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
+      [Provisión de información de accesibilidad de controles en un formulario de Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="2":::
       **Accesibilidad web**
 
-      Diseñar, compilar y probar sitios web accesibles en Microsoft Edge.
+      Diseña, compila y prueba sitios web accesibles en Microsoft Edge.
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column:::
-      [Introducción a accesibilidad web](https://docs.microsoft.com/microsoft-edge/accessibility)
+      [Introducción a la accesibilidad web](https://docs.microsoft.com/microsoft-edge/accessibility)
 
       [Diseñar sitios web accesibles](https://docs.microsoft.com/microsoft-edge/accessibility/design)
    :::column-end:::
    :::column:::
       [Creación de sitios web accesibles](https://docs.microsoft.com/microsoft-edge/accessibility/build)
 
-      [Prueba de sitios web accesibles](https://docs.microsoft.com/microsoft-edge/accessibility/test)
+      [Pruebas de sitios web accesibles](https://docs.microsoft.com/microsoft-edge/accessibility/test)
    :::column-end:::
 :::row-end:::
 
 ## <a name="samples"></a>Muestras
 
-Descargue y ejecute ejemplos completos de Windows que muestren varias características y funcionalidades de accesibilidad.
+Descarga y ejecuta ejemplos completos de Windows que muestren varias características y funcionalidades de accesibilidad.
 
 :::row:::
    :::column:::
       [Explorador de ejemplo de código](https://docs.microsoft.com/en-us/samples/browse/)
 
-      El explorador de ejemplos nuevo reemplaza a la galería de código de MSDN.
+      El nuevo explorador de ejemplos reemplaza la galería de código de MSDN.
    :::column-end:::
    :::column:::
       [Galería de código de MSDN (retirada)](https://code.msdn.microsoft.com/site/search?query=accessibility&f%5B0%5D.Value=accessibility&f%5B0%5D.Type=SearchText&ac=2)
 
-      Descargue ejemplos para Windows, Windows Phone, Microsoft Azure, Office, SharePoint, Silverlight y otros productos.
+      Descarga ejemplos para Windows, Windows Phone, Microsoft Azure, Office, SharePoint, Silverlight y otros productos.
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column:::
       [Ejemplos de Windows clásico en GitHub](https://github.com/microsoft/Windows-classic-samples/search?q=accessibility&unscoped_q=accessibility)
 
-      En estos ejemplos se muestra el modelo de programación y la funcionalidad de Windows y Windows Server. 
+      En estos ejemplos se muestra el modelo de programación y la funcionalidad de Windows y Windows Server. 
    :::column-end:::
    :::column:::
-      [Ejemplos de Plataforma universal de Windows (UWP) en GitHub](https://github.com/microsoft/Windows-universal-samples/search?q=accessibility&unscoped_q=accessibility)
+      [Ejemplos de la Plataforma universal de Windows (UWP) en GitHub](https://github.com/microsoft/Windows-universal-samples/search?q=accessibility&unscoped_q=accessibility)
 
-      En estos ejemplos se muestran los patrones de uso de la API para el Plataforma universal de Windows (UWP) en el kit de desarrollo de software (SDK) de Windows para Windows 10.
+      En estos ejemplos se muestran los patrones de uso de la API para el Plataforma universal de Windows (UWP) en el Kit de desarrollo de software (SDK) de Windows para Windows 10.
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="2":::
       [XAML Controls Gallery](https://github.com/microsoft/Xaml-Controls-Gallery)
 
-      Esta aplicación muestra los distintos controles XAML admitidos en el sistema de diseño de Fluent.
+      Esta aplicación muestra los distintos controles XAML admitidos en el sistema Fluent Design.
    :::column-end:::
 :::row-end:::
 
 ## <a name="videos"></a>Vídeos
 
-Varios vídeos en los que se explica cómo crear aplicaciones de Windows accesibles para cuestiones de accesibilidad generales y cómo Microsoft las resuelve.
+A continuación, le proporcionamos varios vídeos en los que se explica cómo crear aplicaciones de Windows accesibles para cuestiones de accesibilidad generales y cómo Microsoft las resuelve.
 
 :::row:::
    :::column:::
-      **Cómo empezar a trabajar con accesibilidad en aplicaciones de Windows**
+      **Cómo empezar a trabajar con la accesibilidad en aplicaciones de Windows**
    :::column-end:::
    :::column:::
-      **Un minuto de desarrollo: Desarrollo de aplicaciones para accesibilidad**
+      **One Dev Minute: Desarrollo de aplicaciones para la accesibilidad**
    :::column-end:::
    :::column:::
-      **Introducción a Disability y accesibilidad**
+      **Introducción a las discapacidades y la accesibilidad**
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -193,13 +193,13 @@ Varios vídeos en los que se explica cómo crear aplicaciones de Windows accesib
 :::row-end:::
 :::row:::
    :::column:::
-      **De hack to product, control ocular para Windows 10**
+      **De ser candidato en Hackathon a convertirse en un producto: el control ocular para Windows 10**
    :::column-end:::
    :::column:::
-      **Accesibilidad en Windows 10**
+      **Accesibilidad en Windows 10**
    :::column-end:::
    :::column:::
-      **Introducción a la compilación de aplicaciones UWP accesibles**
+      **Introducción a la creación de aplicaciones para UWP accesibles**
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -215,13 +215,13 @@ Varios vídeos en los que se explica cómo crear aplicaciones de Windows accesib
 :::row-end:::
 :::row:::
    :::column:::
-      **Diseñar características de accesibilidad de Windows**
+      **Diseño de características de accesibilidad de Windows**
    :::column-end:::
    :::column:::
-      **Características de accesibilidad de Windows 10 otorgar a todos**
+      **Las características de accesibilidad de Windows 10 otorgan posibilidades a todo el mundo**
    :::column-end:::
    :::column:::
-      **Facilitar la visualización de los punteros del mouse**
+      **Simplificación de la visualización de los punteros del mouse**
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -236,7 +236,7 @@ Varios vídeos en los que se explica cómo crear aplicaciones de Windows accesib
    :::column-end:::
 :::row-end:::
 
-## <a name="other-resources"></a>Otros recursos:
+## <a name="other-resources"></a>Otros recursos
 
 :::row:::
    :::column span="3":::
@@ -250,10 +250,10 @@ Varios vídeos en los que se explica cómo crear aplicaciones de Windows accesib
       [En las noticias](https://news.microsoft.com/presskits/accessibility/)
    :::column-end:::
    :::column:::
-      [Blogs de accesibilidad](https://blogs.microsoft.com/accessibility/)
+      [Blogs de accesibilidad](https://blogs.microsoft.com/accessibility/).
    :::column-end:::
    :::column:::
-      [Blogs de automatización de la interfaz de usuario de Windows](https://blogs.msdn.microsoft.com/winuiautomation/)
+      [Blogs de Automatización de la interfaz de usuario de Windows](https://blogs.msdn.microsoft.com/winuiautomation/)
    :::column-end:::
 :::row-end:::
 
@@ -261,7 +261,7 @@ Varios vídeos en los que se explica cómo crear aplicaciones de Windows accesib
    :::column span="3":::
       **Comunidad y soporte técnico**
 
-      Un lugar donde los desarrolladores y usuarios de Windows reúnen y aprenden juntos.
+      Un lugar donde los desarrolladores y usuarios de Windows se reúnen y aprenden juntos.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -269,9 +269,9 @@ Varios vídeos en los que se explica cómo crear aplicaciones de Windows accesib
       [Comunidad de Windows: accesibilidad](https://community.windows.com/search?q=accessibility)
    :::column-end:::
    :::column:::
-      [Foro de accesibilidad de Windows y desarrollo de automatización](https://social.msdn.microsoft.com/Forums/windows/home?forum=windowsaccessibilityandautomation)
+      [Foro de de desarrollo de la automatización y la accesibilidad de Windows](https://social.msdn.microsoft.com/Forums/windows/home?forum=windowsaccessibilityandautomation)
    :::column-end:::
    :::column:::
-      [Departamento de soporte técnico Answer](https://www.microsoft.com/Accessibility/disability-answer-desk)
+      [Answer Desk para personas con discapacidad](https://www.microsoft.com/Accessibility/disability-answer-desk)
    :::column-end:::
 :::row-end:::

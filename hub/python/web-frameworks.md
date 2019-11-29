@@ -1,185 +1,185 @@
 ---
 title: Desarrollo web con Python en Windows
-description: Cómo empezar a usar Python para el desarrollo web en Windows, incluida la configuración de marcos como el matraz y Django.
+description: Cómo empezar a usar Python para el desarrollo web en Windows, incluida la configuración de marcos como Flask y Django.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-keywords: Python, Windows 10, Microsoft, Python en Windows, Python web con WSL, aplicación Web de Python con el subsistema de Windows para Linux, desarrollo web de Python en Windows, aplicación de frasco en Windows, aplicación de Django en Windows, Python Web, frasco web dev en Windows, Django web dev en Windows, Windows web dev con Python, vs Code Python web dev y Remote WSL Extension, Ubuntu, WSL, venv, PIP, extensión de Microsoft Python, ejecutar Python en Windows, usar Python en Windows, compilar con Python en Windows
+keywords: python, windows 10, microsoft, python en windows, python web con wsl, aplicación web de python con el subsistema de windows para linux, desarrollo web de python en windows, aplicación de flask en windows, aplicación de django en windows, python web, desarrollo web de flask en windows, desarrollo web de django en windows, desarrollo web de windows con python, desarrollo web de python de vs code, extensión remota de wsl, ubuntu, wsl, venv, pip, extensión de python de microsoft, ejecutar python en windows, usar python en windows, compilar con python en windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: 285e5149778f2d5cb63554a5af63bb9ae23809dc
 ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72314949"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>Introducción al uso de Python para el desarrollo web en Windows
 
-A continuación se ofrece una guía paso a paso para empezar a usar Python para el desarrollo web en Windows mediante el subsistema de Windows para Linux (WSL).
+A continuación, te proporcionamos una guía detallada para empezar a usar Python para el desarrollo web en Windows mediante el Subsistema de Windows para Linux (WSL).
 
 ## <a name="set-up-your-development-environment"></a>Configurar el entorno de desarrollo
 
-Se recomienda instalar Python en WSL al compilar aplicaciones Web. Muchos de los tutoriales e instrucciones para el desarrollo web de Python se escriben para los usuarios de Linux y usan herramientas de instalación y empaquetado basadas en Linux. La mayoría de las aplicaciones web también se implementan en Linux, por lo que se garantiza la coherencia entre los entornos de desarrollo y de producción.
+Te recomendamos que instales Python en WSL cuando compiles aplicaciones web. Muchos de los tutoriales e instrucciones para el desarrollo web de Python se escriben para los usuarios de Linux y usan herramientas de instalación y empaquetado basadas en Linux. La mayoría de las aplicaciones web también se implementan en Linux, por lo que esto te garantizará una coherencia entre los entornos de desarrollo y producción.
 
-Si usa Python para algo que no sea el desarrollo web, se recomienda instalar Python directamente en Windows 10 mediante el Microsoft Store. WSL no admite aplicaciones o escritorios de GUI (como PyGame, GNOME, KDE, etc.). Instale y use Python directamente en Windows para estos casos. Si no está familiarizado con Python, consulte nuestra guía: [Introducción al uso de Python en Windows para principiantes](./beginners.md). Si está interesado en automatizar las tareas comunes en el sistema operativo, consulte nuestra guía: [Introducción al uso de Python en Windows para scripting y automatización](./scripting.md). En algunos escenarios avanzados, es posible que desee considerar la posibilidad de descargar una versión específica de Python directamente de [Python.org](https://www.python.org/downloads/windows/) o considerar la posibilidad de instalar una [alternativa](https://www.python.org/download/alternatives), como Anaconda, Jython, PyPy, WinPython, IronPython, etc. Solo se recomienda si es un programador de Python más avanzado con un motivo específico para elegir una implementación alternativa.
+Si usas Python para tareas que no estén relacionadas con el desarrollo web, te recomendamos que lo instales directamente en Windows 10 mediante Microsoft Store. WSL no admite las aplicaciones o los escritorios de GUI (por ejemplo, PyGame, Gnome, KDE, etc). Instala y usa Python directamente en Windows para estos casos. Si no estás familiarizado con Python, consulta nuestra guía: [Introducción al uso de Python en Windows para principiantes](./beginners.md). Si estás interesado en automatizar las tareas comunes en el sistema operativo, consulta nuestra guía: [Introducción al uso de Python en Windows para el scripting y la automatización](./scripting.md). En algunos escenarios avanzados, es posible que quieras considerar la posibilidad de descargar una versión específica de Python directamente desde [python.org](https://www.python.org/downloads/windows/) o una [alternativa](https://www.python.org/download/alternatives), como Anaconda, Jython, PyPy, WinPython, IronPython, etc. Solo te lo recomendamos si eres un programador de Python más avanzado y tienes un motivo específico para elegir una implementación alternativa.
 
-## <a name="enable-windows-subsystem-for-linux"></a>Habilitar el subsistema de Windows para Linux
+## <a name="enable-windows-subsystem-for-linux"></a>Habilitación del Subsistema de Windows para Linux
 
-WSL permite ejecutar un entorno de GNU/Linux, que incluye la mayoría de las herramientas de línea de comandos, utilidades y aplicaciones, directamente en Windows, sin modificar y completamente integradas con el sistema de archivos de Windows y herramientas favoritas como Visual Studio Code. Antes de habilitar WSL, compruebe que tiene la [versión más reciente de Windows 10](https://www.microsoft.com/software-download/windows10).
+WSL permite ejecutar directamente en Windows un entorno GNU/Linux no modificado y completamente integrado con el sistema de archivos de Windows y tus herramientas favoritas, como Visual Studio Code, incluidas la mayoría de las herramientas de línea de comandos, las utilidades y las aplicaciones. Antes de habilitar WSL, comprueba que tienes la [versión más reciente de Windows 10](https://www.microsoft.com/software-download/windows10).
 
-Para habilitar WSL en el equipo, debe hacer lo siguiente:
+Para habilitar WSL en el equipo, debes hacer lo siguiente:
 
-1. Vaya al menú **Inicio** (icono de Windows inferior izquierdo), escriba "activar o desactivar las características de Windows" y seleccione el vínculo al **Panel de control** para abrir el menú emergente **características de Windows** . Busque "subsistema de Windows para Linux" en la lista y active la casilla para activar la característica.
+1. Ve al menú **Inicio** (icono de Windows de la esquina inferior izquierda), escribe "Activar o desactivar las características de Windows" y selecciona el vínculo en el **Panel de control** para abrir el menú emergente **Características de Windows**. Busca "Subsistema de Windows para Linux" en la lista y selecciona la casilla para activar la característica.
 
 2. Reinicia el equipo cuando se te solicite.
 
 ## <a name="install-a-linux-distribution"></a>Instalación de una distribución de Linux
 
-Hay varias distribuciones de Linux disponibles para ejecutarse en WSL. Puede buscar e instalar su favorito en el Microsoft Store. Se recomienda comenzar con [Ubuntu 18,04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q) , ya que es actual, popular y bien compatible.
+Hay varias distribuciones de Linux disponibles para ejecutar en WSL. Puedes buscar e instalar tu favorita en Microsoft Store. Te recomendamos que empieces con [Ubuntu 18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q), ya que es la versión actual, popular y compatible.
 
-1. Abra este vínculo de [Ubuntu 18,04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q) , abra el Microsoft Store y seleccione **obtener**. *(Se trata de una descarga bastante grande y puede tardar algún tiempo en instalarse).*
+1. Abre este vínculo de [Ubuntu 18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q), abre Microsoft Store y selecciona **Obtener**. *(Se trata de una descarga bastante grande y puede tardar en instalarse).*
 
-2. Una vez finalizada la descarga, seleccione **iniciar** desde el Microsoft Store o iniciar escribiendo "Ubuntu 18,04 LTS" en el menú **Inicio** .
+2. Una vez finalizada la descarga, selecciona **Iniciar** en Microsoft Store o bien escribe "Ubuntu 18.04 LTS" en el menú **Inicio** para iniciarla.
 
-3. Al ejecutar la distribución por primera vez, se le pedirá que cree un nombre y una contraseña de cuenta. Después, iniciará sesión automáticamente como este usuario de forma predeterminada. Puede elegir cualquier nombre de usuario y contraseña. No tienen ninguna relación con el nombre de usuario de Windows.
+3. Se te pedirá que crees un nombre de cuenta y una contraseña cuando ejecutes la distribución por primera vez. Después, iniciarás sesión automáticamente con este usuario de forma predeterminada. Puedes elegir cualquier nombre de usuario y contraseña. No tienen nada que ver con tu nombre de usuario de Windows.
 
-Para comprobar la distribución de Linux que está usando actualmente, escriba: `lsb_release -d`. Para actualizar la distribución de Ubuntu, use: `sudo apt update && sudo apt upgrade`. Se recomienda actualizar periódicamente para asegurarse de que tiene los paquetes más recientes. Windows no controla automáticamente esta actualización. Para obtener vínculos a otras distribuciones de Linux disponibles en el Microsoft Store, métodos de instalación alternativos o solución de problemas, consulte la [Guía de instalación del subsistema de Windows para Linux para Windows 10](https://docs.microsoft.com/windows/wsl/install-win10).
+Para comprobar la distribución de Linux que usas actualmente, puedes escribir lo siguiente: `lsb_release -d`. Para actualizar la distribución de Ubuntu, usa `sudo apt update && sudo apt upgrade`. Te recomendamos que realices actualizaciones periódicamente para asegurarte de que cuentas con los paquetes más recientes. Windows no controla automáticamente esta actualización. Para obtener vínculos a otras distribuciones de Linux disponibles en Microsoft Store, métodos de instalación alternativos o soluciones de problemas, consulta la [Guía de instalación del Subsistema de Windows para Linux para Windows 10](https://docs.microsoft.com/windows/wsl/install-win10).
 
-## <a name="set-up-visual-studio-code"></a>Configurar Visual Studio Code
+## <a name="set-up-visual-studio-code"></a>Configuración de Visual Studio Code
 
-Aproveche las ventajas de [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense), la [detección de errores](https://code.visualstudio.com/docs/python/linting), la [compatibilidad con depuración](https://code.visualstudio.com/docs/python/debugging), [fragmentos de código](https://code.visualstudio.com/docs/editor/userdefinedsnippets) y [pruebas unitarias](https://code.visualstudio.com/docs/python/unit-testing) mediante VS Code. VS Code se integra perfectamente con el subsistema de Windows para Linux, lo que proporciona un [terminal integrado](https://code.visualstudio.com/docs/editor/integrated-terminal) para establecer un flujo de trabajo sin problemas entre el editor de código y la línea de comandos, además de admitir [git para el control de versiones](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support) con git común los comandos (agregar, confirmar, insertar, extraer) se integran directamente en la interfaz de usuario.
+Aprovecha las ventajas de [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense), la [detección de errores](https://code.visualstudio.com/docs/python/linting), la [compatibilidad con la depuración](https://code.visualstudio.com/docs/python/debugging), los [fragmentos de código](https://code.visualstudio.com/docs/editor/userdefinedsnippets) y las [pruebas unitarias](https://code.visualstudio.com/docs/python/unit-testing) mediante el uso de VS Code. VS Code se integra perfectamente con el Subsistema de Windows para Linux, lo que proporciona un [terminal integrado](https://code.visualstudio.com/docs/editor/integrated-terminal) para establecer un flujo de trabajo sin problemas entre el editor de código y la línea de comandos, además de admitir [GIT para el control de versiones](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support) con comandos de Git comunes (agregar, confirmar, enviar cambios e incorporar cambios) integrados directamente en la interfaz de usuario.
 
-1. [Descargue e instale vs code para Windows](https://code.visualstudio.com). VS Code también está disponible para Linux, pero el subsistema de Windows para Linux no admite aplicaciones de GUI, por lo que es necesario instalarla en Windows. No se preocupe, todavía podrá integrarse con la línea de comandos y las herramientas de Linux mediante la extensión Remote-WSL.
+1. [Descarga e instala VS Code para Windows](https://code.visualstudio.com). VS Code también está disponible para Linux, pero el Subsistema de Windows para Linux no admite aplicaciones de GUI, por lo que deberemos instalarlo en Windows. Pero no te preocupes. Igualmente podrás realizar la integración con la línea de comandos y las herramientas de Linux mediante la extensión Remote-WSL.
 
-2. Instale la [extensión Remote-WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) en vs Code. Esto le permite usar WSL como entorno de desarrollo integrado y controlará la compatibilidad y las cosas. [Más información](https://code.visualstudio.com/docs/remote/remote-overview).
+2. Instala la [extensión Remote-WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) de VS Code. De este modo, podrás usar WSL como entorno de desarrollo integrado y la compatibilidad y las rutas se controlarán automáticamente. [Más información](https://code.visualstudio.com/docs/remote/remote-overview).
 
 > [!IMPORTANT]
-> Si ya tiene VS Code instalado, debe asegurarse de que tiene la [versión 1,35](https://code.visualstudio.com/updates/v1_35) o posterior para poder instalar la [extensión Remote-WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). No se recomienda el uso de WSL en VS Code sin la extensión Remote-WSL, ya que se perderá la compatibilidad con Autocompletar, depuración, detección de errores, etc. Hecho divertido: Esta extensión WSL se instala en $HOME/.vscode-Server/Extensions.
+> Si ya tienes VS Code instalado, deberás asegurarte de que dispones de la [versión 1.35 de mayo ](https://code.visualstudio.com/updates/v1_35) o una posterior a fin de poder instalar la [extensión Remote-WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). No te recomendamos que uses WSL en VS Code sin la extensión Remote-WSL, ya que perderás la compatibilidad con Autocompletar, la depuración, la detección de errores, etc. Dato curioso: Esta extensión de WSL se instala en $HOME/.vscode-server/extensions.
 
 ## <a name="create-a-new-project"></a>Creación de un proyecto nuevo.
 
 Vamos a crear un nuevo directorio de proyecto en nuestro sistema de archivos de Linux (Ubuntu) en el que trabajaremos con las aplicaciones y herramientas de Linux mediante VS Code.
 
-1. Cierre VS Code y abra Ubuntu 18,04 (la línea de comandos de WSL). para ello, vaya al menú **Inicio** (icono de Windows inferior izquierdo) y escriba: "Ubuntu 18,04".
+1. Cierra VS Code y abre Ubuntu 18.04 (la línea de comandos de WSL). Para ello, ve al menú **Inicio** (icono de Windows de la esquina inferior izquierda) y escribe "Ubuntu 18.04".
 
-2. En la línea de comandos de Ubuntu, navegue a la ubicación en la que desea colocar el proyecto y cree un directorio para él: `mkdir HelloWorld`.
+2. En la línea de comandos de Ubuntu, navega a la ubicación en la que quieras colocar el proyecto y crea un directorio para este (`mkdir HelloWorld`).
 
-![Terminal Ubuntu](../images/ubuntu-terminal.png)
+![Terminal de Ubuntu](../images/ubuntu-terminal.png)
 
 > [!TIP]
-> Una cuestión importante que hay que recordar al usar el subsistema de Windows para Linux (WSL) es que **ahora está trabajando entre dos sistemas de archivos diferentes**: 1) el sistema de archivos de Windows y 2) el sistema de archivos de Linux (WSL), que es Ubuntu en nuestro ejemplo. Deberá prestar atención a la ubicación en la que se instalan los paquetes y se almacenan los archivos. Puede instalar una versión de una herramienta o un paquete en el sistema de archivos de Windows y una versión completamente diferente en el sistema de archivos de Linux. La actualización de la herramienta en el sistema de archivos de Windows no tendrá ningún efecto en la herramienta en el sistema de archivos de Linux y viceversa. WSL monta las unidades fijas en el equipo en la carpeta `/mnt/<drive>` de la distribución de Linux. Por ejemplo, la unidad de Windows C: está montada en `/mnt/c/`. Puede tener acceso a los archivos de Windows desde el terminal Ubuntu y usar aplicaciones y herramientas de Linux en esos archivos y viceversa. Se recomienda trabajar en el sistema de archivos de Linux para el desarrollo web de Python dado que muchas de las herramientas web se han escrito originalmente para Linux y se han implementado en un entorno de producción de Linux. También evita la combinación de la semántica del sistema de archivos (como Windows no distingue entre mayúsculas y minúsculas con respecto a los nombres de archivo). Dicho esto, WSL ahora admite el salto entre los sistemas de archivos de Windows y Linux, por lo que puede hospedar sus archivos en cualquiera de ellos. [Más información](https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/). También nos complace compartir que [WSL2 está disponible próximamente para Windows](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/) y ofrecerá algunas mejoras excelentes. Puede [probarlo ahora en la compilación 18917 de Windows Insider](https://docs.microsoft.com/windows/wsl/wsl2-install).
+> Una cuestión importante que hay que recordar al usar el Subsistema de Windows para Linux (WSL) es que **ahora trabajas entre dos sistemas de archivos diferentes**: 1) el sistema de archivos de Windows y 2) el sistema de archivos de Linux (WSL), que es Ubuntu en nuestro ejemplo. Deberás prestar atención a la ubicación en la que instalas los paquetes y almacenas los archivos. Puedes instalar una versión de una herramienta o un paquete en el sistema de archivos de Windows y una versión completamente diferente en el sistema de archivos de Linux. La actualización de la herramienta en el sistema de archivos de Windows no tendrá ningún efecto en la herramienta del sistema de archivos de Linux, y viceversa. WSL monta las unidades fijas en el equipo en la carpeta `/mnt/<drive>` de la distribución de Linux. Por ejemplo, la unidad C: de Windows se monta en `/mnt/c/`. Puedes acceder a los archivos de Windows desde el terminal de Ubuntu y usar aplicaciones y herramientas de Linux en esos archivos, y viceversa. Te recomendamos que trabajes en el sistema de archivos de Linux para el desarrollo web de Python, dado que muchas de las herramientas web se han escrito originalmente para Linux y se han implementado en un entorno de producción de Linux. Además, así también se evita la combinación de la semántica del sistema de archivos (como el hecho de que Windows no distingue mayúsculas de minúsculas en los nombres de archivo). Dicho esto, WSL ahora admite el salto entre los sistemas de archivos de Windows y Linux, por lo que puedes hospedar tus archivos en cualquiera de ellos. [Más información](https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/). También nos complace compartir que [WSL2 estará disponible próximamente en Windows](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/) y ofrecerá algunas mejoras excelentes. Puedes [probarlo ahora en la compilación 18917 de Windows Insider](https://docs.microsoft.com/windows/wsl/wsl2-install).
 
 ## <a name="install-python-pip-and-venv"></a>Instalación de Python, PIP y venv
 
-Ubuntu 18,04 LTS incluye Python 3,6 ya instalado, pero no incluye algunos de los módulos que puede esperar obtener con otras instalaciones de Python. Todavía tendremos que instalar **PIP**, el administrador de paquetes estándar para Python y **venv**, el módulo estándar que se usa para crear y administrar entornos virtuales ligeros.  
+Ubuntu 18.04 LTS se suministra con Python 3.6 ya instalado, pero no incluye algunos de los módulos que puedes esperar obtener con otras instalaciones de Python. Por este motivo, tendremos que instalar **PIP**, el administrador de paquetes estándar para Python, y **venv**, el módulo estándar que se usa para crear y administrar entornos virtuales ligeros.  
 
-1. Confirme que Python3 ya está instalado; para ello, abra el terminal Ubuntu y escriba: `python3 --version`. Debe devolver el número de versión de Python. Si necesita actualizar la versión de Python, actualice primero la versión de Ubuntu escribiendo: `sudo apt update && sudo apt upgrade` y, a continuación, actualice Python con `sudo apt upgrade python3`.
+1. Confirma que Python3 ya está instalado. Para ello, abre el terminal de Ubuntu y escribe `python3 --version`. Se te debería devolver el número de versión de Python. Si necesitas actualizar la versión de Python, primero actualiza la versión de Ubuntu. Para ello, escribe `sudo apt update && sudo apt upgrade` y, luego, actualiza Python con `sudo apt upgrade python3`.
 
-2. Instale **PIP** escribiendo: `sudo apt install python3-pip`. PIP permite instalar y administrar paquetes adicionales que no forman parte de la biblioteca estándar de Python.
+2. Para instalar **PIP**, escribe `sudo apt install python3-pip`. PIP te permite instalar y administrar paquetes adicionales que no forman parte de la biblioteca estándar de Python.
 
-3. Instale **venv** escribiendo: `sudo apt install python3-venv`.
+3. Para instalar **venv**, escribe `sudo apt install python3-venv`.
 
-## <a name="create-a-virtual-environment"></a>Crear un entorno virtual
+## <a name="create-a-virtual-environment"></a>Creación de un entorno virtual
 
-El uso de entornos virtuales es un procedimiento recomendado para los proyectos de desarrollo de Python. Mediante la creación de un entorno virtual, puede aislar las herramientas del proyecto y evitar conflictos de versiones con herramientas para los demás proyectos. Por ejemplo, puede que esté manteniendo un proyecto web más antiguo que requiera el marco Web de Django 1,2, pero, a continuación, se incluye un nuevo proyecto emocionante con Django 2,2. Si actualiza Django globalmente, fuera de un entorno virtual, podría encontrar algunos problemas de versión más adelante. Además de evitar conflictos de versiones accidentales, los entornos virtuales permiten instalar y administrar paquetes sin privilegios administrativos.
+El uso de entornos virtuales es un procedimiento recomendado para los proyectos de desarrollo de Python. Mediante la creación de un entorno virtual, puedes aislar las herramientas del proyecto y evitar conflictos de versiones con las herramientas de los demás proyectos. Por ejemplo, es posible que mantengas un proyecto web más antiguo que requiera el marco web de Django 1.2, pero, a continuación, te aparezca un nuevo proyecto emocionante con Django 2.2. Si actualizas Django globalmente, fuera de un entorno virtual, más adelante podrías encontrarte con algunos problemas de versiones. Además de evitar conflictos de versiones accidentales, los entornos virtuales permiten instalar y administrar paquetes sin privilegios administrativos.
 
-1. Abra el terminal y, dentro de la carpeta del proyecto *HelloWorld* , use el siguiente comando para crear un entorno virtual denominado **. venv**: `python3 -m venv .venv`.
+1. Abre el terminal y, dentro de la carpeta del proyecto *HelloWorld*, usa el siguiente comando para crear un entorno virtual denominado **.venv**: `python3 -m venv .venv`.
 
-2. Para activar el entorno virtual, escriba: `source .venv/bin/activate`. Si funcionó, debería ver **(. venv)** antes del símbolo del sistema. Ahora tiene un entorno independiente preparado para escribir código e instalar paquetes. Cuando haya terminado con el entorno virtual, escriba el siguiente comando para desactivarlo: `deactivate`.
+2. Para activar el entorno virtual, escribe `source .venv/bin/activate`. Si funcionó, deberías ver **(.venv)** antes del símbolo del sistema. Ahora tienes un entorno independiente preparado para escribir código e instalar paquetes. Cuando hayas terminado con el entorno virtual, escribe el siguiente comando para desactivarlo: `deactivate`.
 
-    ![Crear un entorno virtual](../images/wsl-venv.png)
+    ![Creación de un entorno virtual](../images/wsl-venv.png)
 
 > [!TIP]
-> Se recomienda crear el entorno virtual dentro del directorio en el que planea tener el proyecto. Puesto que cada proyecto debe tener su propio directorio independiente, cada uno tendrá su propio entorno virtual, por lo que no hay necesidad de nombres únicos. Nuestra sugerencia es usar name **. venv** para seguir la Convención de Python. Algunas herramientas (como pipenv) también tienen como valor predeterminado este nombre si se instala en el directorio del proyecto. No quiere usar **. env** como entra en conflicto con los archivos de definición de variables de entorno. Por lo general, no se recomiendan los nombres que no conducen a un punto, ya que no es necesario `ls` recordándole constantemente que existe el directorio. También se recomienda agregar **. venv** al archivo. gitignore. (Esta es [la plantilla gitignore predeterminada de github para Python](https://github.com/github/gitignore/blob/50e42aa1064d004a5c99eaa72a2d8054a0d8de55/Python.gitignore#L99-L106) como referencia). Para obtener más información sobre cómo trabajar con entornos virtuales en VS Code, consulte [uso de entornos de Python en vs Code](https://code.visualstudio.com/docs/python/environments).
+> Te recomendamos que crees el entorno virtual dentro del directorio en el que planeas tener el proyecto. Puesto que cada proyecto debe tener su propio directorio independiente, cada uno tendrá su propio entorno virtual, por lo que no hay necesidad de usar nombres únicos. Nuestra sugerencia es usar el nombre **.venv** para seguir la convención de Python. Algunas herramientas (como pipenv) también tienen como valor predeterminado este nombre si las instalas en el directorio del proyecto. Te recomendamos que no uses **.env**, dado que entra en conflicto con los archivos de definición de la variable de entorno. Por lo general, no se recomienda el uso de nombres que empiecen con un punto, ya que no necesitas que `ls` te recuerde de manera constante que el directorio existe. También te recomendamos que agregues **.venv** a tu archivo .gitignore. (Aquí tienes la [plantilla de gitignore predeterminada de GitHub para Python](https://github.com/github/gitignore/blob/50e42aa1064d004a5c99eaa72a2d8054a0d8de55/Python.gitignore#L99-L106) a modo de referencia). Para obtener más información sobre cómo trabajar con entornos virtuales en VS Code, consulta [Uso de entornos de Python en VS Code](https://code.visualstudio.com/docs/python/environments).
 
-## <a name="open-a-wsl---remote-window"></a>Abrir una ventana WSL-Remote
+## <a name="open-a-wsl---remote-window"></a>Apertura de una ventana WSL-Remote
 
-VS Code usa la extensión Remote-WSL (instalada anteriormente) para tratar el subsistema de Linux como servidor remoto. Esto le permite usar WSL como entorno de desarrollo integrado. [Más información](https://code.visualstudio.com/docs/remote/wsl). 
+VS Code usa la extensión Remote-WSL (instalada anteriormente) para tratar el subsistema de Linux como un servidor remoto. Esto te permite usar WSL como entorno de desarrollo integrado. [Más información](https://code.visualstudio.com/docs/remote/wsl). 
 
-1. Abra la carpeta del proyecto en VS Code desde el terminal Ubuntu; para ello, escriba: `code .` (el "." indica a VS Code que abra la carpeta actual).
+1. Para abrir la carpeta del proyecto en VS Code desde el terminal de Ubuntu, escribe `code .` (el "." indica a VS Code que abra la carpeta actual).
 
-2. Aparecerá una alerta de seguridad en Windows Defender y seleccione "permitir acceso". Una vez que se abre VS Code, debería ver el indicador de host de conexión remota, en la esquina inferior izquierda, que le permite saber que está editando en **WSL: Ubuntu-18.04 @ no__t-0.
+2. Aparecerá una alerta de seguridad de Windows Defender, en la que deberás seleccionar "Permitir acceso". Una vez que se abra VS Code, deberías ver el indicador de host de conexión remota en la esquina inferior izquierda, lo que te permitirá saber que realizas la edición en **WSL: Ubuntu-18.04**.
 
-    ![VS Code indicador de host de conexión remota](../images/wsl-remote-extension.png)
+    ![Indicador de host de conexión remota de VS Code](../images/wsl-remote-extension.png)
 
-3. Cierre el terminal Ubuntu. Al avanzar, usaremos el terminal WSL integrado en VS Code.
+3. Cierra el terminal de Ubuntu. Más adelante, usaremos el terminal de WSL integrado en VS Code.
 
-4. Abra el terminal WSL en VS Code presionando **Ctrl + '** (mediante el carácter de acento grave) o seleccionando **Ver** **terminal**@no__t 2. Se abrirá una línea de comandos Bash (WSL) abierta a la ruta de acceso de la carpeta del proyecto que creó en el terminal Ubuntu.
+4. Abre el terminal de WSL en VS Code. Para ello, presiona **Control + `** (mediante el carácter de tilde aguda) o selecciona **Ver** > **Terminal**. Se abrirá una línea de comandos de Bash (WSL) en la ruta de acceso de la carpeta del proyecto que creó en el terminal de Ubuntu.
 
-    ![VS Code con terminal WSL](../images/vscode-bash-remote.png)
+    ![VS Code con el terminal de WSL](../images/vscode-bash-remote.png)
 
-## <a name="install-the-microsoft-python-extension"></a>Instalación de la extensión de Microsoft Python
+## <a name="install-the-microsoft-python-extension"></a>Instalación de la extensión de Microsoft Python
 
-Tendrá que instalar las extensiones de VS Code para la WSL remota. Las extensiones ya instaladas localmente en VS Code no estarán disponibles automáticamente. [Más información](https://code.visualstudio.com/docs/remote/wsl#_managing-extensions).
+Tendrás que instalar las extensiones de VS Code para tu extensión de Remote-WSL. Las extensiones que ya estén instaladas localmente en VS Code no estarán disponibles automáticamente. [Más información](https://code.visualstudio.com/docs/remote/wsl#_managing-extensions).
 
-1. Abra la ventana VS Code Extensions; para ello, escriba **Ctrl + Mayús + X** (o use el menú para desplazarse hasta **Ver** **las extensiones**de  > ).
+1. Para abrir la ventana Extensiones de VS Code, escribe **Control + Mayús + X** (o usa el menú para desplazarte a **Ver** > **Extensiones**).
 
-2. En el cuadro principales **extensiones de búsqueda en Marketplace** , escriba:  **Python**.
+2. En el cuadro **Buscar extensiones en Marketplace** de la parte superior, escribe:  **Python**.
 
-3. Busque la extensión **Python (MS-Python. Python) de Microsoft** y seleccione el botón de **instalación** verde.
+3. Busca la extensión **Python (ms-python.python) de Microsoft** y selecciona el botón **Instalar** de color verde.
 
-4. Una vez finalizada la instalación de la extensión, deberá seleccionar el botón azul **recarga necesaria** . Esto volverá a cargar VS Code y mostrará un **WSL: UBUNTU-18,04-installed @ no__t-0 en la ventana extensiones de VS Code que muestra que ha instalado la extensión de Python.
+4. Una vez finalizada la instalación de la extensión, deberás seleccionar el botón **Reload required** (Recarga necesaria) de color azul. Se volverá a cargar VS Code y se mostrara la sección **WSL: UBUNTU-18.04 - Installed** (WSL: UBUNTU-18.04 [instalado]) en la ventana VS Code Extensions (Extensiones de VS Code), que mostrará que ha instalado la extensión de Python.
 
-## <a name="run-a-simple-python-program"></a>Ejecutar un programa de Python sencillo
+## <a name="run-a-simple-python-program"></a>Ejecución de un programa de Python simple
 
-Python es un lenguaje interpretado y admite distintos tipos de intérpretes (python2, Anaconda, PyPy, etc.). VS Code debe tener como valor predeterminado el intérprete asociado al proyecto. Si tiene un motivo para cambiarlo, seleccione el intérprete que se muestra actualmente en la barra azul en la parte inferior de la ventana de VS Code o abra la **paleta de comandos** (Ctrl + Mayús + P) y escriba el comando **Python: Seleccione intérprete @ no__t-0. Se mostrará una lista de los intérpretes de Python que tiene instalados actualmente. [Más información sobre la configuración de entornos de Python](https://code.visualstudio.com/docs/python/environments).
+Python es un lenguaje interpretado y admite distintos tipos de intérpretes (Python2, Anaconda, PyPy, etc.). VS Code debe tener como valor predeterminado el intérprete asociado al proyecto. Si tienes algún motivo para cambiarlo, selecciona el intérprete que se muestra actualmente en la barra azul de la parte inferior de la ventana de VS Code o abre la **Paleta de comandos** (Control + Mayús + P) y escribe el comando **Python: Select Interpreter**. Se mostrará una lista de los intérpretes de Python que tienes instalados actualmente. [Obtén más información sobre la configuración de entornos de Python](https://code.visualstudio.com/docs/python/environments).
 
-Vamos a crear y ejecutar un programa de Python sencillo como prueba y asegurarse de que se ha seleccionado el intérprete de Python correcto.
+Para probarlo, crearemos y ejecutaremos un programa de Python sencillo. Así mismo, nos aseguraremos de que hemos seleccionado el intérprete de Python correcto.
 
-1. Abra la ventana del explorador de archivos de VS Code escribiendo **Ctrl + Mayús + E** (o use el menú para navegar a **Ver** > **Explorer**).
+1. Para abrir la ventana VS Code File Explorer (Explorador de archivos de VS Code), escribe **Control + Mayús + E** (o usa el menú para navegar a **Ver** > **Extensiones**).
 
-2. Si aún no está abierto, abra el terminal de WSL integrado presionando **Ctrl + Mayús + '** y asegúrese de que la carpeta del proyecto **HelloWorld** Python está seleccionada.
+2. Si aún no está abierto, escribe **Control + Mayús + `** para abrir el terminal de WSL integrado y asegúrate de que la carpeta del proyecto de Python **HelloWorld** esté seleccionada.
 
-3. Cree un archivo de Python escribiendo: `touch test.py`. Debería ver que el archivo que acaba de crear aparece en la ventana del explorador bajo las carpetas. venv y. vscode que ya se encuentra en el directorio del proyecto.
+3. Para crear un archivo de Python, escribe `touch test.py`. Deberías ver que el archivo que acabas de crear aparece en la ventana Explorador bajo las carpetas. venv y. vscode que ya se encuentran en el directorio del proyecto.
 
-4. Seleccione el archivo **Test.py** que acaba de crear en la ventana del explorador para abrirlo en vs Code. Dado que. py en nuestro nombre de archivo indica VS Code que se trata de un archivo de Python, la extensión de Python que cargó anteriormente elegirá y cargará automáticamente un intérprete de Python que verá en la parte inferior de la ventana de VS Code.
+4. Selecciona el archivo **test.py** que acabas de crear en la ventana Explorador para abrirlo en VS Code. Dado que la extensión .py de nuestro nombre de archivo indica a VS Code que se trata de un archivo de Python, la extensión de Python que cargó anteriormente elegirá y cargará de manera automática un intérprete de Python que verás en la parte inferior de la ventana de VS Code.
 
-    ![Seleccione el intérprete de Python en VS Code](../images/interpreterselection.gif)
+    ![Selección del intérprete de Python en VS Code](../images/interpreterselection.gif)
 
-5. Pegue este código Python en el archivo test.py y, a continuación, guarde el archivo (Ctrl + S): 
+5. Pega este código Python en el archivo test.py y, a continuación, guarda el archivo (Control + S): 
 
     ```python
     print("Hello World")
     ```
 
-6. Para ejecutar el programa "Hola mundo" de Python que acabamos de crear, seleccione el archivo **Test.py** en la ventana explorador de vs Code y, a continuación, haga clic con el botón derecho en el archivo para mostrar un menú de opciones. Seleccione **Ejecutar archivo de Python en terminal**. Como alternativa, en la ventana de terminal WSL integrada, escriba: `python test.py` para ejecutar el programa "Hola mundo". El intérprete de Python imprimirá "Hola mundo" en la ventana de terminal.
+6. Para ejecutar el programa "Hola mundo" de Python que acabamos de crear, selecciona el archivo **test.py** en la ventana Explorador de VS Code y, a continuación, haz clic con el botón derecho en el archivo para mostrar un menú de opciones. Selecciona **Run Python File in Terminal** (Ejecutar archivo de Python en terminal). Como alternativa, en la ventana del terminal de WSL integrada, escribe `python test.py` para ejecutar el programa "Hola mundo". El intérprete de Python imprimirá "Hola mundo" en la ventana del terminal.
 
-¡Enhorabuena! Ya está todo listo para crear y ejecutar programas de Python. Ahora vamos a intentar crear una aplicación Hola mundo con dos de los marcos Web de Python más populares: Frasco y Django.
+Enhorabuena. Ya lo tienes todo listo para crear y ejecutar programas de Python. Ahora vamos a intentar crear una aplicación Hola mundo con dos de los marcos web de Python más populares: Flask y Django.
 
-## <a name="hello-world-tutorial-for-flask"></a>Tutorial de Hola mundo para el frasco
+## <a name="hello-world-tutorial-for-flask"></a>Tutorial de Hola mundo para Flask
 
-[Frasco](http://flask.pocoo.org/) es un marco de aplicación web para Python. En este breve tutorial, creará una pequeña aplicación de frasco "Hola mundo" con VS Code y WSL.
+[Flask](http://flask.pocoo.org/) es un marco de aplicación web para Python. En este breve tutorial, creará una pequeña aplicación "Hola mundo" de Flask con VS Code y WSL.
 
-1. Abra Ubuntu 18,04 (la línea de comandos de WSL). para ello, vaya al menú **Inicio** (icono de Windows inferior izquierdo) y escriba: "Ubuntu 18,04".
+1. Para abrir Ubuntu 18.04 (la línea de comandos de WSL), ve al menú **Inicio** (icono de Windows de la esquina inferior izquierda) y escribe "Ubuntu 18.04".
 
-2. Cree un directorio para el proyecto: `mkdir HelloWorld-Flask` y, a continuación, `cd HelloWorld-Flask` para especificar el directorio.
+2. Crea un directorio para el proyecto `mkdir HelloWorld-Flask` y, a continuación, escribe `cd HelloWorld-Flask` para entrar al directorio.
 
-3. Cree un entorno virtual para instalar las herramientas del proyecto: `python3 -m venv .venv`
+3. Crea un entorno virtual para instalar las herramientas del proyecto: `python3 -m venv .venv`.
 
-4. Abra el proyecto **HelloWorld-frasco** en vs Code escribiendo el comando: `code .`
+4. Para abrir el proyecto **HelloWorld-Flask** en VS Code, escribe el comando `code .`.
 
-5. Dentro de VS Code, abra el terminal de WSL integrado (también conocido como bash) escribiendo **Ctrl + Mayús + '** (la carpeta de proyecto **HelloWorld-frasco** ya debe estar seleccionada). *Cierre la línea de comandos de Ubuntu a medida que trabajamos en el terminal WSL integrado con VS Code avanzando.*
+5. En VS Code, abre el terminal de WSL integrado (también conocido como Bash). Para ello, escribe **Control + Mayús + `** (la carpeta del proyecto **HelloWorld-Flask** ya debería estar seleccionada). *Cierra la línea de comandos de Ubuntu, ya que a partir de ahora trabajaremos en el terminal de WSL integrado con VS Code.*
 
-6. Active el entorno virtual que creó en el paso #3 mediante el terminal bash en VS Code: `source .venv/bin/activate`. Si funcionó, debería ver (. venv) antes del símbolo del sistema.
+6. Activa el entorno virtual que creaste en el paso #3 mediante el terminal de Bash de VS Code: `source .venv/bin/activate`. Si funcionó, deberías ver (.venv) antes del símbolo del sistema.
 
-7. Para instalar el frasco en el entorno virtual, escriba: `python3 -m pip install flask`. Compruebe que se ha instalado; para ello, escriba: `python3 -m flask --version`.
+7. Instala Flask en el entorno virtual escribiendo `python3 -m pip install flask`. Para que verificar se haya instalado, escribe `python3 -m flask --version`.
 
-8. Cree un nuevo archivo para el código de Python: `touch app.py`
+8. Crea un archivo nuevo para el código de Python: `touch app.py`.
 
-9. Abra el archivo **app.py** en el explorador de archivos de VS Code (`Ctrl+Shift+E` y, a continuación, seleccione el archivo app.py). Esto activará la extensión de Python para elegir un intérprete. Debe tener como valor predeterminado **Python 3.6.8 64 bits ('. venv ': venv)** . Tenga en cuenta que también ha detectado su entorno virtual.
+9. Abre el archivo **app.py** en el explorador de archivos de VS Code (`Ctrl+Shift+E`y, a continuación, selecciona el archivo app.py). Se activará la extensión de Python para elegir un intérprete. El valor predeterminado debería ser **Python 3.6.8 64-bit ('.venv': venv)** . Ten en cuenta que también detecta tu entorno virtual.
 
     ![Entorno virtual activado](../images/virtual-environment.png)
 
-10. En **app.py**, agregue el código para importar el frasco y cree una instancia del objeto de frasco:
+10. En **app.py**, agrega el código para importar Flask y crea una instancia del objeto de Flask:
 
     ```python
     from flask import Flask
     app = Flask(__name__)
     ```
 
-11. También en **app.py**, agregue una función que devuelva contenido, en este caso una cadena simple. Use el decorador **app. Route** del frasco para asignar la ruta de la dirección URL "/" a esa función:
+11. En **app.py**, agrega también una función que devuelva contenido. En este caso, una cadena simple. Usa el decorador **app.route** de Flask para asignar la ruta de la URL "/" a esa función:
 
     ```python
     @app.route("/")
@@ -188,17 +188,17 @@ Vamos a crear y ejecutar un programa de Python sencillo como prueba y asegurarse
     ```
 
     > [!TIP]
-    > Puede usar varios decoradores en la misma función, uno por línea, en función de cuántas rutas diferentes desee asignar a la misma función.
+    > Puedes usar varios decoradores en la misma función, uno por línea, en función de cuántas rutas diferentes quieras asignar a la misma función.
 
-12. Guarde el archivo **app.py** (**Ctrl + S**).
+12. Guarda el archivo **app.py** (**Control + S**).
 
-13. En el terminal, ejecute la aplicación escribiendo el siguiente comando:
+13. En el terminal, escribe el siguiente comando para ejecutar la aplicación.
 
     ```python
     python3 -m flask run
     ```
 
-    Esto ejecuta el servidor de desarrollo de frasco. El servidor de desarrollo busca **app.py** de forma predeterminada. Al ejecutar el frasco, debería ver una salida similar a la siguiente:
+    Se ejecutará el servidor de desarrollo de Flask. De forma predeterminada, el servidor de desarrollo busca el archivo **app.py**. Al ejecutar Flask, deberías ver un resultado similar al siguiente:
 
     ```bash
     (env) user@USER:/mnt/c/Projects/HelloWorld$ python3 -m flask run
@@ -209,58 +209,58 @@ Vamos a crear y ejecutar un programa de Python sencillo como prueba y asegurarse
      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
     ```
 
-14. Abra el explorador Web predeterminado en la página representada, **presione Ctrl + clic** en la dirección URL de http://127.0.0.1:5000/ del terminal. Debería ver el mensaje siguiente en el explorador:
+14. Abre el explorador web predeterminado en la página representada y presiona **Control + clic** en la dirección URL http://127.0.0.1:5000/ del terminal. Deberías ver el mensaje siguiente en el explorador:
 
-    ![¡ Hola, frasco!](../images/hello-flask.png)
+    ![Hello, Flask!](../images/hello-flask.png)
 
-15. Observe que cuando visita una dirección URL como "/", aparece un mensaje en el terminal de depuración que muestra la solicitud HTTP:
+15. Observa que, cuando visitas una dirección URL como "/", se muestra un mensaje en el terminal de depuración con la solicitud HTTP siguiente:
 
     ```bash
     127.0.0.1 - - [19/Jun/2019 13:36:56] "GET / HTTP/1.1" 200 -
     ```
 
-16. Detenga la aplicación con **Ctrl + C** en el terminal.
+16. Para detener la aplicación, usa **Control + C** en el terminal.
 
 > [!TIP]
-> Si desea usar un nombre de archivo diferente que **app.py**, como **Program.py**, defina una variable de entorno denominada **FLASK_APP** y establezca su valor en el archivo elegido. A continuación, el servidor de desarrollo del frasco usa el valor de **FLASK_APP** en lugar del archivo **app.py**predeterminado. Para obtener más información, consulte [la documentación de la interfaz de línea de comandos del frasco](http://flask.pocoo.org/docs/1.0/cli/).
+> Si quieres usar un nombre de archivo diferente que **app.py**, como **program.py**, define una variable de entorno denominada **FLASK_APP** y establece su valor en el archivo elegido. A continuación, el servidor de desarrollo de Flask usará el valor de **FLASK_APP** en lugar del archivo predeterminado **app.py**. Para obtener más información, ve la [documentación de la interfaz de línea de comandos de Flask](http://flask.pocoo.org/docs/1.0/cli/).
 
-Enhorabuena, ha creado una aplicación Web de frasco con Visual Studio Code y el subsistema de Windows para Linux. Para obtener un tutorial más detallado sobre el uso de VS Code y el frasco, consulte [tutorial de frasco en Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-flask).
+Enhorabuena, has creado una aplicación web de Flask con Visual Studio Code y el Subsistema de Windows para Linux. Para ver un tutorial más detallado sobre el uso de VS Code y Flask, consulta el [Tutorial de Flask en Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-flask).
 
 ## <a name="hello-world-tutorial-for-django"></a>Tutorial de Hola mundo para Django
 
-[Django](https://www.djangoproject.com) es un marco de aplicación web para Python. En este breve tutorial, creará una pequeña aplicación de "Hola mundo" Django con VS Code y WSL.
+[Django](https://www.djangoproject.com) es un marco de aplicación web para Python. En este breve tutorial, crearás una pequeña aplicación "Hola mundo" de Django con VS Code y WSL.
 
-1. Abra Ubuntu 18,04 (la línea de comandos de WSL). para ello, vaya al menú **Inicio** (icono de Windows inferior izquierdo) y escriba: "Ubuntu 18,04".
+1. Para abrir Ubuntu 18.04 (la línea de comandos de WSL), ve al menú **Inicio** (icono de Windows de la esquina inferior izquierda) y escribe "Ubuntu 18.04".
 
-2. Cree un directorio para el proyecto: `mkdir HelloWorld-Django` y, a continuación, `cd HelloWorld-Django` para especificar el directorio.
+2. Crea un directorio para el proyecto `mkdir HelloWorld-Django` y, a continuación, escribe `cd HelloWorld-Django` para entrar al directorio.
 
-3. Cree un entorno virtual para instalar las herramientas del proyecto: `python3 -m venv .venv`
+3. Crea un entorno virtual para instalar las herramientas del proyecto: `python3 -m venv .venv`.
 
-4. Abra el proyecto **HelloWorld-DJango** en vs Code escribiendo el comando: `code .`
+4. Para abrir el proyecto **HelloWorld-DJango** en VS Code, escribe el comando `code .`.
 
-5. Dentro de VS Code, abra el terminal de WSL integrado (también conocido como bash) escribiendo **Ctrl + Mayús + '** (la carpeta de proyecto **HelloWorld-Django** ya debe estar seleccionada). *Cierre la línea de comandos de Ubuntu a medida que trabajamos en el terminal WSL integrado con VS Code avanzando.*
+5. En VS Code, abre el terminal de WSL integrado (también conocido como Bash). Para ello, escribe **Control + Mayús + `** (la carpeta del proyecto **HelloWorld-Django** ya debería estar seleccionada). *Cierra la línea de comandos de Ubuntu, ya que a partir de ahora trabajaremos en el terminal de WSL integrado con VS Code.*
 
-6. Active el entorno virtual que creó en el paso #3 mediante el terminal bash en VS Code: `source .venv/bin/activate`. Si funcionó, debería ver (. venv) antes del símbolo del sistema.
+6. Activa el entorno virtual que creaste en el paso #3 mediante el terminal de Bash de VS Code: `source .venv/bin/activate`. Si funcionó, deberías ver (.venv) antes del símbolo del sistema.
 
-7. Instale Django en el entorno virtual con el comando: `python3 -m pip install django`. Compruebe que se ha instalado; para ello, escriba: `python3 -m django --version`.
+7. Instala Django en el entorno virtual con el comando `python3 -m pip install django`. Para que verificar se haya instalado, escribe `python3 -m django --version`.
 
-8. A continuación, ejecute el siguiente comando para crear el proyecto Django:
+8. A continuación, ejecuta el siguiente comando para crear el proyecto de Django:
 
     ```bash
     django-admin startproject web_project .
     ```
 
-    El comando `startproject` presupone (mediante el uso de `.` al final) que la carpeta actual es la carpeta del proyecto y crea lo siguiente en ella:
+    El comando `startproject` presupone (mediante el uso de `.` al final) que la carpeta actual es la carpeta del proyecto, y crea lo siguiente en ella:
 
-    - `manage.py`: La utilidad administrativa de línea de comandos Django para el proyecto. Ejecute comandos administrativos para el proyecto mediante `python manage.py <command> [options]`.
+    - `manage.py`: La utilidad administrativa de la línea de comandos de Django para el proyecto. Debes ejecutar comandos administrativos para el proyecto mediante `python manage.py <command> [options]`.
 
     - Una subcarpeta denominada `web_project`, que contiene los archivos siguientes:
         - `__init__.py`: un archivo vacío que indica a Python que esta carpeta es un paquete de Python.
-        - `wsgi.py`: un punto de entrada para que los servidores Web compatibles con WSGI sirvan al proyecto. Normalmente se deja este archivo tal cual, ya que proporciona los enlaces para los servidores Web de producción.
-        - `settings.py`: contiene la configuración del proyecto Django, que se modifica durante el desarrollo de una aplicación Web.
-        - `urls.py`: contiene una tabla de contenido para el proyecto Django, que también se modifica en el curso del desarrollo.
+        - `wsgi.py`: un punto de entrada para los servidores web compatibles con WSGI que van a proporcionar servicios al proyecto. Normalmente, deberás dejar los archivos tal cual, ya que sirven de enlace para los servidores web de producción.
+        - `settings.py`: contiene la configuración del proyecto de Django, que se modifica durante el desarrollo de una aplicación web.
+        - `urls.py`: contiene una tabla de contenido para el proyecto de Django, que también se modifica durante el desarrollo.
 
-9. Para comprobar el proyecto Django, inicie el servidor de desarrollo de Django con el comando `python3 manage.py runserver`. El servidor se ejecuta en el puerto predeterminado 8000 y debería ver una salida similar a la siguiente en la ventana de terminal:
+9. Para verificar el proyecto de Django, inicia el servidor de desarrollo de Django con el comando `python3 manage.py runserver`. El servidor se ejecuta en el puerto predeterminado 8000 y deberías ver un resultado similar al siguiente en la ventana del terminal:
 
     ```output
     Performing system checks...
@@ -273,23 +273,23 @@ Enhorabuena, ha creado una aplicación Web de frasco con Visual Studio Code y el
     Quit the server with CONTROL-C.
     ```
 
-    Al ejecutar el servidor la primera vez, se crea una base de datos de SQLite predeterminada en el archivo `db.sqlite3`, que está pensado para fines de desarrollo, pero se puede usar en producción para aplicaciones Web de bajo volumen. Además, el servidor Web integrado de Django está diseñado *únicamente* para fines de desarrollo local. Sin embargo, cuando se implementa en un host Web, Django usa el servidor Web del host en su lugar. El módulo `wsgi.py` del proyecto Django se encarga del enlace a los servidores de producción.
+    Cuando ejecutes el servidor por primera vez, se creará una base de datos de SQLite predeterminada en el archivo `db.sqlite3`. Está diseñada con fines de desarrollo, pero se puede usar en producción para aplicaciones web de volumen bajo. Además, el servidor web integrado de Django *solo* está pensado para usarse con fines de desarrollo local. Sin embargo, cuando realiza una implementación en un host web, Django utiliza el servidor web del host en su lugar. El módulo `wsgi.py` del proyecto de Django se ocupa de servir como enlace a los servidores de producción.
 
-    Si desea utilizar un puerto distinto del predeterminado 8000, especifique el número de puerto en la línea de comandos, como `python3 manage.py runserver 5000`.
+    Si quieres utilizar un puerto distinto del predeterminado (8000), especifica el número de puerto en la línea de comandos, como `python3 manage.py runserver 5000`.
 
-10. `Ctrl+click` la dirección URL de `http://127.0.0.1:8000/` en la ventana salida de terminal para abrir el explorador predeterminado en esa dirección. Si Django está instalado correctamente y el proyecto es válido, verá una página predeterminada. En la VS Code ventana salida de terminal también se muestra el registro del servidor.
+10. Presiona `Ctrl+click` en la dirección URL `http://127.0.0.1:8000/` de la ventana de salida del terminal para abrir el explorador predeterminado en esa dirección. Si Django está instalado correctamente y el proyecto es válido, verás una página predeterminada. En la ventana de salida del terminal de VS Code, también se muestra el registro del servidor.
 
-11. Cuando haya terminado, cierre la ventana del explorador y detenga el servidor en VS Code con `Ctrl+C` como se indica en la ventana salida de terminal.
+11. Cuando hayas terminado, cierra la ventana del explorador y detén el servidor en VS Code con `Ctrl+C`, tal y como se indica en la ventana de salida del terminal.
 
-12. Ahora, para crear una aplicación de Django, ejecute el comando `startapp` de la utilidad administrativa en la carpeta del proyecto (donde se encuentra `manage.py`):
+12. Ahora, para crear una aplicación de Django, ejecuta el comando `startapp` de la utilidad administrativa en la carpeta del proyecto (donde reside `manage.py`):
 
     ```bash
     python3 manage.py startapp hello
     ```
 
-    El comando crea una carpeta llamada `hello` que contiene una serie de archivos de código y una subcarpeta. De estos, suele trabajar con `views.py` (que contiene las funciones que definen las páginas de la aplicación web) y `models.py` (que contiene las clases que definen los objetos de datos). La utilidad administrativa de Django usa la carpeta `migrations` para administrar las versiones de base de datos como se describe más adelante en este tutorial. También hay los archivos `apps.py` (configuración de la aplicación), `admin.py` (para crear una interfaz administrativa) y `tests.py` (para pruebas), que no se describen aquí.
+    El comando crea una carpeta denominada `hello`, que contiene una serie de archivos de código y una subcarpeta. De estos, normalmente trabajarás con `views.py` (que contiene las funciones que definen las páginas de la aplicación web) y `models.py` (que contiene las clases que definen los objetos de datos). La utilidad administrativa de Django usa la carpeta `migrations` para administrar las versiones de base de datos, tal como se describe más adelante en este tutorial. También hay los archivos `apps.py` (configuración de la aplicación), `admin.py` (para crear una interfaz administrativa) y `tests.py` (para pruebas), que no se describen aquí.
 
-13. Modifique `hello/views.py` para que coincida con el código siguiente, que crea una única vista para la Página principal de la aplicación:
+13. Modifica `hello/views.py` para que coincida con el código siguiente. Se creará una vista única para la página principal de la aplicación:
 
     ```python
     from django.http import HttpResponse
@@ -298,7 +298,7 @@ Enhorabuena, ha creado una aplicación Web de frasco con Visual Studio Code y el
         return HttpResponse("Hello, Django!")
     ```
 
-14. Cree un archivo, `hello/urls.py`, con el contenido que aparece a continuación. El archivo `urls.py` es donde se especifican los patrones para enrutar las distintas direcciones URL a sus vistas adecuadas. El código siguiente contiene una ruta para asignar la dirección URL raíz de la aplicación (`""`) a la función `views.home` que acaba de agregar a @no__t 2:
+14. Crea un archivo, `hello/urls.py`, con el contenido que aparece a continuación. En el archivo `urls.py` se especifican los patrones para enrutar las distintas direcciones URL a sus vistas adecuadas. El código siguiente contiene una ruta para asignar la dirección URL raíz de la aplicación (`""`) a la función `views.home` que acabas de agregar a `hello/views.py`:
 
     ```python
     from django.urls import path
@@ -309,7 +309,7 @@ Enhorabuena, ha creado una aplicación Web de frasco con Visual Studio Code y el
     ]
     ```
 
-15. La carpeta `web_project` también contiene un archivo `urls.py`, que es el lugar en el que se controla el enrutamiento de direcciones URL. Abra `web_project/urls.py` y modifíquelo para que coincida con el código siguiente (puede conservar los comentarios instructivos si lo desea). Este código extrae el `hello/urls.py` de la aplicación mediante `django.urls.include`, que mantiene las rutas de la aplicación contenidas en la aplicación. Esta separación resulta útil cuando un proyecto contiene varias aplicaciones.
+15. La carpeta `web_project` también contiene un archivo `urls.py`, que es el lugar en el que se controla el enrutamiento de direcciones URL. Abre el archivo `web_project/urls.py` y modifícalo para que coincida con el código siguiente (si quieres, puedes conservar los comentarios instructivos). Este código extrae el archivo `hello/urls.py` de la aplicación mediante `django.urls.include`, que mantiene las rutas de la aplicación contenidas en la aplicación. Esta separación resulta útil cuando un proyecto contiene varias aplicaciones.
 
     ```python
     from django.contrib import admin
@@ -320,15 +320,15 @@ Enhorabuena, ha creado una aplicación Web de frasco con Visual Studio Code y el
     ]
     ```
 
-16. Guarde todos los archivos modificados.
+16. Guarda todos los archivos modificados.
 
-17. En el terminal de VS Code, ejecute el servidor de desarrollo con `python manage.py runserver` y abra un explorador para `http://127.0.0.1:8000/` para ver una página que representa "Hello, Django".
+17. En el terminal de VS Code, ejecuta el servidor de desarrollo con `python manage.py runserver` y abre la URL `http://127.0.0.1:8000/` en un explorador para ver una página que represente "Hello, Django".
 
-Enhorabuena, ha creado una aplicación Web de Django con VS Code y el subsistema de Windows para Linux. Para obtener un tutorial más detallado sobre el uso de VS Code y Django, consulte el [tutorial de Django en Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-django).
+Enhorabuena, has creado una aplicación web de Django con VS Code y el Subsistema de Windows para Linux. Para ver un tutorial más detallado sobre el uso de VS Code y Django, consulta el [Tutorial de Django en Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-django).
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Tutorial de Python con vs Code](https://code.visualstudio.com/docs/python/python-tutorial): Un tutorial introductorio para VS Code como un entorno de Python, principalmente cómo editar, ejecutar y depurar código.
-- [Compatibilidad de Git en vs Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support): Obtenga información sobre cómo usar los aspectos básicos del control de versiones de Git en VS Code.  
-- [Obtenga información acerca de las actualizaciones disponibles próximamente con WSL 2!](https://docs.microsoft.com/windows/wsl/wsl2-index): Esta nueva versión cambia el modo en que las distribuciones de Linux interactúan con Windows, lo que aumenta el rendimiento del sistema de archivos y agrega compatibilidad completa con llamadas del sistema.
-- [Trabajar con varias distribuciones de Linux en Windows](https://docs.microsoft.com/windows/wsl/wsl-config): Obtenga información sobre cómo administrar varias distribuciones de Linux diferentes en el equipo Windows.
+- [Tutorial de Python con VS Code](https://code.visualstudio.com/docs/python/python-tutorial): un tutorial introductorio para VS Code como entorno de Python, en el que principalmente se describe cómo editar, ejecutar y depurar código.
+- [Compatibilidad de GIT en VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support): obtén información sobre cómo usar los aspectos básicos del control de versiones de GIT en VS Code.  
+- [Información sobre las actualizaciones disponibles próximamente con WSL 2](https://docs.microsoft.com/windows/wsl/wsl2-index): esta nueva versión cambia el modo en que las distribuciones de Linux interactúan con Windows, lo que aumenta el rendimiento del sistema de archivos y agrega compatibilidad completa con las llamadas del sistema.
+- [Trabajo con varias distribuciones de Linux en Windows](https://docs.microsoft.com/windows/wsl/wsl-config): obtén información sobre cómo administrar varias distribuciones de Linux diferentes en la máquina Windows.

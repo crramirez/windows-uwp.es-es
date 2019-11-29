@@ -1,30 +1,30 @@
 ---
 title: Introducción al uso de Python en Windows con una base de datos
-description: Una guía para ayudarle a empezar a usar PostgreSQL o MongoDB con Python en Windows.
+description: Una guía que te ayudará a empezar a usar PostgreSQL o MongoDB con Python en Windows.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-keywords: Python, Windows 10, PostgreSQL, MongoDB, Postgres, Mongo, Microsoft, Python en Windows, instalación de PostgreSQL en Windows, instalación de MongoDB en Windows, uso de PostgreSQL con Python, uso de MongoDB con Python, PostgreSQL en WSL, MongoDB en WSL
+keywords: python, windows 10, postgresql, mongodb, postgres, mongo, microsoft, python en windows, instalar postgresql en windows, instalar mongodb en windows, usar postgresql con python, usar mongodb con python, postgresql en WSL, mongodb en WSL
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: 9b1bdea86739f3d58b39cf7f0e6b8090474886f3
 ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72517778"
 ---
 # <a name="get-started-using-postgresql-or-mongodb-with-python-on-windows"></a>Introducción al uso de PostgreSQL o MongoDB con Python en Windows
 
-Esta guía paso a paso le ayudará a comenzar a conectar su aplicación de Python a una base de datos de. Decidimos centrarnos en dos opciones populares: PostgreSQL y MongoDB.
+Esta guía detallada te ayudará a comenzar a conectar tu aplicación de Python a una base de datos. Decidimos centrarnos en dos opciones conocidas: PostgreSQL y MongoDB.
 
 ## <a name="differences-between-mongodb-and-postgresql"></a>Diferencias entre MongoDB y PostgreSQL
 
 [!INCLUDE [Postgres vs Mongo](../includes/postgres-v-mongo.md)]
 
 > [!NOTE]
-> También puede ser conveniente tener en cuenta cómo se integra el marco de trabajo y las herramientas que se usan con un sistema de base de datos determinado. Parece que el [marco Web de Django](./web-frameworks.md#hello-world-tutorial-for-django) está mejor integrado con PostgreSQL (consulte los [documentos de Django](https://docs.djangoproject.com/en/2.2/ref/contrib/postgres/) y [psycopg2](https://github.com/psycopg/psycopg2)). El [marco Web de frasco](./web-frameworks.md#hello-world-tutorial-for-flask) parece estar mejor integrado con MongoDB (consulte [MongoEngine](https://github.com/MongoEngine/flask-mongoengine) y [PyMongo](https://github.com/dcrosta/flask-pymongo)).
+> También te recomendamos que consideres en qué medida el marco y las herramientas que usas están integrados con un sistema de base de datos determinado. El [marco web de Django](./web-frameworks.md#hello-world-tutorial-for-django) parece estar mejor integrado con PostgreSQL (consulta la [documentación de Django](https://docs.djangoproject.com/en/2.2/ref/contrib/postgres/) y [psycopg2](https://github.com/psycopg/psycopg2)). El [marco web de Flask](./web-frameworks.md#hello-world-tutorial-for-flask) parece estar mejor integrado con MongoDB (consulta [MongoEngine](https://github.com/MongoEngine/flask-mongoengine) y [PyMongo](https://github.com/dcrosta/flask-pymongo)).
 
 ## <a name="install-postgresql"></a>Instalación de PostgreSQL
 
@@ -32,7 +32,7 @@ Esta guía paso a paso le ayudará a comenzar a conectar su aplicación de Pytho
 
 ### <a name="vs-code-support-for-postgresql"></a>Compatibilidad de VS Code con PostgreSQL
 
-VS Code admite el trabajo con bases de datos de PostgreSQL a través de la [extensión PostgreSQL](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-postgresql), puede crear, conectarse a, administrar y consultar las bases de datos de postgresql desde vs Code.
+VS Code permite trabajar con bases de datos de PostgreSQL mediante la [extensión de PostgreSQL ](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-postgresql). Puedes crear, administrar y consultar las bases de datos de PostgreSQL desde VS Code, así como conectarte a ellas.
 
 ## <a name="install-mongodb"></a>Instalación de MongoDB
 
@@ -40,10 +40,10 @@ VS Code admite el trabajo con bases de datos de PostgreSQL a través de la [exte
 
 ### <a name="vs-code-support-for-mongodb"></a>Compatibilidad de VS Code con MongoDB
 
-VS Code admite el trabajo con bases de datos de MongoDB a través de la [extensión CosmosDB de Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb), puede crear, conectar, administrar y consultar bases de datos de mongodb desde vs Code.
+VS Code permite trabajar con bases de datos de MongoDB mediante la [extensión de Azure CosmosDB](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb). Puedes crear, administrar y consultar las bases de datos de MongoDB desde VS Code, así como conectarte a ellas.
 
-Para obtener más información, visite el VS Code docs: [trabajar con MongoDB](https://code.visualstudio.com/docs/azure/mongodb).
+Para obtener más información, visita la documentación de VS Code: [Trabajar con MongoDB](https://code.visualstudio.com/docs/azure/mongodb).
 
-## <a name="set-up-profile-aliases"></a>Configurar alias de perfil
+## <a name="set-up-profile-aliases"></a>Configuración de alias de perfil
 
 [!INCLUDE [Set up profile aliases](../includes/profile-aliases.md)]

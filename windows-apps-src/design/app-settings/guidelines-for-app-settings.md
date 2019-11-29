@@ -10,14 +10,14 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c08dad36929c7889f1896404df862230040e3499
 ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/09/2019
 ms.locfileid: "72163702"
 ---
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
 
-La configuración de la aplicación es la parte personalizable por el usuario de la aplicación Plataforma universal de Windows (UWP) a la que se tiene acceso a través de una página de configuración de la aplicación. Por ejemplo, una aplicación de lector de noticias podría permitir al usuario especificar qué orígenes de noticias mostrar o cuántas columnas Mostrar en la pantalla, mientras que una aplicación meteorológica podría permitir que el usuario elegira entre Celsius y Fahrenheit. En este artículo se proporcionan recomendaciones y procedimientos recomendados para crear y mostrar la configuración de la aplicación.
+La configuración de la aplicación es la parte que puede personalizar el usuario de una aplicación de la Plataforma universal de Windows (UWP) a la que se accede a través de una página de configuración de la aplicación. Por ejemplo, una aplicación del lector de noticias puede permitir al usuario especificar qué fuentes de noticias o cuántas columnas se deben mostrar en la pantalla, mientras que una aplicación meteorológica podría permitir al usuario elegir entre Celsius y Fahrenheit. En este artículo se proporcionan los procedimientos recomendados para crear y mostrar la configuración de aplicaciones.
 
 ## <a name="when-to-provide-a-settings-page"></a>Cuándo se debe proporcionar una página de configuración
 
@@ -50,19 +50,19 @@ Para el diseño del panel de navegación, el elemento Configuración de la aplic
 
 **Barra de la aplicación**
 
-Si estás usando la [barra de aplicaciones](../controls-and-patterns/app-bars.md) o la barra de herramientas, coloca el punto de entrada de configuración como el último elemento en el menú de desbordamiento "Más". Si es importante tener una mayor detectabilidad del punto de entrada de configuración de la aplicación, colócalo directamente en la barra de aplicaciones y no en el desbordamiento.
+Si usas la [barra de aplicaciones](../controls-and-patterns/app-bars.md) o la barra de herramientas, coloca el punto de entrada de configuración como el último elemento en el menú de desbordamiento "Más". Si es importante tener una mayor detectabilidad del punto de entrada de configuración de la aplicación, colócalo directamente en una barra de la aplicación y no en el desbordamiento.
 
 ![punto de entrada de la configuración de la aplicación para la barra de la aplicación](images/appsettings-entrypoint-tabs.png)
 
 **Hub**
 
-Si estás usando un diseño de navegación centralizada, el punto de entrada de la configuración de la aplicación debe colocarse en el menú de desbordamiento "Más" de la barra de aplicaciones.
+Si usas un diseño de navegación centralizada, el punto de entrada de la configuración de la aplicación debe colocarse en el menú de desbordamiento "Más" de una barra de la aplicación.
 
-**Pestañas/pivotes**
+**Pestañas y tablas dinámicas**
 
-Para un diseño de pestañas o tablas dinámicas, no se recomienda colocar el punto de entrada de la configuración de la aplicación como uno de los elementos principales de la navegación. En su lugar, el punto de entrada de la configuración de la aplicación debe colocarse en el menú de desbordamiento "Más" de la barra de aplicaciones.
+Para un diseño de pestañas o tablas dinámicas, no se recomienda colocar el punto de entrada de la configuración de la aplicación como uno de los elementos principales de la navegación. En su lugar, el punto de entrada de la configuración de la aplicación debe colocarse en el menú de desbordamiento "Más" de una barra de la aplicación.
 
-**Maestro: detalles**
+**Detalles principales**
 
 En lugar de esconder el punto de entrada de la configuración de la aplicación en lo más profundo de un panel de detalles maestro, conviértelo en el último elemento anclado en el nivel superior del panel maestro.
 
@@ -85,9 +85,9 @@ Móvil:
 Si la aplicación permite a los usuarios elegir el modo de color de la aplicación, presenta estas opciones usando [botones de radio](../controls-and-patterns/radio-button.md) o un [cuadro combinado](../controls-and-patterns/combo-box.md) con el encabezado "Elegir un modo de aplicación". En las opciones debe haber lo siguiente:
 - Claro
 - Oscuro
-- Versión predeterminada de Windows
+- Valor predeterminado de Windows
 
-También te recomendamos que agregues un hipervínculo a la página Colores de la aplicación de Configuración de Windows donde los usuarios puedan acceder al modo de aplicación predeterminado actual y modificarlo. Usa la cadena "Configuración de color de Windows" para el texto del hipervínculo.
+También te recomendamos que agregues un hipervínculo a la página Colores de la aplicación Configuración de Windows, en que los usuarios puedan acceder al modo de aplicación predeterminado actual y modificarlo. Usa la cadena "Configuración de color de Windows" para el texto del hipervínculo.
 
 ![Sección "Elegir un modo"](images/appsettings_mode.png)
 
@@ -100,9 +100,9 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 ## <a name="about-section-and-feedback-button"></a>Sección Acerca de y botón Comentarios
 
 
-Se recomienda colocar la sección "Acerca de esta aplicación" en la aplicación como una página dedicada o en su propia sección. Si quieres usar un botón "Enviar comentarios", colócalo en la parte inferior de la página "Acerca de esta aplicación".
+Te recomendamos que coloques la sección "Acerca de esta aplicación" en la aplicación como una página dedicada o en su propia sección. Si quieres usar un botón "Enviar comentarios", colócalo en la parte inferior de la página "Acerca de esta aplicación".
 
-En un subtítulo "Condiciones de uso", coloca los "Términos de uso" y la "Declaración de privacidad" (debería ser [botones de hipervínculo](../controls-and-patterns/hyperlinks.md) con ajuste de texto), así como información legal adicional, como el copyright.
+En un subtítulo "Condiciones de uso", coloca los "Términos de uso" y la "Declaración de privacidad" (deberían ser [botones de hipervínculo](../controls-and-patterns/hyperlinks.md) con ajuste de texto), así como información legal adicional, como el copyright.
 
 ![Sección "Acerca de esta aplicación" con un botón "Enviar comentarios"](images/appsettings-about.png)
 
@@ -124,11 +124,11 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
 - Presenta el contenido de arriba a abajo en una sola columna, desplazable si fuera necesario. Limita el desplazamiento a un máximo del doble del alto de pantalla.
 - Usa los controles siguientes para la configuración de la aplicación:
 
-    - [Modificadores de alternancia](../controls-and-patterns/toggles.md): Para permitir que los usuarios establezcan o desactiven los valores.
-    - [Botones de radio](../controls-and-patterns/radio-button.md): Para permitir que los usuarios elijan un elemento de un conjunto de hasta 5 opciones relacionadas mutuamente excluyentes.
-    - [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): Para permitir que los usuarios escriban texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
-    - [Hipervínculos](../controls-and-patterns/hyperlinks.md): Para llevar al usuario a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
-    - [Botones](../controls-and-patterns/buttons.md): Para permitir que los usuarios inicien una acción inmediata sin descartar el control flotante de configuración actual.
+    - [Modificadores para alternar](../controls-and-patterns/toggles.md): para permitir que los usuarios activen o desactiven valores.
+    - [Botones de radio](../controls-and-patterns/radio-button.md): para permitir a los usuarios elegir un elemento de un conjunto de hasta 5 opciones relacionadas que sean mutuamente excluyentes.
+    - [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): para permitir que los usuarios escriban texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
+    - [Hipervínculos](../controls-and-patterns/hyperlinks.md): para dirigir a los usuarios a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
+    - [Botones](../controls-and-patterns/buttons.md): para permitir que los usuarios inicien una acción inmediata sin descartar el control flotante de configuración actual.
 - Agrega un mensaje descriptivo si se desactiva uno de los controles. Coloca este mensaje por encima del control deshabilitado.
 - Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](https://docs.microsoft.com/previous-versions/windows/apps/br212672(v=win.10)) o [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition), con un desplazamiento izquierdo de 100 píxeles.
 - Usa encabezados de sección, párrafos y etiquetas para ayudar a organizar y aclarar el contenido, si fuera necesario.
@@ -140,7 +140,7 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Conceptos básicos del diseño de comandos](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
+* [Conceptos básicos del diseño de los comandos](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
 * [Directrices sobre controles de progreso](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)
 * [Almacenar y recuperar datos de la aplicación](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
 * [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)

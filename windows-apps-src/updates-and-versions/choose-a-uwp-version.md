@@ -1,18 +1,18 @@
 ---
 title: Elegir una versión de UWP
 description: Al escribir una aplicación para UWP en Microsoft Visual Studio, puedes elegir la versión de destino. Obtén información sobre la diferencia entre las diferentes versiones de UWP y sobre cómo configurar las opciones en proyectos nuevos y existentes.
-ms.date: 04/19/2019
+ms.date: 11/19/2019
 ms.topic: article
 keywords: Windows 10, UWP, versión, compilación, versiones, Windows, elegir, actualizar, actualizaciones
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: f691a0d600fd6508f1f8ec2bbffec9bf02a98da7
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: a75667fdad6352b5ca8225951ce522f13325d381
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67821050"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258915"
 ---
 # <a name="choose-a-uwp-version"></a>Elegir una versión de UWP
 
@@ -21,7 +21,7 @@ Cada versión de Windows 10 ha aportado características nuevas y mejoradas a l
 > [!WARNING]
 > Los proyectos UWP creados en versiones actuales de Visual Studio no se pueden abrir en Visual Studio 2015.
 
-En la tabla siguiente se describen las versiones disponibles de Windows 10. Tenga en cuenta que esta tabla solo se aplica a la compilación de aplicaciones para UWP, que solo son compatibles con Windows 10. No puede desarrollar aplicaciones para UWP para versiones anteriores de Windows, y tiene que haber [instalado la compilación adecuada del SDK](https://go.microsoft.com/fwlink/?LinkId=821431) con el fin de seleccionar esa versión como destino.
+En la tabla siguiente se describen las versiones disponibles de Windows 10. Tenga en cuenta que esta tabla solo se aplica a la compilación de aplicaciones para UWP, que solo son compatibles con Windows 10. No puede desarrollar aplicaciones para UWP para versiones anteriores de Windows, y tiene que haber [instalado la compilación adecuada del SDK](https://developer.microsoft.com/windows/downloads#_blank) con el fin de seleccionar esa versión como destino.
 
 | Versión | Descripción |
 | --- | --- |
@@ -34,7 +34,7 @@ En la tabla siguiente se describen las versiones disponibles de Windows 10. Ten
 | Compilación 10586 (actualización de noviembre, versión 1511) | Esta versión de Windows 10 se publicó en noviembre de 2015. Las características destacadas incluyen la introducción de las API ORTC (Comunicaciones en tiempo real mediante objetos) para la comunicación de vídeo en Microsoft Edge y las API de proveedores para permitir a las aplicaciones usar la autenticación de rostro de Windows Hello. [Más información sobre las características introducidas en esta compilación.](../whats-new/windows-10-build-10586.md) |
 | Compilación 10240 (Windows 10, versión 1507) | Esta es la versión inicial de Windows 10, publicada en julio de 2015. [Más información sobre las características introducidas en esta compilación.](../whats-new/windows-10-build-10240.md) |
 
-Es muy recomendable que los nuevos desarrolladores y los desarrolladores que escriban código para un público general usen siempre la compilación más reciente de Windows (17763). Los desarrolladores que escriban aplicaciones de empresa deberían pensar seriamente en ofrecer compatibilidad para una **versión mínima** más antigua.
+Es muy recomendable que los nuevos desarrolladores y los desarrolladores que escriban código para un público general usen siempre la compilación más reciente de Windows (18362). Los desarrolladores que escriban aplicaciones de empresa deberían pensar seriamente en ofrecer compatibilidad para una **versión mínima** más antigua.
 
 ## <a name="whats-different-in-each-uwp-version"></a>¿Qué es diferente en cada versión de UWP?
 
@@ -54,8 +54,8 @@ Si está desarrollando una aplicación de escritorio, consulte en su lugar [vers
 
 En el diálogo **Nuevo proyecto de Windows universal** de Visual Studio, puedes elegir una versión para la **Versión de destino** y otra para la **Versión mínima**. Además, puede cambiar la **Versión de destino** y la **Versión mínima** de la aplicación para UWP en la sección *aplicación* de las **Propiedades** de la aplicación.
 
-* **Versión de destino**. Esto establece el ajuste *TargetPlatformVersion* en el archivo del proyecto. También determina el valor del atributo *TargetDeviceFamily@MaxVersionTested* en el manifiesto del paquete de la aplicación. El valor que elijas especificará la versión de la plataforma UWP a la que está destinada tu proyecto (y, por lo tanto, el conjunto de API disponibles para tu aplicación), por lo que recomendamos que elijas la versión más reciente que sea posible. Para obtener más información sobre el manifiesto del paquete de la aplicación y algunas directrices sobre cómo configurar TargetDeviceFamily manualmente, consulta [TargetDeviceFamily](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily).
-* **Versión mínima**. Esto establece el ajuste *TargetPlatformMinVersion* en el archivo del proyecto. También determina el valor del atributo *TargetDeviceFamily@MinVersion* en el manifiesto del paquete de la aplicación. El valor que elijas especificará la versión mínima de la plataforma UWP con la que puede funcionar tu proyecto.
+* **Versión de destino**. Versión de Windows 10 en la que se va a ejecutar la aplicación. Esto establece el ajuste *TargetPlatformVersion* en el archivo del proyecto. También determina el valor del atributo *TargetDeviceFamily@MaxVersionTested* en el manifiesto del paquete de la aplicación. El valor que elijas especificará la versión de la plataforma UWP a la que está destinada tu proyecto (y, por lo tanto, el conjunto de API disponibles para tu aplicación), por lo que recomendamos que elijas la versión más reciente que sea posible. Para obtener más información sobre el manifiesto del paquete de la aplicación y algunas directrices sobre cómo configurar TargetDeviceFamily manualmente, consulta [TargetDeviceFamily](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily).
+* **Versión mínima**. Versión más antigua de Windows 10 necesaria para admitir las funciones básicas de la aplicación. Esto establece el ajuste *TargetPlatformMinVersion* en el archivo del proyecto. También determina el valor del atributo *TargetDeviceFamily@MinVersion* en el manifiesto del paquete de la aplicación. El valor que elijas especificará la versión mínima de la plataforma UWP con la que puede funcionar tu proyecto.
 
 Ten en cuenta que vas a declarar que tu aplicación funciona en cualquier versión de Windows en el rango desde la **Versión mínima** a la **Versión de destino**. Si las dos son la misma versión, no necesitas hacer nada especial. Si son diferentes, estas son algunas cosas que debes tener en cuenta.
 

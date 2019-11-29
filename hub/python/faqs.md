@@ -1,80 +1,80 @@
 ---
-title: Preguntas más frecuentes sobre el uso de Python en Windows
-description: Preguntas más frecuentes sobre el uso de Python en Windows
+title: Preguntas más frecuentes sobre el uso de Python en Windows.
+description: Preguntas más frecuentes sobre el uso de Python en Windows.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-keywords: Python, Windows 10, Microsoft, PIP, py. exe, rutas de acceso de archivo, PYTHONPATH, implementación de Python, empaquetado de Python
+keywords: python, windows 10, microsoft, pip, py.exe, rutas de acceso al archivo, PYTHONPATH, desarrollo de python, empaquetado de python
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: 4132ef0089ee707367666b4d6340333e538b1130
 ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72313374"
 ---
-# <a name="frequently-asked-questions-about-using-python-on-windows"></a>Preguntas más frecuentes sobre el uso de Python en Windows
+# <a name="frequently-asked-questions-about-using-python-on-windows"></a>Preguntas más frecuentes sobre el uso de Python en Windows.
 
-## <a name="why-cant-i-pip-install-a-certain-package"></a>¿Por qué no se puede "instalar PIP" un determinado paquete?
+## <a name="why-cant-i-pip-install-a-certain-package"></a>¿Por qué no puedo realizar una "instalación de PIP" de un determinado paquete?
 
-Hay una serie de motivos por los que se producirá un error en la instalación. en la mayoría de los casos, la solución correcta es ponerse en contacto con el desarrollador del paquete.
+Hay una serie de motivos por los que se producirá un error en la instalación. En la mayoría de los casos, lo mejor que puedes hacer para solucionarlo es ponerte en contacto con el desarrollador del paquete.
 
-La causa más común de los problemas es intentar instalar en una ubicación para la que no tiene permiso de modificación. Por ejemplo, la ubicación de instalación predeterminada podría requerir privilegios administrativos, pero de forma predeterminada Python no las tendrá. La mejor solución es crear un entorno virtual e instalarlo allí.
+La causa más común de los problemas es intentar realizar una instalación en una ubicación para la que no tiene permiso de modificación. Por ejemplo, la ubicación de instalación predeterminada podría requerir privilegios administrativos, pero de forma predeterminada Python no los tendrá. La mejor solución es crear un entorno virtual e realizar la instalación allí.
 
-Algunos paquetes incluyen código nativo que requiere un C o C++ un compilador para instalar. En general, los desarrolladores de paquetes deben publicar versiones previamente compiladas, pero a menudo no lo hacen. Algunos de estos paquetes pueden funcionar si [instala las herramientas de compilación para Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) y selecciona C++ la opción; sin embargo, en la mayoría de los casos, deberá ponerse en contacto con el desarrollador de paquetes.
+Algunos paquetes incluyen código nativo que requiere un compilador de C o C++ para la instalación. En general, los desarrolladores de paquetes deben publicar versiones precompiladas, pero a menudo no lo hacen. Es posible que algunos de estos paquetes funcionen si [instalas Build Tools para Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) y seleccionas la opción de C++. Sin embargo, en la mayoría de los casos, deberás ponerte en contacto con el desarrollador de paquetes.
 
-[Siga la explicación de stackoverflow](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379).
+[Sigue el debate en Stack Overflow](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379).
 
-## <a name="what-is-pyexe"></a>¿Qué es py. exe?
+## <a name="what-is-pyexe"></a>¿Qué es py.es?
 
-Puede acabar con varias versiones de Python instaladas en el equipo porque está trabajando en diferentes tipos de proyectos de Python. Dado que todos usan el comando `python`, puede que no sea obvio qué versión de Python está usando. Como norma, se recomienda usar el comando `python3` (o `python3.7` para seleccionar una versión específica).
+Puedes acabar con varias versiones de Python instaladas en la máquina porque trabajas en diferentes tipos de proyectos de Python. Dado que todas estas usan el comando `python`, puede que no sea obvia la versión de Python que usas. Como norma, te recomendamos que uses el comando `python3` (o `python3.7` para seleccionar una versión específica).
 
-El [iniciador de py. exe](https://docs.python.org/3/using/windows.html#launcher) seleccionará automáticamente la versión más reciente de Python que haya instalado. También puede usar comandos como `py -3.7` para seleccionar una versión determinada o `py --list` para ver qué versiones se pueden usar. **Sin embargo**, el iniciador de py. exe solo funcionará si usa una versión de Python instalada desde [Python.org](https://www.python.org/downloads/windows/). Al instalar Python desde el Microsoft Store, **no se incluye**el comando `py`. Para Linux, macOS, WSL y la versión Microsoft Store de Python, debe usar el comando `python3` (o `python3.7`).
+El [iniciador de py.exe](https://docs.python.org/3/using/windows.html#launcher) seleccionará automáticamente la versión más reciente de Python que hayas instalado. También puedes usar comandos como `py -3.7` para seleccionar una versión determinada o `py --list` para ver qué versiones se pueden usar. **SIN EMBARGO**, el iniciador de py.exe solo funcionará si usas una versión de Python instalada de [python.org](https://www.python.org/downloads/windows/). Al instalar Python desde Microsoft Store, el comando `py` no se **incluye**. Para Linux, macOS, WSL y la versión de Microsoft Store de Python, debes usar el comando `python3` (o `python3.7`).
 
-## <a name="why-does-running-pythonexe-open-the-microsoft-store"></a>¿Por qué la ejecución de Python. exe abre el Microsoft Store?
+## <a name="why-does-running-pythonexe-open-the-microsoft-store"></a>¿Por qué se abre Microsoft Store al ejecutar python.exe?
 
-Para ayudar a los nuevos usuarios a encontrar una buena instalación de Python, hemos agregado un acceso directo a Windows que le llevará directamente a la versión más reciente del paquete de la comunidad Publicada en el Microsoft Store. Este paquete se puede instalar fácilmente, sin permisos de administrador, y reemplazará los comandos predeterminados `python` y `python3` por los reales.
+A fin de ayudar a los nuevos usuarios a encontrar una instalación adecuada de Python, hemos agregado una combinación de teclas en Windows que te dirigirá directamente a la versión más reciente del paquete de la comunidad publicado en Microsoft Store. Este paquete se puede instalar fácilmente sin permisos de administrador y reemplazará los comandos predeterminados `python` y `python3` por los reales.
 
-La ejecución del archivo ejecutable de acceso directo con los argumentos de línea de comandos devolverá un código de error para indicar que Python no se instaló. Esto es para evitar que los archivos por lotes y los scripts abran la aplicación de la tienda cuando probablemente no se haya previsto.
+Si ejecutas el archivo ejecutable de acceso directo con cualquier argumento de la línea de comandos, se devolverá un código de error para indicar que Python no se instaló. De este modo, se evita que los scripts y los archivos por lotes abran la aplicación Store cuando dicha apertura probablemente no esté prevista.
 
-Si instala Python con los instaladores de [Python.org](https://www.python.org/downloads/windows/) y selecciona la opción "Agregar a ruta de acceso", el nuevo comando `python` tendrá prioridad sobre el acceso directo. Tenga en cuenta que otros instaladores pueden agregar `python` con una prioridad _inferior_ a la del acceso directo integrado.
+Si instalas Python con los instaladores de [python.org](https://www.python.org/downloads/windows/) y seleccionas la opción "Agregar a PATH", el nuevo comando `python` tendrá prioridad sobre la combinación de teclas. Ten en cuenta que hay otros instaladores que pueden agregar `python` con una prioridad _inferior_ respecto a la combinación de teclas integrada.
 
-Puede deshabilitar los accesos directos sin instalar Python si abre "administrar alias de ejecución de la aplicación" desde Inicio, busca las entradas de Python "instalador de la aplicación" y las cambia a "desactivado".
+Puedes deshabilitar las combinaciones de teclas sin instalar Python si abres "Manage app execution aliases" ("Administrar alias de ejecución de la aplicación") desde Inicio, buscas las entradas de Python "Instalador de aplicación" y las cambias a "Desactivado".
 
-## <a name="why-dont-file-paths-work-in-python-when-i-copy-paste-them"></a>¿Por qué no funcionan las rutas de acceso de archivo en Python cuando las copia y las pega?
+## <a name="why-dont-file-paths-work-in-python-when-i-copy-paste-them"></a>¿Por qué no funcionan las rutas de acceso a archivos en Python cuando las copias y las pegas?
 
-Las cadenas de Python usan "secuencias de escape" para los caracteres especiales. Por ejemplo, para insertar un carácter de nueva línea en una cadena, debe escribir `\n`. Dado que las rutas de acceso de archivo en Windows usan barras diagonales inversas, es posible que algunas partes se conviertan en caracteres especiales.
+Las cadenas de Python usan "secuencias de escape" para los caracteres especiales. Por ejemplo, para insertar un carácter de línea nueva en una cadena, deberías escribir `\n`. Dado que las rutas de acceso a archivos en Windows usan barras diagonales inversas, es posible que algunas partes se conviertan en caracteres especiales.
 
-Para pegar una ruta de acceso como una cadena en Python, agregue el prefijo `r`. Esto indica que se trata de una cadena `raw` y no se usarán caracteres de escape excepto \ "(es posible que tenga que quitar la última barra diagonal inversa de la ruta de acceso). Por lo tanto, la ruta de acceso podría ser similar a la siguiente: r "C:\Users\MyName\Documents\Document.txt"
+Para pegar una ruta de acceso como una cadena en Python, agrega el prefijo `r`. Esto indica que se trata de una cadena `raw` y que no se usarán caracteres de escape, excepto "\"(es posible que tengas que quitar la última barra diagonal inversa de la ruta de acceso). Por lo tanto, la ruta de acceso podría ser similar a la siguiente: r"C:\Users\MyName\Documents\Document.txt"
 
-Al trabajar con rutas de acceso en Python, se recomienda usar el módulo estándar pathlib. Esto le permitirá convertir la cadena en un objeto de trazado enriquecido que puede realizar manipulaciones de ruta de acceso de forma coherente tanto si usa barras diagonales inversas como barras diagonales inversas, lo que hace que el código funcione mejor en distintos sistemas operativos.
+Al trabajar con rutas de acceso en Python, te recomendamos que uses el módulo estándar pathlib. De este modo, podrás convertir la cadena en un objeto Path enriquecido que puede realizar manipulaciones de ruta de acceso de forma coherente tanto si usa barras diagonales como barras diagonales inversas, lo que hace que el código funcione mejor en distintos sistemas operativos.
 
 ## <a name="what-is-pythonpath"></a>¿Qué es PYTHONPATH?
 
-Python usa la variable de entorno PYTHONPATH para especificar una lista de directorios desde los que se pueden importar los módulos. Al ejecutar, puede inspeccionar la variable `sys.path` para ver los directorios en los que se buscará al importar algo.
+Python usa la variable de entorno PYTHONPATH para especificar una lista de directorios desde la que se pueden importar los módulos. Cuando se ejecute, puedes inspeccionar la variable `sys.path` para ver los directorios en los que se realizará la búsqueda cuando importes algo.
 
-Para establecer esta variable desde el símbolo del sistema, use: `set PYTHONPATH=list;of;paths`.
+Para establecer esta variable desde el símbolo del sistema, usa `set PYTHONPATH=list;of;paths`.
 
-Para establecer esta variable desde PowerShell, use: `$env:PYTHONPATH=’list;of;paths’` justo antes de iniciar Python.
+Para establecer esta variable desde PowerShell, usa `$env:PYTHONPATH=’list;of;paths’` justo antes de iniciar Python.
 
-**No** se recomienda establecer esta variable globalmente a través de las opciones de configuración de **variables de entorno** , ya que puede ser utilizada por cualquier versión de Python en lugar de la que pretenda usar.
+**No** te recomendamos establecer esta variable de forma global a través de la configuración **Variables de entorno**, ya que puede que la use cualquier versión de Python en lugar de la que quieras usar.
 
 ## <a name="where-can-i-find-help-with-packaging-and-deployment"></a>¿Dónde puedo encontrar ayuda con el empaquetado y la implementación?
 
-[Docker](https://code.visualstudio.com/docs/azure/docker): La [extensión VSCode](https://code.visualstudio.com/docs/azure/docker) le ayuda a empaquetar e implementar rápidamente con plantillas Dockerfile y Docker-Compose. yml (genere los archivos de Docker adecuados para el proyecto).
+[Docker](https://code.visualstudio.com/docs/azure/docker): [La extensión VSCode](https://code.visualstudio.com/docs/azure/docker) te ayuda realizar rápidamente el empaquetado y la implementación con plantillas Dockerfile y docker-compose yml (genera los archivos de Docker adecuados para el proyecto).
 
-[Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/) permite implementar y administrar aplicaciones en contenedores a la vez que se escalan recursos a petición.
+[Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/) te permite implementar y administrar aplicaciones en contenedores a la vez que escalas recursos a petición.
 
-## <a name="what-if-i-need-to-work-across-different-machines"></a>¿Qué ocurre si necesito trabajar en distintos equipos?
+## <a name="what-if-i-need-to-work-across-different-machines"></a>¿Qué ocurre si necesito trabajar en distintas máquinas?
 
-La sincronización de la [configuración](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) le permite sincronizar la configuración del vs Code en distintas instalaciones mediante github. Si trabaja en diferentes equipos, esto ayuda a mantener el entorno coherente entre ellos.
+La extensión [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) te permite sincronizar la configuración de VS Code entre diferentes instalaciones mediante GitHub. Si trabajas en diferentes máquinas, te ayuda a mantener el entorno coherente entre ellas.
 
-## <a name="what-if-im-used-to-using-pycharm-atom-sublime-text-emacs-or-vim"></a>¿Qué ocurre si utilizo usar PyCharm, Atom, Sublime Text, Emacs o VIM?
+## <a name="what-if-im-used-to-using-pycharm-atom-sublime-text-emacs-or-vim"></a>¿Qué ocurre si estoy acostumbrado a usar PyCharm, Atom, Sublime Text, Emacs o VIM?
 
-La extensión VSCode [keymaps](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads) puede ayudar a su entorno a su gusto en casa.
+La extensión de VSCode [Keymaps](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads) puede ayudarte a configurar el entorno para que te resulte más familiar.
 
-## <a name="how-do-mac-shortcut-keys-map-to-windows-shortcut-keys"></a>¿Cómo se asignan las teclas de método abreviado a Windows?
+## <a name="how-do-mac-shortcut-keys-map-to-windows-shortcut-keys"></a>¿Cómo se asignan las teclas de método abreviado de Mac a Windows?
 
-Algunos de los botones del teclado y los métodos abreviados del sistema son ligeramente diferentes entre una máquina de Windows y un equipo Macintosh. Esta [Guía de transición de Mac a Windows](../dev-environment/mac-to-windows.md) cubre los aspectos básicos.
+Algunos de los botones del teclado y los métodos abreviados del sistema son ligeramente diferentes entre una máquina Windows y una Macintosh. En esta [guía de transición de Mac a Windows](../dev-environment/mac-to-windows.md) se tratan los conceptos básicos.
