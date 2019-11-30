@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: 77993256752f081c5abc4f56164d0846c2b61060
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 4d35945c803df2c4f84c5085de0a27a5d6731545
+ms.sourcegitcommit: c8634b15b10bd196e7e2f876ae26e1205e160c91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258769"
+ms.lasthandoff: 11/29/2019
+ms.locfileid: "74663552"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Componentes de Windows Runtime asincrónicos para una aplicación para UWP cargada en paralelo
 
@@ -70,7 +70,7 @@ Afortunadamente, son fáciles de declarar con clases de C\#. Sin embargo, hay co
 
 La secuencia para definir el contrato se presenta de este modo:
 
-**Paso 1**: crear una nueva biblioteca de clase en Visual Studio. Asegúrese de crear el proyecto mediante la plantilla de **biblioteca de clases** y no la **Windows Runtime** plantilla de componentes.
+**Paso 1**: Crear una nueva biblioteca de clase en Visual Studio Asegúrese de crear el proyecto mediante la plantilla de **biblioteca de clases** y no la **Windows Runtime** plantilla de componentes.
 
 Obviamente a continuación hay una implementación, pero esta sección solo abarca la definición del contrato entre procesos. La muestra correspondiente incluye la siguiente clase (EnterpriseServer.cs), cuya forma inicial tiene este aspecto:
 
@@ -565,7 +565,7 @@ struct PersonStruct
 }
 ```
 
-A continuación, devuelva * PersonStruct\[\]* en lugar de la *lista&lt;PersonObject&gt;* .
+A continuación, devuelva *PersonStruct\[\]* en lugar de la *lista&lt;PersonObject&gt;* .
 Así se obtienen todos los datos en un "salto" entre procesos.
 
 Al igual que en todas las consideraciones de rendimiento, medir y probar es fundamental. Lo ideal es insertar telemetría en las diversas operaciones para determinar cuánto tardan. Es importante medir un intervalo: por ejemplo, ¿cuánto tarda en realidad en consumir todos los objetos *People* de una consulta determinada en la aplicación en prueba?
@@ -577,7 +577,7 @@ La muestra ilustra cómo insertar retrasos de tiempo en el código usando las t�
 
 Cuando se realizan cambios en el servidor, hay que procurar que cualquier instancia que se ejecutara anteriormente ya no se ejecuta. En última instancia, COM se encargará de dar con esto en el proceso, pero el temporizador de resumen tardará más tiempo y reducirá la eficacia del desarrollo iterativo. En consecuencia, eliminar una instancia que se ejecutara anteriormente constituye un paso normal durante el desarrollo. Esto conlleva que el desarrollador lleve un seguimiento de la instancia de dllhost que hospeda el servidor.
 
-El proceso de servidor se puede detectar y eliminar mediante el Administrador de tareas o cualquier otra aplicación externa. La herramienta de línea de comandos **TaskList.exe** también se incluye y presenta una sintaxis flexible; por ejemplo:
+El proceso de servidor se puede detectar y eliminar mediante el Administrador de tareas o cualquier otra aplicación externa. La herramienta de línea de comandos **TaskList. exe** también se incluye y tiene una sintaxis flexible, por ejemplo:
 
   
  | **Command** | **Acción** |
