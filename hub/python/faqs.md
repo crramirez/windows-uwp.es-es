@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, pip, py.exe, rutas de acceso al archivo, PYTHONPATH, desarrollo de python, empaquetado de python
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 4132ef0089ee707367666b4d6340333e538b1130
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 6dbf86e0f9435e44140159ebb2bcbc3d67928999
+ms.sourcegitcommit: c8634b15b10bd196e7e2f876ae26e1205e160c91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313374"
+ms.lasthandoff: 11/29/2019
+ms.locfileid: "74663562"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Preguntas más frecuentes sobre el uso de Python en Windows.
 
@@ -47,7 +47,7 @@ Puedes deshabilitar las combinaciones de teclas sin instalar Python si abres "Ma
 
 Las cadenas de Python usan "secuencias de escape" para los caracteres especiales. Por ejemplo, para insertar un carácter de línea nueva en una cadena, deberías escribir `\n`. Dado que las rutas de acceso a archivos en Windows usan barras diagonales inversas, es posible que algunas partes se conviertan en caracteres especiales.
 
-Para pegar una ruta de acceso como una cadena en Python, agrega el prefijo `r`. Esto indica que se trata de una cadena `raw` y que no se usarán caracteres de escape, excepto "\"(es posible que tengas que quitar la última barra diagonal inversa de la ruta de acceso). Por lo tanto, la ruta de acceso podría ser similar a la siguiente: r"C:\Users\MyName\Documents\Document.txt"
+Para pegar una ruta de acceso como una cadena en Python, agrega el prefijo `r`. Esto indica que se trata de una cadena `raw` y que no se usarán caracteres de escape, excepto "\"(es posible que tengas que quitar la última barra diagonal inversa de la ruta de acceso). Así pues, la ruta de acceso podría tener este aspecto: `r"C:\Users\MyName\Documents\Document.txt"`
 
 Al trabajar con rutas de acceso en Python, te recomendamos que uses el módulo estándar pathlib. De este modo, podrás convertir la cadena en un objeto Path enriquecido que puede realizar manipulaciones de ruta de acceso de forma coherente tanto si usa barras diagonales como barras diagonales inversas, lo que hace que el código funcione mejor en distintos sistemas operativos.
 
