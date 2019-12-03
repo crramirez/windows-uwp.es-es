@@ -6,12 +6,12 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp, clasificación por edades, clasificación de juegos, iarc, clasificación, cuestionario, panel de clasificación, clasificación de contenido
 ms.localizationpriority: medium
-ms.openlocfilehash: bab98b50b1d53451708b7631f74d15947c60d4c8
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 2e8ffdcf1daf9198ded9658c471e765acf5ab8f3
+ms.sourcegitcommit: 7754c1cb1a348f3311417ea7df3e9d168fe39517
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260042"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74694781"
 ---
 # <a name="age-ratings"></a>Clasificaciones por edades
 
@@ -24,7 +24,7 @@ La primera vez que envíes una aplicación (o la primera vez que actualices una 
 > [!IMPORTANT]
 > Si ya has completado el cuestionario sobre la aplicación en otro escaparate y tienes un identificador de la clasificación de la IARC, puedes seleccionar la opción de proporcionarnos tu identificador de clasificación. Usaremos tu id. para asociar las clasificaciones existentes con tu aplicación en la Microsoft Store.
 
-Tienes que responder a las preguntas con precisión. Para obtener más información acerca de cualquier pregunta, haz clic en el icono de información que aparece junto a ella. Como parte de este proceso, compartimos con la IARC tu nombre para mostrar de publicador y tu dirección de correo electrónico. Tras completar el cuestionario, el sistema de clasificación de la IARC proporcionará la información de clasificación por edades y contenido en base a tus respuestas. Esta información de clasificación la usaremos a la hora de mostrar tu aplicación a los clientes en diferentes mercados. También recibirás un correo electrónico de la IARC con una confirmación de la clasificación por edades de la aplicación cuando dicha aplicación se haya publicado.
+Tienes que responder a las preguntas con precisión. Para obtener más información acerca de cualquier pregunta, haz clic en el icono de información que aparece junto a ella. Como parte de este proceso, compartimos con la IARC tu nombre de editor y tu dirección de correo electrónico. Tras completar el cuestionario, el sistema de clasificación de la IARC proporcionará la información de clasificación por edades y contenido en base a tus respuestas. Esta información de clasificación la usaremos a la hora de mostrar tu aplicación a los clientes en diferentes mercados. También recibirás un correo electrónico de la IARC con una confirmación de la clasificación por edades de la aplicación cuando dicha aplicación se haya publicado.
 
 La primera pregunta te pide que elijas la categoría que mejor describa la aplicación (y sus metadatos). Una vez que hagas una selección, verá más preguntas. Las preguntas específicas que verás variarán en función de tus respuestas anteriores. Para obtener más detalles que pueden ayudarle a entender cómo responder a cualquier pregunta, haga clic en el icono de información junto a esa pregunta. Si te equivocas en algo, puedes retroceder o comenzar el cuestionario de nuevo para proporcionar las respuestas correctas.
 
@@ -33,9 +33,6 @@ Cuando termines de responder a las preguntas, haz clic en **Save and generate**.
 La próxima vez que actualices la aplicación, verás todas las clasificaciones asignadas de la aplicación en esta página. También puedes hacer clic en **Editar** para repetir el cuestionario si el contenido de tu aplicación cambia de tal forma que debas ajustar alguna respuesta. La IARC también puede actualizar las preguntas ocasionalmente. En este caso, es posible que se te pida que vuelvas a completar el cuestionario cuando envíes una actualización.
 
 <span id="boards" />
-
-> [!NOTE]
-> La legislación de Corea del Sur exige que los juegos disponibles en Corea del Sur se clasifiquen a través del [Game Rating Board](https://www.grb.or.kr/Default.aspx) de Corea del Sur. Si estás enviando un juego y quieres ofrecerlo en Corea del Sur, debes rellenar esta sección adicional y cargar el certificado de clasificación. Ten en cuenta que si la aplicación no es un juego o si no quieres ofrecerla en Corea del Sur, puedes dejar esta sección en blanco.
 
 > [!NOTE]
 > Si estás enviando un juego que estará disponible en Taiwán, se te exige por ley registrar la clasificación de CSRR proporcionado usando [este formulario](https://www.gamerating.org.tw/company_login.php). 
