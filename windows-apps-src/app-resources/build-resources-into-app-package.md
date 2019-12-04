@@ -1,19 +1,19 @@
 ---
-Description: Algunos tipos de aplicaciones (diccionarios multilingües, herramientas de traducción, etc.) necesitan reemplazar el comportamiento predeterminado de una recopilación de aplicación y crear recursos en el lote de aplicaciones en lugar de tenerlos en paquetes de recursos independientes. En este tema se explica cómo hacerlo.
-title: Crear recursos en el paquete de aplicación, en lugar de en un paquete de recursos
+Description: Algunos tipos de aplicaciones (diccionarios multilingües, herramientas de traducción, etc.) necesitan reemplazar el comportamiento predeterminado de un lote de aplicaciones y crear recursos en el paquete de la aplicación en lugar de tenerlos en distintos paquetes de recursos. En este tema se explica cómo hacerlo.
+title: Compilar recursos en el paquete de la aplicación
 template: detail.hbs
 ms.date: 11/14/2017
 ms.topic: article
-keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
+keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: f7acabc9858f5a2fa0b6b76d752d2a342959f41f
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: d7a63c44ac8cb6f6b17951cf6515fad33fb83ee9
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682512"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74734950"
 ---
-# <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>Crear recursos en el paquete de aplicación, en lugar de en un paquete de recursos
+# <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>Crear recursos en el paquete de la aplicación, en lugar de en un paquete de recursos
 
 Algunos tipos de aplicaciones (diccionarios multilingües, herramientas de traducción, etc.) necesitan reemplazar el comportamiento predeterminado de un lote de aplicaciones y crear recursos en el paquete de la aplicación en lugar de tenerlos en paquetes de recursos independientes. En este tema se explica cómo hacerlo.
 
@@ -57,7 +57,7 @@ Hay un paso final que debes hacer. **Pero solo si has eliminado el nombre de cal
    </default>
 ```
 
-### <a name="how-does-this-work"></a>¿Cómo funciona esto?
+### <a name="how-does-this-work"></a>¿Cómo funciona?
 
 En segundo plano, Visual Studio inicia una herramienta denominada `MakePri.exe` para generar un archivo conocido como un índice de recursos del paquete, que describe todos los recursos de la aplicación, incluyendo la indicación de en qué nombres de calificador de recursos dividir automáticamente. Para obtener más información acerca de esta herramienta, consulta [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md). Visual Studio pasa un archivo de configuración a `MakePri.exe`. El contenido de tu archivo `priconfig.packaging.xml` se usa como el elemento `<packaging>` de ese archivo de configuración, que es la parte que determina la división automática. Por lo tanto, agregar y editar `priconfig.packaging.xml` en última instancia influye en el contenido del archivo de índice de recursos del paquete que Visual Studio genera para tu aplicación, así como el contenido de los paquetes de tu lote de aplicaciones.
 

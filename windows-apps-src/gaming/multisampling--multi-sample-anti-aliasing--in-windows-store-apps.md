@@ -1,23 +1,23 @@
 ---
-title: Muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP)
-description: Aprende a usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D.
+title: Muestreo múltiple en aplicaciones para UWP
+description: Obtén información sobre cómo usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, muestreo múltiple, direct3d, games, multisampling
 ms.localizationpriority: medium
-ms.openlocfilehash: 976cdfb5f1dc92f693f7296d6e33d7ccc4c4d6e7
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f4d3e590f99fdf6ca907fcc8fd5b412c5796f474
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318941"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735110"
 ---
-# <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> El muestreo múltiple en Universal Windows Platform (UWP) aplicaciones
+# <a name="span-iddev_gamingmultisampling__multi-sample_anti_aliasing__in_windows_store_appsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span>Muestreo múltiple en aplicaciones Plataforma universal de Windows (UWP)
 
 
 
-Aprende a usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D. El muestreo múltiple, también conocido como suavizado de contorno de muestras múltiples, es una técnica gráfica que se usa para disminuir la apariencia de bordes afilados. Se aplica dibujando más píxeles de los que existen en el destino de representación y después promediando valores para mantener la apariencia de un borde "parcial" en ciertos píxeles. Si quieres ver una descripción más minuciosa de cómo funciona el muestreo múltiple en Direct3D, consulta [Multisample Anti-Aliasing Rasterization Rules (Reglas de rasterización para el suavizado de contorno de muestras múltiples)](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage-rules).
+Obtén información sobre cómo usar el muestreo múltiple en aplicaciones para la Plataforma universal de Windows (UWP) compiladas con Direct3D. El muestreo múltiple, también conocido como suavizado de contorno de muestras múltiples, es una técnica gráfica que se usa para disminuir la apariencia de bordes afilados. Se aplica dibujando más píxeles de los que existen en el destino de representación y después promediando valores para mantener la apariencia de un borde "parcial" en ciertos píxeles. Si quieres ver una descripción más minuciosa de cómo funciona el muestreo múltiple en Direct3D, consulta [Multisample Anti-Aliasing Rasterization Rules (Reglas de rasterización para el suavizado de contorno de muestras múltiples)](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage-rules).
 
 ## <a name="multisampling-and-the-flip-model-swap-chain"></a>Muestreo múltiple y la cadena de intercambio en el modelo flip
 
@@ -28,11 +28,11 @@ Las aplicaciones para UWP con DirectX deben usar cadenas de intercambio en el mo
 
 Los niveles de característica de Direct3D garantizan la compatibilidad con funciones mínimas y específicas para el recuento de muestras y garantizan la disponibilidad de ciertos formatos de búfer que admitirán el muestreo múltiple. Los dispositivos de gráficos, por lo general, admiten una mayor variedad de formatos y recuentos de muestras que la cantidad mínima requerida. La compatibilidad con el muestreo múltiple se puede determinar en tiempo de ejecución. Para ello, debes comprobar la compatibilidad de las características con el muestreo múltiple en formatos DXGI específicos y, a continuación, debes comprobar los recuentos de muestras que se pueden usar con cada formato admitido.
 
-1.  Llama a [**ID3D11Device::CheckFeatureSupport**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) para averiguar qué formatos DXGI se pueden usar con el muestreo múltiple. Suministra los formatos de destino de representación que tu juego puede usar. El destino de representación y el destino de la resolución debe usar el mismo formato, así que compruebe para ambos [ **D3D11\_formato\_soporte\_MULTIMUESTRA\_RENDERTARGET** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ne-d3d11-d3d11_format_support) y **D3D11\_formato\_soporte\_MULTIMUESTRA\_resolver**.
+1.  Llama a [**ID3D11Device::CheckFeatureSupport**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) para averiguar qué formatos DXGI se pueden usar con el muestreo múltiple. Suministra los formatos de destino de representación que tu juego puede usar. Tanto el destino de representación como el destino de la resolución deben usar el mismo formato, por lo que debe comprobar el formato de [**D3D11\_\_compatibilidad con\_\_de\_RENDERTARGET**](https://docs.microsoft.com/windows/desktop/api/d3d11/ne-d3d11-d3d11_format_support) y **D3D11\_** de\_de\_de de ejemplo.
 
-    **La característica de nivel de 9:  ** Aunque la característica de nivel 9 dispositivos [garantizar la compatibilidad con formatos de destino de representación de muestreo múltiple](https://docs.microsoft.com/previous-versions/ff471324(v=vs.85)), no se garantiza la compatibilidad para destinos de resolución de muestreo múltiple. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
+    **Nivel de característica 9:  ** Aunque los dispositivos de nivel [de característica 9 garantizan la compatibilidad con formatos de destino de representación multimuestreados](https://docs.microsoft.com/previous-versions/ff471324(v=vs.85)), no se garantiza la compatibilidad con destinos de resolución de múltiples muestras. Por lo tanto, debes realizar esta comprobación antes de usar la técnica del muestreo múltiple que se describe en este tema.
 
-    El código siguiente comprueba el muestreo múltiple de soporte técnico para todos lo DXGI\_valores de formato:
+    El código siguiente comprueba la compatibilidad de muestreo múltiple con todos los valores de formato de DXGI\_:
 
     ```cpp
     // Determine the format support for multisampling.
@@ -82,11 +82,11 @@ Los niveles de característica de Direct3D garantizan la compatibilidad con func
     }
     ```
 
-    > **Tenga en cuenta**    Use [ **ID3D11Device2::CheckMultisampleQualityLevels1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_2/nf-d3d11_2-id3d11device2-checkmultisamplequalitylevels1) en su lugar si necesita comprobar compatibilidad de muestreo múltiple para los búferes de recursos en mosaico.
+    > **Tenga en cuenta**   usar [**ID3D11Device2:: CheckMultisampleQualityLevels1**](https://docs.microsoft.com/windows/desktop/api/d3d11_2/nf-d3d11_2-id3d11device2-checkmultisamplequalitylevels1) en su lugar si necesita comprobar la compatibilidad Multimuestra de los búferes de recursos en mosaico.
 
      
 
-3.  Crea un búfer y una vista de destino de representación con el recuento de muestras deseado. Usar el mismo DXGI\_formato, ancho y alto que la cadena de intercambio, pero especifique un número de muestras mayor que 1 y usar una dimensión de textura de muestreo múltiple (**D3D11\_RTV\_dimensión\_TEXTURE2DMS** por ejemplo). Si es necesario, puedes volver a crear la cadena de intercambio mediante una configuración nueva que sea adecuada para el muestreo múltiple.
+3.  Crea un búfer y una vista de destino de representación con el recuento de muestras deseado. Use el mismo formato de\_de DXGI, el ancho y el alto que la cadena de intercambio, pero especifique un recuento de muestras mayor que 1 y use una dimensión de textura multimuestreada (**D3D11\_RTV\_dimensión\_TEXTURE2DMS** , por ejemplo). Si es necesario, puedes volver a crear la cadena de intercambio mediante una configuración nueva que sea adecuada para el muestreo múltiple.
 
     El siguiente código crea un destino de representación de muestras múltiples:
 

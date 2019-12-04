@@ -1,17 +1,17 @@
 ---
 description: Aprende a actualizar la aplicación para que use las últimas bibliotecas admitidas de Microsoft Advertising y a asegurarte de que siga recibiendo anuncios de banner.
-title: Actualizar la aplicación a las bibliotecas de publicidad más recientes de anuncios de banner
+title: Usar las bibliotecas de publicidad más recientes para anuncios de banner
 ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, AdControl, AdControl, AdMediatorControl, AdMediatorControl, migrate, migrar
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: f33210f14df3fb855c5744ffcab3ecbc66e1ff58
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 74ac8499e673cacad897455c7065dd3386103406
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259236"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735050"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Actualizar la aplicación a las bibliotecas de publicidad más recientes de anuncios de banner
 
@@ -31,7 +31,7 @@ Antes de que este SDK se lanzara, proporcionamos anteriormente la clase **AdCont
 
 * Los anuncios de banner también dejarán de proporcionarse para las unidades de anuncios que se usan en más de una aplicación. Asegúrate de que las unidades de anuncios se usen cada una solo en una aplicación.
 
-Si tienes una aplicación (que ya está en la Store o que aún está en desarrollo) que muestra anuncios de banner con **AdControl** y no estás seguro de que SDK de publicidad usa la aplicación, sigue las instrucciones de este artículo para determinar si tienes que actualizar la aplicación a un SDK compatible. Si se produce algún problema o necesitas ayuda, [ponte en contacto con soporte técnico](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=32136151).
+Si tienes una aplicación (que ya está en la Store o que aún está en desarrollo) que muestra anuncios de banner con **AdControl** y no estás seguro de que SDK de publicidad usa la aplicación, sigue las instrucciones de este artículo para determinar si tienes que actualizar la aplicación a un SDK compatible. Si se produce algún problema o necesitas ayuda, [ponte en contacto con el soporte técnico](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=32136151).
 
 > [!NOTE]
 > Si la aplicación ya usa el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) (para aplicaciones para UWP), no necesitas realizar más cambios en tu aplicación.

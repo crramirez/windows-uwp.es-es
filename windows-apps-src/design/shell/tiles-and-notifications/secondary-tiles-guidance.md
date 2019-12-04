@@ -1,18 +1,18 @@
 ---
 Description: Obtén información sobre cuándo y dónde debes usar iconos secundarios en tu aplicación para UWP.
-title: Ventanas secundarias
+title: Guía de diseño de mosaicos secundarios
 label: Secondary tiles
 template: detail.hbs
 ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, uwp, iconos secundarios, instrucciones, directrices, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: de3bfa94de1152b3945d42169143a5ae36328c75
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 875513840d8dc752fe336241fa54710aebad6103
+ms.sourcegitcommit: 2d709ddcc31f52d2a4ace1134aea45057d99a615
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625350"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74782576"
 ---
 # <a name="secondary-tile-guidance"></a>Instrucciones sobre los iconos secundarios
 
@@ -32,7 +32,7 @@ Ten en cuenta las siguientes recomendaciones a la hora de habilitar iconos secun
 * Si el contenido que tiene el foco ya está anclado, cambia el botón "Anclar a Inicio" de la barra de la aplicación por el botón "Desanclar de Inicio". El botón "Desanclar de inicio" debería retirar el icono secundario existente.
 * Cuando el contenido que tiene el foco no se puede anclar, no muestres un botón "Anclar a Inicio" (o muestra un botón "Anclar a Inicio" deshabilitado).
 * Usa los glifos proporcionados por el sistema para tus botones "Anclar a Inicio" y "Desanclar de Inicio" (consulta los miembros de anclaje y desanclaje de en Windows.UI.Xaml.Controls.Symbol o WinJS.UI.AppBarIcon).
-* Use el texto del botón estándar: "Anclar a Inicio" y "Desanclar de inicio". Tendrás que invalidar el texto predeterminado cuando uses los glifos de anclaje y desanclaje proporcionados por el sistema.
+* Usa el texto de botones estándar: "Anclar a Inicio" y "Desanclar de Inicio". Tendrás que invalidar el texto predeterminado cuando uses los glifos de anclaje y desanclaje proporcionados por el sistema.
 * No uses un icono secundario como un botón de comando virtual para interactuar con la aplicación primaria, por ejemplo, un icono "saltar a la siguiente pista".
 
 
@@ -47,8 +47,8 @@ Ten en cuenta las siguientes recomendaciones a la hora de habilitar iconos secun
 
 ## <a name="related"></a>Relacionados
 
-* [Información general de los iconos secundarios](secondary-tiles.md)
-* [Iconos secundarios de PIN](secondary-tiles-pinning.md)
-* [Recursos de icono](app-assets.md)
+* [Información general sobre mosaicos secundarios](secondary-tiles.md)
+* [Anclar iconos secundarios](secondary-tiles-pinning.md)
+* [Activos en mosaico](app-assets.md)
 * [Documentación de contenido de mosaico](create-adaptive-tiles.md)
 * [Enviar una notificación de icono local](sending-a-local-tile-notification.md)

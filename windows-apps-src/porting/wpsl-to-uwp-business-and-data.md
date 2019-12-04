@@ -1,17 +1,17 @@
 ---
 description: Detrás de la interfaz de usuario se encuentran las capas de negocio y de datos.
-title: Trasladar Windows Phone las capas de datos y empresariales de Silverlight a UWP
+title: Trasladar las capas de datos y de negocio de WPSL a UWP
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 25d8bba5e1b26613185017642d63128cc2b1f7f6
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 9548026f0cae4ac414da15ad4ad2aa86f6226cbc
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259089"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74734920"
 ---
 #  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>Trasladar Windows Phone las capas de datos y empresariales de Silverlight a UWP
 
@@ -129,7 +129,7 @@ Y la misma función con UWP:
     string myFavoriteAuthor = await Windows.Storage.FileIO.ReadTextAsync(file);
 ```
 
-Una aplicación de Windows Phone Silverlight tiene acceso de solo lectura a la tarjeta SD opcional. Una aplicación para UWP tiene acceso de lectura y escritura a la tarjeta SD. Para obtener más información, consulta [Acceder a la tarjeta SD](https://docs.microsoft.com/windows/uwp/files/access-the-sd-card).
+Una aplicación de Windows Phone Silverlight tiene acceso de solo lectura a la tarjeta SD opcional. Una aplicación para UWP tiene acceso de lectura y escritura a la tarjeta SD. Para obtener información, consulta [Acceso a la tarjeta SD](https://docs.microsoft.com/windows/uwp/files/access-the-sd-card).
 
 Para obtener información sobre cómo obtener acceso a fotos, música y archivos de vídeo en una aplicación para UWP, consulta [Archivos y carpetas de las bibliotecas de música, imágenes y vídeos](https://docs.microsoft.com/windows/uwp/files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries).
 

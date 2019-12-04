@@ -1,17 +1,17 @@
 ---
-title: Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hello
+title: Windows Hello y desbloqueo con dispositivos complementarios
 description: Un dispositivo complementario Windows Hello es un dispositivo que puede actuar de forma conjunta con tu escritorio Windows 10 para mejorar la experiencia de autenticación del usuario. Con el marco de dispositivo complementario de Windows Hello, un dispositivo complementario puede proporcionar una experiencia enriquecida para Windows Hello aunque no esté disponible (por ejemplo, si el escritorio de Windows 10 carece de una cámara para el dispositivo de autenticación de caras o lector de huellas digitales , por ejemplo).
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: 416077d2f2e7fe5f98f2586eb7273602b8075982
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 9b04ca1b841f72284ccab9df6c0ab1be8adab5c5
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281848"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735130"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hello
 
@@ -58,7 +58,7 @@ Además de los requisitos anteriores, la aplicación del dispositivo complementa
 
 - Experiencia del usuario y personalización del registro inicial y eliminación posterior del registro del dispositivo complementario Windows Hello.
 - Ejecución en segundo plano, detección del dispositivo complementario Windows Hello, comunicación con el dispositivo complementario Windows Hello y también el servicio de autenticación complementario.
-- Control de errores
+- Tratamiento de errores
 
 Normalmente, los dispositivos complementarios van acompañados de una aplicación para la configuración inicial, como configurar una pulsera de actividad física por primera vez. La funcionalidad descrita en este documento puede formar parte de esa aplicación y no se necesita una aplicación separada.  
 
@@ -66,9 +66,9 @@ Normalmente, los dispositivos complementarios van acompañados de una aplicació
 
 Cada dispositivo complementario Windows Hello debe combinarse con una aplicación que admita tres señales de usuario. Estas señales pueden ser acciones o gestos.
 
-- **Señal de intención**: Permite al usuario mostrar su intención de desbloquearlo, por ejemplo, al presionar un botón en el dispositivo complementario Windows Hello. La señal de propósito debe captarse en el lateral del **dispositivo complementario Windows Hello**.
-- **Señal de presencia del usuario**: Demuestra la presencia del usuario. Por ejemplo, el dispositivo complementario Windows Hello requiere un código PIN antes de que se pueda usar para desbloquear el equipo (no confundir con el PIN del equipo) o que se pulse un botón.
-- **Señal de desambiguación**: Ambigüedad en el escritorio de Windows 10 que el usuario quiere desbloquear cuando hay varias opciones disponibles para el dispositivo complementario de Windows Hello.
+- **Señal de propósito**: permite al usuario mostrar su intención de desbloquear, por ejemplo, pulsando un botón en el dispositivo complementario Windows Hello. La señal de propósito debe captarse en el lateral del **dispositivo complementario Windows Hello**.
+- **Señal de presencia del usuario**: demuestra la presencia del usuario. Por ejemplo, el dispositivo complementario Windows Hello requiere un código PIN antes de que se pueda usar para desbloquear el equipo (no confundir con el PIN del equipo) o que se pulse un botón.
+- **Señal de desambiguación**: elimina la ambigüedad sobre el escritorio de Windows 10 que quiere desbloquear el usuario cuando haya disponibles varias opciones para el dispositivo complementario Windows Hello.
 
 Cualquier cantidad de estas señales de usuario se puede combinar en una sola. Son necesarias las señales de presencia y propósito del usuario en cada uso.
 
@@ -151,7 +151,7 @@ El servicio usa el segundo valor computado para autenticar el dispositivo y tamb
 
 Sin un servidor backend, los usuarios deben registrar su dispositivo complementario Windows Hello por separado con cada dispositivo con escritorio Windows 10.
 
-Un fabricante de dispositivo complementario o un OEM puede implementar un servicio web para mover el estado del registro se muevan entre los escritorios Windows 10 del usuario o sus dispositivos móviles. Para obtener más información, consulta la sección Itinerancia, Revocación y Servicio de filtro.
+Un fabricante de dispositivo complementario o un OEM puede implementar un servicio web para mover el estado del registro se muevan entre los escritorios Windows 10 del usuario o sus dispositivos móviles. Para obtener más información, consulta la sección Itinerancia, revocación y servicio de filtro.
 
 ### <a name="pin-management"></a>Administración del PIN
 
@@ -164,9 +164,9 @@ Los usuarios pueden eliminar un dispositivo complementario Windows Hello desde e
 Las empresas tienen dos opciones para controlar el marco del dispositivo complementario Windows Hello:
 
 - Activación o desactivación de la característica
-- Definición de la lista blanca de dispositivos complementarios Windows Hello permitidos con el uso del almacén de la aplicación de Windows
+- Definición de la lista aprobada de dispositivos complementarios Windows Hello permitidos con el uso del almacén de la aplicación de Windows
 
-El marco del dispositivo complementario Windows Hello no admite ninguna forma centralizada de mantener el inventario de dispositivos complementarios disponibles o un método para filtrar qué instancias de un tipo de dispositivo complementario Windows Hello están permitidas (por ejemplo, solo se permite un dispositivo complementario con un número de serie entre X e Y). Sin embargo, los desarrolladores de aplicaciones pueden crear un servicio para proporcionar esta funcionalidad. Para obtener más información, consulta la sección Itinerancia, Revocación y Servicio de filtro.
+El marco del dispositivo complementario Windows Hello no admite ninguna forma centralizada de mantener el inventario de dispositivos complementarios disponibles o un método para filtrar qué instancias de un tipo de dispositivo complementario Windows Hello están permitidas (por ejemplo, solo se permite un dispositivo complementario con un número de serie entre X e Y). Sin embargo, los desarrolladores de aplicaciones pueden crear un servicio para proporcionar esta funcionalidad. Para obtener más información, consulta la sección Itinerancia, revocación y servicio de filtro.
 
 ### <a name="revocation"></a>Revocación
 
@@ -178,16 +178,16 @@ Sin embargo, los fabricantes de dispositivos complementarios pueden crear un ser
 
 Los fabricantes de dispositivos complementarios pueden implementar un servicio web que puede usarse para los siguientes escenarios:
 
-- Un servicio de filtro para Enterprise: Una empresa puede limitar el conjunto de dispositivos complementarios de Windows Hello que pueden funcionar en su entorno a una determinada selección de un proveedor específico. Por ejemplo, la empresa Contoso podría solicitar 10 000 dispositivos complementarios del modelo Y al fabricante X y asegurarse de que solo esos dispositivos trabajarán en el dominio Contoso (y no cualquier otro modelo de dispositivo del fabricante X).
-- Stock  Una empresa puede determinar la lista de dispositivos complementarios existentes que se usan en un entorno empresarial.
-- Revocación en tiempo real: Si un empleado informa de que su dispositivo complementario se pierde o lo roban, se puede usar el servicio web para revocar el dispositivo.
-- Móviles Un usuario solo tiene que registrar su dispositivo complementario una vez y funciona en todos sus equipos de escritorio y móviles de Windows 10.
+- Un servicio de filtro para empresa: una empresa puede limitar el conjunto de dispositivos complementarios Windows Hello que puedan trabajar en su entorno a solo unos seleccionados de un fabricante específico. Por ejemplo, la empresa Contoso podría solicitar 10 000 dispositivos complementarios del modelo Y al fabricante X y asegurarse de que solo esos dispositivos trabajarán en el dominio Contoso (y no cualquier otro modelo de dispositivo del fabricante X).
+- Inventario: Una empresa puede determinar la lista de dispositivos complementarios existentes usados en un entorno empresarial.
+- Revocación en tiempo real: si un empleado informa de la pérdida o robo de su dispositivo complementario, el servicio web puede usarse para revocar ese dispositivo.
+- Itinerancia: Un usuario solo tiene que registrar su dispositivo complementario una vez y funcionará en todos sus escritorios Windows 10 y Windows Mobile.
 
 Implementar estas características requiere que la aplicación del dispositivo complementario Windows Hello conecte con el servicio web cuando se registre o se use. Se puede optimizar la aplicación del dispositivo complementario Windows Hello para escenarios de inicio de sesión almacenados en caché como, por ejemplo, requiriendo la comprobación con el servicio web solo una vez al día (a costa de extender el tiempo de revocación hasta un día).  
 
 ## <a name="windows-hello-companion-device-framework-api-model"></a>Modelo de la API del marco del dispositivo complementario Windows Hello
 
-### <a name="overview"></a>Información general
+### <a name="overview"></a>Introducción
 
 Una aplicación del dispositivo complementario Windows Hello debe contener dos componentes: una aplicación en primer plano con interfaz de usuario responsable de registrar y anular el registro del dispositivo y una tarea en segundo plano que controla la autenticación.
 
@@ -201,9 +201,9 @@ El flujo general de API es el siguiente:
     * Comprobación de que la aplicación del dispositivo complementario Windows Hello almacena las claves HMAC (si las admite) y de que la aplicación del dispositivo complementario Windows Hello descarta sus copias
 2. Registrar tu tarea en segundo plano
 3. Esperar al evento correcto en la tarea en segundo plano
-    * WaitingForUserConfirmation: Espere a este evento si se requiere la acción o el gesto del usuario en el dispositivo complementario de Windows Hello para iniciar el flujo de autenticación.
-    * CollectingCredential: Esperar este evento si el dispositivo complementario de Windows Hello se basa en la acción o el gesto del usuario en el lado del equipo para iniciar el flujo de autenticación (por ejemplo, presionando la barra espaciadora)
-    * Otro desencadenador, como una tarjeta inteligente: Asegúrese de consultar el estado de autenticación actual para llamar a las API adecuadas.
+    * WaitingForUserConfirmation: esperar este evento si fuera necesario el gesto o acción del usuario en el lateral del dispositivo complementario Windows Hello para iniciar el flujo de autenticación
+    * CollectingCredential: Espere a este evento si el dispositivo complementario de Windows Hello se basa en la acción o el gesto del usuario en el lado del equipo para iniciar el flujo de autenticación (por ejemplo, presionando la barra espaciadora)
+    * Otro desencadenador, como una tarjeta inteligente: Comprobar que consulta el estado actual de autenticación para llamar a las API correctas.
 4. Mantener informado al usuario sobre los mensajes de error o los siguientes pasos necesarios llamando a ShowNotificationMessageAsync. Solo llama a esta API una vez ha recopilado una señal de propósito
 5. Desbloquear
     * Comprobar que las señales de propósito y presencia del usuario se han recopilado
@@ -346,9 +346,9 @@ namespace SecondaryAuthFactorSample
 }
 ```
 
-### <a name="authentication"></a>Autenticación
+### <a name="authentication"></a>Authentication
 
-La autenticación de requiere dos llamadas API al servicio de autenticación complementario: StartAuthenticationAsync y FinishAuthencationAsync.
+La autenticación requiere dos llamadas API al servicio de autenticación complementario: StartAuthenticationAsync y FinishAuthencationAsync.
 
 El primer inicio API devolverá un identificador que usará la segunda API.  La primera llamada devuelve, entre otras cosas, un nonce que, cuando se concatene con otras cosas, debe ser cifrado por HMAC con la clave del dispositivo almacenada en el dispositivo complementario Windows Hello. La segunda llamada devuelve los resultados de HMAC con la clave del dispositivo y pueden acabar potencialmente en una autenticación correcta (es decir, el usuario podrá ver su escritorio).
 

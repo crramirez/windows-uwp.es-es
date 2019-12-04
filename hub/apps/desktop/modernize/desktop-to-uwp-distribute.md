@@ -1,5 +1,5 @@
 ---
-Description: Distribuir una aplicación de escritorio empaquetada (puente de escritorio)
+Description: Distribución de una aplicación empaquetada con puente de escritorio
 title: Publicar la aplicación de escritorio empaquetada en el Microsoft Store o transferirla localmente a uno o varios dispositivos.
 ms.date: 05/18/2018
 ms.topic: article
@@ -8,16 +8,16 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 597a283fd28b571ed968255312059c7049f3f700
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 15970afbeb5d9dee1c2079cd5933b1250ecb2f09
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682562"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74734781"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>Distribuir la aplicación de escritorio empaquetada
 
-Si decide empaquetar [la aplicación de escritorio en un paquete MSIX](/windows/msix/desktop/desktop-to-uwp-root), puede publicar la aplicación empaquetada en la Microsoft Store o transferirla localmente a uno o varios dispositivos.
+Si decide [empaquetar la aplicación de escritorio en un paquete MSIX](/windows/msix/desktop/desktop-to-uwp-root), puede publicar la aplicación empaquetada en la Microsoft Store o transferirla localmente a uno o varios dispositivos.
 
 > [!NOTE]
 > ¿Tiene un plan sobre cómo podría realizar la transición de los usuarios a la aplicación empaquetada? Antes de distribuir la aplicación, consulta la sección [Realizar la transición de usuarios a la aplicación empaquetada](#transition-users) de esta guía para obtener algunas ideas.
@@ -28,7 +28,7 @@ Si decide empaquetar [la aplicación de escritorio en un paquete MSIX](/windows/
 
 Publique la aplicación en el Microsoft Store para llegar a la audiencia más amplia. Además, los clientes de la organización pueden adquirir su aplicación para distribuirla internamente a sus organizaciones a través del [Microsoft Store para la empresa](https://businessstore.microsoft.com/store).
 
-Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicionales como parte del proceso de envío. Eso es porque el manifiesto del paquete declara una funcionalidad restringida denominada **runFullTrust**, y necesitamos aprobar el uso de esa funcionalidad en la aplicación. Puede leer más sobre este requisito aquí: [Funcionalidades restringidas](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
+Si vas a publicar en Microsoft Store, se te hará una serie de preguntas adicionales como parte del proceso de envío. Eso es porque el manifiesto del paquete declara una funcionalidad restringida denominada **runFullTrust**, y necesitamos aprobar el uso de esa funcionalidad en la aplicación. Puedes leer más acerca de este requisito aquí: [Capacidades restringidas](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
 No tiene que firmar la aplicación antes de enviarla a la tienda.
 

@@ -1,17 +1,17 @@
 ---
 description: En este tema se proporciona una asignación completa de las API de Windows Phone Silverlight a sus equivalentes de Plataforma universal de Windows (UWP).
-title: Windows Phone las asignaciones de clases y espacios de nombres de Silverlight a UWP
+title: WPSL a las asignaciones de espacio de nombres y clases de UWP
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1af36b43e02c9ee08373098f57ba29c10badb6c8
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: fdb1dc8ad4b4e61e1ffec294cfbf17e8abcc8586
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259070"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735060"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>Windows Phone Silverlight a las asignaciones de API de UWP
 
@@ -25,7 +25,7 @@ La tabla de asignación le ayudará al trabajar en un proyecto de UWP y volverá
 **Tenga en cuenta**  Windows 10 admite mucho más de la .NET Framework que una aplicación de Windows Phone Store. Por ejemplo, Windows 10 tiene varios System. ServiceModel.\* espacios de nombres, así como System.Net, System .net. NetworkInformation y System .net. Sockets.
 Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que es una tecnología de compilación de antemano que convierte el MSIL en código máquina que se puede ejecutar de forma nativa. Las aplicaciones de .NET Native se inician más rápido, usan menos memoria y usan menos batería que sus equivalentes MSIL.
 
-| Windows Phone Silverlight | Windows en tiempo de ejecución |
+| Windows Phone Silverlight | Windows Runtime |
 | ------------------------- | --------------- |
 | Publicidad | |
 | Clase **Microsoft.Advertising.Mobile.UI.AdControl** | Clase [AdControl](https://docs.microsoft.com/windows/uwp/monetize/display-ads-using-the-microsoft-advertising-libraries) |
@@ -52,7 +52,7 @@ Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que e
 | (SWT = **System.Windows.Threading**) <br/> Clase **SWT.DispatcherTimer** | Clase [**DispatcherTimer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DispatcherTimer) |
 | Blend para Visual Studio | |
 | (MEDC = **Microsoft.Expression.Drawing.Core**) <br/> Clase **MEDC.GeometryHelper** | No hay equivalente directo. |
-| Espacio de nombres **Microsoft.Expression.Interactivity** | Espacio de nombres[Microsoft.Xaml.Interactivity](https://msdn.microsoft.com/library/windows/apps/microsoft.xaml.interactivity.aspx) |
+| Espacio de nombres **Microsoft.Expression.Interactivity** | Espacio de nombres [Microsoft.Xaml.Interactivity](https://msdn.microsoft.com/library/windows/apps/microsoft.xaml.interactivity.aspx) |
 | Espacio de nombres **Microsoft.Expression.Interactivity.Core** | Espacio de nombres [Microsoft.Xaml.Interactions.Core](https://msdn.microsoft.com/library/windows/apps/microsoft.xaml.interactions.core.aspx) |
 | (MEIC = **Microsoft.Expression.Interactivity.Core**) <br/> Clase **MEIC.ExtendedVisualStateManager** | No hay equivalente directo. |
 | Espacio de nombres **Microsoft.Expression.Interactivity.Input** | No hay equivalente directo. |
@@ -163,14 +163,14 @@ Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que e
 | Clase **Microsoft.Phone.Maps.Controls.Map** | Clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) |
 | Espacio de nombres **Microsoft.Phone.Maps.Services** | Espacio de nombres [**Windows. Services. Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) |
 | Clases **Microsoft.Phone.Maps.Services.GeocodeQuery**, **ReverseGeocodeQuery** | Clase [**MapLocationFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapLocationFinder) |
-| Clases **System.Device.Location.GeoCoordinate** | [**Geopoint**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint) (clase) |
+| Clase **System.Device.Location.GeoCoordinate** | [**Geopoint**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint) (clase) |
 | Clase **Microsoft.Phone.Maps.Services.Route** | Clase [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) |
 | Clase **Microsoft.Phone.Maps.Services.RouteQuery** | Clase [**MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) |
 | Monetización | |
 | Espacio de nombres **Microsoft.Phone.Marketplace** | Espacio de nombres [**Windows. ApplicationModel. Store**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) |
 | Multimedia | |
 | Espacio de nombres **Microsoft.Phone.Media** | [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) (clase) |
-| Funciones de red | |
+| Funciones de red de | |
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> Clase **MPNN.DeviceNetworkInformation** | [**Hostname**](https://docs.microsoft.com/uwp/api/Windows.Networking.HostName), clases [**NetworkInformation**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.NetworkInformation) |
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> Clase **MPNN.NetworkInterface** | [**NetworkInformation**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.NetworkInformation) (clase) |
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> Clase **MPNN.NetworkInterfaceInfo** | Clase [**ConnectionProfile**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.ConnectionProfile) |
@@ -179,7 +179,7 @@ Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que e
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> Clase **MPNN.WebRequestExtensions** | No hay equivalente directo. |
 | Espacio de nombres **Microsoft.Phone.Networking.Voip** | No hay equivalente directo. |
 | Clase **System.Net.CookieCollection** | Todavía se admite, pero faltan algunas propiedades (por ejemplo, IsReadOnly) |
-| Clase **System.Net.DownloadProgressChangedEventArgs** y clases similares relacionadas con **System.Net.WebClient** | Clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Deriva de [System.Net.Http.StreamContent](https://docs.microsoft.com/previous-versions/visualstudio/hh138119(v=vs.118)) para medir el progreso. |
+| Clase **System.Net.DownloadProgressChangedEventArgs** y otras clases similares relacionadas con **System.Net.WebClient** | Clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Deriva de [System.Net.Http.StreamContent](https://docs.microsoft.com/previous-versions/visualstudio/hh138119(v=vs.118)) para medir el progreso. |
 | Clases **System.Net.DnsEndPoint**, **IPAddress** | Aún se admiten estas clases, pero faltan algunas propiedades. Alternativamente, migra a la clase [**HostName**](https://docs.microsoft.com/uwp/api/Windows.Networking.HostName). |
 | Clase **System.Net.HttpUtility** | Clase [**HtmlFormatHelper**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.HtmlFormatHelper) |
 | Clase **System.Net.HttpWebRequest** | Solo se admite parcialmente, pero la alternativa recomendada y vanguardista es la clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Estas API usan [System.Net.Http.HttpRequestMessage](https://docs.microsoft.com/previous-versions/visualstudio/hh159020(v=vs.118)) para representar una solicitud HTTP. |
@@ -189,7 +189,7 @@ Además, en una aplicación de Windows 10, se beneficiará de .NET Native, que e
 | Clase **System.Net.Sockets.Socket** | Todavía se admite, pero usa Dispose() en lugar de Close(). Alternativamente, migra a la clase [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket). |
 | Clase **System.Net.Sockets.SocketException** | Se sigue admitiendo, pero usa la propiedad SocketErrorCode en lugar de ErrorCode. |
 | Clases **System.Net.Sockets.UdpAnySourceMulticastClient**, **UdpSingleSourceMulticastClient** | [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket) (clase) |
-| Clase **System.Net.UploadProgressChangedEventArgs** y clases similares relacionadas con **System.Net.WebClient** | Clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
+| Clase **System.Net.UploadProgressChangedEventArgs** y otras clases similares relacionadas con **System.Net.WebClient** | Clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
 | Clase **System.Net.WebClient** | Clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System .net. http. HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))) |
 | Clase **System.Net.WebRequest** | Se admite parcialmente (un conjunto de propiedades diferente), pero la alternativa recomendada y vanguardista es la clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Estas API usan [System.Net.Http.HttpRequestMessage](https://docs.microsoft.com/previous-versions/visualstudio/hh159020(v=vs.118)) para representar una solicitud HTTP. |
 | Clase **System.Net.WebResponse** | Todavía se admite, pero usa Dispose() en lugar de Close(). No obstante, la alternativa recomendada y vanguardista es la clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) (o [System.Net.Http.HttpClient](https://docs.microsoft.com/previous-versions/visualstudio/hh193681(v=vs.118))). Estas API usan [System.Net.Http.HttpResponseMessage](https://docs.microsoft.com/dotnet/api/system.net.http.httpresponsemessage) para representar una respuesta HTTP. |

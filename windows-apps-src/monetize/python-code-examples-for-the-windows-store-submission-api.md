@@ -1,28 +1,28 @@
 ---
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
 description: Usa los ejemplos de código Python de esta sección para obtener más información sobre cómo usar la API de envío de Microsoft Store.
-title: 'Muestra de Python: envíos de aplicaciones, complementos y pilotos'
+title: Código Python para enviar aplicaciones, complementos y vuelos
 ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, API de envío de Microsoft Store, ejemplos de código, python
 ms.localizationpriority: medium
-ms.openlocfilehash: bc3959b4e26bd54542edc3f69666f6d97cddba26
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 9e242bc200c9bdfa8ba829b7c48a562cb17fdc91
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334833"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735090"
 ---
-# <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Muestra de Python: envíos de aplicaciones, complementos y pilotos
+# <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Ejemplo de Python: envíos de aplicaciones, complementos y pilotos
 
 En este artículo se proporcionan ejemplos de código Python que muestran cómo usar la [API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md) para estas tareas:
 
-* [Obtener un token de acceso de Azure AD](#token)
+* [Obtención de un token de acceso Azure AD](#token)
 * [Crear un complemento](#create-add-on)
-* [Creación de un vuelo de paquete](#create-package-flight)
-* [Creación de un envío de la aplicación](#create-app-submission)
-* [Crear una presentación de complemento](#create-add-on-submission)
-* [Crear una presentación de vuelos de paquete](#create-flight-submission)
+* [Crear un paquete piloto](#create-package-flight)
+* [Crear un envío de aplicación](#create-app-submission)
+* [Crear un envío de complementos](#create-add-on-submission)
+* [Crear un envío de paquete piloto](#create-flight-submission)
 
 <span id="token" />
 
@@ -50,30 +50,30 @@ En el siguiente ejemplo se muestra cómo [crear](create-a-flight.md) y luego [el
 
 <span id="create-app-submission" />
 
-## <a name="create-an-app-submission"></a>Crear un envío de aplicación
+## <a name="create-an-app-submission"></a>Create an app submission (Crear un envío de aplicación)
 
-En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de aplicación. Para ello, el código crea un nuevo envío como un clon del último envío publicado y, a continuación, actualiza y confirma el envío al centro de partners clonado. Específicamente, el ejemplo realiza estas tareas:
+En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de aplicación. Para ello, el código crea un nuevo envío como clon del último envío publicado y, a continuación, actualiza y confirma el envío clonado en el centro de Partners. Específicamente, el ejemplo realiza estas tareas:
 
 1. Para empezar, el ejemplo [obtiene datos de la aplicación especificada](get-an-app.md).
 2. A continuación, [elimina el envío pendiente de la aplicación](delete-an-app-submission.md), si existe uno.
 3. Luego [crea un nuevo envío de la aplicación](create-an-app-submission.md) (el nuevo envío es una copia del último envío publicado).
 4. Cambia algunos detalles para el nuevo envío y carga un nuevo paquete para el envío a Azure Blob Storage.
-5. A continuación, lo [actualizaciones](update-an-app-submission.md) y, a continuación, [confirma](commit-an-app-submission.md) el nuevo envío al centro de partners.
+5. Después, [actualiza](update-an-app-submission.md) y [confirma](commit-an-app-submission.md) el nuevo envío al centro de Partners.
 6. Por último, periódicamente [comprueba el estado del nuevo envío](get-status-for-an-app-submission.md) hasta que el envío se confirma correctamente.
 
 [!code-python[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L93-L166)]
 
 <span id="create-add-on-submission" />
 
-## <a name="create-an-add-on-submission"></a>Crear un envío de complemento
+## <a name="create-an-add-on-submission"></a>Create an add-on submission (Crear un envío de complemento)
 
-En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de complemento. Para ello, el código crea un nuevo envío como un clon del último envío publicado y, a continuación, actualiza y confirma el envío al centro de partners clonado. Específicamente, el ejemplo realiza estas tareas:
+En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de complemento. Para ello, el código crea un nuevo envío como clon del último envío publicado y, a continuación, actualiza y confirma el envío clonado en el centro de Partners. Específicamente, el ejemplo realiza estas tareas:
 
 1. Para empezar, el ejemplo [obtiene datos del complemento especificado](get-an-add-on.md).
 2. A continuación, [elimina el envío pendiente del complemento](delete-an-add-on-submission.md), si existe uno.
 3. Luego [crea un nuevo envío del complemento](create-an-add-on-submission.md) (el nuevo envío es una copia del último envío publicado).
-4. Carga un archivo zip que contiene los iconos del envío a Azure Blob Storage. Para obtener más información, consulta las instrucciones sobre cómo cargar un archivo ZIP en Azure Blob Storage en [Crear un envío de complemento](manage-add-on-submissions.md#create-an-add-on-submission).
-5. A continuación, lo [actualizaciones](update-an-add-on-submission.md) y, a continuación, [confirma](commit-an-add-on-submission.md) el nuevo envío al centro de partners.
+4. Carga un archivo ZIP que contiene los iconos del envío a Azure Blob Storage. Para obtener más información, consulta las instrucciones sobre cómo cargar un archivo ZIP en Azure Blob Storage en [Crear un envío de complemento](manage-add-on-submissions.md#create-an-add-on-submission).
+5. Después, [actualiza](update-an-add-on-submission.md) y [confirma](commit-an-add-on-submission.md) el nuevo envío al centro de Partners.
 6. Por último, periódicamente [comprueba el estado del nuevo envío](get-status-for-an-add-on-submission.md) hasta que el envío se confirma correctamente.
 
 [!code-python[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L172-L245)]
@@ -82,17 +82,17 @@ En el siguiente ejemplo se muestra cómo usar varios métodos en la API de enví
 
 ## <a name="create-a-package-flight-submission"></a>Crear un envío de paquete piloto
 
-En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de paquete piloto. Para ello, el código crea un nuevo envío como un clon del último envío publicado y, a continuación, actualiza y confirma el envío al centro de partners clonado. Específicamente, el ejemplo realiza estas tareas:
+En el siguiente ejemplo se muestra cómo usar varios métodos en la API de envío de Microsoft Store para crear un envío de paquete piloto. Para ello, el código crea un nuevo envío como clon del último envío publicado y, a continuación, actualiza y confirma el envío clonado en el centro de Partners. Específicamente, el ejemplo realiza estas tareas:
 
 1. Para empezar, el ejemplo [obtiene datos del paquete piloto especificado](get-a-flight.md).
 2. A continuación, [elimina el envío pendiente del paquete piloto](delete-a-flight-submission.md), si existe uno.
 3. Luego [crea un nuevo envío del paquete piloto](create-a-flight-submission.md) (el nuevo envío es una copia del último envío publicado).
 4. Carga un nuevo paquete para el envío a Azure Blob Storage. Para obtener más información, consulta las instrucciones sobre cómo cargar un archivo ZIP en Azure Blob Storage en [Crear un envío de paquete piloto](manage-flight-submissions.md#create-a-package-flight-submission).
-5. A continuación, lo [actualizaciones](update-a-flight-submission.md) y, a continuación, [confirma](commit-a-flight-submission.md) el nuevo envío al centro de partners.
+5. Después, [actualiza](update-a-flight-submission.md) y [confirma](commit-a-flight-submission.md) el nuevo envío al centro de Partners.
 6. Por último, periódicamente [comprueba el estado del nuevo envío](get-status-for-a-flight-submission.md) hasta que el envío se confirma correctamente.
 
 [!code-python[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L251-L325)]
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Crear y administrar envíos con Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md)

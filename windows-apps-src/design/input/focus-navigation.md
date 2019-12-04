@@ -1,6 +1,6 @@
 ---
-title: Navegación con foco para teclado, controlador para juegos, control remoto y herramientas de accesibilidad
-Description: Aprenda a usar la navegación del foco para proporcionar experiencias de interacción completa y coherente en las aplicaciones UWP y controles personalizados para usuarios avanzados de teclado, las personas con discapacidades y otros requisitos de accesibilidad, así como la experiencia de 10 pies de las pantallas de televisor y Xbox One.
+title: Navegación del foco sin un mouse
+Description: Obtenga información sobre cómo usar la navegación centrada para proporcionar experiencias de interacción completas y coherentes en las aplicaciones UWP y controles personalizados para los usuarios avanzados de teclado, los que tienen discapacidades y otros requisitos de accesibilidad, así como la experiencia de 10 pies de pantallas de televisión y Xbox One.
 label: ''
 template: detail.hbs
 keywords: teclado, dispositivo de juego, control remoto, navegación, navegación interna direccional, área direccional, estrategia de navegación, entrada, interacción del usuario, accesibilidad, facilidad de uso
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a699ef00b3f377656940e66e6d35bfcba1cc5762
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cb49ed58f03710d44a5c06c15530936885b9beea
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57625830"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735100"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a>Navegación con foco para teclado, controlador para juegos, control remoto y herramientas de accesibilidad
 
@@ -59,7 +59,7 @@ El libro electrónico sobre [diseño de software para accesibilidad](https://www
 La región de navegación interna 2D de un control o un grupo de controles se conoce como su "área direccional". Cuando el foco cambia a este objeto, las teclas de dirección del teclado (izquierda, derecha, arriba y abajo) se pueden usar para navegar entre elementos secundarios dentro del área direccional.
 
 ![área direccional](images/keyboard/directional-area-small.png)
-*2D región de navegación interna o área direccional, de un grupo de controles*
+*región de navegación interna 2D, o área direccional, de un grupo de controles*
 
 Puedes usar la propiedad [XYFocusKeyboardNavigation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_XYFocusKeyboardNavigation) (que tiene valores posibles de [Auto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode), [Enabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode) o [Disabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)) para administrar la navegación interna 2D con las teclas de dirección del teclado.
 
@@ -74,8 +74,8 @@ Al establecerse en Auto, el comportamiento de navegación direccional viene dete
 
 Establece **XYFocusKeyboardNavigation** en **Disabled** para bloquear la navegación direccional al control y sus elementos secundarios.
 
-![XYFocusKeyboardNavigation deshabilitado comportamiento](images/keyboard/xyfocuskeyboardnav-disabled.gif)
-*XYFocusKeyboardNavigation deshabilitado comportamiento*
+![comportamiento deshabilitado de XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-disabled.gif)
+*comportamiento deshabilitado de XYFocusKeyboardNavigation*
 
 En este ejemplo, el [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerPrimary) principal tiene **XYFocusKeyboardNavigation** establecido en **Enabled**. Todos los elementos secundarios heredan esta configuración, a la que se puede ir con las teclas de dirección. Sin embargo, los elementos B3 y B4 están en un [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerSecondary) secundario con **XYFocusKeyboardNavigation** establecido en **Disabled**, lo que invalida el contenedor principal y deshabilita la navegación con teclas de dirección a sí mismo y entre sus elementos secundarios.
 
@@ -131,8 +131,8 @@ Establece **XYFocusKeyboardNavigation** en **Enabled** para admitir la navegaci�
 
 Al establecerse, la navegación con las teclas de dirección se restringe a elementos dentro del área direccional. La navegación mediante tabulación no se ve afectada, pues todos los controles permanecen accesibles a través de su jerarquía de orden de tabulación.
 
-![XYFocusKeyboardNavigation habilitado comportamiento](images/keyboard/xyfocuskeyboardnav-enabled.gif)
-*XYFocusKeyboardNavigation habilitado comportamiento*
+![comportamiento habilitado para XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-enabled.gif)
+*comportamiento habilitado para XYFocusKeyboardNavigation*
 
 En este ejemplo, el [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerPrimary) principal tiene **XYFocusKeyboardNavigation** establecido en **Enabled**. Todos los elementos secundarios heredan esta configuración, a la que se puede ir con las teclas de dirección. Los elementos B3 y B4 están en un [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) (ContainerSecondary) secundario en el que **XYFocusKeyboardNavigation** no está establecido, que luego hereda la configuración del contenedor principal. El elemento B5 no está en un área direccional declarada y no admite la navegación con teclas de dirección, pero admite el comportamiento de navegación mediante tabulación estándar.
 
@@ -194,8 +194,8 @@ Puedes tener varios niveles de áreas direccionales anidadas. Si todos los eleme
 
 A continuación se muestra un ejemplo de dos áreas direccionales anidadas dentro de un elemento que no admiten de forma explícita la navegación direccional 2D. En este caso, la navegación direccional no se admite entre las dos áreas anidadas.
 
-![XYFocusKeyboardNavigation habilitado y anidar comportamiento](images/keyboard/xyfocuskeyboardnav-enabled-nested1.gif)
-*XYFocusKeyboardNavigation habilitado y anidar comportamiento*
+![XYFocusKeyboardNavigation Enabled y el comportamiento anidado](images/keyboard/xyfocuskeyboardnav-enabled-nested1.gif)
+*XYFocusKeyboardNavigation habilitado y el comportamiento anidado*
 
 Este es un ejemplo más complejo de tres áreas direccionales anidadas donde:
 
@@ -205,7 +205,7 @@ Este es un ejemplo más complejo de tres áreas direccionales anidadas donde:
 
 ![Comportamiento habilitado y anidado complejo de XYFocusKeyboardNavigation](images/keyboard/xyfocuskeyboardnav-enabled-nested2.gif)
 
-*XYFocusKeyboardNavigation habilitado y complejo anidado de comportamiento*
+*XYFocusKeyboardNavigation habilitado y comportamiento anidado complejo*
 
 ## <a name="tab-navigation"></a>Navegación en pestañas
 
@@ -234,21 +234,21 @@ Como mencionamos en la sección anterior, para evitar una experiencia de navegac
 
    ![Comportamiento de navegación mediante tabulación "Local"](images/keyboard/tabnav-local.gif)
 
-   *Pestaña "Local" comportamiento de navegación*
+   *Comportamiento de navegación por la pestaña "local"*
 
-- **Vez**  
+- **Una vez**  
   El contenedor y todos los elementos secundarios reciben el foco una vez. Para este ejemplo, el orden de tabulación es B1, B2, B7, B1 (también se muestra la navegación interna mediante teclas de dirección).
 
    ![Establecer el comportamiento de navegación mediante tabulación "Una vez"](images/keyboard/tabnav-once.gif)
 
-   *Pestaña "Érase" comportamiento de navegación*
+   *Comportamiento de navegación de la pestaña "una vez"*
 
 - **Ciclo**   
   Vuelve a enfocar ciclos en el elemento activable inicial dentro de un contenedor. Para este ejemplo, el orden de tabulación es B1, B2, B3, B4, B5, B6, B2...
 
    ![Establecer el comportamiento de navegación mediante tabulación "Ciclo"](images/keyboard/tabnav-cycle.gif)
 
-   *"Desplazarse" pestaña comportamiento de navegación*
+   *Comportamiento de navegación por la pestaña "ciclo"*
 
 Este es el código para los ejemplos anteriores (con TabFocusNavigation ="Ciclo").
 
@@ -318,7 +318,7 @@ Este es el código para los ejemplos anteriores (con TabFocusNavigation ="Ciclo"
 </Grid>
 ```
 
-### <a name="tabindexhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscontrolwindowsuixamlcontrolscontroltabindex"></a>[TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex)
+### <a name="tabindexhttpsdocsmicrosoftcomuwpapiwindowsuixamlcontrolscontrolwindows_ui_xaml_controls_control_tabindex"></a>[TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex)
 
 Usa [TabIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_TabIndex) para especificar el orden en que los elementos reciben el foco cuando el usuario navega a través de controles con la tecla Tabulador. Un control con un menor índice de tabulación recibe el foco antes de un control con un mayor índice.
 
@@ -338,7 +338,7 @@ Aquí, mostramos cómo puede la navegación con foco verse afectada por la propi
 
 ![Navegación mediante tabulación "Local" con comportamiento TabIndex](images/keyboard/tabnav-tabindex.gif)
 
-*Navegación con el comportamiento de TabIndex de pestaña "Local"*
+*Navegación de la pestaña "local" con el comportamiento de TabIndex*
 
 En el ejemplo anterior, hay dos ámbitos: 
 - B1, área direccional (B2 - B6) y B7
@@ -425,7 +425,7 @@ Tipos de entrada que no son de puntero tales como teclado, controlador para jueg
 
 En esta sección, describimos cómo especificar una estrategia de navegación preferida y ajustar la navegación con foco dentro de tu aplicación a través de un conjunto de propiedades de estrategias de navegación que admiten todos los tipos de entrada que no son de puntero basados en el foco.
 
-Para obtener información general sobre la creación de aplicaciones y experiencias para Xbox o TV, consulte [interacción con el teclado](keyboard-interactions.md), [diseñar para Xbox y TV](../devices/designing-for-tv.md), y [deinteraccionesdeGamepadycontrolremoto](gamepad-and-remote-interactions.md).
+Para obtener más información general sobre la creación de aplicaciones y experiencias para Xbox/TV, consulte [interacción](keyboard-interactions.md)con el teclado, [diseño para Xbox y TV](../devices/designing-for-tv.md), y [interacciones de control remoto y controlador para juegos](gamepad-and-remote-interactions.md).
 
 ### <a name="navigation-strategies"></a>Estrategias de navegación
 
@@ -453,7 +453,7 @@ En este ejemplo, cada dirección de navegación con foco se establece en Project
 
 ![Estrategia de navegación de proyección](images/keyboard/xyfocusnavigationstrategy-projection.gif)
 
-*Estrategia de exploración de proyección*
+*Estrategia de navegación de proyección*
 
 ### <a name="navigationdirectiondistance"></a>NavigationDirectionDistance
 
@@ -463,7 +463,7 @@ El borde del rectángulo delimitador correspondiente a la dirección de navegaci
 
 ![Estrategia de navegación NavigationDirectionDistance](images/keyboard/xyfocusnavigationstrategy-navigationdirectiondistance.gif)
 
-*Estrategia de exploración NavigationDirectionDistance*
+*Estrategia de navegación NavigationDirectionDistance*
 
 ### <a name="rectilineardistance"></a>RectilinearDistance
 
@@ -473,7 +473,7 @@ La suma de la distancia principal y la secundaria para cada posible candidato se
 
 ![Estrategia de navegación RectilinearDistance](images/keyboard/xyfocusnavigationstrategy-rectilineardistance.gif)
 
-*Estrategia de exploración RectilinearDistance*
+*Estrategia de navegación RectilinearDistance*
 
 En esta imagen se muestra cómo, cuando B1 tiene el foco y la dirección solicitada es hacia abajo, B3 es el candidato de foco RectilinearDistance. Esto se basa en los siguientes cálculos para este ejemplo:
 -   La distancia (B1, B3, hacia abajo) es 10 + 0 = 10
@@ -482,7 +482,7 @@ En esta imagen se muestra cómo, cuando B1 tiene el foco y la dirección solicit
 
 
 ## <a name="related-articles"></a>Artículos relacionados
-- [Navegación del foco mediante programación](focus-navigation-programmatic.md)
+- [Navegación por el foco mediante programación](focus-navigation-programmatic.md)
 - [Interacciones de teclado](keyboard-interactions.md)
 - [Accesibilidad de teclado](../accessibility/keyboard-accessibility.md) 
 
