@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Mac a Windows, asignación de teclas de método abreviado, migración de UNIX a Windows, transición de Mac a Windows, ayuda a pasar de MacBook a Surface, cómo usar Windows para un usuario de Macintosh, cambiar de Macintosh a Windows, ayuda para cambiar los entornos de desarrollo, Mac OS X a Windows, ayuda mover de Mac a PC
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 563a8ad659cfff1396049aae78342642d1db3e72
-ms.sourcegitcommit: 4cb3ee28baa8020ec925b0bdd896ab197a1ddadb
+ms.openlocfilehash: a4e71143730184db094df2a7e8f1416cbaf244c4
+ms.sourcegitcommit: f5bb4e35d1373b982259e61547b3b1765da0e78c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74309156"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74881268"
 ---
 # <a name="guide-for-changing-your-dev-environment-from-mac-to-windows"></a>Guía para cambiar el entorno de desarrollo de Mac a Windows
 
@@ -24,24 +24,24 @@ Para el desarrollo de aplicaciones, el equivalente más cercano a Xcode sería [
 
 ## <a name="keyboard-shortcuts"></a>Accesos rápidos de teclado
 
-| **Sesión** | **Mac** | **Windows** |
+| **Operación** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
-| Copiar | Comando + C | CTR + C |
-| Cortar | Comando + X | CTR + X |
-| Pegar | Comando + V | CTR + V |
+| Copiar | Comando + C | Ctrl+C |
+| Cortar | Comando + X | Ctrl+X |
+| Pegar | Comando + V | Ctrl+V |
 | Deshacer | Comando + Z | Ctrl+Z |
 | Guardar | Comando + S | Ctrl+S |
-| Abrir | Comando + O | Ctrl+O |
-| Bloquear equipo | Comando + control + Q | WindowKey + L |
-| Mostrar escritorio | Comando + F3 | WindowKey + D |
-| Minimizar ventanas | COMANDO + M | Tecla Windows + M |
-| Buscar | Comando + espacio | Tecla Windows |
+| Abre | Comando + O | Ctrl+O |
+| Bloquear equipo | Comando + control + Q | WindowsKey + L |
+| Mostrar escritorio | Comando + F3 | WindowsKey + D |
+| Minimizar ventanas | Comando + M | WindowsKey + M |
+| Buscar | Comando + espacio | WindowsKey |
 | Cerrar la ventana activa | Comando + W | Control + W |
 | Cambiar tarea actual | Comando + Tab | Alt+Tab |
-| Guardar pantalla (captura de pantalla) | Comando + Mayús + 3 | Windows + Mayús + S |
-| Guardar ventana | Comando + Mayús + 4 | Windows + Mayús + S |
+| Guardar pantalla (captura de pantalla) | Comando + Mayús + 3 | WindowsKey + Mayús + S |
+| Guardar ventana | Comando + Mayús + 4 | WindowsKey + Mayús + S |
 | Ver información o propiedades del elemento | Comando + I | Alt+ENTRAR |
- | Seleccionar todos los elementos | Comando + A | Ctrl+A |
+ | Seleccionar todos los elementos | Comando + A | Ctrl+E |
 | Seleccionar más de un elemento en una lista (no contiguo) | Y, a continuación, haga clic en cada elemento | Control y, a continuación, haga clic en cada elemento |
 | Escribir caracteres especiales | Opción + tecla de carácter | Alt + tecla de carácter|
 
@@ -49,7 +49,7 @@ Para el desarrollo de aplicaciones, el equivalente más cercano a Xcode sería [
 
 Nota: algunos de estos métodos abreviados requieren un "menú de paneles de precisión", como el de los dispositivos de Surface y otros equipos portátiles de terceros.
 
- **Sesión** | **Mac** | **Windows** |
+ **Operación** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
 | Scroll | Deslizamiento vertical con dos dedos | Deslizamiento vertical con dos dedos |
 | Zoom | Dos dedos hacia dentro y fuera | Dos dedos hacia dentro y fuera |
@@ -70,7 +70,7 @@ Windows proporciona varias alternativas al emulador de terminal de Mac.
 
 1. La línea de comandos de Windows
 
-La línea de comandos de Windows aceptará comandos de DOS y es la herramienta de línea de comandos que se usa con más frecuencia en Windows. Para abrirlo: Presione **Windows + R** para abrir el cuadro **Ejecutar** , escriba **cmd** y, a continuación, haga clic en **Aceptar**. Para abrir una línea de comandos de administrador, escriba **cmd** y, a continuación, presione **Ctrl + Mayús + entrar**. 
+La línea de comandos de Windows aceptará comandos de DOS y es la herramienta de línea de comandos que se usa con más frecuencia en Windows. Para abrirlo: Presione **WindowsKey + R** para abrir el cuadro **Ejecutar** , escriba **cmd** y, a continuación, haga clic en **Aceptar**. Para abrir una línea de comandos de administrador, escriba **cmd** y, a continuación, presione **Ctrl + Mayús + entrar**.
 
 2. PowerShell
 
@@ -80,11 +80,11 @@ Casualmente, PowerShell [también está disponible para Mac](https://docs.micros
 
 3. Subsistema de Windows para Linux (WSL)
 
-WSL permite ejecutar un shell de Linux en Windows. Esto significa que puede ejecutar *Bash** u otro Shell, en función de la elección y el distribución de Linux específico instalado. El uso de WSL proporcionará el tipo de entorno más conocido para los usuarios de Mac. Por ejemplo, **LS** para enumerar los archivos en un directorio actual, no en **dir** como lo haría con la línea de comandos de Windows. Para obtener información sobre cómo instalar y usar WSL, consulte la [Guía de instalación del subsistema de Windows para Linux para Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+WSL permite ejecutar un shell de Linux en Windows. Esto significa que puede ejecutar *Bash** u otro Shell, en función de la elección y el distribución de Linux específico instalado. El uso de WSL proporcionará el tipo de entorno más conocido para los usuarios de Mac. Por ejemplo, **LS** para enumerar los archivos en un directorio actual, no en **dir** como lo haría con la línea de comandos de Windows. Para obtener información sobre cómo instalar y usar WSL, consulte la [Guía de instalación del subsistema de Windows para Linux para Windows 10](https://docs.microsoft.com/windows/wsl/install-win10).
 
 ## <a name="apps-and-utilities"></a>Aplicaciones y utilidades
 
- **Aplicaciones** | **Mac** | **Windows** |
+ **Aplicación** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
 | Configuración y preferencias | Preferencias del sistema | Configuración |
 | Administrador de tareas | Monitor de actividad | Administrador de tareas |
