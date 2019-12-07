@@ -5,20 +5,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
-ms.openlocfilehash: 71c47767cf026b962f682fb30ca93758dbd5e227
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 52f333af73084ed14982b9d09b6770c8294980f7
+ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244081"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74902526"
 ---
-#<a name="xbox-live-user-management"></a>Administración # de Xbox Live del usuario
+# <a name="xbox-live-user-management"></a>Administración de usuarios de Xbox Live
 
 ## <a name="request"></a>Solicitud
 
 Puedes obtener la lista de los usuarios en la consola o actualizar la lista al agregar, quitar, iniciar sesión, cerrar sesión o modificar los usuarios existentes.
 
-| Método        | URI de la solicitud     | 
+| Método        | URI de solicitud     | 
 | ------------- |-----------------|
 | GET           | /ext/user |
 | PUT           | /ext/user |
@@ -38,16 +38,16 @@ Las llamadas a PUT deben incluir una matriz JSON con la estructura siguiente:
 
 * Usuarios
   * AutoSignIn (opcional): bool que habilita o deshabilita el inicio de sesión automático para la cuenta que especifica EmailAddress o UserId.
-  * Dirección de correo electrónico (opcional: se debe proporcionar si el identificador de usuario no se proporciona a menos que el inicio de sesión en un usuario patrocinado): Especifica el usuario para modificar, agregar o eliminar la dirección de correo electrónico.
-  * Contraseña (opcional: se debe proporcionar si el usuario no está actualmente en la consola): Contraseña usada para agregar un nuevo usuario en la consola.
+  * EmailAddress (opcional: debe proporcionarse si el UserId no se proporciona a menos que inicie sesión un usuario patrocinado): dirección de correo electrónico que especifica el usuario que se debe modificar, agregar o eliminar.
+  * Contraseña (opcional: debe proporcionarse si el usuario no está actualmente en la consola): contraseña que se usa para agregar un nuevo usuario a la consola.
   * SignedIn (opcional): bool que especifica si la cuenta proporcionada debe iniciar o cerrar sesión.
-  * Identificador de usuario (opcional: se debe proporcionar si no se proporciona la dirección de correo electrónico, a menos que el inicio de sesión en un usuario patrocinado): Identificador de usuario especificando el usuario para modificar, agregar o eliminar.
+  * UserId (opcional: debe proporcionarse si el EmailAddress no se proporciona a menos que inicie sesión un usuario patrocinado): UserId que especifica el usuario que se debe modificar, agregar o eliminar.
   * SponsoredUser (opcional): bool que especifica si agregar un usuario patrocinado.
-  * Delete (opcional): valor booleano que especifica para eliminar este usuario de la consola
+  * Delete (opcional): bool que especifica la eliminación de este usuario de la consola
 
 ## <a name="response"></a>Respuesta
 
-**Cuerpo de la respuesta**
+**Cuerpo de respuesta**
 
 Las llamadas a GET devolverán una matriz JSON con las propiedades siguientes:
 
@@ -62,7 +62,7 @@ Las llamadas a GET devolverán una matriz JSON con las propiedades siguientes:
   
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado previstos.
+Esta API tiene los siguientes códigos de estado esperado.
 
 | Código de estado HTTP   | Descripción     | 
 | ------------------ |-----------------|
