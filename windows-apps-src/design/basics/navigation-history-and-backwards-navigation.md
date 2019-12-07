@@ -1,18 +1,18 @@
 ---
 Description: Obtén información sobre cómo implementar la navegación hacia atrás para recorrer el historial de navegación del usuario dentro de una aplicación para UWP.
-title: Historial de navegación y navegación hacia atrás (aplicaciones de Windows)
+title: Historial de navegación y navegación hacia atrás
 template: detail.hbs
 op-migration-status: ready
 ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: de2e70a09f75ed5380a47bed225c0689eb029e89
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 05b435eb6f070634507c143bd028d2cb051c97bc
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713797"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735030"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
 
