@@ -260,6 +260,8 @@
       href: style/reveal.md
     - name: Revelar foco
       href: style/reveal-focus.md
+    - name: Radio de redondeo
+      href: style/rounded-corner.md
     - name: Sonido
       href: style/sound.md
     - name: Espaciado
