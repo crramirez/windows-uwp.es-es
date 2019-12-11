@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, author, event
 ms.localizationpriority: medium
-ms.openlocfilehash: 55d512faccfa318156fb0dc28d3f804b53f0fe3d
-ms.sourcegitcommit: 102fdfdf32ba12a8911018d234d71d67ebef61ce
+ms.openlocfilehash: 6fb9b98ec362b59ad2593bbce24654f1dcfc7638
+ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551663"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830785"
 ---
 # <a name="author-events-in-cwinrt"></a>Crear eventos en C++/WinRT
 
@@ -253,8 +253,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 ```
 
 ## <a name="parameterized-delegates-simple-signals-and-callbacks-within-a-project"></a>Delegados con parámetros, señales simples y devoluciones de llamadas dentro de un proyecto
-
-Si el evento solo se utiliza internamente dentro del proyecto de C++/WinRT (no en archivos binarios), se sigue usando la plantilla de estructura [**winrt::event**](/uwp/cpp-ref-for-winrt/event), pero se parametriza con el parámetro [**winrt::delegate&lt; de C++/WinRT que no es de Windows Runtime. Plantilla de estructura T&gt;** ](/uwp/cpp-ref-for-winrt/delegate), que es un delegado eficaz que se tiene en cuenta en las referencias. Admite cualquier número de parámetros y no se limita a los tipos de Windows Runtime.
+Si necesitas que tus eventos se mantengan dentro de un proyecto de Visual Studio (no en varios archivos binarios) y que dichos eventos no se limiten a los tipos de Windows Runtime, todavía puedes usar la plantilla de clase [**winrt::event**](/uwp/cpp-ref-for-winrt/event)\<Delegate\>. Simplemente usa [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate) en lugar de un tipo de delegado de Windows Runtime real, ya que **winrt::delegate** también admite parámetros que no son de Windows Runtime.
 
 El ejemplo siguiente muestra primero una firma delegada que no toma ningún parámetro (básicamente una señal simple) y, a continuación, una que toma una cadena.
 

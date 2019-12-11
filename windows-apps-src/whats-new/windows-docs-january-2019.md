@@ -5,12 +5,12 @@ keywords: novedades, actualización, características, directrices para desarrol
 ms.date: 01/17/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ac5f7e058a616117e73defde2c48bf4c66f68d2e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 7947fb6e71a9f2ddbedcd8e3ee8bab7b720dc444
+ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259751"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74902470"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>Novedades en la documentación para desarrolladores de Windows de enero de 2019.
 
@@ -22,7 +22,7 @@ La documentación para desarrolladores de Windows se actualiza constantemente co
 
 ### <a name="windows-development-on-microsoft-learn"></a>Desarrollo de Windows en Microsoft Learn
 
-El nuevo sitio de Microsoft Learn ofrece nuevos conocimientos prácticos y las oportunidades de entrenamiento para desarrolladores de Microsoft. Si está interesado en aprender a desarrollar aplicaciones de Windows, consulte [nuestra nueva ruta de aprendizaje](https://docs.microsoft.com/learn/paths/develop-windows10-apps/) para una introducción exhaustiva a la plataforma, las herramientas y cómo escribir sus primeras aplicaciones.
+El nuevo sitio de Microsoft Learn ofrece nuevos conocimientos prácticos y las oportunidades de entrenamiento para desarrolladores de Microsoft. Si está interesado en aprender a desarrollar aplicaciones de Windows, consulte [nuestra nueva ruta de aprendizaje](/learn/paths/develop-windows10-apps/) para una introducción exhaustiva a la plataforma, las herramientas y cómo escribir sus primeras aplicaciones.
 
 ![Imagen de la ruta de aprendizaje de desarrollo de Windows.](images/windows-learn.png)
 
@@ -32,7 +32,7 @@ El nuevo sitio de Microsoft Learn ofrece nuevos conocimientos prácticos y las o
 
 ### <a name="msix-modification-packages"></a>Paquetes de modificación MSIX
 
-Compatibilidad mejorada de Windows 10 versión 1809 para [paquetes de modificación MSIX](https://docs.microsoft.com/windows/msix/modification-package-1809-update). Paquetes de modificación pueden incluir complementos basados en el registro y la personalización asociada, además permiten una aplicación implementada a través de MSIX para usar un registro virtual y ejecutarse según lo previsto.
+Compatibilidad mejorada de Windows 10 versión 1809 para [paquetes de modificación MSIX](/windows/msix/modification-package-1809-update). Paquetes de modificación pueden incluir complementos basados en el registro y la personalización asociada, además permiten una aplicación implementada a través de MSIX para usar un registro virtual y ejecutarse según lo previsto.
 
 ![Creación de paquetes de modificación MSIX](images/msix-modification-package.png)
 
@@ -42,13 +42,13 @@ Los marcos de trabajo de WPF, Windows Forms y WinUI UX ahora están disponibles 
 
 ### <a name="progressive-web-apps-for-xbox"></a>Aplicaciones web progresivas para Xbox
 
-Con [las aplicaciones web progresivas para Xbox One](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/xbox-considerations) puede extender una aplicación web y hacerla disponible como una aplicación de Xbox One a través de Microsoft Store mientras todavía sigue usando los marcos de trabajo existentes, CDN y el back-end del servidor. En su mayor parte, puede empaquetar su PWA para Xbox One de la misma manera que lo haría para Windows, sin embargo, hay varias diferencias clave a través de las cuales le guiará esta guía.
+Con [las aplicaciones web progresivas para Xbox One](/microsoft-edge/progressive-web-apps/xbox-considerations) puede extender una aplicación web y hacerla disponible como una aplicación de Xbox One a través de Microsoft Store mientras todavía sigue usando los marcos de trabajo existentes, CDN y el back-end del servidor. En su mayor parte, puede empaquetar su PWA para Xbox One de la misma manera que lo haría para Windows, sin embargo, hay varias diferencias clave a través de las cuales le guiará esta guía.
 
 ### <a name="windows-machine-learning"></a>Windows Machine Learning
 
-Hemos reestructurado [la página de aterrizaje de WinML APIs](https://docs.microsoft.com/windows/ai/api-reference)y agregado la nueva documentación para el operador de WinML personalizado y las API nativas.
+Hemos reestructurado [la página de aterrizaje de WinML APIs](/windows/ai/api-reference)y agregado la nueva documentación para el operador de WinML personalizado y las API nativas.
 
-En [Entrenar un modelo con PyTorch](https://docs.microsoft.com/windows/ai/train-model-pytorch) se proporcionan instrucciones sobre cómo entrenar un modelo con el marco de trabajo de PyTorch localmente o en la nube. A continuación, puede descargar este modelo como un archivo ONNX y usarlo en sus aplicaciones de WinML.
+En [Entrenar un modelo con PyTorch](/windows/ai/train-model-pytorch) se proporcionan instrucciones sobre cómo entrenar un modelo con el marco de trabajo de PyTorch localmente o en la nube. A continuación, puede descargar este modelo como un archivo ONNX y usarlo en sus aplicaciones de WinML.
 
 ![Gráfico de WinML](images/winml-graphic.png)
 
@@ -56,15 +56,15 @@ En [Entrenar un modelo con PyTorch](https://docs.microsoft.com/windows/ai/train-
 
 ### <a name="choose-your-platform"></a>Elección de la plataforma
 
-¿Está interesado en crear una nueva aplicación de escritorio? Visite nuestra página renovada [Elija su plataforma](https://docs.microsoft.com/windows/desktop/choose-your-technology) para obtener una descripción detallada y las comparaciones de las plataformas de Windows Forms, WPF y UWP, así como para obtener más información sobre la API de Win32.
+¿Está interesado en crear una nueva aplicación de escritorio? Visite nuestra página renovada [Elija su plataforma](/windows/desktop/choose-your-technology) para obtener una descripción detallada y las comparaciones de las plataformas de Windows Forms, WPF y UWP, así como para obtener más información sobre la API de Win32.
 
 ### <a name="faqs-on-win32-webview"></a>Preguntas frecuentes sobre WebView de Win32
 
-Nuestras [preguntas más frecuentes](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webview#frequently-asked-questions-faqs) proporcionan respuestas a preguntas habituales al usar Microsoft Edge WebView en aplicaciones de escritorio, así como vínculos a ejemplos y recursos adicionales.
+Nuestras [preguntas más frecuentes](/windows/communitytoolkit/controls/wpf-winforms/webview#frequently-asked-questions-faqs) proporcionan respuestas a preguntas habituales al usar Microsoft Edge WebView en aplicaciones de escritorio, así como vínculos a ejemplos y recursos adicionales.
 
 ### <a name="japanese-era-change"></a>Cambio a la era japonesa
 
-[Prepare su aplicación para el cambio a la era japonesa](../design/globalizing/japanese-era-change.md) le muestra cómo asegurarse de que la aplicación de Windows está lista para el conjunto de cambios de la era japonesa que se realizará el 1 de mayo de 2019. [Esta página también está disponible en japonés](https://docs.microsoft.com/ja-jp/windows/uwp/design/globalizing/japanese-era-change).
+[Prepare su aplicación para el cambio a la era japonesa](../design/globalizing/japanese-era-change.md) le muestra cómo asegurarse de que la aplicación de Windows está lista para el conjunto de cambios de la era japonesa que se realizará el 1 de mayo de 2019. [Esta página también está disponible en japonés](/windows/uwp/design/globalizing/japanese-era-change).
 
 ## <a name="videos"></a>Vídeos
 
@@ -82,9 +82,10 @@ En la serie de vídeos de una pregunta de desarrollador, los desarrolladores de 
 
 Raymond Chen:
 
-* [¿Por qué tener archivos de aplicación y los archivos de programa (x86)?](https://youtu.be/N7o9eJpFYco)
+* [¿Por qué tener archivos de aplicación y los archivos de programa (x86)?](https://youtu.be/qRb6otsHG5c)
+* [¿Cómo fue tu primera entrevista en Microsoft?](https://youtu.be/MfzzbNp8kfw)
 
 Larry Osterman:
 
-* [¿Por qué es COM tan complicado?](https://youtu.be/-gkXAV-StVA )
-* [Cómo fue tu primera entrevista para Microsoft?](https://youtu.be/qRb6otsHG5c)
+* [¿Por qué es COM tan complicado?](https://youtu.be/-gkXAV-StVA)
+* [Cómo fue tu primera entrevista para Microsoft?](https://youtu.be/N7o9eJpFYco)

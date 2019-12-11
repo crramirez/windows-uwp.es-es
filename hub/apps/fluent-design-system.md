@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: f3a2575b17cc4228d7c4db273845478aecf65f29
-ms.sourcegitcommit: f0936ce8e88d78b1af99998794a8765094f6a487
+ms.openlocfilehash: f46d6ba99d4342e1e4fe7a9926082a5981fd690a
+ms.sourcegitcommit: 11c5cb559c949b6fe645499c2265434885882d8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915107"
+ms.lasthandoff: 12/01/2019
+ms.locfileid: "74666910"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Los creadores de aplicaciones de Fluent Design System para Windows
 
@@ -112,7 +112,7 @@ Las aplicaciones para UWP pueden ejecutarse en una amplia variedad de dispositiv
     :::column span="2":::
 **Optimización para la entrada adecuada**
 
-Las aplicaciones para UWP admiten automáticamente interacciones comunes con mouse, teclado, lápiz y función táctil; no necesitas hacer nada. Sin embargo, puedes mejorar tu aplicación con la compatibilidad optimizada con las entradas específicas, como el lápiz y Surface Dial.
+Las aplicaciones para UWP admiten automáticamente interacciones comunes con mouse, teclado, lápiz y función táctil. No necesitas hacer nada más. Sin embargo, si quieres, puedes mejorar tu aplicación gracias a la compatibilidad optimizada con entradas específicas, como el lápiz y Surface Dial.
 
 [Más información sobre las entradas y las interacciones](/windows/uwp/design/input/input-primer)
 :::row-end:::
