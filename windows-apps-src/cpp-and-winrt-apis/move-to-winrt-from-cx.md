@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, port, migrate, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 92088906078a3a705e5fae052a50fc914561c77c
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: d540474140e4734320b06d852933b30fa20b61be
+ms.sourcegitcommit: 2c6aac8a0cc02580df0987f0b7dba5924e3472d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393456"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74958975"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>Migrar a C++/WinRT desde C++/CX
 
@@ -468,24 +468,23 @@ C++/CX representa una cadena de Windows Runtime como tipo de referencia; mientra
 
 Además, C++/CX te permite desreferenciar una **String^** null, en cuyo caso se comporta como la cadena `""`.
 
-| Operación | C++/CX | C++/WinRT|
+| Comportamiento | C++/CX | C++/WinRT|
 |-|-|-|
+| Declaraciones | `Object^ o;`<br>`String^ s;` | `IInspectable o;`<br>`hstring s;` |
 | Categoría de tipo de cadena | Tipo de referencia | Tipo de valor |
 | **HSTRING** null se proyecta como | `(String^)nullptr` | `hstring{}` |
 | ¿Son null y `""` idénticos? | Sí | Sí |
-| Validez de null | `s = nullptr;`<br>`s->Length == 0` (válido) | `s = nullptr;`<br>`s.size() == 0` (válido) |
-| Aplicar boxing a una cadena | `o = s;` | `o = box_value(s);` |
-| Si `s` es `null` | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{});`<br>`o != nullptr` |
-| Si `s` es `""` | `o = "";`<br>`o == nullptr` | `o = box_value(hstring{L""});`<br>`o != nullptr;` |
-| Aplicar boxing a una cadena, conservando null | `o = s;` | `o = s.empty() ? nullptr : box_value(s);` |
-| Forzar boxing a una cadena | `o = PropertyValue::CreateString(s);` | `o = box_value(s);` |
-| Unboxing a una cadena conocida | `s = (String^)o;` | `s = unbox_value<hstring>(o);` |
-| Si `o` es null | `s == nullptr; // equivalent to ""` | Bloqueo |
-| Si `o` no es una cadena con conversión boxing | `Platform::InvalidCastException` | Bloqueo |
-| Unboxing de cadena, usar reserva si es null; bloquear en cualquier otro caso | `s = o ? (String^)o : fallback;` | `s = o ? unbox_value<hstring>(o) : fallback;` |
-| Unboxing de cadena, si es posible; usar reversión en cualquier otro caso | `auto box = dynamic_cast<IBox<String^>^>(o);`<br>`s = box ? box->Value : fallback;` | `s = unbox_value_or<hstring>(o, fallback);` |
+| Validez de null | `s = nullptr;`<br>`s->Length == 0` (válido) | `s = hstring{};`<br>`s.size() == 0` (válido) |
+| Si asignas una cadena null a un objeto | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{});`<br>`o != nullptr` |
+| Si asignas `""` a un objeto | `o = "";`<br>`o == nullptr` | `o = box_value(hstring{L""});`<br>`o != nullptr` |
 
-En los dos casos de *conversión unboxing con reserva* anteriores, es posible que se fuerce la conversión boxing a una cadena null, en cuyo caso no se usará la reserva. El valor resultante será una cadena vacía, ya que es lo que se encontraba tras la conversión boxing.
+Conversiones boxing y unboxing básicas.
+
+| Operación | C++/CX | C++/WinRT|
+|-|-|-|
+| Aplicar boxing a una cadena | `o = s;`<br>Una cadena vacía se convierte en nullptr. | `o = box_value(s);`<br>Una cadena vacía se convierte en un objeto con un valor distinto de null. |
+| Unboxing a una cadena conocida | `s = (String^)o;`<br>El objeto null se convierte en una cadena vacía.<br>InvalidCastException si no es una cadena. | `s = unbox_value<hstring>(o);`<br>Un objeto null se bloquea.<br>Se bloquea si no es una cadena. |
+| Conversión unboxing de una posible cadena | `s = dynamic_cast<String^>(o);`<br>Un objeto null o que no es una cadena se convierte en una cadena vacía. | `s = unbox_value_or<hstring>(o, fallback);`<br>Un valor null o que no es una cadena se convierte en un elemento Fallback.<br>Una cadena vacía se conserva. |
 
 ## <a name="concurrency-and-asynchronous-operations"></a>Operaciones simultáneas y asincrónicas
 
