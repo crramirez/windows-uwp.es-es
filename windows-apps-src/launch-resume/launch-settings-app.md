@@ -1,5 +1,5 @@
 ---
-title: Cómo iniciar la aplicación Configuración de Windows
+title: Iniciar la aplicación Configuración de Windows
 description: Aprende a iniciar la aplicación Configuración de Windows desde la aplicación. En este tema se describe el esquema de URI ms-settings. Usa este esquema de URI para iniciar la aplicación Configuración de Windows en páginas específicas de configuración.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
 ms.date: 04/19/2019
@@ -7,14 +7,14 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 7dd8604d9c9f32c374161ec1478221ebee6972c6
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 6387cc75047371666ac55b9fb70ae73d3e4c4d64
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282506"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302669"
 ---
-# <a name="launch-the-windows-settings-app"></a>Cómo iniciar la aplicación Configuración de Windows
+# <a name="launch-the-windows-settings-app"></a>Iniciar la aplicación Configuración de Windows
 
 **API importantes**
 
@@ -22,7 +22,7 @@ ms.locfileid: "72282506"
 -   [**PreferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
 -   [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)
 
-Aprende a iniciar la aplicación Configuración de Windows. En este tema se describe la **configuración de MS:** Esquema de URI. Usa este esquema de URI para iniciar la aplicación Configuración de Windows en páginas específicas de configuración.
+Aprende a iniciar la aplicación Configuración de Windows. En este tema, se describe el esquema de URI **ms-settings:** . Usa este esquema de URI para iniciar la aplicación Configuración de Windows en páginas específicas de configuración.
 
 El inicio de la aplicación Configuración es una parte importante de la programación de una aplicación compatible con la privacidad. Si la aplicación no puede obtener acceso a un recurso con información confidencial, se recomienda proporcionar al usuario un vínculo a la configuración de privacidad de ese recurso. Para obtener más información, consulta [Directrices para aplicaciones compatibles con la privacidad](https://docs.microsoft.com/windows/uwp/security/index).
 
@@ -56,7 +56,7 @@ El código anterior inicia la página de configuración de privacidad de la cám
 
 Para obtener más información sobre el inicio de URI, consulta [Iniciar la aplicación predeterminada de un URI](launch-default-app.md).
 
-## <a name="ms-settings-uri-scheme-reference"></a>ms-settings: Referencia de esquema URI
+## <a name="ms-settings-uri-scheme-reference"></a>Referencia del esquema de URI ms-settings:
 
 Usa los siguientes URI para abrir varias páginas de la aplicación Configuración.
 
@@ -76,12 +76,12 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 
 |Página de configuración| URI |
 |-------------|-----|
-| Acceder a la red del trabajo o colegio | ms-settings:workplace |
+| Acceder a la red del trabajo o centro docente | ms-settings:workplace |
 | Cuentas de correo electrónico y aplicaciones  | ms-settings:emailandaccounts |
 | Familia y otras personas | ms-settings:otherusers |
 | Configuración de un quiosco | MS-Settings: assignedaccess |
 | Opciones de inicio de sesión | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
-| Sincronizar tu configuración | ms-settings:sync |
+| Sincronizar la configuración | ms-settings:sync |
 | Configurar Windows Hello | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
 | Tu información | ms-settings:yourinfo |
 
@@ -90,7 +90,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |Página de configuración| URI |
 |-------------|-----|
 | Aplicaciones y características | ms-settings:appsfeatures |
-| Funciones de la aplicación | ms-settings:appsfeatures-app (Restablecer, administrar contenido de complementos y descargable, etc. para la aplicación)|
+| Características de la aplicación | ms-settings:appsfeatures-app (Restablecer, administrar contenido de complementos y descargable, etc. para la aplicación)|
 | Aplicaciones para sitios web | ms-settings:appsforwebsites |
 | Aplicaciones predeterminadas | ms-settings:defaultapps |
 | Administrar características opcionales | ms-settings:optionalfeatures |
@@ -116,10 +116,10 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |Página de configuración| URI |
 |-------------|-----|
 | AutoPlay | ms-settings:autoplay |
-| Bluetooth | ms-settings:bluetooth |
+| Bluetooth, | ms-settings:bluetooth |
 | Dispositivos conectados | ms-settings:connecteddevices |
 | Cámara predeterminada | MS-Settings: Camera (**en desuso en Windows 10, versión 1809 y posteriores**) |
-| Mouse y panel táctil | ms-settings:mousetouchpad (la configuración del panel táctil solo está disponible en dispositivos que disponen de panel táctil) |
+| Ratón y panel táctil | ms-settings:mousetouchpad (la configuración del panel táctil solo está disponible en dispositivos que disponen de panel táctil) |
 | Lápiz y Windows Ink | ms-settings:pen |
 | Impresoras y escáneres | ms-settings:printers |
 | Panel táctil | ms-settings:devices-touchpad (la configuración del panel táctil solo está disponible en dispositivos que disponen de hardware de panel táctil) |
@@ -165,7 +165,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | TruePlay | MS-Settings: Gaming-trueplay (**en desuso en Windows 10, versión 1809 y posteriores**) |
 | Redes Xbox | ms-settings:gaming-xboxnetworking |
 
-## <a name="home-page"></a>Página principal
+## <a name="home-page"></a>Página Inicio
 
 |Página de configuración| URI |
 |-------------|-----|
@@ -202,7 +202,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Wi-Fi | ms-settings:network-wifi (solo está disponible si el dispositivo tiene un adaptador Wi-Fi) |
 | Llamada por Wi-Fi | ms-settings:network-wificalling (solo está disponible si se habilitan las llamadas por Wi-Fi) |
 
-## <a name="personalization"></a>Personalization
+## <a name="personalization"></a>Personalización
 
 |Página de configuración| URI |
 |-------------|-----|
@@ -213,11 +213,11 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Pantalla de bloqueo | ms-settings:lockscreen |
 | Barra de navegación | MS-Settings: personalización-barra de navegación (**desusado en Windows 10, versión 1809 y posteriores**) |
 | Personalización (categoría) | ms-settings:personalization |
-| Comienzo | ms-settings:personalization-start |
+| Inicio | ms-settings:personalization-start |
 | Barra de tareas | ms-settings:taskbar |
 | Temas | ms-settings:themes |
 
-## <a name="phone"></a>Phone
+## <a name="phone"></a>Teléfono
 
 |Página de configuración| URI |
 |-------------|-----|
@@ -229,7 +229,7 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Aplicaciones para accesorios | MS-Settings: Privacy-accessoryapps (**en desuso en Windows 10, versión 1809 y posteriores**) |
 | Información de cuenta | ms-settings:privacy-accountinfo |
-| Historial de actividad | ms-settings:privacy-activityhistory |
+| Historial de actividades | ms-settings:privacy-activityhistory |
 | Id. de publicidad | MS-Settings: Privacy-advertisingid (**en desuso en Windows 10, versión 1809 y posteriores**) |
 | Diagnósticos de aplicaciones | ms-settings:privacy-appdiagnostics |
 | Descargas automáticas de archivos | ms-settings:privacy-automaticfiledownloads |
@@ -243,9 +243,9 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Seguidor de ojos | ms-settings:privacy-eyetracker (requiere hardware de seguidor de ojos) |
 | Comentarios y diagnósticos | ms-settings:privacy-feedback |
 | Sistema de archivos | ms-settings:privacy-broadfilesystemaccess |
-| General | ms-settings:privacy-general |
-| Location | ms-settings:privacy-location |
-| Mensajería | ms-settings:privacy-messaging |
+| General, | ms-settings:privacy-general |
+| Ubicación | ms-settings:privacy-location |
+| Mensajes | ms-settings:privacy-messaging |
 | Micrófono | ms-settings:privacy-microphone |
 | Movimiento | ms-settings:privacy-motion |
 | Notificaciones | ms-settings:privacy-notifications |
@@ -287,17 +287,17 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 | Cifrado | ms-settings:deviceencryption |
 | Asistente de concentración | ms-settings:quiethours <br> ms-settings:quietmomentshome |
 | Configuración de gráficos | ms-settings:display-advancedgraphics (solo está disponible en dispositivos que admiten opciones gráficas avanzadas) |
-| Mensajería | ms-settings:messaging |
+| Mensajes | ms-settings:messaging |
 | Multitarea | ms-settings:multitasking |
 | Ajustes de luz nocturna | ms-settings:nightlight |
-| Phone | ms-settings:phone-defaultapps |
-| Proyección en este PC | ms-settings:project |
+| Teléfono | ms-settings:phone-defaultapps |
+| Proyectar en este PC | ms-settings:project |
 | Experiencias compartidas | ms-settings:crossdevice |
 | Modo tableta | ms-settings:tabletmode |
 | Barra de tareas | ms-settings:taskbar |
 | Notificaciones y acciones | ms-settings:notifications |
 | Escritorio remoto | ms-settings:remotedesktop |
-| Phone | MS-Settings: Phone (**en desuso en Windows 10, versión 1809 y posteriores**) |
+| Teléfono | MS-Settings: Phone (**en desuso en Windows 10, versión 1809 y posteriores**) |
 | Inicio/apagado y suspensión | ms-settings:powersleep |
 | Sonido | MS-Settings: sonido |
 | Almacenamiento | ms-settings:storagesense |
@@ -309,7 +309,8 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |-------------|-----|
 | Fecha y hora | ms-settings:dateandtime |
 | Configuración de IME de Japón | ms-settings:regionlanguage-jpnime (disponible si está instalado el Editor de métodos de entrada de Japón de Microsoft) |
-| Lenguaje | MS-Settings: teclado<br/>ms-settings:regionlanguage<br/>MS-Settings: regionlanguage-bpmfime<br/>MS-Settings: regionlanguage-cangjieime<br/>MS-Settings: regionlanguage-chsime-pinyin-domainlexicon<br/>MS-Settings: regionlanguage-chsime-pinyin-KeyConfig<br/>MS-Settings: regionlanguage-chsime-pinyin-UDP<br/>MS-Settings: regionlanguage-chsime-Wubi-UDP<br/>MS-Settings: regionlanguage-quickime |
+| Región | MS-Settings: regionformatting |
+| Idioma | MS-Settings: teclado<br/>ms-settings:regionlanguage<br/>MS-Settings: regionlanguage-bpmfime<br/>MS-Settings: regionlanguage-cangjieime<br/>MS-Settings: regionlanguage-chsime-pinyin-domainlexicon<br/>MS-Settings: regionlanguage-chsime-pinyin-KeyConfig<br/>MS-Settings: regionlanguage-chsime-pinyin-UDP<br/>MS-Settings: regionlanguage-chsime-Wubi-UDP<br/>MS-Settings: regionlanguage-quickime |
 | Configuración IME de Pinyin | ms-settings:regionlanguage-chsime-pinyin (disponible si está instalado el Editor de métodos de entrada de Pinyin de Microsoft) |
 | Voz | ms-settings:speech |
 | Configuración IME de Wubi  | ms-settings:regionlanguage-chsime-wubi (disponible si está instalado el Editor de métodos de entrada de Wubi de Microsoft) |
@@ -319,14 +320,14 @@ Usa los siguientes URI para abrir varias páginas de la aplicación Configuraci�
 |Página de configuración| URI |
 |-------------|-----|
 | Activación | ms-settings:activation |
-| Copias de seguridad | ms-settings:backup |
+| Copia de seguridad | ms-settings:backup |
 | Optimización de distribución | ms-settings:delivery-optimization |
-| Encontrar mi dispositivo | ms-settings:findmydevice |
+| Encuentra mi dispositivo | ms-settings:findmydevice |
 | Para desarrolladores | ms-settings:developers |
 | Recuperación | ms-settings:recovery |
 | Solucionar problemas | ms-settings:troubleshoot |
 | Seguridad de Windows | ms-settings:windowsdefender |
-| Programa Windows Insider | ms-settings:windowsinsider (solo está disponible si el usuario se inscribe en WIP)<br/>MS-Settings: windowsinsider-optin |
+| Programa Windows Insider | ms-settings:windowsinsider (solo está disponible si el usuario se inscribe en WIP)<br/>MS-Settings: windowsinsider-optin |
 | Windows Update | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Windows Update: opciones avanzadas | ms-settings:windowsupdate-options |
 | Windows Update: opciones de reinicio | ms-settings:windowsupdate-restartoptions |
