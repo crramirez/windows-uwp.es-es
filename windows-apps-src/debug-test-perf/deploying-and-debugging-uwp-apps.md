@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, test, rendimiento, performance, depuración, debug, pruebas
 ms.localizationpriority: medium
-ms.openlocfilehash: cdfcdfddb2b595a589c70d1facc24559c63b98da
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d948af1ce10b3752ba9f20454d8dea72916de692
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74254791"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683858"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Implementación y depuración de aplicaciones para UWP
 
@@ -98,7 +98,7 @@ Para obtener más información, consulta la página [Centro de descarga para Vis
 
 ## <a name="passing-command-line-debug-arguments"></a>Pasar argumentos de depuración de la línea de comandos
 
-En Visual Studio 2019, puede pasar argumentos de depuración de línea de comandos al iniciar la depuración de aplicaciones para UWP. Puedes acceder a los argumentos de depuración de la línea de comandos desde el parámetro *args* del método **OnLaunched** de la clase [**Application**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application). Para especificar los argumentos de depuración de la línea de comandos, abre las propiedades del proyecto y navega a la pestaña **Depurar**.
+En Visual Studio 2019, puede pasar argumentos de depuración de línea de comandos al iniciar la depuración de aplicaciones para UWP. Puedes acceder a los argumentos de depuración de la línea de comandos desde el parámetro *args* del método **OnLaunched** de la clase [**Application**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application). Para especificar los argumentos de depuración de la línea de comandos, abre las propiedades del proyecto y navega a la pestaña **Depurar**.
 
 > [!NOTE]
 > Esta característica está disponible en Visual Studio 2017 (versión 15.1) para C#, VB y C++. JavaScript está disponible en versiones posteriores. Los argumentos de depuración de la línea de comandos están disponibles para todos los tipos de implementación, excepto el simulador.
@@ -111,7 +111,7 @@ En el caso de proyectos C++ y JS para UWP, verás **Argumentos de la línea de c
 
 ![Argumentos de la línea de comandos C++ y JS](images/command-line-arguments-cpp.png)
 
-Después de especificar los argumentos de la línea de comandos, puedes acceder al valor del argumento en el método **OnLaunched** de la aplicación. El elemento [args**del objeto**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs)LaunchActivatedEventArgs tendrá una **Argumentos** con el valor establecido en el texto del campo **Argumentos de la línea de comandos** campo.
+Después de especificar los argumentos de la línea de comandos, puedes acceder al valor del argumento en el método **OnLaunched** de la aplicación. El elemento *args* del objeto [**LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) tendrá una **Argumentos** con el valor establecido en el texto del campo **Argumentos de la línea de comandos** campo.
 
 ![Argumentos de la línea de comandos C++ y JS](images/command-line-arguments-debugging.png)
 
@@ -217,7 +217,7 @@ Los archivos de símbolos contienen una variedad de datos muy útiles al depurar
 
 Para establecer opciones de símbolo de Visual Studio, selecciona **Herramientas > Opciones** y después ve a **Depuración > Símbolos** en la ventana del cuadro de diálogo.
 
-![cuadro de diálogo Opciones](images/gs-debug-uwp-apps-004.png)
+![Cuadro de diálogo Opciones](images/gs-debug-uwp-apps-004.png)
 
 Para cargar símbolos en una sesión de depuración con [WinDbg](#windbg), establece la variable **sympath** en la ubicación del paquete de símbolos. Por ejemplo, al ejecutar el comando siguiente, se cargarán los símbolos del servidor de símbolos de Microsoft y después se almacenarán en caché en el directorio C:\Symbols:
 

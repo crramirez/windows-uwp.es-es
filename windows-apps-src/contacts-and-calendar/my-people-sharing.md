@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f0549aa1e20d8ed787eed550f4a7e7171a812831
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: ff37a243f88bdd378998070f58ec35196c62a6cf
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820185"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683493"
 ---
 # <a name="my-people-sharing"></a>Uso compartido de Mis allegados
 
@@ -20,15 +20,15 @@ La función Mis allegados permite a los usuarios anclar contactos a su barra de 
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 y Microsoft Visual Studio 2019. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ Conocimientos básicos de C# o algún lenguaje de programación orientado a objetos similar. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++ Windows 10 y Microsoft Visual Studio 2019. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/windows/uwp/get-started/get-set-up).
++ Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 Hay tres pasos que debes seguir para habilitar la aplicación destino de uso compartido de Mis allegados:
 
-1. [Declarar la compatibilidad con el contrato de activación shareTarget en el manifiesto de aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [Anotar los contactos que los usuarios pueden compartir al uso de la aplicación.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [Declare la compatibilidad con el contrato de activación shareTarget en el manifiesto de aplicación.](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [Anote los contactos que los usuarios pueden compartir para usar la aplicación.](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3. Admitir varias instancias de la aplicación en ejecución al mismo tiempo.  Los usuarios deben poder interactuar con una versión completa de la aplicación mientras también la usan para compartir con otros. Puede que la usen a la vez en varias ventanas de uso compartido. Para admitir esto, la aplicación debe poder ejecutar varias vistas al mismo tiempo. Para obtener información sobre cómo hacerlo, consulta el artículo ["Mostrar varias vistas en una aplicación"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views).
 
 Cuando hayas hecho esto, la aplicación aparecerá como un destino de uso compartido en la ventana de compartir Mis allegados, que se puede iniciar de dos maneras:
@@ -75,7 +75,7 @@ Para declarar la compatibilidad de la aplicación como destino de contenido comp
 </Applications>
 ```
 
-Este código agrega compatibilidad para todos los formatos de datos y archivos, pero puedes especificar qué tipos de archivo y formatos de datos son compatibles (consulta [documentación de la clase ShareTarget](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appxmanifestschema/element-sharetarget) para obtener más detalles).
+Este código agrega compatibilidad para todos los formatos de datos y archivos, pero puedes especificar qué tipos de archivo y formatos de datos son compatibles (consulta [documentación de la clase ShareTarget](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-sharetarget) para obtener más detalles).
 
 ## <a name="annotating-contacts"></a>Anotación de contactos
 
@@ -103,11 +103,11 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el nombre de familia de paquete, abre **Package.appxmanifest** mediante el editor predeterminado y busca en la pestaña "Empaquetado". Aquí, "Aplicación" es la clase activable correspondiente a la vista de destino de contenido compartido.
+El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el Nombre de familia de paquete, abre **Package.appxmanifest** mediante el editor predeterminado y busca en la pestaña "Empaquetado". Aquí, "Aplicación" es la clase activable correspondiente a la vista de destino de contenido compartido
 
 ## <a name="running-as-a-my-people-share-target"></a>Ejecución como destino de contenido compartido de Mis allegados
 
-Por último, para ejecutar la aplicación, invalida el método [OnShareTargetActivated](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Application#Windows_UI_Xaml_Application_OnShareTargetActivated_Windows_ApplicationModel_Activation_ShareTargetActivatedEventArgs_) en la clase principal de tu aplicación para controlar la activación de destino de contenido compartido. La propiedad [ShareTargetActivatedEventArgs.ShareOperation.Contacts](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation#Properties) contendrá los contactos con los que se está compartiendo o estará vacía si se trata de una operación de compartir estándar (no un uso compartido de Mis allegados).
+Por último, para ejecutar la aplicación, invalida el método [OnShareTargetActivated](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application#Windows_UI_Xaml_Application_OnShareTargetActivated_Windows_ApplicationModel_Activation_ShareTargetActivatedEventArgs_) en la clase principal de tu aplicación para controlar la activación de destino de contenido compartido. La propiedad [ShareTargetActivatedEventArgs.ShareOperation.Contacts](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharetarget.shareoperation#Properties) contendrá los contactos con los que se está compartiendo o estará vacía si se trata de una operación de compartir estándar (no un uso compartido de Mis allegados).
 
 ```Csharp
 protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
@@ -131,7 +131,7 @@ protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs arg
 }
 ```
 
-## <a name="see-also"></a>Vea también
-+ [Admitir agregar personas de mi](my-people-support.md)
-+ [Clase ShareTarget](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appxmanifestschema/element-sharetarget)
-+ [Ejemplo de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
+## <a name="see-also"></a>Consulta también
++ [Incorporación de compatibilidad con mis personas](my-people-support.md)
++ [Clase ShareTarget](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-sharetarget)
++ [Ejemplo de integración de tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)

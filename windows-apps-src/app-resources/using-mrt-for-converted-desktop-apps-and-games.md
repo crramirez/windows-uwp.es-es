@@ -1,20 +1,20 @@
 ---
 title: Uso de MRT para juegos y aplicaciones de escritorio convertidos
-description: Al empaquetar la aplicación o juego .NET o Win32 como un paquete AppX, puedes aprovechar el sistema de administración de recursos para cargar recursos de una aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
+description: Al empaquetar la aplicación o juego .NET o Win32 como un paquete AppX, puedes aprovechar el sistema de administración de recursos para cargar recursos de aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. recursos, juegos, centennial, convertidor de aplicaciones de escritorio, mui, ensamblado satélite
 ms.localizationpriority: medium
-ms.openlocfilehash: 3367cfafb2f3a8e307fd26dc6d6c19f1ece0d17e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 0425e7bb00e4a5be848443aa278ebaad1706cb30
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74254749"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683918"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Usar el sistema de administración de recursos de Windows 10 en una aplicación o juego heredado.
 
-Con frecuencia, las aplicaciones .NET y Win32 están localizadas en diferentes idiomas, para así ampliar el mercado al que pueden dirigirse. Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación o el juego de .NET o Win32 como un paquete MSIX o AppX, puede aprovechar el sistema de administración de recursos para cargar los recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
+Con frecuencia, las aplicaciones .NET y Win32 están localizadas en diferentes idiomas, para así ampliar el mercado al que pueden dirigirse. Para más información sobre la propuesta de valor de localizar la aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación o el juego de .NET o Win32 como un paquete MSIX o AppX, puede aprovechar el sistema de administración de recursos para cargar los recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
 
 Existen muchas formas para localizar las aplicaciones Win32 tradicionales, pero Windows 8 introdujo un nuevo [sistema de administración de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)) que funciona entre lenguajes de programación y tipos de aplicaciones, además de proporcionar funcionalidad que va más allá de una simple localización. Este sistema se denominará "MRT" en este tema. Históricamente, eso significaba "Tecnología de recursos modernos", pero ha dejado de usarse el término "Modernos". También se puede llamar al administrador de recursos MRM (administrador de recursos modernos) o PRI (índice de recursos del paquete).
 
@@ -38,7 +38,7 @@ En muchos casos, puedes seguir usando los formatos de localización y el código
 <tr>
 <td>Usar MRT para identificar y localizar recursos</td>
 <td>Requisito previo para minimizar los tamaños de descarga e instalación; idioma de reserva automático</td>
-<td>Medio</td>
+<td>Mediana</td>
 </tr>
 <tr>
 <td>Crear paquetes de recursos</td>
@@ -148,7 +148,7 @@ Si desea crear manualmente el paquete, tendrá que crear una estructura de direc
 </Package>
 ```
 
-Para obtener más información sobre el archivo de manifiesto del paquete y el diseño del paquete, vea [manifiesto del paquete](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appx-package-manifest)de la aplicación.
+Para obtener más información sobre el archivo de manifiesto del paquete y el diseño del paquete, vea [manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest)de la aplicación.
 
 Por último, si usa Visual Studio para crear un nuevo proyecto y migrar el código existente en, vea [crear una aplicación "Hello, World"](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal). Puede incluir el código existente en el nuevo proyecto, pero es probable que tenga que realizar cambios significativos en el código (especialmente en la interfaz de usuario) para poder ejecutarlo como una aplicación de UWP pura. Estos cambios están fuera del ámbito de este documento.
 
@@ -207,7 +207,7 @@ Si quieres usar el diseñador de Visual Studio:
 
 Una vez que haya definido los valores en el archivo de `.resw`, el siguiente paso es actualizar el manifiesto para hacer referencia a las cadenas de recursos. De nuevo, puedes editar un archivo XML directamente o confiar en el diseñador de manifiestos de Visual Studio.
 
-Si editas el XML directamente, abre el archivo `AppxManifest.xml` y realiza los siguientes cambios en los <span style="background-color: lightgreen">valores resaltados</span>; usa este texto *exacto*, no un texto específico para la aplicación. No es obligado usar estos nombres exactos para los recursos; puedes elegir los tuyos propios, pero los que elijas deben coincidir exactamente con lo que aparece en el archivo &mdash;. Estos nombres deben coincidir con el elemento `Names` que creaste en el archivo `.resw`, con el prefijo del esquema `ms-resource:` y el espacio de nombres `Resources/`. 
+Si editas el XML directamente, abre el archivo `AppxManifest.xml` y realiza los siguientes cambios en los <span style="background-color: lightgreen">valores resaltados</span>; usa este texto *exacto*, no un texto específico para la aplicación. No es obligado usar estos nombres exactos para los recursos; puedes elegir los tuyos propios, pero los que elijas deben coincidir exactamente con lo que aparece en el archivo `.resw`. Estos nombres deben coincidir con el elemento `Names` que creaste en el archivo `.resw`, con el prefijo del esquema `ms-resource:` y el espacio de nombres `Resources/`. 
 
 > [!NOTE]
 > Muchos elementos del manifiesto se han omitido de este fragmento de código. no elimine nada.
@@ -349,7 +349,7 @@ Para usar el Explorador de Windows:
 3. Elija `Local Machine` y haga clic en `Next`
 4. Acepte la solicitud de elevación de administración de control de cuentas de usuario, si aparece, y haga clic en `Next`
 5. Escriba la contraseña de la clave privada, si hay alguna, y haga clic en `Next`
-6. Seleccionar `Place all certificates in the following store`
+6. Seleccione `Place all certificates in the following store`
 7. Haz clic en `Browse` y elige la carpeta `Trusted People` (**no** "Editores de confianza")
 8. Haga clic en `Next` y, a continuación, `Finish`
 
@@ -433,11 +433,11 @@ Para probar los nuevos cambios localizados, basta con agregar un nuevo idioma pr
 1. Ejecuta la aplicación `Settings` (`Windows + I`)
 2. Vaya a `Time & language`
 3. Vaya a `Region & language`
-4. Haga clic en `Add a language`
+4. haga clic en `Add a language`.
 5. Escribe (o selecciona) el idioma que quieras (p. ej., `Deutsch` o `German`)
  * Si hay subidiomas, elige el que quieras (p. ej., `Deutsch / Deutschland`)
 6. Selecciona el nuevo idioma en la lista de idiomas
-7. Haga clic en `Set as default`
+7. haga clic en `Set as default`.
 
 Ahora abre el menú Inicio y busca la aplicación. Deberías ver los valores localizados para el idioma seleccionado (otras aplicaciones también pueden aparecer localizadas). Si no ves el nombre localizado enseguida, espera unos minutos hasta que se actualice la memoria caché del menú Inicio. Para volver a tu idioma nativo, simplemente haz que sea el idioma predeterminado en la lista de idiomas. 
 
@@ -541,11 +541,11 @@ Por ejemplo, la aplicación puede usar la API de Win32 `GetUserPreferredUILangua
 
 El cambio del código para usar MRT para localizar recursos no es difícil. Requiere el uso de un conjunto de tipos de WinRT y unas pocas líneas de código. Los tipos principales que usarás son los siguientes:
 
-* [ResourceContext](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceContext), que encapsula el conjunto de valores de calificadores activos actualmente (idioma, factor de escala, etc.).
-* [ResourceManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.resources.core.resourcemanager) (la versión de WinRT, no la versión de .NET), que permite el acceso a todos los recursos del archivo PRI.
-* [ResourceMap](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.resources.core.resourcemap), que representa un subconjunto específico de los recursos en el archivo PRI (en este ejemplo, los recursos basados en archivos frente a los recursos de cadenas).
-* [NamedResource](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource), que representa un recurso lógico y todos sus posibles candidatos.
-* [ResourceCandidate](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.resources.core.resourcecandidate), que representa un único recurso candidato concreto. 
+* [ResourceContext](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceContext), que encapsula el conjunto de valores de calificadores activos actualmente (idioma, factor de escala, etc.).
+* [ResourceManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcemanager) (la versión de WinRT, no la versión de .NET), que permite el acceso a todos los recursos del archivo PRI.
+* [ResourceMap](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcemap), que representa un subconjunto específico de los recursos en el archivo PRI (en este ejemplo, los recursos basados en archivos frente a los recursos de cadenas).
+* [NamedResource](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.NamedResource), que representa un recurso lógico y todos sus posibles candidatos.
+* [ResourceCandidate](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecandidate), que representa un único recurso candidato concreto. 
 
 En seudocódigo, la forma de resolver un nombre de archivo de recurso específico (como `UICommands\ui.txt` en el ejemplo anterior) es la siguiente:
 
@@ -724,7 +724,7 @@ Ahora que ya tienes un "fat pack" que contiene todos los recursos, hay dos rutas
 
 Para poder usar la herramienta Bundle Generator, tienes que actualizar manualmente el archivo de configuración PRI creado para el paquete, para quitar la sección `<packaging>`.
 
-Si usa Visual Studio, consulte para asegurarse de [que los recursos se instalan en un dispositivo independientemente de si un dispositivo los requiere](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)) para obtener información sobre cómo compilar todos los idiomas en el paquete principal creando los archivos `priconfig.packaging.xml` y `priconfig.default.xml`.
+Si usa Visual Studio, consulte para asegurarse de [que los recursos se instalan en un dispositivo independientemente de si un dispositivo los requiere](https://docs.microsoft.com/previous-versions/dn482043(v=vs.140)) para obtener información sobre cómo compilar todos los idiomas en el paquete principal creando los archivos `priconfig.packaging.xml` y `priconfig.default.xml`.
 
 Si editas manualmente los archivos, sigue estos pasos: 
 

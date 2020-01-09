@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d2d95711196a9bf2ab113527e5fc8f44459dc3d
-ms.sourcegitcommit: d8ce1a25ac0373acafb394837eb5c0737f6efec8
+ms.openlocfilehash: a53c03c10089856cfd738a5c071c37502a34e9a5
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486429"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683628"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproducir audio y vídeo con MediaPlayer
 
@@ -20,7 +20,7 @@ En este artículo se muestra cómo reproducir elementos multimedia en la aplicac
 En este artículo se muestran las características de **MediaPlayer** que usará una aplicación típica de reproducción de elementos multimedia. Ten en cuenta que **MediaPlayer** usa la clase [**MediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaSource) como un contenedor de todos los elementos multimedia. Esta clase permite cargar y reproducir elementos multimedia de distintos orígenes, como archivos locales, secuencias de memoria y orígenes de redes, todo con la misma interfaz. También hay clases de nivel superior que funcionan con **MediaSource**, como [**MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackItem) y [**MediaPlaybackList**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackList), que proporcionan características más avanzadas, como listas de reproducción y la capacidad para administrar orígenes multimedia con varias pistas de audio, vídeo y metadatos. Para obtener más información sobre **MediaSource** y las API relacionadas, consulta [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md).
 
 > [!NOTE] 
-> Las ediciones Windows 10 N y Windows 10 KN no incluyen las funciones multimedia necesarias para usar **MediaPlayer** para la reproducción. Estas características se pueden instalar manualmente. Para obtener más información, consulta [Media feature pack for Windows 10 N and Windows 10 KN editions](https://support.microsoft.com/en-us/help/3010081/media-feature-pack-for-windows-10-n-and-windows-10-kn-editions) (Media Feature Pack para las ediciones Windows 10 N y Windows 10 KN).
+> Las ediciones Windows 10 N y Windows 10 KN no incluyen las funciones multimedia necesarias para usar **MediaPlayer** para la reproducción. Estas características se pueden instalar manualmente. Para obtener más información, consulta [Media feature pack for Windows 10 N and Windows 10 KN editions](https://support.microsoft.com/help/3010081/media-feature-pack-for-windows-10-n-and-windows-10-kn-editions) (Media Feature Pack para las ediciones Windows 10 N y Windows 10 KN).
 
 ## <a name="play-a-media-file-with-mediaplayer"></a>Reproducir un archivo multimedia con MediaPlayer  
 La reproducción básica de elementos multimedia con **MediaPlayer** es muy fácil de implementar. En primer lugar, crea una nueva instancia de la clase **MediaPlayer**. Tu aplicación puede tener varias instancias de **MediaPlayer** activas a la vez. Después, establece la propiedad [**Source**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.source) del reproductor en un objeto que implemente [**IMediaPlaybackSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.IMediaPlaybackSource), como un objeto [**MediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaSource), [**MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackItem) o [**MediaPlaybackList**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackList). En este ejemplo, un objeto **MediaSource** se crea a partir de un archivo en el almacenamiento local de la aplicación, y después se crea un objeto **MediaPlaybackItem** desde el origen y, se asigna a la propiedad **Source** del reproductor.
@@ -104,7 +104,7 @@ A continuación, declara un objeto **Rect** que almacenará el rectángulo de or
 
 [!code-cs[DeclareSourceRect](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareSourceRect)]
 
-El controlador **ManipulationDelta** ajusta la escala o la traslación del rectángulo de zoom. Si el valor de escala delta no es 1, significa que el usuario realizó un gesto de reducir. Si el valor es mayor que 1, el rectángulo de origen debe hacerse más pequeño para acercar el contenido. Si el valor es menor que 1, el rectángulo de origen debe hacerse más grande para alejar. Antes de configurar los nuevos valores de escala, se comprueba el rectángulo resultante para asegurarse de que quede por completo dentro de los límites (0,0,1,1).
+El controlador **ManipulationDelta** ajusta la escala o la traslación del rectángulo de zoom. Si el valor de escala delta no es 1, significa que el usuario realizó un gesto de reducir. Si el valor es mayor que 1, el rectángulo de origen debe hacerse más pequeño para acercar el contenido. Si el valor es inferior a 1, el rectángulo de origen debe hacerse más grande para alejar. Antes de establecer los nuevos valores de escala, se comprueba el rectángulo resultante para garantizar que quede por completo dentro de los límites (0,0,1,1).
 
 Si el valor de escala es 1, se controla el gesto de traslación. Simplemente, el número de píxeles en el gesto dividido por el ancho y alto del control traslada el rectángulo. De nuevo, se comprueba el rectángulo resultante para asegurarse de que se encuentra dentro de los límites (0,0,1,1).
 
@@ -143,7 +143,7 @@ En el siguiente ejemplo se muestra cómo usar un objeto **MediaTimelineControlle
 
 [!code-cs[SetTimelineController](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetTimelineController)]
 
-**Precaución** La clase [**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager) proporciona integración automática entre **MediaPlayer** y los controles de transporte de contenido multimedia del sistema (SMTC), pero no se puede usar esta integración automática con reproductores multimedia que se controlen con un objeto **MediaTimelineController**. Por lo tanto, debes deshabilitar el administrador de comandos del reproductor multimedia antes de establecer el controlador de línea de tiempo del reproductor. Si no lo hace generará una excepción con el mensaje siguiente: "Asociar el controlador de escala de tiempo multimedia está bloqueado debido al estado actual del objeto." Para obtener más información sobre la integración del reproductor multimedia con los SMTC, consulta [Integrar con los controles de transporte multimedia del sistema](integrate-with-systemmediatransportcontrols.md). Si estás usando un objeto **MediaTimelineController**, aún puedes controlar los SMTC manualmente. Para obtener más información, consulta [Controles de transporte de contenido multimedia del sistema](system-media-transport-controls.md).
+**Precaución** La clase [**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager) proporciona integración automática entre **MediaPlayer** y los controles de transporte de contenido multimedia del sistema (SMTC), pero no se puede usar esta integración automática con reproductores multimedia que se controlen con un objeto **MediaTimelineController**. Por lo tanto, debes deshabilitar el administrador de comandos del reproductor multimedia antes de establecer el controlador de línea de tiempo del reproductor. Si no se hace, se generará una excepción con el siguiente mensaje: "Se bloqueó la adjunción del controlador de línea de tiempo multimedia debido al estado actual del objeto". Para obtener más información sobre la integración del reproductor multimedia con los SMTC, consulta [Integrar con los controles de transporte multimedia del sistema](integrate-with-systemmediatransportcontrols.md). Si estás usando un objeto **MediaTimelineController**, aún puedes controlar los SMTC manualmente. Para obtener más información, consulta [Controles de transporte de contenido multimedia del sistema](system-media-transport-controls.md).
 
 Cuando hayas adjuntado un objeto **MediaTimelineController** a uno o más reproductores multimedia, puedes controlar el estado de reproducción con los métodos que expone el controlador. El siguiente ejemplo llama al método [**Start**](https://docs.microsoft.com/uwp/api/windows.media.mediatimelinecontroller.start) para iniciar la reproducción de todos los reproductores multimedia adjuntos al inicio del elemento multimedia.
 
@@ -189,7 +189,7 @@ Ten en cuenta que si el valor de desplazamiento de un reproductor se asigna a un
 ## <a name="play-spherical-video-with-mediaplayer"></a>Reproducir vídeo esférico con MediaPlayer
 A partir de Windows 10, versión 1703, **MediaPlayer** admite la proyección equirectangular para la reproducción de vídeo esférico. El contenido de vídeo esférico no es diferente del vídeo plano normal en el sentido que **MediaPlayer** representará el vídeo siempre y cuando se admita la codificación correspondiente. En el caso de vídeo esférico que contiene una etiqueta de metadatos que especifica que el vídeo usa la proyección equirectangular, **MediaPlayer** puede representar el vídeo con un campo de vista y orientación de vista especificados. Esto permite escenarios como, por ejemplo, la reproducción de vídeo de realidad virtual con una pantalla montada en la cabeza o simplemente permitir al usuario hacer un paneo dentro del contenido de vídeo esférico mediante el mouse o entrada de teclado.
 
-Para reproducir vídeo esférico, sigue los pasos de reproducción de contenido de vídeo que se describe anteriormente en este artículo. Es un paso adicional registrar un controlador para el [ **MediaPlayer.MediaOpened** ](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer#Windows_Media_Playback_MediaPlayer_MediaOpened) eventos. Este evento proporciona una oportunidad para habilitar y controlar los parámetros de reproducción de vídeo esférico.
+Para reproducir vídeo esférico, sigue los pasos de reproducción de contenido de vídeo que se describe anteriormente en este artículo. El paso adicional consiste en registrar un controlador para el evento [**MediaPlayer. MediaOpened**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer#Windows_Media_Playback_MediaPlayer_MediaOpened) . Este evento proporciona una oportunidad para habilitar y controlar los parámetros de reproducción de vídeo esférico.
 
 [!code-cs[OpenSphericalVideo](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetOpenSphericalVideo)]
 
@@ -228,13 +228,13 @@ Una vez que todos los objetos necesarios se hayan inicializado, se llama a **Cop
 
 Para más información sobre el uso de Win2D, consulta el [repositorio GitHub de Win2D](https://github.com/Microsoft/Win2D). Para probar el código de ejemplo que se muestra arriba, tendrás que agregar el paquete de NuGet Win2D al proyecto con las siguientes instrucciones.
 
-**Para agregar el paquete Win2D NuGet al proyecto efecto**
+**Para agregar el paquete NuGet de Win2D al proyecto de efecto**
 
 1.  En el **Explorador de soluciones**, haz clic con el botón derecho en el proyecto y selecciona **Administrar paquetes NuGet**.
 2.  En la parte superior de la ventana, selecciona la pestaña **Examinar**.
 3.  En el cuadro de búsqueda, escribe **Win2D**.
 4.  Selecciona **Win2D.uwp**y luego selecciona **Instalar** en el panel derecho.
-5.  En el cuadro de diálogo **Revisar cambios** se muestra el paquete que se instalará. Haga clic en **Aceptar**.
+5.  En el cuadro de diálogo **Revisar cambios** se muestra el paquete que se instalará. Haz clic en **Aceptar**.
 6.  Acepta la licencia del paquete.
 
 ## <a name="detect-and-respond-to-audio-level-changes-by-the-system"></a>Detectar y responder a cambios de nivel de audio por el sistema
@@ -258,10 +258,10 @@ El usuario puede decidir que quiere pausar o continuar la reproducción, incluso
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Reproducción de multimedia](media-playback.md)
-* [Realiza un seguimiento, listas de reproducción y elementos multimedia](media-playback-with-mediasource.md)
-* [Integrar con los controles de transporte de medios del sistema](integrate-with-systemmediatransportcontrols.md)
-* [Crear, programar y administrar los medios](create-schedule-and-manage-media-breaks.md)
-* [Reproducir archivos multimedia en segundo plano](background-audio.md)
+* [Elementos multimedia, listas de reproducción y pistas](media-playback-with-mediasource.md)
+* [Integración con los controles de transporte multimedia del medio](integrate-with-systemmediatransportcontrols.md)
+* [Crear, programar y administrar saltos multimedia](create-schedule-and-manage-media-breaks.md)
+* [Reproducir contenido multimedia en segundo plano](background-audio.md)
 
 
 

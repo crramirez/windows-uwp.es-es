@@ -4,16 +4,16 @@ title: Escribir un complemento personalizado para Device Portal
 description: Obtén información sobre cómo escribir una aplicación para UWP que usa Windows Device Portal para hospedar una página web y proporcionar información de diagnóstico.
 ms.date: 03/24/2017
 ms.topic: article
-keywords: Windows 10, uwp, portal de dispositivos
+keywords: Windows 10, UWP, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: fe1c2130c3fae70f8aa5aa18acee83a6b6247ef5
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 4881fe961979243849728d3f835c449e0f71f4b4
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820158"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683848"
 ---
-# <a name="write-a-custom-plugin-for-device-portal"></a>Escribir un complemento personalizado para Portal de dispositivos
+# <a name="write-a-custom-plugin-for-device-portal"></a>Escribir un complemento personalizado para el Portal de dispositivos
 
 Obtén información sobre cómo escribir una aplicación para UWP que usa Windows Device Portal para hospedar una página web y proporcionar información de diagnóstico.
 
@@ -22,7 +22,7 @@ A partir de Creators Update, puedes usar Device Portal para hospedar las interfa
 ## <a name="create-a-new-uwp-app-project"></a>Creación de un nuevo proyecto de aplicación para UWP
 En esta guía, crearemos todo en una solución para hacerlo más sencillo.
 
-En Microsoft de Visual Studio 2019, cree un nuevo proyecto de aplicación UWP. Vaya a archivo > Nuevo > proyecto y seleccione aplicación vacía (Windows Universal) para C#y, a continuación, haga clic en siguiente. En configurar el cuadro de diálogo nuevo proyecto. Denomine el proyecto "DevicePortalProvider" y, a continuación, haga clic en crear. Esta será la aplicación que contiene el servicio de aplicaciones. Asegúrese de elegir "Windows 10 Creators Update (10.0; Build 15063) "para admitir.  Es posible que tengas que actualizar Visual Studio o instalar el nuevo SDK. Consulta [aquí](https://blogs.windows.com/buildingapps/2017/04/05/updating-tooling-windows-10-creators-update/) para más información. 
+En Microsoft Visual Studio 2019, cree un nuevo proyecto de aplicación para UWP. Vaya a archivo > Nuevo > proyecto y seleccione aplicación vacía (Windows universal) para C#y, a continuación, haga clic en siguiente. En el cuadro de diálogo Configurar el nuevo proyecto. Asigne al proyecto el nombre "DevicePortalProvider" y, a continuación, haga clic en crear. Esta será la aplicación que contiene el servicio de aplicaciones. Asegúrese de elegir "Windows 10 Creators Update (10,0; Compilación 15063) "para admitir.  Es posible que tengas que actualizar Visual Studio o instalar el nuevo SDK. Consulta [aquí](https://blogs.windows.com/buildingapps/2017/04/05/updating-tooling-windows-10-creators-update/) para más información. 
 
 ## <a name="add-the-deviceportalprovider-extension-to-your-packageappxmanifest-file"></a>Agregar la extensión devicePortalProvider al archivo package.appxmanifest
 Tendrás que agregar algo de código a tu archivo *package.appxmanifest* para que tu aplicación sea funcional como complemento de Device Portal. En primer lugar, agrega las siguientes definiciones de espacio de nombres a la parte superior del archivo. Agrégalas también al atributo `IgnorableNamespaces`.
@@ -78,7 +78,7 @@ Para esta funcionalidad se requieren dos nuevas capacidades. También deben agre
 > La funcionalidad "devicePortalProvider" está restringida ("rescap"), lo que significa que tienes que obtener autorización previa de la Tienda antes de que tu aplicación se pueda publicar allí. Sin embargo, esto no impide probar la aplicación de manera a través de la instalación de prueba. Para más información sobre las funcionalidades restringidas, consulta [Declaraciones de funcionalidades de las aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
 ## <a name="set-up-your-background-task-and-winrt-component"></a>Configurar la tarea en segundo plano y el componente WinRT
-Para configurar la conexión a Device Portal, la aplicación debe enlazar una conexión de servicio de la aplicación desde el servicio Device Portal con la instancia de Device Portal en ejecución dentro de la aplicación. Para ello, agrega un nuevo componente WinRT a tu aplicación con una clase que implemente [**IBackgroundTask**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.ibackgroundtask).
+Para configurar la conexión a Device Portal, la aplicación debe enlazar una conexión de servicio de la aplicación desde el servicio Device Portal con la instancia de Device Portal en ejecución dentro de la aplicación. Para ello, agrega un nuevo componente WinRT a tu aplicación con una clase que implemente [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask).
 
 ```csharp
 namespace MySampleProvider {
@@ -88,7 +88,7 @@ namespace MySampleProvider {
     }
 ```
 
-Asegúrate de que su nombre coincide con el espacio de nombres y clases establecido por el AppService EntryPoint ("MySampleProvider.SampleProvider"). Cuando realizas la primera solicitud al proveedor de Device Portal, Device Portal almacenará de la solicitud, iniciará la tarea en segundo plano de la aplicación, llamará a su método **Run** y pasará un elemento [**IBackgroundTaskInstance**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance). Luego, la aplicación lo usa para configurar una instancia de [**DevicePortalConnection**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnection).
+Asegúrate de que su nombre coincide con el espacio de nombres y clases establecido por el AppService EntryPoint ("MySampleProvider.SampleProvider"). Cuando realizas la primera solicitud al proveedor de Device Portal, Device Portal almacenará de la solicitud, iniciará la tarea en segundo plano de la aplicación, llamará a su método **Run** y pasará un elemento [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance). Luego, la aplicación lo usa para configurar una instancia de [**DevicePortalConnection**](https://docs.microsoft.com/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnection).
 
 ```csharp
 // Implement background task handler with a DevicePortalConnection
@@ -108,10 +108,10 @@ public void Run(IBackgroundTaskInstance taskInstance) {
 }
 ```
 
-Hay dos eventos que deben controlarse mediante la aplicación para completar la solicitud de control de bucle: **Cerrado**, para cada vez que el servicio de Portal de dispositivo se apaga, y [ **RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), superficies solicitudes HTTP entrante y proporciona la funcionalidad principal del Portal del dispositivo proveedor. 
+La aplicación debe controlar dos eventos para completar el bucle de tratamiento de la solicitud: **cerrado**, para cada vez que se cierra el servicio del portal de dispositivos, y [**RequestReceived**](https://docs.microsoft.com/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), que muestra las solicitudes HTTP entrantes y proporciona la funcionalidad principal del proveedor del portal de dispositivos. 
 
 ## <a name="handle-the-requestreceived-event"></a>Controlar el evento RequestReceived
-El evento **RequestReceived** se lanzará una vez para cada HTTP solicitud que se realice en la ruta de controlador especificado del complemento. El bucle de control de la solicitud para los proveedores de Device Portal es similar al de NodeJS Express: los objetos de solicitud y respuesta se proporcionan juntos con el evento y el controlador responde rellenando el objeto de respuesta. En los proveedores de Device Portal, el evento **RequestReceived** y sus controladores usan objetos [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httprequestmessage) y [**HttpResponseMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpresponsemessage).   
+El evento **RequestReceived** se lanzará una vez para cada HTTP solicitud que se realice en la ruta de controlador especificado del complemento. El bucle de control de la solicitud para los proveedores de Device Portal es similar al de NodeJS Express: los objetos de solicitud y respuesta se proporcionan juntos con el evento y el controlador responde rellenando el objeto de respuesta. En los proveedores de Device Portal, el evento **RequestReceived** y sus controladores usan objetos [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/uwp/api/windows.web.http.httprequestmessage) y [**HttpResponseMessage**](https://docs.microsoft.com/uwp/api/windows.web.http.httpresponsemessage).   
 
 ```csharp
 // Sample RequestReceived echo handler: respond with an HTML page including the query and some additional process information. 
@@ -136,7 +136,7 @@ private void DevicePortalConnection_RequestReceived(DevicePortalConnection sende
 }
 ```
 
-En este controlador de solicitud de ejemplo, primero extraemos los objetos de solicitud y respuesta del parámetro *args* y luego creamos una cadena con la dirección URL de la solicitud y código adicional en formato HTML. Esto se agrega en el objeto de respuesta como una instancia [**HttpStringContent**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpstringcontent). También se permiten otras clases [**IHttpContent**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.ihttpcontent), como las de "String" y "Búfer".
+En este controlador de solicitud de ejemplo, primero extraemos los objetos de solicitud y respuesta del parámetro *args* y luego creamos una cadena con la dirección URL de la solicitud y código adicional en formato HTML. Esto se agrega en el objeto de respuesta como una instancia [**HttpStringContent**](https://docs.microsoft.com/uwp/api/windows.web.http.httpstringcontent). También se permiten otras clases [**IHttpContent**](https://docs.microsoft.com/uwp/api/windows.web.http.ihttpcontent), como las de "String" y "Búfer".
 
 La respuesta luego se establece como una respuesta HTTP y se le proporciona un código de estado de 200 (Aceptar). Debería representarse según lo previsto en el explorador que hizo la llamada original. Ten en cuenta que cuando vuelve el controlador de evento **RequestReceived**, el mensaje de respuesta se devuelve automáticamente al agente de usuario: no se necesita ningún método "send" adicional.
 
@@ -176,7 +176,7 @@ El contenido estático que entregue un proveedor de Device Portal se entrega en 
 
 ![Salida de complemento de Device Portal](images/device-portal/plugin-output.png)
  
-Lo que es más importante, el uso de los métodos HttpPost/DeleteExpect200 en webbRest se encargará automáticamente del [control CSRF](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/preventing-cross-site-request-forgery-csrf-attacks), lo que permite a tu página web llamar a las API de REST de cambio de estado.  
+Lo que es más importante, el uso de los métodos HttpPost/DeleteExpect200 en webbRest se encargará automáticamente del [control CSRF](https://docs.microsoft.com/aspnet/web-api/overview/security/preventing-cross-site-request-forgery-csrf-attacks), lo que permite a tu página web llamar a las API de REST de cambio de estado.  
 
 > [!NOTE] 
 > El contenido estático que se incluye en Device Portal no proporciona una garantía contra cambios importantes. Si bien no se espera que las API cambiarán con frecuencia, podrían hacerlo, especialmente en los archivos *common.js* y *controls.js*, que el proveedor no debe usar. 
@@ -196,7 +196,7 @@ Para depurar la tarea en segundo plano, tienes que cambiar la forma en que Visua
 6.  En el explorador, accede al espacio de nombres del proveedor y debería activarse el punto de interrupción.
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Información general de Windows Device Portal](device-portal.md)
-* [Crear y usar un servicio de aplicación](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [Información general de Windows Device portal](device-portal.md)
+* [Crear y usar un servicio de aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
 
 

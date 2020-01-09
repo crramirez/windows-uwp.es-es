@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo las aplicaciones de Win32 C++ WRL pueden enviar notificaciones del sistema local y controlar el usuario hace clic en la notificación del sistema.
+Description: Obtenga información sobre C++ cómo las aplicaciones de Win32 WRL pueden enviar notificaciones del sistema local y controlar el usuario al hacer clic en la notificación del sistema.
 title: Enviar una notificación del sistema local desde aplicaciones de C++ (WRL) de escritorio
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 03/07/2018
 ms.topic: article
 keywords: windows 10, uwp, win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar notificación del sistema local, puente de dispositivo de escritorio, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: af6c4392d97bdbf06c3e185b8a1c0235225bfe5a
-ms.sourcegitcommit: 81021b7930905beb67383a08b09520cf95c68fd9
+ms.openlocfilehash: abd3fc88f2ecacd0146a9f3a88a3240630078454
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940312"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684200"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar una notificación del sistema local desde aplicaciones de C++ (WRL) de escritorio
 
@@ -22,7 +22,7 @@ Las aplicaciones de escritorio (Puente de dispositivo de escritorio y Win32 clá
 > Si estás escribiendo una aplicación para UWP, consulta la [documentación de UWP](send-local-toast.md). Para otros lenguajes de escritorio, consulta [C++ de escritorio](send-local-toast-desktop.md).
 
 
-## <a name="step-1-enable-the-windows-10-sdk"></a>Paso 1: Habilitar el 10 de Windows SDK
+## <a name="step-1-enable-the-windows-10-sdk"></a>Paso 1: Habilitar el SDK de Windows 10
 
 Si no has habilitado el SDK de Windows 10 para tu aplicación de Win32, debes hacerlo primero. Hay unos pocos pasos clave...
 
@@ -38,14 +38,14 @@ En **Enlazador-> Entrada**, agrega `runtimeobject.lib` a las **Dependencias adic
 Luego, en **General**, debes asegurarte de que la **versión de Windows SDK** está establecida en algo como 10.0 o posterior (no Windows 8.1).
 
 
-## <a name="step-2-copy-compat-library-code"></a>Paso 2: Copie el código de la biblioteca de compatibilidad
+## <a name="step-2-copy-compat-library-code"></a>Paso 2: Copiar código de la biblioteca compat
 
 Copia los archivos [DesktopNotificationManagerCompat.h](https://raw.githubusercontent.com/WindowsNotifications/desktop-toasts/master/CPP-WRL/DesktopToastsCppWrlApp/DesktopNotificationManagerCompat.h) y [DesktopNotificationManagerCompat.cpp](https://raw.githubusercontent.com/WindowsNotifications/desktop-toasts/master/CPP-WRL/DesktopToastsCppWrlApp/DesktopNotificationManagerCompat.cpp) desde GitHub en tu proyecto. La biblioteca compat toma buena parte de la complejidad de las notificaciones de escritorio. Las siguientes instrucciones requieren la biblioteca compat.
 
 Si estás usando encabezados precompilados, asegúrate de `#include "stdafx.h"` como la primera línea del archivo DesktopNotificationManagerCompat.cpp.
 
 
-## <a name="step-3-include-the-header-files-and-namespaces"></a>Paso 3: Incluir los archivos de encabezado y los espacios de nombres
+## <a name="step-3-include-the-header-files-and-namespaces"></a>Paso 3: Incluir los espacios de nombres y los archivos de encabezado
 
 Incluye el archivo de encabezado de la biblioteca de compatibilidad y los espacios de nombres y los archivos de encabezado relacionados con el uso de las API de notificación del sistema para UWP.
 
@@ -62,7 +62,7 @@ using namespace Microsoft::WRL;
 
 ## <a name="step-4-implement-the-activator"></a>Paso 4: Implementar el activador
 
-Debe implementar un controlador para la activación del sistema, de modo que cuando el usuario hace clic en la notificación del sistema, la aplicación puede hacer algo. Esto es necesario para que la notificación del sistema se conserve en el Centro de actividades (ya que se podría hacer clic en la notificación del sistema cuando se cierre la aplicación). Esta clase se puede colocar en cualquier lugar de tu proyecto.
+Debe implementar un controlador para la activación del sistema, de modo que cuando el usuario haga clic en la notificación del sistema, la aplicación pueda hacer algo. Esto es necesario para que la notificación del sistema se conserve en el Centro de actividades (ya que se podría hacer clic en la notificación del sistema cuando se cierre la aplicación). Esta clase se puede colocar en cualquier lugar de tu proyecto.
 
 Implementa la interfaz de **INotificationActivationCallback** como se muestra a continuación, incluido un UUID y también llama a **CoCreatableClass** para marcar la clase como que se puede crear con COM. Para el UUID, crea un GUID único mediante uno de los muchos generadores GUID en línea. Este CLSID (identificador de clase) de GUID es la manera a través de la cual el Centro de actividades sabe qué clase de COM activar.
 
@@ -87,7 +87,7 @@ CoCreatableClass(NotificationActivator);
 ```
 
 
-## <a name="step-5-register-with-notification-platform"></a>Paso 5: Registrar con la plataforma de notificación
+## <a name="step-5-register-with-notification-platform"></a>Paso 5: Registrarse con la plataforma de notificaciones
 
 A continuación, debes registrarte con la plataforma de notificaciones. Hay diferentes pasos en función de si usas el Puente de dispositivo de escritorio o Win32 clásico. Si admites ambos, debes hacer los dos pasos (sin embargo, no es necesario bifurcar tu código, ¡nuestra biblioteca lo controla por ti!).
 
@@ -143,11 +143,11 @@ Si estás usando Win32 clásico (o si admites ambos), tienes que declarar tu id.
 
 Elige un AUMID único que identifica tu aplicación de Win32. Esto suele estar en el formato de [CompanyName].[AppName], pero quieres garantizar que esto es único en todas las aplicaciones (puedes agregar algunos dígitos al final).
 
-#### <a name="step-51-wix-installer"></a>Paso 5.1: Instalador de WiX
+#### <a name="step-51-wix-installer"></a>Paso 5.1: Instalar WiX
 
 Si estás usando WiX para tu instalador, edita el archivo **Product.wxs** para agregar las dos propiedades de acceso directo al menú Inicio como se muestra a continuación. Asegúrate de que tu GUID del paso n.º 4 esté incluido entre `{}` como se ve a continuación.
 
-**Product.wxs**
+**Producto. WXS**
 
 ```xml
 <Shortcut Id="ApplicationStartMenuShortcut" Name="Wix Sample" Description="Wix Sample" Target="[INSTALLFOLDER]WixSample.exe" WorkingDirectory="INSTALLFOLDER">
@@ -165,7 +165,7 @@ Si estás usando WiX para tu instalador, edita el archivo **Product.wxs** para a
 > Para usar notificaciones realmente, debes instalar tu aplicación mediante el instalador una vez antes de la depuración normalmente para que el acceso directo de Inicio con tus AUMID y CLSID estén presentes. Después de que el acceso directo de Inicio esté presente, puedes depurar con F5 desde Visual Studio.
 
 
-#### <a name="step-52-register-aumid-and-com-server"></a>Paso 5.2: Registrar servidor AUMID y COM
+#### <a name="step-52-register-aumid-and-com-server"></a>Paso 5.2: Registrar servidor COM y AUMID
 
 A continuación, con independencia de su instalador, en el código de inicio de tu aplicación (antes de llamar a cualquier API de notificación), llama al método **RegisterAumidAndComServer**, especificando la clase de activador de notificación del paso n.º 4 y tu AUMID utilizada anteriormente.
 
@@ -179,7 +179,7 @@ Si admites tanto el Puente de dispositivo de escritorio como Win32 clásico, pue
 Este método te permite llamar a las API de compatibilidad para enviar y administrar notificaciones sin tener que proporcionar constantemente tu AUMID. E inserta la clave del Registro de LocalServer32 para el servidor COM.
 
 
-## <a name="step-6-register-com-activator"></a>Paso 6: Registrar el activador de COM
+## <a name="step-6-register-com-activator"></a>Paso 6: Registrar el activador COM
 
 Tanto para el Puente de dispositivo de escritorio como para las aplicaciones de Win32 clásicas, debes registrar tu tipo de activador de notificación, por lo que puedes controlar las activaciones de notificación del sistema.
 
@@ -375,7 +375,7 @@ Si tu aplicación no se está ejecutando:
 Para aplicaciones de escritorio, la activación en primer plano y en segundo plano se controla de forma idéntica: se llama a tu activador de COM. Depende del código de tu aplicación decidir si se mostrará una ventana o simplemente se realizará algún trabajo y después se saldrá. Por lo tanto, al especificar un **activationType** **en segundo plano** en el contenido de la notificación del sistema no se cambia el comportamiento.
 
 
-## <a name="step-9-remove-and-manage-notifications"></a>Paso 9: Quitar y administrar las notificaciones
+## <a name="step-9-remove-and-manage-notifications"></a>Paso 9: Quitar y administrar notificaciones
 
 El proceso de quitar y administrar notificaciones es idéntico a las aplicaciones para UWP. Sin embargo, se recomienda usar nuestra biblioteca de compatibilidad para obtener un valor de **DesktopNotificationHistoryCompat** de manera que no tenga que preocuparse de proporcionar el AUMID si estás usando Win32 clásico.
 
@@ -416,13 +416,13 @@ Si recibes muchos errores de compilación de `unresolved external symbol`, es pr
 
 Si admite Windows 8.1 o una versión inferior, querrás comprobar en tiempo de ejecución si estás ejecutando en Windows 10 antes de llamar a cualquier API de **DesktopNotificationManagerCompat** o enviar notificaciones del sistema ToastGeneric.
 
-Windows 8 introdujo notificaciones del sistema, pero usó las [plantillas de notificación del sistema heredadas](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh761494(v=win.10)), como ToastText01. La activación se controlaba mediante el evento **Activated** en la memoria de la clase **ToastNotification** puesto que las notificaciones del sistema eran solo elementos emergentes breves que no se conservaban. Windows 10 introdujo [notificaciones del sistema ToastGeneric interactivas](adaptive-interactive-toasts.md) y también introdujo el Centro de actividades donde las notificaciones se conservan durante varios días. La introducción del Centro de actividades requirió la introducción de un activador COM, para que la notificación del sistema se pueda activar días después de crearla.
+Windows 8 introdujo notificaciones del sistema, pero usó las [plantillas de notificación del sistema heredadas](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10)), como ToastText01. La activación se controlaba mediante el evento **Activated** en la memoria de la clase **ToastNotification** puesto que las notificaciones del sistema eran solo elementos emergentes breves que no se conservaban. Windows 10 introdujo [notificaciones del sistema ToastGeneric interactivas](adaptive-interactive-toasts.md) y también introdujo el Centro de actividades donde las notificaciones se conservan durante varios días. La introducción del Centro de actividades requirió la introducción de un activador COM, para que la notificación del sistema se pueda activar días después de crearla.
 
 | Sistema operativo | ToastGeneric | Activador COM | Plantillas de notificación del sistema heredadas |
 | -- | ------------ | ------------- | ---------------------- |
-| Windows 10 | Se admite | Se admite | Compatible (pero no activará el servidor COM) |
-| Windows 8.1/8 | N/D | N/D | Se admite |
-| Windows 7 y versiones inferiores | N/D | N/D | N/D |
+| 10 de Windows | Se admite | Se admite | Compatible (pero no activará el servidor COM) |
+| Windows 8.1/8 | N/A | N/A | Se admite |
+| Windows 7 y versiones inferiores | N/A | N/A | N/A |
 
 Para comprobar si estás ejecutando en Windows 10, incluye el encabezado `<VersionHelpers.h>` y comprueba el método **IsWindows10OrGreater**. Si esto devuelve true, continúa llamando a todos los métodos descritos en esta documentación. 
 
@@ -438,11 +438,11 @@ if (IsWindows10OrGreater())
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-**PROBLEMA CORREGIDO: Aplicación no reciba el foco al hacer clic en la notificación del sistema**: En las compilaciones 15063 y versiones anteriores, derechos de primer plano no se transfieren a la aplicación cuando se activa el servidor COM. Por tanto, tu aplicación simplemente parpadeará al intentar moverla al primer plano. No había ninguna solución para este problema. Corregimos esto en las compilaciones 16299 y posteriores.
+**CORREGIDO: Las aplicación no obtiene el foco tras hacer clic en la notificación del sistema**: en la compilación 15063 y anteriores, los derechos de primer plano no se transfirieron a tu aplicación cuando activamos el servidor COM. Por tanto, tu aplicación simplemente parpadeará al intentar moverla al primer plano. No había ninguna solución para este problema. Corregimos esto en las compilaciones 16299 y posteriores.
 
 
 ## <a name="resources"></a>Recursos
 
 * [Ejemplo de código completo en GitHub](https://github.com/WindowsNotifications/desktop-toasts)
-* [Notificaciones del sistema de las aplicaciones de escritorio](toast-desktop-apps.md)
-* [Documentación de contenido de notificación del sistema](adaptive-interactive-toasts.md)
+* [Notificaciones del sistema de aplicaciones de escritorio](toast-desktop-apps.md)
+* [Documentación del contenido del sistema](adaptive-interactive-toasts.md)

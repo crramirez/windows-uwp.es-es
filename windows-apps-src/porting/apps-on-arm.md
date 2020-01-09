@@ -5,12 +5,12 @@ ms.date: 02/15/2018
 ms.topic: article
 keywords: windows 10 s, always connected, siempre conectado ARM, ARM64, x86 emulation, emulación x86
 ms.localizationpriority: medium
-ms.openlocfilehash: 7450b469f77fec4288ad6dff01ee7673affc8dd9
-ms.sourcegitcommit: f3c1a81b50f4a372a15996ac71b3f408a8ee1409
+ms.openlocfilehash: 004b2410ab050ca32ec6219b2d9a6ba0d45a6ebb
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72237532"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683928"
 ---
 # <a name="windows-10-on-arm"></a>Windows 10 en ARM
 Originalmente Windows 10 (a diferencia de Windows 10 Mobile) podría ejecutarse únicamente en equipos equipados con procesadores x86 y x64. Ahora, el escritorio de Windows 10 puede ejecutarse en equipos con tecnología de procesadores ARM64 con la actualización de Fall Creators o versiones más recientes. La naturaleza de ahorro de energía de la arquitectura de CPU ARM permite a estos equipos tener una batería que dura todo el día y compatibilidad con redes de datos móviles. Estos equipos proporcionarán una gran compatibilidad de aplicaciones excelentes y permiten ejecutar tus aplicaciones win32 x86 existentes sin modificarse. Para obtener más información o una demostración, consulte el [vídeo de Channel 9 para el equipo conectado siempre](https://channel9.msdn.com/Events/Build/2017/P4171).
@@ -26,7 +26,7 @@ Las experiencias integradas de Windows 10 como Edge, Cortana, menú Inicio y exp
 Windows 10 en ARM ejecuta todas las [aplicaciones de UWP](../get-started/universal-application-platform-guide.md) x86, ARM32 y ARM64 desde el Microsoft Store. Las aplicaciones ARM32 y ARM64 se ejecutan de forma nativa sin ninguna emulación, mientras que las aplicaciones x86 se ejecutan en la emulación. Si eres un desarrollador UWP, asegúrate de enviar un paquete ARM para tu aplicación ya que proporcionará la mejor experiencia de usuario para el dispositivo. Paras más información, consulta [Arquitecturas de paquete de aplicación](/windows/msix/package/device-architecture).
 
 >[!NOTE]
-> Para compilar la aplicación de UWP de manera nativa como destino de la plataforma ARM64, debe tener Visual Studio 2017 versión 15,9 o posterior, o Visual Studio 2019. Para obtener más información, vea [esta entrada de blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
+> Para compilar la aplicación de UWP de manera nativa como destino de la plataforma ARM64, debe tener Visual Studio 2017 versión 15,9 o posterior, o Visual Studio 2019. Para más información, vea [esta entrada de blog](https://blogs.windows.com/buildingapps/2018/11/15/official-support-for-windows-10-on-arm-development).
 
 
 >[!IMPORTANT]
@@ -46,5 +46,5 @@ Además de las aplicaciones para UWP, Windows 10 en ARM también puede ejecutar 
 ## <a name="related-topics"></a>Temas relacionados
 |Tema | Descripción |
 |-----|-----|
-|[Compilar controladores de ARM64 con el WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers)|Instrucciones para compilar un controlador ARM64. |
-| [Depuración de aplicaciones x86 en ARM](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-arm64) | Instrucciones para la depuración de aplicaciones x86 en ARM. |
+|[Compilar controladores de ARM64 con el WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers)|Instrucciones para compilar un controlador ARM64. |
+| [Depuración de aplicaciones x86 en ARM](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugging-arm64) | Instrucciones para la depuración de aplicaciones x86 en ARM. |

@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d36368fab267370e2301e52731d99bc7b146fbd
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: fd33720255a04ffd8669673f027973afb4369086
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258245"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684208"
 ---
 # <a name="speech-interactions"></a>Interacciones de voz
 
@@ -24,7 +24,7 @@ Integra el reconocimiento de voz y texto a voz (también denominado TTS o sínte
 **TTS** TTS usa un motor de síntesis de voz (voz) para convertir una cadena de texto en palabras habladas. La cadena de entrada puede ser texto básico y sin adornos o Lenguaje de marcado de síntesis de voz (SSML) más complejo. SSML proporciona una forma estándar de controlar características de la salida de voz, como la pronunciación, el volumen, el tono, la velocidad o el énfasis.
 
 **Otros componentes relacionados con la voz:** 
-**Cortana** en las aplicaciones Windows usa comandos de voz personalizados (hablados o escritos) para lanzar la aplicación en primer plano (la aplicación toma el foco, como si se iniciara desde el menú Inicio) o activarla como un servicio en segundo plano (**Cortana** conserva el foco, pero proporciona los resultados de la aplicación). Consulta las [Directrices para el comando de voz (VCD) de Cortana](https://docs.microsoft.com/en-us/cortana/voice-commands/vcd) si expones la funcionalidad de la aplicación en la interfaz de usuario de **Cortana**.
+**Cortana** en las aplicaciones Windows usa comandos de voz personalizados (hablados o escritos) para lanzar la aplicación en primer plano (la aplicación toma el foco, como si se iniciara desde el menú Inicio) o activarla como un servicio en segundo plano (**Cortana** conserva el foco, pero proporciona los resultados de la aplicación). Consulta las [Directrices para el comando de voz (VCD) de Cortana](https://docs.microsoft.com/cortana/voice-commands/vcd) si expones la funcionalidad de la aplicación en la interfaz de usuario de **Cortana**.
 
 ## <a name="speech-interaction-design"></a>Diseño de la interacción mediante voz
 

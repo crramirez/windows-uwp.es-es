@@ -6,15 +6,15 @@ ms.date: 04/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a680347e9d1a749cc6e1d86ef1f02da280b4b74
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c6c5832b479fedc8d2f14e53cdbaccf179358c4d
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361781"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683898"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a>Detectar y responder a cambios de estado de audio
-A partir de Windows 10, versión 1803, la aplicación puede detectar cuándo el sistema reduce o silencia el nivel de audio de una secuencia de audio que tu aplicación está usando. Puedes recibir notificaciones para capturar y representar secuencias, para una categoría de audio y dispositivo de audio concretos, o para un objeto [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) que tu aplicación está usando para la reproducción multimedia. Por ejemplo, el sistema puede reducir, o atenuar, el nivel de reproducción de audio cuando suena una alarma. El sistema silenciará la aplicación cuando pasa al segundo plano si la aplicación no ha declarado la funcionalidad *backgroundMediaPlayback* en el manifiesto de la aplicación. 
+A partir de Windows 10, versión 1803, la aplicación puede detectar cuándo el sistema reduce o silencia el nivel de audio de una secuencia de audio que tu aplicación está usando. Puedes recibir notificaciones para capturar y representar secuencias, para una categoría de audio y dispositivo de audio concretos, o para un objeto [**MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer) que tu aplicación está usando para la reproducción multimedia. Por ejemplo, el sistema puede reducir, o atenuar, el nivel de reproducción de audio cuando suena una alarma. El sistema silenciará la aplicación cuando pasa al segundo plano si la aplicación no ha declarado la funcionalidad *backgroundMediaPlayback* en el manifiesto de la aplicación. 
 
 El patrón para controlar los cambios de estado de audio es el mismo para todas las secuencias de audio compatibles. En primer lugar, crea una instancia de la clase [**AudioStateMonitor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor). En el siguiente ejemplo, la aplicación está usando la clase [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) para capturar audio para el chat de juego. Se llama a un método de fábrica para obtener un monitor de estado de audio asociado a la secuencia de captura de audio del juego de chat del dispositivo de comunicaciones predeterminado.  A continuación, se registra un controlador para el evento [**SoundLevelChanged**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged), que se generará cuando el sistema cambie el nivel de audio de la secuencia asociada.
 
@@ -22,7 +22,7 @@ El patrón para controlar los cambios de estado de audio es el mismo para todas 
 
 [!code-cs[SoundLevelDeviceIdCategory](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetSoundLevelDeviceIdCategory)]
 
-En el **SoundLevelChanged** controlador de eventos, compruebe el [ **SoundLevel** ](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevel) propiedad de la **AudioStateMonitor** remitente pasa a la controlador para determinar cuál es el nuevo nivel de audio para el flujo. En este ejemplo, la aplicación detiene la captura de audio cuando el nivel de sonido se silencia y reanuda la captura cuando el nivel de audio vuelve al volumen completo.
+En el controlador de eventos **SoundLevelChanged** , Compruebe la propiedad [**SoundLevel**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevel) del remitente **AudioStateMonitor** pasado en el controlador para determinar cuál es el nuevo nivel de audio de la secuencia. En este ejemplo, la aplicación detiene la captura de audio cuando el nivel de sonido se silencia y reanuda la captura cuando el nivel de audio vuelve al volumen completo.
 
 [!code-cs[GameChatSoundLevelChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetGameChatSoundLevelChanged)]
 

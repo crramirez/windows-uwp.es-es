@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 41f1c19f62482dc28bc067adb2e60b2c6fafa509
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 1c106df0efc7952895f882ec5c05cc1af52bcfac
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061895"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683503"
 ---
 # <a name="my-people-notifications"></a>Notificaciones de Mis allegados
 
@@ -20,8 +20,8 @@ Las notificaciones de Mis allegados proporcionan una nueva forma para que los us
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 y Microsoft Visual Studio 2019. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++ Windows 10 y Microsoft Visual Studio 2019. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/windows/uwp/get-started/get-set-up).
++ Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="how-it-works"></a>Cómo funciona
 
@@ -49,7 +49,7 @@ Esto indica que la notificación del sistema debe tratarse como una notificació
 
 El nodo de la imagen del interior del enlace debe incluir los siguientes parámetros:
 
-+ **diez**
++ **src**
     + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local.
 + **spritesheet: src**
     + La URI del activo. Esta puede ser una URI de web HTTP/HTTPS, una URI msappx o una ruta de acceso a un archivo local. Solo es necesaria para animaciones de spritesheet.
@@ -59,7 +59,7 @@ El nodo de la imagen del interior del enlace debe incluir los siguientes paráme
     + Fotogramas por segundo (FPS). Solo es necesaria para animaciones de spritesheet. Solo se admiten los valores 1-120.
 + **spritesheet-startingFrame**
     + Número de fotogramas para comenzar la animación. Solo se usa para animaciones de spritesheet y, de no facilitarse, su valor predeterminado es 0.
-+ **alternativa**
++ **alt**
     + Cadena de texto que se usa para la narración del lector de pantalla.
 
 > [!NOTE]
@@ -75,7 +75,7 @@ Además, el nodo del sistema de nivel superior debe incluir el parámetro **hint
     + P. ej. remoteid:1234
 
 > [!NOTE]
-> Si tu aplicación utiliza las [API ContactStore](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) y la propiedad [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para vincular contactos almacenados en el PC con contactos almacenados de forma remota, es esencial que el valor de la propiedad RemoteId sea único y estable. Esto significa que el identificador remoto debe identificar de forma consistente una sola cuenta de usuario y debería contener una etiqueta única que no entre en conflicto con los identificadores remotos de otros contactos del PC, incluidos los contactos propiedad de otras aplicaciones.
+> Si tu aplicación utiliza las [API ContactStore](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactstore) y la propiedad [StoredContact.RemoteId](https://docs.microsoft.com/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para vincular contactos almacenados en el PC con contactos almacenados de forma remota, es esencial que el valor de la propiedad RemoteId sea único y estable. Esto significa que el identificador remoto debe identificar de forma consistente una sola cuenta de usuario y debería contener una etiqueta única que no entre en conflicto con los identificadores remotos de otros contactos del PC, incluidos los contactos propiedad de otras aplicaciones.
 > Si no se garantiza que los identificadores remotos utilizados por tu aplicación sean únicos y estables, puedes utilizar la [clase RemoteIdHelper](https://docs.microsoft.com/previous-versions/windows/apps/jj207024(v=vs.105)#BKMK_UsingtheRemoteIdHelperclass) para agregar una etiqueta única a todos tus identificadores remotos antes de agregarlos al sistema. O puedes decidir no utilizar en absoluto la propiedad RemoteId y en su lugar crear una propiedad personalizada extendida en la que almacenar los identificadores remotos de tus contactos.
 
 Además del segundo enlace y la carga, debes incluir otra carga en el primer enlace para la notificación del sistema reserva. La notificación usará esto si se fuerza a revertir a una notificación del sistema normal (explicado detalladamente al [final de este artículo](/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast)).
@@ -93,7 +93,7 @@ Este es un ejemplo de cómo crear una notificación de Mis allegados con una car
             <text>Add your fallback toast content here</text>
         </binding>
         <binding template="ToastGeneric" experienceType="shoulderTap">
-            <image src="https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png"/>
+            <image src="https://docs.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png"/>
         </binding>
     </visual>
 </toast>
@@ -113,8 +113,8 @@ Este es un ejemplo de cómo crear una notificación con una carga spritesheet an
             <text>Add your fallback toast content here</text>
         </binding>
         <binding template="ToastGeneric" experienceType="shoulderTap">
-            <image src="https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/images/shoulder-tap-pizza-static.png"
-                spritesheet-src="https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/images/shoulder-tap-pizza-spritesheet.png"
+            <image src="https://docs.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-pizza-static.png"
+                spritesheet-src="https://docs.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-pizza-spritesheet.png"
                 spritesheet-height='80' spritesheet-fps='25' spritesheet-startingFrame='15'/>
         </binding>
     </visual>
@@ -154,4 +154,4 @@ Si una notificación de Mis allegados vuelve a ser notificación del sistema, se
 + [Ejemplo de notificaciones de mis personas](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
 + [Incorporación de compatibilidad con mis personas](my-people-support.md)
 + [Notificaciones del sistema adaptables](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
-+ [Clase ToastNotification](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification)
++ [Clase ToastNotification](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastnotification)

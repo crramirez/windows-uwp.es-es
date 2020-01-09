@@ -5,18 +5,18 @@ ms.date: 02/15/2018
 ms.topic: article
 keywords: windows 10 s, always connected, siempre conectado, limitations, limitaciones, windows 10 on ARM, windows 10 en ARM
 ms.localizationpriority: medium
-redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
-ms.openlocfilehash: a0765f8b7b250949146c4ed6f374bb5b6f7ae8bb
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+redirect_url: https://docs.microsoft.com/windows/uwp/porting/apps-on-arm-troubleshooting-x86
+ms.openlocfilehash: e9bbef6f9b714b99148cf4ac082f98b4422f23b2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682757"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683968"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>Limitaciones de aplicaciones y experiencias en ARM
 Windows 10 en ARM tiene las siguientes limitaciones necesarias:
 
-- **Solo se admiten controladores ARM64**. Al igual que con todas las arquitecturas, los controladores modo kernel, los controladores [Marco de controlador de modo usuario (UMDF)](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/overview-of-the-umdf) y los controladores de impresión deben compilarse para que coincidan con la arquitectura del sistema operativo. Mientras el sistema operativo de ARM tiene las funcionalidades para emular aplicaciones de modo usuario x86, los controladores implementados para otras arquitecturas (como x64 o x86) actualmente no se emulan y, por consiguiente, no se admiten en esta plataforma. Cualquier aplicación que funcione con su propio controlador personalizado debe migrarse a ARM64. En escenarios limitados, la aplicación se puede ejecutar como x86 en emulación, pero la parte del controlador de la aplicación debe migrarse a ARM64. Para obtener más información sobre la compilación del controlador para ARM64, consulta [Compilar controladores de ARM64 con el WDK](/windows-hardware/drivers/develop/building-arm64-drivers).
+- **Solo se admiten controladores ARM64**. Al igual que con todas las arquitecturas, los controladores modo kernel, los controladores [Marco de controlador de modo usuario (UMDF)](https://docs.microsoft.com/windows-hardware/drivers/wdf/overview-of-the-umdf) y los controladores de impresión deben compilarse para que coincidan con la arquitectura del sistema operativo. Mientras el sistema operativo de ARM tiene las funcionalidades para emular aplicaciones de modo usuario x86, los controladores implementados para otras arquitecturas (como x64 o x86) actualmente no se emulan y, por consiguiente, no se admiten en esta plataforma. Cualquier aplicación que funcione con su propio controlador personalizado debe migrarse a ARM64. En escenarios limitados, la aplicación se puede ejecutar como x86 en emulación, pero la parte del controlador de la aplicación debe migrarse a ARM64. Para obtener más información sobre la compilación del controlador para ARM64, consulta [Compilar controladores de ARM64 con el WDK](/windows-hardware/drivers/develop/building-arm64-drivers).
 
 - **Las aplicaciones x64 no se admiten**. Windows 10 en ARM no admite la emulación de aplicaciones x64.
 
@@ -32,7 +32,7 @@ La siguiente tabla enumera algunos problemas comunes y ofrece sugerencias sobre 
 
 |Problema|Solución|
 |-----|--------|
-| La aplicación se basa en un controlador que no está diseñado para ARM. | Volver a compilar el controlador x86 para ARM64. Consulta [Compilar controladores de ARM64 con el WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/develop/building-arm64-drivers). |
+| La aplicación se basa en un controlador que no está diseñado para ARM. | Volver a compilar el controlador x86 para ARM64. Consulta [Compilar controladores de ARM64 con el WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers). |
 | La aplicación solo está disponible para x64. | Si desarrollas para Microsoft Store, envía una versión ARM de tu aplicación. Consulta [Arquitecturas de paquete de aplicación](/windows/msix/package/device-architecture) para más información. Si eres un desarrollador de Win32, distribuye una versión x86 de la aplicación. |
 | La aplicación usa una versión de OpenGL posterior a 1.1 o requiere OpenGL acelerado por hardware. | Las aplicaciones x86 que usan DirectX 9, DirectX 10, DirectX 11 y DirectX 12 funcionarán en ARM. Para obtener más información, consulta [Juegos y gráficos DirectX](https://docs.microsoft.com/windows/desktop/directx). |
 | Tu aplicación x86 no funciona como esperabas. | Prueba a usar el Solucionador de problemas de compatibilidad siguiendo las instrucciones del [Solucionador de problemas de compatibilidad de programas en ARM](apps-on-arm-program-compat-troubleshooter.md). Para otros pasos de solución de problemas, consulta el artículo [Solución de problemas de aplicaciones x86 en ARM](apps-on-arm-troubleshooting-x86.md). |

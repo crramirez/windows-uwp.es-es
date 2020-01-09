@@ -1,6 +1,6 @@
 ---
 description: En este tutorial se muestra cómo agregar interfaces de usuario XAML de UWP, crear paquetes de MSIX e incorporar otros componentes modernos en la aplicación WPF.
-title: 'Tutorial: Modernización de una aplicación WPF'
+title: 'Tutorial: modernizar una aplicación de WPF'
 ms.topic: article
 ms.date: 06/27/2019
 ms.author: mcleans
@@ -8,14 +8,14 @@ author: mcleanbyron
 keywords: Windows 10, UWP, Windows Forms, WPF, Islas XAML
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 3e78bd81531750ac419c5ca3628e72a3e8505038
-ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
+ms.openlocfilehash: de84cbb2e1927d9426eefaaf7b0d70d604427da1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71317082"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683818"
 ---
-# <a name="tutorial-modernize-a-wpf-app"></a>Tutorial: Modernización de una aplicación WPF 
+# <a name="tutorial-modernize-a-wpf-app"></a>Tutorial: modernizar una aplicación de WPF 
 
 Hay muchas maneras de [modernizar](index.md) las aplicaciones de escritorio existentes mediante la integración de las características de Windows más recientes en el código fuente existente en lugar de volver a escribir las aplicaciones desde el principio. En este tutorial exploraremos varias maneras de modernizar una aplicación de línea de negocio de WPF existente con estas características:
 
@@ -30,7 +30,7 @@ En este tutorial se requieren los siguientes conocimientos de desarrollo:
 * Conocimientos básicos de C# y XAML.
 * Conocimientos básicos de UWP.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 En este tutorial se proporciona el código para una sencilla aplicación de línea de negocio de WPF denominada gastos de contoso. En el escenario ficticio del tutorial, contoso Reports es una aplicación interna que usan los administradores de Contoso Corporation para realizar un seguimiento de los gastos enviados por sus informes. Ahora los administradores están equipados con dispositivos táctiles y les gustaría usar la aplicación de gastos de Contoso sin un mouse o un teclado. Desafortunadamente, la versión actual de la aplicación no es táctil.
 
@@ -56,7 +56,7 @@ En el tutorial, mejorará los gastos de Contoso con nuevas características de W
 Para realizar este tutorial, el equipo de desarrollo debe tener instalados estos requisitos previos:
 
 * Windows 10, versión 1903 (compilación 18362) o una versión posterior.
-* [Visual Studio 2019](https://www.visualstudio.com).
+* [Visual Studio 2019](https://www.visualstudio.com).
 * [SDK de .net Core 3](https://dotnet.microsoft.com/download/dotnet-core/3.0) (Instale la versión más reciente).
 
 Asegúrese de instalar las siguientes cargas de trabajo y características opcionales con Visual Studio 2019:
@@ -70,19 +70,19 @@ Asegúrese de instalar las siguientes cargas de trabajo y características opcio
 Antes de comenzar el tutorial, descargue el código fuente de la aplicación de gastos de Contoso y asegúrese de que puede compilar el código en Visual Studio.
 
 1. Descargue el código fuente de la aplicación en la pestaña **releases** del [repositorio de AppConsult WinAppsModernization Workshop](https://github.com/Microsoft/AppConsult-WinAppsModernizationWorkshop). El vínculo directo es [https://aka.ms/wamwc](https://aka.ms/wamwc).
-2. Abra el archivo zip y extraiga todo el contenido en la raíz de la unidad **C\\ :** . Se creará una carpeta denominada **C:\WinAppsModernizationWorkshop**.
+2. Abra el archivo zip y extraiga todo el contenido en la raíz de la unidad **C:\\** . Se creará una carpeta denominada **C:\WinAppsModernizationWorkshop**.
 3. Abra Visual Studio 2019 y haga doble clic en el archivo **C:\WinAppsModernizationWorkshop\Lab\Exercise1\01-Start\ContosoExpenses\ContosoExpenses.sln** para abrir la solución.
 4. Compruebe que puede compilar, ejecutar y depurar el proyecto de WPF de gastos de Contoso presionando el botón **Inicio** o Ctrl + F5.
 
-## <a name="get-started"></a>Comenzar
+## <a name="get-started"></a>Introducción
 
 Una vez que tenga el código fuente de la aplicación de ejemplo de gastos de Contoso y pueda confirmar que puede compilarlo en Visual Studio, está listo para iniciar el tutorial:
 
-* [Parte 1: Migración de la aplicación de gastos de Contoso a .NET Core 3](modernize-wpf-tutorial-1.md)
-* [Parte 2: Adición de un control InkCanvas de UWP con islas XAML](modernize-wpf-tutorial-2.md)
-* [Parte 3: Adición de un control CalendarView de UWP con islas XAML](modernize-wpf-tutorial-3.md)
-* [Parte 4: Agregar notificaciones y actividades de usuario de Windows 10](modernize-wpf-tutorial-4.md)
-* [Parte 5: Empaquetar e implementar con MSIX](modernize-wpf-tutorial-5.md)
+* [Parte 1: migración de la aplicación de gastos de Contoso a .NET Core 3](modernize-wpf-tutorial-1.md)
+* [Parte 2: adición de un control InkCanvas de UWP con islas XAML](modernize-wpf-tutorial-2.md)
+* [Parte 3: adición de un control CalendarView de UWP con islas XAML](modernize-wpf-tutorial-3.md)
+* [Parte 4: incorporación de notificaciones y actividades de usuario de Windows 10](modernize-wpf-tutorial-4.md)
+* [Parte 5: empaquetar e implementar con MSIX](modernize-wpf-tutorial-5.md)
 
 ## <a name="important-concepts"></a>Conceptos importantes
 
@@ -98,9 +98,9 @@ En adelante, la mayoría de las nuevas características de Windows 10 se exponen
 
 ### <a name="msix-packaging"></a>Empaquetado de MSIX
 
-[MSIX](http://aka.ms/msix) (anteriormente conocido como AppX) es el modelo de empaquetado moderno para aplicaciones de Windows. MSIX admite aplicaciones para UWP, así como aplicaciones de escritorio que se compilan mediante tecnologías como Win32, WPF, Windows Forms, Java, electrones, etc. Al empaquetar una aplicación de escritorio en un paquete de MSIX, puede publicar la aplicación en el Microsoft Store. La aplicación de escritorio también obtiene la identidad del paquete cuando se instala, lo que permite a la aplicación de escritorio usar un conjunto más amplio de API de WinRT.
+[MSIX](/windows/msix/) (anteriormente conocido como appx) es el modelo de empaquetado moderno para aplicaciones de Windows. MSIX admite aplicaciones para UWP, así como aplicaciones de escritorio que se compilan mediante tecnologías como Win32, WPF, Windows Forms, Java, electrones, etc. Al empaquetar una aplicación de escritorio en un paquete de MSIX, puede publicar la aplicación en el Microsoft Store. La aplicación de escritorio también obtiene la identidad del paquete cuando se instala, lo que permite a la aplicación de escritorio usar un conjunto más amplio de API de WinRT.
 
-Para obtener más información, consulte estos artículos:
+Para más información, consulte estos artículos:
 
 * [Empaquetar aplicaciones de escritorio](/windows/uwp/porting/desktop-to-uwp-root)
 * [En segundo plano de la aplicación de escritorio empaquetada](/windows/uwp/porting/desktop-to-uwp-behind-the-scenes)
@@ -111,7 +111,7 @@ A partir de Windows 10, versión 1903, puede hospedar controles de UWP en aplica
 
 Para obtener más información, vea [controles de UWP en aplicaciones de escritorio (Islas XAML)](/windows/uwp/xaml-platform/xaml-host-controls). Este tutorial le guía a través del proceso de uso de dos tipos diferentes de controles de isla XAML:
 
-* El [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) y el [MapControl](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/wpf-winforms/mapcontrol) en el kit de herramientas de la comunidad de Windows. Estos controles de WPF encapsulan la interfaz y la funcionalidad de los controles de UWP correspondientes y se pueden usar como cualquier otro control WPF en el diseñador de Visual Studio.
+* El [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) y el [MapControl](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mapcontrol) en el kit de herramientas de la comunidad de Windows. Estos controles de WPF encapsulan la interfaz y la funcionalidad de los controles de UWP correspondientes y se pueden usar como cualquier otro control WPF en el diseñador de Visual Studio.
 
 * Control de [vista de calendario](/windows/uwp/design/controls-and-patterns/calendar-view) de UWP. Se trata de un control estándar de UWP que se hospedará con el control [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) en el kit de herramientas de la comunidad de Windows.
 
@@ -121,9 +121,9 @@ Para obtener más información, vea [controles de UWP en aplicaciones de escrito
 
 A través de sus primeras versiones, el enfoque de .NET Core era para admitir aplicaciones web o de back-end. Con .NET Core, puede crear fácilmente aplicaciones web escalables o API que se pueden hospedar en Windows, Linux o en arquitecturas de microservicios como contenedores de Docker.
 
-.NET Core 3 es la versión más reciente de .NET Core. El resaltado de esta versión es la compatibilidad con las aplicaciones de escritorio de Windows, incluidas las aplicaciones de Windows Forms y WPF. Puede ejecutar aplicaciones de escritorio de Windows nuevas y existentes en .NET Core 3 y disfrutar de todas las ventajas que ofrece .NET Core. Los controles de UWP que se hospedan en [islas XAML](xaml-islands.md) también se pueden usar en las aplicaciones de Windows Forms y WPF que tienen como destino .NET Core 3.
+.NET Core 3 es la versión más reciente de .NET Core. Lo más destacado de esta versión es la compatibilidad con aplicaciones de escritorio de Windows, incluidas las aplicaciones de Windows Forms y WPF. Puedes ejecutar aplicaciones de escritorio de Windows nuevas y existentes en .NET Core 3 y disfrutar de todas las ventajas que ofrece .NET Core. Los controles de UWP que se hospedan en [islas XAML](xaml-islands.md) también se pueden usar en las aplicaciones de Windows Forms y WPF que tienen como destino .NET Core 3.
 
 > [!NOTE]
 > WPF y Windows Forms no están convirtiéndose en multiplataforma y no se puede ejecutar WPF o Windows Forms en Linux y MacOS. Los componentes de interfaz de usuario de WPF y Windows Forms siguen teniendo una dependencia en el sistema de representación de Windows.
 
-Para obtener más información, vea [novedades de .net Core 3,0](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0).
+Para obtener más información, consulta el tema sobre [novedades de .NET Core 3.0](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0).

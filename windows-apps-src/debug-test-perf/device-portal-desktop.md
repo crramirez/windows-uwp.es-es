@@ -1,21 +1,21 @@
 ---
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Portal de dispositivos para dispositivos de escritorio Windows
-description: Aprende cómo Windows Device Portal abre diagnóstico y automatización en el escritorio de Windows.
+description: Aprende cómo Windows Device Portal abre el diagnóstico y la automatización en el escritorio de Windows.
 ms.date: 02/06/2019
 ms.topic: article
 keywords: Windows 10, UWP, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f25e882f53bb4f673aa5003495f37d553208721
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 73f7e827c0ec8ca289d3523da06601de978a91d2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282005"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681976"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de dispositivos para dispositivos de escritorio Windows
 
-Portal de dispositivos Windows permite ver información de diagnóstico e interactuar con el equipo de escritorio a través de HTTP desde una ventana del navegador. Puedes usar Device Portal para lo siguiente:
+Portal de dispositivos Windows permite ver información de diagnóstico e interactuar con el equipo de escritorio a través de HTTP desde una ventana del navegador. Puedes usar el Portal de dispositivos para lo siguiente:
 - Ver y manipular una lista de procesos en ejecución
 - Instalar, eliminar, iniciar y cerrar aplicaciones
 - Cambiar de perfiles Wi-Fi, ver la intensidad de señal y ver la ipconfig
@@ -35,7 +35,7 @@ A partir de Windows 10, versión 1607, algunas de las características más reci
 
 ### <a name="turn-on-device-portal"></a>Activar el Portal de dispositivos
 
-Puedes habilitar el Portal de dispositivos en la sección **Para desarrolladores** de **Configuración**. Al habilitarlo, también debes crear un nombre de usuario y una contraseña para correspondientes. No uses tu cuenta de Microsoft u otras credenciales de Windows. 
+Puedes habilitar el Portal de dispositivos en la sección **Para desarrolladores** de **Configuración**. Al habilitarlo, también debes crear un nombre de usuario y una contraseña para correspondientes. No uses tu cuenta de Microsoft ni otras credenciales de Windows. 
 
 ![Sección Portal de dispositivos de la aplicación Configuración](images/device-portal/device-portal-desk-settings.png) 
 
@@ -64,11 +64,11 @@ El Portal de dispositivos en un dispositivo de escritorio Windows proporciona el
 - Rendimiento
 - Depuración
 - Seguimiento de eventos para Windows (ETW)
-- Seguimiento del rendimiento
+- Seguimiento de rendimiento
 - Administrador de dispositivos
-- Funciones de red
+- Funciones de red de
 - Datos de bloqueos
-- Características
+- Funciones
 - Realidad mixta
 - Depurador de instalación en streaming
 - Ubicación
@@ -78,12 +78,12 @@ El Portal de dispositivos en un dispositivo de escritorio Windows proporciona el
 
 ### <a name="registry-based-configuration-for-device-portal"></a>Configuración basada en el Registro para el Portal de dispositivos
 
-Si quieres seleccionar los números de puerto para Device Portal (como 80 y 443), puedes establecer las siguientes claves de registro:
+Si quieres seleccionar los números de puerto para el Portal de dispositivos (como 80 y 443), puedes establecer las siguientes regkeys:
 
 - En `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service`
     - `UseDynamicPorts`: un valor DWORD obligatorio. Establécelo en 0 para conservar los números de puerto que hayas elegido.
-    - `HttpPort`: un valor DWORD obligatorio. Contiene el número de puerto que escuchará Device Portal para las conexiones HTTP.    
-    - `HttpsPort`: un valor DWORD obligatorio. Contiene el número de puerto que escuchará Device Portal para las conexiones HTTPS.
+    - `HttpPort`: un valor DWORD obligatorio. Contiene el número de puerto que escuchará el Portal de dispositivos para las conexiones HTTP activadas.    
+    - `HttpsPort`: un valor DWORD obligatorio. Contiene el número de puerto que escuchará el Portal de dispositivos para las conexiones HTTPS activadas.
     
 En la misma ruta de acceso de regkey, también puedes desactivar el requisito de autenticación:
 - `UseDefaultAuthorizer` - `0` para deshabilitar `1` para habilitado.  
@@ -103,7 +103,7 @@ Desde un símbolo del sistema administrativo, puede habilitar y configurar compo
     - Esto te permite instalar tu propio certificado SSL para corregir la página de advertencia de SSL que se ve normalmente en el Portal de dispositivos. 
 - `-Debug <various options for authentication, port selection, and tracing level>`
     - Ejecuta una versión independiente del Portal de dispositivos con una configuración específica y mensajes de depuración visibles. Esto resulta muy útil para crear un [complemento empaquetado](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-plugin). 
-    - Consulta el [artículo de MSDN Magazine](https://msdn.microsoft.com/en-us/magazine/mt826332.aspx) para obtener más información acerca de cómo se ejecutar esto como un sistema con el fin de probar completamente el complemento empaquetado.
+    - Consulta el [artículo de MSDN Magazine](https://msdn.microsoft.com/magazine/mt826332.aspx) para obtener más información acerca de cómo se ejecutar esto como un sistema con el fin de probar completamente el complemento empaquetado.
 
 ## <a name="common-errors-and-issues"></a>Errores comunes y problemas
 
@@ -129,7 +129,7 @@ Puede obtener este error si los paquetes para desarrolladores no están instalad
 
 Puede recibir este error si está en una conexión a Internet de uso medido. No podrá descargar los paquetes para desarrolladores en una conexión de uso medido.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 * [Información general de Windows Device portal](device-portal.md)
 * [Referencia de API principal del portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

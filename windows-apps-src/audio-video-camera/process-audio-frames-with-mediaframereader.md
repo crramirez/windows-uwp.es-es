@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f8d357dfbceafb6cc366b2880956ab3db231047d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 170452443588399e0257bb49f3c63604bc0a7830
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74256662"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683888"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Procesar tramas de audio con MediaFrameReader
 
@@ -31,7 +31,7 @@ El proceso para adquirir fotogramas de audio es prácticamente igual al de adqui
 1.  En Microsoft Visual Studio, en el **Explorador de soluciones**, abre el diseñador para el manifiesto de la aplicación haciendo doble clic en el elemento **package.appxmanifest**.
 2.  Selecciona la pestaña **Funcionalidades**.
 3.  Selecciona las casillas **Cámara web** y **Micrófono**.
-4.  Para obtener acceso a la biblioteca de imágenes y vídeos, marca las casillas de **Biblioteca de imágenes** y de **Biblioteca de vídeos**.
+4.  Para obtener acceso a la biblioteca de imágenes y vídeos, marca las casillas de **Biblioteca de imágenes** y el cuadro de **Biblioteca de vídeos**.
 
 
 
@@ -72,7 +72,7 @@ Puedes recuperar el [**AudioDeviceController**](https://docs.microsoft.com/uwp/a
 
 [!code-cs[AudioDeviceControllerMute](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetAudioDeviceControllerMute)]
 
-Puedes usar un objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/windows.media.audioframe) para pasar datos de audio capturados por un origen de fotograma multimedia en un [**AudioGraph**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph). Pasa el fotograma en el método [**AddFrame**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.addframe) de un [**AudioFrameInputNode**](https://docs.microsoft.com/en-us/uwp/api/windows.media.audio.audioframeinputnode). Para obtener más información sobre cómo usar gráficos de audio para capturar, procesar y mezclar señales de audio, consulta [Gráficos de Audio](audio-graphs.md).
+Puedes usar un objeto [**AudioFrame**](https://docs.microsoft.com/uwp/api/windows.media.audioframe) para pasar datos de audio capturados por un origen de fotograma multimedia en un [**AudioGraph**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph). Pasa el fotograma en el método [**AddFrame**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.addframe) de un [**AudioFrameInputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode). Para obtener más información sobre cómo usar gráficos de audio para capturar, procesar y mezclar señales de audio, consulta [Gráficos de Audio](audio-graphs.md).
 
 ## <a name="related-topics"></a>Temas relacionados
 
