@@ -6,19 +6,19 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, juegos, entrada, registro, personalizado
 ms.localizationpriority: medium
-ms.openlocfilehash: 30c1f0d8c9fac09d071d158563c964c6a598e073
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: bfce7503efd88a7a05a0471667953e287262bc35
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67714060"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684926"
 ---
 # <a name="registry-data-for-game-controllers"></a>Datos del registro para dispositivos de juego
 
 > [!NOTE]
 > Este tema está destinado a los fabricantes de dispositivos de juego compatibles con Windows 10 y no es de interés para la mayoría de los desarrolladores.
 
-El [espacio de nombres Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input) permite a los proveedores de hardware independientes (IHV) agregar datos al registro del equipo, habilitar sus dispositivos para que aparezcan como [Gamepads](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad), [RacingWheels](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel), [ArcadeSticks](https://docs.microsoft.com/uwp/api/windows.gaming.input.arcadestick), [FlightSticks](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.flightstick) y [UINavigationControllers](https://docs.microsoft.com/uwp/api/windows.gaming.input.uinavigationcontroller), según corresponda. Todos los IHV deberían agregar estos datos para sus controladores compatibles. Al hacer esto, todos los juegos UWP (y los juegos de escritorio que usen la API de WinRT) será compatibles con el dispositivo de juego.
+El [espacio de nombres Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input) permite a los proveedores de hardware independientes (IHV) agregar datos al registro del equipo, habilitar sus dispositivos para que aparezcan como [Gamepads](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad), [RacingWheels](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel), [ArcadeSticks](https://docs.microsoft.com/uwp/api/windows.gaming.input.arcadestick), [FlightSticks](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstick) y [UINavigationControllers](https://docs.microsoft.com/uwp/api/windows.gaming.input.uinavigationcontroller), según corresponda. Todos los IHV deberían agregar estos datos para sus controladores compatibles. Al hacer esto, todos los juegos UWP (y los juegos de escritorio que usen la API de WinRT) será compatibles con el dispositivo de juego.
 
 ## <a name="mapping-scheme"></a>Esquema de asignación
 
@@ -31,19 +31,19 @@ La siguiente tabla explica los valores esperados en la ubicación raíz del disp
 <table>
     <tr>
         <th>Nombre</th>
-        <th>Tipo</th>
-        <th>¿Obligatorio?</th>
-        <th>Info</th>
+        <th>Escribe</th>
+        <th>¿Requerido?</th>
+        <th>Información</th>
     </tr>
     <tr>
         <td>Deshabilitada</td>
         <td>DWORD</td>
         <td>No</td>
         <td>
-            <p>Indica que se debe deshabilitar este dispositivo concreto.</p>
+            <p>Indica que se debe deshabilitar este dispositivo en particular.</p>
             <ul>
-                <li><b>0</b>: Dispositivo no está deshabilitado.</li>
-                <li><b>1</b>: Dispositivo está deshabilitado.</li>
+                <li><b>0</b>: el dispositivo no está deshabilitado.</li>
+                <li><b>1</b>: el dispositivo está deshabilitado.</li>
             </ul>
         </td>
     </tr>
@@ -65,8 +65,8 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
 <table>
     <tr>
         <th>Subclave</th>
-        <th>¿Obligatorio?</th>
-        <th>Info</th>
+        <th>¿Requerido?</th>
+        <th>Información</th>
     </tr>
     <tr>
         <td>Menú</td>
@@ -78,7 +78,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
         <td>Sí</td>
     </tr>
     <tr>
-        <td>A</td>
+        <td>Verás el botón</td>
         <td>Sí</td>
     </tr>
     <tr>
@@ -178,8 +178,8 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
 <table>
     <tr>
         <th>Subclave</th>
-        <th>¿Obligatorio?</th>
-        <th>Info</th>
+        <th>¿Requerido?</th>
+        <th>Información</th>
     </tr>
     <tr>
         <td>PreviousGear</td>
@@ -337,8 +337,8 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
 <table>
     <tr>
         <th>Subclave</th>
-        <th>¿Obligatorio?</th>
-        <th>Info</th>
+        <th>¿Requerido?</th>
+        <th>Información</th>
     </tr>
     <tr>
         <td>Acción 1</td>
@@ -398,8 +398,8 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
 <table>
     <tr>
         <th>Subclave</th>
-        <th>¿Obligatorio?</th>
-        <th>Info</th>
+        <th>¿Requerido?</th>
+        <th>Información</th>
     </tr>
     <tr>
         <td>FirePrimary</td>
@@ -416,7 +416,7 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
         <td rowspan="4" style="vertical-align: middle;">Véase <a href="#axis-mapping">Asignación de ejes</a></td>
     </tr>
     <tr>
-        <td>Rotación alrededor del eje x (pitch)</td>
+        <td>Cabeceo</td>
         <td>Sí</td>
     </tr>
     <tr>
@@ -441,8 +441,8 @@ La siguiente tabla enumera las subclaves necesarias y opcionales en la subclave 
 <table>
     <tr>
         <th>Subclave</th>
-        <th>¿Obligatorio?</th>
-        <th>Info</th>
+        <th>¿Requerido?</th>
+        <th>Información</th>
     </tr>
     <tr>
         <td>Menú</td>
@@ -555,10 +555,10 @@ La siguiente tabla enumera los valores necesarios para asignar un botón. Por ej
 
 <table>
     <tr>
-        <th>`Source`</th>
+        <th>Origen</th>
         <th>Nombre de valor</th>
         <th>Tipo de valor</th>
-        <th>¿Obligatorio?</th>
+        <th>¿Requerido?</th>
         <th>Información de valor</th>
     </tr>
     <tr>
@@ -597,7 +597,7 @@ La siguiente tabla enumera los valores necesarios para asignar un botón. Por ej
         </td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Modificador</td>
+        <td rowspan="3" style="vertical-align: middle;">Cambia</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sí</td>
@@ -635,10 +635,10 @@ La siguiente tabla enumera los valores necesarios para asignar un eje.
 
 <table>
     <tr>
-        <th>`Source`</th>
+        <th>Origen</th>
         <th>Nombre de valor</th>
         <th>Tipo de valor</th>
-        <th>¿Obligatorio?</th>
+        <th>¿Requerido?</th>
         <th>Información de valor</th>
     </tr>
     <tr>
@@ -713,7 +713,7 @@ La siguiente tabla enumera los valores necesarios para asignar un eje.
         <td>Indica que el valor de eje asignado se debe invertir antes de devolverlo.</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Modificador</td>
+        <td rowspan="3" style="vertical-align: middle;">Cambia</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Sí</td>
@@ -806,7 +806,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
 
 <table>
     <tr>
-        <th>`Source`</th>
+        <th>Origen</th>
         <th>Nombre de valor</th>
         <th>Tipo de valor</th>
         <th>Información de valor</th>
@@ -820,7 +820,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
     <tr>
         <td>SwitchKind</td>
         <td>REG_SZ</td>
-        <td><b>TwoWay</b>, <b>FourWay</b>, o <b>EightWay</b>
+        <td><b>TwoWay</b>, <b>FourWay</b>o <b>EightWay</b>
     </tr>
     <tr>
         <td>UpButtonIndex</td>
@@ -898,7 +898,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
         <td>DWORD</td>
     </tr>
     <tr>
-        <td rowspan="3" style="vertical-align: middle;">Modificador</td>
+        <td rowspan="3" style="vertical-align: middle;">Cambia</td>
         <td>SwitchIndex</td>
         <td>DWORD</td>
         <td>Índice en la matriz de conmutadores <b>RawGameController</b>.
@@ -966,7 +966,7 @@ Las posiciones de los conmutadores pueden asignarse desde un conjunto de botones
 
 #### <a name="buttonindex-values"></a>*Valores de ButtonIndex
 
-\*Indexar valores ButtonIndex el **RawGameController**de matriz de botón:
+\*índice de valores ButtonIndex en la matriz de botones del **RawGameController**:
 
 <table>
     <tr>
@@ -1047,7 +1047,7 @@ Estos son valores de asignación estática para diferentes tipos de asignación.
 
 ## <a name="labels"></a>Etiquetas
 
-Las etiquetas deben estar presentes en la clave **Labels**, en la raíz del dispositivo. **Las etiquetas** puede tener 3 subclaves: **Botones**, **ejes**, y **conmutadores**.
+Las etiquetas deben estar presentes en la clave **Labels**, en la raíz del dispositivo. **Labels** puede tener 3 subclaves: **Buttons**, **Axes** y **Switches**.
 
 ### <a name="button-labels"></a>Etiquetas de los botones
 
@@ -1070,7 +1070,7 @@ Las etiquetas deben aparecer en este orden en la clave **Buttons**:
 
 <table>
     <tr>
-        <th>Name</th>
+        <th>Nombre</th>
         <th>Valor (tipo: REG_SZ)</th>
     </tr>
     <tr>
@@ -1117,7 +1117,7 @@ Las etiquetas deben aparecer en este orden en la clave **Buttons**:
 
 ### <a name="axis-labels"></a>Etiquetas de ejes
 
-La clave **Axes** asignará cada una de las posiciones de eje de la matriz de ejes **RawGameController** a una de las etiquetas que se enumeran en [GameControllerButtonLabel Enum](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel), al igual que las con las etiquetas de los botones. Consulta el ejemplo de [Etiquetas de botones](#button-labels).
+La clave **Axes** asignará cada una de las posiciones de eje de la matriz de ejes **RawGameController** a una de las etiquetas que se enumeran en [GameControllerButtonLabel Enum](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel), al igual que las con las etiquetas de los botones. Consulta el ejemplo de [Etiquetas de botones](#button-labels).
 
 ### <a name="switch-labels"></a>Etiquetas de conmutadores
 
@@ -1345,8 +1345,8 @@ Windows Registry Editor Version 5.00
 "Invert" = dword:00000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-* [Windows.Gaming.Input Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input)
-* [Windows.Gaming.Input.Custom Namespace](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
+* [Espacio de nombres Windows. Gaming. Input](https://docs.microsoft.com/uwp/api/windows.gaming.input)
+* [Espacio de nombres Windows. Gaming. Input. Custom](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom)
 * [Archivos INF](https://docs.microsoft.com/windows-hardware/drivers/install/inf-files)

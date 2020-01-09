@@ -1,19 +1,19 @@
 ---
 description: Usa tu Mac actual para desarrollar aplicaciones para Windows.
-title: Configuración de Mac con Windows 10
+title: Configuración del Mac con Windows 10
 ms.assetid: 6D520610-5DE0-476E-A792-AA57E002D309
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 55165e0369c6bda64c19dc384c5c2addf224b8ba
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: b8ff6d6b3b15992f0598bfb371e6bfb1023d6dc1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259119"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685000"
 ---
-# <a name="setting-up-your-mac-with-windows-10"></a>Configuración de Mac con Windows 10
+# <a name="setting-up-your-mac-with-windows-10"></a>Configuración del Mac con Windows 10
 
 
 Usa tu Mac actual para desarrollar aplicaciones para Windows.
@@ -24,7 +24,7 @@ Usa tu Mac actual para desarrollar aplicaciones para Windows.
 
 **Tenga en cuenta**  necesitará una imagen de arranque de Windows 10 en disco o en una unidad flash USB. Si estás suscrito a MSDN, puedes descargar la imagen de instalación desde el Área de descarga para suscriptores de MSDN. Si no es suscriptor, el instalador se puede adquirir en el [Microsoft Store](https://www.microsoft.com/store/apps). También puedes descargarlo desde [esta ubicación](https://www.microsoft.com/software-download/windows10), lo que resulta útil si ya ejecutas Windows y quieres actualizar.
 
-Una vez que tenga Windows en ejecución, puede instalar la versión más reciente de Visual Studio desde [descargas para desarrolladores para Windows 10](https://developer.microsoft.com/en-us/windows/downloads) y empezar a escribir aplicaciones.
+Una vez que tenga Windows en ejecución, puede instalar la versión más reciente de Visual Studio desde [descargas para desarrolladores para Windows 10](https://developer.microsoft.com/windows/downloads) y empezar a escribir aplicaciones.
 
 **Tenga en cuenta**  si tiene previsto usar los emuladores de dispositivos de Visual Studio, **debe** instalar una versión de 64 bits (x64) de Windows 10 Pro o superior. Por desgracia, algunos Mac antiguos no pueden ejecutar Windows de 64 bits. Ponte en contacto con Apple en esta[página de asistencia de Apple](https://support.apple.com/kb/HT5634)para saber si tu hardware es compatible.
 

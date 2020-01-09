@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eeb8cb8a8b71123c3a5a94eea316621e5f93fe8e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 29357746b6fca2c6aae52e9516a5b7dc2fca8ef2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259075"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684620"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Trasladar Windows Phone Silverlight XAML y la interfaz de usuario a UWP
 
@@ -76,7 +76,7 @@ Una vez eliminadas todas las directivas using anteriores y después de agregar l
 
 En ocasiones, la corrección del código imperativo será tan mínima como cambiar el tipo de un parámetro. En otras ocasiones, tendrá que usar las API de UWP en lugar de las API de .NET para aplicaciones Windows Runtime 8. x. Para identificar las API admitidas, use el resto de esta guía de migración en combinación con [.net para obtener información general sobre las aplicaciones de Windows Runtime 8. x](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) y la [referencia de Windows Runtime](https://docs.microsoft.com/uwp/api/).
 
-Asimismo, si solo quieres llegar a la etapa donde se crea el proyecto, puedes establecer como comentario o código auxiliar cualquier código que no sea esencial. Después itera, un problema cada vez, y consulta los siguientes temas de esta sección (y el tema anterior: [Solución de problemas](wpsl-to-uwp-troubleshooting.md)), hasta que se zanjen todos los problemas de compilación y de tiempo de ejecución y la migración se complete.
+Y, si solo quieres llegar a la etapa donde se crea el proyecto, puedes establecer como comentario o código auxiliar cualquier código que no sea esencial. Después itera, un problema cada vez, y consulta los siguientes temas de esta sección (y el tema anterior: [Solución de problemas](wpsl-to-uwp-troubleshooting.md)), hasta que se zanjen todos los problemas de compilación y de tiempo de ejecución y la migración se complete.
 
 ## <a name="adaptiveresponsive-ui"></a>Interfaz de usuario adaptativa y dinámica
 
@@ -84,7 +84,7 @@ Dado que la aplicación de Windows 10 puede ejecutarse en una gran variedad de d
 
 ## <a name="alarms-and-reminders"></a>Alarmas y recordatorios
 
-El código que usa las clases **Alarm** o **Reminder** debe migrarse para que use la clase [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) y así crear y registrar una tarea en segundo plano, además de mostrar una notificación del sistema en el momento pertinente. Consulta [Proceso en segundo plano](wpsl-to-uwp-business-and-data.md) y [Notificaciones del sistema](#toasts).
+El código que usa las clases **Alarm** o **Reminder** debe migrarse para que use la clase [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para crear y registrar una tarea en segundo plano, además de mostrar una notificación del sistema en el momento pertinente. Consulta [Proceso en segundo plano](wpsl-to-uwp-business-and-data.md) y [Notificaciones del sistema](#toasts).
 
 ## <a name="animation"></a>Animación
 
@@ -194,10 +194,10 @@ Windows Phone aplicaciones de Silverlight usan los controles definidos en el esp
 | ApplicationBarMenuItem | El equivalente de UWP es la [AppBarButton.Label](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton.label) establecida en el texto del elemento de menú. |
 | ContextMenu (en el kit de herramientas de Windows Phone) | Para una selección única o emergente, usa [Flyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout). |
 | Clase ControlTiltEffect.TiltEffect | Las animaciones de la biblioteca de animaciones de UWP están integradas en los estilos predeterminados de los controles comunes. Consulta la [Animación de acciones de puntero](https://docs.microsoft.com/previous-versions/windows/apps/jj649432(v=win.10)). |
-| LongListSelector con datos agrupados | El Windows Phone LongListSelector de Silverlight funciona de dos maneras, que se pueden usar en concierto. En primer lugar, es capaz de mostrar datos agrupados por una clave como, por ejemplo, una lista de nombres agrupados por su letra inicial. En segundo lugar, es capaz de aplicar "zoom" entre dos vistas semánticas: la lista agrupada de elementos (por ejemplo, nombres) y una lista de únicamente las claves de grupo (por ejemplo, letras iniciales). Con el UWP, puedes mostrar datos agrupados con las [Directrices para controles de lista y cuadrícula](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists). |
+| LongListSelector con los datos agrupados | El Windows Phone LongListSelector de Silverlight funciona de dos maneras, que se pueden usar en concierto. En primer lugar, es capaz de mostrar datos agrupados por una clave como, por ejemplo, una lista de nombres agrupados por su letra inicial. En segundo lugar, es capaz de aplicar "zoom" entre dos vistas semánticas: la lista agrupada de elementos (por ejemplo, nombres) y una lista de únicamente las claves de grupo (por ejemplo, letras iniciales). Con el UWP, puedes mostrar datos agrupados con las [Directrices para controles de lista y cuadrícula](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists). |
 | LongListSelector con datos planos | Por motivos de rendimiento, en el caso de listas muy largas, se recomienda LongListSelector en lugar de un cuadro de lista de Windows Phone Silverlight, incluso para datos sin agrupar y sin agrupar. En una aplicación para UWP, se prefiere [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) para listas de elementos largas independientemente de si los datos son susceptibles de agruparse. |
 | Panorámica | El control panorama de Silverlight de Windows Phone se asigna a las [directrices para los controles de concentrador en las aplicaciones Windows Runtime 8. x](https://docs.microsoft.com/windows/uwp/controls-and-patterns/hub) y las directrices para el control de central. <br/> Ten en cuenta que un control Panorama se ajusta automáticamente desde la última sección a la primera y su imagen de fondo se mueve en parallax en relación con las secciones. Las secciones [Hub](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Hub) no se ajustan automáticamente y no se usa parallax. |
-| Pivot | El equivalente de UWP del control Pivot de Windows Phone Silverlight es [Windows. UI. Xaml. Controls. Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot). Está disponible para todas las familias de dispositivos. |
+| Dinámica | El equivalente de UWP del control Pivot de Windows Phone Silverlight es [Windows. UI. Xaml. Controls. Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot). Está disponible para todas las familias de dispositivos. |
 
 **Tenga en cuenta**   el estado visual PointerOver es relevante en estilos y plantillas personalizados en aplicaciones de Windows 10, pero no en Windows Phone aplicaciones de Silverlight. Hay otras razones por las que los estilos o plantillas personalizados existentes pueden no ser adecuados para las aplicaciones de Windows 10, incluidas las claves de recursos del sistema que se usan, los cambios en los conjuntos de Estados visuales usados y las mejoras de rendimiento realizadas en las plantillas o los estilos predeterminados de Windows 10. Le recomendamos que edite una nueva copia de la plantilla predeterminada de un control para Windows 10 y, a continuación, vuelva a aplicar la personalización de estilo y plantilla a este.
 
@@ -205,7 +205,7 @@ Para obtener información sobre los controles de UWP, consulta [Controles por fu
 
 ##  <a name="design-language-in-windows10"></a>Lenguaje de diseño en Windows 10
 
-Hay algunas diferencias en el lenguaje de diseño entre Windows Phone aplicaciones de Silverlight y aplicaciones de Windows 10. Para obtener detalles, consulta [Diseño](https://developer.microsoft.com/en-us/windows/apps/design). A pesar de los cambios del lenguaje de diseño, nuestros principios de diseño siguen siendo coherentes: prestar atención a los detalles, pero siempre lograr la simplicidad centrándonos en el contenido y no en el embellecimiento, reducir drásticamente los elementos visuales y mantenernos auténticos al dominio digital; usar jerarquía visual especialmente con tipografía; diseño en cuadrícula; y hacer que tus experiencias cobren vida con animaciones fluidas.
+Hay algunas diferencias en el lenguaje de diseño entre Windows Phone aplicaciones de Silverlight y aplicaciones de Windows 10. Para obtener detalles, consulta [Diseño](https://developer.microsoft.com/windows/apps/design). A pesar de los cambios del lenguaje de diseño, nuestros principios de diseño siguen siendo coherentes: prestar atención a los detalles, pero siempre lograr la simplicidad centrándonos en el contenido y no en el embellecimiento, reducir drásticamente los elementos visuales y mantenernos auténticos al dominio digital; usar jerarquía visual especialmente con tipografía; diseño en cuadrícula; y hacer que tus experiencias cobren vida con animaciones fluidas.
 
 ## <a name="localization-and-globalization"></a>Localización y globalización
 
@@ -213,7 +213,7 @@ En el caso de las cadenas localizadas, puede volver a usar el archivo. resx desd
 
 Windows Phone aplicaciones de Silverlight usan la clase **CultureInfo** para ayudar a globalizar una aplicación. Las aplicaciones para UWP usan MRT (Modern Resource Technology), que permite la carga dinámica de recursos de aplicación (localización, escala y tema) en tiempo de ejecución y en la superficie de diseño de Visual Studio. Para obtener más información, consulta [Directrices sobre archivos, datos y globalización](https://docs.microsoft.com/windows/uwp/design/usability/index).
 
-El tema [**ResourceContext.QualifierValues**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues) describe cómo cargar recursos específicos de la familia de dispositivos según el factor de selección de recursos de la familia de dispositivos.
+El tema [**ResourceContext.QualifierValues**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues) describe cómo cargar recursos específicos de la familia de dispositivos según el factor de selección de recurso de la familia de dispositivos.
 
 ## <a name="media-and-graphics"></a>Multimedia y gráficos
 
@@ -309,17 +309,17 @@ La bandeja del sistema (establecida en el marcado XAML con `shell:SystemTray.IsV
 
 El texto (o tipografía) es un aspecto importante de una aplicación para UWP y, durante la migración, es aconsejable que vuelvas a visitar los diseños de elementos visuales de las vistas para que estén en consonancia con el nuevo lenguaje de diseño. Usa estas ilustraciones para encontrar los estilos de sistema **TextBlock** de UWP que están disponibles. Busque los que correspondan a los Windows Phone los estilos de Silverlight que usó. Como alternativa, puede crear sus propios estilos universales y copiar las propiedades de los estilos del sistema de Silverlight Windows Phone en ellos.
 
-![system textblock styles fo windows 10 apps](images/label-uwp10stylegallery.png)
+![estilos de textblock del sistema para aplicaciones de Windows 10](images/label-uwp10stylegallery.png)
 
 Estilos de TextBlock del sistema para aplicaciones de Windows 10
 
-En una aplicación de Windows Phone Silverlight, la familia de fuentes predeterminada es Segoe WP. En una aplicación de Windows 10, la familia de fuentes predeterminada es Segoe UI. Como resultado, las métricas de fuente en tu aplicación pueden parecer diferentes. Si desea reproducir el aspecto de su Windows Phone texto de Silverlight, puede establecer sus propias métricas mediante propiedades como [**LineHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.lineheight) y [**LineStackingStrategy**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy). Si quieres obtener más información, consulta [Directrices para fuentes](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts) y [Diseñar aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/apps/design).
+En una aplicación de Windows Phone Silverlight, la familia de fuentes predeterminada es Segoe WP. En una aplicación de Windows 10, la familia de fuentes predeterminada es Segoe UI. Como resultado, las métricas de fuente en tu aplicación pueden parecer diferentes. Si desea reproducir el aspecto de su Windows Phone texto de Silverlight, puede establecer sus propias métricas mediante propiedades como [**LineHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.lineheight) y [**LineStackingStrategy**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy). Si quieres obtener más información, consulta [Directrices para fuentes](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts) y [Diseñar aplicaciones para UWP](https://developer.microsoft.com/windows/apps/design).
 
 ## <a name="theme-changes"></a>Cambios de tema
 
 En el caso de una aplicación de Windows Phone Silverlight, el tema predeterminado es oscuro de forma predeterminada. En el caso de los dispositivos Windows 10, el tema predeterminado ha cambiado, pero puede controlar el tema que se usa al declarar un tema solicitado en App. Xaml. Por ejemplo, para usar un tema oscuro en todos los dispositivos, agrega `RequestedTheme="Dark"` al elemento Application de raíz.
 
-## <a name="tiles"></a>Iconos
+## <a name="tiles"></a>Ventanas
 
 Los iconos de las aplicaciones UWP tienen comportamientos similares a los iconos dinámicos de las aplicaciones de Windows Phone Silverlight, aunque existen algunas diferencias. Por ejemplo, el código que llama al método **Microsoft.Phone.Shell.ShellTile.Create** para crear iconos secundarios debe migrarse para llamar a [**SecondaryTile.RequestCreateAsync**](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.requestcreateasync). Este es un ejemplo de antes y después, en el que primero se Windows Phone la versión de Silverlight:
 
@@ -356,7 +356,7 @@ Para obtener más información sobre iconos, notificaciones del sistema, distint
 
 ## <a name="toasts"></a>Notificaciones del sistema
 
-El código que muestra una notificación del sistema con la clase **Microsoft.Phone.Shell.ShellToast**, debe migrarse para usar las clases [**ToastNotificationManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationManager), [**ToastNotifier**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier), [**ToastNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification) y [**ScheduledToastNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ScheduledToastNotification). Ten en cuenta que en dispositivos móviles, el término que se muestra al consumidor para "notificación del sistema" es "mensaje emergente".
+El código que muestra una notificación del sistema con la clase **Microsoft.Phone.Shell.ShellToast** debe migrarse para usar las clases [**ToastNotificationManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationManager), [**ToastNotifier**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier), [**ToastNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification) y [**ScheduledToastNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ScheduledToastNotification). Ten en cuenta que en dispositivos móviles, el término que se muestra al consumidor para "notificación del sistema" es "mensaje emergente".
 
 Consulta [Trabajar con iconos, notificaciones y notificaciones del sistema](https://docs.microsoft.com/previous-versions/windows/apps/hh868259(v=win.10)).
 
@@ -384,7 +384,7 @@ Para obtener más información, consulta [Diseño con capacidad de respuesta 101
 
 ## <a name="window-size"></a>Tamaño de la ventana
 
-En la aplicación para UWP, puedes especificar un tamaño mínimo (ancho y alto) con código imperativo. El tamaño mínimo predeterminado es 500 x 320epx, que también es el tamaño mínimo más pequeño aceptado. El tamaño mínimo mayor aceptado es 500x500 epx.
+En la aplicación para UWP, puedes especificar un tamaño mínimo (ancho y alto) con código imperativo. El tamaño mínimo predeterminado es 500 x 320epx, que también es el tamaño mínimo más pequeño aceptado. El tamaño mínimo más grande aceptado es 500 x 500 epx.
 
 ```csharp
    Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize

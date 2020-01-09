@@ -1,17 +1,17 @@
 ---
-Description: Utilice la alineación, márgenes y las propiedades de relleno para organizar el diseño de elementos en una página.
+Description: Use las propiedades Alignment, margin y padding para organizar el diseño de los elementos de una página.
 title: Alineación, margen y espaciado interno para el diseño
 ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3c7ca724279a6a4d41b1f7757428af8eab403549
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0d7f702d145740703b9fbc4ca2e7fd8eba8957cc
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57600940"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684464"
 ---
 # <a name="alignment-margin-padding"></a>Alineación, margen, espaciado interno
 
@@ -22,38 +22,38 @@ Un tamaño correcto garantiza que todo el contenido sea claro y legible. Los usu
 
 ![diagrama que muestra las dimensiones](images/dimensions.svg)
 
-- [**Alto** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) y [ **ancho** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width) especificar el tamaño de un elemento. Los valores predeterminados son, matemáticamente hablando, NaN (Not A Number, es decir, no es un número). Puedes ajustar valores fijos medidos en [píxeles efectivos](../basics/design-and-ui-intro.md#effective-pixels-and-scaling), o bien puedes usar **Auto** o la [variación de tamaño proporcional](layout-panels.md#grid) para un comportamiento fluido.
+- [**Height**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) y [**width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width) especifican el tamaño de un elemento. Los valores predeterminados son, matemáticamente hablando, NaN (Not A Number, es decir, no es un número). Puedes ajustar valores fijos medidos en [píxeles efectivos](../basics/design-and-ui-intro.md#effective-pixels-and-scaling), o bien puedes usar **Auto** o la [variación de tamaño proporcional](layout-panels.md#grid) para un comportamiento fluido.
 
-- [**ActualHeight** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualheight) y [ **ActualWidth** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth) son propiedades de solo lectura que proporcionan el tamaño de un elemento en tiempo de ejecución. Si los diseños fluidos se amplían o se reducen, los valores cambian en un evento [**SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged). Ten en cuenta que un [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) no cambiará los valores ActualHeight y ActualWidth.
+- [**ActualHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualheight) y [**ActualWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth) son propiedades de solo lectura que proporcionan el tamaño de un elemento en tiempo de ejecución. Si los diseños fluidos se amplían o se reducen, los valores cambian en un evento [**SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged). Ten en cuenta que un [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) no cambiará los valores ActualHeight y ActualWidth.
 
-- [**MinWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.minwidth)/[**MaxWidth** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxwidth) y [ **MinHeight** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.minheight) / [ **MaxHeight** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxheight) especificar valores que restringen el tamaño de un elemento al tiempo que permite cambiar el tamaño de fluido.
+- [**MinWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.minwidth)/[**MaxWidth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxwidth) y [**MinHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.minheight)/[**MaxHeight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxheight) especifique valores que restrinjan el tamaño de un elemento y permita el cambio de tamaño del fluido.
 
-- [**FontSize** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.fontsize) y otras propiedades de texto controlan el tamaño del diseño de los elementos de texto. Aunque los elementos de texto no tiene dimensiones declaradas de manera explícita, sí que han calculado ActualWidth y ActualHeight. 
+- [**FontSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.fontsize) y otras propiedades de texto controlan el tamaño del diseño de los elementos de texto. Aunque los elementos de texto no tiene dimensiones declaradas de manera explícita, sí que han calculado ActualWidth y ActualHeight. 
 
-## <a name="alignment"></a>Alineación
+## <a name="alignment"></a>Asociación
 La alineación hace que la apariencia de tu interfaz de usuario sea más interesante, organizada y equilibrada, y también puede usarse para establecer una jerarquía visual y relaciones.
 
 ![diagrama que muestra la alineación](images/alignment.svg)
 
-- [**HorizontalAlignment** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) y [ **VerticalAlignment** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment) especificar cómo se debería colocar un elemento dentro de su contenedor primario.
+- [**HorizontalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) y [**VerticalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment) especifican cómo se debe colocar un elemento dentro de su contenedor primario.
     - Los valores de **HorizontalAlignment** son **Left**, **Center**, **Right** y **Stretch**.
     - Los valores de **VerticalAlignment** son **Top**, **Center**, **Bottom** y **Stretch**.
 
 - **Stretch** es el valor predeterminado para ambas propiedades, y los elementos ocupan todo el espacio que se les proporciona en el contenedor primario. Los valores de Height y Width con un número real anulan un valor Stretch, que en cambio actuará como un valor Center. Algunos controles, como Button, invalidan el valor predeterminado Stretch en su estilo predeterminado.
 
-- [**HorizontalContentAlignment** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment) y [ **VerticalContentAlignment** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.verticalcontentalignment) especificar cómo se colocan los elementos secundarios dentro de un contenedor.
+- [**HorizontalContentAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment) y [**VerticalContentAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.verticalcontentalignment) especifican cómo se colocan los elementos secundarios dentro de un contenedor.
 
 - La alineación puede afectar a los recortes en un panel de distribución. Por ejemplo, con `HorizontalAlignment="Left"`, el lado derecho del elemento se recorta si el contenido es mayor que el ActualWidth.
 
-- Los elementos de texto usan la propiedad [**TextAlignment**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.textalignment). Por lo general, te recomendamos que uses la alineación a la izquierda, el valor predeterminado. Para obtener más información sobre cómo aplicar estilo al texto, consulta [Tipografía](../style/typography.md).
+- Los elementos de texto usan la propiedad [**TextAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment). Por lo general, te recomendamos que uses la alineación a la izquierda, el valor predeterminado. Para obtener más información sobre cómo aplicar estilo al texto, consulta [Tipografía](../style/typography.md).
 
-## <a name="margin-and-padding"></a>Margen y espaciado
+## <a name="margin-and-padding"></a>Margen y espaciado interno
 Las propiedades de margen y espaciado interno evitan que la interfaz de usuario parezca demasiado desordenada o demasiado dispersa, y también pueden conseguir que algunas entradas como el lápiz y la función táctil sean más fáciles de usar. Esta ilustración muestra los márgenes y espaciado interno de un contenedor y su contenido.
 
 ![márgenes de XAML y diagrama de espaciado interno](images/xaml-layout-margins-padding.svg)
 
 ### <a name="margin"></a>Margen
-[**Margen** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin) controla la cantidad de espacio vacío alrededor de un elemento. El margen no añade píxeles a ActualHeight y ActualWidth ni tampoco se considera como parte del elemento para las pruebas de acceso y el uso de eventos de entrada.
+[**Margen**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin) controla la cantidad de espacio vacío que hay alrededor de un elemento. El margen no añade píxeles a ActualHeight y ActualWidth ni tampoco se considera como parte del elemento para las pruebas de acceso y el uso de eventos de entrada.
 
 - Los valores del margen pueden ser uniformes o diferentes. Con `Margin="20"`, un margen uniforme de 20 píxeles se aplicaría al elemento a la izquierda, parte superior, derecha y parte inferior. Con `Margin="0,10,5,25"`, los valores se aplicarían a la izquierda, parte superior, derecha y parte inferior (en este orden). 
 
@@ -64,19 +64,19 @@ Las propiedades de margen y espaciado interno evitan que la interfaz de usuario 
 - Los valores de margen son los últimos en restringirse, por lo tanto, debes tener cuidado con los márgenes porque pueden recortar o limitar los elementos contenedores. Un valor de margen podría ser la causa de que no aparezca un elemento para representar; con un margen aplicado, la dimensión de un elemento puede restringirse a 0.
 
 ### <a name="padding"></a>Espaciado interno
-[**Relleno** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.padding) controla la cantidad de espacio entre el borde interior de un elemento y su contenido secundario o elementos. Un valor Padding positivo disminuye el área de contenido del elemento. 
+El [**relleno**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.padding) controla la cantidad de espacio entre el borde interior de un elemento y sus elementos o contenido secundarios. Un valor Padding positivo disminuye el área de contenido del elemento. 
 
 A diferencia del margen, el espaciado interno no es una propiedad de FrameworkElement. Existen varias clases que definen su propia propiedad de espaciado interno:
 
--   [**Control.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.padding): hereda a todos los [ **Control** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls) las clases derivadas. No todos los controles tienen contenido, de modo que para algunos controles, establecer la propiedad no hace nada. Si el control tiene un borde, el espaciado interno se aplica dentro de dicho borde.
--   [**Border.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.padding): define el espacio entre la línea de rectángulo creada por [ **BorderThickness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.borderthickness)/[**BorderBrush**  ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.borderbrush) y [ **secundarios** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.child) elemento.
--   [**ItemsPresenter.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemspresenter.padding): contribuye a la apariencia de los elementos en controles de elemento, colocar el relleno alrededor de cada elemento especificado.
--   [**TextBlock.Padding** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.padding) y [ **RichTextBlock.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.padding): expandir el cuadro de límite alrededor del texto del elemento de texto. Estos elementos de texto no tienen ningún **Background**, por lo que puede resultar difícil verlos. Por ello, usa la configuración [**Margin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block.margin) en contenedores [**Block**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block) en su lugar.
+-   [**Control. Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.padding): hereda en todas las clases derivadas de [**control**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls) . No todos los controles tienen contenido, de modo que para algunos controles, establecer la propiedad no hace nada. Si el control tiene un borde, el espaciado interno se aplica dentro de dicho borde.
+-   [**Border. Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.padding): define el espacio entre la línea del rectángulo creada por [**BorderThickness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.borderthickness)/[**BorderBrush**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.borderbrush) y el elemento [**secundario**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.child) .
+-   [**ItemsPresenter. Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemspresenter.padding): contribuye a la apariencia de los elementos de los controles de elemento, colocando el relleno especificado alrededor de cada elemento.
+-   [**TextBlock. Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.padding) y [**RichTextBlock. Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.padding): expanda el cuadro de límite alrededor del texto del elemento de texto. Estos elementos de texto no tienen ningún **Background**, por lo que puede resultar difícil verlos. Por ello, usa la configuración [**Margin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block.margin) en contenedores [**Block**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block) en su lugar.
 
 En cada uno de estos casos, los elementos también tienen una propiedad de margen. Si se aplica tanto el margen como el espaciado interno, se suman, es decir, la distancia aparente entre un contenedor externo y el contenido interno será el margen más el espaciado interno.
 
 ### <a name="example"></a>Ejemplo
-Echemos un vistazo a los efectos de Margin y Padding en controles reales. Este es un TextBox dentro de una Grid con los valores predeterminados Margin y Padding establecidos en 0.
+Echemos un vistazo a los efectos del margen y espaciado interno en controles reales. Este es un TextBox dentro de una Grid con los valores predeterminados Margin y Padding establecidos en 0.
 
 ![Cuadro de texto con margen y espaciado de 0](images/xaml-layout-textbox-no-margins-padding.svg)
 
@@ -92,7 +92,7 @@ Este es el mismo TextBox y Grid con los valores Margin y Padding del TextBox, ta
 
 
 ## <a name="style-resources"></a>Recursos de estilo
-No hace falta establecer cada valor individualmente en un control. Suele ser más eficiente agrupar valores de propiedad en un recurso [**Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) y aplicar el Style a un control. Esto es especialmente cierto cuando necesites aplicar los mismos valores de propiedad a muchos controles. Para más información sobre los estilos, consulta [Estilos XAML](../controls-and-patterns/xaml-styles.md).
+No hace falta establecer cada valor individualmente en un control. Suele ser más eficiente agrupar valores de propiedad en un recurso [**Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) y aplicar el Style a un control. Esto suele ocurrir cuando necesites aplicar los mismos valores de propiedad a muchos controles. Para más información sobre los estilos, consulta [Estilos XAML](../controls-and-patterns/xaml-styles.md).
 
 ## <a name="general-recommendations"></a>Recomendaciones generales
 - Solo se aplican los valores de medida a ciertos elementos clave y se usa el comportamiento de la distribución fluida para los demás elementos. Esto proporciona una [interfaz de usuario dinámica](responsive-design.md) cuando cambia el ancho de la ventana.
@@ -104,9 +104,9 @@ No hace falta establecer cada valor individualmente en un control. Suele ser má
 ![medianiles recomendados](images/12-gutter.svg)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [**FrameworkElement.Height**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height)
-* [**FrameworkElement.Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width)
-* [**FrameworkElement.HorizontalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment)
-* [**FrameworkElement.VerticalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment)
-* [**FrameworkElement.Margin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin)
-* [**Control.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.padding)
+* [**FrameworkElement. Height**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height)
+* [**FrameworkElement. width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width)
+* [**FrameworkElement. HorizontalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment)
+* [**FrameworkElement. VerticalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment)
+* [**FrameworkElement. Margin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin)
+* [**Control. Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.padding)

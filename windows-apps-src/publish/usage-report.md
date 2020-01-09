@@ -1,22 +1,22 @@
 ---
-Description: El informe de uso en el centro de partners le permite ver cómo los clientes usan la aplicación.
+Description: El informe de uso del centro de Partners le permite ver cómo los clientes usan la aplicación.
 title: Informe de uso
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, uso, evento personalizado, informe, telemetría, sesiones de usuario
 ms.localizationpriority: medium
-ms.openlocfilehash: b8f368e5af13628d5330ab96ab3b7675de410505
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 45f42b7cf31eb0c22ef68ef9191d773f9044421e
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788211"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685111"
 ---
 # <a name="usage-report"></a>Informe de uso
 
 
-El **uso** notificar en [centro de partners](https://partner.microsoft.com/dashboard) le permite ver cómo los clientes en Windows 10 (incluido Xbox) usan la aplicación y muestra información sobre los eventos personalizados que haya definido. Puede ver estos datos en el centro de partners, o [descargar el informe](download-analytic-reports.md) ver sin conexión.
+El informe de **uso** del [centro de Partners](https://partner.microsoft.com/dashboard) le permite ver cómo los clientes de Windows 10 (incluido Xbox) usan la aplicación y muestra información acerca de los eventos personalizados que ha definido. Puede ver estos datos en el centro de Partners o [descargar el informe](download-analytic-reports.md) para verlo sin conexión.
 
 
 ## <a name="apply-filters"></a>Aplicar filtros
@@ -25,9 +25,9 @@ Cerca de la parte superior de la página, puedes seleccionar el período de tiem
 
 También puedes expandir la opción **Filtros** para filtrarlos datos de esta página por versión de paquete, mercado o tipo de dispositivo.
 
--   **Versión del paquete**: El valor predeterminado es **todas**. Si la aplicación incluye más de un paquete, puedes elegir uno concreto aquí.
--   **Mercado**: El filtro predeterminado es **todos los mercados**, pero puede limitar los datos a uno o varios de los mercados.
--   **Tipo de dispositivo**: El valor predeterminado es **todas**, pero puede optar por mostrar los datos de un único tipo de dispositivo específico (PC, consola, tableta, etcetera.).
+-   **Versión del paquete**: el valor predeterminado es **Todas**. Si la aplicación incluye más de un paquete, puedes elegir uno concreto aquí.
+-   **Mercado**: el filtro predeterminado es **Todos los mercados**, pero puedes limitar los datos a uno o varios mercados.
+-   **Tipo de dispositivo**: el valor predeterminado es **Todos**, pero también puedes mostrar los datos de un determinado tipo de dispositivo (PC, consola, tableta, etc.).
 
 La información de todos los gráficos enumerados a continuación reflejará el intervalo de fechas y los filtros que has seleccionado (a excepción de **Nuevos usuarios** en el gráfico **Uso**, que no aparecerá si se selecciona algún filtro). Algunas secciones también te permiten aplicar filtros adicionales.
 
@@ -39,19 +39,19 @@ La información de todos los gráficos enumerados a continuación reflejará el 
 
 El gráfico **Uso** muestra detalles acerca de cómo los clientes están usando tu aplicación durante el período de tiempo seleccionado. Ten en cuenta que este gráfico no realiza un seguimiento de usuarios únicos de tu aplicación ni sesiones de usuario único (es decir, un usuario se representa en este gráfico tanto si usó la aplicación una vez como si lo hizo varias veces).
 
-Este gráfico tiene pestañas independientes que se pueden ver, que muestra el uso por día o semana (según la duración que ha seleccionado).
+Este gráfico tiene pestañas independientes que puede ver, mostrando el uso por día o semana (en función de la duración seleccionada).
 
-- **Usuarios**: Muestra el número total de **las sesiones de usuario** durante el período de tiempo seleccionado. Cada sesión de usuario representa un período de tiempo distinto, a partir de cuando se inicia la aplicación (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad. Por este motivo, un cliente único podría tener varias sesiones de usuario en el mismo día o semana. El número total de **Usuarios activos** (cualquier cliente que use la aplicación ese día o semana) y **Nuevos usuarios** (un cliente que usó la aplicación por primera vez ese día o semana) también se muestran. Ten en cuenta que si has aplicado filtros a la página, no verás **Nuevos usuarios** en este gráfico.
-- **Dispositivos**: Muestra el número de dispositivos diarios que se usa para interactuar con la aplicación todos los usuarios.
-- **Duración**: Muestra las horas de compromiso total (horas que un usuario esté usando activamente la aplicación).
-- **Engagement**: Muestra los minutos de engagement Media por usuario (duración media de todas las sesiones de usuario). 
-- **Retención**: Muestra el número total de **MAU/dau Acumulados** (usuarios activos diariamente usuarios/mensuales activos) en el período de tiempo seleccionado.
-- **Predicción de abandono**: Muestra cuántos usuarios se predecir es probable que detener mediante la aplicación lo antes posible, en función de su uso reciente.
+- **Usuarios**: muestra el número total de **sesiones de usuario** durante el período de tiempo seleccionado. Cada sesión de usuario representa un período de tiempo distinto, a partir de cuando se inicia la aplicación (inicio del proceso) y termina cuando finaliza (final del proceso) o después de un período de inactividad. Por este motivo, un cliente único podría tener varias sesiones de usuario en el mismo día o semana. El número total de **Usuarios activos** (cualquier cliente que use la aplicación ese día o semana) y **Nuevos usuarios** (un cliente que usó la aplicación por primera vez ese día o semana) también se muestran. Ten en cuenta que si has aplicado filtros a la página, no verás **Nuevos usuarios** en este gráfico.
+- **Dispositivos**: muestra el número de dispositivos que usan cada día todos los usuarios para interactuar con la aplicación.
+- **Duración**: muestra el total de horas de interacción (horas en las que un usuario usa la aplicación de forma activa).
+- **Engagement**: muestra el promedio de minutos de interacción por usuario (promedio de duración de todas las sesiones de usuario). 
+- **Retención**: muestra el número total de **DAU/MAU** (usuarios activos diariamente/usuarios activos mensualmente) durante el período de tiempo seleccionado.
+- **Predicción de renovación**: muestra cuántos usuarios se predecirán probablemente dejar de usar la aplicación en breve, en función de su uso reciente.
 
-Cuando el **d. 30** está seleccionado el período de tiempo, puede ver los marcadores de círculo al ver el **usuarios**, **dispositivos**, o **duración** pestañas. Estos representan un aumento significativo o disminuyen en un valor determinado que creemos que desea conocer. La fecha en la que aparece el círculo representa el final de la semana en el que se ha detectado un significativo aumento o disminución en comparación con la semana antes de que. Para ver más detalles sobre lo que ha cambiado, mantenga el mouse sobre el círculo.  
+Cuando se selecciona el período de tiempo de **30D** , es posible que vea marcadores de círculo al ver los **usuarios**, los **dispositivos**o las pestañas de **duración** . Representan un aumento o una disminución significativos en un valor determinado que creemos que querrá conocer. La fecha en la que aparece el círculo representa el final de la semana en el que se ha detectado un aumento o una disminución significativos en comparación con la semana anterior. Para ver más detalles sobre lo que ha cambiado, mantenga el mouse sobre el círculo.  
 
 > [!TIP]
-> Puede ver más información relacionada con cambios significativos durante los últimos 30 días en el [informe Insights](insights-report.md).
+> Puede ver más información relacionada con los cambios significativos en los últimos 30 días del [Informe Insights](insights-report.md).
 
 
 ## <a name="user-sessions"></a>Sesiones de usuario
@@ -74,7 +74,7 @@ Al igual que con el gráfico **Sesiones de usuario**, una sesión de usuario rep
 
 El gráfico **Eventos personalizados** muestra el total de repeticiones de eventos personalizados que has definido para la aplicación. Puede incluir varias repeticiones para el mismo cliente. Puedes usar los filtros para seleccionar los eventos personalizados específicos para los que quieres ver estos datos.
 
-Los eventos personalizados se implementan mediante el método [StoreServicesCustomEventLogger.Log](https://docs.microsoft.com/en-us/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) de [Microsoft Store Services SDK](../monetize/microsoft-store-services-sdk.md).
+Los eventos personalizados se implementan mediante el método [StoreServicesCustomEventLogger.Log](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) de [Microsoft Store Services SDK](../monetize/microsoft-store-services-sdk.md).
 
 Para obtener más información, consulta [Registrar eventos personalizados para el Centro de desarrollo](../monetize/log-custom-events-for-dev-center.md).
 

@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 25dd6ffe698ae8141a02381d5ca45df31377599b
-ms.sourcegitcommit: a4a595c485a1e4549b02b0e20ca9f56b093c5814
+ms.openlocfilehash: 48a8566c80516588939dc0ef071c3da4b9232d64
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74125239"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684610"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -170,7 +170,7 @@ Existen requisitos adicionales según el tipo de archivo.
 
 | Vídeo | Audio |
 | --- | --- |
-| <ul><li>Códec: [H. 264](https://docs.microsoft.com/en-us/windows/desktop/DirectShow/h-264-video-types) (avc1)  </li><li>Escaneo progresivo (no entrelazado)</li><li>Perfil alto</li><li>2 fotogramas B consecutivos</li><li>GOP cerrado. GOP de la mitad de la velocidad de fotogramas</li><li>CABAC</li><li>50 MB/s </li><li>Espacio de colores: 4.2.0</li></ul> | <ul><li>Codec: AAC-LC</li><li>Canales: Estéreo o el sonido envolvente</li><li>Velocidad de muestra: 48 KHz</li><li>Velocidad de bits de audio: 384 Kbps para estéreo, 512 KB/s para sonido envolvente</li></ul> |
+| <ul><li>Códec: [H. 264](https://docs.microsoft.com/windows/desktop/DirectShow/h-264-video-types) (avc1)  </li><li>Escaneo progresivo (no entrelazado)</li><li>Perfil alto</li><li>2 fotogramas B consecutivos</li><li>GOP cerrado. GOP de la mitad de la velocidad de fotogramas</li><li>CABAC</li><li>50 MB/s </li><li>Espacio de colores: 4.2.0</li></ul> | <ul><li>Codec: AAC-LC</li><li>Canales: Estéreo o el sonido envolvente</li><li>Velocidad de muestra: 48 KHz</li><li>Velocidad de bits de audio: 384 Kbps para estéreo, 512 KB/s para sonido envolvente</li></ul> |
 
 > [!WARNING]
 > Es posible que los clientes no escuchen audio para archivos MP4 codificados con códecs distintos de AVC1.

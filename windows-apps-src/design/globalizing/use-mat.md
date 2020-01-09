@@ -6,12 +6,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 802a7a925a08dde94ab59d79e01df94fbbcf495d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 34bc609d06705f1dfa6a5c7370ce6022ae9c3ff8
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258033"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684244"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>Usar el Kit de herramientas para aplicaciones multilingües 4.0
 
@@ -39,7 +39,7 @@ Consulta también [Directrices para globalización](guidelines-and-checklist-for
 El Kit de herramientas para aplicaciones multilingües 4.0 (MAT 4.0) tiene dos partes, cada una con su propio instalador.
 
 - [Extensión del kit de herramientas de aplicaciones multilingüe 4,0 para Visual Studio 2017 y versiones posteriores](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308). Contiene la extensión PASPARTÚ 4,0 para Visual Studio 2019, en forma de instalador. vsix.
-- [Editor del Kit de herramientas para aplicaciones multilingües 4.0](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit). Contiene el editor multilingüe independiente MAT 4.0 en un instalador .msi. También incluye la extensión MAT 4.0 para Visual Studio 2015 y Visual Studio 2013.
+- [Editor del Kit de herramientas para aplicaciones multilingües 4.0](https://developer.microsoft.com/windows/develop/multilingual-app-toolkit). Contiene el editor multilingüe independiente MAT 4.0 en un instalador .msi. También incluye la extensión MAT 4.0 para Visual Studio 2015 y Visual Studio 2013.
 
 Si usa Visual Studio 2017 o Visual Studio 2019, descargue y ejecute ambos instaladores, uno tras otro. Si usas Visual Studio 2015 o Visual Studio 2013, descarga y ejecuta el instalador .msi.
 
@@ -102,7 +102,7 @@ Después de haber probado la aplicación con pseudoidioma, tienes tres opciones 
 
 #### <a name="option-1-translate-the-strings-yourself"></a>Opción 1. Traduce las cadenas tú mismo
 
-Puedes usar el Editor multilingüe para traducir las cadenas de manera individual. Como ya hemos explicado, se incluye en [el instalador .msi ](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit).
+Puedes usar el Editor multilingüe para traducir las cadenas de manera individual. Como ya hemos explicado, se incluye en [el instalador .msi ](https://developer.microsoft.com/windows/develop/multilingual-app-toolkit).
 
 - Haz clic con el botón secundario en el archivo .xlf que quieras traducir.
 - Haz clic en **Abrir con...**  y selecciona el Editor multilingüe. Opcionalmente, puedes hacer clic en **Establecer como predeterminado** .
@@ -169,7 +169,7 @@ Antes de iniciar el proceso de certificación de Microsoft Store, debes excluir 
 ## <a name="downloads"></a>Descargas
 
 * [Kit de herramientas de aplicaciones multilingües 4,0. instalador de VSIX](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
-* [Instalador de Multilingual App Toolkit 4,0. msi](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)
+* [Instalador de Multilingual App Toolkit 4,0. msi](https://developer.microsoft.com/windows/develop/multilingual-app-toolkit)
 
 ## <a name="translation-services"></a>Servicios de traducción
 

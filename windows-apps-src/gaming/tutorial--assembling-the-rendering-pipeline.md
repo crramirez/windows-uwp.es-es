@@ -6,16 +6,16 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, representar
 ms.localizationpriority: medium
-ms.openlocfilehash: 0eeb515f07d9bc2e48ba97f6ef4d71afd0226ace
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8daf07d08dd760da680044938e9a6601e41108d3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367735"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685026"
 ---
-# <a name="rendering-framework-i-intro-to-rendering"></a>Marco de representación lo hago?: Introducción a la representación
+# <a name="rendering-framework-i-intro-to-rendering"></a>Marco de representación I: Introducción a la representación
 
-En temas anteriores hemos visto cómo estructurar un juego de la Plataforma universal de Windows (UWP) y cómo definir una máquina de estados para gestionar el flujo del juego. Ahora vamos a ver cómo ensamblar el marco de representación. Echemos un vistazo a cómo representa el juego de ejemplo la escena de juego mediante 11 Direct3D (conocido comúnmente como DirectX 11).
+En temas anteriores hemos visto cómo estructurar un juego de la Plataforma universal de Windows (UWP) y cómo definir una máquina de estados para gestionar el flujo del juego. Ahora vamos a ver cómo ensamblar el marco de representación. Echemos un vistazo a cómo el juego de ejemplo representa la escena del juego con Direct3D 11 (conocido comúnmente como DirectX 11).
 
 >[!Note]
 >Si no has descargado el código del juego más reciente para esta muestra, ve a [Muestra de juego de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de funciones para UWP. Si necesitas instrucciones sobre cómo descargar el ejemplo, consulta [Obtener las muestras de UWP desde GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
@@ -36,9 +36,9 @@ Para configurar un marco de representación básico a fin de mostrar la salida d
 
 Este artículo explica cómo se representan gráficos (pasos 1 y 3).
 
-[Marco de representación II: Representación de juegos](tutorial-game-rendering.md) abarca el paso 2; cómo configurar el marco de trabajo de representación y cómo se preparan los datos antes de representación puede ocurrir.
+El paso 2 se abarca en [Marco de representación II: representación de juego](tutorial-game-rendering.md); cómo configurar el marco de representación y cómo se preparan los datos antes de que puede producirse la representación.
 
-## <a name="get-started"></a>Comenzar
+## <a name="get-started"></a>Introducción
 
 Antes de comenzar, debes familiarizarte con los conceptos básicos de gráficos y representación. Si no estás familiarizado con Direct3D y la representación, consulta [Términos y conceptos](#terms-and-concepts), donde encontrarás una breve descripción de los términos de gráficos y representación que se usan en este artículo.
 
@@ -50,7 +50,7 @@ En esta parte del tutorial, nos centraremos en la representación de objetos 3D 
 
 Para obtener acceso al hardware para la representación, consulta el artículo de marco UWP en [__App::Initialize__](tutorial--building-the-games-uwp-app-framework.md#appinitialize-method).
 
-El __realizar\_función shared__, como se muestra [debajo](#appinitialize-method), se utiliza para crear un __compartido\_ptr__ a [ __DX::D eviceResources__](#dxdeviceresources), que también proporciona acceso al dispositivo. 
+La __función de creación de\_compartidas__, como se muestra a [continuación](#appinitialize-method), se usa para crear una __\_ptr compartida__ a [__DX::D eviceresources__](#dxdeviceresources), que también proporciona acceso al dispositivo. 
 
 En Direct3D 11, un [dispositivo](#device) se usa para asignar y destruir los objetos, representar primitivos y comunicarse con la tarjeta gráfica mediante el controlador de gráficos.
 
@@ -75,8 +75,8 @@ La escena de juego debe representarse cuando se inicia el juego. Las instruccion
 
 El flujo simple es:
 1. __Update__
-2. __Render__
-3. __Present__
+2. __Representación__
+3. __Presente__
 
 ### <a name="gamemainrun-method"></a>Método GameMain::Run
 
@@ -122,7 +122,7 @@ void GameMain::Run()
 }
 ```
 
-### <a name="update"></a>Actualización
+### <a name="update"></a>Actualizar
 
 Consulta el artículo [Administración del flujo de los juegos](tutorial-game-flow-management.md) para obtener más información sobre la actualización de los estados de juego en los métodos [__App::Update__ y __GameMain::Update__](tutorial-game-flow-management.md#appupdate-method).
 
@@ -130,7 +130,7 @@ Consulta el artículo [Administración del flujo de los juegos](tutorial-game-fl
 
 La representación se implementa mediante una llamada al método [__GameRenderer::Render__](#gamerendererrender-method) en __GameMain::Run__.
 
-Si la [representación en estéreo](#stereo-rendering) está habilitada, hay dos fases de representación: una para el ojo derecho y otra para el ojo izquierdo. En cada paso de representación, enlazamos el destino de representación y la vista de galería de símbolos de profundidad en el dispositivo. También borramos la vista de galería de símbolos de profundidad después.
+Si la [representación en estéreo](#stereo-rendering) está habilitada, hay dos fases de representación: una para el ojo derecho y otra para el ojo izquierdo. En cada paso de representación, enlazamos el destino de representación y la vista de la galería de símbolos de profundidad al dispositivo. También borramos la vista de galería de símbolos de profundidad después.
 
 > [!Note]
 > La representación en estéreo se puede conseguir con otros métodos, como el estéreo de pase único mediante la creación de instancias de vértices o los sombreadores de geometría. El método de dos pases de representación es más lento, pero más conveniente para lograr la representación en estéreo.
@@ -146,10 +146,10 @@ En esta muestra de juego, el representador está diseñado para usar un diseño 
 
 Establece el contexto de Direct3D para usar un diseño de vértice de entrada. Los objetos del diseño de entrada describen cómo se transmiten los datos del búfer de vértices en la [canalización de representación](#rendering-pipeline). 
 
-A continuación, establecemos el contexto de Direct3D para utilizar los búferes de constantes definidos anteriormente, que usa el [sombreador de vértices](#vertex-shaders-and-pixel-shaders) la etapa de canalización y el [sombreador de píxeles](#vertex-shaders-and-pixel-shaders) la etapa de canalización. 
+A continuación, se establece el contexto de Direct3D para usar los búferes de constantes definidos anteriormente, que se usan en la fase de canalización del [sombreador de vértices](#vertex-shaders-and-pixel-shaders) y la fase de canalización del [sombreador de píxeles](#vertex-shaders-and-pixel-shaders) . 
 
 > [!Note]
-> Consulte [representación framework II: Representación de juegos](tutorial-game-rendering.md) para obtener más información acerca de la definición de los búferes de constantes.
+> Consulta [Marco de representación II: representación de juego](tutorial-game-rendering.md) para obtener más información acerca de la definición de los búferes de constantes.
 
 Dado que el mismo diseño de entrada y conjunto de búferes de constantes se usa para todos los sombreadores que se encuentran en la canalización, se configura una vez por fotograma.
 
@@ -334,14 +334,14 @@ void GameRenderer::Render()
 
 Al representar la escena, recorres todos los objetos que se deben representar. Los siguientes pasos se repiten para cada objeto (primitivo).
 
-* Actualizar el búfer de constantes (__m\_constantBufferChangesEveryPrim__) con el modelo [matriz de transformación universal](#world-transform-matrix) e información de material.
-* El __m\_constantBufferChangesEveryPrim__ contiene parámetros para cada objeto.  Incluye la matriz de transformación objeto a mundo, así como propiedades de materiales, como el color y el exponente especular para calcular la iluminación.
+* Actualice el búfer de constantes (__m\_constantBufferChangesEveryPrim__) con la [matriz de transformación universal](#world-transform-matrix) del modelo y la información del material.
+* La __m\_constantBufferChangesEveryPrim__ contiene parámetros para cada objeto.  Incluye la matriz de transformación objeto a mundo, así como propiedades de materiales, como el color y el exponente especular para calcular la iluminación.
 * Definir el contexto de Direct3D para usar el diseño de vértice de entrada para que los datos de objeto de malla se transmitan en la fase de ensamblador-entrada (IA) de la [canalización de representación](#rendering-pipeline)
 * Establecer el contexto de Direct3D para usar un [búfer de índices](#index-buffer) en la fase de IA. Proporciona la información del primitivo: tipo, orden de datos.
-* Enviar una llamada Draw para dibujar al primitivo indexado sin instancia. El método __GameObject::Render__ actualiza el [búfer de constantes](#constant-buffer-or-shader-constant-buffer) primitivas con los datos específicos a un primitivo determinado. El resultado de todo esto es una llamada a __DrawIndexed__ en el contexto para dibujar la geometría de cada primitivo. En concreto, esta llamada a Draw coloca comandos y datos en la cola para la unidad de procesos de gráficos (GPU), parametrizados por los datos del búfer de constantes. Cada llamada a draw ejecuta el sombreador de vértices una vez por cada vértice y, a continuación, el [sombreador de píxeles](#vertex-shaders-and-pixel-shaders) una vez para cada píxel de cada triángulo en la primitiva. Las texturas forman parte del estado que el sombreador de píxeles usa para llevar a cabo la representación.
+* Enviar una llamada Draw para dibujar al primitivo indexado sin instancia. El método __GameObject::Render__ actualiza el [búfer de constantes](#constant-buffer-or-shader-constant-buffer) primitivas con los datos específicos a un primitivo determinado. El resultado de todo esto es una llamada a __DrawIndexed__ en el contexto para dibujar la geometría de cada primitivo. En concreto, esta llamada a Draw coloca comandos y datos en la cola para la unidad de procesos de gráficos (GPU), parametrizados por los datos del búfer de constantes. Cada llamada a Draw ejecuta el sombreador de vértices una vez por vértice y, después, el [sombreador de píxeles](#vertex-shaders-and-pixel-shaders) una vez por cada píxel de cada triángulo de la primitiva. Las texturas forman parte del estado que el sombreador de píxeles usa para llevar a cabo la representación.
 
 Razones para varios búferes de constantes:
-    * El juego usa múltiples búferes de constantes, pero sólo necesita actualizar dichos búferes una vez por primitivo. Como se ha mencionado antes, los búferes de constantes son como entradas para los sombreadores que se ejecutan para cada primitivo. Algunos datos son estáticos (__m\_constantBufferNeverChanges__); están constantes algunos datos sobre el marco (__m\_constantBufferChangesEveryFrame__), al igual que la posición de la cámara; y algunos datos están específicos para el tipo primitivo, como el color y las texturas (__m\_constantBufferChangesEveryPrim__)
+    * El juego usa múltiples búferes de constantes, pero sólo necesita actualizar dichos búferes una vez por primitivo. Como se ha mencionado antes, los búferes de constantes son como entradas para los sombreadores que se ejecutan para cada primitivo. Algunos datos son estáticos (__m\_constantBufferNeverChanges__); algunos datos son constantes sobre el marco (__m\_constantBufferChangesEveryFrame__), como la posición de la cámara; y algunos datos son específicos de la primitiva, como el color y las texturas (__m\_constantBufferChangesEveryPrim__)
     * El representador del juego separa estas entradas en distintos búferes de constantes para optimizar el ancho de banda de la memoria que usan la CPU y la GPU. Esta medida ayuda a minimizar la cantidad de datos de los que la GPU debe realizar un seguimiento. La GPU tiene una gran cola de comandos y que, cada vez que el juego llama a __Draw__, ese comando se pone a la cola junto con sus datos asociados. Cuando el juego actualiza el búfer de constantes de primitivos y envía el siguiente comando __Draw__, el controlador de gráficos agrega este comando siguiente y los datos asociados a la cola. Si el juego dibuja 100 primitivos, podría haber potencialmente 100 copias de los datos del búfer de constantes en la cola. Para minimizar la cantidad de datos que el juego envía a la GPU, el juego use un búfer de constantes de primitivos independiente que solo contiene las actualizaciones de cada primitivo.
 
 #### <a name="gameobjectrender-method"></a>Método GameObject::Render
@@ -431,7 +431,7 @@ Llamamos al método __DX::DeviceResources::Present__ para colocar el contenido q
 
 Usamos el término cadena de intercambio para una colección de búferes que se usan para mostrar fotogramas al usuario. Cada vez que una aplicación presenta un nuevo marco para mostrar, el primer búfer de la cadena de intercambio toma el lugar del búfer que se muestra. Este proceso se denomina intercambio o inversión. Para obtener más información, consulta [Cadenas de intercambio](../graphics-concepts/swap-chains.md).
 
-* El método __actual__ de la interfaz __IDXGISwapChain1__ le indica a [DXGI](#dxgi) que bloquee hasta la sincronización vertical (VSync), con lo que la aplicación pasa a modo de suspensión hasta la próxima VSync. Esto garantiza que no pierdas ningún ciclo representando fotogramas que nunca se mostrarán en la pantalla.
+* El método actual de la interfaz __IDXGISwapChain1__ le indica a [DXGI](#dxgi) que bloquee hasta la sincronización vertical (VSync), con lo que la aplicación pasa a modo de suspensión hasta la próxima VSync. Esto garantiza que no pierdas ningún ciclo representando fotogramas que nunca se mostrarán en la pantalla.
 * El método __DiscardView__ de la interfaz __ID3D11DeviceContext3__ descarta el contenido del [destino de representación](#render-target). Esta es una operación válida únicamente cuando el contenido existente se sobrescribirá por completo. Si se usan rectángulos de modificación o desplazamiento, esta llamada debe quitarse.
 * Con el mismo método __DiscardView__, descarta el contenido de la [galería de símbolos de profundidad](#depth-stencil).
 * El método __HandleDeviceLost__ se usa para administrar el escenario si el [dispositivo](#device) se quita. Si el dispositivo se quitó con una desconexión o una actualización del controlador, debes volver a crear todos los recursos del dispositivo. Para obtener más información, consulta [Controlar escenarios cuando se quitan dispositivos en Direct3D 11](handling-device-lost-scenarios.md).
@@ -473,7 +473,7 @@ void DX::DeviceResources::Present()
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Este artículo ha explicado cómo se representan los gráficos en la pantalla y ha proporcionado una breve descripción de algunos de los términos de representación usados. Más información sobre la representación en el [II del marco de representación: Representación de juegos](tutorial-game-rendering.md) artículo y aprenda a preparar los datos necesarios antes de la representación.
+Este artículo ha explicado cómo se representan los gráficos en la pantalla y ha proporcionado una breve descripción de algunos de los términos de representación usados. Puedes obtener más información sobre la representación en el artículo [Marco de representación II: Representación de juego](tutorial-game-rendering.md) y aprender a preparar los datos necesarios antes de la representación.
 
 ## <a name="terms-and-concepts"></a>Términos y conceptos
 
@@ -490,10 +490,10 @@ La información de la escena y el objeto se usa por el marco de representación 
 La canalización de representación es el proceso en el que la información de la escena en 3D se convierte en una imagen que aparece en pantalla. En Direct3D 11, esta canalización es programable. Puedes adaptar las fases para que sean compatibles con tus necesidades de representación. Las fases que incluyen núcleos de sombreador comunes pueden programarse mediante el lenguaje de programación HLSL. Es también conocida como la canalización de la representación de gráficos o simplemente la canalización.
 
 Para ayudarte a crear esta canalización, debes estar familiarizado con lo siguiente:
-* [HLSL](#HLSL). Se recomienda el uso de HLSL Shader Model 5.1 y superior para juegos DirectX de UWP.
-* [Sombreadores](#Shaders)
-* [Los sombreadores de vértices y los sombreadores de píxeles](#vertext-shaders-pixel-shaders)
-* [Etapas del sombreador](#shader-stages)
+* [HLSL](#hlsl). Se recomienda el uso de HLSL Shader Model 5.1 y superior para juegos DirectX de UWP.
+* [Sombreadores](#shaders)
+* [Sombreadores de vértices y sombreadores de píxeles](#vertex-shaders-and-pixel-shaders)
+* [Fases del sombreador](#shader-stages)
 * [Varios formatos de archivo de sombreador](#various-shader-file-formats)
 
 Para obtener más información, consulta [Comprender la canalización de representación de Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3dgetstarted/understand-the-directx-11-2-graphics-pipeline) y [Canalización de gráficos](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-graphics-pipeline).
@@ -533,11 +533,11 @@ Extensiones de archivo de código de sombreador:
 
 Direct3D 11 es un conjunto de API que nos ayudan a crear gráficos para aplicaciones con gran cantidad de gráficos, como los juegos, donde necesitamos una buena tarjeta gráfica para procesar un cálculo intensivo. Esta sección explica brevemente los conceptos de programación de gráficos de Direct3D 11: recurso, subrecurso, dispositivo y contexto de dispositivo.
 
-#### <a name="resource"></a>Resource
+#### <a name="resource"></a>Recurso
 
 Para aquellos que son nuevos, los recursos (también conocidos como recursos de dispositivo) son como información sobre la representación de un objeto como texturas, posición y color. Los recursos proporcionan datos a la canalización y definen lo que se representa en la escena. Los recursos se pueden cargar desde el medio de juegos o crearse de forma dinámica en tiempo de ejecución.
 
-Un recurso es, de hecho, un área en la memoria a la que puede obtener acceso la [canalización](#rendering-pipeline) de Direct3D. Para que la canalización pueda obtener acceso a la memoria de forma eficiente, los datos que se proporcionan a la canalización (por ejemplo, geometría de entrada, recursos del sombreador y texturas) deben almacenarse en un recurso. Hay dos tipos de recursos de los que derivan todos los recursos de Direct3D: un búfer o una textura. Se pueden activar hasta 128 recursos para cada fase de la canalización. Para obtener más información, consulta [Recursos](../graphics-concepts/resources.md).
+Un recurso es, de hecho, un área en la memoria a la que puede obtener acceso la [canalización](#rendering-pipeline) de Direct3D. Para que la canalización pueda acceder a la memoria de forma eficiente, los datos que se proporcionan a la canalización (por ejemplo, geometría de entrada, recursos del sombreador y texturas) deben almacenarse en un recurso. Hay dos tipos de recursos de los que derivan todos los recursos de Direct3D: un búfer o una textura. Se pueden activar hasta 128 recursos para cada fase de la canalización. Para obtener más información, consulta [Recursos](../graphics-concepts/resources.md).
 
 #### <a name="subresource"></a>Subrecurso
 
@@ -549,7 +549,7 @@ Una recurso de galería de símbolos de profundidad contiene el formato y el bú
 
 La información de profundidad nos dice qué áreas de polígonos se representan en lugar de ocultarse de la vista. La información de la galería de símbolos nos indica qué píxeles se enmascaran. Se puede usar para producir efectos especiales, ya que determina si se dibuja un píxel o no; establece el bit a 1 o 0. 
 
-Para obtener más información, vea: [Vista de galería de símbolos de profundidad](../graphics-concepts/depth-stencil-view--dsv-.md), [búfer de profundidad](../graphics-concepts/depth-buffers.md), y [búfer de galería de símbolos](../graphics-concepts/stencil-buffers.md).
+Para obtener más información, consulta: [Vista de galería de símbolos de profundidad](../graphics-concepts/depth-stencil-view--dsv-.md), [búfer de profundidad](../graphics-concepts/depth-buffers.md), y [búfer de galería de símbolos](../graphics-concepts/stencil-buffers.md).
 
 #### <a name="render-target"></a>Destino de representación
 
@@ -561,13 +561,13 @@ Cada destino de representación debe tener también una vista de galería de sí
 
 Para los que no conocen Direct3D 11, un dispositivo es una manera de asignar y destruir objetos, representar primitivos y comunicarse con la tarjeta gráfica mediante el controlador de gráficos. 
 
-Para una explicación más precisa, un dispositivo Direct3D es el componente de representación de Direct3D. Un dispositivo encapsula y almacena el estado de representación, transforma, ilumina y rasteriza una imagen en una superficie. Para obtener más información, consulta [Dispositivos](../graphics-concepts/devices.md).
+Para una explicación más precisa, un dispositivo Direct3D es el componente de representación de Direct3D. Un dispositivo encapsula y almacena el estado de representación, realiza transformaciones y operaciones de iluminación y rasteriza una imagen en una superficie. Para obtener más información, consulta [Dispositivos](../graphics-concepts/devices.md).
 
 Un dispositivo está representado mediante la interfaz [ID3D11Device](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11device). En otras palabras, la interfaz ID3D11Device representa un adaptador de pantalla virtual y se usa para crear los recursos que pertenecen a un dispositivo. 
 
 Ten en cuenta que hay diferentes versiones de ID3D11Device, [ID3D11Device5](https://docs.microsoft.com/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11device5) es la versión más reciente y agrega nuevos métodos a los de ID3D11Device4. Para obtener más información sobre cómo se comunica Direct3D con el hardware subyacente, consulta [Arquitectura del modelo de controlador de dispositivo de Windows (WDDM)](https://docs.microsoft.com/windows-hardware/drivers/display/windows-vista-and-later-display-driver-model-architecture).
 
-Cada aplicación debe tener al menos un dispositivo, la mayoría de las aplicaciones solo crea un dispositivo. Crear un dispositivo para uno de los controladores de hardware instalados en su equipo mediante una llamada a __D3D11CreateDevice__ o __D3D11CreateDeviceAndSwapChain__ y especificando el tipo de controlador con el D3D\_ CONTROLADOR\_indicador de tipo. Cada dispositivo puede usar uno o varios contextos de dispositivo, según las funciones deseadas. Para más información consulta [Función D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice).
+Cada aplicación debe tener al menos un dispositivo, la mayoría de las aplicaciones solo crea un dispositivo. Cree un dispositivo para uno de los controladores de hardware instalados en el equipo mediante una llamada a __D3D11CreateDevice__ o __D3D11CreateDeviceAndSwapChain__ y especifique el tipo de controlador con la marca de tipo\_de\_del controlador D3D. Cada dispositivo puede usar uno o varios contextos de dispositivo, según las funciones deseadas. Para más información consulta [Función D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice).
 
 #### <a name="device-context"></a>Contexto de dispositivo
 
@@ -577,17 +577,17 @@ Direct3D 11 implementa dos tipos de contextos de dispositivo, uno para la repres
 
 Las interfaces __ID3D11DeviceContext__ tienen diferentes versiones; __ID3D11DeviceContext4__ agrega nuevos métodos a los de __ID3D11DeviceContext3__.
 
-Nota: __ID3D11DeviceContext4__ se introdujo en Windows 10 Creators Update y es la versión más reciente de la __ID3D11DeviceContext__ interfaz. Las aplicaciones orientadas a Windows 10 Creators Update deben usar esta interfaz en lugar de las versiones anteriores. Para obtener más información, consulta [ID3D11DeviceContext4](https://docs.microsoft.com/windows/desktop/api/d3d11_3/nn-d3d11_3-id3d11devicecontext4).
+Nota: __ID3D11DeviceContext4__ se introduce en la Windows 10 Creators Update y es la versión más reciente de la interfaz __ID3D11DeviceContext__. Las aplicaciones orientadas a Windows 10 Creators Update deben usar esta interfaz en lugar de las versiones anteriores. Para obtener más información, consulta [ID3D11DeviceContext4](https://docs.microsoft.com/windows/desktop/api/d3d11_3/nn-d3d11_3-id3d11devicecontext4).
 
 #### <a name="dxdeviceresources"></a>DX::DeviceResources
 
-La clase __DX::DeviceResources__ está en los archivos .h de __DeviceResources.cpp__/ __.h__ y controla todos los recursos de dispositivo de DirectX. En el proyecto de juego de muestra y en el proyecto de plantilla de DirectX 11 App, estos archivos están en la carpeta __Commons__. Puedes conseguir la versión más reciente de estos archivos al crear un nuevo proyecto de plantilla DirectX 11 App en Visual Studio 2015 o posterior.
+La clase __DX::DeviceResources__ está en los archivos .h de __DeviceResources.cpp__/ y controla todos los recursos de dispositivo de DirectX. En el proyecto de juego de muestra y en el proyecto de plantilla de DirectX 11 App, estos archivos están en la carpeta __Commons__. Puedes conseguir la versión más reciente de estos archivos al crear un nuevo proyecto de plantilla DirectX 11 App en Visual Studio 2015 o posterior.
 
 ### <a name="buffer"></a>Búfer
 
 Un recurso de búfer es una colección de datos completos agrupados en elementos. Puedes usar búferes para almacenar una gran cantidad de datos, como vectores de posiciones, vectores normales, coordenadas de textura en un búfer de vértices, índices en un búfer de índices o estados de dispositivo. Los elementos de búfer pueden incluir valores de datos agrupados (por ejemplo, valores de superficie R8G8B8A8), enteros de 8 bits únicos o cuatro valores de punto flotante de 32 bits.
 
-Hay tres tipos de búferes disponibles: Búfer de vértices, búferes de índice y búfer de constantes.
+Existen tres tipos de búferes disponibles: búfer de vértices, búfer de índices y búfer de constantes.
 
 #### <a name="vertex-buffer"></a>Búfer de vértices
 
@@ -616,7 +616,7 @@ Para obtener más información consulta [Introducción a los búferes en Direct3
 
 ### <a name="dxgi"></a>DXGI
 
-Microsoft DirectX Graphics Infrastructure (DXGI) es un subsistema nuevo que se introdujo con Windows Vista que encapsula algunas de las tareas de bajo nivel que son necesarios por Direct3D 10, versión 10.1, 11 y 11.1. Se debe tener especial cuidado al usar DXGI en una aplicación multiproceso, para garantizar que no se producen interbloqueos. Para obtener más información, consulte [DirectX Graphics Infrastructure (DXGI): Prácticas recomendadas-Multithreading](https://docs.microsoft.com/windows/desktop/direct3darticles/dxgi-best-practices)
+Microsoft DirectX Graphics Infrastructure (DXGI) es un nuevo subsistema que se presentó con Windows Vista que encapsula algunas de las tareas de bajo nivel que son necesarias en Direct3D 10, 10,1, 11 y 11,1. Se debe tener especial cuidado al usar DXGI en una aplicación multiproceso, para garantizar que no se producen interbloqueos. Para obtener más información, consulta [Infraestructura de gráficos DirectX (DXGI): Procedimientos recomendados- Multiproceso](https://docs.microsoft.com/windows/desktop/direct3darticles/dxgi-best-practices)
 
 ### <a name="feature-level"></a>Nivel de características
 
@@ -624,9 +624,9 @@ El nivel de características es un concepto que se introdujo en Direct3D 11 para
 
 Cada tarjeta de vídeo implementa un cierto nivel de funcionalidad DirectX, en función de las GPU instaladas. En versiones anteriores de Microsoft Direct3D, podías averiguar la versión de Direct3D de la tarjeta de vídeo implementada y, a continuación, programar la aplicación de la manera correspondiente. 
 
-Con el nivel de características, cuando creas un dispositivo, puedes intentar crear un dispositivo para el nivel de características que deseas solicitar. Si la creación de dispositivos funciona, ese nivel de característica existe, si no, el hardware no admite ese nivel de características. Puedes intentar volver a crear un dispositivo a un nivel de características inferior o puedes elegir salir de la aplicación. Por ejemplo, las 12\_nivel 0 requiere Direct3D 11.3 o Direct3D 12 y el modelo de sombreador 5.1. Para obtener más información, consulte [niveles de características de Direct3D: Información general para cada nivel de característica](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro).
+Con el nivel de características, cuando creas un dispositivo, puedes intentar crear un dispositivo para el nivel de características que deseas solicitar. Si la creación de dispositivos funciona, ese nivel de característica existe, si no, el hardware no admite ese nivel de características. Puedes intentar volver a crear un dispositivo a un nivel de características inferior o puedes elegir salir de la aplicación. Por ejemplo, el nivel de características 12\_0 requiere Direct3D 11,3 o Direct3D 12 y el modelo de sombreador 5,1. Para obtener más información, consulta [Niveles de característica de Direct3D: Introducción para cada nivel de características](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro).
 
-Usar niveles de características, puede desarrollar una aplicación de Direct3D 9, Microsoft Direct3D 10 o Direct3D 11 y, a continuación, ejecútelo en 9, 10 u 11 hardware (con algunas excepciones). Para más información, consulta [Niveles de características Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro).
+Con los niveles de características, puede desarrollar una aplicación para Direct3D 9, Microsoft Direct3D 10 o Direct3D 11 y, a continuación, ejecutarla en el hardware de 9, 10 u 11 (con algunas excepciones). Para más información, consulta [Niveles de características Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro).
 
 ### <a name="stereo-rendering"></a>Representación en estéreo
 
@@ -650,10 +650,10 @@ Donde:
 * M (modelo a mundo) es una matriz de transformación para coordenadas de modelo a coordenadas de mundo, también conocida como la [Matriz de transformación de mundo](#world-transform-matrix). Lo proporciona el primitivo.
 * M (mundo a vista) es una matriz de transformación para coordenadas de mundo a coordenadas de vista, también conocida como la [Matriz de transformación de vista](#view-transform-matrix).
     * Lo proporciona la matriz de vista de la cámara. Se define por la posición de la cámara junto con los vectores de vista (el vector de vista que apunta directamente a la escena desde la cámara y el vector de vista hacia arriba situado hacia arriba y perpendicular a la primera vista).
-    * En el juego de ejemplo, __m\_viewMatrix__ es la matriz de transformación de vista y se calcula mediante __Camera::SetViewParams__ 
+    * En el juego de ejemplo, __m\_viewMatrix__ es la matriz de transformación de vistas y se calcula mediante __Camera:: SetViewParams__ 
 * M (vista a dispositivo) es una matriz de transformación para coordenadas de vista a coordenadas de dispositivo, también conocida como la [Matriz de transformación de proyección](#projection-transform-matrix).
     * Lo proporciona la proyección de la cámara. Proporciona información sobre la cantidad de ese espacio que está realmente visible en la escena final. El campo de visión (FoV), relación de aspecto y los planos de recorte definen la matriz de transformación de proyección.
-    * En el juego de ejemplo, __m\_projectionMatrix__ define la transformación a las coordenadas de proyección, que se calcula mediante __Camera::SetProjParams__ (para la proyección estéreo, se usan dos matrices de proyección: uno para cada vista del.) 
+    * En el juego de ejemplo, __m\_projectionMatrix__ define la transformación en las coordenadas de proyección, calculada mediante __Camera:: SetProjParams__ (para la proyección estéreo, se usan dos matrices de proyección: una para cada vista de ojo). 
 
 El código de sombreador en VertexShader.hlsl se carga con estos vectores y matrices desde los búferes de constantes y realiza esta transformación para cada vértice.
 

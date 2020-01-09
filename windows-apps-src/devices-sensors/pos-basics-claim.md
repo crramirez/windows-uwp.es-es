@@ -5,12 +5,12 @@ ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f3fc2b2aa10fedf143c55158e521b2c1cd5b75d
-ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
+ms.openlocfilehash: bc3a8afbc0d3ca4655e0b1745090db633bcd92b7
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816692"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684675"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>Notificaciones de dispositivo de punto de servicio y habilitar modelo
 
@@ -23,7 +23,7 @@ Después de haber creado un objeto de dispositivo PointOfService correctamente, 
 
 ### <a name="apis-used-to-claim--release"></a>API usadas para notificar o liberar
 
-|Dispositivo|Notificación | Lanzamiento | 
+|Dispositivo|Notificación | Publicación | 
 |-|:-|:-|
 |BarcodeScanner | [BarcodeScanner.ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync) | [ClaimedBarcodeScanner. Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.close) |
 |CashDrawer | [CashDrawer.ClaimDrawerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.cashdrawer.claimdrawerasync) | [ClaimedCashDrawer. Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.close) | 
@@ -81,7 +81,7 @@ Este ejemplo muestra cómo reclamar un dispositivo de escáner de códigos de ba
 
 > [!Warning]
 > Una notificación se puede perder en las siguientes circunstancias:
-> 1. Otra aplicación ha solicitado una notificación del mismo dispositivo y la aplicación no emitió un **RetainDevice** en respuesta al evento **ReleaseDeviceRequested**.  (Consulta [Negociación de notificaciones](#Claim-negotiation) a continuación para obtener más información.)
+> 1. Otra aplicación ha solicitado una notificación del mismo dispositivo y la aplicación no emitió un **RetainDevice** en respuesta al evento **ReleaseDeviceRequested**.  (Consulta [Negociación de notificaciones](#claim-negotiation) a continuación para obtener más información.)
 > 2. Se ha suspendido la aplicación, lo que ha originado que se cierre el objeto del dispositivo y que la notificación ya no sea válida. (Consulta [Ciclo de vida de objetos de dispositivos](pos-basics-deviceobject.md#device-object-lifecycle) para obtener más información.)
 
 

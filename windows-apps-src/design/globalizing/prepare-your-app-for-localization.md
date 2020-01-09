@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 341d46879895da221e3a17ba88f28fd22e7c5e27
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 9e0991a8a06054b6136dfc1fd65c15dbeb66e6fd
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258100"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684260"
 ---
 # <a name="make-your-app-localizable"></a>Hacer que la aplicación sea localizable
 
@@ -46,7 +46,7 @@ Usar cadenas de tamaño apropiado. Las cadenas cortas son más fáciles de tradu
 
 Pero, en tensión con esta directriz, está el riesgo de volver a usar una cadena en contextos diferentes. Incluso las palabras más simples como &quot;activado&quot; y &quot;desactivado&quot; pueden traducirse de manera diferente según el contexto. En inglés "on" y "off" pueden usarse para alternar entre el modo de vuelo, la red Bluetooth y los dispositivos. No obstante, en italiano, la traducción depende del contexto de lo que se activa o desactiva. Debes crear un par de cadenas para cada contexto. Puedes volver a usar las cadenas si dos contextos son iguales. Por ejemplo, puedes volver a usar la cadena "Volume" tanto para el volumen de los efectos de sonido como para el volumen de la música porque ambos hacen referencia a la intensidad del sonido. En cambio, no debes volver a usar la misma cadena cuando hagas referencia a "Volume" cuando se refiera al disco duro, porque el contexto y el significado son diferentes y la palabra puede traducirse de manera diferente.
 
-Igualmente, una cadena como "text" o "fax" puede usarse tanto como verbo como sustantivo en inglés, lo que puede causar confusión en el proceso de traducción. En su lugar, crea una cadena separada para el formato de verbo y el de sustantivo. Cuando no estés seguro de si el contexto es el mismo, por si acaso usa una cadena diferente.
+Igualmente, una cadena como "text" o "fax" puede usarse tanto como verbo como sustantivo en inglés, lo que puede causar confusión en el proceso de traducción. En su lugar, crea una cadena separada para el formato de verbo y el de sustantivo. Cuando no estés seguro de si el contexto es el mismo, por si acaso, usa una cadena diferente.
 
 En resumen, factorizar las cadenas en las partes que funcionan en todos los contextos. Habrá casos donde una cadena deberá ser una oración completa.
 
@@ -54,7 +54,7 @@ Considere la siguiente cadena: "no se pudo sincronizar el {0}."
 
 Una variedad de palabras podría reemplazar {0}, como "appointment", "Task" o "Document". Si bien este ejemplo funciona para el inglés, no lo hará en todos los casos para la misma oración en alemán, por ejemplo. Ten en cuenta que en las siguientes oraciones en alemán, algunas de las palabras de la cadena de plantilla ("Der", "Die", "Das") tienen que coincidir con la palabra parametrizada:
 
-| Inglés                                    | Alemán                                           |
+| English                                    | Alemán                                           |
 |:------------------------------------------ |:------------------------------------------------ |
 | The appointment could not be synchronized. | Der Termin konnte nicht synchronisiert werden.   |
 | No pudo sincronizarse la tarea.        | Die Aufgabe konnte nicht synchronisiert werden.  |
@@ -80,14 +80,14 @@ Usar una voz o tono informal en las cadenas es una opción válida. Puedes usar 
 
 Pseudolocaliza tu aplicación para descubrir los problemas de localización. Pseudolocalización es un tipo de localización de ejecución en seco o prueba de divulgación. Se produce un conjunto de recursos que no están traducidos realmente, solo lo parecen. Por ejemplo, las cadenas son aproximadamente un 40 % más largas que en el idioma predeterminado y tienen delimitadores para que puedas ver de un solo vistazo si se han truncado en la interfaz de usuario.
 
-## <a name="deployment-considerations"></a>Consideraciones de implementación
+## <a name="deployment-considerations"></a>Reflexiones sobre la implementación
 
 Cuando se instala una aplicación que contiene datos de idioma localizados, es posible que solo esté disponible el idioma predeterminado para la aplicación aunque se hayan incluido inicialmente recursos para varios idiomas. Esto se debe a que el proceso de instalación está optimizado para instalar solo los recursos de idioma que coinciden con el idioma y la referencia cultural actuales del dispositivo. Por lo tanto, si el dispositivo está configurado para en-US, solo los recursos de idioma en-US se instalan con la aplicación.
 
 > [!NOTE]
 > No es posible instalar compatibilidad de idioma adicional para la aplicación después de la instalación inicial. Si cambia el idioma predeterminado después de instalar una aplicación, la aplicación continúa usando solo los recursos de idioma originales.
 
-Si desea asegurarse de que todos los recursos de idioma están disponibles después de la instalación, cree un archivo de configuración para el paquete de aplicación que especifique que se requieren determinados recursos durante la instalación (incluidos los recursos de idioma). Esta característica de instalación optimizada se habilita automáticamente cuando se genera el. appxbundle de la aplicación durante el empaquetado. Para obtener más información, consulte [asegurarse de que los recursos se instalan en un dispositivo independientemente de si un dispositivo los requiere](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)).
+Si desea asegurarse de que todos los recursos de idioma están disponibles después de la instalación, cree un archivo de configuración para el paquete de aplicación que especifique que se requieren determinados recursos durante la instalación (incluidos los recursos de idioma). Esta característica de instalación optimizada se habilita automáticamente cuando se genera el. appxbundle de la aplicación durante el empaquetado. Para obtener más información, consulte [asegurarse de que los recursos se instalan en un dispositivo independientemente de si un dispositivo los requiere](https://docs.microsoft.com/previous-versions/dn482043(v=vs.140)).
 
 Opcionalmente, para asegurarse de que todos los recursos están instalados (no solo un subconjunto), puede deshabilitar la generación de. appxbundle al empaquetar la aplicación. Sin embargo, esto no es recomendable, ya que puede aumentar el tiempo de instalación de la aplicación.
 
@@ -101,7 +101,7 @@ Deshabilite la generación automática del. appxbundle estableciendo el atributo
 
 ## <a name="geopolitical-awareness"></a>Reconocimiento geopolítico
 
-Evita agresiones políticas en mapas o cuando hagas referencia a regiones. Los mapas pueden incluir fronteras nacionales e internacionales controvertidas, lo que frecuentemente es un origen de ofensa política. Ten cuidado de hacer que cualquier UI usada para seleccionar una nación haga referencia a ella como &quot;país o región&quot;. Colocar un territorio en disputa en una lista llamada &quot;países&quot;, como en un formulario de direcciones, puede generarte problemas.
+Evita agresiones políticas en mapas o cuando hagas referencia a regiones. Los mapas pueden incluir fronteras nacionales e internacionales controvertidas, lo que frecuentemente es un origen de ofensa política. Ten cuidado de hacer que cualquier interfaz de usuario usada para seleccionar una nación haga referencia a ella como &quot;país o región&quot;. Colocar un territorio en disputa en una lista llamada &quot;países&quot;, como en un formulario de direcciones, puede generarte problemas.
 
 ## <a name="language--and-region-changed-events"></a>Eventos de cambio de idioma y región
 
@@ -130,7 +130,7 @@ Incluir la etiqueta `<link>` en el archivo de recursos (.resw) significa que, ad
 
 ## <a name="choose-an-appropriate-translation-approach"></a>Elegir un enfoque de traducción apropiado
 
-Después de que las cadenas se separan en archivos de recursos, pueden traducirse. El momento ideal para traducir cadenas es después de que se finalizan las cadenas de un proyecto, que generalmente sucede hacia el final de éste. Puedes abordar el proceso de traducción de diferentes maneras, según el volumen de cadenas por traducir, el número de idiomas por traducir y el modo en que se realizará la traducción (como internamente en contraposición a mediante la contratación de un proveedor externo).
+Después de que las cadenas se separen en archivos de recursos, pueden traducirse. El momento ideal para traducir cadenas es después de que se finalizan las cadenas de un proyecto, que generalmente sucede hacia el final de éste. Puedes abordar el proceso de traducción de diferentes maneras, según el volumen de cadenas por traducir, el número de idiomas por traducir y el modo en que se realizará la traducción (como internamente en contraposición a mediante la contratación de un proveedor externo).
 
 Ten en cuenta estas opciones.
 
@@ -142,8 +142,8 @@ Ten en cuenta estas opciones.
 
 También debe tener en cuenta lo siguiente:
 
-- **Herramientas de localización** Hay varias herramientas de localización disponibles para analizar archivos de recursos y permitir que los traductores solo editen las cadenas traducibles. Este enfoque reduce el riesgo de que un traductor edite las etiquetas XML por error, pero tiene la desventaja de introducir un nuevo proceso y herramienta al proceso de localización. Una herramienta de localización es un buen recurso para organizar proyectos que tengan un gran volumen de cadenas pero que solo necesiten traducirse a una pequeña cantidad de idiomas. Para obtener más información, consulta el artículo acerca de [Cómo usar el Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/previous-versions/windows/apps/jj572370(v=win.10)).
-- **Proveedores de localización** Considere la posibilidad de usar un proveedor de localización si la aplicación contiene grandes cadenas que deben traducirse en un gran número de idiomas. Un proveedor de localizaciones puede darte consejo sobre las herramientas y los procesos, así como traducir tus archivos de recursos. Esta es una solución ideal, pero también la opción más costosa, y puede aumentar los tiempos de entrega para el contenido traducido.
+- **Herramientas de localización** Hay varias herramientas de localización disponibles para analizar archivos de recursos y permitir que los traductores solo editen las cadenas traducibles. Este enfoque reduce el riesgo de que un traductor edite las etiquetas XML por error, pero tiene la desventaja de introducir un nuevo proceso y herramienta al proceso de localización. Una herramienta de localización es un buen recurso para organizar proyectos que tengan un gran volumen de cadenas pero que solo necesiten traducirse a una pequeña cantidad de idiomas. Para obtener más información, consulta [Cómo usar el kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/previous-versions/windows/apps/jj572370(v=win.10)).
+- **Proveedores de localización** Considere la posibilidad de usar un proveedor de localización si la aplicación contiene grandes cadenas que deben traducirse en un gran número de idiomas. Un proveedor de localizaciones puede darte consejo sobre las herramientas y los procesos, así como traducir tus archivos de recursos. Esta es una solución ideal, pero también la opción más costosa y puede aumentar los tiempos de entrega para el contenido traducido.
 
 ## <a name="keep-access-keys-and-labels-consistent"></a>Mantener la coherencia de las claves de acceso y las etiquetas
 
@@ -171,7 +171,7 @@ Los caracteres en kanji japonés tienen la propiedad de tener más de una lectur
 
 De esta manera, el usuario puede buscar el nombre de la aplicación "希蒼" usando tanto el valor furigana "のあ" (noa) como el valor fonético (mediante la función **GetPhonetic** del Editor de métodos de entrada (IME)) "まれあお" (mare-ao).
 
-El método de ordenación sigue el formato del **panel de control regional**:
+El método de ordenación sigue el formato del **Panel de control regional**:
 
 - En una configuración regional del usuario en japonés,
   - Si está habilitado el furigana, "希蒼" se ordena conforme a "の".

@@ -1,17 +1,17 @@
 ---
 title: Agregar controles
-description: Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego 3-D, y cómo va a desarrollar controles básicos para mandos, función táctil y mouse.
+description: Echemos un vistazo ahora al modo en que la muestra de juego implementa los controles de movimiento y vista en un juego en 3-D, y a cómo desarrollar controles básicos para mandos, toque y mouse.
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, controles, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c2b7031bf8afb047fcfc869e23ee1c398218af8
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: edc790ba949010fb1975317c5113ca02744889a0
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258426"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684563"
 ---
 # <a name="add-controls"></a>Agregar controles
 
@@ -37,11 +37,11 @@ En este momento tenemos un juego que presenta contenido, pero no podemos mover n
 ## <a name="common-control-behaviors"></a>Comportamientos de controles comunes
 
 
-Los controles táctiles y los controles de mouse o teclado tienen una implementación principal muy parecida. En una aplicación para UWP, un puntero es simplemente un punto en la pantalla. Puedes moverlo desplazando el ratón o deslizando un dedo por la pantalla táctil. Como resultado, puedes registrar un único conjunto de eventos y despreocuparte de si el jugador usa un mouse o una pantalla táctil para mover y presionar el puntero.
+Los controles táctiles y los controles de ratón/teclado tienen una implementación principal muy parecida. En una aplicación para UWP, un puntero es simplemente un punto en la pantalla. Puedes moverlo desplazando el ratón o deslizando un dedo por la pantalla táctil. Como resultado, puedes registrar un único conjunto de eventos y despreocuparte de si el jugador usa un mouse o una pantalla táctil para mover y presionar el puntero.
 
 Cuando la clase **MoveLookController** en la muestra de juego se inicializa, registra cuatro eventos específicos de puntero y uno específico de ratón:
 
-Evento | Descripción
+Suceso | Descripción
 :------ | :-------
 [**CoreWindow::P ointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointerpressed) | Se presionó (o se mantuvo presionado) el botón izquierdo o derecho del mouse o se tocó la superficie táctil.
 [**CoreWindow::P ointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) |El mouse se movió, o se realizó una acción de arrastrar en la superficie táctil.
@@ -84,7 +84,7 @@ Para determinar el momento en el que el juego debería estar escuchando una entr
 
 Estado | Descripción
 :----- | :-------
-**Ninguno** | Es el estado inicializado para el mando. Se ignoran todas las entradas porque el juego no espera la entrada de ningún controlador.
+**Ninguno** | Es el estado inicializado para el controlador. Se ignoran todas las entradas porque el juego no espera la entrada de ningún controlador.
 **WaitForInput** | El controlador está esperando que el jugador confirme un mensaje desde el juego mediante un clic con el botón izquierdo del mouse, un evento táctil, o con el botón de menú en un controlador para juegos.
 **Active** | El controlador está en modo de juego activo.
 
@@ -121,7 +121,7 @@ Cuando se llama, el método [**Update**](https://github.com/Microsoft/Windows-un
 
 
 
-El bucle de juego puede probar si el jugador está disparando llamando al método **IsFiring** en la instancia **MoveLookController**. El **MoveLookController** comprueba para ver si el jugador ha presionado el botón de disparo en uno de los tres tipos de entrada.
+El bucle de juego puede probar si el jugador está disparando llamando al método **IsFiring** en la instancia **MoveLookController**. **MoveLookController** comprueba si el jugador ha presionado el botón de disparo en uno de los tres tipos de entrada.
 
 ```cpp
 bool MoveLookController::IsFiring()
@@ -459,7 +459,7 @@ Este juego tiene el siguiente diseño de control para teclado y mouse.
 Entrada de usuario | Acción
 :------- | :--------
 W | El jugador se mueve hacia adelante
-A | El jugador se mueve a la izquierda
+Verás el botón | El jugador se mueve a la izquierda
 S | El jugador se mueve hacia atrás
 D | El jugador se mueve a la derecha
 X | Subir la vista
@@ -484,7 +484,7 @@ El mouse se trata de una forma ligeramente distinta a los controles táctiles, a
 
 Esto se controla en el método [**OnPointerPressed**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L179-L313) de **MoveLookController**.
 
-En este método comprobamos qué tipo de dispositivo de puntero se utiliza con la enumeración [`Windows::Devices::Input::PointerDeviceType`](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Input.PointerDeviceType). Si el juego está **Activo** y **PointerDeviceType** no es **Táctil**, damos por hecho que es la entrada de mouse.
+En este método comprobamos qué tipo de dispositivo de puntero se utiliza con la enumeración [`Windows::Devices::Input::PointerDeviceType`](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDeviceType). Si el juego está **Activo** y **PointerDeviceType** no es **Táctil**, damos por hecho que es la entrada de mouse.
 
 ```cpp
     case MoveLookControllerState::Active:
@@ -557,7 +557,7 @@ Cuando el jugador deja de presionar uno de los botones del mouse, se produce el 
 
 Ahora veamos el último tipo de control compatible: los controladores para juegos. Los controladores para juegos se manejan de forma independiente a los controles táctiles y de ratón, porque no usan el objeto de puntero. Por este motivo, unos nuevos controladores de eventos y métodos deben agregarse.
 
-## <a name="adding-gamepad-support"></a>Añadir compatibilidad con el controlador para juegos
+## <a name="adding-gamepad-support"></a>Agregar compatibilidad con el controlador para juegos
 
 
 En este juego, se añade la compatibilidad con el controlador para juegos llamando a las API [Windows.Gaming.Input](https://docs.microsoft.com/uwp/api/windows.gaming.input). Este conjunto de API proporciona acceso entradas de dispositivos de juegos como volantes de carreras o palancas de vuelo. 

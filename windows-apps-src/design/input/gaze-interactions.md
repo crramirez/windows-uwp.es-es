@@ -1,6 +1,6 @@
 ---
 title: Interacciones de mirada
-Description: Aprenda a diseñar y optimizar sus aplicaciones para UWP para proporcionar la mejor experiencia posible para los usuarios que se basan en la entrada de mirada desde herramientas de seguimiento del ojo y head.
+Description: Obtenga información sobre cómo diseñar y optimizar las aplicaciones de UWP para proporcionar la mejor experiencia posible a los usuarios que confían en la entrada de la mirada del ojo y del cabeza.
 label: Gaze interactions
 template: detail.hbs
 keywords: mirada, seguimiento de ojos, seguimiento de cabeza, punto de mirada, entrada, interacción del usuario, accesibilidad, facilidad de uso
@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3fb07dd9aec475566940dbf98ae6bd1c5f9c1337
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 6176bdce1a725c1024af9f4ecf0c37cabb0f5376
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317338"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684234"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>Interacciones de mirada y seguimiento de ojos en aplicaciones para UWP
 
@@ -29,14 +29,14 @@ Proporciona soporte técnico para realizar un seguimiento de la mirada del usuar
 
 **API importantes**: [Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview), [GazeDevicePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview), [GazeInputSourcePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 La entrada de mirada es un modo eficaz de interactuar y usar aplicaciones de Windows y UWP que es especialmente útil como una tecnología de asistencia para usuarios con enfermedades neuromusculares (por ejemplo, ELA) y otras limitaciones que implican discapacidades musculares o nerviosas.
 
 Además, la entrada de mirada ofrece igualmente atractivas oportunidades tanto para juegos (incluida adquisición y seguimiento del objetivo) y aplicaciones de productividad tradicionales, quioscos y otros escenarios interactivos donde dispositivos de entrada tradicionales (teclado, mouse, pantalla táctil) no están disponibles, o donde podría resultar útil/de ayuda liberar manos del usuario para otras tareas (por ejemplo, sujetar bolsas de compra).
 
 > [!NOTE]
-> La compatibilidad con el hardware de seguimiento de ojos se introdujo en **Windows 10 Fall Creators Update** junto con [Control ocular](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control), una característica integrada que permite usar los ojos para controlar el puntero en pantalla, escribir con el teclado en pantalla y comunicarse con personas utilizando texto a voz. Un conjunto de API de UWP ([Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) para crear aplicaciones que pueden interactuar con los ojos está disponible con el hardware de seguimiento **10 de abril de 2018 de Windows Update (versión 1803, compilación 17134)** y versiones más recientes.
+> La compatibilidad con el hardware de seguimiento de ojos se introdujo en **Windows 10 Fall Creators Update** junto con [Control ocular](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control), una característica integrada que permite usar los ojos para controlar el puntero en pantalla, escribir con el teclado en pantalla y comunicarse con personas utilizando texto a voz. Un conjunto de API de UWP ([Windows. Devices. Input. preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) para compilar aplicaciones que pueden interactuar con el hardware de seguimiento de ojos está disponible con la **actualización 2018 de abril de Windows 10 (versión 1803, compilación 17134)** y versiones más recientes.
 
 ## <a name="privacy"></a>Privacidad
 
@@ -44,7 +44,7 @@ Debido a los datos personales potencialmente sensibles recopilados por los dispo
 
 Además, si la aplicación recopila, almacena o transfiere datos de seguimiento de los ojos, debe describir esto en la declaración de privacidad de la aplicación y seguir todos los otros requisitos de **Información personal** en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [Directivas de Microsoft Store](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
-## <a name="setup"></a>Programa de instalación
+## <a name="setup"></a>Configuración
 
 Para usar las API de entrada de mirada en la aplicación para UWP tienes que: 
 
@@ -70,9 +70,9 @@ Se usa una pequeña elipse para mostrar dónde se encuentra el punto de mirada d
 
 ![Ejemplo de seguimiento de la mirada con temporizador](images/gaze/gaze-input-timed2.gif)
 
-*Observación de seguimiento con el ejemplo de temporizador*
+*Ejemplo de Tracking with Timer*
 
-**Descargar este ejemplo de [ejemplo de entrada de mirada (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)**
+**Descargar este ejemplo de [ejemplo de entrada de mirada (Basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)**
 
 1. En primer lugar, debemos configurar la interfaz de usuario (MainPage.xaml).
 
@@ -154,7 +154,7 @@ Se usa una pequeña elipse para mostrar dónde se encuentra el punto de mirada d
 
 2. A continuación, inicializamos nuestra aplicación.
 
-    En este fragmento de código, declaramos nuestros objetos globales e invalidamos el evento de la página [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) para iniciar nuestro [observador de dispositivo de mirada](https://docs.microsoft.com/en-us/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview) y el evento de página [OnNavigatedFrom](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) para detener nuestro [observador de dispositivo de mirada](https://docs.microsoft.com/en-us/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview).
+    En este fragmento de código, declaramos nuestros objetos globales e invalidamos el evento de la página [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) para iniciar nuestro [observador de dispositivo de mirada](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview) y el evento de página [OnNavigatedFrom](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) para detener nuestro [observador de dispositivo de mirada](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview).
 
     ```csharp
     using System;
@@ -499,9 +499,9 @@ Se usa una pequeña elipse para mostrar dónde se encuentra el punto de mirada d
     ```
 6. Por último, estos son los métodos usados para administrar el temporizador de foco de mirada para esta aplicación.
 
-    `DoesElementContainPoint` comprueba si el puntero mirada a través de la barra de progreso. Si es así, inicia el temporizador de mirada e incrementa la barra de progreso en cada tic del temporizador de mirada.
+    `DoesElementContainPoint` comprueba si el puntero mira en la barra de progreso. Si es así, inicia el temporizador de mirada e incrementa la barra de progreso en cada tic del temporizador de mirada.
 
-    `SetGazeTargetLocation` establece la ubicación inicial de la barra de progreso y, si la barra de progreso se completa (según el temporizador de foco mirada), la barra de progreso se mueve a una ubicación aleatoria.
+    `SetGazeTargetLocation` establece la ubicación inicial de la barra de progreso y, si la barra de progreso se completa (dependiendo del temporizador de enfoque de miras), mueve la barra de progreso a una ubicación aleatoria.
 
     ```csharp
     /// <summary>
@@ -596,12 +596,12 @@ Se usa una pequeña elipse para mostrar dónde se encuentra el punto de mirada d
     }
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 ### <a name="resources"></a>Recursos
 
-- [Biblioteca de observación de Kit de herramientas de comunidad de Windows](https://docs.microsoft.com/windows/communitytoolkit/gaze/gazeinteractionlibrary)
+- [Biblioteca de miras de Windows Community Toolkit](https://docs.microsoft.com/windows/communitytoolkit/gaze/gazeinteractionlibrary)
 
 ### <a name="topic-samples"></a>Ejemplos del tema
 
-- [Ejemplo (basic) que mirar (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)
+- [Miras de ejemplo (BasicC#) ()](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)
