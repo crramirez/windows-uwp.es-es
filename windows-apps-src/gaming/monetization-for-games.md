@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, juegos, monetización, games, monetization
 ms.localizationpriority: medium
-ms.openlocfilehash: 132f8c1d0ff314b794cc8464ec69cdf84f6a5f3b
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: baef3750b8dc076fd78c239cfc61662256e57c14
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258481"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685251"
 ---
 #  <a name="monetization-for-games"></a>Monetización para juegos
 
@@ -53,7 +53,7 @@ Las compras desde el juego son productos que se compran dentro de un juego. Tamb
 
 Puedes crear dos tipos de complementos en la Tienda: _duraderos_ o _consumibles_. Los complementos duraderos son artículos que persisten durante un período de tiempo especificado y se pueden comprar una sola vez hasta que expiran. Los complementos consumibles son artículos que se puedan comprar y usar una y otra vez.
 
-Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es decir, si son &mdash;administrados por el desarrollador_o_administrados por la Tienda_ (esta característica está disponible a partir de Windows 10, versión 1607). Con un consumible administrado por el desarrollador, usted es responsable de realizar un seguimiento del saldo del artículo para el jugador. con un consumible administrado por el almacén, el Microsoft Store realiza un seguimiento del saldo del elemento. Para obtener más información, consulta [Introducción a los complementos consumibles](https://docs.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases).
+Al crear complementos consumibles, decide cómo quieres hacer su seguimiento; es decir, si son _administrados por el desarrollador_ o _administrados por la Tienda_ (esta característica está disponible a partir de Windows 10, versión 1607). Con un consumible administrado por el desarrollador, usted es responsable de realizar un seguimiento del saldo del artículo para el jugador. con un consumible administrado por el almacén, el Microsoft Store realiza un seguimiento del saldo del elemento. Para obtener más información, consulta [Introducción a los complementos consumibles](https://docs.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases).
 
 ### <a name="create-in-game-purchases"></a>Crear compras desde el juego
 
@@ -77,7 +77,7 @@ Dado que un complemento se debe crear junto con un juego, tu juego debe publicar
 (Si el juego terminado ya está disponible en la Tienda, puedes omitir los tres primeros pasos e ir directamente a [Crear un complemento en la Tienda](#create-an-add-on-in-the-store)).
 
 Para crear complementos mientras el juego aún está en la etapa de desarrollo:
-1. [Crear un paquete](#create-a-package)
+1. [Creación de un paquete](#create-a-package)
 2. [Publicar el juego como oculto](#publish-the-game-as-hidden)
 3. [Asociar la solución de juego en Visual Studio con la tienda](#associate-your-game-solution-with-the-store)
 4. [Crear un complemento en el almacén](#create-an-add-on-in-the-store)
@@ -103,7 +103,7 @@ Para crear un paquete que se puede cargar en la Tienda:
 3. En la página __Información general de la aplicación__, haz clic en __Iniciar el envío__.
 4. Configura este nuevo envío. En la página de envío:
     * Haz clic en __Precios y disponibilidad__. En la sección __visibilidad__ , elija "__ocultar esta aplicación y evitar la adquisición...__ " para asegurarse de que solo el equipo de desarrollo tiene acceso al juego. Para obtener más información, consulta [Distribución y visibilidad](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability).
-    * Haga clic en __Propiedades__. En la sección __Categoría y subcategoría__, elige __Juegos__ y luego elige una subcategoría adecuada para el juego.
+    * Haz clic en __Propiedades__. En la sección __Categoría y subcategoría__, elige __Juegos__ y luego elige una subcategoría adecuada para el juego.
     * Haz clic en __Clasificaciones por edades__. Completa el cuestionario con precisión.
     * Haz clic en __Paquetes__. Carga el paquete de juego creado en el paso anterior.
 5. Sigue toda otra indicación de envío que se muestre en el panel para que puedas publicar correctamente este juego que permanece oculto para el público.
@@ -206,10 +206,10 @@ Smaato permite incorporar anuncios de banner en juegos y aplicaciones para UWP. 
 Puedes usar AdDuplex para implementar banners o anuncios intersticiales en el juego.
 
 Para conocer más detalles sobre cómo integrar AdDuplex directamente en un proyecto de Windows 10 en XAML, visita el sitio web de AdDuplex:
-* Anuncios de banner: [Windows 10 SDK for XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage) (SDK de Windows 10 para XAML)
-* Anuncios intersticiales: [Windows 10 XAML AdDuplex Interstitial Ad Installation and Usage](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage) (Uso e instalación de anuncios intersticiales de AdDuplex para Windows 10 en XAML)
+* Anuncios de banner: [Windows 10 SDK for XAML](https://adduplex.zendesk.com/hc/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage) (SDK de Windows 10 para XAML)
+* Anuncios intersticiales: [Windows 10 XAML AdDuplex Interstitial Ad Installation and Usage](https://adduplex.zendesk.com/hc/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage) (Uso e instalación de anuncios intersticiales de AdDuplex para Windows 10 en XAML)
 
-Para obtener información sobre cómo integrar el SDK de AdDuplex en juegos para UWP de Windows 10 creados con Unity, consulta [Windows 10 SDK for Unity apps installation and usage](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage) (SDK de Windows 10 para la instalación y el uso de aplicaciones de Unity).
+Para obtener información sobre cómo integrar el SDK de AdDuplex en juegos para UWP de Windows 10 creados con Unity, consulta [Windows 10 SDK for Unity apps installation and usage](https://adduplex.zendesk.com/hc/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage) (SDK de Windows 10 para la instalación y el uso de aplicaciones de Unity).
 
 ## <a name="maximize-your-games-potential-through-ad-campaigns"></a>Maximizar el potencial del juego a través de campañas publicitarias
 

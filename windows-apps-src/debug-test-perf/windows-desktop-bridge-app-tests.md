@@ -6,16 +6,16 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, UWP, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: dcdac5130af673d1b0d1ab1a9713902e9ab22830
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ec780253deb170c5dde1828add366907c403f100
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257820"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681906"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de la aplicación Puente de dispositivo de escritorio de Windows
 
-Las aplicaciones de [puente de escritorio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) son aplicaciones de escritorio de Windows convertidas en aplicaciones plataforma universal de Windows (UWP) mediante el [puente de escritorio](https://developer.microsoft.com/en-us/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows 10.
+Las aplicaciones de [puente de escritorio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) son aplicaciones de escritorio de Windows convertidas en aplicaciones plataforma universal de Windows (UWP) mediante el [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop). Después de la conversión, la aplicación de escritorio de Windows se empaqueta, se le realiza un mantenimiento y se implementa en forma de un paquete de la aplicación para UWP (un archivo .appx o .appxbundle) destinado a escritorio de Windows 10.
 
 ## <a name="required-versus-optional-tests"></a>Pruebas obligatorias vs. pruebas opcionales
 Las pruebas opcionales para las aplicaciones de puente de escritorio de Windows son meramente informativos y no se usarán para evaluar la aplicación durante la incorporación de Microsoft Store. Se recomienda investigar estos resultados de pruebas para generar aplicaciones de mejor calidad. Los criterios de aprobación o no aprobación general para la incorporación de la tienda se determinan según las pruebas obligatorias y no según estas pruebas opcionales.
@@ -90,7 +90,7 @@ Esta prueba comprueba si la aplicación está intentando iniciar archivos ejecut
 Las funcionalidades de uso especial están indicadas para escenarios muy específicos. Estas funcionalidades solo pueden usarse en cuentas de empresa. 
 
 **Detalles de la prueba**  
-Examina si la aplicación declara alguna de las siguientes funcionalidades: 
+Examinan si la aplicación declara alguna de las siguientes funcionalidades: 
 * EnterpriseAuthentication
 * SharedUserCertificates
 * DocumentsLibrary
@@ -107,7 +107,7 @@ Es posible que la aplicación no se instale correctamente si las cadenas o imág
 **Detalles de la prueba**  
 Inspecciona los recursos definidos en el manifiesto de la aplicación para asegurarse de que estén presentes y sean válidos.
 
-**Acción correctiva**  
+**Acción correctiva**:  
 Usa la siguiente tabla como guía.
 
 Mensaje de error | Observaciones
@@ -122,9 +122,9 @@ La imagen debe definir al menos una variante sin un calificador TargetSize. Debe
 Al paquete le falta un archivo "resources.pri".  | Si tienes contenido localizable en el manifiesto de la aplicación, asegúrate de que el paquete de la aplicación incluya un archivo resources.pri válido. 
 El archivo "resources.pri" debe tener un mapa de recursos cuyo nombre coincida con el nombre del paquete {package full name}.  | Este error puede obtenerse si el manifiesto cambió y el nombre del mapa de recursos del archivo resources.pri deja de coincidir con el nombre del paquete en el manifiesto. En el mensaje en sí, {package full name} contiene el nombre del paquete que resources.pri debe tener. Para corregir esto, debes reconstruir resources.pri y la forma más fácil de hacerlo es reconstruyendo el paquete de la aplicación. 
 El archivo "resources.pri" no debe tener habilitado Combinar automáticamente.  | MakePRI.exe admite una opción denominada Combinar automáticamente. El valor predeterminado de Combinar automáticamente es desactivado. Cuando está habilitado, Combinar automáticamente combina los recursos del paquete de idioma de una aplicación en un solo resources.pri en tiempo de ejecución. No se recomienda para las aplicaciones que desea distribuir a través de la Microsoft Store. Los recursos. PRI de una aplicación distribuida a través de la Microsoft Store deben estar en la raíz del paquete de la aplicación y contener todas las referencias de lenguaje que admite la aplicación. 
-La cadena {string} no cumple la restricción de longitud máxima de {number} caracteres.  | Consulta los [requisitos de metadatos del paquete](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). En el mensaje en sí, {string} se reemplaza por la cadena que tiene el error y {number} contiene la longitud máxima. 
+La cadena {string} no cumple la restricción de longitud máxima de {number} caracteres.  | Consulta los [requisitos de metadatos del paquete](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements). En el mensaje en sí, {string} se reemplaza por la cadena que tiene el error y {number} contiene la longitud máxima. 
 La cadena {string} no debe tener espacios en blanco iniciales ni finales.  | El esquema de los elementos en el manifiesto de la aplicación no permite caracteres de espacio en blanco inicial ni final. En el mensaje en sí, {string} se reemplaza por la cadena que tiene el error. Asegúrate de que ninguno de los valores localizados en los campos del manifiesto en resources.pri tenga caracteres de espacio en blanco inicial o final. 
-La cadena debe ser no vacía (mayor que cero en longitud).  | Consulta el tema sobre los [requisitos del paquete de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements) para más información. 
+La cadena debe ser no vacía (mayor que cero en longitud).  | Consulta el tema sobre los [requisitos del paquete de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) para más información. 
 No hay un recurso predeterminado especificado en el archivo "resources.pri".  | Para más información, consulta la guía sobre [recursos de la aplicación](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data). En la configuración de compilación predeterminada, Visual Studio solo incluye los recursos de imagen con una escala de 200 en el paquete de la aplicación al generar paquetes y coloca otros recursos en el paquete de recursos. Asegúrate de incluir recursos de imagen con una escala de 200 o de configurar el proyecto para incluir los recursos que tienes. 
 No hay un valor de recurso especificado en el archivo "resources.pri".  | Asegúrate de que el manifiesto de la aplicación tenga recursos definidos en dicho archivo. 
 El archivo de imagen {filename} debe tener un tamaño inferior a 204800 bytes.  | Reduce el tamaño de las imágenes especificadas. 
@@ -150,16 +150,16 @@ Prueba el contenido del manifiesto de la aplicación para asegurarte de que su c
 Las aplicaciones deben tener un manifiesto de la aplicación con el formato correcto.
 
 **Detalles de la prueba**  
-Examina el manifiesto de la aplicación para comprobar que el contenido sea correcto, según se describe en los [Requisitos del paquete de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). En esta prueba se realizan las siguientes comprobaciones:
+Examina el manifiesto de la aplicación para comprobar que el contenido sea correcto, según se describe en los [Requisitos del paquete de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements). En esta prueba se realizan las siguientes comprobaciones:
 * **Extensiones de archivo y protocolos**  
 La aplicación puede declarar los tipos de archivo a los que se puede asociar. Una declaración de un gran número de tipos de archivo poco comunes provoca una experiencia de usuario deficiente. Esta prueba limita el número de extensiones de archivo con las que puede asociarse una aplicación.
 * **Regla de dependencia de marco**  
-Esta prueba aplica el requisito de que las aplicaciones declaren las dependencias adecuadas en UWP. Si se encuentra una dependencia inadecuada, la aplicación no pasará la prueba. Si hay un error de coincidencia entre la versión del sistema operativo a la que se dirige la aplicación y las dependencias de marco establecidas, la aplicación no superará la prueba. Tampoco lo hará si hace referencia a alguna "versión preliminar " de los archivos dll del marco.
+Esta prueba aplica el requisito de que las aplicaciones declaren las dependencias adecuadas en UWP. Si se encuentra una dependencia inadecuada, la aplicación no superará la prueba. Si hay un error de coincidencia entre la versión del sistema operativo a la que se dirige la aplicación y las dependencias de marco establecidas, la aplicación no superará la prueba. Tampoco lo hará si hace referencia a alguna "versión preliminar " de los archivos dll del marco.
 * **Comprobación de la comunicación entre procesos (IPC)**  
 Esta prueba impone el requisito de que las aplicaciones Puente de dispositivo de escritorio no se comunican fuera del contenedor de la aplicación con componentes del escritorio. La comunicación entre procesos está pensada exclusivamente para las aplicaciones de prueba. Las aplicaciones en las que el nombre especificado en [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) sea `DesktopApplicationPath` no superarán esta prueba.  
 
-**Acción correctiva**  
-Compara el manifiesto de la aplicación con los requisitos descritos en la página sobre los [Requisitos del paquete de la aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements).
+**Acción correctiva**:  
+Compara el manifiesto de la aplicación con los requisitos descritos en la página sobre los [Requisitos del paquete de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
 
 #### <a name="32-application-count"></a>3.2 Recuento de aplicaciones
