@@ -34,7 +34,7 @@
               href: apps/desktop/modernize/visual-layer-in-desktop-apps.md
             - name: WPF
               href: apps/desktop/modernize/using-the-visual-layer-with-wpf.md
-            - name: Windows Forms
+            - name: "Windows\_Forms"
               href: apps/desktop/modernize/using-the-visual-layer-with-windows-forms.md
             - name: Win32
               href: apps/desktop/modernize/using-the-visual-layer-with-win32.md
@@ -64,7 +64,7 @@
               href: apps/desktop/modernize/modernize-wpf-tutorial-4.md
             - name: Empaquetar e implementar con MSIX
               href: apps/desktop/modernize/modernize-wpf-tutorial-5.md
-    - name: "Sistema Fluent\_Design"
+    - name: Fluent Design System
       href: apps/fluent-design-system.md
     - name: Accesibilidad
       href: apps/accessibility.md
@@ -88,7 +88,7 @@
           href: python/scripting.md
         - name: Introducción a las bases de datos
           href: python/databases.md
-        - name: P+F
+        - name: Preguntas más frecuentes
           href: python/faqs.md
         - name: Recursos
           href: python/resources.md
@@ -96,8 +96,10 @@
       items:
         - name: Introducción
           href: nodejs/index.yml
-        - name: Configuración del entorno de desarrollo
+        - name: Configuración con WSL2 (Linux)
           href: nodejs/setup-on-wsl2.md
+        - name: Configuración con Windows (principiantes)
+          href: nodejs/setup-on-windows.md
         - name: Introducción para principiantes
           href: nodejs/beginners.md
         - name: Introducción a los marcos web
@@ -110,7 +112,7 @@
       items:
         - name: Cambiar el entorno de desarrollo
           href: dev-environment/mac-to-windows.md
-        - name: Accesos rápidos de teclado
+        - name: Métodos abreviados de teclado
           href: 'dev-environment/mac-to-windows.md#keyboard-shortcuts'
         - name: Accesos directos de panel táctil
           href: 'dev-environment/mac-to-windows.md#trackpad-shortcuts'

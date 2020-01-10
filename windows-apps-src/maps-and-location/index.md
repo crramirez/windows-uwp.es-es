@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, map, location, map services
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a27eeeb9aa7349e532dcd76e5b7a7176ac20c08
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 7f39e365cd15a10f775a89cf32747b4bf0bbd87a
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259345"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685064"
 ---
 # <a name="maps-and-location-overview"></a>Introducción a ubicación y mapas
 
@@ -30,14 +30,14 @@ En esta sección se explica cómo mostrar mapas, usar los servicios de mapa, bus
 ## <a name="display-maps"></a>Mostrar mapas
 
 
-Muestra mapas con las vistas 2D, 3D o Streetside en tu aplicación mediante las API del espacio de nombres [**Windows.UI.Xaml.Controls.Maps**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps). Puedes marcar puntos de interés en el mapa con marcadores, imágenes, formas o elementos de interfaz de usuario XAML. También puedes superponer imágenes en ventana o reemplazar las imágenes de mapa de forma conjunta.
+Muestra mapas con las vistas 2D, 3D o Streetside en tu aplicación mediante las API del espacio de nombres [**Windows.UI.Xaml.Controls.Maps**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps). Puedes marcar puntos de interés (POI) en el mapa con marcadores, imágenes, formas o elementos de interfaz de usuario XAML. También puedes superponer imágenes en mosaico o reemplazar las imágenes de mapa de forma conjunta.
 
 | Tema | Descripción |
 |-------|-------------|
-| [Solicitar una clave de autenticación de mapas](authentication-key.md) | La aplicación debe autenticarse para poder usar [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este artículo se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación. |
-| [Mostrar mapas con vistas 2D, 3D y Streetside](display-maps.md) | Muestra mapas personalizables en tu aplicación mediante la clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl). Este tema también presenta la vista 3D aérea y la vista de Streetside. |
-| [Mostrar puntos de interés en un mapa](display-poi.md) | Agrega puntos de interés a un mapa mediante marcadores, imágenes, formas y elementos de interfaz de usuario XAML. |
-| [Superponer imágenes en mosaico en un mapa](overlay-tiled-images.md) | Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de icono. Usa orígenes de icono para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo. |
+| [Solicitar una clave de autenticación de mapas](authentication-key.md) | La aplicación debe autenticarse para poder usar la clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este artículo se describe cómo solicitar una clave de autenticación de mapas desde el [Centro de desarrollo de Mapas de Bing](https://www.bingmapsportal.com/) y cómo agregarla a la aplicación. |
+| [Mostrar mapas con vistas 2D, 3D y Streetside](display-maps.md) | Muestra mapas personalizables en tu aplicación mediante la clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl). En este tema también se presentan las vistas 3D aérea y Streetside. |
+| [Mostrar puntos de interés (POI) en un mapa](display-poi.md) | Agrega puntos de interés (POI) a un mapa mediante marcadores, imágenes, formas y elementos de interfaz de usuario XAML. |
+| [Superponer imágenes en mosaico en un mapa](overlay-tiled-images.md) | Superpón imágenes en mosaico personalizadas o de terceros en un mapa mediante orígenes de mosaico. Usa orígenes de mosaico para superponer información especializada como, por ejemplo, datos meteorológicos, datos de población o datos sísmicos, o bien para reemplazar el mapa predeterminado por completo. |
 
 
 
@@ -47,11 +47,11 @@ Agrega rutas, indicaciones y funcionalidades de geocodificación a tu aplicació
 
 | Tema | Descripción |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Solicitar una clave de autenticación de mapas](authentication-key.md) | La aplicación debe autenticarse para poder usar [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este artículo se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación. |
-| [Mostrar puntos de interés en un mapa](display-poi.md) | Agrega puntos de interés a un mapa mediante marcadores, imágenes, formas y elementos de interfaz de usuario XAML. |
+| [Solicitar una clave de autenticación de mapas](authentication-key.md) | La aplicación debe autenticarse para poder usar la clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este artículo se describe cómo solicitar una clave de autenticación de mapas desde el [Centro de desarrollo de Mapas de Bing](https://www.bingmapsportal.com/) y cómo agregarla a la aplicación. |
+| [Mostrar puntos de interés (POI) en un mapa](display-poi.md) | Agrega puntos de interés (POI) a un mapa mediante marcadores, imágenes, formas y elementos de interfaz de usuario XAML. |
 | [Mostrar rutas e indicaciones](routes-and-directions.md) | Solicita rutas e indicaciones y muéstralas en tu aplicación. |
-| [Realizar geocodificación y geocodificación inversa](geocoding.md) | Puedes convertir direcciones en ubicaciones geográficas (geocodificación), y ubicaciones geográficas en direcciones (geocodificación inversa), si llamas a los métodos de la clase [**MapLocationFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapLocationFinder) del espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). |
-| [Buscar y descargar paquetes de mapas para usarlos sin conexión](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| En el pasado, la aplicación debía dirigir a los usuarios a la aplicación Configuración para descargar mapas sin conexión. Ahora, puedes usar las clases del espacio de nombres [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/en-us/uwp/api/windows.services.maps.offlinemaps) para buscar los paquetes descargados en un área determinada (según una clase [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/en-us/uwp/api/windows.devices.geolocation.geoboundingbox), etc.). <br> También puedes comprobar y escuchar el estado descargado de los paquetes de mapas, así como iniciar una descarga sin necesidad de que el usuario abandone la aplicación. <br> Encontrarás ejemplos de cómo hacer esto en el contenido de referencia y en el [ejemplo de mapa de la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl).
+| [Realizar geocodificación y geocodificación inversa](geocoding.md) | Convierte direcciones en ubicaciones geográficas (geocodificación), y ubicaciones geográficas en direcciones (geocodificación inversa), mediante una llamada a los métodos de la clase [**MapLocationFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapLocationFinder) del espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). |
+| [Buscar y descargar paquetes de mapas para usarlos sin conexión](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps)| En el pasado, la aplicación debía dirigir a los usuarios a la aplicación Configuración para descargar mapas sin conexión. Ahora, puedes usar las clases del espacio de nombres [Windows.Services.Maps.OfflineMaps](https://docs.microsoft.com/uwp/api/windows.services.maps.offlinemaps) para buscar los paquetes descargados en un área determinada (según una clase [Geopoint](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint), [GeoboundingBox](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geoboundingbox), etc.). <br> También puedes comprobar y escuchar el estado descargado de los paquetes de mapas, así como iniciar una descarga sin necesidad de que el usuario abandone la aplicación. <br> Encontrarás ejemplos de cómo hacer esto en el contenido de referencia y en el [ejemplo de mapa de la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl).
 
 ## <a name="get-the-users-location"></a>Obtener la ubicación del usuario
 
@@ -59,12 +59,12 @@ Obtén la ubicación actual del usuario y recibe notificaciones cuando la ubicac
 
 | Tema | Descripción |
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Solicitar una clave de autenticación de mapas](authentication-key.md) | La aplicación debe autenticarse para poder usar [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este artículo se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación. |
-| [Directrices de diseño para las aplicaciones con reconocimiento de ubicación](guidelines-and-checklist-for-detecting-location.md) | Directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación del usuario. |
+| [Solicitar una clave de autenticación de mapas](authentication-key.md) | La aplicación debe autenticarse para poder usar la clase [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este artículo se describe cómo solicitar una clave de autenticación de mapas desde el [Centro de desarrollo de Mapas de Bing](https://www.bingmapsportal.com/) y cómo agregarla a la aplicación. |
+| [Directrices de diseño para las aplicaciones con reconocimiento de ubicación](guidelines-and-checklist-for-detecting-location.md) | Directrices de rendimiento para las aplicaciones que necesitan acceder a la ubicación de un usuario. |
 | [Obtener la ubicación del usuario](get-location.md) | Obtén acceso a la ubicación del usuario y luego recupérala. | 
 | [Directrices para usar Visits tracking](guidelines-for-visits.md) | Aprende a usar la eficaz característica Visits Tracking para realizar cómodamente el seguimiento de la ubicación. |
 | [Guía de diseño de geovallas](guidelines-for-geofencing.md) | Directrices de rendimiento para las aplicaciones que usan la característica de geovalla. |
-| [Configurar una geovalla](set-up-a-geofence.md) | Configura una geovalla en tu aplicación y aprende a administrar las notificaciones en primer y segundo plano. |
+| [Configurar una geovalla](set-up-a-geofence.md) | Configura una geovalla en tu aplicación, y aprende a administrar las notificaciones en primer y segundo plano. |
 
 ## <a name="launch-the-windows-maps-app"></a>Iniciar la aplicación Mapas de Windows
 

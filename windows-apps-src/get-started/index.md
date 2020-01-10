@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: get started, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 7439d437dda69bf235bd8681751617b2982be394
-ms.sourcegitcommit: 2d3a7d18edf2715987b26d1b5341ec88eefc99ec
+ms.openlocfilehash: 4f78bdfec6c6e06ffc542bc7741b875e952bc169
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898521"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684889"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introducción a las aplicaciones de Windows 10
 
@@ -47,7 +47,7 @@ ms.locfileid: "74898521"
                         </div>
                     </div>
                     <div class="cardText">
-                    <h3>Preparación</h3>
+                    <h3>Prepárate</h3>
                     <p>Visual Studio Community y el SDK de Windows 10 te proporcionan todo lo necesario para crear magníficas aplicaciones, y son gratuitos.</p>
                     <ul>
                         <li><a href="//docs.microsoft.com/windows/uwp/get-started/get-set-up">Descargar las herramientas y el SDK</a></li>
@@ -67,7 +67,7 @@ ms.locfileid: "74898521"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Empezar a codificar</h3>
+                        <h3>Empezar a crear el código</h3>
                         <p>Tanto si eres un desarrollador experto como si solo quieres crear tu primera aplicación, consigue experiencia práctica con la plataforma y los documentos de Windows 10.</p>
                         <ul>
                             <li><a href="//docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">Empezar a crear el código</a></li>
@@ -110,7 +110,7 @@ ms.locfileid: "74898521"
                     </div>
                 </div>
                 <div class="cardText">
-                    <h3>Muestras</h3>
+                    <h3>Ejemplos</h3>
                     <p>Consigue una experiencia de primera mano con la plataforma Windows 10 y mira cómo funcionan las API.</p>
                     <br>
                     <p><a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples">Uso de ejemplos de aplicaciones para UWP</a></p>
@@ -223,7 +223,7 @@ ms.locfileid: "74898521"
                 <div class="card">
                     <div class="cardText">
                         <h3>¿Eres nuevo en el tema de desarrollo?</h3>
-                        <p><a href="//docs.microsoft.com/en-us/learn/browse/?products=windows&resource_type=module">Windows en Microsoft Learn</a></p>
+                        <p><a href="//docs.microsoft.com/learn/browse/?products=windows&resource_type=module">Windows en Microsoft Learn</a></p>
                         </div>
                     </div>
                 </div>
