@@ -4,16 +4,16 @@ title: Interacciones de lápiz y Windows Ink en aplicaciones para UWP
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in UWP apps
 template: detail.hbs
-keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, InkCanvas, reconocimiento de escritura a mano, interacción del usuario, entrada
+keywords: Windows Ink, Windows Inking, entrada manuscrita de Windows, DirectInk, InkPresenter, InkCanvas, handwriting recognition, reconocimiento de escritura a mano, user interaction, interacción del usuario, input, entrada
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 031ac1ebc8d164c99240969ce77813f36a311858
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a8d4299eb361fb804419af687bdcaa25ffa54bb8
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258297"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684476"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Interacciones de lápiz y Windows Ink en aplicaciones para UWP
 
@@ -100,16 +100,16 @@ Para realizar entradas manuscritas básicas, no es necesario preocuparse por [**
 Se crea una instancia de un objeto [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) con cada control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
 > [!NOTE]
-> No se pueden crear instancias de la propiedad [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) directamente. En su lugar, debes acceder a ellas a través de la propiedad [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) de la clase [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas). 
+> No se pueden crear instancias de [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) directamente. En su lugar, debes acceder a ellas a través de la propiedad [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) de la clase [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas). 
 
 Junto con el suministro de todos los comportamientos de entrada de lápiz de su control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) correspondiente, [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) proporciona un completo conjunto de API para la personalización del trazo adicional y administración más detallada de la entrada de lápiz (estándar y modificada). Se incluyen las propiedades de trazo, los tipos de dispositivo de entrada admitidos y si el objeto procesa la entrada o esta se pasa a la aplicación para su procesamiento.
 
 > [!NOTE]
 > La entrada de lápiz estándar (de punta de lápiz o punta y botón del borrador) no se modifica con una prestación hardware secundaria, como un botón del lápiz, el botón derecho del ratón o un mecanismo similar. 
 
-De manera predeterminada, la entrada de lápiz solo es compatible con el lápiz. En este apartado, configuraremos [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) para que interprete los datos de entrada del lápiz y el mouse como trazos de lápiz. Asimismo, también estableceremos algunos atributos de trazo de lápiz iniciales que se usarán en la representación de trazos de [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
+De manera predeterminada, la entrada de lápiz solo es compatible con el lápiz. En este apartado, configuraremos [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) para que interprete los datos de entrada del lápiz y el ratón como trazos de lápiz. Asimismo, también estableceremos algunos atributos de trazo de lápiz iniciales que se usarán en la representación de trazos de [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas).
 
-Para habilitar la entrada de lápiz con el ratón y la función táctil, establece la propiedad [**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes) de [**InkPresenter**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter) en la combinación de valores de [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes) que quieras.
+Para habilitar la entrada de lápiz con el ratón y la función táctil, establece la propiedad [**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes) de [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) en la combinación de valores de [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes) que quieras.
 
 ```csharp
 public MainPage()
@@ -198,7 +198,7 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 
 Estas imágenes muestran cómo se procesa y personaliza la entrada manuscrita mediante [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter).
 
-| ![control inkcanvas con trazos de lápiz negro predeterminados](images/ink-basic-custom-1-small.png) | ![control inkcanvas con trazos de lápiz rojo seleccionados por el usuario](images/ink-basic-custom-2-small.png) |
+| ![inkcanvas con trazos de lápiz negro predeterminados](images/ink-basic-custom-1-small.png) | ![inkcanvas con trazos de lápiz rojo seleccionados por el usuario](images/ink-basic-custom-2-small.png) |
 | --- | --- |
 | [  **InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con trazos de lápiz negro predeterminados. | [  **InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) con trazos de lápiz rojo seleccionados por el usuario. | 
 
@@ -263,7 +263,7 @@ En el siguiente ejemplo de código (todo el código está en los archivos MainPa
 
     Por último, asignamos agentes de escucha para los eventos [**StrokeStarted**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokeinput.strokestarted) y [**StrokesErased**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.strokeserased) de la propiedad [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter). Los controladores de estos eventos se usan para limpiar la interfaz de usuario de selección si se inicia un nuevo trazo o se borra un trazo existente.
 
-    ![control inkcanvas con trazos de lápiz negro predeterminados](images/ink-unprocessed-2-small.png)
+    ![inkcanvas con trazos de lápiz negro predeterminados](images/ink-unprocessed-2-small.png)
 
       ```csharp
         public MainPage()
@@ -474,7 +474,7 @@ Para obtener un ejemplo completo de esta funcionalidad, consulta la [muestra de 
 * [Control de la entrada con puntero](handle-pointer-input.md)
 * [Identificación de dispositivos de entrada](identify-input-devices.md)
 
-**Enumera**
+**API**
 
 * [**Windows. Devices. Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
 * [**Windows. UI. Input. inking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)

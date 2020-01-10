@@ -9,16 +9,16 @@ ms.date: 12/07/2018
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c2d05c87f4f7b6164afe1fcbcb62323eef3bdf1
-ms.sourcegitcommit: 5f80bfc3ba04ad0a0853f83917d6a0ef3da24fa3
+ms.openlocfilehash: d180621736e79daec91a11a6932e80633962d6c7
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2019
-ms.locfileid: "72302253"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684522"
 ---
 # <a name="globalization-and-localization"></a>Globalización y localización
 
-Windows se usa en todo el mundo, lo que incluye a personas de diferentes culturas, regiones e idiomas. Los usuarios hablan varios idiomas diferentes y en una variedad de países y regiones diferentes. Algunos usuarios hablan más de un idioma. Por lo tanto, tu aplicación se ejecuta en configuraciones que implican muchas permutaciones de configuración de sistema para idioma, región y cultura. Puedes aumentar el mercado potencial de la aplicación diseñándola para que sea fácilmente adaptable mediante la *globalización* y la *localización*.
+Windows se usa en todo el mundo por personas de diferentes culturas, regiones e idiomas. Los usuarios hablan varios idiomas diferentes y en una diversidad de países y regiones diferentes. Algunos usuarios hablan más de un idioma. Por lo tanto, tu aplicación se ejecuta en configuraciones que implican muchas permutaciones de configuración de sistema para idioma, región y cultura. Puedes aumentar el mercado potencial de la aplicación diseñándola para que sea fácilmente adaptable mediante la *globalización* y la *localización*.
 
 Este vídeo proporciona una introducción breve sobre cómo preparar la aplicación para todo el mundo: [Introducción a la globalización y la localización](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
 
@@ -38,7 +38,7 @@ El código debe funcionar igual de bien en cualquiera de las referencias cultura
 - Reglas de ordenación
 
 >[!NOTE]
-> Para obtener una lista de los nombres de configuración regional admitidos por la versión del sistema operativo Windows, consulte la columna etiqueta de idioma de la tabla en el [apéndice a: comportamiento del producto](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) en la [Referencia del identificador de idioma de Windows (LCID)](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f).
+> Para obtener una lista de los nombres de configuración regional admitidos por la versión del sistema operativo Windows, consulte la columna etiqueta de idioma de la tabla en el [apéndice a: comportamiento del producto](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) en la [Referencia del identificador de idioma de Windows (LCID)](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f).
 
 **Localizabilidad** es el proceso de preparación de una aplicación globalizada para la localización y/o la comprobación de que la aplicación está lista para la localización. Hacer que una aplicación sea localizable significa que el proceso de localización siguiente no descubrirá ningún defecto funcionales en la aplicación. La propiedad más esencial de una aplicación localizable es que su código ejecutable se ha separado limpiamente de los recursos localizables de la aplicación.
 
@@ -69,4 +69,4 @@ La mayoría de los equipos de localización usa herramientas especiales para fac
 | [Usar el kit de herramientas de aplicaciones multilingüe 4,0](use-mat.md) | El kit de herramientas de aplicaciones multilingües (PASPARTÚ) 4,0 se integra con Microsoft Visual Studio 2017 y versiones posteriores para proporcionar a las aplicaciones UWP compatibilidad con traducción, administración de archivos de traducción y herramientas del editor. |
 | [Preguntas más frecuentes sobre el kit de herramientas multilingües 4,0 & solución de problemas](mat-faq-troubleshooting.md) | Este tema proporciona respuestas a preguntas frecuentes y problemas relacionados con el Kit de herramientas para aplicaciones multilingües (MAT) 4.0. |
 | [Usar la página de códigos UTF-8](use-utf8-code-page.md) | UTF-8 es la página de códigos universal para la internacionalización. |
-| [Preparación de la aplicación para el cambio de la era japonesa](japanese-era-change.md) | Obtén información sobre el cambio de la era japonesa de mayo de 2019 y cómo preparar la aplicación. |
+| [Preparación de la aplicación para el cambio de la era japonesa](japanese-era-change.md) | Obtén información sobre el cambio de la era japonesa de mayo de 2019 y cómo preparar la aplicación. |

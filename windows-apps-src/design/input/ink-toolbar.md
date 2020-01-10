@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ae67e5d4d6da3cc9716c5f0efd276023bae9af0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 48fea83560655b02909b302225f44fa3e9713f00
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258378"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684494"
 ---
 # <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>Agregar un control InkToolbar a una aplicación para la Plataforma universal de Windows (UWP)
 
@@ -172,7 +172,7 @@ También puedes usar el enlace para encargarte de las actualizaciones de la inte
 
     1. Agrega dos propiedades bool a la clase InkToolbarSnippetHostViewModel: **LeftHandedLayout** (misma funcionalidad que el ejemplo de solo XAML anterior) y **PortraitLayout** (orientación del dispositivo).
         >[!NOTE] 
-        > La propiedad PortraitLayout se puede establecer e incluye la definición para el evento [PropertyChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged).
+        > La propiedad PortraitLayout se puede establecer e incluye la definición para el evento [PropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged).
 
         ```csharp
         public bool LeftHandedLayout
@@ -214,7 +214,7 @@ También puedes usar el enlace para encargarte de las actualizaciones de la inte
     1. Agrega dos nuevas clases a la carpeta Converters (en este ejemplo, las llamamos **HorizontalAlignmentFromHandednessConverter.cs** y **VerticalAlignmentFromAppViewConverter.cs**).
     1. Agrega los espacios de nombres `using Windows.UI.Xaml` y `using Windows.UI.Xaml.Data` a cada archivo.
     1. Cambia cada clase por `public` y especifica que implementa la interfaz [IValueConverter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter).
-    1. Agrega los métodos [Convert](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) y [ConvertBack](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) a cada archivo, como se muestra aquí (dejamos el método ConvertBack sin implementar).
+    1. Agrega los métodos [Convert](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) y [ConvertBack](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) a cada archivo, como se muestra aquí (dejamos el método ConvertBack sin implementar).
         - HorizontalAlignmentFromHandednessConverter coloca la barra de herramientas de Ink en el lado derecho de la aplicación para usuarios diestros y en el lado izquierdo de la aplicación para usuarios zurdos.
         ```csharp
         using System;
@@ -619,7 +619,7 @@ En este ejemplo, se define un lápiz personalizado con una punta ancha que permi
 
 En primer lugar, definimos nuestro lápiz personalizado y especificamos los atributos de dibujo en el código subyacente. Hacemos referencia este lápiz personalizado de XAML más adelante.
 
-1. Haz clic con el botón secundario en el proyecto en el Explorador de soluciones y selecciona Agregar > Nuevo elemento.
+1. Haz clic con el botón derecho en el proyecto en el Explorador de soluciones y selecciona Agregar > Nuevo elemento.
 2. En Visual C# -> Código, agrega un nuevo archivo de clase y llámalo CalligraphicPen.cs.
 3. En Calligraphic.cs, reemplaza el valor predeterminado mediante un bloque con lo siguiente:
 ```csharp
@@ -848,7 +848,7 @@ namespace Ink_Basic_InkToolbar
 
 Puedes crear un botón de herramienta personalizada para invocar una herramienta que no sea lápiz y que esté definida por la aplicación.
 
-De manera predeterminada, [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) procesa todas las entradas como trazos de lápiz o trazos de borrado. Esto incluye la entrada que modificó una prestación de hardware secundaria, como el botón de menú contextual del lápiz, el botón secundario del mouse o similares. Sin embargo, [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) puede configurarse para dejar una entrada determinada sin procesar que, a continuación, se pasa a la aplicación para procesarla de forma personalizada.
+De manera predeterminada, [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) procesa todas las entradas como trazos de lápiz o trazos de borrado. Esto incluye la entrada que modificó una prestación de hardware secundaria, como el botón de menú contextual del lápiz, el botón derecho del mouse o similares. Sin embargo, [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) puede configurarse para dejar una entrada determinada sin procesar que, a continuación, se pasa a la aplicación para procesarla de forma personalizada.
 
 En este ejemplo, definimos un botón de herramienta personalizada que, cuando se activa, hace que los trazos posteriores se procesen y se representen como un lazo de selección (línea discontinua) en lugar de como una entrada manuscrita. Todos los trazos de lápiz que se hagan dentro de los límites del área de selección se establecen en [**Selected**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstroke.selected).
 

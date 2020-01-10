@@ -1,19 +1,19 @@
 ---
-title: Código adaptativo para versiones
+title: Código adaptable para versiones
 description: Usa la clase ApiInformation para aprovechar las nuevas API mientras mantienes la compatibilidad con versiones anteriores.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
-ms.openlocfilehash: f542c76d879881af296351ce51a803aa9986ecbb
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2c03475c0c4007508a18c17645dbe99eeb7d6cb0
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359711"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681986"
 ---
-# <a name="version-adaptive-code"></a>Código adaptativo para versiones
+# <a name="version-adaptive-code"></a>Código adaptable para versiones
 
 Puedes considerar la escritura de código adaptativo algo similar a [crear una interfaz de usuario adaptativa](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml). Podrías diseñar la interfaz de usuario base para que se ejecute en la pantalla más pequeña y luego mover o agregar elementos cuando detectes que la aplicación se ejecuta en una pantalla más grande. Con el código adaptativo, se escribe el código base para que se ejecute en la versión más baja del sistema operativo y se pueden agregar características seleccionadas especialmente cuando se detecte que la aplicación se ejecuta en una versión superior en la que haya una nueva característica disponible.
 
@@ -23,7 +23,7 @@ Para obtener más información general acerca de ApiInformation, contratos de AP
 
 Se usa la clase [Windows.Foundation.Metadata.ApiInformation](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation) en una condición del código para probar la presencia de la API que se desee llamar. Esta condición se evaluará donde se ejecute la aplicación, pero solo se evaluará como **true** en los dispositivos en los que la API esté presente y en los que, por lo tanto, se encuentre disponible para llamarla. Esto permite escribir código adaptativo para versiones con el fin de crear aplicaciones que usen las API que solo estén disponibles en algunas versiones del sistema operativo.
 
-Aquí analizamos ejemplos específicos para orientar a nuevas características en Windows Insider Preview. Para obtener una descripción general sobre el uso de **ApiInformation**, consulta [Device families overview](https://docs.microsoft.com/en-us/uwp/extension-sdks/device-families-overview#writing-code) (Información general sobre las familias de dispositivos) y la entrada de blog [Dynamically detecting features with API contracts](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (Detección dinámica de funciones con contratos de API).
+Aquí analizamos ejemplos específicos para orientar a nuevas características en Windows Insider Preview. Para obtener una descripción general sobre el uso de **ApiInformation**, consulta [Device families overview](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview#writing-code) (Información general sobre las familias de dispositivos) y la entrada de blog [Dynamically detecting features with API contracts](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (Detección dinámica de funciones con contratos de API).
 
 > [!TIP]
 > Si se realizan numerosas comprobaciones de API en tiempo de ejecución, el rendimiento de la aplicación puede verse afectado. En estos ejemplos te mostramos las comprobaciones incorporadas. En el código de producción, debes realizar la comprobación una vez, almacenar el resultado en caché y, a continuación, utilizar el resultado en caché en toda la aplicación. 
@@ -73,7 +73,7 @@ En esta sección se muestran varios ejemplos de código adaptativo que usan las 
 
 ### <a name="example-1-new-enum-value"></a>Ejemplo 1: Nuevo valor de enumeración
 
-Windows 10, versión 1607 agrega un nuevo valor para el [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue) enumeración: **ChatWithoutEmoji**. Este nuevo ámbito de entrada tiene el mismo comportamiento de entrada que el ámbito de entrada **Chat** (revisión ortográfica, autocompletar, uso de mayúsculas automático), pero se asigna a un teclado táctil sin botón de emoji. Esto resulta útil si creas tu propio selector de emoji y deseas deshabilitar el botón de emoji integrado en el teclado táctil. 
+Windows 10, versión 1607, agrega un nuevo valor a la enumeración [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue): **ChatWithoutEmoji**. Este nuevo ámbito de entrada tiene el mismo comportamiento de entrada que el ámbito de entrada **Chat** (revisión ortográfica, autocompletar, uso de mayúsculas automático), pero se asigna a un teclado táctil sin botón de emoji. Esto resulta útil si creas tu propio selector de emoji y deseas deshabilitar el botón de emoji integrado en el teclado táctil. 
 
 Este ejemplo muestra cómo comprobar si el valor de enumeración **ChatWithoutEmoji** está presente y establece la propiedad [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) de un **TextBox** si lo está. Si no se encuentra presente en el sistema en el que se ejecuta la aplicación, en su lugar la propiedad **InputScope** se establece en **Chat**. El código que se muestra podría colocarse en un controlador de eventos Page.Page constructor o Page.Loaded.
 
@@ -445,5 +445,5 @@ class IsEnumPresentTrigger : StateTriggerBase
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-- [Detectar dinámicamente las características con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Información general de las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+- [Detección dinámica de características con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)

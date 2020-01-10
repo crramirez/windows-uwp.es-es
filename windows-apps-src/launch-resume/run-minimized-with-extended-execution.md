@@ -1,19 +1,19 @@
 ---
 description: Aprender a usar la ejecución extendida para mantener la aplicación en ejecución mientras está minimizada
-title: Aplazar la suspensión de la aplicación con ejecución ampliada
+title: Aplazar la suspensión de aplicaciones con ejecución ampliada
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, ejecución extendida, minimizada, ExtendedExecutionSession, tarea en segundo plano, ciclo de vida de la aplicación, pantalla de bloqueo
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
 ms.localizationpriority: medium
-ms.openlocfilehash: 68d2c9937b02d60bb8509aedaf6277512a4e0c4a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fdb47a7c57ff8ef719b819253ab768c0d836be14
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371423"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684557"
 ---
-# <a name="postpone-app-suspension-with-extended-execution"></a>Aplazar la suspensión de la aplicación con ejecución ampliada
+# <a name="postpone-app-suspension-with-extended-execution"></a>Aplazar la suspensión de aplicaciones con ejecución ampliada
 
 En este artículo se muestra cómo usar la ejecución extendida para posponer cuándo la aplicación está suspendida, de manera que pueda ejecutarse mientras está minimizada o con la pantalla de bloqueo activada.
 
@@ -23,7 +23,7 @@ Hay casos en que puede ser necesario que una aplicación se siga ejecutando, en 
 
 Si es necesario que una aplicación se siga ejecutando, la puede seguir ejecutando el sistema operativo o este puede solicitar que se siga ejecutando. Por ejemplo, al reproducir audio en segundo plano, el sistema operativo puede mantener una aplicación ejecutándose más tiempo si sigues estos pasos de [Reproducción de contenido multimedia en segundo plano](../audio-video-camera/background-audio.md). De lo contrario, debes solicitar más tiempo manualmente. La cantidad de tiempo que puedes obtener para realizar la ejecución en segundo plano puede tardar varios minutos, pero debes estar preparado para controlar la sesión que se está revocando en cualquier momento. Estas limitaciones de tiempo de ciclo de vida de aplicación están deshabilitadas mientras que la aplicación se ejecuta con un depurador. Por este motivo es importante probar la Ejecución ampliada y otras herramientas para posponer la suspensión de la aplicación mientras no se está ejecutando en un depurador o usando los eventos de ciclo de vida disponibles en Visual Studio. 
  
-Crea una clase [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) para solicitar más tiempo para completar una operación en segundo plano. El tipo de clase **ExtendedExecutionSession** que se crea está determinado por la enumeración [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason) que se proporciona al crearla. Hay tres **ExtendedExecutionReason** los valores de enumeración: **No se especifica, LocationTracking** y **SavingData**. Solo se puede solicitar una **ExtendedExecutionSession** en cualquier momento. Intentar crear otra sesión mientras una solicitud de sesión aprobada está actualmente activa hará que se lance la excepción 0x8007139F desde el constructor **ExtendedExecutionSession** que indica que el grupo o recurso no se encuentra en el estado correcto para realizar la operación solicitada. No debes usar [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) y [ExtendedExecutionForegroundReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason); requieren funcionalidades restringidas y no están disponibles para su uso en aplicaciones de la Tienda.
+Crea una clase [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) para solicitar más tiempo para completar una operación en segundo plano. El tipo de clase **ExtendedExecutionSession** que se crea está determinado por la enumeración [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason) que se proporciona al crearla. Existen tres valores de enumeración: **ExtendedExecutionReason**, **Unspecified, LocationTracking** y **SavingData**. Solo se puede solicitar una **ExtendedExecutionSession** en cualquier momento. Intentar crear otra sesión mientras una solicitud de sesión aprobada está actualmente activa hará que se lance la excepción 0x8007139F desde el constructor **ExtendedExecutionSession** que indica que el grupo o recurso no se encuentra en el estado correcto para realizar la operación solicitada. No debes usar [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) y [ExtendedExecutionForegroundReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason); requieren funcionalidades restringidas y no están disponibles para su uso en aplicaciones de la Tienda.
 
 ## <a name="run-while-minimized"></a>Ejecutar mientras está minimizada
 
@@ -255,13 +255,13 @@ El ajuste de uso de memoria y energía de la aplicación es esencial para garant
 
 Usa [BackgroundExecutionManager.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager) para determinar si el usuario ha decidido que la actividad en segundo plano de la aplicación debe ser limitada. Ten en cuenta el uso de la batería y ejecuta aplicaciones en segundo plano solo cuando sea necesario completar una acción que requiera el usuario.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-[Ejemplo de la ejecución extendida](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ExtendedExecution)  
+[Ejemplo de ejecución extendida](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ExtendedExecution)  
 [Ciclo de vida de aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle)  
-[Ciclo de vida de la aplicación: mantener aplicaciones activas con tareas en segundo plano y ejecución ampliada](https://msdn.microsoft.com/en-us/magazine/mt590969.aspx)
+[Ciclo de vida de la aplicación: mantener aplicaciones activas con tareas en segundo plano y ejecución ampliada](https://msdn.microsoft.com/magazine/mt590969.aspx)
 [Administración de memoria en segundo plano](https://docs.microsoft.com/windows/uwp/launch-resume/reduce-memory-usage)  
 [Transferencias en segundo plano](https://docs.microsoft.com/windows/uwp/networking/background-transfers)  
-[Reconocimiento de la batería y la actividad en segundo plano](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#I2bkQ6861TRpbRjr.97)  
+[Detección de la batería y actividad en segundo plano](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#I2bkQ6861TRpbRjr.97)  
 [Clase MemoryManager](https://docs.microsoft.com/uwp/api/windows.system.memorymanager)  
-[Reproducir archivos multimedia en segundo plano](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)  
+[Reproducir contenido multimedia en segundo plano](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)  

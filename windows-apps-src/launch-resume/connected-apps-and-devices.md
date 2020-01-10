@@ -6,16 +6,16 @@ ms.topic: article
 keywords: Windows 10, UWP, dispositivos conectados, sistemas remotos, Roma, proyecto Roma
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
-ms.openlocfilehash: b989f5c115ef5c8555f8cb48ac43f2d50a9d830c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 742ef56165ea26df3a03d54e99a17d2a00908cb6
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260517"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684452"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Aplicaciones y dispositivos conectados (Proyecto Roma)
 
-En esta sección se explica cómo conectar aplicaciones entre dispositivos y plataformas mediante el [proyecto Roma](https://developer.microsoft.com/en-us/windows/project-rome). Para obtener información sobre cómo implementar el proyecto Roma en un escenario multiplataforma, visite la [Página principal de docs para el proyecto Roma](https://docs.microsoft.com/en-us/windows/project-rome/).
+En esta sección se explica cómo conectar aplicaciones entre dispositivos y plataformas mediante el [proyecto Roma](https://developer.microsoft.com/windows/project-rome). Para obtener información sobre cómo implementar el proyecto Roma en un escenario multiplataforma, visite la [Página principal de docs para el proyecto Roma](https://docs.microsoft.com/windows/project-rome/).
 
 La mayoría de los usuarios tiene varios dispositivos y con frecuencia comienzan una actividad en un dispositivo y la finalizan en otro. Para ello, las aplicaciones necesitan abarcar dispositivos y plataformas. Project Roma permite detectar dispositivos remotos, iniciar una aplicación en un dispositivo remoto y comunicarse con un servicio de aplicaciones en un dispositivo remoto.
 
@@ -34,6 +34,6 @@ Para obtener más información sobre el proyecto Rome en general, incluidos los 
 | [Iniciar una aplicación en un dispositivo remoto](launch-a-remote-app.md) | Aprende a iniciar una aplicación en un dispositivo remoto. Este tema aborda el caso de uso más simple y la instalación preliminar.  |
 | [Detectar dispositivos remotos](discover-remote-devices.md)  | Obtén información sobre cómo detectar dispositivos a los que te puedas conectar. |
 | [Comunicarse con un servicio de aplicaciones remoto](communicate-with-a-remote-app-service.md) | Obtén información sobre cómo interactuar con una aplicación en un dispositivo remoto. |
-| [Conectar dispositivos mediante sesiones remotas](remote-sessions.md) | Cree experiencias compartidas en varios dispositivos uniéndolos en una sesión remota. |
+| [Conectar dispositivos mediante sesiones remotas](remote-sessions.md) | Crea experiencias compartidas entre varios dispositivos uniéndolos en una sesión remota. |
 | [Continuar la actividad del usuario, incluso en diferentes dispositivos](useractivities.md)| Ayude a los usuarios a reanudar lo que hacían en la aplicación, incluso en varios dispositivos.|
 | [Prácticas recomendadas de las actividades del usuario](useractivities-best-practices.md)| Conozca los procedimientos recomendados para crear y actualizar actividades de usuario.|
