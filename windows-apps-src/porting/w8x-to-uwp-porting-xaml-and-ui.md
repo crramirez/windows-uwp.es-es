@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 19e754fd6a52880c7bc636818acaeda815f9da16
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 879dee0c8c4c3ad9004c11fa488d32eae8936510
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259106"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684655"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Migración de XAML y la interfaz de usuario de Windows Runtime 8.x a UWP
 
@@ -93,7 +93,7 @@ Si quiere estar seguro de que sus estilos y plantillas personalizados están usa
 
 Estos son algunos ejemplos más específicos de los cambios en los controles.
 
-| Nombre del control | Cambio |
+| Nombre del control | Cambiar |
 |--------------|--------|
 | **AppBar**   | Si está utilizando el control **AppBar** (en su lugar se recomienda usar[**CommandBar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBar) ), no se oculta de forma predeterminada en una aplicación de Windows 10. Puedes controlarlo con la propiedad [**AppBar.ClosedDisplayMode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode). |
 | **AppBar**, [**CommandBar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBar) | En una aplicación de Windows 10, **AppBar** y [**CommandBar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBar) tienen un botón **Ver más** (los puntos suspensivos). |
@@ -122,7 +122,7 @@ Para obtener más información sobre los controles de aplicaciones para UWP, con
 
 ##  <a name="design-language-in-windows10"></a>Lenguaje de diseño en Windows 10
 
-Hay algunas diferencias pequeñas pero importantes en el lenguaje de diseño entre aplicaciones universales 8,1 y aplicaciones de Windows 10. Para obtener detalles, consulta [Diseño](https://developer.microsoft.com/en-us/windows/apps/design). A pesar de los cambios del lenguaje de diseño, nuestros principios de diseño siguen siendo coherentes: prestar atención a los detalles, pero siempre lograr la simplicidad centrándonos en el contenido y no en el embellecimiento, reducir drásticamente los elementos visuales y mantenernos auténticos al dominio digital; usar jerarquía visual especialmente con tipografía; diseño en cuadrícula; y hacer que tus experiencias cobren vida con animaciones fluidas.
+Hay algunas diferencias pequeñas pero importantes en el lenguaje de diseño entre aplicaciones universales 8,1 y aplicaciones de Windows 10. Para obtener detalles, consulta [Diseño](https://developer.microsoft.com/windows/apps/design). A pesar de los cambios del lenguaje de diseño, nuestros principios de diseño siguen siendo coherentes: prestar atención a los detalles, pero siempre lograr la simplicidad centrándonos en el contenido y no en el embellecimiento, reducir drásticamente los elementos visuales y mantenernos auténticos al dominio digital; usar jerarquía visual especialmente con tipografía; diseño en cuadrícula; y hacer que tus experiencias cobren vida con animaciones fluidas.
 
 ## <a name="effective-pixels-viewing-distance-and-scale-factors"></a>Píxeles efectivos, distancia de visualización y factores de escala
 
@@ -194,12 +194,12 @@ En esta tabla se describen los cambios en los estados visuales y los grupos de e
 |                     | PointerOver             |                   | PointerOver         |
 |                     | Pressed                 |                   | Pressed             |
 |                     | PointerOverPressed      |                   | [no disponible]       |
-|                     | Deshabilitada                |                   | [no disponible]       |
+|                     | Deshabilitado                |                   | [no disponible]       |
 |                     | [no disponible]           |                   | PointerOverSelected |
-|                     | [no disponible]           |                   | Selected            |
+|                     | [no disponible]           |                   | Seleccionado            |
 |                     | [no disponible]           |                   | PressedSelected     |
 | [no disponible]       |                         | DisabledStates    |                     |
-|                     | [no disponible]           |                   | Deshabilitada            |
+|                     | [no disponible]           |                   | Deshabilitado            |
 |                     | [no disponible]           |                   | Habilitado             |
 | SelectionHintStates |                         | [no disponible]     |                     |
 |                     | VerticalSelectionHint   |                   | [no disponible]       |
@@ -214,7 +214,7 @@ En esta tabla se describen los cambios en los estados visuales y los grupos de e
 |                     | UnselectedPointerOver   |                   | [no disponible]       |
 |                     | UnselectedSwiping       |                   | [no disponible]       |
 |                     | Selecting               |                   | [no disponible]       |
-|                     | Selected                |                   | [no disponible]       |
+|                     | Seleccionado                |                   | [no disponible]       |
 |                     | SelectedSwiping         |                   | [no disponible]       |
 |                     | SelectedUnfocused       |                   | [no disponible]       |
 
@@ -247,7 +247,7 @@ El lenguaje de diseño ha evolucionado para Windows 10 y, por tanto, algunos est
 
 En otros casos, las claves de recurso ya no son compatibles. El editor de marcado XAML en Visual Studio resalta las referencias a las claves de recursos que no puede resolver. Por ejemplo, el editor de marcado XAML subrayará una referencia a la clave de estilo `ListViewItemTextBlockStyle` con una línea ondulada roja. Si no se corrige, la aplicación finalizará inmediatamente cuando intentes implementarla en el emulador o el dispositivo. Por tanto, es importante prestar atención a la corrección del marcado XAML. Encontrarás que Visual Studio es una herramienta excelente para detectar esos problemas.
 
-Para las claves que aún se admiten, los cambios en el lenguaje de diseño significan que han cambiado las propiedades establecidas por algunos estilos. Por ejemplo, `TitleTextBlockStyle` establece **FontSize** en 14.667 PX en una aplicación Windows Runtime 8. x y 18.14 PX en una aplicación de Windows Phone Store. Sin embargo, el mismo estilo establece **FontSize** en una 24px mucho más grande en una aplicación de Windows 10. Revisa los diseños y usa los estilos apropiados en los lugares adecuados. Si quieres obtener más información, consulta [Directrices para fuentes](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts) y [Diseñar aplicaciones para UWP](https://developer.microsoft.com/en-us/windows/apps/design).
+Para las claves que aún se admiten, los cambios en el lenguaje de diseño significan que han cambiado las propiedades establecidas por algunos estilos. Por ejemplo, `TitleTextBlockStyle` establece **FontSize** en 14.667 PX en una aplicación Windows Runtime 8. x y 18.14 PX en una aplicación de Windows Phone Store. Sin embargo, el mismo estilo establece **FontSize** en una 24px mucho más grande en una aplicación de Windows 10. Revisa los diseños y usa los estilos apropiados en los lugares adecuados. Si quieres obtener más información, consulta [Directrices para fuentes](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts) y [Diseñar aplicaciones para UWP](https://developer.microsoft.com/windows/apps/design).
 
 Se trata de una lista completa de claves que ya no son compatibles.
 
@@ -450,7 +450,7 @@ Tampoco se recomienda ocultar el elemento Configuración en un panel de maestro 
 
 La página de configuración debe llenar toda la ventana de la aplicación y es donde deben encontrarse las opciones Acerca de y Comentarios. Para obtener instrucciones sobre el diseño de la página de configuración, consulta [Directrices para la configuración de la aplicación](https://docs.microsoft.com/windows/uwp/app-settings/guidelines-for-app-settings).
 
-## <a name="text"></a>Text
+## <a name="text"></a>Texto
 
 El texto (o tipografía) es un aspecto importante de una aplicación para UWP y, durante la migración, es aconsejable que vuelvas a visitar los diseños de elementos visuales de las vistas para que estén en consonancia con el nuevo lenguaje de diseño. Usa estas ilustraciones para encontrar los estilos del sistema de **TextBlock** para la Plataforma universal de Windows (UWP) que están disponibles. Busque los que correspondan a los Windows Phone los estilos de Silverlight que usó. Como alternativa, puede crear sus propios estilos universales y copiar las propiedades de los estilos del sistema de Silverlight Windows Phone en ellos.
 
