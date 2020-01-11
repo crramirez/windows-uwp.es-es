@@ -5,18 +5,18 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, experimental, api
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e564d0bf7dc2acb3ffa05eaaf70def63a0908cd
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 542e007d07d490c2f18077e646f7598bfd2587c3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321982"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684911"
 ---
 # <a name="experimental-apis"></a>API experimentales
 
 Las API experimentales están en las primeras fases de diseño y es probable que cambien a medida que los propietarios incorporen comentarios y agreguen compatibilidad con escenarios adicionales.
 
-Estas API se usan en el modo piloto externamente con los [SDK de Windows Insider](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewSDK) para que los desarrolladores puedan probarlas y proporcionar comentarios antes de que entren a formar parte de la plataforma oficial. Mientras están en el modo piloto, no hay ninguna promesa ni compromiso de estabilidad.
+Estas API se usan en el modo piloto externamente con los [SDK de Windows Insider](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK) para que los desarrolladores puedan probarlas y proporcionar comentarios antes de que entren a formar parte de la plataforma oficial. Mientras están en el modo piloto, no hay ninguna promesa ni compromiso de estabilidad.
 
 ## <a name="consuming-experimental-apis"></a>Uso de las API experimentales
 IntelliSense te permitirá saber si una API es experimental. También recibirás una advertencia del compilador al usar una API experimental, como "... es solo con fines de evaluación y está sujeta a cambios o a su eliminación en actualizaciones futuras".
@@ -25,7 +25,7 @@ Estas advertencias ayudan a evitar que crees dependencias en las API experimenta
 
 De manera predeterminada, estas API se deshabilitan en tiempo de ejecución y, al llamarlas, se genera una excepción en tiempo de ejecución. Se trata de otra medida de seguridad para evitar dependencias involuntarias y la distribución generalizada de aplicaciones que usan API experimentales.
 
-Para habilitar estas API con fines de experimentación, usa el [complemento de características del Portal de dispositivos Windows (WDP)](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal) en el dispositivo de destino para habilitar la característica correspondiente a la API que desees llamar.
+Para habilitar estas API con fines de experimentación, usa el [complemento de características del Portal de dispositivos Windows (WDP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal) en el dispositivo de destino para habilitar la característica correspondiente a la API que desees llamar.
 
 La documentación de una API experimental determinada depende del equipo al que pertenece.
 

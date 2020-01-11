@@ -5,12 +5,12 @@ ms.date: 03/28/2019
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, database
 ms.localizationpriority: medium
-ms.openlocfilehash: 05579affd127fd951e233d1492d23e2dad0f4b53
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 54907dac63580794b7df42fa2e61162d16be8a1b
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340039"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302569"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Uso de una base de datos de SQL Server en una aplicación para UWP
 Tu aplicación puede conectarse directamente a una base de datos de SQL Server y a continuación almacenar y recuperar datos mediante clases en el espacio de nombres [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient).
@@ -95,10 +95,7 @@ public class Product : INotifyPropertyChanged
     public event PropertyChangedEventHandler PropertyChanged;
     private void NotifyPropertyChanged(string propertyName)
     {
-        if (PropertyChanged != null)
-        {
-            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
 }
@@ -228,7 +225,7 @@ Explora el espacio de nombres [System.Data.SqlClient](https://docs.microsoft.com
 
 En la mayoría de los casos, es necesario cambiar algún aspecto de la configuración de SQL Server. Si puedes conectarte a la base de datos desde otro tipo de aplicación de escritorio, como una aplicación WPF o Windows Forms, asegúrate de que has habilitado TCP/IP para SQL Server. Puedes hacerlo en la consola de **Administración de equipos**.
 
-![Administración de equipos](images/computer-management.png)
+![Administrar equipos](images/computer-management.png)
 
 A continuación, asegúrate de que se está ejecutando el servicio de SQL Server Browser.
 
