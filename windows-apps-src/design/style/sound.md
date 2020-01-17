@@ -12,18 +12,18 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 31f527cff7588ccf6da2594566cfa3cf13a214f1
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8ed1344b5ee49244a6c1afcbb873b54fcc28624f
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258679"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684882"
 ---
 # <a name="sound"></a>Sonido
 
 ![imagen principal](images/header-sound.svg)
 
-Hay muchas formas de usar sonido para mejorar tu aplicación. Puedes usar sonido para complementar otros elementos de interfaz de usuario, esto permitirá que los usuarios puedan reconocer eventos de forma audible. El sonido puede ser un elemento de interfaz de usuario eficaz para personas con discapacidades visuales. Puedes usar sonido para crear una atmósfera que sumerge al usuario; por ejemplo, puedes reproducir una banda sonora divertida en segundo plano en un puzle o usar efectos de sonido inquietantes para un juego de miedo o supervivencia.
+Hay muchas formas de usar sonido para mejorar tu aplicación. Puedes usar sonido para complementar otros elementos de la interfaz de usuario, lo que permite a los usuarios reconocer eventos de forma audible. El sonido puede ser un elemento de la interfaz de usuario eficaz para personas con discapacidades visuales. Puedes usar sonido para crear una atmósfera envolvente para el usuario; por ejemplo, puedes reproducir una banda sonora divertida en segundo plano en un juego de rompecabezas o usar efectos de sonido inquietantes para un juego de miedo o supervivencia.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -43,15 +43,15 @@ Hay muchas formas de usar sonido para mejorar tu aplicación. Puedes usar sonido
 
 ## <a name="sound-global-api"></a>API global de sonido
 
-UWP proporciona un sistema de sonido fácilmente accesible que te permite simplemente "invertir un cambio" y obtener una experiencia de sonido envolvente en toda la aplicación.
+La plataforma UWP proporciona un sistema de sonido fácilmente accesible que permite simplemente "invertir un cambio" y obtener una experiencia de sonido envolvente en toda la aplicación.
 
-[**ElementSoundPlayer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer) es un sistema de sonido integrado dentro de XAML y, cuando está activado en todos los controles predeterminados, se reproducen sonidos automáticamente.
+[**ElementSoundPlayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementsoundplayer) es un sistema de sonido integrado dentro de XAML y, cuando está activado en todos los controles predeterminados, se reproducen sonidos automáticamente.
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
-**ElementSoundPlayer** tiene tres estados distintos: **Activado**, **Desactivado** y **Automático**.
+**ElementSoundPlayer** tiene tres estados distintos: **On** **Off** y **Auto**.
 
-Si se establece en **Desactivado**, independientemente de dónde se ejecute la aplicación, el sonido no se reproducirá nunca. Si se establece en **Activado**, los sonidos de tu aplicación se reproducirán en todas las plataformas.
+Si se establece en **Off**, independientemente de dónde se ejecute la aplicación, el sonido no se reproducirá nunca. Si se establece en **On**, los sonidos de tu aplicación se reproducirán en todas las plataformas.
 
 Al habilitar ElementSoundPlayer, se habilitará también automáticamente el audio espacial (sonido 3D). Para deshabilitar el sonido 3D (y seguir manteniendo el sonido activado), deshabilita **SpatialAudioMode** del elemento ElementSoundPlayer: 
 
@@ -60,18 +60,18 @@ ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 ```
 
 La propiedad **SpatialAudioMode** puede aceptar estos valores: 
-- **Automático**: el audio espacial se activará cuando el sonido esté activado. 
+- **Auto**: el audio espacial se activará cuando el sonido esté activado. 
 - **Off**: el audio espacial siempre está desactivado, incluso si el sonido está activado.
-- **Activado**: siempre se reproducirá audio espacial.
+- **On**: siempre se reproducirá audio espacial.
 
 Para obtener más información acerca del audio espacial y de cómo XAML lo controla, consulta [AudioGraph: audio espacial](/windows/uwp/audio-video-camera/audio-graphs#spatial-audio).
 
 ### <a name="sound-for-tv-and-xbox"></a>Sonido para televisión y Xbox
 
-El sonido es una parte fundamental de la experiencia de 10 pies y, de manera predeterminada, el estado de **ElementSoundPlayer** es **Automático**, lo que significa que solo obtendrás sonido cuando la aplicación se ejecute en Xbox.
-Para obtener más información sobre el diseño para televisión o Xbox, consulta el artículo [Diseño para Xbox y televisión](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN).
+El sonido es una parte fundamental de la experiencia en pantalla de TV y, de manera predeterminada, el estado de **ElementSoundPlayer** es **Auto**, lo que significa que solo obtendrás sonido cuando la aplicación se ejecute en Xbox.
+Para obtener más información sobre el diseño para televisión y Xbox, consulta el artículo [Diseño para Xbox y televisión](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN).
 
-## <a name="sound-volume-override"></a>Reemplazo del volumen del sonido
+## <a name="sound-volume-override"></a>Invalidación del volumen del sonido
 
 Todos los sonidos de la aplicación se pueden atenuar con el control **Volumen**. Sin embargo, los sonidos de la aplicación no se pueden reproducir a un volumen *más alto que el volumen del sistema*.
 
@@ -79,13 +79,13 @@ Para establecer el nivel del volumen de la aplicación, llama a:
 ```C#
 ElementSoundPlayer.Volume = 0.5;
 ```
-Donde el volumen máximo (en relación con el volumen del sistema) es 1.0 y el mínimo 0.0 (esencialmente silencioso).
+Donde el volumen máximo (en relación con el volumen del sistema) es 1.0 y el mínimo es 0.0 (esencialmente silencioso).
 
 ## <a name="control-level-state"></a>Estado del nivel de control
 
-Si no se desea un sonido predeterminado de un control, se puede deshabilitar. Esto se realiza mediante el **ElementSoundMode** en el control.
+Si no se desea el sonido predeterminado de un control, se puede deshabilitar. Para ello, se utiliza la propiedad **ElementSoundMode** en el control.
 
-**ElementSoundMode** tiene dos estados: **Desactivado** y **Predeterminado**. Cuando no se establece, es **Predeterminado**. Si se establece en **Desactivado**, cada sonido que reproduzca el control se silenciará *excepto para foco*.
+**ElementSoundMode** tiene dos estados: **Desactivado** y **Predeterminado**. Cuando no se establece, es **Default**. Si se establece en **Off**, cada sonido que reproduzca el control se silenciará *excepto para el foco*.
 
 ```XAML
 <Button Name="ButtonName" Content="More Info" ElementSoundMode="Off"/>
@@ -95,34 +95,34 @@ Si no se desea un sonido predeterminado de un control, se puede deshabilitar. Es
 ButtonName.ElementSoundState = ElementSoundMode.Off;
 ```
 
-## <a name="is-this-the-right-sound"></a>¿Es este el control adecuado?
+## <a name="is-this-the-right-sound"></a>¿Es este el sonido adecuado?
 
-Al crear un control personalizado o al cambiar un sonido existente del control, es importante comprender los usos de todos los sonidos que proporciona el sistema.
+Al crear un control personalizado o cambiar el sonido de un control existente, es importante comprender los usos de todos los sonidos que proporciona el sistema.
 
-Cada sonido se relaciona con una determinada interacción de usuario básica y, aunque los sonidos se pueden personalizar para reproducir en cualquier interacción, esta sección sirve para ilustrar los casos en los que se deberían usar los sonidos para mantener una experiencia coherente en todas las aplicaciones para UWP.
+Cada sonido se relaciona con una determinada interacción de usuario básica y, aunque los sonidos se pueden personalizar para reproducirse en cualquier interacción, esta sección sirve para ilustrar los escenarios en los que se deberían usar sonidos para mantener una experiencia coherente en todas las aplicaciones para UWP.
 
 ### <a name="invoking-an-element"></a>Invocar un elemento
 
-Actualmente, el sonido activado por el control más común en nuestro sistema es el sonido **Invocar**. Este sonido se reproduce cuando un usuario invoca un control a través de una pulsación, un clic, una introducción o un espacio o si presiona el botón "A" en un mando de juegos.
+Actualmente, el sonido desencadenado por control más común en nuestro sistema es el sonido **Invoke**. Este sonido se reproduce cuando un usuario invoca un control a través de una pulsación, un clic, una entrada o un espacio o si presiona el botón "A" en un controlador para juegos.
 
-Por lo general, este sonido solo se reproduce cuando un usuario destina explícitamente un control simple o una parte del control a través de un [dispositivo de entrada](../input/index.md).
+Por lo general, este sonido solo se reproduce cuando un usuario selecciona explícitamente un control simple o una parte del control a través de un [dispositivo de entrada](../input/index.md).
 
 
-Para reproducir este sonido en cualquier evento de control, solo tienes que llamar al método de reproducción de **ElementSoundPlayer** y pasar **ElementSound.Invoke**:
+Para reproducir este sonido desde cualquier evento de control, solo tienes que llamar al método Play desde **ElementSoundPlayer** y pasar **ElementSound.Invoke**:
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Invoke);
 ```
 
 ### <a name="showing--hiding-content"></a>Mostrar y ocultar el contenido
 
-Hay muchos controles flotantes, cuadros de diálogo e interfaces de usuario descartables en XAML y, cualquier acción que active una de estas superposiciones, debe llamar a un sonido **Mostrar** u **Ocultar**.
+Hay muchos controles flotantes, cuadros de diálogo e interfaces de usuario descartables en XAML y, cualquier acción que desencadene una de estas superposiciones, debe llamar a un sonido **Show** o **Hide**.
 
-Cuando una ventana de contenido de superposición se incluye en la vista, debe llamarse al sonido **Mostrar**:
+Cuando una ventana de contenido de superposición se incluye en la vista, se debe llamar al sonido **Show**:
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Show);
 ```
-Por el contrario, cuando se cierra una ventana de contenido de superposición (o se cierra el elemento por cambio de foco), debe llamarse al sonido **Ocultar**:
+Por el contrario, cuando se cierra una ventana de contenido de superposición (o se cierra el elemento por cambio de foco), se debe llamar al sonido **Hide**:
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Hide);
@@ -133,39 +133,39 @@ Cuando se navega entre paneles o vistas en la página de una aplicación (consul
 
 La experiencia de sonido con relación a este concepto de navegación está incluida en los sonidos **MovePrevious** y **MoveNext**.
 
-Al pasar a un vista o panel que se considera el *siguiente elemento* de una lista, llama a:
+Al pasar a una vista o un panel que se considere el *siguiente elemento* de una lista, llama a:
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MoveNext);
 ```
-Y al pasar a un vista o panel anterior de una lista que se considera el *elemento anterior*, llama a:
+Y al pasar a una vista o un panel anterior de una lista que se considere el *elemento anterior*, llama a:
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
 ```
-### <a name="back-navigation"></a>Volver a la navegación
+### <a name="back-navigation"></a>Navegación hacia atrás
 
-Al navegar desde la página actual a la página anterior dentro de una aplicación, debe llamarse al sonido **GoBack**:
+Al navegar de la página actual a la anterior dentro de una aplicación, se debe llamar al sonido **GoBack**:
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 ```
-### <a name="focusing-on-an-element"></a>Centrarse en un elemento
+### <a name="focusing-on-an-element"></a>Establecer el foco en un elemento
 
-El sonido de **Foco** es el único sonido implícito en nuestro sistema. Esto significa que, aunque un usuario no interactúe directamente con nada, seguirá escuchando un sonido.
+El sonido **Focus** es el único sonido implícito en nuestro sistema. Esto significa que, aunque un usuario no interactúe directamente con nada, seguirá escuchando un sonido.
 
-El enfoque ocurre cuando un usuario navega a través de una aplicación, bien con el mando de juegos, el teclado, el control remoto o el kinect. Normalmente, el sonido de **Foco** *no se reproduce en eventos PointerEntered o al pasar el mouse por encima*.
+El enfoque se produce cuando un usuario navega a través de una aplicación, bien con el controlador para juegos, el teclado, el control remoto o el Kinect. Normalmente, el sonido de **Foco***no se reproduce en eventos PointerEntered o al pasar el mouse por encima*.
 
-Para configurar un control para que reproduzca el sonido de **Foco** cuando el control recibe el foco, llama a:
+Para configurar un control para que reproduzca el sonido **Focus** cuando el control reciba el foco, llama a:
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Focus);
 ```
-### <a name="cycling-focus-sounds"></a>Recorrer sonidos de foco
+### <a name="cycling-focus-sounds"></a>Recorrer sonidos Focus
 
-Como una característica agregada para llamar a **ElementSound.Focus**, el sistema de sonido, de manera predeterminada, recorrerá 4 sonidos diferentes en cada desencadenador de navegación. Esto significa que no se reproducirán dos sonidos de foco exactos uno detrás de otro.
+Como una característica adicional para llamar a **ElementSound.Focus**, el sistema de sonido recorrerá cuatro sonidos diferentes en cada desencadenador de navegación. Esto significa que no se reproducirán dos sonidos de foco exactos uno detrás de otro.
 
-La finalidad de esta característica de recorrido consiste en evitar que los sonidos de foco sean monótonos y que los note el usuario. Los sonidos de foco se reproducirán más a menudo y, por lo tanto, deben ser más sutiles.
+La finalidad de esta característica de ciclo consiste en evitar que los sonidos de foco sean monótonos y perceptibles para el usuario. Los sonidos de foco se reproducirán más a menudo y, por lo tanto, deben ser más sutiles.
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 

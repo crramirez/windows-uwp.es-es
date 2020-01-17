@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: dc696c9a57e84e2caade6a2623a72a6048b65621
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 9fb08278391118215063c293b71ffde1ed4443b8
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319107"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684120"
 ---
 # <a name="teaching-tip"></a>Sugerencia de enseñanza
 
@@ -27,7 +27,7 @@ Una sugerencia de enseñanza puede ser descartable por cambio de foco, o bien pu
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado? 
 
-Usa un control **TeachingTip** para centrar la atención de un usuario en actualizaciones y características nuevas o importantes, para recordarle opciones no esenciales que podrían mejorar su experiencia, o para enseñarle cómo se debe completar una tarea. 
+Usa un control **TeachingTip** para centrar la atención de un usuario en actualizaciones y características nuevas o importantes, para recordarle de opciones no esenciales que podrían mejorar su experiencia, o para enseñarle cómo se debe completar una tarea. 
 
 Ya que las sugerencias de enseñanza son transitorias, no es un control recomendado para informar a los usuarios sobre los errores o cambios de estado importantes.
 
@@ -58,7 +58,7 @@ Cuando la información presentada no pertenece a un elemento determinado de la i
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza en la esquina inferior derecha. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú). Hay un botón Cerrar en la esquina superior derecha de la sugerencia de enseñanza.](../images/teaching-tip-non-targeted.png)
 
-Una sugerencia de enseñanza puede exigir al usuario que use un botón "X" en la esquina superior para descartarla o un botón "Cerrar" en la parte inferior. También es posible que la sugerencia de enseñanza se cierre por cambio de foco si no se agrega un botón Descartar. En su lugar, la sugerencia de enseñanza se cerrará cuando un usuario se desplace o interactúe con otros elementos de la aplicación. Debido a este comportamiento, las sugerencias descartables por cambio de foco son la mejor solución cuando una sugerencia debe colocarse en un área desplazable. 
+Una sugerencia de enseñanza puede exigir al usuario que use un botón "X" en la esquina superior para descartarla o un botón "Cerrar" en la parte inferior. También es posible que la sugerencia de enseñanza se descarte por cambio de foco si no se agrega un botón Descartar. En su lugar, la sugerencia de enseñanza se cerrará cuando un usuario se desplace o interactúe con otros elementos de la aplicación. Debido a este comportamiento, las sugerencias descartables por cambio de foco son la mejor solución cuando una sugerencia debe colocarse en un área desplazable. 
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza descartable por cambio de foco en la esquina inferior derecha. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú).](../images/teaching-tip-light-dismiss.png)
 
@@ -71,11 +71,11 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Save automatically"
             Subtitle="When you save your file to OneDrive, we save your changes as you go - so you never have to.">
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -106,10 +106,10 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to.">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 Ten en cuenta que en este ejemplo el elemento TeachingTip está en el árbol de elementos, en lugar de en un objeto ResourceDictionary o en el código subyacente. Esto no tiene ningún efecto sobre el comportamiento; TeachingTip solo se muestra cuando se abre y no ocupa espacio en el diseño.
@@ -120,7 +120,7 @@ Ten en cuenta que en este ejemplo el elemento TeachingTip está en el árbol de 
 
 La sugerencia de enseñanza reproduce el comportamiento de ubicación del [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) del control flotante con la propiedad TeachingTipPlacementMode. El modo de selección de ubicación predeterminado intentará colocar una sugerencia de enseñanza dirigida sobre su destino, y colocará las sugerencias de enseñanza no dirigidas centradas en la parte inferior de la raíz de XAML. Al igual que con los controles flotantes, si el modo de selección de ubicación preferido no deja espacio libre para que se muestre la sugerencia de enseñanza, se elegirá otro modo de selección de ubicación automáticamente. 
 
-Para las aplicaciones que predicen la entrada del controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( https://docs.microsoft.com/en-us/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
+Para las aplicaciones que predicen la entrada del controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
 
 Una sugerencia de enseñanza dirigida con la propiedad PreferredPlacement establecida en "BottomLeft" se mostrará con la delta centrada en la parte inferior de su destino y el cuerpo de la sugerencia estará desplazado hacia la izquierda.
 
@@ -128,12 +128,12 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to."
             PreferredPlacement="BottomLeft">
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -147,11 +147,11 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     PreferredPlacement="BottomLeft">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza en la esquina inferior izquierda. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú). Hay un botón Cerrar en la esquina superior derecha de la sugerencia de enseñanza.](../images/teaching-tip-non-targeted-preferred-placement.png)
@@ -164,7 +164,7 @@ El siguiente diagrama muestra el resultado de los 13 modos de PreferredPlacemen
 
 ### <a name="add-a-placement-margin"></a>Agregar un margen de ubicación  
 
-Puedes controlar la distancia a la que se coloca una sugerencia de enseñanza con relación a su destino, al igual que la distancia a la que se coloca una sugerencia de enseñanza no dirigida con relación a los bordes de la raíz de XAML mediante la propiedad PlacementMargin. Al igual que [Margin](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.margin), PlacementMargin tiene cuatro valores: left, right, top y bottom, por lo que solo se usan los valores pertinentes. Por ejemplo, PlacementMargin.Left se aplica cuando la sugerencia está a la izquierda del destino o en el borde izquierdo de la raíz de XAML.
+Puedes controlar la distancia a la que se coloca una sugerencia de enseñanza con relación a su destino, al igual que la distancia a la que se coloca una sugerencia de enseñanza no dirigida con relación a los bordes de la raíz de XAML mediante la propiedad PlacementMargin. Al igual que [Margin](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin), PlacementMargin tiene cuatro valores: left, right, top y bottom, por lo que solo se usan los valores pertinentes. Por ejemplo, PlacementMargin.Left se aplica cuando la sugerencia está a la izquierda del destino o en el borde izquierdo de la raíz de XAML.
 
 El ejemplo siguiente muestra una sugerencia no dirigida cuyos valores Left/Top/Right/Bottom de PlacementMargin están establecidos en 80.
 
@@ -172,12 +172,12 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     PreferredPlacement="BottomLeft"
     PlacementMargin="80">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza colocada hacia la esquina inferior derecha, aunque no del todo. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú). Hay un botón Cerrar en la esquina superior derecha de la sugerencia de enseñanza.](../images/teaching-tip-placement-margin.png)
@@ -191,7 +191,7 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to.">
@@ -199,7 +199,7 @@ XAML
                     <CheckBox x:Name="HideTipsCheckBox" Content="Don't show tips at start up" IsChecked="{x:Bind HidingTips, Mode=TwoWay}" />
                     <TextBlock>You can change your tip preferences in <Hyperlink NavigateUri="app:/item/SettingsPage">Settings</Hyperlink> if you change your mind.</TextBlock>
                 </StackPanel>
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -218,7 +218,7 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources> 
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to."
@@ -229,7 +229,7 @@ XAML
                     <CheckBox x:Name="HideTipsCheckBox" Content="Don't show tips at start up" IsChecked="{x:Bind HidingTips, Mode=TwoWay}" />
                     <TextBlock>You can change your tip preferences in <Hyperlink NavigateUri="app:/item/SettingsPage">Settings</Hyperlink> if you change your mind.</TextBlock>
                 </StackPanel>
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -244,14 +244,14 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources> 
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to.">
-            <controls:TeachingTip.HeroContent>
+            <muxc:TeachingTip.HeroContent>
                 <Image Source="Assets/cloud.png" />
-            </controls:TeachingTip.HeroContent>
-        </controls:TeachingTip>
+            </muxc:TeachingTip.HeroContent>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -266,14 +266,14 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to."
-            <controls:TeachingTip.IconSource>
-                <controls:SymbolIconSource Symbol="Save" />
-            </controls:TeachingTip.IconSource>
-        </controls:TeachingTip>
+            <muxc:TeachingTip.IconSource>
+                <muxc:SymbolIconSource Symbol="Save" />
+            </muxc:TeachingTip.IconSource>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -290,11 +290,11 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     IsLightDismissEnabled="True">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza descartable por cambio de foco en la esquina inferior derecha. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú).](../images/teaching-tip-light-dismiss.png)
@@ -309,13 +309,13 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     PreferredPlacement="BottomRight"
     PlacementMargin="-80,-50,0,0"
     ShouldConstrainToRootBounds="False">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza fuera de la esquina inferior derecha de la aplicación. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú). Hay un botón Cerrar en la esquina superior derecha de la sugerencia de enseñanza.](../images/teaching-tip-escape-xaml-root.png)
@@ -328,11 +328,11 @@ El evento de cierre puede usarse para cancelar o aplazar el cierre de una sugere
 
 XAML
 ```XAML
-<controls:TeachingTip x:Name="EnableNewSettingsTip"
+<muxc:TeachingTip x:Name="EnableNewSettingsTip"
     Title="New ways to protect your privacy!"
     Subtitle="Please close this tip and review our updated privacy policy and privacy settings."
     Closing="OnTipClosing">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 C#
@@ -359,13 +359,13 @@ public void OnTipClosing(object sender, TeachingTipClosingEventArgs args)
 
 ### <a name="related-articles"></a>Artículos relacionados 
 
-* [Cuadros de diálogo y controles flotantes](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
+* [Cuadros de diálogo y controles flotantes](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
 
 ### <a name="recommendations"></a>Recomendaciones
 * Las sugerencias son temporales y no deben contener información u opciones que sean críticas para la experiencia de una aplicación. 
 * Evita mostrar sugerencias de enseñanza con demasiada frecuencia. Es más probable que las sugerencias de enseñanza reciban atención individual cuando están escalonadas a lo largo de sesiones largas o en varias sesiones.    
 * Mantén las sugerencias concisas y el tema claro. Las investigaciones muestran que, en promedio, los usuarios solo leen entre 3 y 5 palabras y comprenden entre 2 y 3 antes de decidir si van a interactuar con una sugerencia.
-* No se garantiza la accesibilidad del controlador para juegos de una sugerencia de enseñanza. Para las aplicaciones que esperan recibir la entrada de un controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( https://docs.microsoft.com/en-us/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
+* No se garantiza la accesibilidad del controlador para juegos de una sugerencia de enseñanza. Para las aplicaciones que esperan recibir la entrada de un controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
 * Cuando la sugerencia de enseñanza está habilitada para escapar la raíz de XAML, se recomienda habilitar la propiedad IsLightDismissEnabled y establecer el modo de PreferredPlacement más cercano al centro de la raíz de XAML. 
 
 ### <a name="reconfiguring-an-open-teaching-tip"></a>Volver a configurar una sugerencia de enseñanza abierta

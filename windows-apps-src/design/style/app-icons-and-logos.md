@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0801ba9036f69aef340881b9c92807e80af6b09f
-ms.sourcegitcommit: e43bc20c2f6e9375f61931c2fce95f06fd1f31df
+ms.openlocfilehash: 25d9df392d6ed2725b171fe6513334a39458410b
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212073"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684594"
 ---
 # <a name="app-icons-and-logos"></a>Logotipos e iconos de aplicaciones 
 
@@ -29,7 +29,7 @@ Todas las apps tienen un icono o logotipo que la representa y ese icono aparece 
         * En Microsoft Store
     :::column-end:::
     :::column:::
-        ![windows 10 start and tiles](images/assetguidance01.jpg)
+        ![Inicio e iconos de Windows 10](images/assetguidance01.jpg)
     :::column-end:::
 :::row-end:::
 
@@ -75,7 +75,7 @@ Dado que los recursos de iconos de app son mapas de bits y estos no se escalan b
 
 "¿Cómo puedo especificar imágenes para la descripción de mi app en Microsoft Store?"
 
-De manera predeterminada, usamos algunas de las imágenes de los paquetes en Microsoft Store, tal como se describe en la tabla de la parte superior de esta página (junto con otras [imágenes que proporciones durante el proceso de envío](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)). Además, tienes la opción de impedir que Microsoft Store use las imágenes de logotipo en los paquetes de tu app al mostrar la descripción a los clientes en Windows 10 (incluyendo Xbox) y, en cambio, hacer que Microsoft Store use solo las imágenes que cargues. Esto te ofrece más control sobre el aspecto de la app en diversas pantallas en Microsoft Store. (Ten en cuenta que si tu producto admite versiones anteriores del sistema operativo, esos clientes todavía podrían ver las imágenes de los paquetes, incluso si usas esta opción). Puedes hacer esto en la sección **Store logos** (Logotipos de Microsoft Store) del paso **Descripción en Microsoft Store** del proceso de envío.
+De manera predeterminada, usamos algunas de las imágenes de los paquetes en Microsoft Store, tal como se describe en la tabla de la parte superior de esta página (junto con otras [imágenes que proporciones durante el proceso de envío](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images)). Además, tienes la opción de impedir que Microsoft Store use las imágenes de logotipo en los paquetes de tu app al mostrar la descripción a los clientes en Windows 10 (incluyendo Xbox) y, en cambio, hacer que Microsoft Store use solo las imágenes que cargues. Esto te ofrece más control sobre el aspecto de la app en diversas pantallas en Microsoft Store. (Ten en cuenta que si tu producto admite versiones anteriores del sistema operativo, esos clientes todavía podrían ver las imágenes de los paquetes, incluso si usas esta opción). Puedes hacer esto en la sección **Store logos** (Logotipos de Microsoft Store) del paso **Descripción en Microsoft Store** del proceso de envío.
 
 ![Especificar los logotipos de Microsoft Store durante el proceso de envío](images/app-icons/storelogodisplay.png)
 
@@ -133,15 +133,15 @@ Para iniciar el Diseñador de manifiestos:
         2. En el **Explorador de soluciones**, haz doble clic en el archivo Package.appmxanifest.
     :::column-end:::
     :::column:::
-        ![The Visual Studio 2019 Manifest Designer](images/icons/vs-solution-explorer.png)
+        ![Diseñador de manifiestos de Visual Studio 2019](images/icons/vs-solution-explorer.png)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-            Visual Studio displays the Manifest Designer.
+            Visual Studio muestra el diseñador de manifiestos.
     :::column-end:::
     :::column:::
-            ![The Visual Assets tab](images/icons/vs-manfiest-designer.png)
+            ![Pestaña Recursos visuales](images/icons/vs-manfiest-designer.png)
     :::column-end:::
 :::row-end:::    
 :::row:::
@@ -149,7 +149,7 @@ Para iniciar el Diseñador de manifiestos:
         3. Haz clic en la pestaña **Recursos visuales**.
     :::column-end:::
     :::column:::
-        ![The Visual Assets tab](images/icons/vs-manfiest-designer-visual-assets.png)
+        ![Pestaña Recursos visuales](images/icons/vs-manfiest-designer-visual-assets.png)
     :::column-end:::
 :::row-end:::        
 
@@ -197,7 +197,7 @@ El recurso de icono de app aparece en muchos lugares: la barra de tareas de Wind
 Además de los tamaños de factor de escala estándar ("Square44x44Logo.scale-400.png"), también recomendamos crear recursos de "tamaño de destino". Estos recursos se llaman "tamaño de destino" porque se dirigen a tamaños específicos, como 16 píxeles, en lugar de factores de escala específicos, como 400. Los recursos de tamaño de destino son para las superficies que no usan el sistema de nivel predefinido de escalado:
 
 * Lista de accesos directos de Inicio (escritorio)
-* Inicio en esquina inferior del icono (escritorio)
+* Esquina inferior del icono de Inicio (escritorio)
 * Accesos directos (escritorio)
 * Panel de control (escritorio)
 
@@ -223,20 +223,20 @@ Esta es la lista de recursos de tamaño de destino:
 
 \* Como mínimo, recomendamos que proporciones estos tamaños. 
 
-No tienes que agregar espaciado interno a estos recursos porque Windows lo hará si es necesario. Estos recursos deberían contar con una superficie mínima de 16 píxeles. 
+No tienes que agregar espaciado interno a estos recursos, ya que lo hará Windows si es necesario. Estos recursos deberían representar una superficie mínima de 16 píxeles. 
 
 Te mostramos un ejemplo de dichos recursos tal como se muestran en los iconos de la barra de tareas de Windows:
 
-![recursos de la barra de tareas de Windows](images/assetguidance21.png)
+![Recursos de la barra de tareas de Windows](images/assetguidance21.png)
 
 ### <a name="unplated-assets"></a>Recursos sin placa
 De manera predeterminada, Windows usa un recurso basado en el destino sobre una placa posterior de color. Si quieres, puedes proporcionar un recurso sin placa basada en destino. "Sin placa" significa que el recurso se mostrará en un fondo transparente. Ten en cuenta que estos recursos aparecerán sobre una variedad de colores de fondo. 
 
-![activos con y sin placa](images/assetguidance22.png)
+![Activos con y sin placa](images/assetguidance22.png)
 
 Estas son las superficies que usan recursos de icono de app sin placa:
 * Barra de tareas y miniatura de la barra de tareas (escritorio)
-* Accesos directos de la barra de tareas
+* Lista de accesos directos de la barra de tareas
 * Vista de tareas
 * ALT+TAB
 
@@ -249,7 +249,7 @@ El tema seleccionado del usuario determina el color de la barra de tareas. Si el
 
 Estas son las recomendaciones de tamaño para los recursos basados en destino, a escala del 100 %:
 
-![target-based asset sizing at 100 % scale](images/assetguidance23.png)
+![Tamaño de recursos basados en el destino con una escala del 100 %](images/assetguidance23.png)
 
 
 ## <a name="more-about-splash-screen-assets"></a>Más información sobre los recursos de la pantalla de presentación
@@ -271,41 +271,41 @@ Si quieres proporcionar tu propio relleno, estas son nuestras recomendaciones pa
 
 Hay 4 tamaños de icono: pequeño (71 x 71), mediano (150 x 150), ancho (310 x 150) y grande (310 x 310). 
 
-Cada recurso de ventana es del mismo tamaño que la ventana en la que se coloca.
+Cada recurso de icono es del mismo tamaño que el icono en el que se coloca.
 
 ![Icono con sangrado completo](images/app-icons/tile-assets1.png)
 
 Si no quieres que el icono se extienda hasta su borde, puedes usar píxeles transparentes en el recurso para crear relleno. 
 
-![placa trasera e icono](images/assetguidance05.png)
+![Placa trasera e icono](images/assetguidance05.png)
 
-Para los mosaicos pequeños, limita el ancho y alto del icono al 66 % del tamaño de mosaico:
+Para los mosaicos pequeños, limita el ancho y el alto del icono al 66 % de su tamaño:
 
-![relaciones de tamaño de mosaico pequeño](images/assetguidance09.png)
+![Relaciones de tamaño de icono pequeño](images/assetguidance09.png)
 
-Para los mosaicos medianos, limita el ancho del icono al 66 % y el alto al 50 % del tamaño de mosaico. Esto impide la superposición de elementos de la barra de personalización de marca:
+Para los iconos medianos, limita el ancho al 66 % y el alto al 50 % de su tamaño. Esto impide la superposición de elementos de la barra de personalización de marca:
 
-![relaciones de tamaño de mosaico mediano](images/assetguidance10.png)
+![Relaciones de tamaño de icono mediano](images/assetguidance10.png)
 
-Para los mosaicos anchos, limita el ancho del icono al 66 % y el alto al 50 % del tamaño de mosaico. Esto impide la superposición de elementos de la barra de personalización de marca:
+Para los iconos anchos, limita el ancho al 66 % y el alto al 50 % de su tamaño. Esto impide la superposición de elementos de la barra de personalización de marca:
 
-![relaciones de tamaño de mosaico ancho](images/assetguidance11.png)
+![Relaciones de tamaño de icono ancho](images/assetguidance11.png)
 
 Para iconos grandes, limita el ancho del icono al 66 % y la altura al 50 % del tamaño del icono:
 
-![relaciones de tamaño de mosaico grande](images/assetguidance12.png)
+![Relaciones de tamaño de icono grande](images/assetguidance12.png)
 
-Algunos iconos están diseñados para una orientación horizontal o vertical, mientras que otros tienen formas más complejas que impiden que se ajusten exactamente a las dimensiones de destino. Los iconos que parece que están centrados pueden medirse conforme a un lado. En este caso, las partes de un icono pueden quedar por fuera de la superficie recomendada, siempre que ocupen el mismo peso visual que un icono ajustado exactamente:
+Algunos iconos están diseñados para una orientación horizontal o vertical, mientras que otros tienen formas más complejas que impiden que se ajusten exactamente a las dimensiones de destino. Los iconos que parecen estar centrados pueden medirse conforme a un lado. En este caso, las partes de un icono pueden quedar fuera de la superficie recomendada, siempre que ocupen el mismo peso visual que un icono ajustado exactamente:
 
-![tres iconos centrados](images/assetguidance13.png)
+![Tres iconos centrados](images/assetguidance13.png)
 
-Con activos sin bordes, ten en cuenta los elementos que interactúan dentro de los márgenes y bordes de los iconos. Mantén los márgenes de, al menos, el 16 % del alto o ancho del icono. Este porcentaje representa el doble de ancho de los márgenes en los tamaños de mosaico más pequeños:
+En el caso de los recursos con sangrado completo, ten en cuenta los elementos que interactúan dentro de los márgenes y bordes de los iconos. Mantén unos márgenes del 16 % del alto o ancho del icono como mínimo. Este porcentaje representa el doble del ancho de los márgenes en los tamaños de icono más pequeños:
 
-![icono sin bordes con márgenes](images/assetguidance14.png)
+![Icono con sangrado completo y márgenes](images/assetguidance14.png)
 
 En este ejemplo los márgenes son demasiado estrechos:
 
-![icono sin bordes con márgenes que son demasiado pequeños](images/assetguidance15.png)
+![Icono con sangrado completo y márgenes que son demasiado pequeños](images/assetguidance15.png)
 
 
 ## <a name="optimizing-for-specific-themes-languages-and-other-conditions"></a>Optimizar para temas específicos, idiomas y otras condiciones 

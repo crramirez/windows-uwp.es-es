@@ -5,12 +5,12 @@ keywords: hosted web app;aplicación web hospedada;HWA;REST API;API REST;single-
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f5195cc3ed84116797c0b424a637c255b082386
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: b9a6b80034dc8272226c9563960079434dff8e41
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281859"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684782"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Crear una aplicación web de una sola página con back-end de API REST
 
@@ -32,7 +32,7 @@ Si todavía no tienes estos recursos en tu equipo, usa los siguientes vínculos 
 
  - [Visual Studio Code](https://code.visualstudio.com/)
 
-Si quieres completar los pasos finales´para hospedar el servicio de API y la aplicación de juego de memoria en Microsoft Azure, tendrás que [crear una cuenta gratuita de Azure](https://azure.microsoft.com/en-us/free/) si todavía no lo has hecho.
+Si quieres completar los pasos finales´para hospedar el servicio de API y la aplicación de juego de memoria en Microsoft Azure, tendrás que [crear una cuenta gratuita de Azure](https://azure.microsoft.com/free/) si todavía no lo has hecho.
 
 Si decides dejar (o posponer) la parte de Azure, simplemente omite las secciones finales de las partes I y II, que abarcan el hospedaje y el empaquetado de la aplicación en Azure para Microsoft Store. El servicio de API y la aplicación web que crees se podrán ejecutar localmente (desde `http://localhost:8000` y `http://localhost:3000`, respectivamente) en tu equipo.
 
@@ -290,7 +290,7 @@ Estos son algunos recursos útiles para ir más allá:
 
  - [Depuración avanzada de Node.js con Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 
- - [Documentación web y móvil de Azure](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=web)
+ - [Documentación web y móvil de Azure](https://docs.microsoft.com/azure/#pivot=services&panel=web)
 
  - [Documentación de Azure DocumentDB](https://azure.microsoft.com/blog/dear-documentdb-customers-welcome-to-azure-cosmos-db/)
 
@@ -490,7 +490,7 @@ if (cardsFlipped == gameBoardSize) {
 Si el número de cartas volteadas coincide con el tamaño del tablero del juego (por ejemplo, `cardsFlipped == gameBoardSize`), no hay más cartas que se puedan voltear y el usuario ha ganado el juego. Vamos a agregar algo de HTML sencillo al elemento `div` con `id="game-board"` para que el usuario sepa que ha ganado y que puede volver a jugar.  
 
 ### <a name="3-create-the-user-interface"></a>3. Crear la interfaz de usuario 
-Ahora vamos a ver todo este código en acción mediante la creación de la interfaz de usuario. En este tutorial, usamos el motor de plantillas [Pug](https://pugjs.org/) (formalmente Jade).  La sintaxis de *Pug* es limpia y distingue los espacios en blanco para escribir HTML. A continuación te mostramos un ejemplo. 
+Ahora vamos a ver todo este código en acción mediante la creación de la interfaz de usuario. En este tutorial, usamos el motor de plantillas [Pug](https://pugjs.org/) (formalmente Jade).  La sintaxis de *Pug* es limpia y distingue los espacios en blanco para escribir HTML. A continuación se muestra un ejemplo. 
 
 ```
 body
@@ -592,7 +592,7 @@ La adición de un movimiento de volteo con [transformaciones CSS](https://develo
     perspective: 1000px; 
     ```
 
-2. Ahora, agrega las siguientes propiedades para la clase `.cards` en style.css. El `div` `.cards` es el elemento que realmente realizará la animación de volteo y mostrará la parte frontal o la posterior de la carta. 
+2. Ahora, agrega las siguientes propiedades para la clase `.cards` en style.css. `div` `.cards` es el elemento que realmente realizará la animación de volteo y mostrará la parte frontal o la posterior de la carta. 
 
     ``` css
     transform-style: preserve-3d;
@@ -634,8 +634,8 @@ Ahora puedes implementar la aplicación en Azure (o en cualquier otro servicio d
 
 Los pasos básicos para publicarla en Microsoft Store son:
 
- 1. Crear una cuenta de [desarrollador de Windows](https://developer.microsoft.com/en-us/store/register).
- 2. Usar la [lista de comprobación de envío de aplicación](https://docs.microsoft.com/en-us/windows/uwp/publish/app-submissions).
+ 1. Crear una cuenta de [desarrollador de Windows](https://developer.microsoft.com/store/register).
+ 2. Usar la [lista de comprobación de envío de aplicación](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
  3. Enviar la aplicación para su [certificación](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process).
 
 Estos son algunos recursos útiles para ir más allá:

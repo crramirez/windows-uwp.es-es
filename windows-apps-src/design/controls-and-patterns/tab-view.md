@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: acad94c0697f930235af809cc3e2826e4c5befde
-ms.sourcegitcommit: f0588a086cf2499968bf03b10c6bce5f518e90cb
+ms.openlocfilehash: 141a24ca1f828f98231ec35471f7b43229df57e6
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71144965"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684346"
 ---
 # <a name="tabview"></a>TabView
 
@@ -31,7 +31,7 @@ TabView ofrece pestañas de documentos para aplicaciones para UWP. Usa un contro
 - Los usuarios puedan abrir documentos o páginas web directamente en pestañas.
 - Los usuarios puedan arrastrar y colocar pestañas entre ventanas.
 
-Si un control TabView no es adecuado para tu aplicación, considera la posibilidad de usar controles como [Pivot](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/pivot) o [NavigationView](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/navigationview).
+Si un control TabView no es adecuado para tu aplicación, considera la posibilidad de usar controles como [Pivot](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot) o [NavigationView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview).
 
 ## <a name="anatomy"></a>Anatomía
 
@@ -89,9 +89,9 @@ Hay varias maneras de aprovechar o ampliar la funcionalidad de un control TabVie
 
 En lugar de hacer que las pestañas ocupen su propia fila debajo de la barra de título de una ventana, puedes combinar las dos en la misma área. De este modo, se ahorra espacio vertical para el contenido y la aplicación adquiere un aspecto más moderno.
 
-Dado que un usuario puede arrastrar una ventana por la barra de título para cambiar la posición de la ventana, es importante que la barra de título no se rellene completamente con pestañas. Por lo tanto, al mostrar las pestañas en una barra de título, tienes que especificar una parte de la barra de título que se va a reservar como área arrastrable. Si no especificas una región arrastrable, se podrá arrastrar toda la barra de título, lo que impedirá que las pestañas reciban eventos de entrada. Si el control TabView se muestra en la barra de título de una ventana, siempre tienes que incluir un elemento TabStripFooter en TabView y marcarlo como región arrastrable.
+Dado que un usuario puede arrastrar una ventana por la barra de título para cambiar la posición de la ventana, es importante que la barra de título no se rellene completamente con pestañas. Por lo tanto, al mostrar las pestañas en una barra de título, tienes que especificar una parte de la barra de títuloque se va a reservar como área arrastrable. Si no especificas una región arrastrable, se podrá arrastrar toda la barra de título, lo que impedirá que las pestañas reciban eventos de entrada. Si el control TabView se muestra en la barra de título de una ventana, siempre tienes que incluir un elemento TabStripFooter en TabView y marcarlo como región arrastrable.
 
-Para obtener más información, consulta [Personalización de la barra de título](https://docs.microsoft.com/en-us/windows/uwp/design/shell/title-bar).
+Para obtener más información, consulta [Personalización de la barra de título](https://docs.microsoft.com/windows/uwp/design/shell/title-bar).
 
 ![Pestañas en la barra de título](images/tabview/tab-extend-to-title.png)
 
@@ -151,7 +151,7 @@ A medida que la barra de pestañas se llena de pestañas, puedes controlar cómo
 
 | Valor TabWidthMode | Comportamiento                                                                                                                                                    |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Igual              | A medida que se agreguen nuevas pestañas, todas las pestañas se reducirán horizontalmente hasta que alcancen un ancho mínimo muy pequeño.                                                       |
+| Equal              | A medida que se agreguen nuevas pestañas, todas las pestañas se reducirán horizontalmente hasta que alcancen un ancho mínimo muy pequeño.                                                       |
 | SizeToContent      | Las pestañas siempre tendrán su "tamaño natural", el tamaño mínimo necesario para mostrar su icono y encabezado. No se expandirán ni se reducirán a medida que se agreguen o cierren. |
 
 Sea cual sea el valor que elijas, en algún momento es posible que haya demasiadas pestañas para mostrar en la franja de pestañas. En este caso, aparecerán botones de desplazamiento que permitirán al usuario desplazar TabStrip a la izquierda y a la derecha.
@@ -162,7 +162,7 @@ La mayoría de los usuarios tiene experiencia en el uso de pestañas de document
 
 Independientemente de cómo interactúe el usuario con un conjunto de pestañas de documento, siempre debe haber una pestaña activa. Si el usuario cierra la pestaña seleccionada o separa la pestaña seleccionada en otra ventana, otra pestaña debe convertirse en la pestaña activa. Para ello, TabView selecciona automáticamente la pestaña siguiente. Si tienes un buen motivo para que la aplicación permita un control TabView con una pestaña no seleccionada, el área de contenido de TabView sencillamente estará en blanco.
 
-## <a name="keyboard-navigation"></a>Navegación por teclado
+## <a name="keyboard-navigation"></a>Navegación con el teclado
 
 De manera predeterminada, TabView admite muchos escenarios comunes de navegación por teclado. En esta sección se explica la funcionalidad integrada y se hacen recomendaciones sobre funcionalidades adicionales que pueden resultar útiles para algunas aplicaciones.
 
@@ -293,6 +293,6 @@ private void NavigateToNumberedTabKeyboardAccelerator_Invoked(KeyboardAccelerato
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [MasterDetails](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/master-details)
-- [NavigationView](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/navigationview)
-- [Pivot](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/pivot)
+- [MasterDetails](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/master-details)
+- [NavigationView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview)
+- [Pivot](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot)

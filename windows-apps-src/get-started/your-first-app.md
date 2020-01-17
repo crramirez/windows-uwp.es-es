@@ -1,19 +1,19 @@
 ---
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
-title: Crea tu primera aplicación
+title: Creación de la primera aplicación
 description: Cree una aplicación de la Plataforma universal de Windows (UWP) para Windows 10 con su lenguaje de programación favorito.
 ms.date: 01/25/2017
 ms.topic: article
 keywords: windows 10, uwp, primera aplicación, c#, c++, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: f386de7ebf9aae2f49a2709d8c1c8ce2595cbf1d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d0870212df4deb7f12f790107ec988fac3eb69ab
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260523"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685150"
 ---
-# <a name="create-your-first-app"></a>Crea tu primera aplicación
+# <a name="create-your-first-app"></a>Creación de la primera aplicación
 
 Le damos la bienvenida a la [plataforma UWP](universal-application-platform-guide.md). Estos tutoriales le ayudarán a crear su primera aplicación para UWP en el lenguaje de su elección.
 
@@ -21,7 +21,7 @@ Para empezar, elija su lenguaje favorito.
 
 ## <a name="c-and-xaml"></a>C# y XAML
 
-Usa tus conocimientos de .NET, WPF o Silverlight para compilar aplicaciones mediante la plataforma XAML con C#.
+Usa tus conocimientos de .NET, WPF o Silverlight para compilar aplicaciones mediante el lenguaje XAML con C#.
 
 * [Crear una aplicación "Hello, world" mediante XAML con C#](create-a-hello-world-app-xaml-universal.md)
 
@@ -29,7 +29,7 @@ Si quiere aprender los aspectos básicos o simplemente refrescar su memoria, con
 
 * [Conceptos básicos de C# para principiantes](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners?l=Lvld4EQIC_2706218949)
 * [Conceptos básicos de VB para principiantes](https://docs.microsoft.com/learn/?l=jqMOvLKbC_9206218965)
-* [Guía del desarrollador de Windows 10](https://docs.microsoft.com/learn/)
+* [Guía de Windows 10 para desarrolladores](https://docs.microsoft.com/learn/)
 
 Si está listo para intentar algo un poco más divertido que "Hello, World!", pruebe estos tutoriales:
 
@@ -61,7 +61,7 @@ Aproveche sus habilidades web para compilar aplicaciones utilizando HTML5, CSS3 
 Amplíe sus habilidades de JavaScript y HTML más allá de UWP para crear aplicaciones web, o explore la realidad virtual en la web con WebVR
 
 * [Documentación de desarrollador de Microsoft Edge](https://docs.microsoft.com/microsoft-edge/)
-* [Usar WebVR con Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/webvr/)
+* [Usar WebVR con Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/)
 
 Las aplicaciones web se pueden empaquetar fácilmente en el marco UWP como aplicaciones web alojadas y promocionarse en Microsoft Store.
 
@@ -69,7 +69,7 @@ Las aplicaciones web se pueden empaquetar fácilmente en el marco UWP como aplic
 * [Convertir su aplicación web en una aplicación para UWP](../porting/hwa-create-windows.md)
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 * [Empezar a crear el código](create-uwp-apps.md)
 * [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md)

@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 keywords: Accesibilidad en Windows 10, Accesibilidad, compilación de aplicaciones de Win32 accesibles, compilación de aplicaciones para UWP accesibles, compilación de aplicaciones para WPF accesibles, compilación de aplicaciones de WinForms accesibles
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: 76bbd3f0e04bbb2f729ad0950bae190b2fffb6ac
-ms.sourcegitcommit: 6e7665b457ec4585db19b70acfa2554791ad6e10
+ms.openlocfilehash: fdb1092139602edd00086e17ff4dc7a27cf361dd
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987194"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681896"
 ---
 # <a name="accessibility-in-windows-10"></a>Accesibilidad en Windows 10
 
@@ -43,7 +43,7 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
 
       [Pruebas de accesibilidad](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-testing)
 
-      [Accesibilidad en la Tienda](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-in-the-store)
+      [Accesibilidad en Store](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-in-the-store)
    :::column-end:::
    :::column:::
       ![Aplicaciones de la plataforma Win32](images/platform-win32.png)
@@ -120,7 +120,7 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
    :::column:::
       [Introducción a la accesibilidad web](https://docs.microsoft.com/microsoft-edge/accessibility)
 
-      [Diseñar sitios web accesibles](https://docs.microsoft.com/microsoft-edge/accessibility/design)
+      [Diseño de sitios web accesibles](https://docs.microsoft.com/microsoft-edge/accessibility/design)
    :::column-end:::
    :::column:::
       [Creación de sitios web accesibles](https://docs.microsoft.com/microsoft-edge/accessibility/build)
@@ -129,13 +129,13 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
    :::column-end:::
 :::row-end:::
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 Descarga y ejecuta ejemplos completos de Windows que muestren varias características y funcionalidades de accesibilidad.
 
 :::row:::
    :::column:::
-      [Explorador de ejemplo de código](https://docs.microsoft.com/en-us/samples/browse/)
+      [Explorador de ejemplo de código](https://docs.microsoft.com/samples/browse/)
 
       El nuevo explorador de ejemplos reemplaza la galería de código de MSDN.
    :::column-end:::

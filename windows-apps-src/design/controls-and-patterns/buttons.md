@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e454bed6dc1a9429fe313e305dc9ba818d86e765
-ms.sourcegitcommit: 802699ce8d21e7fa4639f0b19b1c5b6c46c2c727
+ms.openlocfilehash: a3cd8a0c988df08047b10911a4d4f55e3ba1cb6e
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68835641"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684111"
 ---
 # <a name="buttons"></a>Botones
 
@@ -30,7 +30,7 @@ El marco [XAML](../../xaml-platform/xaml-overview.md) proporciona un control de 
 
 Control | Descripción
 ------- | -----------
-[Button](/uwp/api/windows.ui.xaml.controls.button) | Un botón que inicia una acción inmediata. Puede usarse con un evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) o un enlace [Command](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command).
+[Botón](/uwp/api/windows.ui.xaml.controls.button) | Un botón que inicia una acción inmediata. Puede usarse con un evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) o un enlace [Command](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command).
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Un botón que genera un evento [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) continuamente mientras se presiona.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Un botón al que se le aplica el estilo de un hipervínculo y se usa para navegación. Para obtener más información sobre los hipervínculos, consulta [Hipervínculos](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Un botón con un botón de contenido adicional para abrir un control flotante adjunto.
@@ -127,9 +127,9 @@ private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
 
 Cuando se pulsa un control **Button** con un dedo o un lápiz, o se presiona el botón primario del mouse mientras el puntero está sobre él, el botón genera el evento [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Si un botón tiene el foco del teclado, al presionar la tecla ENTRAR o la barra espaciadora, también se genera el evento **Click**.
 
-Por lo general, no se pueden manipular los eventos [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) de nivel bajo en un objeto **Button** porque tiene el comportamiento **Click** en su lugar. Para obtener más información, consulta el tema de [introducción a los eventos y eventos enrutados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
+Por lo general, no se pueden manipular los eventos [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) de nivel bajo en un objeto **Button** porque tiene el comportamiento **Click** en su lugar. Para obtener más información, consulta [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
 
-Se puede cambiar la forma en que un botón genera el evento **Click** cambiando la propiedad [ClickMode](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.clickmode). El valor predeterminado de **ClickMode** es **Release**, pero también se puede establecer el valor **ClickMode** de un botón en **Hover** o **Press**. Si el valor de **ClickMode** es **Hover**, el evento **Click** no puede generarse mediante el teclado o la función táctil.
+Se puede cambiar la forma en que un botón genera el evento **Click** cambiando la propiedad [ClickMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.clickmode). El valor predeterminado de **ClickMode** es **Release**, pero también se puede establecer el valor **ClickMode** de un botón en **Hover** o **Press**. Si el valor de **ClickMode** es **Hover**, el evento **Click** no puede generarse mediante el teclado o la función táctil.
 
 
 ### <a name="button-content"></a>Contenido de Button
@@ -179,7 +179,7 @@ Aquí se ha establecido como contenido de un botón un elemento **StackPanel** q
 </Button>
 ```
 
-El botón tendrá el siguiente aspecto:
+El botón tiene el siguiente aspecto:
 
 ![Botón con contenido de texto e imagen](images/button-orange.png)
 
@@ -217,7 +217,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-drop-down-button"></a>Creación de un botón desplegable
 
-> El control **DropDownButton** requiere la [Biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/) o Windows 10, versión 1809 (SDK 17763) o posterior. Para descargar el SDK más reciente, consulta [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Para descargar un SDK anterior, consulta [Windows SDK y el archivo del emulador](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive).
+> El control **DropDownButton** requiere la [Biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/) o Windows 10, versión 1809 (SDK 17763) o posterior. Para descargar el SDK más reciente, consulta [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Para descargar un SDK anterior, consulta [Windows SDK y el archivo del emulador](https://developer.microsoft.com/windows/downloads/sdk-archive).
 
 Un elemento [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) es un botón que muestra un botón de contenido adicional como un indicador visual de que tiene un control flotante asociado con más opciones. Tiene el mismo comportamiento que un control **Button** estándar con un control flotante; solo la apariencia es distinta.
 
@@ -278,7 +278,7 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 ## <a name="create-a-split-button"></a>Creación de un botón de expansión
 
  > [!IMPORTANT]
- > El control **SplitButton** requiere la [Biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/) o Windows 10, versión 1809 (SDK 17763) o posterior. Para descargar el SDK más reciente, consulta [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Para descargar un SDK anterior, consulta [Windows SDK y el archivo del emulador](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive).
+ > El control **SplitButton** requiere la [Biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/) o Windows 10, versión 1809 (SDK 17763) o posterior. Para descargar el SDK más reciente, consulta [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Para descargar un SDK anterior, consulta [Windows SDK y el archivo del emulador](https://developer.microsoft.com/windows/downloads/sdk-archive).
 
 Un control [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) tiene dos partes que se pueden invocar por separado. Una parte se comporta como un botón estándar e invoca una acción inmediata. La otra parte invoca un control flotante que contiene opciones adicionales entre las que puede elegir el usuario.
 
@@ -388,7 +388,7 @@ public sealed partial class MainPage : Page
 ## <a name="create-a-toggle-split-button"></a>Creación de un botón de expansión de alternancia
 
 > [!NOTE]
-> El control **ToggleSplitButton** requiere la [Biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/) o Windows 10, versión 1809 (SDK 17763) o posterior. Para descargar el SDK más reciente, consulta [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Para descargar un SDK anterior, consulta [Windows SDK y el archivo del emulador](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive).
+> El control **ToggleSplitButton** requiere la [Biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/) o Windows 10, versión 1809 (SDK 17763) o posterior. Para descargar el SDK más reciente, consulta [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Para descargar un SDK anterior, consulta [Windows SDK y el archivo del emulador](https://developer.microsoft.com/windows/downloads/sdk-archive).
 
 Un control [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) tiene dos partes que se pueden invocar por separado. Una parte se comporta como un botón de alternancia que se puede activar o desactivar. La otra parte invoca un control flotante que contiene opciones adicionales entre las que puede elegir el usuario.
 
@@ -548,7 +548,7 @@ Si el diseño requiere un único botón, debe estar alineado a la izquierda o a 
 
 ## <a name="back-buttons"></a>Botones Atrás
 
-El botón Atrás es un elemento de la interfaz de usuario proporcionado por el sistema que permite la navegación hacia atrás a través de la pila de retroceso o el historial de navegación del usuario. No es necesario que crees tu propio botón Atrás, pero es posible que debas realizar algunas acciones para permitir que la experiencia de navegación hacia atrás resulte adecuada. Para obtener más información, consulta el artículo [Historial de navegación y navegación hacia atrás para las aplicaciones para UWP](../basics/navigation-history-and-backwards-navigation.md).
+El botón Atrás es un elemento de la interfaz de usuario proporcionado por el sistema que permite la navegación hacia atrás a través de la pila de retroceso o el historial de navegación del usuario. No es necesario que crees tu propio botón Atrás, pero es posible que debas realizar algunas acciones para que la experiencia de navegación hacia atrás resulte adecuada. Para obtener más información, consulta el artículo [Historial de navegación y navegación hacia atrás para las aplicaciones para UWP](../basics/navigation-history-and-backwards-navigation.md).
 
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo

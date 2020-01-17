@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 93a81501b524826484111419899675fbb99b86fa
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 38f289b21980e2a77fd8669c39750e9b989aa742
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364755"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684391"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -264,7 +264,7 @@ Los elementos que muestra [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.it
 
 La clase [StackLayout](/uwp/api/microsoft.ui.xaml.controls.stacklayout) organiza los elementos en una sola línea que se puede orientar horizontal o verticalmente.
 
-Puedes establecer la propiedad [Spacing](/en-us/uwp/api/microsoft.ui.xaml.controls.stacklayout.spacing) para ajustar la cantidad de espacio entre los elementos. El espaciado se aplica en la dirección de la propiedad [Orientation](/uwp/api/microsoft.ui.xaml.controls.stacklayout.orientation) del diseño.
+Puedes establecer la propiedad [Spacing](/uwp/api/microsoft.ui.xaml.controls.stacklayout.spacing) para ajustar la cantidad de espacio entre los elementos. El espaciado se aplica en la dirección de la propiedad [Orientation](/uwp/api/microsoft.ui.xaml.controls.stacklayout.orientation) del diseño.
 
 ![Espaciado del diseño de pila](images/stack-layout.png)
 
@@ -300,7 +300,7 @@ Puedes establecer la propiedad [ItemsStretch](/uwp/api/microsoft.ui.xaml.control
 
 En esta lista se muestran los valores disponibles. Las definiciones dan por supuesto que el valor predeterminado de **Orientation** es **Horizontal**.
 
-- **Ninguna**: el espacio adicional se deja sin usar al final de la fila. Este es el valor predeterminado.
+- **None**: el espacio adicional se deja sin usar al final de la fila. Este es el valor predeterminado.
 - **Fill**: los elementos obtienen un ancho adicional para usar el espacio disponible (en caso de orientación vertical, obtienen un alto adicional).
 - **Uniform**: los elementos obtienen un ancho adicional para usar el espacio disponible y un alto adicional para mantener la relación de aspecto (el alto y el ancho se intercambian en caso de orientación vertical).
 
@@ -642,6 +642,12 @@ En este ejemplo se muestra cómo puedes mostrar una lista de elementos agrupados
 
 ```xaml
 <!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
+
+<Page.Resources>
+    <muxc:StackLayout x:Key="MyGroupLayout"/>
+    <muxc:StackLayout x:Key="MyItemLayout" Orientation="Horizontal"/>
+</Page.Resources>
+
 <ScrollViewer>
   <muxc:ItemsRepeater ItemsSource="{x:Bind AppNotifications}"
                       Layout="{StaticResource MyGroupLayout}">
@@ -650,7 +656,7 @@ En este ejemplo se muestra cómo puedes mostrar una lista de elementos agrupados
         <!-- Group -->
         <StackPanel>
           <!-- Header -->
-          TextBlock Text="{x:Bind AppTitle}"/>
+          <TextBlock Text="{x:Bind AppTitle}"/>
           <!-- Items -->
           <muxc:ItemsRepeater ItemsSource="{x:Bind Notifications}"
                               Layout="{StaticResource MyItemLayout}"
@@ -663,10 +669,11 @@ En este ejemplo se muestra cómo puedes mostrar una lista de elementos agrupados
   </muxc:ItemsRepeater>
 </ScrollViewer>
 ```
-
-En este ejemplo se muestra un diseño para una aplicación con varias categorías que se pueden cambiar con las preferencias del usuario y que se presentan como listas de desplazamiento horizontal, como puede verse aquí.
+En la imagen siguiente se muestra el diseño básico creado usando como pauta el ejemplo anterior.
 
 ![Diseño anidado con ItemsRepeater](images/items-repeater-nested-layout.png)
+
+En este ejemplo se muestra un diseño para una aplicación con varias categorías que se pueden cambiar con las preferencias del usuario y que se presentan como listas de desplazamiento horizontal. El diseño de este ejemplo también se representa con la imagen anterior.
 
 ```xaml
 <!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
@@ -777,7 +784,7 @@ La clase ItemsRepeater se asegura automáticamente de que el orden de tabulació
 > [!NOTE]
 > ItemsRepeater no recuerda automáticamente el último elemento enfocado.  Esto significa que, cuando un usuario usa Mayús+Tab, es posible que se le lleve al último elemento ejecutado.
 
-### <a name="announcing-item-x-of-y-in-screen-readers"></a>Anuncio de "Elemento _X_ de _Y_" en lectores de pantalla
+### <a name="announcing-item-_x_-of-_y_-in-screen-readers"></a>Anuncio de "Elemento _X_ de _Y_" en lectores de pantalla
 
 Debes administrar el establecimiento de las propiedades de automatización adecuadas, como los valores de **PositionInSet** y **SizeOfSet**, y asegurarte de que permanecen actualizadas al agregar elementos, moverlos, quitarlos, etc.
 

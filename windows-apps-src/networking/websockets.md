@@ -6,17 +6,17 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, redes, websocket, messagewebsocket, streamwebsocket
 ms.localizationpriority: medium
-ms.openlocfilehash: eb083b0d8ed0aedfc6e14be9bed9647daa2bb950
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 221ab5e0647fe95e8d715fc320ba2b9c1bee2dfe
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260168"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684958"
 ---
 # <a name="websockets"></a>WebSockets
 Los WebSockets ofrecen un mecanismo para una comunicación bidireccional rápida y segura entre un cliente y un servidor a través de Internet mediante HTTP(S), y admiten tanto mensajes UTF-8 como binarios.
 
-En el [protocolo de WebSocket](https://tools.ietf.org/html/rfc6455), los datos se transfieren inmediatamente a través de una conexión de dúplex completo y de socket único que permite que los mensajes se envíen y se reciba desde los dos extremos en tiempo real. Los WebSockets son ideales para juegos multijugador (tanto en tiempo real como basados en turnos), notificaciones instantáneas de redes sociales, presentaciones actualizadas de cotizaciones o información meteorológica, y otras aplicaciones que requieren una transferencia de datos segura y rápida.
+En el [protocolo WebSocket](https://tools.ietf.org/html/rfc6455), los datos se transfieren inmediatamente a través de una conexión de dúplex completo y de socket único, que permite que los mensajes se envíen y reciban desde ambos puntos de conexión en tiempo real. Los WebSockets son ideales para juegos multijugador (tanto en tiempo real como basados en turnos), notificaciones instantáneas de redes sociales, presentaciones actualizadas de cotizaciones o información meteorológica, y otras aplicaciones que requieren una transferencia de datos segura y rápida.
 
 Para establecer una conexión WebSocket, se intercambia un protocolo de enlace específico, basado en HTTP, entre el cliente y el servidor. Si la conexión se establece correctamente, el protocolo de nivel de aplicación se "actualiza" de HTTP a WebSockets, mediante la conexión TCP establecida anteriormente. Una vez que esto ocurre, HTTP queda totalmente fuera del juego. Ambos puntos de conexión pueden enviar o recibir datos mediante el protocolo WebSocket, hasta que se cierre la conexión WebSocket.
 
@@ -34,12 +34,12 @@ La Plataforma universal de Windows (UWP) ofrece compatibilidad para que tanto el
 ## <a name="secure-your-connection-with-tlsssl"></a>Proteger la conexión con TLS/SSL
 En la mayoría de los casos, querrás usar una conexión WebSocket segura para que los datos que envíes y recibas estén cifrados. Esto también aumentará las posibilidades de que la conexión se establezca correctamente, porque muchos intermediarios, como los firewalls y los servidores proxy, rechazan las conexiones WebSocket no cifradas. El [protocolo WebSocket](https://tools.ietf.org/html/rfc6455#section-3) define estos dos esquemas de URI.
 
-| Esquema de URI | Propósito |
+| Esquema URI | Propósito |
 | - | - |
 | wss: | Se usa para conexiones seguras que deben estar cifradas. |
 | ws: | Se usa para conexiones sin cifrar. |
 
-Para cifrar la conexión WebSocket, usa el esquema de URI `wss:`. A continuación te mostramos un ejemplo.
+Para cifrar la conexión WebSocket, usa el esquema de URI `wss:`. A continuación se muestra un ejemplo.
 
 ```csharp
 protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -298,7 +298,7 @@ Como se muestra en el ejemplo anterior, antes de establecer una conexión y envi
 Cuando se reciben datos, se genera el evento **MessageReceived**. A los datos se puede acceder a través de [**MessageWebSocketMessageReceivedEventArgs**](/uwp/api/windows.networking.sockets.messagewebsocketmessagereceivedeventargs). Cuando el servidor o el cliente cierra el socket, se genera el evento **Closed**.
  
 ### <a name="send-data-on-a-messagewebsocket"></a>Enviar datos en una clase MessageWebSocket
-Una vez establecida la conexión, puedes enviar datos al servidor. Esto se hace mediante la propiedad [**MessageWebSocket.OutputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream) y una clase [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) para escribir los datos. 
+Una vez establecida la conexión, puedes enviar datos al servidor. Esto se hace mediante la propiedad [**MessageWebSocket.OutputStream**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream) y una clase [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) para escribir los datos. 
 
 **Nota** **DataWriter** toma posesión del flujo de salida. Cuando la clase **DataWriter** queda fuera del ámbito, si el flujo de salida está asociado a ella, **DataWriter** cancela la asignación del flujo de salida. Después de eso, los intentos posteriores de usar el flujo de salida generan un error con un valor HRESULT de 0x80000013. Sin embargo, puedes llamar al método [**DataWriter.DetachStream**](/uwp/api/windows.storage.streams.datawriter.DetachStream) para desasociar el flujo de salida de **DataWriter** y devolver la propiedad del flujo a la clase **MessageWebSocket**.
 
@@ -564,12 +564,12 @@ private:
 Antes de establecer una conexión y enviar datos con una clase **StreamWebSocket**, debes suscribirte al evento [**StreamWebSocket.Closed**](/uwp/api/windows.networking.sockets.streamwebsocket.Closed). Cuando el servidor o el cliente cierra el socket, se genera el evento **Closed**.
  
 ### <a name="send-data-on-a-streamwebsocket"></a>Enviar datos en una clase StreamWebSocket
-Una vez establecida la conexión, puedes enviar datos al servidor. Esto se hace mediante la propiedad [**StreamWebSocket.OutputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream) y una clase [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) para escribir los datos.
+Una vez establecida la conexión, puedes enviar datos al servidor. Esto se hace mediante la propiedad [**StreamWebSocket.OutputStream**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream) y una clase [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) para escribir los datos.
 
 **Nota** Si quieres escribir más datos en el mismo socket, asegúrate de llamar al método [**DataWriter.DetachStream**](/uwp/api/windows.storage.streams.datawriter.DetachStream) para desasociar el flujo de salida de **DataWriter** antes de que **DataWriter** quede fuera del ámbito. Esto devuelve la propiedad del flujo a la clase **MessageWebSocket**.
 
 ### <a name="receive-data-on-a-streamwebsocket"></a>Recibir datos en una clase StreamWebSocket
-Usa la propiedad [**StreamWebSocket.InputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream) y una clase [**DataReader**](/uwp/api/windows.storage.streams.datareader) para leer los datos.
+Usa la propiedad [**StreamWebSocket.InputStream**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream) y una clase [**DataReader**](/uwp/api/windows.storage.streams.datareader) para leer los datos.
 
 ## <a name="advanced-options-for-messagewebsocket-and-streamwebsocket"></a>Opciones avanzadas para las clases MessageWebSocket y StreamWebSocket
 Antes de establecer una conexión, puedes definir opciones avanzadas en un socket estableciendo las propiedades en [**MessageWebSocketControl**](/uwp/api/windows.networking.sockets.messagewebsocketcontrol) o [**StreamWebSocketControl**](/uwp/api/windows.networking.sockets.streamwebsocketcontrol). Puedes acceder a una instancia de dichas clases desde el propio objeto de socket a través de su propiedad [**MessageWebSocket.Control**](/uwp/api/windows.networking.sockets.messagewebsocket.control) o su propiedad [**StreamWebSocket.Control**](/uwp/api/windows.networking.sockets.streamwebsocket.control), según corresponda.
@@ -615,14 +615,14 @@ La clase [**StreamWebSocketInformation**](/uwp/api/Windows.Networking.Sockets.St
 Ten en cuenta que todas las propiedades de estas clases de información son de solo lectura, pero puedes usarlas para recuperar la información en cualquier momento durante el ciclo de vida de un objeto de socket web.
 
 ## <a name="handling-exceptions"></a>Control de excepciones
-Un error en una operación [**MessageWebSocket**](/uwp/api/Windows.Networking.Sockets.MessageWebSocket) o [**StreamWebSocket**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket) se devuelve como un valor **HRESULT**. Puedes pasar ese valor **HRESULT** al método [**WebSocketError.GetStatus**](/uwp/api/windows.networking.sockets.websocketerror.getstatus) para convertirlo en un valor de enumeración [**WebErrorStatus**](/uwp/api/Windows.Web.WebErrorStatus).
+Un error detectado en una operación [**MessageWebSocket**](/uwp/api/Windows.Networking.Sockets.MessageWebSocket) o [**StreamWebSocket**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket) se devuelve como un valor **HRESULT**. Puedes pasar ese valor **HRESULT** al método [**WebSocketError.GetStatus**](/uwp/api/windows.networking.sockets.websocketerror.getstatus) para convertirlo en un valor de enumeración [**WebErrorStatus**](/uwp/api/Windows.Web.WebErrorStatus).
 
 La mayoría de los valores de enumeración **WebErrorStatus** corresponden a un error devuelto por la operación de cliente HTTP nativo. Tu aplicación puede activar valores de enumeración **WebErrorStatus** para modificar el comportamiento de la aplicación en función de la causa de la excepción.
 
 Para los errores de validación de parámetros, puedes usar el valor **HRESULT** de la excepción para obtener información más detallada del error. Los posibles valores **HRESULT** se muestran en `Winerror.h`, que se puede encontrar en la instalación del SDK (por ejemplo, en la carpeta `C:\Program Files (x86)\Windows Kits\10\Include\<VERSION>\shared`). Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** que se devuelve es **E_INVALIDARG**.
 
 ## <a name="setting-timeouts-on-websocket-operations"></a>Establecimiento de tiempos de espera en operaciones de WebSocket
-Las clases **MessageWebSocket** y **StreamWebSocket** usan un servicio del sistema interno para enviar solicitudes de cliente de WebSocket y recibir respuestas de un servidor. El valor de tiempo de espera predeterminado que se usa en una operación de conexión de WebSocket es 60 segundos. Si el servidor HTTP que admite WebSockets no responde o no puede responder a la solicitud de conexión de WebSocket (está temporalmente inactivo o bloqueado por una interrupción de la red), el servicio del sistema interno espera los 60 segundos predeterminados antes de devolver un error. Este error provoca una excepción en el método **ConnectAsync** de WebSocket. Para las operaciones de envío y recepción después de que se haya establecido una conexión de WebSocket, el tiempo de espera predeterminado es de 30 segundos.
+Las clases **MessageWebSocket** y **StreamWebSocket** usan un servicio del sistema interno para enviar solicitudes de cliente de WebSocket y recibir respuestas de un servidor. El valor de tiempo de espera predeterminado que se usa en una operación de conexión de WebSocket es de 60 segundos. Si el servidor HTTP que admite WebSockets no responde o no puede responder a la solicitud de conexión de WebSocket (está temporalmente inactivo o bloqueado por una interrupción de la red), el servicio del sistema interno espera los 60 segundos predeterminados antes de devolver un error. Este error provoca una excepción en el método **ConnectAsync** de WebSocket. Para las operaciones de envío y recepción después de que se haya establecido una conexión de WebSocket, el tiempo de espera predeterminado es de 30 segundos.
 
 Si la consulta de nombre de un servidor HTTP del identificador URI devuelve varias direcciones IP para el nombre, el servicio del sistema interno prueba hasta 5 direcciones IP para el sitio (cada una de ellas con un tiempo de espera predeterminado de 60 segundos) antes de producir un error. Por consiguiente, la aplicación podría esperar varios minutos intentando conectarse a diversas direcciones IP antes de que controle una excepción. El usuario podría percibir este comportamiento como si la aplicación hubiera dejado de funcionar. 
 
@@ -814,7 +814,7 @@ protected:
 * [MessageWebSocket.Control](/uwp/api/windows.networking.sockets.messagewebsocket.control)
 * [MessageWebSocket.Information](/uwp/api/Windows.Networking.Sockets.MessageWebSocket.Information)
 * [MessageWebSocket.MessageReceived](/uwp/api/Windows.Networking.Sockets.MessageWebSocket.MessageReceived)
-* [MessageWebSocket.OutputStream](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream)
+* [MessageWebSocket.OutputStream](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream)
 * [MessageWebSocketControl](/uwp/api/Windows.Networking.Sockets.MessageWebSocketControl)
 * [MessageWebSocketControl.MessageType](/uwp/api/Windows.Networking.Sockets.MessageWebSocketControl.MessageType)
 * [MessageWebSocketInformation](/uwp/api/Windows.Networking.Sockets.MessageWebSocketInformation)
@@ -825,8 +825,8 @@ protected:
 * [StreamSocket.ConnectAsync](/uwp/api/windows.networking.sockets.streamsocket.connectasync)
 * [StreamWebSocket.Control](/uwp/api/windows.networking.sockets.streamwebsocket.control)
 * [StreamWebSocket.Information](/uwp/api/windows.networking.sockets.streamwebsocket.Information)
-* [StreamWebSocket.InputStream](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream)
-* [StreamWebSocket.OutputStream](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream)
+* [StreamWebSocket.InputStream](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream)
+* [StreamWebSocket.OutputStream](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream)
 * [StreamWebSocketControl](/uwp/api/Windows.Networking.Sockets.StreamWebSocketControl)
 * [StreamWebSocketInformation](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation)
 * [WebErrorStatus](/uwp/api/Windows.Web.WebErrorStatus) 
@@ -837,5 +837,5 @@ protected:
 * [Protocolo WebSocket](https://tools.ietf.org/html/rfc6455)
 * [Sockets](sockets.md)
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 * [Ejemplo de WebSocket](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebSocket)

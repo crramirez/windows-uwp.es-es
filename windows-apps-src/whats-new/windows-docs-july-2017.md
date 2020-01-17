@@ -5,18 +5,18 @@ keywords: what's new;update;features;developer guidance;Windows 10; novedades;ac
 ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0fa773cdb174369e14c12c4f805f3a57e2ff6eef
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 65c3c2fb4b7a5a7f0b5f4b3c89773f3e21bd654d
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258830"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684738"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novedades de la documentación para desarrolladores de Windows de julio de 2017
 
 La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general, directrices para los desarrolladores y ejemplos de código sobre las características están a tu disposición desde hace poco y contienen información nueva y actualizada para los desarrolladores de Windows.
 
-[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/your-first-app.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/your-first-app.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
@@ -106,7 +106,7 @@ El artículo [Procesar fotogramas multimedia con MediaFrameReader](../audio-vide
 
 ### <a name="scoped-search"></a>Ámbito de búsqueda
 
-Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-started/universal-application-platform-guide.md) y de la [referencia de API](https://docs.microsoft.com/en-us/uwp/api/) en docs.microsoft.com. A menos que este ámbito está desactivado, las búsquedas realizadas dentro de estas áreas devolverán solo documentos de UWP.
+Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-started/universal-application-platform-guide.md) y de la [referencia de API](https://docs.microsoft.com/uwp/api/) en docs.microsoft.com. A menos que este ámbito está desactivado, las búsquedas realizadas dentro de estas áreas devolverán solo documentos de UWP.
 
 ![Ámbito de búsqueda](images/scoped-search.png)
 
@@ -114,7 +114,7 @@ Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-s
 
 Prueba la aplicación de Windows para garantizar que funciona correctamente en dispositivos que ejecuten Windows S. Usa [esta guía nueva](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s) para obtener información sobre cómo hacerlo.
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 ### <a name="annotated-audio-app-sample"></a>Ejemplo de la aplicación Annotated Audio
 
@@ -132,12 +132,12 @@ Prueba la aplicación de Windows para garantizar que funciona correctamente en d
 
 ### <a name="accessibility"></a>Accesibilidad
 
-Crear accesibilidad en tus aplicaciones hace que estas lleguen a un público más amplio. [Ve el vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility) y obtén más información sobre el [desarrollo de aplicaciones accesibles](https://developer.microsoft.com/en-us/windows/accessible-apps).
+Crear accesibilidad en tus aplicaciones hace que estas lleguen a un público más amplio. [Ve el vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility) y obtén más información sobre el [desarrollo de aplicaciones accesibles](https://developer.microsoft.com/windows/accessible-apps).
 
 ### <a name="payments-request-api"></a>API de solicitud de pago
 
 La API de solicitud de pago ayuda a los clientes y vendedores a completar el proceso de finalización de la compra en línea de una forma muy sencilla. [Ve el vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-the-Payments-Request-API) y, a continuación, consulta la [documentación de solicitud de pago](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-the-Payments-Request-API).
 
-### <a name="windows-10-iot-core"></a>Windows 10 IoT Core
+### <a name="windows-10-iot-core"></a>Windows 10 IoT Core
 
-Con Windows 10 IoT Core y la Plataforma universal de Windows, puedes realizar rápidamente prototipos y crear proyectos con conexiones visuales y de componentes, como la puerta de reconocimiento de mascotas. [Ve el vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/Building-a-Pet-Recognition-Door-Using-Windows-10-IoT-Core) y, a continuación, obtén más información sobre la [introducción a Windows 10 IoT Core](https://developer.microsoft.com/en-us/windows/iot).
+Con Windows 10 IoT Core y la Plataforma universal de Windows, puedes realizar rápidamente prototipos y crear proyectos con conexiones visuales y de componentes, como la puerta de reconocimiento de mascotas. [Ve el vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/Building-a-Pet-Recognition-Door-Using-Windows-10-IoT-Core) y, a continuación, obtén más información sobre la [introducción a Windows 10 IoT Core](https://developer.microsoft.com/windows/iot).

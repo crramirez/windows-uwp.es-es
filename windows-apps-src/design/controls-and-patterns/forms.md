@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: ff071a2a98c533ad7c089b28165f026de00ba68f
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: e1a5b192ed57d3962b6ba4cbef69e3663bc1e2ec
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319092"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683998"
 ---
 # <a name="forms"></a>Formularios
 Un formulario es un grupo de controles que recopila y envía datos de los usuarios. Los formularios se usan normalmente para páginas de configuración, encuestas, creación de cuentas y mucho más. 
@@ -26,7 +26,7 @@ Un formulario es una página dedicada para recopilar entradas de datos que está
 - Cambie la configuración de la aplicación, por ejemplo, las opciones de privacidad o visualización.
 - Realice una encuesta.
 - Compre un artículo.
-- Enviar comentarios
+- Comentarios
 
 ## <a name="types-of-forms"></a>Tipos de formularios
 
@@ -58,7 +58,7 @@ Este tipo de formulario ofrece flexibilidad al usuario para responder. Normalmen
 Para facilitar la experiencia del usuario y garantizar que los usuarios puedan introducir la entrada correcta, ten en cuenta las siguientes recomendaciones para diseñar formularios. 
 
 ### <a name="labels"></a>Etiquetas
-Las [etiquetas](labels.md) debe alinearse a la izquierda y colocarse encima del control de entrada. Muchos controles tienen una propiedad Header integrada que sirve para mostrar la etiqueta. En los controles sin propiedad Header o para etiquetar grupos de controles, puedes usar [TextBlock](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.TextBlock) en su lugar.
+Las [etiquetas](labels.md) debe alinearse a la izquierda y colocarse encima del control de entrada. Muchos controles tienen una propiedad Header integrada que sirve para mostrar la etiqueta. En los controles sin propiedad Header o para etiquetar grupos de controles, puedes usar [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) en su lugar.
 
 Para crear [diseños con accesibilidad](../accessibility/accessibility.md), etiqueta los controles individuales y los grupos de controles para mayor claridad tanto para humanos como para los lectores de pantalla. 
 
@@ -135,7 +135,7 @@ Control | Use | Ejemplo
 Control | Use | Ejemplo
 - | - | -
 [Control deslizante](slider.md) | Seleccionar un número de un intervalo de valores numéricos contiguos. | Porcentajes, volumen, velocidad de reproducción.
-[Rating](rating.md) | Calificar con estrellas. | Comentarios del cliente
+[Rating](rating.md) | Calificar con estrellas. | Comentarios de los clientes
 
 ### <a name="date-and-time"></a>Fecha y hora
 

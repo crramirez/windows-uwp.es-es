@@ -1,6 +1,6 @@
 ---
-Description: El patrón de maestro y detalles muestra una lista maestra y los detalles del elemento seleccionado actual. Este patrón se usa con frecuencia en listas de correo electrónico y de contactos y con libretas de direcciones.
-title: Panel de maestro y detalles
+Description: El patrón de maestro y detalles muestra una lista maestra y los detalles del elemento seleccionado actual. Este patrón se usa con frecuencia para listas de contactos o libretas de direcciones y correo electrónico.
+title: Maestro/detalles
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
@@ -8,30 +8,30 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b9d8d8a381c0fce186b39853f57d35c1dce4b8f8
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 0b7c21e5e6305c7b2941b46db562c93da0fdfe39
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63773380"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684385"
 ---
-# <a name="masterdetails-pattern"></a>Patrón de maestro y detalles
+# <a name="masterdetails-pattern"></a>Patrón de master y detalles
 
  
 
-El patrón de maestro y detalles tiene un panel maestro (normalmente con una [vista de lista](lists.md)) y un panel de detalles para el contenido. Cuando se selecciona un elemento en la lista maestra, se actualiza el panel de detalles. Este patrón se usa con frecuencia para libretas de direcciones y de correos electrónicos.
+El patrón de maestro y detalles tiene un panel maestro (normalmente con una [vista de lista](lists.md)) y un panel de detalles para el contenido. Cuando se selecciona un elemento en la lista maestra, se actualiza el panel de detalles. Este patrón se usa con frecuencia para libretas de direcciones y correo electrónico.
 
-> **API importantes**: [clase ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+> **API importantes**: [clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Ejemplo del patrón de maestro y detalles](images/HIGSecOne_MasterDetail.png)
 
 ## <a name="is-this-the-right-pattern"></a>¿Es este el patrón adecuado?
 
-El patrón de maestro y detalles funciona bien si quieres:
+El patrón de maestro y detalles es adecuado para las operaciones siguientes:
 
--   Crear una aplicación de correo electrónico, una libreta de direcciones o cualquier aplicación que se base en un diseño de detalles de lista.
--   Buscar y dar prioridad a una gran colección de contenido.
--   Permitir la rápida adición y eliminación de elementos de una lista mientras se trabaja cambiando entre contextos continuamente.
+-   Compilar una aplicación de correo electrónico, una libreta de direcciones o cualquier aplicación que se base en un diseño de detalles de lista.
+-   Buscar y priorizar una gran colección de contenido.
+-   Permitir la adición y eliminación rápidas de elementos de una lista mientras se trabaja cambiando entre contextos continuamente.
 
 ## <a name="choose-the-right-style"></a>Elegir el estilo adecuado
 
@@ -45,17 +45,17 @@ Al implementar el patrón de maestro y detalles, te recomendamos que uses el est
  
 ## <a name="stacked-style"></a>Estilo apilado
 
-En el estilo apilado, solo hay un panel visible a la vez: el maestro o los detalles.
+En el estilo apilado, solo hay un panel visible a la vez: el maestro o el de detalles.
 
 ![Vista de maestro y detalles en el modo apilado](images/patterns-md-stacked.png)
 
-El usuario comienza en el patrón de panel y "explora en profundidad" hasta el panel de detalles, seleccionando un elemento en la lista maestra. Para el usuario, parece que las vistas de maestro y detalles existen en dos páginas independientes.
+El usuario comienza en el panel maestro y "explora en profundidad" hasta el panel de detalles mediante la selección de un elemento de la lista maestra. Para el usuario, parece que las vistas de maestro y detalles existen en dos páginas independientes.
 
 ### <a name="create-a-stacked-masterdetails-pattern"></a>Crear un patrón de maestro y detalles apilado
 
-Una forma de crear el patrón de maestro y detalles apilado es usar páginas independientes para la vista maestra y de detalles. Coloca la vista maestra en una página, y el panel de detalles en una página independiente.
+Una forma de crear el patrón de maestro y detalles apilado es usar páginas independientes para el panel maestro y el de detalles. Coloca la vista maestra en una página, y el panel de detalles en una página independiente.
 
-![Partes de la vista de maestro y detalles con estilo apilado](images/patterns-md-stacked-parts.png)
+![Partes del panel de detalles de estilo apilado](images/patterns-md-stacked-parts.png)
 
 En la página de vista maestra, un control de [vista de lista](lists.md) funciona bien para presentar listas que pueden contener imágenes y texto. 
 
@@ -69,7 +69,7 @@ En el estilo en paralelo, los paneles de maestro y de detalles están visibles a
 
 ![Patrón de maestro y detalles](images/patterns-masterdetail-400x227.png)
 
-La lista del panel de maestro usa una selección visual para indicar el elemento seleccionado actual. Al seleccionar un elemento nuevo en la lista de maestro, se actualiza el panel de detalles.
+La lista del panel de maestro presenta un elemento visual de selección para indicar el elemento seleccionado actualmente. Al seleccionar un elemento nuevo en la lista maestra, se actualiza el panel de detalles.
 
 ### <a name="create-a-side-by-side-masterdetails-pattern"></a>Crear un patrón de maestro y detalles en paralelo
 
@@ -77,7 +77,7 @@ Una forma de crear un patrón de maestro y detalles en paralelo es usar el contr
 
 ![partes de la vista en dos paneles de la vista maestra y detalles](images/patterns_md_splitview_parts.png)
 
-En el panel maestro, un control de [vista de lista](lists.md) funciona bien para presentar listas que pueden contener imágenes y texto.
+En el panel maestro, un control de [vista de lista](lists.md) es adecuado para presentar listas que puedan contener imágenes y texto.
 
 En el contenido de detalles, usa el [elemento de contenido](../layout/layout-panels.md) que sea más apropiado. Si tienes muchos campos independientes, considera la posibilidad de usar un diseño de **cuadrícula** para organizar los elementos en un formulario.
 
@@ -88,7 +88,7 @@ Para implementar un patrón de maestro y detalles para cualquier tamaño de pant
 ![diseño adaptativo de vista maestra y detalles](images/patterns_masterdetail.png)
 
 ### <a name="create-an-adaptive-masterdetails-pattern"></a>Crear un patrón adaptativo de maestro y detalles
-Para crear un diseño adaptativo, define diferentes [**VisualStates**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.visualstate) para la interfaz de usuario y declara puntos de interrupción para los distintos estados con [**AdaptiveTriggers**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
+Para crear un diseño adaptativo, define diferentes [**VisualStates**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstate) para la interfaz de usuario y declara puntos de interrupción para los distintos estados con [**AdaptiveTriggers**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.AdaptiveTrigger).
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
@@ -102,7 +102,7 @@ Los siguientes ejemplos implementan el patrón de maestro y detalles con diseño
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Listas](lists.md)
-- [Buscar](search.md)
+- [Búsqueda](search.md)
 - [Barras de la aplicación y de comandos](app-bars.md)
-- [Clase ListView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
-- [Clase SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+- [Clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [Clase SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)

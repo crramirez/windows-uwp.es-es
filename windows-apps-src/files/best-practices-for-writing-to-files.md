@@ -5,12 +5,12 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a6a1d93b1deaad084ff25db946199b678b35703c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: dcbeffc7e3db8f3df9c197e8c388f30faf7ad03d
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369510"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685242"
 ---
 # <a name="best-practices-for-writing-to-files"></a>Procedimientos recomendados para escribir en archivos
 
@@ -44,7 +44,7 @@ Un objeto [**StorageFile**](https://docs.microsoft.com/uwp/api/windows.storage.s
 Comprender este concepto es útil cuando se realiza E/S con un **StorageFile**. Por ejemplo, la sección [Escritura en un archivo ](quickstart-reading-and-writing-files.md#writing-to-a-file) presenta tres formas de escribir en un archivo:
 
 * Utilizando el método [**FileIO.WriteTextAsync** ](https://docs.microsoft.com/uwp/api/windows.storage.fileio.writetextasync).
-* Al crear un búfer y luego llamar al método [**FileIO.WriteBufferAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.storage.fileio.writebufferasync).
+* Al crear un búfer y luego llamar al método [**FileIO.WriteBufferAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileio.writebufferasync).
 * El modelo de cuatro pasos mediante una secuencia:
   1. [Abrir](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.openasync) el archivo para obtener una secuencia.
   2. [Obtener](https://docs.microsoft.com/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) un flujo de salida.
@@ -63,7 +63,7 @@ El siguiente diagrama ilustra las tareas subyacentes realizadas por el método *
 
 ![Diagrama de secuencia de llamada de API UWP para escribir en un archivo](images/file-write-call-sequence.svg)
 
-Las ventajas de usar los métodos **Escritura** de las clases [**FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) y [**PathIO** ](https://docs.microsoft.com/uwp/api/windows.storage.pathio) en lugar del modelo de cuatro pasos más complejo que usa una secuencia son:
+Las ventajas de usar los métodos **Escritura** de las clases [**FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) y [**PathIO**](https://docs.microsoft.com/uwp/api/windows.storage.pathio) en lugar del modelo de cuatro pasos más complejo que usa una secuencia son:
 
 * Una llamada de API para controlar todos los pasos intermedios, incluidos los errores.
 * El archivo original se mantiene si algo va mal.
@@ -94,7 +94,7 @@ Su aplicación no debe realizar ninguna suposición sobre los datos en el archiv
 
 ### <a name="readers"></a>Lectores
 
-Si el archivo en el que se está escribiendo también está siendo utilizado por un lector educado (es decir, abierto con [ **FileAccessMode.Read** ](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode), las lecturas posteriores fallarán con un error ERROR_OPLOCK_HANDLE_CLOSED (0x80070323). Algunas veces las aplicaciones vuelven a intentar abrir el archivo para leerlo nuevamente mientras la operación de **Escritura** está en curso. Esto podría dar como resultado una condición de carrera en la que la **Escritura** falla al intentar sobrescribir el archivo original porque no se puede reemplazar.
+Si el archivo en el que se está escribiendo también está siendo utilizado por un lector educado (es decir, abierto con [**FileAccessMode.Read**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode), las lecturas posteriores fallarán con un error ERROR_OPLOCK_HANDLE_CLOSED (0x80070323). Algunas veces las aplicaciones vuelven a intentar abrir el archivo para leerlo nuevamente mientras la operación de **Escritura** está en curso. Esto podría dar como resultado una condición de carrera en la que la **Escritura** falla al intentar sobrescribir el archivo original porque no se puede reemplazar.
 
 ### <a name="files-from-knownfolders"></a>Archivos de KnownFolders
 
@@ -114,7 +114,7 @@ Algunos errores pueden volverse más predominantes según el tipo de archivos, l
 
 * Archivos creados y editados por el usuario en la carpeta de datos locales de su aplicación. Estos se crean y editan solo mientras se usa su aplicación, y existen solo dentro de la aplicación.
 * Metadatos de la aplicación Su aplicación usa estos archivos para realizar un seguimiento de su propio estado.
-* Otros archivos en ubicaciones del sistema de archivos a los que su aplicación ha declarado funcionalidades de acceso. Estos se encuentran más comúnmente en uno de los [ **KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders).
+* Otros archivos en ubicaciones del sistema de archivos a los que su aplicación ha declarado funcionalidades de acceso. Estos se encuentran más comúnmente en uno de los [**KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders).
 
 Su aplicación tiene control total sobre las dos primeras categorías de archivos, ya que son parte de los archivos de paquetes de su aplicación y solo pueden acceder a ella. Para los archivos de la última categoría, su aplicación debe ser consciente de que otras aplicaciones y servicios del sistema operativo pueden tener acceso los archivos al mismo tiempo.
 
@@ -194,6 +194,6 @@ else
 
 La [programación paralela con .NET blog](https://devblogs.microsoft.com/pfxteam/) es un gran recurso para obtener orientación sobre la programación paralela. En particular, la [ publicación sobre AsyncReaderWriterLock ](https://devblogs.microsoft.com/pfxteam/building-async-coordination-primitives-part-7-asyncreaderwriterlock/) describe cómo mantener el acceso exclusivo a un archivo para las escrituras al tiempo que permite el acceso de lectura simultáneo. Tenga en cuenta que la serialización de E/S afectará el rendimiento.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 * [Crear, escribir y leer archivos](quickstart-reading-and-writing-files.md)

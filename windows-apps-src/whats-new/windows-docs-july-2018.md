@@ -5,18 +5,18 @@ keywords: novedades, actualización, características, instrucciones para desarr
 ms.date: 07/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c92de1901c9cc67a30f495e34289bac5d7d2b94
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: f4e9ce391aa485e681fc198e14fe3374edb72aa1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258795"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684717"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Novedades en los documentos para desarrolladores de Windows de julio de 2018
 
 La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. Las siguientes descripciones de características, instrucciones para desarrolladores, vídeos y ejemplos se han puesto a disposición de los desarrolladores en el mes de julio.
 
-[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
@@ -29,7 +29,7 @@ Las [aplicaciones web progresivas (PWA)](https://developer.microsoft.com/windows
 Consulta nuestras guías de PWA para lo siguiente:
 
 * [Compilar una aplicación web simple como PWA](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started)
-* [Mejorar tu PWA con Windows Runtime](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/windows-features)
+* [Mejorar tu PWA con Windows Runtime](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
 * [Publicar la PWA en Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store)
 
 ### <a name="notepad"></a>Bloc de notas
@@ -89,7 +89,7 @@ Larry Osterman:
 * [¿Por qué no se permite a los desarrolladores cambiar el dispositivo de audio predeterminado?](https://www.youtube.com/watch?v=6aNUoVfbnmg&feature=youtu.be)
 * [¿Por qué hay tantas funciones de UWP asincrónicas?](https://www.youtube.com/watch?v=5M724QIy1Mk&feature=youtu.be)
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 ### <a name="photo-editor-cwinrt"></a>C++/WinRT para Photo Editor
 

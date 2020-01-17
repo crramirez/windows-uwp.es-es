@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 71c04725fed4ab9d5d2158f2f892af038aefc8fd
-ms.sourcegitcommit: 807dadf5eceb576aba3ad898a6e9bf12129e94a4
+ms.openlocfilehash: b9c5348063f277d4d76cbea120689328bcc217b1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72680751"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684150"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Crear diseños adaptables
 
@@ -30,7 +30,7 @@ La **página de detalles**, que muestra una sola foto después de que se haya se
 
 * Visual Studio 2019: [Descargar Visual Studio 2019 Community (gratuito)](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
 * SDK de Windows 10 (10.0.15063.468 o posterior):  [Descargar el último SDK de Windows (gratuito)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Emulador para Windows Mobile: [Descargar el emulador para Windows 10 Mobile (gratuito)](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)
+* Emulador para Windows Mobile: [Descargar el emulador para Windows 10 Mobile (gratuito)](https://developer.microsoft.com/windows/downloads/sdk-archive)
 
 ## <a name="part-0-get-the-starter-code-from-github"></a>Parte 0: Obtener el código de inicio de GitHub
 
@@ -59,7 +59,7 @@ En este tutorial, empezaremos con una versión simplificada del ejemplo PhotoLab
 
 3. Abre el proyecto haciendo clic en `Photolab.sln`.
 
-## <a name="part-1-run-the-mobile-emulator"></a>1ª parte: Ejecutar el emulador de dispositivo móvil
+## <a name="part-1-run-the-mobile-emulator"></a>Parte 1: Ejecutar el emulador de dispositivo móvil
 
 En la barra de herramientas de Visual Studio, asegúrate de que la plataforma de soluciones esté establecida en x86 o x64, no ARM y, a continuación, cambia el dispositivo de destino del equipo local a uno de los emuladores de dispositivo móvil que tengas instalados (por ejemplo, el emulador para Windows Mobile 10.0.15063 WVGA de 5 pulgadas y 1 GB). Prueba a ejecutar la aplicación Galería fotográfica en el emulador de dispositivo móvil que hayas seleccionado presionando **F5**.
 
@@ -67,7 +67,7 @@ En cuanto se inicie la aplicación, probablemente observarás que, mientras la a
 
 ![Diseño para dispositivos móviles: después](../basics/images/xaml-basics/adaptive-layout-mobile-before.png)
 
-## <a name="part-2-build-a-tailored-mobile-layout"></a>2ª parte: Crear un diseño personalizado para dispositivos móviles
+## <a name="part-2-build-a-tailored-mobile-layout"></a>Parte 2: Crear un diseño personalizado para dispositivos móviles
 Para lograr que esta aplicación quede bien en dispositivos más pequeños, vamos a crear un conjunto de estilos distinto en nuestra página XAML, que se usará solo si se detecta un dispositivo móvil.
 
 ### <a name="create-a-new-datatemplate"></a>Crear una nueva DataTemplate

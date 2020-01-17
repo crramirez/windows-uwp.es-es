@@ -5,25 +5,18 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: webvr;edge;desarrollo web;babylon;babylonjs;babylon.js;javascript;web development
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f212e4e06035134b0ac5b5ea69381ed0d985783
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: ff350f8ce08f566b8c95c3c46faad330923e4b2e
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321162"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685200"
 ---
 # <a name="adding-webvr-support-to-a-3d-babylonjs-game"></a>Agregar compatibilidad con WebVR a un juego 3D de Babylon.js
 
 Si has creado un juego 3D con Babylon.js y piensas que puede tener un aspecto estupendo en realidad virtual (VR), sigue los sencillos pasos de este tutorial para hacerlo realidad.
 
-Agregaremos compatibilidad con WebVR al juego que se muestra aquí. ¡Adelante, conecta un mando de Xbox para probarlo!
-
-
-<iframe height='300' scrolling='no' title='Babylon.js dino game using Babylon.GUI (juego de dinosaurio de Babylon.js mediante Babylon.GUI)' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/wrOvoj/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/wrOvoj/'>Babylon.js dino game using Babylon.GUI</a> (juego de dinosaurio de Babylon.js mediante Babylon.GUI) de Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
-Este es un juego 3D que funciona bien en una pantalla plana, pero ¿funcionará en VR?
-En este tutorial, te guiaremos a través de los pocos pasos que se necesitan para que funcione con WebVR. Vamos a usar un casco de [Windows Mixed Reality](https://developer.microsoft.com/mixed-reality) que puede aprovechar la compatibilidad agregada para WebVR en Microsoft Edge. Después de aplicar estos cambios al juego, es posible que también funcione con otras combinaciones de explorador y casco de realidad mixta compatibles con WebVR.
+En este tutorial, te guiaremos a través de los pocos pasos que se necesitan para que un juego 3D funcione con WebVR. Vamos a usar un casco de [Windows Mixed Reality](https://developer.microsoft.com/mixed-reality) que puede aprovechar la compatibilidad agregada para WebVR en Microsoft Edge. Después de aplicar estos cambios al juego, es posible que también funcione con otras combinaciones de explorador y casco de realidad mixta compatibles con WebVR.
 
 
 
@@ -32,7 +25,7 @@ En este tutorial, te guiaremos a través de los pocos pasos que se necesitan par
 - Un editor de texto (como [Visual Studio Code](https://code.visualstudio.com/download)).
 - Un mando de Xbox conectado al equipo.
 - Windows 10 Creators Update.
-- Un equipo con las [especificaciones mínimas necesarias para ejecutar Windows Mixed Reality](https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup)
+- Un equipo con las [especificaciones mínimas necesarias para ejecutar Windows Mixed Reality](https://developer.microsoft.com/windows/mixed-reality/immersive_headset_setup)
 - Un dispositivo Windows Mixed Reality (opcional). 
 
 
@@ -204,9 +197,6 @@ Agregue este código bajo la llamada `scene.onPointerDown = function() {...}`.
 
 Si abrimos **index.html** después de conectar el casco y el dispositivo de juego, bastará un clic izquierdo en la ventana de juego azul para cambiar nuestro juego al modo VR. Adelante, ponte el casco para echar un vistazo a los resultados. 
 
-
-<iframe height='300' scrolling='no' title='Babylon.js dino game using Babylon.GUI (juego de dinosaurio de Babylon.js mediante Babylon.GUI) - WebVR' src='//codepen.io/MicrosoftEdgeDocumentation/embed/preview/RjgpJd/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Consulta el Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/RjgpJd/'>Babylon.js dino game using Babylon.GUI - WebVR</a> (juego de dinosaurio de Babylon.js mediante Babylon.GUI, WebVR) Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) en <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 
 ## <a name="conclusion"></a>Conclusión

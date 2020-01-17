@@ -5,21 +5,21 @@ template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 491489c0a6462c1bcbee2015027403ae359c47a2
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 9328c3f156acd13fd8947e01e924bf0d6849c0a6
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282276"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684404"
 ---
 # <a name="item-templates-for-list-view"></a>Plantillas de elemento para vistas de lista
 
-Esta sección contiene las plantillas de elemento que puedes usar con un control [**ListView**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView). Usa estas plantillas para obtener la apariencia de los tipos de aplicación más comunes. 
+Esta sección contiene las plantillas de elemento que puedes usar con un control [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView). Usa estas plantillas para obtener la apariencia de los tipos de aplicación más comunes. 
 
 Para mostrar el enlace de datos, estas plantillas enlazan **ListViewItems** con la clase de ejemplo Recording desde la [introducción al enlace de datos](../../data-binding/data-binding-quickstart.md).
 
 > [!NOTE] 
-> Actualmente, cuando una clase **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la clase **DataTemplate**. Para más información sobre accesibilidad, consulta [Información general sobre accesibilidad](../accessibility/accessibility-overview.md).
+> Actualmente, cuando una clase **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la clase **DataTemplate**. Para más información sobre accesibilidad, consulta [Información general sobre accesibilidad](../accessibility/accessibility-overview.md).
 
 ## <a name="single-line-list-item"></a>Elemento de lista de una sola línea
 Usa esta plantilla para mostrar una colección de elementos con una imagen y una única línea de texto.
@@ -129,7 +129,7 @@ Usa esta plantilla para mostrar una colección de elementos con texto en columna
 ```
 
 ## <a name="related-articles"></a>Artículos relacionados
-- [Clase ListView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.listview)
+- [Clase ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)
 - [Introducción al enlace de datos](../../data-binding/data-binding-quickstart.md)
 - [Información general sobre accesibilidad](../accessibility/accessibility-overview.md)
 - [Ejemplo de ListView y GridView (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)

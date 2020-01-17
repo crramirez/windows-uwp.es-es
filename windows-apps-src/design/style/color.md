@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: efe67707edc5f556301ded466f3f2919ec04873e
-ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
+ms.openlocfilehash: 7ab504657ae5e3142eb7db1d9517a013e9aaf5f3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74153727"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684581"
 ---
 # <a name="color"></a>Color
 
@@ -219,13 +219,13 @@ Para obtener más información sobre los controles de estilos, consulta [Estilos
 
 ## <a name="color-api"></a>API de color
 
-Hay varias API que se pueden usar para agregar color a la aplicación. En primer lugar, la clase [**Colors**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colors), que implementa una gran lista de colores predefinidos. Se puede acceder automáticamente a estos con las propiedades XAML. En el siguiente ejemplo, creamos un botón y establecemos las propiedades de color de fondo y de primer plano en miembros de la clase **Colors**.
+Hay varias API que se pueden usar para agregar color a la aplicación. En primer lugar, la clase [**Colors**](https://docs.microsoft.com/uwp/api/windows.ui.colors), que implementa una gran lista de colores predefinidos. Se puede acceder automáticamente a estos con las propiedades XAML. En el siguiente ejemplo, creamos un botón y establecemos las propiedades de color de fondo y de primer plano en miembros de la clase **Colors**.
 
 ```xaml
 <Button Background="MediumSlateBlue" Foreground="White">Button text</Button>
 ```
 
-Puedes crear tus propios colores a partir de valores hexadecimales o RGB con la estructura [**Color**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.color) en XAML.
+Puedes crear tus propios colores a partir de valores hexadecimales o RGB con la estructura [**Color**](https://docs.microsoft.com/uwp/api/windows.ui.color) en XAML.
 
 ```xaml
 <Color x:Key="LightBlue">#FF36C0FF</Color>
@@ -240,9 +240,9 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 Las letras "Argb" significan "alfa (opacidad), rojo, verde y azul", que son los cuatro componentes de un color. Cada argumente puede oscilar entre 0 y 255. Puedes optar por omitir el primer valor, lo que dará una opacidad predeterminada de 255, o 100 % opaco.
 
 > [!Note]
-> Si usas C++, debes crear colores mediante la clase [**ColorHelper**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colorhelper).
+> Si usas C++, debes crear colores mediante la clase [**ColorHelper**](https://docs.microsoft.com/uwp/api/windows.ui.colorhelper).
 
-El uso más habitual de **Color** es como argumento de un [**SolidColorBrush**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.solidcolorbrush), que se puede usar para pintar elementos de la interfaz de usuario de un solo color sólido. Por lo general, estos pinceles se definen en una clase [**ResourceDictionary**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.ResourceDictionary), de modo que puedan volver a usarse para varios elementos.
+El uso más habitual de **Color** es como argumento de un [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.solidcolorbrush), que se puede usar para pintar elementos de la interfaz de usuario de un solo color sólido. Por lo general, estos pinceles se definen en una clase [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary), de modo que puedan volver a usarse para varios elementos.
 
 ```xaml
 <ResourceDictionary>
@@ -267,9 +267,9 @@ Además de definir tus propios colores en la aplicación, puedes definir el ámb
 ### <a name="how-to-use-colorpaletteresources"></a>Cómo usar ColorPaletteResources
 
 ColorPaletteResources es una API que le indica al sistema qué recursos están restringidos a un ámbito y dónde. ColorPaletteResources debe tener un atributo [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute), que puede ser uno de los tres siguientes:
-- Predeterminado
+- Valor predeterminado
   * Mostrará los cambios de color tanto en el tema [claro](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) como en el [oscuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme).
-- Claro
+- Ligero
   * Mostrará los cambios de color solo en el [tema claro](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme).
 - Oscuro
   * Mostrará los cambios de color solo en el [tema oscuro](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme).

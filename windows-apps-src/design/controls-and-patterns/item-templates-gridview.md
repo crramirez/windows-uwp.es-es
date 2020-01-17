@@ -5,21 +5,21 @@ template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: edd9f5e56f78a4fef34f5ddff85f64ada73dc68a
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 17c14d7147cafa17e78bd13bf6684a99d87cbdfd
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282300"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684412"
 ---
 # <a name="item-templates-for-grid-view"></a>Plantillas de elemento para vistas de cuadrícula
 
-Esta sección contiene las plantillas de elemento que puedes usar con un control [**GridView**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.GridView). Usa estas plantillas para obtener la apariencia de los tipos de aplicación más comunes.
+Esta sección contiene las plantillas de elemento que puedes usar con un control [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView). Usa estas plantillas para obtener la apariencia de los tipos de aplicación más comunes.
 
 Para mostrar el enlace de datos, estas plantillas enlazan **GridViewItems** con la clase de ejemplo Recording desde la [introducción al enlace de datos](../../data-binding/data-binding-quickstart.md).
 
 > [!NOTE] 
-> Actualmente, cuando una clase **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la clase **DataTemplate**. Para obtener más información sobre la accesibilidad, consulta [Información general sobre accesibilidad](../accessibility/accessibility-overview.md).
+> Actualmente, cuando una clase **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la clase **DataTemplate**. Para obtener más información sobre la accesibilidad, consulta [Información general sobre accesibilidad](../accessibility/accessibility-overview.md).
 
 ## <a name="icon-and-text"></a>Icono y texto
 Usa estas plantillas para mostrar una colección de aplicaciones en una cuadrícula con un icono y texto.
@@ -156,7 +156,7 @@ Usa esta plantilla para mostrar una colección de elementos multimedia con texto
 ```
 
 ## <a name="related-articles"></a>Artículos relacionados
-- [Clase GridView](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.GridView)
+- [Clase GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [Introducción al enlace de datos](../../data-binding/data-binding-quickstart.md)
 - [Información general sobre accesibilidad](../accessibility/accessibility-overview.md)
 - [Ejemplo de ListView y GridView (Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)

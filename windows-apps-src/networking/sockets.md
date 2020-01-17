@@ -6,12 +6,12 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 49e126ea0212499361fea58b58237ee13fb76ca2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 42913aae69e5d049530d649c031351f4f3ab9ace
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259177"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684973"
 ---
 # <a name="sockets"></a>Sockets
 Los sockets son una tecnología de transferencia de datos de bajo nivel sobre la que se implementan muchos protocolos de red. UWP ofrece las clases de socket TCP y UDP para aplicaciones cliente-servidor o de punto a punto, tanto si las conexiones son de larga duración o no se necesita una conexión establecida.
@@ -22,7 +22,7 @@ Este tema se centra en cómo usar las clases de socket de la Plataforma universa
 > Como consecuencia del [aislamiento de red](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)), Windows deshabilita establecer una conexión de socket (Sockets o WinSock) entre dos aplicaciones para UWP que se ejecuten en el mismo equipo, ya sea mediante la dirección de bucle invertido local (127.0.0.0) o especificando explícitamente la dirección IP local. Para obtener más información acerca de los mecanismos por los que las aplicaciones para UWP pueden comunicarse entre sí, consulte [Comunicación entre aplicaciones](/windows/uwp/app-to-app/index).
 
 ## <a name="build-a-basic-tcp-socket-client-and-server"></a>Compilar servidor y un cliente de socket TCP básico
-Un socket TCP (Protocolo de control de transmisión) proporciona transferencias de datos de red de bajo nivel en cualquier dirección para conexiones de larga duración. Los sockets TCP son la característica subyacente que usan la mayoría de los protocolos de red que se usan en Internet. Para demostrar las operaciones básicas de TCP, el código de ejemplo siguiente muestra un [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) y un [**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener) que envía y recibe datos a través de TCP para formar un servidor y un cliente de eco.
+Un socket TCP (Protocolo de control de transmisión) proporciona transferencias de datos de red de bajo nivel en cualquier dirección para conexiones de larga duración. Los sockets TCP son la característica subyacente que usan la mayoría de los protocolos de red que se utilizan en Internet. Para demostrar las operaciones básicas de TCP, el código de ejemplo siguiente muestra un [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) y un [**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener) que envía y recibe datos a través de TCP para formar un servidor y un cliente de eco.
 
 Para comenzar con el menor número posible de partes móviles&mdash;y eludir problemas de aislamiento de red en el presente &mdash; cree un nuevo proyecto y coloque el código de cliente y servidor siguiente en el mismo proyecto.
 
@@ -996,7 +996,7 @@ private:
     }
 ```
 
-## <a name="background-operations-and-the-socket-broker"></a>Operaciones en segundo plano y agente de socket
+## <a name="background-operations-and-the-socket-broker"></a>Operaciones en segundo plano y agente de sockets
 Puede usar al agente de socket y controlar los desencadenadores de canal, para garantizar que su aplicación reciba correctamente las conexiones o los datos en sockets mientras no estén en primer plano. Para más información, consulte [Comunicaciones de red en segundo plano](network-communications-in-the-background.md).
 
 ## <a name="batched-sends"></a>Envíos por lotes
@@ -1274,15 +1274,15 @@ private:
 
 Existen algunas limitaciones importantes impuestas mediante el uso de envíos por lote en el código.
 
--   No se puede modificar el contenido de las instancias de **IBuffer** que se escriben hasta que se complete la escritura asincrónica.
+-   No se puede modificar el contenido de las instancias de **IBuffer** que se escriben hasta que se completa la escritura asincrónica.
 -   El patrón **FlushAsync** solo funciona en **StreamSocket.OutputStream** y **DatagramSocket.OutputStream**.
 -   La trama **FlushAsync** solo funciona en Windows 10 y en adelante.
--   En otros casos, use [**Task.WaitAll**](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___) en lugar de la trama **FlushAsync**.
+-   En otros casos, use [**Task.WaitAll**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___) en lugar de la trama **FlushAsync**.
 
 ## <a name="port-sharing-for-datagramsocket"></a>Uso compartido de puertos para DatagramSocket
 Puede configurar un [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) para que coexista con otros sockets de multidifusión de Win32 o UWP enlazados a la misma dirección y puerto. Para ello, configure el [**DatagramSocketControl.MulticastOnly**](/uwp/api/Windows.Networking.Sockets.DatagramSocketControl.MulticastOnly) en `true` antes de enlazar o conectar el socket. Se accede a una instancia de **DatagramSocketControl** desde el propio objeto **DatagramSocket** a través de su propiedad [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.datagramsocket.Control).
 
-## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Proporcionar un certificado de cliente con la clase StreamSocket
+## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Aprovisionamiento de un certificado de cliente con la clase StreamSocket
 [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) admite el uso de SSL/TLS para autenticar el servidor con el que se comunica la aplicación cliente. En algunos casos, la aplicación de cliente debe autenticarse en el servidor mediante un certificado de cliente SSL/TLS. Puede proporcionar un certificado de cliente con la propiedad [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) antes de enlazar o conectar el socket (se debe establecer antes de que se inicie el protocolo de enlace SSL/TLS). Se accede a una instancia de **StreamSocketControl** desde el propio objeto **StreamSocket** a través de su propiedad [**StreamSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control). Si el servidor solicita el certificado de cliente, Windows responderá con el certificado del cliente proporcionado.
 
 Use una invalidación de [**StreamSocket.ConnectAsync**](/uwp/api/windows.networking.sockets.streamsocket.connectasync) que toma un [**SocketProtectionLevel**](/uwp/api/windows.networking.sockets.socketprotectionlevel), como se muestra en este ejemplo de código mínimo.
@@ -1383,5 +1383,5 @@ El constructor [**HostName**](/uwp/api/Windows.Networking.HostName) puede arroja
 * [Cómo establecer las funcionalidades de red](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
 * [Windows Sockets 2 (Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 * [Muestra StreamSocket](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/StreamSocket)
