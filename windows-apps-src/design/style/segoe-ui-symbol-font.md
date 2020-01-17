@@ -9,18 +9,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a615e00513bba0ba21f2f9a18fa0c8cdda31cb3f
-ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
+ms.openlocfilehash: b2003553ae7bf41b9c472f59528b46f39a07900c
+ms.sourcegitcommit: cd185e16d976f2d149312d39d560681538070e3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414136"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737658"
 ---
 # <a name="segoe-mdl2-icons"></a>Iconos de Segoe MDL2
 
  
 
-Este artículo enumera los iconos que proporciona la fuente Segoe MDL2 Assets. 
+En este artículo se enumeran los iconos que proporciona la fuente Segoe MDL2 Assets. 
 
 > **API importantes**: [**enumeración Symbol**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol), [**clase FontIcon**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
 
@@ -28,19 +28,19 @@ Este artículo enumera los iconos que proporciona la fuente Segoe MDL2 Assets.
 
 Con el lanzamiento de Windows 10, la fuente Segoe MDL2 Assets reemplaza a la fuente de iconos Segoe UI Symbol de Windows 8/8.1. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol** seguirá estando disponible como recurso "heredado", pero se recomienda actualizar la aplicación para usar la nueva **Segoe MDL2 Assets**).
 
-La mayor parte de los iconos y controles de interfaz de usuario incluidos en la fuente **Segoe MDL2 Assets** están asignados a un área de uso privado (PUA) de Unicode. El PUA permite que los desarrolladores de fuentes asignen valores de Unicode privados a glifos que no se asignan a puntos de código existentes. Esto es útil al crear una fuente de símbolos, pero genera un problema de interoperabilidad. Si la fuente no está disponible, no se mostrarán los glifos. Usa estos glifos solamente cuando puedas especificar la fuente **Segoe MDL2 Assets** .
+La mayor parte de los iconos y controles de interfaz de usuario incluidos en la fuente **Segoe MDL2 Assets** están asignados a un área de uso privado (PUA) de Unicode. Esta área PUA permite a los desarrolladores de fuentes asignar valores Unicode privados a glifos que no se asignan a puntos de código existentes. Resulta útil al crear una fuente de símbolos, pero genera un problema de interoperabilidad. Si la fuente no está disponible, no se mostrarán los glifos. Usa estos glifos solamente cuando puedas especificar la fuente **Segoe MDL2 Assets**.
 
-Usa estos glifos solamente cuando puedas especificar de forma explícita la fuente **Segoe MDL2 Assets**. Si trabajas con iconos, no puedes usar estos glifos, porque no puedes especificar la fuente del icono y los glifos de PUA no están disponibles mediante la reserva de la fuente.
+Usa estos glifos solamente cuando puedas especificar de forma explícita la fuente **Segoe MDL2 Assets**. Si trabajas con iconos, no puedes usar estos glifos, porque no puedes especificar la fuente del icono y los glifos PUA no están disponibles mediante la reserva de la fuente.
 
-A diferencia de **Segoe UI Symbol**, los iconos de la fuente **Segoe MDL2 activos** no están diseñados para el uso en línea con texto. Esto significa que ya no sirven algunos "trucos" anteriores, como las flechas de muestra progresiva de opciones. De igual modo, como todos los nuevos iconos tienen el mismo tamaño y posición, no es necesario hacerlos con ancho cero. Ahora funcionan como un conjunto. En principio, es posible superponer directamente dos iconos diseñados como un conjunto, ya que encajarán perfectamente. Esto puede hacerse para permitir la coloración en el código. Por ejemplo, U+EA3A y U+EA3B se crearon para el estado de notificación del icono Inicio. Como ya están centrados, el relleno del círculo puede colorearse según el estado.
+A diferencia de **Segoe UI Symbol**, los iconos de la fuente **Segoe MDL2 Assets** no están diseñados para el uso en línea con texto. Esto significa que algunos "trucos" anteriores, como las flechas de muestra progresiva ya no sirven. De igual modo, dado que todos los iconos nuevos tienen el mismo tamaño y posición, no es necesario crearlos con un ancho cero. Ahora funcionan como un conjunto. Lo mejor es que puedes superponer directamente dos iconos diseñados como un conjunto y se colocarán en su sitio. Esto permite la coloración en el código. Por ejemplo, U+EA3A y U+EA3B se crearon para el estado del distintivo del icono Inicio. Dado que ya están centrados, el relleno del círculo puede colorearse según el estado.
 
 ## <a name="layering-and-mirroring"></a>Disposición en capas y creación de reflejos
 
-Todos los glifos de **Segoe MDL2 Assets** tienen el mismo ancho fijo y un alto y un punto de origen izquierdo coherentes, de modo que es posible lograr efectos de superposición y coloreado simplemente superponiendo glifos. En este ejemplo se muestra un contorno grueso dibujado en la parte superior del corazón rojo de ancho cero.
+Todos los glifos de **Segoe MDL2 Assets** tienen el mismo ancho fijo con un alto y un punto de origen izquierdo coherentes, lo que permite aplicar efectos de superposición y coloración simplemente con la superposición de glifos. En este ejemplo se muestra un contorno negro dibujado sobre el corazón rojo de ancho cero.
 
 ![Uso de un glifo de ancho cero](images/segoe-ui-symbol-layering.png)
 
-Muchos de los iconos también disponen de formas reflejas para su uso en idiomas que se leen de derecha a izquierda, como el árabe, el dari, el persa y el hebreo.
+Muchos de los iconos también tienen formas reflejadas para su uso en idiomas que se leen de derecha a izquierda, como el árabe, el dari, el persa y el hebreo.
 
 ## <a name="using-the-icons"></a>Usar los iconos
 Si estás desarrollando una aplicación en C#, VB o C++ y XAML, puedes usar los glifos especificados de Segoe MDL2 Assets con la [enumeración Symbol](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
@@ -74,7 +74,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
 
  <tr>
   <td>Símbolo</td>
-  <td>Código</td>
+  <td>Punto de código Unicode</td>
   <td>Descripción</td>
  </tr>
  <tr><td><img src="images/segoe-mdl/E700.png" width="32" height="32" alt="GlobalNavigationButton" /></td>
@@ -91,7 +91,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E703.png" width="32" height="32" alt="Connect" /></td>
   <td>E703</td>
-  <td>Conectar</td>
+  <td>Conecte</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E704.png" width="32" height="32" alt="InternetSharing" /></td>
   <td>E704</td>
@@ -103,7 +103,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E706.png" width="32" height="32" alt="Brightness" /></td>
   <td>E706</td>
-  <td>Brillo</td>
+  <td>Luminosidad</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E707.png" width="32" height="32" alt="MapPin" /></td>
   <td>E707</td>
@@ -139,7 +139,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E70F.png" width="32" height="32" alt="Edit" /></td>
   <td>E70F</td>
-  <td>Edita</td>
+  <td>Editar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E710.png" width="32" height="32" alt="Add" /></td>
   <td>E710</td>
@@ -155,11 +155,11 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E713.png" width="32" height="32" alt="Settings" /></td>
   <td>E713</td>
-  <td>Configuración</td>
+  <td>Settings</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E714.png" width="32" height="32" alt="Video" /></td>
   <td>E714</td>
-  <td>Vídeo</td>
+  <td>Vídeos</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E715.png" width="32" height="32" alt="Mail" /></td>
   <td>E715</td>
@@ -167,7 +167,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E716.png" width="32" height="32" alt="People" /></td>
   <td>E716</td>
-  <td>Contactos</td>
+  <td>Personas</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E717.png" width="32" height="32" alt="Phone" /></td>
   <td>E717</td>
@@ -179,7 +179,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E719.png" width="32" height="32" alt="Shop" /></td>
   <td>E719</td>
-  <td>Tienda</td>
+  <td>Comprar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E71A.png" width="32" height="32" alt="Stop" /></td>
   <td>E71A</td>
@@ -247,7 +247,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E72A.png" width="32" height="32" alt="Forward" /></td>
   <td>E72A</td>
-  <td>Adelante</td>
+  <td>Reenviar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E72B.png" width="32" height="32" alt="Back" /></td>
   <td>E72B</td>
@@ -259,11 +259,11 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E72D.png" width="32" height="32" alt="Share" /></td>
   <td>E72D</td>
-  <td>Compartir</td>
+  <td>Recurso compartido</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E72E.png" width="32" height="32" alt="Lock" /></td>
   <td>E72E</td>
-  <td>Lock</td>
+  <td>Bloquear</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E730.png" width="32" height="32" alt="ReportHacked" /></td>
   <td>E730</td>
@@ -291,7 +291,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E738.png" width="32" height="32" alt="Remove" /></td>
   <td>E738</td>
-  <td>Eliminar</td>
+  <td>Quitar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E739.png" width="32" height="32" alt="Checkbox" /></td>
   <td>E739</td>
@@ -363,11 +363,11 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E74A.png" width="32" height="32" alt="Up" /></td>
   <td>E74A</td>
-  <td>Arriba</td>
+  <td>Subir</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E74B.png" width="32" height="32" alt="Down" /></td>
   <td>E74B</td>
-  <td>Abajo</td>
+  <td>Bajar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E74C.png" width="32" height="32" alt="OEM" /></td>
   <td>E74C</td>
@@ -383,7 +383,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E74F.png" width="32" height="32" alt="Mute" /></td>
   <td>E74F</td>
-  <td>Silenciar</td>
+  <td>Silencio</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E750.png" width="32" height="32" alt="BackSpaceQWERTY" /></td>
   <td>E750</td>
@@ -503,7 +503,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E770.png" width="32" height="32" alt="System" /></td>
   <td>E770</td>
-  <td>Sistema</td>
+  <td>System</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E771.png" width="32" height="32" alt="Personalize" /></td>
   <td>E771</td>
@@ -623,7 +623,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E793.png" width="32" height="32" alt="Light" /></td>
   <td>E793</td>
-  <td>Claro</td>
+  <td>Ligero</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E799.png" width="32" height="32" alt="AspectRatio" /></td>
   <td>E799</td>
@@ -651,7 +651,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E7AD.png" width="32" height="32" alt="Rotate" /></td>
   <td>E7AD</td>
-  <td>Rotar</td>
+  <td>Girar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7B3.png" width="32" height="32" alt="RedEye" /></td>
   <td>E7B3</td>
@@ -667,7 +667,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E7B8.png" width="32" height="32" alt="Package" /></td>
   <td>E7B8</td>
-  <td>Empaquetar</td>
+  <td>Paquete</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7BA.png" width="32" height="32" alt="Warning" /></td>
   <td>E7BA</td>
@@ -691,7 +691,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C1.png" width="32" height="32" alt="Flag" /></td>
   <td>E7C1</td>
-  <td>Bandera</td>
+  <td>Marca</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C3.png" width="32" height="32" alt="Page" /></td>
   <td>E7C3</td>
@@ -727,7 +727,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E7E3.png" width="32" height="32" alt="Ferry" /></td>
   <td>E7E3</td>
-  <td>Buque</td>
+  <td>Ferri</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7E6.png" width="32" height="32" alt="Highlight" /></td>
   <td>E7E6</td>
@@ -763,7 +763,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E7EF.png" width="32" height="32" alt="Admin" /></td>
   <td>E7EF</td>
-  <td>Administrador</td>
+  <td>Administración</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7F0.png" width="32" height="32" alt="CC" /></td>
   <td>E7F0</td>
@@ -883,7 +883,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E815.png" width="32" height="32" alt="Touch" /></td>
   <td>E815</td>
-  <td>Función táctil</td>
+  <td>Tocar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E816.png" width="32" height="32" alt="MapDirections" /></td>
   <td>E816</td>
@@ -927,7 +927,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E823.png" width="32" height="32" alt="Recent" /></td>
   <td>E823</td>
-  <td>Reciente</td>
+  <td>Recientes</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E825.png" width="32" height="32" alt="Bank" /></td>
   <td>E825</td>
@@ -963,7 +963,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E82F.png" width="32" height="32" alt="ToolTip" /></td>
   <td>E82F</td>
-  <td>ToolTip</td>
+  <td>Información sobre herramientas</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E830.png" width="32" height="32" alt="ChromeBack" /></td>
   <td>E830</td>
@@ -1231,7 +1231,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E877.png" width="32" height="32" alt="Vibrate" /></td>
   <td>E877</td>
-  <td>Vibración</td>
+  <td>Vibrar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E878.png" width="32" height="32" alt="RoamingInternational" /></td>
   <td>E878</td>
@@ -1363,7 +1363,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E898.png" width="32" height="32" alt="Upload" /></td>
   <td>E898</td>
-  <td>Subir</td>
+  <td>Cargar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E899.png" width="32" height="32" alt="Emoji" /></td>
   <td>E899</td>
@@ -1435,7 +1435,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AB.png" width="32" height="32" alt="Switch" /></td>
   <td>E8AB</td>
-  <td>Conmutador</td>
+  <td>Modificador</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AC.png" width="32" height="32" alt="Rename" /></td>
   <td>E8AC</td>
@@ -1455,11 +1455,11 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B0.png" width="32" height="32" alt="Click" /></td>
   <td>E8B0</td>
-  <td>Haz clic</td>
+  <td>Haga clic en</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B1.png" width="32" height="32" alt="Shuffle" /></td>
   <td>E8B1</td>
-  <td>Aleatorio</td>
+  <td>Orden aleatorio</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B2.png" width="32" height="32" alt="Movies" /></td>
   <td>E8B2</td>
@@ -1619,7 +1619,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D9.png" width="32" height="32" alt="Unfavorite" /></td>
   <td>E8D9</td>
-  <td>No favorito</td>
+  <td>Quitar de Favoritos</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8DA.png" width="32" height="32" alt="OpenLocal" /></td>
   <td>E8DA</td>
@@ -1767,7 +1767,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E8FE.png" width="32" height="32" alt="Scan" /></td>
   <td>E8FE</td>
-  <td>Digitalización</td>
+  <td>Explorar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8FF.png" width="32" height="32" alt="Preview" /></td>
   <td>E8FF</td>
@@ -1799,7 +1799,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E909.png" width="32" height="32" alt="World" /></td>
   <td>E909</td>
-  <td>Mundo</td>
+  <td>World</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E90A.png" width="32" height="32" alt="Comment" /></td>
   <td>E90A</td>
@@ -1919,7 +1919,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E930.png" width="32" height="32" alt="Completed" /></td>
   <td>E930</td>
-  <td>Completado</td>
+  <td>Completed</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E931.png" width="32" height="32" alt="ChromeAnnotate" /></td>
   <td>E931</td>
@@ -2027,7 +2027,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E952.png" width="32" height="32" alt="Dock" /></td>
   <td>E952</td>
-  <td>Acoplamiento</td>
+  <td>Acoplar</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E953.png" width="32" height="32" alt="MultimediaDMS" /></td>
   <td>E953</td>
@@ -2067,7 +2067,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E95E.png" width="32" height="32" alt="Health" /></td>
   <td>E95E</td>
-  <td>Salud</td>
+  <td>Mantenimiento</td>
  </tr>
  <tr><td><img src="images/segoe-mdl/E95F.png" width="32" height="32" alt="Wire" /></td>
   <td>E95F</td>
@@ -2227,7 +2227,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E988.png" width="32" height="32" alt="HalfKatakana" /></td>
   <td>E988</td>
-  <td>HalfKatakana</td>
+  <td>FullKatakana</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E989.png" width="32" height="32" alt="ChineseBoPoMoFo" /></td>
   <td>E989</td>
@@ -2343,7 +2343,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E9B7.png" width="32" height="32" alt="PuncKey4" /></td>
   <td>E9B7</td>
-  <td>PuncKey4</td>
+  <td>PuncKey1</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9B8.png" width="32" height="32" alt="PuncKey5" /></td>
   <td>E9B8</td>
@@ -2383,7 +2383,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D9.png" width="32" height="32" alt="Diagnostic" /></td>
   <td>E9D9</td>
-  <td>Diagnóstico</td>
+  <td>Diagnostic</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9E9.png" width="32" height="32" alt="Equalizer" /></td>
   <td>E9E9</td>
@@ -2439,7 +2439,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EA38.png" width="32" height="32" alt="Asterisk" /></td>
   <td>EA38</td>
-  <td>Asterisco</td>
+  <td>Asterisk</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EA39.png" width="32" height="32" alt="ErrorBadge" /></td>
   <td>EA39</td>
@@ -2595,7 +2595,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EA69.png" width="32" height="32" alt="Media" /></td>
   <td>EA69</td>
-  <td>Multimedia</td>
+  <td>Medios</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EA6A.png" width="32" height="32" alt="SyncError" /></td>
   <td>EA6A</td>
@@ -2659,7 +2659,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EA8F.png" width="32" height="32" alt="Ringer" /></td>
   <td>EA8F</td>
-  <td>Tono</td>
+  <td>Timbre</td>
  </tr>
  <tr><td><img src="images/segoe-mdl/EA90.png" width="32" height="32" alt="PDF" /></td>
   <td>EA90</td>
@@ -2775,7 +2775,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EB50.png" width="32" height="32" alt="Reminder" /></td>
   <td>EB50</td>
-  <td>Recordatorio</td>
+  <td>Reminder</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EB51.png" width="32" height="32" alt="Heart" /></td>
   <td>EB51</td>
@@ -3179,7 +3179,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EC08.png" width="32" height="32" alt="Courthouse" /></td>
   <td>EC08</td>
-  <td>Corte</td>
+  <td>Palacio de justicia</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EC09.png" width="32" height="32" alt="Groceries" /></td>
   <td>EC09</td>
@@ -3223,7 +3223,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/EC1B.png" width="32" height="32" alt="Badge" /></td>
   <td>EC1B</td>
-  <td>Insignia</td>
+  <td>Distintivo</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EC1E.png" width="32" height="32" alt="SignalRoaming" /></td>
   <td>EC1E</td>
@@ -3783,7 +3783,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
  </tr>
 <tr><td><img src="images/segoe-mdl/ED64.png" width="32" height="32" alt="Marker" /></td>
   <td>ED64</td>
-  <td>Rotulador</td>
+  <td>Marcador</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/ED65.png" width="32" height="32" alt="InkingCaret" /></td>
   <td>ED65</td>
@@ -3909,7 +3909,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
   <td>EDE3</td>
   <td>ButtonMenu</td>
  </tr>
-<tr><td><img src="images/segoe-mdl/EDE4.png" width="32" height="32" alt="CloudSeach" /></td>
+<tr><td><img src="images/segoe-mdl/EDE4.png" width="32" height="32" alt="CloudSearch" /></td>
   <td>EDE4</td>
   <td>CloudSearch</td>
  </tr>
@@ -5521,7 +5521,7 @@ Ten en cuenta que la fuente **Segoe MDL2 Assets** incluye muchos más iconos de 
 ## <a name="related-articles"></a>Artículos relacionados
 
 * [Directrices sobre iconos](../style/icons.md)
-* [Enumeración Symbol](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Symbol)
+* [Enumeración Symbol](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Symbol)
 * [Clase FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
 
 
