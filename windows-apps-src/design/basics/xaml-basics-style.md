@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f2c63c90170a633ae718db618c502efa41fb3f7d
-ms.sourcegitcommit: 807dadf5eceb576aba3ad898a6e9bf12129e94a4
+ms.openlocfilehash: 0e9e0a426d51fddaf4ff509438176e9db7a3e474
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72680762"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684130"
 ---
 # <a name="tutorial-create-custom-styles"></a>Tutorial: Creación de estilos personalizados
 
@@ -30,7 +30,7 @@ La aplicación PhotoLab tiene dos páginas principales:
 **DetailPage.xaml:** muestra una sola foto después de que se haya seleccionado. Un menú de edición flotante permite modificar la foto, cambiar su nombre y guardarla.
 ![DetailPage](../basics/images/xaml-basics/detailpage.png)
 
-## <a name="part-1-create-a-fancy-slider-control"></a>1ª parte: Creación de un control deslizante sofisticado  
+## <a name="part-1-create-a-fancy-slider-control"></a>Parte 1: Creación de un control deslizante sofisticado  
 
 La Plataforma universal de Windows (UWP) proporciona varias maneras de personalizar la apariencia de una aplicación. Desde la configuración de fuentes y tipografía hasta los colores y gradientes o los efectos de desenfoque, hay muchas opciones. 
 
@@ -55,7 +55,7 @@ El control deslizante de exposición ajusta la exposición de la imagen: si se d
 
 3. Usa un elemento Polígono para crear una forma de fondo para el control deslizante de exposición.
 
-    El [espacio de nombres Windows.XAML.Ui.Shapes](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Shapes) proporciona siete formas para elegir. Hay una elipse, un rectángulo y un elemento denominado Trazado, que puede hacer cualquier tipo de forma (hasta un unicornio). 
+    El [espacio de nombres Windows.XAML.Ui.Shapes](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Shapes) proporciona siete formas para elegir. Hay una elipse, un rectángulo y un elemento denominado Trazado, que puede hacer cualquier tipo de forma (hasta un unicornio). 
     
     <!-- TODO reduce size -->
     ![Un unicornio](../basics/images/xaml-basics/unicorn.png)
@@ -173,11 +173,11 @@ Enhorabuena, has completado la parte 1. Si te has quedado atascado o quieres ver
 
  
     
-## <a name="part-2-create-basic-styles"></a>2ª parte: Creación de estilos básicos
+## <a name="part-2-create-basic-styles"></a>Parte 2: Creación de estilos básicos
 
 Una de las ventajas de los estilos de XAML es que pueden reducir considerablemente la cantidad de código que hay que escribir, y pueden facilitar mucho la actualización del aspecto de la aplicación.
 
-Para definir un estilo, agrega un elemento [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) a la propiedad [Resources](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.Resources) de un elemento que contenga el control al que quieres aplicar estilo.  Si agregas el estilo a la propiedad **Page.Resources**, se podrá acceder tus estilos desde toda la página. Si agregas el estilo a la propiedad **Application.Resources** en el archivo App.xaml, se podrá acceder a él desde toda la aplicación.
+Para definir un estilo, agrega un elemento [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) a la propiedad [Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Resources) de un elemento que contenga el control al que quieres aplicar estilo.  Si agregas el estilo a la propiedad **Page.Resources**, se podrá acceder tus estilos desde toda la página. Si agregas el estilo a la propiedad **Application.Resources** en el archivo App.xaml, se podrá acceder a él desde toda la aplicación.
 
 Puedes crear tanto estilos con nombre como estilos generales. Los estilos con nombre deben aplicarse explícitamente a controles concretos, mientras que los estilos generales se aplican a cualquier control que coincida con el **TargetType** especificado. 
 
