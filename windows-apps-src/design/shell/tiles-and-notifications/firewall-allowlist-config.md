@@ -9,24 +9,24 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, servicio de notificaciones de Windows, notificación, Windows, firewall, solución de problemas, IP, tráfico, empresa, red, IPv4, VIP, FQDN, dirección IP pública
 ms.localizationpriority: medium
-ms.openlocfilehash: c3774164d16e86a88f45eb50030beec099629d6f
-ms.sourcegitcommit: 738bab9a088a244a7a212dcac6fb3560c547b8d5
+ms.openlocfilehash: fa0153a395144382aee3f764f0f7d9316afa9c5e
+ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72695768"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76265026"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configuraciones de firewall y proxy de empresa para admitir el tráfico de WNS
 
-## <a name="background"></a>Información preliminar:
-Muchas empresas usan firewalls para bloquear el tráfico de red no deseado; Desafortunadamente, esto también puede bloquear aspectos importantes como las comunicaciones del servicio de notificaciones de Windows. Esto significa que todas las notificaciones enviadas a través de WNS se quitarán en determinadas configuraciones de red. Para evitar esto, los administradores de red pueden agregar la lista de FQDN o VIP de WNS aprobados a su lista de exenciones para permitir que el tráfico de WNS pase a través del firewall. A continuación se muestran más detalles sobre cómo y qué agregar, así como la compatibilidad con distintos tipos de proxy.
+## <a name="background"></a>Segundo plano
+Muchas empresas usan firewalls para bloquear el tráfico de red y los puertos no deseados; Desafortunadamente, esto también puede bloquear aspectos importantes como las comunicaciones del servicio de notificaciones de Windows. Esto significa que todas las notificaciones enviadas a través de WNS se quitarán en determinadas configuraciones de red. Para evitar esto, los administradores de red pueden agregar la lista de FQDN o VIP de WNS aprobados a su lista de exenciones para permitir que el tráfico de WNS pase a través del firewall. A continuación se muestran más detalles sobre cómo y qué agregar, así como la compatibilidad con distintos tipos de proxy.
 
 ## <a name="proxy-support"></a>Compatibilidad con proxy
 
 > [!Note]
 > Los clientes de Windows **no** admiten todos los servidores proxy, la conexión a WNS debe ser una conexión directa.
 
-**¡Próximamente!** Estamos investigando activamente diferentes configuraciones de red, servidores proxy y firewalls. Esta página se actualizará con más detalles sobre escenarios empresariales comunes y la compatibilidad con WNS en breve.
+**Próximamente** Estamos investigando activamente diferentes configuraciones de red, servidores proxy y firewalls. Esta página se actualizará con más detalles sobre escenarios empresariales comunes y la compatibilidad con WNS en breve.
 
 
 ## <a name="what-information-should-be-added-to-the-allowlist"></a>Información que se debe agregar a permitidos
@@ -39,8 +39,8 @@ A continuación se muestra una lista que contiene los FQDN, las VIP y los interv
 > Los intervalos de direcciones IP cambiarán periódicamente; por este motivo, no se incluyen en esta página. Si desea ver la lista de intervalos IP, puede descargar el archivo desde el centro de descarga: [VIP e intervalos IP de servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Consulte periódicamente para asegurarse de que dispone de la información más actualizada. 
 
 
-### <a name="fqdns-vips-and-ips"></a>FQDN, VIP e IP
-Cada uno de los elementos del siguiente documento XML se explica en la tabla siguiente (en [términos y notaciones](#terms-and-notations)). Los intervalos IP se dejaron intencionadamente en este documento para que se le recomiende usar solo los FQDN, ya que los FQDN permanecerán constantes. Sin embargo, puede descargar el archivo XML que contiene la lista completa desde el centro de descarga: [VIP e intervalos IP de servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Las nuevas VIP o intervalos IP entrarán en **vigor una semana después de cargarse**.
+### <a name="fqdns-vips-ips-and-ports"></a>FQDN, direcciones VIP, direcciones IP y puertos
+Independientemente del método que elija, deberá permitir el tráfico de red a los destinos enumerados a través del **puerto 443**. Cada uno de los elementos del siguiente documento XML se explica en la tabla siguiente (en [términos y notaciones](#terms-and-notations)). Los intervalos IP se dejaron intencionadamente en este documento para que se le recomiende usar solo los FQDN, ya que los FQDN permanecerán constantes. Sin embargo, puede descargar el archivo XML que contiene la lista completa desde el centro de descarga: [VIP e intervalos IP de servicio de notificaciones de Windows (WNS)](https://www.microsoft.com/download/details.aspx?id=44238). Las nuevas VIP o intervalos IP entrarán en **vigor una semana después de cargarse**.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>

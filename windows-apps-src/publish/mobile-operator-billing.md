@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp, operadores de telefonía móviles, facturación móvil, facturación de operador de telefonía móvil
 ms.localizationpriority: medium
-ms.openlocfilehash: 606267080ced6ea8dd41f8f05ddcdee4d33b00f2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: af682d2a17e10bf1c3b3cdcb3485315a6972eb9f
+ms.sourcegitcommit: e38946d8228293fca7d6c2b4d66e8e8f0d349e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259966"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258357"
 ---
 # <a name="mobile-operator-billing"></a>Facturación de operadores de telefonía móvil
 
@@ -44,6 +44,7 @@ La facturación de operadores de telefonía móvil se admite actualmente por est
 | Polonia               | Naranja, reproducir                                            |
 | Singapur            | M1 limitado, StarHub                                     |
 | Eslovaquia             | Slovak Telekom                                          |
+| Sudáfrica         | Vodacom                                                 |
 | España                | Orange                                                  |
 | Suecia               | Telenor, 3                                              |
 | Suiza          | Swisscom, Sunrise                                       |

@@ -1,19 +1,19 @@
 ---
-Description: En el apartado Resumen de pago se muestran los detalles sobre el dinero que has ganado con tus aplicaciones y complementos. También se muestra información que te permite saber cuándo recibirás los pagos y cuánto te pagarán.
-title: Resumen de pago
+Description: Los informes de pago muestran los detalles sobre el dinero que ha obtenido con sus aplicaciones y complementos. También se muestra información que te permite saber cuándo recibirás los pagos y cuánto te pagarán.
+title: Informes de pago
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.date: 08/02/2019
 ms.topic: article
 keywords: windows 10, uwp, resumen de pago, extracto, pagos, ganancias, pagos, pago, beneficios
 ms.localizationpriority: medium
-ms.openlocfilehash: aff36ace40317ff0b2ff54a8ca75381fe2c24a4e
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: f4d8727a48cd68b304d515fe34082b4c4f632b4b
+ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684991"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76265073"
 ---
-# <a name="payout-summary"></a>Resumen de pago
+# <a name="payout-reports"></a>Informes de pago
 
 El **resumen de pagos** muestra detalles sobre el dinero que ha ganado con Microsoft. También se muestra información que te permite saber cuándo recibirás los pagos y cuánto te pagarán.
 
@@ -22,12 +22,23 @@ Si vendes productos en Azure Marketplace, también verás información sobre los
 > [!NOTE]
 > Para poder acceder a esta opción, sus ganancias deben alcanzar el [umbral de pago](payment-thresholds-methods-and-timeframes.md) de 50 USD. Para obtener más información sobre el umbral de pago, consulte esta página y revise el contrato para desarrolladores de aplicaciones.
 
+> [!NOTE]
+> Si busca soporte técnico relacionado con los pagos, incluida la configuración de las cuentas de pago, los pagos que faltan, la colocación de los pagos en espera o cualquier otra cosa, póngase en contacto con el soporte técnico [aquí](https://developer.microsoft.com/windows/support).
+
 ## <a name="access-the-payout-summary-pages"></a>Acceder a las páginas de Resumen de pago
 
 Para abrir una de las páginas de Resumen de pago:
 
-1. Seleccione el icono de Money en la esquina superior derecha.
-2. Seleccione pagos, historial de transacciones o exportar datos.
+1. Seleccione el icono de pago en la esquina superior derecha.
+2. Seleccione historial de transacciones, pagos o exportar datos.
+
+## <a name="transaction-history-page"></a>Página historial de transacciones
+
+En esta página se muestran todos los beneficios individuales, incluida la fecha, el tipo y la obtención de cada uno de ellos. Puede seleccionar un período de tiempo para verlo y también puede filtrar por ID. de inscripción, programa, ID. de pago, tipo de ganancia, palanca y estado. Los datos están disponibles para el año fiscal actual (1 de Julio – 30 de junio) y los dos años fiscales anteriores.
+
+Para ver más detalles sobre una ganancia, seleccione la flecha hacia abajo que se encuentra en el lado derecho de la página. Esto mostrará la palanca, el importe de los ingresos y el producto. Si, por alguna razón, alguno de estos datos no está disponible, pero necesita acceder a él, póngase en contacto [con el soporte técnico](https://developer.microsoft.com/windows/support)]. Si la ganancia es el resultado de un ajuste, y no una transacción, no se mostrarán los campos del producto.
+
+Para exportar cualquiera de los datos de la transacción en esta página, use la página **exportar datos** .
 
 ## <a name="payments-page"></a>Página pagos
 
@@ -78,7 +89,9 @@ Notas:
 - La página exportar datos no se actualiza por sí misma. Es posible que tenga que actualizar la página manualmente para ver los datos más recientes.
 - El filtro puede producir un error no hay datos disponibles. Probablemente significa que ha dejado el período de tiempo predeterminado seleccionado en tres meses y, a continuación, ha seleccionado un ID. de pago de una ganancia que está fuera de ese período. Expanda el período de tiempo y vuelva a intentarlo.
 
-## <a name="payment-download-export"></a>Exportación de descarga de pago
+## <a name="payments"></a>Pagos
+
+![Exportar pagos](images/pc-export-payments.png)
 
 Esta opción proporciona una descarga de los pagos que ha recibido en el Banco para un programa determinado, los impuestos asociados y el importe de la ganancia agregada. Este informe se usa para muchos programas del centro de Partners, por lo que es posible que algunas columnas no sean aplicables a su informe. Estas columnas se marcan a continuación.
 
@@ -95,13 +108,15 @@ Esta opción proporciona una descarga de los pagos que ha recibido en el Banco p
 | serviceFeeTax            | Cantidad total de serviceFeeTax de pago a divisa para el programa/participantID (aplicable solo para programas de tienda y Azure Marketplace) |
 | totalPayment             | Pago total en moneda local excluyendo el impuesto de retención e incluyendo el impuesto de venta (si procede) para el programa/participantID   |
 | currencyCode             | Pago a código de divisa                                                                                                                      |
-| paymentMethod            | El método que se usa para pagar al socio comercial, por ejemplo, transferencia electrónica bancaria, nota de crédito                                                             |
+| paymentMethod            | El método que se usa para pagar al socio comercial, por ejemplo, transferencia electrónica bancaria, nota de crédito                                                     |
 | paymentID                | Identificador único del pago. Este número normalmente es visible en la instrucción Bank. (aplicable solo para pagos de SAP)              |
 | paymentStatus            | Estado del pago                                                                                                                            |
 | paymentStatusDescription | Descripción detallada del estado del pago.                                                                                                    |
 | paymentDate              | Fecha de envío del pago de Microsoft                                                                                                      |
 
-## <a name="transaction-history-download-export"></a>Exportación de la descarga del historial de transacciones
+## <a name="transaction-history"></a>Historial de transacciones
+
+![Exportar historial de transacciones](images/pc-export-transaction.png)
 
 Esta opción proporciona una descarga de cada elemento de línea que se ve en la página historial de transacciones, ganando el tipo, la fecha, el importe de la transacción asociada, el cliente, el producto y otros detalles transaccionales aplicables a los programas.
 
@@ -122,7 +137,7 @@ Esta opción proporciona una descarga de cada elemento de línea que se ve en la
 | lever                          | Indica la regla de negocios de la ganancia.                                                                                                  | Todos                                                            |
 | earningRate                    | Tasa de incentivos aplicada sobre el importe de la transacción para generar una ganancia.                                                                      | Todos                                                            |
 | quantity                       | Varía en función del programa. Indica la cantidad facturada en los programas de transacción.                                                            | Todos                                                            |
-| quantityType                   | Indica el tipo de cantidad, por ejemplo, cantidad facturada, MAU                                                                                     | Todos                                                            |
+| quantityType                   | Indica el tipo de cantidad, por ejemplo, cantidad facturada, MAU                                                                             | Todos                                                            |
 | earningType                    | Indica si es honorarios, devolución, cooperativo, venta, etc.                                                                                          | Todos                                                            |
 | earningAmount                  | Importe de la ganancia en la moneda original de la transacción.                                                                                      | Todos                                                            |
 | earningAmountUSD               | Importe de la ganancia en USD.                                                                                                                    | Todos                                                            |
@@ -177,3 +192,46 @@ Esta opción proporciona una descarga de cada elemento de línea que se ve en la
 | TenantID                       |                                                                                                                                          | Programas de incentivos                                             |
 | externalReferenceId            | Identificador único del programa.                                                                                                        | Programas de pago directo (incentivos y tienda)                      |
 | externalReferenceIdLabel       | Etiqueta del identificador único.                                                                                                                  | Programas de pago directo (incentivos y tienda)                      |
+
+## <a name="historical-statements"></a>Instrucciones históricas
+
+![Exportar instrucciones históricas](images/pc-export-statements.png)
+
+El historial de transacciones desde antes del 1 2019 de julio se trata por separado. Las instrucciones utilizarán los campos siguientes en lugar de los actuales.
+
+> [!NOTE]
+> El historial de transacciones heredadas tiene una columna denominada "reservada" que corresponde a la columna "beneficios" en el historial moderno, con la salvedad de que excluye todas las ganancias con estado = "pago enviado".
+
+> [!NOTE]
+> Los filtros (3M, 6 M, 12M, etc.) no se aplicarán a la sección de **instrucciones históricas** .
+
+| Nombre del campo              | Descripción                                                                                                                                                             |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Fuente de ingresos          | La fuente de tus ingresos, que se basa en el lugar en el que se ha producido la transacción (por ejemplo, Microsoft Store, Windows Phone Store, Windows Store 8, publicidad, etc.)                  |
+| Id. de pedido                | Un identificador de pedido exclusivo. Este id. permite identificar las transacciones de compra con sus respectivas transacciones que no son de compra (como las devoluciones, la anulaciones, etc.). Ambas tendrá el mismo id. de pedido. Además, en el caso de un cargo dividido en el que se hayan usado varios métodos de pago para una sola compra, te permitirá vincular las transacciones de compra. |
+| Id. de transacción          | Identificador único de la transacción.                                                                                                                                          |
+| Fecha y hora de transacción   | La fecha y la hora a las que se realizó la transacción (hora UTC).                                                                                                                       |
+| Id. de producto principal       | Identificador único del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el identificador del producto principal es igual al identificador del producto.                                |
+| Id. del producto              | Identificador único del producto.                                                                                                                                              |
+| Nombre del producto principal     | Nombre del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el nombre del producto principal es igual al nombre del producto.                                  |
+| Nombre del producto            | Nombre del producto.                                                                                                                                                    |
+| Tipo de producto            | Tipo de producto (por ejemplo aplicación, complemento, juego, etc.)                                                                                                                       |
+| Cantidad                | Si el valor de Fuente de ingresos es la Microsoft Store para Empresas, Cantidad representa el número de licencias adquiridas. Para otras fuentes de ingresos, el valor de Cantidad siempre será 1. Nota: Aunque una misma transacción esté dividida en dos artículos de línea debido al uso de dos métodos de pago distintos, cada artículo de línea mostrará un valor de 1 en Cantidad. |
+| Tipo de transacción        | Tipo de transacción (por ejemplo, compra, reembolso, inversión, anulación, etc.)                                                                                              |
+| Método de pago          | Instrumento de pago del cliente usado para la transacción (por ejemplo, tarjeta, facturación del operador de telefonía móvil, PayPal, etc.)                                                               |
+| País o región        | País o región donde se realizó la transacción.                                                                                                                          |
+| Proveedor o vendedor local | Proveedor o vendedor local del registro.                                                                                                                                        |
+| Moneda de la transacción    | Moneda de la transacción.                                                                                                                                            |
+| Importe de la transacción      | Importe de la transacción.                                                                                                                                              |
+| Impuestos enviados            | Importe de impuestos enviados (de ventas, de uso o impuestos sobre bienes y servicios o IVA)                                                                                                                  |
+| Ingresos netos            | Importe de la transacción menos impuestos.                                                                                                                                   |
+| Honorarios de la Tienda               | Porcentaje de los ingresos netos retenido por Microsoft en concepto de honorarios por hacer que la aplicación o el complemento esté disponible en la Tienda.                                                      |
+| Ganancias por la aplicación            | Ingresos netos menos los honorarios de la Tienda.                                                                                                                                       |
+| Impuestos retenidos          | Importe de impuestos retenido. (No se incluye en el archivo .csv **Reservado**).                                                                                                |
+| Pago                 | Ganancias por la aplicación menos la retención de impuestos aplicables (es el importe que aparece en Moneda de transacción). (No se incluye en el archivo .csv **Reservado**).                               |
+| Tipo de cambio                 | Tipo de cambio usado para convertir la moneda de la transacción a la moneda de pago.                                                                                         |
+| Moneda de pago        | Moneda en que se realiza el pago.                                                                                                                                       |
+| Pago convertido       | Importe del pago convertido a la moneda de pago con el tipo de cambio.                                                                                                         |
+| Modelo de remesa de impuestos         | Parte responsable de la remesa de impuestos (de ventas, de uso o impuestos sobre bienes y servicios o IVA)                                                                                                   |
+| Fecha y hora de elegibilidad   | Fecha y hora en las que las ganancias por las transacciones sean aptas para el pago (hora UTC). Cuando se crea un pago, incluye las ganancias de las transacciones que tienen una fecha y hora de elegibilidad anterior a la fecha de creación del pago. (Solo se incluye en el archivo .csv **Reservado**). |
+| Cargos                 | Muestra un desglose de todos los detalles de los cargos agregados en la columna Importe de la transacción. (Solo se incluye para Azure Marketplace; no se incluye en el archivo .csv **Reservado**). |

@@ -6,12 +6,12 @@ ms.date: 03/05/2019
 ms.topic: article
 keywords: windows 10, uwp, impuestos, impuestos de aplicación, requisitos fiscales, expansión comercial, tipo impositivo
 ms.localizationpriority: medium
-ms.openlocfilehash: aa408e803457c9b53cb383158b5a7a91a2c07e14
-ms.sourcegitcommit: 8efeb6672f759b1ea7e3e9e2f90e764480791142
+ms.openlocfilehash: 2dd488fc241de4ef765cd318590ba857faa37003
+ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728486"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76265036"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Detalles de impuestos para desarrolladores de aplicaciones y juegos de Windows y publicadores de Azure Marketplace
 
@@ -275,7 +275,7 @@ Lo siguiente se aplica solo a los publicadores de Azure Marketplace, con indepen
 ## <a name="mixed-remittance-countriesregions-for-windows-appgame-developers"></a>Países o regiones de remesas mixtas para desarrolladores de aplicaciones y juegos de Windows
 
 
-Determinados socios de facturación de Microsoft pueden cobrar y remitir los impuestos por ventas, uso, bienes y servicios, valor añadido o similares, si los hubiera, aplicables a la adquisición por parte de los clientes de tus aplicaciones o productos desde la aplicación a través de la Tienda en los países o regiones que se indican a continuación. Los [informes](payout-summary.md#transaction-history-download-export) que Microsoft pone a tu disposición identificarán las transacciones para las que un socio de facturación ha recaudado impuestos de ventas, uso, bienes y servicios, valor añadido u otros impuestos similares aplicables a la adquisición por parte de los clientes de tus aplicaciones o productos desde la aplicación a través de la Tienda. Excepto en el caso de las transacciones que se describen en el informe, ni Microsoft ni sus proveedores de servicios de facturación remitirán ningún impuesto sobre las ventas, uso, bienes y servicios, valor añadido o similares en relación con la adquisición, por parte del cliente, de tus aplicaciones o productos desde la aplicación en estos países o regiones. Es tu responsabilidad revisar el informe que se te ha proporcionado, así como determinar y cumplir con tus obligaciones, si corresponde, de registrar, recaudar e ingresar impuestos con respecto a las transacciones relacionadas con tus aplicaciones o productos desde la aplicación.
+Determinados socios de facturación de Microsoft pueden cobrar y remitir los impuestos por ventas, uso, bienes y servicios, valor añadido o similares, si los hubiera, aplicables a la adquisición por parte de los clientes de tus aplicaciones o productos desde la aplicación a través de la Tienda en los países o regiones que se indican a continuación. Los [informes](payout-summary.md#export-data-page) que 0Microsoft pone a su disposición identificarán las transacciones para las que un asociado de facturación ha recopilado ventas, uso, bienes y servicios, valor añadido o impuestos similares aplicables a la adquisición de los clientes de las aplicaciones o productos en la aplicación a través de la tienda. Excepto en el caso de las transacciones que se describen en el informe, ni Microsoft ni sus proveedores de servicios de facturación remitirán ningún impuesto sobre las ventas, uso, bienes y servicios, valor añadido o similares en relación con la adquisición, por parte del cliente, de tus aplicaciones o productos desde la aplicación en estos países o regiones. Es tu responsabilidad revisar el informe que se te ha proporcionado, así como determinar y cumplir con tus obligaciones, si corresponde, de registrar, recaudar e ingresar impuestos con respecto a las transacciones relacionadas con tus aplicaciones o productos desde la aplicación.
 
 | Países/regiones con ingreso combinado |
 |------------------------------------|
