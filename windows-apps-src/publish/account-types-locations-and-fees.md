@@ -151,7 +151,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Lituania                         | 14 EUR              | 75 EUR           |  
 | Luxemburgo                        | 14 EUR              | 75 EUR           |  
 | RAE de Macao                         | 19 USD              | 99 USD           |  
-| ERY de Macedonia                 | 19 USD              | 99 USD           |  
+| Macedonia del Norte                 | 19 USD              | 99 USD           |  
 | Madagascar                        | 19 USD              | 99 USD           |  
 | Malawi                            | 19 USD              | 99 USD           |  
 | Malasia                          | 62 MYR              | 300 MYR          |  
