@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, COM, component, class, interface
 ms.localizationpriority: medium
-ms.openlocfilehash: bb28ec7afa22f81033bfce2aff530119e53a4b91
-ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
+ms.openlocfilehash: 88012d96b7c769094cb80d0f34b77060291a3eef
+ms.sourcegitcommit: 80ea5e05f8c15700f6c6fa3d1ed37e479568762b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660157"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75928812"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM con C++/WinRT
 
@@ -169,7 +169,11 @@ Además, utiliza [**com_ptr::try_as**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrtry
 
 ## <a name="full-source-code-listing-of-a-minimal-direct2d-application"></a>Lista del código fuente completo de una aplicación de Direct2D mínima
 
-Si quieres compilar y ejecutar este ejemplo de código fuente, en primer lugar, en Visual Studio, crea una nueva **aplicación principal (C++/WinRT)** . `Direct2D` es un nombre razonable para el proyecto, pero puedes darle el nombre que quieras. Abre `App.cpp`, elimina todo su contenido y pega en la lista siguiente.
+Si quieres compilar y ejecutar este ejemplo de código fuente, en primer lugar, en Visual Studio, crea una nueva **aplicación principal (C++/WinRT)** . `Direct2D` es un nombre razonable para el proyecto, pero puedes darle el nombre que quieras.
+
+Abre `pch.h` y agrega `#include <unknwn.h>` inmediatamente después de incluir `windows.h`.
+
+Abre `App.cpp`, elimina todo su contenido y pega en la lista siguiente.
 
 El código siguiente usa la [función winrt::com_ptr::capture](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcapture-function) siempre que sea posible. `WINRT_ASSERT` es una definición de macro y se expande a [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros).
 
@@ -491,7 +495,7 @@ Como puede ver, C++/WinRT proporciona compatibilidad tanto para implementar como
 
 ## <a name="avoiding-namespace-collisions"></a>Evitar conflictos de espacio de nombres
 
-Es una práctica común en C++/WinRT &mdash;como se muestra en el listado de código de este tema&mdash; utilizar las directivas "using" libremente. Sin embargo, en algunos casos eso puede provocar el problema de importación de nombres en conflicto en el espacio de nombres global. A continuación te mostramos un ejemplo.
+Es una práctica común en C++/WinRT &mdash;como se muestra en el listado de código de este tema&mdash; utilizar las directivas "using" libremente. Sin embargo, en algunos casos eso puede provocar el problema de importación de nombres en conflicto en el espacio de nombres global. A continuación se muestra un ejemplo.
 
 C++/WinRT contiene un tipo denominado [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown); mientras que COM define un tipo denominado [ **::IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown). Por tanto, ten en cuenta el código siguiente, en un proyecto de C++/WinRT que consume encabezados de COM.
 
