@@ -70,7 +70,7 @@
           href: layout/3-d-perspective-effects.md
     - name: Profundidad Z y sombra
       href: layout/depth-shadow.md
-- name: Controls
+- name: Controles
   items:
     - name: Introducción
       href: controls-and-patterns/index.md
@@ -174,7 +174,7 @@
           href: controls-and-patterns/menus.md
     - name: Navegación
       items:
-        - name: Panel de maestro y detalles
+        - name: Maestro/detalles
           href: controls-and-patterns/master-details.md
         - name: Vista de navegación
           href: controls-and-patterns/navigationview.md
@@ -182,7 +182,7 @@
           href: controls-and-patterns/pivot.md
         - name: Vista de pestañas
           href: controls-and-patterns/tab-view.md
-    - name: Contactos
+    - name: Personas
       items:
         - name: Tarjeta de contacto
           href: controls-and-patterns/contact-card.md
@@ -216,7 +216,7 @@
           href: controls-and-patterns/progress-controls.md
         - name: Información sobre herramientas
           href: controls-and-patterns/tooltips.md
-    - name: Text
+    - name: Texto
       items:
         - name: Introducción
           href: controls-and-patterns/text-controls.md
@@ -240,6 +240,8 @@
           href: controls-and-patterns/content-links.md
         - name: Vista de escritura a mano
           href: controls-and-patterns/text-handwriting-view.md
+    - name: Vista de dos paneles
+      href: controls-and-patterns/two-pane-view.md
 - name: Estilo
   items:
     - name: Introducción
@@ -423,14 +425,14 @@
           href: input/save-and-load-ink.md
         - name: Agregar una InkToolbar
           href: input/ink-toolbar.md
-    - name: Función táctil
+    - name: Tocar
       href: input/touch-interactions.md
     - name: Mouse
       href: input/mouse-interactions.md
-    - name: Teclado
+    - name: Keyboard
       href: input/keyboard-interactions.md
       items:
-        - name: Teclas de acceso
+        - name: Claves de acceso
           href: input/access-keys.md
         - name: Aceleradores de teclado
           href: input/keyboard-accelerators.md
@@ -505,7 +507,7 @@
       href: input/guidelines-for-rotation.md
     - name: Seleccionar texto e imágenes
       href: input/guidelines-for-textselection.md
-    - name: Selección de destino
+    - name: Establecer destinos
       href: input/guidelines-for-targeting.md
     - name: Información visual
       href: input/guidelines-for-visualfeedback.md
@@ -515,7 +517,7 @@
       href: devices/index.md
     - name: Diseño para Xbox y televisión
       href: devices/designing-for-tv.md
-    - name: Realidad mixta
+    - name: Mixed Reality
       href: devices/designing-for-MR.md
 - name: Facilidad de uso
   items:
