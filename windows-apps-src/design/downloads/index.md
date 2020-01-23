@@ -7,19 +7,18 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f33e2f10686edf149feb11e317a10e535685ef19
-ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
+ms.openlocfilehash: 4678565547616c0cee4a7961cb4a0c95fc03241b
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74902540"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520460"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Kits de herramientas de diseño y ejemplos de aplicaciones para UWP
 
 ![Conceptos básicos de diseño](../images/downloads-2x.png)
 
-Diseño y descargas relacionadas con la interfaz de usuario para aplicaciones de Fluent Design o UWP. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/windows/downloads">nuestra página de descargas principales</a>. 
-
+Diseño y descargas relacionadas con la interfaz de usuario para aplicaciones de Fluent Design o UWP. Si necesitas más herramientas como, por ejemplo, Visual Studio, consulta <a href="https://developer.microsoft.com/windows/downloads">nuestra página de descargas principales</a>.
 
 ## <a name="design-toolkits"></a>Kits de herramientas de diseño
 
@@ -60,11 +59,6 @@ v1705, mayo de 2017<br>
 <a href="https://aka.ms/adobephotoshoptoolkit">Descargar</a>
     :::column-end:::
     :::column:::
-![imagen principal](images/framer.png)
-<b>Kit de herramientas de Framer</b><br>
-(Este kit de herramientas ya no es compatible).<br/>
-v1806, junio de 2018<br>
-<a href="https://github.com/Microsoft/windows-framer-toolkit">Descargar</a>
     :::column-end:::
 :::row-end:::
 
@@ -104,7 +98,7 @@ Funciones auxiliares, controles personalizados y servicios de aplicaciones.<br /
 :::row-end:::
 
     
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 ![Imagen del Editor de temas XAML de Fluent](images/XamlThemeEditor_screenshot.png)
 **Editor de temas XAML de Fluent**<br>
