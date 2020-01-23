@@ -1,19 +1,19 @@
 ---
 description: En este artículo se muestra cómo hospedar un control de UWP personalizado en una aplicación WPF mediante el uso de islas XAML.
 title: Hospedar un control personalizado de UWP en una aplicación WPF con islas XAML
-ms.date: 08/20/2019
+ms.date: 01/10/2010
 ms.topic: article
 keywords: Windows 10, UWP, Windows Forms, WPF, Islas XAML, controles personalizados, controles de usuario, controles host
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: af8ef4d8fb8661e4a8f2d6b1fb98dd19cbd567c1
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.openlocfilehash: 4fb6e2d4fc13d90ec69f962e69b1ee8cb5c1361c
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302529"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520400"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar un control personalizado de UWP en una aplicación WPF con islas XAML
 
@@ -53,9 +53,9 @@ Antes de comenzar, siga estas instrucciones para crear un proyecto de WPF y conf
 
 5. En la ventana **Administrador de paquetes NuGet** , asegúrese de que esté seleccionada la opción **incluir versión preliminar** .
 
-6. Seleccione la pestaña **examinar** , busque el paquete [Microsoft. Toolkit. WPF. UI. XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) (versión v 6.0.0-preview7 o posterior) e instale el paquete. Este paquete proporciona todo lo que necesita para usar el control **WindowsXamlHost** para hospedar un control de UWP, incluidos otros paquetes de NuGet relacionados.
+6. Seleccione la pestaña **examinar** , busque el paquete [Microsoft. Toolkit. WPF. UI. XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) (versión v 6.0.0 o posterior) e instale el paquete. Este paquete proporciona todo lo que necesita para usar el control **WindowsXamlHost** para hospedar un control de UWP, incluidos otros paquetes de NuGet relacionados.
     > [!NOTE]
-    > Windows Forms aplicaciones deben usar el paquete [Microsoft. Toolkit. Forms. UI. XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.XamlHost) (versión v 6.0.0-preview7 o posterior).
+    > Windows Forms aplicaciones deben usar el paquete [Microsoft. Toolkit. Forms. UI. XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.XamlHost) (versión v 6.0.0 o posterior).
 
 7. Configure la solución para que tenga como destino una plataforma específica, como x86 o x64. Los controles personalizados de UWP no se admiten en los proyectos que tienen como destino **cualquier CPU**.
 
@@ -70,7 +70,7 @@ Después, agregue un proyecto de aplicación para UWP a la misma solución que e
 
 1. En **Explorador de soluciones**, haga clic con el botón secundario en el nodo de la solución y seleccione **Agregar** -> **nuevo proyecto**.
 2. Agrega un proyecto **Aplicación vacía (Windows universal)** a la solución. Asegúrese de que la versión de destino y la versión mínima están establecidas en **Windows 10, versión 1903** o posterior.
-3. En el proyecto de aplicación para UWP, instale el paquete NuGet [Microsoft. Toolkit. Win32. UI. XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) (versión v 6.0.0-preview7 o posterior).
+3. En el proyecto de aplicación para UWP, instale el paquete NuGet [Microsoft. Toolkit. Win32. UI. XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) (versión v 6.0.0 o posterior).
 4. Abra el archivo **app. Xaml** y reemplace el contenido de este archivo por el código XAML siguiente. Reemplace `MyUWPApp` por el espacio de nombres del proyecto de aplicación para UWP.
 
     ```xml
@@ -200,13 +200,11 @@ Si ya tiene un control personalizado, puede usarlo en lugar del control que se m
 
 Tradicionalmente, los controles de UWP se han publicado como parte del sistema operativo Windows 10 y están disponibles para los desarrolladores a través de la Windows SDK. La [biblioteca WinUI](https://docs.microsoft.com/uwp/toolkits/winui/) es un enfoque alternativo, en el que las versiones actualizadas de los controles UWP propios del Windows SDK se distribuyen en un paquete NuGet que no está asociado a las versiones de Windows SDK. Esta biblioteca también incluye nuevos controles que no forman parte de la Windows SDK y la plataforma UWP predeterminada. Consulte nuestra [Guía básica de la biblioteca WinUI](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md) para obtener más detalles.
 
-En esta sección se muestra cómo agregar un control de UWP desde la biblioteca WinUI al control de usuario para que pueda hospedar este control en la aplicación WPF. 
+En esta sección se muestra cómo agregar un control de UWP desde la biblioteca WinUI al control de usuario para que pueda hospedar este control en la aplicación WPF.
 
-1. En el proyecto de aplicación para UWP, instale la versión preliminar más reciente del paquete NuGet [Microsoft. UI. Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) .
-    > [!NOTE]
-    > Asegúrese de instalar la versión *preliminar* más reciente. Actualmente, solo funcionarán las versiones preliminares de este paquete si elige empaquetar la aplicación en un [paquete de MSIX](https://docs.microsoft.com/windows/msix) para su implementación.
+1. En el proyecto de aplicación para UWP, instale la versión más reciente del paquete de NuGet [Microsoft. UI. Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) .
 
-2. En el archivo app. XAML de este proyecto, agregue el siguiente elemento secundario al elemento `<xaml:Application>`.
+2. En el archivo app. XAML de este proyecto, agregue el siguiente elemento secundario al elemento `<xaml:XamlApplication>`.
 
     ```xml
     <Application.Resources>
@@ -229,7 +227,7 @@ En esta sección se muestra cómo agregar un control de UWP desde la biblioteca 
     </xaml:XamlApplication>
     ```
 
-3. En el proyecto de biblioteca de clases de UWP, instale la versión preliminar más reciente del paquete NuGet [Microsoft. UI. Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) (la misma versión que instaló en el proyecto de aplicación para UWP).
+3. En el proyecto de biblioteca de clases de UWP, instale la versión más reciente del paquete de NuGet [Microsoft. UI. Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) (la misma versión que instaló en el proyecto de aplicación para UWP).
 
 4. En el mismo proyecto, abra el archivo XAML para el control de usuario y agregue la siguiente declaración de espacio de nombres al elemento `<UserControl>`.
 
@@ -263,7 +261,7 @@ Las instrucciones siguientes muestran cómo empaquetar todos los componentes de 
 3. Edite el archivo de proyecto de empaquetado. Estos cambios son necesarios actualmente para empaquetar aplicaciones WPF destinadas a .NET Core 3 y que hospedan islas XAML.
 
     1. En Explorador de soluciones, haga clic con el botón secundario en el nodo del proyecto de empaquetado y seleccione **Editar archivo de proyecto**.
-    2. Busca el elemento `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` en el archivo. Reemplace este elemento por el siguiente código XML. Estos cambios son necesarios actualmente para empaquetar aplicaciones WPF destinadas a .NET Core 3 y que hospedan controles de UWP.
+    2. Busca el elemento `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` en el archivo. Reemplace este elemento por el código XML siguiente. Estos cambios son necesarios actualmente para empaquetar aplicaciones WPF destinadas a .NET Core 3 y que hospedan controles de UWP.
 
         ``` xml
         <ItemGroup>
@@ -287,22 +285,9 @@ Las instrucciones siguientes muestran cómo empaquetar todos los componentes de 
         </Target>
         ```
 
-    3. Guarde el archivo de proyecto y ciérrelo.
+    3. Guarde el archivo del proyecto y ciérrelo.
 
-4. Edite el manifiesto del paquete para hacer referencia a la imagen de la pantalla de presentación predeterminada correcta. Esta solución es necesaria actualmente para empaquetar aplicaciones de WPF que hospedan controles personalizados de UWP.
-
-    1. En el proyecto de empaquetado, haga clic con el botón derecho en el archivo **Package. appxmanifest** y haga clic en **Ver código**.
-    2. Busque el siguiente elemento en el archivo.
-
-        ```<uap:SplashScreen Image="Images\SplashScreen.png" />```
-
-    3. Cambie este elemento a:
-
-        ```<uap:SplashScreen Image="Images\SplashScreen.scale-200.png" />```
-
-    4. Guarde el archivo **Package. appxmanifest** y ciérrelo.
-
-5. Edite el archivo de proyecto de WPF. Estos cambios son necesarios actualmente para empaquetar aplicaciones de WPF que hospedan controles personalizados de UWP.
+4. Edite el archivo de proyecto de WPF. Estos cambios son necesarios actualmente para empaquetar aplicaciones de WPF que hospedan controles personalizados de UWP.
 
     1. En Explorador de soluciones, haga clic con el botón secundario en el nodo del proyecto WPF y seleccione **descargar el proyecto**.
     2. Haga clic con el botón secundario en el nodo del proyecto WPF y seleccione **Editar**.
@@ -314,10 +299,10 @@ Las instrucciones siguientes muestran cómo empaquetar todos los componentes de 
         </PropertyGroup>
         ```
 
-    4. Guarde el archivo de proyecto y ciérrelo.
+    4. Guarde el archivo del proyecto y ciérrelo.
     5. Haga clic con el botón secundario en el nodo del proyecto WPF y elija **volver a cargar el proyecto**.
 
-6. Compile y ejecute el proyecto de empaquetado. Confirme que se ejecuta WPF y que el control personalizado de UWP se muestra como se esperaba.
+5. Compile y ejecute el proyecto de empaquetado. Confirme que se ejecuta WPF y que el control personalizado de UWP se muestra como se esperaba.
 
 ## <a name="related-topics"></a>Temas relacionados
 

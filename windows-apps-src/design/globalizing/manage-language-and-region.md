@@ -7,12 +7,12 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, globalización, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 79edf30733f7bca443c5fd12103fbd5d93909732
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 1642f8ccc989ce224ff0b3250fa1b79c954167b1
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258065"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520420"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación
 Un usuario de Windows puede utilizar **Configuración** > **Hora e idioma** > **Región e idioma** para configurar una lista ordenada de idiomas de visualización preferidos o simplemente un único idioma de visualización preferido. Un idioma puede tener una variante regional. Por ejemplo, puedes seleccionar el español de España, el español de México o el español que se habla en Estados Unidos, entre otros.
@@ -70,7 +70,7 @@ La tercera lista de idiomas de interés es la intersección entre las dos listas
 
 Más concretamente, la lista de idiomas de la aplicación en tiempo de ejecución se compone de estos elementos.
 
-1.  **(Opcional) Invalidación del idioma principal**. La [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride) es una sencilla configuración de invalidación para las aplicaciones que ofrecen a los usuarios su propia elección de idioma independiente, o bien para las aplicaciones con un motivo fundado para invalidar las opciones de idioma predeterminado. Para más información, echa un vistazo a la [muestra de recursos de la aplicación y localización](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa).
+1.  **(Opcional) Invalidación del idioma principal**. La [**PrimaryLanguageOverride**](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride) es una sencilla configuración de invalidación para las aplicaciones que ofrecen a los usuarios su propia elección de idioma independiente, o bien para las aplicaciones con un motivo fundado para invalidar las opciones de idioma predeterminado. Para más información, echa un vistazo a la [Muestra de recursos de la aplicación y localización](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa).
 2.  **Los idiomas del usuario son compatibles con la aplicación**. Esta es la lista de idiomas del perfil de usuario filtrada por la lista de idiomas del manifiesto de la aplicación. Si los idiomas del usuario se filtran en función de aquellos que la aplicación admite, se mantendrá la coherencia en los kits de desarrollo de software (SDK), las bibliotecas de clases, los paquetes de marcos dependientes y la aplicación.
 3.  **Si 1 y 2 están vacíos, entonces el idioma predeterminado o el primer idioma admitido por la aplicación**. Si la lista de idiomas del perfil de usuario no contiene ninguno de los idiomas que admite la aplicación, entonces el idioma de la aplicación en tiempo de ejecución es el primer idioma admitido por la aplicación.
 
@@ -115,7 +115,7 @@ La localización podría no ser necesaria para todos los recursos.
 Considera si los servicios web a los que llamas tienen el mismo grado de localización que tu aplicación. Las solicitudes HTTP realizadas desde aplicaciones UWP y aplicaciones de escritorio en solicitudes web típicas y XMLHttpRequest (XHR) usan el encabezado estándar de solicitud Accept-Language HTTP. De manera predeterminada, el encabezado HTTP se establece en la lista de idiomas del perfil de usuario. Cada idioma de la lista se expande aún más para incluir valores independientes del idioma y una ponderación (q). Por ejemplo, la lista de idiomas de un usuario de fr-FR y en-US da como resultado un encabezado de solicitud Accept-Language HTTP de fr-FR, fr, en-US, en ("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3"). Pero si tu aplicación del tiempo (por ejemplo) muestra una interfaz de usuario en francés (Francia), pero el idioma que está en primer lugar de la lista de preferencias del usuario es el alemán, a continuación, deberás solicitar explícitamente francés (Francia) desde el servicio para que siga siendo coherente dentro de la aplicación.
 
 ## <a name="apis-in-the-windowsglobalization-namespace"></a>API en el espacio de nombres Windows.Globalization.
-Generalmente, las API del espacio de nombres [**Windows.Globalization**](/uwp/api/windows.globalization?branch=live) utilizan la lista de idiomas de la aplicación en tiempo de ejecución para determinar el idioma. Si ninguno tiene un formato que coincida, se utiliza la configuración regional del usuario, que es la misma que se usa para el reloj del sistema. La configuración regional del usuario está disponible en **Configuración** > **Hora e idioma** > **Región e idioma** > **Opciones adicionales de fecha, hora y configuración regional** > **Región: Cambiar formatos de fecha, hora o número**. Las API de **Windows.Globalization** también tienen invalidación para especificar una lista de idiomas que se usará en lugar de la lista de idiomas de la aplicación en tiempo de ejecución.
+Generalmente, las API del espacio de nombres [**Windows.Globalization**](/uwp/api/windows.globalization?branch=live) utilizan la lista de idiomas de la aplicación en tiempo de ejecución para determinar el idioma. Si ninguno tiene un formato que coincida, se utiliza la configuración regional del usuario, Es la misma que se utiliza para el reloj del sistema. La configuración regional del usuario está disponible en **Configuración** > **Hora e idioma** > **Región e idioma** > **Opciones adicionales de fecha, hora y configuración regional** > **Región: Cambiar formatos de fecha, hora o número**. Las API de **Windows.Globalization** también tienen invalidación para especificar una lista de idiomas que se usará en lugar de la lista de idiomas de la aplicación en tiempo de ejecución.
 
 Al utilizar la clase [**Idioma**](/uwp/api/windows.globalization.language?branch=live), puedes inspeccionar detalles acerca de un idioma en particular como el script del idioma, el nombre para mostrar y el nombre nativo.
 
@@ -193,7 +193,7 @@ En la siguiente tabla se incluyen ejemplos de lo que el usuario vería en la int
 </table>
 
 >[!NOTE]
-> Para obtener una lista de los códigos de país o región estándar usados por Microsoft, consulte la [lista de países o regiones oficiales](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
+> Para obtener una lista de los códigos de país o región estándar usados por Microsoft, consulte la [lista de países o regiones oficiales](/windows/uwp/publish/supported-languages).
 
 ## <a name="important-apis"></a>API importantes
 * [GlobalizationPreferences. Languages](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)
@@ -211,7 +211,7 @@ En la siguiente tabla se incluyen ejemplos de lo que el usuario vería en la int
 * [Etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47)
 * [Registro de subetiqueta del lenguaje IANA](https://www.iana.org/assignments/language-subtag-registry)
 * [Adaptar los recursos al idioma, escala, alto contraste y otros calificadores](../../app-resources/tailor-resources-lang-scale-contrast.md)
-* [Idiomas admitidos](../../publish/supported-languages.md)
+* [Lenguajes admitidos](../../publish/supported-languages.md)
 * [Globalizar los formatos de fecha, hora y número](use-global-ready-formats.md)
 * [Cómo el sistema de administración de recursos compara etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
 
