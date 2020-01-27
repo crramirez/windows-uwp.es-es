@@ -68,6 +68,8 @@
       href: apps/fluent-design-system.md
     - name: Accesibilidad
       href: apps/accessibility.md
+    - name: Voz
+      href: apps/speech.md
     - name: Características y tecnologías
       href: apps/features-and-technologies.md
     - name: Actualizaciones más recientes del documento

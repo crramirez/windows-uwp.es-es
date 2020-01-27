@@ -8,12 +8,12 @@ keywords: lápiz, mouse, panel táctil, función táctil, puntero, entrada, inte
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f3d5480c0fa12366afe02cc31cdb994fdd4a842
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 97c4941a6ec694b3bb23864ede3119d6f76113d2
+ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257902"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725998"
 ---
 # <a name="handle-pointer-input"></a>Controlar la entrada de puntero
 
@@ -33,12 +33,10 @@ La mayoría de las experiencias de interacción suelen implicar que el usuario i
 
 > [!NOTE]
 > Si la aplicación lo requiere, también se promueve la información específica del dispositivo desde los datos sin procesar de HID.
- 
 
 Cada punto de entrada (o contacto) de la pila de entrada se representa mediante un objeto [**Pointer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.Pointer) que se expone mediante el parámetro [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) en los diversos controladores de eventos de puntero. En el caso de lápices múltiples o entrada multitáctil, cada contacto se trata como un puntero de entrada único.
 
 ## <a name="pointer-events"></a>Eventos de puntero
-
 
 Los eventos de puntero exponen información básica, como el tipo de dispositivo de entrada y el estado de detección (en un intervalo o un contacto), e información extendida, como la ubicación, la presión y la geometría de contacto. Además, también están disponibles las propiedades del dispositivo específico, como qué botón del mouse presionó un usuario o si un usuario está usando el extremo borrador del lápiz. Si la aplicación necesita diferenciar entre distintos dispositivos de entrada y sus funcionalidades, consulta el tema de [identificar dispositivos de entrada](identify-input-devices.md).
 
@@ -46,7 +44,6 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 
 > [!NOTE]
 > Limita la entrada del puntero a un elemento específico de la interfaz de usuario llamando a [**CapturePointer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.capturepointer) en ese elemento dentro de un controlador de eventos de puntero. Cuando un elemento captura un puntero, solo ese objeto recibe eventos de entrada del puntero, incluso aunque se mueva el puntero fuera del área límite del objeto. [  **IsInContact**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isincontact) (botón del mouse presionado, función táctil o pluma en contacto) debe ser verdadero para que **CapturePointer** se realice correctamente.
- 
 
 <table>
 <colgroup>
@@ -55,7 +52,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Evento</th>
+<th align="left">Suceso</th>
 <th align="left">Descripción</th>
 </tr>
 </thead>
@@ -120,7 +117,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
 <td align="left"><p>Se produce cuando se gira la rueda del mouse.</p>
-<p>La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a>.</p></td>
+<p>La entrada de mouse se asocia con un solo puntero asignado al detectar por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a>.</p></td>
 </tr>
 </tbody>
 </table> 
@@ -325,7 +322,7 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 -   Este controlador administra el evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved). Se agrega el evento al registro de eventos y se actualizan los detalles del puntero.
 
     > [!Important]
-    > La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). El evento [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) solo se desencadena cuando se libera ese mismo botón del mouse (no se puede asociar ningún otro botón con el puntero hasta que se complete este evento). Debido a esta asociación exclusiva, los clics de otros botones del mouse se enrutan a través del evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved).     
+    > La entrada de mouse se asocia con un solo puntero asignado al detectar por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). El evento [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) solo se desencadena cuando se libera ese mismo botón del mouse (no se puede asociar ningún otro botón con el puntero hasta que se complete este evento). Debido a esta asociación exclusiva, los clics de otros botones del mouse se enrutan a través del evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved).     
 
 ```csharp
 /// <summary>
@@ -698,7 +695,7 @@ Esta aplicación particular usa color y animación para resaltar el puntero prin
 
 **Descargar este ejemplo del [ejemplo de entrada de puntero (UserControl con animación)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)**
 
-### <a name="visual-feedback"></a>Información visual
+### <a name="visual-feedback"></a>Comentarios visuales
 
 Definimos un **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)** , basado en un objeto **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** de XAML, que resalta dónde está cada puntero en el lienzo y usa un **[Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** para animar la elipse que corresponde al puntero principal.
 

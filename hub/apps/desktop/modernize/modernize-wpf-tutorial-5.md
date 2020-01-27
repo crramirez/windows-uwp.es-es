@@ -2,22 +2,22 @@
 description: En este tutorial se muestra cómo agregar interfaces de usuario XAML de UWP, crear paquetes de MSIX e incorporar otros componentes modernos en la aplicación WPF.
 title: Empaquetar e implementar con MSIX
 ms.topic: article
-ms.date: 06/27/2019
+ms.date: 01/23/2020
 ms.author: mcleans
 author: mcleanbyron
 keywords: Windows 10, UWP, Windows Forms, WPF, Islas XAML
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 6f5c01b23f02bb9c116ddaaec698612aa539539d
-ms.sourcegitcommit: e9dc2711f0a0758727468f7ccd0d0f0eee3363e3
+ms.openlocfilehash: 27906d9d389c065ab1fdf7124151cd1915f850eb
+ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979349"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76726018"
 ---
-# <a name="part-5-package-and-deploy-with-msix"></a>5\.ª parte: Empaquetar e implementar con MSIX
+# <a name="part-5-package-and-deploy-with-msix"></a>Parte 5: empaquetar e implementar con MSIX
 
-Esta es la parte final de un tutorial que muestra cómo modernizar una aplicación de escritorio WPF de ejemplo denominada gastos de contoso. Para obtener información general sobre el tutorial, los requisitos previos y las instrucciones para descargar la aplicación de [ejemplo, vea Tutorial: Modernizar una aplicación](modernize-wpf-tutorial.md)de WPF. En este artículo se supone que ya ha completado la [parte 4](modernize-wpf-tutorial-4.md).
+Esta es la parte final de un tutorial que muestra cómo modernizar una aplicación de escritorio WPF de ejemplo denominada gastos de contoso. Para obtener información general sobre el tutorial, los requisitos previos y las instrucciones para descargar la aplicación de ejemplo, vea [Tutorial: modernización de una aplicación de WPF](modernize-wpf-tutorial.md). En este artículo se supone que ya ha completado la [parte 4](modernize-wpf-tutorial-4.md).
 
 En la [parte 4](modernize-wpf-tutorial-4.md) aprendió que algunas API de WinRT, incluida la API de notificaciones, requieren la identidad del paquete antes de que se puedan usar en una aplicación. Puede obtener la identidad del paquete mediante el empaquetado de gastos de Contoso con [MSIX](https://docs.microsoft.com/windows/msix), el formato de empaquetado introducido en Windows 10 para empaquetar e implementar aplicaciones de Windows. MSIX ofrece ventajas a los desarrolladores y profesionales de ti, entre los que se incluyen:
 
@@ -40,7 +40,7 @@ Visual Studio 2019 proporciona una manera sencilla de empaquetar una aplicación
 
     ![Proyecto de paquete de aplicación de Windows](images/wpf-modernize-tutorial/WAP.png)
 
-4. Asigne un nombre al `ContosoExpenses.Package` nuevo proyecto y haga clic en **crear**.
+4. Asigne al nuevo proyecto el nombre `ContosoExpenses.Package` y haga clic en **crear**.
 
 5. Seleccione **Windows 10, versión 1903 (10,0; Compilación 18362)** para la **versión de destino** y la **versión mínima** , y haga clic en **Aceptar**.
 
@@ -54,52 +54,22 @@ Visual Studio 2019 proporciona una manera sencilla de empaquetar una aplicación
 
 8. Haga clic con el botón derecho en el proyecto **ContosoExpenses. Package** y elija **establecer como proyecto de inicio**.
 
-9. En Explorador de soluciones, haga clic con el botón secundario en el nodo de proyecto **ContosoExpenses. Package** y seleccione **Editar archivo de proyecto**.
-
-10. Busca el elemento `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` en el archivo.
-
-11. Reemplace este elemento por el siguiente código XML.
-
-    ``` xml
-    <ItemGroup>
-        <SDKReference Include="Microsoft.VCLibs,Version=14.0">
-        <TargetedSDKConfiguration Condition="'$(Configuration)'!='Debug'">Retail</TargetedSDKConfiguration>
-        <TargetedSDKConfiguration Condition="'$(Configuration)'=='Debug'">Debug</TargetedSDKConfiguration>
-        <TargetedSDKArchitecture>$(PlatformShortName)</TargetedSDKArchitecture>
-        <Implicit>true</Implicit>
-        </SDKReference>
-    </ItemGroup>
-    <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
-    <Target Name="_StompSourceProjectForWapProject" BeforeTargets="_ConvertItems">
-        <ItemGroup>
-        <_TemporaryFilteredWapProjOutput Include="@(_FilteredNonWapProjProjectOutput)" />
-        <_FilteredNonWapProjProjectOutput Remove="@(_TemporaryFilteredWapProjOutput)" />
-        <_FilteredNonWapProjProjectOutput Include="@(_TemporaryFilteredWapProjOutput)">
-            <SourceProject></SourceProject>
-            <TargetPath Condition="'%(FileName)%(Extension)'=='resources.pri'">app_resources.pri</TargetPath>
-        </_FilteredNonWapProjProjectOutput>
-        </ItemGroup>
-    </Target>
-    ```
-
-12. Guarde el archivo de proyecto y ciérrelo.
-
-13. Presione **F5** para iniciar la aplicación empaquetada en el depurador.
+9. Presione **F5** para iniciar la aplicación empaquetada en el depurador.
 
 En este momento, puede observar algunos cambios que indican que la aplicación se está ejecutando ahora como empaquetada:
 
 - El icono de la barra de tareas o el menú Inicio es ahora el recurso predeterminado que se incluye en cada **proyecto de paquete de aplicación de Windows**.
-- Si hace clic con el botón secundario en la aplicación **ContosoExpense. Package** que aparece en el menú Inicio, observará opciones que normalmente se reservan para las aplicaciones descargadas desde el Microsoft Store, como la configuración de la **aplicación**, la **tasa y la revisión** y el **uso compartido.** .
+- Si hace clic con el botón secundario en la aplicación **ContosoExpense. Package** que aparece en el menú Inicio, observará opciones que normalmente se reservan para las aplicaciones descargadas desde el Microsoft Store, como la configuración de la **aplicación**, la **tasa y la revisión** y el **uso compartido**.
 
     ![ContosoExpenses en el menú Inicio](images/wpf-modernize-tutorial/StartMenu.png)
 
-- Si desea desinstalar la aplicación, puede hacer clic con el botón secundario en **ContosoExpense. Package** en el menú Inicio yseleccionar desinstalar. La aplicación se quitará de inmediato, sin que haya ningún sobrante en el sistema.
+- Si desea desinstalar la aplicación, puede hacer clic con el botón secundario en **ContosoExpense. Package** en el menú Inicio y seleccionar **desinstalar**. La aplicación se quitará de inmediato, sin que haya ningún sobrante en el sistema.
 
 ## <a name="test-the-notification"></a>Prueba de la notificación
 
 Ahora que ha empaquetado la aplicación de gastos de Contoso con MSIX, puede probar el escenario de notificación que no estaba funcionando al final de la [parte 4](modernize-wpf-tutorial-4.md).
 
-1. En la aplicación de gastos de Contoso, elija un empleado de la lista y, a continuación, haga clic en el botón **Agregar nuevo gasto** . 
+1. En la aplicación de gastos de Contoso, elija un empleado de la lista y, a continuación, haga clic en el botón **Agregar nuevo gasto** .
 2. Complete todos los campos del formulario y presione **Guardar**.
 3. Confirme que ve una notificación del sistema operativo.
 
