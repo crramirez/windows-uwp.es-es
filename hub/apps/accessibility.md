@@ -6,16 +6,16 @@ ms.date: 09/12/2019
 keywords: Accesibilidad en Windows 10, Accesibilidad, compilación de aplicaciones de Win32 accesibles, compilación de aplicaciones para UWP accesibles, compilación de aplicaciones para WPF accesibles, compilación de aplicaciones de WinForms accesibles
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: fdb1092139602edd00086e17ff4dc7a27cf361dd
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 2739546061febcfc96403ed5520fdcbd8bc2c462
+ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681896"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725938"
 ---
 # <a name="accessibility-in-windows-10"></a>Accesibilidad en Windows 10
 
-![hero-accessibility-bar-smaller.png](images/hero-accessibility-bar-smaller.png)
+![Imagen principal de accesibilidad](images/hero-accessibility-bar-smaller.png)
 
 ## <a name="build-accessibility-into-your-applications-to-empower-people-of-all-abilities"></a>Agrega accesibilidad en tus aplicaciones para que las puedan utilizar todos los usuarios, independientemente de sus capacidades
 
@@ -256,7 +256,6 @@ A continuación, le proporcionamos varios vídeos en los que se explica cómo cr
       [Blogs de Automatización de la interfaz de usuario de Windows](https://blogs.msdn.microsoft.com/winuiautomation/)
    :::column-end:::
 :::row-end:::
-
 :::row:::
    :::column span="3":::
       **Comunidad y soporte técnico**
