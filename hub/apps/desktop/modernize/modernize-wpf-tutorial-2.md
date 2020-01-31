@@ -2,18 +2,18 @@
 description: En este tutorial se muestra cómo agregar interfaces de usuario XAML de UWP, crear paquetes de MSIX e incorporar otros componentes modernos en la aplicación WPF.
 title: Incorporación de un control InkCanvas en UWP mediante islas XAML
 ms.topic: article
-ms.date: 01/10/2010
+ms.date: 01/24/2020
 ms.author: mcleans
 author: mcleanbyron
 keywords: Windows 10, UWP, Windows Forms, WPF, Islas XAML
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 1ed4fa54b9987ef0ab5f3dd89aa9d11a00ae695c
-ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
+ms.openlocfilehash: 945cc2f1cf225c194e5820990bdbeda584069e4c
+ms.sourcegitcommit: 1455e12a50f98823bfa3730c1d90337b1983b711
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520440"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76814045"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>Parte 2: adición de un control InkCanvas de UWP con islas XAML
 
@@ -22,7 +22,7 @@ Esta es la segunda parte de un tutorial que muestra cómo modernizar una aplicac
 En el escenario ficticio de este tutorial, el equipo de desarrollo de Contoso desea agregar compatibilidad con firmas digitales a la aplicación de gastos de contoso. El control **InkCanvas** de UWP es una opción excelente para este escenario, ya que admite características de entrada de lápiz digital y tecnología de AI, como la capacidad para reconocer texto y formas. Para ello, usará el control UWP ajustado de [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) disponible en el kit de herramientas de la comunidad de Windows. Este control ajusta la interfaz y la funcionalidad del control **InkCanvas** de UWP para su uso en una aplicación de WPF. Para obtener más información sobre los controles de UWP ajustados, consulta [hospedar controles XAML de UWP en aplicaciones de escritorio (Islas XAML)](xaml-islands.md).
 
 > [!NOTE]
-> En este tutorial, la aplicación WPF hospedará solo los controles UWP de primera parte del Windows SDK. Para admitir otros escenarios de isla de XAML, incluidos los controles personalizados de UWP, el proyecto de aplicación debe tener acceso a una instancia de la clase `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` proporcionada por el kit de herramientas de la comunidad de Windows. La manera recomendada de hacerlo es agregar un proyecto **aplicación vacía (Windows universal)** a la misma solución que el proyecto WPF (o Windows Forms) y revisar la clase `App` predeterminada en este proyecto. Dado que este paso no es necesario para el escenario básico de hospedaje de controles de UWP de primera parte desde el Windows SDK, en este tutorial se omite este paso. Para más información, consulte [este artículo](host-standard-control-with-xaml-islands.md).
+> En este tutorial, la aplicación WPF hospedará solo los controles UWP de primera parte del Windows SDK. Por lo tanto, en este tutorial se omiten los pasos para definir una instancia de la clase [Microsoft. Toolkit. Win32. UI. XamlHost. XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) tal y como se describe [aquí](host-standard-control-with-xaml-islands.md#required-components).
 
 ## <a name="configure-the-project-to-use-xaml-islands"></a>Configurar el proyecto para usar islas XAML
 
@@ -71,7 +71,7 @@ Antes de poder agregar un control **InkCanvas** a la aplicación de gastos de Co
     </application>
     ```
 
-8. Guarde y cierre el archivo `app.manifest`.
+8. Guarde y cierre el archivo de `app.manifest`.
 
 9. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **ContosoExpenses. Core** y elija **propiedades**.
 
