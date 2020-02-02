@@ -1,37 +1,36 @@
 ---
 title: Crear y hospedar una extensión de aplicación
-description: Crea y hospeda las extensiones de aplicaciones de la Plataforma universal de Windows (UWP) que te permiten ampliar tu aplicación mediante paquetes que los usuarios pueden instalar desde la Microsoft Store.
+description: Escriba y hospede extensiones de aplicaciones que le permitan ampliar su aplicación a través de paquetes que los usuarios pueden instalar desde el Microsoft Store.
 keywords: extensión de aplicación, servicio de la aplicación, en segundo plano
-ms.date: 10/05/2017
+ms.date: 01/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cb5395238ad6813556b7ae254ca4a86bc8f5b28
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: d315fb89f38e517e61194adf5b75a28b4675de9c
+ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282395"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929283"
 ---
 # <a name="create-and-host-an-app-extension"></a>Crear y hospedar una extensión de aplicación
 
-En este artículo se muestra cómo crear una extensión de aplicación para UWP y hospedarla en una aplicación para UWP.
+En este artículo se muestra cómo crear una extensión de aplicación de Windows 10 y hospedarla en una aplicación. Las extensiones de aplicación se admiten en aplicaciones para UWP y [aplicaciones de escritorio empaquetadas](/windows/apps/desktop/modernize/#msix-packages).
 
-Este artículo se incluye con un ejemplo de código:
-- Descarga y descomprime [ejemplo de código de extensión de matemáticas](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip).
+Para mostrar cómo crear una extensión de aplicación, en este artículo se usan fragmentos de código XML de manifiesto de paquete y fragmentos de código del ejemplo de código de la [extensión Math](https://github.com/MicrosoftDocs/windows-topic-specific-samples/tree/MathExtensionSample). Este ejemplo es una aplicación de UWP, pero las características mostradas en el ejemplo también se aplican a las aplicaciones de escritorio empaquetadas. Siga estas instrucciones para empezar a trabajar con el ejemplo:
+
+- Descargue y descomprima el [ejemplo de código de la extensión Math](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip).
 - En Visual Studio 2019, abra MathExtensionSample. sln. Establece el tipo de compilación en x86 (**Compilación** > **Configuration Manager** y, a continuación, cambia **Plataforma** a **x86** para ambos proyectos).
-- Implemente la solución: **Cree**una solución de**implementación** > .
+- Implementa la solución: **Compilación** > **Implementar solución**.
 
 ## <a name="introduction-to-app-extensions"></a>Introducción a las extensiones para aplicaciones
 
-En la Plataforma universal de Windows (UWP), las extensiones para aplicaciones proporcionan una funcionalidad similar a la de los complementos en otras plataformas. Las extensiones de Microsoft Edge son extensiones de la aplicación para UWP, por ejemplo. Las extensiones de aplicaciones para UWP se introdujeron en la Windows 10 Anniversary Edition (versión 1607, compilación 10.0.14393).
+En Windows 10, las extensiones de aplicación proporcionan una funcionalidad similar a la de los complementos, complementos y complementos en otras plataformas. Las extensiones de aplicación se introdujeron en la edición de aniversario de Windows 10 (versión 1607, compilación 10.0.14393).
 
-Las extensiones de aplicaciones para UWP son aplicaciones para UWP que tienen una declaración de extensión que les permite compartir eventos de contenido e implementación con una aplicación host. Una aplicación de extensión puede proporcionar varias extensiones.
+Las extensiones de aplicaciones son aplicaciones UWP o aplicaciones de escritorio empaquetadas que tienen una declaración de extensión que les permite compartir eventos de contenido e implementación con una aplicación host. Una aplicación de extensión puede proporcionar varias extensiones.
 
-Dado que las extensiones de aplicaciones son solo aplicaciones para UWP, también pueden ser aplicaciones totalmente funcionales, extensiones de host y proporcionar extensiones a otras aplicaciones, todo ello sin tener que crear paquetes de aplicación independientes.
+Dado que las extensiones de aplicación son solo aplicaciones UWP o aplicaciones de escritorio empaquetadas, también pueden ser aplicaciones totalmente funcionales, extensiones de host y proporcionar extensiones a otras aplicaciones, sin necesidad de crear paquetes de aplicaciones independientes.
 
-Al crear un host de extensión de aplicación, se crea una oportunidad de desarrollar un ecosistema alrededor de la aplicación en la que otros desarrolladores pueden mejorar tu aplicación de formas que es posible que no esperaras o para las que no tuvieras los recursos. Considere la posibilidad de Microsoft Office extensiones, extensiones de Visual Studio, extensiones del explorador, etc. Estos crean experiencias más enriquecidas para las aplicaciones que van más allá de la funcionalidad con la que se distribuyen. Las extensiones pueden agregar valor y longevidad a tu aplicación.
-
-**Información general**
+Al crear un host de extensión de aplicación, se crea una oportunidad de desarrollar un ecosistema alrededor de la aplicación en la que otros desarrolladores pueden mejorar tu aplicación de formas que es posible que no esperaras o para las que no tuvieras los recursos. Ten en cuenta las extensiones de Microsoft Office, las extensiones de Visual Studio, las extensiones del explorador, etc. Estas animaciones crean experiencias más enriquecidas para las aplicaciones que van más allá de la funcionalidad con las que se incluyen. Las extensiones pueden agregar valor y longevidad a tu aplicación.
 
 En un nivel alto, para configurar una relación de extensión de aplicación, tenemos que:
 
@@ -120,9 +119,9 @@ De nuevo, observe la línea `xmlns:uap3="http://..."` y la presencia de `uap3` e
 
 El significado de los atributos `<uap3:AppExtension>` son los que se muestran a continuación:
 
-|Atributo|Descripción|Requerido|
+|Atributo|Descripción|Necesario|
 |---------|-----------|:------:|
-|**Name**|Este es el nombre de contrato de extensión. Cuando coincida con el **Name** declarado en un host, ese host podrá encontrar esta extensión.| :heavy_check_mark: |
+|**Nombre**|Este es el nombre de contrato de extensión. Cuando coincida con el **Name** declarado en un host, ese host podrá encontrar esta extensión.| :heavy_check_mark: |
 |**SESIÓN**| Identifica esta extensión de manera única. Dado que puede haber varias extensiones que usen el mismo nombre de contrato de extensión (imagina una app de pintura que admite varias extensiones), puedes usar el identificador para diferenciarlas. Los hosts de extensión de aplicación pueden usar el identificador para deducir algo sobre el tipo de extensión. Por ejemplo, podrías tener una extensión diseñada para escritorio y otra para móvil, siendo el identificador el diferenciador. También podrías usar el elemento **Properties** , que se explica a continuación, para ello.| :heavy_check_mark: |
 |**Mostrar**| Se puede usar desde la app host para identificar la extensión al usuario. Se puede consultar desde, y puede usar, el [nuevo sistema de administración de recursos](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para la localización. El contenido localizado se carga desde el paquete de extensión de app, no desde la app host. | |
 |**Descripción** | Se puede usar desde la app host para describir la extensión al usuario. Se puede consultar desde, y puede usar, el [nuevo sistema de administración de recursos](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) para la localización. El contenido localizado se carga desde el paquete de extensión de app, no desde la app host. | |
