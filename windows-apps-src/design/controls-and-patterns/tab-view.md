@@ -7,16 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 141a24ca1f828f98231ec35471f7b43229df57e6
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 24c7bd8828ec036135233f569ee7add5d39ffb32
+ms.sourcegitcommit: 136416e8e2eb0565bb6eb99e42482c1723ccb8c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684346"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76890430"
 ---
 # <a name="tabview"></a>TabView
 
 El control TabView es una manera de mostrar un conjunto de pestañas y su contenido correspondiente. Los controles TabView son útiles para mostrar varias páginas (o documentos) de contenido, a la vez que proporcionan a los usuarios la capacidad de reorganizar, abrir o cerrar nuevas pestañas.
+
+> **API importantes**: [Clase TabView](/uwp/api/microsoft.ui.xaml.controls.tabview), [clase TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
 
 ![Ejemplo de TabView](images/tabview/tab-introduction.png)
 
@@ -25,7 +27,7 @@ El control TabView es una manera de mostrar un conjunto de pestañas y su conten
 En general, las UI con pestañas vienen en uno de dos estilos distintos que difieren en función y aspecto: Las **pestañas estáticas** son el tipo de pestaña que se encuentra a menudo en las ventanas de configuración. Contienen un número establecido de páginas en un orden fijo que normalmente incluyen contenido predefinido.
 Las **pestañas de documentos** son el tipo de pestaña que se encuentra en un explorador, como Microsoft Edge. Los usuarios pueden crear, quitar y reorganizar las pestañas, desplazar las pestañas entre ventanas y cambiar el contenido de las pestañas.
 
-TabView ofrece pestañas de documentos para aplicaciones para UWP. Usa un control TabView cuando:
+[TabView](/uwp/api/microsoft.ui.xaml.controls.tabview) ofrece pestañas de documentos para aplicaciones para UWP. Usa un control TabView cuando:
 
 - Los usuarios puedan abrir, cerrar o reorganizar las pestañas dinámicamente.
 - Los usuarios puedan abrir documentos o páginas web directamente en pestañas.
@@ -35,21 +37,21 @@ Si un control TabView no es adecuado para tu aplicación, considera la posibilid
 
 ## <a name="anatomy"></a>Anatomía
 
-En la imagen siguiente se muestran las partes del control TabView. TabStrip tiene un encabezado y un pie de página, pero a diferencia de un documento, el encabezado y el pie de página de TabStrip se encuentran en el extremo izquierdo y el extremo derecho de la banda, respectivamente.
+En la imagen siguiente se muestran las partes del control [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview). TabStrip tiene un encabezado y un pie de página, pero a diferencia de un documento, el encabezado y el pie de página de TabStrip se encuentran en el extremo izquierdo y el extremo derecho de la banda, respectivamente.
 
 ![Anatomía del control TabView](images/tabview/tab-view-anatomy.png)
 
-En la imagen siguiente se muestran las partes del control TabViewItem. Ten en cuenta que aunque el contenido se muestra dentro del control TabView, el contenido en realidad forma parte de TabViewItem.
+En la imagen siguiente se muestran las partes del control [TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem). Ten en cuenta que aunque el contenido se muestra dentro del control TabView, el contenido en realidad forma parte de TabViewItem.
 
 ![Anatomía del control TabViewItem](images/tabview/tab-control-anatomy.png)
 
 ### <a name="create-a-tab-view"></a>Crear una vista de pestañas
 
-En este ejemplo se crea un control TabView sencillo junto con controladores de eventos para admitir la apertura y cierre de pestañas.
+En este ejemplo se crea un control [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview) sencillo junto con controladores de eventos para admitir la apertura y el cierre de pestañas.
 
 ```xaml
 <TabView AddTabButtonClick="Tabs_AddTabButtonClick"
-            TabCloseRequested="Tabs_TabCloseRequested" />
+         TabCloseRequested="Tabs_TabCloseRequested" />
 ```
 
 ```csharp
@@ -77,7 +79,7 @@ private void Tabs_TabCloseRequested(TabView sender, TabViewTabCloseRequestedEven
 
 ## <a name="behavior"></a>Comportamiento
 
-Hay varias maneras de aprovechar o ampliar la funcionalidad de un control TabView.
+Hay varias maneras de aprovechar o ampliar la funcionalidad de un control [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview).
 
 ### <a name="bind-tabitemssource-to-a-tabviewitemcollection"></a>Enlazar TabItemsSource a TabViewItemCollection
 
@@ -89,7 +91,7 @@ Hay varias maneras de aprovechar o ampliar la funcionalidad de un control TabVie
 
 En lugar de hacer que las pestañas ocupen su propia fila debajo de la barra de título de una ventana, puedes combinar las dos en la misma área. De este modo, se ahorra espacio vertical para el contenido y la aplicación adquiere un aspecto más moderno.
 
-Dado que un usuario puede arrastrar una ventana por la barra de título para cambiar la posición de la ventana, es importante que la barra de título no se rellene completamente con pestañas. Por lo tanto, al mostrar las pestañas en una barra de título, tienes que especificar una parte de la barra de títuloque se va a reservar como área arrastrable. Si no especificas una región arrastrable, se podrá arrastrar toda la barra de título, lo que impedirá que las pestañas reciban eventos de entrada. Si el control TabView se muestra en la barra de título de una ventana, siempre tienes que incluir un elemento TabStripFooter en TabView y marcarlo como región arrastrable.
+Dado que un usuario puede arrastrar una ventana por la barra de título para cambiar la posición de la ventana, es importante que la barra de título no se rellene completamente con pestañas. Por lo tanto, al mostrar las pestañas en una barra de título, tienes que especificar una parte de la barra de títuloque se va a reservar como área arrastrable. Si no especificas una región arrastrable, se podrá arrastrar toda la barra de título, lo que impedirá que las pestañas reciban eventos de entrada. Si el control TabView se muestra en la barra de título de una ventana, siempre tienes que incluir un elemento [TabStripFooter](/uwp/api/microsoft.ui.xaml.controls.tabview.tabstripfooter) en [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview) y marcarlo como región arrastrable.
 
 Para obtener más información, consulta [Personalización de la barra de título](https://docs.microsoft.com/windows/uwp/design/shell/title-bar).
 
@@ -98,7 +100,7 @@ Para obtener más información, consulta [Personalización de la barra de títul
 ```xaml
 <Page>
     <TabView HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <TabViewItem Icon="Home" Header="Home" IsCloseable="False" />
+        <TabViewItem Icon="Home" Header="Home" IsClosable="False" />
         <TabViewItem Icon="Document" Header="Document 1" />
         <TabViewItem Icon="Document" Header="Document 2" />
         <TabViewItem Icon="Document" Header="Document 3" />
@@ -147,7 +149,7 @@ private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sende
 
 ### <a name="control-overflow-behavior"></a>Controlar el comportamiento de desbordamiento
 
-A medida que la barra de pestañas se llena de pestañas, puedes controlar cómo se muestran las pestañas si estableces el valor TabView.TabWidthMode.
+A medida que la barra de pestañas se llena de pestañas, puedes controlar cómo se muestran si estableces el valor [TabView.TabWidthMode](/uwp/api/microsoft.ui.xaml.controls.tabview.tabwidthmode).
 
 | Valor TabWidthMode | Comportamiento                                                                                                                                                    |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -160,15 +162,15 @@ Sea cual sea el valor que elijas, en algún momento es posible que haya demasiad
 
 La mayoría de los usuarios tiene experiencia en el uso de pestañas de documentos simplemente por el hecho de usar un explorador web. Cuando usen pestañas de documentos en tu aplicación, su experiencia condiciona sus expectativas acerca de cómo deben comportarse las pestañas.
 
-Independientemente de cómo interactúe el usuario con un conjunto de pestañas de documento, siempre debe haber una pestaña activa. Si el usuario cierra la pestaña seleccionada o separa la pestaña seleccionada en otra ventana, otra pestaña debe convertirse en la pestaña activa. Para ello, TabView selecciona automáticamente la pestaña siguiente. Si tienes un buen motivo para que la aplicación permita un control TabView con una pestaña no seleccionada, el área de contenido de TabView sencillamente estará en blanco.
+Independientemente de cómo interactúe el usuario con un conjunto de pestañas de documento, siempre debe haber una pestaña activa. Si el usuario cierra la pestaña seleccionada o separa la pestaña seleccionada en otra ventana, otra pestaña debe convertirse en la pestaña activa. Para ello, [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview) selecciona automáticamente la pestaña siguiente. Si tienes un buen motivo para que la aplicación permita un control TabView con una pestaña no seleccionada, el área de contenido de TabView sencillamente estará en blanco.
 
 ## <a name="keyboard-navigation"></a>Navegación con el teclado
 
-De manera predeterminada, TabView admite muchos escenarios comunes de navegación por teclado. En esta sección se explica la funcionalidad integrada y se hacen recomendaciones sobre funcionalidades adicionales que pueden resultar útiles para algunas aplicaciones.
+De manera predeterminada, [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview) admite muchos escenarios comunes de navegación por teclado. En esta sección se explica la funcionalidad integrada y se hacen recomendaciones sobre funcionalidades adicionales que pueden resultar útiles para algunas aplicaciones.
 
 ### <a name="tab-and-cursor-key-behavior"></a>Comportamiento de las teclas de tabulación y de cursor
 
-Cuando el foco se desplaza al área de TabStrip, el elemento TabViewItem seleccionado recibe el foco. A continuación, el usuario puede usar las teclas de flecha izquierda y derecha para desplazar el foco (no la selección) a otras pestañas de TabStrip. El foco de las flechas queda atrapado en la franja de pestañas y el botón de agregar pestaña (+), si hay uno. Para sacar el foco del área de TabStrip, el usuario puede presionar la tecla TAB, que moverá el foco al siguiente elemento enfocable.
+Cuando el foco se desplaza al área de _TabStrip_, el elemento [TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem) seleccionado recibe el foco. A continuación, el usuario puede usar las teclas de flecha izquierda y derecha para desplazar el foco (no la selección) a otras pestañas de TabStrip. El foco de las flechas queda atrapado en la franja de pestañas y el botón de agregar pestaña (+), si hay uno. Para sacar el foco del área de TabStrip, el usuario puede presionar la tecla TAB, que moverá el foco al siguiente elemento enfocable.
 
 Desplazar el foco mediante TAB
 
@@ -188,18 +190,18 @@ Usa las teclas de dirección para desplazar el foco y, luego, presiona la barra 
 
 ### <a name="shortcuts-for-selecting-adjacent-tabs"></a>Accesos directos para seleccionar pestañas adyacentes
 
-Con Control + TAB se selecciona el siguiente elemento TabViewItem. Con Control + Mayús + TAB se selecciona el elemento TabViewItem anterior. A tales efectos, la lista de pestañas se recorre en bucle, por lo que si seleccionas la pestaña siguiente mientras está seleccionada la última pestaña, se seleccionará la primera pestaña.
+Con Control + TAB se selecciona el siguiente elemento [TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem). Con Control + Mayús + TAB se selecciona el elemento TabViewItem anterior. A tales efectos, la lista de pestañas se recorre en bucle, por lo que si seleccionas la pestaña siguiente mientras está seleccionada la última pestaña, se seleccionará la primera pestaña.
 
 ### <a name="closing-a-tab"></a>Cerrar una pestaña
 
-Si presionas Control + F4, se generará el evento TabCloseRequested. Controla dicho evento y cierra la pestaña si es necesario.
+Si presionas Control + F4, se generará el evento [TabCloseRequested](/uwp/api/microsoft.ui.xaml.controls.tabview.tabcloserequested). Controla dicho evento y cierra la pestaña si es necesario.
 
 ### <a name="keyboard-guidance-for-app-developers"></a>Guía del teclado para desarrolladores de aplicaciones
 
 Algunas aplicaciones pueden requerir un control de teclado más avanzado. Ten en cuenta la posibilidad de implementar los siguientes accesos directos si son adecuados para tu aplicación.
 
 > [!WARNING]
-> Si vas a agregar un control TabView a una aplicación existente, es posible que ya hayas creado métodos abreviados de teclado que se asignen a las combinaciones de teclas de los métodos abreviados de teclado de TabView recomendados. En este caso, tendrás que decidir si quieres mantener los accesos directos existentes u ofrecer al usuario una experiencia de pestañas intuitiva.
+> Si vas a agregar un control [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview) a una aplicación existente, es posible que ya hayas creado métodos abreviados de teclado que se asignen a las combinaciones de teclas de los métodos abreviados de teclado de TabView recomendados. En este caso, tendrás que decidir si quieres mantener los accesos directos existentes u ofrecer al usuario una experiencia de pestañas intuitiva.
 
 - La combinación de teclas Control + T debe abrir una nueva pestaña. Por lo general, esta pestaña se rellena con un documento predefinido o se crea vacía con una forma sencilla de elegir su contenido. Si el usuario debe elegir contenido para una nueva pestaña, ten en cuenta la posibilidad de poner el foco de entrada en el control de selección de contenido.
 - La combinación Control + W debe cerrar la pestaña seleccionada. Recuerda que TabView seleccionará automáticamente la pestaña siguiente.
@@ -210,7 +212,7 @@ Algunas aplicaciones pueden requerir un control de teclado más avanzado. Ten en
 
 ### <a name="implement-browser-style-keyboarding-behavior"></a>Implementar un comportamiento de teclado al estilo del explorador
 
-En este ejemplo, se implementan varias de las recomendaciones anteriores en un control TabView. En concreto, en este ejemplo se implementan Control + T, Control + W, Control + 1-8 y Control + 9.
+En este ejemplo, se implementan varias de las recomendaciones anteriores en un control [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview). En concreto, en este ejemplo se implementan Control + T, Control + W, Control + 1-8 y Control + 9.
 
 ```xaml
 <controls:TabView x:Name="TabRoot">

@@ -1,19 +1,19 @@
 ---
 description: Esta guía te ayuda a crear interfaces de usuario de UWP basadas en Fluent directamente en tus aplicaciones de WPF y Windows Forms
 title: Controles de UWP en aplicaciones de escritorio
-ms.date: 01/10/2010
+ms.date: 01/24/2020
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 95fbfc9aa988330fb21713651687690fa769b99f
-ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
+ms.openlocfilehash: 96705faff278c4cab31e0ab271bc31d08261401b
+ms.sourcegitcommit: 1455e12a50f98823bfa3730c1d90337b1983b711
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520410"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76814015"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Cómo usar los controles XAML de UWP en aplicaciones de escritorio (islas XAML)
 
@@ -127,4 +127,5 @@ Este es el estado actual de las características relacionadas con las islas XAML
 Para obtener información general y tutoriales sobre el uso de las islas XAML, consulta los siguientes artículos y recursos:
 
 * [Tutorial de modernización de una aplicación de WPF](modernize-wpf-tutorial.md): En este tutorial se proporcionan instrucciones paso a paso para usar los controles encapsulados y los controles host en el kit de herramientas de la Comunidad Windows para agregar controles de UWP a una aplicación de línea de negocio de WPF existente. En este tutorial se incluye el código completo de la aplicación de WPF, así como instrucciones detalladas para cada paso del proceso.
+* [Ejemplos de código de las islas XAML](https://github.com/microsoft/Xaml-Islands-Samples): En este repositorio se incluyen ejemplos de Windows Forms, WPF y C++ o Win32 que muestran cómo utilizar las islas XAML.
 * [Islas XAML v1, actualizaciones y hoja de ruta](https://blogs.windows.com/windowsdeveloper/2019/06/13/xaml-islands-v1-updates-and-roadmap): En esta entrada de blog se describen muchas preguntas comunes sobre las islas XAML, y se proporciona una hoja de ruta de desarrollo detallada.

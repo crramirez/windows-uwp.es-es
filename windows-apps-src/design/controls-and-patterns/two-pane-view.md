@@ -6,12 +6,12 @@ ms.date: 01/22/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b3d12f2aad1d5dffbbad0790e5940699536daf0b
-ms.sourcegitcommit: e6a435716799c7bb192b3d5c4d3b8295ec3911d4
+ms.openlocfilehash: 67b97aec970cc655700729743f10c63c666ab0a6
+ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76549710"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929261"
 ---
 # <a name="two-pane-view"></a>Vista de dos paneles
 
@@ -238,8 +238,8 @@ La vista de dos paneles entra en el modo Tall cuando hay una sola pantalla que e
 Cuando la vista de dos paneles está en modo Wide, la propiedad TallLayout determina lo que se debe mostrar:
 
 - **SinglePane**: Un único panel (según lo determinado por PanePriority). El panel ocupa el tamaño completo de TwoPaneView (es decir, adopta el tamaño star en ambas direcciones).
-- **TopBottom**: Pane1 en la parte superior/Pane2 a la derecha. Ambos paneles tienen un tamaño star en sentido horizontal, la altura de Pane1 se ajusta automáticamente y la altura de Pane2 se ajusta según star.
-- **BottomTop**: Pane1 a la derecha/Pane2 a la izquierda. Ambos paneles tienen un tamaño star en sentido horizontal, la altura de Pane2 se ajusta automáticamente y la altura de Pane1 se ajusta según star.
+- **TopBottom**: Pane1 en la parte superior/Pane2 en la parte inferior. Ambos paneles tienen un tamaño star en sentido horizontal, la altura de Pane1 se ajusta automáticamente y la altura de Pane2 se ajusta según star.
+- **BottomTop**: Pane1 en la parte inferior/Pane2 en la parte superior. Ambos paneles tienen un tamaño star en sentido horizontal, la altura de Pane2 se ajusta automáticamente y la altura de Pane1 se ajusta según star.
 
 El valor predeterminado es **TopBottom**.
 
