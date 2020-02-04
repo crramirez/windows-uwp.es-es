@@ -52,9 +52,9 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
 
       Desarrolle aplicaciones habilitadas para voz para escritorio de Windows y Windows Server con las herramientas, la información y los motores de ejemplo y las aplicaciones que se proporcionan aquí.
 
-      [Microsoft Speech Platform: kit de desarrollo de software (SDK) (versión 11)](https://www.microsoft.com/download/details.aspx?id=27226)
+      [Microsoft Speech Platform: kit de desarrollo de software (SDK) (versión 11)](https://www.microsoft.com/download/details.aspx?id=27226)
       
-      [Microsoft Speech SDK, versión 5,1](https://www.microsoft.com/download/details.aspx?id=10121)
+      [Microsoft Speech SDK, versión 5.1](https://www.microsoft.com/download/details.aspx?id=10121)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -65,7 +65,7 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
 
       Desarrolla aplicaciones y herramientas accesibles en la plataforma establecida para las aplicaciones de Windows administradas con un modelo de interfaz de usuario de XAML y .NET Framework.
 
-      [Guía de programación de System. Speech para .NET Framework](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))
+      [Guía de programación de System.Speech para .NET Framework](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))
    :::column-end:::
    :::column:::
       ![Servicios de voz de Azure](images/platform-azure-speech.png)

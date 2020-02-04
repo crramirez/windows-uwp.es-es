@@ -117,7 +117,7 @@ Las aplicaciones para UWP pueden escuchar los siguientes eventos de puntero:
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
 <td align="left"><p>Se produce cuando se gira la rueda del mouse.</p>
-<p>La entrada de mouse se asocia con un solo puntero asignado al detectar por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a>.</p></td>
+<p>La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a>.</p></td>
 </tr>
 </tbody>
 </table> 
@@ -322,7 +322,7 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 -   Este controlador administra el evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved). Se agrega el evento al registro de eventos y se actualizan los detalles del puntero.
 
     > [!Important]
-    > La entrada de mouse se asocia con un solo puntero asignado al detectar por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). El evento [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) solo se desencadena cuando se libera ese mismo botón del mouse (no se puede asociar ningún otro botón con el puntero hasta que se complete este evento). Debido a esta asociación exclusiva, los clics de otros botones del mouse se enrutan a través del evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved).     
+    > La entrada de mouse se asocia con un solo puntero que se asigna cuando se detecta por primera vez la entrada. Al hacer clic en un botón del mouse (izquierdo, rueda o derecho), se crea una asociación secundaria entre el puntero y ese botón a través del evento [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). El evento [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) solo se desencadena cuando se libera ese mismo botón del mouse (no se puede asociar ningún otro botón con el puntero hasta que se complete este evento). Debido a esta asociación exclusiva, los clics de otros botones del mouse se enrutan a través del evento [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved).     
 
 ```csharp
 /// <summary>
@@ -695,7 +695,7 @@ Esta aplicación particular usa color y animación para resaltar el puntero prin
 
 **Descargar este ejemplo del [ejemplo de entrada de puntero (UserControl con animación)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)**
 
-### <a name="visual-feedback"></a>Comentarios visuales
+### <a name="visual-feedback"></a>Información visual
 
 Definimos un **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)** , basado en un objeto **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** de XAML, que resalta dónde está cada puntero en el lienzo y usa un **[Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** para animar la elipse que corresponde al puntero principal.
 
