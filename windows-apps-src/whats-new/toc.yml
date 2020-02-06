@@ -3,27 +3,6 @@
   items:
     - name: "Adiciones de API en Windows\_10, compilación 18362"
       href: ../whats-new/windows-10-build-18362-api-diff.md
-- name: 'Novedades de los documentos de Windows, enero de 2019'
-  href: ../whats-new/windows-docs-january-2019.md
-  items:
-    - name: 'Novedades de los documentos de Windows, septiembre de 2018'
-      href: ../whats-new/windows-docs-september-2018.md
-    - name: 'Novedades de los documentos de Windows, agosto de 2018'
-      href: ../whats-new/windows-docs-august-2018.md
-    - name: 'Novedades de los documentos de Windows, julio de 2018'
-      href: ../whats-new/windows-docs-july-2018.md
-    - name: 'Novedades de los documentos de Windows, mayo de 2018'
-      href: ../whats-new/windows-docs-may-2018.md
-    - name: 'Novedades de la documentación de Windows, febrero de 2018'
-      href: ../whats-new/windows-docs-february-2018.md
-    - name: 'Novedades de los documentos de Windows, diciembre de 2017'
-      href: ../whats-new/windows-docs-december-2017.md
-    - name: 'Novedades de los documentos de Windows, septiembre de 2017'
-      href: ../whats-new/windows-docs-september-2017.md
-    - name: 'Novedades de los documentos de Windows, agosto de 2017'
-      href: ../whats-new/windows-docs-august-2017.md
-    - name: 'Novedades de los documentos de Windows, julio de 2017'
-      href: ../whats-new/windows-docs-july-2017.md
 - name: "Versiones anteriores de Windows\_10"
   items:
     - name: "Novedades para desarrolladores en Windows\_10, compilación 17763"
@@ -55,5 +34,27 @@
       href: ../whats-new/windows-10-build-10586.md
     - name: "Novedades de Windows\_10, compilación 10240"
       href: ../whats-new/windows-10-build-10240.md
+- name: Resúmenes de actualizaciones de documentos anteriores
+  items:
+    - name: 'Novedades de los documentos de Windows, enero de 2019'
+      href: ../whats-new/windows-docs-january-2019.md
+    - name: 'Novedades de los documentos de Windows, septiembre de 2018'
+      href: ../whats-new/windows-docs-september-2018.md
+    - name: 'Novedades de los documentos de Windows, agosto de 2018'
+      href: ../whats-new/windows-docs-august-2018.md
+    - name: 'Novedades de los documentos de Windows, julio de 2018'
+      href: ../whats-new/windows-docs-july-2018.md
+    - name: 'Novedades de los documentos de Windows, mayo de 2018'
+      href: ../whats-new/windows-docs-may-2018.md
+    - name: 'Novedades de la documentación de Windows, febrero de 2018'
+      href: ../whats-new/windows-docs-february-2018.md
+    - name: 'Novedades de los documentos de Windows, diciembre de 2017'
+      href: ../whats-new/windows-docs-december-2017.md
+    - name: 'Novedades de los documentos de Windows, septiembre de 2017'
+      href: ../whats-new/windows-docs-september-2017.md
+    - name: 'Novedades de los documentos de Windows, agosto de 2017'
+      href: ../whats-new/windows-docs-august-2017.md
+    - name: 'Novedades de los documentos de Windows, julio de 2017'
+      href: ../whats-new/windows-docs-july-2017.md
 - name: API experimentales
   href: ../whats-new/experimental-apis.md
