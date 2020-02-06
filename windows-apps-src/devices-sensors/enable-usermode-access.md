@@ -1,28 +1,28 @@
 ---
-title: Habilitar el acceso de modo usuario a GPIO, I2C, y SPI
-description: En este tutorial se describe cómo habilitar el acceso de modo usuario a GPIO, I2C, SPI y UART en Windows 10.
+title: Habilitación del acceso en modo usuario a GPIO, I2C y SPI
+description: En este tutorial se describe cómo habilitar el acceso de modo de usuario a GPIO, I2C, SPI y UART en Windows 10.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a1356003c86040cfa51872b802ba070a685789b
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 08c802154180f5577c43a3ad5f349f53e3d9b5d3
+ms.sourcegitcommit: 20ee991a1cf87ef03c158cd3f38030c7d0e483fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281842"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77037905"
 ---
-# <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>Habilitar el acceso de modo usuario a GPIO, I2C, y SPI
+# <a name="enable-user-mode-access-to-gpio-i2c-and-spi"></a>Habilitación del acceso en modo usuario a GPIO, I2C y SPI
 
-Windows 10 contiene nuevas API para acceder a GPIO, I2C, SPI y UART directamente desde el modo usuario. Los paneles de desarrollo como Raspberry Pi 2 exponen un subconjunto de estas conexiones que permiten a los usuarios ampliar un módulo de cálculo base con circuitos personalizados para dirigirte a una aplicación particular. Normalmente, estos buses de bajo nivel se comparten con otras funciones incorporadas críticas, con solo un subconjunto de las patillas y buses de GPIO expuestos en los encabezados. Para preservar la estabilidad del sistema, es necesario especificar qué patillas y buses son seguros para modificar las aplicaciones de modo de usuario.
+Windows 10 contiene nuevas API para el acceso directo desde el modo de usuario de entrada/salida de uso general (GPIO), el circuito interintegrado (I2C), la interfaz de periféricos serie (SPI) y el transmisor receptor asíncrono universal (UART). Los paneles de desarrollo como Raspberry pi 2 exponen un subconjunto de estas conexiones, lo que le permite ampliar un módulo de proceso básico con un circuito personalizado para dirigirse a una aplicación determinada. Normalmente, estos buses de bajo nivel se comparten con otras funciones incorporadas críticas, con solo un subconjunto de las patillas y buses de GPIO expuestos en los encabezados. Para conservar la estabilidad del sistema, es necesario especificar qué PIN y buses son seguros para su modificación por parte de las aplicaciones en modo de usuario.
 
-Este documento describe cómo especificar esta configuración en ACPI y proporciona herramientas para comprobar que la configuración se especificó correctamente.
+En este documento se describe cómo especificar esta configuración en la interfaz avanzada de configuración y energía (ACPI) y se proporcionan herramientas para validar que la configuración se especificó correctamente.
 
 > [!IMPORTANT]
-> Los destinatarios de este documento son los desarrolladores de UEFI y ACPI. Se da por hecho que existe cierta familiarización con ACPI, creación de ASL y SpbCx/GpioClx.
+> La audiencia de este documento es Unified Extensible Firmware Interface (UEFI) y desarrolladores de ACPI. Se asume cierta familiaridad con la creación de ACPI, el lenguaje de origen ACPI (ASL) y el uso de SpbCx/GpioClx.
 
-El acceso de modo de usuario a buses de nivel bajo en Windows se asocia a través de los marcos `GpioClx` y `SpbCx` existentes. Un nuevo controlador llamado *RhProxy*, disponible en Windows IoT Core y Windows Enterprise, expone los recursos `GpioClx``SpbCx` en modo usuario. Para habilitar las API, se debe declarar un nodo de dispositivo para rhproxy en las tablas ACPI con cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario. Este documento es una guía de la creación y comprobación de ASL.
+El acceso al modo de usuario a buses de bajo nivel en Windows se sondea a través de los marcos de `GpioClx` y `SpbCx` existentes. Un nuevo controlador denominado *RhProxy*, disponible en Windows IOT Core y Windows Enterprise, expone `GpioClx` y `SpbCx` recursos al modo de usuario. Para habilitar las API, se debe declarar un nodo de dispositivo para rhproxy en las tablas ACPI con cada uno de los recursos GPIO y SPB que deben exponerse al modo de usuario. Este documento es una guía de la creación y comprobación de ASL.
 
 ## <a name="asl-by-example"></a>ASL como ejemplo
 
@@ -41,7 +41,7 @@ Device(RHPX)
 * _CID – Id. compatible. Debe ser “MSFT8000”.
 * _UID – Id. único. Establecer a 1.
 
-Después, declaramos cada uno de los recursos GPIO y SPB que se deben exponer en modo de usuario. El orden en que se declaran los recursos es importante porque los índices de recursos se usan para asociar las propiedades con los recursos. Si hay varios buses de I2C o SPI expuestos, el primero declarado se considera el bus 'predeterminado' para ese tipo de bus y será la instancia devuelta por los métodos `GetDefaultAsync()` de [Windows.Devices.I2c.I2cController](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2ccontroller) y [Windows.Devices.Spi.SpiController](https://docs.microsoft.com/uwp/api/windows.devices.spi.spicontroller).
+A continuación, declaramos cada uno de los recursos de GPIO y SPB que deben exponerse al modo de usuario. El orden en que se declaran los recursos es importante porque los índices de recursos se usan para asociar las propiedades con los recursos. Si hay varios buses de I2C o SPI expuestos, el primero declarado se considera el bus 'predeterminado' para ese tipo de bus y será la instancia devuelta por los métodos `GetDefaultAsync()` de [Windows.Devices.I2c.I2cController](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2ccontroller) y [Windows.Devices.Spi.SpiController](https://docs.microsoft.com/uwp/api/windows.devices.spi.spicontroller).
 
 ### <a name="spi"></a>SPI
 
@@ -208,7 +208,7 @@ Los siguientes campos son marcadores de posición para los valores especificados
 
 ### <a name="gpio"></a>GPIO
 
-A continuación, declaramos todas las patillas de GPIO que se exponen en modo de usuario. Ofrecemos las siguientes directrices para decidir qué patillas exponer:
+A continuación, se declaran todos los pin de GPIO que se exponen al modo de usuario. Ofrecemos las siguientes directrices para decidir qué patillas exponer:
 
 * Declarar todas las patillas en los encabezados expuestos.
 * Declarar las patillas que estén conectadas a funciones incorporadas útiles como botones y LED.
@@ -294,9 +294,9 @@ Elige el esquema de numeración que sea más compatible con la documentación pu
 
 ### <a name="uart"></a>UART
 
-Si tu controlador UART usa`SerCx` o `SerCx2`, puedes usar rhproxy para exponer el controlador a modo usuario. Los controladores UART que crean una interfaz de dispositivo de tipo `GUID_DEVINTERFACE_COMPORT` no necesitan usar rhproxy. El controlador de la bandeja de entrada `Serial.sys` es uno de estos casos.
+Si el controlador UART usa `SerCx` o `SerCx2`, puede usar rhproxy para exponer el controlador al modo de usuario. Los controladores UART que crean una interfaz de dispositivo de tipo `GUID_DEVINTERFACE_COMPORT` no necesitan usar rhproxy. El controlador de la bandeja de entrada `Serial.sys` es uno de estos casos.
 
-Para exponer un UART tipo `SerCx` a modo usuario, declara un recurso de `UARTSerialBus` de la siguiente manera.
+Para exponer un UART de estilo `SerCx`al modo de usuario, declare un recurso `UARTSerialBus` como se indica a continuación.
 
 ```cpp
 // Index 2
@@ -325,7 +325,7 @@ La declaración de nombre descriptivo correspondiente es:
 Package(2) { "bus-UART-UART2", Package() { 2 }},
 ```
 
-De este modo se asigna el nombre descriptivo "UART2" al controlador, que es el identificador que los usuarios usarán para tener acceso al bus desde el modo de usuario.
+Esto asigna el nombre descriptivo "UART2" al controlador, que es el identificador que los usuarios usarán para acceder al bus desde el modo de usuario.
 
 ## <a name="runtime-pin-muxing"></a>Multiplexación de patillas en tiempo de ejecución
 
@@ -655,14 +655,14 @@ Cuando estés listo para probar rhproxy, es útil usar el siguiente procedimient
 1. Compile y cargue el nodo rhproxy mediante `ACPITABL.dat`
 1. Comprueba que el nodo del dispositivo `rhproxy` existe
 1. Comprueba que `rhproxy` está cargándose e iniciándose
-1. Comprueba que los dispositivos esperados están expuestos al modo usuario
+1. Comprobar que los dispositivos esperados se exponen al modo de usuario
 1. Comprueba que puedes interactuar con cada dispositivo desde la línea de comandos
 1. Comprueba que puedes interactuar con cada dispositivo desde una aplicación para UWP
 1. Ejecuta las pruebas de HLK
 
 ### <a name="verify-controller-drivers"></a>Comprueba los controladores de la controladora
 
-Dado que rhproxy expone otros dispositivos en el sistema en modo usuario, solo funciona si ya están trabajando esos dispositivos. El primer paso es comprobar que esos dispositivos (el I2C, SPI, las controladoras de GPIO que deseas exponer) ya están funcionando.
+Dado que rhproxy expone otros dispositivos en el sistema al modo de usuario, solo funciona si esos dispositivos ya están funcionando. El primer paso es comprobar que esos dispositivos (el I2C, SPI, las controladoras de GPIO que deseas exponer) ya están funcionando.
 
 Al aviso del comando, ejecuta
 
@@ -740,9 +740,9 @@ Si el resultado indica que rhproxy se ha iniciado, rhproxy se ha cargado e inici
 * Problema 51: `CM_PROB_WAITING_ON_DEPENDENCY` El sistema no está iniciando rhproxy porque una de sus dependencias no se ha podido cargar. Esto significa que los recursos han pasado al punto de rhproxy y a nodos ACPI no válidos, o que no se inician los dispositivos de destino. En primer lugar, vuelve a comprobar que todos los dispositivos se están ejecutando correctamente (consulta la sección anterior 'Comprobar los controladores de controladora'). Después, compruebe el ASL y asegúrese de que todas las rutas de acceso a los recursos (por ejemplo, `\_SB.I2C1`) son correctas y apunte a los nodos válidos de su DSDT.
 * Problema 10: `CM_PROB_FAILED_START` Rhproxy no se pudo iniciar, probablemente por un problema en el análisis del recurso. Repasa tu ASL, vuelve a comprobar los índices de recurso en el DSD y verifica que los recursos GPIO se hayan especificado en orden de número de patilla ascendente.
 
-### <a name="verify-that-the-expected-devices-are-exposed-to-usermode"></a>Comprueba que los dispositivos esperados están expuestos al modo usuario
+### <a name="verify-that-the-expected-devices-are-exposed-to-user-mode"></a>Comprobar que los dispositivos esperados se exponen al modo de usuario
 
-Ahora que se está ejecutando rhproxy, debería haber creado interfaces de dispositivos que se puedan acceder por el modo usuario. Usaremos varias herramientas de líneas de comandos para enumerar los dispositivos y ver si están presentes.
+Ahora que rhproxy se está ejecutando, debe haber creado interfaces de dispositivos a las que se pueda tener acceso mediante el modo de usuario. Usaremos varias herramientas de líneas de comandos para enumerar los dispositivos y ver si están presentes.
 
 Clone el repositorio de [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) y compile los ejemplos de `GpioTestTool`, `I2cTestTool`, `SpiTestTool`y `Mincomm`. Copia las herramientas al dispositivo que estás probando y usa los siguientes comandos para enumerar los dispositivos.
 
@@ -800,7 +800,7 @@ MinComm "\\?\ACPI#FSCL0007#3#{86e0d1e0-8089-11d0-9ce4-08003e301f73}\000000000000
 
 Usa las siguientes muestras para validar que los dispositivos funcionan desde UWP.
 
-| Muestra | Vínculo |
+| Ejemplo | Vínculo |
 |------|------|
 | IoT-GPIO | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-GPIO |
 | IoT-I2C | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-I2C |
@@ -835,7 +835,7 @@ Haz clic en Ejecutar seleccionados. Hay documentación adicional disponible en c
 
 ## <a name="resources"></a>Recursos
 
-| Destino | Vínculo |
+| Destination | Vínculo |
 |-------------|------|
 | Especificación de ACPI 5.0 | http://acpi.info/spec.htm |
 | Asl.exe (Microsoft ASL Compiler) | https://msdn.microsoft.com/library/windows/hardware/dn551195.aspx |
@@ -854,7 +854,7 @@ Haz clic en Ejecutar seleccionados. Hay documentación adicional disponible en c
 | MinComm (serie) | https://github.com/ms-iot/samples/tree/develop/MinComm |
 | Hardware Lab Kit (HLK) | https://msdn.microsoft.com/library/windows/hardware/dn930814.aspx |
 
-## <a name="apendix"></a>Apéndice
+## <a name="appendix"></a>Apéndice
 
 ### <a name="appendix-a---raspberry-pi-asl-listing"></a>Apéndice A: Lista de ASL de Raspberry Pi
 
