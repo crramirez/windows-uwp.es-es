@@ -6,19 +6,19 @@ ms.date: 07/22/2019
 ms.topic: article
 keywords: windows 10, uwp, packaging
 ms.localizationpriority: medium
-ms.openlocfilehash: d067511e4ceb5aaf072aabf8f74ccf186a7787dc
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: bb772007cd5c4391634f9df6ba0b6d2037a7b5de
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682670"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089481"
 ---
 # <a name="packaging-apps"></a>Empaquetado de aplicaciones
 
-Esta sección contiene o se vincula a artículos sobre el empaquetado de aplicaciones para la Plataforma universal de Windows (UWP) en paquetes de aplicaciones MSIX y AppX para su implementación e instalación. Algunos de estos vínculos se dirigen a artículos relevantes de la [documentación de MSIX](https://docs.microsoft.com/windows/msix/).
+Esta sección contiene vínculos o artículos sobre el empaquetado de aplicaciones para la Plataforma universal de Windows (UWP) en paquetes de la aplicación MSIX y .appx para su implementación e instalación. Algunos de estos vínculos se dirigen a artículos relevantes de la [documentación de MSIX](https://docs.microsoft.com/windows/msix/).
 
 > [!NOTE]
-> El formato original del empaquetado de aplicaciones para UWP en Windows 10 se llamaba AppX. A partir de Windows 10, versión 1809, el nombre de este formato de empaquetado cambió a MSIX y se amplió para admitir todos los tipos de aplicaciones de Windows, incluidas las aplicaciones de escritorio de .NET y C++/Win32. También se ha ampliado la compatibilidad con MSIX a las versiones anteriores de Windows. Para más información, consulta la [documentación de MSIX](https://docs.microsoft.com/windows/msix/).
+> El formato original del empaquetado de aplicaciones para UWP en Windows 10 era .appx. A partir de Windows 10, versión 1809, el nombre de este formato de empaquetado cambió a .msix y se amplió para admitir todos los tipos de aplicaciones de Windows, incluidas las aplicaciones de escritorio en .NET y C++/Win32. También se ha ampliado la compatibilidad con MSIX a las versiones anteriores de Windows. Para más información, consulta la [documentación de MSIX](https://docs.microsoft.com/windows/msix/).
 
 | Tema | Descripción |
 |-------|-------------|

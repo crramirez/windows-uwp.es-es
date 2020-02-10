@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 67ba9f5c9bc4a5e723eb2696d88804df5300eda0
-ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
+ms.openlocfilehash: d5014532be613e8284a1e2d6496f71b9f2b8e892
+ms.sourcegitcommit: 5002836b3c8d3e0f2970da1333ec8f42da861ae3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468986"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77071257"
 ---
 # <a name="dialog-controls"></a>Controles de cuadro de diálogo
 
@@ -65,7 +65,7 @@ Para obtener recomendaciones sobre cuándo usar un control flotante frente a cu�
     -   Use respuestas específicas al contenido o a la instrucción principal como texto del botón. Un ejemplo sería: "¿Quieres permitir que nombreDeAplicación acceda a tu ubicación?", seguido de los botones "Permitir" y "Bloquear". Cuando las respuestas son específicas, se comprenden con mayor rapidez y la toma de decisiones resulta eficaz.
     - Asegúrese de que el texto de los botones de acción sea conciso. Las cadenas cortas permiten al usuario realizar una selección de manera rápida y segura.
     - Además de la acción segura y no destructiva, opcionalmente podrá presentar al usuario uno o dos botones de acción relacionados con la instrucción principal. Estos botones de acción "hacerlo" confirman el principal punto del cuadro de diálogo. Use las API de PrimaryButton y SecondaryButton APIs para agregar estas acciones "hacerlo".
-    - Los botones de acción "hacerlo" deberían aparecer como los botones situados más a la izquierda. La acción segura y no destructiva debe aparecer como el botón situado más a la derecha.
+    - Los botones de acción "hacerlo" deberían aparecer a la izquierda del resto. La acción segura y no destructiva debe aparecer como el botón situado más a la derecha.
     - Opcionalmente, puede elegir diferenciar uno de los tres botones como el botón predeterminado del cuadro de diálogo. Use la API de DefaultButton para diferenciar uno de los botones.  
 -   No uses cuadros de diálogo en el caso de los errores que son contextuales para un lugar específico de la página, como los errores de validación (en los campos de contraseña, por ejemplo); usa el lienzo de la aplicación para mostrar errores en línea.
 - Use la [clase ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog) para compilar la experiencia de cuadro de diálogo. No use la API de MessageDialog en desuso.
@@ -252,7 +252,7 @@ Un cuadro de diálogo de confirmación típico tiene dos botones: un botón de a
 
 ## <a name="contentdialog-in-appwindow-or-xaml-islands"></a>ContentDialog en AppWindow o islas de Xaml
 
-> Nota: Esta sección es aplicable a las aplicaciones diseñadas para Windows 10, versión 1903 o posterior. Las Islas de XAML y AppWindow no están disponibles en versiones anteriores. Para obtener más información acerca de las versiones, consulte el [aplicaciones de versión adaptable](../../../debug-test-perf/version-adaptive-apps.md).
+> NOTA: Esta sección es aplicable a las aplicaciones diseñadas para Windows 10, versión 1903 o posterior. Las Islas de XAML y AppWindow no están disponibles en versiones anteriores. Para obtener más información acerca de las versiones, consulte el [aplicaciones de versión adaptable](../../../debug-test-perf/version-adaptive-apps.md).
 
 De manera predeterminada, los cuadros de diálogo muestran de forma modal con respecto a la raíz [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview). Cuando use ContentDialog dentro de cualquiera isla [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) o [XAML](/windows/apps/desktop/modernize/xaml-islands), deberá establecer manualmente la [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) en el cuadro de diálogo a la raíz del host XAML.
 
@@ -282,7 +282,7 @@ private async void DisplayNoWifiDialog()
 > [!WARNING]
 > Solo puede haber uno ContentDialog abierto en cada subproceso a la vez. Al intentar abrir dos ContentDialogs producirá una excepción, incluso si está intentando abrir en AppWindows independiente.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 

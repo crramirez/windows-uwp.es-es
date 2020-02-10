@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: b7d38464a26af0df03c1aa381b16fbddf1de55cc
-ms.sourcegitcommit: e0644abf76a2535ea24758d1904ff00dfcd86a51
+ms.openlocfilehash: 70415c9f3d58625cfdc651ec67c8a9f37c23cffa
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008044"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089501"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Configurar compilaciones automatizadas para la aplicación para UWP
 
@@ -62,7 +62,7 @@ steps:
 
 ```
 
-La plantilla predeterminada intenta firmar el paquete con el certificado especificado en el archivo. csproj. Si desea firmar el paquete durante la compilación, debe tener acceso a la clave privada. De lo contrario, puede deshabilitar la firma agregando el parámetro `/p:AppxPackageSigningEnabled=false` a la sección `msbuildArgs` del archivo YAML.
+La plantilla predeterminada intenta firmar el paquete con el certificado especificado en el archivo. csproj. Si desea firmar el paquete durante la compilación, debe tener acceso a la clave privada. De lo contrario, puede deshabilitar la firma agregando el parámetro `/p:AppxPackageSigningEnabled=false` a la sección `msbuildArgs` en el archivo YAML.
 
 ## <a name="add-your-project-certificate-to-the-secure-files-library"></a>Agregar el certificado de proyecto a la biblioteca de archivos seguros
 
@@ -96,11 +96,11 @@ Esta tarea compila cualquier solución que se encuentra en la carpeta de trabajo
 | AppxBundle | Siempre | Crea un archivo. msixbundle/. appxbundle con los archivos. msix/. appx para la plataforma especificada. |
 | UapAppxPackageBuildMode | StoreUpload | Genera el archivo. msixupload/. appxupload y la carpeta **_Test** para la instalación de prueba. |
 | UapAppxPackageBuildMode | CI | Genera el archivo. msixupload/. appxupload únicamente. |
-| UapAppxPackageBuildMode | SideloadOnly | Genera la carpeta **_Test** solo para la instalación de prueba. |
+| UapAppxPackageBuildMode | SideloadOnly | Genera el **_Test** carpeta solo para la instalación de prueba. |
 | AppxPackageSigningEnabled | true | Habilita la firma de paquetes. |
-| PackageCertificateThumbprint | Huella digital del certificado | Este valor **debe** coincidir con la huella digital del certificado de firma o ser una cadena vacía. |
-| PackageCertificateKeyFile | Path | Ruta de acceso al certificado que se va a usar. Esto se recupera de los metadatos de archivo seguros. |
-| PackageCertificatePassword | Contraseña | La contraseña de la clave privada en el certificado. Se recomienda que almacene la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y vincule la contraseña al [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puede pasar la variable a este argumento. |
+| PackageCertificateThumbprint | Huella digital de certificado | Este valor **debe** coincidir con la huella digital del certificado de firma o ser una cadena vacía. |
+| PackageCertificateKeyFile | Ruta de acceso | Ruta de acceso al certificado que se va a usar. Esto se recupera de los metadatos de archivo seguros. |
+| PackageCertificatePassword | Password | La contraseña de la clave privada en el certificado. Se recomienda que almacene la contraseña en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) y vincule la contraseña al [grupo de variables](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups). Puede pasar la variable a este argumento. |
 
 ### <a name="configure-the-build"></a>Configurar la compilación
 
@@ -115,7 +115,7 @@ Si desea compilar la solución mediante la línea de comandos o con cualquier ot
 
 ### <a name="configure-package-signing"></a>Configurar la firma de paquetes
 
-Para firmar el paquete MSIX (o APPX), la canalización debe recuperar el certificado de firma. Para ello, agregue una tarea DownloadSecureFile antes de la tarea VSBuild.
+Para firmar el paquete MSIX (o. appx), la canalización debe recuperar el certificado de firma. Para ello, agregue una tarea DownloadSecureFile antes de la tarea VSBuild.
 Esto le proporcionará acceso al certificado de firma a través de ```signingCert```.
 
 ```yml
@@ -148,7 +148,7 @@ A continuación, actualice la tarea VSBuild para que haga referencia al certific
 
 ### <a name="review-parameters"></a>Revisar parámetros
 
-Los parámetros definidos con la sintaxis `$()` son variables definidas en la definición de compilación y cambiarán en otros sistemas de compilación.
+Los parámetros definidos con la sintaxis de `$()` son variables definidas en la definición de compilación y cambiarán en otros sistemas de compilación.
 
 ![variables predeterminadas](images/building-screen5.png)
 
@@ -191,7 +191,7 @@ Este error aparece porque en el nivel de la solución, no está claro qué aplic
 |Aplicación|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|
 
-A continuación, quite el argumento de MSBuild `AppxBundle` del paso de compilación.
+A continuación, quite el `AppxBundle` argumento de MSBuild del paso de compilación.
 
 ## <a name="related-topics"></a>Temas relacionados
 

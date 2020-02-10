@@ -7,12 +7,12 @@ ms.date: 10/20/2017
 ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: f40a68b6e07a90bcb1ce1d646bdfc0dfb4553495
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5b45f33e9849a46e22250640b88a85ea16143231
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359418"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089331"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>Recursos de aplicación y el sistema de administración de recursos
 
@@ -38,6 +38,6 @@ Para más información sobre la propuesta de valor de localizar la aplicación, 
 | [Crear recursos en el paquete de la aplicación, en lugar de en un paquete de recursos](build-resources-into-app-package.md) | Algunos tipos de aplicaciones (diccionarios multilingües, herramientas de traducción, etc.) necesitan reemplazar el comportamiento predeterminado de un lote de aplicaciones y crear recursos en el paquete de la aplicación en lugar de tenerlos en distintos paquetes de recursos. En este tema se explica cómo hacerlo. |
 | [API de indexación de recursos de paquetes (PRI) y sistemas de compilación personalizados](pri-apis-custom-build-systems.md) | Con las [API de indexación de recursos de paquetes (PRI)](https://docs.microsoft.com/windows/desktop/menurc/pri-indexing-reference), puedes desarrollar un sistema de compilación personalizado para los recursos de la aplicación para UWP. El sistema de compilación podrá crear y volcar (como XML) archivos de índice de recursos del paquete (PRI), así como controlar sus versiones, en cualquier nivel de complejidad que necesite la aplicación para UWP. |
 | [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md) | MakePri.exe es una herramienta de línea de comandos que se puede usar para crear y volcar archivos PRI. Viene integrada como parte de MSBuild en Microsoft Visual Studio, pero podría ser útil para crear paquetes manualmente o con un sistema de compilación personalizado. |
-| [Usar el sistema de administración de recursos de Windows 10 en una aplicación o juego heredados](using-mrt-for-converted-desktop-apps-and-games.md) | Al empaquetar la aplicación o juego .NET o Win32 como un paquete AppX, puedes aprovechar el sistema de administración de recursos para cargar recursos de aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas. |
+| [Usar el sistema de administración de recursos de Windows 10 en una aplicación o juego heredados](using-mrt-for-converted-desktop-apps-and-games.md) | Al empaquetar la aplicación o juego en .NET o Win32 como un paquete .msix o .appx, puedes aprovechar el sistema de administración de recursos para cargar recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas. |
 
 Consulta también [Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).

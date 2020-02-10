@@ -5,15 +5,15 @@ ms.topic: article
 ms.date: 06/27/2019
 ms.author: mcleans
 author: mcleanbyron
-keywords: Windows 10, UWP, Windows Forms, WPF, Islas XAML
+keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: de84cbb2e1927d9426eefaaf7b0d70d604427da1
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 397c301564c0d4799c6b41db209da9659725103d
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683818"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089311"
 ---
 # <a name="tutorial-modernize-a-wpf-app"></a>Tutorial: modernizar una aplicación de WPF 
 
@@ -30,7 +30,7 @@ En este tutorial se requieren los siguientes conocimientos de desarrollo:
 * Conocimientos básicos de C# y XAML.
 * Conocimientos básicos de UWP.
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 En este tutorial se proporciona el código para una sencilla aplicación de línea de negocio de WPF denominada gastos de contoso. En el escenario ficticio del tutorial, contoso Reports es una aplicación interna que usan los administradores de Contoso Corporation para realizar un seguimiento de los gastos enviados por sus informes. Ahora los administradores están equipados con dispositivos táctiles y les gustaría usar la aplicación de gastos de Contoso sin un mouse o un teclado. Desafortunadamente, la versión actual de la aplicación no es táctil.
 
@@ -56,7 +56,7 @@ En el tutorial, mejorará los gastos de Contoso con nuevas características de W
 Para realizar este tutorial, el equipo de desarrollo debe tener instalados estos requisitos previos:
 
 * Windows 10, versión 1903 (compilación 18362) o una versión posterior.
-* [Visual Studio 2019](https://www.visualstudio.com).
+* [Visual Studio 2019](https://www.visualstudio.com).
 * [SDK de .net Core 3](https://dotnet.microsoft.com/download/dotnet-core/3.0) (Instale la versión más reciente).
 
 Asegúrese de instalar las siguientes cargas de trabajo y características opcionales con Visual Studio 2019:
@@ -98,9 +98,9 @@ En adelante, la mayoría de las nuevas características de Windows 10 se exponen
 
 ### <a name="msix-packaging"></a>Empaquetado de MSIX
 
-[MSIX](/windows/msix/) (anteriormente conocido como appx) es el modelo de empaquetado moderno para aplicaciones de Windows. MSIX admite aplicaciones para UWP, así como aplicaciones de escritorio que se compilan mediante tecnologías como Win32, WPF, Windows Forms, Java, electrones, etc. Al empaquetar una aplicación de escritorio en un paquete de MSIX, puede publicar la aplicación en el Microsoft Store. La aplicación de escritorio también obtiene la identidad del paquete cuando se instala, lo que permite a la aplicación de escritorio usar un conjunto más amplio de API de WinRT.
+[MSIX](/windows/msix/) es el modelo de empaquetado moderno para aplicaciones de Windows. MSIX admite aplicaciones para UWP, así como aplicaciones de escritorio que se compilan mediante tecnologías como Win32, WPF, Windows Forms, Java, electrones, etc. Al empaquetar una aplicación de escritorio en un paquete de MSIX, puede publicar la aplicación en el Microsoft Store. La aplicación de escritorio también obtiene la identidad del paquete cuando se instala, lo que permite a la aplicación de escritorio usar un conjunto más amplio de API de WinRT.
 
-Para más información, consulte estos artículos:
+Para obtener más información, consulte estos artículos:
 
 * [Empaquetar aplicaciones de escritorio](/windows/uwp/porting/desktop-to-uwp-root)
 * [En segundo plano de la aplicación de escritorio empaquetada](/windows/uwp/porting/desktop-to-uwp-behind-the-scenes)

@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 8f22761bf535f13ae0686a9b180ee810fba61028
-ms.sourcegitcommit: 1455e12a50f98823bfa3730c1d90337b1983b711
+ms.openlocfilehash: 35ddf17d121a06e453e9b51e023e859f0c1cd0ab
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76814005"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089351"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar un control personalizado de UWP en una aplicación WPF con islas XAML
 
@@ -34,7 +34,7 @@ Para hospedar un control personalizado de UWP en una aplicación de WPF (o Windo
     La manera recomendada de hacerlo es agregar un proyecto **aplicación vacía (Windows universal)** a la misma solución que el proyecto de WPF o Windows Forms, revisar la clase `App` predeterminada en este proyecto para derivar de `XamlApplication`y, a continuación, crear una instancia de este objeto en el código de punto de entrada para la aplicación.
 
     > [!NOTE]
-    > La solución solo puede contener un proyecto que define un objeto de `XamlApplication`. Todos los controles personalizados de UWP de la aplicación comparten el mismo objeto de `XamlApplication`. El proyecto que define el objeto de `XamlApplication` debe incluir referencias a todas las demás bibliotecas y proyectos de UWP que se usan para hospedar controles de UWP en la isla XAML.
+    > La solución solo puede contener un proyecto que define un objeto de `XamlApplication`. Todos los controles personalizados de UWP de la aplicación comparten el mismo objeto de `XamlApplication`. El proyecto que define el objeto de `XamlApplication` debe incluir referencias a todas las demás bibliotecas y proyectos de UWP que se usan en los controles del host para UWP en la isla XAML.
 
 ## <a name="create-a-wpf-project"></a>Crear un proyecto de WPF
 
@@ -285,7 +285,7 @@ En esta sección se muestra cómo agregar un control de UWP desde la biblioteca 
 
 ## <a name="package-the-app"></a>Empaquetar la aplicación
 
-Opcionalmente, puede empaquetar la aplicación WPF en un [paquete de MSIX](https://docs.microsoft.com/windows/msix) para la implementación. MSIX es la tecnología moderna de empaquetado de aplicaciones para Windows y se basa en una combinación de tecnologías de instalación de MSI, APPX, App-V y ClickOnce.
+Opcionalmente, puede empaquetar la aplicación WPF en un [paquete de MSIX](https://docs.microsoft.com/windows/msix) para la implementación. MSIX es la tecnología moderna de empaquetado de aplicaciones para Windows y se basa en una combinación de tecnologías de instalación de MSI,. appx, App-V y ClickOnce.
 
 Las instrucciones siguientes muestran cómo empaquetar todos los componentes de la solución en un paquete de MSIX mediante el proyecto de paquete de [aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) en Visual Studio 2019. Estos pasos solo son necesarios si desea empaquetar la aplicación WPF en un paquete MSIX. Tenga en cuenta que estos pasos incluyen actualmente algunas soluciones específicas para el escenario de hospedaje de controles personalizados de UWP.
 

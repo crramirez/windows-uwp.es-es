@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: fb6d2bebda31ed768309b23d18b3b47e4487b058
-ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
+ms.openlocfilehash: c2e7524605847009dae415d93794658dd08a79a3
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929247"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089401"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernización de las aplicaciones de escritorio
 
@@ -24,7 +24,7 @@ En este artículo se describen las características de Windows 10 y UWP que pued
 
 ## <a name="msix-packages"></a>Paquetes MSIX
 
-MSIX es un formato moderno de paquete de la aplicación de Windows que proporciona una experiencia de empaquetado universal para todas las aplicaciones de Windows, incluidas las aplicaciones de UWP, WPF, Windows Forms y Win32. MSIX reúne los mejores aspectos de las tecnologías de instalación de MSI, AppX, App-V y ClickOnce, a fin de ofrecer una experiencia de empaquetado confiable y moderna.
+MSIX es un formato moderno de paquete de la aplicación de Windows que proporciona una experiencia de empaquetado universal para todas las aplicaciones de Windows, incluidas las aplicaciones de UWP, WPF, Windows Forms y Win32. MSIX reúne los mejores aspectos de las tecnologías de instalación de MSI, .appx, App-V y ClickOnce a fin de ofrecer una experiencia de empaquetado confiable y moderna.
 
 El empaquetado de las aplicaciones de escritorio de Windows en paquetes MSIX le permite acceder a una sólida experiencia de instalación y actualización, a un modelo de seguridad administrado con un sistema de funcionalidades flexible, a compatibilidad con Microsoft Store, a la administración empresarial y a muchos modelos de distribución personalizados.
 

@@ -1,24 +1,24 @@
 ---
 title: Uso de MRT para juegos y aplicaciones de escritorio convertidos
-description: Al empaquetar la aplicación o juego .NET o Win32 como un paquete AppX, puedes aprovechar el sistema de administración de recursos para cargar recursos de aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
+description: Al empaquetar la aplicación o el juego de .NET o Win32 como un paquete. msix o. appx, puede aprovechar el sistema de administración de recursos para cargar los recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. recursos, juegos, centennial, convertidor de aplicaciones de escritorio, mui, ensamblado satélite
 ms.localizationpriority: medium
-ms.openlocfilehash: 0425e7bb00e4a5be848443aa278ebaad1706cb30
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: c753e9437c76c89ac6af8cedcb1f954d1ce56fe3
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683918"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089452"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Usar el sistema de administración de recursos de Windows 10 en una aplicación o juego heredado.
 
-Con frecuencia, las aplicaciones .NET y Win32 están localizadas en diferentes idiomas, para así ampliar el mercado al que pueden dirigirse. Para más información sobre la propuesta de valor de localizar la aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación o el juego de .NET o Win32 como un paquete MSIX o AppX, puede aprovechar el sistema de administración de recursos para cargar los recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
+Con frecuencia, las aplicaciones .NET y Win32 están localizadas en diferentes idiomas, para así ampliar el mercado al que pueden dirigirse. Para más información sobre la propuesta de valor de localizar la aplicación, consulta [Globalización y localización](../design/globalizing/globalizing-portal.md). Al empaquetar la aplicación o el juego de .NET o Win32 como un paquete. msix o. appx, puede aprovechar el sistema de administración de recursos para cargar los recursos de la aplicación adaptados al contexto en tiempo de ejecución. En este tema se describen en profundidad las técnicas.
 
 Existen muchas formas para localizar las aplicaciones Win32 tradicionales, pero Windows 8 introdujo un nuevo [sistema de administración de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)) que funciona entre lenguajes de programación y tipos de aplicaciones, además de proporcionar funcionalidad que va más allá de una simple localización. Este sistema se denominará "MRT" en este tema. Históricamente, eso significaba "Tecnología de recursos modernos", pero ha dejado de usarse el término "Modernos". También se puede llamar al administrador de recursos MRM (administrador de recursos modernos) o PRI (índice de recursos del paquete).
 
-Combinado con la implementación basada en MSIX o AppX (por ejemplo, desde el Microsoft Store), MRT puede ofrecer automáticamente los recursos más aplicables para un usuario o dispositivo determinado, lo que minimiza el tamaño de la descarga e instalación de la aplicación. Esta reducción de tamaño puede ser significativa para las aplicaciones que tienen una gran cantidad de contenido localizado, quizás del orden de varios *gigabytes* para juegos AAA. Entre las ventajas adicionales de MRT se encuentran las listas localizadas en el shell de Windows y en Microsoft Store, una lógica de reserva automática cuando el idioma preferido de un usuario no coincide con los recursos disponibles.
+Combinado con la implementación basada en MSIX o. appx (por ejemplo, desde el Microsoft Store), MRT puede ofrecer automáticamente los recursos más aplicables para un usuario o dispositivo determinado, lo que minimiza el tamaño de la descarga e instalación de la aplicación. Esta reducción de tamaño puede ser significativa para las aplicaciones que tienen una gran cantidad de contenido localizado, quizás del orden de varios *gigabytes* para juegos AAA. Entre las ventajas adicionales de MRT se encuentran las listas localizadas en el shell de Windows y en Microsoft Store, una lógica de reserva automática cuando el idioma preferido de un usuario no coincide con los recursos disponibles.
 
 En este documento se describe la arquitectura de nivel superior de MRT y se proporciona una guía de portabilidad para mover las aplicaciones Win32 heredadas a MRT con cambios de código mínimos. Una vez movidas a MRT, el desarrollador dispondrá de ventajas adicionales (por ejemplo, la posibilidad de segmentar recursos por factor de escala o tema del sistema). Ten en cuenta que la localización basada en MRT funciona tanto en aplicaciones para UWP como en aplicaciones Win32 procesadas por el Puente de dispositivo de escritorio (también llamado "Centennial").
 
@@ -33,17 +33,17 @@ En muchos casos, puedes seguir usando los formatos de localización y el código
 <tr>
 <td>Localizar el manifiesto del paquete</td>
 <td>El trabajo mínimo indispensable para que el contenido localizado aparezca en el shell de Windows y en Microsoft Store</td>
-<td>Pequeña</td>
+<td>Pequeño</td>
 </tr>
 <tr>
 <td>Usar MRT para identificar y localizar recursos</td>
 <td>Requisito previo para minimizar los tamaños de descarga e instalación; idioma de reserva automático</td>
-<td>Mediana</td>
+<td>Media</td>
 </tr>
 <tr>
 <td>Crear paquetes de recursos</td>
 <td>Último paso para minimizar los tamaños de descarga e instalación</td>
-<td>Pequeña</td>
+<td>Pequeño</td>
 </tr>
 <tr>
 <td>Migrar a los formatos de recursos y API de MRT</td>
@@ -207,7 +207,7 @@ Si quieres usar el diseñador de Visual Studio:
 
 Una vez que haya definido los valores en el archivo de `.resw`, el siguiente paso es actualizar el manifiesto para hacer referencia a las cadenas de recursos. De nuevo, puedes editar un archivo XML directamente o confiar en el diseñador de manifiestos de Visual Studio.
 
-Si editas el XML directamente, abre el archivo `AppxManifest.xml` y realiza los siguientes cambios en los <span style="background-color: lightgreen">valores resaltados</span>; usa este texto *exacto*, no un texto específico para la aplicación. No es obligado usar estos nombres exactos para los recursos; puedes elegir los tuyos propios, pero los que elijas deben coincidir exactamente con lo que aparece en el archivo `.resw`. Estos nombres deben coincidir con el elemento `Names` que creaste en el archivo `.resw`, con el prefijo del esquema `ms-resource:` y el espacio de nombres `Resources/`. 
+Si editas el XML directamente, abre el archivo `AppxManifest.xml` y realiza los siguientes cambios en los <span style="background-color: lightgreen">valores resaltados</span>; usa este texto *exacto*, no un texto específico para la aplicación. No es obligado usar estos nombres exactos para los recursos; puedes elegir los tuyos propios, pero los que elijas deben coincidir exactamente con lo que aparece en el archivo &mdash;. Estos nombres deben coincidir con el elemento `Names` que creaste en el archivo `.resw`, con el prefijo del esquema `ms-resource:` y el espacio de nombres `Resources/`. 
 
 > [!NOTE]
 > Muchos elementos del manifiesto se han omitido de este fragmento de código. no elimine nada.
@@ -293,7 +293,7 @@ Puede abrir el archivo de asignación `..\resources.map.txt` para comprobar que 
 
 Ahora que se ha compilado el archivo PRI, puedes compilar y firmar el paquete:
 
-1. Para crear el paquete de la aplicación, ejecute el siguiente comando reemplazando `contoso_demo.appx` por el nombre del archivo MSIX/AppX que quiere crear y asegurándose de elegir un directorio diferente para el archivo (en este ejemplo se usa el directorio primario; puede estar en cualquier parte, pero **no** debe ser el directorio del proyecto).
+1. Para crear el paquete de la aplicación, ejecute el siguiente comando reemplazando `contoso_demo.appx` por el nombre del archivo. msix/. appx que quiere crear y asegurándose de elegir un directorio diferente para el archivo (en este ejemplo se usa el directorio primario; puede ser cualquier lugar pero **no** debe ser el directorio del proyecto).
 
     ```CMD
     makeappx pack /m AppXManifest.xml /f ..\resources.map.txt /p ..\contoso_demo.appx /o
@@ -317,7 +317,7 @@ Ahora que se ha compilado el archivo PRI, puedes compilar y firmar el paquete:
     ```
 
     Puedes escribir `signtool sign /?` para ver qué hace cada parámetro; pero, en resumen:
-      * `/fd` establece el algoritmo de Resumen de archivo (SHA256 es el valor predeterminado para AppX)
+      * `/fd` establece el algoritmo de síntesis de archivo (SHA256 es el valor predeterminado para. appx)
       * `/a` seleccionará automáticamente el mejor certificado
       * `/f` especifica el archivo de entrada que contiene el certificado de firma
 
@@ -349,7 +349,7 @@ Para usar el Explorador de Windows:
 3. Elija `Local Machine` y haga clic en `Next`
 4. Acepte la solicitud de elevación de administración de control de cuentas de usuario, si aparece, y haga clic en `Next`
 5. Escriba la contraseña de la clave privada, si hay alguna, y haga clic en `Next`
-6. Seleccione `Place all certificates in the following store`
+6. Seleccionar `Place all certificates in the following store`
 7. Haz clic en `Browse` y elige la carpeta `Trusted People` (**no** "Editores de confianza")
 8. Haga clic en `Next` y, a continuación, `Finish`
 
@@ -433,11 +433,11 @@ Para probar los nuevos cambios localizados, basta con agregar un nuevo idioma pr
 1. Ejecuta la aplicación `Settings` (`Windows + I`)
 2. Vaya a `Time & language`
 3. Vaya a `Region & language`
-4. haga clic en `Add a language`.
+4. Haga clic en `Add a language`
 5. Escribe (o selecciona) el idioma que quieras (p. ej., `Deutsch` o `German`)
  * Si hay subidiomas, elige el que quieras (p. ej., `Deutsch / Deutschland`)
 6. Selecciona el nuevo idioma en la lista de idiomas
-7. haga clic en `Set as default`.
+7. Haga clic en `Set as default`
 
 Ahora abre el menú Inicio y busca la aplicación. Deberías ver los valores localizados para el idioma seleccionado (otras aplicaciones también pueden aparecer localizadas). Si no ves el nombre localizado enseguida, espera unos minutos hasta que se actualice la memoria caché del menú Inicio. Para volver a tu idioma nativo, simplemente haz que sea el idioma predeterminado en la lista de idiomas. 
 
@@ -578,7 +578,7 @@ A partir de aquí, la aplicación de muestra puede continuar usando `CreateFile`
 
 #### <a name="loading-net-resources"></a>Carga de recursos de .NET
 
-Debido a que .NET tiene integrado un mecanismo para localizar y cargar recursos (denominados "ensamblados satélite"), no hay ningún código explícito que se tenga que reemplazar como en el ejemplo sintético anterior: en .NET solo se necesitan los archivos DLL de recursos en los directorios adecuados y se localizan automáticamente. Cuando una aplicación se empaqueta como un MSIX o un AppX con paquetes de recursos, la estructura de directorios es algo diferente, en lugar de tener los directorios de recursos como subdirectorios del directorio principal de la aplicación, son del mismo nivel (o no están presentes en absoluto si el usuario no incluye el idioma en sus preferencias). 
+Debido a que .NET tiene integrado un mecanismo para localizar y cargar recursos (denominados "ensamblados satélite"), no hay ningún código explícito que se tenga que reemplazar como en el ejemplo sintético anterior: en .NET solo se necesitan los archivos DLL de recursos en los directorios adecuados y se localizan automáticamente. Cuando una aplicación se empaqueta como un MSIX o un. appx mediante paquetes de recursos, la estructura de directorios es algo diferente, en lugar de tener los directorios de recursos como subdirectorios del directorio principal de la aplicación, son del mismo nivel (o no aparecen en absoluto si el usuario no incluye el idioma en sus preferencias). 
 
 Por ejemplo, imagina una aplicación .NET con el siguiente diseño, en que todos los archivos existen en la carpeta `MainApp`:
 
@@ -595,7 +595,7 @@ Por ejemplo, imagina una aplicación .NET con el siguiente diseño, en que todos
 </pre>
 </blockquote>
 
-Después de la conversión a AppX, el diseño tendrá un aspecto similar al siguiente, suponiendo que `en-US` sea el idioma predeterminado y el usuario tenga el alemán y el francés en su lista de idiomas:
+Después de la conversión a. appx, el diseño tendrá un aspecto similar al siguiente, suponiendo que `en-US` era el idioma predeterminado y que el usuario tiene el alemán y el francés en la lista de idiomas:
 
 <blockquote>
 <pre>
@@ -630,7 +630,7 @@ static class PriResourceResolver
 
     var resource = ResourceManager.Current.MainResourceMap.GetSubtree("Files")[fileName];
 
-    // Note use of 'UnsafeLoadFrom' - this is required for apps installed with AppX, but
+    // Note use of 'UnsafeLoadFrom' - this is required for apps installed with .appx, but
     // in general is discouraged. The full sample provides a safer wrapper of this method
     return Assembly.UnsafeLoadFrom(resource.Resolve(resourceContext).ValueAsString);
   }

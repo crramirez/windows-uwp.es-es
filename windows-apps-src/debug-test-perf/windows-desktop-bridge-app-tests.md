@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, UWP, certificación de aplicaciones
 ms.localizationpriority: medium
-ms.openlocfilehash: ec780253deb170c5dde1828add366907c403f100
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: c7ffd500f3b616367ac26dffbbfc03d43b507dac
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681906"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089411"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Pruebas de la aplicación Puente de dispositivo de escritorio de Windows
 
@@ -43,7 +43,7 @@ Las aplicaciones de escritorio convertidas pueden mejorarse con una amplia gama 
 Consulta [Puente de dispositivo de escritorio a UWP: extensiones de aplicación](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions) para ver una explicación de estas extensiones y cómo usarlas correctamente. 
 
 ### <a name="3-debug-configuration-test"></a>3. Prueba de configuración de depuración
-Esta prueba verifica que la appx no es una versión de depuración.
+Esta prueba comprueba que el. msix o. appx no es una compilación de depuración.
  
 **Fondo**  
 Para que se certifique el Microsoft Store, las aplicaciones no se deben compilar para depurar y no deben hacer referencia a las versiones de depuración de un archivo ejecutable. Además, debes crear tu propio código según lo optimice tu aplicación para pasar esta prueba.
@@ -90,7 +90,7 @@ Esta prueba comprueba si la aplicación está intentando iniciar archivos ejecut
 Las funcionalidades de uso especial están indicadas para escenarios muy específicos. Estas funcionalidades solo pueden usarse en cuentas de empresa. 
 
 **Detalles de la prueba**  
-Examinan si la aplicación declara alguna de las siguientes funcionalidades: 
+Examina si la aplicación declara alguna de las siguientes funcionalidades: 
 * EnterpriseAuthentication
 * SharedUserCertificates
 * DocumentsLibrary
@@ -107,10 +107,10 @@ Es posible que la aplicación no se instale correctamente si las cadenas o imág
 **Detalles de la prueba**  
 Inspecciona los recursos definidos en el manifiesto de la aplicación para asegurarse de que estén presentes y sean válidos.
 
-**Acción correctiva**:  
+**Acción correctiva**  
 Usa la siguiente tabla como guía.
 
-Mensaje de error | Observaciones
+Mensaje de error | Comentarios
 --------------|---------
 La imagen {image name} define ambos calificadores Scale y TargetSize; puedes definir un calificador por vez. | Puedes personalizar imágenes para distintas resoluciones. En el mensaje en sí, {image name}contiene el nombre de la imagen que presenta el error. Asegúrate de que cada imagen defina Scale o TargetSize como calificador. 
 La imagen {image name} no cumple con las restricciones de tamaño.  | Asegúrate de que todas las imágenes de la aplicación cumplan con las restricciones de tamaño apropiado. En el mensaje en sí, {image name}contiene el nombre de la imagen que presenta el error. 
@@ -154,11 +154,11 @@ Examina el manifiesto de la aplicación para comprobar que el contenido sea corr
 * **Extensiones de archivo y protocolos**  
 La aplicación puede declarar los tipos de archivo a los que se puede asociar. Una declaración de un gran número de tipos de archivo poco comunes provoca una experiencia de usuario deficiente. Esta prueba limita el número de extensiones de archivo con las que puede asociarse una aplicación.
 * **Regla de dependencia de marco**  
-Esta prueba aplica el requisito de que las aplicaciones declaren las dependencias adecuadas en UWP. Si se encuentra una dependencia inadecuada, la aplicación no superará la prueba. Si hay un error de coincidencia entre la versión del sistema operativo a la que se dirige la aplicación y las dependencias de marco establecidas, la aplicación no superará la prueba. Tampoco lo hará si hace referencia a alguna "versión preliminar " de los archivos dll del marco.
+Esta prueba aplica el requisito de que las aplicaciones declaren las dependencias adecuadas en UWP. Si se encuentra una dependencia inadecuada, la aplicación no pasará la prueba. Si hay un error de coincidencia entre la versión del sistema operativo a la que se dirige la aplicación y las dependencias de marco establecidas, la aplicación no superará la prueba. Tampoco lo hará si hace referencia a alguna "versión preliminar " de los archivos dll del marco.
 * **Comprobación de la comunicación entre procesos (IPC)**  
 Esta prueba impone el requisito de que las aplicaciones Puente de dispositivo de escritorio no se comunican fuera del contenedor de la aplicación con componentes del escritorio. La comunicación entre procesos está pensada exclusivamente para las aplicaciones de prueba. Las aplicaciones en las que el nombre especificado en [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute) sea `DesktopApplicationPath` no superarán esta prueba.  
 
-**Acción correctiva**:  
+**Acción correctiva**  
 Compara el manifiesto de la aplicación con los requisitos descritos en la página sobre los [Requisitos del paquete de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
 
 

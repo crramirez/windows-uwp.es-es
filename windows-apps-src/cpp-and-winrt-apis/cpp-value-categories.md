@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, estándar, c ++, cpp, winrt, proyección, movimiento, reenvío, categorías de valor, semántica de movimiento, reenvío directo, lvalue, rvalue, glvalue, prvalue, xvalue
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a11d7763c33df6733a8dbf78392d27417e7cf18d
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 1312b84ded26859cd4b83ffbe3e8a75bfdef6950
+ms.sourcegitcommit: 20ee991a1cf87ef03c158cd3f38030c7d0e483fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270205"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77037885"
 ---
 # <a name="value-categories-and-references-to-them"></a>Categorías de valor y referencias a estas
 En este tema se describen las distintas categorías de valores (y referencias a los valores) que existen en C++. Seguro que has oído hablar de *lvalues* y *rvalues*, pero puede que no pienses en ellos de la forma que presenta este tema. Y también hay otros tipos de valores.
@@ -58,7 +58,7 @@ Un valor lvalue, por el contrario, no es móvil, tal como se muestra en esta ilu
 No se puede mover un valor lvalue. Sin embargo, *existe* un tipo de valores glvalue (el conjunto de cosas con identidad) que se puede mover, si sabes lo que estás haciendo (incluido tener cuidado de no acceder a él después de moverlo), y se llama xvalue. Más adelante retomaremos esta idea cuando nos centremos en la imagen completa de las categorías de valor.
 
 ## <a name="rvalue-references-and-reference-binding-rules"></a>Referencias rvalue y reglas de enlace de referencias
-En esta sección se presenta la sintaxis para una referencia a un valor rvalue. Tendremos que esperar a que otro tema reciba un tratamiento detallado del movimiento y reenvío, pero esos son problemas que las referencias rvalue resuelven. Aunque, antes de adentrarnos en las referencias rvalue, primero es necesario ser más claros sobre `T&`, lo que anteriormente hemos llamado simplemente "una referencia". Realmente es "una referencia lvalue (distinta de const)", que se refiere a un valor en el que el usuario de la referencia puede escribir.
+En esta sección se presenta la sintaxis para una referencia a un valor rvalue. Tendremos que esperar a otro tema para profundizar en el movimiento y reenvío, pero basta decir que las referencias rvalue son una parte necesaria de la solución a esos problemas. Aunque, antes de adentrarnos en las referencias rvalue, primero es necesario ser más claros sobre `T&`, lo que anteriormente hemos llamado simplemente "una referencia". Realmente es "una referencia lvalue (distinta de const)", que se refiere a un valor en el que el usuario de la referencia puede escribir.
 
 ```cppwinrt
 template<typename T> T& get_by_lvalue_ref() { ... } // Get by lvalue (non-const) reference.
