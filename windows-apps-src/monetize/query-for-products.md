@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, ver productos, Microsoft Store collection API, view products
 ms.localizationpriority: medium
-ms.openlocfilehash: c071ca83381e47664e44ef506927c82a4687992d
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 0f6976f8161089be1f907d85e7373fc0f3474c62
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867714"
+ms.lasthandoff: 02/10/2020
+ms.locfileid: "77112245"
 ---
 # <a name="query-for-products"></a>Consultar productos
 
@@ -36,36 +36,36 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 
 | Método | URI de solicitud                                                 |
 |--------|-------------------------------------------------------------|
-| EXPONER   | ```https://collections.mp.microsoft.com/v6.0/collections/query``` |
+| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/query``` |
 
 
 ### <a name="request-header"></a>Encabezado de la solicitud
 
-| Header         | Type   | Descripción                                                                                           |
+| Encabezado         | Tipo   | Descripción                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorización  | string | Necesario. El token de acceso Azure ad en el *token*&gt;de **portador** &lt;del formulario.                           |
+| Authorization  | string | Obligatorio. El token de acceso de Azure AD con el formato **portador** &lt;&gt;de *token* .                           |
 | Host           | string | Debe establecerse en el valor **collections.mp.microsoft.com**.                                            |
 | Content-Length | número | Longitud del cuerpo de la solicitud.                                                                       |
-| Content-Type   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
+| Tipo de contenido   | string | Especifica los tipos de solicitud y respuesta. Actualmente, el único valor admitido es **application/json**. |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
 
-| Parámetro         | Type         | Descripción         | Obligatorio |
+| Parámetro         | Tipo         | Descripción         | Obligatorio |
 |-------------------|--------------|---------------------|----------|
-| beneficiaries     | enumerar&lt;UserIdentity & gt | Una lista de objetos UserIdentity que representan los usuarios que consultan los productos. Para obtener más información, consulta la tabla siguiente.    | Sí      |
-| continuationToken | string       | Si hay varios conjuntos de productos, el cuerpo de la respuesta devuelve un token de continuación cuando se alcanza el límite de la página. Proporciona ese token de continuación aquí en llamadas posteriores para recuperar los productos restantes.       | Sin       |
-| maxPageSize       | número       | Número máximo de productos que puede devolver una respuesta. El valor predeterminado y máximo es de 100.                 | Sin       |
-| modifiedAfter     | datetime     | Si se especifica, el servicio devuelve solo los productos modificados después de esta fecha.        | Sin       |
-| parentProductId   | string       | Si se especifica, el servicio devuelve solo los complementos que corresponden a la aplicación especificada.      | Sin       |
+| beneficiaries     | enumerar&lt;UserIdentity&gt; | Una lista de objetos UserIdentity que representan los usuarios que consultan los productos. Para obtener más información, consulta la tabla siguiente.    | Sí      |
+| continuationToken | string       | Si hay varios conjuntos de productos, el cuerpo de la respuesta devuelve un token de continuación cuando se alcanza el límite de la página. Proporciona ese token de continuación aquí en llamadas posteriores para recuperar los productos restantes.       | No       |
+| maxPageSize       | número       | Número máximo de productos que puede devolver una respuesta. El valor predeterminado y máximo es de 100.                 | No       |
+| modifiedAfter     | datetime     | Si se especifica, el servicio devuelve solo los productos modificados después de esta fecha.        | No       |
+| parentProductId   | string       | Si se especifica, el servicio devuelve solo los complementos que corresponden a la aplicación especificada.      | No       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | Si se especifica, el servicio devuelve solo los productos aplicables a los pares de producto o SKU proporcionados. Para obtener más información, consulta la tabla siguiente.      | No       |
-| productTypes      | cadena&lt;de lista&gt;       | Especifica los tipos de productos que se van a devolver en los resultados de la consulta. Los tipos de producto admitidos son **Application**, **Durable** y **UnmanagedConsumable**.     | Sí       |
-| validityType      | string       | Si se establece en **All**, se devolverán todos los productos de un usuario, incluidos los artículos expirados. Si se establece en **Valid**, solo se devolverán los productos que sean válidos en este momento (es decir, que tengan un estado activo, una fecha de inicio anterior a la actual &lt; y una fecha final posterior &gt; a la actual). | Sin       |
+| productTypes      | enumerar&lt;cadena&gt;       | Especifica los tipos de productos que se van a devolver en los resultados de la consulta. Los tipos de producto admitidos son **Application**, **Durable** y **UnmanagedConsumable**.     | Sí       |
+| validityType      | string       | Si se establece en **All**, se devolverán todos los productos de un usuario, incluidos los artículos expirados. Si se establece en **Valid**, solo se devolverán los productos que sean válidos en este momento (es decir, que tengan un estado activo, una fecha de inicio anterior a la actual &lt; y una fecha final posterior &gt; a la actual). | No       |
 
 
 El objeto UserIdentity contiene los parámetros siguientes.
 
-| Parámetro            | Type   |  Descripción      | Obligatorio |
+| Parámetro            | Tipo   |  Descripción      | Obligatorio |
 |----------------------|--------|----------------|----------|
 | identityType         | string | Especifica el valor de cadena **b2b**.    | Sí      |
 | identityValue        | string | La [clave de identificador de Microsoft Store](view-and-grant-products-from-a-service.md#step-4) que representa la identidad del usuario cuyos productos quieres consultar.  | Sí      |
@@ -74,7 +74,7 @@ El objeto UserIdentity contiene los parámetros siguientes.
 
 El objeto ProductSkuId contiene los parámetros siguientes.
 
-| Parámetro | Type   | Descripción          | Obligatorio |
+| Parámetro | Tipo   | Descripción          | Obligatorio |
 |-----------|--------|----------------------|----------|
 | productId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para un [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) del catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un producto es 9NBLGGH42CFD. | Sí      |
 | skuID     | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) de un producto del catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un SKU es 0010.       | Sí      |
@@ -117,33 +117,33 @@ Content-Type: application/json
 
 ### <a name="response-body"></a>Cuerpo de la respuesta
 
-| Parámetro         | Type                     | Descripción          | Obligatorio |
+| Parámetro         | Tipo                     | Descripción          | Obligatorio |
 |-------------------|--------------------------|-----------------------|----------|
-| continuationToken | string                   | Si hay varios conjuntos de productos, este token se devuelve cuando se alcanza el límite de la página. Puedes especificar este token de continuación en llamadas posteriores para recuperar los productos restantes. | Sin       |
-| items             | CollectionItemContractV6 | Matriz de productos para el usuario especificado. Para obtener más información, consulta la tabla siguiente.        | No       |
+| continuationToken | string                   | Si hay varios conjuntos de productos, este token se devuelve cuando se alcanza el límite de la página. Puedes especificar este token de continuación en llamadas posteriores para recuperar los productos restantes. | No       |
+| elementos             | CollectionItemContractV6 | Matriz de productos para el usuario especificado. Para obtener más información, consulta la tabla siguiente.        | No       |
 
 
 El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 
-| Parámetro            | Type               | Descripción            | Obligatorio |
+| Parámetro            | Tipo               | Descripción            | Obligatorio |
 |----------------------|--------------------|-------------------------|----------|
 | acquiredDate         | datetime           | Fecha en que el usuario compró el artículo.                  | Sí      |
-| campaignId           | string             | Identificador de campaña que se proporcionó al realizar la compra del artículo.                  | Sin       |
-| devOfferId           | string             | El identificador de la oferta de una compra desde la aplicación.              | Sin       |
+| campaignId           | string             | Identificador de campaña que se proporcionó al realizar la compra del artículo.                  | No       |
+| devOfferId           | string             | El identificador de la oferta de una compra desde la aplicación.              | No       |
 | endDate              | datetime           | La fecha de finalización del artículo.              | Sí      |
-| fulfillmentData      | string             | N/D         | Sin       |
+| fulfillmentData      | string             | N/D         | No       |
 | inAppOfferToken      | string             | La cadena de identificador de producto especificada por el desarrollador que se asigna al elemento en el centro de Partners. Un identificador de producto de ejemplo es *product123*. | No       |
 | itemId               | string             | Id. que identifica este artículo de colección de otros artículos que posee el usuario. Este identificador es único para cada producto.   | Sí      |
 | localTicketReference | string             | Id. de *localTicketReference* que se suministró previamente en el cuerpo de la solicitud.                  | Sí      |
 | modifiedDate         | datetime           | Fecha de la última modificación de este artículo.              | Sí      |
-| orderId              | string             | Si está presente, el identificador del objeto del que se obtuvo este artículo.              | Sin       |
-| orderLineItemId      | string             | Si está presente, el artículo de línea de un pedido concreto para el que se obtuvo el artículo.              | Sin       |
+| orderId              | string             | Si está presente, el identificador del objeto del que se obtuvo este artículo.              | No       |
+| orderLineItemId      | string             | Si está presente, el artículo de línea de un pedido concreto para el que se obtuvo el artículo.              | No       |
 | ownershipType        | string             | La cadena *OwnedByBeneficiary*.   | Sí      |
 | productId            | string             | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para el [producto](in-app-purchases-and-trials.md#products-skus-and-availabilities) del catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un producto es 9NBLGGH42CFD.          | Sí      |
-| productType          | string             | Uno de los siguientes tipos de productos: **Aplicación**, **durable**y **UnmanagedConsumable**.        | Sí      |
-| purchasedCountry     | string             | N/D   | Sin       |
+| productType          | string             | Uno de los siguientes tipos de producto: **Application**, **Durable** y **UnmanagedConsumable**.        | Sí      |
+| purchasedCountry     | string             | N/D   | No       |
 | purchaser            | IdentityContractV6 | Si está presente, representa la identidad del comprador del artículo. Consulta los detalles de este objeto a continuación.        | No       |
-| quantity             | número             | Cantidad del artículo. Actualmente, el valor siempre será 1.      | Sin       |
+| quantity             | número             | Cantidad del artículo. Actualmente, el valor siempre será 1.      | No       |
 | skuId                | string             | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) para la [SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) del producto del catálogo de Microsoft Store. Un ejemplo de identificador de la Store para un SKU es 0010.     | Sí      |
 | skuType              | string             | Tipo de la SKU. Entre los valores posibles se incluyen **Trial**, **Full** y **Rental**.        | Sí      |
 | startDate            | datetime           | Fecha en que el artículo comienza a ser válido.       | Sí      |
@@ -154,7 +154,7 @@ El objeto CollectionItemContractV6 contiene los parámetros siguientes.
 
 El objeto IdentityContractV6 contiene los parámetros siguientes.
 
-| Parámetro     | Type   | Descripción                                                                        | Obligatorio |
+| Parámetro     | Tipo   | Descripción                                                                        | Obligatorio |
 |---------------|--------|------------------------------------------------------------------------------------|----------|
 | identityType  | string | Contiene el valor *pub*.                                                      | Sí      |
 | identityValue | string | El valor de cadena del elemento *publisherUserId* de la clave de Id. de Microsoft Store especificada. | Sí      |
