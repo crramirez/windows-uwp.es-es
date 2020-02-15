@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, API de colecciones de Microsoft Store, ver productos, Microsoft Store collection API, view products
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f6976f8161089be1f907d85e7373fc0f3474c62
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: a5a986896ca3b2585590e11d17219106a9043204
+ms.sourcegitcommit: 2747d9266e1678fca96d3822ce47499ca91a2c70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2020
-ms.locfileid: "77112245"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77252289"
 ---
 # <a name="query-for-products"></a>Consultar productos
 
@@ -59,7 +59,7 @@ Para obtener más información, consulta [Administrar los derechos de producto d
 | modifiedAfter     | datetime     | Si se especifica, el servicio devuelve solo los productos modificados después de esta fecha.        | No       |
 | parentProductId   | string       | Si se especifica, el servicio devuelve solo los complementos que corresponden a la aplicación especificada.      | No       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | Si se especifica, el servicio devuelve solo los productos aplicables a los pares de producto o SKU proporcionados. Para obtener más información, consulta la tabla siguiente.      | No       |
-| productTypes      | enumerar&lt;cadena&gt;       | Especifica los tipos de productos que se van a devolver en los resultados de la consulta. Los tipos de producto admitidos son **Application**, **Durable** y **UnmanagedConsumable**.     | Sí       |
+| productTypes      | enumerar&lt;cadena&gt;       | Especifica los tipos de productos que se van a devolver en los resultados de la consulta. Los tipos de productos admitidos son **Application**, **durable**, **Game**y **UnmanagedConsumable**.     | Sí       |
 | validityType      | string       | Si se establece en **All**, se devolverán todos los productos de un usuario, incluidos los artículos expirados. Si se establece en **Valid**, solo se devolverán los productos que sean válidos en este momento (es decir, que tengan un estado activo, una fecha de inicio anterior a la actual &lt; y una fecha final posterior &gt; a la actual). | No       |
 
 
