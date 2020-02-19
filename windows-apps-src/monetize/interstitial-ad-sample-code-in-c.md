@@ -2,18 +2,21 @@
 ms.assetid: 7a16b0ca-6b8e-4ade-9853-85690e06bda6
 description: Aprende a iniciar un anuncio intersticial con C#.
 title: Código de ejemplo de anuncios intersticiales en C#
-ms.date: 03/22/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, intersticial, c#, código de muestra, ads, advertising, interstitial, sample code
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c05681d2f59c88643e8cd224bb7de554a35de8d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 4179d0dde5577093a2ae30c539adf0a8c544d56b
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259285"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463367"
 ---
 # <a name="interstitial-ad-sample-code-in-c"></a>Código de ejemplo de ad intersticial en C\# #  
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 En este tema se proporciona un código de muestra completo para una aplicación básica para la Plataforma universal de Windows (UWP) en C# y XAML que muestra un anuncio intersticial. Para obtener instrucciones paso a paso que ilustran cómo configurar el proyecto para usar este código, consulta [Anuncios intersticiales](interstitial-ads.md). Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 

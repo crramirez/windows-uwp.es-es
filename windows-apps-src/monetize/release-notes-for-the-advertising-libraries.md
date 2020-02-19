@@ -2,25 +2,25 @@
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
 description: Revisa las notas de la versión de las bibliotecas de Microsoft Advertising.
 title: Notas de la versión de las bibliotecas de publicidad
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, release notes, notas de la versión
 ms.localizationpriority: medium
-ms.openlocfilehash: 04d3554620cde44fc9907845a7765d023e1ed03e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 50eea90dcf8ed59f420953eec5da5b7a0fe6b4b2
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260205"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463917"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de la versión de las bibliotecas de publicidad
 
-
-
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 En esta sección se proporcionan las notas de la versión para la versión actual de las bibliotecas de Microsoft Advertising. Estas bibliotecas admiten aplicaciones XAML y JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8,1 y Windows Phone 8.
 
-## <a name="installation"></a>Instalación
+## <a name="installation"></a>Installation
 
 
 Las bibliotecas de publicidad de Microsoft están disponibles como parte del [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK). Para más información sobre cómo instalar el SDK, consulta [Instalar el SDK de Microsoft Advertising](install-the-microsoft-advertising-libraries.md).

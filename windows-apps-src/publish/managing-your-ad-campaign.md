@@ -1,34 +1,36 @@
 ---
-Description: Administrar campañas de anuncios para las aplicaciones en el centro de partners.
-title: Administrar la campaña publicitaria
+Description: Administrar campañas de AD para las aplicaciones en el centro de Partners.
+title: Administrar campañas publicitarias
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
-ms.date: 06/19/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ead654573d16628e5dd07c58c937d4f71cb7f84c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d79e65b2937e7ec6db57e00b31b44b1796203a50
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608510"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463977"
 ---
-# <a name="manage-your-ad-campaign"></a>Administrar la campaña publicitaria
+# <a name="manage-your-ad-campaign"></a>Administrar campañas publicitarias
 
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
-Para administrar campañas de anuncios para la aplicación en [centro de partners](https://partner.microsoft.com/dashboard), expanda **atraiga** en el menú de navegación izquierdo y, a continuación, seleccione **campañas publicitarias**. Aparecerán todas las campañas publicitarias asociadas a tus aplicaciones, junto con las impresiones, los clics y las instalaciones de cada una de ellas. Para obtener más información acerca de las impresiones, los clics y las instalaciones, consulta las definiciones de estos términos en [Informe Campaña publicitaria](promote-your-app-report.md).
+Para administrar campañas de AD para su aplicación en el [centro de Partners](https://partner.microsoft.com/dashboard), expanda **atraer** en el menú de navegación izquierdo y, a continuación, seleccione **campañas de anuncios**. Aparecerán todas las campañas publicitarias asociadas a tus aplicaciones, junto con las impresiones, los clics y las instalaciones de cada una de ellas. Para obtener más información acerca de las impresiones, los clics y las instalaciones, consulta las definiciones de estos términos en [Informe Campaña publicitaria](promote-your-app-report.md).
 
 Para filtrar la lista de campañas publicitarias, haz clic en el menú desplegable **Filtros de sección** desplegable y elige entre los siguientes filtros:
 
--   **Fecha**: Especifica el intervalo de datos de impresiones, clics e instalaciones que están asociadas con las campañas de publicidad.
--   **Estado**: Esto especifica el estado de las campañas de ad:
+-   **Fecha**: especifica el intervalo de fechas de las impresiones, los clics y las instalaciones asociados a las campañas publicitarias.
+-   **Estado**: especifica el estado de las campañas publicitarias.
     -   **Activo** indica que la campaña publicitaria se está ejecutando y está procesando datos. Para poner en pausa temporalmente una campaña publicitaria, haz clic en **Pausar** en la columna **Acción** de la tabla de campañas publicitarias.
     -   **En pausa** indica que la campaña publicitaria está temporalmente en espera y no está procesando datos. Para reanudar una campaña publicitaria, haz clic en **Reanudar** en la columna **Acción** de la tabla de campañas publicitarias.
     -   **Finalizado** indica que la campaña publicitaria alcanzó la fecha de finalización que especificaste al crear o modificar por última vez la campaña publicitaria.
     -   **Requiere atención** indica que la campaña publicitaria tiene problemas que requieren tu atención, como un error de facturación o un diseño de anuncio personalizado que no se pudo validar. Para solucionar los problemas, haz clic en el texto de la columna **Acción** de la tabla de campañas publicitarias.
--   **Tipo de campaña**: Especifica si mostrar pago o [casa](about-house-ads.md) campañas de anuncios.
+-   **Tipo de campaña**: especifica si se van a mostrar campañas publicitarias de pago o [internas](about-house-ads.md).
 
-## <a name="reporting"></a>Generación de informes
+## <a name="reporting"></a>Reporting
 
 
 Los detalles de generación de informes se muestran en esta página. Para obtener más información, consulta el [Informe Campaña publicitaria](promote-your-app-report.md).
@@ -42,10 +44,10 @@ Para realizar cambios en una campaña publicitaria, haz clic en su nombre para i
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Crear una campaña de publicidad para la aplicación](create-an-ad-campaign-for-your-app.md)
-* [Sobre anuncios de casa](about-house-ads.md)
+* [Crear una campaña de AD para la aplicación](create-an-ad-campaign-for-your-app.md)
+* [Acerca de los anuncios de casa](about-house-ads.md)
 * [Informe de anuncios de instalación de aplicaciones](app-install-ads-reports.md)
-* [Las preguntas más frecuentes](common-questions.md)
+* [Preguntas comunes](common-questions.md)
  
 
  

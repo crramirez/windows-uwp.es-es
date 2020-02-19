@@ -2,18 +2,21 @@
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
 description: Aprende a instalar el SDK de Microsoft Advertising.
 title: Instala el SDK de Microsoft Advertising
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, uwp, anuncios, publicidad, instalar, SDK, biblioteca de publicidad
 ms.localizationpriority: medium
-ms.openlocfilehash: 37e57d49ba40814891154aef2ec0de6b3b7e560c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: f3b63ac40041b93372544d586d3feb23940fccc5
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260268"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463391"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instala el SDK de Microsoft Advertising
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 Para mostrar anuncios en las aplicaciones para UWP en Windows 10, instala el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK). Este SDK es una extensión de Visual Studio 2015 y versiones posteriores.
 
@@ -26,7 +29,7 @@ Para mostrar anuncios en las aplicaciones para UWP en Windows 10, instala el [S
 
 Para instalar el SDK de Microsoft Advertising mediante el instalador MSI:
 
-1.  Cierra todas las instancias de Visual Studio.
+1.  Cierre todas las instancias de Visual Studio.
 
 2. Si anteriormente habías instalado una versión anterior del SDK de Microsoft Advertising, el SDK de cliente de anuncios universal, la extensión Ad Mediator o el SDK de Microsoft Store Engagement and Monetization, desinstala ahora esas versiones de SDK. Opcionalmente, abre una ventana de **símbolo del sistema** y ejecuta estos comandos para limpiar todas las versiones de SDK de publicidad anteriores que se hayan instalado con Visual Studio, pero que podrían no aparecer en la lista de programas instalados en el equipo:
     ```console
@@ -49,7 +52,7 @@ Para instalar el SDK de Microsoft Advertising mediante el instalador MSI:
 
 Para instalar el SDK de Microsoft Advertising en un proyecto de UWP específico a través de NuGet:
 
-1.  Cierra todas las instancias de Visual Studio.
+1.  Cierre todas las instancias de Visual Studio.
 
 2.  Si anteriormente habías instalado una versión anterior del SDK de Microsoft Advertising, el SDK de cliente de anuncios universal, la extensión Ad Mediator o el SDK de Microsoft Store Engagement and Monetization, desinstala ahora esas versiones de SDK. Opcionalmente, abre una ventana de **símbolo del sistema** y ejecuta estos comandos para limpiar todas las versiones de SDK de publicidad anteriores que se hayan instalado con Visual Studio, pero que podrían no aparecer en la lista de programas instalados en el equipo:
     ```console
@@ -80,7 +83,7 @@ Para instalar el SDK de Microsoft Advertising en un proyecto de UWP específico 
 
 Después de instalar el SDK de Microsoft Advertising, sigue estas instrucciones para hacer referencia al SDK en tu proyecto para usar las API de publicidad.
 
-1. Abre el proyecto en Visual Studio.
+1. Abra el proyecto en Visual Studio.
     > [!NOTE]
     > Si el destino del proyecto es **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica por arquitectura (por ejemplo, **x86**). Si el destino del proyecto es **Cualquier CPU**, no podrás agregar una referencia al SDK de Microsoft Advertising correctamente a través de los siguientes pasos. Para obtener más información, consulta [Errores de referencia derivados de orientar el proyecto a Cualquier CPU](known-issues-for-the-advertising-libraries.md#reference_errors).
 

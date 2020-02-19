@@ -2,18 +2,21 @@
 ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: Aprende a detectar errores de AdControl en la aplicación.
 title: Tutorial de control de errores en JavaScript
-ms.date: 05/11/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, ads, publicidad, advertising, control de errores, error handling, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b68979bfa6b1f661ca7765ebc2598b201f013e2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 01b9949a17d5653bf121018dc40058b99af21719
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260299"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463857"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>Tutorial de control de errores en JavaScript
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 En este tutorial se muestra cómo detectar errores relacionados con los anuncios en la aplicación JavaScript. Este tutorial usa un objeto [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un anuncio de banner, pero los conceptos generales en él también se aplican a anuncios intersticiales y anuncios nativos.
 

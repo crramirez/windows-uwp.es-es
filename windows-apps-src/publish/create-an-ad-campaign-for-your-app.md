@@ -2,18 +2,21 @@
 Description: Puede crear campañas de AD en el centro de partners para ayudar a promocionar su aplicación y a ampliar la base de usuarios de la aplicación.
 title: Crear una campaña publicitaria para tu aplicación
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
-ms.date: 10/31/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, anuncio, campaña, promover
 ms.localizationpriority: medium
-ms.openlocfilehash: ec5d23a502c5517193956da6c57efe1eb668e0f0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: e804260a312c963c380f4d09b00cc276b385c2ff
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260019"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463727"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Crear una campaña publicitaria para tu aplicación
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 Puede crear campañas de AD en el [centro de Partners](https://partner.microsoft.com/dashboard) para ayudar a promocionar su aplicación y a ampliar su base de usuarios. De forma predeterminada, elegiremos el público de destino de los anuncios en función de la configuración de la aplicación en el centro de Partners, pero también puede definir su propia audiencia. También puedes usar un conjunto predeterminado de plantillas de anuncios o cargar tus propios diseños de anuncio. Para obtener más información sobre las campañas publicitarias, consulta [Preguntas comunes sobre las campañas publicitarias](common-questions.md).
 

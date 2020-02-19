@@ -2,18 +2,21 @@
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: Aprende a incluir anuncios intersticiales en una aplicación para UWP para Windows 10 con el SDK de Microsoft Advertising.
 title: Anuncios intersticiales
-ms.date: 03/22/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de anuncios, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 98800f1a9a94de20910e932032d8b949bac52dde
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: b953fe0aca3d0ab9b8ce27f2b068c3bf1b869c83
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259279"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463957"
 ---
 # <a name="interstitial-ads"></a>Anuncios intersticiales
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 En este tutorial se muestra cómo incluir anuncios intersticiales en juegos y aplicaciones de la Plataforma universal de Windows (UWP) para Windows 10. Para obtener proyectos de muestra completos que muestran cómo agregar anuncios intersticiales a aplicaciones de JavaScript y HTML y aplicaciones XAML con C# y C++, consulta las [muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 
@@ -52,7 +55,7 @@ Para mostrar anuncios intersticiales en tu aplicación, sigue las instrucciones 
 
 En esta sección se proporcionan ejemplos en C#, pero Visual Basic y C++ también son compatibles con proyectos XAML/.NET. Para obtener un ejemplo de código C# completo, consulta [Código de ejemplo de anuncios intersticiales en C#](interstitial-ad-sample-code-in-c.md).
 
-1. Abre el proyecto en Visual Studio.
+1. Abra el proyecto en Visual Studio.
     > [!NOTE]
     > Si estás usando un proyecto existente, abre el archivo Package.appxmanifest en el proyecto y asegúrate de que la funcionalidad **Internet (cliente)** está seleccionada. La aplicación necesita esta funcionalidad para recibir anuncios de prueba y anuncios dinámicos.
 
@@ -105,7 +108,7 @@ En esta sección se proporcionan ejemplos en C#, pero Visual Basic y C++ tambié
 
 En las siguientes instrucciones se supone que has creado un proyecto de Windows universal para JavaScript en Visual Studio y te diriges a una CPU específica. Para obtener un ejemplo de código completo, consulta [Código de ejemplo de anuncios intersticiales en JavaScript](interstitial-ad-sample-code-in-javascript.md).
 
-1. Abre el proyecto en Visual Studio.
+1. Abra el proyecto en Visual Studio.
 
 2. Si el destino del proyecto es **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica por arquitectura (por ejemplo, **x86**). Si el destino del proyecto es **Cualquier CPU**, no podrás agregar una referencia a la biblioteca de publicidad de Microsoft correctamente a través de los siguientes pasos. Para obtener más información, consulta [Errores de referencia derivados de orientar el proyecto a Cualquier CPU](known-issues-for-the-advertising-libraries.md#reference_errors).
 
@@ -160,7 +163,7 @@ En las siguientes instrucciones se supone que has creado un proyecto de Windows 
 
 En este ejemplo se supone que has creado un proyecto de **Aplicación XAML y DirectX (Windows universal)** en C++ de Visual Studio y te diriges a una arquitectura de CPU concreta.
  
-1. Abre el proyecto en Visual Studio.
+1. Abra el proyecto en Visual Studio.
 
 3. Agrega una referencia al SDK de Microsoft Advertising en el proyecto:
 

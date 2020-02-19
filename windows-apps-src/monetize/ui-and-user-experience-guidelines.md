@@ -2,25 +2,28 @@
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: Obtén las directrices de la interfaz de usuario y de la experiencia del usuario para los anuncios en aplicaciones.
 title: Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
-ms.date: 05/11/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, guidelines, directrices, best practices, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: cf7f61f427ef0b1a0ff5b6f3b66d02d13d02e4ab
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 2ce51f1ec99b080de6483b1d703492050c7a434c
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320683"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463927"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 En este artículo se proporcionan directrices para ofrecer magníficas experiencias con anuncios de banner, anuncios intersticiales y anuncios nativos en las aplicaciones. Para obtener instrucciones generales sobre cómo diseñar la apariencia de las aplicaciones, consulta [Diseño e interfaz de usuario](https://developer.microsoft.com/windows/apps/design).
 
 > [!IMPORTANT]
 > Todo uso de publicidad en tu aplicación debe regirse por las Directivas de Microsoft Store, que incluyen, entre otras, la [directiva 10.10](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) (Conducta y contenido de publicidad). En concreto, la implementación de anuncios de banner o anuncios intersticiales de la aplicación debe cumplir los requisitos de directiva de Microsoft Store [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content). En este artículo se incluyen ejemplos de implementaciones que infringirían dicha directiva. Tales ejemplos se proporcionan para fines informativos solamente, como una forma de ayudarte a comprender mejor la directiva. Estos ejemplos no son integrales y es posible que haya muchas otras formas de infringir las Directivas de Microsoft Store que no se muestran en este artículo.
 
-## <a name="general-best-practices"></a>Procedimientos recomendados generales
+## <a name="general-best-practices"></a>Prácticas recomendadas generales
 
 Antes de revisar nuestras directrices para diferentes tipos de anuncios en este artículo, revisa estos procedimientos recomendados generales para mejorar tus ingresos por anuncios.
 
@@ -71,13 +74,13 @@ En esta sección se proporcionan ejemplos de escenarios de anuncios de banner qu
 
 * Omitir, de cualquier manera, el temporizador de actualización mínima integrado para anuncios de banner, lo que incluye, entre otros, intercambiar objetos [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) o forzar una actualización de la página sin interacción del usuario.
 
-* Uso de unidades de anuncios en directo (es decir, las unidades de anuncios que se obtiene desde el centro de partners) durante el desarrollo y pruebas, o en un emulador.
+* Usar unidades de anuncio en directo (es decir, unidades de anuncios que se obtienen del centro de Partners) durante el desarrollo y las pruebas, o en un emulador.
 
 * Escribir o distribuir código que llame a los servicios de anuncio a través de medios que no sean las bibliotecas de Microsoft Advertising que se ejecutan en el contexto de la aplicación.
 
 * Interactuar con interfaces no documentadas u objetos secundarios creados por las bibliotecas de Microsoft Advertising, por ejemplo, **WebView** o **MediaElement**.
 
-* Para publicar anuncios en un viewbox para reducir el tamaño de los anuncios para permitir que los anuncios más de una página de lo normal.
+* Colocar anuncios en un Viewbox para reducir el tamaño de los anuncios con el fin de permitir más anuncios en una página de lo normal.
 
 <span id="interstitialbestpractices10" />
 
@@ -157,7 +160,7 @@ En esta sección se proporcionan ejemplos de escenarios de anuncios intersticial
 
 * Solicitar un anuncio intersticial solo para tener un anuncio de copia de seguridad para una secuencia de anuncios en cascada. Si solicitas un anuncio intersticial y luego recibes el evento [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready), el siguiente anuncio intersticial que se muestre en la aplicación debe ser el anuncio que está listo para mostrarse a través del método [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show).
 
-* Uso de unidades de anuncios en directo (es decir, las unidades de anuncios que se obtiene desde el centro de partners) durante el desarrollo y pruebas, o en un emulador.
+* Usar unidades de anuncio en directo (es decir, unidades de anuncios que se obtienen del centro de Partners) durante el desarrollo y las pruebas, o en un emulador.
 
 * Escribir o distribuir código que llame a los servicios de anuncio a través de medios que no sean las bibliotecas de Microsoft Advertising que se ejecutan en el contexto de la aplicación.
 

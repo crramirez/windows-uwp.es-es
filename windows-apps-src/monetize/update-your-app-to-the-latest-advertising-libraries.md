@@ -1,23 +1,26 @@
 ---
 description: Aprende a actualizar la aplicación para que use las últimas bibliotecas admitidas de Microsoft Advertising y a asegurarte de que siga recibiendo anuncios de banner.
 title: Usar las bibliotecas de publicidad más recientes para anuncios de banner
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, AdControl, AdControl, AdMediatorControl, AdMediatorControl, migrate, migrar
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: 74ac8499e673cacad897455c7065dd3386103406
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.openlocfilehash: a8ccc8e9c76fc0f16bcdfc619d8048307fdfbc57
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735050"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463887"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Actualizar la aplicación a las bibliotecas de publicidad más recientes de anuncios de banner
 
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+
 A partir del 1 de abril de 2017, ya no se proporcionan anuncios de banner a aplicaciones que usan una versión no compatible del SDK de publicidad. Si usas **AdControl** para mostrar anuncios de banner en la aplicación de Plataforma universal de Windows (UWP), usa la información incluida en este artículo para determinar si usas un SDK de publicidad no compatible y migrar la aplicación a un SDK compatible.
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Las aplicaciones para UWP que muestran anuncios de banner deben usar **AdControl** desde las bibliotecas de publicidad que se distribuyen en el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK). Este SDK admite un conjunto mínimo de capacidades de publicidad, incluida la posibilidad de ofrecer contenido multimedia enriquecido de HTML5 a través de la [especificación Mobile Rich-media Ad Interface Definitions (MRAID) 1.0](https://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf) de Interactive Advertising Bureau (IAB). Muchos de nuestros anunciantes buscan estas capacidades, y exigimos que los desarrolladores de aplicaciones usen una de estas versiones del SDK con el fin de ayudar a que nuestro ecosistema de aplicaciones sea más atractivo para los anunciantes y, en última instancia, generar más ingresos para ti.
 
@@ -31,7 +34,7 @@ Antes de que este SDK se lanzara, proporcionamos anteriormente la clase **AdCont
 
 * Los anuncios de banner también dejarán de proporcionarse para las unidades de anuncios que se usan en más de una aplicación. Asegúrate de que las unidades de anuncios se usen cada una solo en una aplicación.
 
-Si tienes una aplicación (que ya está en la Store o que aún está en desarrollo) que muestra anuncios de banner con **AdControl** y no estás seguro de que SDK de publicidad usa la aplicación, sigue las instrucciones de este artículo para determinar si tienes que actualizar la aplicación a un SDK compatible. Si se produce algún problema o necesitas ayuda, [ponte en contacto con el soporte técnico](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=32136151).
+Si tienes una aplicación (que ya está en la Store o que aún está en desarrollo) que muestra anuncios de banner con **AdControl** y no estás seguro de que SDK de publicidad usa la aplicación, sigue las instrucciones de este artículo para determinar si tienes que actualizar la aplicación a un SDK compatible. Si se produce algún problema o necesitas ayuda, [ponte en contacto con soporte técnico](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=32136151).
 
 > [!NOTE]
 > Si la aplicación ya usa el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) (para aplicaciones para UWP), no necesitas realizar más cambios en tu aplicación.

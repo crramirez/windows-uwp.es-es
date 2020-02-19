@@ -2,18 +2,21 @@
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
 description: Aprende a usar la clase AdScheduler para mostrar anuncios en contenido de vídeo.
 title: Mostrar anuncios en contenido de vídeo
-ms.date: 03/22/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, video, vídeo, scheduler, programador, javascript, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6178758cd67471d56b1d65e293104e987e81fb9b
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: ea3287af2164457f37b5f148289d4d9f9b833595
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681926"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463469"
 ---
 # <a name="show-ads-in-video-content"></a>Mostrar anuncios en contenido de vídeo
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 Este tutorial muestra cómo usar la clase **AdScheduler** para mostrar anuncios en contenido de vídeo en una aplicación para la Plataforma universal de Windows (UWP) que se haya escrito mediante JavaScript con HTML.
 
@@ -51,13 +54,13 @@ La publicidad para el contenido de vídeo es diferente en función de si el prog
 
 3. Agrega a tu proyecto una referencia a la biblioteca **Microsoft Advertising SDK for JavaScript**.
 
-    1. Desde la ventana del **Explorador de soluciones**, haz clic con el botón derecho en **Referencias** y luego selecciona **Agregar referencia...**
-    2. En el **Administrador de referencias**, expande **Universal Windows**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **SDK de Microsoft Advertising para JavaScript** (versión 10.0).
+    1. Desde la ventana del **Explorador de soluciones**, haz clic con el botón secundario en **Referencias** y, a continuación, selecciona **Agregar referencia...**
+    2. En el **Administrador de referencias**, expande **Universal Windows**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **Microsoft Advertising SDK for JavaScript** (versión 10.0).
     3. En el **Administrador de referencias**, haz clic en Aceptar.
 
 4.  Agrega el archivo AdScheduler.js al proyecto:
 
-    1. En Visual Studio, haz clic en **Proyecto** y en **Administrar paquetes de NuGet**.
+    1. En Visual Studio, haz clic en **Proyecto** y luego en **Administrar paquetes de NuGet**.
     2. En el cuadro de búsqueda, escribe **Microsoft.StoreServices.VideoAdScheduler** e instala el paquete Microsoft.StoreServices.VideoAdScheduler. El archivo AdScheduler.js se agrega al subdirectorio .. /js en el proyecto.
 
 5.  Abre el archivo index.html (u otro archivo html adecuado para el proyecto). En la sección `<head>`, después de las referencias de JavaScript del proyecto de default.css y main.js, agrega la referencia a ad.js y adscheduler.js.
@@ -144,7 +147,7 @@ Cuando se reanuda el contenido que contiene publicidad, establece **playSkippedM
 
 Esta propiedad obtiene o establece el número de milisegundos para esperar una respuesta de la solicitud de anuncios antes del tiempo de espera. Un valor de 0 informa al sistema ningún tiempo de espera. El valor predeterminado es 30000 ms (30 segundos).
 
-### <a name="schedule"></a>programar
+### <a name="schedule"></a>schedule
 
 Esta propiedad obtiene los datos de programación que se recuperaron del servidor de anuncios. Este objeto incluye la jerarquía completa de los datos que corresponde a la estructura de la carga de Video Ad Serving Template (VAST) o Video Multiple Ad Playlist (VMAP)
 

@@ -7,31 +7,31 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 965d823f48cacf4af4999e45ffd02f421c8927e7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 1f53dd0538e4564c50fb5cbcb6986f5cf9661cae
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259703"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463834"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Introducción a los Servicios de notificaciones de inserción de Windows (WNS)
  
 
-Con los Servicios de notificaciones de inserción de Windows (WNS), los desarrolladores de terceros pueden enviar actualizaciones de notificaciones del sistema, de icono, de distintivo y sin procesar desde su propio servicio de nube. Esto proporciona un mecanismo para enviar nuevas actualizaciones a los usuarios de una manera segura y de bajo consumo.
+Windows Inserte Notification Services (WNS) permite a los desarrolladores de terceros enviar notificaciones del sistema, iconos, distintivos y sin formato desde su propio servicio en la nube. Esto proporciona un mecanismo para enviar nuevas actualizaciones a los usuarios de una manera segura y de bajo consumo.
 
 ## <a name="how-it-works"></a>Cómo funciona
 
 
 En el siguiente diagrama se muestra el flujo completo de datos para el envío de una notificación de inserción. Esto conlleva los siguientes pasos:
 
-1.  La aplicación solicita un canal de notificación de inserción de la plataforma universal de Windows.
+1.  La aplicación solicita un canal de notificaciones de envío de WNS.
 2.  Windows solicita a WNS que cree un canal de notificación. que será devuelto al dispositivo de llamada en forma de identificador uniforme de recursos (URI).
-3.  Windows devuelve el URI del canal de notificación a tu aplicación.
+3.  WNS devuelve el URI del canal de notificación a la aplicación.
 4.  Tu aplicación envía el URI a tu propio servicio de nube. A continuación, debes almacenar el URI en tu propio servicio de nube para poder acceder al URI al enviar notificaciones. El URI es una interfaz entre tu propia aplicación y tu propio servicio; es responsabilidad tuya implementar esta interfaz con estándares web seguros y fiables.
 5.  Cuando tu servicio de nube tenga una actualización por enviar, WNS recibe una notificación mediante el URI del canal. Para ello, se emite una solicitud HTTP POST, incluida la carga de notificación, a través de la Capa de sockets seguros (SSL). Este paso requiere autenticación.
 6.  WNS recibe la solicitud y enruta la notificación hacia el dispositivo pertinente.
 
-![Diagrama de flujo de datos WNS para notificaciones de inserción](images/wns-diagram-01.png)
+![Diagrama de flujo de datos WNS para notificaciones de inserción](images/wns-diagram-01.jpg)
 
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>Registro de una aplicación y recepción de las credenciales para el servicio de nube
 
@@ -68,7 +68,7 @@ En un nivel alto, la cadena de información es la siguiente:
 1.  El servicio de nube envía sus credenciales a WNS mediante HTTPS siguiendo el protocolo OAuth 2.0. Esto autentica el servicio con WNS.
 2.  WNS devuelve un token de acceso, si la autenticación fue correcta. Este token de acceso se usa en solicitudes de notificación subsiguientes hasta que expire.
 
-![Diagrama WNS para la autenticación del servicio de nube](images/wns-diagram-02.png)
+![Diagrama WNS para la autenticación del servicio de nube](images/wns-diagram-02.jpg)
 
 En la autenticación con WNS, el servicio de nube envía una solicitud HTTP en una capa de sockets seguros (SSL). Los parámetros se proporcionan en el formato "aplicación/x-www-formato-urlcodificada". Proporcione el SID del paquete en el campo "ID. de\_de cliente" y la clave secreta en el campo "secreto de\_de cliente". Para obtener detalles de sintaxis, consulta la referencia sobre la [solicitud de token de acceso](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)).
 
@@ -137,7 +137,7 @@ El token de acceso descrito anteriormente puede volver a usarse para varias soli
 
 En este diagrama se muestra el flujo de datos:
 
-![Diagrama WNS para enviar una notificación](images/wns-diagram-03.png)
+![Diagrama WNS para enviar una notificación](images/wns-diagram-03.jpg)
 
 ### <a name="important-notes"></a>Notas importantes
 

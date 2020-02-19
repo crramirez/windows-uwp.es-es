@@ -1,18 +1,21 @@
 ---
 description: Obtén información sobre cómo agregar anuncios nativos a tu aplicación para UWP.
 title: Anuncios nativos
-ms.date: 05/11/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de anuncios, anuncio nativo
 ms.localizationpriority: medium
-ms.openlocfilehash: 83c174dc682af27a4811a44c826c572f91ec1f06
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 7a2022db39c27453dd3c1e9e1eb63914b25a637b
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260219"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463937"
 ---
 # <a name="native-ads"></a>Anuncios nativos
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 Un anuncio nativo es un formato de anuncio basado en componentes, donde cada parte del anuncio creativo (por ejemplo, el título, la imagen, la descripción y el texto de llamada a la acción) se entrega a la aplicación como un elemento individual. Puedes integrar estos elementos en la aplicación con tus propias fuentes, colores, animaciones y otros componentes de interfaz de usuario para unir una experiencia de usuario discreta que se ajuste a la apariencia de la aplicación a la vez que también se obtiene un alto rendimiento de los anuncios.
 

@@ -1,18 +1,21 @@
 ---
 description: El servicio de mediación de anuncios de Microsoft te permite maximizar las funcionalidades de ingresos por anuncios y de promoción de la aplicación mostrando anuncios de múltiples redes de anuncio.
 title: Servicio de mediación de anuncios de Microsoft
-ms.date: 06/05/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, mediación de anuncios
 ms.localizationpriority: medium
-ms.openlocfilehash: 700a80aff4c991f4fa3bff681ba995b113025fec
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ad2f60b6b87f81df44bc2f875a722a9e36fdd170
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259329"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463987"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Servicio de mediación de anuncios de Microsoft
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 Cuando usas el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) para [mostrar anuncios en tus aplicaciones](display-ads-in-your-app.md), también puede usar opcionalmente el servicio de mediación de anuncios de Microsoft para maximizar los ingresos por anuncios. Este artículo proporciona información general sobre el servicio de mediación de anuncios y sus objetivos.
 

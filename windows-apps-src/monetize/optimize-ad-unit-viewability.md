@@ -1,34 +1,37 @@
 ---
 description: Obtén información sobre formas de mejorar la visualización de tus unidades de anuncios.
-title: Optimizar la visualización de tus unidades de anuncios
-ms.date: 05/07/2018
+title: Optimizar la visualización de las unidades de anuncios
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, directrices, visualización
 ms.localizationpriority: medium
-ms.openlocfilehash: 87e21f4e98c58f79f397c369891212eccb196c18
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6996b656c9bf161538e286dc4c2d63c1d2840bc8
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662270"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463947"
 ---
-# <a name="optimize-the-viewability-of-your-ad-units"></a>Optimizar la visualización de tus unidades de anuncios
+# <a name="optimize-the-viewability-of-your-ad-units"></a>Optimizar la visualización de las unidades de anuncios
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 El [Informe de rendimiento de publicidad](../publish/advertising-performance-report.md) incluye las métricas de visualización para tus unidades de anuncios. La visualización es una métrica importante porque el sector de la publicidad avanza hacia la valoración de las impresiones visibles en lugar de simplemente las impresiones entregadas. Los anunciantes tienden a pujar por las impresiones visibles porque tienen mayor probabilidad de que los usuarios los vean.  
 
 De acuerdo con las directrices de visualización de IAB, una impresión de anuncio de banner se cuenta como visible si cumple los siguientes criterios:
 
-* Requisito de píxeles: Mayor o igual a 50% de los píxeles en el anuncio se encontraba en el espacio visible de la aplicación.
-* Requisito de tiempo: El tiempo que se cumple el requisito de píxel era mayor o igual que un segundo continua, la representación de ad posterior.
+* Requisito de píxeles: un porcentaje mayor o igual al 50 % de los píxeles del anuncio se encontraban en el espacio visible de la aplicación.
+* Requisito de tiempo: el tiempo que se cumple el requisito de píxeles fue superior o igual a un segundo continuo tras la representación del anuncio.
 
 Una impresión de anuncio de vídeo se cuenta como visible si cumple los criterios siguientes:
 
-* Requisito de píxeles: Mayor o igual a 50% de los píxeles en el anuncio se encontraba en la parte visible de la aplicación.
-* Requisito de tiempo: El vídeo cumple el requisito de píxel y se reproduce durante dos segundos continua post ad representar.
+* Requisito de píxeles: un porcentaje mayor o igual al 50 % de los píxeles del anuncio se encontraban en la parte visible de la aplicación.
+* Requisito de tiempo: el vídeo cumplió el requisito de píxeles y se reprodujo durante dos segundos continuos tras la representación del anuncio.
 
 La visualización se calcula mediante la fórmula siguiente:
 
-**Capacidad de visualización = [ve impresiones] * 100 / [Total impresiones de anuncios]**
+**Visualización = [impresiones visualizadas] * 100/[total de impresiones de AD]**
 
 ## <a name="guidelines-to-improve-ad-unit-viewability"></a>Directrices para mejorar la visualización de la unidad de anuncios
 

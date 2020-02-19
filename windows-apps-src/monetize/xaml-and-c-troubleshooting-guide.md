@@ -2,30 +2,33 @@
 ms.assetid: 141900dd-f1d3-4432-ac8b-b98eaa0b0da2
 description: Obtén información sobre las soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones XAML.
 title: Guía de solución de problemas de XAML y C#
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, AdControl, solución de problemas, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 94af97e1e678c6ee92aaa731057c5f67185e25c5
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 9783036d00fc56b904e6d362f55ddaaf8375a872
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334663"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463747"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>Guía de solución de problemas de XAML y C#
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 En este tema encontrarás soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de XAML.
 
 * [XAML](#xaml)
-  * [Elemento AdControl no aparecen](#xaml-notappearing)
-  * [Caja negra hace parpadear y desaparece](#xaml-blackboxblinksdisappears)
-  * [Anuncios no actualizar](#xaml-adsnotrefreshing)
+  * [AdControl no aparece](#xaml-notappearing)
+  * [El cuadro negro parpadea y desaparece](#xaml-blackboxblinksdisappears)
+  * [Anuncios no actualizando](#xaml-adsnotrefreshing)
 
 * [C#](#csharp)
-  * [Elemento AdControl no aparecen](#csharp-adcontrolnotappearing)
-  * [Caja negra hace parpadear y desaparece](#csharp-blackboxblinksdisappears)
-  * [Anuncios no actualizar](#csharp-adsnotrefreshing)
+  * [AdControl no aparece](#csharp-adcontrolnotappearing)
+  * [El cuadro negro parpadea y desaparece](#csharp-blackboxblinksdisappears)
+  * [Anuncios no actualizando](#csharp-adsnotrefreshing)
 
 <span id="xaml"/>
 
@@ -37,7 +40,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
 
 1.  Asegúrate de que la funcionalidad **Internet (Client)** esté seleccionada en Package.appxmanifest.
 
-2.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de ad que obtuvo en el centro de partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+2.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el identificador de la aplicación y el identificador de unidad de ad que obtuvo en el centro de Partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -173,7 +176,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     > [!div class="tabbedCodeSnippets"]
     [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
 
-3.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de ad que obtuvo en el centro de partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+3.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el identificador de la aplicación y el identificador de unidad de ad que obtuvo en el centro de Partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs

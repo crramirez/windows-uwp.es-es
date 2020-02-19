@@ -2,30 +2,33 @@
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: Lee sobre las soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de JavaScript y HTML.
 title: Guía de solución de problemas de HTML y JavaScript
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, ads, publicidad, advertising, AdControl, solución de problemas, troubleshooting, HTML, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 01e2781b64629e24cba9b4ac02629a79ee4d998b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fb804c312962fc349607b9d55176bfd7279cf8e9
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57633240"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463797"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>Guía de solución de problemas de HTML y JavaScript
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 En este tema encontrarás soluciones a problemas comunes de desarrollo con las bibliotecas de Microsoft Advertising en aplicaciones de JavaScript y HTML.
 
 * [HTML](#html)
-  * [Elemento AdControl no aparecen](#html-notappearing)
-  * [Caja negra hace parpadear y desaparece](#html-blackboxblinksdisappears)
-  * [Anuncios no actualizar](#html-adsnotrefreshing)
+  * [AdControl no aparece](#html-notappearing)
+  * [El cuadro negro parpadea y desaparece](#html-blackboxblinksdisappears)
+  * [Anuncios no actualizando](#html-adsnotrefreshing)
 
-* [JavaScript](#js)
-  * [Elemento AdControl no aparecen](#js-adcontrolnotappearing)
-  * [Caja negra hace parpadear y desaparece](#js-blackboxblinksdisappears)
-  * [Anuncios no actualizar](#js-adsnotrefreshing)
+* [Código](#js)
+  * [AdControl no aparece](#js-adcontrolnotappearing)
+  * [El cuadro negro parpadea y desaparece](#js-blackboxblinksdisappears)
+  * [Anuncios no actualizando](#js-adsnotrefreshing)
 
 ## <a name="html"></a>HTML
 
@@ -46,7 +49,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     </head>
     ```
 
-3.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de ad que obtuvo en el centro de partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+3.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el identificador de la aplicación y el identificador de unidad de ad que obtuvo en el centro de Partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` html
@@ -271,7 +274,7 @@ En este tema encontrarás soluciones a problemas comunes de desarrollo con las b
     });  
     ```
 
-4.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el Id. de aplicación y el Id. de unidad de ad que obtuvo en el centro de partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
+4.  Comprueba el id. de aplicación y el id. de unidad de anuncios. Estos identificadores deben coincidir con el identificador de la aplicación y el identificador de unidad de ad que obtuvo en el centro de Partners. Para obtener más información, consulta [Configurar unidades de anuncios en la aplicación](set-up-ad-units-in-your-app.md#live-ad-units).
 
     > [!div class="tabbedCodeSnippets"]
     ``` javascript

@@ -2,18 +2,21 @@
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
 description: Obtén información sobre los problemas conocidos de la versión actual del SDK de Microsoft Advertising.
 title: Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
-ms.date: 04/16/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, problemas conocidos, solución de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: 6701ff346f41352a108922f82da82fbf52fd7402
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 34c07a46d31ddf6c8f5b56ffd19059b4d225a72c
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685089"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463967"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Problemas conocidos y solución de problemas para los anuncios en las aplicaciones
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
 En este tema se muestran los problemas conocidos con la versión actual del SDK de Microsoft Advertising. Para obtener una guía sobre la solución de problemas, consulta los temas siguientes.
 

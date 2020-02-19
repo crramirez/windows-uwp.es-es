@@ -2,22 +2,25 @@
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
 description: Obtén información sobre los tamaños de anuncios de banner admitidos.
 title: Tamaños admitidos de anuncios de banner
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, sizes, tamaños, banner, banner
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cd21be7f0e1f05e1fe4de07053cb18ee5048c6a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c3836c2d4b0c7f522db936906e2eae3ed2862b68
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613850"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463897"
 ---
 # <a name="supported-banner-ad-sizes"></a>Tamaños admitidos de anuncios de banner
 
-Los siguientes tamaños de anuncios de banner son compatibles con aplicaciones de la Plataforma universal de Windows (UWP). Cuando cree una instancia su **elemento AdControl** objetos en la aplicación, asegúrese de establecer las propiedades ancho y alto para que coincida con uno de estos tamaños admitidos.
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
-Los tamaños son de ancho x alto.
+Los siguientes tamaños de anuncios de banner son compatibles con aplicaciones de la Plataforma universal de Windows (UWP). Al crear una instancia del objeto **AdControl** en la aplicación, asegúrese de establecer las propiedades ancho y alto para que coincida con uno de estos tamaños admitidos.
+
+Los tamaños son ancho x alto.
 
 * 160 x 600
 * 300 x 50
@@ -28,7 +31,7 @@ Los tamaños son de ancho x alto.
 * 728 x 90
 
 > [!NOTE]
-> Para obtener la mejor experiencia, se recomienda usar los siguientes tamaños en los dispositivos Windows 10 Mobile: 300 x 50, 50 x 320 y 640 x 100.
+> Para una experiencia óptima, te recomendamos que uses los siguientes tamaños en dispositivos Windows 10 Mobile: 300 x 50, 320 x 50 y 640 x 100.
 
 En la siguiente tabla se proporcionan ejemplos que muestran cada tamaño de anuncios de banner.
 
