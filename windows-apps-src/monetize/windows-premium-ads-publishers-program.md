@@ -1,22 +1,25 @@
 ---
 description: El Programa de editores de anuncios de Windows Premium consta de una colección protegida de aplicaciones habilitadas para anuncios que las redes de anuncios de partners pueden adaptar con anuncios premium de alto rendimiento. Las aplicaciones de este programa son las mejores en lo que respecta al uso, participación y experiencia.
 title: Programa de editores de anuncios de Windows Premium
-ms.date: 09/08/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad
 ms.localizationpriority: medium
-ms.openlocfilehash: 4db99097516fcead384af6fc9e4c588707b96d41
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: ba5708b953efff3b4a7c52286ae1a74c43d3d211
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684438"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463757"
 ---
 # <a name="windows-premium-ads-publishers-program"></a>Programa de editores de anuncios de Windows Premium
 
-Como parte de nuestros continuos esfuerzos para ayudar a los desarrolladores de Windows a monetizar sus aplicaciones a través de anuncios, ofrecemos el [Programa de editores de anuncios de Windows Premium](https://www.windowspremiumapps.com). Esto es una colección protegida de juegos y aplicaciones habilitados para anuncios que son los mejores en lo que respecta el uso, participación y experiencia. Estas aplicaciones y juegos tienen capacidad de visualización certificada y una audiencia distribuida a nivel mundial de usuarios identificables con un gran nivel de participación.
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
 
-Los anunciantes de nuestras redes de anuncios de partners pueden identificar estas aplicaciones por separado y proporcionar anuncios premium de alto rendimiento exclusivamente para estas aplicaciones para la máxima rentabilidad de la inversión de sus campañas. En el caso de los desarrolladores, esto implica que las aplicaciones que forman parte de este programa pueden obtener más ingresos publicitarios.
+Como parte de nuestros continuos esfuerzos para ayudar a los desarrolladores de Windows a monetizar sus aplicaciones mediante anuncios, ofrecemos el [Programa de editores de anuncios de Windows Premium](https://www.windowspremiumapps.com). Se trata de una colección escogida de aplicaciones y juegos con anuncios habilitados que son los mejores respecto al uso, participación y experiencia. Estas aplicaciones y juegos tienen capacidad de visualización certificada y una audiencia distribuida a nivel mundial de usuarios identificables con un gran nivel de participación.
+
+Los anunciantes de nuestras redes de anuncios de partners pueden identificar estas aplicaciones por separado y ofrecer anuncios premium de alto rendimiento, exclusivamente para estas aplicaciones, con la finalidad de obtener el máximo retorno de la inversión de sus campañas. En el caso de los desarrolladores, esto implica que las aplicaciones que forman parte de este programa pueden obtener más ingresos publicitarios.
 
 ## <a name="how-does-microsoft-add-apps-to-this-program"></a>¿Cómo Microsoft agrega aplicaciones a este programa? 
 
