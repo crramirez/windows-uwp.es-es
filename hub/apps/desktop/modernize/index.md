@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: c2e7524605847009dae415d93794658dd08a79a3
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: 0c86290c9765eba5186e777f8de7b3b86967be9e
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089401"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521346"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernización de las aplicaciones de escritorio
 
@@ -20,7 +20,7 @@ Windows 10 y la Plataforma universal de Windows (UWP) ofrecen muchas caracterís
 En este artículo se describen las características de Windows 10 y UWP que puedes usar en las aplicaciones de escritorio hoy mismo. Para ver un tutorial que muestra cómo modernizar una aplicación existente para que pueda usar muchas de las características descritas en este artículo, consulte [Modernización de una aplicación WPF](modernize-wpf-tutorial.md).
 
 > [!NOTE]
-> ¿Necesitas ayuda para migrar las aplicaciones de escritorio a Windows 10? El servicio [Asesoría de aplicaciones de escritorio](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) proporciona soporte directo y gratuito a los desarrolladores que porten sus aplicaciones a Windows 10. Este programa está disponible para todos los fabricantes de software independiente y las empresas aptas. Para más información sobre los requisitos que hay que cumplir y sobre el propio programa, visita [https://aka.ms/DesktopAppAssure](https://aka.ms/DesktopAppAssure). Para empezar a trabajar ahora, [envía la solicitud](https://aka.ms/DesktopAppAssureRequest).
+> ¿Necesitas ayuda para migrar las aplicaciones de escritorio a Windows 10? El servicio [Asesoría de aplicaciones de escritorio](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) proporciona soporte directo y gratuito a los desarrolladores que porten sus aplicaciones a Windows 10. Este programa está disponible para todos los fabricantes de software independiente y las empresas aptas. Para más información sobre los requisitos que hay que cumplir y sobre el propio programa, visita [https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered](https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered). Para empezar a trabajar ahora, [envía la solicitud](https://fasttrack.microsoft.com/dl/daa).
 
 ## <a name="msix-packages"></a>Paquetes MSIX
 
