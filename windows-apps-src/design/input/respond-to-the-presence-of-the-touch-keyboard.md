@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: teclado, accesibilidad, navegación, foco, texto, entrada, interacciones del usuario, keyboard, accessibility, navigation, focus, text, input, user interactions
 ms.date: 07/13/2018
 ms.topic: article
-ms.openlocfilehash: c752a5df96c22b945865c0c3a465f22391aa54bc
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: e26bbe00bba8b3d91d7ee842cb4d9c984a941f2b
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258280"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521366"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder a la presencia del teclado táctil
 
@@ -220,7 +220,7 @@ void Scenario2_ShowHideEvents::OnHiding(InputPane^ /*sender*/, InputPaneVisibili
 
 **Ejemplos de archivo**
 
-- [Entrada: ejemplo de teclado táctil](https://code.msdn.microsoft.com/windowsapps/Touch-keyboard-sample-43532fda)
+- [Entrada: ejemplo de teclado táctil](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
 - [Responder a la apariencia de la muestra de teclado en pantalla](https://code.msdn.microsoft.com/windowsapps/keyboard-events-sample-866ba41c)
 - [Ejemplo de edición de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
-- [Ejemplo de accesibilidad XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
+- [Ejemplo de accesibilidad XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)

@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, AdControl, control de anuncios, javaScript, HTML
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bb6a804cbf7fa2b46020178d8a90e38d76607f1
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 7614265048945ddc9f1a1c32338e8446ee3ce7ba
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463507"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507189"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>AdControl en HTML 5 y JavaScript
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 En este tutorial se muestra cómo usar la clase [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar anuncios de banner en una aplicación para Plataforma universal de Windows (UWP) JavaScript/HTML para Windows 10.
 

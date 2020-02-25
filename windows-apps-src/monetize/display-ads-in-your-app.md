@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, banner, control de anuncios, intersticial
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f318a68a97e98d3da24da16778988ee40c4e1dd
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: d693b8a4e07e66eded7d1580291c552e7ab9ca64
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463787"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507229"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Aumenta las oportunidades de ingresos poniendo anuncios en tu aplicación para la Plataforma universal de Windows (UWP) para Windows 10 mediante el SDK de Microsoft Advertising. Nuestra plataforma de monetización de anuncios ofrece una variedad de formatos de ad que se pueden integrar perfectamente en sus aplicaciones y admiten la mediación con muchas redes de anuncios populares. Nuestra plataforma es compatible con los estándares OpenRTB, VAST 2.x, MRAID 2 y VPAID 3, y con MOAT e IAS. 
 
@@ -114,7 +114,7 @@ Para obtener más ayuda con el SDK de Microsoft Advertising, usa los siguientes 
 |  Tarea    | Recurso |               
 |----------|-------|
 | Informar de un error u obtener soporte técnico asistido para la publicidad     | Visita la [página de soporte técnico](https://developer.microsoft.com/windows/support) y elige **Anuncios en aplicaciones**.        |
-| Obtener soporte técnico de la comunidad     | Visita el [foro](https://go.microsoft.com/fwlink/?LinkID=401264).       |
+| Obtener soporte técnico de la comunidad     | Visita el [foro](https://social.msdn.microsoft.com/forums/windowsapps/en-US/home?category=windowsapps).       |
 | Descargar proyectos de ejemplo que muestran cómo agregar anuncios intersticiales en vídeo y en banner a las aplicaciones.     | Consulta las [Muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).       |
 | Obtener información sobre las oportunidades de monetización más recientes para aplicaciones de Windows     | Visita [Rentabiliza las aplicaciones](https://developer.microsoft.com/store/monetize).        |
 

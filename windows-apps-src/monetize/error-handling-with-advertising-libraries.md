@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, control de errores, javascript, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 1804bc6b44069dccdd92d0a33fcfd48567363a33
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 0e3cc4d3d0b0cde40117a8534589f48c9d463c44
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463847"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507119"
 ---
 # <a name="handle-ad-errors"></a>Controlar errores de anuncios
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Las clases [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol),  [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) y [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) tienen cada una un evento **ErrorOccurred** que se genera si se produce un error relacionado con los anuncios. El código de la aplicación puede controlar este evento y examinar las propiedades [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errorcode) y [ErrorMessage](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errormessage) del objeto de argumentos de evento para ayudar a determinar la causa del error.
 

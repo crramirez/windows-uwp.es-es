@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0be47e5edeee0d00843d06297857f39977e085f4
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d6b90b000564c1c6929154c3ac3b79c129e3fff6
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258952"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507149"
 ---
 # <a name="vat-info"></a>Información sobre el IVA
 
@@ -21,7 +21,7 @@ Si se le pide que proporcione un número de identificación de IVA durante el pr
 ## <a name="understanding-vat-numbers"></a>Descripción de los números de IVA
 
 
-Un número de impuesto sobre el valor añadido (IVA) es un identificador que se utiliza en los países o regiones de la Unión Europea. Para obtener más información, consulta el [sitio de VIES](https://go.microsoft.com/fwlink/p/?LinkId=181246) oficial de la Unión Europea.
+Un número de impuesto sobre el valor añadido (IVA) es un identificador que se utiliza en los países o regiones de la Unión Europea. Para obtener más información, consulta el [sitio de VIES](http://ec.europa.eu/taxation_customs/vies/vieshome.do) oficial de la Unión Europea.
 
 ## <a name="accepted-formats-for-vat-numbers"></a>Formatos válidos para números de IVA
 
@@ -29,7 +29,7 @@ Un número de impuesto sobre el valor añadido (IVA) es un identificador que se 
 Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente tabla se proporciona únicamente a modo de orientación. Ponte en contacto con las autoridades tributarias locales para comprobar si hay cambios recientes en caso de que esta orientación no sea suficiente para proporcionar a Microsoft un número de IVA.
 
 <table Responsive="true">
-<tr><th>País o región</th><th>Información sobre el IVA</th></tr>
+<tr><th>País/región</th><th>Información sobre el IVA</th></tr>
 <tr><td data-th="Country/region">Austria
 </td><td data-th="VAT info">
 <ul>
@@ -70,7 +70,7 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 <li>Ejemplo: 12345678, 123456789 o 0123456789</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">República Checa</td><td data-th="VAT info">
+<tr><td data-th="Country/region">República checa</td><td data-th="VAT info">
 <ul>
 <li>Formato del número de IVA: 8, 9 o 10 dígitos</li>
 <li>Código de país/región: CZ</li>
@@ -98,7 +98,7 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 <li>Ejemplo: 12345678</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">Francia</td><td data-th="VAT info">
+<tr><td data-th="Country/region">France</td><td data-th="VAT info">
 <ul>
 <li>Formato del número de IVA: 11 dígitos</li>
 <li>Código de país/región: FR</li>
@@ -106,7 +106,7 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 <li>Notas: Puede incluir cualquier carácter alfabético excepto I o Q como primer o segundo carácter, o bien como primer y segundo caracteres, seguido de 9 dígitos.</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">Alemania</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Germany</td><td data-th="VAT info">
 <ul>
 <li>Formato del número de IVA: 9 dígitos</li>
 <li>Código de país/región: DE</li>
@@ -194,7 +194,7 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 <li>Ejemplo: 123456789</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">Rumanía</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Rumania</td><td data-th="VAT info">
 <ul>
 <li>Formato del número de IVA: 2 letras y 8-10 dígitos</li>
 <li>Código de país o región: RO</li>

@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, guidelines, directrices, best practices, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ce51f1ec99b080de6483b1d703492050c7a434c
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: d64d5c544f6ec9e1356cc024e634286336dc9f91
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463927"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506799"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 En este artículo se proporcionan directrices para ofrecer magníficas experiencias con anuncios de banner, anuncios intersticiales y anuncios nativos en las aplicaciones. Para obtener instrucciones generales sobre cómo diseñar la apariencia de las aplicaciones, consulta [Diseño e interfaz de usuario](https://developer.microsoft.com/windows/apps/design).
 
@@ -38,7 +38,7 @@ Antes de revisar nuestras directrices para diferentes tipos de anuncios en este 
 
 En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar [anuncios de banner](banner-ads.md) en tu aplicación mediante [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) de las Directivas de Microsoft Store.
 
-### <a name="best-practices"></a>Procedimiento recomendado
+### <a name="best-practices"></a>Procedimientos recomendados
 
 Te recomendamos que sigas los siguientes procedimientos recomendados a la hora de implementar anuncios de banner en tu aplicación:
 
@@ -90,7 +90,7 @@ Si se usan con elegancia, los [anuncios intersticiales](interstitial-ads.md) pue
 
 En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar anuncios de vídeo intersticial y de banner intersticial en la aplicación con la clase [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) de las Directivas de Microsoft Store. Dado que conoces tu aplicación mejor que nadie, excepto en lo que a directivas se refiere, la decisión final está en tus manos. Lo más importante que debes tener en cuenta es que las clasificaciones de la aplicación y los ingresos están estrechamente relacionados.
 
-### <a name="best-practices"></a>Procedimiento recomendado
+### <a name="best-practices"></a>Procedimientos recomendados
 
 Te recomendamos que sigas los siguientes procedimientos recomendados a la hora de implementar anuncios intersticiales en tu aplicación:
 

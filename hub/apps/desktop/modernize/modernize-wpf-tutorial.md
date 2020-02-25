@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 397c301564c0d4799c6b41db209da9659725103d
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: 21049c995d467209b22fe8ea5c40d303911f2c2c
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089311"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521295"
 ---
 # <a name="tutorial-modernize-a-wpf-app"></a>Tutorial: modernizar una aplicación de WPF 
 
@@ -69,7 +69,7 @@ Asegúrese de instalar las siguientes cargas de trabajo y características opcio
 
 Antes de comenzar el tutorial, descargue el código fuente de la aplicación de gastos de Contoso y asegúrese de que puede compilar el código en Visual Studio.
 
-1. Descargue el código fuente de la aplicación en la pestaña **releases** del [repositorio de AppConsult WinAppsModernization Workshop](https://github.com/Microsoft/AppConsult-WinAppsModernizationWorkshop). El vínculo directo es [https://aka.ms/wamwc](https://aka.ms/wamwc).
+1. Descargue el código fuente de la aplicación en la pestaña **releases** del [repositorio de AppConsult WinAppsModernization Workshop](https://github.com/Microsoft/AppConsult-WinAppsModernizationWorkshop). El vínculo directo es [https://github.com/microsoft/AppConsult-WinAppsModernizationWorkshop/releases](https://github.com/microsoft/AppConsult-WinAppsModernizationWorkshop/releases).
 2. Abra el archivo zip y extraiga todo el contenido en la raíz de la unidad **C:\\** . Se creará una carpeta denominada **C:\WinAppsModernizationWorkshop**.
 3. Abra Visual Studio 2019 y haga doble clic en el archivo **C:\WinAppsModernizationWorkshop\Lab\Exercise1\01-Start\ContosoExpenses\ContosoExpenses.sln** para abrir la solución.
 4. Compruebe que puede compilar, ejecutar y depurar el proyecto de WPF de gastos de Contoso presionando el botón **Inicio** o Ctrl + F5.

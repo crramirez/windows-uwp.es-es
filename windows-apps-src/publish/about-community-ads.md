@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8da380cb49d584e56f584f3ad321d601d211faf0
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 48d63dae76113c70273f6ff2cba46348b1e24a10
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463447"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507019"
 ---
 # <a name="about-community-ads"></a>Acerca de los anuncios de la comunidad
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Si la aplicación [muestra anuncios intersticiales en banner o banner](../monetize/display-ads-in-your-app.md), puede realizar promociones cruzadas de la aplicación con otros desarrolladores con aplicaciones en el Microsoft Store de forma gratuita. Esta función se denomina *anuncios de la comunidad*.  
 

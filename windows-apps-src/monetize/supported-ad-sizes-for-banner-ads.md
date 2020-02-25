@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, sizes, tamaños, banner, banner
 ms.localizationpriority: medium
-ms.openlocfilehash: c3836c2d4b0c7f522db936906e2eae3ed2862b68
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: ec96d744f7a9d2e91b27feae1fe5f3b0c322a450
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463897"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506859"
 ---
 # <a name="supported-banner-ad-sizes"></a>Tamaños admitidos de anuncios de banner
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Los siguientes tamaños de anuncios de banner son compatibles con aplicaciones de la Plataforma universal de Windows (UWP). Al crear una instancia del objeto **AdControl** en la aplicación, asegúrese de establecer las propiedades ancho y alto para que coincida con uno de estos tamaños admitidos.
 

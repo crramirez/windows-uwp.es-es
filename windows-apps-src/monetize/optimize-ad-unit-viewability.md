@@ -5,17 +5,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, directrices, visualización
 ms.localizationpriority: medium
-ms.openlocfilehash: 6996b656c9bf161538e286dc4c2d63c1d2840bc8
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 06d870fbc631611bcfc453698cd9aa4fc844da5d
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463947"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506810"
 ---
 # <a name="optimize-the-viewability-of-your-ad-units"></a>Optimizar la visualización de las unidades de anuncios
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 El [Informe de rendimiento de publicidad](../publish/advertising-performance-report.md) incluye las métricas de visualización para tus unidades de anuncios. La visualización es una métrica importante porque el sector de la publicidad avanza hacia la valoración de las impresiones visibles en lugar de simplemente las impresiones entregadas. Los anunciantes tienden a pujar por las impresiones visibles porque tienen mayor probabilidad de que los usuarios los vean.  
 

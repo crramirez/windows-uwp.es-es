@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d39d2f094dd85c29b51a19e1affcf0d292183ede
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: fa9ba2b8c9b327a51218dfc5f100c147f2d566e8
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257776"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521266"
 ---
 # <a name="expose-basic-accessibility-information"></a>Exponer información básica de accesibilidad  
 
@@ -83,7 +83,7 @@ XAML
   AutomationProperties.Name="An image of a customer using the product."/>
 ```
 
-De manera alternativa, considera incluir un subtítulo que aparezca en la interfaz de usuario visible y que también funcione como información de accesibilidad asociada con la etiqueta para el contenido de imagen. A continuación te mostramos un ejemplo:
+De manera alternativa, considera incluir un subtítulo que aparezca en la interfaz de usuario visible y que también funcione como información de accesibilidad asociada con la etiqueta para el contenido de imagen. Por ejemplo:
 
 XAML
 ```xml
@@ -141,7 +141,7 @@ Una de las herramientas que puedes usar para probar la accesibilidad se llama **
 <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
 
 ## <a name="accessible-names-from-dynamic-data"></a>Nombres accesibles de datos dinámicos  
-Windows admite muchos controles que se pueden usar para mostrar valores que provienen de un origen de datos asociado, a través de una función conocida como *enlace de datos*. Cuando rellenas listas con elementos de datos, puedes tener que usar una técnica que establezca nombres accesibles para elementos de lista enlazados a datos después de que se haya rellenado la lista inicial. Para más información, consulta el "Escenario 4" en la [muestra de accesibilidad XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d).
+Windows admite muchos controles que se pueden usar para mostrar valores que provienen de un origen de datos asociado, a través de una función conocida como *enlace de datos*. Cuando rellenas listas con elementos de datos, puedes tener que usar una técnica que establezca nombres accesibles para elementos de lista enlazados a datos después de que se haya rellenado la lista inicial. Para más información, consulta el "Escenario 4" en la [muestra de accesibilidad XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample).
 
 <span id="Accessible_names_and_localization"/>
 <span id="accessible_names_and_localization"/>
@@ -157,5 +157,5 @@ Ten en cuenta que las propiedades adjuntas, como las propiedades [**AutomationPr
 ## <a name="related-topics"></a>Temas relacionados  
 * [Accesibilidad](accessibility.md)
 * [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)
-* [Ejemplo de accesibilidad XAML](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
+* [Ejemplo de accesibilidad XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
 * [Pruebas de accesibilidad](accessibility-testing.md)

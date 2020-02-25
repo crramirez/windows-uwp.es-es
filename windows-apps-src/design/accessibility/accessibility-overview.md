@@ -1,21 +1,21 @@
 ---
 Description: Este artículo es una descripción general de los conceptos y las tecnologías relacionados con escenarios de accesibilidad para aplicaciones para la Plataforma universal de Windows (UWP).
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
-title: Información general sobre la accesibilidad
+title: Información general sobre accesibilidad
 label: Accessibility overview
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0065ecd39244d9cbb48bf75d474217aae249e45b
-ms.sourcegitcommit: ae288e85be682f74109510b9f52787fdc3dd2ecd
+ms.openlocfilehash: 22f614d65728c0f5121cadfdcbfb58a7b817a47d
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860546"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521286"
 ---
-# <a name="accessibility-overview"></a>Información general sobre la accesibilidad
+# <a name="accessibility-overview"></a>Información general sobre accesibilidad
 
 Este artículo es una descripción general de los conceptos y las tecnologías relacionados con escenarios de accesibilidad para aplicaciones para la Plataforma universal de Windows (UWP).
 
@@ -53,7 +53,7 @@ Compatibilidad de la accesibilidad viene principalmente de la compatibilidad int
 
 Muchas de las necesidades de accesibilidad del usuario se satisfacen a través de productos de tecnología de asistencia instalados por este o por herramientas y de la configuración proporcionada por el sistema operativo. Esto incluye funciones como lectores de pantalla, ampliación de pantalla y configuración de contraste alto.
 
-Los productos de tecnología de asistencia incluyen una variedad de software y hardware. Estos productos funcionan a través de los marcos de accesibilidad y la interfaz de teclado estándar que proporcionan información acerca del contenido y la estructura de una interfaz de usuario a los lectores de pantalla y otras tecnologías de asistencia. A continuación, se incluyen algunos ejemplos de productos de tecnología de asistencia:
+Los productos de tecnología de asistencia incluyen una gran variedad de software y hardware. Estos productos funcionan a través de los marcos de accesibilidad y la interfaz de teclado estándar que proporcionan información acerca del contenido y la estructura de una interfaz de usuario a los lectores de pantalla y otras tecnologías de asistencia. A continuación, se incluyen algunos ejemplos de productos de tecnología de asistencia:
 
 * El teclado en pantalla, que permite a las personas usar un puntero en lugar de un teclado para escribir texto.
 * Software de reconocimiento de voz, que convierte las palabras habladas en texto escrito.
@@ -200,7 +200,7 @@ Cuando crees un control personalizado, te recomendamos que también implementes 
 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>Compatibilidad para tecnología de asistencia en aplicaciones que admiten la interoperabilidad XAML/Microsoft DirectX
 
-No se puede acceder de manera predeterminada al contenido de Microsoft DirectX hospedado en una interfaz de usuario XAML (mediante [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) o [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource)). El [ejemplo de interoperabilidad XAML SwapChainPanel DirectX](https://code.msdn.microsoft.com/windowsapps/XAML-SwapChainPanel-00cb688b) muestra cómo crear sistemas del mismo nivel de automatización de la interfaz de usuario para el contenido de DirectX hospedado. Esta técnica permite que se pueda acceder al contenido hospedado a través de la automatización de la interfaz de usuario.
+No se puede acceder de manera predeterminada al contenido de Microsoft DirectX hospedado en una interfaz de usuario XAML (mediante [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) o [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource)). El [ejemplo de interoperabilidad XAML SwapChainPanel DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208.1%20Store%20app%20samples/%5BC%23%5D-Windows%208.1%20Store%20app%20samples/XAML%20SwapChainPanel%20DirectX%20interop%20sample) muestra cómo crear sistemas del mismo nivel de automatización de la interfaz de usuario para el contenido de DirectX hospedado. Esta técnica permite que se pueda acceder al contenido hospedado a través de la automatización de la interfaz de usuario.
 
 ## <a name="related-topics"></a>Temas relacionados
 

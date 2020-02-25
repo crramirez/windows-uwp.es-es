@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, walkthroughs, tutoriales
 ms.localizationpriority: medium
-ms.openlocfilehash: 83ba6729230b77dc4a3ae97abffe24a3623c4c3d
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 20c122146aca86b42055005169abf981c3142c21
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463777"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507219"
 ---
 # <a name="implement-ads-in-your-app"></a>Implementar anuncios en la aplicación
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 En los artículos de esta sección se muestra cómo agregar anuncios de banner, anuncios intersticiales y anuncios nativos a las aplicaciones mediante el SDK de Microsoft Advertising. Para ver proyectos de ejemplo completos, consulta las [muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 

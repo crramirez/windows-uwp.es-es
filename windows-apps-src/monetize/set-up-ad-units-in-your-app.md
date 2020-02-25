@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad, unidades de anuncios, pruebas
 ms.localizationpriority: medium
-ms.openlocfilehash: 37f04e8b112df23457c46e4f535309f2fe5dd847
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: c7bafdc7d21814a03d6f7da7132d8017d7f238e5
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463907"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506727"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Configurar unidades de anuncios en la aplicación
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Cada control de anuncio de la aplicación de Plataforma universal de Windows (UWP) tiene una *unidad de anuncio* correspondiente que se usa por nuestros servicios para proporcionar anuncios al control. Cada unidad de anuncio consta de un *Id. de unidad de anuncio* e *Id. de aplicación* que debes asignar al código en tu aplicación.
 

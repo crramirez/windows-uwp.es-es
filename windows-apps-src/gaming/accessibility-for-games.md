@@ -6,12 +6,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: Windows 10, UWP, accesibilidad, juegos
 ms.localizationpriority: medium
-ms.openlocfilehash: 74ff2c25d38f20b94f50cc05a548778ee212bad0
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 347f5c6900806ef4658b81b8db15957029d39116
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321361"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478651"
 ---
 #  <a name="making-games-accessible"></a>Hacer que los juegos sean accesibles
 
@@ -69,7 +69,7 @@ Si las respuestas son principalmente no, o no sabes responderlas, es el momento 
 
 ## <a name="defining-disability"></a>Definir discapacidad
 
-La discapacidad se define como "un desajuste entre las necesidades de la persona y las del servicio, producto o entorno que se ofrece". ([Vídeo inclusivo](https://www.microsoft.com/design/inclusive/), Microsoft.com.) Esto significa que cualquier usuario puede experimentar una discapacidad y que puede ser una condición a corto plazo o conocimiento. Imagina qué desafíos pueden encontrarse los jugadores con estos problemas cuando jueguen al juego y piensa en cómo se puede mejorar el juego pensando en ellos. A continuación se enumeran algunas discapacidades por considerar:
+La discapacidad se define como "un desajuste entre las necesidades de la persona y las del servicio, producto o entorno que se ofrece". ([Vídeo inclusivo](https://www.microsoft.com/design/inclusive/), Microsoft.com.) Esto significa que cualquier persona puede experimentar una discapacidad y que puede ser un problema breve o circunstancial. Imagina qué desafíos pueden encontrarse los jugadores con estos problemas cuando jueguen al juego y piensa en cómo se puede mejorar el juego pensando en ellos. A continuación se enumeran algunas discapacidades por considerar:
 
 ### <a name="vision"></a>Visual
 
@@ -99,7 +99,7 @@ La discapacidad se define como "un desajuste entre las necesidades de la persona
 
 ## <a name="how-to-make-games-more-accessible"></a>¿Cómo hacer que los juegos sean más accesibles?
 
-### <a name="design-shift-inclusive-game-design-approach"></a>Cambio de diseño: Enfoque de diseño de juegos inclusivo
+### <a name="design-shift-inclusive-game-design-approach"></a>Cambio de diseño: enfoque de diseño de juego inclusivo
 
 El diseño inclusivo se centra en la creación de productos y servicios más accesible para una gama más amplia de consumidores, incluidas las personas con discapacidades.
 
@@ -109,73 +109,73 @@ Por tanto, los paradigmas tradicionales de diseño de juegos deben cambiar para 
 
 Al identificar las diferencias, puedes optimizar el concepto de diseño original y mejorarlo. De esta manera, más personas experimentarán tu visión. Cuando, durante el proceso de diseño del juego, te tomas tu tiempo para ser más inclusivo, el +juego final se vuelve más accesible. Ningún juego puede funcionar para todos los usuarios, la definición de juego requiere que haya cierto grado de desafío, pero, si consideras la accesibilidad, puedes asegurarse de que nadie quede excluido innecesariamente.
 
-### <a name="empower-gamers-give-gamers-options"></a>Capacite a jugadores: Conceda a jugadores opciones
+### <a name="empower-gamers-give-gamers-options"></a>Potencia a los jugadores: dales opciones
 
 Casi todas las soluciones de accesibilidad se basan en uno de estos dos principios. El primero es darles a los jugadores las opciones para personalizar su experiencia de juego. Si ya tienes una gran base de aficionados, puede que una parte importante de tu público no quiera que la experiencia cambie en alguna manera. No hay problema. Ofrece a los jugadores la capacidad de activar y desactivar esas características y haz que se puedan configurar individualmente. Tienes que permitir que la gente pueda experimentar el juego de la manera que mejor se adapte a sus propias necesidades y preferencias.
 
-### <a name="reinforce-communicate-information-in-more-than-one-way"></a>Reforzar: Comunicar la información en más de una forma
+### <a name="reinforce-communicate-information-in-more-than-one-way"></a>Refuerzo: Comunicar información en más de una forma
 
-El segundo principio es en lo que se basa el concepto de diseño universal, un enfoque único que, no solo atrae a más jugadores, sino que también mejora la experiencia de todos. Por ejemplo, una imagen vale lo mismo que un texto y un símbolo lo mismo que un color. Un daltónico no puede usar un mapa que se basa en una variedad de marcadores de colores diferentes y, además, es frustrante para todos los demás, ya que deben recordar las equivalencias correspondientes. Agregar símbolos mejora la experiencia para todos los usuarios.
+El segundo principio es en lo que se basa el concepto de diseño universal, un enfoque único que, no solo atrae a más jugadores, sino que también mejora la experiencia de todos. Por ejemplo, una imagen vale lo mismo que un texto y un símbolo lo mismo que un color. Un mapa que se basa en un intervalo de distintos marcadores coloreados no es solo imposible para los jugadores de color ciego, sino que también es frustrante para todos los usuarios que deben recordar lo que es todo. Agregar símbolos mejora la experiencia para todos los usuarios.
 
-### <a name="innovate-be-creative"></a>Innove: Sea creativo
+### <a name="innovate-be-creative"></a>Innova: sé creativo
 
 Existen muchas maneras creativas de mejorar la accesibilidad de tu juego. Ponte tu traje de creatividad y aprende de otros juegos accesibles del mercado. Si ya tienes un juego existente, aprende a identificar las características actuales del juego que se podrían mejorar mientras mantienes la experiencia y la mecánica de juego principal como se diseñaron. Como se menciona anteriormente, la accesibilidad a juegos es proporcionar a los jugadores opciones para personalizar su experiencia de juego. Puede ser a través de refuerzo o comunicación de la información de más de una forma. 
 
 Tener en cuenta la accesibilidad permite enfocar el diseño desde un ángulo de nuevo y, posiblemente, con ideas que no hubieras considerado antes. Este enfoque para diseñar ha producido conceptos interesantes y ha creado productos que tienen un gran éxito de aceptación o comercial. Algunos ejemplos son el texto predictivo, el reconocimiento de voz, las reducciones en las aceras, el altavoz, la máquina de escribir y el reconocimiento óptico de caracteres (OCR). Las ideas para estos productos proceden de aquellos que empezaron a pensar en soluciones de accesibilidad.
 
-### <a name="adopt-quality-means-accessible-features"></a>Adoptar: Calidad significa características accesibles
+### <a name="adopt-quality-means-accessible-features"></a>Adopta: calidad significa características accesibles
 
 La accesibilidad es una medida de calidad. Debe ser un requisito incluido y no una opción interesante. Por ejemplo, "Permitir la adaptación minimapa para los daltónicos" no se considera un elemento de trabajo de prioridad baja del que te encargarás si te sobra tiempo. Si no se realiza este elemento de trabajo, la opción minimapa está incompleta y no se puede enviar.
 
-### <a name="evangelize-make-accessibility-a-priority-in-your-game-studio"></a>Dé a conocer: Hacer una prioridad de accesibilidad en la game studio
+### <a name="evangelize-make-accessibility-a-priority-in-your-game-studio"></a>Evangeliza: haz que la accesibilidad sea una prioridad en tu estudio de juegos
 
 El desarrollo de juegos siempre se realiza en una línea de tiempo ajustada, así que dar prioridad a la accesibilidad ayudará a facilitar el proceso. Una forma de hacerlo es diseñar desde el principio teniendo en cuenta la accesibilidad. Cuanto antes consideres la accesibilidad, más fácil y barata será. 
 
 Comparte tus conocimientos sobre la accesibilidad con tu equipo, habla de las ventajas comerciales y destruye los mitos (como que no beneficia a muchas personas, que atenúa tu método de trabajo y que es difícil y caro de implementar).
 
-### <a name="review-constantly-evaluate-your-game"></a>Revisión: Evalúe constantemente su juego
+### <a name="review-constantly-evaluate-your-game"></a>Revisa: evalúa constantemente tu juego
 
 Durante el desarrollo, puedes realizar un proceso de revisión para asegurarte de que se esté pensando en la accesibilidad en cada paso del camino. Haz una lista de comprobación como la siguiente para ayudar a tu equipo a evaluar constantemente si lo que se está creando es accesible o no.
 
-| Checklist                                         | Características de accesibilidad                                                                                                         |
+| Lista de comprobación                                         | Características de accesibilidad                                                                                                         |
 |---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | Animaciones del juego                                | Se probaron los subtítulos y la fotosensibilidad                                                                           |
-| Ilustraciones generales (gráficos 2D y 3D)              | Opciones y colores fáciles de usar para daltónicos, no se depende totalmente del color para identificar y se usan también formas y patrones|
+| Ilustraciones generales (gráficos 2D y 3D)              | Colores y opciones invidentes de color, no dependientes completamente del color para la identificación, sino también usar formas y patrones|
 | Pantalla de inicio, menú de configuración y otros menús       | Capacidad de leer opciones en voz alta y de recordar las opciones de la configuración, método de entrada de mando alternativo, tamaño de fuente de la interfaz de usuario ajustable  |
 | Experiencia de juego                                          | Niveles de dificultad ajustables, subtítulos, buenos elementos visuales y comentarios de audio para el jugador                           |
-| Pantalla HUD                                       | Posición de la pantalla ajustable, tamaño de fuente ajustable, opción fácil de usar para daltónicos                                                  |        
+| Pantalla HUD                                       | Posición de pantalla ajustable, tamaño de fuente ajustable, opción compatible con daltonismo                                                  |        
 | Entrada del mando                                     | Controles que se puedan reasignar para dispositivo de entrada, compatibilidad con mandos personalizados, entrada simplificada permitida para el juego                               |        
 
-### <a name="playtest-and-iterate-get-gamers-feedback"></a>Playtest y recorrer en iteración: Obtener comentarios de jugadores
+### <a name="playtest-and-iterate-get-gamers-feedback"></a>Probar e iterar: obtener comentarios de los jugadores
 
 Al organizar sesiones de prueba de juegos, invita a probadores con discapacidades para las que tu juego está diseñado y haz que jueguen. Recuerda que tienes que incluir preguntas de accesibilidad en los cuestionarios de pruebas Beta. Las asociaciones locales de discapacitados son una estupenda fuente de participantes. Observa cómo juegan y obtén comentarios de ellos. Averigua qué cambios deben realizarse para mejorar el juego.
 
 Usa las redes sociales y el foro de tu juego para escuchar comentarios sobre las características de accesibilidad más importantes y cómo implementarlas. 
 
-### <a name="shout-it-out-let-the-world-know-your-game-is-accessible"></a>Gritarlo: Informar del mundo a que su juego es accesible
+### <a name="shout-it-out-let-the-world-know-your-game-is-accessible"></a>Anúncialo: haz saber al mundo que tu juego es accesible
 
 Los usuarios querrán saber si los jugadores con discapacidades podrán jugar a tu juego. Expón claramente la accesibilidad del juego en el sitio web, en las notas de prensa y en la caja del juego, a fin de garantizar que los usuarios sepan qué esperar cuando compren tu juego. Recuerda hacer accesibles también tu sitio web y todos los canales de ventas del juego. Más importante aún, llega a la comunidad de juegos de accesibilidad e infórmales sobre tu juego.
 
 ## <a name="game-accessibility-features"></a>Características de accesibilidad a juegos
 
-En esta sección se describen algunas características que pueden hacer que el juego sea más accesible. Estas características se derivan de instrucciones que se tomaron de las [Directrices de accesibilidad a juegos](https://gameaccessibilityguidelines.com/), que representan los resultados de un grupo de colaboración de estudios, especialistas y academias. Para obtener más información, consulta las [Directrices de accesibilidad a juegos](https://gameaccessibilityguidelines.com/). 
+En esta sección se describen algunas características que pueden hacer que el juego sea más accesible. Estas características se derivan de las directrices tomadas en el sitio web de [directrices de accesibilidad de juegos](http://gameaccessibilityguidelines.com/) . Ese recurso representa las conclusiones de un grupo de estudios, especialistas y académicos.
 
-### <a name="colorblind-friendly-graphics-and-user-interface"></a>Gráficos e interfaz de usuario fáciles de usar para daltónicos
+### <a name="color-blind-friendly-graphics-and-user-interface"></a>Interfaz de usuario y gráficos descriptivos para colores ciegos
 
 La retina del ojo tiene dos tipos de células sensible a la luz: los conos para ver donde está luz y los bastones para ver cuando hay poca luz. 
 
-Hay tres tipos de conos (rojos, verdes y azules) que nos permiten ver colores correctamente. El daltonismo se produce cuando uno o varios de estos tres tipos de conos no funciona según lo esperado. El grado de daltonismo puede oscilar desde una percepción de color casi normal con una sensibilidad reducida hacia la luz roja, verde o azul a una completa incapacidad para percibir ningún color. 
+Hay tres tipos de conos (rojos, verdes y azules) que nos permiten ver colores correctamente. La persiana de color se produce cuando uno o varios de estos tres tipos de conos claros no funcionan según lo esperado. El grado de daltonización del color puede oscilar entre la claridad de color casi normal con una sensibilidad reducida hacia la luz roja, verde o azul, hasta una incapacidad total de percibir cualquier color. 
 
-Dado que es menos común tener sensibilidad reducida a la luz azul, al diseñar para daltónicos, la selección de colores está dirigida a personas con daltonismo al rojo o al verde:
+Dado que es menos común tener una sensibilidad reducida a la luz azul, al diseñar para el color ciego, la selección de colores está orientada hacia las personas que están desvidentes en rojo o verde:
  
-  + Usa combinaciones de colores que puedan diferenciar las personas con daltonismo al rojo o al verde:
+  + Use combinaciones de colores que se pueden diferenciar por personas con daltonismo de color rojo/verde:
   
-    * Colores que aparecen similar: Todas las sombras de rojo y verde como brown y naranja
-    * Colores que destaquen: Azul y amarillo
+    * Colores que parecen similares: Todos los tonos de rojo y verde, incluidos el marrón y el naranja
+    * Colores que destacan: Azul y amarillo
     
   + No confíes únicamente en el color para comunicar o distinguir los objetos del juego. Usa también formas y patrones.
   + Si tienes que depender solo de colores, combina los preestablecidos con una selección libre de colores, de modo que se pueda personalizar por completo por los jugadores que lo necesiten y que no suponga trabajo adicional para los que no lo necesitan.
-  + Usa un simulador de daltonismo a fin de probar los diseños y poder verlos a través de los ojos de un daltónico. Esto puede ayudarte a evitar problemas comunes de contraste. [Color Oracle](https://www.colororacle.org) es un simulador de daltonismo gratuito que puede emular los tres tipos más comunes de deficiencia en la visión del color: deuteranopía, protanopia y tritanopia.
+  + Use un simulador ciego de color para probar los diseños de modo que pueda ver los diseños a través de los ojos de color ciego. Esto puede ayudarte a evitar problemas comunes de contraste. [Color Oracle](https://www.colororacle.org) es un simulador ciego de color gratuito que puede simular los tres tipos más comunes de deficiencias de la visión de color: deuteranopia, Protanopia y tritanopia.
   
 ### <a name="closed-captioning-and-subtitles"></a>Subtítulos
 
@@ -187,8 +187,8 @@ Estas son algunas directrices básicas a tener en cuenta cuando se diseñan los 
 *   Selecciona el tamaño de fuente lo suficientemente grande o ten en cuenta la opción de un tamaño de fuente ajustable para obtener una mayor flexibilidad. (El tamaño de fuente ideal depende del tamaño de la pantalla o la distancia a la pantalla, entre otros).
 *   Crea un alto contraste entre el color de fondo y el de la fuente. Usa un diseño fuerte y sombras para el texto. Usa una superposición de fondo oscura para los títulos y recuerda ofrecer opciones para activarlos o desactivarlos. (Para obtener más información, consulta [Información acerca de la relación de contraste](https://docs.microsoft.com/windows/uwp/accessibility/accessible-text-requirements).)
 * Muestra frases cortas en pantalla, como máximo 38 caracteres por línea y un máximo de 2 o 3 líneas en cada momento. (Recuerda no revelar contenido del juego mostrando el texto antes de que ocurra el evento.)
-*   Distingue qué hace el sonido o quién habla. (Ejemplo: "Daniel: Hola!")
-*   Proporciona la opción de activar y desactivar los subtítulos. (Característica adicional: Capacidad de seleccionar se muestra la cantidad de sonido información basada en importancia).
+*   Distingue qué hace el sonido o quién habla. (Ejemplo: "Daniel: ¡Hola!")
+*   Proporciona la opción de activar y desactivar los subtítulos. (Característica adicional: capacidad de seleccionar cuánta información de sonido se muestra en función de la importancia.)
 
 ### <a name="game-chat-transcription"></a>Transcripción del chat de juego
 
@@ -204,7 +204,7 @@ El sonido proporciona información al jugador, aparte de la información visual.
 
 *   Usa pistas de audio 3D para proporcionar información espacial adicional.
 * Separa los controles de volumen de la música, la voz y los efectos de sonido.
-*   Diseña una voz que proporcione información significativa para los jugadores. (Ejemplo: "Se aproximan los enemigos" vs. "Enemigos entran desde la puerta trasera.")
+*   Diseña una voz que proporcione información significativa para los jugadores. (Ejemplo: "Los enemigos se acercan" frente a "Los enemigos entran por la puerta de atrás.")
 *   Asegúrate de que la voz se habla a una velocidad razonable y proporciona un control de velocidad para obtener una mejor accesibilidad.
 
 ### <a name="fully-mappable-controls"></a>Controles completamente asignables
@@ -241,7 +241,7 @@ Evita lo siguiente:
 * Más de cinco bandas repetidas de contraste alto separadas uniformemente (filas o columnas como cuadrículas y dameros) que puedan estar compuestos de elementos normales más pequeños como polkadots
 * Más de cinco líneas de texto con formato de solo mayúsculas, sin demasiado espacio entre las letras y con un interlineado de la misma altura que las propias líneas, ya que esto es, en efecto, una imagen de columnas de contraste alto que se alternan de forma regular.
 
-Usa un sistema automatizado para buscar en el juego estímulos que pudieran causar epilepsia fotosensible. (Ejemplo: [La prueba de Harding](https://www.hardingtest.com/index.php?page=test) y [Harding Flash y analizador de patrón (FPA) G2](https://www.hardingfpa.com/harding-fpa-for-games/) desarrollado por Cambridge Research sistema Ltd y profesor Graham Harding.) 
+Usa un sistema automatizado para buscar en el juego estímulos que pudieran causar epilepsia fotosensible. (Ejemplo: [The Harding Test](https://www.hardingtest.com/index.php?page=test) y [Harding Flash and Pattern Analyzer (FPA) G2](https://www.hardingfpa.com/harding-fpa-for-games/) desarrollado por Cambridge Research System Ltd y el Profesor Graham Harding). 
 
 Incluir la opción **Parpadeo On/Off** como una opción de configuración y establecer el **Parpadeo** en **Off** de manera predeterminada. Al hacer esto, protegerá a los jugadores que todavía no saben que pueden sufrir ataques.
 
@@ -252,24 +252,22 @@ Diseña pausas entre los niveles del juego y anima a los jugadores a tomar un de
 Estos son algunos sitios externos que proporcionan información adicional sobre accesibilidad a juegos.
 
 ### <a name="game-accessibility-guidelines"></a>Directrices sobre accesibilidad a juegos
-* [Directrices de accesibilidad de juegos](https://gameaccessibilityguidelines.com/)
-* [Directrices de AbleGamers Foundation](https://accessible.games/accessible-player-experiences/)
-* [Diseñar juegos universalmente accesible (UA)](https://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
+* [Directrices de accesibilidad de juegos](http://gameaccessibilityguidelines.com/) (se usa como referencia en este tema)
+* [Directrices de AbleGamers Foundation](https://accessible.games/accessible-player-experiences/) (se usa como referencia en este tema)
+* [Diseñar juegos de acceso universal (UA)](https://www.ics.forth.gr/hci/ua-games/index_main.php?l=e&c=555)
 
 ### <a name="custom-input-controllers"></a>Mandos de entrada personalizados
 * [Efecto especial](https://www.specialeffect.org.uk/)
-* [Combate WAR activa](https://www.warfighterengaged.org/)
+* [Guerra Fighter embragado](https://www.warfighterengaged.org/)
 
-## <a name="references-used"></a>Referencias usadas
-* [Directrices de accesibilidad de juegos](https://gameaccessibilityguidelines.com/)
-* [Directrices de AbleGamers Foundation](https://accessible.games/accessible-player-experiences/)
-* [Reconocimiento de color ciegos, una empresa de interés de la Comunidad](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
-* [Cómo hacer subtítulos bien de un artículo de blog sobre Gamasutra por Ian Hamilton](https://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
-* [Innovación para todos los programas](https://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
-* [Foundation epilepsia](https://www.epilepsy.com/)
+### <a name="other-references-used"></a>Otras referencias usadas
+* [Reconocimiento de color ciego, una empresa de interés de la comunidad](https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/)
+* [Cómo hacer los subtítulos bien&mdash;un artículo de blog sobre Gamasutra by Ian Hamilton](https://www.gamasutra.com/blogs/IanHamilton/20150715/248571/How_to_do_subtitles_well__basics_and_good_practices.php)
+* [Innovación para todo el programa](https://www.inclusivedesign.no/practical-tools/definitions-article56-127.html)
+* [Epilepsia base](https://www.epilepsy.com/)
 
-## <a name="related-links"></a>Vínculos relacionados
+### <a name="related-links"></a>Vínculos relacionados
 * [Diseño inclusivo](https://www.microsoft.com/design/inclusive/)
-* [Centro de accesibilidad de Microsoft para desarrolladores](https://developer.microsoft.com/windows/accessible-apps)
-* [Desarrollo de aplicaciones UWP accesible](https://docs.microsoft.com/windows/uwp/accessibility/accessibility)
-* [Libro electrónico de Software de accesibilidad de ingeniería](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Centro para desarrolladores de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps)
+* [Desarrollo de aplicaciones UWP accesibles](https://docs.microsoft.com/windows/uwp/accessibility/accessibility)
+* [Libro electrónico de ingeniería de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)

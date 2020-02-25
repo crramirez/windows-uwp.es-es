@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, release notes, notas de la versión
 ms.localizationpriority: medium
-ms.openlocfilehash: 50eea90dcf8ed59f420953eec5da5b7a0fe6b4b2
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 377069522c6b31a55028bf35bf9c71ac50c90608
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463917"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506849"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Notas de la versión de las bibliotecas de publicidad
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 En esta sección se proporcionan las notas de la versión para la versión actual de las bibliotecas de Microsoft Advertising. Estas bibliotecas admiten aplicaciones XAML y JavaScript/HTML para Windows 10, Windows 8.1, Windows Phone 8,1 y Windows Phone 8.
 

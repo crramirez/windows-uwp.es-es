@@ -11,12 +11,12 @@ metadata:
   ms.date: 11/08/2019
   ms.localizationpriority: medium
   uhfHeaderId: MSDocsHeader-WinDevCenter
-  ms.openlocfilehash: f7c79005943440c4b8896e35f78b86c300a23d7f
-  ms.sourcegitcommit: 5bd8dcb5dc1b07fd97c60b41c3f8feae099fee4a
+  ms.openlocfilehash: 1f686a9aae18f76b3a2bed316618857599544a2a
+  ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/22/2019
-  ms.locfileid: "74320028"
+  ms.lasthandoff: 02/21/2020
+  ms.locfileid: "77521297"
 highlightedContent:
   items:
   - title: Obtener Visual Studio y Windows SDK
@@ -31,126 +31,133 @@ highlightedContent:
   - title: Aprendizaje en línea para desarrolladores de aplicaciones de Windows
     itemType: learn
     url: https://docs.microsoft.com/learn/browse/?products=windows
-conceptualContent:
+productDirectory:
+  title: Desarrollar para Windows
   items:
-  - title: Plataformas de dispositivos
+  - title: Aplicaciones de escritorio para Windows
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
     links:
-    - text: Windows PCs
-      url: /windows/apps/desktop/
-      itemType: get-started
-    - text: Realidad mixta y HoloLens
-      url: https://docs.microsoft.com/windows/mixed-reality/
-      itemType: get-started
-    - text: IoT Core
-      url: https://docs.microsoft.com/windows/iot-core/windows-iot-core
-      itemType: get-started
-    - text: Xbox One
-      url: https://www.xbox.com/developers
-      itemType: get-started
-    - text: Desarrollo de aplicaciones para dispositivos móviles
-      url: https://docs.microsoft.com/azure/mobile-apps/
-      itemType: overview
-  - title: Desarrolla tu primera aplicación de escritorio
+    - url: /windows/apps/desktop/
+      text: Introducción
+  - title: Dispositivos Windows 10X y de doble pantalla
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
     links:
-    - text: UWP
-      url: /windows/uwp/get-started/
-      itemType: get-started
-    - text: Win32
-      url: https://docs.microsoft.com/windows/win32/desktop-programming/
-      itemType: get-started
-    - text: WPF (.NET Core)
-      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json&view=vs-2019
-      itemType: get-started
-    - text: WPF (.NET Framework)
-      url: https://docs.microsoft.com/dotnet/framework/wpf/getting-started/
-      itemType: get-started
-    - text: Windows Forms
-      url: https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms
-      itemType: get-started
-  - title: Referencia de la API
+    - url: https://docs.microsoft.com/dual-screen
+      text: Introducción
+  - title: Subsistema de Windows para Linux, Python y otras herramientas
+    imageSrc: https://docs.microsoft.com/media/logos/logo_linux-color.svg
     links:
-    - text: UWP
-      url: https://docs.microsoft.com/uwp/
-      itemType: reference
-    - text: Win32 (por encabezado)
-      url: https://docs.microsoft.com/windows/win32/api/
-      itemType: reference
-    - text: Win32 (por característica)
-      url: https://docs.microsoft.com/windows/win32/apiindex/windows-api-list
-      itemType: reference
-    - text: .NET Core
-      url: https://docs.microsoft.com/dotnet/api/index?view=netcore-3.0
-      itemType: reference
-    - text: .NET Framework
-      url: https://docs.microsoft.com/dotnet/api/index?view=netframework-4.8
-      itemType: reference
-tools:
+    - url: /windows/dev-environment/
+      text: Introducción
+conceptualContent:
   title: Marcos y plataformas de aplicaciones
   items:
   - title: UWP
-    imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
-    url: /windows/uwp/
+    links:
+    - text: Introducción
+      url: /windows/uwp/
+      itemType: overview
+    - text: Introducción
+      url: /windows/uwp/get-started/
+      itemType: get-started
+    - text: Referencia para API, esquemas y mucho más
+      url: https://docs.microsoft.com/uwp/
+      itemType: reference
+    - text: Espacios de nombres de API
+      url: https://docs.microsoft.com/uwp/api/
+      itemType: reference
+    - text: Ejemplos
+      url: https://github.com/Microsoft/Windows-universal-samples
+      itemType: sample
   - title: Win32
-    imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
-    url: https://docs.microsoft.com/windows/win32/
+    links:
+    - text: Introducción
+      url: https://docs.microsoft.com/windows/win32/
+      itemType: overview
+    - text: Introducción
+      url: https://docs.microsoft.com/windows/win32/desktop-programming/
+      itemType: get-started
+    - text: Referencia de API (por encabezado)
+      url: https://docs.microsoft.com/windows/win32/api/
+      itemType: reference
+    - text: Referencia de API (por característica)
+      url: https://docs.microsoft.com/windows/win32/apiindex/windows-api-list
+      itemType: reference
+    - text: Ejemplos
+      url: https://github.com/Microsoft/Windows-classic-samples
+      itemType: sample
   - title: WPF
-    imageSrc: https://docs.microsoft.com/media/logos/logo_NET.svg
-    url: https://docs.microsoft.com/dotnet/framework/wpf/
-  - title: Windows Forms
-    imageSrc: https://docs.microsoft.com/media/logos/logo_NET.svg
-    url: https://docs.microsoft.com/dotnet/framework/winforms/
+    links:
+    - text: Introducción
+      url: https://docs.microsoft.com/dotnet/desktop-wpf/overview/?view=vs-2019
+      itemType: overview
+    - text: Introducción
+      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json&view=vs-2019
+      itemType: get-started
+    - text: Referencia de API (.NET Core)
+      url: https://docs.microsoft.com/dotnet/api/index?view=netcore-3.1
+      itemType: reference
+    - text: Referencia de API (.NET Framework)
+      url: https://docs.microsoft.com/dotnet/api/index?view=netframework-4.8
+      itemType: reference
+    - text: Ejemplos
+      url: https://github.com/Microsoft/WPF-Samples
+      itemType: sample
+  - title: Windows Forms
+    links:
+    - text: Introducción
+      url: https://docs.microsoft.com/dotnet/framework/winforms/
+      itemType: overview
+    - text: Introducción
+      url: https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms
+      itemType: get-started
+    - text: Referencia de API (.NET Core)
+      url: https://docs.microsoft.com/dotnet/api/index?view=netcore-3.1
+      itemType: reference
+    - text: Referencia de API (.NET Framework)
+      url: https://docs.microsoft.com/dotnet/api/index?view=netframework-4.8
+      itemType: reference
+tools:
+  title: Plataformas de dispositivos
+  items:
+  - title: Windows PCs
+    imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
+    url: /windows/apps/desktop/
+  - title: Realidad mixta y HoloLens
+    imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
+    url: https://docs.microsoft.com/windows/mixed-reality/
+  - title: Windows para IoT
+    imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
+    url: https://docs.microsoft.com/windows/iot-core/windows-iot-core
+  - title: Xbox One
+    imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
+    url: https://www.xbox.com/developers
 additionalContent:
   sections:
-  - title: Tareas
+  - title: Tareas y tecnologías
     items:
-    - title: Compilación de una aplicación de escritorio
-      summary: Compila aplicaciones de escritorio de UWP, Win32, WPF y Windows Forms para equipos Windows.
-      url: /windows/apps/desktop/
-    - title: Moderniza tu aplicación de escritorio
-      summary: Mejora tu aplicación de escritorio existente para usar las características más recientes de Windows 10.
-      url: /windows/apps/desktop/modernize
-    - title: Desarrollo de características de Windows
+    - title: Características de Windows para desarrolladores
       summary: Obtén información sobre cómo se admiten las características Windows en distintas plataformas de aplicaciones.
       url: /windows/apps/features-and-technologies/
-    - title: Buscar ejemplos de código
-      summary: Obtén información sobre cómo compilar fantásticas aplicaciones al experimentar con nuestros ejemplos.
-      url: https://developer.microsoft.com/windows/samples
+    - title: Agregar características de Windows 10 a la aplicación de escritorio
+      summary: Mejora y moderniza tu aplicación de escritorio existente para usar las características más recientes de Windows 10.
+      url: /windows/apps/desktop/modernize
+    - title: MSIX
+      summary: Empaqueta e implementa cualquier aplicación de Windows con un formato de empaquetado moderno y universal.
+      url: https://docs.microsoft.com/windows/msix/
     - title: Desarrollo para dispositivos móviles
       summary: Explora los servicios Microsoft que te permiten crear aplicaciones móviles seguras y confiables basadas en la nube.
       url: https://docs.microsoft.com/azure/mobile-apps/
-    - title: Desarrollo con Python, Node.js, etc.
-      summary: Configura el equipo Windows para que funcione con tecnologías multiplataforma como Python, Node.js, etc.
-      url: /windows/dev-environment/
     - title: Publicación en Microsoft Store
       summary: Usa el Centro de partners para publicar tus aplicaciones y juegos de Windows en Microsoft Store.
       url: /windows/uwp/publish/
     - title: Accesibilidad de la aplicación
       summary: Agrega accesibilidad en tus aplicaciones para que las puedan utilizar todos los usuarios, independientemente de sus capacidades.
       url: /windows/apps/accessibility/
-  - title: Tecnologías
-    items:
-    - title: Novedades para desarrolladores
-      summary: Obtén información sobre las últimas características para desarrolladores de Windows 10.
-      url: https://developer.microsoft.com/windows/windows-10-for-developers
     - title: Inteligencia artificial de Windows
       summary: Usa la IA de Windows para compilar soluciones inteligentes para problemas complejos en tus aplicaciones.
       url: https://docs.microsoft.com/windows/ai/
-    - title: Windows para IoT
-      summary: Compila soluciones para la plataforma Windows para IoT.
-      url: https://docs.microsoft.com/windows/iot-core/
-    - title: MSIX
-      summary: Empaqueta e implementa cualquier aplicación de Windows con un formato de empaquetado moderno y universal.
-      url: https://docs.microsoft.com/windows/msix/
     - title: Contenedores en Windows
       summary: Empaqueta tus aplicaciones con sus dependencias en entornos de Windows rápidos y completamente aislados.
       url: https://docs.microsoft.com/virtualization/windowscontainers/
-    - title: Realidad mixta
-      summary: Crea soluciones de realidad mixta colaborativas para HoloLens y mucho más.
-      url: https://docs.microsoft.com/windows/mixed-reality/
-    - title: Proyecto Roma
-      summary: Crea experiencias entre dispositivos para las aplicaciones.
-      url: https://docs.microsoft.com/windows/project-rome/
-    - title: Microsoft Graph
-      summary: Aprovecha un modelo de programación unificado para crear aplicaciones que interactúen con los datos de millones de usuarios.
-      url: https://docs.microsoft.com/graph/
   footer: '[@WindowsDocs en Twitter](https://twitter.com/WindowsDocs) - [OneDevMinute en YouTube](https://aka.ms/OneDevMinute) - [Soporte técnico para desarrolladores de Windows](https://developer.microsoft.com/windows/support) - [Stack Overflow](https://stackoverflow.com/questions/tagged/windows)'

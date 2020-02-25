@@ -5,17 +5,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, anuncios, publicidad
 ms.localizationpriority: medium
-ms.openlocfilehash: ba5708b953efff3b4a7c52286ae1a74c43d3d211
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 06421b92106baec5a846db5fc7adf8ef3b742bff
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463757"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507079"
 ---
 # <a name="windows-premium-ads-publishers-program"></a>Programa de editores de anuncios de Windows Premium
 
 >[!WARNING]
-> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://aka.ms/ad-monetization-shutdown)
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Como parte de nuestros continuos esfuerzos para ayudar a los desarrolladores de Windows a monetizar sus aplicaciones mediante anuncios, ofrecemos el [Programa de editores de anuncios de Windows Premium](https://www.windowspremiumapps.com). Se trata de una colección escogida de aplicaciones y juegos con anuncios habilitados que son los mejores respecto al uso, participación y experiencia. Estas aplicaciones y juegos tienen capacidad de visualización certificada y una audiencia distribuida a nivel mundial de usuarios identificables con un gran nivel de participación.
 
