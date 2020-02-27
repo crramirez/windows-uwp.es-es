@@ -62,7 +62,7 @@ Para usar este modelo de manera eficaz, necesitamos un conjunto de principios de
 **Si se ve igual, haz que funcione igual**
 -   Cuando el usuario ve un cuadro de texto o el control de hamburguesa, es muy probable que espere que se comporte de la misma manera en diferentes dispositivos. Si tienes una buena razón para desviarte de un comportamiento establecido, cumple con las expectativas del usuario haciendo que también se vea diferente.
 
-Si un elemento se ve de manera muy similar a un elemento o una convención existentes, considera la posibilidad de que haga lo mismo
+**Si un elemento se ve de manera muy similar a un elemento o una convención existentes, considera la posibilidad de que haga lo mismo**
 -   Necesitas un icono de "nuevo documento". Por qué diseñar uno nuevo que sea apenas un poco diferente, cuando puedes usar uno que el usuario ya reconozca.
 
 **La facilidad de uso bate a la coherencia**
