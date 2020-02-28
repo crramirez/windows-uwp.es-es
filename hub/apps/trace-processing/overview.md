@@ -5,14 +5,14 @@ author: maiak
 ms.author: maiak
 ms.date: 02/23/2020
 ms.topic: overview
-ms.openlocfilehash: 1283a6b183673cbfb0d3d27290fc24ae6b020302
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: bc2ec3035e097a8cab15b556d1b1793385b8aeb9
+ms.sourcegitcommit: 7f1b64f62bc3a82ebcd3807c809363df46919195
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629079"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705760"
 ---
-# <a name="process-event-tracing-for-windows-etw-traces-in-net"></a>Procesos de seguimiento de eventos para Windows (ETW) en .NET
+# <a name="process-etw-traces-in-net"></a>Procesar seguimientos de ETW en .NET
 
 [Seguimiento de eventos para Windows (ETW)](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal) es un eficaz sistema de recopilación de seguimientos integrado en el sistema operativo Windows. Windows tiene una integración profunda con ETW, incluidos los datos sobre el comportamiento del sistema hasta el kernel para eventos como cambios de contexto, asignación de memoria, creación y salida de procesos, etc. Los datos de todo el sistema disponibles en ETW lo convierten en una buena opción para el análisis de rendimiento de un extremo a otro o para otras preguntas que requieran la interacción entre varios componentes del sistema.
 
@@ -28,7 +28,7 @@ En esta información general, aprendió qué es .NET TraceProcessing.
 
 El siguiente paso consiste en [procesar el primer seguimiento](quickstart.md).
 
-## <a name="in-this-section"></a>En esta sección
+## <a name="related-topics"></a>Temas relacionados
 
 * [Acceder a los datos de seguimiento](tutorial.md)
 * [Extender TraceProcessor](extensibility.md)
