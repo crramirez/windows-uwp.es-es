@@ -16,7 +16,7 @@
             - name: Modernizar las aplicaciones de escritorio
               tocHref: /windows/apps/desktop/modernize/
               topicHref: /windows/apps/desktop/modernize/
-            - name: Procesar seguimientos de ETW en .NET
+            - name: .NET TraceProcessing
               tocHref: /windows/apps/trace-processing/
               topicHref: /windows/apps/trace-processing/overview
         - name: Entorno de desarrollo
