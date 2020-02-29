@@ -1,18 +1,17 @@
 ---
 title: Directivas de Microsoft Store
 description: Los productos de la Store deben cumplir nuestros estándares de certificación, ofrecer a los clientes una experiencia verdaderamente útil y atractiva, y proporcionar una buena opción para la Store.
-layout: LandingPage
-ms.date: 03/05/2019
+ms.date: 10/01/2019
 ms.topic: article
 keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: 5086353adbc07e265f02e12f998ae655cd512d48
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a68247637395c3f68bf1140479bc94cb8e0fcc33
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258976"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607248"
 ---
 # <a name="microsoft-store-policies"></a>Directivas de Microsoft Store
 

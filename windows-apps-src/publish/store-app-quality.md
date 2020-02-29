@@ -1,18 +1,17 @@
 ---
 title: Calidad de la aplicación
 description: Es importante para los clientes y los desarrolladores por igual que las aplicaciones de Store sean divertidas, entretenidas y que merezcan la pena. Para ayudar a los desarrolladores a conseguir ese objetivo, proporcionamos esta información general de algunos de los aspectos clave sobre la calidad de las aplicaciones.
-layout: LandingPage
-ms.date: 10/26/2017
+ms.date: 07/25/2017
 ms.topic: article
 keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: B15D4F19-4E6A-4C27-AD64-F03014D11BA9
-ms.openlocfilehash: 550ffeac8912769fc7e319d819f4de67f6d36cf1
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d093a7b49a8c5ac00ca927614365d1b548e2f63a
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66826422"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607258"
 ---
 # <a name="app-quality"></a>Calidad de la aplicación
 
@@ -86,7 +85,7 @@ Los clientes valoran la atención a sus comentarios y necesidades. Los clientes 
 - Para obtener más información, consulte [Interactuar con los clientes](https://developer.microsoft.com/store/engage).
 
 
-### <a name="see-also"></a>Consulte también
+### <a name="see-also"></a>Consulta también
 
 - [Código de conducta y directivas de Microsoft Store](store-policies-and-code-of-conduct.md)
 - [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)

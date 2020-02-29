@@ -1,18 +1,17 @@
 ---
 title: Historial de cambios de las directivas de Microsoft Store
 description: Historial de cambios de las directivas de Microsoft Store
-layout: LandingPage
-ms.date: 03/05/2019
+ms.date: 10/01/2019
 ms.topic: article
 keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: D451D271-A6CA-4B46-AE99-C2269E8A078C
-ms.openlocfilehash: 879a400d22b3032bb4ee3f3f378a85f04ad73355
-ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
+ms.openlocfilehash: 3fbdc8e4831a39386396dc2c1dad25581f12fbf9
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71705565"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607281"
 ---
 # <a name="change-history-for-microsoft-store-policies"></a>Historial de cambios de las directivas de Microsoft Store
 
@@ -196,7 +195,7 @@ ms.locfileid: "71705565"
 </table>
 
 
-### <a name="see-also"></a>Consulte también
+### <a name="see-also"></a>Consulta también
 
 - [Código de conducta y directivas de Microsoft Store](store-policies-and-code-of-conduct.md)
 - [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)
