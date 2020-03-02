@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e489aa8cbf8b63885f039847b291404393444e9
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 13901e044cbf6a14ac0ede6e9ed0f451859e49a1
+ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339390"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629156"
 ---
 # <a name="calendar-date-and-time-controls"></a>Calendario, controles de fecha y hora
 
@@ -87,7 +87,7 @@ El punto de entrada muestra la fecha elegida y, cuando el usuario lo selecciona,
 
 ### <a name="time-picker"></a>Selector de hora
 
-El **TimePicker** se usa para seleccionar un único valor para cosas como citas o una hora de salida. Es una visualización estática que establece el usuario o se establece en el código, pero no se actualiza para mostrar la hora actual. 
+El **TimePicker** se usa para seleccionar un único valor para cosas como citas o una hora de salida. Es una visualización estática que establece el usuario o se establece en el código, pero no se actualiza para mostrar la hora actual.
 
 El punto de entrada muestra la hora elegida y, cuando el usuario lo selecciona, se expande una superficie del selector en sentido vertical desde el medio para que el usuario realice una selección. El selector de hora se superpone a otra interfaz de usuario; no hace que la otra interfaz desaparezca.
 
@@ -110,10 +110,10 @@ Los controles de fecha XAML admiten todos los sistemas de calendario compatibles
 
 El control de selector de hora admite cada uno de los sistemas de reloj especificados en la clase [Windows.Globalization.ClockIdentifiers](https://docs.microsoft.com/uwp/api/Windows.Globalization.ClockIdentifiers). Puedes establecer la propiedad [ClockIdentifier](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepicker.clockidentifier) para usar un reloj de 12 horas o un reloj de 24 horas. El tipo de la propiedad es String, pero debes usar valores que correspondan a las propiedades de cadena estática de la clase ClockIdentifiers. Son estas: TwelveHour (la cadena "12HourClock") y TwentyFourHour (la cadena "24HourClock"). El valor predeterminado es "12HourClock".
 
-
 ### <a name="datetime-and-calendar-values"></a>Valores de DateTime y Calendar
 
-Los objetos de fecha usados en los controles de fecha y hora XAML tienen una representación diferente según el lenguaje de programación. 
+Los objetos de fecha usados en los controles de fecha y hora XAML tienen una representación diferente según el lenguaje de programación.
+
 - C# y Visual Basic usan la estructura [System.DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset) que es parte de .NET. 
 - C++/CX usa la estructura [Windows::Foundation::DateTime](https://docs.microsoft.com/windows/desktop/api/windows.foundation/ns-windows-foundation-datetime). 
 
@@ -121,15 +121,19 @@ Un concepto relacionado es la clase Calendar, que influye en la interpretación 
 
 .NET admite también un tipo denominado [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime), que implícitamente se puede convertir a una estructura [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset). Por lo tanto, es posible que veas un tipo de "DateTime" que se usa en el código .NET que se usa para establecer valores que son realmente DateTimeOffset. Para obtener más información sobre la diferencia entre DateTime y DateTimeOffset, consulta las observaciones de la clase [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset).
 
-> **Nota**&nbsp;&nbsp;No se pueden establecer propiedades que toman objetos de fecha como una cadena de atributos XAML, porque el analizador XAML de Windows Runtime no tiene una lógica de conversión para convertir cadenas en fechas como objetos DateTime o DateTimeOffset. En general, estableces estos valores en el código. Otra técnica posible es definir una fecha que esté disponible como un objeto de datos o en el contexto de datos y, luego, establecer la propiedad como un atributo XAML que haga referencia a una expresión de la [extensión de marcado \{Binding\}](../../xaml-platform/binding-markup-extension.md) que pueda acceder a la fecha como datos.
+> [!NOTE]
+> No se pueden establecer propiedades que toman objetos de fecha como una cadena de atributos XAML, porque el analizador XAML de Windows Runtime no tiene una lógica de conversión para convertir cadenas en fechas como objetos DateTime o DateTimeOffset. En general, estableces estos valores en el código. Otra técnica posible es definir una fecha que esté disponible como un objeto de datos o en el contexto de datos y, luego, establecer la propiedad como un atributo XAML que haga referencia a una expresión de la [extensión de marcado \{Binding\}](../../xaml-platform/binding-markup-extension.md) que pueda acceder a la fecha como datos.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
-* [Ejemplo de conceptos básicos de interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
+- [Ejemplo de conceptos básicos de interfaz de usuario de XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
+- [Ejemplo de calendario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Calendar)
+- [Ejemplo de formato de fecha y hora](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/DateTimeFormatting)
 
 ## <a name="related-topics"></a>Temas relacionados
 
-**Para desarrolladores (XAML)**
+### <a name="for-developers-xaml"></a>Para desarrolladores (XAML)
+
 - [Clase CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView)
 - [Clase CalendarDatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker)
 - [Clase DatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker)

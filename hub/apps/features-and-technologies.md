@@ -6,12 +6,12 @@ ms.date: 05/08/2019
 ms.localizationpriority: medium
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: ac779bf57e51b13051fa25293606daab05540fd1
-ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
+ms.openlocfilehash: 6bae7fdef4e9cdf05dfa6f56160f1021033123e6
+ms.sourcegitcommit: 7f1b64f62bc3a82ebcd3807c809363df46919195
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76726028"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705780"
 ---
 # <a name="features-and-technologies-for-windows-apps"></a>Características y tecnologías de las aplicaciones de Windows
 
@@ -87,6 +87,12 @@ En las secciones siguientes se proporcionan vínculos útiles para obtener más 
 |  UWP  |  Win32 (API de Windows) |  WPF  |  Windows Forms  |
 |-------|----------------------|-------|-----------------|
 | [Enumerar dispositivos](/windows/uwp/devices-sensors/enumerate-devices)<br/><br/>[Obtener información sobre la batería](/windows/uwp/devices-sensors/get-battery-info)<br/><br/>[Subprocesamiento y programación asincrónica](/windows/uwp/threading-async/)<br/><br/>[Servicios web y redes](/windows/uwp/networking/) | [Servicios del sistema](/windows/desktop/system-services)<br/><br/>[Administración de la memoria](/windows/desktop/memory/memory-management)<br/><br/>[Administración de la energía](/windows/desktop/power/power-management-portal)<br/><br/>[Procesos y subprocesos](/windows/desktop/procthread/processes-and-threads)<br/><br/>[Redes e Internet](/windows/desktop/networking)<br/><br/>[Información del sistema de Windows](/windows/desktop/sysinfo/windows-system-information) |  [Modelo de subprocesos](https://docs.microsoft.com/dotnet/framework/wpf/advanced/threading-model)<br/><br/>[Programación para redes en .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/)  |  [Información del sistema](https://docs.microsoft.com/dotnet/framework/winforms/advanced/system-information-and-windows-forms)<br/><br/>[Administración de la energía](https://docs.microsoft.com/dotnet/framework/winforms/advanced/power-management-in-windows-forms)<br/><br/>[Programación para redes en .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/)<br/><br/>[Redes en Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/advanced/networking-in-windows-forms-applications)  |
+
+### <a name="debugging-and-performance"></a>Depuración y rendimiento
+
+|  UWP  |  Win32 (API de Windows) |  WPF y Windows Forms  |
+|-------|----------------------|-------|-----------------|
+| [Depuración, pruebas y rendimiento](/windows/uwp/debug-test-perf)<br/><br/>[Implementación y depuración de aplicaciones para UWP](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)<br/><br/>[Kit para la certificación de aplicaciones en Windows](/windows/uwp/debug-test-perf/windows-app-certification-kit)<br/><br/>[Rendimiento](/windows/uwp/debug-test-perf/performance-and-xaml-ui)| [Depuración y control de errores](https://docs.microsoft.com/windows/win32/debugging-and-error-handling)<br/><br/>[Herramientas de depuración para Windows](https://docs.microsoft.com/windows-hardware/drivers/debugger/)<br/><br/>[Seguimiento de eventos para Windows (ETW)](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal)<br/><br/>[API .NET TraceProcessing](/windows/apps/trace-processing/)<br/><br/>[TraceLogging](https://docs.microsoft.com/windows/win32/tracelogging/trace-logging-portal)<br/><br/>[Contadores de rendimiento](https://docs.microsoft.com/windows/win32/perfctrs/performance-counters-portal) |  [Depuración, seguimiento y generación de perfiles](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/)<br/><br/>[Seguimiento e instrumentación de aplicaciones](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/tracing-and-instrumenting-applications)<br/><br/>[Diagnóstico de errores con asistentes para la depuración administrada](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants)<br/><br/>[Generación de perfiles en tiempo de ejecución](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/runtime-profiling)<br/><br/>[Contadores de rendimiento](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/performance-counters)<br/><br/>[Implementación de ClickOnce para Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms)  |
 
 ### <a name="packaging-and-deployment"></a>Empaquetado e implementación
 
