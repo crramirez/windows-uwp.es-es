@@ -1,19 +1,19 @@
 ---
 Description: Obtenga información sobre cómo conceder identidades a aplicaciones de escritorio no empaquetadas para poder usar las características modernas de Windows 10 en esas aplicaciones.
 title: Concesión de identidad a aplicaciones de escritorio no empaquetadas
-ms.date: 10/25/2019
+ms.date: 02/28/2020
 ms.topic: article
 keywords: Windows 10, escritorio, paquete, identidad, MSIX, Win32
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 10ed6b8e1bd5efce4c9d4429d91849b1333505b6
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: ae05a00cac19fdd349aa48160b88cde6b84e26b0
+ms.sourcegitcommit: 620e4a51e2486ec2cb7190176b3d9bf3d7b5b6af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521356"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78222031"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>Concesión de identidad a aplicaciones de escritorio no empaquetadas
 
@@ -137,7 +137,7 @@ SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx  /p <
 
 ### <a name="add-the-package-identity-metadata-to-your-desktop-application-manifest"></a>Agregar los metadatos de identidad del paquete al manifiesto de aplicación de escritorio
 
-También debe incluir un [manifiesto de aplicación en paralelo](https://docs.microsoft.com/windows/win32/sbscs/application-manifests) con la aplicación de escritorio e incluir un\<elemento de **\>msix** con atributos que declaren los atributos de identidad de la aplicación. El sistema operativo usa los valores de estos atributos para determinar la identidad de la aplicación cuando se inicia el archivo ejecutable.
+También debe incluir un [manifiesto de aplicación en paralelo](https://docs.microsoft.com/windows/win32/sbscs/application-manifests) con la aplicación de escritorio e incluir un&lt;elemento de [&gt;msix](https://docs.microsoft.com/windows/win32/sbscs/application-manifests#msix) con atributos que declaren los atributos de identidad de la aplicación. El sistema operativo usa los valores de estos atributos para determinar la identidad de la aplicación cuando se inicia el archivo ejecutable.
 
 En el ejemplo siguiente se muestra un manifiesto de aplicación en paralelo con un elemento **\<msix\>** .
 
