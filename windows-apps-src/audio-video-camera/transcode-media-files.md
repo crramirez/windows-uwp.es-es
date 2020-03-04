@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 38aef2779908e173712bda0f35ca9e0651fb786b
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 58cc932ee8801835c44282de159900e3bb167e01
+ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683878"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256168"
 ---
 # <a name="transcode-media-files"></a>Transcodificar archivos multimedia
 
@@ -27,7 +27,7 @@ Además de los espacios de nombres que hacen referencia a la plantilla de proyec
 
 [!code-cs[Using](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetUsing)]
 
-## <a name="select-source-and-destination-files"></a>Selecciona los archivos de origen y de destino
+## <a name="select-source-and-destination-files"></a>Seleccionar los archivos de origen y de destino
 
 La forma en que la aplicación determina los archivos de origen y destino de la transcodificación depende de la implementación. En este ejemplo se usa una clase [**FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) y una clase [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) para permitir al usuario seleccionar un origen y un archivo de destino.
 
@@ -79,22 +79,5 @@ Para transcodificar el archivo, crea un nuevo objeto [**MediaTranscoder**](https
 Puedes registrar eventos para responder cuando el progreso de la transcodificación asincrónica [**TranscodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.transcoding.preparetranscoderesult.transcodeasync) cambie. Estos eventos forman parte del marco de programación asincrónica para aplicaciones para la Plataforma universal de Windows (UWP) y no son específicos para la API de transcodificación.
 
 [!code-cs[TranscodeCallbacks](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeCallbacks)]
-
-
-## <a name="encode-a-metadata-stream"></a>Codificar una secuencia de metadatos
-A partir de Windows 10, versión 1803, puede incluir metadatos de tiempo durante la transcodificación de archivos multimedia. A diferencia de los ejemplos de transcodificación de vídeo anteriores, que usan los métodos de creación de perfiles de codificación multimedia integrados, como [**MediaEncodingProfile. CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4), debe crear manualmente el perfil de codificación de metadatos para admitir el tipo de metadatos que va a codificar.
-
-Este primer paso para crear un perfil de incodificación de metadatos es crear un objeto [**TimedMetadataEncodingProperties**] que describa la codificación de los metadatos que se van a transcodificar. La propiedad SubType es un GUID que especifica el tipo de los metadatos. Los detalles de codificación para cada tipo de metadatos son de propiedad y no los proporciona Windows. En este ejemplo, se usa el GUID para los metadatos de GoPro (GPRS). A continuación, se llama a [**SetFormatUserData**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) para establecer un BLOB binario de datos que describe el formato de flujo específico del formato de metadatos. A continuación, se crea una **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) a partir de las propiedades de codificación y una etiqueta de seguimiento y un nombre para permitir que una aplicación Lea el flujo endcoded para identificar la secuencia de metadatos y, opcionalmente, mostrar el nombre de flujo en la interfaz de usuario. 
- 
-[!code-cs[GetStreamDescriptor](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetStreamDescriptor)]
-
-Después de crear el **TimedMetadataStreamDescriptor**, puede crear un **MediaEncodingProfile** que describa el vídeo, el audio y los metadatos que se van a codificar en el archivo. El **TimedMetadataStreamDescriptor** creado en el último ejemplo se pasa a esta función auxiliar de ejemplo y se agrega a **MediaEncodingProfile** mediante una llamada a [**SetTimedMetadataTracks**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks).
-
-[!code-cs[GetMediaEncodingProfile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetMediaEncodingProfile)]
- 
-
- 
-
-
 
 

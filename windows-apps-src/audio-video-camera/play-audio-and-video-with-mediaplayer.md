@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a53c03c10089856cfd738a5c071c37502a34e9a5
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 4ae87600c49b61e5ee426e8dd7ab33b3d3cf7ea3
+ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683628"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256158"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>Reproducir audio y vídeo con MediaPlayer
 
@@ -116,6 +116,8 @@ En el controlador de eventos [**DoubleTapped**](https://docs.microsoft.com/uwp/a
 
 [!code-cs[DoubleTapped](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDoubleTapped)]
 
+**Nota:** En esta sección se describe la entrada táctil. Touchpad envía eventos de puntero y no envía eventos de manipulación.
+
 ### <a name="handling-policy-based-playback-degradation"></a>Controlar la degradación de reproducción basada en directivas
 
 En algunas circunstancias, el sistema puede degradar la reproducción de un elemento multimedia, como la reducción de la resolución (restricción), en función de una directiva en lugar de un problema de rendimiento. Por ejemplo, el vídeo puede verse afectado por el sistema si se está reproduciendo con un controlador de vídeo sin firmar. Puedes llamar a [**MediaPlaybackSession.GetOutputDegradationPolicyState**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.getoutputdegradationpolicystate#Windows_Media_Playback_MediaPlaybackSession_GetOutputDegradationPolicyState) para determinar si, y por qué, se está produciendo esta degradación basada en directivas y alertar al usuario o registrar el motivo con fines de telemetría.
@@ -214,7 +216,7 @@ En el controlador de eventos **VideoTracksChanged**, para obtener las propiedade
 ## <a name="use-mediaplayer-in-frame-server-mode"></a>Usar MediaPlayer en modo de servidor de fotogramas
 A partir de Windows 10, versión 1703, puedes usar **MediaPlayer** en modo de servidor de fotogramas. En este modo, **MediaPlayer** no representará automáticamente los fotogramas en un objeto **MediaPlayerElement** asociado. En cambio, la aplicación copia el fotograma actual de **MediaPlayer** a un objeto que implementa [**IDirect3DSurface**](https://docs.microsoft.com/uwp/api/windows.graphics.directx.direct3d11.idirect3dsurface). El principal escenario de esta característica es usar sombreadores de píxeles para procesar los fotogramas de vídeo que proporcione **MediaPlayer**. La aplicación es responsable de mostrar cada fotograma después del procesamiento, por ejemplo, mostrando el fotograma en un control [**Image**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image) de XAML.
 
-En el siguiente ejemplo, se inicializa un nuevo objeto **MediaPlayer** y se carga el contenido de vídeo. Luego, se registra un controlador para [**VideoFrameAvailable**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.VideoFrameAvailable). El modo de servidor de fotogramas se habilita al establecer la propiedad [**IsVideoFrameServerEnabled**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.IsVideoFrameServerEnabled) del objeto **MediaPlayer** en **true**. Por último, la reproducción multimedia se inicia con una llamada a [**reproducir**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Play).
+En el siguiente ejemplo, se inicializa un nuevo objeto **MediaPlayer** y se carga el contenido de vídeo. Luego, se registra un controlador para [**VideoFrameAvailable**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.VideoFrameAvailable). El modo de servidor de fotogramas se habilita al establecer la propiedadIsVideoFrameServerEnabled[**del objeto**MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.IsVideoFrameServerEnabled) en **true**. Por último, la reproducción multimedia se inicia con una llamada a [**reproducir**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Play).
 
 [!code-cs[FrameServerInit](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetFrameServerInit)]
 
@@ -234,7 +236,7 @@ Para más información sobre el uso de Win2D, consulta el [repositorio GitHub de
 2.  En la parte superior de la ventana, selecciona la pestaña **Examinar**.
 3.  En el cuadro de búsqueda, escribe **Win2D**.
 4.  Selecciona **Win2D.uwp**y luego selecciona **Instalar** en el panel derecho.
-5.  En el cuadro de diálogo **Revisar cambios** se muestra el paquete que se instalará. Haz clic en **Aceptar**.
+5.  En el cuadro de diálogo **Revisar cambios** se muestra el paquete que se instalará. Haga clic en **Aceptar**.
 6.  Acepta la licencia del paquete.
 
 ## <a name="detect-and-respond-to-audio-level-changes-by-the-system"></a>Detectar y responder a cambios de nivel de audio por el sistema

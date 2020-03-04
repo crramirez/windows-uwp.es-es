@@ -8,19 +8,19 @@ keywords: táctil, función táctil,puntero,entrada,interacción del usuario
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 25398f0b48e88e2cebe81f62cc62ac1d9bd92d5c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 2277be481326aa5ae5a76c900160108bcd29fb84
+ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258215"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256148"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 
 
 Diseña tu aplicación teniendo en mente que el principal método de entrada de los usuarios será táctil. Si usas los controles de UWP, la compatibilidad con el mouse, el panel táctil y el lápiz o la pluma no requiere programación adicional, ya que las aplicaciones para UWP la ofrecen de forma gratuita.
 
-Pero ten presente que una interfaz de usuario optimizada para entrada táctil no es siempre mejor que una interfaz de usuario tradicional. Ambas ofrecen ventajas y desventajas exclusivas de la tecnología y la aplicación en cuestión. A la hora de diseñar una interfaz de usuario básicamente táctil, es importante entender las diferencias fundamentales entre entrada táctil (incluido el panel táctil), con pluma o lápiz, con mouse y con el teclado.
+Pero ten presente que una interfaz de usuario optimizada para entrada táctil no es siempre mejor que una interfaz de usuario tradicional. Ambas ofrecen ventajas y desventajas exclusivas de la tecnología y la aplicación en cuestión. En el paso a una interfaz de usuario táctil, es importante comprender las diferencias principales entre el toque, el panel táctil, el lápiz/lápiz, el mouse y la entrada del teclado.
 
 > **API importantes**: [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
 
@@ -57,7 +57,7 @@ En la tabla siguiente, se muestran algunas de las diferencias entre los disposit
 
 <table>
 <tbody><tr><th>Factor</th><th>Interacciones táctiles</th><th>Interacciones con mouse, teclado, pluma/lápiz</th><th>Panel táctil</th></tr>
-<tr><td rowspan="3">Precisión</td><td>El área de contacto de la punta de un dedo es mayor que la de una sola coordenada x-y, lo que aumenta las probabilidades de activación no intencional de comandos.</td><td>El mouse y la pluma/lápiz suministran una coordenada x-y precisa.</td><td>Es igual al mouse.</td></tr>
+<tr><td rowspan="3">Precision</td><td>El área de contacto de la punta de un dedo es mayor que la de una sola coordenada x-y, lo que aumenta las probabilidades de activación no intencional de comandos.</td><td>El mouse y la pluma/lápiz suministran una coordenada x-y precisa.</td><td>Es igual al mouse.</td></tr>
 <tr><td>La forma del área de contacto cambia durante el movimiento.  </td><td>Los movimientos de mouse y los trazos de la pluma/lápiz suministran coordenadas x-y precisas. El foco del teclado es explícito.</td><td>Es igual al mouse.</td></tr>
 <tr><td>No hay cursor de mouse para ayudar con la selección del destino.</td><td>El cursor del mouse, el cursor de la pluma/lápiz y el foco del teclado ayudan a seleccionar el destino.</td><td>Es igual al mouse.</td></tr>
 <tr><td rowspan="3">Anatomía humana</td><td>Los movimientos de los dedos no son precisos, ya que es difícil realizar un movimiento en línea recta con uno o más dedos. Esto se debe a la curvatura de las articulaciones de la mano y a la cantidad de articulaciones involucradas en el movimiento.</td><td>Es más fácil ejecutar un movimiento en línea recta con mouse o pluma/lápiz porque la mano que los controla recorre una distancia física menor que el cursor en la pantalla.</td><td>Es igual al mouse.</td></tr>
@@ -72,9 +72,8 @@ En la tabla siguiente, se muestran algunas de las diferencias entre los disposit
 <tr><td>Admite manipulación directa de objetos por medio de gestos como pulsar, arrastrar, deslizar, reducir y girar.</td><td>No admite manipulación directa porque el mouse, la pluma o el lápiz y el teclado son dispositivos de entrada indirecta.</td><td>Es igual al mouse.</td></tr>
 </tbody></table>
 
-
-
-**Tenga en cuenta**   la entrada indirecta ha tenido la ventaja de más de 25 años de refinamiento. Algunas funciones, como la información sobre herramientas desencadenada al mantener el mouse sobre un elemento, se diseñaron para explorar la interfaz de usuario específicamente con entrada de panel táctil, mouse, pluma o lápiz y teclado. Funciones de UI como esta se han rediseñado para lograr la experiencia completa que reporta la entrada táctil, sin poner en riesgo la experiencia de usuario de estos otros dispositivos.
+> [!NOTE]
+> La entrada indirecta tiene la ventaja de más de 25 años de perfeccionamiento. Algunas funciones, como la información sobre herramientas desencadenada al mantener el mouse sobre un elemento, se diseñaron para explorar la interfaz de usuario específicamente con entrada de panel táctil, mouse, pluma o lápiz y teclado. Funciones de UI como esta se han rediseñado para lograr la experiencia completa que reporta la entrada táctil, sin poner en riesgo la experiencia de usuario de estos otros dispositivos.
 
  
 
@@ -85,7 +84,7 @@ Los comentarios visuales adecuados durante las interacciones con la aplicación 
 La información visual es esencial cuando el usuario usa la entrada táctil para llevar a cabo actividades que requieren exactitud y precisión en lo que respecta a ubicación. Muestra información siempre que se detecte entrada táctil para ayudar al usuario a entender cualquier regla personalizada de selección de destinos que defina la aplicación y los controles correspondientes.
 
 
-## <a name="targeting"></a>Selección de destino
+## <a name="targeting"></a>Destino
 
 La selección de destinos se optimiza mediante:
 
@@ -151,7 +150,8 @@ Además, te recomendamos lo siguiente:
 -   Las interacciones deben admitir manipulaciones compuestas. Por ejemplo, alejar para ampliar mientras se arrastran los dedos para el movimiento panorámico.
 -   Las interacciones no deben distinguirse temporalmente. La misma interacción debe tener el mismo resultado, independientemente del tiempo que se haya tardado en realizarla. Las activaciones temporales introducen retrasos obligatorios para los usuarios y reducen la naturaleza envolvente de la manipulación directa, así como la percepción de la respuesta del sistema.
 
-    **Tenga en cuenta**  una excepción es el lugar en el que se usan interacciones de tiempo específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
+   > [!NOTE]
+   > Una excepción a esto es el lugar en el que se usan interacciones de tiempo específicas para ayudar en el aprendizaje y la exploración (por ejemplo, mantener presionado).
 
      
 
@@ -192,15 +192,15 @@ Para proporcionar compatibilidad táctil personalizada, puedes controlar diverso
 
 Este es el conjunto básico de gestos táctiles que admite la UWP.
 
-| Nombre           | Tipo                 | Descripción                                                                            |
+| Name           | Tipo                 | Descripción                                                                            |
 |----------------|----------------------|----------------------------------------------------------------------------------------|
-| Tocar            | Gesto estático       | Un dedo toca la pantalla y se levanta.                                            |
-| Pulsar y sostener | Gesto estático       | Un dedo toca la pantalla y se queda en el lugar.                                      |
+| Puntee en            | Gesto estático       | Un dedo toca la pantalla y se levanta.                                            |
+| Presionar y mantener presionado | Gesto estático       | Un dedo toca la pantalla y se queda en el lugar.                                      |
 | Deslizar          | Gesto de manipulación | Uno o más dedos tocan la pantalla y se mueven en la misma dirección.                   |
 | Deslizar rápidamente          | Gesto de manipulación | Uno o más dedos tocan la pantalla y se mueven una corta distancia en la misma dirección.  |
 | Girar           | Gesto de manipulación | Dos o más dedos tocan la pantalla y se mueven describiendo un arco en el sentido de las agujas del reloj o en el sentido contrario a las agujas del reloj. |
 | Reducir          | Gesto de manipulación | Dos o más dedos tocan la pantalla y se acercan entre sí.                         |
-| Ampliar        | Gesto de manipulación | Dos o más dedos tocan la pantalla y se alejan entre sí.                           |
+| Ajustar        | Gesto de manipulación | Dos o más dedos tocan la pantalla y se alejan entre sí.                           |
 
  
 
@@ -231,7 +231,7 @@ Esta es una lista de eventos de puntero y su argumento de evento relacionado.
 | [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited)               | Se produce cuando un puntero sale del área de prueba de posicionamiento de un elemento.  |
 | [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled)           | Se produce cuando un contacto táctil se pierde de manera inesperada.               |
 | [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)     | Se produce cuando otro elemento hace una captura del puntero.    |
-| [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)   | Se produce cuando cambia el valor delta de la rueda del mouse.         |
+| [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)   | Se produce cuando cambia el valor Delta de una rueda del mouse y cuando se gira el Touchpad.         |
 | [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) | Proporciona datos para todos los eventos de puntero.                         |
 
  
@@ -414,6 +414,9 @@ Usa eventos de manipulación si necesitas incluir en tu aplicación compatibilid
 
 Puedes usar los eventos de manipulación para detectar interacciones como, por ejemplo, arrastrar, zoom y sostener.
 
+> [!NOTE]
+> Touchpad no genera eventos de manipulación. En su lugar, se producirán eventos de puntero para la entrada de Touchpad.
+
 Esta es una lista de eventos de manipulación y los argumentos de evento relacionados.
 
 | Evento o clase                                                                                               | Descripción                                                                                                                               |
@@ -436,7 +439,8 @@ Un gesto consiste en una serie de eventos de manipulación. Cada gesto se inicia
 
 A continuación, se desencadenan uno o más eventos [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta). Por ejemplo, si tocas la pantalla y luego arrastras el dedo por la pantalla. Por último, cuando termina la interacción, tiene lugar un evento [**ManipulationCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted).
 
-**Tenga en cuenta**  si no dispone de un monitor de pantalla táctil, puede probar el código de evento de manipulación en el simulador mediante una interfaz de rueda del mouse y el mouse.
+> [!NOTE]
+> Si no dispone de un monitor de pantalla táctil, puede probar el código de evento de manipulación en el simulador mediante una interfaz de mouse y rueda de mouse.
 
  
 
