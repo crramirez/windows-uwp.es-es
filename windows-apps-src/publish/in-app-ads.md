@@ -6,14 +6,17 @@ ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e12641695dd72cddcfb6b51f6cd2f20fa66ddf41
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 96994566d19e03f1d85b751242331f04fef098ad
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258999"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78290349"
 ---
 # <a name="in-app-ads"></a>Anuncios en aplicaciones
+
+>[!WARNING]
+> A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Use la página **monetizar** &gt; **ADS en la aplicación** del [centro de Partners](https://partner.microsoft.com/dashboard) para crear y administrar unidades de anuncios para:
 
@@ -116,10 +119,10 @@ En la tabla siguiente se muestran las redes de pago que admitimos actualmente pa
 | Recomendaciones de contenido de MSN |  Seleccione esta opción para servir anuncios de recomendaciones de contenido de MSN. |  Banner, Banner intersticial  |
 | Outbrain |  Selecciona esta opción para proporcionar anuncios desde [Outbrain](https://www.outbrain.com/). |  Banner, Banner intersticial  |
 | Revcontent |  Selecciona esta opción para proporcionar anuncios desde [Revcontent](https://www.revcontent.com/). |  Banner, nativo  |
-| Smaato |  Selecciona esta opción para proporcionar anuncios desde [Smaato](https://www.smaato.com/). |  Banner  |
+| Smaato |  Selecciona esta opción para proporcionar anuncios desde [Smaato](https://www.smaato.com/). |  Pancarta  |
 | smartclip |  Selecciona esta opción para proporcionar anuncios desde [smartclip](http://www.smartclip.com/). |  Vídeo intersticial  |
 | SpotX |  Selecciona esta opción para proporcionar anuncios desde [SpotX](https://www.spotx.tv/). |  Vídeo intersticial  |
-| Taboola |  Selecciona esta opción para proporcionar anuncios desde [Taboola](https://www.taboola.com/). |  Banner  |
+| Taboola |  Selecciona esta opción para proporcionar anuncios desde [Taboola](https://www.taboola.com/). |  Pancarta  |
 | Vungle | Seleccione esta opción para servir anuncios de [Vungle](https://vungle.com/) | Vídeo intersticial |
 | Undertone | Seleccione esta opción para servir anuncios desde [undertone](https://www.undertone.com/). | Banner intersticial |
 
