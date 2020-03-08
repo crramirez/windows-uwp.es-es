@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, games, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: af5d73e0a786e33aff6274cd63ee5ae6ac77c133
-ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74153695"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853012"
 ---
 #  <a name="define-the-uwp-app-framework"></a>Definir el marco de la aplicación para UWP
 
@@ -382,7 +382,7 @@ void GameMain::Run()
 
 ## <a name="uninitialize-method-of-the-view-provider"></a>El método Uninitialize del proveedor de vista
 
-Cuando el usuario finalmente finaliza la sesión de juego, debemos limpiar. Aquí es donde entra en acción **Uninitialize**.
+Cuando el usuario finalmente finaliza la sesión de juego, debemos limpiar. Aquí es donde entra en acción la propiedad **Uninitialize**.
 
 En Windows 10, al cerrar la ventana de la aplicación no se elimina el proceso de la aplicación, sino que se escribe el estado del singleton de la aplicación en la memoria. Si hay algo especial que debe ocurrir cuando el sistema tiene que reclamar su memoria, incluyendo cualquier limpieza de recursos, pon el código de esa limpieza en este método.
 

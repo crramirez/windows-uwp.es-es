@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9712b4498b03460568d20d4c8e27172ad5c14360
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362208"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853011"
 ---
 # <a name="resource-types"></a>Tipos de recursos
 
@@ -34,7 +34,7 @@ Existen dos maneras de especificar completamente el diseño (o la superficie de 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>Ha escrito</p></td>
+<td align="left"><p><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>Con tipo</p></td>
 <td align="left"><p>Se especifica el tipo completamente al crear el recurso.</p></td>
 </tr>
 <tr class="even">
@@ -46,20 +46,20 @@ Existen dos maneras de especificar completamente el diseño (o la superficie de 
 
  
 
-## <a name="span-idbufferresourcesspanspan-idbufferresourcesspanspan-idbufferresourcesspanspan-idbuffer-resourcesspanbuffer-resources"></a><span id="Buffer_Resources"></span><span id="buffer_resources"></span><span id="BUFFER_RESOURCES"></span><span id="buffer-resources"></span>Recursos de búfer
+## <a name="span-idbuffer_resourcesspanspan-idbuffer_resourcesspanspan-idbuffer_resourcesspanspan-idbuffer-resourcesspanbuffer-resources"></a><span id="Buffer_Resources"></span><span id="buffer_resources"></span><span id="BUFFER_RESOURCES"></span><span id="buffer-resources"></span>Recursos de búfer
 
 
 Un recurso de búfer es una colección de datos completamente tipificados; internamente, un búfer contiene elementos. Un elemento está formado por entre 1 y 4 componentes. Algunos ejemplos de tipos de datos de elemento son: un valor de los datos empaquetados (por ejemplo, R8G8B8A8), un único entero de 8 bits o cuatro valores flotantes de 32 bits. Estos tipos de datos se utilizan para almacenar datos, como un vector de posición, un vector normal, una coordenada de textura en un búfer de vértices, un índice en un búfer de índices o el estado del dispositivo.
 
 Un búfer se crea como un recurso no estructurado. Dado que no está estructurado, un búfer no puede contener ningún nivel de mapas MIP, no se filtra cuando se lee y no puede ser de varias muestras.
 
-### <a name="span-idbuffertypesspanspan-idbuffertypesspanspan-idbuffertypesspanbuffer-types"></a><span id="Buffer_Types"></span><span id="buffer_types"></span><span id="BUFFER_TYPES"></span>Tipos de búfer
+### <a name="span-idbuffer_typesspanspan-idbuffer_typesspanspan-idbuffer_typesspanbuffer-types"></a><span id="Buffer_Types"></span><span id="buffer_types"></span><span id="BUFFER_TYPES"></span>Tipos de búfer
 
 -   [Búfer de vértices](#vertex-buffer)
 -   [Búfer de índice](#index-buffer)
 -   [Búfer de constantes](#shader-constant-buffer)
 
-### <a name="span-idvertexbufferspanspan-idvertexbufferspanspan-idvertexbufferspanspan-idvertex-bufferspanvertex-buffer"></a><span id="Vertex_Buffer"></span><span id="vertex_buffer"></span><span id="VERTEX_BUFFER"></span><span id="vertex-buffer"></span>Búfer de vértices
+### <a name="span-idvertex_bufferspanspan-idvertex_bufferspanspan-idvertex_bufferspanspan-idvertex-bufferspanvertex-buffer"></a><span id="Vertex_Buffer"></span><span id="vertex_buffer"></span><span id="VERTEX_BUFFER"></span><span id="vertex-buffer"></span>Búfer de vértices
 
 Un búfer es una colección de elementos; un búfer de vértices contiene los datos por vértice. El ejemplo más simple es un búfer de vértices que contiene un tipo de datos, como datos de posición. Se puede visualizar como en la siguiente ilustración.
 
@@ -78,7 +78,7 @@ Para acceder a datos de un búfer de vértices, necesitas saber el vértice al q
 
 Antes de crear un búfer de vértices, debes definir su diseño mediante la creación de un objeto de diseño de entrada. Una vez creado el objeto de diseño de entrada, enlázalo a la fase del ensamblador de entrada (IA).
 
-### <a name="span-idindexbufferspanspan-idindexbufferspanspan-idindexbufferspanspan-idindex-bufferspanindex-buffer"></a><span id="Index_Buffer"></span><span id="index_buffer"></span><span id="INDEX_BUFFER"></span><span id="index-buffer"></span>Búfer de índice
+### <a name="span-idindex_bufferspanspan-idindex_bufferspanspan-idindex_bufferspanspan-idindex-bufferspanindex-buffer"></a><span id="Index_Buffer"></span><span id="index_buffer"></span><span id="INDEX_BUFFER"></span><span id="index-buffer"></span>Búfer de índice
 
 Un búfer de índices contiene un conjunto secuencial de índices de 16 o 32 bits; cada índice se utiliza para identificar un vértice en un búfer de vértices. El uso de un búfer de índices con uno o más búferes de vértices para suministrar datos a la fase IA se denomina indexación. Un búfer de índices se puede visualizar como en la siguiente ilustración.
 
@@ -94,7 +94,7 @@ Un búfer de índices puede unir varias series de líneas o triángulos ([topolo
 
 ![Ilustración de un índice de corte en series](images/d3d10-ia-strips-cut-value.png)
 
-### <a name="span-idshaderconstantbufferspanspan-idshaderconstantbufferspanspan-idshaderconstantbufferspanspan-idshader-constant-bufferspanconstant-buffer"></a><span id="Shader_Constant_Buffer"></span><span id="shader_constant_buffer"></span><span id="SHADER_CONSTANT_BUFFER"></span><span id="shader-constant-buffer"></span>Búfer de constantes
+### <a name="span-idshader_constant_bufferspanspan-idshader_constant_bufferspanspan-idshader_constant_bufferspanspan-idshader-constant-bufferspanconstant-buffer"></a><span id="Shader_Constant_Buffer"></span><span id="shader_constant_buffer"></span><span id="SHADER_CONSTANT_BUFFER"></span><span id="shader-constant-buffer"></span>Búfer de constantes
 
 Direct3D tiene un búfer para suministrar constantes de sombreador que se denomina "búfer de constantes de sombreador" o simplemente "búfer de constantes". Conceptualmente, se parece a un búfer de vértices de un solo elemento, como se muestra en la siguiente ilustración.
 
@@ -112,27 +112,27 @@ Usa un búfer de constantes para almacenar los resultados de la fase de salida e
 
 Consulta [Shader Constants (DirectX HLSL)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants) [Constantes de sombreador (DirectX HLSL)] para ver un ejemplo de declaración de un búfer de constantes en un sombreador.
 
-## <a name="span-idtextureresourcesspanspan-idtextureresourcesspanspan-idtextureresourcesspanspan-idtexture-resourcesspantexture-resources"></a><span id="Texture_Resources"></span><span id="texture_resources"></span><span id="TEXTURE_RESOURCES"></span><span id="texture-resources"></span>Recursos de textura
+## <a name="span-idtexture_resourcesspanspan-idtexture_resourcesspanspan-idtexture_resourcesspanspan-idtexture-resourcesspantexture-resources"></a><span id="Texture_Resources"></span><span id="texture_resources"></span><span id="TEXTURE_RESOURCES"></span><span id="texture-resources"></span>Recursos de textura
 
 
-Un recurso de textura es una colección estructurada de datos diseñada para almacenar elementos de textura. A diferencia de los búferes, las texturas se pueden filtrar por muestrarios de texturas, ya que las leen las unidades del sombreador. El tipo de textura afecta a cómo se filtra la textura. Un elemento de textura representa la unidad más pequeña de una textura que puede leer una canalización o a la que puede escribir. Cada elemento de textura contiene componentes de 1 a 4, organizados en uno de los formatos DXGI (consulte [ **DXGI\_formato**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)).
+Un recurso de textura es una colección estructurada de datos diseñada para almacenar elementos de textura. A diferencia de los búferes, las texturas se pueden filtrar por muestrarios de texturas, ya que las leen las unidades del sombreador. El tipo de textura afecta a cómo se filtra la textura. Un elemento de textura representa la unidad más pequeña de una textura que puede leer una canalización o a la que puede escribir. Cada textura contiene de 1 a 4 componentes, organizados en uno de los formatos de DXGI (consulte [**formato de\_de dxgi**](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)).
 
 Las texturas se crean como un recurso estructurado para que se conozca su tamaño. Sin embargo, cada textura puede ser con o sin tipos en el momento de creación del recurso, siempre que el tipo esté totalmente especificado con una vista cuando la textura esté enlazada a la canalización.
 
 -   [Tipos de textura](#texture-types)
--   [Recursos secundarios de Metadata](#subresources)
--   [Vs seguros. Establecimiento flexible de tipos](#typed)
+-   [Metadata](#subresources)
+-   [Strong frente a tipos débiles](#typed)
 
-### <a name="span-idtexturetypesspanspan-idtexturetypesspanspan-idtexturetypesspanspan-idtexture-typesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span><span id="texture-types"></span>Tipos de textura
+### <a name="span-idtexture_typesspanspan-idtexture_typesspanspan-idtexture_typesspanspan-idtexture-typesspantexture-types"></a><span id="Texture_Types"></span><span id="texture_types"></span><span id="TEXTURE_TYPES"></span><span id="texture-types"></span>Tipos de textura
 
-Hay varios tipos de texturas: 1 D, 2D, 3D, cada uno de los cuales se puede crear con o sin mapas MIP. Direct3D también admite matrices de texturas y texturas de varias muestras.
+Hay varios tipos de texturas: 1D, 2D y 3D. Cada uno puede crearse con o sin mapas MIP. Direct3D también admite matrices de texturas y texturas de varias muestras.
 
 -   [Textura 1D](#texture1d-resource)
--   [Matriz de textura 1D](#texture1d-array-resource)
+-   [matriz de textura 1D](#texture1d-array-resource)
 -   [Textura 2D y matriz de textura 2D](#texture2d-resource)
 -   [Textura 3D](#texture3d-resource)
 
-### <a name="span-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1dresourcespanspan-idtexture1d-resourcespan1d-texture"></a><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>Textura 1D
+### <a name="span-idtexture1d_resourcespanspan-idtexture1d_resourcespanspan-idtexture1d_resourcespanspan-idtexture1d-resourcespan1d-texture"></a><span id="Texture1D_Resource"></span><span id="texture1d_resource"></span><span id="TEXTURE1D_RESOURCE"></span><span id="texture1d-resource"></span>Textura 1D
 
 Una textura 1D en su forma más sencilla contiene datos de texturas que se pueden abordar con una sola coordenada de textura. Se puede visualizar como una matriz de elementos de textura, como se muestra en la siguiente ilustración.
 
@@ -144,7 +144,7 @@ Cada elemento de textura contiene un número de componentes de color según el f
 
 Un nivel de mapas MIP es una textura que es una potencia de dos menor que el nivel que tiene por encima. El nivel superior contiene el máximo detalle, que es menor en cada nivel posterior; para un mapa MIP 1D, el nivel inferior contiene un elemento de textura. Los diferentes niveles se identifican con un índice denominado LOD (nivel de detalle); puedes usar el LOD para acceder a una textura inferior al representar geometría que está tan cerca de la cámara.
 
-### <a name="span-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1darrayresourcespanspan-idtexture1d-array-resourcespan1d-texture-array"></a><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>Matriz de textura 1D
+### <a name="span-idtexture1d_array_resourcespanspan-idtexture1d_array_resourcespanspan-idtexture1d_array_resourcespanspan-idtexture1d-array-resourcespan1d-texture-array"></a><span id="Texture1D_Array_Resource"></span><span id="texture1d_array_resource"></span><span id="TEXTURE1D_ARRAY_RESOURCE"></span><span id="texture1d-array-resource"></span>matriz de textura 1D
 
 Direct3D 10 también tiene una nueva estructura de datos para las matrices de texturas. Conceptualmente, una matriz de texturas 1D es similar a la siguiente ilustración.
 
@@ -154,7 +154,7 @@ Esta matriz de textura contiene tres texturas. Cada una de las tres texturas tie
 
 Todas las matrices de textura de Direct3D son una matriz homogénea de texturas, lo que significa que cada textura de una matriz de texturas debe tener el mismo formato de datos y tamaño (incluido el ancho de textura y el número de niveles de mapas MIP). Puedes crear matrices de texturas de distintos tamaños, siempre que todas las texturas de cada matriz tengan el mismo tamaño.
 
-### <a name="span-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2dresourcespanspan-idtexture2d-resourcespan2d-texture-and-2d-texture-array"></a><span id="Texture2D_Resource"></span><span id="texture2d_resource"></span><span id="TEXTURE2D_RESOURCE"></span><span id="texture2d-resource"></span>Textura 2D y matriz de textura 2D
+### <a name="span-idtexture2d_resourcespanspan-idtexture2d_resourcespanspan-idtexture2d_resourcespanspan-idtexture2d-resourcespan2d-texture-and-2d-texture-array"></a><span id="Texture2D_Resource"></span><span id="texture2d_resource"></span><span id="TEXTURE2D_RESOURCE"></span><span id="texture2d-resource"></span>Textura 2D y matriz de textura 2D
 
 Un recurso Texture2D contiene una cuadrícula 2D de elementos de textura. Cada elemento de textura es direccionable por un vector u, v. Dado que es un recurso de textura, puede contener niveles de mapas MIP y subrecursos. Un recurso de textura 2D totalmente rellenado es similar a la siguiente ilustración.
 
@@ -168,7 +168,7 @@ Un recurso Texture2DArray es una matriz homogénea de texturas 2D; es decir, cad
 
 Esta matriz de texturas contiene tres texturas y cada textura es de 3x5 con dos niveles de mapas MIP.
 
-### <a name="span-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanspan-idtexture2darrayresourceasatexturecubespanusing-a-texture2darray-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>Uso de un Texture2DArray como un cubo de textura
+### <a name="span-idtexture2darray_resource_as_a_texture_cubespanspan-idtexture2darray_resource_as_a_texture_cubespanspan-idtexture2darray_resource_as_a_texture_cubespanusing-a-texture2darray-as-a-texture-cube"></a><span id="Texture2DArray_Resource_as_a_Texture_Cube"></span><span id="texture2darray_resource_as_a_texture_cube"></span><span id="TEXTURE2DARRAY_RESOURCE_AS_A_TEXTURE_CUBE"></span>Usar un Texture2DArray como un cubo de textura
 
 Un cubo de texturas es una matriz de texturas 2D que contiene 6 texturas, una para cada cara del cubo. Un cubo de texturas totalmente rellenado es similar a la siguiente ilustración.
 
@@ -176,7 +176,7 @@ Un cubo de texturas es una matriz de texturas 2D que contiene 6 texturas, una pa
 
 Una matriz de texturas 2D que contiene 6 texturas se pueden leer desde dentro de los sombreadores con las funciones intrínsecas del mapa de cubos, después de que se enlacen a la canalización con una vista de textura de cubo. Los cubos de texturas se tratan desde el sombreador con un vector 3D señalando desde el centro del cubo de texturas.
 
-### <a name="span-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3dresourcespanspan-idtexture3d-resourcespan3d-texture"></a><span id="Texture3D_Resource"></span><span id="texture3d_resource"></span><span id="TEXTURE3D_RESOURCE"></span><span id="texture3d-resource"></span>Textura 3D
+### <a name="span-idtexture3d_resourcespanspan-idtexture3d_resourcespanspan-idtexture3d_resourcespanspan-idtexture3d-resourcespan3d-texture"></a><span id="Texture3D_Resource"></span><span id="texture3d_resource"></span><span id="TEXTURE3D_RESOURCE"></span><span id="texture3d-resource"></span>Textura 3D
 
 Un recurso Texture3D (también conocido como "textura de volumen") contiene un volumen 3D de elementos de textura. Dado que es un recurso de textura, puede contener niveles de mapas MIP. Una textura 3D totalmente rellenada es similar a la siguiente ilustración.
 
@@ -186,7 +186,7 @@ Cuando se enlaza un segmento de mapa MIP de textura 3D como una salida de destin
 
 No hay ningún concepto de una matriz de texturas 3D. Por lo tanto, un subrecurso de textura 3D es un nivel de mapa MIP único.
 
-### <a name="span-idsubresourcesspanspan-idsubresourcesspanspan-idsubresourcesspansubresources"></a><span id="Subresources"></span><span id="subresources"></span><span id="SUBRESOURCES"></span>Recursos secundarios de Metadata
+### <a name="span-idsubresourcesspanspan-idsubresourcesspanspan-idsubresourcesspansubresources"></a><span id="Subresources"></span><span id="subresources"></span><span id="SUBRESOURCES"></span>Metadata
 
 La API de Direct3D hace referencia a recursos completos o a subconjuntos de recursos. Para especificar parte de los recursos, Direct3D ha acuñado el término *subrecursos*, que hace referencia a un subconjunto de un recurso.
 
@@ -204,31 +204,31 @@ Considérala una textura única que se compone de tres subtexturas. Cada subtext
 
 ![Ilustración de un índice de subrecursos basado en cero](images/d3d10-resource-texture1darray-sub-indexing.png)
 
-### <a name="span-idselectingsubresourcesspanspan-idselectingsubresourcesspanspan-idselectingsubresourcesspanselecting-subresources"></a><span id="Selecting_Subresources"></span><span id="selecting_subresources"></span><span id="SELECTING_SUBRESOURCES"></span>Seleccionar recursos secundarios de Metadata
+### <a name="span-idselecting_subresourcesspanspan-idselecting_subresourcesspanspan-idselecting_subresourcesspanselecting-subresources"></a><span id="Selecting_Subresources"></span><span id="selecting_subresources"></span><span id="SELECTING_SUBRESOURCES"></span>Selección de Subrecursos
 
 Algunas API acceden a un recurso completo, mientras que otras personas acceden a una parte de un recurso. Las API que acceden a una parte de un recurso suelen utilizar una descripción de la vista para especificar los subrecursos a los que van a acceder.
 
 Estas figuras muestran los términos que se utilizan en una descripción de la vista al acceder a una matriz de texturas.
 
-### <a name="span-idarrayslicespanspan-idarrayslicespanspan-idarrayslicespanarray-slice"></a><span id="Array_Slice"></span><span id="array_slice"></span><span id="ARRAY_SLICE"></span>Segmento de matriz
+### <a name="span-idarray_slicespanspan-idarray_slicespanspan-idarray_slicespanarray-slice"></a><span id="Array_Slice"></span><span id="array_slice"></span><span id="ARRAY_SLICE"></span>Segmento de matriz
 
 Dada una matriz de texturas, cada textura con mapas MIP, un segmento de matriz (representado por el rectángulo blanco) incluye una textura y todas sus subtexturas, como se muestra en la siguiente ilustración.
 
 ![Ilustración de un segmento de matriz](images/d3d10-resource-array-slice.png)
 
-### <a name="span-idmipslicespanspan-idmipslicespanspan-idmipslicespanmip-slice"></a><span id="Mip_Slice"></span><span id="mip_slice"></span><span id="MIP_SLICE"></span>Segmento de MIP
+### <a name="span-idmip_slicespanspan-idmip_slicespanspan-idmip_slicespanmip-slice"></a><span id="Mip_Slice"></span><span id="mip_slice"></span><span id="MIP_SLICE"></span>Segmento MIP
 
 Un segmento de mapa MIP (representado por el rectángulo blanco) incluye un nivel de mapa MIP para cada textura de una matriz, como se muestra en la siguiente ilustración.
 
 ![Ilustración de un segmento de mapa MIP](images/d3d10-resource-mip-slice.png)
 
-### <a name="span-idselectingasinglesubresourcespanspan-idselectingasinglesubresourcespanspan-idselectingasinglesubresourcespanselecting-a-single-subresource"></a><span id="Selecting_a_Single_Subresource"></span><span id="selecting_a_single_subresource"></span><span id="SELECTING_A_SINGLE_SUBRESOURCE"></span>Seleccionar un único Subrecurso
+### <a name="span-idselecting_a_single_subresourcespanspan-idselecting_a_single_subresourcespanspan-idselecting_a_single_subresourcespanselecting-a-single-subresource"></a><span id="Selecting_a_Single_Subresource"></span><span id="selecting_a_single_subresource"></span><span id="SELECTING_A_SINGLE_SUBRESOURCE"></span>Selección de un único subrecurso
 
 Puedes usar estos dos tipos de segmentos para elegir un único subrecurso, como se muestra en la siguiente ilustración.
 
 ![Ilustración de selección de un subrecurso mediante un segmento de matriz y segmento de mapa MIP](images/d3d10-resource-subresources-1.png)
 
-### <a name="span-idselectingmultiplesubresourcesspanspan-idselectingmultiplesubresourcesspanspan-idselectingmultiplesubresourcesspanselecting-multiple-subresources"></a><span id="Selecting_Multiple_Subresources"></span><span id="selecting_multiple_subresources"></span><span id="SELECTING_MULTIPLE_SUBRESOURCES"></span>Selección de varios recursos secundarios de Metadata
+### <a name="span-idselecting_multiple_subresourcesspanspan-idselecting_multiple_subresourcesspanspan-idselecting_multiple_subresourcesspanselecting-multiple-subresources"></a><span id="Selecting_Multiple_Subresources"></span><span id="selecting_multiple_subresources"></span><span id="SELECTING_MULTIPLE_SUBRESOURCES"></span>Seleccionar varios Subrecursos
 
 O bien, puedes utilizar estos dos tipos de segmentos con el número de niveles de mapas MIP o el número de texturas para seleccionar varios subrecursos.
 
@@ -236,7 +236,7 @@ O bien, puedes utilizar estos dos tipos de segmentos con el número de niveles d
 
 Independientemente del tipo de textura que utilices, con o sin mapas MIP, con o sin una matriz de textura, suelen proporcionarse funciones auxiliares para calcular el índice de un subrecurso particular.
 
-### <a name="span-idtypedspanspan-idtypedspanspan-idtypedspanstrong-vs-weak-typing"></a><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>Vs seguros. Establecimiento flexible de tipos
+### <a name="span-idtypedspanspan-idtypedspanspan-idtypedspanstrong-vs-weak-typing"></a><span id="Typed"></span><span id="typed"></span><span id="TYPED"></span>Strong frente a tipos débiles
 
 La creación de un recurso completamente tipificado restringe el recurso al formato en el que se creó. Esto permite que el tiempo de ejecución optimice el acceso, especialmente si el recurso se crea con marcas que indican que la aplicación no lo puede asignar. Los recursos creados con un tipo específico no se pueden reinterpretar mediante el mecanismo de vista.
 
