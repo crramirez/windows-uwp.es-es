@@ -1,5 +1,5 @@
 ---
-title: Prácticas de entrada para juegos
+title: Procedimientos de entrada para juegos
 description: Obtén información sobre patrones y técnicas para el uso eficaz de los dispositivos de entrada.
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
 ms.date: 11/20/2017
@@ -7,17 +7,17 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, entrada
 ms.localizationpriority: medium
 ms.openlocfilehash: 8235b2c2029b2bb3b9351263a3c908879b4beba9
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684982"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853070"
 ---
-# <a name="input-practices-for-games"></a>Prácticas de entrada para juegos
+# <a name="input-practices-for-games"></a>Procedimientos de entrada para juegos
 
 En esta página se describen patrones y técnicas para usar con eficacia dispositivos de entrada de juegos para la Plataforma universal de Windows (UWP).
 
-En esta página encontrarás información sobre lo siguiente:
+En esta página encontrarás información sobre:
 
 * Cómo hacer un seguimiento de los jugadores y de los dispositivos de entrada y navegación que están usando actualmente
 * Cómo detectar las transiciones de botón (presionado a no presionado, sin presionar a presionado)
@@ -315,7 +315,7 @@ Para los dispositivos de juego compatibles con el informe de batería detallado,
 
 Si tu código realiza alguna acción (por ejemplo, dibujar la interfaz de usuario) en función del porcentaje de duración de batería restante, asegúrate de que cumpla con los valores anteriores. Por ejemplo, si deseas advertir al jugador cuando el controlador tenga poca batería, puedes hacerlo cuando llega al 10 %.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [Windows. System. User (clase)](https://docs.microsoft.com/uwp/api/windows.system.user)
 * [Interfaz Windows. Gaming. Input. IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)

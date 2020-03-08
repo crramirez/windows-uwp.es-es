@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, flight submissions, envíos piloto
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e96f6d2495583fcee4d16e54a5c8a5e208fec27
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259252"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852529"
 ---
 # <a name="manage-package-flight-submissions"></a>Manage package flight submissions (Administrar envíos de paquetes piloto)
 
@@ -259,12 +259,12 @@ Este recurso tiene los siguientes valores.
 |------------|--------|------------------------------|
 | id            | string  | Identificador del envío.  |
 | flightId           | string  |  Identificador del paquete piloto al que está asociado el envío.  |  
-| status           | string  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Publicación</li><li>ReleaseFailed</li></ul>   |
-| statusDetails           | object  |  Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores.  |
+| status           | string  | Estado del envío. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publicar</li><li>Publicado</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certificación</li><li>CertificationFailed</li><li>Versión</li><li>ReleaseFailed</li></ul>   |
+| statusDetails           | objeto  |  Un [recurso de detalles de estado](#status-details-object) que contiene detalles adicionales sobre el estado del envío, incluida la información sobre los errores.  |
 | flightPackages           | array  | Contiene [recursos de paquete piloto](#flight-package-object) que proporcionan detalles acerca de cada paquete del envío.   |
-| packageDeliveryOptions    | object  | Un [recurso de opciones de entrega de paquete](#package-delivery-options-object) que contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria para el envío.   |
+| packageDeliveryOptions    | objeto  | Un [recurso de opciones de entrega de paquete](#package-delivery-options-object) que contiene el lanzamiento de paquete gradual y la configuración de actualización obligatoria para el envío.   |
 | fileUploadUrl           | string  | URI de firma de acceso compartido (SAS) para cargar los paquetes para el envío. Si estás agregando nuevos paquetes para el envío, carga el archivo ZIP que contiene los paquetes en este URI. Para obtener más información, consulta [Crear un envío de paquete piloto](#create-a-package-flight-submission).  |
-| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | string  | Modo de publicación del envío. Puede ser uno de los valores siguientes: <ul><li>Inmediata</li><li>Manual</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | Fecha de publicación del envío en formato ISO 8601, si el valor *targetPublishMode* se establece en SpecificDate.  |
 | notesForCertification           | string  |  Proporciona información adicional de los evaluadores de certificación como, por ejemplo, las credenciales de la cuenta de prueba y los pasos para obtener acceso y comprobar las características. Para obtener más información, consulta [Notas para la certificación](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification). |
 
@@ -276,9 +276,9 @@ Este recurso contiene detalles adicionales sobre el estado de un envío. Este re
 
 | Valor           | Tipo    | Descripción                   |
 |-----------------|---------|------|
-|  errors               |    object     |   Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de errores del envío.   |     
-|  warnings               |   object      | Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de advertencias del envío.     |
-|  certificationReports               |     object    |   Una matriz de [recursos de informe de certificación](#certification-report-object) que proporcionan acceso a los datos del informe de certificación del envío. Si se produce un error en la certificación, puedes examinar estos informes para obtener más información.    |  
+|  errors               |    objeto     |   Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de errores del envío.   |     
+|  advertencias               |   objeto      | Una matriz de [recursos de detalles de estado](#status-detail-object) que contienen los detalles de advertencias del envío.     |
+|  certificationReports               |     objeto    |   Una matriz de [recursos de informe de certificación](#certification-report-object) que proporcionan acceso a los datos del informe de certificación del envío. Si se produce un error en la certificación, puedes examinar estos informes para obtener más información.    |  
 
 
 <span id="status-detail-object" />
@@ -290,7 +290,7 @@ Este recurso contiene información adicional acerca de las advertencias o los er
 | Valor           | Tipo    | Descripción       |
 |-----------------|---------|------|
 |  code               |    string     |   Un [código de estado de envío](#submission-status-code) que describe el tipo de error o advertencia. |  
-|  details               |     string    |  Mensaje con más detalles sobre el problema.     |
+|  detalles               |     string    |  Mensaje con más detalles sobre el problema.     |
 
 
 <span id="certification-report-object" />
@@ -301,7 +301,7 @@ Este recurso proporciona acceso a los datos del informe de certificación de un 
 
 | Valor           | Tipo    | Descripción         |
 |-----------------|---------|------|
-|     fecha            |    string     |  Fecha y hora en que se generó el informe, en formato ISO 8601.    |
+|     date            |    string     |  Fecha y hora en que se generó el informe, en formato ISO 8601.    |
 |     reportUrl            |    string     |  Dirección URL en la que puedes obtener acceso al informe.    |
 
 
@@ -339,8 +339,8 @@ Este recurso tiene los siguientes valores.
 | fileStatus    | string    |  Estado del paquete. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
 | id    |  string   |  Id. que identifica de manera exclusiva el paquete. Este valor lo utiliza el centro de Partners.   |     
 | version    |  string   |  Versión del paquete de aplicación. Para obtener más información, consulta [Numeración de la versión del paquete](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
-| architecture    |  string   |  Arquitectura del paquete de aplicación (por ejemplo, ARM).   |     
-| languages    | array    |  Matriz de códigos de idioma para los idiomas que admite la aplicación. Para obtener más información, consulta [Idiomas admitidos](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
+| arquitectura    |  string   |  Arquitectura del paquete de aplicación (por ejemplo, ARM).   |     
+| lenguajes    | array    |  Matriz de códigos de idioma para los idiomas que admite la aplicación. Para obtener más información, consulta [Idiomas admitidos](https://docs.microsoft.com/windows/uwp/publish/supported-languages).    |     
 | capabilities    |  array   |  Matriz de funcionalidades necesarias para el paquete. Para obtener más información acerca de las funcionalidades, consulta [Declaraciones de funcionalidades de las aplicaciones](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
 | minimumDirectXVersion    |  string   |  Versión mínima de DirectX que admite el paquete de aplicación. Solo se puede establecer para las aplicaciones diseñadas para Windows 8.x; se omite para las aplicaciones diseñadas para otras versiones. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
 | minimumSystemRam    | string    |  RAM mínima que requiere el paquete de aplicación. Solo se puede establecer para las aplicaciones diseñadas para Windows 8.x; se omite para las aplicaciones diseñadas para otras versiones. Puede ser uno de los valores siguientes: <ul><li>Ninguno</li><li>Memory2GB</li></ul>   |    
@@ -371,9 +371,9 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
-| packageRollout   |   object      |   Un [recurso de lanzamiento de paquete](#package-rollout-object) que contiene la configuración del lanzamiento de paquete gradual para el envío.    |  
+| packageRollout   |   objeto      |   Un [recurso de lanzamiento de paquete](#package-rollout-object) que contiene la configuración del lanzamiento de paquete gradual para el envío.    |  
 | isMandatoryUpdate    | boolean    |  Indica si vas a tratar los paquetes de este envío como obligatorios para la instalación automática de actualizaciones de la aplicación. Para obtener más información sobre los paquetes obligatorios para la instalación automática de actualizaciones de la aplicación, consulta [Descargar e instalar actualizaciones de paquete para tu aplicación](../packaging/self-install-package-updates.md).    |  
-| mandatoryUpdateEffectiveDate    |  fecha   |  La fecha y la hora en que los paquetes de este envío se convierten en obligatorios, en formato ISO 8601 y zona horaria UTC.   |        
+| mandatoryUpdateEffectiveDate    |  date   |  La fecha y la hora en que los paquetes de este envío se convierten en obligatorios, en formato ISO 8601 y zona horaria UTC.   |        
 
 <span id="package-rollout-object" />
 
@@ -384,7 +384,7 @@ Este recurso contiene la [configuración de lanzamiento de paquete](#manage-grad
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|------|
 | isPackageRollout   |   boolean      |  Indica si el lanzamiento de paquete gradual está habilitado para el envío.    |  
-| packageRolloutPercentage    | flotante    |  El porcentaje de usuarios que recibirá los paquetes en el lanzamiento gradual.    |  
+| packageRolloutPercentage    | float    |  El porcentaje de usuarios que recibirá los paquetes en el lanzamiento gradual.    |  
 | packageRolloutStatus    |  string   |  Una de las siguientes cadenas, que indica el estado del lanzamiento de paquete gradual: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
 | fallbackSubmissionId    |  string   |  El identificador del envío que recibirán los clientes que no obtengan los paquetes de lanzamiento gradual.   |          
 
@@ -417,7 +417,7 @@ Los siguientes códigos de representan el estado de un envío.
 | ListingOptOutWarning | El desarrollador quitó una descripción de un envío anterior o no incluyó la información de descripción que admitía el paquete. |
 | ListingOptInWarning  | El desarrollador agregó una lista. |
 | UpdateOnlyWarning | El desarrollador está intentando insertar algo que solo presenta soporte técnico de actualizaciones. |
-| Otras  | El envío presenta un estado no reconocido o sin clasificar. |
+| Otro  | El envío presenta un estado no reconocido o sin clasificar. |
 | PackageValidationWarning | El proceso de validación del paquete genera una advertencia. |
 
 <span/>

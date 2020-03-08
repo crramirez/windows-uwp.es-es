@@ -1,17 +1,17 @@
 ---
 ms.assetid: 4F9657E5-1AF8-45E0-9617-45AF64E144FC
-description: Utilice estos métodos en la API de envío de Microsoft Store para administrar complementos para aplicaciones que están registrados en su cuenta del centro de partners.
+description: Use estos métodos en la API de envío de Microsoft Store para administrar complementos para las aplicaciones que están registradas en su cuenta del centro de Partners.
 title: Administración de complementos
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-ons, complementos, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e06f8e915466f116692c63df5c53c2a0f97447f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372497"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852374"
 ---
 # <a name="manage-add-ons"></a>Administración de complementos
 
@@ -36,7 +36,7 @@ Estos métodos solo pueden usarse para obtener, crear o eliminar complementos. P
 <tr>
 <td align="left">GET</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts</td>
-<td align="left"><a href="get-all-add-ons.md">Obtener todos los complementos para sus aplicaciones</a></td>
+<td align="left"><a href="get-all-add-ons.md">Obtener todos los complementos de las aplicaciones</a></td>
 </tr>
 <tr>
 <td align="left">GET</td>
@@ -44,12 +44,12 @@ Estos métodos solo pueden usarse para obtener, crear o eliminar complementos. P
 <td align="left"><a href="get-an-add-on.md">Obtener un complemento específico</a></td>
 </tr>
 <tr>
-<td align="left">EXPONER</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts</td>
 <td align="left"><a href="create-an-add-on.md">Crear un complemento</a></td>
 </tr>
 <tr>
-<td align="left">SUPRIMIR</td>
+<td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}</td>
 <td align="left"><a href="delete-an-add-on.md">Eliminar un complemento</a></td>
 </tr>
@@ -99,12 +99,12 @@ Este recurso tiene los siguientes valores.
 
 | Valor      | Tipo   | Descripción        |
 |------------|--------|--------------|
-| applications      | array  | Matriz que contiene un [recurso de aplicación](#application-object) que representa la aplicación a la que está asociado este complemento. Solo se admite un elemento en esta matriz.  |
+| aplicaciones      | array  | Matriz que contiene un [recurso de aplicación](#application-object) que representa la aplicación a la que está asociado este complemento. Solo se admite un elemento en esta matriz.  |
 | id | string  | Id. de la Tienda del complemento. Este valor lo proporciona la Tienda. Un ejemplo de Id. de la Tienda sería 9NBLGGH4TNMP.  |
 | productId | string  | Id. del producto del complemento. Identificador que proporcionó el desarrollador cuando se creó el complemento. Para obtener más información, consulta [Establecer el tipo de producto y el id. del producto](https://docs.microsoft.com/windows/uwp/publish/set-your-iap-product-id). |
-| productType | string  | Tipo de producto del complemento. Se admiten los siguientes valores: **Durable** y **consumibles**.  |
-| lastPublishedInAppProductSubmission       | object | Un [recurso de envío](#submission-object) que proporciona información sobre el último envío publicado para el complemento.         |
-| pendingInAppProductSubmission        | object  |  Un [recurso de envío](#submission-object) que proporciona información sobre el envío pendiente actual para el complemento.  |   |
+| productType | string  | Tipo de producto del complemento. Se admiten los siguientes valores: **Duradero** y **Consumible**.  |
+| lastPublishedInAppProductSubmission       | objeto | Un [recurso de envío](#submission-object) que proporciona información sobre el último envío publicado para el complemento.         |
+| pendingInAppProductSubmission        | objeto  |  Un [recurso de envío](#submission-object) que proporciona información sobre el envío pendiente actual para el complemento.  |   |
 
 <span id="application-object" />
 
@@ -130,8 +130,8 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|-----------|
-| value            | object  |  Objeto que contiene los siguientes valores: <br/><br/> <ul><li>*id*. Id. de la Tienda de la aplicación. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para la aplicación.</li></ul>   |
-| totalCount   | entero  | Número de objetos de la aplicación en la matriz *applications* del cuerpo de la respuesta.                                                                                                                                                 |
+| value            | objeto  |  Objeto que contiene los siguientes valores: <br/><br/> <ul><li>*Id*. El Id. de Store de la aplicación. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para la aplicación.</li></ul>   |
+| totalCount   | int  | Número de objetos de la aplicación en la matriz *applications* del cuerpo de la respuesta.                                                                                                                                                 |
 
 <span id="submission-object" />
 
@@ -159,8 +159,8 @@ Este recurso tiene los siguientes valores.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Administrar envíos de complemento con la API de envío de Microsoft Store](manage-add-on-submissions.md)
+* [Crear y administrar envíos con Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md)
+* [Administración de envíos de complementos mediante la API de envío de Microsoft Store](manage-add-on-submissions.md)
 * [Obtener todos los complementos](get-all-add-ons.md)
 * [Obtener un complemento](get-an-add-on.md)
 * [Crear un complemento](create-an-add-on.md)

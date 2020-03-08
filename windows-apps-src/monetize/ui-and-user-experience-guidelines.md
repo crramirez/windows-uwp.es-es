@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, Windows 10, uwp, UWP, ads, anuncios, advertising, publicidad, guidelines, directrices, best practices, procedimientos recomendados
 ms.localizationpriority: medium
 ms.openlocfilehash: d64d5c544f6ec9e1356cc024e634286336dc9f91
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77506799"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852589"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Directrices de la interfaz de usuario y de la experiencia del usuario para anuncios
 
@@ -38,7 +38,7 @@ Antes de revisar nuestras directrices para diferentes tipos de anuncios en este 
 
 En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar [anuncios de banner](banner-ads.md) en tu aplicación mediante [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) de las Directivas de Microsoft Store.
 
-### <a name="best-practices"></a>Procedimientos recomendados
+### <a name="best-practices"></a>Procedimiento recomendado
 
 Te recomendamos que sigas los siguientes procedimientos recomendados a la hora de implementar anuncios de banner en tu aplicación:
 
@@ -90,7 +90,7 @@ Si se usan con elegancia, los [anuncios intersticiales](interstitial-ads.md) pue
 
 En las siguientes secciones se proporcionan recomendaciones sobre cómo implementar anuncios de vídeo intersticial y de banner intersticial en la aplicación con la clase [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) y ejemplos de implementaciones que infringen la [directiva 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) de las Directivas de Microsoft Store. Dado que conoces tu aplicación mejor que nadie, excepto en lo que a directivas se refiere, la decisión final está en tus manos. Lo más importante que debes tener en cuenta es que las clasificaciones de la aplicación y los ingresos están estrechamente relacionados.
 
-### <a name="best-practices"></a>Procedimientos recomendados
+### <a name="best-practices"></a>Procedimiento recomendado
 
 Te recomendamos que sigas los siguientes procedimientos recomendados a la hora de implementar anuncios intersticiales en tu aplicación:
 

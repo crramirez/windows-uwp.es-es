@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8568a4613b5bb62b98edc7edd302a42153e5e33b
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281792"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853222"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP
 
@@ -96,7 +96,7 @@ Para más información sobre cómo implementar patrones comunes de aplicaciones 
 
 También puedes usar [Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master) en Visual Studio para empezar a trabajar con un diseño para la aplicación.
 
-## <a name="controls"></a>Controls
+## <a name="controls"></a>Controles
 
 La plataforma de diseño de UWP proporciona un conjunto de controles comunes cuyo funcionamiento está garantizado en todos los dispositivos de Windows y que cumplen los principios de nuestro [sistema Fluent Design](/windows/apps/fluent-design-system). Estos controles incluyen todo, desde controles simples, como botones y los elementos de texto, hasta controles sofisticados que pueden generar listas a partir de un conjunto de datos y una plantilla.
 
@@ -170,7 +170,7 @@ Proporcionamos una serie de herramientas que te ayudarán en el proceso de dise�
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
 
-## <a name="next-fluent-design-system"></a>Siguiente: Sistema Fluent Design
+## <a name="next-fluent-design-system"></a>Siguiente: Fluent Design System
 
 Si quieres obtener información sobre los principios que rigen Fluent Design (el sistema de diseño de Microsoft) y ver más características que puedes incorporar a tu aplicación para UWP, sigue con [Sistema Fluent Design](/windows/apps/fluent-design-system).
 
