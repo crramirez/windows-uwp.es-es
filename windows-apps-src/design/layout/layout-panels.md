@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9322ba847aeb7eb64c2654e1105582478a0d3b47
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340125"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853221"
 ---
 # <a name="layout-panels"></a>Paneles de diseño
 
@@ -25,7 +25,7 @@ Hay varias cosas que tienes que tener en cuenta a la hora de elegir panel de dis
 ## <a name="examples"></a>Ejemplos
 
 <table>
-<th align="left">Galería de controles XAML<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
@@ -143,7 +143,7 @@ El resultado tiene el siguiente aspecto.
 
 En un objeto StackPanel, si el tamaño de un elemento secundario no se establece explícitamente, se amplía para rellenar el ancho disponible (o el alto si el objeto Orientation es **Horizontal**). En este ejemplo, el ancho de los rectángulos no está establecido. Los rectángulos se expanden para ocupar todo el ancho del StackPanel.
 
-## <a name="grid"></a>Cuadrícula
+## <a name="grid"></a>Grid
 
 El panel [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) es compatible con diseños fluidos y te permite organizar los controles en diseños de varias filas y varias columnas. Puedes especificar las filas y columnas de un panel Grid mediante las propiedades [**RowDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.rowdefinitions) y [**ColumnDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.columndefinitions).
 
@@ -173,7 +173,7 @@ En este ejemplo de código XAML se muestra cómo crear una cuadrícula con dos f
 
 El resultado tiene el siguiente aspecto.
 
-![Cuadrícula](images/layout-panel-grid.png)
+![Grid](images/layout-panel-grid.png)
 
 En este ejemplo, la variación del tamaño funciona del siguiente modo: 
 - La segunda fila tiene un alto explícito de 44 píxeles efectivos. De manera predeterminada, el alto de la primera fila rellena el espacio restante.
@@ -182,7 +182,7 @@ En este ejemplo, la variación del tamaño funciona del siguiente modo:
 
 Puedes distribuir el espacio dentro de una columna o una fila usando variación de tamaño **Auto** o proporcional. La variación de tamaño automática se usa para permitir que los elementos de la interfaz de usuario cambien su tamaño de modo que se ajusten a su contenido o contenedor primario. La variación de tamaño automática también se puede usar con las filas y columnas de una cuadrícula. Para usar la variación de tamaño automática, establece las propiedades Height o Width de los elementos de interfaz de usuario en **Auto**.
 
-La *variación de tamaño proporcional* se usa para distribuir espacio disponible entre las filas y columnas de una cuadrícula en proporciones ponderadas. En XAML, los valores de estrella se \* expresan como (o *n* \* para el ajuste de tamaño de estrella ponderada). Por ejemplo, para especificar que una columna es 5 veces más ancha que la segunda columna en un diseño de dos columnas, use "\*5" y\*"" para las propiedades de [**ancho**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) en los elementos [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) .
+La *variación de tamaño proporcional* se usa para distribuir espacio disponible entre las filas y columnas de una cuadrícula en proporciones ponderadas. En XAML, los valores de estrella se expresan como \* (o *n*\* para el ajuste de tamaño de estrella ponderada). Por ejemplo, para especificar que una columna es 5 veces más ancha que la segunda columna en un diseño de dos columnas, use "5\*" y "\*" para las propiedades de [**ancho**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) de los elementos [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) .
 
 En este ejemplo, se combinan variaciones de tamaño fijas, automáticas y proporcionales en una clase [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) con 4 columnas.
 
@@ -243,7 +243,7 @@ El resultado tiene el siguiente aspecto.
 
 En este ejemplo, el número máximo de filas de cada columna es 3. En la primera columna se incluyen solo dos elementos (los rectángulos rojos y azules) porque el rectángulo azul se extiende entre dos filas. El rectángulo verde luego se ajusta a la parte superior de la siguiente columna.
 
-## <a name="canvas"></a>Lienzo
+## <a name="canvas"></a>Canvas
 
 El panel [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) posiciona sus elementos secundarios con puntos de coordenadas fijos y no es compatible con diseños fluidos. Para especificar los puntos en los elementos secundarios se establecen las propiedades adjuntas [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) y [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) de cada elemento. El objeto Canvas primario lee estas propiedades adjuntas en sus elementos secundarios y usa los valores durante el pase de diseño [Arrange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange).
 
@@ -264,7 +264,7 @@ Este es un ejemplo de un Canvas en el código XAML.
 
 El resultado tiene el siguiente aspecto.
 
-![Lienzo](images/layout-panel-canvas.png)
+![Canvas](images/layout-panel-canvas.png)
 
 Usa el panel Canvas con moderación. Aunque resulta conveniente poder controlar con precisión la posición de los elementos de la interfaz de usuario en algunos escenarios, un panel de diseño con una posición fija puede hacer que el área de la interfaz de usuario sea menos adaptativa a los cambios generales de tamaño de la ventana de la aplicación. El cambio de tamaño de la ventana de la aplicación podría ser el resultado de un cambio de orientación del dispositivo, de la división de las ventanas de la aplicación o de un cambio de monitor, entre otros escenarios.
 
@@ -274,4 +274,4 @@ Hay varios paneles especiales que se pueden usar solo como [**ItemsPanel**](http
 
 ## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.

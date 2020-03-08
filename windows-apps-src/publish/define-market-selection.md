@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp, mercados, países, regiones
 ms.localizationpriority: medium
 ms.openlocfilehash: 3621e9c6af0daa84a9762989a14c79f35471b73c
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787120"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852883"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
 
 La Microsoft Store llega a clientes de más de 200 países y regiones de todo el mundo. Puedes elegir los mercados en los que quieres ofrecer tu aplicación, con la opción de personalizar muchas [precios y disponibilidad](set-app-pricing-and-availability.md) características por mercado o por grupo de los mercados.
 
-Para que obtener información ayudar a mejorar la aplicación adecuada para los clientes en todo el mundo, consulte [directrices para la globalización de](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) y [hacer que su aplicación sea localizable](../design/globalizing/prepare-your-app-for-localization.md).
+Para obtener información que ayude a que su aplicación sea adecuada para los clientes de todo el mundo, consulte [directrices para la globalización](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) y [haga que su aplicación sea localizable](../design/globalizing/prepare-your-app-for-localization.md).
 
 > [!NOTE]
 > Aunque este tema hace referencia a las aplicaciones, la selección del mercado para envíos de complementos utiliza el mismo proceso.
@@ -34,19 +34,19 @@ De manera predeterminada, se seleccionan todos los mercados. Puedes anular la se
 Ten en cuenta que estas selecciones se aplican solo a las nuevas adquisiciones; si alguien que ya tenga la aplicación en un mercado determinado y más adelante lo quita, las personas que ya tienen la aplicación en dicho mercado pueden seguir usándola, pero no obtendrán las actualizaciones que envíes y ningún cliente nuevo puede conseguir la aplicación en ese mercado.
 
 > [!IMPORTANT]
-> Es su responsabilidad cumplir requisitos legales locales, incluso si esos requisitos no aparezcan aquí o en el centro de partners.
+> Es su responsabilidad cumplir los requisitos legales locales, incluso si esos requisitos no aparecen aquí o en el centro de Partners.
 
 Ten en cuenta que incluso si seleccionas todos los mercados, las leyes y restricciones locales u otros factores pueden impedir que ciertas aplicaciones se muestren en algunos países y regiones. Además, algunos mercados pueden tener requisitos específicos en relación con las clasificaciones por edades. Si la aplicación no cumple estos requisitos, no podremos ofrecer tu aplicación en ese mercado. Consulta [Clasificaciones por edades](age-ratings.md) Para obtener más información.
 
 > [!NOTE]
-> Para las aplicaciones publicadas anteriormente que incluyen los paquetes destinados a Windows 8 o Windows 8.1, algunos mercados individuales se tratan como un solo mercado de "Rest World". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
+> En el caso de las aplicaciones publicadas anteriormente que incluyen paquetes destinados a Windows 8 o Windows 8.1, algunos mercados individuales se tratan como un mercado único "resto del mundo". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
 
 También verás una casilla que te permitirá indicar si ofreces tu aplicación en cualquier mercado que la Tienda pueda agregar en un futuro. Si dejas esta casilla marcada y, a más adelante, añadimos nuevos mercados, el precio base y la fecha de disponibilidad general de tu envío se usarán para tu aplicación en estos mercados. Si no quieres que esto ocurra, puedes desactivar esta casilla y, en ese caso, no mostraremos tu aplicación en los futuros mercados (aunque siempre puedes agregarlos más tarde).
  
 
-## <a name="microsoft-store-consumer-markets"></a>Mercados de consumidor de Microsoft Store
+## <a name="microsoft-store-consumer-markets"></a>Microsoft Store mercados de consumidores
 
-Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes: Los mercados con un asterisco admiten la Microsoft Store en Xbox One; verá **Xbox** junto a sus nombres en el **mercado selección** ventana emergente.
+Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los mercados siguientes: Los mercados con un asterisco admiten el Microsoft Store en Xbox One; verá **Xbox** junto a sus nombres en la ventana emergente de **selección de mercado** .
 
 
 <table>
@@ -244,7 +244,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>RAE de Macao</td>
   </tr>
   <tr>
-    <td>Macedonia del Norte</td>
+    <td>Macedonia (ERYM)</td>
     <td>Madagascar</td>
     <td>Malawi</td>
     <td>Malasia</td>
@@ -313,17 +313,17 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Islas Pitcairn</td>
     <td>Polonia *</td>
     <td>Portugal *</td>
-    <td>Catar</td>
+    <td>Qatar</td>
   </tr>
   <tr>
     <td>Reunión</td>
-    <td>Rumanía</td>
+    <td>Rumania</td>
     <td>Rusia *</td>
     <td>Ruanda</td>
   </tr>
   <tr>
     <td>San Bartolomé</td>
-    <td>Santa Elena, Ascensión y Tristán da Cunha</td>
+    <td>Santa Elena, Ascensión y Tristán de Acuña</td>
     <td>San Cristóbal y Nieves</td>
     <td>Santa Lucía</td>
   </tr>
@@ -388,8 +388,8 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Tuvalu</td>
   </tr>
   <tr>
-    <td>ESTADOS UNIDOS Islas menores alejadas</td>
-    <td>ESTADOS UNIDOS Islas Vírgenes</td>
+    <td>Islas menores alejadas de los EE. UU.</td>
+    <td>Islas Vírgenes de los Estados Unidos de América</td>
     <td>Uganda</td>
     <td>Ucrania</td>
   </tr>
@@ -428,7 +428,7 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 &nbsp;
 
-| País o región       | Método de pago  | Ajuste de expansión comercial | Fecha efectiva |
+| País/región       | Método de pago  | Ajuste de expansión comercial | Fecha efectiva |
 |----------------------|-----------------|-------------------------------|----------------|
 | Argentina            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Australia            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
@@ -439,11 +439,11 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 | Chile                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | China                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Colombia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| República Checa       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| República checa       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Dinamarca              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Finlandia              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Francia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Alemania              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| France               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Germany              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Grecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Hong Kong            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Hungría              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
@@ -451,7 +451,7 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 | Irlanda              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Israel               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Italia                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Japón                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Japan                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | México               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Países Bajos          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Nueva Zelanda          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
@@ -476,9 +476,9 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Mercados "Resto del mundo" para Windows 8.x
 
-Si la aplicación publicada previamente incluye los paquetes destinados a Windows 8.x, es importante tener en cuenta que los mercados se tratan como un mercado único "resto del mundo" para los clientes que usan el Store en Windows 8.x, incluso después de que se muestran como mercados individuales en el centro de partners.
+Si la aplicación publicada anteriormente incluye paquetes que tienen como destino Windows 8. x, es importante tener en cuenta que una serie de mercados se trata como un mercado único de "resto del mundo" para los clientes que usan la tienda en Windows 8. x, aunque se muestren como mercados individuales. en el centro de Partners.
 
-Si deja la selección de mercado de forma predeterminada al enviar la aplicación, no tiene que preocuparse por esto, y la aplicación estará disponible para todos los mercados posibles. Sin embargo, si desea excluir algunos mercados, tenga en cuenta que excepto incluso uno de estos medios de mercados de "Rest World" que la aplicación no estará disponible en *cualquier* del "Resto del mundo" mercados para los clientes de Windows 8 o Windows 8.1.
+Si deja la selección predeterminada del mercado al enviar la aplicación, no tiene que preocuparse de ello y la aplicación estará disponible para todos los mercados posibles. Sin embargo, si desea excluir determinados mercados, tenga en cuenta que, al excluir uno de estos mercados "resto del mundo", la aplicación no estará disponible en *ninguno* de los mercados "resto del mundo" para los clientes de Windows 8 o Windows 8.1.
 
 Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los siguientes:
 
@@ -613,7 +613,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Liberia</td>
     <td>Liechtenstein</td>
     <td>RAE de Macao</td>
-    <td>Macedonia del Norte</td>
+    <td>Macedonia (ERYM)</td>
   </tr>
   <tr>
     <td>Madagascar</td>
@@ -671,7 +671,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   </tr>
   <tr>
     <td>San Bartolomé</td>
-    <td>Santa Elena, Ascensión y Tristán da Cunha</td>
+    <td>Santa Elena, Ascensión y Tristán de Acuña</td>
     <td>San Cristóbal y Nieves</td>
     <td>Santa Lucía</td>
   </tr>
@@ -714,8 +714,8 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   <tr>
     <td>Tuvalu</td>
     <td>Uganda</td>
-    <td>ESTADOS UNIDOS Islas menores alejadas</td>
-    <td>ESTADOS UNIDOS Islas Vírgenes</td>
+    <td>Islas menores alejadas de los EE. UU.</td>
+    <td>Islas Vírgenes de los Estados Unidos de América</td>
   </tr>
   <tr>
     <td>Uzbekistán</td>
@@ -738,4 +738,4 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
 </table>
 
 > [!NOTE]
-> Para obtener una lista de los países y regiones en los que puede registrarse para una cuenta de desarrollador, consulte [cuenta tipos, ubicaciones y precios](account-types-locations-and-fees.md).
+> para obtener una lista de los países y regiones en los que puede registrarse para una cuenta de desarrollador, consulte [tipos de cuenta, ubicaciones y tarifas](account-types-locations-and-fees.md).

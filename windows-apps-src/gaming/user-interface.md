@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, UWP, games, directx, plantillas
 ms.localizationpriority: medium
 ms.openlocfilehash: 668a41a69c2b7dab338d251d95e23e801fa85cf6
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321139"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853032"
 ---
 # <a name="directx-game-project-templates"></a>Plantillas de proyectos de juegos DirectX
 
@@ -24,7 +24,7 @@ Las plantillas de DirectX y UWP (Plataforma universal de Windows) te permiten cr
 
 Para crear el proyecto, debes:
 
--   [Descargar Microsoft Visual Studio 2015](https://visualstudio.microsoft.com/vs/). Visual Studio 2015 dispone de herramientas de programación, como las herramientas de depuración de gráficos. Para obtener información general sobre las herramientas y las funciones de juegos y elementos gráficos de DirectX, consulta [Herramientas de Visual Studio para programación de juegos DirectX](set-up-visual-studio-for-game-development.md).
+-   [Descargue Microsoft Visual Studio 2015](https://visualstudio.microsoft.com/vs/). Visual Studio 2015 tiene herramientas para la programación de gráficos, como herramientas de depuración. Para obtener información general sobre las herramientas y las funciones de juegos y elementos gráficos de DirectX, consulta [Herramientas de Visual Studio para programación de juegos DirectX](set-up-visual-studio-for-game-development.md).
 
 ## <a name="choosing-a-template"></a>Elección de una plantilla
 
@@ -44,9 +44,9 @@ Las plantillas de DirectX de Windows universal contienen los siguientes archivos
 
 -   pch.h y pch.cpp: compatibilidad con encabezado precompilado.
 -   Package.appxmanifest: propiedades del paquete de implementación de la aplicación.
--   \*.pfx - certificados para la aplicación.
+-   \*. pfx: certificados para la aplicación.
 -   Dependencias externas: vínculos a archivos externos que usa el proyecto.
--   \*Main.h y \*Main.cpp - métodos para administrar activos de la aplicación, actualizar el estado de la aplicación y el marco de representación.
+-   \*Main. h y \*Main. cpp: métodos para administrar los recursos de la aplicación, actualizar el estado de la aplicación y representar el marco.
 -   App.h y App.cpp: punto de entrada principal de la aplicación. Conecta la aplicación con el shell de Windows y controla los eventos del ciclo de vida de la aplicación. Estos archivos solo aparecen en las plantillas DirectX 11 App (aplicación universal de Windows) y DirectX 12 App (aplicación universal de Windows).
 -   App.xaml, App.xaml.cpp y App.xaml.h: punto de entrada principal de la aplicación. Conecta la aplicación con el shell de Windows y controla los eventos del ciclo de vida de la aplicación. Estos archivos solo aparecen en la plantilla DirectX 11 and XAML App (Universal Windows).
 -   DirectXPage.xaml, DirectXPage.xaml.cpp y DirectXPage.xaml.h: una página que hospeda un SwapChainPanel de DirectX. Estos archivos solo aparecen en la plantilla DirectX 11 and XAML App (Universal Windows).
@@ -70,10 +70,10 @@ Ahora que ya tienes un punto de partida, puedes ir adquiriendo más conocimiento
 
 Si estás migrando un juego existente, consulta los siguientes temas.
 
--   [Portar de OpenGL ES 2.0 a Direct3D 11.1](port-from-opengl-es-2-0-to-directx-11-1.md)
--   [Puerto de DirectX 9 para plataforma Universal de Windows](porting-your-directx-9-game-to-windows-store.md)
+-   [Puerto de OpenGL ES 2,0 a Direct3D 11,1](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [Puerto de DirectX 9 a Plataforma universal de Windows](porting-your-directx-9-game-to-windows-store.md)
 
 Si estás creando un nuevo juego DirectX, consulta los siguientes temas.
 
 -   [Crear un juego para UWP sencillo con DirectX](tutorial--create-your-first-uwp-directx-game.md)
--   [Desarrollar Marble Maze, un juego de plataforma Universal de Windows en C++ y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+-   [Desarrollo de Marble Maze, una Plataforma universal de Windows Game C++ en y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)

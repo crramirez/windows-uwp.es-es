@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: 59c7e5b2c9ceea534f530bc6880b32a808c91e70
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787032"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852528"
 ---
 # <a name="enter-add-on-properties"></a>Especificar las propiedades de complemento
 
@@ -29,7 +29,7 @@ Los campos que ves en esta página variarán, en función del tipo de producto d
 
 ## <a name="product-lifetime"></a>Duración del producto
 
-Si has seleccionado **Duradero** para el tipo de producto, aquí se muestra la opción **Duración del producto**. La **duración del producto** predeterminada para un complemento duradero es **para siempre**, lo que significa que el complemento no caduca nunca. Si lo prefiere, puede cambiar el **vigencia del producto** para que el complemento expira tras una duración establecida (con las opciones de 1 a 365 días).
+Si has seleccionado **Duradero** para el tipo de producto, aquí se muestra la opción **Duración del producto**. La **duración del producto** predeterminada para un complemento duradero es **para siempre**, lo que significa que el complemento no caduca nunca. Si lo prefiere, puede cambiar la **duración del producto** para que el complemento expire después de una duración establecida (con opciones de 1-365 días).
 
 
 ## <a name="quantity"></a>Cantidad
@@ -39,7 +39,7 @@ Si seleccionaste **Consumible administrado por la Tienda** para el tipo de produ
 
 ## <a name="subscription-period"></a>Período de suscripción
 
-Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Elige una opción para especificar la frecuencia a la que se le cobrará a un cliente por la suscripción. La opción predeterminada es **mensual**, pero también puede seleccionar **3 meses**, **6 meses**, **anualmente**, o **de24meses**.
+Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Elige una opción para especificar la frecuencia a la que se le cobrará a un cliente por la suscripción. La opción predeterminada es **mensual**, pero también puede seleccionar **3 meses**, **6 meses**, **anualmente**o **24 meses**.
 
 > [!IMPORTANT]
 > Después de publicar el complemento, no podrás cambiar la selección de **Período de suscripción**.
@@ -84,7 +84,7 @@ Tienes la opción de proporcionar hasta diez palabras clave de hasta 30 caracter
 Para consultar este campo, usa la propiedad [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) del [espacio de nombres Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), usa la propiedad [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords)).
 
 > [!NOTE]
-> Palabras clave no están disponibles para su uso en los paquetes destinados a Windows 8 y Windows 8.1.
+> Las palabras clave no están disponibles para su uso en paquetes destinados a Windows 8 y Windows 8.1.
 
 <span id="custom-developer-data" />
 
@@ -97,7 +97,7 @@ Por ejemplo, supongamos que tienes un juego y que vendes un complemento que perm
 Para consultar este campo, usa la propiedad [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) del [espacio de nombres Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), usa la propiedad [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag)).
 
 > [!NOTE]
-> El **datos del programador personalizado** campo no está disponible para su uso en los paquetes destinados a Windows 8 y Windows 8.1.
+> El campo **datos de desarrollador personalizados** no está disponible para su uso en paquetes destinados a Windows 8 y Windows 8.1.
 
  
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 440f758e5db8bd77d3f26290eb59d7684e5f87a3
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867651"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853072"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interacciones con controlador para juegos y control remoto
 
@@ -22,7 +22,7 @@ ms.locfileid: "68867651"
 
 ***Muchas experiencias de interacción se comparten entre el controlador de juegos, el control remoto y el teclado***
 
-Cree experiencias de interacción en las aplicaciones Plataforma universal de Windows (UWP) que garantizan que la aplicación es utilizable y accesible a través de los tipos de entrada tradicionales de equipos, portátiles y tabletas (mouse, teclado, toque, etc.), así como los tipos de entrada. típico de la experiencia de televisión y *10 pies* , como el controlador para juegos y el control remoto.
+Cree experiencias de interacción en las aplicaciones Plataforma universal de Windows (UWP) que garantizan que la aplicación es utilizable y accesible a través de los tipos de entrada tradicionales de equipos, portátiles y tabletas (mouse, teclado, toque, etc.), así como los tipos de entrada típicos de la experiencia de TV y *10 pies* , como el controlador de juegos y el control remoto.
 
 Consulte [diseño de Xbox y TV](../devices/designing-for-tv.md) para obtener instrucciones generales de diseño sobre aplicaciones UWP en la experiencia de *10 pies* .
 
@@ -79,15 +79,15 @@ La siguiente tabla enumera todos los botones de hardware compatibles con las apl
 | Botón de menú               | Sí       | Sí               |
 | Botón de vista               | Sí       | Sí               |
 | Botones X e Y           | Sí       | No                |
-| Palanca izquierda                | Sí       | Sin                |
-| Palanca hacia la derecha               | Sí       | Sin                |
-| Desencadenadores izquierdo y derecho   | Sí       | Sin                |
-| Reboteadores izquierdo y derecho    | Sí       | Sin                |
-| Botón OneGuide           | Sin        | Sí               |
-| Botón de Volumen             | Sin        | Sí               |
-| Botón de canal            | Sin        | Sí               |
+| Palanca izquierda                | Sí       | No                |
+| Palanca hacia la derecha               | Sí       | No                |
+| Desencadenadores izquierdo y derecho   | Sí       | No                |
+| Reboteadores izquierdo y derecho    | Sí       | No                |
+| Botón OneGuide           | No        | Sí               |
+| Botón de Volumen             | No        | Sí               |
+| Botón de canal            | No        | Sí               |
 | Botones de control de medios     | No        | Sí               |
-| Botón de silencio               | Sin        | Sí               |
+| Botón de silencio               | No        | Sí               |
 
 ### <a name="built-in-button-support"></a>Soporte para botones incorporado
 
@@ -100,7 +100,7 @@ La UWP asigna automáticamente el comportamiento de entrada del teclado existent
 | Entrar                 | A/Botón de selección                       |
 | Escape                | Botón B/Atrás*                        |
 
-\*Cuando la aplicación no controla los eventos [KeyDown](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) ni [KeyUp](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) para el botón B, se desencadenará el evento [SystemNavigationManager.](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.backrequested) allocated, que debería dar lugar a la navegación hacia atrás dentro de la aplicación. Sin embargo, esto deberá ser implementado por ti, como se indica en el siguiente fragmento de código:
+\*cuando la aplicación no controla los eventos [KeyDown](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) ni [KeyUp](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) para el botón B, se desencadenará el evento [SystemNavigationManager.](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.backrequested) allocated, que debe devolver la navegación hacia atrás dentro de la aplicación. Sin embargo, esto deberá ser implementado por ti, como se indica en el siguiente fragmento de código:
 
 ```csharp
 // This code goes in the MainPage class
@@ -158,18 +158,18 @@ La siguiente tabla enumera la compatibilidad con aceleradores integrada en la UW
 | Interacción   | Teclado/ratón   | Controlador para juegos      | Integrada para:  | Recomendada para: |
 |---------------|------------|--------------|----------------|------------------|
 | Retroceder/avanzar página  | Retroceder/avanzar página | Desencadenadores izquierdo/derecho | [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Vistas que admiten el desplazamiento vertical
-| Página a la izquierda/derecha | None | Reboteadores izquierdo/derecho | [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Vistas que admiten el desplazamiento horizontal
-| Acercar/alejar        | Ctrl +/- | Desencadenadores izquierdo/derecho | None | `ScrollViewer`, vistas que permiten acercar y alejar |
-| Abrir o cerrar el panel de navegación | None | Ver | None | Paneles de navegación |
-| Buscar | None | Botón Y | None | Combinación de teclas para la función de búsqueda principal de la aplicación |
-| [Abrir el menú contextual](#commandbar-and-contextflyout) | Haz clic con el botón secundario | Botón de menú | [ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | Menús contextuales |
+| Página a la izquierda/derecha | Ninguno | Reboteadores izquierdo/derecho | [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Vistas que admiten el desplazamiento horizontal
+| Acercar/alejar        | Ctrl +/- | Desencadenadores izquierdo/derecho | Ninguno | `ScrollViewer`, vistas que permiten acercar y alejar |
+| Abrir o cerrar el panel de navegación | Ninguno | Ver | Ninguno | Paneles de navegación |
+| Buscar | Ninguno | Botón Y | Ninguno | Combinación de teclas para la función de búsqueda principal de la aplicación |
+| [Abrir el menú contextual](#commandbar-and-contextflyout) | Haga clic con el botón secundario en | Botón de menú | [ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | Menús contextuales |
 
 ## <a name="xy-focus-navigation-and-interaction"></a>Interacción y navegación con foco XY
 
 Si tu aplicación admite una navegación del foco adecuada para el teclado, esto se trasladará bien al controlador para juegos y al control remoto.
 La navegación con las teclas de dirección se asigna al **pad-D** (así como a la **palanca izquierda** en el controlador para juegos), y la interacción con los elementos de la interfaz de usuario se asigna a la tecla **Entrar/Seleccionar** (ver [Controlador para juegos y control remoto](#gamepad-and-remote-control)).
 
-Muchos eventos y propiedades se usan tanto en el teclado como en el controlador de juegos. Ambos activan los eventos `KeyDown` y `KeyUp`, y solo navegarán a los controles que tengan las propiedades `IsTabStop="True"` y `Visibility="Visible"`. Para obtener directrices de diseño para teclado, consulta [Interacciones con el teclado](../input/keyboard-interactions.md).
+Muchos eventos y propiedades se usan tanto en el teclado como en el controlador de juegos. Ambos activan los eventos &mdash; y `KeyDown`, y solo navegarán a los controles que tengan las propiedades `KeyUp` y `IsTabStop="True"`. Para obtener directrices de diseño para teclado, consulta [Interacciones con el teclado](../input/keyboard-interactions.md).
 
 Si la compatibilidad con el teclado se implementa correctamente, tu aplicación funcionará razonablemente bien; sin embargo, esto puede requerir algo más de trabajo para admitir todos los escenarios. Piensa en las necesidades específicas de tu aplicación para proporcionar la mejor experiencia posible para el usuario.
 
@@ -195,7 +195,7 @@ page.GotFocus += (object sender, RoutedEventArgs e) =>
 Existen tres razones comunes por las que navegación XY puede no funcionar del modo previsto:
 
 * La propiedad [IsTabStop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istabstop) o [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) no está correctamente establecida.
-* El control que obtiene el foco es realmente más grande de lo que piensas: la navegación XY observa el tamaño total del control ([ActualWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth) y [ActualHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualheight)), no solo la parte del control que representa algo interesante.
+* El control que obtiene el foco es realmente más grande de lo que piensas: la navegación XY observa el tamaño total del control (&mdash;ActualWidth[ y ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth)ActualHeight[), no solo la parte del control que representa algo interesante.
 * Un control activable se encuentra encima de otro: la navegación XY no admite controles que se superponen.
 
 Si la navegación XY sigue sin funcionar de la manera esperada después de solucionar estos problemas, puedes apuntar manualmente al elemento que quieres que tenga el foco mediante el método que se describe en [Reemplazo de la navegación predeterminada](#overriding-the-default-navigation).
@@ -284,15 +284,15 @@ Simplemente reorganizar la interfaz de usuario para que no queden elementos inne
 
 ### <a name="commandbar-and-contextflyout"></a>CommandBar y ContextFlyout
 
-Al usar un [CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar), tenga en cuenta el problema de desplazarse a través de una lista [, como se mencionó en el problema: Elementos de la interfaz de usuario ubicados después de la](#problem-ui-elements-located-after-long-scrolling-list-grid)cuadrícula o lista de desplazamiento largo. La siguiente imagen muestra un diseño de interfaz de usuario con `CommandBar` en la parte inferior de la lista/cuadrícula. El usuario tendría que desplazarse hacia abajo de todo por la lista/cuadrícula para llegar a la `CommandBar`.
+Cuando se usa [CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar), ten en cuenta el problema de desplazamiento por una lista, como se mencionó en [Problema: elementos de la interfaz de usuario ubicados después de una cuadrícula/lista de desplazamiento larga](#problem-ui-elements-located-after-long-scrolling-list-grid). La siguiente imagen muestra un diseño de interfaz de usuario con `CommandBar` en la parte inferior de la lista/cuadrícula. El usuario tendría que desplazarse hacia abajo de todo por la lista/cuadrícula para llegar a la `CommandBar`.
 
 ![CommandBar en la parte inferior de la lista/cuadrícula](images/designing-for-tv/2d-navigation-best-practices-commandbar-and-contextflyout.png)
 
-¿Qué ocurre si coloca `CommandBar` lo *anterior* en la lista o cuadrícula? Si bien un usuario que se desplazó hacia abajo de la lista/cuadrícula tendría que desplazarse nuevamente hacia arriba para llegar a la `CommandBar`, se trata de una navegación ligeramente más corta que en la configuración anterior. Ten en cuenta que esto es suponiendo que el foco inicial de tu aplicación se sitúe junto a o encima de `CommandBar`; este enfoque no funcionará si el foco inicial se encuentra por debajo de la lista/cuadrícula. Si estos elementos de la `CommandBar` son elementos de acción global a los que no se accede muy a menudo (como un botón **Sincronizar**), puede ser aceptable que se ubiquen encima de la lista/cuadrícula.
+¿Qué ocurre si coloca el `CommandBar` *encima* de la lista o cuadrícula? Si bien un usuario que se desplazó hacia abajo de la lista/cuadrícula tendría que desplazarse nuevamente hacia arriba para llegar a la `CommandBar`, se trata de una navegación ligeramente más corta que en la configuración anterior. Ten en cuenta que esto es suponiendo que el foco inicial de tu aplicación se sitúe junto a o encima de `CommandBar`; este enfoque no funcionará si el foco inicial se encuentra por debajo de la lista/cuadrícula. Si estos elementos de la `CommandBar` son elementos de acción global a los que no se accede muy a menudo (como un botón **Sincronizar**), puede ser aceptable que se ubiquen encima de la lista/cuadrícula.
 
 Si bien no se pueden apilar los elementos de una `CommandBar` verticalmente, colocarlos contra la dirección del desplazamiento (por ejemplo, a la izquierda o derecha de una lista de desplazamiento vertical, o en la parte superior o inferior de una lista de desplazamiento horizontal) es otra opción que podrías considerar si funciona bien para el diseño de tu interfaz de usuario.
 
-Si tu aplicación tiene una `CommandBar` cuyos elementos deben ser fácilmente accesibles para los usuarios, es aconsejable que consideres colocar estos elementos dentro de una propiedad [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) y los quites de la `CommandBar`. `ContextFlyout`es una propiedad de [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) y es el [menú contextual](../controls-and-patterns/dialogs-and-flyouts/index.md) asociado a ese elemento. En el equipo, al hacer clic con el botón derecho en un elemento con una propiedad `ContextFlyout`, aparecerá el menú contextual correspondiente. En Xbox One, esto ocurrirá al presionar el botón **Menú** mientras el foco está en dicho elemento.
+Si tu aplicación tiene una `CommandBar` cuyos elementos deben ser fácilmente accesibles para los usuarios, es aconsejable que consideres colocar estos elementos dentro de una propiedad [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) y los quites de la `CommandBar`. `ContextFlyout` es una propiedad de [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) y es el [menú contextual](../controls-and-patterns/dialogs-and-flyouts/index.md) asociado a ese elemento. En el equipo, al hacer clic con el botón derecho en un elemento con una propiedad `ContextFlyout`, aparecerá el menú contextual correspondiente. En Xbox One, esto ocurrirá al presionar el botón **Menú** mientras el foco está en dicho elemento.
 
 ### <a name="ui-layout-challenges"></a>Desafíos de diseño de la interfaz de usuario
 
@@ -311,7 +311,7 @@ La siguiente es una aplicación inmobiliaria imaginaria que muestra una lista de
 
 ![Aplicación inmobiliaria imaginaria](images/designing-for-tv/2d-focus-navigation-and-interaction-real-estate-app.png)
 
-#### Problema: Elementos de la interfaz de usuario situados después de la cuadrícula o lista de desplazamiento largo<a name="problem-ui-elements-located-after-long-scrolling-list-grid"></a>
+#### Problema: algunos elementos de la interfaz de usuario se encuentran después de una cuadrícula/lista de desplazamiento larga<a name="problem-ui-elements-located-after-long-scrolling-list-grid"></a>
 
 La [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) de las propiedades que se muestra en la siguiente imagen es una lista con desplazamiento muy larga. Si la [participación](#focus-engagement)*no* se requiere en la `ListView`, cuando el usuario navegue a la lista, el foco se colocará en el primer elemento en la lista. Para que el usuario llegue al botón **anterior** o **siguiente**, deberá pasar por todos los elementos de la lista. En casos como este en el que resulta difícil solicitarle al usuario que recorra toda la lista (es decir, cuando la lista no es lo suficientemente corta como para que esta experiencia sea aceptable) sería conveniente considerar otras opciones.
 
@@ -333,12 +333,12 @@ Cuando se *requiere* la participación, todo la `ListView` se convierte en un ob
 
 ![Aplicación inmobiliaria: participación definida como requerida para que solo lleve 1 clic llegar a los botones Anterior/Siguiente](images/designing-for-tv/2d-focus-navigation-and-interaction-engagement.png)
 
-#### <a name="problem-scrollviewer-without-any-focusable-elements"></a>Problema: ScrollViewer sin ningún elemento que pueda recibir el foco
+#### <a name="problem-scrollviewer-without-any-focusable-elements"></a>Problema: ScrollViewer sin elementos activables
 
 Como la navegación con foco XY depende de la navegación a un elemento de interfaz de usuario activable cada vez, un [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) que no contiene elementos activables (como con solo texto, al igual que en este ejemplo) puede desencadenar un escenario en el que el usuario no puede ver todo el contenido del `ScrollViewer`.
 Consulta las soluciones para este y otros escenarios relacionados en [Participación del foco](#focus-engagement).
 
-![Aplicación Inmobiliaria: ScrollViewer solo con texto](images/designing-for-tv/2d-focus-navigation-and-interaction-scrollviewer.png)
+![Aplicación inmobiliaria: ScrollViewer solo con texto](images/designing-for-tv/2d-focus-navigation-and-interaction-scrollviewer.png)
 
 #### <a name="problem-free-scrolling-ui"></a>Problema: Interfaz de usuario de desplazamiento libre
 
@@ -347,7 +347,7 @@ En estos casos, puedes activar el [modo de mouse](#mouse-mode) para permitir que
 
 ![Elemento de mapa de la interfaz de usuario en modo de mouse](images/designing-for-tv/map-mouse-mode.png)
 
-## <a name="mouse-mode"></a>Modo de mouse
+## <a name="mouse-mode"></a>Modo del mouse
 
 Como se describe en [Interacción y navegación con foco XY](#xy-focus-navigation-and-interaction), en Xbox One el foco se mueve mediante un sistema de navegación XY, el cual permite al usuario cambiar el foco desde un control a otro desplazándose hacia arriba, abajo, izquierda y derecha.
 Sin embargo, algunos controles, como [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) y [MapControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl), requieren una interacción de mouse en la que los usuarios pueden mover libremente el puntero dentro de los límites del control.
@@ -450,7 +450,7 @@ Siempre debe haber un foco visual visible en la pantalla para que el usuario pue
 
 Una excepción a esta regla serían las experiencias de pantalla completa, como ver vídeos o imágenes, en cuyo caso no sería adecuado mostrar el foco visual.
 
-### <a name="reveal-focus"></a>Reveal foco
+### <a name="reveal-focus"></a>Revelar foco
 
 Reveal focus es un efecto de iluminación que anima el borde de los elementos activables, como un botón, cuando el usuario mueve el foco del teclado o del controlador para juegos hacia ellos. Al animar el brillo alrededor del borde de los elementos enfocados, Reveal focus permite que los usuarios entiendan mejor dónde está el foco y hacia dónde va el foco.
 
@@ -510,7 +510,7 @@ Otro enfoque para resolver este problema es solicitar participación en `Slider`
 
 Cuando `Slider` requiera la participación del foco, el usuario puede llegar al botón de la derecha simplemente presionando dos veces el pad-D/palanca izquierda hacia la derecha. Esta solución es excelente porque no precisa de ajustes en la interfaz de usuario y produce el comportamiento esperado.
 
-### <a name="items-controls"></a>Controles de los elementos
+### <a name="items-controls"></a>Controles de elementos
 
 Aparte del control [Slider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider), hay otros controles a los cuales conviene solicitar participación, como por ejemplo:
 
@@ -538,9 +538,9 @@ Esto permitirá al usuario saltear la `ListView` rápidamente simplemente presio
 
 [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) es ligeramente diferente a estos controles, ya que tiene sus propias peculiaridades que hay que tener en cuenta. Si tienes un `ScrollViewer` con contenido activable, desplazándose al `ScrollViewer` te permitirá por defecto moverte por sus elementos activables. Como en `ListView`, debes desplazarte por cada elemento para navegar fuera de `ScrollViewer`.
 
-Si el `ScrollViewer`*no* tiene contenido activable (por ejemplo, si solo contiene texto) puedes establecer `IsFocusEngagementEnabled="True"` para que el usuario puede activar el `ScrollViewer` mediante el uso del botón **A/Seleccionar**. Después de haberlo activado, pueden desplazarse por el texto mediante el **pad-D/palanca izquierda**y, a continuación, presionar el botón **B/Atrás** para desactivarlo una vez que han terminado.
+Si el `ScrollViewer`*no* tiene contenido activable (por ejemplo, si solo contiene texto) puedes establecer &mdash; para que el usuario puede activar el &mdash; mediante el uso del botón `IsFocusEngagementEnabled="True"`A/Seleccionar`ScrollViewer`. Después de haberlo activado, pueden desplazarse por el texto mediante el **pad-D/palanca izquierda**y, a continuación, presionar el botón **B/Atrás** para desactivarlo una vez que han terminado.
 
-Otro enfoque sería establecer `IsTabStop="True"` en el `ScrollViewer` para que el usuario no tenga que activar el control; pueden simplemente colocar el foco en él y, a continuación, desplazarse con **pad-D/palanca izquierda** cuando no haya ningún elemento activable el `ScrollViewer`.
+Otro enfoque sería establecer `IsTabStop="True"` en el `ScrollViewer` para que el usuario no tenga que activar el control; pueden simplemente colocar el foco en él y, a continuación, desplazarse con &mdash;pad-D/palanca izquierda**cuando no haya ningún elemento activable el**.
 
 ### <a name="focus-engagement-defaults"></a>Valores predeterminados de participación del foco
 
@@ -549,13 +549,13 @@ Algunos controles causan la captura del foco con frecuencia suficiente como para
 | Control               | Valor predeterminado de participación del foco  |
 |-----------------------|---------------------------|
 | CalendarDatePicker    | Activado                        |
-| FlipView              | Desactivado                       |
-| GridView              | Desactivado                       |
-| ListBox               | Desactivado                       |
-| ListView              | Desactivado                       |
-| ScrollViewer          | Desactivado                       |
-| SemanticZoom          | Desactivado                       |
-| Slider                | Activado                        |
+| FlipView              | Desactivar                       |
+| GridView              | Desactivar                       |
+| ListBox               | Desactivar                       |
+| ListView              | Desactivar                       |
+| ScrollViewer          | Desactivar                       |
+| SemanticZoom          | Desactivar                       |
+| Control deslizante                | Activado                        |
 
 Todos los demás controles de la UWP no darán como resultado ningún cambio visual o del comportamiento cuando `IsFocusEngagementEnabled="True"`.
 

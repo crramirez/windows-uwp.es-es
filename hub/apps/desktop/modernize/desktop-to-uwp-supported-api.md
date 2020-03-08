@@ -10,11 +10,11 @@ author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: 60a735af077d2121868e2613cb0f33e194e4330c
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302539"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852982"
 ---
 # <a name="uwp-apis-available-to-desktop-apps"></a>API de UWP disponibles para aplicaciones de escritorio
 
@@ -22,18 +22,18 @@ Las aplicaciones de escritorio pueden usar una amplia gama de API de Plataforma 
 
 Muchas API de UWP requieren la [identidad del paquete](modernize-packaged-apps.md) que se va a usar en una aplicación de escritorio. La mayoría de las API de UWP funcionan bien aplicaciones que tienen identidad de paquete. Sin embargo, algunas áreas de características aún no están totalmente probadas o no funcionan actualmente según lo previsto.
 
-| Área de función | Detalles |
+| Área de características | Detalles |
 |--------------|---------|
 | Citas, contactos y mensajes de correo electrónico | No todas las API se admiten actualmente. |
 | Autenticación e identidad de usuario | No todas las API se admiten actualmente. |
 | Tareas en segundo plano | Aunque las aplicaciones de escritorio pueden registrar tareas en segundo plano, solo se pueden ejecutar <i>como</i> una tarea en segundo plano. Para obtener más información, consulta la [muestra de tarea en segundo plano en GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample). |
-| Bluetooth, | No todas las API se admiten actualmente. |
+| Bluetooth | No todas las API se admiten actualmente. |
 | Chat y llamadas de teléfono | Las aplicaciones de escritorio no se pueden ejecutar en Mobile hasta que se portan por completo a UWP. |
 | Activación del contrato | Un contrato solo puede activar las aplicaciones de UWP completas. |
 | Criptografía | No todas las API se admiten actualmente. |
 | Geolocalización | No todas las API se admiten actualmente. |
 | Selectores de archivos y carpetas | Las aplicaciones con identidad tienen acceso total al sistema de archivos y no necesitan selectores de UWP. |
-| Multimedia | No todas las API se admiten actualmente. |
+| Medios | No todas las API se admiten actualmente. |
 | Punto de servicio | No todas las API se admiten actualmente. |
 | Tarjetas inteligentes | No todas las API se admiten actualmente. |
 | PlayReady | No todas las API se admiten actualmente. |
