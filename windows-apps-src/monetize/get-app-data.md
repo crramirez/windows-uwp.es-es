@@ -1,30 +1,30 @@
 ---
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
-description: Utilice estos métodos en la API de envío de Microsoft Store para recuperar los datos para las aplicaciones que están registradas en su cuenta del centro de partners.
+description: Use estos métodos en la API de envío de Microsoft Store para recuperar los datos de las aplicaciones que están registradas en su cuenta del centro de Partners.
 title: Obtención de datos de la aplicación
 ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app data, datos de la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: cfbe8df46f51b41ccdd840f609caf2c593735e1f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372147"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853352"
 ---
 # <a name="get-app-data"></a>Obtención de datos de la aplicación
 
-Utilice los métodos siguientes en la API de envío de Microsoft Store para obtener datos para las aplicaciones existentes en la cuenta del centro de partners. Para obtener una introducción a la API de envío de Microsoft Store, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
+Use los métodos siguientes en el Microsoft Store API de envío para obtener datos de las aplicaciones existentes en la cuenta del centro de Partners. Para obtener una introducción a la API de envío de Microsoft Store, incluidos los requisitos previos para usar la API, consulta [Crear y administrar envíos mediante el uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md).
 
-Para poder usar estos métodos, la aplicación ya debe existir en la cuenta del centro de partners. Para crear o administrar envíos de aplicaciones, consulta los métodos de [Administrar envíos de aplicaciones](manage-app-submissions.md).
+Antes de poder usar estos métodos, la aplicación ya debe existir en la cuenta del centro de Partners. Para crear o administrar envíos de aplicaciones, consulta los métodos de [Administrar envíos de aplicaciones](manage-app-submissions.md).
 
 | Método | URI                                                                                             | Descripción                                                 |
 |------- |------------------------------------------------------------------------------------------------ |------------------------------------------------------------ |
 | GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [Obtener datos para todas las aplicaciones](get-all-apps.md)               |
 | GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [Obtener datos para una aplicación específica](get-an-app.md)                |
-| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [Obtenga complementos para una aplicación](get-add-ons-for-an-app.md)         |
-| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [Obtener los vuelos de paquete para una aplicación](get-flights-for-an-app.md) |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)         |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md) |
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -68,10 +68,10 @@ Este recurso tiene los siguientes valores.
 | primaryName   | string  | Nombre principal de la aplicación.      |
 | packageFamilyName | string  | El nombre de familia de paquete de la aplicación.      |
 | packageIdentityName          | string  | El nombre de identidad de paquete de la aplicación.                       |
-| publisherName       | string  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde a la **paquete/identidad/publicador** valor que aparece en el [identidad de aplicación](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details) página de la aplicación en el centro de partners.       |
+| publisherName       | string  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde al valor de **paquete/identidad/publicador** que aparece en la página identidad de la [aplicación](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details) de la aplicación en el centro de Partners.       |
 | firstPublishedDate      | string  | La fecha en que se publicó la aplicación por primera vez, en formato ISO 8601.   |
-| lastPublishedApplicationSubmission       | object | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para la aplicación.    |
-| pendingApplicationSubmission        | object  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   
+| lastPublishedApplicationSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para la aplicación.    |
+| pendingApplicationSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   
 | hasAdvancedListingPermission        | boolean  |  Indica si puedes configurar las [gamingOptions](manage-app-submissions.md#gaming-options-object) o los [tráileres](manage-app-submissions.md#trailer-object) para envíos para la aplicación. Este valor es true para envíos creados después de mayo de 2017. |  |
 
 
@@ -123,10 +123,10 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción           |
 |-----------------|---------|------------------------|
-| flightId            | string  | El identificador del paquete piloto. Este valor es proporcionado por el centro de partners.  |
+| flightId            | string  | El identificador del paquete piloto. Este valor lo proporciona el centro de Partners.  |
 | friendlyName           | string  | El nombre del paquete piloto, según lo especifica el desarrollador.   |
-| lastPublishedFlightSubmission       | object | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para el paquete piloto.   |
-| pendingFlightSubmission        | object  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para el paquete piloto.  |    
+| lastPublishedFlightSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para el paquete piloto.   |
+| pendingFlightSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para el paquete piloto.  |    
 | groupIds           | array  | Una matriz de cadenas que contienen los identificadores de los grupos de pilotos asociados con el paquete piloto. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).   |
 | rankHigherThan           | string  | El nombre descriptivo del paquete piloto que está clasificado inmediatamente por debajo del paquete piloto actual. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |
 
@@ -156,9 +156,9 @@ Este recurso tiene los siguientes valores.
  
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
-* [Administrar envíos de aplicaciones mediante la API de envío de Microsoft Store](manage-app-submissions.md)
+* [Crear y administrar envíos con Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md)
+* [Administración de envíos de aplicaciones mediante la API de envío de Microsoft Store](manage-app-submissions.md)
 * [Obtener todas las aplicaciones](get-all-apps.md)
 * [Obtener una aplicación](get-an-app.md)
-* [Obtenga complementos para una aplicación](get-add-ons-for-an-app.md)
-* [Obtener los vuelos de paquete para una aplicación](get-flights-for-an-app.md)
+* [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)
+* [Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md)
