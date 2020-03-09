@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9544988837d44f42d963b268a2ce3d37cce83952
-ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66364110"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853521"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
@@ -65,7 +65,7 @@ El marco XAML proporciona un conjunto de recursos [Color](/uwp/api/Windows.UI.Co
 
 Esta tabla enumera la clave, el nombre simple y la representación de cadena del color (con el formato \#aarrggbb) para los recursos "Light" y "Dark" que proporciona el marco XAML. La clave se usa para hacer referencia al recurso en una aplicación. El "Nombre simple claro/oscuro" se usa como parte de la convención de nomenclatura de pincel que explicaremos más adelante.
 
-| Tecla                             | Nombre simple claro/oscuro | Claro      | Oscuro       |
+| Clave                             | Nombre simple claro/oscuro | Ligero      | Oscuro       |
 |---------------------------------|------------------------|------------|------------|
 | SystemAltHighColor              | AltHigh                | \#FFFFFFFF | \#FF000000 |
 | SystemAltLowColor               | AltLow                 | \#33FFFFFF | \#33000000 |
@@ -94,10 +94,10 @@ Esta tabla enumera la clave, el nombre simple y la representación de cadena del
 
 :::row:::
     :::column:::
-        #### Light theme
+        #### <a name="light-theme"></a>Tema claro
     :::column-end:::
     :::column:::
-        #### Dark theme
+        #### <a name="dark-theme"></a>Tema oscuro
     :::column-end:::
 :::row-end:::
 
@@ -105,10 +105,10 @@ Esta tabla enumera la clave, el nombre simple y la representación de cadena del
 
 :::row:::
     :::column:::
-        ![The base light theme](images/themes/light-base.png)
+        ![El tema claro Base](images/themes/light-base.png)
     :::column-end:::
     :::column:::
-        ![The base dark theme](images/themes/dark-base.png)
+        ![El tema oscuro Base](images/themes/dark-base.png)
     :::column-end:::
 :::row-end:::
 
@@ -116,10 +116,10 @@ Esta tabla enumera la clave, el nombre simple y la representación de cadena del
 
 :::row:::
     :::column:::
-        ![The alt light theme](images/themes/light-alt.png)
+        ![El tema claro Alt](images/themes/light-alt.png)
     :::column-end:::
     :::column:::
-        ![The alt dark theme](images/themes/dark-alt.png)
+        ![El tema oscuro alternativo](images/themes/dark-alt.png)
     :::column-end:::
 :::row-end:::
 
@@ -127,10 +127,10 @@ Esta tabla enumera la clave, el nombre simple y la representación de cadena del
 
 :::row:::
     :::column:::
-        ![The list light theme](images/themes/light-list.png)
+        ![El tema claro List](images/themes/light-list.png)
     :::column-end:::
     :::column:::
-        ![The list dark theme](images/themes/dark-list.png)
+        ![El tema oscuro de list](images/themes/dark-list.png)
     :::column-end:::
 :::row-end:::
 
@@ -138,10 +138,10 @@ Esta tabla enumera la clave, el nombre simple y la representación de cadena del
 
 :::row:::
     :::column:::
-        ![The chrome light theme](images/themes/light-chrome.png)
+        ![El tema claro Chrome](images/themes/light-chrome.png)
     :::column-end:::
     :::column:::
-        ![The chrome dark theme](images/themes/dark-chrome.png)
+        ![El tema oscuro chrome](images/themes/dark-chrome.png)
     :::column-end:::
 :::row-end:::
 
@@ -151,9 +151,9 @@ Además del conjunto de recursos proporcionados por el marco XAML, hay un conjun
 
 Esta tabla enumera los colores de todo el sistema que XAML proporciona como objetos de recursos derivados de la paleta del sistema de Windows. La columna "Nombre de accesibilidad" muestra cómo se etiqueta el color en la interfaz de usuario de la configuración de Windows. La columna "Nombre simple de contraste alto" es una descripción en una palabra de cómo se aplica el color en los controles comunes de XAML. Se usa como parte de la convención de nomenclatura de pincel que explicaremos más adelante. La columna "Predeterminado inicial" muestra los valores que se obtendrían si el sistema no se ejecutara en contraste alto.
 
-| Tecla                           | Nombre de accesibilidad            | Nombre simple de contraste alto | Predeterminado inicial |
+| Clave                           | Nombre de accesibilidad            | Nombre simple de contraste alto | Predeterminado inicial |
 |-------------------------------|--------------------------------|--------------------------|-----------------|
-| SystemColorButtonFaceColor    | **Texto del botón** (segundo plano)   | Background               | \#FFF0F0F0      |
+| SystemColorButtonFaceColor    | **Texto del botón** (segundo plano)   | Segundo plano               | \#FFF0F0F0      |
 | SystemColorButtonTextColor    | **Texto del botón** (primer plano)   | Primer plano               | \#FF000000      |
 | SystemColorGrayTextColor      | **Texto deshabilitado**              | Deshabilitada                 | \#FF6D6D6D      |
 | SystemColorHighlightColor     | **Texto seleccionado** (segundo plano) | Resaltar                | \#FF3399FF      |
@@ -191,9 +191,9 @@ Cuando este pincel se aplica a un elemento XAML, el tema actual determina su col
 
 | Tema        | Nombre simple del color | Recurso de color             | Valor en tiempo de ejecución                                              |
 |--------------|-------------------|----------------------------|------------------------------------------------------------|
-| Claro        | AltHigh           | SystemAltHighColor         | \#FFFFFFFF                                                 |
+| Ligero        | AltHigh           | SystemAltHighColor         | \#FFFFFFFF                                                 |
 | Oscuro         | AltHigh           | SystemAltHighColor         | \#FF000000                                                 |
-| HighContrast | Background        | SystemColorButtonFaceColor | El color especificado en la configuración para el fondo del botón. |
+| HighContrast | Segundo plano        | SystemColorButtonFaceColor | El color especificado en la configuración para el fondo del botón. |
 
 Puedes usar el esquema de nombre `SystemControl[Simple HighContrast name][Simple light/dark name]Brush` para determinar qué pincel aplicar a tus propios elementos XAML.
 
@@ -402,7 +402,7 @@ Tiene esta apariencia:
 
 ### <a name="navigationbackbuttonnormalstyle"></a>NavigationBackButtonNormalStyle
 
-**TargetType**: [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
+**TargetType**: [Botón](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
 
 Este elemento [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) proporciona una plantilla completa para un elemento [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) que puede ser el botón de retroceso en la navegación para una aplicación de navegación. Las dimensiones predeterminadas son 40 x 40 píxeles. Para personalizar el estilo puedes establecer explícitamente [Height](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height), [Width](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width), [FontSize](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontsize) y otras propiedades en tu elemento **Button** o crear un estilo derivado mediante [BasedOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.basedon).
 
@@ -418,7 +418,7 @@ Tiene esta apariencia:
 
 ### <a name="navigationbackbuttonsmallstyle"></a>NavigationBackButtonSmallStyle
 
-**TargetType**: [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
+**TargetType**: [Botón](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)
 
 Este elemento [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) proporciona una plantilla completa para un elemento [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) que puede ser el botón de retroceso en la navegación para una aplicación de navegación. Es similar a **NavigationBackButtonNormalStyle**, pero con unas dimensiones de 30 x 30 píxeles.
 
