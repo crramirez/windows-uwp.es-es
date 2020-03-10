@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, author, event
 ms.localizationpriority: medium
 ms.openlocfilehash: 6fb9b98ec362b59ad2593bbce24654f1dcfc7638
-ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830785"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853292"
 ---
 # <a name="author-events-in-cwinrt"></a>Crear eventos en C++/WinRT
 
@@ -41,7 +41,7 @@ namespace BankAccountWRC
 }
 ```
 
-Guarda el archivo. El proyecto no se compilará totalmente en este momento, pero compilar ahora resulta útil porque genera los archivos de código fuente en el que implementarás la clase en tiempo de ejecución **BankAccount**. Así que puedes compilar ahora. En esta fase, verás errores de compilación porque no se han encontrado `Class.h` y `Class.g.h`.
+Guarde el archivo. El proyecto no se compilará totalmente en este momento, pero compilar ahora resulta útil porque genera los archivos de código fuente en el que implementarás la clase en tiempo de ejecución **BankAccount**. Así que puedes compilar ahora. En esta fase, verás errores de compilación porque no se han encontrado `Class.h` y `Class.g.h`.
 
 Durante el proceso de compilación, la herramienta `midl.exe` se ejecuta para crear el archivo de metadatos de Windows Runtime de tu componente, que es `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`. Después se ejecutará la herramienta `cppwinrt.exe` (con la opción `-component`) para generar archivos de código fuente y ayudarte a crear tu componente. Estos archivos incluyen código auxiliar para que puedas empezar a implementar la clase en tiempo de ejecución **BankAccount** que declaraste en tu archivo IDL. Estos archivos de código auxiliar son `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h` y `BankAccount.cpp`.
 
@@ -269,7 +269,7 @@ log.add([](std::wstring const& message) { Persist(message); });
 log(L"Hello, World!");
 ```
 
-Observa que puedes agregar al evento tantos delegados de suscripción como quieras. Sin embargo, los eventos conllevan una cierta sobrecarga. Si todo lo que necesitas es una devolución de llamada simple con un solo delegado de suscripción, puedes usar [**winrt::delegate&lt;. T&gt;**  ](/uwp/cpp-ref-for-winrt/delegate) por sí misma.
+Observa que puedes agregar al evento tantos delegados de suscripción como quieras. Sin embargo, los eventos conllevan una cierta sobrecarga. Si todo lo que necesitas es una devolución de llamada simple con un solo delegado de suscripción, puedes usar [**winrt::delegate&lt;. T&gt;** ](/uwp/cpp-ref-for-winrt/delegate) por sí misma.
 
 ```cppwinrt
 winrt::delegate<> signalCallback;

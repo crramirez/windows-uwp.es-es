@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, XAML, control, binding, property
 ms.localizationpriority: medium
 ms.openlocfilehash: 06934c1c3b23c244fb32ffa957cffb926ffd1bb0
-ms.sourcegitcommit: eb683734801c1de5977db70e626609cf7e5b7654
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304516"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853291"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles de XAML; enlazar a una propiedad de C++/WinRT
 Una propiedad que se puede enlazar de forma eficaz a un control de XAML se conoce como una propiedad *observable*. Esta idea se basa en el patrón de diseño de software conocido como *patrón observador*. En este tema se muestra cómo implementar propiedades observables en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) y cómo enlazar controles de elementos XAML a dichas propiedades (para obtener información general, consulta [Enlace de datos](/windows/uwp/data-binding)).
@@ -204,7 +204,7 @@ namespace Bookstore
 }
 ```
 
-Guarda el archivo. El proyecto no se compilará totalmente en este momento, pero compilar ahora resulta útil porque genera los archivos de código fuente en el que implementarás la clase en tiempo de ejecución **MainPage** (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`). Así que compila ahora. En esta fase, el error de compilación que verás es **"MainViewModel": no es miembro de "winrt::Bookstore::implementation::MainPage"** .
+Guarde el archivo. El proyecto no se compilará totalmente en este momento, pero compilar ahora resulta útil porque genera los archivos de código fuente en el que implementarás la clase en tiempo de ejecución **MainPage** (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` y `MainPage.cpp`). Así que compila ahora. En esta fase, el error de compilación que verás es **"MainViewModel": no es miembro de "winrt::Bookstore::implementation::MainPage"** .
 
 Si omites la inclusión de `BookstoreViewModel.idl` (consulta la lista anterior de `MainPage.idl`), verás el error **se espera \< cerca de "MainViewModel"** . Otra sugerencia es asegurarte de que dejas todos los tipos en el mismo espacio de nombres, que se muestra en los listados de código.
 
@@ -350,7 +350,7 @@ Usa `x:Bind` al enlazar a un valor booleano.
 
 ## <a name="important-apis"></a>API importantes
 * [INotifyPropertyChanged::PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged)
-* [Plantilla de función winrt::make ](/uwp/cpp-ref-for-winrt/make)
+* [Plantilla de función winrt::make](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Temas relacionados
 * [Consumir API con C++/WinRT](consume-apis.md)
