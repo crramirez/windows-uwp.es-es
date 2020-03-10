@@ -5,12 +5,12 @@ ms.date: 07/12/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, biblioteca de interfaz de usuario de Windows, WinUI
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d0066abb2a6eb15f1d31aaf930ed2c0f0faf81a
-ms.sourcegitcommit: 4e74c920f1fef507c5cdf874975003702d37bcbb
+ms.openlocfilehash: aadf177bc4a44f67550dba1f6f706525b8460857
+ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68372711"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256178"
 ---
 # <a name="a-simple-cwinrt-windows-ui-library-example"></a>Un ejemplo sencillo de biblioteca de interfaz de usuario de Windows para C++/WinRT
 
@@ -21,11 +21,13 @@ Este tema te ayudará durante el proceso de adición de compatibilidad simple pa
 
 ## <a name="create-a-blank-app-hellowinuicppwinrt"></a>Creación de una aplicación en blanco (HelloWinUICppWinRT)
 
-En Visual Studio, crea un nuevo proyecto con la plantilla de proyecto **Blank App (C++/WinRT)** (Aplicación en blanco [C++/WinRT]) y asígnale el nombre *HelloWinUICppWinRT*.
+En Visual Studio, crea un nuevo proyecto con la plantilla de proyecto **Aplicación en blanco (C++/WinRT)** . Asegúrate de que usas la plantilla de **(C++/WinRT)** , y no la de **(Windows universal)** .
+
+Establece el nombre del nuevo proyecto en *HelloWinUICppWinRT* y, para que la estructura de carpetas coincida con el tutorial, desactiva **Colocar la solución y el proyecto en el mismo directorio**.
 
 ## <a name="install-the-microsoftuixaml-nuget-package"></a>Instala el paquete NuGet Microsoft.UI.Xaml
 
-Haz clic en **Proyecto** \> **Administrar paquetes NuGet...** \> **Examinar**, escribe o pega **Microsoft.UI.Xaml** en el cuadro de búsqueda, selecciona el elemento en los resultados de la búsqueda y haz clic en **Instalar** para instalar el paquete del proyecto (también verás una notificación de acuerdo de licencia). Ten cuidado de instalar solo el paquete **Microsoft.UI.Xaml** y no **Microsoft.UI.Xaml.Core.Direct**.
+Haz clic en **Proyecto** \> **Administrar paquetes NuGet...** \> **Examinar**, escribe o pega **Microsoft.UI.Xaml** en el cuadro de búsqueda, selecciona el elemento en los resultados de la búsqueda y haz clic en **Instalar** para instalar el paquete en el proyecto (también verás una notificación del contrato de licencia). Ten cuidado de instalar solo el paquete **Microsoft.UI.Xaml** y no **Microsoft.UI.Xaml.Core.Direct**.
 
 ## <a name="declare-winui-application-resources"></a>Declarar recursos de la aplicación de WinUI
 
@@ -39,7 +41,7 @@ Abre `App.xaml` y pega el marcado siguiente entre las etiquetas de apertura y ci
 
 ## <a name="add-a-winui-control-to-mainpage"></a>Agregar un control de WinUI a MainPage
 
-A continuación, abre `MainPage.xaml`. En la etiqueta de apertura existente de **Application** hay algunas declaraciones de espacio de nombres XML. Agrega la declaración de espacio de nombres XML `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`. Luego, pega el marcado siguiente entre las etiquetas de apertura y cierre existentes de **Page**, sobrescribiendo el elemento **StackPanel** existente.
+A continuación, abre `MainPage.xaml`. En la etiqueta de apertura existente de **Página** hay algunas declaraciones de espacio de nombres XML. Agrega la declaración de espacio de nombres XML `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`. Luego, pega el marcado siguiente entre las etiquetas de apertura y cierre existentes de **Page**, sobrescribiendo el elemento **StackPanel** existente.
 
 ```xaml
 <muxc:NavigationView PaneTitle="Welcome">
@@ -47,11 +49,11 @@ A continuación, abre `MainPage.xaml`. En la etiqueta de apertura existente de *
 </muxc:NavigationView>
 ```
 
-## <a name="edit-mainpageh-and-cpp-as-necessary"></a>Editar MainPage.h y .cpp según sea necesario
+## <a name="edit-mainpagecpp-and-h-as-necessary"></a>Editar MainPage.cpp y .h según sea necesario
 
-Al agregar un paquete NuGet a un proyecto de C++/WinRT (como el paquete **Microsoft.UI.Xaml** que agregaste antes), las herramientas generan un conjunto de encabezados de proyección en la carpeta `\Generated Files\winrt` del proyecto. Para incorporar esos archivos de encabezados al proyecto, de modo que se resuelvan las referencias a esos nuevos tipos, deberás incluirlos.
+En `MainPage.cpp`, elimina el código dentro de la implementación de **MainPage::ClickHandler**, ya que *myButton* ya no está en el marcado XAML.
 
-Por lo tanto, en `MainPage.h`, edita los elementos que has incluido para que tengan el mismo aspecto que los que aparecen en la lista siguiente. Si quisieras usar WinUI desde más de una página XAML, podrías ir al archivo de encabezado precompilado (normalmente, `pch.h`) e incluir los elementos allí.
+En `MainPage.h`, edita los elementos que has incluido para que tengan el mismo aspecto que los que aparecen en la lista siguiente. Si quisieras usar WinUI desde más de una página XAML, podrías ir al archivo de encabezado precompilado (normalmente, `pch.h`) e incluir los elementos allí.
 
 ```cppwinrt
 #include "MainPage.g.h"
@@ -59,9 +61,11 @@ Por lo tanto, en `MainPage.h`, edita los elementos que has incluido para que ten
 #include "winrt/Microsoft.UI.Xaml.XamlTypeInfo.h"
 ```
 
-Y, por último, en `MainPage.cpp`, elimina el código dentro de la implementación de **MainPage::ClickHandler**, ya que *myButton* ya no está en el marcado XAML.
+Ahora, compila el proyecto.
 
-Ahora puedes compilar y ejecutar el proyecto.
+Al agregar un paquete NuGet a un proyecto de C++/WinRT (como el paquete **Microsoft.UI.Xaml** que agregaste antes) y compilar el proyecto, las herramientas generan un conjunto de encabezados de proyección en la carpeta `\Generated Files\winrt` del proyecto. Si has seguido el tutorial, ahora tendrás una carpeta `\HelloWinUICppWinRT\HelloWinUICppWinRT\Generated Files\winrt`. El cambio realizado en `MainPage.h` anteriormente hace que los archivos de encabezados de proyección se incluyan en el proyecto. Y eso es necesario para que se resuelvan las referencias a los tipos del paquete NuGet.
+
+Ahora puedes ejecutar el proyecto.
 
 ![Captura de pantalla sencilla de la biblioteca de interfaz de usuario de Windows para C++/WinRT](images/winui.png)
 
