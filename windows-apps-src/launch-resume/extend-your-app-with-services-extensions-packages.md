@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, ampliar, separar por componentes, servicio de aplicaciones, paquete, ampliación
 ms.localizationpriority: medium
-ms.openlocfilehash: d9a98ef8e0ec53668277face05d83c08f6421cb7
-ms.sourcegitcommit: c7e10793cbef55ace959ac8fc6ddd08e683602bd
+ms.openlocfilehash: a2d12fbf1c45c05c2e9917c77c0d15f15bccaf72
+ms.sourcegitcommit: 756217c559155e172087dee4d762d328c6529db6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73329507"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78935347"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Ampliar la aplicación con servicios, extensiones y paquetes
 
@@ -18,16 +18,16 @@ Hay muchas tecnologías en Windows 10 para extender y componen la aplicación. E
 
 | Escenario                           | Paquete de recursos   | Paquete de activos      | Paquete opcional   | Lote plano        | Extensión de aplicación      | Servicio de aplicaciones        | Instalación en streaming  |
 |------------------------------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|
-| Complementos de código de terceros            |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
-| Complementos de código dentro del proceso              |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |
-| Activos de la experiencia de usuario (cadenas o imágenes)         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
-| Contenido a petición <br/> (por ejemplo, niveles adicionales) |      |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
-| Licencias independientes y adquisición |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
-| Adquisición desde la aplicación                 |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    |                    |
-| Optimizar el tiempo de instalación              | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
-| Reducir la superficie del disco              | :heavy_check_mark: |                    | :heavy_check_mark: |                    |                    |                    |                    |
-| Optimizar el empaquetado                 |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |
-| Reducir el tiempo de publicación             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |
+| Complementos de código de terceros            |                    |                    |                    |                    | :marca_comprobación_gruesa: |                    |                    |
+| Complementos de código dentro del proceso              |                    |                    | :marca_comprobación_gruesa: |                    |                    |                    |                    |
+| Activos de la experiencia de usuario (cadenas o imágenes)         | :marca_comprobación_gruesa: | :marca_comprobación_gruesa: | :marca_comprobación_gruesa: |                    | :marca_comprobación_gruesa: |                    | :marca_comprobación_gruesa: |
+| Contenido a petición <br/> (por ejemplo, niveles adicionales) |      |                    | :marca_comprobación_gruesa: |                    | :marca_comprobación_gruesa: |                    | :marca_comprobación_gruesa: |
+| Licencias independientes y adquisición |                    |                    | :marca_comprobación_gruesa: |                    | :marca_comprobación_gruesa: | :marca_comprobación_gruesa: |                    |
+| Adquisición desde la aplicación                 |                    |                    | :marca_comprobación_gruesa: |                    | :marca_comprobación_gruesa: |                    |                    |
+| Optimizar el tiempo de instalación              | :marca_comprobación_gruesa: |                    | :marca_comprobación_gruesa: |                    | :marca_comprobación_gruesa: |                    | :marca_comprobación_gruesa: |
+| Reducir la superficie del disco              | :marca_comprobación_gruesa: |                    | :marca_comprobación_gruesa: |                    |                    |                    |                    |
+| Optimizar el empaquetado                 |                    | :marca_comprobación_gruesa: | :marca_comprobación_gruesa: | :marca_comprobación_gruesa: |                    |                    |                    |
+| Reducir el tiempo de publicación             | :marca_comprobación_gruesa: | :marca_comprobación_gruesa: | :marca_comprobación_gruesa: | :marca_comprobación_gruesa: |                    |                    |                    |
 
 ## <a name="scenario-descriptions-the-rows-in-the-table-above"></a>Descripciones de escenarios (filas de la tabla anterior)
 
@@ -78,7 +78,7 @@ Los paquetes de recursos son paquetes únicamente de activos que permiten a tu a
 Los paquetes opcionales se usan para complementar o ampliar la funcionalidad original de un paquete de la aplicación. Es posible publicar una aplicación, seguida de la publicación de paquetes opcionales posteriormente, o publicar tanto la aplicación como paquetes opcionales al mismo tiempo. Al ampliar la aplicación mediante un paquete opcional, tienes las ventajas de distribuir y rentabilizar el contenido como paquete de la aplicación independiente. Los paquetes opcionales está pensados normalmente para ser desarrollados por el desarrollador de aplicaciones, ya que se ejecutan con la identidad de la aplicación principal (a diferencia de las extensiones de para aplicaciones). En función de cómo definas el paquete opcional, puedes cargar el código, los activos, o el código y los activos desde el paquete opcional a la aplicación principal. Si necesita mejorar la aplicación con contenido que se puede monetizar, autorizar y distribuir por separado, los paquetes opcionales podrían ser la opción adecuada para usted. Para obtener detalles de implementación, consulta [Paquetes opcionales y creación de conjuntos relacionados](/windows/msix/package/optional-packages).
 
 **Lote plano**
-[Paquetes de aplicación de lote plano](/windows/msix/package/flat-bundles.md) son similares a los lotes de aplicaciones normales, salvo que en lugar de incluir todos los paquetes de aplicación dentro de la carpeta, el lote plano solo contiene *referencias* a esos paquetes de la aplicación. Al contener referencias a los paquetes de la aplicación en lugar de los propios archivos, un lote plano reducirá la cantidad de tiempo que se tarda en empaquetar y descargar una aplicación.
+[Paquetes de aplicación de lote plano](/windows/msix/package/flat-bundles) son similares a los lotes de aplicaciones normales, salvo que en lugar de incluir todos los paquetes de aplicación dentro de la carpeta, el lote plano solo contiene *referencias* a esos paquetes de la aplicación. Al contener referencias a los paquetes de la aplicación en lugar de los propios archivos, un lote plano reducirá la cantidad de tiempo que se tarda en empaquetar y descargar una aplicación.
 
 **Extensión de aplicación**
 
@@ -98,7 +98,7 @@ Los servicios de aplicaciones son aplicaciones para UWP que ofrecen servicios a 
 
 La transmisión en streaming es una forma de optimizar la forma en que se entrega la aplicación a los usuarios. En lugar de esperar a que se descargue toda la aplicación antes de usarla, los usuarios pueden interactuar con la aplicación tan pronto como se haya descargado una parte necesaria. Depende de ti, como desarrollador, segmentar la aplicación en una sección requerida para el lanzamiento y la activación básica y contenido adicional para el resto de la aplicación. Consulta [Instalación en streaming para aplicaciones para UWP](/windows/msix/package/streaming-install) para obtener más detalles de implementación e información.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 [Crear y usar un servicio de aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
 [Introducción a los paquetes de activos](/windows/msix/package/asset-packages)  

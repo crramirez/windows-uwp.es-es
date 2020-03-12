@@ -3,24 +3,22 @@ Description: Con los Servicios de notificaciones de inserción de Windows (WNS),
 title: Introducción a los Servicios de notificaciones de inserción de Windows (WNS)
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 03/06/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f53dd0538e4564c50fb5cbcb6986f5cf9661cae
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: bd6c3ec487871d18a7142489802b801120f5e7ed
+ms.sourcegitcommit: 0142b5a47511afa76d74015e3fd8635b6042a542
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463834"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79038168"
 ---
-# <a name="windows-push-notification-services-wns-overview"></a>Introducción a los Servicios de notificaciones de inserción de Windows (WNS)
- 
+# <a name="windows-push-notification-services-wns-overview"></a>Introducción a los Servicios de notificaciones de inserción de Windows (WNS) 
 
 Windows Inserte Notification Services (WNS) permite a los desarrolladores de terceros enviar notificaciones del sistema, iconos, distintivos y sin formato desde su propio servicio en la nube. Esto proporciona un mecanismo para enviar nuevas actualizaciones a los usuarios de una manera segura y de bajo consumo.
 
 ## <a name="how-it-works"></a>Cómo funciona
-
 
 En el siguiente diagrama se muestra el flujo completo de datos para el envío de una notificación de inserción. Esto conlleva los siguientes pasos:
 
@@ -35,15 +33,52 @@ En el siguiente diagrama se muestra el flujo completo de datos para el envío de
 
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>Registro de una aplicación y recepción de las credenciales para el servicio de nube
 
-
-Antes de enviar notificaciones con WNS, la aplicación debe registrarse en el panel de la Tienda. Esto te proporcionará las credenciales de la aplicación que tu servicio en la nube usará en la autenticación con WNS. Estas credenciales son un identificador de seguridad de paquete (SID) y una clave secreta. Para realizar este registro, inicie sesión en el [centro de Partners](https://partner.microsoft.com/dashboard). Después de crear la aplicación, puedes recuperar las credenciales siguiendo las instrucciones de la página **Administración de aplicaciones: WNS/MPNS**. Si quieres usar la solución Servicios de Live, sigue el vínculo del **sitio de Servicios Live** de esta página.
+Antes de enviar notificaciones con WNS, la aplicación debe registrarse en el panel de la Tienda. 
 
 Cada aplicación tiene su propio conjunto de credenciales para su servicio de nube. Estas credenciales no se pueden usar para enviar notificaciones a cualquier otra aplicación.
 
-Para obtener más información acerca del registro de una aplicación, consulta el tema sobre [cómo autenticar con el Servicio de notificaciones de inserción de Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10)).
+### <a name="step-1-register-your-app-with-the-dashboard"></a>Paso 1: registrar la aplicación en el panel
+
+Para poder enviar notificaciones a través de WNS, la aplicación debe estar registrada en el panel del centro de Partners. Esto te proporcionará las credenciales de la aplicación que tu servicio en la nube usará en la autenticación con WNS. Estas credenciales son un identificador de seguridad de paquete (SID) y una clave secreta. Para realizar este registro, inicie sesión en el [centro de Partners](https://partner.microsoft.com/dashboard). Después de crear la aplicación, consulte [Product Management-WNS/MPNS](https://apps.dev.microsoft.com/) para instrunctions sobre cómo recuperar las credenciales (si quiere usar la solución Live Services, siga el vínculo **sitio de servicios Live** en esta página).
+
+Para registrarse:
+1.  Vaya a la página de aplicaciones de la tienda Windows del centro de Partners e inicie sesión con su cuenta de Microsoft personal (por ejemplo: johndoe@outlook.com, janedoe@xboxlive.com).
+2.  Una vez que haya iniciado sesión, haga clic en el vínculo panel.
+3.  En el panel, seleccione crear una nueva aplicación.
+
+![registro de la aplicación WNS](../images/wns-create-new-app.png)
+
+4.  Cree la aplicación reservando un nombre de aplicación. Proporcione un nombre único para la aplicación. Escriba el nombre y haga clic en el botón reservar nombre del producto. Si el nombre está disponible, se reserva para la aplicación. Una vez que haya reservado correctamente un nombre para la aplicación, los demás detalles estarán disponibles para modificarlos en este momento.
+
+![nombre de producto reservado de WNS](../images/wns-reserve-poduct-name.png)
+ 
+### <a name="step-2-obtain-the-identity-values-and-credentials-for-your-app"></a>Paso 2: obtener los valores de identidad y las credenciales de la aplicación
+
+Al reservar un nombre para la aplicación, la tienda Windows crea las credenciales asociadas. También se asignaron valores de identidad asociados (nombre y publicador) que deben estar presentes en el archivo de manifiesto de la aplicación (package. appxmanifest). Si ya ha cargado la aplicación en la tienda Windows, estos valores se agregarán automáticamente al manifiesto. Si no ha cargado la aplicación, tendrá que agregar manualmente los valores de identidad al manifiesto.
+
+1.  Seleccione la flecha desplegable administración del producto
+
+![Administración de productos de WNS](../images/wns-product-management.png)
+
+2.  En el menú desplegable administración del producto, seleccione el vínculo WNS/MPNS.
+
+![Administración de productos de WNS continuted](../images/wns-product-management2.png)
+ 
+3.  En la página WNS/MPNS, haga clic en el vínculo sitio de servicios Live que se encuentra en la sección Notification Services de Windows inserciones (WNS) y Microsoft Azure Mobile Services.
+
+![servicios Live de WNS](../images/wns-live-services-page.png)
+ 
+4.  La página del portal de registro de aplicaciones (anteriormente, la página Live Services) proporciona un elemento Identity que se incluirá en el manifiesto de la aplicación. Esto incluye los secretos de la aplicación, el identificador de seguridad del paquete y la identidad de la aplicación. Abra el manifiesto en un editor de texto y agregue el elemento que indica la página.   
+
+> [!NOTE]
+> Si ha iniciado sesión con una cuenta de AAD, deberá ponerse en contacto con el cuenta de Microsoft propietario que registró la aplicación para obtener los secretos de la aplicación asociada. Si necesita ayuda para encontrar esta persona de contacto, haga clic en el engranaje en la esquina superior derecha de la pantalla y, a continuación, haga clic en configuración del desarrollador y la dirección de correo electrónico de la persona que creó la aplicación con su cuenta de Microsoft se mostrará ahí.
+ 
+5.  Cargue el SID y el secreto de cliente en el servidor en la nube.
+
+> [!Important]
+> El SID y el secreto de cliente deben almacenarse de forma segura y el servicio en la nube puede acceder a ellos. La divulgación o el robo de esta información podría permitir que un atacante envíe notificaciones a los usuarios sin su permiso o conocimiento.
 
 ## <a name="requesting-a-notification-channel"></a>Solicitud de un canal de notificación
-
 
 Cuando se ejecuta una aplicación que puede recibir notificaciones de inserción, primero debe solicitar un canal de notificación mediante [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager#Windows_Networking_PushNotifications_PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsync_System_String_). Para obtener una explicación detallada y un código de ejemplo, consulta el tema sobre [cómo solicitar, crear y guardar un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10)). Esta API devuelve un URI de canal que está vinculado exclusivamente a la aplicación que llama y su icono, y a través del cual pueden enviarse todos los tipos de notificaciones.
 
@@ -58,7 +93,6 @@ Después de crear correctamente un URI de canal, la aplicación lo envía a su s
 
 ## <a name="authenticating-your-cloud-service"></a>Autenticación del servicio de nube
 
-
 Para enviar una notificación, se debe autenticar el servicio de nube con WNS. El primer paso en este proceso se realiza cuando registras tu aplicación con el Panel de la Microsoft Store. Durante el proceso de registro, la aplicación recibe un identificador de seguridad de paquete (SID) y una clave secreta. El servicio de nube usa esta información para autenticar con WNS.
 
 El esquema de autenticación de WNS se implementa mediante el perfil de credenciales de cliente del protocolo [OAuth 2.0](https://tools.ietf.org/html/draft-ietf-oauth-v2-23). El servicio de nube realiza la autenticación con WNS al proporcionar sus credenciales (SID de paquete y clave secreta). A cambio recibe un token de acceso. Este token de acceso permite al servicio de nube enviar una notificación. El token se requiere con cada solicitud de notificación enviada a WNS.
@@ -70,11 +104,10 @@ En un nivel alto, la cadena de información es la siguiente:
 
 ![Diagrama WNS para la autenticación del servicio de nube](images/wns-diagram-02.jpg)
 
-En la autenticación con WNS, el servicio de nube envía una solicitud HTTP en una capa de sockets seguros (SSL). Los parámetros se proporcionan en el formato "aplicación/x-www-formato-urlcodificada". Proporcione el SID del paquete en el campo "ID. de\_de cliente" y la clave secreta en el campo "secreto de\_de cliente". Para obtener detalles de sintaxis, consulta la referencia sobre la [solicitud de token de acceso](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)).
+En la autenticación con WNS, el servicio de nube envía una solicitud HTTP en una capa de sockets seguros (SSL). Los parámetros se proporcionan en el formato "aplicación/x-www-formato-urlcodificada". Proporcione el SID del paquete en el campo "ID. de\_de cliente" y la clave secreta en el campo "secreto de\_de cliente" como se muestra en el ejemplo siguiente. Para obtener detalles de sintaxis, consulta la referencia sobre la [solicitud de token de acceso](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)).
 
-**Tenga en cuenta**  este es solo un ejemplo, no el código de cortar y pegar que puede usar correctamente en su propio código.
-
- 
+> [!NOTE]
+> Esto es solo un ejemplo, no código de cortar y pegar que se puede usar correctamente en su propio código. 
 
 ``` http
  POST /accesstoken.srf HTTP/1.1
@@ -169,7 +202,8 @@ No hay ninguna forma de comprobar el estado de estos dos valores, pero puedes co
 
 Si la aplicación depende en gran medida de las notificaciones de inserción, te recomendamos que notifiques a los usuarios que no pueden recibir notificaciones mientras esté activado el ahorro de batería y para que les resulte más fácil ajustar la **configuración de ahorro de batería**. Con el esquema de URI de configuración del ahorro de batería en Windows 10, `ms-settings:batterysaver-settings`, puede proporcionar un vínculo cómodo a la aplicación de configuración.
 
-**Sugerencia**   al notificar al usuario acerca de la configuración del ahorro de batería, se recomienda proporcionar una manera de suprimir el mensaje en el futuro. Por ejemplo, la casilla `dontAskMeAgainBox` del siguiente ejemplo guarda la preferencia del usuario en [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
+> [!TIP]
+> Al notificar al usuario acerca de la configuración del ahorro de batería, se recomienda proporcionar una manera de suprimir el mensaje en el futuro. Por ejemplo, la casilla `dontAskMeAgainBox` del siguiente ejemplo guarda la preferencia del usuario en [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings).
 
  
 

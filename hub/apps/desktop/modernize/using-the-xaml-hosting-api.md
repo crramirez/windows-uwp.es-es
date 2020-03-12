@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 84a41b4dd77a451a79e607e5ad5cb7df548419a9
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: 9f6ba075a8dba048c9a11cc415734d040d953079
+ms.sourcegitcommit: 756217c559155e172087dee4d762d328c6529db6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089421"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78935373"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-c-win32-app"></a>Uso de la API de hospedaje XAML de UWP en una aplicación Win32 de C++
 
@@ -61,6 +61,9 @@ En el diagrama siguiente se muestra la jerarquía de objetos de una isla XAML qu
 
 ![Arquitectura de DesktopWindowXamlSource](images/xaml-islands/xaml-hosting-api-rev2.png)
 
+> [!NOTE]
+> Al hospedar islas XAML en una aplicación de escritorio, puede tener varios árboles de contenido XAML que se ejecuten en el mismo subproceso al mismo tiempo. Para tener acceso al elemento raíz de un árbol de contenido XAML en una isla XAML y obtener información relacionada sobre el contexto en el que se hospeda, utilice la clase [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) . Las API [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview)y [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) no proporcionan la información correcta para las islas XAML. Para obtener más información, vea [esta sección ](xaml-islands.md#window-host-context-for-xaml-islands).
+
 ## <a name="related-samples"></a>Muestras relacionadas
 
 La forma de usar la API de hospedaje XAML de UWP en el código depende del tipo de aplicación, el diseño de la aplicación y otros factores. Para ayudar a ilustrar el uso de esta API en el contexto de una aplicación completa, en este artículo se hace referencia al código de los ejemplos siguientes.
@@ -100,7 +103,7 @@ Esta sección le guía a través del proceso de uso de la API de hospedaje XAML 
     2. Seleccione la pestaña **examinar** , busque el paquete [Microsoft. Windows. CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) e instale la versión más reciente de este paquete.
 
     > [!NOTE]
-    > En el caso de los proyectos nuevos, puede instalar la [ C++extensión de Visual Studio (VSIX)/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) y usar una C++de las plantillas de proyecto/WinRT incluidas en esa extensión. Para obtener más información, consulte [este artículo](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+    > En el caso de los proyectos nuevos, puede instalar la [ C++extensión de Visual Studio (VSIX)/WinRT](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) y usar una C++de las plantillas de proyecto/WinRT incluidas en esa extensión. Para obtener más información, consulta [este artículo](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 4. Instale el paquete NuGet [Microsoft. Toolkit. Win32. UI. SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) :
 
@@ -467,25 +470,25 @@ Las instrucciones siguientes muestran cómo empaquetar todos los componentes de 
 
 ### <a name="error-using-uwp-xaml-hosting-api-in-a-uwp-app"></a>Error al usar la API de hospedaje XAML de UWP en una aplicación de UWP
 
-| Problema | Resolución |
+| Problema | Solución |
 |-------|------------|
 | La aplicación recibe un **COMException** con el siguiente mensaje: "no se puede activar DesktopWindowXamlSource. Este tipo no se puede usar en una aplicación de UWP ". o "no se puede activar WindowsXamlManager. Este tipo no se puede usar en una aplicación de UWP ". | Este error indica que está intentando usar la API de hospedaje XAML de UWP (específicamente, está intentando crear una instancia de los tipos [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) o [WindowsXamlManager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) ) en una aplicación para UWP. La API de hospedaje XAML de UWP solo está pensada para usarse en aplicaciones de escritorio que no son de UWP, como C++ WPF, Windows Forms y aplicaciones Win32. |
 
 ### <a name="error-trying-to-use-the-windowsxamlmanager-or-desktopwindowxamlsource-types"></a>Error al intentar usar los tipos WindowsXamlManager o DesktopWindowXamlSource
 
-| Problema | Resolución |
+| Problema | Solución |
 |-------|------------|
 | La aplicación recibe una excepción con el siguiente mensaje: "WindowsXamlManager y DesktopWindowXamlSource son compatibles con las aplicaciones que tienen como destino la versión de Windows 10.0.18226.0 y versiones posteriores. Compruebe el manifiesto de aplicación o el manifiesto del paquete y asegúrese de que la propiedad MaxTestedVersion esté actualizada. " | Este error indica que la aplicación intentó usar los tipos **WindowsXamlManager** o **DESKTOPWINDOWXAMLSOURCE** en la API de hospedaje XAML de UWP, pero el sistema operativo no puede determinar si la aplicación se ha creado para tener como destino Windows 10, versión 1903 o posterior. La API de hospedaje XAML de UWP se presentó por primera vez como una vista previa en una versión anterior de Windows 10, pero solo se admite a partir de Windows 10, versión 1903.</p></p>Para resolver este problema, cree un paquete de MSIX para la aplicación y ejecútelo desde el paquete, o bien instale el paquete NuGet [Microsoft. Toolkit. Win32. UI. SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) en el proyecto. Para obtener más información, vea [esta sección ](#configure-the-project). |
 
 ### <a name="error-attaching-to-a-window-on-a-different-thread"></a>Error al asociar a una ventana en un subproceso diferente
 
-| Problema | Resolución |
+| Problema | Solución |
 |-------|------------|
 | La aplicación recibe un **COMException** con el siguiente mensaje: "error en el método AttachToWindow porque el HWND especificado se creó en un subproceso diferente". | Este error indica que la aplicación llamó al método **IDesktopWindowXamlSourceNative:: AttachToWindow** y le pasó el HWND de una ventana creada en un subproceso diferente. Debe pasar este método el HWND de una ventana creada en el mismo subproceso que el código desde el que llama al método. |
 
 ### <a name="error-attaching-to-a-window-on-a-different-top-level-window"></a>Error al asociar a una ventana en una ventana de nivel superior diferente
 
-| Problema | Resolución |
+| Problema | Solución |
 |-------|------------|
 | La aplicación recibe un **COMException** con el siguiente mensaje: "error en el método AttachToWindow porque el HWND especificado desciende de una ventana de nivel superior distinta de la del HWND que se pasó previamente a AttachToWindow en el mismo subproceso". | Este error indica que la aplicación llamó al método **IDesktopWindowXamlSourceNative:: AttachToWindow** y le pasó el HWND de una ventana que desciende de una ventana de nivel superior diferente de la ventana especificada en una llamada anterior a este método en el mismo subproceso.</p></p>Una vez que la aplicación llama a **AttachToWindow** en un subproceso determinado, todos los demás objetos [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) del mismo subproceso solo pueden asociarse a ventanas que son descendientes de la misma ventana de nivel superior que se pasó en la primera llamada a **AttachToWindow**. Cuando se cierran todos los objetos **DesktopWindowXamlSource** para un subproceso determinado, el siguiente **DesktopWindowXamlSource** se vuelve a adjuntar a cualquier ventana de nuevo.</p></p>Para resolver este problema, cierre todos los objetos **DesktopWindowXamlSource** enlazados a otras ventanas de nivel superior en este subproceso o cree un nuevo subproceso para este **DesktopWindowXamlSource**. |
 
