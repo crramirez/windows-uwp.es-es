@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, complementos, iap, duradero, consumible, suscripción, tipo de producto, id. de producto, compra desde la aplicación, producto desde la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: a6ef1ca71ffcd7b2d445292bfb38a6a8d29e7a74
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852422"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210511"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Establecer el tipo del producto de tu complemento y el id. del producto
 
@@ -28,7 +28,7 @@ En primer lugar, debes indicar qué tipo de complemento ofreces. Esta selección
 
 <span id="durable" />
 
-### <a name="durable"></a>Perdurable
+### <a name="durable"></a>Durable
 
 Selecciona **Duradero** como el tipo de producto si el complemento normalmente se adquiere una sola vez. Estos complementos a menudo se usan para desbloquear funcionalidad adicional en una aplicación.
 
@@ -52,7 +52,7 @@ Los complementos de suscripción solo son compatibles con clientes que tienen Wi
 
 Debe enviar el producto primario para poder publicar complementos de suscripción en la tienda (aunque puede crear el envío en el centro de Partners y comenzar a trabajar en él en cualquier momento).
 
-## <a name="product-id"></a>Product ID
+## <a name="product-id"></a>Id. del producto
 
 Independientemente del tipo de producto que elijas, necesitarás especificar un id. del producto único para el complemento. Este nombre se usará para identificar el complemento en el centro de Partners, y puede usar este identificador para [hacer referencia al complemento en el código](../monetize/in-app-purchases-and-trials.md#how-to-use-product-ids-for-add-ons-in-your-code).
 

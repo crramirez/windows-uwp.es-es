@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 73f7e827c0ec8ca289d3523da06601de978a91d2
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853432"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210191"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de dispositivos para dispositivos de escritorio Windows
 
@@ -62,7 +62,7 @@ El Portal de dispositivos en un dispositivo de escritorio Windows proporciona el
 - Explorador de archivos
 - Procesos en ejecución
 - Rendimiento
-- Depurar
+- Depuración
 - Seguimiento de eventos para Windows (ETW)
 - Seguimiento del rendimiento
 - Administrador de dispositivos
@@ -71,7 +71,7 @@ El Portal de dispositivos en un dispositivo de escritorio Windows proporciona el
 - Características
 - Realidad mixta
 - Depurador de instalación en streaming
-- Location
+- Ubicación
 - Borrador
 
 ## <a name="more-device-portal-options"></a>Más opciones del Portal de dispositivos
@@ -129,7 +129,7 @@ Puede obtener este error si los paquetes para desarrolladores no están instalad
 
 Puede recibir este error si está en una conexión a Internet de uso medido. No podrá descargar los paquetes para desarrolladores en una conexión de uso medido.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Información general de Windows Device portal](device-portal.md)
 * [Referencia de API principal del portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

@@ -1,25 +1,25 @@
 ---
 description: Aprende a usar el espacio de nombres Windows.Services.Store para implementar complementos de una suscripción.
-title: Habilitar complementos de una suscripción para tu aplicación
+title: Habilitar complementos de una suscripción para la aplicación
 keywords: windows 10, uwp, suscripciones, complementos, add-ons, compras desde la aplicación, in-app purchases, IAP, Windows.Services.Store
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b937ca61110452e233061179c398cae0d047686e
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: ba436ab760f589debeaf6909acd64d61df89a43d
+ms.sourcegitcommit: 912146681b1befc43e6db6e06d1e3317e5987592
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335063"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79295738"
 ---
-# <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de una suscripción para tu aplicación
+# <a name="enable-subscription-add-ons-for-your-app"></a>Habilitar complementos de una suscripción para la aplicación
 
 Tu aplicación de Plataforma universal de Windows (UWP) puede ofrecer compras desde la aplicación de complementos de *suscripción* a los clientes. Puedes usar suscripciones para vender productos digitales en tu aplicación (como las características de la aplicación o el contenido digital) con períodos de facturación periódicos automatizados.
 
 > [!NOTE]
 > Para habilitar la compra de complementos de suscripción en la aplicación, el proyecto debe estar dirigido a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio (esto corresponde a Windows 10, versión 1607), y debe usar las API del espacio de nombres **Windows.Services.Store** para implementar la experiencia de compra desde la aplicación en lugar de usar el espacio de nombres **Windows.ApplicationModel.Store**. Para obtener más información sobre las diferencias entre estos espacios de nombres, consulta [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md).
 
-## <a name="feature-highlights"></a>Aspectos destacados de las características
+## <a name="feature-highlights"></a>Características destacadas
 
 Los complementos de una suscripción para aplicaciones para UWP admiten las siguientes características:
 
@@ -33,24 +33,24 @@ Los complementos de una suscripción para aplicaciones para UWP admiten las sigu
 
 Para habilitar la compra de complementos de una suscripción en la aplicación, sigue estos pasos.
 
-1. [Crear una presentación de complemento](../publish/add-on-submissions.md) para su suscripción en el centro de partners y publicar el envío. Al seguir el proceso de envío del complemento, presta mucha atención a las siguientes propiedades:
+1. [Cree un envío de complementos](../publish/add-on-submissions.md) para su suscripción en el centro de Partners y publique el envío. Al seguir el proceso de envío del complemento, presta mucha atención a las siguientes propiedades:
 
-    * [Tipo de producto](../publish/set-your-add-on-product-id.md#product-type): Asegúrese de seleccionar **suscripción**.
+    * [Tipo de producto](../publish/set-your-add-on-product-id.md#product-type): Asegúrate de seleccionar **Suscripción**.
 
-    * [Período de suscripción](../publish/enter-add-on-properties.md#subscription-period): Elija el período de facturación periódico para la suscripción. No puedes cambiar el período de suscripción después de publicar el complemento.
+    * [Período de suscripción](../publish/enter-add-on-properties.md#subscription-period): Elige el período de facturación periódico para tu suscripción. No puedes cambiar el período de suscripción después de publicar el complemento.
 
         Cada complemento de suscripción admite un período de suscripción único y período de prueba. Debes crear un complemento de suscripción diferente para cada tipo de suscripción que quieres ofrecer en tu aplicación. Por ejemplo, si quisieras ofrecer una suscripción mensual sin ninguna versión de prueba, una suscripción mensual con una versión de prueba de un mes, una suscripción anual sin ninguna versión de prueba y una suscripción anual con una versión de prueba de un mes, necesitará crear cuatro complementos de suscripción.
 
-    * [Período de prueba](../publish/enter-add-on-properties.md#free-trial): Considere la posibilidad de elegir un período de prueba de 1 semana o mes su suscripción permitir que los usuarios probar el contenido de la suscripción antes de comprarlo. No puedes cambiar ni quitar el período de prueba después de publicar el complemento de la suscripción.
+    * [Período de prueba](../publish/enter-add-on-properties.md#free-trial): Piense en la posibilidad de elegir un período de prueba de 1 semana o 1 mes para tu suscripción para que los usuarios puedan probar el contenido de la suscripción antes de comprarla. No puedes cambiar ni quitar el período de prueba después de publicar el complemento de la suscripción.
 
         Para obtener una evaluación gratuita de tu suscripción, un usuario debe adquirir tu suscripción a través del proceso de compra desde la aplicación estándar, como una forma de pago válida. No se le cobra dinero durante el período de prueba. Al final del período de prueba, la suscripción se convierte automáticamente en la suscripción completa y se te cobrará el instrumento de pago del usuario para el primer período de la suscripción de pago. Si el usuario elige cancelar su suscripción durante el período de prueba, la suscripción permanece activa hasta el final del período de prueba. Algunos períodos de prueba no están disponibles para todos los períodos de suscripción.
 
         > [!NOTE]
         > Cada cliente puede adquirir una prueba gratuita durante un complemento de suscripción solo una vez. Una vez que un cliente adquiere una prueba gratuita de una suscripción, la Store impide que el mismo cliente adquiera de nuevo la mismo suscripción de prueba gratuita.
 
-    * [Visibilidad](../publish/set-add-on-pricing-and-availability.md#visibility): Si va a crear un complemento de prueba que sólo va a utilizar para probar la experiencia de compra en la aplicación para la suscripción, se recomienda que seleccione uno de los **oculto en el Store** opciones. De lo contrario, puedes seleccionar la mejor opción de visibilidad para tu escenario.
+    * [Visibilidad](../publish/set-add-on-pricing-and-availability.md#visibility): Si estás creando un complemento de prueba que solo usarás para probar la experiencia de compra desde la aplicación para la suscripción, te recomendamos que selecciones una de las opciones **Oculto en la Store**. De lo contrario, puedes seleccionar la mejor opción de visibilidad para tu escenario.
 
-    * [Precios](../publish/set-add-on-pricing-and-availability.md?#pricing): Elija el precio de la suscripción en esta sección. No puedes subir el precio de la suscripción después de publicar el complemento. Sin embargo, puede bajar el precio posteriormente:
+    * [Precios](../publish/set-add-on-pricing-and-availability.md?#pricing): Elige el precio de tu suscripción en esta sección. No puedes subir el precio de la suscripción después de publicar el complemento. Sin embargo, puede bajar el precio posteriormente:
         > [!IMPORTANT]
         > De manera predeterminada, al crear cualquier complemento, el precio se establece inicialmente en **Gratis**. Dado que no puedes subir el precio del complemento de una suscripción después de completar el envío del complemento, asegúrate de elegir el precio de tu suscripción aquí.
 
@@ -68,8 +68,8 @@ Los ejemplos de código de esta sección muestran cómo usar las API en el espac
 
 Estos ejemplos cumplen los siguientes requisitos:
 * Un proyecto de Visual Studio para una aplicación de la Plataforma universal de Windows (UWP) destinado a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o un versión posterior.
-* Tiene [creó un envío de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) en el centro de partners y esta aplicación se publica en el Store. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Tienda mientras la pruebas. Para obtener más información, consulta la [guía para prueba](in-app-purchases-and-trials.md#testing).
-* Tiene [crea un complemento de suscripción para la aplicación](../publish/add-on-submissions.md) en el centro de partners.
+* Ha [creado un envío de aplicación](https://docs.microsoft.com/windows/uwp/publish/app-submissions) en el centro de Partners y esta aplicación se publica en la tienda. De manera opcional, puedes configurar la aplicación para que no se pueda descubrir en la Tienda mientras la pruebas. Para obtener más información, consulta la [guía para prueba](in-app-purchases-and-trials.md#testing).
+* Ha [creado un complemento de suscripción para la aplicación en el](../publish/add-on-submissions.md) centro de Partners.
 
 El código de estos ejemplos supone que:
 * El archivo de código requiere el **uso** de instrucciones para los espacios de nombres **Windows.Services.Store** y **System.Threading.Tasks**.
@@ -124,12 +124,12 @@ No ofrecemos período de gracia para la facturación de la suscripción. Si no p
 Los siguientes escenarios no son compatibles actualmente con complementos de una suscripción.
 
 * En este momento no se admite la venta de suscripciones a clientes directamente a través de la Tienda. Las suscripciones solo están disponibles para compras desde la aplicación de productos digitales.
-* Los clientes no pueden cambiar periodos de suscripción utilizando la página [https://account.microsoft.com/services](https://account.microsoft.com/services) de su cuenta de Microsoft. Para cambiar a un período de suscripción diferente, los clientes deben cancelar su suscripción actual y, después, comprar una suscripción con un período de suscripción diferente de la aplicación.
+* Los clientes no pueden cambiar periodos de suscripción utilizando la página [https://account.microsoft.com/services](https://account.microsoft.com/services) de su cuenta de Microsoft. Para cambiar a otro período de suscripción, los clientes deben cancelar su suscripción actual y, después, comprar una suscripción con un período de suscripción diferente de la aplicación.
 * El cambio de nivel no se admite actualmente para complementos de una suscripción (por ejemplo, el cambio de un cliente de una suscripción básica a una suscripción premium con más características).
 * Las [Ventas](../publish/put-apps-and-add-ons-on-sale.md) y los [códigos promocionales](../publish/generate-promotional-codes.md) no se admiten actualmente para complementos de una suscripción.
-
+* Renovación de las suscripciones existentes después de establecer la visibilidad del complemento de suscripción para **detener la adquisición**. Para más información [, consulte establecimiento de precios y disponibilidad de complementos](../publish/set-add-on-pricing-and-availability.md) .
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Pruebas y compras desde la aplicación](in-app-purchases-and-trials.md)
-* [Obtener la información de producto para las aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)
+* [Obtener información del producto para aplicaciones y complementos](get-product-info-for-apps-and-add-ons.md)

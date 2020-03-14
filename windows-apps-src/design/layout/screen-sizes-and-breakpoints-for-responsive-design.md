@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 37d0ca71adf43891628a02d60d6873e7934d749b
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853152"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210181"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamaños de pantalla y puntos de interrupción
 
@@ -40,14 +40,14 @@ Esta tabla describe las distintas clases de tamaño y los puntos de interrupció
 </thead>
 <tbody>
 <tr class="even">
-<td style="vertical-align:top;">Pequeño</td>
+<td style="vertical-align:top;">Pequeña</td>
 <td style="vertical-align:top;">640 píxeles o menos</td>
 <td style="vertical-align:top;">4&quot; a 6&quot;; 20&quot; a 65&quot;</td>
 <td style="vertical-align:top;">Teléfonos, televisores</td>
 <td style="vertical-align:top;">320x569, 360x640, 480x854</td>
 </tr>
 <tr class="odd">
-<td style="vertical-align:top;">Media</td>
+<td style="vertical-align:top;">Medio</td>
 <td style="vertical-align:top;">De 641 a 1007 píxeles</td>
 <td style="vertical-align:top;">De 7 a 12 pulgadas</td>
 <td style="vertical-align:top;">Tabléfono, tabletas</td>
@@ -76,7 +76,7 @@ Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para g
 
 ## <a name="general-recommendations"></a>Recomendaciones generales
 
-### <a name="small"></a>Pequeño
+### <a name="small"></a>Pequeña
 - Establece los márgenes de la ventana de la izquierda y derecha en 12 píxeles para crear una separación visual entre los bordes izquierdo y derecho de la ventana de la aplicación.
 - Acopla las [barras de la aplicación](../controls-and-patterns/app-bars.md) a la parte inferior de la ventana para una mejor accesibilidad.
 - Usa una columna o región a la vez.
@@ -84,7 +84,7 @@ Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para g
 - Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo de superposición para ahorrar espacio en pantalla.
 - Si usas el [patrón de maestro y detalles](../controls-and-patterns/master-details.md), elige el modo de presentación apilada para ahorrar espacio en pantalla.
 
-### <a name="medium"></a>Media
+### <a name="medium"></a>Medio
 - Establece los márgenes izquierdo y derecho de la ventana en 24 píxeles para crear una separación visual entre los bordes izquierdo y derecho de la ventana de la aplicación.
 - Sitúa los elementos de comando, como las [barras de la aplicación](../controls-and-patterns/app-bars.md) en la parte superior de la ventana de la aplicación.
 - Usa hasta dos columnas o regiones.

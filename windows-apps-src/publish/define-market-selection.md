@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mercados, países, regiones
 ms.localizationpriority: medium
 ms.openlocfilehash: 3621e9c6af0daa84a9762989a14c79f35471b73c
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852883"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210971"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
@@ -313,11 +313,11 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Islas Pitcairn</td>
     <td>Polonia *</td>
     <td>Portugal *</td>
-    <td>Qatar</td>
+    <td>Catar</td>
   </tr>
   <tr>
     <td>Reunión</td>
-    <td>Rumania</td>
+    <td>Rumanía</td>
     <td>Rusia *</td>
     <td>Ruanda</td>
   </tr>
@@ -428,7 +428,7 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 &nbsp;
 
-| País/región       | Método de pago  | Ajuste de expansión comercial | Fecha efectiva |
+| País o región       | Método de pago  | Ajuste de expansión comercial | Fecha efectiva |
 |----------------------|-----------------|-------------------------------|----------------|
 | Argentina            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Australia            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
@@ -439,11 +439,11 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 | Chile                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | China                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Colombia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| República checa       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| República Checa       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Dinamarca              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Finlandia              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| France               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Germany              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Francia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Alemania              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Grecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Hong Kong            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Hungría              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
@@ -451,7 +451,7 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 | Irlanda              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Israel               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Italia                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Japan                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Japón                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | México               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Países Bajos          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Nueva Zelanda          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |

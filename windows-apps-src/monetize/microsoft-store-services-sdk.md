@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: 679dde6802a2c0d27444fbcda040f2ba19039457
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852799"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210751"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Conectar con clientes con Microsoft Store Services SDK
 
@@ -113,7 +113,7 @@ Para instalar las bibliotecas de Microsoft Store Services SDK mediante NuGet:
 
 Después de instalar Microsoft Store Services SDK a través del instalador MSI o de NuGet, sigue estas instrucciones para hacer referencia al ensamblado del SDK en el proyecto UWP.
 
-1. Abra el proyecto en Visual Studio.
+1. Abre el proyecto en Visual Studio.
     > [!NOTE]
     > Si tu proyecto es una aplicación JavaScript que tiene como destino **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica de la arquitectura (por ejemplo, **x86**).
 

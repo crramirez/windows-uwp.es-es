@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app data, datos de la aplicación
 ms.localizationpriority: medium
 ms.openlocfilehash: cfbe8df46f51b41ccdd840f609caf2c593735e1f
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853352"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210981"
 ---
 # <a name="get-app-data"></a>Obtención de datos de la aplicación
 
@@ -70,8 +70,8 @@ Este recurso tiene los siguientes valores.
 | packageIdentityName          | string  | El nombre de identidad de paquete de la aplicación.                       |
 | publisherName       | string  | El identificador del editor de Windows asociado con la aplicación. Esto corresponde al valor de **paquete/identidad/publicador** que aparece en la página identidad de la [aplicación](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details) de la aplicación en el centro de Partners.       |
 | firstPublishedDate      | string  | La fecha en que se publicó la aplicación por primera vez, en formato ISO 8601.   |
-| lastPublishedApplicationSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para la aplicación.    |
-| pendingApplicationSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   
+| lastPublishedApplicationSubmission       | object | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para la aplicación.    |
+| pendingApplicationSubmission        | object  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para la aplicación.   |   
 | hasAdvancedListingPermission        | boolean  |  Indica si puedes configurar las [gamingOptions](manage-app-submissions.md#gaming-options-object) o los [tráileres](manage-app-submissions.md#trailer-object) para envíos para la aplicación. Este valor es true para envíos creados después de mayo de 2017. |  |
 
 
@@ -125,8 +125,8 @@ Este recurso tiene los siguientes valores.
 |-----------------|---------|------------------------|
 | flightId            | string  | El identificador del paquete piloto. Este valor lo proporciona el centro de Partners.  |
 | friendlyName           | string  | El nombre del paquete piloto, según lo especifica el desarrollador.   |
-| lastPublishedFlightSubmission       | objeto | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para el paquete piloto.   |
-| pendingFlightSubmission        | objeto  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para el paquete piloto.  |    
+| lastPublishedFlightSubmission       | object | Un [recurso de envío](#submission_object) que proporciona información sobre el último envío publicado para el paquete piloto.   |
+| pendingFlightSubmission        | object  |  Un [recurso de envío](#submission_object) que proporciona información sobre el envío pendiente actual para el paquete piloto.  |    
 | groupIds           | array  | Una matriz de cadenas que contienen los identificadores de los grupos de pilotos asociados con el paquete piloto. Para obtener más información sobre los grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).   |
 | rankHigherThan           | string  | El nombre descriptivo del paquete piloto que está clasificado inmediatamente por debajo del paquete piloto actual. Para obtener más información sobre la clasificación de grupos de pilotos, consulta [Paquetes piloto](https://docs.microsoft.com/windows/uwp/publish/package-flights).  |
 

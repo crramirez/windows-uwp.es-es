@@ -7,23 +7,23 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 43782a1a5d26ba84fe53f6c164a944fa357edfb1
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787026"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210811"
 ---
 # <a name="create-add-on-store-listings"></a>Creación de descripciones de la Tienda de los complementos
 
-Al enviar un complemento de [centro de partners](https://partner.microsoft.com/dashboard), la información que se proporciona en el **Store anuncios** paso se mostrará a los clientes cuando ve la opción para adquirir el complemento. Revisa la descripción de la Tienda cuidadosamente para que represente el complemento con precisión de forma que sea atractivo para los clientes. Puedes proporcionar descripciones de la Tienda personalizadas para diferentes idiomas.
+Al enviar un complemento en el centro de [Partners](https://partner.microsoft.com/dashboard), la información proporcionada en el paso de los **listados de tiendas** se mostrará a los clientes cuando vean la opción de adquirir el complemento. Revisa la descripción de la Tienda cuidadosamente para que represente el complemento con precisión de forma que sea atractivo para los clientes. Puedes proporcionar descripciones de la Tienda personalizadas para diferentes idiomas.
 
 > [!TIP]
-> También puede [importar y exportar listas Store](import-and-export-store-listings.md) para su complemento si desea escribir la información de anuncio sin conexión en un archivo .csv, en lugar de proporcionar esta información directamente en el centro de partners. Esto puede ser especialmente útil al crear descripciones en varios idiomas. Sin embargo, siempre puede escribir la información directamente en [centro de partners](https://partner.microsoft.com/dashboard) en lugar de usar la característica de importación y exportación.
+> También puede [importar y exportar listas](import-and-export-store-listings.md) de la tienda para el complemento si quiere escribir la información de lista sin conexión en un archivo. csv, en lugar de proporcionar esta información directamente en el centro de Partners. Esto puede ser especialmente útil al crear descripciones en varios idiomas. Sin embargo, siempre puede escribir su información directamente en el [centro de Partners](https://partner.microsoft.com/dashboard) , en lugar de usar la característica de importación y exportación.
 
 
 ## <a name="store-listing-languages"></a>Idiomas de la descripción de la Tienda
 
-Antes de escribir la información de la descripción de la Tienda, debes especificar uno o más [idiomas](supported-languages.md). Debes completar la página **Descripción de la Tienda** para al menos un idioma. Se recomienda crear la aplicación de listados de Store para cada idioma admite.
+Antes de escribir la información de la descripción de la Tienda, debes especificar uno o más [idiomas](supported-languages.md). Debes completar la página **Descripción de la Tienda** para al menos un idioma. Se recomienda crear listas de tiendas para cada idioma admitido por la aplicación.
 
 En la sección **Descripción de la Tienda** del envío de tu complemento, haz clic en **Agregar/eliminar idiomas** y luego haz clic en **Administración de idiomas** en la página siguiente. Activa las casillas para los idiomas que deseas agregar y, después, haz clic en **Actualizar**. Los idiomas que has seleccionado se mostrarán en la sección **Idiomas de descripción de la Tienda** de la página.
 

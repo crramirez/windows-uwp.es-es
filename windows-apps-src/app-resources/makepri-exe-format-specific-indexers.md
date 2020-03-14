@@ -1,24 +1,24 @@
 ---
 Description: En este tema se describen los indizadores específicos de formato usados por la herramienta MakePri.exe para generar su índice de recursos.
-title: Indizadores específicos de formato de MakePri.exe
+title: Indexadores específicos del formato de MakePri.exe
 template: detail.hbs
 ms.date: 10/18/2017
 ms.topic: article
-keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
+keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: e07c0b2730da258126465fbeea917b32ef9d23e6
-ms.sourcegitcommit: 46890e7f3c1287648631c5e318795f377764dbd9
+ms.openlocfilehash: 6d30a0321de872dac11070c52dd0598b2276bcab
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320608"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79200963"
 ---
-# <a name="makepriexe-format-specific-indexers"></a>Indizadores específicos de formato de MakePri.exe
+# <a name="makepriexe-format-specific-indexers"></a>Indexadores específicos del formato de MakePri.exe
 
 Este tema describe los indizadores específicos de formato usados por la herramienta [MakePri.exe](compile-resources-manually-with-makepri.md) para generar su índice de recursos.
 
 > [!NOTE]
-> Se instala MakePri.exe al comprobar la **Windows SDK para aplicaciones de UWP administradas** opción al instalar el Kit de desarrollo de Software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las demás arquitecturas). Por ejemplo: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri. exe se instala cuando se activa la opción **Windows SDK para aplicaciones administradas de UWP** al instalar el kit de desarrollo de software de Windows. Se instala en la ruta de acceso `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (así como en las carpetas denominadas para las otras arquitecturas). Por ejemplo, `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 MakePri.exe se suele usar con los comandos `new`, `versioned` o `resourcepack`. Consulta [Opciones de línea de comandos de MakePri.exe](makepri-exe-command-options.md). En esos casos indexa los archivos de origen para generar un índice de recursos. MakePri.exe usa diversos indizadores individuales para leer distintos archivos de recursos de origen o contenedores de recursos. El indexador más sencillo es el indizador de carpeta, que indiza el contenido de una carpeta, como imágenes `.jpg` o `.png`.
 
@@ -26,44 +26,44 @@ Pueden identificarse los indexadores específicos del formato especificando elem
 
 Los contenedores de recursos detectados durante la indexación suelen obtener su contenido indizado en vez de agregarse al índice. Por ejemplo, los archivos `.resjson` que encuentra el indexador de carpeta se pueden indizar más con un indizador `.resjson`, en cuyo caso el propio archivo `.resjson` no aparece en el índice. **Nota** Un elemento `<indexer-config>` del indexador asociado a ese contenedor debe incluirse en el archivo de configuración para que esto ocurra.
 
-Por lo general, los calificadores encontrados en una entidad contenedora, como una carpeta o un archivo `.resw` se aplican a todos los recursos que contengan, como los archivos de la carpeta o las cadenas del archivo `.resw`.
+Por lo general, los calificadores encontrados en una entidad contenedora, como una carpeta o un archivo &mdash; se aplican a todos los recursos que contengan, como los archivos de la carpeta o las cadenas del archivo `.resw`.
 
 ## <a name="folder"></a>Carpeta
 
 El indizador de carpeta se identifica por un atributo `type` de CARPETA. Indiza el contenido de una carpeta y determina los calificadores de recursos de la carpeta y los nombres de archivo. Su elemento de configuración se ajusta al siguiente esquema.
 
 ```xml
-<xs:schema attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\
-    <xs:simpleType name=\"ExclusionTypeList\">\
-        <xs:restriction base=\"xs:string\">\
-            <xs:enumeration value=\"path\"/>\
-            <xs:enumeration value=\"extension\"/>\
-            <xs:enumeration value=\"name\"/>\
-            <xs:enumeration value=\"tree\"/>\
-        </xs:restriction>\
-    </xs:simpleType>\
-    <xs:complexType name=\"FolderExclusionType\">\
-        <xs:attribute name=\"type\" type=\"ExclusionTypeList\" use=\"required\"/>\
-        <xs:attribute name=\"value\" type=\"xs:string\" use=\"required\"/>\
-        <xs:attribute name=\"doNotTraverse\" type=\"xs:boolean\" use=\"required\"/>\
-        <xs:attribute name=\"doNotIndex\" type=\"xs:boolean\" use=\"required\"/>\
-    </xs:complexType>\
-    <xs:simpleType name=\"IndexerConfigFolderType\">\
-        <xs:restriction base=\"xs:string\">\
-            <xs:pattern value=\"((f|F)(o|O)(l|L)(d|D)(e|E)(r|R))\"/>\
-        </xs:restriction>\
-    </xs:simpleType>\
-    <xs:element name=\"indexer-config\">\
-        <xs:complexType>\
-            <xs:sequence>\
-                <xs:element name=\"exclude\" type=\"FolderExclusionType\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\
-            </xs:sequence>\
-            <xs:attribute name=\"type\" type=\"IndexerConfigFolderType\" use=\"required\"/>\
-            <xs:attribute name=\"foldernameAsQualifier\" type=\"xs:boolean\" use=\"required\"/>\
-            <xs:attribute name=\"filenameAsQualifier\" type=\"xs:boolean\" use=\"required\"/>\
-            <xs:attribute name=\"qualifierDelimiter\" type=\"xs:string\" use=\"required\"/>\
-        </xs:complexType>\
-    </xs:element>\
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="ExclusionTypeList">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="path"/>
+            <xs:enumeration value="extension"/>
+            <xs:enumeration value="name"/>
+            <xs:enumeration value="tree"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="FolderExclusionType">
+        <xs:attribute name="type" type="ExclusionTypeList" use="required"/>
+        <xs:attribute name="value" type="xs:string" use="required"/>
+        <xs:attribute name="doNotTraverse" type="xs:boolean" use="required"/>
+        <xs:attribute name="doNotIndex" type="xs:boolean" use="required"/>
+    </xs:complexType>
+    <xs:simpleType name="IndexerConfigFolderType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="((f|F)(o|O)(l|L)(d|D)(e|E)(r|R))"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="indexer-config">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="exclude" type="FolderExclusionType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="type" type="IndexerConfigFolderType" use="required"/>
+            <xs:attribute name="foldernameAsQualifier" type="xs:boolean" use="required"/>
+            <xs:attribute name="filenameAsQualifier" type="xs:boolean" use="required"/>
+            <xs:attribute name="qualifierDelimiter" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>
 ```
 
@@ -76,18 +76,18 @@ El indizador PRI se identifica por un atributo `type` de PRI. Indiza el contenid
 Todos los valores, calificadores y nombres de recursos contenidos en el archivo PRI se mantienen directamente en el nuevo archivo PRI. Sin embargo, el mapa de recursos de nivel superior no se mantiene en el PRI final. Los mapas de recursos se combinan.
 
 ```xml
-<xs:schema id=\"prifile\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" elementFormDefault=\"qualified\">\
-    <xs:simpleType name=\"IndexerConfigPriType\">\
-        <xs:restriction base=\"xs:string\">\
-            <xs:pattern value=\"((p|P)(r|R)(i|I))\"/>\
-        </xs:restriction>\
-    </xs:simpleType>\
-    <xs:element name=\"indexer-config\">\
-        <xs:complexType>\
-            <xs:attribute name=\"type\" type=\"IndexerConfigPriType\" use=\"required\"/>\
-        </xs:complexType>\
-    </xs:element>\
-</xs:schema>\
+<xs:schema id="prifile" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="IndexerConfigPriType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="((p|P)(r|R)(i|I))"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="indexer-config">
+        <xs:complexType>
+            <xs:attribute name="type" type="IndexerConfigPriType" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
 ```
 
 ## <a name="priinfo"></a>PriInfo
@@ -122,94 +122,94 @@ El siguiente es un ejemplo de configuración que incluye tipos de recurso String
 Para indizarse, un archivo de volcado debe terminar con la extensión `.pri.xml` y debe ajustarse al siguiente esquema.
 
 ```xml
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" >\
-  <xs:simpleType name="candidateType">\
-    <xs:restriction base="xs:string">\
-      <xs:pattern value="Path|String"/>\
-    </xs:restriction>\
-  </xs:simpleType>\
-  <xs:complexType name="scopeType">\
-    <xs:sequence>\
-      <xs:element name="ResourceMapSubtree" type="scopeType" minOccurs="0" maxOccurs="unbounded"/>\
-      <xs:element name="NamedResource" minOccurs="0" maxOccurs="unbounded">\
-        <xs:complexType>\
-          <xs:sequence>\
-            <xs:element name="Decision" minOccurs="0" maxOccurs="unbounded">\
-              <xs:complexType>\
-                <xs:sequence>\
-                  <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>\
-                </xs:sequence>\
-                <xs:anyAttribute processContents="skip" />\
-              </xs:complexType>\
-            </xs:element>\
-            <xs:element name="Candidate" minOccurs="0" maxOccurs="unbounded">\
-              <xs:complexType>\
-                <xs:sequence>\
-                  <xs:element name="QualifierSet" minOccurs="0" maxOccurs="unbounded">\
-                    <xs:complexType>\
-                      <xs:sequence>\
-                        <xs:element name="Qualifier" minOccurs="0" maxOccurs="unbounded">\
-                          <xs:complexType>\
-                            <xs:attribute name="name" type="xs:string" use="required" />\
-                            <xs:attribute name="value" type="xs:string" use="required" />\
-                            <xs:attribute name="priority" type="xs:integer" use="required" />\
-                            <xs:attribute name="scoreAsDefault" type="xs:decimal" use="required" />\
-                            <xs:attribute name="index" type="xs:integer" use="required" />\
-                          </xs:complexType>\
-                        </xs:element>\
-                      </xs:sequence>\
-                      <xs:anyAttribute processContents="skip" />\
-                    </xs:complexType>\
-                  </xs:element>\
-                  <xs:element name="Value" type="xs:string"  minOccurs="0" maxOccurs="unbounded"/>\
-                </xs:sequence>\
-                <xs:attribute name="type" type="candidateType" use="required" />\
-              </xs:complexType>\
-            </xs:element>\
-          </xs:sequence>\
-          <xs:attribute name="name" use="required" type="xs:string" />\
-          <xs:anyAttribute processContents="skip" />\
-        </xs:complexType>\
-      </xs:element>\
-    </xs:sequence>\
-    <xs:attribute name="name" use="required" type="xs:string" />\
-    <xs:anyAttribute processContents="skip" />\
-  </xs:complexType>\
-  <xs:element name="PriInfo">\
-    <xs:complexType>\
-      <xs:sequence>\
-        <xs:element name="PriHeader" >\
-          <xs:complexType>\
-            <xs:sequence>\
-              <xs:any minOccurs ="0" maxOccurs="unbounded" processContents="skip" />\
-            </xs:sequence>\
-            <xs:anyAttribute processContents="skip" />\
-          </xs:complexType>\
-        </xs:element>\
-        <xs:element name="QualifierInfo">\
-          <xs:complexType>\
-            <xs:sequence>\
-              <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip" />\
-            </xs:sequence>\
-          </xs:complexType>\
-        </xs:element>\
-        <xs:element name="ResourceMap">\
-          <xs:complexType>\
-            <xs:sequence>\
-              <xs:element name="VersionInfo">\
-                <xs:complexType>\
-                  <xs:anyAttribute processContents="skip" />\
-                </xs:complexType>\
-              </xs:element>\
-              <xs:element minOccurs="0" maxOccurs="unbounded" name="ResourceMapSubtree" type="scopeType" />\
-            </xs:sequence>\
-            <xs:attribute name="name" type="xs:string" use="required" />\
-            <xs:anyAttribute processContents="skip" />\
-          </xs:complexType>\
-        </xs:element>\
-      </xs:sequence>\
-    </xs:complexType>\
-  </xs:element>\
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" >
+  <xs:simpleType name="candidateType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="Path|String"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="scopeType">
+    <xs:sequence>
+      <xs:element name="ResourceMapSubtree" type="scopeType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="NamedResource" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Decision" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:anyAttribute processContents="skip" />
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Candidate" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="QualifierSet" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Qualifier" minOccurs="0" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:attribute name="name" type="xs:string" use="required" />
+                            <xs:attribute name="value" type="xs:string" use="required" />
+                            <xs:attribute name="priority" type="xs:integer" use="required" />
+                            <xs:attribute name="scoreAsDefault" type="xs:decimal" use="required" />
+                            <xs:attribute name="index" type="xs:integer" use="required" />
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:anyAttribute processContents="skip" />
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Value" type="xs:string"  minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="type" type="candidateType" use="required" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="name" use="required" type="xs:string" />
+          <xs:anyAttribute processContents="skip" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="name" use="required" type="xs:string" />
+    <xs:anyAttribute processContents="skip" />
+  </xs:complexType>
+  <xs:element name="PriInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PriHeader" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs ="0" maxOccurs="unbounded" processContents="skip" />
+            </xs:sequence>
+            <xs:anyAttribute processContents="skip" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="QualifierInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ResourceMap">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VersionInfo">
+                <xs:complexType>
+                  <xs:anyAttribute processContents="skip" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="ResourceMapSubtree" type="scopeType" />
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required" />
+            <xs:anyAttribute processContents="skip" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
 ```
 
@@ -267,19 +267,19 @@ Este es un ejemplo de un recurso de tipo Path válido con dos candidatos de un a
 El indizador ResFiles se identifica por un atributo `type` de RESFILES. Indiza el contenido de un archivo `.resfiles`. Su elemento de configuración se ajusta al siguiente esquema.
 
 ```xml
-<xs:schema id=\"resx\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" elementFormDefault=\"qualified\">\
-    <xs:simpleType name=\"IndexerConfigResFilesType\">\
-        <xs:restriction base=\"xs:string\">\
-            <xs:pattern value=\"((r|R)(e|E)(s|S)(f|F)(i|I)(l|L)(e|E)(s|S))\"/>\
-        </xs:restriction>\
-    </xs:simpleType>\
-    <xs:element name=\"indexer-config\">\
-        <xs:complexType>\
-            <xs:attribute name=\"type\" type=\"IndexerConfigResFilesType\" use=\"required\"/>\
-            <xs:attribute name=\"qualifierDelimiter\" type=\"xs:string\" use=\"required\"/>\
-        </xs:complexType>\
-    </xs:element>\
-</xs:schema>\
+<xs:schema id="resx" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="IndexerConfigResFilesType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="((r|R)(e|E)(s|S)(f|F)(i|I)(l|L)(e|E)(s|S))"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="indexer-config">
+        <xs:complexType>
+            <xs:attribute name="type" type="IndexerConfigResFilesType" use="required"/>
+            <xs:attribute name="qualifierDelimiter" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
 ```
 
 Un archivo `.resfiles` es un archivo de texto que contiene una sencilla lista de rutas de archivos. Un archivo `.resfiles` puede contener comentarios "//". A continuación te mostramos un ejemplo.
@@ -298,19 +298,19 @@ Images\logo.scale-180.png
 El indizador ResJSON se identifica por un atributo `type` de RESJSON. Indexa el contenido de un archivo `.resjson`, que es un archivo de recursos de cadena. Su elemento de configuración se ajusta al siguiente esquema.
 
 ```xml
-<xs:schema id=\"resjson\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" elementFormDefault=\"qualified\">\
-    <xs:simpleType name=\"IndexerConfigResJsonType\">\
-        <xs:restriction base=\"xs:string\">\
-            <xs:pattern value=\"((r|R)(e|E)(s|S)(j|J)(s|S)(o|O)(n|N))\"/>\
-        </xs:restriction>\
-    </xs:simpleType>\
-    <xs:element name=\"indexer-config\">\
-        <xs:complexType>\
-            <xs:attribute name=\"type\" type=\"IndexerConfigResJsonType\" use=\"required\"/>\
-            <xs:attribute name=\"initialPath\" type=\"xs:string\" use=\"optional\"/>\
-        </xs:complexType>\
-    </xs:element>\
-</xs:schema>\
+<xs:schema id="resjson" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="IndexerConfigResJsonType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="((r|R)(e|E)(s|S)(j|J)(s|S)(o|O)(n|N))"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="indexer-config">
+        <xs:complexType>
+            <xs:attribute name="type" type="IndexerConfigResJsonType" use="required"/>
+            <xs:attribute name="initialPath" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
 ```
 
 Un archivo `.resjson` contiene el texto JSON (consulta [Tipo de medios aplicación/json para notación de objetos JavaScript (JSON)](https://www.ietf.org/rfc/rfc4627.txt). El archivo debe contener un único objeto JSON con propiedades jerárquicas. Cada propiedad debe ser otro objeto JSON o un valor de cadena.
@@ -326,20 +326,20 @@ El atributo `initialPath` pone todos los recursos en esta ruta de acceso inicial
 El indizador ResW se identifica por un atributo `type` de RESW. Indexa el contenido de un archivo `.resw`, que es un archivo de recursos de cadena. Su elemento de configuración se ajusta al siguiente esquema.
 
 ```xml
-<xs:schema id=\"resw\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" elementFormDefault=\"qualified\">\
-    <xs:simpleType name=\"IndexerConfigResxType\">\
-        <xs:restriction base=\"xs:string\">\
-            <xs:pattern value=\"((r|R)(e|E)(s|S)(w|W))\"/>\
-        </xs:restriction>\
-    </xs:simpleType>\
-    <xs:element name=\"indexer-config\">\
-        <xs:complexType>\
-            <xs:attribute name=\"type\" type=\"IndexerConfigResxType\" use=\"required\"/>\
-            <xs:attribute name=\"convertDotsToSlashes\" type=\"xs:boolean\" use=\"required\"/>\
-            <xs:attribute name=\"initialPath\" type=\"xs:string\" use=\"optional\"/>\
-        </xs:complexType>\
-    </xs:element>\
-</xs:schema>\
+<xs:schema id="resw" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="IndexerConfigResxType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="((r|R)(e|E)(s|S)(w|W))"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="indexer-config">
+        <xs:complexType>
+            <xs:attribute name="type" type="IndexerConfigResxType" use="required"/>
+            <xs:attribute name="convertDotsToSlashes" type="xs:boolean" use="required"/>
+            <xs:attribute name="initialPath" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
 ```
 
 Un archivo `.resw` es un archivo XML que se ajusta al siguiente esquema.
@@ -400,6 +400,6 @@ El atributo `initialPath` pone todos los recursos en esta ruta de acceso inicial
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Compilar recursos manualmente con MakePri.exe](compile-resources-manually-with-makepri.md)
-* [Opciones de línea de comandos MakePri.exe](makepri-exe-command-options.md)
-* [Archivo de configuración MakePri.exe](makepri-exe-configuration.md)
-* [Tipo de medio de la aplicación/json para JavaScript Object Notation (JSON)](https://www.ietf.org/rfc/rfc4627.txt)
+* [Opciones de la línea de comandos de MakePri. exe](makepri-exe-command-options.md)
+* [Archivo de configuración MakePri. exe](makepri-exe-configuration.md)
+* [El tipo de medio de aplicación/JSON para notación de objetos JavaScript (JSON)](https://www.ietf.org/rfc/rfc4627.txt)

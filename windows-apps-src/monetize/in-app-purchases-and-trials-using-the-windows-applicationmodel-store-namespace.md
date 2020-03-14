@@ -7,11 +7,11 @@ ms.topic: article
 keywords: uwp, compras desde la aplicación, in-app purchases, IAP, complementos, add-ons, pruebas, trials, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 03bd2740022864008e87b448682c1025c46d2f2d
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852790"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209681"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Pruebas y compras desde la aplicación con el espacio de nombres Windows.ApplicationModel.Store
 
@@ -355,7 +355,7 @@ Esta sección describe los elementos y atributos del archivo WindowsStoreProxy.x
 
 El elemento raíz de este archivo es el elemento **CurrentApp**, que representa la aplicación actual. Este elemento contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Obligatorio  |  Cantidad  |  Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  |  Descripción   |
 |-------------|------------|--------|--------|
 |  [ListingInformation](#listinginformation)  |    Sí        |  1  |  Contiene datos de la descripción de la aplicación.            |
 |  [LicenseInformation](#licenseinformation)  |     Sí       |   1    |   Describe las licencias disponibles para esta aplicación y sus complementos duraderos.     |
@@ -370,7 +370,7 @@ Este elemento contiene datos de la descripción de la aplicación. **ListingInfo
 
 **ListingInformation** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Obligatorio  |  Cantidad  |  Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  |  Descripción   |
 |-------------|------------|--------|--------|
 |  [Aplicaciones](#app-child-of-listinginformation)  |    Sí   |  1   |    Proporciona datos sobre la aplicación.         |
 |  [Producto](#product-child-of-listinginformation)  |    No  |  0 o más   |      Describe un complemento de la aplicación.     |     |
@@ -383,7 +383,7 @@ Este elemento describe la licencia de la aplicación. **App** es un elemento sec
 
 **App** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Obligatorio  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  **AppId**  |    Sí   |  1   |   El GUID que identifica la aplicación en la Tienda. Puede ser cualquier GUID para pruebas.        |
 |  **LinkUri**  |    Sí  |  1   |    El URI de la página de descripción en la Tienda. Puede ser cualquier identificador URI válido para pruebas.         |
@@ -399,7 +399,7 @@ Este elemento, proporciona información acerca de la aplicación para un país o
 
 **MarketData** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Obligatorio  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  **Nombre**  |    Sí   |  1   |   El nombre de la aplicación en este país o región.        |
 |  **Descripción**  |    Sí  |  1   |      La descripción de la aplicación para este país o región.       |
@@ -409,7 +409,7 @@ Este elemento, proporciona información acerca de la aplicación para un país o
 
 **MarketData** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **XML: lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
@@ -421,7 +421,7 @@ Este elemento describe un complemento de la aplicación. **Product** es un eleme
 
 **Product** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **IdProducto**  |    Sí        |    Contiene la cadena usada por la aplicación para identificar el complemento.           |
 |  **LicenseDuration**  |    No        |    Indica el número de días durante los cuales la licencia será válida tras adquirir el artículo. La fecha de caducidad de la nueva licencia creada por la compra de un producto es la fecha de compra más la duración de la licencia. Este atributo se usa solo si el atributo **ProductType ofrece** atributo es **Durable**; este atributo se omite en el caso de complementos consumibles.           |
@@ -435,7 +435,7 @@ Este elemento, proporciona información acerca del complemento para un país o u
 
 **MarketData** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Obligatorio  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  **Nombre**  |    Sí   |  1   |   El nombre del complemento en este país o región.        |
 |  **Tarifas**  |    Sí  |  1   |     El precio del complemento en este país o región.        |
@@ -448,7 +448,7 @@ Este elemento, proporciona información acerca del complemento para un país o u
 
 **MarketData** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **XML: lang**  |    Sí        |     Especifica el país o región al que se aplica la información de datos del mercado.          |  |
 
@@ -460,7 +460,7 @@ Este elemento describe las licencias disponibles para esta aplicación y sus pro
 
 **LicenseInformation** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Obligatorio  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  [Aplicaciones](#app-child-of-licenseinformation)  |    Sí   |  1   |    Describe la licencia de la aplicación.         |
 |  [Producto](#product-child-of-licenseinformation)  |    No  |  0 o más   |      Describe el estado de la licencia de un complemento duradero en la aplicación.         |   |
@@ -469,10 +469,10 @@ La tabla siguiente muestra cómo simular algunas condiciones comunes mediante la
 
 |  Condición para simular  |  IsActive  |  IsTrial  | ExpirationDate   |
 |-------------|------------|--------|--------|
-|  Licencia completa  |    true   |  false  |    Ausente. En realidad, puede estar presente y especificar una fecha futura, pero te sugerimos que omitas el elemento en el archivo XML. Si está presente y especifica una fecha en el pasado, **IsActive** se omitirá y se supondrá que es false.          |
+|  Licencia completa  |    true   |  falso  |    Ausente. En realidad, puede estar presente y especificar una fecha futura, pero te sugerimos que omitas el elemento en el archivo XML. Si está presente y especifica una fecha en el pasado, **IsActive** se omitirá y se supondrá que es false.          |
 |  En período de prueba  |    true  |  true   |      &lt;una fecha y una hora futuras&gt; Este elemento debe estar presente porque **IsTrial** es true. Puedes visitar un sitio web que muestre la hora universal coordinada (UTC) actual para saber cuánto en el futuro establecer esta opción para obtener el período de prueba restante que desees.         |
-|  Período de prueba expirado  |    false  |  true   |      &lt;una fecha y una hora pasadas&gt; Este elemento debe estar presente porque **IsTrial** es true. Puedes visitar un sitio web que muestre la hora universal coordinada (UTC) actual para saber cuándo es "el pasado" en UTC.         |
-|  No válido  |    false  | false       |     &lt;cualquier valor o se omite&gt;          |  |
+|  Período de prueba expirado  |    falso  |  true   |      &lt;una fecha y una hora pasadas&gt; Este elemento debe estar presente porque **IsTrial** es true. Puedes visitar un sitio web que muestre la hora universal coordinada (UTC) actual para saber cuándo es "el pasado" en UTC.         |
+|  No válido  |    falso  | falso       |     &lt;cualquier valor o se omite&gt;          |  |
 
 <span id="app-child-of-licenseinformation"/>
 
@@ -482,7 +482,7 @@ Este elemento describe la licencia de la aplicación. **App** es un elemento sec
 
 **App** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Obligatorio  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Sí   |  1   |    Describe el estado actual de la licencia de esta aplicación. El valor **true** indica que la licencia es válida; **false** indica que la licencia no es válida. Normalmente, este valor es **true** tanto si la aplicación tiene un modo de prueba como si no.  Establece este valor en **false** para probar cómo se comporta la aplicación cuando tiene una licencia no válida.           |
 |  **IsTrial**  |    Sí  |  1   |      Describe el estado actual del período de prueba de esta aplicación. El valor **true** indica que la aplicación se está usando durante el período de prueba; **false** indica que la aplicación no está en el período de prueba, bien porque se ha adquirido la aplicación o bien porque ha expirado dicho período de prueba.         |
@@ -496,14 +496,14 @@ Este elemento describe el estado de la licencia de un complemento duradero en la
 
 **Product** contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Obligatorio  |  Cantidad  | Descripción   |
+|  Elemento  |  Requerido  |  Cantidad  | Descripción   |
 |-------------|------------|--------|--------|
 |  **IsActive**  |    Sí   |  1     |    Describe el estado actual de la licencia de este complemento. El valor **true** indica que el complemento se puede usar; por su parte, **false** indica que el complemento no se puede usar o no se ha adquirido.           |
 |  **ExpirationDate**  |    No   |  0 o 1     |     La fecha en la que caduca el complemento, en hora universal coordinada (UTC). La fecha debe expresarse como: aaaa-mm-ddThh:mm:ss.ssZ. Por ejemplo, las 05:00 del 19 de enero de 2015 se especificaría como 2015-01-19T05:00:00.00Z. Si este elemento está presente, el complemento tiene una fecha de caducidad. Si no está presente, el complemento no caduca.  |  
 
 **Product** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **IdProducto**  |    Sí        |   Contiene la cadena usada por la aplicación para identificar el complemento.            |
 |  **OfferId**  |     No       |   Contiene la cadena que la aplicación usa para identificar la categoría a la que pertenece el complemento. Esto proporciona compatibilidad para catálogos de elementos de gran tamaño, como se describe en [Administrar un catálogo extenso de productos desde la aplicación](manage-a-large-catalog-of-in-app-products.md).           |
@@ -516,7 +516,7 @@ Este elemento describe cómo las llamadas a diversos métodos [CurrentAppSimulat
 
 **Simulation** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **SimulationMode**  |    No        |      Los valores pueden ser **Interactive** o **Automatic**. Cuando este atributo se establece en **Automatic**, los métodos devolverán automáticamente los códigos de error HRESULT especificados. Esto puede usarse cuando se ejecutan casos de prueba automatizados.       |
 
@@ -528,7 +528,7 @@ Este elemento describe el código de error predeterminado devuelto por un métod
 
 **DefaultResponse** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **MethodName**  |    Sí        |   Asigna este atributo a uno de los valores de enumeración que se muestran para el tipo **StoreMethodName** en el [esquema](#schema). Cada uno de estos valores de enumeración representa un método **CurrentAppSimulator** para el que deseas simular un valor devuelto de código de error en la aplicación durante las pruebas. Por ejemplo, el valor **RequestAppPurchaseAsync_GetResult** indica que deseas simular el valor devuelto de código de error del método [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator.requestapppurchaseasync).            |
 |  **Valor**  |     Sí       |   Asigna este atributo a uno de los valores de enumeración que se muestran para el tipo **ResponseCodes** en el [esquema](#schema). Cada uno de estos valores de enumeración representa el código de error que deseas recuperar para el método asignado al atributo **MethodName** para este elemento **DefaultResponse**.           |
@@ -547,7 +547,7 @@ Este elemento describe un complemento consumible. **Product** es un elemento sec
 
 **Product** tiene los atributos siguientes.
 
-|  Atributo  |  Obligatorio  |  Descripción   |
+|  Atributo  |  Requerido  |  Descripción   |
 |-------------|------------|----------------|
 |  **IdProducto**  |    Sí        |   Contiene la cadena usada por la aplicación para identificar el complemento consumible.            |
 |  **TransactionId**  |     Sí       |   Contiene un GUID (en forma de cadena) usado por la aplicación para realizar un seguimiento de la transacción de compra de un consumible por el proceso de suministro. Consulta [Habilita compras de productos consumibles desde la aplicación](enable-consumable-in-app-product-purchases.md)            |

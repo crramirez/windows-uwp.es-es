@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9322ba847aeb7eb64c2654e1105582478a0d3b47
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853221"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210211"
 ---
 # <a name="layout-panels"></a>Paneles de diseño
 
@@ -143,7 +143,7 @@ El resultado tiene el siguiente aspecto.
 
 En un objeto StackPanel, si el tamaño de un elemento secundario no se establece explícitamente, se amplía para rellenar el ancho disponible (o el alto si el objeto Orientation es **Horizontal**). En este ejemplo, el ancho de los rectángulos no está establecido. Los rectángulos se expanden para ocupar todo el ancho del StackPanel.
 
-## <a name="grid"></a>Grid
+## <a name="grid"></a>Cuadrícula
 
 El panel [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) es compatible con diseños fluidos y te permite organizar los controles en diseños de varias filas y varias columnas. Puedes especificar las filas y columnas de un panel Grid mediante las propiedades [**RowDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.rowdefinitions) y [**ColumnDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.columndefinitions).
 
@@ -173,7 +173,7 @@ En este ejemplo de código XAML se muestra cómo crear una cuadrícula con dos f
 
 El resultado tiene el siguiente aspecto.
 
-![Grid](images/layout-panel-grid.png)
+![Cuadrícula](images/layout-panel-grid.png)
 
 En este ejemplo, la variación del tamaño funciona del siguiente modo: 
 - La segunda fila tiene un alto explícito de 44 píxeles efectivos. De manera predeterminada, el alto de la primera fila rellena el espacio restante.
@@ -243,7 +243,7 @@ El resultado tiene el siguiente aspecto.
 
 En este ejemplo, el número máximo de filas de cada columna es 3. En la primera columna se incluyen solo dos elementos (los rectángulos rojos y azules) porque el rectángulo azul se extiende entre dos filas. El rectángulo verde luego se ajusta a la parte superior de la siguiente columna.
 
-## <a name="canvas"></a>Canvas
+## <a name="canvas"></a>Lienzo
 
 El panel [**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) posiciona sus elementos secundarios con puntos de coordenadas fijos y no es compatible con diseños fluidos. Para especificar los puntos en los elementos secundarios se establecen las propiedades adjuntas [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) y [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) de cada elemento. El objeto Canvas primario lee estas propiedades adjuntas en sus elementos secundarios y usa los valores durante el pase de diseño [Arrange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange).
 
@@ -264,7 +264,7 @@ Este es un ejemplo de un Canvas en el código XAML.
 
 El resultado tiene el siguiente aspecto.
 
-![Canvas](images/layout-panel-canvas.png)
+![Lienzo](images/layout-panel-canvas.png)
 
 Usa el panel Canvas con moderación. Aunque resulta conveniente poder controlar con precisión la posición de los elementos de la interfaz de usuario en algunos escenarios, un panel de diseño con una posición fija puede hacer que el área de la interfaz de usuario sea menos adaptativa a los cambios generales de tamaño de la ventana de la aplicación. El cambio de tamaño de la ventana de la aplicación podría ser el resultado de un cambio de orientación del dispositivo, de la división de las ventanas de la aplicación o de un cambio de monitor, entre otros escenarios.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, tráiler, vídeo, captura de pantalla, imagen, icono, descripción de Store, imágenes de la descripción de Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 48a8566c80516588939dc0ef071c3da4b9232d64
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684610"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210901"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -23,9 +23,9 @@ Durante el [proceso de envío de la aplicación](app-submissions.md), debes prop
 
 El almacén también puede usar el icono de la aplicación y otras imágenes que incluya en el paquete de la aplicación. Ejecuta el [Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md) para determinar si te falta alguna de las imágenes necesarias antes de enviar tu aplicación. Para obtener instrucciones y recomendaciones sobre estas imágenes, consulte [iconos y logotipos](../design/style/app-icons-and-logos.md)de la aplicación.
 
-## <a name="screenshots"></a>Capturas de pantalla
+## <a name="screenshots"></a>Las capturas de pantalla
 
-Las capturas de pantalla son imágenes de tu aplicación que se muestran a los clientes en la descripción de Store de tu aplicación.
+Las capturas de pantalla son imágenes de tu aplicación que se muestran a los clientes en la descripción de la Tienda de la aplicación.
 
 Tienes la opción de proporcionar capturas de pantalla para las diferentes familias de dispositivos que admita tu aplicación, y que las capturas de pantallas adecuadas aparezcan cuando un cliente vea la descripción de Store de la aplicación para ese tipo de dispositivo. 
 
@@ -189,7 +189,7 @@ Esta imagen es *obligatoria* para la visualización correcta si tu descripción 
 Recomendaciones a tener en cuenta al diseñar esta imagen:
 
 - La imagen debe ser un archivo .png de 1920 x 1080 píxeles o 3840 x 2160 píxeles.
-- Selecciona una imagen dinámica relacionada con la aplicación, para propiciar el reconocimiento y la diferenciación. Evita fotografías almacenadas o elementos visuales genéricos.
+- Selecciona una imagen dinámica relacionada con la aplicación, para propiciar el reconocimiento y la diferenciación. Evita fotografías de catálogo o elementos visuales genéricos.
 - No incluyas texto en la imagen.
 - Evita colocar elementos visuales clave en el tercio inferior de la imagen (ya que en algunos diseños podemos aplicar un degradado sobre esa parte).
 - Sitúa los detalles más importantes en el centro de la imagen (ya que en algunos diseños puede que la recortemos).
@@ -197,7 +197,7 @@ Recomendaciones a tener en cuenta al diseñar esta imagen:
 - Evita mostrar la interfaz de usuario de la aplicación y no uses imágenes específicas de dispositivo.
 - Evita temas políticos y nacionales, banderas o símbolos religiosos.
 - No incluyas imágenes de gestos desconsiderados, desnudez, apuestas, monedas, drogas, tabaco o alcohol.
-- No uses armas apuntando hacia el usuario ni violencia o sangre excesiva.
+- No uses armas apuntando hacia el usuario o violencia excesiva y sangre.
 
 Mientras que proporcionar esta imagen nos permite tener en cuenta a tu aplicación para oportunidades promocionales seleccionadas, eso no garantiza que tu aplicación se seleccione. Consulta [Facilitar la promoción de la aplicación](make-your-app-easier-to-promote.md) para obtener más información.
 

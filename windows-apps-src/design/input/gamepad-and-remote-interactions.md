@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 440f758e5db8bd77d3f26290eb59d7684e5f87a3
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853072"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210031"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interacciones con controlador para juegos y control remoto
 
@@ -26,7 +26,7 @@ Cree experiencias de interacción en las aplicaciones Plataforma universal de Wi
 
 Consulte [diseño de Xbox y TV](../devices/designing-for-tv.md) para obtener instrucciones generales de diseño sobre aplicaciones UWP en la experiencia de *10 pies* .
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
 En este tema, se explica lo que debe tener en cuenta en el diseño de interacción (o lo que no es necesario, si la plataforma lo hace después), y se proporcionan instrucciones, recomendaciones y sugerencias para la creación de aplicaciones para UWP que resulten divertidas de usar independientemente de dispositivo, tipo de entrada o capacidades y preferencias del usuario.
 
@@ -162,7 +162,7 @@ La siguiente tabla enumera la compatibilidad con aceleradores integrada en la UW
 | Acercar/alejar        | Ctrl +/- | Desencadenadores izquierdo/derecho | Ninguno | `ScrollViewer`, vistas que permiten acercar y alejar |
 | Abrir o cerrar el panel de navegación | Ninguno | Ver | Ninguno | Paneles de navegación |
 | Buscar | Ninguno | Botón Y | Ninguno | Combinación de teclas para la función de búsqueda principal de la aplicación |
-| [Abrir el menú contextual](#commandbar-and-contextflyout) | Haga clic con el botón secundario en | Botón de menú | [ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | Menús contextuales |
+| [Abrir el menú contextual](#commandbar-and-contextflyout) | Haz clic con el botón secundario | Botón de menú | [ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | Menús contextuales |
 
 ## <a name="xy-focus-navigation-and-interaction"></a>Interacción y navegación con foco XY
 
@@ -347,7 +347,7 @@ En estos casos, puedes activar el [modo de mouse](#mouse-mode) para permitir que
 
 ![Elemento de mapa de la interfaz de usuario en modo de mouse](images/designing-for-tv/map-mouse-mode.png)
 
-## <a name="mouse-mode"></a>Modo del mouse
+## <a name="mouse-mode"></a>Modo de mouse
 
 Como se describe en [Interacción y navegación con foco XY](#xy-focus-navigation-and-interaction), en Xbox One el foco se mueve mediante un sistema de navegación XY, el cual permite al usuario cambiar el foco desde un control a otro desplazándose hacia arriba, abajo, izquierda y derecha.
 Sin embargo, algunos controles, como [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) y [MapControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl), requieren una interacción de mouse en la que los usuarios pueden mover libremente el puntero dentro de los límites del control.
@@ -510,7 +510,7 @@ Otro enfoque para resolver este problema es solicitar participación en `Slider`
 
 Cuando `Slider` requiera la participación del foco, el usuario puede llegar al botón de la derecha simplemente presionando dos veces el pad-D/palanca izquierda hacia la derecha. Esta solución es excelente porque no precisa de ajustes en la interfaz de usuario y produce el comportamiento esperado.
 
-### <a name="items-controls"></a>Controles de elementos
+### <a name="items-controls"></a>Controles de los elementos
 
 Aparte del control [Slider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider), hay otros controles a los cuales conviene solicitar participación, como por ejemplo:
 
@@ -549,12 +549,12 @@ Algunos controles causan la captura del foco con frecuencia suficiente como para
 | Control               | Valor predeterminado de participación del foco  |
 |-----------------------|---------------------------|
 | CalendarDatePicker    | Activado                        |
-| FlipView              | Desactivar                       |
-| GridView              | Desactivar                       |
-| ListBox               | Desactivar                       |
-| ListView              | Desactivar                       |
-| ScrollViewer          | Desactivar                       |
-| SemanticZoom          | Desactivar                       |
+| FlipView              | Desactivado                       |
+| GridView              | Desactivado                       |
+| ListBox               | Desactivado                       |
+| ListView              | Desactivado                       |
+| ScrollViewer          | Desactivado                       |
+| SemanticZoom          | Desactivado                       |
 | Control deslizante                | Activado                        |
 
 Todos los demás controles de la UWP no darán como resultado ningún cambio visual o del comportamiento cuando `IsFocusEngagementEnabled="True"`.

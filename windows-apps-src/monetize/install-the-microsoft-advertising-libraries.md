@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, anuncios, publicidad, instalar, SDK, biblioteca de publicidad
 ms.localizationpriority: medium
 ms.openlocfilehash: 109ddbd3551dbd4304b86e56ace40f39e1b71211
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853112"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209641"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instala el SDK de Microsoft Advertising
 
@@ -83,7 +83,7 @@ Para instalar el SDK de Microsoft Advertising en un proyecto de UWP específico 
 
 Después de instalar el SDK de Microsoft Advertising, sigue estas instrucciones para hacer referencia al SDK en tu proyecto para usar las API de publicidad.
 
-1. Abra el proyecto en Visual Studio.
+1. Abre el proyecto en Visual Studio.
     > [!NOTE]
     > Si el destino del proyecto es **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica por arquitectura (por ejemplo, **x86**). Si el destino del proyecto es **Cualquier CPU**, no podrás agregar una referencia al SDK de Microsoft Advertising correctamente a través de los siguientes pasos. Para obtener más información, consulta [Errores de referencia derivados de orientar el proyecto a Cualquier CPU](known-issues-for-the-advertising-libraries.md#reference_errors).
 

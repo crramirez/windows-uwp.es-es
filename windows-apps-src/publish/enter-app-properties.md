@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, configuración de juegos, modo de presentación, requisitos del sistema, requisitos de hardware, hardware mínimo, hardware recomendado, directiva de privacidad, información de contacto de soporte técnico, sitio web de aplicaciones, información de soporte técnico
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bc1283560334d2eac97fd358feabfca0f411014
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320041"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210761"
 ---
 # <a name="enter-app-properties"></a>Especificar las propiedades de la aplicación
 
@@ -58,7 +58,7 @@ Introduce la dirección URL de la página web o una dirección de correo electr�
 
 ## <a name="game-settings"></a>Configuración del juego
 
-Esta sección solo aparecerán si seleccionaste **Juegos** como la categoría de tu producto. Aquí puedes especificar qué características son compatibles con el juego. La información que se proporciona en esta sección se mostrará en Store del producto en la lista.
+Esta sección solo aparecerán si seleccionaste **Juegos** como la categoría de tu producto. Aquí puedes especificar qué características son compatibles con el juego. La información que proporcione en esta sección se mostrará en la lista de la tienda del producto.
 
 Si tu juego es compatible con cualquiera de las opciones multijugador, asegúrate de indicar el número mínimo y máximo de jugadores para una sesión. No se pueden especificar más de 1000 jugadores como mínimo o como máximo.
 
@@ -92,13 +92,13 @@ Si haces selecciones para **Requisitos mínimos de hardware**, esos elementos se
 
 El comportamiento para los clientes dependerá de los requisitos específicos y la versión del cliente de Windows:
 
-- **Para los clientes de Windows 10, versión 1607 o posterior:**
+- **Para clientes de Windows 10, versión 1607 o posterior:**
      - Todos los requisitos mínimos y recomendados se mostrará en la descripción de la Tienda.
      - La Tienda buscará todos los requisitos mínimos y mostrará una advertencia a los clientes que usen un dispositivo que no cumpla los requisitos.
-- **Para los clientes de versiones anteriores de Windows 10:**
+- **Para clientes con versiones anteriores de Windows 10:**
      - Para la mayoría de los clientes, todos los requisitos de hardware mínimos y recomendados se mostrarán en la descripción de la Tienda (aunque los clientes que visualicen una versión anterior de cliente de la Tienda solo verán los requisitos mínimos de hardware).
      - La Tienda intentará comprobar los elementos que designes como **Requisitos mínimos de hardware**, con la excepción de **Memoria**, **DirectX**, **Memoria de vídeo**, **Gráficos** y **Procesador**. Estos no se comprobarán y los clientes no verán ninguna advertencia en los dispositivos que no cumplan estos requisitos. 
-- **Para los clientes de Windows 8.x y versiones anteriores o Windows Phone 8.x y versiones anteriores:**
+- **Para clientes de Windows 8. x y versiones anteriores o Windows Phone 8. x y versiones anteriores:**
      - Si activas la casilla **Requisitos mínimos de hardware** para **Pantalla táctil**, este requisito se mostrará en la descripción de la Tienda de la aplicación y los clientes con dispositivos sin pantalla táctil verán una advertencia si intentan descargar la aplicación. No se comprobarán otros requisitos ni se mostrarán en la descripción de la Tienda.
 
 También recomendamos agregar a la aplicación comprobaciones en tiempo de ejecución para el hardware especificado, dado que la Tienda no siempre puede detectar si al dispositivo de un cliente le faltan las características seleccionadas. De todos modos, el cliente podrá descargar la aplicación, aunque se le muestre una advertencia. Si quieres evitar completamente que tu aplicación para UWP se descargue en un dispositivo que no cumpla con los requisitos mínimos de memoria o nivel de DirectX, puedes designar los requisitos mínimos en un [archivo XML de StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/storemanifestschema2015/schema-root).

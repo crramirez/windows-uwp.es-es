@@ -12,11 +12,11 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.openlocfilehash: 449f0c81bdd54d99ef0977ca1c9b6ba10ba5eae7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258359"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210111"
 ---
 # <a name="keyboard-interactions"></a>Interacciones de teclado
 

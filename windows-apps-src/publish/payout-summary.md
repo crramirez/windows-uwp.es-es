@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, resumen de pago, extracto, pagos, ganancias, pagos, pago, beneficios
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8727a48cd68b304d515fe34082b4c4f632b4b
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853462"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210531"
 ---
 # <a name="payout-reports"></a>Informes de pago
 
@@ -70,12 +70,12 @@ Para exportar cualquiera de los datos de la transacción en esta página, selecc
 | Próximo                 | El pedido de pago generó revisiones internas pendientes antes de que se procese el pago.                                                               | No                                                         |
 | Factura de impuestos pendiente      | La factura de impuestos está incompleta o no es válida.                                                                                                  | Debe actualizar la factura de impuestos antes de que se le pague |
 | Rechazado durante la revisión   | Se rechazó el pago durante la revisión.                                                                                                     | Póngase en contacto [con el soporte técnico de Microsoft](https://developer.microsoft.com/windows/support) para obtener detalles                      |
-| No superadas                   | No se pudo realizar el pago debido a un error del sistema de Microsoft.                                                                                         | Póngase en contacto [con el soporte técnico de Microsoft](https://developer.microsoft.com/windows/support) para obtener detalles                      |
+| Failed                   | No se pudo realizar el pago debido a un error del sistema de Microsoft.                                                                                         | Póngase en contacto [con el soporte técnico de Microsoft](https://developer.microsoft.com/windows/support) para obtener detalles                      |
 | En curso              | El pago está en curso.                                                                                                                 | No                                                         |
 | Pago incorrecto        | La regresión del pago está en curso.                                                                                                       | No                                                         |
 | Sent                     | Se ha enviado el pago al Banco.                                                                                                     | No                                                         |
 | Reprocesamiento             | El pago encontró un error del sistema de Microsoft y se está reprocesando.                                                                  | No                                                         |
-| Invertido                 | El banco invirtió el pago y se enviará de nuevo en el siguiente ciclo de pago.                                                     | No                                                         |
+| Invertida                 | El banco invirtió el pago y se enviará de nuevo en el siguiente ciclo de pago.                                                     | No                                                         |
 | Factura de impuestos rechazada     | La factura de impuestos se rechazó durante la revisión. Todos los pagos pendientes estarán en espera hasta que se complete la revisión de la factura de impuestos.                 | Póngase en contacto [con el soporte técnico de Microsoft](https://developer.microsoft.com/windows/support) para obtener detalles                      |
 | Factura de impuestos en revisión | Se está revisando la factura de impuestos. El pago se publicará una vez que se haya aprobado la factura de impuestos.                                   | No                                                         |
 | Rechazado                 | El Banco rechazó el pago.                                                                                                      | Póngase en contacto con su banco para obtener más información.                             |
@@ -208,11 +208,11 @@ El historial de transacciones desde antes del 1 2019 de julio se trata por separ
 | Nombre del campo              | Descripción                                                                                                                                                             |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Fuente de ingresos          | La fuente de tus ingresos, que se basa en el lugar en el que se ha producido la transacción (por ejemplo, Microsoft Store, Windows Phone Store, Windows Store 8, publicidad, etc.)                  |
-| Order ID                | Un identificador de pedido exclusivo. Este id. permite identificar las transacciones de compra con sus respectivas transacciones que no son de compra (como las devoluciones, la anulaciones, etc.). Ambas tendrá el mismo id. de pedido. Además, en el caso de un cargo dividido en el que se hayan usado varios métodos de pago para una sola compra, te permitirá vincular las transacciones de compra. |
-| Transaction ID          | Identificador único de la transacción.                                                                                                                                          |
+| Id. de pedido                | Un identificador de pedido exclusivo. Este id. permite identificar las transacciones de compra con sus respectivas transacciones que no son de compra (como las devoluciones, la anulaciones, etc.). Ambas tendrá el mismo id. de pedido. Además, en el caso de un cargo dividido en el que se hayan usado varios métodos de pago para una sola compra, te permitirá vincular las transacciones de compra. |
+| Id. de transacción          | Identificador único de la transacción.                                                                                                                                          |
 | Fecha y hora de transacción   | Fecha y hora en que se realizó la transacción (hora UTC).                                                                                                                       |
 | Id. de producto principal       | Identificador único del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el identificador del producto principal es igual al identificador del producto.                                |
-| Product ID              | Identificador único del producto.                                                                                                                                              |
+| Id. del producto              | Identificador único del producto.                                                                                                                                              |
 | Nombre del producto principal     | Nombre del producto principal. Ten en cuenta que, si no hay un producto principal para la transacción, el nombre del producto principal es igual al nombre del producto.                                  |
 | Nombre del producto            | Nombre del producto.                                                                                                                                                    |
 | Tipo de producto            | Tipo de producto (por ejemplo aplicación, complemento, juego, etc.)                                                                                                                       |

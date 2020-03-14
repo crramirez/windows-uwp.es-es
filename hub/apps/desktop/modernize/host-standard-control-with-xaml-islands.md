@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: d6e8704d61589731f09de7c16b0eae987d593968
-ms.sourcegitcommit: 3ceba13cb0f991f751e5a95d0f82e27631500338
+ms.openlocfilehash: 4bc474c3414969f27468a8daf262df0ae6e3b57e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600800"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209791"
 ---
 # <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar un control estándar de UWP en una aplicación WPF con islas XAML
 
@@ -31,12 +31,10 @@ Para hospedar un control de UWP en una aplicación de WPF (o Windows Forms), nec
 
 * **El proyecto y el código fuente de la aplicación**. El uso del control [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) para hospedar controles UWP de primera parte estándar se admite en las aplicaciones que tienen como destino el .NET Framework o .net Core 3.
 
-* **Un proyecto de aplicación para UWP que define una clase de aplicación raíz que se deriva de XamlApplication**. El proyecto de WPF o Windows Forms debe tener acceso a una instancia de la clase [Microsoft. Toolkit. Win32. UI. XamlHost. XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) proporcionada por el kit de herramientas de la comunidad de Windows. Este objeto actúa como proveedor de metadatos raíz para cargar los metadatos de los tipos XAML de UWP personalizados en los ensamblados en el directorio actual de la aplicación.
-
-    La manera recomendada de hacerlo es agregar un proyecto **aplicación vacía (Windows universal)** a la misma solución que el proyecto de WPF o Windows Forms, revisar la clase `App` predeterminada en este proyecto para derivar de `XamlApplication`y, a continuación, crear una instancia de este objeto en el código de punto de entrada para la aplicación.
+* **Un proyecto de aplicación para UWP que define una clase de aplicación raíz que se deriva de XamlApplication**. El proyecto de WPF o Windows Forms debe tener acceso a una instancia de la clase [Microsoft. Toolkit. Win32. UI. XamlHost. XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) proporcionada por el kit de herramientas de la comunidad de Windows. La manera recomendada de hacerlo es definir este objeto en un proyecto de aplicación para UWP independiente que forme parte de la solución para la aplicación WPF o Windows Forms. Este objeto actúa como proveedor de metadatos raíz para cargar los metadatos de los tipos XAML de UWP personalizados en los ensamblados en el directorio actual de la aplicación.
 
     > [!NOTE]
-    > Aunque este componente no es necesario para escenarios triviales de la isla de XAML, como hospedar un control de UWP de primera parte, la aplicación necesita este objeto `XamlApplication` para admitir la gama completa de escenarios de isla de XAML, incluido el hospedaje de controles personalizados de UWP. Por lo tanto, se recomienda definir siempre un objeto de `XamlApplication` en cualquier solución en la que se utilicen islas XAML.
+    > Aunque el objeto `XamlApplication` no es necesario para hospedar un control UWP de primera parte, la aplicación necesita este objeto para admitir la gama completa de escenarios de isla XAML, incluido el hospedaje de controles UWP personalizados. Por lo tanto, se recomienda definir siempre un objeto de `XamlApplication` en cualquier solución en la que se utilicen islas XAML.
 
     > [!NOTE]
     > La solución solo puede contener un proyecto que define un objeto de `XamlApplication`. Todos los controles personalizados de UWP de la aplicación comparten el mismo objeto de `XamlApplication`. El proyecto que define el objeto de `XamlApplication` debe incluir referencias a todas las demás bibliotecas y proyectos de UWP que se usan para hospedar controles de UWP en la isla XAML.
@@ -69,7 +67,10 @@ Antes de comenzar, siga estas instrucciones para crear un proyecto de WPF y conf
 
 ## <a name="define-a-xamlapplication-class-in-a-uwp-app-project"></a>Definición de una clase XamlApplication en un proyecto de aplicación para UWP
 
-Después, agregue un proyecto de aplicación para UWP a la misma solución que el proyecto de WPF. Modificará la clase `App` predeterminada en este proyecto para derivar de la clase [Microsoft. Toolkit. Win32. UI. XamlHost. XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) proporcionada por el kit de herramientas de la comunidad de Windows. Para obtener más información sobre el propósito de esta clase, vea [esta sección](#required-components).
+Después, agregue un proyecto de aplicación para UWP a la solución y revise la clase `App` predeterminada en este proyecto para derivar de la clase [Microsoft. Toolkit. Win32. UI. XamlHost. XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) proporcionada por el kit de herramientas de la comunidad de Windows.
+
+> [!NOTE]
+> Aunque este paso no es necesario para hospedar un control de UWP de primera parte, la aplicación necesita el objeto de `XamlApplication` para admitir la gama completa de escenarios de isla de XAML, incluido el hospedaje de controles de UWP personalizados. Por lo tanto, se recomienda definir siempre un objeto de `XamlApplication` en cualquier solución en la que se utilicen islas XAML.
 
 1. En **Explorador de soluciones**, haga clic con el botón secundario en el nodo de la solución y seleccione **Agregar** -> **nuevo proyecto**.
 2. Agrega un proyecto **Aplicación vacía (Windows universal)** a la solución. Asegúrese de que la versión de destino y la versión mínima están establecidas en **Windows 10, versión 1903** o posterior.
@@ -107,7 +108,7 @@ Después, agregue un proyecto de aplicación para UWP a la misma solución que e
 
 ## <a name="instantiate-the-xamlapplication-object-in-the-entry-point-of-your-wpf-app"></a>Crear una instancia del objeto XamlApplication en el punto de entrada de la aplicación WPF
 
-A continuación, agregue código al punto de entrada de la aplicación de WPF para crear una instancia de la clase `App` que acaba de definir en el proyecto de UWP (esta es la clase que ahora deriva de `XamlApplication`). Para obtener más información sobre el propósito de este objeto, vea [esta sección](#required-components).
+A continuación, agregue código al punto de entrada de la aplicación de WPF para crear una instancia de la clase `App` que acaba de definir en el proyecto de UWP (esta es la clase que ahora deriva de `XamlApplication`).
 
 1. En el proyecto de WPF, haga clic con el botón secundario en el nodo del proyecto, seleccione **agregar** -> **nuevo elemento**y, a continuación, seleccione **clase**. Asigne un nombre al **programa** de la clase y haga clic en **Agregar**.
 

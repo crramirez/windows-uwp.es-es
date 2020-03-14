@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, add-ons, complementos, in-app product, producto desde la aplicación, IAP, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e06f8e915466f116692c63df5c53c2a0f97447f
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852374"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209661"
 ---
 # <a name="manage-add-ons"></a>Administración de complementos
 
@@ -99,12 +99,12 @@ Este recurso tiene los siguientes valores.
 
 | Valor      | Tipo   | Descripción        |
 |------------|--------|--------------|
-| aplicaciones      | array  | Matriz que contiene un [recurso de aplicación](#application-object) que representa la aplicación a la que está asociado este complemento. Solo se admite un elemento en esta matriz.  |
+| applications      | array  | Matriz que contiene un [recurso de aplicación](#application-object) que representa la aplicación a la que está asociado este complemento. Solo se admite un elemento en esta matriz.  |
 | id | string  | Id. de la Tienda del complemento. Este valor lo proporciona la Tienda. Un ejemplo de Id. de la Tienda sería 9NBLGGH4TNMP.  |
 | productId | string  | Id. del producto del complemento. Identificador que proporcionó el desarrollador cuando se creó el complemento. Para obtener más información, consulta [Establecer el tipo de producto y el id. del producto](https://docs.microsoft.com/windows/uwp/publish/set-your-iap-product-id). |
 | productType | string  | Tipo de producto del complemento. Se admiten los siguientes valores: **Duradero** y **Consumible**.  |
-| lastPublishedInAppProductSubmission       | objeto | Un [recurso de envío](#submission-object) que proporciona información sobre el último envío publicado para el complemento.         |
-| pendingInAppProductSubmission        | objeto  |  Un [recurso de envío](#submission-object) que proporciona información sobre el envío pendiente actual para el complemento.  |   |
+| lastPublishedInAppProductSubmission       | object | Un [recurso de envío](#submission-object) que proporciona información sobre el último envío publicado para el complemento.         |
+| pendingInAppProductSubmission        | object  |  Un [recurso de envío](#submission-object) que proporciona información sobre el envío pendiente actual para el complemento.  |   |
 
 <span id="application-object" />
 
@@ -130,8 +130,8 @@ Este recurso tiene los siguientes valores.
 
 | Valor           | Tipo    | Descripción        |
 |-----------------|---------|-----------|
-| value            | objeto  |  Objeto que contiene los siguientes valores: <br/><br/> <ul><li>*Id*. El Id. de Store de la aplicación. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para la aplicación.</li></ul>   |
-| totalCount   | int  | Número de objetos de la aplicación en la matriz *applications* del cuerpo de la respuesta.                                                                                                                                                 |
+| value            | object  |  Objeto que contiene los siguientes valores: <br/><br/> <ul><li>*Id*. El Id. de Store de la aplicación. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).</li><li>*resourceLocation*. Ruta de acceso relativa que se puede anexar al URI de la solicitud de base ```https://manage.devcenter.microsoft.com/v1.0/my/``` para recuperar los datos completos para la aplicación.</li></ul>   |
+| totalCount   | entero  | Número de objetos de la aplicación en la matriz *applications* del cuerpo de la respuesta.                                                                                                                                                 |
 
 <span id="submission-object" />
 

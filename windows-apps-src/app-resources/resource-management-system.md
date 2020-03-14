@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
 ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853131"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209951"
 ---
 # <a name="resource-management-system"></a>Sistema de administración de recursos
 El sistema de administración de recursos tiene funciones de tiempo de compilación y de tiempo de ejecución. Al compilar, el sistema crea un índice de todas las diferentes variantes de los recursos que se empaquetan con tu aplicación. Este índice es el índice de recursos del paquete, o PRI, y también se incluye en el paquete de la aplicación. En tiempo de ejecución, el sistema detecta el usuario y la configuración de la máquina que están en vigor, consulta la información del PRI y carga automáticamente los recursos que son la mejor coincidencia para esa configuración.
@@ -42,7 +42,7 @@ Un objeto [**ResourceCandidate**](/uwp/api/windows.applicationmodel.resources.co
 
 Los recursos disponibles para una aplicación se almacenan en colecciones jerárquicas, a las que puedes tener acceso con un objeto [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live). La clase **ResourceManager** proporciona acceso a las diversas instancias **ResourceMap** de nivel superior que usa la aplicación, que se corresponden con los diversos paquetes para la aplicación. El valor [**MainResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager.MainResourceMap) corresponde al mapa de recursos del paquete de la aplicación actual y excluye cualquier paquete de marcos de referencia. Cada **ResourceMap** se denomina según el nombre de paquete que se especifica en el manifiesto del paquete. Dentro de un **ResourceMap** existen subárboles (consulta [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)), que contienen además objetos **NamedResource**. Los subárboles suelen corresponder a los archivos de recursos que contienen el recurso. Para obtener más información, consulta [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](localize-strings-ui-manifest.md) y [Cargar imágenes y activos adaptados a la escala, tema, contraste alto y otros](images-tailored-for-scale-theme-contrast.md).
 
-A continuación se incluye un ejemplo.
+A continuación te mostramos un ejemplo.
 
 ```csharp
 // using Windows.ApplicationModel.Resources.Core;

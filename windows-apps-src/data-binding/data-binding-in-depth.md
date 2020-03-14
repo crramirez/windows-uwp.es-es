@@ -10,11 +10,11 @@ dev_langs:
 - csharp
 - cppwinrt
 ms.openlocfilehash: 0b54b04f2f36c2661de8baf58d0da1aec75ae590
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853232"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210151"
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 
@@ -804,7 +804,7 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 |---------|----------|-----------|-------|
 | La ruta de acceso es la propiedad predeterminada | `{x:Bind a.b.c}` | `{Binding a.b.c}` | | 
 | Propiedades de acceso | `{x:Bind Path=a.b.c}` | `{Binding Path=a.b.c}` | En Bind: x, ruta de acceso raíz está en la página de forma predeterminada, no DataContext. | 
-| indizador | `{x:Bind Groups[2].Title}` | `{Binding Groups[2].Title}` | Enlaza con el elemento especificado en la colección. Se admiten solamente en números enteros índices. | 
+| Indexador | `{x:Bind Groups[2].Title}` | `{Binding Groups[2].Title}` | Enlaza con el elemento especificado en la colección. Se admiten solamente en números enteros índices. | 
 | Propiedades adjuntas | `{x:Bind Button22.(Grid.Row)}` | `{Binding Button22.(Grid.Row)}` | Las propiedades adjuntas se especifican mediante paréntesis. Si la propiedad no está declarada en un espacio de nombres XAML, agrega un prefijo con un espacio de nombres XML, que debe estar asignado a un espacio de nombres de código al principio del documento. | 
 | Conversión | `{x:Bind groups[0].(data:SampleDataGroup.Title)}` | No es necesario. | Las conversiones de tipos se especifican mediante paréntesis. Si la propiedad no está declarada en un espacio de nombres XAML, agrega un prefijo con un espacio de nombres XML, que debe estar asignado a un espacio de nombres de código al principio del documento. | 
 | Converter | `{x:Bind IsShown, Converter={StaticResource BoolToVisibility}}` | `{Binding IsShown, Converter={StaticResource BoolToVisibility}}` | Convertidores deben declararse en la raíz del página o ResourceDictionary o en App.xaml. | 

@@ -10,11 +10,11 @@ author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: 60a735af077d2121868e2613cb0f33e194e4330c
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852982"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209671"
 ---
 # <a name="uwp-apis-available-to-desktop-apps"></a>API de UWP disponibles para aplicaciones de escritorio
 
@@ -22,7 +22,7 @@ Las aplicaciones de escritorio pueden usar una amplia gama de API de Plataforma 
 
 Muchas API de UWP requieren la [identidad del paquete](modernize-packaged-apps.md) que se va a usar en una aplicación de escritorio. La mayoría de las API de UWP funcionan bien aplicaciones que tienen identidad de paquete. Sin embargo, algunas áreas de características aún no están totalmente probadas o no funcionan actualmente según lo previsto.
 
-| Área de características | Detalles |
+| Área de función | Detalles |
 |--------------|---------|
 | Citas, contactos y mensajes de correo electrónico | No todas las API se admiten actualmente. |
 | Autenticación e identidad de usuario | No todas las API se admiten actualmente. |
@@ -33,7 +33,7 @@ Muchas API de UWP requieren la [identidad del paquete](modernize-packaged-apps.m
 | Criptografía | No todas las API se admiten actualmente. |
 | Geolocalización | No todas las API se admiten actualmente. |
 | Selectores de archivos y carpetas | Las aplicaciones con identidad tienen acceso total al sistema de archivos y no necesitan selectores de UWP. |
-| Medios | No todas las API se admiten actualmente. |
+| Multimedia | No todas las API se admiten actualmente. |
 | Punto de servicio | No todas las API se admiten actualmente. |
 | Tarjetas inteligentes | No todas las API se admiten actualmente. |
 | PlayReady | No todas las API se admiten actualmente. |

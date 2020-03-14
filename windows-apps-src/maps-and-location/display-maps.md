@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, mapa, map, ubicación, location, control de mapa, map control, vistas de mapa, map views
 ms.localizationpriority: medium
 ms.openlocfilehash: cc12f6c9b9177bce9a91288fdd2c43c118be5f61
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260427"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210311"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Mostrar mapas con vistas 2D, 3D y Streetside
 

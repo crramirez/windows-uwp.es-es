@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, juegos, games, controlador para juegos, gamepad, vibración, vibration
 ms.localizationpriority: medium
 ms.openlocfilehash: e65b22039c381bd333516bd9f98c60bbddb9621c
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853071"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210601"
 ---
 # <a name="gamepad-and-vibration"></a>Controlador para juegos y vibración
 
@@ -54,7 +54,7 @@ Las zonas muertas mayores ofrecen una estrategia simple para separar la entrada 
 
 Para obtener más información, consulta [Lectura de los sticks analógicos](#reading-the-thumbsticks).
 
-### <a name="ui-navigation"></a>Navegación por la IU
+### <a name="ui-navigation"></a>Navegación de la interfaz de usuario
 
 Para aliviar la carga de la compatibilidad con los diferentes dispositivos de entrada para la navegación de la interfaz de usuario y fomentar la coherencia entre dispositivos y juegos, la mayoría de dispositivos de entrada _física_ actúan simultáneamente como dispositivo independiente de entrada _lógica_, llamado [controlador de navegación de la interfaz de usuario](ui-navigation-controller.md). El controlador de navegación de la interfaz de usuario proporciona un vocabulario común para los comandos de navegación de la interfaz de usuario entre los dispositivos de entrada.
 
@@ -63,9 +63,9 @@ Como controlador de navegación de la interfaz de usuario, los controladores de 
 | Comando de navegación | Entrada del controlador para juegos                       |
 | ------------------:| ----------------------------------- |
 |                 Arriba | Stick analógico izquierdo hacia arriba/cruceta hacia arriba       |
-|               Verticalmente | Stick analógico izquierdo hacia abajo/cruceta hacia abajo   |
-|               Izquierdo | Stick analógico izquierdo hacia la izquierda/cruceta hacia la izquierda   |
-|              Derecho | Stick analógico izquierdo hacia la derecha/cruceta hacia la derecha |
+|               Abajo | Stick analógico izquierdo hacia abajo/cruceta hacia abajo   |
+|               Izquierda | Stick analógico izquierdo hacia la izquierda/cruceta hacia la izquierda   |
+|              Derecha | Stick analógico izquierdo hacia la derecha/cruceta hacia la derecha |
 |               Ver | Botón de vista                         |
 |               Menú | Botón de menú                         |
 |             Aceptar | Botón A                            |
@@ -464,7 +464,7 @@ A diferencia de los otros, los dos motores de vibración dentro de los gatillos 
 
 La [muestra de GamepadVibrationUWP _(github)_ ](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/GamepadVibrationUWP) indica cómo se utilizan los motores de vibración del controlador para juegos y los gatillos de impulso para producir una variedad de efectos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Windows.Gaming.Input.UINavigationController][]
 * [Windows. Gaming. Input. IGameController][]

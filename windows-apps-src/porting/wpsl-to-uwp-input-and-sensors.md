@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a62fcb4a208a52fd77be2a9913e265b12bf31f43
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853151"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210921"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>Trasladar Windows Phone Silverlight a UWP para el modelo de e/s, dispositivos y aplicaciones
 
@@ -84,7 +84,7 @@ Una aplicación de Windows Phone Silverlight puede usar la clase **Microsoft. Ph
 | Propiedad **PowerSource**                                                                | No hay equivalente                                                                                                                                                                                                                                                                                                                      |
 | Evento **PowerSourceChanged**                                                            | Controla el evento [**RemainingChargePercentChanged**](https://docs.microsoft.com/uwp/api/windows.phone.devices.power.battery.remainingchargepercentchanged) (solo la familia de dispositivos móviles). El evento se genera cuando el valor de la propiedad [**RemainingChargePercent**](https://docs.microsoft.com/uwp/api/windows.phone.devices.power.battery.remainingchargepercent) (solo para la familia de dispositivos móviles) disminuye un 1 %. |
 
-## <a name="location"></a>Location
+## <a name="location"></a>Ubicación
 
 Cuando una aplicación que declara la funcionalidad de ubicación en el manifiesto del paquete de la aplicación se ejecuta en Windows 10, el sistema solicitará el consentimiento del usuario final. Por lo tanto, si la aplicación muestra su propia petición de consentimiento personalizado, o si proporciona una alternancia de activar y desactivar, es aconsejable quitarla para que solo se le solicite una vez al usuario final.
 

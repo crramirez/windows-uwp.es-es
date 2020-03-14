@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app submissions, envíos de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 0575127096a016c54c1ee84c1e57c2f22054384b
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260227"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210831"
 ---
 # <a name="manage-app-submissions"></a>Administración de envíos de aplicaciones
 

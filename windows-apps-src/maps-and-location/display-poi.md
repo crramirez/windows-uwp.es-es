@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, mapa, map, ubicación, location, marcadores, pushpins
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bf8009232dbe3afcab2af28b76785fb261200f7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259377"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210301"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>Mostrar puntos de interés en un mapa
 

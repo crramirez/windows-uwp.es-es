@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 29357746b6fca2c6aae52e9516a5b7dc2fca8ef2
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853162"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210641"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Trasladar Windows Phone Silverlight XAML y la interfaz de usuario a UWP
 
@@ -187,7 +187,7 @@ De este modo, el resto del modelo de vista, los valores de ruta de acceso de la 
 
 Windows Phone aplicaciones de Silverlight usan los controles definidos en el espacio de nombres **Microsoft. Phone. Controls** y el espacio de nombres **System. Windows. Controls** . Las aplicaciones para UWP XAML usan controles definidos en el espacio de nombres [**Windows.UI.Xaml.Controls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls). La arquitectura y el diseño de los controles XAML en UWP son prácticamente iguales que Windows Phone controles de Silverlight. No obstante, se han realizado algunos cambios para mejorar el conjunto de controles disponibles y para unificarlos con las aplicaciones de Windows. A continuación se muestran ejemplos específicos.
 
-| Nombre del control | Cambiar |
+| Nombre del control | Cambio |
 |--------------|--------|
 | ApplicationBar | La propiedad [Page.TopAppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.topappbar). |
 | ApplicationBarIconButton | El equivalente de UWP es la propiedad [Glyph](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon.glyph). PrimaryCommands es la propiedad de contenido de CommandBar. El analizador XAML interpreta el xml interno de un elemento como el valor de su propiedad de contenido. |
@@ -305,7 +305,7 @@ Consulta también [Texto](#text) más adelante.
 
 La bandeja del sistema (establecida en el marcado XAML con `shell:SystemTray.IsVisible`) se llama ahora "barra de estado" y aparece de manera predeterminada. Puedes controlar su visibilidad en código imperativo llamando a los métodos [**Windows.UI.ViewManagement.StatusBar.ShowAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.statusbar.showasync) y [**HideAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.statusbar.hideasync).
 
-## <a name="text"></a>Texto
+## <a name="text"></a>Text
 
 El texto (o tipografía) es un aspecto importante de una aplicación para UWP y, durante la migración, es aconsejable que vuelvas a visitar los diseños de elementos visuales de las vistas para que estén en consonancia con el nuevo lenguaje de diseño. Usa estas ilustraciones para encontrar los estilos de sistema **TextBlock** de UWP que están disponibles. Busque los que correspondan a los Windows Phone los estilos de Silverlight que usó. Como alternativa, puede crear sus propios estilos universales y copiar las propiedades de los estilos del sistema de Silverlight Windows Phone en ellos.
 

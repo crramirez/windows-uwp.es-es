@@ -1,19 +1,19 @@
 ---
 Description: Descubre cómo se ponen los paquetes de la aplicación a disposición de los clientes y cómo se administran escenarios de paquetes específicos.
-title: Instrucciones para la administración de paquetes de aplicaciones
+title: Orientación para administrar paquetes de la aplicación
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f5caa2610e19234cfd83119d570f858c540b401
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685135"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210201"
 ---
-# <a name="guidance-for-app-package-management"></a>Instrucciones para la administración de paquetes de aplicaciones
+# <a name="guidance-for-app-package-management"></a>Orientación para administrar paquetes de la aplicación
 
 Descubre cómo se ponen los paquetes de la aplicación a disposición de los clientes y cómo se administran escenarios de paquetes específicos.
 
@@ -33,7 +33,7 @@ En general, un sistema operativo puede ejecutar los paquetes destinados a versio
 > A partir del 31 de octubre de 2018, los productos recién creados no pueden incluir paquetes destinados a Windows 8. x/Windows Phone 8. x o una versión anterior. Para obtener más información, consulte esta [entrada de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 
-## <a name="removing-an-app-from-the-store"></a>Quitar una aplicación de Store
+## <a name="removing-an-app-from-the-store"></a>Quitar una aplicación de la Tienda
 
 En ocasiones, es posible que quieras dejar de ofrecer una aplicación a los clientes, es decir, "cancelar su publicación". Para ello, haz clic en **Make app unavailable** en la página de **Información general de la aplicación**. Después de confirmar que quieres que la aplicación deje de estar disponible, en el plazo de unas horas dejará de estar visible en Microsoft Store y ningún cliente nuevo podrá acceder a ella (a no ser que tengan un [código promocional](generate-promotional-codes.md) y usen un dispositivo Windows 10).
 

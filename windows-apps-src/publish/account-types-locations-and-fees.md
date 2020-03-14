@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac6c3e7c89c091d1080364b8fbbb35d484aee49
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260060"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210911"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
@@ -151,7 +151,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Lituania                         | 14 EUR              | 75 EUR           |  
 | Luxemburgo                        | 14 EUR              | 75 EUR           |  
 | RAE de Macao                         | 19 USD              | 99 USD           |  
-| Macedonia del Norte                 | 19 USD              | 99 USD           |  
+| ERY de Macedonia                 | 19 USD              | 99 USD           |  
 | Madagascar                        | 19 USD              | 99 USD           |  
 | Malawi                            | 19 USD              | 99 USD           |  
 | Malasia                          | 62 MYR              | 300 MYR          |  

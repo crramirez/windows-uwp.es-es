@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, notificaciones del sistema, notificaciones del sistema interactivas, notificaciones del sistema adaptables, contenido de notificaciones del sistema, carga de notificaciones del sistema
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b424da3b9413c7528cb6f6a6a888e9fe2cc7cb7
-ms.sourcegitcommit: a4a595c485a1e4549b02b0e20ca9f56b093c5814
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74125250"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209861"
 ---
 # <a name="toast-content"></a>Contenido de notificaciones del sistema
 
@@ -25,7 +25,7 @@ Las notificaciones del sistema interactivas y adaptables permiten crear notifica
 > Para ver las plantillas heredadas de Windows 8.1 y Windows Phone 8,1, consulte el [Catálogo de plantillas de notificaciones de sistema heredado](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10)).
 
 
-## <a name="getting-started"></a>Tareas iniciales
+## <a name="getting-started"></a>Introducción
 
 **Instale la biblioteca de notificaciones.** Si quieres usar C# en lugar de XML para generar notificaciones, instala el paquete de NuGet denominado [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) (buscar "notificaciones para UWP"). Los ejemplos de C# proporcionados en este artículo usan la versión 1.0.0 del paquete NuGet.
 
