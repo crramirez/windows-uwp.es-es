@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, complementos, iap, precio
 ms.localizationpriority: medium
-ms.openlocfilehash: c6384b5890466ff13c72a1b90eb9b27194d51fff
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
-ms.translationtype: HT
+ms.openlocfilehash: 803164c395602313bcb84331e30376efd6832731
+ms.sourcegitcommit: 912146681b1befc43e6db6e06d1e3317e5987592
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/13/2020
-ms.locfileid: "79211001"
+ms.locfileid: "79295728"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Establecer los precios y la disponibilidad de los complementos
 
@@ -37,7 +37,7 @@ En el caso delos complementos que no quieres que estén ampliamente disponibles,
 -   **Detener la compra: Los clientes con un vínculo directo podrán ver la descripción de la aplicación en la Tienda, pero solo podrán descargarla si ya tienen el producto, tienen un código promocional y están usando un dispositivo Windows 10. Este complemento no se muestra en la descripción del producto principal**: elegir esta opción significa que el complemento no se mostrará en la descripción de la aplicación y los nuevos clientes no podrán comprar el complemento. Sin embargo, **esta opción no se admite para los clientes de Windows 8.1 o versiones anteriores**. Si la aplicación publicada anteriormente está disponible en Windows 8.1 o versiones anteriores, el complemento seguirá estando disponible para su compra a esos clientes. Para dejar de ofrecer el complemento a los clientes en Windows 8.1 o versiones anteriores, debe actualizar la aplicación para quitar el código que ofrece el complemento y luego publicar un nuevo envío para la aplicación. Esto se recomienda incluso si la aplicación no tiene como destino Windows 8.1 o versiones anteriores; es una mejor experiencia para los clientes si nunca les ofrece un complemento que ha optado por no estar disponible.
     
  > [!NOTE] 
- > Elegir la opción **Detener la compra** o enviar una actualización de aplicaciones que quite el complemento del código de la aplicación no afectan a los clientes que ya hayan comprado el complemento, independientemente de su sistema operativo.
+ > La elección de la opción **detener adquisición** o el envío de una actualización de la aplicación que quite el complemento de la aplicación no impedirá que los clientes usen el complemento si ya lo han comprado. Las suscripciones existentes no se renovarán y, posteriormente, se cancelarán una vez finalizado el período actual.
 
 
 ## <a name="schedule"></a>Programa
@@ -47,7 +47,7 @@ De manera predeterminada (a menos que hayas seleccionado una de la opciones **Oc
 Para obtener más información, consulta [Configurar la programación de lanzamiento precisa](configure-precise-release-scheduling.md).
 
 
-## <a name="pricing"></a>Precios
+## <a name="pricing"></a>Precio
 
 Debe seleccionar un precio base para el complemento (a menos que haya seleccionado la opción **detener adquisición** en la sección **visibilidad** ). La selección predeterminada es **gratuita**, por lo que si desea cobrar dinero por el complemento, asegúrese de elegir uno de los planes de tarifa disponibles (a partir de 99 USD).
 
