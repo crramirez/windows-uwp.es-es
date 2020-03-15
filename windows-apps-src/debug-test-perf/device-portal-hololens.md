@@ -1,19 +1,19 @@
 ---
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
-title: El Portal de dispositivos para HoloLens
+title: Device Portal para HoloLens
 description: Obtén información sobre cómo Windows Device Portal para HoloLens te permite configurar y administrar de forma remota tu dispositivo HoloLens.
 ms.date: 01/03/2019
 ms.topic: article
 keywords: Windows 10, UWP, portal de dispositivos
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a9cdf03aa574ea0762d73514a209367f27822ba
-ms.sourcegitcommit: 33fcf67cf96ce8574df2e50cafc4ca7c18234c4b
+ms.openlocfilehash: 059ce14f85ebe7d955ba2da8897ab47109f74a72
+ms.sourcegitcommit: 1d6d05d28358e087d9ee8829d76c5fbbac0225cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76530787"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401974"
 ---
-# <a name="device-portal-for-hololens"></a>El Portal de dispositivos para HoloLens
+# <a name="device-portal-for-hololens"></a>Device Portal para HoloLens
 
 
 ## <a name="set-up-device-portal-on-hololens"></a>Configurar Device Portal en HoloLens
@@ -22,7 +22,7 @@ ms.locfileid: "76530787"
 
 1. Enciende HoloLens y colócalo en el dispositivo.
 2. Realice el gesto de [Inicio](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) o el gesto de [floración](https://developer.microsoft.com/mixed-reality#Bloom) de HoloLens (1ª generación) para iniciar el menú principal.
-3. Mira el icono de **configuración** y realiza el gesto de [pulsación de aire](https://developer.microsoft.com/mixed-reality#Press_and_release) en hololens (1ª generación) o lo selecciona en hololens 2. para ello, debe [tocarlo o usar un rayo](https://docs.microsoft.com/hololens/hololens2-basic-usage). La aplicación de configuración se iniciará después de seleccionarla.
+3. Mira el icono de **configuración** y realiza el gesto de [puntear](https://developer.microsoft.com/mixed-reality#Press_and_release) en hololens (1ª generación) o seleccionarlo en hololens 2 Si [lo toca o usa un rayo de mano](https://docs.microsoft.com/hololens/hololens2-basic-usage). La aplicación de configuración se iniciará después de seleccionarla.
 4. Selecciona el elemento de menú **Actualizar**.
 5. Selecciona el elemento de menú **Para desarrolladores**.
 6. Habilita el **Modo de desarrollador**.
@@ -98,17 +98,17 @@ La barra de herramientas de la parte superior de la página proporciona acceso a
 - **Ayuda**: abre la página de documentación de la interfaz REST.
 
 En la página principal se muestra la siguiente información:
-- **Estado del dispositivo**: supervisa el estado del dispositivo y notifica los errores graves.
+- Estado del **dispositivo**: supervisa el estado del dispositivo y notifica los errores graves.
 - **Información de Windows**: muestra el nombre de HoloLens y la versión de Windows instalada actualmente.
-- La sección **Preferencias** contiene las siguientes opciones:
-    - **IPD**: establece la distancia interpupilar (IPD), que es la distancia, en milímetros, entre el centro de las pupilas del usuario cuando mira al frente. La configuración surte efecto inmediatamente. El valor predeterminado se calculó automáticamente al configurar el dispositivo.
+- La sección **Preferencias** contiene las siguientes configuraciones:
+    - **IPD**: establece la distancia interpupilar (IPD), que es la distancia, en milímetros, entre el centro de las pupilas del usuario cuando mira al frente. La configuración surte efecto inmediatamente. El valor predeterminado se calculó automáticamente al configurar el dispositivo. **Válido solo para HoloLens (1ª generación), Hololens 2 calcula la posición de la vista.** 
     - **Nombre del dispositivo**: asigna un nombre a HoloLens. Debes reiniciar el dispositivo después de cambiar este valor para que surta efecto. Después de hacer clic en Guardar, en un cuadro de diálogo se te preguntará si quieres reiniciar el dispositivo inmediatamente o más tarde.
     - **Configuración de suspensión**: establece el período de tiempo de espera antes de que el dispositivo entre en el modo de suspensión cuando está conectado y cuando funciona con batería.
 
 ### <a name="3d-view"></a>Vista 3D 
 
 Usa la página Vista 3D para ver cómo HoloLens interpreta el entorno. Navega por la vista con el mouse:
-- **Girar**: haz clic con el botón primario + mouse;
+- **Girar**: haz clic con el botón izquierdo + mouse;
 - **Panorámica**: haz clic con el botón derecho + mouse;
 - **Zoom**: desplazamiento del mouse.
 - **Opciones de seguimiento**: activa el seguimiento visual continuo al activar la opción Force visual tracking. Pausa detiene el seguimiento visual.
@@ -143,7 +143,7 @@ Ten en cuenta que las aplicaciones de HoloLens no podrán capturar una foto o un
 La herramienta Rendimiento del sistema de HoloLens tiene 3 métricas adicionales que se pueden grabar. 
 
 Estas son las métricas disponibles:
-- **SoC power**: uso de energía instantánea de sistema en un chip (SoC), con una media superior a un minuto
+- **SoC power**: uso de energía instantánea system-on-chip, con una media superior a un minuto
 - **Energía del sistema**: uso de energía instantánea del sistema, con una media superior a un minuto
 - **Velocidad de fotogramas**: fotogramas por segundo, intervalos en blanco verticales perdidos por segundo y perdidos consecutivos
 
@@ -151,7 +151,7 @@ Estas son las métricas disponibles:
 
 En esta página puedes recopilar los volcados de memoria de las aplicaciones transferidas localmente. Activa la casilla Volcados de memoria de cada aplicación de la que quieras recopilar volcados de memoria. Vuelve a esta página para recopilar los volcados de memoria. Los archivos de volcado de memoria se pueden abrir en Visual Studio para su depuración.
 
-### <a name="kiosk-mode"></a>Pantalla completa 
+### <a name="kiosk-mode"></a>Modo de quiosco 
 
 Habilita la pantalla completa, lo que limita la capacidad del usuario para iniciar aplicaciones nuevas o cambiar la aplicación en ejecución. Cuando la pantalla completa está habilitada, se deshabilitan el gesto Nástico y Cortana y no se muestran las aplicaciones colocadas en el entorno del usuario.
 
@@ -159,11 +159,11 @@ Activa Enable Kiosk Mode para poner HoloLens en pantalla completa. Selecciona la
 
 Ten en cuenta que la aplicación se ejecutará en el inicio, incluso si no está habilitada la pantalla completa. Selecciona Ninguna para que no se ejecute ninguna aplicación en el inicio.
 
-### <a name="simulation"></a>Simulación 
+### <a name="simulation"></a>Simulation 
 
 Te permite grabar y reproducir datos de entrada para las pruebas.
 - **Capture room**: se usa para descargar un archivo de espacio simulado que contiene la malla espacial de asignación del entorno del usuario. Asigna un nombre al espacio y, a continuación, haz clic en Capturar para guardar los datos como un archivo .xef en tu equipo. Puedes cargar este archivo de espacio en el emulador HoloLens.
-- **Grabación**: Activa las secuencias para que graben, asigna un nombre a la grabación y haz clic o pulsa en Grabar para iniciar la grabación. Realiza acciones con HoloLens y a continuación haz clic en Detener para guardar los datos como un archivo .xef en tu equipo. Este archivo se puede cargar en el dispositivo o emulador HoloLens.
+- **Grabación**: Activa las secuencias para que graben, asigna un nombre a la grabación y haz clic o pulsa en Grabar para iniciar la grabación. Realiza acciones con HoloLens y, a continuación, haz clic en Detener para guardar los datos como un archivo .xef en tu equipo. Este archivo se puede cargar en el dispositivo o emulador HoloLens.
 - **Reproducción**: haz clic o pulsa en Cargar grabación para seleccionar un archivo .xef desde tu equipo y enviar los datos a HoloLens.
 - **Modo de control**: selecciona Valor predeterminado o Simulación en la lista desplegable y pulsa o haz clic en el botón Establecer para seleccionar el modo en HoloLens. Si eliges "Simulación", se deshabilitan los sensores reales de HoloLens y se usan los datos simulados cargados en su lugar. Si cambias a "Simulación", HoloLens no responderá al usuario real hasta que vuelva al "Valor predeterminado".
 
@@ -172,9 +172,9 @@ Te permite grabar y reproducir datos de entrada para las pruebas.
 
 Envía la entrada de teclado desde la máquina remota a HoloLens.
 
-Haz clic o pulsa en la región de debajo del teclado virtual para habilitar el envío de pulsaciones de teclas a HoloLens. Escribe el texto de entrada en el cuadro de texto y haz clic o pulsa en Enviar para enviar las pulsaciones de teclas a la aplicación activa.
+Haz clic o pulsa en la región de debajo del teclado virtual para habilitar el envío de pulsaciones de teclas a HoloLens. Escribe texto de entrada en el cuadro de texto y haz clic o pulsa en Enviar para enviar las pulsaciones de teclas a la aplicación activa.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [Información general de Windows Device portal](device-portal.md)
 * [Referencia de API de principales del Portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core) (API comunes a todos los dispositivos Windows 10)
