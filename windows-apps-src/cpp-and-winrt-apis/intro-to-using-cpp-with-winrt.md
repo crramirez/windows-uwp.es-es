@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, estándar, c ++, cpp, winrt, proyección, introducción
 ms.localizationpriority: medium
 ms.openlocfilehash: fd267f96ca6931252ab3130d363447ae79820108
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255100"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209140"
 ---
 # <a name="introduction-to-cwinrt"></a>Introducción a C++/WinRT
 &nbsp;
@@ -44,7 +44,7 @@ Te conviene descargar e instalar la versión más reciente de la [Extensión de 
 
 Las plantillas de proyecto de Visual Studio para C++/WinRT se describen en las secciones siguientes. Cuando se crea un proyecto de C++/WinRT con la versión más reciente de la extensión VSIX instalada, el nuevo proyecto de C++/WinRT instala automáticamente el [paquete NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/). El paquete NuGet **Microsoft.Windows.CppWinRT** ofrece compatibilidad con la compilación de C++/WinRT (propiedades y destinos de MSBuild), lo que permite que el proyecto sea portátil entre una máquina de desarrollo y un agente de compilación (en el que solo está instalado el paquete NuGet, y no la extensión de VSIX).
 
-También puedes convertir un proyecto existente si instalas manualmente el paquete NuGet **Microsoft.Windows.CppWinRT**. Después de instalar la versión más reciente de la extensión VSIX (o de actualizar a esta), abre el proyecto existente en Visual Studio, haz clic en **Proyecto** \> **Administrar paquetes NuGet…** \> **Examinar**, escribe o pega **Microsoft.Windows.CppWinRT** en el cuadro de búsqueda, selecciona el elemento en los resultados de la búsqueda y haz clic en **Instalar** para instalar el paquete de ese proyecto. Una vez que hayas agregado el paquete, obtendrás compatibilidad de MSBuild con C++/WinRT para el proyecto, incluida la invocación de la herramienta `cppwinrt.exe`.
+También puedes convertir un proyecto existente si instalas manualmente el paquete NuGet **Microsoft.Windows.CppWinRT**. Después de instalar la versión más reciente de la extensión VSIX (o de actualizar a esta), abre el proyecto existente en Visual Studio, haz clic en **Proyecto** \> **Administrar paquetes NuGet…** \> **Busca**, escribe o pega **Microsoft.Windows.CppWinRT** en el cuadro de búsqueda, selecciona el elemento en los resultados de la búsqueda y haz clic en **Instalar** para instalar el paquete de ese proyecto. Una vez que hayas agregado el paquete, obtendrás compatibilidad de MSBuild con C++/WinRT para el proyecto, incluida la invocación de la herramienta `cppwinrt.exe`.
 
 > [!IMPORTANT]
 > Si tienes proyectos creados con una versión de la extensión VSIX anterior a 1.0.190128.4 (o actualizados para funcionar con esta), consulta [Versiones anteriores de la extensión VSIX](#earlier-versions-of-the-vsix-extension). En esta sección encontrarás información importante sobre la configuración de los proyectos que necesitarás conocer a fin de actualizarlos para usar la versión más reciente de la extensión VSIX.

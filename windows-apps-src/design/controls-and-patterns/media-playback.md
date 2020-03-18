@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e93a1806d1d2add4b3b1c3ee02417a43d574d3c
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319387"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209040"
 ---
 # <a name="media-player"></a>Reproductor multimedia
 
@@ -91,7 +91,7 @@ Se recomienda el diseño de controles de fila doble (a continuación) en la mayo
 
 [MediaPlayerElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) se integra automáticamente con los controles de transporte de contenido multimedia del sistema. Los controles de transporte de contenido multimedia del sistema son los controles que aparecen cuando se presionan teclas multimedia de hardware, como los botones multimedia de los teclados. Para obtener más información, consulta [SystemMediaTransportControls](https://docs.microsoft.com/uwp/api/Windows.Media.SystemMediaTransportControls).
 
-> **Nota**&nbsp;&nbsp; [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) no se integra automáticamente con los controles de transporte de contenido multimedia del sistema, por lo que debes conectarlos de forma manual. Para obtener más información, consulta [Controles de transporte de contenido multimedia del sistema](https://docs.microsoft.com/windows/uwp/audio-video-camera/system-media-transport-controls).
+> **Nota**&nbsp;&nbsp; [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) no se integra automáticamente en los controles de transporte de contenido multimedia del sistema, por lo que debes conectarlos de forma manual. Para obtener más información, consulta [Controles de transporte de contenido multimedia del sistema](https://docs.microsoft.com/windows/uwp/audio-video-camera/system-media-transport-controls).
 
 
 ### <a name="set-the-media-source"></a>Establecer el origen del contenido multimedia
@@ -390,7 +390,7 @@ Si tienes espacio en la pantalla o diseñas para la experiencia de 10 pies, opta
 
 Los controles predeterminados se han optimizado para la reproducción de contenido multimedia; sin embargo, tienes la posibilidad de las agregar opciones personalizadas que necesites en el reproductor multimedia con el fin de proporcionar experiencia óptima para tu aplicación. Consulta el artículo [Crear controles de transporte personalizados](custom-transport-controls.md) para obtener más información sobre cómo agregar controles personalizados.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 

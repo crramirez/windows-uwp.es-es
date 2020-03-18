@@ -7,11 +7,11 @@ keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, news, what's, 
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: d5a2c3d10f2cbfcc608d212a9465ca738e1ca15e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255044"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209110"
 ---
 # <a name="whats-new-in-cwinrt"></a>Novedades de C++/WinRT
 
@@ -131,7 +131,7 @@ La herramienta `cppwinrt.exe` ahora compara la salida de un archivo de encabezad
 
 #### <a name="generic-interfaces-are-now-all-generated"></a>Ahora se generan todas las interfaces genéricas
 
-Gracias al lector de metadatos de xlang, C++/WinRT genera ahora todas las interfaces parametrizadas o genéricas a partir de los metadatos. Las interfaces como [Windows::Foundation::Collections::IVector\<T\> ](/uwp/api/windows.foundation.collections.ivector_t_) ahora se generan a partir de los metadatos en lugar de escribirse a mano en `winrt/base.h`. El resultado es que el tamaño de `winrt/base.h` se ha reducido a la mitad y que las optimizaciones se generan directamente en el código (lo que era difícil de hacer con el enfoque de escritura a mano).
+Gracias al lector de metadatos de xlang, C++/WinRT genera ahora todas las interfaces parametrizadas o genéricas a partir de los metadatos. Las interfaces como [Windows::Foundation::Collections::IVector\<T\>](/uwp/api/windows.foundation.collections.ivector_t_) ahora se generan a partir de los metadatos en lugar de escribirse a mano en `winrt/base.h`. El resultado es que el tamaño de `winrt/base.h` se ha reducido a la mitad y que las optimizaciones se generan directamente en el código (lo que era difícil de hacer con el enfoque de escritura a mano).
 
 > [!IMPORTANT]
 > Las interfaces, como el ejemplo presentado, ahora aparecen en sus respectivos encabezados de espacio de nombres, en lugar de en `winrt/base.h`. Por lo tanto, si aún no lo has hecho, tendrás que incluir el encabezado del espacio de nombres apropiado para poder usar la interfaz.

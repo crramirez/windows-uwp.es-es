@@ -5,22 +5,23 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, concurrency, async, asynchronous, asynchrony
 ms.localizationpriority: medium
-ms.openlocfilehash: 06fadae3e33da3289726f45e7222617d51843015
-ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
+ms.openlocfilehash: 949f8c407e0a49c87cbb45c01117a7e2e1525010
+ms.sourcegitcommit: 5f22e596443ff4645ebf68626d8a4d275d8a865f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816679"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79083178"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Operaciones simultáneas y asincrónicas con C++/WinRT
 
-En este tema se muestra cómo puedes crear y consumir objetos asincrónicos de Windows Runtime con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+> [!IMPORTANT]
+> En este tema se presentan los conceptos de *corrutinas* y `co_await`, que se recomiendan usar tanto en la UI *como* en las aplicaciones que no son de UI. Para simplificar, la mayoría de los ejemplos de código de este tema introductorio muestran proyectos de la **Aplicación de consola de Windows (C++/WinRT)** . En los ejemplos de código últimos de este tema se usan corrutinas, pero, para mayor comodidad, los ejemplos de aplicación de consola también siguen usando la llamada de función de bloqueo **get** justo antes de salir, de modo que la aplicación no sale antes de finalizar la impresión de la salida. Tú no hará eso (llamar a la función de bloqueo **get**) desde un subproceso de UI. En su lugar, usarás la instrucción `co_await`. Las técnicas que usarás en las aplicaciones de UI se describen en el tema [Simultaneidad y asincronía más avanzadas](concurrency-2.md).
 
-Después de leer este tema, consulta también [Simultaneidad y asincronía más avanzadas](concurrency-2.md) para conocer más escenarios.
+En este tema introductorio se muestran algunas de las maneras en que puedes crear y consumir objetos asincrónicos de Windows Runtime con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Después de leer este tema, especialmente en el caso de las técnicas que vas a usar en las aplicaciones de UI, consulta también [Simultaneidad y asincronía más avanzadas](concurrency-2.md).
 
 ## <a name="asynchronous-operations-and-windows-runtime-async-functions"></a>Operaciones asincrónicas y funciones "Async" de Windows Runtime
 
-Cualquier API de Windows Runtime que tenga el potencial de tardar más de 50 milisegundos en completarse se implementa como una función asincrónica (con un nombre terminado en "Async"). La implementación de una función asincrónica inicia el trabajo en otro subproceso y se devuelve inmediatamente con un objeto que representa la operación asincrónica. Cuando se completa la operación asincrónica, dicho objeto devuelto contiene cualquier valor que resulte del trabajo. El espacio de nombres de Windows Runtime **Windows::Foundation** contiene cuatro tipos de objeto de la operación asincrónica.
+Cualquier API de Windows Runtime que tenga el potencial de tardar más de 50 milisegundos en completarse se implementa como una función asincrónica (con un nombre terminado en "Async"). La implementación de una función asincrónica inicia el trabajo en otro subproceso, y se devuelve inmediatamente con un objeto que representa la operación asincrónica. Cuando se completa la operación asincrónica, dicho objeto devuelto contiene cualquier valor que resulte del trabajo. El espacio de nombres de Windows Runtime **Windows::Foundation** contiene cuatro tipos de objeto de la operación asincrónica.
 
 - [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction),
 - [**IAsyncActionWithProgress&lt;TProgress&gt;** ](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_),
@@ -29,7 +30,9 @@ Cualquier API de Windows Runtime que tenga el potencial de tardar más de 50 mil
 
 Cada uno de estos tipos de la operación asincrónica se proyecta en un tipo correspondiente en el espacio de nombres **winrt::Windows::Foundation** de C++/WinRT. C++/WinRT también contiene una estructura adaptadora await interna. No la usas directamente, pero gracias a dicha estructura puedes escribir una instrucción `co_await` para esperar de forma cooperativa el resultado de cualquier función que devuelva uno de estos tipos de la operación asincrónica. Y puedes crear tus propias corrutinas que devuelvan estos tipos.
 
-Un ejemplo de una función asincrónica de Windows es [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync), que devuelve un objeto de la operación asincrónica de tipo [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_). Echemos un vistazo a algunas maneras &mdash;primero de bloqueo y luego de no bloqueo&mdash; de utilizar C++/WinRT para llamar a una API como esta.
+Un ejemplo de una función asincrónica de Windows es [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync), que devuelve un objeto de la operación asincrónica de tipo [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_).
+
+Echemos un vistazo a algunas maneras &mdash;primero de bloqueo y luego de no bloqueo&mdash; de utilizar C++/WinRT para llamar a una API como esta. Solo para ilustrar las ideas básicas, usaremos un proyecto de **Aplicación de consola de Windows (C++/WinRT)** en los siguientes ejemplos de código. Las técnicas más adecuadas para una aplicación de UI se describen en [Simultaneidad y asincronía más avanzadas](concurrency-2.md).
 
 ## <a name="block-the-calling-thread"></a>Bloqueo del subproceso de llamada
 
@@ -111,6 +114,8 @@ Una corrutina es una función que se puede suspender y reanudar. En la anterior 
 Puedes agregar una corrutina en otras corrutinas. O puedes llamar a **get** para bloquear y esperar a que se complete (y obtener el resultado, si lo hay). O bien, puedes pasarla a otro lenguaje de programación compatible con Windows Runtime.
 
 También es posible controlar los eventos de acciones y operaciones asincrónicas completados o en progreso mediante delegados. Para información más detallada y ejemplos de código, consulta [Tipos de delegados para acciones y operaciones asincrónicas](handle-events.md#delegate-types-for-asynchronous-actions-and-operations).
+
+Como puedes ver, en el ejemplo de código anterior, seguiremos usando la llamada de función de bloqueo **get** justo antes de salir de **main**. Pero esto solo es para que la aplicación no salga antes de finalizar la impresión de la salida.
 
 ## <a name="asynchronously-return-a-windows-runtime-type"></a>Devolución de forma asincrónica de un tipo de Windows Runtime
 

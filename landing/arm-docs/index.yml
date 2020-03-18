@@ -1,0 +1,61 @@
+### YamlMime:Landing
+title: Documentación de Windows 10 en ARM
+summary: Windows 10 funciona en equipos con procesadores ARM. En esta página se proporciona información para conocer más sobre la plataforma y comenzar a desarrollar aplicaciones.
+metadata:
+  title: Documentación de Windows 10 en ARM
+  description: En esta página se proporciona la información necesaria para empezar a desarrollar aplicaciones para UWP y win32 ARM64.
+  ms.service: guidance
+  ms.topic: landing-page
+  author: msatranjr
+  ms.author: misatran
+  ms.date: 05/08/2018
+  ms.localizationpriority: medium
+  ms.openlocfilehash: 27a950a8c9de6e4be8a5905bd274dddeeb982aa7
+  ms.sourcegitcommit: b2a671bf10894a9fbce5d2a1fab7fe6228188394
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79310978"
+landingContent:
+- title: Acerca de Windows 10 en ARM
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 10 en ARM
+      url: /windows/uwp/porting/apps-on-arm.md
+  - linkListType: learn
+    links:
+    - text: Aprender cómo funciona la emulación de x86
+      url: /windows/uwp/porting/apps-on-arm-x86-emulation.md
+  - linkListType: video
+    links:
+    - text: Compilación de aplicaciones de C++ de ARM64 Win32
+      url: https://youtu.be/OZtVBDeVqCE
+    - text: Windows 10 Compilación 2018 en ARM para desarrolladores
+      url: https://channel9.msdn.com/Events/Build/2018/BRK2438
+    - text: Presentación de la Comunidad Windows con Kevin Gallo
+      url: https://channel9.msdn.com/Events/Ch9Live/Windows-Community-Standup/Kevin-Gallo-January-2018
+- title: Desarrollo para Windows 10 en ARM
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Compilación de aplicaciones de ARM64 con el SDK
+      url: https://blogs.windows.com/buildingapps/?p=52087
+    - text: Aplicaciones para UWP en ARM
+      url: /windows/uwp/porting/apps-on-arm-troubleshooting-arm32.md
+    - text: Depuración en ARM
+      url: /windows-hardware/drivers/debugger/debugging-arm64.md
+    - text: Compilación de controladores de ARM64 con el WDK
+      url: /windows-hardware/drivers/develop/building-arm64-drivers.md
+    - text: Desarrollo de aplicaciones x86 en ARM
+      url: /windows/uwp/porting/apps-on-arm-troubleshooting-x86.md
+- title: ¿Tiene comentarios?
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Usar el Centro de opiniones
+      url: feedback-hub://?tabid=2&contextid=803
+    - text: Notificar un error
+      url: mailto:woafeedback@microsoft.com
+    - text: Proporcionar comentarios sobre documentos
+      url: https://github.com/MicrosoftDocs/windows-uwp/tree/docs/landing/arm-docs

@@ -5,18 +5,21 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, XAML, control, boxing, scalar, value
 ms.localizationpriority: medium
-ms.openlocfilehash: 431230d3b67d7a380b4f0b20fdef1e0f918c3aa2
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 29263260217de154f1a942d37d1e18fece15e3d0
+ms.sourcegitcommit: 0142b5a47511afa76d74015e3fd8635b6042a542
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270162"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79038098"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a>Conversión boxing y unboxing de valores escalares a IInspectable con C++/WinRT
  
 La [**interfaz IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) es la interfaz de raíz de todas las clases en tiempo de ejecución de Windows Runtime (WinRT). Esto es una idea análoga a que [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) se encuentra en la raíz de todas las clases e interfaces COM y a que **System.Object** se encuentra en la raíz de todas las clases [Common Type System ](https://docs.microsoft.com/dotnet/standard/base-types/common-type-system).
 
 En otras palabras, una función que espera **IInspectable** se puede pasar a una instancia de cualquier clase en tiempo de ejecución. Sin embargo, no se puede pasar directamente un valor escalar, como un valor numérico o de texto, a dicha función. En su lugar, los valores escalares deben encapsularse dentro de un objeto de clase de referencia. Dicho proceso de encapsulación se conoce como la *conversión boxing* del valor.
+
+> [!IMPORTANT]
+> Puedes aplicar la conversión boxing y unboxing a cualquier tipo que puedas pasar a una API de Windows Runtime. En otras palabras, un tipo de Windows Runtime. Los valores numéricos y de texto (cadenas) son los ejemplos indicados anteriormente. Otro ejemplo es un `struct` que definas en IDL. Si intentas aplicar una conversión boxing a un `struct` de C++ normal (uno que no se defina en IDL), el compilador te recordará que solo puedes aplicar la conversión boxing a un tipo de Windows Runtime. Una clase en tiempo de ejecución es un tipo de Windows Runtime, pero claro que puedes pasar clases en tiempo de ejecución a las API de Windows Runtime sin una conversión boxing.
 
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) proporciona la función [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value), que toma un valor escalar y devuelve el valor de conversión boxing a **IInspectable**. Para realizar la conversión unboxing de **IInspectable** en un valor escalar se usan las funciones [**winrt::unbox_value**](/uwp/cpp-ref-for-winrt/unbox-value) y [**winrt::unbox_value_or**](/uwp/cpp-ref-for-winrt/unbox-value-or).
 

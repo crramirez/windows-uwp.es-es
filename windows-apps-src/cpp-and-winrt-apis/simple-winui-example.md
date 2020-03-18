@@ -5,12 +5,12 @@ ms.date: 07/12/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, biblioteca de interfaz de usuario de Windows, WinUI
 ms.localizationpriority: medium
-ms.openlocfilehash: aadf177bc4a44f67550dba1f6f706525b8460857
-ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
+ms.openlocfilehash: 0dce8e7ea08b18921f228b3da2e679a9edb02228
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78256178"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79200983"
 ---
 # <a name="a-simple-cwinrt-windows-ui-library-example"></a>Un ejemplo sencillo de biblioteca de interfaz de usuario de Windows para C++/WinRT
 
@@ -53,7 +53,7 @@ A continuación, abre `MainPage.xaml`. En la etiqueta de apertura existente de *
 
 En `MainPage.cpp`, elimina el código dentro de la implementación de **MainPage::ClickHandler**, ya que *myButton* ya no está en el marcado XAML.
 
-En `MainPage.h`, edita los elementos que has incluido para que tengan el mismo aspecto que los que aparecen en la lista siguiente. Si quisieras usar WinUI desde más de una página XAML, podrías ir al archivo de encabezado precompilado (normalmente, `pch.h`) e incluir los elementos allí.
+En `MainPage.h`, edita los elementos que has incluido para que tengan el mismo aspecto que los que aparecen en la lista siguiente.
 
 ```cppwinrt
 #include "MainPage.g.h"
@@ -63,7 +63,10 @@ En `MainPage.h`, edita los elementos que has incluido para que tengan el mismo a
 
 Ahora, compila el proyecto.
 
-Al agregar un paquete NuGet a un proyecto de C++/WinRT (como el paquete **Microsoft.UI.Xaml** que agregaste antes) y compilar el proyecto, las herramientas generan un conjunto de encabezados de proyección en la carpeta `\Generated Files\winrt` del proyecto. Si has seguido el tutorial, ahora tendrás una carpeta `\HelloWinUICppWinRT\HelloWinUICppWinRT\Generated Files\winrt`. El cambio realizado en `MainPage.h` anteriormente hace que los archivos de encabezados de proyección se incluyan en el proyecto. Y eso es necesario para que se resuelvan las referencias a los tipos del paquete NuGet.
+Al agregar un paquete NuGet a un proyecto de C++/WinRT (como el paquete **Microsoft.UI.Xaml** que agregaste antes) y compilar el proyecto, las herramientas generan un conjunto de encabezados de proyección en la carpeta `\Generated Files\winrt` del proyecto. Si has seguido el tutorial, ahora tendrás una carpeta `\HelloWinUICppWinRT\HelloWinUICppWinRT\Generated Files\winrt`. La edición que has realizado en `MainPage.h` anterior hace que esos archivos de encabezado de proyección de WinUI se vuelvan visibles para **MainPage**. Y eso es necesario para que se resuelva la referencia en **MainPage** en el tipo **Microsoft::UI::Xaml::Controls::NavigationView**.
+
+> [!IMPORTANT]
+> En una aplicación real, querrás que los archivos de encabezado de proyección de WinUI estén visibles para *todas* las páginas XAML del proyecto, no solo para **MainPage**. En ese caso, moverías las inclusiones de los dos archivos de encabezado de proyección de WinUI al archivo de encabezado precompilado (normalmente, `pch.h`). Luego, se resolverán las referencias en cualquier lugar del proyecto en los tipos del paquete NuGet. En el caso de una aplicación mínima de una página, como la que se está compilando en este tutorial, no es necesario usar `pch.h`, y es adecuado incluir los encabezados en `MainPage.h`.
 
 Ahora puedes ejecutar el proyecto.
 

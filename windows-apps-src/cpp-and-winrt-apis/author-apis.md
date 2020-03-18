@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, estándar, c++, cpp, winrt, projected, proyectado, projection, proyección, implementation, implementación, implement, implementar, runtime class, clase en tiempo de ejecución, activation, activación
 ms.localizationpriority: medium
 ms.openlocfilehash: 84c0e9315950541e51bf49f5c0eec370f3188c4d
-ms.sourcegitcommit: 58f6643510a27d6b9cd673da850c191ee23b813e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74701483"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209280"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
@@ -32,7 +32,7 @@ En ambos casos, el tipo que implementa tus API de C++/WinRT se denomina *tipo de
 El escenario más sencillo es aquel en el que implementas una interfaz de Windows Runtime para consumo local. No necesitas una clase en tiempo de ejecución, solo una clase C++ normal. Por ejemplo, podrías estar escribiendo una app basada en [**CoreApplication** ](/uwp/api/windows.applicationmodel.core.coreapplication).
 
 > [!NOTE]
-> Para más información sobre cómo instalar y usar C++/WinRT Visual Studio Extension (VSIX) y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para más información sobre cómo instalar y usar la Extensión de Visual Studio (VSIX) para C++/WinRT y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 En Visual Studio, la plantilla de proyecto **Visual C++**  > **Windows Universal** > **Core App (C++/WinRT)** muestra el patrón **CoreApplication**. El patrón empieza pasando una implementación de [**Windows::ApplicationModel::Core::IFrameworkViewSource**](/uwp/api/windows.applicationmodel.core.iframeworkviewsource) a [**CoreApplication::Run**](/uwp/api/windows.applicationmodel.core.coreapplication.run).
 
@@ -114,7 +114,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 ...
 ```
 
-Dado que el tipo de tu **App***es***IFrameworkViewSource**, solo puedes pasar uno a **Run**.
+Dado que el tipo de **App** *es* **IFrameworkViewSource**, solo puedes pasar uno a **Run**.
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -316,7 +316,7 @@ Si tienes un objeto de la interfaz y sabes que se trata de una interfaz en tu im
 > [!NOTE]
 > Si no has instalado el SDK de Windows versión 10.0.17763.0 (Windows 10, versión 1809) o posterior, tendrás que llamar a [**winrt::from_abi**](/uwp/cpp-ref-for-winrt/from-abi) en lugar de [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self).
 
-A continuación te mostramos un ejemplo. Hay otro ejemplo en [Implementan la clase de control personalizada **BgLabelControl**](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
+A continuación se muestra un ejemplo. Hay otro ejemplo en [Implementan la clase de control personalizada **BgLabelControl**](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class).
 
 ```cppwinrt
 void ImplFromIClosable(IClosable const& from)
@@ -459,7 +459,7 @@ MySpecializedToggleButtonAutomationPeer::MySpecializedToggleButtonAutomationPeer
 ...
 ```
 
-El constructor de clase base espera un objeto **ToggleButton**. Y **MySpecializedToggleButton** *es un objeto* **ToggleButton**.
+El constructor de clase base espera un objeto **ToggleButton**. Y **MySpecializedToggleButton** *es un* **ToggleButton**.
 
 Hasta que no hayas realizado la modificación descrita anteriormente (pasar dicho parámetro del constructor a la clase base), el compilador marcará el constructor e indicará que no hay ningún constructor predeterminado adecuado disponible en un tipo llamado, en este caso, **MySpecializedToggleButtonAutomationPeer_base&lt;MySpecializedToggleButtonAutomationPeer&gt;** . En realidad es la clase base de la clase base de tu tipo de implementación.
 
@@ -492,17 +492,17 @@ Aquí se indican varios lugares donde las características de C++/WinRT esperan 
 |Característica|Acepta|Notas|
 |-|-|-|
 |`T` (representa un puntero inteligente)|Proyectado|Consulta el aviso en [Namespaces: projected types, implementation types, and factories](#namespaces-projected-types-implementation-types-and-factories) (Espacios de nombres: tipos proyectados, tipos de implementación y factorías) sobre el uso del tipo de implementación por error.|
-|`agile_ref<T>`|Ambos|Si usas el tipo de implementación, entonces el argumento del constructor debe ser `com_ptr<T>`.|
+|`agile_ref<T>`|Ambas|Si usas el tipo de implementación, entonces el argumento del constructor debe ser `com_ptr<T>`.|
 |`com_ptr<T>`|Implementación|El uso del tipo proyectado genera el error: `'Release' is not a member of 'T'`.|
-|`default_interface<T>`|Ambos|Si usas el tipo de implementación, se devuelve la primera interfaz implementada.|
+|`default_interface<T>`|Ambas|Si usas el tipo de implementación, se devuelve la primera interfaz implementada.|
 |`get_self<T>`|Implementación|El uso del tipo proyectado genera el error: `'_abi_TrustLevel': is not a member of 'T'`.|
-|`guid_of<T>()`|Ambos|Devuelve el GUID de la interfaz predeterminada.|
+|`guid_of<T>()`|Ambas|Devuelve el GUID de la interfaz predeterminada.|
 |`IWinRTTemplateInterface<T>`<br>|Proyectado|El uso del tipo de implementación se compila, pero es un error&mdash;consulta el aviso en [Namespaces: projected types, implementation types, and factories](#namespaces-projected-types-implementation-types-and-factories) (Espacios de nombres: tipos proyectados, tipos de implementación y factorías).|
 |`make<T>`|Implementación|El uso del tipo proyectado genera el error: `'implements_type': is not a member of any direct or indirect base class of 'T'`.|
-| `make_agile(T const&amp;)`|Ambos|Si usad el tipo de implementación, entonces el argumento debe ser `com_ptr<T>`.|
+| `make_agile(T const&amp;)`|Ambas|Si usad el tipo de implementación, entonces el argumento debe ser `com_ptr<T>`.|
 | `make_self<T>`|Implementación|El uso del tipo proyectado genera el error: `'Release': is not a member of any direct or indirect base class of 'T'`.|
 | `name_of<T>`|Proyectado|Si usas el tipo de implementación, obtendrás el GUID de cadenas de la interfaz predeterminada.|
-| `weak_ref<T>`|Ambos|Si usas el tipo de implementación, entonces el argumento del constructor debe ser `com_ptr<T>`.|
+| `weak_ref<T>`|Ambas|Si usas el tipo de implementación, entonces el argumento del constructor debe ser `com_ptr<T>`.|
 
 ## <a name="opt-in-to-uniform-construction-and-direct-implementation-access"></a>Participación en la construcción uniforme y acceso de implementación directa
 
@@ -746,7 +746,7 @@ Esto requiere que todos los miembros de la jerarquía de la clase acuerden el va
 * [Plantilla de función winrt::from_abi](/uwp/cpp-ref-for-winrt/from-abi)
 * [Plantilla de función winrt::get_self](/uwp/cpp-ref-for-winrt/get-self)
 * [Plantilla de estructura winrt::implements](/uwp/cpp-ref-for-winrt/implements)
-* [Plantilla de función winrt::make ](/uwp/cpp-ref-for-winrt/make)
+* [Plantilla de función winrt::make](/uwp/cpp-ref-for-winrt/make)
 * [Plantilla de función winrt::make_self](/uwp/cpp-ref-for-winrt/make-self)
 * [Función winrt::Windows::Foundation::IUnknown::as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
