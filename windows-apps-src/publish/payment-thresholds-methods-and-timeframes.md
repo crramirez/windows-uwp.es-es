@@ -1,21 +1,21 @@
 ---
 Description: El tiempo estimado para transferir pagos, los umbrales de pago aplicables y los catálogos de soluciones de Microsoft desde los que puedes recibir pagos pueden variar según el país o la región y el tipo de cuenta de pago.
 title: Umbrales, métodos y plazos de pago
-ms.date: 10/18/2018
+ms.date: 03/16/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bcaedb87111d8d55a3d082adc8fdbd8a5096747
-ms.sourcegitcommit: 35a511c2b29ae3d5008612a5fc13d3eb6370d2d0
+ms.openlocfilehash: 45a491364a4b1f406169cba76b7e7ea1ded00886
+ms.sourcegitcommit: 1d6d05d28358e087d9ee8829d76c5fbbac0225cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67495702"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79434222"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Umbrales, métodos y plazos de pago
 
-El tiempo estimado para los pagos de transferencia y catálogos de Microsoft desde el que puede recibir pagos puede variar según el tipo de cuenta de pago y país/región. En este tema se describe los métodos de pago admitidos en cada país o región.
+El tiempo estimado para transferir pagos y Microsoft marketplaces desde los que puede recibir pagos puede variar en función de su país o región y tipo de cuenta de pago. En este tema se describen los métodos de pago admitidos en cada país o región.
 
 Para cualquier país o región específico, usaremos ACH/SEPA o transferencia bancaria para enviar nuestros pagos. Además, en algunos países o algunas regiones se admite PayPal como método de pago.
 
@@ -37,9 +37,9 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 ## <a name="payment-methods-in-countriesregions"></a>Métodos de pago en países o regiones
 
 > [!NOTE]
-> Los umbrales de pago en todas las regiones es 50 USD.
+> Los umbrales de pago en todas las regiones son $50 USD.
 
-| País                          | Azure Marketplace | Store, publicidad, Mixer y Minecraft | Office | Pagos de PayPal |
+| País                          | Azure Marketplace | Almacenar, anunciar, Mixer y Minecraft | Office | Pagos por PayPal |
 |----------------------------------|-------------------|------------------------------------------|--------|-----------------|
 | Afganistán                      | Sí               | Sí                                      | No     | No              |
 | Albania                          | Sí               | Sí                                      | Sí    | Sí             |
@@ -74,12 +74,12 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 | Colombia                         | Sí               | Sí                                      | Sí    | Sí             |
 | Comoras                          | Sí               | Sí                                      | No     | No              |
 | Congo (RDC)                      | Sí               | Sí                                      | Sí    | No              |
-| Congo, República Unida de               | Sí               | Sí                                      | Sí    | No              |
+| Congo, República de               | Sí               | Sí                                      | Sí    | No              |
 | Costa Rica                       | Sí               | Sí                                      | Sí    | Sí             |
-| Costa de Marfil                    | Sí               | Sí                                      | Sí    | No              |
+| Côte D'Ivoire                    | Sí               | Sí                                      | Sí    | No              |
 | Croacia                          | Sí               | Sí                                      | Sí    | No              |
 | Chipre                           | Sí               | Sí                                      | Sí    | Sí             |
-| República Checa                   | Sí               | Sí                                      | Sí    | Sí             |
+| República checa                   | Sí               | Sí                                      | Sí    | Sí             |
 | Dinamarca                          | Sí               | Sí                                      | Sí    | Sí             |
 | Dominica                         | Sí               | Sí                                      | No     | Sí             |
 | República Dominicana               | Sí               | Sí                                      | Sí    | Sí             |
@@ -91,9 +91,9 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 | Etiopía                         | Sí               | Sí                                      | Sí    | No              |
 | Fiyi                     | Sí               | Sí                                      | No     | No              |
 | Finlandia                          | Sí               | Sí                                      | Sí    | Sí             |
-| Francia                           | Sí               | Sí                                      | Sí    | Sí             |
+| France                           | Sí               | Sí                                      | Sí    | Sí             |
 | Georgia                          | Sí               | Sí                                      | Sí    | Sí             |
-| Alemania                          | Sí               | Sí                                      | Sí    | Sí             |
+| Germany                          | Sí               | Sí                                      | Sí    | Sí             |
 | Ghana                            | Sí               | Sí                                      | Sí    | No              |
 | Grecia                           | Sí               | Sí                                      | Sí    | Sí             |
 | Guatemala                        | Sí               | Sí                                      | Sí    | Sí             |
@@ -110,11 +110,11 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 | Israel                           | Sí               | Sí                                      | Sí    | Sí             |
 | Italia                            | Sí               | Sí                                      | Sí    | Sí             |
 | Jamaica                          | Sí               | Sí                                      | Sí    | Sí             |
-| Japón                            | Sí               | Sí                                      | Sí    | Sí             |
+| Japan                            | Sí               | Sí                                      | Sí    | Sí             |
 | Jordania                           | Sí               | Sí                                      | Sí    | Sí             |
 | Kazajistán                       | Sí               | Sí                                      | Sí    | Sí             |
 | Kenia                            | Sí               | Sí                                      | Sí    | Sí             |
-| Corea del sur                    | Sí               | Sí                                      | Sí    | No              |
+| Corea (sur)                    | Sí               | Sí                                      | Sí    | No              |
 | Kuwait                           | Sí               | Sí                                      | Sí    | Sí             |
 | Kirguistán                       | No                | No                                       | Sí    | No              |
 | Laos                             | Sí               | Sí                                      | Sí    | No              |
@@ -124,7 +124,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 | Liechtenstein                    | Sí               | Sí                                      | Sí    | Sí             |
 | Lituania                        | Sí               | Sí                                      | Sí    | No              |
 | Luxemburgo                       | Sí               | Sí                                      | Sí    | Sí             |
-| Macedonia del Norte                        | No                | Sí                                      | Sí    | No              |
+| Ex-República Yugoslava de Macedonia                        | No                | Sí                                      | Sí    | No              |
 | Madagascar                       | Sí               | Sí                                      | Sí    | No              |
 | Malawi                           | Sí               | Sí                                      | Sí    | Sí             |
 | Malasia                         | Sí               | Sí                                      | Sí    | Sí             |
@@ -153,8 +153,8 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 | Polonia                           | Sí               | Sí                                      | Sí    | Sí             |
 | Portugal                         | Sí               | Sí                                      | Sí    | Sí             |
 | Puerto Rico                      | No                | No                                       | Sí    | No              |
-| Catar                            | Sí               | Sí                                      | Sí    | Sí             |
-| Rumanía                          | Sí               | Sí                                      | Sí    | No              |
+| Qatar                            | Sí               | Sí                                      | Sí    | Sí             |
+| Rumania                          | Sí               | Sí                                      | Sí    | No              |
 | Rusia                           | Sí               | Sí                                      | No     | Sí             |
 | Ruanda                           | Sí               | Sí                                      | Sí    | No              |
 | San Vicente y las Granadinas | No                | Sí                                      | No     | No              |

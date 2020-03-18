@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c8fda22a565972e4157777c1db537a8f8d9ba20
-ms.sourcegitcommit: 20af365ce85d3d7d3a8d07c4cba5d0f1fbafd85d
+ms.openlocfilehash: d148df8de9086aaaec004525c3ee4865e4320c4e
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034006"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79453365"
 ---
 # <a name="xbind-markup-extension"></a>Extensión de marcado {x:Bind}
 
@@ -30,7 +30,7 @@ Los objetos de enlace creados por **{x: enlace}** y **{Binding}** son prácticam
 
 -   [{x:Bind} (ejemplo)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlBind)
 -   [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper)
--   [Ejemplo de conceptos básicos de la interfaz de usuario XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
+-   [XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery)
 
 ## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
@@ -85,8 +85,7 @@ Por ejemplo: en una página, **Text="{x:Bind Employee.FirstName}"** buscará un 
 
 En el caso de C++/CX, **{x:Bind}** no se puede enlazar a propiedades y campos privados en el modelo de datos o página: debes tener una propiedad pública para que se pueda enlazar. El área de superficie del enlace se debe exponer como clases o interfaces de CX para que podamos obtener los metadatos relevantes. No es necesario el **\[atributo\]enlazable** .
 
-Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. En su lugar, puede usar el nombre del elemento como la primera parte de la ruta de acceso para el enlace, ya que los elementos con nombre se convierten en campos dentro de la página o control de usuario que representa el origen de enlace raíz. 
-
+Con **x:Bind**, no necesitas usar **ElementName=xxx** como parte de la expresión de enlace. En su lugar, puede usar el nombre del elemento como la primera parte de la ruta de acceso para el enlace, ya que los elementos con nombre se convierten en campos dentro de la página o control de usuario que representa el origen de enlace raíz.
 
 ### <a name="collections"></a>Colecciones
 
@@ -104,10 +103,80 @@ Para enlazar a [las propiedades adjuntas](./attached-properties-overview.md), de
 
 ### <a name="casting"></a>Conversión
 
-El establecimiento de tipos de los enlaces compilados es inflexible y resuelve el tipo de cada paso en una ruta de acceso. Si el tipo devuelto no incluye el miembro, se producirá un error durante la compilación. Puedes especificar una conversión para indicar el tipo real del objeto al enlace. En el siguiente caso, **obj** es una propiedad del objeto de tipo, pero contiene un cuadro de texto, por lo que podemos usar **Text="{x:Bind ((TextBox)obj).Text}"** o **Text="{x:Bind obj.(TextBox.Text)}"** .
+El establecimiento de tipos de los enlaces compilados es inflexible y resuelve el tipo de cada paso en una ruta de acceso. Si el tipo devuelto no incluye el miembro, se producirá un error durante la compilación. Puedes especificar una conversión para indicar el tipo real del objeto al enlace.
+
+En el siguiente caso, **obj** es una propiedad del objeto de tipo, pero contiene un cuadro de texto, por lo que podemos usar **Text="{x:Bind ((TextBox)obj).Text}"** o **Text="{x:Bind obj.(TextBox.Text)}"** .
+
 El campo **groups3** de **Text = "{x:BIND ((Data: SampleDataGroup) groups3\[0\]). Title} "** es un diccionario de objetos, por lo que debe convertirlo en **Data: SampleDataGroup**. Recuerda que puedes usar el prefijo del espacio de nombres XML **data:** para asignar el tipo de objeto a un espacio de nombres de código que no forme parte del espacio de nombres XAML predeterminado.
 
 _Nota: la C#sintaxis de conversión de estilo es más flexible que la sintaxis de la propiedad adjunta y es la sintaxis recomendada en el futuro._
+
+#### <a name="pathless-casting"></a>Conversión de rutas de acceso
+
+El analizador de enlace nativo no proporciona una palabra clave para representar `this` como un parámetro de función, pero admite la conversión sin ruta de acceso (por ejemplo, `{x:Bind (x:String)}`), que se puede usar como un parámetro de función. Por lo tanto, `{x:Bind MethodName((namespace:TypeOfThis))}` es una manera válida de realizar lo que es conceptualmente equivalente a `{x:Bind MethodName(this)}`.
+
+Ejemplo:
+
+`Text="{x:Bind local:MainPage.GenerateSongTitle((local:SongItem))}"`
+
+```xaml
+<Page
+    x:Class="AppSample.MainPage"
+    ...
+    xmlns:local="using:AppSample">
+
+    <Grid>
+        <ListView ItemsSource="{x:Bind Songs}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:SongItem">
+                    <TextBlock
+                        Margin="12"
+                        FontSize="40"
+                        Text="{x:Bind local:MainPage.GenerateSongTitle((local:SongItem))}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
+```
+
+```csharp
+namespace AppSample
+{
+    public class SongItem
+    {
+        public string TrackName { get; private set; }
+        public string ArtistName { get; private set; }
+
+        public SongItem(string trackName, string artistName)
+        {
+            ArtistName = artistName;
+            TrackName = trackName;
+        }
+    }
+
+    public sealed partial class MainPage : Page
+    {
+        public List<SongItem> Songs { get; }
+        public MainPage()
+        {
+            Songs = new List<SongItem>()
+            {
+                new SongItem("Track 1", "Artist 1"),
+                new SongItem("Track 2", "Artist 2"),
+                new SongItem("Track 3", "Artist 3")
+            };
+
+            this.InitializeComponent();
+        }
+
+        public static string GenerateSongTitle(SongItem song)
+        {
+            return $"{song.TrackName} - {song.ArtistName}";
+        }
+    }
+}
+```
 
 ## <a name="functions-in-binding-paths"></a>Funciones en rutas de acceso de enlace
 
