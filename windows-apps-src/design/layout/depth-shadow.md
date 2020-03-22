@@ -3,19 +3,18 @@ author: knicholasa
 description: La profundidad Z, la profundidad relativa y la sombra son dos maneras de incorporar la profundidad en la aplicación para ayudar a los usuarios a centrarse de forma natural y eficaz.
 title: Profundidad Z y sombra para aplicaciones UWP
 template: detail.hbs
-ms.author: nichola
 ms.date: 04/19/2019
 ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 pm-contact: chigy
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e9197be38d1edfdad41a434132f318cdf3f45ea
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 216974ba564a192f94473469f3a7a49191ef2192
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282417"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081386"
 ---
 # <a name="z-depth-and-shadow"></a>Profundidad Z y sombra
 
@@ -39,7 +38,7 @@ Si utiliza controles estándar, las sombras de ThemeShadow se incorporarán auto
 
 ## <a name="themeshadow"></a>ThemeShadow
 
-El tipo ThemeShadow se puede aplicar a cualquier elemento XAML para dibujar las sombras de forma adecuada en función de las coordenadas x, y, z. ThemeShadow también se ajusta automáticamente para otras especificaciones del entorno:
+El tipo [ThemeShadow](/uwp/api/windows.ui.xaml.media.themeshadow) se puede aplicar a cualquier elemento XAML para dibujar las sombras de forma adecuada en función de las coordenadas x, y, z. ThemeShadow también se ajusta automáticamente para otras especificaciones del entorno:
 
 - Se adapta a los cambios en la iluminación, el tema del usuario, el entorno de la aplicación y el shell.
 - Aplica sombras a los elementos automáticamente según su profundidad z. 
@@ -65,7 +64,7 @@ Los controles comunes siguientes usarán automáticamente ThemeShadow para conve
 - [Control de transporte multimedia](../controls-and-patterns/media-playback.md#media-transport-controls), [InkToolbar](../controls-and-patterns/inking-controls.md)
 - [Animación conectada](../motion/connected-animation.md)
 
-Nota: Los controles flotantes solo aplicarán ThemeShadow cuando se compilan en Windows 10 versión 1903 o un SDK más reciente.
+Nota: los controles flotantes solo aplicarán ThemeShadow cuando se compilan en Windows 10 versión 1903 o un SDK más reciente.
 
 ### <a name="themeshadow-in-popups"></a>ThemeShadow en elementos emergentes
 
@@ -115,7 +114,7 @@ Si la sombra predeterminada no tiene un aspecto correcto en el contenido del con
 
 En general, le recomendamos que piense detenidamente en el uso de la sombra y limite su uso a los casos en los que se presenta una jerarquía visual significativa. Sin embargo, se proporciona una manera de convertir una sombra de cualquier elemento de la interfaz de usuario en caso de que tenga escenarios avanzados que lo necesiten.
 
-Para convertir una sombra de un elemento XAML que no está en un elemento emergente, debe especificar explícitamente los otros elementos que pueden recibir la sombra en la colección `ThemeShadow.Receivers`. Los receptores no pueden ser antecesores de la conversión en el árbol visual.
+Para convertir una sombra de un elemento XAML que no está en un elemento emergente, debe especificar explícitamente los otros elementos que pueden recibir la sombra en la colección de `ThemeShadow.Receivers`. Los receptores no pueden ser antecesores de la conversión en el árbol visual.
 
 En este ejemplo se muestran dos rectángulos que proyectan sombras en una cuadrícula detrás de ellos:
 
@@ -159,8 +158,8 @@ La sombra no responde automáticamente a su entorno y no usa fuentes luminosas. 
 
 ## <a name="which-shadow-should-i-use"></a>¿Qué sombra debo usar?
 
-| Property | ThemeShadow | Sombra |
-| - | - | - | - |
+| Propiedad | ThemeShadow | Sombra |
+| - | - | - |
 | **SDK mínimo** | Windows 10 versión 1903 | 14393 |
 | **Adaptabilidad** | Sí | No |
 | **Personalización** | No | Sí |

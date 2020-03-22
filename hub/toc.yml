@@ -48,8 +48,6 @@
               href: apps/desktop/modernize/desktop-to-uwp-extend.md
             - name: Distribución de la aplicación empaquetada
               href: apps/desktop/modernize/desktop-to-uwp-distribute.md
-        - name: Concesión de identidad a aplicaciones de escritorio no empaquetadas
-          href: apps/desktop/modernize/grant-identity-to-nonpackaged-apps.md
         - name: 'Tutorial: Modernización de una aplicación WPF'
           items:
             - name: Introducción
@@ -64,6 +62,8 @@
               href: apps/desktop/modernize/modernize-wpf-tutorial-4.md
             - name: Empaquetar e implementar con MSIX
               href: apps/desktop/modernize/modernize-wpf-tutorial-5.md
+        - name: Concesión de identidad a aplicaciones de escritorio no empaquetadas
+          href: apps/desktop/modernize/grant-identity-to-nonpackaged-apps.md
     - name: Fluent Design System
       href: apps/fluent-design-system.md
     - name: Accesibilidad
@@ -71,27 +71,7 @@
     - name: Voz
       href: apps/speech.md
     - name: Características y tecnologías
-      items:
-        - name: Introducción
-          href: apps/features-and-technologies.md
-        - name: Procesar seguimientos de ETW en .NET
-          items:
-            - name: Introducción
-              href: apps/trace-processing/overview.md
-            - name: Procesar el primer seguimiento
-              href: apps/trace-processing/quickstart.md
-            - name: Acceder a los datos de seguimiento
-              href: apps/trace-processing/tutorial.md
-            - name: Extender TraceProcessor
-              href: apps/trace-processing/extensibility.md
-            - name: Cargar símbolos
-              href: apps/trace-processing/symbols.md
-            - name: Usar el streaming
-              href: apps/trace-processing/streaming.md
-            - name: Ejemplos
-              href: 'https://github.com/microsoft/eventtracing-processing-samples'
-            - name: Referencia
-              href: apps/trace-processing/reference.md
+      href: apps/features-and-technologies.md
     - name: Actualizaciones más recientes del documento
       href: apps/whats-new/latest-doc-updates.md
 - name: Compilación con Windows

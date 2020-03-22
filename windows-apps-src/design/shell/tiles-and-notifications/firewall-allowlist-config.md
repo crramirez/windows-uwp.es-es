@@ -4,21 +4,20 @@ Description: Muchas empresas usan firewalls para bloquear el tráfico no deseado
 title: Agregar tráfico de WNS al firewall permitidos
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, servicio de notificaciones de Windows, notificación, Windows, firewall, solución de problemas, IP, tráfico, empresa, red, IPv4, VIP, FQDN, dirección IP pública
 ms.localizationpriority: medium
-ms.openlocfilehash: fa0153a395144382aee3f764f0f7d9316afa9c5e
-ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
+ms.openlocfilehash: 34e66249c5b44cbfecd81b9238eda2b1e5412b9a
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76265026"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080661"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configuraciones de firewall y proxy de empresa para admitir el tráfico de WNS
 
-## <a name="background"></a>Segundo plano
+## <a name="background"></a>Fondo
 Muchas empresas usan firewalls para bloquear el tráfico de red y los puertos no deseados; Desafortunadamente, esto también puede bloquear aspectos importantes como las comunicaciones del servicio de notificaciones de Windows. Esto significa que todas las notificaciones enviadas a través de WNS se quitarán en determinadas configuraciones de red. Para evitar esto, los administradores de red pueden agregar la lista de FQDN o VIP de WNS aprobados a su lista de exenciones para permitir que el tráfico de WNS pase a través del firewall. A continuación se muestran más detalles sobre cómo y qué agregar, así como la compatibilidad con distintos tipos de proxy.
 
 ## <a name="proxy-support"></a>Compatibilidad con proxy
@@ -26,7 +25,7 @@ Muchas empresas usan firewalls para bloquear el tráfico de red y los puertos no
 > [!Note]
 > Los clientes de Windows **no** admiten todos los servidores proxy, la conexión a WNS debe ser una conexión directa.
 
-**Próximamente** Estamos investigando activamente diferentes configuraciones de red, servidores proxy y firewalls. Esta página se actualizará con más detalles sobre escenarios empresariales comunes y la compatibilidad con WNS en breve.
+**¡Próximamente!** Estamos investigando activamente diferentes configuraciones de red, servidores proxy y firewalls. Esta página se actualizará con más detalles sobre escenarios empresariales comunes y la compatibilidad con WNS en breve.
 
 
 ## <a name="what-information-should-be-added-to-the-allowlist"></a>Información que se debe agregar a permitidos
