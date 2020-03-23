@@ -8,22 +8,22 @@ ms.date: 11/16/2017
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ecf82294614114e711483dfdc58cfad36591369
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: ea9f58c8f861be7774285c5611ad222d9587e2a1
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319560"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081710"
 ---
-# <a name="controls-for-uwp-apps"></a>Controles de aplicaciones para UWP 
+# <a name="controls-for-uwp-apps"></a>Controles de aplicaciones para UWP
 
-![Controls](../images/controls-2x.png)
+![Controles](../images/controls-2x.png)
 
 En el desarrollo de aplicaciones para UWP, un <i>control</i> es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Los controles son los elementos esenciales de la interfaz de usuario. Un <i>patrón</i> es una receta para combinar varios controles con el fin de hacer algo nuevo.
 
-Ponemos a tu disposición más de 45 controles, que van desde botones simples hasta controles de datos de enorme eficacia, como la vista de cuadrícula.  Estos controles forman parte de Fluent Design System y pueden ayudarte a crear una interfaz de usuario llamativa y escalable que quede bien en todos los dispositivos y tamaños de pantalla. 
+Ponemos a tu disposición más de 45 controles, que van desde botones simples hasta controles de datos de enorme eficacia, como la vista de cuadrícula.  Estos controles forman parte de Fluent Design System y pueden ayudarte a crear una interfaz de usuario llamativa y escalable que quede bien en todos los dispositivos y tamaños de pantalla.
 
-Los artículos de esta sección proporcionan instrucciones de diseño y de codificación para agregar controles y patrones a aplicaciones para UWP. 
+Los artículos de esta sección proporcionan instrucciones de diseño y de codificación para agregar controles y patrones a aplicaciones para UWP.
 
 ## <a name="intro"></a>Introducción
 
@@ -41,85 +41,92 @@ El marco XAML te permite personalizar la apariencia de tus aplicaciones de varia
 :::row-end:::
 
 ## <a name="get-the-windows-ui-library"></a>Obtener la biblioteca de interfaz de usuario de Windows
-Algunos controles solo están disponibles en la biblioteca de interfaz de usuario de Windows. Para obtenerla, consulta la [introducción a la biblioteca de interfaz de usuario de Windows y las instrucciones de instalación](/uwp/toolkits/winui/).
 
-## <a name="alphabetical-index"></a>Índice alfabético 
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | Algunos controles solo están disponibles en la biblioteca de interfaz de usuario de Windows (WinUI), un paquete NuGet que contiene nuevos controles y características de interfaz de usuario. Para obtenerla, consulta la [introducción a la biblioteca de interfaz de usuario de Windows y las instrucciones de instalación](/uwp/toolkits/winui/).<br/>A partir de WinUI 2.2, el estilo predeterminado de muchos controles se actualizó para usar esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). |
 
-Obtener información detallada sobre los patrones y controles específicos. (Para obtener una lista ordenada por función, consulta <a href="controls-by-function.md">Índice de controles por función</a>).
+## <a name="alphabetical-index"></a>Índice alfabético
 
-<div style="column-count: 2; column-gap: 40px; margin-top: 40px;" >
-<ul style="margin-top: 0px; padding-top: 0px; list-style-type: none;">
-<li style="list-style-type: none;"><a href="auto-suggest-box.md">Cuadro de sugerencias automáticas</a></li>
+Obtener información detallada sobre los patrones y controles específicos. (Para obtener una lista ordenada por función, consulta [Índice de controles por función](controls-by-function.md)).
 
-<li style="list-style-type: none;"><a href="app-bars.md">Barras</a></li>
+:::row:::
+    :::column:::
 
-<li style="list-style-type: none;"><a href="buttons.md">Botones</a></li>
+- Reproductor visual animado (consulte [Lottie](/windows/communitytoolkit/animations/lottie)) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Cuadro de sugerencias automáticas](auto-suggest-box.md)
+- [Botón](buttons.md)
+- [Selector de fecha del calendario](calendar-date-picker.md)
+- [Vista del calendario](calendar-view.md)
+- [Casilla](checkbox.md)
+- [Selector de color](color-picker.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Cuadro combinado](combo-box.md)
+- [Barra de comandos](app-bars.md)
+- [Control flotante de la barra de comandos](command-bar-flyout.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Tarjeta de contacto](contact-card.md)
+- [Cuadro de diálogo de contenido](dialogs-and-flyouts/dialogs.md)
+- [Vínculo de contenido](content-links.md)
+- [Menú contextual](menus.md)
+- [Selector de fecha](date-picker.md)
+- [Cuadros de diálogo y controles flotantes](dialogs-and-flyouts/index.md)
+- [Botón de lista desplegable](buttons.md#create-a-drop-down-button) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Vista para alternar](flipview.md)
+- [control flotante](dialogs-and-flyouts/flyouts.md)
+- [Formularios](forms.md) (patrón)
+- [Vista de cuadrícula](listview-and-gridview.md)
+- [Hipervínculo](hyperlinks.md)
+- [Botón de hipervínculo](hyperlinks.md#create-a-hyperlinkbutton)
+- [Imágenes y pinceles de imagen](images-imagebrushes.md)
+- [Controles de entrada manuscrita](inking-controls.md)
+- [Vista de lista](listview-and-gridview.md)
+- [Control de mapa](../../maps-and-location/controls-map.md)
+- [Maestro/detalles](master-details.md) (patrón)
+- [Reproducción de multimedia](media-playback.md)
+- [Barra de menús](menus.md#create-a-menu-bar) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Control flotante de menú](menus.md)
+- [Vista de navegación](navigationview.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
 
-<li style="list-style-type: none;"><a href="checkbox.md">Casilla</a></li>
+    :::column-end:::
+    :::column:::
 
-<li style="list-style-type: none;"><a href="color-picker.md">Selector de colores</a></li>
+- [Cuadro de número](number-box.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Vista de Parallax](..\motion\parallax.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Cuadro de contraseña](password-box.md)
+- [Imagen de persona](person-picture.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Pivot](pivot.md)
+- [Barra de progreso](progress-controls.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Círculo de progreso](progress-controls.md)
+- [Botón de radio](radio-button.md)
+- [Control de clasificación](rating.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Botón Repetir](buttons.md#create-a-repeat-button)
+- [Cuadro de texto enriquecido](rich-edit-box.md)
+- [Bloque de texto enriquecido](rich-text-block.md)
+- [Visor de desplazamiento](scroll-controls.md)
+- [Búsqueda](search.md) (patrón)
+- [Zoom semántico](semantic-zoom.md)
+- [Formas](shapes.md)
+- [Control deslizante](slider.md)
+- [Botón Dividir](buttons.md#create-a-split-button) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Vista dividida](split-view.md)
+- [Control Deslizar rápidamente](swipe.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Vista de pestañas](tab-view.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Sugerencia de enseñanza](dialogs-and-flyouts/teaching-tip.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Bloque de texto](text-block.md)
+- [Cuadro de texto](text-box.md)
+- [Selector de hora](time-picker.md)
+- [Modificador para alternar](toggles.md)
+- [Botón de alternancia](buttons.md)
+- [Botón Activar o desactivar división](buttons.md#create-a-toggle-split-button)
+- [Información sobre herramientas](tooltips.md)
+- [Vista de árbol](tree-view.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Vista de dos paneles](two-pane-view.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Vista web](web-view.md)
 
-<li style="list-style-type: none;"><a href="contact-card.md">Tarjeta de contacto</a></li>
-
-<li style="list-style-type: none;"><a href="date-and-time.md">Controles de fecha y hora</a></li>
-
-<li style="list-style-type: none;"><a href="dialogs-and-flyouts/index.md">Cuadros de diálogo y controles flotantes</a></li>
-
-<li style="list-style-type: none;"><a href="flipview.md">Vista para alternar</a></li>
-
-<li style="list-style-type: none;"><a href="forms.md">Formularios</a></li>
-
-<li style="list-style-type: none;"><a href="hyperlinks.md">Hipervínculos</a></li>
-
-<li style="list-style-type: none;"><a href="images-imagebrushes.md">Imágenes y pinceles de imagen</a></li>
-
-<li style="list-style-type: none;"><a href="inking-controls.md">Controles de entrada manuscrita</a></li>
-
-<li style="list-style-type: none;"><a href="lists.md">Listas</a></li>
-
-<li style="list-style-type: none;"><a href="../../maps-and-location/controls-map.md">Control de mapa</a></li>
-
-<li style="list-style-type: none;"><a href="master-details.md">Maestro/detalles</a></li>
-
-<li style="list-style-type: none;"><a href="media-playback.md">Reproducción de multimedia</a></li>
-
-<li style="list-style-type: none;"><a href="menus.md">Menús y menús contextuales</a></li>
-
-<li style="list-style-type: none;"><a href="navigationview.md">Vista de navegación</a></li>
-
-<li style="list-style-type: none;"><a href="person-picture.md">Imagen de persona</a></li>
-
-<li style="list-style-type: none;"><a href="pivot.md">Pivot</a></li>
-
-<li style="list-style-type: none;"><a href="progress-controls.md">Controles de progreso</a></li>
-
-<li style="list-style-type: none;"><a href="radio-button.md">Botón de radio</a></li>
-
-<li style="list-style-type: none;"><a href="rating.md">Control de clasificación</a></li>
-
-<li style="list-style-type: none;"><a href="scroll-controls.md">Controles de desplazamiento y movimiento panorámico</a></li>
-
-<li style="list-style-type: none;"><a href="search.md">Buscar</a></li>
-
-<li style="list-style-type: none;"><a href="semantic-zoom.md">Zoom semántico</a></li>
-
-<li style="list-style-type: none;"><a href="shapes.md">Formas</a></li>
-
-<li style="list-style-type: none;"><a href="slider.md">Control deslizante</a></li>
-
-<li style="list-style-type: none;"><a href="split-view.md">Vista dividida</a></li>
-
-<li style="list-style-type: none;"><a href="text-controls.md">Controles de texto</a></li>
+    :::column-end:::
+:::row-end:::
 
 
-<li style="list-style-type: none;"><a href="toggles.md">Alternancia</a></li>
-<li style="list-style-type: none;"><a href="tooltips.md">Información sobre herramientas</a></li>
 
-<li style="list-style-type: none;"><a href="tree-view.md">Vista de árbol</a></li>
-
-<li style="list-style-type: none;"><a href="web-view.md">Vista web</a></li>
-</ul>
-</div>
 
 ## <a name="xaml-controls-gallery"></a>XAML Controls Gallery
 
@@ -133,6 +140,4 @@ Obtén la aplicación _XAML Controls Gallery_ de Microsoft Store para ver en acc
 
 ## <a name="additional-controls"></a>Controles adicionales
 
-Hay disponibles controles adicionales para el desarrollo para UWP desde empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> y <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Estos controles proporcionan compatibilidad adicional para desarrolladores de empresa y .NET, ya que mejoran los controles estándar del sistema con controles y servicios personalizados.  
-
-Si estás interesado en saber más sobre estos controles, echa un vistazo al ejemplo de <a href="https://github.com/Microsoft/Windows-appsample-customers-orders-database">base de datos de pedidos de clientes</a> en GitHub. En este ejemplo, se usa el control de cuadrícula de datos y la validación de entrada de datos de Telerik, que forma parte de su interfaz de usuario para el conjunto de aplicaciones de UWP. La interfaz de usuario para el conjunto de aplicaciones de UWP es una colección de más de 20 controles que está disponible como proyecto de código abierto a través de .NET Foundation.
+Hay disponibles controles adicionales para el desarrollo para UWP desde empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> y <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Estos controles proporcionan compatibilidad adicional para desarrolladores de empresa y .NET, ya que mejoran los controles estándar del sistema con controles y servicios personalizados.

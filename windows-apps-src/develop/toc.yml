@@ -299,7 +299,7 @@
           href: ../debug-test-perf/loose-file-registration.md
         - name: Pruebas beta
           href: ../debug-test-perf/beta-testing.md
-        - name: Windows Device Portal
+        - name: Portal de dispositivos Windows
           href: ../debug-test-perf/device-portal.md
           items:
             - name: Device Portal para equipos de escritorio
@@ -432,7 +432,7 @@
               href: ../monetize/set-up-ad-units-in-your-app.md
             - name: Servicio de mediación de anuncios de Microsoft
               href: ../monetize/ad-mediation-service.md
-            - name: Procedimiento recomendado
+            - name: Procedimientos recomendados
               href: ../monetize/best-practices-for-ads-in-apps.md
               items:
                 - name: Directrices de la interfaz de usuario y de la experiencia del usuario
@@ -743,13 +743,13 @@
       items:
         - name: Introducción
           href: ../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md
-        - name: Comenzar
+        - name: Introducción
           href: ../cpp-and-winrt-apis/get-started.md
         - name: Novedades
           href: ../cpp-and-winrt-apis/news.md
         - name: Preguntas frecuentes
           href: ../cpp-and-winrt-apis/faq.md
-        - name: Solución de problemas
+        - name: Solucionar problemas
           href: ../cpp-and-winrt-apis/troubleshooting.md
         - name: Aplicación de ejemplo de Photo Editor
           href: ../cpp-and-winrt-apis/photo-editor-sample.md
@@ -1204,7 +1204,7 @@
       items:
         - name: Migración del proyecto
           href: ../porting/w8x-to-uwp-porting-to-a-uwp-project.md
-        - name: Solución de problemas
+        - name: Solucionar problemas
           href: ../porting/w8x-to-uwp-troubleshooting.md
         - name: Migración de XAML y la interfaz de usuario
           href: ../porting/w8x-to-uwp-porting-xaml-and-ui.md
@@ -1249,7 +1249,7 @@
           href: ../porting/wpsl-to-uwp-namespace-and-class-mappings.md
         - name: Migración del proyecto
           href: ../porting/wpsl-to-uwp-porting-to-a-uwp-project.md
-        - name: Solución de problemas
+        - name: Solucionar problemas
           href: ../porting/wpsl-to-uwp-troubleshooting.md
         - name: Migración de XAML y la interfaz de usuario
           href: ../porting/wpsl-to-uwp-porting-xaml-and-ui.md
@@ -1354,6 +1354,8 @@
               href: ../launch-resume/extend-your-app-with-services-extensions-packages.md
             - name: Crear y hospedar una extensión de aplicación
               href: ../launch-resume/how-to-create-an-extension.md
+            - name: Crear aplicaciones hospedadas
+              href: ../launch-resume/hosted-apps.md
         - name: Hacer que tu aplicación sea compatible con las tareas en segundo plano
           href: ../launch-resume/support-your-app-with-background-tasks.md
           items:
