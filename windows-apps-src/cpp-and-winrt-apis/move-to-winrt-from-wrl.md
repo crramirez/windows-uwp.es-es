@@ -5,19 +5,19 @@ ms.date: 05/30/2018
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migrar, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b313e80b744279f8dc955e8c07d31aba2860c3f
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 663e0dddb9823e35e2d31ba9667bd3d16bd1d5de
+ms.sourcegitcommit: cab95379459ad378163aa4469c9dc6c509cc8c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393429"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510998"
 ---
 # <a name="move-to-cwinrt-from-wrl"></a>Migrar a C++/WinRT desde WRL
 En este tema se muestra cómo portar código de la [Biblioteca de plantillas C++ de Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) a su equivalente en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 El primer paso en la migración a C++/WinRT es agregar manualmente soporte C++/WinRT a tu proyecto (consulta [Soporte de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)). Para ello, instala el [paquete NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) en el proyecto. Abre el proyecto en Visual Studio, haz clic en **Proyecto** \> **Administrar paquetes NuGet...** \> **Busca**, escribe o pega **Microsoft.Windows.CppWinRT** en el cuadro de búsqueda, selecciona el elemento en los resultados de la búsqueda y haz clic en **Instalar** para instalar el paquete de ese proyecto. Un efecto de ese cambio es que el soporte para [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) está desactivado en el proyecto. Si usas C++/CX en el proyecto, puedes dejar el soporte desactivado y actualizar tu código de C++/CX a C++/WinRT también (consulta [Mover a C++/ WinRT desde C++/CX](move-to-winrt-from-cx.md)). O bien puedes volver a activar el soporte (en las propiedades del proyecto, **C/C++** \> **General** \> **Usar extensión de Windows Runtime** \> **Sí (/ZW)** ) y centrarte primero en portar tu código WRL. El código de C++/CX y C++/WinRT puede coexistir en el mismo proyecto, a excepción de la compatibilidad con el compilador XAML y los componentes de Windows Runtime (consulta [Migrar a C++/WinRT desde C++/CX](move-to-winrt-from-cx.md)).
 
-Establece la propiedad de proyecto **General** \> **Versión de la plataforma de destino** en 10.0.17134.0 (Windows 10, versión 1803) o superior.
+Establece la propiedad de proyecto **General** \> **Versión de la plataforma de destino** en 10.0.17134.0 (Windows 10, versión 1803) o superior.
 
 En el archivo de encabezado precompilado (normalmente `pch.h`), incluye `winrt/base.h`.
 
@@ -27,7 +27,7 @@ En el archivo de encabezado precompilado (normalmente `pch.h`), incluye `winrt/b
 
 Si incluyes cualquier encabezado de API de Windows proyectado de C++/ WinRT (por ejemplo, `winrt/Windows.Foundation.h`), no necesitas incluir explícitamente `winrt/base.h` de este modo, porque se incluirá automáticamente para ti.
 
-## <a name="porting-wrl-com-smart-pointers-microsoftwrlcomptrcppwindowscomptr-class"></a>Portar punteros inteligentes COM WRL ([Microsoft::WRL::ComPtr](/cpp/windows/comptr-class))
+## <a name="porting-wrl-com-smart-pointers-microsoftwrlcomptr"></a>Portar punteros inteligentes COM WRL ([Microsoft::WRL::ComPtr](/cpp/windows/comptr-class))
 Porta cualquier código que use **Microsoft::WRL::ComPtr\<T\>** para que use [**winrt::com_ptr\<T\>** ](/uwp/cpp-ref-for-winrt/com-ptr). Aquí se muestra un ejemplo de código de "antes" y "después". En la versión de *después*, la función miembro [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput-function) recupera el puntero sin procesar subyacente para que se pueda establecer.
 
 ```cpp
@@ -87,7 +87,7 @@ m_d3dDevice->CreateDepthStencilView(m_depthStencil.Get(), &dsvDesc, m_dsvHeap->G
 m_d3dDevice->CreateDepthStencilView(m_depthStencil.get(), &dsvDesc, m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
 ```
 
-Cuando quieras pasar el puntero sin procesar subyacente a una función que espera un puntero a **IUnknown**, usa la función gratuita [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#get_unknown-function), tal como se muestra en el siguiente ejemplo.
+Cuando quieras pasar el puntero sin procesar subyacente a una función que espera un puntero a **IUnknown**, usa la función gratuita [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown), tal como se muestra en el siguiente ejemplo.
 
 ```cpp
 ComPtr<IDXGISwapChain1> swapChain;

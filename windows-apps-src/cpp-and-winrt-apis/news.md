@@ -1,21 +1,80 @@
 ---
 description: Noticias y cambios en C++/WinRT.
 title: Novedades de C++/WinRT
-ms.date: 04/23/2019
+ms.date: 03/16/2020
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, news, what's, new
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d5a2c3d10f2cbfcc608d212a9465ca738e1ca15e
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 734544a1294c6a97e70afcbf7ce6b5efc13cf841
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209110"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448585"
 ---
 # <a name="whats-new-in-cwinrt"></a>Novedades de C++/WinRT
 
 A medida que se publiquen las versiones posteriores de C++/WinRT, se describirán las novedades y los cambios en este tema.
+
+## <a name="rollup-of-recent-improvementsadditions-as-of-march-2020"></a>Paquete acumulativo de mejoras o adiciones recientes a partir de marzo de 2020
+
+### <a name="up-to-23-shorter-build-times"></a>Reducción de los tiempos de compilación de hasta un 23 %
+
+Los equipos de compiladores de C++/WinRT y C++ han colaborado en todo lo posible para reducir los tiempos de compilación. Hemos leído atentamente los análisis del compilador para averiguar cómo se pueden reestructurar los elementos internos de C++/WinRT para ayudar al compilador de C++ a eliminar la sobrecarga de tiempo de compilación, y también cómo mejorar el compilador de C++ para controlar la biblioteca de C++/WinRT. C++/WinRT se ha optimizado para el compilador; y el compilador se ha optimizado para C++/WinRT.
+
+Tomemos como ejemplo el peor escenario de creación de un encabezado precompilado (PCH) que contenga todos los encabezados del espacio de nombres de proyección de C++/WinRT.
+
+| Version | Tamaño del encabezado PCH (bytes) | Tiempo (s) |
+| - | - | - |
+| C++/WinRT a partir de julio, con Visual C++ 16.3 | 3 004 104 632 | 31 |
+| versión 2.0.200316.3 de C++/WinRT, con Visual C++ 16.5 | 2 393 515 336 | 24 |
+
+Una reducción del 20 % del tamaño y del 23 % del tiempo de compilación.
+
+### <a name="improved-msbuild-support"></a>Compatibilidad con MSBuild mejorada
+
+Hemos invertido muchos esfuerzos en mejorar la compatibilidad con [MSBuild](/visualstudio/msbuild/msbuild?view=vs-2019) para una gran selección de escenarios diferentes.
+
+### <a name="even-faster-factory-caching"></a>Almacenamiento en caché de fábrica aún más rápido
+
+Hemos mejorado la inclusión de la memoria caché de fábrica para mejorar las rutas de acceso activas en línea, lo que conduce a una ejecución más rápida.
+
+Esa mejora no afecta al tamaño del código &mdash;tal y como se describe a continuación en [Generación de código optimizada para el control de excepciones](#optimized-exception-handling-eh-code-generation). Si la aplicación usa de forma intensiva el control de excepciones de C++, puede reducir el binario mediante la opción `/d2FH4`, que está activada de forma predeterminada en los proyectos nuevos creados con Visual Studio 2019 16.3 y versiones posteriores.
+
+### <a name="more-efficient-boxing"></a>Conversión boxing más eficiente
+
+Si se usa en una aplicación XAML, [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value) ahora es más eficaz (consulta [Conversión boxing y unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)). Las aplicaciones que realizan muchas conversiones boxing también observarán una reducción del tamaño del código.
+
+### <a name="support-for-implementing-com-interfaces-that-implement-iinspectable"></a>Compatibilidad para implementar interfaces COM que implementan IInspectable
+
+Si necesitas implementar una interfaz COM (que no sea de Windows Runtime) que solo implemente [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable), ahora puedes hacerlo con C++/WinRT. Consulta [Interfaces COM que implementan IInspectable](https://github.com/microsoft/xlang/pull/603).
+
+### <a name="module-locking-improvements"></a>Mejoras en el bloqueo de módulos
+
+El control sobre el bloqueo de módulos ahora permite tanto los escenarios de hospedaje personalizados como la eliminación total de bloqueos en el nivel de módulos. Consulta [Mejoras en el bloqueo de módulos](https://github.com/microsoft/xlang/pull/583).
+
+### <a name="support-for-non-windows-runtime-error-information"></a>Soporte para información de errores que no son de Windows Runtime
+
+Algunas API (incluidas algunas de Windows Runtime) notifican errores sin utilizar las API que han originado los errores de Windows Runtime. En estos casos, C++/WinRT ahora vuelve a usar la información de error de COM. Consulta [Soporte de C++/WinRT para información de errores que no son de WinRT](https://github.com/microsoft/xlang/pull/582).
+
+### <a name="enable-c-module-support"></a>Habilitar la compatibilidad con módulos de C++ 
+
+La compatibilidad con módulos de C++ vuelve a estar disponible, pero solo de forma experimental. La característica no está completa en el compilador de C++ de momento.
+
+### <a name="more-efficient-coroutine-resumption"></a>Reanudación más eficaz de la corrutina
+
+Las corrutinas de C++/WinRT ya funcionan bien, pero seguimos buscando formas de mejorarlas. Consulta [Mejorar la escalabilidad de la reanudación de corrutinas](https://github.com/microsoft/xlang/pull/546).
+
+### <a name="new-when_all-and-when_any-async-helpers"></a>Nuevas aplicaciones auxiliares asincrónicas **when_all** y **when_any**
+
+La función auxiliar **when_all** crea un objeto [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) que se completa una vez completados todos los objetos que admiten await proporcionados. La aplicación auxiliar **when_any** crea un objeto **IAsyncAction** que se completa una vez completados todos los objetos que admiten await proporcionados. 
+
+Consulta [Agregar la aplicación auxiliar asincrónica when_any](https://github.com/microsoft/xlang/pull/520) y [Agregar la aplicación auxiliar asincrónica when_all](https://github.com/microsoft/xlang/pull/516).
+
+### <a name="other-optimizations-and-additions"></a>Otras optimizaciones y adiciones
+
+Además, se han introducido numerosas correcciones de errores y optimizaciones y adiciones menores, incluidas varias mejoras para simplificar la depuración y optimizar las implementaciones internas y predeterminadas. Sigue este vínculo para obtener una lista exhaustiva: [https://github.com/microsoft/xlang/pulls?q=is%3Apr+is%3Aclosed](https://github.com/microsoft/xlang/pulls?q=is%3Apr+is%3Aclosed).
 
 ## <a name="news-and-changes-in-cwinrt-20"></a>Noticias y cambios en C++/WinRT 2.0
 

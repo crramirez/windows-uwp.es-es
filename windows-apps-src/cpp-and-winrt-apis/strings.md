@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, string
 ms.localizationpriority: medium
-ms.openlocfilehash: 004aa3e267bab86527ac3d5c3fe0383ccd4ad904
-ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
+ms.openlocfilehash: 1771c3754e8e9580514f646ae8589b1982911fc7
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67844307"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448564"
 ---
 # <a name="string-handling-in-cwinrt"></a>Control de cadenas en C++/WinRT
 
@@ -159,23 +159,25 @@ Es posible que observes que los parámetros de entrada de C++/WinRT, que deben a
 El resultado es que puedes omitir en gran medida las características específicas de gestión de cadenas de Windows Runtime y trabajar así eficazmente con aquello que conoces. Y esto es importante, teniendo en cuenta la gran cantidad de cadenas que se utilizan en Windows Runtime.
 
 ## <a name="formatting-strings"></a>Formato de las cadenas
-Una opción para dar formato a las cadenas es **std::wstringstream**. Este es un ejemplo que da formato y muestra un mensaje de seguimiento de depuración simple.
+Una opción para dar formato a las cadenas es **std::wostringstream**. Este es un ejemplo que da formato y muestra un mensaje de seguimiento de depuración simple.
 
 ```cppwinrt
 #include <sstream>
+#include <winrt/Windows.UI.Input.h>
+#include <winrt/Windows.UI.Xaml.Input.h>
 ...
-void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
+void MainPage::OnPointerPressed(winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e)
 {
-    float2 const point = args.CurrentPoint().Position();
-    std::wstringstream wstringstream;
-    wstringstream << L"Pointer pressed at (" << point.x << L"," << point.y << L")" << std::endl;
-    ::OutputDebugString(wstringstream.str().c_str());
+    winrt::Windows::Foundation::Point const point{ e.GetCurrentPoint(nullptr).Position() };
+    std::wostringstream wostringstream;
+    wostringstream << L"Pointer pressed at (" << point.X << L"," << point.Y << L")" << std::endl;
+    ::OutputDebugString(wostringstream.str().c_str());
 }
 ```
 
 ## <a name="the-correct-way-to-set-a-property"></a>La forma correcta para establecer una propiedad
 
-Establece una propiedad pasando un valor a una función de establecimiento. A continuación te mostramos un ejemplo.
+Establece una propiedad pasando un valor a una función de establecimiento. A continuación se muestra un ejemplo.
 
 ```cppwinrt
 // The right way to set the Text property.

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción, uwp, windows 10, pista de aprendizaje, diseño, formulario
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9542151a8104ade77d8311ed1f16eba2809ecf7a
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.openlocfilehash: 02cb15d948bf35b1c449bb430c9c31dd33d9eec6
+ms.sourcegitcommit: ea058c804637319f18801447fd0f7e38ce17b801
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163687"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79543978"
 ---
 # <a name="create-and-customize-a-form"></a>Crear y personalizar un formulario
 
@@ -127,7 +127,7 @@ Algo más importante para diseños dinámicos son los **estados visuales.** Un e
 ```
 
 > [!IMPORTANT]
-> Cuando use StateTriggers, siempre asegúrese de que VisualStateGroups se adjunte al menor elemento secundario de la raíz. Aquí, **Grid** es el primer elemento secundario del elemento **Page** raíz.
+> Cuando use StateTriggers, siempre asegúrese de que VisualStateGroups se adjunte al primer elemento secundario de la raíz. Aquí, **Grid** es el primer elemento secundario del elemento **Page** raíz.
 
 No es práctico crear estados visuales para una amplia variedad de tamaños de pantalla, ni hay más de un par de ellos que pueden tener un impacto significativo en la experiencia del usuario de su aplicación. Recomendamos diseñar en su lugar algunos puntos de interrupción clave; puede [leer más aquí](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md).
 

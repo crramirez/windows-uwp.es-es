@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, desarrollo de escritorio
-ms.openlocfilehash: d0d87f8e4b6524471ff5e2ada9012a22641b06d7
-ms.sourcegitcommit: ddf0137929945eddf01041a81aa4d26038e70f46
+ms.openlocfilehash: bf8a5970d1999427023592f919ef0b92737fa934
+ms.sourcegitcommit: cab95379459ad378163aa4469c9dc6c509cc8c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74392089"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510988"
 ---
 # <a name="choose-your-app-platform"></a>Elección de la plataforma de aplicaciones
 
@@ -26,9 +26,13 @@ Cuando quieres crear una nueva aplicación de escritorio para equipos Windows, l
 
 Todas estas plataformas de aplicaciones te permiten crear aplicaciones de escritorio como Word, Excel y Photoshop, que se ejecutan en el escritorio clásico de Windows y aprovechan al máximo las características específicas de ese entorno. Sin embargo, algunas de estas plataformas disponen de características especiales que resultan más adecuadas para determinados tipos de aplicaciones:
 
-* **UWP, WPF y Windows Forms**. Estas plataformas proporcionan entornos de ejecución administrados (Windows Runtime para UWP, y .NET para Windows Forms y WPF) que aportan muchas ventajas, especialmente en las áreas de productividad del desarrollador, una interfaz de usuario sofisticada y personalizable, y la seguridad de las aplicaciones. Como estas plataformas admiten diseñadores visuales y el marcado de la interfaz de usuario para crear rápidamente dicha interfaz, resultan especialmente adecuadas para las aplicaciones de línea de negocio.
+* **UWP**. Esta plataforma proporciona un sistema de tipos común, las API y el modelo de aplicación para todos los dispositivos que ejecutan Windows 10. Las aplicaciones para UWP pueden ser nativas o administradas. 
 
-* **Win32 API**. Win32 API (también conocida como la API de Windows) es la plataforma original para aplicaciones Windows en C y C++ nativas que requieren acceso directo a Windows y al hardware. Proporciona una experiencia de desarrollo de primera clase sin depender de un entorno de ejecución administrado como .NET y WinRT. Esto hace que Win32 API sea la plataforma preferida para las aplicaciones que necesitan el mayor nivel de rendimiento y acceso directo al hardware del sistema.
+* **WPF y Windows Forms**. Estas plataformas proporcionan un sistema de tipos común, las API y el modelo de aplicación para las aplicaciones administradas que se ejecutan en .NET.
+
+* **Win32 API**. Win32 API (también conocida como la API de Windows) es la plataforma original para aplicaciones Windows en C y C++ nativas que requieren acceso directo a Windows y al hardware. Esto hace que Win32 API sea la plataforma preferida para las aplicaciones que necesitan el mayor nivel de rendimiento y acceso directo al hardware del sistema.
+
+Tanto UWP como .NET presentan una integración profunda con Visual Studio. Esto proporciona muchas ventajas, especialmente en las áreas de productividad de desarrollo, interfaz de usuario sofisticada y personalizable, y seguridad de las aplicaciones. Como estas plataformas admiten diseñadores visuales y el marcado de la interfaz de usuario para crear rápidamente dicha interfaz, resultan especialmente adecuadas para las aplicaciones de línea de negocio.
 
 En este artículo se describen con más detalle estas plataformas, y esa información te ayudará a determinar cuál es la mejor para tu aplicación. 
 
@@ -62,7 +66,7 @@ Para obtener más información sobre WPF, consulta los artículos siguientes:
 * [Referencia de API (.NET)](https://docs.microsoft.com/dotnet/api/index)
 * [Ejemplos](https://github.com/Microsoft/WPF-Samples)
 
-## <a name="windows-forms"></a>Windows Forms
+## <a name="windows-forms"></a>Windows Forms
 
 Windows Forms es la plataforma original para aplicaciones Windows administradas, con un modelo de interfaz de usuario ligero y acceso a .NET Core y a la instancia completa de .NET Framework. Esta plataforma es más adecuada para que los desarrolladores puedan empezar a compilar aplicaciones rápidamente, incluso para aquellos que no están familiarizados con ella. Se trata de una plataforma de desarrollo de aplicaciones rápida, basada en formularios, con una gran colección integrada de controles visuales y de arrastrar y colocar que no son visuales. Windows Forms no usa XAML, por lo que si decides más adelante llevar tu aplicación a UWP, tendrás que reescribir completamente la interfaz de usuario.
 
@@ -98,7 +102,7 @@ Para obtener más información, consulta los artículos siguientes:
 
 En la tabla siguiente se comparan las distintas características de Windows Forms, WPF y UWP en detalle.
 
-| Característica o escenario  |    UWP     |      WPF     |   Windows Forms  |
+| Característica o escenario  |    UWP     |      WPF     |   Windows Forms  |
 |--------|--------|--------|--------|
 | **Versiones admitidas**      |  Windows 10   |  Windows 7 y versiones posteriores |  Windows 7 y versiones posteriores  |
 | **Lenguajes**      |   C\#, C++/WinRT, C++/CX, VB, JavaScript   |  C\#, C++/CLI (Extensiones administradas para C++), F\#, VB |  C\#, C++/CLI (Extensiones administradas para C++), F\#, VB   |
