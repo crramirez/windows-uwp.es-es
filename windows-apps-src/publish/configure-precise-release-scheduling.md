@@ -127,7 +127,7 @@ A continuación se muestra una tabla en la que se muestran las zonas horarias es
 | República Centroafricana  |  (UTC + 01:00) África central occidental |
 | Chad  |  (UTC + 01:00) África central occidental |
 | Chile  |  (UTC-04:00) Santiago |
-| China  |  (UTC + 08:00) Pekín, Chongqing, Hong Kong, Urumqi |
+| China  |  (UTC + 08:00) Beijing, Chongqing, Hong Kong, Urumqi |
 | Isla de Navidad  |  (UTC + 07:00) Krasnoiarsk |
 | Islas Cocos  |  (UTC + 06:30) Yangón (Rangún) |
 | Colombia  |  (UTC-05:00) Bogotá, Lima, Quito, Río Branco |
@@ -179,7 +179,7 @@ A continuación se muestra una tabla en la que se muestran las zonas horarias es
 | Islas Heard y McDonald  |  (UTC-05:00) Bogotá, Lima, Quito, Río Branco |
 | Santa Sede (Ciudad del Vaticano)  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
 | Honduras  |  (UTC-06:00) Hora central (EE. UU. & Canadá) |
-| Región Administrativa Especial de Hong Kong  |  (UTC + 08:00) Pekín, Chongqing, Hong Kong, Urumqi |
+| RAE de Hong Kong  |  (UTC + 08:00) Beijing, Chongqing, Hong Kong, Urumqi |
 | Hungría  |  (UTC + 01:00) Belgrado, Bratislava, Budapest, Liubliana, Praga |
 | Islandia  |  (UTC + 00:00) Monrovia, Reykjavik |
 | India  |  (UTC + 05:30) Chennai, Calcuta, Mumbai, Nueva Delhi |
@@ -207,8 +207,8 @@ A continuación se muestra una tabla en la que se muestran las zonas horarias es
 | Liechtenstein  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
 | Lituania  |  (UTC + 02:00) Chisinau |
 | Luxemburgo  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
-| RAE de Macao  |  (UTC + 08:00) Pekín, Chongqing, Hong Kong, Urumqi |
-| Macedonia (Ex-República Yugoslava de Macedonia)  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
+| RAE de Macao  |  (UTC + 08:00) Beijing, Chongqing, Hong Kong, Urumqi |
+| Macedonia del Norte (ERY de Macedonia)  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
 | Madagascar  |  (UTC + 03:00) Nairobi |
 | Malawi  |  (UTC + 02:00) Harare, Pretoria |
 | Malasia  |  (UTC + 08:00) Kuala Lumpur, Singapur |

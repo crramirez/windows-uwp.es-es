@@ -244,7 +244,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>RAE de Macao</td>
   </tr>
   <tr>
-    <td>Macedonia (ERYM)</td>
+    <td>Macedonia del Norte (ERYM)</td>
     <td>Madagascar</td>
     <td>Malawi</td>
     <td>Malasia</td>
@@ -613,7 +613,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Liberia</td>
     <td>Liechtenstein</td>
     <td>RAE de Macao</td>
-    <td>Macedonia (ERYM)</td>
+    <td>Macedonia del Norte (ERYM)</td>
   </tr>
   <tr>
     <td>Madagascar</td>
