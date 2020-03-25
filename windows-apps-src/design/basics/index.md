@@ -1,28 +1,28 @@
 ---
-description: Aprende a diseñar y codificar una aplicación para UWP en la que resulte fácil navegar y cuyo aspecto sea perfecto en varios dispositivos y tamaños de pantalla.
+description: Aprende a diseñar y codificar una aplicación de Windows en la que resulte fácil navegar y cuyo aspecto sea perfecto en varios dispositivos y tamaños de pantalla.
 title: Conceptos básicos de diseño
-keywords: diseño de aplicaciones para UWP, Plataforma universal de Windows, diseño de aplicaciones, interfaz
-ms.date: 03/07/2018
+keywords: diseño de aplicaciones para uwp, plataforma universal de windows, diseño de aplicaciones, interfaz, fluent design system
+ms.date: 03/23/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 78462d5d29ebcc31792aa46da7657c57fb960e13
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: fdedd400928a32ae44a1e88b8e0159d7b36473f2
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984109"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218515"
 ---
-# <a name="design-basics-for-uwp-apps"></a>Conceptos básicos de diseño de las aplicaciones para UWP
+# <a name="design-basics-for-windows-apps"></a>Conceptos básicos de diseño para aplicaciones de Windows
 
 ![Icono de conceptos básicos de diseño](../images/basics-2x.png)
 
-Las instrucciones de diseño para la Plataforma universal de Windows (UWP) son un recurso que te ayuda a diseñar y crear fantásticas aplicaciones. No se trata de una lista de reglas prescriptivas, sino de un documento dinámico, diseñado para adaptarse a la evolución de nuestra aplicación Fluent Design System, así como a las necesidades de nuestra comunidad de creación de aplicaciones. 
+Las instrucciones de diseño de Windows son un recurso que te ayuda a diseñar y compilar fantásticas aplicaciones. No se trata de una lista de reglas prescriptivas, sino de un documento dinámico, diseñado para adaptarse a la evolución de nuestra aplicación Fluent Design System, así como a las necesidades de nuestra comunidad de creación de aplicaciones. 
 
 ## <a name="overview"></a>Introducción
 
-[**Introducción al diseño de aplicaciones para UWP**](design-and-ui-intro.md)
+[**Introducción al diseño de aplicaciones de Windows**](design-and-ui-intro.md)
 
-Introducción a las características de UWP combinada con procedimientos recomendados para crear aplicaciones que se escalan a la perfección en todo tipo de dispositivos diseñados para Windows.
+Introducción a las características de aplicaciones de Windows combinada con procedimientos recomendados para crear aplicaciones que se escalan a la perfección en todo tipo de dispositivos diseñados para Windows.
 
 [**Fluent Design System**](/windows/apps/fluent-design-system)
 
@@ -32,7 +32,7 @@ Fluent Design System presenta nuestros objetivos y principios para la creació
 
 [**Conceptos básicos de navegación**](navigation-basics.md)
 
-La navegación en las aplicaciones para UWP se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema. Este artículo es una introducción a estos componentes y te muestra cómo usarlos juntos para crear una buena experiencia de navegación.
+La navegación en las aplicaciones de Windows se basa en un modelo flexible de estructuras de navegación, elementos de navegación y características de nivel del sistema. Este artículo es una introducción a estos componentes y te muestra cómo usarlos juntos para crear una buena experiencia de navegación.
 
 [**Conceptos básicos de comandos**](commanding-basics.md)
 
@@ -57,4 +57,4 @@ Proporciona a la aplicación de edición de fotos un diseño adaptativo.
 
 [**3. Crear estilos personalizados**](xaml-basics-style.md)
 
-Proporciona un aspecto propio a nuestros controles para UWP mediante la creación de estilos personalizados.
+Proporciona un aspecto propio a nuestros controles de Windows mediante la creación de estilos personalizados.

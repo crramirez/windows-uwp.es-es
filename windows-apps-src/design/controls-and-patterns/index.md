@@ -1,29 +1,29 @@
 ---
-description: Obtén instrucciones de diseño y de codificación para agregar controles y patrones a aplicaciones para UWP. Descubre más de 45 controles eficaces para su uso con la aplicación.
-title: 'Controles y patrones para UWP: desarrollo de aplicaciones de Windows'
-keywords: controles de UWP, interfaz de usuario, controles de la aplicación
+description: Obtén instrucciones de diseño y de codificación para agregar controles y patrones a tu aplicación de Windows. Descubre más de 45 controles eficaces para su uso con la aplicación.
+title: 'Controles y patrones de Windows: desarrollo de aplicaciones de Windows'
+keywords: controles de UWP, interfaz de usuario, controles de la aplicación, controles de windows
 label: Controls & patterns
 template: detail.hbs
-ms.date: 11/16/2017
+ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: ea9f58c8f861be7774285c5611ad222d9587e2a1
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 63907b3bfe3fc6dece900f1a7c09ac535e859471
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081710"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218455"
 ---
-# <a name="controls-for-uwp-apps"></a>Controles de aplicaciones para UWP
+# <a name="controls-for-windows-apps"></a>Controles para aplicaciones de Windows
 
 ![Controles](../images/controls-2x.png)
 
-En el desarrollo de aplicaciones para UWP, un <i>control</i> es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Los controles son los elementos esenciales de la interfaz de usuario. Un <i>patrón</i> es una receta para combinar varios controles con el fin de hacer algo nuevo.
+En el desarrollo de aplicaciones de Windows, un <i>control</i> es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Los controles son los elementos esenciales de la interfaz de usuario. Un <i>patrón</i> es una receta para combinar varios controles con el fin de hacer algo nuevo.
 
 Ponemos a tu disposición más de 45 controles, que van desde botones simples hasta controles de datos de enorme eficacia, como la vista de cuadrícula.  Estos controles forman parte de Fluent Design System y pueden ayudarte a crear una interfaz de usuario llamativa y escalable que quede bien en todos los dispositivos y tamaños de pantalla.
 
-Los artículos de esta sección proporcionan instrucciones de diseño y de codificación para agregar controles y patrones a aplicaciones para UWP.
+Los artículos de esta sección proporcionan instrucciones de diseño y de codificación para agregar controles y patrones a tu aplicación de Windows.
 
 ## <a name="intro"></a>Introducción
 
@@ -140,4 +140,4 @@ Obtén la aplicación _XAML Controls Gallery_ de Microsoft Store para ver en acc
 
 ## <a name="additional-controls"></a>Controles adicionales
 
-Hay disponibles controles adicionales para el desarrollo para UWP desde empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> y <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Estos controles proporcionan compatibilidad adicional para desarrolladores de empresa y .NET, ya que mejoran los controles estándar del sistema con controles y servicios personalizados.
+Hay disponibles controles adicionales para el desarrollo de Windows de empresas como <a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> y <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>. Estos controles proporcionan compatibilidad adicional para desarrolladores de empresa y .NET, ya que mejoran los controles estándar del sistema con controles y servicios personalizados.
