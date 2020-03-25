@@ -6,12 +6,12 @@ ms.author: mattwoj
 manager: jken
 ms.topic: article
 ms.date: 03/19/2020
-ms.openlocfilehash: ae86947b461e3fb748b67043827ffeebfc5cb0d2
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 2a7a5983dcc7e330a30cf53b93c73f36f811d17d
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80108108"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218475"
 ---
 # <a name="contribute-to-windows-docs-and-be-entered-to-win-some-swag"></a>Contribuya con Windows docs y escriba para ganar algunos swag
 
@@ -27,7 +27,7 @@ Esto es lo que debe hacer:
     - [Herramientas y controladores de - de desarrollo de hardware de](https://docs.microsoft.com/windows-hardware/drivers/) **Windows**
 3. Realice correcciones en una página de docs seleccionando el botón **Editar** en la parte superior de la página. Esto le llevará al archivo de origen de Markdown en GitHub.
 4. Una vez completados los cambios. Archivo su solicitud de incorporación de cambios (PR).
-5. Visite la [@WindowsDocs](https://twitter.com/WindowsDocs) cuenta de Twitter y responda a la publicación de concurso con un vínculo a su solicitud de incorporación de mensajes.
+5. Responda a la [publicación de@WindowsDocs concurso](https://twitter.com/WindowsDocs/status/1242088720209268736) con un vínculo a su solicitud de incorporación de mensajes.
 
 Gracias a nuestra comunidad de colaboradores.
 

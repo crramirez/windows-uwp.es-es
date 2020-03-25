@@ -7,12 +7,12 @@ ms.date: 03/19/2017
 ms.topic: article
 keywords: windows 10, uwp, maps, mapas, map style sheet, hoja de estilo de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: b59e8c3c6d9c4c299e441964be1afb4e02051e23
-ms.sourcegitcommit: 5264d7499ddbe21199a63d74a294206069f90f8b
+ms.openlocfilehash: b2e6e57721a5667a9ca38b21eee2a618353cd30b
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78287451"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218565"
 ---
 # <a name="map-style-sheet-reference"></a>Referencia de hoja de estilo de mapa
 
@@ -263,6 +263,7 @@ En esta sección se describen las propiedades que puedes usar para cada entrada.
 | shadedReliefVisible          | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Un marcador que indica si se va a dibujar o no el sombreado de elevación en el mapa. |
 | shadowColor                  | Color   |      |      |      |  ✔   |  ✔   | Color de los iconos de sombra detrás que utilizan sombras. |
 | spaceColor                   | Color   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | El valor de color ARGB para la zona que rodea el mapa. |
+| terrainFlat                  | Bool    |      |      |      |      |      | Marca que indica si el terreno debe ser plano (deshabilitado) en el mapa. |
 | useDefaultImageColors        | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | Marca que indica si se deben usar los colores originales del SVG en lugar de buscar la entrada de la paleta para los colores de una imagen. |
 
 <a id="mapelement" />

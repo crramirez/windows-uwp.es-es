@@ -8,16 +8,16 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 4bc474c3414969f27468a8daf262df0ae6e3b57e
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 3f2a0a6ee6b22fa7d08e7fc746c4ec2ad4ebffa7
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209791"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218595"
 ---
 # <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedar un control estándar de UWP en una aplicación WPF con islas XAML
 
-En este artículo se muestran dos maneras de hospedar un control estándar de UWP (es decir, un control UWP de primera parte proporcionado por la biblioteca Windows SDK o WinUI) en una aplicación WPF con [islas XAML](xaml-islands.md):
+En este artículo se muestran dos maneras de hospedar un control estándar de UWP (es decir, un control UWP de primera parte proporcionado por el Windows SDK) en una aplicación WPF con [islas XAML](xaml-islands.md):
 
 * Muestra cómo hospedar un control [InkCanvas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) y [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) de UWP mediante [controles ajustados](xaml-islands.md#wrapped-controls) en el kit de herramientas de la comunidad de Windows. Estos controles encapsulan la interfaz y la funcionalidad de un pequeño conjunto de controles de UWP útiles. Puede agregarlos directamente a la superficie de diseño de su proyecto de WPF o Windows Forms y, a continuación, usarlos como cualquier otro control de WPF o Windows Forms en el diseñador.
 
@@ -291,6 +291,9 @@ Ahora que ha agregado los controles [InkCanvas](https://docs.microsoft.com/windo
 Opcionalmente, puede empaquetar la aplicación WPF en un [paquete de MSIX](https://docs.microsoft.com/windows/msix) para la implementación. MSIX es la tecnología moderna de empaquetado de aplicaciones para Windows y se basa en una combinación de tecnologías de instalación de MSI,. appx, App-V y ClickOnce.
 
 Las instrucciones siguientes muestran cómo empaquetar todos los componentes de la solución en un paquete de MSIX mediante el proyecto de paquete de [aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) en Visual Studio 2019. Estos pasos solo son necesarios si desea empaquetar la aplicación WPF en un paquete MSIX.
+
+> [!NOTE]
+> Si decide no empaquetar la aplicación en un [paquete de MSIX](https://docs.microsoft.com/windows/msix) para la implementación, los equipos que ejecutan la aplicación deben tener instalado [Visual C++ Runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) .
 
 1. Agregue un nuevo [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) a la solución. Cuando cree el proyecto, seleccione **Windows 10, versión 1903 (10,0; Compilación 18362)** para la **versión de destino** y la **versión mínima**.
 

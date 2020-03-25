@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1979e16853fc288b83f5e4216c970440300fc597
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 5192177edf284d1fe6e0c6eb06bf8713fbff8b4e
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258315"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218385"
 ---
 # <a name="speech-recognition"></a>Reconocimiento de voz
 
@@ -208,7 +208,7 @@ var AudioCapturePermissions = WinJS.Class.define(
 
 ## <a name="recognize-speech-input"></a>Reconocer la entrada de voz
 
-Una *restricción* define las palabras y las frases (vocabulario) que una aplicación reconoce en una entrada de voz. Las restricciones son fundamentales para el reconocimiento de voz y mejoran la precisión del reconocimiento de voz de tu aplicación.
+Una *restricción* define las palabras y las frases (vocabulario) que una aplicación reconoce en una entrada de voz. Las restricciones son el núcleo del reconocimiento de voz y ofrecen a la aplicación un mayor control sobre la precisión del reconocimiento de voz.
 
 Puede usar los siguientes tipos de restricciones para reconocer la entrada de voz.
 
@@ -220,7 +220,8 @@ La gramática predeterminada de dictado de texto libre tiene la capacidad de rec
 
 La gramática de búsqueda web, como una gramática de dictado, contiene un gran número de palabras y frases que puede decir un usuario. Sin embargo, está optimizada para reconocer los términos que suelen usar las personas cuando buscan en la web.
 
-**Nota**  debido a que las gramáticas de dictado predefinidas y de búsqueda web pueden ser grandes y, como están en línea (no en el dispositivo), es posible que el rendimiento no sea tan rápido como con una gramática personalizada instalada en el dispositivo.     
+> [!NOTE]
+> debido a que las gramáticas de dictado predefinida y búsqueda web pueden ser grandes y, como están en línea (no en el dispositivo), es posible que el rendimiento no sea tan rápido como con una gramática personalizada instalada en el dispositivo.     
 
 Estas gramáticas predefinidas pueden usarse para reconocer hasta 10 segundos de entrada de voz y no requieren ningún esfuerzo de edición por su parte. Sin embargo, sí requieren una conexión a una red.
 

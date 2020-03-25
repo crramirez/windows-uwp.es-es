@@ -6,17 +6,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08dbe9ed7aaa732172d488712aa47d6d3631508a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 2be088edd732a22acb11be5fc209ff25c84bae17
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317701"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218355"
 ---
 # <a name="share-data"></a>Compartir datos
 
 
 Este artículo explica cómo admitir el contrato para contenido compartido en una aplicación para la Plataforma universal de Windows (UWP). El contrato para contenido compartido es una manera sencilla de compartir rápidamente los datos, como texto, vínculos, fotos y vídeos, entre aplicaciones. Por ejemplo, es posible que un usuario quiera compartir una página web con sus amigos mediante una aplicación de red social, o guardar un vínculo en una aplicación de notas para consultarlo más adelante.
+
+> [!NOTE]
+> Los ejemplos de código de este artículo están escritos para aplicaciones UWP. Las aplicaciones de escritorio de C++WPF, Windows Forms y/Win32 deben usar la interfaz [IDataTransferManagerInterop](https://docs.microsoft.com/windows/win32/api/shobjidl_core/nn-shobjidl_core-idatatransfermanagerinterop) para obtener el objeto [DataTransferManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager) para una ventana específica. Para obtener más información, vea el ejemplo [ShareSource](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/ShareSource) .
 
 ## <a name="set-up-an-event-handler"></a>Configurar un controlador de eventos
 
@@ -33,18 +36,18 @@ Cuando se produce un evento [**DataRequested**](https://docs.microsoft.com/uwp/a
 Puedes compartir varios tipos de datos, incluidos:
 
 -   Texto sin formato
--   Identificadores uniformes de recursos (URI)
+-   Identificador uniforme de recursos (URI)
 -   HTML
 -   Texto con formato
--   Mapas de bits
--   Archivos
+-   Bitmaps
+-   Files
 -   Personalizar datos definidos por el desarrollador
 
 El objeto [**DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) puede contener uno o más de estos formatos, en cualquier combinación. En el ejemplo a continuación se muestra el uso compartido de un texto.
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
-## <a name="set-properties"></a>Establecer las propiedades
+## <a name="set-properties"></a>Definir propiedades
 
 Cuando empaquetas datos para compartirlos, puedes suministrar diversas propiedades que proporcionan información adicional acerca del contenido que se va a compartir. Estas propiedades ayudan a las aplicaciones de destino a mejorar la experiencia del usuario. Por ejemplo, una descripción sirve de ayuda cuando el usuario está compartiendo contenido con más de una aplicación. Agregar una miniatura al compartir una imagen o un vínculo a una página web proporciona al usuario una referencia visual. Para obtener más información, consulta [**DataPackagePropertySet**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackagePropertySet).
 
@@ -99,8 +102,8 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 * [Recibir datos](receive-data.md)
 * [DataPackage](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage)
 * [DataPackagePropertySet](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackagepropertyset)
-* [DataRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest)
-* [DataRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested)
+* [Solicitud de consulta](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest)
+* [Solicitado](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested)
 * [FailWithDisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext)
 * [ShowShareUi](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.showshareui)
  
