@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 196c6d98b0944bbc22c3d0f652853ecab28bd3c6
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 46f20a4f63decfad063332d2e8e494c15563e398
+ms.sourcegitcommit: f2832e1e04cbf472f7fd51c08144489c510ff470
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061908"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80270400"
 ---
 # <a name="create-snap-points-with-inertia-modifiers"></a>Creación de puntos de acoplamiento con modificadores de inercia
 
@@ -93,12 +93,12 @@ El acoplamiento hacia arriba o hacia abajo se determina en función de dónde at
 ```csharp
 // Is NaturalRestingPosition less than the halfway point between Snap Points?
 snapUpModifier.Condition = _compositor.CreateExpressionAnimation(
-"this.Target.NaturalRestingPosition.y < (this.StartingValue – " + 
+"this.Target.NaturalRestingPosition.y < (this.StartingValue - " + 
 "mod(this.StartingValue, prop.snapDistance) + prop.snapDistance / 2)");
 snapUpModifier.Condition.SetReferenceParameter("prop", _propSet);
 // Is NaturalRestingPosition greater than the halfway point between Snap Points?
 snapDownModifier.Condition = _compositor.CreateExpressionAnimation(
-"this.Target.NaturalRestingPosition.y >= (this.StartingValue – " + 
+"this.Target.NaturalRestingPosition.y >= (this.StartingValue - " + 
 "mod(this.StartingValue, prop.snapDistance) + prop.snapDistance / 2)");
 snapDownModifier.Condition.SetReferenceParameter("prop", _propSet);
 ```
@@ -113,10 +113,10 @@ Ahora solo tienes que definir los Resting Values de cada InertiaModifier: mover 
 snapUpModifier.RestingValue = _compositor.CreateExpressionAnimation(
 "this.StartingValue - mod(this.StartingValue, prop.snapDistance)");
 snapUpModifier.RestingValue.SetReferenceParameter("prop", _propSet);
-snapForwardModifier.RestingValue = _compositor.CreateExpressionAnimation(
+snapDownModifier.RestingValue = _compositor.CreateExpressionAnimation(
 "this.StartingValue + prop.snapDistance - mod(this.StartingValue, " + 
 "prop.snapDistance)");
-snapForwardModifier.RestingValue.SetReferenceParameter("prop", _propSet);
+snapDownModifier.RestingValue.SetReferenceParameter("prop", _propSet);
 ```
 
 Por último, agrega los InertiaModifiers a InteractionTracker. Ahora cuando InteractionTracker entre en su InertiaState, comprobará las condiciones de su InertiaModifiers para ver si se debe modificar su posición.
