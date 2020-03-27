@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection
 ms.localizationpriority: medium
-ms.openlocfilehash: 61a54edc236f94bec44420471a176a2014fcdb0d
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 5f76f093724788dbf7d32133acaf2e16e933b166
+ms.sourcegitcommit: f288bcc108f9850671662c7b76c55c8313e88b42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79208801"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290047"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -59,10 +59,11 @@ C++/WinRT funciona mejor y produce archivos binarios más pequeños que cualquie
 | [Pasar parámetros a los límites de la ABI](pass-parms-to-abi.md) | C++/WinRT simplifica el paso de parámetros a los límites de la ABI ya que proporciona conversiones automáticas para casos habituales. |
 | [Consumir componentes COM con C++/WinRT](consume-com.md) | En este tema se usa un ejemplo de código completo de Direct2D para mostrar cómo utilizar C++/WinRT para consumir clases e interfaces COM. |
 | [Crear componentes COM con C++/WinRT](author-coclasses.md) | C++/WinRT puede ayudarte a crear componentes COM clásicos, igual que te ayuda a crear clases de Windows Runtime. |
-| [Migrar a C++/WinRT desde C++/CX](move-to-winrt-from-cx.md) | En este tema se muestra cómo migrar código de C++/CX a su equivalente en C++/WinRT. |
-| [Interoperabilidad entre C++/WinRT y C++/CX](interop-winrt-cx.md) | En este tema se muestran dos funciones auxiliares que pueden usarse para realizar la conversión entre objetos de [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) y C++/WinRT. |
-| [Migrar a C++/WinRT desde WRL](move-to-winrt-from-wrl.md) | En este tema se muestra cómo migrar código de la [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) a su equivalente en C++/WinRT. |
-| [Migrar a C++/WinRT desde C#](move-to-winrt-from-csharp.md) | En este tema se muestra cómo migrar código de C# a su equivalente en C++/WinRT. |
+| [Migrar a C++/WinRT desde C++/CX](move-to-winrt-from-cx.md) | En este tema se describen los detalles técnicos implicados en la portabilidad del código fuente de un proyecto de [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) a su equivalente de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
+| [Interoperabilidad entre C++/WinRT y C++/CX](interop-winrt-cx.md) | En este tema se muestran dos funciones auxiliares que pueden usarse para realizar la conversión entre objetos de [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) y [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
+| [Migrar a C++/WinRT desde WRL](move-to-winrt-from-wrl.md) | En este tema se muestra cómo portar código de la [Biblioteca de plantillas C++ de Windows Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) a su equivalente en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
+| [Portabilidad del ejemplo del Portapapeles a C++/WinRT desde C#: un caso práctico](clipboard-to-winrt-from-csharp.md) | En este tema se presenta un caso práctico de portabilidad de las [aplicaciones para la Plataforma universal de Windows (UWP) de ejemplo](https://github.com/microsoft/Windows-universal-samples) de [C#](/visualstudio/get-started/csharp) a [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
+| [Migrar a C++/WinRT desde C#](move-to-winrt-from-csharp.md) | En este tema se describen los detalles técnicos implicados en la portabilidad del código fuente de un proyecto de [C#](/visualstudio/get-started/csharp) a su equivalente de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). |
 | [Interoperabilidad entre C++/WinRT y la ABI](interop-winrt-abi.md) | En este tema se muestra cómo realizar la conversión entre la interfaz binaria de aplicaciones (ABI) y objetos de C++/WinRT. |
 | [Referencias fuertes y débiles de C++/WinRT](weak-references.md) | Windows Runtime es un sistema con recuento de referencias y en este tipo de sistemas es importante conocer el significado de referencias fuertes y débiles y la diferencia entre ellas. |
 | [Objetos ágiles](agile-objects.md) | Un objeto ágil es aquel al que se puede acceder desde cualquier subproceso. Los tipos de C++/WinRT son ágiles de manera predeterminada, pero puedes excluirlos. |
