@@ -7,12 +7,12 @@ ms.date: 03/06/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd6c3ec487871d18a7142489802b801120f5e7ed
-ms.sourcegitcommit: 0142b5a47511afa76d74015e3fd8635b6042a542
+ms.openlocfilehash: e4a0a2d532341e76d6ff74dda9b6b6a8638c77fd
+ms.sourcegitcommit: b398966fc052b232e03f2e32512a48d3a4444b8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79038168"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80367677"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Introducción a los Servicios de notificaciones de inserción de Windows (WNS) 
 
@@ -42,13 +42,13 @@ Cada aplicación tiene su propio conjunto de credenciales para su servicio de nu
 Para poder enviar notificaciones a través de WNS, la aplicación debe estar registrada en el panel del centro de Partners. Esto te proporcionará las credenciales de la aplicación que tu servicio en la nube usará en la autenticación con WNS. Estas credenciales son un identificador de seguridad de paquete (SID) y una clave secreta. Para realizar este registro, inicie sesión en el [centro de Partners](https://partner.microsoft.com/dashboard). Después de crear la aplicación, consulte [Product Management-WNS/MPNS](https://apps.dev.microsoft.com/) para instrunctions sobre cómo recuperar las credenciales (si quiere usar la solución Live Services, siga el vínculo **sitio de servicios Live** en esta página).
 
 Para registrarse:
-1.  Vaya a la página de aplicaciones de la tienda Windows del centro de Partners e inicie sesión con su cuenta de Microsoft personal (por ejemplo: johndoe@outlook.com, janedoe@xboxlive.com).
-2.  Una vez que haya iniciado sesión, haga clic en el vínculo panel.
-3.  En el panel, seleccione crear una nueva aplicación.
+1.    Vaya a la página de aplicaciones de la tienda Windows del centro de Partners e inicie sesión con su cuenta de Microsoft personal (por ejemplo: johndoe@outlook.com, janedoe@xboxlive.com).
+2.    Una vez que haya iniciado sesión, haga clic en el vínculo panel.
+3.    En el panel, seleccione crear una nueva aplicación.
 
 ![registro de la aplicación WNS](../images/wns-create-new-app.png)
 
-4.  Cree la aplicación reservando un nombre de aplicación. Proporcione un nombre único para la aplicación. Escriba el nombre y haga clic en el botón reservar nombre del producto. Si el nombre está disponible, se reserva para la aplicación. Una vez que haya reservado correctamente un nombre para la aplicación, los demás detalles estarán disponibles para modificarlos en este momento.
+4.    Cree la aplicación reservando un nombre de aplicación. Proporcione un nombre único para la aplicación. Escriba el nombre y haga clic en el botón reservar nombre del producto. Si el nombre está disponible, se reserva para la aplicación. Una vez que haya reservado correctamente un nombre para la aplicación, los demás detalles estarán disponibles para modificarlos en este momento.
 
 ![nombre de producto reservado de WNS](../images/wns-reserve-poduct-name.png)
  
@@ -56,24 +56,24 @@ Para registrarse:
 
 Al reservar un nombre para la aplicación, la tienda Windows crea las credenciales asociadas. También se asignaron valores de identidad asociados (nombre y publicador) que deben estar presentes en el archivo de manifiesto de la aplicación (package. appxmanifest). Si ya ha cargado la aplicación en la tienda Windows, estos valores se agregarán automáticamente al manifiesto. Si no ha cargado la aplicación, tendrá que agregar manualmente los valores de identidad al manifiesto.
 
-1.  Seleccione la flecha desplegable administración del producto
+1.    Seleccione la flecha desplegable administración del producto
 
 ![Administración de productos de WNS](../images/wns-product-management.png)
 
-2.  En el menú desplegable administración del producto, seleccione el vínculo WNS/MPNS.
+2.    En el menú desplegable administración del producto, seleccione el vínculo WNS/MPNS.
 
 ![Administración de productos de WNS continuted](../images/wns-product-management2.png)
  
-3.  En la página WNS/MPNS, haga clic en el vínculo sitio de servicios Live que se encuentra en la sección Notification Services de Windows inserciones (WNS) y Microsoft Azure Mobile Services.
+3.    En la página WNS/MPNS, haga clic en el vínculo sitio de servicios Live que se encuentra en la sección Notification Services de Windows inserciones (WNS) y Microsoft Azure Mobile Services.
 
 ![servicios Live de WNS](../images/wns-live-services-page.png)
  
-4.  La página del portal de registro de aplicaciones (anteriormente, la página Live Services) proporciona un elemento Identity que se incluirá en el manifiesto de la aplicación. Esto incluye los secretos de la aplicación, el identificador de seguridad del paquete y la identidad de la aplicación. Abra el manifiesto en un editor de texto y agregue el elemento que indica la página.   
+4.    La página del portal de registro de aplicaciones (anteriormente, la página Live Services) proporciona un elemento Identity que se incluirá en el manifiesto de la aplicación. Esto incluye los secretos de la aplicación, el identificador de seguridad del paquete y la identidad de la aplicación. Abra el manifiesto en un editor de texto y agregue el elemento que indica la página.    
 
 > [!NOTE]
 > Si ha iniciado sesión con una cuenta de AAD, deberá ponerse en contacto con el cuenta de Microsoft propietario que registró la aplicación para obtener los secretos de la aplicación asociada. Si necesita ayuda para encontrar esta persona de contacto, haga clic en el engranaje en la esquina superior derecha de la pantalla y, a continuación, haga clic en configuración del desarrollador y la dirección de correo electrónico de la persona que creó la aplicación con su cuenta de Microsoft se mostrará ahí.
  
-5.  Cargue el SID y el secreto de cliente en el servidor en la nube.
+5.    Cargue el SID y el secreto de cliente en el servidor en la nube.
 
 > [!Important]
 > El SID y el secreto de cliente deben almacenarse de forma segura y el servicio en la nube puede acceder a ellos. La divulgación o el robo de esta información podría permitir que un atacante envíe notificaciones a los usuarios sin su permiso o conocimiento.
@@ -180,6 +180,7 @@ En este diagrama se muestra el flujo de datos:
 -   Un token de acceso solo permite a un servicio de nube enviar notificaciones a una sola aplicación para la cual se creó ese token. No se puede usar un mismo token de acceso para enviar notificaciones entre varias aplicaciones. Por lo tanto, si tu servicio de nube admite varias aplicaciones, debe proporcionarse el token de acceso correcto de la aplicación al insertarse una notificación en cada URI de canal.
 -   Cuando el dispositivo no tenga conexión, WNS almacenará de manera predeterminada hasta cinco notificaciones de icono (si la cola está habilitada; de lo contrario, almacenará una sola) y una notificación de distintivo para cada URI de canal y notificaciones sin procesar. Este comportamiento de almacenamiento en caché predeterminado puede modificarse a través del encabezado [Directiva-de-memoria-caché-de-X-WNS](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)). Ten en cuenta que las notificaciones del sistema nunca se almacenan cuando el dispositivo está sin conexión.
 -   En escenarios donde el contenido de una notificación está personalizado para el usuario, WNS recomienda que el servicio de nube envíe esas actualizaciones inmediatamente apenas se reciben. Entre los ejemplos de este escenario, se incluyen actualizaciones de fuentes de medios sociales, invitaciones de comunicación instantánea, notificaciones de mensaje nuevo o alertas. De forma alternativa, puedes tener escenarios en los que la misma actualización genérica se envía con frecuencia a un gran subconjunto de usuarios; por ejemplo, pronóstico del tiempo, cotizaciones y nuevas actualizaciones. Las instrucciones de WNS especifican que la frecuencia de estas actualizaciones debe ser de una cada 30 minutos, como máximo. El usuario final o WNS podrían considerarlas abusivas si se envían con mayor frecuencia.
+-   La plataforma de notificaciones de Windows mantiene una conexión de datos periódica con WNS para mantener el socket activo y en buen estado. Si no hay aplicaciones que soliciten o utilicen canales de notificación, no se creará el socket.
 
 ## <a name="expiration-of-tile-and-badge-notifications"></a>Expiración de las notificaciones de icono y de distintivo
 
