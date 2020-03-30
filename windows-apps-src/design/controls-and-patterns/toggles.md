@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a23a7a7da9605c0ffb5a537c75d63e3f06705881
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 8d9cb44c91bcd556a10059005a8f19a75f90d3d9
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63775158"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081473"
 ---
 # <a name="toggle-switches"></a>Modificadores para alternar
 
@@ -25,7 +25,7 @@ El modificador para alternar representa un conmutador físico que permite a los 
 
 Para crear un control de modificador para alternar, usa la [clase ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch).
 
-> **API importantes**: [clase ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [propiedad IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [evento Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
+> **API de plataforma**: [clase ToggleSwitch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [propiedad IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [evento Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -42,7 +42,7 @@ Para que el modificador para alternar sea sencillo de comprender, etiquétalo co
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles de XAML</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ToggleSwitch">ToggleSwitch</a> o <a href="xamlcontrolsgallery:/item/ToggleButton">ToggleButton</a> en acción.</p>
     <ul>
@@ -169,9 +169,9 @@ También puedes usar contenido más complejo si configuras las propiedades [OnCo
 - Usa las etiquetas predeterminadas On y Off cuando sea posible; reemplázalas solo cuando sea necesario para que el modificador para alternar tenga sentido. Si las reemplaza, usa una sola palabra que describa con mayor precisión la alternancia. En general, si las palabras "On" y "Off" no describen la acción vinculada a un modificador para alternar, probablemente necesites un control diferente.
 - Evita reemplazar las etiquetas On y Off a menos que debas hacerlo; usa las etiquetas predeterminadas a menos que la situación requiera que las personalices.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
-- [Ejemplos de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

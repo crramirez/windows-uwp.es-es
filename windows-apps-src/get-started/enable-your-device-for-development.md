@@ -6,12 +6,12 @@ keywords: Introducción a Visual Studio con licencia de desarrollador, dispositi
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a2d1719379302dd8e996c37e05d7ddaf35a0cf18
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 4b360f75ccf08d9cc00eeba2948215b7240627a8
+ms.sourcegitcommit: 3c3730e968fba89b21459390735614cd4c9d9c67
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258416"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320417"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -121,7 +121,7 @@ El inicio de sesión SSH se realiza a través de la cuenta "DevToolsUser", que a
 #### <a name="caveats-for-ssh-usage"></a>Advertencias para el uso de SSH
 El servidor SSH existente que se usa en Windows aún no cumple con el protocolo, por lo que el uso de un cliente SFTP o SSH puede requerir una configuración especial.  En particular, el subsistema SFTP se ejecuta en la versión 3 o anteriores, por lo que cualquier cliente que se conecte debe configurarse para esperar un servidor antiguo.  El servidor SSH en dispositivos más antiguos usa `ssh-dss` para la autenticación de clave pública, que está en desuso para OpenSSH.  Para conectarse a dichos dispositivos, el cliente SSH debe estar configurado manualmente para aceptar `ssh-dss`.  
 
-### <a name="device-discovery"></a>Detección de dispositivos
+### <a name="device-discovery"></a>Detección de dispositivo
 
 Al habilitar la detección de dispositivos, permites que el dispositivo esté visible para otros dispositivos de la red a través de mDNS.  Esta función también te permite obtener el PIN SSH para el emparejamiento con este dispositivo si presionas el botón "Emparejamiento" una vez habilitada la detección de dispositivos.  Este aviso de PIN debe mostrarse en la pantalla para completar la primera implementación de Visual Studio destinada al dispositivo.  
 
@@ -193,7 +193,7 @@ Puedes usar gpedit.msc para definir las directivas de grupo necesarias para habi
 
     -   **Permitir la instalación de todas las aplicaciones de confianza**
 
-    - O bien
+    O
 
     Para habilitar el modo de desarrollador, edita las directivas para habilitar ambos:
 
@@ -207,26 +207,30 @@ Puedes usar gpedit.msc para definir las directivas de grupo necesarias para habi
 1.  Ejecuta **regedit**.
 2.  Para habilitar la instalación de prueba, establece el valor de este DWORD en 1:
 
-    -   `HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps`
+    -   `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock\AllowAllTrustedApps`
 
-    - O bien
+    O
 
     Para habilitar el modo de desarrollador, establece los valores de este DWORD en 1:
 
-    -   `HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense`
+    -   `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock\AllowDevelopmentWithoutDevLicense`
 
 **Usar PowerShell para habilitar el dispositivo**
 
 1.  Ejecuta PowerShell con privilegios de administrador.
 2.  Para habilitar la instalación de prueba, ejecuta el siguiente comando:
 
-    -   `PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"`
+    ```powershell
+    PS C:\WINDOWS\system32> reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v "AllowAllTrustedApps" /d "1"
+    ```
 
-    - O bien
+    O
 
     Para habilitar el modo de desarrollador, ejecuta el siguiente comando:
 
-    -   `PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"`
+    ```powershell
+    PS C:\WINDOWS\system32> reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"
+    ```
 
 ## <a name="upgrade-your-device-from-windows-81-to-windows-10"></a>Actualizar el dispositivo de Windows 8.1 a Windows 10
 
@@ -241,7 +245,7 @@ Después debes habilitar el dispositivo para el desarrollo, tal como se describe
 
 Error: DEP0700: Error en el registro de la aplicación.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 * [Tu primera aplicación](your-first-app.md)
 * [Publicar tu aplicación para UWP](https://docs.microsoft.com/windows/uwp/publish/)

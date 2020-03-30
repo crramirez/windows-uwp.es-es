@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 57639fc370ed7e10a427af4808e2a8a6de91b554
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8f1717a59399fb95f7b71a38ee8d2d46de4ca765
+ms.sourcegitcommit: e11e0f65930665579d1f296861234893e82bf8fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257703"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301443"
 ---
 # <a name="controls-by-function"></a>Controles por función
 
@@ -100,7 +100,7 @@ Control que responde a la entrada del usuario y que genera un evento **Click**.
         Click="Button_Click" />
 ```
 
-Referencia: [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 
+Referencia: [Botón](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 
 
 Diseño y procedimientos: [Guía de control de los botones](buttons.md) 
 
@@ -313,7 +313,7 @@ Diseño y procedimientos: Directrices para información sobre herramientas
 
 ## <a name="images"></a>Imágenes
 
-### <a name="image"></a>Image
+### <a name="image"></a>Imagen
 Control que presenta una imagen.
 
 ```xaml
@@ -544,7 +544,7 @@ Diseño y procedimientos: [Guía de control de elemento multimedia](media-playba
 
 Código de ejemplo: [Muestra de controles de transporte de contenido multimedia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCustomMediaTransportControls)
 
-### <a name="video"></a>Vídeo
+### <a name="video"></a>Vídeos
 Consulta Elemento multimedia
 
 ## <a name="navigation"></a>Navegación
@@ -724,10 +724,10 @@ Código de ejemplo: [Muestra de texto XAML](https://code.msdn.microsoft.com/wind
 ### <a name="text-box"></a>Cuadro de texto
 Campo de texto sin formato de una línea o multilínea.
 
-![Control de cuadro de texto](images/controls/text-box.png) 
+![Control de cuadro de texto](images/controls/text-box.png)
 
 ```xaml
-<TextBox x:Name="textBox1" Text="I am a TextBox" 
+<TextBox x:Name="textBox1" Text="I am a Text Box."
          TextChanged="TextBox_TextChanged"/>
 ```
 
@@ -779,9 +779,9 @@ Control que presenta una lista en línea de elementos entre los que puede selecc
 ```xaml
 <ListBox x:Name="listBox1" Width="100"
          SelectionChanged="ListBox_SelectionChanged">
-    <x:String>Item 1</x:String>
-    <x:String>Item 2</x:String>
-    <x:String>Item 3</x:String>
+    <x:String>List item 1</x:String>
+    <x:String>List item 2</x:String>
+    <x:String>List item 3</x:String>
 </ListBox>
 ```
 

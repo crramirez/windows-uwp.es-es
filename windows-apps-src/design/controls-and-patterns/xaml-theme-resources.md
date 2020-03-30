@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9544988837d44f42d963b268a2ce3d37cce83952
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: f2097a35d87594251ed2c0a04be06ccdb705902f
+ms.sourcegitcommit: 378693fe9b655fe14814d683e8d8cb2dd1380fd7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209050"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249859"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
@@ -177,7 +177,7 @@ Además de los colores de tema de contraste alto del sistema, el color de énfas
 
 ### <a name="theme-dependent-brushes"></a>Pinceles dependientes del tema
 
-Los recursos de color que se muestran en las secciones anteriores se usan para establecer la propiedad [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) de los recursos [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) en los diccionarios de recursos de temas del sistema. Usa los recursos de pincel para aplicar el color a elementos XAML. Las claves para los recursos de pincel tienen el siguiente formato de nombre: `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. Por ejemplo, `SystemControlBackroundAltHighBrush`.
+Los recursos de color que se muestran en las secciones anteriores se usan para establecer la propiedad [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) de los recursos [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) en los diccionarios de recursos de temas del sistema. Usa los recursos de pincel para aplicar el color a elementos XAML. Las claves para los recursos de pincel tienen el siguiente formato de nombre: `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. Por ejemplo, `SystemControlBackgroundAltHighBrush`.
 
 Veamos cómo se determina el valor de color de este pincel en tiempo de ejecución. En los diccionarios de recursos "Light" y "Dark", el pincel se define así:
 

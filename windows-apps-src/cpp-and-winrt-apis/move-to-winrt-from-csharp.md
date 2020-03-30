@@ -1,20 +1,20 @@
 ---
-description: En este tema se muestra cómo migrar código de C# a su equivalente en C++/WinRT.
+description: En este tema se describen los detalles técnicos implicados en la portabilidad del código fuente de un proyecto de [C#](/visualstudio/get-started/csharp) a su equivalente de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 title: Migrar a C++/WinRT desde C#
 ms.date: 07/15/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migrar, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 17900829388bfe0b3cc325e27d0807b139ccaa27
-ms.sourcegitcommit: 2c6aac8a0cc02580df0987f0b7dba5924e3472d6
+ms.openlocfilehash: f7cd35dbf211b14dfb886fc9ba4305cd7ce56e5e
+ms.sourcegitcommit: f288bcc108f9850671662c7b76c55c8313e88b42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74958965"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290052"
 ---
 # <a name="move-to-cwinrt-from-c"></a>Migrar a C++/WinRT desde C#
 
-En este tema se muestra cómo trasladar el código de un proyecto de [C#](/visualstudio/get-started/csharp) a su equivalente en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
+En este tema se describen los detalles técnicos implicados en la portabilidad del código fuente de un proyecto de [C#](/visualstudio/get-started/csharp) a su equivalente de [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
 ## <a name="register-an-event-handler"></a>Registrar un controlador de eventos
 
@@ -193,7 +193,7 @@ auto s{ std::to_wstring(i) }; // s is a std::wstring with value L"2".
 
 C++/WinRT también admite [**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring) para un número limitado de tipos. Tendrás que agregar sobrecargas para los tipos adicionales a los que quieras aplicar stringify.
 
-| Idioma | Stringify int | Stringify enum |
+| Language | Stringify int | Stringify enum |
 | - | - | - |
 | C# | `string result = "hello, " + intValue.ToString();`<br>`string result = $"hello, {intValue}";` | `string result = "status: " + status.ToString();`<br>`string result = $"status: {status}";` |
 | C++/WinRT | `hstring result = L"hello, " + to_hstring(intValue);` | `// must define overload (see below)`<br>`hstring result = L"status: " + to_hstring(status);` |
@@ -290,7 +290,7 @@ Conversiones boxing y unboxing básicas.
 |-|-|-|
 | Aplicar boxing a una cadena | `o = s;`<br>Una cadena vacía se convierte en un objeto con un valor distinto de null. | `o = box_value(s);`<br>Una cadena vacía se convierte en un objeto con un valor distinto de null. |
 | Unboxing a una cadena conocida | `s = (string)o;`<br>El objeto null se convierte en una cadena null.<br>InvalidCastException si no es una cadena. | `s = unbox_value<hstring>(o);`<br>Un objeto null se bloquea.<br>Se bloquea si no es una cadena. |
-| Conversión unboxing de una posible cadena | `s = o as string;`<br>Un objeto null o que no es una cadena se convierte en una cadena null.<br><br>O bien,<br><br>`s = o as string ?? fallback;`<br>Un valor null o que no es una cadena se convierte en un elemento Fallback.<br>Una cadena vacía se conserva. | `s = unbox_value_or<hstring>(o, fallback);`<br>Un valor null o que no es una cadena se convierte en un elemento Fallback.<br>Una cadena vacía se conserva. |
+| Conversión unboxing de una posible cadena | `s = o as string;`<br>Un objeto null o que no es una cadena se convierte en una cadena null.<br><br>O<br><br>`s = o as string ?? fallback;`<br>Un valor null o que no es una cadena se convierte en un elemento Fallback.<br>Una cadena vacía se conserva. | `s = unbox_value_or<hstring>(o, fallback);`<br>Un valor null o que no es una cadena se convierte en un elemento Fallback.<br>Una cadena vacía se conserva. |
 
 ## <a name="derived-classes"></a>Clases derivadas
 

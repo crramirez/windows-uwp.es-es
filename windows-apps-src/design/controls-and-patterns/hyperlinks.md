@@ -12,20 +12,18 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b17220a039612e0b13cd9842800c37c39bf194dd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: fa4ff0cbc2bd361b241f660f9c6b28f03bc7c24c
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362758"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080895"
 ---
 # <a name="hyperlinks"></a>Hipervínculos
 
- 
-
 Los hipervínculos llevan al usuario a otra parte de la aplicación, a otra aplicación o permiten iniciar un identificador uniforme de recursos (URI) específico con una aplicación de explorador diferente. Existen dos formas mediante las que se puede agregar un hipervínculo a una aplicación XAML: el elemento de texto **Hyperlink** y el control **HyperlinkButton**.
 
-> **API importantes**: [Elemento de texto Hyperlink](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [Control HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
+> **API de plataforma**: [Elemento de texto Hyperlink](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [Control HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
 
 ![Botón de hipervínculo](images/controls/hyperlink-button.png)
 
@@ -45,7 +43,7 @@ Elige el tipo correcto de hipervínculo según tus necesidades:
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/HyperlinkButton">abrirla y ver HyperlinkButton en acción</a>.</p>
     <ul>
@@ -173,7 +171,7 @@ El color predeterminado del hipervínculo es el color de énfasis del sistema. P
 -   Mantén los hipervínculos discretos y suficientemente separados para que el usuario pueda diferenciarlos y seleccionarlos con facilidad.
 -   Agrega información sobre herramientas a los hipervínculos que indican dónde se dirigirá al usuario. Si se dirige al usuario a un sitio externo, incluye el nombre de dominio de nivel superior dentro de la información sobre herramientas y un estilo de texto con un color de fuente secundario.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 

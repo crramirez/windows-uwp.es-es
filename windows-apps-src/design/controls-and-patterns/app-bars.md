@@ -13,18 +13,18 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f5fd3408657047c3d1d102c65f6264954983134
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: c32b60b3d9e717a916b5424f3b8bd78102439f30
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257743"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081967"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
 Las barras de comandos proporcionan a los usuarios acceso fácil a las tareas más comunes de tu app. Las barras de comandos pueden proporcionar acceso a los comandos del nivel de apps o específicos de la página, y se pueden usar con cualquier patrón de navegación.
 
-> **API importantes**: [clase CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar), [clase AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), [clase AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [clase AppBarSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator)
+> **API de plataforma:** [clase CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar), [clase AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), [clase AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [clase AppBarSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator)
 
 ![Ejemplo de una barra de comandos con iconos](images/controls_appbar_icons.png)
 
@@ -40,7 +40,7 @@ El control CommandBar es un control de propósito general, flexible y ligero que
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la app <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/CommandBar">abrir la app y ver CommandBar en acción</a>.</p>
     <ul>
@@ -259,7 +259,7 @@ Aunque los modos Mínima y Oculta son de utilidad en algunas situaciones, ten en
 
 Cambiar la propiedad ClosedDisplayMode para proporcionar más o menos información de una sugerencia al usuario afecta al diseño de los elementos adyacentes. Por el contrario, cuando el objeto CommandBar cambia entre cerrado y abierto, no afecta al diseño de otros elementos.
 
-## <a name="placement"></a>Colocación
+## <a name="placement"></a>Selección de ubicación
 Las barras de comandos se pueden colocar en la parte superior de la ventana de la aplicación, en la parte inferior de la ventana de la aplicación y de manera alineada.
 
 ![Ejemplo 1 de colocación de barra de la aplicación](images/AppbarGuidelines_Placement1.png)
@@ -275,9 +275,9 @@ Las barras de comandos pueden colocarse en las siguientes regiones de la pantall
 
 >**Dispositivos táctiles**: si la barra de comandos debe permanecer visible para el usuario cuando aparece el teclado táctil o el panel de entrada de software (SIP), puedes asignarla a la propiedad [BottomAppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.bottomappbar) de una página y pasará a estar visible cuando el SIP esté presente. De lo contrario, debes colocar la barra de comandos de manera alineada y en una posición relativa al contenido de tu aplicación.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 - [Ejemplo de comandos XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ## <a name="related-articles"></a>Artículos relacionados

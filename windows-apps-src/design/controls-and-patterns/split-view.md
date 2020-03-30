@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7381d8d99f47a69ba7398366762a7dbb4088e04a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: e5df29f4ce91bd272fd921b23b5fc05b6655d4c0
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364177"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081540"
 ---
 # <a name="split-view-control"></a>Control de vista en dos paneles
 
@@ -59,7 +59,7 @@ Si quieres crear un menú de navegación con un botón de expandir/contraer y un
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/SplitView">abrirla y ver SplitView en acción</a>.</p>
     <ul>
@@ -93,7 +93,7 @@ Este es un control SplitView con un panel abierto que aparece en línea junto al
 </SplitView>
 ```
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 

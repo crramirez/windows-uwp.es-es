@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 06cd49ce68de6f1c7a7a29b94c80f0a004a2eca3
-ms.sourcegitcommit: 6b29f0cbdc6e66b44150b3b60e95d67e1f7f56bf
+ms.openlocfilehash: e198e65052e9ef79ee38863260bce1c1f798ba38
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74478537"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081738"
 ---
 # <a name="collections-and-lists"></a>Colecciones y listas
 
@@ -47,7 +47,7 @@ Cada uno de estos controles (a excepción de ItemsRepeater) también tiene un co
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, puedes ver <a href="xamlcontrolsgallery:/item/ListView">ListView</a>, <a href="xamlcontrolsgallery:/item/GridView">GridView</a>, <a href="xamlcontrolsgallery:/item/FlipView">FlipView</a>, <a href="xamlcontrolsgallery:/item/TreeView">TreeView</a> y <a href="xamlcontrolsgalley:/item/ItemsRepeater">ItemsRepeater</a> en acción.</p>
     <ul>
@@ -316,7 +316,7 @@ Los tres ejemplos siguientes son controles ItemsRepeater que están enlazados al
 </tr>
 </table>
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 

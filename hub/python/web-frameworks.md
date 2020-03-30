@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python en windows, python web con wsl, aplicación web de python con el subsistema de windows para linux, desarrollo web de python en windows, aplicación de flask en windows, aplicación de django en windows, python web, desarrollo web de flask en windows, desarrollo web de django en windows, desarrollo web de windows con python, desarrollo web de python de vs code, extensión remota de wsl, ubuntu, wsl, venv, pip, extensión de python de microsoft, ejecutar python en windows, usar python en windows, compilar con python en windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: d883007168e0baf35f8a0ab0827505b683cfd291
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 8cbc8343764e4de57bd418ecdb36bd606b037c68
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79208980"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218485"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>Introducción al uso de Python para el desarrollo web en Windows
 
@@ -325,7 +325,7 @@ Enhorabuena, has creado una aplicación web de Flask con Visual Studio Code y e
 
 16. Guarda todos los archivos modificados.
 
-17. En el terminal de VS Code, ejecuta el servidor de desarrollo con `python manage.py runserver` y abre la URL `http://127.0.0.1:8000/` en un explorador para ver una página que represente "Hello, Django".
+17. En el terminal de VS Code, ejecuta el servidor de desarrollo con `python3 manage.py runserver` y abre la URL `http://127.0.0.1:8000/` en un explorador para ver una página que represente "Hello, Django".
 
 Enhorabuena, has creado una aplicación web de Django con VS Code y el Subsistema de Windows para Linux. Para ver un tutorial más detallado sobre el uso de VS Code y Django, consulta el [Tutorial de Django en Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-django).
 

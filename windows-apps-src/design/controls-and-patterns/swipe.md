@@ -11,12 +11,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d575eb25d9a013aa999cf304db6d83faeb87765
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 9a9ff0acd46ef7efa92239b0a3ef07b507850a66
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63774702"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081520"
 ---
 # <a name="swipe"></a>Deslizar rápidamente
 
@@ -42,7 +42,7 @@ Debes usar los comandos de deslizar el dedo cuando haya un grupo de elementos po
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/SwipeControl">abrir la aplicación y ver SwipeControl en acción</a>.</p>
     <ul>
@@ -233,9 +233,9 @@ Aquí, se establece un elemento de deslizar el dedo _reply_ para que se cierre d
 - Usa el deslizamiento horizontal del dedo en elementos más anchos, y el vertical en elementos más altos.
 - Usa etiquetas de texto cortas y concisas.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
-- [Ejemplos de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
