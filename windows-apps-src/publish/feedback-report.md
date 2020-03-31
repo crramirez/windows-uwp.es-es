@@ -6,14 +6,17 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 47eb494ac1b61caac0549f89254ae5d60a7ddf4c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 50ffec5beafd88ddc852e4d9b2fb995fb12bd939
+ms.sourcegitcommit: 56d777134bc85f049e281e34660de612ac938a01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259017"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80417434"
 ---
 # <a name="feedback-report"></a>Informe de comentarios
+
+> [!WARNING]
+> El informe de comentarios está en desuso el 15 de abril de 2020 este informe dejará de ser compatible después del 2020 15 de abril. Los datos de este informe no se actualizarán después de esta fecha y el informe se quitará en el futuro sin previo aviso. Puede seguir viendo los comentarios recibidos de los clientes directamente en el centro de opiniones.
 
 El **Informe de comentarios** del centro de Partners le permite ver los problemas, las sugerencias y los votos que los clientes de Windows 10 han enviado a través del centro de comentarios. Puede ver estos datos en el centro de Partners o exportar los datos para verlos sin conexión.
 
