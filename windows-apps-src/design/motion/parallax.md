@@ -12,18 +12,20 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ab37c49115acbccaf81725b74def85891fd73219
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.openlocfilehash: ac195916e76ad7b3f03adc39a293422d0d58f7a4
+ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735070"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80614085"
 ---
 # <a name="parallax"></a>Parallax
 
 Parallax es un efecto visual donde elementos más cercanos al usuario se mueven más rápido que los elementos en el fondo. Parallax crea una sensación de profundidad, perspectiva y movimiento. En una aplicación para UWP, puedes usar el control ParallaxView para crear un efecto de paralaje.  
 
-> **API importantes**: [Clase ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propiedad VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [propiedad HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
+> **API de la biblioteca de interfaz de usuario de Windows:** [clase ParallaxView](/uwp/api/Microsoft.UI.Xaml.Controls.Parallaxview), [propiedad VerticalShift](/uwp/api/Microsoft.UI.Xaml.Controls.Parallaxview.VerticalShift), [propiedad HorizontalShift](/uwp/api/Microsoft.UI.Xaml.Controls.Parallaxview.HorizontalShift)
+>
+> **API de plataforma**: [clase ParallaxView](/uwp/api/Windows.UI.Xaml.Controls.Parallaxview), [propiedad VerticalShift](/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift), [propiedad HorizontalShift](/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift)
 
 ## <a name="examples"></a>Ejemplos
 
@@ -47,7 +49,7 @@ Parallax es un efecto visual donde elementos más cercanos al usuario se mueven 
 
 ## <a name="how-it-works-in-a-user-interface"></a>Cómo funciona en una interfaz de usuario
 
-En una interfaz de usuario, puedes crear un efecto de paralaje si mueves distintos objetos a diferentes velocidades cuando la interfaz de usuario se desplaza o realiza un movimiento panorámico. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> Para demostrarlo, echemos un vistazo a dos capas de contenido, una lista y una imagen de fondo.  La lista se coloca encima de la imagen de fondo, lo que ya proporciona la ilusión de que la lista puede estar más cerca del usuario.  Ahora, para lograr el efecto de paralaje, queremos que el objeto más cercano a nosotros se desplace "más rápido" que el objeto que está más lejos.  Cuando el usuario desplaza la interfaz, la lista se mueve a una velocidad más rápida que la imagen de fondo, lo que crea la ilusión de profundidad.
+En una interfaz de usuario, puedes crear un efecto de paralaje si mueves distintos objetos a diferentes velocidades cuando la interfaz de usuario se desplaza o realiza un movimiento panorámico. <!-- Parallax is an important tool in adding depth to applications along with other techniques like transition animations, perspective tilt, and layering. --> Para demostrar, echemos un vistazo a dos capas de contenido, una lista y una imagen de fondo.  La lista se coloca encima de la imagen de fondo, lo que ya proporciona la ilusión de que la lista puede estar más cerca del usuario.  Ahora, para lograr el efecto de Parallax, queremos que el objeto más cercano a nosotros viaje "más rápido" que el objeto que está más lejos.  Cuando el usuario desplaza la interfaz, la lista se mueve a una velocidad más rápida que la imagen de fondo, lo que crea la ilusión de profundidad.
 
  ![Ejemplo de efecto de paralaje con una lista y una imagen en segundo plano](images/_Parallax_v2.gif)
 
@@ -80,7 +82,7 @@ En este ejemplo se crea un efecto de paralaje para una lista:
        <x:String>Item 2</x:String> 
        <x:String>Item 3</x:String> 
        <x:String>Item 4</x:String> 
-       <x:String>Item 5</x:String>  
+       <x:String>Item 5</x:String>     
        <x:String>Item 6</x:String> 
        <x:String>Item 7</x:String> 
        <x:String>Item 8</x:String> 
@@ -98,9 +100,9 @@ En este ejemplo se crea un efecto de paralaje para una lista:
        <x:String>Item 21</x:String>        
     </ListView>
 </Grid>
-``` 
+```    
 
-ParallaxView ajusta automáticamente el tamaño de la imagen de modo que sirva para la operación de paralaje, por lo que no tienes que preocuparte de que la imagen salga de la vista durante el desplazamiento.
+ParallaxView ajusta automáticamente el tamaño de la imagen para que funcione con la operación de Parallax, por lo que no tiene que preocuparse de la imagen que se desplaza fuera de la vista.
 
 ## <a name="customizing-the-parallax-effect"></a>Personalizar el efecto de paralaje 
 
@@ -113,11 +115,11 @@ Los valores más grandes crean un efecto más impactante.
 
 Para obtener la lista completa de maneras de personalizar el paralaje, consulta la clase ParallaxView. 
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
 - Usa el efecto de paralaje en listas con una imagen de fondo.
 - Considera usar el paralaje en ListViewItems cuando ListViewItems contenga una imagen.
-- No lo uses en todas partes, el uso excesivo puede reducir su impacto.
+- No lo use en todas partes, el uso excesivo puede reducir su impacto
 
 ## <a name="related-articles"></a>Artículos relacionados
 
