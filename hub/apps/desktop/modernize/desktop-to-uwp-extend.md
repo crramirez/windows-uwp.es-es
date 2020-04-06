@@ -1,6 +1,6 @@
 ---
 Description: Ampliar tu aplicación de escritorio con componentes e interfaces de usuario de Windows
-title: Amplíe su aplicación con la interfaz de usuario y los componentes de Windows
+title: Ampliación de la aplicación con componentes e interfaces de usuario de Windows
 ms.date: 06/08/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -9,83 +9,83 @@ author: mcleanbyron
 ms.localizationpriority: medium
 ms.openlocfilehash: a38f5fa7f3ef99f5970ec5d476fb65761aa39db4
 ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/20/2019
 ms.locfileid: "75302589"
 ---
-# <a name="extend-your-desktop-app-with-modern-uwp-components"></a>Amplíe su aplicación de escritorio con los componentes modernos de UWP
+# <a name="extend-your-desktop-app-with-modern-uwp-components"></a>Ampliación de la aplicación de escritorio con componentes de UWP modernos
 
-Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usuario habilitada para entrada táctil) deben ejecutarse dentro de un contenedor de aplicación moderna. Si desea agregar estas experiencias, amplíe su aplicación de escritorio con los componentes de Windows Runtime y los proyectos de UWP.
+Algunas experiencias de Windows 10 (por ejemplo, una página de interfaz de usuario habilitada para entrada táctil) deben ejecutarse dentro de un contenedor de aplicación moderna. Si quieres agregar estas experiencias, amplía tu aplicación de escritorio con los componentes de proyectos de UWP y Windows Runtime.
 
-En muchos casos, puede llamar a Windows Runtime API directamente desde la aplicación de escritorio, por lo que antes de revisar esta guía, consulte [mejorar para Windows 10](desktop-to-uwp-enhance.md).
+En muchos casos, puedes llamar a las API de Windows Runtime directamente desde la aplicación de escritorio, por lo que, antes de revisar esta guía, consulta [Mejora para Windows 10](desktop-to-uwp-enhance.md).
 
 > [!NOTE]
-> Las características descritas en este artículo requieren que la aplicación de escritorio tenga la [identidad del paquete](modernize-packaged-apps.md), ya sea [empaquetando la aplicación de escritorio en un paquete MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) o [concediendo la identidad de la aplicación mediante un paquete disperso](grant-identity-to-nonpackaged-apps.md).
+> En las características que se describen en este artículo se requiere que la aplicación de escritorio tenga [identidad de paquete](modernize-packaged-apps.md), bien mediante el [empaquetado de la aplicación de escritorio en un paquete MSIX](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) o mediante la [concesión de la identidad de la aplicación con un paquete disperso](grant-identity-to-nonpackaged-apps.md).
 
 Si estás listo, comencemos.
 
 <a id="setup" />
 
-## <a name="first-setup-your-solution"></a>En primer lugar, configura tu solución
+## <a name="first-setup-your-solution"></a>En primer lugar, configurar la solución
 
 Agrega uno o varios proyectos de UWP y componentes de Runtime a la solución.
 
-Comienza con una solución que contenga un **proyecto de empaquetado de aplicación Windows** con una referencia a la aplicación de escritorio.
+Comienza con una solución que contenga un **Proyecto de paquete de aplicación de Windows** con una referencia a la aplicación de escritorio.
 
 Esta imagen muestra un ejemplo de solución.
 
-![Ampliar proyecto de inicio](images/desktop-to-uwp/extend-start-project.png)
+![Ampliar el proyecto de inicio](images/desktop-to-uwp/extend-start-project.png)
 
-Si la solución no contiene un proyecto de empaquetado, consulte [empaquetar la aplicación de escritorio mediante Visual Studio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
+Si la solución no contiene un proyecto de empaquetado, consulta [Empaquetado de la aplicación de escritorio mediante Visual Studio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
 
-### <a name="configure-the-desktop-application"></a>Configurar la aplicación de escritorio
+### <a name="configure-the-desktop-application"></a>Configuración de la aplicación de escritorio
 
-Asegúrese de que la aplicación de escritorio tiene referencias a los archivos que necesita para llamar a Windows Runtime API.
+Asegúrate de que la aplicación de escritorio tiene referencias a los archivos que necesitas para llamar a las API de Windows Runtime.
 
-Para ello, consulte la sección [configurar el proyecto](desktop-to-uwp-enhance.md#set-up-your-project) .
+Para ello, consulta la sección [Configurar el proyecto](desktop-to-uwp-enhance.md#set-up-your-project).
 
 ### <a name="add-a-uwp-project"></a>Agregar un proyecto de UWP
 
 Agrega una **Aplicación vacía (Windows universal)** a la solución.
 
-Aquí es donde debes crear una UI de XAML moderna o usar las API que se ejecutan solo dentro de un proceso de UWP.
+Aquí es donde debes crear una interfaz de usuario XAML moderna o usar las API que se ejecutan solo dentro de un proceso de UWP.
 
 ![Proyecto de UWP](images/desktop-to-uwp/add-uwp-project-to-solution.png)
 
-En tu proyecto de empaquetado, haz clic con el botón derecho en el nodo **Applications** y, a continuación, elige **Agregar referencia**.
+En tu proyecto de empaquetado, haz clic con el botón derecho en el nodo **Aplicaciones** y, a continuación, elige **Agregar referencia**.
 
-![Añadir referencia de proyecto de UWP](images/desktop-to-uwp/add-uwp-project-reference.png)
+![Referencia al proyecto de UWP](images/desktop-to-uwp/add-uwp-project-reference.png)
 
-A continuación, añade una referencia al proyecto de UWP.
+A continuación, agrega una referencia al proyecto de UWP.
 
-![Añadir referencia de proyecto de UWP](images/desktop-to-uwp/choose-uwp-project.png)
+![Referencia al proyecto de UWP](images/desktop-to-uwp/choose-uwp-project.png)
 
 Tu solución debe tener un aspecto similar a este:
 
 ![Solución con proyecto de UWP](images/desktop-to-uwp/uwp-project-reference.png)
 
-### <a name="optional-add-a-windows-runtime-component"></a>Opta Agregar un componente de Windows Runtime
+### <a name="optional-add-a-windows-runtime-component"></a>(Opcional) Agregar un componente de Windows Runtime
 
-Para llevar a cabo algunos escenarios, tendrá que agregar código a un componente de Windows Runtime.
+Para realizar algunos escenarios, tendrás que agregar código a un componente de Windows Runtime.
 
 ![servicio de aplicación de componente de Runtime](images/desktop-to-uwp/add-runtime-component.png)
 
-A continuación, desde tu proyecto de UWP, agrega una referencia al componente de Runtime. Tu solución debe tener un aspecto similar a este:
+A continuación, desde el proyecto de UWP, agrega una referencia al componente de Runtime. Tu solución debe tener un aspecto similar a este:
 
 ![Referencia de componente de Runtime](images/desktop-to-uwp/runtime-component-reference.png)
 
 ### <a name="build-your-solution"></a>Compilar la solución
 
-Compile la solución para asegurarse de que no aparezcan errores. Si recibe errores, Abra **Configuration Manager** y asegúrese de que los proyectos tengan como destino la misma plataforma.
+Compila la solución para asegurarte de que no aparezcan errores. Si aparecen errores, abre **Configuration Manager** y asegúrate de que los proyectos tengan como destino la misma plataforma.
 
-![Administrador de configuración](images/desktop-to-uwp/config-manager.png)
+![Configuration Manager](images/desktop-to-uwp/config-manager.png)
 
 Echemos un vistazo a algunas cosas que puedes hacer con los proyectos de UWP y los componentes de Runtime.
 
-## <a name="show-a-modern-xaml-ui"></a>Mostrar una interfaz de usuario de XAML moderna
+## <a name="show-a-modern-xaml-ui"></a>Mostrar una interfaz de usuario XAML moderna
 
-Como parte del flujo de tu aplicación, puedes incorporar interfaces de usuario basadas en XAML modernas en la aplicación de escritorio. Estas interfaces de usuario pueden ser adaptables naturalmente para diferentes tamaños de pantalla y resoluciones y admitir modelos interactivos modernos, como la entrada táctil y manuscrita.
+Como parte del flujo de la aplicación, puedes incorporar interfaces de usuario basadas en XAML modernas en la aplicación de escritorio. Estas interfaces de usuario pueden ser adaptables naturalmente para diferentes tamaños de pantalla y resoluciones, y admitir modelos interactivos modernos, como la entrada táctil y manuscrita.
 
 Por ejemplo, con una pequeña cantidad de marcado XAML, puedes ofrecer a los usuarios potentes características de visualización relacionadas con mapas.
 
@@ -94,39 +94,39 @@ Esta imagen muestra una aplicación de Windows Forms que abre una interfaz de us
 ![diseño adaptativo](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->En este ejemplo se muestra una interfaz de usuario XAML agregando un proyecto de UWP a la solución. Este es el enfoque compatible estable para mostrar las IUs de XAML en una aplicación de escritorio. La alternativa a este enfoque consiste en agregar controles XAML de UWP directamente a la aplicación de escritorio mediante una isla XAML. Las islas XAML están disponibles actualmente como vista previa para desarrolladores. Aunque te animamos a probarlas ahora en tu propio código de prototipo, no recomendamos usarlos en el código de producción en este momento. Estas API y controles seguirán evolucionando y estabilizarán en futuras versiones de Windows. Para obtener más información sobre las islas XAML, consulte [controles de UWP en aplicaciones de escritorio](xaml-islands.md)
+>En este ejemplo se muestra una interfaz de usuario XAML mediante la adición de un proyecto de UWP a la solución. Este es el enfoque compatible estable para mostrar las interfaces de usuario XAML en una aplicación de escritorio. La alternativa a este enfoque consiste en agregar controles XAML de UWP directamente a la aplicación de escritorio mediante una isla XAML. Las islas XAML están disponibles actualmente como versión preliminar para desarrolladores. Aunque te animamos a probarlas ahora en tu propio código de prototipo, no recomendamos usarlos en el código de producción en este momento. Estas API y controles seguirán evolucionando y se estabilizarán en futuras versiones de Windows. Para obtener más información sobre las islas XAML, consulta [Controles de UWP en aplicaciones de escritorio](xaml-islands.md).
 
 ### <a name="the-design-pattern"></a>El modelo de diseño
 
 Para mostrar una interfaz de usuario basada en XAML, deberás hacer lo siguiente:
 
-:uno: [Configurar la solución](#solution-setup)
+:one: [Configurar la solución](#solution-setup)
 
-:dos: [Crear una interfaz de usuario de XAML](#xaml-UI)
+:two: [Crear una interfaz de usuario XAML](#xaml-UI)
 
-:tres: [Agregar una extensión de protocolo al proyecto de UWP](#add-a-protocol-extension)
+:three: [Agregar una extensión de protocolo al proyecto de UWP](#add-a-protocol-extension)
 
-:cuatro: [Iniciar la aplicación para UWP desde tu aplicación de escritorio](#start)
+:four: [Iniciar la aplicación para UWP desde la aplicación de escritorio](#start)
 
-:cinco: [En el proyecto de UWP, muestra la página que quieres](#parse)
+:five: [En el proyecto de UWP, mostrar la página deseada](#parse)
 
 <a id="solution-setup" />
 
 ### <a name="setup-your-solution"></a>Configurar la solución
 
-Para obtener instrucciones generales sobre cómo configurar la solución, consulta la sección [En primer lugar, configura tu solución](#setup) al principio de esta guía.
+Para obtener instrucciones generales sobre cómo configurar la solución, consulta la sección [En primer lugar, configurar la solución](#setup) al principio de esta guía.
 
-Tu solución tendría un aspecto similar a este:
+La solución tendrá un aspecto similar a este:
 
-![Solución de interfaz de usuario para XAML](images/desktop-to-uwp/xaml-ui-solution.png)
+![Solución de interfaz de usuario XAML](images/desktop-to-uwp/xaml-ui-solution.png)
 
-En este ejemplo, el proyecto de Windows Forms se denomina **Landmarks** y el proyecto de UWP que contiene la interfaz de usuario de XAML **MapUI**.
+En este ejemplo, el proyecto de Windows Forms se denomina **Landmarks** y el proyecto de UWP que contiene la interfaz de usuario XAML, **MapUI**.
 
 <a id="xaml-UI" />
 
-### <a name="create-a-xaml-ui"></a>Crear una interfaz de usuario de XAML
+### <a name="create-a-xaml-ui"></a>Crear una interfaz de usuario XAML
 
-Agregar una interfaz de usuario de XAML a tu proyecto de UWP Este es el XAML para un mapa básico.
+Agrega una interfaz de usuario XAML al proyecto de UWP. Este es el XAML para un mapa básico.
 
 ```xml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="12,20,12,14">
@@ -152,7 +152,7 @@ Agregar una interfaz de usuario de XAML a tu proyecto de UWP Este es el XAML par
 
 ### <a name="add-a-protocol-extension"></a>Agregar una extensión de protocolo
 
-En **Explorador de soluciones**, abra el archivo **Package. appxmanifest** del proyecto de empaquetado en la solución y agregue esta extensión.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución y agrega esta extensión.
 
 ```xml
 <Extensions>
@@ -164,7 +164,7 @@ En **Explorador de soluciones**, abra el archivo **Package. appxmanifest** del p
 
 Asigna un nombre al protocolo, proporciona el nombre del archivo ejecutable generado por el proyecto de UWP y el nombre de la clase del punto de entrada.
 
-También puedes abrir el **package.appxmanifest** en el diseñador, elegir la pestaña **Declaraciones** y, a continuación, agregar la extensión allí.
+También puedes abrir el archivo **package.appxmanifest** en el diseñador, elegir la pestaña **Declaraciones** y, a continuación, agregar la extensión allí.
 
 ![Pestaña Declaraciones](images/desktop-to-uwp/protocol-properties.png)
 
@@ -175,7 +175,7 @@ También puedes abrir el **package.appxmanifest** en el diseñador, elegir la pe
 
 ### <a name="start-the-uwp-app"></a>Iniciar la aplicación para UWP
 
-En primer lugar, desde tu aplicación de escritorio, crea un [Uri](https://docs.microsoft.com/dotnet/api/system.uri) que incluya el nombre del protocolo y los parámetros que quieras pasar a la aplicación para UWP. Luego llama al método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync).
+En primer lugar, desde la aplicación de escritorio, crea un [Uri](https://docs.microsoft.com/dotnet/api/system.uri) que incluya el nombre del protocolo y los parámetros que quieras pasar a la aplicación para UWP. Luego llama al método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync).
 
 ```csharp
 
@@ -200,7 +200,7 @@ private async void ShowMap(double lat, double lon)
 
 ### <a name="parse-parameters-and-show-a-page"></a>Analizar parámetros y mostrar una página
 
-En la clase **Aplicación** de tu proyecto de UWP, invalida el controlador de eventos **OnActivated**. Si la aplicación se activa por el protocolo, analiza los parámetros y luego abre la página que quieras.
+En la clase **Aplicación** del proyecto de UWP, invalida el controlador de eventos **OnActivated**. Si el protocolo activa la aplicación, analiza los parámetros y luego abre la página que quieras.
 
 ```csharp
 protected override void OnActivated(Windows.ApplicationModel.Activation.IActivatedEventArgs e)
@@ -220,7 +220,7 @@ protected override void OnActivated(Windows.ApplicationModel.Activation.IActivat
 }
 ```
 
-En el código subyacente de la página XAML, invalide el método ``OnNavigatedTo`` para usar los parámetros pasados en la página. En este caso, usaremos la latitud y longitud que se pasaron a esta página para mostrar una ubicación en un mapa.
+En el código subyacente de la página XAML, invalida el método ``OnNavigatedTo`` para usar los parámetros pasados a la página. En este caso, usaremos la latitud y la longitud que se pasaron a esta página para mostrar una ubicación en un mapa.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -247,29 +247,29 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
  }
 ```
 
-## <a name="making-your-desktop-application-a-share-target"></a>Hacer que la aplicación de escritorio sea un destino de recursos compartidos
+## <a name="making-your-desktop-application-a-share-target"></a>Convertir la aplicación de escritorio en un destino de recursos compartidos
 
-Puedes hacer la aplicación de escritorio sea un destino de recursos compartidos para que los usuarios puedan compartir con facilidad datos, como imágenes de otras aplicaciones que admiten el uso compartido.
+Puedes convertir la aplicación de escritorio en un destino de recursos compartidos para que los usuarios puedan compartir con facilidad datos, como imágenes de otras aplicaciones que admiten el uso compartido.
 
-Por ejemplo, los usuarios pueden elegir la aplicación para compartir imágenes de Microsoft Edge, la aplicación fotos. Esta es una aplicación de ejemplo de WPF que tiene esa capacidad.
+Por ejemplo, los usuarios podrían elegir tu aplicación para compartir imágenes desde Microsoft Edge, la aplicación Fotos. Esta es una aplicación de ejemplo WPF que tiene esa funcionalidad.
 
-![destino de uso compartido](images/desktop-to-uwp/share-target.png).
+![Compartir destino](images/desktop-to-uwp/share-target.png).
 
-Vea el ejemplo completo [aquí](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/ShareTarget) .
+Consulta el ejemplo completo [aquí](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/ShareTarget).
 
 ### <a name="the-design-pattern"></a>El modelo de diseño
 
 Para que la aplicación sea un destino de recursos compartidos, deberás hacer lo siguiente:
 
-:uno: [Agrega una extensión de destino de recursos compartidos](#share-extension)
+:one: [Agregar una extensión de destino de recursos compartidos](#share-extension)
 
-: dos: [invalidar el controlador de eventos OnShareTargetActivated](#override)
+:two: [Invalidar el controlador de eventos OnShareTargetActivated](#override)
 
-: tres: [Agregar extensiones de escritorio al proyecto de UWP](#desktop-extensions)
+:three: [Agregar extensiones de escritorio al proyecto de UWP](#desktop-extensions)
 
-: cuatro: [Agregar la extensión de proceso de plena confianza](#full-trust)
+:four: [Agregar la extensión de proceso de plena confianza](#full-trust)
 
-: cinco: [modificación de la aplicación de escritorio para obtener el archivo compartido](#modify-desktop)
+:five: [Modificar la aplicación de escritorio para obtener el archivo compartido](#modify-desktop)
 
 <a id="share-extension" />
 
@@ -277,7 +277,7 @@ Los pasos siguientes
 
 ### <a name="add-a-share-target-extension"></a>Agregar una extensión de destino de recursos compartidos
 
-En **Explorador de soluciones**, abra el archivo **Package. appxmanifest** del proyecto de empaquetado en la solución y agregue la extensión de destino del recurso compartido.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución y agrega la extensión de destino de recursos compartidos.
 
 ```xml
 <Extensions>
@@ -297,15 +297,15 @@ En **Explorador de soluciones**, abra el archivo **Package. appxmanifest** del p
 
 Proporciona el nombre del archivo ejecutable generado por el proyecto de UWP y el nombre de la clase del punto de entrada. Este marcado supone que el nombre del archivo ejecutable de la aplicación para UWP es `ShareTarget.exe`.
 
-También tendrás que especificar qué tipos de archivos se pueden compartir con la aplicación. En este ejemplo, vamos a convertir la aplicación de escritorio de [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) en un destino de recurso compartido para las imágenes de mapa de bits, por lo que especificamos `Bitmap` para el tipo de archivo compatible.
+También tendrás que especificar qué tipos de archivos se pueden compartir con la aplicación. En este ejemplo, para convertir la aplicación de escritorio [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) en un destino de recursos compartidos para las imágenes de mapa de bits, se especifica `Bitmap` para el tipo de archivo compatible.
 
 <a id="override" />
 
 ### <a name="override-the-onsharetargetactivated-event-handler"></a>Invalidar el controlador de eventos OnShareTargetActivated
 
-Invalide el controlador de eventos **OnShareTargetActivated** en la clase **App** del proyecto de UWP.
+Invalida el controlador de eventos **OnShareTargetActivated** en la clase **App** del proyecto de UWP.
 
-A este controlador de eventos se llama cuando los usuarios eligen tu aplicación para compartir sus archivos.
+Se llama a este controlador de eventos cuando los usuarios eligen tu aplicación para compartir sus archivos.
 
 ```csharp
 
@@ -330,21 +330,21 @@ private async void shareWithDesktopApplication(ShareOperation shareOperation)
 }
 ```
 
-En este código, se guarda la imagen que el usuario comparte en una carpeta de almacenamiento local de aplicaciones. Más adelante, modificaremos la aplicación de escritorio para que extraiga imágenes de la misma carpeta. La aplicación de escritorio puede hacerlo porque se incluye en el mismo paquete que la aplicación para UWP.
+En este código, se guarda la imagen que el usuario comparte en una carpeta de almacenamiento local de aplicaciones. Más adelante, modificaremos la aplicación de escritorio para extraer imágenes de esa misma carpeta. La aplicación de escritorio puede hacerlo porque está incluida en el mismo paquete que la aplicación para UWP.
 
 <a id="desktop-extensions" />
 
 ### <a name="add-desktop-extensions-to-the-uwp-project"></a>Agregar extensiones de escritorio al proyecto de UWP
 
-Agregue las **extensiones de escritorio de Windows para la extensión UWP** al proyecto de aplicación para UWP.
+Agrega la extensión **Windows Desktop Extensions for the UWP** al proyecto de la aplicación para UWP.
 
-![extensión de escritorio](images/desktop-to-uwp/desktop-extensions.png)
+![Extensión de escritorio](images/desktop-to-uwp/desktop-extensions.png)
 
 <a id="full-trust" />
 
 ### <a name="add-the-full-trust-process-extension"></a>Agregar la extensión de proceso de plena confianza
 
-En **Explorador de soluciones**, abra el archivo **Package. appxmanifest** del proyecto de empaquetado en la solución y, a continuación, agregue la extensión de proceso de plena confianza junto a la extensión de destino de recurso compartido que agrega este archivo anteriormente.
+En el **Explorador de soluciones**, abre el archivo **package.appxmanifest** del proyecto de empaquetado en la solución y, a continuación, agrega la extensión de proceso de plena confianza junto a la extensión de destino de recursos compartidos que agregaste anteriormente a este archivo.
 
 ```xml
 <Extensions>
@@ -354,19 +354,19 @@ En **Explorador de soluciones**, abra el archivo **Package. appxmanifest** del p
 </Extensions>  
 ```
 
-Esta extensión permitirá a la aplicación de UWP iniciar la aplicación de escritorio en la que desea compartir un archivo. En el ejemplo, hacemos referencia al archivo ejecutable de la aplicación de escritorio [PhotoStoreDemo de WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) .
+Esta extensión permitirá a la aplicación para UWP iniciar la aplicación de escritorio en la que quieres compartir un archivo. En el ejemplo, hacemos referencia al archivo ejecutable de la aplicación de escritorio [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo).
 
 <a id="modify-desktop" />
 
-### <a name="modify-the-desktop-application-to-get-the-shared-file"></a>Modificación de la aplicación de escritorio para obtener el archivo compartido
+### <a name="modify-the-desktop-application-to-get-the-shared-file"></a>Modificar la aplicación de escritorio para obtener el archivo compartido
 
-Modifique la aplicación de escritorio para buscar y procesar el archivo compartido. En este ejemplo, la aplicación para UWP almacenó el archivo compartido en la carpeta de datos de la aplicación local. Por lo tanto, se modificará la aplicación de escritorio [PhotoStoreDemo de WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) para extraer fotos de esa carpeta.
+Modifica la aplicación de escritorio para buscar y procesar el archivo compartido. En este ejemplo, la aplicación para UWP almacenó el archivo compartido en la carpeta de datos de la aplicación local. Por lo tanto, se modificará la aplicación de escritorio [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) para extraer fotos de esa carpeta.
 
 ```csharp
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-En el caso de las instancias de la aplicación de escritorio que ya están abiertas por el usuario, es posible que también se controle el evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher) y que pase la ruta de acceso a la ubicación del archivo. De este modo, las instancias abiertas de la aplicación de escritorio mostrarán la foto compartida.
+En el caso de las instancias de la aplicación de escritorio que ya ha abierto el usuario, también se puede controlar el evento [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher) y pasar la ruta de acceso a la ubicación del archivo. De este modo, las instancias abiertas de la aplicación de escritorio mostrarán la foto compartida.
 
 ```csharp
 ...
@@ -394,31 +394,31 @@ private void Watcher_Created(object sender, FileSystemEventArgs e)
 
 ## <a name="create-a-background-task"></a>Crear una tarea en segundo plano
 
-Se añade una tarea en segundo plano para ejecutar código de aplicación incluso cuando la aplicación está suspendida. Las tareas en segundo plano son geniales para tareas pequeñas que no requieren la interacción del usuario. Por ejemplo, la tarea puede descargar correo, mostrar una notificación del sistema sobre un mensaje de chat entrante o reaccionar a un cambio en una condición del sistema.
+Se debe añadir una tarea en segundo plano para ejecutar código incluso cuando la aplicación está suspendida. Las tareas en segundo plano son geniales para tareas pequeñas que no requieren la interacción del usuario. Por ejemplo, la tarea puede descargar correo, mostrar una notificación del sistema sobre un mensaje de chat entrante o reaccionar a un cambio en una condición del sistema.
 
-Esta es una aplicación de ejemplo de WPF que registra una tarea en segundo plano.
+A continuación se incluye un ejemplo de aplicación WPF que registra una tarea en segundo plano.
 
-![tarea en segundo plano](images/desktop-to-uwp/sample-background-task.png)
+![Tarea en segundo plano](images/desktop-to-uwp/sample-background-task.png)
 
-La tarea realiza una solicitud http y mide el tiempo que tarda la solicitud en devolver una respuesta. Tus tareas probablemente serán mucho más interesantes, pero este ejemplo es ideal para conocer la mecánica básica de una tarea en segundo plano.
+La tarea realiza una solicitud HTTP y mide el tiempo que tarda la solicitud en devolver una respuesta. Tus tareas probablemente serán mucho más interesantes, pero este ejemplo es ideal para conocer la mecánica básica de una tarea en segundo plano.
 
-Vea el ejemplo completo [aquí](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/BGTask).
+Consulta el ejemplo completo [aquí](https://github.com/Microsoft/Windows-Packaging-Samples/tree/master/BGTask).
 
 ### <a name="the-design-pattern"></a>El modelo de diseño
 
 Para crear un servicio en segundo plano, deberás hacer lo siguiente:
 
-:uno: [Implementar la tarea en segundo plano](#implement-task)
+:one: [Implementar la tarea en segundo plano](#implement-task)
 
-:dos: [Configurar la tarea en segundo plano](#configure-background-task)
+:two: [Configurar la tarea en segundo plano](#configure-background-task)
 
-:tres: [Registrar la tarea en segundo plano](#register-background-task)
+:three: [Registrar la tarea en segundo plano](#register-background-task)
 
 <a id="implement-task" />
 
 ### <a name="implement-the-background-task"></a>Implementar la tarea en segundo plano
 
-Implementa la tarea en segundo plano agregando el código a un proyecto de componente de Windows Runtime.
+Para implementar la tarea en segundo plano, agrega el código a un proyecto de componente de Windows Runtime.
 
 ```csharp
 public sealed class SiteVerifier : IBackgroundTask
@@ -459,17 +459,17 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ### <a name="configure-the-background-task"></a>Configurar la tarea en segundo plano
 
-En el diseñador de manifiestos, abra el archivo **Package. appxmanifest** del proyecto de empaquetado en la solución.
+En el diseñador de manifiesto, abre el archivo **package.appxmanifest** del proyecto de empaquetado en tu solución.
 
 En la pestaña **Declaraciones**, agrega una declaración de **Tareas en segundo plano**.
 
 ![Opción de tarea en segundo plano](images/desktop-to-uwp/background-task-option.png)
 
-A continuación, elige las propiedades deseadas. Nuestro ejemplo usa la propiedad **Timer**.
+A continuación, elige las propiedades deseadas. En nuestro ejemplo se usa la propiedad **Timer**.
 
 ![Propiedad Timer](images/desktop-to-uwp/timer-property.png)
 
-Proporcione el nombre completo de la clase en el Windows Runtime componente que implementa la tarea en segundo plano.
+Proporciona el nombre completo de la clase en el componente de Windows Runtime que implementa la tarea en segundo plano.
 
 ![Propiedad Timer](images/desktop-to-uwp/background-task-entry-point.png)
 
@@ -501,6 +501,6 @@ public void RegisterBackgroundTask(String triggerName)
 }
 ```
 
-## <a name="find-answers-to-your-questions"></a>Encuentra respuestas a tus preguntas
+## <a name="find-answers-to-your-questions"></a>Encontrar respuestas a tus preguntas
 
 ¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).

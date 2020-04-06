@@ -4,11 +4,11 @@ description: Este artículo te guiará en el procedimiento para dirigirte a dist
 title: Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)
 ms.date: 04/08/2019
 ms.topic: article
-keywords: windows 10, uwp, test, rendimiento, performance, depuración, debug, pruebas
+keywords: windows 10, uwp, depuración, pruebas, rendimiento, debut, test, performance
 ms.localizationpriority: medium
 ms.openlocfilehash: d948af1ce10b3752ba9f20454d8dea72916de692
 ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/06/2020
 ms.locfileid: "75683858"
@@ -17,7 +17,7 @@ ms.locfileid: "75683858"
 
 Este artículo te guiará en el procedimiento para dirigirte a distintos destinos de implementación y de depuración.
 
-Microsoft Visual Studio permite implementar y depurar las aplicaciones de Plataforma universal de Windows (UWP) en una variedad de dispositivos Windows 10. Visual Studio puede controlar el proceso de creación y registro de la aplicación en el dispositivo de destino.
+Microsoft Visual Studio permite implementar y depurar aplicaciones para la Plataforma universal de Windows (UWP) en una variedad de dispositivos de Windows 10. Visual Studio puede controlar el proceso de creación y registro de la aplicación en el dispositivo de destino.
 
 ## <a name="picking-a-deployment-target"></a>Elección de un destino de implementación
 
@@ -25,11 +25,11 @@ Para elegir un destino, ve a la lista desplegable de destino de depuración junt
 
 ![Lista de destinos de dispositivo para depuración](images/debug-device-target-list.png)
 
-- **Simulador** va a implementar la aplicación en un entorno simulado en la máquina de desarrollo actual. Esta opción solo está disponible si la **Versión mínima de la plataforma de destino** de la aplicación es inferior o igual al sistema operativo de la máquina de desarrollo.
-- **Máquina local** implementa la aplicación en la máquina de desarrollo actual. Esta opción solo está disponible si la **Versión mínima de la plataforma de destino** de la aplicación es inferior o igual al sistema operativo de la máquina de desarrollo.
+- **Simulador** va a implementar la aplicación en un entorno simulado en la máquina de desarrollo actual. Esta opción solo está disponible si el valor de **Versión mínima de la plataforma de destino** es menor o igual que el sistema operativo de la máquina de desarrollo.
+- **Máquina local** implementa la aplicación en la máquina de desarrollo actual. Esta opción solo está disponible si el valor de **Versión mínima de la plataforma de destino** es menor o igual que el sistema operativo de la máquina de desarrollo.
 - **Máquina remota** te permitirá especificar un destino remoto para implementar la aplicación. Puedes encontrar más información acerca de la implementación en una máquina remota en [Especificación de un dispositivo remoto](#specifying-a-remote-device).
 - **Dispositivo** implementará la aplicación en un dispositivo conectado mediante USB. El dispositivo no debe estar bloqueado por el desarrollador y debe tener la pantalla desbloqueada.
-- Un destino de tipo **Emulador** arrancará e implementará la aplicación en un emulador con la configuración especificada en el nombre. Los emuladores solo están disponibles en máquinas con Hyper-V habilitadas que ejecuten Windows 8.1 o más.
+- Un destino de tipo **Emulador** arrancará e implementará la aplicación en un emulador con la configuración especificada en el nombre. Los emuladores solo están disponibles en máquinas compatibles con Hyper-V que ejecutan Windows 8.1 o posterior.
 
 ## <a name="debugging-deployed-apps"></a>Depuración de aplicaciones implementadas
 
@@ -45,7 +45,7 @@ Las aplicaciones para UWP se pueden desarrollar y compilar en Windows 8.1 o post
 
 ## <a name="package-layout"></a>Diseño del paquete
 
-A partir de la actualización 3 de Visual Studio 2015, se ha agregado la opción para que los desarrolladores especifiquen la ruta de acceso de diseño de las aplicaciones para UWP. Esto determina en qué lugar del disco se copia diseño del paquete cuando se compila la aplicación. De manera predeterminada, esta propiedad se establece en relación con el directorio del proyecto raíz. Si no modificas esta propiedad, el comportamiento permanecerá igual al que tiene para las versiones anteriores de Visual Studio.
+A partir de Visual Studio 2015 Update 3, hemos agregado la opción para que los desarrolladores especifiquen la ruta de acceso de diseño de sus aplicaciones para UWP. Esto determina en qué lugar del disco se copia diseño del paquete cuando se compila la aplicación. De manera predeterminada, esta propiedad se establece en relación con el directorio del proyecto raíz. Si no modificas esta propiedad, el comportamiento permanecerá igual al que tiene para las versiones anteriores de Visual Studio.
 
 Esta propiedad se puede modificar en las propiedades de **Depurar** del proyecto.
 
@@ -65,15 +65,15 @@ Para especificar una máquina remota para aplicaciones de C# o Microsoft Visual 
 
 ![Cuadro de diálogo Conexiones remotas](images/debug-remote-connections.png)
 
-Para volver a este cuadro de diálogo, puede abrir Propiedades del proyecto y pasar a la pestaña **depurar** . Desde allí, seleccione **Buscar** junto a **equipo remoto:**
+Para volver a este cuadro de diálogo, puedes abrir las propiedades del proyecto e ir a la pestaña **Depurar**. Allí, selecciona **Buscar** junto a **Máquina remota:**
 
 ![Pestaña Depurar](images/debug-remote-machine-config.png)
 
-Para implementar una aplicación en un equipo remoto de Creators Update, también debes descargar e instalar Herramientas remotas para Visual Studio en el equipo de destino. Para obtener instrucciones completas, consulta [Instrucciones del equipo remoto](#remote-pc-instructions).  Sin embargo, a partir del PC de Creators Update también es compatible con la implementación remota.  
+Para implementar una aplicación en un equipo remoto con una versión anterior a Creators Update, también debes descargar e instalar Herramientas remotas para Visual Studio en el equipo de destino. Para obtener instrucciones completas, consulta [Instrucciones del equipo remoto](#remote-pc-instructions).  Sin embargo, los equipos con versiones a partir de Creators Update también son compatibles con la implementación remota.  
 
 ### <a name="c-and-javascript"></a>C++ y JavaScript
 
-Para especificar un destino de equipo remoto para C++ una aplicación para UWP de o JavaScript:
+Para especificar el destino de una máquina remota de una aplicación para UWP en C++ o JavaScript:
 
 1. En el **Explorador de soluciones**, haz clic con el botón derecho en el nombre del proyecto y elige **Propiedades**.
 2. Ve a la configuración de **Depuración** y cambia el valor de **Depurador para iniciar** a **Máquina remota**.
@@ -86,32 +86,32 @@ Después de especificar la máquina, puedes seleccionar **Máquina remota** en l
 ### <a name="remote-pc-instructions"></a>Instrucciones del equipo remoto
 
 > [!NOTE]
-> Estas instrucciones solo son necesarias para versiones anteriores a Windows 10.  A partir de la actualización de los creadores, un equipo puede tratarse como una consola Xbox.  Es decir, al habilitar la Detección de dispositivos en del equipo con Modo de desarrollador y mediante la Autenticación universal para emparejarlo mediante PIN y conectar con el equipo.
+> Estas instrucciones solo son necesarias para versiones anteriores de Windows 10.  A partir de Creators Update, un equipo puede tratarse como una consola Xbox.  Es decir, habilitar la Detección de dispositivos en el menú Modo de desarrollo del equipo y usar la Autenticación universal para realizar el emparejamiento mediante PIN y la conexión con el equipo.
 
-Para implementar en un equipo remoto con Creators Update preinstalado, el equipo de destino debe tener instalado Visual Studio Remote Tools. La máquina remota también deben ejecutar una versión de Windows que sea superior o igual a la propiedad **Versión mínima de la plataforma de destino** de tus aplicaciones. Una vez que hayas instalado las herramientas remotas, debes iniciar el depurador remoto en el equipo de destino.
+Para realizar la implementación en un equipo remoto con una versión anterior a Creators Update, el equipo de destino debe tener instaladas las Herramientas remotas para Visual Studio. El equipo remoto también debe ejecutar una versión de Windows superior o igual a la especificada en la propiedad **Versión mínima de la plataforma de destino**. Una vez que hayas instalado las herramientas remotas, debes iniciar el depurador remoto en el equipo de destino.
 
 Para ello, busca **Depurador remoto** en el menú **Inicio**, ábrelo y, si te lo pide, permite que el depurador configure las opciones del firewall. De manera predeterminada, el depurador se inicia con la autenticación de Windows. Esto requiere credenciales de usuario si el usuario que inició sesión no es el mismo en ambos equipos.
 
-Para cambiarlo a **sin autenticación**, en el **Depurador remoto**, vaya a **herramientas** -&gt; **Opciones**y, a continuación, establézcalo en **sin autenticación**. Tras configurar el depurador remoto, también debes asegurarte de que has configurado el dispositivo host en [Modo de desarrollador](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). Después de esto, puedes implementar desde la máquina de desarrollo.
+Para cambiar a **Sin autenticación**, en el **Depurador remoto**, ve a **Herramientas** -&gt; **Opciones** y establécelo en **Sin autenticación**. Tras configurar el depurador remoto, también debes asegurarte de que has configurado el dispositivo host en [Modo de desarrollador](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development). Después de esto, puedes implementar desde la máquina de desarrollo.
 
 Para obtener más información, consulta la página [Centro de descarga para Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
-## <a name="passing-command-line-debug-arguments"></a>Pasar argumentos de depuración de la línea de comandos
+## <a name="passing-command-line-debug-arguments"></a>Paso de argumentos de depuración de la línea de comandos
 
-En Visual Studio 2019, puede pasar argumentos de depuración de línea de comandos al iniciar la depuración de aplicaciones para UWP. Puedes acceder a los argumentos de depuración de la línea de comandos desde el parámetro *args* del método **OnLaunched** de la clase [**Application**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application). Para especificar los argumentos de depuración de la línea de comandos, abre las propiedades del proyecto y navega a la pestaña **Depurar**.
+En Visual Studio 2019, puedes pasar argumentos de depuración de la línea de comandos al iniciar la depuración de las aplicaciones para UWP. Puedes acceder a los argumentos de depuración de la línea de comandos desde el parámetro *args* del método **OnLaunched** de la clase [**Application**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application). Para especificar los argumentos de depuración de la línea de comandos, abre las propiedades del proyecto y navega a la pestaña **Depurar**.
 
 > [!NOTE]
-> Esta característica está disponible en Visual Studio 2017 (versión 15.1) para C#, VB y C++. JavaScript está disponible en versiones posteriores. Los argumentos de depuración de la línea de comandos están disponibles para todos los tipos de implementación, excepto el simulador.
+> Esta característica está disponible en Visual Studio 2017 (versión 15.1) para C#, VB y C++. JavaScript está disponible en versiones posteriores. Los argumentos de depuración de la línea de comandos están disponibles para todos los tipos de implementación, excepto el simulador.
 
-En el caso de proyectos C# y VB para la UWP, verás un campo **Argumentos de la línea de comandos:** en **Opciones de inicio**.
+En el caso de proyectos C# y VB de UWP, verás un campo **Argumentos de la línea de comandos** en **Opciones de inicio**.
 
 ![Argumentos de línea de comandos](images/command-line-arguments.png)
 
-En el caso de proyectos C++ y JS para UWP, verás **Argumentos de la línea de comandos** como un campo en **Propiedades de depuración**.
+En el caso de proyectos C# y VB de UWP, verás **Argumentos de la línea de comandos** como un campo de **Propiedades de depuración**.
 
 ![Argumentos de la línea de comandos C++ y JS](images/command-line-arguments-cpp.png)
 
-Después de especificar los argumentos de la línea de comandos, puedes acceder al valor del argumento en el método **OnLaunched** de la aplicación. El elemento *args* del objeto [**LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) tendrá una **Argumentos** con el valor establecido en el texto del campo **Argumentos de la línea de comandos** campo.
+Después de especificar los argumentos de la línea de comandos, puedes acceder al valor del argumento en el método **OnLaunched** de la aplicación. El elemento *args* del objeto [**LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) tendrá una propiedad **Argumentos** con el valor establecido en el texto del campo **Argumentos de la línea de comandos**.
 
 ![Argumentos de la línea de comandos C++ y JS](images/command-line-arguments-debugging.png)
 
@@ -119,13 +119,13 @@ Después de especificar los argumentos de la línea de comandos, puedes acceder 
 
 Existen tres modos de autenticación para la implementación del equipo remoto:
 
-- **Universal (protocolo sin cifrar)** : usa este modo de autenticación siempre que realices una implementación en un dispositivo remoto. Actualmente, esto es para dispositivos de IoT, dispositivos de Xbox y dispositivos HoloLens, así como para dispositivos con Creators Update o equipos más nuevos. Universal (protocolo sin cifrar) solo se debe usar en redes de confianza. La conexión de depuración es vulnerable para los usuarios malintencionados que podrían interceptar y cambiar los datos que se pasan entre el desarrollo y el equipo remoto.
-- **Windows**: este modo de autenticación solo está destinado para su uso en la implementación del equipo remoto (de escritorio o portátil) que ejecuten Herramientas remotas para Visual Studio. Usa este modo de autenticación si tienes acceso a las credenciales del usuario que inició la sesión de la máquina de destino. Este es el canal más seguro para la implementación remota.
-- **Ninguno**: este modo de autenticación solo está destinado para su uso en la implementación del equipo remoto (de escritorio o portátil) que ejecuten Herramientas remotas para Visual Studio. Usa este modo de autenticación si tienes una instalación de máquina de prueba en un entorno en el que se inició sesión con una cuenta de prueba y no se pueden escribir credenciales. Asegúrate de que la configuración del depurador remoto esté establecida para aceptar que no haya autenticación.
+- **Universal (protocolo sin cifrar)** : usa este modo de autenticación siempre que realices una implementación en un dispositivo remoto. Actualmente, esto es para dispositivos de IoT, dispositivos Xbox y dispositivos HoloLens, así como para equipos con Creators Update o más nuevos. Universal (protocolo sin cifrar) solo se debe usar en redes de confianza. La conexión de depuración es vulnerable para los usuarios malintencionados que podrían interceptar y cambiar los datos que se pasan entre el desarrollo y el equipo remoto.
+- **Windows**: este modo de autenticación solo está destinado a usarse para equipos remotos (de escritorio o portátil) que ejecuten Herramientas remotas para Visual Studio. Usa este modo de autenticación si tienes acceso a las credenciales del usuario que inició la sesión de la máquina de destino. Este es el canal más seguro para la implementación remota.
+- **None**: este modo de autenticación solo está destinado a usarse para equipos remotos (de escritorio o portátil) que ejecuten Herramientas remotas para Visual Studio. Usa este modo de autenticación si tienes una instalación de máquina de prueba en un entorno en el que se inició sesión con una cuenta de prueba y no se pueden escribir credenciales. Asegúrate de que la configuración del depurador remoto esté establecida para aceptar que no haya autenticación.
 
 ## <a name="advanced-remote-deployment-options"></a>Opciones avanzadas de implementación remota
 
-A partir del lanzamiento de Visual Studio 2015 Update 3 y la actualización de aniversario de Windows 10, hay nuevas opciones de implementación remota avanzada para determinados dispositivos Windows 10. Las opciones avanzadas de implementación remota pueden encontrarse en el menú **Depurar** de las propiedades del proyecto.
+A partir del lanzamiento de Visual Studio 2015 Update 3 y la Actualización de aniversario de Windows 10, hay nuevas opciones avanzadas de implementación remota para determinados dispositivos Windows 10. Las opciones avanzadas de implementación remota pueden encontrarse en el menú **Depurar** de las propiedades del proyecto.
 
 Las nuevas propiedades incluyen lo siguiente:
 
@@ -137,8 +137,8 @@ Las nuevas propiedades incluyen lo siguiente:
 
 Para usar las opciones avanzadas de implementación remota, debes cumplir los siguientes requisitos:
 
-- Tenga Visual Studio 2015 Update 3 o alguna versión posterior de Visual Studio instalada con Windows 10 Tools 1.4.1 o posterior (que incluye el SDK de actualización de aniversario de Windows 10) se recomienda usar la versión más reciente de Visual Studio con las actualizaciones para asegurarse de que obtiene todos los características más recientes de desarrollo y seguridad.
-- Elegir como destino un dispositivo remoto de Xbox con la Actualización de aniversario de Windows 10 o un equipo con Windows 10 Creators Update.
+- Asegúrate de tener Visual Studio 2015 Update 3 o alguna versión posterior de Visual Studio instalada con las Herramientas para Windows 10 1.4.1 o una versión posterior (que incluye el SDK de la Actualización de aniversario de Windows 10). Se recomienda usar la versión más reciente de Visual Studio con las actualizaciones para asegurarse de obtener todas las características de desarrollo y seguridad más recientes.
+- Elección como destino de un dispositivo remoto Xbox con la Actualización de aniversario de Windows 10 o un equipo con Windows 10 Creators Update.
 - Usar el modo Autenticación universal
 
 ### <a name="properties-pages"></a>Páginas de propiedades
@@ -158,7 +158,7 @@ La opción **Copiar archivos en el dispositivo** transferirá físicamente los a
 La **ruta de acceso de registro del paquete** especificada cuando **copias archivos en el dispositivo** es la ubicación física del dispositivo remoto en la que se copian los archivos. Esta ruta de acceso se puede especificar como cualquier ruta de acceso relativa. La ubicación en la que se implementen los archivos será relativa a una raíz de archivos de desarrollo que variará según el dispositivo de destino. Especificar esta ruta de acceso resulta útil en el caso de varios desarrolladores que comparten el mismo dispositivo y trabajan en paquetes con alguna variación en cuanto a compilación.
 
 > [!NOTE]
-> **Copiar archivos en el dispositivo** actualmente se admite en Xbox con Actualización de aniversario de Windows 10 y con equipos con Windows 10 Creators Update.
+> **Copiar archivos en el dispositivo** actualmente se admite en Xbox con la Actualización de aniversario de Windows 10 y en equipos con Windows 10 Creators Update.
 
 En el dispositivo remoto, el diseño se copia en la siguiente ubicación predeterminada: `\\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
 
@@ -171,11 +171,11 @@ Para registrar correctamente el diseño desde la red, primero debes hacer que **
 Para obtener ayuda con este tema, consulta los siguientes ejemplos:
 
 - Ejemplo 1 (carpeta local de diseño, accesible como un recurso compartido de red):
-  - **Ruta de acceso** de la carpeta de diseño = `D:\Layouts\App1`
+  - **Ruta de acceso de la carpeta del diseño** = `D:\Layouts\App1`
   - **Ruta de acceso de registro del paquete** = `\\NETWORK-SHARE\Layouts\App1`
 
 - Ejemplo 2 (carpeta de diseño de la red):
-  - **Ruta de acceso** de la carpeta de diseño = `\\NETWORK-SHARE\Layouts\App1`
+  - **Ruta de acceso de la carpeta del diseño** = `\\NETWORK-SHARE\Layouts\App1`
   - **Ruta de acceso de registro del paquete** = `\\NETWORK-SHARE\Layouts\App1`
 
 Cuando registres el diseño desde la red por primera vez, las credenciales se almacenarán en caché en el dispositivo de destino para que no sea necesario iniciar sesión una y otra vez. Para quitar las credenciales almacenadas en caché, puedes usar la [herramienta WinAppDeployCmd.exe](https://docs.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool) desde el SDK de Windows 10 con el comando **deletecreds**.
@@ -183,32 +183,32 @@ Cuando registres el diseño desde la red por primera vez, las credenciales se al
 No puedes seleccionar **Mantener todos los archivos en el dispositivo** al registrar el diseño desde la red porque no hay archivos que se copien físicamente al dispositivo remoto.
 
 > [!NOTE]
-> **Registrar el diseño desde la red** actualmente se admite en Xbox con Actualización de aniversario de Windows 10 y con equipos con Windows 10 Creators Update.
+> **Registrar el diseño desde la red** actualmente se admite en Xbox con la Actualización de aniversario de Windows 10 y en equipos con Windows 10 Creators Update.
 
-En el dispositivo remoto, el diseño se registra en la siguiente ubicación predeterminada en función de la familia de dispositivos: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles`: es un vínculo simbólico a la **ruta de acceso de registro del paquete** . el equipo no usa un vínculo simbólico y, en su lugar, registra directamente la ruta de acceso de registro del **paquete** .
+En el dispositivo remoto, el diseño se registrará en la siguiente ubicación predeterminada según la familia de dispositivos: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` (es un vínculo simbólico de la **ruta de acceso de registro del paquete**). El equipo no usa un vínculo simbólico y en su lugar, registra directamente la **ruta de acceso de registro del paquete**.
 
 ## <a name="debugging-options"></a>Opciones de depuración
 
-En Windows 10, el rendimiento de inicio de las aplicaciones para UWP se ha mejorado al iniciar y suspender las aplicaciones de forma proactiva en una técnica denominada [preinicio](https://docs.microsoft.com/windows/uwp/launch-resume/handle-app-prelaunch). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
+Windows 10 presenta una mejora del rendimiento de inicio de las aplicaciones para UWP gracias al inicio y la posterior suspensión de aplicaciones de forma proactiva mediante una técnica denominada [inicio previo](https://docs.microsoft.com/windows/uwp/launch-resume/handle-app-prelaunch). Muchas aplicaciones no tendrán que hacer nada especial para funcionar en este modo, pero es posible que algunas necesiten ajustar su comportamiento. Para facilitar la depuración de problemas en estas rutas de acceso de código, puedes comenzar depurando la aplicación desde Visual Studio en el modo de inicio previo.
 
-La depuración se admite tanto desde un proyecto de Visual Studio (**Depuración** -&gt; **otros destinos de depuración** -&gt; **depurar el preinicio de la aplicación Windows universal**) como en el caso de las aplicaciones ya instaladas en el equipo (**depurar** -&gt; **otros destinos de depuración** -&gt; **depurar paquete de aplicaciones instalado** seleccionando la casilla **Activar aplicación con** Para obtener más información, consulta [Debug UWP Prelaunch (Depurar inicio previo de UWP)](https://blogs.msdn.com/b/visualstudioalm/archive/2015/11/30/debug-uwp-prelaunch-with-vs2015.aspx).
+La depuración se admite tanto desde un proyecto de Visual Studio (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar el inicio previo de la Aplicación Windows universal**) como para las aplicaciones ya instaladas en la máquina (**Depurar** -&gt; **Otros destinos de depuración** -&gt; **Depurar paquete de aplicaciones instalado** y activa la casilla **Activar aplicación con inicio previo**). Para obtener más información, consulta [Debug UWP Prelaunch (Depurar inicio previo de UWP)](https://blogs.msdn.com/b/visualstudioalm/archive/2015/11/30/debug-uwp-prelaunch-with-vs2015.aspx).
 
 Puedes establecer las siguientes opciones de implementación en la página de propiedades de **Depurar** del proyecto de inicio:
 
 - **Permitir bucle invertido de la red local**
 
-  Por cuestiones de seguridad, no se permite que una aplicación para UWP instalada de modo estándar realice llamadas de red al dispositivo en el que está instalada. De manera predeterminada, la implementación de Visual Studio crea una exención de esta regla para la aplicación implementada. Esta exención te permite probar los procedimientos de comunicación en un solo equipo. Antes de enviar la aplicación al Microsoft Store, debe probar la aplicación sin la exención.
+  Por cuestiones de seguridad, no se permite que una aplicación para UWP instalada de modo estándar realice llamadas de red al dispositivo en el que está instalada. De manera predeterminada, la implementación de Visual Studio crea una exención de esta regla para la aplicación implementada. Esta exención te permite probar los procedimientos de comunicación en un solo equipo. Antes de enviar la aplicación a la Microsoft Store, debes probarla sin la exención.
 
   Para quitar la exención de bucle invertido de red de la aplicación:
 
-  - En la C# página de propiedades y Visual Basic **depurar** , desactive la casilla **permitir bucle invertido de la red local** .
+  - En la página de propiedades de  **Depurar** de C# y Visual Basic, desactiva la casilla **Permitir bucle invertido de la red local**.
   - En la página de propiedades de **Depuración** de JavaScript y C++, establece el valor de **Permitir bucle invertido de la red local** en **No**.
 
-- **No iniciar, pero depurar mi código al iniciar o iniciar la aplicación**
+- **No iniciar, pero depurar mi código al empezar / Iniciar aplicación**
 
   Para configurar la implementación para iniciar automáticamente una sesión de depuración cuando se inicie la aplicación:
 
-  - En la C# página de propiedades y Visual Basic **depurar** , active la casilla no **iniciar, pero depurar mi código al iniciarse** .
+  - En la página de propiedades de  **Depurar** de C# y Visual Basic, activa la casilla **No iniciar, pero depurar mi código al empezar**.
   - En la página de propiedades de **Depuración** de JavaScript y C++, establece el valor de **Iniciar aplicación** en **Sí**.
 
 ## <a name="symbols"></a>Símbolos
@@ -217,7 +217,7 @@ Los archivos de símbolos contienen una variedad de datos muy útiles al depurar
 
 Para establecer opciones de símbolo de Visual Studio, selecciona **Herramientas > Opciones** y después ve a **Depuración > Símbolos** en la ventana del cuadro de diálogo.
 
-![Cuadro de diálogo Opciones](images/gs-debug-uwp-apps-004.png)
+![cuadro de diálogo Opciones](images/gs-debug-uwp-apps-004.png)
 
 Para cargar símbolos en una sesión de depuración con [WinDbg](#windbg), establece la variable **sympath** en la ubicación del paquete de símbolos. Por ejemplo, al ejecutar el comando siguiente, se cargarán los símbolos del servidor de símbolos de Microsoft y después se almacenarán en caché en el directorio C:\Symbols:
 

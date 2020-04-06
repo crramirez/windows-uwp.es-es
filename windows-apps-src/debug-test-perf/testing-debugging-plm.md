@@ -1,6 +1,6 @@
 ---
 description: Herramientas y técnicas para depurar y probar cómo funciona tu aplicación con Administración del ciclo de vida de los procesos.
-title: Administración de la duración del proceso de prueba y depuración
+title: Pruebas y depuración de Administración del ciclo de vida de los procesos
 ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -8,7 +8,7 @@ ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
 ms.openlocfilehash: 6912d7faa3a86dade13b60eac5654aef8a52173d
 ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/03/2019
 ms.locfileid: "74735020"
