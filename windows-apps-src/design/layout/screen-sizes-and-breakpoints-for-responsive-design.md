@@ -1,6 +1,6 @@
 ---
 title: Tamaños de pantalla y puntos de interrupción de diseño adaptativo
-description: En lugar de optimizar tu interfaz de usuario de los muchos dispositivos en el ecosistema de Windows 10, te recomendamos diseñar para unas cuantas categorías de ancho clave denominadas puntos de interrupción.
+description: En lugar de optimizar tu interfaz de usuario de los muchos dispositivos en el ecosistema de Windows 10, te recomendamos diseñar para unas cuantas categorías de ancho clave denominadas puntos de interrupción.
 ms.date: 08/30/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -8,25 +8,25 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 37d0ca71adf43891628a02d60d6873e7934d749b
 ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/13/2020
 ms.locfileid: "79210181"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamaños de pantalla y puntos de interrupción
 
-Las aplicaciones para UWP pueden ejecutarse en cualquier dispositivo que ejecute Windows 10, esto es, teléfonos, tabletas, equipos de escritorio, televisores y mucho más. Con un gran número de destinos de dispositivo y tamaños de pantalla en el ecosistema de Windows 10, en lugar de optimizar la interfaz de usuario para cada dispositivo, se recomienda diseñar para unas cuantas categorías de ancho de clave (también denominadas "puntos de interrupción"): 
+Las aplicaciones para UWP pueden ejecutarse en cualquier dispositivo que ejecute Windows 10, lo que incluye teléfonos, tabletas, equipos de escritorio, televisores y mucho más. Con un elevado número de destinos de dispositivo y tamaños de pantalla en el ecosistema de Windows 10, en lugar de optimizar tu interfaz de usuario para cada dispositivo, te recomendamos diseñar unas cuantas categorías de ancho clave (también denominadas "puntos de interrupción"): 
 - Pequeño (menos de 640 píxeles)
 - Medio (de 641 a 1007 píxeles)
 - Grande (1008 píxeles o más)
 
 > [!TIP]
-> Cuando diseñes puntos de interrupción específicos, diseña la cantidad de espacio en pantalla disponible para tu aplicación (ventana de la aplicación), no el tamaño de la pantalla. Cuando la aplicación se ejecuta a pantalla completa, la ventana de la aplicación tiene el mismo tamaño que la pantalla, pero cuando la aplicación no está a pantalla completa, la ventana es menor que la pantalla.
+> Cuando diseñes para puntos de interrupción específicos, diseña para la cantidad de espacio en pantalla disponible para tu aplicación (ventana de la aplicación), no el tamaño de la pantalla. Cuando la aplicación se ejecuta a pantalla completa, la ventana de la aplicación tiene el mismo tamaño que la pantalla, pero cuando la aplicación no está a pantalla completa, la ventana es menor que la pantalla.
 
 ## <a name="breakpoints"></a>Puntos de interrupción
-Esta tabla describe las distintas clases de tamaño y los puntos de interrupción.
+En esta tabla se describen las distintas clases de tamaño y puntos de interrupción.
 
-![Puntos de interrupción de diseño con capacidad de respuesta](images/breakpoints/size-classes.svg)
+![Puntos de interrupción con diseño dinámico](images/breakpoints/size-classes.svg)
 
 <table>
 <thead>
@@ -49,7 +49,7 @@ Esta tabla describe las distintas clases de tamaño y los puntos de interrupció
 <tr class="odd">
 <td style="vertical-align:top;">Medio</td>
 <td style="vertical-align:top;">De 641 a 1007 píxeles</td>
-<td style="vertical-align:top;">De 7 a 12 pulgadas</td>
+<td style="vertical-align:top;">7&quot; a 12&quot;</td>
 <td style="vertical-align:top;">Tabléfono, tabletas</td>
 <td style="vertical-align:top;">960 x 540</td>
 </tr>
@@ -65,13 +65,13 @@ Esta tabla describe las distintas clases de tamaño y los puntos de interrupció
 
 ## <a name="why-are-tvs-considered-small"></a>¿Por qué los televisores se consideran "pequeños"? 
 
-Aunque la mayoría de los televisores son físicamente bastante grandes (de 40 a 65 pulgadas es lo habitual) y tienen resoluciones altas (HD o 4k), el diseño para una televisión de 1080 píxeles que se ve a 10 m de distancia es diferente del diseño de un monitor de 1080 píxeles cuando se está sentado a una distancia de 300 m en tu escritorio. Cuando tienes en cuenta la distancia, los 1080 píxeles de los televisores son más similares al monitor 540 píxeles que está mucho más cerca.
+Aunque la mayoría de los televisores son físicamente bastante grandes (de 40 a 65 pulgadas es lo habitual) y tienen resoluciones altas (HD o 4k), el diseño para una televisión de 1080 píxeles que se ve a 3 m de distancia es diferente del diseño de un monitor de 1080 píxeles cuando se está sentado a una distancia de 30 cm en el escritorio. Cuando tienes en cuenta la distancia, los 1080 píxeles de los televisores son más similares al monitor 540 píxeles que está mucho más cerca.
 
-El sistema de píxeles eficaz de UWP tiene en cuenta automáticamente para ti la distancia de visualización. Al especifica un tamaño para un control o un intervalo de punto de interrupción, estás usando realmente píxeles "efectivos". Por ejemplo, si creas código dinámico para 1080 píxeles y superior, un monitor 1080 usará ese código, pero un televisor de 1080 píxeles no lo hará porque aunque un televisor de 1080 píxeles tiene 1080 píxeles físicos, solo tiene 540 píxeles efectivos. Lo que hace que el diseño para un televisor similar al diseño de un teléfono.
+El sistema de píxeles eficaz de UWP tiene en cuenta automáticamente la distancia de visualización. Al especificar un tamaño para un control o un intervalo de punto de interrupción, estás usando realmente píxeles "efectivos". Por ejemplo, si creas código dinámico para 1080 píxeles y superior, un monitor de 1080 usará ese código, pero un televisor de 1080 píxeles no lo hará porque, aunque un televisor de 1080 píxeles tiene 1080 píxeles físicos, solo tiene 540 píxeles efectivos. Lo que hace que el diseño para un televisor sea similar al diseño para un teléfono.
 
 ## <a name="effective-pixels-and-scale-factor"></a>Píxeles efectivos y factor de escala
 
-Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para garantizar que tu aplicación sea legible en todos los dispositivos de Windows 10. Windows escala automáticamente cada pantalla en función de su valor de PPP (puntos por pulgada) y la distancia de visualización del dispositivo. Los usuarios pueden anular el valor predeterminado si se dirigen a la página **Configuración** > **Pantalla** > **Escala y distribución**. 
+Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para garantizar que tu aplicación sea legible en todos los dispositivos Windows 10. Windows escala automáticamente para cada pantalla en función de su valor de PPP (puntos por pulgada) y la distancia de visualización del dispositivo. Los usuarios pueden anular el valor predeterminado desde la página **Configuración** > **Pantalla** > **Escala y distribución**. 
 
 
 ## <a name="general-recommendations"></a>Recomendaciones generales
@@ -100,6 +100,6 @@ Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para g
 - Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo acoplado para que siempre se muestre.
 
 >[!TIP] 
-> Con [**continuum para teléfonos**](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), los usuarios pueden conectar dispositivos Windows 10 Mobile compatibles con un monitor, mouse y teclado para que sus teléfonos funcionen como equipos portátiles. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, un teléfono móvil no se mantendrá siempre en la clase de tamaño pequeño.
+> Con [**Continuum para teléfonos**](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), los usuarios pueden conectar dispositivos móviles compatibles con Windows 10 a un monitor, un ratón y un teclado para que los teléfonos funcionen como un portátil. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, ya que un teléfono móvil no se mantendrá siempre en la clase de tamaño.
 
 

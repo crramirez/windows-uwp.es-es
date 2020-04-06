@@ -4,12 +4,12 @@ description: Obtén información sobre los principios del radio de redondeo, los
 ms.date: 10/08/2019
 ms.topic: article
 keywords: windows 10;uwp;radio de redondeo;corner radius;redondeo;rounded
-ms.openlocfilehash: 84cd27bf8c65ed65a6ee2b0f044e0ffb3ef86bf0
-ms.sourcegitcommit: 49af415e4eefea125c023b7071adaa5dc482e223
+ms.openlocfilehash: a83473b5ad836633bc195aa2b5afe87fa092e0ee
+ms.sourcegitcommit: 3c3730e968fba89b21459390735614cd4c9d9c67
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74799929"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320427"
 ---
 # <a name="corner-radius"></a>Radio de redondeo
 
@@ -72,7 +72,7 @@ Hay tres áreas de los controles en los que se utilizan los estilos de esquinas 
 - MenuFlyout
 - Pestañas de TabView
 - TeachingTip
-- ToolTip
+- Información sobre herramientas
 - Elemento de control flotante (cuando está abierto)
   - AutoSuggestBox
   - CalendarDatePicker
@@ -180,9 +180,21 @@ Si quieres cambiar la cantidad de redondeo de todos los controles dentro de un �
 
 Puedes modificar la propiedad [CornerRadius](/uwp/api/windows.ui.xaml.controls.control.cornerradius) en los controles directamente si quieres cambiar la cantidad de redondeo de solo un número reducido de controles.
 
-|Predeterminado | Propiedad modificada |
+|Valor predeterminado | Propiedad modificada |
 |:-- |:-- |
 |![DefaultCheckBox](images/rounded-corner/default-checkbox.png)| ![CustomCheckBox](images/rounded-corner/custom-checkbox.png)|
 |`<CheckBox Content="Checkbox"/>` | `<CheckBox Content="Checkbox" CornerRadius="5"/> ` |
 
 No todas las esquinas de los controles responderán a la modificación de la propiedad `CornerRadius`. Para asegurarte de que el control cuyas esquinas quieres redondear responderá realmente a la propiedad `CornerRadius` de la manera esperada, comprueba primero que los recursos globales `ControlCornerRadius` o `OverlayCornerRadius` afecten al control en cuestión. Si no es así, comprueba que el control que quieres redondear tiene esquinas. Muchos de nuestros controles no representan visualmente bordes reales y, por lo tanto, no pueden hacer un uso correcto de la propiedad `CornerRadius`.
+
+### <a name="basing-custom-styles-on-winui"></a>Estilos personalizados basados en WinUI
+
+Puedes basar tus estilos personalizados en los estilos de esquinas redondeadas de WinUI si especificas el atributo `BasedOn` correcto en el estilo. Por ejemplo, para crear un estilo de botón personalizado basado en el estilo de botón de WinUI, haz lo siguiente:
+
+```xaml
+<Style x:Key="MyCustomButtonStyle" BasedOn="{StaticResource DefaultButtonStyle}">
+   ...
+</Style>
+```
+
+En general, los estilos de control de WinUI siguen una convención de nomenclatura coherente: "DefaultXYZStyle" donde "XYZ" es el nombre del control. Para obtener una referencia completa, puedes examinar los archivos XAML en el repositorio de WinUI.

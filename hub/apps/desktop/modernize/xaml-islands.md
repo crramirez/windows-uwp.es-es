@@ -1,19 +1,19 @@
 ---
 description: Esta guía te ayuda a crear interfaces de usuario de UWP basadas en Fluent directamente en tus aplicaciones de WPF y Windows Forms
 title: Controles de UWP en aplicaciones de escritorio
-ms.date: 01/24/2020
+ms.date: 03/23/2020
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 061ad7a3f63fc92dd2f865f8870c7de5edf862af
-ms.sourcegitcommit: 756217c559155e172087dee4d762d328c6529db6
+ms.openlocfilehash: 0f596047cfdd01fcfca568ea1c63b1e2cc14c272
+ms.sourcegitcommit: 1670eec29b4360ec37cde2910b76078429273cb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78935356"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80329508"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Cómo usar los controles XAML de UWP en aplicaciones de escritorio (islas XAML)
 
@@ -21,7 +21,7 @@ A partir de Windows 10, versión 1903, puedes hospedar controles de UWP en apl
 
 Puedes hospedar cualquier control de UWP que se derive de [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement), incluido:
 
-* Cualquier control de UWP de origen proporcionado por la biblioteca de Windows SDK o WinUI.
+* Cualquier control de UWP de origen proporcionado por el Windows SDK.
 * Cualquier control de UWP personalizado (por ejemplo, un control de usuario que conste de varios controles de UWP que funcionen conjuntamente). Debes tener el código fuente del control personalizado para poder compilarlo con la aplicación.
 
 Fundamentalmente, las islas XAML se crean mediante la *API de hospedaje XAML de UWP*. Esta API consta de varias clases de Windows Runtime e interfaces COM que se introdujeron en el SDK de Windows 10, versión 1903. También proporcionamos un conjunto de controles .NET de las islas XAML en el [kit de herramientas de la Comunidad Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/) que usan internamente la API de hospedaje XAML de UWP y proporcionan una experiencia de desarrollo más cómoda para las aplicaciones de WPF y Windows Forms.
@@ -30,6 +30,13 @@ La forma de usar las islas XAML depende del tipo de aplicación y de los tipos d
 
 > [!NOTE]
 > Si tienes comentarios sobre las islas XAML, crea un nuevo problema en el [repositorio de Microsoft.Toolkit.Win32](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/issues) y deja los comentarios allí. Si prefieres enviar los comentarios de forma privada, puedes enviarlos a XamlIslandsFeedback@microsoft.com. Tus aportes y escenarios son muy importantes para nosotros.
+
+## <a name="requirements"></a>Requisitos
+
+Las islas XAML tienen estos requisitos de tiempo de ejecución:
+
+* Windows 10, versión 1903, o una versión posterior.
+* Si tu aplicación no está empaquetada en un [paquete MSIX](https://docs.microsoft.com/windows/msix) para su implementación, el equipo debe tener instalado el [Tiempo de ejecución de Visual C++](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
 
 ## <a name="wpf-and-windows-forms-applications"></a>Aplicaciones de WPF y Windows Forms
 
@@ -99,7 +106,11 @@ Para usar estos controles, instala uno de los paquetes NuGet siguientes:
 
 Los controles .NET de las islas XAML no se admiten en aplicaciones Win32 de C++. En su lugar, estas aplicaciones deben usar la *API de hospedaje XAML de UWP* proporcionada por el SDK de Windows 10 (versión 1903 y posterior).
 
-La API de hospedaje XAML de UWP consta de varias clases de Windows Runtime e interfaces COM que la aplicación Win32 de C++ puede usar para hospedar cualquier control de UWP que derive de [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement). Puedes hospedar controles de UWP en cualquier elemento de UI de la aplicación, que tenga un identificador de ventana asociado (HWND). Para más información sobre esta API, incluidos los requisitos previos, consulta [Uso de la API de hospedaje XAML de UWP en una aplicación Win32 de C++](using-the-xaml-hosting-api.md).
+La API de hospedaje XAML de UWP consta de varias clases de Windows Runtime e interfaces COM que la aplicación Win32 de C++ puede usar para hospedar cualquier control de UWP que derive de [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement). Puedes hospedar controles de UWP en cualquier elemento de UI de la aplicación, que tenga un identificador de ventana asociado (HWND). Para más información sobre esta API, consulta los artículos siguientes.
+
+* [Uso de la API de hospedaje XAML de UWP en una aplicación Win32 de C++](using-the-xaml-hosting-api.md)
+* [Hospedaje de un control estándar de UWP en una aplicación Win32 de C++](host-standard-control-with-xaml-islands-cpp.md)
+* [Hospedaje de un control personalizado de UWP en una aplicación Win32 de C++](host-custom-control-with-xaml-islands-cpp.md)
 
 > [!NOTE]
 > Los controles encapsulados y los controles host del kit de herramientas de la Comunidad Windows usan la API de hospedaje XAML de UWP internamente, e implementan todo el comportamiento que, de lo contrario, tendrías que controlar tú mismo si usaras la API de hospedaje XAML de UWP directamente, incluida la navegación con el teclado y los cambios de diseño. En el caso de las aplicaciones de WPF y Windows Forms, se recomienda encarecidamente usar estos controles en lugar de la API de hospedaje XAML de UWP directamente, ya que abstraen muchos de los detalles de implementación del uso de la API.
@@ -112,7 +123,33 @@ A continuación se muestra una visión rápida de cómo los distintos tipos de c
 
 Las API que aparecen en la parte inferior de este diagrama se incluye con el Windows SDK. Los controles encapsulados y los controles host están disponibles a través de paquetes NuGet en el kit de herramientas de la Comunidad Windows.
 
-## <a name="window-host-context-for-xaml-islands"></a>Contexto de hosts de ventanas para islas XAML
+## <a name="limitations-and-workarounds"></a>Limitaciones y soluciones alternativas
+
+En las secciones siguientes se describen las limitaciones y las soluciones alternativas para ciertos escenarios de desarrollo de UWP en aplicaciones de escritorio que usan islas XAML. 
+
+### <a name="supported-only-with-workarounds"></a>Compatible solo con soluciones alternativas
+
+:heavy_check_mark: Para acceder al elemento raíz de un árbol de contenido XAML en una isla XAML y obtener la información relacionada sobre el contexto en el que se hospeda, no uses las clases[CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview) y [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window). En su lugar, usa la clase [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot). Para obtener más información, consulta [esta sección](#window-host-context-for-xaml-islands).
+
+:heavy_check_mark: Para admitir el [Contrato para contenido compartido](/windows/uwp/app-to-app/share-data) desde una aplicación de WPF, Windows Forms o C++ Win32, la aplicación tiene que usar la interfaz [IDataTransferManagerInterop](https://docs.microsoft.com/windows/win32/api/shobjidl_core/nn-shobjidl_core-idatatransfermanagerinterop) para obtener el objeto [DataTransferManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager) para iniciar la operación de uso compartido para una ventana específica. Para obtener un ejemplo que muestra cómo usar esta interfaz en una aplicación de WPF, consulta el [ejemplo de ShareSource](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/ShareSource).
+
+:heavy_check_mark: No se admite el uso de `x:Bind` con controles hospedados en islas XAML. Tendrás que declarar el modelo de datos en una biblioteca de .NET Standard.
+
+### <a name="not-supported"></a>Incompatible
+
+:no_entry_sign: Usar el control [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) para hospedar controles de UWP externos basados en C# en aplicaciones de WPF y Windows Forms que tienen como destino .NET Framework. Este escenario solo se admite en aplicaciones con destinos en .NET Core 3.
+
+:no_entry_sign: El contenido XAML de UWP en las islas XAML no responde a los cambios de tema de Windows de oscuro a claro, ni viceversa, en tiempo de ejecución. El contenido responde a los cambios de contraste alto en tiempo de ejecución.
+
+:no_entry_sign: Agregar un control **WebView** a un control de usuario personalizado (en subproceso, fuera de subproceso o fuera de proceso).
+
+:no_entry_sign: En el modo de pantalla completa no se admiten el control [MediaPlayer](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer) y el control de host [MediaPlayerElement](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mediaplayerelement).
+
+:no_entry_sign: Entrada de texto con la vista de escritura a mano. Para más información sobre esta característica, consulta [este artículo](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-handwriting-view).
+
+:no_entry_sign: Controles de texto que usan vínculos de contenido `@Places` y `@People`. Para más información sobre esta característica, consulta [este artículo](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/content-links).
+
+### <a name="window-host-context-for-xaml-islands"></a>Contexto de hosts de ventanas para islas XAML
 
 Al hospedar islas XAML en una aplicación de escritorio, puedes tener varios árboles de contenido XAML que se ejecuten en el mismo subproceso a la vez. Para acceder al elemento raíz de un árbol de contenido XAML en una isla XAML y obtener la información relacionada sobre el contexto en el que se hospeda, usa la clase [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot). Las clases [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview) y [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) no proporcionan la información correcta para las islas XAML. Los objetos [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow) y [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) existen en el subproceso, y la aplicación puede acceder a ellos, pero no devolverán límites ni visibilidad significativos (son siempre invisibles y tienen un tamaño de 1×1). Para más información, consulta [Hosts de ventanas](/windows/uwp/design/layout/show-multiple-views#windowing-hosts).
 
@@ -131,9 +168,11 @@ Rect windowSize = CoreWindow.GetForCurrentThread().Bounds;
 
 Para obtener una tabla de las API comunes relacionadas con ventanas que debes evitar en el contexto de las islas XAML y los reemplazos de [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) recomendados, consulta la tabla de [esta sección](/windows/uwp/design/layout/show-multiple-views#make-code-portable-across-windowing-hosts).
 
+Para obtener un ejemplo que muestra cómo usar esta interfaz en una aplicación de WPF, consulta el ejemplo de [ShareSource](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/ShareSource).
+
 ## <a name="feature-roadmap"></a>Hoja de ruta de las características
 
-Este es el estado actual de las características relacionadas con las islas XAML a partir de Windows 10, versión 1903, y la versión 6.0 del kit de herramientas de la Comunidad Windows:
+Este es el estado actual de las características relacionadas con las islas XAML:
 
 * **Aplicaciones Win32 de C++** : La API de hospedaje XAML de UWP se considera la versión 1.0 a partir de Windows 10, versión 1903.
 * **Aplicaciones administradas que tienen como destino .NET Framework 4.6.2 y versiones posteriores:** Los controles de las islas XAML que están disponibles en los [paquetes NuGet, versión 6.0.0](#configure-your-project-to-use-the-xaml-island-net-controls), se consideran la versión 1.0 para las aplicaciones que tienen como destino .NET Framework 4.6.2 y versiones posteriores.

@@ -1,20 +1,20 @@
 ---
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
-title: Referencia de API principales del Portal de dispositivos
+title: Referencia de API principal de Device Portal
 description: Obtén información sobre las API de REST principales de Windows Device Portal que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
 ms.custom: 19H1
 ms.date: 04/19/2019
 ms.topic: article
-keywords: Windows 10, UWP, portal de dispositivos
+keywords: windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e091cc7ad62f69b9e76541101555493609b8a06
 ms.sourcegitcommit: 8d945e0406818e614eacdc962493e570cc7615ed
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/15/2020
 ms.locfileid: "75955307"
 ---
-# <a name="device-portal-core-api-reference"></a>Referencia de API principales del Portal de dispositivos
+# <a name="device-portal-core-api-reference"></a>Referencia de API principal de Device Portal
 
 Toda la funcionalidad del Portal de dispositivos se basa en las API de REST que los desarrolladores pueden llamar directamente para acceder a recursos y controlar sus dispositivos mediante programación.
 
@@ -36,11 +36,11 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI | Descripción |
 | :------          | :------ |
-| package   | (**obligatorio**) Nombre de archivo del paquete que debe instalarse. |
+| paquete   | (**obligatorio**) Nombre de archivo del paquete que debe instalarse. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
@@ -51,7 +51,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -85,14 +85,14 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI | Descripción |
 | :------          | :------ |
-| package   | (**obligatorio**) Los nombres de archivo de paquetes que deben instalarse. |
+| paquete   | (**obligatorio**) Nombres de archivo de los paquetes que se van a instalar. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud** 
-- Agregue ".opt" a los nombres de archivo de los paquetes opcionales cuando los especifique como un parámetro, por ejemplo: "foo.appx.opt" o "bar.appxbundle.opt". 
+- Agrega ".opt" a los nombres de archivo de los paquetes opcionales cuando los especifiques como un parámetro, por ejemplo: "foo.appx.opt" o "bar.appxbundle.opt". 
 - El archivo .appx o .appxbundle, así como las dependencias necesarias de la aplicación. 
 - El certificado que se usa para firmar la aplicación, si el dispositivo es IoT o escritorio de Windows. Otras plataformas no requieren el certificado. 
 
@@ -100,7 +100,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -130,11 +130,11 @@ Puede registrar una aplicación en una carpeta dinámica mediante el siguiente f
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
@@ -153,7 +153,7 @@ Puede registrar una aplicación en una carpeta dinámica mediante el siguiente f
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -170,11 +170,11 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 <hr>
 
-### <a name="register-a-related-set-in-loose-file-folders"></a>Registrar un conjunto relacionado en carpetas dinámicas
+### <a name="register-a-related-set-in-loose-file-folders"></a>Registrar un conjunto relacionado en carpetas de archivos dinámicos
 
 **Solicitud**
 
-Puede registrar un [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) en carpetas dinámicas mediante el siguiente formato de solicitud.
+Puedes registrar un [conjunto relacionado](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/) en carpetas dinámicas mediante el siguiente formato de solicitud.
 
 | Método      | URI de la solicitud |
 | :------     | :----- |
@@ -182,11 +182,11 @@ Puede registrar un [conjunto relacionado](https://blogs.msdn.microsoft.com/appin
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
@@ -214,7 +214,7 @@ Puede registrar un [conjunto relacionado](https://blogs.msdn.microsoft.com/appin
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -243,21 +243,21 @@ Puedes obtener el estado de la instalación de una aplicación que está en curs
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -289,21 +289,21 @@ Puedes desinstalar una aplicación mediante el siguiente formato de solicitud.
 
 | Parámetro de URI | Descripción |
 | :------          | :------ |
-| package   | (**obligatorio**) El elemento PackageFullName (de GET /api/app/packagemanager/packages) de la aplicación de destino |
+| paquete   | (**obligatorio**) El elemento PackageFullName (de GET /api/app/packagemanager/packages) de la aplicación de destino |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -334,15 +334,15 @@ Puedes obtener una lista de aplicaciones instaladas en el sistema mediante el si
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -373,7 +373,7 @@ La respuesta incluye una lista de los paquetes instalados con detalles asociados
 ```
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -391,7 +391,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 <hr>
 
-## <a name="bluetooth"></a>Bluetooth,
+## <a name="bluetooth"></a>Bluetooth
 
 <hr>
 
@@ -399,7 +399,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 **Solicitud**
 
-Puedes obtener una lista de radios Bluetooth que están instaladas en la máquina mediante el siguiente formato de solicitud. Esto también se puede actualizar a una conexión WebSocket, con los mismos datos JSON.
+Puedes obtener una lista de las radios Bluetooth que están instaladas en la máquina mediante el siguiente formato de solicitud. También se puede actualizar a una conexión WebSocket, con los mismos datos JSON.
  
 | Método        | URI de la solicitud |
 | :------          | :------ |
@@ -409,15 +409,15 @@ Puedes obtener una lista de radios Bluetooth que están instaladas en la máquin
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -437,7 +437,7 @@ La respuesta incluye una matriz JSON de las radios Bluetooth conectadas al dispo
 ```
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP | Descripción |
 | :------             | :------ |
@@ -453,11 +453,11 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 <hr>
 
-### <a name="turn-the-bluetooth-radio-on-or-off"></a>Activa o desactiva la radio Bluetooth.
+### <a name="turn-the-bluetooth-radio-on-or-off"></a>Activar o desactivar la radio Bluetooth
 
 **Solicitud**
 
-Activa o desactivar una radio Bluetooth específica.
+Activa o desactiva una radio Bluetooth específica.
  
 | Método | URI de la solicitud |
 | :------   | :------ |
@@ -469,22 +469,22 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI | Descripción |
 | :------          | :------ |
-| ID            | (**obligatorio**) El id. de dispositivo de la radio Bluetooth y debe codificarse con base 64. |
+| ID            | (**obligatorio**) Id. de dispositivo de la radio Bluetooth que debe estar codificado en Base64. |
 | Estado         | (**obligatorio**) Puede ser `"On"` o `"Off"`. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP | Descripción |
 | :------             | :------ |
@@ -503,7 +503,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 **Solicitud**
 
-Puede obtener una lista de los dispositivos Bluetooth emparejados actualmente con el siguiente formato de solicitud. Esto puede actualizarse a una conexión WebSocket con los mismos datos JSON. Durante la duración de la conexión de WebSocket, la lista de dispositivos puede cambiar. Cada vez que hay una actualización, se enviará una lista completa de los dispositivos a través de la conexión WebSocket.
+Puedes obtener una lista de los dispositivos Bluetooth emparejados actualmente con el siguiente formato de solicitud. También se puede actualizar a una conexión WebSocket, con los mismos datos JSON. Mientras las conexión de WebSocket está activa, la lista de dispositivos puede cambiar. Cada vez que exista una actualización, se enviará una lista completa de los dispositivos a través de la conexión WebSocket.
 
 | Método        | URI de la solicitud       |
 | :---          | :---              |
@@ -512,19 +512,19 @@ Puede obtener una lista de los dispositivos Bluetooth emparejados actualmente co
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
-La respuesta incluye una matriz JSON de dispositivos Bluetooth que están emparejados actualmente.
+La respuesta incluye una matriz JSON de los dispositivos Bluetooth que están emparejados actualmente.
 ```json
 {"PairedDevices": [
     {
@@ -534,14 +534,14 @@ La respuesta incluye una matriz JSON de dispositivos Bluetooth que están empare
     },...
 ]}
 ```
-El campo *AudioConnectionStatus* estará presente si el dispositivo se puede usar para audio en este sistema. (Las directivas y los componentes opcionales pueden afectar a esto). *AudioConnectionStatus* estará "conectado" o "desconectado".
+El campo *AudioConnectionStatus* estará presente si el dispositivo se puede usar para audio en este sistema. (Las directivas y los componentes opcionales pueden influir). El valor de *AudioConnectionStatus* será "Connected" o "Disconnected".
 
 ---
 ### <a name="get-a-list-of-available-bluetooth-devices"></a>Obtener una lista de dispositivos Bluetooth disponibles
 
 **Solicitud**
 
-Puede obtener una lista de los dispositivos Bluetooth disponibles para emparejar mediante el siguiente formato de solicitud. Esto puede actualizarse a una conexión WebSocket con los mismos datos JSON. Durante la duración de la conexión de WebSocket, la lista de dispositivos puede cambiar. Cada vez que hay una actualización, se enviará una lista completa de los dispositivos a través de la conexión WebSocket.
+Puedes obtener una lista de los dispositivos Bluetooth disponibles para emparejar con el siguiente formato de solicitud. También se puede actualizar a una conexión WebSocket, con los mismos datos JSON. Mientras las conexión de WebSocket está activa, la lista de dispositivos puede cambiar. Cada vez que exista una actualización, se enviará una lista completa de los dispositivos a través de la conexión WebSocket.
 
 | Método        | URI de la solicitud          |
 | :---          | :---                 |
@@ -550,19 +550,19 @@ Puede obtener una lista de los dispositivos Bluetooth disponibles para emparejar
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
-La respuesta incluye una matriz JSON de dispositivos Bluetooth que actualmente están disponibles para el emparejamiento.
+La respuesta incluye una matriz JSON de los dispositivos Bluetooth que están disponibles actualmente para emparejar.
 ```json
 {"AvailableDevices": [
     {
@@ -577,7 +577,7 @@ La respuesta incluye una matriz JSON de dispositivos Bluetooth que actualmente e
 
 **Solicitud**
 
-Se conectará al dispositivo si el dispositivo se puede usar para audio en este sistema. (Las directivas y los componentes opcionales pueden afectar a esto).
+Se conectará al dispositivo si este se puede usar para audio en este sistema. (Las directivas y los componentes opcionales pueden influir).
 
 | Método       | URI de la solicitud           |
 | :---         | :---                  |
@@ -587,21 +587,21 @@ Se conectará al dispositivo si el dispositivo se puede usar para audio en este 
 
 | Parámetro de URI | Descripción |
 | :---          | :--- |
-| ID            | (**obligatorio**) IDENTIFICADOR del extremo de la Asociación para el dispositivo Bluetooth y debe estar codificado en Base64. |
+| ID            | (**obligatorio**) Id. de extremo de asociación del dispositivo Bluetooth, que debe estar codificado en Base64. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP | Descripción |
 | :---             | :--- |
@@ -621,7 +621,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 **Solicitud**
 
-Desconectará el dispositivo si el dispositivo se puede usar para audio en este sistema. (Las directivas y los componentes opcionales pueden afectar a esto).
+Desconectará el dispositivo si el dispositivo se puede usar para audio en este sistema. (Las directivas y los componentes opcionales pueden influir).
 
 | Método       | URI de la solicitud              |
 | :---         | :---                     |
@@ -631,21 +631,21 @@ Desconectará el dispositivo si el dispositivo se puede usar para audio en este 
 
 | Parámetro de URI | Descripción |
 | :---          | :--- |
-| ID            | (**obligatorio**) IDENTIFICADOR del extremo de la Asociación para el dispositivo Bluetooth y debe estar codificado en Base64. |
+| ID            | (**obligatorio**) Id. de extremo de asociación del dispositivo Bluetooth, que debe estar codificado en Base64. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP | Descripción |
 | :---             | :--- |
@@ -675,15 +675,15 @@ Puedes obtener una lista de dispositivos que están instalados en la máquina me
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -704,7 +704,7 @@ La respuesta incluye una matriz JSON de los dispositivos conectados al dispositi
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -720,7 +720,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 <hr>
 
-### <a name="get-data-on-connected-usb-deviceshubs"></a>Obtener datos de dispositivos o concentradores USB conectados
+### <a name="get-data-on-connected-usb-deviceshubs"></a>Obtener datos sobre dispositivos o concentradores USB conectados
 
 **Solicitud**
 
@@ -733,15 +733,15 @@ Puedes obtener una lista de los descriptores USB de los dispositivos y concentra
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -762,7 +762,7 @@ La respuesta es un archivo JSON que incluye el DeviceID del dispositivo USB junt
 }
 ```
 
-**Datos devueltos de ejemplo**
+**Ejemplo de datos devueltos**
 ```json
 {
     "DeviceList": [{
@@ -791,7 +791,7 @@ La respuesta es un archivo JSON que incluye el DeviceID del dispositivo USB junt
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -822,15 +822,15 @@ Puedes obtener la lista de todos los volcados de memoria disponibles para todas 
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -838,7 +838,7 @@ La respuesta incluye una lista de volcados de memoria de cada aplicación transf
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -876,11 +876,11 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -891,7 +891,7 @@ La respuesta tiene el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -930,17 +930,17 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -978,17 +978,17 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1027,11 +1027,11 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1039,7 +1039,7 @@ La respuesta incluye un archivo de volcado de memoria. Puedes usar WinDbg o Visu
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -1077,17 +1077,17 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1115,15 +1115,15 @@ Puedes obtener la lista de archivos de minivolcado de comprobación de errores m
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1139,7 +1139,7 @@ La respuesta incluye una lista de nombres de archivo de volcado de memoria y los
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1174,11 +1174,11 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1186,7 +1186,7 @@ La respuesta incluye el archivo de volcado de memoria. Puedes inspeccionar este 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1214,15 +1214,15 @@ Puedes obtener la configuración del control de bloqueo de comprobación de erro
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1238,7 +1238,7 @@ La respuesta incluye la configuración de control de bloqueo. Para obtener más 
 
 **Tipos de volcado**
 
-0: Deshabilitado
+0: Deshabilitada
 
 1: Volcado de memoria completo (recopila toda la memoria en uso)
 
@@ -1248,7 +1248,7 @@ La respuesta incluye la configuración de control de bloqueo. Para obtener más 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1276,15 +1276,15 @@ Puedes obtener un volcado de memoria de kernel dinámico mediante el siguiente f
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1292,7 +1292,7 @@ La respuesta incluye el volcado de memoria de modo kernel completo. Puedes inspe
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1328,11 +1328,11 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1340,7 +1340,7 @@ La respuesta incluye del volcado de memoria del proceso. Puedes inspeccionar est
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1373,23 +1373,23 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | Parámetro de URI | Descripción |
 | :---          | :--- |
 | autoreboot   | (**opcional**) True o false. Esto indica si el sistema se reinicia automáticamente después de que se produzca un error o se bloquee. |
-| dumptype   | (**opcional**) El tipo de volcado de memoria. Para obtener los valores admitidos, consulta [CrashDumpType Enumeration](https://docs.microsoft.com/previous-versions/azure/reference/dn802457(v=azure.100)).|
+| dumptype   | (**opcional**) Tipo de volcado de memoria. Para obtener los valores admitidos, consulta [CrashDumpType Enumeration](https://docs.microsoft.com/previous-versions/azure/reference/dn802457(v=azure.100)).|
 | maxdumpcount   | (**opcional**) Número máximo de volcados de memoria que se deben guardar. |
 | sobrescribir   | (**opcional**) True o false. Indica si se deben sobrescribir o no los volcados de memoria antiguos cuando se alcanza el límite del contador de volcado de memoria especificado por *maxdumpcount*. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1421,15 +1421,15 @@ Puedes crear una sesión ETW en tiempo real mediante el siguiente formato de sol
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1437,7 +1437,7 @@ La respuesta incluye los eventos ETW de los proveedores habilitados.  Ver los co
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1480,7 +1480,7 @@ Esta respuesta se envía desde el servidor al cliente. Esto se envía como texto
 
 Los objetos de carga son pares de clave-valor adicionales (string:string) que se proporcionan en el evento ETW original.
 
-Por ejemplo:
+Ejemplo:
 ```json
 {
     "ID" : 42, 
@@ -1516,15 +1516,15 @@ Puedes enumerar los proveedores registrados con el siguiente formato de solicitu
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1540,7 +1540,7 @@ La respuesta incluye la lista de proveedores de ETW. La lista incluye el nombre 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1568,15 +1568,15 @@ Puedes enumerar los proveedores registrados con el siguiente formato de solicitu
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1621,15 +1621,15 @@ Puedes obtener el estado de invalidación de la pila de ubicaciones del disposit
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1641,7 +1641,7 @@ La respuesta incluye el estado de invalidación del dispositivo en el siguiente 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -1670,11 +1670,11 @@ Puedes establecer el estado de invalidación de la pila de ubicaciones del dispo
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
@@ -1692,7 +1692,7 @@ La respuesta incluye el estado de invalidación que ha establecido el dispositiv
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -1721,15 +1721,15 @@ Puedes obtener la ubicación inyectada del dispositivo (sin precisión) mediante
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1744,7 +1744,7 @@ La respuesta incluye los valores de longitud y latitud inyectados en el siguient
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 |  Código de estado HTTP      | Descripción | 
 | :------     | :----- |
@@ -1773,11 +1773,11 @@ Puedes establecer la ubicación inyectada del dispositivo (sin precisión) media
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
@@ -1801,7 +1801,7 @@ La respuesta incluye la ubicación que se ha establecido en el siguiente formato
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -1836,15 +1836,15 @@ Puedes obtener el nombre de una máquina mediante el siguiente formato de solici
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1856,7 +1856,7 @@ La respuesta incluye el nombre del equipo en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -1887,15 +1887,15 @@ Puedes obtener la información del sistema operativo de una máquina mediante el
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1913,7 +1913,7 @@ La respuesta incluye la información del sistema operativo en el siguiente forma
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -1944,15 +1944,15 @@ Puedes obtener la familia de dispositivos (Xbox, Teléfono, escritorio, etc.) me
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -1968,7 +1968,7 @@ DeviceType tendrá un aspecto como "Windows.Xbox", "Windows.Desktop", etc.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2007,17 +2007,17 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2050,28 +2050,28 @@ Puedes obtener el nombre del usuario activo en el dispositivo mediante el siguie
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 La respuesta incluye la información del usuario en el siguiente formato. 
 
-Correcto: 
+En caso de éxito: 
 ```json
 {
     "UserDisplayName" : string, 
     "UserSID" : string
 }
 ```
-Error:
+En caso de error:
 ```json
 {
     "Code" : int, 
@@ -2083,7 +2083,7 @@ Error:
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2117,15 +2117,15 @@ Puedes obtener la lista de procesos que se encuentran en ejecución actualmente 
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -2148,7 +2148,7 @@ La respuesta incluye una lista de procesos con detalles de cada proceso. La info
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2180,15 +2180,15 @@ Esto también se pueden actualizar a una conexión WebSocket.  Proporciona los m
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -2227,7 +2227,7 @@ La respuesta incluye las estadísticas de rendimiento del sistema, como el uso d
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2245,7 +2245,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 <hr>
 
-## <a name="power"></a>Inicio/Apagado
+## <a name="power"></a>Potencia
 
 <hr>
 
@@ -2262,15 +2262,15 @@ Puedes obtener el estado actual de la batería mediante el siguiente formato de 
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -2290,7 +2290,7 @@ La información del estado actual de la batería se devuelve mediante el siguien
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2320,15 +2320,15 @@ Puedes obtener el plan de energía activo mediante el siguiente formato de solic
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -2339,7 +2339,7 @@ El plan de energía activo tiene el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2369,11 +2369,11 @@ Opciones:
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
@@ -2383,7 +2383,7 @@ Hay una lista completa de estados de energía disponible por aplicación y la co
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2411,15 +2411,15 @@ Puedes comprobar el estado de energía del sistema mediante el siguiente formato
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -2430,7 +2430,7 @@ La información de estado de energía tiene la siguiente plantilla.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2467,17 +2467,17 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2514,17 +2514,17 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2554,11 +2554,11 @@ Puedes obtener un informe de estudio de suspensión mediante el siguiente format
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -2566,7 +2566,7 @@ La respuesta es un archivo que contiene el estudio de suspensión.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2594,15 +2594,15 @@ Puedes enumerar los informes de estudio de suspensión disponibles mediante el s
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -2618,7 +2618,7 @@ La lista de los informes disponibles tiene la siguiente plantilla.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2646,15 +2646,15 @@ Puedes obtener la transformación de estudio de suspensión mediante el siguient
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -2662,7 +2662,7 @@ La respuesta contiene la transformación de estudio de suspensión.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2694,21 +2694,21 @@ Puedes reiniciar el equipo de destino mediante el siguiente formato de solicitud
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2737,21 +2737,21 @@ Puedes apagar el equipo de destino mediante el siguiente formato de solicitud.
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2791,21 +2791,21 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | Parámetro de URI | Descripción |
 | :---          | :--- |
 | appid   | (**obligatorio**) PRAID de la aplicación que quieres iniciar. Este valor debe estar codificado mediante hex64. |
-| package   | (**obligatorio**) Nombre completo del paquete de la aplicación que quiere iniciar. Este valor debe estar codificado mediante hex64. |
+| paquete   | (**obligatorio**) Nombre completo del paquete de la aplicación que quiere iniciar. Este valor debe estar codificado mediante hex64. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2840,22 +2840,22 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI | Descripción |
 | :---          | :--- |
-| package   | (**obligatorio**) Nombre completo de los paquetes de la aplicación que quiere detener. Este valor debe estar codificado mediante hex64. |
+| paquete   | (**obligatorio**) Nombre completo de los paquetes de la aplicación que quiere detener. Este valor debe estar codificado mediante hex64. |
 | forcestop   | (**opcional**) Un valor de **yes** indica que el sistema debe forzar la detención de todos los procesos. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2894,17 +2894,17 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -2920,7 +2920,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 <hr>
 
-## <a name="networking"></a>Funciones de red de
+## <a name="networking"></a>Funciones de red
 
 <hr>
 
@@ -2937,15 +2937,15 @@ Puedes obtener la configuración IP actual mediante el siguiente formato de soli
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -2993,7 +2993,7 @@ La respuesta incluye la configuración IP en la siguiente plantilla.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3015,7 +3015,7 @@ Esta API tiene los siguientes códigos de estado esperado.
 
 **Solicitud**
 
-Establece la configuración de IPV4 con IP estática y DNS. Si no se especifica una dirección IP estática, habilita DHCP. Si se especifica una dirección IP estática, también se debe especificar DNS.
+Establece la configuración de IPV4 con IP estática y DNS. Si no se especifica una IP estática, habilita DHCP. Si se especifica una IP estática, también se debe especificar DNS.
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
@@ -3028,12 +3028,12 @@ Establece la configuración de IPV4 con IP estática y DNS. Si no se especifica 
 | :---          | :--- |
 | AdapterName | (**obligatorio**) GUID de la interfaz de red. |
 | IPAddress | Dirección IP estática que se va a establecer. |
-| Máscara | (**obligatorio** si *IPAddress* no es null) Máscara de subred estática. |
-| DefaultGateway | (**obligatorio** si *IPAddress* no es null) La puerta de enlace predeterminada estática. |
-| PrimaryDNS | (**obligatorio** si *IPAddress* no es null) DNS primario estático que se va a establecer. |
-| SecondayDNS | (**obligatorio** si *PrimaryDNS* no es null) DNS secundario estático que se va a establecer. |
+| SubnetMask | (**obligatorio** si *IPAddress* no es null) Máscara de subred estática. |
+| DefaultGateway | (**obligatorio** si *IPAddress* no es null) Puerta de enlace estática predeterminada. |
+| PrimaryDNS | (**obligatorio** si *IPAddress* no es null) El DNS estático primario no se ha establecido. |
+| SecondayDNS | (**obligatorio** si *IPAddress* no es null) El DNS estático secundario no se ha establecido. |
 
-Para mayor claridad, para establecer una interfaz en DHCP, serialice solo la `AdapterName` en la conexión:
+Para mayor claridad, para establecer una interfaz en DHCP, serializa solo `AdapterName` en la conexión:
 
 ```json
 {
@@ -3043,17 +3043,17 @@ Para mayor claridad, para establecer una interfaz en DHCP, serialice solo la `Ad
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3084,15 +3084,15 @@ Puedes enumerar las interfaces de red inalámbrica disponibles mediante el sigui
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3116,7 +3116,7 @@ Una lista de las interfaces inalámbricas disponibles con detalles en el siguien
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3155,11 +3155,11 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3187,7 +3187,7 @@ Lista de redes inalámbricas encontradas en la *interfaz* proporcionada. Esto in
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3224,23 +3224,23 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | :------          | :------ |
 | interfaz   | (**obligatorio**) GUID de la interfaz de red que se usa para conectarse a la red. |
 | op   | (**obligatorio**) Indica la acción que se debe realizar. Los valores posibles son connect o disconnect.|
-| ssid   | (**obligatorio si *op* == connect**) SSID al que se debe conectar. |
-| key   | (**obligatorio si *op* == connect and network requires authentication**) La clave compartida. |
+| ssid   | (**obligatorio si *op* == conectar**) SSID al que se debe conectar. |
+| key   | ( ***obligatorio si* op** == conectar y la red requiere autenticación**) Clave compartida. |
 | createprofile | (**obligatorio**) Crea un perfil de la red en el dispositivo.  Esto hará que el dispositivo se conecte a la red automáticamente en el futuro. Esto puede ser **sí** o **no**. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3278,17 +3278,17 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3325,18 +3325,18 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI | Descripción |
 | :------          | :------ |
-| user   | (**obligatorio**) Nombre de usuario asociado con el informe. |
+| usuario   | (**obligatorio**) Nombre de usuario asociado con el informe. |
 | tipo   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**. |
 | name   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. |
 | file   | (**obligatorio**) Nombre del archivo que se debe descargar del informe. Esto debe estar codificado en Base64. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3344,7 +3344,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3377,13 +3377,13 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 | Parámetro de URI | Descripción |
 | :------          | :------ |
-| user   | (**obligatorio**) Usuario asociado con el informe. |
+| usuario   | (**obligatorio**) Usuario asociado con el informe. |
 | tipo   | (**obligatorio**) Tipo de informe. Esto se puede **consultar** o **archivar**. |
 | name   | (**obligatorio**) Nombre del informe. Esto debe estar codificado en Base64. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
@@ -3400,7 +3400,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3429,15 +3429,15 @@ Puedes obtener los informes WER mediante el siguiente formato de solicitud.
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3459,7 +3459,7 @@ Los informes WER en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3492,11 +3492,11 @@ Puedes cargar un perfil WPR e iniciar un seguimiento con dicho perfil mediante e
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
@@ -3515,7 +3515,7 @@ El estado de sesión WPR en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3553,11 +3553,11 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3572,7 +3572,7 @@ En Inicio, esta API devuelve el estado de sesión WPR en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3602,15 +3602,15 @@ Puedes detener una sesión de seguimiento de WPR de arranque mediante el siguien
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3618,7 +3618,7 @@ Puedes detener una sesión de seguimiento de WPR de arranque mediante el siguien
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3656,11 +3656,11 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3675,7 +3675,7 @@ En Inicio, esta API devuelve el estado de sesión WPR en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3705,15 +3705,15 @@ Puedes detener una sesión de seguimiento de WPR mediante el siguiente formato d
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3721,7 +3721,7 @@ Puedes detener una sesión de seguimiento de WPR mediante el siguiente formato d
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3751,15 +3751,15 @@ Puedes recuperar el estado de la sesión actual de WPR mediante el siguiente for
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3774,7 +3774,7 @@ El estado de la sesión de seguimiento de WPR en el siguiente formato.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3804,15 +3804,15 @@ Puedes obtener una lista del seguimientos de ETL en el dispositivo mediante el s
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3832,7 +3832,7 @@ La lista de sesiones de seguimiento completadas se proporciona en el siguiente f
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3870,11 +3870,11 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3882,7 +3882,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3920,11 +3920,11 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
@@ -3932,7 +3932,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -3966,17 +3966,17 @@ Te permite ver las etiquetas aplicadas actualmente para el dispositivo.  Estas s
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
-**Respuesta** Las etiquetas aplicadas actualmente con el siguiente formato. 
+**Respuesta** Las etiquetas aplicadas actualmente con el formato siguiente. 
 ```json
  {
     "tags": [
@@ -3989,7 +3989,7 @@ Te permite ver las etiquetas aplicadas actualmente para el dispositivo.  Estas s
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -4020,22 +4020,22 @@ Elimina todas las etiquetas anunciadas actualmente por DNS-SD.
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
- - Ninguna
+ - Ninguno
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -4072,18 +4072,18 @@ Elimina una etiqueta anunciada actualmente por DNS-SD.
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
- - Ninguna
+ - Ninguno
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -4119,18 +4119,18 @@ Agrega una etiqueta al anuncio de DNS-SD.
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
- - Ninguna
+ - Ninguno
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -4163,15 +4163,15 @@ Obtén una lista de carpetas accesibles de nivel superior.
 
 **Parámetros de URI**
 
-- Ninguna
+- Ninguno
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta** Las carpetas disponibles con el siguiente formato. 
 ```json
@@ -4182,7 +4182,7 @@ Obtén una lista de carpetas accesibles de nivel superior.
 ```
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -4217,16 +4217,16 @@ Obtén una lista de los archivos que hay en una carpeta.
 | Parámetro de URI | Descripción |
 | :------     | :----- |
 | knownfolderid | (**obligatorio**) El directorio de nivel superior donde quieres la lista de archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. |
-| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. |
-| ruta de acceso | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
+| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) Nombre completo del paquete de la aplicación que te interesa. |
+| path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta** Las carpetas disponibles con el siguiente formato. 
 ```json
@@ -4244,7 +4244,7 @@ Obtén una lista de los archivos que hay en una carpeta.
 ```
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -4278,12 +4278,12 @@ Obtener un archivo de una carpeta conocida o appLocalData.
 | :------     | :----- |
 | knownfolderid | (**obligatorio**) El directorio de nivel superior donde deseas descargar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. |
 | nombreDeArchivo | (**obligatorio**) El nombre del archivo que se va a descargar. |
-| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete que te interesa. |
-| ruta de acceso | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
+| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) Nombre completo del paquete que te interesa. |
+| path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
@@ -4293,7 +4293,7 @@ Obtener un archivo de una carpeta conocida o appLocalData.
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -4329,24 +4329,24 @@ Cambiar el nombre de un archivo de una carpeta.
 | knownfolderid | (**obligatorio**) El directorio de nivel superior en el que se encuentra el archivo. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. |
 | nombreDeArchivo | (**obligatorio**) El nombre original del archivo cuyo nombre se va a cambiar. |
 | newfilename | (**obligatorio**) El nuevo nombre del archivo.|
-| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. |
-| ruta de acceso | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
+| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) Nombre completo del paquete de la aplicación que te interesa. |
+| path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
-- Ninguna
+- Ninguno
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -4380,24 +4380,24 @@ Elimina un archivo de una carpeta.
 | :------     | :----- |
 | knownfolderid | (**obligatorio**) El directorio de nivel superior del que quieres eliminar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. |
 | nombreDeArchivo | (**obligatorio**) El nombre del archivo que se va a eliminar. |
-| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. |
-| ruta de acceso | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
+| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) Nombre completo del paquete de la aplicación que te interesa. |
+| path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
-- Ninguna 
+- Ninguno 
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |
@@ -4430,22 +4430,22 @@ Carga un archivo en una carpeta.  Esto sobrescribirá cualquier archivo existent
 | Parámetro de URI | Descripción |
 | :------     | :----- |
 | knownfolderid | (**obligatorio**) El directorio de nivel superior donde quieres cargar los archivos. Usa **LocalAppData** para obtener acceso a las aplicaciones transferidas localmente. |
-| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) El nombre completo del paquete de la aplicación que te interesa. |
-| ruta de acceso | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
+| packagefullname | (**obligatorio si *knownfolderid* == LocalAppData**) Nombre completo del paquete de la aplicación que te interesa. |
+| path | (**opcional**) El subdirectorio dentro de la carpeta o el paquete especificado anteriormente. |
 
 **Encabezados de solicitud**
 
-- Ninguna
+- Ninguno
 
 **Cuerpo de la solicitud**
 
-- Ninguna
+- Ninguno
 
 **Respuesta**
 
 **Código de estado**
 
-Esta API tiene los siguientes códigos de estado esperado.
+Esta API tiene los siguientes códigos de estado previstos.
 
 | Código de estado HTTP      | Descripción |
 | :------     | :----- |

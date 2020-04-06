@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ae05a00cac19fdd349aa48160b88cde6b84e26b0
-ms.sourcegitcommit: 620e4a51e2486ec2cb7190176b3d9bf3d7b5b6af
+ms.openlocfilehash: 6b77cc7b2f39a987df4c832f7a8daeb7e2722def
+ms.sourcegitcommit: f2f61a43f5bc24b829e8db679ffaca3e663c00e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78222031"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588711"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>Concesión de identidad a aplicaciones de escritorio no empaquetadas
 
@@ -124,7 +124,7 @@ Después de crear el manifiesto del paquete, crea el paquete disperso con la [he
 En el siguiente ejemplo se muestra cómo crear un paquete disperso desde la línea de comandos.  
 
 ```Console
-MakeAppx.exe  pack  /d  <path to directory that contains manifest>  /p  <output path>\MyPackage.msix  /nv
+MakeAppx.exe pack /d <path to directory that contains manifest> /p <output path>\MyPackage.msix /nv
 ```
 
 Para poder instalar correctamente el paquete disperso en un equipo de destino, debes firmarlo con un certificado que sea de confianza en el equipo de destino. Puedes crear un nuevo certificado autofirmado para fines de desarrollo y firmar el paquete disperso mediante [SignTool](https://docs.microsoft.com/windows/msix/package/sign-app-package-using-signtool), que está disponible en Windows SDK.
@@ -132,7 +132,7 @@ Para poder instalar correctamente el paquete disperso en un equipo de destino, d
 En el siguiente ejemplo se muestra cómo firmar un paquete disperso desde la línea de comandos.
 
 ```Console
-SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx  /p <certificate password>  <path to sparse package>\MyPackage.msix
+SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx /p <certificate password> <path to sparse package>\MyPackage.msix
 ```
 
 ### <a name="add-the-package-identity-metadata-to-your-desktop-application-manifest"></a>Agregar los metadatos de identidad del paquete al manifiesto de aplicación de escritorio
