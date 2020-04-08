@@ -6,16 +6,21 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d2c8e05d2b01b110085ed82c19cecd251c9c6971
-ms.sourcegitcommit: c95915f8a13736705eab74951a12b2cf528ea612
+ms.openlocfilehash: bbcb53a6c88feb989b504f3b94b27d0e969cfdc1
+ms.sourcegitcommit: 26f3b5d24aa1834a527a15967d723a8749f32dc9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70876245"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80812776"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>Integrar con los controles de transporte de contenido multimedia del sistema
 
 En este artículo se muestra cómo interactuar con los controles de transporte multimedia del sistema (SMTC). Los SMTC son un conjunto de controles comunes para todos los dispositivos de Windows 10 que proporcionan un modo coherente para que los usuarios controlen la reproducción multimedia de todas las aplicaciones en ejecución que usan [**MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer) para la reproducción.
+
+Los controles de transporte de medios del sistema permiten a los desarrolladores de aplicaciones multimedia integrarse con la interfaz de usuario integrada del sistema para Mostrar metadatos multimedia como intérprete, título del álbum o título del capítulo. El control de transporte del sistema también permite a los usuarios controlar la reproducción de una aplicación multimedia mediante la interfaz de usuario integrada del sistema, como pausar la reproducción y omitir hacia delante y hacia atrás en una lista de reproducción.
+
+<img alt="System Media Transtport Controls" src="images/smtc.png" />
+
 
 Para obtener una muestra completa que demuestre la integración con los SMTC, consulta la [muestra de controles de transporte multimedia del sistema en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls).
                     
@@ -74,7 +79,7 @@ A continuación, se comprueba la propiedad [**Handled**](https://docs.microsoft.
 Por último, se llama a [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) en el objeto de aplazamiento para que el sistema sepa que terminaste de procesar el comando.
 
 [!code-cs[PreviousReceived](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetPreviousReceived)]
-                
+                 
 ## <a name="manual-control-of-the-smtc"></a>Control manual de los SMTC
 Como se mencionó anteriormente en este artículo, los SMTC detectarán y mostrarán automáticamente la información de todas las instancias de **MediaPlayer** que cree la aplicación. Si quieres usar varias instancias de **MediaPlayer**, pero quieres que los SMTC proporcionen una sola entrada para la aplicación, debes controlar manualmente el comportamiento de los SMTC en lugar de usar la integración automática. Además, si usas [**MediaTimelineController**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaTimelineController) para controlar uno o más reproductores multimedia, debes usar la integración de SMTC manual. Asimismo, si la aplicación usa una API distinta de **MediaPlayer**, como la clase [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph), para reproducir contenido multimedia, debes implementar la integración de SMTC manual para que el usuario emplee los SMTC para controlar la aplicación. Para obtener información sobre cómo controlar manualmente los SMTC, consulta [Control manual de los controles de transporte de multimedia del sistema](system-media-transport-controls.md).
 
