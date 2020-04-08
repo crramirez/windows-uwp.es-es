@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ffd5481fec0ebf6db24d9af95b8a11d05a043170
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: 5340c8375be9cf33a8f56fdba7bd36e9743767ab
+ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521226"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80482306"
 ---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>Contribución a la documentación conceptual de UWP
 
@@ -22,7 +22,7 @@ Si **no** eres empleado de Microsoft, puedes contribuir mediante el [repositorio
 
 Si ya estás en el repositorio de contenido público, para comenzar ve hasta el archivo que quieres cambiar. Desde allí, selecciona el icono de lápiz situado encima del contenido para empezar a editarlo.
 
-Si estás viendo una página en docs.microsoft.com, una alternativa es seleccionar el botón **Editar** de la parte superior derecha de la página. Esta acción te redirigirá al archivo de origen asociado del repositorio.
+Si estás viendo una página en [docs.microsoft.com](https://docs.microsoft.com), una alternativa es seleccionar el botón **Editar** de la parte superior derecha de la página. Esta acción te redirigirá al archivo de origen asociado del repositorio.
 
 Al comenzar a editar, GitHub bifurca automáticamente el repositorio oficial en tu cuenta personal de GitHub, donde puedes realizar los cambios. Cuando hayas terminado, envía una solicitud de incorporación de cambios a la rama **docs**.
 

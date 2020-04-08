@@ -1,158 +1,158 @@
 ---
-title: Introducción a los marcos Web de node. js en Windows
-description: Una guía para ayudarle a empezar a trabajar con Marcos Web de node. js en Windows.
+title: Introducción a los marcos web de Node.js en Windows
+description: Una guía para ayudarle a empezar a usar los marcos web de Node.js en Windows.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-keywords: NodeJS, node. js, Windows 10, Microsoft, Learning NodeJS, nodo en Windows, nodo en WSL, nodo en Linux en Windows, nodo de instalación en Windows, NodeJS con vs Code, desarrollar con nodo en Windows, desarrollar con NodeJS en Windows, instalar nodo en WSL, NodeJS en Windows Subsistema para Linux
+keywords: NodeJS, Node.js, windows 10, microsoft, aprendizaje de nodejs, node en windows, node en wsl, node en linux en windows, instalar node en windows, nodejs con vs code, desarrollar con node en windows, desarrollar con nodejs en windows, instalar node en WSL, NodeJS en el Subsistema de Windows para Linux
 ms.localizationpriority: medium
 ms.date: 09/19/2019
 ms.openlocfilehash: a8ce1d08136a74504e1b3bad26feadd61b72068f
 ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72517790"
 ---
-# <a name="get-started-with-nodejs-web-frameworks-on-windows"></a>Introducción a los marcos Web de node. js en Windows
+# <a name="get-started-with-nodejs-web-frameworks-on-windows"></a>Introducción a los marcos web de Node.js en Windows
 
-Una guía paso a paso que le ayudará a empezar a usar marcos Web de node. js en Windows, incluidos los siguientes:. js, Nuxt. js y Gatsby.
+Una guía paso a paso que te ayudará a empezar a usar marcos web de node.js en Windows, incluidos Next.js, Nuxt.js y Gatsby.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-En esta guía se da por supuesto que ya ha completado los pasos para [configurar el entorno de desarrollo de node. js con WSL 2](./setup-on-wsl2.md), entre los que se incluyen:
+En esta guía se da por supuesto que ya has completado los pasos para [configurar el entorno de desarrollo de Node.js con WSL 2](./setup-on-wsl2.md), que incluyen:
 
-- Instale Windows 10 Insider Preview compilación 18932 o posterior.
-- Habilite la característica WSL 2 en Windows.
-- Instale una distribución de Linux (Ubuntu 18,04 para nuestros ejemplos). Puede comprobarlo con: `wsl lsb_release -a`
-- Asegúrese de que la distribución de Ubuntu 18,04 se está ejecutando en el modo WSL 2. (WSL puede ejecutar distribuciones en el modo V1 o V2). Para comprobarlo, abra PowerShell y escriba: `wsl -l -v`
-- Con PowerShell, establezca Ubuntu 18,04 como su distribución predeterminada, con: `wsl -s ubuntu 18.04`
+- Instalar la compilación 18932 o posterior de Windows 10 Insider Preview.
+- Habilitar la característica WSL 2 en Windows.
+- Instalar una distribución de Linux (Ubuntu 18.04 para nuestros ejemplos). Puedes comprobarlo con: `wsl lsb_release -a`.
+- Asegurarte de que la distribución de Ubuntu 18.04 se está ejecutando en modo WSL 2. (WSL puede ejecutar distribuciones en los modos V1 o V2). Para comprobarlo, abre PowerShell y escribe: `wsl -l -v`.
+- Con PowerShell, establece Ubuntu 18.04 como la distribución predeterminada, con: `wsl -s ubuntu 18.04`.
 
 ## <a name="get-started-with-nextjs"></a>Introducción a Next.js
 
-Next. js es un marco para crear aplicaciones JavaScript representadas por el servidor basadas en React. js, node. js, WebPack y Babel. js. Es básicamente un proyecto reutilizable para reAct, diseñado con atención a los procedimientos recomendados, que le permite crear aplicaciones web "universales" de manera sencilla y coherente, con prácticamente cualquier configuración. Estas aplicaciones web "universales" representadas por servidor también se denominan a veces "isomórficos", lo que significa que el código se comparte entre el cliente y el servidor.
+Next.js es un marco para crear aplicaciones de JavaScript representadas por el servidor basadas en React.js, Node.js, Webpack y Babel.js. Es básicamente un proyecto reutilizable para React, diseñado con atención a los procedimientos recomendados, que te permite crear aplicaciones web "universales" de manera sencilla y coherente con prácticamente cualquier configuración. Estas aplicaciones web "universales" representadas por el servidor también se denominan a veces "isomórficas", lo que significa que el código se comparte entre el cliente y el servidor.
 
-Para crear un siguiente proyecto. js, que incluye la instalación de Next, reAct y reAct-DOM:
+Para crear un siguiente proyecto de Next.js, que incluye la instalación de next, react y react-dom:
 
-1. Abra el terminal de WSL (es decir, Ubuntu 18,04).
+1. Abre el terminal de WSL (es decir, Ubuntu 18.04).
 
-2. Cree una nueva carpeta de proyecto: `mkdir NextProjects` y escriba ese directorio: `cd NextProjects`.
+2. Crea la nueva carpeta de proyecto `mkdir NextProjects` y accede al directorio `cd NextProjects`.
 
-3. Instale Next. js y cree un proyecto (reemplazando "My-Next-app" por lo que le gustaría llamar a su aplicación): `npm create next-app my-next-app`.
+3. Instala Next.js y crea un proyecto (reemplazando "my-next-app" por el nombre que le quiera poner a la aplicación): `npm create next-app my-next-app`.
 
-4. Una vez instalado el paquete, cambie los directorios a la nueva carpeta de la aplicación, `cd my-next-app` y, a continuación, use `code .` para abrir el proyecto. js siguiente en VS Code. Esto le permitirá ver el siguiente marco. js que se ha creado para la aplicación. Tenga en cuenta que VS Code ha abierto la aplicación en un entorno de WSL remoto (como se indica en la pestaña verde en la parte inferior izquierda de la ventana de VS Code). Esto significa que mientras usa VS Code para editar en el sistema operativo Windows, todavía está ejecutando la aplicación en el sistema operativo Linux.
+4. Una vez instalado el paquete, cambia los directorios a la nueva carpeta de la aplicación, `cd my-next-app`, y luego usa `code .` para abrir el siguiente proyecto de Next.js en VS Code. Esto te permitirá ver el siguiente marco de Next.js que se ha creado para la aplicación. Ten en cuenta que VS Code ha abierto la aplicación en un entorno de WSL remoto (como se indica en la pestaña verde en la parte inferior izquierda de la ventana de VS Code). Esto significa que aunque estás usando VS Code para editar en el sistema operativo Windows, la aplicación se seguirá ejecutando en el sistema operativo Linux.
 
-    ![WSL: extensión remota](../images/wsl-remote-extension.png)
+    ![Extensión WSL-Remote](../images/wsl-remote-extension.png)
 
-5. Hay 3 comandos que debe conocer una vez instalado el siguiente. js:
+5. Hay tres comandos que debes conocer una vez instales Next.js:
 
-    - `npm run dev` para ejecutar una instancia de desarrollo con recarga en caliente, seguimiento de archivos y tarea que se vuelve a ejecutar.
+    - `npm run dev` para ejecutar una instancia de desarrollo con recarga activa, supervisión de archivos y reejecución de tareas.
     - `npm run build` para compilar el proyecto.
     - `npm start` para iniciar la aplicación en modo de producción.
 
-    Abra el terminal WSL integrado en VS Code (**Ver terminal de >** ). Asegúrese de que la ruta de acceso del terminal apunta al directorio del proyecto (es decir, `~/NextProjects/my-next-app$`). Después, intente ejecutar una instancia de desarrollo de la nueva aplicación. js siguiente con: `npm run dev`
+    Abre el terminal de WSL integrado en VS Code (**Ver > Terminal**). Asegúrate de que la ruta de acceso del terminal apunta al directorio del proyecto (es decir, `~/NextProjects/my-next-app$`). Después, intenta ejecutar una instancia de desarrollo de la nueva aplicación Next.js con: `npm run dev`
 
-6. El servidor de desarrollo local se iniciará y, una vez que las páginas del proyecto terminen de compilar, el terminal mostrará "compilado correctamente-listo en [http://localhost:3000](http://localhost:3000)". Seleccione este vínculo localhost para abrir la nueva aplicación. js siguiente en un explorador Web.
+6. El servidor de desarrollo local se iniciará y, una vez que las páginas del proyecto terminen de compilar, el terminal mostrará un mensaje para indicar que se ha compilado correctamente y está listo en [http://localhost:3000](http://localhost:3000). Selecciona este vínculo localhost para abrir la nueva aplicación Next.js en un explorador web.
 
-    ![La siguiente aplicación. js que se ejecuta en localhost: 3000](../images/next-app.png)
+    ![La aplicación Next.js ejecutándose en localhost:3000.](../images/next-app.png)
 
-7. Abra el archivo `pages/index.js` en el editor de VS Code. Busque el título de la página `<h1 className='title'>Welcome to Next.js!</h1>` y cámbielo a `<h1 className='title'>This is my new Next.js app!</h1>`. Con el explorador Web todavía abierto en localhost: 3000, guarde el cambio y observe que la característica de recarga en caliente compila y actualiza automáticamente el cambio en el explorador.
+7. Abre el archivo `pages/index.js` en el editor de VS Code. Busca el título de la página `<h1 className='title'>Welcome to Next.js!</h1>` y cámbialo a `<h1 className='title'>This is my new Next.js app!</h1>`. Con el explorador web todavía abierto en localhost:3000, guarda el cambio y observa que la característica de recarga activa compila y actualiza automáticamente el cambio en el explorador.
 
-8. Veamos el modo en que Next. js controla los errores. Quite la etiqueta de cierre `</h1>` para que el código de título tenga el siguiente aspecto: `<h1 className='title'>This is my new Next.js app!`. Guarde este cambio y observe que se mostrará el error "no se pudo compilar" en el explorador y en el terminal, lo que le permitirá saber que se espera una etiqueta de cierre para `<h1>`. Reemplace la etiqueta de cierre `</h1>`, guárdela y la página se volverá a cargar.
+8. Veamos el modo en que Next.js administra los errores. Quita la etiqueta de cierre de `</h1>` para que el código de título tenga el siguiente aspecto: `<h1 className='title'>This is my new Next.js app!`. Guarda este cambio y observa que se mostrará un error para indicar que no se pudo compilar en el explorador y en el terminal, lo que te permitirá saber que se espera una etiqueta de cierre para `<h1>`. Reemplaza la etiqueta de cierre `</h1>` y la página se volverá a cargar.
 
-Puede usar el depurador de VS Code con la siguiente aplicación. js seleccionando la tecla F5 o yendo a **ver > depurar** (Ctrl + Mayús + D) y **Ver > consola de depuración** (Ctrl + Mayús + Y) en la barra de menús. Si selecciona el icono de engranaje en la ventana Depurar, se creará un archivo de configuración de inicio (`launch.json`) para que guarde los detalles de configuración de la depuración. Para obtener más información, vea [depuración de vs Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging).
+Puedes usar el depurador de VS Code con la siguiente aplicación Next.js; para ello, selecciona la tecla F5 o ve a **Ver > Depurar** (Ctrl+Mayús+D) y **Ver > Consola de depuración** (Ctrl+Mayús+Y) en la barra de menús. Si seleccionas el icono de engranaje en la ventana Depurar, se creará un archivo de configuración de inicio (`launch.json`) para que guardes los detalles de configuración de la depuración. Para obtener más información, consulta [Depuración en VS Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging).
 
-![VS Code ventana de depuración y el icono de configuración Launch. JSON](../images/vscode-debug-launch-configuration.png)
+![Ventana de depuración de VS Code e icono de configuración de launch.json](../images/vscode-debug-launch-configuration.png)
 
-Para obtener más información acerca de Next. js, consulte los [documentos de. js siguientes](https://nextjs.org/docs).
+Para obtener más información acerca de Next.js, consulta la [documentación de Next.js](https://nextjs.org/docs).
 
 ## <a name="get-started-with-nuxtjs"></a>Introducción a Nuxt.js
 
-Nuxt. js es un marco para crear aplicaciones JavaScript representadas por el servidor basadas en Vue. js, node. js, WebPack y Babel. js. Fue inspirado en el siguiente. js. Es básicamente un proyecto reutilizable para Vue. Al igual que el siguiente. js, se ha diseñado con atención a los procedimientos recomendados y permite crear aplicaciones web "universales" de manera sencilla y coherente, con prácticamente cualquier configuración. Estas aplicaciones web "universales" representadas por servidor también se denominan a veces "isomórficos", lo que significa que el código se comparte entre el cliente y el servidor.
+Nuxt.js es un marco para crear aplicaciones de JavaScript representadas por el servidor basadas en Vue.js, Node.js, Webpack y Babel.js. Está inspirado en Next.js. Es básicamente un proyecto reutilizable para Vue. Al igual que Next.js, está diseñado con atención a los procedimientos recomendados, que te permite crear aplicaciones web "universales" de manera sencilla y coherente con prácticamente cualquier configuración. Estas aplicaciones web "universales" representadas por el servidor también se denominan a veces "isomórficas", lo que significa que el código se comparte entre el cliente y el servidor.
 
-Para crear un proyecto de Nuxt. js, que incluirá la respuesta a una serie de preguntas sobre el tipo de marco de trabajo de servidor integrado, el marco de la interfaz de usuario, el marco de pruebas, el modo, los módulos y el pelusa que quiere instalar:
+Para crear un proyecto de Nuxt.js, que incluirá las respuestas a una serie de preguntas sobre el tipo de marco de servidor integrado, el marco de la interfaz de usuario, el marco de pruebas, el modo, los módulos y el linter que quieres instalar:
 
-1. Abra el terminal de WSL (es decir, Ubuntu 18,04).
+1. Abre el terminal de WSL (es decir, Ubuntu 18.04).
 
-2. Cree una nueva carpeta de proyecto: `mkdir NuxtProjects` y escriba ese directorio: `cd NuxtProjects`.
+2. Crea la nueva carpeta de proyecto `mkdir NuxtProjects` y accede al directorio `cd NuxtProjects`.
 
-3. Instale Nuxt. js y cree un proyecto (reemplazando "My-Nuxt-app" por lo que le gustaría llamar a su aplicación): `npm create nuxt-app my-nuxt-app`
+3. Instala Nuxt.js y crea un proyecto (reemplazando "my-nuxt-app" por el nombre que le quieras poner a la aplicación): `npm create nuxt-app my-nuxt-app`.
 
-4. El instalador de Nuxt. js ahora le preguntará las siguientes preguntas:
-    - Nombre del proyecto: My-nuxtjs-App
-    - Descripción del proyecto: Descripción de la aplicación Nuxt. js.
+4. El instalador de Nuxt. js ahora te hará las siguientes preguntas:
+    - Nombre del proyecto: my-nuxtjs-app
+    - Descripción del proyecto: descripción de la aplicación Nuxt.js.
     - Nombre del autor: utilizo mi alias de GitHub.
-    - Elija el administrador de paquetes: hilado o **NPM** : usamos NPM para nuestros ejemplos.
-    - Elija marco de interfaz de usuario: ninguno, Vue Design Vue, bootstrap Vue, etc. Vamos a elegir **Vuetify** para este ejemplo, pero la comunidad Vue creó un buen resumen comparando [estos marcos de interfaz de usuario](https://vue-community.org/guide/ecosystem/ui-libraries.html#summary-tldr) para ayudarle a elegir el mejor ajuste para su proyecto.
-    - Elija marcos de servidor personalizados: ninguno, AdonisJs, Express, Fastify, etc. Vamos a elegir **ninguno** en este ejemplo, pero puede encontrar una [comparación del marco de trabajo de 2019-2020 Server](https://dev.to/santypk4/introducing-the-best-10-node-js-frameworks-for-2019-and-2020-mcm) en el sitio de dev.to.
-    - Elija módulos de Nuxt. js (use la barra espaciadora para seleccionar módulos o simplemente escriba si no desea): Axios (para simplificar las solicitudes HTTP) o [compatibilidad con PWA](https://pwa.nuxtjs.org/) (para agregar un servicio-Worker, archivo manifest. JSON, etc.). No vamos a agregar un módulo para este ejemplo.
-    - Elija Herramientas de detección de errores: **ESLint**, adornarla, archivos provisionales de pelusa. Vamos a elegir **ESLint** (una herramienta para analizar el código y avisarle de posibles errores).
-    - Elija un marco de pruebas: **ninguno**, jest, Ava. Vamos a elegir **ninguna** , ya que no trataremos las pruebas en esta guía de inicio rápido.
-    - Elija el modo de representación: **universal (SSR)** o aplicación de una sola página (Spa). Vamos a elegir **universal (SSR)** en nuestro ejemplo, pero los [documentos de Nuxt. js](https://nuxtjs.org/guide#server-rendered-universal-ssr-) señalan algunas de las diferencias: SSR que requiere un servidor node. js que ejecute al servidor: representar la aplicación y Spa para el hospedaje estático.
-    - Elija Herramientas de desarrollo: **jsconfig. JSON** (recomendado para vs code para que funcione la finalización del código de IntelliSense)
+    - Elige el administrador de paquetes: Yarn o **Npm** (usamos NPM para nuestros ejemplos).
+    - Elige el marco de la interfaz de usuario: Ninguno, Ant Design Vue, Bootstrap Vue, etc. Vamos a elegir **Vuetify** para este ejemplo, pero la comunidad Vue creó un buen [resumen de comparativa de estos marcos de interfaz de usuario](https://vue-community.org/guide/ecosystem/ui-libraries.html#summary-tldr) para ayudarte a elegir el que mejor se adapte a tu proyecto.
+    - Elige marcos de servidor personalizados: Ninguno, AdonisJs, Express, Fastify, etc. Vamos a elegir **Ninguno** para este ejemplo, pero puedes encontrar una [comparación de marcos de servidor 2019-2020](https://dev.to/santypk4/introducing-the-best-10-node-js-frameworks-for-2019-and-2020-mcm) en el sitio Dev.to.
+    - Elige módulos de Nuxt.js (usa la barra espaciadora para seleccionar módulos o simplemente dale a Enter si no quieres ninguno): Axios (para simplificar las solicitudes HTTP) o [PWA support](https://pwa.nuxtjs.org/) (para agregar un servicio de trabajo, un archivo manifest.json, etc.). No vamos a agregar ningún módulo para este ejemplo.
+    - Elige herramientas de detección de errores: **ESLint**, Prettier, archivos almacenados provisionalmente de Lint. Vamos a elegir **ESLint** (una herramienta para analizar el código y avisar de posibles errores).
+    - Elige un marco de pruebas: **Ninguno**, Jest, AVA. Vamos a elegir **Ninguno** ya que no trataremos las pruebas en esta guía de inicio rápido.
+    - Elige el modo de representación: **universal (SSR)** o aplicación de página única (SPA). Vamos a elegir **Universal (SSR)** en nuestro ejemplo, pero en la [documentación de Nuxt.js](https://nuxtjs.org/guide#server-rendered-universal-ssr-) se señalan algunas de las diferencias: SSR requiere un servidor Node.js en ejecución para representar en el servidor la aplicación y SPA para el hospedaje estático.
+    - Elige las herramientas de desarrollo: **jsconfig.json** (recomendado para VS Code para que funcione la finalización del código de IntelliSense).
 
-5. Una vez creado el proyecto, `cd my-nuxtjs-app` para escribir el directorio del proyecto de Nuxt. js y, a continuación, escriba `code .` para abrir el proyecto en el entorno de VS Code WSL-Remote.
+5. Una vez creado el proyecto, `cd my-nuxtjs-app` para indicar el directorio del proyecto de Nuxt.js y, a continuación, escribe `code .` para abrir el proyecto en el entorno de VS Code WSL-Remote.
 
-    ![WSL: extensión remota](../images/wsl-remote-extension.png)
+    ![Extensión WSL-Remote](../images/wsl-remote-extension.png)
 
-6. Hay 3 comandos que debe conocer una vez instalado Nuxt. js:
+6. Hay tres comandos que debes conocer una vez instales Next.js:
 
-    - `npm run dev` para ejecutar una instancia de desarrollo con recarga en caliente, seguimiento de archivos y tarea que se vuelve a ejecutar.
+    - `npm run dev` para ejecutar una instancia de desarrollo con recarga activa, supervisión de archivos y reejecución de tareas.
     - `npm run build` para compilar el proyecto.
     - `npm start` para iniciar la aplicación en modo de producción.
 
-    Abra el terminal WSL integrado en VS Code (**Ver terminal de >** ). Asegúrese de que la ruta de acceso del terminal apunta al directorio del proyecto (es decir, `~/NuxtProjects/my-nuxt-app$`). Después, intente ejecutar una instancia de desarrollo de la nueva aplicación de Nuxt. js con: `npm run dev`
+    Abre el terminal de WSL integrado en VS Code (**Ver > Terminal**). Asegúrate de que la ruta de acceso del terminal apunta al directorio del proyecto (es decir, `~/NuxtProjects/my-nuxt-app$`). Después, intenta ejecutar una instancia de desarrollo de la nueva aplicación Nuxt.js con: `npm run dev`
 
-6. El servidor de desarrollo local se iniciará (mostrando algunos tipos de barras de progreso de las compilaciones de cliente y servidor). Una vez que el proyecto termine de compilar, el terminal mostrará "compilado correctamente" junto con cuánto tiempo tardó en compilarse. Apunte el explorador Web a [http://localhost:3000](http://localhost:3000) para abrir la nueva aplicación de Nuxt. js.
+6. El servidor de desarrollo local se iniciará (mostrando algunos tipos útiles de barras de progreso de las compilaciones de cliente y servidor). Una vez que el proyecto termine de compilarse, el terminal mostrará un mensaje que indica que se compilado correctamente junto con el tiempo que tardó en compilarse. Apunta con el explorador web a [http://localhost:3000](http://localhost:3000) para abrir la nueva aplicación de Nuxt.js.
 
-    ![La aplicación Nuxt. js que se ejecuta en localhost: 3000](../images/nuxt-app.png)
+    ![La aplicación Nuxt.js ejecutándose en localhost:3000.](../images/nuxt-app.png)
 
-7. Abra el archivo `pages/index.vue` en el editor de VS Code. Busque el título de la página `<v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>` y cámbielo a `<v-card-title class="headline">This is my new Nuxt.js app!</v-card-title>`. Con el explorador Web todavía abierto en localhost: 3000, guarde el cambio y observe que la característica de recarga en caliente compila y actualiza automáticamente el cambio en el explorador.
+7. Abre el archivo `pages/index.vue` en el editor de VS Code. Busca el título de la página `<v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>` y cámbialo a `<v-card-title class="headline">This is my new Nuxt.js app!</v-card-title>`. Con el explorador web todavía abierto en localhost:3000, guarda el cambio y observa que la característica de recarga activa compila y actualiza automáticamente el cambio en el explorador.
 
-8. Veamos cómo Nuxt. js controla los errores. Quite la etiqueta de cierre `</v-card-title>` para que el código de título tenga el siguiente aspecto: `<v-card-title class="headline">This is my new Nuxt.js app!`. Guarde este cambio y observe que se mostrará un error de compilación en el explorador y en el terminal, lo que le permitirá saber que falta una etiqueta de cierre para `<v-card-title>`, junto con los números de línea en los que se puede encontrar el error en el código. Reemplace la etiqueta de cierre `</v-card-title>`, guárdela y la página se volverá a cargar.
+8. Veamos el modo en que Nuxt.js administra los errores. Quita la etiqueta de cierre de `</v-card-title>` para que el código de título tenga el siguiente aspecto: `<v-card-title class="headline">This is my new Nuxt.js app!`. Guarda este cambio y observa que se mostrará un error de compilación en el explorador y en el terminal, lo que te permitirá saber que falta una etiqueta de cierre para `<v-card-title>`, junto con los números de línea en los que se puede encontrar el error en el código. Reemplaza la etiqueta de cierre `</v-card-title>` y la página se volverá a cargar.
 
-Puede usar el depurador de VS Code con la aplicación Nuxt. js seleccionando la tecla F5 o yendo a **ver > depurar** (Ctrl + Mayús + D) y **Ver > consola de depuración** (Ctrl + Mayús + Y) en la barra de menús. Si selecciona el icono de engranaje en la ventana Depurar, se creará un archivo de configuración de inicio (`launch.json`) para que guarde los detalles de configuración de la depuración. Para obtener más información, vea [depuración de vs Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging).
+Puedes usar el depurador de VS Code con la siguiente aplicación Next.js; para ello, selecciona la tecla F5 o ve a **Ver > Depurar** (Ctrl+Mayús+D) y **Ver > Consola de depuración** (Ctrl+Mayús+Y) en la barra de menús. Si seleccionas el icono de engranaje en la ventana Depurar, se creará un archivo de configuración de inicio (`launch.json`) para que guardes los detalles de configuración de la depuración. Para obtener más información, consulta [Depuración en VS Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging).
 
-![VS Code ventana de depuración y el icono de configuración Launch. JSON](../images/vscode-debug-launch-configuration.png)
+![Ventana de depuración de VS Code e icono de configuración de launch.json](../images/vscode-debug-launch-configuration.png)
 
-Para más información sobre Nuxt. js, consulte la [Guía de Nuxt. js](https://nuxtjs.org/guide).
+Para obtener más información acerca de Nuxt.js, consulta la [documentación de Next.js](https://nuxtjs.org/guide).
 
 ## <a name="get-started-with-gatsbyjs"></a>Introducción a Gatsby.js
 
-Gatsby. js es un marco de trabajo generador de sitios estático basado en React. js, en lugar de ser representado por servidor como Next. js y Nuxt. js. Un generador de sitios estáticos genera HTML estático en tiempo de compilación. No requiere un servidor. Next. js y Nuxt. js generan HTML en tiempo de ejecución (cada vez que entra una nueva solicitud). Requieren un servidor para ejecutarse. Gatsby también dicta cómo controlar los datos de la aplicación (con GraphQL), mientras que Next. js y Nuxt. js dejan esa decisión.
+Gatsby.js es un marco generador de sitios estático basado en React.js, en lugar de representarse en servidor como Next.js y Nuxt.js. Un generador de sitios estáticos genera HTML estático en tiempo de compilación. No requiere un servidor. Next.js y Nuxt.js generan HTML en tiempo de ejecución (cada vez que entra una nueva solicitud). Requieren un servidor para ejecutarse. Gatsby también dicta cómo controlar los datos de la aplicación (con GraphQL), mientras que Next.js y Nuxt.js dejan esa decisión en tus manos.
 
-Para crear un proyecto de Gatsby. js:
+Para crear un proyecto de Gatsby.js:
 
-1. Abra el terminal de WSL (es decir, Ubuntu 18,04).
-2. Cree una nueva carpeta de proyecto: `mkdir GatsbyProjects` y escriba ese directorio: `cd GatsbyProjects`
-3. Use NPM para instalar la CLI de Gatsby: `npm install -g gatsby-cli`. Una vez instalado, Compruebe la versión con `gatsby --version`.
-4. Cree el proyecto de Gatsby. js: `gatsby new my-gatsby-app`
-5. Una vez instalado el paquete, cambie los directorios a la nueva carpeta de la aplicación, `cd my-gatsby-app` y, a continuación, use `code .` para abrir el proyecto Gatsby en VS Code. Esto le permitirá ver el marco de trabajo de Gatsby. js que se ha creado para la aplicación mediante el explorador de archivos de VS Code. Tenga en cuenta que VS Code ha abierto la aplicación en un entorno de WSL remoto (como se indica en la pestaña verde en la parte inferior izquierda de la ventana de VS Code). Esto significa que mientras usa VS Code para editar en el sistema operativo Windows, todavía está ejecutando la aplicación en el sistema operativo Linux.
+1. Abre el terminal de WSL (es decir, Ubuntu 18.04).
+2. Crea la nueva carpeta de proyecto `mkdir GatsbyProjects` y accede al directorio `cd GatsbyProjects`.
+3. Usa NPM para instalar la CLI de Gatsby: `npm install -g gatsby-cli`. Una vez instalada, comprueba la versión con `gatsby --version`.
+4. Crea el proyecto de Gatsby. js: `gatsby new my-gatsby-app`
+5. Una vez instalado el paquete, cambia los directorios a la nueva carpeta de la aplicación, `cd my-gatsby-app`, y luego usa `code .` para abrir el siguiente proyecto de Next.js en VS Code. Esto le permitirá ver el siguiente marco de Gatsby.js que se ha creado para la aplicación con el Explorador de archivos de VS Code. Ten en cuenta que VS Code ha abierto la aplicación en un entorno de WSL remoto (como se indica en la pestaña verde en la parte inferior izquierda de la ventana de VS Code). Esto significa que aunque estás usando VS Code para editar en el sistema operativo Windows, la aplicación se seguirá ejecutando en el sistema operativo Linux.
 
-    ![WSL: extensión remota](../images/wsl-remote-extension.png)
+    ![Extensión WSL-Remote](../images/wsl-remote-extension.png)
 
-6. Hay 3 comandos que debe conocer una vez instalado Gatsby:
+6. Hay 3 comandos que debes conocer una vez instales Gatsby:
 
-    - `gatsby develop` para ejecutar una instancia de desarrollo con recarga en caliente.
+    - `gatsby develop` para ejecutar una instancia de desarrollo con recarga activa.
     - `gatsby build` para crear una compilación de producción.
     - `gatsby serve` para iniciar la aplicación en modo de producción.
 
-    Abra el terminal WSL integrado en VS Code (**Ver terminal de >** ). Asegúrese de que la ruta de acceso del terminal apunta al directorio del proyecto (es decir, `~/GatsbyProjects/my-gatsby-app$`). Después, intente ejecutar una instancia de desarrollo de la aplicación nueva con: `gatsby develop`
+    Abre el terminal de WSL integrado en VS Code (**Ver > Terminal**). Asegúrate de que la ruta de acceso del terminal apunta al directorio del proyecto (es decir, `~/GatsbyProjects/my-gatsby-app$`). Después, intenta ejecutar una instancia de desarrollo de la nueva aplicación con: `gatsby develop`
 
-7. Una vez finalizada la compilación del nuevo proyecto de Gatsby, el terminal mostrará "ahora puede ver Gatsby-Starter-default en el explorador. [http://localhost:8000/](http://localhost:8000/). " Seleccione este vínculo localhost para ver el nuevo proyecto compilado en un explorador Web.
+7. Una vez finalizada la compilación del nuevo proyecto de Gatsby, el terminal mostrará un mensaje indicando que ya puedes ver gatsby-starter-default en el explorador. [http://localhost:8000/](http://localhost:8000/). Selecciona este vínculo localhost para ver el nuevo proyecto compilado en un explorador web.
 
 > [!NOTE]
-> Observará que la salida de terminal también le indica que puede "ver GraphiQL, un IDE en el explorador, para explorar los datos y el esquema del sitio: [http://localhost:8000/___graphql](http://localhost:8000/___graphql)". GraphQL consolida las API en un IDE de autodocumentación (GraphiQL) integrado en Gatsby. Además de explorar los datos y el esquema del sitio, puede realizar operaciones de GraphQL como consultas, mutaciones y suscripciones. Para obtener más información, vea [Introducción a GraphiQL](https://www.gatsbyjs.org/docs/running-queries-with-graphiql/).
+> Observarás que la salida de terminal también indica que puedes ver GraphiQL, un IDE en el explorador, para explorar los datos y el esquema del sitio: [http://localhost:8000/___graphql](http://localhost:8000/___graphql). GraphQL consolida las API en un IDE de autodocumentación (GraphiQL) integrado en Gatsby. Además de explorar los datos y el esquema del sitio, puedes realizar operaciones de GraphQL como consultas, mutaciones y suscripciones. Para obtener más información, consulta [Introducción a GraphiQL](https://www.gatsbyjs.org/docs/running-queries-with-graphiql/).
 
-8. Abra el archivo `src/pages/index.js` en el editor de VS Code. Busque el título de la página `<h1 >Hi people</h1>` y cámbielo a `<h1 >Hi (Your Name)!</h1>`. Con el explorador Web todavía abierto en localhost: 8000, guarde el cambio y observe que la característica de recarga en caliente compila y actualiza automáticamente el cambio en el explorador.
+8. Abre el archivo `src/pages/index.js` en el editor de VS Code. Busca el título de la página `<h1 >Hi people</h1>` y cámbialo a `<h1 >Hi (Your Name)!</h1>`. Con el explorador web todavía abierto en localhost:8000, guarda el cambio y observa que la característica de recarga activa compila y actualiza automáticamente el cambio en el explorador.
 
-    ![La aplicación Gatsby. js que se ejecuta en localhost: 3000](../images/gatsby-app.png)
+    ![La aplicación Gatsby.js ejecutándose en localhost:3000.](../images/gatsby-app.png)
 
-9. Veamos el modo en que Next. js controla los errores. Quite la etiqueta de cierre `</h1>` para que el código de título tenga el siguiente aspecto: `<h1>Hi (Your Name)!`. Guarde este cambio y observe que se mostrará el error "no se pudo compilar" en el explorador y en el terminal, lo que le permitirá saber que se espera una etiqueta de cierre para `<h1>`. Reemplace la etiqueta de cierre `</h1>`, guárdela y la página se volverá a cargar.
+9. Veamos el modo en que Next.js administra los errores. Quita la etiqueta de cierre de `</h1>` para que el código de título tenga el siguiente aspecto: `<h1>Hi (Your Name)!`. Guarda este cambio y observa que se mostrará un error para indicar que no se pudo compilar en el explorador y en el terminal, lo que te permitirá saber que se espera una etiqueta de cierre para `<h1>`. Reemplaza la etiqueta de cierre `</h1>` y la página se volverá a cargar.
 
-Puede usar el depurador de VS Code con la siguiente aplicación. js seleccionando la tecla F5 o yendo a **ver > depurar** (Ctrl + Mayús + D) y **Ver > consola de depuración** (Ctrl + Mayús + Y) en la barra de menús. Si selecciona el icono de engranaje en la ventana Depurar, se creará un archivo de configuración de inicio (`launch.json`) para que guarde los detalles de configuración de la depuración. Para obtener más información, vea [depuración de vs Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging).
+Puedes usar el depurador de VS Code con la siguiente aplicación Next.js; para ello, selecciona la tecla F5 o ve a **Ver > Depurar** (Ctrl+Mayús+D) y **Ver > Consola de depuración** (Ctrl+Mayús+Y) en la barra de menús. Si seleccionas el icono de engranaje en la ventana Depurar, se creará un archivo de configuración de inicio (`launch.json`) para que guardes los detalles de configuración de la depuración. Para obtener más información, consulta [Depuración en VS Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging).
 
-![VS Code ventana de depuración y el icono de configuración Launch. JSON](../images/vscode-debug-launch-configuration.png)
+![Ventana de depuración de VS Code e icono de configuración de launch.json](../images/vscode-debug-launch-configuration.png)
 
-Para obtener más información sobre Gatsby, consulte los [documentos de Gatsby. js](https://www.gatsbyjs.org/docs/).
+Para obtener más información sobre Gatsby, consulta la [documentación de Gatsby.js](https://www.gatsbyjs.org/docs/).

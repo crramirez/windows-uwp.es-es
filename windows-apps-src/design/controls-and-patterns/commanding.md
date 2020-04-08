@@ -1,16 +1,15 @@
 ---
 title: Uso de comandos en aplicaciones de la Plataforma universal de Windows (UWP)
 description: Cómo utilizar las clases XamlUICommand y StandardUICommand (junto con la interfaz ICommand) para compartir y administrar comandos entre diversos tipos de control, independientemente del tipo de dispositivo y de la entrada que se va a usar.
-author: Karl-Bridge-Microsoft
 ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
-ms.openlocfilehash: cd34c9444c68b8e959f449124fe4ae294ec14fc4
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 57e4a135e97c0a8f5d09834f2eb8c729c6422af0
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257711"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081751"
 ---
 # <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Uso de comandos en aplicaciones de la Plataforma universal de Windows (UWP) con ICommand, XamlUICommand y StandardUICommand
 
@@ -63,7 +62,7 @@ En esta tabla se muestran algunos comandos de colección típicos y las formas d
 | ---------------- | -------------- | ----------------- | -------------------- | ----------------- |
 | Eliminar elemento      | Menú contextual   | Botón interactivo      | Tecla Supr              | Deslizar el dedo para eliminar   |
 | Marcar elemento        | Menú contextual   | Botón interactivo      | Ctrl + Mayús + G         | Deslizar el dedo para marcar     |
-| Actualizar datos     | Menú contextual   | N/D               | Tecla F5               | Extraer para actualizar   |
+| Actualizar datos     | Menú contextual   | N/A               | Tecla F5               | Extraer para actualizar   |
 | Marcar como favorito un elemento | Menú contextual   | Botón interactivo      | F, Ctrl+S            | Deslizar el dedo para favorito |
 
 **Proporciona siempre un menú contextual** Te recomendamos incluir todos los comandos contextuales pertinentes en un menú contextual tradicional o CommandBarFlyout, porque ambos son compatibles con todos los tipos de entrada. Por ejemplo, si un comando se expone solo durante un evento de mantener el puntero, no puede utilizarse en un dispositivo solo táctil.
@@ -1100,11 +1099,11 @@ Usa los métodos siguientes para compilar comandos para tus aplicaciones para UW
 
 Para ver un ejemplo completo que muestra una implementación de [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) y [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand), consulta el ejemplo [Galería de controles XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Controles y patrones en aplicaciones para UWP](index.md)
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
 #### <a name="topic-samples"></a>Ejemplos del tema
 

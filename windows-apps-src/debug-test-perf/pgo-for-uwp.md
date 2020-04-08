@@ -1,12 +1,12 @@
 ---
 title: Ejecutar la Optimización guiada por perfiles (PGO) en aplicaciones para Plataforma universal de Windows (UWP)
-description: Una guía paso a paso para aplicar la optimización guiada por perfiles (PGO) a las aplicaciones Plataforma universal de Windows (UWP).
+description: Una guía paso a paso para aplicar la Optimización de guiada de perfil (PGO) a las aplicaciones para Plataforma universal de Windows (UWP).
 ms.date: 02/08/2017
 ms.localizationpriority: medium
 ms.topic: article
 ms.openlocfilehash: c784812d2e070aba0857cb84e5729b1426717b8d
 ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73062367"
@@ -17,7 +17,7 @@ Este tema se ofrece una guía paso a paso para aplicar la Optimización de guiad
 
 El siguiente es un tutorial básico sobre cómo aplicar PGO a la plantilla de aplicación DirectX 11 (UWP) predeterminada mediante el uso de Visual Studio 2015 Update 3.
  
-Las capturas de pantallas a lo largo de esta guía se basan en el siguiente proyecto nuevo: ![cuadro de diálogo nuevo proyecto](images/pgo-001.png)
+Las capturas de pantalla en este tutorial se basan en el siguiente nuevo proyecto: ![cuadro de diálogo de nuevo proyecto](images/pgo-001.png)
 
 Para aplicar PGO a la plantilla de aplicación DirectX 11:
 

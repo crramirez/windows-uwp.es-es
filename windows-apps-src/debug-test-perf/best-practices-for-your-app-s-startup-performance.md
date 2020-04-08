@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ae37ab763b6705fbb3f341569904972ebb181412
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74254685"
@@ -32,7 +32,7 @@ Evidentemente, debes realizar mediciones representativas de la experiencia que t
 
 En el siguiente procedimiento se describe cómo ejecutar Ngen.exe para precompilar la aplicación.
 
-**Para ejecutar Ngen. exe**
+**Instrucciones para ejecutar Ngen.exe**
 
 1.  Ejecuta la aplicación una vez, como mínimo, para asegurarte de que Ngen.exe la detecte.
 2.  Realiza una de las siguientes acciones para abrir el **Programador de tareas**:
@@ -107,7 +107,7 @@ En la ventana [Visual Studio Live Visual Tree](https://devblogs.microsoft.com/vi
 
 ![Árbol visual activo.](images/live-visual-tree.png)
 
-**Usar fraccionamiento**. La contracción de un elemento o el establecimiento de su opacidad en 0, no impedirá su creación. Con x:Load o x:DeferLoadStrategy, puedes retrasar la carga de un fragmento de la interfaz de usuario y cargarlo cuando se necesite. Esta es una buena manera de retrasar el procesamiento de la interfaz de usuario que no es visible en la pantalla de inicio, de modo que puedes cargarla cuando sea necesario o como parte de un conjunto de lógica retrasada. Para activar la carga, solo necesitas llamar a FindName para el elemento. Para más información y un ejemplo, consulta [x:Load attribute](../xaml-platform/x-load-attribute.md) y [x:DeferLoadStrategy attribute](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute).
+**Usar aplazamiento**. La contracción de un elemento o el establecimiento de su opacidad en 0, no impedirá su creación. Con x:Load o x:DeferLoadStrategy, puedes retrasar la carga de un fragmento de la interfaz de usuario y cargarlo cuando se necesite. Esta es una buena manera de retrasar el procesamiento de la interfaz de usuario que no es visible en la pantalla de inicio, de modo que puedes cargarla cuando sea necesario o como parte de un conjunto de lógica retrasada. Para activar la carga, solo necesitas llamar a FindName para el elemento. Para más información y un ejemplo, consulta [Atributo x:Load](../xaml-platform/x-load-attribute.md) y [Atributo x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute).
 
 **Virtualización**. Si tienes una lista o contenido repetido en la interfaz de usuario, se recomienda encarecidamente usar la virtualización de la interfaz de usuario. Si la interfaz de usuario de la lista no se virtualiza, vas a pagar el coste de la creación de todos los elementos iniciales, lo que puede ralentizar el inicio. Consulta [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md).
 

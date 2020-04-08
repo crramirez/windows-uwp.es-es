@@ -11,18 +11,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a9ff0acd46ef7efa92239b0a3ef07b507850a66
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 315edbddccc51b7e742bf9beffad8497a104ce03
+ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081520"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80614091"
 ---
 # <a name="swipe"></a>Deslizar rápidamente
 
 Los comandos de deslizar el dedo son aceleradores para menús contextuales que permiten a los usuarios acceder fácilmente a las acciones de menú comunes de forma táctil, sin necesidad de cambiar los estados de la aplicación.
 
-> **API importantes**: [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol), [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem), [clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView)
+> **API de la biblioteca de interfaz de usuario de Windows**: [SwipeControl](/uwp/api/microsoft.ui.xaml.controls.swipecontrol), [SwipeItem](/uwp/api/microsoft.ui.xaml.controls.swipeitem)
+>
+> **API de plataforma**: [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol), [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem), [clase ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView)
 
 ![Ejecutar y mostrar el tema claro](images/LightThemeSwipe.png)
 

@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 38f289b21980e2a77fd8669c39750e9b989aa742
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 3b7eb2aa8f753c3e8b956ed722d1f807362bc204
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684391"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081721"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -22,11 +22,15 @@ A diferencia de [ListView](/uwp/api/windows.ui.xaml.controls.listview), [ItemsRe
 
 En términos conceptuales, [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) podría considerarse un panel controlado por datos, en lugar de un control completo, como ListView. Tú te encargas de especificar una colección de elementos de datos para su visualización, una plantilla de elemento que genere un elemento de interfaz de usuario para cada elemento de datos y un diseño que determine el tamaño y la colocación de los elementos. ItemsRepeater generará elementos secundarios en función del origen de datos y los mostrará según lo que especifiquen la plantilla de elemento y el diseño. No hace falta que los elementos mostrados sean homogéneos, ya que ItemsRepeater puede cargar contenido para representar los elementos de datos según los criterios que especifiques en un selector de plantillas de datos.
 
-| **Obtener la biblioteca de interfaz de usuario de Windows** |
-| - |
-| Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-> **API importantes**: [clase ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater), [clase ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer)
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **ItemsRepeater** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de la biblioteca de interfaz de usuario de Windows**: [clase ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
+>
+> **API de plataforma:** [Clase ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -46,7 +50,7 @@ Tanto [ItemsControl](/uwp/api/windows.ui.xaml.controls.itemscontrol) como ItemsR
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ItemsRepeater">ItemsRepeater</a> en acción.</p>
     <ul>
@@ -203,7 +207,7 @@ En esta lista se muestran las interfaces disponibles y cuándo se debe considera
 
     Al igual que la interfaz **INotifyCollectionChanged**, permite al control observar los cambios en el origen de datos y reaccionar ante ellos.
 
-    **Advertencia**: Windows.Foundation.IObservableVector\<T> no es compatible con una acción de tipo "Mover". Esto puede hacer que la interfaz de usuario de un elemento pierda su estado visual.  Por ejemplo, un elemento que actualmente está seleccionado o que tiene el foco donde el movimiento se consigue mediante una acción de eliminar seguida de una acción de agregar perderá el foco y dejará de estar seleccionado.
+    **Advertencia**: Windows.Foundation.IObservableVector\<T> no es compatible con una acción de tipo "Mover". Esto puede hacer que la interfaz de usuario de un elemento pierda su estado visual.  Por ejemplo, un elemento que actualmente está seleccionado o que tiene el foco donde el movimiento se consigue mediante una acción "Eliminar" seguida de una acción "Agregar" perderá el foco y dejará de estar seleccionado.
 
     Platform.Collections.Vector\<T> usa IObservableVector\<T> y tiene esta misma limitación. Si es necesaria la compatibilidad con una acción de tipo "Mover", usa la interfaz **INotifyCollectionChanged**.  La clase .NET ObservableCollection\<T> usa **INotifyCollectionChanged**.
 

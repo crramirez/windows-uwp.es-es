@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f9e7cc16b65f4ee2727fae5a711da9372ee91c01
 ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/11/2019
 ms.locfileid: "72282189"
@@ -18,7 +18,7 @@ ms.locfileid: "72282189"
 
 La memoria de las aplicaciones para la Plataforma universal de Windows (UWP) escritas en C# y Visual Basic se administra de manera automática con el recolector de elementos no usados de .NET. En esta sección se resume el comportamiento y los procesos recomendados de rendimiento del recolector de elementos no usados de .NET para las aplicaciones para UWP. Para más información sobre el funcionamiento del recolector de elementos no utilizados de .NET y las herramientas para depurar y analizar su rendimiento, consulta [Recolección de elementos no utilizados](https://docs.microsoft.com/dotnet/standard/garbage-collection/index).
 
-**Tenga en cuenta**  es necesario que intervenga en el comportamiento predeterminado del recolector de elementos no utilizados, lo que indica que los problemas de memoria generales se producen en la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio 2015](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/). Este tema solo se aplica a C# y Visual Basic.
+**Nota**  La necesidad de intervenir en el comportamiento predeterminado del recolector de elementos no utilizados es una clara señal de problemas de memoria generales en la aplicación. Para más información, consulta [Herramienta de uso de memoria durante la depuración en Visual Studio 2015](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/). Este tema solo se aplica a C# y Visual Basic.
 
  
 
@@ -42,7 +42,7 @@ Induce una recolección de elementos no utilizados solamente si has medido el re
 
 Para inducir una recolección de elementos no usados de una generación, llama a [**GC.Collect(n)** ](https://docs.microsoft.com/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_), donde n es la generación que quieres recolectar (0, 1 o 2).
 
-**Tenga en cuenta**  se recomienda no forzar una recolección de elementos no utilizados en la aplicación porque el recolector de elementos no utilizados usa muchas heurísticas para determinar el mejor momento para realizar una recolección, y forzar una recolección es en muchos casos un uso innecesario de la CPU. Pero si sabes que tienes una gran cantidad de objetos en la aplicación que ya no se usan y quieres devolver esta memoria al sistema, puede resultar conveniente forzar una recolección de elementos no utilizados. Por ejemplo, puedes inducir una recolección al final de una secuencia de carga en un juego para liberar memoria antes de comenzar la partida.
+**Nota**  Se recomienda no forzar una recolección de elementos no usados en la aplicación, ya que el recolector de elementos no usados usa muchas medidas heurísticas para determinar el mejor momento de realizar una recolección y, si la fuerzas, en muchos casos provocarás un uso innecesario de la CPU. Pero si sabes que tienes una gran cantidad de objetos en la aplicación que ya no se usan y quieres devolver esta memoria al sistema, puede resultar conveniente forzar una recolección de elementos no utilizados. Por ejemplo, puedes inducir una recolección al final de una secuencia de carga en un juego para liberar memoria antes de comenzar la partida.
  
 Para evitar inducir accidentalmente demasiadas recolecciones de elementos no utilizados, puedes establecer el valor de [**GCCollectionMode**](https://docs.microsoft.com/dotnet/api/system.gccollectionmode) en **Optimized**. Esto indica al recolector de elementos no utilizados que debe iniciar una recolección solo si determina que será lo suficientemente productiva como para justificar su ejecución.
 
@@ -74,7 +74,7 @@ Los objetos de 85 KB o mayores se asignan al montón de objetos grandes (LOH) y
 
 ### <a name="avoid-reference-rich-objects"></a>Evitar objetos con muchas referencias
 
-El recolector de elementos no utilizados sigue las referencias entre los objetos desde las raíces de la aplicación para determinar qué objetos están activos. Para más información, consulta el tema que explica [lo que sucede durante una recolección de elementos no utilizados](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals). Si un objeto contiene muchas referencias, el recolector de elementos no utilizados deberá realizar una mayor cantidad de trabajo. Una técnica común (especialmente con objetos grandes) consiste en convertir objetos enriquecidos de referencia en objetos sin referencias (por ejemplo, en lugar de almacenar una referencia, almacenar un índice). Obviamente, esta técnica solo funciona cuando es posible hacerlo de forma lógica.
+El recolector de elementos no utilizados sigue las referencias entre los objetos desde las raíces de la aplicación para determinar qué objetos están activos. Para más información, consulta el tema que explica [lo que sucede durante una recolección de elementos no utilizados](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals). Si un objeto contiene muchas referencias, el recolector de elementos no utilizados deberá realizar una mayor cantidad de trabajo. Una técnica común (especialmente con los objetos grandes) consiste en convertir los objetos con muchas referencias en objetos sin referencias (por ejemplo, en lugar de almacenar una referencia, almacena un índice). Obviamente, esta técnica solo funciona cuando es posible hacerlo de forma lógica.
 
 El reemplazo de referencias de objeto por índices puede implicar una modificación complicada y perjudicial en la aplicación, y es más eficaz en objetos grandes con una gran cantidad de referencias. Hazlo solamente si notas tiempos de recolección de elementos no utilizados prolongados en la aplicación relacionados con objetos con muchas referencias.
 

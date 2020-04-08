@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f4d2443370d285322e94c4ca21e7d616f96794b7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 6b85177e5d3d0f4a2a37010ba9122861216a4b6b
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257731"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081960"
 ---
 # <a name="command-bar-flyout"></a>Control flotante de la barra de comandos
 
@@ -25,17 +25,24 @@ El control flotante de la barra de comandos permite proporcionar a los usuarios 
 
 ![Un control flotante de la barra de comandos de texto expandido](images/command-bar-flyout-header.png)
 
-> CommandBarFlyout requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior, o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
-
-> - **API de plataforma**: [Clase CommandBarFlyout](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [clase AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [clase AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [clase AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator)
->- **API de la Biblioteca de la interfaz de usuario de Windows**: [Clase CommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
-
 Al igual que [CommandBar](app-bars.md), CommandBarFlyout tiene las propiedades **PrimaryCommands** y **SecondaryCommands**, que puedes utilizar para agregar comandos. Puedes colocar los comandos en una de las colecciones o en ambas. La forma y el momento en que se muestran los comandos principales y secundarios dependen del modo de presentación.
 
 El control flotante de la barra de comandos tiene dos modos de presentación: *contraído* y *expandido*.
 
-- En el modo contraído, se muestran solo los comandos principales. Si el control flotante de la barra de comandos tiene comandos principales y secundarios, se muestra un botón "más", que se representa mediante unos puntos suspensivos \[•••\]. Esto permite al usuario obtener acceso a los comandos secundarios al realizar la transición al modo expandido.
+- En el modo contraído, se muestran solo los comandos principales. Si el control flotante de la barra de comandos tiene comandos principales y secundarios, se muestra un botón "más", que se representa mediante unos puntos suspensivos \[***\]. Esto permite al usuario obtener acceso a los comandos secundarios al realizar la transición al modo expandido.
 - En el modo expandido, se muestran los comandos principales y secundarios. (Si el control tiene únicamente elementos secundarios, estos se muestran de un modo parecido al control MenuFlyout).
+
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **CommandBarFlyout** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+>**API de la biblioteca de interfaz de usuario de Windows**: [Clase CommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
+>
+>**API de plataforma**: [Clase CommandBarFlyout](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [clase AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [clase AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [clase AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator)
+>
+> CommandBarFlyout requiere Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior, o la [Biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -56,7 +63,7 @@ Para mostrar los comandos en un menú contextual, puedes usar CommandBarFlyout o
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la app <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/CommandBarFlyout">abrir la app y ver CommandBarFlyout en acción</a>.</p>
     <ul>
@@ -394,7 +401,7 @@ En esta tabla se muestran los comandos incluidos en un elemento TextCommandBarFl
 | Copiar | cuando se selecciona el texto. |
 | Pegar | cuando el control de texto no es de solo lectura y el portapapeles tiene contenido. |
 | Deshacer | cuando hay una acción que se puede deshacer. |
-| Seleccionar todos | cuando se puede seleccionar el texto. |
+| Seleccionar todo | cuando se puede seleccionar el texto. |
 
 ### <a name="custom-text-command-bar-flyouts"></a>Controles flotantes de la barra de comandos de texto personalizado
 
@@ -403,9 +410,9 @@ No se puede personalizar TextCommandBarFlyout y cada control de texto lo adminis
 - Para sustituir el valor de TextCommandBarFlyout predeterminado que se muestra en la selección de texto, puedes crear un elemento CommandBarFlyout personalizado (u otro tipo de control flotante) y asignarlo a la propiedad **SelectionFlyout**. Si estableces SelectionFlyout en **null**, no se muestran comandos en la selección.
 - Para sustituir el valor de TextCommandBarFlyout predeterminado que se muestra como el menú contextual, asigna un elemento CommandBarFlyout personalizado (u otro tipo de control flotante) a la propiedad **ContextFlyout** en un control de texto. Si estableces ContextFlyout en **null**, se muestra el control flotante del menú que aparece en versiones anteriores del control de texto en lugar de TextCommandBarFlyout.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 - [Ejemplo de comandos XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
 ## <a name="related-articles"></a>Artículos relacionados

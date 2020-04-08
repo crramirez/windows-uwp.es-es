@@ -12,22 +12,22 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f623c18db5af8e503965c0c4518e35e263791a51
-ms.sourcegitcommit: 61194375c0889b73ee2b978c444c4b90a576b3e4
+ms.openlocfilehash: ad18426a36503c9a540343565c20297502810b76
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039153"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081648"
 ---
 # <a name="radio-buttons"></a>Botones de radio
-
-> **API importantes**: [Clase RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [Evento Checked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked) y [Propiedad IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
 Los botones de radio permiten a los usuarios seleccionar una opción entre un conjunto. Cada opción aparece representada por un botón de radio y los usuarios solo pueden seleccionar un único botón de radio en un grupo de botones de radio.
 
 (Si tienes curiosidad acerca del origen del nombre, los botones de radio se llaman así por los botones de canales preestablecidos de una radio).
 
 ![Botones de radio](images/controls/radio-button.png)
+
+> **API de plataforma**: [Clase RadioButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [Evento Checked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked) y [Propiedad IsChecked](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -62,7 +62,7 @@ Si las opciones disponibles se basan en el contexto actual de la aplicación o p
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/RadioButton">abrir la aplicación y ver RadioButton en acción</a>.</p>
     <ul>
@@ -187,7 +187,7 @@ En esta ilustración, se muestra el modo correcto de colocar y espaciar botones 
 
 ![Directrices de espaciado para botones de radio](images/radiobutton-redlines.png)
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 

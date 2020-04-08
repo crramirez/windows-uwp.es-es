@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, COM, component, class, interface
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a9bdfcee8811e52587eb4fcd59913a731b799a2
-ms.sourcegitcommit: cab95379459ad378163aa4469c9dc6c509cc8c43
+ms.openlocfilehash: 6a286056fc0c44d01482e23e52df0fa80eca0515
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79511008"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218525"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM con C++/WinRT
 
@@ -127,14 +127,7 @@ Puedes llamar a la función [**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#co
 
 ## <a name="com-functions-that-take-an-iunknown-interface-pointer"></a>Funciones COM que toman un puntero de interfaz **IUnknown**
 
-Puedes llamar a la función [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) para pasar **com_ptr** a una función que toma un puntero de interfaz **IUnknown**.
-
-```cppwinrt
-winrt::check_hresult(factory->CreateSwapChainForCoreWindow(
-    ...
-    winrt::get_unknown(CoreWindow::GetForCurrentThread()),
-    ...));
-```
+Puedes llamar a la función [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) para pasar **com_ptr** a una función que toma un puntero de interfaz **IUnknown**. Consulta ese tema para obtener un ejemplo de código.
 
 ## <a name="passing-and-returning-com-smart-pointers"></a>Paso y devolución de punteros inteligentes COM
 
@@ -171,7 +164,7 @@ Además, utiliza [**com_ptr::try_as**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrtry
 
 Si quieres compilar y ejecutar este ejemplo de código fuente, en primer lugar, en Visual Studio, crea una nueva **aplicación principal (C++/WinRT)** . `Direct2D` es un nombre razonable para el proyecto, pero puedes darle el nombre que quieras.
 
-Abre `pch.h` y agrega `#include <unknwn.h>` inmediatamente después de incluir `windows.h`.
+Abre `pch.h` y agrega `#include <unknwn.h>` inmediatamente después de incluir `windows.h`. Esto se debe a que estamos usando [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown). Es una buena idea usar `#include <unknwn.h>` de forma explícita cada vez que utilices **winrt::get_unknown**, aunque otro encabezado haya incluido dicho encabezado.
 
 Abre `App.cpp`, elimina todo su contenido y pega en la lista siguiente.
 

@@ -10,25 +10,35 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: bb6cc29260f5891cda74879618b59bb3762b7f18
-ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
+ms.openlocfilehash: edeebf177cf438931bb318ea19cd292a9c9b27c0
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690418"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081598"
 ---
 # <a name="rating-control"></a>Control de clasificación
 
 El control de clasificación permite a los usuarios ver y establecer clasificaciones que reflejan el grado de satisfacción con el contenido y los servicios. Los usuarios pueden interactuar con el control de clasificación mediante la función táctil, el lápiz, el mouse, el controlador para juegos y el teclado. Las siguientes instrucciones muestran cómo usar las características del control de clasificación para proporcionar flexibilidad y personalización.
 
-> **API importantes**: [Clase RatingControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.ratingcontrol)
+![Ejemplo de control de clasificación](images/rating_rs2_doc_ratings_intro.png)
+
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **RatingControl** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de la biblioteca de interfaz de usuario de Windows:** [Clase RatingControl](/uwp/api/microsoft.ui.xaml.controls.ratingcontrol)
+>
+> **API de plataforma:** [Clase RatingControl](/uwp/api/windows.ui.xaml.controls.ratingcontrol)
 
 ## <a name="examples"></a>Ejemplos
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/RatingControl">abrir la aplicación y ver RatingControl en acción</a>.</p>
     <ul>
@@ -38,8 +48,6 @@ El control de clasificación permite a los usuarios ver y establecer clasificaci
 </td>
 </tr>
 </table>
-
-![Ejemplo de control de clasificación](images/rating_rs2_doc_ratings_intro.png)
 
 ### <a name="editable-rating-with-placeholder-value"></a>Clasificación editable con el valor del marcador de posición
 
@@ -95,6 +103,6 @@ Esta es una lista no completa de funcionalidades adicionales:
 -   Deshabilitación de animaciones de crecimiento
 -   Personalización del número de estrellas
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.

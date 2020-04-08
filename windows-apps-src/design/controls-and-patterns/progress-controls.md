@@ -12,24 +12,26 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e5ff5d0e9172432110d60a007228e59e48785b9
-ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
+ms.openlocfilehash: 66dc74e73207feb9b155adffc116f857dcb3027d
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830806"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081626"
 ---
 # <a name="progress-controls"></a>Controles de progreso
 
 Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga. Esto puede significar que el usuario no puede interactuar con la aplicación cuando el indicador de progreso está visible y también puede indicar el tiempo de espera aproximado, según el indicador que usa.
 
-| **API de plataforma** | **API de la biblioteca de la interfaz de usuario de Windows** |
-| - | - |
-| [clase ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [propiedad IsIndeterminate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [clase ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [propiedad IsActive](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive) | [Clase ProgressBar](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [propiedad IsIndeterminate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.progressbar.isindeterminate) |
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-| **Obtención de la biblioteca de la interfaz de usuario de Windows** |
-| - |
-| Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **ProgressBar** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de la biblioteca de interfaz de usuario de Windows**: [Clase ProgressBar](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [propiedad IsIndeterminate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.progressbar.isindeterminate)
+>
+> **API de plataforma:** [clase ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [propiedad IsIndeterminate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [clase ProgressRing](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [propiedad IsActive](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive)
 
 > [!NOTE]
 > Hay dos versiones del control ProgressBar: una en la plataforma, representada por el espacio de nombres Windows.UI.Xaml; la otra en la biblioteca de interfaz de usuario de Windows, en el espacio de nombres Microsoft.UI.Xaml. Aunque la API de ProgressBar es la misma, la apariencia del control es distinta en estas dos versiones. En este documento se mostrarán imágenes de la versión más reciente de la biblioteca de interfaz de usuario de Windows.
@@ -72,7 +74,7 @@ Además, un control de progreso es de solo lectura y no es interactivo. Esto sig
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para abrir la aplicación y ver <a href="xamlcontrolsgallery:/item/ProgressBar">ProgressBar</a> o <a href="xamlcontrolsgallery:/item/ProgressRing">ProgressRing</a> en acción.</p>
     <ul>
@@ -94,7 +96,7 @@ No siempre resulta obvio qué control o qué estado (determinado o indeterminado
 
 -   **¿El usuario puede continuar sin tener que supervisar el progreso de la operación?**
 
-    Cuando se usa una clase ProgressBar, la interacción es no modal, lo que normalmente significa que la finalización de la operación no bloquea al usuario y puede seguir usando la aplicación de otras maneras hasta que haya finalizado ese aspecto.
+    Cuando se usa un control ProgressBar, la interacción es no modal, lo que normalmente significa que la finalización de la operación no bloquea al usuario y puede seguir usando la aplicación de otras maneras hasta que haya finalizado ese aspecto.
 
 -   **Palabras clave**
 
@@ -125,7 +127,7 @@ No siempre resulta obvio qué control o qué estado (determinado o indeterminado
 ### <a name="no-progress-indication-necessary"></a>No es necesaria ninguna indicación de progreso
 -   **¿El usuario necesita saber que está ocurriendo algo?**
 
-    Por ejemplo, si la aplicación está descargando algo en segundo plano y el usuario no inició la descarga, no tiene por qué saberlo necesariamente.
+    Por ejemplo, si la aplicación está descargando algo en segundo plano y el usuario no inició la descarga, este no tiene por qué saberlo necesariamente.
 
 -   **¿La operación es una actividad en segundo plano que no bloquea la actividad del usuario y tiene poco interés (aunque lo tenga en parte) para el usuario?**
 
@@ -203,7 +205,7 @@ En algunas ocasiones, resulta mejor mostrar solo un breve cursor de espera, cuan
 Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Wait, 10);
 ```
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 

@@ -1,5 +1,5 @@
 ---
-title: Código adaptable para versiones
+title: Código adaptativo para versiones
 description: Usa la clase ApiInformation para aprovechar las nuevas API mientras mantienes la compatibilidad con versiones anteriores.
 ms.date: 02/08/2017
 ms.topic: article
@@ -8,12 +8,12 @@ ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c03475c0c4007508a18c17645dbe99eeb7d6cb0
 ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/06/2020
 ms.locfileid: "75681986"
 ---
-# <a name="version-adaptive-code"></a>Código adaptable para versiones
+# <a name="version-adaptive-code"></a>Código adaptativo para versiones
 
 Puedes considerar la escritura de código adaptativo algo similar a [crear una interfaz de usuario adaptativa](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml). Podrías diseñar la interfaz de usuario base para que se ejecute en la pantalla más pequeña y luego mover o agregar elementos cuando detectes que la aplicación se ejecuta en una pantalla más grande. Con el código adaptativo, se escribe el código base para que se ejecute en la versión más baja del sistema operativo y se pueden agregar características seleccionadas especialmente cuando se detecte que la aplicación se ejecuta en una versión superior en la que haya una nueva característica disponible.
 
@@ -23,7 +23,7 @@ Para obtener más información general acerca de ApiInformation, contratos de AP
 
 Se usa la clase [Windows.Foundation.Metadata.ApiInformation](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation) en una condición del código para probar la presencia de la API que se desee llamar. Esta condición se evaluará donde se ejecute la aplicación, pero solo se evaluará como **true** en los dispositivos en los que la API esté presente y en los que, por lo tanto, se encuentre disponible para llamarla. Esto permite escribir código adaptativo para versiones con el fin de crear aplicaciones que usen las API que solo estén disponibles en algunas versiones del sistema operativo.
 
-Aquí analizamos ejemplos específicos para orientar a nuevas características en Windows Insider Preview. Para obtener una descripción general sobre el uso de **ApiInformation**, consulta [Device families overview](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview#writing-code) (Información general sobre las familias de dispositivos) y la entrada de blog [Dynamically detecting features with API contracts](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) (Detección dinámica de funciones con contratos de API).
+Aquí analizamos ejemplos específicos para orientar a nuevas características en Windows Insider Preview. Para obtener una descripción general sobre el uso de **ApiInformation**, consulta [Información general sobre las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview#writing-code) y la entrada de blog [Detección dinámica de funciones con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/).
 
 > [!TIP]
 > Si se realizan numerosas comprobaciones de API en tiempo de ejecución, el rendimiento de la aplicación puede verse afectado. En estos ejemplos te mostramos las comprobaciones incorporadas. En el código de producción, debes realizar la comprobación una vez, almacenar el resultado en caché y, a continuación, utilizar el resultado en caché en toda la aplicación. 
@@ -71,7 +71,7 @@ Inconvenientes:
 
 En esta sección se muestran varios ejemplos de código adaptativo que usan las API que son nuevas en Windows 10, versión 1607 (Windows Insider Preview).
 
-### <a name="example-1-new-enum-value"></a>Ejemplo 1: Nuevo valor de enumeración
+### <a name="example-1-new-enum-value"></a>Ejemplo 1: el nuevo valor enum
 
 Windows 10, versión 1607, agrega un nuevo valor a la enumeración [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue): **ChatWithoutEmoji**. Este nuevo ámbito de entrada tiene el mismo comportamiento de entrada que el ámbito de entrada **Chat** (revisión ortográfica, autocompletar, uso de mayúsculas automático), pero se asigna a un teclado táctil sin botón de emoji. Esto resulta útil si creas tu propio selector de emoji y deseas deshabilitar el botón de emoji integrado en el teclado táctil. 
 
@@ -154,7 +154,7 @@ En estos ejemplos, se puede usar el valor de enumeración Chat en XAML o en el c
 
 Si se usa el valor ChatWithoutEmoji en XAML o en el código sin comprobación, se compilará sin errores porque se encuentra presente en la versión del sistema operativo de destino. También se ejecutará sin errores en un sistema que posea la versión del sistema operativo de destino. Sin embargo, si la aplicación se ejecuta en un sistema con un sistema operativo que tenga la versión mínima, se bloqueará en tiempo de ejecución porque el valor de enumeración ChatWithoutEmoji no está presente. Por lo tanto, este valor solo debe usarse en el código y encapsularlo en una comprobación de API en tiempo de ejecución, de forma que solo se llame si está admitido en el sistema actual.
 
-### <a name="example-2-new-control"></a>Ejemplo 2: Nuevo control
+### <a name="example-2-new-control"></a>Ejemplo 2: nuevo control
 
 Una nueva versión de Windows normalmente aporta nuevos controles a la superficie de las API para UWP que aportan nuevas funciones a la plataforma. Para aprovechar la presencia de un nuevo control, usa el método [ApiInformation.IsTypePresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.istypepresent).
 
@@ -303,7 +303,7 @@ Los desencadenadores de estado extensible permiten usar juntos el marcado y el c
 
 Debes usar los desencadenadores de estado para código adaptativo solo cuando haya pequeños cambios de la interfaz de usuario entre diferentes versiones del sistema operativo que no afecten a la interfaz de usuario restante, como un cambio de valor de una propiedad o una enumeración en un control.
 
-### <a name="example-1-new-property"></a>Ejemplo 1: Nueva propiedad
+### <a name="example-1-new-property"></a>Ejemplo 1: nueva propiedad
 
 El primer paso para configurar un desencadenador de estado extensible es crear una subclase de la clase [StateTriggerBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.statetriggerbase) para crear un desencadenador personalizado que se activará en función de la presencia de una API. Este ejemplo muestra un desencadenador que se activa si la presencia de la propiedad coincide con la variable `_isPresent` establecida en XAML.
 
@@ -371,7 +371,7 @@ El desencadenador de este ejemplo comprueba si la propiedad está presente. Si l
 </Grid>
 ```
 
-### <a name="example-2-new-enum-value"></a>Ejemplo 2: Nuevo valor de enumeración
+### <a name="example-2-new-enum-value"></a>Ejemplo 2: el nuevo valor enum
 
 Este ejemplo muestra cómo establecer diferentes valores de enumeración en función de si un valor se encuentra presente. Usa un desencadenador de estado personalizado para lograr el mismo resultado que el ejemplo anterior de chat. En este ejemplo, se usa el nuevo ámbito de entrada ChatWithoutEmoji si el dispositivo ejecuta Windows 10, versión 1607; de lo contrario, se usa el ámbito de entrada **Chat**. Los estados visuales que usan este desencadenador se configuran con un estilo *if-else*, en el que el ámbito de entrada se elige en función en la presencia del nuevo valor de enumeración.
 
@@ -446,4 +446,4 @@ class IsEnumPresentTrigger : StateTriggerBase
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Información general de las familias de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-- [Detección dinámica de características con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Detección dinámica de funciones con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)

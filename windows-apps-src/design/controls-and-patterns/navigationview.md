@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c0d12b3b043546cd908fb474fa8ca9656d8dc56e
-ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
+ms.openlocfilehash: 17eb1a2f24e9fd893fee1a0aff349989577375c7
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71100848"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081703"
 ---
 # <a name="navigation-view"></a>Vista de navegación
 
@@ -24,6 +24,12 @@ El control NavigationView proporciona navegación de nivel superior para la apli
 
 ![navegación superior](images/nav-view-header.png)<br/>
 _La vista de navegación admite el panel de navegación superior e izquierdo o el menú_
+
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **NavigationView** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 > **API de plataforma**: [clase Windows.UI.Xaml.Controls.NavigationView](/uwp/api/windows.ui.xaml.controls.navigationview)
 >
@@ -46,7 +52,7 @@ Para información sobre otros patrones de navegación, consulta [Conceptos bási
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/XAML-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td><img src="images/XAML-controls-gallery-app-icon-sm.png" alt="XAML controls gallery" width="168"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/NavigationView">abrirla y ver NavigationView en acción</a>.</p>
     <ul>
@@ -226,7 +232,7 @@ Puedes colocar contenido de formato libre en el panel si lo agregas a la propied
     :::column-end:::
 :::row-end:::
 
-### <a name="header"></a>Encabezado
+### <a name="header"></a>Header
 
 Puedes agregar un título de página mediante la propiedad [Header](/uwp/api/windows.ui.xaml.controls.navigationview.header).
 
@@ -250,7 +256,7 @@ Te recomendamos márgenes de 12 píxeles en el área de contenido cuando Naviga
 
 De manera predeterminada, la vista de navegación cambia automáticamente su modo de pantalla en función de la cantidad de espacio en pantalla disponible para ella. Las propiedades [CompactModeThresholdWidth](/uwp/api/windows.ui.xaml.controls.navigationview.compactmodethresholdwidth) y [ExpandedModeThresholdWidth](/uwp/api/windows.ui.xaml.controls.navigationview.expandedmodethresholdwidth) especifican los puntos de interrupción en los que el modo de pantalla cambia. Puedes modificar estos valores para personalizar el comportamiento del modo de pantalla adaptable.
 
-### <a name="default"></a>Predeterminado
+### <a name="default"></a>Valor predeterminado
 
 Cuando PaneDisplayMode está establecido en su valor predeterminado de **Auto**, el comportamiento adaptable es mostrar:
 
@@ -379,12 +385,12 @@ Puedes ocultar o deshabilitar el botón Atrás mediante el establecimiento de es
 
 :::row:::
     :::column:::
-        ![Navigation view back button in the left navigation pane](images/leftnav-back.png)<br/>
-        _The back button in the left navigation pane_
+        ![Botón atrás de la vista de navegación en el panel de navegación izquierdo](images/leftnav-back.png)<br/>
+        _Botón atrás en el panel de navegación izquierdo_
     :::column-end:::
     :::column:::
-        ![Navigation view back button in the top navigation pane](images/topnav-back.png)<br/>
-        _The back button in the top navigation pane_
+        ![Botón atrás de la vista de navegación en el panel de navegación superior](images/topnav-back.png)<br/>
+        _Botón atrás en el panel de navegación superior_
     :::column-end:::
 :::row-end:::
 
@@ -624,7 +630,7 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 }
 ```
 
-Esta es una versión de [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) del controlador **NavView_ItemInvoked** del ejemplo de código C# anterior. La técnica del controlador C++/WinRT implica almacenar primero (en la etiqueta de [ **NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) el nombre de tipo completo de la página a la que quieres ir. En el controlador, aplica la conversión unboxing a ese valor, conviértelo en un objeto [**Windows::UI::Xaml::Interop::TypeName**](/uwp/api/windows.ui.xaml.interop.typename) y úsalo para ir a la página de destino. No es necesaria la variable de asignación denominada `_pages` que ves en el ejemplo de C#; y podrás crear pruebas unitarias que confirmen que los valores dentro de las etiquetas son de un tipo válido. Consulta también [Conversión boxing y unboxing de valores escalares a IInspectable con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/boxing).
+Esta es una versión de [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) del controlador **NavView_ItemInvoked** del ejemplo de código C# anterior. La técnica del controlador C++/WinRT implica almacenar primero (en la etiqueta de [**NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)) el nombre de tipo completo de la página a la que quieres ir. En el controlador, aplica la conversión unboxing a ese valor, conviértelo en un objeto [**Windows::UI::Xaml::Interop::TypeName**](/uwp/api/windows.ui.xaml.interop.typename) y úsalo para ir a la página de destino. No es necesaria la variable de asignación denominada `_pages` que ves en el ejemplo de C#; y podrás crear pruebas unitarias que confirmen que los valores dentro de las etiquetas son de un tipo válido. Consulta también [Conversión boxing y unboxing de valores escalares a IInspectable con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/boxing).
 
 ```cppwinrt
 void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* sender */, Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs const & args)

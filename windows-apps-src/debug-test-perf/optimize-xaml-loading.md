@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: beb6dde4036019e004d94e5f60e8f3583c78d775
 ms.sourcegitcommit: de34aabd90a92a083dfa17d4f8a98578597763f4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/28/2019
 ms.locfileid: "72980023"
@@ -45,7 +45,7 @@ Los siguientes ejemplos muestran la diferencia en el recuento de elementos y el 
 
 #### <a name="option-1---inefficient"></a>Opción 1: Ineficaz
 
-Aquí se carga la clase ListView, pero no está visible porque su ancho es 0. La ListView y cada uno de sus elementos secundarios se crean en el árbol visual y se cargan en la memoria.
+Aquí se carga la clase ListView, pero no está visible porque su ancho es 0. El objeto ListView y cada uno de sus elementos secundarios se crean en el árbol visual y se cargan en la memoria.
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -141,13 +141,13 @@ Los paneles de diseño tienen una propiedad [Background](https://docs.microsoft.
 <Grid Background="Black"/>
 ```
 
-Los paneles de diseño también tienen propiedades de borde integradas, por lo que no necesitas colocar un elemento [Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border) alrededor de un panel de diseño. Consulta [Optimizar el diseño XAML](optimize-your-xaml-layout.md) para más información y ejemplos.
+Los paneles de diseño también tienen propiedades de borde integradas, por lo que no necesitas colocar un elemento [Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border) alrededor de un panel de diseño. Consulta [Optimiza tu diseño XAML](optimize-your-xaml-layout.md) para más información y ejemplos.
 
-### <a name="use-images-in-place-of-vector-based-elements"></a>Usar imágenes en lugar de elementos basados en vector
+### <a name="use-images-in-place-of-vector-based-elements"></a>Uso de imágenes en lugar de elementos basados en vector
 
 Si debes volver a usar el mismo elemento basado en vectores numerosas veces, te resultará más útil usar un elemento [Image](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image) en su lugar. Los elementos basados en vectores pueden ser más engorrosos porque la CPU debe crear cada elemento individual por separado. Ten en cuenta que el archivo de imagen debe descodificarse una sola vez.
 
-## <a name="optimize-resources-and-resource-dictionaries"></a>Optimizar los recursos y los diccionarios de recursos
+## <a name="optimize-resources-and-resource-dictionaries"></a>Optimización de los recursos y los diccionarios de recursos
 
 Normalmente se usan [diccionarios de recursos](../design/controls-and-patterns/resourcedictionary-and-xaml-resource-references.md) para almacenar, en un nivel algo global, recursos que a los que quieras hacer referencia en varios lugares en la aplicación. Por ejemplo, estilos, pinceles, plantillas, etc.
 
@@ -157,9 +157,9 @@ En general, hemos optimizado el elemento [ResourceDictionary](https://docs.micro
 
 Usa el [atributo x:Key](../xaml-platform/x-key-attribute.md) para hacer referencia a los recursos. Los recursos con el atributo [x:Name](../xaml-platform/x-name-attribute.md) no sacarán partido de la optimización de la plataforma, en cambio, se creará una instancia de ellos en cuanto se cree el objeto ResourceDictionary. Esto sucede porque x:Name indica a la plataforma que la aplicación necesita acceso de campo a este recurso, por lo que debe crear algo a que hacer referencia.
 
-### <a name="resourcedictionary-in-a-usercontrol"></a>ResourceDictionary en un elemento UserControl.
+### <a name="resourcedictionary-in-a-usercontrol"></a>ResourceDictionary en un elemento UserControl
 
-Un elemento ResourceDictionary definido en un objeto [UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) resulta en una penalización. La plataforma crea una copia de este tipo de objeto ResourceDictionary para todas las instancias del objeto UserControl. Si tiene un UserControl que se usa mucho, mueva el ResourceDictionary fuera del UserControl y colóquelo en el nivel de página.
+Un elemento ResourceDictionary definido en un objeto [UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) resulta en una penalización. La plataforma crea una copia de este tipo de objeto ResourceDictionary para todas las instancias del objeto UserControl. Si tienes un objeto UserControl que se usa con mucha frecuencia, saca el objeto ResourceDictionary del objeto UserControl y ponlo en el nivel de página.
 
 ### <a name="resource-and-resourcedictionary-scope"></a>Ámbito de Resource y ResourceDictionary
 
@@ -167,7 +167,7 @@ Si una página hace referencia a un control de usuario o un recurso definido en 
 
 Aquí, debido a que_InitialPage.xaml_ usa un recurso de _ExampleResourceDictionary.xaml_, la totalidad de _ExampleResourceDictionary.xaml_ debe analizarse en el inicio.
 
-**InitialPage. Xaml.**
+**InitialPage.xaml.**
 
 ```xaml
 <Page x:Class="ExampleNamespace.InitialPage" ...>
@@ -185,7 +185,7 @@ Aquí, debido a que_InitialPage.xaml_ usa un recurso de _ExampleResourceDictiona
 </Page>
 ```
 
-**ExampleResourceDictionary. Xaml.**
+**ExampleResourceDictionary.xaml.**
 
 ```xaml
 <ResourceDictionary>
@@ -196,9 +196,9 @@ Aquí, debido a que_InitialPage.xaml_ usa un recurso de _ExampleResourceDictiona
 </ResourceDictionary>
 ```
 
-Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _App.xaml_ es una buena práctica y evita la duplicación. Sin embargo, _App.xaml_ se analiza en el inicio de la aplicación por lo tanto, cualquier recurso que se use en únicamente una página (a menos que esa página sea la página inicial) se debe colocar en los recursos locales de la página. Este ejemplo de contador muestra _App.xaml_ que contiene recursos usados en únicamente una página (que no es la página inicial). Esto aumenta innecesariamente el tiempo de inicio de la aplicación.
+Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _App.xaml_ es una buena práctica y evita la duplicación. Sin embargo, _App.xaml_ se analiza en el inicio de la aplicación por lo tanto, cualquier recurso que se use en únicamente una página (a menos que esa página sea la página inicial) se debe colocar en los recursos locales de la página. Este ejemplo muestra una entidad de _App.xaml_ que contiene recursos usados en únicamente una página (que no es la página inicial). Esto aumenta innecesariamente el tiempo de inicio de la aplicación.
 
-**App. Xaml**
+**App.xaml**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -212,7 +212,7 @@ Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _Ap
 </Application>
 ```
 
-**InitialPage. Xaml.**
+**InitialPage.xaml.**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -223,7 +223,7 @@ Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _Ap
 </Page>
 ```
 
-**SecondPage. Xaml.**
+**SecondPage.xaml.**
 
 ```xaml
 <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE. -->
@@ -234,11 +234,11 @@ Si usas un recurso en muchas páginas en toda la aplicación, almacenarlo en _Ap
 </Page>
 ```
 
-La manera de hacer que el ejemplo anterior de contador sea más eficiente es mover `SecondPageTextBrush` a _SecondPage.xaml_ y mover `ThirdPageTextBrush` a _ThirdPage.xaml_. `InitialPageTextBrush` puede permanecer en _app. Xaml_ porque los recursos de la aplicación deben analizarse en el inicio de la aplicación en cualquier caso.
+La manera de hacer que el ejemplo anterior de contador sea más eficiente es mover `SecondPageTextBrush` a _SecondPage.xaml_ y mover `ThirdPageTextBrush` a _ThirdPage.xaml_. `InitialPageTextBrush` puede permanecer en _App.xaml_ porque los recursos de la aplicación deben analizarse en el inicio de la aplicación en cualquier caso.
 
 ### <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>Consolidar varios pinceles que tengan el mismo aspecto en un recurso
 
-La plataforma XAML trata de almacenar en caché los objetos usados frecuentemente para que puedan volver a usarse siempre que sea posible. De todos modos, el lenguaje XAML no puede determinar fácilmente si un pincel declarado en una pieza de marcado es el mismo que está declarado en otra. Este ejemplo usa [SolidColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) como demostración, pero el caso resulta ser más probable y más importante mediante [GradientBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GradientBrush). Busca también pinceles que usen los colores predefinidos, por ejemplo, `"Orange"` y `"#FFFFA500"` son el mismo color.
+La plataforma XAML trata de almacenar en caché los objetos usados frecuentemente para que puedan volver a usarse siempre que sea posible. De todos modos, el lenguaje XAML no puede determinar fácilmente si un pincel declarado en una pieza de marcado es el mismo que está declarado en otra. Este ejemplo usa la clase [SolidColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) como demostración, pero el caso resulta ser más probable y más importante con la clase [GradientBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GradientBrush). Busca también pinceles que usen los colores predefinidos, por ejemplo, `"Orange"` y `"#FFFFA500"` son el mismo color.
 
 **Ineficaz.**
 
@@ -319,7 +319,7 @@ Usa un elemento compuesto en lugar de disponer varios elementos para crear un ef
 
 ### <a name="layout-panels"></a>Paneles de diseño
 
-Un panel de diseño puede tener dos propósitos: colorear un área y diseñar elementos secundarios. Si un elemento de atrás correspondiente al orden z ya está coloreando un área, no será necesario que un panel de diseño de la parte frontal pinte esa área. En su lugar, puede centrarse en el diseño de los elementos secundarios. Aquí tienes un ejemplo.
+Un panel de diseño puede tener dos propósitos: colorear un área y diseñar elementos secundarios. Si un elemento de atrás correspondiente al orden z ya está coloreando un área, no será necesario que un panel de diseño de la parte frontal pinte esa área. En su lugar, puede centrarse en el diseño de los elementos secundarios. A continuación se muestra un ejemplo.
 
 **Ineficaz.**
 
@@ -425,7 +425,7 @@ Para comprobar si tienes XBF2, abre la aplicación en un editor de código binar
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Prácticas recomendadas para el rendimiento de inicio de la aplicación](best-practices-for-your-app-s-startup-performance.md)
+- [Procedimientos recomendados para mejorar el rendimiento del inicio de la aplicación](best-practices-for-your-app-s-startup-performance.md)
 - [Optimiza tu diseño XAML](optimize-your-xaml-layout.md)
 - [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md)
-- [Herramientas para la generación de perfiles y el rendimiento](tools-for-profiling-and-performance.md)
+- [Herramientas de creación de perfiles y rendimiento](tools-for-profiling-and-performance.md)

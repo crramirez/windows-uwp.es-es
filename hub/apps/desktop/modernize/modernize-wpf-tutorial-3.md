@@ -1,50 +1,50 @@
 ---
-description: En este tutorial se muestra cómo agregar interfaces de usuario XAML de UWP, crear paquetes de MSIX e incorporar otros componentes modernos en la aplicación WPF.
+description: En este tutorial se muestra cómo agregar interfaces de usuario de XAML en UWP, crear paquetes MSIX e incorporar otros componentes actuales en la aplicación de WPF.
 title: Incorporación de un control CalendarView en UWP mediante islas XAML
 ms.topic: article
 ms.date: 06/27/2019
 ms.author: mcleans
 author: mcleanbyron
-keywords: Windows 10, UWP, Windows Forms, WPF, Islas XAML
+keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
 ms.openlocfilehash: 830c1cdf2e24e716d51642bc65b5b6783d0d784a
 ms.sourcegitcommit: 6bb794c6e309ba543de6583d96627fbf1c177bef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69643371"
 ---
-# <a name="part-3-add-a-uwp-calendarview-control-using-xaml-islands"></a>Parte 3: Incorporación de un control CalendarView en UWP mediante islas XAML
+# <a name="part-3-add-a-uwp-calendarview-control-using-xaml-islands"></a>3\.ª parte: Incorporación de un control CalendarView en UWP mediante islas XAML
 
-Esta es la tercera parte de un tutorial que muestra cómo modernizar una aplicación de escritorio WPF de ejemplo denominada gastos de contoso. Para obtener información general sobre el tutorial, los requisitos previos y las instrucciones para descargar la aplicación de [ejemplo, vea Tutorial: Modernizar una aplicación](modernize-wpf-tutorial.md)de WPF. En este artículo se da por supuesto que ya ha completado la [parte 2](modernize-wpf-tutorial-2.md).
+Esta es la tercera parte de un tutorial que muestra cómo modernizar una aplicación de escritorio de WPF de ejemplo denominada Contoso Expenses. Para obtener información general sobre el tutorial, los requisitos previos y las instrucciones para descargar la aplicación de ejemplo, consulta [Tutorial: Modernización de una aplicación WPF](modernize-wpf-tutorial.md). En este artículo se da por supuesto que ya has completado la [parte 2](modernize-wpf-tutorial-2.md).
 
-En el escenario ficticio de este tutorial, el equipo de desarrollo de Contoso quiere facilitar la elección de la fecha de un informe de gastos en un dispositivo habilitado para Touch. En esta parte del tutorial, agregará un control [CalendarView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/calendar-view) de UWP a la aplicación. Este es el mismo control que se usa en la funcionalidad de fecha y hora de Windows 10 en la barra de tareas.
+En el escenario ficticio de este tutorial, el equipo de desarrollo de Contoso quiere facilitar la elección de la fecha de un informe de gastos en un dispositivo con el control táctil habilitado. En esta parte del tutorial, agregarás un control [CalendarView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/calendar-view) de UWP a la aplicación. Este es el mismo control que se usa en la funcionalidad de fecha y hora de Windows 10 en la barra de tareas.
 
 ![Imagen de CalendarViewControl](images/wpf-modernize-tutorial/CalendarViewControl.png)
 
-A diferencia del control **InkCanvas** agregado en la [parte 2](modernize-wpf-tutorial-2.md), el kit de herramientas de la comunidad de Windows no proporciona una versión ajustada del **CalendarView** de UWP que se puede usar en aplicaciones de WPF. Como alternativa, hospedará un **InkCanvas** en el control genérico [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) . Puede usar este control para hospedar cualquier control UWP de primera parte proporcionado por la biblioteca Windows SDK o WinUI o cualquier control personalizado de UWP creado por un tercero. El control **WindowsXamlHost** se proporciona mediante el `Microsoft.Toolkit.Wpf.UI.XamlHost` paquete NuGet del paquete. Este paquete se incluye con el `Microsoft.Toolkit.Wpf.UI.Controls` paquete de NuGet que instaló en la [parte 2](modernize-wpf-tutorial-2.md).
+A diferencia del control **InkCanvas** que agregaste en la [parte 2](modernize-wpf-tutorial-2.md), el kit de herramientas de la comunidad de Windows no proporciona una versión ajustada de **CalendarView** de UWP que se pueda usar en aplicaciones de WPF. Como alternativa, hospedarás un elemento **InkCanvas** en el control [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) genérico. Puedes usar este control para hospedar cualquier control de UWP de origen proporcionado por la biblioteca de Windows SDK o WinUI o cualquier control personalizado de UWP creado por un tercero. El control **WindowsXamlHost** se proporciona mediante el paquete NuGet del paquete de `Microsoft.Toolkit.Wpf.UI.XamlHost`. Este paquete se incluye con el paquete NuGet de `Microsoft.Toolkit.Wpf.UI.Controls` que instalaste en la [parte 2](modernize-wpf-tutorial-2.md).
 
 > [!NOTE]
-> En este tutorial solo se muestra cómo usar [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) para hospedar el control **CalendarView** de primera entidad proporcionado por el Windows SDK. Para ver un tutorial que muestra cómo hospedar un control personalizado, vea [hospedar un control de UWP personalizado en una aplicación WPF con islas XAML](host-custom-control-with-xaml-islands.md).
+> En este tutorial solo se muestra cómo usar [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) para hospedar el control de  **CalendarView** de origen que proporciona Windows SDK. Para ver un tutorial que muestra cómo hospedar un control personalizado, consulta [Hospedaje de un control personalizado de UWP en una aplicación de WPF mediante islas XAML](host-custom-control-with-xaml-islands.md).
 
-Para usar el control **WindowsXamlHost** , debe llamar directamente a las API de WinRT desde el código en la aplicación WPF. El `Microsoft.Windows.SDK.Contracts` paquete NuGet contiene las referencias necesarias para que pueda llamar a las API de WinRT desde la aplicación. Este paquete también se incluye en el `Microsoft.Toolkit.Wpf.UI.Controls` paquete NuGet que instaló en la [parte 2](modernize-wpf-tutorial-2.md).
+Para usar el control **WindowsXamlHost**, debes llamar directamente a las API de WinRT desde el código en la aplicación WPF. El paquete NuGet de `Microsoft.Windows.SDK.Contracts` contiene las referencias necesarias para que puedas llamar a las API de WinRT desde la aplicación. Este paquete se incluye también en el paquete NuGet de `Microsoft.Toolkit.Wpf.UI.Controls` que instalaste en la [parte 2](modernize-wpf-tutorial-2.md).
 
-## <a name="add-the-windowsxamlhost-control"></a>Agregar el control WindowsXamlHost
+## <a name="add-the-windowsxamlhost-control"></a>Adición del control WindowsXamlHost
 
-1. En **Explorador de soluciones**, expanda la carpeta views en el proyecto **ContosoExpenses. Core** y haga doble clic en el archivo **AddNewExpense. Xaml** . Este es el formulario que se usa para agregar un nuevo gasto a la lista. Aquí se muestra cómo aparece en la versión actual de la aplicación.
+1. En el **Explorador de soluciones**, expande la carpeta **Vistas** del proyecto **ContosoExpenses.Core** y haz doble clic en el archivo **AddNewExpense.xaml**. Este es el formulario que se usa para agregar un nuevo gasto a la lista. Aquí se muestra cómo aparece en la versión actual de la aplicación.
 
-    ![Agregar nuevo gasto](images/wpf-modernize-tutorial/AddNewExpense.png)
+    ![Adición de nuevo gasto](images/wpf-modernize-tutorial/AddNewExpense.png)
 
-    El control selector de fecha incluido en WPF está pensado para equipos tradicionales con Mouse y teclado. Elegir una fecha con una pantalla táctil no es realmente factible, debido al pequeño tamaño del control y al espacio limitado entre cada día del calendario.
+    El control de selector de fecha incluido en WPF está pensado para equipos tradicionales con mouse y teclado. La selección de una fecha con una pantalla táctil no es realmente factible, debido al reducido tamaño del control y al espacio limitado entre cada día del calendario.
 
-2. En la parte superior del archivo **AddNewExpense. Xaml** , agregue el atributo siguiente al elemento **Window** .
+2. En la parte superior del archivo **AddNewExpense.xaml**, agrega el atributo siguiente al elemento **Window**.
 
     ```xml
     xmlns:xamlhost="clr-namespace:Microsoft.Toolkit.Wpf.UI.XamlHost;assembly=Microsoft.Toolkit.Wpf.UI.XamlHost"
     ```
 
-    Después de agregar este atributo, el elemento de **ventana** debe tener el siguiente aspecto.
+    Después de agregar este atributo, el elemento **Window** debe tener ahora un aspecto como este.
 
     ```xml
     <Window x:Class="ContosoExpenses.Views.AddNewExpense"
@@ -60,7 +60,7 @@ Para usar el control **WindowsXamlHost** , debe llamar directamente a las API de
             Background="{StaticResource AddNewExpenseBackground}">
     ```
 
-3. Cambie el atributo **height** del elemento **Window** de 450 a 800. Esto es necesario porque el control **CalendarView** de UWP tiene más espacio que el selector de fecha de WPF.
+3. Cambia el atributo de **altura** del elemento **Window** de 450 a 800. Esto es necesario porque el control **CalendarView** de UWP ocupa más espacio que el selector de fecha de WPF.
 
     ```xml
     <Window x:Class="ContosoExpenses.Views.AddNewExpense"
@@ -76,15 +76,15 @@ Para usar el control **WindowsXamlHost** , debe llamar directamente a las API de
             Background="{StaticResource AddNewExpenseBackground}">
     ```
 
-4. Busque el `DatePicker` elemento situado cerca de la parte inferior del archivo y reemplace este elemento por el código XAML siguiente.
+4. Busca el elemento `DatePicker` situado cerca de la parte inferior del archivo y reemplace este elemento por el código XAML siguiente.
 
     ```xml
     <xamlhost:WindowsXamlHost InitialTypeName="Windows.UI.Xaml.Controls.CalendarView" Grid.Column="1" Grid.Row="6" Margin="5, 0, 0, 0" x:Name="CalendarUwp"  />
     ```
 
-    Este código XAML agrega el control **WindowsXamlHost** . La propiedad **InitialTypeName** indica el nombre completo del control UWP que quiere hospedar (en este caso, **Windows. UI. Xaml. Controls. CalendarView**).
+    Este XAML agrega el control **WindowsXamlHost**. La propiedad **InitialTypeName** indica el nombre completo del control de UWP que quiere hospedar (en este caso, **Windows.UI.Xaml.Controls.CalendarView**).
 
-5. Presione F5 para compilar y ejecutar la aplicación en el depurador. Elija un empleado en la lista y, a continuación, presione el botón **Agregar nuevo gasto** . Confirme que la siguiente página hospeda el nuevo control **CalendarView** de UWP.
+5. Presiona F5 para compilar y ejecutar la aplicación en el depurador. Elige un empleado de la lista y, a continuación, presiona el botón **Agregar gasto nuevo**. Confirma que la siguiente página hospeda el nuevo control **CalendarView** de UWP.
 
     ![Contenedor de CalendarView](images/wpf-modernize-tutorial/CalendarViewWrapper.png)
 
@@ -92,22 +92,22 @@ Para usar el control **WindowsXamlHost** , debe llamar directamente a las API de
 
 ## <a name="interact-with-the-windowsxamlhost-control"></a>Interacción con el control WindowsXamlHost
 
-A continuación, actualizará la aplicación para procesar la fecha seleccionada, la mostrará en la pantalla y rellenará el objeto de **gastos** para guardarlo en la base de datos.
+A continuación, actualizarás la aplicación para procesar la fecha seleccionada, la mostrarás en la pantalla y rellenarás el objeto **Expense** para guardarlo en la base de datos.
 
-El [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView) de UWP contiene dos miembros que son relevantes para este escenario:
+El elemento [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView) de UWP contiene dos miembros que son pertinentes para este escenario:
 
 - La propiedad **SelectedDates** contiene la fecha seleccionada por el usuario.
 - El evento **SelectedDatesChanged** se genera cuando el usuario selecciona una fecha.
 
-Sin embargo, el control **WindowsXamlHost** es un control de host genérico para *cualquier* tipo de control de UWP. Como tal, no expone una propiedad denominada **SelectedDates** o un evento denominado **SelectedDatesChanged**, porque son específicos del control **CalendarView** . Para tener acceso a estos miembros, debe escribir código que convierta **WindowsXamlHost** en el tipo **CalendarView** . El mejor lugar para hacerlo es responder al evento **ChildChanged** del control **WindowsXamlHost** , que se genera cuando se representa el control hospedado.
+Sin embargo, el control **WindowsXamlHost** es un control host genérico para *cualquier* tipo de control de UWP. Como tal, no expone una propiedad llamada **SelectedDates** ni un evento llamado **SelectedDatesChanged**, porque son específicos del control **CalendarView**. Para tener acceso a estos miembros, debes escribir código que convierta el elemento **WindowsXamlHost** al tipo **CalendarView**. El mejor método para hacerlo es responder al evento **ChildChanged** del control **WindowsXamlHost**, que se genera cuando se ha representado el control hospedado.
 
-1. En el archivo **AddNewExpense. Xaml** , agregue un controlador de eventos para el evento **ChildChanged** del control **WindowsXamlHost** que agregó anteriormente. Cuando haya terminado, el elemento **WindowsXamlHost** debería tener este aspecto.
+1. En el archivo **AddNewExpense.xaml**, agrega un controlador de eventos para el evento **ChildChanged** del control **WindowsXamlHost** que agregaste anteriormente. Cuando hayas terminado, el elemento **WindowsXamlHost** debe tener el siguiente aspecto.
 
     ```xml
     <xamlhost:WindowsXamlHost InitialTypeName="Windows.UI.Xaml.Controls.CalendarView" Grid.Column="1" Grid.Row="6" Margin="5, 0, 0, 0" x:Name="CalendarUwp"  ChildChanged="CalendarUwp_ChildChanged" />
     ```
 
-2. En el mismo archivo, busque el elemento **Grid. RowDefinitions** de la **cuadrícula**principal. Agregue un elemento **RowDefinition** más con el **alto** igual a **auto** al final de la lista de elementos secundarios. Cuando haya terminado, el elemento **Grid. RowDefinitions** debería tener este aspecto (ahora debería haber 9 elementos **RowDefinition** ).
+2. En el mismo archivo, busca el elemento **Grid.RowDefinitions** del objeto **Grid** principal. Agrega uno o varios elementos **RowDefinition** con el **alto** establecido en la opción **automática** al final de la lista de elementos secundarios. Cuando hayas terminado, el elemento **Grid.RowDefinitions** debe ser similar a este (ahora debería haber 9 elementos **RowDefinition**).
 
     ```xml
     <Grid.RowDefinitions>
@@ -123,28 +123,28 @@ Sin embargo, el control **WindowsXamlHost** es un control de host genérico para
     </Grid.RowDefinitions>
     ```
 
-4. Agregue el siguiente código XAML después del elemento **WindowsXamlHost** y antes del elemento **Button** situado cerca del final del archivo.
+4. Agrega el siguiente código XAML después del elemento **WindowsXamlHost** y antes del elemento **Button** situado cerca del final del archivo.
 
     ```xml
     <TextBlock Text="Selected date:" FontSize="16" FontWeight="Bold" Grid.Row="7" Grid.Column="0" />
     <TextBlock Text="{Binding Path=Date}" FontSize="16" Grid.Row="7" Grid.Column="1" />
     ```
 
-5. Busque el elemento **Button** cerca del final del archivo y cambie la propiedad **Grid. Row** de **7** a **8**. Esto desplaza el botón una fila hacia abajo en la cuadrícula porque agregó una nueva fila.
+5. Busca el elemento **Button** situado cerca del final del archivo y cambia la propiedad **Grid.Row** de **7** a **8**. De este modo, se desplaza el botón una fila hacia abajo en la cuadrícula porque agregaste una nueva fila.
 
     ```xml
     <Button Content="Save" Grid.Row="8" Grid.Column="0" Command="{Binding Path=SaveExpenseCommand}" Margin="5, 12, 0, 0" HorizontalAlignment="Left" Width="180" />
     ```
 
-6. Abra el archivo de código **AddNewExpense.Xaml.CS** .
+6. Abre el archivo de código **AddNewExpense.xaml.cs**.
 
-7. Agregue la siguiente instrucción al principio del archivo.
+7. Agrega la siguiente instrucción al principio del archivo.
 
     ```csharp
     using Microsoft.Toolkit.Wpf.UI.XamlHost;
     ```
 
-8. Agregue el siguiente controlador de eventos a `AddNewExpense` la clase. Este código implementa el evento **ChildChanged** del control **WindowsXamlHost** que declaró anteriormente en el archivo XAML.
+8. Agrega el siguiente controlador de eventos a la clase `AddNewExpense`. Este código implementa el evento **ChildChanged** del control **WindowsXamlHost** que se declaró anteriormente en el archivo XAML.
 
     ```csharp
     private void CalendarUwp_ChildChanged(object sender, System.EventArgs e)
@@ -167,13 +167,13 @@ Sin embargo, el control **WindowsXamlHost** es un control de host genérico para
     }
     ```
 
-    Este código usa la propiedad **secundaria** del control **WindowsXamlHost** para tener acceso al control **CalendarView** de UWP. Después, el código se suscribe al evento **SelectedDatesChanged** , que se desencadena cuando el usuario selecciona una fecha en el calendario. Este controlador de eventos pasa la fecha seleccionada al ViewModel en el que se crea el nuevo objeto de **gastos** y se guarda en la base de datos. Para ello, el código usa la infraestructura de mensajería que proporciona el paquete NuGet Light de MVVM. El código envía un mensaje denominado **SelectedDateMessage** al ViewModel, que lo recibirá y establecerá la propiedad **Date** con el valor seleccionado. En este escenario, el control **CalendarView** está configurado para el modo de selección única, por lo que la colección contendrá un solo elemento.
+    Este código usa la propiedad **Child** del control **WindowsXamlHost** para tener acceso al control **CalendarView** de UWP. Después, el código se suscribe al evento **SelectedDatesChanged**, que se desencadena cuando el usuario selecciona una fecha en el calendario. Este controlador de eventos pasa la fecha seleccionada a ViewModel, donde se crea el nuevo objeto **Expense** y se guarda en la base de datos. Para ello, el código usa la infraestructura de mensajería que proporciona el paquete NuGet MVVM Light. El código envía un mensaje llamado **SelectedDateMessage** a ViewModel, que lo recibirá y establecerá la propiedad **Date** con el valor seleccionado. En este escenario, el control **CalendarView** está configurado para el modo de selección única, por lo que la colección contendrá un solo elemento.
 
-    En este momento, el proyecto todavía no se compilará porque falta la implementación de la clase **SelectedDateMessage** . En los pasos siguientes se implementa esta clase.
+    En este momento, el proyecto todavía no se compilará porque falta la implementación de la clase **SelectedDateMessage**. En los pasos siguientes se implementa esta clase.
 
-9. En **Explorador de soluciones**, haga clic con el botón secundario en la carpeta **mensajes** y elija **Agregar > clase**. Asigne a la nueva clase el nombre **SelectedDateMessage** y haga clic en **Agregar**.
+9. En el **Explorador de soluciones**, haz clic con el botón derecho en la carpeta **Mensajes** y elige **Agregar > Clase**. Asigna a la nueva clase el nombre **SelectedDateMessage** y haz clic en **Agregar**.
 
-10. Reemplace el contenido del archivo de código **SelectedDateMessage.CS** por el código siguiente. Este código agrega una instrucción using para el `GalaSoft.MvvmLight.Messaging` espacio de nombres (desde el paquete NuGet Light de MVVM), hereda de la clase **MessageBase** y agrega la propiedad **DateTime** que se inicializa a través del constructor público. Cuando haya terminado, el archivo debe tener este aspecto.
+10. Reemplaza el contenido del archivo de código **SelectedDateMessage.cs** por el siguiente código. Este código agrega una instrucción using para el espacio de nombres `GalaSoft.MvvmLight.Messaging` (desde el paquete NuGet MVVM Light), hereda de la clase **MessageBase** y agrega la propiedad **DateTime** que se inicializa a través del constructor público. Cuando hayas terminado, la página debe tener el siguiente aspecto.
 
     ```csharp
     using GalaSoft.MvvmLight.Messaging;
@@ -193,9 +193,9 @@ Sin embargo, el control **WindowsXamlHost** es un control de host genérico para
     }
     ```
 
-11. A continuación, actualizará el ViewModel para recibir este mensaje y rellenar la propiedad **Date** de ViewModel. En **Explorador de soluciones**, expanda la carpeta **ViewModels** y abra el archivo **AddNewExpenseViewModel.CS** .
+11. A continuación, actualizarás ViewModel para recibir este mensaje y rellenarás la propiedad **Date** de ViewModel. En **Explorador de soluciones**, expande la carpeta **ViewModels** y abre el archivo **AddNewExpenseViewModel.cs**.
 
-12. Busque el constructor público para la `AddNewExpenseViewModel` clase y agregue el código siguiente al final del constructor. Este código se registra para recibir el **SelectedDateMessage**, extraer la fecha seleccionada a través de la propiedad **SelectedDate** y se usa para establecer la propiedad **Date** expuesta por el ViewModel. Dado que esta propiedad está enlazada con el control **TextBlock** que agregó anteriormente, puede ver la fecha seleccionada por el usuario.
+12. Busca el constructor público para la clase `AddNewExpenseViewModel` y agrega el código siguiente al final del constructor. Este código se registra para recibir el valor **SelectedDateMessage** y extraer de él la fecha seleccionada a través de la propiedad **SelectedDate**, y se usa para establecer la propiedad **Date** expuesta por ViewModel. Dado que esta propiedad está enlazada al control **TextBlock** que agregaste anteriormente, puedes ver la fecha seleccionada por el usuario.
 
     ```csharp
     Messenger.Default.Register<SelectedDateMessage>(this, message =>
@@ -204,7 +204,7 @@ Sin embargo, el control **WindowsXamlHost** es un control de host genérico para
     });
     ```
 
-    Cuando haya terminado, el `AddNewExpenseViewModel` constructor debería tener este aspecto. 
+    Cuando hayas terminado, el constructor `AddNewExpenseViewModel` debe tener el siguiente aspecto. 
 
     ```csharp
     public AddNewExpenseViewModel(IDatabaseService databaseService, IStorageService storageService)
@@ -222,14 +222,14 @@ Sin embargo, el control **WindowsXamlHost** es un control de host genérico para
     ```
 
     > [!NOTE]
-    > El `SaveExpenseCommand` método en el mismo archivo de código realiza el trabajo de guardar los gastos en la base de datos. Este método usa la propiedad **Date** para crear el nuevo objeto de **gastos** . Esta propiedad se rellena ahora mediante el control **CalendarView** a través del `SelectedDateMessage` mensaje que acaba de crear.
+    > El método `SaveExpenseCommand` del mismo archivo de código realiza la tarea de guardar los gastos en la base de datos. Este método usa la propiedad **Date** para crear el nuevo objeto **Expense**. Esta propiedad se rellena ahora mediante el control **CalendarView** a través del mensaje de `SelectedDateMessage` que acabas de crear.
 
-13. Presione F5 para compilar y ejecutar la aplicación en el depurador. Elija uno de los empleados disponibles y, a continuación, haga clic en el botón **Agregar nuevo gasto** . Complete todos los campos del formulario y elija una fecha en el nuevo control **CalendarView** . Confirme que la fecha seleccionada se muestra como una cadena debajo del control.
+13. Presiona F5 para compilar y ejecutar la aplicación en el depurador. Elige uno de los empleados disponibles y, a continuación, haz clic en el botón **Agregar gasto nuevo**. Completa todos los campos del formulario y elige una fecha en el nuevo control **CalendarView**. Confirma que la fecha seleccionada se muestra como una cadena debajo del control.
 
-14. Presione el botón **Guardar** . El formulario se cerrará y el nuevo gasto se agrega al final de la lista de gastos. La primera columna con la fecha de gasto debe ser la fecha seleccionada en el control **CalendarView** .
+14. Presiona el botón **Guardar**. El formulario se cerrará y el nuevo gasto se agrega al final de la lista de gastos. La primera columna con la fecha de gasto debe ser la fecha seleccionada en el control **CalendarView**.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este punto del tutorial, ha reemplazado correctamente un control de fecha y hora de WPF por el control **CalendarView** de UWP, que admite bolígrafos digitales y táctiles, además de la entrada del mouse y del teclado. Aunque el kit de herramientas de la comunidad de Windows no proporciona una versión ajustada del control **CalendarView** de UWP que se puede usar directamente en una aplicación WPF, pudo hospedar el control mediante el control genérico [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) .
+En este punto del tutorial, has reemplazado correctamente un control de fecha y hora de WPF por el control **CalendarView** de UWP, que admite bolígrafos digitales y táctiles, además de la entrada del mouse y del teclado. Aunque el kit de herramientas de la Comunidad Windows no proporciona una versión ajustada del control **CalendarView** de UWP que se pueda usar directamente en una aplicación de WPF, podías hospedar el control mediante el control [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) genérico.
 
-Ya está listo para [la parte 4: Agregue las actividades y notificaciones](modernize-wpf-tutorial-4.md)de usuario de Windows 10.
+Ahora ya estás listo para continuar con la [Parte 4: Incorporación de actividades y notificaciones del usuario de Windows 10](modernize-wpf-tutorial-4.md).

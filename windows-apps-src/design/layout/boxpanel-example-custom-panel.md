@@ -14,7 +14,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3fe1389e3c3db28f834217b4f163c48633c32d14
 ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71340168"
@@ -134,7 +134,7 @@ La forma en la que `BoxPanel` divide el tamaño es bastante sencilla: divide su 
 Este panel se puede usar cuando el componente de altura de *availableSize* no esté enlazado. Si esto es así, el panel no tiene una altura conocida que dividir. En este caso, la lógica del paso de medición informa a cada elemento secundario de que todavía carece de una altura enlazada, y lo hace pasando un elemento [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) a la llamada de [**Measure**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) de los elementos secundarios en los que [**Size.Height**](https://docs.microsoft.com/uwp/api/windows.foundation.size.height) es infinito. Esto puede hacerse. Cuando se llama a **Measure**, la lógica consiste en que [**DesiredSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.desiredsize) se establece en el mínimo de lo siguiente: lo que se pasó a **Measure**, o bien el tamaño natural de dicho elemento de factores como [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) y [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) expresamente definidos.
 
 > [!NOTE]
-> La lógica interna de [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) también tiene este comportamiento: **StackPanel** pasa un valor de dimensión infinito para [**medir**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) en los elementos secundarios, lo que indica que no hay ninguna restricción en los elementos secundarios de la dimensión de orientación. Normalmente, **StackPanel** establece su tamaño dinámicamente para dar cabida a todos los elementos secundarios de una pila que crece en esa dimensión.
+> La lógica interna de [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) presenta el mismo comportamiento: **StackPanel** pasa un valor de dimensión infinito a [**Measure**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) en los elementos secundarios, lo que indica que no hay ninguna limitación en ellos en cuanto a dimensión de orientación. Normalmente, **StackPanel** establece su tamaño dinámicamente para dar cabida a todos los elementos secundarios de una pila que crece en esa dimensión.
 
 Sin embargo, el panel en sí no puede devolver un objeto [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) con un valor infinito de [**MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride); esto generaría una excepción durante el diseño. Por lo tanto, parte de la lógica irá dirigida a averiguar la altura máxima que cada elemento secundario necesita para, luego, usar esa altura como altura de celda en caso de que esta no se haya obtenido ya de las propias limitaciones de tamaño del panel. Aquí te mostramos la función auxiliar `LimitUnboundedSize` a la que se hizo referencia en el código anterior, que toma la altura de celda máxima y la usa para dar al panel una altura finita que devolver, al tiempo que garantiza que `cellheight` sea un número finito antes de que se inicie el paso de organización:
 
@@ -223,10 +223,10 @@ Te estarás preguntando por qué el panel no elige 5x2 para diez elementos, ya q
 
 **Referencia**
 
-* [**FrameworkElement. ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride)
-* [**FrameworkElement. MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride)
-* [**Plana**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel)
+* [**FrameworkElement.ArrangeOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.arrangeoverride)
+* [**FrameworkElement.MeasureOverride**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.measureoverride)
+* [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel)
 
 **Conceptos**
 
-* [Alineación, margen y relleno](alignment-margin-padding.md)
+* [Alineación, margen y espaciado](alignment-margin-padding.md)
