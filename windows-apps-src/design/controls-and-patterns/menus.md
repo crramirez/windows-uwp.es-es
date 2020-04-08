@@ -13,12 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 31371c2b2a4826939de428fb6d7c082b78d05843
-ms.sourcegitcommit: 6951827b7d0948618e1fbb082c28794c7f23f83c
+ms.openlocfilehash: b008b12c5f92d56c127c5ec8026d305d3d57a869
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923153"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081677"
 ---
 # <a name="menus-and-context-menus"></a>Menús y menús contextuales
 
@@ -26,13 +26,15 @@ Los menús y los menús contextuales muestran una lista de opciones o comandos c
 
 ![Ejemplo de un menú contextual típico](images/contextmenu_rs2_icons.png)
 
-| **Obtener la biblioteca de interfaz de usuario de Windows** |
-| - |
-| Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-| **API de plataforma** | **API de la biblioteca de interfaz de usuario de Windows** |
+|  |  |
 | - | - |
-| [Clase MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [clase MenuBar](/uwp/api/windows.ui.xaml.controls.menubar), [propiedad ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propiedad FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties) | [Clase MenuBar](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **MenuBar** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de la interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/). |
+
+> **API de la biblioteca de interfaz de usuario de Windows**: [Clase MenuBar](/uwp/api/microsoft.ui.xaml.controls.menubar)
+>
+> **API de plataforma:** [Clase MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout), [clase MenuBar](/uwp/api/windows.ui.xaml.controls.menubar), [propiedad ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout), [propiedad FlyoutBase.AttachedFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -57,7 +59,7 @@ También puedes usar un elemento MenuBar junto con un elemento CommandBar. Usa M
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/MenuFlyout">abrir la aplicación y ver MenuFlyout en acción</a>.</p>
     <ul>
@@ -266,9 +268,9 @@ Usa los mismos elementos para crear menús en una barra de menús, tal como apar
 </muxc:MenuBar>
 ```
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 - [Ejemplo del menú contextual XAML](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlContextMenu)
 
 ## <a name="related-articles"></a>Artículos relacionados
