@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 610b6237071c9d7435ca167c1a89b4ef7c40b333
 ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71339576"
@@ -64,7 +64,7 @@ Las opciones disponibles en cuanto a la tecnología de serialización para aplic
 
 Desde el punto de vista del rendimiento, te recomendamos usar la clase [**XmlSerializer**](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer). La clase **XmlSerializer** cuenta con los tiempos más bajos de serialización y deserialización, y mantiene una superficie de memoria baja. Asimismo, **XmlSerializer** tiene menos dependencias en .NET Framework. Esto significa que, en comparación con otras tecnologías de serialización, deben cargarse menos módulos en la aplicación para usar **XmlSerializer**.
 
-[**DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer) facilita la serialización de clases personalizadas, aunque tiene un mayor impacto en el rendimiento que **XmlSerializer**. Si necesitas mejorar el rendimiento, considera cambiar de opciones. En general, no debes cargar más de un serializador y te recomendamos que uses **XmlSerializer**, a menos que necesites usar las características de otro serializador.
+[**DataContractSerializer**](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.datacontractserializer) facilita la serialización de clases personalizadas, aunque supone un mayor impacto para el rendimiento que **XmlSerializer**. Si necesitas mejorar el rendimiento, considera cambiar de opciones. En general, no debes cargar más de un serializador y te recomendamos que uses **XmlSerializer**, a menos que necesites usar las características de otro serializador.
 
 ### <a name="reduce-memory-footprint"></a>Reducir la superficie de memoria
 
@@ -85,7 +85,7 @@ La mayoría de las aplicaciones no necesitan controlar el evento [**Resuming**](
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Directrices para suspender y reanudar aplicaciones](https://docs.microsoft.com/windows/uwp/launch-resume/index)
+* [Directrices para suspender y reanudar una aplicación](https://docs.microsoft.com/windows/uwp/launch-resume/index)
  
 
  

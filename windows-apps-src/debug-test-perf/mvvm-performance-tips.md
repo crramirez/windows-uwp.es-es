@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9027362eccfb8130b181bee26a57f13ce1e1af66
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57621770"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63785432"
 ---
 # <a name="mvvm-and-language-performance-tips"></a>Sugerencias de rendimiento de MVVM y lenguaje
 
@@ -29,12 +29,12 @@ El patrón Model-View-ViewModel (MVVM) es común en muchas aplicaciones XAML. (M
 Hay varias definiciones concretas del patrón MVVM y marcos de terceros que ayudan a implementarlo. Sin embargo, una adherencia estricta a cualquier variación del patrón puede resultar en aplicaciones con mucha más sobrecarga que se pueda justificar.
 
 -   Los enlaces de datos XAML (la extensión de marcado {Binding}) se diseñaron en parte para habilitar los patrones de modelos y vistas. Sin embargo, {Binding} aporta un conjunto de trabajo no trivial y la sobrecarga de la CPU. La creación de un elemento {Binding} provoca una serie de asignaciones, y la actualización de un destino de enlace puede provocar reflejos y conversiones boxing. Estos problemas se han solucionado con la extensión de marcado {x:Bind}, que compila los enlaces en tiempo de compilación. **Recomendación:** usa {x:Bind}.
--   Es común en MVVM conectar Button.Click al modelo de vista con un objeto ICommand, tales como las aplicaciones auxiliares comunes DelegateCommand o RelayCommand. Sin embargo, estos comandos son asignaciones adicionales, incluido el agente de escucha de eventos CanExecuteChanged, lo que agrega al conjunto de trabajo y al tiempo de inicio o navegación de la página. **Recomendación:** Como alternativa al uso de la cómoda interfaz ICommand, considere la posibilidad de colocar los controladores de eventos en el código subyacente y adjuntarlos a los eventos de vista y llamar a un comando en el modelo de vista cuando se producen esos eventos. También tendrás que agregar código adicional para deshabilitar el elemento Button cuando el comando no está disponible.
--   Es común en MVVM crear una página con todas las configuraciones posibles de la interfaz de usuario y luego contraer partes del árbol enlazando la propiedad Visibility a las propiedades en la máquina virtual. Esto agrega tiempo de inicio innecesariamente y posiblemente al conjunto de trabajo (ya que algunas partes del árbol quizás nunca se hagan visibles). **Recomendaciones:** Use la [atributo x: Load](../xaml-platform/x-load-attribute.md) o [atributo x: deferloadstrategy al mismo en tiempo](../xaml-platform/x-deferloadstrategy-attribute.md) característica aplazar partes innecesarias del árbol de inicio. Además, crea controles de usuario separados para los diferentes modos de la página y usa el código subyacente para mantener cargados solo los controles necesarios.
+-   Es común en MVVM conectar Button.Click al modelo de vista con un objeto ICommand, tales como las aplicaciones auxiliares comunes DelegateCommand o RelayCommand. Sin embargo, estos comandos son asignaciones adicionales, incluido el agente de escucha de eventos CanExecuteChanged, lo que agrega al conjunto de trabajo y al tiempo de inicio o navegación de la página. **Recomendación:** como alternativa al uso de la cómoda interfaz ICommand, podrías colocar los controladores de eventos en el código subyacente, adjuntarlos a los eventos de vista y llamar a un comando en la vista de modelos cuando se generen los eventos. También tendrás que agregar código adicional para deshabilitar el elemento Button cuando el comando no está disponible.
+-   Es común en MVVM crear una página con todas las configuraciones posibles de la interfaz de usuario y luego contraer partes del árbol enlazando la propiedad Visibility a las propiedades en la máquina virtual. Esto agrega tiempo de inicio innecesariamente y posiblemente al conjunto de trabajo (ya que algunas partes del árbol quizás nunca se hagan visibles). **Recomendaciones:** usa los atributos [x:Load](../xaml-platform/x-load-attribute.md) o [x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md) para diferir las partes innecesarias del árbol. Además, crea controles de usuario separados para los diferentes modos de la página y usa el código subyacente para mantener cargados solo los controles necesarios.
 
 ## <a name="ccx-recommendations"></a>Recomendaciones para C++/CX
 
 -   **Usa la versión más reciente**. Se presentan mejoras continuamente en el rendimiento del compilador de C++/CX. Asegúrate de que crear tu aplicación con el conjunto de herramientas más reciente.
--   **Deshabilita RTTI (/GR-)**. RTTI está activado de manera predeterminada en el compilador, por lo tanto, a menos que tu entorno de compilación lo desactiva, probablemente lo estés usando. RTTI tiene una sobrecarga significativa y, a menos que el código dependa mucho de él, deberías desactivarlo. El marco de XAML no tiene ningún requisito que exige que tu código use RTTI.
+-   **Deshabilita RTTI (/GR-)** . RTTI está activado de manera predeterminada en el compilador, por lo tanto, a menos que tu entorno de compilación lo desactiva, probablemente lo estés usando. RTTI tiene una sobrecarga significativa y, a menos que el código dependa mucho de él, deberías desactivarlo. El marco de XAML no tiene ningún requisito que exige que tu código use RTTI.
 -   **Evita el uso elementos ppltasks intensivos**. Los elementos Ppltasks son muy convenientes cuando se llama a las API de WinRT asincrónicas, pero incluyen una sobrecarga significativa en relación con el tamaño del código. El equipo de C++/CX está trabajando en una función del lenguaje (await) que proporcionará un rendimiento mucho mejor. Mientras tanto, equilibra el uso de los elementos ppltasks en las rutas de acceso activas del código.
 -   **Evita el uso de C++/CX en la "lógica de negocios" de la aplicación**. C++/CX está diseñado para ofrecer una manera cómoda de acceder a las API de WinRT desde las aplicaciones C++. Hace uso de contenedores que tienen sobrecarga. Debes evitar el uso de C++/CX dentro de la lógica o modelo de negocio de tu clase y usarlo en los límites entre el código y WinRT.

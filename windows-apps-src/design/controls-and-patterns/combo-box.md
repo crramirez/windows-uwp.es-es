@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 351e234577b1a07b33bdcdbb92642c3697342503
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.openlocfilehash: 31b3bcc2388a98941fc5e8aa44d18beee53de5c7
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163698"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081098"
 ---
 # <a name="combo-box-and-list-box"></a>Cuadro combinado y cuadro de lista
 
@@ -23,11 +23,17 @@ Usa un cuadro combinado (también conocido como lista desplegable) para presenta
 
 Cuando se cierra el cuadro combinado, o bien se muestra la selección actual o bien está vacío si no hay ningún elemento seleccionado. Cuando el usuario amplía el cuadro combinado, este muestra la lista de elementos seleccionables.
 
-> **API importantes**: [clase de cuadro combinado](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [propiedad IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [propiedad Text](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [evento TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
-
-Un cuadro combinado en su estado compacto con un encabezado.
-
 ![Ejemplo de una lista desplegable en su estado compacto](images/combo_box_collapsed.png)
+
+> _Un cuadro combinado en su estado compacto con un encabezado._
+
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete de NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de plataforma:** [clase de cuadro combinado](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [propiedad IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [propiedad Text](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [evento TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -41,7 +47,7 @@ Un cuadro combinado en su estado compacto con un encabezado.
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la app <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ComboBox">abrir la app y ver ComboBox en acción</a>.</p>
     <ul>
@@ -100,7 +106,7 @@ public MainPage()
 
 ### <a name="item-selection"></a>Selección de elementos
 
-Como ListView y GridView, ComboBox se deriva de [Selector](/uwp/api/windows.ui.xaml.controls.primitives.selector), por lo que puedes obtener la selección del usuario de la misma manera estándar.
+Igual que ListView y GridView, ComboBox deriva de [Selector](/uwp/api/windows.ui.xaml.controls.primitives.selector), por lo que puedes obtener la selección del usuario de la misma manera estándar.
 
 Puedes obtener o establecer el elemento seleccionado del cuadro combinado mediante la propiedad [SelectedItem](/uwp/api/windows.ui.xaml.controls.primitives.selector.selecteditem) y obtener o establecer el índice del elemento seleccionado mediante el uso de la propiedad [SelectedIndex](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedindex).
 
@@ -240,13 +246,13 @@ private void FontSizeComboBox_TextSubmitted(ComboBox sender, ComboBoxTextSubmitt
 {
     if (byte.TryParse(e.Text, out double newValue))
     {
-        // Update the app’s font size.
+        // Update the app's font size.
         _fontSize = newValue;
     }
     else
     {
         // If the item is invalid, reject it and revert the text.
-        // Mark the event as handled so the framework doesn’t update the selected item.
+        // Mark the event as handled so the framework doesn't update the selected item.
         sender.Text = sender.SelectedValue.ToString();
         e.Handled = true;
     }
@@ -279,7 +285,7 @@ private void FavoriteColorComboBox_TextSubmitted(ComboBox sender, ComboBoxTextSu
     else
     {
         // If the item is invalid, reject it but do not revert the text.
-        // Mark the event as handled so the framework doesn’t update the selected item.
+        // Mark the event as handled so the framework doesn't update the selected item.
         e.Handled = true;
     }
 }
@@ -321,7 +327,7 @@ Un cuadro de lista permite al usuario seleccionar uno o varios elementos de una 
 - Utiliza la fuente predeterminada, salvo que se indique lo contrario en las directrices de tu marca.
 - No uses un cuadro de lista para los comandos ni para mostrar u ocultar dinámicamente otros controles.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 - [Ejemplo de AutoSuggestBox](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlAutoSuggestBox)
@@ -330,7 +336,7 @@ Un cuadro de lista permite al usuario seleccionar uno o varios elementos de una 
 
 - [Controles de texto](text-controls.md)
 - [Revisión ortográfica](text-controls.md)
-- [Buscar](search.md)
+- [Búsqueda](search.md)
 - [Clase TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Clase Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 - [Propiedad String.Length](https://docs.microsoft.com/dotnet/api/system.string.length)

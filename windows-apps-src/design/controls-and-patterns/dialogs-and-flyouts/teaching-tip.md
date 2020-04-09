@@ -10,24 +10,30 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fb08278391118215063c293b71ffde1ed4443b8
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 6276ef9bcb6b01fd557057d3d36939350314015b
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684120"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081051"
 ---
 # <a name="teaching-tip"></a>Sugerencia de enseñanza
 
 Una sugerencia de enseñanza es un control flotante parcialmente persistente y con mucho contenido que proporciona información contextual. A menudo se utiliza para informar, recordar y enseñar a los usuarios sobre características importantes y nuevas que pueden mejorar su experiencia.
 
-**API importantes:** [Clase TeachingTip](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.teachingtip?view=winui-2.2)
-
 Una sugerencia de enseñanza puede ser descartable por cambio de foco, o bien puede requerir una acción explícita para cerrarse. Además, puede apuntar a un elemento específico de la interfaz de usuario con su delta y también se puede utilizar sin una delta o destino.
 
-## <a name="is-this-the-right-control"></a>¿Es este el control adecuado? 
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-Usa un control **TeachingTip** para centrar la atención de un usuario en actualizaciones y características nuevas o importantes, para recordarle de opciones no esenciales que podrían mejorar su experiencia, o para enseñarle cómo se debe completar una tarea. 
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | El control **TeachingTip** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de la biblioteca de interfaz de usuario de Windows:** [Clase TeachingTip](/uwp/api/microsoft.ui.xaml.controls.teachingtip)
+
+## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
+
+Usa un control **TeachingTip** para centrar la atención de un usuario en actualizaciones y características nuevas o importantes, para recordarle de opciones no esenciales que podrían mejorar su experiencia, o para enseñarle cómo se debe completar una tarea.
 
 Ya que las sugerencias de enseñanza son transitorias, no es un control recomendado para informar a los usuarios sobre los errores o cambios de estado importantes.
 
@@ -37,7 +43,7 @@ Ya que las sugerencias de enseñanza son transitorias, no es un control recomend
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/TeachingTip">abrir la aplicación y ver TeachingTip en acción</a>.</p>
     <ul>
@@ -50,7 +56,7 @@ Ya que las sugerencias de enseñanza son transitorias, no es un control recomend
 
 Una sugerencia de enseñanza puede tener varias configuraciones, incluidas las siguientes menciones destacadas.
 
-Una sugerencia de enseñanza puede dirigirse a un elemento específico de la interfaz de usuario con su delta para dejar más claro el contexto de la información que está presentando. 
+Una sugerencia de enseñanza puede dirigirse a un elemento específico de la interfaz de usuario con su delta para dejar más claro el contexto de la información que está presentando.
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza que tiene como destino el botón Guardar. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú). Hay un botón Cerrar en la esquina superior derecha de la sugerencia de enseñanza.](../images/teaching-tip-targeted.png)
 
@@ -58,14 +64,15 @@ Cuando la información presentada no pertenece a un elemento determinado de la i
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza en la esquina inferior derecha. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú). Hay un botón Cerrar en la esquina superior derecha de la sugerencia de enseñanza.](../images/teaching-tip-non-targeted.png)
 
-Una sugerencia de enseñanza puede exigir al usuario que use un botón "X" en la esquina superior para descartarla o un botón "Cerrar" en la parte inferior. También es posible que la sugerencia de enseñanza se descarte por cambio de foco si no se agrega un botón Descartar. En su lugar, la sugerencia de enseñanza se cerrará cuando un usuario se desplace o interactúe con otros elementos de la aplicación. Debido a este comportamiento, las sugerencias descartables por cambio de foco son la mejor solución cuando una sugerencia debe colocarse en un área desplazable. 
+Una sugerencia de enseñanza puede exigir al usuario que use un botón "X" en la esquina superior para descartarla o un botón "Cerrar" en la parte inferior. También es posible que la sugerencia de enseñanza se descarte por cambio de foco si no se agrega un botón Descartar. En su lugar, la sugerencia de enseñanza se cerrará cuando un usuario se desplace o interactúe con otros elementos de la aplicación. Debido a este comportamiento, las sugerencias descartables por cambio de foco son la mejor solución cuando una sugerencia debe colocarse en un área desplazable.
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza descartable por cambio de foco en la esquina inferior derecha. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú).](../images/teaching-tip-light-dismiss.png)
 
 
 ### <a name="create-a-teaching-tip"></a>Crear una sugerencia de enseñanza
 
-Este es el código XAML para un control de sugerencia de enseñanza dirigida que muestra el aspecto predeterminado de TeachingTip con un título y subtítulo. Ten en cuenta que la sugerencia de enseñanza puede aparecer en cualquier lugar del árbol de elementos o el código subyacente. En el ejemplo siguiente, se encuentra en un objeto ResourceDictionary.
+Este es el código XAML para un control de sugerencia de enseñanza dirigida que muestra el aspecto predeterminado de TeachingTip con un título y subtítulo.
+Ten en cuenta que la sugerencia de enseñanza puede aparecer en cualquier lugar del árbol de elementos o el código subyacente. En el ejemplo siguiente, se encuentra en un objeto ResourceDictionary.
 
 XAML
 ```XAML
@@ -118,7 +125,7 @@ Ten en cuenta que en este ejemplo el elemento TeachingTip está en el árbol de 
 
 ### <a name="preferred-placement"></a>Ubicación preferida
 
-La sugerencia de enseñanza reproduce el comportamiento de ubicación del [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) del control flotante con la propiedad TeachingTipPlacementMode. El modo de selección de ubicación predeterminado intentará colocar una sugerencia de enseñanza dirigida sobre su destino, y colocará las sugerencias de enseñanza no dirigidas centradas en la parte inferior de la raíz de XAML. Al igual que con los controles flotantes, si el modo de selección de ubicación preferido no deja espacio libre para que se muestre la sugerencia de enseñanza, se elegirá otro modo de selección de ubicación automáticamente. 
+La sugerencia de enseñanza reproduce el comportamiento de ubicación del [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) del control flotante con la propiedad TeachingTipPlacementMode. El modo de selección de ubicación predeterminado intentará colocar una sugerencia de enseñanza dirigida sobre su destino, y colocará las sugerencias de enseñanza no dirigidas centradas en la parte inferior de la raíz de XAML. Al igual que con los controles flotantes, si el modo de selección de ubicación preferido no deja espacio libre para que se muestre la sugerencia de enseñanza, se elegirá otro modo de selección de ubicación automáticamente.
 
 Para las aplicaciones que predicen la entrada del controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
 
@@ -162,11 +169,11 @@ El siguiente diagrama muestra el resultado de los 13 modos de PreferredPlacemen
 El siguiente diagrama muestra el resultado de los 13 modos de PreferredPlacement que se pueden establecer para las sugerencias de enseñanza no dirigidas.
 ![Ilustración que contiene nueve sugerencias de enseñanza, cada una es una demostración de un modo de selección de ubicación no dirigida distinto. Cada sugerencia de enseñanza tiene una etiqueta con el modo que representa. La primera palabra de un modo de selección de ubicación indica el lado de la raíz de XAML en la que la sugerencia de enseñanza se mostrará centrada. Si hay una segunda palabra en el modo de selección de ubicación, la sugerencia de enseñanza se colocará hacia ese esquina especificada de la raíz de XAML. Por ejemplo, el modo de selección de ubicación "TopRight" hará que la sugerencia de enseñanza se muestre en la esquina superior derecha de la raíz de XAML. Para los modos de selección de ubicación no dirigidos, el orden de las dos palabras no afecta a la selección de ubicación. TopRight es equivalente a RightTop. El modo de selección de ubicación "Center" es único y hace que la sugerencia de enseñanza se muestre en el centro vertical y horizontal de la raíz de XAML.](../images/teaching-tip-non-targeted-preferred-placement-modes.png)
 
-### <a name="add-a-placement-margin"></a>Agregar un margen de ubicación  
+### <a name="add-a-placement-margin"></a>Agregar un margen de ubicación
 
 Puedes controlar la distancia a la que se coloca una sugerencia de enseñanza con relación a su destino, al igual que la distancia a la que se coloca una sugerencia de enseñanza no dirigida con relación a los bordes de la raíz de XAML mediante la propiedad PlacementMargin. Al igual que [Margin](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin), PlacementMargin tiene cuatro valores: left, right, top y bottom, por lo que solo se usan los valores pertinentes. Por ejemplo, PlacementMargin.Left se aplica cuando la sugerencia está a la izquierda del destino o en el borde izquierdo de la raíz de XAML.
 
-El ejemplo siguiente muestra una sugerencia no dirigida cuyos valores Left/Top/Right/Bottom de PlacementMargin están establecidos en 80.
+En el ejemplo siguiente se muestra una sugerencia no dirigida cuyos valores Left/Top/Right/Bottom de PlacementMargin están establecidos en 80.
 
 XAML
 ```XAML
@@ -185,7 +192,7 @@ XAML
 
 ### <a name="add-content"></a>Agregar contenido
 
-Puede agregarse contenido a una sugerencia de enseñanza mediante la propiedad Content. Si el tamaño de la sugerencia de enseñanza no permite mostrar todo el contenido, se habilitará automáticamente una barra de desplazamiento para permitir que el usuario se desplace por el área de contenido. 
+Puede agregarse contenido a una sugerencia de enseñanza mediante la propiedad Content. Si el tamaño de la sugerencia de enseñanza no permite mostrar todo el contenido, se habilitará automáticamente una barra de desplazamiento para permitir que el usuario se desplace por el área de contenido.
 
 XAML
 ```XAML
@@ -217,7 +224,7 @@ Puedes agregar un botón de acción personalizado si estableces la propiedad Act
 XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
-    <Button.Resources> 
+    <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
@@ -243,7 +250,7 @@ Se puede agregar contenido de borde a borde a una sugerencia de enseñanza si se
 XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
-    <Button.Resources> 
+    <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
@@ -260,7 +267,7 @@ XAML
 
 ### <a name="add-an-icon"></a>Agregar un icono
 
-Puede agregarse un icono al lado del título y subtítulo mediante la propiedad IconSource. Entre los tamaños de icono recomendados se incluyen 16 píxeles, 24 píxeles y 32 píxeles. 
+Puede agregarse un icono al lado del título y subtítulo mediante la propiedad IconSource. Entre los tamaños de icono recomendados se incluyen 16 píxeles, 24 píxeles y 32 píxeles.
 
 XAML
 ```XAML
@@ -282,9 +289,9 @@ XAML
 
 ### <a name="enable-light-dismiss"></a>Habilitar el descarte por cambio de foco
 
-La funcionalidad de descarte por cambio de foco está deshabilitada de manera predeterminada, pero se puede habilitar para que, por ejemplo, una sugerencia de enseñanza se cierre cuando un usuario se desplace o interactúe con otros elementos de la aplicación. Debido a este comportamiento, las sugerencias descartables por cambio de foco son la mejor solución cuando una sugerencia debe colocarse en un área desplazable. 
+La funcionalidad de descarte por cambio de foco está deshabilitada de manera predeterminada, pero se puede habilitar para que, por ejemplo, una sugerencia de enseñanza se cierre cuando un usuario se desplace o interactúe con otros elementos de la aplicación. Debido a este comportamiento, las sugerencias descartables por cambio de foco son la mejor solución cuando una sugerencia debe colocarse en un área desplazable.
 
-El botón Cerrar se quitará automáticamente de una sugerencia de enseñanza que tenga habilitado el descarte por cambio de foco para que los usuarios puedan identificar que su comportamiento es de descarte por cambio de foco. 
+El botón Cerrar se quitará automáticamente de una sugerencia de enseñanza que tenga habilitado el descarte por cambio de foco para que los usuarios puedan identificar que su comportamiento es de descarte por cambio de foco.
 
 XAML
 ```XAML
@@ -322,7 +329,7 @@ XAML
 
 ### <a name="canceling-and-deferring-close"></a>Cancelar y aplazar el cierre
 
-El evento de cierre puede usarse para cancelar o aplazar el cierre de una sugerencia de enseñanza. Puede utilizarse para mantener abierta la sugerencia de enseñanza o para tener tiempo suficiente para que se produzca una acción o animación personalizada. Cuando se cancela el cierre de una sugerencia de enseñanza, IsOpen vuelve a ser true. Sin embargo, seguirá siendo false durante un aplazamiento. También se puede cancelar un cierre mediante programación. 
+El evento de cierre puede usarse para cancelar o aplazar el cierre de una sugerencia de enseñanza. Puede utilizarse para mantener abierta la sugerencia de enseñanza o para tener tiempo suficiente para que se produzca una acción o animación personalizada. Cuando se cancela el cierre de una sugerencia de enseñanza, IsOpen vuelve a ser true. Sin embargo, seguirá siendo false durante un aplazamiento. También se puede cancelar un cierre mediante programación.
 
 **Nota: Si ninguna de las opciones de selección de ubicación permite que la sugerencia de enseñanza se muestre por completo, esta iterará su ciclo de vida de eventos para forzar un cierre en lugar de mostrarse sin un botón Cerrar accesible. Si la aplicación cancela el evento de cierre, la sugerencia de enseñanza puede permanecer abierta sin un botón Cerrar accesible.**
 
@@ -357,16 +364,16 @@ public void OnTipClosing(object sender, TeachingTipClosingEventArgs args)
 
 ## <a name="remarks"></a>Observaciones
 
-### <a name="related-articles"></a>Artículos relacionados 
+### <a name="related-articles"></a>Artículos relacionados
 
 * [Cuadros de diálogo y controles flotantes](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
 
 ### <a name="recommendations"></a>Recomendaciones
-* Las sugerencias son temporales y no deben contener información u opciones que sean críticas para la experiencia de una aplicación. 
-* Evita mostrar sugerencias de enseñanza con demasiada frecuencia. Es más probable que las sugerencias de enseñanza reciban atención individual cuando están escalonadas a lo largo de sesiones largas o en varias sesiones.    
+* Las sugerencias son temporales y no deben contener información u opciones que sean críticas para la experiencia de una aplicación.
+* Evita mostrar sugerencias de enseñanza con demasiada frecuencia. Es más probable que las sugerencias de enseñanza reciban atención individual cuando están escalonadas a lo largo de sesiones largas o en varias sesiones.
 * Mantén las sugerencias concisas y el tema claro. Las investigaciones muestran que, en promedio, los usuarios solo leen entre 3 y 5 palabras y comprenden entre 2 y 3 antes de decidir si van a interactuar con una sugerencia.
 * No se garantiza la accesibilidad del controlador para juegos de una sugerencia de enseñanza. Para las aplicaciones que esperan recibir la entrada de un controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
-* Cuando la sugerencia de enseñanza está habilitada para escapar la raíz de XAML, se recomienda habilitar la propiedad IsLightDismissEnabled y establecer el modo de PreferredPlacement más cercano al centro de la raíz de XAML. 
+* Cuando la sugerencia de enseñanza está habilitada para escapar la raíz de XAML, se recomienda habilitar la propiedad IsLightDismissEnabled y establecer el modo de PreferredPlacement más cercano al centro de la raíz de XAML.
 
 ### <a name="reconfiguring-an-open-teaching-tip"></a>Volver a configurar una sugerencia de enseñanza abierta
 

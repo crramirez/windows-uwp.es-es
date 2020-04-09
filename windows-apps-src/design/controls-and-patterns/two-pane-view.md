@@ -6,12 +6,12 @@ ms.date: 01/22/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a070a72324408746f67b8814554160a76ee0ce4
-ms.sourcegitcommit: e4b48989c91cd77ba73c90d9eb9cd67b88d52f21
+ms.openlocfilehash: 19b473ea964ee9c6cb82098e142f066258bcf30b
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79191706"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081442"
 ---
 # <a name="two-pane-view"></a>Vista de dos paneles
 
@@ -25,13 +25,15 @@ Aunque el control TwoPaneView funciona en todos los dispositivos Windows, está 
 > [!NOTE]
 > Un _dispositivo de doble pantalla_ es un tipo especial de dispositivo con funcionalidades exclusivas. No equivale a un dispositivo de escritorio con varios monitores. Para obtener más información sobre los dispositivos de doble pantalla, consulta [Introducción a los dispositivos de doble pantalla](/dual-screen/introduction). (Consulta [Mostrar varias vistas](/windows/uwp/design/layout/show-multiple-views) para más información sobre las formas en que puedes optimizar la aplicación para varios monitores).
 
-| Obtener la biblioteca de interfaz de usuario de Windows |
-| - |
-| Este control se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información, incluidas instrucciones sobre la instalación, consulta la [introducción a la biblioteca de la interfaz de usuario de Windows](/uwp/toolkits/winui/). |
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-| API de plataforma | API de la biblioteca de interfaz de usuario de Windows |
+|  |  |
 | - | - |
-| [Clase TwoPaneView](/uwp/api/windows.ui.xaml.controls.twopaneview) | [Clase TwoPaneView](/uwp/api/microsoft.ui.xaml.controls.twopaneview) |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **TwoPaneView** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de la biblioteca de interfaz de usuario de Windows:** [Clase TwoPaneView](/uwp/api/microsoft.ui.xaml.controls.twopaneview)
+>
+> **API de plataforma:** [Clase TwoPaneView](/uwp/api/windows.ui.xaml.controls.twopaneview)
 
 En este documento, se usará el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page):
 

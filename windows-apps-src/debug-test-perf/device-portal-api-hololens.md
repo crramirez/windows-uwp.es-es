@@ -4,14 +4,14 @@ title: Referencia de API de Device Portal para HoloLens
 description: Obtén información sobre las API de REST de Windows Device Portal para HoloLens que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
 ms.date: 03/22/2018
 ms.topic: article
-keywords: Windows 10, uwp, portal de dispositivos
+keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aeb068908adf6d6c40a50cee3aececba1861ee8
-ms.sourcegitcommit: 81511fddf1393dffcfc069c769bb149da99529b1
-ms.translationtype: MT
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59013342"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63801384"
 ---
 # <a name="device-portal-api-reference-for-hololens"></a>Referencia de API de Device Portal para HoloLens
 
@@ -21,7 +21,7 @@ Todo lo que contiene Windows Device Portal se basa en las API de REST que puedes
 
 ### <a name="get-https-requirements-for-the-device-portal"></a>Obtener los requisitos de HTTPS para Device Portal
 
-**Solicitud**
+**solicitud**
 
 Puedes obtener los requisitos de HTTPS de Device Portal mediante el siguiente formato de solicitud.
  
@@ -153,7 +153,7 @@ Puedes establecer los requisitos de HTTPS de Device Portal mediante el siguiente
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/management/settings/https |
+| POST | /api/holographic/management/settings/https |
 
 
 **Parámetros de URI**
@@ -189,7 +189,7 @@ Puedes establecer el valor de IPD almacenado mediante el siguiente formato de so
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/os/settings/ipd |
+| POST | /api/holographic/os/settings/ipd |
 
 
 **Parámetros de URI**
@@ -283,7 +283,7 @@ Puedes obtener la fase térmica del dispositivo mediante el siguiente formato de
 
 Los valores posibles se indican en la siguiente tabla.
 
-| Valor | Descripción |
+| Value | Descripción |
 | --- | --- |
 | 1 | Normal |
 | 2 | Templado |
@@ -302,7 +302,7 @@ Puedes crear un flujo de control o publicar datos en un flujo creado mediante el
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/simulation/control/stream |
+| POST | /api/holographic/simulation/control/stream |
 
 
 **Parámetros de URI**
@@ -338,7 +338,7 @@ Puedes eliminar un flujo de control mediante el siguiente formato de solicitud.
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| SUPRIMIR | /api/holographic/simulation/control/stream |
+| DELETE | /api/holographic/simulation/control/stream |
 
 
 **Parámetros de URI**
@@ -431,7 +431,7 @@ Puedes establecer el modo de simulación mediante el siguiente formato de solici
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/simluation/control/mode |
+| POST | /api/holographic/simluation/control/mode |
 
 
 **Parámetros de URI**
@@ -468,7 +468,7 @@ Puedes eliminar una grabación mediante el siguiente formato de solicitud.
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| SUPRIMIR | /api/holographic/simulation/playback/file |
+| DELETE | /api/holographic/simulation/playback/file |
 
 
 **Parámetros de URI**
@@ -635,7 +635,7 @@ Puedes cargar una grabación mediante el siguiente formato de solicitud.
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/simulation/playback/session/file |
+| POST | /api/holographic/simulation/playback/session/file |
 
 
 **Parámetros de URI**
@@ -670,7 +670,7 @@ Puedes pausar una grabación mediante el siguiente formato de solicitud.
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/simulation/playback/session/pause |
+| POST | /api/holographic/simulation/playback/session/pause |
 
 
 **Parámetros de URI**
@@ -705,7 +705,7 @@ Puedes reproducir una grabación mediante el siguiente formato de solicitud.
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/simulation/playback/session/play |
+| POST | /api/holographic/simulation/playback/session/play |
 
 
 **Parámetros de URI**
@@ -740,7 +740,7 @@ Puedes detener una grabación mediante el siguiente formato de solicitud.
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/simulation/playback/session/stop |
+| POST | /api/holographic/simulation/playback/session/stop |
 
 
 **Parámetros de URI**
@@ -775,7 +775,7 @@ Puedes descargar una grabación mediante el siguiente formato de solicitud.
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| SUPRIMIR | /api/holographic/simulation/playback/session/file |
+| DELETE | /api/holographic/simulation/playback/session/file |
 
 
 **Parámetros de URI**
@@ -810,7 +810,7 @@ Puedes cargar una grabación mediante el siguiente formato de solicitud.
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/simulation/playback/file |
+| POST | /api/holographic/simulation/playback/file |
 
 
 **Parámetros de URI**
@@ -874,7 +874,7 @@ Puedes iniciar una grabación mediante el siguiente formato de solicitud. Solo p
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/simulation/recording/start |
+| POST | /api/holographic/simulation/recording/start |
 
 
 **Parámetros de URI**
@@ -887,7 +887,7 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 | hands   | (**consulta más adelante**) Establece este valor en 1 para indicar que el sistema debe registrar los datos de manos. |
 | spatialMapping   | (**consulta más adelante**) Establece este valor en 1 para indicar que el sistema debe registrar los datos de asignación espacial. |
 | environment   | (**consulta más adelante**) Establece este valor en 1 para indicar que el sistema debe registrar los datos de entorno. |
-| NAME   | (**obligatorio**) Nombre de la grabación. |
+| name   | (**obligatorio**) Nombre de la grabación. |
 | singleSpatialMappingFrame   | (**opcional**) Establece este valor en 1 para indicar que solo se debe registrar un marco de asignación espacial. |
 
 De estos parámetros, exactamente uno debe establecerse en 1: *head*, *hands*, *spatialMapping* o *environment*.
@@ -916,7 +916,7 @@ Puedes detener la grabación actual mediante el siguiente formato de solicitud. 
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/simulation/recording/stop |
+| POST | /api/holographic/simulation/recording/stop |
 
 
 **Parámetros de URI**
@@ -949,7 +949,7 @@ Puedes eliminar una grabación de MRC mediante el siguiente formato de solicitud
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-SUPRIMIR | /api/holographic/mrc/file |
+DELETE | /api/holographic/mrc/file |
 
 
 **Parámetros de URI**
@@ -1113,7 +1113,7 @@ Puedes establecer la configuración de MRC mediante el siguiente formato de soli
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/mrc/settings |
+| POST | /api/holographic/mrc/settings |
 
 
 **Parámetros de URI**
@@ -1144,7 +1144,7 @@ Puedes iniciar una grabación de MRC mediante el siguiente formato de solicitud.
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/mrc/video/control/start |
+| POST | /api/holographic/mrc/video/control/start |
 
 
 **Parámetros de URI**
@@ -1175,7 +1175,7 @@ Puedes detener la grabación de MRC actual mediante el siguiente formato de soli
  
 | Método      | URI de la solicitud |
 | :------     | :----- |
-| EXPONER | /api/holographic/mrc/video/control/stop |
+| POST | /api/holographic/mrc/video/control/stop |
 
 
 **Parámetros de URI**

@@ -11,20 +11,24 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 00a65324b799b0cf974271da23fdbcb36aa6c8e2
-ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
+ms.openlocfilehash: d3acd69b2b0e3a1bd97b6aa917991d4b2c88d075
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399615"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081589"
 ---
 # <a name="rich-edit-box"></a>Cuadro de texto enriquecido
 
- 
-
 Puedes usar un control RichEditBox para escribir y editar documentos de texto enriquecido que contengan texto con formato, hipervínculos e imágenes. Puedes hacer que RichEditBox sea de solo lectura si estableces la propiedad IsReadOnly en **true**.
 
-> **API importantes**: [Clase RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Propiedad Document](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document), [Propiedad IsReadOnly](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [Propiedad IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de plataforma**: [Clase RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Propiedad Document](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.document), [Propiedad IsReadOnly](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [Propiedad IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -40,7 +44,7 @@ Para obtener más información sobre cómo elegir el control de texto correcto, 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/RichEditBox">abrirla y ver RichEditBox en acción</a>.</p>
     <ul>
@@ -200,22 +204,22 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elegir el teclado adecuado para el control de texto
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elección del teclado adecuado para el control de texto
 
-Para ayudar a que los usuarios escriban datos con el teclado táctil o con el panel de entrada por software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario. La distribución del teclado predeterminada es normalmente adecuada para trabajar con documentos de texto enriquecido.
+Para ayudar a los usuarios a escribir datos con el teclado táctil o con el panel de entrada de software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario. La distribución del teclado predeterminada es normalmente adecuada para trabajar con documentos de texto enriquecido.
 
 Para obtener más información sobre cómo usar los ámbitos de entrada, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard).
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
-- Cuando crees un cuadro de texto enriquecido, proporciona botones de estilo e implementa sus acciones.
+- Cuando crees un cuadro de texto enriquecido, proporciona botones de aplicación de estilos e implementa sus acciones.
 - Usa una fuente coherente con el estilo de la aplicación.
-- Ajusta la altura del control de texto para que permita acomodar las entradas típicas.
+- Ajusta la altura del control de texto para que admita entradas típicas.
 - No permitas que los controles de entrada de texto crezcan en altura a medida que los usuarios escriben.
 - No uses un cuadro de texto multilínea si los usuarios solo necesitan una única línea.
 - No uses un control de texto enriquecido si un control de texto sin formato es suficiente.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 

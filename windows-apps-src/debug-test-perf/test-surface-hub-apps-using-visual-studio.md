@@ -8,20 +8,20 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 37c7f9edbaee008b6e16ef2ca202ff5cbcf39ca2
 ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/21/2019
 ms.locfileid: "67317503"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Probar aplicaciones de Surface Hub con Visual Studio
-El simulador de Visual Studio ofrece un entorno donde puede diseñar, desarrollar, depurar y probar aplicaciones de la Plataforma universal de Windows (UWP), incluidas las aplicaciones que hayas creado para Microsoft Surface Hub. El simulador no utiliza la misma interfaz de usuario como Surface Hub, pero resulta útil para probar cómo la aplicación de aspecto y el comportamiento con el tamaño de pantalla de Surface Hub y la resolución.
+El simulador de Visual Studio ofrece un entorno donde puede diseñar, desarrollar, depurar y probar aplicaciones de la Plataforma universal de Windows (UWP), incluidas las aplicaciones que hayas creado para Microsoft Surface Hub. El simulador no usa la misma interfaz de usuario que Surface Hub, pero resulta útil para probar el aspecto y el comportamiento de la aplicación con la resolución y el tamaño de la pantalla de Surface Hub.
 
-Para obtener más información acerca de la herramienta simulador en general, vea [ejecutar aplicaciones para UWP en el simulador](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).
+Para más información sobre el simulador, consulta [Ejecutar aplicaciones para UWP en el simulador](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).
 
 ## <a name="add-surface-hub-resolutions-to-the-simulator"></a>Agregar resoluciones de Surface Hub al simulador
 Para agregar resoluciones de Surface Hub al simulador:
 
-1. Crear una configuración para el 55" Surface Hub guardando el siguiente código XML en un archivo denominado *HardwareConfigurations SurfaceHub55.xml*.  
+1. Crea una configuración para el dispositivo Surface Hub de 55" y guarda el siguiente código XML en un archivo llamado *HardwareConfigurations-SurfaceHub55.xml*.  
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -40,7 +40,7 @@ Para agregar resoluciones de Surface Hub al simulador:
     </ArrayOfHardwareConfiguration>
     ```
 
-2. Crear una configuración para el 84" Surface Hub guardando el siguiente código XML en un archivo denominado *HardwareConfigurations SurfaceHub84.xml*.
+2. Crea una configuración para el dispositivo Surface Hub de 84" y guarda el siguiente código XML en un archivo llamado *HardwareConfigurations-SurfaceHub84.xml*.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -59,7 +59,7 @@ Para agregar resoluciones de Surface Hub al simulador:
     </ArrayOfHardwareConfiguration>
     ```
 
-3. Copie los dos archivos XML en *C:\Program Files (x86) \Common Shared\Windows simulador\\&lt;número de versión&gt;\HardwareConfigurations*.
+3. Copia los dos archivos XML en *C:\Archivos de programa (x86)\Archivos comunes\Microsoft Shared\Windows Simulator\\&lt;número de versión&gt;\HardwareConfigurations*.
 
    > [!NOTE]
    > Se requieren privilegios administrativos para guardar archivos en esta carpeta.
@@ -69,31 +69,31 @@ Para agregar resoluciones de Surface Hub al simulador:
     ![Resoluciones del simulador de Visual Studio](images/vs-simulator-resolutions.png)
 
    > [!TIP]
-   > [Activar el modo de Tablet PC](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) para simular mejor la experiencia de un dispositivo Surface Hub.
+   > [Activa el modo de tableta](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) para simular mejor la experiencia de un equipo Surface Hub.
 
-## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Implementar aplicaciones en un dispositivo Surface Hub desde Visual Studio
-Implementar manualmente una aplicación en un dispositivo Surface Hub es un proceso sencillo.
+## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Implementar aplicaciones en un dispositivo Surface Hub desde Visual Studio
+La implementación manual de una aplicación en un dispositivo Surface Hub es un proceso sencillo.
 
 ### <a name="enable-developer-mode"></a>Habilitar el modo de desarrollador
-De forma predeterminada, Surface Hub solo instala las aplicaciones desde la Microsoft Store. Para instalar aplicaciones firmadas por otros orígenes, debes habilitar el modo de desarrollador.
+De forma predeterminada, Surface Hub solo instala las aplicaciones de Microsoft Store. Para instalar aplicaciones firmadas por otros orígenes, debes habilitar el modo de desarrollador.
 
 > [!NOTE]
-> Después de que se ha habilitado el modo de programador, deberá restablecer el dispositivo Surface Hub si desea deshabilítela de nuevo. Al restablecer el dispositivo se eliminan todas las configuraciones y los archivos de usuario locales y, a continuación, se vuelve a instalar Windows.
+> Una vez habilitado el modo de desarrollador, tendrás que restablecer el dispositivo Surface Hub si quieres volver a deshabilitarlo. Al restablecer el dispositivo se eliminan todas las configuraciones y los archivos de usuario locales y, a continuación, se vuelve a instalar Windows.
 
 1. En el menú **Inicio** de Surface Hub, abre la aplicación Configuración.
 
    > [!NOTE]
-   > Se requieren privilegios administrativos para tener acceso a la aplicación de configuración en Surface Hub.
+   > Se requieren privilegios administrativos para tener acceso a la aplicación Configuración del dispositivo Surface Hub.
 
-2. Vaya a **actualización y seguridad \> para desarrolladores**.
+2. Ve a **Actualización y seguridad \> Para desarrolladores**.
 
 3. Elige el **Modo de desarrollador** y acepta la advertencia.
 
 ### <a name="deploy-your-app-from-visual-studio"></a>Implementar la aplicación desde Visual Studio
-Para obtener más información sobre el proceso de implementación en general, consulte [implementación y depuración de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
+Para más información sobre el proceso de implementación, consulta [Implementar y depurar aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 
    > [!NOTE]
-   > Esta característica requiere Visual Studio 2015 Update 1 o posterior, pero se recomienda que use la versión más actualizada más reciente de Visual Studio. Una instancia de Visual Studio al día gibe que todo el desarrollo más reciente y las actualizaciones de seguridad.
+   > Esta característica requiere Visual Studio 2015 Update 1 o versiones posteriores, pero se recomienda usar la versión más reciente actualizada de Visual Studio. Una instancia de Visual Studio actualizada incluirá todas las actualizaciones de seguridad y desarrollo más recientes.
 
 1. Navega hasta la lista desplegable de destino de depuración junto al botón **Iniciar depuración** y selecciona **Equipo remoto**.
 
@@ -104,9 +104,9 @@ Para obtener más información sobre el proceso de implementación en general, c
 2. Escribe la dirección IP del Surface Hub. Asegúrate de que el modo de autenticación **Universal** está seleccionado.
 
    > [!TIP] 
-   > Después de haber habilitado el modo de programador, puede encontrar la dirección IP de la superficie del concentrador en la pantalla de bienvenida.
+   > Una vez habilitado el modo de desarrollador, encontrarás la dirección IP del Surface Hub en la pantalla de bienvenida.
 
-3. Seleccione **Iniciar depuración (F5)** para implementar y depurar la aplicación de Surface Hub o presione Ctrl + F5 para implementar solo la aplicación.
+3. Selecciona **Iniciar depuración (F5)** para implementar y depurar la aplicación en el Surface Hub o presiona Ctrl+F5 para implementar únicamente la aplicación.
 
    > [!TIP]
-   > Si el dispositivo Surface Hub es mostrar la pantalla de bienvenida, descarte eligiendo cualquier botón.
+   > Si el dispositivo Surface Hub muestra la pantalla de bienvenida, elige cualquier botón para descartarla.

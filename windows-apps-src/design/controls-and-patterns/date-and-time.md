@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 13901e044cbf6a14ac0ede6e9ed0f451859e49a1
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: 202c1cb16e461d7cfbbe82cea999f1ed17523850
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629156"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081061"
 ---
 # <a name="calendar-date-and-time-controls"></a>Calendario, controles de fecha y hora
 
@@ -30,7 +30,7 @@ Los controles de fecha y hora ofrecen maneras estándar y localizadas para que e
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/category/DataInput">abrir la aplicación y ver estos controles en acción</a>.</p>
     <ul>
@@ -63,11 +63,11 @@ La vista del calendario se compone de 3 vistas separadas: la vista de mes, la vi
 ![Ejemplo de selector de fecha del calendario](images/calendar-view-3-views.png)
 
 - Si es necesario que un usuario pueda seleccionar varias fechas, debes usar una **CalendarView**.
-- Si es necesario permitir que un usuario elija solo una fecha determinada y no necesita que haya un calendario siempre visible, considera usar un control **CalendarDatePicker** o **DatePicker**.
+- Si necesitas que un usuario pueda elegir solo una fecha determinada y no necesitas que haya un calendario siempre visible, considera la posibilidad de usar un control **CalendarDatePicker** o **DatePicker**.
 
 ### <a name="calendar-date-picker"></a>Selector de fecha del calendario
 
-**CalendarDatePicker** es un control desplegable que está optimizado para seleccionar una fecha determinada de una vista de calendario en el que la información contextual es importante, por ejemplo, el día de la semana o lo que se ha completado del calendario. Puedes modificar el calendario para que proporcione contexto adicional o para que limite las fechas disponibles.
+**CalendarDatePicker** es un control desplegable que está optimizado para seleccionar una fecha determinada de una vista de calendario en la que la información contextual es importante, por ejemplo, el día de la semana o cuántos días del calendario han transcurrido. Puedes modificar el calendario para que proporcione contexto adicional o para que limite las fechas disponibles.
 
 El punto de entrada muestra texto del marcador de posición si no se ha establecido una fecha; de lo contrario, muestra la fecha elegida. Cuando el usuario selecciona el punto de entrada, se expande una vista de calendario para que el usuario realice una selección de fecha. La vista de calendario se superpone a otra interfaz de usuario; no hace que la otra interfaz desaparezca.
 

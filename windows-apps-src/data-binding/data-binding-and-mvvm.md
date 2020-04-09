@@ -1,63 +1,63 @@
 ---
 ms.assetid: F46306EC-DFF3-4FF0-91A8-826C1F8C4A52
 title: Enlace de datos y MVVM
-description: Enlace de datos es el núcleo del patrón de diseño de arquitectura Model-View-ViewModel (MVVM) interfaz de usuario y permite el acoplamiento flexible entre el código de interfaz de usuario y que no son de interfaz de usuario.
+description: El enlace de datos es el núcleo de la arquitectura de vista de modelos (MVVM) de la interfaz de usuario, y permite el acoplamiento flexible entre la interfaz de usuario y el código que no es de la interfaz de usuario.
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 931f2fcbcdbf58b9dc2ca40403d7466b620a8991
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: MT
+ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616740"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63798108"
 ---
 # <a name="data-binding-and-mvvm"></a>Enlace de datos y MVVM
 
-Model-View-ViewModel (MVVM) es un patrón de diseño de arquitectura de interfaz de usuario para desacoplar el código de interfaz de usuario y que no son de interfaz de usuario. Con MVVM, definir la interfaz de usuario mediante declaración en XAML y usar marcado de enlace de datos para vincularla a otras capas que contiene los datos y comandos. La infraestructura de enlace de datos proporciona un acoplamiento flexible que mantiene la interfaz de usuario y los datos vinculados se sincronizan y enruta la entrada del usuario a los comandos adecuados. 
+Vista de modelos (MVVM) es un patrón de diseño de arquitectura de interfaz de usuario para desacoplar el código de la interfaz de usuario y el código que no es de la interfaz de usuario. Con MVVM, se define la interfaz de usuario mediante una declaración en XAML y se usa el marcado de enlace de datos para vincularlo a otras capas que contienen datos y comandos. La infraestructura de enlace de datos ofrece un acoplamiento flexible que mantiene la interfaz de usuario y los datos vinculados sincronizados y enruta la entrada del usuario a los comandos adecuados. 
 
-Ya que proporciona un acoplamiento flexible, el uso del enlace de datos reduce dependencias fuertes entre los distintos tipos de código. Esto facilita cambiar las unidades de código individuales (métodos, las clases, controles, etc.) sin causar efectos secundarios no deseados en otras unidades. Este desacoplamiento es un ejemplo de la *separación de preocupaciones*, que es un concepto importante en muchos patrones de diseño. 
+Dado que proporciona un acoplamiento flexible, el uso del enlace de datos reduce las dependencias fuertes entre los distintos tipos de código. Esto facilita el cambio de unidades de código individuales (métodos, clases, controles, etc.) sin causar efectos secundarios imprevistos en otras unidades. Este desacoplamiento es un ejemplo de la *separación de preocupaciones*, que es un concepto importante en muchos patrones de diseño. 
 
 ## <a name="benefits-of-mvvm"></a>Ventajas de MVVM
 
-Desacoplar el código tiene muchas ventajas, como:
+Desacoplar el código tiene muchas ventajas, entre las que se incluyen:
 
-* Habilitación de un estilo de codificación iterativo y exploratorio. Cambio que está aislado es menos arriesgado y más fácil experimentar con.
-* Pruebas unitarias simplificar. Unidades de código que están completamente aisladas entre sí se pueden probar individualmente y fuera de los entornos de producción.
-* Admitir la colaboración en equipo. Código desacoplado que se adhiere a las interfaces bien diseñadas puede desarrollado por personas independientes o equipos e integrada más adelante.
-* Mejorar la facilidad de mantenimiento. Corrección de errores en código desacoplado es menos probable que causan regresiones en el otro código.
+* Permite un estilo de codificación exploratorio iterativo. Los cambios aislados son menos arriesgados y es más fácil experimentar con ellos.
+* Simplifica las pruebas unitarias. Las unidades de código que están aisladas entre sí se pueden probar de forma individual y fuera de los entornos de producción.
+* Admite el trabajo en equipo. El código desacoplado que se adhiere a interfaces bien diseñadas pueden desarrollarlo usuarios individuales o equipos, e integrarse posteriormente.
+* Mejora el mantenimiento. La corrección de errores en el código desacoplado es menos probable que provoque regresiones en otro código.
 
-A diferencia de MVVM, una aplicación con una estructura más convencional de "código" normalmente usa el enlace de datos para datos de sólo visualización y responde a la entrada del usuario directamente administrando eventos expuestos por los controles. Los controladores de eventos se implementan en los archivos de código subyacente (por ejemplo, MainPage.xaml.cs) y, a menudo estrechamente a los controles, que normalmente contiene el código que manipula directamente la interfaz de usuario. Esto facilita difíciles o imposibles de reemplazar un control sin tener que actualizar el código de control de eventos. Con esta arquitectura, los archivos de código subyacente acumulan a menudo código que no está directamente relacionados con la interfaz de usuario, como el código de acceso de la base de datos, que termina está duplicado y se puede modificar para su uso con otras páginas.
+A diferencia de MVVM, una aplicación con una estructura de "código subyacente" más convencional normalmente usa el enlace de datos para los datos de solo presentación, y responde a la entrada del usuario mediante el control directo de los eventos expuestos por los controles. Los controladores de eventos se implementan en archivos de código subyacente (como MainPage.xaml.cs) y, a menudo, se acoplan estrechamente a los controles, que normalmente contienen código que manipula directamente la interfaz de usuario. Esto hace que sea difícil o imposible reemplazar un control sin tener que actualizar el código de control de eventos. Con esta arquitectura, los archivos de código subyacente suelen acumular código que no está directamente relacionado con la interfaz de usuario, como el código de acceso a la base de datos, y terminan duplicándose y modificándose para usarlos con otras páginas.
 
 ## <a name="app-layers"></a>Capas de aplicación
 
-Cuando se usa el patrón MVVM, una aplicación se divide en las siguientes capas:
+Al usar el patrón MVVM, una aplicación se divide en las siguientes capas:
 
-* El **modelo** capa define los tipos que representan los datos empresariales. Esto todo lo necesario para modelar el dominio de aplicación principal incluye y, a menudo incluye lógica de aplicación principal. Esta capa es completamente independiente de la vista y las capas del modelo de vista y, a menudo reside parcialmente en la nube. Dado un nivel de modelo implementada totalmente, puede crear a otro cliente varias aplicaciones si lo prefiere, como aplicaciones web y UWP que funcionan con los mismos datos subyacentes.
-* El **vista** capa define la interfaz de usuario mediante marcado XAML. El marcado incluye expresiones de enlace de datos (como [x: Bind](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)) que definen la conexión entre los componentes específicos de la interfaz de usuario y diversos miembros del modelo de vista y modelos. A veces, los archivos de código subyacente se usan como parte de la capa de vista para que contenga código adicional necesario para personalizar o manipular la interfaz de usuario, o para extraer datos de los argumentos de controlador de eventos antes de llamar a un método de modelo de vista que realiza el trabajo. 
-* El **vista-modelo** capa proporciona los destinos de enlace de datos para la vista. En muchos casos, el modelo de vista expone el modelo directamente, o proporciona a miembros que contienen miembros de modelo específico. El modelo de vista también puede definir los miembros para realizar el seguimiento de los datos que son pertinentes para la interfaz de usuario pero no para el modelo, como el orden de visualización de una lista de elementos. El modelo de vista también actúa como un punto de integración con otros servicios como código de acceso de la base de datos. En los proyectos sencillos, quizás no necesite un nivel de modelo independiente, pero solo un modelo de vista que encapsula todos los datos que necesita. 
+* La capa del **modelo** define los tipos que representan los datos empresariales. Esto incluye todo lo necesario para modelar el dominio de la aplicación principal y, a menudo, incluye la lógica de la aplicación principal. Esta capa es totalmente independiente de las capas de vista y de vista de modelos, y a menudo reside parcialmente en la nube. Con una capa de modelo totalmente implementada, puedes crear varias aplicaciones cliente diferentes si lo prefieres, como aplicaciones web y de UWP que funcionen con los mismos datos subyacentes.
+* La capa de **vista** define la interfaz de usuario mediante el marcado XAML. El marcado incluye expresiones de enlace de datos (como [x:Bind](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)) que definen la conexión entre componentes de interfaz de usuario específicos y varias vistas de modelos y miembros de modelo. Los archivos de código subyacente a veces se utilizan como parte de la capa de vista para contener el código adicional necesario para personalizar o manipular la interfaz de usuario, o para extraer datos de los argumentos del controlador de eventos antes de llamar a un método de vista de modelos que realiza el trabajo. 
+* La capa **vista de modelos** proporciona los destinos del enlace de datos para la vista. En muchos casos, la vista de modelos expone el modelo directamente o proporciona miembros que contienen miembros de modelo específicos. La vista de modelos también puede definir miembros para realizar el seguimiento de los datos que son relevantes para la interfaz de usuario, pero no para el modelo, como el orden de presentación de una lista de elementos. La vista de modelos también sirve como punto de integración con otros servicios, como el código de acceso a la base de datos. En el caso de los proyectos sencillos, es posible que no necesites una capa de modelo independiente, sino solo una vista de modelos que encapsule todos los datos que necesitas. 
 
-## <a name="basic-and-advanced-mvvm"></a>MVVM básica y avanzada
+## <a name="basic-and-advanced-mvvm"></a>MVVM básico y avanzado
 
-Al igual que con cualquier modelo de diseño, hay más de una forma de implementar MVVM y muchas técnicas diferentes se consideran parte de MVVM. Por este motivo, hay varios marcos diferentes de MVVM de terceros que admiten las diferentes plataformas basada en XAML, incluidos UWP. Sin embargo, estos marcos de trabajo generalmente incluyen varios servicios para implementar una arquitectura desacoplada, lo que la definición exacta de MVVM un poco ambiguo. 
+Como en cualquier patrón de diseño, hay más de una manera de implementar MVVM, y muchas técnicas diferentes se consideran parte de MVVM. Por este motivo, hay varios marcos de trabajo de MVVM de terceros que admiten las distintas plataformas basadas en XAML, incluida UWP. Sin embargo, estos marcos suelen incluir varios servicios para implementar la arquitectura desacoplada, lo que permite que la definición exacta de MVVM sea algo ambigua. 
 
-Aunque sofisticado marcos de MVVM pueden ser muy útiles, especialmente para los proyectos a escala empresarial, normalmente hay un costo asociado a adoptar cualquier patrón determinado o técnica, y los beneficios no siempre están claros, según la escala y el tamaño de el proyecto. Afortunadamente, puede adoptar solo esas técnicas que proporcionan una ventaja clara y tangible y pase por alto otros hasta que la necesite. 
+Aunque los marcos de trabajo de MVVM sofisticados pueden ser muy útiles, especialmente en el caso de los proyectos de escala empresarial, normalmente la adopción de un patrón o técnica determinados conlleva un costo y las ventajas no siempre están claras, en función de la escala y el tamaño del proyecto. Afortunadamente, puedes adoptar solo las técnicas que proporcionan una ventaja clara y tangible, y omitir otras hasta que las necesites. 
 
-En concreto, puede obtener mucha ventaja basta con comprender y aplicar toda la funcionalidad de enlace de datos y separar la lógica de aplicación en las capas que se ha descrito anteriormente. Esto puede lograrse mediante solo las funcionalidades que ofrece el SDK de Windows, sin usar los marcos de trabajo externos. En concreto, el [extensión de marcado {x: Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) facilita el enlace de datos y mayor rendimiento que en plataformas anteriores de XAML, eliminando la necesidad de un lote del código reutilizable necesario anteriormente.
+En concreto, puedes disfrutar de muchas ventajas tan solo con comprender y aplicar todas las posibilidades del enlace de datos, y separar la lógica de la aplicación en las capas descritas anteriormente. Esto se puede lograr usando solo las funcionalidades proporcionadas por Windows SDK y sin usar marcos de trabajo externos. En concreto, la [extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) hace que el enlace de datos sea más sencillo y superior que en las plataformas XAML anteriores, lo que elimina la necesidad de crear la gran cantidad de código reutilizable que se requería anteriormente.
 
-Para obtener orientación adicional sobre el uso básico, estándar de MVVM, eche un vistazo el [ejemplo de la base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database) en GitHub. Muchos de los otros [ejemplos de aplicaciones UWP](https://github.com/Microsoft?q=windows-appsample
-) también usan una arquitectura básica de MVVM y el [ejemplo de aplicación de tráfico](https://github.com/Microsoft/Windows-appsample-trafficapp) incluye código subyacente y las versiones MVVM, con notas que describe el [conversión MVVM ](https://github.com/Microsoft/Windows-appsample-trafficapp/blob/MVVM/MVVM.md). 
+Para más información sobre el uso de la arquitectura MVVM básica lista para usar, consulta el [ejemplo de base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database), en GitHub. Muchos otros [ejemplos de aplicaciones para UWP](https://github.com/Microsoft?q=windows-appsample
+) usan también una arquitectura MVVM básica, y el ejemplo de aplicación de [tráfico](https://github.com/Microsoft/Windows-appsample-trafficapp) incluye tanto la versión de código subyacente como la versión MVVM, con notas que describen la [conversión a MVVM](https://github.com/Microsoft/Windows-appsample-trafficapp/blob/MVVM/MVVM.md). 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 ### <a name="topics"></a>Temas
 
 [Enlace de datos en profundidad](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)  
-[extensión de marcado {x: Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)  
+[Extensión de marcado {x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)  
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
-[Ejemplo de la base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database)  
+[Ejemplo de base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database)  
 [Ejemplo de inventario de VanArsdel](https://github.com/Microsoft/InventorySample)  
 [Ejemplo de aplicación de tráfico](https://github.com/Microsoft/Windows-appsample-trafficapp)  

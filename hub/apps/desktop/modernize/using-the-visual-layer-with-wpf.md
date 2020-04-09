@@ -1,6 +1,6 @@
 ---
-title: Uso de la capa Visual con WPF
-description: Aprenda técnicas para usar la API de nivel Visual en combinación con el contenido WPF existente para crear efectos y animaciones avanzadas.
+title: Usar la capa visual con WPF
+description: Obtén información sobre las técnicas de uso de las API de la capa visual en combinación con contenido de WPF ya existente para crear animaciones y efectos avanzados.
 ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -9,80 +9,80 @@ author: jwmsft
 ms.localizationpriority: medium
 ms.openlocfilehash: a2f30ba67acc12d622acd09f9fae872ee2058a2f
 ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2019
 ms.locfileid: "66215152"
 ---
-# <a name="using-the-visual-layer-with-wpf"></a>Uso de la capa Visual con WPF
+# <a name="using-the-visual-layer-with-wpf"></a>Usar la capa visual con WPF
 
-Puede usar las API de composición de Windows en tiempo de ejecución (también denominado el [capa Visual](/windows/uwp/composition/visual-layer)) en las aplicaciones de Windows Presentation Foundation (WPF) para crear experiencias modernas es clara para los usuarios de Windows 10.
+Puedes usar las API de Composition de Windows Runtime (también llamada la [capa visual](/windows/uwp/composition/visual-layer)) en las aplicaciones de Windows Presentation Foundation (WPF) para crear experiencias modernas que atraigan a los usuarios de Windows 10.
 
-El código completo de este tutorial está disponible en GitHub: [Ejemplo WPF HelloComposition](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WPF/HelloComposition).
+El código completo de este tutorial está disponible en GitHub: [Ejemplo HelloComposition de WPF](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WPF/HelloComposition).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-El XAML UWP API de hospedaje tiene estos requisitos previos.
+La API de hospedaje XAML de UWP tiene estos requisitos previos.
 
-- Se supone que tiene cierta familiaridad con el desarrollo de aplicaciones con WPF y UWP. Para obtener más información, consulta:
+- Damos por hecho que estás familiarizado con el desarrollo de aplicaciones con WPF y UWP. Para obtener más información, consulta:
   - [Introducción (WPF)](/dotnet/framework/wpf/getting-started/)
-  - [Empezar a trabajar con aplicaciones de Windows 10](/windows/uwp/get-started/)
-  - [Mejore su aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance)
-- .NET framework 4.7.2 o posterior
-- Windows 10, versión 1803 o posterior
-- SDK de Windows 10 17134 o posterior
+  - [Introducción a las aplicaciones de Windows 10](/windows/uwp/get-started/)
+  - [Mejorar tu aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance)
+- .NET Framework 4.7.2 o una versión posterior
+- Windows 10 versión 1803 o posterior
+- SDK de Windows 10 17134 o posterior
 
-## <a name="how-to-use-composition-apis-in-wpf"></a>Cómo usar las API de composición en WPF
+## <a name="how-to-use-composition-apis-in-wpf"></a>Procedimiento para usar las API de Composition en WPF
 
-En este tutorial, creará una aplicación WPF sencilla interfaz de usuario y agregarle elementos animados de composición. Componentes WPF y composición se mantienen simple, pero se muestra el código de interoperabilidad es el mismo independientemente de la complejidad de los componentes. La aplicación finalizada es similar al siguiente.
+En este tutorial, crearás una interfaz de usuario de aplicación de WPF simple y le agregarás elementos de Composition animados. Tanto WPF como los componentes de Composition son sencillos, pero el código de interoperabilidad mostrado es el mismo, independientemente de la complejidad de los componentes. La aplicación finalizada tiene el siguiente aspecto.
 
-![La interfaz de usuario de aplicación en ejecución](images/visual-layer-interop/wpf-comp-interop-app-ui.png)
+![Interfaz de usuario de la aplicación en ejecución](images/visual-layer-interop/wpf-comp-interop-app-ui.png)
 
 ## <a name="create-a-wpf-project"></a>Crear un proyecto de WPF
 
-El primer paso es crear el proyecto de aplicación WPF, que incluye una definición de aplicación y la página XAML para la interfaz de usuario.
+El primer paso es crear el proyecto de aplicación de WPF, que incluye una definición de aplicación y la página XAML para la interfaz de usuario.
 
-Para crear un nuevo proyecto de aplicación de WPF en Visual C# denominado _HelloComposition_:
+Para crear un nuevo proyecto de aplicación de WPF en Visual C# llamado _HelloComposition_:
 
-1. Abra Visual Studio y seleccione **archivo** > **New** > **proyecto**.
+1. Abre Visual Studio y selecciona **Archivo** > **Nuevo** > **Proyecto**.
 
-    El **nuevo proyecto** abre el cuadro de diálogo.
-1. En el **instalado** categoría, expanda el **Visual C#**  nodo y, a continuación, seleccione **Windows Desktop**.
-1. Seleccione el **aplicación de WPF (.NET Framework)** plantilla.
-1. Escriba el nombre _HelloComposition_, seleccione el marco de trabajo **.NET Framework 4.7.2**, a continuación, haga clic en **Aceptar**.
+    Se abre el cuadro de diálogo **Nuevo proyecto**.
+1. En la categoría **Instalados**, expande el nodo **Visual C#** y, después, selecciona **Escritorio de Windows**.
+1. Selecciona la plantilla **Aplicación de WPF (.NET Framework)** .
+1. Escribe el nombre _HelloComposition_, selecciona Framework **.NET Framework 4.7.2** y, después, haz clic en **Aceptar**.
 
-    Visual Studio crea el proyecto y abre el Diseñador de la ventana de aplicación predeterminada denominado MainWindow.xaml.
+    Visual Studio crea el proyecto y abre el diseñador de la ventana predeterminada de la aplicación llamada MainWindow.xaml.
 
-## <a name="configure-the-project-to-use-windows-runtime-apis"></a>Configurar el proyecto para usar Windows Runtime APIs
+## <a name="configure-the-project-to-use-windows-runtime-apis"></a>Configurar el proyecto para usar las API de Windows Runtime
 
-Para usar Windows en tiempo de ejecución (WinRT) API en la aplicación WPF, deberá configurar el proyecto de Visual Studio para tener acceso el tiempo de ejecución de Windows. Además, vectores se usan ampliamente por las API de composición, por lo que deberá agregar las referencias necesarias para usar vectores.
+Para usar las API de Windows Runtime (WinRT) en la aplicación de WPF, tienes que configurar el proyecto de Visual Studio para que tenga acceso a Windows Runtime. Además, las API de Composition usan mucho los vectores, por lo que tienes que agregar las referencias necesarias para usar vectores.
 
-Paquetes de NuGet están disponibles para abordar estas necesidades de ambos. Instale las últimas versiones de estos paquetes para agregar las referencias necesarias al proyecto.  
+Hay paquetes NuGet disponibles para abordar estas dos necesidades. Instala las versiones más recientes de estos paquetes para agregar las referencias necesarias al proyecto.  
 
-- [Microsoft.Windows.SDK.Contracts](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts) (requiere el conjunto de formato de administración de paquete predeterminado a PackageReference).
+- [Microsoft.Windows.SDK.Contracts](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts) (requiere el formato de administración de paquetes predeterminado establecido en PackageReference).
 - [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors/)
 
 > [!NOTE]
-> Aunque se recomienda usar los paquetes de NuGet para configurar el proyecto, puede agregar manualmente las referencias necesarias. Para obtener más información, consulte [mejorar su aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance). La siguiente tabla muestra los archivos que necesita para agregar referencias a.
+> Aunque se recomienda usar paquetes NuGet para configurar el proyecto, puedes agregar manualmente las referencias necesarias. Para más información, consulta [Mejorar tu aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance). En la tabla siguiente se muestran los archivos a los que hay que agregar referencias.
 
-|Archivo|Location|
+|Archivo|Ubicación|
 |--|--|
 |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-|Windows.Foundation.UniversalApiContract.winmd|C:\Program archivos (x86) \Windows Kits\10\References\<*sdk versión*> \Windows.Foundation.UniversalApiContract\<*versión*>|
-|Windows.Foundation.FoundationContract.winmd|C:\Program archivos (x86) \Windows Kits\10\References\<*sdk versión*> \Windows.Foundation.FoundationContract\<*versión*>|
+|Windows.Foundation.UniversalApiContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\<*sdk version*>\Windows.Foundation.UniversalApiContract\<*version*>|
+|Windows.Foundation.FoundationContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\<*sdk version*>\Windows.Foundation.FoundationContract\<*version*>|
 |System.Numerics.Vectors.dll|C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics.Vectors\v4.0_4.0.0.0__b03f5f7f11d50a3a|
-|System.Numerics.dll|C:\Program archivos (x86) Assemblies\Microsoft\Framework\.NETFramework\v4.7.2|
+|System.Numerics.dll|C:\Archivos de programa (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2|
 
-## <a name="configure-the-project-to-be-per-monitor-dpi-aware"></a>Configurar el proyecto para ser monitor reconocimiento de PPP
+## <a name="configure-the-project-to-be-per-monitor-dpi-aware"></a>Configuración del proyecto para que reconozca el valor de ppp de cada monitor
 
-El contenido de la capa visual que agregue a la aplicación no se escala automáticamente para que coincida con la configuración de PPP de la pantalla se muestran en. Deberá habilitar el reconocimiento de PPP por monitor para la aplicación y, a continuación, asegúrese de que el código que utilice para crear el contenido de la capa visual tiene en cuenta la escala de PPP actual cuando se ejecuta la aplicación. Aquí se configura el proyecto para que sea el reconocimiento de PPP. En secciones posteriores, se muestra cómo usar la información de PPP para escalar el contenido de la capa visual.
+El contenido de la capa visual que agregues a la aplicación no se escala automáticamente para que coincida con la configuración de ppp de la pantalla en la que se muestra. Tienes que habilitar en la aplicación el reconocimiento de ppp en cada monitor y, a continuación, asegurarte de que el código que usas para crear el contenido de la capa visual tenga en cuenta la escala de ppp actual cuando se ejecute la aplicación. Aquí, configuramos el proyecto para que reconozca el valor de ppp. En las secciones siguientes, se muestra cómo usar la información de ppp para escalar el contenido de la capa visual.
 
-Las aplicaciones de WPF son sistema PPP de forma predeterminada, pero es necesario declarar a sí mismos para ser monitor reconocimiento de PPP en un archivo app.manifest. Para activar el reconocimiento de PPP por monitor de nivel de Windows en el archivo de manifiesto de aplicación:
+Las aplicaciones de WPF reconocen el valor de ppp del sistema de forma predeterminada, pero deben declararse en el archivo app.manifest para que reconozcan el valor de ppp en cada monitor. Para activar en el archivo de manifiesto de la aplicación el reconocimiento de ppp en cada monitor en el nivel de Windows:
 
-1. En **el Explorador de soluciones**, haga clic en el _HelloComposition_ proyecto.
-1. En el menú contextual, seleccione **agregar** > **nuevo elemento...** .
-1. En el **Agregar nuevo elemento** cuadro de diálogo, seleccione "Archivo de manifiesto de aplicación", a continuación, haga clic en **agregar**. (Puede dejar el nombre predeterminado).
-1. En el archivo app.manifest, busque este xml y quitar los comentarios:
+1. En el **Explorador de soluciones**, haz clic con el botón derecho en el proyecto _HelloComposition_.
+1. En el menú contextual, selecciona **Agregar** > **Nuevo elemento...** .
+1. En el cuadro de diálogo **Agregar nuevo elemento**, selecciona "Archivo de manifiesto de aplicación" y, a continuación, haz clic en **Agregar**. (Puedes dejar el nombre predeterminado).
+1. En el archivo app.manifest, busca este código XML y elimina el comentario:
 
     ```xaml
     <application xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -92,15 +92,15 @@ Las aplicaciones de WPF son sistema PPP de forma predeterminada, pero es necesar
       </application>
     ```
 
-1. Agregar esta configuración después de la apertura `<windowsSettings>` etiqueta:
+1. Agrega esta configuración después de la etiqueta `<windowsSettings>` de apertura:
 
     ```xaml
           <dpiAwareness xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">PerMonitor</dpiAwareness>
     ```
 
-1. También deberá establecer el **DoNotScaleForDpiChanges** en el archivo App.config.
+1. También tienes que establecer el valor de **DoNotScaleForDpiChanges** en el archivo app.config.
 
-    Abra App.Config y agregue este código xml dentro de la `<configuration>` elemento:
+    Abre App.Config y agrega este código XML dentro del elemento `<configuration>`:
 
     ```xml
     <runtime>
@@ -109,22 +109,22 @@ Las aplicaciones de WPF son sistema PPP de forma predeterminada, pero es necesar
     ```
 
 > [!NOTE]
-> **AppContextSwitchOverrides** solo puede establecerse una vez. Si la aplicación ya tiene un conjunto, debe punto y coma delimitar este modificador dentro del atributo de valor.
+> **AppContextSwitchOverrides** solo se puede establecer una vez. Si la aplicación ya tiene un conjunto, debes delimitar este modificador dentro del atributo value.
 
-(Para obtener más información, consulte el [ejemplos y Guía de desarrollador de PPP por Monitor](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) en GitHub.)
+(Para más información, consulta la [guía para desarrolladores y los ejemplos de ppp por monitor](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) en GitHub).
 
-## <a name="create-an-hwndhost-derived-class-to-host-composition-elements"></a>Cree una clase derivada de HwndHost a elementos de la composición de host
+## <a name="create-an-hwndhost-derived-class-to-host-composition-elements"></a>Crear una clase derivada de HwndHost para hospedar los elementos de Composition
 
-Para hospedar contenido que cree con la capa visual, deberá crear una clase que derive de [HwndHost](/dotnet/api/system.windows.interop.hwndhost). Esto es donde realiza la mayoría de la configuración para hospedar las API de composición. En esta clase, se usa [servicios de invocación de plataforma (PInvoke)](/cpp/dotnet/calling-native-functions-from-managed-code) y [interoperabilidad COM](/dotnet/api/system.runtime.interopservices.comimportattribute) para poner las API de composición en su aplicación WPF. Para obtener más información sobre PInvoke y la interoperabilidad COM, vea [interoperar con código no administrado](/dotnet/framework/interop/index).
+Para hospedar el contenido que crees con la capa visual, debes crear una clase que derive de [HwndHost](/dotnet/api/system.windows.interop.hwndhost). Aquí es donde se realiza la mayoría de la configuración para hospedar las API de Composition. En esta clase, se usan los [servicios de invocación de plataforma (PInvoke)](/cpp/dotnet/calling-native-functions-from-managed-code) y la [interoperabilidad COM](/dotnet/api/system.runtime.interopservices.comimportattribute) para incorporar las API de Composition a la aplicación de WPF. Para más información sobre PInvoke y la interoperabilidad COM, consulta [Interoperar con código no administrado](/dotnet/framework/interop/index).
 
 > [!TIP]
-> Si necesita, compruebe el código completo al final del tutorial para asegurarse de que todo el código está en los lugares correctos cuando se trabaja con el tutorial.
+> Si es necesario, comprueba el código completo al final del tutorial para asegurarte de que todo el código está en el lugar correcto mientras trabajas en el tutorial.
 
-1. Agregue un nuevo archivo de clase al proyecto que se derive de [HwndHost](/dotnet/api/system.windows.interop.hwndhost).
-    - En **el Explorador de soluciones**, haga clic en el _HelloComposition_ proyecto.
-    - En el menú contextual, seleccione **agregar** > **clase...** .
-    - En el **Agregar nuevo elemento** cuadro de diálogo, nombre de la clase _CompositionHost.cs_, a continuación, haga clic en **agregar**.
-1. En CompositionHost.cs, edite la definición de clase que derive de **HwndHost**.
+1. Agrega al proyecto un nuevo archivo de clase que derive de [HwndHost](/dotnet/api/system.windows.interop.hwndhost).
+    - En el **Explorador de soluciones**, haz clic con el botón derecho en el proyecto _HelloComposition_.
+    - En el menú contextual, selecciona **Agregar** > **Clase...** .
+    - En el cuadro de diálogo **Agregar nuevo elemento**, asigna a la clase el nombre _CompositionHost.cs_ y, después, haz clic en **Agregar**.
+1. En CompositionHost.cs, edita la definición de clase para que derive de **HwndHost**.
 
     ```csharp
     // Add
@@ -138,7 +138,7 @@ Para hospedar contenido que cree con la capa visual, deberá crear una clase que
     }
     ```
 
-1. Agregue el código y el constructor siguiente a la clase.
+1. Agrega el siguiente código y constructor a la clase.
 
     ```csharp
     // Add
@@ -179,9 +179,9 @@ Para hospedar contenido que cree con la capa visual, deberá crear una clase que
     }
     ```
 
-1. Invalidar el **BuildWindowCore** y **DestroyWindowCore** métodos.
+1. Invalida los métodos **BuildWindowCore** y **DestroyWindowCore**.
     > [!NOTE]
-    > En BuildWindowCore, llame a la _InitializeCoreDispatcher_ y _InitComposition_ métodos. Puede crear estos métodos en los pasos siguientes.
+    > En BuildWindowCore, se llama a los métodos _InitializeCoreDispatcher_ e _InitComposition_. Estos métodos se crean en los pasos siguientes.
 
     ```csharp
     // Add
@@ -219,7 +219,7 @@ Para hospedar contenido que cree con la capa visual, deberá crear una clase que
     }
     ```
 
-    - [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) y [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) requieren una declaración PInvoke. Esta declaración se coloca al final del código de la clase.
+    - [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) y [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) requieren una declaración PInvoke. Coloca esta declaración al final del código de la clase.
 
     ```csharp
     #region PInvoke declarations
@@ -242,8 +242,8 @@ Para hospedar contenido que cree con la capa visual, deberá crear una clase que
     #endregion PInvoke declarations
     ```
 
-1. Inicializar un subproceso con un [CoreDispatcher](/uwp/api/windows.ui.core.coredispatcher). El distribuidor core es responsable de procesar los mensajes de ventana y distribución de eventos para WinRT APIs. Las instancias nuevas de **CoreDispatcher** debe crearse en un subproceso que tiene un CoreDispatcher.
-    - Cree un método denominado _InitializeCoreDispatcher_ y agregue código para configurar la cola del distribuidor.
+1. Inicializa un subproceso con [CoreDispatcher](/uwp/api/windows.ui.core.coredispatcher). El distribuidor principal es responsable de procesar los mensajes de ventana y de distribuir los eventos de las API de WinRT. Se deben crear nuevas instancias de **CoreDispatcher** en un subproceso que tenga un objeto CoreDispatcher.
+    - Crea un método llamado _InitializeCoreDispatcher_ y agrega código para configurar la cola del distribuidor.
 
     ```csharp
     private object InitializeCoreDispatcher()
@@ -259,7 +259,7 @@ Para hospedar contenido que cree con la capa visual, deberá crear una clase que
     }
     ```
 
-    - La cola del distribuidor también requiere una declaración PInvoke. Colocar esta declaración dentro de la _declaraciones PInvoke_ región que creó en el paso anterior.
+    - La cola del distribuidor también requiere una declaración PInvoke. Coloca esta declaración dentro de la región de _declaraciones PInvoke_ que creaste en el paso anterior.
 
     ```csharp
     //typedef enum DISPATCHERQUEUE_THREAD_APARTMENTTYPE
@@ -314,9 +314,9 @@ Para hospedar contenido que cree con la capa visual, deberá crear una clase que
                                             out object dispatcherQueueController);
     ```
 
-    Ahora tiene preparada la cola del distribuidor y empezar a inicializar y crear contenido composición.
+    Ahora tienes la cola del distribuidor lista y puedes empezar a inicializar y crear el contenido de Composition.
 
-1. Inicializar el [Compositor](/uwp/api/windows.ui.composition.compositor). El Compositor es una fábrica que crea una variedad de tipos en el [Windows.UI.Composition](/uwp/api/windows.ui.composition) espacio de nombres que abarca los objetos visuales, el sistema de efectos y el sistema de animación. La clase Compositor también administra la duración de objetos creado a partir de la fábrica.
+1. Inicializa la clase [Compositor](/uwp/api/windows.ui.composition.compositor). Compositor es una fábrica que crea diversos tipos en el espacio de nombres [Windows.UI.Composition](/uwp/api/windows.ui.composition), tales como la capa visual, el sistema de efectos y el sistema de animación. La clase Compositor también administra la duración de los objetos creados con la fábrica.
 
     ```csharp
     private void InitComposition(IntPtr hwndHost)
@@ -336,7 +336,7 @@ Para hospedar contenido que cree con la capa visual, deberá crear una clase que
     }
     ```
 
-    - **ICompositorDesktopInterop** y **ICompositionTarget** requieren COM importaciones. Coloque el siguiente código después la _CompositionHost_ clase, pero dentro la declaración de espacio de nombres.
+    - **ICompositorDesktopInterop** e **ICompositionTarget** requieren importaciones de COM. Coloca este código después de la clase _CompositionHost_, pero dentro de la declaración del espacio de nombres.
 
     ```csharp
     #region COM Interop
@@ -385,29 +385,29 @@ Para hospedar contenido que cree con la capa visual, deberá crear una clase que
     #endregion COM Interop
     ```
 
-## <a name="create-a-usercontrol-to-add-your-content-to-the-wpf-visual-tree"></a>Crear un UserControl para agregar el contenido en el árbol visual de WPF
+## <a name="create-a-usercontrol-to-add-your-content-to-the-wpf-visual-tree"></a>Crear un control UserControl para agregar el contenido al árbol visual de WPF
 
-El último paso para configurar la infraestructura necesaria para el host de composición contenido consiste en Agregar HwndHost al árbol visual de WPF.
+El último paso para configurar la infraestructura necesaria para hospedar el contenido de Composition es agregar HwndHost al árbol visual de WPF.
 
-### <a name="create-a-usercontrol"></a>Crear un UserControl
+### <a name="create-a-usercontrol"></a>Crear un control UserControl
 
-Un control de usuario es una manera cómoda para empaquetar el código que crea y administra el contenido de la composición y agregar fácilmente el contenido en el XAML.
+Un control UserControl es una manera cómoda de empaquetar el código que crea y administra el contenido de Composition, y agrega fácilmente el contenido al código XAML.
 
-1. Agregue un nuevo archivo de control de usuario al proyecto.
-    - En **el Explorador de soluciones**, haga clic en el _HelloComposition_ proyecto.
-    - En el menú contextual, seleccione **agregar** > **Control de usuario...** .
-    - En el **Agregar nuevo elemento** cuadro de diálogo, nombre el control de usuario _CompositionHostControl.xaml_, a continuación, haga clic en **agregar**.
+1. Agrega un nuevo control de usuario al proyecto.
+    - En el **Explorador de soluciones**, haz clic con el botón derecho en el proyecto _HelloComposition_.
+    - En el menú contextual, selecciona **Agregar** > **Control de usuario...** .
+    - En el cuadro de diálogo **Agregar nuevo elemento**, asigna al control de usuario el nombre _CompositionHostControl.xaml_ y, después, haz clic en **Agregar**.
 
-    Los CompositionHostControl.xaml CompositionHostControl.xaml.cs archivos y se crean y se agrega al proyecto.
-1. En CompositionHostControl.xaml, reemplace el `<Grid> </Grid>` etiquetas con este **borde** elemento, que es el contenedor XAML que se ubicarán los HwndHost en.
+    Se crean los archivos CompositionHostControl. XAML y CompositionHostControl.xaml.cs y se agregan al proyecto.
+1. En CompositionHostControl. XAML, reemplaza las etiquetas `<Grid> </Grid>` por este elemento **Border**, que es el contenedor XAML en el que irá HwndHost.
 
     ```xaml
     <Border Name="CompositionHostElement"/>
     ```
 
-En el código para el control de usuario, creará una instancia de la clase CompositionHost que creó en el paso anterior y agregarlo como un elemento secundario de _CompositionHostElement_, el borde que creó en la página XAML.
+En el código del control de usuario, crea una instancia de la clase CompositionHost que creaste en el paso anterior y agrégala como elemento secundario de _CompositionHostElement_, el borde que creaste en la página XAML.
 
-1. En CompositionHostControl.xaml.cs, agregue variables privadas para los objetos que se usará en el código de composición. Agregue estas después de la definición de clase.
+1. En CompositionHostControl.xaml.cs, agrega las variables privadas para los objetos que vas a usar en el código de Composition. Agrégalos después de la definición de clase.
 
     ```csharp
     CompositionHost compositionHost;
@@ -416,9 +416,9 @@ En el código para el control de usuario, creará una instancia de la clase Comp
     DpiScale currentDpi;
     ```
 
-1. Agregar un controlador para el control de usuario **Loaded** eventos. Esto es donde se configura la instancia de CompositionHost.
+1. Agrega un controlador para el evento **Loaded** del control de usuario. Aquí es donde se configura la instancia de CompositionHost.
 
-    - En el constructor, enlazar el controlador de eventos como se muestra aquí (`Loaded += CompositionHostControl_Loaded;`).
+    - En el constructor, enlaza el controlador de eventos como se muestra aquí (`Loaded += CompositionHostControl_Loaded;`).
 
     ```csharp
     public CompositionHostControl()
@@ -428,7 +428,7 @@ En el código para el control de usuario, creará una instancia de la clase Comp
     }
     ```
 
-    - Agregue el método de controlador de eventos con el nombre *CompositionHostControl_Loaded*.
+    - Agrega el método de control de eventos con el nombre *CompositionHostControl_Loaded*.
     ```csharp
     private void CompositionHostControl_Loaded(object sender, RoutedEventArgs e)
     {
@@ -449,9 +449,9 @@ En el código para el control de usuario, creará una instancia de la clase Comp
     }
     ```
 
-    En este método, configure los objetos que se usará en el código de composición. Le presentamos una visión rápida de lo que sucede.
+    En este método, se configuran los objetos que se van a usar en el código de Composition. A continuación se muestra rápidamente lo que está ocurriendo.
 
-    - En primer lugar, asegúrese de que el conjunto de copia solo se realiza una vez al comprobar si ya existe una instancia de CompositionHost.
+    - En primer lugar, comprueba si ya existe una instancia de CompositionHost para asegurarte de que la configuración solo se realiza una vez.
 
     ```csharp
     // If the user changes the DPI scale setting for the screen the app is on,
@@ -463,13 +463,13 @@ En el código para el control de usuario, creará una instancia de la clase Comp
     }
     ```
 
-    - Obtiene el valor de PPP actual. Esto se usa para escalar correctamente los elementos de la composición.
+    - Obtén el valor de ppp actual. Se usa para escalar correctamente los elementos de Composition.
 
     ```csharp
     currentDpi = VisualTreeHelper.GetDpi(this);
     ```
 
-    - Cree una instancia de CompositionHost y asignarlo como elemento secundario del borde, _CompositionHostElement_.
+    - Crea una instancia de CompositionHost y asígnala como elemento secundario del borde _CompositionHostElement_.
 
     ```csharp
     compositionHost =
@@ -477,26 +477,26 @@ En el código para el control de usuario, creará una instancia de la clase Comp
     ControlHostElement.Child = compositionHost;
     ```
 
-    - Obtenga al Compositor de la CompositionHost.
+    - Obtén el compositor desde CompositionHost.
 
     ```csharp
     compositor = compositionHost.Compositor;
     ```
 
-    - Para crear un contenedor visual, utilice al Compositor. Este es el contenedor de composición que se agregan los elementos de la composición.
+    - Usa el compositor para crear un objeto visual contenedor. Este es el contenedor de Composition al que se agregan los elementos de Composition.
 
     ```csharp
     containerVisual = compositor.CreateContainerVisual();
     compositionHost.Child = containerVisual;
     ```
 
-### <a name="add-composition-elements"></a>Agregar elementos de composición
+### <a name="add-composition-elements"></a>Agregar elementos de Composition
 
-Con la infraestructura en su lugar, ahora puede generar el contenido de composición que desea mostrar.
+Una vez implementada la infraestructura, ahora puedes generar el contenido de Composition que quieres mostrar.
 
-En este ejemplo, agrega código que crea y se anima un cuadrado simple [SpriteVisual](/uwp/api/windows.ui.composition.spritevisual).
+En este ejemplo, se agrega código que crea y anima un cuadrado [SpriteVisual](/uwp/api/windows.ui.composition.spritevisual) simple.
 
-1. Agregue un elemento de composición. En CompositionHostControl.xaml.cs, agregue estos métodos a la clase CompositionHostControl.
+1. Agrega un elemento de Composition. En CompositionHostControl.xaml.cs, agrega estos métodos a la clase CompositionHostControl.
 
     ```csharp
     // Add
@@ -546,17 +546,17 @@ En este ejemplo, agrega código que crea y se anima un cuadrado simple [SpriteVi
     }
     ```
 
-### <a name="handle-dpi-changes"></a>Controlar los cambios de PPP
+### <a name="handle-dpi-changes"></a>Administración de los cambios de ppp
 
-El código para agregar y animar un elemento tiene en cuenta la escala de PPP actual cuando se crean elementos, pero también debe tener en cuenta los cambios de PPP mientras se ejecuta la aplicación. Puede controlar la [HwndHost.DpiChanged](/dotnet/api/system.windows.interop.hwndhost.dpichanged) basada en eventos para recibir notificaciones de cambios y ajustar los cálculos en el nuevo valor de PPP.
+El código para agregar y animar un elemento tiene en cuenta la escala de ppp actual cuando se crean los elementos, pero también tienes que tener en cuenta los cambios de ppp mientras se ejecuta la aplicación. Puedes controlar el evento [HwndHost.DpiChanged](/dotnet/api/system.windows.interop.hwndhost.dpichanged) para recibir notificaciones de los cambios y ajustar los cálculos en función del nuevo valor de ppp.
 
-1. En el método CompositionHostControl_Loaded, después de la última línea, agregue esta opción para enlazar el controlador de evento DpiChanged.
+1. En el método CompositionHostControl_Loaded, después de la última línea, agrega esto para enlazar el controlador de eventos DpiChanged.
 
     ```csharp
     compositionHost.DpiChanged += CompositionHost_DpiChanged;
     ```
 
-1. Agregue el método de controlador de eventos con el nombre _CompositionHostDpiChanged_. Este código ajusta la escala y el desplazamiento de cada elemento y se vuelve a calcular las animaciones que no se completen.
+1. Agrega el método de control de eventos con el nombre _CompositionHostDpiChanged_. Este código ajusta la escala y el desplazamiento de cada elemento, y vuelve a calcular las animaciones que no se han completado.
 
     ```csharp
     private void CompositionHost_DpiChanged(object sender, DpiChangedEventArgs e)
@@ -579,10 +579,10 @@ El código para agregar y animar un elemento tiene en cuenta la escala de PPP ac
 
 ## <a name="add-the-user-control-to-your-xaml-page"></a>Agregar el control de usuario a la página XAML
 
-Ahora, puede agregar el control de usuario a la UI de XAML.
+Ahora, puedes agregar el control de usuario a la interfaz de usuario XAML.
 
-1. En MainWindow.xaml, establezca el alto de la ventana en 600 y el ancho de 840.
-1. Agregue el XAML para la interfaz de usuario. En MainWindow.xaml, agregue este XAML entre la raíz `<Grid> </Grid>` etiquetas.
+1. En MainWindow.xaml, establece el alto de la ventana en 600 y el ancho en 840.
+1. Agrega el código XAML de la interfaz de usuario. En MainWindow.xaml, agrega este código XAML entre las etiquetas `<Grid> </Grid>` raíz.
 
     ```xaml
     <Grid.ColumnDefinitions>
@@ -608,9 +608,9 @@ Ahora, puede agregar el control de usuario a la UI de XAML.
                                   BorderThickness="3"/>
     ```
 
-1. Controle el clic de botón para crear nuevos elementos. (El evento Click ya está enlazado en el XAML.)
+1. Controla el clic de botón para crear nuevos elementos. (El evento Click ya está enlazado en el código XAML).
 
-    En MainWindow.xaml.cs, agregue esto *Button_Click* método controlador de eventos. Este código llama a _CompositionHost.AddElement_ para crear un nuevo elemento con un tamaño generado al azar y desplazamiento.
+    En MainWindow.xaml.cs, agrega este método de controlador de eventos *Button_Click*. Este código llama a _CompositionHost.AddElement_ para crear un nuevo elemento con un tamaño y desplazamiento generados de forma aleatoria.
 
     ```csharp
     // Add
@@ -626,25 +626,25 @@ Ahora, puede agregar el control de usuario a la UI de XAML.
     }
     ```
 
-Ahora puede compilar y ejecutar la aplicación WPF. Si necesita, compruebe el código completo al final del tutorial para asegurarse de que todo el código está en los lugares correctos.
+Ahora puedes compilar y ejecutar la aplicación de WPF. Si es necesario, comprueba el código completo al final del tutorial para asegurarte de que todo el código está en el lugar correcto.
 
-Cuando ejecute la aplicación y haga clic en el botón, debería ver animados cuadrados agregados a la interfaz de usuario.
+Al ejecutar la aplicación y hacer clic en el botón, verás que se agregan los cuadrados animados a la interfaz de usuario.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener un ejemplo más completo que se basa en la misma infraestructura, consulte el [ejemplo de integración de WPF Visual layer](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WPF/VisualLayerIntegration) en GitHub.
+Para ver un ejemplo más completo que se basa en la misma infraestructura, consulta en GitHub el [ejemplo de integración de la capa visual en WPF](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WPF/VisualLayerIntegration).
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Introducción (WPF)](/dotnet/framework/wpf/getting-started/) (. NET)
-- [Interoperar con código no administrado](/dotnet/framework/interop/) (. NET)
-- [Empezar a trabajar con aplicaciones de Windows 10](/windows/uwp/get-started/) (UWP)
-- [Mejore su aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance) (UWP)
+- [Introducción (WPF)](/dotnet/framework/wpf/getting-started/) (.NET)
+- [Interoperar con código no administrado](/dotnet/framework/interop/) (.NET)
+- [Introducción a las aplicaciones de Windows 10](/windows/uwp/get-started/) (UWP)
+- [Mejorar tu aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance) (UWP)
 - [Espacio de nombres Windows.UI.Composition](/uwp/api/windows.ui.composition) (UWP)
 
 ## <a name="complete-code"></a>Código completo
 
-Este es el código completo para este tutorial.
+Este es el código completo de este tutorial.
 
 ### <a name="mainwindowxaml"></a>MainWindow.xaml
 

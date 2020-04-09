@@ -12,20 +12,26 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 86386c75407cb1132cc71766e4e126b7e0e3c81b
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: e8a4c347bd2baa51115ecd9315f923e205133a6e
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339472"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081271"
 ---
 # <a name="auto-suggest-box"></a>Cuadro de sugerencias automáticas
 
 Usa un AutoSuggestBox para proporcionar una lista de sugerencias para que el usuario seleccione una a medida que escribe.
 
-> **API importantes**: [Clase AutoSuggestBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox), [Evento TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.textchanged), [Evento SuggestionChose](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.suggestionchosen), [Evento QuerySubmitted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.querysubmitted)
-
 ![Un cuadro de sugerencias automáticas](images/controls/auto-suggest-box-open.png)
+
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de plataforma**: [Clase AutoSuggestBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox), [Evento TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.textchanged), [Evento SuggestionChose](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.suggestionchosen), [Evento QuerySubmitted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.querysubmitted)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -38,7 +44,7 @@ Para obtener más información sobre cómo elegir el control de texto correcto, 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">Galería de controles XAML</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/AutoSuggestBox">abrirla y ver AutoSuggestBox en acción</a>.</p>
     <ul>
@@ -143,7 +149,7 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
 Usa un AutoSuggestBox para proporcionar una lista de sugerencias para que el usuario seleccione una a medida que escribe.
 
-De manera predeterminada, el cuadro de entrada de texto no muestra un botón de consulta. Puedes establecer la propiedad [QueryIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.queryicon) para agregar un botón con el icono especificado en la parte derecha del cuadro de texto. Por ejemplo, para que el AutoSuggestBox tenga el aspecto de un cuadro de búsqueda habitual, agrega un icono 'Buscar', como este.
+De manera predeterminada, el cuadro de entrada de texto no muestra un botón de consulta. Puedes establecer la propiedad [QueryIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox.queryicon) para agregar un botón con el icono especificado en la parte derecha del cuadro de texto. Por ejemplo, para que el AutoSuggestBox tenga el aspecto de un cuadro de búsqueda típico, agrega un icono "Buscar", como este.
 
 ```xaml
 <AutoSuggestBox QueryIcon="Find"/>
@@ -174,7 +180,7 @@ Aquí se muestra un AutoSuggestBox con un icono 'Buscar'.
 </div>
 -->
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 - [Ejemplo de AutoSuggestBox](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlAutoSuggestBox)
@@ -183,7 +189,7 @@ Aquí se muestra un AutoSuggestBox con un icono 'Buscar'.
 
 - [Controles de texto](text-controls.md)
 - [Revisión ortográfica](text-controls.md)
-- [Buscar](search.md)
+- [Búsqueda](search.md)
 - [Clase TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
 - [Clase Windows.UI.Xaml.Controls PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 - [Propiedad String.Length](https://docs.microsoft.com/dotnet/api/system.string.length)

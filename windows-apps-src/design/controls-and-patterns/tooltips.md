@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1dabfee25df08d933fc892c3ed6e46f3cc6f4513
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: e1e4874051554a8b725c7921a60a2c2429b18bc1
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364033"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081462"
 ---
 # <a name="tooltips"></a>Información sobre herramientas
 
@@ -25,7 +25,13 @@ La información sobre herramientas es una breve descripción que está vinculada
 
 ![Una información sobre herramientas](images/controls/tool-tip.png)
 
-> **API importantes**: [Clase ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) y [Clase ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete de NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de plataforma**: [Clase ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) y [Clase ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -59,7 +65,7 @@ Usa información sobre herramientas para ofrecer más información sobre un cont
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/ToolTip">abrir la aplicación y ver ToolTip en acción</a>.</p>
     <ul>
@@ -108,7 +114,7 @@ Puedes usar cualquier objeto como [Contenido](/uwp/api/windows.ui.xaml.controls.
 </TextBlock>
 ```
 
-### <a name="placement"></a>Colocación
+### <a name="placement"></a>Selección de ubicación
 
 De manera predeterminada, una información sobre herramientas aparece centrada encima del puntero. La ubicación no está restringida por la ventana de la aplicación, por lo que es posible que la información sobre herramientas se muestre parcial o completamente fuera de los límites de la ventana de la aplicación.
 
@@ -147,9 +153,9 @@ Si una información sobre herramientas oculta el contenido al que hace referenci
 - No pongas controles interactivos dentro de la información sobre herramientas.
 - No pongas imágenes que parezcan interactivas dentro de la información sobre herramientas.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

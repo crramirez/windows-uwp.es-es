@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 52de0933bf51adaae6b0923868e12eb92ced4a1a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 320586fb8fe7f71eaea2d4b12c0dd731a1f721db
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63793777"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080967"
 ---
 # <a name="flyouts"></a>Controles flotantes
 
@@ -24,20 +24,26 @@ Un control flotante es un contenedor de cierre del elemento por cambio de foco q
 
 ![Menú contextual anidado dentro de un control flotante](../images/flyout-nested.png)
 
-> **API importantes**: [Clase Flyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de plataforma:** [Clase Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 * No uses un control flotante en lugar de una [información sobre herramientas](../tooltips.md) o un [menú contextual](../menus.md). Usa una información sobre herramientas para mostrar una descripción breve que se oculta tras un tiempo determinado. Usa un menú contextual para acciones contextuales relacionadas con un elemento de la interfaz de usuario, como copiar y pegar.
 
-Para obtener recomendaciones sobre cuándo usar un control flotante frente a cuándo se debe usar un cuadro de diálogo (un control similar), vea [Cuadros de diálogo y controles flotantes](index.md). 
+Para obtener recomendaciones sobre cuándo usar un control flotante frente a cuándo se debe usar un cuadro de diálogo (un control similar), vea [Cuadros de diálogo y controles flotantes](index.md).
 
 ## <a name="examples"></a>Ejemplos
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para abrirla y ver <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> o <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> en acción.</p>
     <ul>
@@ -74,7 +80,7 @@ En este ejemplo se agrega un control flotante simple a una imagen. Cuando el usu
   <FlyoutBase.AttachedFlyout>
     <Flyout>
       <TextBlock Text="This is some text in a flyout."  />
-    </Flyout>        
+    </Flyout>
   </FlyoutBase.AttachedFlyout>
 </Image>
 ````
@@ -121,7 +127,7 @@ En los ejemplos anteriores, los controles flotantes se definen alineados. Tambi�
 ````csharp
 private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 {
-    FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);  
+    FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
 }
 ````
 
@@ -157,10 +163,10 @@ Los controles de cierre del elemento por cambio de foco como los controles flota
 
 ## <a name="light-dismiss-behavior"></a>Comportamiento de cierre del elemento por cambio de foco
 Los controles flotantes se pueden cerrar con una rápida acción de cierre del elemento por cambio de foco, incluidas:
--   Pulsar fuera del control flotante.
--   Presionar la tecla de teclado Escape.
--   Presionar el botón Atrás del sistema de hardware o software.
--   Presionar el botón B del controlador para juegos.
+-    Pulsar fuera del control flotante.
+-    Presionar la tecla de teclado Escape.
+-    Presionar el botón Atrás del sistema de hardware o software.
+-    Presionar el botón B del controlador para juegos.
 
 Al descartar con una pulsación, este gesto se absorbe normalmente y no pasa a la interfaz de usuario que se encuentra debajo. Por ejemplo, si hay un botón visible detrás de un control flotante abierto, primera pulsación del usuario descarta el control flotante, pero no activa este botón. Al presionar el botón se requiere una segunda pulsación.
 
@@ -177,7 +183,7 @@ En el siguiente ejemplo, se activarán los tres botones dentro de la FavoritesBa
                 OverlayInputPassThroughElement="{x:Bind FavoritesBar}">
             <StackPanel>
                 <HyperlinkButton Content="Washington Trails Association"/>
-                <HyperlinkButton Content="Washington Cascades - Go Northwest! A Travel Guide"/>  
+                <HyperlinkButton Content="Washington Cascades - Go Northwest! A Travel Guide"/>
             </StackPanel>
         </Flyout>
     </Page.Resources>
@@ -188,7 +194,7 @@ En el siguiente ejemplo, se activarán los tres botones dentro de la FavoritesBa
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel x:Name="FavoritesBar" Orientation="Horizontal">
-            <HyperlinkButton x:Name="PageLinkBtn">Bing</HyperlinkButton>  
+            <HyperlinkButton x:Name="PageLinkBtn">Bing</HyperlinkButton>
             <Button x:Name="Folder1" Content="Travel" Flyout="{StaticResource TravelFlyout}"/>
             <Button x:Name="Folder2" Content="Entertainment" Click="Folder2_Click"/>
         </StackPanel>
@@ -208,9 +214,9 @@ private void Folder2_Click(object sender, RoutedEventArgs e)
 {
 ````
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
-- [Ejemplos de Galería de controles XAML](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 - [Información sobre herramientas](../tooltips.md)

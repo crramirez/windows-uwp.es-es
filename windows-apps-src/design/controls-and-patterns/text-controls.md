@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c171a431180ee63956bae1c235224f64642601a
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 7f2421316be30d24ef44784974fc2c6c199a6570
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340223"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081485"
 ---
 # <a name="text-controls"></a>Controles de texto
 
@@ -45,11 +45,11 @@ La propiedad de contenido de RichTextBlock es la propiedad [Blocks](https://docs
 
 ### <a name="text-input"></a>Entrada de texto
 
-Usa un control **TextBox** para permitir al usuario escribir y editar texto sin formato, como en un formulario. Puedes usar la propiedad [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) para obtener el texto y establecerlo en un TextBox.
+Usa un control **TextBox** para permitir al usuario escribir y editar texto sin formato, como en un formulario. Puedes usar la propiedad [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) para obtener el texto y establecerlo en un control TextBox.
 
-Puedes hacer un TextBox de solo lectura, pero este debe ser un estado temporal y condicional. Si el texto nunca es editable, considera la posibilidad de usar un TextBlock en su lugar.
+Puedes hacer que un control TextBox sea de solo lectura, pero este debe ser un estado temporal y condicional. Si el texto nunca es editable, considera la posibilidad de usar un TextBlock en su lugar.
 
-Usa un control **PasswordBox** para recopilar la contraseña u otros datos privados, como el número de la Seguridad social. Un cuadro de contraseña es un cuadro de entrada de texto que oculta los caracteres que se escriben en él para asegurar la privacidad. Un cuadro de contraseña parece un cuadro de entrada de texto, salvo que muestra viñetas, en vez del texto que se ha escrito. El carácter de viñeta se puede personalizar.
+Usa un control **PasswordBox** para recopilar la contraseña u otros datos privados, como el número de la Seguridad Social. Un cuadro de contraseña es un cuadro de entrada de texto que oculta los caracteres que se escriben en él para asegurar la privacidad. Un cuadro de contraseña parece un cuadro de entrada de texto, salvo que muestra viñetas en vez del texto que se ha escrito. El carácter de viñeta se puede personalizar.
 
 Usa un control **AutoSuggestBox** para mostrar al usuario una lista de sugerencias para que elija una a medida que escribe. Un cuadro de sugerencias automáticas es un cuadro de entrada de texto que desencadena una lista de sugerencias de búsqueda básicas. Los términos sugeridos pueden dibujarse a partir de una combinación de los términos de búsqueda más usados y el historial de los términos que el usuario ha escrito.
 
@@ -75,7 +75,7 @@ Hay muchas maneras de obtener la entrada del usuario en la aplicación. Estas pr
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/category/Text">abrir la aplicación y ver los controles de texto en acción</a>.</p>
     <ul>
@@ -125,20 +125,20 @@ A partir de Windows 10, versión 1803, los cuadros de entrada de texto XAML cu
 
 Para obtener más información, consulta [Entrada de texto con la vista de escritura a mano](text-handwriting-view.md).
 
-## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elegir el teclado adecuado para el control de texto
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Elección del teclado adecuado para el control de texto
 
 **Se aplica a:** TextBox, PasswordBox y RichEditBox
 
-Para ayudar a que los usuarios escriban datos con el teclado táctil o con el panel de entrada por software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario.
+Para ayudar a los usuarios a escribir datos con el teclado táctil o con el panel de entrada de software (SIP), puedes establecer el ámbito de entrada del control de texto para que coincida con el tipo de datos que se espera que escriba el usuario.
 
 >Sugerencia Esta información se aplica únicamente al SIP. No se aplica a teclados de hardware o al teclado en pantalla disponible en las opciones de accesibilidad de Windows.
 
-El teclado táctil se puede usar para escribir texto cuando la aplicación se ejecuta en un dispositivo con pantalla táctil. El teclado táctil se invoca cuando el usuario pulsa en un campo de entrada editable, como un TextBox o RichEditBox. Es posible conseguir que los usuarios escriban datos en la aplicación de forma mucho más rápida y sencilla, si estableces el ámbito de entrada del control de texto para que coincida con el tipo de datos que esperas que el usuario escriba. El ámbito de entrada proporciona una sugerencia al sistema sobre el tipo de entrada de texto que espera el control para que el sistema pueda proporcionar una distribución del teclado táctil especializada para el tipo de entrada.
+El teclado táctil se puede usar para escribir texto cuando la aplicación se ejecuta en un dispositivo con pantalla táctil. El teclado táctil se invoca cuando el usuario pulsa un campo de entrada editable, como TextBox o RichEditBox. Para que los usuarios puedan escribir datos en la aplicación de forma mucho más rápida y sencilla, establece el ámbito de entrada del control de texto para que coincida con el tipo de datos que esperas que escriba el usuario. El ámbito de entrada proporciona una sugerencia al sistema sobre el tipo de entrada de texto que espera el control para que el sistema pueda proporcionar un diseño de táctil especializado para el tipo de entrada.
 
-Por ejemplo, si un cuadro de texto se usa únicamente para escribir un PIN de 4 dígitos, establece la propiedad [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) en **Number**. Esto indica al sistema que debe mostrar el diseño de teclado numérico, lo cual facilita al usuario la inserción del PIN.
+Por ejemplo, si un cuadro de texto se usa únicamente para escribir un PIN de 4 dígitos, establece la propiedad [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) en **Number**. Esto indica al sistema que debe mostrar el diseño de teclado numérico, lo cual facilita al usuario la entrada del PIN.
 
 >Importante  
->El ámbito de entrada no implica que se realice ninguna validación de entrada y tampoco impide que el usuario proporcione cualquier entrada a través de un teclado de hardware u otro dispositivo de entrada. Sigues siendo responsable de la validación de la entrada en tu código, según sea necesario.
+>El ámbito de entrada no implica que se realice ninguna validación de entrada y tampoco impide que el usuario proporcione cualquier entrada a través de un teclado de hardware u otro dispositivo de entrada. Sigues siendo responsable de la validación de la entrada en el código, según sea necesario.
 
 Para obtener más información, consulta [Usar el ámbito de entrada para cambiar el teclado táctil](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard).
 

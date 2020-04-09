@@ -1,45 +1,45 @@
 ---
-description: Este tutorial muestra cómo agregar interfaces de usuario de UWP XAML y crear paquetes MSIX para incorporar otros componentes modernos en su aplicación WPF.
-title: Agregar notificaciones y las actividades de usuario de Windows 10
+description: En este tutorial se muestra cómo agregar interfaces de usuario de XAML en UWP, crear paquetes MSIX e incorporar otros componentes actuales en la aplicación de WPF.
+title: Incorporación de actividades y notificaciones del usuario de Windows 10
 ms.topic: article
 ms.date: 06/27/2019
 ms.author: mcleans
 author: mcleanbyron
-keywords: Windows 10, uwp, formularios windows forms, wpf, Islas de xaml
+keywords: windows 10, uwp, windows forms, wpf, islas xaml
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
 ms.openlocfilehash: 8443ac25ba678986046b967a90a8899eaffb76aa
 ms.sourcegitcommit: 1eec0e4fd8a5ba82803fdce6e23fcd01b9488523
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/27/2019
 ms.locfileid: "67420116"
 ---
-# <a name="part-4-add-windows-10-user-activities-and-notifications"></a>Parte 4: Agregar notificaciones y las actividades de usuario de Windows 10
+# <a name="part-4-add-windows-10-user-activities-and-notifications"></a>4\.ª parte: Incorporación de actividades y notificaciones del usuario de Windows 10
 
-Se trata de la cuarta parte de un tutorial que muestra cómo modernizar una aplicación de escritorio de WPF de ejemplo denominada Contoso gastos. Para obtener información general del tutorial, los requisitos previos y las instrucciones para descargar la aplicación de ejemplo, vea [Tutorial: Modernizar una aplicación de WPF](modernize-wpf-tutorial.md). En este artículo se da por supuesto que ya ha completado [parte 3](modernize-wpf-tutorial-3.md).
+Esta es la cuarta parte de un tutorial que muestra cómo modernizar una aplicación de escritorio de WPF de ejemplo llamada Contoso Expenses. Para obtener información general sobre el tutorial, los requisitos previos y las instrucciones para descargar la aplicación de ejemplo, consulta [Tutorial: Modernización de una aplicación WPF](modernize-wpf-tutorial.md). En este artículo se da por supuesto que ya has completado la [parte 3](modernize-wpf-tutorial-3.md).
 
-En las partes anteriores de este tutorial, ha agregado que UWP XAML controla la aplicación con islas de XAML. Como un producto de esto, también habilitar la aplicación a llamar a cualquier API de WinRT. Se abrirá la oportunidad para la aplicación pueda utilizar muchas otras características que ofrece Windows 10, no solo los controles de UWP XAML.
+En las partes anteriores de este tutorial, has agregado controles XAML de UWP a la aplicación con islas XAML. Indirectamente, también has habilitado la aplicación para que llame a cualquier API de WinRT. Esto abre la oportunidad de que la aplicación use muchas otras características ofrecidas por Windows 10, no solo los controles XAML de UWP.
 
-En el escenario ficticio de este tutorial, el equipo de desarrollo de Contoso ha decidido agregar dos nuevas características a la aplicación: las actividades y las notificaciones. Esta parte del tutorial muestra cómo implementar estas características.
+En el escenario ficticio de este tutorial, el equipo de desarrollo de Contoso ha decidido agregar dos nuevas características a la aplicación: actividades y notificaciones. En esta parte del tutorial se muestra cómo implementar estas características.
 
 ## <a name="add-a-user-activity"></a>Agregar una actividad de usuario
 
-En Windows 10, las aplicaciones pueden realizar un seguimiento de las actividades realizadas por el usuario como la apertura de un archivo o mostrar una página específica. Estas actividades, a continuación, se ponen a disposición a través de la escala de tiempo, una característica incluida en Windows 10, versión 1803, que permite al usuario volver al pasado y reanudar una actividad anteriormente a trabajar rápidamente.
+En Windows 10, las aplicaciones pueden realizar un seguimiento de las actividades realizadas por el usuario, como abrir un archivo o mostrar una página específica. Estas actividades están disponibles después mediante la línea de tiempo, una característica incorporada en la versión 1803 de Windows 10, que permite al usuario volver rápidamente al pasado y reanudar una actividad que se había iniciado anteriormente.
 
-![Imagen de escala de tiempo de Windows](images/wpf-modernize-tutorial/WindowsTimeline.png)
+![Imagen de la línea de tiempo de Windows](images/wpf-modernize-tutorial/WindowsTimeline.png)
 
-Se realiza el seguimiento de las actividades del usuario mediante [Microsoft Graph](https://developer.microsoft.com/graph/). Sin embargo, cuando se crea una aplicación de Windows 10, no necesita interactuar directamente con los puntos de conexión REST proporcionados por Microsoft Graph. En su lugar, puede usar un conjunto práctico de APIs de WinRT. Vamos a usar estas APIs WinRT en la aplicación Contoso gastos para realizar un seguimiento cada vez que el usuario abre un gasto dentro de la aplicación y usar las tarjetas adaptables para permitir que los usuarios crear la actividad.
+El seguimiento de las actividades de usuario se realiza mediante [Microsoft Graph](https://developer.microsoft.com/graph/). Sin embargo, cuando se compila una aplicación de Windows 10, no es necesario interactuar directamente con los puntos de conexión de REST proporcionados por Microsoft Graph. En su lugar, puedes usar un conjunto de API de WinRT adecuado. Vamos a usar estas API de WinRT en la aplicación Contoso Expenses para realizar un seguimiento cada vez que el usuario cree un gasto en la aplicación, y usar tarjetas adaptables que los usuarios puedan crear la actividad.
 
 ### <a name="introduction-to-adaptive-cards"></a>Introducción a las tarjetas adaptables
 
-Esta sección proporciona una breve introducción a [las tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/). Si no necesita esta información, puede omitir este paso y vaya directamente a la [agregar una tarjeta adaptable](#add-an-adaptive-card) instrucciones.
+En esta sección se proporciona una breve introducción a las [tarjetas adaptables](https://docs.microsoft.com/adaptive-cards/). Si no necesitas esta información, puedes ir directamente a las instrucciones sobre cómo [agregar una tarjeta adaptable](#add-an-adaptive-card).
 
-Las tarjetas adaptables permiten a los desarrolladores intercambiar el contenido de la tarjeta de una manera común y coherente. Una tarjeta adaptable se describe mediante una carga JSON que define su contenido, que puede incluir texto, imágenes, acciones y mucho más.
+Las tarjetas adaptables permiten a los desarrolladores intercambiar contenido de tarjetas de una manera común y coherente. Una tarjeta adaptable se describe mediante una carga JSON que define su contenido, que puede incluir texto, imágenes, acciones, etc.
 
-Una tarjeta adaptable define sólo el contenido y no la apariencia visual del contenido. La plataforma donde se recibe la tarjeta adaptable puede representar el contenido usando el estilo más apropiado. Es la manera en que están diseñadas las tarjetas adaptables a través de [un representador](https://docs.microsoft.com/adaptive-cards/rendering-cards/getting-started), que es capaz de realizar la carga de JSON y convertirla en la interfaz de usuario nativa. Por ejemplo, la interfaz de usuario podría ser XAML para un WPF o UWP app, AXML para una aplicación Android o HTML para un sitio Web o un chat bot.
+Una tarjeta adaptable define solo el contenido y no la apariencia visual del contenido. La plataforma donde se recibe la tarjeta adaptable puede representar el contenido con el estilo más adecuado. Las tarjetas adaptables se diseñan con un [representador](https://docs.microsoft.com/adaptive-cards/rendering-cards/getting-started), que puede tomar la carga de JSON y convertirla en una interfaz de usuario nativa. Por ejemplo, la interfaz de usuario podría ser XAML para una aplicación para WPF o UWP, AXML para una aplicación Android o HTML para un sitio web o un chat de bot.
 
-Este es un ejemplo de una carga de la tarjeta adaptable simple.
+Este es un ejemplo de una carga sencilla de tarjeta adaptable.
 
 ```json
 {
@@ -133,42 +133,42 @@ Este es un ejemplo de una carga de la tarjeta adaptable simple.
 }
 ```
 
-La imagen siguiente muestra cómo este JSON se representa de maneras diferentes mediante ta canal de Teams, Cortana y una notificación de Windows.
+En la imagen siguiente se muestra cómo representan este JSON un canal de Teams, Cortana y una notificación de Windows.
 
-![Imagen de representación tarjeta adaptable](images/wpf-modernize-tutorial/AdaptiveCards.png)
+![Imagen de la representación de una tarjeta adaptable](images/wpf-modernize-tutorial/AdaptiveCards.png)
 
-Las tarjetas adaptables desempeñan un papel importante en escala de tiempo porque es la manera en que Windows procesa las actividades. Cada vista en miniatura que aparece dentro de la escala de tiempo es realmente una tarjeta adaptable. Por lo tanto, cuando vas a crear una actividad de usuario dentro de la aplicación, se le pedirá que proporcione una tarjeta adaptable para representarlo.
+Las tarjetas adaptables desempeñan un papel importante en Línea de tiempo porque es la forma que tiene Windows de representar las actividades. Cada miniatura mostrada dentro de la línea de tiempo es realmente una tarjeta adaptable. Por lo tanto, cuando vayas a crear una actividad de usuario dentro de la aplicación, se te pedirá que proporciones una tarjeta adaptable para representarla.
 
 > [!NOTE]
-> Está usando una excelente manera de pensar y establecer el diseño de una tarjeta adaptable [el diseñador en línea](https://adaptivecards.io/designer/). Tendrá la oportunidad de diseñar la tarjeta con bloques de creación (imágenes, textos, columnas, etcetera) y recibir el JSON correspondiente. Una vez que tenga una idea del diseño final, puede usar una biblioteca denominada [las tarjetas adaptables](https://www.nuget.org/packages/AdaptiveCards/) para que sea más fácil generar su tarjeta adaptable mediante C# clases en lugar de JSON sin formato, que puede ser difícil de depurar y compilar.
+> Una excelente manera de recopilar el diseño de una tarjeta adaptable es usar el [diseñador en línea](https://adaptivecards.io/designer/). Tendrás la oportunidad de diseñar la tarjeta con bloques de creación (imágenes, textos, columnas, etc.) y obtener el código JSON correspondiente. Cuando tengas la idea del diseño final, puedes usar una biblioteca [Tarjetas adaptables](https://www.nuget.org/packages/AdaptiveCards/) para crear tu tarjeta adaptable fácilmente usando las clases de C# en lugar de JSON sin formato, que podría resultar difícil de depurar y compilar.
 
 ### <a name="add-an-adaptive-card"></a>Agregar una tarjeta adaptable
 
-1. Haga clic con el botón derecho en el **ContosoExpenses.Core** proyecto en el Explorador de soluciones y elija **administrar paquetes NuGet**.
+1. En el Explorador de soluciones, haz clic con el botón derecho en el proyecto **ContosoExpenses.Core** y elige **Administrar paquetes NuGet**.
 
-2. En el **Administrador de paquetes de NuGet** ventana, haga clic en **examinar**. Busque el `Newtonsoft.Json` empaquetar e instalar la última versión disponible. Esto es una conocida biblioteca de manipulación de JSON que va a utilizar para ayudar a mainipulate las cadenas JSON requeridas por las tarjetas adaptables.
+2. En la ventana **Administrador de paquetes NuGet**, haz clic en **Examinar**. Busca el paquete `Newtonsoft.Json` e instala la versión más reciente disponible. Esta es una conocida biblioteca de manipulación de JSON que se usará para ayudar a manipular las cadenas JSON requeridas por las tarjetas adaptables.
 
-    ![Paquete NewtonSoft.Json NuGet](images/wpf-modernize-tutorial/JsonNetNuGet.png)
+    ![Paquete NuGet NewtonSoft.Json](images/wpf-modernize-tutorial/JsonNetNuGet.png)
 
     > [!NOTE]
-    > Si no instala el `Newtonsoft.Json` paquete por separado, la biblioteca de las tarjetas adaptables hará referencia a una versión anterior de la `Newtonsoft.Json` paquete que no es compatible con .NET Core 3.0.
+    > Si no instalas el paquete `Newtonsoft.Json` por separado, la biblioteca de tarjetas adaptables hará referencia a una versión anterior del paquete `Newtonsoft.Json` que no es compatible con .NET Core 3.0.
 
-2. En el **Administrador de paquetes de NuGet** ventana, haga clic en **examinar**. Busque el `AdaptiveCards` empaquetar e instalar la última versión disponible.
+2. En la ventana **Administrador de paquetes NuGet**, haz clic en **Examinar**. Busca el paquete `AdaptiveCards` e instala la versión más reciente disponible.
 
-    ![Paquete de NuGet de las tarjetas adaptable](images/wpf-modernize-tutorial/AdaptiveCardsNuGet.png)
+    ![Paquete NuGet de tarjetas adaptables](images/wpf-modernize-tutorial/AdaptiveCardsNuGet.png)
 
-3. En **el Explorador de soluciones**, haga clic en el **ContosoExpenses.Core** del proyecto, elija **Agregar -> clase**. Nombre de la clase **TimelineService.cs** y haga clic en **Aceptar**.
+3. En el **Explorador de soluciones**, haz clic con el botón derecho en el proyecto **ContosoExpenses.Core** y elige **Agregar -> Clase**. Asigna a la clase el nombre **TimelineService.cs** y haz clic en **Aceptar**.
 
-4. En el **TimelineService.cs** , agregue las siguientes instrucciones a la parte superior del archivo.
+4. En el archivo **TimelineService.cs**, agrega las siguientes instrucciones en la parte superior del archivo.
 
     ```csharp
     using AdaptiveCards;
     using ContosoExpenses.Data.Models;
     ```
 
-5. Cambiar el espacio de nombres declarado en el archivo de `ContosoExpenses.Core` a `ContosoExpenses`.
+5. Cambia el espacio de nombres `ContosoExpenses.Core` declarado en el archivo por `ContosoExpenses`.
 
-5. Agregue el método siguiente a la `TimelineService` clase.
+5. Agrega el método siguiente a la clase `TimelineService`:
 
    ```csharp
     private string BuildAdaptiveCard(Expense expense)
@@ -231,20 +231,20 @@ Las tarjetas adaptables desempeñan un papel importante en escala de tiempo porq
 
 #### <a name="about-the-code"></a>Acerca del código
 
-Este método recibe una **gastos** compila un nuevo objeto con toda la información sobre los gastos para representar y **AdaptiveCard** objeto. El método agrega lo siguiente a la tarjeta:
+Este método recibe un objeto **Expense** con toda la información sobre el gasto que se va a representar y genera un nuevo objeto **AdaptiveCard**. El método agrega lo siguiente a la tarjeta:
 
-- Un título, que utiliza la descripción del gasto.
+- Un título, que usa la descripción del gasto.
 - Una imagen, que es el logotipo de Contoso.
 - El importe del gasto.
 - La fecha del gasto.
 
-Los 3 últimos elementos se dividen en dos columnas diferentes, por lo que el logotipo de Contoso y los detalles sobre los gastos pueden colocarse en paralelo. Una vez creado el objeto, el método devuelve la cadena JSON correspondiente con la Ayuda de la **ToJson** método.
+Los tres últimos elementos se dividen en dos columnas diferentes, por lo que el logotipo de Contoso y los detalles sobre el gasto pueden colocarse en paralelo. Una vez compilado el objeto, el método devuelve la cadena JSON correspondiente con la ayuda del método **ToJson**.
 
 ### <a name="define-the-user-activity"></a>Definir la actividad del usuario
 
-Ahora que ha definido la tarjeta adaptable, puede crear una actividad de usuario basada en él.
+Ahora que has definido la tarjeta adaptable, puedes crear una actividad de usuario basada en ella.
 
-1. Agregue las siguientes instrucciones al principio del **TimelineService.cs** archivo:
+1. Agrega las siguientes instrucciones en la parte superior del archivo **TimelineService.cs**:
 
     ```csharp
     using Windows.ApplicationModel.UserActivities;
@@ -253,9 +253,9 @@ Ahora que ha definido la tarjeta adaptable, puede crear una actividad de usuario
     ```
 
     > [!NOTE]
-    > Estos son los espacios de nombres UWP. Estos resolver porque el `Microsoft.Toolkit.Wpf.UI.Controls` paquete de NuGet que instaló en el paso 2 incluye una referencia a la `Microsoft.Windows.SDK.Contracts` empaquetar, lo que permite el **ContosoExpenses.Core** proyecto referencia WinRT APIs incluso aunque se trate de .NET Proyecto de Core 3.
+    > Estos son espacios de nombres de UWP. Se resuelven porque el paquete NuGet `Microsoft.Toolkit.Wpf.UI.Controls` que instalaste en el paso 2 incluye una referencia al paquete `Microsoft.Windows.SDK.Contracts`, que permite que el proyecto **ContosoExpenses.Core** haga referencia a las API de WinRT aunque sea un proyecto de .NET Core 3.
 
-2. Agregue las siguientes declaraciones de campo para el `TimelineService` clase.
+2. Agrega las siguientes declaraciones de campo a la clase `TimelineService`.
 
     ```csharp
     private UserActivityChannel _userActivityChannel;
@@ -263,7 +263,7 @@ Ahora que ha definido la tarjeta adaptable, puede crear una actividad de usuario
     private UserActivitySession _userActivitySession;
     ```
 
-3. Agregue el método siguiente a la `TimelineService` clase.
+3. Agrega el método siguiente a la clase `TimelineService`:
 
     ```csharp
     public async Task AddToTimeline(Expense expense)
@@ -284,40 +284,40 @@ Ahora que ha definido la tarjeta adaptable, puede crear una actividad de usuario
     }
     ```
 
-4. Guarde los cambios en **TimelineService.cs**.
+4. Guarda los cambios en **TimelineService.cs**.
 
 #### <a name="about-the-code"></a>Acerca del código
 
-El `AddToTimeline` método obtiene primero un **UserActivityChannel** objeto que es necesario para almacenar las actividades del usuario. A continuación, crea una nueva actividad de usuario mediante el **GetOrCreateUserActivityAsync** método, que requiere un identificador único. De este modo, si ya existe una actividad, la aplicación puede actualizarlo; en caso contrario, creará uno nuevo. El identificador para pasar depende por el tipo de aplicación que estamos creando:
+El método `AddToTimeline` obtiene primero un objeto **UserActivityChannel** que es necesario para almacenar las actividades de usuario. A continuación, crea una nueva actividad de usuario con el método **GetOrCreateUserActivityAsync**, que requiere un identificador único. Así, si una actividad ya existe, la aplicación puede actualizarla. En caso contrario, creará una nueva. El identificador que se va a pasar depende del tipo de aplicación que se está compilando:
 
-* Si desea actualizar siempre la misma actividad para que la escala de tiempo, solo se mostrarán una más reciente, puede usar un identificador fijo (como **gastos**).
-* Si desea realizar un seguimiento de todas las actividades como uno diferente, para que la escala de tiempo mostrará todas ellas, puede usar un identificador dinámico.
+* Si quieres actualizar siempre la misma actividad para que la línea de tiempo muestre solo la más reciente, puedes usar un identificador fijo (como **Expenses**).
+* Si quieres hacer el seguimiento de cada actividad por separado, para que la línea de tiempo las muestre todas, puedes usar un identificador dinámico.
 
-En este escenario, la aplicación realizará el seguimiento de cada gasto abierto como una actividad de usuario diferente, por lo que el código crea cada identificador con la palabra clave **gastos -** seguido por el identificador único gastos.
+En este escenario, la aplicación realizará un seguimiento de los gastos abiertos como una actividad de usuario diferente, por lo que el código crea cada identificador usando la palabra clave **Expense-** seguida del identificador de gastos único.
 
-Después de que el método crea un **UserActivity** objeto, rellena el objeto con la siguiente información:
+Después de que el método crea un objeto **UserActivity**, lo rellena con la siguiente información:
 
-* Un **ActivationUri** que se invoca cuando el usuario hace clic en la actividad en la escala de tiempo. El código usa un protocolo personalizado denominado **contosoexpenses** que va a controlar la aplicación más adelante.
-* El **VisualElements** objeto, que contiene un conjunto de propiedades que definen la apariencia visual de la actividad. Este código establece la **DisplayText** (que es el título que aparece encima de la entrada en la escala de tiempo) y el **contenido**. 
+* **ActivationUri**, que se invoca cuando el usuario hace clic en la actividad en la línea de tiempo. El código usa un protocolo personalizado llamado **contosoexpenses** que la aplicación controlará más adelante.
+* El objeto **VisualElements**, que contiene un conjunto de propiedades que definen la apariencia visual de la actividad. Este código establece los valores de **DisplayText** (que es el título que se muestra en la parte superior de la entrada en la línea de tiempo) y **Content**. 
 
-Esto es donde la tarjeta adaptable que se definió anteriormente desempeña un papel. La aplicación pasa la tarjeta adaptable diseñada anteriormente como contenido para el método. Sin embargo, Windows 10 usa un objeto diferente para representar una tarjeta en comparación con el utilizado por el `AdaptiveCards` paquete NuGet. Por lo tanto, el método vuelve a crear la tarjeta usando el **CreateAdaptiveCardFromJson** método expuesto por el **AdaptiveCardBuilder** clase. Después de la actividad del usuario que crea el método, guarda la actividad y crea una nueva sesión.
+Aquí es donde entra en juego la tarjeta adaptable que definió anteriormente. La aplicación pasa la tarjeta adaptable que diseñaste como contenido al método. Sin embargo, para representar una tarjeta, Windows 10 usa un objeto diferente del que usa el paquete NuGet `AdaptiveCards`. Por lo tanto, el método vuelve a crear la tarjeta con el método **CreateAdaptiveCardFromJson** expuesto por la clase **AdaptiveCardBuilder**. Después de que el método crea la actividad de usuario, guarda la actividad y crea una nueva sesión.
 
-Cuando un usuario hace clic en una actividad en la escala de tiempo, el **contosoexpenses: / /** se activará el protocolo y la dirección URL incluirá la información de la aplicación debe recuperar el gasto seleccionado. Como una tarea opcional, podría implementar la activación de protocolos para que la aplicación reacciona correctamente cuando el usuario usa la escala de tiempo.
+Cuando un usuario haga clic en una actividad de la línea de tiempo, se activará el protocolo **contosoexpenses://** y la dirección URL incluirá la información que la aplicación necesita para recuperar el gasto seleccionado. Como tarea opcional, podrías implementar la activación del protocolo para que la aplicación reaccione correctamente cuando el usuario utiliza la línea de tiempo.
 
-### <a name="integrate-the-application-with-timeline"></a>Integrar la aplicación con la escala de tiempo
+### <a name="integrate-the-application-with-timeline"></a>Integración de la aplicación con la línea de tiempo
 
-Ahora que ha creado una clase que interactúa con la escala de tiempo, nos podemos empezar a usar para mejorar la experiencia de la aplicación. El mejor lugar para usar el **AddToTimeline** método expuesto por el **TimelineService** clase es cuando el usuario abre la página de detalles de gasto.
+Ahora que has creado una clase que interactúa con la línea de tiempo, podemos empezar a usarla para mejorar la experiencia de la aplicación. El mejor lugar para usar el método **AddToTimeline** expuesto por la clase **TimelineService** es cuando el usuario abre la página de detalles de un gasto.
 
-1. En el **ContosoExpenses.Core** del proyecto, expanda el **ViewModels** carpeta y abra el **ExpenseDetailViewModel.cs** archivo. Se trata de ViewModel que admite la ventana de detalle de gastos.
+1. En el proyecto **ContosoExpenses.Core**, expande la carpeta **ViewModels** y abre el archivo **ExpenseDetailViewModel.cs**. Este es el control ViewModel que admite la ventana del detalle de gastos.
 
-2. Busque el constructor público de la **ExpenseDetailViewModel** de clases y agregue el código siguiente al final del constructor. Cuando se abre la ventana de gastos, el método se llama a la **AddToTimeline** método y pasa el gasto actual. El **TimelineService** clase utiliza esta información para crear una actividad de usuario con la información de gastos.
+2. Busca el constructor público de la clase **ExpenseDetailViewModel** y agrega el código siguiente al final del constructor. Cada vez que se abre la ventana de gastos, el método llama al método **AddToTimeline** y pasa el gasto actual. La clase **TimelineService** usa esta información para crear una actividad de usuario con la información de los gastos.
 
     ```csharp
     TimelineService timeline = new TimelineService();
     timeline.AddToTimeline(expense);
     ```
 
-    Cuando haya terminado, el constructor debería parecerse a esto.
+    Cuando termines, el constructor tendrá el siguiente aspecto.
 
     ```csharp
     public ExpensesDetailViewModel(IDatabaseService databaseService, IStorageService storageService)
@@ -334,42 +334,42 @@ Ahora que ha creado una clase que interactúa con la escala de tiempo, nos podem
     }
     ```
 
-3. Presione F5 para compilar y ejecutar la aplicación en el depurador. Elija a un empleado en la lista y, a continuación, elija un gasto. En la página de detalles, tenga en cuenta la descripción de los gastos, la fecha y la cantidad.
+3. Presiona F5 para compilar y ejecutar la aplicación en el depurador. Elige un empleado en la lista y uno de los gastos. En la página de detalles, anota la descripción del gasto, la fecha y el importe.
 
-4. Presione **inicio + TAB** para abrir la escala de tiempo.
+4. Presiona **Inicio + TAB** para abrir la línea de tiempo.
 
-5. Desplácese hacia abajo en la lista de aplicaciones actualmente abiertas hasta que vea la sección titulada **hoy**. En esta sección se muestra algunas de las actividades de usuario más reciente. Haga clic en el **ver todas las actividades** vínculo junto a la **hoy** encabezado.
+5. Baja por la lista de aplicaciones abiertas actualmente hasta que veas la sección **Hoy**. En esta sección se muestran algunas de las actividades de usuario más recientes. Haz clic en el vínculo **Ver todas las actividades** junto al encabezado **Hoy**.
 
-6. Confirme que ve una tarjeta nueva con la información sobre el gasto que acaba de seleccionar en la aplicación.
+6. Confirma que ves una nueva tarjeta con la información sobre los gastos que acabas de seleccionar en la aplicación.
 
-    ![Escala de tiempo de los gastos de Contoso](images/wpf-modernize-tutorial/ContosoExpensesTimeline.png)
+    ![Línea de tiempo de Contoso Expenses](images/wpf-modernize-tutorial/ContosoExpensesTimeline.png)
 
-7. Si ahora abre otros gastos, verá nuevas tarjetas que se va a agregar como las actividades del usuario. Recuerde que el código usa un identificador diferente para cada actividad, por lo que crea una tarjeta para cada gasto abrir en la aplicación.
+7. Si ahora abres otros gastos, verás que se agregan nuevas tarjetas como actividades de usuario. Recuerda que el código usa un identificador diferente para cada actividad, por lo que crea una tarjeta para cada gasto que abra en la aplicación.
 
 8. Cierra la aplicación.
 
 ## <a name="add-a-notification"></a>Agregar una notificación
 
-La segunda característica en que el equipo de desarrollo de Contoso desea agregar es una notificación que se muestra al usuario cada vez que se guarda un gasto nuevo en la base de datos. Para ello, puede aprovechar el sistema de notificaciones integradas en Windows 10, que se expone a los desarrolladores a través de WinRT APIs. Este sistema de notificación tiene muchas ventajas:
+La segunda característica que el equipo de desarrollo de Contoso quiere agregar es una notificación que se muestre al usuario cada vez que se guarde un nuevo gasto en la base de datos. Para ello, puede aprovechar el sistema de notificaciones integradas de Windows 10, que se expone a los desarrolladores mediante las API de WinRT. Este sistema de notificación tiene muchas ventajas:
 
 - Las notificaciones son coherentes con el resto del sistema operativo.
-- Son útiles.
-- Se almacenan en el centro de actividades por lo que se pueden revisar más adelante.
+- Son accionables.
+- Se almacenan en el Centro de actividades para que se puedan revisar más adelante.
 
 Para agregar una notificación a la aplicación:
 
-1. En **el Explorador de soluciones**, haga clic en el **ContosoExpenses.Core** del proyecto, elija **Agregar -> clase**. Nombre de la clase **NotificationService.cs** y haga clic en **Aceptar**.
+1. En el **Explorador de soluciones**, haz clic con el botón derecho en el proyecto **ContosoExpenses.Core** y elige **Agregar -> Clase**. Asigna a la clase el nombre **NotificationService.cs** y haz clic en **Aceptar**.
 
-2. En el **NotificationService.cs** , agregue las siguientes instrucciones a la parte superior del archivo.
+2. En el archivo **NotificationService.cs**, agrega las siguientes instrucciones en la parte superior del archivo.
 
     ```csharp
     using Windows.Data.Xml.Dom;
     using Windows.UI.Notifications;
     ```
 
-3. Cambiar el espacio de nombres declarado en el archivo de `ContosoExpenses.Core` a `ContosoExpenses`.
+3. Cambia el espacio de nombres `ContosoExpenses.Core` declarado en el archivo por `ContosoExpenses`.
 
-4. Agregue el método siguiente a la `NotificationService` clase.
+4. Agrega el método siguiente a la clase `NotificationService`:
 
     ```csharp
     public void ShowNotification(string description, double amount)
@@ -391,18 +391,18 @@ Para agregar una notificación a la aplicación:
     }
     ```
 
-    Notificaciones del sistema se representan mediante una carga XML, que puede incluir texto, imágenes, acciones y mucho más. Puede encontrar todos los elementos admitidos [aquí](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/toast-schema). Este código utiliza un esquema muy simple con dos líneas de texto: el título y el cuerpo. Después de que el código define la carga XML y los carga en un **XmlDocument** objeto que encapsula el código XML en un **ToastNotification** objeto y se muestra mediante un el **ToastNotificationManager** clase.
+    Las notificaciones del sistema se representan mediante una carga XML, que puede incluir texto, imágenes, acciones, etc. Encontrarás todos los elementos admitidos [aquí](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/toast-schema). Este código usa un esquema muy sencillo con dos líneas de texto: el título y el cuerpo. Una vez que el código define la carga XML y la carga en un objeto **XmlDocument**, ajusta el código XML en un objeto **ToastNotification** y lo muestra mediante una clase **ToastNotificationManager**.
 
-5. En el **ContosoExpenses.Core** del proyecto, expanda el **ViewModels** carpeta y abra el **AddNewExpenseViewModel.cs** archivo. 
+5. En el proyecto **ContosoExpenses.Core**, expande la carpeta **ViewModels** y abre el archivo **AddNewExpenseViewModel.cs**. 
 
-6. Busque el `SaveExpenseCommand` método, que se desencadena cuando el usuario presiona el botón para guardar un gasto nuevo. Agregue el código siguiente a este método, justo después de la llamada a la `SaveExpense` método.
+6. Busca el método `SaveExpenseCommand`, que se desencadena cuando el usuario presiona el botón para guardar un nuevo gasto. Agrega el código siguiente a este método, justo después de la llamada al método `SaveExpense`.
 
     ```csharp
     NotificationService notificationService = new NotificationService();
     notificationService.ShowNotification(expense.Description, expense.Cost);
     ```
 
-    Cuando haya terminado, la `SaveExpenseCommand` método debe tener un aspecto similar al siguiente.
+    Cuando hayas terminado, el método `SaveExpenseCommand` tendrá este aspecto.
 
     ```csharp
     private RelayCommand _saveExpenseCommand;
@@ -441,14 +441,14 @@ Para agregar una notificación a la aplicación:
     }
     ```
 
-7. Presione F5 para compilar y ejecutar la aplicación en el depurador. Elija un empleado en la lista y, a continuación, haga clic en el **Agregar gasto nuevo** botón. Complete todos los campos en el formulario y presione **guardar**.
+7. Presiona F5 para compilar y ejecutar la aplicación en el depurador. Elige un empleado de la lista y, a continuación y haz clic en el botón **Add new expense** (Agregar gasto nuevo). Completa todos los campos del formulario y presiona **Save** (Guardar).
 
-8. Recibirá la siguiente excepción.
+8. Recibirás la siguiente excepción.
 
     ![Error de notificación del sistema](images/wpf-modernize-tutorial/ToastNotificationError.png)
 
-Esta excepción se produce por el hecho de que la aplicación de gastos de Contoso aún no tiene la identidad del paquete. Algunas APIs WinRT, incluidas las notificaciones de API, requieren la identidad del paquete antes de que se pueden usar en una aplicación. Las aplicaciones UWP recibir identidad del paquete de forma predeterminada porque solo se pueden distribuir a través de paquetes MSIX. Otros tipos de aplicaciones de Windows, incluidas las aplicaciones WPF, también pueden implementarse a través de paquetes MSIX para obtener la identidad del paquete. La siguiente parte de este tutorial explorará cómo hacerlo.
+Esta excepción se debe al hecho de que la aplicación Contoso Expenses todavía no tiene la identidad del paquete. Algunas API de WinRT, incluida la API de notificaciones, requieren la identidad del paquete antes de que se puedan usar en una aplicación. Las aplicaciones UWP reciben la identidad de paquete de forma predeterminada porque solo se pueden distribuir a través de paquetes MSIX. Otros tipos de aplicaciones de Windows, incluidas las aplicaciones de WPF, también se pueden implementar a través de paquetes MSIX para obtener la identidad del paquete. En la siguiente parte de este tutorial se explica cómo hacerlo.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este punto del tutorial, ha agregado correctamente una actividad de usuario a la aplicación que se integra con la escala de tiempo de Windows, y también ha agregado una notificación a la aplicación que se desencadena cuando los usuarios crean un gasto nuevo. Sin embargo, la notificación todavía no funciona porque la aplicación requiere la identidad del paquete para usar las notificaciones de API. Para obtener información sobre cómo crear un paquete MSIX para la aplicación obtener la identidad del paquete y obtener otros beneficios de la implementación, consulte [parte 5: Empaquetar e implementar con MSIX](modernize-wpf-tutorial-5.md).
+En este punto del tutorial, has agregado correctamente una actividad de usuario a la aplicación que se integra con la línea de tiempo de Windows, y has agregado también una notificación a la aplicación que se desencadena cuando los usuarios crean un nuevo gasto. Sin embargo, la notificación todavía no funciona porque la aplicación requiere que la identidad del paquete use la API de notificaciones. Para obtener información sobre cómo crear un paquete MSIX para que la aplicación obtenga la identidad del paquete, así como otras ventajas de implementación, consulta la [parte 5: Empaquetar e implementar con MSIX](modernize-wpf-tutorial-5.md).

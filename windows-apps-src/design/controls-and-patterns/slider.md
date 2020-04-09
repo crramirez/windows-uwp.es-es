@@ -12,23 +12,26 @@ design-contact: ksulliv
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 841903f9bc998af5ead2a3486c500487cb070855
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: cf4e9885fdb17780c176e2740101a0cd530328ec
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364303"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081554"
 ---
 # <a name="sliders"></a>Controles deslizantes
 
- 
-
 Un control deslizante es un control que permite que el usuario seleccione entre un intervalo de valores moviendo un control de posición por una pista.
-
-> **API importantes**: [clase Slider](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider), [propiedad Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [evento ValueChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
 
 ![Control deslizante](images/controls/slider.png)
 
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
+
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de plataforma**: [clase Slider](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider), [propiedad Value](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [evento ValueChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -40,27 +43,27 @@ No uses un control deslizante para una configuración binaria. En lugar de ello,
 
 A continuación encontrarás algunos factores adicionales que deberás tener en cuenta a la hora de decidirte a usar un control deslizante:
 
--   **¿El valor de configuración parece una cantidad relativa?** Si no es así, usa [botones de radio](radio-button.md) o un [cuadro de lista](lists.md).
--   **¿El valor de configuración es un valor numérico exacto y conocido?** Si es así, usa un [cuadro de texto](text-box.md).
--   **¿Sería bueno que el usuario obtuviera una respuesta inmediata sobre el efecto de los cambios realizados en la configuración?** Si es así, usa un control deslizante. Por ejemplo, los usuarios pueden elegir un color más fácilmente si ven de forma inmediata el efecto de los cambios en los valores de matiz, saturación o luminosidad.
--   **¿La configuración tiene un intervalo de cuatro o más valores?** Si no es así, usa [botones de radio](radio-button.md).
--   **¿El usuario puede cambiar el valor?** Los controles deslizantes están destinados a la interacción del usuario. Si un usuario no puede cambiar el valor, usa texto de solo lectura.
+- **¿El valor de configuración parece una cantidad relativa?** Si no es así, usa [botones de radio](radio-button.md) o un [cuadro de lista](lists.md).
+- **¿El valor de configuración es un valor numérico exacto y conocido?** Si es así, usa un [cuadro de texto](text-box.md).
+- **¿Sería bueno que el usuario obtuviera una respuesta inmediata sobre el efecto de los cambios realizados en la configuración?** Si es así, usa un control deslizante. Por ejemplo, los usuarios pueden elegir un color más fácilmente si ven de forma inmediata el efecto de los cambios en los valores de matiz, saturación o luminosidad.
+- **¿La configuración tiene un intervalo de cuatro o más valores?** Si no es así, usa [botones de radio](radio-button.md).
+- **¿El usuario puede cambiar el valor?** Los controles deslizantes están destinados a la interacción del usuario. Si un usuario no puede cambiar el valor, usa texto de solo lectura.
 
 Si intentas decidir entre un control deslizante y un cuadro de texto numérico, usa el cuadro de texto numérico si:
 
--   El espacio en pantalla es limitado.
--   Es probable que el usuario prefiera usar el teclado.
+- El espacio en pantalla es limitado.
+- Es probable que el usuario prefiera usar el teclado.
 
 Usa el control deslizante si:
 
--   Los usuarios van a sacar provecho de una respuesta instantánea.
+- Los usuarios van a sacar provecho de una respuesta instantánea.
 
 ## <a name="examples"></a>Ejemplos
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/Slider">abrir la aplicación y ver Slider en acción</a>.</p>
     <ul>
@@ -176,7 +179,7 @@ La dirección del intervalo es la dirección hacia la que mueves el control desl
 
     -   Si necesitas una etiqueta de valor, muéstrala debajo del control deslizante.
     -   Centra el texto en relación con el control e incluye las unidades (como pueden ser píxeles).
-    -   Como el control de posición del control deslizante queda oculto al deslizarlo, considera la posibilidad de mostrar el valor actual de alguna otra forma, con una etiqueta u otro elemento visual. Un control deslizante que establezca el tamaño del texto podría presentar un texto de muestra del tamaño correcto al lado del control deslizante.
+    -   Como el control de posición del control deslizante queda oculto al deslizarlo, considera la posibilidad de mostrar el valor actual de alguna otra forma, con una etiqueta u otro objeto visual. Un control deslizante que establezca el tamaño del texto podría presentar un texto de muestra del tamaño correcto al lado del control deslizante.
 
 ### <a name="appearance-and-interaction"></a>Aspecto e interacción
 
@@ -186,9 +189,9 @@ Un control deslizante tiene un destino táctil grande. Para que la accesibilidad
 
 Al diseñar un control deslizante personalizado, piensa en la manera de presentar toda la información necesaria al usuario de la forma más clara posible. Usa una etiqueta de valor si el usuario tiene que saber cuáles son las unidades para entender la opción. Busca formas creativas de representar valores gráficamente. Por ejemplo, un control deslizante que controle el volumen podría mostrar el gráfico de un altavoz sin ondas de sonido en el extremo inferior del control y el gráfico de un altavoz con ondas de sonido en el extremo superior.
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
-- [Ejemplos de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): consulta todos los controles XAML en un formato interactivo.
+- [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 
 ## <a name="related-topics"></a>Temas relacionados
 - [Modificadores para alternar](toggles.md)

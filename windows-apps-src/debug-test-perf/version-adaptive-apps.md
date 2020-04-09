@@ -7,27 +7,27 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b947d0b6cc83dc6bca45efb7103a933e79972e3b
 ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/21/2019
 ms.locfileid: "67317451"
 ---
-# <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicaciones adaptables de versión: Usar las nuevas API y mantener la compatibilidad con versiones anteriores
+# <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Aplicaciones adaptables para versiones: usar nuevas API y mantener la compatibilidad con versiones anteriores
 
 Cada versión del SDK de Windows 10 agrega nuevas y emocionantes funcionalidades, y querrás aprovecharlas. Sin embargo, no todos los clientes actualizarán sus dispositivos a la última versión de Windows 10 al mismo tiempo y quieres asegurarte de que tu aplicación funciona en la gama más amplia posible de dispositivos. Aquí te mostramos cómo diseñar la aplicación para que se ejecute en versiones anteriores de Windows 10, pero que también aproveche las ventajas de las nuevas funciones cuando la aplicación se ejecute en un dispositivo que tenga instalada la actualización más reciente.
 
-Es necesario llevar a cabo 3 pasos para asegurarse de que la aplicación admite la gama más amplia posible de dispositivos Windows 10.
+Es necesario llevar a cabo tres pasos para asegurarse de que la aplicación admita la gama más amplia posible de dispositivos Windows 10.
 
 - En primer lugar, configura el proyecto de Visual Studio para orientarlo a las API más recientes. Esto afecta a lo que sucede cuando se compila la aplicación.
 - En segundo lugar, realiza comprobaciones en tiempo de ejecución para asegurarte de llamar únicamente a las API que estén presentes en el dispositivo en el que se ejecute la aplicación.
-- Por último, prueba la aplicación en la versión mínima y la versión de destino de Windows 10.
+- Por último, prueba la aplicación en la versión mínima y la versión de destino de Windows 10.
 
 ## <a name="configure-your-visual-studio-project"></a>Configura el proyecto de Visual Studio.
 
 El primer paso para admitir varias versiones de Windows 10 es especificar las versiones *de destino* y *mínimas* del sistema operativo/SDK que se admiten en el proyecto de Visual Studio.
 
-- *Destino*: La versión del SDK que Visual Studio compila el código de aplicación y ejecutar todas las herramientas contra. Todas las API y todos los recursos de esta versión del SDK están disponibles en el código de la aplicación en el momento de la compilación.
-- *Mínimo*: La versión del SDK que admite la versión de SO más antigua que la aplicación se puede ejecutar en (y se implementará en el almacén) y la versión de Visual Studio compila el código de marcado de la aplicación contra. 
+- *Destino*: es la versión del SDK en la que Visual Studio compila el código de la aplicación y ejecuta todas las herramientas. Todas las API y todos los recursos de esta versión del SDK están disponibles en el código de la aplicación en el momento de la compilación.
+- *Mínimo*: es la versión del SDK que admite la versión más antigua del sistema operativo en la que se puede ejecutar la aplicación (y que la Tienda implementará) y la versión para la que Visual Studio compila el código de marcado de la aplicación. 
 
 Durante el tiempo de ejecución, la aplicación se ejecutará para la versión del sistema operativo para la que se implemente, por lo que la aplicación generará excepciones si usas recursos o llamas a API que no estén disponibles en esa versión. Más adelante en este artículo te mostramos cómo usar las comprobaciones en tiempo de ejecución para llamar a las API correctas.
 
@@ -48,20 +48,20 @@ Para cambiar la versión mínima y de destino de un proyecto que ya se haya crea
 
 Como referencia, la siguiente tabla muestra los números de compilación de cada SDK.
 
-| Nombre descriptivo | `Version` | Sistema operativo/compilación de SDK |
+| Nombre descriptivo | Version | Sistema operativo/compilación de SDK |
 | ---- | ---- | ---- |
 | RTM | 1507 | 10240 |
 | Actualización de noviembre | 1511 | 10586 |
-| Actualización de aniversario | 1607 | 14393 |
+| Anniversary Update | 1607 | 14393 |
 | Creators Update | 1703 | 15063 |
-| Fall Creators Update | 1709 | 16299 |
+| Actualización Fall Creators Update | 1709 | 16299 |
 | Actualización de abril de 2018 | 1803 | 17134 |
 | Actualización de octubre de 2018 | 1809 | 17763 |
 | Actualización de mayo de 2019 | 1903 | 18362 |
 
 Puedes descargar cualquier versión publicada del SDK desde [Windows SDK y el archivo del emulador](https://developer.microsoft.com/windows/downloads/sdk-archive). Puedes descargar el Windows Insider Preview SDK más reciente desde la sección para desarrolladores del sitio [Windows Insider](https://insider.windows.com/for-developers/).
 
- Para obtener más información acerca de las actualizaciones de Windows 10, consulte [información de versión de Windows 10](https://www.microsoft.com/itpro/windows-10/release-information). Para obtener información importante sobre el ciclo de vida de soporte técnico de Windows 10, consulte el [hoja de información del ciclo de vida de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+ Para más información sobre las actualizaciones de Windows 10, consulta [Información de versión de Windows 10](https://www.microsoft.com/itpro/windows-10/release-information). Para obtener información importante sobre el ciclo de vida de soporte técnico de Windows 10, consulta la [Hoja de datos del ciclo de vida de Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 ## <a name="perform-api-checks"></a>Realizar comprobaciones de API
 
@@ -84,13 +84,13 @@ Los tipos relacionados lógicamente se agrupan en un contrato de API y, a partir
 El contrato de API más grande y más comúnmente usado es el **Windows.Foundation.UniversalApiContract**. Contiene la mayoría de las API en la Plataforma universal de Windows. La documentación de los [contratos de API y el SDK de extensión de la familia de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/) describe la variedad de contratos de API disponibles. Verás que la mayoría de ellos representa un conjunto de API relacionados funcionalmente.
 
 > [!NOTE]
-> Si tiene una vista previa de Windows Software Development Kit (SDK) instalado que no está documentada todavía, también puede encontrar información sobre la compatibilidad de contrato de API en el archivo 'Platform.xml' ubicado en la carpeta de instalación de SDK en '\(archivos de programa (x86)) \ Windows Kits\10\Platforms\<plataforma >\<versión SDK > \Platform.xml'.
+> Si tienes una versión preliminar del Kit de desarrollo de software (SDK) de Windows que no está documentada todavía, también podrás encontrar información sobre el soporte del contrato de la API en el archivo "Platform.xml" ubicado en la carpeta de instalación del SDK en "\(Archivos de programa (x86))\Windows Kits\10\Platforms\<plataforma>\<versión del SDK>\Platform.xm".
 
-### <a name="version-adaptive-code-and-conditional-xaml"></a>Código adaptativo para versiones y XAML condicional
+### <a name="version-adaptive-code-and-conditional-xaml"></a>Código adaptable para versiones y XAML condicional
 
 En todas las versiones de Windows 10, puedes usar la clase ApiInformation en una condición del código para probar la presencia de la API que se desee llamar. En el código adaptable, puedes usar distintos métodos de la clase, como IsTypePresent, IsEventPresent, IsMethodPresent y IsPropertyPresent, para probar las API en el nivel de detalle que necesitas.
 
-Para obtener más información y ejemplos, consulta **[Código adaptativo para versiones](version-adaptive-code.md)** .
+Para más información y ejemplos, consulta **[Código adaptable para versiones](version-adaptive-code.md)** .
 
 Si la versión mínima de tu aplicación es la compilación 15063 (Creators Update) o posterior, puedes usar *XAML condicional* para establecer propiedades y crear instancias de objetos en el marcado sin tener que usar código subyacente. El XAML condicional proporciona una forma de usar el método ApiInformation.IsApiContractPresent en el marcado.
 
@@ -105,6 +105,6 @@ Para obtener más información sobre la depuración remota, consulta [Implementa
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [¿Qué es una aplicación para UWP](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-- [Detectar dinámicamente las características con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
-- [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (Vídeo de compilación de 2015)
+- [¿Qué es una aplicación para UWP?](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [Detección dinámica de características con contratos de API](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [Contratos de API](https://channel9.msdn.com/Events/Build/2015/3-733) (vídeo de compilación de 2015)

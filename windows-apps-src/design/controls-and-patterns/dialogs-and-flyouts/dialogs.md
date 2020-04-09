@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d5014532be613e8284a1e2d6496f71b9f2b8e892
-ms.sourcegitcommit: 5002836b3c8d3e0f2970da1333ec8f42da861ae3
+ms.openlocfilehash: 00c51fed9f2d327afe6f493891b2744243501ea1
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77071257"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080963"
 ---
 # <a name="dialog-controls"></a>Controles de cuadro de diálogo
 
@@ -25,21 +25,26 @@ Los cuadros de diálogo son superposiciones modales en la interfaz de usuario qu
 
 ![Ejemplo de un cuadro de diálogo](../images/dialogs/dialog_RS2_delete_file.png)
 
+**Obtención de la biblioteca de la interfaz de usuario de Windows**
 
-> **API importantes**: [Clase ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
+|  |  |
+| - | - |
+| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+
+> **API de plataforma:** [Clase ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Use los cuadros de diálogo para notificar a los usuarios información importante o para solicitar información adicional o confirmación para completar una acción.
 
-Para obtener recomendaciones sobre cuándo usar un control flotante frente a cuándo usar un cuadro de diálogo (un control similar), vea [Cuadros de diálogo y controles flotantes](index.md). 
+Para obtener recomendaciones sobre cuándo usar un control flotante frente a cuándo usar un cuadro de diálogo (un control similar), vea [Cuadros de diálogo y controles flotantes](index.md).
 
 ## <a name="examples"></a>Ejemplos
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para abrirla y ver <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> o <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a> en acción.</p>
     <ul>
@@ -66,7 +71,7 @@ Para obtener recomendaciones sobre cuándo usar un control flotante frente a cu�
     - Asegúrese de que el texto de los botones de acción sea conciso. Las cadenas cortas permiten al usuario realizar una selección de manera rápida y segura.
     - Además de la acción segura y no destructiva, opcionalmente podrá presentar al usuario uno o dos botones de acción relacionados con la instrucción principal. Estos botones de acción "hacerlo" confirman el principal punto del cuadro de diálogo. Use las API de PrimaryButton y SecondaryButton APIs para agregar estas acciones "hacerlo".
     - Los botones de acción "hacerlo" deberían aparecer a la izquierda del resto. La acción segura y no destructiva debe aparecer como el botón situado más a la derecha.
-    - Opcionalmente, puede elegir diferenciar uno de los tres botones como el botón predeterminado del cuadro de diálogo. Use la API de DefaultButton para diferenciar uno de los botones.  
+    - Opcionalmente, puede elegir diferenciar uno de los tres botones como el botón predeterminado del cuadro de diálogo. Use la API de DefaultButton para diferenciar uno de los botones.
 -   No uses cuadros de diálogo en el caso de los errores que son contextuales para un lugar específico de la página, como los errores de validación (en los campos de contraseña, por ejemplo); usa el lienzo de la aplicación para mostrar errores en línea.
 - Use la [clase ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog) para compilar la experiencia de cuadro de diálogo. No use la API de MessageDialog en desuso.
 
@@ -135,7 +140,7 @@ private async void DisplayNoWifiDialog()
 }
 ```
 
-Cuando los cuadros de diálogo se usan para mostrar una pregunta de bloqueo, su cuadro de diálogo debe presentar al usuario los botones de acción relacionados con la pregunta. El botón "seguro" y no destructivo puede ir acompañado de uno o dos botones de acción "hacerlo". Cuando se le presenten al usuario varias opciones, asegúrese de que los botones explican con claridad las acciones "hacerlo" y seguro o "no hacerlo" relacionados con la pregunta propuesta.
+Cuando los cuadros de diálogo se usan para mostrar una pregunta de bloqueo, su cuadro de diálogo debe presentar al usuario los botones de acción relacionados con la pregunta. El botón "seguro" y no destructivo puede ir acompañado de uno o dos botones de acción "hacerlo". Cuando se le presenten al usuario varias opciones, asegúrate de que los botones explican con claridad las acciones "hacerlo" y segura o "no hacerlo" relacionadas con la pregunta propuesta.
 
 ![Un cuadro de diálogo con dos botones](../images/dialogs/dialog_RS2_two_button.png)
 
@@ -212,7 +217,7 @@ Opcionalmente, puede elegir diferenciar uno de los tres botones como el botón p
 - El botón responderá a la tecla ENTRAR automáticamente
     - Cuando el usuario presiona la tecla ENTRAR del teclado, se activará el controlador de clic asociado con el botón predeterminado y el ContentDialogResult devolverá el valor asociado con el botón predeterminado
     - Si el usuario ha situado el foco del teclado en un control que controla ENTRAR, el botón predeterminado no responderá al presionar ENTRAR
-- El botón recibirá el foco automáticamente cuando se abra el cuadro de diálogo, a menos que el contenido del cuadro de diálogo contenga interfaz de usuario activable
+- El botón recibirá el foco automáticamente cuando se abra el cuadro de diálogo, a menos que el contenido del cuadro de diálogo contenga un elemento de interfaz de usuario activable.
 
 Use la propiedad ContentDialog.DefaultButton para indicar el botón predeterminado. De manera predeterminada, no se establece ningún botón predeterminado.
 
@@ -236,8 +241,8 @@ private async void DisplaySubscribeDialog()
 ```
 
 ## <a name="confirmation-dialogs-okcancel"></a>Cuadros de diálogo de confirmación (Aceptar/Cancelar)
-Un cuadro de diálogo de confirmación ofrece a los usuarios la posibilidad de confirmar que desean realizar una acción. Pueden confirman la acción o cancelarla.  
-Un cuadro de diálogo de confirmación típico tiene dos botones: un botón de afirmación ("Aceptar") y un botón de cancelación.  
+Un cuadro de diálogo de confirmación ofrece a los usuarios la posibilidad de confirmar que desean realizar una acción. Pueden confirman la acción o cancelarla.
+Un cuadro de diálogo de confirmación típico tiene dos botones: un botón de afirmación ("Aceptar") y un botón de cancelación.
 
 <ul>
     <li>

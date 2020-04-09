@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: de7a430248841722aedd960cd485ea24499fdd00
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 43d0471b6e7ebc36df4f80a1b214b0721ae25570
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684272"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081411"
 ---
 # <a name="web-view"></a>Vista web
 
@@ -30,7 +30,7 @@ Usa un control de vista web para mostrar contenido HTML de formato enriquecido d
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p>Si tienes instalada la aplicación <strong style="font-weight: semi-bold">XAML Controls Gallery</strong>, haz clic aquí para <a href="xamlcontrolsgallery:/item/WebView">abrirla y ver WebView en acción</a>.</p>
     <ul>
@@ -59,7 +59,7 @@ Puedes obtener el título del documento HTML que se muestra actualmente en la vi
 
 Aunque WebView no es una subclase de Control, recibe el foco de entrada del teclado y participa en la secuencia de tabulación. Proporciona un método [Focus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.focus) y eventos [GotFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus) y [LostFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus), pero carece de propiedades relacionadas con la tabulación. Su posición en la secuencia de tabulación es igual a su posición en el orden de documentos XAML. La secuencia de tabulación incluye todos los elementos de la vista web que pueden recibir el foco de entrada. 
 
-Como se indica en la tabla Events de la página de la clase [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView), la vista web no admite la mayoría de los eventos de entrada de usuario heredados de [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), como [KeyDown](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown), [KeyUp](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) y [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). En vez de eso, puedes usar [InvokeScriptAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.invokescriptasync) con la función JavaScript **eval** para usar los controladores de eventos HTML y usar **window.external.notify** desde el controlador de eventos HTML para notificar a la aplicación mediante [WebView.ScriptNotify](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.scriptnotify).
+Tal y como se indica en la tabla Events de la página de la clase [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView), la vista web no admite la mayoría de los eventos de entrada de usuario heredados de [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), como [KeyDown](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown), [KeyUp](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) y [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed). En vez de eso, puedes usar [InvokeScriptAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.invokescriptasync) con la función JavaScript **eval** para usar los controladores de eventos HTML y usar **window.external.notify** desde el controlador de eventos HTML para notificar a la aplicación mediante [WebView.ScriptNotify](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.scriptnotify).
 
 ### <a name="navigating-to-content"></a>Navegación al contenido
 
@@ -88,9 +88,9 @@ webView1.Navigate("http://www.contoso.com");
 
 Para navegar a un URI con una solicitud POST y encabezados HTTP, usa el método [NavigateWithHttpRequestMessage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage). Este método solo admite [HttpMethod.Post](https://docs.microsoft.com/uwp/api/windows.web.http.httpmethod.post) y [HttpMethod.Get](https://docs.microsoft.com/uwp/api/windows.web.http.httpmethod.get) como valores de la propiedad [HttpRequestMessage.Method](https://docs.microsoft.com/uwp/api/windows.web.http.httprequestmessage.method). 
 
-Para cargar contenido sin comprimir y sin cifrar desde los almacenes de datos [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) o [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) de la aplicación, usa el método **Navigate** con un **URI** que utilice el [ms-appdata scheme](/windows/uwp/app-resources/uri-schemes). La compatibilidad de la vista web con este esquema requiere que coloques el contenido en una subcarpeta de la carpeta local o temporal. Esto permite la navegación a identificadores URI como ms-appdata:///local/*carpeta*/*archivo*.html y ms-appdata:///temp/*carpeta*/*archivo*.html. (Para cargar archivos comprimidos o cifrados, consulta [NavigateToLocalStreamUri](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri)). 
+Para cargar contenido sin comprimir y sin cifrar desde los almacenes de datos [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) o [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) de la aplicación, usa el método **Navigate** con un **URI** que utilice [ms-appdata scheme](/windows/uwp/app-resources/uri-schemes). La compatibilidad de la vista web con este esquema requiere que coloques el contenido en una subcarpeta de la carpeta local o temporal. Esto permite la navegación a identificadores URI como ms-appdata:///local/*carpeta*/*archivo*.html y ms-appdata:///temp/*carpeta*/*archivo*.html. (Para cargar archivos comprimidos o cifrados, consulta [NavigateToLocalStreamUri](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri)). 
 
-Cada una de estas subcarpetas de primer nivel está aislada del contenido de otras subcarpetas de primer nivel. Por ejemplo, puedes navegar a ms-appdata:///temp/carpeta1/archivo.html, pero no puedes tener en este archivo un vínculo a ms-appdata:///temp/carpeta2/archivo.html. Sin embargo, sí puedes establecer un vínculo al contenido HTML del paquete de la aplicación mediante el **esquema ms-appx-web**, y al contenido web mediante los esquemas URI **http** y **https**.
+Cada una de estas subcarpetas de primer nivel está aislada del contenido de otras subcarpetas de primer nivel. Por ejemplo, puedes ir a ms-appdata:///temp/carpeta1/archivo.html, pero en este archivo no puedes tener un vínculo a ms-appdata:///temp/carpeta2/archivo.html. Sin embargo, sí puedes establecer un vínculo al contenido HTML del paquete de la aplicación mediante el **esquema ms-appx-web**, y al contenido web mediante los esquemas URI **http** y **https**.
 
 ```csharp
 webView1.Navigate("ms-appdata:///local/intro/welcome.html");

@@ -1,6 +1,6 @@
 ---
-title: Usar el nivel visual con Windows Forms
-description: Aprenda técnicas para usar las API de nivel visual en combinación con el contenido de Windows Forms existente para crear animaciones y efectos avanzados.
+title: Usar la capa visual con Windows Forms
+description: Obtén información sobre las técnicas de uso de las API de la capa visual en combinación con contenido de Windows Forms ya existente para crear animaciones y efectos avanzados.
 ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -9,84 +9,84 @@ author: jwmsft
 ms.localizationpriority: medium
 ms.openlocfilehash: 9da9dee48beef6e3c1cd38ffbe9761ed89fd940d
 ms.sourcegitcommit: 93d0b2996b4742b33cd6d641e036f42672cf5238
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/23/2019
 ms.locfileid: "69999637"
 ---
-# <a name="using-the-visual-layer-with-windows-forms"></a>Usar el nivel visual con Windows Forms
+# <a name="using-the-visual-layer-with-windows-forms"></a>Usar la capa visual con Windows Forms
 
-Puede usar Windows Runtime las API de composición (también denominada [capa visual](/windows/uwp/composition/visual-layer)) en las aplicaciones de Windows Forms para crear experiencias modernas que se encienden para los usuarios de Windows 10.
+Puedes usar las API de Composition de Windows Runtime (también llamada la [capa visual](/windows/uwp/composition/visual-layer)) en las aplicaciones de Windows Forms para crear experiencias modernas que atraigan a los usuarios de Windows 10.
 
-El código completo de este tutorial está disponible en GitHub: [Windows Forms ejemplo de HelloComposition](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WinForms/HelloComposition).
+El código completo de este tutorial está disponible en GitHub: [Ejemplo HelloComposition de Windows Forms](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WinForms/HelloComposition).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 La API de hospedaje de UWP tiene estos requisitos previos.
 
-- Damos por hecho que estás familiarizado con el desarrollo de aplicaciones mediante Windows Forms y UWP. Para obtener más información, consulta:
-  - [Introducción con Windows Forms](/dotnet/framework/winforms/getting-started-with-windows-forms)
-  - [Introducción a las aplicaciones de Windows 10](/windows/uwp/get-started/)
-  - [Mejorar la aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance)
-- .NET Framework 4.7.2 o posterior
-- Windows 10 versión 1803 o posterior
-- Windows 10 SDK 17134 o posterior
+- Damos por hecho que estás familiarizado con el desarrollo de aplicaciones con Windows Forms y UWP. Para obtener más información, consulta:
+  - [Introducción a Windows Forms](/dotnet/framework/winforms/getting-started-with-windows-forms)
+  - [Introducción a las aplicaciones de Windows 10](/windows/uwp/get-started/)
+  - [Mejorar tu aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance)
+- .NET Framework 4.7.2 o una versión posterior
+- Windows 10 versión 1803 o posterior
+- SDK de Windows 10 17134 o posterior
 
-## <a name="how-to-use-composition-apis-in-windows-forms"></a>Cómo usar las API de composición en Windows Forms
+## <a name="how-to-use-composition-apis-in-windows-forms"></a>Procedimiento para usar las API de Composition en Windows Forms
 
-En este tutorial, creará una interfaz de usuario de Windows Forms simple y le agregará elementos de composición animados. Los componentes de Windows Forms y de composición se mantienen sencillos, pero el código de interoperabilidad mostrado es el mismo independientemente de la complejidad de los componentes. La aplicación finalizada tiene el siguiente aspecto.
+En este tutorial, crearás una interfaz de usuario de aplicación de Windows Forms simple y le agregarás elementos de Composition animados. Tanto Windows Forms como los componentes de Composition son sencillos, pero el código de interoperabilidad mostrado es el mismo, independientemente de la complejidad de los componentes. La aplicación finalizada tiene el siguiente aspecto.
 
-![La interfaz de usuario de la aplicación en ejecución](images/visual-layer-interop/wf-comp-interop-app-ui.png)
+![Interfaz de usuario de la aplicación en ejecución](images/visual-layer-interop/wf-comp-interop-app-ui.png)
 
 ## <a name="create-a-windows-forms-project"></a>Creación de un proyecto de Windows Forms
 
-El primer paso es crear el proyecto de aplicación de Windows Forms, que incluye una definición de aplicación y el formulario principal de la interfaz de usuario.
+El primer paso es crear el proyecto de aplicación de Windows Forms, que incluye una definición de aplicación y el formulario principal para la interfaz de usuario.
 
-Para crear un nuevo proyecto de aplicación de Windows Forms C# en Visual denominado _HelloComposition_:
+Para crear un nuevo proyecto de aplicación de Windows Forms en Visual C# llamado _HelloComposition_:
 
-1. Abra Visual Studio y seleccione **archivo** > **nuevo** > **proyecto**.<br/>Se abrirá el cuadro de diálogo **nuevo proyecto** .
-1. En la categoría **instalado** , expanda el nodo  **C# visual** y, a continuación, seleccione escritorio de **Windows**.
-1. Seleccione la plantilla **Windows Forms App (.NET Framework)** .
-1. Escriba el nombre _HelloComposition,_ seleccione Framework **.NET Framework 4.7.2**y, a continuación, haga clic en **Aceptar**.
+1. Abre Visual Studio y selecciona **Archivo** > **Nuevo** > **Proyecto**.<br/>Se abre el cuadro de diálogo **Nuevo proyecto**.
+1. En la categoría **Instalados**, expande el nodo **Visual C#** y, después, selecciona **Escritorio de Windows**.
+1. Selecciona la plantilla **Aplicación de Windows Forms (.NET Framework)** .
+1. Escribe el nombre _HelloComposition_, selecciona Framework **.NET Framework 4.7.2** y, después, haz clic en **Aceptar**.
 
-Visual Studio crea el proyecto y abre el diseñador para la ventana de la aplicación predeterminada denominada Form1.cs.
+Visual Studio crea el proyecto y abre el diseñador de la ventana predeterminada de la aplicación llamada Form1.cs.
 
-## <a name="configure-the-project-to-use-windows-runtime-apis"></a>Configuración del proyecto para usar Windows Runtime API
+## <a name="configure-the-project-to-use-windows-runtime-apis"></a>Configurar el proyecto para usar las API de Windows Runtime
 
-Para usar las API de Windows Runtime (WinRT) en la aplicación Windows Forms, debe configurar el proyecto de Visual Studio para tener acceso a la Windows Runtime. Además, las API de composición usan los vectores de manera extensa, por lo que debe agregar las referencias necesarias para usar vectores.
+Para usar las API de Windows Runtime (WinRT) en la aplicación de Windows Forms, tienes que configurar el proyecto de Visual Studio para que tenga acceso a Windows Runtime. Además, las API de Composition usan mucho los vectores, por lo que tienes que agregar las referencias necesarias para usar vectores.
 
-Los paquetes de NuGet están disponibles para abordar estas dos necesidades. Instale las versiones más recientes de estos paquetes para agregar las referencias necesarias al proyecto.  
+Hay paquetes NuGet disponibles para abordar estas dos necesidades. Instala las versiones más recientes de estos paquetes para agregar las referencias necesarias al proyecto.  
 
-- [Microsoft. Windows. SDK. Contracts](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts) (requiere el formato de administración de paquetes predeterminado establecido en PackageReference).
-- [System. Numerics. vectores](https://www.nuget.org/packages/System.Numerics.Vectors/)
+- [Microsoft.Windows.SDK.Contracts](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts) (requiere el formato de administración de paquetes predeterminado establecido en PackageReference).
+- [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors/)
 
 > [!NOTE]
-> Aunque se recomienda usar los paquetes de NuGet para configurar el proyecto, puede Agregar manualmente las referencias necesarias. Para obtener más información, consulte [mejorar la aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance). En la tabla siguiente se muestran los archivos a los que es necesario agregar referencias.
+> Aunque se recomienda usar paquetes NuGet para configurar el proyecto, puedes agregar manualmente las referencias necesarias. Para más información, consulta [Mejorar tu aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance). En la tabla siguiente se muestran los archivos a los que hay que agregar referencias.
 
-|Archivo|Location|
+|Archivo|Ubicación|
 |--|--|
 |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-|Windows.Foundation.UniversalApiContract.winmd|C:\Archivos de programa (x86) \Windows\<Kits\10\References*SDK versión*>\<\Windows.Foundation.UniversalApiContract*versión*>|
-|Windows.Foundation.FoundationContract.winmd|C:\Archivos de programa (x86) \Windows\<Kits\10\References*SDK versión*>\<\Windows.Foundation.FoundationContract*versión*>|
-|System. Numerics. Vectors. dll|C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics.Vectors\v4.0_4.0.0.0__b03f5f7f11d50a3a|
-|System. Numerics. dll|C:\Archivos de programa (x86) \Reference\.Assemblies\Microsoft\Framework NETFramework\v4.7.2|
+|Windows.Foundation.UniversalApiContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\<*sdk version*>\Windows.Foundation.UniversalApiContract\<*version*>|
+|Windows.Foundation.FoundationContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\<*sdk version*>\Windows.Foundation.FoundationContract\<*version*>|
+|System.Numerics.Vectors.dll|C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics.Vectors\v4.0_4.0.0.0__b03f5f7f11d50a3a|
+|System.Numerics.dll|C:\Archivos de programa (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2|
 
 ## <a name="create-a-custom-control-to-manage-interop"></a>Crear un control personalizado para administrar la interoperabilidad
 
-Para hospedar el contenido que crea con la capa visual, cree un control personalizado derivado de [control](/dotnet/api/system.windows.forms.control). Este control proporciona acceso a un [identificador](/dotnet/api/system.windows.forms.control.handle)de ventana, que se necesita para crear el contenedor para el contenido de la capa visual.
+Para hospedar el contenido que creas con la capa visual, crea un control personalizado derivado de [Control](/dotnet/api/system.windows.forms.control). Este control permite acceder a una ventana [Handle](/dotnet/api/system.windows.forms.control.handle), que se necesita para crear el contenedor para el contenido de la capa visual.
 
-Aquí es donde se realiza la mayoría de la configuración para hospedar las API de composición. En este control, se usan los servicios de invocación de [plataforma (PInvoke)](/cpp/dotnet/calling-native-functions-from-managed-code) y la interoperabilidad [com](/dotnet/api/system.runtime.interopservices.comimportattribute) para llevar las API de composición a la aplicación Windows Forms. Para obtener más información sobre PInvoke y la interoperabilidad COM, vea interoperar [con código no administrado](/dotnet/framework/interop/index).
+Aquí es donde se realiza la mayoría de la configuración para hospedar las API de Composition. En este control, se usan los [servicios de invocación de plataforma (PInvoke)](/cpp/dotnet/calling-native-functions-from-managed-code) y la [interoperabilidad COM](/dotnet/api/system.runtime.interopservices.comimportattribute) para incorporar las API de Composition a la aplicación de Windows Forms. Para más información sobre PInvoke y la interoperabilidad COM, consulta [Interoperar con código no administrado](/dotnet/framework/interop/index).
 
 > [!TIP]
-> Si es necesario, compruebe el código completo al final del tutorial para asegurarse de que todo el código se encuentra en los lugares correctos mientras trabaja en el tutorial.
+> Si es necesario, comprueba el código completo al final del tutorial para asegurarte de que todo el código está en el lugar correcto mientras trabajas en el tutorial.
 
-1. Agregue un nuevo archivo de control personalizado al proyecto que derive de [control](/dotnet/api/system.windows.forms.control).
-    - En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto _HelloComposition_ .
-    - En el menú contextual, seleccione **Agregar** > **nuevo elemento.** ...
-    - En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **control personalizado**.
-    - Asigne al control el nombre _CompositionHost.CS_y, a continuación, haga clic en **Agregar**. CompositionHost.cs se abre en el Vista de diseño.
+1. Agrega un nuevo archivo de control personalizado al proyecto que derive de [Control](/dotnet/api/system.windows.forms.control).
+    - En el **Explorador de soluciones**, haz clic con el botón derecho en el proyecto _HelloComposition_.
+    - En el menú contextual, selecciona **Agregar** > **Nuevo elemento...** .
+    - En el cuadro de diálogo **Agregar nuevo elemento**, selecciona **Control personalizado**.
+    - Asigna al control el nombre _CompositionHost.cs_ y haz clic en **Agregar**. CompositionHost.cs se abre en la vista de diseño.
 
-1. Cambie a la vista de código para CompositionHost.cs y agregue el código siguiente a la clase.
+1. Cambia a la vista de código para ver CompositionHost.cs y agrega el código siguiente a la clase.
 
     ```csharp
     // Add
@@ -112,9 +112,9 @@ Aquí es donde se realiza la mayoría de la configuración para hospedar las API
     }
     ```
 
-1. Agregue código al constructor.
+1. Agrega código al constructor.
 
-    En el constructor, se llama a los métodos _InitializeCoreDispatcher_ y _InitComposition_ . Cree estos métodos en los pasos siguientes.
+    En el constructor, se llama a los métodos _InitializeCoreDispatcher_ e _InitComposition_. Estos métodos se crean en los pasos siguientes.
 
     ```csharp
     public CompositionHost()
@@ -132,8 +132,8 @@ Aquí es donde se realiza la mayoría de la configuración para hospedar las API
     }
     ```
 
-1. Inicializar un subproceso con un [CoreDispatcher](/uwp/api/windows.ui.core.coredispatcher). El distribuidor principal es responsable de procesar los mensajes de ventana y de enviar los eventos para las API de WinRT. Las nuevas instancias de **compositor** deben crearse en un subproceso que tenga un CoreDispatcher.
-    - Cree un método denominado _InitializeCoreDispatcher_ y agregue el código para configurar la cola del distribuidor.
+1. Inicializa un subproceso con [CoreDispatcher](/uwp/api/windows.ui.core.coredispatcher). El distribuidor principal es responsable de procesar los mensajes de ventana y de distribuir los eventos de las API de WinRT. Se deben crear nuevas instancias de **Compositor** en un subproceso que tenga un objeto CoreDispatcher.
+    - Crea un método llamado _InitializeCoreDispatcher_ y agrega código para configurar la cola del distribuidor.
 
     ```csharp
     // Add
@@ -152,7 +152,7 @@ Aquí es donde se realiza la mayoría de la configuración para hospedar las API
     }
     ```
 
-    - La cola del distribuidor requiere una declaración PInvoke. Coloque esta declaración al final del código para la clase. (Este código se coloca dentro de una región para mantener el código de clase ordenado).
+    - La cola del distribuidor requiere una declaración PInvoke. Coloca esta declaración al final del código de la clase. (Este código se coloca dentro de una región para mantener ordenado el código de la clase).
 
     ```csharp
     #region PInvoke declarations
@@ -211,9 +211,9 @@ Aquí es donde se realiza la mayoría de la configuración para hospedar las API
     #endregion PInvoke declarations
     ```
 
-    Ahora tiene la cola del distribuidor lista y puede empezar a inicializar y crear el contenido de la composición.
+    Ahora tienes la cola del distribuidor lista y puedes empezar a inicializar y crear el contenido de Composition.
 
-1. Inicialice el [compositor](/uwp/api/windows.ui.composition.compositor). El compositor es un generador que crea una variedad de tipos en el espacio de nombres [Windows. UI. Composition](/uwp/api/windows.ui.composition) que abarca la capa visual, el sistema de efectos y el sistema de animación. La clase compositor también administra la duración de los objetos creados a partir del generador.
+1. Inicializa la clase [Compositor](/uwp/api/windows.ui.composition.compositor). Compositor es una fábrica que crea diversos tipos en el espacio de nombres [Windows.UI.Composition](/uwp/api/windows.ui.composition), tales como la capa visual, el sistema de efectos y el sistema de animación. La clase Compositor también administra la duración de los objetos creados con la fábrica.
 
     ```csharp
     private void InitComposition(IntPtr hwndHost)
@@ -236,7 +236,7 @@ Aquí es donde se realiza la mayoría de la configuración para hospedar las API
     }
     ```
 
-    - **ICompositorDesktopInterop** y **ICompositionTarget** requieren importaciones com. Coloque este código después de la clase _CompositionHost_ , pero dentro de la declaración del espacio de nombres.
+    - **ICompositorDesktopInterop** e **ICompositionTarget** requieren importaciones de COM. Coloca este código después de la clase _CompositionHost_, pero dentro de la declaración del espacio de nombres.
 
     ```csharp
     #region COM Interop
@@ -285,29 +285,29 @@ Aquí es donde se realiza la mayoría de la configuración para hospedar las API
     #endregion COM Interop
     ```
 
-## <a name="create-a-custom-control-to-host-composition-elements"></a>Crear un control personalizado para hospedar elementos de composición
+## <a name="create-a-custom-control-to-host-composition-elements"></a>Crear un control personalizado para hospedar elementos de Composition
 
-Es una buena idea colocar el código que genera y administra los elementos de composición en un control independiente que se deriva de CompositionHost. Esto mantiene el código de interoperabilidad que ha creado en la clase CompositionHost reutilizable.
+Es una buena idea colocar el código que genera y administra los elementos de Composition en un control independiente que derive de CompositionHost. Esto permite reutilizar el código de interoperabilidad que has creado en la clase CompositionHost.
 
-Aquí se crea un control personalizado derivado de CompositionHost. Este control se agrega al cuadro de herramientas de Visual Studio para que pueda agregarlo al formulario.
+Aquí se crea un control personalizado derivado de CompositionHost. Este control se agrega al cuadro de herramientas de Visual Studio para que puedas agregarlo al formulario.
 
-1. Agregue un nuevo archivo de control personalizado al proyecto que deriva de CompositionHost.
-    - En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto _HelloComposition_ .
-    - En el menú contextual, seleccione **Agregar** > **nuevo elemento.** ...
-    - En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **control personalizado**.
-    - Asigne al control el nombre _CompositionHostControl.CS_y, a continuación, haga clic en **Agregar**. CompositionHostControl.cs se abre en el Vista de diseño.
+1. Agrega al proyecto un nuevo archivo de control personalizado que derive de CompositionHost.
+    - En el **Explorador de soluciones**, haz clic con el botón derecho en el proyecto _HelloComposition_.
+    - En el menú contextual, selecciona **Agregar** > **Nuevo elemento...** .
+    - En el cuadro de diálogo **Agregar nuevo elemento**, selecciona **Control personalizado**.
+    - Asigna al control el nombre _CompositionHostControl.cs_ y haz clic en **Agregar**. CompositionHostControl.cs se abre en la vista de diseño.
 
-1. En el panel Propiedades de la vista de diseño CompositionHostControl.cs, establezca la propiedad **BackColor** en **ControlLight**.
+1. En el panel Propiedades de la vista de diseño de CompositionHostControl.cs, establece la propiedad **BackColor** en **ControlLight**.
 
-    Establecer el color de fondo es opcional. Lo hacemos aquí para que pueda ver el control personalizado con el fondo del formulario.
+    Establecer el color de fondo es opcional. Lo hacemos aquí para que puedas ver el control personalizado contra el fondo del formulario.
 
-1. Cambie a la vista de código para CompositionHostControl.cs y actualice la declaración de clase para que derive de CompositionHost.
+1. Cambia a la vista de código de CompositionHostControl.cs y actualiza la declaración de clase para que derive de CompositionHost.
 
     ```csharp
     class CompositionHostControl : CompositionHost
     ```
 
-1. Actualice el constructor para llamar al constructor base.
+1. Actualiza el constructor para llamar al constructor base.
 
     ```csharp
     public CompositionHostControl() : base()
@@ -316,15 +316,15 @@ Aquí se crea un control personalizado derivado de CompositionHost. Este control
     }
     ```
 
-### <a name="add-composition-elements"></a>Agregar elementos de composición
+### <a name="add-composition-elements"></a>Agregar elementos de Composition
 
-Una vez implementada la infraestructura, ahora puede agregar contenido de composición a la interfaz de usuario de la aplicación.
+Una vez implementada la infraestructura, ahora puedes agregar contenido de Composition a la interfaz de usuario de la aplicación.
 
-En este ejemplo, agregará código a la clase CompositionHostControl que crea y anima un [SpriteVisual](/uwp/api/windows.ui.composition.spritevisual)simple.
+En este ejemplo, agregarás código a la clase CompositionHostControl que crea y anima un objeto [SpriteVisual](/uwp/api/windows.ui.composition.spritevisual) simple.
 
-1. Agregue un elemento de composición.
+1. Agrega un elemento de Composition.
 
-    En CompositionHostControl.cs, agregue estos métodos a la clase CompositionHostControl.
+    En CompositionHostControl.cs, agrega estos métodos a la clase CompositionHostControl.
 
     ```csharp
     // Add
@@ -364,26 +364,26 @@ En este ejemplo, agregará código a la clase CompositionHostControl que crea y 
 
 ## <a name="add-the-control-to-your-form"></a>Agregar el control al formulario
 
-Ahora que tiene un control personalizado para hospedar contenido de composición, puede agregarlo a la interfaz de usuario de la aplicación. Aquí, agregará una instancia del CompositionHostControl creado en el paso anterior. CompositionHostControl se agrega automáticamente al cuadro de herramientas de Visual Studio en componentes del **_nombre del proyecto_** .
+Ahora que tienes un control personalizado para hospedar el contenido de Composition, puedes agregarlo a la interfaz de usuario de la aplicación. Aquí, agregarás una instancia del control CompositionHostControl creado en el paso anterior. CompositionHostControl se agrega automáticamente al cuadro de herramientas de Visual Studio en **Componentes de _nombre del proyecto_** .
 
-1. En la vista de diseño Form1.CS, agregue un botón a la interfaz de usuario.
+1. En la vista de diseño de Form1.cs, agrega un botón a la interfaz de usuario.
 
-    - Arrastre un botón desde el cuadro de herramientas hasta Form1. Colóquelo en la esquina superior izquierda del formulario. (Vea la imagen al principio del tutorial para comprobar la ubicación de los controles).
-    - En el panel Propiedades, cambie la propiedad **Text** de _button1_ a _Agregar elemento de composición_.
-    - Cambie el tamaño del botón para que se muestre todo el texto.
+    - Arrastra un botón desde el cuadro de herramientas hasta Form1. Colócalo en la esquina superior izquierda del formulario. (Consulta la imagen al principio del tutorial para comprobar la ubicación de los controles).
+    - En el panel Propiedades, cambia la propiedad **Text** de _button1_ a _Add composition element_ (Agregar elemento de Composition).
+    - Cambia el tamaño del botón para que se muestre todo el texto.
 
-    (Para obtener más información, [consulte Cómo: Agregue controles a Windows Forms](/dotnet/framework/winforms/controls/how-to-add-controls-to-windows-forms)).
+    (Para más información, consulta [cómo agregar controles a Windows Forms](/dotnet/framework/winforms/controls/how-to-add-controls-to-windows-forms)).
 
-1. Agregue un CompositionHostControl a la interfaz de usuario.
+1. Agrega un control CompositionHostControl a la interfaz de usuario.
 
-    - Arrastre un CompositionHostControl desde el cuadro de herramientas hasta Form1. Colóquelo a la derecha del botón.
-    - Cambie el tamaño del CompositionHost para que rellene el resto del formulario.
+    - Arrastra un control CompositionHostControl desde el cuadro de herramientas hasta Form1. Colócalo a la derecha del botón.
+    - Cambia el tamaño de CompositionHost para que llene el resto del formulario.
 
-1. Controle el evento click del botón.
+1. Controla el evento Click del botón.
 
-   - En el panel Propiedades, haga clic en el rayo para cambiar a la vista de eventos.
-   - En la lista eventos, seleccione el evento **click** , escriba *Button_Click*y presione Entrar.
-   - Este código se agrega en Form1.cs:
+   - En el panel Propiedades, haz clic en el rayo para cambiar a la vista de eventos.
+   - En la lista de eventos, selecciona el evento **Click**, escribe *Button_Click* y presiona Entrar.
+   - Este código se agrega a Form1.cs:
 
     ```csharp
     private void Button_Click(object sender, EventArgs e)
@@ -392,9 +392,9 @@ Ahora que tiene un control personalizado para hospedar contenido de composición
     }
     ```
 
-1. Agregue código al controlador de clic de botón para crear nuevos elementos.
+1. Agrega código al controlador de clic del botón para crear nuevos elementos.
 
-    - En Form1.cs, agregue código al controlador de eventos *Button_Click* que creó anteriormente. Este código llama a _CompositionHostControl1. AddElement_ para crear un nuevo elemento con un tamaño y desplazamiento generados de forma aleatoria. (La instancia de CompositionHostControl se llamaba automáticamente _compositionHostControl1_ al arrastrarla al formulario).
+    - En Form1.cs, agrega código al controlador del evento *Button_Click* que creó anteriormente. Este código llama a _CompositionHostControl1.AddElement_ para crear un nuevo elemento con un tamaño y desplazamiento generados de forma aleatoria. (La instancia de CompositionHostControl recibió automáticamente el nombre _compositionHostControl1_ al arrastrarla al formulario).
 
     ```csharp
     // Add
@@ -410,19 +410,19 @@ Ahora que tiene un control personalizado para hospedar contenido de composición
     }
     ```
 
-Ahora puede compilar y ejecutar la aplicación Windows Forms. Al hacer clic en el botón, debería ver los cuadrados animados agregados a la interfaz de usuario.
+Ahora puedes compilar y ejecutar la aplicación de Windows Forms. Al hacer clic en el botón, verás que se agregan los cuadrados animados a la interfaz de usuario.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener un ejemplo más completo que se basa en la misma infraestructura, consulte el [ejemplo de integración de capas visuales de Windows Forms](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WinForms/VisualLayerIntegration) en github.
+Para ver un ejemplo más completo que se basa en la misma infraestructura, consulta en GitHub el [ejemplo de integración de la capa visual en Windows Forms](https://github.com/Microsoft/Windows.UI.Composition-Win32-Samples/tree/master/dotnet/WinForms/VisualLayerIntegration).
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Introducción con Windows Forms](/dotnet/framework/winforms/getting-started-with-windows-forms) 2003
-- [Interoperar con código no administrado](/dotnet/framework/interop/) 2003
-- [Introducción a las aplicaciones de Windows 10](/windows/uwp/get-started/) UWP
-- [Mejorar la aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance) UWP
-- [Espacio de nombres Windows. UI. Composition](/uwp/api/windows.ui.composition) UWP
+- [Introducción a Windows Forms](/dotnet/framework/winforms/getting-started-with-windows-forms) (.NET)
+- [Interoperar con código no administrado](/dotnet/framework/interop/) (.NET)
+- [Introducción a las aplicaciones de Windows 10](/windows/uwp/get-started/) (UWP)
+- [Mejorar tu aplicación de escritorio para Windows 10](/windows/uwp/porting/desktop-to-uwp-enhance) (UWP)
+- [Espacio de nombres Windows.UI.Composition](/uwp/api/windows.ui.composition) (UWP)
 
 ## <a name="complete-code"></a>Código completo
 
