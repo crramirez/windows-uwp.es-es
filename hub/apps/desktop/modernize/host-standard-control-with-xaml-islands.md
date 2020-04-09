@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 3f2a0a6ee6b22fa7d08e7fc746c4ec2ad4ebffa7
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: ed6aa406cd1372819c25bd43b59cd416130b09e0
+ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218595"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80482512"
 ---
 # <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>Hospedaje de un control estándar de UWP en una aplicación de WPF mediante las islas XAML
 
@@ -31,7 +31,7 @@ Para hospedar un control de UWP en una aplicación de WPF o de Windows Forms, ne
 
 * **El proyecto y el código fuente de la aplicación**. El uso del control [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) para hospedar controles estándar de UWP de origen se admite en las aplicaciones que tienen como destino .NET Framework o .NET Core 3.
 
-* **Un proyecto de aplicación para UWP que define una clase de aplicación raíz que se deriva de XamlApplication**. El proyecto de WPF o Windows Forms debe tener acceso a una instancia de la clase [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) proporcionada por el kit de herramientas de la comunidad de Windows. La manera recomendada de hacerlo es definir este objeto en un proyecto de aplicación para UWP independiente que forme parte de la solución para la aplicación de WPF o Windows Forms. Este objeto actúa como proveedor de metadatos raíz para cargar los metadatos de los tipos XAML de UWP personalizados en los ensamblados del directorio actual de la aplicación.
+* **Un proyecto de aplicación para UWP que define una clase de aplicación raíz que se deriva de XamlApplication**. El proyecto de WPF o Windows Forms debe tener acceso a una instancia de la clase [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) proporcionada por el kit de herramientas de la comunidad de Windows, a fin de que pueda detectar y cargar los controles XAML de UWP personalizados. La manera recomendada de hacerlo es definir este objeto en un proyecto de aplicación para UWP independiente que forme parte de la solución para la aplicación de WPF o Windows Forms. 
 
     > [!NOTE]
     > Aunque el objeto `XamlApplication` no es necesario para hospedar un control de UWP de origen, la aplicación necesita este objeto para admitir la gama completa de escenarios de la isla XAML, incluido el hospedaje de controles de UWP personalizados. Por lo tanto, se recomienda definir siempre un objeto `XamlApplication` en cualquier solución en la que se utilicen las islas XAML.
@@ -41,7 +41,7 @@ Para hospedar un control de UWP en una aplicación de WPF o de Windows Forms, ne
 
 ## <a name="create-a-wpf-project"></a>Creación de un proyecto de WPF
 
-Antes de comenzar, sigue estas instrucciones para crear un proyecto de WPF y configurarlo para hospedar islas XAML. Si tienes un proyecto de WPF existente, puedes adaptar estos pasos y ejemplos de código para el proyecto.
+Antes de comenzar, sigue estas instrucciones para crear un proyecto de WPF y configurarlo para hospedar XAML Islands. Si tienes un proyecto de WPF existente, puedes adaptar estos pasos y ejemplos de código para el proyecto.
 
 1. En Visual Studio 2019, crea un proyecto de **aplicación de WPF (.NET Framework)** o de **aplicación de WPF (.NET Core)** . Si deseas crear un proyecto de **aplicación de WPF (.NET Core)** , primero debes instalar la última versión del [SDK de .NET Core 3](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
@@ -67,7 +67,7 @@ Antes de comenzar, sigue estas instrucciones para crear un proyecto de WPF y con
 
 ## <a name="define-a-xamlapplication-class-in-a-uwp-app-project"></a>Definición de una clase XamlApplication en un proyecto de aplicación para UWP
 
-A continuación, agrega un proyecto de aplicación para UWP a la solución y revisa la clase `App` predeterminada en este proyecto para derivarla de la clase [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) proporcionada por el kit de herramientas de la comunidad de Windows.
+A continuación, agrega un proyecto de aplicación para UWP a la solución y revisa la clase `App` predeterminada en este proyecto para derivarla de la clase [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) proporcionada por el kit de herramientas de la comunidad de Windows. Esta clase admite la interfaz [IXamlMetadaraProvider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider), que permite que la aplicación detecte y cargue metadatos para controles XAML de UWP personalizados en ensamblados del directorio actual de la aplicación en tiempo de ejecución. Esta clase también inicializa el marco XAML de UWP para el subproceso actual.
 
 > [!NOTE]
 > Aunque este paso no es necesario para hospedar un control de UWP de origen, la aplicación necesita el objeto `XamlApplication` para admitir la gama completa de escenarios de una isla XAML, incluido el hospedaje de controles de UWP personalizados. Por lo tanto, se recomienda definir siempre un objeto `XamlApplication` en cualquier solución en la que se utilicen islas XAML.
@@ -75,7 +75,7 @@ A continuación, agrega un proyecto de aplicación para UWP a la solución y rev
 1. En el **Explorador de soluciones**, haz clic con el botón derecho en el nodo de la solución y selecciona **Agregar** -> **Nuevo proyecto**.
 2. Agrega un proyecto **Aplicación vacía (Windows universal)** a la solución. Asegúrate de que la versión de destino y la versión mínima están configuradas en **Windows 10, versión 1903** o posterior.
 3. En el proyecto de aplicación para UWP, instala el paquete NuGet [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) (versión 6.0.0 o posterior).
-4. Abre el archivo **App.xaml** y reemplaza el contenido de este archivo por el código XAML siguiente. Reemplaza `MyUWPApp` por el espacio de nombres del proyecto de aplicación para UWP.
+4. Abre el archivo **App.xaml** y reemplaza su contenido por el código XAML siguiente. Reemplaza `MyUWPApp` por el espacio de nombres del proyecto de aplicación para UWP.
 
     ```xml
     <xaml:XamlApplication
@@ -132,7 +132,7 @@ A continuación, agrega código al punto de entrada de la aplicación de WPF par
 
 3. Haz clic con el botón derecho en el nodo del proyecto y selecciona **Propiedades**.
 
-4. En la pestaña **Aplicación** de las propiedades, haz clic en la lista desplegable **Objeto de inicio** y elige el nombre completo de la clase `Program` que has agregado en el paso anterior. 
+4. En la pestaña **Aplicación** de las propiedades, haz clic en la lista desplegable **Objeto de inicio** y elige el nombre completo de la clase `Program` que agregaste en el paso anterior. 
     > [!NOTE]
     > De forma predeterminada, los proyectos de WPF definen una función de punto de entrada `Main` en un archivo de código generado que no está diseñado para modificarse. Este paso cambia el punto de entrada del proyecto al método `Main` de la nueva clase `Program`, lo que permite agregar código que se ejecuta lo antes posible en el proceso de inicio de la aplicación. 
 
@@ -290,12 +290,12 @@ Ahora que has agregado los controles encapsulados de UWP [InkCanvas](https://doc
 
 También puedes empaquetar la aplicación de WPF en un [paquete MSIX](https://docs.microsoft.com/windows/msix) para implementarla. MSIX es una tecnología de empaquetado de aplicaciones moderna para Windows y está basada en una combinación de las tecnologías de instalación MSI, .appx, App-V y ClickOnce.
 
-Las instrucciones siguientes muestran cómo empaquetar todos los componentes de la solución en un paquete MSIX mediante el [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) en Visual Studio 2019. Estos pasos solo son necesarios si quieres empaquetar la aplicación de WPF en un paquete MSIX.
+Las instrucciones siguientes muestran cómo empaquetar todos los componentes de la solución en un paquete MSIX mediante el [Proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) en Visual Studio 2019. Estos pasos solo son necesarios si quieres empaquetar la aplicación de WPF en un paquete MSIX.
 
 > [!NOTE]
 > Si decides no empaquetar la aplicación en un [paquete MSIX](https://docs.microsoft.com/windows/msix) para su implementación, los equipos que ejecuten dicha aplicación deberán tener instalado el [Tiempo de ejecución de Visual C++](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
 
-1. Agrega un nuevo [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) a la solución. Al crear el proyecto, selecciona **Windows 10, versión 1903 (10.0; compilación 18362)** para la **versión de destino** y la **versión mínima**.
+1. Agrega un nuevo [Proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) a la solución. Al crear el proyecto, selecciona **Windows 10, versión 1903 (10.0; compilación 18362)** para la **versión de destino** y la **versión mínima**.
 
 2. En el proyecto de empaquetado, haz clic con el botón derecho en el nodo **Aplicaciones** y elige **Agregar referencia**. En la lista de proyectos, selecciona el proyecto de WPF en la solución y haz clic en **Aceptar**.
 
