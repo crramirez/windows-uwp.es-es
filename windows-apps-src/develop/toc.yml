@@ -181,6 +181,8 @@
           href: ../networking/web-feeds.md
         - name: Transferencias en segundo plano
           href: ../networking/background-transfers.md
+    - name: Compartición de objetos con nombre
+      href: ../communication/sharing-named-objects.md
 - name: Datos y archivos
   items:
     - name: Recursos de aplicación
