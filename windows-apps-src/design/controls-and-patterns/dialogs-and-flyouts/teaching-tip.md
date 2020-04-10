@@ -2,7 +2,7 @@
 Description: Una sugerencia de enseñanza es un control flotante parcialmente persistente y con mucho contenido que proporciona información contextual.
 title: Sugerencias de enseñanza
 template: detail.hbs
-ms.date: 04/19/2019
+ms.date: 04/01/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: yulikl
@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 6276ef9bcb6b01fd557057d3d36939350314015b
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 06734c854f0097db5fa96e35d4123dde8bda8a95
+ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081051"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80614140"
 ---
 # <a name="teaching-tip"></a>Sugerencia de enseñanza
 
@@ -27,16 +27,20 @@ Una sugerencia de enseñanza puede ser descartable por cambio de foco, o bien pu
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | El control **TeachingTip** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | El control **TeachingTip** requiere la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinadas a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de la biblioteca de interfaz de usuario de Windows:** [Clase TeachingTip](/uwp/api/microsoft.ui.xaml.controls.teachingtip)
+
+> [!TIP]
+> En este documento, se usa el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page): `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`
+>
+>En el código subyacente, se usa el alias **muxc** en C# para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado esta instrucción **using** en la parte superior del archivo: `using muxc = Microsoft.UI.Xaml.Controls;`
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
 Usa un control **TeachingTip** para centrar la atención de un usuario en actualizaciones y características nuevas o importantes, para recordarle de opciones no esenciales que podrían mejorar su experiencia, o para enseñarle cómo se debe completar una tarea.
 
 Ya que las sugerencias de enseñanza son transitorias, no es un control recomendado para informar a los usuarios sobre los errores o cambios de estado importantes.
-
 
 ## <a name="examples"></a>Ejemplos
 
@@ -68,14 +72,12 @@ Una sugerencia de enseñanza puede exigir al usuario que use un botón "X" en la
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza descartable por cambio de foco en la esquina inferior derecha. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú).](../images/teaching-tip-light-dismiss.png)
 
-
 ### <a name="create-a-teaching-tip"></a>Crear una sugerencia de enseñanza
 
 Este es el código XAML para un control de sugerencia de enseñanza dirigida que muestra el aspecto predeterminado de TeachingTip con un título y subtítulo.
 Ten en cuenta que la sugerencia de enseñanza puede aparecer en cualquier lugar del árbol de elementos o el código subyacente. En el ejemplo siguiente, se encuentra en un objeto ResourceDictionary.
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -87,8 +89,7 @@ XAML
 </Button>
 ```
 
-C#
-```C#
+```csharp
 public MainPage()
 {
     this.InitializeComponent();
@@ -109,8 +110,7 @@ Este es el resultado cuando se muestran la página que contiene el botón y la s
 
 No todas las sugerencias están relacionadas con un elemento en pantalla. Para estos casos, no establezcas la propiedad de destino y, en su lugar, la sugerencia de enseñanza se mostrará en relación con los bordes de la raíz de XAML. Sin embargo, una sugerencia de enseñanza puede no tener delta y conservar la colocación relativa a un elemento de la interfaz de usuario si estableces la propiedad TailVisibility en "Collapsed". El ejemplo siguiente es de una sugerencia de enseñanza no dirigida.
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save" />
 
 <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -131,8 +131,7 @@ Para las aplicaciones que predicen la entrada del controlador para juegos, consu
 
 Una sugerencia de enseñanza dirigida con la propiedad PreferredPlacement establecida en "BottomLeft" se mostrará con la delta centrada en la parte inferior de su destino y el cuerpo de la sugerencia estará desplazado hacia la izquierda.
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -147,11 +146,9 @@ XAML
 
 ![Una aplicación de ejemplo con un botón "Save" (Guardar) que funciona como el destino de una sugerencia de enseñanza ubicada debajo de la esquina izquierda. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú). Hay un botón Cerrar en la esquina superior derecha de la sugerencia de enseñanza.](../images/teaching-tip-targeted-preferred-placement.png)
 
-
 Una sugerencia de enseñanza no dirigida que tenga la propiedad PreferredPlacement establecida en "BottomLeft" se mostrará en la esquina inferior izquierda de la raíz de XAML.
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save" />
 
 <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -175,8 +172,7 @@ Puedes controlar la distancia a la que se coloca una sugerencia de enseñanza co
 
 En el ejemplo siguiente se muestra una sugerencia no dirigida cuyos valores Left/Top/Right/Bottom de PlacementMargin están establecidos en 80.
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save" />
 
 <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -194,8 +190,7 @@ XAML
 
 Puede agregarse contenido a una sugerencia de enseñanza mediante la propiedad Content. Si el tamaño de la sugerencia de enseñanza no permite mostrar todo el contenido, se habilitará automáticamente una barra de desplazamiento para permitir que el usuario se desplace por el área de contenido.
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -221,8 +216,7 @@ De manera predeterminada, se muestra un botón Cerrar "X" estándar junto al tí
 
 Puedes agregar un botón de acción personalizado si estableces la propiedad ActionButtonContent (y opcionalmente las propiedades ActionButtonCommand y ActionButtonCommandParameter).
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -230,7 +224,7 @@ XAML
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to."
             ActionButtonContent="Disable"
-            ActionButtonCommand="DisableAutoSave"
+            ActionButtonCommand="{x:Bind DisableAutoSaveCommand}"
             CloseButtonContent="Got it!">
                 <StackPanel>
                     <CheckBox x:Name="HideTipsCheckBox" Content="Don't show tips at start up" IsChecked="{x:Bind HidingTips, Mode=TwoWay}" />
@@ -247,8 +241,7 @@ XAML
 
 Se puede agregar contenido de borde a borde a una sugerencia de enseñanza si se establece la propiedad HeroContent. La ubicación del contenido de elemento principal puede establecerse en la parte superior o inferior de una sugerencia de enseñanza si configuras la propiedad HeroContentPlacement.
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -269,8 +262,7 @@ XAML
 
 Puede agregarse un icono al lado del título y subtítulo mediante la propiedad IconSource. Entre los tamaños de icono recomendados se incluyen 16 píxeles, 24 píxeles y 32 píxeles.
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -293,8 +285,7 @@ La funcionalidad de descarte por cambio de foco está deshabilitada de manera pr
 
 El botón Cerrar se quitará automáticamente de una sugerencia de enseñanza que tenga habilitado el descarte por cambio de foco para que los usuarios puedan identificar que su comportamiento es de descarte por cambio de foco.
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save" />
 
 <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -306,14 +297,13 @@ XAML
 
 ![Una aplicación de ejemplo con una sugerencia de enseñanza descartable por cambio de foco en la esquina inferior derecha. El título de la sugerencia dice "Saving automatically" (Guardado automático) y el subtítulo dice "We save your changes as you go - so you never have to" (Tus cambios se guardan sobre la marcha para que no tengas que hacerlo tú).](../images/teaching-tip-light-dismiss.png)
 
-### <a name="escaping-the-xaml-root-bounds"></a>Escaparse de los límites de la raíz de XAML
+### <a name="escaping-the-xaml-root-bounds"></a>Eludir de los límites de la raíz de XAML
 
-En Windows versión 19H1 y anteriores, una sugerencia de enseñanza puede escaparse de los límites de la raíz de XAML y la pantalla si se establece la propiedad ShouldConstrainToRootBounds. Cuando esta propiedad está habilitada, una sugerencia de enseñanza no intentará mantenerse en los límites de la raíz de XAML ni de la pantalla y usará siempre la posición especificada en el modo PreferredPlacement. Se recomienda habilitar la propiedad IsLightDismissEnabled y establecer el modo de PreferredPlacement más cercano al centro de la raíz de XAML para garantizar la mejor experiencia para los usuarios.
+A partir de Windows 10, versión 1903 (compilación 18362), una sugerencia de enseñanza puede eludir los límites de la raíz de XAML y la pantalla al definir la propiedad `ShouldConstrainToRootBounds`. Cuando esta propiedad está habilitada, una sugerencia de enseñanza no intentará mantenerse en los límites de la raíz de XAML ni de la pantalla y usará siempre la posición especificada en el modo `PreferredPlacement`. Se recomienda habilitar la propiedad `IsLightDismissEnabled` y establecer el modo `PreferredPlacement` más cercano al centro de la raíz de XAML para garantizar la mejor experiencia para los usuarios.
 
 En versiones anteriores de Windows, esta propiedad se omite y la sugerencia de enseñanza siempre permanece dentro de los límites de la raíz de XAML.
 
-XAML
-```XAML
+```xaml
 <Button x:Name="SaveButton" Content="Save" />
 
 <muxc:TeachingTip x:Name="AutoSaveTip"
@@ -331,10 +321,10 @@ XAML
 
 El evento de cierre puede usarse para cancelar o aplazar el cierre de una sugerencia de enseñanza. Puede utilizarse para mantener abierta la sugerencia de enseñanza o para tener tiempo suficiente para que se produzca una acción o animación personalizada. Cuando se cancela el cierre de una sugerencia de enseñanza, IsOpen vuelve a ser true. Sin embargo, seguirá siendo false durante un aplazamiento. También se puede cancelar un cierre mediante programación.
 
-**Nota: Si ninguna de las opciones de selección de ubicación permite que la sugerencia de enseñanza se muestre por completo, esta iterará su ciclo de vida de eventos para forzar un cierre en lugar de mostrarse sin un botón Cerrar accesible. Si la aplicación cancela el evento de cierre, la sugerencia de enseñanza puede permanecer abierta sin un botón Cerrar accesible.**
+> [!NOTE]
+> Si ninguna de las opciones de selección de ubicación permite que la sugerencia de enseñanza se muestre por completo, esta iterará su ciclo de vida de eventos para forzar un cierre en lugar de mostrarse sin un botón Cerrar accesible. Si la aplicación cancela el evento de cierre, la sugerencia de enseñanza puede permanecer abierta sin un botón Cerrar accesible.
 
-XAML
-```XAML
+```xaml
 <muxc:TeachingTip x:Name="EnableNewSettingsTip"
     Title="New ways to protect your privacy!"
     Subtitle="Please close this tip and review our updated privacy policy and privacy settings."
@@ -342,18 +332,18 @@ XAML
 </muxc:TeachingTip>
 ```
 
-C#
-```C#
-public void OnTipClosing(object sender, TeachingTipClosingEventArgs args)
+```csharp
+private void OnTipClosing(muxc.TeachingTip sender, muxc.TeachingTipClosingEventArgs args)
 {
-    if (args.Reason == TeachingTipCloseReason.CloseButton)
+    if (args.Reason == muxc.TeachingTipCloseReason.CloseButton)
     {
         using(args.GetDeferral())
         {
-            bool success = await UpdateUserSettings(User thisUsersID);
+            bool success = UpdateUserSettings(User thisUsersID);
             if(!success)
             {
-                //We were not able to update the settings! Don't close the tip and display the reason why.
+                // We were not able to update the settings!
+                // Don't close the tip and display the reason why.
                 args.Cancel = true;
                 ShowLastErrorMessage();
             }
@@ -362,19 +352,18 @@ public void OnTipClosing(object sender, TeachingTipClosingEventArgs args)
 }
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="recommendations"></a>Recomendaciones
 
-### <a name="related-articles"></a>Artículos relacionados
-
-* [Cuadros de diálogo y controles flotantes](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
-
-### <a name="recommendations"></a>Recomendaciones
 * Las sugerencias son temporales y no deben contener información u opciones que sean críticas para la experiencia de una aplicación.
 * Evita mostrar sugerencias de enseñanza con demasiada frecuencia. Es más probable que las sugerencias de enseñanza reciban atención individual cuando están escalonadas a lo largo de sesiones largas o en varias sesiones.
 * Mantén las sugerencias concisas y el tema claro. Las investigaciones muestran que, en promedio, los usuarios solo leen entre 3 y 5 palabras y comprenden entre 2 y 3 antes de decidir si van a interactuar con una sugerencia.
 * No se garantiza la accesibilidad del controlador para juegos de una sugerencia de enseñanza. Para las aplicaciones que esperan recibir la entrada de un controlador para juegos, consulta [Interacciones con controlador para juegos y control remoto]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction). Se recomienda probar la accesibilidad del controlador para juegos de todas las sugerencias de enseñanza con todas las configuraciones posibles de la interfaz de usuario de una aplicación.
 * Cuando la sugerencia de enseñanza está habilitada para escapar la raíz de XAML, se recomienda habilitar la propiedad IsLightDismissEnabled y establecer el modo de PreferredPlacement más cercano al centro de la raíz de XAML.
 
-### <a name="reconfiguring-an-open-teaching-tip"></a>Volver a configurar una sugerencia de enseñanza abierta
+## <a name="reconfiguring-an-open-teaching-tip"></a>Volver a configurar una sugerencia de enseñanza abierta
 
 Es posible volver a configurar algunos contenidos y propiedades mientras la sugerencia de enseñanza está abierta, y estos cambios surtirán efecto inmediatamente. Otras propiedades y contenido (como la propiedad de icono, los botones de acción y de cierre y volver a configurar los descartes por cambio de foco y los descartes explícitos) requieren que la sugerencia de enseñanza se cierre y se vuelva a abrir para que los cambios de estas propiedades surtan efecto. Ten en cuenta que cambiar el comportamiento de descarte de manual a descarte por cambio de foco mientras una sugerencia de enseñanza está abierta provocará que su botón Cerrar se elimine antes de que el comportamiento de cierre por cambio de foco se habilite, por lo que la sugerencia se quedará bloqueada en la pantalla.
+
+## <a name="related-articles"></a>Artículos relacionados
+
+* [Cuadros de diálogo y controles flotantes](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)

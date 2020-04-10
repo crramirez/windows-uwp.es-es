@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 9c451eba40b5c36843a32efbc80de40866f2f0dc
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: ab5b509aa69dc54d18ef3643d7ccd46bc2984676
+ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081450"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80614102"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -40,25 +40,14 @@ Las API de **TreeView** admiten las siguientes características:
 | - | - |
 | ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **TreeView** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
-> **API de la biblioteca de interfaz de usuario de Windows:** [Clase TreeView](/uwp/api/microsoft.ui.xaml.controls.treeview), [clase TreeViewNode](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [propiedad TreeView.ItemsSource](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource)
+> **API de la biblioteca de interfaz de usuario de Windows:** [Clase TreeView](/uwp/api/microsoft.ui.xaml.controls.treeview),  [clase TreeViewNode](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [propiedad TreeView.ItemsSource](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource)
 >
 > **API de plataforma:** [Clase TreeView](/uwp/api/windows.ui.xaml.controls.treeview),  [clase TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode), [propiedad TreeView.ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource)
 
-En este documento, se usará el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page):
-
-```xaml
-xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-```
-
-En el código subyacente, se usará el alias **muxc** en C# para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado esta instrucción **using** en la parte superior del archivo:
-
-```csharp
-using muxc = Microsoft.UI.Xaml.Controls;
-```
-
-```vb
-Imports muxc = Microsoft.UI.Xaml.Controls
-```
+> [!TIP]
+> En este documento, se usa el alias **muxc** en XAML para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado lo siguiente a nuestro elemento [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page): `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`
+>
+>En el código subyacente, se usa el alias **muxc** en C# para representar las API de la biblioteca de interfaz de usuario de Windows que hemos incluido en nuestro proyecto. Hemos agregado esta instrucción **using** en la parte superior del archivo: `using muxc = Microsoft.UI.Xaml.Controls;`
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
