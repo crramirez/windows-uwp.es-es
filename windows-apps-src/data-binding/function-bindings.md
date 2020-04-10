@@ -1,23 +1,23 @@
 ---
-description: La extensión de marcado xBind permite las funciones que se usará en el marcado.
-title: 'Funciones de x: Bind'
+description: La extensión de marcado xBind permite usar funciones en el marcado.
+title: Funciones de x:Bind
 ms.date: 02/06/2019
 ms.topic: article
-keywords: Windows 10, uwp, xBind
+keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: 879be9591bae36a1dbcd485387fbb4ac7f502fea
 ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66360083"
 ---
-# <a name="functions-in-xbind"></a>Funciones de x: Bind
+# <a name="functions-in-xbind"></a>Funciones de x:Bind
 
 > [!NOTE]
-> Para obtener información general sobre el uso de enlace de datos en su aplicación con **{x: Bind}** (y para obtener una comparación total entre **{x: Bind}** y **{Binding}** ), consulte [datos enlace en profundidad](data-binding-in-depth.md).
+> Para obtener información general sobre el uso del enlace de datos en la aplicación con **{x:Bind}** y para realizar una comparación general entre **{x:Bind}** y **{Binding}** , consulta el tema [Enlace de datos en profundidad](data-binding-in-depth.md).
 
-A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esto permite:
+A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esto permite lo siguiente:
 
 - Lograr la conversión de valores de una forma más sencilla
 - Obtener una manera de que los enlaces dependan de más de un parámetro
@@ -63,7 +63,7 @@ class ColorEntry
 
 La ruta de acceso a la función se especifica como otras tantas rutas de acceso de propiedades y puede incluir puntos (.), indexadores o conversiones para localizar la función.
 
-Las funciones estáticas pueden especificarse mediante la sintaxis XMLNamespace:ClassName.MethodName. Por ejemplo, use la siguiente sintaxis para enlazar a las funciones estáticas en el código subyacente.
+Las funciones estáticas pueden especificarse mediante la sintaxis XMLNamespace:ClassName.MethodName. Por ejemplo, usa la sintaxis siguiente para enlazar a funciones estáticas en el código subyacente.
 
 ```xaml
 <Page 
@@ -87,7 +87,7 @@ namespace MyNamespace
 }
 ```
 
-También puede usar las funciones del sistema directamente en el marcado para lograr los escenarios sencillos como formato de fecha, formato de texto, concatenaciones de texto, etc., por ejemplo:
+También puedes usar funciones del sistema directamente en el marcado para crear escenarios sencillos, como el formato de fecha, el formato de texto, las concatenaciones de texto, etc.. Por ejemplo:
 
 ```xaml
 <Page 
@@ -108,7 +108,7 @@ La función a enlazar debe tener en cuenta lo siguiente:
 - Los tipos de argumento deben coincidir con los datos que se pasan; no se realizan conversiones de restricción.
 - El tipo de devolución de la función debe coincidir con el tipo de propiedad que está usando el enlace.
 
-El motor de enlace reacciona a cambio de propiedad las notificaciones que se desencadena con el nombre de función y vuelva a evaluación enlaces según sea necesario. Por ejemplo:
+El motor de enlace reacciona a las notificaciones de cambio de propiedad que se activan con el nombre de la función y vuelve a evaluar los enlaces según sea necesario. Por ejemplo:
 
 ```xaml
 <DataTemplate x:DataType="local:Person">
@@ -164,7 +164,7 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> Puede usar las funciones de x: Bind para lograr los mismos escenarios que lo que se admite a través de los convertidores de tipos y MultiBinding en WPF.
+> Puedes usar las funciones de x:Bind para lograr los mismos escenarios que se consiguen con convertidores y enlace múltiple en WPF.
 
 ## <a name="function-arguments"></a>Argumentos de función
 
@@ -178,7 +178,7 @@ Se pueden especificar varios argumentos de función separados por comas (,)
 
 ### <a name="two-way-function-bindings"></a>Enlaces de funciones bidireccionales
 
-En un escenario con un enlace bidireccional, es necesario especificar una segunda función para la dirección inversa del enlace. Esto se realiza mediante el **restablecimiento de enlace** enlaza la propiedad. En el ejemplo siguiente, la función debe tomar un argumento que es el valor que se deba volver a insertar en el modelo.
+En un escenario con un enlace bidireccional, es necesario especificar una segunda función para la dirección inversa del enlace. Esto se hace mediante la propiedad de enlace **BindBack**. En el ejemplo siguiente, la función debe tomar un argumento que sea el valor que se debe devolver al modelo.
 
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
