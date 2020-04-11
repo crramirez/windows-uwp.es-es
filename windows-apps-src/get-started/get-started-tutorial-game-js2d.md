@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 92a1567fe72d46e53bf218c033fc59e8c98a2981
-ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
+ms.openlocfilehash: 4ef4255c8ea1eb9db34f652e5974a4f341e5500d
+ms.sourcegitcommit: 74627903a18b14c1af68269b0a8c85840caa1898
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929269"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80759452"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Crear un juego para UWP en JavaScript
 
@@ -30,7 +30,7 @@ Para publicar la aplicación en Microsoft Store, debe estar escrita como una apl
 
 Este proyecto se creó con JavaScript mediante Visual Studio. Con algunos cambios menores, también puede hospedarse en un sitio web o adaptarse para otras plataformas. 
 
-**Nota:** Este no es un juego completo (ni necesariamente bueno); sino que está diseñado para mostrar cómo usar JavaScript y una biblioteca de terceros a fin de preparar una aplicación para publicarse en Microsoft Store.
+**Nota:** Este no es un juego completo (ni necesariamente bueno); sino que está diseñado para mostrar cómo usar JavaScript y una biblioteca de terceros a fin de preparar una aplicación para publicarse en Microsoft Store. 
 
 
 ## <a name="requirements"></a>Requisitos
@@ -42,6 +42,7 @@ Para jugar con este proyecto, necesitarás lo siguiente:
 
 En este proyecto se usa el marco de CreateJS de JavaScript. CreateJS es un conjunto gratuito de herramientas, publicado bajo una licencia de MIT, diseñado para facilitar la tarea de crear juegos basados en sprite. Las bibliotecas CreateJS ya están presentes en el proyecto (busca *js/easeljs-0.8.2.min.js* y *js/preloadjs-0.6.2.min.js* en la vista Explorador de soluciones). Para obtener más información acerca de CreateJS, consulta la [página principal de CreateJS](https://www.createjs.com).
 
+**Nota:** El desarrollo de aplicaciones para UWP de JavaScript no se admite en Visual Studio 2019. Debes usar Visual Studio 2017 para desarrollar una aplicación para UWP de JavaScript.
 
 ## <a name="getting-started"></a>Introducción
 

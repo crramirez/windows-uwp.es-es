@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c6995ab6116d4e3bda8e21c397ab3b4985732763
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: 9739933f9fd23c6f169c24c4f789e53ba894708d
+ms.sourcegitcommit: 252dbf4483d58dd7093a79726a29923109eebee5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77639772"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696631"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -76,15 +76,6 @@ La característica más destacable de Acrylic es su transparencia. Hay dos tipos
 Si usas acrílico en la app en superficies de navegación, considera la posibilidad de extender el contenido debajo del panel acrílico para mejorar el flujo en la app. Usar NavigationView hará esto automáticamente. Sin embargo, para evitar crear de efecto de bandas, intenta no colocar varios fragmentos de acrílico de un borde a otro, ya que esto puede crear una costura no deseada entre las dos superficies desenfocadas. Acrylic es una herramienta que aporta armonía visual a los diseños, pero, cuando se usa de forma incorrecta, puede generar ruido visual.
 
 Ten en cuenta los siguientes patrones de uso para decidir la mejor manera de incorporar el acrílico en la app:
-
-### <a name="horizontal-navigation-or-commanding"></a>Desplazamiento horizontal o comandos
-
-Si la app no es capaz de aprovechar NavigationView y tienes previsto agregar acrílico por tu cuenta, te recomendamos usar un acrílico relativamente translúcido con opacidad de tono del 60 %.
- - Cuando el panel se abre como una superposición sobre otro contenido de la app, este debe ser [acrílico en la app al 60 %](#acrylic-theme-resources).
-
-![App Mapas que usa comandos de horizontal en la app](images/Maps_In_App_Acrylic_1.png)
-
-Además, hacer que el contenido se extienda o desplace por debajo del acrílico en la parte superior le dará a la app una experiencia más envolvente y agilizada.
 
 ### <a name="vertical-panes"></a>Paneles verticales
 
@@ -202,7 +193,7 @@ Puedes elegir agregar un tono de color al acrílico de tu app para mostrar una p
 
 Para agregar un pincel de acrílico, define los tres recursos para los temas oscuro, claro y contraste alto. Ten en cuenta que en contraste alto, recomendamos usar una clase SolidColorBrush con el mismo atributo x:Key que la clase AcrylicBrush para oscuro o claro.
 
-> [!Note] 
+> [!Note]
 > Si no especificas un valor TintLuminosityOpacity, el sistema ajustará automáticamente su valor según TintColor y TintOpacity.
 
 ```xaml
