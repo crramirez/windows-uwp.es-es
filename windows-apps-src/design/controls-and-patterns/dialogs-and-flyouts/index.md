@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 37ab62a6e6c2e294e8d6b5222eab4a1a9ae25a2e
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: c61d1478c38df315a3fe3c20151de8c2bfbca4e2
+ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081005"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123587"
 ---
 # <a name="dialogs-and-flyouts"></a>Cuadros de diálogo y controles flotantes
 
@@ -24,15 +24,12 @@ Los cuadros de diálogo y los controles flotantes son elementos transitorios de 
 
 > **API de plataforma:** [Clase ContentDialog](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [clase Flyout](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
-:::row:::
-    :::column:::
 **cuadros de diálogo**
 
 ![Ejemplo de un cuadro de diálogo](../images/dialogs/dialog_RS2_delete_file.png)
 
 Los cuadros de diálogo son superposiciones modales en la interfaz de usuario que proporcionan información contextual sobre la aplicación. Los cuadros de diálogo bloquean las interacciones con la ventana de la aplicación hasta que se descarten de forma explícita. A menudo solicitan algún tipo de acción por parte del usuario.
-    :::column-end:::
-    :::column::: 
+
 **controles flotantes**
 
 ![Ejemplo de un control flotante](../images/flyout-example2.png)
@@ -40,9 +37,6 @@ Los cuadros de diálogo son superposiciones modales en la interfaz de usuario qu
 Un control flotante es un elemento emergente contextual ligero que muestra la interfaz de usuario relacionada con lo que está haciendo el usuario. Incluye lógica de colocación y tamaño, y se puede usar para mostrar un control secundario o más detalles acerca de un elemento.
 
 A diferencia de un cuadro de diálogo, un control flotante se puede descartar rápidamente al pulsar o hacer clic en algún lugar fuera de dicho control flotante, presionar la tecla Escape (Esc) o el botón Atrás, cambiar el tamaño de la ventana de la aplicación o cambiar la orientación del dispositivo.
-    :::column-end:::
-:::row-end:::
-
 
 ## <a name="is-this-the-right-control"></a>¿Es este el control adecuado?
 
@@ -52,8 +46,6 @@ Una vez que hayas determinado que quieres usar un cuadro de diálogo o un contro
 
 Dado que los cuadros de diálogo bloquean las interacciones y los controles flotantes no, los cuadros de diálogo deben reservarse para situaciones en las que quieres que el usuario centre toda su atención en un dato específico o responda a una pregunta. Los controles flotantes, por el contrario, se pueden usar si quieres llamar la atención sobre algo, pero no hay problemas si el usuario quiere pasarlo por alto.
 
-:::row:::
-    :::column:::
    <p><b>Usa un cuadro de diálogo para...</b> <br/>
 <ul>
 <li>Expresar información importante que el usuario <b>debe</b> leer y confirmar antes de continuar. Algunos ejemplos son:
@@ -69,17 +61,14 @@ Dado que los cuadros de diálogo bloquean las interacciones y los controles flot
 <li>Preguntas cuando la aplicación deba hacer al usuario una pregunta de bloqueo, por ejemplo, cuando la aplicación no puede elegir en nombre del usuario. Una pregunta de bloqueo no se puede ignorar ni posponer, y debe ofrecer al usuario opciones bien definidas.</li>
 </ul>
 </p>
-    :::column-end:::
-    :::column:::
+
+
    <p><b>Usa un control flotante para...</b> <br/>
 <ul>
 <li>Recopilar información adicional necesaria para poder completar una acción.</li>
 <li>Mostrar información que solo sea pertinente algunas veces. Por ejemplo, en una aplicación de galería fotográfica, cuando el usuario hace clic en una imagen en miniatura, podrías usar un control flotante para mostrar una versión grande de la imagen.</li>
 <li>Mostrar más información, como detalles o descripciones más largas de un elemento de la página.</li>
 </ul></p>
-    :::column-end:::
-:::row-end:::
-
 
 ## <a name="ways-to-avoid-using-dialogs-and-flyouts"></a>Formas de evitar el uso de cuadros de diálogo y controles flotantes
 
