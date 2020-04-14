@@ -8,18 +8,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 870042f3a7737e5caf646d4d14ffd49af39a079f
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: a3017073b15ea18214e9c78263fb212bb192132b
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80108148"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266933"
 ---
 # <a name="create-hosted-apps"></a>Crear aplicaciones hospedadas
 
 A partir de Windows 10, versión 2004, puede crear *aplicaciones hospedadas*. Una aplicación hospedada comparte el mismo archivo ejecutable y la misma definición que una aplicación *host* principal, pero parece y se comporta como una aplicación independiente en el sistema.
 
-Las aplicaciones hospedadas son útiles para los escenarios en los que desea que un componente (como un archivo ejecutable o un archivo de script) se comporte como una aplicación de Windows 10, pero el componente requiere un proceso de host para poder ejecutarlo. Por ejemplo, se puede entregar un script de PowerShell o de Python como una aplicación hospedada que requiere la instalación de un host para poder ejecutarse. Una aplicación hospedada puede tener su propio icono de inicio, su identidad y una profunda integración con las características de Windows 10, como tareas en segundo plano, notificaciones, mosaicos y destinos de los recursos compartidos.
+Las aplicaciones hospedadas son útiles para los escenarios en los que desea que un componente (como un archivo ejecutable o un archivo de script) se comporte como una aplicación de Windows 10 independiente, pero el componente requiere un proceso de host para poder ejecutarlo. Por ejemplo, se puede entregar un script de PowerShell o de Python como una aplicación hospedada que requiere la instalación de un host para poder ejecutarse. Una aplicación hospedada puede tener su propio icono de inicio, su identidad y una profunda integración con las características de Windows 10, como tareas en segundo plano, notificaciones, mosaicos y destinos de los recursos compartidos.
 
 La característica de aplicaciones hospedadas es compatible con varios elementos y atributos del manifiesto de paquete que permiten a una aplicación hospedada usar un ejecutable y una definición en un paquete de aplicación host. Cuando un usuario ejecuta la aplicación hospedada, el sistema operativo inicia automáticamente el archivo ejecutable del host en la identidad de la aplicación hospedada. Después, el host puede cargar activos visuales, contenido o llamar a las API como la aplicación hospedada. La aplicación hospedada obtiene la intersección de las funciones declaradas entre el host y la aplicación hospedada. Esto significa que una aplicación hospedada no puede solicitar más capacidades de las que proporciona el host.
 
