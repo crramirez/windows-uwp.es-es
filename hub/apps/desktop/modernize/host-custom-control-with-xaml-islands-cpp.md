@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 23d7fbf129e9cf53a9510200aa4e3836dffa602f
-ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
+ms.openlocfilehash: 93badc28c9c4fa1684836fc4a883e54661e8d4dc
+ms.sourcegitcommit: 7112e4ec3f19d46a1fc4d81d1c29fd9c01522610
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80482641"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80986968"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>Hospedaje de un control personalizado de UWP en una aplicación Win32 de C++
 
@@ -377,9 +377,11 @@ A continuación, actualiza el proyecto **MyDesktopWin32App** para definir una ma
 4. En el **Explorador de soluciones**, haz clic con el botón derecho en **MyDesktopWin32App (descargado)** y selecciona **Volver a cargar el proyecto**.
 
 5. Haz clic con el botón derecho en **MyDesktopWin32App**, selecciona **Propiedades** y haz clic en el nodo **C/C++** en el panel izquierdo. Confirma que la macro **Directorios de inclusión adicionales** se definió a partir del cambio en el archivo del proyecto que realizaste en el paso anterior.
+
     ![Configuración del proyecto C/C++](images/xaml-islands/xaml-island-cpp-7.png)
 
 6. En el cuadro de diálogo **Páginas de propiedades**, expande **Herramienta Manifiesto** -> **Entrada y salida**. Establece la propiedad **Reconocimiento de ppp** en **Reconocimiento de ppp elevado por monitor**. Si no estableces esta propiedad, es posible que se produzca un error de configuración del manifiesto en ciertos escenarios de PPP elevado.
+
     ![Configuración del proyecto C/C++](images/xaml-islands/xaml-island-cpp-8.png)
 
 ## <a name="host-the-custom-uwp-xaml-control-in-the-desktop-project"></a>Hospedaje del control XAML de UWP personalizado en el proyecto de escritorio

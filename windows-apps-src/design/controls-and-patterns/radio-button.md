@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ad18426a36503c9a540343565c20297502810b76
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 1e7fb764f3d21c260080d8846df3c66c65dccdb5
+ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081648"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123627"
 ---
 # <a name="radio-buttons"></a>Botones de radio
 
@@ -73,9 +73,9 @@ Si las opciones disponibles se basan en el contexto actual de la aplicación o p
 </tr>
 </table>
 
-Botones de radio en la configuración del navegador Microsoft Edge.
+Botones de radio en la configuración del explorador.
 
-![Botones de radio en la configuración del navegador Microsoft Edge](images/control-examples/radio-buttons-edge.png)
+![Botones de radio en la configuración del explorador](images/control-examples/radio-buttons-edge.png)
 
 ## <a name="create-a-radio-button"></a>Crear un botón de radio
 

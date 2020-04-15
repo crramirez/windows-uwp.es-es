@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e198e65052e9ef79ee38863260bce1c1f798ba38
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 75bc81f4295fb76f5a7cc61b3cadd1496f57dc4c
+ms.sourcegitcommit: 1b06c27e7fa4726fd950cbeaf05206c0a070e3c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081738"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80893485"
 ---
 # <a name="collections-and-lists"></a>Colecciones y listas
 
@@ -38,6 +38,8 @@ A continuación, se proporcionan directrices de diseño, características y ejem
 Cada uno de estos controles (a excepción de ItemsRepeater) proporciona las funciones de aplicación de estilos e interacción integradas. Sin embargo, para personalizar aún más el aspecto visual de la vista de colección y de los elementos que contiene, se usa [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate). Puedes encontrar información detallada sobre las plantillas de datos y la personalización del aspecto de una vista de colección en la página [Plantillas y contenedores de elementos](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/item-containers-templates).
 
 Cada uno de estos controles (a excepción de ItemsRepeater) también tiene un comportamiento integrado para permitir la selección de uno o de varios elementos. Consulta [Selection modes overview](selection-modes.md) (Información general sobre los modos de selección) para obtener más información.
+
+Uno de los escenarios que no se tratan en este artículo es la visualización de colecciones en una tabla o en varias columnas. Si quieres mostrar una colección en este formato, piensa en la posibilidad de usar el [control DataGrid](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid) del [Kit de herramientas de la Comunidad Windows](https://docs.microsoft.com/windows/communitytoolkit/). 
 
 > **Windows 10 Fall Creators Update: cambio de comportamiento** De manera predeterminada, en lugar de llevar a cabo la selección, ahora un lápiz activo se desplaza y realiza un movimiento panorámico por una lista en aplicaciones para UWP (como la entrada táctil, el panel táctil y el lápiz pasivo).
 > Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, consulta en el tema de referencia de API la [clase ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer).
