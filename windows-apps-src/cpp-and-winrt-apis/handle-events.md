@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: 664f6799d3bb6f848243820ec46e655262e8c1a7
-ms.sourcegitcommit: 912146681b1befc43e6db6e06d1e3317e5987592
+ms.openlocfilehash: fa97c99f14eee1cb76148c717b1e126a3f406fd1
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79295718"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266923"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Control de eventos mediante delegados en C++/WinRT
 
@@ -218,7 +218,7 @@ Si intentas especificar [**winrt::auto_revoke**](/uwp/cpp-ref-for-winrt/auto-rev
 
 ## <a name="delegate-types-for-asynchronous-actions-and-operations"></a>Tipos de delegados para acciones y operaciones asincrónicas
 
-Los ejemplos anteriores usan el tipo de delegado **RoutedEventHandler** pero, evidentemente, hay muchos otros tipos de delegados. Por ejemplo, las acciones y operaciones asincrónicas (con y sin progreso) tienen eventos completados y en progreso que esperan delegados del correspondiente tipo. Por ejemplo, el evento en progreso de una operación asincrónica con progreso (que es cualquier cosa que implemente [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)) requiere un delegado de tipo [**AsyncOperationProgressHandler** ](/uwp/api/windows.foundation.asyncoperationprogresshandler). Este es un ejemplo de código para crear un delegado de este tipo con una función lambda. El ejemplo también muestra cómo crear un delegado [**AsyncOperationWithProgressCompletedHandler**](/uwp/api/windows.foundation.asyncoperationwithprogresscompletedhandler).
+Los ejemplos anteriores usan el tipo de delegado **RoutedEventHandler** pero, evidentemente, hay muchos otros tipos de delegados. Por ejemplo, las acciones y operaciones asincrónicas (con y sin progreso) tienen eventos completados y en progreso que esperan delegados del correspondiente tipo. Por ejemplo, el evento en progreso de una operación asincrónica con progreso (que es cualquier cosa que implemente [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)) requiere un delegado de tipo [**AsyncOperationProgressHandler** ](/uwp/api/windows.foundation.asyncoperationprogresshandler). Este es un ejemplo de código para crear un delegado de este tipo con una función lambda. El ejemplo también muestra cómo crear un delegado [**AsyncOperationWithProgressCompletedHandler**](/uwp/api/windows.foundation.asyncoperationwithprogresscompletedhandler).
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>

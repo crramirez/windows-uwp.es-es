@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, concurrency, async, asynchronous, asynchrony
 ms.localizationpriority: medium
-ms.openlocfilehash: 949f8c407e0a49c87cbb45c01117a7e2e1525010
-ms.sourcegitcommit: 5f22e596443ff4645ebf68626d8a4d275d8a865f
+ms.openlocfilehash: 048d6fe455f7c3e77922ef8b937a9cb1d6cbb21c
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79083178"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266903"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Operaciones simultáneas y asincrónicas con C++/WinRT
 
@@ -24,13 +24,13 @@ En este tema introductorio se muestran algunas de las maneras en que puedes crea
 Cualquier API de Windows Runtime que tenga el potencial de tardar más de 50 milisegundos en completarse se implementa como una función asincrónica (con un nombre terminado en "Async"). La implementación de una función asincrónica inicia el trabajo en otro subproceso, y se devuelve inmediatamente con un objeto que representa la operación asincrónica. Cuando se completa la operación asincrónica, dicho objeto devuelto contiene cualquier valor que resulte del trabajo. El espacio de nombres de Windows Runtime **Windows::Foundation** contiene cuatro tipos de objeto de la operación asincrónica.
 
 - [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction),
-- [**IAsyncActionWithProgress&lt;TProgress&gt;** ](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_),
-- [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_) y
-- [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_).
+- [**IAsyncActionWithProgress&lt;TProgress&gt;** ](/uwp/api/windows.foundation.iasyncactionwithprogress-1),
+- [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation-1) y
+- [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress-2).
 
 Cada uno de estos tipos de la operación asincrónica se proyecta en un tipo correspondiente en el espacio de nombres **winrt::Windows::Foundation** de C++/WinRT. C++/WinRT también contiene una estructura adaptadora await interna. No la usas directamente, pero gracias a dicha estructura puedes escribir una instrucción `co_await` para esperar de forma cooperativa el resultado de cualquier función que devuelva uno de estos tipos de la operación asincrónica. Y puedes crear tus propias corrutinas que devuelvan estos tipos.
 
-Un ejemplo de una función asincrónica de Windows es [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync), que devuelve un objeto de la operación asincrónica de tipo [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_).
+Un ejemplo de una función asincrónica de Windows es [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync), que devuelve un objeto de la operación asincrónica de tipo [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress-2).
 
 Echemos un vistazo a algunas maneras &mdash;primero de bloqueo y luego de no bloqueo&mdash; de utilizar C++/WinRT para llamar a una API como esta. Solo para ilustrar las ideas básicas, usaremos un proyecto de **Aplicación de consola de Windows (C++/WinRT)** en los siguientes ejemplos de código. Las técnicas más adecuadas para una aplicación de UI se describen en [Simultaneidad y asincronía más avanzadas](concurrency-2.md).
 
@@ -158,7 +158,7 @@ int main()
 
 En el ejemplo anterior, **RetrieveBlogFeedAsync** devuelve **IAsyncOperationWithProgress**, que tiene progreso y un valor devuelto. Podemos hacer otro trabajo mientras **RetrieveBlogFeedAsync** está haciendo el suyo y recuperando la fuente. A continuación, llamamos a **get** en este objeto de la operación asincrónica para bloquear, esperamos a que se complete y obtenemos los resultados de la operación.
 
-Si vas a devolver asincrónicamente un tipo de Windows Runtime, debes devolver [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation_tresult_) o [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_). Se cualifica cualquier clase de tiempo de ejecución propia o de terceros o cualquier tipo que se pueda pasar a una función de Windows Runtime o desde ella (por ejemplo, `int` o **winrt::hstring**). El compilador te ayudará con un error "*debe ser de tipo WinRT*" si intentas usar uno de estos tipos de la operación asincrónica con un tipo que no sea de Windows Runtime.
+Si vas a devolver asincrónicamente un tipo de Windows Runtime, debes devolver [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation-1) o [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress-2). Se cualifica cualquier clase de tiempo de ejecución propia o de terceros o cualquier tipo que se pueda pasar a una función de Windows Runtime o desde ella (por ejemplo, `int` o **winrt::hstring**). El compilador te ayudará con un error "*debe ser de tipo WinRT*" si intentas usar uno de estos tipos de la operación asincrónica con un tipo que no sea de Windows Runtime.
 
 Si una corrutina no tiene al menos una instrucción `co_await`, para que se cualifique como un corrutina, debe tener al menos una instrucción `co_return` o `co_yield`. Habrá casos en los que la corrutina pueda devolver un valor sin introducir ninguna asincronía y, por lo tanto, sin bloquear ni cambiar el contexto. Este ejemplo lo hace (la segunda y subsiguientes veces que se realice la llamada) almacenando en caché un valor.
 
@@ -292,9 +292,9 @@ Consulta el artículo [Referencias fuertes y débiles de C++/WinRT](/windows/uwp
 ## <a name="important-apis"></a>API importantes
 * [Clase concurrency::task](/cpp/parallel/concrt/reference/task-class)
 * [Interfaz IAsyncAction](/uwp/api/windows.foundation.iasyncaction)
-* [Interfaz IAsyncActionWithProgress&lt;TProgress&gt;](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)
-* [Interfaz IAsyncOperation&lt;TResult&gt;](/uwp/api/windows.foundation.iasyncoperation_tresult_)
-* [Interfaz IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)
+* [Interfaz IAsyncActionWithProgress&lt;TProgress&gt;](/uwp/api/windows.foundation.iasyncactionwithprogress-1)
+* [Interfaz IAsyncOperation&lt;TResult&gt;](/uwp/api/windows.foundation.iasyncoperation-1)
+* [Interfaz IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)
 * [Método SyndicationClient::RetrieveFeedAsync](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)
 * [Clase SyndicationFeed](/uwp/api/windows.web.syndication.syndicationfeed)
 

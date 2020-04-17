@@ -7,18 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0eada4c65933151eb6d40b7e3cfdbf31369d6d35
-ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
+ms.openlocfilehash: d0e4a290da0d67560715f80bf20fc6ae4d44a8f6
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80614117"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266963"
 ---
 # <a name="number-box"></a>Cuadro de número
 
 Representa un control que se puede usar para mostrar y editar números. Admite la validación, los incrementos paso a paso y el procesamiento de cálculos en línea de ecuaciones básicas, como la multiplicación, la división, la suma y la resta.
-
-![Ejemplo de un menú contextual típico](images/contextmenu_rs2_icons.png)
 
 **Obtención de la biblioteca de la interfaz de usuario de Windows**
 
