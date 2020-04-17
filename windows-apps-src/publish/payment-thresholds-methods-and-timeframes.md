@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
-ms.openlocfilehash: 45a491364a4b1f406169cba76b7e7ea1ded00886
-ms.sourcegitcommit: 1d6d05d28358e087d9ee8829d76c5fbbac0225cb
+ms.openlocfilehash: e9a6ce5dac2e6a8480b3c6e95472b437ad6f947c
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79434222"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545015"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Umbrales, métodos y plazos de pago
 
@@ -79,7 +79,7 @@ Para ver los países o las regiones en los que se usan estos métodos de pago pa
 | Côte D'Ivoire                    | Sí               | Sí                                      | Sí    | No              |
 | Croacia                          | Sí               | Sí                                      | Sí    | No              |
 | Chipre                           | Sí               | Sí                                      | Sí    | Sí             |
-| República checa                   | Sí               | Sí                                      | Sí    | Sí             |
+| Checo                          | Sí               | Sí                                      | Sí    | Sí             |
 | Dinamarca                          | Sí               | Sí                                      | Sí    | Sí             |
 | Dominica                         | Sí               | Sí                                      | No     | Sí             |
 | República Dominicana               | Sí               | Sí                                      | Sí    | Sí             |

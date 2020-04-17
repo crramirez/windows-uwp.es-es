@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp, operadores de telefonía móviles, facturación móvil, facturación de operador de telefonía móvil
 ms.localizationpriority: medium
-ms.openlocfilehash: af682d2a17e10bf1c3b3cdcb3485315a6972eb9f
-ms.sourcegitcommit: e38946d8228293fca7d6c2b4d66e8e8f0d349e92
+ms.openlocfilehash: 77e157698203b5f55c3fd2ce9dd59e8c94051f5b
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76258357"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545035"
 ---
 # <a name="mobile-operator-billing"></a>Facturación de operadores de telefonía móvil
 
@@ -25,17 +25,17 @@ Estamos trabajando con los operadores de telefonía móvil para ampliar la dispo
 
 La facturación de operadores de telefonía móvil se admite actualmente por estos operadores de telefonía móvil.
 
-| País o región       | Operadores de telefonía móvil                                        |
+| País/región       | Operadores de telefonía móvil                                        |
 |----------------------|---------------------------------------------------------|
 | Australia            | Optus                                                   |
 | Austria              | Hutchison 3G Austria, A1 Telekom, T-Mobile / tele.ring  |
 | Bélgica              | Base, Proximus                                          |
 | Canadá               | Telus                                                   |
-| República Checa       | T-Mobile                                                |
+| Checo              | T-Mobile                                                |
 | Dinamarca              | 3, TDC / YouSee, Telenor, Telia                         |
 | Finlandia              | DNA, Elisa                                              |
-| Francia               | Orange                                                  |
-| Alemania              | O2, Telekom Deutschland, Vodafone                       |
+| France               | Naranja                                                  |
+| Germany              | O2, Telekom Deutschland, Vodafone                       |
 | Hungría              | Telenor                                                 |
 | Italia                | Wind, Tre                                               |
 | Malasia             | Digi                                                    |
@@ -45,7 +45,7 @@ La facturación de operadores de telefonía móvil se admite actualmente por est
 | Singapur            | M1 limitado, StarHub                                     |
 | Eslovaquia             | Slovak Telekom                                          |
 | Sudáfrica         | Vodacom                                                 |
-| España                | Orange                                                  |
+| España                | Naranja                                                  |
 | Suecia               | Telenor, 3                                              |
 | Suiza          | Swisscom, Sunrise                                       |
 | Taiwán               | FarEasTone                                              |

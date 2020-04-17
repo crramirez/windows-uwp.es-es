@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ac6c3e7c89c091d1080364b8fbbb35d484aee49
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: a7ab3d40b48caecc82fafef4df964b7a1dbf8071
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210911"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545095"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
@@ -29,7 +29,7 @@ Las cuentas de empresa están pensadas para empresas y organizaciones. Para las 
 
 Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 
-| Cuenta individual | Cuenta de empresa |
+| Cuenta individual | Cuenta de la empresa |
 |--------------------|-----------------|
 | <ul><li>Cuesta aproximadamente 19 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
 
@@ -47,7 +47,7 @@ Puedes registrarte con una cuenta de desarrollador y enviar aplicaciones si resi
 
 En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el registro de la cuenta de desarrollador. Se trata de una tarifa única y no se aplica ningún cargo por renovación. Ten en cuenta que los precios que se indican a continuación están sujetos a cambios.
 
-| País o región                    | Tarifa de reg. individual | Tarifa de reg. de empresa |
+| País/región                    | Tarifa de reg. individual | Tarifa de reg. de empresa |
 |-----------------------------------|---------------------|------------------|
 | Afganistán                       | 19 USD              | 99 USD           |
 | Albania                           | 19 USD              | 99 USD           |
@@ -93,7 +93,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Côte d'Ivoire                     | 19 USD              | 99 USD           |  
 | Croacia                           | 107 HRK             | 500 HRK          |  
 | Chipre                            | 14 EUR              | 75 EUR           |  
-| República Checa                    | 365 CZK             | 1720 CZK         |  
+| Checo                           | 365 CZK             | 1720 CZK         |  
 | Dinamarca                           | 106 DKK             | 530 DKK          |  
 | Yibuti                          | 19 USD              | 99 USD           | 
 | Dominica                          | 19 USD              | 99 USD           | 
@@ -108,11 +108,11 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Islas Feroe                     | 19 USD              | 99 USD           |  
 | Fiyi                              | 19 USD              | 99 USD           |  
 | Finlandia                           | 14 EUR              | 75 EUR           |  
-| Francia                            | 14 EUR              | 75 EUR           |  
+| France                            | 14 EUR              | 75 EUR           |  
 | Gabón                             | 19 USD              | 99 USD           |  
 | Gambia                        | 19 USD              | 99 USD           |  
 | Georgia                           | 19 USD              | 99 USD           |  
-| Alemania                           | 14 EUR              | 75 EUR           |  
+| Germany                           | 14 EUR              | 75 EUR           |  
 | Ghana                             | 19 USD              | 99 USD           |  
 | Grecia                            | 14 EUR              | 75 EUR           |  
 | Groenlandia                         | 19 USD              | 99 USD           |  
@@ -123,7 +123,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Guyana                            | 19 USD              | 99 USD           |  
 | Haití                             | 19 USD              | 99 USD           |  
 | Honduras                          | 19 USD              | 99 USD           |  
-| Región Administrativa Especial de Hong Kong                     | 147 HKD             | 760 HKD          |  
+| Hong Kong, RAE                     | 147 HKD             | 760 HKD          |  
 | Hungría                           | 4237 HUF            | 18 800 HUF        |  
 | Islandia                           | 2319 ISK            | 11929 ISK        |
 | India                             | 1201 INR            | 4500 INR         |  
@@ -133,12 +133,12 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Israel                            | 67 ILS              | 350 ILS          |  
 | Italia                             | 14 EUR              | 75 EUR           |  
 | Jamaica                           | 19 USD              | 99 USD           |  
-| Japón                             | 1847 JPY            | 9800 JPY         |  
+| Japan                             | 1847 JPY            | 9800 JPY         |  
 | Jordania                            | 13 JOD              | 70 JOD           |  
 | Kazajistán                        | 2897 KZT            | 15038 KZT        |  
 | Kenia                             | 1900 KES            | 9999 KES         |  
 | Kiribati                          | 19 USD              | 99 USD           |  
-| Corea del Sur                             | 21216 KRW           | 108000 KRW       |  
+| Korea                             | 21216 KRW           | 108000 KRW       |  
 | Kuwait                            | 5 KWD               | 28 KWD           |  
 | Kirguistán                        | 19 USD              | 99 USD           |  
 | Laos                              | 19 USD              | 99 USD           |  
@@ -188,8 +188,8 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Filipinas                       | 832 PHP             | 4400 PHP         |  
 | Polonia                            | 59 PLN              | 280 PLN          |  
 | Portugal                          | 14 EUR              | 75 EUR           |  
-| Catar                             | 69 QAR              | 360 QAR          |  
-| Rumanía                           | 14 EUR              | 75 EUR           |  
+| Qatar                             | 69 QAR              | 360 QAR          |  
+| Rumania                           | 14 EUR              | 75 EUR           |  
 | Rusia                            | 626 RUB             | 3000 RUB         |  
 | Ruanda                            | 19 USD              | 99 USD           |  
 | San Cristóbal y Nieves             | 19 USD              | 99 USD           |  

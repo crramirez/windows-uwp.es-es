@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, impuestos, irs, servicio de impuestos internos, impuesto, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: 55143f109398aae1988b7ac0d060cda138e7e48e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: e01e1615cb05ab7b0f3d3fa12861e46b231642a8
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258965"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545075"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 
@@ -44,7 +44,7 @@ Los formularios fiscales se le enviarán desde las siguientes direcciones:
 <tr><td>Windows, Office, Azure</td><td>Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Corporation a través de Microsoft Ireland actuando como intermediario calificado para Microsoft Corporation)</td><td>Una ubicación de Microsoft<br>&nbsp;del sur&nbsp;&nbsp;de la empresa<br>Leopardstown, Dublín 18 Irlanda</td></tr>
 <tr><td>Anunciar</td><td>Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Online Inc. a través de Microsoft Ireland actuando como agente de pago para Microsoft Online Inc).</td><td>Una ubicación de Microsoft<br>&nbsp;del sur&nbsp;&nbsp;de la empresa<br>Leopardstown, Dublín 18 Irlanda</td></tr>
 <tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EE. UU.</td></tr>
-<tr><td colspan="3">* Los ciudadanos de los siguientes países que obtienen ingresos publicitarios se pagarán a través de Microsoft Ireland Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda Isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, Países Bajos, Noruega, Polonia, Portugal, Rumania, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza y Reino Unido</td></tr>
+<tr><td colspan="3">* Los ciudadanos de los siguientes países que obtienen ingresos publicitarios se pagarán a través de Microsoft Ireland Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, Checo, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda, isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, Países Bajos, Noruega, Polonia, Portugal, Rumanía, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza y Reino Unido</td></tr>
 </table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para los desarrolladores que se encuentran en los Estados Unidos

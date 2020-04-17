@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, mercados, países, regiones
 ms.localizationpriority: medium
-ms.openlocfilehash: 3621e9c6af0daa84a9762989a14c79f35471b73c
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 0b1a51a98746594a8563de2f309bec9cb5dda0b3
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210971"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545055"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
@@ -139,7 +139,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Croacia</td>
     <td>Curazao</td>
     <td>Chipre</td>
-    <td>República Checa *</td>
+    <td>Checo *</td>
   </tr>
   <tr>
     <td>Dinamarca *</td>
@@ -244,7 +244,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>RAE de Macao</td>
   </tr>
   <tr>
-    <td>Macedonia del Norte (ERYM)</td>
+    <td>Macedonia (ERYM)</td>
     <td>Madagascar</td>
     <td>Malawi</td>
     <td>Malasia</td>
@@ -313,11 +313,11 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Islas Pitcairn</td>
     <td>Polonia *</td>
     <td>Portugal *</td>
-    <td>Catar</td>
+    <td>Qatar</td>
   </tr>
   <tr>
     <td>Reunión</td>
-    <td>Rumanía</td>
+    <td>Rumania</td>
     <td>Rusia *</td>
     <td>Ruanda</td>
   </tr>
@@ -428,7 +428,7 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 &nbsp;
 
-| País o región       | Método de pago  | Ajuste de expansión comercial | Fecha efectiva |
+| País/región       | Método de pago  | Ajuste de expansión comercial | Fecha efectiva |
 |----------------------|-----------------|-------------------------------|----------------|
 | Argentina            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Australia            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
@@ -439,11 +439,11 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 | Chile                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | China                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Colombia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| República Checa       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Checo              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Dinamarca              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Finlandia              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Francia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Alemania              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| France               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Germany              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Grecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Hong Kong            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Hungría              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
@@ -451,7 +451,7 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 | Irlanda              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Israel               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Italia                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Japón                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Japan                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | México               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Países Bajos          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
 | Nueva Zelanda          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
@@ -476,7 +476,7 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Mercados "Resto del mundo" para Windows 8.x
 
-Si la aplicación publicada anteriormente incluye paquetes que tienen como destino Windows 8. x, es importante tener en cuenta que una serie de mercados se trata como un mercado único de "resto del mundo" para los clientes que usan la tienda en Windows 8. x, aunque se muestren como mercados individuales. en el centro de Partners.
+Si la aplicación publicada previamente incluye paquetes destinados a Windows 8. x, es importante tener en cuenta que una serie de mercados se trata como un mercado único de "resto del mundo" para los clientes que usan la tienda en Windows 8. x, aunque se muestren como mercados individuales en el centro de Partners.
 
 Si deja la selección predeterminada del mercado al enviar la aplicación, no tiene que preocuparse de ello y la aplicación estará disponible para todos los mercados posibles. Sin embargo, si desea excluir determinados mercados, tenga en cuenta que, al excluir uno de estos mercados "resto del mundo", la aplicación no estará disponible en *ninguno* de los mercados "resto del mundo" para los clientes de Windows 8 o Windows 8.1.
 
@@ -613,7 +613,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Liberia</td>
     <td>Liechtenstein</td>
     <td>RAE de Macao</td>
-    <td>Macedonia del Norte (ERYM)</td>
+    <td>Macedonia (ERYM)</td>
   </tr>
   <tr>
     <td>Madagascar</td>

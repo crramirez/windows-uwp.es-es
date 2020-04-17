@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, programación, fecha de lanzamiento, fechas, inicio
 ms.localizationpriority: medium
-ms.openlocfilehash: eebd98d8e1ce39ef8d9876ab4749bcc76012f9fa
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 98f4ca9cb1b0b9bf2178fc0b80d0819e15448d24
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210391"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545045"
 ---
 # <a name="configure-precise-release-scheduling"></a>Configurar la programación precisa del lanzamiento
 
@@ -36,7 +36,7 @@ Las opciones seleccionadas para la programación de base se aplicarán a todos l
 
 Verás dos opciones aquí: **Lanzamiento** y **Detener la compra**. 
 
-## <a name="release"></a>Publicación
+## <a name="release"></a>Versión
 
 En la lista desplegable de **Lanzamiento**, puedes establecer cuando quieres que tu aplicación esté disponible en la Store. Esto significa que la aplicación es reconocible en la Store mediante búsqueda o exploración, y que los clientes pueden ver su descripción en la Store y comprar la aplicación.
 
@@ -76,7 +76,7 @@ Para agregar una programación personalizada para un mercado adicional, o un gru
 
 ## <a name="global-time-zones"></a>Zonas horarias globales
 
-A continuación se muestra una tabla en la que se muestran las zonas horarias específicas que se usan en cada mercado, por lo que cuando el envío utiliza la hora local (por ejemplo, el lanzamiento a las 9:00 de la versión local), puede averiguar el tiempo que se publicará en cada mercado, en especial útil con los mercados que tienen más de una hora z. una, como Canadá.
+A continuación se muestra una tabla en la que se muestran las zonas horarias específicas que se usan en cada mercado, por lo que cuando el envío utiliza la hora local (por ejemplo, el lanzamiento a las 9:00 de la versión local), puede averiguar el tiempo que se publicará en cada mercado, especialmente útil para los mercados que tienen más de una zona horaria, como Canadá.
 
 | Mercado | Zona horaria |
 |--------|-----------|
@@ -127,7 +127,7 @@ A continuación se muestra una tabla en la que se muestran las zonas horarias es
 | República Centroafricana  |  (UTC + 01:00) África central occidental |
 | Chad  |  (UTC + 01:00) África central occidental |
 | Chile  |  (UTC-04:00) Santiago |
-| China  |  (UTC + 08:00) Beijing, Chongqing, Hong Kong, Urumqi |
+| China  |  (UTC + 08:00) Pekín, Chongqing, Hong Kong, Urumqi |
 | Isla de Navidad  |  (UTC + 07:00) Krasnoiarsk |
 | Islas Cocos  |  (UTC + 06:30) Yangón (Rangún) |
 | Colombia  |  (UTC-05:00) Bogotá, Lima, Quito, Río Branco |
@@ -139,7 +139,7 @@ A continuación se muestra una tabla en la que se muestran las zonas horarias es
 | Croacia  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
 | CuraÃ § AO  |  (UTC-04:00) Cuiabá |
 | Chipre  |  (UTC + 02:00) Chisinau |
-| República Checa  |  (UTC + 01:00) Belgrado, Bratislava, Budapest, Liubliana, Praga |
+| Checo  |  (UTC + 01:00) Belgrado, Bratislava, Budapest, Liubliana, Praga |
 | Dinamarca  |  (UTC + 01:00) Bruselas, Copenhague, Madrid, París |
 | Yibuti  |  (UTC + 03:00) Nairobi |
 | Dominica  |  (UTC-04:00) Hora del Atlántico (Canadá) |
@@ -155,14 +155,14 @@ A continuación se muestra una tabla en la que se muestran las zonas horarias es
 | Islas Feroe  |  (UTC + 00:00) Dublín, Edimburgo, Lisboa, Londres |
 | Fiyi  |  (UTC + 12:00) Fiyi |
 | Finlandia  |  (UTC + 02:00) Helsinki, Kiev, Riga, Sofía, Tallin, Vilnius |
-| Francia  |  (UTC + 01:00) Bruselas, Copenhague, Madrid, París |
+| France  |  (UTC + 01:00) Bruselas, Copenhague, Madrid, París |
 | Guayana Francesa  |  (UTC-03:00) Cayena, fortaleza |
 | Polinesia Francesa  |  (UTC-10:00) Hawái |
 | Tierras Australes y Antárticas Francesas  |  (UTC + 05:00) Asjabad, Tashkent |
 | Gabón  |  (UTC + 01:00) África central occidental |
 | Gambia  |  (UTC + 00:00) Monrovia, Reykjavik |
 | Georgia  |  (UTC-05:00) Hora del este (EE. UU. & Canadá) |
-| Alemania  |  (UTC + 01:00) Amsterdam, Berlín, Berna, Roma, Estocolmo, Viena |
+| Germany  |  (UTC + 01:00) Amsterdam, Berlín, Berna, Roma, Estocolmo, Viena |
 | Ghana  |  (UTC + 00:00) Monrovia, Reykjavik |
 | Gibraltar  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
 | Grecia  |  (UTC + 02:00) Atenas, Bucarest |
@@ -179,7 +179,7 @@ A continuación se muestra una tabla en la que se muestran las zonas horarias es
 | Islas Heard y McDonald  |  (UTC-05:00) Bogotá, Lima, Quito, Río Branco |
 | Santa Sede (Ciudad del Vaticano)  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
 | Honduras  |  (UTC-06:00) Hora central (EE. UU. & Canadá) |
-| RAE de Hong Kong  |  (UTC + 08:00) Beijing, Chongqing, Hong Kong, Urumqi |
+| Hong Kong, RAE  |  (UTC + 08:00) Pekín, Chongqing, Hong Kong, Urumqi |
 | Hungría  |  (UTC + 01:00) Belgrado, Bratislava, Budapest, Liubliana, Praga |
 | Islandia  |  (UTC + 00:00) Monrovia, Reykjavik |
 | India  |  (UTC + 05:30) Chennai, Calcuta, Mumbai, Nueva Delhi |
@@ -189,13 +189,13 @@ A continuación se muestra una tabla en la que se muestran las zonas horarias es
 | Israel  |  (UTC + 02:00) Jerusalén |
 | Italia  |  (UTC + 01:00) Amsterdam, Berlín, Berna, Roma, Estocolmo, Viena |
 | Jamaica  |  (UTC-05:00) Hora del este (EE. UU. & Canadá) |
-| Japón  |  (UTC + 09:00) Osaka, Sapporo, Tokio |
+| Japan  |  (UTC + 09:00) Osaka, Sapporo, Tokio |
 | Jersey  |  (UTC + 00:00) Monrovia, Reykjavik |
 | Jordania  |  (UTC + 02:00) Chisinau |
 | Kazajistán  |  (UTC + 05:00) Asjabad, Tashkent |
 | Kenia  |  (UTC + 03:00) Nairobi |
 | Kiribati  |  (UTC + 14:00) Isla Kiritimati |
-| Corea del Sur  |  (UTC + 09:00) Seúl |
+| Korea  |  (UTC + 09:00) Seúl |
 | Kuwait  |  (UTC + 04:00) Abu Dabi, Muscat |
 | Kirguistán  |  (UTC + 06:00) Astaná |
 | Laos  |  (UTC + 07:00) Bangkok, Hanoi, Yakarta |
@@ -207,8 +207,8 @@ A continuación se muestra una tabla en la que se muestran las zonas horarias es
 | Liechtenstein  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
 | Lituania  |  (UTC + 02:00) Chisinau |
 | Luxemburgo  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
-| RAE de Macao  |  (UTC + 08:00) Beijing, Chongqing, Hong Kong, Urumqi |
-| Macedonia del Norte (ERY de Macedonia)  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
+| RAE de Macao  |  (UTC + 08:00) Pekín, Chongqing, Hong Kong, Urumqi |
+| Macedonia (Ex-República Yugoslava de Macedonia)  |  (UTC + 01:00) Sarajevo, Skopie, Varsovia, Zagreb |
 | Madagascar  |  (UTC + 03:00) Nairobi |
 | Malawi  |  (UTC + 02:00) Harare, Pretoria |
 | Malasia  |  (UTC + 08:00) Kuala Lumpur, Singapur |
@@ -256,9 +256,9 @@ A continuación se muestra una tabla en la que se muestran las zonas horarias es
 | Islas Pitcairn  |  (UTC-08:00) Hora del Pacífico (EE. UU. & Canadá) |
 | Polonia  |  (UTC + 01:00) Belgrado, Bratislava, Budapest, Liubliana, Praga |
 | Portugal  |  (UTC + 00:00) Dublín, Edimburgo, Lisboa, Londres |
-| Catar  |  (UTC + 04:00) Abu Dabi, Muscat |
+| Qatar  |  (UTC + 04:00) Abu Dabi, Muscat |
 | Reunión  |  (UTC + 04:00) Puerto Louis |
-| Rumanía  |  (UTC + 02:00) Chisinau |
+| Rumania  |  (UTC + 02:00) Chisinau |
 | COLUMNA  |  (UTC-07:00) Hora de las montañas rocosas (EE. UU. & Canadá) |
 | Rusia  |  (UTC + 03:00) Moscú, San Petersburgo |
 | Ruanda  |  (UTC + 02:00) Harare, Pretoria |

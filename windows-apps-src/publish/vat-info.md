@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d6b90b000564c1c6929154c3ac3b79c129e3fff6
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.openlocfilehash: 1c8521ef2988e2108dbbd619812bfde26cecc81b
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507149"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545085"
 ---
 # <a name="vat-info"></a>Información sobre el IVA
 
@@ -70,7 +70,7 @@ Ten en cuenta que Microsoft no ofrece asesoramiento fiscal y que la siguiente ta
 <li>Ejemplo: 12345678, 123456789 o 0123456789</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">República checa</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Checo</td><td data-th="VAT info">
 <ul>
 <li>Formato del número de IVA: 8, 9 o 10 dígitos</li>
 <li>Código de país/región: CZ</li>
