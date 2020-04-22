@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 0f596047cfdd01fcfca568ea1c63b1e2cc14c272
-ms.sourcegitcommit: 1670eec29b4360ec37cde2910b76078429273cb0
+ms.openlocfilehash: dbae7ada227b4f3019a2e17c91e6b06b7f2f276f
+ms.sourcegitcommit: 0acdafcf75fcd19e5c3181eb16defcfee3918cb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80329508"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81441870"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Cómo usar los controles XAML de UWP en aplicaciones de escritorio (islas XAML)
 
@@ -148,6 +148,8 @@ En las secciones siguientes se describen las limitaciones y las soluciones alter
 :no_entry_sign: Entrada de texto con la vista de escritura a mano. Para más información sobre esta característica, consulta [este artículo](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-handwriting-view).
 
 :no_entry_sign: Controles de texto que usan vínculos de contenido `@Places` y `@People`. Para más información sobre esta característica, consulta [este artículo](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/content-links).
+
+:no_entry_sign: Las islas XAML no admiten el hospedaje de un elemento [ContentDialog](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentDialog) que contiene un control que acepta entrada de texto, como [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) o [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox). Si lo hace, el control de entrada no responderá correctamente a las pulsaciones de teclas. Para lograr una funcionalidad similar con una isla XAML, se recomienda hospedar un elemento [Popup](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Popup) que contenga el control de entrada.
 
 ### <a name="window-host-context-for-xaml-islands"></a>Contexto de hosts de ventanas para islas XAML
 

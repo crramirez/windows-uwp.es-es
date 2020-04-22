@@ -8,25 +8,20 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6b77cc7b2f39a987df4c832f7a8daeb7e2722def
-ms.sourcegitcommit: f2f61a43f5bc24b829e8db679ffaca3e663c00e9
+ms.openlocfilehash: d997c6109256974f17bc0f86a518e34ef55960a7
+ms.sourcegitcommit: ecd7bce5bbe15e72588937991085dad6830cec71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588711"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224278"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>Concesión de identidad a aplicaciones de escritorio no empaquetadas
 
-<!--
-> [!NOTE]
-> The features described in this article require Windows 10 Insider Preview Build 10.0.19000.0 or a later release.
--->
-
 Muchas de las características de extensibilidad de Windows 10 requieren el uso de la [identidad de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) desde aplicaciones de escritorio que no son para UWP, que incluyen tareas en segundo plano, notificaciones, iconos dinámicos y destinos de recursos compartidos. En estos casos, el sistema operativo requiere la identidad para poder identificar al autor de llamada de la API correspondiente.
 
-En las versiones del sistema operativo anteriores a la compilación de Windows 10 Insider Preview 10.0.19000.0, la única manera de conceder la identidad a una aplicación de escritorio es [empaquetarla en un paquete MSIX firmado](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root). Para estas aplicaciones, la identidad se especifica en el manifiesto del paquete, y el registro de identidades se controla mediante la canalización de la implementación de MSIX en función de la información del manifiesto. Todo el contenido al que se hace referencia en el manifiesto del paquete está presente en el paquete MSIX.
+En las versiones del sistema operativo anteriores a Windows 10, versión 2004, la única manera de conceder la identidad a una aplicación de escritorio es [empaquetarla en un paquete MSIX firmado](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root). Para estas aplicaciones, la identidad se especifica en el manifiesto del paquete, y el registro de identidades se controla mediante la canalización de la implementación de MSIX en función de la información del manifiesto. Todo el contenido al que se hace referencia en el manifiesto del paquete está presente en el paquete MSIX.
 
-A partir de la compilación de Windows 10 Insider Preview 10.0.19000.0, puedes conceder la identidad del paquete a las aplicaciones de escritorio no empaquetadas en un paquete MSIX mediante la creación y el registro de un *paquete disperso* con la aplicación. Esta compatibilidad permite que las aplicaciones de escritorio que todavía no pueden adoptar el empaquetado de MSIX para la implementación usen las características de extensibilidad de Windows 10 que requieren la identidad del paquete. Para obtener más información general, consulta [esta entrada de blog](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97).
+A partir de Windows 10, versión 2004, puedes conceder la identidad del paquete a las aplicaciones de escritorio no empaquetadas en un paquete MSIX mediante la creación y el registro de un *paquete disperso* con la aplicación. Esta compatibilidad permite que las aplicaciones de escritorio que todavía no pueden adoptar el empaquetado de MSIX para la implementación usen las características de extensibilidad de Windows 10 que requieren la identidad del paquete. Para obtener más información general, consulta [esta entrada de blog](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97).
 
 Para crear y registrar un paquete disperso que conceda la identidad del paquete a la aplicación de escritorio, debes realizar los pasos siguientes.
 
@@ -162,9 +157,9 @@ El manifiesto de la aplicación en paralelo debe existir en el mismo directorio 
 
 ## <a name="register-your-sparse-package-at-run-time"></a>Registrar el paquete disperso en tiempo de ejecución
 
-Para conceder la identidad del paquete a la aplicación de escritorio, la aplicación debe registrar el paquete disperso mediante la clase [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager). Puedes agregar código a la aplicación para registrar el paquete disperso cuando la aplicación se ejecuta por primera vez, o bien ejecutar código para registrar el paquete mientras se instala la aplicación de escritorio (por ejemplo, si usas MSI para instalar la aplicación de escritorio, puedes ejecutar este código desde una acción personalizada).
+Para conceder la identidad del paquete a la aplicación de escritorio, la aplicación debe registrar el paquete disperso mediante el método **AddPackageByUriAsync** de la clase [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager). Este método está disponible a partir de Windows 10, versión 2004. Puedes agregar código a la aplicación para registrar el paquete disperso cuando la aplicación se ejecuta por primera vez, o bien ejecutar código para registrar el paquete mientras se instala la aplicación de escritorio (por ejemplo, si usas MSI para instalar la aplicación de escritorio, puedes ejecutar este código desde una acción personalizada).
 
-En el siguiente ejemplo se muestra cómo registrar un paquete disperso. Este código crea un objeto **AddPackageOptions** que contiene la ruta de acceso a la ubicación externa donde el manifiesto del paquete puede hacer referencia al contenido fuera del paquete. A continuación, el código pasa este objeto al método **PackageManager.AddPackageByUriAsync** para registrar el paquete disperso. Este método también recibe la ubicación del paquete disperso firmado como un URI. Para obtener un ejemplo más completo, consulta el archivo de código `StartUp.cs` en el [ejemplo](#sample) relacionado.
+En el siguiente ejemplo se muestra cómo registrar un paquete disperso. Este código crea un objeto **AddPackageOptions** que contiene la ruta de acceso a la ubicación externa donde el manifiesto del paquete puede hacer referencia al contenido fuera del paquete. A continuación, el código pasa este objeto al método **AddPackageByUriAsync** para registrar el paquete disperso. Este método también recibe la ubicación del paquete disperso firmado como un URI. Para obtener un ejemplo más completo, consulta el archivo de código `StartUp.cs` en el [ejemplo](#sample) relacionado.
 
 ```csharp
 private static bool registerSparsePackage(string externalLocation, string sparsePkgPath)
