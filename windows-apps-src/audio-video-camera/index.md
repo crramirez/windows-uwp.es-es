@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e3e29dabf074eab59f6c788c139524f7dc2474df
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "67318317"
 ---
 # <a name="audio-video-and-camera"></a>Audio, vídeo y cámara
@@ -39,7 +39,7 @@ En esta sección se ofrece información sobre la creación de aplicaciones para 
 | [Consulta de códecs instalados](codec-query.md) | Muestra cómo consultar los codificadores y descodificadores de audio y vídeo instalados en un dispositivo. |
 | [Captura de pantalla](screen-capture.md) | Describe cómo usar el [espacio de nombres Windows.Graphics.Capture](https://docs.microsoft.com/uwp/api/windows.graphics.capture) para adquirir fotogramas de una pantalla o una ventana de aplicación, con el fin de elaborar secuencias de vídeo o instantáneas para crear experiencias interactivas y de colaboración. |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 - [Desarrollar aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/develop/)
 
  

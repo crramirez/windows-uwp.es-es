@@ -1,7 +1,6 @@
-items:
 - name: Novedades
   href: whats-new/toc.yml
-- name: Comenzar
+- name: Introducción
   href: get-started/toc.yml
 - name: Diseño e interfaz de usuario
   href: design/toc.yml
@@ -13,9 +12,3 @@ items:
   href: publish/toc.yml
 - name: Referencia de la API
   href: /uwp/
-ms.openlocfilehash: 694733290f7b44ed6b7c88eaf6bcb9a5e0e71309
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583246"

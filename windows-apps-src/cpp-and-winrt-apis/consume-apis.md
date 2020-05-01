@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projected, projection, implementation, runtime class, activation
 ms.localizationpriority: medium
 ms.openlocfilehash: 66c162b7ae9cd588bea1062ed8c953d94d1b691c
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "70393763"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Consumo de API con C++/WinRT
@@ -19,7 +19,7 @@ En este tema se muestra cómo consumir las API de [C++/WinRT](/windows/uwp/cpp-a
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>Si la API está en un espacio de nombres de Windows
 Este es el caso más común en el que consumirás una API de Windows Runtime. Para cada tipo de un espacio de nombres de Windows definido en los metadatos, C++/WinRT define un equivalente de C++ descriptivo (denominado el *tipo proyectado*). Un tipo proyectado tiene el mismo nombre completo que el tipo de Windows, pero se colocado en el espacio de nombres **winrt** de C++ mediante la sintaxis de C++. Por ejemplo, [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri) se proyecta en C++/WinRT como **winrt::Windows::Foundation::Uri**.
 
-Este es un ejemplo de código sencillo. Si quieres copiar y pegar los siguientes ejemplos de código directamente en el archivo de código fuente principal de un proyecto de **aplicación de consola Windows (C++/WinRT)** , establece primero **No utilizar encabezados precompilados** en las propiedades del proyecto.
+Este es un ejemplo de código sencillo. Si quieres copiar y pegar los ejemplos de código siguientes directamente en el archivo de código fuente principal de un proyecto de **aplicación de consola de Windows (C++/WinRT)** , establece primero **No utilizar encabezados precompilados** en las propiedades del proyecto.
 
 ```cppwinrt
 // main.cpp
@@ -264,7 +264,7 @@ auto smallBox{
 Esta sección se aplica si creaste el componente tú mismo o si este procedió de un proveedor.
 
 > [!NOTE]
-> Para más información sobre cómo instalar y usar la Extensión de Visual Studio (VSIX) para C++/WinRT y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para más información sobre cómo instalar y usar C++/WinRT Visual Studio Extension (VSIX) y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 En tu proyecto de aplicación, haz referencia al archivo de metadatos de Windows Runtime del componente de Windows Runtime (`.winmd`) y realiza la compilación. Durante la compilación, la herramienta `cppwinrt.exe` genera una biblioteca de C++ estándar que describe completamente&mdash;o *proyecta*&mdash;la superficie de la API para el componente. En otras palabras, la biblioteca generada contiene los tipos proyectados para el componente.
 

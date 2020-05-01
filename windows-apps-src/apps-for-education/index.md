@@ -7,10 +7,10 @@ keywords: windows 10, uwp, education
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d68fd78a7da3f1b98f61225f3aad8ca1590140e
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "67317607"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a>Desarrollar aplicaciones universales de Windows para la educación
@@ -37,7 +37,7 @@ La plataforma Windows Ink consigue que las aplicaciones educativas deslumbren ad
 - En [Muestra de entrada de lápiz compleja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk) se muestra cómo usar la funcionalidad InkPresenter avanzada para intercalar tinta con otros objetos, seleccionar trazos de lápiz, copiar o pegar y controlar eventos. Se basa en la Plataforma universal de Windows en C++ y puede ejecutarse en ambas SKU de escritorio y móvil de Windows 10.
 
 
-### <a name="microsoft-store"></a>Microsoft Store
+### <a name="microsoft-store"></a>Microsoft Store
 A menudo, las aplicaciones educativas se publican en circunstancias especiales para una organización específica. Consulta [Distribuir aplicaciones de LOB en las empresas](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) para obtener información sobre este tema.
 
 ## <a name="related-topics"></a>Temas relacionados

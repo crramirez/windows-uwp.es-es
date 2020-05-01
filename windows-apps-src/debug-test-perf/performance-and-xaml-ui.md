@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c13fb0f1b3d982d372896547bf2e47d978532ea4
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "70393448"
 ---
 # <a name="performance"></a>Rendimiento
@@ -22,7 +22,7 @@ Si aún no lo has hecho, un paso que ya hemos visto y que permite realizar mejor
 
 | Tema | Descripción |
 |-------|-------------|
-| [Planeamiento del rendimiento](planning-and-measuring-performance.md) | Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, realiza mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos. |
+| [Planificación del rendimiento](planning-and-measuring-performance.md) | Los usuarios esperan que sus aplicaciones sean dinámicas, que su uso sea natural y que no agoten fácilmente la batería. Técnicamente, el rendimiento es un requisito no funcional, pero tratarlo como una característica te ayudará a cumplir las expectativas de los usuarios. Especificar objetivos y realizar mediciones son factores clave. Determina cuáles son los escenarios críticos para el rendimiento, define lo que significa un buen rendimiento. A continuación, realiza mediciones al principio y con la suficiente frecuencia durante el ciclo de vida del proyecto, para estar seguro de que cumples los objetivos. |
 | [Optimización de la actividad en segundo plano](optimize-background-activity.md) | Crea aplicaciones para UWP que colaboren con el sistema para usar tareas en segundo plano de una manera que produzca un consumo eficiente de la batería. |
 | [Optimización de interfaz de usuario de ListView y GridView](optimize-gridview-and-listview.md) | Mejora el rendimiento y el tiempo de inicio de [<strong>GridView</strong>](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) mediante la virtualización de la interfaz de usuario, la reducción de elementos y la actualización progresiva de esos elementos. |
 | [Virtualización de datos de ListView y GridView](listview-and-gridview-data-optimization.md) | Mejora el rendimiento y el tiempo de inicio de [<strong>GridView</strong>](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) mediante la virtualización de datos. |

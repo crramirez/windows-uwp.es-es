@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, directo, pila, asignaciones, proyectado, implementación
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fe8ff6653b8655ee25cd9adc0c11acb22d42a11
-ms.sourcegitcommit: 4e74c920f1fef507c5cdf874975003702d37bcbb
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68372796"
 ---
 # <a name="diagnosing-direct-allocations"></a>Diagnóstico de asignaciones directas
@@ -38,7 +38,7 @@ void Print(IStringable const& stringable)
 }
 ```
 
-El problema es que nuestro tipo **MyStringable** *no* es **IStringable**.
+El problema es que nuestro tipo **MyStringable***no* es **IStringable**.
 
 - Nuestro tipo **MyStringable** es una implementación de la interfaz **IStringable**.
 - El tipo **IStringable** es un tipo proyectado.
@@ -133,7 +133,7 @@ En cuarto lugar, como **winrt::make** inserta una clase derivada, la implementac
 Por lo tanto, C++/WinRT desafía nuestras nociones preconcebidas de lo que significa escribir código COM clásico. Y eso es perfectamente razonable porque WinRT no es un COM clásico. El COM clásico es el lenguaje de ensamblado de Windows Runtime. No debería ser el código que escribas cada día. En su lugar, C++/WinRT te ayuda a escribir código que es más similar al C++ moderno y se parece mucho menos al COM clásico.
 
 ## <a name="important-apis"></a>API importantes
-* [Plantilla de función winrt::make](/uwp/cpp-ref-for-winrt/make)
+* [Plantilla de función winrt::make ](/uwp/cpp-ref-for-winrt/make)
 * [Plantilla de función winrt::make_self](/uwp/cpp-ref-for-winrt/make-self)
 
 ## <a name="related-topics"></a>Temas relacionados

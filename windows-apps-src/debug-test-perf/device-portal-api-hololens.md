@@ -4,13 +4,13 @@ title: Referencia de API de Device Portal para HoloLens
 description: Obtén información sobre las API de REST de Windows Device Portal para HoloLens que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
 ms.date: 03/22/2018
 ms.topic: article
-keywords: windows 10, uwp, device portal
+keywords: windows 10, uwp, portal de dispositivos
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aeb068908adf6d6c40a50cee3aececba1861ee8
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63801384"
 ---
 # <a name="device-portal-api-reference-for-hololens"></a>Referencia de API de Device Portal para HoloLens
@@ -21,7 +21,7 @@ Todo lo que contiene Windows Device Portal se basa en las API de REST que puedes
 
 ### <a name="get-https-requirements-for-the-device-portal"></a>Obtener los requisitos de HTTPS para Device Portal
 
-**solicitud**
+**Solicitud**
 
 Puedes obtener los requisitos de HTTPS de Device Portal mediante el siguiente formato de solicitud.
  
