@@ -9,10 +9,10 @@ author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: 08308c7bca3cd7f39b08c836e43d791a3fda048f
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80226279"
 ---
 # <a name="host-a-standard-uwp-control-in-a-c-win32-app"></a>Hospedaje de un control estándar de UWP en una aplicación Win32 de C++
@@ -287,7 +287,7 @@ Las instrucciones siguientes muestran cómo empaquetar todos los componentes de 
 > [!NOTE]
 > Si decides no empaquetar la aplicación en un [paquete MSIX](https://docs.microsoft.com/windows/msix) para su implementación, los equipos que ejecuten dicha aplicación deberán tener instalado el [Tiempo de ejecución de Visual C++](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
 
-1. Agrega un nuevo [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) a la solución. Al crear el proyecto, selecciona **Windows 10, versión 1903 (10.0; compilación 18362)** para la **versión de destino** y la **versión mínima**.
+1. Agrega un nuevo [Proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) a la solución. Al crear el proyecto, selecciona **Windows 10, versión 1903 (10.0; compilación 18362)** para la **versión de destino** y la **versión mínima**.
 
 2. En el proyecto de empaquetado, haz clic con el botón derecho en el nodo **Aplicaciones** y elige **Agregar referencia**. En la lista de proyectos, selecciona el proyecto de aplicación de escritorio C++/Win32 en la solución y haz clic en **Aceptar**.
 

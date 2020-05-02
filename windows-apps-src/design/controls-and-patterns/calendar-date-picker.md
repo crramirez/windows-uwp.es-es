@@ -13,10 +13,10 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 28248b3df4a3444441c7a4a19f1a360150170b1c
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80081250"
 ---
 # <a name="calendar-date-picker"></a>Selector de fecha del calendario
@@ -27,7 +27,7 @@ El selector de fecha del calendario es un control desplegable que está optimiza
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones de UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de plataforma**: [clase CalendarDatePicker](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker), [propiedad Date](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.date), [evento DateChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged)
 

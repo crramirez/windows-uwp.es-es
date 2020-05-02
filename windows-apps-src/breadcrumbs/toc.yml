@@ -1,10 +1,10 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Windows
+  tocHref: /windows/
+  topicHref: /windows/
   items:
-    - name: Windows
-      tocHref: /windows/
-      topicHref: /windows/
+    - name: Aplicaciones
+      tocHref: /windows/apps/
+      topicHref: /windows/apps/
       items:
         - name: UWP
           tocHref: /windows/uwp/
@@ -13,7 +13,7 @@
             - name: Novedades
               tocHref: /windows/uwp/whats-new/
               topicHref: /windows/uwp/whats-new/windows-10-version-latest
-            - name: Comenzar
+            - name: Introducción
               tocHref: /windows/uwp/get-started/
               topicHref: /windows/uwp/get-started/
             - name: Diseño e interfaz de usuario
@@ -35,7 +35,7 @@
                 - name: Movimiento
                   tocHref: /windows/uwp/design/motion/
                   topicHref: /windows/uwp/design/motion/index
-                - name: Controls
+                - name: Controles
                   tocHref: /windows/uwp/design/controls-and-patterns/
                   topicHref: /windows/uwp/design/controls-and-patterns/index
                 - name: Entrada e interacciones
@@ -94,7 +94,7 @@
                 - name: 'Dispositivos, sensores y energía'
                   tocHref: /windows/uwp/devices-sensors/
                   topicHref: /windows/uwp/devices-sensors/index
-                - name: Empresas
+                - name: Enterprise
                   tocHref: /windows/uwp/enterprise/
                   topicHref: /windows/uwp/enterprise/index
                 - name: 'Archivos, carpetas y bibliotecas'

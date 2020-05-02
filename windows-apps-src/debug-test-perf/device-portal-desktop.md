@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
 ms.openlocfilehash: 73f7e827c0ec8ca289d3523da06601de978a91d2
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79210191"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de dispositivos para dispositivos de escritorio Windows
@@ -131,5 +131,5 @@ Si usas una conexión a Internet de uso medido, puede que recibas este error. No
 
 ## <a name="see-also"></a>Consulta también
 
-* [Introducción a Windows Device Portal](device-portal.md)
+* [Introducción al Portal de dispositivos Windows](device-portal.md)
 * [Referencia de API principal del Portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

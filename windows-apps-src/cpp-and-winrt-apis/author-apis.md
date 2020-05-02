@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, estándar, c++, cpp, winrt, projected, proyectado, projection, proyección, implementation, implementación, implement, implementar, runtime class, clase en tiempo de ejecución, activation, activación
 ms.localizationpriority: medium
-ms.openlocfilehash: 84c0e9315950541e51bf49f5c0eec370f3188c4d
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: fcdeaec3728306de420baa4a2aea06ef1952641e
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209280"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255269"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
@@ -239,7 +239,7 @@ Hemos visto que el flujo de trabajo consiste en usar IDL para declarar la clase 
 A continuación se muestran algunos ejemplos.
 
 - Puedes flexibilizar los tipos de parámetros. Por ejemplo, si en IDL tu método toma un elemento **SomeClass**, puedes cambiarlo a **Ispectable** en la implementación. Esto funciona porque cualquier elemento **SomeClass** puede reenviarse a **IIspectable** (si lo haces al revés, no funcionará).
-- Puedes aceptar un parámetro que se pueda copiar en función del valor, en lugar de las referencias. Por ejemplo, cambia `SomeClass` a `SomeClass const&`. Esto es necesario cuando necesites evitar capturar una referencia en una corrutina (consulta[Pasar los parámetros](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)).
+- Puedes aceptar un parámetro que se pueda copiar en función del valor, en lugar de las referencias. Por ejemplo, cambia `SomeClass const&` a `SomeClass`. Esto es necesario cuando necesites evitar capturar una referencia en una corrutina (consulta[Pasar los parámetros](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)).
 - Puedes flexibilizar el valor devuelto. Por ejemplo, puedes cambiar **void** a [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget).
 
 Los dos últimos son muy útiles al escribir un controlador de eventos asincrónicos.

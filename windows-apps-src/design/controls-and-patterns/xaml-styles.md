@@ -11,10 +11,10 @@ template: detail.hbs
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a2f73fe6280d3a86510ce48f47017dd4897139a
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79208990"
 ---
 # <a name="xaml-styles"></a>Estilos XAML

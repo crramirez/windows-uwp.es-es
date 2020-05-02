@@ -13,10 +13,10 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e1e4874051554a8b725c7921a60a2c2429b18bc1
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80081462"
 ---
 # <a name="tooltips"></a>Información sobre herramientas
@@ -29,7 +29,7 @@ La información sobre herramientas es una breve descripción que está vinculada
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete de NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | La biblioteca de interfaz de usuario de Windows 2.2 o posterior incluye una nueva plantilla para este control que usa esquinas redondeadas. Para obtener más información, consulta [Radio de redondeo](/windows/uwp/design/style/rounded-corner). WinUI es un paquete NuGet que contiene nuevas características de interfaz de usuario y controles para aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de plataforma**: [Clase ToolTip](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) y [Clase ToolTipService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
 

@@ -1,0 +1,89 @@
+- name: Compilación de aplicaciones para Windows
+  href: index.yml
+  items:
+    - name: Compilación de aplicaciones de escritorio
+      items:
+        - name: Introducción
+          href: desktop/index.md
+        - name: Elección de la plataforma de aplicaciones
+          href: desktop/choose-your-platform.md
+    - name: Modernización de las aplicaciones de escritorio
+      items:
+        - name: Introducción
+          href: desktop/modernize/index.md
+        - name: Llamada a las API de UWP
+          items:
+            - name: Introducción
+              href: desktop/modernize/desktop-to-uwp-enhance.md
+            - name: API de UWP disponibles
+              href: desktop/modernize/desktop-to-uwp-supported-api.md
+        - name: Hospedaje de controles XAML de UWP (islas XAML)
+          items:
+            - name: Introducción
+              href: desktop/modernize/xaml-islands.md
+            - name: XAML Islands en aplicaciones de WPF y Windows Forms
+              items:
+                - name: Hospedaje de un control estándar de UWP
+                  href: desktop/modernize/host-standard-control-with-xaml-islands.md
+                - name: Hospedaje de un control estándar de UWP
+                  href: desktop/modernize/host-custom-control-with-xaml-islands.md
+            - name: XAML Islands en aplicaciones Win32 de C++
+              items:
+                - name: Usar la API de hospedaje XAML de UWP
+                  href: desktop/modernize/using-the-xaml-hosting-api.md
+                - name: Hospedaje de un control estándar de UWP
+                  href: desktop/modernize/host-standard-control-with-xaml-islands-cpp.md
+                - name: Hospedaje de un control estándar de UWP
+                  href: desktop/modernize/host-custom-control-with-xaml-islands-cpp.md
+                - name: Escenarios avanzados
+                  href: desktop/modernize/advanced-scenarios-xaml-islands-cpp.md
+        - name: Uso de la capa visual (Windows.UI.Composition)
+          items:
+            - name: Introducción
+              href: desktop/modernize/visual-layer-in-desktop-apps.md
+            - name: WPF
+              href: desktop/modernize/using-the-visual-layer-with-wpf.md
+            - name: "Windows\_Forms"
+              href: desktop/modernize/using-the-visual-layer-with-windows-forms.md
+            - name: Win32
+              href: desktop/modernize/using-the-visual-layer-with-win32.md
+        - name: Características que requieren la identidad del paquete
+          items:
+            - name: Introducción
+              href: desktop/modernize/modernize-packaged-apps.md
+            - name: Integración con extensiones de paquete
+              href: desktop/modernize/desktop-to-uwp-extensions.md
+            - name: Ampliación con componentes de UWP
+              href: desktop/modernize/desktop-to-uwp-extend.md
+            - name: Distribución de la aplicación empaquetada
+              href: desktop/modernize/desktop-to-uwp-distribute.md
+        - name: 'Tutorial: Modernización de una aplicación WPF'
+          items:
+            - name: Introducción
+              href: desktop/modernize/modernize-wpf-tutorial.md
+            - name: Migración de la aplicación Contoso Expenses a .NET Core 3
+              href: desktop/modernize/modernize-wpf-tutorial-1.md
+            - name: Incorporación de un control InkCanvas en UWP mediante islas XAML
+              href: desktop/modernize/modernize-wpf-tutorial-2.md
+            - name: Incorporación de un control CalendarView en UWP mediante islas XAML
+              href: desktop/modernize/modernize-wpf-tutorial-3.md
+            - name: Incorporación de actividades y notificaciones del usuario de Windows 10
+              href: desktop/modernize/modernize-wpf-tutorial-4.md
+            - name: Empaquetar e implementar con MSIX
+              href: desktop/modernize/modernize-wpf-tutorial-5.md
+        - name: Concesión de identidad a aplicaciones de escritorio no empaquetadas
+          href: desktop/modernize/grant-identity-to-nonpackaged-apps.md
+    - name: "Desarrollo para Windows\_10X"
+      items:
+        - name: "Preguntas frecuentes sobre el desarrollo para Windows\_10X"
+          href: 10x/faq.md
+    - name: Fluent Design System
+      href: fluent-design-system.md
+    - name: Accesibilidad
+      href: accessibility.md
+    - name: Voz
+      href: speech.md
+    - name: Características y tecnologías
+      href: features-and-technologies.md
+    - name: Actualizaciones más recientes del documento
+      href: whats-new/latest-doc-updates.md

@@ -7,10 +7,10 @@ ms.localizationpriority: medium
 ms.author: mcleans
 author: mcleanbyron
 ms.openlocfilehash: 6bae7fdef4e9cdf05dfa6f56160f1021033123e6
-ms.sourcegitcommit: 7f1b64f62bc3a82ebcd3807c809363df46919195
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77705780"
 ---
 # <a name="features-and-technologies-for-windows-apps"></a>Características y tecnologías de las aplicaciones de Windows

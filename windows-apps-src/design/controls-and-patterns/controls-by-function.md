@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f1717a59399fb95f7b71a38ee8d2d46de4ca765
-ms.sourcegitcommit: e11e0f65930665579d1f296861234893e82bf8fb
+ms.openlocfilehash: 32038d6e25ec450dae59d0c1d7e9c8703fdc8018
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301443"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82148744"
 ---
 # <a name="controls-by-function"></a>Controles por función
 
@@ -222,7 +222,7 @@ Diseño y procedimientos: [calendario, controles de fecha y hora](date-and-time.
 ### <a name="date-picker"></a>Selector de fecha
 Control que permite a un usuario seleccionar una fecha.
 
-![Control de selector de fecha](images/controls/date-picker.png)
+![Control de selector de fecha](images/controls_datepicker_expand.png)
 
 ```xaml
 <DatePicker Header="Arrival Date"/>
@@ -235,7 +235,7 @@ Diseño y procedimientos: [calendario, controles de fecha y hora](date-and-time.
 ### <a name="time-picker"></a>Selector de hora
 Control que permite a un usuario seleccionar un valor de hora.
 
-![Control TimePicker](images/controls/time-picker.png) 
+![Control TimePicker](images/controls_timepicker_expand.png)
 
 ```xaml
 <TimePicker Header="Arrival Time"/>

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción;uwp;windows 10;pista de aprendizaje;archivos;e/s de archivos;leer archivo;escribir archivo;crear archivo;escribir texto;leer texto;get started;learning track;files;file io;read file;write file;create file;write text;read text
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 29cfeef852f240548f1cd961f73766346da7afa4
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1270d49cc8746b2793b1414306f9ee842cb40f40
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321131"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82166251"
 ---
 # <a name="work-with-files"></a>Trabajar con archivos
 
@@ -102,7 +102,7 @@ Como alternativa, la aplicación puede declarar la funcionalidad [broadFileSyste
 
 Para obtener una lista completa de las ubicaciones a las que las aplicaciones pueden tener acceso, consulta [Permisos de acceso de archivo](https://docs.microsoft.com/windows/uwp/files/file-access-permissions).
 
-## <a name="useful-apis-and-docs"></a>API y documentos de utilidad
+## <a name="useful-apis-and-docs"></a>API y documentos útiles
 
 Este es un resumen rápido de las API y otra documentación de utilidad que te ayudarán a empezar a trabajar con archivos y carpetas.
 
@@ -141,8 +141,8 @@ Este es un resumen rápido de las API y otra documentación de utilidad que te a
 
 | Ejemplo de código | Descripción |
 |-----------------|---------------|
-| [Application data sample](https://code.msdn.microsoft.com/windowsapps/ApplicationData-sample-fb043eb2) (ejemplo de datos de aplicaciones) | Muestra cómo almacenar y recuperar datos que son específicos de cada usuario utilizando las API de datos de aplicaciones. |
+| [Application data sample](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/applicationdata/) (ejemplo de datos de aplicaciones) | Muestra cómo almacenar y recuperar datos que son específicos de cada usuario utilizando las API de datos de aplicaciones. |
 | [Ejemplo de acceso a archivos](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) | Muestra cómo crear, leer, escribir, copiar y eliminar un archivo. |
-| [Ejemplo de selector de archivos](https://code.msdn.microsoft.com/windowsapps/File-picker-sample-9f294cba) | Muestra cómo acceder a archivos y carpetas al permitir que el usuario los elija con la interfaz de usuario. Además, muestra cómo guardar un archivo para que el usuario pueda especificar el nombre, el tipo de archivo y la ubicación de un archivo que va a guardarse. |
+| [Ejemplo de selector de archivos](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/filepicker/) | Muestra cómo acceder a archivos y carpetas al permitir que el usuario los elija con la interfaz de usuario. Además, muestra cómo guardar un archivo para que el usuario pueda especificar el nombre, el tipo de archivo y la ubicación de un archivo que va a guardarse. |
 | [JSON sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Json) (ejemplo de JSON) | Muestra cómo codificar y descodificar objetos, matrices, cadenas, números y booleanos de notación de objetos JavaScript (JSON) mediante el [Espacio de nombres Windows.Data.Json](https://docs.microsoft.com/uwp/api/Windows.Data.Json). |
 | [Ejemplos de código adicionales](https://developer.microsoft.com/windows/samples) | Elige **Files, folder, and libraries** (Archivos, carpeta y bibliotecas) en la lista desplegable de categorías. |
