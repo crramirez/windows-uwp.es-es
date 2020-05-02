@@ -1,19 +1,19 @@
 ---
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
-title: Preparación
+title: Prepárate
 description: Estar preparado es más fácil de lo que puedas imaginar. Sigue estas instrucciones y empieza a crear aplicaciones para la Plataforma universal de Windows (UWP) para Windows 10.
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c95d915c8906e2052243fee509e260fc8864454
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258365"
 ---
-# <a name="get-set-up"></a>Preparación
+# <a name="get-set-up"></a>Prepárate
 
 ![Prepárate para usar Visual Studio](images/VisualStudio2017Hero_ImageXL-LG.png)
 
@@ -69,7 +69,7 @@ Si quieres personalizar el dispositivo e instalar otras características o paque
 
 Para obtener la lista completa de herramientas y descargas, consulta la página de [Descargas](https://developer.microsoft.com/windows/downloads).
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 * [Ejemplos de código para desarrolladores de UWP](https://developer.microsoft.com/windows/samples)
 * [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md)

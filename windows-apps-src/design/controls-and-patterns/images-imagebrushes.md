@@ -9,10 +9,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a07fc5c669d3c9cd374a4a031fba2ee6ef6d5756
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74257287"
 ---
 # <a name="images-and-image-brushes"></a>Imágenes y pinceles de imagen
@@ -44,7 +44,7 @@ Usa un elemento **ImageBrush** para aplicar una imagen a otro objeto. Entre los 
 
 ## <a name="create-an-image"></a>Crear una imagen
 
-### <a name="image"></a>Image
+### <a name="image"></a>Imagen
 En este ejemplo se muestra cómo crear una imagen mediante el objeto [Image](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image).
 
 
@@ -80,7 +80,7 @@ Este es el elemento Ellipse que ha pintado ImageBrush.
 
 Si no establece los valores de [Width](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width) o [Height](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) de un objeto **Image**, este se muestra con las dimensiones de la imagen que especificó **Source**. Cuando se establecen los valores **Width** y **Height**, se crea un área rectangular contenedora donde se muestra la imagen. Mediante la propiedad [Stretch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.stretch) se puede especificar la forma en que la imagen rellena esta área contenedora. La propiedad Stretch acepta estos valores, que define la enumeración [Stretch](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Stretch):
 
--   **Ninguna**: la imagen no se ajusta para rellenar las dimensiones de salida. Ten cuidado con el valor de Stretch: si la imagen de origen es mayor que el área contenedora, se recortará, lo que no es deseable, ya que no tendrás control sobre la ventanilla, algo que tendrías con un elemento [Clip](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.clip) intencionado.
+-   **None**: la imagen no se ajusta para rellenar las dimensiones de salida. Ten cuidado con el valor de Stretch: si la imagen de origen es mayor que el área contenedora, se recortará, lo que no es deseable, ya que no tendrás control sobre la ventanilla, algo que tendrías con un elemento [Clip](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.clip) intencionado.
 -   **Uniform**: la imagen se escala para ajustarse a las dimensiones de salida. aunque la relación de aspecto del contenido se mantiene. Este es el valor predeterminado.
 -   **UniformToFill**: la imagen se escala de forma que rellenar completamente el área de salida, pero mantiene su relación de aspecto original.
 -   **Fill**: la imagen se escala para ajustarse a las dimensiones de salida. Como el alto y el ancho del contenido se escalan de forma independiente, la relación de aspecto original de la imagen quizás no se mantenga. En otras palabras, la imagen podría distorsionarse para rellenar completamente el área de salida.
@@ -160,7 +160,7 @@ Si defines un elemento Image o ImageBrush mediante código, usa los constructore
 > [!NOTE]
 > Si estableces imágenes mediante código, puedes usar el control automático para obtener acceso a los recursos sin calificar con calificadores de referencia cultural y de escala actuales, o bien puedes usar [ResourceManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) y [ResourceMap](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap) con calificadores de escala y referencia cultural para obtener los recursos directamente. Para obtener más información, consulta [Sistema de administración de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)).
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [Muestra de XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): Vea todos los controles XAML en un formato interactivo.
 

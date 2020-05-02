@@ -13,10 +13,10 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63801207"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>Comandos contextuales en colecciones y listas
@@ -35,11 +35,11 @@ Dado que los usuarios pueden interactuar con una aplicación para UWP mediante 
 
 En esta tabla se muestran algunos comandos de colección típicos y formas de exponer los comandos. 
 
-| Comando          | Independiente de entrada | Acelerador de mouse | Aceleradores de teclado | Acelerador de entrada táctil |
+| Comando          | Independiente de la entrada | Acelerador de mouse | Teclas de aceleración | Acelerador de entrada táctil |
 | ---------------- | -------------- | ----------------- | -------------------- | ----------------- |
 | Eliminar elemento      | Menú contextual   | Botón interactivo      | Tecla Supr              | Deslizar el dedo para eliminar   |
 | Marcar elemento        | Menú contextual   | Botón interactivo      | Ctrl + Mayús + G         | Deslizar el dedo para marcar     |
-| Actualizar datos     | Menú contextual   | N/D               | Tecla F5               | Extraer para actualizar   |
+| Actualizar datos     | Menú contextual   | N/A               | Tecla F5               | Extraer para actualizar   |
 | Marcar como favorito un elemento | Menú contextual   | Botón interactivo      | F, Ctrl+S            | Deslizar el dedo para favorito |
 
 
@@ -55,7 +55,7 @@ En esta tabla se muestran algunos comandos de colección típicos y formas de ex
 > [!NOTE]
 > Los usuarios han de poder acceder a todos los comandos desde cualquier tipo de dispositivo. Por ejemplo, si los comandos de la aplicación solo se exponen a través de los aceleradores de puntero de botones interactivos, los usuarios táctiles no podrán obtener acceso a ellos. Como mínimo, usa un menú contextual para proporcionar acceso a todos los comandos.  
 
-## <a name="example-the-podcastobject-data-model"></a>Por ejemplo: Modelo de datos de PodcastObject
+## <a name="example-the-podcastobject-data-model"></a>Ejemplo: Modelo de datos de PodcastObject
 
 Para demostrar nuestras recomendaciones de comandos, en este artículo se crea una lista de podcasts para una aplicación de podcasts. El código de ejemplo muestra cómo permitir al usuario marcar como "favorito" un podcast concreto en una lista.
 
@@ -237,8 +237,8 @@ El usuario puede invocar menús contextuales con estas "acciones contextuales":
 | Entrada    | Acción de contexto                          |
 | -------- | --------------------------------------- |
 | Mouse    | Hacer clic con el botón derecho                             |
-| Teclado | Mayús + F10, botón de menú                  |
-| Función táctil    | Presión larga en el elemento                      |
+| Keyboard | Mayús + F10, botón de menú                  |
+| Tocar    | Presión larga en el elemento                      |
 | Lápiz      | Presión en el botón de menú contextual, presión larga en el elemento |
 | Controlador para juegos  | Botón de menú                             |
 

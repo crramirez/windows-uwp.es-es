@@ -7,15 +7,15 @@ ms.topic: article
 ms.assetid: ea855480-874d-431f-94bf-13d81eacc010
 ms.localizationpriority: medium
 ms.openlocfilehash: 53604de72eb32f7f6a8162b0cdb9cf481f6e9537
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258879"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-15063"></a>Novedades para desarrolladores en Windows 10, compilación 15063
 
-La compilación 15063 de Windows 10 (también conocida como Creators Update o versión 1703), en combinación con Visual Studio 2019 y el SDK actualizado, proporciona las herramientas, características y experiencias necesarias para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+La compilación 15063 de Windows 10 (también conocida como Creators Update o versión 1703), en combinación con Visual Studio 2019 y el SDK actualizado, proporciona las herramientas, características y experiencias necesarias para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 A continuación le ofrecemos una colección de características nuevas y mejoradas de interés para los desarrolladores. Para obtener una lista completa de los nuevos espacios de nombres agregados a Windows SDK, consulte [Nuevas API en la compilación 15063 de Windows 10](windows-10-build-15063-api-diff.md). Para obtener más información sobre las características más destacadas de Windows 10, consulte [Lo más destacado de Windows 10](https://developer.microsoft.com/windows/windows-10-for-developers). También puedes consultar [Windows Developer Platform features](https://developer.microsoft.com/windows/platform/features) (Características de la plataforma para desarrolladores de Windows) si quieres tener una introducción de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
 

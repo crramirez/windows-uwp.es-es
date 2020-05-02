@@ -7,10 +7,10 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: cb2aef514c8787b5afe11ea5a2818012bfdf2f41
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72282423"
 ---
 # <a name="typography"></a>Tipografía
@@ -104,7 +104,7 @@ Usa Encabezado o Subencabezado si hay que ajustar el texto.
     :::column-end:::
 :::row-end:::
 
-## <a name="alignment"></a>Alineación
+## <a name="alignment"></a>Asociación
 
 El valor predeterminado [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) es Left y, en la mayoría de los casos, la alineación del texto a la izquierda con un margen irregular a la derecha proporciona un anclaje coherente del contenido y un diseño uniforme. Para idiomas de derecha a izquierda, consulta [Ajustar el diseño y las fuentes para admitir globalización](../globalizing/adjust-layout-and-fonts--and-support-rtl.md).
 

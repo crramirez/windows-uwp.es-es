@@ -11,10 +11,10 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: b72d7fced63a4c3ef4b1b233afcbb9f9874d9a3f
-ms.sourcegitcommit: 81e29e66f0cb1e13c3daa3a239e4dcc4dd674a66
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68796717"
 ---
 # <a name="content-links-in-text-controls"></a>Vínculos de contenido en controles de texto
@@ -48,7 +48,7 @@ Las diferencias de uso, representación y comportamiento se tratan en detalle en
 | --------- | ----------- | ---------- |
 | Uso | Instancia de ContentLinkInfo | Elemento de texto ContentLink |
 | Cursor | Determinado por el tipo de vínculo de contenido, no se puede cambiar | Determinado por la propiedad del Cursor, **null** de manera predeterminada |
-| ToolTip | No representado | Muestra el texto secundario |
+| Información sobre herramientas | No representado | Muestra el texto secundario |
 
 ## <a name="enable-content-links-in-a-richeditbox"></a>Habilitación de los vínculos de contenido en un RichEditBox
 
@@ -154,7 +154,7 @@ El selector de lugares crea un objeto ContentLinkInfo con una raíz de URI de ht
 - Si LinkContentKind no es "Lugares", intenta abrir la aplicación **Mapas** en la ubicación especificada. Por ejemplo, esto puede suceder si se ha modificado la cadena LinkContentKind en el controlador de eventos ContentLinkChanged.
 - Si no se puede abrir el URI en la aplicación Mapas, el mapa se abre en el explorador predeterminado. Esto suele ocurrir cuando las opciones de configuración de _Aplicaciones para sitios web_ del usuario no permiten abrir el URI mediante la aplicación **Mapas**.
 
-##### <a name="people"></a>Contactos
+##### <a name="people"></a>Personas
 
 El selector de contactos crea un objeto ContentLinkInfo con un URI que usa el protocolo **ms-people**.
 

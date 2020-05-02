@@ -6,10 +6,10 @@ ms.topic: article
 keywords: Windows 10, UWP, MongoDB, base de datos
 ms.localizationpriority: medium
 ms.openlocfilehash: ea3e630a3bb0b8fc5f7f4168b0b946f115b97446
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "67713995"
 ---
 # <a name="use-a-mongodb-database"></a>Usar una base de datos de MongoDB

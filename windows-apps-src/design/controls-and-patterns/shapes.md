@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e78fddf1a0dae39d4479a4a1786a36687337c75e
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "71340232"
 ---
 # <a name="draw-shapes"></a>Dibujar formas
@@ -20,7 +20,7 @@ Aprende a dibujar formas como elipses, rectángulos, polígonos y trayectorias. 
 > **API importantes**: [Clase Path](/uwp/api/Windows.UI.Xaml.Shapes.Path), [Espacio de nombres Windows.UI.Xaml.Shapes](/uwp/api/Windows.UI.Xaml.Shapes), [Espacio de nombres Windows.UI.Xaml.Media](/uwp/api/Windows.UI.Xaml.Media)
 
 
-Son dos los conjuntos de clases que definen una región del espacio en la interfaz de usuario XAML: las clases [**Shape** ](/uwp/api/Windows.UI.Xaml.Shapes.Shape) y las clases [ **Geometry** ](/uwp/api/Windows.UI.Xaml.Media.Geometry). La principal diferencia entre estas clases es que **Shape** tiene asociado un pincel y se puede representar en la pantalla, mientras que **Geometry** simplemente define una región del espacio y no se representa, salvo que ayude a aportar información a otra propiedad de interfaz de usuario. Puedes pensar en **Shape** como una clase [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), la cual tiene su límite definido por **Geometry**. Este tema se centra principalmente en las clases **Shape**.
+Son dos los conjuntos de clases que definen una región del espacio en la interfaz de usuario XAML: las clases [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape) y las clases [**Geometry**](/uwp/api/Windows.UI.Xaml.Media.Geometry). La principal diferencia entre estas clases es que **Shape** tiene asociado un pincel y se puede representar en la pantalla, mientras que **Geometry** simplemente define una región del espacio y no se representa, salvo que ayude a aportar información a otra propiedad de interfaz de usuario. Puedes pensar en **Shape** como una clase [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), la cual tiene su límite definido por **Geometry**. Este tema se centra principalmente en las clases **Shape**.
 
 Las clases [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape) son: [**Line**](/uwp/api/Windows.UI.Xaml.Shapes.Line), [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse), [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle), [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon), [**Polyline**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline) y [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path). La clase **Path** es interesante porque puede definir una geometría arbitraria. Asimismo, la clase [**Geometry**](/uwp/api/Windows.UI.Xaml.Media.Geometry) también tiene su función aquí, dado que es una forma de definir las partes de una clase **Path**.
 
@@ -102,7 +102,7 @@ Este es el [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) representa
 
 ![Un rectángulo representado.](images/shapes-rectangle.jpg)
 
-**Sugerencia**   Hay algunos escenarios para definiciones de la interfaz de usuario en los que, en lugar de usar una clase [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle), es posible que sea más apropiado usar una clase [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border). Si quieres crear una forma rectangular en torno a otro contenido, puede ser mejor usar un **Border**, ya que puede tener contenido secundario y su tamaño se ajustará automáticamente en torno a ese contenido, en lugar de tener dimensiones fijas de alto y ancho como un **Rectangle**. Un **Border** también ofrece la opción de tener esquinas redondeadas, a través de la propiedad [**CornerRadius**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.cornerradius).
+**Sugerencia**  Hay algunos escenarios para definiciones de la interfaz de usuario en los que, en lugar de usar una clase [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle), es posible que sea más apropiado usar una clase [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border). Si quieres crear una forma rectangular en torno a otro contenido, puede ser mejor usar un **Border**, ya que puede tener contenido secundario y su tamaño se ajustará automáticamente en torno a ese contenido, en lugar de tener dimensiones fijas de alto y ancho como un **Rectangle**. Un **Border** también ofrece la opción de tener esquinas redondeadas, a través de la propiedad [**CornerRadius**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.cornerradius).
 
 Por otro lado, es probable que un [**Rectángulo**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) sea la mejor opción para la composición de controles. Un **Rectangle** es una forma que se ve en muchas plantillas de control, porque se usa como una parte de "FocusVisual" para los controles activables. Cuando el control esté en un estado visual "Focused", este rectángulo se hará visible; en otros estados, estará oculto.
 
@@ -141,7 +141,7 @@ Y aquí tienes el [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon) represe
 
 ![Polígono representado.](images/shapes-polygon.jpg)
 
-**Sugerencia**   El valor de [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) se usa a menudo como tipo en XAML para escenarios en los que no se declaran los vértices de las formas. Por ejemplo, un valor **Point** forma parte de los datos del evento referentes a los eventos de entrada táctil; de esta manera, podrás saber con exactitud en qué punto de un espacio de coordenadas se produjo la acción táctil. Para obtener más información sobre el valor **Point** y cómo usarlo en XAML o en código, consulta el tema de referencia de la API para [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point).
+**Sugerencia**  El valor de [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point) se usa a menudo como tipo en XAML para escenarios en los que no se declaran los vértices de las formas. Por ejemplo, un valor **Point** forma parte de los datos del evento referentes a los eventos de entrada táctil; de esta manera, podrás saber con exactitud en qué punto de un espacio de coordenadas se produjo la acción táctil. Para obtener más información sobre el valor **Point** y cómo usarlo en XAML o en código, consulta el tema de referencia de la API para [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point).
 
 ## <a name="line"></a>Línea
 
@@ -206,7 +206,7 @@ Y aquí tienes la [**polilínea**](/uwp/api/Windows.UI.Xaml.Shapes.Polyline) rep
 
 ![Polilínea representada.](images/shapes-polyline.jpg)
 
-## <a name="path"></a>Ruta de acceso
+## <a name="path"></a>Ruta
 
 Un [**Trazado**](/uwp/api/Windows.UI.Xaml.Shapes.Path) es el objeto más versátil de la clase [**Shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape), ya que se puede usar para definir una geometría arbitraria. Pero esta versatilidad implica complejidad. Veamos cómo crear un **trazado** básico en XAML.
 
@@ -233,7 +233,7 @@ Este es el [**trazado**](/uwp/api/Windows.UI.Xaml.Shapes.Path) representado.
 
 ![Trazado representado.](images/shapes-path.jpg)
 
-En el siguiente ejemplo, se muestra el uso de otra técnica que analizamos: un [**GeometryGroup**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.geometrygroup) con una [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry). En este ejemplo se ejercitan algunos de los tipos de geometría que se pueden usar como parte de **PathGeometry**: [**PathFigure** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure) y los distintos elementos que pueden ser un segmento de [ **PathFigure.Segments**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments).
+En el siguiente ejemplo, se muestra el uso de otra técnica que analizamos: un [**GeometryGroup**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.geometrygroup) con una [**PathGeometry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathGeometry). En este ejemplo se ejercitan algunos de los tipos de geometría que se pueden usar como parte de **PathGeometry**: [**PathFigure**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PathFigure) y los distintos elementos que pueden ser un segmento de [**PathFigure.Segments**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.pathfigure.segments).
 
 ```xaml
 <Path Stroke="Black" StrokeThickness="1" Fill="#CCCCFF">

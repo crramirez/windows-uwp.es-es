@@ -9,10 +9,10 @@ keywords: NodeJS, Node.js, windows 10, microsoft, aprendizaje de nodejs, node e
 ms.localizationpriority: medium
 ms.date: 09/19/2019
 ms.openlocfilehash: 63c47107538d8744201f83ea1be24cfaf3193f4f
-ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72517818"
 ---
 # <a name="get-started-using-mongodb-or-postgresql-with-nodejs-on-windows"></a>Introducción al uso de MongoDB o PostgreSQL con Node.js en Windows

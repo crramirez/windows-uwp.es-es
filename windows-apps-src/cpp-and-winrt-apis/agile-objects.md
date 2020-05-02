@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, standard, estándar, c++, cpp, winrt, projection, proyección, agile, ágil, object, objeto, agility, agilidad, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 82dff619e6fa3934f69b93090bee90de6359ca07
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66360329"
 ---
 # <a name="agile-objects-in-cwinrt"></a>Objetos ágiles en C++/WinRT
@@ -87,7 +87,7 @@ No importa dónde aparezca la estructura del marcador dentro del paquete de par�
 
 Ya optes o no por la agilidad, puedes implementar **IMarshal** tú mismo. Por ejemplo, puedes usar el marcador **winrt::non_agile** para evitar la implementación de agilidad predeterminada e implementar **IMarshal** tú mismo&mdash;quizás para admitir la semántica de cálculo de referencias por valor.
 
-## <a name="agile-references-winrtagileref"></a>Referencias ágiles (winrt::agile_ref)
+## <a name="agile-references-winrtagile_ref"></a>Referencias ágiles (winrt::agile_ref)
 
 Si vas a consumir un objeto que no es ágil, pero necesitas pasarlo a algún contexto potencialmente ágil, una opción consiste en usar la plantilla de estructura [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) para obtener una referencia ágil a una instancia de un tipo que no sea ágil, o a una interfaz de un objeto que no sea ágil.
 

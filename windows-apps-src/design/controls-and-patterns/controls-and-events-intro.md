@@ -9,10 +9,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 671f33cf106eabf11b317b00d5c2a6cd9abcf3d0
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66363035"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introducción a los controles y patrones
@@ -74,7 +74,7 @@ Usas las propiedades para especificar la apariencia, el contenido y otros atribu
 Te resultará conveniente permitir que el tamaño y la posición del control se establezcan de manera automática. En este caso, puedes restablecer las propiedades de tamaño y posición que Visual Studio estableció automáticamente.
 
 Para restablecer una propiedad
-1. En el panel Propiedades, haz clic en el marcador de propiedades junto al valor de propiedad. Se abre el menú de propiedad.
+1. En el panel Propiedades, haz clic en el marcador de propiedades junto al valor de propiedad. Se abre el menú de propiedades.
 2. En el menú de propiedad, haz clic en Restablecer.
 
 ![La propiedad Visual Studio restablece la opción de menú](images/add-controls-property-reset.png)

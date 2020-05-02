@@ -8,10 +8,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 05b435eb6f070634507c143bd028d2cb051c97bc
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74735030"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Historial de navegación y navegación hacia atrás para las aplicaciones para UWP
@@ -294,7 +294,7 @@ Si la aplicación se va a ejecutar en varios dispositivos, [crea un desencadenad
 
 Te recomendamos que incluyas compatibilidad para las siguientes entradas para la navegación hacia atrás. (Ten en cuenta que algunas de estas entradas no son compatibles con BackRequested del sistema y deben controlarse mediante eventos separados).
 
-| Entrada | Evento |
+| Entrada | Suceso |
 | --- | --- |
 | Windows: tecla Retroceso | BackRequested |
 | Botón Atrás de hardware | BackRequested |

@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, API WinRT, Indexador, Búsqueda
 localizationpriority: medium
 ms.openlocfilehash: 2a77bfc37d853efd28bde9bc3043d072888822f2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66369263"
 ---
 # <a name="using-supplemental-properties"></a>Uso de propiedades complementarias  
@@ -41,7 +41,7 @@ Las propiedades complementarias se comportan igual que las propiedades normales 
 
 Una vez que se escribe la propiedad, se puede buscar, filtrar, ordenar o agrupar igual que cualquier otra propiedad del sistema. También se puede usar en consultas combinadas con otras propiedades del sistema, ya sean complementarias o no. De este modo, se ofrece flexibilidad para agrupar fácilmente propiedades complementarias con el código existente del sistema de archivos, sin tener que volver a escribir.  
 
-### <a name="example-scenarios"></a>Situaciones que sirven de ejemplo 
+### <a name="example-scenarios"></a>Escenarios de ejemplo 
 
 Hay miles de propiedades diferentes que podrías escribir para una propiedad complementaria, pero hay un par de escenarios clave a los que este tutorial suele regresar:  
 

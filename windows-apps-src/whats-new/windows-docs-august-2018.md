@@ -6,17 +6,17 @@ ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 723cae783ba16fe5be9bb2076f96d4a5f823d733
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258839"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Novedades en los documentos para desarrolladores de Windows de agosto de 2018
 
 La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. Las siguientes descripciones de características, instrucciones para desarrolladores y vídeos se han puesto a disposición de los desarrolladores en agosto.
 
-[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
@@ -50,7 +50,7 @@ Se ha agregado una lista de [extensiones heredadas de las API de Microsoft](http
 
 Hemos agregado 250 listados de código de [C++/WinRT](../cpp-and-winrt-apis/index.md) en los temas de nuestros documentos, que se suman a los ejemplos de código de C++/CX existentes.
 
-### <a name="project-rome"></a>Proyecto Roma
+### <a name="project-rome"></a>Project Rome
 
 El sitio de [documentos de Proyecto Roma](https://docs.microsoft.com/windows/project-rome/) se ha reorganizado con un enfoque centrado en las características. Gracias a este cambio, los desarrolladores ahora deberían encontrar lo que buscan e implementar las características que elijan en varias plataformas con mayor facilidad.
 

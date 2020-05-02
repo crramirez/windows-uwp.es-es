@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10;uwp;first app;hello world;primera aplicación;hola mundo
 ms.localizationpriority: medium
 ms.openlocfilehash: 93c78845a218620a8a46fc4439733734099b9853
-ms.sourcegitcommit: 13ce25364201223e21e2e5e89f99bc7aa4d93f56
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73847603"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Creación de una aplicación "Hello, world" (XAML)
@@ -32,7 +32,7 @@ Aquí aprenderás a:
 -   También se supone que estás usando el diseño de ventana predeterminado de Visual Studio. Si cambias el diseño predeterminado, puedes restablecerlo en el menú **Ventana** con el comando **Restablecer diseño de la ventana**.
 
 > [!NOTE]
-> En este tutorial se usa Visual Studio Community 2017. Si usas otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
+> En este tutorial se usa Visual Studio Community 2017. Si usa otra versión de Visual Studio, es posible que tenga una apariencia un poco diferente.
 
 ## <a name="video-summary"></a>Resumen en vídeo
 
@@ -235,7 +235,7 @@ Enhorabuena, has creado tu primera aplicación para Windows 10 y la UWP.
 
 Para aprender a usar XAML el diseño de los controles que usará la aplicación, prueba el [tutorial sobre la cuadrícula](../design/layout/grid-tutorial.md), o dirígete directamente a los [pasos siguientes](learn-more.md).
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 * [Tu primera aplicación](your-first-app.md)
 * [Publicar tu aplicación para UWP](https://docs.microsoft.com/windows/uwp/publish/)

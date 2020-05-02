@@ -8,10 +8,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 15984e00b036bf44d6e4a7f60cb6435ea1add291
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63808734"
 ---
 # <a name="thumbnail-images"></a>Imágenes en miniatura
@@ -109,7 +109,7 @@ En estos ejemplos se muestra cómo varían las imágenes en miniatura recuperada
 <img src="images/thumbnail-pic-single-mode.png" alt="Picture thumbnail in single mode"/> </td>
 </tr>
 <tr>
-<td>Vídeo</td>
+<td>Vídeos</td>
 <td>La miniatura tiene un icono que la diferencia de las imágenes. <br />
 <img src="images/thumbnail-vid-picvid-modes.png" alt="Video thumbnail in picture or video mode"/></td>
 <td>La miniatura se recorta para obtener una relación de aspecto cuadrada. <br />
