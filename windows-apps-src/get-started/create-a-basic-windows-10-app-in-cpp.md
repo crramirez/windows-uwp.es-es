@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c388b9b81744c0d27d96c1f97b4e405af63eaef
-ms.sourcegitcommit: fc5db2e26db65be025e9f62044b4d29bb1744f8d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80524083"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Crear una aplicación "Hello world" en C++/CX
@@ -315,7 +315,7 @@ Ahora mismo, en la aplicación de Windows el texto es muy pequeño y difícil de
 5.  Expande el grupo **Varios** y busca la propiedad **Style**.
 6.  Haz clic en el marcador de propiedad (el cuadro verde situado a la derecha de la propiedad **Style**) y después, en el menú, elige **Recurso del sistema** > **BaseTextBlockStyle**.
 
-     **BaseTextBlockStyle** es un recurso que se define en el [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) en <root>\\ Archivos de aplicación \\ Kits de Windows \\ 10 \\ Incluidos \\ winrt \\ xaml \\ diseño \\ generic.xaml.
+      **BaseTextBlockStyle** es un recurso que se define en el [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) en <root>\\ Archivos de aplicación \\ Kits de Windows \\ 10 \\ Incluidos \\ winrt \\ xaml \\ diseño \\ generic.xaml.
 
     ![Ventana de propiedades, vista Propiedades](images/xaml-hw-style-cpp.png)
 

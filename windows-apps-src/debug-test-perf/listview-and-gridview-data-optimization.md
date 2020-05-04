@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d00a41c5a58935a4ecfe623c71a1264a2dc1132
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "71339612"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualización de datos de ListView y GridView
@@ -31,7 +31,7 @@ Si dispones de un conjunto de datos que es tan grande que no se puede o no se de
 
 Aquí encontrarás más información acerca de las técnicas de virtualización de datos incremental y de acceso aleatorio.
 
-## <a name="incremental-data-virtualization"></a>Virtualización de datos incremental
+## <a name="incremental-data-virtualization"></a> Virtualización de datos incremental
 
 La virtualización de datos incremental carga los datos en secuencia. Un [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) que usa la virtualización de datos incremental puede usarse para ver una colección de un millón de elementos, pero solo 50 elementos se cargan inicialmente. A medida que el usuario realiza un movimiento panorámico/desplazamiento, se cargan los 50 siguientes. A medida que se cargan los elementos, se reduce el tamaño del control de la barra de desplazamiento. Para este tipo de virtualización de datos, debes escribir una clase de origen de datos que implemente estas interfaces.
 
