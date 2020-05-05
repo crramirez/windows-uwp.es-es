@@ -12,10 +12,10 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d7b781e6074468fbe73446e4057e36ff31266d05
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72165102"
 ---
 # <a name="selection-mode-overview"></a>Introducción al modo de selección
@@ -25,9 +25,9 @@ El modo de selección permite a los usuarios seleccionar uno o varios elementos 
 ## <a name="different-selection-modes"></a>Diferentes modos de selección
 Existen tres modos de selección diferentes:
 
-- Simple: El usuario puede seleccionar un solo elemento a la vez.
-- Varios: El usuario puede seleccionar varios elementos sin usar un modificador.
-- Extendido: El usuario puede seleccionar varios elementos con un modificador, por ejemplo, manteniendo presionada la tecla Mayús.
+- Único: el usuario puede seleccionar un solo elemento a la vez.
+- Múltiple: el usuario puede seleccionar varios elementos sin usar un modificador.
+- Extendido: el usuario puede seleccionar varios elementos con un modificador, por ejemplo, manteniendo presionada la tecla MAYÚS.
 
 ## <a name="selection-mode-examples"></a>Ejemplos de modo de selección
 ### <a name="here-is-a-listview-with-single-selection-mode-enabled"></a>Esta es una vista de lista con el modo de selección única habilitado.

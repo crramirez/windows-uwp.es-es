@@ -13,7 +13,7 @@
       href: symbols.md
     - name: Usar el streaming
       href: streaming.md
-    - name: Ejemplos
+    - name: Muestras
       href: 'https://github.com/microsoft/eventtracing-processing-samples'
     - name: Referencia
       href: reference.md

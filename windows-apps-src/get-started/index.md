@@ -6,10 +6,10 @@ ms.topic: article
 keywords: get started, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: 39f45b7604e71c4b57439f8c3e89548614758484
-ms.sourcegitcommit: 08cb5a4ca2e02179ad6b768c841fe3d5216bcae3
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80614985"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Introducción a las aplicaciones de Windows 10
@@ -58,7 +58,7 @@ Crea aplicaciones que funcionen en todos los dispositivos Windows 10 o mejora t
     :::column-end:::
     :::column:::
         <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="Samples illustration" />
-        <h3 style="margin-top: 10px; margin-bottom: 0px">Ejemplos</h3>
+        <h3 style="margin-top: 10px; margin-bottom: 0px">Muestras</h3>
         <p style="margin-top: 0px; margin-bottom: 50px">Consigue una experiencia de primera mano con la plataforma Windows 10 y mira cómo funcionan las API.</p>
         <br>
         <a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples">Uso de ejemplos de aplicaciones de Windows</a><br/>

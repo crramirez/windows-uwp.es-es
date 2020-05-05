@@ -12,10 +12,10 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 0dbe5e2f1cc32a3d1b52572f71fba7547af99f17
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258562"
 ---
 # <a name="create-write-and-read-a-file"></a>Crear, escribir y leer archivos
@@ -554,6 +554,6 @@ Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
     Dim text As String = dataReader.ReadString(numBytesLoaded)
     ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 - [Procedimientos recomendados para escribir en archivos](best-practices-for-writing-to-files.md)

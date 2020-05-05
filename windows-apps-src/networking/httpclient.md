@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 57927ff77f060a1ea1bd7720d8831f31c5355264
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74259206"
 ---
 # <a name="httpclient"></a>HttpClient
@@ -158,7 +158,7 @@ int main()
 
 ## <a name="post-binary-data-over-http"></a>Datos POST binarios a través de HTTP
 
-El ejemplo de código [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis) siguiente ilustra el uso de datos del formulario y una solicitud POST para enviar una pequeña cantidad de datos binarios como una carga de archivos a un servidor web. El código usa la clase [ **HttpBufferContent** ](/uwp/api/windows.web.http.httpbuffercontent) para representar los datos binarios y la clase [**HttpMultipartFormDataContent**](/uwp/api/windows.web.http.httpmultipartformdatacontent) para representar los datos del formulario de varias partes.
+El ejemplo de código [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis) siguiente ilustra el uso de datos del formulario y una solicitud POST para enviar una pequeña cantidad de datos binarios como una carga de archivos a un servidor web. El código usa la clase [**HttpBufferContent**](/uwp/api/windows.web.http.httpbuffercontent) para representar los datos binarios y la clase [**HttpMultipartFormDataContent**](/uwp/api/windows.web.http.httpmultipartformdatacontent) para representar los datos del formulario de varias partes.
 
 > [!NOTE]
 > Una llamada **obtener** (como se muestra en el ejemplo de código siguiente), no es adecuada para un subproceso de interfaz de usuario. Para la técnica correcta para usar en ese caso, consulte [simultaneidad y operaciones asincrónicas con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).

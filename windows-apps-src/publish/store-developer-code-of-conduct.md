@@ -7,10 +7,10 @@ keywords: acuerdo de directivas de store
 ms.localizationpriority: high
 ms.assetid: 2B84B877-794A-468F-A478-DA09E4694513
 ms.openlocfilehash: d81333b38908a10f88d886d766353aae455b1f47
-ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77607236"
 ---
 # <a name="developer-code-of-conduct"></a>Código de conducta del desarrollador

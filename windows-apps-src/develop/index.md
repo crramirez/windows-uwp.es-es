@@ -6,10 +6,10 @@ ms.date: 03/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 233666294555c46b5ba8b1e558eb32d6aed84e2a
-ms.sourcegitcommit: 08cb5a4ca2e02179ad6b768c841fe3d5216bcae3
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80614962"
 ---
 # <a name="develop-uwp-apps"></a>Desarrollar aplicaciones para UWP
@@ -174,7 +174,7 @@ Artículos sobre procedimientos y código para crear aplicaciones para UWP en Wi
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px">Periféricos, sensores y energía</h3>
-        <a href="/windows/uwp/contacts-and-calendar/">Introducción</a><br/>
+        <a href="/windows/uwp/contacts-and-calendar/">Información general</a><br/>
         <a href="/windows/uwp/devices-sensors/enable-device-capabilities">Habilitar funcionalidades de dispositivos</a><br/>
         <a href="/windows/uwp/devices-sensors/pair-devices">Emparejar dispositivos</a><br/>
         <a href="/windows/uwp/devices-sensors/point-of-service">Punto de servicio</a><br/>
@@ -186,7 +186,7 @@ Artículos sobre procedimientos y código para crear aplicaciones para UWP en Wi
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px">Migración</h3>
-        <a href="/windows/uwp/porting/">Introducción</a><br/>
+        <a href="/windows/uwp/porting/">Información general</a><br/>
         <a href="/windows/uwp/porting/wpsl-to-uwp-root">Migrar de Windows Phone Silverlight a UWP</a><br/>
         <a href="/windows/uwp/porting/w8x-to-uwp-root">Migrar de Windows Runtime 8.x a UWP</a><br/>
         <a href="/windows/uwp/porting/desktop-to-uwp-root">Puente de escritorio</a><br/>

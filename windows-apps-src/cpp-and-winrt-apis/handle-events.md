@@ -5,19 +5,19 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: fa97c99f14eee1cb76148c717b1e126a3f406fd1
-ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
+ms.openlocfilehash: eae966c130c52305b53cc4122844aeae49ecab92
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81266923"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82267493"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Control de eventos mediante delegados en C++/WinRT
 
 En este tema se muestra cómo registrar y revocar delegados de control de eventos con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Puedes controlar un evento mediante cualquier objeto de tipo función de C++ estándar.
 
 > [!NOTE]
-> Para más información sobre cómo instalar y usar la Extensión de Visual Studio (VSIX) para C++/WinRT y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
+> Para más información sobre cómo instalar y usar C++/WinRT Visual Studio Extension (VSIX) y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="using-visual-studio-2019-to-add-an-event-handler"></a>Usar Visual Studio 2019 para agregar un controlador de eventos
 
@@ -218,7 +218,7 @@ Si intentas especificar [**winrt::auto_revoke**](/uwp/cpp-ref-for-winrt/auto-rev
 
 ## <a name="delegate-types-for-asynchronous-actions-and-operations"></a>Tipos de delegados para acciones y operaciones asincrónicas
 
-Los ejemplos anteriores usan el tipo de delegado **RoutedEventHandler** pero, evidentemente, hay muchos otros tipos de delegados. Por ejemplo, las acciones y operaciones asincrónicas (con y sin progreso) tienen eventos completados y en progreso que esperan delegados del correspondiente tipo. Por ejemplo, el evento en progreso de una operación asincrónica con progreso (que es cualquier cosa que implemente [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)) requiere un delegado de tipo [**AsyncOperationProgressHandler** ](/uwp/api/windows.foundation.asyncoperationprogresshandler). Este es un ejemplo de código para crear un delegado de este tipo con una función lambda. El ejemplo también muestra cómo crear un delegado [**AsyncOperationWithProgressCompletedHandler**](/uwp/api/windows.foundation.asyncoperationwithprogresscompletedhandler).
+Los ejemplos anteriores usan el tipo de delegado **RoutedEventHandler** pero, evidentemente, hay muchos otros tipos de delegados. Por ejemplo, las acciones y operaciones asincrónicas (con y sin progreso) tienen eventos completados y en progreso que esperan delegados del correspondiente tipo. Por ejemplo, el evento en progreso de una operación asincrónica con progreso (que es cualquier cosa que implemente [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)) requiere un delegado de tipo [**AsyncOperationProgressHandler** ](/uwp/api/windows.foundation.asyncoperationprogresshandler-2). Este es un ejemplo de código para crear un delegado de este tipo con una función lambda. El ejemplo también muestra cómo crear un delegado [**AsyncOperationWithProgressCompletedHandler**](/uwp/api/windows.foundation.asyncoperationwithprogresscompletedhandler-2).
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>
@@ -257,7 +257,7 @@ void ProcessFeedAsync()
 Como sugiere el comentario de corrutina anterior, en lugar de usar un delegado con los eventos completados de acciones y operaciones asincrónicas, posiblemente te resulte más natural usar las corrutinas. Para obtener información detallada y ejemplos de código, consulta [Operaciones simultáneas y asincrónicas con C++/WinRT](concurrency.md).
 
 > [!NOTE]
-> No es correcto implementar más de un *controlador de finalización* para una operación o acción asincrónica. Puedes tener un solo delegado para su evento completado o bien puedes aplicar `co_await`. Si tienes ambos, se producirá un error en la segunda.
+> No es correcto implementar más de un *controlador de finalización* para una operación o acción asincrónica. Puedes tener un solo delegado para su evento completado o bien puedes aplicar `co_await`. Si tienes ambos, se producirá un error en el segundo.
 
 Si continúas con delegados en lugar de con una corrutina, podrás optar por una sintaxis más sencilla.
 

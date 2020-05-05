@@ -9,10 +9,10 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0808b5173f697fcca8d5e117f857d3861c327ae3
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258119"
 ---
 #  <a name="ui-considerations-for-uwp-devices"></a>Consideraciones sobre la interfaz de usuario para dispositivos de UWP
@@ -47,7 +47,7 @@ Consideraciones sobre la interfaz de usuario
 
 Entradas
 -   Mouse
--   Teclado
+-   Keyboard
 -   Entrada táctil en equipos portátiles y equipos de escritorio todo en uno.
 -   A veces se usan mandos, como el controlador de Xbox.
 
@@ -77,7 +77,7 @@ Consideraciones sobre la interfaz de usuario
 -   El botón Atrás del sistema se encuentra en la barra de navegación.
 
 Entradas
--   Función táctil
+-   Tocar
 -   Lápiz
 -   Teclado externo (en ocasiones)
 -   Mouse (en ocasiones)
@@ -155,7 +155,7 @@ Consideraciones sobre la interfaz de usuario
 -   En las orientaciones horizontales y verticales, asegúrate de que haya suficiente superficie de pantalla para la barra de la aplicación cuando el teclado en pantalla está arriba.
 
 Entradas
--   Función táctil
+-   Tocar
 -   Voz
 
 Funcionalidades típicas del dispositivo
@@ -187,7 +187,7 @@ Consideraciones sobre la interfaz de usuario
 -   La función Atrás del sistema es opcional. Cuando un desarrollador de aplicaciones elige mostrarla, aparece en la barra de título de la aplicación.
 
 Entradas
--   Función táctil
+-   Tocar
 -   Lápiz
 -   Voz
 -   Teclado (en pantalla/remoto)

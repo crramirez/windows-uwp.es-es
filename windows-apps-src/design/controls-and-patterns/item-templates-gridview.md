@@ -4,12 +4,12 @@ title: Plantillas de elemento para vistas de cuadrícula
 template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
-keywords: windows 10, uwp, fluent
+keywords: windows 10, uwp, fluent
 ms.openlocfilehash: 17c14d7147cafa17e78bd13bf6684a99d87cbdfd
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75684412"
 ---
 # <a name="item-templates-for-grid-view"></a>Plantillas de elemento para vistas de cuadrícula
@@ -19,7 +19,7 @@ Esta sección contiene las plantillas de elemento que puedes usar con un control
 Para mostrar el enlace de datos, estas plantillas enlazan **GridViewItems** con la clase de ejemplo Recording desde la [introducción al enlace de datos](../../data-binding/data-binding-quickstart.md).
 
 > [!NOTE] 
-> Actualmente, cuando una clase **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la clase **DataTemplate**. Para obtener más información sobre la accesibilidad, consulta [Información general sobre accesibilidad](../accessibility/accessibility-overview.md).
+> Actualmente, cuando una clase **DataTemplate** contiene varios controles (por ejemplo, más de un único **TextBlock**), el nombre accesible predeterminado para los lectores de pantalla proviene de .ToString() en el elemento. En su lugar, es más cómodo establecer [**AutomationProperties.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) en el elemento raíz de la clase **DataTemplate**. Para más información sobre accesibilidad, consulta [Información general sobre accesibilidad](../accessibility/accessibility-overview.md).
 
 ## <a name="icon-and-text"></a>Icono y texto
 Usa estas plantillas para mostrar una colección de aplicaciones en una cuadrícula con un icono y texto.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f2cb92dca3da2d1f8e3eccfade6558f363c5b13
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 0b38cf60f1f890649af33ad34f244bc348af2832
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257867"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82148691"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Pruebas con en el Emulador de Microsoft para Windows 10 Mobile
 
@@ -54,7 +54,7 @@ Emulador de Microsoft para Windows 10 Mobile no puede cargar las aplicaciones or
 ### <a name="installing"></a>Instalación de
 El Emulador de Microsoft para Windows 10 Mobile se incluye como parte del SDK de Windows 10. El SDK de Windows 10 y el emulador se pueden instalar como parte de la instalación de Visual Studio. Consulta la [página de descarga de Visual Studio](https://developer.microsoft.com/windows/downloads).
 
-También puedes instalar el Emulador de Microsoft para Windows 10 Mobile con el [programa de instalación de Microsoft Emulator](https://go.microsoft.com/fwlink/p/?LinkID=615095).
+También puedes instalar el Emulador de Microsoft para Windows 10 Mobile con el [programa de instalación de Microsoft Emulator](https://download.microsoft.com/download/E/3/4/E347E8C5-BD79-49AF-941C-D08893A45268/emulator/EmulatorSetup.exe).
 
 ### <a name="uninstalling"></a>Desinstalación
 
@@ -362,7 +362,7 @@ En modo **Route**, puedes seleccionar uno de los perfiles de velocidad siguiente
 
 | Perfil | Velocidad por hora               | Velocidad por segundo | Descripción | 
 |---------|------------------------------|------------------|-------------|
-| Speed Limit | Límite de velocidad de la ruta | No disponible   | Atraviesa la ruta con el límite de velocidad publicado. |
+| Speed Limit | Límite de velocidad de la ruta | No aplicable   | Atraviesa la ruta con el límite de velocidad publicado. |
 | Walking     | 5 km/h                   | 1,39 m           | Atraviesa la ruta a un ritmo normal a pie de 5 km/h. |
 | Biking      | 25 km/h                  | 6,94 m           | Atraviesa la ruta a un ritmo normal en bicicleta de 25 km/h. |
 | Fast        |                          |                  |Atraviesa la ruta más rápidamente que el límite de velocidad publicado. | 
@@ -652,7 +652,7 @@ Para deshabilitar la aceleración de hardware:
 5. Haz doble clic en **DisableRemoteFx**, escribe 1 en el cuadro de datos **Valor**, selecciona la opción **Decimal** y luego haz clic en **Aceptar**.
 6. Cierre el Editor del Registro.
 
-**Nota:** Después de establecer este valor del Registro, debes eliminar la máquina virtual en el administrador de Hyper-V para la configuración que iniciaste en Visual Studio y después volver a iniciar el emulador con gráficos representados por software.
+**Nota:** Después de establecer este valor del Registro, debes eliminar la máquina virtual en el administrador de Hyper-V para la configuración que iniciaste en Visual Studio y después volver a iniciar el emulador con gráficos representados por software.
 
 ## <a name="support-resources"></a>Recursos de soporte técnico
 

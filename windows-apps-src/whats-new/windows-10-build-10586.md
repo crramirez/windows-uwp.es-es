@@ -7,15 +7,15 @@ ms.topic: article
 ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
 ms.localizationpriority: medium
 ms.openlocfilehash: af3c078d2e5c1d27e5e6ece8f72b0fa601d6c053
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74259762"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-10586"></a>Novedades para desarrolladores en Windows 10, compilación 10586
 
-La compilación 10586 de Windows 10 (también conocida como actualización de noviembre o versión 1511), en combinación con Visual Studio 2019 y el SDK actualizado, proporciona las herramientas, características y experiencias para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+La compilación 10586 de Windows 10 (también conocida como actualización de noviembre o versión 1511), en combinación con Visual Studio 2019 y el SDK actualizado, proporciona las herramientas, características y experiencias para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="windows-10-build-10586---november-2015"></a>Windows 10, compilación 10586, noviembre de 2015
 

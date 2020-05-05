@@ -6,10 +6,10 @@ ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 65c3c2fb4b7a5a7f0b5f4b3c89773f3e21bd654d
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75684738"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Novedades de la documentación para desarrolladores de Windows de julio de 2017
@@ -114,7 +114,7 @@ Se ha agregado un ámbito "UWP" a la documentación de [UWP conceptual](../get-s
 
 Prueba la aplicación de Windows para garantizar que funciona correctamente en dispositivos que ejecuten Windows S. Usa [esta guía nueva](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s) para obtener información sobre cómo hacerlo.
 
-## <a name="samples"></a>Ejemplos
+## <a name="samples"></a>Muestras
 
 ### <a name="annotated-audio-app-sample"></a>Ejemplo de la aplicación Annotated Audio
 

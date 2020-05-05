@@ -4,13 +4,13 @@ title: Pruebas del Kit para la certificación de aplicaciones en Windows
 description: El Kit para la certificación de aplicaciones en Windows contiene diversas pruebas que pueden ayudarte a garantizar que tu aplicación esté lista para publicarse en Microsoft Store.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, app certification
+keywords: windows 10, uwp, certificación de aplicaciones
 ms.localizationpriority: medium
 ms.openlocfilehash: 9de761a0b127d7218c7dc2bb4c6862626b7c60e4
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77089431"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Pruebas del Kit para la certificación de aplicaciones en Windows
@@ -164,7 +164,7 @@ Las pruebas del analizador binario BinScope comprueban el uso correcto de estas 
 
 ### <a name="span-idbinscope-1spanallowpartiallytrustedcallersattribute"></a><span id="binscope-1"></span>AllowPartiallyTrustedCallersAttribute
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows**: Error de prueba de APTCACheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows :** error en la prueba APTCACheck
 
 El atributo AllowPartiallyTrustedCallersAttribute (APTCA) habilita el acceso a los códigos de plena confianza desde los códigos de confianza parcial en los ensamblados con signo. Cuando apliques el atributo APTCA en un ensamblado, los llamadores de confianza parcial pueden obtener acceso a ese ensamblado durante su vigencia, lo que puede comprometer la seguridad.
 
@@ -178,7 +178,7 @@ Esta prueba solo se realiza en código administrado (C#, .NET, etc.).
 
 ### <a name="span-idbinscope-2spansafeseh-exception-handling-protection"></a><span id="binscope-2">Protección de control de excepciones de /SafeSEH</span>
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows**: Error de prueba de SafeSEHCheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba SafeSEHCheck
 
 Un controlador de excepciones se ejecuta cuando la aplicación encuentra una condición de excepción, como un error de división entre cero. Dado que la dirección del controlador de excepciones se almacena en la pila cuando se llama una función, podría quedar expuesta a un atacante de desbordamiento de búfer si algún software malintencionado quisiera sobrescribir la pila.
 
@@ -192,7 +192,7 @@ La prueba no se realiza en binarios de 64 bits ni en binarios de conjunto de ch
 
 ### <a name="span-idbinscope-3spandata-execution-prevention"></a><span id="binscope-3"></span>Prevención de ejecución de datos
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows**: Error de prueba de NXCheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** error en la prueba NXCheck
 
 Esta prueba comprueba que la aplicación no ejecute el código que se almacena en el segmento de datos.
 
@@ -206,7 +206,7 @@ Te recomendamos que pruebes tus aplicaciones en una CPU con funcionalidad DEP y 
 
 ### <a name="span-idbinscope-4spanaddress-space-layout-randomization"></a><span id="binscope-4"></span>Selección aleatoria del diseño del espacio de direcciones
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows**: Error de prueba de DBCheck
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba DBCheck.
 
 La selección aleatoria del diseño del espacio de direcciones (ASLR) carga imágenes ejecutables en ubicaciones impredecibles de la memoria, lo que dificulta la tarea del software malintencionado La aplicación y todos los componentes que usa la aplicación deben admitir ASLR.
 
@@ -222,7 +222,7 @@ Esta prueba se realiza solamente en aplicaciones escritas en lenguajes no admini
 
 ### <a name="span-idbinscope-5spanreadwrite-shared-pe-section"></a><span id="binscope-5"></span>Sección PE compartida de lectura y escritura
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows**: Error de prueba de SharedSectionsCheck.
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba SharedSectionsCheck.
 
 Los archivos binarios con secciones grabables marcadas como compartidas son una amenaza de seguridad. No compiles aplicaciones con secciones compartidas grabables a menos que sea necesario. Usa [**CreateFileMapping**](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-createfilemappinga) o [**MapViewOfFile**](https://docs.microsoft.com/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile) para crear un objeto de memoria compartida debidamente asegurado.
 
@@ -236,7 +236,7 @@ Esta prueba se realiza solamente en aplicaciones escritas en lenguajes no admini
 
 ### <a name="appcontainercheck"></a>AppContainerCheck
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows**: Error de prueba de AppContainerCheck.
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba AppContainerCheck.
 
 AppContainerCheck comprueba que esté establecido el bit **appcontainer** en el encabezado portable ejecutable (PE) de un binario ejecutable. Las aplicaciones deben tener el bit **appcontainer** establecido en todos los archivos .exe y en todas las DLL no administradas para ejecutarse correctamente.
 
@@ -252,7 +252,7 @@ Esta prueba se realiza en todos los archivos .exe y en DLL no administrados.
 
 ### <a name="span-idbinscope-7spanexecutableimportscheck"></a><span id="binscope-7"></span>ExecutableImportsCheck
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows**: Error de prueba de ExecutableImportsCheck Test.
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba ExecutableImportsCheck.
 
 Una imagen portable ejecutable (PE) no pasa esta prueba si su tabla de importación se colocó en una sección de código ejecutable. Esto puede producirse si habilitaste la combinación de .rdata para la imagen PE estableciendo la marca */merge* del enlazador de Visual C++ en */merge:.rdata=.text*.
 
@@ -266,7 +266,7 @@ Esta prueba se realiza en todo el código binario excepto en los ensamblados pur
 
 ### <a name="span-idbinscope-8spanwxcheck"></a><span id="binscope-8"></span>WXCheck
 
-**Mensaje de error del Kit para la certificación de aplicaciones en Windows**: Error de prueba de WXCheck.
+**Mensaje de error del Kit para la certificación de aplicaciones en Windows:** Error en la prueba WXCheck.
 
 La comprobación ayuda a garantizar que un binario no tenga ninguna página asignada como de escritura y ejecutable. Esto puede suceder si el binario tiene una sección de escritura y ejecutable o si el valor de *SectionAlignment* del binario es menor que *PAGE\-SIZE*.
 
@@ -595,11 +595,11 @@ Comprueba que los archivos **.winmd** del paquete cumplen las reglas de UWP.
 
 ### <a name="corrective-actions"></a>Acciones correctivas
 
--   **Prueba de atributo ExclusiveTo**: asegúrate de que las clases UWP no implementen interfaces marcadas como ExclusiveTo para otra clase.
--   **Prueba de ubicación del tipo**: comprueba que los metadatos de todos los tipos de UWP estén ubicados en el archivo winmd cuyo nombre coincida en longitud con el espacio de nombres del paquete de la aplicación.
--   **Prueba de distinción entre mayúsculas y minúsculas en el nombre de tipo**: comprueba que todos los tipos de UWP tengan nombres únicos con distinción entre mayúsculas y minúsculas en el paquete de la aplicación. Asegúrate también de que ningún nombre de tipo UWP se use además como espacio de nombres de tu paquete de la aplicación.
--   **Prueba de exactitud del nombre de tipo**: comprueba que no hay tipos de UWP en el espacio de nombres global ni en el espacio de nombres de nivel superior de Windows.
--   **Prueba de exactitud de metadatos general**: comprueba que el compilador que usas para generar los tipos esté actualizado con las especificaciones de UWP.
+-   **Prueba del atributo ExclusiveTo:** comprueba que las clases de UWP no implementen interfaces de otra clase marcadas como exclusivas (ExclusiveTo).
+-   **Prueba de ubicación de tipo:** comprueba que los metadatos de todos los tipos de UWP estén ubicados en el archivo .winmd cuyo nombre en longitud presente la mayor coincidencia con el espacio de nombres en el paquete de la aplicación.
+-   **Prueba de distinción entre mayúsculas y minúsculas del nombre de tipo:** comprueba que todos los tipos de UWP tengan nombres únicos sin distinción de mayúsculas y minúsculas en el paquete de la aplicación. Asegúrate también de que ningún nombre de tipo UWP se use además como espacio de nombres de tu paquete de la aplicación.
+-   **Prueba de exactitud del nombre de tipo:** comprueba que no haya tipos de UWP en el espacio de nombres global ni en el espacio de nombres de nivel superior de Windows.
+-   **Prueba de exactitud de metadatos general:** comprueba que el compilador que usas para generar los tipos de UWP cumpla con las especificaciones actuales de Windows Runtime.
 -   **Prueba de propiedades:** comprueba que las propiedades de una clase de UWP tengan un método get (los métodos set son opcionales). Asegúrate de que el método get devuelva un tipo de valor que coincida con el tipo del parámetro de entrada del método set, para todas las propiedades de los tipos de UWP.
 
 ## <a name="package-sanity-tests"></a>Pruebas de integridad del paquete

@@ -6,23 +6,23 @@ ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cd84892f9d90a69379ac5a7f84dfa188adf1211e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258783"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Novedades en la documentación para desarrolladores de Windows de mayo de 2018
 
 La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente información general de características, instrucciones para desarrolladores, vídeos y ejemplos se encuentra disponibles en el mes de mayo para que coincida con el congreso para desarrolladores [Microsoft Build 2018](https://www.microsoft.com/build/).
 
-[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
 ### <a name="motion-in-fluent-design"></a>Movimiento en Fluent Design
 
-El uso de movimiento en el sistema Fluent Design está evolucionando sobre la base de los principios básicos de control de tiempo, aceleración, direccionalidad y gravedad. Aplicar estos principios básicos ayudará a guiar al usuario a través de la aplicación y lo conectará con su experiencia digital al reflejar el mundo natural. Aprenda más en estos artículos:
+El uso de movimiento en el sistema Fluent Design está evolucionando sobre la base de los principios básicos de control de tiempo, aceleración, direccionalidad y gravedad. Aplicar estos principios básicos te ayudará a guiar al usuario a través de la aplicación y lo conectará con su experiencia digital al reflejar el mundo natural. Aprenda más en estos artículos:
 
 * [La introducción al movimiento](../design/motion/index.md) se ha actualizado para reflejar estos principios básicos.
 * En [Movimiento en la práctica](../design/motion/motion-in-practice.md) se proporcionan ejemplos de cómo aplicar estos principios básicos en la app.
@@ -87,9 +87,9 @@ Paquetes opcionales en la aplicación pueden contener ahora el código ejecutabl
 
 ### <a name="page-transitions"></a>Transiciones de página
 
-Las [transiciones de página](../design/motion/page-transitions.md) permiten a los usuarios navegar entre las páginas de una aplicación. Ayudan a los usuarios a comprender dónde se encuentran en la jerarquía de navegación, además de que proporcionan comentarios sobre la relación entre las páginas.
+Las [transiciones de página](../design/motion/page-transitions.md) permiten a los usuarios navegar entre las páginas de una aplicación. Ayudan a los usuarios a comprender dónde se encuentran en la jerarquía de navegación y proporcionan comentarios sobre la relación entre las páginas.
 
-### <a name="project-rome"></a>Proyecto Roma
+### <a name="project-rome"></a>Project Rome
 
 El equipo del Proyecto Roma ha mejorado sus SDK para iOS y Android, agregando nuevas características como Actividades del usuario y refactorizando gran parte de su código para proporcionar una experiencia de programación coherente entre los diferentes SDK. [Todos los nuevos documentos de procedimientos y referencia de API](https://docs.microsoft.com/windows/project-rome/) empezarán a funcionar durante el congreso para desarrolladores Build 2018.
 
@@ -99,7 +99,7 @@ La característica de Conjuntos está disponible en las compilaciones de versió
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 
-### <a name="get-started"></a>Comenzar
+### <a name="get-started"></a>Introducción
 
 Hemos revitalizado nuestro contenido de Introducción con nuevas pistas de aprendizaje. Estos nuevos temas pretenden ofrecer a los nuevos desarrolladores de Windows 10 información sobre algunas tareas comunes que quizás deseen realizar. No son tutoriales y no proporcionan un tutorial de mano, pero muestran dónde existe documentación y cómo usarla. Consulte la renovada página [Comenzar a codificar](../get-started/create-uwp-apps.md) o explore cada pista de aprendizaje individual:
 
@@ -122,14 +122,14 @@ La página [Notificaciones](../publish/send-push-notifications-to-your-apps-cust
 
 ### <a name="cwinrt"></a>C++/WinRT
 
-C++/ WinRT es una nueva forma de crear y consumir distintas API de Windows Runtime. Se ha implementado únicamente en los archivos de encabezado y está diseñada para ofrecerle acceso de primera clase a las características de las aplicaciones modernas. [Mire el vídeo](https://www.youtube.com/watch?v=TLSul1XxppA&feature=youtu.be) para conocer cómo funciona y, luego, [lea los documentos para desarrolladores](../cpp-and-winrt-apis/index.md) para obtener más información.
+C++/ WinRT es una nueva forma de crear y usar distintas API de Windows Runtime. Se ha implementado únicamente en los archivos de encabezado y está diseñada para ofrecerle acceso de primera clase a las características de las aplicaciones modernas. [Mira el vídeo](https://www.youtube.com/watch?v=TLSul1XxppA&feature=youtu.be) para conocer cómo funciona y, luego, [lee los documentos para desarrolladores](../cpp-and-winrt-apis/index.md) para obtener más información.
 
 ### <a name="multi-instance-uwp-apps"></a>Aplicaciones para UWP de varias instancias
 
-Windows ahora le permite ejecutar varias instancias de la aplicación para UWP, cada una en su propio proceso independiente. [Mire el vídeo](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) para aprender cómo crear una nueva aplicación que admita esta característica y, después, [lea los documentos para desarrolladores](../launch-resume/multi-instance-uwp.md) para obtener instrucciones sobre cómo y por qué usar esta característica.
+Windows ahora le permite ejecutar varias instancias de la aplicación para UWP, cada una en su propio proceso independiente. [Mira el vídeo](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) para descubrir cómo crear una nueva aplicación que admita esta característica y, después, [lee los documentos para desarrolladores](../launch-resume/multi-instance-uwp.md) para obtener instrucciones sobre cómo y por qué usar esta característica.
 
 ## <a name="samples"></a>Muestras
 
 ### <a name="customer-database-tutorial"></a>Tutorial sobre base de datos de cliente
 
-En este tutorial se crea una aplicación para UWP básica para administrar una lista de clientes y se presentan conceptos y procedimientos que resultarán útiles en el desarrollo para empresas. Con este tutorial podrá recorrer los pasos para la implementación de elementos de la interfaz de usuario y la incorporación de operaciones en una base de datos SQLite local. También encontrará instrucciones detalladas para conectarte a una base de datos remota de REST si quiere avanzar más. [Consulte el tutorial aquí](../enterprise/customer-database-tutorial.md)
+En este tutorial se crea una aplicación para UWP básica para administrar una lista de clientes y se presentan conceptos y procedimientos que resultarán útiles en el desarrollo para empresas. Con este tutorial podrás recorrer los pasos para la implementación de elementos de la interfaz de usuario y la incorporación de operaciones en una base de datos SQLite local. También encontrarás instrucciones detalladas para conectarte a una base de datos remota de REST si quieres avanzar más. [Consulte el tutorial aquí](../enterprise/customer-database-tutorial.md)

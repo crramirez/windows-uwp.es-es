@@ -6,10 +6,10 @@ ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: fb63a5f7cefbccbedc09b0c74d9daea9d26b63a8
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74734960"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>Novedades en la documentación para los desarrolladores de Windows de septiembre de 2017
@@ -18,7 +18,7 @@ La documentación para desarrolladores de Windows se actualiza constantemente co
 
 Por supuesto, Fall Creators Update está a la vuelta de la esquina, así que permanezca atento para obtener gran cantidad de documentación que llegará el próximo mes.
 
-[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/your-first-app.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/your-first-app.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 

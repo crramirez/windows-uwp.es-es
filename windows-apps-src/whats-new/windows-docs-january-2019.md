@@ -6,17 +6,17 @@ ms.date: 01/17/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7947fb6e71a9f2ddbedcd8e3ee8bab7b720dc444
-ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74902470"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>Novedades en la documentación para desarrolladores de Windows de enero de 2019.
 
 La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La siguiente introducción a las características, instrucciones para desarrolladores y vídeos están disponibles desde el mes de enero.
 
-[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
@@ -78,7 +78,7 @@ Visite nuestra [nueva serie de vídeos sobre Visual Studio Code](https://www.you
 
 ### <a name="one-dev-question"></a>Una pregunta de desarrollador
 
-En la serie de vídeos de una pregunta de desarrollador, los desarrolladores de Microsoft cubren una serie de preguntas acerca del desarrollo de Windows, la cultura del equipo y el historial. A continuación encontrarás las preguntas más recientes que hemos respondido.
+En la serie de vídeos de una pregunta de desarrollador, los desarrolladores de Microsoft cubren una serie de preguntas acerca del desarrollo de Windows, la cultura del equipo y el historial. Aquí es donde hemos respondido a las preguntas más recientes.
 
 Raymond Chen:
 

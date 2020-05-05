@@ -7,21 +7,21 @@ keywords: windows 10, uwp, standard, c++, cpp, winrt, proyección, XAML, person
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: a6cde5a62367dccd83ca8dc6a46c203587850422
-ms.sourcegitcommit: cfbcf0381ec11f6daef3fa82b36ecbff3f3b8450
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80760520"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>Controles (basados en modelo) personalizados de XAML con C++/WinRT
 
 > [!IMPORTANT]
-> Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), consulta [Consumir API con C++/WinRT](author-apis.md) y [Crear API con C++/WinRT ](consume-apis.md).
+> Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
 
 Una de las características más eficaces de la plataforma Universal de Windows (UWP) es la flexibilidad que ofrece la pila de la interfaz de usuario (UI) para crear controles personalizados basados en el tipo [**Control**](/uwp/api/windows.ui.xaml.controls.control) de XAML. El marco de interfaz de usuario de XAML ofrece características tales como [propiedades de dependencia personalizadas](/windows/uwp/xaml-platform/custom-dependency-properties) y [propiedades adjuntas](/windows/uwp/xaml-platform/custom-attached-properties), así como [plantillas de control](/windows/uwp/design/controls-and-patterns/control-templates), que facilitan la creación de controles repletos de características y personalizables. Este tema te guía por los pasos de creación de un control (basado en modelo) personalizado con C++/WinRT.
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>Crear una aplicación en blanco (BgLabelControlApp)
-Para empezar, crea un proyecto en Microsoft Visual Studio. Crea un proyecto de **Aplicación en blanco (C++/WinRT)** , establece el nombre en *BgLabelControlApp* y, para que la estructura de carpetas coincida con el tutorial, asegúrate de que la opción **Colocar la solución y el proyecto en el mismo directorio** esté desactivada.
+Comienza creando un proyecto en Microsoft Visual Studio Crea un proyecto de **Aplicación en blanco (C++/WinRT)** , establece el nombre en *BgLabelControlApp* y, para que la estructura de carpetas coincida con el tutorial, asegúrate de que la opción **Colocar la solución y el proyecto en el mismo directorio** esté desactivada.
 
 En una sección posterior de este tema, se te indicará que compiles el proyecto (pero no lo compiles hasta entonces).
 
@@ -50,7 +50,7 @@ La lista anterior muestra el patrón que se sigue al declarar una propiedad de d
 > [!NOTE]
 > Si quieres una DP con un tipo de punto flotante, conviértela en `double` (`Double` en [MIDL 3.0](/uwp/midl-3/)). Si se declara e implementa una DP de tipo `float` (`Single` en MIDL) y luego se establece un valor para esa DP en marcado XAML, se producirá el error *Failed to create a 'Windows.Foundation.Single' from the text '<NUMBER>'* (No se pudo crear un "Windows.Foundation.Single" a partir del texto).
 
-Guarda el archivo y compila el proyecto. Durante el proceso de compilación, la herramienta `midl.exe` se ejecuta para crear un archivo de metadatos de Windows Runtime (`\BgLabelControlApp\Debug\BgLabelControlApp\Unmerged\BgLabelControl.winmd`) que describe la clase en tiempo de ejecución. Después se ejecutará la herramienta `cppwinrt.exe` para generar archivos de código fuente y ayudarte a crear y consumir tu clase en tiempo de ejecución. Estos archivos incluyen códigos auxiliares para que puedas empezar a implementar la clase en tiempo de ejecución **BgLabelControl** que declaraste en el archivo IDL. Estos archivos de código auxiliar son `\BgLabelControlApp\BgLabelControlApp\Generated Files\sources\BgLabelControl.h` y `BgLabelControl.cpp`
+Guarda el archivo y compila el proyecto. Durante el proceso de compilación, la herramienta `midl.exe` se ejecuta para crear un archivo de metadatos de Windows Runtime (`\BgLabelControlApp\Debug\BgLabelControlApp\Unmerged\BgLabelControl.winmd`) que describe la clase en tiempo de ejecución. Después se ejecutará la herramienta `cppwinrt.exe` para generar archivos de código fuente y ayudarte a crear y consumir tu clase en tiempo de ejecución. Estos archivos incluyen códigos auxiliares para que puedas empezar a implementar la clase en tiempo de ejecución **BgLabelControl** que declaraste en el archivo IDL. Estos archivos de código auxiliar son `\BgLabelControlApp\BgLabelControlApp\Generated Files\sources\BgLabelControl.h` y `BgLabelControl.cpp`.
 
 Copia los archivos de código auxiliar `BgLabelControl.h` y `BgLabelControl.cpp` de `\BgLabelControlApp\BgLabelControlApp\Generated Files\sources\` a la carpeta del proyecto, que es `\BgLabelControlApp\BgLabelControlApp\`. En el **Explorador de soluciones**, asegúrate de que **Mostrar todos los archivos** esté activado. Haz clic con el botón derecho en los archivos de código auxiliar que has copiado y luego haz clic en **Incluir en el proyecto**.
 

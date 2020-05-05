@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2977877b839f40e07b3eaa03b8349fb8439a401
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73062750"
 ---
 # <a name="app-analysis-overview"></a>Información general sobre el análisis de la aplicación
@@ -209,7 +209,7 @@ Usa x: Key en lugar de x: Name cuando no se haga referencia a recursos desde el 
 
 ## <a name="collections-control-is-using-a-non-virtualizing-panel"></a>El control de colecciones usa un panel sin virtualización
 
-Si proporcionas una plantilla del panel de elementos personalizada (consulta ItemsPanel), asegúrate de usar un panel de virtualización, como ItemsWrapGrid o ItemsStackPanel. Si usas VariableSizedWrapGrid, WrapGrid o StackPanel, no conseguirás virtualización. Además, los siguientes eventos ListView solo se generan al usar ItemsWrapGrid o ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer y ContainerContentChanging.
+Si proporcionas una plantilla del panel de elementos personalizada (consulta ItemsPanel), asegúrate de usar un panel de virtualización, como ItemsWrapGrid o ItemsStackPanel. Si usas VariableSizedWrapGrid, WrapGrid o StackPanel, no conseguirás virtualización. Además, los siguientes eventos de ListView se generan únicamente cuando se usa una clase ItemsWrapGrid o ItemsStackPanel: ChoosingGroupHeaderContainer, ChoosingItemContainer y ContainerContentChanging.
 
 La virtualización de la interfaz de usuario es la mejora más importante que puedes realizar para mejorar el rendimiento de las colecciones. Esto significa que los elementos de la interfaz de usuario que representan los elementos se crean a petición. Para un control de elementos enlazado a una colección de 1000 elementos, sería un desperdicio de recursos crear la interfaz de usuario de todos los elementos al mismo tiempo, porque todos no pueden mostrarse a la vez. ListView y GridView (y otros controles estándar derivados de ItemsControl) realizan la virtualización de la interfaz de usuario por ti. Cuando los elementos están a punto de desplazarse hacia la vista (a una páginas de distancia), el marco de trabajo genera la interfaz de usuario de los elementos y los almacena. Asimismo, cuando sea improbable que los elementos se muestren de nuevo, el marco de trabajo recuperará la memoria.
 
@@ -227,7 +227,7 @@ Usas un panel que no admite la virtualización.
 
 Usa un panel de virtualización como ItemsWrapGrid o ItemsStackPanel.
 
-## <a name="accessibility-uia-elements-with-no-name"></a>Accesibilidad: elementos UIA sin nombre
+## <a name="accessibility-uia-elements-with-no-name"></a>Accesibilidad: Elementos UIA sin nombre
 
 En XAML, puedes proporcionar un nombre si estableces AutomationProperties.Name. Muchos elementos de automatización del mismo nivel proporcionan un nombre predeterminado para UIA si no se establece AutomationProperties.Name. 
 
@@ -245,7 +245,7 @@ Establece la propiedad AutomationProperties.Name en el XAML del control a una ca
 
 A veces la corrección de la aplicación adecuada no es proporcionar un nombre, sino quitar el elemento UIA de todos los árboles excepto los árboles sin procesar. Puedes hacerlo en XAML estableciendo `AutomationProperties.AccessibilityView = "Raw"`.
 
-## <a name="accessibility-uia-elements-with-the-same-controltype-should-not-have-the-same-name"></a>Accesibilidad: los elementos UIA con el mismo Controltype no deben tener el mismo nombre
+## <a name="accessibility-uia-elements-with-the-same-controltype-should-not-have-the-same-name"></a>Accesibilidad: Los elementos UIA con el mismo Controltype no deben tener el mismo nombre
 
 Dos elementos UIA con el mismo elemento primario UIA no deben tener los mismos Name y ControlType. Está bien tener dos controles con el mismo Name si tienen ControlTypes diferentes. 
 

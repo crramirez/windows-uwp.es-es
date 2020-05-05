@@ -9,10 +9,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c08dad36929c7889f1896404df862230040e3499
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72163702"
 ---
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
@@ -83,7 +83,7 @@ Móvil:
 
 
 Si la aplicación permite a los usuarios elegir el modo de color de la aplicación, presenta estas opciones usando [botones de radio](../controls-and-patterns/radio-button.md) o un [cuadro combinado](../controls-and-patterns/combo-box.md) con el encabezado "Elegir un modo de aplicación". En las opciones debe haber lo siguiente:
-- Claro
+- Ligero
 - Oscuro
 - Valor predeterminado de Windows
 
@@ -127,7 +127,7 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
     - [Modificadores para alternar](../controls-and-patterns/toggles.md): para permitir que los usuarios activen o desactiven valores.
     - [Botones de radio](../controls-and-patterns/radio-button.md): para permitir a los usuarios elegir un elemento de un conjunto de hasta 5 opciones relacionadas que sean mutuamente excluyentes.
     - [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): para permitir que los usuarios escriban texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
-    - [Hipervínculos](../controls-and-patterns/hyperlinks.md): para dirigir a los usuarios a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
+    - [Hipervínculos](../controls-and-patterns/hyperlinks.md): para llevar a los usuarios a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
     - [Botones](../controls-and-patterns/buttons.md): para permitir que los usuarios inicien una acción inmediata sin descartar el control flotante de configuración actual.
 - Agrega un mensaje descriptivo si se desactiva uno de los controles. Coloca este mensaje por encima del control deshabilitado.
 - Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](https://docs.microsoft.com/previous-versions/windows/apps/br212672(v=win.10)) o [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition), con un desplazamiento izquierdo de 100 píxeles.

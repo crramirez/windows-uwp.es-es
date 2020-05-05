@@ -5,10 +5,10 @@ ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
 ms.openlocfilehash: 2ad2a84a78006eafcdfa47d1faef533bea2224ff
-ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "81123604"
 ---
 # <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Uso de comandos en aplicaciones de la Plataforma universal de Windows (UWP) con ICommand, XamlUICommand y StandardUICommand
@@ -377,7 +377,7 @@ Si tienes que crear un comando que no está definido por la clase [StandardUICom
 
 *XamlUICommandSample*
 
-| Descargar el código de este ejemplo |
+| Descargar el código de este ejemplo. |
 | -------------------- |
 | [Ejemplo de comandos de UWP (XamlUICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-xamluicommand.zip) |
 
@@ -627,7 +627,7 @@ La manera más sencilla de admitir una experiencia de comandos estructurada es d
 
 *Ejemplo de ICommand*
 
-| Descargar el código de este ejemplo |
+| Descargar el código de este ejemplo. |
 | -------------------- |
 | [Ejemplo de comandos de UWP (ICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-icommand.zip) |
 
@@ -1103,7 +1103,7 @@ Para ver un ejemplo completo que muestra una implementación de [XamlUICommand](
 
 [Controles y patrones en aplicaciones para UWP](index.md)
 
-### <a name="samples"></a>Ejemplos
+### <a name="samples"></a>Muestras
 
 #### <a name="topic-samples"></a>Ejemplos del tema
 

@@ -6,17 +6,17 @@ ms.date: 02/05/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cac61f398fff17ecfb824f2d869364097f38d5d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258818"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-february-2018"></a>Novedades en los documentos para desarrolladores de Windows de febrero de 2018
 
 La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. Las siguientes descripciones de características, instrucciones para desarrolladores y vídeos se han puesto a disposición de los desarrolladores en enero y contienen datos nuevos y actualizados para los desarrolladores de Windows.
 
-[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 
 ## <a name="features"></a>Características
@@ -41,7 +41,7 @@ Hemos actualizado nuestros documentos de [diseño de página XAML](../design/lay
 
 ### <a name="subscription-add-ons-are-now-available-to-all-developers"></a>Complementos de suscripción disponibles para todos los desarrolladores
 
-Crea y publica complementos de una suscripción para vender productos digitales en tus aplicaciones y juegos (como las características de la aplicación o el contenido digital) con períodos de facturación periódicos automatizados. Para obtener más información, consulta [Habilitar complementos de una suscripción para tu aplicación](../monetize/enable-subscription-add-ons-for-your-app.md).
+Crea y publica complementos de una suscripción para vender productos digitales en tus aplicaciones y juegos (como las características de la aplicación o el contenido digital) con períodos de facturación periódicos automatizados. Para obtener más información, consulte [Habilitar complementos de una suscripción para su aplicación](../monetize/enable-subscription-add-ons-for-your-app.md).
 
 ## <a name="developer-guidance"></a>Guía para desarrolladores
 

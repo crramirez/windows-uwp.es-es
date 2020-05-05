@@ -12,10 +12,10 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 9b9d409718a157c55b28fdb3ccaa28caaa295adf
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75684284"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto con la vista de escritura a mano
@@ -67,7 +67,7 @@ La vista de escritura a mano se encuentra encima del control de texto subyacente
 
 La interfaz de usuario de la aplicación no se redistribuye para incluir el control más grande, por lo que el sistema puede causar que la vista obstruya una interfaz de usuario importante.
 
-Aquí se muestra cómo usar la propiedad [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) del elemento [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) de un objeto [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) para especificar qué delimitador del control de texto subyacente se usa para alinear la vista de escritura a mano.
+Aquí se muestra cómo usar la propiedad [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) del elemento [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) de un objeto [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para especificar qué delimitador del control de texto subyacente se usa para alinear la vista de escritura a mano.
 
 ```xaml
 <TextBox Name="SampleTextBox"

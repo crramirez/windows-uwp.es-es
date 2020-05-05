@@ -8,10 +8,10 @@ ms.topic: article
 keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b45f33e9849a46e22250640b88a85ea16143231
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77089331"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>Recursos de aplicación y el sistema de administración de recursos

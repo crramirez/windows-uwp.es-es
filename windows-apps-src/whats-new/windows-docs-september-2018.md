@@ -6,21 +6,21 @@ ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 85e41a26343c9e4c6eb239cbfdd74dc946d5b657
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258804"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Novedades en la documentación para los desarrolladores de Windows de septiembre de 2018
 
 La documentación para desarrolladores de Windows se actualiza constantemente con información sobre las nuevas características disponibles para los desarrolladores a través de la plataforma de Windows. La introducción a las características, instrucciones para desarrolladores y vídeos están disponibles desde el mes de septiembre.
 
-[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
+[Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
 ## <a name="features"></a>Características
 
-### <a name="windows-machine-learning"></a>Aprendizaje automático de Windows
+### <a name="windows-machine-learning"></a>Windows Machine Learning
 
 [Los documentos de Windows Machine Learning](https://docs.microsoft.com/windows/ai/) ahora se encuentran en su propio sitio y se actualizan para el último SDK de Windows Insider. Hay tutoriales para escritorio y para UWP en C++ y C# para ayudarlo a empezar a agregar WinML a la aplicación.
 

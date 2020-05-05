@@ -4,10 +4,10 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 10/04/2019
 ms.openlocfilehash: 2f7a57f1652ecab81a70c39faa1b70c42ed6a3de
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72314909"
 ---
 Escribir `sudo service mongodb start` o `sudo service postgres start` y `sudo -u postgrest psql` puede resultar tedioso.  Sin embargo, puedes considerar la posibilidad de configurar los alias en el archivo `.profile` de WSL para que estos comandos sean más rápidos de usar y más fáciles de recordar. 
