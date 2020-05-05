@@ -6,17 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 76026c4f499a068bab689eadf050e0ec6277bbe8
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 39759bec429bfe7952777d9669b7971a09136116
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393685"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82034139"
 ---
 # <a name="windows-runtime-components"></a>Componentes de Windows Runtime
-Los componentes de Windows Runtime son objetos independientes que permiten crear una instancia y se pueden usar desde cualquier lenguaje, como C#, Visual Basic, JavaScript y C++.
 
-Puedes usar Visual Studio y C#, Visual Basic o C++ para crear componentes de Windows Runtime que puedan usarse en aplicaciones de la Plataforma universal de Windows (UWP).
+Los componentes de Windows Runtime son módulos de software independientes a los que puedes hacer referencia y que puedes usar desde cualquier lenguaje, como C#, C++/WinRT, Visual Basic, JavaScript y C++/CX. Puedes usar Visual Studio para crear componentes de Windows Runtime que puedan usarse en aplicaciones de la Plataforma universal de Windows (UWP).
+
+> [!NOTE]
+> Si eres desarrollador de C++, te recomendamos que uses [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para las nuevas aplicaciones. C++/WinRT es una moderna proyección de lenguaje C++17 totalmente estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivos de encabezado y diseñada para darte acceso de primera clase a la API moderna de Windows. Para obtener información sobre cómo crear un componente de Windows Runtime con C++/WinRT, consulta [Crear eventos en C++/WinRT](../cpp-and-winrt-apis/author-events.md).
 
 | Tema | Descripción |
 |-------|-------------|

@@ -11,11 +11,11 @@
       items:
         - name: Introducción
           href: desktop/modernize/index.md
-        - name: Llamada a las API de UWP
+        - name: Llamar a API de Windows Runtime
           items:
             - name: Introducción
               href: desktop/modernize/desktop-to-uwp-enhance.md
-            - name: API de UWP disponibles
+            - name: API de Windows Runtime disponibles
               href: desktop/modernize/desktop-to-uwp-supported-api.md
         - name: Hospedaje de controles XAML de UWP (islas XAML)
           items:

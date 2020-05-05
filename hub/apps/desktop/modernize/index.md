@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c86290c9765eba5186e777f8de7b3b86967be9e
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: b966d00455bce390457e148c60b57296375ac2fa
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521346"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730242"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernización de las aplicaciones de escritorio
 
@@ -36,11 +36,11 @@ Para más información, consulta [Empaquetar aplicaciones de escritorio](/window
 
 Para obtener más información, consulta el tema sobre [novedades de .NET Core 3.0](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0).
 
-## <a name="uwp-apis"></a>Api de UWP
+## <a name="windows-runtime-apis"></a>API de Windows Runtime
 
-Puedes llamar a muchas API de UWP directamente en la aplicación de escritorio de WPF, Windows Forms o C++ Win32 para integrar las experiencias más actuales creadas para los usuarios de Windows 10. Por ejemplo, puedes llamar a las API de UWP para que agreguen notificaciones del sistema a la aplicación de escritorio.
+Puedes llamar a muchas API de Windows Runtime directamente en la aplicación de escritorio de WPF, Windows Forms o Win32 de C++ para integrar las experiencias más actuales creadas para los usuarios de Windows 10. Por ejemplo, puedes llamar a las API de Windows Runtime para agregar notificaciones del sistema a la aplicación de escritorio.
 
-Para más información, consulta [Uso de API de UWP en aplicaciones de escritorio](desktop-to-uwp-enhance.md).
+Para obtener más información, consulta [Uso de API de Windows Runtime para aplicaciones de escritorio](desktop-to-uwp-enhance.md).
 
 ## <a name="host-uwp-controls-xaml-islands"></a>Hospedaje de controles de UWP (islas XAML)
 
@@ -50,18 +50,18 @@ Para más información, consulta [Uso de controles de UWP en aplicaciones de esc
 
 ## <a name="use-the-visual-layer-in-desktop-apps"></a>Uso de una capa visual en aplicaciones de escritorio
 
-Ahora puedes usar las API de UWP en aplicaciones de escritorio que no son de UWP para mejorar la apariencia, aspecto y funcionalidad de las aplicaciones de WPF, Windows Forms y C++ Win32 y aprovechar las ventajas de las características más recientes de la interfaz de usuario de Windows 10 que solo están disponibles a través de UWP. Esto es útil cuando necesitas crear experiencias personalizadas que van más allá de los controles integrados de UWP que puedes hospedar mediante islas XAML.
+Ahora puedes usar las API de Windows Runtime en aplicaciones de escritorio que no son de UWP para mejorar la apariencia, el aspecto y la funcionalidad de las aplicaciones de WPF, Windows Forms y Win32 de C++, y aprovechar las ventajas de las características más recientes de la interfaz de usuario de Windows 10 que solo están disponibles a través de UWP. Esto es útil cuando necesitas crear experiencias personalizadas que van más allá de los controles integrados de UWP que puedes hospedar mediante islas XAML.
 
 Para más información, consulta [Modernización de una aplicación de escritorio mediante la capa visual](visual-layer-in-desktop-apps.md).
 
 ## <a name="additional-features-available-to-apps-with-package-identity"></a>Características adicionales disponibles para aplicaciones con la identidad de paquete
 
-Algunas experiencias modernas de Windows 10 solo están disponibles en las aplicaciones de escritorio que tienen la [identidad de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity). Estas características incluyen algunas API de UWP, extensiones de paquete y componentes de UWP. Para más información, consulta [Características que requieren identidad del paquete](modernize-packaged-apps.md).
+Algunas experiencias modernas de Windows 10 solo están disponibles en las aplicaciones de escritorio que tienen la [identidad de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity). Estas características incluyen algunas API de Windows Runtime, extensiones de paquetes y componentes de UWP. Para más información, consulta [Características que requieren identidad del paquete](modernize-packaged-apps.md).
 
 Hay varias maneras de conceder identidad a una aplicación de escritorio:
 
 * Empaquetarla en un [paquete de MSIX](/windows/msix/desktop/desktop-to-uwp-root). MSIX es un formato moderno de paquete de la aplicación que proporciona una experiencia de empaquetado universal para todas las aplicaciones Windows, WPF, Windows Forms y Win32. Proporciona una sólida experiencia de instalación y actualización, un modelo de seguridad administrado con un sistema de funcionalidades flexible, compatibilidad con Microsoft Store, administración empresarial y muchos modelos de distribución personalizados. Para más información, consulta [Empaquetar aplicaciones de escritorio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) en la documentación de MSIX.
-* Si no puedes adoptar el empaquetado de MSIX para implementar la aplicación de escritorio, a partir de la compilación de Windows 10 Insider Preview 10.0.19000.0 puedes conceder la identidad de paquete al crear un *paquete disperso de MSIX* que solo contenga un manifiesto de paquete. Para obtener más información, consulta [Concesión de identidad a aplicaciones de escritorio no empaquetadas](grant-identity-to-nonpackaged-apps.md).
+* Si no puedes adoptar el empaquetado de MSIX para implementar la aplicación de escritorio, a partir de la compilación de Windows 10, versión 2004, puedes conceder la identidad de paquete al crear un *paquete disperso de MSIX* que solo contenga un manifiesto de paquete. Para obtener más información, consulta [Concesión de identidad a aplicaciones de escritorio no empaquetadas](grant-identity-to-nonpackaged-apps.md).
 
 <a id="desktop-uwp-controls"/>
 

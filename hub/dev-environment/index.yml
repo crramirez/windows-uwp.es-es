@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Compilación con Windows
+title: Entorno de desarrollo de Windows
 summary: Configure el entorno de desarrollo para que funcione con Python, Node.js, el subsistema de Windows para Linux, Terminal Windows, Docker, MongoDB, PostgreSQL y muchos más.
 metadata:
   author: mattwojo
@@ -9,12 +9,12 @@ metadata:
   ms.date: 09/15/2019
   ms.prod: dev-environment
   ms.topic: landing-page
-  ms.openlocfilehash: aaeb8b3818baf9b02d767222c2144a9066079362
-  ms.sourcegitcommit: 860e8303da3e36624f603ce3273d68911c696e5d
+  ms.openlocfilehash: 62e4cc8c5788780988b79d079ff4a6834a525a51
+  ms.sourcegitcommit: 0808a2719c007b3d7f55714e197ad080a1631a57
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72777270"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82630645"
 landingContent:
 - title: Introducción a Python
   linkLists:
@@ -42,7 +42,7 @@ landingContent:
       url: ../python/web-frameworks.md#hello-world-tutorial-for-django
   - linkListType: reference
     links:
-    - text: P+F
+    - text: Preguntas más frecuentes
       url: ../python/faqs.md
     - text: Recursos adicionales
       url: ../python/resources.md
@@ -72,6 +72,34 @@ landingContent:
       url: ../nodejs/web-frameworks.md#get-started-with-nuxtjs
     - text: Configuración de una aplicación web con Gatsby.js
       url: ../nodejs/web-frameworks.md#get-started-with-gatsbyjs
+- title: Introducción a Android
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Información general sobre el desarrollo de Android en Windows
+      url: ../android/overview.md
+    - text: Comparación de los marcos multiplataforma para Android
+      url: ../android/overview.md#cross-platform
+  - linkListType: get-started
+    links:
+    - text: Android nativo
+      url: ../android/overview.md#native-android
+    - text: Xamarin.Android
+      url: ../android/xamarin-android.md
+    - text: Xamarin.Forms
+      url: ../android/xamarin-forms.md
+    - text: React Native
+      url: ../android/react-native.md
+    - text: PWA (Cordova, Ionic y PhoneGap)
+      url: ../android/pwa.md
+    - text: Desarrollo de juegos
+      url: ../android/overview.md#game-development
+  - linkListType: concept
+    links:
+    - text: Pruebas en un emulador o dispositivo Android
+      url: ../android/emulator.md
+    - text: Actualización de la configuración de Windows Defender para mejorar el rendimiento
+      url: ../android/defender-settings.md
 - title: Subsistema de Windows para Linux (WSL)
   linkLists:
   - linkListType: overview
@@ -98,7 +126,7 @@ landingContent:
       url: https://docs.microsoft.com/windows/wsl/faq
     - text: Preguntas más frecuentes sobre WSL 2
       url: https://docs.microsoft.com/windows/wsl/wsl2-faq
-    - text: Solución de problemas
+    - text: Solucionar problemas
       url: https://docs.microsoft.com/windows/wsl/troubleshooting
 - title: Guía de Mac a Windows
   linkLists:
@@ -106,7 +134,7 @@ landingContent:
     links:
     - text: Cambio del entorno
       url: mac-to-windows.md
-    - text: Accesos rápidos de teclado
+    - text: Métodos abreviados de teclado
       url: mac-to-windows.md#keyboard-shortcuts
     - text: Accesos directos de panel táctil
       url: mac-to-windows.md#trackpad-shortcuts
