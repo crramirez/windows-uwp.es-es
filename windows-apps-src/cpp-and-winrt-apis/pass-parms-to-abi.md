@@ -5,12 +5,12 @@ ms.date: 07/10/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, pasar, parámetros, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: c1e172fc4dbd5b865add1828a98dc1a030d5dc6f
-ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
+ms.openlocfilehash: 9c5ce6a30e68fe6fc26316bc2f41c6e2556b98ef
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67844353"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255259"
 ---
 # <a name="passing-parameters-into-the-abi-boundary"></a>Pasar parámetros a los límites de la ABI
 
@@ -57,7 +57,7 @@ Las colecciones de Windows Runtime ya son de tipo **Iterable**.
 
 Ten en cuenta que **IIterable\<U\>** y **std::vector\<U\>** no se permiten, incluso si **U** es convertible a **T**. En cuanto a **std::vector\<U\>** , puedes usar la versión de doble iterador (tienes más detalles a continuación).
 
-En algunos casos, el objeto que tienes puede implementar el valor **Iterable** que quieras. Por ejemplo, el elemento **IVectorView\<StorageFile\>** que produjo [**FileOpenPicker.PickMultipleFilesAsync**](/uwp/api/windows.storage.pickers.fileopenpicker.pickmultiplefilesasync) implementa el valor **IIterable<StorageFile>** . Pero también implementa **IIterable <IStorageItem>** ; solo tienes que pedirlo explícitamente.
+En algunos casos, el objeto que tienes puede implementar el valor **Iterable** que quieras. Por ejemplo, el elemento **IVectorView\<StorageFile\>** que produjo [**FileOpenPicker.PickMultipleFilesAsync**](/uwp/api/windows.storage.pickers.fileopenpicker.pickmultiplefilesasync) implementa el valor **IIterable<StorageFile>** . Pero también implementa  **IIterable <IStorageItem>** ; solo tienes que pedirlo explícitamente.
 
 ```cppwinrt
 IVectorView<StorageFile> pickedFiles{ co_await filePicker.PickMultipleFilesAsync() };
@@ -164,3 +164,5 @@ El elemento **winrt::array_view\<T\>** no está en el espacio de nombres **winrt
 | **std::vector<C>** | Un C++ **std::vector** de **C**, donde **C** se puede convertir a **T** y `sizeof(C) == sizeof(T)`. |
 | `{ T*, T* }` | Un par de punteros que representan el intervalo (comienzo, final).|
 | **std::initializer_list\<T\>** ||
+
+Consulta también la entrada de blog [Distintos patrones para pasar matrices de estilo C en el límite de ABI Windows Runtime](https://devblogs.microsoft.com/oldnewthing/20200205-00/?p=103398).

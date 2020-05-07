@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: ab5b509aa69dc54d18ef3643d7ccd46bc2984676
-ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
+ms.openlocfilehash: 68682d7b47e42995060601f5ae1c9b8d891aa3ff
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80614102"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81643718"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -472,7 +472,7 @@ El control **TreeView** admite tanto la selección única como la múltiple. De 
 
 Cuando se habilita la selección múltiple, se muestra una casilla junto a cada nodo de la vista de árbol y se resaltan los elementos seleccionados. Un usuario puede seleccionar o anular la selección de un elemento mediante la casilla; al hacer clic en el elemento, se le invoca.
 
-Si se selecciona un nodo primario (o se anula su selección), se seleccionarán todos los elementos secundarios bajo ese nodo (o se anulará su selección). Si se seleccionan algunos elementos secundarios bajo un nodo primario, pero no todos, la casilla del nodo primario se mostrará como indeterminada (rellenada con una caja negra).
+Si se selecciona un nodo primario (o se anula su selección), se seleccionarán todos los elementos secundarios bajo ese nodo (o se anulará su selección). Si se seleccionan algunos elementos secundarios bajo un nodo primario, pero no todos, el estado de la casilla del nodo primario se mostrará como indeterminado.
 
 ![Selección múltiple en una vista de árbol](images/treeview-selection.png)
 

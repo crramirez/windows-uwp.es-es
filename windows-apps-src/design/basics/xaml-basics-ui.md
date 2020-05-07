@@ -6,10 +6,10 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c23a9539d0fc3902f715917b380e8b6b3e132c15
-ms.sourcegitcommit: 1d868968297d0d6d02cc38fe84d0a3ab5bccfb60
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68974458"
 ---
 # <a name="tutorial-create-a-user-interface"></a>Tutorial: Crear una interfaz de usuario
@@ -57,7 +57,7 @@ En este tutorial, empezaremos con una versión simplificada del ejemplo PhotoLab
 
 3. Abre el proyecto, para lo que debes seleccionar **Photolab.sln**.
 
-## <a name="part-1-add-a-textblock-control-by-using-xaml-designer"></a>1ª parte: Agregar un control TextBlock mediante el Diseñador XAML
+## <a name="part-1-add-a-textblock-control-by-using-xaml-designer"></a>Parte 1: Agregar un control TextBlock mediante el Diseñador XAML
 
 Visual Studio proporciona varias herramientas que te ayudarán a crear más fácilmente la interfaz de usuario de XAML. El Diseñador XAML se usa para arrastrar controles a la superficie de diseño y ver cómo serán antes de ejecutar la aplicación. El panel **Propiedades** permite ver y establecer todas las propiedades del control que están activas en el diseñador. Esquema del documento muestra la estructura de elementos primarios y secundarios del árbol visual de XAML de la interfaz de usuario. El editor XAML se usa para escribir directamente y modificar el marcado XAML.
 
@@ -116,7 +116,7 @@ Para agregar un control mediante el Diseñador XAML:
                VerticalAlignment="Top"/>
     ```
 
-6. Para colocar el control **TextBlock**, primero hay que quitar los valores de propiedades que Visual Studio ha agregado. En Esquema del documento, haz clic con el botón derecho en **TitleTextBlock** y selecciona **Layout**  > **Reset All** (Diseño > Restablecer todo).
+6. Para colocar el control **TextBlock**, primero hay que quitar los valores de propiedades que Visual Studio ha agregado. En Esquema del documento, haz clic con el botón derecho en **TitleTextBlock** y selecciona **Layout** > **Reset All** (Diseño > Restablecer todo).
 
     ![Esquema del documento](images/xaml-basics/doc-outline-reset.png)
 
@@ -149,7 +149,7 @@ Es posible que hayas observado que en el Diseñador XAML, la aplicación mostrab
 > [!NOTE]
 > En esta parte del tutorial, has agregado un control arrastrándolo. También puedes agregar un control haciendo doble clic en él, en Caja de herramientas. Pruébalo y observa las diferencias en el código XAML que Visual Studio genera.
 
-## <a name="part-2-add-a-gridview-control-by-using-the-xaml-editor"></a>2ª parte: Agregar un control GridView desde el editor de XAML
+## <a name="part-2-add-a-gridview-control-by-using-the-xaml-editor"></a>Parte 2: Agregar un control GridView desde el editor de XAML
 
 En la primera parte, has recibido algunas nociones básicas acerca del uso del Diseñador XAML y de otras herramientas proporcionadas por Visual Studio. Aquí, usarás el editor XAML para trabajar directamente con el marcado XAML. A medida que te vayas familiarizando con XAML, es posible que resulte una manera más eficaz de trabajar.
 
@@ -183,7 +183,7 @@ Para agregar un control desde el editor de XAML:
 
     Para más información sobre el diseño mediante **RelativePanel**, consulta [Paneles de diseño](https://docs.microsoft.com/windows/uwp/layout/layout-panels#relativepanel).
 
-2. Debajo del elemento **TextBlock**, agrega un control **GridView** denominado **ImageGridView**. Establece las _propiedades adjuntas_ de **RelativePanel** para colocar el control debajo del texto del título y estirarlo al ancho de la pantalla.
+2. Debajo del elemento **TextBlock**, agrega un control **GridView** denominado **ImageGridView**. Establece las _propiedades adjuntas_ de **RelativePanel** para colocar el control debajo del texto del título y estirarlo a todo el ancho de la pantalla.
 
     **Agrega este XAML**
 
@@ -474,7 +474,7 @@ Ejecuta la aplicación y mira su aspecto actual. Cambiar el tamaño de la ventan
 
 Para centrar las imágenes en la página, necesitas ajustar la alineación del control **Grid** en la página. ¿O necesitas ajustar la alineación de las imágenes en **GridView**? ¿Importa eso? Vamos a verlo.
 
-Para obtener más información sobre alineación, consulta [Alineación, márgenes y relleno](../layout/alignment-margin-padding.md)
+Para obtener más información sobre alineación, consulta [Alineación, márgenes y relleno](../layout/alignment-margin-padding.md).
 
 (en este paso, puedes intentar establecer la propiedad **Background** de **GridView** en tu color favorito. Te permitirá ver más claramente lo qué está sucediendo con el diseño).
 
@@ -515,7 +515,7 @@ Para modificar la alineación de las imágenes:
 
 5. En el cuadro de diálogo, cambia el valor de **Name (key**)[Nombre (clave)] a **ImageGridView_ItemsPanelTemplate**y selecciona **Aceptar**.
 
-    Se agregará una copia de la **ItemsPanelTemplate** predeterminada a la sección **Page.Resources** de tu XAML (y, como antes, **GridView** se actualiza para hacer referencia a este recurso).
+    Se agregará una copia de la **ItemsPanelTemplate** predeterminada a la sección **Page.Resources** de tu XAML. (y, como antes, **GridView** se actualiza para hacer referencia a este recurso).
 
     ```xaml
     <ItemsPanelTemplate x:Key="ImageGridView_ItemsPanelTemplate">

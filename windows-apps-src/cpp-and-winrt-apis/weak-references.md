@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, strong, weak, reference
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 781b63f9f32a0fdf7edee6479b60fd82822cc745
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: dc991ff485d9e4ba90264e1b8082a40e0f4ab801
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209240"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82267480"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Referencias fuertes y débiles de C++/WinRT
 
@@ -359,7 +359,7 @@ En la cláusula de captura lamba, se crea una variable temporal que representa u
 
 ## <a name="weak-references-in-cwinrt"></a>Referencias débiles de C++/WinRT
 
-Anteriormente, hemos visto que se utilizaban referencias débiles. En general, son buenas para interrumpir las referencias cíclicas. Por ejemplo, para la implementación nativa de marco de la interfaz de usuario basada en XAML (debido al diseño histórico del marco) el mecanismo de referencia débil en C++/WinRT es necesario para controlar referencias cíclicas. Sin embargo, fuera de XAML es probable que no necesites usar referencias débiles (no es que haya algo inherentemente específico de XAML en ellas). Más bien, la mayoría de las veces deberías poder diseñar tu propia API de C++/WinRT de modo que se evite la necesidad de referencias cíclicas y referencias débiles. 
+Anteriormente, hemos visto que se utilizaban referencias débiles. En general, son buenas para interrumpir las referencias cíclicas. Por ejemplo, para la implementación nativa del marco de la interfaz de usuario basada en XAML (debido al diseño histórico del marco), el mecanismo de referencia débil en C++/WinRT es necesario para controlar referencias cíclicas. Sin embargo, fuera de XAML es probable que no necesites usar referencias débiles (no es que haya algo inherentemente específico de XAML en ellas). Más bien, la mayoría de las veces deberías poder diseñar tu propia API de C++/WinRT de modo que se evite la necesidad de referencias cíclicas y referencias débiles. 
 
 Para cualquier tipo en particular que declares, a C++/WinRT no le resulta inmediatamente evidente saber si se necesitan referencias débiles o cuándo se necesitan. De este modo, C++/WinRT proporciona soporte de referencia débil automáticamente en la plantilla de estructura [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements), desde la que tus propios tipos C++/WinRT derivan directa o indirectamente. Es un sistema de pago pay-to-play, es decir, no te cuesta nada a menos que en realidad se consulte tu objeto para [**IWeakReferenceSource**](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource). Y puedes [optar por no recibir tal soporte](#opting-out-of-weak-reference-support) explícitamente.
 

@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, frequently, asked, questions, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: d942fd58619c12192fd8429c0e8aeb5aa070fd4d
-ms.sourcegitcommit: 2a80888843bb53cc1f926dcdfc992cf065539a67
+ms.openlocfilehash: 95f5ad82831b6b07e0bbc2127947f777f0cd50e5
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81005455"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81759926"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Preguntas más frecuentes sobre C++/WinRT
 Respuestas a preguntas que probablemente tengas acerca de la creación y del consumo de las API de Windows Runtime con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -82,6 +82,8 @@ Si tienes una clase en tiempo de ejecución que libera recursos en su destructor
 - Hay casos muy excepcionales que implican carreras de apagado o interbloqueos, donde sí tienes que llamar a **IClosable::Close**. Si vas a usar tipos **Windows.UI.Composition**, por ejemplo, puede que te encuentres con casos en los que quieras deshacerte de objetos en una secuencia definida, como una alternativa para permitir que la destrucción del contenedor de C++/WinRT haga el trabajo por ti.
 - Si no puedes garantizar que tienes la última referencia restante a un objeto (porque la pasaste a otras API, que podrían estar manteniendo una referencia), es conveniente llamar a **IClosable::Close**.
 - En caso de duda, es seguro llamar a **IClosable::Close** manualmente, en lugar de esperar a que el contenedor lo llame en la destrucción.
+
+Por lo tanto, si sabes que tienes la última referencia, puedes permitir que el destructor del contenedor realice su trabajo. Si necesitas cerrarlo antes de que desaparezca la última referencia, debes realizar la llamada **Close**. Para que no se apliquen excepciones, la llamada a **Close** debe ser de tipo resource-acquisition-is-initialization (RAII) (de este modo, el cierre se completa durante el desenredo). C++/WinRT no tiene ningún contenedor **unique_close**, pero puedes crear uno.
 
 ## <a name="can-i-use-llvmclang-to-compile-with-cwinrt"></a>¿Puedo usar LLVM/Clang para compilar con C++/WinRT?
 No admitimos la cadena de herramientas de LLVM y Clang para C++/WinRT, pero hacemos uso de ella internamente para validar la conformidad con los estándares de C++/WinRT. Por ejemplo, si quisieras emular lo que hacemos internamente, podrías intentar un experimento, como el que se describe a continuación.

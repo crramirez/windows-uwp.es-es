@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 834bea47a566789926648098086c05c0a47b6065
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74260553"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a>Compilación de una aplicación compleja de la Plataforma universal de Windows (UWP)
@@ -126,7 +126,7 @@ Técnicas comunes:
 
 -   **Compartir**  Permite a los usuarios compartir contenido desde la aplicación con otras personas a través de otras aplicaciones y también recibir contenido de otras personas y aplicaciones.
 -   **Reproducir en**  Permite que los usuarios disfruten de la transmisión de audio, vídeo o imágenes desde la aplicación a otros dispositivos de la red doméstica.
--   **Selector de archivos y selector de archivos y extensiones**   Permite que los usuarios carguen y guarden sus archivos desde el sistema de archivos local, los dispositivos de almacenamiento conectados, el Grupo Hogar o incluso desde otras aplicaciones. También puedes proporcionar una extensión de selector de archivos para que otras aplicaciones puedan cargar el contenido de la aplicación.
+-   **Selector de archivos y extensiones del selector de archivos**   Permite que los usuarios carguen y guarden sus archivos desde el sistema de archivos local, los dispositivos de almacenamiento conectados, el Grupo Hogar o incluso desde otras aplicaciones. También puedes proporcionar una extensión de selector de archivos para que otras aplicaciones puedan cargar el contenido de la aplicación.
 
 Para más información, consulta el tema sobre las [extensiones y los contratos entre aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh464906(v=win.10)).
 <!-- Win 8 page. Should have replacement. -->
@@ -142,7 +142,7 @@ Por supuesto, puedes usar diferentes interacciones táctiles, como girar, pasar 
 **Atractiva y original**  Asegúrese de que la aplicación sea original y atraiga a los usuarios con estas experiencias estándar:
 
 -   **Animaciones**  Usa nuestra biblioteca de animaciones para que la aplicación resulte rápida y fluida para los usuarios. Ayuda a los usuarios a comprender cambios contextuales y relaciona las experiencias entre sí con transiciones visuales. Obtén más información sobre [cómo animar la interfaz de usuario](../graphics/animations-overview.md).
--   **Notificaciones del sistema**   Informe a los usuarios sobre contenido personalmente importante o que esté sujeto a una limitación temporal a través de notificaciones del sistema, para atraerlos a la aplicación incluso cuando esté cerrada. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../design/shell/tiles-and-notifications/index.md).
+-   **Notificaciones del sistema**  Informe a los usuarios sobre contenido personalmente importante o que esté sujeto a una limitación temporal a través de notificaciones del sistema, para atraerlos a la aplicación incluso cuando esté cerrada. Obtén más información sobre los [iconos, las notificaciones y las notificaciones del sistema](../design/shell/tiles-and-notifications/index.md).
 -   **Iconos de la aplicación**  Ofrezca actualizaciones nuevas y oportunas para que los usuarios quieran volver a la aplicación. Hay más información en la siguiente sección. Obtén más información sobre los [iconos de la aplicación](../design/shell/tiles-and-notifications/creating-tiles.md).
 
 **Personalización**
@@ -155,7 +155,7 @@ Por supuesto, puedes usar diferentes interacciones táctiles, como girar, pasar 
 
 -   **Gestos de proximidad**  Permita que los usuarios conecten sus dispositivos a otros dispositivos cercanos pulsándolos físicamente al mismo tiempo (juegos multijugador). Obtén más información sobre [proximidad y pulsación](https://docs.microsoft.com/previous-versions/windows/apps/hh465229(v=win.10)).
 -   **Cámaras y dispositivos de almacenamiento externo**  Conecte a los usuarios con sus cámaras integradas o conectadas para permitirles conversar, realizar conferencias, grabar vídeoblogs, tomar fotografías del perfil, documentar hechos del mundo que les rodea o para cualquier otra actividad en la que destaque la aplicación. Obtén más información sobre el [acceso a contenido en almacenamiento extraíble](https://docs.microsoft.com/previous-versions/windows/apps/hh465189(v=win.10)).
--   **Acelerómetros y otros sensores**    Hoy en día los dispositivos vienen con diversos sensores. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
+-   **Acelerómetros y otros sensores**     Hoy en día los dispositivos vienen con diversos sensores. La aplicación puede atenuar o iluminar la pantalla según la luz ambiental, redistribuir la interfaz de usuario si el usuario gira la pantalla o reaccionar ante un movimiento físico. Obtén más información sobre los [sensores](../devices-sensors/sensors.md).
 -   **Geolocalización**  Use la información sobre geolocalización que le proporcionan los datos web estándar o los sensores de ubicación geográfica para que los usuarios puedan desplazarse, encontrar su posición en un mapa u obtener avisos sobre personas, actividades o destinos cercanos. Obtén más información sobre la [ubicación geográfica](https://docs.microsoft.com/previous-versions/windows/apps/hh465139(v=win.10)).
 
 Volvamos a tomar el ejemplo de la aplicación para viajes. Para ofrecer una excelente ayuda a un grupo de amigos que quieren crear de forma conjunta los itinerarios de viajes en grupo, podrías usar algunas de estas funciones, por mencionar algunas:
@@ -226,7 +226,7 @@ Para obtener más información sobre cómo diseñar para diferentes tamaños de 
 
 Piensa en lo que quieres que sientan, piensen o hagan los usuarios cuando inicien por primera vez la aplicación. Vuelve a consultar el enunciado de puntos fuertes. Aunque no tengas la oportunidad de decir a los usuarios en persona para qué es excelente la aplicación, puedes transmitirles el mensaje con tu primera impresión. Aprovecha lo siguiente:
 
-**Icono y notificaciones**    El icono es la cara de la aplicación. Entre todas las aplicaciones que el usuario pueda tener en su pantalla Inicio, ¿qué es lo que hará que quiera iniciar la tuya? Asegúrate de que el icono resalte la marca de tu aplicación y muestre sus puntos fuertes. Usa las notificaciones de icono para que la aplicación siempre tenga una apariencia renovada y relevante, lo que hará que el usuario vuelva a ella una y otra vez.
+**Icono y notificaciones**    El icono es la cara de tu aplicación. Entre todas las aplicaciones que el usuario pueda tener en su pantalla Inicio, ¿qué es lo que hará que quiera iniciar la tuya? Asegúrate de que el icono resalte la marca de tu aplicación y muestre sus puntos fuertes. Usa las notificaciones de icono para que la aplicación siempre tenga una apariencia renovada y relevante, lo que hará que el usuario vuelva a ella una y otra vez.
 
 **Pantalla de presentación**  La pantalla de presentación debe cargarse lo más rápido posible y permanecer en la pantalla solo el tiempo necesario para inicializar el estado de la aplicación. Lo que muestres en la pantalla de presentación debe expresar la personalidad de la aplicación.
 

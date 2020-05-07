@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, get, getting, started
 ms.localizationpriority: medium
 ms.openlocfilehash: c058a727e09f00e01664c314d8c198f3f25e841e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74255129"
 ---
 # <a name="get-started-with-cwinrt"></a>Introducción a C++/WinRT
@@ -71,7 +71,7 @@ Con la configuración del proyecto predeterminada, los encabezados incluidos pro
 Los encabezados contienen las API de Windows proyectadas en C++/WinRT. En otras palabras, para cada tipo de Windows, C++/WinRT define un equivalente de C++ descriptivo (denominado el *tipo proyectado*). Un tipo proyectado tiene el mismo nombre completo que el tipo de Windows, pero se coloca en el espacio de nombres **winrt** de C++. La colocación de estas inclusiones en tu encabezado precompilado reduce el tiempo de compilación incremental.
 
 > [!IMPORTANT]
-> Siempre que quieras usar un tipo desde un espacio de nombres de Windows, incluye el archivo de encabezado de espacio de nombres de Windows C++/WinRT correspondiente, tal como se ha mostrado anteriormente. El encabezado *correspondiente* es el que tiene el mismo nombre que el espacio de nombres del tipo. Por ejemplo, para usar la proyección de C++/WinRT para la clase en tiempo de ejecución [**Windows::Foundation::Collections::PropertySet**](/uwp/api/windows.foundation.collections.propertyset), `#include <winrt/Windows.Foundation.Collections.h>`. Si incluyes `winrt/Windows.Foundation.Collections.h`, no necesitas incluir *también* `winrt/Windows.Foundation.h`. Cada encabezado de proyección de C++/WinRT incluye su archivo de encabezado de espacio de nombres principal, por lo que no *necesitas* incluirlo de manera explícita. Sin embargo, si lo haces, no se producirá ningún error.
+> Siempre que quieras usar un tipo desde un espacio de nombres de Windows, incluye el archivo de encabezado de espacio de nombres de Windows C++/WinRT correspondiente, tal como se ha mostrado anteriormente. El encabezado *correspondiente* es el que tiene el mismo nombre que el espacio de nombres del tipo. Por ejemplo, para usar la proyección de C++/WinRT para la clase en tiempo de ejecución [**Windows::Foundation::Collections::PropertySet**](/uwp/api/windows.foundation.collections.propertyset), `#include <winrt/Windows.Foundation.Collections.h>`. Si incluyes `winrt/Windows.Foundation.Collections.h`, no necesitas incluir *también*`winrt/Windows.Foundation.h`. Cada encabezado de proyección de C++/WinRT incluye su archivo de encabezado de espacio de nombres principal, por lo que no *necesitas* incluirlo de manera explícita. Sin embargo, si lo haces, no se producirá ningún error.
 
 ```cppwinrt
 using namespace winrt;
@@ -149,7 +149,7 @@ En `pch.h`, incluye `winrt/base.h`.
 
 La proyección de lenguaje de C++/WinRT depende de algunas funciones de Windows Runtime y puntos de entrada libres (no miembros), que requieren la vinculación a la biblioteca paraguas [WindowsApp.lib](/uwp/win32-and-com/win32-apis). En esta sección se describen tres maneras de satisfacer al enlazador.
 
-La primera opción consiste en agregar al proyecto de Visual Studio todas las propiedades y los destinos de MSBuild de C++WinRT. Para ello, instala el [paquete NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) en el proyecto. Abre el proyecto en Visual Studio, haz clic en **Proyecto** \> **Administrar paquetes NuGet...** \> **Examinar**, escribe o pega **Microsoft.Windows.CppWinRT** en el cuadro de búsqueda, selecciona el elemento en los resultados de la búsqueda y haz clic en **Instalar** para instalar el paquete de ese proyecto.
+La primera opción consiste en agregar al proyecto de Visual Studio todas las propiedades y los destinos de MSBuild de C++WinRT. Para ello, instala el [paquete NuGet Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) en el proyecto. Abre el proyecto en Visual Studio, haz clic en **Proyecto** \> **Administrar paquetes NuGet...** \> **Busca**, escribe o pega **Microsoft.Windows.CppWinRT** en el cuadro de búsqueda, selecciona el elemento en los resultados de la búsqueda y haz clic en **Instalar** para instalar el paquete de ese proyecto.
 
 También puedes usar la configuración de vínculo del proyecto para vincular explícitamente `WindowsApp.lib`. O bien, puedes hacerlo en código fuente (en `pch.h`, por ejemplo), como en este ejemplo.
 

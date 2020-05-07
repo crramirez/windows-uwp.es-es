@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, posibilidad de localización, localización, japonesa, era
 ms.localizationpriority: high
 ms.openlocfilehash: 7e8250ccae96ed835aba2a2a993fdde9ae31a884
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "67714120"
 ---
 # <a name="prepare-your-application-for-the-japanese-era-change"></a>Preparar la aplicación para el cambio de la era japonesa
@@ -79,7 +79,7 @@ Ahora, prueba cómo la aplicación controla la nueva era. Comprueba los lugares 
 
 ### <a name="gannen-"></a>*Gannen* (元年)
 
-El formato para el calendario japonés suele ser **&lt;Nombre de la era&gt;&lt;Año de la era&gt;** . Por ejemplo, el año 2018 es **Heisei 30** (平成30年).  Sin embargo, el primer año de cada era es especial; en lugar de ser **&lt;Nombre de la era&gt; 1**, es **&lt;Nombre de la era&gt; 元年** (*gannen*). Por lo tanto, el primer año de la era Heisei sería 平成元年 (*Heisei gannen*). Asegúrate de que tu aplicación maneje correctamente el primer año de la nueva era y presente correctamente 令和元年.
+El formato para el calendario japonés suele ser **&lt;Nombre de la era&gt; &lt;Año de la era&gt;** . Por ejemplo, el año 2018 es **Heisei 30** (平成30年).  Sin embargo, el primer año de cada era es especial; en lugar de ser **&lt;Nombre de la era&gt; 1**, es **&lt;Nombre de la era&gt; 元年** (*gannen*). Por lo tanto, el primer año de la era Heisei sería 平成元年 (*Heisei gannen*). Asegúrate de que tu aplicación maneje correctamente el primer año de la nueva era y presente correctamente 令和元年.
 
 ## <a name="related-apis"></a>API relacionadas
 
@@ -140,7 +140,7 @@ Se verán afectadas las API siguientes:
   * [Función GetCalendarInfoEx](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-getcalendarinfoex)
   * [Función GetCalendarInfoW](https://docs.microsoft.com/windows/desktop/api/winnls/nf-winnls-getcalendarinfow)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 * [Tratamiento de las eras en el calendario japonés](https://docs.microsoft.com/windows/desktop/Intl/era-handling-for-the-japanese-calendar)
 * [Momento Y2K del calendario japonés](https://blogs.msdn.microsoft.com/shawnste/2018/04/12/the-japanese-calendars-y2k-moment/)

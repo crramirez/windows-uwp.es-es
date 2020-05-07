@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Mac to Windows, shortcut key mapping, move from Unix to Windows, transition from Mac to Windows, help moving from MacBook to Surface, how to use Windows for a Macintosh user, switching from Macintosh to Windows, help changing dev environments, Mac OS X to Windows, help moving from Mac to PC
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 8c23fa3e6791a3cd78d259b40e68606a30fd9395
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: 457abcec97247afcc0d63c983c8a6cda2de51c66
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218445"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81643697"
 ---
 # <a name="guide-for-changing-your-dev-environment-from-mac-to-windows"></a>Guía para cambiar el entorno de desarrollo de Mac a Windows
 
@@ -82,11 +82,11 @@ Casualmente, PowerShell [también está disponible para Mac](https://docs.micros
 
 3. Subsistema de Windows para Linux (WSL)
 
-WSL permite ejecutar un shell de Linux en Windows. Esto significa que puedes ejecutar *Bash** u otro shell, en función de la elección y de la distribución de Linux específica instalada. El uso de WSL proporcionará el tipo de entorno más conocido para los usuarios de Mac. Por ejemplo, usarás **ls** para enumerar los archivos de un directorio actual, no **dir** como lo harías con la línea de comandos de Windows. Para obtener información sobre la instalación y el uso de WSL, consulta la [Guía de instalación del Subsistema de Windows para Linux para Windows 10](https://docs.microsoft.com/windows/wsl/install-win10).
+WSL permite ejecutar un shell de Linux en Windows. Esto significa que puedes ejecutar **Bash** u otro shell, en función de tu elección y de la distribución de Linux específica instalada. El uso de WSL proporcionará el tipo de entorno más conocido para los usuarios de Mac. Por ejemplo, usarás **ls** para enumerar los archivos de un directorio actual, no **dir** como lo harías con la línea de comandos de Windows. Para obtener información sobre la instalación y el uso de WSL, consulta la [Guía de instalación del Subsistema de Windows para Linux para Windows 10](https://docs.microsoft.com/windows/wsl/install-win10).
 
 4. Terminal Windows (versión preliminar)
 
-Terminal Windows es una aplicación que combina herramientas de línea de comandos y shells de diversos orígenes, como la línea de comandos tradicional de Windows, PowerShell y el Subsistema de Windows para Linux. Aunque actualmente se encuentra en versión preliminar, ya contiene varias características útiles, como la compatibilidad con varias pestañas, paneles divididos, temas y estilos personalizados y compatibilidad total con Unicode. Terminal Windows se puede instalar desde [Microsoft Store en Windows 10](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701?activetab=pivot:overviewtab).
+Terminal Windows es una aplicación que combina herramientas de línea de comandos y shells de diversos orígenes, como la línea de comandos tradicional de Windows, PowerShell y el Subsistema de Windows para Linux. Aunque, actualmente, se encuentra en versión preliminar, ya contiene varias características útiles, como la compatibilidad con varias pestañas, paneles divididos, temas y estilos personalizados y compatibilidad total con Unicode. Terminal Windows se puede instalar desde [Microsoft Store en Windows 10](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701?activetab=pivot:overviewtab).
 
 ## <a name="apps-and-utilities"></a>Aplicaciones y utilidades
 

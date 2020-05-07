@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Node.js, windows 10, native windows, directly on windows
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 456aac17f61ab0add3d35a48c74e151fa15e9e83
-ms.sourcegitcommit: 8efeb6672f759b1ea7e3e9e2f90e764480791142
+ms.openlocfilehash: fe1943da8c1de4f4fced5dec67079522d83f9a19
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728476"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82173471"
 ---
 # <a name="set-up-your-nodejs-development-environment-directly-on-windows"></a>Configuración del entorno de desarrollo de Node.js directamente en Windows
 
@@ -38,6 +38,7 @@ Hay varias maneras de instalar Node.js. Se recomienda usar un administrador de v
     ![Lista de NVM que no muestra ninguna versión de Node](../images/windows-nvm-powershell-no-node.png)
 
 6. Instala la versión actual de Node.js (para probar las mejoras de las características más recientes, pero es más probable que tengas más problemas que con la versión de LTS): `nvm install latest`
+
 7. Instala la versión de LTS estable más reciente de Node.js (recomendada); para ello, primero debes buscar el número de versión de LTS actual con: `nvm list available` y, a continuación, instalar el número de versión de LTS con: `nvm install <version>` (reemplazando `<version>` por el número, es decir: `nvm install 12.14.0`).
 
     ![Lista de las versiones disponibles de NVM](../images/windows-nvm-list.png)
@@ -46,8 +47,10 @@ Hay varias maneras de instalar Node.js. Se recomienda usar un administrador de v
 
     ![Lista de NVM que muestra las versiones de Node instaladas](../images/windows-nvm-node-installs.png)
 
-9. Para comprobar qué versión de Node.js es actualmente la predeterminada, escribe: `node --version`
+9. Después de instalar los números de versión de Node.js necesarios, selecciona la versión que quieras usar. Para ello, escribe `nvm use <version>` (reemplaza `<version>` por el número, es decir, `nvm use 12.9.0`).
+
 10. Para cambiar la versión de Node.js que deseas usar para un proyecto, crea un directorio de proyecto `mkdir NodeTest`, escribe el directorio `cd NodeTest` y, a continuación, escribe `nvm use <version>`, reemplazando `<version>` por el número de versión que te gustaría usar (por ejemplo, v10.16.3).
+
 11. Comprueba qué versión de npm está instalada con: `npm --version`; este número de versión cambiará automáticamente a cualquier versión de npm que esté asociada a la versión actual de Node.js.
 
 ## <a name="alternative-version-managers"></a>Administradores de versiones alternativos

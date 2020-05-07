@@ -14,10 +14,10 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: c35795eeb6afa32e77acb507c687e334e454d0d5
-ms.sourcegitcommit: e0f6150c8f45b69a3e114d0556c2c3d5aed7238f
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72560806"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementación del desplazamiento entre dos páginas
@@ -318,7 +318,7 @@ Nuestra aplicación ya navega entre dos páginas, pero aún no hace nada interes
 
 En Page1.xaml, reemplaza la clase **HyperlinkButton** que agregaste antes por el siguiente [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel).
 
-Una vez hecho esto, agregamos una etiqueta [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) y una clase [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) (`name`) para escribir una cadena de texto.
+Una vez hecho esto, agregamos una etiqueta [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) y un valor de `name` [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) para escribir una cadena de texto.
 
 ```xaml
 <StackPanel>
