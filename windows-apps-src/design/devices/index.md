@@ -1,6 +1,6 @@
 ---
-Description: Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
-title: Consideraciones sobre la interfaz de usuario para dispositivos de UWP
+Description: El hecho de conocer los dispositivos que admiten aplicaciones de Windows te ayudará a ofrecer la mejor experiencia del usuario para cada factor de forma.
+title: Consideraciones sobre la interfaz de usuario para dispositivos Windows
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
@@ -8,18 +8,18 @@ keywords: dispositivo, entrada, interacción
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0808b5173f697fcca8d5e117f857d3861c327ae3
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 121025dc5e87e7e3953b9517144e36ab382795bb
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258119"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968211"
 ---
-#  <a name="ui-considerations-for-uwp-devices"></a>Consideraciones sobre la interfaz de usuario para dispositivos de UWP
+#  <a name="ui-considerations-for-windows-devices"></a>Consideraciones sobre la interfaz de usuario para dispositivos Windows
 
 ![Dispositivos](../images/devices-2x.png)
 
-Familiarizarte con los dispositivos que admiten aplicaciones para la Plataforma universal de Windows (UWP) te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
+El hecho de conocer los dispositivos que admiten aplicaciones de Windows te ayudará a ofrecer la mejor experiencia del usuario para cada factor de forma.
 
 ![dispositivos de Windows](images/device-primer/device-primer-ramp.png)
 
@@ -96,7 +96,7 @@ Funcionalidades típicas del dispositivo
 
 La experiencia de estar sentado en tu sofá al otro lado de la sala, con un controlador para juegos o control remoto para interactuar con tu televisor, se llama la **experiencia de 10 pies**. Se denomina así porque el usuario generalmente está sentado aproximadamente a 10 pies de distancia de la pantalla. Esto proporciona desafíos que no están presentes, por ejemplo, en la experiencia de *2 pies* o interactuando con un PC. Si estás desarrollando una aplicación para Xbox One o cualquier otro dispositivo conectado a una pantalla de TV y que puede usar un controlador para juegos o un control remoto para la entrada, siempre debes tener esto en cuenta.
 
-Diseñar tu aplicación para UWP para la experiencia de 10 pies es muy diferente que diseñarla para cualquiera de las otras categorías de dispositivos mencionadas aquí. Para obtener más información, consulta [Diseño para Xbox y televisión](designing-for-tv.md).
+Diseñar tu aplicación de Windows para la experiencia de 10 pies es muy diferente que diseñarla para cualquiera de las otras categorías de dispositivos mencionadas aquí. Para obtener más información, consulta [Diseño para Xbox y televisión](designing-for-tv.md).
 
 Tamaños de pantalla
 - 24" y superior

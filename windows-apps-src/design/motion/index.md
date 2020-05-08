@@ -1,6 +1,6 @@
 ---
 Description: Un movimiento intencionado y bien diseñado da vida a las aplicaciones y ofrece una experiencia que se percibe elaborada y elegante. Ayuda a los usuarios a comprender los cambios contextuales y relaciona las experiencias con transiciones visuales.
-title: Movimiento y la animación en las aplicaciones para UWP
+title: Movimiento para las aplicaciones de Windows
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
@@ -12,14 +12,14 @@ design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 31cf2134fb8f77809b75a5abf3e6980443452059
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 49fc31729bc8f195bacf1d743c570aa5293b33de
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68867402"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970340"
 ---
-# <a name="motion-for-uwp-apps"></a>Movimiento para las aplicaciones para UWP
+# <a name="motion-for-windows-apps"></a>Movimiento para las aplicaciones de Windows
 
 ![Icono de movimiento](../images/motion-2x.png)
 
