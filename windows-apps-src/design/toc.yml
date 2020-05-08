@@ -354,7 +354,7 @@
               href: shell/tiles-and-notifications/toast-schema.md
             - name: Enviar notificaciones del sistema locales
               items:
-                - name: Aplicaciones para UWP
+                - name: Aplicaciones de Windows
                   href: shell/tiles-and-notifications/send-local-toast.md
                 - name: Aplicaciones de escritorio
                   items:

@@ -8,16 +8,16 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 671f33cf106eabf11b317b00d5c2a6cd9abcf3d0
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: af04bfcc9b105b19ace18086921a17cc609e5d71
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66363035"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969990"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Introducción a los controles y patrones
 
-En el desarrollo de aplicaciones para UWP, un *control* es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario.
+En el desarrollo de aplicaciones de Windows, un *control* es un elemento de la interfaz de usuario que muestra contenido o permite la interacción. Crea la interfaz de usuario de la aplicación con controles, como botones, cuadros de texto y cuadros combinados para mostrar los datos y las entradas de texto del usuario.
 
 > **API importantes**: [espacio de nombres Windows.UI.Xaml.Controls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
 
