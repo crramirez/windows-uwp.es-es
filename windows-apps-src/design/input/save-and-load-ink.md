@@ -1,29 +1,29 @@
 ---
-Description: Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializar los trazos de lápiz en un archivo de formato Ink Serialized Format (ISF). El archivo ISF es una imagen GIF con metadatos adicionales para todos los comportamientos y propiedades de trazo de lápiz. Las aplicaciones que no están habilitadas para la entrada de lápiz pueden ver la imagen GIF estática, incluida la transparencia del fondo del canal alfa.
+Description: Las aplicaciones de Windows que admiten Windows Ink pueden serializar y deserializar trazos de lápiz en un archivo de formato serializado de tinta (ISF). El archivo ISF es una imagen GIF con metadatos adicionales para todos los comportamientos y propiedades de trazo de lápiz. Las aplicaciones que no están habilitadas para la entrada de lápiz pueden ver la imagen GIF estática, incluida la transparencia del fondo del canal alfa.
 title: Almacenar y recuperar datos de trazos de lápiz de Windows Ink
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
-keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format, interacción del usuario, entrada
+keywords: Windows Ink, Windows inking, DirectInk, InkPresenter, InkCanvas, ISF, formato serializado de tinta, interacción del usuario, entrada
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2919a2f61f3185d85b91bdf6fd6be22402eb77d0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 819358fb775444d62cbad414668a779fc5c305ca
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258267"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970250"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Almacenar y recuperar datos de trazos de lápiz de Windows Ink
 
 
-Las aplicaciones para UWP que admiten Windows Ink pueden serializar y deserializar los trazos de lápiz en un archivo de formato Ink Serialized Format (ISF). El archivo ISF es una imagen GIF con metadatos adicionales para todos los comportamientos y propiedades de trazo de lápiz. Las aplicaciones que no están habilitadas para la entrada de lápiz pueden ver la imagen GIF estática, incluida la transparencia del fondo del canal alfa.
+Las aplicaciones de Windows que admiten Windows Ink pueden serializar y deserializar trazos de lápiz en un archivo de formato serializado de tinta (ISF). El archivo ISF es una imagen GIF con metadatos adicionales para todos los comportamientos y propiedades de trazo de lápiz. Las aplicaciones que no están habilitadas para la entrada de lápiz pueden ver la imagen GIF estática, incluida la transparencia del fondo del canal alfa.
 
 > [!NOTE]
 > El formato ISF es la representación más compacta y persistente de la entrada de lápiz. Puede incrustarse en un formato de documento binario, como un archivo GIF, o colocarse directamente en el Portapapeles.
 
-> **API importantes**: [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas), [**Windows.UI.Input.Inking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
+> **API importantes**: [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas), [**Windows. UI. Input. inking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
 
 ## <a name="save-ink-strokes-to-a-file"></a>Guardar los trazos de lápiz en un archivo
 
@@ -403,7 +403,7 @@ private void btnCut_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-Para copiar, simplemente llamamos a [**CopySelectedToClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.copyselectedtoclipboard) en el [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) del [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter).
+En el caso de Copy, simplemente llamamos a [**CopySelectedToClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.copyselectedtoclipboard) en el [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) del [**objeto InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter).
 
 
 ```csharp
@@ -413,9 +413,9 @@ private void btnCopy_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-Para pegar, llamamos a [**CanPasteFromClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.canpastefromclipboard) para garantizar que el contenido del Portapapeles se pueda pegar en el lienzo de entrada de lápiz.
+Para pegar, se llama a [**CanPasteFromClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.canpastefromclipboard) para asegurarse de que el contenido del portapapeles se puede pegar en el lienzo de tinta.
 
-Si es así, llamamos a [**PasteFromClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.pastefromclipboard) para insertar los trazos de lápiz del Portapapeles en el objeto [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) del objeto [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter), lo que representará los trazos en el lienzo de entrada de lápiz.
+Si es así, se llama a [**PasteFromClipboard**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokecontainer.pastefromclipboard) para insertar los trazos de lápiz del portapapeles en el [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) del [**objeto InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter), que luego representa los trazos en el lienzo de entrada de lápiz.
 
 ```csharp
 private void btnPaste_Click(object sender, RoutedEventArgs e)
@@ -436,17 +436,17 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 * [Interacciones de pluma y lápiz](pen-and-stylus-interactions.md)
 
-**Ejemplos de temas**
+**Ejemplos del tema**
 * [Guardar y cargar trazos de entrada de lápiz desde un archivo de formato serializado de tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
 * [Guardar y cargar trazos de entrada de lápiz desde el portapapeles](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
 
 **Otros ejemplos**
-* [Ejemplo de entrada deC#lápizC++simple (/)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
-* [Ejemplo de tinta complejaC++()](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
-* [Ejemplo de entrada de lápiz (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Tutorial de introducción: compatibilidad con la entrada manuscrita en la aplicación para UWP](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
-* [Ejemplo de libro de color](https://github.com/Microsoft/Windows-appsample-coloringbook)
-* [Ejemplo de notas de la familia](https://github.com/Microsoft/Windows-appsample-familynotes)
+* [Ejemplo de entrada de lápiz simple (C#/C + +)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
+* [Ejemplo de tinta compleja (C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
+* [Ejemplo de entrada de lápiz (JavaScript)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BJavaScript%5D-Windows%208%20app%20samples/JavaScript/Windows%208%20app%20samples/Input%20Ink%20sample%20(Windows%208))
+* [Tutorial de introducción: compatibilidad con la entrada de lápiz en la aplicación de Windows](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
+* [Muestra de libro para colorear](https://github.com/Microsoft/Windows-appsample-coloringbook)
+* [Muestra de notas familiares](https://github.com/Microsoft/Windows-appsample-familynotes)
 
 
 

@@ -1,5 +1,5 @@
 ---
-Description: Aprende sobre la evolución del diseño inclusivo con aplicaciones de la Plataforma universal de Windows (UWP) para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
+Description: Obtenga información sobre cómo evolucionar el diseño inclusivo con aplicaciones de aplicaciones de Windows para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
 ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
 title: Diseño de software inclusivo en Windows 10
 label: Designing inclusive software
@@ -8,35 +8,35 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e9cc88792e6cfdc581a4c7dc27ecc060cc0000c3
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 0f048d9d3541b52994713c8040c451a421df3e0a
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317341"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969440"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Diseño de software inclusivo para Windows 10  
 
-Aprende sobre la evolución del diseño inclusivo con aplicaciones de la Plataforma universal de Windows (UWP) para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
+Obtenga información sobre cómo evolucionar el diseño inclusivo con aplicaciones de aplicaciones de Windows para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
 
 En Microsoft, estamos mejorando nuestros principios y prácticas de diseño. Estos informan cómo se ven, sienten, funcionan y comportan nuestras experiencias. Estamos elevando nuestra perspectiva.
 
 Esta nueva filosofía de diseño se denomina diseño inclusivo. La idea consiste en diseñar software con todos los usuarios en mente desde el principio. Esto difiere de considerar la accesibilidad como una tecnología que se añade al final del proceso de desarrollo para satisfacer a los requerimientos de un pequeño grupo de usuarios.
 
-"Definimos discapacidad como un desajuste entre las necesidades de la persona y las del servicio, producto o entorno que se ofrece. Cualquier persona puede experimentar una discapacidad. Es un rasgo humano común y no debe excluirse."  \- desde el [Inclusive](https://www.microsoft.com/design/inclusive/) vídeo  
+"Definimos discapacidad como un desajuste entre las necesidades de la persona y las del servicio, producto o entorno que se ofrece. Cualquier persona puede experimentar una discapacidad. Es un rasgo humano común y no debe excluirse."  \-desde el vídeo [inclusivo](https://www.microsoft.com/design/inclusive/)  
 
 El diseño inclusivo crea mejores productos para todos. Se trata de considerar la gama completa de diversidad humana. Considera las rampas que se encuentran ahora en la mayoría de las esquinas de las aceras. Claramente fueron pensadas para ser usadas por personas en sillas de ruedas. Pero ahora casi todo el mundo las usa, incluso personas con sillitas para bebés, ciclistas y patinadores en monopatín. Incluso los peatones usarán dichas rampas a menudo porque están ahí y mejoran la experiencia. El control remoto de la televisión podría considerarse una tecnología de asistencia (AT) para una persona con limitaciones físicas. E incluso hoy es prácticamente imposible comprar un televisor sin uno de ellos. Antes de que los niños aprendan a atarse los zapatos, pueden llevar zapatos sin cordones o de cierre fácil. Los zapatos que son fáciles de poner y quitar suelen preferirse en culturas donde los zapatos se quitan antes de entrar en una casa. También son mejores para aquellas personas con problemas de habilidad, como artritis o una fractura de muñeca.
 
 ## <a name="inclusive-design-principles"></a>Principios de diseño inclusivo  
 Los siguientes 4 principios están impulsando el cambio de Microsoft hacia el diseño inclusivo:
 
-**Piense en universal**: Nos centramos en lo que unifica las personas, motivaciones humanos, relaciones y las capacidades. Esto nos lleva a tener en cuenta el impacto social más amplio de nuestro trabajo. El resultado es una experiencia que tiene una diversidad de formas para que todas las personas participen.
+**Piensa de forma universal**: nos enfocamos en lo que unifica a las personas (motivaciones, relaciones y capacidades humanas). Esto nos lleva a tener en cuenta el impacto social más amplio de nuestro trabajo. El resultado es una experiencia que tiene una diversidad de formas para que todas las personas participen.
 
-**Asegúrese de personal**: A continuación, nos Desafíe a nosotros para crear conexiones emocionales. Las interacciones de persona a persona pueden inspirar una mejor interacción de la persona con la tecnología. Las circunstancias particulares de una persona pueden mejorar el diseño para todos los usuarios. El resultado es una experiencia que parece creada especialmente para una persona.
+**Haz que sea personal**: a continuación, nos desafiamos a crear conexiones emocionales. Las interacciones de persona a persona pueden inspirar una mejor interacción de la persona con la tecnología. Las circunstancias particulares de una persona pueden mejorar el diseño para todos los usuarios. El resultado es una experiencia que parece creada especialmente para una persona.
 
-**Simpleza**: Empezamos con la simplicidad como unificador definitivo. Cuando se reduce el desorden, las personas saben qué hacer a continuación. Están inspiradas a avanzar hacia espacios que sean limpios, livianos y abiertos. El resultado es una experiencia realista e intemporal.
+**Mantenlo simple**: Empezamos con la simplicidad como el unificador fundamental. Cuando se reduce el desorden, las personas saben qué hacer a continuación. Están inspiradas a avanzar hacia espacios que sean limpios, livianos y abiertos. El resultado es una experiencia realista e intemporal.
 
-**Crear los usuarios disfruten**: Experiencias entretenidas evocar wonder y detección. Algunas veces es mágico. Algunas veces es un detalle que es simplemente perfecto. Diseñamos estos momentos para que se sientan como un ansiado cambio de ritmo. El resultado es una experiencia que tiene impulso y flujo.
+**Crea deleite**: las experiencias agradables provocan fascinación y descubrimiento. Algunas veces es mágico. Algunas veces es un detalle que es simplemente perfecto. Diseñamos estos momentos para que se sientan como un ansiado cambio de ritmo. El resultado es una experiencia que tiene impulso y flujo.
 
 ## <a name="inclusive-design-users"></a>Usuarios de diseño inclusivo  
 Existen básicamente dos tipos de usuarios de la tecnología de asistencia (AT):
@@ -46,7 +46,7 @@ Existen básicamente dos tipos de usuarios de la tecnología de asistencia (AT):
 
 La mayoría de los usuarios de PC (54 por ciento) son conscientes de la existencia de alguna forma de tecnología de asistencia y el 44 por ciento de dichos usuarios usan alguna forma de ella, pero muchos de ellos no usan AT que los beneficiaría (Forrester 2004).  
 
-Un estudio de 2003-2004 encargado por Microsoft y llevado a cabo por Forrester Research encontró que más de la mitad (57 por ciento) de los usuarios de PC en los Estados Unidos entre los 18 y 64 años de edad podrían beneficiarse de la tecnología de asistencia. La mayoría de estos usuarios no se identificaron a sí mismos como discapacitados o con algún tipo de deficiencia, pero expresaron ciertas dificultades relacionadas con la tarea cuando usan un equipo. Forrester (2003) también encuentra el siguiente número de usuarios con estas dificultades específicas: Uno de cuatro experimenta una dificultad visual. Uno de cada cuatro experimenta dolor en las muñecas o manos. Uno de cada cinco experimenta dificultades auditivas.  
+Un estudio de 2003-2004 realizado por Microsoft y realizada por Forrester Research encontró que más de &mdash; la mitad &mdash; del 57 por ciento de los usuarios del equipo en el Estados Unidos entre las edades 18 y 64 podrían beneficiarse de la tecnología de asistencia. La mayoría de estos usuarios no se identificaron a sí mismos como discapacitados o con algún tipo de deficiencia, pero expresaron ciertas dificultades relacionadas con la tarea cuando usan un equipo. Forrester (2003) también encontró la siguiente proporción de usuarios con estas dificultades específicas: uno de cada cuatro experimenta dificultades visuales. Uno de cada cuatro experimenta dolor en las muñecas o manos. Uno de cada cinco experimenta dificultades auditivas.  
 
 Además de las discapacidades permanentes, la gravedad y los tipos de dificultades que experimenta un individuo pueden variar a lo largo su vida. La persona normal no existe. Nuestras capacidades siempre están cambiando. Margaret Meade dijo: "Todos somos únicos. Ser únicos nos hace iguales."  
 
@@ -93,19 +93,19 @@ La sección 508 actualizada de la Ley estadounidense sobre la discapacidad (ADA)
 #### <a name="color-combinations"></a>Combinaciones de colores  
 Aproximadamente el 7 por ciento de los hombres (y menos del 1 por ciento de las mujeres) tienen alguna forma de daltonismo. Los usuarios con daltonismo tienen problemas para distinguir entre algunos colores, así que es importante que nunca se use el color por sí solo para transmitir el estado o el significado en una aplicación. Para obtener imágenes decorativas (tales como iconos o fondos), las combinaciones de colores se deberían elegirse de manera que se maximice la percepción de la imagen por parte de los usuarios daltónicos. Si diseñas usando estas recomendaciones de color desde el principio, tu aplicación ya estará dando pasos importantes hacia ser inclusiva.  
 
-## <a name="summary-mdash-seven-steps-for-inclusive-design"></a>Resumen: siete pasos para un diseño inclusivo  
+## <a name="summary-mdash-seven-steps-for-inclusive-design"></a>Resumen &mdash; de siete pasos para el diseño inclusivo  
 En resumen, sigue estos siete pasos para garantizar que tu software sea inclusivo.  
 1.  Decide si un diseño inclusivo es un aspecto importante para tu software. Si lo es, aprende y aprecia cómo le permite a los usuarios reales vivir, trabajar y jugar, para ayudarte a guiar tu diseño.  
 2.  A medida que diseñes soluciones para tus requisitos, usa los controles proporcionados por tu entorno de desarrollo (controles estándar) tanto como sea posible y evita los esfuerzos y costos innecesarios de los controles personalizados.  
 3.  Diseña una jerarquía lógica para tu producto, tomando nota de dónde están los controles estándar, los controles personalizados y el foco del teclado en la interfaz de usuario.  
 4.  Diseña configuraciones del sistema útiles (tales como la navegación por teclado, el contraste alto y los valores altos de PPP) en tu producto.  
-5.  Implementa tu diseño mediante el [Centro de Microsoft para desarrolladores de accesibilidad](https://developer.microsoft.com/windows/accessible-apps) y la especificación de accesibilidad de tu marco como punto de referencia.  
+5.  Implemente el diseño mediante el [Centro para desarrolladores de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps) y la especificación de accesibilidad de su marco de trabajo como punto de referencia.  
 6.  Prueba tu producto en usuarios con necesidades especiales para garantizar que podrán aprovechar las técnicas de diseño inclusivo implementadas en él.  
 7.  Entrega tu producto final y documenta tu implementación para aquellas otras personas que trabajen en el proyecto después de ti.  
 
 ## <a name="related-topics"></a>Temas relacionados  
 * [Diseño inclusivo](https://www.microsoft.com/design/inclusive/)
-* [Ingeniería Software para mejorar la accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
-* [Centro de desarrollo de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps)
+* [Diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Centro para desarrolladores de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps)
 * [Desarrollo de aplicaciones inclusivas de Windows](developing-inclusive-windows-apps.md) 
 * [Accesibilidad](accessibility.md)

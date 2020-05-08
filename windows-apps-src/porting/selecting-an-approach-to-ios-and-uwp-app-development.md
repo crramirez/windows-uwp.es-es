@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a76b451a3d268e418ae24998afdd29d32bb43ed6
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 538fbc33d161f5f91033427af76438f49d3d3b68
+ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260135"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82148583"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Selección de un enfoque para iOS y desarrollo de aplicaciones para UWP
 
@@ -54,7 +54,7 @@ Con una aplicación de iOS existente, las opciones son un poco más limitadas. S
 
     Si la lógica de negocios principal está escrita en C++, en lugar de Objective-C o Swift, a menudo se puede usar este código con solo cambios menores en el proyecto. Después puede usar XAML para definir la interfaz de usuario, como con otras aplicaciones de Windows y llamar al código de C++ cuando sea necesario.
 
--   [Usar el ángulo para ejecutar OpenGL ES en Windows](https://github.com/microsoft/angle/wiki)
+-   [Uso de ANGLE para ejecutar OpenGL ES en Windows](https://github.com/microsoft/angle/wiki)
 
     Un paso intermedio para migrar el proyecto de OpenGL ES 2.0 es usar ANGLE. ANGLE te permite ejecutar contenido de OpenGL ES en Windows mediante la conversión de llamadas a la API de OpenGL ES en llamadas a la API de DirectX 11.
 
@@ -64,7 +64,7 @@ Con una aplicación de iOS existente, las opciones son un poco más limitadas. S
 
     Un entorno de creación de juegos.
 
--   [Construcción 2]( https://go.microsoft.com/fwlink/p/?LinkID=320481)
+-   [Construct 2]( https://www.scirra.com/)
 
     Un entorno de creación de juegos.
 
@@ -76,11 +76,11 @@ Con una aplicación de iOS existente, las opciones son un poco más limitadas. S
 
     Una biblioteca de código multiplataforma para la manipulación de sprites y el modelado físico.
 
--   [Impact. js](https://impactjs.com/)
+-   [Impact.js](https://impactjs.com/)
 
     Una biblioteca de juegos basados en HTML.
 
--   [Mermelada](http://madewithmarmalade.com/)
+-   [Marmalade](http://madewithmarmalade.com/)
 
     Un SDK multiplataforma.
 

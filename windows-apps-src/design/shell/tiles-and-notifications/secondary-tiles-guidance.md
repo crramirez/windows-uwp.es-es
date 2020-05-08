@@ -1,51 +1,51 @@
 ---
-Description: Obtén información sobre cuándo y dónde debes usar iconos secundarios en tu aplicación para UWP.
+Description: Obtenga información acerca de Cuándo y dónde debe usar iconos secundarios en la aplicación de Windows.
 title: Guía de diseño de mosaicos secundarios
 label: Secondary tiles
 template: detail.hbs
 ms.date: 05/25/2017
 ms.topic: article
-keywords: windows 10, uwp, iconos secundarios, instrucciones, directrices, procedimientos recomendados
+keywords: Windows 10, UWP, iconos secundarios, instrucciones, instrucciones, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: 875513840d8dc752fe336241fa54710aebad6103
-ms.sourcegitcommit: 2d709ddcc31f52d2a4ace1134aea45057d99a615
+ms.openlocfilehash: 400b0d48fd68c720d613325d1938c0c4a70931a7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74782576"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971030"
 ---
-# <a name="secondary-tile-guidance"></a>Instrucciones sobre los iconos secundarios
+# <a name="secondary-tile-guidance"></a>Guía de mosaicos secundarios
 
 
-Un icono secundario es una manera coherente y eficaz que tienen los usuarios para acceder directamente a áreas específicas de una aplicación del menú Inicio. Aunque el usuario elige si quiere "anclar" o no un icono secundario al menú Inicio, es el desarrollador quien determina en qué áreas de una aplicación se puede anclar. Para obtener un resumen más detallado, consulta [Introducción a los iconos secundarios](secondary-tiles.md). Ten en cuenta estas directrices a la hora de habilitar iconos secundarios y diseñar la interfaz de usuario asociada en tu aplicación.
+Un icono secundario proporciona una forma coherente y eficaz de que los usuarios accedan directamente a áreas específicas de una aplicación desde el menú Inicio. Aunque un usuario elige si desea "anclar" un icono secundario en el menú Inicio, el desarrollador determina las áreas ancladas de una aplicación. Para obtener un resumen más detallado, consulte [información general sobre iconos secundarios](secondary-tiles.md). Tenga en cuenta estas directrices al habilitar los iconos secundarios y diseñar la interfaz de usuario asociada en la aplicación.
 
 > [!NOTE]
-> Solo los usuarios pueden anclar un icono secundario al menú Inicio; las aplicaciones no pueden anclar iconos secundarios mediante programación. Los usuarios también pueden controlar la retirada de iconos y pueden quitar un icono secundario del menú Inicio o de la aplicación principal.
+> Solo los usuarios pueden anclar un icono secundario al menú Inicio; las aplicaciones no pueden anclar iconos secundarios mediante programación. Los usuarios también controlan la eliminación de los mosaicos y pueden quitar un icono secundario del menú Inicio o de la aplicación primaria.
 
 
 ## <a name="recommendations"></a>Recomendaciones
 
-Ten en cuenta las siguientes recomendaciones a la hora de habilitar iconos secundarios en tu aplicación:
+Tenga en cuenta las siguientes recomendaciones al habilitar iconos secundarios en la aplicación:
 
-* Cuando el contenido que tiene el foco se puede anclar, la barra de la aplicación debe incluir un botón "Anclar a Inicio" para crear un icono secundario para el usuario.
-* Cuando el usuario haga clic en "Anclar a Inicio", debes llamar inmediatamente a la API desde el subproceso de interfaz de usuario para [anclar el icono secundario](secondary-tiles-pinning.md).
-* Si el contenido que tiene el foco ya está anclado, cambia el botón "Anclar a Inicio" de la barra de la aplicación por el botón "Desanclar de Inicio". El botón "Desanclar de inicio" debería retirar el icono secundario existente.
-* Cuando el contenido que tiene el foco no se puede anclar, no muestres un botón "Anclar a Inicio" (o muestra un botón "Anclar a Inicio" deshabilitado).
-* Usa los glifos proporcionados por el sistema para tus botones "Anclar a Inicio" y "Desanclar de Inicio" (consulta los miembros de anclaje y desanclaje de en Windows.UI.Xaml.Controls.Symbol o WinJS.UI.AppBarIcon).
-* Usa el texto de botones estándar: "Anclar a Inicio" y "Desanclar de Inicio". Tendrás que invalidar el texto predeterminado cuando uses los glifos de anclaje y desanclaje proporcionados por el sistema.
-* No uses un icono secundario como un botón de comando virtual para interactuar con la aplicación primaria, por ejemplo, un icono "saltar a la siguiente pista".
+* Cuando el contenido del foco es anclado, la barra de la aplicación debe contener el botón "anclar a Inicio" para crear un icono secundario para el usuario.
+* Cuando el usuario hace clic en "anclar a Inicio", debe llamar inmediatamente a la API desde el subproceso de la interfaz de usuario para [anclar el icono secundario](secondary-tiles-pinning.md).
+* Si el contenido del foco ya está anclado, reemplace el botón "anclar a Inicio" de la barra de la aplicación por un botón "desanclar desde Inicio". El botón "desanclar de inicio" debería quitar el icono secundario existente.
+* Cuando el contenido del foco no sea anclado, no muestre un botón "anclar a Inicio" (o muestre un botón "anclar al inicio" deshabilitado).
+* Use los glifos proporcionados por el sistema para los botones "anclar a Inicio" y "desanclar desde Inicio" (vea el PIN y desanclar miembros en Windows. UI. Xaml. Controls. Symbol o WinJS. UI. AppBarIcon).
+* Use el texto del botón estándar: "anclar a Inicio" y "desanclar desde Inicio". Tendrá que reemplazar el texto predeterminado al usar el PIN proporcionado por el sistema y desanclar los glifos.
+* No use un icono secundario como un botón de comando virtual para interactuar con la aplicación primaria, como un icono "ir al siguiente seguimiento".
 
 
 ## <a name="additional-usage-guidance-for-devs"></a>Instrucciones de uso adicionales para desarrolladores
 
-* Cuando se inicia una aplicación, siempre debe enumerar sus iconos secundarios, por si se han realizado adiciones o eliminaciones de las cuales no se estaba al tanto. Cuando se elimina un icono secundario a través de la barra de la aplicación de la pantalla Inicio, Windows simplemente quita el icono. La propia aplicación es responsable de liberar los recursos usados por el icono secundario. Cuando se copian iconos secundarios a través de la nube, las notificaciones de icono y distintivo actuales en el icono secundario, las notificaciones programadas, los canales de notificación de inserción y los Identificadores uniformes de recursos (URI) usados con las notificaciones periódicas no se copian con el icono secundario y deben volver a configurarse.
-* La aplicación debe usar identificadores únicos, significativos y que se puedan volver a crear para iconos secundarios. El uso de identificadores de iconos secundarios predecibles y significativos en una aplicación ayuda a que esta sepa qué debe hacer con estos iconos cuando aparecen en una instalación nueva de un nuevo equipo.
+* Cuando se inicia una aplicación, siempre debe enumerar sus iconos secundarios, en caso de que se hayan agregado o eliminado de los que no era consciente. Cuando se elimina un icono secundario a través de la barra de la aplicación de pantalla de inicio, Windows simplemente quita el icono. La propia aplicación es responsable de liberar todos los recursos usados por el icono secundario. Cuando los mosaicos secundarios se copian a través de la nube, las notificaciones de icono o de distintivo actual en el icono secundario, las notificaciones programadas, los canales de notificaciones de envío y los identificadores uniformes de recursos (URI) que se usan con las notificaciones periódicas no se copian con el icono secundario y deben volver a configurarse.
+* Una aplicación debe usar identificadores únicos significativos y recreables para los iconos secundarios. El uso de identificadores de iconos secundarios predecibles que son significativos para una aplicación ayuda a la aplicación a comprender qué hacer con estos mosaicos cuando se ven en una instalación nueva en un equipo nuevo.
   * En tiempo de ejecución, la aplicación puede consultar si existe un icono específico.
-  * Se puede solicitar que la plataforma de iconos secundarios devuelva el conjunto de todos los iconos secundarios que pertenecen a una aplicación específica. El uso de identificadores únicos y significativos para estos iconos puede ayudar a que la aplicación examine el conjunto de iconos secundarios y realice las acciones correspondientes. Por ejemplo, en una aplicación de medios sociales, los identificadores podrían identificar los contactos individuales para los que se crean los iconos.
-* Los iconos secundarios, como todos los iconos de la pantalla Inicio, son entradas dinámicas que pueden actualizarse frecuentemente con contenido nuevo. Los iconos secundarios pueden exponer notificaciones y actualizaciones mediante los mismos mecanismos que cualquier otro icono. Para más información, consulta [Elegir un método de entrega de notificaciones](choosing-a-notification-delivery-method.md).
+  * Se puede solicitar a la plataforma de mosaicos secundarios que devuelva el conjunto de todos los iconos secundarios que pertenecen a una aplicación específica. El uso de identificadores únicos significativos para estos iconos puede ayudar a la aplicación a examinar el conjunto de iconos secundarios y realizar las acciones adecuadas. Por ejemplo, en el caso de una aplicación de redes sociales, los identificadores pueden identificar contactos individuales para los que se crearon iconos.
+* Los mosaicos secundarios, como todos los mosaicos de la pantalla Inicio, son salidas dinámicas que se pueden actualizar con frecuencia con contenido nuevo. Los iconos secundarios pueden exponer notificaciones y actualizaciones mediante los mismos mecanismos que cualquier otro icono. Consulte [elegir un método de entrega de notificaciones](choosing-a-notification-delivery-method.md) para obtener más información.
 
 
-## <a name="related"></a>Relacionados
+## <a name="related"></a>Temas relacionados
 
 * [Información general sobre mosaicos secundarios](secondary-tiles.md)
 * [Anclar iconos secundarios](secondary-tiles-pinning.md)

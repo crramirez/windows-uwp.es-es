@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: c59982c174909a3fb8ab0b21d5dd792969cfeebc
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d2b6ba88587f4f536d4fe6fc2750a520166fde18
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259474"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606354"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Controlar una tarea en segundo plano cancelada
 
@@ -23,7 +23,7 @@ ms.locfileid: "74259474"
 
 -   [**BackgroundTaskCanceledEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcanceledeventhandler)
 -   [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)
--   [**ApplicationData. Current**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.current)
+-   [**ApplicationData.Current**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.current)
 
 Aprende a crear una tarea en segundo plano que reconozca una solicitud de cancelación, detenga el trabajo e informe de la cancelación a la aplicación a través del almacenamiento persistente.
 
@@ -38,7 +38,7 @@ Escribe un método para controlar el evento de cancelación.
 > [!NOTE]
 > Para todas las familias de dispositivos excepto la de equipos de escritorio, si el dispositivo dispone de poca memoria, las tareas en segundo plano podrían finalizarse. Si no se encuentra una excepción de memoria insuficiente o la aplicación no la controla, la tarea en segundo plano finalizará sin previo aviso y sin provocar el evento OnCancel. Esto contribuye a garantizar la experiencia del usuario de la aplicación en primer plano. La tarea en segundo plano debe estar diseñada para controlar este escenario.
 
-Crea un método llamado **OnCanceled** como se describe a continuación. Este método es el punto de entrada al que llama Windows Runtime cuando se realiza una solicitud de cancelación para la tarea en segundo plano.
+Cree un método denominado **OnCancel** como se indica a continuación. Este método es el punto de entrada al que llama Windows Runtime cuando se realiza una solicitud de cancelación para la tarea en segundo plano.
 
 ```csharp
 private void OnCanceled(
@@ -67,7 +67,7 @@ void ExampleBackgroundTask::OnCanceled(
 }
 ```
 
-Agregue una variable de marca llamada **\_CancelRequested** a la clase de tarea en segundo plano. Esta variable se usará para indicar que se ha realizado una solicitud de cancelación.
+Agregue una variable de marca denominada ** \_CancelRequested** a la clase de tarea en segundo plano. Esta variable se usará para indicar que se ha realizado una solicitud de cancelación.
 
 ```csharp
 volatile bool _CancelRequested = false;
@@ -83,9 +83,9 @@ private:
     volatile bool CancelRequested;
 ```
 
-En el método **OnCancel** que creó en el paso 1, establezca la variable de marca **\_CancelRequested** en **true**.
+En el método **OnCancel** que creó en el paso 1, establezca la variable ** \_** de marca CancelRequested en **true**.
 
-El método **OnCancel** de [ejemplo de tarea en segundo plano]( https://go.microsoft.com/fwlink/p/?linkid=227509) completo establece **\_CancelRequested** en **true** y escribe una salida de depuración potencialmente útil.
+El método **cancelado** de [ejemplo de tarea en segundo plano]( https://code.msdn.microsoft.com/windowsapps/Background-Task-Sample-9209ade9) establece ** \_CancelRequested** en **true** y escribe una salida de depuración potencialmente útil.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -131,9 +131,9 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 ## <a name="handle-cancellation-by-exiting-your-background-task"></a>Controlar la cancelación al salir de la tarea en segundo plano
 
-Cuando se recibe una solicitud de cancelación, el método que realiza el trabajo en segundo plano debe detener el trabajo y salir reconociendo Cuándo **\_cancelRequested** está establecido en **true**. En el caso de las tareas en segundo plano, esto significa que se devuelve desde el método **OnBackgroundActivated** . En el caso de las tareas en segundo plano fuera de proceso, esto significa que se devuelve desde el método **Run** .
+Cuando se recibe una solicitud de cancelación, el método que realiza el trabajo en segundo plano debe detener el trabajo y salir si se establece ** \_cancelRequested** en **true**. En el caso de las tareas en segundo plano, esto significa que se devuelve desde el método **OnBackgroundActivated** . En el caso de las tareas en segundo plano fuera de proceso, esto significa que se devuelve desde el método **Run** .
 
-Modifica el código de la clase de tarea en segundo plano para comprobar la variable de marca mientras está en funcionamiento. Si **\_cancelRequested** se establece en true, deje de continuar el trabajo.
+Modifica el código de la clase de tarea en segundo plano para comprobar la variable de marca mientras está en funcionamiento. Si ** \_cancelRequested** se establece en true, deje de continuar el trabajo.
 
 El [ejemplo de tarea en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) incluye una comprobación que detiene la devolución de llamada del temporizador periódico si se cancela la tarea en segundo plano.
 
@@ -253,7 +253,7 @@ else
 }
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Puedes descargar la [muestra de tarea en segundo plano](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) para ver estas muestras de código en contexto dentro de los métodos.
 
@@ -402,7 +402,7 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Crear y registrar una tarea en segundo plano dentro del proceso](create-and-register-an-inproc-background-task.md).
+- [Cree y registre una tarea en segundo plano en proceso](create-and-register-an-inproc-background-task.md).
 - [Crear y registrar una tarea en segundo plano fuera del proceso](create-and-register-a-background-task.md)
 - [Declarar tareas en segundo plano en el manifiesto de la aplicación](declare-background-tasks-in-the-application-manifest.md)
 - [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)

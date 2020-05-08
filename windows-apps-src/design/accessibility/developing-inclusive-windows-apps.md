@@ -1,5 +1,5 @@
 ---
-Description: Aprende a desarrollar aplicaciones para UWP de Windows 10 accesibles que incluyan navegación por teclado, configuración de color y contraste y compatibilidad con tecnologías de asistencia.
+Description: Aprenda a desarrollar aplicaciones de Windows accesibles que incluyen la navegación mediante teclado, la configuración de color y contraste y la compatibilidad con tecnologías de asistencia.
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: Desarrollo de aplicaciones inclusivas de Windows 10
 label: Developing inclusive Windows 10 apps
@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08f9d3f20974c1e1ce7ef62c01c26a44d3ff4889
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f3d2866b3e04d2fa531e9bd538badd96205a8c65
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319226"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969430"
 ---
 # <a name="developing-inclusive-windows-apps"></a>Desarrollo de aplicaciones inclusivas de Windows  
 
-En este artículo se describe cómo desarrollar aplicaciones accesibles para la Plataforma universal de Windows (UWP). En concreto, se supone que conoces cómo diseñar la jerarquía lógica de la aplicación para tu aplicación. Aprende a desarrollar aplicaciones para UWP de Windows 10 accesibles que incluyan navegación por teclado, configuración de color y contraste y compatibilidad con tecnologías de asistencia.
+En este artículo se describe cómo desarrollar aplicaciones de aplicaciones de Windows accesibles. En concreto, se supone que conoces cómo diseñar la jerarquía lógica de la aplicación para tu aplicación. Aprenda a desarrollar aplicaciones de Windows accesibles que incluyen la navegación mediante teclado, la configuración de color y contraste y la compatibilidad con tecnologías de asistencia.
 
-Si no lo has hecho aún, empieza por leer [Diseño de software inclusivo](designing-inclusive-software.md).
+Si todavía no lo ha hecho, empiece leyendo el diseño del [software inclusivo](designing-inclusive-software.md).
 
 Hay tres cosas que debes hacer para asegurarte de que tu aplicación sea accesible:
 
@@ -32,7 +32,7 @@ El acceso mediante programación es fundamental para la creación de accesibilid
 
 Para obtener más información sobre cómo hacer que los elementos de interfaz de usuario de tu aplicación estén disponibles para las tecnologías de asistencia (AT), consulta el tema [Exponer la información de accesibilidad básica](basic-accessibility-information.md).
 
-## <a name="keyboard-navigation"></a>Navegación por teclado  
+## <a name="keyboard-navigation"></a>Navegación con el teclado  
 Para los usuarios ciegos o con problemas de movilidad, es muy importante poder navegar por la interfaz de usuario con un teclado. Sin embargo, solo se debe dar foco del teclado a los controles de interfaz de usuario que requieren interacción del usuario para funcionar. Los componentes que no requieren una acción, tales como las imágenes estáticas, no necesitan foco del teclado.  
 
 Es importante recordar que, a diferencia de la navegación con un mouse o entrada táctil, la navegación por teclado es lineal. Al considerar la navegación por teclado, piensa en cómo el usuario interactúa con tu producto y cuál será la lógica de navegación. En las culturas occidentales, las personas leen de izquierda a derecha y de arriba abajo. Por lo tanto, es una práctica habitual seguir este patrón en la navegación por teclado.  
@@ -76,14 +76,14 @@ La siguiente es una versión abreviada de la lista de comprobación de accesibil
 3. Comprueba visualmente tu interfaz de usuario para asegurarte de que el contraste de texto sea suficiente, que los elementos se representen correctamente en los temas de contraste alto y que los colores se usen correctamente.
 4. Ejecuta herramientas de accesibilidad, soluciona problemas notificados y comprueba la experiencia de lectura de pantalla. (Consulta el tema sobre pruebas de accesibilidad).
 5. Asegúrate de que la configuración del manifiesto de la aplicación siga las instrucciones de accesibilidad.
-6. Declara que tu aplicación es accesible en Microsoft Store. (Consulta el tema [Accesibilidad en la tienda](accessibility-in-the-store.md).)
+6. Declare la aplicación como accesible en el Microsoft Store. (Consulta el tema [Accesibilidad en la tienda](accessibility-in-the-store.md).)
 
 Para obtener más información, consulta el tema completo [Lista de comprobación de accesibilidad](accessibility-checklist.md).
 
 ## <a name="related-topics"></a>Temas relacionados  
 * [Diseño de software inclusivo](designing-inclusive-software.md)  
 * [Diseño inclusivo](https://www.microsoft.com/design/inclusive/)
-* [Procedimientos recomendados de accesibilidad para evitar](practices-to-avoid.md)
-* [Ingeniería Software para mejorar la accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
-* [Centro de desarrollo de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps)
+* [Procedimientos de accesibilidad que deben evitarse](practices-to-avoid.md)
+* [Diseño de software para accesibilidad](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Centro para desarrolladores de accesibilidad de Microsoft](https://developer.microsoft.com/windows/accessible-apps)
 * [Accesibilidad](accessibility.md)

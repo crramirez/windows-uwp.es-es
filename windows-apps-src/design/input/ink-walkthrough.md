@@ -1,108 +1,108 @@
 ---
 ms.assetid: ''
-title: Compatibilidad con la entrada de lápiz en tu aplicación para UWP
-description: Un tutorial paso a paso para agregar compatibilidad con la entrada de lápiz a tu aplicación para UWP.
-keywords: entrada de lápiz, entrada manuscrita, tutorial
+title: Compatibilidad con la entrada manuscrita en la aplicación de Windows
+description: Un tutorial paso a paso para agregar compatibilidad con la entrada de lápiz a la aplicación de Windows.
+keywords: tinta, entrada manuscrita, tuorial
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 07b6347d46913a11a666234154b72d4bf4a3ebd3
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a1b4dc6fbec0e16428035348114b1b160d50cff0
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258400"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968150"
 ---
-# <a name="tutorial-support-ink-in-your-uwp-app"></a>Tutorial: compatibilidad con la entrada de lápiz en tu aplicación para UWP
+# <a name="tutorial-support-ink-in-your-windows-app"></a>Tutorial: compatibilidad con la entrada manuscrita en la aplicación de Windows
 
-![el lápiz de Surface](images/ink/ink-hero-small.png)  
+![Lápiz para Surface](images/ink/ink-hero-small.png)  
 *Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)).
 
-En este tutorial se explica cómo crear una aplicación básica para la Plataforma universal de Windows (UWP) compatible con la escritura y dibujo con Windows Ink. Usamos fragmentos de código de una aplicación de muestra, que puedes descargar de GitHub (consulta [Código de muestra](#sample-code)), para mostrar las diferentes características y las API asociadas de Windows Ink (consulta [Componentes de la plataforma Windows Ink](#components-of-the-windows-ink-platform)) que se tratan en cada paso.
+En este tutorial se explica cómo crear una aplicación básica de aplicaciones de Windows que admita la escritura y el dibujo con Windows Ink. Usamos fragmentos de código de una aplicación de ejemplo, que puede descargar de GitHub (consulte el [código de ejemplo](#sample-code)), para mostrar las distintas características y las API de Windows Ink asociadas (consulte [los componentes de la plataforma de tinta de Windows](#components-of-the-windows-ink-platform)) que se describen en cada paso.
 
-Nos centraremos en lo siguiente:
-* Adición de compatibilidad con la entrada de lápiz básica
-* Adición de una barra de herramientas de la entrada de lápiz
+Nos centramos en lo siguiente:
+* Agregar compatibilidad básica con entradas manuscritas
+* Agregar una barra de herramientas de entrada manuscrita
 * Compatibilidad con el reconocimiento de escritura a mano
-* Compatibilidad con el reconocimiento de formas básicas
-* Guardar y cargar la entrada de lápiz
+* Compatibilidad con el reconocimiento de forma básico
+* Guardar y cargar entradas manuscritas
 
-Para más información sobre cómo implementar estas características, consulta [Interacciones de lápiz y Windows Ink en aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions).
+Para obtener más información sobre la implementación de estas características, consulte [interacciones de lápiz y Windows Ink en aplicaciones de Windows](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions).
 
 ## <a name="introduction"></a>Introducción
 
-Con Windows Ink, puedes proporcionar a tus clientes el equivalente digital de casi cualquier experiencia de lápiz y papel imaginable, desde notas y anotaciones rápidas, manuscritas, a demostraciones en pizarra interactiva y desde dibujos de arquitectura e ingeniería a obras maestras personales.
+Con Windows Ink, puede proporcionar a los clientes el equivalente digital de casi cualquier experiencia de lápiz y papel imaginable, desde anotaciones rápidas y manuscritas hasta demostraciones de pizarra y desde dibujos arquitectónicos y de ingeniería hasta obras maestras personales.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
-* Un equipo (o máquina virtual) que ejecute la versión actual de Windows 10.
+* Un equipo (o una máquina virtual) que ejecute la versión actual de Windows 10
 * [Visual Studio 2019 y el SDK de RS2](https://developer.microsoft.com/windows/downloads)
 * [SDK de Windows 10 (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * En función de la configuración, es posible que tenga que instalar el paquete de NuGet [Microsoft. NETCore. UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) y habilitar el **modo de desarrollador** en la configuración del sistema (configuración-> actualización & seguridad-> para desarrolladores-> usar características de desarrollador).
-* Si no estás familiarizado con el desarrollo de aplicaciones para la Plataforma universal de Windows (UWP) con Visual Studio, echa un vistazo a estos temas antes de empezar este tutorial:  
+* Si no está familiarizado con el desarrollo de aplicaciones de aplicaciones de Windows con Visual Studio, consulte estos temas antes de empezar este tutorial:  
     * [Prepárate](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
-    * [Crear una aplicación "Hello, World" (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
-* **[OPCIONAL]** Un lápiz digital y un equipo con una pantalla compatible con la entrada de lápiz digital.
+    * [Creación de una aplicación "Hello, world" (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+* **[Opcional]** Un lápiz digital y un equipo con una pantalla que admita la entrada de esa plumilla digital.
 
 > [!NOTE] 
-> Aunque Windows Ink sea compatible con el dibujo con mouse y la función táctil (te mostramos cómo hacerlo en el paso 3 de este tutorial), para una experiencia óptima de Windows Ink, te recomendamos un lápiz digital y un equipo con pantalla compatible con la entrada de lápiz digital.
+> Aunque Windows Ink puede ser compatible con el dibujo con un mouse y un toque (se muestra cómo hacer esto en el paso 3 de este tutorial) para una experiencia de Windows Ink óptima, se recomienda tener un lápiz digital y un equipo con una pantalla que admita la entrada de esa plumilla digital.
 
 ## <a name="sample-code"></a>Código de ejemplo
-En este tutorial, usamos una aplicación de muestra de entrada de lápiz para mostrar los conceptos y la funcionalidad analizada.
+En este tutorial, usamos una aplicación de entrada de lápiz de ejemplo para mostrar los conceptos y la funcionalidad que se describen.
 
-Descarga este código de muestra y origen de Visual Studio de [GitHub](https://github.com/) en [windows-appsample-get-started-ink sample](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink):
+Descargue este ejemplo de Visual Studio y el código fuente de [GitHub](https://github.com/) en el [ejemplo Windows-appsample-Get-Started-Ink](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink):
 
-1. Selecciona el botón verde **Clone or download**.  
-![clonación del repositorio](images/ink/ink-clone.png)
-2. Si tienes una cuenta de GitHub, puedes clonar el repositorio en el equipo local seleccionando **Abrir en Visual Studio**. 
-3. Si no tienes una cuenta de GitHub, o solo quieres una copia local del proyecto, elige **Download ZIP** (tendrás que irlo comprobando con regularidad para descargar las actualizaciones más recientes).
+1. Seleccione el botón de **clonación o descarga** de verde  
+![Clonar el repositorio](images/ink/ink-clone.png)
+2. Si tiene una cuenta de GitHub, puede clonar el repositorio en el equipo local eligiendo **abrir en Visual Studio** . 
+3. Si no tiene una cuenta de GitHub, o simplemente quiere una copia local del proyecto, elija **download zip** (tendrá que comprobar de nuevo con regularidad para descargar las actualizaciones más recientes).
 
 > [!IMPORTANT]
-> La mayoría del código de la muestra está comentado. Cuando sigamos cada paso de este tema, se te pedirá que quites los comentarios de diversas secciones del código. En Visual Studio, simplemente resalta las líneas de código y presiona CTRL-K y, a continuación, CTRL-U.
+> La mayor parte del código del ejemplo se marca como comentario. A medida que avanzamos en cada paso, se le pedirá que quite las marcas de comentario de las distintas secciones del código. En Visual Studio, solo tiene que resaltar las líneas de código y presionar CTRL-K y, a continuación, CTRL + U.
 
 ## <a name="components-of-the-windows-ink-platform"></a>Componentes de la plataforma Windows Ink
 
-Estos objetos proporcionan la mayor parte de la experiencia de la entrada de lápiz para las aplicaciones para UWP.
+Estos objetos proporcionan la mayor parte de la experiencia de entrada manuscrita para aplicaciones de Windows.
 
 | Componente | Descripción |
 | --- | --- |
-| [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | Control de plataforma de interfaz de usuario XAML que, de forma predeterminada, recibe y muestra todas las entradas de un lápiz como trazo de tinta o trazo de borrado. |
-| [**Objeto**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) | Un objeto de código subyacente, cuya instancia se creó con un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) (expuesto a través de la propiedad [**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter)). Este objeto proporciona todas las funcionalidades de entrada de lápiz predeterminadas expuestas por [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), junto con un completo conjunto de API para la personalización adicional. |
+| [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | Un control de plataforma de interfaz de usuario XAML que, de manera predeterminada, recibe y muestra todas las entradas de lápiz como un trazo de lápiz o un trazo de borrado. |
+| [**Objeto**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) | Un objeto de código subyacente, cuya instancia se creó con un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) (expuesto a través de la propiedad [**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter)). Este objeto proporciona toda la funcionalidad de entrada manuscrita predeterminada expuesta por el [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), junto con un conjunto completo de API para la personalización y personalización adicionales. |
 | [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar) | Control de plataforma de interfaz de usuario XAML que contiene una colección personalizable y extensible de botones que activan las características relacionadas con la tinta en un [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)asociado. |
-| [**IInkD2DRenderer**](https://docs.microsoft.com/windows/desktop/api/inkrenderer/nn-inkrenderer-iinkd2drenderer)<br/>Esta funcionalidad no se explica aquí, para más información, consulta [Muestra de entrada de lápiz compleja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk). | Habilita la representación de trazos de lápiz en el contexto de dispositivo de Direct2D designado de una aplicación universal de Windows, en lugar del control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) predeterminado. |
+| [**IInkD2DRenderer**](https://docs.microsoft.com/windows/desktop/api/inkrenderer/nn-inkrenderer-iinkd2drenderer)<br/>Aquí no tratamos esta funcionalidad. para obtener más información, consulte el [ejemplo de tinta compleja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk). | Habilita la representación de trazos de lápiz en el contexto de dispositivo de Direct2D designado de una aplicación universal de Windows, en lugar del control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) predeterminado. |
 
-## <a name="step-1-run-the-sample"></a>Paso 1: ejecutar la muestra
+## <a name="step-1-run-the-sample"></a>Paso 1: ejecutar el ejemplo
 
-Después de descargar la aplicación de muestra RadialController, comprueba que se ejecuta:
-1. Abre el proyecto de muestra en Visual Studio.
-2. Establece la lista desplegable **Plataformas de solución** en una selección que no sea ARM.
-3. Presiona F5 para compilar, implementar y ejecutar.  
+Después de descargar la aplicación de ejemplo RadialController, compruebe que se ejecuta:
+1. Abra el proyecto de ejemplo en Visual Studio.
+2. Establezca la lista desplegable **plataformas de solución** en una selección que no sea de ARM.
+3. Presione F5 para compilar, implementar y ejecutar.  
 
    > [!NOTE]
-   > Como alternativa, puedes seleccionar el elemento de menú **Depurar** > **Iniciar depuración** o seleccionar el botón de ejecución del **Equipo Local** que se muestra aquí.
-   > ![botón compilar proyecto de Visual Studio](images/ink/ink-vsrun-small.png)
+   > Como alternativa, **puede seleccionar** > el elemento de menú Depurar**iniciar depuración** o seleccionar el botón ejecutar **equipo local** que se muestra aquí.
+   > ![Botón compilar proyecto de Visual Studio](images/ink/ink-vsrun-small.png)
 
-Se abre la ventana de la aplicación y, después de que aparezca una pantalla de presentación durante unos segundos, verás esta pantalla inicial.
+La ventana de la aplicación se abre y, después de que aparezca una pantalla de presentación durante unos segundos, verá esta pantalla inicial.
 
 ![Aplicación vacía](images/ink/ink-app-step1-empty-small.png)
 
-Bien, ahora tenemos la aplicación para UWP básica que usaremos en el resto de este tutorial. En los pasos siguientes, agregaremos la funcionalidad de entrada de lápiz.
+Bien, ahora tenemos la aplicación básica de Windows que usaremos en el resto de este tutorial. En los pasos siguientes, agregamos la funcionalidad de tinta.
 
-## <a name="step-2-use-inkcanvas-to-support-basic-inking"></a>Paso 2: usar InkCanvas para la compatibilidad con la entrada de lápiz básica
+## <a name="step-2-use-inkcanvas-to-support-basic-inking"></a>Paso 2: usar InkCanvas para admitir la entrada de lápiz básica
 
-Probablemente ya hayas observado que la aplicación, en su forma inicial, no te permite dibujar nada con el lápiz (aunque puedes usarlo como dispositivo señalador estándar para interactuar con la aplicación). 
+Es posible que ya haya observado que la aplicación, en su forma inicial, no le permite dibujar nada con el lápiz (aunque puede usar el lápiz como un dispositivo de puntero estándar para interactuar con la aplicación). 
 
-Vamos a corregir esta pequeña limitación en este paso.
+Vamos a corregir esa pequeña limitación en este paso.
 
-Para agregar la funcionalidad de entrada de lápiz básica, solo debes colocar un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) de plataforma UWP en la página adecuada de la aplicación.
+Para agregar la funcionalidad básica de entrada manuscrita, solo tiene que colocar un control [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) en la página correspondiente de la aplicación.
 
 > [!NOTE]
-> Un control InkCanvas tiene el valor predeterminado cero para las propiedades [**Height**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) y [**Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width), a menos que se trate de un elemento secundario de un elemento que, de manera automática, cambie el tamaño de sus elementos secundarios. 
+> Un InkCanvas tiene propiedades de [**alto**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) y [**ancho**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) predeterminadas de cero, a menos que sea el elemento secundario de un elemento que ajusta automáticamente el tamaño de sus elementos secundarios. 
 
-### <a name="in-the-sample"></a>En la muestra:
-1. Abre el archivo MainPage.xaml.cs.
-2. Busca el código marcado con el título "// Step 2: Use InkCanvas to support basic inking".
-3. Quita las marcas de comentario de las siguientes líneas. (Estas referencias son necesarias para la funcionalidad que se usa en los pasos posteriores).  
+### <a name="in-the-sample"></a>En el ejemplo:
+1. Abra el archivo MainPage.xaml.cs.
+2. Busque el código marcado con el título de este paso ("//Step 2: usar InkCanvas para admitir la entrada de lápiz básica").
+3. Quite las marcas de comentario de las líneas siguientes. (Estas referencias son necesarias para la funcionalidad usada en los pasos siguientes).  
 
 ``` csharp
     using Windows.UI.Input.Inking;
@@ -111,9 +111,9 @@ Para agregar la funcionalidad de entrada de lápiz básica, solo debes colocar u
     using Windows.Storage.Streams;
 ```
 
-4. Abre el archivo MainPage.xaml.
+4. Abra el archivo MainPage. Xaml.
 5. Busque el código marcado con el título de este paso ("\<!--paso 2: entrada de lápiz básica con InkCanvas-->").
-6. Quita la marca de comentario de la siguiente línea.  
+6. Quite la marca de comentario de la línea siguiente.  
 
 ``` xaml
     <InkCanvas x:Name="inkCanvas" />
@@ -121,27 +121,27 @@ Para agregar la funcionalidad de entrada de lápiz básica, solo debes colocar u
 
 Eso es todo. 
 
-Ahora vuelve a ejecutar la aplicación. Adelante, garabatea, escribe tu nombre o, si sostienes un espejo o tienes buena memoria, dibuja tu retrato.
+Ahora, vuelva a ejecutar la aplicación. Avance y garabatear, escriba su nombre o (si está manteniendo un reflejo o tiene una memoria muy buena), dibuje su propio retrato.
 
 ![Entrada de lápiz básica](images/ink/ink-app-step1-name-small.png)
 
-## <a name="step-3-support-inking-with-touch-and-mouse"></a>Paso 3: compatibilidad con la entrada de lápiz de la función táctil y el mouse
+## <a name="step-3-support-inking-with-touch-and-mouse"></a>Paso 3: compatibilidad con la entrada manuscrita con Touch y mouse
 
-Verás que, de manera predeterminada, la entrada de lápiz solo es compatible con el lápiz. Si intentas escribir o dibujar con el dedo, el mouse o el panel táctil, te decepcionarás.
+Observará que, de forma predeterminada, las entradas manuscritas solo se admiten para la entrada manuscrita. Si intenta escribir o dibujar con el dedo, el mouse o el touchpad, estará decepcionado.
 
-Para darle la vuelta a esto, tienes que agregar una segunda línea de código. Esta vez será en el código subyacente para el archivo XAML en el que declaraste el control [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas). 
+Para desactivar la desaprobación, debe agregar una segunda línea de código. Esta vez se encuentra en el código subyacente para el archivo XAML en el que declaró el [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas). 
 
-En este paso, se introduce el objeto [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter), que proporciona la administración precisa de la entrada, procesamiento y representación de la entrada de lápiz (estándar o modificada) en tu [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas).
+En este paso, se presenta el objeto [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) , que proporciona una administración más específica de la entrada, el procesamiento y la representación de la entrada manuscrita (estándar y modificado) en el control [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas).
 
 > [!NOTE]
-> La entrada de lápiz estándar (punta del lápiz o punta/botón del borrador) no se modifica con un elemento de hardware secundario, como un botón del lápiz, el botón derecho del mouse o un mecanismo similar. 
+> La entrada de lápiz estándar (sugerencia o botón de la punta del lápiz o del borrador) no se modifica con una prestación de hardware secundaria, como un botón de barril del lápiz, un botón secundario del mouse o un mecanismo similar. 
 
-Para habilitar la entrada de lápiz con el ratón y la función táctil, establece la propiedad [**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes) de [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) en la combinación de valores de [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes) que quieras.
+Para habilitar el mouse y la entrada táctil, establezca la propiedad [**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes) del [**objeto InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) en la combinación de los valores de [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes) que desee.
 
-### <a name="in-the-sample"></a>En la muestra:
-1. Abre el archivo MainPage.xaml.cs.
-2. Busca el código marcado con el título "// Step 3: Support inking with touch and mouse".
-3. Quita las marcas de comentario de las siguientes líneas.  
+### <a name="in-the-sample"></a>En el ejemplo:
+1. Abra el archivo MainPage.xaml.cs.
+2. Busque el código marcado con el título de este paso ("//Step 3: support inking with touch and mouse").
+3. Quite las marcas de comentario de las líneas siguientes.  
 
 ``` csharp
     inkCanvas.InkPresenter.InputDeviceTypes =
@@ -150,23 +150,23 @@ Para habilitar la entrada de lápiz con el ratón y la función táctil, estable
         Windows.UI.Core.CoreInputDeviceTypes.Pen;
 ```
 
-Vuelve a ejecutar la aplicación y verás que todos tus sueños sobre dibujar con el dedo en una pantalla de ordenador se han hecho realidad.
+Vuelva a ejecutar la aplicación y verá que todos los sueños de dibujo con dedo se han puesto en funcionamiento.
 
 > [!NOTE]
-> Al especificar los tipos de dispositivo de entrada, debes indicar la compatibilidad para cada tipo de entrada (incluido el lápiz), ya que al establecer esta propiedad se reemplaza la configuración predeterminada del control [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas).
+> Al especificar los tipos de dispositivo de entrada, debe indicar la compatibilidad para cada tipo de entrada específico (incluido el lápiz), ya que al establecer esta propiedad se invalida la configuración predeterminada de [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) .
 
-## <a name="step-4-add-an-ink-toolbar"></a>Paso 4: agregar una barra de herramientas de entrada de lápiz
+## <a name="step-4-add-an-ink-toolbar"></a>Paso 4: agregar una barra de herramientas de entrada manuscrita
 
-El control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) es un control de la plataforma UWP que proporciona una colección personalizable y extensible de botones para activar las características relacionadas con la entrada de lápiz. 
+[**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) es un control de plataforma UWP que proporciona una colección personalizable y extensible de botones para activar características relacionadas con la tinta. 
 
-De manera predeterminada, el control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) incluye un conjunto básico de botones que permiten a los usuarios seleccionar rápidamente entre un lápiz, un marcador de resaltado o un borrador, cualquiera de los cuales puede usarse junto con una galería de símbolos (regla o transportador). Los botones de marcador de resaltado y lápiz también proporcionan un control flotante para seleccionar el color y el tamaño del trazo de lápiz.
+De forma predeterminada, el control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) incluye un conjunto básico de botones que permiten a los usuarios seleccionar rápidamente entre un lápiz, un lápiz, un marcador de resaltado o un borrador, cualquiera de los cuales puede usarse junto con una galería de símbolos (regla o Protractor). Los botones de lápiz, lápiz y marcador de resaltado proporcionan también un control flotante para seleccionar el color de la tinta y el tamaño del trazo.
 
-Para agregar un control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) predeterminado a una aplicación de entrada de lápiz, solo tienes que colocarlo en la misma página que el control [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) y asociar los dos controles.
+Para agregar un control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) predeterminado a una aplicación de entrada manuscrita, simplemente colóquelo en la misma página que el [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) y asocie los dos controles.
 
-### <a name="in-the-sample"></a>En la muestra
-1. Abre el archivo MainPage.xaml.
-2. Busque el código marcado con el título de este paso ("\<!--paso 4: agregar una barra de herramientas de entrada manuscrita, >").
-3. Quita las marcas de comentario de las siguientes líneas.  
+### <a name="in-the-sample"></a>En el ejemplo
+1. Abra el archivo MainPage. Xaml.
+2. Busque el código marcado con el título de este paso ("\<!--paso 4: agregar una barra de herramientas de tinta-->").
+3. Quite las marcas de comentario de las líneas siguientes.  
 
 ``` xaml
     <InkToolbar x:Name="inkToolbar" 
@@ -177,27 +177,27 @@ Para agregar un control [**InkToolbar**](https://docs.microsoft.com/uwp/api/wind
 ```
 
 > [!NOTE]
-> Para mantener la interfaz de usuario y el código lo más despejados y sencillos posible, se usa un diseño de cuadrícula básico y se declara el control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) después del control [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) en una fila de cuadrícula. Si lo declaras antes del control [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), el control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) se representa en primer lugar, debajo del lienzo y es inaccesible para el usuario.  
+> Para mantener la interfaz de usuario y el código en la forma más sencilla y simple posible, usamos un diseño de cuadrícula básico y declaramos el control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) después del control [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) en una fila de la cuadrícula. Si se declara antes que el control [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), el control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) se representa primero, debajo del lienzo e inaccesible para el usuario.  
 
-Ahora ejecuta la aplicación otra vez para ver el control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) y probar algunas de las herramientas.
+Ahora vuelva a ejecutar la aplicación para ver el control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) y probar algunas de las herramientas.
 
-![InkToolbar del Bloc de bocetos del área de trabajo de entrada de lápiz](images/ink/ink-inktoolbar-default-small.png)
+![InkToolbar desde dibujo con el área de trabajo de tinta](images/ink/ink-inktoolbar-default-small.png)
 
 ### <a name="challenge-add-a-custom-button"></a>Desafío: agregar un botón personalizado
 <table class="wdg-noborder">
 <tr>
 <td>
 
-![InkToolbar del Bloc de bocetos del área de trabajo de entrada de lápiz](images/challenge-icon.png)
+![InkToolbar desde dibujo en el área de trabajo de tinta](images/challenge-icon.png)
 
 </td>
 <td>
 
-Este es un ejemplo de un control **[InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)** personalizado (del Bloc de bocetos del Área de trabajo de Windows Ink).
+A continuación se muestra un ejemplo de un control **[InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)** personalizado (de dibujo en el área de trabajo de Windows Ink).
 
-![InkToolbar del Bloc de bocetos del área de trabajo de entrada de lápiz](images/ink/ink-inktoolbar-sketchpad-small.png)
+![InkToolbar desde dibujo en el área de trabajo de tinta](images/ink/ink-inktoolbar-sketchpad-small.png)
 
-Para los detalles sobre cómo personalizar el control [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar), consulta [Agregar un control InkToolbar a una aplicación de entrada manuscrita para la Plataforma universal de Windows (UWP)](ink-toolbar.md).
+Para obtener más información sobre cómo personalizar un control [inktoolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar), vea [Agregar un control inktoolbar a una aplicación de entrada de lápiz de la aplicación Windows](ink-toolbar.md).
 
 </td>
 </tr>
@@ -205,22 +205,22 @@ Para los detalles sobre cómo personalizar el control [InkToolbar](https://docs.
 
 ## <a name="step-5-support-handwriting-recognition"></a>Paso 5: compatibilidad con el reconocimiento de escritura a mano
 
-Ahora que puedes escribir y dibujar en la aplicación, vamos a probar a hacer algo útil con esos garabatos.
+Ahora que puede escribir y dibujar en la aplicación, vamos a intentar hacer algo útil con esos garabatos.
 
-En este paso, usamos las características del reconocimiento de escritura a mano de Windows Ink para intentar descifrar lo que has escrito.
+En este paso, se usan las características de reconocimiento de escritura a mano de Windows Ink para intentar descifrar lo que ha escrito.
 
 > [!NOTE]
-> Se puede mejorar el reconocimiento de escritura a mano a través de la configuración de **Lápiz y Windows Ink**:
-> 1. Abre el menú Inicio y selecciona **Configuración**.
-> 2. En la pantalla de configuración selecciona **Dispositivos** > **Lápiz y Windows Ink**.
+> Se puede mejorar el reconocimiento de escritura a mano a través del lápiz & la configuración de **Windows Ink** :
+> 1. Abra el menú Inicio y seleccione **configuración**.
+> 2. En la pantalla de configuración, seleccione **dispositivos** > **lápiz & Windows Ink**.
 > ![InkToolbar desde dibujo en el área de trabajo de tinta](images/ink/ink-settings-small.png)
-> 3. Selecciona **Reconocer mi escritura a mano** para abrir el cuadro de diálogo **Personalización de escritura a mano**.
+> 3. Seleccione **obtener para conocer la escritura a mano** y abrir el cuadro de diálogo de **Personalización de escritura a mano** .
 > ![InkToolbar desde dibujo en el área de trabajo de tinta](images/ink/ink-settings-handwritingpersonalization-small.png)
 
-### <a name="in-the-sample"></a>En la muestra:
-1. Abre el archivo MainPage.xaml.
+### <a name="in-the-sample"></a>En el ejemplo:
+1. Abra el archivo MainPage. Xaml.
 2. Busque el código marcado con el título de este paso ("\<!--paso 5: compatibilidad con el reconocimiento de escritura a mano-->").
-3. Quita las marcas de comentario de las siguientes líneas.  
+3. Quite las marcas de comentario de las líneas siguientes.  
 
 ``` xaml
     <Button x:Name="recognizeText" 
@@ -235,11 +235,11 @@ En este paso, usamos las características del reconocimiento de escritura a mano
                 Margin="50,0,0,0" />
 ```
 
-4. Abre el archivo MainPage.xaml.cs.
-5. Busca el código marcado con el título " Step 5: Support handwriting recognition".
-6. Quita las marcas de comentario de las siguientes líneas.  
+4. Abra el archivo MainPage.xaml.cs.
+5. Busque el código marcado con el título de este paso ("paso 5: compatibilidad con el reconocimiento de escritura a mano").
+6. Quite las marcas de comentario de las líneas siguientes.  
 
-- Estas son las variables globales necesarias para este paso.
+- Estas son las variables globales que se requieren para este paso.
 
 ``` csharp
     InkAnalyzer analyzerText = new InkAnalyzer();
@@ -248,7 +248,7 @@ En este paso, usamos las características del reconocimiento de escritura a mano
     IReadOnlyList<IInkAnalysisNode> words = null;
 ```
 
-- Este es el controlador para el botón **Recognize text**, donde haremos el procesamiento del reconocimiento.
+- Este es el controlador del botón **reconocer texto** , donde hacemos el procesamiento de reconocimiento.
 
 ``` csharp
     private async void recognizeText_ClickAsync(object sender, RoutedEventArgs e)
@@ -278,24 +278,24 @@ En este paso, usamos las características del reconocimiento de escritura a mano
     }
 ```
 
-7. Vuelve a ejecutar la aplicación, escribe algo y, a continuación, haz clic en el botón **Recognize text**.
-8. Los resultados del reconocimiento se muestran al lado del botón.
+7. Vuelva a ejecutar la aplicación, escriba algo y, a continuación, haga clic en el botón **reconocer texto**
+8. Los resultados del reconocimiento se muestran al lado del botón
 
 ### <a name="challenge-1-international-recognition"></a>Desafío 1: reconocimiento internacional
 <table class="wdg-noborder">
 <tr>
 <td>
 
-![InkToolbar del Bloc de bocetos del área de trabajo de entrada de lápiz](images/challenge-icon.png)
+![InkToolbar desde dibujo en el área de trabajo de tinta](images/challenge-icon.png)
 
 </td>
 <td>
 
-Windows Ink es compatible con el reconocimiento de texto en muchos de los idiomas compatibles con Windows. Cada paquete de idioma incluye un motor de reconocimiento de escritura a mano que se puede instalar con el paquete de idioma.
+Windows Ink admite el reconocimiento de texto para muchos de los idiomas admitidos por Windows. Cada paquete de idioma incluye un motor de reconocimiento de escritura a mano que se puede instalar con el paquete de idioma.
 
-Dirígete a un idioma específico consultando los motores de reconocimiento de escritura a mano instalados.
+Se dirige a un idioma específico mediante la consulta de los motores de reconocimiento de escritura a mano instalados.
 
-Para más información sobre el reconocimiento de escritura a mano internacional, consulta [Reconocimiento de trazos de Windows Ink como texto](convert-ink-to-text.md).
+Para obtener más información sobre el reconocimiento de escritura a mano internacional, consulte [reconocer trazos de Windows Ink como texto](convert-ink-to-text.md).
 
 </td>
 </tr>
@@ -306,14 +306,14 @@ Para más información sobre el reconocimiento de escritura a mano internacional
 <tr>
 <td>
 
-![InkToolbar del Bloc de bocetos del área de trabajo de entrada de lápiz](images/challenge-icon.png)
+![InkToolbar desde dibujo en el área de trabajo de tinta](images/challenge-icon.png)
 
 </td>
 <td>
 
-Para este tutorial, es necesario presionar un botón para iniciar el reconocimiento. También puedes realizar el reconocimiento dinámico mediante el uso de una función de temporización básica.
+En este tutorial, es necesario presionar un botón para iniciar el reconocimiento. También puede realizar el reconocimiento dinámico mediante una función de control de tiempo básica.
 
-Para más información sobre el reconocimiento dinámico, consulta [Reconocimiento de trazos de Windows Ink como texto](convert-ink-to-text.md).
+Para obtener más información sobre el reconocimiento dinámico, consulte [reconocer trazos de Windows Ink como texto](convert-ink-to-text.md).
 
 </td>
 </tr>
@@ -321,34 +321,34 @@ Para más información sobre el reconocimiento dinámico, consulta [Reconocimien
 
 ## <a name="step-6-recognize-shapes"></a>Paso 6: reconocer formas
 
-De acuerdo, ahora puedes convertir las notas manuscritas en algo un poco más legible. Pero ¿qué pasa con esos garabatos temblorosos por la cafeína de la reunión matinal sobre el diagrama de flujo anónimo?
+Bien, ahora puede convertir las notas manuscritas en algo un poco más legible. Pero, ¿qué ocurre con esos garabatos caffeinateds de la reunión anónima en los diagramas de flujo de la mañana?
 
-Con el análisis de la entrada de lápiz, la aplicación también puede reconocer un conjunto de formas, entre las que se incluyen las siguientes:
+Con el análisis de tinta, la aplicación también puede reconocer un conjunto de formas básicas, entre las que se incluyen:
 
-- Círculo
-- Rombo
+- Circle
+- Diamond
 - Dibujo
-- Elipse
-- Triángulo equilátero
-- Hexágono
-- Triángulo isósceles
-- Paralelogramo
+- Ellipse
+- EquilateralTriangle
+- Tuerca
+- IsoscelesTriangle
+- Inclina
 - Pentágono
-- Cuadrilátero
+- Cuadrangular
 - Rectángulo
-- Triángulo rectángulo
-- Cuadrado
-- Trapezoide
-- Triángulo
+- RightTriangle
+- Square
+- Trapecio
+- Triangle
 
-En este paso, usamos las características de reconocimiento de formas de Windows Ink para intentar organizar tus garabatos.
+En este paso, se usan las características de reconocimiento de formas de Windows Ink para intentar limpiar los garabatos.
 
-En este ejemplo, no intentamos volver a dibujar trazos de lápiz (aunque es posible). En su lugar, agregamos un lienzo estándar debajo de InkCanvas donde dibujamos objetos elipse o polígono equivalentes derivados de la entrada de lápiz original. A continuación, borramos los trazos de lápiz correspondientes.
+En este ejemplo, no se intenta volver a dibujar trazos de lápiz (aunque es posible). En su lugar, se agrega un lienzo estándar en el InkCanvas en el que se dibujan objetos de elipse o polígono equivalentes derivados de la tinta original. A continuación, se eliminarán los trazos de tinta correspondientes.
 
-### <a name="in-the-sample"></a>En la muestra:
-1. Abre el archivo MainPage.xaml.
-2. Busque el código marcado con el título de este paso ("\<!--paso 6: reconocer formas-->")
-3. Quita la marca de comentario de esta línea.  
+### <a name="in-the-sample"></a>En el ejemplo:
+1. Abra el archivo MainPage. Xaml.
+2. Busque el código marcado con el título de este paso ("\<!--paso 6: reconocer formas-->").
+3. Quite la marca de comentario de esta línea.  
 
 ``` xaml
    <Canvas x:Name="canvas" />
@@ -360,9 +360,9 @@ En este ejemplo, no intentamos volver a dibujar trazos de lápiz (aunque es posi
         Margin="10,10,10,10" />
 ```
 
-4. Abre el archivo MainPage.xaml.cs.
-5. Busca el código marcado con el título "// Step 6: Recognize shapes".
-6. Quita las marcas de comentario de estas líneas:  
+4. Abra el archivo MainPage.xaml.cs
+5. Busque el código marcado con el título de este paso ("//Step 6: rerecognize Shapes").
+6. Quite los comentarios de estas líneas:  
 
 ``` csharp
     private async void recognizeShape_ClickAsync(object sender, RoutedEventArgs e)
@@ -381,29 +381,29 @@ En este ejemplo, no intentamos volver a dibujar trazos de lápiz (aunque es posi
     }
 ```
 
-7. Ejecuta la aplicación, dibuja algunas formas y haz clic en el botón **Recognize shape**.
+7. Ejecute la aplicación, dibuje algunas formas y haga clic en el botón **reconocer forma**
 
-Este es un ejemplo de un diagrama de flujo rudimentario de una servilleta digital.
+A continuación se muestra un ejemplo de un diagrama de flujo rudimentario de una servilleta digital.
 
-![Diagrama de flujo de entrada de lápiz original](images/ink/ink-app-step6-shapereco1-small.png)
+![Diagrama de flujo de tinta original](images/ink/ink-app-step6-shapereco1-small.png)
 
-Este es el mismo diagrama de flujo después del reconocimiento de formas.
+Este es el mismo diagrama de flujo después del reconocimiento de la forma.
 
-![Diagrama de flujo de entrada de lápiz original](images/ink/ink-app-step6-shapereco2-small.png)
+![Diagrama de flujo de tinta original](images/ink/ink-app-step6-shapereco2-small.png)
 
 
 ## <a name="step-7-save-and-load-ink"></a>Paso 7: guardar y cargar la entrada de lápiz
 
-¿Has terminado garabatear y te gusta cómo queda, pero piensas que más adelante puede que retoques un par de cosas? Puedes guardar los trazos de entrada de lápiz en un archivo ISF (Ink Serialized Format) y cargarlos para edición cuando te llegue la inspiración. 
+Por lo tanto, ha acabado doodling y usted le gusta lo que ve, pero cree que le gustaría ajustar un par de cosas más adelante. Puede guardar los trazos de tinta en un archivo de formato serializado de tinta (ISF) y cargarlos para su edición siempre que se produce la inspiración. 
 
-El archivo ISF es una imagen GIF básica que incluye metadatos adicionales que describen los comportamientos y propiedades del trazo de lápiz. Las aplicaciones que no están habilitadas para la entrada de lápiz pueden omitir los metadatos adicionales y cargar la imagen GIF básica (incluida la transparencia del fondo del canal alfa).
+El archivo ISF es una imagen GIF básica que incluye metadatos adicionales que describen las propiedades y los comportamientos del trazo de tinta. Las aplicaciones que no están habilitadas para entrada manuscrita pueden omitir los metadatos adicionales y cargar la imagen GIF básica (incluida la transparencia de fondo de canal alfa).
 
-En este paso, enlazamos los botones **Guardar** y **Cargar** situados junto a la barra de herramientas de entrada de lápiz.
+En este paso, se enlazan los botones **Guardar** y **cargar** situados junto a la barra de herramientas de entrada manuscrita.
 
-### <a name="in-the-sample"></a>En la muestra:
-1. Abre el archivo MainPage.xaml.
+### <a name="in-the-sample"></a>En el ejemplo:
+1. Abra el archivo MainPage. Xaml.
 2. Busque el código marcado con el título de este paso ("\<!--paso 7: guardar y cargar el lápiz-->").
-3. Quita las marcas de comentario de las siguientes líneas. 
+3. Quite las marcas de comentario de las líneas siguientes. 
 
 ``` xaml
     <Button x:Name="buttonSave" 
@@ -418,9 +418,9 @@ En este paso, enlazamos los botones **Guardar** y **Cargar** situados junto a la
             Margin="5,0,0,0"/>
 ```
 
-4. Abre el archivo MainPage.xaml.cs.
-5. Busca el código marcado con el título "// Step 7: Save and load ink".
-6. Quita las marcas de comentario de las siguientes líneas.  
+4. Abra el archivo MainPage.xaml.cs.
+5. Busque el código marcado con el título de este paso ("//Step 7: Save and upload Ink").
+6. Quite las marcas de comentario de las líneas siguientes.  
 
 ``` csharp
     private async void buttonSave_ClickAsync(object sender, RoutedEventArgs e)
@@ -434,25 +434,25 @@ En este paso, enlazamos los botones **Guardar** y **Cargar** situados junto a la
     }
 ```
 
-7. Ejecuta la aplicación y dibuja algo.
-8. Selecciona el botón **Guardar** y guarda el dibujo.
-9. Borra la entrada de lápiz o reinicia la aplicación.
-10. Selecciona el botón **Cargar** y abre el archivo de entrada de lápiz que acabas de guardar.
+7. Ejecute la aplicación y dibuje algo.
+8. Seleccione el botón **Guardar** y guarde el dibujo.
+9. Borre la tinta o reinicie la aplicación.
+10. Seleccione el botón **cargar** y abra el archivo de entrada manuscrita que acaba de guardar.
 
-### <a name="challenge-use-the-clipboard-to-copy-and-paste-ink-strokes"></a>Desafío: usar el Portapapeles para copiar y pegar trazos de lápiz 
+### <a name="challenge-use-the-clipboard-to-copy-and-paste-ink-strokes"></a>Desafío: usar el portapapeles para copiar y pegar trazos de lápiz 
 <table class="wdg-noborder">
 <tr>
 <td>
 
-![InkToolbar del Bloc de bocetos del área de trabajo de entrada de lápiz](images/challenge-icon.png)
+![InkToolbar desde dibujo en el área de trabajo de tinta](images/challenge-icon.png)
 
 </td>
 
 <td>
 
-Windows Ink también es compatible con copiar y pegar trazos de lápiz en y desde el Portapapeles.
+Windows Ink también admite copiar y pegar trazos de lápiz hacia y desde el portapapeles.
 
-Para más información sobre cómo usar el Portapapeles con la entrada de lápiz, consulta [Almacenar y recuperar datos de trazos de lápiz de Windows Ink](save-and-load-ink.md).
+Para obtener más información acerca del uso del Portapapeles con entrada de lápiz, vea [almacenar y recuperar datos de trazo de Windows Ink](save-and-load-ink.md).
 
 </td>
 </tr>
@@ -460,23 +460,23 @@ Para más información sobre cómo usar el Portapapeles con la entrada de lápiz
 
 ## <a name="summary"></a>Resumen
 
-Enhorabuena, has completado el tutorial **Entrada: compatibilidad con la entrada de lápiz en tu aplicación para UWP**. Te hemos mostrado el código básico necesario para la compatibilidad con la entrada de lápiz en tus aplicaciones para UWP y cómo ofrecer algunas de las mejores experiencias de usuario compatibles con la plataforma Windows Ink.
+Enhorabuena, ha completado la **entrada: compatibilidad con la entrada de lápiz en el tutorial de la aplicación de Windows** . Le mostramos el código básico necesario para admitir la entrada de lápiz en las aplicaciones de Windows y cómo proporcionar algunas de las experiencias de usuario más enriquecidas admitidas por la plataforma de Windows Ink.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Interacciones de lápiz y Windows Ink en aplicaciones para UWP](pen-and-stylus-interactions.md)
+* [Interacciones de lápiz y Windows Ink en aplicaciones de Windows](pen-and-stylus-interactions.md)
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
-* [Ejemplo de análisis de tinta (BasicC#) ()](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
-* [Ejemplo de reconocimiento de escrituraC#a mano manuscrita ()](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
+* [Ejemplo de análisis de tinta (Basic) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
+* [Ejemplo de reconocimiento de escritura a mano manuscrita (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
 * [Guardar y cargar trazos de entrada de lápiz desde un archivo de formato serializado de tinta (ISF)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
 * [Guardar y cargar trazos de entrada de lápiz desde el portapapeles](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
 * [Ejemplo de posición y orientación de la barra de herramientas de lápiz (básico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)
 * [Ejemplo de posición y orientación de la barra de herramientas de lápiz (dinámico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)
-* [Ejemplo de entrada deC#lápizC++simple (/)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
-* [Ejemplo de tinta complejaC++()](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
-* [Ejemplo de entrada de lápiz (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Tutorial de introducción: compatibilidad con la entrada manuscrita en la aplicación para UWP](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
-* [Ejemplo de libro de color](https://github.com/Microsoft/Windows-appsample-coloringbook)
-* [Ejemplo de notas de la familia](https://github.com/Microsoft/Windows-appsample-familynotes)
+* [Ejemplo de entrada de lápiz simple (C#/C + +)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
+* [Ejemplo de tinta compleja (C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
+* [Ejemplo de entrada de lápiz (JavaScript)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BJavaScript%5D-Windows%208%20app%20samples/JavaScript/Windows%208%20app%20samples/Input%20Ink%20sample%20(Windows%208))
+* [Tutorial de introducción: compatibilidad con la entrada de lápiz en la aplicación de Windows](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
+* [Muestra de libro para colorear](https://github.com/Microsoft/Windows-appsample-coloringbook)
+* [Muestra de notas familiares](https://github.com/Microsoft/Windows-appsample-familynotes)

@@ -4,18 +4,18 @@ title: Enviar un elemento de trabajo al grupo de subprocesos
 description: Obtén información acerca de cómo realizar trabajo en un subproceso separado mediante el envío de un elemento de trabajo al grupo de subprocesos.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, subprocesos, grupo de subprocesos
+keywords: Windows 10, UWP, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: d3dcd162e0a139328ef5885ac26edec04a279134
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a9da63e05380987d69d97a74123e593acd0b8cb1
+ms.sourcegitcommit: 2dbf4a3f3473c1d3a0ad988bcbae6e75dfee3640
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259808"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619349"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
-\[ actualizado para aplicaciones para UWP en Windows 10. Para artículos de Windows 8. x, consulte el [archivo](https://docs.microsoft.com/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN) \]
+\[Se actualizó con aplicaciones para UWP en Windows 10. Para artículos de Windows 8. x, consulte el [archivo](https://docs.microsoft.com/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN)\]
 
 <b>API importantes</b>
 
@@ -350,7 +350,7 @@ Ten en cuenta que el controlador de finalización comprueba si el elemento de tr
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Puede obtener más información si descarga el código de esta guía de inicio rápido en el [ejemplo de creación de un elemento de trabajo ThreadPool](https://code.msdn.microsoft.com/windowsapps/Creating-a-ThreadPool-work-9665cdff) escrito para Windows 8.1 y vuelve a usar el código fuente en una aplicación Win\_Unap de Windows 10.
+Puede obtener más información si descarga el código de esta guía de inicio rápido en el [ejemplo de creación de un elemento de trabajo ThreadPool](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Thread%20pool%20sample) escrito para Windows 8.1 y vuelve a usar el\_código fuente en una aplicación Win Unap Windows 10.
 
 ## <a name="related-topics"></a>Temas relacionados
 

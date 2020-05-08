@@ -1,5 +1,5 @@
 ---
-Description: Procedimientos de prueba que debes seguir para asegurarte de que la aplicación para la Plataforma universal de Windows (UWP) sea accesible.
+Description: Procedimientos de prueba para asegurarse de que se puede tener acceso a la aplicación de aplicación de Windows.
 ms.assetid: 272D9C9E-B179-4F5A-8493-926D007A0225
 title: Pruebas de accesibilidad
 label: Accessibility testing
@@ -8,16 +8,16 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fb9480740746b6e6ec792d4b88f4d84e4acb7c0e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8c5f3a01ae9231bd27208cacff0ee5209c3716b5
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257798"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969690"
 ---
 # <a name="accessibility-testing"></a>Pruebas de accesibilidad  
 
-Procedimientos de prueba que debes seguir para asegurarte de que la aplicación para la Plataforma universal de Windows (UWP) sea accesible.
+Procedimientos de prueba para asegurarse de que se puede tener acceso a la aplicación de aplicación de Windows.
 
 <span id="run_accessibility_testing_tools"/>
 <span id="RUN_ACCESSIBILITY_TESTING_TOOLS"/>
@@ -35,14 +35,14 @@ Puedes iniciar las herramientas de prueba de accesibilidad desde un símbolo del
 
 ### <a name="accscope"></a>**AccScope**  
 
-La herramienta [**AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope) permite que los desarrolladores y los evaluadores evalúan la accesibilidad de su aplicación durante la fase de desarrollo y diseño de la aplicación, posiblemente en fases prototipo anteriores, en lugar de hacerlo en las fases de prueba más avanzadas del ciclo de desarrollo de la aplicación. Está diseñada especialmente para probar los escenarios de accesibilidad de la característica Narrador con la aplicación.
+La herramienta [**AccScope**](https://docs.microsoft.com/windows/desktop/WinAuto/accscope) permite a los desarrolladores y evaluadores evaluar la accesibilidad de su aplicación durante el desarrollo y el diseño de la aplicación, potencialmente en fases de prototipo anteriores, en lugar de en las fases de prueba en tiempo de ejecución del ciclo de desarrollo de una aplicación. Está diseñada especialmente para probar los escenarios de accesibilidad de la característica Narrador con la aplicación.
 
 <span id="inspect"/>
 <span id="INSPECT"/>
 
 ### <a name="inspect"></a>**Inspeccionar**  
 
-[**Inspeccionar**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) permite seleccionar cualquier elemento de la interfaz de usuario y ver sus datos de accesibilidad. Puedes ver los modelos de control y las propiedades de Automatización de la interfaz de usuario de Microsoft y probar la estructura de navegación de los elementos de automatización en el árbol de automatización de la interfaz de usuario. Usa **Inspect** mientras desarrollas la interfaz de usuario para comprobar cómo los atributos de accesibilidad se exponen en la automatización de la interfaz de usuario. En algunos casos, los atributos provienen de la compatibilidad para la automatización de la interfaz de usuario que ya viene implementada en los controles XAML predeterminados. En otros casos, los atributos provienen de valores específicos que definiste en el marcado XAML, como propiedades adjuntas [**AutomationProperties**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties).
+[**Inspeccionar**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) permite seleccionar cualquier elemento de la interfaz de usuario y ver sus datos de accesibilidad. Puedes ver los modelos de control y las propiedades de Automatización de la interfaz de usuario de Microsoft y probar la estructura de navegación de los elementos de automatización en el árbol de automatización de la interfaz de usuario. Use **inspeccionar** mientras desarrolla la interfaz de usuario para comprobar cómo se exponen los atributos de accesibilidad en la automatización de la interfaz de usuario. En algunos casos, los atributos provienen de la compatibilidad para la automatización de la interfaz de usuario que ya viene implementada en los controles XAML predeterminados. En otros casos, los atributos provienen de valores específicos que se han establecido en el marcado XAML, como propiedades asociadas de [**AutomationProperties**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) .
 
 En la siguiente imagen se muestra la herramienta [**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) consultando las propiedades de Automatización de la interfaz de usuario del elemento de menú **Editar** del Bloc de notas.
 
@@ -64,7 +64,7 @@ En la siguiente imagen se muestra la herramienta [**Inspect**](https://docs.micr
 <span id="ACCESSIBLE_EVENT_WATCHER"/>
 
 ### <a name="accessible-event-watcher"></a>**Accessible Event Watcher**  
-[**Monitor de eventos accesibles (AccEvent)** ](https://docs.microsoft.com/windows/desktop/WinAuto/accessible-event-watcher) comprueba si los elementos de la interfaz de usuario de una aplicación activan la automatización de la interfaz de usuario y los eventos de Microsoft Active Accessibility cuando se producen cambios en la interfaz de usuario Se pueden producir cambios en la interfaz de usuario cuando cambia el foco, cuando se invoca o se selecciona un elemento de la interfaz de usuario o cambia uno de sus estados o propiedades.
+[**Accessible Event Watcher (AccEvent)**](https://docs.microsoft.com/windows/desktop/WinAuto/accessible-event-watcher) prueba si los elementos de la interfaz de usuario de una aplicación generan eventos adecuados de Automatización de la interfaz de usuario y Microsoft Active Accessibility cuando se hacen cambios en la interfaz de usuario. Se pueden producir cambios en la interfaz de usuario cuando cambia el foco, cuando se invoca o se selecciona un elemento de la interfaz de usuario o cambia uno de sus estados o propiedades.
 
 > [!NOTE]
 > La mayoría de las herramientas de prueba de accesibilidad mencionadas en la documentación se ejecutan en un equipo, no en un teléfono. Puedes ejecutar algunas herramientas mientras desarrollas y usas un emulador, aunque la mayoría de estas herramientas no pueden exponer el árbol de automatización de la interfaz de usuario en el emulador.
@@ -101,13 +101,13 @@ Usa las opciones de pantalla del sistema para ajustar el valor de puntos por pul
 <span id="VERIFY_MAIN_APP_SCENARIOS_BY_USING_NARRATOR"/>
 
 ## <a name="verify-main-app-scenarios-by-using-narrator"></a>Comprobar los escenarios de aplicaciones principales mediante el uso del Narrador  
-Utiliza el Narrador para probar la experiencia de lectura de pantalla de la aplicación.
+Use el narrador para probar la experiencia de lectura de pantalla de la aplicación.
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode/player]
 
-**Siga estos pasos para probar la aplicación con el narrador con el mouse y el teclado:**
-1.  Inicia el Narrador presionando la _tecla del logotipo de Windows, Ctrl y Entrar_. En versiones anteriores a Windows 10, versión 1607, usa _tecla del logotipo de Windows y Entrar_ para iniciar el Narrador.
-2.  Navega por la aplicación con el teclado utilizando la tecla de _tabulador_, las teclas de dirección y la combinación _tecla Bloq Mayús + teclas de dirección_.
+**Utiliza estos pasos para probar cómo funciona la aplicación utilizando el Narrador con un mouse y un teclado:**
+1.  Para iniciar el narrador, presione la _tecla del logotipo de Windows + Ctrl + entrar_. En las versiones anteriores a la versión 1607 de Windows 10, use la _tecla del logotipo de Windows + entrar_ para iniciar el narrador.
+2.  Navegue por la aplicación con el teclado mediante la tecla _Tab_ , las teclas de dirección y _Bloq Mayús + teclas de dirección_.
 3.  Conforme estás navegando por la aplicación, escucha cómo lee Narrador los elementos de la interfaz de usuario y comprueba lo siguiente:
     * En cada control, asegúrate de que el Narrador lee todo el contenido visible. Comprueba también que el Narrador lee el nombre de cada control, los estados aplicables (comprobado, seleccionado, etc.) y los tipos de control (botón, casilla, elemento de lista, etc.).
     * Si el elemento es interactivo, comprueba que puedes usar el Narrador para invocar su acción presionando las teclas _Bloq Mayús + Entrar_.
@@ -118,16 +118,16 @@ Utiliza el Narrador para probar la experiencia de lectura de pantalla de la apli
 
 A partir de Windows 10, versión 1607, presentamos un nuevo modo de desarrollador en Narrador. Activa el modo de desarrollador cuando Narrador ya esté en ejecución presionando _Bloq Mayús + Mayús + F12_. Cuando el modo de desarrollador esté habilitado, la pantalla estará enmascarada y destacará solamente los objetos accesibles y el texto asociado que se expone mediante programación a Narrador. Esto te ofrece un una buena representación visual de la información que se expone a Narrador.
 
-**Siga estos pasos para probar la aplicación con el modo táctil del narrador:**
+**Utiliza estos pasos para probar la aplicación utilizando el modo táctil de Narrador:**
 
 > [!NOTE]
 > El Narrador introduce automáticamente el modo táctil en los dispositivos que admiten contactos 4+. Narrador no admite escenarios de varios monitores o digitalizadores multitáctiles en la pantalla principal.
 
 1.  Familiarízate con la interfaz de usuario y analiza el diseño.
 
-    * **Navegue a través de la interfaz de usuario mediante gestos de deslizamiento con un solo dedo.** Usa los deslizamientos rápidos hacia la derecha o hacia la izquierda para moverte entre los elementos y hacia arriba o hacia abajo para cambiar la categoría de los elementos por los que navegas. Las categorías incluyen todos los elementos, los vínculos, las tablas, los encabezados, etc. La navegación con gestos de deslizar rápidamente con un solo dedo es similar a navegar con _Bloq Mayús + tecla de dirección_.
-    * **Use los gestos de tabulación para navegar por los elementos que se van a activar.** Un deslizamiento con tres dedos hacia la derecha o hacia la izquierda es lo mismo que navegar con el _tabulador_ y _Mayús + Tabulador_ en un teclado.
-    * **Investigue espacialmente la interfaz de usuario con un solo dedo.** Arrastra un dedo hacia arriba y abajo o hacia la derecha y la izquierda, para que Narrador lea los elementos bajo el dedo. Puedes usar el mouse como alternativa puesto que usa la misma lógica de posicionamiento que se utiliza al arrastrar un dedo.
+    * **Navega por la interfaz de usuario mediante gestos de deslizar rápidamente con un solo dedo.** Usa los deslizamientos rápidos hacia la derecha o hacia la izquierda para moverte entre los elementos y hacia arriba o hacia abajo para cambiar la categoría de los elementos por los que navegas. Las categorías incluyen todos los elementos, los vínculos, las tablas, los encabezados, etc. Desplazarse por los gestos de deslizamiento con un solo dedo es similar a navegar con _Bloq Mayús + Flecha_.
+    * **Usa gestos de tabulación para desplazarte por los elementos activables.** Un dedo de tres dedos hacia la derecha o la izquierda es el mismo que si se navega por _Tab_ y _MAYÚS + TAB_ en un teclado.
+    * **Investiga espacialmente la interfaz de usuario con un solo dedo.** Arrastra un dedo hacia arriba y abajo o hacia la derecha y la izquierda, para que Narrador lea los elementos bajo el dedo. Puedes usar el mouse como alternativa puesto que usa la misma lógica de posicionamiento que se utiliza al arrastrar un dedo.
     * **Lee toda la ventana y todo su contenido deslizando tres dedos hacia arriba**. Esto equivale a usar _Bloq Mayús + W_.
 
     Si hay partes importantes de la interfaz de usuario a las que no puedes acceder, es posible que tengas un problema de accesibilidad.

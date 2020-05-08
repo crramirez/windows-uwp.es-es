@@ -1,8 +1,8 @@
 ---
-Description: Obtenga información sobre cómo administrar mediante programación la navegación con el foco con el teclado, el controlador de juegos y las herramientas de accesibilidad en una aplicación de UWP.
-title: Navegación con foco mediante programación con teclado, controlador para juegos y herramientas de accesibilidad
+Description: Obtenga información sobre cómo administrar mediante programación la navegación con el foco con el teclado, el controlador de juegos y las herramientas de accesibilidad en una aplicación de Windows.
+title: Navegación por el enfoque de programación con el teclado, el controlador de juegos y las herramientas de accesibilidad
 label: Programmatic focus navigation
-keywords: teclado, controlador para juegos, control remoto, navegación, estrategia de navegación, entrada, interacción del usuario, accesibilidad, facilidad de uso
+keywords: teclado, dispositivo de juego, control remoto, navegación, estrategia de navegación, entrada, interacción del usuario, accesibilidad, facilidad de uso
 ms.date: 03/19/2018
 ms.topic: article
 pm-contact: miguelrb
@@ -10,29 +10,29 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d919a86a44110d5b3b444fdf47d41f31637ccb6b
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 6b66363588ddad01b05ccc9cc6b3b7912fa21594
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210011"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970150"
 ---
 # <a name="programmatic-focus-navigation"></a>Navegación con foco mediante programación
 
-![Teclado, control remoto y pad-D](images/dpad-remote/dpad-remote-keyboard.png)
+![Teclado, remoto y PAD D](images/dpad-remote/dpad-remote-keyboard.png)
 
-Para mover el foco mediante programación en tu aplicación para UWP, puedes usar el método [FocusManager.TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) o el método [FocusManager.FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_).
+Para desplazar el foco mediante programación en la aplicación Windows, puede usar el método [FocusManager. TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) o el método [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) .
 
-[TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) intenta cambiar el foco del elemento con foco al siguiente elemento activable en la dirección especificada, mientras que [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) recupera el elemento (como [DependencyObject](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject)) que recibirá el foco basado en la dirección especificada de navegación (solo la navegación direccional, no se puede usar para emular la navegación mediante tabulación).
+[TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) intenta cambiar el foco del elemento que tiene el foco al siguiente elemento enfocable en la dirección especificada, mientras que [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) recupera el elemento (como [DependencyObject](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject)) que recibirá el foco en función de la dirección de navegación especificada (solo navegación direccional, no se puede usar para emular la navegación por tabulación).
 
 > [!NOTE]
-> Recomendamos usar el método [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) en lugar de [FindNextFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextFocusableElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) porque FindNextFocusableElement recupera un UIElement, que devuelve null si el siguiente elemento activable no es un UIElement (como un objeto Hyperlink). 
+> Se recomienda usar el método [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) en lugar de [FindNextFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextFocusableElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) porque FindNextFocusableElement recupera un objeto UIElement, que devuelve NULL si el siguiente elemento enfocable no es un elemento UIElement (como un objeto Hyperlink). 
 
-## <a name="find-a-focus-candidate-within-a-scope"></a>Buscar un candidato de foco en un ámbito
+## <a name="find-a-focus-candidate-within-a-scope"></a>Buscar un candidato de foco dentro de un ámbito
 
-Puedes personalizar el comportamiento de navegación con foco para [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) y [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_), incluyendo la búsqueda del siguiente candidato de foco dentro de un árbol específico de la interfaz de usuario o no teniendo en cuenta elementos específicos.
+Puede personalizar el comportamiento de navegación de foco para [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) y [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_), lo que incluye la búsqueda del siguiente candidato de enfoque en un árbol de interfaz de usuario específico o la exclusión de elementos específicos de la consideración.
 
-En este ejemplo se usa un juego TicTacToe para demostrar los métodos [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) y [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_).
+En este ejemplo se usa un juego de TicTacToe para mostrar los métodos [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) y [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) .
 
 ```xaml
 <StackPanel Orientation="Horizontal"
@@ -123,25 +123,25 @@ private void OnKeyDown(object sender, KeyRoutedEventArgs e)
 }
 ```
 
-Usa [FindNextElementOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions) para personalizar más el modo en que se identifican los candidatos de foco. Este objeto proporciona las siguientes propiedades:
+Use [FindNextElementOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions) para personalizar aún más el modo en que se identifican los candidatos. Este objeto proporciona las siguientes propiedades:
 
-- [SearchRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_SearchRoot): define el ámbito de la búsqueda de candidatos de navegación con foco para los elementos secundarios de esta clase DependencyObject. Null indica que se inicie la búsqueda desde la raíz del árbol visual.
+- [SearchRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_SearchRoot) : el ámbito de la búsqueda de candidatos para la navegación del foco a los elementos secundarios de este DependencyObject. Null indica que se va a iniciar la búsqueda desde la raíz del árbol visual.
 
 > [!Important] 
-> Si se aplican una o varias transformaciones a los descendientes de la clase **SearchRoot** que los colocan fuera del área direccional, estos elementos aún se consideran candidatos.
+> Si se aplican una o varias transformaciones a los descendientes de **SearchRoot** que las colocan fuera del área direccional, estos elementos se consideran candidatos.
 
-- [ExclusionRect](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_ExclusionRect): los candidatos de navegación con foco se identifican con un rectángulo delimitador "ficticio" en el que todos los objetos superpuestos se excluyen del foco de navegación. Este rectángulo se usa solo para cálculos y nunca se agrega al árbol visual.
-- [HintRect](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_HintRect): los candidatos de navegación con foco se identifican con un rectángulo delimitador "ficticio" que identifica los elementos con más probabilidades de recibir el foco. Este rectángulo se usa solo para cálculos y nunca se agrega al árbol visual.
-- [XYFocusNavigationStrategyOverride](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_XYFocusNavigationStrategyOverride): la estrategia de navegación con foco empleada a fin de identificar el mejor elemento candidato para recibir el foco.
+- Los candidatos de navegación [ExclusionRect](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_ExclusionRect) se identifican mediante un rectángulo delimitador "ficticio" donde todos los objetos superpuestos se excluyen del foco de navegación. Este rectángulo solo se usa para los cálculos y nunca se agrega al árbol visual.
+- Los candidatos de navegación [HintRect](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_HintRect) se identifican mediante un rectángulo delimitador "ficticio" que identifica los elementos que es más probable que reciban el foco. Este rectángulo solo se usa para los cálculos y nunca se agrega al árbol visual.
+- [XYFocusNavigationStrategyOverride](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_XYFocusNavigationStrategyOverride) : estrategia de navegación de foco que se usa para identificar el mejor elemento candidato para recibir el foco.
 
-En la siguiente imagen se ilustran algunos de estos conceptos. 
+En la imagen siguiente se muestran algunos de estos conceptos. 
 
-Cuando el elemento B tiene el foco, FindNextElement identifica I como el candidato de foco al ir a la derecha. A continuación se muestran los motivos de esto:
-- Debido a la propiedad [HintRect](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_HintRect) en A, la referencia de inicio es A, no B
-- C no es candidato porque MyPanel se ha especificado como [SearchRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_SearchRoot)
-- F no es candidato porque [ExclusionRect](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_ExclusionRect) se solapa con él
+Cuando el elemento B tiene el foco, FindNextElement identifica I como candidato de foco al navegar a la derecha. Las razones para esto son las siguientes:
+- Debido a la [HintRect](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_HintRect) en un, la referencia inicial es A, no a B
+- C no es un candidato porque se ha especificado mi panel como [SearchRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_SearchRoot)
+- F no es un candidato porque la [ExclusionRect](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_ExclusionRect) se superpone
 
-![Personaliza el comportamiento de navegación con foco mediante sugerencias de navegación](images/keyboard/navigation-hints.png)
+![Comportamiento de navegación del foco personalizado con sugerencias de navegación](images/keyboard/navigation-hints.png)
 
 *Comportamiento de navegación del foco personalizado con sugerencias de navegación*
 
@@ -149,13 +149,13 @@ Cuando el elemento B tiene el foco, FindNextElement identifica I como el candida
 
 ### <a name="nofocuscandidatefound-event"></a>Evento NoFocusCandidateFound
 
-El evento [UIElement.NoFocusCandidateFound](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_NoFocusCandidateFound) se desencadena cuando se presionan las teclas Tabulador o de dirección y no hay ningún candidato de foco en la dirección especificada. Este evento no se desencadena para [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_).
+El evento [UIElement. NoFocusCandidateFound](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_NoFocusCandidateFound) se desencadena cuando se presionan las teclas de tabulación o de flecha y no hay ningún candidato de foco en la dirección especificada. Este evento no se desencadena para [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_).
 
-Dado que este es un evento enrutado, se propaga del elemento enfocado a través de los objetos primarios sucesivos a la raíz del árbol de objetos. Esto te permite controlar el evento siempre que sea apropiado.
+Dado que se trata de un evento enrutado, se propaga desde el elemento enfocado hacia arriba a través de los objetos primarios sucesivos hasta la raíz del árbol de objetos. Esto le permite controlar el evento siempre que sea apropiado.
 
 <a name="split-view-code-sample"></a>
 
-Aquí te mostramos cómo una cuadrícula abre [SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview) cuando el usuario intenta mover el foco a la izquierda del control activable situado más a la izquierda (consulta [Diseño para Xbox y televisión](../devices/designing-for-tv.md#navigation-pane)).
+En este caso, se muestra cómo una cuadrícula abre un [SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview) cuando el usuario intenta cambiar el foco a la izquierda del control que tiene el foco más a la izquierda (consulte [diseño de Xbox y TV](../devices/designing-for-tv.md#navigation-pane)).
 
 ```xaml
 <Grid NoFocusCandidateFound="OnNoFocusCandidateFound">
@@ -180,40 +180,40 @@ private void OnNoFocusCandidateFound (
 ```
 
 ### <a name="gotfocus-and-lostfocus-events"></a>Eventos GotFocus y LostFocus
-Los eventos [UIElement.GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) y [UIElement.LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus) se desencadenan cuando un elemento obtiene el foco o pierde el foco, respectivamente. Este evento no se desencadena para [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_).
+Los eventos [UIElement. GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) y [UIElement. LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus) se desencadenan cuando un elemento recibe el foco o pierde el foco, respectivamente. Este evento no se desencadena para [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_).
 
-Dado que estos son eventos enrutados, se propagan del elemento enfocado a través de los objetos primarios sucesivos a la raíz del árbol de objetos. Esto te permite controlar el evento siempre que sea apropiado.
+Dado que se trata de eventos enrutados, se propagan desde el elemento enfocado hasta los objetos primarios sucesivos hasta la raíz del árbol de objetos. Esto le permite controlar el evento siempre que sea apropiado.
 
 ### <a name="gettingfocus-and-losingfocus-events"></a>Eventos GettingFocus y LosingFocus
 
-Los eventos [UIElement.GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) y [UIElement.LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) se activan antes de invocar a los eventos [UIElement.GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) y [UIElement.LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus). 
+Los [eventos UIElement. GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) y [UIElement. LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) se activan antes que los eventos [UIElement. GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) y [UIElement. LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus) respectivos. 
 
-Dado que estos son eventos enrutados, se propagan del elemento enfocado a través de los objetos primarios sucesivos a la raíz del árbol de objetos. Como esto sucede antes de producirse un cambio de foco, puedes redirigir o cancelar el cambio de foco.
+Dado que se trata de eventos enrutados, se propagan desde el elemento enfocado hasta los objetos primarios sucesivos hasta la raíz del árbol de objetos. Como sucede antes de que se produzca un cambio de foco, puede redirigir o cancelar el cambio de foco.
 
-[GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) y [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) son eventos sincrónicos, por lo que el foco no se moverá mientras se propaguen estos eventos. Sin embargo, [GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) y [LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus) son eventos asincrónicos, lo que significa que no hay ninguna garantía de que el foco no se vuelva a mover antes de que se ejecute el controlador.
+[GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) y [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) son eventos sincrónicos, por lo que el foco no se mueve mientras se propaguen estos eventos. Sin embargo, [GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) y [LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus) son eventos asincrónicos, lo que significa que no hay ninguna garantía de que el foco no se mueva de nuevo antes de que se ejecute el controlador.
 
-Si el foco de desplaza por una llamada a [Control.Focus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_Focus_Windows_UI_Xaml_FocusState_), [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) se genera durante la llamada, mientras que [GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) se genera después de la llamada.
+Si el foco se mueve a través de una llamada a [control. Focus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_Focus_Windows_UI_Xaml_FocusState_), [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) se genera durante la llamada, mientras que [GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) se genera después de la llamada.
 
-El destino de navegación con foco se puede cambiar durante los eventos [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) y [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) (antes de que el foco se desplace) por la propiedad [GettingFocusEventArgs.NewFocusedElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.gettingfocuseventargs#Windows_UI_Xaml_Input_GettingFocusEventArgs_NewFocusedElement). Incluso si cambia el destino, el evento aún se propaga y el destino puede cambiar de nuevo.
+El destino de navegación de foco se puede cambiar durante los eventos [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) y [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) (antes de que el foco se mueva) a través de la propiedad [GettingFocusEventArgs. NewFocusedElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.gettingfocuseventargs#Windows_UI_Xaml_Input_GettingFocusEventArgs_NewFocusedElement) . Incluso si se cambia el destino, el evento todavía se propaga y se puede cambiar de nuevo el destino.
 
-Para evitar problemas de reentrada, se lanza una excepción si se intenta mover el foco (con [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) o [Control.Focus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_Focus_Windows_UI_Xaml_FocusState_)) mientras se propagan estos eventos.
+Para evitar problemas de reentrada, se produce una excepción si intenta cambiar el foco (mediante [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) o [control. Focus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_Focus_Windows_UI_Xaml_FocusState_)) mientras se ejecutan estos eventos.
 
-Estos eventos se desencadenan independientemente del motivo del desplazamiento del foco (incluidas la navegación mediante tabulación, la navegación direccional y la navegación mediante programación).
+Estos eventos se desencadenan independientemente de la razón por la que se mueve el foco (incluida la navegación por tabulaciones, la navegación direccional y la navegación mediante programación).
 
 Este es el orden de ejecución de los eventos de foco:
 
-1.  [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) Si el foco se restablece nuevamente en el elemento que perdió el foco o [TryCancel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.losingfocuseventargs#Windows_UI_Xaml_Input_LosingFocusEventArgs_TryCancel) es correcto, no se desencadenarán más eventos.
-2.  [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) Si el foco se restablece nuevamente en el elemento que perdió el foco o [TryCancel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.gettingfocuseventargs#Windows_UI_Xaml_Input_GettingFocusEventArgs_TryCancel) es correcto, no se desencadenarán más eventos.
+1.  [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) Si el foco se restablece de nuevo al elemento que pierde el foco o [TryCancel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.losingfocuseventargs#Windows_UI_Xaml_Input_LosingFocusEventArgs_TryCancel) se realiza correctamente, no se desencadena ningún evento.
+2.  [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) Si el foco se restablece de nuevo al elemento que pierde el foco o [TryCancel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.gettingfocuseventargs#Windows_UI_Xaml_Input_GettingFocusEventArgs_TryCancel) se realiza correctamente, no se desencadena ningún evento.
 3.  [LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus)
-4.  [Primero](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus)
+4.  [GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus)
 
-La siguiente imagen muestra cómo, al pasar de A a la derecha, XYFocus elige B4 como candidato. Luego B4 desencadena el evento GettingFocus, donde ListView tiene la oportunidad de volver a asignar el foco a B3.
+En la imagen siguiente se muestra cómo, cuando se mueve a la derecha desde un, el XYFocus elige B4 como candidato. A continuación, B4 desencadena el evento GettingFocus donde ListView tiene la oportunidad de volver a asignar el foco a B3.
 
-![Cambio del destino de navegación con foco en el evento GettingFocus](images/keyboard/focus-events.png)
+![Cambiar el destino de navegación del foco en el evento GettingFocus](images/keyboard/focus-events.png)
 
 *Cambiar el destino de navegación del foco en el evento GettingFocus*
 
-Aquí te mostraremos cómo controlar el evento [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) y redirigir el foco.
+Aquí se muestra cómo controlar el evento [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) y redirigir el foco.
 
 ```XAML
 <StackPanel Orientation="Horizontal">
@@ -250,7 +250,7 @@ private void OnGettingFocus(UIElement sender, GettingFocusEventArgs args)
 }
 ```
 
-Aquí te mostraremos cómo controlar el evento [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) para [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar) y establecer el foco al cerrarse el menú.
+Aquí se muestra cómo controlar el evento [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) para un control [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar) y establecer el foco cuando se cierra el menú.
 
 ```XAML
 <CommandBar x:Name="MyCommandBar" LosingFocus="OnLosingFocus">
@@ -280,13 +280,13 @@ private void OnLosingFocus(UIElement sender, LosingFocusEventArgs args)
 }
 ```
 
-## <a name="find-the-first-and-last-focusable-element"></a>Buscar el primer y el último elemento activable
+## <a name="find-the-first-and-last-focusable-element"></a>Buscar el primer y último elemento enfocable
 
-Los métodos [FocusManager.FindFirstFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindFirstFocusableElement_Windows_UI_Xaml_DependencyObject_) y [FocusManager.FindLastFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindLastFocusableElement_Windows_UI_Xaml_DependencyObject_) mueven el foco al primer o último elemento activable dentro del ámbito de un objeto (el árbol de elementos de [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) o el árbol de texto de [TextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement)). El ámbito se especifica en la llamada (si el argumento es null, el ámbito es la ventana actual)
+Los métodos [FocusManager. FindFirstFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindFirstFocusableElement_Windows_UI_Xaml_DependencyObject_) y [FocusManager. FindLastFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindLastFocusableElement_Windows_UI_Xaml_DependencyObject_) mueven el foco al primer o último elemento enfocable dentro del ámbito de un objeto (el árbol de elementos de un elemento [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) o el árbol de texto de un elemento [TextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement)). El ámbito se especifica en la llamada (si el argumento es null, el ámbito es la ventana actual).
 
-Si no puede identificarse ningún candidato de foco en el ámbito, se devolverá null.
+Si no se puede identificar ningún candidato de foco en el ámbito, se devuelve NULL.
 
-Aquí mostramos cómo especificar que los botones de un control CommandBar tienen comportamiento direccional de ajuste automático (consulta [Interacciones de teclado](keyboard-interactions.md#popup-ui)).
+Aquí se muestra cómo especificar que los botones de un CommandBar tienen un comportamiento direccional de encapsulado (consulte [interacciones de teclado](keyboard-interactions.md#popup-ui)).
 
 ```XAML
 <CommandBar x:Name="MyCommandBar" LosingFocus="OnLosingFocus">
