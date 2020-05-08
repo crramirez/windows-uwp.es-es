@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 200fe265390d10a12a8e1b3a1abf7cd8164238d6
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 9cd347b115a920c71ca1eb9b5f466adf05c69c64
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258238"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968250"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar el idioma del reconocedor de voz
 
@@ -25,15 +25,15 @@ Obtén información sobre cómo seleccionar un idioma instalado para usarlo en e
 
 Aquí se enumeran los idiomas instalados en un sistema, se identifica cuál es el idioma predeterminado y se selecciona otro idioma de reconocimiento.
 
-**Requisitos previos**
+**Requisitos previos:**
 
-Este tema se basa en [Reconocimiento de voz](speech-recognition.md).
+Este tema se basa en el [reconocimiento de voz](speech-recognition.md).
 
 Debes tener un conocimiento básico del reconocimiento de voz y de las restricciones del reconocimiento.
 
-Si acabas de empezar a desarrollar aplicaciones para la Plataforma universal de Windows (UWP), consulta estos temas para familiarizarte con las tecnologías que te presentamos aquí.
+Si no está familiarizado con el desarrollo de aplicaciones de aplicaciones de Windows, consulte estos temas para familiarizarse con las tecnologías que se describen aquí.
 
--   [Crea tu primera aplicación.](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
+-   [Creación de la primera aplicación](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
 -   Encontrarás más información acerca de los eventos, en [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
 
 **Instrucciones para la experiencia del usuario:**
@@ -56,15 +56,15 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 Los idiomas instalados pueden variar entre dispositivos. Debes comprobar la existencia de un idioma si dependes de él para una restricción concreta.
 
-**Tenga en cuenta**  se requiere un reinicio después de instalar un nuevo paquete de idioma. Se produce una excepción con el código de error SPERR\_\_encuentra (0x8004503a) si el idioma especificado no se admite o no ha terminado de instalarse.
+**Tenga en cuenta**  que es necesario reiniciar después de instalar un nuevo paquete de idioma. Se produce una excepción con el\_código\_de error SPERR no encontrado (0x8004503a) si el idioma especificado no se admite o no ha terminado de instalarse.
 
  
 
 Determina los idiomas admitidos en un dispositivo al comprobar una de las dos propiedades estáticas de la clase [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer):
 
--   [**SupportedTopicLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedtopiclanguages): la colección de objetos de [**lenguaje**](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) que se usan con la gramática de dictado y búsqueda web predefinida.
+-   [**SupportedTopicLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedtopiclanguages): es la colección de objetos [**Language**](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) que se usa con gramáticas predefinidas de dictado y búsqueda en Internet.
 
--   [**SupportedGrammarLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedgrammarlanguages): la colección de objetos de [**idioma**](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) que se usa con una restricción de lista o un archivo de especificación de gramática de reconocimiento de voz (SRGS).
+-   [**SupportedGrammarLanguages**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedgrammarlanguages): La colección de objetos [**Idioma**](https://docs.microsoft.com/uwp/api/Windows.Globalization.Language) que se usa con una restricción de lista o un archivo de Especificación de gramática de reconocimiento de voz (SRGS).
 
 ## <a name="specify-a-language"></a>Especificar un idioma
 
@@ -79,14 +79,14 @@ var language = new Windows.Globalization.Language("en-US");
 var recognizer = new SpeechRecognizer(language); 
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 
 Una restricción de tema puede configurarse mediante la adición de [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint) a la colección [**Restricciones**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) de [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) y, luego, llamando a [**CompileConstraintsAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync). Un [**SpeechRecognitionResultStatus**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus) de **TopicLanguageNotSupported** se devuelve si el reconocedor no se inicializa con un idioma de tema admitido.
 
 Una restricción de lista se configura mediante la adición de [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint) a la colección [**Restricciones**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) de [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) y, luego, llamando a [**CompileConstraintsAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync). No se puede especificar el idioma de una lista personalizada directamente. En su lugar, la lista se procesará mediante el idioma del reconocedor.
 
-Una gramática SRGS es un formato XML estándar abierto representado por la clase [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint). A diferencia de las listas personalizadas, puedes especificar el idioma de la gramática en el marcado SRGS. [**CompileConstraintsAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync) produce un error con un [**SpeechRecognitionResultStatus**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus) de **TopicLanguageNotSupported** si el Reconocedor no se ha inicializado en el mismo idioma que el marcado SRGS.
+Una gramática SRGS es un formato XML estándar abierto representado por la clase [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint). A diferencia de las listas personalizadas, puedes especificar el idioma de la gramática en el marcado SRGS. Se produce un error en [**CompileConstraintsAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync) con un objeto [**SpeechRecognitionResultStatus**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus) de **TopicLanguageNotSupported** si no se inicializa el reconocedor en el mismo idioma que el marcado SRGS.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
@@ -98,9 +98,9 @@ Una gramática SRGS es un formato XML estándar abierto representado por la clas
 
 * [Directrices para el diseño de voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
 
-**Ejemplos**
+**Muestras**
 
-* [Ejemplo de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
+* [Muestra de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  
 
  

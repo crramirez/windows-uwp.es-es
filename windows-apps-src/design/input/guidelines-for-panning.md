@@ -8,35 +8,35 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 945368e27c4f6215d2f5df20d52d916ead3597dd
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: b6e391354b34f00460eb5988f4e03c1ff07a9296
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257953"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970120"
 ---
 # <a name="guidelines-for-panning"></a>Directrices sobre el movimiento panorámico
 
 
 El movimiento panorámico o el desplazamiento permiten a los usuarios navegar dentro de una única vista para mostrar el contenido de la vista que no cabe en la ventanilla. Algunos ejemplos de vistas son la estructura de carpetas de un equipo, una biblioteca de documentos o un álbum de fotos.
 
-> **API importantes**: [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
+> **API importantes**: [**Windows. UI. Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows. UI. Xaml. Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
 
-## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
+## <a name="dos-and-donts"></a>Consejos
 
 
 **Indicadores de movimiento panorámico y barras de desplazamiento**
 
 -   Asegúrate de que el movimiento panorámico y el desplazamiento sean posibles antes de cargar contenido en tu aplicación.
 
--   Haz que queden visibles los indicadores de movimiento panorámico y las barras de desplazamiento para ofrecer indicaciones de ubicación y tamaño. Ocúltalos si ofreces una función de navegación personalizada.
+-   Mostrar indicadores de movimiento panorámico y barras de desplazamiento para proporcionar indicaciones de ubicación y tamaño. Oculte si proporciona una característica de navegación personalizada.
 
-    **Tenga en cuenta**  a diferencia de las barras de desplazamiento estándar, los indicadores de movimiento panorámico son meramente informativos. No se exponen a dispositivos de entrada y no es posible manipularlos de ninguna forma.
+    **Observe**  que, a diferencia de las barras de desplazamiento estándar, los indicadores de movimiento panorámico son meramente informativos. No se exponen a dispositivos de entrada y no es posible manipularlos de ninguna forma.
 
      
 
-**Movimiento panorámico de un solo eje (desbordamiento unidimensional)**
+**Movimiento panorámico en un solo eje (desbordamiento de una dimensión)**
 
 -   Usa movimiento panorámico en un eje para las áreas de contenido que se extienden más allá de un límite de la ventanilla (vertical u horizontal).
 
@@ -44,7 +44,7 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
     -   Movimiento panorámico horizontal para una cuadrícula de elementos.
 -   No uses puntos de acoplamiento obligatorios con el movimiento panorámico en un solo eje si un usuario tiene que contar con la posibilidad de realizar movimientos panorámicos y detenerse entre puntos de acoplamiento. Los puntos de acoplamiento obligatorios garantizan que el usuario se detendrá en un punto de acoplamiento. Usa, en cambio, puntos de acoplamiento de proximidad.
 
-**Movimiento de forma libre (desbordamiento bidimensional)**
+**Movimiento panorámico de forma libre (desbordamiento en dos dimensiones)**
 
 -   Usa movimiento panorámico en dos ejes para las áreas de contenido que se extienden más allá de ambos límites de la ventanilla (vertical y horizontal).
 
@@ -58,7 +58,7 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
     -   Coloca un punto de acoplamiento en cada límite lógico.
     -   Dimensiona o escala cada elemento de modo que se ajuste a la vista.
 
-**Puntos lógicos y clave**
+**Puntos clave y lógicos**
 
 -   Usa puntos de acoplamiento de proximidad si hay puntos clave o sitios lógicos en el contenido en los que el usuario probablemente se detendrá. Por ejemplo, un encabezado de sección.
 
@@ -66,7 +66,7 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 
 **Encadenamiento de contenido incrustado o anidado**
 
--   Usa el movimiento panorámico en un solo eje (generalmente, el horizontal) y los diseños de columna para contenido de texto y basado en cuadrículas. En estos casos, por lo general, el contenido se encapsula y fluye de columna en columna y permite que la experiencia del usuario sea coherente y pueda detectarse en las aplicaciones para UWP.
+-   Usa el movimiento panorámico en un solo eje (generalmente, el horizontal) y los diseños de columna para contenido de texto y basado en cuadrículas. En estos casos, el contenido normalmente se ajusta y fluye de forma natural de la columna a la columna y mantiene la experiencia del usuario coherente y reconocible en todas las aplicaciones de Windows.
 
 -   No uses regiones incrustadas que se puedan mover panorámicamente para mostrar texto o listas de elementos. Como los indicadores de movimiento panorámico y las barras de desplazamiento se muestran solamente cuando se detecta el contacto de entrada en la región, no se trata de una experiencia de usuario intuitiva ni que se pueda detectar.
 
@@ -76,10 +76,10 @@ El movimiento panorámico o el desplazamiento permiten a los usuarios navegar de
 
 ## <a name="additional-usage-guidance"></a>Instrucciones de uso adicionales
 
-El movimiento panorámico de forma táctil, mediante un gesto de deslizar o deslizar rápidamente con uno o varios dedos, es como desplazarse con el mouse. La interacción de movimiento panorámico es más parecida a la acción de girar la rueda del mouse o deslizar el cuadro de desplazamiento que a la de hacer clic en la barra de desplazamiento. A menos que se realice una distinción en una API o que alguna de las interfaces de usuario de Windows específicas del dispositivo requiera, simplemente hacemos referencia a ambas interacciones como movimiento panorámico.
+El movimiento panorámico de forma táctil, mediante un gesto de deslizar o deslizar rápidamente con uno o varios dedos, es como desplazarse con el mouse. La interacción de movimiento panorámico es más parecida a la acción de girar la rueda del mouse o deslizar el cuadro de desplazamiento que a la de hacer clic en la barra de desplazamiento. A menos que se establezca una distinción en una API o que lo requiera la interfaz de usuario de Windows específica de algún dispositivo, simplemente se hace referencia a las dos interacciones como movimiento panorámico.
 
 > <div id="main">
-> <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong> De forma predeterminada, en lugar de la selección de texto, un lápiz activo ahora se desplaza/gira en aplicaciones para UWP (como Touch, Touchpad y pluma pasiva).  
+> <strong>Windows 10 Fall Creators Update: cambio de comportamiento</strong> De forma predeterminada, en lugar de la selección de texto, un lápiz activo ahora se desplaza/gira en las aplicaciones de Windows (como Touch, Touchpad y pluma pasiva).  
 > Si la aplicación depende del comportamiento anterior, puedes invalidar el desplazamiento de lápiz y revertir al comportamiento anterior. Para obtener más información, consulta el tema de referencia de API <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Clase ScrollViewer</a>.
 > </div>
 
@@ -98,7 +98,7 @@ El deslizamiento implica mover los dedos lentamente en la dirección del movimie
 
 **Tipos de movimiento panorámico**
 
-Windows 8 admite tres tipos de movimiento panorámico:
+Windows 8 admite tres tipos de movimiento panorámico:
 
 -   Eje único: el movimiento panorámico es posible solo en una dirección (horizontal o vertical).
 -   Guías: el movimiento panorámico es posible en todas las direcciones. Sin embargo, una vez que el usuario cruza un umbral de distancia en una dirección específica, el movimiento panorámico queda restringido a ese eje.
@@ -108,14 +108,14 @@ Windows 8 admite tres tipos de movimiento panorámico:
 
 La experiencia de interacción para el movimiento panorámico es exclusiva del dispositivo de entrada, aunque sigue proporcionando funciones similares.
 
-**Regiones desplazables** Los comportamientos de las regiones desplazables se exponen a los desarrolladores de aplicaciones para UWP que usan JavaScript en el momento del diseño a través de las hojas de estilo CSS.
+**Regiones panorámicas** Los comportamientos de regiones panorámicas se exponen a la aplicación de Windows con desarrolladores de JavaScript en tiempo de diseño a través de Hojas de estilo CSS (CSS).
 
 Hay dos modos de visualización de movimiento panorámico en función del dispositivo de entrada detectado:
 
 -   Indicadores de movimiento panorámico para la entrada táctil.
 -   Barras de desplazamiento para otros dispositivos de entrada, como el mouse, el panel táctil, el teclado y el lápiz.
 
-**Tenga en cuenta**  los indicadores de movimiento panorámico solo están visibles cuando el contacto táctil está dentro de la región panorámica. Del mismo modo, la barra de desplazamiento solo se ve cuando el cursor del mouse, el cursor del lápiz o la pluma, o el foco del teclado se encuentran dentro de la región desplazable.
+**Nota:**  los indicadores de movimiento panorámico solo están visibles cuando el contacto táctil está dentro de la región panorámica. Del mismo modo, la barra de desplazamiento solo se ve cuando el cursor del mouse, el cursor del lápiz o la pluma, o el foco del teclado se encuentran dentro de la región desplazable.
 
  
 
@@ -125,8 +125,8 @@ En el diagrama siguiente se muestran dos áreas que pueden moverse panorámicame
 
 ![imagen en la que se muestran dos áreas que pueden moverse panorámicamente con diferentes longitudes y sus correspondientes indicadores de movimiento panorámico.](images/scrolling-indicators.png)
 
-**Comportamientos de movimiento panorámico**
-**Puntos de acoplamiento** El movimiento panorámico con el gesto de deslizar rápidamente agrega un comportamiento de inercia a la interacción cuando se levanta el contacto táctil. Con la inercia, el contenido se sigue desplazando hasta alcanzar algún umbral de distancia sin la entrada directa del usuario. Usa puntos de acoplamiento para modificar el comportamiento de inercia.
+**Panning behaviors**
+Los**puntos de acoplamiento** de los comportamientos de movimiento panorámico con el gesto de deslizar rápidamente introducen el comportamiento de inercia en la interacción cuando se levanta el contacto táctil. Con la inercia, el contenido se sigue desplazando hasta alcanzar algún umbral de distancia sin la entrada directa del usuario. Usa puntos de acoplamiento para modificar el comportamiento de inercia.
 
 Los puntos de acoplamiento especifican paradas lógicas en el contenido de tu aplicación. Desde el punto de vista cognitivo, los puntos de acoplamiento actúan como un mecanismo de paginación para el usuario y minimizan la fatiga que producen los gestos excesivos de deslizar y deslizar rápidamente en grandes regiones desplazables. Con ellos, puedes controlar las entradas del usuario imprecisas y asegurarte de que se muestre en la ventanilla un subconjunto específico de contenido o información clave.
 
@@ -170,30 +170,22 @@ Esta guía también es útil para aplicaciones, como álbumes de fotografías o 
 
 ## <a name="related-articles"></a>Artículos relacionados
 
+- [Interacciones del usuario personalizadas](https://docs.microsoft.com/windows/uwp/design/layout/index)
+- [Optimizar ListView y GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
+- [Accesibilidad de teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
 
-* [Interacciones del usuario personalizadas](https://docs.microsoft.com/windows/uwp/design/layout/index)
-* [Optimizar ListView y GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
-* [Accesibilidad de teclado](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
-
-**Ejemplos**
-* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-* [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+**Muestras**
+- [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Ejemplo de entrada de latencia baja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **Ejemplos de archivo**
-* [Entrada: ejemplo de eventos de entrada de usuario de XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [Entrada: ejemplo de prueba de posicionamiento táctil](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
-* [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [Entrada: ejemplo de entrada de lápiz simplificada](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
-* [Entrada: ejemplo de gestos de Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
-* [Entrada: ejemplo de manipulaciones y gestos (C++)](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
-* [Ejemplo de entrada táctil de DirectX](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
- 
-
- 
-
-
-
-
+- [Entrada: muestra de eventos de entrada de usuario de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20XAML%20user%20input%20events%20sample)
+- [Entrada: muestra de funcionalidades del dispositivo](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))
+- [Entrada: muestra de prueba de acceso táctil](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
+- [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
+- [Entrada: ejemplo de entrada de lápiz simplificada](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
+- [Entrada: muestra de gestos de Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [Entrada: ejemplo de manipulaciones y gestos](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
+- [Muestra de entrada táctil de DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))

@@ -1,55 +1,55 @@
 ---
 title: Falta de API de .NET en Unity y UWP
-description: Obtén información sobre las API de .NET que faltan al compilar juegos de UWP en Unity y las soluciones de problemas comunes.
+description: Obtenga información sobre las API de .NET que faltan al compilar juegos para UWP en Unity y soluciones alternativas para problemas comunes.
 ms.assetid: 28A8B061-5AE8-4CDA-B4AB-2EF0151E57C1
 ms.date: 02/21/2018
 ms.topic: article
-keywords: windows 10, uwp, juegos, .net, unity
+keywords: Windows 10, UWP, juegos, .net, Unity
 ms.localizationpriority: medium
-ms.openlocfilehash: df93fbeb3a879a84873827a5ead926f96b02adcc
-ms.sourcegitcommit: 8ee0752099170aaf96c7cb105f7cc039b6e7ff06
+ms.openlocfilehash: 8c7f906a19ddbabea85b0426aca9e41a62327e36
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80968061"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729804"
 ---
 # <a name="missing-net-apis-in-unity-and-uwp"></a>Falta de API de .NET en Unity y UWP
 
-Al crear un juego para UWP con. NET, es posible que algunas API que podrías usar, en el editor de Unity o para un juego de PC independiente, no estén presentes para UWP. Eso es porque .NET para aplicaciones para UWP incluye un subconjunto de los tipos proporcionados en el conjunto completo de .NET Framework para cada espacio de nombres.
+Al compilar un juego para UWP con .NET, es posible que algunas API que puede usar en el editor de Unity o en un juego de equipos independiente no estén presentes para UWP. Esto se debe a que .NET para aplicaciones para UWP incluye un subconjunto de los tipos proporcionados en el .NET Framework completo para cada espacio de nombres.
 
-Además, algunos motores de juego usan distintos tipos de .NET que no son totalmente compatibles con .NET para UWP, como Mono de Unity. Por lo tanto, cuando estás escribiendo tu juego, todo podría funcionar bien en el editor, pero cuando vayas a compilar para UWP, es posible que obtengas errores como este: **El tipo o el espacio de nombres 'Formateadores' no existen en el espacio de nombres 'System.Runtime.Serialization' (¿tal vez te falta una referencia de ensamblado?)**
+Además, algunos motores de juegos usan diferentes tipos de .NET que no son totalmente compatibles con .NET para UWP, como mono de Unity. Por lo tanto, cuando se escribe el juego, todo podría funcionar correctamente en el editor, pero al ir a la compilación de UWP, podría obtenerse un error similar al siguiente: **el tipo o el espacio de nombres ' formateadores ' no existe en el espacio de nombres ' System. Runtime. Serialization ' (¿falta una referencia de ensamblado?)**
 
-Afortunadamente, Unity proporciona algunas de estas API que faltan como métodos de extensión y tipos de sustitución, que se describen en [Plataforma Universal de Windows: tipos de .NET que faltan en el back-end de scripting de . NET](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html). Sin embargo, si la funcionalidad que necesitas no está aquí, [Introducción a .NET para aplicaciones de Windows 8.x](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) describe formas de convertir el código para usar WinRT o .NET para API de UWP. (Trata de Windows 8, pero también es aplicable a las aplicaciones para UWP de Windows 10).
+Afortunadamente, Unity proporciona algunas de estas API que faltan como métodos de extensión y tipos de reemplazo, que se describen en [plataforma universal de Windows: faltan tipos de .net en el back-end de scripting de .net](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html). Sin embargo, si la funcionalidad que necesita no está aquí, la [información general sobre las aplicaciones de .net para Windows 8. x](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) describe las formas en que puede convertir el código para usar WinRT o .net para las api de Windows Runtime. (Describe Windows 8, pero también es aplicable a las aplicaciones para UWP de Windows 10).
 
-## <a name="net-standard"></a>.NET estándar
+## <a name="net-standard"></a>.NET Standard
 
-Para comprender por qué algunas API podrían no funcionar, es importante comprender los distintos tipos de .NET y cómo UWP implementa .NET. La [.NET estándar](https://docs.microsoft.com/dotnet/standard/net-standard) es una especificación formal de las API de .NET que está diseñada para ser multiplataforma y unificar los diferentes tipos .NET. Cada implementación de .NET admite una versión determinada de .NET estándar. Puedes ver una tabla de los estándares y las implementaciones en [Soporte técnico de implementación de .NET](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support).
+Para comprender por qué algunas API pueden no funcionar, es importante comprender los distintos tipos de .NET y cómo implementa UWP .NET. El [.net Standard](https://docs.microsoft.com/dotnet/standard/net-standard) es una especificación formal de las API de .net que está pensada para ser multiplataforma y unificar los distintos tipos de .net. Cada implementación de .NET admite una versión determinada del .NET Standard. Puede ver una tabla de estándares e implementaciones en [compatibilidad con la implementación de .net](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support).
 
-Cada versión del SDK de UWP se ajusta a un nivel diferente de .NET estándar. Por ejemplo, el SDK 16299 (la Fall Creators Update) admite .NET 2.0 estándar.
+Cada versión del SDK de UWP se ajusta a un nivel diferente de .NET Standard. Por ejemplo, el SDK de 16299 (Fall Creators Update) admite .NET Standard 2,0.
 
-Si quieres saber si una API de .NET determinada se admite en la versión UWP que te interesa, puedes comprobar la [Referencia de API de .NET estándar](https://docs.microsoft.com/dotnet/api/index?view=netstandard-2.0) y seleccionar la versión de .NET estándar que es compatible con esa versión de UWP.
+Si desea saber si se admite una determinada API de .NET en la versión de UWP a la que está destinada, puede consultar la referencia de la [API de .net Standard](https://docs.microsoft.com/dotnet/api/index?view=netstandard-2.0) y seleccionar la versión de la .net Standard compatible con esa versión de UWP.
 
-## <a name="scripting-backend-configuration"></a>Configuración de back-end de scripting
+## <a name="scripting-backend-configuration"></a>Scripting de configuración de back-end
 
-Lo primero que debes hacer si tienes problemas al compilar para UWP es comprobar la **Configuración del reproductor** (**Archivo > Configuración de compilación**, selecciona **Plataforma Universal de Windows** y después **Configuración del reproductor**). En **Otras opciones de configuración > Configuración**, los tres primeros puntos de la lista desplegable (**Versión de tiempo de ejecución de scripting**, **Back-end de scripting** y **Nivel de compatibilidad de Api**) son opciones de configuración importantes a considerar.
+Lo primero que debe hacer si tiene problemas para compilar para UWP es comprobar la **configuración del reproductor** (**archivos > configuración de compilación**, seleccionar **plataforma universal de Windows**y, después, **configuración del reproductor**). En **otros valores > configuración**, las tres primeras listas desplegables (**versión del tiempo de ejecución del script**, **back-end de scripting**y **nivel de compatibilidad de API**) son importantes que se deben tener en cuenta.
 
-La **Versión de tiempo de ejecución de scripting** es lo que usa el back-end de scripting de Unity que te permite obtener la versión equivalente (aproximada) de soporte técnico de .NET Framework que elijas. Sin embargo, ten en cuenta que no todas las API de dicha versión de .NET Framework serán compatibles, solo aquellas de la versión de .NET estándar a la que está orientada la UWP.
+La **versión de scripting en tiempo de ejecución** es lo que el back-end de scripting de Unity usa, lo que le permite obtener la versión equivalente (aproximadamente) de .NET Framework soporte que elija. Sin embargo, tenga en cuenta que no se admitirán todas las API de esa versión de .NET Framework, solo las de la versión de .NET Standard de destino de UWP.
 
-A menudo, con las nuevas versiones. NET, se agregan más API a .NET estándar, que te podrían permitir usar el mismo código en modos independiente y UWP. Por ejemplo, el espacio de nombres [System.Runtime.Serialization.Json](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json) se introdujo en .NET 2.0 estándar. Si estableces la **Versión de tiempo de ejecución de scripting** en **Equivalentes de .NET 3.5** (que se orienta a una versión anterior de . NET estándar), obtendrás un error al intentar usar la API; cambia a **Equivalente a .NET 4.6** (que es compatible con .NET 2.0 estándar) y la API funcionará.
+A menudo con las nuevas versiones de .NET, se agregan más API a .NET Standard que pueden permitirle usar el mismo código en la plataforma independiente y en UWP. Por ejemplo, el espacio de nombres [System. Runtime. Serialization. JSON](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json) se presentó en .net Standard 2,0. Si establece la **versión del tiempo de ejecución de scripting** en **.net 3,5 equivalente** (que tiene como destino una versión anterior del .net Standard), obtendrá un error al intentar usar la API; Cambie al **equivalente de .net 4,6** (que admite .net Standard 2,0) y la API funcionará.
 
-El **back-end de scripting** puede ser **.NET** o **IL2CPP**. En este tema, supondremos que has elegido **.NET**, ya que es donde se producen los problemas que se tratan aquí. Para más información, consulta [Back-end de scripting](https://docs.unity3d.com/Manual/windowsstore-scriptingbackends.html).
+El **back-end de scripting** puede ser **.net** o **IL2CPP**. En este tema, se supone que ha elegido **.net**, ya que es donde surgen los problemas descritos aquí. Consulte [scripting back-ends](https://docs.unity3d.com/Manual/windowsstore-scriptingbackends.html) para obtener más información.
 
-Por último, debes establecer el **Nivel de compatibilidad de api** a la versión de .NET en la que quieras que tu juego pueda ejecutarse. Este debe coincidir con la **Versión de tiempo de ejecución de scripting**.
+Por último, debe establecer el **nivel de compatibilidad** de la API en la versión de .net en la que desea que se ejecute el juego. Debe coincidir con la **versión del tiempo de ejecución del script**.
 
-En general, para **Versión de tiempo de ejecución de scripting** y **Nivel de compatibilidad de api**, debes seleccionar la versión más reciente disponible con el fin de tener mayor compatibilidad con .NET Framework y, por lo tanto, tener la posibilidad de usar más API de .NET.
+En general, para la **versión del tiempo de ejecución de script** y el nivel de compatibilidad de la **API**, debe seleccionar la última versión disponible para tener más compatibilidad con el .NET Framework y, por tanto, permitirle usar más API de .net.
 
-![Configuración: Versión de tiempo de ejecución de scripting; Back-end de scripting; Nivel de compatibilidad de api](images/missing-dot-net-apis-in-unity-1.png)
+![Configuración: versión de scripting en tiempo de ejecución; Back-end de scripting; Nivel de compatibilidad de API](images/missing-dot-net-apis-in-unity-1.png)
 
 ## <a name="platform-dependent-compilation"></a>Compilación dependiente de la plataforma
 
-Si vas a crear tu juego de Unity para varias plataformas, incluyendo la UWP, puede que quieras usar una compilación dependiente de la plataforma para asegurarte de que solo se ejecute código destinado a UWP cuando se compile el juego como una UWP. De esta forma, puedes usar el conjunto completo de .NET Framework para escritorios independientes y otras plataformas, y las API WinRT para UWP, sin obtener errores de compilación.
+Si va a compilar el juego Unity para varias plataformas, incluido UWP, querrá usar la compilación dependiente de la plataforma para asegurarse de que el código destinado a UWP solo se ejecuta cuando el juego se compila como una UWP. De este modo, puede usar el .NET Framework completo para el escritorio independiente y otras plataformas, y las API de WinRT para UWP, sin tener que obtener errores de compilación.
 
-Usa las siguientes directivas para compilar solo el código solo cuando se ejecute como una aplicación para UWP:
+Use las siguientes directivas para compilar solo el código cuando se ejecuta como una aplicación de UWP:
 
 ```csharp
 #if NETFX_CORE
@@ -60,17 +60,17 @@ Usa las siguientes directivas para compilar solo el código solo cuando se ejecu
 ```
 
 > [!NOTE]
-> `NETFX_CORE` solo está pensado para comprobar si está compilando C# código en el back-end de scripting de .net. Si usa un back-end de scripting diferente, como IL2CPP, use [`ENABLE_WINMD_SUPPORT`](https://docs.unity3d.com/Manual/windowsstore-code-snippets.html) en su lugar.
+> `NETFX_CORE`solo está pensado para comprobar si está compilando código C# en el back-end de scripting de .NET. Si usa un back-end de scripting diferente, como IL2CPP, use [`ENABLE_WINMD_SUPPORT`](https://docs.unity3d.com/Manual/windowsstore-code-snippets.html) en su lugar.
 
-Para obtener una lista completa de directivas de compilación dependientes de la plataforma, consulta [Compilación dependiente de la plataforma](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
+Para obtener la lista completa de las directivas de compilación dependientes de la plataforma, consulte [compilación dependiente](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)de la plataforma.
 
-## <a name="common-issues-and-workarounds"></a>Problemas y soluciones habituales
+## <a name="common-issues-and-workarounds"></a>Problemas comunes y soluciones alternativas
 
-Los escenarios siguientes describen problemas comunes que pueden surgir donde faltan las API de .NET en el subconjunto UWP y las formas intentar resolverlos.
+En los siguientes escenarios se describen los problemas comunes que pueden surgir cuando faltan las API de .NET en el subconjunto de UWP y las maneras de desplazarse por ellas.
 
-### <a name="data-serialization-using-binaryformatter"></a>Serialización de datos mediante BinaryFormatter
+### <a name="data-serialization-using-binaryformatter"></a>Serialización de datos con BinaryFormatter
 
-Es habitual que los juegos serialicen datos de guardado, para que los jugadores puedan manipularlos fácilmente. Sin embargo, [BinaryFormatter](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.formatters.binary.binaryformatter), que serializa un objeto en binario, no está disponible en versiones anteriores de .NET estándar (anteriores a 2.0). Considera el uso de [XmlSerializer](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer) o [DataContractJsonSerializer](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer) en su lugar.
+Es habitual que los juegos serialicen los datos guardados para que los jugadores no puedan manipularlos fácilmente. Sin embargo, [BinaryFormatter](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.formatters.binary.binaryformatter), que serializa un objeto en binario, no está disponible en versiones anteriores del .net Standard (anterior a 2,0). Considere la posibilidad de usar [XmlSerializer](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer) o [DataContractJsonSerializer](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer) en su lugar.
 
 ```csharp
 private void Save()
@@ -90,17 +90,17 @@ private void Save()
 
 ### <a name="io-operations"></a>operaciones de E/S
 
-Algunos tipos del espacio de nombres [System.IO](https://docs.microsoft.com/dotnet/api/system.io), como [FileStream](https://docs.microsoft.com/dotnet/api/system.io.filestream), no están disponibles en versiones anteriores de .NET estándar. Sin embargo, Unity proporciona los tipos de [Directorio](https://docs.microsoft.com/dotnet/api/system.io.directory), [Archivo](https://docs.microsoft.com/dotnet/api/system.io.file) y **FileStream** para que puedas usarlos en tu juego.
+Algunos tipos del espacio de nombres [System.IO](https://docs.microsoft.com/dotnet/api/system.io) , como [FileStream](https://docs.microsoft.com/dotnet/api/system.io.filestream), no están disponibles en versiones anteriores de la .net Standard. Sin embargo, Unity proporciona los tipos de [directorio](https://docs.microsoft.com/dotnet/api/system.io.directory), [archivo](https://docs.microsoft.com/dotnet/api/system.io.file)y **FileStream** para poder usarlos en el juego.
 
-Como alternativa, puedes usar las API de [Windows.Storage](https://docs.microsoft.com/uwp/api/Windows.Storage), que solo están disponibles para aplicaciones para UWP. Sin embargo, estas API restringen la aplicación a escribir en su almacenamiento específico y no le conceden libre acceso al sistema de archivos completo. Para obtener más información, consulta [Archivos, carpetas y bibliotecas](https://docs.microsoft.com/windows/uwp/files/).
+Como alternativa, puede usar las API de [Windows. Storage](https://docs.microsoft.com/uwp/api/Windows.Storage) , que solo están disponibles para las aplicaciones de UWP. Sin embargo, estas API restringen la aplicación a escribir en su almacenamiento específico y no proporcionan acceso gratuito a todo el sistema de archivos. Consulte [archivos, carpetas y bibliotecas](https://docs.microsoft.com/windows/uwp/files/) para obtener más información.
 
-Un aspecto importante es que el método [Cerrar](https://docs.microsoft.com/dotnet/api/system.io.stream.close) solo está disponible en .NET 2.0 estándar y posteriores (aunque Unity proporciona un método de extensión). En su lugar, usa [Disponer](https://docs.microsoft.com/dotnet/api/system.io.stream.dispose).
+Una nota importante es que el método [Close](https://docs.microsoft.com/dotnet/api/system.io.stream.close) solo está disponible en .net Standard 2,0 y versiones posteriores (aunque Unity proporciona un método de extensión). Use [Dispose](https://docs.microsoft.com/dotnet/api/system.io.stream.dispose) en su lugar.
 
 ### <a name="threading"></a>Subprocesos
 
-Algunos tipos de los espacios de nombres [System.Threading](https://docs.microsoft.com/dotnet/api/system.threading), como [ThreadPool](https://docs.microsoft.com/dotnet/api/system.threading.threadpool), no están disponibles en versiones anteriores de .NET estándar. En estos casos, puedes usar en su lugar el espacio de nombres [Windows.System.Threading](https://docs.microsoft.com/uwp/api/windows.system.threading).
+Algunos tipos de los espacios de nombres [System. Threading](https://docs.microsoft.com/dotnet/api/system.threading) , como [ThreadPool](https://docs.microsoft.com/dotnet/api/system.threading.threadpool), no están disponibles en versiones anteriores del .net Standard. En estos casos, puede usar el espacio de nombres [Windows. System. Threading](https://docs.microsoft.com/uwp/api/windows.system.threading) en su lugar.
 
-Aquí te mostramos cómo puedes controlar los subprocesos en un juego de Unity, usando la compilación dependiente de la plataforma para prepararte para plataformas UWP y no UWP:
+Aquí se muestra cómo puede controlar los subprocesos en un juego de Unity mediante la compilación dependiente de la plataforma para preparar las plataformas UWP y que no son de UWP:
 
 ```csharp
 private void UsingThreads()
@@ -115,9 +115,9 @@ private void UsingThreads()
 
 ### <a name="security"></a>Seguridad
 
-Algunos de los espacios de nombres **System.Security.** *, como [System.Security.Cryptography.X509Certificates](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0), no están disponibles al compilar un juego Unity para UWP. En estos casos, usa la API **Windows.Security.** *, que abarca gran parte de la misma funcionalidad.
+Parte de **System. Security.** * los espacios de nombres, como [System. Security. Cryptography. X509Certificates](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0), no están disponibles al compilar un juego de Unity para UWP. En estos casos, use **Windows. Security.** * API, que cubren gran parte de la misma funcionalidad.
 
-El siguiente ejemplo simplemente obtiene los certificados de un almacén de certificados con el nombre proporcionado:
+En el siguiente ejemplo se obtienen simplemente los certificados de un almacén de certificados con el nombre dado:
 
 ```cs
 private async void GetCertificatesAsync(string certStoreName)
@@ -134,13 +134,13 @@ private async void GetCertificatesAsync(string certStoreName)
     }
 ```
 
-Para obtener más información acerca de las API de seguridad WinRT, consulta [Seguridad](https://docs.microsoft.com/windows/uwp/security/).
+Consulte [seguridad](https://docs.microsoft.com/windows/uwp/security/) para obtener más información sobre el uso de las API de seguridad de WinRT.
 
-### <a name="networking"></a>Funciones de red
+### <a name="networking"></a>Redes
 
-Algunos de los espacios de nombres **System&period;Net.** *, como [System.Net.Mail](https://docs.microsoft.com/dotnet/api/system.net.mail?view=netstandard-2.0), tampoco están disponibles al compilar un juego Unity para UWP. Para la mayoría de estas API, usa las correspondientes API **Windows.Networking.** * y **Windows.Web.** * WinRT para obtener una funcionalidad similar. Consulta [Servicios web y redes](https://docs.microsoft.com/windows/uwp/networking/) para obtener más información.
+Parte de la **red&period;del sistema.** * los espacios de nombres, como [System .net. mail](https://docs.microsoft.com/dotnet/api/system.net.mail?view=netstandard-2.0), tampoco están disponibles al compilar un juego Unity para UWP. Para la mayoría de estas API, use el correspondiente **Windows. networking.** * y **Windows. Web.** * API de WinRT para obtener una funcionalidad similar. Vea [redes y servicios web](https://docs.microsoft.com/windows/uwp/networking/) para obtener más información.
 
-En el caso de **System.Net.Mail**, usa el espacio de nombres [Windows.ApplicationModel.Email](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email). Consulta [Enviar correo electrónico](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) para obtener más información.
+En el caso de **System .net. mail**, use el espacio de nombres [Windows. ApplicationModel. email](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email) . Consulte [envío de correo electrónico](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) para obtener más información.
 
 ## <a name="see-also"></a>Vea también
 

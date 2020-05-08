@@ -1,5 +1,5 @@
 ---
-Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción de usuario intuitivas y distintivas, que estén optimizadas para la entrada táctil pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
+Description: Cree aplicaciones de aplicaciones de Windows con experiencias de interacción de usuario intuitivas y distintivas que estén optimizadas para la funcionalidad táctil pero que sean coherentes funcionalmente en todos los dispositivos de entrada.
 title: Interacciones táctiles
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
@@ -8,12 +8,12 @@ keywords: táctil, función táctil,puntero,entrada,interacción del usuario
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2277be481326aa5ae5a76c900160108bcd29fb84
-ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
+ms.openlocfilehash: 99926de0ea26b0cef9184756add777a39330d934
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78256148"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970260"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 
@@ -22,12 +22,12 @@ Diseña tu aplicación teniendo en mente que el principal método de entrada de 
 
 Pero ten presente que una interfaz de usuario optimizada para entrada táctil no es siempre mejor que una interfaz de usuario tradicional. Ambas ofrecen ventajas y desventajas exclusivas de la tecnología y la aplicación en cuestión. En el paso a una interfaz de usuario táctil, es importante comprender las diferencias principales entre el toque, el panel táctil, el lápiz/lápiz, el mouse y la entrada del teclado.
 
-> **API importantes**: [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
+> **API importantes**: [**Windows. UI. Xaml. Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input), [**Windows. UI. Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows. Devices. Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
 
 
 Muchos dispositivos tienen pantallas multitoque que admiten el uso de uno o más dedos (o contactos táctiles) como entrada. Los contactos táctiles y su movimiento, se interpretan como gestos táctiles y manipulaciones para admitir distintas interacciones del usuario.
 
-La Plataforma universal de Windows (UWP) incluye una serie de mecanismos diferentes para administrar la entrada táctil que te permiten crear una experiencia envolvente que los usuarios de tus aplicaciones pueden explorar con confianza. Aquí, describiremos los conceptos básicos del uso de la entrada táctil en una aplicación para UWP.
+La aplicación de Windows incluye una serie de mecanismos distintos para controlar la entrada táctil, lo que le permite crear una experiencia envolvente que los usuarios pueden explorar con confianza. Aquí se describen los aspectos básicos del uso de la entrada táctil en una aplicación de Windows.
 
 Las interacciones táctiles requieren tres cosas:
 
@@ -53,17 +53,17 @@ Al proporcionar experiencias de interacción únicas y distintivas para todos lo
 
 ## <a name="compare-touch-interaction-requirements"></a>Compara los requisitos de la interacción táctil
 
-En la tabla siguiente, se muestran algunas de las diferencias entre los dispositivos de entrada que debes tener en cuenta al diseñar aplicaciones para UWP optimizadas para entrada táctil.
+En la tabla siguiente se muestran algunas de las diferencias entre los dispositivos de entrada que se deben tener en cuenta al diseñar aplicaciones de Windows con optimización táctil.
 
 <table>
 <tbody><tr><th>Factor</th><th>Interacciones táctiles</th><th>Interacciones con mouse, teclado, pluma/lápiz</th><th>Panel táctil</th></tr>
-<tr><td rowspan="3">Precision</td><td>El área de contacto de la punta de un dedo es mayor que la de una sola coordenada x-y, lo que aumenta las probabilidades de activación no intencional de comandos.</td><td>El mouse y la pluma/lápiz suministran una coordenada x-y precisa.</td><td>Es igual al mouse.</td></tr>
+<tr><td rowspan="3">Precisión</td><td>El área de contacto de la punta de un dedo es mayor que la de una sola coordenada x-y, lo que aumenta las probabilidades de activación no intencional de comandos.</td><td>El mouse y la pluma/lápiz suministran una coordenada x-y precisa.</td><td>Es igual al mouse.</td></tr>
 <tr><td>La forma del área de contacto cambia durante el movimiento.  </td><td>Los movimientos de mouse y los trazos de la pluma/lápiz suministran coordenadas x-y precisas. El foco del teclado es explícito.</td><td>Es igual al mouse.</td></tr>
 <tr><td>No hay cursor de mouse para ayudar con la selección del destino.</td><td>El cursor del mouse, el cursor de la pluma/lápiz y el foco del teclado ayudan a seleccionar el destino.</td><td>Es igual al mouse.</td></tr>
 <tr><td rowspan="3">Anatomía humana</td><td>Los movimientos de los dedos no son precisos, ya que es difícil realizar un movimiento en línea recta con uno o más dedos. Esto se debe a la curvatura de las articulaciones de la mano y a la cantidad de articulaciones involucradas en el movimiento.</td><td>Es más fácil ejecutar un movimiento en línea recta con mouse o pluma/lápiz porque la mano que los controla recorre una distancia física menor que el cursor en la pantalla.</td><td>Es igual al mouse.</td></tr>
 <tr><td>Puede ser difícil llegar a algunas áreas de la superficie táctil de un dispositivo de pantalla debido a la posición de los dedos y la sujeción del dispositivo por parte del usuario.</td><td>El mouse y la pluma o el lápiz pueden llegar a cualquier parte de la pantalla. El teclado permite acceder a cualquier control con el orden de tabulación. </td><td>La posición de los dedos y la empuñadura pueden ser un problema.</td></tr>
 <tr><td>Puede ocurrir que los objetos queden ocultos por la punta de uno o más dedos o la mano del usuario. Esto se conoce como oclusión.</td><td>Los dispositivos de entrada indirecta no provocan oclusión.</td><td>Es igual al mouse.</td></tr>
-<tr><td>Estado del objeto</td><td>La interacción táctil emplea un modelo de dos estados: la superficie táctil de un dispositivo de pantalla se toca (activado) o no se toca (desactivado). No existe un estado de movimiento que pueda desencadenar una respuesta visual adicional.</td><td>
+<tr><td>Estado de objeto</td><td>La interacción táctil emplea un modelo de dos estados: la superficie táctil de un dispositivo de pantalla se toca (activado) o no se toca (desactivado). No existe un estado de movimiento que pueda desencadenar una respuesta visual adicional.</td><td>
 <p>El mouse, la pluma/lápiz y el teclado exponen un modelo de tres estados: arriba (desactivado), abajo (activado) y movimiento (foco).</p>
 <p>El estado de movimiento permite que el usuario explore y aprenda mediante informaciones sobre herramientas asociadas con elementos de la interfaz de usuario. Los efectos de movimiento y foco pueden transmitir qué objetos son interactivos y ayudar, además, a seleccionar el destino. 
 </p>
@@ -84,7 +84,7 @@ Los comentarios visuales adecuados durante las interacciones con la aplicación 
 La información visual es esencial cuando el usuario usa la entrada táctil para llevar a cabo actividades que requieren exactitud y precisión en lo que respecta a ubicación. Muestra información siempre que se detecte entrada táctil para ayudar al usuario a entender cualquier regla personalizada de selección de destinos que defina la aplicación y los controles correspondientes.
 
 
-## <a name="targeting"></a>Destino
+## <a name="targeting"></a>Establecer destinos
 
 La selección de destinos se optimiza mediante:
 
@@ -96,7 +96,7 @@ La selección de destinos se optimiza mediante:
 
     Toda el área de contacto del dedo determina el objeto de destino más probable.
 
--   Arrastrar
+-   Scrubbing
 
     La selección de destinos de los elementos dentro de un grupo se puede realizar fácilmente si se arrastra el dedo entre ellos (por ejemplo, los botones de radio). El elemento actual se activa cuando se libera el contacto táctil.
 
@@ -109,7 +109,7 @@ La selección de destinos se optimiza mediante:
 Diseña teniendo en cuenta las interacciones descuidadas mediante:
 
 -   Puntos de acoplamiento que permitan detenerse en las ubicaciones deseadas con mayor facilidad cuando los usuarios interactúan con el contenido.
--   "Guías" direccionales que ayuden con el movimiento panorámico vertical y horizontal, incluso cuando la mano se mueve ligeramente en arco. Para obtener más información, consulta [Directrices sobre el movimiento panorámico](guidelines-for-panning.md).
+-   "Raíles" direccional que pueden ayudar con el movimiento panorámico vertical u horizontal, incluso cuando la mano se mueve en un arco ligero. Para obtener más información, vea [instrucciones para la panorámica](guidelines-for-panning.md).
 
 ## <a name="occlusion"></a>Oclusión
 
@@ -129,9 +129,9 @@ La oclusión de dedos y manos se evita mediante:
 
 -   Controladores para mayor precisión
 
-    Cuando necesites una mayor precisión (por ejemplo, para la selección de texto), ofrece controladores de selección que se desplacen para mejorar la precisión. Para obtener más información, consulta las [directrices para seleccionar texto e imágenes (aplicaciones de Windows Runtime)](guidelines-for-textselection.md).
+    Cuando necesites una mayor precisión (por ejemplo, para la selección de texto), ofrece controladores de selección que se desplacen para mejorar la precisión. Para obtener más información, vea [directrices para seleccionar texto e imágenes (aplicaciones Windows Runtime)](guidelines-for-textselection.md).
 
-## <a name="timing"></a>Intervalos
+## <a name="timing"></a>Control de tiempo
 
 Evita los cambios de modo cronometrado en favor de la manipulación directa. Esta simula el control físico, directo y en tiempo real de un objeto. El objeto responde a medida que se mueven los dedos.
 
@@ -169,7 +169,7 @@ La configuración de zoom se aplica tanto al zoom óptico (compatible con el con
 
 Usa las vistas de aplicación y los eventos para modificar los comportamientos de movimiento panorámico/desplazamiento y zoom. Esto puede proporcionar una experiencia de interacción más uniforme que la que permite el control de los eventos de puntero y de gestos.
 
-Para más información sobre las vistas de aplicación, consulta [Controles, diseños y texto](https://docs.microsoft.com/windows/uwp/design/basics/).
+Para obtener más información sobre las vistas de aplicaciones, consulte [controles, diseños y texto](https://docs.microsoft.com/windows/uwp/design/basics/).
 
 ## <a name="custom-touch-interactions"></a>Interacciones táctiles personalizadas
 
@@ -178,11 +178,11 @@ Si implementas tu propia compatibilidad con la interacción, ten presente que lo
 
 Para proporcionar compatibilidad táctil personalizada, puedes controlar diversos eventos [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement). Estos eventos se agrupan en tres niveles de abstracción.
 
--   Los eventos de gestos estáticos se desencadenan una vez completada una interacción. Entre los eventos de gestos se incluyen [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped), [**DoubleTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.doubletapped), [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped) y [**Holding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding).
+-   Los eventos de gestos estáticos se desencadenan una vez completada una interacción. Los eventos de gesto incluyen los de [**puntear**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped), [**DoubleTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.doubletapped), [**RightTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)y [**Holding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding).
 
-    Puedes deshabilitar los eventos de gestos en elementos concretos al establecer [**IsTapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.istapenabled), [**IsDoubleTapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.isdoubletapenabled), [**IsRightTapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.isrighttapenabled) y [**IsHoldingEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.isholdingenabled) en **false**.
+    Puede deshabilitar los eventos de gestos en elementos concretos estableciendo [**IsTapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.istapenabled), [**IsDoubleTapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.isdoubletapenabled), [**IsRightTapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.isrighttapenabled)y [**IsHoldingEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.isholdingenabled) en **false**.
 
--   Los eventos de puntero, como [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) y [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved), proporcionan detalles de bajo nivel para cada contacto táctil como, por ejemplo, el movimiento del puntero y la capacidad de distinguir eventos de presionar y soltar.
+-   Los eventos de puntero como [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) y [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved) proporcionan detalles de bajo nivel para cada contacto táctil, incluido el movimiento del puntero y la capacidad de distinguir los eventos de presionar y soltar.
 
     Un puntero es un tipo de entrada genérico con un mecanismo de eventos unificado. Expone información básica, como la posición de la pantalla, en el origen de entrada activo, que puede ser entrada táctil, panel táctil, mouse o lápiz.
 
@@ -192,15 +192,15 @@ Para proporcionar compatibilidad táctil personalizada, puedes controlar diverso
 
 Este es el conjunto básico de gestos táctiles que admite la UWP.
 
-| Name           | Tipo                 | Descripción                                                                            |
+| Nombre           | Tipo                 | Descripción                                                                            |
 |----------------|----------------------|----------------------------------------------------------------------------------------|
-| Puntee en            | Gesto estático       | Un dedo toca la pantalla y se levanta.                                            |
-| Presionar y mantener presionado | Gesto estático       | Un dedo toca la pantalla y se queda en el lugar.                                      |
-| Deslizar          | Gesto de manipulación | Uno o más dedos tocan la pantalla y se mueven en la misma dirección.                   |
+| Pulsar            | Gesto estático       | Un dedo toca la pantalla y se levanta.                                            |
+| Pulsar y sostener | Gesto estático       | Un dedo toca la pantalla y se queda en el lugar.                                      |
+| Diapositiva          | Gesto de manipulación | Uno o más dedos tocan la pantalla y se mueven en la misma dirección.                   |
 | Deslizar rápidamente          | Gesto de manipulación | Uno o más dedos tocan la pantalla y se mueven una corta distancia en la misma dirección.  |
 | Girar           | Gesto de manipulación | Dos o más dedos tocan la pantalla y se mueven describiendo un arco en el sentido de las agujas del reloj o en el sentido contrario a las agujas del reloj. |
 | Reducir          | Gesto de manipulación | Dos o más dedos tocan la pantalla y se acercan entre sí.                         |
-| Ajustar        | Gesto de manipulación | Dos o más dedos tocan la pantalla y se alejan entre sí.                           |
+| Extender        | Gesto de manipulación | Dos o más dedos tocan la pantalla y se alejan entre sí.                           |
 
  
 
@@ -421,9 +421,9 @@ Esta es una lista de eventos de manipulación y los argumentos de evento relacio
 
 | Evento o clase                                                                                               | Descripción                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Evento ManipulationStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)                                   | Se produce cuando el procesador de manipulación se crea por primera vez.                                                                                  |
-| [**Evento ManipulationStarted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)                                     | Ocurre cuando un dispositivo de entrada comienza una manipulación en el [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement).                                            |
-| [**Evento ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)                                         | Ocurre cuando el dispositivo de entrada cambia su posición durante la manipulación.                                                                      |
+| [**Evento ManipulationStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)                                   | Se produce cuando se crea por primera vez el procesador de manipulación.                                                                                  |
+| [**Evento ManipulationStarted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)                                     | Se produce cuando un dispositivo de entrada comienza una manipulación en el [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement).                                            |
+| [**Evento ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)                                         | Se produce cuando el dispositivo de entrada cambia de posición durante una manipulación.                                                                      |
 | [**Evento ManipulationInertiaStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastartingevent)                | Ocurre cuando el dispositivo de entrada pierde contacto con el objeto [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) durante una manipulación y el inicio de la inercia. |
 | [**Evento ManipulationCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)                                 | Ocurre cuando finaliza la manipulación y la inercia sobre el [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement).                                          |
 | [**ManipulationStartingRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs)               | Proporciona datos para el evento [**ManipulationStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting).                                         |
@@ -456,7 +456,7 @@ Primero, se crea un objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Recta
 </Grid>
 ```
 
-A continuación, se crea un objeto [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) global denominado `dragTranslation` para traducir el objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle). Un agente de escucha de eventos [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) se especifica en el objeto **Rectangle** y `dragTranslation` se agrega al objeto [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) del objeto **Rectangle**.
+A continuación, se crea un objeto [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) global denominado `dragTranslation` para traducir el objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle). Un agente de escucha de eventos de [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) se especifica en el `dragTranslation` **rectángulo**y se agrega al [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) del **rectángulo**.
 
 ```cpp
 // Global translation transform used for changing the position of 
@@ -574,9 +574,9 @@ End Sub
 ## <a name="routed-events"></a>Eventos enrutados
 
 
-Todos los eventos de puntero, los eventos de gestos y los eventos de manipulación mencionados aquí se implementan como *eventos enrutados*. Esto significa que el evento podría estar controlado por objetos distintos que el que generó el evento. Los elementos principales sucesivos de un árbol de objetos, como los contenedores principales de un objeto [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) o la raíz [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) de tu aplicación, pueden elegir controlar estos eventos aunque el elemento original no lo haga. Por el contrario, cualquier objeto que no controle el evento puede marcar el evento controlado para que nunca llegue a un elemento principal. Para obtener más información sobre el concepto de evento enrutado y cómo afecta a la forma de escribir controladores para eventos enrutados, consulta [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).
+Todos los eventos de puntero, los eventos de gestos y los eventos de manipulación mencionados aquí se implementan como *eventos enrutados*. Esto significa que el evento podría estar controlado por objetos distintos que el que generó el evento. Los elementos principales sucesivos de un árbol de objetos, como los contenedores principales de un objeto [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) o la raíz [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) de tu aplicación, pueden elegir controlar estos eventos aunque el elemento original no lo haga. Por el contrario, cualquier objeto que no controle el evento puede marcar el evento controlado para que nunca llegue a un elemento principal. Para obtener más información sobre el concepto de evento enrutado y cómo afecta a cómo se escriben los controladores para los eventos enrutados, vea [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).
 
-## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
+## <a name="dos-and-donts"></a>Consejos
 
 
 -   Diseña aplicaciones en las que la interacción táctil sea el principal método de entrada que se espera.
@@ -587,29 +587,21 @@ Todos los eventos de puntero, los eventos de gestos y los eventos de manipulaci�
 -   No uses interacciones temporales en la medida de lo posible (ejemplo de uso correcto: mantener pulsado).
 -   No uses la cantidad de dedos para distinguir la manipulación en la medida de lo posible.
 
-
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Control de la entrada con puntero](handle-pointer-input.md)
-* [Identificación de dispositivos de entrada](identify-input-devices.md)
+- [Controlar la entrada de puntero](handle-pointer-input.md)
+- [Identificación de dispositivos de entrada](identify-input-devices.md)
 
-**Ejemplos**
+### <a name="samples"></a>Ejemplos
 
-* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-* [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+- [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Ejemplo de entrada de latencia baja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
-**Ejemplos de archivo**
+### <a name="archive-samples"></a>Muestras de archivo
 
-* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [Entrada: ejemplo de eventos de entrada de usuario de XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [Entrada: gestos y manipulaciones con GestureRecognizer](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
- 
-
- 
-
-
-
-
+- [Entrada: muestra de funcionalidades del dispositivo](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))
+- [Entrada: muestra de eventos de entrada de usuario de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20XAML%20user%20input%20events%20sample)
+- [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
+- [Entrada: gestos y manipulaciones con GestureRecognizer](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)

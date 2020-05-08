@@ -9,16 +9,16 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e17b1c18fc8e643ac788e5e13ac78cae49a35ef
-ms.sourcegitcommit: 6d743cf9c3e09f87ea2879b8e1f2dc4a1b1a16fe
+ms.openlocfilehash: 385c11e48695c2486fd5a2b72633923454e2f8ea
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74166081"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970640"
 ---
-# <a name="connected-animation-for-uwp-apps"></a>Animación conectada para aplicaciones para UWP
+# <a name="connected-animation-for-windows-apps"></a>Animación conectada para aplicaciones de Windows
 
-Las animaciones conectadas te permiten crear una experiencia de navegación dinámica y atractiva al animar la transición de un elemento entre dos vistas distintas. Esto ayuda al usuario a mantener el contexto y ofrece continuidad entre las vistas.
+Las animaciones conectadas te permiten crear una experiencia de navegación dinámica y atractiva al animar la transición de un elemento entre dos vistas distintas. Esto ayuda al usuario a mantener su contexto y proporciona continuidad entre las vistas.
 
 En una animación conectada, un elemento aparece en "continuar" entre dos vistas durante un cambio en el contenido de la interfaz de usuario, volando por la pantalla desde su ubicación en la vista de origen hasta su destino en la nueva vista. Esto hace hincapié en el contenido común entre las vistas y crea un efecto atractivo y dinámico como parte de una transición.
 
@@ -41,7 +41,7 @@ En una animación conectada, un elemento aparece en "continuar" entre dos vistas
 </tr>
 </table>
 
-En este vídeo corto, una aplicación usa una animación conectada para animar una imagen de elemento a medida que "continúa" para formar parte del encabezado de la página siguiente. El efecto te ayuda a mantener al usuario en contexto a través de la transición.
+En este vídeo corto, una aplicación usa una animación conectada para animar una imagen de elemento a medida que "continúa" para formar parte del encabezado de la página siguiente. El efecto ayuda a mantener el contexto del usuario a través de la transición.
 
 ![Animación conectada](images/connected-animations/example.gif)
 
@@ -53,17 +53,17 @@ En este vídeo corto, una aplicación usa una animación conectada para animar u
 
 > [!VIDEO https://channel9.msdn.com/Events/Windows/Windows-Developer-Day-Fall-Creators-Update/WinDev005/player]
 
-## <a name="connected-animation-and-the-fluent-design-system"></a>Animación conectada y Fluent Design System
+## <a name="connected-animation-and-the-fluent-design-system"></a>Animación conectada y el sistema de diseño fluida
 
- Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. La animación conectada es un componente de Fluent Design System que agrega movimiento a tu aplicación. Para más información, consulta la [Introducción a Fluent Design para UWP](/windows/apps/fluent-design-system).
+ Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. La animación conectada es un componente del sistema de diseño fluida que agrega movimiento a la aplicación. Para obtener más información, vea [información general sobre el diseño de Fluent](/windows/apps/fluent-design-system).
 
-## <a name="why-connected-animation"></a>¿Por qué usar una animación conectada?
+## <a name="why-connected-animation"></a>¿Por qué se conecta la animación?
 
-Al navegar entre páginas, es importante que el usuario pueda comprender el nuevo contenido que se le presenta después del desplazamiento y cómo se relaciona con su intención al navegar. Las animaciones conectadas proporcionan una metáfora visual eficaz que destaca la relación entre dos vistas al llevar el foco del usuario al contenido compartido por ellas. Además, las animaciones conectadas agregan un interés y un orden visuales a la navegación por la página, lo que puede ayudar a diferenciar el diseño de movimiento de la aplicación.
+Al navegar entre las páginas, es importante que el usuario comprenda qué nuevo contenido se presenta después de la navegación y cómo se relaciona con su intención al navegar. Las animaciones conectadas proporcionan una metáfora visual eficaz que enfatiza la relación entre dos vistas dibujando el foco del usuario en el contenido compartido entre ellas. Además, las animaciones conectadas agregan interés visual y la navegación de la página, lo que puede ayudar a diferenciar el diseño del movimiento de la aplicación.
 
-## <a name="when-to-use-connected-animation"></a>Cuándo usar animaciones conectadas
+## <a name="when-to-use-connected-animation"></a>Cuándo se debe usar la animación conectada
 
-En general, las animaciones conectadas se usan al cambiar de página, aunque pueden aplicarse a cualquier experiencia donde cambie el contenido de una interfaz de usuario y quieras que el usuario se mantenga en contexto. Debes pensar en usar una animación conectada en lugar de una [transición de navegación de profundización](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) siempre que haya una imagen u otro elemento de la interfaz de usuario que se comparta entre las vistas de origen y de destino.
+Las animaciones conectadas suelen usarse al cambiar las páginas, aunque se pueden aplicar a cualquier experiencia en la que se cambia el contenido en una interfaz de usuario y se desea que el usuario mantenga el contexto. Debe plantearse el uso de una animación conectada en lugar de una [transición de navegación de obtención de detalles](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) cada vez que haya una imagen u otra parte de la interfaz de usuario compartida entre las vistas de origen y de destino.
 
 ## <a name="configure-connected-animation"></a>Configurar animación conectada
 
@@ -100,13 +100,13 @@ Para lograr los distintos efectos, algunas configuraciones omiten estas propieda
 
 | Configuración | ¿Respeta DefaultDuration? | ¿Respeta DefaultEasingFunction? |
 | - | - | - |
-| Gravedad | Sí | Sí* <br/> **la traducción básica de a a B usa esta función de aceleración, pero la "DIP" tiene su propia función de aceleración.*  |
+| Peso | Sí | Sí* <br/> **La traducción básica de a a B usa esta función de aceleración, pero la "DIP" tiene su propia función de aceleración.*  |
 | Directo | No <br/> *Anima por 150MS.*| No <br/> *Usa la función de aceleración decelerada.* |
 | Básico | Sí | Sí |
 
 ## <a name="how-to-implement-connected-animation"></a>Cómo implementar la animación conectada
 
-La configuración de una animación conectada consta de dos pasos:
+La configuración de una animación conectada implica dos pasos:
 
 1. *Preparar* un objeto de animación en la página de origen, que indica al sistema que el elemento de origen participará en la animación conectada.
 1. *Inicie* la animación en la página de destino, pasando una referencia al elemento de destino.
@@ -118,7 +118,7 @@ ConnectedAnimationService.GetForCurrentView()
     .PrepareToAnimate("forwardAnimation", SourceImage);
 ```
 
-Cuando se produzca la navegación, inicie la animación en la página de destino. Para iniciar la animación, llama a [ConnectedAnimation.TryStart](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.trystart). Puedes recuperar la instancia de animación correcta llamando a [ConnectedAnimationService.GetAnimation](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.getanimation) con la clave única que proporcionaste cuando creaste la animación.
+Cuando se produzca la navegación, inicie la animación en la página de destino. Para iniciar la animación, llame a [ConnectedAnimation. TryStart](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.trystart). Puede recuperar la instancia de la animación adecuada llamando a [ConnectedAnimationService. GetAnimation](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice.getanimation) con la clave única que proporcionó al crear la animación.
 
 ```csharp
 ConnectedAnimation animation =
@@ -238,13 +238,13 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
-Entre el momento en que se configura la animación y el momento en que se inicia, el elemento de origen aparece inmovilizado por encima de otra interfaz de usuario de la aplicación. Esto le permite realizar cualquier otra animación de transición simultáneamente. Por esta razón, no debe esperar más de ~ 250 milisegundos entre los dos pasos porque la presencia del elemento de origen puede ser distraer. Si preparas una animación y no se inicia en el plazo de tres segundos, el sistema desechará la animación y todas las subsiguientes llamadas a [TryStart](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.trystart) generarán un error.
+Entre el momento en que se configura la animación y el momento en que se inicia, el elemento de origen aparece inmovilizado por encima de otra interfaz de usuario de la aplicación. Esto le permite realizar cualquier otra animación de transición simultáneamente. Por esta razón, no debe esperar más de ~ 250 milisegundos entre los dos pasos porque la presencia del elemento de origen puede ser distraer. Si prepara una animación y no la inicia en menos de tres segundos, el sistema eliminará la animación y las llamadas subsiguientes a [TryStart](/uwp/api/windows.ui.xaml.media.animation.connectedanimation.trystart) producirán un error.
 
-## <a name="connected-animation-in-list-and-grid-experiences"></a>Animación conectado en experiencias de lista y cuadrícula
+## <a name="connected-animation-in-list-and-grid-experiences"></a>Animación conectada en experiencias de lista y cuadrícula
 
-A menudo, querrás crear una animación conectada desde un control de lista o cuadrícula o hacia él. Puede usar los dos métodos en [ListView](/uwp/api/windows.ui.xaml.controls.listview) y [GridView](/uwp/api/windows.ui.xaml.controls.gridview), [PrepareConnectedAnimation](/uwp/api/windows.ui.xaml.controls.listviewbase.prepareconnectedanimation) y [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync)para simplificar este proceso.
+A menudo, querrá crear una animación conectada desde o a un control de lista o cuadrícula. Puede usar los dos métodos en [ListView](/uwp/api/windows.ui.xaml.controls.listview) y [GridView](/uwp/api/windows.ui.xaml.controls.gridview), [PrepareConnectedAnimation](/uwp/api/windows.ui.xaml.controls.listviewbase.prepareconnectedanimation) y [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync)para simplificar este proceso.
 
-Por ejemplo, supongamos que tienes una clase **ListView** que contiene un elemento con el nombre "PortraitEllipse" en la plantilla de datos.
+Por ejemplo, supongamos que tiene un **control ListView** que contiene un elemento con el nombre "PortraitEllipse" en su plantilla de datos.
 
 ```xaml
 <ListView x:Name="ContactsListView" Loaded="ContactsListView_Loaded">
@@ -296,11 +296,11 @@ private void ContactsListView_Loaded(object sender, RoutedEventArgs e)
 <iframe width=640 height=360 src='https://microsoft.sharepoint.com/portals/hub/_layouts/15/VideoEmbedHost.aspx?chId=552c725c%2De353%2D4118%2Dbd2b%2Dc2d0584c9848&amp;vId=9066bbbe%2Dcf58%2D4ab4%2Db274%2D595616f5d0a0&amp;width=640&amp;height=360&amp;autoPlay=false&amp;showInfo=true' allowfullscreen></iframe>
 -->
 
-Una *animación coordinada* es un tipo especial de animación de entrada en el que aparece un elemento junto con el destino de animación conectado, animando en conjunto con el elemento de animación conectado a medida que se mueve por la pantalla. Las animaciones coordinadas pueden sumar interés visual a una transición y llamar aún más la atención del usuario al contexto que comparten las vistas de origen y de destino. En estas imágenes, la interfaz de usuario del título para el elemento ser anima con una animación coordinada.
+Una *animación coordinada* es un tipo especial de animación de entrada en el que aparece un elemento junto con el destino de animación conectado, animando en conjunto con el elemento de animación conectado a medida que se mueve por la pantalla. Las animaciones coordinadas pueden agregar más interés visual a una transición y, además, atraer la atención del usuario al contexto compartido entre las vistas de origen y de destino. En estas imágenes, la interfaz de usuario de la leyenda del elemento se anima mediante una animación coordinada.
 
 Cuando una animación coordinada usa la configuración de gravedad, la gravedad se aplica al elemento de animación conectado y a los elementos coordinados. Los elementos coordinados se "swoop" junto con el elemento conectado para que los elementos permanezcan realmente coordinados.
 
-Usa la sobrecarga de dos parámetros de **TryStart** para agregar elementos coordinados a una animación conectada. En este ejemplo se muestra una animación coordinada de un diseño de cuadrícula denominado "DescriptionRoot" que entra junto con un elemento de animación conectado denominado "CoverImage".
+Use la sobrecarga de dos parámetros de **TryStart** para agregar elementos coordinados a una animación conectada. En este ejemplo se muestra una animación coordinada de un diseño de cuadrícula denominado "DescriptionRoot" que entra junto con un elemento de animación conectado denominado "CoverImage".
 
 ```xaml
 <!-- DestinationPage.xaml -->
@@ -326,13 +326,13 @@ void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
-## <a name="dos-and-donts"></a>Lo que se debe y no se debe hacer
+## <a name="dos-and-donts"></a>Y no
 
-- Usa una animación conectada en las transiciones de página en las que un elemento se comparta entre las páginas de origen y de destino.
+- Utilice una animación conectada en las transiciones de página donde se comparte un elemento entre las páginas de origen y de destino.
 - Use [GravityConnectedAnimationConfiguration](/uwp/api/windows.ui.xaml.media.animation.gravityconnectedanimationconfiguration) para la navegación hacia delante.
 - Use [DirectConnectedAnimationConfiguration](/uwp/api/windows.ui.xaml.media.animation.directconnectedanimationconfiguration) para la navegación hacia atrás.
-- No espere en las solicitudes de red u otras operaciones asincrónicas de ejecución prolongada entre la preparación y el inicio de una animación conectada. Es posible que tengas que cargar previamente la información necesaria para ejecutar la transición con antelación o usar una imagen de marcador de posición de baja resolución mientras se carga la imagen de alta resolución en la vista de destino.
-- Use [SuppressNavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) para evitar una animación de transición en un **fotograma** si usa **ConnectedAnimationService**, ya que las animaciones conectadas no están diseñadas para usarse simultáneamente con las transiciones de navegación predeterminadas. Para obtener más información sobre cómo usar las transiciones de navegación, consulta [NavigationThemeTransition](/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition).
+- No espere en las solicitudes de red u otras operaciones asincrónicas de ejecución prolongada entre la preparación y el inicio de una animación conectada. Es posible que tenga que cargar previamente la información necesaria para ejecutar la transición con antelación, o bien usar una imagen de marcador de posición de baja resolución mientras se carga una imagen de alta resolución en la vista de destino.
+- Use [SuppressNavigationTransitionInfo](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) para evitar una animación de transición en un **fotograma** si usa **ConnectedAnimationService**, ya que las animaciones conectadas no están diseñadas para usarse simultáneamente con las transiciones de navegación predeterminadas. Vea [NavigationThemeTransition](/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) para obtener más información sobre cómo usar las transiciones de navegación.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

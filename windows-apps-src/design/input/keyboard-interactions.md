@@ -1,5 +1,5 @@
 ---
-Description: Aprende a diseñar y optimizar tus aplicaciones para UWP para que proporcionen la mejor experiencia posible para los usuarios avanzados de teclado y para aquellos que tienen discapacidades y otros requisitos de accesibilidad.
+Description: Obtenga información sobre cómo diseñar y optimizar las aplicaciones de Windows para que proporcionen la mejor experiencia posible para los usuarios avanzados de teclado y los con discapacidades y otros requisitos de accesibilidad.
 title: Interacciones de teclado
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
@@ -11,79 +11,79 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 449f0c81bdd54d99ef0977ca1c9b6ba10ba5eae7
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 1d883243b60b2b2693fbf0f21315008e556b5743
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210111"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970760"
 ---
 # <a name="keyboard-interactions"></a>Interacciones de teclado
 
 ![Imagen principal de teclado](images/keyboard/keyboard-hero.jpg)
 
-Aprende a diseñar y optimizar tus aplicaciones para UWP para que proporcionen la mejor experiencia posible para los usuarios avanzados de teclado y para aquellos que tienen discapacidades y otros requisitos de accesibilidad.
+Obtenga información sobre cómo diseñar y optimizar las aplicaciones de Windows para que proporcionen la mejor experiencia posible para los usuarios avanzados de teclado y los con discapacidades y otros requisitos de accesibilidad.
 
-En todos los dispositivos, la entrada de teclado es una parte importante de la experiencia de interacción global de la Plataforma universal de Windows (UWP). Una experiencia de teclado bien diseñada permite a los usuarios navegar por la interfaz de usuario de la aplicación de manera eficaz y acceder a su funcionalidad total sin tener que levantar las manos del teclado.
+En todos los dispositivos, la entrada de teclado es una parte importante de la experiencia de interacción de aplicaciones de Windows general. Una experiencia de teclado bien diseñada permite a los usuarios navegar de forma eficaz por la interfaz de usuario de la aplicación y acceder a toda su funcionalidad sin levantar las manos del teclado.
 
-![Imagen del teclado y el controlador para juegos](images/keyboard/keyboard-gamepad.jpg)
+![imagen de teclado y controlador para juegos](images/keyboard/keyboard-gamepad.jpg)
 
 ***Los patrones de interacción comunes se comparten entre el teclado y el controlador para juegos***
 
-En este tema, nos centramos específicamente en el diseño de aplicaciones para UWP para la entrada de teclado en equipos. Sin embargo, una experiencia de teclado bien diseñada es importante para admitir herramientas de accesibilidad como el narrador de Windows, mediante [teclados de software](#software-keyboard) como el teclado táctil y el teclado en pantalla (OSK), y para controlar otros tipos de dispositivos de entrada, como el controlador de juegos de Xbox y el control remoto.
+En este tema, nos centraremos específicamente en el diseño de aplicaciones de Windows para la entrada de teclado en PC. Sin embargo, una experiencia de teclado bien diseñada es importante para admitir herramientas de accesibilidad como el narrador de Windows, mediante [teclados de software](#software-keyboard) como el teclado táctil y el teclado en pantalla (OSK), y para controlar otros tipos de dispositivos de entrada, como el controlador de juegos de Xbox y el control remoto.
 
-Muchas de las directrices y recomendaciones que se describe aquí, incluidos los [elementos visuales de foco](#focus-visuals), las [teclas de acceso](#access-keys) y la [navegación de la interfaz de usuario](#navigation), también se aplican a estos otros escenarios.
+Muchas de las instrucciones y recomendaciones que se describen aquí, incluidos los [objetos visuales de foco](#focus-visuals), [las claves de acceso](#access-keys)y la navegación de la [interfaz de usuario](#navigation), también se aplican a estos otros escenarios.
 
-**NOTA**  Si bien se usan teclados hardware y software para la entrada de texto, este tema se centra en la navegación y la interacción.
+**Nota:**  Aunque los teclados de hardware y software se usan para la entrada de texto, el enfoque de este tema es la navegación y la interacción.
 
 ## <a name="built-in-support"></a>Compatibilidad integrada
 
-Junto con el mouse, el teclado es el periférico más ampliamente usado en los equipos y, como tal, es una parte fundamental de la experiencia del equipo. Los usuarios de equipos esperan una experiencia integral y coherente tanto del sistema como de las aplicaciones individuales en la respuesta a la entrada de teclado.
+Junto con el mouse, el teclado es el periférico más usado en los equipos y, como tal, es una parte fundamental de la experiencia del PC. Los usuarios de equipos esperan una experiencia completa y coherente tanto del sistema como de las aplicaciones individuales en respuesta a la entrada de teclado.
 
-Todos los controles de UWP incluyen compatibilidad integrada para experiencias de teclado e interacciones de usuario enriquecidas, mientras que la plataforma misma proporciona una amplia base para crear experiencias de teclado que creas que se adecuan mejor a tus aplicaciones y controles personalizados.
+Todos los controles de UWP incluyen compatibilidad integrada para experiencias de teclado enriquecidas e interacciones de usuario, mientras que la propia plataforma proporciona una amplia base para crear experiencias de teclado que se sientan más adecuadas para sus controles y aplicaciones personalizados.
 
-![Imagen de teclado con teléfono](images/keyboard/keyboard-phone.jpg)
+![teclado con imagen de teléfono](images/keyboard/keyboard-phone.jpg)
 
 ***UWP admite el teclado con cualquier dispositivo***
 
 ## <a name="basic-experiences"></a>Experiencias básicas
 ![Dispositivos basados en el foco](images/keyboard/focus-based-devices.jpg)
 
-Como se mencionó anteriormente, los dispositivos de entrada, como el controlador para juegos y el control remoto de Xbox, y las herramientas de accesibilidad, como el Narrador, comparten gran parte de la experiencia de entrada de teclado en cuanto a la navegación y los comandos. Esta experiencia en común entre los distintos tipos y herramientas de entrada minimiza el trabajo adicional para ti y contribuye al objetivo de "compilar una vez, ejecutar en cualquier parte" de la Plataforma universal de Windows.
+Como se mencionó anteriormente, los dispositivos de entrada, como el controlador de juegos de Xbox y el control remoto, y las herramientas de accesibilidad como narrador, comparten gran parte de la experiencia de entrada de teclado para la navegación y los comandos. Esta experiencia común en los tipos de entrada y las herramientas minimiza el trabajo adicional que le proporciona y contribuye al objetivo "crear una vez, ejecutar en cualquier lugar" del Plataforma universal de Windows.
 
 En caso necesario, se identificarán las diferencias clave que se deben tener en cuenta y se debe describir cualquier mitigación que se deba tener en cuenta.
 
 Estos son los dispositivos y las herramientas que se describen en este tema:
 
-| Dispositivo/herramienta                       | Descripción     |
+| Dispositivo o herramienta                       | Descripción     |
 |-----------------------------------|-----------------|
-|Teclado (hardware y software)   |Además del teclado de hardware estándar, las aplicaciones de UWP admiten dos teclados de software: el [teclado táctil (o el software)](#software-keyboard) y el [teclado en pantalla](#on-screen-keyboard).|
-|Controlador para juegos y control remoto         |El controlador para juegos y el control remoto de Xbox son dispositivos de entrada fundamentales en la [experiencia de 10 pies](../devices/designing-for-tv.md). Para obtener información específica sobre la compatibilidad de UWP para el controlador para juegos y el control remoto, consulta [Interacciones con el controlador para juegos y el control remoto](gamepad-and-remote-interactions.md).|
-|Lectores de pantalla (Narrador)          |El Narrador es un lector de pantalla integrado para Windows, que proporciona una funcionalidad y unas experiencias de interacción únicas, pero que sigue basándose en la navegación y entrada básicas por teclado. Para más información sobre el Narrador, consulta [Introducción al Narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator).|
+|Teclado (hardware y software)   |Además del teclado de hardware estándar, las aplicaciones de Windows admiten dos teclados de software: el [teclado táctil (o el software)](#software-keyboard) y el [teclado en pantalla](#on-screen-keyboard).|
+|Controlador para juegos y control remoto         |El controlador de juegos de Xbox y el control remoto son dispositivos de entrada fundamentales en la [experiencia de 10 pies](../devices/designing-for-tv.md). Para obtener detalles específicos sobre la compatibilidad de Windows con el controlador para juegos y el control remoto, consulte [interacciones de control remoto y controlador de juegos](gamepad-and-remote-interactions.md).|
+|Lectores de pantalla (narrador)          |Narrador es un lector de pantalla integrado para Windows que proporciona características y experiencias de interacción exclusivas, pero que sigue basándose en la entrada y la navegación básicas del teclado. Para obtener detalles sobre el narrador, consulte [Introducción a narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator).|
 
-## <a name="custom-experiences-and-efficient-keyboarding"></a>Experiencias personalizadas y uso eficiente del teclado
-Como se mencionó, la compatibilidad del teclado es integral, para garantizar que las aplicaciones funcionen bien para usuarios con distintas habilidades, capacidades y expectativas. Te recomendamos que des prioridad a lo siguiente.
-- Admitir la navegación e interacción por teclado
-    - Asegurar que los elementos accionables estén identificados como paradas de tabulación (y no lo estén los no accionables) y que el orden de la navegación sea lógico y predecible (consulta [Paradas de tabulación](#tab-stops))
-    - Establece el foco inicial en el elemento más lógico (véase [Foco inicial](#initial-focus))
-    - Proporcionar navegación con las teclas de flecha para las "navegaciones internas" (véase [Navegación](#navigation))
-- Admitir métodos abreviados de teclado
-    - Proporcionar las teclas de aceleración para acciones rápidas (véase [Aceleradores](#accelerators))
+## <a name="custom-experiences-and-efficient-keyboarding"></a>Experiencias personalizadas y teclado eficaz
+Como se mencionó, la compatibilidad con el teclado es fundamental para garantizar que las aplicaciones funcionen bien para los usuarios con diferentes aptitudes, capacidades y expectativas. Se recomienda dar prioridad a lo siguiente.
+- Compatibilidad con la navegación y la interacción con el teclado
+    - Asegúrese de que los elementos procesables se identifican como delimitadores de tabulación (y los elementos no procesables no) y el orden de navegación es lógico y predecible (consulte [puntos de tabulación](#tab-stops)).
+    - Establecer el foco inicial en el elemento lógico más (vea el [foco inicial](#initial-focus))
+    - Proporcionar navegación por la tecla de dirección para "navegaciones internas" (vea [navegación](#navigation))
+- Compatibilidad con métodos abreviados de teclado
+    - Proporcionar teclas de aceleración para acciones rápidas (consulte [aceleradores](#accelerators))
     - Proporcionar claves de acceso para navegar por la interfaz de usuario de la aplicación (consulte [claves de acceso](access-keys.md))
 
 ### <a name="focus-visuals"></a>Objetos visuales de foco
 
-La UWP admite un único diseño visual de foco que funciona bien para todos los tipos y experiencias de entrada.
-![de foco de Visual](images/keyboard/focus-visual.png)
+UWP admite un diseño visual de enfoque único que funciona bien con todos los tipos de entrada y experiencias.
+![Foco visual](images/keyboard/focus-visual.png)
 
-Un elemento visual de foco:
+Un visual de foco:
 
-- Aparece cuando un elemento de la interfaz de usuario recibe el foco desde un teclado, controlador para juegos o control remoto.
-- Se representa como un borde resaltado alrededor del elemento de la interfaz de usuario para indicar que se puede realizar una acción.
-- Ayuda al usuario a navegar por la interfaz de usuario de una aplicación sin perderse.
-- Puede personalizarse para tu aplicación (consulta [Elementos visuales de foco de alta visibilidad](guidelines-for-visualfeedback.md#high-visibility-focus-visuals)).
+- Se muestra cuando un elemento de la interfaz de usuario recibe el foco de un teclado y/o un control remoto
+- Se representa como un borde resaltado alrededor del elemento de la interfaz de usuario para indicar que se puede realizar una acción
+- Ayuda a un usuario a navegar por una interfaz de usuario de la aplicación sin perderse
+- Se puede personalizar para su aplicación (consulte [objetos visuales de foco de alta visibilidad](guidelines-for-visualfeedback.md#high-visibility-focus-visuals))
 
-**NOTA** El elemento visual de foco de la UWP no es el mismo que el rectángulo de foco del Narrador.
+**Nota:** El visual de foco de UWP no es el mismo que el rectángulo de foco de narrador.
 
 ### <a name="tab-stops"></a>Puntos de tabulación
 
@@ -93,80 +93,80 @@ Para que un control se incluya en el orden de tabulación, la propiedad [IsEnabl
 
 Para excluir específicamente un control del orden de tabulación, establezca la propiedad [IsTabStop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) en **false**.
 
-De manera predeterminada, el orden de tabulación refleja el orden en que se crean los elementos de la interfaz de usuario. Por ejemplo, si `StackPanel`contiene `Button`, `Checkbox`y `TextBox`, el orden de tabulación es `Button`, `Checkbox` y `TextBox`.
+De forma predeterminada, el orden de tabulación refleja el orden en que se crean los elementos de la interfaz de usuario. Por ejemplo, si un `StackPanel` contiene un `Button`, un `Checkbox`y un, `TextBox`el orden de `Button`tabulación `Checkbox`es, `TextBox`y.
 
 Puede invalidar el orden de tabulación predeterminado estableciendo la propiedad [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) .
 
-#### <a name="tab-order-should-be-logical-and-predictable"></a>El orden de tabulación debe ser predecible y lógico
+#### <a name="tab-order-should-be-logical-and-predictable"></a>El orden de tabulación debe ser lógico y predecible
 
-Un modelo bien diseñada de navegación con el teclado, con un orden de tabulación predecible y lógico, hace que la aplicación sea más intuitiva y ayuda a los usuarios a explorar, descubrir y acceder a la funcionalidad de manera más eficaz y eficiente.
+Un modelo de navegación de teclado bien diseñado, mediante un orden de tabulación lógico y predecible, hace que la aplicación sea más intuitiva y ayude a los usuarios a explorar, detectar y obtener acceso a la funcionalidad de forma más eficaz y eficaz.
 
 Todos los controles interactivos deben tener tabulaciones (a menos que estén en un [Grupo](#control-group)), mientras que los controles no interactivos, como las etiquetas, no deberían.
 
-Evita un orden de tabulación personalizado que haga que el foco salte sin sentido en la aplicación. Por ejemplo, una lista de controles en un formulario debe tener un orden de tabulación que fluya de arriba a abajo y de izquierda a derecha (dependiendo de la configuración regional).
+Evite un orden de tabulación personalizado que haga que el foco se desplace por la aplicación. Por ejemplo, una lista de controles de un formulario debe tener un orden de tabulación que fluya desde la parte superior a la inferior y de izquierda a derecha (según la configuración regional).
 
 Vea [accesibilidad del teclado](../accessibility/keyboard-accessibility.md) para obtener más detalles sobre cómo personalizar las tabulaciones.
 
-#### <a name="try-to-coordinate-tab-order-and-visual-order"></a>Intenta coordinar el orden de tabulación y el orden visual
+#### <a name="try-to-coordinate-tab-order-and-visual-order"></a>Intente coordinar el orden de tabulación y el orden visual
 
 La coordinación del orden de tabulación y el orden visual (también denominado orden de lectura o orden de presentación) ayuda a reducir la confusión de los usuarios cuando navegan por la interfaz de usuario de la aplicación.
 
-Prueba a clasificar y presentar los comandos, controles y contenido más importantes en primer lugar, tanto en el orden de tabulación como en el orden visual. Sin embargo, la posición de visualización puede depender del contenedor de diseño primario y de ciertas propiedades de los elementos secundarios que influyen en el diseño. En concreto, los diseños que usan una metáfora de cuadrícula o una tabla pueden tener un orden visual muy diferente del orden de tabulación.
+Intente clasificar y presentar los comandos, controles y contenido más importantes en primer lugar en el orden de tabulación y en el orden visual. Sin embargo, la posición de visualización puede depender del contenedor de diseño primario y de ciertas propiedades de los elementos secundarios que influyen en el diseño. En concreto, los diseños que usan una metáfora de cuadrícula o una tabla metáfora pueden tener un orden visual muy diferente del orden de tabulación.
 
-**NOTA** El orden visual depende también de la configuración regional y el idioma.
+**Nota:** El orden visual también depende de la configuración regional y el idioma.
 
 ### <a name="initial-focus"></a>Foco inicial
 
-El foco inicial especifica el elemento de la interfaz de usuario que recibe el foco cuando se inicia o activa una aplicación o una página por primera vez. Al usar un teclado, es de este elemento que un usuario comienza a interactuar con la interfaz de usuario de la aplicación.
+Foco inicial especifica el elemento de la interfaz de usuario que recibe el foco cuando una aplicación o una página se inicia o activa por primera vez. Al usar un teclado, es de este elemento que un usuario comienza a interactuar con la interfaz de usuario de la aplicación.
 
-En el caso de las aplicaciones UWP, el foco inicial se establece en el elemento con el valor de [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) más alto que puede recibir el foco. Se omiten los elementos secundarios de los controles de contenedor. En caso de empate, el primer elemento en el árbol visual recibe el foco.
+En el caso de las aplicaciones UWP, el foco inicial se establece en el elemento con el valor de [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) más alto que puede recibir el foco. Los elementos secundarios de los controles de contenedor se omiten. En un empate, el primer elemento del árbol visual recibe el foco.
 
-#### <a name="set-initial-focus-on-the-most-logical-element"></a>Establece el foco inicial en el elemento más lógico
+#### <a name="set-initial-focus-on-the-most-logical-element"></a>Establecer el foco inicial en el elemento lógico más
 
-Establece el foco inicial en el elemento de la interfaz de usuario para la acción primera, o principal, que los usuarios más probablemente realicen al iniciar la aplicación o navegar a una página. Entre algunos ejemplos se incluyen:
--   Una aplicación de fotos, donde el foco se establece en el primer elemento de una galería
--   Una aplicación de música, donde el foco se establece en el botón de reproducción
+Establezca el foco inicial en el elemento de la interfaz de usuario de la primera acción, o primaria, que los usuarios tienen más probabilidades de realizar al iniciar la aplicación o ir a una página. Estos son algunos ejemplos:
+-   Una aplicación fotográfica en la que el foco se establece en el primer elemento de una galería
+-   Una aplicación de música en la que el foco se establece en el botón de reproducción
 
 #### <a name="dont-set-initial-focus-on-an-element-that-exposes-a-potentially-negative-or-even-disastrous-outcome"></a>No establezca el foco inicial en un elemento que exponga un resultado potencialmente negativo, o incluso desastroso,.
 
-Este nivel de funcionalidad debe ser la elección de un usuario. Establecer el foco inicial en un elemento con un resultado significativo podría provocar la pérdida accidental de datos o acceso al sistema. Por ejemplo, no establezca el foco en el botón eliminar al navegar a un correo electrónico.
+Este nivel de funcionalidad debe ser la elección de un usuario. Establecer el foco inicial en un elemento con un resultado significativo podría producir la pérdida de datos o el acceso al sistema imprevistos. Por ejemplo, no establezca el foco en el botón eliminar al navegar a un correo electrónico.
 
 Vea [navegación centrada](focus-navigation.md) para obtener más detalles sobre cómo invalidar el orden de tabulación.
 
 ### <a name="navigation"></a>Navegación
 
-Por lo general, se admite la navegación por teclado a través de la tecla TAB y las teclas de dirección.
+La navegación con el teclado normalmente se admite a través de las teclas de tabulación y las teclas de dirección.
 
-![Teclas TAB y de dirección](images/keyboard/tab-and-arrow.png)
+![Tabulador y teclas de dirección](images/keyboard/tab-and-arrow.png)
 
-De manera predeterminada, los controles de UWP siguen estos comportamientos de teclado básicos:
--   La **tecla TAB** navega entre los controles que se pueda accionar/activar en el orden de tabulación.
--   **Mayús+TAB** navega por los controles en el orden de tabulación inverso. Si el usuario ha navegado dentro del control con las teclas de dirección, el foco se establece en el último valor conocido dentro del control.
--   Las **teclas de dirección** exponen la "navegación interna" específica del control. Cuando el usuario entra en la "navegación interna", las teclas de dirección no navegan fuera de un control. Entre algunos ejemplos se incluyen:
-    -   La tecla de dirección arriba/abajo mueve el foco dentro de `ListView` y `MenuFlyout`
-    -   Modificar los valores seleccionados actualmente para `Slider` y `RatingsControl`
-    -   Desplace el símbolo de intercalación dentro de `TextBox`
-    -   Expandir o contraer elementos dentro de `TreeView`
+De forma predeterminada, los controles de UWP siguen estos comportamientos básicos del teclado:
+-   **Las teclas de tabulación** se desplazan entre los controles accionables/activos en el orden de tabulación.
+-   **MAYÚS + TAB** desplazar controles en el orden de tabulación inversa. Si el usuario ha navegado dentro del control mediante la tecla de dirección, el foco se establece en el último valor conocido dentro del control.
+-   **Las teclas de dirección** exponen "navegación interna" específica del control cuando el usuario escribe "navegación interna". las teclas de dirección no se desplazan fuera de un control. Estos son algunos ejemplos:
+    -   La tecla de dirección arriba/abajo mueve `ListView` el foco dentro de y`MenuFlyout`
+    -   Modificar los valores actualmente seleccionados `Slider` para y`RatingsControl`
+    -   Desplace el símbolo de intercalación dentro`TextBox`
+    -   Expandir o contraer elementos dentro de`TreeView`
 
 Use estos comportamientos predeterminados para optimizar la navegación del teclado de la aplicación.
 
-#### <a name="use-inner-navigation-with-sets-of-related-controls"></a>Usa la "navegación interna" con conjuntos de controles relacionados
+#### <a name="use-inner-navigation-with-sets-of-related-controls"></a>Usar "navegación interna" con conjuntos de controles relacionados
 
 Proporcionar la navegación por la tecla de dirección en un conjunto de controles relacionados refuerza su relación dentro de la organización general de la interfaz de usuario de la aplicación.
 
-Por ejemplo, el control `ContentDialog` que se muestra aquí proporciona navegación interna de manera predeterminada para una fila horizontal de botones (para controles personalizados, consulta la sección [Grupo de controles](#control-group)).
+Por ejemplo, el `ContentDialog` control que se muestra aquí proporciona la navegación interna de forma predeterminada para una fila horizontal de botones (para controles personalizados, vea la sección [grupo de controles](#control-group) ).
 
-![ejemplo de diálogo](images/keyboard/dialog.png)
+![ejemplo de cuadro de diálogo](images/keyboard/dialog.png)
 
 ***La interacción con una colección de botones relacionados se facilita con la navegación por la tecla de dirección***
 
-Si se muestran los elementos en una sola columna, las teclas de dirección arriba o abajo navegan por los elementos. Si se muestran los elementos en una sola fila, las teclas de dirección derecha o izquierda navegan por los elementos. Si los elementos se encuentran en varias columnas, se usan las cuatro teclas de dirección para navegar.
+Si los elementos se muestran en una sola columna, la tecla de dirección arriba/abajo navega por los elementos. Si los elementos se muestran en una sola fila, la tecla de dirección derecha/izquierda navega por los elementos. Si los elementos son varias columnas, se desplazan las cuatro teclas de dirección.
 
 #### <a name="define-a-single-tab-stop-for-a-collection-of-related-controls"></a>Definir una única tabulación para una colección de controles relacionados
 
 Al definir una única posición de tabulación para una colección de controles relacionados, o complementarios, puede minimizar el número de tabulaciones generales en la aplicación.
 
-Por ejemplo, las imágenes siguientes muestran dos controles `ListView` apilados. La imagen de la izquierda muestra la navegación mediante teclas de dirección usada con un punto de tabulación para navegar entre controles `ListView`; mientras que la imagen de la derecha muestra de qué manera la navegación entre elementos secundarios puede hacerse más fácil y eficaz al eliminar la necesidad de atravesar los controles principales con una tecla TAB.
+Por ejemplo, las siguientes imágenes muestran dos `ListView` controles apilados. La imagen de la izquierda muestra la navegación por la tecla de dirección que se usa con `ListView` una tabulación para desplazarse por los controles, mientras que la imagen de la derecha muestra cómo la navegación entre los elementos secundarios podría ser más fácil y eficaz eliminando la necesidad de para atravesar los controles primarios con una tecla de tabulación.
 
 
 <table>
@@ -176,64 +176,64 @@ Por ejemplo, las imágenes siguientes muestran dos controles `ListView` apilados
 
 ***La interacción con dos controles ListView apilados puede ser más fácil y eficaz, ya que se elimina la tabulación y se navega por las teclas de flecha.***
 
-Visita la sección [Grupo de controles](#control-group) para aprender cómo aplicar los ejemplos de optimización en la interfaz de usuario de tu aplicación.
+Visite la sección del [grupo de control](#control-group) para obtener información sobre cómo aplicar los ejemplos de optimización a la interfaz de usuario de la aplicación.
 
 ### <a name="interaction-and-commanding"></a>Interacción y comandos
 
-Una vez que un control tiene el foco, un usuario puede interactuar con él e invocar cualquier funcionalidad asociada con la entrada de teclado específica.
+Una vez que un control tiene el foco, un usuario puede interactuar con él e invocar cualquier funcionalidad asociada mediante la entrada de teclado específica.
 
 #### <a name="text-entry"></a>Entrada de texto
 
-Para los controles diseñados específicamente para la entrada de texto, como `TextBox` y `RichEditBox`, toda la entrada de teclado se usa para escribir texto o navegar por él, lo que tiene prioridad sobre los otros comandos de teclado. Por ejemplo, el menú desplegable para un control `AutoSuggestBox` no reconoce la **barra espaciadora** como comando de selección.
+En el caso de los controles diseñados específicamente para entradas `TextBox` de `RichEditBox`texto como y, todas las entradas de teclado se usan para escribir o navegar por el texto, lo que tiene prioridad sobre otros comandos de teclado. Por ejemplo, el menú desplegable de un `AutoSuggestBox` control no reconoce la clave de **espacio** como un comando de selección.
 
 ![entrada de texto](images/keyboard/text-entry.png)
 
-#### <a name="space-key"></a>Barra espaciadora
+#### <a name="space-key"></a>Clave de espacio
 
-Cuando la **barra espaciadora** no está en modo de entrada de texto, invoca la acción o el comando asociados con el control del foco (igual que una pulsación con la entrada táctil o un clic con el mouse).
+Cuando no está en modo de entrada de texto, la tecla **barra espaciadora** invoca la acción o el comando asociado al control que tiene el foco (como una pulsación con el toque o un clic con el mouse).
 
-![barra espaciadora](images/keyboard/space-key.png)
+![clave de espacio](images/keyboard/space-key.png)
 
-#### <a name="enter-key"></a>Tecla ENTRAR
+#### <a name="enter-key"></a>Entrar (tecla)
 
-La tecla **ENTRAR** puede realizar una variedad de interacciones comunes del usuario, según el control que tenga el foco:
--   Activa los controles de comando, como `Button` o `Hyperlink`. Para evitar la confusión del usuario final, la tecla **ENTRAR** también activa los controles que parecen controle de comando, como `ToggleButton` o `AppBarToggleButton`.
--   Muestra la interfaz de usuario del selector para los controles, como `ComboBox` y `DatePicker`. La tecla **ENTRAR** también confirma y cierra la interfaz de usuario del selector.
--   Activa los controles de lista, como `ListView`, `GridView` y `ComboBox`.
-    -   La tecla **ENTRAR** realiza la acción de selección al igual que la **barra espaciadora** para los elementos de listas y cuadrículas, a menos que haya una acción adicional asociada a estos elementos (abrir una nueva ventana).
-    -   Si hay una acción adicional asociada con el control, la tecla **ENTRAR** realiza la acción adicional y la **barra espaciadora** realiza la acción de selección.
+La tecla **entrar** puede realizar una serie de interacciones de usuario comunes, dependiendo del control con el foco:
+-   Activa controles de comando como `Button` o. `Hyperlink` Para evitar la confusión del usuario final, la tecla **entrar** también activa controles que se parecen a controles de `ToggleButton` comando `AppBarToggleButton`como o.
+-   Muestra la interfaz de usuario del selector para controles `ComboBox` como `DatePicker`y. La tecla **entrar** también confirma y cierra la interfaz de usuario del selector.
+-   Activa controles de lista como `ListView`, `GridView`y. `ComboBox`
+    -   La tecla **entrar** realiza la acción de selección como la clave de **espacio** para los elementos de lista y cuadrícula, a menos que haya una acción adicional asociada a estos elementos (abrir una nueva ventana).
+    -   Si hay una acción adicional asociada al control, la tecla **entrar** realiza la acción adicional y la clave de **espacio** realiza la acción de selección.
 
-**NOTA** La tecla **ENTRAR** y la **barra espaciadora** no siempre realizan la misma acción, pero a menudo sí.
+**Nota:** La tecla **entrar** y la clave de **espacio** no siempre realizan la misma acción, pero a menudo lo hacen.
 
-![tecla ENTRAR](images/keyboard/enter-key.png)
+![tecla entrar](images/keyboard/enter-key.png)
 
-La tecla Esc permite al usuario cancelar la interfaz de usuario transitoria (junto con las acciones en curso en esa interfaz de usuario).
+La tecla ESC permite al usuario cancelar la interfaz de usuario transitoria (junto con cualquier acción en curso en esa interfaz de usuario).
 
-Entre los ejemplos de esta experiencia se incluyen:
--   El usuario abre un `ComboBox` con un valor seleccionado y usa las teclas de dirección para mover la selección del foco a un nuevo valor. Al presionar la tecla Esc se cierra el `ComboBox`, y el valor seleccionado se restablece al valor original.
--   El usuario invoca una acción de eliminación permanente de un correo electrónico y aparece un `ContentDialog` para confirmar la acción. El usuario decide que esta no es la acción deseada y presiona la tecla **Esc** para cerrar el cuadro de diálogo. Como la tecla **Esc** está asociada al botón **Cancelar**, se cierra el cuadro de diálogo y se cancela la acción. La tecla **Esc** solo afecta a la interfaz de usuario transitoria, no cierra la interfaz de usuario de la aplicación ni vuelve en la navegación.
+Estos son algunos ejemplos de esta experiencia:
+-   El usuario abre `ComboBox` un con un valor seleccionado y usa las teclas de dirección para desplazar la selección del foco a un nuevo valor. Al presionar la tecla Esc `ComboBox` , se cierra y se restablece el valor seleccionado al valor original.
+-   El usuario invoca una acción de eliminación permanente para un correo electrónico y se le solicita `ContentDialog` que confirme la acción. El usuario decide que esta no es la acción deseada y presiona la tecla **ESC** para cerrar el cuadro de diálogo. Como la tecla **ESC** está asociada al botón **Cancelar** , el cuadro de diálogo se cierra y se cancela la acción. La tecla **ESC** solo afecta a la interfaz de usuario transitoria, no se cierra o se vuelve a navegar a través de la interfaz de usuario de la aplicación.
 
-![tecla ESC](images/keyboard/esc-key.png)
+![Tecla ESC](images/keyboard/esc-key.png)
 
-#### <a name="home-and-end-keys"></a>Teclas Inicio y Fin
+#### <a name="home-and-end-keys"></a>Teclas de inicio y fin
 
-Las teclas **Inicio** y **Fin** permiten al usuario desplazarse al principio o al final de una región de la interfaz de usuario.
+Las teclas **Inicio** y **fin** permiten a los usuarios desplazarse al principio o al final de una región de la interfaz de usuario.
 
-Entre los ejemplos de esta experiencia se incluyen:
--   Para los controles `ListView` y `GridView`, la tecla **Inicio** mueve el foco al primer elemento y desplaza la vista hasta él, mientras que la tecla **Fin** mueve el foco al último elemento y desplaza la vista hasta él.
--   Para un control `ScrollView`, la tecla **Inicio** permite desplazarse a la parte superior de la región, mientras que la tecla **Fin** permite desplazarse a la parte inferior de la región (no se cambia el foco).
+Estos son algunos ejemplos de esta experiencia:
+-   En `ListView` el `GridView` caso de los controles y, la tecla **Inicio** mueve el foco al primer elemento y lo desplaza a la vista, mientras que la tecla **fin** mueve el foco al último elemento y lo desplaza a la vista.
+-   Para un `ScrollView` control, la tecla **Inicio** se desplaza hasta la parte superior de la región, mientras que la tecla **fin** se desplaza hasta la parte inferior de la región (el foco no cambia).
 
-![teclas Inicio y Fin](images/keyboard/home-and-end.png)
+![teclas Inicio y fin](images/keyboard/home-and-end.png)
 
-#### <a name="page-up-and-page-down-keys"></a>Teclas Retroceder Página (RePág) y Avanzar Página (AvPág)
+#### <a name="page-up-and-page-down-keys"></a>Teclas Re Pág y Av Pág
 
-Las teclas **Página** permiten al usuario desplazarse a una región de la interfaz de usuario en incrementos discretos.
+Las claves de **Página** permiten a un usuario desplazarse por una región de la interfaz de usuario en incrementos discretos.
 
-Por ejemplo, para controles `ListView` y `GridView`, la tecla **AvPág** desplaza la región hacia arriba una "página" (normalmente la altura de la ventanilla) y mueve el foco a la parte superior de la región. Por el contrario, la tecla **AvPág** desplaza la región hacia abajo una página y mueve el foco a la parte inferior de la región.
+Por ejemplo, para `ListView` los `GridView` controles y, la tecla **Re Pág** desplaza la región hacia arriba por una "página" (normalmente el alto de la ventanilla) y mueve el foco a la parte superior de la región. Como alternativa, la tecla **Av Pág** desplaza la región hacia abajo por una página y mueve el foco a la parte inferior de la región.
 
-![teclas RePág y AvPág](images/keyboard/page-up-and-down.png)
+![tecla RE PÁG y Av Pág](images/keyboard/page-up-and-down.png)
 
-### <a name="keyboard-shortcuts"></a>Accesos rápidos de teclado
+### <a name="keyboard-shortcuts"></a>Accesos directos del teclado
 
 Los métodos abreviados de teclado pueden facilitar el uso de la aplicación al proporcionar compatibilidad mejorada para la accesibilidad y una mayor eficiencia para los usuarios del teclado.
 
@@ -260,11 +260,11 @@ Los aceleradores tienen las siguientes características:
 -   Tienen efecto en toda la aplicación, cuando se admiten.
 -   Deben asignarse de forma coherente a medida que se memorizan y no se documentan directamente.
 
-#### <a name="access-keys"></a>Teclas de acceso
+#### <a name="access-keys"></a>Claves de acceso
 
-Para obtener información más detallada para admitir las teclas de acceso con UWP, consulta la página [Teclas de acceso](access-keys.md).
+Vea la página [claves de acceso](access-keys.md) para obtener información más detallada sobre la compatibilidad con las claves de acceso con UWP.
 
-Las teclas de acceso ayudan a los usuarios que tienen discapacidades motrices la posibilidad de presionar una tecla a la vez para activar un elemento específico de la interfaz de usuario. Además, las teclas de acceso pueden usarse para comunicar teclas de método abreviado adicionales para ayudar a los usuarios avanzados a realizar acciones rápidamente.
+Las claves de acceso ayudan a los usuarios con las discapacidades de las funciones del motor a presionar una tecla cada vez para actuar sobre un elemento específico en la interfaz de usuario. Además, las claves de acceso se pueden usar para comunicar teclas de método abreviado adicionales para ayudar a los usuarios avanzados a realizar acciones rápidamente.
 
 Las teclas de acceso tienen las siguientes características:
 -   Usan la tecla Alt y una tecla alfanumérica.
@@ -274,43 +274,43 @@ Las teclas de acceso tienen las siguientes características:
 -   Las claves de acceso deben asignarse de forma coherente a los comandos de uso frecuente (especialmente los botones de confirmación), siempre que sea posible.
 -   Están traducidas.
 
-#### <a name="common-keyboard-shortcuts"></a>Métodos abreviados de teclado habituales
+#### <a name="common-keyboard-shortcuts"></a>Métodos abreviados de teclado comunes
 
 La tabla siguiente es una pequeña muestra de los métodos abreviados de teclado que se usan con frecuencia. 
 
-| Acción                               | Comando de tecla                                      |
+| Acción                               | Comando de teclas                                      |
 |--------------------------------------|--------------------------------------------------|
-| Seleccionar todos                           | Ctrl+A                                           |
+| Seleccionar todo                           | Ctrl+A                                           |
 | Seleccionar continuamente                  | Mayús+Tecla de flecha                                  |
-| Guardar                                 | Ctrl+S                                           |
+| Save                                 | Ctrl+S                                           |
 | Buscar                                 | Ctrl+F                                           |
-| Imprimir                                | Ctrl+P                                           |
+| Print                                | Ctrl+P                                           |
 | Copiar                                 | Ctrl+C                                           |
 | Cortar                                  | Ctrl+X                                           |
 | Pegar                                | Ctrl+V                                           |
 | Deshacer                                 | Ctrl+Z                                           |
-| Pestaña siguiente                             | Ctrl+TAB                                         |
-| Cerrar pestaña                            | Ctrl+F4 o Ctrl+W                                |
+| Pestaña siguiente                             | Ctrl+Tab                                         |
+| Cerrar pestaña                            | Ctrl + F4 o Ctrl + W                                |
 | Zoom semántico                        | Ctrl++ o Ctrl+-                                 |
 
 Para obtener una lista completa de los métodos abreviados del sistema de Windows, consulte [métodos abreviados de teclado para Windows](https://support.microsoft.com/help/12445/windows-keyboard-shortcuts). Para obtener acceso a los métodos abreviados de aplicaciones comunes, consulte [métodos abreviados de teclado para aplicaciones de Microsoft](https://support.microsoft.com/help/13805/windows-keyboard-shortcuts-in-apps).
 
 ## <a name="advanced-experiences"></a>Experiencias avanzadas
 
-En esta sección, veremos algunas de las experiencias de interacción de teclado más complejas compatibles con las aplicaciones para UWP, junto con algunos de los comportamientos que debes tener en cuenta cuando tu aplicación se use en diferentes dispositivos y con diferentes herramientas.
+En esta sección, se describen algunas de las experiencias de interacción de teclado más complejas que admiten las aplicaciones UWP, junto con algunos de los comportamientos que debe tener en cuenta cuando se usa la aplicación en diferentes dispositivos y con herramientas diferentes.
 
 ### <a name="control-group"></a>Grupo de control
 
-Puedes agrupar un conjunto de controles relacionados o complementarios, en un "grupo de controles" (o área direccional), lo que permite la "navegación interna" con las teclas de dirección. El grupo de controles puede ser un único punto de tabulación, o puedes especificar varios puntos de tabulación dentro del grupo de controles.
+Puede agrupar un conjunto de controles relacionados, o complementarios, en un "grupo de control" (o área direccional), que permite "navegación interna" mediante las teclas de dirección. El grupo de control puede ser una sola posición de tabulación, o puede especificar varias tabulaciones en el grupo de control.
 
-#### <a name="arrow-key-navigation"></a>Navegación mediante teclas de dirección
+#### <a name="arrow-key-navigation"></a>Navegación por la tecla de dirección
 
-Los usuarios esperan que se admita la navegación mediante teclas de dirección cuando hay un grupo de controles similares y relacionados en una región de la interfaz de usuario:
--   `AppBarButtons` en un `CommandBar`
--   `ListItems` o `GridItems` dentro de `ListView` o `GridView`
--   `Buttons` dentro de `ContentDialog`
+Los usuarios esperan compatibilidad con la navegación por la tecla de dirección cuando hay un grupo de controles similares relacionados en una región de la interfaz de usuario:
+-   `AppBarButtons`en un`CommandBar`
+-   `ListItems`o `GridItems` dentro `ListView` o`GridView`
+-   `Buttons`énfasis`ContentDialog`
 
-Los controles para UWP admiten la navegación mediante teclas de dirección de manera predeterminada. Para los diseños personalizados y grupos de controles, usa `XYFocusKeyboardNavigation="Enabled"` para proporcionar un comportamiento similar.
+Los controles de UWP admiten la navegación por teclas de flecha de forma predeterminada. En el caso de los diseños personalizados y los `XYFocusKeyboardNavigation="Enabled"` grupos de control, use para proporcionar un comportamiento similar.
 
 Considere la posibilidad de agregar compatibilidad con la navegación por teclas de dirección al usar los siguientes controles:
 
@@ -335,47 +335,47 @@ Considere la posibilidad de agregar compatibilidad con la navegación por teclas
 
 Dependiendo de la funcionalidad y el diseño de la aplicación, la mejor opción de navegación de un grupo de control puede ser una única posición de tabulación con navegación por las flechas a los elementos secundarios, varias tabulaciones o alguna combinación.
 
-##### <a name="use-multiple-tab-stops-and-arrow-keys-for-buttons"></a>Usa varios puntos de tabulación y las teclas de dirección para los botones
+##### <a name="use-multiple-tab-stops-and-arrow-keys-for-buttons"></a>Usar varias tabulaciones y teclas de dirección para botones
 
-Los usuarios de accesibilidad dependen de reglas de navegación mediante teclado bien definidas, que normalmente no usan las teclas de dirección para desplazarse por una colección de botones. Sin embargo, los usuarios sin dificultades visuales podrían considerar que el comportamiento es natural.
+Los usuarios de accesibilidad se basan en reglas de navegación de teclado bien establecidas, que normalmente no usan teclas de dirección para navegar por una colección de botones. Sin embargo, los usuarios sin discapacidades visuales podrían creer que el comportamiento es natural.
 
-En este caso, un ejemplo de comportamiento predeterminado de UWP es `ContentDialog`. Si bien las teclas de dirección pueden usarse para desplazarse entre los botones, cada botón es también un punto de tabulación.
+Un ejemplo de comportamiento predeterminado de UWP en este caso es `ContentDialog`. Aunque las teclas de dirección se pueden usar para navegar entre los botones, cada botón también es una tabulación.
 
-##### <a name="assign-single-tab-stop-to-familiar-ui-patterns"></a>Asigna un único punto de tabulación a los patrones de interfaz de usuario familiares
+##### <a name="assign-single-tab-stop-to-familiar-ui-patterns"></a>Asignación de una sola tabulación a patrones familiares de la interfaz de usuario
 
-En los casos donde el diseño siga un patrón de interfaz de usuario conocido para los grupos de controles, la asignación de un único punto de tabulación al grupo puede mejorar la eficacia de navegación para los usuarios.
+En los casos en los que el diseño sigue un patrón de interfaz de usuario conocido para los grupos de control, la asignación de una única posición de tabulación al grupo puede mejorar la eficacia de la navegación para los usuarios.
 
 Algunos ejemplos son:
 -   `RadioButtons`
--   Varios `ListViews` que tienen el mismo aspecto y se comportan como un solo `ListView`
--   Cualquier interfaz de usuario hecha para verse y comportarse como una cuadrícula de iconos (por ejemplo, los iconos del menú Inicio)
+-   Múltiplos `ListViews` que tienen el mismo aspecto y se comportan como un solo`ListView`
+-   Cualquier interfaz de usuario para buscar y comportarse como una cuadrícula de mosaicos (como los mosaicos del menú Inicio)
 
-#### <a name="specifying-control-group-behavior"></a>Especificar el comportamiento del grupo de controles
+#### <a name="specifying-control-group-behavior"></a>Especificar el comportamiento del grupo de control
 
-Usa las siguientes API para admitir el comportamiento personalizado de grupos de controles (todos se explican con más detalle más adelante en este tema):
+Use las siguientes API para admitir el comportamiento del grupo de control personalizado (todos se describen con más detalle más adelante en este tema):
 
--   [XYFocusKeyboardNavigation](focus-navigation.md#2d-directional-navigation-for-keyboard) permite la navegación mediante de teclas de dirección entre los controles.
--   [TabFocusNavigation](focus-navigation.md#tab-navigation) indica si existen varios puntos de tabulación o solo un punto de tabulación.
--   [FindFirstFocusableElement y FindLastFocusableElement](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) establece el foco en el primer elemento con la tecla **Inicio** y el último elemento con la tecla **Fin**.
+-   [XYFocusKeyboardNavigation](focus-navigation.md#2d-directional-navigation-for-keyboard) habilita la navegación por la tecla de dirección entre controles
+-   [TabFocusNavigation](focus-navigation.md#tab-navigation) indica si hay varias tabulaciones o una sola tabulación
+-   [FindFirstFocusableElement y FindLastFocusableElement](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) establecen el foco en el primer elemento con la tecla **Inicio** y el último elemento con la tecla **fin**
 
-En la siguiente imagen se muestra un comportamiento intuitivo de navegación mediante el teclado para un grupo de controles de botones de radio asociados. En este caso, te recomendamos un único punto de tabulación para el grupo de controles, navegación interna entre los botones de radio con las teclas de dirección, la tecla **Inicio** enlazada al primer botón de radio, y la tecla **Fin** enlazada al último botón de radio.
+La imagen siguiente muestra un comportamiento intuitivo de navegación por el teclado para un grupo de controles de botones de radio asociados. En este caso, se recomienda una única tabulación para el grupo de control, la navegación interna entre los botones de radio mediante las teclas de dirección, la tecla **Inicio** enlazada al primer botón de radio y la tecla **fin** enlazada al último botón de radio.
 
-![implementación](images/keyboard/putting-it-all-together.png)
+![reunir todo](images/keyboard/putting-it-all-together.png)
 
-### <a name="keyboard-and-narrator"></a>El teclado y el Narrador
+### <a name="keyboard-and-narrator"></a>Teclado y narrador
 
-El Narrador es una herramienta de accesibilidad de la interfaz de usuario dirigida a los usuarios del teclado (también se admiten otros tipos de entrada). Sin embargo, la funcionalidad del Narrador va más allá de las interacciones de teclado admitidas por las aplicaciones para UWP y es necesario prestar especial atención al diseñar tu aplicación para UWP para el Narrador. (La [página de conceptos básicos del Narrador](https://support.microsoft.com/help/22808/windows-10-narrator-basics) te guía a través de la experiencia del usuario con el Narrador).
+Narrador es una herramienta de accesibilidad de interfaz de usuario orientada hacia los usuarios del teclado (también se admiten otros tipos de entrada). Sin embargo, la funcionalidad del narrador va más allá de las interacciones de teclado admitidas por las aplicaciones UWP y se requiere atención adicional al diseñar la aplicación para UWP para el narrador. (La [Página de conceptos básicos del narrador](https://support.microsoft.com/help/22808/windows-10-narrator-basics) le guía a través de la experiencia del usuario de narrador).
 
-Algunas de las diferencias entre los comportamientos del teclado para UWP y los admitidos por el Narrador incluyen:
--   Combinaciones de teclas adicionales para la navegación a elementos de la interfaz de usuario que no están expuestos a través de la navegación habitual mediante el teclado, como Bloq Mayús+teclas de dirección para leer las etiquetas de los controles.
--   Navegación a los elementos deshabilitados. De manera predeterminada, los elementos deshabilitados no se exponen a través de la navegación habitual mediante el teclado.
--   "Vistas" de controles para la navegación más rápida en función de la granularidad de la interfaz de usuario. Los usuarios pueden navegar a los elementos, caracteres, palabras, líneas, párrafos, vínculos, encabezados, tablas, puntos de referencia y sugerencias. La navegación habitual mediante el teclado expone estos objetos como una lista plana, lo que podría hacer que la navegación fuese engorrosa, a menos que proporciones teclas de método abreviado.
+Algunas de las diferencias entre los comportamientos de teclado de UWP y los admitidos por el narrador incluyen:
+-   Combinaciones clave adicionales para la navegación a los elementos de la interfaz de usuario que no se exponen a través de la navegación de teclado estándar, como Bloq Mayús + teclas de dirección para leer las etiquetas de control.
+-   Navegación a los elementos deshabilitados. De forma predeterminada, los elementos deshabilitados no se exponen a través de la navegación de teclado estándar.
+-   Controle "views" para una navegación más rápida basada en la granularidad de la interfaz de usuario. Los usuarios pueden navegar a elementos, caracteres, palabras, líneas, párrafos, vínculos, encabezados, tablas, puntos de referencia y sugerencias. La navegación de teclado estándar expone estos objetos como una lista plana, lo que puede hacer que la navegación sea tediosa a menos que proporcione teclas de método abreviado.
 
 #### <a name="case-study--autosuggestbox-control"></a>Caso práctico: control AutoSuggestBox
 
-El botón de búsqueda para `AutoSuggestBox` no es accesible para la navegación habitual mediante el teclado con las teclas TAB y de dirección porque el usuario puede presionar la tecla **ENTRAR** para enviar la consulta de búsqueda. Sin embargo, es accesible mediante el Narrador cuando el usuario presiona Bloq Mayús+una tecla de dirección.
+El botón buscar de no `AutoSuggestBox` es accesible para la navegación de teclado estándar mediante las teclas de tabulación y de flecha porque el usuario puede presionar la tecla **entrar** para enviar la consulta de búsqueda. Sin embargo, es accesible a través del narrador cuando el usuario presiona Bloq Mayús + una tecla de dirección.
 
-![sugerencia automática de foco del teclado](images/keyboard/auto-suggest-keyboard.png)
+![enfoque de teclado de sugerencia automática](images/keyboard/auto-suggest-keyboard.png)
 
 *Con el teclado, los usuarios presionan la* tecla ***entrar*** *para enviar una consulta de búsqueda*
 
@@ -392,81 +392,81 @@ El botón de búsqueda para `AutoSuggestBox` no es accesible para la navegación
   </tr>
 </table>
 
-### <a name="keyboard-and-the-xbox-gamepad-and-remote-control"></a>El teclado y el controlador para juegos y el control remoto de Xbox
+### <a name="keyboard-and-the-xbox-gamepad-and-remote-control"></a>Teclado y el mando a distancia y control remoto de Xbox
 
-Los controles para juegos y controles remotos de Xbox admiten muchos comportamientos y experiencias del teclado para UWP. Sin embargo, debido a la falta de varias opciones de teclas que sí están disponibles en un teclado, el controlador para juegos y el control remoto no tienen muchas optimizaciones de teclado (el control remoto es incluso más limitado que el controlador para juegos).
+Los controladores de juegos y controles remotos de Xbox admiten muchos comportamientos y experiencias de teclado de UWP. Sin embargo, debido a la falta de varias opciones de clave disponibles en un teclado, el controlador para juegos y el control remoto carecen de varias optimizaciones de teclado (el control remoto es aún más limitado que el controlador de juegos).
 
 Consulte interacciones del controlador para juegos [y control remoto](gamepad-and-remote-interactions.md) para obtener más información sobre la compatibilidad de UWP con el controlador de juegos y la entrada de control remoto.
 
-A continuación se muestran algunas asignaciones clave entre el teclado, el controlador para juegos y el control remoto.
+A continuación se muestran algunas asignaciones de teclas entre el teclado, el controlador de juegos y el control remoto.
 
 | **Teclado**  | **Controlador para juegos**                         | **Control remoto**  |
 |---------------|-------------------------------------|---------------------|
-| Barra espaciadora         | Botón A                            | Botón de selección       |
-| Entrar         | Botón A                            | Botón de selección       |
+| Space         | Botón A                            | Botón seleccionar       |
+| Escriba         | Botón A                            | Botón seleccionar       |
 | Escape        | Botón B                            | Botón Atrás         |
-| Inicio/Fin      | N/D                                 | N/D                 |
-| RePág/AvPág  | Botón de gatillo para desplazamiento vertical, botón superior para desplazamiento horizontal   | N/D                 |
+| Inicio o fin      | N/D                                 | N/D                 |
+| RE PÁG/AV pág  | Botón desencadenador para desplazamiento vertical, botón de golpe para desplazamiento horizontal   | N/D                 |
 
-Algunas diferencias clave que debes tener en cuenta al diseñar la aplicación para UWP para su uso con el controlador para juegos y el control remoto incluyen:
--   La entrada de texto requiere que el usuario presione A activar un control de texto.
--   La navegación con foco no se limita a los grupos de controles; los usuarios pueden navegar libremente a cualquier elemento activable de la interfaz de usuario en la aplicación.
+Algunas de las principales diferencias que debe tener en cuenta al diseñar la aplicación para UWP para su uso con el controlador de juegos y el uso del control remoto son:
+-   La entrada de texto requiere que el usuario presione para activar un control de texto.
+-   La navegación de foco no se limita a los grupos de control; los usuarios pueden navegar libremente a cualquier elemento de la interfaz de usuario que tenga el foco en la aplicación.
 
-    **NOTA** El foco puede moverse a cualquier elemento activable de la interfaz de usuario en la dirección de presión de las teclas, a menos que sea una superposición de la interfaz de usuario o se especifique una [participación del foco](gamepad-and-remote-interactions.md#focus-engagement), lo que impide que el foco entre o salga de una región hasta que se active o desactive con el botón A. Consulta la sección de [navegación direccional](#directional-navigation) para obtener más información.
--   La cruceta y los botones de la palanca izquierda se usan para mover el foco entre los controles y para la navegación interna.
+    **Nota:** El foco puede moverse a cualquier elemento de la interfaz de usuario que tenga el foco en la dirección de la pulsación de teclas, a menos que esté en una interfaz de usuario de superposición o se especifique el [foco](gamepad-and-remote-interactions.md#focus-engagement) , lo que evita que el foco entre o salga de una región hasta que se haya comprometido/desactivado con el botón a. Para obtener más información, vea la sección [navegación direccional](#directional-navigation) .
+-   Los botones del panel D y del stick izquierdo se usan para cambiar el foco entre los controles y la navegación interna.
 
-    **NOTA** El controlador para juegos y el control remoto solo se desplazan a los elementos que están en el mismo orden visual que la tecla direccional presionada. La navegación está deshabilitada en esa dirección cuando no hay ningún elemento posterior que pueda recibir el foco. Según la situación, los usuarios del teclado no siempre tienen esa restricción. Para obtener más información, consulta la sección [Optimización integrada del teclado](#built-in-keyboard-optimization).
+    **Nota:** El controlador de juegos y el control remoto solo navegan a los elementos que se encuentran en el mismo orden visual que la tecla direccional presionada. La navegación se deshabilita en esa dirección cuando no hay ningún elemento posterior que pueda recibir el foco. Dependiendo de la situación, los usuarios del teclado no siempre tienen esa restricción. Para obtener más información, consulte la sección sobre la [optimización de teclado integrada](#built-in-keyboard-optimization) .
 
 #### <a name="directional-navigation"></a>Navegación direccional
 
-La navegación direccional se administra mediante una clase auxiliar [FocusManager](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.FocusManager) de UWP, que toma la tecla direccional presionada (tecla de dirección, cruceta) e intenta mover el foco en la dirección visual correspondiente.
+La navegación direccional se administra mediante una clase auxiliar de [Administrador de foco](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.FocusManager) de UWP, que toma la tecla direccional presionada (tecla de dirección, almohadilla D) e intenta cambiar el foco en la dirección visual correspondiente.
 
 A diferencia del teclado, cuando una aplicación opta por el [modo de mouse](gamepad-and-remote-interactions.md#mouse-mode), la navegación direccional se aplica en toda la aplicación para el controlador de juegos y el control remoto. Consulte [interacciones de control remoto y controlador para juegos](gamepad-and-remote-interactions.md) para más información sobre la optimización de navegación direccional.
 
-**NOTA** La navegación mediante la tecla TAB del teclado no se considera como navegación direccional. Para obtener más información, consulta la sección [Puntos de tabulación](#tab-stops).
+**Nota:** La navegación con la tecla de tabulación del teclado no se considera una navegación direccional. Para obtener más información, vea la sección de [tabulaciones](#tab-stops) .
 
 <table>
   <tr>
     <td>
       <p><img src="images/keyboard/directional-navigation.png" alt="directional navigation"/></p>
-      <p><em><strong>navegación direccional compatible</strong></br>Con las teclas de dirección (flechas de teclado, controlador para juegos y panel de control remoto), el usuario puede navegar entre distintos controles.</em></p>
+      <p><em><strong>Navegación direccional compatible</strong></br>Con las teclas de dirección (flechas de teclado, controlador para juegos y panel de control remoto), el usuario puede navegar entre distintos controles.</em></p>
     </td>
     <td>
       <p><img src="images/keyboard/no-directional-navigation.png" alt="no directional navigation"/></p>
-      <p><strong>no se admite la navegación direccional</strong> <em> </br>El usuario no puede desplazarse entre los distintos controles mediante las teclas direccionales. Otros métodos de navegación entre los controles (tecla TAB) no se ven afectados.</em></p>
+      <p><em><strong>No se admite la navegación direccional</strong> </br>El usuario no puede navegar entre distintos controles mediante claves direccionales. Otros métodos de navegación entre los controles (tecla TAB) no se ven afectados.</em></p>
     </td>
   </tr>
 </table>
 
 ### <a name="built-in-keyboard-optimization"></a>Optimización de teclado integrada
 
-Según el diseño y los controles que se usen, las aplicaciones para UWP pueden optimizarse específicamente para la entrada de teclado.
+En función del diseño y los controles usados, las aplicaciones UWP se pueden optimizar específicamente para la entrada de teclado.
 
-En el siguiente ejemplo se muestra un grupo de elementos de lista, elementos de cuadrícula y elementos de menú a los que se les han asignado un único punto de tabulación (consulta la sección [Puntos de tabulación](#tab-stops)). Cuando el grupo tiene el foco, se realiza la navegación interna con las teclas direccionales en el orden visual correspondiente (consulta la sección [Navegación](#navigation)).
+En el ejemplo siguiente se muestra un grupo de elementos de lista, elementos de cuadrícula y elementos de menú que se han asignado a una sola tabulación ( [vea la sección de tabulaciones](#tab-stops) ). Cuando el grupo tiene el foco, la navegación interna se realiza con las teclas de dirección en el orden visual correspondiente (vea la sección [navegación](#navigation) ).
 
-![navegación con teclas de dirección por una sola columna](images/keyboard/single-column-arrow.png)
+![navegación por la tecla de flecha de una sola columna](images/keyboard/single-column-arrow.png)
 
 ***Navegación por la tecla de flecha de una sola columna***
 
-![navegación con teclas de dirección por una sola fila](images/keyboard/single-row-arrow.png)
+![navegación por la tecla de flecha de una sola fila](images/keyboard/single-row-arrow.png)
 
 ***Navegación por la tecla de flecha de una sola fila***
 
-![navegación con teclas de dirección por varias filas y columnas](images/keyboard/multiple-column-and-row-navigation.png)
+![navegación por varias claves de flecha de filas y columnas](images/keyboard/multiple-column-and-row-navigation.png)
 
 ***Navegación por varias teclas de flecha de columna o fila***
 
-#### <a name="wrapping-homogeneous-list-and-grid-view-items"></a>Ajuste de elementos homogéneos de la vista de lista y de cuadrícula
+#### <a name="wrapping-homogeneous-list-and-grid-view-items"></a>Ajustar elementos de vista de cuadrícula y lista homogénea
 
-La navegación direccional no siempre es la manera más eficaz de desplazarse por varias filas y columnas de elementos List y GridView.
+La navegación direccional no es siempre la manera más eficaz de navegar por varias filas y columnas de elementos de lista y de GridView.
 
-**NOTA** En general, los elementos de menú son listas de una sola columna, pero en algunos casos es posible que se apliquen reglas de enfoque especiales (consulta [Interfaz de usuario emergente](#popup-ui)).
+**Nota:** Los elementos de menú suelen ser listas de una sola columna, pero es posible que se apliquen reglas de foco especiales en algunos casos (vea la [interfaz de usuario emergente](#popup-ui)).
 
-Los objetos List y Grid pueden crearse con varias filas y columnas. Suelen ordenarse en row-major (donde los elementos llenan toda la fila antes de rellenar la fila siguiente) o column-major (donde los elementos rellenan toda la columna antes de rellenar la siguiente columna). El orden de row-major o column-major depende de la dirección de desplazamiento, y debes asegurarte de que el orden de los elementos no entre en conflicto con esta dirección.
+Los objetos de lista y cuadrícula se pueden crear con varias filas y columnas. Normalmente se encuentran en la fila principal (donde los elementos rellenan primero la fila antes de rellenar la fila siguiente) o la columna principal (donde los elementos rellenan la columna por completo antes de rellenar el orden de la columna siguiente). El orden principal de fila o columna depende de la dirección de desplazamiento y debe asegurarse de que el orden de los elementos no entra en conflicto con esta dirección.
 
-En el orden row-major (donde los elementos se rellenan de izquierda a derecha y de arriba abajo), cuando el foco está en el último elemento de una fila y se presiona la tecla de flecha derecha, el foco se mueve al primer elemento de la fila siguiente. Este mismo comportamiento se produce a la inversa: cuando el foco se encuentra en el primer elemento en una fila y se presiona la tecla de flecha izquierda, el foco se mueve al último elemento de la fila anterior.
+En el orden principal de las filas (en el que los elementos se rellenan de izquierda a derecha, de arriba abajo), cuando el foco está en el último elemento de una fila y se presiona la tecla de dirección derecha, el foco se mueve al primer elemento de la fila siguiente. Este mismo comportamiento se produce en orden inverso: cuando el foco se establece en el primer elemento de una fila y se presiona la tecla de dirección izquierda, el foco se mueve al último elemento de la fila anterior.
 
-En el orden column-major (donde los elementos se rellenan de arriba abajo y de izquierda a derecha), cuando el foco está en el último elemento de una columna y el usuario presiona la tecla de flecha abajo, el foco se mueve al primer elemento de la columna siguiente. Este mismo comportamiento se produce a la inversa: cuando el foco se encuentra en el primer elemento en una columna y se presiona la tecla de flecha arriba, el foco se mueve al último elemento de la columna anterior.
+En el orden principal de las columnas (donde los elementos se rellenan de arriba abajo, de izquierda a derecha), cuando el foco está en el último elemento de una columna y el usuario presiona la tecla de dirección abajo, el foco se mueve al primer elemento de la columna siguiente. Este mismo comportamiento se produce en orden inverso: cuando el foco se establece en el primer elemento de una columna y se presiona la tecla de dirección arriba, el foco se mueve al último elemento de la columna anterior.
 
 <table>
   <tr>
@@ -501,9 +501,9 @@ Si el último elemento tiene el foco y se presiona la tecla de dirección abajo,
 
 Se recomienda emular estos mismos comportamientos en los controles personalizados. El ejemplo de código sobre cómo implementar este comportamiento se puede encontrar en la documentación de [navegación del foco mediante programación](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) .
 
-## <a name="test-your-app"></a>Probar la aplicación
+## <a name="test-your-app"></a>Prueba de la aplicación
 
-Prueba tu aplicación con todos los dispositivos de entrada admitidos para garantizar que puedas desplazarte a los elementos de la interfaz de usuario forma coherente e intuitiva y de que ningún elemento inesperado interfiera con el orden de tabulación deseado.
+Pruebe la aplicación con todos los dispositivos de entrada admitidos para asegurarse de que los elementos de la interfaz de usuario se pueden navegar de forma coherente e intuitiva y de que ningún elemento inesperado interfiere con el orden de tabulación deseado.
 
 ## <a name="related-articles"></a>Artículos relacionados
 * [Eventos de teclado](keyboard-events.md)
@@ -515,17 +515,17 @@ Prueba tu aplicación con todos los dispositivos de entrada admitidos para garan
 
 ### <a name="software-keyboard"></a>Teclado de software
 
-El teclado de software es un teclado que se muestra en la pantalla y que el usuario puede usar en lugar del teclado físico para escribir datos con entrada táctil, el mouse, el lápiz o la pluma u otro dispositivo señalador (no es necesaria una pantalla táctil). En la pantalla táctil, estos teclados también pueden tocarse directamente para escribir texto. En los dispositivos Xbox One, las teclas individuales deben seleccionarse moviendo el elemento visual de foco o usando métodos abreviados con el controlador para juegos o el control remoto.
+Teclado de software es un teclado que se muestra en pantalla y que el usuario puede usar en lugar del teclado físico para escribir y escribir datos mediante la función táctil, el mouse, el lápiz o el lápiz, o cualquier otro dispositivo señalador (no se requiere una pantalla táctil). En la pantalla táctil, estos teclados se pueden tocar directamente para escribir texto. En dispositivos de Xbox One, es necesario seleccionar claves individuales moviendo el foco visual o usando teclas de método abreviado con el control remoto o el controlador de juegos.
 
-![Teclado táctil de Windows 10](images/keyboard/default.png)
+![Teclado táctil de Windows 10](images/keyboard/default.png)
 
 ***Teclado táctil de Windows 10***
 
-![Teclado en pantalla de Xbox One](images/keyboard/xbox-onscreen-keyboard.png)
+![Teclado Xbox One en pantalla](images/keyboard/xbox-onscreen-keyboard.png)
 
 ***Teclado Xbox One en pantalla***
 
-Según el dispositivo, el teclado de software aparece cuando un campo de texto u otro control de texto editable obtiene el foco o cuando el usuario manualmente lo habilita a través del **centro de notificaciones**:
+En función del dispositivo, el teclado del software aparece cuando un campo de texto u otro control de texto modificable recibe el foco, o cuando el usuario lo habilita manualmente a través del **centro de notificaciones**:
 
 ![Icono del teclado táctil en el centro de notificaciones](images/keyboard/touch-keyboard-notificationcenter.png)
 
@@ -540,12 +540,12 @@ La siguiente es una lista de controles de no edición que pueden recibir el foco
 -   Botón de selección
 -   Barra de desplazamiento
 -   Árbol
--   Elemento del árbol
+-   Elemento de árbol
 -   Menú
 -   Barra de menús
 -   Elemento de menú
 -   Barra de herramientas
--   Lista
+-   List
 -   Elemento de lista
 
 Estos son algunos ejemplos de los diferentes modos del teclado táctil. La primera imagen es el diseño predeterminado, la segunda es el diseño para pulgares (puede que no esté disponible para todos los idiomas).
@@ -560,20 +560,20 @@ Estos son algunos ejemplos de los diferentes modos del teclado táctil. La prime
 
 La correcta interacción con el teclado permite a los usuarios emplear escenarios de aplicación básicos mediante el uso exclusivo del teclado. Es decir, que los usuarios pueden alcanzar todos los elementos interactivos de la interfaz de usuario y activar funciones predeterminadas. Hay una serie de factores que pueden afectar el grado de éxito, como la navegación por el teclado, las teclas de acceso para accesibilidad y las teclas de aceleración (o de método abreviado) para usuarios avanzados.
 
-**Tenga en cuenta**  el teclado táctil no admite la alternancia y la mayoría de los comandos del sistema.
+**Tenga en cuenta**  que el teclado táctil no admite la alternancia y la mayoría de los comandos del sistema.
 
 #### <a name="on-screen-keyboard"></a>Teclado en pantalla
-Al igual que el teclado de software, el teclado en pantalla es un teclado software visual que puedes usar en lugar del teclado físico para escribir datos con entrada táctil, el mouse, el lápiz o la pluma u otro dispositivo señalador (no es necesaria una pantalla táctil). El teclado en pantalla se proporciona para sistemas que no incluyen un teclado físico, o para usuarios cuyos problemas de movilidad les impidan usar los dispositivos de entrada físicos tradicionales. El teclado en pantalla simula la mayoría de las funciones, si no todas, de un teclado de hardware.
+Al igual que el teclado de software, el teclado en pantalla es un visual, teclado de software que puede usar en lugar del teclado físico para escribir y escribir datos mediante la función táctil, Mouse, pluma/lápiz u otro dispositivo señalador (no se requiere una pantalla táctil). El teclado en pantalla se proporciona para sistemas que no incluyen un teclado físico, o para usuarios cuyos problemas de movilidad les impidan usar los dispositivos de entrada físicos tradicionales. El teclado en pantalla simula la mayoría de las funciones, si no todas, de un teclado de hardware.
 
 Puede activarse desde la página Teclado, que se encuentra en Configuración &gt; Accesibilidad.
 
-**NOTA** El teclado en pantalla tiene prioridad sobre el teclado táctil, que no se mostrará si el primero está presente.
+**Nota:** El teclado en pantalla tiene prioridad sobre el teclado táctil, que no se mostrará si el teclado en pantalla está presente.
 
 ![Teclado en pantalla](images/keyboard/osk.png)
 
 ***Teclado en pantalla***
 
-Para obtener más información sobre el teclado en pantalla, visita la página [Teclado en pantalla](https://support.microsoft.com/help/10762/windows-use-on-screen-keyboard).
+Visite [la página teclado en pantalla](https://support.microsoft.com/help/10762/windows-use-on-screen-keyboard) para obtener más detalles sobre el teclado en pantalla.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

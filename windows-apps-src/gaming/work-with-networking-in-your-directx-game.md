@@ -4,14 +4,14 @@ description: Aprende a desarrollar e incorporar características de red en un ju
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, juegos, redes, directx
+keywords: Windows 10, UWP, juegos, redes, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 79a1640964902f1effc08196372128bd38bebe2d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 2e693016fa6b87f231c1cbbfac4c2e55d44623c9
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258402"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606374"
 ---
 # <a name="networking-for-games"></a>Conexión en red de juegos
 
@@ -19,7 +19,7 @@ ms.locfileid: "74258402"
 
 Aprende a desarrollar e incorporar características de red en un juego DirectX.
 
-## <a name="concepts-at-a-glance"></a>Breve explicación de conceptos
+## <a name="concepts-at-a-glance"></a>Conceptos de un vistazo
 
 
 En tu juego DirectX puedes usar una variedad de características de red, ya sea un juego independiente sencillo o juegos masivos de varios jugadores. El uso más simple de las funciones de red sería almacenar nombres de usuario y puntuaciones del juego en un servidor de red central.
@@ -121,7 +121,7 @@ El espacio de nombres [**Windows.Networking.Sockets**](https://docs.microsoft.co
 
 Encontrar un error en [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) o una operación [**StreamSocketListener**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener) hace que se arroje una excepción. La causa de la excepción es un valor de error representado como un valor **HRESULT**. El método [**SocketError.GetStatus**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.socketerror.getstatus) se usa para convertir un error de red de una operación de socket en un valor de enumeración [**SocketErrorStatus**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.SocketErrorStatus). La mayoría de los valores de enumeración **SocketErrorStatus** corresponden a un error devuelto por la operación de Windows Sockets nativa. Una aplicación puede filtrar según valores **SocketErrorStatus** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
-Para los errores de validación de parámetros, una aplicación también puede usar el **HRESULT** de la excepción para obtener información más detallada del error que causó la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E\_INVALIDARG**.
+Para los errores de validación de parámetros, una aplicación también puede usar el **HRESULT** de la excepción para obtener información más detallada del error que causó la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Para la mayoría de los errores de validación de parámetros, el **HRESULT** devuelto es **E\_INVALIDARG**.
 
 Agregar código para controlar excepciones cuando se intenta hacer una conexión de socket de secuencias
 
@@ -222,7 +222,7 @@ using namespace Windows::Networking::Sockets;
 
 ### <a name="exceptions-in-windowswebhttp"></a>Excepciones en Windows.Web.Http
 
-El constructor de la clase [**Windows::Foundation::Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) usado con [**Windows::Web::Http::HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) puede arrojar una excepción si se pasa una cadena con un URI no válido (contiene caracteres no permitidos en un URI). En C++, no hay ningún método para probar y analizar una cadena en un URI. Si una aplicación recibe información del usuario relativa a **Windows::Foundation::Uri**, el constructor debe estar en un bloque Try/Catch. Si se arroja una excepción, la aplicación puede notificar al usuario y solicitar un nuevo URI.
+El constructor de la clase [**Windows::Foundation::Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) usado con [**Windows::Web::Http::HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) puede arrojar una excepción si se pasa una cadena con un URI no válido (contiene caracteres no permitidos en un URI). En C++, no hay ningún método para probar y analizar una cadena en un URI. Si una aplicación obtiene la entrada del usuario para **Windows:: Foundation:: URI**, el constructor debe estar en un bloque try/catch. Si se arroja una excepción, la aplicación puede notificar al usuario y solicitar un nuevo URI.
 
 La aplicación también debe comprobar que el esquema en el URI sea HTTP o HTTPS, dado que estos son los únicos esquemas admitidos por [**Windows::Web::Http::HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient).
 
@@ -269,11 +269,11 @@ Agregar código para validar una cadena para un URI del usuario
     // ... Continue with code to execute with a valid URI.
 ```
 
-El espacio de nombres [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/windows.web.http) no tiene una función de conveniencia. Por este motivo, una aplicación que use [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) y otras clases de este espacio de nombres debe usar el valor **HRESULT**.
+El espacio de nombres [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/windows.web.http) no tiene una función de conveniencia. Por lo tanto, una aplicación que usa [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) y otras clases de este espacio de nombres necesita usar el valor **HRESULT** .
 
 En las aplicaciones con C++, [**Platform::Exception**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [**Platform::Exception::HResult**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#hresult) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [**Platform::Exception::Message**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#message) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
-Para la mayoría de los errores de validación de parámetros, el valor de **HRESULT** devuelto es **E\_INVALIDARG**. Para algunas llamadas a métodos no válidas, el valor de **HRESULT** devuelto es **E\_ILLEGAL\_METHOD\_CALL**.
+Para la mayoría de los errores de validación de parámetros, el **HRESULT** devuelto es **E\_INVALIDARG**. Para algunas llamadas a métodos no válidas, el valor de **HRESULT** devuelto es **E\_ILLEGAL\_METHOD\_CALL**.
 
 Agregar código para controlar excepciones cuando se intenta usar [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) para conectarse a un servidor HTTP
 
@@ -370,13 +370,13 @@ using namespace Windows::Web::Http;
 
 **Otros recursos**
 
-* [Conectar con un socket de datagrama](https://docs.microsoft.com/previous-versions/windows/apps/jj635238(v=win.10))
-* [Conexión a un recurso de red con un socket de flujo](https://docs.microsoft.com/previous-versions/windows/apps/jj150599(v=win.10))
+* [Conectar con un socket de datagramas](https://docs.microsoft.com/previous-versions/windows/apps/jj635238(v=win.10))
+* [Conectar a un recurso de red con un socket de secuencias](https://docs.microsoft.com/previous-versions/windows/apps/jj150599(v=win.10))
 * [Conexión a servicios de red](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
-* [Conexión a servicios Web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+* [Conexión a servicios web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
 * [Conceptos básicos de redes](https://docs.microsoft.com/windows/uwp/networking/networking-basics)
-* [Configuración de las funcionalidades de aislamiento de red](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-* [Cómo habilitar el aislamiento de red y de depuración de bucle invertido](https://docs.microsoft.com/previous-versions/windows/apps/hh780593(v=win.10))
+* [Procedimiento para configurar las funcionalidades de aislamiento de red](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+* [Cómo habilitar el aislamiento de red de bucle invertido y de depuración](https://docs.microsoft.com/previous-versions/windows/apps/hh780593(v=win.10))
 
 **Referencia**
 
@@ -386,9 +386,9 @@ using namespace Windows::Web::Http;
 * [**Windows:: Web:: http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)
 * [**Windows:: Networking:: Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
 
-**Ejemplos**
+**Muestras**
 
-* [Ejemplo de DatagramSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
-* [Ejemplo de HttpClient]( https://go.microsoft.com/fwlink/p/?linkid=242550)
-* [Ejemplo de proximidad](https://code.msdn.microsoft.com/windowsapps/Proximity-Sample-88129731)
+* [Muestra de DatagramSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
+* [Ejemplo de HttpClient]( https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
+* [Muestra de proximidad](https://code.msdn.microsoft.com/windowsapps/Proximity-Sample-88129731)
 * [Muestra StreamSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)

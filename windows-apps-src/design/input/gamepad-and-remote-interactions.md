@@ -9,31 +9,31 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 440f758e5db8bd77d3f26290eb59d7684e5f87a3
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 207ad9cb3008f1a36402e413b7e246aa2135ae26
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210031"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970170"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interacciones con controlador para juegos y control remoto
 
-![Imagen del teclado y el controlador para juegos](images/keyboard/keyboard-gamepad.jpg)
+![imagen de teclado y controlador para juegos](images/keyboard/keyboard-gamepad.jpg)
 
 ***Muchas experiencias de interacción se comparten entre el controlador de juegos, el control remoto y el teclado***
 
-Cree experiencias de interacción en las aplicaciones Plataforma universal de Windows (UWP) que garantizan que la aplicación es utilizable y accesible a través de los tipos de entrada tradicionales de equipos, portátiles y tabletas (mouse, teclado, toque, etc.), así como los tipos de entrada típicos de la experiencia de TV y *10 pies* , como el controlador de juegos y el control remoto.
+Cree experiencias de interacción en las aplicaciones de la aplicación Windows para asegurarse de que la aplicación es utilizable y accesible a través de los tipos de entrada de PC, portátiles y tabletas tradicionales (mouse, teclado, toque, etc.), así como los tipos de entrada típicos de la experiencia de TV y *10 pies* , como el controlador de juegos y el control remoto.
 
-Consulte [diseño de Xbox y TV](../devices/designing-for-tv.md) para obtener instrucciones generales de diseño sobre aplicaciones UWP en la experiencia de *10 pies* .
+Consulte [diseño de Xbox y TV](../devices/designing-for-tv.md) para obtener instrucciones generales de diseño sobre aplicaciones Windows en la experiencia de *10 pies* .
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
-En este tema, se explica lo que debe tener en cuenta en el diseño de interacción (o lo que no es necesario, si la plataforma lo hace después), y se proporcionan instrucciones, recomendaciones y sugerencias para la creación de aplicaciones para UWP que resulten divertidas de usar independientemente de dispositivo, tipo de entrada o capacidades y preferencias del usuario.
+En este tema, se explica lo que debe tener en cuenta en el diseño de la interacción (o lo que no, si la plataforma lo busca después) y proporciona instrucciones, recomendaciones y sugerencias para la creación de aplicaciones de Windows que son divertidas de usar independientemente del dispositivo, el tipo de entrada o las capacidades y preferencias del usuario.
 
 En la parte inferior, la aplicación debe ser tan intuitiva y fácil de usar en el entorno de *2 pies* , ya que se encuentra en el entorno de 3 *metros* (y viceversa). Admita los dispositivos preferidos del usuario, haga que el foco de la interfaz de usuario sea claro y unmistakable, organice el contenido para que la navegación sea coherente y predecible, y proporcione a los usuarios la ruta más corta posible a lo que desean hacer.
 
 > [!NOTE]
-> La mayoría de los fragmentos de código de este tema están en XAML/C#; Sin embargo, los principios y conceptos se aplican a todas las aplicaciones para UWP. Si estás desarrollando una aplicación para UWP en HTML/JavaScript para Xbox, echa un vistazo a la excelente biblioteca [TVHelpers](https://github.com/Microsoft/TVHelpers/wiki) en GitHub.
+> La mayoría de los fragmentos de código de este tema se encuentran en XAML o C#; sin embargo, los principios y conceptos se aplican a todas las aplicaciones de Windows. Si está desarrollando una aplicación de Windows HTML/JavaScript para Xbox, consulte la excelente biblioteca de [TVHelpers](https://github.com/Microsoft/TVHelpers/wiki) en github.
 
 
 ## <a name="optimize-for-both-2-foot-and-10-foot-experiences"></a>Optimizar para experiencias de 2 y 3 pies
@@ -43,11 +43,11 @@ Como mínimo, se recomienda probar las aplicaciones para asegurarse de que funci
 Estas son algunas otras maneras en que puede optimizar la aplicación para su uso en experiencias de 2 y 3 pies y con todos los dispositivos de entrada (cada uno de los vínculos a la sección correspondiente de este tema).
 
 > [!NOTE]
-> Dado que los controladores de juegos de Xbox y los controles remotos admiten muchos comportamientos y experiencias de teclado de UWP, estas recomendaciones son adecuadas para ambos tipos de entrada. Consulte [interacciones de teclado](keyboard-interactions.md) para obtener información más detallada del teclado.
+> Dado que los controladores de juegos de Xbox y los controles remotos admiten muchos comportamientos y experiencias del teclado de Windows, estas recomendaciones son adecuadas para ambos tipos de entrada. Consulte [interacciones de teclado](keyboard-interactions.md) para obtener información más detallada del teclado.
 
 | Característica        | Descripción           |
 | -------------------------------------------------------------- |--------------------------------|
-| [Navegación e interacción con el foco XY](#xy-focus-navigation-and-interaction) | La navegación con el **foco XY** permite al usuario navegar por la interfaz de usuario de la aplicación. Sin embargo, esto limita al usuario a navegar hacia arriba, abajo, izquierda y derecha. En esta sección se describen recomendaciones para lidiar con esta y otras consideraciones. |
+| [Interacción y navegación con foco XY](#xy-focus-navigation-and-interaction) | La navegación con el **foco XY** permite al usuario navegar por la interfaz de usuario de la aplicación. Sin embargo, esto limita al usuario a navegar hacia arriba, abajo, izquierda y derecha. En esta sección se describen recomendaciones para lidiar con esta y otras consideraciones. |
 | [Modo del mouse](#mouse-mode)|La navegación con el foco XY no es práctica, ni siquiera posible, para algunos tipos de aplicaciones, como las asignaciones o el dibujo y la representación de aplicaciones. En estos casos, el **modo de mouse** permite a los usuarios navegar libremente con un controlador para juegos o un control remoto, al igual que un mouse en un equipo.|
 | [Foco visual](#focus-visual)  | El elemento visual de foco es un borde que resalta el elemento de la interfaz de usuario actualmente enfocado. Esto ayuda a los usuarios a identificar rápidamente la interfaz de usuario a la que navegan o con los que interactúan.  |
 | [Interacción con el foco](#focus-engagement) | Focus Engagement requiere que el usuario presione el botón **a/seleccionar** en un controlador para juegos o control remoto cuando un elemento de la interfaz de usuario tiene el foco para interactuar con él. |
@@ -69,7 +69,7 @@ En este documento, se hará referencia a los botones mediante los nombres asigna
 
 Como puedes ver en el diagrama, hay algunos botones que son compatibles con el controlador para juegos pero que no son compatibles con el control remoto y viceversa. Si bien puedes usar botones que solo se admiten en un dispositivo de entrada para agilizar la navegación por la interfaz de usuario, ten en cuenta que usarlos para las interacciones críticas puede crear una situación en la que el usuario no pueda interactuar con determinadas partes de la interfaz de usuario.
 
-La siguiente tabla enumera todos los botones de hardware compatibles con las aplicaciones para UWP y cuál dispositivo de entrada es compatible con ellos.
+En la tabla siguiente se enumeran todos los botones de hardware que admiten las aplicaciones de Windows y los dispositivos de entrada que los admiten.
 
 | Botón                    | Controlador para juegos   | Control remoto    |
 |---------------------------|-----------|-------------------|
@@ -87,20 +87,20 @@ La siguiente tabla enumera todos los botones de hardware compatibles con las apl
 | Botón de Volumen             | No        | Sí               |
 | Botón de canal            | No        | Sí               |
 | Botones de control de medios     | No        | Sí               |
-| Botón de silencio               | No        | Sí               |
+| Botón Silencio               | No        | Sí               |
 
 ### <a name="built-in-button-support"></a>Soporte para botones incorporado
 
-La UWP asigna automáticamente el comportamiento de entrada del teclado existente al controlador para juegos y al control remoto. La siguiente tabla enumera estas asignaciones integradas.
+UWP asigna automáticamente el comportamiento de entrada de teclado existente al controlador de juegos y a la entrada de control remoto. La siguiente tabla enumera estas asignaciones integradas.
 
-| Teclado              | Controlador para juegos/control remoto                        |
+| Keyboard              | Controlador para juegos/control remoto                        |
 |-----------------------|---------------------------------------|
 | Teclas de dirección            | Pad-D (también la palanca izquierda en el controlador para juegos)    |
 | Barra espaciadora              | A/Botón de selección                       |
-| Entrar                 | A/Botón de selección                       |
+| Escriba                 | A/Botón de selección                       |
 | Escape                | Botón B/Atrás*                        |
 
-\*cuando la aplicación no controla los eventos [KeyDown](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) ni [KeyUp](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) para el botón B, se desencadenará el evento [SystemNavigationManager.](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.backrequested) allocated, que debe devolver la navegación hacia atrás dentro de la aplicación. Sin embargo, esto deberá ser implementado por ti, como se indica en el siguiente fragmento de código:
+\*Cuando la aplicación no controla los eventos [KeyDown](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) ni [KeyUp](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) para el botón B, se desencadenará el evento [SystemNavigationManager.](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.backrequested) allocated, que debería dar lugar a la navegación hacia atrás dentro de la aplicación. Sin embargo, esto deberá ser implementado por ti, como se indica en el siguiente fragmento de código:
 
 ```csharp
 // This code goes in the MainPage class
@@ -145,36 +145,36 @@ private bool BackRequested()
 ```
 
 > [!NOTE]
-> Si se usa el botón B para volver, no muestres un botón Atrás en la interfaz de usuario. Si vas a usar una [vista de navegación](../controls-and-patterns/navigationview.md), el botón Atrás se ocultará automáticamente. Para obtener más información sobre la navegación hacia atrás, consulta [Historial de navegación y navegación hacia atrás para las aplicaciones para UWP](../basics/navigation-history-and-backwards-navigation.md).
+> Si se usa el botón B para volver atrás, no se muestra un botón atrás en la interfaz de usuario. Si utiliza una vista de [navegación](../controls-and-patterns/navigationview.md), el botón atrás se ocultará automáticamente. Para obtener más información sobre la navegación hacia atrás, consulte el [historial de navegación y la navegación hacia atrás para aplicaciones de Windows](../basics/navigation-history-and-backwards-navigation.md).
 
-Las aplicaciones para UWP en Xbox One también permiten presionar el botón **Menú** para abrir los menús contextuales. Para obtener más información, consulta [CommandBar y ContextFlyout](#commandbar-and-contextflyout).
+Las aplicaciones de Windows en Xbox One también permiten presionar el botón de **menú** para abrir los menús contextuales. Para obtener más información, consulta [CommandBar y ContextFlyout](#commandbar-and-contextflyout).
 
 ### <a name="accelerator-support"></a>Soporte para aceleradores
 
-Los botones aceleradores son botones que pueden usarse para aumentar la velocidad de navegación a través de una interfaz de usuario. Sin embargo, estos botones pueden ser exclusivos para un determinado dispositivo de entrada, por lo tanto, ten en cuenta que no todos los usuarios podrán usar estas funciones. De hecho, el controlador para juegos es el único dispositivo de entrada que actualmente admite las funciones de aceleradores en aplicaciones para UWP en Xbox One.
+Los botones aceleradores son botones que pueden usarse para aumentar la velocidad de navegación a través de una interfaz de usuario. Sin embargo, estos botones pueden ser exclusivos para un determinado dispositivo de entrada, por lo tanto, ten en cuenta que no todos los usuarios podrán usar estas funciones. De hecho, el controlador de juegos es actualmente el único dispositivo de entrada que admite las funciones de acelerador para las aplicaciones de Windows en Xbox One.
 
 La siguiente tabla enumera la compatibilidad con aceleradores integrada en la UWP, así como también la que puedes implementar por tu cuenta. Usa estos comportamientos en tu interfaz de usuario personalizada para brindar una experiencia de usuario coherente y agradable.
 
-| Interacción   | Teclado/ratón   | Controlador para juegos      | Integrada para:  | Recomendada para: |
+| Interacción   | Teclado/mouse   | Controlador para juegos      | Integrada para:  | Recomendada para: |
 |---------------|------------|--------------|----------------|------------------|
 | Retroceder/avanzar página  | Retroceder/avanzar página | Desencadenadores izquierdo/derecho | [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Vistas que admiten el desplazamiento vertical
-| Página a la izquierda/derecha | Ninguno | Reboteadores izquierdo/derecho | [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Vistas que admiten el desplazamiento horizontal
-| Acercar/alejar        | Ctrl +/- | Desencadenadores izquierdo/derecho | Ninguno | `ScrollViewer`, vistas que permiten acercar y alejar |
-| Abrir o cerrar el panel de navegación | Ninguno | Ver | Ninguno | Paneles de navegación |
-| Buscar | Ninguno | Botón Y | Ninguno | Combinación de teclas para la función de búsqueda principal de la aplicación |
-| [Abrir el menú contextual](#commandbar-and-contextflyout) | Haz clic con el botón secundario | Botón de menú | [ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | Menús contextuales |
+| Página a la izquierda/derecha | None | Reboteadores izquierdo/derecho | [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer`, [Selector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView) | Vistas que admiten el desplazamiento horizontal
+| Acercar/alejar        | Ctrl +/- | Desencadenadores izquierdo/derecho | None | `ScrollViewer`, vistas que admiten acercamiento y alejamiento |
+| Abrir o cerrar el panel de navegación | None | Ver | None | Paneles de navegación |
+| Search | None | Botón Y | None | Combinación de teclas para la función de búsqueda principal de la aplicación |
+| [Abrir el menú contextual](#commandbar-and-contextflyout) | Haga clic con el botón secundario en | Botón de menú | [ContextFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout) | Menús contextuales |
 
 ## <a name="xy-focus-navigation-and-interaction"></a>Interacción y navegación con foco XY
 
 Si tu aplicación admite una navegación del foco adecuada para el teclado, esto se trasladará bien al controlador para juegos y al control remoto.
 La navegación con las teclas de dirección se asigna al **pad-D** (así como a la **palanca izquierda** en el controlador para juegos), y la interacción con los elementos de la interfaz de usuario se asigna a la tecla **Entrar/Seleccionar** (ver [Controlador para juegos y control remoto](#gamepad-and-remote-control)).
 
-Muchos eventos y propiedades se usan tanto en el teclado como en el controlador de juegos. Ambos activan los eventos &mdash; y `KeyDown`, y solo navegarán a los controles que tengan las propiedades `KeyUp` y `IsTabStop="True"`. Para obtener directrices de diseño para teclado, consulta [Interacciones con el teclado](../input/keyboard-interactions.md).
+Muchos eventos y propiedades se usan tanto en el teclado como&mdash;en el controlador `KeyDown` de `KeyUp` juegos y ambos se activan y eventos, y ambos solo navegarán `IsTabStop="True"` a `Visibility="Visible"`los controles que tengan las propiedades y. Para obtener directrices de diseño para teclado, consulta [Interacciones con el teclado](../input/keyboard-interactions.md).
 
 Si la compatibilidad con el teclado se implementa correctamente, tu aplicación funcionará razonablemente bien; sin embargo, esto puede requerir algo más de trabajo para admitir todos los escenarios. Piensa en las necesidades específicas de tu aplicación para proporcionar la mejor experiencia posible para el usuario.
 
 > [!IMPORTANT]
-> El modo de mouse está habilitado de manera predeterminada para las aplicaciones para UWP que se ejecutan en Xbox One. Para deshabilitar el modo de mouse y habilitar la navegación con foco XY, establece `Application.RequiresPointerMode=WhenRequested`.
+> El modo de mouse está habilitado de forma predeterminada para las aplicaciones de Windows que se ejecutan en Xbox One. Para deshabilitar el modo de mouse y habilitar la navegación con foco XY, establece `Application.RequiresPointerMode=WhenRequested`.
 
 ### <a name="debugging-focus-issues"></a>Depurar problemas de foco
 
@@ -195,8 +195,8 @@ page.GotFocus += (object sender, RoutedEventArgs e) =>
 Existen tres razones comunes por las que navegación XY puede no funcionar del modo previsto:
 
 * La propiedad [IsTabStop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istabstop) o [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) no está correctamente establecida.
-* El control que obtiene el foco es realmente más grande de lo que piensas: la navegación XY observa el tamaño total del control (&mdash;ActualWidth[ y ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth)ActualHeight[), no solo la parte del control que representa algo interesante.
-* Un control activable se encuentra encima de otro: la navegación XY no admite controles que se superponen.
+* El control que recibe el foco es realmente mayor de&mdash;lo que cree que la navegación XY examina el tamaño total del control ([ActualWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth) y [ActualHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualheight)), no solo la parte del control que representa algo interesante.
+* Un control enfocable está en la parte superior&mdash;de otra navegación XY no es compatible con los controles superpuestos.
 
 Si la navegación XY sigue sin funcionar de la manera esperada después de solucionar estos problemas, puedes apuntar manualmente al elemento que quieres que tenga el foco mediante el método que se describe en [Reemplazo de la navegación predeterminada](#overriding-the-default-navigation).
 
@@ -288,11 +288,11 @@ Cuando se usa [CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Co
 
 ![CommandBar en la parte inferior de la lista/cuadrícula](images/designing-for-tv/2d-navigation-best-practices-commandbar-and-contextflyout.png)
 
-¿Qué ocurre si coloca el `CommandBar` *encima* de la lista o cuadrícula? Si bien un usuario que se desplazó hacia abajo de la lista/cuadrícula tendría que desplazarse nuevamente hacia arriba para llegar a la `CommandBar`, se trata de una navegación ligeramente más corta que en la configuración anterior. Ten en cuenta que esto es suponiendo que el foco inicial de tu aplicación se sitúe junto a o encima de `CommandBar`; este enfoque no funcionará si el foco inicial se encuentra por debajo de la lista/cuadrícula. Si estos elementos de la `CommandBar` son elementos de acción global a los que no se accede muy a menudo (como un botón **Sincronizar**), puede ser aceptable que se ubiquen encima de la lista/cuadrícula.
+¿Qué ocurre si colocas `CommandBar` *por encima* de la lista/cuadrícula? Si bien un usuario que se desplazó hacia abajo de la lista/cuadrícula tendría que desplazarse nuevamente hacia arriba para llegar a la `CommandBar`, se trata de una navegación ligeramente más corta que en la configuración anterior. Ten en cuenta que esto es suponiendo que el foco inicial de tu aplicación se sitúe junto a o encima de `CommandBar`; este enfoque no funcionará si el foco inicial se encuentra por debajo de la lista/cuadrícula. Si estos elementos de la `CommandBar` son elementos de acción global a los que no se accede muy a menudo (como un botón **Sincronizar**), puede ser aceptable que se ubiquen encima de la lista/cuadrícula.
 
 Si bien no se pueden apilar los elementos de una `CommandBar` verticalmente, colocarlos contra la dirección del desplazamiento (por ejemplo, a la izquierda o derecha de una lista de desplazamiento vertical, o en la parte superior o inferior de una lista de desplazamiento horizontal) es otra opción que podrías considerar si funciona bien para el diseño de tu interfaz de usuario.
 
-Si tu aplicación tiene una `CommandBar` cuyos elementos deben ser fácilmente accesibles para los usuarios, es aconsejable que consideres colocar estos elementos dentro de una propiedad [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) y los quites de la `CommandBar`. `ContextFlyout` es una propiedad de [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) y es el [menú contextual](../controls-and-patterns/dialogs-and-flyouts/index.md) asociado a ese elemento. En el equipo, al hacer clic con el botón derecho en un elemento con una propiedad `ContextFlyout`, aparecerá el menú contextual correspondiente. En Xbox One, esto ocurrirá al presionar el botón **Menú** mientras el foco está en dicho elemento.
+Si tu aplicación tiene una `CommandBar` cuyos elementos deben ser fácilmente accesibles para los usuarios, es aconsejable que consideres colocar estos elementos dentro de una propiedad [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) y los quites de la `CommandBar`. `ContextFlyout`es una propiedad de [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) y es el [menú contextual](../controls-and-patterns/dialogs-and-flyouts/index.md) asociado a ese elemento. En el equipo, al hacer clic con el botón derecho en un elemento con una propiedad `ContextFlyout`, aparecerá el menú contextual correspondiente. En Xbox One, esto ocurrirá al presionar el botón **Menú** mientras el foco está en dicho elemento.
 
 ### <a name="ui-layout-challenges"></a>Desafíos de diseño de la interfaz de usuario
 
@@ -305,15 +305,15 @@ Para comprender mejor esto, echemos un vistazo a una aplicación imaginaria que 
 
 La siguiente es una aplicación inmobiliaria imaginaria que muestra una lista de viviendas disponibles para la venta, un mapa, una descripción de la propiedad y demás información. Esta aplicación presenta tres desafíos que puedes superar mediante el uso de las siguientes técnicas:
 
-- [Reorganización de la interfaz de usuario](#ui-rearrange)
+- [Reorganizar la interfaz de usuario](#ui-rearrange)
 - [Interacción con el foco](#engagement)
 - [Modo del mouse](#mouse-mode)
 
 ![Aplicación inmobiliaria imaginaria](images/designing-for-tv/2d-focus-navigation-and-interaction-real-estate-app.png)
 
-#### Problema: algunos elementos de la interfaz de usuario se encuentran después de una cuadrícula/lista de desplazamiento larga<a name="problem-ui-elements-located-after-long-scrolling-list-grid"></a>
+#### <a name="problem-ui-elements-located-after-long-scrolling-listgrid"></a>Problema: algunos elementos de la interfaz de usuario se encuentran después de una cuadrícula/lista de desplazamiento larga<a name="problem-ui-elements-located-after-long-scrolling-list-grid"></a>
 
-La [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) de las propiedades que se muestra en la siguiente imagen es una lista con desplazamiento muy larga. Si la [participación](#focus-engagement)*no* se requiere en la `ListView`, cuando el usuario navegue a la lista, el foco se colocará en el primer elemento en la lista. Para que el usuario llegue al botón **anterior** o **siguiente**, deberá pasar por todos los elementos de la lista. En casos como este en el que resulta difícil solicitarle al usuario que recorra toda la lista (es decir, cuando la lista no es lo suficientemente corta como para que esta experiencia sea aceptable) sería conveniente considerar otras opciones.
+La [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) de las propiedades que se muestra en la siguiente imagen es una lista con desplazamiento muy larga. Si la [participación](#focus-engagement)*no* se requiere en la `ListView`, cuando el usuario navegue a la lista, el foco se colocará en el primer elemento en la lista. Para que el usuario llegue al botón **anterior** o **siguiente**, deberá pasar por todos los elementos de la lista. En casos como este, en los que es difícil&mdash;que el usuario recorra la lista completa, es decir, cuando la lista no es lo suficientemente breve para que esta&mdash;experiencia sea aceptable, puede ser conveniente tener en cuenta otras opciones.
 
 ![Aplicación inmobiliaria: una lista de 50 elementos sencillos requiere 51 clics para llegar a los botones de abajo](images/designing-for-tv/2d-focus-navigation-and-interaction-real-estate-app-list.png)
 
@@ -347,7 +347,7 @@ En estos casos, puedes activar el [modo de mouse](#mouse-mode) para permitir que
 
 ![Elemento de mapa de la interfaz de usuario en modo de mouse](images/designing-for-tv/map-mouse-mode.png)
 
-## <a name="mouse-mode"></a>Modo de mouse
+## <a name="mouse-mode"></a>Modo del mouse
 
 Como se describe en [Interacción y navegación con foco XY](#xy-focus-navigation-and-interaction), en Xbox One el foco se mueve mediante un sistema de navegación XY, el cual permite al usuario cambiar el foco desde un control a otro desplazándose hacia arriba, abajo, izquierda y derecha.
 Sin embargo, algunos controles, como [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) y [MapControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl), requieren una interacción de mouse en la que los usuarios pueden mover libremente el puntero dentro de los límites del control.
@@ -383,7 +383,7 @@ El siguiente diagrama muestra las asignaciones de los botones del controlador pa
 > [!NOTE]
 > El modo de mouse solo se admite en Xbox One con controlador para juegos/control remoto. En las otras familias de dispositivos y tipos de entrada se omite silenciosamente.
 
-Usa la propiedad [RequiresPointer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.requirespointer) en un control o una página para activar el modo de mouse en ella. Esta propiedad tiene tres valores posibles: `Never` (valor predeterminado), `WhenEngaged` y `WhenFocused`.
+Use la propiedad [RequiresPointer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.requirespointer) en un control o una página para activar el modo de mouse. Esta propiedad tiene tres valores posibles: `Never` (valor predeterminado), `WhenEngaged`y. `WhenFocused`
 
 ### <a name="activating-mouse-mode-on-a-control"></a>Activación del modo de mouse en un control
 
@@ -401,7 +401,7 @@ Cuando el usuario utiliza un control con `RequiresPointer="WhenEngaged"`, se act
 > [!NOTE]
 > Si un control activa el modo de mouse cuando se usa, también debe solicitar la activación de `IsEngagementRequired="true"`; de lo contrario, nunca se activará el modo de mouse.
 
-Cuando un control está en modo de mouse, sus controles anidados también estarán en modo de mouse. El modo solicitado de sus elementos secundarios se ignorará; no es posible que un elemento primario esté en modo de mouse y un elemento secundario no.
+Cuando un control está en modo de mouse, sus controles anidados también estarán en modo de mouse. Se omitirá&mdash;el modo solicitado de sus elementos secundarios, no es posible que un elemento primario esté en modo de mouse pero un elemento secundario no sea.
 
 Además, el modo solicitado de un control solo se inspecciona cuando obtiene el foco, por lo que el modo no cambiará dinámicamente mientras tiene el foco.
 
@@ -446,15 +446,15 @@ Prueba poniendo el foco inicial en la región superior izquierda de tu aplicaci�
 
 ### <a name="making-focus-clearly-visible"></a>Hacer que el foco sea claramente visible
 
-Siempre debe haber un foco visual visible en la pantalla para que el usuario pueda continuar desde donde estaba sin necesidad de buscar el foco. Del mismo modo, debe haber un elemento activable en la pantalla en todo momento; por ejemplo, no uses ventanas emergentes con solo texto y ningún elemento activable.
+Siempre debe haber un foco visual visible en la pantalla para que el usuario pueda continuar desde donde estaba sin necesidad de buscar el foco. De forma similar, en todo momento&mdash;debe haber un elemento enfocable en la pantalla, por ejemplo, no usar elementos emergentes solo con texto y sin elementos que puedan recibir el foco.
 
 Una excepción a esta regla serían las experiencias de pantalla completa, como ver vídeos o imágenes, en cuyo caso no sería adecuado mostrar el foco visual.
 
 ### <a name="reveal-focus"></a>Revelar foco
 
-Reveal focus es un efecto de iluminación que anima el borde de los elementos activables, como un botón, cuando el usuario mueve el foco del teclado o del controlador para juegos hacia ellos. Al animar el brillo alrededor del borde de los elementos enfocados, Reveal focus permite que los usuarios entiendan mejor dónde está el foco y hacia dónde va el foco.
+Mostrar el foco es un efecto de iluminación que anima el borde de los elementos que puedan recibir el foco, como un botón, cuando el usuario mueve el foco del controlador de juegos o el foco de teclado. Al animar el resplandor alrededor del borde de los elementos que tienen el foco, mostrar el foco proporciona a los usuarios una mejor comprensión de Dónde está el foco y Dónde está el foco.
 
-La opción Reveal focus está desactivada de manera predeterminada. Para experiencias de 3 metros, deberás habilitarla para revelar el foco configurando la [propiedad Application.FocusVisualKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.FocusVisualKind) en tu constructor de aplicaciones.
+Mostrar el foco está desactivado de forma predeterminada. En el caso de las experiencias de 10 pies, debería optar por mostrar el foco estableciendo la [propiedad Application. FocusVisualKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.FocusVisualKind) en el constructor de la aplicación.
 
 ```csharp
     if(AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox")
@@ -463,7 +463,7 @@ La opción Reveal focus está desactivada de manera predeterminada. Para experie
     }
 ```
 
-Para obtener más información, consulta la guía sobre [Reveal focus](/windows/uwp/design/style/reveal-focus)
+Para obtener más información, vea las instrucciones para [Mostrar el foco](/windows/uwp/design/style/reveal-focus).
 
 ### <a name="customizing-the-focus-visual"></a>Personalización del foco visual
 
@@ -473,7 +473,7 @@ También puedes descartar los focos visuales proporcionados por el sistema. Para
 
 ### <a name="light-dismiss-overlay"></a>Superposición de cierre del elemento por cambio de foco
 
-Para llamar la atención del usuario a los elementos de la interfaz de usuario que el usuario está manipulando actualmente con el controlador para juegos o el control remoto, la UWP agrega automáticamente una capa de "humo" que abarca áreas fuera de la interfaz de usuario emergente cuando la aplicación se ejecuta en Xbox One. Esto no requiere ningún trabajo adicional, pero es algo a tener en cuenta al diseñar la interfaz de usuario. Puedes establecer la propiedad `LightDismissOverlayMode` en cualquier `FlyoutBase` para habilitar o deshabilitar la capa de humo; el valor predeterminado es `Auto`, lo que significa que está habilitada en Xbox y deshabilitada en otros lugares. Para obtener más información, consulta [Cierre del elemento modal frente a cierre del elemento por cambio de foco](../controls-and-patterns/menus.md).
+Para llamar la atención del usuario a los elementos de la interfaz de usuario que el usuario está manipulando actualmente con el dispositivo de juego o el control remoto, UWP agrega automáticamente una capa de "humo" que cubre áreas fuera de la interfaz de usuario emergente cuando la aplicación se ejecuta en Xbox One. Esto no requiere ningún trabajo adicional, pero es algo a tener en cuenta al diseñar la interfaz de usuario. Puedes establecer la propiedad `LightDismissOverlayMode` en cualquier `FlyoutBase` para habilitar o deshabilitar la capa de humo; el valor predeterminado es `Auto`, lo que significa que está habilitada en Xbox y deshabilitada en otros lugares. Para obtener más información, consulta [Cierre del elemento modal frente a cierre del elemento por cambio de foco](../controls-and-patterns/menus.md).
 
 ## <a name="focus-engagement"></a>Participación del foco
 
@@ -538,9 +538,9 @@ Esto permitirá al usuario saltear la `ListView` rápidamente simplemente presio
 
 [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) es ligeramente diferente a estos controles, ya que tiene sus propias peculiaridades que hay que tener en cuenta. Si tienes un `ScrollViewer` con contenido activable, desplazándose al `ScrollViewer` te permitirá por defecto moverte por sus elementos activables. Como en `ListView`, debes desplazarte por cada elemento para navegar fuera de `ScrollViewer`.
 
-Si el `ScrollViewer`*no* tiene contenido activable (por ejemplo, si solo contiene texto) puedes establecer &mdash; para que el usuario puede activar el &mdash; mediante el uso del botón `IsFocusEngagementEnabled="True"`A/Seleccionar`ScrollViewer`. Después de haberlo activado, pueden desplazarse por el texto mediante el **pad-D/palanca izquierda**y, a continuación, presionar el botón **B/Atrás** para desactivarlo una vez que han terminado.
+Si no `ScrollViewer` tiene *no* contenido&mdash;que pueda recibir el foco, por ejemplo, si solo&mdash;contiene texto que `IsFocusEngagementEnabled="True"` se puede establecer para que el `ScrollViewer` usuario pueda interactuar con el botón **a/seleccionar** . Después de haberlo activado, pueden desplazarse por el texto mediante el **pad-D/palanca izquierda**y, a continuación, presionar el botón **B/Atrás** para desactivarlo una vez que han terminado.
 
-Otro enfoque sería establecer `IsTabStop="True"` en el `ScrollViewer` para que el usuario no tenga que activar el control; pueden simplemente colocar el foco en él y, a continuación, desplazarse con &mdash;pad-D/palanca izquierda**cuando no haya ningún elemento activable el**.
+Otro enfoque sería `IsTabStop="True"` establecer en `ScrollViewer` , de modo que el usuario no tenga que interactuar con el control&mdash;y, a continuación, simplemente colocar el foco en él y, a continuación, desplazarse con el **Panel D o el stick izquierdo** cuando `ScrollViewer`no haya ningún elemento que pueda recibir el foco dentro de.
 
 ### <a name="focus-engagement-defaults"></a>Valores predeterminados de participación del foco
 
@@ -548,22 +548,22 @@ Algunos controles causan la captura del foco con frecuencia suficiente como para
 
 | Control               | Valor predeterminado de participación del foco  |
 |-----------------------|---------------------------|
-| CalendarDatePicker    | Activado                        |
-| FlipView              | Desactivado                       |
-| GridView              | Desactivado                       |
-| ListBox               | Desactivado                       |
-| ListView              | Desactivado                       |
-| ScrollViewer          | Desactivado                       |
-| SemanticZoom          | Desactivado                       |
-| Control deslizante                | Activado                        |
+| CalendarDatePicker    | Por                        |
+| FlipView              | Off                       |
+| GridView              | Off                       |
+| ListBox               | Off                       |
+| ListView              | Off                       |
+| ScrollViewer          | Off                       |
+| SemanticZoom          | Off                       |
+| Control deslizante                | Por                        |
 
-Todos los demás controles de la UWP no darán como resultado ningún cambio visual o del comportamiento cuando `IsFocusEngagementEnabled="True"`.
+El resto de los controles de Windows producirá cambios de comportamiento o visuales `IsFocusEngagementEnabled="True"`cuando.
 
 ## <a name="summary"></a>Resumen
 
-Puede compilar aplicaciones para UWP que estén optimizadas para un dispositivo o una experiencia específicos, pero el Plataforma universal de Windows también le permite compilar aplicaciones que se pueden usar correctamente en todos los dispositivos, tanto en experiencias de 2 pies como en de 10 pies, y independientemente de la entrada. capacidad del dispositivo o del usuario. El uso de las recomendaciones de este artículo puede garantizar que la aplicación sea tan buena como para la televisión y un equipo.
+Puede compilar aplicaciones de Windows optimizadas para un dispositivo o una experiencia específicos, pero el Plataforma universal de Windows también le permite compilar aplicaciones que se pueden usar correctamente en todos los dispositivos, tanto en las experiencias de 2 pies como en las de 10 pies, independientemente del dispositivo de entrada o de la capacidad del usuario. El uso de las recomendaciones de este artículo puede garantizar que la aplicación sea tan buena como para la televisión y un equipo.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Diseño para Xbox y televisión](../devices/designing-for-tv.md)
-- [Dispositivos principales para aplicaciones Plataforma universal de Windows (UWP)](index.md)
+- [Dispositivos principales para aplicaciones de aplicaciones de Windows](index.md)
