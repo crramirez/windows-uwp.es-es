@@ -1,5 +1,5 @@
 ---
-Description: Crea aplicaciones para la Plataforma universal de Windows (UWP) con experiencias de interacción del usuario intuitivas y distintivas que estén optimizadas para el panel táctil pero que sean funcionalmente coherentes entre los distintos dispositivos de entrada.
+Description: Cree aplicaciones de aplicaciones de Windows con experiencias de interacción de usuario intuitivas y distintivas que estén optimizadas para touchpad, pero que sean coherentes funcionalmente en todos los dispositivos de entrada.
 title: Interacciones del panel táctil
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
@@ -8,12 +8,12 @@ keywords: panel táctil,PTP,táctil,función táctil,puntero,entrada,interacció
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 991d85edd9c0a51412d33b48e364974d2095410e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: afbdf5c672328acfc60a82f9f66c75dc52370c99
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258230"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970240"
 ---
 # <a name="touchpad-design-guidelines"></a>Directrices para el diseño de panel táctil
 
@@ -29,7 +29,7 @@ Las interacciones del panel táctil requieren tres cosas:
 
 -   Un panel táctil estándar o un panel táctil de precisión de Windows.
 
-    Los paneles táctiles de precisión están optimizados para dispositivos de la Plataforma universal de Windows (UWP). Permiten al sistema controlar ciertos aspectos de la experiencia del panel táctil de forma nativa, como el seguimiento de dedo y la detección de palma para ofrecer una experiencia más coherente en todos los dispositivos.
+    Los paneles táctiles de precisión están optimizados para dispositivos de aplicaciones Windows. Permiten al sistema controlar ciertos aspectos de la experiencia del panel táctil de forma nativa, como el seguimiento de dedo y la detección de palma para ofrecer una experiencia más coherente en todos los dispositivos.
 
 -   El contacto directo de uno o más dedos en el panel táctil.
 -   Movimiento de los contactos táctiles (o la falta de movimiento, según un umbral de tiempo).
@@ -40,7 +40,7 @@ Los datos de entrada proporcionados por el panel táctil pueden ser:
 -   Reconocidos como un método de entrada alternativo, como un mouse o un lápiz.
 -   Usados para complementar o modificar aspectos de otros métodos de entrada, como difuminar un trazo de lápiz dibujado con un lápiz.
 
-Un panel táctil combina la entrada multitáctil indirecta con la entrada precisa de un dispositivo señalador, como por ejemplo un mouse. Esta combinación hace que el panel táctil sea ideal tanto para la interfaz de usuario optimizada para entrada táctil como para los destinos típicamente más pequeños de las aplicaciones de productividad y el entorno de escritorio. Optimiza el diseño de tu aplicación para UWP para la entrada táctil y obtén compatibilidad con paneles táctiles de manera predeterminada.
+Un panel táctil combina la entrada multitáctil indirecta con la entrada precisa de un dispositivo señalador, como por ejemplo un mouse. Esta combinación hace que el panel táctil sea ideal tanto para la interfaz de usuario optimizada para entrada táctil como para los destinos típicamente más pequeños de las aplicaciones de productividad y el entorno de escritorio. Optimizar el diseño de la aplicación Windows para la entrada táctil y obtener compatibilidad con Touchpad de forma predeterminada.
 
 Los paneles táctiles integran diversas experiencias de interacción, por lo que te recomendamos usar el evento [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered) para proporcionar comandos de interfaz de usuario de estilo mouse además de la compatibilidad integrada con la entrada táctil. Por ejemplo, usa botones Anterior y Siguiente para que los usuarios puedan pasar de una página de contenido a otra además de realizar movimientos panorámicos por el contenido.
 
@@ -55,11 +55,11 @@ Los usuarios pueden establecer muchos más comportamientos de interacción y ges
 
 ![configuración del panel táctil estándar](images/mouse-touchpad-settings-standard.png)
 
-<sup>Configuración de\\ de\\ Touchpad estándar</sup>
+<sup>Configuración\\ estándar\\ de Touchpad</sup>
 
 ![configuración del panel táctil de precisión de Windows](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Configuración de\\ de\\ Touchpad de Windows\\ Precision</sup>
+<sup>Configuración\\ de\\ Touchpad\\ de Windows Precision</sup>
 
 Estos son algunos ejemplos de gestos optimizados para panel táctil para realizar tareas comunes.
 
@@ -127,7 +127,7 @@ Para obtener más información sobre cómo consultar las funciones de dispositiv
 
 
 -   Cuando se detecte un cursor del panel táctil (a través de eventos de movimiento o mantenimiento del mouse), muestra la interfaz de usuario específica del mouse para indicar las funciones expuestas por el elemento. Si el cursor del panel táctil no se mueve por un determinado período o el usuario inicia una interacción táctil, haz que la interfaz de usuario del panel táctil vaya desapareciendo gradualmente. Esto mantiene la interfaz de usuario ordenada y organizada.
--   No uses el cursor para obtener información al mantener el mouse. La información proporcionada por el elemento es suficiente (consulta la sección Cursores más adelante).
+-   No use el cursor para los comentarios de mantener el mouse; los comentarios proporcionados por el elemento son suficientes (consulte la sección de cursores a continuación).
 -   No muestres información visual si un elemento no admite interacción (por ejemplo, texto estático).
 -   No uses rectángulos de foco con las interacciones del panel táctil. Resérvalos para las interacciones del teclado.
 -   Muestra información visual simultáneamente para todos los elementos que representan el mismo destino de entrada.
@@ -139,7 +139,7 @@ Para obtener instrucciones más generales sobre la información visual, consulta
 
 Hay disponible un conjunto de cursores estándar para un puntero del panel táctil. Estos se usan para indicar la acción principal de un elemento.
 
-Cada cursor estándar tiene asociada una imagen predeterminada correspondiente. El usuario o una aplicación pueden reemplazar la imagen predeterminada asociada con cualquier cursor estándar en cualquier momento. Las aplicaciones para UWP especifican una imagen de cursor mediante la función [**PointerCursor**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor).
+Cada cursor estándar tiene asociada una imagen predeterminada correspondiente. El usuario o una aplicación pueden reemplazar la imagen predeterminada asociada con cualquier cursor estándar en cualquier momento. Las aplicaciones para UWP especifican una imagen de cursor a través de la función [**PointerCursor**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor) .
 
 Si necesitas personalizar el cursor del mouse:
 
@@ -151,20 +151,19 @@ Si necesitas personalizar el cursor del mouse:
 
 ## <a name="related-articles"></a>Artículos relacionados
 
+- [Controlar la entrada de puntero](handle-pointer-input.md)
+- [Identificación de dispositivos de entrada](identify-input-devices.md)
 
-* [Control de la entrada con puntero](handle-pointer-input.md)
-* [Identificar dispositivos de entrada](identify-input-devices.md)
-**Muestras**
-* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-* [Focus visuals sample (Muestra de elementos visuales de foco)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
-**Muestras de archivo**
-* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [Entrada: ejemplo de eventos de entrada de usuario de XAML](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [Entrada: gestos y manipulaciones con GestureRecognizer](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
- 
+### <a name="samples"></a>Ejemplos
 
+- [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Ejemplo de entrada de latencia baja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
+### <a name="archive-samples"></a>Muestras de archivo
 
+- [Entrada: muestra de funcionalidades del dispositivo](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))
+- [Entrada: muestra de eventos de entrada de usuario de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20XAML%20user%20input%20events%20sample)
+- [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
+- [Entrada: gestos y manipulaciones con GestureRecognizer](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)

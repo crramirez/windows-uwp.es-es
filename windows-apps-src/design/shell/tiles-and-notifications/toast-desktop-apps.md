@@ -1,86 +1,86 @@
 ---
 Description: Descubra las distintas opciones de escritorio que las aplicaciones Win32 tienen para enviar notificaciones del sistema.
-title: Notificaciones del sistema desde aplicaciones de escritorio
+title: Notificaciones del sistema de aplicaciones de escritorio
 label: Toast notifications from desktop apps
 template: detail.hbs
 ms.date: 05/01/2018
 ms.topic: article
-keywords: windows 10, uwp, win32, escritorio, notificaciones del sistema, puente de dispositivo de escritorio, opciones para enviar notificaciones del sistema, servidor com, activador com, com, falso com, no com, sin com, enviar notificaciones del sistema
+keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, puente de escritorio, msix, paquete disperso, opciones para enviar notificaciones del sistema, servidor com, activador com, com, com falsificado, sin com, sin com, enviar notificaciones de envío
 ms.localizationpriority: medium
-ms.openlocfilehash: 31501d2dc3ac255897e374ca81b05558be7bc2fc
-ms.sourcegitcommit: 545d5d864d89650a00a496ac4e52def9a13b14cd
+ms.openlocfilehash: 020cdeb1aaddac7fe879e91d18e258aea1b387ea
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73560657"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970990"
 ---
-# <a name="toast-notifications-from-desktop-apps"></a>Notificaciones del sistema desde aplicaciones de escritorio
+# <a name="toast-notifications-from-desktop-apps"></a>Notificaciones del sistema de aplicaciones de escritorio
 
-Las aplicaciones de escritorio (Puente de dispositivo de escritorio y Win32 clásico) pueden enviar notificaciones del sistema interactivas igual de la misma manera que las aplicaciones de la Plataforma universal de Windows (UWP). Sin embargo, hay varias opciones distintas para aplicaciones de escritorio debido a los diferentes esquemas de activación.
+Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas, al igual que las aplicaciones de aplicaciones de Windows. Sin embargo, hay varias opciones diferentes para las aplicaciones de escritorio debido a los diferentes esquemas de activación.
 
-En este artículo, enumeramos las opciones que tienes para enviar una notificación del sistema en Windows 10. Cada opción admite totalmente...
+En este artículo, se enumeran las opciones que tiene para enviar una notificación del sistema en Windows 10. Cada opción es totalmente compatible...
 
-* Persistir en el Centro de actividades.
-* Ser activable tanto desde el elemento emergente como desde dentro del Centro de actividades.
-* Ser activable mientras tu EXE no se está ejecutando.
+* Persistencia en el centro de actividades
+* Ser activable desde el elemento emergente y dentro del centro de actividades
+* Se está activando cuando el archivo EXE no se está ejecutando
 
 ## <a name="all-options"></a>Todas las opciones
 
-En la tabla siguiente se muestra las opciones de compatibilidad con las notificaciones del sistema dentro de tu aplicación de escritorio y las características compatibles correspondientes. Puedes usar la tabla para seleccionar la mejor opción para tu escenario.<br/><br/>
+En la tabla siguiente se muestran las opciones para admitir las notificaciones del sistema dentro de la aplicación de escritorio y las características admitidas correspondientes. Puede usar la tabla para seleccionar la mejor opción para su escenario.<br/><br/>
 
-| Opción | Elementos visuales | Acciones | Entradas | Activa en proceso |
+| Opción | Objetos visuales | Acciones | Entradas | Activa en proceso |
 | -- | -- | -- | -- | -- |
 | [Activador COM](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
 | [Sin CLSID de COM/stub](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
 
 
-## <a name="preferred-option---com-activator"></a>Opción preferida: activador COM
+## <a name="preferred-option---com-activator"></a>Opción preferida: COM Activator
 
-Esta es la opción preferida que funciona tanto para Puente de dispositivo de escritorio como para Win32 clásico y es compatible con todas las características de notificación. No tengas miedo del "activador COM"; tenemos una biblioteca [para C#](send-local-toast-desktop.md) y [aplicaciones de C++](send-local-toast-desktop-cpp-wrl.md) que hace que resulte muy sencillo, incluso si nunca antes has escrito un servidor COM.<br/><br/>
+Esta es la opción preferida que funciona con las aplicaciones de escritorio y es compatible con todas las características de notificación. No tenga miedo del "activador COM"; tenemos una biblioteca para las aplicaciones [de C#](send-local-toast-desktop.md) y [C++](send-local-toast-desktop-cpp-wrl.md) que hace que resulte muy sencillo, incluso si nunca ha escrito un servidor com antes.<br/><br/>
 
-| Elementos visuales | Acciones | Entradas | Activa en proceso |
+| Objetos visuales | Acciones | Entradas | Activa en proceso |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ✔️ | ✔️ |
 
-Con la opción de activador COM, puedes usar las siguientes plantillas de notificación y tipos de activación en tu aplicación.<br/><br/>
+Con la opción Activator de COM, puede usar las siguientes plantillas de notificación y tipos de activación de la aplicación.<br/><br/>
 
-| Tipo de activación y plantilla | Puente de dispositivo de escritorio | Win32 clásico |
+| Tipo de plantilla y activación | MSIX/paquete disperso | Win32 clásico |
 | -- | -- | -- |
-| ToastGeneric en primer plano | ✔️ | ✔️ |
-| Segundo plano de ToastGeneric | ✔️ | ✔️ |
-| Protocolo de ToastGeneric | ✔️ | ✔️ |
+| Primer plano ToastGeneric | ✔️ | ✔️ |
+| Fondo de ToastGeneric | ✔️ | ✔️ |
+| Protocolo ToastGeneric | ✔️ | ✔️ |
 | Plantillas heredadas | ✔️ | ❌ |
 
 > [!NOTE]
-> Si agregas el activador COM a tu aplicación existente del Puente de dispositivo de escritorio, las activaciones de notificaciones heredadas de primer y segundo plano activarán ahora el activador COM en lugar de la línea de comandos.
+> Si agrega el activador COM a la aplicación de paquete MSIX/disperso existente, las activaciones de la notificación de primer o segundo plano y las de notificaciones heredadas activarán ahora su activador de COM en lugar de la línea de comandos.
 
-Para obtener información sobre cómo usar esta opción, consulte [enviar una notificación del sistema local C# desde aplicaciones de escritorio](send-local-toast-desktop.md) o [enviar una notificación del C++ sistema local desde aplicaciones de webwrl de escritorio](send-local-toast-desktop-cpp-wrl.md).
+Para obtener información sobre cómo usar esta opción, consulte [enviar una notificación del sistema local desde las aplicaciones de C# de escritorio](send-local-toast-desktop.md) o [enviar una notificación del sistema local desde las aplicaciones de la WRL de C++ de escritorio](send-local-toast-desktop-cpp-wrl.md).
 
 
-## <a name="alternative-option---no-com--stub-clsid"></a>Opción alternativa: Ningún COM/CLSID de rutas internas
+## <a name="alternative-option---no-com--stub-clsid"></a>Opción alternativa: ningún CLSID de COM/stub
 
-Esta es una opción alternativa si no puedes implementar un activador COM. Sin embargo, sacrificarás algunas características, como la compatibilidad de entrada (cuadros de texto en las notificaciones del sistema) y la activación en proceso.<br/><br/>
+Se trata de una opción alternativa si no puede implementar un activador COM. Sin embargo, sacrificará algunas características, como la compatibilidad de entrada (cuadros de texto en la notificación del sistema) y la activación en proceso.<br/><br/>
 
-| Elementos visuales | Acciones | Entradas | Activa en proceso |
+| Objetos visuales | Acciones | Entradas | Activa en proceso |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ❌ | ❌ |
 
-Con esta opción, si admites Win32 clásico, tu limitación será mucho mayor en los tipos de activación y plantillas de notificación que puedes usar, como se muestra a continuación.<br/><br/>
+Con esta opción, si admite Win32 clásico, está mucho más limitado en las plantillas de notificación y los tipos de activación que puede usar, tal como se muestra a continuación.<br/><br/>
 
-| Tipo de activación y plantilla | Puente de dispositivo de escritorio | Win32 clásico |
+| Tipo de plantilla y activación | MSIX/paquete disperso | Win32 clásico |
 | -- | -- | -- |
-| ToastGeneric en primer plano | ✔️ | ❌ |
-| Segundo plano de ToastGeneric | ✔️ | ❌ |
-| Protocolo de ToastGeneric | ✔️ | ✔️ |
+| Primer plano ToastGeneric | ✔️ | ❌ |
+| Fondo de ToastGeneric | ✔️ | ❌ |
+| Protocolo ToastGeneric | ✔️ | ✔️ |
 | Plantillas heredadas | ✔️ | ❌ |
 
-En el caso de las aplicaciones de puente de escritorio, solo tiene que enviar notificaciones del sistema como si fuera una aplicación de UWP. Cuando el usuario haga clic en la notificación del sistema, la aplicación se iniciará en la línea de comandos con los argumentos de inicio que especificaste en la notificación del sistema.
+En el caso de las aplicaciones empaquetadas [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) y las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps), solo tiene que enviar notificaciones del sistema como si fuera una aplicación de UWP. Cuando el usuario haga clic en la notificación del sistema, la aplicación se iniciará con los argumentos de inicio que especificó en la notificación del sistema.
 
-Para aplicaciones clásicas de Win32, configura el AUMID para que puedas enviar notificaciones del sistema y también especificar a continuación un CLSID en el acceso directo. Puede ser cualquier GUID aleatorio. No agregues el activador o servidor COM. Agregas un CLSID COM "auxiliar", lo que hará que el Centro de actividades conservar la notificación. Ten en cuenta que solo puedes usar notificaciones del sistema de activación de protocolo ya que el CLSID auxiliar interrumpirá la activación de cualquier otra activaciones de notificación del sistema. Por lo tanto, tienes que actualizar tu aplicación para admitir la activación de protocolo y que el protocolo de notificaciones del sistema activen tu propia aplicación.
+En el caso de las aplicaciones Win32 clásicas, configure el AUMID para que pueda enviar notificaciones del sistema y, a continuación, especifique también un CLSID en el acceso directo. Puede ser cualquier GUID aleatorio. No agregue el servidor COM o el activador. Está agregando un "stub" COM CLSID, que hará que el centro de actividades conserve la notificación. Tenga en cuenta que solo puede usar notificaciones de activación de protocolo, ya que el CLSID de código auxiliar interrumpirá la activación de cualquier otra activación del sistema. Por lo tanto, debe actualizar la aplicación para admitir la activación del protocolo y hacer que el protocolo del sistema Active su propia aplicación.
 
 
 ## <a name="resources"></a>Recursos
 
-* [Enviar una notificación del sistema local desde C# aplicaciones de escritorio](send-local-toast-desktop.md)
-* [Enviar una notificación del sistema local desde C++ las aplicaciones de webwrl de escritorio](send-local-toast-desktop-cpp-wrl.md)
+* [Enviar una notificación del sistema local desde las aplicaciones de escritorio de C#](send-local-toast-desktop.md)
+* [Enviar una notificación del sistema local desde las aplicaciones de la WRL de C++ de escritorio](send-local-toast-desktop-cpp-wrl.md)
 * [Documentación del contenido del sistema](adaptive-interactive-toasts.md)

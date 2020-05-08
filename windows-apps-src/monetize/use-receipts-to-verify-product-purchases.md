@@ -1,26 +1,26 @@
 ---
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
-description: Cada transacción de Microsoft Store que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción.
+description: Cada transacción Microsoft Store que tiene como resultado una compra de productos correcta puede devolver opcionalmente una confirmación de transacción.
 title: Usar recibos para comprobar la compra de productos
 ms.date: 04/16/2018
 ms.topic: article
-keywords: windows 10, Windows 10, uwp, UWP, in-app purchases, compras desde la aplicación, IAPs, IAP, receipts, recibos, Windows.ApplicationModel.Store, Windows.ApplicationModel.Store
+keywords: Windows 10, UWP, compras desde la aplicación, IAPs, confirmaciones, Windows. ApplicationModel. Store
 ms.localizationpriority: medium
-ms.openlocfilehash: a26d98de58c954f1bec588b335483de08404862b
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ba87de0755469f373f9000f3d96d3021c9197985
+ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259222"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82148886"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para comprobar la compra de productos
 
-Cada transacción de Microsoft Store que tiene como resultado una compra correcta del producto también puede devolver un recibo de la transacción. Este recibo proporciona información sobre el producto enumerado y el coste abonado por el cliente.
+Cada transacción Microsoft Store que tiene como resultado una compra de productos correcta puede devolver opcionalmente una confirmación de transacción. Este recibo proporciona información sobre el producto enumerado y el coste abonado por el cliente.
 
-El acceso a esta información resulta útil en aquellos casos en los que la aplicación debe comprobar que un usuario compró tu aplicación o ha realizado una compra complementaria (también llamada compra de productos desde la aplicación o IAP) en Microsoft Store. Por ejemplo, imagina un juego que ofrece contenido descargado. Si el usuario que compró el contenido quiere jugar en otro dispositivo, debes comprobar que ese usuario ya sea propietario del contenido. A continuación se muestra cómo hacerlo.
+El acceso a esta información es compatible con escenarios en los que la aplicación necesita comprobar que un usuario ha adquirido la aplicación o que ha realizado compras de complementos (también denominadas productos en la aplicación o IAP) desde el Microsoft Store. Por ejemplo, imagina un juego que ofrece contenido descargado. Si el usuario que compró el contenido quiere jugar en otro dispositivo, debes comprobar que ese usuario ya sea propietario del contenido. Esta es la manera de hacerlo.
 
 > [!IMPORTANT]
-> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) para obtener y validar un recibo de una compra desde la aplicación. Si usas el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store) para compras desde la aplicación (introducidas en Windows 10, versión 1607 y disponibles para proyectos destinados a **Windows 10 Anniversary Edition (10.0, compilación 14393)** o una versión posterior de Visual Studio), este espacio de nombres no proporciona una API para obtener los recibos de compra para compras desde la aplicación. Sin embargo, puedes usar un método REST en la API de colecciones de Microsoft Store para obtener los datos de una transacción de compra. Para obtener más información, consulta [Recibos de las compras desde la aplicación](in-app-purchases-and-trials.md#receipts).
+> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows. ApplicationModel. Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) para obtener y validar una confirmación para una compra desde la aplicación. Si usa el espacio de nombres [Windows. Services. Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store) para las compras desde la aplicación (introducida en la versión 1607 de Windows 10 y disponible para los proyectos que tienen como destino **Windows 10 aniversario Edition (10,0). Compilación 14393)** o una versión posterior en Visual Studio), este espacio de nombres no proporciona una API para obtener confirmaciones de compra para compras desde la aplicación. Sin embargo, puede usar un método REST en la API de colección Microsoft Store para obtener datos de una transacción de compra. Para obtener más información, consulta [Recibos de las compras desde la aplicación](in-app-purchases-and-trials.md#receipts).
 
 ## <a name="requesting-a-receipt"></a>Solicitar un recibo
 
@@ -33,7 +33,7 @@ El espacio de nombres **Windows.ApplicationModel.Store** admite varias formas de
 Un recibo de aplicación tiene la siguiente apariencia.
 
 > [!NOTE]
-> Este ejemplo tiene el formato para ayudar a hacer que el código XML sea legible. Los recibos reales de la aplicación no incluyen espacios en blanco entre elementos.
+> En este ejemplo se da formato para ayudar a que el código XML sea legible. Los envíos de aplicaciones reales no incluyen espacios en blanco entre los elementos.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -60,7 +60,7 @@ Un recibo de aplicación tiene la siguiente apariencia.
 Un recibo de producto tiene la siguiente apariencia.
 
 > [!NOTE]
-> Este ejemplo tiene el formato para ayudar a hacer que el código XML sea legible. Los recibos de producto reales no incluyen espacios en blanco entre elementos.
+> En este ejemplo se da formato para ayudar a que el código XML sea legible. Los recibos de producto reales no incluyen espacios en blanco entre los elementos.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -87,7 +87,7 @@ Puedes usar cualquiera de estos ejemplos de recibo para probar tu código de val
 
 ## <a name="validating-a-receipt"></a>Validar un recibo
 
-Para validar la autenticidad de un recibo, necesitas que tu sistema back-end (un servicio web o algo similar) compruebe la firma del recibo usando el certificado público. Para obtener este certificado, usa la dirección URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```, donde ```CertificateId``` es el valor **CertificateId** en la recepción.
+Para validar la autenticidad de un recibo, necesitas que tu sistema back-end (un servicio web o algo similar) compruebe la firma del recibo usando el certificado público. Para obtener este certificado, use la dirección ```https://lic.apps.microsoft.com/licensing/certificateserver/?cid=CertificateId%60%60%60, where ```URL CertificateId ' ' ' es el valor de **CertificateId** en la recepción.
 
 Este es un ejemplo del proceso de validación. Este código se ejecuta en una aplicación de consola de .NET Framework que incluye una referencia al ensamblado **System.Security**.
 
@@ -104,10 +104,10 @@ Esta sección describe los elementos y atributos de un recibo.
 
 El elemento raíz de este archivo es el elemento **Recibo** que contiene información sobre la aplicación y compras desde la aplicación. Este elemento contiene los siguientes elementos secundarios.
 
-|  Elemento  |  Requerido  |  Cantidad  |  Descripción   |
+|  Elemento  |  Obligatorio  |  Cantidad  |  Descripción   |
 |-------------|------------|--------|--------|
 |  [AppReceipt](#appreceipt)  |    No        |  0 o 1  |  Contiene información de compra de la aplicación actual.            |
-|  [ProductReceipt](#productreceipt)  |     No       |  0 o más    |   Contiene información sobre una compra desde la aplicación de la aplicación actual.     |
+|  [ProductReceipt](#productreceipt)  |     No       |  0 o más    |   Contiene información sobre una compra desde la aplicación de la aplicación actual.     |
 |  Firma  |      Sí      |  1   |   Este elemento es un estándar de [construcción XML DSIG](https://www.w3.org/TR/xmldsig-core/). Contiene un elemento de **SignatureValue**, que contiene la firma que puedes usar para validar el recibo, y un elemento de **SignedInfo**.      |
 
 **Receipt** tiene los atributos siguientes.
@@ -129,7 +129,7 @@ Este elemento contiene la información de compra de la aplicación actual.
 
 |  Atributo  |  Descripción   |
 |-------------|-------------------|
-|  **Sesión**  |    Identifica la compra.           |
+|  **Id**  |    Identifica la compra.           |
 |  **AppId**  |     El valor de Nombre de familia de paquete que usa el sistema operativo para la aplicación.           |
 |  **LicenseType**  |    **Completa**, si el usuario ha comprado la versión completa de la aplicación. **Prueba**, si el usuario ha descargado una versión de prueba de la aplicación.           |  
 |  **PurchaseDate**  |    Fecha cuando se adquirió la aplicación.          |  |
@@ -144,7 +144,7 @@ Este elemento contiene información sobre una compra desde la aplicación de la 
 
 |  Atributo  |  Descripción   |
 |-------------|-------------------|
-|  **Sesión**  |    Identifica la compra.           |
+|  **Id**  |    Identifica la compra.           |
 |  **AppId**  |     Identifica la aplicación a través del cual el usuario realizó la compra.           |
 |  **IdProducto**  |     Identifica el producto comprado.           |
 |  **ProductType**  |    Determina el tipo de producto. Actualmente solo admite un valor de **Duradero**.          |  

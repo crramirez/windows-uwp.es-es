@@ -1,23 +1,23 @@
 ---
 title: Problemas conocidos de UWP en el Programa para desarrolladores de Xbox
-description: Se indican los problemas conocidos con la UWP en el Programa para desarrolladores de Xbox.
+description: Enumera los problemas conocidos del programa para desarrolladores de UWP en Xbox.
 ms.date: 03/29/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
-ms.openlocfilehash: 34425a0e754d62a1d9d7716bca3576463aec3ba5
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: dbf9d40d4dc2cfedaa78cbca5b16c4cc26d2d4e1
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259727"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730072"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Problemas conocidos de UWP en el Programa para desarrolladores de Xbox
 
 En este tema se describen los problemas conocidos de UWP en el Programa para desarrolladores de Xbox One. Para obtener más información acerca de este programa, consulta [UWP en Xbox](index.md). 
 
-\[si llegó aquí desde un vínculo en un tema de referencia de API y busca información sobre la API de la familia de dispositivos universales, consulte [características de UWP que todavía no se admiten en Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN).\]
+\[Si llegó aquí desde un vínculo en un tema de referencia de la API y busca información sobre la API de la familia de dispositivos universales, consulte [características de UWP que todavía no se admiten en Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN).\]
 
 La siguiente lista destaca algunos problemas conocidos que puedes encontrarte, aunque esta no es una lista exhaustiva. 
 
@@ -36,31 +36,31 @@ Para solucionar este problema, deshabilita temporalmente el control parental o:
 3. Inicia la aplicación desde la consola.
 4. Escribe un PIN o una contraseña para permitir que la aplicación se inicie.
 5. La aplicación se iniciará.
-6. Cierra la aplicación.
+6. Cierre la aplicación.
 7. Inicia desde VS con F5 y la aplicación se iniciará sin pedir confirmación.
 
 En este punto, el permiso es _permanente_ hasta que se cierra la sesión del usuario, aunque se desinstale y vuelva a instalar la aplicación.
  
 Existe otro tipo de excepción que solo está disponible para cuentas de menores. Una cuenta de un menor requiere que uno de los progenitores inicie sesión para conceder permiso, pero, cuando lo hace, el progenitor tiene la opción de elegir **Siempre** y permitir que el menor inicie la aplicación. Esa excepción se almacena en la nube y se conservará, incluso si el menor cierra la sesión y vuelve a iniciarla.
 
-## <a name="storagefilecopyasync-fails-to-copy-encrypted-files-to-unencrypted-destination"></a>Se produce un error de StorageFile.CopyAsync al copiar archivos cifrados en un destino sin cifrar 
+## <a name="storagefilecopyasync-fails-to-copy-encrypted-files-to-unencrypted-destination"></a>StorageFile. CopyAsync no puede copiar archivos cifrados en un destino sin cifrar 
 
-Cuando StorageFile.CopyAsync se usa para copiar un archivo cifrado en un destino que no está cifrado, se producirá un error en la llamada con la excepción siguiente:
+Cuando StorageFile. CopyAsync se usa para copiar un archivo cifrado a un destino que no está cifrado, se producirá un error en la llamada con la siguiente excepción:
 
 ```
 System.UnauthorizedAccessException: Access is denied. (Excep_FromHResult 0x80070005)
 ```
 
-Esto puede afectar a los desarrolladores de Xbox que quieran copiar en otra ubicación los archivos que se implementan como parte de su paquete de la aplicación. El motivo es que el contenido del paquete está cifrado en una consola Xbox en el modo comercial, pero no en el modo de desarrollo. Como resultado, es posible que parezca que la aplicación funciona según lo esperado durante el desarrollo y pruebas, pero presente un error cuando se publique y luego instale en una consola Xbox en modo comercial.
+Esto puede afectar a los desarrolladores de Xbox que desean copiar archivos que se implementan como parte de su paquete de aplicación en otra ubicación. El motivo es que el contenido del paquete se cifra en una consola Xbox en modo de venta directa, pero no en el modo de desarrollo. Como resultado, es posible que la aplicación parezca que funciona como se espera durante el desarrollo y las pruebas, pero después se produce un error una vez que se ha publicado y después se ha instalado en una consola Xbox comercial.
  
 
 ## <a name="blocked-networking-ports-on-xbox-one"></a>Puertos de red bloqueados en Xbox One
 
 Las aplicaciones para la Plataforma universal de Windows (UWP) en dispositivos Xbox One tienen restringido el enlace a los puertos del intervalo [57344, 65535], inclusive. Aunque el enlace a estos puertos puede parecer correcto en tiempo de ejecución, el tráfico de red puede eliminarse de forma silenciosa antes de llegar a la aplicación. La aplicación se debe enlazar al puerto 0 siempre que sea posible, lo que permite al sistema seleccionar el puerto local. Si necesitas usar un puerto específico, el número de puerto debe estar en el intervalo [1025, 49151], y debes comprobar y evitar conflictos con el registro IANA. Para obtener más información, consulta [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) (Nombre de servicio y registro de número de puerto del protocolo de transporte).
 
-## <a name="uwp-api-coverage"></a>Cobertura de las APIs de UWP
+## <a name="windows-runtime-api-coverage"></a>Windows Runtime cobertura de API
 
-En Xbox no se admiten todas las API de UWP. Para ver la lista de las API que sabemos que no funcionan, consulta [UWP features that aren't yet supported on Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN) (Características UWP que aún no se admiten en Xbox). Si encuentras problemas con otras API, notifícalo en los foros. 
+No todas las API de Windows Runtime se admiten en Xbox. Para ver la lista de las API que sabemos que no funcionan, consulta [UWP features that aren't yet supported on Xbox](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN) (Características UWP que aún no se admiten en Xbox). Si encuentras problemas con otras API, notifícalo en los foros. 
 
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>Desplazarse a WDP genera una advertencia de certificado
@@ -70,11 +70,11 @@ Recibirás una advertencia acerca del certificado proporcionado, similar a la si
 ![Advertencia de certificado de seguridad de sitio web](images/security_cert_warning.jpg)
 
 
-## <a name="knownfoldersmediaserverdevices-caveat-on-xbox"></a>Advertencia de KnownFolders.MediaServerDevices en Xbox
+## <a name="knownfoldersmediaserverdevices-caveat-on-xbox"></a>ADVERTENCIA de KnownFolders. MediaServerDevices en Xbox
 
-En el escritorio, los servidores multimedia se "emparejan" con el equipo y el servicio de asociación de dispositivos realiza un seguimiento constante de los servidores que están en línea, de modo que una consulta del sistema de archivos inicial puede devolver inmediatamente una lista de los servidores emparejados que están actualmente en línea.
+En el escritorio, los servidores multimedia se "emparejan" con el equipo y el servicio de Asociación de dispositivos realiza un seguimiento constante de cuál de los servidores está en línea actualmente, por lo que una consulta inicial del sistema de archivos puede devolver inmediatamente una lista de los servidores emparejados que están actualmente en línea.
 
-En Xbox, no hay ninguna interfaz de usuario para agregar o quitar servidores, por lo que la consulta del sistema de archivos inicial siempre volverá vacía. Debes crear una consulta, suscribirte al evento ContentsChanged y actualizar la consulta cada vez que recibas una notificación. Se generarán los servidores y la mayoría aparecerán en 3 segundos.
+En Xbox, no hay ninguna interfaz de usuario para agregar o quitar servidores, por lo que la consulta de sistema de archivos inicial siempre devolverá un valor vacío. Debe crear una consulta y suscribirse al evento ContentsChanged y actualizar la consulta cada vez que reciba una notificación. Los servidores se incluirán en y la mayoría de ellos se habrán descubierto en 3 segundos.
 
 Código de ejemplo sencillo:
 
@@ -115,6 +115,6 @@ namespace TestDNLA {
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [Preguntas más frecuentes](frequently-asked-questions.md)
 - [UWP en Xbox One](index.md)

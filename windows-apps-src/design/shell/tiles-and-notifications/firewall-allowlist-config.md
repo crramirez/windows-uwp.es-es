@@ -8,16 +8,16 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, servicio de notificaciones de Windows, notificación, Windows, firewall, solución de problemas, IP, tráfico, empresa, red, IPv4, VIP, FQDN, dirección IP pública
 ms.localizationpriority: medium
-ms.openlocfilehash: 34e66249c5b44cbfecd81b9238eda2b1e5412b9a
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 7f87dc0cc174a22f474c91a58f3ffeb738822fa8
+ms.sourcegitcommit: 963316e065cf36c17b6360c3f89fba93a1a94827
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080661"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82868907"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configuraciones de firewall y proxy de empresa para admitir el tráfico de WNS
 
-## <a name="background"></a>Fondo
+## <a name="background"></a>Información previa
 Muchas empresas usan firewalls para bloquear el tráfico de red y los puertos no deseados; Desafortunadamente, esto también puede bloquear aspectos importantes como las comunicaciones del servicio de notificaciones de Windows. Esto significa que todas las notificaciones enviadas a través de WNS se quitarán en determinadas configuraciones de red. Para evitar esto, los administradores de red pueden agregar la lista de FQDN o VIP de WNS aprobados a su lista de exenciones para permitir que el tráfico de WNS pase a través del firewall. A continuación se muestran más detalles sobre cómo y qué agregar, así como la compatibilidad con distintos tipos de proxy.
 
 ## <a name="proxy-support"></a>Compatibilidad con proxy
@@ -60,6 +60,10 @@ Independientemente del método que elija, deberá permitir el tráfico de red a 
         <IpRange Subnet=""/>
         <!-- See the file in Download Center for the complete list of IP ranges -->
     </ClientIPsIPv4>
+    <IdentityServiceDNS>
+        <DNS FQDN="login.microsoftonline.com"/>
+        <DNS FQDN="login.live.com"/>
+    </IdentityServiceDNS>
 </WNSPublicIpAddresses>
 
 ```
@@ -82,10 +86,10 @@ Si usa el servicio de notificación heredado, MPNS, los intervalos de direccione
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Inicio rápido: envío de una notificación de extracción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
-* [Solicitud, creación y guardado de un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
-* [Cómo interceptar notificaciones para la ejecución de aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
-* [Cómo autenticarse con el servicio de notificaciones de extracción de Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
-* [Encabezados de solicitud y respuesta del servicio de notificaciones de extracción](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
-* [Instrucciones y lista de comprobación para las notificaciones de envío](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [Inicio rápido: Envío de una notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [Cómo solicitar, crear y guardar un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
+* [Cómo interceptar notificaciones para aplicaciones en ejecución](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
+* [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
+* [Directrices y lista de comprobación de notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
  

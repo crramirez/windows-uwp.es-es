@@ -8,35 +8,35 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d6647b25f6f9f5015ca31ae75a869731ccc1fe3
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 0d3f1f4cfa609ce7e5df83c98f2e815045a3209f
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258308"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970230"
 ---
 # <a name="surface-dial-interactions"></a>Interacciones de Surface Dial
 
-![imagen de Surface dial con Surface Studio](images/windows-wheel/dial-pen-studio-600px.png)  
+![Imagen de Surface Dial con Surface Studio](images/windows-wheel/dial-pen-studio-600px.png)  
 *Surface Dial con Surface Studio y Lápiz para Surface* (disponible para su compra en [Microsoft Store](https://www.microsoft.com/store/d/Surface-Dial/925R551SKTGN?icid=Surface_Accessories_ModB_Surface_Dial_103116)).
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
-Los dispositivos de rueda de Windows, como Surface Dial, son una nueva categoría de dispositivos de entrada que permiten un abanico de experiencias de interacción del usuario atractivas y únicas para Windows y aplicaciones de Windows. 
+Los dispositivos de rueda de Windows, como el marcado de Surface, son una nueva categoría de dispositivo de entrada que habilita un host de experiencias de interacción de usuarios atractivas y únicas para aplicaciones Windows y Windows. 
 
 > [!IMPORTANT]
-> En este tema, nos referimos específicamente a las interacciones de Surface Dial, pero la información es aplicable a todos los dispositivos de rueda de Windows. 
+> En este tema, hacemos referencia específicamente a las interacciones de marcado de Surface, pero la información es aplicable a todos los dispositivos de rueda de Windows. 
 
 | Vídeos |   |
 | --- | --- |
 | <iframe src="https://www.youtube-nocookie.com/embed/WMklcdzcNcU" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> |
-| *Asociados de la aplicación de marcado de Surface* | *Marcado de Surface para desarrolladores* |
+| *Asociados de aplicaciones de Surface Dial* | *Surface Dial para desarrolladores* |
 
 Con un factor de forma que se basa en una acción (o gesto) de *giro*, Surface Dial se ha diseñado como un dispositivo de entrada secundario multimodal que complementa la entrada de un dispositivo principal. En la mayoría de los casos, el dispositivo se manipula con la mano no dominante del usuario mientras realiza una tarea con la mano dominante (por ejemplo, una entrada manuscrita con un lápiz). No está diseñado como una entrada de puntero de precisión (por ejemplo, entrada táctil, lápiz o mouse). 
 
 Surface Dial también admite una acción de *pulsar y sostener* y una acción de *hacer clic*. Pulsar y sostener tiene una única función: mostrar un menú de comandos. Si el menú está activo, este procesa la entrada de girar y hacer clic. De lo contrario, la entrada se pasa a la aplicación para su procesamiento. 
 
-**Al igual que con todos los dispositivos de entrada de Windows, puede personalizar y adaptar la experiencia de interacción de marcado de Surface para adaptarse a la funcionalidad de las aplicaciones.**
+**Al igual que con todos los dispositivos de entrada de Windows, puedes personalizar y adaptar la experiencia de interacción de Surface Dial para que se ajuste a la funcionalidad de tus aplicaciones.**
 
 > [!TIP]
 > Si se usan juntos, Surface Dial y el nuevo Surface Studio pueden proporcionar una experiencia de usuario aún más distintiva.  
@@ -59,21 +59,21 @@ Esta colección de herramientas integradas se adapta al contexto actual del sist
 
 Además de esta compatibilidad de plataforma general, Surface Dial también está estrechamente integrado con los controles de plataforma de Windows Ink ([**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) e [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar)).
 
-![Surface dial con el lápiz de Surface](images/windows-wheel/dial-and-pen-400px.png)  
-*Surface dial con lápiz de Surface*
+![Surface Dial con Lápiz para Surface](images/windows-wheel/dial-and-pen-400px.png)  
+*Surface Dial con Lápiz para Surface*
 
 Cuando se usa con Surface Dial, estos controles habilitan funciones adicionales que permiten modificar los atributos de entrada de lápiz y controlar la galería de símbolos de regla de la barra de herramientas de entradas de Ink.
 
 Cuando se abre el menú Surface Dial en una aplicación de entrada manuscrita que usa la barra de herramientas de entradas de Ink, el menú ahora incluye herramientas para controlar el tipo de lápiz y el grosor del pincel. Cuando se habilita la regla, se agrega una herramienta correspondiente al menú que permite al dispositivo controlar la posición y el ángulo de la regla.
 
-![menú de marcado de Surface con la herramienta de selección de lápiz para la barra de herramientas de Windows Ink](images/windows-wheel/surface-dial-menu-inktoolbar-pen.png)  
-*Menú de marcado de Surface con la herramienta de selección de lápiz para la barra de herramientas de Windows Ink*
+![Menú de Surface Dial con la herramienta de selección de lápiz para la barra de herramientas de Windows Ink](images/windows-wheel/surface-dial-menu-inktoolbar-pen.png)  
+*Menú de Surface Dial con la herramienta de selección de lápiz para la barra de herramientas de Windows Ink*
 
-![menú de marcado de Surface con la herramienta de tamaño de trazo para la barra de herramientas de Windows Ink](images/windows-wheel/surface-dial-menu-inktoolbar-strokesize.png)  
-*Menú de marcado de Surface con la herramienta de tamaño de trazo para la barra de herramientas de Windows Ink*
+![Menú de Surface Dial con la herramienta de tamaño de trazo para la barra de herramientas de Windows Ink](images/windows-wheel/surface-dial-menu-inktoolbar-strokesize.png)  
+*Menú de Surface Dial con la herramienta de tamaño de trazo para la barra de herramientas de Windows Ink*
 
-![menú de marcado de Surface con la herramienta de regla para la barra de herramientas de Windows Ink](images/windows-wheel/surface-dial-menu-inktoolbar-ruler.png)  
-*Menú de marcado de Surface con la herramienta de regla para la barra de herramientas de Windows Ink*
+![Menú de Surface Dial con la herramienta de regla para la barra de herramientas de Windows Ink](images/windows-wheel/surface-dial-menu-inktoolbar-ruler.png)  
+*Menú de Surface Dial con la herramienta de regla para la barra de herramientas de Windows Ink*
 
 ## <a name="user-customization"></a>Personalización del usuario
 
@@ -89,7 +89,7 @@ En esta sección, analizaremos tanto las directrices sobre la experiencia del us
 
 **Asegurarte de que tus herramientas se corresponden con el contexto actual** Cuando consigues que resulte claro e intuitivo qué es lo que hace una herramienta y cómo funciona la interacción con Surface Dial, ayudas a que los usuarios aprendan rápidamente y se centren en sus tareas.
 
-**Minimice el número de herramientas de aplicación tanto como sea posible**  
+**Minimizar el número de herramientas de la aplicación tanto como sea posible**  
 El menú de Surface Dial tiene espacio para siete elementos. Si hay ocho o más elementos, el usuario deberá girar el Dial para ver qué herramientas están disponibles en un control flotante de desbordamiento, lo que dificultará la navegación por el menú, así como la detección y la selección de las herramientas.
 
 Te recomendamos que proporciones una sola herramienta personalizada para tu aplicación o para el contexto de la aplicación. Esto te permitirá configurar la herramienta en función de lo que está haciendo el usuario sin que tenga que activar el menú de Surface Dial y seleccionar una herramienta. 
@@ -100,10 +100,10 @@ Como los elementos de menú de Surface Dial no admiten un estado deshabilitado, 
 > [!IMPORTANT]
 > Cuando agregues un elemento al menú, asegúrate de que el elemento no existe aún.
 
-**No quitar la herramienta de configuración de volumen del sistema integrada**  
+**No quitar la herramienta integrada de configuración del volumen del sistema**  
 Normalmente, el usuario siempre va a necesitar el control del volumen. Es posible que escuche música mientras usa tu aplicación, así que las herramientas de volumen y de pista siguiente siempre deben estar accesibles desde el menú de Surface Dial. (La herramienta de pista siguiente se agrega automáticamente al menú cuando se reproducen elementos multimedia).
 
-**Sea coherente con la organización de menús**  
+**Ser coherente con la organización del menú**  
 Esto ayuda a los usuarios a descubrir y conocer las herramientas que están disponibles al usar la aplicación, y ayuda a mejorar su eficacia al cambiar de herramientas.
 
 **Proporcionar iconos de alta calidad coherentes con los iconos integrados**  
@@ -116,7 +116,7 @@ Los iconos pueden transmitir profesionalidad y excelencia, e inspiran confianza 
 |   |   |   |
 | --- | --- | --- |
 | ![Icono con fondo alfa](images/windows-wheel/surface-dial-menu-icon1.png) | ![Icono que se muestra en el menú de rueda con el icono de tema predeterminado](images/windows-wheel/surface-dial-menu-icon2.png) | ![Menú en la pantalla de Surface Dial](images/windows-wheel/surface-dial-menu-icon3.png) |
-| *Icono con fondo alfa* | *Icono mostrado en el menú de rueda con el tema predeterminado* | *Icono mostrado en el menú de rueda con contraste alto tema blanco* |
+| *Icono con fondo alfa* | *Icono que se muestra en el menú de rueda con el tema predeterminado* | *Icono que se muestra en el menú de rueda con el tema blanco en contraste alto* |
 
 **Usar nombres concisos y descriptivos**  
 El nombre de la herramienta se muestra en el menú de la herramienta junto con el icono de la herramienta, y también lo usan los lectores de pantalla. 
@@ -125,7 +125,7 @@ El nombre de la herramienta se muestra en el menú de la herramienta junto con e
   - El desplazamiento indica el efecto de ambas direcciones de rotación
   - La acción de deshacer especifica una acción principal, sin embargo rehacer (la acción complementaria) se puede inferir y el usuario puede descubrirla fácilmente
 
-### <a name="developer-guidance"></a>Guía para desarrolladores
+### <a name="developer-guidance"></a>Instrucciones para desarrolladores
 
 Puedes personalizar la experiencia de Surface Dial para complementar la funcionalidad de tus aplicaciones a través de un completo conjunto de [API de Windows en tiempo de ejecución](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController). 
 
@@ -141,7 +141,7 @@ En este ejemplo, agregamos una herramienta personalizada básica que pasa los da
 
 1. Primero, declaramos nuestra interfaz de usuario (solo un control deslizante y un botón de alternancia) en XAML.
 
-   ![imagen de la interfaz de usuario de la aplicación de ejemplo](images/windows-wheel/surface-dial-snippet-customtool1.png)  
+   ![Imagen de la interfaz de usuario de la aplicación de ejemplo](images/windows-wheel/surface-dial-snippet-customtool1.png)  
    *La interfaz de usuario de la aplicación de ejemplo*
 
     ```Xaml
@@ -242,8 +242,8 @@ En este ejemplo, agregamos una herramienta personalizada básica que pasa los da
 
 Al ejecutar la aplicación, utilizamos Surface Dial para interactuar con ella. En primer lugar, pulsamos y sostenemos para abrir el menú y seleccionar nuestra herramienta personalizada. Una vez activada la herramienta personalizada, podemos girar el Dial para ajustar el control deslizante y hacer clic en él para alternar el modificador.
 
-![imagen de la interfaz de usuario de la aplicación de ejemplo activada mediante la herramienta personalizada de marcado de Surface](images/windows-wheel/surface-dial-snippet-customtool2.png)  
-*La interfaz de usuario de la aplicación de ejemplo activada con Surface dial Custom Tool*
+![Imagen de la interfaz de usuario de la aplicación de ejemplo activada mediante la herramienta personalizada de Surface Dial](images/windows-wheel/surface-dial-snippet-customtool2.png)  
+*Interfaz de usuario de la aplicación de ejemplo activada mediante la herramienta personalizada de Surface Dial*
 
 **Especificar las herramientas integradas**
 
@@ -291,7 +291,7 @@ De manera predeterminada, el menú se muestra en el centro de la pantalla del us
 > [!NOTE]
 > Cuando Surface Dial se coloca en la pantalla de Studio Surface, el menú se centra justo en la posición de la pantalla donde está colocado Surface Dial.
 
-### <a name="rotate"></a>Rotar
+### <a name="rotate"></a>Girar
 
 Surface Dial está diseñado principalmente para admitir la rotación para las interacciones que implican ajustes suaves e incrementales de controles o valores analógicos.
 
@@ -302,15 +302,15 @@ El dispositivo se puede girar hacia la derecha y hacia la izquierda, y también 
 
 #### <a name="ux-guidance-for-custom-interactions"></a>Guía de experiencia del usuario para interacciones personalizadas
 
-**Las herramientas con una sensibilidad de rotación continua o alta deben deshabilitar los comentarios hápticos**
+**Las herramientas con alta sensibilidad rotacional o sensibilidad continua deben deshabilitar los comentarios hápticos**
 
 Los comentarios hápticos coinciden con la sensibilidad rotacional de la herramienta activa. Se recomienda deshabilitar los comentarios hápticos para las herramientas con alta sensibilidad rotacional o sensibilidad continua ya que resulta una experiencia incómoda para el usuario. 
 
-**La mano dominante no debe afectar a las interacciones basadas en la rotación**
+**La mano dominante no debería afectar a las interacciones basadas en la rotación**
 
 Surface Dial no puede detectar qué mano se está usando, pero el usuario puede establecer la escritura manuscrita (o la mano dominante) en **Configuración de Windows -> Dispositivo -> Lápiz y Windows Ink**.
 
-**La configuración regional debe tenerse en cuenta para todas las interacciones de rotación**
+**La configuración regional se debería tener en cuenta para todas las interacciones de rotación**
 
 Maximiza la satisfacción del cliente acomodando y adaptando tus interacciones con la configuración regional y los diseños de derecha a izquierda.
 
@@ -318,16 +318,16 @@ Las herramientas y comandos integrados en el menú del Dial siguen estas directr
 
 |   |   |   |
 | --- | --- | --- |
-| Izquierda<br/>Arriba<br/>Alejar | ![Imagen de Surface Dial](images/windows-wheel/surface-dial-rotate.png) | Derecha<br/>Abajo<br/>Acercar |
+| Left<br/>Arriba<br/>Fuera | ![Imagen de Surface Dial](images/windows-wheel/surface-dial-rotate.png) | Right<br/>Bajar<br/>En |
 |   |   |   |
 
 | Dirección conceptual | Asignación a Surface Dial | Rotación en sentido del reloj | Rotación en sentido contrario a las agujas del reloj |
 | --- | --- | --- | --- |
-| Horizontal | Asignación de izquierda y derecha basada en la parte superior de Surface Dial | Derecha | Izquierda |
-| Vertical | Asignación de arriba y abajo basada en el lado izquierdo de Surface Dial | Abajo | Arriba |
-| Eje z | Acercar (o más cerca) asignado a arriba/derecha<br/>Alejar (o más lejos) asignado a abajo/izquierda | Acercar | Alejar |
+| Horizontal | Asignación de izquierda y derecha basada en la parte superior de Surface Dial | Right | Left |
+| Vertical | Asignación de arriba y abajo basada en el lado izquierdo de Surface Dial | Bajar | Arriba |
+| Eje z | Acercar (o más cerca) asignado a arriba/derecha<br/>Alejar (o más lejos) asignado a abajo/izquierda | En | Fuera |
 
-#### <a name="developer-guidance"></a>Guía para desarrolladores
+#### <a name="developer-guidance"></a>Instrucciones para desarrolladores
 
 A medida que el usuario gira el dispositivo, se desencadenan los eventos de [**RadialController.RotationChanged**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.rotationchanged) en función de una variación diferencial ([**RadialControllerRotationChangedEventArgs.RotationDeltaInDegrees**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerrotationchangedeventargs.rotationdeltaindegrees)) con respecto a la dirección de giro. La sensibilidad (o resolución) de los datos se puede establecer con la propiedad [**RadialController.RotationResolutionInDegrees**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.rotationresolutionindegrees).
 
@@ -339,7 +339,7 @@ En general, se recomienda deshabilitar los comentarios hápticos cuando la resol
 Puedes habilitar y deshabilitar los comentarios hápticos para herramientas personalizadas configurando la propiedad [**RadialController.UseAutomaticHapticFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.useautomatichapticfeedback).
 
 > [!NOTE]
-> No puedes invalidar el comportamiento háptico de las herramientas del sistema, como el control de volumen. Para estas herramientas, solo el usuario puede deshabilitar los comentarios hápticos por el usuario desde la página de configuración de la rueda.
+> No puedes invalidar el comportamiento háptico de las herramientas del sistema, como el control de volumen. Para estas herramientas, los comentarios hápticos solo los puede deshabilitar el usuario en la página de configuración de la rueda.
 
 Este es un ejemplo de cómo personalizar la resolución de los datos de rotación y habilitar o deshabilitar comentarios hápticos.
 
@@ -366,25 +366,25 @@ private void MyController_ButtonClicked(RadialController sender,
 }
 ```
 
-### <a name="click"></a>Haz clic
+### <a name="click"></a>Haga clic en 
 
 Hacer clic en Surface Dial es similar a hacer clic en el botón izquierdo del mouse (el estado de rotación del dispositivo no tiene ningún efecto en esta acción).
 
 #### <a name="ux-guidance"></a>Directrices sobre la experiencia de usuario
 
-**No asigne una acción o un comando a este gesto si el usuario no se puede recuperar fácilmente del resultado.**
+**No asignar una acción o comando a este gesto si el usuario no puede recuperarse fácilmente del resultado**
 
 Cualquier acción que realice tu aplicación en base al clic del usuario en Surface Dial debe ser reversible. Siempre debes permitir que el usuario pueda recorrer fácilmente la pila de retroceso de la aplicación y restaurar un estado anterior de la aplicación.
 
 Operaciones binarias como desactivar/activar notificaciones o mostrar/ocultar proporcionar buenas experiencias de usuario con el gesto de hacer clic.
 
-**Las herramientas modales no deben habilitarse o deshabilitarse haciendo clic en el marcado de Surface**
+**Las herramientas modales no se deben habilitar o deshabilitar haciendo clic en Surface Dial**
 
 Algunos modos de aplicación/herramienta pueden entrar en conflicto con las interacciones que dependen de la rotación, o deshabilitarlas. Herramientas, como la regla en la barra de herramientas de Windows Ink, deben activarse o desactivarse a través de otras prestaciones de la interfaz de usuario (la barra de herramientas de Windows Ink proporciona un control [**ToggleButton**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton) integrado).
 
 Para herramientas modales, asigna el elemento de menú de Surface Dial a la herramienta de destino o al elemento de menú seleccionado anteriormente.
 
-#### <a name="developer-guidance"></a>Guía para desarrolladores
+#### <a name="developer-guidance"></a>Instrucciones para desarrolladores
 
 Cuando se hace clic en Surface Dial, se desencadena un evento [**RadialController.ButtonClicked**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.buttonclicked). Los argumentos [**RadialControllerButtonClickedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerButtonClickedEventArgs) incluyen una propiedad [**Contact**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerbuttonclickedeventargs.contact) que contiene la ubicación y el área límite del punto de contacto de Surface Dial en la pantalla de Surface Studio. Si Surface Dial no está en contacto con la pantalla, esta propiedad es null. 
 
@@ -401,21 +401,21 @@ En este modo, puedes aumentar la integración y la personalización de tus exper
 
 #### <a name="ux-guidance-for-on-screen-interactions"></a>Guía de experiencia del usuario para interacciones en pantalla
 
-**Las aplicaciones deben responder cuando el marcado de Surface se detecta en pantalla**
+**Las aplicaciones deben responder cuando se detecta la presencia de Surface Dial sobre la pantalla**
 
 Los comentarios visuales ayudan a indicar al usuario que tu aplicación ha detectado el dispositivo en la pantalla de Surface Studio.
 
-**Ajustar la interfaz de usuario relacionada con el marcado de Surface en función de la ubicación del dispositivo**
+**Ajustar la interfaz de usuario relacionada con Surface Dial en función de la ubicación del dispositivo**
 
 El dispositivo (y el cuerpo del usuario) pueden tapar partes críticas de la interfaz de usuario según donde el usuario lo coloque.
 
-**Ajustar la interfaz de usuario relacionada con el marcado de Surface en función de la interacción del usuario**
+**Ajustar la interfaz de usuario relacionada con Surface Dial en función de la interacción del usuario**
 
 Además de la oclusión de hardware, la mano o el brazo de un usuario pueden ocultar parte de la pantalla al usar el dispositivo.
 
 El área que queda oculta depende de la mano que se esté usando con el dispositivo. Como el dispositivo está diseñado para usarse principalmente con la mano no dominante, se debe ajustar la interfaz de usuario relacionada con Surface Dial a la mano opuesta a la especificada por el usuario (opción **Configuración de Windows > Dispositivo > Lápiz y Windows Ink > Elige la mano con la que escribes**).
 
-**Las interacciones deben responder a la posición de marcado en lugar de al movimiento**
+**Las interacciones deben responder a la posición de Surface Dial en lugar de al movimiento**
 
 El pie del dispositivo está diseñado para pegarse a la pantalla y no para deslizarse sobre ella, ya que no es un dispositivo señalador de precisión. Por lo tanto, esperamos que lo habitual sea que los usuarios levanten y coloquen Surface Dial en lugar de arrastrarlo por la pantalla.
 
@@ -423,7 +423,7 @@ El pie del dispositivo está diseñado para pegarse a la pantalla y no para desl
 
 Configurar la herramienta activa en base al contexto de la interfaz de usuario, como puede ser la proximidad a un control, un lienzo o una ventana, puede mejorar la experiencia del usuario al reducir los pasos necesarios para realizar una tarea.
 
-#### <a name="developer-guidance"></a>Guía para desarrolladores
+#### <a name="developer-guidance"></a>Instrucciones para desarrolladores
 
 Cuando Surface Dial se coloca en la superficie digitalizadora de Studio Surface, se desencadena un evento [**RadialController.ScreenContactStarted**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller.screencontactstarted) y se proporciona la información de contacto ([**RadialControllerScreenContactStartedEventArgs.Contact**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerscreencontactstartedeventargs.contact)) a la aplicación.
 
@@ -435,7 +435,7 @@ En el siguiente ejemplo, hemos creado una aplicación básica con cuatro seccion
 
 1. Primero, declaramos nuestra interfaz de usuario (cuatro secciones, cada una con un control deslizante y un botón de alternancia) en XAML.
 
-   ![imagen de la interfaz de usuario de la aplicación de ejemplo](images/windows-wheel/surface-dial-snippet-customtool3.png)  
+   ![Imagen de la interfaz de usuario de la aplicación de ejemplo](images/windows-wheel/surface-dial-snippet-customtool3.png)  
    *La interfaz de usuario de la aplicación de ejemplo*
 
    ```xaml 
@@ -635,8 +635,8 @@ private void ActivateGridAtLocation(Point Location)
 
 Al ejecutar la aplicación, utilizamos Surface Dial para interactuar con ella. En primer lugar, colocamos el dispositivo en la pantalla de Surface Studio, acción que la aplicación detecta y la asocia a la sección inferior derecha (consulta la imagen). A continuación, pulsamos y sostenemos Surface Dial para abrir el menú y seleccionar la herramienta personalizada. Una vez activada la herramienta personalizada, podemos girar Surface Dial para ajustar el control deslizante o hacer clic en él para alternar el botón de alternancia.
 
-![imagen de la interfaz de usuario de la aplicación de ejemplo activada mediante la herramienta personalizada de marcado de Surface](images/windows-wheel/surface-dial-snippet-customtool4.png)  
-*La interfaz de usuario de la aplicación de ejemplo activada con Surface dial Custom Tool*
+![Imagen de la interfaz de usuario de la aplicación de ejemplo activada mediante la herramienta personalizada de Surface Dial](images/windows-wheel/surface-dial-snippet-customtool4.png)  
+*Interfaz de usuario de la aplicación de ejemplo activada mediante la herramienta personalizada de Surface Dial*
 
 ## <a name="summary"></a>Resumen
 
@@ -644,13 +644,13 @@ En este tema se ofrece información general sobre el dispositivo de entrada Surf
 
 ## <a name="feedback"></a>Comentarios
 
-Envía tu preguntas, sugerencias y comentarios a [radialcontroller@microsoft.com](mailto:radialcontroller@microsoft.com).
+Envíe sus preguntas, sugerencias y comentarios a [radialcontroller@microsoft.com](mailto:radialcontroller@microsoft.com).
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-[Tutorial: compatibilidad con el marcado de Surface (y otros dispositivos de rueda) en la aplicación de UWP](radialcontroller-walkthrough.md)
+[Tutorial: compatibilidad con el marcado de Surface (y otros dispositivos de rueda) en la aplicación de Windows](radialcontroller-walkthrough.md)
 
-### <a name="api-reference"></a>Referencia de la API
+### <a name="api-reference"></a>Referencia de API
 
 - [Clase **RadialController**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController)
 - [Clase **RadialControllerButtonClickedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerButtonClickedEventArgs)
@@ -665,18 +665,18 @@ Envía tu preguntas, sugerencias y comentarios a [radialcontroller@microsoft.com
 - [Enumeración **RadialControllerMenuKnownIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerMenuKnownIcon) 
 - [Enumeración **RadialControllerSystemMenuItemKind**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialControllerSystemMenuItemKind) 
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
 #### <a name="topic-samples"></a>Ejemplos del tema
 
 [Personalización de RadialController](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
 
-#### <a name="other-samples"></a>Otras muestras
+#### <a name="other-samples"></a>Otros ejemplos
 
 [Ejemplo de libro de color](https://github.com/Microsoft/Windows-appsample-coloringbook)
 
-[Tutorial de introducción: compatibilidad con el marcado de Surface (y otros dispositivos de rueda) en la aplicación de UWP](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-RadialController)
+[Tutorial de introducción: compatibilidad con el marcado de Surface (y otros dispositivos de rueda) en la aplicación de Windows](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-RadialController)
 
 [Muestras de la Plataforma universal de Windows (C# y C++)](https://github.com/Microsoft/Windows-universal-samples/tree/b78d95134ce2d57c848e0a8dc339fc362748fb9c/Samples/RadialController)
 
-[Ejemplo de escritorio clásico de Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController)
+[Muestra de escritorio clásico de Windows](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController)

@@ -1,42 +1,42 @@
 ---
-Description: En este tema se enumeran las fuentes disponibles para las aplicaciones para UWP que se localizan en otros idiomas además de inglés de EE. UU.
+Description: En este tema se enumeran las fuentes disponibles para aplicaciones de Windows que están localizadas en idiomas distintos del Inglés de EE. UU.
 title: Fuentes internacionales
 template: detail.hbs
 ms.date: 11/02/2017
 ms.topic: article
-keywords: windows 10, uwp, globalización, localización
+keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: eb12ea0bb7966813413d29908c4974a7c4c97486
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: aa0b560ad684ba230e0a498b9069d24d510f49c0
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258079"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970910"
 ---
 # <a name="international-fonts"></a>Fuentes internacionales
 
-En este tema se enumeran las fuentes disponibles para las aplicaciones para UWP que se localizan en otros idiomas además de inglés de EE. UU.
+En este tema se enumeran las fuentes disponibles para aplicaciones de Windows que están localizadas en idiomas distintos del Inglés de EE. UU.
 
-En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47) del idioma. Para ver una lista de etiquetas de idioma que se admiten específicamente en la Microsoft Store, consulta [Idiomas admitidos](../../publish/supported-languages.md).
+En la tabla siguiente, la columna "etiqueta de idioma" muestra la [etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47) del idioma. Para ver una lista de las etiquetas de idioma admitidas específicamente por el Microsoft Store, consulte [idiomas admitidos](../../publish/supported-languages.md).
 
 | Idioma | Etiqueta de idioma | Fuente usada en Windows |
 | --------- | ----------- | -------------------- |
 | Afrikáans | af-ZA | Segoe UI |
-| Albano | sq-AL | Segoe UI |
+| Albanés | sq-AL | Segoe UI |
 | Amárico | am-ET | Ebrima |
 | Árabe | ar-SA | Segoe UI |
 | Armenio | hy-AM | Segoe UI |
 | Asamés | as-IN | Nirmala UI |
-| Azerbaiyano (latino) | az-Latn-AZ | Segoe UI |
-| Bengalí (Bangladés) | bn-BD | Nirmala UI |
+| Azerbaiyano (Latín) | az-Latn-AZ | Segoe UI |
+| Bengalí (Bangladesh) | bn-BD | Nirmala UI |
 | Bengalí (India) | bn-IN | Nirmala UI |
-| Euskera (Euskera) | eu-ES | Segoe UI |
+| Vasco (España) | eu-ES | Segoe UI |
 | Bielorruso | be-BY | Segoe UI |
 | Bosnio (latino) | bs-Latn-BA | Segoe UI |
 | Búlgaro | bg-BG | Segoe UI |
 | Catalán | ca-ES | Segoe UI |
-| Kurdo central (árabe) | ku-ARAB-IQ | Segoe UI |
-| Cheroqui (cheroqui) | chr-CHER-US | Gadugi |
+| Kurdo central (árabe) | Ku-árabe-IQ | Segoe UI |
+| Cheroqui (cheroqui) | Chr-CHER-US | Gadugi |
 | Chino simplificado | zh-CN | Microsoft YaHei UI |
 | Chino tradicional (Hong Kong) | zh-HK | Microsoft JhengHei UI |
 | Chino tradicional (Taiwán) | zh-TW | Microsoft JhengHei UI |
@@ -55,7 +55,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Alemán | de-DE | Segoe UI |
 | Griego | el-GR | Segoe UI |
 | Gujarati | gu-IN | Nirmala UI |
-| Hausa (latino) | ha-Latn-NG | Segoe UI |
+| Hausa (Latín) | ha-Latn-NG | Segoe UI |
 | Hebreo | he-IL | Segoe UI |
 | Hindi | hi-IN | Nirmala UI |
 | Húngaro | hu-HU | Segoe UI |
@@ -67,10 +67,10 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | isiZulu | zu-ZA | Segoe UI |
 | Italiano | it-IT | Segoe UI |
 | Japonés | ja-JP | Yu Gothic UI |
-| Kannada | kn-IN | Nirmala UI |
+| Canarés | kn-IN | Nirmala UI |
 | Kazajo | kk-KZ | Segoe UI |
 | Khmer | km-KH | Leelawadee UI |
-| Quiché | qut-GT | Segoe UI |
+| Quiché | QUT-GT | Segoe UI |
 | Kinyarwanda | rw-RW | Segoe UI |
 | Suajili | sw-KE | Segoe UI |
 | Konkani | kok-IN | Nirmala UI |
@@ -83,27 +83,27 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Malayo | ms-MY | Segoe UI |
 | Malayalam | ml-IN | Nirmala UI |
 | Maltés | mt-MT | Segoe UI |
-| Maorí | mi-NZ | Segoe UI |
-| Marathi | mr-IN | Nirmala UI |
+| Maori | mi-NZ | Segoe UI |
+| Maratí | mr-IN | Nirmala UI |
 | Mongol (cirílico) | mn-MN | Segoe UI |
 | Nepalí | ne-NP | Nirmala UI |
-| Noruego (Bokmål) | nb-NO | Segoe UI |
-| Noruego (Nynorsk) | nn-NO | Segoe UI |
+| Noruego (bokmal) | nb-NO | Segoe UI |
+| Noruego (nynorsk) | nn-NO | Segoe UI |
 | Odia | or-IN | Nirmala UI |
 | Persa | fa-IR | Segoe UI |
 | Polaco | pl-PL | Segoe UI |
 | Portugués (Brasil) | pt-BR | Segoe UI |
 | Portugués (Portugal) | pt-PT | Segoe UI |
-| Punyabí | pa-IN | Nirmala UI |
+| Punjabi | pa-IN | Nirmala UI |
 | Punyabí (árabe) | pa-Arab-PK | Segoe UI |
 | Quechua | quz-PE | Segoe UI |
 | Rumano | ro-RO | Segoe UI |
 | Ruso | ru-RU | Segoe UI |
 | Gaélico escocés | gd-GB | Segoe UI |
-| Serbio (cirílico, Bosnia-Herzegovina) | sr-Cyrl-BA | Segoe UI |
+| Serbio (cirílico, Bosnia y Herzegovina) | sr-Cyrl-BA | Segoe UI |
 | Serbio (cirílico, Serbia) | sr-Cyrl-CS | Segoe UI |
 | Serbio (latino) | sr-Latn-CS | Segoe UI |
-| Sesotho sa leboa | nso-ZA | Segoe UI |
+| Sotho septentrional | nso-ZA | Segoe UI |
 | Setsuana | tn-ZA | Segoe UI |
 | Sindhi (árabe) | sd-Arab-PK | Segoe UI |
 | Cingalés | si-LK | Nirmala UI |
@@ -113,7 +113,7 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 | Sueco | sv-SE | Segoe UI |
 | Tayiko (cirílico) | tg-Cyrl-TJ | Segoe UI |
 | Tamil | ta-IN | Nirmala UI |
-| Tártaro | tt-RU | Segoe UI |
+| Tatar | tt-RU | Segoe UI |
 | Telugu | te-IN | Nirmala UI |
 | Tailandés | th-TH | Leelawadee UI |
 | Tigriña | ti-ET | Ebrima |
@@ -131,5 +131,5 @@ En la siguiente tabla, la columna "Etiqueta de idioma" indica la [etiqueta de id
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Etiqueta de idioma BCP-47](https://tools.ietf.org/html/bcp47)
-* [Idiomas admitidos](../../publish/supported-languages.md)
+* [Etiqueta de idioma de BCP-47](https://tools.ietf.org/html/bcp47)
+* [Idiomas compatibles](../../publish/supported-languages.md)

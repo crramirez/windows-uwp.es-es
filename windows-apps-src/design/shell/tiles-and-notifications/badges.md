@@ -1,6 +1,6 @@
 ---
 Description: Aprende a usar iconos, distintivos, notificaciones del sistema y notificaciones para proporcionar puntos de entrada en la aplicación y mantener actualizados a los usuarios.
-title: Notificaciones para aplicaciones para UWP
+title: Notificaciones de distintivo para aplicaciones Windows
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
@@ -8,14 +8,14 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e0c3802f0b6163ad5f0e179d90148bae543aeab
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1d3aa9658e8a57a7993eb79d164b1e17ac23b9ac
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320849"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970880"
 ---
-# <a name="badge-notifications-for-uwp-apps"></a>Notificaciones para aplicaciones para UWP
+# <a name="badge-notifications-for-windows-apps"></a>Notificaciones de distintivo para aplicaciones Windows
 
  
 
@@ -34,8 +34,8 @@ Las notificaciones aparecen en el icono de barra de tareas de la aplicación y e
 
 <table>
     <tr>
-        <th>Valor</th>
-        <th>Insignia</th>
+        <th>Value</th>
+        <th>Distintivo</th>
         <th>XML</th>
     </tr>
     <tr>
@@ -55,7 +55,7 @@ En lugar de un número, una notificación puede mostrar un elemento de un conjun
 
 <table>
 <tr>
-    <th>Estado</th>
+    <th>Status</th>
     <th>Glifo</th>
     <th>XML</th>
 </tr>
@@ -65,7 +65,7 @@ En lugar de un número, una notificación puede mostrar un elemento de un conjun
     <td>`<badge value="none"/>`</td>
 </tr>
 <tr>
-    <td>actividad</td>
+    <td>activity</td>
     <td><img src="images/badges/badge-activity.png" alt="Glyph" /></td>
     <td>`<badge value="activity"/>`</td>
 </tr>
@@ -128,7 +128,7 @@ En lugar de un número, una notificación puede mostrar un elemento de un conjun
 
 ## <a name="create-a-badge"></a>Crear una notificación
 
-Estos ejemplos muestran cómo crear una actualización de notificaciones.
+En estos ejemplos se muestra cómo crear una actualización de distintivo.
 
 ### <a name="create-a-numeric-badge"></a>Crear una notificación numérica
 
@@ -194,9 +194,9 @@ private void clearBadge()
 }
 ````
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
-* [Ejemplo de notificaciones](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)<br/> Muestra cómo crear iconos dinámicos, enviar actualizaciones de notificación y mostrar notificaciones del sistema. 
+* [Muestra de notificaciones](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)<br/> Muestra cómo crear iconos dinámicos, enviar actualizaciones de notificación y mostrar notificaciones del sistema. 
 
 ## <a name="related-articles"></a>Artículos relacionados
 

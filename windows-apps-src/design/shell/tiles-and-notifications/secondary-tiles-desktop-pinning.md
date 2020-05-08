@@ -1,40 +1,40 @@
 ---
-Description: Las aplicaciones de escritorio de Windows pueden anclar iconos secundarios gracias al Puente de dispositivo de escritorio.
-title: Anclar iconos secundarios desde una aplicación de escritorio
+Description: Las aplicaciones de escritorio de Windows pueden anclar iconos secundarios gracias al puente de escritorio.
+title: Anclar iconos secundarios desde la aplicación de escritorio
 label: Pin secondary tiles from desktop application
 template: detail.hbs
 ms.date: 05/25/2017
 ms.topic: article
-keywords: windows 10, puente de dispositivo de escritorio, iconos secundarios, anclar, anclado, inicio rápido, muestra de código, ejemplo, secondarytile, aplicación de escritorio, win32, winforms, wpf
+keywords: Windows 10, puente de escritorio, iconos secundarios, PIN, anclaje, Inicio rápido, ejemplo de código, ejemplo, secondarytile, aplicación de escritorio, Win32, WinForms, WPF
 ms.localizationpriority: medium
-ms.openlocfilehash: cd6debb076aac4286c8cb9a33730ade4942b5030
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 7ddcd96eadbb6d2edbc3a72fa58ff3cc8931a09b
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209921"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730364"
 ---
-# <a name="pin-secondary-tiles-from-desktop-application"></a>Anclar iconos secundarios desde una aplicación de escritorio
+# <a name="pin-secondary-tiles-from-desktop-application"></a>Anclar iconos secundarios desde la aplicación de escritorio
 
 
-Gracias al [Puente de dispositivo de escritorio](https://developer.microsoft.com/windows/bridges/desktop), las aplicaciones de escritorio de Windows (como Win32, Windows Forms y WPF) pueden anclar iconos secundarios.
+Gracias al [puente de escritorio](https://developer.microsoft.com/windows/bridges/desktop), las aplicaciones de escritorio de Windows (como Win32, Windows Forms y WPF) pueden anclar iconos secundarios.
 
 ![Captura de pantalla de iconos secundarios](images/secondarytiles.png)
 
 > [!IMPORTANT]
-> **Requiere la actualización de otoño Creators Update**: debes utilizar SDK 16299 y estar ejecutando la compilación 16299 o posterior para anclar iconos secundarios desde las aplicaciones de Puente de dispositivo de escritorio.
+> **Requiere Fall Creators Update**: debe tener como destino el SDK 16299 y ejecutar la compilación 16299 o posterior para anclar los iconos secundarios de las aplicaciones de puente de escritorio.
 
-Agregar un icono secundario desde tu aplicación WPF o WinForms es muy similar a una aplicación para UWP pura. La única diferencia es que debes especificar el identificador de la ventana principal (HWND). Esto es porque al anclar un icono, Windows muestra un cuadro de diálogo modal que pide al usuario que confirme si quiere anclar el icono. Si la aplicación de escritorio no configura el objeto SecondaryTile con la ventana de propietario, Windows no sabe dónde se debe dibujar el cuadro de diálogo y se producirá un error en la operación.
+Agregar un icono secundario desde la aplicación de WPF o WinForms es muy similar a una aplicación UWP pura. La única diferencia es que debe especificar el identificador de ventana principal (HWND). Esto se debe a que al anclar un icono, Windows muestra un cuadro de diálogo modal que pide al usuario que confirme si desea anclar el icono. Si la aplicación de escritorio no configura el objeto SecondaryTile con la ventana propietaria, Windows no sabrá dónde dibujar el cuadro de diálogo y se producirá un error en la operación.
 
 
-## <a name="package-your-app-with-desktop-bridge"></a>Agregar tu aplicación con Puente de dispositivo de escritorio
+## <a name="package-your-app-with-desktop-bridge"></a>Empaquetar la aplicación con el puente de escritorio
 
-Si no has empaquetado tu aplicación con el Puente de dispositivo de escritorio, [debes hacerlo primero](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) para poder usar las API de UWP.
+Si no ha empaquetado la aplicación con el puente de escritorio, [primero debe hacerlo](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) antes de poder usar las api de Windows Runtime.
 
 
 ## <a name="enable-access-to-iinitializewithwindow-interface"></a>Habilitar el acceso a la interfaz IInitializeWithWindow
 
-Si tu aplicación está escrita en un lenguaje administrado, como C# o Visual Basic, declara la interfaz IInitializeWithWindow en el código de la aplicación con el atributo [ComImport](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute) y Guid, como se muestra en el siguiente ejemplo de C#. En este ejemplo se da por hecho que el archivo de código tiene una instrucción using para el espacio de nombres System.Runtime.InteropServices.
+Si la aplicación está escrita en un lenguaje administrado como C# o Visual Basic, declare la interfaz IInitializeWithWindow en el código de la aplicación con el atributo [ComImport](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute) y GUID, tal como se muestra en el siguiente ejemplo de C#. En este ejemplo se da por hecho que el archivo de código tiene una instrucción using para el espacio de nombres System.Runtime.InteropServices.
 
 ```csharp
 [ComImport]
@@ -46,12 +46,12 @@ public interface IInitializeWithWindow
 }
 ```
 
-Alternativamente, si estás usando C++, agrega una referencia al archivo de encabezado **shobjidl.h** en el código. Este archivo de encabezado contiene la declaración de la interfaz *IInitializeWithWindow*.
+Como alternativa, si usa C++, agregue una referencia al archivo de encabezado **shobjidl. h** en el código. Este archivo de encabezado contiene la declaración de la interfaz *IInitializeWithWindow*.
 
 
 ## <a name="initialize-the-secondary-tile"></a>Inicializar el icono secundario
 
-Inicializa un nuevo objeto de icono secundario exactamente como lo harías con una aplicación para UWP normal. Para obtener más información sobre la creación y anclaje de iconos secundarios, consulta [Anclar iconos secundarios](secondary-tiles-pinning.md).
+Inicialice un nuevo objeto de icono secundario exactamente igual que haría con una aplicación de UWP normal. Para obtener más información sobre la creación y el anclaje de iconos secundarios, consulte [anclar iconos secundarios](secondary-tiles-pinning.md).
 
 ```csharp
 // Initialize the tile with required arguments
@@ -66,7 +66,7 @@ SecondaryTile tile = new SecondaryTile(
 
 ## <a name="assign-the-window-handle"></a>Asignar el identificador de ventana
 
-Este es el paso clave para las aplicaciones de escritorio. Convertir el objeto en un objeto [IInitializeWithWindow](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow). Después, llama al método [IInitializeWithWindow.Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) y pasa el identificador de la ventana que quieras que sea la propietaria del cuadro de diálogo modal. El siguiente ejemplo de C# muestra cómo pasar el identificador de la ventana principal de la aplicación al método.
+Este es el paso clave para las aplicaciones de escritorio. Convierta el objeto en un objeto [IInitializeWithWindow](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow) . A continuación, llame al método [IInitializeWithWindow. Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) y pase el identificador de la ventana que desee que sea el propietario del cuadro de diálogo modal. En el siguiente ejemplo de C# se muestra cómo pasar el identificador de la ventana principal de la aplicación al método.
 
 ```csharp
 // Assign the window handle
@@ -77,7 +77,7 @@ initWindow.Initialize(System.Diagnostics.Process.GetCurrentProcess().MainWindowH
 
 ## <a name="pin-the-tile"></a>Anclar el icono
 
-Por último, solicita anclar el icono como lo harías con una aplicación para UWP normal.
+Por último, solicite el anclaje del icono como lo haría con una aplicación de UWP normal.
 
 ```csharp
 // Pin the tile
@@ -87,12 +87,12 @@ bool isPinned = await tile.RequestCreateAsync();
 ```
 
 
-## <a name="send-tile-notifications"></a>Enviar notificaciones de iconos
+## <a name="send-tile-notifications"></a>Enviar notificaciones de icono
 
 > [!IMPORTANT]
-> **Requiere la actualización de abril de 2018, versión 17134.81 o posterior**: debes ejecutar la versión 17134.81 o posterior para enviar notificaciones de icono o distintivo a ventanas secundarias desde aplicaciones del Puente de dispositivo de escritorio. Antes de esta actualización de mantenimiento .81, se producía una excepción 0x80070490 *Elemento no encontrado* al enviar notificaciones de icono o distintivo a iconos secundarios desde las aplicaciones del Puente de dispositivo de escritorio.
+> **Requiere la versión 17134,81 de abril de 2018 o posterior**: debe ejecutar la compilación 17134,81 o posterior para enviar notificaciones de icono o de distintivo a los mosaicos secundarios desde las aplicaciones de puente de escritorio. Antes de esta actualización de servicio. 81, se produciría una excepción 0x80070490 *elemento no encontrado* al enviar notificaciones de icono o distintivo a mosaicos secundarios desde aplicaciones de puente de escritorio.
 
-Enviar notificaciones de iconos o distintivos es los mismo que las aplicaciones para UWP. Consulta [Enviar una notificación de icono local](sending-a-local-tile-notification.md) para empezar.
+El envío de notificaciones de icono o de distintivo es igual que las aplicaciones de UWP. Consulte [envío de una notificación de icono local](sending-a-local-tile-notification.md) para comenzar.
 
 
 ## <a name="resources"></a>Recursos

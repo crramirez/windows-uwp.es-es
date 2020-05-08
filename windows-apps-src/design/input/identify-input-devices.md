@@ -1,5 +1,5 @@
 ---
-Description: Identifica los dispositivos de entrada que se conectan a un dispositivo de la Plataforma universal de Windows (UWP) e identifica sus capacidades y atributos.
+Description: Identifique los dispositivos de entrada conectados a un dispositivo de aplicación de Windows e identifique sus capacidades y atributos.
 title: Identificar dispositivos de entrada
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
@@ -8,26 +8,26 @@ keywords: dispositivo, digitalizador, entrada, interacción
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b2a17d1f4664326cb54d9c53d828eb372ef93fe4
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 792b2f71408928de0278dd0c623f13923a2165a8
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257893"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970030"
 ---
 # <a name="identify-input-devices"></a>Identificar dispositivos de entrada
 
 
-Identifica los dispositivos de entrada que se conectan a un dispositivo de la Plataforma universal de Windows (UWP) e identifica sus capacidades y atributos.
+Identifique los dispositivos de entrada conectados a un dispositivo de aplicación de Windows e identifique sus capacidades y atributos.
 
-> **API importantes**: [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
+> **API importantes**: [**Windows. Devices. Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows. UI. Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows. UI. Xaml. Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
 
 ## <a name="retrieve-mouse-properties"></a>Recuperar las propiedades del mouse
 
 
 El espacio de nombres [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) contiene la clase [**MouseCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseCapabilities) que se usa para recuperar las propiedades expuestas por uno o varios dispositivos mouse conectados. Solo es necesario crear un nuevo objeto **MouseCapabilities** y obtener las propiedades que te interesan.
 
-**Nota**  los valores devueltos por las propiedades que se describen aquí se basan en todos los ratones detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un mouse admite una capacidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un mouse.
+**Tenga en cuenta**  que los valores devueltos por las propiedades que se describen aquí se basan en todos los ratones detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un mouse admite una capacidad específica y las propiedades numéricas devuelven el valor máximo expuesto por un mouse.
 
  
 
@@ -65,7 +65,7 @@ private void GetKeyboardProperties()
 
 El espacio de nombres [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) contiene la clase [**TouchCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.TouchCapabilities) que se usa para recuperar si hay algún digitalizador táctil conectado. Solo es necesario crear un nuevo objeto **TouchCapabilities** y obtener las propiedades que te interesan.
 
-**Nota**  los valores devueltos por las propiedades que se describen aquí se basan en todos los digitalizadores táctiles detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un digitalizador admite una funcionalidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un digitalizador.
+**Tenga en cuenta**  que los valores devueltos por las propiedades que se describen aquí se basan en todos los digitalizadores táctiles detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un digitalizador admite una funcionalidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un digitalizador.
 
  
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 El espacio de nombres [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) contiene la clase [**PointerDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) que se usa para recuperar si hay dispositivos detectados compatibles con la entrada de puntero (táctil, teclado táctil, mouse o pluma). Solo tienes que crear un nuevo objeto **PointerDevice** y obtener las propiedades que te interesan.
 
-**Nota**  los valores devueltos por las propiedades que se describen aquí se basan en todos los dispositivos de puntero detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un dispositivo admite una funcionalidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un dispositivo de puntero.
+**Tenga en cuenta**  que los valores devueltos por las propiedades que se describen aquí se basan en todos los dispositivos de puntero detectados: las propiedades booleanas devuelven un valor distinto de cero si al menos un dispositivo admite una funcionalidad específica, y las propiedades numéricas devuelven el valor máximo expuesto por un dispositivo de puntero.
 
 En el código siguiente se usa una tabla para mostrar las propiedades y los valores correspondientes a cada dispositivo señalador.
 
@@ -176,18 +176,12 @@ private void GetPointerDevices()
 
 ## <a name="related-articles"></a>Artículos relacionados
 
+### <a name="samples"></a>Ejemplos
 
-**Ejemplos**
-* [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Ejemplo de entrada de baja latencia](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Ejemplo de entrada de latencia baja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [Ejemplo de modo de interacción del usuario](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
 
-**Ejemplos de archivo**
-* [Entrada: ejemplo de funcionalidades del dispositivo](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
- 
+### <a name="archive-samples"></a>Ejemplos de archivo
 
- 
-
-
-
-
+- [Entrada: muestra de funcionalidades del dispositivo](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))

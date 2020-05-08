@@ -1,5 +1,5 @@
 ---
-Description: Este artículo es una descripción general de los conceptos y las tecnologías relacionados con escenarios de accesibilidad para aplicaciones para la Plataforma universal de Windows (UWP).
+Description: Este artículo es una introducción a los conceptos y tecnologías relacionados con escenarios de accesibilidad para aplicaciones de Windows.
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: Información general sobre accesibilidad
 label: Accessibility overview
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 22f614d65728c0f5121cadfdcbfb58a7b817a47d
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: 386ea9a5ea9b66b0756963da10f72c3dbed53ff9
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521286"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969660"
 ---
 # <a name="accessibility-overview"></a>Información general sobre accesibilidad
 
-Este artículo es una descripción general de los conceptos y las tecnologías relacionados con escenarios de accesibilidad para aplicaciones para la Plataforma universal de Windows (UWP).
+Este artículo es una introducción a los conceptos y tecnologías relacionados con escenarios de accesibilidad para aplicaciones de Windows.
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility/player]
 
@@ -83,7 +83,7 @@ Existen muchas otras propiedades de automatización disponibles (incluidas las p
 <span id="keyboard_support"/>
 <span id="KEYBOARD_SUPPORT"/>
 
-## <a name="keyboard-support"></a>Compatibilidad de teclado
+## <a name="keyboard-support"></a>Compatibilidad con el teclado
 
 Para proporcionar una buena compatibilidad de teclado, debes asegurarte de que cada parte de tu aplicación pueda usarse con un teclado. Si tu aplicación usa principalmente los controles estándar y no usa ningún control personalizado, ya tienes la mayor parte del camino recorrido. El modelo de control básico de XAML proporciona compatibilidad de teclado integrada que incluye navegación mediante tabulación, entrada de texto y compatibilidad específica del control. Los elementos que funcionan como contenedores de diseño (como los paneles) usan el orden de diseño para establecer un orden de tabulación predeterminado. Ese orden suele ser el orden de tabulación correcto que se debe usar para una representación accesible de la interfaz de usuario. Si usas los controles [**ListBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox) y [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) para mostrar los datos, estos proporcionan navegación integrada mediante teclas de dirección. O bien, si usas un control [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button), este ya controla la tecla Entrar o la barra espaciadora para la activación de botones.
 
@@ -184,7 +184,7 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 Para obtener más información sobre las declaraciones de accesibilidad y la publicación de la aplicación, consulta [Accesibilidad en la Tienda](accessibility-in-the-store.md).
 
 > [!NOTE]
-> Declarar que la aplicación es accesible solo es relevante para la Microsoft Store.
+> Declarar la aplicación como accesible solo es pertinente para el Microsoft Store.
 
 <span id="Assistive_technology_support_in_custom_controls"/>
 <span id="assistive_technology_support_in_custom_controls"/>
@@ -192,7 +192,7 @@ Para obtener más información sobre las declaraciones de accesibilidad y la pub
 
 ## <a name="assistive-technology-support-in-custom-controls"></a>Compatibilidad con tecnologías de asistencia en controles personalizados
 
-Cuando crees un control personalizado, te recomendamos que también implementes o extiendas una o varias subclases de [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) para proporcionar compatibilidad con accesibilidad. En algunos casos, siempre y cuando uses la misma clase del mismo nivel que usó la clase de control base, la compatibilidad de la automatización con tu clase derivada es adecuada en un nivel básico. De todos modos, debes probarlo. Y recuerda que la implementación de una clase del mismo nivel es un procedimiento recomendado para que esta pueda notificar correctamente el nombre de clase de tu nueva clase de control. La implementación de la automatización del mismo nivel personalizada conlleva algunos pasos. Para obtener más información, consulta [Personalizar sistemas de automatización del mismo nivel](custom-automation-peers.md).
+Cuando crees un control personalizado, te recomendamos que también implementes o extiendas una o varias subclases de [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) para proporcionar compatibilidad con accesibilidad. En algunos casos, siempre y cuando uses la misma clase del mismo nivel que usó la clase de control base, la compatibilidad de la automatización con tu clase derivada es adecuada en un nivel básico. De todos modos, debes probarlo. Y recuerda que la implementación de una clase del mismo nivel es un procedimiento recomendado para que esta pueda notificar correctamente el nombre de clase de tu nueva clase de control. La implementación de la automatización del mismo nivel personalizada conlleva algunos pasos. Para obtener más información, vea [elementos de automatización del mismo nivel](custom-automation-peers.md).
 
 <span id="Assistive_technology_support_in_apps_that_support_XAML___Microsoft_DirectX_interop"/>
 <span id="assistive_technology_support_in_apps_that_support_xaml___microsoft_directx_interop"/>
@@ -205,7 +205,7 @@ No se puede acceder de manera predeterminada al contenido de Microsoft DirectX h
 ## <a name="related-topics"></a>Temas relacionados
 
 * [**Windows. UI. Xaml. Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
-* [Diseño para accesibilidad](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
+* [Diseño de accesibilidad](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
 * [Ejemplo de accesibilidad XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
 * [Accesibilidad](accessibility.md)
 * [Introducción a narrador](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

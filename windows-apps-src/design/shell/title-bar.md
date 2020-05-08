@@ -1,45 +1,45 @@
 ---
-description: Personalizar la barra de título de una aplicación de escritorio para que coincida con la personalidad de la aplicación.
+description: Personalice la barra de título de una aplicación de escritorio para que coincida con la personalidad de la aplicación.
 title: Personalización de la barra de título
 template: detail.hbs
 ms.date: 10/10/2017
 ms.topic: article
-keywords: windows 10, uwp, barra de título
+keywords: Windows 10, UWP, barra de título
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 323b9b80a7d0087a07faf34d598f51d643e1324c
-ms.sourcegitcommit: 5687e5340f8d78da95c3ac28304d1c9b8960c47d
+ms.openlocfilehash: 47db0abfa96ae572c20d6bfd7496d7b5d168ab50
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70930338"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968420"
 ---
 # <a name="title-bar-customization"></a>Personalización de la barra de título
 
 
 
-Cuando la aplicación se ejecuta en una ventana del escritorio, puedes personalizar las barras de título para que coincidan con la personalidad de tu aplicación. La personalización de la barra de título de la API te permite especificar colores para elementos de la barra de título, o ampliar el contenido de tu aplicación en el área de la barra de título y tomar el control completo de la misma.
+Cuando la aplicación se ejecuta en una ventana de escritorio, puede personalizar las barras de título para que coincidan con la personalidad de la aplicación. Las API de personalización de la barra de título permiten especificar los colores de los elementos de la barra de título, o ampliar el contenido de la aplicación en el área de la barra de título y tomar el control total del mismo.
 
-> **API importantes**: [Propiedad ApplicationView. TitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [clase ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), clase [CoreApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
+> **API importantes**: [propiedad ApplicationView. TitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview), [clase ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), [clase CoreApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar)
 
-## <a name="how-much-to-customize-the-title-bar"></a>Cuánto se puede personalizar la barra de título
+## <a name="how-much-to-customize-the-title-bar"></a>La cantidad de personalización de la barra de título
 
-Hay dos niveles de personalización que puedes aplicar a la barra de título.
+Hay dos niveles de personalización que se pueden aplicar a la barra de título.
 
-Para la personalización de color sencilla, puedes establecer las propiedades [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar) para especificar los colores que quiere1s usar para elementos de la barra de título. En este caso, el sistema conserva la responsabilidad para todos los demás aspectos de la barra de título, como el dibujo del nombre de la aplicación y la definición de áreas arrastrables.
+Para la personalización de color simple, puede establecer las propiedades de [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar) para especificar los colores que desea utilizar para los elementos de la barra de título. En este caso, el sistema conserva la responsabilidad de todos los demás aspectos de la barra de título, como dibujar el título de la aplicación y definir áreas arrastrables.
 
-La otra opción es ocultar la barra de título predeterminada y reemplazarla por su propio contenido XAML. Por ejemplo, puedes colocar texto, botones o menús personalizados en el área de la barra de título. También deberás usar esta opción para ampliar un fondo [acrílico](../style/acrylic.md) en el área de la barra de título.
+La otra opción consiste en ocultar la barra de título predeterminada y reemplazarla por su propio contenido XAML. Por ejemplo, puede colocar texto, botones o menús personalizados en el área de la barra de título. También tendrá que usar esta opción para extender un fondo [acrílico](../style/acrylic.md) en el área de la barra de título.
 
-Cuando eliges una personalización completa, eres responsable de colocar contenido en el área de la barra de título y puedes definir tu propia región arrastrable. Los botones Atrás, Cerrar, Minimizar y Maximizar del sistema todavía están disponibles y los controla el sistema, pero elementos como el título de la aplicación no lo están. Deberás crear esos elementos tú mismo según las necesidades de tu aplicación.
+Al optar por la personalización completa, usted es responsable de colocar el contenido en el área de la barra de título y puede definir su propia región de arrastre. Los botones atrás, cerrar, minimizar y maximizar del sistema siguen estando disponibles y administrados por el sistema, pero no los elementos como el título de la aplicación. Tendrá que crear esos elementos según sea necesario para la aplicación.
 
 > [!NOTE]
-> La personalización de color sencilla está disponible para aplicaciones para UWP con HTML, XAML y DirectX. La personalización completa solo está disponible para aplicaciones para UWP con XAML.
+> La personalización de color simple está disponible para las aplicaciones de Windows mediante XAML, DirectX y HTML. La personalización completa solo está disponible para las aplicaciones de Windows que usan XAML.
 
-## <a name="simple-color-customization"></a>Personalización de color sencilla
+## <a name="simple-color-customization"></a>Personalización de color simple
 
-Si solo quieres personalizar los colores de la barra de título y no hacer nada demasiado decorativo (por ejemplo, colocar pestañas en la barra de título), puedes establecer las propiedades de color en la [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar) para la ventana de la aplicación.
+Si solo desea personalizar los colores de la barra de título y no hacer nada más sofisticado (por ejemplo, colocar las pestañas en la barra de título), puede establecer las propiedades de color en el [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar) de la ventana de la aplicación.
 
-En este ejemplo se muestra cómo obtener una instancia de ApplicationViewTitleBar y cómo establecer sus propiedades de color.
+En este ejemplo se muestra cómo obtener una instancia de ApplicationViewTitleBar y establecer sus propiedades de color.
 
 ```csharp
 // using Windows.UI.ViewManagement;
@@ -64,27 +64,27 @@ titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.SeaGreen;
 ```
 
 > [!NOTE]
-> Este código se puede colocar en el método [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) de tu aplicación (_App.xaml.cs_), después de la llamada a [Window.Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate) o en la primera página de tu aplicación.
+> Este código se puede colocar en el método [onlaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) de la aplicación (_app.Xaml.CS_), después de la llamada a [window. Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate)o en la primera página de la aplicación.
 
 > [!TIP]
-> El kit de herramientas de Comunidad Windows proporciona extensiones que te permiten establecer estas propiedades de color en XAML. Para obtener más información, consulta la [documentación del kit de herramientas de Comunidad Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/extensions/viewextensions).
+> El kit de herramientas de la comunidad de Windows proporciona extensiones que permiten establecer estas propiedades de color en XAML. Para obtener más información, consulte la [documentación del kit de herramientas](https://docs.microsoft.com/windows/uwpcommunitytoolkit/extensions/viewextensions)de la comunidad de Windows.
 
-Hay algunas cosas que debes tener en cuenta al establecer los colores de la barra de título:
+Hay algunos aspectos que se deben tener en cuenta al establecer los colores de la barra de título:
 
-- El color de fondo del botón no se aplica a los de estados de presionado y mantener el mouse del botón Cerrar. El botón Cerrar siempre usa el color definido por el sistema para esos estados.
-- Las propiedades de color del botón se aplican al botón Atrás del sistema cuando se usa. ([Consulta Historial de navegación y navegación hacia atrás](../basics/navigation-history-and-backwards-navigation.md).)
-- El establecimiento de una propiedad de color en **null** lo restablece al color del sistema predeterminado.
-- No se pueden establecer colores transparentes. Se ignora el canal alfa del color.
+- El color de fondo del botón no se aplica al estado de mantener presionado del botón Cerrar. El botón Cerrar siempre usa el color definido por el sistema para esos Estados.
+- Las propiedades de color del botón se aplican al botón atrás del sistema cuando se usa. ([Consulte el historial de navegación y la navegación hacia atrás](../basics/navigation-history-and-backwards-navigation.md)).
+- Al establecer una propiedad de color en **null** , se restablece el color predeterminado del sistema.
+- No se pueden establecer colores transparentes. Se omite el canal alfa del color.
 
-Windows ofrece a un usuario la opción de aplicar su [color de énfasis](https://docs.microsoft.com/windows/uwp/style/color#accent-color) seleccionado a la barra de título. Si estableces cualquier color de la barra de título, te recomendamos que establezcas todos los colores de manera explícita. Esto garantiza que no hay ninguna combinación de colores no intencionada que se produzca debido a la configuración de color definida por el usuario.
+Windows ofrece a los usuarios la opción de aplicar el [color de énfasis](https://docs.microsoft.com/windows/uwp/style/color#accent-color) seleccionado a la barra de título. Si establece un color de barra de título, se recomienda establecer explícitamente todos los colores. Esto garantiza que no hay combinaciones de colores no deseadas que se produzcan debido a la configuración de color definida por el usuario.
 
 ## <a name="full-customization"></a>Personalización completa
 
-Cuando eliges la personalización de la barra de título completa, el área de cliente de tu aplicación se amplía para cubrir toda la ventana, incluida el área de la barra de título. Eres responsable del dibujo y del control de entrada para toda la ventana, excepto los botones de título, que se superponen encima del lienzo de la aplicación.
+Al participar en la personalización de la barra de título completa, el área cliente de la aplicación se amplía para abarcar toda la ventana, incluido el área de la barra de título. El usuario es responsable del dibujo y del control de entrada de toda la ventana excepto de los botones de título, que están superpuestos en la parte superior del lienzo de la aplicación.
 
-Para ocultar la barra de título predeterminada y ampliar el contenido en el área de la barra de título, establece la propiedad [CoreApplicationViewTitleBar.ExtendViewIntoTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar) en **true**.
+Para ocultar la barra de título predeterminada y extender el contenido en el área de la barra de título, establezca la propiedad [CoreApplicationViewTitleBar. ExtendViewIntoTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar) en **true**.
 
-Este ejemplo muestra cómo obtener el valor de CoreApplicationViewTitleBar y establecer la propiedad ExtendViewIntoTitleBar en **true**. Esto se puede realizar en el método [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) de tu aplicación (_App.xaml.cs_) o en la primera página de tu aplicación.
+En este ejemplo se muestra cómo obtener CoreApplicationViewTitleBar y establecer la propiedad ExtendViewIntoTitleBar en **true**. Esto puede hacerse en el método [onlaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) de la aplicación (_app.Xaml.CS_) o en la primera página de la aplicación.
 
 ```csharp
 // using Windows.ApplicationModel.Core;
@@ -95,13 +95,18 @@ coreTitleBar.ExtendViewIntoTitleBar = true;
 ```
 
 > [!TIP]
-> Esta configuración se mantiene cuando tu app se cierra y se reinicia. En Visual Studio, si estableces ExtendViewIntoTitleBar **true**y, a continuación, quieres volver a la configuración predeterminada, debe establecerla explícitamente en **false** y ejecutar la app para sobrescribir la configuración persistente.
+> Esta configuración se conserva cuando la aplicación se cierra y se reinicia. En Visual Studio, si establece ExtendViewIntoTitleBar en **true**y después desea volver al valor predeterminado, debe establecerlo explícitamente en **false** y ejecutar la aplicación para sobrescribir la configuración persistente.
 
 ### <a name="draggable-regions"></a>Regiones arrastrables
 
-La región arrastable de la barra de título define el lugar donde el usuario puede hacer clic y arrastrar para desplazar la ventana (en lugar de simplemente arrastrar contenido dentro del lienzo de la aplicación). La región arrastrable se especifica mediante una llamada al método [Window.SetTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.settitlebar) y el paso de un UIElement que define la región arrastable. (El UIElement a menudo es un panel que contiene otros elementos.)
+La región arrastrable de la barra de título define el lugar en el que el usuario puede hacer clic y arrastrar para mover la ventana (en lugar de arrastrar simplemente el contenido dentro del lienzo de la aplicación). Especifique la región arrastrable llamando al método [window. SetTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.settitlebar) y pasando un UIElement que defina la región arrastrable. (El UIElement suele ser un panel que contiene otros elementos).
 
-Esta es la manera de establecer una cuadrícula de contenido como la región de la barra de título arrastrable. Este código se coloca en el XAML y código subyacente para la primera página de tu aplicación. Consulta la sección [Ejemplo de personalización completa](./title-bar.md#full-customization-example) para obtener el código completo.
+Aquí se muestra cómo establecer una cuadrícula de contenido como la región de la barra de título que se va a arrastrar. Este código va en el código XAML y en el código subyacente de la primera página de la aplicación. Vea la sección [ejemplo de personalización completa](./title-bar.md#full-customization-example) para ver el código completo.
+
+
+> [!IMPORTANT]
+> De forma predeterminada, algunos elementos de la interfaz de usuario, como Grid, no participan en la prueba de posicionamiento cuando no tienen un conjunto de fondo.
+> En la cuadrícula `AppTitleBar` del ejemplo siguiente para permitir el arrastre, por lo tanto, es necesario establecer el fondo `Transparent`en.
 
 ```xaml
 <Grid x:Name="AppTitleBar" Background="Transparent">
@@ -141,36 +146,36 @@ private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sende
 }
 ```
 
-El UIElement (`AppTitleBar`) forma parte del XAML de tu aplicación. Puedes declarar y establecer la barra de título en una página raíz que no cambia, o declarar y establecer una región de la barra de título en cada página a la que puede navegar tu aplicación. Si la estableces en cada página, asegúrate de que la región arrastrable se mantienen coherente cuando los usuarios navegan por tu aplicación.
+UIElement (`AppTitleBar`) forma parte del XAML de la aplicación. Puede declarar y establecer la barra de título en una página raíz que no cambie, o bien declarar y establecer un área de la barra de título en cada página a la que pueda navegar su aplicación. Si lo establece en cada página, debe asegurarse de que la región arrastrable permanece coherente cuando un usuario navega por la aplicación.
 
-Puedes llamar a SetTitleBar para cambiar a un nuevo elemento de barra de título mientras se ejecuta tu aplicación. También puedes pasar **null** como el parámetro de SetTitleBar para revertir al comportamiento de arrastre predeterminado. (Consulta "Región arrastrable predeterminada" para obtener más información).
+Puede llamar a SetTitleBar para cambiar a un nuevo elemento de la barra de título mientras la aplicación se está ejecutando. También puede pasar **null** como parámetro a SetTitleBar para revertir al comportamiento de arrastre predeterminado. (Consulte "región de arrastre predeterminada" para obtener más información).
 
 > [!IMPORTANT]
-> La región arrastrable que especifiques debe poder someterse a la prueba de posicionamiento lo que significa que, para algunos elementos, es posible que tengas que establecer un pincel de fondo transparente. Consulta los comentarios sobre [VisualTreeHelper.FindElementsInHostCoordinates](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.visualtreehelper.findelementsinhostcoordinates) para obtener más información.
+> La región que se puede arrastrar que especifique debe ser una prueba de posicionamiento, lo que significa que, para algunos elementos, es posible que tenga que establecer un pincel de fondo transparente. Vea los comentarios en [VisualTreeHelper. FindElementsInHostCoordinates](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.visualtreehelper.findelementsinhostcoordinates) para obtener más información.
 >
->Por ejemplo, si defines una cuadrícula como la región arrastable, establece `Background="Transparent"` para que sea arrastrable.
+>Por ejemplo, si define una cuadrícula como su región de arrastre, establezca `Background="Transparent"` para que se pueda arrastrar.
 >
->Esta cuadrícula no es arrastrable (pero sí lo son los elementos visibles que se encuentran dentro): `<Grid x:Name="AppTitleBar">`.
+>Esta cuadrícula no es arrastrable (pero los elementos visibles dentro de ella son `<Grid x:Name="AppTitleBar">`):.
 >
->Esta cuadrícula tiene el mismo aspecto, pero la cuadrícula completa es arrastable: `<Grid x:Name="AppTitleBar" Background="Transparent">`.
+>Esta cuadrícula tiene el mismo aspecto, pero se arrastra toda la cuadrícula: `<Grid x:Name="AppTitleBar" Background="Transparent">`.
 
-#### <a name="default-draggable-region"></a>Región arrastrable predeterminada
+#### <a name="default-draggable-region"></a>Región de arrastre predeterminada
 
-Si no especificas una región desplazable, un rectángulo que tenga el ancho de la ventana, el alto de los botones de subtítulo y esté colocado en el borde superior de la ventana se establece como la región arrastrable predeterminada.
+Si no se especifica una región arrastrable, un rectángulo que sea el ancho de la ventana, el alto de los botones de título y colocado a lo largo del borde superior de la ventana se establecerá como la región de arrastre predeterminada.
 
-Si defines una región arrastable, el sistema reduce el tamaño de la región arrastrable predeterminada a un área pequeña del tamaño de un botón de título, situado a la izquierda de los botones de título (o a la derecha si los botones de título se encuentran en el lado izquierdo de la ventana). Esto garantiza que siempre es un área coherente que el usuario puede arrastrar.
+Si define una región arrastrable, el sistema reduce la región arrastrable predeterminada hacia abajo hasta un área pequeña, el tamaño de un botón de título, situado a la izquierda de los botones de título (o a la derecha si los botones de título están en el lado izquierdo de la ventana). Esto garantiza que siempre haya un área coherente que el usuario pueda arrastrar.
 
 ### <a name="system-caption-buttons"></a>Botones de título del sistema
 
-El sistema reserva la esquina superior izquierda o superior derecha de la ventana de la aplicación para los botones de título del sistema (Atrás, Minimizar, Maximizar, Cerrar). El sistema mantiene el control del área de control de título para garantizar que se proporciona la funcionalidad mínima para arrastrar, minimizar, maximizar y cerrar la ventana. El sistema dibuja el botón Cerrar en la parte superior derecha para los idiomas que se escriben de izquierda a derecha y en la parte superior izquierda para los idiomas que se escriben de derecha a izquierda.
+El sistema reserva la esquina superior izquierda o superior derecha de la ventana de la aplicación para los botones de título del sistema (atrás, minimizar, maximizar y cerrar). El sistema conserva el control del área de control de títulos para garantizar que se proporciona la funcionalidad mínima para arrastrar, minimizar, maximizar y cerrar la ventana. El sistema dibuja el botón cerrar en la parte superior derecha para los idiomas de izquierda a derecha y en la parte superior izquierda para los idiomas que se van de derecha a izquierda.
 
-Las dimensiones y la posición del área de control de título se comunican mediante la clase CoreApplicationViewTitleBar, de modo que puede tenerlas en cuenta en el diseño de la interfaz de usuario de la barra del título. El ancho de la región reservada en cada lado lo proporcionan las propiedades [SystemOverlayLeftInset](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.SystemOverlayLeftInset) o [SystemOverlayRightInset](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.SystemOverlayRightInset) y su alto lo determina la propiedad [Height](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.Height).
+La clase CoreApplicationViewTitleBar comunica las dimensiones y la posición del área de control Caption para que se pueda tener en cuenta en el diseño de la interfaz de usuario de la barra de título. El ancho de la región reservada en cada lado lo proporcionan las propiedades [SystemOverlayLeftInset](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.SystemOverlayLeftInset) o [SystemOverlayRightInset](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.SystemOverlayRightInset) , y el alto lo proporciona la propiedad [height](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.Height) .
 
-Puedes dibujar contenido debajo de la superficie de control de subtítulo definida por estas propiedades, como el fondo de la aplicación, pero no debes colocar ninguna interfaz de usuario con la que esperes que el usuario puede interactuar. No recibe ninguna entrada porque la entrada para los controles de título se controlada por el sistema.
+Puede dibujar contenido debajo del área de control de título definida por estas propiedades, como el fondo de la aplicación, pero no debe colocar ninguna interfaz de usuario con la que espera que el usuario pueda interactuar. No recibe ninguna entrada porque el sistema controla la entrada para los controles de título.
 
-Puedes controlar el evento [LayoutMetricsChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.LayoutMetricsChanged) para responder a cambios en el tamaño de los botones de título. Por ejemplo, esto puede suceder cuando se muestra o se oculta el botón Atrás del sistema. Controle este evento para comprobar y actualizar la posición de los elementos de la interfaz de usuario que dependen del tamaño de la barra de título.
+Puede controlar el evento [LayoutMetricsChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.LayoutMetricsChanged) para responder a los cambios en el tamaño de los botones de título. Por ejemplo, esto puede ocurrir cuando se muestra u oculta el botón atrás del sistema. Controle este evento para comprobar y actualizar la posición de los elementos de la interfaz de usuario que dependen del tamaño de la barra de título.
 
-En este ejemplo se muestra cómo ajustar el diseño de la barra de título para tener en cuenta cambios como el botón Atrás del sistema que se muestran u ocultan. `AppTitleBar`, `LeftPaddingColumn` y`RightPaddingColumn` se declaran en el código XAML mostrado previamente.
+En este ejemplo se muestra cómo ajustar el diseño de la barra de título para tener en cuenta los cambios como el botón atrás del sistema que se muestra u oculta. `AppTitleBar`, `LeftPaddingColumn`y `RightPaddingColumn` se declaran en el código XAML mostrado previamente.
 
 ```csharp
 private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sender, object args)
@@ -193,11 +198,11 @@ private void UpdateTitleBarLayout(CoreApplicationViewTitleBar coreTitleBar)
 
 ### <a name="interactive-content"></a>Contenido interactivo
 
-Puedes colocar controles interactivos, como botones, menús o un cuadro de búsqueda en la parte superior de la app para que aparezcan en la barra de título. Sin embargo, hay algunas reglas que debe seguir para asegurarse de que los elementos interactivos reciban datos proporcionados por el usuario.
-- Debes llamar a SetTitleBar para definir un área como la región de la barra de título arrastrable. Si no lo haces, el sistema establece la región arrastrable predeterminada en la parte superior de la página. El sistema controlará entonces toda la entrada de usuario para esta área y evitará que la entrada llegue a los controles.
-- Coloca los controles interactivos en la parte superior de la región arrastrable definida por la llamada en SetTitleBar (con un orden z superior). No conviertas tus controles interactivos en elementos secundarios del UIElement pasado a SetTitleBar. Cuando pases un elemento a SetTitleBar, el sistema lo trata como la barra de título del sistema y controla toda la entrada de puntero para ese elemento.
+Puede colocar controles interactivos, como botones, menús o un cuadro de búsqueda, en la parte superior de la aplicación para que aparezcan en la barra de título. Sin embargo, hay algunas reglas que debe seguir para asegurarse de que los elementos interactivos reciban datos proporcionados por el usuario.
+- Debe llamar a SetTitleBar para definir un área como la región de la barra de título que se puede arrastrar. Si no lo hace, el sistema establece la región de arrastre predeterminada en la parte superior de la página. A continuación, el sistema administrará todos los datos proporcionados por el usuario en esta área e impedirá que los datos lleguen a los controles.
+- Coloque los controles interactivos en la parte superior de la región arrastrable definida por la llamada a SetTitleBar (con un orden z superior). No convierta los controles interactivos en los elementos secundarios del UIElement pasado a SetTitleBar. Después de pasar un elemento a SetTitleBar, el sistema lo trata como la barra de título del sistema y controla toda la entrada de puntero a ese elemento.
 
-Aquí, el elemento `TitleBarButton` tiene un orden Z superior a `AppTitleBar`, de modo que recibe la entrada del usuario.
+Aquí, el `TitleBarButton` elemento tiene un orden z superior a `AppTitleBar`, por lo que recibe la entrada del usuario.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -233,25 +238,25 @@ Aquí, el elemento `TitleBarButton` tiene un orden Z superior a `AppTitleBar`, d
 
 ### <a name="transparency-in-caption-buttons"></a>Transparencia en los botones de título
 
-Al establecer ExtendViewIntoTitleBar en **true**, puedes hacer transparente el fondo de los botones de título para que se muestre el fondo de la aplicación. Normalmente, estableces el fondo en [Colors.Transparent](https://docs.microsoft.com/uwp/api/windows.ui.colors.Transparent) para lograr una transparencia completa. Para una transparencia parcial, establece el canal alfa para el valor de [Color](https://docs.microsoft.com/uwp/api/windows.ui.color) en el que estableces la propiedad.
+Si establece ExtendViewIntoTitleBar en **true**, puede hacer que el fondo de los botones de título sea transparente para que el fondo de la aplicación se muestre. Normalmente se establece el fondo en [colors. Transparent](https://docs.microsoft.com/uwp/api/windows.ui.colors.Transparent) para una transparencia completa. Para una transparencia parcial, establezca el canal alfa del [color](https://docs.microsoft.com/uwp/api/windows.ui.color) en el que establece la propiedad.
 
-Estas propiedades ApplicationViewTitleBar pueden ser transparentes:
+Estas propiedades de ApplicationViewTitleBar pueden ser transparentes:
 
 - ButtonBackgroundColor
 - ButtonHoverBackgroundColor
 - ButtonPressedBackgroundColor
 - ButtonInactiveBackgroundColor
 
-El color de fondo del botón no se aplica a los de estados de presionado y mantener el mouse del botón Cerrar. El botón Cerrar siempre usa el color definido por el sistema para esos estados.
+El color de fondo del botón no se aplica al estado de mantener presionado del botón Cerrar. El botón Cerrar siempre usa el color definido por el sistema para esos Estados.
 
-Todas las demás propiedades de color seguirán ignorando el canal alfa. Si ExtendViewIntoTitleBar se establece en **false**, siempre se ignora el canal alfa para todas las propiedades de color ApplicationViewTitleBar.
+Todas las demás propiedades de color seguirán ignorando el canal alfa. Si ExtendViewIntoTitleBar se establece en **false**, el canal alfa siempre se omite para todas las propiedades de color ApplicationViewTitleBar.
 
-### <a name="full-screen-and-tablet-mode"></a>Pantalla completa y modo tableta
+### <a name="full-screen-and-tablet-mode"></a>Modo de pantalla completa y tableta
 
-Cuando la app se ejecuta en _pantalla completa_ o _modo tableta_, el sistema oculta la barra de título y los botones de control de título. Sin embargo, el usuario puede invocar la barra de título para que se muestre como una superposición sobre la interfaz de usuario de la aplicación.
-Puedes controlar el evento [CoreApplicationViewTitleBar.IsVisibleChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.IsVisibleChanged) para recibir notificaciones cuando se oculte o se invoque la barra de título, o mostrar u ocultar el contenido de la barra de título personalizado según sea necesario.
+Cuando la aplicación se ejecuta en el modo de _pantalla completa_ o de _Tablet PC_, el sistema oculta los botones de control de la barra de título y del título. Sin embargo, el usuario puede invocar la barra de título para que se muestre como una superposición encima de la interfaz de usuario de la aplicación.
+Puede controlar el evento [CoreApplicationViewTitleBar. IsVisibleChanged](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.IsVisibleChanged) para recibir una notificación cuando la barra de título se oculte o se invoque, y mostrar u ocultar el contenido de la barra de título personalizada según sea necesario.
 
-Este ejemplo muestra cómo controlar IsVisibleChanged para mostrar y ocultar el elemento `AppTitleBar` mostrado anteriormente.
+En este ejemplo se muestra cómo controlar IsVisibleChanged para mostrar y ocultar `AppTitleBar` el elemento mostrado previamente.
 
 ```csharp
 public MainPage()
@@ -279,7 +284,7 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 ```
 
 >[!NOTE]
->El modo _pantalla completa_ solo se puede especificar si lo admite la app. Consulta [ApplicationView.IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode) para obtener más información. El [_modo tableta_](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) es una opción de usuario en el hardware compatible, por lo que un usuario puede elegir ejecutar cualquier aplicación en modo de tableta.
+>El modo de _pantalla completa_ solo se puede especificar si la aplicación lo admite. Vea [ApplicationView. IsFullScreenMode](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.IsFullScreenMode) para obtener más información. El [_modo tableta_](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) es una opción de usuario en el hardware compatible, por lo que un usuario puede elegir ejecutar cualquier aplicación en modo de tableta.
 
 ## <a name="full-customization-example"></a>Ejemplo de personalización completa
 
@@ -379,9 +384,9 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
 
-- Haga que sea obvio cuando la ventana esté activa o inactiva. Como mínimo, cambia el color del texto, los iconos y los botones en la barra de título.
-- Define una región arrastrable en el borde superior del lienzo de la app. La coincidencia con la colocación de las barras de título del sistema facilita que los usuarios la encuentren.
-- Define una región arrastrable que coincida con la barra de título visual (si existe) en el lienzo de la aplicación.
+- Haga que sea obvio cuando la ventana esté activa o inactiva. Como mínimo, cambie el color del texto, los iconos y los botones de la barra de título.
+- Defina una región arrastrable a lo largo del borde superior del lienzo de la aplicación. La coincidencia de la ubicación de las barras de título del sistema facilita la búsqueda de los usuarios.
+- Defina una región arrastrable que coincida con la barra de título visual (si existe) en el lienzo de la aplicación.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

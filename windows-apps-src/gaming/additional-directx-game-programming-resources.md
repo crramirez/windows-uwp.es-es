@@ -4,14 +4,14 @@ description: Para obtener más información sobre la programación de juegos en 
 ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, juegos, programación
+keywords: Windows 10, UWP, juegos y programación
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ecf6e4c28695d789a133c96d6fa04ceb705ef3e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a87b979dc48f8977047599cac6a32ba0d901bd63
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258536"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606364"
 ---
 # <a name="game-programming-resources"></a>Recursos de programación de juegos
 
@@ -34,15 +34,15 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 ## <a name="blogs"></a>Blogs
 
 
--   [Juegos para Windows y el SDK de DirectX]( https://go.microsoft.com/fwlink/p/?LinkID=288873)
--   [Blog para desarrolladores de DirectX]( https://go.microsoft.com/fwlink/p/?LinkID=288874)
--   [Blog de Shawn Hargreaves]( https://go.microsoft.com/fwlink/p/?LinkID=288872) (información sobre juegos XNA).
+-   [Juegos para Windows y el SDK de DirectX]( https://blogs.msdn.com/b/chuckw/)
+-   [Blog para desarrolladores de DirectX]( https://blogs.msdn.com/b/directx/)
+-   [Blog de Shawn Hargreaves]( https://blogs.msdn.com/b/shawnhar/) (información sobre juegos XNA).
 
 ## <a name="toolkits"></a>Kits de herramientas
 
 
--   [Kit de herramientas de DirectX](  https://go.microsoft.com/fwlink/p/?LinkID=248929)
--   [Biblioteca de procesamiento de texturas de DirectXTex](  https://go.microsoft.com/fwlink/p/?LinkID=248926)
+-   [Kit de herramientas de DirectX](  https://github.com/Microsoft/DirectXTK)
+-   [Biblioteca de procesamiento de texturas de DirectXTex](  https://github.com/Microsoft/DirectXTex)
 -   [Diagnóstico de gráficos](https://docs.microsoft.com/visualstudio/debugger/overview-of-visual-studio-graphics-diagnostics?view=vs-2015) de Microsoft Visual Studio
 -   [Win2D](https://github.com/Microsoft/Win2D): Una API de Windows Runtime fácil de usar para la representación de elementos gráficos 2D de modo inmediato con aceleración de GPU.
 -   [Ángulo de Microsoft Store](https://github.com/microsoft/angle/wiki) : ejecuta contenido de OpenGL es en Windows mediante la traducción de llamadas de API de OpenGL es a llamadas API de DirectX 11.

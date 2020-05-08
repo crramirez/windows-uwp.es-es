@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc8fecd7a5a1596d074c170d7a7211126e88b8ae
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 67bba732efd199c5093bb75e9b0a2c41b67e568c
+ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684863"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82148571"
 ---
 # <a name="aep-service-class-ids"></a>Identificadores de clase de servicio AEP
 
@@ -29,12 +29,12 @@ Los desarrolladores de aplicaciones deben usar filtros de sintaxis de consulta a
 
 Los servicios Bluetooth entran dentro de uno de los dos protocolos, el protocolo Bluetooth o el protocolo Bluetooth LE. Los identificadores de estos protocolos son los siguientes:
 
--   Identificador del protocolo Bluetooth: {e0cbf06c-cd8b-4647-bb8a-263b43f0f974}
--   Identificador del protocolo Bluetooth LE: {bb7bb05e-5972-42b5-94fc-76eaa7084d49}
+-   IDENTIFICADOR de protocolo Bluetooth: {e0cbf06c-cd8b-4647-bb8a-263b43f0f974}
+-   IDENTIFICADOR de protocolo Bluetooth LE: {bb7bb05e-5972-42b5-94fc-76eaa7084d49}
 
 El protocolo Bluetooth admite varios servicios que siguen el mismo formato básico. Los cuatro primeros dígitos del GUID varían según el servicio; sin embargo, todos los GUID de Bluetooth terminan con **0000-0000-1000-8000-00805F9B34FB**. Por ejemplo, el servicio RFCOMM tiene el precursor 0x0003, por lo que el identificador completo sería **00030000-0000-1000-8000-00805F9B34FB**. En la siguiente tabla se muestran algunos servicios Bluetooth comunes.
 
-| Nombre de servicio                         | GUID                                     |
+| Nombre del servicio                         | GUID                                     |
 |--------------------------------------|------------------------------------------|
 | RFCOMM                               | **00030000-0000-1000-8000-00805F9B34FB** |
 | GATT: servicio de notificaciones de alertas    | **18110000-0000-1000-8000-00805F9B34FB** |
@@ -72,7 +72,7 @@ El protocolo Bluetooth admite varios servicios que siguen el mismo formato bási
 
  
 
-Para obtener una lista más completa de los servicios de Bluetooth disponibles, consulta las páginas de servicios y protocolos Bluetooth [aquí](https://go.microsoft.com/fwlink/p/?LinkID=619586) y [aquí](https://go.microsoft.com/fwlink/p/?LinkID=619587). También puedes usar la API [**GattServiceUuids**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids) para obtener algunos servicios GATT comunes.
+Para obtener una lista más completa de los servicios de Bluetooth disponibles, consulta las páginas de servicios y protocolos Bluetooth [aquí](https://www.bluetooth.org/en-us/specification/assigned-numbers/service-discovery) y [aquí](https://go.microsoft.com/fwlink/p/?LinkID=619587). También puedes usar la API [**GattServiceUuids**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids) para obtener algunos servicios GATT comunes.
 
 ## <a name="custom-bluetooth-le-services"></a>Servicios Bluetooth LE personalizados
 
@@ -86,15 +86,15 @@ Los servicios UPnP usan el siguiente identificador de protocolo: {0e261de4-12f0-
 
 En general, todos los servicios UPnP tienen aplicado su nombre con hash en un GUID mediante el algoritmo definido en RFC 4122. En la tabla siguiente se enumeran algunos de los servicios UPnP comunes definidos en Windows.
 
-| Nombre de servicio                       | GUID                                      |
+| Nombre del servicio                       | GUID                                      |
 |------------------------------------|-------------------------------------------|
-| Connection Manager                 | **ba36014c-b51f-51cc-bf71-1ad779ced3c6**  |
+| Administrador de conexiones                 | **ba36014c-b51f-51cc-bf71-1ad779ced3c6**  |
 | Transporte AV                       | **deeacb78-707a-52df-b1c6-6f945e7e25bf**  |
 | Control de representaciones                  | **cc7fe721-a3c7-5a14-8c49-4419dc895513**  |
 | Reenvío de capa 3                 | **97d477fa-f403-577b-a714-b29a9007797f**  |
 | Configuración de la interfaz común WAN | **e4c1c624-c3c4-5104-b72e-ac425d9d157c**  |
-| Conexión WAP IP                  | **e4ac1c23-b5ac-5c27-8814-6bd837d8832c**  |
-| Configuración WFA WLAN             | **23d5f7db-747f-5099-8f21-3ddfd0c3c688**  |
+| conexión IP WAP                  | **e4ac1c23-b5ac-5c27-8814-6bd837d8832c**  |
+| Configuración WLAN WFA             | **23d5f7db-747f-5099-8f21-3ddfd0c3c688**  |
 | Impresora mejorada                   | **fb9074da-3d9f-5384-922e-9978ae51ef0c**  |
 | Impresora básica                      | **5d2a7252-d45c-5158-87a4-05212da327e1**  |
 | Registrador de receptor de multimedia           | **0b4a2add-d725-5198-b2ba-852b8bf8d183**  |
@@ -109,7 +109,7 @@ Los servicios WSD usan el siguiente identificador de protocolo: {782232aa-a2f9-4
 
 En general, todos los servicios WSD tienen aplicado su nombre con hash en un GUID mediante el algoritmo definido en RFC 4122. En la tabla siguiente se enumeran algunos de los servicios WSD comunes definidos en Windows.
 
-| Nombre de servicio | GUID                                     |
+| Nombre del servicio | GUID                                     |
 |--------------|------------------------------------------|
 | Impresora      | **65dca7bd-2611-583e-9a12-ad90f47749cf** |
 | Escáner      | **56ec8b9e-0237-5cae-aa3f-d322dd2e6c1e** |

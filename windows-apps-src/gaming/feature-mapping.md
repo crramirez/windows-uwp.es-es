@@ -4,14 +4,14 @@ description: Aprende a trasladar las características de tu juego Direct3D 9 a D
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, juegos, games, DirectX 9, DirectX 11, portar, porting
+keywords: Windows 10, UWP, juegos, DirectX 9, DirectX 11, portabilidad
 ms.localizationpriority: medium
-ms.openlocfilehash: c5c86ad836c94d990f5728ce9f7cfe49c754ce19
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: e0643773ca529540284f0749de6e91349f4e9c47
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210611"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730234"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Asignar características de DirectX 9 a las API de DirectX 11
 
@@ -19,8 +19,8 @@ ms.locfileid: "79210611"
 
 **Resumen**
 
--   [Planear el puerto DirectX](plan-your-directx-port.md)
--   [Cambios importantes de Direct3D 9 a Direct3D 11](understand-direct3d-11-1-concepts.md)
+-   [Planear la migración de DirectX](plan-your-directx-port.md)
+-   [Cambios importantes en Direct3D 11 respecto de Direct3D 9](understand-direct3d-11-1-concepts.md)
 -   Asignación de características
 
 
@@ -66,7 +66,7 @@ Visual Studio todavía usa FXC como opción avanzada para compilar objetos de so
 
 Para ver rápidamente la carga de recursos de sombreador, consulta [Migración simple de Direct3D 9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-Direct3D 11 incorporó el modelo de sombreador 5, que requiere el nivel de característica 11 de Direct3D\_0 (o superior). Consulta [HLSL Shader Model 5 Features for Direct3D 11 (Características del modelo de sombreador 5 de HLSL para Direct3D 11)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl).
+Direct3D 11 incorporó el modelo de sombreador 5, que requiere el nivel\_de característica 11 0 de Direct3D (o superior). Consulta [HLSL Shader Model 5 Features for Direct3D 11 (Características del modelo de sombreador 5 de HLSL para Direct3D 11)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl).
 
 ## <a name="replace-xnamath-and-d3dxmath"></a>Reemplazar XNAMath y D3DXMath
 
@@ -82,7 +82,7 @@ DirectSound no es compatible con la UWP:
 
 -   Usa [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal) para agregar efectos de sonido a tu juego.
 
-##  <a name="replace-directinput-with-xinput-and-uwp-apis"></a>Reemplazar DirectInput con XInput y las API de la UWP
+##  <a name="replace-directinput-with-xinput-and-windows-runtime-apis"></a>Reemplazar DirectInput con las API de XInput y Windows Runtime
 
 
 DirectInput no es compatible con la UWP:
@@ -102,16 +102,16 @@ DirectShow ya no forma parte de la API de DirectX ni de la API de Windows. [Micr
 Microsoft DirectPlay está en desuso. Si tu juego usa servicios de red, debes proporcionar un código de red que cumpla con los requisitos de UWP. Usa estas API:
 
 -   [Win32 y COM para aplicaciones UWP (funciones de red) (Windows)](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps)
--   [**Windows. Networking (espacio de nombres) (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking)
--   [**Espacio de nombres Windows. networking. Sockets (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
--   [**Espacio de nombres Windows. networking. Connectivity (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity)
--   [**Espacio de nombres Windows. ApplicationModel. Background (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+-   [**Espacio de nombres Windows.Networking (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking)
+-   [**Espacio de nombres Windows.Networking.Sockets (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
+-   [**Espacio de nombres Windows.Networking.Connectivity (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity)
+-   [**Espacio de nombres Windows.ApplicationModel.Background (Windows)**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 Estos artículos te ayudarán a agregar características de red y a declarar la compatibilidad de las redes en el manifiesto del paquete de la aplicación.
 
--   [Conexión con sockets (aplicaciones para UWP C#conC++ /VB/y XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
--   [Conexión con WebSockets (aplicaciones para UWP C#conC++ /VB/y XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh994396(v=win.10))
--   [Conexión a servicios web (aplicaciones para UWP C#conC++ /VB/y XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+-   [Conexión con sockets (aplicaciones para UWP con C#/VB/C + + y XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
+-   [Conexión con WebSockets (aplicaciones para UWP con C#/VB/C + + y XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh994396(v=win.10))
+-   [Conexión a servicios web (aplicaciones para UWP con C#/VB/C + + y XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
 -   [Conceptos básicos de redes](https://docs.microsoft.com/windows/uwp/networking/networking-basics)
 
 Ten en cuenta que todas las aplicaciones para UWP (incluidos los juegos) usan tipos específicos de tareas en segundo plano para mantener la conectividad mientras la aplicación está suspendida. Si tu juego necesita mantener el estado de conexión durante la suspensión, consulta [Conceptos básicos de redes](https://docs.microsoft.com/windows/uwp/networking/networking-basics).
@@ -147,11 +147,11 @@ Usa esta tabla cuando tengas que convertir código de Direct3D 9 a Direct3D 11. 
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-present">IDirect3DDevice9: reenviar:P</a></p></td>
-<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::Present1</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-testcooperativelevel">IDirect3DDevice9::TestCooperativeLevel</a></p></td>
-<td align="left"><p>Llama a <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::Present1</a> con el conjunto de marcas DXGI_PRESENT_TEST.</p></td>
+<td align="left"><p>Llame a <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> con la marca de DXGI_PRESENT_TEST establecida.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9">IDirect3DBaseTexture9</a></p>
@@ -211,7 +211,7 @@ Usa esta tabla cuando tengas que convertir código de Direct3D 9 a Direct3D 11. 
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-reset">IDirect3DDevice9:: RESET</a></p></td>
-<td align="left"><p>El dispositivo LOST y POOL_MANAGED ya no existen. <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::Present1</a> pueden fallar con un valor de retorno <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a>.</p></td>
+<td align="left"><p>El dispositivo LOST y POOL_MANAGED ya no existen. <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> puede producir un error con un valor devuelto <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a> .</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawrectpatch">IDirect3DDevice9:DrawRectPatch</a></p>
@@ -231,7 +231,7 @@ Usa esta tabla cuando tengas que convertir código de Direct3D 9 a Direct3D 11. 
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat">IDirect3DDevice9:CheckDeviceFormat</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-getdevicecaps">IDirect3DDevice9:GetDeviceCaps</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-validatedevice">IDirect3DDevice9:ValidateDevice</a></p></td>
-<td align="left"><p>Los bits de capacidad se reemplazan con niveles de características. Solo unos pocos casos de uso de características y formato son opcionales para un nivel de características determinado. Esto puede revisarse con <a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport">ID3D11Device::CheckFeatureSupport</a> y <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-checkformatsupport">ID3D11Device::CheckFormatSupport</a>.</p></td>
+<td align="left"><p>Los bits de capacidad se reemplazan con niveles de características. Solo unos pocos casos de uso de características y formato son opcionales para un nivel de características determinado. Se pueden comprobar con <a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport">ID3D11Device:: CheckFeatureSupport</a> y <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-checkformatsupport">ID3D11Device:: CheckFormatSupport</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -342,7 +342,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8_UNORM</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>   usar. r swizzle en el sombreador para duplicar de rojo en otros componentes para obtener el comportamiento de Direct3D 9.
+<strong>Nota</strong>    use. r swizzle en el sombreador para duplicar el rojo en otros componentes para obtener el comportamiento de Direct3D 9.
 </div>
 <div>
  
@@ -352,7 +352,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>   usar swizzle. rrrg en el sombreador para duplicar rojo y desplace el color verde a los componentes alfa para obtener el comportamiento de Direct3D 9.
+<strong>Nota</strong>    use swizzle. rrrg en el sombreador para duplicar rojo y desplace el color verde a los componentes alfa para obtener el comportamiento de Direct3D 9.
 </div>
 <div>
  
@@ -398,7 +398,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
 <td align="left"><p>DXGI_FORMAT_G8R8_G8B8_UNORM</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>   en Direct3D 9 los datos se escalaron verticalmente 255.0 f, pero esto se puede controlar en el sombreador.
+<strong>Tenga en cuenta</strong>    que en Direct3D 9 los datos se escalaron verticalmente 255.0 f, pero esto se puede controlar en el sombreador.
 </div>
 <div>
  
@@ -412,7 +412,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_B8G8_UNORM</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>   en Direct3D 9 los datos se escalaron verticalmente 255.0 f, pero esto se puede controlar en el sombreador.
+<strong>Tenga en cuenta</strong>    que en Direct3D 9 los datos se escalaron verticalmente 255.0 f, pero esto se puede controlar en el sombreador.
 </div>
 <div>
  
@@ -426,7 +426,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM & DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>   DXT1 y DXT2 son los mismos desde una perspectiva de API/hardware. La única diferencia está en el uso de un componente alfa multiplicado previamente, lo que permite a una aplicación realizar su seguimiento sin necesidad de usar otro formato.
+<strong>Tenga en cuenta</strong>    que DXT1 y DXT2 son los mismos desde una perspectiva de API/hardware. La única diferencia está en el uso de un componente alfa multiplicado previamente, lo que permite a una aplicación realizar su seguimiento sin necesidad de usar otro formato.
 </div>
 <div>
  
@@ -440,7 +440,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>   DXT3 y DXT4 son los mismos desde una perspectiva de API/hardware. La única diferencia está en el uso de un componente alfa multiplicado previamente, lo que permite a una aplicación realizar su seguimiento sin necesidad de usar otro formato.
+<strong>Tenga en cuenta</strong>    que DXT3 y DXT4 son los mismos desde una perspectiva de API/hardware. La única diferencia está en el uso de un componente alfa multiplicado previamente, lo que permite a una aplicación realizar su seguimiento sin necesidad de usar otro formato.
 </div>
 <div>
  
@@ -506,7 +506,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>   usar. r swizzle en el sombreador para duplicar el color rojo en otros componentes con el fin de obtener el comportamiento de D3D9.
+<strong>Nota</strong>    use. r swizzle en el sombreador para duplicar el color rojo en otros componentes con el fin de obtener el comportamiento de D3D9.
 </div>
 <div>
  
@@ -580,7 +580,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>   el sombreador obtiene valores uint, pero si se necesitan flotantes de estilo de Direct3D 9 (0,0 f, 1,0 f... 255. f), UINT solo se puede convertir a float32 en el sombreador.
+<strong>Tenga en cuenta</strong>    que el sombreador obtiene valores uint, pero si se necesitan flotantes de estilo de Direct3D 9 (0,0 f, 1,0 f... 255. f), UINT solo se puede convertir a float32 en el sombreador.
 </div>
 <div>
  
@@ -590,7 +590,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>   el sombreador obtiene valores de Sint, pero si se necesitan flotantes de estilo de Direct3D 9, se puede convertir en float32 en el sombreador.
+<strong>Tenga en cuenta</strong>    que el sombreador obtiene valores de Sint, pero si se necesitan flotantes de estilo de Direct3D 9, se puede convertir en float32 en el sombreador.
 </div>
 <div>
  
@@ -600,7 +600,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>   el sombreador obtiene valores de Sint, pero si se necesitan flotantes de estilo de Direct3D 9, se puede convertir en float32 en el sombreador.
+<strong>Tenga en cuenta</strong>    que el sombreador obtiene valores de Sint, pero si se necesitan flotantes de estilo de Direct3D 9, se puede convertir en float32 en el sombreador.
 </div>
 <div>
  
@@ -646,7 +646,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>FourCC 'ATI1'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC4_UNORM</p>
 <div class="alert">
-<strong>Nota</strong>   requiere el nivel de características 10,0 o posterior
+<strong>Nota</strong>    requiere el nivel de característica 10,0 o posterior
 </div>
 <div>
  
@@ -656,7 +656,7 @@ Usa esta tabla para convertir formatos de Direct3D 9 a formatos de DXGI.
 <td align="left"><p>FourCC 'ATI2'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC5_UNORM</p>
 <div class="alert">
-<strong>Nota</strong>   requiere el nivel de características 10,0 o posterior
+<strong>Nota</strong>    requiere el nivel de característica 10,0 o posterior
 </div>
 <div>
  

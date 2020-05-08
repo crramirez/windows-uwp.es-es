@@ -1,6 +1,6 @@
 ---
-Description: Obtenga información sobre cómo Fluent movimiento usa direccionalidad y gravedad.
-title: Direccionalidad y gravedad - animación en aplicaciones para UWP
+Description: Obtenga información sobre cómo el movimiento fluida usa direccionalidad y gravedad.
+title: 'Direccionalidad y gravedad: animación en aplicaciones de Windows'
 label: Directionality and gravity
 template: detail.hbs
 ms.date: 10/02/2018
@@ -11,18 +11,18 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8f1e36f0febeeaac5a12d408d7be8a717f0ab398
-ms.sourcegitcommit: 7c3b88198178d6f6a535f35e1bf8665410d41d92
+ms.openlocfilehash: ddcfac5e36500a8fc6dc41c7c86037f5a1483203
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569123"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970650"
 ---
 # <a name="directionality-and-gravity"></a>Direccionalidad y gravedad
 
-Las señales bidireccionales ayudan a solidificar el modelo mental del viaje de un usuario a través de experiencias. Es importante que la dirección del movimiento admita tanto la continuidad del espacio como la integridad de los objetos en el espacio.
+Las señales direccionales ayudan a solidificar el modelo mental del viaje que un usuario toma entre las experiencias. Es importante que la dirección de cualquier movimiento admita tanto la continuidad del espacio como la integridad de los objetos en el espacio.
 
-El movimiento direccional está sujeto a fuerzas como la gravedad. Aplicar fuerzas al movimiento refuerza la apariencia natural del movimiento.
+El movimiento direccional está sujeto a fuerzas como la gravedad. Aplicar fuerzas al movimiento refuerza el funcionamiento natural del movimiento.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -39,84 +39,84 @@ El movimiento direccional está sujeto a fuerzas como la gravedad. Aplicar fuerz
 </tr>
 </table>
 
-## <a name="direction-of-movement"></a>Dirección de movimiento
+## <a name="direction-of-movement"></a>Dirección del movimiento
 
 :::row:::
     :::column:::
-Dirección del movimiento corresponde al movimiento físico. Al igual que en la naturaleza, los objetos se pueden mover en cualquier eje del mundo - X, Y, Z. Así es cómo consideramos el movimiento de objetos en la pantalla.
-Al mover objetos, evitar colisiones no naturales. Tenga en cuenta que objetos proceden de y vayan a y siempre admiten construcciones de nivel superior que se pueden usar en la escena, como la jerarquía de dirección o el diseño de desplazamiento.
+La dirección del movimiento corresponde al movimiento físico. Al igual que en la naturaleza, los objetos pueden moverse en cualquier eje mundial (X, Y, Z). Así es como pensamos en el movimiento de objetos en la pantalla.
+Cuando mueva objetos, evite colisiones no naturales. Tenga en cuenta que los objetos proceden de y van a, y siempre admiten construcciones de nivel superior que se pueden usar en la escena, como la dirección de desplazamiento o la jerarquía de diseño.
     :::column-end:::
     :::column:::
-        ![direction backward in](images/Direction.gif)
+        ![dirección hacia atrás en](images/Direction.gif)
     :::column-end:::
 :::row-end:::
 
 ## <a name="direction-of-navigation"></a>Dirección de navegación
 
-La dirección de navegación entre escenas en tu aplicación es conceptual. Los usuarios navegan hacia adelante y atrás. Las escenas entran y salen de la vista. Estos conceptos se combinan con un movimiento físico para guiar al usuario.
+La dirección de navegación entre las escenas de la aplicación es conceptual. Los usuarios navegan hacia delante y hacia atrás. Las escenas se mueven y salen de la vista. Estos conceptos se combinan con el traslado físico para guiar al usuario.
 
-Cuando la navegación hace que el objeto viaje de la escena anterior a la nueva escena, el objeto hace un simple movimiento de A-a-B en la pantalla. Para garantizar que el movimiento sea más físico, se agrega la aceleración estándar, así como la sensación de gravedad.
+Cuando la navegación hace que un objeto viaje de la escena anterior a la nueva escena, el objeto hace que se mueva una simple a B en la pantalla. Para asegurarse de que el movimiento es más físico, se agrega la aceleración estándar, así como la sensación de gravedad.
 
-Para la navegación hacia atrás, se invierte el movimiento (B-a-A). Cuando el usuario navega hacia atrás, tienen una expectativa de ser devuelto al estado anterior lo antes posible. El tiempo es más rápido, más directo y usa deceleración.
+Para la navegación hacia atrás, se invierte el movimiento (de B a a). Cuando el usuario se desplaza hacia atrás, se espera que se devuelva al estado anterior lo antes posible. El tiempo es más rápido, más directo y usa la aceleración de deceleración.
 
-Aquí, se aplican estos principios ya que el elemento seleccionado permanece en pantalla durante la navegación hacia delante y hacia atrás.
+Aquí, estos priciples se aplican cuando el elemento seleccionado permanece en pantalla durante la navegación hacia delante y hacia atrás.
 
 ![Ejemplo de interfaz de usuario de movimiento continuo](images/continuous3.gif)
 
-Cuando la navegación provoca la sustitución de elementos en la pantalla, es importante mostrar a dónde se fue la escena existente y de dónde procede la nueva escena.
+Cuando la navegación hace que se reemplacen los elementos de la pantalla, es importante mostrar dónde salió la escena de salida y de dónde procede la nueva escena.
 
 Esto presenta varias ventajas:
 
 - Solidifica el modelo mental del usuario del espacio.
-- La duración de la escena que sale proporciona más tiempo para preparar el contenido en el que se va a animar para la escena entrante.
+- La duración de la escena de salida proporciona más tiempo para preparar el contenido que se animará en para la escena entrante.
 - Mejora el rendimiento percibido de la aplicación.
 
-Existen 4 direcciones de navegación discretas a tener en cuenta.
+Hay 4 instrucciones discretas de navegación que se deben tener en cuenta.
 
 :::row:::
     :::column:::
-**Avance en** celebrar contenido introducir la escena de manera que no entren en conflicto con el contenido saliente. Contenido disminuye la velocidad a la escena.
+**Hacia delante** Celebre el contenido que entra en la escena de manera que no entre en conflicto con el contenido saliente. El contenido se ralentiza en la escena.
     :::column-end:::
     :::column:::
-        ![direction forward in](images/forwardIN.gif)
+        ![dirección hacia delante en](images/forwardIN.gif)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-**Avance horizontal** contenido se cierra rápidamente. Aceleran los objetos fuera de la pantalla.
+**Reenvío** El contenido se cierra rápidamente. Los objetos se aceleran en pantalla.
     :::column-end:::
     :::column:::
-        ![direction forward out](images/forwardOUT.gif)
+        ![Dirección remitir hacia fuera](images/forwardOUT.gif)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-**Con versiones anteriores de** igual que avance en, pero puede revertir.
+**Hacia atrás** Igual que hacia delante, pero invertido.
     :::column-end:::
     :::column:::
-        ![direction backward in](images/backwardIN.gif)
+        ![dirección hacia atrás en](images/backwardIN.gif)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-**Con versiones anteriores de salida** igual que el reenvío de salida, pero puede revertir.
+**Hacia atrás** Igual que el reenvío, pero invertido.
     :::column-end:::
     :::column:::
-        ![direction backward out](images/backwardOUT.gif)
+        ![dirección hacia atrás hacia atrás](images/backwardOUT.gif)
     :::column-end:::
 :::row-end:::
 
-## <a name="gravity"></a>Gravedad
+## <a name="gravity"></a>Peso
 
-La gravedad hace que tu experiencia resulte más natural. Los objetos que se mueven en el eje Z y no están anclados a la escena mediante una prestación en pantalla tienen el potencial de verse afectada por la gravedad. Cuando un objeto escapa de la escena y antes de que alcance la velocidad de escape, la gravedad atrae hacia abajo el objeto, crea una curva más natural de la trayectoria de objeto conforme se mueve.
+La gravedad hace que las experiencias parezcan más naturales. Los objetos que se mueven en el eje Z y que no están anclados a la escena por una prestación en pantalla tienen la posibilidad de que se vea afectado por la gravedad. A medida que un objeto se rompe sin la escena y antes de que llegue a la velocidad de escape, la gravedad se extrae del objeto, lo que crea una curva más natural de la trayectoria del objeto a medida que se mueve.
 
-Por lo general, la gravedad se manifiesta cuando un objeto debe saltar de una escena a otra. Por este motivo, la animación conectada utiliza el concepto de gravedad.
+Normalmente, la gravedad se manifiesta cuando un objeto debe saltar de una escena a otra. Debido a esto, la animación conectada utiliza el concepto de gravedad.
 
-Aquí, un elemento de la fila superior de la cuadrícula se ve afectado por la gravedad, lo que hace que caiga ligeramente conforme deja su sitio y se mueve hacia la parte frontal.
+Aquí, la gravedad afecta a un elemento de la fila superior de la cuadrícula, lo que hace que se coloque ligeramente mientras deja su lugar y se desplaza hacia delante.
 
-![dirección hacia atrás dentro](images/continuity-photos.gif)
+![dirección hacia atrás en](images/continuity-photos.gif)
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Información general del movimiento](index.md)
-- [Control de tiempo y de aceleración](timing-and-easing.md)
+- [Información general sobre movimiento](index.md)
+- [Sincronización y aceleración](timing-and-easing.md)
