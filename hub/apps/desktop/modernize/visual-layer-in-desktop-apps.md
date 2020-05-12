@@ -7,16 +7,16 @@ keywords: windows 10, uwp
 ms.author: jimwalk
 author: jwmsft
 ms.localizationpriority: medium
-ms.openlocfilehash: 249291c59a31036fa967ac338209404557b57503
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 33a5f0bc31a8fe1421f7ab0de5f229d2feb77915
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66215176"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730137"
 ---
 # <a name="using-the-visual-layer-in-desktop-apps"></a>Usar la capa visual en aplicaciones de escritorio
 
-Ahora puedes usar las API de UWP en aplicaciones de escritorio que no son de UWP para mejorar la apariencia y funcionalidad de las aplicaciones de WPF, Windows Forms y C++ Win32, y aprovechar las ventajas de las características más recientes de la interfaz de usuario de Windows 10 que solo están disponibles a través de UWP.
+Ahora puedes usar las API de Windows Runtime en aplicaciones de escritorio que no son de UWP para mejorar la apariencia y funcionalidad de las aplicaciones de WPF, Windows Forms y C++ Win32, y aprovechar las ventajas de las características más recientes de la interfaz de usuario de Windows 10 que solo están disponibles a través de UWP.
 
 En muchos casos, puedes usar [islas XAML](xaml-islands.md) para agregar controles XAML modernos a la aplicación. Sin embargo, cuando necesites crear experiencias personalizadas que vayan más allá de los controles integrados de UWP, puedes acceder mediante las API de capa visual.
 

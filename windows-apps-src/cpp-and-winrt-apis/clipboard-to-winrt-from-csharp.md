@@ -5,18 +5,30 @@ ms.date: 04/13/2020
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, proyección, portar, migrar, C#, ejemplo, clipboard, caso, práctico
 ms.localizationpriority: medium
-ms.openlocfilehash: ecfbe1831014bce0cb7259c935ab0ae7a8af3de8
-ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
+ms.openlocfilehash: de19d4624cbcf6f102b2eb2067c9f0ff9c583f0b
+ms.sourcegitcommit: 29daa3959304d748e4dec4e6f8e774fade65aa8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81266943"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82851609"
 ---
 # <a name="porting-the-clipboard-sample-tocwinrtfromcmdasha-case-study"></a>Portabilidad del ejemplo de Clipboard a C++/WinRT desde C#&mdash;un caso práctico
 
 En este tema se presenta un caso práctico de portabilidad de las [aplicaciones para la Plataforma universal de Windows (UWP) de ejemplo](https://github.com/microsoft/Windows-universal-samples) de [C#](/visualstudio/get-started/csharp) a [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt). Para practicar y ganar experiencias de portabilidad, puedes seguir el tutorial y portar el ejemplo por tu cuenta a medida que avanzas.
 
-Consulta también [Migrar a C++/WinRT desde C#](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp), que presenta una serie de secciones que abordan detalles técnicos específicos relacionados con la portabilidad de C# a C++/WinRT.
+Para obtener un catálogo completo de los detalles técnicos implicados en la migración a C++/WinRT desde C#, consulta el tema complementario [Migrar a C++/WinRT desde C#](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp).
+
+## <a name="a-brief-preface-about-c-and-c-source-code-files"></a>Breve introducción sobre los archivos de código fuente de C# y C++
+
+En un proyecto de C#, los archivos de código fuente son archivos `.cs` principalmente. Al pasar a C++, observarás que hay más tipos de archivos de código fuente con los que familiarizarse. La razón tiene que ver con la diferencia entre los compiladores, la forma en que se reutiliza el código de C++ y las nociones de *declaración* y *definición* de un tipo y sus funciones (sus métodos).
+
+Una *declaración* de función describe solo la *firma* de la función (tipo de valor devuelto, nombre, y tipos y nombres de parámetros). Una *definición* de función incluye el *cuerpo* de la función (implementación).
+
+Es un poco diferente cuando se trata de tipos. Para *definir* un tipo, se proporciona el nombre y, como mínimo, se *declaran* todas sus funciones miembro (y otros miembros). Es decir, puedes *definir* un tipo aunque no definas sus funciones miembro.
+
+- Los archivos de código fuente de C++ comunes son `.h` y `.cpp`. Un archivo `.h` es un archivo de *encabezado*, que define uno o varios tipos. Aunque *puedes* definir funciones miembro en un encabezado, esta suele ser la finalidad de un archivo `cpp`. Por lo tanto, para un tipo de archivo de C++ **MyClass** hipotético, definirías **MyClass** en `MyClass.h` y sus funciones miembro, en `MyClass.cpp`. Para que otros desarrolladores vuelvan a usar las clases, debes compartir solo los archivos `.h` y el código de objeto. Debes conservar el secreto de los archivos `.cpp`, ya que la implementación constituye tu propiedad intelectual.
+- Encabezado precompilado (`pch.h`). Normalmente, hay un conjunto de archivos de encabezado que se incluyen en la aplicación y que establecen cambios solo en raras ocasiones. Por lo tanto, en lugar de procesar el contenido de ese conjunto de encabezados cada vez que realizas las compilación, puedes agregar esos encabezados en uno, compilarlos una vez y, a continuación, utilizar la salida de ese paso de precompilación cada vez que realices la compilación. Esto se hace a través de un archivo de *encabezado precompilado* (normalmente denominado `pch.h`).
+- Archivos `.idl`. Estos archivos contienen lenguaje de definición de interfaz (IDL). Puedes considerar IDL como los archivos de encabezado de tipos de Windows Runtime. Hablaremos más sobre IDL en la sección [IDL para el tipo **MainPage**](#idl-for-the-mainpage-type).
 
 ## <a name="download-and-test-the-clipboard-sample"></a>Descarga y prueba del ejemplo de Clipboard
 
@@ -72,19 +84,30 @@ En los siguientes apartados, veremos cómo portar **MainPage** y **Scenario**.
 
 ### <a name="idl-for-the-mainpage-type"></a>IDL para el tipo **MainPage**
 
+Comencemos esta sección hablando brevemente sobre el lenguaje de definición de interfaz (IDL) y cómo nos ayuda a programar con C++/WinRT. IDL es un tipo de código fuente que describe la superficie de un tipo Windows Runtime a la que se puede llamar. La superficie de un tipo a la que se puede llamar (o pública) se *proyecta* al mundo, lo que permite consumir el tipo. Esa parte *proyectada* del tipo contrasta con la implementación interna real del tipo, que no es pública y a la que no se puede llamar. Solo es la parte proyectada que definimos en IDL.
+
+En el código fuente IDL creado (dentro de un archivo `.idl`), puedes compilar IDL en archivos de metadatos legibles por máquina (también conocidos como metadatos de Windows). Estos archivos de metadatos tienen la extensión `.winmd`. A continuación se indican algunos de sus usos.
+
+- Un archivo `.winmd` puede describir los tipos de Windows Runtime en un componente. Cuando se hace referencia a un componente de Windows Runtime (WRC) desde un proyecto de aplicación, el proyecto de aplicación lee los metadatos de Windows que pertenecen a WRC (esos metadatos pueden estar en un archivo independiente o empaquetados en el mismo archivo que el propio WRC) para que pueda usar los tipos de WRC desde la aplicación.
+- Un archivo `.winmd` puede describir los tipos de Windows Runtime de una parte de la aplicación para que se puedan usar en una parte diferente de la misma aplicación. Por ejemplo, un tipo de Windows Runtime que se usa en una página XAML de la misma aplicación.
+- Para facilitar el consumo de tipos de Windows Runtime (integrado o de terceros), el sistema de compilación de C++/WinRT utiliza archivos `.winmd` para generar tipos de contenedor para representar las partes proyectadas de esos tipos de Windows Runtime.
+- Para que sea más fácil implementar sus propios tipos de Windows Runtime, el sistema de compilación de C++/WinRT convierte el IDL en un archivo `.winmd` y, a continuación, lo usa para generar contenedores para la proyección, así como códigos auxiliares en los que basar la implementación (hablaremos más sobre estos códigos auxiliares más adelante en este tema).
+
+La versión específica de IDL que usamos con C++/WinRT es [Lenguaje de definición de interfaz de Microsoft 3.0](/uwp/midl-3/intro). En el resto de esta sección, examinaremos el tipo **MainPage** de C# con cierto detalle. Decidiremos qué partes deben estar en la *proyección* del tipo de **MainPage** de C++/WinRT (es decir, en su superficie pública o a la que se puede llamar), y cuáles solo pueden ser parte de su implementación. Esta distinción es importante porque, cuando lleguemos a la creación de IDL (lo que haremos en la sección siguiente), solo definiremos las partes a las que se puede llamar.
+
 Los archivos de código fuente de C# que, en conjunto, implementan el tipo **MainPage** son: `MainPage.xaml` (que portaremos pronto, al copiarlo), `MainPage.xaml.cs` y `SampleConfiguration.cs`.
 
 En la versión de C++/WinRT, factorizaremos el tipo **MainPage** en los archivos de código fuente de una manera similar. Tomaremos la lógica de `MainPage.xaml.cs` y la traduciremos en su mayor parte a `MainPage.h` y `MainPage.cpp`. Y para la lógica de `SampleConfiguration.cs`, la traduciremos a `SampleConfiguration.h` y `SampleConfiguration.cpp`.
 
-Las clases de una aplicación para la Plataforma universal de Windows (UWP) de C# son tipos de Windows Runtime. Sin embargo, cuando creas un tipo en una aplicación de C++/WinRT, puedes elegir si ese tipo es un tipo de Windows Runtime o una clase, estructura o enumeración de C++ normal.
+Las clases de una aplicación para la Plataforma universal de Windows (UWP) de C# son, por supuesto, tipos de Windows Runtime. Sin embargo, cuando creas un tipo en una aplicación de C++/WinRT, puedes elegir si ese tipo es un tipo de Windows Runtime o una clase, estructura o enumeración de C++ normal.
 
-En el proyecto de C++/WinRT, **MainPage** ya es un tipo de Windows Runtime, por lo que no es necesario cambiar ese aspecto. En concreto, se trata de una *clase en tiempo de ejecución*.
+Cualquier página XAML de nuestro proyecto debe ser un tipo de Windows Runtime, por lo que **MainPage** debe ser un tipo de Windows Runtime. En el proyecto de C++/WinRT, **MainPage** ya es un tipo de Windows Runtime, por lo que no es necesario cambiar ese aspecto. En concreto, se trata de una *clase en tiempo de ejecución*.
 
 - Para obtener más información sobre si debes crear una clase en tiempo de ejecución para un tipo determinado, consulta el tema [Crear API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis).
-- Los conceptos del *tipo de implementación* y el *tipo proyectado* son importantes al trabajar con C++/WinRT. Puedes obtener información sobre ellos en el tema mencionado anteriormente y en [Consumo de API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/consume-apis).
-- Para obtener información sobre la conexión entre clases en tiempo de ejecución y archivos `.idl`, lee y sigue con el tema [Controles de XAML; enlazar a una propiedad de C++/WinRT](/windows/uwp/cpp-and-winrt-apis/binding-property). En ese tema encontrarás una guía por el proceso de creación de una clase en tiempo de ejecución, cuyo primer paso es agregar un nuevo elemento **Archivo Midl (.idl)** al proyecto.
+- En C++/WinRT, la implementación interna de una clase en tiempo de ejecución y sus partes proyectadas (públicas) existen en el formulario de dos clases diferentes. Se conocen como *tipo de implementación* y *tipo proyectado*. Puedes obtener información sobre ellos en el tema mencionado en el punto anterior y también en [Consumo de API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/consume-apis).
+- Para obtener más información sobre la conexión entre clases en tiempo de ejecución e IDL (archivos `.idl`), lee y sigue con el tema [Controles de XAML; enlazar a una propiedad de C++/WinRT](/windows/uwp/cpp-and-winrt-apis/binding-property). En ese tema encontrarás una guía por el proceso de creación de una clase en tiempo de ejecución, cuyo primer paso es agregar un nuevo elemento **Archivo Midl (.idl)** al proyecto.
 
-Para **MainPage**, ya tenemos el archivo `MainPage.idl` necesario en el proyecto de C++/WinRT. Pero durante este tutorial, agregaremos al proyecto *nuevos* archivos `.idl`.
+Para **MainPage**, ya tenemos el archivo `MainPage.idl` necesario en el proyecto de C++/WinRT. Esto se debe a que la plantilla de proyecto lo creó automáticamente. Pero más adelante en este tutorial, agregaremos más archivos `.idl` al proyecto.
 
 Pronto veremos una lista de qué IDL se debe agregar exactamente al archivo `MainPage.idl` existente. Antes de eso, tenemos que razonar algunas cosas sobre qué hay que incluir, y qué no, en el IDL.
 
@@ -139,7 +162,7 @@ Además, recordarás que **MainPage.Scenarios** es una colección de objetos de 
 
 Ahora vamos a agregar al archivo `MainPage.idl` los nuevos tipos y el nuevo miembro de **Mainpage** que hemos decidido declarar en el IDL. Al mismo tiempo, quitaremos del IDL los miembros del marcador de posición de **Mainpage** que nos proporcionó la plantilla de proyecto de Visual Studio.
 
-Por lo tanto, en el proyecto de C++/WinRT, abre `MainPage.idl` y edítalo para que se parezca a la lista siguiente. Ten en cuenta que una de las modificaciones consiste en cambiar el nombre del espacio de nombres de **Clipboard** a **SDKTemplate**. Si lo quieres, simplemente elimina el contenido actual del `MainPage.idl` y pégalo en la lista siguiente. Otro retoque a tener en cuenta es que estamos cambiando el nombre de **Scenario::ClassType** a **Scenario::ClassName**.
+Por lo tanto, en el proyecto de C++/WinRT, abre `MainPage.idl` y edítalo para que se parezca a la lista siguiente. Ten en cuenta que una de las modificaciones consiste en cambiar el nombre del espacio de nombres de **Clipboard** a **SDKTemplate**. Si quieres, simplemente, puedes reemplazar todo el contenido de `MainPage.idl` por el siguiente código. Otro retoque a tener en cuenta es que estamos cambiando el nombre de **Scenario::ClassType** a **Scenario::ClassName**.
 
 ```idl
 // MainPage.idl
@@ -183,13 +206,15 @@ En Visual Studio, para el proyecto de C++/WinRT, establece la propiedad  **Comm
 
 ### <a name="save-the-idl-and-re-generate-stub-files"></a>Almacenamiento del IDL y regeneración de los archivos de código auxiliar
 
-Si ha leído el tema [Controles de XAML; enlazar a una propiedad de C++/WinRT](/windows/uwp/cpp-and-winrt-apis/binding-property), se habrá topado con la noción de *archivos de código auxiliar*. Los archivos de código auxiliar se generan automáticamente (mediante una herramienta denominada `cppwinrt.exe`, y según el contenido de los archivos `.idl`) al compilar el proyecto de C++/WinRT. En dicho tema encontrará más detalles sobre esto.
+El tema [Controles XAML; enlazar a una propiedad de C++/WinRT](/windows/uwp/cpp-and-winrt-apis/binding-property) presenta la noción de *archivos de código auxiliar* y muestra un tutorial de estos en acción. También mencionamos los archivos de código auxiliar anteriormente en este tema al explicar que el sistema de compilación de C++/WinRT convierte el contenido de los archivos `.idl` en metadatos de Windows y, a continuación, a partir de esos metadatos, una herramienta denominada `cppwinrt.exe` genera archivos de código auxiliar en los que puede basar la implementación.
+
+Cada vez que se agregas, quitas o cambias algo en tu IDL y en la compilación, el sistema de compilación actualiza las implementaciones de código auxiliar en esos archivos de código auxiliar. Por lo tanto, cada vez que cambies tu IDL y la compilación, se recomienda que veas esos archivos de código auxiliar, copies todas las firmas modificadas y las pegues en el proyecto. Ofreceremos más detalles y ejemplos de cómo hacerlo dentro de un momento. Pero la ventaja de hacerlo es proporcionarte una forma sin errores de saber en todo momento cuál debe ser la forma del tipo de implementación y cuál debe ser la firma de sus métodos.
 
 En este punto del tutorial, hemos terminado de editar el archivo `MainPage.idl` por el momento, así que deberías guardarlo ahora. El proyecto no se compilará hasta su finalización en este momento, pero crear una compilación ahora es útil porque vuelve a generar los archivos de código auxiliar de **MainPage**.
 
-En este proyecto de C++/WinRT, estos archivos de código auxiliar se generan en la carpeta `\Clipboard\Clipboard\Generated Files\sources`. Podrás encontrarlos allí después de que se haya completado la compilación parcial (de nuevo, como se espera, la compilación no se completará correctamente. Pero el paso que nos interesa&mdash;generar archivos de código auxiliar&mdash;*sí* se habrá completado correctamente). Los archivos que nos interesan son `MainPage.h` y `MainPage.cpp`.
+En este proyecto de C++/WinRT, los archivos de código auxiliar se generan en la carpeta `\Clipboard\Clipboard\Generated Files\sources`. Podrás encontrarlos allí después de que se haya completado la compilación parcial (de nuevo, como se espera, la compilación no se completará correctamente. Pero el paso que nos interesa&mdash;generar archivos de código auxiliar&mdash;*sí* se habrá completado correctamente). Los archivos que nos interesan son `MainPage.h` y `MainPage.cpp`.
 
-En esos dos archivos de código auxiliar, verás implementaciones de código auxiliar de los nuevos miembros de **MainPage** que hemos agregado al IDL (**Current** y **FEATURE_NAME**, por ejemplo). Copiaremos esas implementaciones de código auxiliar en los archivos `MainPage.h` y `MainPage.cpp` que ya están en el proyecto. Al mismo tiempo, al igual que hicimos con el IDL, quitaremos de los archivos existentes los miembros del marcador de posición **Mainpage** que nos ha proporcionado la plantilla de proyecto de Visual Studio (la propiedad ficticia denominada **MyProperty**y el controlador de eventos denominado **ClickHandler**).
+En esos dos archivos de código auxiliar, verás nuevas implementaciones de código auxiliar de los miembros de **MainPage** que hemos agregado al IDL (**Current** y **FEATURE_NAME**, por ejemplo). Podrás copiar esas implementaciones de código auxiliar en los archivos `MainPage.h` y `MainPage.cpp` que ya están en el proyecto. Al mismo tiempo, al igual que hicimos con el IDL, quitaremos de los archivos existentes los miembros del marcador de posición **Mainpage** que nos ha proporcionado la plantilla de proyecto de Visual Studio (la propiedad ficticia denominada **MyProperty**y el controlador de eventos denominado **ClickHandler**).
 
 De hecho, el único miembro de la versión actual de **MainPage** que queremos conservar es el constructor.
 
@@ -559,7 +584,7 @@ void MainPage::UpdateStatus(hstring const& strMessage, SDKTemplate::NotifyType c
 ...
 ```
 
-En C#, aplicas *dot into* a las propiedades anidadas. Por lo tanto, el tipo **MainPage** de C#  puede acceder a su propia propiedad **Dispatcher** con la sintaxis `Dispatcher`. Y C# puede, además, aplicar *dot into* a ese valor con una sintaxis como `Dispatcher.HasThreadAccess`. En C++/WinRT, las propiedades se implementan como funciones de descriptor de acceso, por lo que la sintaxis difiere solo en que agregas paréntesis para cada llamada de función.
+En C#, puedes usar la notación de puntos para aplicar *dot into* a las propiedades anidadas. Por lo tanto, el tipo **MainPage** de C#  puede acceder a su propia propiedad **Dispatcher** con la sintaxis `Dispatcher`. Y C# puede, además, aplicar *dot into* a ese valor con una sintaxis como `Dispatcher.HasThreadAccess`. En C++/WinRT, las propiedades se implementan como funciones de descriptor de acceso, por lo que la sintaxis difiere solo en que agregas paréntesis para cada llamada de función.
 
 |C#|C++/WinRT|
 |-|-|
@@ -1127,7 +1152,7 @@ Consolidar las clases en tiempo de ejecución en un único archivo IDL (consulta
 
 Mientras hacemos eso, también vamos a quitar la propiedad ficticia generada automáticamente (`Int32 MyProperty;` y su implementación) de cada uno de esos cinco tipos de página XAML.
 
-En primer lugar, agrega un nuevo elemento de **archivo Midl (.idl)** al proyecto de C++/WinRT. Asígnale el nombre `Project.idl`. Elimina el contenido predeterminado de `Project.idl` y, en su lugar, pega la siguiente lista.
+En primer lugar, agrega un nuevo elemento de **archivo Midl (.idl)** al proyecto de C++/WinRT. Asígnale el nombre `Project.idl`. Reemplaza todo el contenido de `Project.idl` por el código siguiente.
 
 ```idl
 // Project.idl

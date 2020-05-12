@@ -6,12 +6,12 @@ ms.topic: article
 keywords: introducción;uwp;windows 10;pista de aprendizaje;archivos;e/s de archivos;leer archivo;escribir archivo;crear archivo;escribir texto;leer texto;get started;learning track;files;file io;read file;write file;create file;write text;read text
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1270d49cc8746b2793b1414306f9ee842cb40f40
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c36f4885dffa86452543f05f5b7a59a882d25710
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82166251"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730059"
 ---
 # <a name="work-with-files"></a>Trabajar con archivos
 
@@ -26,7 +26,7 @@ Examinaremos el código para escribir y leer texto desde un archivo y cómo acce
 Estos son los tipos principales que necesitas conocer para leer o escribir texto desde/en un archivo:
 
 - [Windows.Storage.StorageFile](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) representa un archivo. Esta clase tiene propiedades que proporcionan información sobre el archivo y los métodos para crear, abrir, copiar, eliminar y cambiar el nombre de los archivos.
-Puede usarse para tratar con rutas de acceso de cadenas. Hay algunas API de UWP que toman una ruta de acceso de cadena, pero con mayor frecuencia utilizarás un **StorageFile** para representar a un archivo. Esto se debe a que algunos de los archivos con los trabajarás en UWP pueden no tener una ruta de acceso, o puede que sea una ruta de acceso difícil de usar. Usa [StorageFile.GetFileFromPathAsync()](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getfilefrompathasync) para convertir una ruta de acceso de cadena en un **StorageFile**. 
+Puede usarse para tratar con rutas de acceso de cadenas. Hay algunas API de Windows Runtime que toman una ruta de acceso de cadena, pero con mayor frecuencia utilizarás un **StorageFile** para representar a un archivo. Esto se debe a que algunos de los archivos con los trabajarás en UWP pueden no tener una ruta de acceso, o puede que sea una ruta de acceso difícil de usar. Usa [StorageFile.GetFileFromPathAsync()](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getfilefrompathasync) para convertir una ruta de acceso de cadena en un **StorageFile**. 
 
 - La clase [FileIO](https://docs.microsoft.com/uwp/api/windows.storage.fileio) proporciona una manera fácil de leer y escribir texto. Esta clase también puede leer/escribir una matriz de bytes o el contenido de un búfer. Esta clase es muy similar a la clase [PathIO](https://docs.microsoft.com/uwp/api/windows.storage.pathio). La diferencia principal es que, en vez de tomar una ruta de acceso de cadena (como **PathIO**) toma un **StorageFile**.
 - [Windows.Storage.StorageFolder](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder) representa una carpeta (directorio). Esta clase tiene métodos para crear archivos, consultar el contenido de una carpeta o para crear, cambiar el nombre de las carpetas y eliminarlas. Además, tiene propiedades que proporcionan información sobre una carpeta. 

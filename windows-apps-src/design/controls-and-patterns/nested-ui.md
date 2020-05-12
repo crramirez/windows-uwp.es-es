@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: aa672c99dc83e7955c4d4f91b5bc34620c48ed01
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d2372044076e1885602dec806df95ad60e789cdd
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66364549"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968090"
 ---
 # <a name="nested-ui-in-list-items"></a>Interfaz de usuario anidada en elementos de lista
 
@@ -56,9 +56,9 @@ Las *acciones secundarias* suelen ser aceleradores asociados a elementos de list
 
 ## <a name="options-for-secondary-actions"></a>Opciones de acciones secundarias
 
-Al crear la interfaz de usuario de la lista, primero debes tener en cuenta todos los métodos de entrada que admite UWP. Para obtener más información sobre los distintos tipos de entrada, consulta [Información básica de entradas](../input/index.md).
+Al crear la interfaz de usuario de la lista, primero debes tener en cuenta todos los métodos de entrada que admite Windows. Para obtener más información sobre los distintos tipos de entrada, consulta [Información básica de entradas](../input/index.md).
 
-Después de asegurarte de que la aplicación admite todas las entradas que admite UWP, debes decidir si las acciones secundarias de la aplicación son lo suficientemente importantes para exponerlas como aceleradores en la lista principal. Recuerda que cuantas más acciones expongas, más complicada será la interfaz de usuario. ¿Necesitas realmente exponer las acciones secundarias en la interfaz de usuario de la lista principal o puedes ponerlas en otro lugar?
+Después de asegurarte de que la aplicación admite todas las entradas que admite Windows, debes decidir si las acciones secundarias de la aplicación son lo suficientemente importantes para exponerlas como aceleradores en la lista principal. Recuerda que cuantas más acciones expongas, más complicada será la interfaz de usuario. ¿Necesitas realmente exponer las acciones secundarias en la interfaz de usuario de la lista principal o puedes ponerlas en otro lugar?
 
 Considera la posibilidad de exponer acciones adicionales en la interfaz de usuario de la lista principal cuando esas acciones deban ser accesibles para cualquier entrada en todo momento.
 
@@ -97,7 +97,7 @@ En estos ejemplos, hablaremos sobre la interfaz de usuario de la lista donde el 
 
 ## <a name="consider-all-inputs"></a>Ten en cuenta todas las entradas
 
-Si decides usar la interfaz de usuario anidada, evalúa también la experiencia del usuario con todos los tipos de entrada. Como se mencionó anteriormente, la interfaz de usuario anidada funciona a la perfección para algunos tipos de entrada. Sin embargo, no siempre funciona bien con otros. En particular, las entradas de teclado, controlador y control remoto pueden tener dificultades para acceder a los elementos de la interfaz de usuario anidada. Asegúrate de seguir las instrucciones siguientes para garantizar que UWP funcione con todos los tipos de entrada.
+Si decides usar la interfaz de usuario anidada, evalúa también la experiencia del usuario con todos los tipos de entrada. Como se mencionó anteriormente, la interfaz de usuario anidada funciona a la perfección para algunos tipos de entrada. Sin embargo, no siempre funciona bien con otros. En particular, las entradas de teclado, controlador y control remoto pueden tener dificultades para acceder a los elementos de la interfaz de usuario anidada. Asegúrate de seguir las instrucciones siguientes para garantizar que Windows funcione con todos los tipos de entrada.
 
 ## <a name="nested-ui-handling"></a>Control de la interfaz de usuario anidada
 

@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e9e0a426d51fddaf4ff509438176e9db7a3e474
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 279a02962693d74c8c9ac037c0e3ee08f44a560b
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684130"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969101"
 ---
 # <a name="tutorial-create-custom-styles"></a>Tutorial: Creación de estilos personalizados
 
@@ -32,7 +32,7 @@ La aplicación PhotoLab tiene dos páginas principales:
 
 ## <a name="part-1-create-a-fancy-slider-control"></a>Parte 1: Creación de un control deslizante sofisticado  
 
-La Plataforma universal de Windows (UWP) proporciona varias maneras de personalizar la apariencia de una aplicación. Desde la configuración de fuentes y tipografía hasta los colores y gradientes o los efectos de desenfoque, hay muchas opciones. 
+La aplicación de Windows proporciona varias maneras de personalizar la apariencia de una aplicación. Desde la configuración de fuentes y tipografía hasta los colores y gradientes o los efectos de desenfoque, hay muchas opciones. 
 
 Para la primera parte del tutorial, vamos a animar algunos de los controles de edición de fotos. 
 

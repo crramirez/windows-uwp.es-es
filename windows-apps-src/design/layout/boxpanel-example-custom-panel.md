@@ -12,12 +12,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fe1389e3c3db28f834217b4f163c48633c32d14
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 68ca40a48b8b8d04bcd8b01584856233e9a99e7c
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71340168"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970210"
 ---
 # <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, un ejemplo de panel personalizado
 
@@ -47,7 +47,7 @@ Teniendo esto en mente, el `BoxPanel` que mostramos aquí es para un escenario e
 
 Empezaremos derivando una clase personalizada [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel). Probablemente, la forma más sencilla de hacerlo es definir un archivo de código independiente para esta clase. Para hacerlo, usamos las opciones del menú contextual **Agregar** | **Nuevo elemento** | **Clase** de un proyecto en el **Explorador de soluciones** de Microsoft Visual Studio. Asigna el nombre `BoxPanel` a la clase (y al archivo).
 
-El archivo de plantilla de una clase no comienza con una gran cantidad de instrucciones **using**, ya que no está destinado específicamente a aplicaciones para la Plataforma universal de Windows (UWP). Por lo tanto, agrega primero las instrucciones **using**. El archivo de plantilla también empieza con algunas instrucciones **using** que probablemente no necesitas y que se pueden eliminar. A continuación te sugerimos una lista de instrucciones **using** que pueden resolver tipos que necesitarás en un código de panel personalizado típico:
+El archivo de plantilla de una clase no comienza con una gran cantidad de instrucciones **using**, ya que no está destinado específicamente a aplicaciones de Windows. Por lo tanto, agrega primero las instrucciones **using**. El archivo de plantilla también empieza con algunas instrucciones **using** que probablemente no necesitas y que se pueden eliminar. A continuación te sugerimos una lista de instrucciones **using** que pueden resolver tipos que necesitarás en un código de panel personalizado típico:
 
 ```CSharp
 using System;

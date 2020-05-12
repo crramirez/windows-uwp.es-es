@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 06734c854f0097db5fa96e35d4123dde8bda8a95
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 479a289ff15ab6a3db7a51d52f4bf3b075e8a64b
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614140"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968786"
 ---
 # <a name="teaching-tip"></a>Sugerencia de enseñanza
 
@@ -27,7 +27,7 @@ Una sugerencia de enseñanza puede ser descartable por cambio de foco, o bien pu
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | El control **TeachingTip** requiere la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinadas a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](../images/winui-logo-64x64.png) | El control **TeachingTip** requiere la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinadas a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de la biblioteca de interfaz de usuario de Windows:** [Clase TeachingTip](/uwp/api/microsoft.ui.xaml.controls.teachingtip)
 

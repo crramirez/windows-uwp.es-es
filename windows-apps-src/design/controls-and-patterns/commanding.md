@@ -1,19 +1,19 @@
 ---
-title: Uso de comandos en aplicaciones de la Plataforma universal de Windows (UWP)
+title: Comandos en aplicaciones de Windows
 description: Cómo utilizar las clases XamlUICommand y StandardUICommand (junto con la interfaz ICommand) para compartir y administrar comandos entre diversos tipos de control, independientemente del tipo de dispositivo y de la entrada que se va a usar.
 ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
-ms.openlocfilehash: 2ad2a84a78006eafcdfa47d1faef533bea2224ff
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 24df2f6c67fe5a501461d5ce5e9c18a147c54672
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81123604"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968770"
 ---
-# <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Uso de comandos en aplicaciones de la Plataforma universal de Windows (UWP) con ICommand, XamlUICommand y StandardUICommand
+# <a name="commanding-in-windows-app-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Uso de comandos en aplicaciones de Windows con ICommand, XamlUICommand y StandardUICommand
 
-En este tema, se describe el uso de comandos en aplicaciones de la Plataforma universal de Windows (UWP). Concretamente, vamos a explicar cómo usar las clases [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) y [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) (junto con la interfaz ICommand) para compartir y administrar comandos entre diversos tipos de controles, independientemente del tipo de dispositivo y de la entrada que se va a usar.
+En este tema, se describe el uso de comandos en aplicaciones de Windows. Concretamente, vamos a explicar cómo usar las clases [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) y [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) (junto con la interfaz ICommand) para compartir y administrar comandos entre diversos tipos de controles, independientemente del tipo de dispositivo y de la entrada que se va a usar.
 
 ![Un diagrama que representa un uso común para un comando compartido; expone varias superficies de interfaz de usuario con un comando "favorito"](images/commanding/generic-commanding.png)
 
@@ -67,9 +67,9 @@ En esta tabla se muestran algunos comandos de colección típicos y las formas d
 
 **Proporciona siempre un menú contextual** Te recomendamos incluir todos los comandos contextuales pertinentes en un menú contextual tradicional o CommandBarFlyout, porque ambos son compatibles con todos los tipos de entrada. Por ejemplo, si un comando se expone solo durante un evento de mantener el puntero, no puede utilizarse en un dispositivo solo táctil.
 
-## <a name="commands-in-uwp-applications"></a>Comandos en aplicaciones para UWP
+## <a name="commands-in-windows-applications"></a>Comandos en aplicaciones de Windows
 
-Hay varias maneras de compartir y administrar las experiencias del uso de comandos en una aplicación para UWP. Puedes definir controladores de eventos para las interacciones estándar, como hacer clic, en el código subyacente (esto puede ser bastante ineficaz según la complejidad de la interfaz de usuario), puedes enlazar la escucha de eventos para las interacciones estándar a un controlador compartido, o puedes enlazar la propiedad Command del control a una implementación de ICommand que describa la lógica del comando.
+Hay varias maneras de compartir y administrar las experiencias del uso de comandos en una aplicación de Windows. Puedes definir controladores de eventos para las interacciones estándar, como hacer clic, en el código subyacente (esto puede ser bastante ineficaz según la complejidad de la interfaz de usuario), puedes enlazar la escucha de eventos para las interacciones estándar a un controlador compartido, o puedes enlazar la propiedad Command del control a una implementación de ICommand que describa la lógica del comando.
 
 Para proporcionar experiencias de usuario completas y enriquecidas en distintas superficies de comandos, de forma eficaz y con una duplicación de código mínima, se recomienda usar las características de enlace de comandos descritas en este tema (para el control de eventos estándar, consulta cada uno de los temas de eventos).
 
@@ -377,7 +377,7 @@ Si tienes que crear un comando que no está definido por la clase [StandardUICom
 
 *XamlUICommandSample*
 
-| Descargar el código de este ejemplo. |
+| Descargar el código de este ejemplo |
 | -------------------- |
 | [Ejemplo de comandos de UWP (XamlUICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-xamluicommand.zip) |
 
@@ -614,7 +614,7 @@ private void ListViewSwipeContainer_PointerExited(object sender, PointerRoutedEv
 
 ## <a name="command-experiences-using-the-icommand-interface"></a>Experiencias con comandos con la interfaz ICommand
 
-Los controles UWP estándar (botón, lista, selección, calendario, texto predictivo) proporcionan la base para muchas experiencias de comando comunes. Para ver la lista completa de tipos de controles, consulta [Controles y patrones para aplicaciones para UWP](index.md).
+Los controles UWP estándar (botón, lista, selección, calendario, texto predictivo) proporcionan la base para muchas experiencias de comando comunes. Para ver la lista completa de tipos de controles, consulta [Controles y patrones para aplicaciones de Windows](index.md).
 
 La manera más sencilla de admitir una experiencia de comandos estructurada es definir una implementación de la interfaz ICommand ([Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) para C++ o [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand) para C#).  Después, esta instancia de ICommand se puede enlazar a controles tales como botones.
 
@@ -627,7 +627,7 @@ La manera más sencilla de admitir una experiencia de comandos estructurada es d
 
 *Ejemplo de ICommand*
 
-| Descargar el código de este ejemplo. |
+| Descargar el código de este ejemplo |
 | -------------------- |
 | [Ejemplo de comandos de UWP (ICommand)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-commanding-icommand.zip) |
 
@@ -1087,7 +1087,7 @@ namespace UICommand1
 
 La Plataforma universal de Windows ofrece un sistema de comandos sólido y flexible que permite compilar aplicaciones que comparten y administran los comandos en distintos tipos de controles, dispositivos y tipos de entrada.
 
-Usa los métodos siguientes para compilar comandos para tus aplicaciones para UWP:
+Usa los métodos siguientes para compilar comandos para tus aplicaciones de Windows:
 
 - Escucha y controla los eventos en XAML y en el código subyacente.
 - Enlaza a un método de control de eventos como Click.
@@ -1101,9 +1101,9 @@ Para ver un ejemplo completo que muestra una implementación de [XamlUICommand](
 
 ## <a name="see-also"></a>Consulta también
 
-[Controles y patrones en aplicaciones para UWP](index.md)
+[Controles y patrones para aplicaciones de Windows](index.md)
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
 #### <a name="topic-samples"></a>Ejemplos del tema
 

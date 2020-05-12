@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c08dad36929c7889f1896404df862230040e3499
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 9c35bc6cfcf36543482bcb42d0ccda7fd3102ac9
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72163702"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970040"
 ---
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
 
-La configuración de la aplicación es la parte que puede personalizar el usuario de una aplicación de la Plataforma universal de Windows (UWP) a la que se accede a través de una página de configuración de la aplicación. Por ejemplo, una aplicación del lector de noticias puede permitir al usuario especificar qué fuentes de noticias o cuántas columnas se deben mostrar en la pantalla, mientras que una aplicación meteorológica podría permitir al usuario elegir entre Celsius y Fahrenheit. En este artículo se proporcionan los procedimientos recomendados para crear y mostrar la configuración de aplicaciones.
+La configuración de la aplicación es la parte que puede personalizar el usuario de una aplicación de Windows a la que se accede a través de una página de configuración de la aplicación. Por ejemplo, una aplicación del lector de noticias puede permitir al usuario especificar qué fuentes de noticias o cuántas columnas se deben mostrar en la pantalla, mientras que una aplicación meteorológica podría permitir al usuario elegir entre Celsius y Fahrenheit. En este artículo se proporcionan los procedimientos recomendados para crear y mostrar la configuración de aplicaciones.
 
 ## <a name="when-to-provide-a-settings-page"></a>Cuándo se debe proporcionar una página de configuración
 
@@ -127,7 +127,7 @@ Cuando tengas una lista de elementos que quieras incluir en la página de config
     - [Modificadores para alternar](../controls-and-patterns/toggles.md): para permitir que los usuarios activen o desactiven valores.
     - [Botones de radio](../controls-and-patterns/radio-button.md): para permitir a los usuarios elegir un elemento de un conjunto de hasta 5 opciones relacionadas que sean mutuamente excluyentes.
     - [Cuadro de entrada de texto](../controls-and-patterns/text-block.md): para permitir que los usuarios escriban texto. Usa el tipo de cuadro de texto que corresponda al tipo de texto que obtienes del usuario, como correo electrónico o contraseña.
-    - [Hipervínculos](../controls-and-patterns/hyperlinks.md): para llevar a los usuarios a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
+    - [Hipervínculos](../controls-and-patterns/hyperlinks.md): para dirigir a los usuarios a otra página dentro de la aplicación o a un sitio web externo. Cuando un usuario haga clic en un hipervínculo, el control flotante de configuración se descarta.
     - [Botones](../controls-and-patterns/buttons.md): para permitir que los usuarios inicien una acción inmediata sin descartar el control flotante de configuración actual.
 - Agrega un mensaje descriptivo si se desactiva uno de los controles. Coloca este mensaje por encima del control deshabilitado.
 - Anima controles y contenido como un solo bloque después de que se hayan animado el control flotante de configuración y el encabezado. Anima el contenido mediante las animaciones [**enterPage**](https://docs.microsoft.com/previous-versions/windows/apps/br212672(v=win.10)) o [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition), con un desplazamiento izquierdo de 100 píxeles.

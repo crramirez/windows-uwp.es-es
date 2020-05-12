@@ -1,16 +1,16 @@
 ---
-Description: Directrices de diseño de formularios de aplicaciones para UWP.
+Description: Directrices de diseño de formularios de aplicaciones de Windows.
 title: Formularios
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: b6533864748b4245b16ec7bcea9d2a831ff1c88a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 69ffaf4ff67d4ee78e78c195d759ae242a069e8e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "76520450"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968516"
 ---
 # <a name="forms"></a>Formularios
 Un formulario es un grupo de controles que recopila y envía datos de los usuarios. Los formularios se usan normalmente para páginas de configuración, encuestas, creación de cuentas y mucho más. 
@@ -62,7 +62,7 @@ Las [etiquetas](labels.md) debe alinearse a la izquierda y colocarse encima del 
 
 Para crear [diseños con accesibilidad](../accessibility/accessibility.md), etiqueta los controles individuales y los grupos de controles para mayor claridad tanto para humanos como para los lectores de pantalla. 
 
-Para los estilos de fuente, usa la [tabla de tipografías de UWP](../style/typography.md). Usa `TitleTextBlockStyle` para los títulos de página, `SubtitleTextBlockStyle` para los encabezados de grupo y `BodyTextBlockStyle` para las etiquetas de control.
+Para los estilos de fuente, usa la [rampa de tipos de Windows](../style/typography.md) predeterminada. Usa `TitleTextBlockStyle` para los títulos de página, `SubtitleTextBlockStyle` para los encabezados de grupo y `BodyTextBlockStyle` para las etiquetas de control.
 
 <div class="mx-responsive-img">
 <table>

@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 49058568acccfa32c9c354a7e2570a5734c0c577
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: bc12d76cf34b5a631435a7535567aab0cafb0f44
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081687"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970380"
 ---
 # <a name="media-player"></a>Reproductor multimedia
 
@@ -396,5 +396,5 @@ Los controles predeterminados se han optimizado para la reproducción de conteni
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Conceptos básicos sobre el diseño de comandos de aplicaciones para la Plataforma universal de Windows (UWP)](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
-- [Conceptos básicos de diseño del contenido para las aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/layout/content-basics)
+- [Conceptos básicos de diseño de comandos para aplicaciones de Windows](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
+- [Conceptos básicos de diseño de contenido para aplicaciones de Windows](https://docs.microsoft.com/windows/uwp/layout/content-basics)

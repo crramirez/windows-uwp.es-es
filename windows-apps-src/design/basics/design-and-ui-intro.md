@@ -1,24 +1,24 @@
 ---
 Description: Las características de diseño universal incluidas en la aplicación de UWP te ayudan a crear aplicaciones que se adaptan perfectamente a una gama de dispositivos.
-title: Introducción al diseño de aplicaciones para la Plataforma universal de Windows (aplicaciones de Windows)
+title: Introducción al diseño de aplicaciones de Windows
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 ms.date: 05/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8568a4613b5bb62b98edc7edd302a42153e5e33b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d0e7ad60e8c709cf4a7b075b1d7307bbd61ed79c
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209320"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969360"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Introducción al diseño de aplicaciones para UWP
 
 ![ejemplo de aplicación de iluminación](images/introUWP-header.jpg)
 
-Las instrucciones de diseño para la Plataforma universal de Windows (UWP) son un recurso que te ayuda a diseñar y crear fantásticas aplicaciones.
+Las instrucciones de diseño de aplicaciones de Windows son un recurso que te ayuda a diseñar y compilar fantásticas aplicaciones.
 
 No se trata de una lista de reglas prescriptivas, sino de un documento dinámico, diseñado para adaptarse a la evolución de nuestro [sistema Fluent Design](/windows/apps/fluent-design-system), así como a las necesidades de nuestra comunidad de creación de aplicaciones.
 

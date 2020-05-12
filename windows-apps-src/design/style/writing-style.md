@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f5f38fdfb3ba9fd32a6e06ec19cdbfb6c3b09f24
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8d79d4f3394bcf8f7892f2c6dc3d4e0ca72972ab
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68867683"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970610"
 ---
 # <a name="writing-style"></a>Estilo de escritura
 
@@ -103,7 +103,7 @@ Habla directamente al usuario.
 
 :::row:::
     :::column:::
-![Sí](images/do.svg) Las instrucciones de diseño para la Plataforma universal de Windows (UWP) son un recurso que te ayuda a diseñar y crear fantásticas aplicaciones. Con las características de diseño que se incluyen en cada aplicación para UWP, puedes crear interfaces de usuario (IU) que se adecúen a diversos dispositivos.
+![Sí](images/do.svg) Las instrucciones de diseño de aplicaciones de Windows son un recurso que te ayuda a diseñar y compilar fantásticas aplicaciones. Con las características de diseño que se incluyen en cada aplicación de Windows, puedes crear interfaces de usuario (IU) que se adecúen a diversos dispositivos.
     :::column-end:::
     :::column:::
     :::column-end:::

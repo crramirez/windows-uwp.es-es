@@ -11,14 +11,14 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fb0101597a38553f56579913a9c40502fcdbf051
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 7c44baee7d3201e2e554604405afe337007dd510
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79434232"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970960"
 ---
-# <a name="icons-for-uwp-apps"></a>Iconos de aplicaciones para UWP
+# <a name="icons-for-windows-apps"></a>Iconos de aplicaciones de Windows
 
 ![Imagen de encabezado de iconos](images/icons/header-icons.png)
 

@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 483e5d33f67ad2cd27403d7a1b229edebedfebb9
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 97507e0d9a954bc102bd4d2bcd825369df4cced7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81123634"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970050"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
@@ -282,5 +282,5 @@ Las barras de comandos pueden colocarse en las siguientes regiones de la pantall
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Conceptos básicos sobre el diseño de comandos de aplicaciones para la Plataforma universal de Windows (UWP)](../basics/commanding-basics.md)
+* [Conceptos básicos de diseño de comandos para aplicaciones de Windows](../basics/commanding-basics.md)
 * [Clase CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)

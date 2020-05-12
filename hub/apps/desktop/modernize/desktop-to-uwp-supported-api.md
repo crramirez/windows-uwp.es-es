@@ -1,6 +1,6 @@
 ---
-Description: Las aplicaciones de escritorio empaquetadas pueden usar una amplia gama de API de Plataforma universal de Windows (UWP), aunque no se haya realizado la transición completa a una aplicación para UWP. En este artículo se enumeran las clases disponibles que puede usar tu aplicación empaquetada.
-title: API de UWP disponibles para una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)
+Description: Las aplicaciones de escritorio empaquetadas pueden usar una amplia gama de API de Windows Runtime, aunque no se haya realizado la transición completa a una aplicación para UWP. En este artículo se enumeran las clases disponibles que puede usar tu aplicación empaquetada.
+title: API de Windows Runtime disponibles para una aplicación de escritorio empaquetada (Puente de dispositivo de escritorio)
 ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -9,18 +9,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 60a735af077d2121868e2613cb0f33e194e4330c
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 68c2427fe6b02385325f0f224cc837912621f6bb
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209671"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729849"
 ---
-# <a name="uwp-apis-available-to-desktop-apps"></a>API de UWP disponibles para aplicaciones de escritorio
+# <a name="windows-runtime-apis-available-to-desktop-apps"></a>API de Windows Runtime disponibles para aplicaciones de escritorio
 
 Las aplicaciones de escritorio convertidas pueden usar una amplia gama de API de Plataforma universal de Windows (UWP), aunque no se haya realizado la transición a una aplicación para UWP. En este artículo se enumeran las clases disponibles que puede usar tu aplicación de escritorio.
 
-Muchas API de UWP requieren que se use la [identidad de paquete](modernize-packaged-apps.md) en una aplicación de escritorio. La mayoría de las API de UWP funcionan bien con aplicaciones que tienen identidad de paquete. Sin embargo, algunas áreas de características aún no están totalmente probadas o no funcionan actualmente según lo previsto.
+Muchas API de Windows Runtime requieren que se use la [identidad de paquete](modernize-packaged-apps.md) en una aplicación de escritorio. La mayoría de las API de Windows Runtime funcionan bien con aplicaciones que tienen identidad de paquete. Sin embargo, algunas áreas de características aún no están totalmente probadas o no funcionan actualmente según lo previsto.
 
 | Área de función | Detalles |
 |--------------|---------|
@@ -45,9 +45,9 @@ En ocasiones, puede parecer que las API en estas áreas funcionen correctamente.
 
 ## <a name="list-of-apis"></a>Lista de API
 
-La siguiente es una lista completa de las API de UWP que se admiten en aplicaciones de escritorio. Puedes ver las [API que se admiten solo en aplicaciones con identidad de paquete](#new) o las [API que se admiten en todas las aplicaciones de escritorio](#both).
+La siguiente es una lista completa de las API de Windows Runtime que se admiten en aplicaciones de escritorio. Puedes ver las [API que se admiten solo en aplicaciones con identidad de paquete](#new) o las [API que se admiten en todas las aplicaciones de escritorio](#both).
 
-Para obtener ejemplos sobre cómo usar las API de UWP, consulta las [muestras del Puente de dispositivo de escritorio](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) y las [muestras de aplicaciones para Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) disponibles en GitHub. También puedes consultar la entrada de blog sobre la [llamada a las API de Windows 10 desde una aplicación de escritorio](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/).
+Para obtener ejemplos sobre cómo usar las API de Windows Runtime, consulta los temas sobre [muestras del Puente de dispositivo de escritorio](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) y [muestras de aplicaciones para la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples) en GitHub. También puedes consultar la entrada de blog sobre la [llamada a las API de Windows 10 desde una aplicación de escritorio](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/).
 
 <a id="new" />
 

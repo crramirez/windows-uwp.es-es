@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
-ms.openlocfilehash: f7c5eb595f3347eb4670e4f7c0a50aa930341d3e
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 9848fc9e330a725f52ce2a7fae8b13f300476cf7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74735040"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970200"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>Tutorial: Uso de Grid y StackPanel para crear una aplicación meteorológica sencilla
 
@@ -120,6 +120,6 @@ Y eso es todo. Has creado correctamente el diseño de una aplicación meteoroló
 Si lo deseas, experimenta con el diseño anterior y explora diferentes maneras en las que podrías representar los datos meteorológicos.
 
 ## <a name="related-articles"></a>Artículos relacionados
-Para obtener una introducción al diseño de diseños para aplicaciones para UWP, consulta [Introducción al diseño de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro).
+Para obtener una introducción sobre la creación de diseños de aplicaciones de Windows, consulta [Introducción al diseño de aplicaciones de Windows](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro).
 
 Para obtener información sobre cómo crear diseños dinámicos que se adapten a diferentes tamaños de pantalla, consulta [Definir diseños de página con XAML](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)

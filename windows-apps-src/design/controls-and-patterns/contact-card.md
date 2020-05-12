@@ -9,16 +9,16 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 36c8c6248b356bbb17da72b53b0480a27999b875
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 274481b2a282b025a637f7f6cc54dc0161c3e61d
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74257694"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968760"
 ---
 # <a name="contact-card"></a>Tarjeta de contacto
 
-La tarjeta de contacto muestra información de contacto, como el nombre, el número de teléfono y la dirección, para un [Contacto](/uwp/api/Windows.ApplicationModel.Contacts.Contact) (el mecanismo que usa UWP para representar personas y empresas).  La tarjeta de contacto también permite al usuario editar información de contacto. Puedes elegir entre mostrar una tarjeta de contacto compacta o una tarjeta de contacto completa que contenga información adicional.
+La tarjeta de contacto muestra información de contacto, como el nombre, el número de teléfono y la dirección, de un [Contacto](/uwp/api/Windows.ApplicationModel.Contacts.Contact) (el mecanismo que usa Windows para representar personas y empresas).  La tarjeta de contacto también permite al usuario editar información de contacto. Puedes elegir entre mostrar una tarjeta de contacto compacta o una tarjeta de contacto completa que contenga información adicional.
 
 > **API importantes**: [método ShowContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard), [método ShowFullContactCard](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard), [método IsShowContactCardSupported](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [clase Contact](/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
 

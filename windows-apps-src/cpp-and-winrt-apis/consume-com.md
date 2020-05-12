@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, COM, component, class, interface
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a286056fc0c44d01482e23e52df0fa80eca0515
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: 1b6ce3ce56b4afbf4c45b406c8af369bee4b55bb
+ms.sourcegitcommit: 2dbf4a3f3473c1d3a0ad988bcbae6e75dfee3640
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218525"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619329"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>Consumir componentes COM con C++/WinRT
 
@@ -127,7 +127,13 @@ Puedes llamar a la función [**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#co
 
 ## <a name="com-functions-that-take-an-iunknown-interface-pointer"></a>Funciones COM que toman un puntero de interfaz **IUnknown**
 
-Puedes llamar a la función [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) para pasar **com_ptr** a una función que toma un puntero de interfaz **IUnknown**. Consulta ese tema para obtener un ejemplo de código.
+Puedes usar [**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrget-function) para pasar **com_ptr** a una función que toma un puntero de interfaz **IUnknown**.
+
+Puedes usar la función gratuita [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) para devolver la dirección de (es decir, un puntero a) la [interfaz IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) subyacente sin procesar de un objeto de un tipo proyectado. Después, puedes pasar esa dirección a una función que tome un puntero de interfaz **IUnknown**.
+
+Para obtener información sobre los *tipos proyectados*, consulta [Consumo de API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/consume-apis).
+
+Para obtener un ejemplo de código de **get_unknown**, consulta [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) o la [lista de código fuente completa de una aplicación Direct2D mínima](/windows/uwp/cpp-and-winrt-apis/consume-com#full-source-code-listing-of-a-minimal-direct2d-application) en este tema.
 
 ## <a name="passing-and-returning-com-smart-pointers"></a>Paso y devolución de punteros inteligentes COM
 

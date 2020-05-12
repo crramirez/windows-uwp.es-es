@@ -1,18 +1,18 @@
 ---
-description: Aprende a usar colores de énfasis y temas en tus aplicaciones para UWP.
-title: Color en las aplicaciones para UWP
+description: Aprende a usar colores de énfasis y temas en tus aplicaciones de Windows.
+title: Color en las aplicaciones de Windows
 ms.date: 04/07/2019
 ms.topic: article
 keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7ab504657ae5e3142eb7db1d9517a013e9aaf5f3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f5e103b7661c53fb70561dd1bd654188be2704ff
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684581"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970770"
 ---
 # <a name="color"></a>Color
 
@@ -20,7 +20,7 @@ ms.locfileid: "75684581"
 
 El color proporciona una forma intuitiva de comunicar información a los usuarios en tu aplicación. Puede usarse para indicar interactividad, proporcionar comentarios a las acciones del usuario y dar una sensación de continuidad visual a tu interfaz.
 
-En aplicaciones para UWP, los colores vienen determinados principalmente por el color de énfasis y el tema. En este artículo, trataremos cómo puedes usar el color en la aplicación y cómo se emplean los recursos de tema y color de énfasis para que una aplicación para UWP se pueda usar en cualquier contexto de tema.
+En aplicaciones de Windows, los colores vienen determinados principalmente por el color de énfasis y el tema. En este artículo, trataremos cómo puedes usar el color en la aplicación y cómo se emplean los recursos de tema y color de énfasis para que una aplicación de Windows se pueda usar en cualquier contexto de tema.
 
 ## <a name="color-principles"></a>Principios de color
 
@@ -48,7 +48,7 @@ Ten en cuenta cómo las personas de diferentes culturas interpretarán los color
 
 ## <a name="themes"></a>Temas
 
-Las aplicaciones para UWP pueden usar un tema de aplicación claro u oscuro. El tema afecta a los colores de fondo, al texto, a los iconos y a los [controles comunes](../controls-and-patterns/index.md) de la aplicación.
+Las aplicaciones de Windows pueden usar un tema de aplicación claro u oscuro. El tema afecta a los colores de fondo, al texto, a los iconos y a los [controles comunes](../controls-and-patterns/index.md) de la aplicación.
 
 ### <a name="light-theme"></a>Tema claro
 
@@ -58,7 +58,7 @@ Las aplicaciones para UWP pueden usar un tema de aplicación claro u oscuro. El 
 
 ![Tema oscuro](images/color/dark-theme.svg)
 
-De manera predeterminada, el tema de tu aplicación para UWP es la preferencia de tema del usuario de la configuración de Windows o el tema predeterminado del dispositivo (es decir, oscuro en Xbox). Aun así, también puedes establecer el tema de tu aplicación para UWP.
+De manera predeterminada, el tema de tu aplicación de Windows es la preferencia de tema del usuario de la configuración de Windows o el tema predeterminado del dispositivo (es decir, oscuro en Xbox). Aun así, también puedes establecer el tema de tu aplicación de Windows.
 
 ### <a name="changing-the-theme"></a>Modificación del tema
 

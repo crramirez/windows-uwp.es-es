@@ -1,6 +1,6 @@
 ---
-Description: Introducción a los patrones de página y elementos de interfaz de usuario comunes para mostrar el contenido en tu aplicación para UWP.
-title: Conceptos básicos del diseño de contenido para aplicaciones para la Plataforma universal de Windows (UWP)
+Description: Introducción a los patrones de página y elementos de interfaz de usuario comunes para mostrar el contenido en tu aplicación de Windows.
+title: Conceptos básicos de diseño de contenido para aplicaciones de Windows
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
@@ -9,14 +9,14 @@ ms.date: 12/01/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e5b46223ea7dfa5e43b5a50a04a4c3f31307d49
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: fdb4f21c2837fdc201d9e9847541cfd2bf728468
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63796323"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969350"
 ---
-# <a name="content-design-basics-for-uwp-apps"></a>Conceptos básicos del diseño de contenido para las aplicaciones para UWP
+# <a name="content-design-basics-for-windows-apps"></a>Conceptos básicos de diseño de contenido para aplicaciones de Windows
 
 El propósito principal de cualquier aplicación es proporcionar acceso a contenido. Como hay aplicaciones con distintas finalidades, el contenido adquiere diversas formas: en una aplicación de edición de fotos, la fotografía es el contenido; en una aplicación de viajes, los mapas y la información acerca de los destinos de viaje son el contenido, etc. 
 

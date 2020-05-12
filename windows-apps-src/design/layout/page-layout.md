@@ -1,29 +1,29 @@
 ---
-title: Diseño de página de aplicaciones para UWP
-description: Al diseñar la aplicación, lo primero que hay que tener en cuenta es la estructura de diseño. En este artículo se trata la estructura común de los diseños de página básicos, incluidos los elementos de interfaz de usuario que necesitarás y dónde deben colocarse en una página. En las aplicaciones para UWP, cada página normalmente tiene elementos de navegación, comandos y contenido.
+title: Diseño de página para aplicaciones de Windows
+description: Al diseñar la aplicación, lo primero que hay que tener en cuenta es la estructura de diseño. En este artículo se trata la estructura común de los diseños de página básicos, incluidos los elementos de interfaz de usuario que necesitarás y dónde deben colocarse en una página. En las aplicaciones de Windows, cada página normalmente tiene elementos de navegación, comandos y contenido.
 ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
-ms.openlocfilehash: 7333cebc945715412e3ff1140ca26e1ed5368704
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3dbdf8d006472c288369fd528e89663aca5a9e10
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684546"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970890"
 ---
 # <a name="page-layout"></a>Diseño de página
 
-En las aplicaciones para UWP, cada [**página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) normalmente tiene elementos de navegación, comandos y contenido. 
+En las aplicaciones de Windows, cada [**página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) normalmente tiene elementos de navegación, comandos y contenido. 
 
-La aplicación puede tener varias páginas: cuando un usuario inicia una aplicación para UWP, el código de la aplicación crea un [**marco**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) para colocarlo dentro de la [**ventana**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) de la aplicación. A continuación, el marco puede [navegar](../basics/navigate-between-two-pages.md) entre las instancias de la [**página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) de la aplicación. 
+La aplicación puede tener varias páginas: cuando un usuario inicia una aplicación de Windows, el código de la aplicación crea un [**marco**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) para colocarlo dentro de la [**ventana**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) de la aplicación. A continuación, el marco puede [navegar](../basics/navigate-between-two-pages.md) entre las instancias de la [**página**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) de la aplicación. 
 
 La mayoría de las páginas siguen una estructura de diseño común. En este artículo veremos los elementos de la interfaz de usuario que necesitarás y dónde deben colocarse en una página. 
 
 ![Estructura de la página](images/page-components.svg)
 
 ## <a name="navigation"></a>Navegación
-El diseño de la aplicación comienza con el modelo de navegación que elijas, que define el modo en que los usuarios navegarán entre las páginas de la aplicación. En este artículo, trataremos dos patrones de navegación comunes: navegación izquierda y navegación superior. Para obtener instrucciones sobre cómo elegir otras opciones de navegación, consulta [Conceptos básicos del diseño de navegación para las aplicaciones para UWP](../basics/navigation-basics.md).
+El diseño de la aplicación comienza con el modelo de navegación que elijas, que define el modo en que los usuarios navegarán entre las páginas de la aplicación. En este artículo, trataremos dos patrones de navegación comunes: navegación izquierda y navegación superior. Para obtener instrucciones sobre cómo elegir otras opciones de navegación, consulta [Conceptos básicos del diseño de navegación para las aplicaciones de Windows](../basics/navigation-basics.md).
 
 ![Patrones de navegación superior e izquierdo](images/top-left-nav.svg)
 
@@ -91,7 +91,7 @@ El modelo [maestro y detalles](../controls-and-patterns/master-details.md) const
 Un [formulario](../controls-and-patterns/forms.md) es un grupo de controles que recopila y envía datos de los usuarios. La mayoría, si no todas las aplicaciones, usan algún tipo de formulario para las páginas de configuración, iniciar sesión en portales, los centros de comentarios, la creación de cuentas u otros fines. 
 
 ## <a name="sample-apps"></a>Aplicaciones de ejemplo
-Para ver cómo se pueden implementar estos patrones, consulta nuestras [aplicaciones para UWP de ejemplo](https://developer.microsoft.com/windows/samples):
+Para ver cómo se pueden implementar estos patrones, consulta nuestras [aplicaciones de Windows de ejemplo](https://developer.microsoft.com/windows/samples):
 - [Reproductor de vídeo de BuildCast](https://github.com/Microsoft/BuildCast)
 - [Programador de comidas](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)
 - [Libro para colorear](https://github.com/Microsoft/Windows-appsample-coloringbook)

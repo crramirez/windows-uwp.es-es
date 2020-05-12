@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9739933f9fd23c6f169c24c4f789e53ba894708d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8d969c5282fa03fb11d108d2b2c8e0fe44dfde49
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80696631"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968460"
 ---
 # <a name="acrylic-material"></a>Material acrílico
 
@@ -36,7 +36,7 @@ Acrílico en el tema oscuro ![Acrílico en el tema oscuro](images/Acrylic_DarkTh
 
 ## <a name="acrylic-and-the-fluent-design-system"></a>Acrylic y Fluent Design System
 
- Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Acrylic es un componente de Fluent Design System que agrega textura física (material) y profundidad a tu app. Para más información, consulta la [Introducción a Fluent Design para UWP](/windows/apps/fluent-design-system).
+ Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Acrylic es un componente de Fluent Design System que agrega textura física (material) y profundidad a tu app. Para más información, consulta la [Introducción a Fluent Design](/windows/apps/fluent-design-system).
 
  ## <a name="video-summary"></a>Resumen en vídeo
 
@@ -102,7 +102,7 @@ En el modo de contraste alto, los usuarios siguen viendo el color de fondo conoc
 
 Además, solo el acrílico en el fondo reemplazará su translucidez y textura con un color sólido:
  - Cuando se desactiva una ventana de la app en el escritorio
- - Cuando la aplicación para UWP se ejecuta en modo de teléfono, Xbox, HoloLens o tableta
+ - Cuando la aplicación de Windows se ejecuta en modo de teléfono, Xbox, HoloLens o tableta
 
 ### <a name="legibility-considerations"></a>Consideraciones sobre la legibilidad
 Es importante asegurarse de que cualquier texto que la app presente a los usuarios [cumpla con las relaciones de contraste](../accessibility/accessible-text-requirements.md). Hemos optimizado la receta del acrílico para que el texto negro o blanco de color de alta densidad o incluso gris de color de densidad media cumpla con las relaciones de contraste sobre el acrílico. Los recursos de tema que proporciona la plataforma toman, de manera predeterminada, colores con tono de contraste con una opacidad del 80 %. Al colocar texto de cuerpo de color de alta densidad sobre acrílico, puedes reducir la opacidad del tono a la vez que mantienes la legibilidad. En el modo oscuro, la opacidad del tono puede ser del 70 %, mientras que el acrílico en modo claro cumplirá con las relaciones de contraste a una opacidad del 50 %.

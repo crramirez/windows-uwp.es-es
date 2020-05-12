@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b7c21e5e6305c7b2941b46db562c93da0fdfe39
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 5ae8094ac3fbb1de8958b1cc138953d3e1b887cc
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684385"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970390"
 ---
 # <a name="masterdetails-pattern"></a>Patrón de master y detalles
 
@@ -24,6 +24,9 @@ El patrón de maestro y detalles tiene un panel maestro (normalmente con una [vi
 > **API importantes**: [clase ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [clase SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![Ejemplo del patrón de maestro y detalles](images/HIGSecOne_MasterDetail.png)
+
+> [!TIP]
+> Si deseas usar un control XAML que implemente este patrón automáticamente, se recomienda el [control XAML MasterDetailsView](/windows/communitytoolkit/controls/masterdetailsview) del kit de herramientas de la comunidad de Windows.
 
 ## <a name="is-this-the-right-pattern"></a>¿Es este el patrón adecuado?
 
@@ -61,7 +64,7 @@ En la página de vista maestra, un control de [vista de lista](lists.md) funcion
 
 En la página de vista de detalles, usa el [elemento de contenido](../layout/layout-panels.md) que sea más apropiado. Si tienes muchos campos independientes, considera la posibilidad de usar un diseño de **cuadrícula** para organizar los elementos en un formulario.
 
-Para la navegación entre páginas, consulta el [historial de navegación y navegación hacia atrás para las aplicaciones para UWP](../basics/navigation-history-and-backwards-navigation.md).
+Para la navegación entre páginas, consulta el [historial de navegación y navegación hacia atrás para las aplicaciones de Windows](../basics/navigation-history-and-backwards-navigation.md).
 
 ## <a name="side-by-side-style"></a>Estilo en paralelo
 
@@ -98,6 +101,9 @@ Los siguientes ejemplos implementan el patrón de maestro y detalles con diseño
 - [Ejemplo de panel maestro y detalles de Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
 - [Ejemplo de base de datos de pedidos de clientes](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
 - [Ejemplo de lector RSS](https://github.com/Microsoft/Windows-appsample-rssreader)
+
+> [!TIP]
+> Si deseas usar un control XAML que implemente este patrón automáticamente, se recomienda el [control XAML MasterDetailsView](/windows/communitytoolkit/controls/masterdetailsview) del kit de herramientas de la comunidad de Windows.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

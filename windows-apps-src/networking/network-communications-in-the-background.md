@@ -6,14 +6,18 @@ ms.date: 06/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8db29561afa06a2f6a2be67565d59e9387240d1c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 29c6609a2e57abede7fe606be8c028e503270d4c
+ms.sourcegitcommit: f910b29d35ac7afd0b759640bcac1d2fee399b3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74259193"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82973281"
 ---
 # <a name="network-communications-in-the-background"></a>Comunicaciones de red en segundo plano
+
+> [!NOTE]
+> **Parte de la información hace referencia al producto de versión preliminar, el cual puede sufrir importantes modificaciones antes de que se publique la versión comercial. Microsoft no ofrece ninguna garantía, expresa o implícita, con respecto a la información que se ofrece aquí.**
+
 Para continuar con la comunicación de red mientras no está en primer plano, la aplicación puede usar tareas en segundo plano y una de estas dos opciones.
 - Agente de socket. Las aplicaciones que usan sockets para conexiones a largo plazo pueden delegar la propiedad de un socket a un agente de sockets del sistema cuando abandonan el primer plano. A continuación, el agente activa la aplicación cuando llega el tráfico al socket, vuelve a transferir la propiedad a la aplicación y esta procesa el tráfico que llega.
 - Desencadenadores del canal de control. 
@@ -160,6 +164,10 @@ Primero, asegúrate de que estás usando los desencadenadores del canal de contr
 Si usa los WebSockets, [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2), [**System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) o [**Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient), debe usar [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger).
 
 ## <a name="controlchanneltrigger-with-websockets"></a>WebSockets con ControlChannelTrigger
+
+> [!IMPORTANT]
+> La característica que se describe en esta sección (**WebSockets con ControlChannelTrigger**) se admite en la versión 10.0.15063.0 del SDK y en versiones anteriores. También se admite en versiones preliminares de [Windows 10 Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK).
+
 Debes tener en cuenta algunos aspectos especiales cuando uses [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) o [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) con [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger). Existen algunos patrones de uso y procedimientos recomendados específicos de transporte que debes seguir al usar la clase **MessageWebSocket** o **StreamWebSocket** con **ControlChannelTrigger**. Asimismo, estos aspectos también afectan la manera en que se controlan las solicitudes para que reciban paquetes en la clase **StreamWebSocket**. Las solicitudes que reciban paquetes en la clase **MessageWebSocket** no se verán afectadas.
 
 Los siguientes patrones de uso y procedimientos recomendados deben cumplirse cuando uses [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) o [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) con [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger):

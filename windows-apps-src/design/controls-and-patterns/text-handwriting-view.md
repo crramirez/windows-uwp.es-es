@@ -1,5 +1,5 @@
 ---
-Description: Personaliza la vista integrada de escritura a mano para entrada de lápiz en texto que sea compatible con controles de texto de UWP tales como TextBox y RichEditBox (y controles, como AutoSuggestBox que proporcionan una experiencia similar de entrada de texto).
+Description: Personaliza la vista integrada de escritura a mano para entrada de lápiz en texto que sea compatible con controles de texto de Windows tales como TextBox y RichEditBox (y controles, como AutoSuggestBox, que proporcionan una experiencia similar de entrada de texto).
 title: Entrada de texto con la vista de escritura a mano
 label: Text input with the handwriting view
 template: detail.hbs
@@ -11,18 +11,18 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9b9d409718a157c55b28fdb3ccaa28caaa295adf
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ccd21481a8488a101ee79ae0b0224651a94461a7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684284"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82967970"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Entrada de texto con la vista de escritura a mano
 
 ![El cuadro de texto se amplía cuando se pulsa con el lápiz](images/handwritingview/handwritingview2.gif)
 
-Personaliza la vista integrada de escritura a mano para entrada de lápiz en texto que sea compatible con controles de texto de UWP tales como [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) y [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) y controles derivados de estos tales como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox).
+Personaliza la vista integrada de escritura a mano para entrada de lápiz en texto que sea compatible con controles de texto de Windows tales como [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) y [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) y controles derivados de estos tales como [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox).
 
 ## <a name="overview"></a>Introducción
 
@@ -67,7 +67,7 @@ La vista de escritura a mano se encuentra encima del control de texto subyacente
 
 La interfaz de usuario de la aplicación no se redistribuye para incluir el control más grande, por lo que el sistema puede causar que la vista obstruya una interfaz de usuario importante.
 
-Aquí se muestra cómo usar la propiedad [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) del elemento [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) de un objeto [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) para especificar qué delimitador del control de texto subyacente se usa para alinear la vista de escritura a mano.
+Aquí se muestra cómo usar la propiedad [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) del elemento [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) de un objeto [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) para especificar qué delimitador del control de texto subyacente se usa para alinear la vista de escritura a mano.
 
 ```xaml
 <TextBox Name="SampleTextBox"

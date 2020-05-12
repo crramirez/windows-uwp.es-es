@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d0c2f5c5aa6c5d5bfcaee8e9b0ec14bbcd4ff3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8ed4515a90df50a1ff8c0d6b82eb8cda5a4a78c9
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71339377"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968750"
 ---
 # <a name="control-templates"></a>Plantillas de control
 
@@ -186,7 +186,7 @@ Una manera rápida de aplicar temas a los controles es hacer clic con el botón 
 
 ## <a name="controls-and-accessibility"></a>Controles y accesibilidad
 
-Cuando creas una plantilla para un control, aparte de estar cambiando el comportamiento y la apariencia visual del control en cierta medida, es probable que estés modificando también el modo en que dicho control se muestra en los marcos de accesibilidad. La Plataforma universal de Windows (UWP) admite el marco de automatización de la interfaz de usuario de Microsoft para la accesibilidad. Todos los controles predeterminados y sus plantillas correspondientes admiten los patrones y tipos de controles comunes de la automatización de la interfaz de usuario que sean apropiados para el propósito y la función del control en cuestión. Los clientes de automatización de la interfaz de usuario interpretan estos patrones y tipos de controles como tecnologías de ayuda, lo que permite que un control esté accesible dentro de una interfaz de usuario de aplicación accesible más grande.
+Cuando creas una plantilla para un control, aparte de estar cambiando el comportamiento y la apariencia visual del control en cierta medida, es probable que estés modificando también el modo en que dicho control se muestra en los marcos de accesibilidad. La aplicación de Windows admite el marco de automatización de la interfaz de usuario de Microsoft para la accesibilidad. Todos los controles predeterminados y sus plantillas correspondientes admiten los patrones y tipos de controles comunes de la automatización de la interfaz de usuario que sean apropiados para el propósito y la función del control en cuestión. Los clientes de automatización de la interfaz de usuario interpretan estos patrones y tipos de controles como tecnologías de ayuda, lo que permite que un control esté accesible dentro de una interfaz de usuario de aplicación accesible más grande.
 
 Para separar la lógica de control básica y, asimismo, cumplir algunos de los requisitos de arquitectura de la automatización de la interfaz de usuario, las clases de los controles incorporan la compatibilidad con la accesibilidad en una clase aparte: un sistema de automatización del mismo nivel. A veces, los sistemas de automatización del mismo nivel interactúan con las plantillas de control, ya que esperan que en ellas haya determinados elementos con nombre que permitan habilitar tecnologías de ayuda para invocar acciones de botones.
 

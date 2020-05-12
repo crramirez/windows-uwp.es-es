@@ -11,12 +11,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f287f738c39e21ea76ff2595cc34ac715a1b52ca
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 6e7661beb52438640c570e1a5ec4d7f60502e119
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081187"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968910"
 ---
 # <a name="color-picker"></a>Selector de colores
 
@@ -28,7 +28,7 @@ Un selector de colores se usa para explorar y seleccionar colores. De manera pre
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **ColorPicker** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **ColorPicker** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de la biblioteca de interfaz de usuario de Windows:** [Clase ColorPicker](/uwp/api/microsoft.ui.xaml.controls.colorpicker), [propiedad Color](/uwp/api/microsoft.ui.xaml.controls.colorpicker.Color), [evento ColorChanged](/uwp/api/microsoft.ui.xaml.controls.colorpicker.ColorChanged)
 >
@@ -220,7 +220,7 @@ Valores hexadecimales | IsHexInputVisible
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Interacciones de lápiz en aplicaciones para UWP](../input/pen-and-stylus-interactions.md)
+- [Interacciones de lápiz en aplicaciones de Windows](../input/pen-and-stylus-interactions.md)
 - [Entrada manuscrita](inking-controls.md)
 
 <!--

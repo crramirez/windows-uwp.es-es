@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 37d0ca71adf43891628a02d60d6873e7934d749b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f79b7247a7e1a1889c530a16c280f490db51042e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79210181"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970750"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamaños de pantalla y puntos de interrupción
 
-Las aplicaciones para UWP pueden ejecutarse en cualquier dispositivo que ejecute Windows 10, lo que incluye teléfonos, tabletas, equipos de escritorio, televisores y mucho más. Con un elevado número de destinos de dispositivo y tamaños de pantalla en el ecosistema de Windows 10, en lugar de optimizar tu interfaz de usuario para cada dispositivo, te recomendamos diseñar unas cuantas categorías de ancho clave (también denominadas "puntos de interrupción"): 
+Las aplicaciones de Windows pueden ejecutarse en cualquier dispositivo que ejecute Windows 10, lo que incluye teléfonos, tabletas, equipos de escritorio, televisores, etc. Con un elevado número de destinos de dispositivo y tamaños de pantalla en el ecosistema de Windows 10, en lugar de optimizar tu interfaz de usuario para cada dispositivo, te recomendamos diseñar unas cuantas categorías de ancho clave (también denominadas "puntos de interrupción"): 
 - Pequeño (menos de 640 píxeles)
 - Medio (de 641 a 1007 píxeles)
 - Grande (1008 píxeles o más)

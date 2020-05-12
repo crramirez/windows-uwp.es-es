@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f2097a35d87594251ed2c0a04be06ccdb705902f
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: fc05ce50c19a04d5b90d225746c9af6569f49bd3
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80249859"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970440"
 ---
 # <a name="xaml-theme-resources"></a>Recursos de temas XAML
 
@@ -57,7 +57,7 @@ Sigue estas instrucciones al definir y consumir tus propios recursos de tema per
 
 El conjunto de colores combinado para los temas "Light", "Dark" y "HighContrast" constituyen la *Rampa de colores de Windows* en XAML. Si quieres modificar los temas del sistema o bien aplicar un tema del sistema a tus propios elementos XAML, es importante comprender cómo se estructuran los recursos de color.
 
-Para obtener más información acerca de cómo aplicar color en tu aplicación para UWP, consulta [Color en aplicaciones para UWP](../style/color.md).
+Para obtener más información acerca de cómo aplicar color en tu aplicación de Windows, consulta [Color en aplicaciones de Windows](../style/color.md).
 
 ### <a name="light-and-dark-theme-colors"></a>Temas de colores Claro y Oscuro
 
@@ -147,7 +147,7 @@ Esta tabla enumera la clave, el nombre simple y la representación de cadena del
 
 ### <a name="windows-system-high-contrast-colors"></a>Colores en contraste alto del sistema de Windows
 
-Además del conjunto de recursos proporcionados por el marco XAML, hay un conjunto de valores de color derivado de la paleta del sistema de Windows. Estos colores no son específicos de las aplicaciones de Windows Runtime o de la Plataforma universal de Windows (UWP). Sin embargo, muchos de los recursos XAML [Brush](/uwp/api/Windows.UI.Xaml.Media.Brush) consumen estos colores cuando el sistema está funcionando (y la aplicación está ejecutándose) con el tema "HighContrast". El marco XAML proporciona estos colores de todo el sistema como recursos con clave. Las claves siguen el formato de nombre: `SystemColor[name]Color`.
+Además del conjunto de recursos proporcionados por el marco XAML, hay un conjunto de valores de color derivado de la paleta del sistema de Windows. Estos colores no son específicos de las aplicaciones de Windows Runtime o de Windows. Sin embargo, muchos de los recursos XAML [Brush](/uwp/api/Windows.UI.Xaml.Media.Brush) consumen estos colores cuando el sistema está funcionando (y la aplicación está ejecutándose) con el tema "HighContrast". El marco XAML proporciona estos colores de todo el sistema como recursos con clave. Las claves siguen el formato de nombre: `SystemColor[name]Color`.
 
 Esta tabla enumera los colores de todo el sistema que XAML proporciona como objetos de recursos derivados de la paleta del sistema de Windows. La columna "Nombre de accesibilidad" muestra cómo se etiqueta el color en la interfaz de usuario de la configuración de Windows. La columna "Nombre simple de contraste alto" es una descripción en una palabra de cómo se aplica el color en los controles comunes de XAML. Se usa como parte de la convención de nomenclatura de pincel que explicaremos más adelante. La columna "Predeterminado inicial" muestra los valores que se obtendrían si el sistema no se ejecutara en contraste alto.
 
@@ -224,7 +224,7 @@ Los estilos tienen este aspecto cuando se aplican a un elemento [TextBlock](http
 <TextBlock Text="Caption" Style="{StaticResource CaptionTextBlockStyle}"/>
 ```
 
-Para obtener instrucciones sobre cómo usar la rampa de tipos UWP en la aplicación, consulta [Tipografía en aplicaciones para UWP](../style/typography.md).
+Para obtener instrucciones sobre cómo usar la rampa de tipos de Windows en la aplicación, consulta [Tipografía en aplicaciones de Windows](../style/typography.md).
 
 ### <a name="basetextblockstyle"></a>BaseTextBlockStyle
 

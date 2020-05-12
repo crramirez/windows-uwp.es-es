@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e098283bae6f58b927892c680a4981d83f9e31e8
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 4f0814621c67c01d5d1a73235faf02d3d753f2c2
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081366"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970060"
 ---
 # <a name="buttons"></a>Botones
 
@@ -42,7 +42,7 @@ Control | Descripción
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | Los controles **DropDownButton**, **SplitButton** y **ToggleSplitButton** se incluyen como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | Los controles **DropDownButton**, **SplitButton** y **ToggleSplitButton** se incluyen como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 > **API de la biblioteca de interfaz de usuario de Windows:** [Clase DropDownButton](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton), [clase SplitButton](/uwp/api/microsoft.ui.xaml.controls.splitbutton), [clase ToggleSplitButton](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton)
 >
@@ -550,10 +550,10 @@ Si el diseño requiere un único botón, debe estar alineado a la izquierda o a 
 
 ## <a name="back-buttons"></a>Botones Atrás
 
-El botón Atrás es un elemento de la interfaz de usuario proporcionado por el sistema que permite la navegación hacia atrás a través de la pila de retroceso o el historial de navegación del usuario. No es necesario que crees tu propio botón Atrás, pero es posible que debas realizar algunas acciones para que la experiencia de navegación hacia atrás resulte adecuada. Para obtener más información, consulta el artículo [Historial de navegación y navegación hacia atrás para las aplicaciones para UWP](../basics/navigation-history-and-backwards-navigation.md).
+El botón Atrás es un elemento de la interfaz de usuario proporcionado por el sistema que permite la navegación hacia atrás a través de la pila de retroceso o el historial de navegación del usuario. No es necesario que crees tu propio botón Atrás, pero es posible que debas realizar algunas acciones para que la experiencia de navegación hacia atrás resulte adecuada. Para obtener más información, consulta [Historial de navegación y navegación hacia atrás para las aplicaciones de Windows](../basics/navigation-history-and-backwards-navigation.md).
 
 
-## <a name="get-the-sample-code"></a>Obtener el código de ejemplo
+## <a name="get-the-sample-code"></a>Obtención del código de ejemplo
 
 - [XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): En este ejemplo se muestran todos los controles XAML en un formato interactivo.
 

@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a7ee8550b72356199645f54b587480275c2bcd
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 26e756b52d4faf18eff2fc684c7db94bca058642
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685083"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971080"
 ---
 # <a name="reveal-highlight"></a>Mostrar resaltado
 
@@ -282,7 +282,7 @@ Al habilitar Reveal en un control personalizado o nuevamente basado en modelo o 
 
 ## <a name="reveal-and-the-fluent-design-system"></a>Reveal y Fluent Design System
 
- Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Reveal es un componente de Fluent Design System que agrega luz a tu aplicación. Para más información, consulta la [Introducción a Fluent Design para UWP](/windows/apps/fluent-design-system).
+ Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Reveal es un componente de Fluent Design System que agrega luz a tu aplicación. Para más información, consulta la [Introducción a Fluent Design](/windows/apps/fluent-design-system).
 
 ## <a name="related-articles"></a>Artículos relacionados
 
