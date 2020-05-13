@@ -546,6 +546,8 @@
           href: accessibility/basic-accessibility-information.md
         - name: Accesibilidad de teclado
           href: accessibility/keyboard-accessibility.md
+        - name: Botones del sistema de hardware y lectores de pantalla
+          href: accessibility/system-button-narration.md
         - name: Puntos de referencia y encabezados
           href: accessibility/landmarks-and-headings.md
         - name: Temas de contraste alto

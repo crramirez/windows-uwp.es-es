@@ -1,5 +1,5 @@
 ---
-Description: El hecho de conocer los dispositivos que admiten aplicaciones de Windows te ayudará a ofrecer la mejor experiencia del usuario para cada factor de forma.
+Description: El hecho de conocer los dispositivos que admiten aplicaciones de Windows te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
 title: Consideraciones sobre la interfaz de usuario para dispositivos Windows
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
@@ -8,18 +8,18 @@ keywords: dispositivo, entrada, interacción
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 121025dc5e87e7e3953b9517144e36ab382795bb
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 37b77e62f14418611047a3af49bd15ed4f8094b4
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968211"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234876"
 ---
 #  <a name="ui-considerations-for-windows-devices"></a>Consideraciones sobre la interfaz de usuario para dispositivos Windows
 
 ![Dispositivos](../images/devices-2x.png)
 
-El hecho de conocer los dispositivos que admiten aplicaciones de Windows te ayudará a ofrecer la mejor experiencia del usuario para cada factor de forma.
+El hecho de conocer los dispositivos que admiten aplicaciones de Windows te ayudará a ofrecer la mejor experiencia de usuario para cada factor de forma.
 
 ![dispositivos de Windows](images/device-primer/device-primer-ramp.png)
 
