@@ -7,16 +7,16 @@ ms.date: 03/07/2018
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar notificaciones locales, puente de escritorio, msix, paquete disperso, C++, CPP, CPlusPlus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: cc87f9281b9623c1f1b46def8f886cfebeb0438f
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 3e103c41de7bf169629085fd259e23e17804360d
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968300"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234667"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar una notificación del sistema local desde las aplicaciones de la WRL de C++ de escritorio
 
-Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas, al igual que las aplicaciones de aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está usando MSIX o un paquete disperso.
+Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está usando MSIX o un paquete disperso.
 
 > [!IMPORTANT]
 > Si va a escribir una aplicación para UWP, consulte la [documentación de UWP](send-local-toast.md). En el caso de otros idiomas del escritorio, vea [escritorio C#](send-local-toast-desktop.md).
@@ -42,7 +42,7 @@ En **General**, asegúrese de que la **versión de Windows SDK** está estableci
 
 Copie el archivo [DesktopNotificationManagerCompat. h](https://raw.githubusercontent.com/WindowsNotifications/desktop-toasts/master/CPP-WRL/DesktopToastsCppWrlApp/DesktopNotificationManagerCompat.h) y [DesktopNotificationManagerCompat. cpp](https://raw.githubusercontent.com/WindowsNotifications/desktop-toasts/master/CPP-WRL/DesktopToastsCppWrlApp/DesktopNotificationManagerCompat.cpp) de github en el proyecto. La biblioteca de compatibilidad abstrae gran parte de la complejidad de las notificaciones del escritorio. Las instrucciones siguientes requieren la biblioteca de compatibilidad.
 
-Si usa encabezados precompilados, `#include "stdafx.h"` Asegúrese de que es la primera línea del archivo DesktopNotificationManagerCompat. cpp.
+Si usa encabezados precompilados, asegúrese de que es `#include "stdafx.h"` la primera línea del archivo DesktopNotificationManagerCompat. cpp.
 
 
 ## <a name="step-3-include-the-header-files-and-namespaces"></a>Paso 3: incluir los archivos de encabezado y los espacios de nombres
@@ -145,7 +145,7 @@ Seleccione un AUMID único que identifique la aplicación Win32. Normalmente tie
 
 #### <a name="step-51-wix-installer"></a>Paso 5,1: instalador de WiX
 
-Si usa WiX para el instalador, edite el archivo **product. WXS** para agregar las dos propiedades de acceso directo al acceso directo del menú Inicio, tal como se muestra a continuación. Asegúrese de que el GUID del paso #4 se incluye `{}` como se muestra a continuación.
+Si usa WiX para el instalador, edite el archivo **product. WXS** para agregar las dos propiedades de acceso directo al acceso directo del menú Inicio, tal como se muestra a continuación. Asegúrese de que el GUID del paso #4 se `{}` incluye como se muestra a continuación.
 
 **Producto. WXS**
 
@@ -405,7 +405,7 @@ Si las notificaciones aparecen pero no se conservan en el centro de actividades 
 
 Si ha instalado el paquete MSIX o disperso y la aplicación de Win32 clásica, tenga en cuenta que la aplicación de paquete MSIX/Sparse sustituirá a la aplicación de Win32 clásica al controlar las activaciones del sistema. Esto significa que las notificaciones del sistema de la aplicación Win32 clásica seguirán iniciando la aplicación del paquete MSIX/Sparse cuando se haga clic en ella. Al desinstalar la aplicación de paquete MSIX/Sparse, se revertirán las activaciones de nuevo a la aplicación de Win32 clásica.
 
-Si recibe `HRESULT 0x800401f0 CoInitialize has not been called.`, asegúrese de llamar `CoInitialize(nullptr)` a en la aplicación antes de llamar a las API.
+Si recibe `HRESULT 0x800401f0 CoInitialize has not been called.` , asegúrese de llamar a `CoInitialize(nullptr)` en la aplicación antes de llamar a las API.
 
 Si recibe `HRESULT 0x8000000e A method was called at an unexpected time.` mientras llama a las API de compatibilidad, lo más probable es que no pueda llamar a los métodos de registro necesarios (o bien, si una aplicación de paquete MSIX o disperso no está ejecutando actualmente la aplicación en el contexto MSIX/Sparse).
 
@@ -420,7 +420,7 @@ Windows 8 presentó notificaciones del sistema, pero usó las plantillas del sis
 
 | SO | ToastGeneric | Activador COM | Plantillas del sistema de notificaciones heredadas |
 | -- | ------------ | ------------- | ---------------------- |
-| Windows 10 | Compatible. | Compatible. | Compatible (pero no activará el servidor COM) |
+| Windows 10 | Compatible | Compatible. | Compatible (pero no activará el servidor COM) |
 | Windows 8.1/8 | N/A | N/D | Compatible |
 | Windows 7 y versiones inferiores | N/A | N/A | N/D |
 

@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e0591a62134f09c1b3a9d115d038020e95f0c139
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 2d6ddf03541e94f89d0950a4f4c03eebaa0e396e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970720"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234475"
 ---
 # <a name="mouse-interactions"></a>Interacciones de mouse
 
-Optimizar el diseño de la aplicación de aplicación de Windows para la entrada táctil y obtener compatibilidad básica con el mouse de forma predeterminada. 
+Optimizar el diseño de la aplicación Windows para la entrada táctil y obtener compatibilidad básica con el mouse de forma predeterminada. 
 
 ![mouse](images/input-patterns/input-mouse.jpg)
 
@@ -59,7 +59,7 @@ Un escueto conjunto de interacciones del mouse se usan de forma coherente en tod
 <td align="left"><p>Clic con el botón secundario para seleccionar y ordenar</p></td>
 <td align="left"><p>Haz clic con el botón secundario para mostrar la barra de navegación (si está disponible) y la barra de la aplicación con comandos globales. Haz clic con el botón secundario en un elemento para seleccionarlo y mostrar la barra de la aplicación con comandos contextuales para el elemento seleccionado.</p>
 <div class="alert">
-<strong>Nota</strong>  : haga clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de la aplicación no son comportamientos de interfaz de usuario apropiados. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
+<strong>Nota:</strong>    Haga clic con el botón derecho para mostrar un menú contextual si la selección o los comandos de la barra de la aplicación no son comportamientos adecuados de la interfaz de usuario. Pero te recomendamos encarecidamente que uses la barra de la aplicación para todos los comportamientos de comandos.
 </div>
 <div>
  

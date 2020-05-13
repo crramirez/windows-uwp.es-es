@@ -1,5 +1,5 @@
 ---
-Description: Reciba, procese y administre los datos de entrada de dispositivos señaladores como la función táctil, el mouse, el lápiz/lápiz y el panel táctil, en las aplicaciones de la aplicación de Windows.
+Description: Reciba, procese y administre los datos de entrada desde dispositivos que apunten, como la entrada táctil, el mouse, el lápiz/lápiz y el panel táctil, en las aplicaciones Windows.
 title: Controlar la entrada de puntero
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
@@ -8,16 +8,16 @@ keywords: lápiz, mouse, panel táctil, función táctil, puntero, entrada, inte
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: db3b87bd187c64b04615fb6722e4e1f2b666b7dc
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 609f6f1ad33c3736d9ac99ec40cbbfe7ade9500a
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970070"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234827"
 ---
 # <a name="handle-pointer-input"></a>Controlar la entrada de puntero
 
-Recibir, procesar y administrar los datos de entrada de los dispositivos señaladores (por ejemplo, táctil, Mouse, lápiz/lápiz y Touchpad) en las aplicaciones de aplicación de Windows.
+Recibir, procesar y administrar los datos de entrada de los dispositivos señaladores (por ejemplo, táctil, Mouse, lápiz/lápiz y Touchpad) en las aplicaciones Windows.
 
 > [!Important]
 > Cree interacciones personalizadas solo si hay un requisito claro y bien definido y las interacciones que admiten los controles de plataforma no admiten su escenario.  
@@ -72,7 +72,7 @@ Las aplicaciones de Windows pueden escuchar los siguientes eventos de puntero:
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>Se produce cuando otro elemento de la interfaz de usuario captura el puntero, si se libera el puntero o si se captura otro puntero mediante programación.</p>
 <div class="alert">
-<strong>Tenga en cuenta</strong>  que no hay ningún evento de captura de puntero correspondiente.
+<strong>Nota:</strong>    No hay ningún evento de captura de puntero correspondiente.
 </div>
 <div>
  
@@ -132,7 +132,7 @@ Estos son algunos fragmentos de código de una aplicación de seguimiento de pun
 
 ### <a name="create-the-ui"></a>Creación de la interfaz de usuario
 
-En este ejemplo, usamos un [rectángulo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle) (`Target`) como el objeto que consume la entrada del puntero. El color del destino cambia cuando cambia el estado del puntero.
+En este ejemplo, usamos un [rectángulo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle) ( `Target` ) como el objeto que consume la entrada del puntero. El color del destino cambia cuando cambia el estado del puntero.
 
 Los detalles de cada puntero se muestran en un [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) flotante que sigue el puntero a medida que se mueve. Los propios eventos de puntero se muestran en el [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) a la derecha del rectángulo.
 
@@ -951,7 +951,7 @@ Por último, definimos nuestros controladores de eventos de puntero básicos en 
 - [Ejemplo de entrada de puntero (Basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)
 - [Ejemplo de entrada de puntero (UserControl con animación)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
 
-### <a name="other-samples"></a>Otros ejemplos
+### <a name="other-samples"></a>Otras muestras
 
 - [Ejemplo de entrada básica](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
 - [Ejemplo de entrada de latencia baja](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)

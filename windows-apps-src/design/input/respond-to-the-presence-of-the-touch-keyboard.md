@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: teclado, accesibilidad, navegación, enfoque, texto, entrada, interacciones de usuario
 ms.date: 07/13/2018
 ms.topic: article
-ms.openlocfilehash: 76b468eedd136522a4af9fb5880049278548865d
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 969d0c24c86a47e72cbfec08d835c25b6e6779c4
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970270"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234885"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>Responder a la presencia del teclado táctil
 
@@ -39,7 +39,7 @@ Este tema se basa en [interacciones de teclado](keyboard-interactions.md).
 
 Debes tener un conocimiento básico de las interacciones de teclado estándar, el control de la entrada de teclado y los eventos, y la automatización de la interfaz de usuario.
 
-Si no está familiarizado con el desarrollo de aplicaciones de aplicaciones de Windows, consulte estos temas para familiarizarse con las tecnologías que se describen aquí.
+Si no está familiarizado con el desarrollo de aplicaciones de Windows, consulte estos temas para familiarizarse con las tecnologías que se describen aquí.
 
 - [Creación de la primera aplicación](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
 - Encontrarás más información acerca de los eventos, en [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).

@@ -1,5 +1,5 @@
 ---
-description: Describe los pasos necesarios para asegurarse de que se puede usar la aplicación de aplicación de Windows cuando un tema de contraste alto está activo.
+description: Describe los pasos necesarios para asegurarse de que se puede usar la aplicación de Windows cuando un tema de contraste alto está activo.
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Temas de contraste alto
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 118f604b8c8c95a863773270825ff4db5c5a1b3a
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ce3fe9ea96f4b4ce2f541fb5f7a9682a0dee5e0e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969460"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234037"
 ---
 # <a name="high-contrast-themes"></a>Tema de contraste alto  
 
@@ -154,7 +154,7 @@ Más adelante, en la aplicación, puedes establecer el fondo.
 <Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
 ```
 
-Observe cómo ** \{se\} usa ThemeResource** dos veces, una vez para hacer referencia a **SystemColorWindowColor** y otra para hacer referencia a **BrandedPageBackgroundBrush**. Ambos son necesarios para que la aplicación use el tema correctamente en tiempo de ejecución. Este es un buen momento para probar la funcionalidad en la aplicación. El fondo de Grid se actualizará automáticamente al cambiar a un tema de contraste alto. También se actualizará al cambiar entre los distintos temas de contraste alto.
+Observe cómo se usa ** \{ ThemeResource \} ** dos veces, una vez para hacer referencia a **SystemColorWindowColor** y otra para hacer referencia a **BrandedPageBackgroundBrush**. Ambos son necesarios para que la aplicación use el tema correctamente en tiempo de ejecución. Este es un buen momento para probar la funcionalidad en la aplicación. El fondo de Grid se actualizará automáticamente al cambiar a un tema de contraste alto. También se actualizará al cambiar entre los distintos temas de contraste alto.
 
 ## <a name="when-to-use-borders"></a>Cuándo usar bordes
 

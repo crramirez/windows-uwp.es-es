@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9651af0c9caaae58bad82b2e33c1b0621b205054
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 6a3429607ecd9245dd10722fbb47d06d7aa6ef75
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970460"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234832"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>Código generado por el Asistente para notificaciones de inserción
  
@@ -42,7 +42,7 @@ var <mobile-service-name>Client = new Microsoft.WindowsAzure.MobileServices.Mobi
 ## <a name="registration-for-push-notifications"></a>Registro para notificaciones de inserción
 
 
-En el registro de inserciones. \*, el método UploadChannel registra el dispositivo para recibir notificaciones de envío. La Tienda realiza un seguimiento de las copias de tu aplicación que hay instaladas y ofrece el canal de notificaciones de inserción. Consulta [**PushNotificationChannelManager**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager).
+En Inserte. Register. \* , el método UploadChannel registra el dispositivo para recibir notificaciones de envío. La Tienda realiza un seguimiento de las copias de tu aplicación que hay instaladas y ofrece el canal de notificaciones de inserción. Consulta [**PushNotificationChannelManager**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager).
 
 El código de cliente es similar para tanto para el backend de JavaScript como para el backend de .NET. De manera predeterminada, al agregar notificaciones de inserción para un servicio backend de JavaScript, se inserta una llamada de ejemplo a la API personalizada notifyAllUsers en el método UploadChannel.
 
@@ -207,7 +207,7 @@ function sendNotifications(request) {
 
 La función sendNotifications envía una sola notificación en forma de notificación del sistema. También puedes usar otros tipos de notificaciones de inserción.
 
-**Sugerencia**  para obtener información sobre cómo obtener ayuda mientras se editan scripts, vea [Habilitar IntelliSense para JavaScript del lado servidor](https://blogs.msdn.com/b/visualstudio/archive/2013/07/26/enabling-intellisense-for-mobile-services-javascript-in-visual-studio.aspx).
+**Sugerencia**    Para obtener información sobre cómo obtener ayuda mientras se editan scripts, vea [Habilitar IntelliSense para JavaScript del lado servidor](https://blogs.msdn.com/b/visualstudio/archive/2013/07/26/enabling-intellisense-for-mobile-services-javascript-in-visual-studio.aspx).
 
  
 
@@ -220,7 +220,7 @@ Las notificaciones del sistema son fáciles de usar; puedes ver un ejemplo en el
 
 Dado que Windows responde a las notificaciones del sistema, puede administrar la mayoría de estas notificaciones cuando la aplicación no se está ejecutando. Por ejemplo, una notificación de inserción permitiría al usuario saber cuándo ha recibido un nuevo mensaje de correo aunque la aplicación de correo local no se esté ejecutando. Windows administra las notificaciones del sistema mostrando un mensaje, como la primera línea de un mensaje de texto. Windows administra una notificación de icono o de rótulo informativo actualizando el icono dinámico de una aplicación para reflejar el número de mensajes de correo nuevos. De este modo, puedes solicitar a los usuarios de tu aplicación que la comprueben en busca de nueva información. Tu aplicación puede recibir notificaciones sin procesar mientras se está ejecutando y puedes usarlas para enviar datos a la aplicación. Si tu aplicación no se está ejecutando, puedes configurar una tarea en segundo plano para supervisar las notificaciones de inserción.
 
-Debe usar las notificaciones de envío de acuerdo con las instrucciones de las aplicaciones de aplicaciones de Windows, ya que estas notificaciones usan los recursos de un usuario y pueden distraerse si se sobreutilizan. Consulta [Directrices y lista de comprobación de notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview).
+Debe usar las notificaciones de envío de acuerdo con las instrucciones para las aplicaciones de Windows, ya que estas notificaciones usan los recursos de un usuario y pueden distraerse si se sobreutilizan. Consulta [Directrices y lista de comprobación de notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview).
 
 Si vas a actualizar iconos dinámicos con notificaciones de inserción, también deberías seguir las directrices de [Directrices y lista de comprobación para iconos y notificaciones](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
 
@@ -233,7 +233,7 @@ Puedes llamar a Servicios de notificaciones de inserción de Windows (WNS) direc
 
 También puedes enviar notificaciones de inserción si ejecutas una tarea programada en tu servicio móvil. Consulta [Programación de trabajos periódicos en Servicios móviles](https://azure.microsoft.com/documentation/articles/mobile-services-schedule-recurring-tasks/).
 
-**ADVERTENCIA**  una vez que haya ejecutado el Asistente para notificaciones de inserciones una vez, no ejecute el Asistente una segunda vez para agregar el código de registro de otro servicio móvil. Si ejecutas el asistente más de una vez por cada proyecto, se generará código que provocará llamadas superpuestas al método [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), que da lugar a una excepción en tiempo de ejecución. Si quieres registrar notificaciones de inserción para más de un servicio móvil, ejecuta el asistente una sola vez y después vuelve a escribir el código de registro para asegurarte de que las llamadas a **CreatePushNotificationChannelForApplicationAsync** no se ejecutan a la vez. Por ejemplo, puede lograr esto moviendo el código generado por el asistente en el registro de extracción. \* (incluida la llamada a **CreatePushNotificationChannelForApplicationAsync**) fuera del evento onlaunched, pero las características específicas de esto dependerán de la arquitectura de la aplicación.
+**ADVERTENCIA**    de Una vez que haya ejecutado el Asistente para notificaciones de envío una vez, no ejecute el Asistente una segunda vez para agregar el código de registro de otro servicio móvil. Si ejecutas el asistente más de una vez por cada proyecto, se generará código que provocará llamadas superpuestas al método [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync), que da lugar a una excepción en tiempo de ejecución. Si quieres registrar notificaciones de inserción para más de un servicio móvil, ejecuta el asistente una sola vez y después vuelve a escribir el código de registro para asegurarte de que las llamadas a **CreatePushNotificationChannelForApplicationAsync** no se ejecutan a la vez. Por ejemplo, puede lograr esto moviendo el código generado por el asistente en el registro \* de extracción. (incluida la llamada a **CreatePushNotificationChannelForApplicationAsync**) fuera del evento onlaunched, pero las características específicas de esto dependerán de la arquitectura de la aplicación.
 
  
 

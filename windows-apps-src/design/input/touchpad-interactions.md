@@ -1,5 +1,5 @@
 ---
-Description: Cree aplicaciones de aplicaciones de Windows con experiencias de interacción de usuario intuitivas y distintivas que estén optimizadas para touchpad, pero que sean coherentes funcionalmente en todos los dispositivos de entrada.
+Description: Cree aplicaciones de Windows con experiencias de interacción de usuario intuitivas y distintivas que estén optimizadas para touchpad, pero que sean funcionalmente coherentes en todos los dispositivos de entrada.
 title: Interacciones del panel táctil
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
@@ -8,12 +8,12 @@ keywords: panel táctil,PTP,táctil,función táctil,puntero,entrada,interacció
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: afbdf5c672328acfc60a82f9f66c75dc52370c99
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ffc3ce96c7e8c2ad4a34aecd1ca85ff644bdef97
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970240"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234483"
 ---
 # <a name="touchpad-design-guidelines"></a>Directrices para el diseño de panel táctil
 
@@ -55,11 +55,11 @@ Los usuarios pueden establecer muchos más comportamientos de interacción y ges
 
 ![configuración del panel táctil estándar](images/mouse-touchpad-settings-standard.png)
 
-<sup>Configuración\\ estándar\\ de Touchpad</sup>
+<sup>Configuración estándar de \\ touchpad \\</sup>
 
 ![configuración del panel táctil de precisión de Windows](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Configuración\\ de\\ Touchpad\\ de Windows Precision</sup>
+<sup>Configuración de Touchpad de Windows \\ Precision \\ \\</sup>
 
 Estos son algunos ejemplos de gestos optimizados para panel táctil para realizar tareas comunes.
 

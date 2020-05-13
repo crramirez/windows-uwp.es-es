@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 1d883243b60b2b2693fbf0f21315008e556b5743
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 44cb122f70825df3ceef043d84e57cd077780749
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970760"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234706"
 ---
 # <a name="keyboard-interactions"></a>Interacciones de teclado
 
@@ -89,13 +89,13 @@ Un visual de foco:
 
 Para usar un control (incluidos los elementos de navegación) con el teclado, el control debe tener un foco. Una manera de que un control reciba el foco de teclado es hacer que sea accesible a través de la navegación por tabulación mediante su identificación como una tabulación en el orden de tabulación de la aplicación.
 
-Para que un control se incluya en el orden de tabulación, la propiedad [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_IsEnabled) debe establecerse en **true** y la propiedad [IsTabStop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) debe establecerse en **true**.
+Para que un control se incluya en el orden de tabulación, la propiedad [IsEnabled](/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_IsEnabled) debe establecerse en **true** y la propiedad [IsTabStop](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) debe establecerse en **true**.
 
-Para excluir específicamente un control del orden de tabulación, establezca la propiedad [IsTabStop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) en **false**.
+Para excluir específicamente un control del orden de tabulación, establezca la propiedad [IsTabStop](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) en **false**.
 
-De forma predeterminada, el orden de tabulación refleja el orden en que se crean los elementos de la interfaz de usuario. Por ejemplo, si un `StackPanel` contiene un `Button`, un `Checkbox`y un, `TextBox`el orden de `Button`tabulación `Checkbox`es, `TextBox`y.
+De forma predeterminada, el orden de tabulación refleja el orden en que se crean los elementos de la interfaz de usuario. Por ejemplo, si un `StackPanel` contiene un `Button` , un `Checkbox` y un `TextBox` , el orden de tabulación es `Button` , `Checkbox` y `TextBox` .
 
-Puede invalidar el orden de tabulación predeterminado estableciendo la propiedad [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) .
+Puede invalidar el orden de tabulación predeterminado estableciendo la propiedad [TabIndex](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) .
 
 #### <a name="tab-order-should-be-logical-and-predictable"></a>El orden de tabulación debe ser lógico y predecible
 
@@ -119,7 +119,7 @@ Intente clasificar y presentar los comandos, controles y contenido más importan
 
 Foco inicial especifica el elemento de la interfaz de usuario que recibe el foco cuando una aplicación o una página se inicia o activa por primera vez. Al usar un teclado, es de este elemento que un usuario comienza a interactuar con la interfaz de usuario de la aplicación.
 
-En el caso de las aplicaciones UWP, el foco inicial se establece en el elemento con el valor de [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) más alto que puede recibir el foco. Los elementos secundarios de los controles de contenedor se omiten. En un empate, el primer elemento del árbol visual recibe el foco.
+En el caso de las aplicaciones UWP, el foco inicial se establece en el elemento con el valor de [TabIndex](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) más alto que puede recibir el foco. Los elementos secundarios de los controles de contenedor se omiten. En un empate, el primer elemento del árbol visual recibe el foco.
 
 #### <a name="set-initial-focus-on-the-most-logical-element"></a>Establecer el foco inicial en el elemento lógico más
 
@@ -143,8 +143,8 @@ De forma predeterminada, los controles de UWP siguen estos comportamientos bási
 -   **Las teclas de tabulación** se desplazan entre los controles accionables/activos en el orden de tabulación.
 -   **MAYÚS + TAB** desplazar controles en el orden de tabulación inversa. Si el usuario ha navegado dentro del control mediante la tecla de dirección, el foco se establece en el último valor conocido dentro del control.
 -   **Las teclas de dirección** exponen "navegación interna" específica del control cuando el usuario escribe "navegación interna". las teclas de dirección no se desplazan fuera de un control. Estos son algunos ejemplos:
-    -   La tecla de dirección arriba/abajo mueve `ListView` el foco dentro de y`MenuFlyout`
-    -   Modificar los valores actualmente seleccionados `Slider` para y`RatingsControl`
+    -   La tecla de dirección arriba/abajo mueve el foco dentro `ListView` de y`MenuFlyout`
+    -   Modificar los valores actualmente seleccionados para `Slider` y`RatingsControl`
     -   Desplace el símbolo de intercalación dentro`TextBox`
     -   Expandir o contraer elementos dentro de`TreeView`
 
@@ -166,7 +166,7 @@ Si los elementos se muestran en una sola columna, la tecla de dirección arriba/
 
 Al definir una única posición de tabulación para una colección de controles relacionados, o complementarios, puede minimizar el número de tabulaciones generales en la aplicación.
 
-Por ejemplo, las siguientes imágenes muestran dos `ListView` controles apilados. La imagen de la izquierda muestra la navegación por la tecla de dirección que se usa con `ListView` una tabulación para desplazarse por los controles, mientras que la imagen de la derecha muestra cómo la navegación entre los elementos secundarios podría ser más fácil y eficaz eliminando la necesidad de para atravesar los controles primarios con una tecla de tabulación.
+Por ejemplo, las siguientes imágenes muestran dos controles apilados `ListView` . La imagen de la izquierda muestra la navegación por la tecla de dirección que se usa con una tabulación para desplazarse `ListView` por los controles, mientras que la imagen de la derecha muestra cómo la navegación entre los elementos secundarios podría ser más fácil y eficaz eliminando la necesidad de para atravesar los controles primarios con una tecla de tabulación.
 
 
 <table>
@@ -184,7 +184,7 @@ Una vez que un control tiene el foco, un usuario puede interactuar con él e inv
 
 #### <a name="text-entry"></a>Entrada de texto
 
-En el caso de los controles diseñados específicamente para entradas `TextBox` de `RichEditBox`texto como y, todas las entradas de teclado se usan para escribir o navegar por el texto, lo que tiene prioridad sobre otros comandos de teclado. Por ejemplo, el menú desplegable de un `AutoSuggestBox` control no reconoce la clave de **espacio** como un comando de selección.
+En el caso de los controles diseñados específicamente para entradas de texto como `TextBox` y `RichEditBox` , todas las entradas de teclado se usan para escribir o navegar por el texto, lo que tiene prioridad sobre otros comandos de teclado. Por ejemplo, el menú desplegable de un `AutoSuggestBox` control no reconoce la clave de **espacio** como un comando de selección.
 
 ![entrada de texto](images/keyboard/text-entry.png)
 
@@ -197,9 +197,9 @@ Cuando no está en modo de entrada de texto, la tecla **barra espaciadora** invo
 #### <a name="enter-key"></a>Entrar (tecla)
 
 La tecla **entrar** puede realizar una serie de interacciones de usuario comunes, dependiendo del control con el foco:
--   Activa controles de comando como `Button` o. `Hyperlink` Para evitar la confusión del usuario final, la tecla **entrar** también activa controles que se parecen a controles de `ToggleButton` comando `AppBarToggleButton`como o.
--   Muestra la interfaz de usuario del selector para controles `ComboBox` como `DatePicker`y. La tecla **entrar** también confirma y cierra la interfaz de usuario del selector.
--   Activa controles de lista como `ListView`, `GridView`y. `ComboBox`
+-   Activa controles de comando como `Button` o `Hyperlink` . Para evitar la confusión del usuario final, la tecla **entrar** también activa controles que se parecen a controles de comando como `ToggleButton` o `AppBarToggleButton` .
+-   Muestra la interfaz de usuario del selector para controles como `ComboBox` y `DatePicker` . La tecla **entrar** también confirma y cierra la interfaz de usuario del selector.
+-   Activa controles de lista como `ListView` , `GridView` y `ComboBox` .
     -   La tecla **entrar** realiza la acción de selección como la clave de **espacio** para los elementos de lista y cuadrícula, a menos que haya una acción adicional asociada a estos elementos (abrir una nueva ventana).
     -   Si hay una acción adicional asociada al control, la tecla **entrar** realiza la acción adicional y la clave de **espacio** realiza la acción de selección.
 
@@ -210,7 +210,7 @@ La tecla **entrar** puede realizar una serie de interacciones de usuario comunes
 La tecla ESC permite al usuario cancelar la interfaz de usuario transitoria (junto con cualquier acción en curso en esa interfaz de usuario).
 
 Estos son algunos ejemplos de esta experiencia:
--   El usuario abre `ComboBox` un con un valor seleccionado y usa las teclas de dirección para desplazar la selección del foco a un nuevo valor. Al presionar la tecla Esc `ComboBox` , se cierra y se restablece el valor seleccionado al valor original.
+-   El usuario abre un `ComboBox` con un valor seleccionado y usa las teclas de dirección para desplazar la selección del foco a un nuevo valor. Al presionar la tecla Esc `ComboBox` , se cierra y se restablece el valor seleccionado al valor original.
 -   El usuario invoca una acción de eliminación permanente para un correo electrónico y se le solicita `ContentDialog` que confirme la acción. El usuario decide que esta no es la acción deseada y presiona la tecla **ESC** para cerrar el cuadro de diálogo. Como la tecla **ESC** está asociada al botón **Cancelar** , el cuadro de diálogo se cierra y se cancela la acción. La tecla **ESC** solo afecta a la interfaz de usuario transitoria, no se cierra o se vuelve a navegar a través de la interfaz de usuario de la aplicación.
 
 ![Tecla ESC](images/keyboard/esc-key.png)
@@ -220,7 +220,7 @@ Estos son algunos ejemplos de esta experiencia:
 Las teclas **Inicio** y **fin** permiten a los usuarios desplazarse al principio o al final de una región de la interfaz de usuario.
 
 Estos son algunos ejemplos de esta experiencia:
--   En `ListView` el `GridView` caso de los controles y, la tecla **Inicio** mueve el foco al primer elemento y lo desplaza a la vista, mientras que la tecla **fin** mueve el foco al último elemento y lo desplaza a la vista.
+-   En el caso de los `ListView` `GridView` controles y, la tecla **Inicio** mueve el foco al primer elemento y lo desplaza a la vista, mientras que la tecla **fin** mueve el foco al último elemento y lo desplaza a la vista.
 -   Para un `ScrollView` control, la tecla **Inicio** se desplaza hasta la parte superior de la región, mientras que la tecla **fin** se desplaza hasta la parte inferior de la región (el foco no cambia).
 
 ![teclas Inicio y fin](images/keyboard/home-and-end.png)
@@ -310,7 +310,7 @@ Los usuarios esperan compatibilidad con la navegación por la tecla de direcció
 -   `ListItems`o `GridItems` dentro `ListView` o`GridView`
 -   `Buttons`énfasis`ContentDialog`
 
-Los controles de UWP admiten la navegación por teclas de flecha de forma predeterminada. En el caso de los diseños personalizados y los `XYFocusKeyboardNavigation="Enabled"` grupos de control, use para proporcionar un comportamiento similar.
+Los controles de UWP admiten la navegación por teclas de flecha de forma predeterminada. En el caso de los diseños personalizados y los grupos de control, use `XYFocusKeyboardNavigation="Enabled"` para proporcionar un comportamiento similar.
 
 Considere la posibilidad de agregar compatibilidad con la navegación por teclas de dirección al usar los siguientes controles:
 
@@ -339,13 +339,13 @@ Dependiendo de la funcionalidad y el diseño de la aplicación, la mejor opción
 
 Los usuarios de accesibilidad se basan en reglas de navegación de teclado bien establecidas, que normalmente no usan teclas de dirección para navegar por una colección de botones. Sin embargo, los usuarios sin discapacidades visuales podrían creer que el comportamiento es natural.
 
-Un ejemplo de comportamiento predeterminado de UWP en este caso es `ContentDialog`. Aunque las teclas de dirección se pueden usar para navegar entre los botones, cada botón también es una tabulación.
+Un ejemplo de comportamiento predeterminado de UWP en este caso es `ContentDialog` . Aunque las teclas de dirección se pueden usar para navegar entre los botones, cada botón también es una tabulación.
 
 ##### <a name="assign-single-tab-stop-to-familiar-ui-patterns"></a>Asignación de una sola tabulación a patrones familiares de la interfaz de usuario
 
 En los casos en los que el diseño sigue un patrón de interfaz de usuario conocido para los grupos de control, la asignación de una única posición de tabulación al grupo puede mejorar la eficacia de la navegación para los usuarios.
 
-Algunos ejemplos son:
+Ejemplos:
 -   `RadioButtons`
 -   Múltiplos `ListViews` que tienen el mismo aspecto y se comportan como un solo`ListView`
 -   Cualquier interfaz de usuario para buscar y comportarse como una cuadrícula de mosaicos (como los mosaicos del menú Inicio)
@@ -373,7 +373,7 @@ Algunas de las diferencias entre los comportamientos de teclado de UWP y los adm
 
 #### <a name="case-study--autosuggestbox-control"></a>Caso práctico: control AutoSuggestBox
 
-El botón buscar de no `AutoSuggestBox` es accesible para la navegación de teclado estándar mediante las teclas de tabulación y de flecha porque el usuario puede presionar la tecla **entrar** para enviar la consulta de búsqueda. Sin embargo, es accesible a través del narrador cuando el usuario presiona Bloq Mayús + una tecla de dirección.
+El botón buscar de `AutoSuggestBox` no es accesible para la navegación de teclado estándar mediante las teclas de tabulación y de flecha porque el usuario puede presionar la tecla **entrar** para enviar la consulta de búsqueda. Sin embargo, es accesible a través del narrador cuando el usuario presiona Bloq Mayús + una tecla de dirección.
 
 ![enfoque de teclado de sugerencia automática](images/keyboard/auto-suggest-keyboard.png)
 
@@ -419,7 +419,7 @@ Algunas de las principales diferencias que debe tener en cuenta al diseñar la a
 
 #### <a name="directional-navigation"></a>Navegación direccional
 
-La navegación direccional se administra mediante una clase auxiliar de [Administrador de foco](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.FocusManager) de UWP, que toma la tecla direccional presionada (tecla de dirección, almohadilla D) e intenta cambiar el foco en la dirección visual correspondiente.
+La navegación direccional se administra mediante una clase auxiliar de [Administrador de foco](/uwp/api/Windows.UI.Xaml.Input.FocusManager) de UWP, que toma la tecla direccional presionada (tecla de dirección, almohadilla D) e intenta cambiar el foco en la dirección visual correspondiente.
 
 A diferencia del teclado, cuando una aplicación opta por el [modo de mouse](gamepad-and-remote-interactions.md#mouse-mode), la navegación direccional se aplica en toda la aplicación para el controlador de juegos y el control remoto. Consulte [interacciones de control remoto y controlador para juegos](gamepad-and-remote-interactions.md) para más información sobre la optimización de navegación direccional.
 
@@ -501,6 +501,7 @@ Si el último elemento tiene el foco y se presiona la tecla de dirección abajo,
 
 Se recomienda emular estos mismos comportamientos en los controles personalizados. El ejemplo de código sobre cómo implementar este comportamiento se puede encontrar en la documentación de [navegación del foco mediante programación](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) .
 
+
 ## <a name="test-your-app"></a>Prueba de la aplicación
 
 Pruebe la aplicación con todos los dispositivos de entrada admitidos para asegurarse de que los elementos de la interfaz de usuario se pueden navegar de forma coherente e intuitiva y de que ningún elemento inesperado interfiere con el orden de tabulación deseado.
@@ -510,6 +511,7 @@ Pruebe la aplicación con todos los dispositivos de entrada admitidos para asegu
 * [Identificación de dispositivos de entrada](identify-input-devices.md)
 * [Responder a la presencia del teclado táctil](respond-to-the-presence-of-the-touch-keyboard.md)
 * [Ejemplo de elementos visuales de foco](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+* [Detalles del teclado del control NavigationView](/windows/uwp/design/controls-and-patterns/navigationview#hierarchical-navigation) 
 
 ## <a name="appendix"></a>Apéndice
 
@@ -545,7 +547,7 @@ La siguiente es una lista de controles de no edición que pueden recibir el foco
 -   Barra de menús
 -   Elemento de menú
 -   Barra de herramientas
--   List
+-   Lista
 -   Elemento de lista
 
 Estos son algunos ejemplos de los diferentes modos del teclado táctil. La primera imagen es el diseño predeterminado, la segunda es el diseño para pulgares (puede que no esté disponible para todos los idiomas).
@@ -560,7 +562,7 @@ Estos son algunos ejemplos de los diferentes modos del teclado táctil. La prime
 
 La correcta interacción con el teclado permite a los usuarios emplear escenarios de aplicación básicos mediante el uso exclusivo del teclado. Es decir, que los usuarios pueden alcanzar todos los elementos interactivos de la interfaz de usuario y activar funciones predeterminadas. Hay una serie de factores que pueden afectar el grado de éxito, como la navegación por el teclado, las teclas de acceso para accesibilidad y las teclas de aceleración (o de método abreviado) para usuarios avanzados.
 
-**Tenga en cuenta**  que el teclado táctil no admite la alternancia y la mayoría de los comandos del sistema.
+**Nota:**    El teclado táctil no admite la alternancia y la mayoría de los comandos del sistema.
 
 #### <a name="on-screen-keyboard"></a>Teclado en pantalla
 Al igual que el teclado de software, el teclado en pantalla es un visual, teclado de software que puede usar en lugar del teclado físico para escribir y escribir datos mediante la función táctil, Mouse, pluma/lápiz u otro dispositivo señalador (no se requiere una pantalla táctil). El teclado en pantalla se proporciona para sistemas que no incluyen un teclado físico, o para usuarios cuyos problemas de movilidad les impidan usar los dispositivos de entrada físicos tradicionales. El teclado en pantalla simula la mayoría de las funciones, si no todas, de un teclado de hardware.

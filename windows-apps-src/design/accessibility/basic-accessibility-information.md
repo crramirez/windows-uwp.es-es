@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 39b019495235ca2ff4bec2f9e6bc1b9230a15599
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ff19eea5a2fa57d4e5b2728ddbd87e5d99ff539a
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969530"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234135"
 ---
 # <a name="expose-basic-accessibility-information"></a>Exponer información básica de accesibilidad  
 
@@ -56,7 +56,7 @@ No todos los controles tienen un valor. Los controles que tienen un valor propor
 ## <a name="influencing-the-ui-automation-tree-views"></a>Influencia en las vistas de árbol de automatización de la interfaz de usuario  
 El marco de trabajo de automatización de la interfaz de usuario tiene un concepto de vistas de árbol, en el que los clientes de automatización de la interfaz de usuario pueden recuperar las relaciones entre los elementos en una interfaz de usuario usando tres posibles vistas: raw, control y content. La vista control es la que suelen usar los clientes de automatización de la interfaz de usuario porque proporciona una buena representación y organización de los elementos en una interfaz de usuario que es interactiva. Las herramientas de pruebas normalmente permiten elegir qué vista de árbol se usará cuando la herramienta presente la organización de los elementos.
 
-De forma predeterminada, cualquier clase derivada de [**control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) y algunos otros elementos aparecerán en la vista de control cuando el marco de automatización de la interfaz de usuario represente la interfaz de usuario de una aplicación de aplicación de Windows. Pero a veces no quieres que un elemento aparezca en la vista control debido a la composición de la interfaz de usuario, en la que el elemento duplica información o presenta información que no es importante para los escenarios de accesibilidad. Usa la propiedad adjunta [**AutomationProperties.AccessibilityView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityviewproperty) para cambiar la manera en que los elementos se exponen en las vistas de árbol. Si colocas un elemento en el árbol **Raw**, la mayoría de las tecnologías de asistencia no notificarán ese elemento como parte de sus vistas. Para ver algunos ejemplos de cómo funciona esto en los controles existentes, abre el archivo XAML de referencia de diseño generic.xaml en un editor de texto y busca **AutomationProperties.AccessibilityView** en las plantillas.
+De forma predeterminada, cualquier clase derivada de [**control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) y algunos otros elementos aparecerán en la vista de control cuando el marco de automatización de la interfaz de usuario represente la interfaz de usuario de una aplicación de Windows. Pero a veces no quieres que un elemento aparezca en la vista control debido a la composición de la interfaz de usuario, en la que el elemento duplica información o presenta información que no es importante para los escenarios de accesibilidad. Usa la propiedad adjunta [**AutomationProperties.AccessibilityView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityviewproperty) para cambiar la manera en que los elementos se exponen en las vistas de árbol. Si colocas un elemento en el árbol **Raw**, la mayoría de las tecnologías de asistencia no notificarán ese elemento como parte de sus vistas. Para ver algunos ejemplos de cómo funciona esto en los controles existentes, abre el archivo XAML de referencia de diseño generic.xaml en un editor de texto y busca **AutomationProperties.AccessibilityView** en las plantillas.
 
 <span id="name_from_inner_text"/>
 <span id="NAME_FROM_INNER_TEXT"/>

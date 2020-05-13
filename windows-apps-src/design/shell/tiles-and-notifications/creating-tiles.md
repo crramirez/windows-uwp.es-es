@@ -1,5 +1,5 @@
 ---
-Description: Un icono es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de aplicación de Windows en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación.
+Description: Un icono es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de Windows en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación.
 title: Iconos de aplicaciones de Windows
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0882ac67766bc2ce037133cf8a39b5393f616e13
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 8823116b8fed3503ccf0dadc488956c93ae6c32b
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971000"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234456"
 ---
 # <a name="tiles-for-windows-apps"></a>Iconos de aplicaciones de Windows
 
  
 
-Un *icono* es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de aplicación de Windows en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación.Windows muestra este icono cuando se instala la aplicación por primera vez. Cuando se instala la aplicación, puedes cambiar el contenido del icono a través de notificaciones; por ejemplo, puedes cambiar el icono para comunicar nueva información al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.
+Un *icono* es una representación de la aplicación en el menú Inicio. Todas las aplicaciones tienen un icono. Al crear un nuevo proyecto de aplicación de Windows en Microsoft Visual Studio, incluye un icono predeterminado que muestra el nombre y el logotipo de la aplicación.Windows muestra este icono cuando se instala la aplicación por primera vez. Cuando se instala la aplicación, puedes cambiar el contenido del icono a través de notificaciones; por ejemplo, puedes cambiar el icono para comunicar nueva información al usuario, como titulares de noticias o el asunto del mensaje sin leer más reciente.
 
 ## <a name="configure-the-default-tile"></a>Configurar el icono predeterminado
 
@@ -55,11 +55,11 @@ Hay algunos elementos que deberías actualizar:
 
     Las imágenes a escala siguen esta convención de nomenclatura:
     
-    nombre de la imagen.*&lt;factor&gt;de escala*de escala. * &lt;&gt;* extensión de archivo de imagen * &lt;&gt; * 
+    * &lt; nombre &gt; *de la imagen.* &lt; factor &gt; de escala*de escala.* &lt; extensión &gt; de archivo de imagen* 
 
     Por ejemplo: SplashScreen. Scale-100. png
 
-    Al hacer referencia a la imagen, se hace referencia a ella como * &lt;nombre&gt;* de la imagen. extensión de archivo de imagen ("SplashScreen. png" en este ejemplo). * &lt;&gt; * El sistema seleccionará automáticamente la imagen a escala adecuada para el dispositivo desde las imágenes que hayas proporcionado.
+    Al hacer referencia a la imagen, se hace referencia a ella como * &lt; nombre &gt; *de la imagen.* &lt; extensión &gt; de archivo de imagen* ("SplashScreen. png" en este ejemplo). El sistema seleccionará automáticamente la imagen a escala adecuada para el dispositivo desde las imágenes que hayas proporcionado.
 
 -   No es necesario, pero sí muy recomendable, ofrecer logotipos para tamaños de iconos grandes y anchos para que el usuario pueda cambiar el tamaño del icono de la aplicación a esos tamaños. Para proporcionar estas imágenes adicionales, cree un elemento **DefaultTile** y use los atributos **Wide310x150Logo** y **Square310x310Logo** para especificar las imágenes adicionales:
 ```    XML

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, redes, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e693016fa6b87f231c1cbbfac4c2e55d44623c9
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: d2d1487c708b8618feec5cb735fb8af260608e00
+ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606374"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280275"
 ---
 # <a name="networking-for-games"></a>Conexión en red de juegos
 
@@ -121,7 +121,7 @@ El espacio de nombres [**Windows.Networking.Sockets**](https://docs.microsoft.co
 
 Encontrar un error en [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) o una operación [**StreamSocketListener**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener) hace que se arroje una excepción. La causa de la excepción es un valor de error representado como un valor **HRESULT**. El método [**SocketError.GetStatus**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.socketerror.getstatus) se usa para convertir un error de red de una operación de socket en un valor de enumeración [**SocketErrorStatus**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.SocketErrorStatus). La mayoría de los valores de enumeración **SocketErrorStatus** corresponden a un error devuelto por la operación de Windows Sockets nativa. Una aplicación puede filtrar según valores **SocketErrorStatus** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
-Para los errores de validación de parámetros, una aplicación también puede usar el **HRESULT** de la excepción para obtener información más detallada del error que causó la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Para la mayoría de los errores de validación de parámetros, el **HRESULT** devuelto es **E\_INVALIDARG**.
+Para los errores de validación de parámetros, una aplicación también puede usar el **HRESULT** de la excepción para obtener información más detallada del error que causó la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Para la mayoría de los errores de validación de parámetros, el **HRESULT** devuelto es **E \_ INVALIDARG**.
 
 Agregar código para controlar excepciones cuando se intenta hacer una conexión de socket de secuencias
 
@@ -273,7 +273,7 @@ El espacio de nombres [**Windows::Web::Http**](https://docs.microsoft.com/uwp/ap
 
 En las aplicaciones con C++, [**Platform::Exception**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [**Platform::Exception::HResult**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#hresult) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [**Platform::Exception::Message**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#message) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
-Para la mayoría de los errores de validación de parámetros, el **HRESULT** devuelto es **E\_INVALIDARG**. Para algunas llamadas a métodos no válidas, el valor de **HRESULT** devuelto es **E\_ILLEGAL\_METHOD\_CALL**.
+Para la mayoría de los errores de validación de parámetros, el **HRESULT** devuelto es **E \_ INVALIDARG**. Para algunas llamadas a métodos no válidas, el valor de **HRESULT** devuelto es **E\_ILLEGAL\_METHOD\_CALL**.
 
 Agregar código para controlar excepciones cuando se intenta usar [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) para conectarse a un servidor HTTP
 
@@ -386,9 +386,9 @@ using namespace Windows::Web::Http;
 * [**Windows:: Web:: http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)
 * [**Windows:: Networking:: Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
 
-**Muestras**
+**Ejemplos**
 
-* [Muestra de DatagramSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
+* [Muestra de DatagramSocket](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/ControlChannelTrigger%20StreamSocket%20sample%20(Windows%208))
 * [Ejemplo de HttpClient]( https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
-* [Muestra de proximidad](https://code.msdn.microsoft.com/windowsapps/Proximity-Sample-88129731)
+* [Muestra de proximidad](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/Proximity%20sample%20(Windows%208))
 * [Muestra StreamSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)

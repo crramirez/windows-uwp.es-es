@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b91b5d8ce39f34c6065f6dce61e90a752b36c8ef
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: bbc0f23ad712850e565814febe5b7e681e58a85d
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971070"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234572"
 ---
 # <a name="create-adaptive-tiles"></a>Crear iconos adaptables
 
@@ -208,7 +208,7 @@ TileContent content = new TileContent()
 
 Puedes controlar la personalización de marca en la parte inferior de un icono dinámico (el nombre para mostrar y el logotipo de esquina) mediante el atributo de personalización de marca de la carga de notificación. Puedes elegir mostrar "none", solo "name", solo "logo" o ambos con "nameAndLogo".
 
-**Nota**  Windows Mobile no admite el logotipo de la esquina, por lo que "logo" y "nameAndLogo" tienen como valor predeterminado "Name" en Mobile.
+**Nota:**    Windows Mobile no admite el logotipo de la esquina, por lo que "logo" y "nameAndLogo" tienen como valor predeterminado "Name" en Mobile.
 
  
 
@@ -280,7 +280,7 @@ TileContent content = new TileContent()
 
 Si no especificas la personalización de marca en la carga de notificaciones, las propiedades del icono base determinarán la personalización de marca. Si en el icono base se muestra el nombre para mostrar, a continuación, la personalización de marca se definirá de manera predeterminada en "name". De lo contrario, la personalización de marca se definirá de manera predeterminada en "none" si no se muestra el nombre para mostrar.
 
-**Tenga en cuenta**    que se trata de un cambio con respecto a Windows 8. x, en el que la personalización de marca predeterminada era "logo".
+**Nota:**    Se trata de un cambio con respecto a Windows 8. x, en el que la personalización de marca predeterminada era "logo".
 
  
 
@@ -406,7 +406,7 @@ new AdaptiveText()
 
 ![estilos de texto de iconos adaptables](images/adaptive-tiles-textstyles.png)
 
-**Tenga en cuenta**  que el estilo tiene como valor predeterminado Caption si no se especifica Hint-Style.
+**Nota:**    El estilo tiene como valor predeterminado Caption si no se especifica Hint-Style.
 
  
 
@@ -414,14 +414,14 @@ new AdaptiveText()
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;sugerencia de texto: estilo =\*""/&gt; | Alto de fuente               | Espesor de la fuente |
+| &lt;sugerencia de texto: estilo = " \* "/&gt; | Alto de fuente               | Espesor de la fuente |
 | caption                        | 12 píxeles efectivos (epx) | Normal     |
 | body                           | 15 epx                    | Normal     |
 | base                           | 15 epx                    | Semibold    |
 | subtitle                       | 20 epx                    | Normal     |
 | title                          | 24 epx                    | Semilight   |
-| subheader                      | 34 epx                    | Claro       |
-| encabezado                         | 46 epx                    | Claro       |
+| subheader                      | 34 epx                    | Ligero       |
+| encabezado                         | 46 epx                    | Ligero       |
 
  
 
@@ -485,7 +485,7 @@ Los grupos permiten declarar semánticamente que el contenido dentro del grupo e
 
 Con el fin de obtener la mejor experiencia en los dispositivos y las pantallas, proporciona varios grupos. El hecho de tener varios grupos permite que el icono se adapte a las pantallas más grandes.
 
-**Tenga en cuenta**  que el único elemento secundario válido de un grupo es un subgrupo.
+**Nota:**    El único elemento secundario válido de un grupo es un subgrupo.
 
  
 
@@ -679,7 +679,7 @@ Si quieres que la primera columna ocupe un 20 % del ancho total y que la segund
 
 ![subgrupos, con espesores que suman 100](images/adaptive-tiles-subgroups03.png)
 
-**Nota:**  se agrega automáticamente un margen de 8 píxeles entre las columnas.
+**Nota:**    Se agrega automáticamente un margen de 8 píxeles entre las columnas.
 
  
 

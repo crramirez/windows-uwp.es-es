@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3d2866b3e04d2fa531e9bd538badd96205a8c65
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 37fb7cc81d1a86a159526af5d580a02482d13f9a
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969430"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233975"
 ---
 # <a name="developing-inclusive-windows-apps"></a>Desarrollo de aplicaciones inclusivas de Windows  
 
-En este artículo se describe cómo desarrollar aplicaciones de aplicaciones de Windows accesibles. En concreto, se supone que conoces cómo diseñar la jerarquía lógica de la aplicación para tu aplicación. Aprenda a desarrollar aplicaciones de Windows accesibles que incluyen la navegación mediante teclado, la configuración de color y contraste y la compatibilidad con tecnologías de asistencia.
+En este artículo se describe cómo desarrollar aplicaciones de Windows accesibles. En concreto, se supone que conoces cómo diseñar la jerarquía lógica de la aplicación para tu aplicación. Aprenda a desarrollar aplicaciones de Windows accesibles que incluyen la navegación mediante teclado, la configuración de color y contraste y la compatibilidad con tecnologías de asistencia.
 
 Si todavía no lo ha hecho, empiece leyendo el diseño del [software inclusivo](designing-inclusive-software.md).
 

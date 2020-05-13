@@ -9,12 +9,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 207ad9cb3008f1a36402e413b7e246aa2135ae26
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5fd39acbf6549cddc075f8b63779f06a802bfdbb
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970170"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234673"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interacciones con controlador para juegos y control remoto
 
@@ -22,7 +22,7 @@ ms.locfileid: "82970170"
 
 ***Muchas experiencias de interacción se comparten entre el controlador de juegos, el control remoto y el teclado***
 
-Cree experiencias de interacción en las aplicaciones de la aplicación Windows para asegurarse de que la aplicación es utilizable y accesible a través de los tipos de entrada de PC, portátiles y tabletas tradicionales (mouse, teclado, toque, etc.), así como los tipos de entrada típicos de la experiencia de TV y *10 pies* , como el controlador de juegos y el control remoto.
+Cree experiencias de interacción en las aplicaciones Windows para asegurarse de que la aplicación es utilizable y accesible a través de los tipos de equipos de entrada tradicionales, portátiles y tabletas (mouse, teclado, toque, etc.), así como los tipos de entrada típicos de la experiencia de TV y *10 pies* , como el controlador para juegos y el control remoto.
 
 Consulte [diseño de Xbox y TV](../devices/designing-for-tv.md) para obtener instrucciones generales de diseño sobre aplicaciones Windows en la experiencia de *10 pies* .
 
@@ -93,7 +93,7 @@ En la tabla siguiente se enumeran todos los botones de hardware que admiten las 
 
 UWP asigna automáticamente el comportamiento de entrada de teclado existente al controlador de juegos y a la entrada de control remoto. La siguiente tabla enumera estas asignaciones integradas.
 
-| Keyboard              | Controlador para juegos/control remoto                        |
+| Teclado              | Controlador para juegos/control remoto                        |
 |-----------------------|---------------------------------------|
 | Teclas de dirección            | Pad-D (también la palanca izquierda en el controlador para juegos)    |
 | Barra espaciadora              | A/Botón de selección                       |
@@ -169,7 +169,7 @@ La siguiente tabla enumera la compatibilidad con aceleradores integrada en la UW
 Si tu aplicación admite una navegación del foco adecuada para el teclado, esto se trasladará bien al controlador para juegos y al control remoto.
 La navegación con las teclas de dirección se asigna al **pad-D** (así como a la **palanca izquierda** en el controlador para juegos), y la interacción con los elementos de la interfaz de usuario se asigna a la tecla **Entrar/Seleccionar** (ver [Controlador para juegos y control remoto](#gamepad-and-remote-control)).
 
-Muchos eventos y propiedades se usan tanto en el teclado como&mdash;en el controlador `KeyDown` de `KeyUp` juegos y ambos se activan y eventos, y ambos solo navegarán `IsTabStop="True"` a `Visibility="Visible"`los controles que tengan las propiedades y. Para obtener directrices de diseño para teclado, consulta [Interacciones con el teclado](../input/keyboard-interactions.md).
+Muchos eventos y propiedades se usan tanto en el teclado como en el controlador de juegos y ambos se &mdash; activan `KeyDown` y `KeyUp` eventos, y ambos solo navegarán a los controles que tengan las propiedades `IsTabStop="True"` y `Visibility="Visible"` . Para obtener directrices de diseño para teclado, consulta [Interacciones con el teclado](../input/keyboard-interactions.md).
 
 Si la compatibilidad con el teclado se implementa correctamente, tu aplicación funcionará razonablemente bien; sin embargo, esto puede requerir algo más de trabajo para admitir todos los escenarios. Piensa en las necesidades específicas de tu aplicación para proporcionar la mejor experiencia posible para el usuario.
 
@@ -195,8 +195,8 @@ page.GotFocus += (object sender, RoutedEventArgs e) =>
 Existen tres razones comunes por las que navegación XY puede no funcionar del modo previsto:
 
 * La propiedad [IsTabStop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istabstop) o [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) no está correctamente establecida.
-* El control que recibe el foco es realmente mayor de&mdash;lo que cree que la navegación XY examina el tamaño total del control ([ActualWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth) y [ActualHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualheight)), no solo la parte del control que representa algo interesante.
-* Un control enfocable está en la parte superior&mdash;de otra navegación XY no es compatible con los controles superpuestos.
+* El control que recibe el foco es realmente mayor de lo que cree que la &mdash; navegación XY examina el tamaño total del control ([ActualWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualwidth) y [ActualHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.actualheight)), no solo la parte del control que representa algo interesante.
+* Un control enfocable está en la parte superior de otra &mdash; navegación XY no es compatible con los controles superpuestos.
 
 Si la navegación XY sigue sin funcionar de la manera esperada después de solucionar estos problemas, puedes apuntar manualmente al elemento que quieres que tenga el foco mediante el método que se describe en [Reemplazo de la navegación predeterminada](#overriding-the-default-navigation).
 
@@ -313,7 +313,7 @@ La siguiente es una aplicación inmobiliaria imaginaria que muestra una lista de
 
 #### <a name="problem-ui-elements-located-after-long-scrolling-listgrid"></a>Problema: algunos elementos de la interfaz de usuario se encuentran después de una cuadrícula/lista de desplazamiento larga<a name="problem-ui-elements-located-after-long-scrolling-list-grid"></a>
 
-La [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) de las propiedades que se muestra en la siguiente imagen es una lista con desplazamiento muy larga. Si la [participación](#focus-engagement)*no* se requiere en la `ListView`, cuando el usuario navegue a la lista, el foco se colocará en el primer elemento en la lista. Para que el usuario llegue al botón **anterior** o **siguiente**, deberá pasar por todos los elementos de la lista. En casos como este, en los que es difícil&mdash;que el usuario recorra la lista completa, es decir, cuando la lista no es lo suficientemente breve para que esta&mdash;experiencia sea aceptable, puede ser conveniente tener en cuenta otras opciones.
+La [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) de las propiedades que se muestra en la siguiente imagen es una lista con desplazamiento muy larga. Si la [participación](#focus-engagement)*no* se requiere en la `ListView`, cuando el usuario navegue a la lista, el foco se colocará en el primer elemento en la lista. Para que el usuario llegue al botón **anterior** o **siguiente**, deberá pasar por todos los elementos de la lista. En casos como este, en los que es difícil que el usuario recorra la lista completa &mdash; , es decir, cuando la lista no es lo suficientemente breve para que esta experiencia sea aceptable, puede ser &mdash; conveniente tener en cuenta otras opciones.
 
 ![Aplicación inmobiliaria: una lista de 50 elementos sencillos requiere 51 clics para llegar a los botones de abajo](images/designing-for-tv/2d-focus-navigation-and-interaction-real-estate-app-list.png)
 
@@ -383,7 +383,7 @@ El siguiente diagrama muestra las asignaciones de los botones del controlador pa
 > [!NOTE]
 > El modo de mouse solo se admite en Xbox One con controlador para juegos/control remoto. En las otras familias de dispositivos y tipos de entrada se omite silenciosamente.
 
-Use la propiedad [RequiresPointer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.requirespointer) en un control o una página para activar el modo de mouse. Esta propiedad tiene tres valores posibles: `Never` (valor predeterminado), `WhenEngaged`y. `WhenFocused`
+Use la propiedad [RequiresPointer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.requirespointer) en un control o una página para activar el modo de mouse. Esta propiedad tiene tres valores posibles: `Never` (valor predeterminado), `WhenEngaged` y `WhenFocused` .
 
 ### <a name="activating-mouse-mode-on-a-control"></a>Activación del modo de mouse en un control
 
@@ -401,7 +401,7 @@ Cuando el usuario utiliza un control con `RequiresPointer="WhenEngaged"`, se act
 > [!NOTE]
 > Si un control activa el modo de mouse cuando se usa, también debe solicitar la activación de `IsEngagementRequired="true"`; de lo contrario, nunca se activará el modo de mouse.
 
-Cuando un control está en modo de mouse, sus controles anidados también estarán en modo de mouse. Se omitirá&mdash;el modo solicitado de sus elementos secundarios, no es posible que un elemento primario esté en modo de mouse pero un elemento secundario no sea.
+Cuando un control está en modo de mouse, sus controles anidados también estarán en modo de mouse. Se omitirá el modo solicitado de sus elementos secundarios &mdash; , no es posible que un elemento primario esté en modo de mouse pero un elemento secundario no sea.
 
 Además, el modo solicitado de un control solo se inspecciona cuando obtiene el foco, por lo que el modo no cambiará dinámicamente mientras tiene el foco.
 
@@ -446,7 +446,7 @@ Prueba poniendo el foco inicial en la región superior izquierda de tu aplicaci�
 
 ### <a name="making-focus-clearly-visible"></a>Hacer que el foco sea claramente visible
 
-Siempre debe haber un foco visual visible en la pantalla para que el usuario pueda continuar desde donde estaba sin necesidad de buscar el foco. De forma similar, en todo momento&mdash;debe haber un elemento enfocable en la pantalla, por ejemplo, no usar elementos emergentes solo con texto y sin elementos que puedan recibir el foco.
+Siempre debe haber un foco visual visible en la pantalla para que el usuario pueda continuar desde donde estaba sin necesidad de buscar el foco. De forma similar, en todo momento debe haber un elemento enfocable en la pantalla &mdash; , por ejemplo, no usar elementos emergentes solo con texto y sin elementos que puedan recibir el foco.
 
 Una excepción a esta regla serían las experiencias de pantalla completa, como ver vídeos o imágenes, en cuyo caso no sería adecuado mostrar el foco visual.
 
@@ -538,9 +538,9 @@ Esto permitirá al usuario saltear la `ListView` rápidamente simplemente presio
 
 [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) es ligeramente diferente a estos controles, ya que tiene sus propias peculiaridades que hay que tener en cuenta. Si tienes un `ScrollViewer` con contenido activable, desplazándose al `ScrollViewer` te permitirá por defecto moverte por sus elementos activables. Como en `ListView`, debes desplazarte por cada elemento para navegar fuera de `ScrollViewer`.
 
-Si no `ScrollViewer` tiene *no* contenido&mdash;que pueda recibir el foco, por ejemplo, si solo&mdash;contiene texto que `IsFocusEngagementEnabled="True"` se puede establecer para que el `ScrollViewer` usuario pueda interactuar con el botón **a/seleccionar** . Después de haberlo activado, pueden desplazarse por el texto mediante el **pad-D/palanca izquierda**y, a continuación, presionar el botón **B/Atrás** para desactivarlo una vez que han terminado.
+Si `ScrollViewer` *no* tiene contenido que pueda recibir el foco &mdash; , por ejemplo, si solo contiene texto &mdash; que se puede establecer para que `IsFocusEngagementEnabled="True"` el usuario pueda interactuar `ScrollViewer` con el botón **a/seleccionar** . Después de haberlo activado, pueden desplazarse por el texto mediante el **pad-D/palanca izquierda**y, a continuación, presionar el botón **B/Atrás** para desactivarlo una vez que han terminado.
 
-Otro enfoque sería `IsTabStop="True"` establecer en `ScrollViewer` , de modo que el usuario no tenga que interactuar con el control&mdash;y, a continuación, simplemente colocar el foco en él y, a continuación, desplazarse con el **Panel D o el stick izquierdo** cuando `ScrollViewer`no haya ningún elemento que pueda recibir el foco dentro de.
+Otro enfoque sería establecer `IsTabStop="True"` en `ScrollViewer` , de modo que el usuario no tenga que interactuar con el control &mdash; y, a continuación, simplemente colocar el foco en él y, a continuación, desplazarse con el **Panel D o el stick izquierdo** cuando no haya ningún elemento que pueda recibir el foco dentro de `ScrollViewer` .
 
 ### <a name="focus-engagement-defaults"></a>Valores predeterminados de participación del foco
 
@@ -557,7 +557,7 @@ Algunos controles causan la captura del foco con frecuencia suficiente como para
 | SemanticZoom          | Off                       |
 | Control deslizante                | Por                        |
 
-El resto de los controles de Windows producirá cambios de comportamiento o visuales `IsFocusEngagementEnabled="True"`cuando.
+El resto de los controles de Windows producirá cambios de comportamiento o visuales cuando `IsFocusEngagementEnabled="True"` .
 
 ## <a name="summary"></a>Resumen
 
@@ -566,4 +566,4 @@ Puede compilar aplicaciones de Windows optimizadas para un dispositivo o una exp
 ## <a name="related-articles"></a>Artículos relacionados
 
 - [Diseño para Xbox y televisión](../devices/designing-for-tv.md)
-- [Dispositivos principales para aplicaciones de aplicaciones de Windows](index.md)
+- [Dispositivos principales para aplicaciones Windows](index.md)

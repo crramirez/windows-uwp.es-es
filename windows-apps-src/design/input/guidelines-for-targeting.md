@@ -8,16 +8,16 @@ ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 199c120dcc85e5c113d6d4d529699a3f2fb28aa1
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 13737e9aeb906e0430b2a18dd75ae1fce3a75956
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970090"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234585"
 ---
 # <a name="guidelines-for-touch-targets"></a>Directrices para destinos táctiles
 
-Todos los elementos de interfaz de usuario interactivos de la aplicación de aplicación de Windows deben ser lo suficientemente grandes como para que los usuarios accedan y utilicen con precisión, independientemente del tipo de dispositivo o del método de entrada.
+Todos los elementos de interfaz de usuario interactivos de la aplicación de Windows deben ser lo suficientemente grandes como para que los usuarios accedan y utilicen con precisión, independientemente del tipo de dispositivo o del método de entrada.
 
 La compatibilidad con la entrada táctil (y la naturaleza relativamente poco precisa del área de contacto táctil) requiere una optimización adicional con respecto al tamaño de destino y al diseño del control, ya que el número más grande y más complejo de datos de entrada que se comunica mediante el digitalizador táctil se usa para determinar el destino previsto (o el más probable) del usuario.
 
@@ -32,7 +32,7 @@ En este tema, se describen estos comportamientos predeterminados para que pueda 
 El *tamaño Fluent Standard* se ha creado para proporcionar un equilibrio entre la densidad de la información y la comodidad del usuario. De hecho, todos los elementos de la pantalla se alinean con un destino de 40 x 40 píxeles efectivos (epx), que permite que los elementos de la interfaz de usuario se alineen con una cuadrícula y se escalen de forma adecuada en función del escalado de nivel de sistema.
 
 > [!NOTE]
-> Para obtener más información sobre los píxeles efectivos y el escalado, consulte [Introducción al diseño de aplicaciones de Windows](../basics/design-and-ui-intro.md#effective-pixels-and-scaling) .
+> Para obtener más información sobre los píxeles efectivos y el escalado, consulta [Introducción al diseño de aplicaciones de Windows](../basics/design-and-ui-intro.md#effective-pixels-and-scaling).
 >
 > Para obtener más información sobre el escalado de nivel de sistema, consulta [Alineación, margen, espaciado interno](../layout/alignment-margin-padding.md).
 
@@ -44,7 +44,7 @@ Las aplicaciones pueden mostrar un nivel más alto de densidad de información c
 
 El ajuste de tamaño compacto se puede aplicar en el nivel de página o de cuadrícula.
 
-### <a name="page-level"></a>De página
+### <a name="page-level"></a>Nivel de página
 
 ```xaml
 <Page.Resources>

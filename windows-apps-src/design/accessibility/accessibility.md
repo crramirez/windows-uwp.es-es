@@ -1,5 +1,5 @@
 ---
-Description: Presenta conceptos de accesibilidad relacionados con las aplicaciones de aplicaciones de Windows.
+Description: Presenta los conceptos de accesibilidad relacionados con las aplicaciones de Windows.
 ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
 title: Accesibilidad
 label: Accessibility
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a632fb3cb6b7a3ad2cda85e0596904194f56b347
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 0e410094f738860e71dadb960fccbdbc59306050
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969600"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234142"
 ---
 # <a name="accessibility"></a>Accesibilidad  
 
-La accesibilidad es acerca de la creación de experiencias que hacen que la aplicación de aplicaciones de Windows sea utilizable por personas que usan tecnología en una amplia gama de entornos y se aproximan a la interfaz de usuario con una variedad de necesidades y experiencias. En algunos casos, los requisitos de accesibilidad están impuestos por ley. Sin embargo, resulta buena idea abordar los problemas de accesibilidad independientemente de los requisitos legales, de modo que tus aplicaciones lleguen al mayor público posible.
+La accesibilidad es acerca de la creación de experiencias que hacen que la aplicación Windows sea utilizable por personas que usan tecnología en una amplia gama de entornos y se aproximan a la interfaz de usuario con una variedad de necesidades y experiencias. En algunos casos, los requisitos de accesibilidad están impuestos por ley. Sin embargo, resulta buena idea abordar los problemas de accesibilidad independientemente de los requisitos legales, de modo que tus aplicaciones lleguen al mayor público posible.
 
 > También hay una declaración de Microsoft Store con respecto a la accesibilidad de la aplicación.
 
@@ -31,6 +31,7 @@ La accesibilidad es acerca de la creación de experiencias que hacen que la apli
 | [Lista de comprobación de accesibilidad](accessibility-checklist.md) | Proporciona una lista de comprobación para ayudarle a asegurarse de que la aplicación de Windows esté accesible. |
 | [Exponer información básica de accesibilidad](basic-accessibility-information.md) | La información de accesibilidad básica se suele clasificar en nombre, rol y valor. En este tema se describe el código para ayudar a que tu aplicación exponga la información básica requerida por las tecnologías de asistencia. |
 | [Accesibilidad de teclado](keyboard-accessibility.md) | Si tu aplicación no proporciona un buen acceso de teclado, los usuarios invidentes o con problemas de motricidad pueden llegar a tener dificultades para usar tu aplicación o, probablemente, no puedan usarla. |
+| [Botones del sistema de hardware y lectores de pantalla](system-button-narration.md) | Los lectores de pantalla, como [narrador](https://support.microsoft.com/en-us/help/22798/windows-10-complete-guide-to-narrator), deben ser capaces de reconocer y controlar los eventos de los botones del sistema de hardware y comunicar su estado a los usuarios. En algunos casos, es posible que el lector de pantalla tenga que controlar los eventos de botón de forma exclusiva y no permitir que se propaguen a otros controladores. |
 | [Puntos de referencia y encabezados](landmarks-and-headings.md) | Los puntos de referencia y los encabezados definen secciones de una interfaz de usuario que ayudan a que la navegación sea eficaz para los usuarios de tecnología de asistencia, como son los lectores de pantalla. |
 | [Temas de contraste alto](high-contrast-themes.md) | Describe los pasos necesarios para asegurarse de que se puede usar la aplicación de Windows cuando un tema de contraste alto está activo. |
 | [Requisitos de texto accesible](accessible-text-requirements.md) | En este tema se describen los procedimientos recomendados sobre accesibilidad de texto en una aplicación mediante la configuración de los colores de texto y fondo, de forma que cumplan con la relación de contraste necesaria. En este tema también se describen los roles de automatización de la interfaz de usuario de Microsoft que pueden tener los elementos de texto en una aplicación de Windows y los procedimientos recomendados para el texto de los gráficos. |

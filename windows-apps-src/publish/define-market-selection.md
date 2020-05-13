@@ -1,47 +1,47 @@
 ---
-Description: La Microsoft Store llega a clientes de más de 200 países y regiones de todo el mundo.
+Description: El Microsoft Store llega a los clientes en más de 200 países y regiones de todo el mundo.
 title: Definir la selección del mercado
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, mercados, países, regiones
+keywords: Windows 10, UWP, mercados, países, regiones
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b1a51a98746594a8563de2f309bec9cb5dda0b3
-ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
+ms.openlocfilehash: ed80d8ef727d3c9be276b295a504b8cc02b373aa
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81545055"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234654"
 ---
 # <a name="define-market-selection"></a>Definir la selección del mercado
 
 
-La Microsoft Store llega a clientes de más de 200 países y regiones de todo el mundo. Puedes elegir los mercados en los que quieres ofrecer tu aplicación, con la opción de personalizar muchas [precios y disponibilidad](set-app-pricing-and-availability.md) características por mercado o por grupo de los mercados.
+El Microsoft Store llega a los clientes en más de 200 países y regiones de todo el mundo. Puede elegir los mercados en los que le gustaría ofrecer la aplicación, con la opción de personalizar muchos [precios y](set-app-pricing-and-availability.md) características de disponibilidad por mercado o por grupo de mercados.
 
 Para obtener información que ayude a que su aplicación sea adecuada para los clientes de todo el mundo, consulte [directrices para la globalización](../design/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) y [haga que su aplicación sea localizable](../design/globalizing/prepare-your-app-for-localization.md).
 
 > [!NOTE]
-> Aunque este tema hace referencia a las aplicaciones, la selección del mercado para envíos de complementos utiliza el mismo proceso.
+> Aunque este tema se refiere a las aplicaciones, la selección de mercado de los envíos de complementos usa el mismo proceso.
 
 ## <a name="markets"></a>Mercados
 
-De manera predeterminada, ofreceremos tu aplicación en todos los mercados posibles, incluidos los mercados futuros que podamos agregar posteriormente, al precio base.
+De forma predeterminada, ofreceremos la aplicación en todos los mercados posibles, incluidos los mercados futuros que podamos agregaremos después, a su precio base.
 
-Si lo prefieres, puedes definir los mercados específicos en los que quieres ofrecer tu aplicación. Para ello, selecciona **Mostrar opciones** en la sección **Mercados** de la página **Precios y disponibilidad**. Esta acción mostrará la ventana emergente de **Selección de mercado**, donde puedes elegir los mercados en los que se va a ofrecer tu aplicación.
+Si lo prefiere, puede definir los mercados específicos en los que le gustaría ofrecer la aplicación. Para ello, seleccione **Mostrar opciones** en la sección **mercados** en la página **precios y disponibilidad** . Se mostrará la ventana emergente de **selección de mercado** , donde puede elegir los mercados en los que se va a ofrecer la aplicación.
 
-De manera predeterminada, se seleccionan todos los mercados. Puedes anular la selección de mercados individuales para excluirlos o puedes hacer clic en **Anular toda la selección** y, a continuación, agregar los mercados individuales que quieras. Puedes buscar un mercado determinado en la barra de búsqueda y también puedes cambiar la lista desplegable de **Todos los mercados** a **Mercados de Xbox** si solo quieres ver los mercados en los que puedes vender productos de Xbox. Cuando hayas terminado, haz clic en **Aceptar** para guardar tus selecciones.
+De forma predeterminada, se seleccionan todos los mercados. Puede anular la selección de mercados individuales para excluirlos, o puede hacer clic en **anular la selección de todo** y, a continuación, agregar mercados individuales de su elección. Puede buscar un mercado determinado en la barra de búsqueda, y también puede cambiar la lista desplegable de **todos los mercados a los** **mercados de Xbox** si solo desea ver los mercados en los que puede vender productos de Xbox. Cuando haya terminado, haga clic en **Aceptar** para guardar las selecciones.
 
-Ten en cuenta que estas selecciones se aplican solo a las nuevas adquisiciones; si alguien que ya tenga la aplicación en un mercado determinado y más adelante lo quita, las personas que ya tienen la aplicación en dicho mercado pueden seguir usándola, pero no obtendrán las actualizaciones que envíes y ningún cliente nuevo puede conseguir la aplicación en ese mercado.
+Tenga en cuenta que las selecciones aquí solo se aplican a las nuevas adquisiciones. Si alguien ya tiene la aplicación en un determinado mercado y posteriormente quita ese mercado, las personas que ya tienen la aplicación en ese mercado podrán seguir utilizándola, pero no obtendrán las actualizaciones que envíe y ningún cliente nuevo en dicho mercado podrá obtener su aplicación.
 
 > [!IMPORTANT]
-> Es su responsabilidad cumplir los requisitos legales locales, incluso si esos requisitos no aparecen aquí o en el centro de Partners.
+> Es su responsabilidad cumplir los requisitos legales locales, incluso si esos requisitos no aparecen aquí ni en el Centro de partners.
 
 Ten en cuenta que incluso si seleccionas todos los mercados, las leyes y restricciones locales u otros factores pueden impedir que ciertas aplicaciones se muestren en algunos países y regiones. Además, algunos mercados pueden tener requisitos específicos en relación con las clasificaciones por edades. Si la aplicación no cumple estos requisitos, no podremos ofrecer tu aplicación en ese mercado. Consulta [Clasificaciones por edades](age-ratings.md) Para obtener más información.
 
 > [!NOTE]
 > En el caso de las aplicaciones publicadas anteriormente que incluyen paquetes destinados a Windows 8 o Windows 8.1, algunos mercados individuales se tratan como un mercado único "resto del mundo". Para obtener más información, consulta [Mercados "Resto del mundo" para Windows 8.x](#rest-of-world-markets-for-windows-8x).
 
-También verás una casilla que te permitirá indicar si ofreces tu aplicación en cualquier mercado que la Tienda pueda agregar en un futuro. Si dejas esta casilla marcada y, a más adelante, añadimos nuevos mercados, el precio base y la fecha de disponibilidad general de tu envío se usarán para tu aplicación en estos mercados. Si no quieres que esto ocurra, puedes desactivar esta casilla y, en ese caso, no mostraremos tu aplicación en los futuros mercados (aunque siempre puedes agregarlos más tarde).
+También verá una casilla que le permite indicar si desea ofrecer su aplicación en cualquier mercado que la tienda pueda agregar en el futuro. Si deja activada esta casilla y posteriormente agregamos nuevos mercados, el precio base y la fecha de disponibilidad general del envío se utilizarán para la aplicación en esos mercados. Si no quiere que esto suceda, puede desactivar esta casilla, en cuyo caso no se mostrará la aplicación en los mercados futuros (aunque siempre se puede agregar más adelante).
  
 
 ## <a name="microsoft-store-consumer-markets"></a>Microsoft Store mercados de consumidores
@@ -50,7 +50,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
 
 
 <table>
-  
+
   <tr>
     <td>Afganistán</td>
     <td>Islas Åland</td>
@@ -77,7 +77,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>Bahamas</td>
-    <td>Baréin</td>
+    <td>Bahréin</td>
     <td>Bangladés</td>
     <td>Barbados</td>
   </tr>
@@ -102,7 +102,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Territorio Británico del Océano Índico</td>
     <td>Islas Vírgenes Británicas</td>
-    <td>Brunéi</td>
+    <td>Brunei</td>
     <td>Bulgaria</td>
   </tr>
   <tr>
@@ -124,16 +124,16 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Isla de Navidad</td>
   </tr>
   <tr>
-    <td>Islas Cocos</td>
-    <td>Colombia *</td>
-    <td>Comoras</td>
-    <td>Congo</td>
+    <td>Islas Cocos (Keeling)</td>
+    <td>Colombia</td>
+    <td>Comores</td>
+    <td>Congo (RDC)</td>
   </tr>
   <tr>
     <td>Congo (RDC)</td>
     <td>Islas Cook</td>
     <td>Costa Rica</td>
-    <td>Côte d’Ivoire</td>
+    <td>Costa de Marfil</td>
   </tr>
   <tr>
     <td>Croacia</td>
@@ -142,7 +142,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Checo *</td>
   </tr>
   <tr>
-    <td>Dinamarca *</td>
+    <td>País</td>
     <td>Yibuti</td>
     <td>Dominica</td>
     <td>República Dominicana</td>
@@ -161,9 +161,9 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>Islas Feroe</td>
-    <td>Fiyi</td>
-    <td>Finlandia *</td>
-    <td>Francia *</td>
+    <td>Islas Fiji</td>
+    <td>Finlandés</td>
+    <td>Francés</td>
   </tr>
   <tr>
     <td>Guayana Francesa</td>
@@ -179,7 +179,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>Gibraltar</td>
-    <td>Grecia *</td>
+    <td>Grecia</td>
     <td>Groenlandia</td>
     <td>Granada</td>
   </tr>
@@ -192,30 +192,30 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Guinea</td>
     <td>Guinea-Bisáu</td>
-    <td>Guyana</td>
+    <td>Guayana</td>
     <td>Haití</td>
   </tr>
   <tr>
-    <td>Islas Heard y McDonald</td>
+    <td>Isla Heard e Islas McDonald</td>
     <td>Honduras</td>
     <td>RAE de Hong Kong *</td>
-    <td>Hungría *</td>
+    <td>Hungría</td>
   </tr>
   <tr>
     <td>Islandia</td>
-    <td>India *</td>
+    <td>India</td>
     <td>Indonesia</td>
-    <td>Irak</td>
+    <td>Iraq</td>
   </tr>
   <tr>
-    <td>Irlanda *</td>
+    <td>Irlanda</td>
     <td>Isla de Man</td>
-    <td>Israel *</td>
-    <td>Italia *</td>
+    <td>Israel</td>
+    <td>Italia</td>
   </tr>
   <tr>
     <td>Jamaica</td>
-    <td>Japón *</td>
+    <td>Chou</td>
     <td>Jersey</td>
     <td>Jordania</td>
   </tr>
@@ -223,7 +223,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Kazajistán</td>
     <td>Kenia</td>
     <td>Kiribati</td>
-    <td>Corea *</td>
+    <td>Corea</td>
   </tr>
   <tr>
     <td>Kuwait</td>
@@ -244,9 +244,9 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>RAE de Macao</td>
   </tr>
   <tr>
-    <td>Macedonia (ERYM)</td>
+    <td>Macedonia del Norte</td>
     <td>Madagascar</td>
-    <td>Malawi</td>
+    <td>Malaui</td>
     <td>Malasia</td>
   </tr>
   <tr>
@@ -262,7 +262,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Mayotte</td>
   </tr>
   <tr>
-    <td>México *</td>
+    <td>Mexicano</td>
     <td>Micronesia</td>
     <td>Moldova</td>
     <td>Mónaco</td>
@@ -281,7 +281,7 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>Nepal</td>
-    <td>Países Bajos *</td>
+    <td>Bajos</td>
     <td>Nueva Caledonia</td>
     <td>Nueva Zelanda *</td>
   </tr>
@@ -294,13 +294,13 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Isla Norfolk</td>
     <td>Islas Marianas del Norte</td>
-    <td>Noruega *</td>
+    <td>Noruega</td>
     <td>Omán</td>
   </tr>
   <tr>
     <td>Pakistán</td>
     <td>Palaos</td>
-    <td>Autoridad Palestina</td>
+    <td>Autoridad palestina</td>
     <td>Panamá</td>
   </tr>
   <tr>
@@ -311,19 +311,19 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   </tr>
   <tr>
     <td>Islas Pitcairn</td>
-    <td>Polonia *</td>
-    <td>Portugal *</td>
+    <td>Polonia</td>
+    <td>Portugal</td>
     <td>Qatar</td>
   </tr>
   <tr>
     <td>Reunión</td>
-    <td>Rumania</td>
-    <td>Rusia *</td>
+    <td>Rumanía</td>
+    <td>Rusia</td>
     <td>Ruanda</td>
   </tr>
   <tr>
     <td>San Bartolomé</td>
-    <td>Santa Elena, Ascensión y Tristán de Acuña</td>
+    <td>Santa Elena, Ascensión y Tristán da Cunha</td>
     <td>San Cristóbal y Nieves</td>
     <td>Santa Lucía</td>
   </tr>
@@ -343,11 +343,11 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Serbia</td>
     <td>Seychelles</td>
     <td>Sierra Leona</td>
-    <td>Singapur *</td>
+    <td>Singapur</td>
   </tr>
   <tr>
     <td>Sint Maarten (zona neerlandesa)</td>
-    <td>Eslovaquia *</td>
+    <td>Eslovaca</td>
     <td>Eslovenia</td>
     <td>Islas Salomón</td>
   </tr>
@@ -355,18 +355,18 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Somalia</td>
     <td>Sudáfrica *</td>
     <td>Georgia del Sur e Islas Sandwich del Sur</td>
-    <td>España *</td>
+    <td>Portugal</td>
   </tr>
   <tr>
     <td>Sri Lanka</td>
     <td>Surinam</td>
-    <td>Svalbard y Jan Mayen</td>
+    <td>Islas Svalbard y Jan Mayen</td>
     <td>Suazilandia</td>
   </tr>
   <tr>
-    <td>Suecia *</td>
-    <td>Suiza *</td>
-    <td>Taiwán *</td>
+    <td>Suecia</td>
+    <td>Suiza</td>
+    <td>Taiwan</td>
     <td>Tayikistán</td>
   </tr>
   <tr>
@@ -382,14 +382,14 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
     <td>Túnez</td>
   </tr>
   <tr>
-    <td>Turquía *</td>
+    <td>Pavo</td>
     <td>Turkmenistán</td>
     <td>Islas Turcas y Caicos</td>
     <td>Tuvalu</td>
   </tr>
   <tr>
-    <td>Islas menores alejadas de los EE. UU.</td>
-    <td>Islas Vírgenes de los Estados Unidos de América</td>
+    <td>EE. UU. Islas menores alejadas de EE. UU.</td>
+    <td>EE. UU. Vírgenes de EE. UU.</td>
     <td>Uganda</td>
     <td>Ucrania</td>
   </tr>
@@ -408,12 +408,12 @@ Puedes elegir que la aplicación (o complemento) aparezca en uno o varios de los
   <tr>
     <td>Vietnam</td>
     <td>Wallis y Futuna</td>
-    <td>Sáhara Occidental (en conflicto)</td>
     <td>Yemen</td>
+    <td>Zambia</td>
   </tr>
   <tr>
-    <td>Zambia</td>
     <td>Zimbabue</td>
+    <td></td>
     <td></td>
     <td></td>
   </tr>
@@ -430,47 +430,47 @@ El ajuste de expansión comercial se aplicará a todas las transacciones procesa
 
 | País/región       | Método de pago  | Ajuste de expansión comercial | Fecha efectiva |
 |----------------------|-----------------|-------------------------------|----------------|
-| Argentina            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Australia            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Austria              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Bélgica              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Brasil               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Canadá               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Chile                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| China                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Colombia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Checo              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Dinamarca              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Finlandia              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| France               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Germany              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Grecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Hong Kong            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Hungría              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| India                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Irlanda              | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Israel               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Italia                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Japan                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| México               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Países Bajos          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Nueva Zelanda          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Polonia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Portugal             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Rusia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Arabia Saudí         | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Singapur            | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Eslovaquia             | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Sudáfrica         | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Corea del Sur          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| España                | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Suecia               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Suiza          | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Taiwán               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Turquía               | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Emiratos Árabes Unidos | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Reino Unido       | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
-| Estados Unidos        | Tarjeta de regalo       | 2,24 %                         | Marzo de 2016     |
+| Argentina            | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Australia            | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Austria              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Bélgica              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Brasil               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Canadá               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Chile                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| China                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Colombia             | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Chequia              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Dinamarca              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Finlandia              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Francia               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Alemania              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Grecia               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| RAE de Hong Kong            | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Hungría              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| India                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Irlanda              | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Israel               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Italia                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Japón                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| México               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Países Bajos          | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Nueva Zelanda          | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Polonia               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Portugal             | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Rusia               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Arabia Saudí         | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Singapur            | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Eslovaquia             | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Sudáfrica         | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Corea del Sur          | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| España                | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Suecia               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Suiza          | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Taiwán               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Turquía               | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Emiratos Árabes Unidos | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Reino Unido       | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
+| Estados Unidos        | Tarjeta de regalo       | 2,24 %                         | marzo de 2016     |
 
  
 
@@ -523,7 +523,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Isla Bouvet</td>
     <td>Territorio Británico del Océano Índico</td>
     <td>Islas Vírgenes Británicas</td>
-    <td>Brunéi</td>
+    <td>Brunei</td>
   </tr>
   <tr>
     <td>Burkina Faso</td>
@@ -539,14 +539,14 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   </tr>
   <tr>
     <td>Isla de Navidad</td>
-    <td>Islas Cocos</td>
-    <td>Comoras</td>
-    <td>Congo</td>
+    <td>Islas Cocos (Keeling)</td>
+    <td>Comores</td>
+    <td>Congo (RDC)</td>
   </tr>
   <tr>
     <td>Congo (RDC)</td>
     <td>Islas Cook</td>
-    <td>Côte d’Ivoire</td>
+    <td>Costa de Marfil</td>
     <td>Curazao</td>
   </tr>
   <tr>
@@ -564,7 +564,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   <tr>
     <td>Islas Malvinas</td>
     <td>Islas Feroe</td>
-    <td>Fiyi</td>
+    <td>Islas Fiji</td>
     <td>Guayana Francesa</td>
   </tr>
   <tr>
@@ -589,11 +589,11 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Guernsey</td>
     <td>Guinea</td>
     <td>Guinea-Bisáu</td>
-    <td>Guyana</td>
+    <td>Guayana</td>
   </tr>
   <tr>
     <td>Haití</td>
-    <td>Islas Heard y McDonald</td>
+    <td>Isla Heard e Islas McDonald</td>
     <td>Honduras</td>
     <td>Islandia</td>
   </tr>
@@ -613,11 +613,11 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
     <td>Liberia</td>
     <td>Liechtenstein</td>
     <td>RAE de Macao</td>
-    <td>Macedonia (ERYM)</td>
+    <td>Macedonia del Norte</td>
   </tr>
   <tr>
     <td>Madagascar</td>
-    <td>Malawi</td>
+    <td>Malaui</td>
     <td>Maldivas</td>
     <td>Malí</td>
   </tr>
@@ -659,7 +659,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   </tr>
   <tr>
     <td>Palaos</td>
-    <td>Autoridad Palestina</td>
+    <td>Autoridad palestina</td>
     <td>Panamá</td>
     <td>Papúa Nueva Guinea</td>
   </tr>
@@ -671,7 +671,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   </tr>
   <tr>
     <td>San Bartolomé</td>
-    <td>Santa Elena, Ascensión y Tristán de Acuña</td>
+    <td>Santa Elena, Ascensión y Tristán da Cunha</td>
     <td>San Cristóbal y Nieves</td>
     <td>Santa Lucía</td>
   </tr>
@@ -696,7 +696,7 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   <tr>
     <td>Georgia del Sur e Islas Sandwich del Sur</td>
     <td>Surinam</td>
-    <td>Svalbard y Jan Mayen</td>
+    <td>Islas Svalbard y Jan Mayen</td>
     <td>Suazilandia</td>
   </tr>
   <tr>
@@ -714,8 +714,8 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
   <tr>
     <td>Tuvalu</td>
     <td>Uganda</td>
-    <td>Islas menores alejadas de los EE. UU.</td>
-    <td>Islas Vírgenes de los Estados Unidos de América</td>
+    <td>EE. UU. Islas menores alejadas de EE. UU.</td>
+    <td>EE. UU. Vírgenes de EE. UU.</td>
   </tr>
   <tr>
     <td>Uzbekistán</td>
@@ -738,4 +738,4 @@ Los mercados que se incluyen en "Resto del mundo" para Windows 8.x son los sigui
 </table>
 
 > [!NOTE]
-> para obtener una lista de los países y regiones en los que puede registrarse para una cuenta de desarrollador, consulte [tipos de cuenta, ubicaciones y tarifas](account-types-locations-and-fees.md).
+> Para obtener una lista de los países y regiones en los que puede registrarse para una cuenta de desarrollador, consulte [tipos de cuenta, ubicaciones y tarifas](account-types-locations-and-fees.md).

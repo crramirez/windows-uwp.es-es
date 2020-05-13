@@ -1,5 +1,5 @@
 ---
-Description: Cree aplicaciones de aplicaciones de Windows con experiencias de interacción de usuario intuitivas y distintivas que estén optimizadas para la funcionalidad táctil pero que sean coherentes funcionalmente en todos los dispositivos de entrada.
+Description: Cree aplicaciones de Windows con experiencias de interacción de usuario intuitivas y distintivas que estén optimizadas para Touch, pero que sean funcionalmente coherentes en todos los dispositivos de entrada.
 title: Interacciones táctiles
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
@@ -8,12 +8,12 @@ keywords: táctil, función táctil,puntero,entrada,interacción del usuario
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 99926de0ea26b0cef9184756add777a39330d934
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: e753b5c92dc22f967e2f518e8435d3a4fb41a529
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970260"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234846"
 ---
 # <a name="touch-interactions"></a>Interacciones táctiles
 
@@ -456,7 +456,7 @@ Primero, se crea un objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Recta
 </Grid>
 ```
 
-A continuación, se crea un objeto [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) global denominado `dragTranslation` para traducir el objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle). Un agente de escucha de eventos de [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) se especifica en el `dragTranslation` **rectángulo**y se agrega al [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) del **rectángulo**.
+A continuación, se crea un objeto [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) global denominado `dragTranslation` para traducir el objeto [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle). Un agente de escucha de eventos de [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) se especifica en el **rectángulo**y `dragTranslation` se agrega al [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) del **rectángulo**.
 
 ```cpp
 // Global translation transform used for changing the position of 
@@ -576,7 +576,7 @@ End Sub
 
 Todos los eventos de puntero, los eventos de gestos y los eventos de manipulación mencionados aquí se implementan como *eventos enrutados*. Esto significa que el evento podría estar controlado por objetos distintos que el que generó el evento. Los elementos principales sucesivos de un árbol de objetos, como los contenedores principales de un objeto [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) o la raíz [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) de tu aplicación, pueden elegir controlar estos eventos aunque el elemento original no lo haga. Por el contrario, cualquier objeto que no controle el evento puede marcar el evento controlado para que nunca llegue a un elemento principal. Para obtener más información sobre el concepto de evento enrutado y cómo afecta a cómo se escriben los controladores para los eventos enrutados, vea [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).
 
-## <a name="dos-and-donts"></a>Consejos
+## <a name="dos-and-donts"></a>Qué hacer y qué no hacer
 
 
 -   Diseña aplicaciones en las que la interacción táctil sea el principal método de entrada que se espera.

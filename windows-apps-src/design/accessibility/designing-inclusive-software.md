@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo evolucionar el diseño inclusivo con aplicaciones de aplicaciones de Windows para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
+Description: Obtenga información sobre cómo desarrollar un diseño inclusivo con aplicaciones de Windows para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
 ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
 title: Diseño de software inclusivo en Windows 10
 label: Designing inclusive software
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f048d9d3541b52994713c8040c451a421df3e0a
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: f7286394f68d6cda82581a825117f12ce98493ba
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969440"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234084"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Diseño de software inclusivo para Windows 10  
 
-Obtenga información sobre cómo evolucionar el diseño inclusivo con aplicaciones de aplicaciones de Windows para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
+Obtenga información sobre cómo desarrollar un diseño inclusivo con aplicaciones de Windows para Windows 10.  Diseña y crea software inclusivo teniendo en cuenta la accesibilidad.
 
 En Microsoft, estamos mejorando nuestros principios y prácticas de diseño. Estos informan cómo se ven, sienten, funcionan y comportan nuestras experiencias. Estamos elevando nuestra perspectiva.
 
@@ -46,7 +46,7 @@ Existen básicamente dos tipos de usuarios de la tecnología de asistencia (AT):
 
 La mayoría de los usuarios de PC (54 por ciento) son conscientes de la existencia de alguna forma de tecnología de asistencia y el 44 por ciento de dichos usuarios usan alguna forma de ella, pero muchos de ellos no usan AT que los beneficiaría (Forrester 2004).  
 
-Un estudio de 2003-2004 realizado por Microsoft y realizada por Forrester Research encontró que más de &mdash; la mitad &mdash; del 57 por ciento de los usuarios del equipo en el Estados Unidos entre las edades 18 y 64 podrían beneficiarse de la tecnología de asistencia. La mayoría de estos usuarios no se identificaron a sí mismos como discapacitados o con algún tipo de deficiencia, pero expresaron ciertas dificultades relacionadas con la tarea cuando usan un equipo. Forrester (2003) también encontró la siguiente proporción de usuarios con estas dificultades específicas: uno de cada cuatro experimenta dificultades visuales. Uno de cada cuatro experimenta dolor en las muñecas o manos. Uno de cada cinco experimenta dificultades auditivas.  
+Un estudio de 2003-2004 realizado por Microsoft y realizada por Forrester Research encontró que más de &mdash; la mitad del 57 por ciento &mdash; de los usuarios del equipo en el Estados Unidos entre las edades 18 y 64 podrían beneficiarse de la tecnología de asistencia. La mayoría de estos usuarios no se identificaron a sí mismos como discapacitados o con algún tipo de deficiencia, pero expresaron ciertas dificultades relacionadas con la tarea cuando usan un equipo. Forrester (2003) también encontró la siguiente proporción de usuarios con estas dificultades específicas: uno de cada cuatro experimenta dificultades visuales. Uno de cada cuatro experimenta dolor en las muñecas o manos. Uno de cada cinco experimenta dificultades auditivas.  
 
 Además de las discapacidades permanentes, la gravedad y los tipos de dificultades que experimenta un individuo pueden variar a lo largo su vida. La persona normal no existe. Nuestras capacidades siempre están cambiando. Margaret Meade dijo: "Todos somos únicos. Ser únicos nos hace iguales."  
 

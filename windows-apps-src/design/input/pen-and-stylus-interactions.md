@@ -1,5 +1,5 @@
 ---
-Description: Cree aplicaciones de aplicaciones de Windows que admitan interacciones personalizadas de los dispositivos de lápiz y lápiz, incluida la tinta digital para experiencias naturales de escritura y dibujo.
+Description: Cree aplicaciones de Windows que admitan interacciones personalizadas de los dispositivos de lápiz y lápiz, incluida la entrada de lápiz digital para experiencias naturales de escritura y dibujo.
 title: Interacciones de lápiz y Windows Ink en aplicaciones de Windows
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in Windows apps
@@ -8,12 +8,12 @@ keywords: Windows Ink, entrada manuscrita de Windows, DirectInk, InkPresenter, I
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c2cda9b2775ac1e0dca2cd37d1082bc6d75b1bad
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 1c9986ee6d4dacc929a8c2d243becf7d5c9d973e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968390"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234904"
 ---
 # <a name="pen-interactions-and-windows-ink-in-windows-apps"></a>Interacciones de lápiz y Windows Ink en aplicaciones de Windows
 
@@ -22,7 +22,7 @@ ms.locfileid: "82968390"
 
 ## <a name="overview"></a>Información general
 
-Optimice su aplicación de aplicación de Windows para que la entrada manuscrita proporcione la funcionalidad de [**dispositivo de puntero**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) estándar y la mejor experiencia de Windows Ink para los usuarios.
+Optimice su aplicación de Windows para que la entrada manuscrita proporcione la funcionalidad de [**dispositivo de puntero**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) estándar y la mejor experiencia de Windows Ink para los usuarios.
 
 > [!NOTE]
 > Este tema se centra en la plataforma Windows Ink. Para poder controlar las entradas generales del puntero (es algo similar al mouse, a la función táctil y al panel táctil), consulta el artículo [Controlar la entrada de puntero](handle-pointer-input.md).

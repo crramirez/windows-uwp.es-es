@@ -8,16 +8,16 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar un sistema local, un puente de escritorio, msix, paquetes dispersos, C#, C Sharp, notificación del sistema, WPF
 ms.localizationpriority: medium
-ms.openlocfilehash: f177660ce6e367caf69de849839a94472f5343fb
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 679254aa35ea49e72f7feaae02ba0ccbddeafdad
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968290"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233659"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar una notificación del sistema local desde las aplicaciones de escritorio de C#
 
-Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas, al igual que las aplicaciones de aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está utilizando paquetes MSIX o dispersos.
+Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está utilizando paquetes MSIX o dispersos.
 
 > [!IMPORTANT]
 > Si va a escribir una aplicación para UWP, consulte la [documentación de UWP](send-local-toast.md). En el caso de otros idiomas del escritorio, consulte [escritorio de C++ WRL](send-local-toast-desktop-cpp-wrl.md).
@@ -117,7 +117,7 @@ Seleccione un AUMID único que identifique la aplicación Win32. Normalmente tie
 
 #### <a name="step-41-wix-installer"></a>Paso 4,1: instalador de WiX
 
-Si usa WiX para el instalador, edite el archivo **product. WXS** para agregar las dos propiedades de acceso directo al acceso directo del menú Inicio, tal como se muestra a continuación. Asegúrese de que el GUID del paso #3 se incluye `{}` como se muestra a continuación.
+Si usa WiX para el instalador, edite el archivo **product. WXS** para agregar las dos propiedades de acceso directo al acceso directo del menú Inicio, tal como se muestra a continuación. Asegúrese de que el GUID del paso #3 se `{}` incluye como se muestra a continuación.
 
 **Producto. WXS**
 
@@ -219,7 +219,7 @@ Cuando el usuario hace clic en la notificación del sistema, se invoca el métod
 Dentro del método Onactivated, puede analizar los argumentos que especificó en el sistema y obtener la entrada del usuario que el usuario ha escrito o seleccionado y, a continuación, activar la aplicación en consecuencia.
 
 > [!NOTE]
-> No se llama al método **onactivated** en el subproceso de la interfaz de usuario. Si desea realizar operaciones de subproceso de interfaz de usuario, debe `Application.Current.Dispatcher.Invoke(callback)`llamar a.
+> No se llama al método **onactivated** en el subproceso de la interfaz de usuario. Si desea realizar operaciones de subproceso de interfaz de usuario, debe llamar a `Application.Current.Dispatcher.Invoke(callback)` .
 
 ```csharp
 // The GUID must be unique to your app. Create a new GUID if copying this code.
@@ -297,7 +297,7 @@ public class MyNotificationActivator : NotificationActivator
 }
 ```
 
-Para permitir que se inicie correctamente mientras se cierra la aplicación, en `App.xaml.cs` el archivo, querrá invalidar el método de **Inicio** (para aplicaciones de WPF) para determinar si se está iniciando desde una notificación del sistema o no. Si se inicia desde una notificación del sistema, habrá un argumento Launch de "-ToastActivated". Cuando lo vea, debe dejar de realizar cualquier código de activación de inicio normal y permitir que el control de código **activado** se inicie.
+Para permitir que se inicie correctamente mientras se cierra la aplicación, en el `App.xaml.cs` archivo, querrá invalidar el método de **Inicio** (para aplicaciones de WPF) para determinar si se está iniciando desde una notificación del sistema o no. Si se inicia desde una notificación del sistema, habrá un argumento Launch de "-ToastActivated". Cuando lo vea, debe dejar de realizar cualquier código de activación de inicio normal y permitir que el control de código **activado** se inicie.
 
 ```csharp
 protected override async void OnStartup(StartupEventArgs e)
@@ -337,7 +337,7 @@ Si la aplicación ya se está ejecutando:
 
 Si la aplicación no se está ejecutando:
 
-1. Se llama a `App.xaml.cs` **alstartup** en con **args** de "-ToastActivated"
+1. Se llama a **alstartup** en `App.xaml.cs` con **args** de "-ToastActivated"
 2. Se llama a **onactivated** en el **NotificationActivator**
 
 

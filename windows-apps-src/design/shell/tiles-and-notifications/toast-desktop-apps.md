@@ -7,16 +7,16 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, puente de escritorio, msix, paquete disperso, opciones para enviar notificaciones del sistema, servidor com, activador com, com, com falsificado, sin com, sin com, enviar notificaciones de envío
 ms.localizationpriority: medium
-ms.openlocfilehash: 020cdeb1aaddac7fe879e91d18e258aea1b387ea
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: b84120a592a1c2f5f18c6b6121568cbf126a582e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970990"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234540"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificaciones del sistema de aplicaciones de escritorio
 
-Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas, al igual que las aplicaciones de aplicaciones de Windows. Sin embargo, hay varias opciones diferentes para las aplicaciones de escritorio debido a los diferentes esquemas de activación.
+Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay varias opciones diferentes para las aplicaciones de escritorio debido a los diferentes esquemas de activación.
 
 En este artículo, se enumeran las opciones que tiene para enviar una notificación del sistema en Windows 10. Cada opción es totalmente compatible...
 

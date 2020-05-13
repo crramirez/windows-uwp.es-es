@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows 10, UWP, juegos, desarrollo de juegos
 ms.localizationpriority: medium
-ms.openlocfilehash: de18e77137941acfba6e9cb3fb6421de8fe156f0
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 5f7c124c1d77cbce140cb42cdc07682dad8f78f2
+ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730251"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280255"
 ---
 # <a name="windows-10-game-development-guide"></a>Guía de desarrollo de juegos para Windows 10
 
@@ -119,7 +119,7 @@ El programa Xbox Live Creators permite a cualquier usuario integrar Xbox Live en
 
 Puede implementar, diseñar y publicar su juego en el programa de creadores sin un kit de desarrollo dedicado, solo con hardware comercial. Para empezar, descargue la [aplicación de activación de modo de desarrollo](https://docs.microsoft.com/windows/uwp/xbox-apps/devkit-activation) en la Xbox One.
 
-Si desea tener acceso a más funcionalidades de Xbox Live, soporte técnico de marketing y desarrollo dedicado y la posibilidad de que se le presenten en la tienda Xbox One principal [ID@Xbox](https://www.xbox.com/Developers/id) , aplique el programa.
+Si desea tener acceso a más funcionalidades de Xbox Live, soporte técnico de marketing y desarrollo dedicado y la posibilidad de que se le presenten en la tienda Xbox One principal, aplique el [ID@Xbox](https://www.xbox.com/Developers/id) programa.
 
 <table>
     <colgroup>
@@ -134,7 +134,7 @@ Si desea tener acceso a más funcionalidades de Xbox Live, soporte técnico de m
 
 #### <a name="idxbox"></a>ID@Xbox
 
-El ID@Xbox programa ayuda a los desarrolladores de juegos cualificados a publicarse automáticamente en Windows y Xbox One. Si quiere desarrollar para Xbox One, o agregar características de Xbox Live, como Gamerscore, logros y marcadores, a su juego de Windows 10, regístrese con ID@Xbox. Conviértase ID@Xbox en desarrollador para obtener las herramientas y el soporte técnico que necesita para dar rienda suelta a su creatividad y maximizar el éxito. Se recomienda que se aplique ID@Xbox primero antes de registrarse para obtener una cuenta de Desarrollador en el centro de Partners.
+El ID@Xbox programa ayuda a los desarrolladores de juegos cualificados a publicarse automáticamente en Windows y Xbox One. Si quiere desarrollar para Xbox One, o agregar características de Xbox Live, como Gamerscore, logros y marcadores, a su juego de Windows 10, regístrese con ID@Xbox . Conviértase en ID@Xbox desarrollador para obtener las herramientas y el soporte técnico que necesita para dar rienda suelta a su creatividad y maximizar el éxito. Se recomienda que se aplique ID@Xbox primero antes de registrarse para obtener una cuenta de Desarrollador en el centro de Partners.
 
 <table>
     <colgroup>
@@ -214,11 +214,11 @@ Hay muchas muestras de juegos y aplicaciones para Windows 10 disponibles que te 
     </tr>
     <tr>
         <td>Ejemplos de juegos de Xbox One (XGD)</td>
-        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-samples">Muestras</a></td>
+        <td><a href="https://developer.microsoft.com/games/xbox/partner/development-education-samples">Ejemplos</a></td>
     </tr>
     <tr>
         <td>Ejemplos de juegos de Windows (Galería de código de MSDN)</td>
-        <td><a href="https://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=game&f%5B1%5D.Type=Contributors&f%5B1%5D.Value=Microsoft&f%5B1%5D.Text=Microsoft">Ejemplos de Microsoft Store Game</a></td>
+        <td><a href="https://docs.microsoft.com/samples/browse/?term=games">Ejemplos de Microsoft Store Game</a></td>
     </tr>
     <tr>
         <td>Ejemplo de juego 2D de JavaScript</td>
@@ -1805,7 +1805,7 @@ Xbox Live es una red de juegos líder que conecta a millones de jugadores de to
     </tr>  
 </table>
 
-### <a name="for-managed-partners-and-developers-in-the-idxbox-program"></a>Para socios y desarrolladores administrados en ID@Xbox el programa
+### <a name="for-managed-partners-and-developers-in-the-idxbox-program"></a>Para socios y desarrolladores administrados en el ID@Xbox programa
 
 <table>
     <colgroup>
@@ -1834,7 +1834,7 @@ Xbox Live es una red de juegos líder que conecta a millones de jugadores de to
     </tr>
     <tr>
         <td>Ejemplos</td>
-        <td><a href="https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK">Ejemplos de código ID@Xbox para desarrolladores</a></td>
+        <td><a href="https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK">Ejemplos de código para ID@Xbox desarrolladores</a></td>
     </tr>  
     <tr>
         <td>Información general sobre el desarrollo de juegos para Xbox Live (vídeo)</td>

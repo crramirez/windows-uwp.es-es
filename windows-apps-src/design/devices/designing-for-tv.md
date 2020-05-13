@@ -13,16 +13,16 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 24cc85c255f26b61603690d6b39c3a6ffdcbb544
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5025a63f5c96365ba1f14311b9c68ed41f4fc5aa
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970730"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234592"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Diseño para Xbox y televisión
 
-Diseñe la aplicación de aplicación de Windows para que tenga buen aspecto y funcione correctamente en las pantallas de televisión y Xbox One.
+Diseñe la aplicación de Windows para que tenga buen aspecto y funcione correctamente en las pantallas de televisión y Xbox One.
 
 Consulte [interacciones de control remoto y controlador para juegos](../input/gamepad-and-remote-interactions.md) para obtener instrucciones sobre las experiencias de interacción en aplicaciones UWP en la experiencia de *10 pies* .
 
@@ -106,7 +106,7 @@ Siempre que los elementos de la interfaz de usuario sean del tamaño apropiado e
 Xbox One representa tu aplicación en 1080p (1920 x 1080 píxeles). Por lo tanto, al traer una aplicación desde otros dispositivos tales como un equipo, asegúrate de que la interfaz de usuario se vea bien en 960 x 540 px al 100 % de escala (o 1280 x 720 px en 100 % de escala para aplicaciones HTML) usando las [técnicas adaptables](../layout/screen-sizes-and-breakpoints-for-responsive-design.md).
 
 El diseño para Xbox es un poco diferente al diseño para PC porque solo necesitas preocuparte por una resolución: 1920 x 1080.
-No importa si el usuario tiene un televisor que tiene mejores aplicaciones UWP&mdash;de resolución siempre se escalará a 1080p.
+No importa si el usuario tiene un televisor que tiene mejores &mdash; aplicaciones UWP de resolución siempre se escalará a 1080p.
 
 Los tamaños correctos de los activos del conjunto de 200 % (o 150 % para aplicaciones HTML) también se extraerán para tu aplicación cuando se ejecute en Xbox One, independientemente de la resolución del televisor.
 
@@ -333,7 +333,7 @@ La idea es colocar el fragmento de código anterior en los recursos de la págin
 > [!NOTE]
 > Este fragmento de código es específico para `ListView`s; para un estilo `GridView` establece el atributo [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) tanto para [ControlTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) como para [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) para conseguir una `GridView`.
 
-Para obtener un control más preciso sobre cómo se muestran los elementos, si su aplicación tiene como destino la versión 1803 o posterior, puede usar el [evento UIElement. BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested). Puede colocarlo en el [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) para que**GridView** de **ListView**/lo detecte antes que el **ScrollViewer** interno, como en los fragmentos de código siguientes:
+Para obtener un control más preciso sobre cómo se muestran los elementos, si su aplicación tiene como destino la versión 1803 o posterior, puede usar el [evento UIElement. BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested). Puede colocarlo en el [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) para que GridView de **ListView** / **GridView** lo detecte antes que el **ScrollViewer** interno, como en los fragmentos de código siguientes:
 
 ```xaml
 <GridView x:Name="gridView">
@@ -413,7 +413,7 @@ Al diseñar para televisores, observe que los colores se muestran de forma muy d
 
 ### <a name="tv-safe-colors"></a>Colores seguros para el televisor
 
-Los valores RGB de un color representan las intensidades de rojo, verde y azul. Los televisores no controlan las&mdash;intensidades extremas muy bien pueden producir un efecto de banda impar o que aparecen descolorados en determinados televisores. Además, los colores de gran intensidad pueden causar un efecto de desbordamiento o "blooming" (los píxeles cercanos comienzan a dibujar los mismos colores). Si bien existen diferentes escuelas de pensamiento sobre lo que se considera colores seguros para el televisor, los colores dentro de los valores RGB de 16-235 (o 10-EB en hexadecimal) son generalmente seguros el televisor.
+Los valores RGB de un color representan las intensidades de rojo, verde y azul. Los televisores no controlan las intensidades extremas muy bien &mdash; pueden producir un efecto de banda impar o que aparecen descolorados en determinados televisores. Además, los colores de gran intensidad pueden causar un efecto de desbordamiento o "blooming" (los píxeles cercanos comienzan a dibujar los mismos colores). Si bien existen diferentes escuelas de pensamiento sobre lo que se considera colores seguros para el televisor, los colores dentro de los valores RGB de 16-235 (o 10-EB en hexadecimal) son generalmente seguros el televisor.
 
 ![Gama de colores seguros para el televisor](images/designing-for-tv/tv-safe-colors-2.png)
 
@@ -462,7 +462,7 @@ Si bien los botones estándar de la UWP funcionan bien en televisores, algunos e
 
 La interfaz de usuario anidada expone los elementos anidados que se pueden accionar dentro de un elemento de interfaz de usuario del contenedor en el que tanto el elemento anidado como el elemento contenedor pueden tener un foco independiente entre sí.
 
-La interfaz de usuario anidada funciona bien para algunos tipos de entrada, pero no siempre para el controlador para juegos y el control remoto, que dependen de la navegación XY. Asegúrate de seguir las directrices de este tema para garantizar que el usuario pueda acceder fácilmente a todos los elementos interactivos y que la interfaz de usuario esté optimizada para el entorno de 304,8 cm. Una solución común consiste en colocar elementos de interfaz de usuario anidados en un `ContextFlyout`.
+La interfaz de usuario anidada funciona bien para algunos tipos de entrada, pero no siempre para el controlador para juegos y el control remoto, que dependen de la navegación XY. Asegúrate de seguir las directrices de este tema para garantizar que el usuario pueda acceder fácilmente a todos los elementos interactivos y que la interfaz de usuario esté optimizada para el entorno de 304,8 cm. Una solución común consiste en colocar elementos de interfaz de usuario anidados en un `ContextFlyout` .
 
 Para obtener más información sobre la interfaz de usuario anidada, consulta [Interfaz de usuario anidada en elementos de lista](../controls-and-patterns/nested-ui.md).
 
@@ -566,6 +566,6 @@ El diseño para la experiencia de 10 pies presenta consideraciones especiales qu
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Dispositivos principales para aplicaciones de aplicaciones de Windows](index.md)
+- [Dispositivos principales para aplicaciones Windows](index.md)
 - [Interacciones con controlador para juegos y control remoto](../input/gamepad-and-remote-interactions.md)
 - [Sonido en las aplicaciones para UWP](../style/sound.md)

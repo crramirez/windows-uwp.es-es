@@ -4,50 +4,50 @@ title: Tipos de cuenta, ubicaciones y precios
 description: Microsoft ofrece cuentas de desarrollador individuales y corporativas en muchos países y regiones.
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, uwp, cuenta de desarrollador, individual, empresa, negocios
+keywords: Windows 10, UWP, cuenta de desarrollador, individuo, empresa, empresa
 ms.localizationpriority: medium
-ms.openlocfilehash: a7ab3d40b48caecc82fafef4df964b7a1dbf8071
-ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
+ms.openlocfilehash: 829bbc857f3856962dfbbbc4bb589fa677b8e264
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81545095"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234812"
 ---
 # <a name="account-types-locations-and-fees"></a>Tipos de cuenta, ubicaciones y precios
 
 El programa de Windows del [centro de Partners](https://partner.microsoft.com/dashboard) ofrece cuentas individuales y de empresa en muchos [países y regiones](#developer-account-and-app-submission-markets). Cualquier tipo de cuenta le proporciona acceso para publicar aplicaciones en la tienda y participar en otros programas de Microsoft.
 
 > [!NOTE]
-> Al abrir la cuenta de desarrollador, asegúrese de iniciar sesión en el [centro de Partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que desea usar para la cuenta de desarrollador. Tendrás la opción de [agregar usuarios adicionales a la cuenta](manage-account-users.md) más adelante.
+> Al abrir la cuenta de desarrollador, asegúrese de iniciar sesión en el [centro de Partners](https://partner.microsoft.com/dashboard) con la cuenta de Microsoft que desea usar para la cuenta de desarrollador. Tendrá la opción de agregar más [usuarios a la cuenta](manage-account-users.md) más adelante.
 
-Cuando [comiences el proceso de suscripción](https://developer.microsoft.com/store/register), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuenta te permitirán enviar aplicaciones, juegos, complementos y servicios.
+Cuando [comiences el proceso de suscripción](https://developer.microsoft.com/store/register), deberás elegir si quieres crear una cuenta individual o de empresa. Ambos tipos de cuentas le permitirán enviar aplicaciones, juegos, complementos y servicios.
 
-Las cuentas de empresa están pensadas para empresas y organizaciones. Para las cuentas de empresa, debemos [comprobar](#account-verification) con más atención para confirmar que tienes autorización para configurar la cuenta de tu empresa. Las cuentas individuales son normalmente adecuadas para un único desarrollador que trabaja por su cuenta, aunque tienes la opción de agregar usuarios adicionales a cualquier tipo de cuenta.
+Las cuentas de empresa están pensadas para empresas y organizaciones. En el caso de las cuentas de empresa, se requiere una mayor [comprobación](#account-verification) para confirmar que está autorizado a configurar la cuenta para su empresa. Las cuentas individuales suelen ser adecuadas para un solo desarrollador que trabaja por sí misma, aunque tiene la opción de agregar usuarios de cuentas adicionales a cualquier tipo de cuenta.
 
 > [!IMPORTANT]
-> No puedes cambiar el tipo de cuenta después de haberla seleccionado, así que asegúrate de que eliges el tipo adecuado.
+> No se puede cambiar el tipo de cuenta una vez realizada la selección, por lo que debe asegurarse de elegir el tipo correcto.
 
 Estas son las diferencias fundamentales entre los dos tipos de cuentas.
 
-| Cuenta individual | Cuenta de la empresa |
+| Cuenta individual | Cuenta de empresa |
 |--------------------|-----------------|
-| <ul><li>Cuesta aproximadamente 19 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de verificación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere realizar una comprobación con más atención</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Capaz de enviar aplicaciones con funcionalidad restringida (como se describe en las [Directivas de Microsoft Store](store-policies.md#1014-account-type))</li></ul> |
+| <ul><li>Cuesta aproximadamente 19 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Proceso de comprobación de cuenta más corto</li></ul> | <ul><li>Cuesta aproximadamente 99 USD (tarifa de registro única; el precio exacto varía en función del país o la región)</li><li>Requiere una mayor comprobación de la cuenta</li><li>Requiere que la empresa esté reconocida como tal en el país o la región en la que se ubica</li><li>Puede enviar aplicaciones con funcionalidad restringida (como se describe en las [directivas de Microsoft Store](store-policies.md#1014-account-type)).</li></ul> |
 
 Las cuentas de empresa son un poco más caras, principalmente porque es necesario realizar pasos adicionales para asegurarnos de que tengas autorización para representar a tu empresa al configurar la cuenta. Según las [directivas](store-policies.md#1014-account-type)de la tienda, las aplicaciones con cierta funcionalidad, como las que tienen acceso a la información de la cuenta financiera o que requieren autenticación para acceder a la funcionalidad principal (sin usar un proveedor de autenticación de terceros dedicado seguro), solo pueden ser publicadas por las cuentas de la empresa.
 
-## <a name="account-verification"></a>Comprobación de cuentas
+## <a name="account-verification"></a>Verificación de la cuenta
 
-Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En las cuentas de empresa, nuestro partner de verificación, Dun & Bradstreet, confirmará que tienes autorización para crear una cuenta para la empresa a la que representas. Este proceso puede tardar entre un par de días y un par de semanas y suele incluir una llamada telefónica a la empresa (de modo que deberás asegurarte de que toda la información de contacto esté actualizada cuando rellenes los formularios de registro). No puede enviar aplicaciones desde una cuenta de empresa hasta que se haya comprobado, pero mientras espera, puede [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) para continuar compilando y probar aplicaciones, y trabajar en la preparación de los envíos.
+Después de completar el proceso de suscripción, tu cuenta pasará por el proceso de verificación. Para las cuentas individuales, comprobamos para asegurarnos de que no haya otra empresa que ya esté usando tu nombre para mostrar del publicador. En el caso de las cuentas de la empresa, nuestro asociado de verificación Dun & Bradstreet confirmará que está autorizado para crear una cuenta para la empresa que está representando. Este proceso puede tardar desde unos días hasta un par de semanas y, a menudo, incluye una llamada telefónica a su empresa (por lo que debe asegurarse de que toda la información de contacto esté actualizada al rellenar los formularios de registro). No puede enviar aplicaciones desde una cuenta de empresa hasta que se haya comprobado, pero mientras espera, puede [reservar un nombre de aplicación](create-your-app-by-reserving-a-name.md) para continuar compilando y probar aplicaciones, y trabajar en la preparación de los envíos.
 
-Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**. 
+Puedes comprobar tu estado de verificación en la página **Configuración de la cuenta**.
 
 ## <a name="developer-account-and-app-submission-markets"></a>Cuenta de desarrollador y mercados de envío de aplicaciones
 
 Puedes registrarte con una cuenta de desarrollador y enviar aplicaciones si resides o diriges un negocio en uno de los países o regiones indicados a continuación.
 
-En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el registro de la cuenta de desarrollador. Se trata de una tarifa única y no se aplica ningún cargo por renovación. Ten en cuenta que los precios que se indican a continuación están sujetos a cambios.
+En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el registro de la cuenta de desarrollador. Se trata de una cuota única y no hay ningún cargo de renovación. Tenga en cuenta que los precios siguientes están sujetos a cambios.
 
-| País/región                    | Tarifa de reg. individual | Tarifa de reg. de empresa |
+| País/región                    | Cuota de reg. individual | Cuota reg. de empresa |
 |-----------------------------------|---------------------|------------------|
 | Afganistán                       | 19 USD              | 99 USD           |
 | Albania                           | 19 USD              | 99 USD           |
@@ -60,8 +60,8 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Australia                         | 21 AUD              | 110 AUD          |  
 | Austria                           | 14 EUR              | 75 EUR           |  
 | Azerbaiyán                        | 19 USD              | 99 USD           |  
-| Bahamas                       | 19 USD              | 99 USD           |  
-| Baréin                           | 7 BHD               | 38 BHD           |  
+| Las Bahamas                       | 19 USD              | 99 USD           |  
+| Bahréin                           | 7 BHD               | 38 BHD           |  
 | Bangladés                        | 1468 BDT            | 7600 BDT         |  
 | Barbados                          | 19 USD              | 99 USD           |  
 | Belarús                           | 19 USD              | 99 USD           |  
@@ -73,7 +73,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Bosnia y Herzegovina            | 19 USD              | 99 USD           |  
 | Botsuana                          | 19 USD              | 99 USD           |  
 | Brasil                            | 46 BRL              | 160 BRL          |  
-| Brunéi                            | 19 USD              | 99 USD           |  
+| Brunei                            | 19 USD              | 99 USD           |  
 | Bulgaria                          | 28 BGN              | 160 BGN          |  
 | Burkina Faso                      | 19 USD              | 99 USD           |  
 | Burundi                           | 19 USD              | 99 USD           |  
@@ -86,17 +86,17 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Chile                             | 9776 CLP            | 46 000 CLP        |  
 | China                             | 116 CNY             | 600 CNY          |  
 | Colombia                          | 36 543 COP           | 180 000 COP       |  
-| Comoras                           | 19 USD              | 99 USD           |  
-| Congo                             | 19 USD              | 99 USD           |  
+| Comores                           | 19 USD              | 99 USD           |  
+| Congo (RDC)                             | 19 USD              | 99 USD           |  
 | Congo (RDC)                       | 19 USD              | 99 USD           |  
 | Costa Rica                        | 9578 CRC            | 49725 CRC        |  
 | Côte d'Ivoire                     | 19 USD              | 99 USD           |  
 | Croacia                           | 107 HRK             | 500 HRK          |  
 | Chipre                            | 14 EUR              | 75 EUR           |  
-| Checo                           | 365 CZK             | 1720 CZK         |  
+| Chequia                           | 365 CZK             | 1720 CZK         |  
 | Dinamarca                           | 106 DKK             | 530 DKK          |  
-| Yibuti                          | 19 USD              | 99 USD           | 
-| Dominica                          | 19 USD              | 99 USD           | 
+| Yibuti                          | 19 USD              | 99 USD           |
+| Dominica                          | 19 USD              | 99 USD           |
 | República Dominicana                | 19 USD              | 99 USD           |  
 | Ecuador                           | 19 USD              | 99 USD           |  
 | Egipto                             | 133 EGP             | 600 EGP          |  
@@ -106,13 +106,13 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Estonia                           | 14 EUR              | 75 EUR           |  
 | Etiopía                          | 19 USD              | 99 USD           |  
 | Islas Feroe                     | 19 USD              | 99 USD           |  
-| Fiyi                              | 19 USD              | 99 USD           |  
+| Islas Fiji                              | 19 USD              | 99 USD           |  
 | Finlandia                           | 14 EUR              | 75 EUR           |  
-| France                            | 14 EUR              | 75 EUR           |  
+| Francia                            | 14 EUR              | 75 EUR           |  
 | Gabón                             | 19 USD              | 99 USD           |  
 | Gambia                        | 19 USD              | 99 USD           |  
 | Georgia                           | 19 USD              | 99 USD           |  
-| Germany                           | 14 EUR              | 75 EUR           |  
+| Alemania                           | 14 EUR              | 75 EUR           |  
 | Ghana                             | 19 USD              | 99 USD           |  
 | Grecia                            | 14 EUR              | 75 EUR           |  
 | Groenlandia                         | 19 USD              | 99 USD           |  
@@ -120,25 +120,25 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Guatemala                         | 145 GTQ             | 750 GTQ          |  
 | Guinea                            | 19 USD              | 99 USD           |  
 | Guinea-Bisáu                     | 19 USD              | 99 USD           |  
-| Guyana                            | 19 USD              | 99 USD           |  
+| Guayana                            | 19 USD              | 99 USD           |  
 | Haití                             | 19 USD              | 99 USD           |  
 | Honduras                          | 19 USD              | 99 USD           |  
-| Hong Kong, RAE                     | 147 HKD             | 760 HKD          |  
+| RAE de Hong Kong                     | 147 HKD             | 760 HKD          |  
 | Hungría                           | 4237 HUF            | 18 800 HUF        |  
 | Islandia                           | 2319 ISK            | 11929 ISK        |
 | India                             | 1201 INR            | 4500 INR         |  
 | Indonesia                         | 203015 IDR          | 1000000 IDR      |
-| Irak                              | 22078 IQD           | 120000 IQD       |  
+| Iraq                              | 22078 IQD           | 120000 IQD       |  
 | Irlanda                           | 14 EUR              | 75 EUR           |  
 | Israel                            | 67 ILS              | 350 ILS          |  
 | Italia                             | 14 EUR              | 75 EUR           |  
 | Jamaica                           | 19 USD              | 99 USD           |  
-| Japan                             | 1847 JPY            | 9800 JPY         |  
+| Japón                             | 1847 JPY            | 9800 JPY         |  
 | Jordania                            | 13 JOD              | 70 JOD           |  
 | Kazajistán                        | 2897 KZT            | 15038 KZT        |  
 | Kenia                             | 1900 KES            | 9999 KES         |  
 | Kiribati                          | 19 USD              | 99 USD           |  
-| Korea                             | 21216 KRW           | 108000 KRW       |  
+| Corea                             | 21216 KRW           | 108000 KRW       |  
 | Kuwait                            | 5 KWD               | 28 KWD           |  
 | Kirguistán                        | 19 USD              | 99 USD           |  
 | Laos                              | 19 USD              | 99 USD           |  
@@ -151,9 +151,8 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Lituania                         | 14 EUR              | 75 EUR           |  
 | Luxemburgo                        | 14 EUR              | 75 EUR           |  
 | RAE de Macao                         | 19 USD              | 99 USD           |  
-| ERY de Macedonia                 | 19 USD              | 99 USD           |  
 | Madagascar                        | 19 USD              | 99 USD           |  
-| Malawi                            | 19 USD              | 99 USD           |  
+| Malaui                            | 19 USD              | 99 USD           |  
 | Malasia                          | 62 MYR              | 300 MYR          |  
 | Maldivas                          | 19 USD              | 99 USD           |  
 | Malí                              | 19 USD              | 99 USD           |  
@@ -176,7 +175,8 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Nueva Zelanda                       | 24 NZD              | 140 NZD          |  
 | Nicaragua                         | 19 USD              | 99 USD           |  
 | Níger                             | 19 USD              | 99 USD           |  
-| Nigeria                           | 3700 NGN            | 19500 NGN        |  
+| Nigeria                           | 3700 NGN            | 19500 NGN        |
+| Macedonia del Norte                   | 19 USD              | 99 USD           |    
 | Noruega                            | 113 NOK             | 580 NOK          |  
 | Omán                              | 7 OMR               | 40 OMR           |  
 | Pakistán                          | 1959 PKR            | 9000 PKR         |  
@@ -189,7 +189,7 @@ En la tabla siguiente, la **Tarifa de registro** es lo que cuesta actualmente el
 | Polonia                            | 59 PLN              | 280 PLN          |  
 | Portugal                          | 14 EUR              | 75 EUR           |  
 | Qatar                             | 69 QAR              | 360 QAR          |  
-| Rumania                           | 14 EUR              | 75 EUR           |  
+| Rumanía                           | 14 EUR              | 75 EUR           |  
 | Rusia                            | 626 RUB             | 3000 RUB         |  
 | Ruanda                            | 19 USD              | 99 USD           |  
 | San Cristóbal y Nieves             | 19 USD              | 99 USD           |  

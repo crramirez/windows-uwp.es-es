@@ -1,5 +1,5 @@
 ---
-Description: Enumera las prácticas que se deben evitar si desea crear una aplicación de aplicación de Windows accesible.
+Description: Enumera las prácticas que se deben evitar si desea crear una aplicación de Windows accesible.
 ms.assetid: 024A9B70-9821-45BB-93F1-61C0B2ECF53E
 title: Procedimientos de accesibilidad que deben evitarse
 label: Accessibility practices to avoid
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 95c23a00ebc9ee2563340fbd5594d53ac7edb066
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 75dad7eb676bd2d2a9d95fa57122085329e5e144
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970010"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233940"
 ---
 # <a name="accessibility-practices-to-avoid"></a>Procedimientos de accesibilidad que deben evitarse
 
-Si desea crear una aplicación de aplicación de Windows accesible, consulte esta lista de prácticas para evitar: 
+Si desea crear una aplicación de Windows accesible, consulte esta lista de prácticas para evitar: 
 
 * **Evita compilar elementos de la interfaz de usuario personalizados si puedes usar los controles predeterminados de Windows** o los controles que ya hayan implementado la compatibilidad con la automatización de la interfaz de usuario de Microsoft. Se puede obtener acceso de forma predeterminada a los controles estándar de Windows y, por lo general, solo es necesario agregar unos pocos atributos de accesibilidad específicos de la aplicación. Por el contrario, implementar la compatibilidad de la clase [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) con un control personalizado te resultará un poco más complicado (consulta el tema [Personalizar sistemas de automatización del mismo nivel](custom-automation-peers.md)).
 * **No coloque texto estático u otros elementos no interactivos en el orden de tabulación** (por ejemplo, estableciendo la propiedad [**TabIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex) para un elemento que no sea interactivo). Tener elementos no interactivos en el orden de tabulación no es compatible con las directrices de accesibilidad del teclado, ya que reduce la eficacia de navegación de los usuarios que usan el teclado. Muchas tecnologías de ayuda usan el orden de tabulación y la capacidad de enfocar un elemento como parte de su lógica en cuanto al modo de presentar la interfaz de una aplicación al usuario de la tecnología de asistencia. Los elementos de solo texto en el orden de tabulación pueden confundir a los usuarios, ya que solo esperan elementos interactivos en el orden de tabulación (botones, casillas, campos de entrada de texto, cuadros combinados, listas, etc.).
