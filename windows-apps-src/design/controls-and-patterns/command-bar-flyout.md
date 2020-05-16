@@ -12,18 +12,18 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6b85177e5d3d0f4a2a37010ba9122861216a4b6b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: bdd18fea2fe563fcee835e6b61e24d6a9b03d029
+ms.sourcegitcommit: f945df77f8a19961ba053ee62e593ec8e015038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081960"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82989821"
 ---
 # <a name="command-bar-flyout"></a>Control flotante de la barra de comandos
 
 El control flotante de la barra de comandos permite proporcionar a los usuarios un acceso sencillo a las tareas comunes al mostrar los comandos en una barra de herramientas flotante relacionada con un elemento en el lienzo de la interfaz de usuario.
 
-![Un control flotante de la barra de comandos de texto expandido](images/command-bar-flyout-header.png)
+![Un control flotante de la barra de comandos de texto expandido](images/command-bar-flyout-text-full.png)
 
 Al igual que [CommandBar](app-bars.md), CommandBarFlyout tiene las propiedades **PrimaryCommands** y **SecondaryCommands**, que puedes utilizar para agregar comandos. Puedes colocar los comandos en una de las colecciones o en ambas. La forma y el momento en que se muestran los comandos principales y secundarios dependen del modo de presentación.
 
@@ -36,7 +36,7 @@ El control flotante de la barra de comandos tiene dos modos de presentación: *c
 
 |  |  |
 | - | - |
-| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **CommandBarFlyout** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones para UWP. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library ](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
+| ![Logotipo de WinUI](images/winui-logo-64x64.png) | El control **CommandBarFlyout** se incluye como parte de la biblioteca de interfaz de usuario de Windows, un paquete NuGet que contiene nuevos controles y características de interfaz de usuario destinados a aplicaciones de Windows. Para obtener más información e instrucciones sobre la instalación, consulta el artículo [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/) (Biblioteca de interfaz de usuario de Windows). |
 
 >**API de la biblioteca de interfaz de usuario de Windows**: [Clase CommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [clase TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
 >
@@ -417,5 +417,5 @@ No se puede personalizar TextCommandBarFlyout y cada control de texto lo adminis
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-- [Conceptos básicos sobre el diseño de comandos de aplicaciones para la Plataforma universal de Windows (UWP)](../basics/commanding-basics.md)
+- [Conceptos básicos de diseño de comandos para aplicaciones de Windows](../basics/commanding-basics.md)
 - [Clase CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)
