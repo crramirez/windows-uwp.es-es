@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: dbae7ada227b4f3019a2e17c91e6b06b7f2f276f
-ms.sourcegitcommit: 0acdafcf75fcd19e5c3181eb16defcfee3918cb2
+ms.openlocfilehash: d050e2b4a7659f8910ce603ec7e90b703cc7722f
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81441870"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606244"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>Cómo usar los controles XAML de UWP en aplicaciones de escritorio (islas XAML)
 
@@ -129,6 +129,8 @@ En las secciones siguientes se describen las limitaciones y las soluciones alter
 
 ### <a name="supported-only-with-workarounds"></a>Compatible solo con soluciones alternativas
 
+:heavy_check_mark: El hospedaje de controles de UWP de la [biblioteca WinUI](https://docs.microsoft.com/uwp/toolkits/winui/) en una isla XAML se admite de forma condicional en la versión actual de las islas XAML. Si la aplicación de escritorio usa un [paquete MSIX](https://docs.microsoft.com/windows/msix) para la implementación, puedes hospedar controles de WinUI de versiones preliminares o de lanzamiento del paquete NuGet [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml). Si la aplicación de escritorio no está empaquetada con MSIX, puedes hospedar controles de WinUI solo si instalas una versión preliminar del paquete NuGet [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml).
+
 :heavy_check_mark: Para acceder al elemento raíz de un árbol de contenido XAML en una isla XAML y obtener la información relacionada sobre el contexto en el que se hospeda, no uses las clases[CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview) y [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window). En su lugar, usa la clase [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot). Para obtener más información, consulta [esta sección](#window-host-context-for-xaml-islands).
 
 :heavy_check_mark: Para admitir el [Contrato para contenido compartido](/windows/uwp/app-to-app/share-data) desde una aplicación de WPF, Windows Forms o C++ Win32, la aplicación tiene que usar la interfaz [IDataTransferManagerInterop](https://docs.microsoft.com/windows/win32/api/shobjidl_core/nn-shobjidl_core-idatatransfermanagerinterop) para obtener el objeto [DataTransferManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager) para iniciar la operación de uso compartido para una ventana específica. Para obtener un ejemplo que muestra cómo usar esta interfaz en una aplicación de WPF, consulta el [ejemplo de ShareSource](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/ShareSource).
@@ -150,6 +152,8 @@ En las secciones siguientes se describen las limitaciones y las soluciones alter
 :no_entry_sign: Controles de texto que usan vínculos de contenido `@Places` y `@People`. Para más información sobre esta característica, consulta [este artículo](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/content-links).
 
 :no_entry_sign: Las islas XAML no admiten el hospedaje de un elemento [ContentDialog](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentDialog) que contiene un control que acepta entrada de texto, como [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) o [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox). Si lo hace, el control de entrada no responderá correctamente a las pulsaciones de teclas. Para lograr una funcionalidad similar con una isla XAML, se recomienda hospedar un elemento [Popup](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Popup) que contenga el control de entrada.
+
+:no_entry_sign: Las islas XAML no admiten actualmente la visualización de archivos SVG en un control [Windows.UI.Xaml.Controls.Image](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) hospedado ni mediante un objeto [Windows.UI.Xaml.Media.Imaging.SvgImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.svgimagesource). Como alternativa, convierte los archivos de imagen que quieras mostrar en formatos basados en tramas como JPG o PNG.
 
 ### <a name="window-host-context-for-xaml-islands"></a>Contexto de hosts de ventanas para islas XAML
 
