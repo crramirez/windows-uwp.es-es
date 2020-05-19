@@ -819,6 +819,8 @@
           items:
             - name: Categorías de valor y referencias
               href: ../cpp-and-winrt-apis/cpp-value-categories.md
+    - name: 'C#/WinRT'
+      href: ../csharp-winrt/index.md
     - name: Seguridad
       href: ../security/index.md
       items:
