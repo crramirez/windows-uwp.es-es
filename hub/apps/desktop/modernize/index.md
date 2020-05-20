@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b966d00455bce390457e148c60b57296375ac2fa
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 86586cfc0f054181f08cd3cd75731e6c53ea4b92
+ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730242"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83579932"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernización de las aplicaciones de escritorio
 
@@ -21,6 +21,17 @@ En este artículo se describen las características de Windows 10 y UWP que pued
 
 > [!NOTE]
 > ¿Necesitas ayuda para migrar las aplicaciones de escritorio a Windows 10? El servicio [Asesoría de aplicaciones de escritorio](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) proporciona soporte directo y gratuito a los desarrolladores que porten sus aplicaciones a Windows 10. Este programa está disponible para todos los fabricantes de software independiente y las empresas aptas. Para más información sobre los requisitos que hay que cumplir y sobre el propio programa, visita [https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered](https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered). Para empezar a trabajar ahora, [envía la solicitud](https://fasttrack.microsoft.com/dl/daa).
+
+## <a name="windows-ui-library"></a>Biblioteca de interfaz de usuario de Windows
+
+La biblioteca de interfaz de usuario de Windows es un conjunto de paquetes NuGet que proporciona controles y otros elementos de interfaz de usuario para aplicaciones de Windows 10. WinUI comenzó como un kit de herramientas que ofrecía versiones nuevas y actualizadas de controles de UWP para aplicaciones para UWP destinadas a versiones de nivel inferior de Windows 10. WinUI ha crecido en el ámbito y ahora es la plataforma de interfaz de usuario nativa (IU) moderna para aplicaciones de Windows 10 en UWP, .NET y Win32.
+
+Puede usar WinUI de las siguientes maneras en las aplicaciones de escritorio:
+
+* Puede actualizar las aplicaciones de WPF, Windows Forms y C++ o Win32 existentes para usar [islas de XAML](xaml-islands.md) para hospedar los controles de WinUI 2.x en las aplicaciones.
+* A partir de la [versión preliminar 1 de WinUi 3.0](../../winui/winui3/index.md), puede crear [aplicaciones .NET y C++ o Win32 que usan una interfaz de usuario totalmente basada en WinUi](../../winui/winui3/get-started-winui3-for-desktop.md).
+
+Consulta [Biblioteca de interfaz de usuario de Windows (WinUI)](../../winui/index.md).
 
 ## <a name="msix-packages"></a>Paquetes MSIX
 
@@ -79,12 +90,6 @@ Tanto si va a compilar una aplicación para UWP centrada exclusivamente en la fa
 | [ComboBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/combo-box#make-a-combo-box-editable) | Ahora ya puedes realizar un cuadro combinado editable para que el usuario escriba los valores que no aparecen en el control.  |
 | [TreeView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) | Ya puedes configurar una vista de árbol que permita el enlace de datos, las plantillas de elementos y la opción para arrastrar y colocar.  |
 | [DataGridView](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid) |   Ofrece una manera flexible de mostrar una colección de datos en filas y columnas. Este control está disponible en el [kit de herramientas de la comunidad Windows](https://docs.microsoft.com/windows/uwpcommunitytoolkit/).  |
-
-## <a name="windows-ui-library"></a>Biblioteca de interfaz de usuario de Windows
-
-La biblioteca de interfaz de usuario de Windows es un conjunto de paquetes NuGet que proporciona nuevos controles y otros elementos de interfaz de usuario para aplicaciones de UWP. Las API de la biblioteca de interfaz de usuario de Windows funcionan en versiones anteriores de Windows 10, por lo que la aplicación funcionará incluso aunque los usuarios no estén ejecutando la última versión de Windows 10. Esto te permitirá adoptar nuevos controles a medida que se publican en la biblioteca de interfaz de usuario de Windows sin tener que preocuparte de incluir comprobaciones de la versión o XAML condicionales.
-
-Consulta [Biblioteca de interfaz de usuario de Windows](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 ## <a name="other-technologies-for-modern-desktop-apps"></a>Otras tecnologías para aplicaciones modernas de escritorio
 

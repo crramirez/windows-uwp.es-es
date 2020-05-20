@@ -7,12 +7,12 @@ keywords: windows win32, desarrollo de escritorio
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: c27826980127674b4a4356af8a3c36056e86bd83
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 5a55a1578fba7052396ecec725db2678ea8bd6ff
+ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74056860"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83580022"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Compilación de aplicaciones de escritorio para PC Windows
 
@@ -62,6 +62,9 @@ En la tabla siguiente se presentan las plataformas. Para obtener una comparació
 </tr>
 </tbody>
 </table>
+
+> [!NOTE]
+> Todas estas plataformas proporcionan un completo marco de trabajo de la interfaz de usuario, así como un conjunto de controles, que te permiten crear aplicaciones de escritorio como Word, Excel y Photoshop, que se ejecutan en el escritorio clásico de Windows y aprovechan al máximo las características específicas de ese entorno. En Windows 10, todas estas plataformas también admiten el uso de la biblioteca de interfaz de usuario de Windows (WinUI) para crear sus interfaces de usuario. Para más información sobre WinUI para aplicaciones de escritorio, consulta [esta sección](choose-your-platform.md#windows-ui-library).
 
 ## <a name="update-existing-desktop-apps-for-windows-10"></a>Actualización de aplicaciones de escritorio existentes para Windows 10
 
