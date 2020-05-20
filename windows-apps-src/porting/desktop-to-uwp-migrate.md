@@ -1,6 +1,6 @@
 ---
-Description: Compartir código entre una aplicación de escritorio y una aplicación de UWP
-title: Compartir código entre una aplicación de escritorio y una aplicación de UWP
+Description: Compartir código entre una aplicación de escritorio y una aplicación para UWP
+title: Compartir código entre una aplicación de escritorio y una aplicación para UWP
 ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -82,7 +82,7 @@ Supongamos que tenemos una aplicación Windows Forms muy básica que muestra los
 
 ![Windows Forms aplicación](images/desktop-to-uwp/win-forms-app.png)
 
-El proyecto contiene una biblioteca de clases .NET Standard 2,0 con una clase estática denominada **Northwind**. Si pasamos este código a la clase **Northwind** , no se compilará porque utiliza las ``SQLConnection``clases ``SqlCommand``, y ``SqlDataReader`` , y las clases que no están disponibles en el .net Standard 2,0.
+El proyecto contiene una biblioteca de clases .NET Standard 2,0 con una clase estática denominada **Northwind**. Si pasamos este código a la clase **Northwind** , no se compilará porque utiliza las ``SQLConnection`` ``SqlCommand`` clases, y ``SqlDataReader`` , y las clases que no están disponibles en el .net Standard 2,0.
 
 ```csharp
 public static ArrayList GetCustomerNames()
@@ -112,9 +112,9 @@ public static ArrayList GetCustomerNames()
 }
 
 ```
-No obstante, podemos usar el [Explorador de API de .net](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) para buscar una alternativa. Las ``DbConnection``clases ``DbCommand``, y ``DbDataReader`` están disponibles en la .net Standard 2,0 para que se puedan usar en su lugar.  
+No obstante, podemos usar el [Explorador de API de .net](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) para buscar una alternativa. Las ``DbConnection`` ``DbCommand`` clases, y ``DbDataReader`` están disponibles en la .net Standard 2,0 para que se puedan usar en su lugar.  
 
-Esta versión revisada usa esas clases para obtener una lista de clientes, pero para ``DbConnection`` crear una clase, es necesario pasar un objeto de generador que se crea en la aplicación cliente.
+Esta versión revisada usa esas clases para obtener una lista de clientes, pero para crear una ``DbConnection`` clase, es necesario pasar un objeto de generador que se crea en la aplicación cliente.
 
 ```csharp
 public static ArrayList GetCustomerNames(DbProviderFactory factory)
@@ -282,9 +282,9 @@ Para empezar a trabajar con los proyectos de Android, iOS y multiplataforma, vea
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Encuentre respuestas a sus preguntas**
+**Encontrar respuestas a tus preguntas**
 
-¿Tiene alguna pregunta? Pregúntenos sobre Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puede preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+¿Tienes alguna pregunta? Pregúntanos en Stack Overflow. Nuestro equipo supervisa estas [etiquetas](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). También puedes preguntarnos [aquí](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
 
 **Enviar comentarios o realizar sugerencias de características**
 

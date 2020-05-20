@@ -41,7 +41,7 @@ En el cuadro de diálogo nuevo proyecto, seleccione la plantilla **aplicación A
 
 Asigne al proyecto el nombre **TimeChangerAndroid** y haga clic en **crear**.
 
-En el cuadro de diálogo Nueva aplicación multiplataforma, seleccione **aplicación en blanco**. En la **versión mínima de Android**, seleccione **Android 5,0 (Lollipop)**. Haga clic en **Aceptar**.
+En el cuadro de diálogo Nueva aplicación multiplataforma, seleccione **aplicación en blanco**. En la **versión mínima de Android**, seleccione **Android 5,0 (Lollipop)**. Haga clic en **OK**.
 
 Xamarin creará una nueva solución con un solo proyecto denominado **TimeChangerAndroid**.
 
@@ -49,7 +49,7 @@ Xamarin creará una nueva solución con un solo proyecto denominado **TimeChange
 
 En el directorio **Resources\layout** del proyecto, Abra **activity_main. XML**. El XML de este archivo define la primera pantalla que verá un usuario al abrir TimeChanger.
 
-La interfaz de usuario de TimeChanger es sencilla. Muestra la hora actual y tiene botones para ajustar la hora en incrementos de una hora. Utiliza un vertical `LinearLayout` para alinear el tiempo por encima de los botones y `LinearLayout` una horizontal para organizar los botones en paralelo. El contenido se centra en la pantalla al establecer el atributo **Android: Grav** en **Center** en el vertical `LinearLayout`.
+La interfaz de usuario de TimeChanger es sencilla. Muestra la hora actual y tiene botones para ajustar la hora en incrementos de una hora. Utiliza un vertical `LinearLayout` para alinear el tiempo por encima de los botones y una horizontal `LinearLayout` para organizar los botones en paralelo. El contenido se centra en la pantalla al establecer el atributo **Android: Grav** en **Center** en el vertical `LinearLayout` .
 
 Reemplace el contenido de **activity_main. XML** por el código siguiente.
 
@@ -93,13 +93,13 @@ Abra **MainActivity.CS**. Este archivo contiene la lógica de código subyacente
 
 ### <a name="set-the-current-time"></a>Establecer la hora actual
 
-En primer lugar, obtenga una referencia `TextView` a que mostrará la hora. Use **FindViewById** para buscar en todos los elementos de la interfaz de usuario el que tenga el valor **Android: ID** (que se estableció `"@+id/timeDisplay"` en en el XML del paso anterior). Este es el `TextView` que mostrará la hora actual.
+En primer lugar, obtenga una referencia a `TextView` que mostrará la hora. Use **FindViewById** para buscar en todos los elementos de la interfaz de usuario el que tenga el valor **Android: ID** (que se estableció `"@+id/timeDisplay"` en en el XML del paso anterior). Este es el `TextView` que mostrará la hora actual.
 
 ```csharp
 var timeDisplay = FindViewById<TextView>(Resource.Id.timeDisplay);
 ```
 
-Los controles de interfaz de usuario deben actualizarse en el subproceso de la interfaz de usuario. Es posible que los cambios realizados desde otro subproceso no actualicen correctamente el control tal como se muestra en la pantalla. Dado que no hay ninguna garantía de que este código siempre se ejecute en el subproceso de la interfaz de usuario, use el método **RunOnUiThread** para asegurarse de que las actualizaciones se muestran correctamente. Este es el método `UpdateTimeLabel` completo.
+Los controles de interfaz de usuario deben actualizarse en el subproceso de la interfaz de usuario. Es posible que los cambios realizados desde otro subproceso no actualicen correctamente el control tal como se muestra en la pantalla. Dado que no hay ninguna garantía de que este código siempre se ejecute en el subproceso de la interfaz de usuario, use el método **RunOnUiThread** para asegurarse de que las actualizaciones se muestran correctamente. Este es el `UpdateTimeLabel` método completo.
 
 ```csharp
 private void UpdateTimeLabel(object state = null)
@@ -147,7 +147,7 @@ public void UpButton_Click(object sender, System.EventArgs e)
 
 ### <a name="wire-up-the-up-and-down-buttons-to-their-corresponding-event-handlers"></a>Conectar los botones arriba y abajo a los controladores de eventos correspondientes
 
-Para asociar los botones a sus controladores de eventos correspondientes, use primero FindViewById para buscar los botones por sus identificadores. Una vez que tenga una referencia al objeto de botón, puede Agregar un controlador de eventos a `Click` su evento.
+Para asociar los botones a sus controladores de eventos correspondientes, use primero FindViewById para buscar los botones por sus identificadores. Una vez que tenga una referencia al objeto de botón, puede Agregar un controlador de eventos a su `Click` evento.
 
 ```csharp
 Button upButton = FindViewById<Button>(Resource.Id.upButton);

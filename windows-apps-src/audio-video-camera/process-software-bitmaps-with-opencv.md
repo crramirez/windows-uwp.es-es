@@ -20,7 +20,7 @@ En este artículo se explica cómo usar la clase **[SoftwareBitmap](https://docs
 Los ejemplos de este artículo le guiarán a través de la creación de un código nativo Windows Runtime componente que se puede usar desde una aplicación de UWP, incluidas las aplicaciones que se crean con C#. Este componente auxiliar expondrá un método único, **Blur**, que usará la función de procesamiento de imágenes de desenfoque de OpenCV. El componente implementa métodos privados que obtienen un puntero al búfer de datos de imagen subyacente que puede usar directamente la biblioteca OpenCV, lo que simplifica la extensión del componente auxiliar para implementar otras características de procesamiento de OpenCV. 
 
 * Para obtener una introducción al uso de **SoftwareBitmap**, vea [crear, editar y guardar imágenes de mapa de bits](imaging.md). 
-* Para obtener información sobre cómo usar la biblioteca de OpenCV, [https://opencv.org](https://opencv.org)vaya a.
+* Para obtener información sobre cómo usar la biblioteca de OpenCV, vaya a [https://opencv.org](https://opencv.org) .
 * Para ver cómo usar el componente auxiliar OpenCV que se muestra en este artículo con **[MediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader)** para implementar el procesamiento de imágenes en tiempo real de fotogramas de una cámara, consulte [uso de OpenCV con MediaFrameReader](use-opencv-with-mediaframereader.md).
 * Para ver un ejemplo de código completo que implementa algunos efectos diferentes, consulte el [ejemplo de fotogramas de cámara + OpenCV](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraOpenCV) en el repositorio de github de ejemplos de Windows universal.
 
