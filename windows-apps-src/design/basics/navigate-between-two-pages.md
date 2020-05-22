@@ -1,5 +1,5 @@
 ---
-Description: Aprenda a habilitar la navegación de punto a punto entre dos páginas básicas en una aplicación de Windows.
+Description: Aprende a habilitar la navegación de punto a punto entre dos páginas básicas en una aplicación de Windows.
 title: Navegación de punto a punto entre dos páginas
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
 label: Peer-to-peer navigation between two pages
@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: ef50b2d84ae9785a13d8c8dd13ca5a399dae142d
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 50211600931fc67c43aa577fabe23f1277a0e897
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969250"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233823"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementación del desplazamiento entre dos páginas
 

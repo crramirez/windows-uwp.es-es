@@ -4,14 +4,14 @@ description: Cómo utilizar las clases XamlUICommand y StandardUICommand (junto 
 ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
-ms.openlocfilehash: 24df2f6c67fe5a501461d5ce5e9c18a147c54672
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5ab46a479e882b9975f24731dfcbb6e433126f80
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968770"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233764"
 ---
-# <a name="commanding-in-windows-app-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Uso de comandos en aplicaciones de Windows con ICommand, XamlUICommand y StandardUICommand
+# <a name="commanding-in-windows-apps-using-standarduicommand-xamluicommand-and-icommand"></a>Uso de comandos en aplicaciones de Windows con StandardUICommand, XamlUICommand e ICommand
 
 En este tema, se describe el uso de comandos en aplicaciones de Windows. Concretamente, vamos a explicar cómo usar las clases [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) y [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) (junto con la interfaz ICommand) para compartir y administrar comandos entre diversos tipos de controles, independientemente del tipo de dispositivo y de la entrada que se va a usar.
 

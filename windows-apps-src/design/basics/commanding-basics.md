@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 26d649e5a27ae7eef0131964f5c277f3539da73f
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 154f1969f18cffc485252971258ef801ca86a56e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969380"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234025"
 ---
 # <a name="command-design-basics-for-windows-apps"></a>Conceptos básicos de diseño de comandos para aplicaciones de Windows
 
@@ -33,7 +33,7 @@ Estas son algunas experiencias de comando comunes:
 - Abrir, guardar y eliminar archivos
 - Editar y crear contenido
 
-Se creativo a la hora de diseñar las experiencias de comandos. Elige qué dispositivos de entrada admite la aplicación y cómo responde la aplicación a cada dispositivo. Una aplicación que incorpora la gama más amplia de funcionalidades y preferencias hace que sea utilizable, portátil y accesible (consulta [Diseño de comandos para aplicaciones de Windows](../controls-and-patterns/commanding.md) para obtener más información).
+Se creativo a la hora de diseñar las experiencias de comandos. Elige qué dispositivos de entrada admite la aplicación y cómo responde la aplicación a cada dispositivo. Una aplicación que incorpora la gama más amplia de funcionalidades y preferencias hace que sea utilizable, portátil y accesible (consulta el artículo sobre [diseño de comandos para aplicaciones de Windows](../controls-and-patterns/commanding.md) para más información).
 
 
 

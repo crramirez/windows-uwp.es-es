@@ -1,17 +1,17 @@
 ---
 title: Novedades de Windows 10, compilación 14393
 description: Tanto la compilación 14393 de Windows 10 como las nuevas herramientas para desarrolladores le proporcionan las herramientas, características y experiencias que ofrece la tecnología de la nueva Plataforma universal de Windows.
-keywords: conoce las novedades, novedades, actualizar, actualización, actualizaciones, características, nuevo, Windows 10, 1607, julio, el más novedoso, 14393
+keywords: Windows 10, 1607, 14393
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: f95cd87b-f959-4148-a9bd-ba0b90d16e71
 ms.localizationpriority: medium
-ms.openlocfilehash: 46abd26f2b9814f87980572d9e9a7891e26a2dcb
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: e3d21531e2fc1b0ec8aee513d5a7b86281232d95
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258895"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234645"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-14393"></a>Novedades para desarrolladores en Windows 10, compilación 14393
 
@@ -24,7 +24,7 @@ A continuación te ofrecemos una lista de características nuevas y mejoradas de
 Característica | Descripción
  :---- | :----
 Teclas de acceso para elementos XAML | Puedes usar la nueva propiedad [**AccessKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.accesskey) y [**AccessKeyManager**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.accesskeymanager) para mejorar la accesibilidad mediante teclado en la aplicación.
-Compatibilidad con GIF animados | Ahora el elemento XAML [**Image**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image) admite GIF animados. Puedes usar estos nuevos miembros en [**BitmapImage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) para controlar la reproducción: [**AutoPlay**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.autoplay), [**IsAnimatedBitmap**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.isanimatedbitmap), [**IsPlaying**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.isplaying), [**Play**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.play), [**Stop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.stop).
+Compatibilidad con GIF animados | Ahora el elemento XAML [**Image**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image) admite GIF animados. Puede usar estos nuevos miembros en [**BitmapImage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) para controlar la reproducción: [**Reproducción automática**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.autoplay), [**IsAnimatedBitmap**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.isanimatedbitmap), [**IsPlaying**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.isplaying), [ **Reproducir**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.play), [**Detener**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.stop).
 Extensibilidad de las aplicaciones | Escribe [extensiones](https://github.com/microsoft/App-Extensibility-Sample) para tus aplicaciones para UWP. Permite que la aplicación para UWP hospede contenido proporcionado por otras aplicaciones para UWP.  Descubre, enumera y accede a contenido de solo lectura desde dichas aplicaciones.
 Pruebas de evaluación | [Hacer un examen](https://docs.microsoft.com/education/windows/take-tests-in-windows-10?f=255&MSPPError=-2147217396) es una aplicación basada en navegador que permite presentar exámenes en línea bloqueados para pruebas de alto riesgo. Usa las [API de Hacer un examen](../apps-for-education/take-a-test-api.md) para impedir que los alumnos usen otro equipo o recursos de Internet durante una prueba.
 Servicio de transferencia inteligente en segundo plano (BITS) | Ahora es posible utilizar las API COM de [BITS](https://docs.microsoft.com/windows/desktop/Bits/background-intelligent-transfer-service-portal) y los cmdlets de PowerShell (si están disponibles) en una sesión remota de PowerShell. Esto resulta especialmente útil a la hora de administrar las versiones de Windows Server 2016 Technical Preview que no dispongan de la funcionalidad de inicio de sesión local. Los trabajos de BITS iniciados a través de sesiones remotas de PowerShell se ejecutan en el contexto de la cuenta de usuario de la sesión y solo avanzarán cuando haya al menos una sesión iniciada o una sesión remota de PowerShell activa asociada con dicha cuenta de usuario. Consulta [To manage PowerShell Remote sessions](https://docs.microsoft.com/windows/desktop/Bits/using-windows-powershell-to-create-bits-transfer-jobs) (Administrar sesiones de PowerShell remotas) para obtener más información sobre cómo administrar sesiones para transferencias de larga duración.<br/><br/>En versiones anteriores de Windows que admitían [tokens auxiliares de BITS](https://docs.microsoft.com/windows/desktop/Bits/helper-tokens-for-bits-transfer-jobs), el propietario del trabajo debía tener privilegios de administrador de forma efectiva para establecer un token auxiliar. En esta versión, el propietario de un trabajo de BITS puede establecer tokens auxiliares sin ser administrador, siempre y cuando el token auxiliar no tenga capacidades de administrador. Esto reduce la superficie de vulnerabilidad de las herramientas de descarga o actualización en segundo plano, ya que permite que se ejecuten con la cuenta NetworkService con menos privilegios, en lugar de con una cuenta con privilegios administrativos.

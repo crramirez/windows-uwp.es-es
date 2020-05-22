@@ -1,22 +1,22 @@
 ---
 title: Novedades de Windows 10, compilación 17134
 description: Tanto la compilación 17134 de Windows 10 como las nuevas herramientas para desarrolladores te proporcionan las herramientas, características y experiencias que ofrece la tecnología de la Plataforma universal de Windows.
-keywords: novedad, novedades, actualización, actualizaciones, características, nuevo, Windows 10, más reciente, desarrolladores, 17134
+keywords: Windows 10, 17134, 1803
 ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cce2c6c36918a117ba6aee25987be9060b3ec148
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 12c788cae02cdc5a0cf8e26f02ea03264960ce49
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258864"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234370"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Novedades para desarrolladores en Windows 10, compilación 17134
 
 La compilación 17134 de Windows 10 (también conocida como Actualización de abril o versión 1803), en combinación con Visual Studio 2019 y el SDK actualizado, te proporciona las herramientas, las características y las experiencias que necesitas para crear aplicaciones extraordinarias para la Plataforma universal de Windows. [Instala las herramientas y el SDK](https://developer.microsoft.com/windows/downloads#_blank) en Windows 10 y estarás listo para [crear una nueva aplicación universal de Windows](../get-started/create-uwp-apps.md) o para explorar cómo puedes usar tu [código de aplicación existente en Windows](../porting/index.md).
 
-A continuación, te ofrecemos una colección de características e instrucciones nuevas y mejoradas de interés para los desarrolladores de Windows en esta versión. Para obtener una lista completa de los nuevos espacios de nombres agregados a Windows SDK, consulta [Nuevas API en la compilación 17134 de Windows 10](windows-10-build-17134-api-diff.md). Para obtener más información sobre las características más destacadas de Windows 10, consulte [Lo más destacado de Windows 10](https://developer.microsoft.com/windows/windows-10-for-developers). También puedes consultar [Windows Developer Platform features](https://developer.microsoft.com/windows/platform/features) (Características de la plataforma para desarrolladores de Windows) si quieres tener una introducción de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
+A continuación, ofrecemos una recopilación de características e instrucciones nuevas y mejoradas de interés para los desarrolladores de Windows en esta versión. Para obtener una lista completa de los nuevos espacios de nombres agregados a Windows SDK, consulta [Nuevas API en la compilación 17134 de Windows 10](windows-10-build-17134-api-diff.md). Para obtener más información sobre las características más destacadas de Windows 10, consulte [Lo más destacado de Windows 10](https://developer.microsoft.com/windows/windows-10-for-developers). También puedes consultar [Windows Developer Platform features](https://developer.microsoft.com/windows/platform/features) (Características de la plataforma para desarrolladores de Windows) si quieres tener una introducción de alto nivel de las funcionalidades pasadas y futuras que se han agregado en la plataforma de Windows.
 
 ## <a name="design--ui"></a>Diseño e interfaz de usuario
 
@@ -78,7 +78,7 @@ Característica | Descripción
 Descargar e instalar actualizaciones de paquetes desde Store | Hemos actualizado [Descargar e instalar actualizaciones de paquete desde la Store](../packaging/self-install-package-updates.md) con nuevas instrucciones y ejemplos acerca de cómo descargar e instalar actualizaciones de paquetes sin mostrar una interfaz de usuario de notificaciones al usuario, desinstalar un paquete opcional y obtener información sobre los paquetes en la cola de descarga e instalación de tu aplicación.
 Especificar precios de forma libre en la moneda local de un mercado específico | Al invalidar el precio base de tu aplicación para un mercado concreto, ya no estás limitado a elegir uno de los niveles de precios estándar; ahora tienes la opción de especificar un precio de forma libre en la moneda local del mercado. Para obtener más información, consulta [Establecer y programar los precios de las aplicaciones](../publish/set-and-schedule-app-pricing.md). **Esta función está disponibles para todos los desarrolladores de Windows y no requiere el SDK actualizado.**
 Contexto de Store | La clase [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) se ha actualizado con una selección de métodos nuevos. Estos métodos administran la descarga y la instalación de las actualizaciones de paquetes y complementos de una aplicación.
-Complementos de suscripción disponibles para todos los desarrolladores | Crea y publica complementos de una suscripción para vender productos digitales en tus aplicaciones y juegos (como las características de la aplicación o el contenido digital) con períodos de facturación periódicos automatizados. Para obtener más información, consulte [Habilitar complementos de una suscripción para su aplicación](../monetize/enable-subscription-add-ons-for-your-app.md). **Esta función está disponibles para todos los desarrolladores de Windows y no requiere el SDK actualizado.**
+Complementos de suscripción disponibles para todos los desarrolladores | Crea y publica complementos de una suscripción para vender productos digitales en tus aplicaciones y juegos (como las características de la aplicación o el contenido digital) con períodos de facturación periódicos automatizados. Para obtener más información, consulta [Habilitar complementos de una suscripción para tu aplicación](../monetize/enable-subscription-add-ons-for-your-app.md). **Esta función está disponibles para todos los desarrolladores de Windows y no requiere el SDK actualizado.**
 
 ## <a name="videos"></a>Vídeos
 
@@ -117,7 +117,7 @@ El Programa de creadores de Xbox Live permite a los desarrolladores publicar jue
 ¿Sientes curiosidad por saber por qué se ha cambiado el nombre del directorio Documents and Settings? [Raymond Chen explica de dónde procede el nombre y por qué se cambió](https://www.youtube.com/watch?v=4vDHQewVmM8&index=1&list=PLWs4_NfqMtoxjy3LrIdf2oamq1coolpZ7). Para obtener más detalles sobre el desarrollo de Windows y su historia, echa un vistazo al [blog de Raymond.](https://devblogs.microsoft.com/oldnewthing/)
 
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 ### <a name="coloring-book"></a>Libro para colorear
 

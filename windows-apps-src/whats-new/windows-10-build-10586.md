@@ -1,17 +1,17 @@
 ---
 title: Novedades de Windows 10, compilación 10586, noviembre de 2015
 description: Tanto la compilación 10586 de Windows 10 como las nuevas herramientas para desarrolladores le proporcionan las herramientas, características y experiencias que ofrece la tecnología de la nueva Plataforma universal de Windows.
-keywords: novedades, actualizaciones, características, nuevo, Windows 10, 1511, noviembre, 10586
+keywords: features, Windows 10, 1511, 10586
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
 ms.localizationpriority: medium
-ms.openlocfilehash: af3c078d2e5c1d27e5e6ece8f72b0fa601d6c053
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 14ea5b96c88abeb1586ff8f6695a694b51ee9af0
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74259762"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234742"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-10586"></a>Novedades para desarrolladores en Windows 10, compilación 10586
 

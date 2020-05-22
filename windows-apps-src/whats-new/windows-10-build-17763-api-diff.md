@@ -1,17 +1,17 @@
 ---
 title: Cambios en las API de Windows 10, compilación 17763
 description: Los desarrolladores pueden usar la siguiente lista para identificar los espacios de nombres nuevos o cambiados en Windows 10, compilación 17763
-keywords: novedades, novedad, actualizaciones, actualización, Windows 10, más recientes, api, 17763, octubre
+keywords: Windows 10, apis, 17763, 1809
 ms.date: 10/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8fd6d2c41cd2f632f22819f452b2f203fd8ac309
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0e21cf153cb86571f83b496461a1da383b387158
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63780339"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234796"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Nuevas API en la compilación 17763 de Windows 10
 
@@ -1407,7 +1407,7 @@ AutoSuggestBox.Description <br> AutoSuggestBox.DescriptionProperty
 
 BackgroundSizing
 
-#### <a name="border"></a>[borde](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border)
+#### <a name="border"></a>[Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border)
 
 Border.BackgroundSizing <br> Border.BackgroundSizingProperty <br> Border.BackgroundTransition
 

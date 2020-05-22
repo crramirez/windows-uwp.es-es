@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c35bc6cfcf36543482bcb42d0ccda7fd3102ac9
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a9b27094a5861151b907dc7787828068122e4a54
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970040"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233982"
 ---
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
 
-La configuración de la aplicación es la parte que puede personalizar el usuario de una aplicación de Windows a la que se accede a través de una página de configuración de la aplicación. Por ejemplo, una aplicación del lector de noticias puede permitir al usuario especificar qué fuentes de noticias o cuántas columnas se deben mostrar en la pantalla, mientras que una aplicación meteorológica podría permitir al usuario elegir entre Celsius y Fahrenheit. En este artículo se proporcionan los procedimientos recomendados para crear y mostrar la configuración de aplicaciones.
+La configuración de la aplicación es la parte que puede personalizar el usuario de una aplicación de Windows a la que se accede mediante una página de configuración de la aplicación. Por ejemplo, una aplicación del lector de noticias puede permitir al usuario especificar qué fuentes de noticias o cuántas columnas se deben mostrar en la pantalla, mientras que una aplicación meteorológica podría permitir al usuario elegir entre Celsius y Fahrenheit. En este artículo se proporcionan los procedimientos recomendados para crear y mostrar la configuración de aplicaciones.
 
 ## <a name="when-to-provide-a-settings-page"></a>Cuándo se debe proporcionar una página de configuración
 

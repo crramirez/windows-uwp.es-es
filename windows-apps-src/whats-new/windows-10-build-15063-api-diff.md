@@ -1,17 +1,17 @@
 ---
 title: Cambios en las API de Windows 10 Creators Update
 description: Los desarrolladores pueden usar la siguiente lista para identificar los espacios de nombres nuevos o cambiados en Windows 10, compilación 15063
-keywords: novedad, novedades, actualización, actualizaciones, Windows 10, 1703, creadores, 15063
+keywords: Windows 10, 1703, 15063
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: d1f6739d-eaea-4c5d-b79a-9f7214e42727
 ms.localizationpriority: medium
-ms.openlocfilehash: fb258c23e38fb2aee5f6f5194371bb72940e51b5
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 85c58e915e4dc60c416bfe3f33c78d4bb5253ec9
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63780430"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234734"
 ---
 # <a name="new-apis-in-windows-10-build-15063"></a>Nuevas API en la compilación 15063 de Windows 10
 
