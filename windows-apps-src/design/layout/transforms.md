@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aa60db28003c4f231cf36b653c5e69b422978c1a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 28dc4a62bf580da41d424c98c186413dc96a8aae
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71340067"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775827"
 ---
 # <a name="transforms-overview"></a>Información general sobre las transformaciones
 
@@ -37,6 +37,8 @@ Las transformaciones se pueden combinar y hay dos clases de Windows Runtime que 
 En un diseño XAML, las transformaciones se aplican una vez finalizado el cálculo de diseño, por lo que los cálculos del espacio disponible y otras decisiones sobre el diseño ya se han realizado antes de aplicar las transformaciones. Como el diseño es lo primero que se aplica, algunas veces obtendrás resultados inesperados si los elementos transformados están en una celda de [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) o en un contenedor de diseño similar que asigna espacio durante el diseño. El elemento transformado puede aparecer truncado u oscurecido porque está intentando dibujarse en un área que no calculó las dimensiones posteriores a la transformación a la hora de dividir el espacio dentro de su contenedor principal. Quizás tengas que experimentar con los resultados de las transformaciones y ajustar algunas opciones de configuración. Por ejemplo, en vez de basarte en el diseño adaptativo y empezar con el tamaño, posiblemente tengas que cambiar las propiedades **Center** o declarar medidas de píxel fijas para el espacio de diseño, a fin de procurar que el elemento principal asigne espacio suficiente.
 
 **Nota sobre la migración:**  Windows Presentation Foundation (WPF) contaba con la propiedad **LayoutTransform** que aplicaba transformaciones antes de la fase de diseño. Sin embargo, XAML en Windows Runtime no admite propiedades **LayoutTransform**. (Microsoft Silverlight también carecía de esta propiedad).
+
+Como alternativa, el kit de herramientas de la Comunidad Windows proporciona el objeto [LayoutTransformControl](/windows/communitytoolkit/controls/LayoutTransformControl) que aplica las transformaciones de matriz en cualquier objeto FrameworkElement de la aplicación.
 
 ## <a name="span-idapplying_a_transform_to_a_ui_elementspanspan-idapplying_a_transform_to_a_ui_elementspanspan-idapplying_a_transform_to_a_ui_elementspanapplying-a-transform-to-a-ui-element"></a><span id="Applying_a_transform_to_a_UI_element"></span><span id="applying_a_transform_to_a_ui_element"></span><span id="APPLYING_A_TRANSFORM_TO_A_UI_ELEMENT"></span>Aplicación de una transformación a un elemento de la interfaz de usuario
 

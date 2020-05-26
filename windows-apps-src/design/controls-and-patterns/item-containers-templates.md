@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2445f1b718532fd0862c276e8fadf12e88fe36ac
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d0834a905c50b92003c3aa78ff8226d35c25e5dd
+ms.sourcegitcommit: ddc65c170834bcce524b5e1d36e6755eae1e3af2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209080"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83729904"
 ---
 # <a name="item-containers-and-templates"></a>Plantillas y contenedores de elementos
 
@@ -313,7 +313,7 @@ La plantilla de control de un elemento contiene los elementos visuales que muest
 
 - Mantenimiento del puntero: rectángulo gris claro que se dibuja debajo de la plantilla de datos.  
 - Selección: rectángulo azul claro que se dibuja debajo de la plantilla de datos. 
-- Foco del teclado: borde de puntos blanco y negro que se dibuja encima de plantilla de elemento. 
+- Foco de teclado: [objeto visual de foco de alta visibilidad](/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals) dibujado encima de la plantilla de elemento.
 
 ![Elementos visuales de estado de la vista de lista](images/listview-state-visuals.png)
 

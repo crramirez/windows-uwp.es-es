@@ -6,18 +6,22 @@ ms.date: 05/11/2020
 ms.localizationpriority: medium
 ms.author: jken
 author: grantmestrength
-ms.openlocfilehash: 9f632c8f47ec42027918c3776492967e60c09764
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 0880d7e7299db2a1a0f7de69400b7bb9c5d0efd9
+ms.sourcegitcommit: 10ec5a20dd1152a1037ebc4fba1a28cc96593586
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580442"
+ms.locfileid: "83665867"
 ---
 # <a name="microsoft-build---the-windows-documentation"></a>Microsoft Build: la documentación de Windows
 
 ![Imagen del héroe de Build](../images/build-banner.jpeg)
 
 Hemos recopilado vínculos a documentación que admite las conversaciones que se proporcionan como parte de [Microsoft Build 2020](https://mybuild.microsoft.com). Esta página se actualizará a medida que el evento continúe, así que vuelve a ver las novedades.
+
+## <a name="project-reunion"></a>Project Reunion
+
+* [Project Reunion](https://blogs.windows.com/windowsdeveloper/2020/05/19/developing-for-all-1-billion-windows-10-devices-and-beyond/) es el futuro del desarrollo de Windows.
 
 ## <a name="windows-terminal"></a>Terminal Windows
 
