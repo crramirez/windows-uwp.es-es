@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 385c11e48695c2486fd5a2b72633923454e2f8ea
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ad94d7b887e28ac01156592ac47cfc9ac4783193
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970640"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775907"
 ---
 # <a name="connected-animation-for-windows-apps"></a>Animación conectada para aplicaciones de Windows
 
@@ -55,7 +55,7 @@ En este vídeo corto, una aplicación usa una animación conectada para animar u
 
 ## <a name="connected-animation-and-the-fluent-design-system"></a>Animación conectada y el sistema de diseño fluida
 
- Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. La animación conectada es un componente del sistema de diseño fluida que agrega movimiento a la aplicación. Para obtener más información, vea [información general sobre el diseño de Fluent](/windows/apps/fluent-design-system).
+ Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. La animación conectada es un componente del sistema de diseño fluida que agrega movimiento a la aplicación. Para más información, consulta la [Introducción a Fluent Design](/windows/apps/fluent-design-system).
 
 ## <a name="why-connected-animation"></a>¿Por qué se conecta la animación?
 
@@ -102,7 +102,7 @@ Para lograr los distintos efectos, algunas configuraciones omiten estas propieda
 | - | - | - |
 | Peso | Sí | Sí* <br/> **La traducción básica de a a B usa esta función de aceleración, pero la "DIP" tiene su propia función de aceleración.*  |
 | Directo | No <br/> *Anima por 150MS.*| No <br/> *Usa la función de aceleración decelerada.* |
-| Básico | Sí | Sí |
+| Básica | Sí | Sí |
 
 ## <a name="how-to-implement-connected-animation"></a>Cómo implementar la animación conectada
 
@@ -271,7 +271,7 @@ void PrepareAnimationWithItem(ContactsItem item)
 Para iniciar una animación con este elemento como destino, por ejemplo, al navegar de nuevo desde una vista de detalle, use [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync). Si acaba de cargar el origen de datos para ListView, TryStartConnectedAnimationAsync esperará para iniciar la animación hasta que se haya creado el contenedor de elementos correspondiente.
 
 ```csharp
-private void ContactsListView_Loaded(object sender, RoutedEventArgs e)
+private async void ContactsListView_Loaded(object sender, RoutedEventArgs e)
 {
     ContactsItem item = GetPersistedItem(); // Get persisted item
     if (item != null)

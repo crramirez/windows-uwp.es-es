@@ -4,19 +4,16 @@ description: La aplicación universal de Windows debe autenticarse para poder us
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, clave de autenticación de mapa, control de mapa
+keywords: Windows 10, UWP, asignar clave de autenticación, control de mapa
 ms.localizationpriority: medium
-ms.openlocfilehash: c3bc74d83c3f713149e9001de4ec10fe0a4706de
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ab0d1900398c313021600c18338ecc1201241410
+ms.sourcegitcommit: f806d5f3b0c1e046c903d3388092c0e059d21858
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259390"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83790996"
 ---
 # <a name="request-a-maps-authentication-key"></a>Solicitar una clave de autenticación de mapas
-
-
-
 
 La [aplicación universal de Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) debe autenticarse para poder usar [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) y los servicios de mapa en el espacio de nombres [**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps). Para autenticar la aplicación, debes especificar una clave de autenticación de mapas. En este tema se describe cómo solicitar una clave de autenticación de mapas desde el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal.com/) y agregarla a la aplicación.
 
@@ -31,7 +28,7 @@ Usa el [Centro para desarrolladores de Mapas de Bing](https://www.bingmapsportal
 
 Para crear una nueva clave
 
-1.  En el explorador, vaya al centro para desarrolladores de mapas de Bing ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
+1.  En el explorador, vaya al centro para desarrolladores de mapas de Bing ( [https://www.bingmapsportal.com](https://www.bingmapsportal.com/) ).
 
 2.  Si se te pide que inicies sesión, escribe tu cuenta de Microsoft y haz clic en **Iniciar sesión**.
 
@@ -39,9 +36,9 @@ Para crear una nueva clave
 
 4.  Si no tienes una cuenta de Mapas de Bing, crea una nueva. Rellena los campos **Nombre de cuenta**, **Nombre del contacto**, **Nombre de la compañía**, **Dirección de correo electrónico** y **Número de teléfono**. Después de aceptar los términos de uso, haz clic en **Crear**.
 
-5.  En el menú **Mi cuenta**, haz clic en **Mis claves**.
+5.  En el menú **mi cuenta** , haga clic en **mis claves**.
 
-6.  Si creaste una clave anteriormente, haz clic en el vínculo para crear una nueva clave. De lo contrario, continúa con el formulario Crear clave.
+6.  Si ya ha creado una clave, haga clic en el vínculo para crear una nueva clave. De lo contrario, continúe con el formulario crear clave.
 
 7.  Rellena el formulario **Crear clave** y, después, haz clic en **Crear**.
 
@@ -92,5 +89,5 @@ Para usar servicios en el espacio de nombres [**Windows.Services.Maps**](https:/
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [Ejemplo de mapa de UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [Directrices de diseño para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* [Vídeo de compilación 2015: uso de mapas y ubicación en el teléfono, la tableta y el PC de las aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechar los mapas y la ubicación entre teléfonos, tabletas y equipos en tus aplicaciones Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Ejemplo de aplicación de tráfico para UWP](https://github.com/Microsoft/Windows-appsample-trafficapp)

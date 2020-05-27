@@ -1,40 +1,40 @@
 ---
-Description: Puede usar el método SendRequestAsync para enviar solicitudes a la Microsoft Store para las operaciones que aún no dispone de una API disponible en el SDK de Windows.
-title: Enviar solicitudes a Microsoft Store
+Description: Puede usar el método SendRequestAsync para enviar solicitudes al Microsoft Store para las operaciones que aún no tienen una API disponible en el Windows SDK.
+title: Enviar solicitudes al Microsoft Store
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 03/22/2018
 ms.topic: article
-keywords: windows 10, uwp, StoreRequestHelper, SendRequestAsync
+keywords: Windows 10, UWP, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
-ms.openlocfilehash: d492bc7dde990404552689516731850974c31a7c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 810c546eb0ee0263dcb50b3ce58e593ad294435c
+ms.sourcegitcommit: 577a54d36145f91c8ade8e4509d4edddd8319137
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57589800"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83867335"
 ---
-# <a name="send-requests-to-the-microsoft-store"></a>Enviar solicitudes a Microsoft Store
+# <a name="send-requests-to-the-microsoft-store"></a>Enviar solicitudes al Microsoft Store
 
-A partir de Windows 10, versión 1607, el Windows SDK proporciona API para las operaciones relacionadas con la Store (como las compras desde la aplicación) en el espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store). Sin embargo, aunque los servicios compatibles con la Store se actualizan, amplían y mejoran constantemente entre publicaciones de sistemas operativos, las nuevas API se suelen agregar en el Windows SDK únicamente durante las publicaciones principales de sistemas operativos.
+A partir de Windows 10, versión 1607, el Windows SDK proporciona las API para las operaciones relacionadas con el almacén (como compras desde la aplicación) en el espacio de nombres [Windows. Services. Store](https://docs.microsoft.com/uwp/api/windows.services.store) . Sin embargo, aunque los servicios que admiten la tienda se actualizan, se expanden y mejoran constantemente entre versiones del sistema operativo, las nuevas API normalmente se agregan a la Windows SDK solo durante las versiones principales del sistema operativo.
 
-Proporcionamos el método [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync) como una forma flexible para que las nuevas operaciones de la Store están disponibles para las aplicaciones para la Plataforma universal de Windows (UWP) antes de que se publique una nueva versión del Windows SDK. Puedes usar este método para enviar solicitudes a la Store para nuevas operaciones que aún no tienen una API correspondiente disponible en la versión más reciente del Windows SDK.
+Proporcionamos el método [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync) como una manera flexible de poner nuevas operaciones de almacenamiento a disposición de las aplicaciones plataforma universal de Windows (UWP) antes de que se publique una nueva versión de la Windows SDK. Puede usar este método para enviar solicitudes al almacén de nuevas operaciones que aún no tienen una API correspondiente disponible en la versión más reciente de la Windows SDK.
 
 > [!NOTE]
-> El método **SendRequestAsync** solo está disponible para aplicaciones dirigidas a Windows 10, versión 1607 o posterior. Algunas de las solicitudes compatibles con este método solo se admiten en versiones posteriores a Windows 10, versión 1607.
+> El método **SendRequestAsync** solo está disponible para las aplicaciones que tienen como destino Windows 10, versión 1607 o posterior. Algunas de las solicitudes admitidas por este método solo se admiten en versiones posteriores a Windows 10, versión 1607.
 
-**SendRequestAsync** es un método estático de la clase [StoreRequestHelper](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper). Para llamar a este método, debes pasar la siguiente información al método:
-* Un objeto [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) que proporciona información sobre el usuario para el que quieres realizar la operación. Para obtener más información sobre este objeto, consulta [Introducción a la clase StoreContext](in-app-purchases-and-trials.md#get-started-with-the-storecontext-class).
-* Un entero que identifica la solicitud que quieres enviar a la Store.
-* Si la solicitud admite argumentos, también puedes pasar una cadena con formato JSON que contenga los argumentos que quieres pasar junto con la solicitud.
+**SendRequestAsync** es un método estático de la clase [StoreRequestHelper](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper) . Para llamar a este método, debe pasar la información siguiente al método:
+* Objeto [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) que proporciona información sobre el usuario para el que desea realizar la operación. Para obtener más información sobre este objeto, consulte Introducción [a la clase StoreContext](in-app-purchases-and-trials.md#get-started-with-the-storecontext-class).
+* Un entero que identifica la solicitud que desea enviar al almacén.
+* Si la solicitud admite argumentos, también puede pasar una cadena con formato JSON que contenga los argumentos que se van a pasar junto con la solicitud.
 
-En el ejemplo siguiente se muestra cómo llamar a este método. En este ejemplo se requiere el uso de instrucciones para los espacios de nombres **Windows.Services.Store** y **System.Threading.Tasks**.
+En el siguiente ejemplo se muestra cómo llamar a este método. Este ejemplo requiere el uso de instrucciones para los espacios de nombres **Windows. Services. Store** y **System. Threading. Tasks** .
 
 ```csharp
 public async Task<bool> AddUserToFlightGroup()
 {
     StoreSendRequestResult result = await StoreRequestHelper.SendRequestAsync(
         StoreContext.GetDefault(), 8,
-        "{ \"type\": \"AddToFlightGroup\", \"parameters\": \"{ \"flightGroupId\": \"your group ID\" }\" }");
+        "{ \"type\": \"AddToFlightGroup\", \"parameters\": { \"flightGroupId\": \"your group ID\" } }");
 
     if (result.ExtendedError == null)
     {
@@ -45,39 +45,39 @@ public async Task<bool> AddUserToFlightGroup()
 }
 ```
 
-Consulta las siguientes secciones para obtener información sobre las solicitudes que están disponibles actualmente a través del método **SendRequestAsync**. Actualizaremos este artículo cuando se agregue compatibilidad para nuevas solicitudes.
+Vea las siguientes secciones para obtener información sobre las solicitudes que están disponibles actualmente a través del método **SendRequestAsync** . Este artículo se actualizará cuando se agregue la compatibilidad con nuevas solicitudes.
 
-## <a name="request-for-in-app-ratings-and-reviews"></a>Solicitar calificaciones y opiniones en la aplicación
+## <a name="request-for-in-app-ratings-and-reviews"></a>Solicitud de revisiones y clasificaciones en la aplicación
 
-Puedes iniciar mediante programación un cuadro de diálogo de la aplicación que le pide al cliente que califique tu aplicación y enviar una reseña pasando el entero 16 de solicitud al método **SendRequestAsync**. Para obtener más información, consulta [Mostrar un diálogo de clasificación y reseña en la aplicación](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app).
+Puede iniciar mediante programación un cuadro de diálogo desde la aplicación que solicita al cliente que califique la aplicación y envíe una revisión pasando el entero de solicitud 16 al método **SendRequestAsync** . Para obtener más información, consulte [Mostrar un cuadro de diálogo de clasificación y revisión en la aplicación](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app).
 
-## <a name="requests-for-flight-group-scenarios"></a>Solicitudes para escenarios de grupos piloto
+## <a name="requests-for-flight-group-scenarios"></a>Solicitudes de escenarios de grupo de vuelos
 
 > [!IMPORTANT]
-> Todas las solicitudes de grupos piloto descritas en esta sección actualmente no están disponibles para la mayoría de las cuentas de desarrollador. Estas solicitudes generarán errores, a menos que Microsoft haya aprovisionado especialmente tu cuenta de desarrollador.
+> Todas las solicitudes de grupo de vuelos descritas en esta sección actualmente no están disponibles para la mayoría de las cuentas de desarrollador. Se producirá un error en estas solicitudes a menos que Microsoft aprovisione especialmente su cuenta de desarrollador.
 
-El método **SendRequestAsync** admite un conjunto de solicitudes para escenarios de grupos piloto, como agregar un usuario o dispositivo a un grupo piloto. Para enviar estas solicitudes, pasa el valor 7 u 8 al parámetro *requestKind* junto con una cadena con formato JSON al parámetro *parametersAsJson* que indica la solicitud que quieres enviar junto con cualquier argumento relacionado. Estos valores de *requestKind* difieren en las siguientes maneras.
+El método **SendRequestAsync** admite un conjunto de solicitudes para escenarios de grupo de vuelos, como agregar un usuario o un dispositivo a un grupo de vuelos. Para enviar estas solicitudes, pase el valor 7 u 8 al parámetro *requestKind* junto con una cadena con formato JSON al parámetro *parametersAsJson* que indica la solicitud que desea enviar junto con los argumentos relacionados. Estos valores de *requestKind* difieren de las siguientes maneras.
 
-|  Valor del tipo de solicitud  |  Descripción  |
+|  Valor de la clase de solicitud  |  Descripción  |
 |----------------------|---------------|
-|  7                   |  Las solicitudes se realizan en el contexto del dispositivo actual. Este valor solo puede usarse en Windows 10, versión 1703 o posterior.  |
-|  8                   |  Las solicitudes se realizan en el contexto del usuario que actualmente inició sesión en la Store. Este valor puede usarse en Windows 10, versión 1607 o posterior.  |
+|  7                   |  Las solicitudes se realizan en el contexto del dispositivo actual. Este valor solo se puede usar en Windows 10, versión 1703 o posterior.  |
+|  8                   |  Las solicitudes se realizan en el contexto del usuario que ha iniciado sesión actualmente en el almacén. Este valor se puede usar en Windows 10, versión 1607 o posterior.  |
 
-Actualmente se implementan las siguientes solicitudes del grupo piloto.
+Actualmente se implementan las siguientes solicitudes de grupo de vuelos.
 
-### <a name="retrieve-remote-variables-for-the-highest-ranked-flight-group"></a>Recuperar variables remotas para el grupo piloto de clasificación más alta
+### <a name="retrieve-remote-variables-for-the-highest-ranked-flight-group"></a>Recuperación de variables remotas para el grupo de vuelos con mayor clasificación
 
 > [!IMPORTANT]
-> Esta solicitud no está disponible actualmente para la mayoría de las cuentas de desarrollador. Esta solicitud generará errores, a menos que Microsoft haya aprovisionado especialmente tu cuenta de desarrollador.
+> Actualmente, esta solicitud no está disponible para la mayoría de las cuentas de desarrollador. Se producirá un error en esta solicitud a menos que Microsoft aprovisione especialmente su cuenta de desarrollador.
 
-Esta solicitud recupera las variables remotas para el grupo piloto de clasificación más alta del usuario o el dispositivo actuales. Para enviar esta solicitud, pasa la siguiente información a los parámetros *requestKind* y *parametersAsJson* del método **SendRequestAsync**.
+Esta solicitud recupera las variables remotas para el grupo de vuelos de mayor clasificación del usuario o dispositivo actual. Para enviar esta solicitud, pase la siguiente información a los parámetros *requestKind* y *ParametersAsJson* del método **SendRequestAsync** .
 
 |  Parámetro  |  Descripción  |
 |----------------------|---------------|
-|  *requestKind*                   |  Especifica 7 para devolver el grupo piloto de clasificación más alta para el dispositivo, o especifica 8 para devolver el grupo piloto de clasificación más alta para el dispositivo y el usuario actuales. Te recomendamos que uses el valor de 8 para el parámetro *requestKind*, porque este valor devolverá el grupo piloto de clasificación más alta en la pertenencia tanto para el dispositivo como para el usuario actual.  |
-|  *parametersAsJson*                   |  Pasa una cadena con formato JSON que contiene los datos que se muestran en el siguiente ejemplo.  |
+|  *requestKind*                   |  Especifique 7 para devolver el grupo de vuelos de mayor rango para el dispositivo o especifique 8 para devolver el grupo de vuelos de mayor rango para el usuario y el dispositivo actuales. Se recomienda usar el valor 8 para el parámetro *requestKind* , ya que este valor devolverá el grupo de vuelos de mayor rango a través de la pertenencia para el usuario y el dispositivo actuales.  |
+|  *parametersAsJson*                   |  Pase una cadena con formato JSON que contenga los datos que se muestran en el ejemplo siguiente.  |
 
-En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *parametersAsJson*. El campo *type* debe estar asignado a la cadena *GetRemoteVariables*. Asignar el *projectId* campo para el Id. del proyecto en el que se definen las variables remotas en el centro de partners.
+En el ejemplo siguiente se muestra el formato de los datos JSON que se van a pasar a *parametersAsJson*. El campo de *tipo* debe asignarse a la cadena *GetRemoteVariables*. Asigne el campo *Projectid* al identificador del proyecto en el que definió las variables remotas en el centro de Partners.
 
 ```json
 { 
@@ -86,15 +86,15 @@ En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *pa
 }
 ```
 
-Una vez que envíes esta solicitud, la propiedad [Response](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.Response) del valor devuelto en [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) contiene una cadena con formato JSON con los siguientes campos.
+Después de enviar esta solicitud, la propiedad [Response](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.Response) del valor devuelto [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) contiene una cadena con formato JSON con los siguientes campos.
 
 |  Campo  |  Descripción  |
 |----------------------|---------------|
-|  *Anónimo*                   |  Un valor booleano, donde **true** indica que la identidad del usuario o del dispositivo no estaba presente en la solicitud, y **false** indica que la identidad del usuario o del dispositivo estaba presente en la solicitud.  |
-|  *name*                   |  Una cadena que contiene el nombre del grupo piloto de clasificación más alta a la que pertenecen el dispositivo o el usuario.  |
-|  *Configuración*                   |  Un diccionario de pares de clave/valor que contiene el nombre y el valor de las variables remotas que el desarrollador ha configurado para el grupo piloto.  |
+|  *anonymous*                   |  Un valor booleano, donde **true** indica que la identidad del usuario o del dispositivo no estaba presente en la solicitud, y **false** indica que la identidad del usuario o del dispositivo estaba presente en la solicitud.  |
+|  *name*                   |  Una cadena que contiene el nombre del grupo de vuelos de mayor rango al que pertenece el dispositivo o el usuario.  |
+|  *settings*                   |  Un diccionario de pares clave-valor que contienen el nombre y el valor de las variables remotas que el desarrollador ha configurado para el grupo de vuelos.  |
 
-En el siguiente ejemplo se muestra un valor devuelto para esta solicitud.
+En el ejemplo siguiente se muestra un valor devuelto para esta solicitud.
 
 ```json
 { 
@@ -108,19 +108,19 @@ En el siguiente ejemplo se muestra un valor devuelto para esta solicitud.
 }
 ```
 
-### <a name="add-the-current-device-or-user-to-a-flight-group"></a>Agregar el dispositivo o el usuario actuales a un grupo piloto
+### <a name="add-the-current-device-or-user-to-a-flight-group"></a>Agregar el dispositivo o el usuario actual a un grupo de vuelos
 
 > [!IMPORTANT]
-> Esta solicitud no está disponible actualmente para la mayoría de las cuentas de desarrollador. Esta solicitud generará errores, a menos que Microsoft haya aprovisionado especialmente tu cuenta de desarrollador.
+> Actualmente, esta solicitud no está disponible para la mayoría de las cuentas de desarrollador. Se producirá un error en esta solicitud a menos que Microsoft aprovisione especialmente su cuenta de desarrollador.
 
-Para enviar esta solicitud, pasa la siguiente información a los parámetros *requestKind* y *parametersAsJson* del método **SendRequestAsync**.
+Para enviar esta solicitud, pase la siguiente información a los parámetros *requestKind* y *ParametersAsJson* del método **SendRequestAsync** .
 
 |  Parámetro  |  Descripción  |
 |----------------------|---------------|
-|  *requestKind*                   |  Especifica 7 para agregar el dispositivo a un grupo piloto, o especifica 8 para agregar el usuario que inició sesión actualmente en la Store a un grupo piloto.  |
-|  *parametersAsJson*                   |  Pasa una cadena con formato JSON que contiene los datos que se muestran en el siguiente ejemplo.  |
+|  *requestKind*                   |  Especifique 7 para agregar el dispositivo a un grupo de vuelos o especifique 8 para agregar el usuario que ha iniciado sesión actualmente en la tienda a un grupo de vuelos.  |
+|  *parametersAsJson*                   |  Pase una cadena con formato JSON que contenga los datos que se muestran en el ejemplo siguiente.  |
 
-En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *parametersAsJson*. El campo *type* debe estar asignado a la cadena *AddToFlightGroup*. Asigna el campo *flightGroupId* al identificador del grupo piloto al que quieres agregar el dispositivo o el usuario.
+En el ejemplo siguiente se muestra el formato de los datos JSON que se van a pasar a *parametersAsJson*. El campo de *tipo* debe asignarse a la cadena *AddToFlightGroup*. Asigne el campo *flightGroupId* al ID. del grupo de vuelos al que desea agregar el dispositivo o el usuario.
 
 ```json
 { 
@@ -129,21 +129,21 @@ En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *pa
 }
 ```
 
-Si hay un error con la solicitud, la propiedad [HttpStatusCode](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.HttpStatusCode) del valor devuelto en [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) contiene el código de respuesta.
+Si se produce un error con la solicitud, la propiedad [HttpStatusCode](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.HttpStatusCode) del valor devuelto [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) contiene el código de respuesta.
 
-### <a name="remove-the-current-device-or-user-from-a-flight-group"></a>Quitar el dispositivo o el usuario actual de un grupo piloto
+### <a name="remove-the-current-device-or-user-from-a-flight-group"></a>Quitar el dispositivo o el usuario actual de un grupo de vuelos
 
 > [!IMPORTANT]
-> Esta solicitud no está disponible actualmente para la mayoría de las cuentas de desarrollador. Esta solicitud generará errores, a menos que Microsoft haya aprovisionado especialmente tu cuenta de desarrollador.
+> Actualmente, esta solicitud no está disponible para la mayoría de las cuentas de desarrollador. Se producirá un error en esta solicitud a menos que Microsoft aprovisione especialmente su cuenta de desarrollador.
 
-Para enviar esta solicitud, pasa la siguiente información a los parámetros *requestKind* y *parametersAsJson* del método **SendRequestAsync**.
+Para enviar esta solicitud, pase la siguiente información a los parámetros *requestKind* y *ParametersAsJson* del método **SendRequestAsync** .
 
 |  Parámetro  |  Descripción  |
 |----------------------|---------------|
-|  *requestKind*                   |  Especifica 7 para quitar el dispositivo de un grupo piloto, o especifica 8 para quitar el usuario que inició sesión actualmente en la Store de un grupo piloto.  |
-|  *parametersAsJson*                   |  Pasa una cadena con formato JSON que contiene los datos que se muestran en el siguiente ejemplo.  |
+|  *requestKind*                   |  Especifique 7 para quitar el dispositivo de un grupo de vuelos o especifique 8 para quitar el usuario que ha iniciado sesión actualmente en el almacén desde un grupo de vuelos.  |
+|  *parametersAsJson*                   |  Pase una cadena con formato JSON que contenga los datos que se muestran en el ejemplo siguiente.  |
 
-En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *parametersAsJson*. El campo *type* debe estar asignado a la cadena *RemoveFromFlightGroup*. Asigna el campo *flightGroupId* al identificador del grupo piloto del que quieres quitar el dispositivo o el usuario.
+En el ejemplo siguiente se muestra el formato de los datos JSON que se van a pasar a *parametersAsJson*. El campo de *tipo* debe asignarse a la cadena *RemoveFromFlightGroup*. Asigne el campo *flightGroupId* al ID. del grupo de vuelos del que desea quitar el dispositivo o el usuario.
 
 ```json
 { 
@@ -152,9 +152,9 @@ En el siguiente ejemplo se muestra el formato de los datos JSON para pasar a *pa
 }
 ```
 
-Si hay un error con la solicitud, la propiedad [HttpStatusCode](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.HttpStatusCode) del valor devuelto en [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) contiene el código de respuesta.
+Si se produce un error con la solicitud, la propiedad [HttpStatusCode](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.HttpStatusCode) del valor devuelto [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) contiene el código de respuesta.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Una clasificación de programa y revise el cuadro de diálogo de la aplicación](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app)
+* [Mostrar un cuadro de diálogo de clasificación y revisión en la aplicación](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app)
 * [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync)
