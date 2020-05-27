@@ -3,12 +3,12 @@ title: WinUI 3.0, versión preliminar 1 (mayo de 2020)
 description: Introducción a WinUI 3.0, versión preliminar.
 ms.date: 05/14/2020
 ms.topic: article
-ms.openlocfilehash: 9141fe7ff215f28557020c7f76dd35c3560edfe5
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 3aac14807f8455eb9a9294c40ddc76ddfa224659
+ms.sourcegitcommit: 7e8c7f89212c88dcc0274c69d2c3365194c0954a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580142"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688489"
 ---
 # <a name="windows-ui-library-30-preview-1-may-2020"></a>Biblioteca de interfaz de usuario de Windows 3.0, versión preliminar 1 (mayo de 2020)
 
@@ -62,14 +62,14 @@ Asegúrate de que el equipo de desarrollo tenga instalada la actualización de a
 
 Instala la versión preliminar 1 de Visual Studio 2019, versión 16.7. Puedes descargarlo de [Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview).
 
-Debes incluir las siguientes cargas de trabajo al instalar Visual Studio Preview:
+Debe incluir las siguientes cargas de trabajo al instalar Visual Studio Preview:
 
-- Desarrollo de Win32 .NET
+- Desarrollo de escritorio de .NET
 - Desarrollo con la Plataforma universal de Windows
 
-Para compilar aplicaciones de C++ también debes incluir las siguientes cargas de trabajo:
+Para compilar aplicaciones de C++ también debe incluir las siguientes cargas de trabajo:
 
-- Desarrollo de Win32 con C++
+- Desarrollo de escritorio con C++
 - Componente opcional *Herramientas de la Plataforma universal de Windows para C++ (v142)* para la carga de trabajo de la Plataforma universal de Windows
 
 ### <a name="visual-studio-project-templates"></a>plantillas de proyecto de Visual Studio
@@ -78,9 +78,9 @@ Para acceder tanto a la versión preliminar 1 de WinUI 3.0 como a las plantill
 
 Descarga la extensión de Visual Studio (`.vsix`) para agregar las plantillas de proyecto y un paquete NuGet de WinUI a Visual Studio 2019.
 
-Para obtener instrucciones sobre cómo agregar la extensión `.vsix` a Visual Studio, consulta [Buscar y usar extensiones de Visual Studio](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2019#install-without-using-the-manage-extensions-dialog-box).
+Para obtener instrucciones sobre cómo agregar la extensión `.vsix` a Visual Studio, consulte [Buscar y usar extensiones de Visual Studio](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2019#install-without-using-the-manage-extensions-dialog-box).
 
-Después de instalar la extensión `.vsix` puedes crear un nuevo proyecto de WinUI 3.0. Para ello, busca "WinUI" y selecciona una de las plantillas de C# o C++ disponibles.
+Después de instalar la extensión `.vsix` puede crear un nuevo proyecto de WinUI 3.0. Para ello, busque "WinUI" y seleccione una de las plantillas de C# o C++ disponibles.
 
 ![Plantillas de Visual Studio para WinUI 3.0](images/WinUI3Templates.png)<br/>
 *Ejemplo de plantillas de Visual Studio para WinUI 3.0*
@@ -133,24 +133,30 @@ La versión preliminar 1 de WinUI 3.0 es compatible con equipos en los que se 
 - MapControl
 - Navegación jerárquica con NavigationView
 - SwapChainPanel no admite la transparencia
-- En C# , se debe usar `WinRT.WeakReference<T>`, en lugar de `System.WeakReference<T>`.
 - Global Reveal usa el comportamiento de reserva, que es un pincel sólido
 - XAML Islands no se admite en esta versión
 - Las bibliotecas del ecosistema de terceros no funcionarán completamente
 - Los IME no funcionan
 - No se puede llamar a los métodos del espacio de nombres Windows.UI.Text
-  
+
+### <a name="known-issues"></a>Problemas conocidos
+
+- En aplicaciones de escritorio de C#:
+   - Debes usar `WinRT.WeakReference<T>` en lugar de `System.WeakReference<T>` para las referencias débiles a objetos de Windows (incluidos los objetos XAML).
+   - Las estructuras [Point](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [Rect](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect) y [Size](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) tienen miembros de tipo Float en lugar de Double.
+
+
 ## <a name="xaml-controls-gallery-winui-30-preview-1-branch"></a>Xaml Controls Gallery (rama de WinUI 3.0, versión preliminar 1)
 
-Consulta la [rama de la versión preliminar 1 de WinUI 3.0 de Xaml Controls Gallery](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview1) para ver una aplicación de ejemplo que incluya todos los controles y características de la versión preliminar 1 de WinUI 3.0.
+Consulta la [rama de la versión preliminar 1 de WinUI 3.0 de Xaml Controls Gallery](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview) para ver una aplicación de ejemplo que incluya todos los controles y características de la versión preliminar 1 de WinUI 3.0.
 
 ![Aplicación Xaml Controls Gallery de WinUI 3.0, versión preliminar 1](images/WinUI3XamlControlsGallery.png)<br/>
 *Ejemplo de la aplicación Xaml Controls Gallery de WinUI 3.0, versión preliminar 1*
 
-Para descargar el ejemplo, clona la rama **winui3preview1** mediante el siguiente comando:
+Para descargar el ejemplo, clona la rama **winui3preview** mediante el siguiente comando:
 
-> `git clone --single-branch --branch winui3preview1 https://github.com/microsoft/Xaml-Controls-Gallery.git`
+> `git clone --single-branch --branch winui3preview https://github.com/microsoft/Xaml-Controls-Gallery.git`
 
-Después, asegúrate de cambiar a la rama **winui3preview1** en el entorno de Git local:
+Después, asegúrate de cambiar a la rama **winui3preview** en el entorno de Git local:
 
-> `git checkout winui3preview1`
+> `git checkout winui3preview`
