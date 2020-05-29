@@ -5,12 +5,12 @@ keywords: uwp app development threading async platform overview portal develop d
 ms.date: 03/29/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 233666294555c46b5ba8b1e558eb32d6aed84e2a
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: f969c1c9ea5bb436ebad8d5e0410b6bf553885c0
+ms.sourcegitcommit: d1eba7cf79cd2885b5bf8f5501bc44a569ab9864
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614962"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172607"
 ---
 # <a name="develop-uwp-apps"></a>Desarrollar aplicaciones para UWP
 
@@ -156,7 +156,7 @@ Artículos sobre procedimientos y código para crear aplicaciones para UWP en Wi
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px">Plataforma</h3>
-        <a href="/windows/uwp/cpp-and-winrt-apis/">C++/WinRT<</a><br/>
+        <a href="/windows/uwp/cpp-and-winrt-apis/">C++/WinRT</a><br/>
         <a href="/windows/uwp/launch-resume/">Inicio, reanudación y tareas en segundo plano</a><br/>
         <a href="/windows/uwp/security/">Seguridad</a><br/>
         <a href="/windows/uwp/threading-async/">Subprocesamiento y programación asincrónica</a><br/>
@@ -174,7 +174,7 @@ Artículos sobre procedimientos y código para crear aplicaciones para UWP en Wi
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px">Periféricos, sensores y energía</h3>
-        <a href="/windows/uwp/contacts-and-calendar/">Información general</a><br/>
+        <a href="/windows/uwp/contacts-and-calendar/">Introducción</a><br/>
         <a href="/windows/uwp/devices-sensors/enable-device-capabilities">Habilitar funcionalidades de dispositivos</a><br/>
         <a href="/windows/uwp/devices-sensors/pair-devices">Emparejar dispositivos</a><br/>
         <a href="/windows/uwp/devices-sensors/point-of-service">Punto de servicio</a><br/>
@@ -186,7 +186,7 @@ Artículos sobre procedimientos y código para crear aplicaciones para UWP en Wi
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px">Migración</h3>
-        <a href="/windows/uwp/porting/">Información general</a><br/>
+        <a href="/windows/uwp/porting/">Introducción</a><br/>
         <a href="/windows/uwp/porting/wpsl-to-uwp-root">Migrar de Windows Phone Silverlight a UWP</a><br/>
         <a href="/windows/uwp/porting/w8x-to-uwp-root">Migrar de Windows Runtime 8.x a UWP</a><br/>
         <a href="/windows/uwp/porting/desktop-to-uwp-root">Puente de escritorio</a><br/>
