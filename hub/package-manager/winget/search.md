@@ -6,12 +6,12 @@ ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: edbd11724ed523f7d6efc57af9a8ef3a7e06bf5a
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 5a176c1138ebfe3f3a9eb2cbef02dad745cfe170
+ms.sourcegitcommit: 8193aef04deb3514eb2d34bfe5cb9424ba12cd76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83824966"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83865022"
 ---
 # <a name="search-command-winget"></a>Comando search (winget)
 
@@ -49,7 +49,7 @@ Las cadenas de búsqueda se pueden filtrar con las siguientes opciones.
 | **--id**        |   Limita la búsqueda al identificador de la aplicación. El identificador incluye el editor y el nombre de la aplicación. |
 | **--name**      |  Limita la búsqueda al nombre de la aplicación. |
 | **--moniker**  |    Limita la búsqueda al moniker especificado. |
-|  **--tag**    |  Limita la búsqueda a las etiquetas que se muestran para la aplicación. |
+| **--tag**    |  Limita la búsqueda a las etiquetas que se muestran para la aplicación. |
 | **--command**   |   Limita la búsqueda al nombre de la aplicación. |
 
 La cadena se tratará como una subcadena. De forma predeterminada, la búsqueda también distingue entre mayúsculas y minúsculas. Por ejemplo, `winget search micro` podría devolver lo siguiente:
@@ -64,7 +64,7 @@ Los comandos de búsqueda admiten una serie de opciones o filtros para ayudar a 
 
 | Opción  | Descripción |
  --------------|-------------|
-| **e, --exact**  |     Usa la cadena exacta en la consulta, incluso distingue mayúsculas y minúsculas. No usará el comportamiento predeterminado de una subcadena.  |  
+| **-e, --exact**  |     Usa la cadena exacta en la consulta, incluso distingue mayúsculas y minúsculas. No usará el comportamiento predeterminado de una subcadena.  |  
 | **-n, --count**      |  Restringe el resultado de visualización al recuento especificado. |
 | **-s, --source**     |  Restringe la búsqueda al nombre de [source](source.md) indicado.  |
 

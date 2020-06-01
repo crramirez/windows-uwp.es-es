@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d870c82a3e4a8bc6c2ce923026010eff953eead2
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c90400c577110f326c693a6c06d28582033a86f6
+ms.sourcegitcommit: eae9859ee06c1e5e4afa08d8d3da072ad06d24a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82107718"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84110384"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>Concesión de identidad a aplicaciones de escritorio no empaquetadas
 
@@ -157,9 +157,9 @@ El manifiesto de la aplicación en paralelo debe existir en el mismo directorio 
 
 ## <a name="register-your-sparse-package-at-run-time"></a>Registrar el paquete disperso en tiempo de ejecución
 
-Para conceder la identidad del paquete a la aplicación de escritorio, la aplicación debe registrar el paquete disperso mediante el método **AddPackageByUriAsync** de la clase [**PackageManager**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager). Este método está disponible a partir de Windows 10, versión 2004. Puedes agregar código a la aplicación para registrar el paquete disperso cuando la aplicación se ejecuta por primera vez, o bien ejecutar código para registrar el paquete mientras se instala la aplicación de escritorio (por ejemplo, si usas MSI para instalar la aplicación de escritorio, puedes ejecutar este código desde una acción personalizada).
+Para conceder la identidad del paquete a la aplicación de escritorio, la aplicación debe registrar el paquete disperso mediante el método [**AddPackageByUriAsync**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager.addpackagebyuriasync) de la [**clase PackageManager**](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager). Este método está disponible a partir de Windows 10, versión 2004. Puedes agregar código a la aplicación para registrar el paquete disperso cuando la aplicación se ejecuta por primera vez, o bien ejecutar código para registrar el paquete mientras se instala la aplicación de escritorio (por ejemplo, si usas MSI para instalar la aplicación de escritorio, puedes ejecutar este código desde una acción personalizada).
 
-En el siguiente ejemplo se muestra cómo registrar un paquete disperso. Este código crea un objeto **AddPackageOptions** que contiene la ruta de acceso a la ubicación externa donde el manifiesto del paquete puede hacer referencia al contenido fuera del paquete. A continuación, el código pasa este objeto al método **AddPackageByUriAsync** para registrar el paquete disperso. Este método también recibe la ubicación del paquete disperso firmado como un URI. Para obtener un ejemplo más completo, consulta el archivo de código `StartUp.cs` en el [ejemplo](#sample) relacionado.
+En el siguiente ejemplo se muestra cómo registrar un paquete disperso. Este código crea un objeto [**AddPackageOptions**](https://docs.microsoft.com/uwp/api/windows.management.deployment.addpackageoptions) que contiene la ruta de acceso a la ubicación externa donde el manifiesto del paquete puede hacer referencia al contenido fuera del paquete. A continuación, el código pasa este objeto al método **AddPackageByUriAsync** para registrar el paquete disperso. Este método también recibe la ubicación del paquete disperso firmado como un URI. Para obtener un ejemplo más completo, consulta el archivo de código `StartUp.cs` en el [ejemplo](#sample) relacionado.
 
 ```csharp
 private static bool registerSparsePackage(string externalLocation, string sparsePkgPath)

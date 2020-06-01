@@ -3,15 +3,15 @@ ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: Habilitar el dispositivo para el desarrollo
 description: Configura el dispositivo Windows 10 para el desarrollo y la depuración.
 keywords: Introducción a Visual Studio con licencia de desarrollador, dispositivo con licencia de desarrollador habilitada
-ms.date: 04/09/2019
+ms.date: 05/22/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b360f75ccf08d9cc00eeba2948215b7240627a8
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f41c7b706f4c088142a77092cf176ed543e21567
+ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80320417"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854781"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -62,7 +62,7 @@ De manera predeterminada, solo puedes instalar aplicaciones para Plataforma univ
 > [!NOTE]
 > A partir de la compilación 18956 de Windows Insider, la instalación de prueba está habilitada de forma predeterminada. Ahora, puedes implementar un paquete MSIX firmado en un dispositivo sin una configuración especial.
 
-Por lo general, la opción de aplicaciones transferidas localmente la usan las empresas y centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store, o cualquier otra persona que necesite ejecutar aplicaciones de fuentes distintas a Microsoft. En este caso, la organización suele aplicar una directiva que deshabilita el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para obtener más información, consulta los artículos de TechNet [Realizar la instalación de prueba de aplicaciones de línea de negocio en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) e [Introducción a la implementación de aplicaciones en Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/add-apps).
+Por lo general, la opción de aplicaciones transferidas localmente la usan las empresas y centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store, o cualquier otra persona que necesite ejecutar aplicaciones de fuentes distintas a Microsoft. En este caso, la organización suele aplicar una directiva que deshabilita el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para más información, consulta los artículos de TechNet [Instalación de prueba de aplicaciones en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) y [Aspectos básicos de Microsoft Intune](https://docs.microsoft.com/mem/intune/fundamentals/).
 
 Información específica de la familia de dispositivos
 

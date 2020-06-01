@@ -6,16 +6,19 @@ ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: b44f20021a0fa33da862e2361be60b730b041b49
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: cb897f25324ab8a516d18f5defe7cffa3e6a0109
+ms.sourcegitcommit: 5a145eda92b5915393e58006867cdd8b98e922f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83824976"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166254"
 ---
 # <a name="source-command-winget"></a>Comando source (winget)
 
 [!INCLUDE [preview-note](../../includes/package-manager-preview.md)]
+
+> [!NOTE]
+> Actualmente, el comando **source** es solo para uso interno. En este momento no se admiten orígenes adicionales.
 
 El comando **source** de la herramienta [winget](index.md) administra los repositorios a los que accede el Administrador de paquetes de Windows. Con el comando **source** puedes usar **add**, **remove**, **list** y **update** para agregar, quitar, enumerar y actualizar los repositorios, respectivamente.
 
@@ -70,22 +73,24 @@ El subcomando **add** también admite el parámetro **type** opcional. El parám
 
 | Tipo  | Descripción |
 |--------------|-------------|
-| **Microsoft.PreIndexed.Package** | Tipo de origen \<predeterminado>. |
+| **Microsoft.PreIndexed.Package** | Tipo de origen \<default>. |
 
 ## <a name="list"></a>list
 
 El subcomando **list** enumera los orígenes habilitados actualmente. Este subcomando también ofrece detalles sobre un origen específico.
 
-Uso: `winget list [-n, --name] \<name>`
+Uso: `winget source list [-n, --name] \<name>`
 
 ### <a name="list-all"></a>list all
 
 El subcomando **list** por sí solo revelará la lista completa de orígenes admitidos. Por ejemplo:
 
 ```CMD
-> C:\winget list
-> Current sources:
->     Contoso ->  https://www.contoso.com/cache
+> C:\winget source list
+> Name   Arg
+> -----------------------------------------
+> winget https://winget.azureedge.net/cache
+
 ```
 
 ### <a name="list-source-details"></a>list source details
@@ -111,7 +116,7 @@ Para obtener detalles completos sobre el origen, pasa el nombre usado para ident
 
 El subcomando **update** fuerza una actualización de un origen individual o de todos.
 
-Uso: `winget update [-n, --name] \<name>`
+Uso: `winget source update [-n, --name] \<name>`
 
 ### <a name="update-all"></a>update all
 
@@ -119,7 +124,7 @@ El subcomando **update** por sí solo solicitará y actualizará cada repositori
 
 ### <a name="update-source"></a>origen de la actualización
 
-El subcomando **update**, combinado con la opción **--name**, puede dirigirse y actualizarse a un origen individual. Por ejemplo: `C:\winget update --name contoso`
+El subcomando **update**, combinado con la opción **--name**, puede dirigirse y actualizarse a un origen individual. Por ejemplo: `C:\winget source update --name contoso`
 
 ## <a name="remove"></a>quitar
 
