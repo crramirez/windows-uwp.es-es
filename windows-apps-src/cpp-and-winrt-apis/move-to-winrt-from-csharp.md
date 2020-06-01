@@ -5,12 +5,12 @@ ms.date: 07/15/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migrar, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 804c22b782dada9c0bde3c379ebfe5a37f1dcff9
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 38ad2d4f2b0af65424e6d9fa50f2c21b626e1914
+ms.sourcegitcommit: 3125d5e2e32831481790266f44967851585888b3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81759938"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172836"
 ---
 # <a name="move-to-cwinrt-from-c"></a>Migrar a C++/WinRT desde C#
 
@@ -27,7 +27,7 @@ En lo que se refiere a los tipos de cambio en la migración que debes esperar, p
 - [**Migración de la proyección del lenguaje**](#port-the-language-projection). Windows Runtime (WinRT) se *proyecta* en varios lenguajes de programación. Cada una de esas proyecciones de lenguaje está diseñada para que suene idiomática en el lenguaje de programación en cuestión. En C#, algunos tipos de Windows Runtime se proyectan como tipos .NET. Por ejemplo, traducirás [**System.Collections.Generic.IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1) de nuevo a [**Windows.Foundation.Collections.IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1). También en C#, algunas operaciones de Windows Runtime se proyectan como características de lenguaje adecuadas de C#. Un ejemplo sería el uso de la sintaxis de operador `+=` en C# para registrar un delegado de control de eventos. Por lo tanto, traducirás características del lenguaje; por ejemplo, para volver a la operación fundamental que se está realizando (el registro de eventos, en este caso).
 - [**Migración de la sintaxis del lenguaje**](#port-language-syntax). Muchos de estos cambios son transformaciones mecánicas simples, en las que se reemplaza un símbolo por otro. Por ejemplo, se cambia un punto (`.`) por dos signos de dos puntos (`::`).
 - [**Procedimiento de migración del lenguaje**](#port-language-procedure). Algunos de estos pueden ser cambios sencillos y repetitivos (como de `myObject.MyProperty` a `myObject.MyProperty()`). Otros requieren cambios más complejos (por ejemplo, portar un procedimiento que implique el uso de **System.Text.StringBuilder** a uno que implique el uso de **std::wostringstream**).
-- [**Migración de tareas específicas de C++/WinRT**](#porting-tasks-that-are-specific-to-cwinrt). C# se encarga de completar determinados detalles de Windows Runtime de manera implícita y en segundo plano. Estos detalles se realizan explícitamente en C++/WinRT. Un ejemplo sería el uso de un archivo `.idl` para definir las clases en tiempo de ejecución.
+- [**Tareas relacionadas con la portación específicas de C++/WinRT**](#porting-related-tasks-that-are-specific-to-cwinrt). C# se encarga de completar determinados detalles de Windows Runtime de manera implícita y en segundo plano. Estos detalles se realizan explícitamente en C++/WinRT. Un ejemplo sería el uso de un archivo `.idl` para definir las clases en tiempo de ejecución.
 
 El resto de este tema está estructurado según esa taxonomía.
 
@@ -88,6 +88,21 @@ namespace winrt::MyProject::implementation
     }
 };
 ```
+
+Un escenario final es donde el proyecto de C# que estás portando se *enlaza* al controlador de eventos desde el marcado (para más información sobre este escenario, consulta [Funciones de x:Bind](/windows/uwp/data-binding/function-bindings)).
+
+```xaml
+<Button x:Name="OpenButton" Click="{x:Bind OpenButton_Click}" />
+```
+
+Puedes cambiarlo al marcado `Click="OpenButton_Click"` más sencillo. O bien, si lo prefieres, puedes mantener el marcado tal como está. Todo lo que tienes que hacer para admitirlo es declarar el controlador de eventos en IDL.
+
+```idl
+void OpenButton_Click(Object sender, Windows.UI.Xaml.RoutedEventArgs e);
+```
+
+> [!NOTE]
+> Declara la función como `void` incluso si la *implementas* como [Desencadenamiento y olvido](/windows/uwp/cpp-and-winrt-apis/concurrency-2#fire-and-forget).
 
 ## <a name="port-language-syntax"></a>Sintaxis del lenguaje de migración
 
@@ -230,7 +245,7 @@ En el caso de la creación de cadenas, C# tiene un tipo [**StringBuilder**](/dot
 
 Consulta también los temas [Migración del método **BuildClipboardFormatsOutputString**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring) y [Migración del método **DisplayChangedFormats**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#displaychangedformats).
 
-## <a name="porting-tasks-that-are-specific-to-cwinrt"></a>Migración de tareas específicas de C++/WinRT
+## <a name="porting-related-tasks-that-are-specific-to-cwinrt"></a>Tareas relacionadas con la portación específicas de C++/WinRT
 
 ### <a name="define-your-runtime-classes-in-idl"></a>Definición de las clases en tiempo de ejecución en IDL
 
@@ -303,13 +318,13 @@ Si piensas usar la extensión de marcado {Binding} para enlazar datos al tipo de
 
 En un proyecto de C#, puedes consumir miembros privados y elementos con nombre del marcado XAML. Pero en C++/WinRT, todas las entidades consumidas por la [**extensión de marcado {x:Bind}** ](/windows/uwp/xaml-platform/x-bind-markup-extension) de XAML deben exponerse públicamente en IDL.
 
-Además, el enlace a un valor booleano muestra `true` o `false`en C#, pero muestra **Windows.Foundation.IReference`1\<valor booleano\>** en C++/WinRT.
+Además, el enlace a un valor booleano muestra `true` o `false`en C#, pero muestra **Windows.Foundation.IReference`1\<Boolean\>** en C++/WinRT.
 
 Para más información y ejemplos de código, consulta [Consumir objetos a partir del marcado](/windows/uwp/cpp-and-winrt-apis/binding-property#consuming-objects-from-xaml-markup).
 
 ### <a name="making-a-data-source-available-to-xaml-markup"></a>Poner un origen de datos a disposición del marcado XAML
 
-En C++/WinRT versión 2.0.190530.8 y posterior, [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) crea un vector observable que admite tanto **[IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)\<T\>** como **IObservableVector\<IInspectable\>** . Para obtener un ejemplo, consulta el tema [Migración de la propiedad **Scenarios**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#scenarios).
+En C++/WinRT, versión 2.0.190530.8 y posterior, [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) crea un vector observable que admite tanto **[IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)\<T\>** como **IObservableVector\<IInspectable\>** . Para obtener un ejemplo, consulta el tema [Migración de la propiedad **Scenarios**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#scenarios).
 
 Puedes crear el **archivo Midl (.idl)** de este modo (consulta también [Factorizar clases en tiempo de ejecución en archivos (.idl)](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl).
 
