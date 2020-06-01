@@ -7,12 +7,15 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f5e103b7661c53fb70561dd1bd654188be2704ff
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+dev_langs:
+- csharp
+- cppwinrt
+ms.openlocfilehash: c87dfbdc00df36c75a5b0b865376af352edcabbb
+ms.sourcegitcommit: 577a54d36145f91c8ade8e4509d4edddd8319137
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970770"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83867365"
 ---
 # <a name="color"></a>Color
 
@@ -235,6 +238,9 @@ También puedes crear el mismo color en código mediante el método **FromArgb**
 
 ```csharp
 Color LightBlue = Color.FromArgb(255,54,192,255);
+```
+```cppwinrt
+Windows::UI::Color LightBlue = Windows::UI::ColorHelper::FromArgb(255,54,192,255);
 ```
 
 Las letras "Argb" significan "alfa (opacidad), rojo, verde y azul", que son los cuatro componentes de un color. Cada argumente puede oscilar entre 0 y 255. Puedes optar por omitir el primer valor, lo que dará una opacidad predeterminada de 255, o 100 % opaco.

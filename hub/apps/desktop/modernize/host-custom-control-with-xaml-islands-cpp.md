@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: eac2574d48864ba8b8dc907c8a7ec43ef266358b
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: dbe40498d128fa483f2c414e088060ec90fc1c22
+ms.sourcegitcommit: c4f912ba0313ae49632f81e38d7d2d983ac132ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606344"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200788"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>Hospedaje de un control personalizado de UWP en una aplicación Win32 de C++
 
@@ -243,6 +243,7 @@ A continuación, revisa la clase **App** predeterminada en el proyecto **MyUWPAp
         ```cpp
         #include "pch.h"
         #include "App.h"
+        #include "App.g.cpp"
         using namespace winrt;
         using namespace Windows::UI::Xaml;
         namespace winrt::MyUWPApp::implementation

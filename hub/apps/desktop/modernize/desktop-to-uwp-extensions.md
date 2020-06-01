@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: d1f01774d5950dbb73cff2e5c38f16167b4b812b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: b048de69a8a259509e5a5c54c5f1d61675a25a18
+ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209721"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854732"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>Integración de la aplicación de escritorio con Windows 10 y UWP
 
@@ -1372,7 +1372,7 @@ Inicia un proceso de Win32 que se ejecute en plena confianza.
 
 Esta extensión puede resultar útil si quieres crear una interfaz de usuario de la Plataforma universal de Windows que se ejecute en todos los dispositivos y, a su vez, que los componentes de la aplicación de Win32 sigan realizando una ejecución de plena confianza.
 
-Solo tienes que crear un paquete de aplicación de Windows para la aplicación de Win32. A continuación, agrega esta extensión al archivo de paquete de la aplicación para UWP. Estas extensiones indican que quieres iniciar un archivo ejecutable en el paquete de la aplicación de Windows.  Si quieres establecer la comunicación entre la aplicación para UWP y la aplicación de Win32, puedes configurar uno o más [servicios de la aplicación](/windows/uwp/launch-resume/app-services.md) para poder hacerlo. Puedes obtener más información acerca de este escenario [aquí](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).
+Solo tienes que crear un paquete de aplicación de Windows para la aplicación de Win32. A continuación, agrega esta extensión al archivo de paquete de la aplicación para UWP. Estas extensiones indican que quieres iniciar un archivo ejecutable en el paquete de la aplicación de Windows.  Si quieres establecer la comunicación entre la aplicación para UWP y la aplicación de Win32, puedes configurar uno o más [servicios de la aplicación](/windows/uwp/launch-resume/app-services) para poder hacerlo. Puedes obtener más información acerca de este escenario [aquí](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 299a25bb92c5afdb86ebc1569a1f98916baa3d09
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: add292dd5b58c3e8da1a0ce2c2371bf211b2a617
+ms.sourcegitcommit: 7704c888a28edc7ab0515a75afac93d1dda4d693
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233955"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84151954"
 ---
 # <a name="introduction-to-windows-app-design"></a>Introducción al diseño de aplicaciones de Windows
 
@@ -120,7 +120,7 @@ Tu aplicación para UWP interactuará con la experiencia más amplia de Windows 
 
 En el menú Inicio y cuando se inicia tu aplicación se muestran ventanas que proporcionan una idea de qué está sucediendo en la aplicación. Su potencial procede del contenido que incluyen y de la inteligencia y la capacidad con la que se ofrecen.
 
-Las aplicaciones para UWP tienen cuatro tamaños de ventana (pequeño, mediano, ancho y grande) que se pueden personalizar con el icono y la identidad de la aplicación. Para obtener instrucciones sobre cómo diseñar ventanas para tu aplicación para UWP, consulta [Directrices de activos de ventanas e iconos](../shell/tiles-and-notifications/app-assets.md).
+Las aplicaciones para UWP tienen cuatro tamaños de ventana (pequeño, mediano, ancho y grande) que se pueden personalizar con el icono y la identidad de la aplicación. Para obtener instrucciones sobre cómo diseñar ventanas para tu aplicación para UWP, consulta [Directrices de activos de ventanas e iconos](../style/app-icons-and-logos.md).
     :::column-end:::
     :::column:::
 ![ventanas en el menú Inicio](images/shell.svg)
