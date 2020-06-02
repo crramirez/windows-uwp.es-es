@@ -7,12 +7,12 @@ keywords: windows win32, desarrollo de escritorio
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a55a1578fba7052396ecec725db2678ea8bd6ff
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: d052ad0f670bccd9b32d2e3643520dd6129ed22a
+ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580022"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84262746"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Compilación de aplicaciones de escritorio para PC Windows
 
@@ -58,7 +58,7 @@ En la tabla siguiente se presentan las plataformas. Para obtener una comparació
 <tr class="even">
 <td><a href="https://docs.microsoft.com/dotnet/framework/winforms/">Windows Forms</a></td>
 <td><p>Plataforma basada en .NET que está diseñada para las aplicaciones de línea de negocio administradas con un modelo de interfaz de usuario ligera. Estas aplicaciones pueden estar dirigidas a <a href="https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> o a la versión completa de .NET Framework.</p></td>
-<td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">Introducción</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">Referencia de API (.NET)</a><br/><a href="https://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=Technology&f%5B0%5D.Value=Windows%20Forms">Ejemplos</a></td>
+<td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">Introducción</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">Referencia de API (.NET)</a></td>
 </tr>
 </tbody>
 </table>

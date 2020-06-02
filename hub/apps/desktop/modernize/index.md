@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 86586cfc0f054181f08cd3cd75731e6c53ea4b92
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 31d7805e7ae936e5c7427b54f2eb9b0ad4b4c3e9
+ms.sourcegitcommit: 37e4af3ba203295c7e88448414cf7ea537ab5402
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83579932"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257386"
 ---
 # <a name="modernize-your-desktop-apps"></a>Modernización de las aplicaciones de escritorio
 
@@ -74,7 +74,7 @@ Hay varias maneras de conceder identidad a una aplicación de escritorio:
 * Empaquetarla en un [paquete de MSIX](/windows/msix/desktop/desktop-to-uwp-root). MSIX es un formato moderno de paquete de la aplicación que proporciona una experiencia de empaquetado universal para todas las aplicaciones Windows, WPF, Windows Forms y Win32. Proporciona una sólida experiencia de instalación y actualización, un modelo de seguridad administrado con un sistema de funcionalidades flexible, compatibilidad con Microsoft Store, administración empresarial y muchos modelos de distribución personalizados. Para más información, consulta [Empaquetar aplicaciones de escritorio](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) en la documentación de MSIX.
 * Si no puedes adoptar el empaquetado de MSIX para implementar la aplicación de escritorio, a partir de la compilación de Windows 10, versión 2004, puedes conceder la identidad de paquete al crear un *paquete disperso de MSIX* que solo contenga un manifiesto de paquete. Para obtener más información, consulta [Concesión de identidad a aplicaciones de escritorio no empaquetadas](grant-identity-to-nonpackaged-apps.md).
 
-<a id="desktop-uwp-controls"/>
+<a id="desktop-uwp-controls"></a>
 
 ## <a name="uwp-controls-optimized-for-desktop-apps"></a>Controles UWP optimizados para aplicaciones de escritorio
 
