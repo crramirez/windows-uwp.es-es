@@ -2,18 +2,22 @@
 Description: Conozca las respuestas a algunas preguntas básicas de los desarrolladores sobre Windows 10 veces.
 title: Preguntas más frecuentes para desarrolladores de Windows 10
 ms.topic: article
-ms.date: 04/1/2020
+ms.date: 06/02/2020
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: d168faf16bdd8a88e0cd4c52c680781061bfcf0d
-ms.sourcegitcommit: dadbc20564e4b0c0ecbab5fd5649dbf8ab08095a
+ms.openlocfilehash: 3ba14e33c098d3515522a9a5907065751fafba87
+ms.sourcegitcommit: 13bda6040988461a61b1b5561fde2f7a54835ccd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80581959"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84318241"
 ---
 # <a name="windows-10x-developer-faq"></a>Preguntas más frecuentes para desarrolladores de Windows 10
+
+> [!IMPORTANT]
+> Recientemente anunciamos algunos cambios en la priorización de Windows 10 y Windows 10 veces.
+> Estos anuncios incluyen cambios en las prioridades de factor de forma 10X de Windows. [Obtenga más información aquí.](https://blogs.windows.com/windowsexperience/2020/05/04/accelerating-innovation-in-windows-10-to-meet-customers-where-they-are/)
 
 Windows 10X es una línea de productos de la familia de Windows optimizada para su uso en dispositivos de pantalla dual. Como desarrollador, puede llegar a un público más amplio mediante la optimización de la aplicación para Windows 10 veces, aprovechando las nuevas características específicas para un público móvil y de pantalla dual, al tiempo que disfruta de la misma gama de funciones de Windows 10 y compatibilidad con escritorio enriquecida. [Anunciamos Windows 10 veces en 2019](https://blogs.windows.com/windowsexperience/2019/10/02/introducing-windows-10x-enabling-dual-screen-pcs-in-2020/#6qxkItE2XMPu24uw.97), y estamos a la hora de publicarla a finales de 2020.
 
