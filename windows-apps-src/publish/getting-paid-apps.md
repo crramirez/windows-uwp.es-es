@@ -1,69 +1,72 @@
 ---
 Description: Obtenga información sobre cómo recibir los pagos de sus aplicaciones, complementos (productos en la aplicación) y beneficios publicitarios.
-title: Recibir pagos
+title: Recepción del pago
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
-ms.date: 03/05/2019
+ms.date: 05/29/2020
 ms.topic: article
-keywords: windows 10, uwp, pagos, ventas de aplicaciones, ganancias por la aplicación, pago, tarifa de la store, suspensión de pago, porcentaje
+keywords: Windows 10, UWP, pagos, ventas de aplicaciones, continuaciones de aplicaciones, pagos, gastos de tienda, retención de pago, porcentaje
 ms.localizationpriority: medium
-ms.openlocfilehash: 853554a0a3a0507f1a8b9d8994618d16aa44bccc
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 5927e6636f1c5a60b4f3453e0493755176c649ad
+ms.sourcegitcommit: 8eae7aec4c4ffb8a0c30e9d03744942fb23958d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259992"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84334230"
 ---
-# <a name="getting-paid"></a>Recibir pagos
+# <a name="getting-paid"></a>Recepción del pago
 Esta es una información importante sobre cómo recibir el pago de las aplicaciones, los complementos y los ingresos publicitarios.
 
 > [!IMPORTANT]
 > Antes de que pueda recibir dinero de las ventas de aplicaciones en el Microsoft Store, debe [configurar la cuenta de pago y rellenar los formularios fiscales necesarios](setting-up-your-payout-account-and-tax-forms.md).
 
-## <a name="store-fee"></a>Comisión de la Tienda
+> [!NOTE]
+> Si busca soporte técnico en relación con los pagos, incluidos la configuración de cuentas de pago, los pagos que faltan, la puesta en espera de los pagos o cualquier otra cosa, póngase en contacto con el servicio de soporte técnico [aquí](https://developer.microsoft.com/windows/support).
 
-Cuando te [registras para obtener una cuenta de desarrollador](https://developer.microsoft.com/store/register), aceptas el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Este acuerdo explica la relación que tienes con Microsoft en cuanto a la venta de aplicaciones en la Microsoft Store, incluida la comisión de la Store que Microsoft cobra por cada venta realizada.
+## <a name="store-fee"></a>Honorarios de Store
 
-Las comisiones están establecidas oficialmente en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Revisa siempre ese documento si tienes alguna duda.
+Cuando te [registras para obtener una cuenta de desarrollador](https://developer.microsoft.com/store/register), aceptas el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). En este contrato se explica la relación entre usted y Microsoft como perteneciente a la venta de aplicaciones en el Microsoft Store, incluida la cuota de la tienda que Microsoft cobra por cada venta realizada.
 
-La comisión de la Store se aplica a todas las ventas de aplicaciones realizadas a través de la Microsoft Store, incluidos los complementos.
+Las comisiones están establecidas oficialmente en el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Revise siempre ese documento si tiene alguna pregunta.
+
+La cuota de la tienda se aplica a todas las ventas de aplicaciones recopiladas por el Microsoft Store, incluidos los complementos.
 
 
-## <a name="price-tiers"></a>Franjas de precios
+## <a name="price-tiers"></a>Franjas de precio
 
-La franja de precios que selecciones establece el [precio de ventas](set-and-schedule-app-pricing.md#base-price) en todos los países donde eliges distribuir tu aplicación. También puedes usar características de precios adicionales, tales como [elegir precios diferentes para distintos mercados](set-and-schedule-app-pricing.md#override-base-price-for-specific-markets) o [poner tu aplicación en oferta](put-apps-and-add-ons-on-sale.md).
+Los niveles de precio seleccionados establecen el [precio de venta](set-and-schedule-app-pricing.md#base-price) en todos los países en los que elige distribuir la aplicación. También puede usar otras características de precios, como [elegir precios diferentes para distintos mercados](set-and-schedule-app-pricing.md#override-base-price-for-specific-markets) o [poner la aplicación en venta](put-apps-and-add-ons-on-sale.md).
 
-Puedes ofrecer tu aplicación de forma gratuita o elegir un precio que los clientes deben pagar para adquirir tu aplicación. Las franjas de precios empiezan por 0,99 USD, con incrementos adicionales (1,09 USD, 1,19 USD, etc.). Estos incrementos entre franjas de precios aumentan a medida que el precio sube.
+Puedes ofrecer tu aplicación de forma gratuita o elegir un precio que los clientes deben pagar para adquirir tu aplicación. Las franjas de precio comienzan en los 0,99 USD, con incrementos adicionales (1,09 USD, 1,19 USD, etc.). Los incrementos entre las franjas de precio aumentan a medida que el precio es mayor.
 
 > [!NOTE] 
-> Estas franjas de precios también se aplican a cualquier complemento que ofrezcas desde la aplicación.
+> Estos niveles de precios también se aplican a los complementos que se ofrecen desde la aplicación.
 
-Cada franja de precios tiene un valor correspondiente en cada una de las divisas que ofrece la Tienda. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. No obstante, debido a cambios en las tasas de cambio extranjeras, el importe de ventas exacto puede variar levemente de una moneda a otra.
+Cada franja de precio tiene un valor correspondiente en cada una de las monedas que ofrece la Store. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. Sin embargo, debido a los cambios en las tasas de cambio, el importe exacto de las ventas puede variar ligeramente de una moneda a otra.
 
-También tienes la opción de especificar un precio de forma libre que elijas en la moneda local de un mercado específico. Al hacerlo, no se ajustará el precio (incluso si cambian las tasas de conversión) a menos que envíes una actualización con un precio nuevo. 
+También tiene la opción de especificar el precio que quiera de forma libre en la moneda local de un mercado específico. Al hacerlo, el precio no se ajustará (incluso si cambian las tasas de conversión) a menos que envíe una actualización con un precio nuevo. 
 
-Recuerda que el precio que seleccionaste puede incluir el impuesto sobre el valor añadido o las ventas que tus clientes deben pagar. Para más información, consulta [detalles de impuestos para aplicaciones de pago](tax-details-for-paid-apps.md) para obtener más información.
+Tenga en cuenta que el precio que seleccione puede incluir impuestos de ventas o al valor añadido que los clientes deben pagar. Para más información, consulta [detalles de impuestos para aplicaciones de pago](tax-details-for-paid-apps.md) para obtener más información.
 
 
 ## <a name="payout-reporting"></a>Informes de pago
 
-Puede obtener acceso a los detalles sobre la información de pago y descargar informes en el **Resumen de pagos** del [centro de Partners](https://partner.microsoft.com/dashboard). Para obtener más información sobre la información que se muestra aquí, y sobre cómo que clasificamos el dinero que ganas, consulta [Resumen de pago](payout-summary.md).
+Puede obtener acceso a los detalles sobre la información de pago y descargar informes en el **Resumen de pago** del [Centro de partners](https://partner.microsoft.com/dashboard). Para obtener más información sobre lo que se muestra aquí y cómo clasificamos el dinero que gana, consulte el [Resumen de pago](payout-summary.md).
 
 
-## <a name="payout-timeframe"></a>Período de pago
+## <a name="payout-timeframe"></a>Plazo de pago
 
-Los pagos se realizan de forma mensual (siempre que hayas alcanzado el umbral de pago aplicable y no hayas seleccionado el pago en suspensión tal como se describe a continuación). Por lo general, enviaremos cualquier pago pendiente a día 15 de un mes determinado. Recuerda que los pagos suelen tardar entre 3 y 10 días laborables adicionales en acreditarse en tu cuenta de pago. Para obtener más información, consulta [Umbrales, métodos y plazos de pago](payment-thresholds-methods-and-timeframes.md).
+Los pagos se realizan mensualmente (siempre que se cumpla el umbral de pago aplicable y no haya retenido el pago tal y como se describe a continuación). Normalmente enviaremos todos los pagos cuyo vencimiento sea en un mes específico antes del día 15 de ese mes. Tenga en cuenta que los pagos suelen tardar entre 3 y 10 días laborables adicionales para llegar a su cuenta de pago. Para obtener más información, consulte [Umbrales de pago, métodos e intervalos de tiempo](payment-thresholds-methods-and-timeframes.md).
 
 
-##  <a name="payout-hold-status"></a>Estado de suspensión de pago
+##  <a name="payout-hold-status"></a>Estado de retención de pagos
 
-De manera predeterminada, te enviaremos pagos mensualmente como se describe más arriba. Sin embargo, tiene la opción de poner los pagos para un programa en espera, lo que nos impedirá enviar pagos a su cuenta. Si optas por suspender los pagos, continuaremos registrando los ingresos que obtengas y proporcionándote detalles en tu **Resumen de pagos**. Sin embargo, no enviaremos los pagos a tu cuenta hasta que quitas la suspensión.
+De forma predeterminada, enviaremos pagos mensualmente, como se describió anteriormente. No obstante, tiene la opción de retener los pagos de un programa, lo que nos impediría enviar pagos a su cuenta. Si decide retener los pagos, se siguen registrando los ingresos que genera y se le proporcionan los detalles en el **Resumen de pagos**. Sin embargo, no enviaremos ningún pago a la cuenta hasta que quite la suspensión.
 
-Para poner los pagos en espera, vaya a **configuración del desarrollador**. En **pago e impuestos**, en la sección **asignación de Perfil de pago y impuestos** , busque el programa para el que desea conservar los pagos. Haga clic en la casilla **suspender mi pago** para conservar los pagos de este programa. Puedes cambiar el estado de suspensión de pagos en cualquier momento, pero ten en cuenta que tu decisión afectará al pago mensual siguiente. Por ejemplo, si quieres suspender el pago de abril, asegúrate de que estableces el estado de suspensión de pagos en **Activado** antes de final de marzo.
+Para retener los pagos, vaya a la **Configuración del desarrollador**. En **Pago e impuestos**, en la sección **Asignación de perfiles fiscales y de pago**, busque el programa para el que quiere suspender los pagos. Haga clic en la casilla **Retener mi pago** para retener los pagos de este programa. Puede cambiar el estado de retención de pagos en cualquier momento, pero tenga en cuenta que su decisión afectará a su próximo pago mensual. Por ejemplo, si quiere retener los pagos de abril, asegúrese de establecer el estado de retención de pagos en **Activado** antes del final de marzo.
 
-Una vez que haya establecido el estado de retención de pago en **activado**, todos los pagos de este programa estarán en espera hasta que vuelva a activar el control deslizante **.** Al hacerlo, se te incluirá durante el próximo ciclo de pagos mensual (siempre que se hayas cumplido los umbrales de pago aplicables). Por ejemplo, si has tenido los pagos en suspensión, pero te gustaría que se generara un pago en junio, asegúrate de definir el estado de suspensión del pago en **Desactivado** antes de final de mayo.
+Una vez que haya establecido el estado de la retención de pagos en **Activado**, todos los pagos de este programa se pondrán en espera hasta que desplace el control deslizante de nuevo a **Desactivado**. Cuando lo haya hecho, se le incluirá en el siguiente ciclo de pago mensual (siempre que se hayan cumplido los umbrales de pago aplicables). Por ejemplo, si ha retenido los pagos pero quiere que se genere un pago en junio, asegúrese de alternar el estado de retención de pagos a **Desactivado** antes de finales de mayo.
 
 > [!NOTE]
-> El **Estado** de la retención de pago se aplica individualmente a cada programa (Microsoft Store, publicidad, Azure Marketplace, etc.). Si desea conservar los pagos en todos los programas, debe mantener los pagos en cada programa individualmente.
+> El **Estado de retención del pago** se aplica individualmente a cada programa (Microsoft Store, publicidad, Azure Marketplace, etc.). Si quiere retener los pagos de todos los programas, debe retenerlos en cada programa de forma individual.
 
 
  
