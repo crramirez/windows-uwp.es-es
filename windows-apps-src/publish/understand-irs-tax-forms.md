@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP, fiscal, IRS, servicio de ingresos internos, impuestos, impuestos, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: ab115b5cb2b64c6f5bd05b166e904773948a876c
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: 4a385c9c351dc0bb5db857fe7d1f5f267347f1f1
+ms.sourcegitcommit: 31c925736391ab166c06f34258564b00aeebd83a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854711"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428919"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Descripción de los formularios fiscales del IRS emitidos por Microsoft
 
@@ -32,20 +32,21 @@ A continuación, explicaremos más sobre estos formularios, incluidos sus destin
 Los formularios fiscales se le enviarán desde las siguientes direcciones:
 
 **Ciudadanos de EE. UU.:**
-<table>
-<tr><th>Grupo de negocios</th><th>Entidad jurídica</th><th>Dirección</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052 EE. UU.</td></tr>
-<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EE. UU.</td></tr>
-<table> 
+
+| Grupo de negocios         | Entidad jurídica          | Dirección                                          |
+|------------------------|-----------------------|--------------------------------------------------|
+| Windows, Office, Azure | Microsoft Corporation | One Microsoft Way<br>Redmond, WA 98052 EE. UU.        |
+| Publicidad            | Microsoft Online Inc. | Parkway Sierra Center de 6880<br>Reno, NV 98511 EE. UU. |
 
 **Ciudadanos no estadounidenses:**
-<table>
-<tr><th>Grupo de negocios</th><th>Entidad jurídica</th><th>Dirección</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Corporation a través de Microsoft Ireland actuando como intermediario calificado para Microsoft Corporation)</td><td>One Microsoft Place<br>&nbsp;Parque de &nbsp; negocios del Condado de sur &nbsp;<br>Leopardstown, Dublín 18 Irlanda</td></tr>
-<tr><td>Anunciar</td><td>Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Online Inc. a través de Microsoft Ireland actuando como agente de pago para Microsoft Online Inc).</td><td>One Microsoft Place<br>&nbsp;Parque de &nbsp; negocios del Condado de sur &nbsp;<br>Leopardstown, Dublín 18 Irlanda</td></tr>
-<tr><td>Publicidad</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 EE. UU.</td></tr>
-<tr><td colspan="3">* Los ciudadanos de los siguientes países que obtienen ingresos publicitarios se pagarán a través de Microsoft Ireland Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, Checo, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda, isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, Países Bajos, Noruega, Polonia, Portugal, Rumanía, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza y Reino Unido</td></tr>
-</table>
+| Grupo de negocios         | Entidad jurídica          | Dirección                                          |
+|------------------------|-----------------------|--------------------------------------------------|
+| Windows, Office, Azure | Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Corporation a través de Microsoft Ireland actuando como intermediario calificado para Microsoft Corporation) | One Microsoft Place<br>&nbsp;Parque de &nbsp; negocios del Condado de sur &nbsp;<br>Leopardstown, Dublín 18 Irlanda|
+| Publicidad\*          | Microsoft Ireland Operations Limited (el pago lo realiza Microsoft Online Inc. a través de Microsoft Ireland actuando como agente de pago para Microsoft Online Inc). | One Microsoft Place<br>&nbsp;Parque de &nbsp; negocios del Condado de sur &nbsp;<br>Leopardstown, Dublín 18 Irlanda |
+| Publicidad            | Microsoft Online Inc. | Parkway Sierra Center de 6880<br>Reno, NV 98511 EE. UU. |
+
+>[!NOTE]
+> \*Los ciudadanos de los siguientes países que obtienen ingresos publicitarios se pagarán a través de Microsoft Ireland Operations Limited: Austria, Bélgica, Bulgaria, Croacia, Chipre, Checo, Dinamarca, Estonia, Finlandia, Francia, Alemania, Grecia, Hungría, Irlanda, isla de Man, Italia, Letonia, Liechtenstein, Lituania, Luxemburgo, Malta, Mónaco, Países Bajos, Noruega, Polonia, Portugal, Rumanía, Eslovaquia, Eslovenia, Sudáfrica, España, Suecia, Suiza y Reino Unido
 
 ## <a name="for-developers-located-in-the-united-states"></a>Para los desarrolladores que se encuentran en los Estados Unidos
 
