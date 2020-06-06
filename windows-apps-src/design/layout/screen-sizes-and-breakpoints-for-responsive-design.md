@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f79b7247a7e1a1889c530a16c280f490db51042e
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 2e385f6b9977eead6aed52215080588e4f9d8c27
+ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970750"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84262776"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Tamaños de pantalla y puntos de interrupción
 
@@ -98,8 +98,3 @@ Las aplicaciones para UWP escalan automáticamente tu interfaz de usuario para g
 - Usa hasta tres columnas o regiones.
 - Muestra el cuadro de búsqueda.
 - Coloca el [panel de navegación](../controls-and-patterns/navigationview.md) en modo acoplado para que siempre se muestre.
-
->[!TIP] 
-> Con [**Continuum para teléfonos**](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), los usuarios pueden conectar dispositivos móviles compatibles con Windows 10 a un monitor, un ratón y un teclado para que los teléfonos funcionen como un portátil. Ten en cuenta esta nueva funcionalidad al diseñar para puntos de interrupción específicos, ya que un teléfono móvil no se mantendrá siempre en la clase de tamaño.
-
-
