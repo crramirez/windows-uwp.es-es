@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: b9a4d0fb13b28babb3d99d0f763d9e7dc6decd2b
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 56104dd5608356b47a405c37eba71e544c5ba23c
+ms.sourcegitcommit: 37e4af3ba203295c7e88448414cf7ea537ab5402
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233783"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257456"
 ---
 # <a name="inking-controls"></a>Controles de entrada manuscrita
 
@@ -72,7 +72,7 @@ Microsoft Edge usa los controles InkCanvas e InkToolbar para las **notas web**.
 
 **Área de trabajo de Windows Ink**
 
-Los controles InkCanvas e InkToolbar también se usan para las opciones **Bloc de bocetos** y **Anotación en captura de pantalla** en el **Área de trabajo de Windows Ink**.  
+Los controles InkCanvas e InkToolbar también se usan para **Recorte y anotación** en el **Área de trabajo de Windows Ink**.  
 ![Control InkToolbar en el Área de trabajo de Windows Ink](images/ink-tools-ink-workspace.png)
 
 ## <a name="create-an-inkcanvas-and-inktoolbar"></a>Crear un control InkCanvas y un control InkToolbar
