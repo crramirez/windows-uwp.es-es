@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e2509743bf9e847fb740816e3552f4172cf644c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 694ab7a3897bdf13189d61ab70ed05b9169b834c
+ms.sourcegitcommit: 020d0ff0e5abf46b2ed660eac61251b32bf150bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970710"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716043"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -347,9 +347,9 @@ Esto podría no ser siempre posible debido a las diferencias de funcionalidad en
 | Agregar un nuevo elemento secundario | Ctrl + Mayús + N |
 | Eliminar elemento seleccionado (con deshacer) | Del, Ctrl + D |
 | Eliminar elemento seleccionado (sin deshacer) | Mayús + Supr |
-| Negrita | Ctrl + B |
-| Underline | Ctrl + U |
-| Cursiva | Ctrl + I |
+| Bold | Ctrl + B |
+| Subrayado | Ctrl + U |
+| Cursiva | Ctrl+I |
 
 | **Navegación** | |
 | ------------- | ----------------------------------- |
@@ -358,12 +358,12 @@ Esto podría no ser siempre posible debido a las diferencias de funcionalidad en
 
 | **Otras acciones** | |
 | ------------- | ----------------------------------- |
-| Agregar favoritos | Ctrl + D | 
+| Agregar favoritos | Ctrl+D | 
 | Actualizar | F5 o Ctrl + R | 
 | Acercar | Ctrl + + | 
 | Alejamiento | Ctrl +- | 
 | Zoom a la vista predeterminada | Ctrl + 0 | 
-| Save | Ctrl + S | 
+| Guardar | Ctrl + S | 
 | Cerrar | Ctrl + W | 
 | Print | Ctrl + P | 
 
@@ -530,8 +530,8 @@ Como el evento [CharacterReceived](https://docs.microsoft.com/uwp/api/windows.ui
 Los eventos de entrada de la vista previa se activan antes que otros eventos. Si no controla estos eventos, se activa el acelerador del elemento que tiene el foco, seguido del evento KeyDown. Ambos eventos se propagan hasta que se administran.
 
 
-![](images/accelerators/accelerators_keyevents.png)
-***Secuencia de eventos*** Key Event Sequence Key
+![Secuencia de eventos Key Event Sequence ](images/accelerators/accelerators_keyevents.png)
+ ***key***
 
 Orden de eventos:
 
@@ -576,8 +576,8 @@ protected override void OnProcessKeyboardAccelerators(
 
 Se recomienda localizar todos los aceleradores de teclado. Puede hacerlo con el archivo de recursos estándar de UWP (. resw) y el atributo x:Uid en las declaraciones de XAML. En este ejemplo, el Windows Runtime carga automáticamente los recursos.
 
-![Localización del acelerador de teclado con](images/accelerators/accelerators_localization.png)
-el archivo de recursos de UWP***localización del acelerador de teclado de archivo con recursos de UWP***
+![Localización del acelerador de teclado con el archivo de recursos de UWP ](images/accelerators/accelerators_localization.png)
+ ***localización del acelerador de teclado de archivo con recursos de UWP***
 
 ``` xaml
 <Button x:Uid="myButton" Click="OnSave">
@@ -602,8 +602,8 @@ void AddAccelerator(
       { 
         Modifiers = keyModifiers, Key = key
       };
-    accelerator.Invoked = handler;
-    this.KeyAccelerators.Add(accelerator);
+    accelerator.Invoked += handler;
+    this.KeyboardAccelerators.Add(accelerator);
   }
 ```
 
