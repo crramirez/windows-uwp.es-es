@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: Windows 10, UWP, finalizador, vídeo, captura de pantalla, imagen, icono, lista de tiendas, imágenes de la lista de tiendas
 ms.localizationpriority: medium
-ms.openlocfilehash: 7995f7d8539ee5835ee9ae079305731879decc95
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: 6a09395a57a83eaa57124173723b96a87d14b3b3
+ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255189"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746755"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -61,7 +61,7 @@ Puede cargar logotipos de la tienda para crear una pantalla más personalizada e
 
 Puede proporcionar estas imágenes como archivos. png (no mayor que 50 MB), cada una de las cuales debe seguir las instrucciones que se indican a continuación.
 
-### <a name="916-poster-art-720-x-1080-or-1440-x-2160-pixels"></a>imagen de póster 9:16 (720 x 1080 o 1440 x 2160 píxeles)
+### <a name="23-poster-art-720-x-1080-or-1440-x-2160-pixels"></a>imagen de póster 2:3 (720 x 1080 o 1440 x 2160 píxeles)
 
 Se usa como la imagen principal del logotipo para clientes en dispositivos con Windows 10 y Xbox, por lo que se **recomienda encarecidamente** proporcionar esta imagen para garantizar una presentación adecuada. Es posible que la lista no tenga un aspecto correcto si no lo incluye, y no será coherente con otras listas que los clientes ven al examinar la tienda. Esta imagen también puede usarse en los resultados de la búsqueda o en colecciones editorially-seleccionada.
 
@@ -72,7 +72,7 @@ Esta imagen debe incluir el nombre de la aplicación y cualquier texto de la ima
 
 ### <a name="11-box-art-1080-x-1080-or-2160-x-2160-pixels"></a>gráfico de caja 1:1 (1080 x 1080 o 2160 x 2160 píxeles)
 
-Esta imagen puede aparecer en varias páginas de la tienda para Windows 10 (incluida Xbox) y, si no se proporciona la imagen de **gráfico de póster 9:16** , se usará como su logotipo principal. Esta imagen también debe incluir el nombre de la aplicación. Las superposiciones de texto pueden aparecer en el trimestre inferior de esta imagen, por lo que no incluya el texto o la imagen clave allí. Asegúrese de incluir el nombre de la aplicación en esta imagen. 
+Esta imagen puede aparecer en varias páginas de la tienda para Windows 10 (incluida Xbox) y, si no se proporciona la imagen de **gráfico de póster 2:3** , se usará como su logotipo principal. Esta imagen también debe incluir el nombre de la aplicación. Las superposiciones de texto pueden aparecer en el trimestre inferior de esta imagen, por lo que no incluya el texto o la imagen clave allí. Asegúrese de incluir el nombre de la aplicación en esta imagen. 
 
 > [!NOTE]
 > Si la aplicación está disponible para los clientes en Xbox, esta imagen es **obligatoria** y debe incluir el título del producto. El título debe aparecer en los tres últimos trimestres de la imagen, ya que pueden aparecer superposiciones de texto en el trimestre inferior de la imagen.
@@ -147,7 +147,7 @@ Al proporcionar los finalizadores, asegúrese de seguir estos requisitos:
 - El formato de vídeo debe ser MOV o MP4.
 - El tamaño de archivo del finalizador no debe superar los 2 GB.
 - La resolución de vídeo debe ser 1920 x 1080 píxeles.
-- La miniatura debe ser un archivo PNG con una resolución de 1920 x 1080 píxeles o de 3840 x 2160 píxeles.
+- La miniatura debe ser un archivo PNG con una resolución de 1920 x 1080 píxeles.
 - El título no puede superar los 255 caracteres.
 - No incluya clasificaciones de edad en los finalizadores.
 

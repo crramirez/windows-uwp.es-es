@@ -6,12 +6,12 @@ ms.date: 05/29/2020
 ms.topic: article
 keywords: Windows 10, UWP, pagos, ventas de aplicaciones, continuaciones de aplicaciones, pagos, gastos de tienda, retención de pago, porcentaje
 ms.localizationpriority: medium
-ms.openlocfilehash: 5927e6636f1c5a60b4f3453e0493755176c649ad
-ms.sourcegitcommit: 8eae7aec4c4ffb8a0c30e9d03744942fb23958d9
+ms.openlocfilehash: 0d42677aeda694e2fc8924cee1832b62d98b15e5
+ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84334230"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746775"
 ---
 # <a name="getting-paid"></a>Recepción del pago
 Esta es una información importante sobre cómo recibir el pago de las aplicaciones, los complementos y los ingresos publicitarios.
@@ -40,7 +40,7 @@ Puedes ofrecer tu aplicación de forma gratuita o elegir un precio que los clien
 > [!NOTE] 
 > Estos niveles de precios también se aplican a los complementos que se ofrecen desde la aplicación.
 
-Cada franja de precio tiene un valor correspondiente en cada una de las monedas que ofrece la Store. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. Sin embargo, debido a los cambios en las tasas de cambio, el importe exacto de las ventas puede variar ligeramente de una moneda a otra.
+Cada franja de precio tiene un valor correspondiente en cada una de las monedas que ofrece la Store. Usamos estos valores para ayudarte a vender tus aplicaciones a un punto de precio comparable mundial. Sin embargo, debido a los cambios en las tasas de cambio, el importe exacto de las ventas puede variar ligeramente de una moneda a otra. Las tasas de cambio se calculan mensualmente. Según el momento en que se realizó la transacción, se aplica la tasa de cambio adecuada. La tasa de cambio y el intervalo de fechas para el que se aplicó se indican en el informe de pago en las columnas exchangeRate y exchangeRateDate, respectivamente.
 
 También tiene la opción de especificar el precio que quiera de forma libre en la moneda local de un mercado específico. Al hacerlo, el precio no se ajustará (incluso si cambian las tasas de conversión) a menos que envíe una actualización con un precio nuevo. 
 

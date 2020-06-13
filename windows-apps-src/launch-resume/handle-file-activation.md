@@ -11,19 +11,19 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 079746d3c1619fe940ba243410f0247b7b850ed9
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 4377db57b3cd713bae8f9c80a0116d016722be19
+ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259458"
+ms.lasthandoff: 06/13/2020
+ms.locfileid: "84756541"
 ---
 # <a name="handle-file-activation"></a>Administrar la activación de archivos
 
 **API importantes**
 
--   [**Windows. ApplicationModel. Activation. FileActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
--   [**Windows. UI. Xaml. Application. OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
+-   [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
+-   [**Windows.UI.Xaml.Application.OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
 
 La aplicación se puede registrar para que se convierta en el controlador predeterminado para un tipo de archivo determinado. Tanto las aplicaciones de escritorio de Windows como las aplicaciones de la Plataforma universal de Windows (UWP) pueden registrarse para convertirse en el controlador de archivos predeterminado. Si el usuario elige tu aplicación como controlador predeterminado de un tipo de archivo específico, la aplicación se activará cuando se inicie dicho tipo de archivo.
 
@@ -31,7 +31,7 @@ Te recomendamos que solo registres tu aplicación para un tipo de archivo si tie
 
 En estos pasos se muestra cómo realizar el registro de un tipo de archivo personalizado, .alsdk, y cómo se activa una aplicación cuando el usuario inicia un archivo .alsdk.
 
-> **Tenga en cuenta**  en las aplicaciones UWP, ciertos URI y extensiones de archivo se reservan para su uso por parte de las aplicaciones integradas y el sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Para más información, consulta [Nombres de esquemas de URI y archivos reservados](reserved-uri-scheme-names.md).
+> **Nota:**    En las aplicaciones UWP, ciertos URI y extensiones de archivo se reservan para su uso por parte de las aplicaciones integradas y el sistema operativo. Se ignorarán los intentos de registrar aplicaciones con una extensión de archivo o URI reservada. Para más información, consulta [Nombres de esquemas de URI y archivos reservados](reserved-uri-scheme-names.md).
 
 ## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Paso 1: Especificar el punto de extensión en el manifiesto del paquete
 
@@ -50,9 +50,9 @@ La aplicación recibe eventos de activación solo para las extensiones de archiv
 | **Tipo de contenido** | Especifica el tipo de contenido MIME, como **image/jpeg**, de un tipo de archivo concreto. **Nota importante sobre los tipos de contenido permitidos:** Esta es una lista ordenada alfabéticamente de los tipos de contenido MIME que no se pueden especificar en el manifiesto del paquete porque están reservados o prohibidos: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
 | **Tipo de archivo** | Especifica el tipo de archivo para el que se va a registrar, precedido de un punto, por ejemplo, “.jpeg”. **Tipos de archivos reservados y prohibidos:** Consulta [Tipos de archivos y nombres de esquema de URI reservados](reserved-uri-scheme-names.md) para obtener una lista ordenada alfabéticamente de los tipos de archivo para aplicaciones integradas que no se pueden registrar para las aplicaciones para UWP porque están reservados o prohibidos. |
 
-2.  Escribe `alsdk` como el valor de **Name**.
+2.  Escriba `alsdk` como **nombre**.
 3.  Escribe `.alsdk` como el valor de **File Type**.
-4.  Escriba "images\\Icon. png" como el logotipo.
+4.  Escriba "images \\Icon.png" como el logotipo.
 5.  Presiona Ctrl+S para guardar el cambio realizado en package.appxmanifest.
 
 Los pasos anteriores permiten agregar un elemento [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-extension) como este al manifiesto del paquete. La categoría **windows.fileTypeAssociation** indica que la aplicación controla los archivos con la extensión `.alsdk`.
@@ -74,12 +74,12 @@ Los pasos anteriores permiten agregar un elemento [**Extension**](https://docs.m
 
 Las aplicaciones que se convierten en predeterminadas para un tipo de archivo muestran sus iconos en varios lugares del sistema. Por ejemplo, estos iconos se muestran en:
 
--   Vista de elementos del Explorador de Windows, menús contextuales y la cinta
+-   Vista de elementos del explorador de Windows, menús contextuales y la cinta de opciones
 -   Panel de control de programas predeterminados
 -   Selector de archivos
 -   Resultados de búsqueda en la pantalla Inicio
 
-Incluir un icono de 44 x 44 con el proyecto para que tu logotipo puede aparecer en estas ubicaciones. Ajusta el aspecto del logotipo del icono de la aplicación y usa el color de fondo de la aplicación en lugar de usar un icono transparente. Extiende el logotipo hasta el borde sin que quede espacio. Prueba los iconos en fondos de color blanco. Consulta [Directrices para los activos de iconos](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/app-assets) para obtener más información sobre los iconos.
+Incluya un icono de 44 x 44 con el proyecto para que su logotipo pueda aparecer en esas ubicaciones. Ajusta el aspecto del logotipo del icono de la aplicación y usa el color de fondo de la aplicación en lugar de usar un icono transparente. Extiende el logotipo hasta el borde sin que quede espacio. Prueba los iconos en fondos de color blanco. Consulte [directrices para recursos](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/app-assets) de iconos e iconos para obtener más detalles sobre los iconos.
 
 ## <a name="step-3-handle-the-activated-event"></a>Paso 3: Administrar el evento activado
 
@@ -127,7 +127,7 @@ Se recomienda crear un nuevo **marco** XAML para cada evento de activación que 
 
 Cuando la aplicación se inicia a través de la activación de archivos, debe considerar la posibilidad de incluir una interfaz de usuario que permita al usuario volver a la página superior de la aplicación.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Los archivos que recibes pueden provenir de un origen que no es de confianza. Se recomienda que valides el contenido de un archivo antes de realizar una acción en él.
 
@@ -135,12 +135,12 @@ Los archivos que recibes pueden provenir de un origen que no es de confianza. Se
 
 ### <a name="complete-example"></a>Ejemplo completo
 
-* [Ejemplo de inicio de asociación](https://code.msdn.microsoft.com/windowsapps/Association-Launching-535d2cec)
+* [Ejemplo de inicio por asociación](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)
 
 ### <a name="concepts"></a>Conceptos
 
 * [Programas predeterminados](https://docs.microsoft.com/windows/desktop/shell/default-programs)
-* [Modelo de tipo de archivo y asociaciones de protocolo](https://docs.microsoft.com/windows/desktop/w8cookbook/file-type-and-protocol-associations-model)
+* [Modelo de asociación de tipos de archivo y protocolos](https://docs.microsoft.com/windows/desktop/w8cookbook/file-type-and-protocol-associations-model)
 
 ### <a name="tasks"></a>Tareas
 
@@ -149,8 +149,8 @@ Los archivos que recibes pueden provenir de un origen que no es de confianza. Se
 
 ### <a name="guidelines"></a>Instrucciones
 
-* [Directrices para tipos de archivo y URI](https://docs.microsoft.com/windows/uwp/files/index)
+* [Directrices sobre tipos de archivo y URI](https://docs.microsoft.com/windows/uwp/files/index)
 
 ### <a name="reference"></a>Referencia
-* [Windows. ApplicationModel. Activation. FileActivatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
-* [Windows. UI. Xaml. Application. OnFileActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
+* [Windows.ApplicationModel.Activation.FileActivatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
+* [Windows.UI.Xaml.Application.OnFileActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)

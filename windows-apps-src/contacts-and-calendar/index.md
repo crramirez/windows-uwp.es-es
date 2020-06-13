@@ -6,12 +6,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp, contacts, calendar, appointments, email messages
 ms.localizationpriority: medium
-ms.openlocfilehash: 8abb3773b2fa18a25716baf641d04c7ad37a293c
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: b2e3f0b1d93d2b2c32e117f61fd7514077ca3923
+ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74255438"
+ms.lasthandoff: 06/13/2020
+ms.locfileid: "84756551"
 ---
 # <a name="contacts-my-people-and-calendar"></a>Contactos, Mis allegados y calendario
 
@@ -36,7 +36,7 @@ Para conocer los distintos modos en que tu aplicación puede obtener acceso a lo
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Ejemplo de API de citas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Appointments)
-* [Ejemplo de API del administrador de contactos](https://code.msdn.microsoft.com/windowsapps/Contact-manager-API-sample-319bdcef)
-* [Ejemplo de una aplicación de selector de contactos](https://code.msdn.microsoft.com/windowsapps/Contact-Picker-App-sample-fc6677a1)
-* [Ejemplo de control de las acciones de contacto](https://code.msdn.microsoft.com/windowsapps/Handling-Contact-Actions-359380e2)
+* [Ejemplo de API del administrador de contactos](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Contact%20manager%20API%20sample)
+* [Ejemplo de una aplicación de selector de contactos](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/ContactPicker)
+* [Ejemplo de control de las acciones de contacto](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208.1%20Store%20app%20samples/99866-Windows%208.1%20Store%20app%20samples/Handling%20Contact%20Actions)
 * [Ejemplo de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)

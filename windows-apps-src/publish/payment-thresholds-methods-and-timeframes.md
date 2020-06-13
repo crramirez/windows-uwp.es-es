@@ -6,18 +6,21 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
-ms.openlocfilehash: 21061105287c97b4a665dad791703dfab2e9ce8f
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 686ed66622efa9c73aa0ed7de64a719d7c441eb4
+ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233811"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746765"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>Umbrales, métodos y plazos de pago
 
 El tiempo estimado para transferir los pagos y los Marketplace de Microsoft desde los que puede recibir pagos puede variar en función de su país o región, así como de su tipo de cuenta de pago. En este tema se describen los métodos de pago admitidos en cada país o región.
 
 Para todos los países o regiones, usaremos ACH/SEPA o transferencia bancaria para ofrecer nuestros pagos. Además, algunos países o regiones admiten PayPal como método de pago.
+
+> [!NOTE]
+> Debido a los cambios en las tasas de cambio, el importe exacto de las ventas puede variar ligeramente de una moneda a otra. Las tasas de cambio se calculan mensualmente. Según el momento en que se realizó la transacción, se aplica la tasa de cambio adecuada. La tasa de cambio y el intervalo de fechas para el que se aplicó se indican en el informe de pago en las columnas exchangeRate y exchangeRateDate, respectivamente.
 
 ## <a name="number-of-days-for-payments-to-reach-payout-account"></a>Número de días para que los pagos lleguen a la cuenta de pago
 
@@ -44,7 +47,7 @@ Para ver los países o regiones en los que se usan estos métodos de pago para c
 | Afganistán                      | Sí               | Sí                                      | No     | No              |
 | Albania                          | Sí               | Sí                                      | Sí    | Sí             |
 | Argelia                          | Sí               | Sí                                      | Sí    | Sí             |
-| Andorra                          | Sin                | No                                       | Sí    | Sí             |
+| Andorra                          | No                | No                                       | Sí    | Sí             |
 | Angola                           | Sí               | Sí                                      | Sí    | No              |
 | Antigua y Barbuda              | Sí               | Sí                                      | No     | Sí             |
 | Argentina                        | Sí               | Sí                                      | Sí    | Sí             |
@@ -89,7 +92,7 @@ Para ver los países o regiones en los que se usan estos métodos de pago para c
 | Eritrea                          | Sí               | Sí                                      | Sí    | No              |
 | Estonia                          | Sí               | Sí                                      | Sí    | Sí             |
 | Etiopía                         | Sí               | Sí                                      | Sí    | No              |
-| Islas Fiyi                     | Sí               | Sí                                      | No     | No              |
+| Islas Fiyi                     | Sí               | Sí                                      | No     | Sin              |
 | Finlandia                          | Sí               | Sí                                      | Sí    | Sí             |
 | Francia                           | Sí               | Sí                                      | Sí    | Sí             |
 | Georgia                          | Sí               | Sí                                      | Sí    | Sí             |
@@ -105,7 +108,7 @@ Para ver los países o regiones en los que se usan estos métodos de pago para c
 | Islandia                          | Sí               | Sí                                      | Sí    | No              |
 | India                            | Sí               | Sí                                      | Sí    | Sí             |
 | Indonesia                        | Sí               | Sí                                      | Sí    | Sí             |
-| Iraq                             | Sí               | Sí                                      | No     | No              |
+| Iraq                             | Sí               | Sí                                      | No     | Sin              |
 | Irlanda                          | Sí               | Sí                                      | Sí    | Sí             |
 | Israel                           | Sí               | Sí                                      | Sí    | Sí             |
 | Italia                            | Sí               | Sí                                      | Sí    | Sí             |
@@ -116,7 +119,7 @@ Para ver los países o regiones en los que se usan estos métodos de pago para c
 | Kenia                            | Sí               | Sí                                      | Sí    | Sí             |
 | Corea (Sur)                    | Sí               | Sí                                      | Sí    | No              |
 | Kuwait                           | Sí               | Sí                                      | Sí    | Sí             |
-| Kirguistán                       | Sin                | No                                       | Sí    | No              |
+| Kirguistán                       | No                | No                                       | Sí    | No              |
 | Laos                             | Sí               | Sí                                      | Sí    | No              |
 | Letonia                           | Sí               | Sí                                      | Sí    | No              |
 | Líbano                          | Sí               | Sí                                      | No     | No              |
@@ -152,7 +155,7 @@ Para ver los países o regiones en los que se usan estos métodos de pago para c
 | Filipinas                      | Sí               | Sí                                      | Sí    | Sí             |
 | Polonia                           | Sí               | Sí                                      | Sí    | Sí             |
 | Portugal                         | Sí               | Sí                                      | Sí    | Sí             |
-| Puerto Rico                      | Sin                | No                                       | Sí    | No              |
+| Puerto Rico                      | No                | No                                       | Sí    | No              |
 | Qatar                            | Sí               | Sí                                      | Sí    | Sí             |
 | Rumanía                          | Sí               | Sí                                      | Sí    | No              |
 | Rusia                           | Sí               | Sí                                      | No     | Sí             |
