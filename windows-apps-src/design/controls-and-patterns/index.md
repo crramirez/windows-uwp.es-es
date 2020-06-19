@@ -8,12 +8,12 @@ ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 63907b3bfe3fc6dece900f1a7c09ac535e859471
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 82e6d91b5a4147237cd04b46dc5b69b8151fece9
+ms.sourcegitcommit: 6dd6d61c912daab2cc4defe5ba0cf717339f7765
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80218455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978387"
 ---
 # <a name="controls-for-windows-apps"></a>Controles para aplicaciones de Windows
 
@@ -95,8 +95,8 @@ Obtener información detallada sobre los patrones y controles específicos. (Par
 - [Imagen de persona](person-picture.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
 - [Pivot](pivot.md)
 - [Barra de progreso](progress-controls.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
-- [Círculo de progreso](progress-controls.md)
-- [Botón de radio](radio-button.md)
+- [Círculo de progreso](progress-controls.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
+- [Botón de radio](radio-button.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
 - [Control de clasificación](rating.md) ![Logotipo de WinUI](images/winui-logo-16x16.png)
 - [Botón Repetir](buttons.md#create-a-repeat-button)
 - [Cuadro de texto enriquecido](rich-edit-box.md)

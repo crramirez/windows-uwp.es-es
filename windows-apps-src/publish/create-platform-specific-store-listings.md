@@ -4,52 +4,52 @@ title: Creación de descripciones de la Tienda específicas de la plataforma
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, personalizar, enumerar, descripción, anteriormente
+keywords: Windows 10, UWP, personalizar, enumerar, descripción, anteriormente
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d9a9e86397ca5e85697543f99481b43f438a063
-ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
+ms.openlocfilehash: 475526662737eaa5b95267e36016e342c6652a89
+ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84945982"
 ---
 # <a name="create-platform-specific-store-listings"></a>Creación de descripciones de la Tienda específicas de la plataforma
 
 
-Si la aplicación publicada previamente tiene paquetes que tienen como destino distintos sistemas operativos, tiene la opción de personalizar los elementos de la lista de Store para los clientes de versiones anteriores del sistema operativo (Windows 8.x o una versión anterior o Windows Phone 8.x o versiones anteriores). 
+Si la aplicación publicada anteriormente tiene paquetes que tienen como destino distintos sistemas operativos, tiene la opción de personalizar partes de la lista de tiendas para clientes con versiones anteriores del sistema operativo (Windows 8. x o anterior y/o Windows Phone 8. x o anterior). 
 
-Los clientes de Windows 10 (incluidos Xbox) verán siempre el valor predeterminado [lista Store](create-app-store-listings.md). No verá la opción para crear listas de Store específicos de la plataforma, a menos que ya ha publicado la aplicación con los paquetes que admiten una o varias versiones del sistema operativo anteriores. 
+Los clientes de Windows 10 (incluido Xbox) siempre verán la [lista de tiendas](create-app-store-listings.md)predeterminada. No verá la opción de crear listas de tiendas específicas de la plataforma a menos que ya haya publicado la aplicación con paquetes que admitan una o varias versiones anteriores del sistema operativo. 
 
 > [!IMPORTANT]
-> A partir del 31 de octubre de 2018, los productos recién creada no pueden incluir los paquetes destinados a 8.x/Windows Windows Phone 8.x o versiones anteriores. Para obtener más información, consulte este [entrada de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
+> Ya no se pueden cargar nuevos paquetes XAP compilados con los SDK de Windows Phone 8. x. Las aplicaciones que ya se encuentran en el almacén con paquetes XAP seguirán funcionando en dispositivos Windows 10 Mobile. Para obtener más información, consulte esta [entrada de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
-Anuncios de Store específicos de la plataforma pueden ser útiles si desea hablar de las características que solo aparecen en una versión de sistema operativo, o quiere proporcionar capturas de pantalla son específicas de un sistema operativo determinado (independientemente del tipo de dispositivo).
+Las listas de tiendas específicas de la plataforma pueden ser útiles si desea mencionar características que solo aparecen en una versión del sistema operativo o desea proporcionar capturas de pantallas específicas de un sistema operativo determinado (independientemente del tipo de dispositivo).
 
 > [!NOTE]
-> Crear una plataforma específica Store enumerar en un lenguaje no crea una lista de Store específicos de la plataforma en otros lenguajes que admite la aplicación. Deberás crear la descripción de la Tienda específica de la plataforma por separado para cada idioma. Observe también que no se puede [importar y exportar datos de la lista de Store](import-and-export-store-listings.md) para programas específicos de la plataforma.
+> Al crear una lista de almacenes específicos de la plataforma en un lenguaje no se crea una lista de almacenes específicos de la plataforma en otros idiomas que admite su aplicación. Deberás crear la descripción de la Tienda específica de la plataforma por separado para cada idioma. Además, tenga en cuenta que no puede [importar y exportar datos](import-and-export-store-listings.md) de la lista de almacenes para listas específicas de la plataforma.
 
 
 ## <a name="creating-a-platform-specific-store-listing"></a>Creación de una descripción de la Tienda específica de la plataforma
 
-Cerca de la parte superior de su **lista Store** página, si la aplicación publicada previamente incluye paquetes que admiten las versiones anteriores del sistema operativo ((Windows 8.x o una versión anterior o Windows Phone 8.x o una versión anterior), puede seleccionar **crear un anuncio de específicos de la plataforma app Store**. Después de seleccionar esta opción, se te pedirá que elijas las versiones de SO de destino que admiten el envío. Una vez que ya ha creado las listas de Store específicos de la plataforma para todas las versiones anteriores del sistema operativo se dirija su aplicación, no podrá realizar otra selección.
+Cerca de la parte superior de la página de la descripción de la **tienda** , si la aplicación publicada anteriormente incluye paquetes que admiten versiones anteriores del sistema operativo ((Windows 8. x o anterior y/o Windows Phone 8. x o anterior), puede seleccionar **crear una lista de App Store específica de la plataforma**. Después de seleccionar esta opción, se le pedirá que elija entre las versiones de sistema operativo de destino que admite el envío. Una vez que haya creado listas de tiendas específicas de la plataforma para todas las versiones anteriores del sistema operativo a las que se destina la aplicación, no podrá realizar otra selección.
 
-Puede usar la lista de Store predeterminada (Windows 10) como punto de partida, que le llevará a través de texto correspondiente y las imágenes que ha escrito para su Store predeterminada listado; a continuación, podrá realizar cualquier cambio que desee antes de guardar. También puedes empezar con una descripción de la Tienda completamente en blanco si lo prefieres.
+Puede usar la lista de tiendas (Windows 10) predeterminada como punto de partida, lo que le llevará por el texto y las imágenes correspondientes que ha escrito para la lista de tiendas predeterminada. podrá realizar los cambios que quiera antes de guardar. También puedes empezar con una descripción de la Tienda completamente en blanco si lo prefieres.
 
-Después de hacer clic en **Continuar**, la página **Descripción de la Tienda** ahora incluirá una sección para la descripción de la Tienda específica de la plataforma que acabas de crear. Esta sección incluirá su propio conjunto de campos de **Descripción** (obligatorio), **Novedades de la versión**, **Capturas de pantalla**, **Icono de ventana de aplicación**, **Funciones de la aplicación** y **Requisitos adicionales del sistema**. Asegúrate de escribir en todos los campos de la descripción de la Tienda personalizada que quieres que muestren información, aunque sea la misma que la de la descripción de la Tienda predeterminada. Si dejas en blanco alguno de estos campos, no se mostrará información sobre ellos en la descripción de la Tienda personalizada.
+Después de hacer clic en **continuar**, la página de la tienda de **tiendas** incluirá ahora una sección para la lista de almacenes específicos de la plataforma que acaba de crear. En esta sección se incluye su propio conjunto de campos para la **Descripción** (obligatorio), las novedades **de esta versión**, las **capturas de pantallas**, el icono de icono de la **aplicación**, **las características**de la aplicación y **los requisitos del sistema adicionales**. Asegúrate de escribir en todos los campos de la descripción de la Tienda personalizada que quieres que muestren información, aunque sea la misma que la de la descripción de la Tienda predeterminada. Si dejas en blanco alguno de estos campos, no se mostrará información sobre ellos en la descripción de la Tienda personalizada.
 
 > [!IMPORTANT]
-> Los campos de la sección [Información adicional](create-app-store-listings.md#additional-information) de la descripción de Store no pueden personalizarse para distintas versiones del sistema operativo.
+> Los campos de la sección [información adicional](create-app-store-listings.md#additional-information) de la lista de tiendas no se pueden personalizar para diferentes versiones de sistema operativo.
 > 
-> Además, dado que algunos de los campos de la página predeterminada [Descripción de Store](create-app-store-listings.md) solo se aplican a clientes de Windows 10, no verás las mismas opciones al crear una descripción de Store específica de la plataforma. Por ejemplo, no puedes agregar tráileres a una descripción de Microsoft Store específica de la plataforma, porque solo se muestran a los clientes de Windows 10, versión 1607 o posterior. 
+> Además, como algunos de los campos de la página de [lista de tiendas](create-app-store-listings.md) predeterminada solo se aplican a los clientes de Windows 10, no verá las mismas opciones al crear una lista de almacenes específicos de la plataforma. Por ejemplo, no puede Agregar finalizadores a una lista de almacenes específicos de la plataforma, ya que los finalizadores solo se muestran a los clientes de Windows 10, versión 1607 o posterior. 
 
-Aún puede editar anuncios específicos de la plataforma según sea necesario para realizar cambios para los clientes de una determinada versión del sistema operativo.
+Puede seguir editando los listados específicos de la plataforma según sea necesario para realizar cambios para los clientes en una determinada versión del sistema operativo.
 
 
 ## <a name="removing-a-platform-specific-store-listing"></a>Supresión de una descripción de la Tienda específica de la plataforma
 
-Si creas una descripción de Microsoft Store específica de la plataforma y más adelante decides mostrar la descripción de Microsoft Store predeterminada a los clientes que usan ese sistema operativo, selecciona el vínculo **Eliminar** junto a la descripción.
+Si crea una lista de tiendas específica de la plataforma y más adelante decide que prefiere mostrar la lista de tiendas predeterminada a los clientes de ese sistema operativo, seleccione el vínculo **eliminar** junto a esa lista.
 
-Después de confirmar que quieres mostrar a esos clientes la descripción de Microsoft Store predeterminada, selecciona **Aceptar**. Se quitará la descripción de Microsoft Store específica de la plataforma (para todos los idiomas en los que existía) y los clientes de esa versión del sistema operativo ahora verán la descripción predeterminada de Microsoft Store. Si cambias de opinión, puedes seguir los pasos anteriores y crear otra descripción de Microsoft Store específica de la plataforma para ese sistema operativo.
+Después de confirmar que le gustaría mostrar a los clientes la lista de tiendas predeterminada, seleccione **Aceptar**. La lista de almacenes específicos de la plataforma se quitará (para todos los idiomas en los que existía) y los clientes de esa versión del sistema operativo ahora verán la lista de tiendas predeterminada. Si cambia de opinión, puede crear otra lista de almacenes específicos de la plataforma para ese sistema operativo siguiendo los pasos indicados anteriormente.
  
 
  

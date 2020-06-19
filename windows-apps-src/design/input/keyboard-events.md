@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ce9d15139d45cce01feb979f18167abee89a1f28
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 73b9ba40eb11d67e82ca3014c2758746d45df40f
+ms.sourcegitcommit: 6dd6d61c912daab2cc4defe5ba0cf717339f7765
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82558819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978397"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -94,9 +94,9 @@ void MyProject::MainPage::Grid_KeyUp(
 
 Todos los eventos de teclado usan [**KeyRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.KeyRoutedEventArgs) para datos de eventos. **KeyRoutedEventArgs** contiene las siguientes propiedades:
 
--   [**Clave**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key)
+-   [**Key**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key)
 -   [**KeyStatus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.keystatus)
--   [**Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled)
+-   [**Controlado**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled)
 -   [**OriginalSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource) (heredado de [**RoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEventArgs))
 
 ### <a name="key"></a>Key
@@ -319,7 +319,7 @@ El propósito de la propiedad [**Handled**](https://docs.microsoft.com/uwp/api/w
 
 ### <a name="addhandler-and-already-handled-keyboard-events"></a>AddHandler y eventos de teclado ya controlados
 
-Puedes usar una técnica especial para adjuntar controladores que pueden actuar sobre eventos que ya están marcados como controlados. Esta técnica usa el método [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) para registrar un controlador, en lugar de usar atributos XAML o la sintaxis específica del lenguaje para agregar controladores, como + = en C\#.
+Puedes usar una técnica especial para adjuntar controladores que pueden actuar sobre eventos que ya están marcados como controlados. Esta técnica usa el método [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) para registrar un controlador, en lugar de usar atributos XAML o la sintaxis específica del lenguaje para agregar controladores, como + = en C \# .
 
 Una limitación general de esta técnica es que la API **AddHandler** toma un parámetro de tipo [**RoutedEvent**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEvent) que identifica el evento enrutado en cuestión. No todos los eventos enrutados proporcionan un identificador **RoutedEvent**. Por lo tanto, esta consideración, influye en qué eventos enrutados es posible controlar en el caso [**Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled). Los eventos [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) y [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) tienen identificadores de evento enrutado ([**KeyDownEvent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydownevent) y [**KeyUpEvent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyupevent)) en [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement). Sin embargo, otros eventos como [**TextBox.TextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) no tienen identificadores de evento enrutado y, por lo tanto, no pueden usarse con la técnica **AddHandler**.
 
@@ -365,9 +365,9 @@ Por lo general, puedes agregar controladores para [**KeyUp**](https://docs.micro
 
 A modo de ejemplo, [**ButtonBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase) (la clase base para [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)) procesa [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) para poder buscar la barra espaciadora o la tecla ENTRAR. La clase **ButtonBase** considera que el evento **KeyUp** equivale al botón primario del mouse presionado con el propósito de generar un evento [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click). Este procesamiento del evento se logra cuando **ButtonBase** invalida el método virtual [**OnKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeyup). En su implementación, establece [**Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled) en **true**. El resultado es que cualquier elemento primario de un botón que escucha un evento de tecla, en el caso de una barra espaciadora, no recibiría el evento ya controlado para sus propios controladores.
 
-Otro ejemplo es [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox). **TextBox** no considera algunas teclas como texto, por ejemplo, las teclas de dirección; en cambio, las considera específicas del comportamiento de la interfaz de usuario de control. **TextBox** marca estos casos de eventos como controlados.
+Otro ejemplo es [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox). Algunas claves, como las teclas de dirección, no se consideran texto por **cuadro** de texto y se consideran específicas del comportamiento de la interfaz de usuario del control. **TextBox** marca estos casos de eventos como controlados.
 
-Los controles personalizados pueden implementar su propio comportamiento de invalidación similar para eventos clave mediante la invalidación de [**onkeydown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeydown) / [**onkeyup**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeyup). Si tu control personalizado procesa teclas aceleradoras específicas o tiene un comportamiento de control o foco similar al escenario que describimos en el caso de la clase [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), puedes incluir esta lógica en tus propias invalidaciones de **OnKeyDown** / **OnKeyUp**.
+Los controles personalizados pueden implementar su propio comportamiento de invalidación similar para eventos clave mediante la invalidación de [**onkeydown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeydown)  /  [**onkeyup**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeyup). Si tu control personalizado procesa teclas aceleradoras específicas o tiene un comportamiento de control o foco similar al escenario que describimos en el caso de la clase [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), puedes incluir esta lógica en tus propias invalidaciones de **OnKeyDown** / **OnKeyUp**.
 
 ## <a name="the-touch-keyboard"></a>Teclado táctil
 

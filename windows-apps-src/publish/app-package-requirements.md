@@ -1,36 +1,36 @@
 ---
-Description: Sigue estas instrucciones para preparar los paquetes de la aplicación para enviarlos a Microsoft Store.
+Description: Siga estas instrucciones para preparar los paquetes de la aplicación para su envío a la Microsoft Store.
 title: Requisitos del paquete de la aplicación
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, requisitos del paquete, paquetes, formato del paquete, versión compatible, enviar
+keywords: Windows 10, UWP, requisitos de paquete, paquetes, formato de paquete, versión admitida, enviar
 ms.localizationpriority: medium
-ms.openlocfilehash: 144e2fefc5802d53187684b6e34cbb2af1d8da0a
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 9c478b038ff729f753696d10fc18b21391a3a7de
+ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682634"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84945993"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
-Sigue estas instrucciones para preparar los paquetes de la aplicación para enviarlos a Microsoft Store.
+Siga estas instrucciones para preparar los paquetes de la aplicación para su envío a la Microsoft Store.
 
-## <a name="before-you-build-your-apps-package-for-the-microsoft-store"></a>Antes de compilar el paquete de la aplicación para Microsoft Store
+## <a name="before-you-build-your-apps-package-for-the-microsoft-store"></a>Antes de compilar el paquete de la aplicación para el Microsoft Store
 
-Asegúrate de [probar tu aplicación con el Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md). También te recomendamos que pruebes la aplicación en distintos tipos de hardware. Ten en cuenta que hasta que no certifiquemos la aplicación y hagamos que esté disponible en Microsoft Store, esta solo podrá instalarse y ejecutarse en equipos que tengan licencias de desarrollador.
+Asegúrate de [probar tu aplicación con el Kit para la certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md). También te recomendamos que pruebes la aplicación en distintos tipos de hardware. Tenga en cuenta que hasta que certificamos la aplicación y la pone a disposición del Microsoft Store, solo se puede instalar y ejecutar en equipos que tengan licencias de desarrollador.
 
 ## <a name="building-the-app-package-using-microsoft-visual-studio"></a>Compilar el paquete de la aplicación con Microsoft Visual Studio
 
 Si usas Microsoft Visual Studio como entorno de desarrollo, ya cuentas con herramientas integradas que te ayudarán a crear un paquete de la aplicación de manera rápida y sencilla. Para más información, consulta [Empaquetado de aplicaciones](../packaging/index.md).
 
 > [!NOTE]
-> Asegúrate de que todos tus nombres de archivo usen ANSI. 
+> Asegúrese de que todos los nombres de archivo usan ANSI. 
 
-Cuando crees el paquete en Visual Studio, asegúrate de iniciar sesión con la misma cuenta asociada con tu cuenta de desarrollador. Algunas partes del manifiesto del paquete tienen detalles específicos relacionados con tu cuenta. Esta información se detecta y se agrega automáticamente. Sin la información adicional agregada al manifiesto, se pueden producir errores al cargar el paquete. 
+Cuando crees el paquete en Visual Studio, asegúrate de iniciar sesión con la misma cuenta asociada con tu cuenta de desarrollador. Algunas partes del manifiesto del paquete tienen detalles específicos relacionados con tu cuenta. Esta información se detecta y se agrega automáticamente. Sin la información adicional agregada al manifiesto, pueden producirse errores de carga de paquetes. 
 
-Al compilar los paquetes de UWP de la aplicación, Visual Studio puede crear un archivo. msix o appx, o un archivo. msixupload o. appxupload. En el caso de las aplicaciones UWP, se recomienda cargar siempre el archivo. msixupload o. appxupload en la página [paquetes](upload-app-packages.md) . Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Store, consulta [Empaquetar una aplicación para UWP con Visual Studio](/windows/msix/package/packaging-uwp-apps).
+Al compilar los paquetes de UWP de la aplicación, Visual Studio puede crear un archivo. msix o appx, o un archivo. msixupload o. appxupload. En el caso de las aplicaciones UWP, se recomienda cargar siempre el archivo. msixupload o. appxupload en la página [paquetes](upload-app-packages.md) . Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la tienda, consulta [empaquetar una aplicación para UWP con Visual Studio](/windows/msix/package/packaging-uwp-apps).
 
 No es necesario que los paquetes de la aplicación estén firmados con un certificado con la raíz en una entidad de certificación de confianza.
 
@@ -42,7 +42,7 @@ En el caso de las aplicaciones UWP, Visual Studio puede generar un lote de aplic
 > [!NOTE]
 > Un grupo de aplicaciones puede contener los paquetes para todas las arquitecturas.
 
-Con un lote de la aplicación, un usuario solo descargará los archivos relevantes, en vez de todos los recursos posibles. Para obtener más información sobre lotes de aplicaciones, consulta [Empaquetado de aplicaciones](../packaging/index.md) y [Empaquetar una aplicación para UWP con Visual Studio](/windows/msix/package/packaging-uwp-apps).
+Con un lote de la aplicación, un usuario solo descargará los archivos relevantes, en vez de todos los recursos posibles. Para obtener más información sobre los grupos de aplicaciones, consulte [empaquetar aplicaciones](../packaging/index.md) y [empaquetar una aplicación para UWP con Visual Studio](/windows/msix/package/packaging-uwp-apps).
 
 
 ## <a name="building-the-app-package-manually"></a>Compilar el paquete de la aplicación manualmente
@@ -67,26 +67,26 @@ Los paquetes de aplicaciones (. msixbundle o. appxbundle) usan un manifiesto dif
 
 Los paquetes de la aplicación deben cumplir con estos requisitos.
 
-| Propiedad del paquete de la aplicación | Requisitos                                                          |
+| Propiedad del paquete de la aplicación | Requisito                                                          |
 |----------------------|----------------------------------------------------------------------|
-| Tamaño del paquete         | . msixbundle o. appxbundle: 25 GB como máximo por lote <br>paquetes. msix o. appx que tienen como destino Windows 10: 25 GB como máximo por paquete<br>paquetes. appx que tienen como destino Windows 8.1: 8 GB como máximo por paquete <br> paquetes. appx destinados a Windows 8: 2 GB como máximo por paquete <br> paquetes. appx que tienen como destino Windows Phone 8,1: 4 GB como máximo por paquete <br> paquetes. xap: 1 GB como máximo por paquete                                                                           |
+| Tamaño de paquete         | . msixbundle o. appxbundle: 25 GB como máximo por lote <br>paquetes. msix o. appx destinados a Windows 10:25 GB como máximo por paquete<br>Paquetes .appx destinados a Windows 8.1: 8 GB como máximo por paquete <br> Paquetes .appx destinados a Windows 8: 2 GB como máximo por paquete <br> Paquetes .appx destinados a Windows Phone 8.1: 4 GB como máximo por paquete <br> Paquetes .xap: 1 GB como máximo por paquete                                                                           |
 | Hash de asignación de bloque     | Algoritmo SHA2-256                                                   |
 
 > [!IMPORTANT]
-> A partir del 31 de octubre de 2018, los productos recién creados no pueden incluir paquetes destinados a Windows 8. x/Windows Phone 8. x o una versión anterior. Para obtener más información, consulte esta [entrada de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
+> Ya no se pueden cargar nuevos paquetes XAP compilados con los SDK de Windows Phone 8. x. Las aplicaciones que ya se encuentran en el almacén con paquetes XAP seguirán funcionando en dispositivos Windows 10 Mobile. Para obtener más información, consulte esta [entrada de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 ## <a name="supported-versions"></a>Versiones compatibles
 
-Para aplicaciones para UWP, todos los paquetes deben dirigirse a una versión de Windows 10 admitida por la Store. Las versiones que admite tu paquete deben indicarse en los atributos **MinVersion** y **MaxVersionTested** del elemento [TargetDeviceFamily](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) del manifiesto de la aplicación.
+En el caso de las aplicaciones UWP, todos los paquetes deben tener como destino una versión de Windows 10 compatible con el almacén. Las versiones que admite el paquete deben indicarse en los atributos **MinVersion** y **MaxVersionTested** del elemento [TargetDeviceFamily](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) del manifiesto de la aplicación.
 
-El rango de versiones actualmente admitido de: 
+Las versiones admitidas actualmente son de: 
 - Mínimo: 10.0.10240.0
 - Máximo: 10.0.17763.1
 
 
 ## <a name="storemanifest-xml-file"></a>Archivo XML de StoreManifest
 
-StoreManifest.xml es un archivo de configuración opcional que se puede incluir en paquetes de la aplicación. Su objetivo es habilitar características como, por ejemplo, declarar tu aplicación como una aplicación para dispositivo de Microsoft Store o declarar los requisitos de los que depende un paquete para que se pueda aplicar a un dispositivo, que no incluye el manifiesto del paquete. Si se usa, StoreManifest. XML se envía con el paquete de la aplicación y debe estar en la carpeta raíz del proyecto principal de la aplicación. Para obtener más información, consulta [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
+StoreManifest.xml es un archivo de configuración opcional que se puede incluir en paquetes de la aplicación. Su finalidad es habilitar características, como la declaración de la aplicación como Microsoft Store aplicación de dispositivo o la declaración de requisitos que un paquete depende de que se aplique a un dispositivo, que el manifiesto del paquete no cubre. Si se usa, StoreManifest.xml se envía con el paquete de la aplicación y debe estar en la carpeta raíz del proyecto principal de la aplicación. Para obtener más información, consulta [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
 
  
 

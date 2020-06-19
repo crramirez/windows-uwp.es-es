@@ -6,19 +6,19 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: Windows 10, UWP, paquetes, carga, carga de paquetes
 ms.localizationpriority: medium
-ms.openlocfilehash: 570ccc1329fd1b2f768ca528b75fe22b982bdaf6
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 5c3c55d351ebd3b956d57c6c7e623e88e7fa88c1
+ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682622"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84945955"
 ---
 # <a name="upload-app-packages"></a>Cargar paquetes de la aplicación
 
 En la página **paquetes** se cargan todos los archivos de paquete (. msix,. msixupload,. msixbundle,. appx,. appxupload y/o. appxbundle) de la aplicación que está enviando. Puede cargar todos los paquetes de la misma aplicación en esta página y, cuando un cliente descarga la aplicación, el almacén proporcionará automáticamente a cada cliente el paquete que mejor se adapte a su dispositivo. Después de cargar los paquetes, verás una tabla que indica [qué paquetes que se ofrecerán a familias específicas de dispositivos Windows 10](#device-family-availability) (y a versiones anteriores del sistema operativo, si procede) ordenados según su clasificación.
 
 > [!IMPORTANT]
-> A partir del 31 de octubre de 2018, los productos recién creados no pueden incluir paquetes destinados a Windows 8. x/Windows Phone 8. x o una versión anterior. Para obtener más información, consulte esta [entrada de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
+> Ya no se pueden cargar nuevos paquetes XAP compilados con los SDK de Windows Phone 8. x. Las aplicaciones que ya se encuentran en el almacén con paquetes XAP seguirán funcionando en dispositivos Windows 10 Mobile. Para obtener más información, consulte esta [entrada de blog](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store).
 
 Consulta [Requisitos del paquete de la aplicación](app-package-requirements.md) para obtener más información sobre lo que incluye un paquete y cómo debe estructurarse. También querrá obtener información sobre [Cómo afectan los números de versión a los paquetes que se entregan a clientes específicos](package-version-numbering.md) y [Cómo administrar paquetes para diversos escenarios](guidance-for-app-package-management.md).
 
@@ -28,7 +28,7 @@ Consulta [Requisitos del paquete de la aplicación](app-package-requirements.md)
 Para cargar paquetes, arrástralos en el campo de carga o haz clic para examinar los archivos. La página **paquetes** le permitirá cargar archivos. msix,. msixupload,. msixbundle,. appx,. appxupload y/o. appxbundle.
 
 > [!IMPORTANT]
-> En Windows 10, se recomienda cargar el archivo. msixupload o. appxupload aquí en lugar de. msix,. appx,. msixbundle o. appxbundle.  Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la Tienda, consulta [Empaquetar una aplicación para UWP con Visual Studio](/windows/msix/package/packaging-uwp-apps).
+> En Windows 10, se recomienda cargar el archivo. msixupload o. appxupload aquí en lugar de. msix,. appx,. msixbundle o. appxbundle.  Para obtener más información sobre cómo empaquetar aplicaciones para UWP para la tienda, consulta [empaquetar una aplicación para UWP con Visual Studio](/windows/msix/package/packaging-uwp-apps).
 
 Si has creado algún [paquete piloto](package-flights.md) para tu aplicación, verás una lista desplegable con la opción para copiar los paquetes de uno de los paquetes piloto. Selecciona el paquete piloto que tiene los paquetes que quieres extraer. A continuación, podrás seleccionar varios o todos los paquetes, para incluirlos en este envío.
 
@@ -37,7 +37,7 @@ Si se detectan errores con un paquete mientras se valida, se mostrará un mensaj
 
 ## <a name="device-family-availability"></a>Disponibilidad de familias de dispositivos
 
-Una vez hayas cargado los paquetes, la sección **Disponibilidad de familias de dispositivos** mostrará una tabla que indica qué paquetes se ofrecerán a familias específicas de dispositivos Windows 10 (y a versiones anteriores del sistema operativo, si procede), ordenados según su clasificación. En esta sección también podrás elegir si quieres o no ofrecer el envío a clientes de familias específicas de dispositivos Windows 10.
+Una vez hayas cargado los paquetes, la sección **Disponibilidad de familias de dispositivos** mostrará una tabla que indica qué paquetes se ofrecerán a familias específicas de dispositivos Windows 10 (y a versiones anteriores del sistema operativo, si procede), ordenados según su clasificación. Esta sección también le permite elegir si quiere o no ofrecer el envío a los clientes en familias específicas de dispositivos Windows 10.
 
 Para obtener más información, consulta [Disponibilidad de familias de dispositivos](device-family-availability.md).
 
@@ -58,7 +58,7 @@ Cuando detectemos paquetes redundantes, proporcionaremos una opción para quitar
 
 ## <a name="gradual-package-rollout"></a>Lanzamiento gradual del paquete
 
-Si el envío es una actualización de una aplicación publicada anteriormente, verás una casilla denominada **Lanzar gradualmente la actualización después de publicar este envío (solo a clientes de Windows 10)** . Esta opción te permitirá seleccionar un porcentaje de clientes a los que enviar los paquetes, y así podrás supervisar sus comentarios y los datos analíticos para asegurarte de que la actualización es correcta antes de realizar una distribución más amplia. Asimismo, puedes incrementar el porcentaje (o detener la actualización) en cualquier momento, sin tener que crear un nuevo envío. 
+Si el envío es una actualización de una aplicación publicada anteriormente, verás una casilla denominada **Lanzar gradualmente la actualización después de publicar este envío (solo a clientes de Windows 10)**. Esta opción te permitirá seleccionar un porcentaje de clientes a los que enviar los paquetes, y así podrás supervisar sus comentarios y los datos analíticos para asegurarte de que la actualización es correcta antes de realizar una distribución más amplia. Asimismo, puedes incrementar el porcentaje (o detener la actualización) en cualquier momento, sin tener que crear un nuevo envío. 
 
 Para obtener más información, consulta [Gradual package rollout (Lanzamiento gradual del paquete)](gradual-package-rollout.md).
 
