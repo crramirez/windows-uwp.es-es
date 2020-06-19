@@ -10,19 +10,19 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 1fb1a971e897bc88d090c589b266542c6de2d1c9
-ms.sourcegitcommit: b432a639fb3d15ebd22d429ccee4dbb03e8550ca
+ms.openlocfilehash: 2c48b4bbfb7fb361b598722d070962db32665042
+ms.sourcegitcommit: d708ac4ec4fac0135dafc0d8c5161ef9fd945ce7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77778526"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069461"
 ---
 # <a name="bluetooth-rfcomm"></a>Bluetooth RFCOMM
 
 **API importantes**
 
 - [**Windows. Devices. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
-- [**Windows. Devices. Bluetooth. RFCOMM**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm)
+- [**Windows.Devices.Bluetooth.Rfcomm**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm)
 
 En este artículo se proporciona información general de Bluetooth RFCOMM en aplicaciones para la Plataforma universal de Windows (UWP), junto con el código de ejemplo sobre cómo enviar o recibir un archivo.
 
@@ -34,13 +34,13 @@ Las API RFCOMM usan el concepto de identificadores de servicio. Aunque un identi
 
 Las aplicaciones pueden realizar operaciones del dispositivo de varios pasos en una tarea en segundo plano para así poder ejecutarse hasta completarse, incluso si la aplicación pasa a segundo plano y se suspende. Esto permite un mantenimiento del dispositivo más fiable, como los cambios en el firmware o la configuración permanente, así como la sincronización de contenidos, sin que el usuario tenga que interrumpir lo que hacía y ver una barra de progreso. Usa la clase [**DeviceServicingTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceServicingTrigger) para el mantenimiento del dispositivo y la clase [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) para la sincronización de contenidos. Ten en cuenta que estas tareas en segundo plano limitan el tiempo que la aplicación puede ejecutarse en segundo plano, y no tienen por objetivo permitir el funcionamiento indefinidamente ni la sincronización infinita.
 
-Para obtener un ejemplo de código completo que detalle la operación de RFCOMM, consulta [**Bluetooth RFCOMM chat sample (Muestra de chat de Bluetooth RFCOMM)** ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat) en Github.  
+Para obtener un ejemplo de código completo que detalle la operación de RFCOMM, consulta [**Bluetooth RFCOMM chat sample (Muestra de chat de Bluetooth RFCOMM)**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat) en Github.  
 
 ## <a name="send-a-file-as-a-client"></a>Enviar un archivo como cliente
 
 Al enviar archivos, el escenario de aplicación básico consiste en conectarse a un dispositivo emparejado según el dispositivo deseado. Esto implica los pasos siguientes:
 
-- Use las funciones **RfcommDeviceService. GetDeviceSelector\*** para ayudar a generar una consulta AQS que se puede usar para enumerar las instancias de dispositivo emparejadas del servicio deseado.
+- Use las funciones **RfcommDeviceService. \* GetDeviceSelector** para ayudar a generar una consulta AQS que se puede usar para enumerar las instancias de dispositivo emparejadas del servicio deseado.
 - Selecciona un dispositivo enumerado, crea una clase [**RfcommDeviceService**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService) y lee los atributos SDP según sea necesario (usando [**established data helpers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) para analizar los datos del atributo).
 - Crea un socket y usa las propiedades [**RfcommDeviceService.ConnectionHostName**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname) y [**RfcommDeviceService.ConnectionServiceName**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename) en el método [**StreamSocket.ConnectAsync**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.connectasync) para realizar el mantenimiento del dispositivo remoto con los parámetros adecuados.
 - Sigue los patrones de flujo de datos establecidos para leer grupos de datos desde el archivo y enviarlos a la propiedad [**StreamSocket.OutputStream**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.outputstream) del socket al dispositivo.
