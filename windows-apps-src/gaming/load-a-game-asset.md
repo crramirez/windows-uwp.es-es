@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, DirectX, carga de recursos
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a779e0d17cdc3f5a11dd720467e3a0572e3c124
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: 56eaebfeb6d644c4c15f14f0613b1e3b1781f637
+ms.sourcegitcommit: 22ed0d4edad5e6bab352e641cf86cf455cf83825
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606314"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133998"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Cargar recursos en tu juego DirectX
 
@@ -28,7 +28,7 @@ Por ejemplo, es probable que las mallas para objetos poligonales en el juego est
 
 -   Biblioteca de modelos de procesamiento paralelo (ppltasks.h)
 
-### <a name="prerequisites"></a>Prerrequisitos
+### <a name="prerequisites"></a>Requisitos previos
 
 -   Comprender Windows Runtime básico
 -   Comprender tareas asincrónicas
@@ -130,7 +130,7 @@ Si tu juego es lo suficientemente simple; carga los recursos con un método como
 
 ¡Pero no quieres que el juego propiamente dicho empiece con cargas asincrónicas sin completar! Crea algún método de señalización de carga completa, como un campo específico, y usa las expresiones lambdas en tus métodos de carga para que se establezca la señal cuando terminen. Comprueba la variable antes de iniciar cualquier componente que use esos recursos cargados.
 
-En este ejemplo, se usan métodos asincrónicos definidos en BasicLoader.cpp para cargar sombreadores, una malla y una textura, cuando se inicia el juego. Tenga en cuenta que establece un campo específico en el objeto Game **,\_m loadingComplete**, cuando finalizan todos los métodos de carga.
+En este ejemplo, se usan métodos asincrónicos definidos en BasicLoader.cpp para cargar sombreadores, una malla y una textura, cuando se inicia el juego. Tenga en cuenta que establece un campo específico en el objeto Game, **m \_ loadingComplete**, cuando finalizan todos los métodos de carga.
 
 ```cpp
 void ResourceLoading::CreateDeviceResources()
@@ -209,8 +209,8 @@ Tomemos los datos de bytes del archivo de la malla. El formato del ejemplo supon
 
 -   Los primeros 32 bits (4 bytes) del flujo de datos contiene el número de vértices (numVertices) de la malla, representado como un valor uint32.
 -   Los siguientes 32 bits (4 bytes) del flujo de datos contiene el número de índices (numIndices) de la malla, representado como un valor uint32.
--   Después, los bits subsiguientes \* (numVertices sizeof (**BasicVertex**)) contienen los datos del vértice.
--   Los últimos bytes \* (numIndices 16) de datos contienen los datos del índice, que se representan como una secuencia de valores UInt16.
+-   Después, los bits subsiguientes (numVertices \* sizeof (**BasicVertex**)) contienen los datos del vértice.
+-   Los últimos \* bytes (numIndices 16) de datos contienen los datos del índice, que se representan como una secuencia de valores UInt16.
 
 Lo importante es que conozcas el diseño del nivel de bits de los datos de la malla que has cargado. También asegúrate de ser coherente con endianness. Todas las plataformas de Windows 8 son little-endian.
 
@@ -239,7 +239,7 @@ task<void> BasicLoader::LoadMeshAsync(
 }
 ```
 
-**CreateMesh** interpreta los datos de bytes cargados desde el archivo y crea un búfer de vértices y un búfer de índice para la malla pasando las listas de vértices e índices, respectivamente, a [**ID3D11Device:: CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) y\_especificando el búfer de vértices\_de enlace D3D11\_o el búfer de\_\_índice\_de D3D11. Este código se usa en **BasicLoader**:
+**CreateMesh** interpreta los datos de bytes cargados desde el archivo y crea un búfer de vértices y un búfer de índice para la malla pasando las listas de vértices e índices, respectivamente, a [**ID3D11Device:: CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) y especificando el búfer de \_ vértices de enlace D3D11 \_ o el búfer de \_ Índice de D3D11 \_ \_ \_ . Este código se usa en **BasicLoader**:
 
 ```cpp
 void BasicLoader::CreateMesh(
@@ -320,14 +320,14 @@ Un archivo DDS es un archivo binario que contiene la siguiente información:
 
 -   Una descripción de los datos del archivo.
 
-    Los datos se describen con una descripción de encabezado mediante el [**encabezado DDS\_**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-header); el formato de píxel se define mediante los píxeles [**DDS\_**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-pixelformat). Tenga en cuenta que el **encabezado\_DDS** y las estructuras de **PIXELFORMAT de DDS\_** REEMPLAZAn las estructuras DDSURFACEDESC2, DDSCAPS2 y DDPIXELFORMAT de DirectDraw 7 desusadas. **El\_encabezado DDS** es el equivalente binario de DDSURFACEDESC2 y DDSCAPS2. **Los\_PIXELFORMAT de DDS** son el equivalente binario de DDPIXELFORMAT.
+    Los datos se describen con una descripción de encabezado mediante el [** \_ encabezado DDS**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-header); el formato de píxel se define mediante los píxeles de [**DDS \_ **](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-pixelformat). Tenga en cuenta que el ** \_ encabezado DDS** y las estructuras de ** \_ PIXELFORMAT de DDS** reemplazan las estructuras DDSURFACEDESC2, DDSCAPS2 y DDPIXELFORMAT de DirectDraw 7 desusadas. **DDS \_ HEADER** es el equivalente binario de DDSURFACEDESC2 y DDSCAPS2. **DDS \_ PIXELFORMAT** es el equivalente binario de DDPIXELFORMAT.
 
     ```cpp
     DWORD               dwMagic;
     DDS_HEADER          header;
     ```
 
-    Si el valor de **dwFlags** en [**DDS\_PIXELFORMAT**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-pixelformat) se establece en DDPF\_FourCC y **dwFourCC** se establece en "contenido DX10", se presentará una estructura de [**\_\_encabezado DDS adicional DXT10**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-header-dxt10) para acomodar las matrices de textura o los formatos de DXGI que no se pueden expresar como un formato de píxel RGB, como los formatos de punto flotante, los formatos sRGB, etc. Cuando la **estructura\_DXT10\_del encabezado DDS** esté presente, toda la descripción de los datos tendrá el siguiente aspecto.
+    Si el valor de **dwFlags** en [**DDS \_ PIXELFORMAT**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-pixelformat) se establece en DDPF \_ FourCC y **dwFourCC** se establece en "contenido DX10", se presentará una estructura de [**encabezado DDS adicional \_ \_ DXT10**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-header-dxt10) para acomodar las matrices de textura o los formatos de DXGI que no se pueden expresar como un formato de píxel RGB, como los formatos de punto flotante, los formatos sRGB, etc. Cuando la **estructura \_ \_ DXT10 del encabezado DDS** esté presente, toda la descripción de los datos tendrá el siguiente aspecto.
 
     ```cpp
     DWORD               dwMagic;
@@ -551,7 +551,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 ```
 
-En este ejemplo, se usa la instancia de **BasicReaderWriter** (**m\_BasicReaderWriter**) para leer en el archivo objeto de sombreador compilado (. CSO) proporcionado como un flujo de bytes. Cuando la tarea termina, la expresión lambda llama a [**ID3D11Device::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader) con los datos de bytes cargados desde el archivo. La devolución de llamada debe establecer una marca que indique que la carga se realizó correctamente y el código debe comprobar esta marca antes de ejecutar el sombreador.
+En este ejemplo, se usa la instancia de **BasicReaderWriter** (**m \_ BasicReaderWriter**) para leer en el archivo objeto de sombreador compilado (. CSO) proporcionado como un flujo de bytes. Cuando la tarea termina, la expresión lambda llama a [**ID3D11Device::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader) con los datos de bytes cargados desde el archivo. La devolución de llamada debe establecer una marca que indique que la carga se realizó correctamente y el código debe comprobar esta marca antes de ejecutar el sombreador.
 
 Los sombreadores de vértices son un poco más complejos. Para un sombreador de vértices, también cargas un diseño de entrada independiente que define los datos de vértices. El siguiente código se usa para cargar asincrónicamente un sombreador de vértices junto con un diseño de entrada de vértices personalizado. Asegúrate de que la información de vértices que cargas desde las mallas pueda representarse en este diseño de entrada de manera correcta.
 
@@ -685,12 +685,11 @@ task<void> BasicLoader::LoadShaderAsync(
         }
     });
 }
-
 ```
 
 En este código, después de leer los datos de bytes para el archivo CSO del sombreador de vértices, creas el sombreador de vértices llamando a [**ID3D11Device::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader). A continuación, creas el diseño de entrada para el sombreador en la misma expresión lambda.
 
-Otros tipos de sombreador, como los sombreadores de casco y geometría, también pueden requerir una configuración específica. Encontrarás el código completo para una variedad de métodos de carga de sombreadores en [Código completo para BasicLoader](complete-code-for-basicloader.md) y en [Muestra de carga de recursos de Direct3D]( https://code.msdn.microsoft.com/windowsapps/Direct3D-Resource-Loading-25406148).
+Otros tipos de sombreador, como los sombreadores de casco y geometría, también pueden requerir una configuración específica. Encontrarás el código completo para una variedad de métodos de carga de sombreadores en [Código completo para BasicLoader](complete-code-for-basicloader.md) y en [Muestra de carga de recursos de Direct3D](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/Direct3D%20resource%20loading%20sample%20(Windows%208)/C%2B%2B).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -698,7 +697,7 @@ Llegados a este punto, deberías comprender y poder crear o modificar métodos p
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestra de carga de recursos de Direct3D]( https://code.msdn.microsoft.com/windowsapps/Direct3D-Resource-Loading-25406148)
+* [Muestra de carga de recursos de Direct3D](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/Direct3D%20resource%20loading%20sample%20(Windows%208)/C%2B%2B)
 * [Código completo para BasicLoader](complete-code-for-basicloader.md)
 * [Código completo para BasicReaderWriter](complete-code-for-basicreaderwriter.md)
 * [Código completo para DDSTextureLoader](complete-code-for-ddstextureloader.md)

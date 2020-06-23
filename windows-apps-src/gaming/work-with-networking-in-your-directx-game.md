@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, redes, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: d2d1487c708b8618feec5cb735fb8af260608e00
-ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
+ms.openlocfilehash: 005dc30bc71d6d9087a3cc15880ffa3936d0a7f7
+ms.sourcegitcommit: 22ed0d4edad5e6bab352e641cf86cf455cf83825
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83280275"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133968"
 ---
 # <a name="networking-for-games"></a>Conexión en red de juegos
 
@@ -389,6 +389,6 @@ using namespace Windows::Web::Http;
 **Ejemplos**
 
 * [Muestra de DatagramSocket](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/ControlChannelTrigger%20StreamSocket%20sample%20(Windows%208))
-* [Ejemplo de HttpClient]( https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
+* [Ejemplo de HttpClient](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/HttpClient%20sample)
 * [Muestra de proximidad](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/Proximity%20sample%20(Windows%208))
 * [Muestra StreamSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
