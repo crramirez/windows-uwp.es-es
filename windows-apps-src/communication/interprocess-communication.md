@@ -4,12 +4,12 @@ description: En este tema se explican varias maneras de realizar la comunicació
 ms.date: 03/23/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.openlocfilehash: 2407a54439157be16b186b48759746238962f8b4
-ms.sourcegitcommit: 2d375e1c34473158134475af401532cc55fc50f4
+ms.openlocfilehash: 5db029db3ffb538802f39aa616c96dbe75601eac
+ms.sourcegitcommit: bf7d4f6739aeeaac735aae3dd0dcbda63a8c5e69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888513"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256385"
 ---
 # <a name="interprocess-communication-ipc"></a>Comunicación entre procesos (IPC)
 
@@ -29,11 +29,11 @@ Los servicios de aplicaciones se utilizan mejor para compartir pequeñas cantida
 
 Las aplicaciones empaquetadas con la funcionalidad [runFullTrust](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) pueden registrar servidores com fuera de proceso para IPC mediante el [manifiesto del paquete](/uwp/schemas/appxpackage/uapmanifestschema/element-com-extension). Esto se conoce como [com empaquetado](https://blogs.windows.com/windowsdeveloper/2017/04/13/com-server-ole-document-support-desktop-bridge/).
 
-## <a name="filesystem"></a>Systems
+## <a name="filesystem"></a>Sistema de archivos
 
 ### <a name="broadfilesystemaccess"></a>BroadFileSystemAccess
 
-Las aplicaciones empaquetadas pueden realizar IPC con el sistema de archivos amplio mediante la declaración de la capacidad restringida de [broadFileSystemAccess](/windows/uwp/files/file-access-permissions#accessing-additional-locations) .
+Las aplicaciones empaquetadas pueden realizar IPC con el sistema de archivos amplio mediante la declaración de la capacidad restringida de [broadFileSystemAccess](/windows/uwp/files/file-access-permissions#accessing-additional-locations) . Esta funcionalidad concede a las API de [Windows. Storage](/uwp/api/Windows.Storage) y a las API de [xxxFromApp](/previous-versions/windows/desktop/legacy/mt846585(v=vs.85)) Win32 acceso a un sistema de archivos amplio.
 
 De forma predeterminada, IPC a través del sistema de archivos para aplicaciones empaquetadas está restringido a los otros mecanismos descritos en esta sección.
 
@@ -67,31 +67,31 @@ En el caso de los escenarios en los que las restricciones de paquete son una car
 
 Los archivos se pueden compartir pasando tokens de [SharedStorageAccessManager](/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) a la aplicación a través de la ValueSet.
 
-## <a name="loopback"></a>Loopback
+## <a name="loopback"></a>Bucle invertido
 
 Bucle invertido es el proceso de comunicación con un servidor de red que escucha en localhost (la dirección de bucle invertido).
 
 Para mantener la seguridad y el aislamiento de red, las conexiones de bucle invertido para IPC están bloqueadas de forma predeterminada para las aplicaciones empaquetadas. Puede habilitar las conexiones de bucle invertido entre la aplicación empaquetada de confianza mediante las [funcionalidades](/previous-versions/windows/apps/hh770532(v=win.10)) y [las propiedades del manifiesto](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules).
 
-* Todas las aplicaciones empaquetadas que participan en conexiones de bucle invertido deberán declarar la funcionalidad `privateNetworkClientServer` en sus [manifiestos de paquete](/uwp/schemas/appxpackage/uapmanifestschema/element-capability).
+* Todas las aplicaciones empaquetadas que participan en conexiones de bucle invertido deberán declarar la `privateNetworkClientServer` funcionalidad en sus [manifiestos de paquete](/uwp/schemas/appxpackage/uapmanifestschema/element-capability).
 * Dos aplicaciones empaquetadas pueden comunicarse a través de bucle invertido declarando [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules) dentro de sus manifiestos de paquete.
     * Cada aplicación debe mostrar la otra en su [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules). El cliente declara una regla de "salida" para el servidor y el servidor declara las reglas "en" para sus clientes compatibles.
 
 > [!NOTE]
 > El nombre de familia de paquete necesario para identificar una aplicación en estas reglas puede encontrarse en el editor de manifiestos de paquete de Visual Studio durante el tiempo de desarrollo, a través del [centro de Partners](/windows/uwp/publish/view-app-identity-details) para aplicaciones publicadas a través del Microsoft Store o mediante el comando de PowerShell [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) para las aplicaciones que ya están instaladas.
 
-Las aplicaciones y los servicios sin empaquetar no tienen una identidad de paquete, por lo que no se pueden declarar en [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules). Puede configurar una aplicación empaquetada para que se conecte a través de bucle invertido con aplicaciones y servicios sin empaquetar a través de [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)), pero esto solo es posible para escenarios de transferencia de prueba o depuración en los que tiene acceso local a la máquina y tiene privilegios de administrador.
+Las aplicaciones y los servicios sin empaquetar no tienen una identidad de paquete, por lo que no se pueden declarar en [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules). Puede configurar una aplicación empaquetada para que se conecte a través de bucle invertido con aplicaciones y servicios sin empaquetar a través de [CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)), pero esto solo es posible para escenarios de transferencia de prueba o depuración en los que tiene acceso local a la máquina y tiene privilegios de administrador.
 
-* Todas las aplicaciones empaquetadas que participan en conexiones de bucle invertido deben declarar la funcionalidad `privateNetworkClientServer` en sus [manifiestos de paquete](/uwp/schemas/appxpackage/uapmanifestschema/element-capability).
+* Todas las aplicaciones empaquetadas que participan en conexiones de bucle invertido deben declarar la `privateNetworkClientServer` funcionalidad en sus [manifiestos de paquete](/uwp/schemas/appxpackage/uapmanifestschema/element-capability).
 * Si una aplicación empaquetada se conecta a una aplicación o un servicio no empaquetado, ejecute `CheckNetIsolation.exe LoopbackExempt -a -n=<PACKAGEFAMILYNAME>` para agregar una exención de bucle invertido para la aplicación empaquetada.
 * Si una aplicación o un servicio sin empaquetar se está conectando a una aplicación empaquetada, ejecute `CheckNetIsolation.exe LoopbackExempt -is -n=<PACKAGEFAMILYNAME>` para permitir que la aplicación empaquetada reciba conexiones de bucle invertido entrantes.
-    * [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)) se debe ejecutar continuamente mientras la aplicación empaquetada escucha las conexiones.
-    * La marca de `-is` se presentó en Windows 10, versión 1607 (10,0; Compilación 14393).
+    * [CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)) se debe ejecutar continuamente mientras la aplicación empaquetada esté escuchando conexiones.
+    * La `-is` marca se presentó en Windows 10, versión 1607 (10,0; Compilación 14393).
 
 > [!NOTE]
-> El nombre de familia de paquete necesario para la marca de `-n` de [CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)) puede encontrarse a través del editor de manifiestos de paquete de Visual Studio durante el tiempo de desarrollo, a través del [centro de Partners](/windows/uwp/publish/view-app-identity-details) para aplicaciones publicadas a través del Microsoft Store, o mediante el comando de PowerShell [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) para aplicaciones que ya están instaladas.
+> El nombre de familia de paquete necesario para la `-n` marca de [CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)) se puede encontrar a través del editor de manifiestos de paquete de Visual Studio durante el tiempo de desarrollo, a través del [centro de Partners](/windows/uwp/publish/view-app-identity-details) para las aplicaciones publicadas a través del Microsoft Store, o mediante el comando de PowerShell [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) para las aplicaciones que ya están instaladas.
 
-[CheckNetIsolation. exe](/previous-versions/windows/apps/hh780593(v=win.10)) también es útil para [depurar problemas de aislamiento de red](/previous-versions/windows/apps/hh780593(v=win.10)#debug-network-isolation-issues).
+[CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)) también es útil para [depurar problemas de aislamiento de red](/previous-versions/windows/apps/hh780593(v=win.10)#debug-network-isolation-issues).
 
 ## <a name="pipes"></a>Canalizaciones
 
@@ -101,7 +101,7 @@ Las [canalizaciones anónimas](/windows/win32/ipc/anonymous-pipes) y con [nombre
 
 * De forma predeterminada, las canalizaciones con nombre en aplicaciones empaquetadas solo se admiten entre procesos dentro del mismo paquete, a menos que un proceso sea de plena confianza.
 * Las canalizaciones con nombre pueden compartirse entre paquetes siguiendo las instrucciones para [compartir objetos con nombre](/windows/uwp/communication/sharing-named-objects).
-* Las canalizaciones con nombre en aplicaciones empaquetadas deben utilizar la sintaxis `\\.\pipe\LOCAL\` para el nombre de la canalización.
+* Las canalizaciones con nombre en aplicaciones empaquetadas deben utilizar la sintaxis del `\\.\pipe\LOCAL\` nombre de la canalización.
 
 ## <a name="registry"></a>Registro
 
