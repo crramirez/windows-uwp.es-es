@@ -3,16 +3,16 @@ description: Obtén las herramientas y las descargas más recientes para los dis
 keywords: diseño de aplicaciones para UWP, IU, interfaz de usuario, diseños de interfaz de usuario, descargas, herramientas de UWP, diseño de aplicaciones de Windows, herramientas de interfaz de usuario de windows
 title: Kits de herramientas de diseño y ejemplos de aplicaciones de Windows
 ms.date: 03/23/2020
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2528ae4dabf072872ce765eb7bfd696c2b29d3f7
-ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
+ms.openlocfilehash: 8336da43767931c439ea79fd9e3824f1a4cc3893
+ms.sourcegitcommit: 47899c30a39087bca1f058a4395cf58daacf5ae9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746785"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345489"
 ---
 # <a name="design-toolkits-and-samples-for-windows-apps"></a>Kits de herramientas de diseño y ejemplos de aplicaciones de Windows
 
