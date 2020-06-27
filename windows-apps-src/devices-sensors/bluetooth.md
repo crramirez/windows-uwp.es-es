@@ -2,25 +2,30 @@
 ms.assetid: 404783BA-8859-4BFB-86E3-3DD2042E66F5
 title: Bluetooth
 description: En esta sección se incluyen artículos acerca de cómo integrar Bluetooth en aplicaciones para la Plataforma universal de Windows (UWP) y cómo usar anuncios de bajo consumo (LE), RFCOMM y GATT.
-ms.date: 02/08/2017
+ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d6b5c95b59c1542df743ecc1f53bf3c3fc90aa1b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: aad368adf500c5968bf6374a5855a7e0dab0a044
+ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57653280"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469570"
 ---
 # <a name="bluetooth"></a>Bluetooth
-En esta sección se incluyen artículos sobre cómo integrar Bluetooth en aplicaciones para la Plataforma universal de Windows (UWP). Hay dos tecnologías Bluetooth diferentes que puedes implementar en tu aplicación.
+Esta sección contiene artículos sobre cómo integrar Bluetooth en aplicaciones Plataforma universal de Windows (UWP). Hay dos tecnologías Bluetooth diferentes que puede elegir implementar en la aplicación.
 
-## <a name="classic-bluetooth-rfcomm"></a>Classic Bluetooth (RFCOMM)
-Antes de Bluetooth LE, los dispositivos usaban este protocolo con frecuencia para comunicarse mediante Bluetooth. Este protocolo es simple y de utilidad para la comunicación entre dispositivos sin necesidad de ahorro de energía. Para más información sobre este protocolo, con ejemplos de código, consulta el tema [Bluetooth RFCOMM](send-or-receive-files-with-rfcomm.md).
+> [!Important]
+> Debe declarar la funcionalidad "Bluetooth" en *Package. appxmanifest*.
+>
+> `<Capabilities> <DeviceCapability Name="bluetooth" /> </Capabilities>`
 
-## <a name="bluetooth-low-energy-le"></a>Bluetooth Low-Energy (LE)
-Bluetooth Low Energy (LE) es una especificación en la que se definen los protocolos para la detección y comunicación entre dispositivos que tienen un requisito del uso de ahorro de energía. Para más información, con ejemplos de código, consulta el tema [Bluetooth Low Energy](bluetooth-low-energy-overview.md).
+## <a name="classic-bluetooth-rfcomm"></a>Bluetooth clásico (RFCOMM)
+Antes de Bluetooth LE, los dispositivos usaban normalmente este protocolo para comunicarse con Bluetooth. Este protocolo es sencillo y útil para la comunicación de dispositivo a dispositivo sin necesidad de ahorro energético. Para obtener más información sobre este protocolo, incluidos los ejemplos de código, vea el tema sobre [Bluetooth RFCOMM](send-or-receive-files-with-rfcomm.md) .
 
-## <a name="see-also"></a>Consulta también
-- [P+F del desarrollador de Bluetooth](bluetooth-dev-faq.md)
+## <a name="bluetooth-low-energy-le"></a>Bluetooth de baja energía (LE)
+Bluetooth de baja energía (LE) es una especificación que define los protocolos para la detección y la comunicación entre los dispositivos que tienen un requisito de uso de energía eficaz. Para obtener más información, incluidos los ejemplos de código, consulte el tema [Bluetooth de baja energía](bluetooth-low-energy-overview.md) .
+
+## <a name="see-also"></a>Consulte también
+- [Preguntas más frecuentes de los desarrolladores de Bluetooth](bluetooth-dev-faq.md)

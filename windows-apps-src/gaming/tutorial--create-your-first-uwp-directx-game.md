@@ -1,65 +1,68 @@
 ---
-title: Crear un juego sencillo para la Plataforma universal de Windows (UWP) con DirectX
-description: En este conjunto de tutoriales, aprenderás a crear un juego básico para la Plataforma universal de Windows (UWP) con DirectX y C++.
+title: Creación de un juego de DirectX Plataforma universal de Windows (UWP)
+description: En este conjunto de tutoriales, aprenderá a usar DirectX y [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/) para crear el juego de ejemplo básico plataforma universal de Windows (UWP) denominado **Simple3DGameDX**.
 ms.assetid: 9edc5868-38cf-58cc-1fb3-8fb85a7ab2c9
-keywords: Ejemplo de juego DirectX, ejemplo de juego, plataforma universal de Windows (UWP), juego Direct3D 11
-ms.date: 12/01/2017
+keywords: Juego de ejemplo de DirectX, juego de ejemplo, Plataforma universal de Windows (UWP), juego Direct3D 11
+ms.date: 06/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c2ee2795410c083a6dd460a8537115dc8d20de31
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2e3007cd79546cba8961000cb2aae44b0b0536fe
+ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367707"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409574"
 ---
 # <a name="create-a-simple-universal-windows-platform-uwp-game-with-directx"></a>Crear un juego de Plataforma universal de Windows (UWP) simple con DirectX
 
-En este conjunto de tutoriales, aprenderás a crear un juego básico para la Plataforma universal de Windows (UWP) con DirectX y C++. Se tratan las partes principales de un juego, incluidos los procesos para cargar activos, como imágenes y mallas, cómo crear un bucle de juego principal, implementar una canalización de representación simple y agregar sonido y controles.
+En este conjunto de tutoriales, aprenderá a usar DirectX y [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/) para crear el juego de ejemplo básico plataforma universal de Windows (UWP) denominado **Simple3DGameDX**. El juego tiene lugar en una sencilla Galería de Disparos 3D de primera persona.
 
-Te enseñaremos las técnicas y consideraciones para desarrollar juegos de UWP. No proporcionamos un juego completo de principio a fin, sino que nos centramos en conceptos clave del desarrollo de juegos DirectX de UWP y tenemos en cuenta consideraciones específicas de Windows Runtime en relación con esos conceptos.
+> [!NOTE]
+> El vínculo desde el que puede descargar el juego de ejemplo **Simple3DGameDX** es un [juego de ejemplo de Direct3D](/samples/microsoft/windows-universal-samples/simple3dgamedx/). El código fuente de C++/WinRT se encuentra en la carpeta denominada `cppwinrt` . Para obtener información sobre otras aplicaciones de ejemplo de UWP, consulte [obtener ejemplos de aplicaciones para UWP](/windows/uwp/get-started/get-uwp-app-samples).
+
+Estos tutoriales cubren todas las partes principales de un juego, incluidos los procesos de carga de recursos como artes y mallas, la creación de un bucle principal del juego, la implementación de una canalización de representación simple y la adición de sonido y controles.
+
+También verá las técnicas y las consideraciones sobre el desarrollo de juegos de UWP. Nos centraremos en los conceptos clave de desarrollo de juegos de DirectX de UWP y llamaremos a las consideraciones específicas del tiempo de ejecución de Windows en relación con estos conceptos.
 
 ## <a name="objective"></a>Objetivo
 
-Usar los conceptos y componentes básicos de un juego DirectX de UWP y familiarizarse con el diseño de juegos de UWP con DirectX.
+Para obtener información sobre los conceptos básicos y los componentes de un juego DirectX de UWP, y para familiarizarse con el diseño de juegos UWP con DirectX.
 
-## <a name="what-you-need-to-know-before-starting"></a>Lo que debes saber antes de empezar
+## <a name="what-you-need-to-know"></a>Aspectos que debe saber
 
+Para este tutorial, debe estar familiarizado con estos temas.
 
-Antes de empezar este tutorial, necesitas estar familiarizado con estos temas.
+- [/WinRT de C++](/windows/uwp/cpp-and-winrt-apis/). C++/WinRT es una proyección moderna estándar de lenguaje C++ 17 para API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivos de encabezado y diseñada para proporcionarle acceso de primera clase a las API modernas de Windows.
+- Álgebra lineal básica y conceptos de física newtoniana.
+- Terminología básica de programación de gráficos.
+- Conceptos básicos de programación en Windows.
+- Conocimiento básico de las API [Direct2D](/windows/desktop/Direct2D/direct2d-portal) y [Direct3D 11](/windows/desktop/direct3d11/how-to-use-direct3d-11).
 
--   Microsoft C++ con extensiones de idioma para Windows Runtime (C++/CX). Se trata de una actualización de Microsoft C++ que incorpora el recuento automático de referencias y es el lenguaje de desarrollo de juegos de UWP con DirectX 11.1 o versiones posteriores.
--   Álgebra lineal básica y conceptos de física newtoniana.
--   Terminología básica de programación de gráficos.
--   Conceptos básicos de programación en Windows.
--   Conocimiento básico de las API [Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) y [Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/how-to-use-direct3d-11).
+##  <a name="direct3d-uwp-shooting-gallery-sample"></a>Ejemplo de galería de disparos de UWP de Direct3D
 
-##  <a name="direct3d-uwp-shooting-game-sample"></a>Juego de disparos de ejemplo Direct3D (UWP)
+El juego de ejemplo **Simple3DGameDX** implementa una sencilla Galería de Disparos 3D de primera persona, donde el jugador activa las bolas en los objetivos móviles. Acertar a cada objetivo concede un determinado número de puntos, y el jugador puede avanzar a través de 6 niveles de dificultad creciente. Al final de los niveles, se cuentan los puntos y el jugador obtiene una puntuación final.
 
+En el ejemplo se muestran estos conceptos de juegos.
 
-Esta muestra implementa una sencilla galería de disparos en primera persona en la que el jugador dispara bolas a objetivos en movimiento. Acertar a cada objetivo concede un determinado número de puntos, y el jugador puede avanzar a través de 6 niveles de dificultad creciente. Al final de los niveles, se cuentan los puntos y el jugador obtiene una puntuación final.
+- Interoperación entre DirectX 11.1 y Windows Runtime
+- Una cámara y perspectiva en 3D en primera persona
+- Efectos 3D estereoscópicos
+- Detección de colisiones entre objetos en 3D
+- Controlar la entrada del reproductor para los controles del mouse, el toque y la controladora Xbox
+- Mezcla y reproducción de audio
+- Estado básico de un juego: equipo
 
-La muestra hace una demostración de los siguientes conceptos de juego:
+![el juego de ejemplo en acción](images/simple-dx-game-overview.png)
 
--   Interoperación entre DirectX 11.1 y Windows Runtime
--   Una cámara y perspectiva en 3D en primera persona
--   Efectos 3D estereoscópicos
--   Detección de colisiones entre objetos en 3D
--   Control de la entrada del jugador desde controles de mouse, gestos táctiles y mando de Xbox
--   Mezcla y reproducción de audio
--   Máquina de estado básica del juego
-
-![muestra de juego en acción](images/simple-dx-game-overview.png)
-
-| Tema | Descripción |
+|Tema|Descripción|
 |-------|-------------|
-|[Configurar el proyecto de juego](tutorial--setting-up-the-games-infrastructure.md) | El primer paso para ensamblar el juego es configurar un proyecto en Microsoft Visual Studio de tal forma que se reduzca al mínimo la cantidad de trabajo necesaria en la infraestructura de código. Puedes ahorrarte mucho tiempo y complicaciones si usas la plantilla adecuada y configuras el proyecto específicamente para desarrollar un juego. Vamos a guiarte por los pasos de configuración de un proyecto de juego sencillo. |
-| [Defina el marco de la aplicación para UWP del juego](tutorial--building-the-games-uwp-app-framework.md) | Crea un marco que permita que el objeto del juego DirectX de UWP interactúe con Windows. Esto incluye las propiedades de Windows Runtime como suspender o reanudar el control de eventos, el foco de ventanas y el acoplamiento.  |
-| [Administración de flujo de juego](tutorial-game-flow-management.md) | Define la máquina de estado de alto nivel para habilitar al jugador y la interacción del sistema. Obtén información sobre cómo interactúa la interfaz de usuario con la máquina de estado del juego general y sobre cómo crear controladores de eventos para juegos UWP. |
-| [Definir el objeto principal del juego](tutorial--defining-the-main-game-loop.md) | Define cómo se juega creando reglas. |
-| [Marco de representación lo hago?: Introducción a la representación](tutorial--assembling-the-rendering-pipeline.md) | Ensambla un marco de representación para mostrar gráficos. Esta sección se divide en dos partes. Introducción a la representación explica cómo presentar los objetos de escena para mostrarlos en pantalla. |
-| [Marco de representación II: Representación de juegos](tutorial-game-rendering.md) | En la segunda parte del tema de la representación, aprenderás a preparar los datos necesarios antes de la representación. |
-| [Agregar una interfaz de usuario](tutorial--adding-a-user-interface.md) | Agregar sencillas opciones de menú y componentes de la pantalla de visualización frontal, proporcionando comentarios al jugador. |
-| [Agregar controles](tutorial--adding-controls.md) | Agregar controles de movimiento y vista en el juego &mdash; controles táctiles básicos, de mouse y de dispositivos de juego. |
-| [Agregar sonido](tutorial--adding-sound.md) | Aprende a crear los sonidos de juego usando API [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-introduction). |
-| [Ampliar el ejemplo de juego](tutorial-resources.md) | Recursos para ampliar tu conocimiento del desarrollo de juegos DirectX, incluyendo el uso de XAML para crear superposiciones. |
+|[Configurar el proyecto de juego](tutorial--setting-up-the-games-infrastructure.md)|El primer paso para desarrollar el juego consiste en configurar un proyecto en Microsoft Visual Studio. Después de configurar un proyecto específicamente para el desarrollo de juegos, puede volver a usarlo como un tipo de plantilla.|
+|[Definir el marco de la aplicación para UWP del juego](tutorial--building-the-games-uwp-app-framework.md)|El primer paso para codificar un juego de Plataforma universal de Windows (UWP) es crear el marco de trabajo que permite que el objeto de aplicación interactúe con Windows.|
+|[Administración de flujo de juegos](tutorial-game-flow-management.md)|Defina el equipo de estado de alto nivel para habilitar la interacción del reproductor y del sistema. Obtenga información sobre cómo interactúa la interfaz de usuario con el equipo de estado general del juego y cómo crear controladores de eventos para juegos UWP.|
+|[Definir el objeto principal del juego](tutorial--defining-the-main-game-loop.md)|Ahora, veremos los detalles del objeto principal del juego de ejemplo y cómo las reglas que implementa se traducen en interacciones con el mundo de juegos.|
+|[Marco de representación I: Introducción a la representación](tutorial--assembling-the-rendering-pipeline.md)|Obtenga información sobre cómo desarrollar la canalización de representación para mostrar los gráficos. Introducción a la representación.|
+|[Plataforma de representación II: representación de juego](tutorial-game-rendering.md)|Obtenga información sobre cómo ensamblar la canalización de representación para mostrar los gráficos. Reproducción de juegos, configurar y preparar datos.|
+|[Agregar una interfaz de usuario](tutorial--adding-a-user-interface.md)|Obtenga información acerca de cómo agregar una superposición de interfaz de usuario 2D a un juego de DirectX UWP.|
+|[Agregar controles](tutorial--adding-controls.md)|Ahora, echemos un vistazo a cómo el juego de ejemplo implementa los controles de movimiento y desplazamiento en un juego 3D, y cómo desarrollar controles táctiles básicos, del mouse y del controlador de juegos.|
+|[Agregar sonido](tutorial--adding-sound.md)|Desarrolle un motor de sonido sencillo con las API de XAudio2 para reproducir música y efectos sonoros de juegos.|
+|[Extender el juego de ejemplo](tutorial-resources.md)|Obtenga información sobre cómo implementar una superposición de XAML para un juego DirectX de UWP.|
