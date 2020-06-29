@@ -85,7 +85,7 @@
               href: ../gaming/how-to-suspend-an-app-directx-and-cpp.md
             - name: Reanudar una aplicación
               href: ../gaming/how-to-resume-an-app-directx-and-cpp.md
-    - name: Muestras
+    - name: Ejemplos
       href: ../gaming/directx-samples.md
       items:
         - name: Juego sencillo para UWP
@@ -93,7 +93,7 @@
           items:
             - name: Configurar el proyecto
               href: ../gaming/tutorial--setting-up-the-games-infrastructure.md
-            - name: Marco de UWP
+            - name: Marco de la aplicación para UWP
               href: ../gaming/tutorial--building-the-games-uwp-app-framework.md
             - name: Administración de flujo de juegos
               href: ../gaming/tutorial-game-flow-management.md
@@ -557,7 +557,7 @@
       href: ../xbox-apps/devkit-deactivation.md
     - name: Configuración del entorno de desarrollo
       href: ../xbox-apps/development-environment-setup.md
-    - name: Muestras
+    - name: Ejemplos
       href: ../xbox-apps/samples.md
     - name: Problemas conocidos
       href: ../xbox-apps/known-issues.md
