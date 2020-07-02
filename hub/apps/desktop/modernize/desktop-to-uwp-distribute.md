@@ -8,12 +8,12 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 14ad6707b7203dddd9aa7be186e76da677bbd675
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 7eb57e8cea83a4d45087be4c4685ada8d108fa7a
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75302709"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334494"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>Distribución de la aplicación de escritorio empaquetada
 
@@ -35,7 +35,7 @@ No tienes que firmar la aplicación antes de enviarla a Store.
 >[!IMPORTANT]
 > Si tienes previsto publicar la aplicación en Microsoft Store, debes asegurarte de que funciona correctamente en dispositivos que ejecutan Windows 10 S. Este es un requisito de Store. Consulta [Probar la aplicación de Windows en Windows 10 S](/windows/msix/desktop/desktop-to-uwp-test-windows-s).
 
-<a id="side-load" />
+<a id="side-load"></a>
 
 ## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Distribución de la aplicación sin enviarla a Microsoft Store
 
@@ -58,7 +58,7 @@ Para firmar la aplicación con un certificado, consulta [Firmar un paquete de la
 
 Para transferir localmente la aplicación a otros dispositivos, consulta [Transferir localmente aplicaciones de LOB en Windows 10](/windows/application-management/sideload-apps-in-windows-10).
 
-<a id="transition-users" />
+<a id="transition-users"></a>
 
 ## <a name="transition-users-to-your-packaged-app"></a>Traslado de los usuarios a la aplicación empaquetada
 
@@ -126,7 +126,7 @@ Para ver el contexto completo de este fragmento de código, consulta el archivo 
 
 ```csharp
 private void RemoveDesktopApp()
-{              
+{
     //Typically, you can find your uninstall string at this location.
     String uninstallString = (String)Microsoft.Win32.Registry.GetValue
         (@"HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion" +

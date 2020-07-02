@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 0b54b04f2f36c2661de8baf58d0da1aec75ae590
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5d18e78047b26e080041b15d12d94f8ef5d340b2
+ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79210151"
+ms.lasthandoff: 06/13/2020
+ms.locfileid: "84756561"
 ---
 # <a name="data-binding-in-depth"></a>Enlace de datos en profundidad
 
@@ -620,7 +620,7 @@ La técnica de enlace de eventos es similar a implementar y consumir comandos (u
 
 ## <a name="binding-to-a-collection-of-folders-or-files"></a>Enlace a una colección de carpetas o archivos
 
-Para recuperar datos de archivos y carpetas, puedes usar las API en el espacio de nombres [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage). No obstante, los distintos métodos **GetFilesAsync**, **GetFoldersAsync** y **GetItemsAsync** no devuelven valores adecuados para enlaces a controles de lista. En cambio, debes enlazar a los valores devueltos de los métodos [**GetVirtualizedFilesVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizedfilesvector), [**GetVirtualizedFoldersVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizedfoldersvector) y [**GetVirtualizedItemsVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizeditemsvector) de la clase [**FileInformationFactory**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess.FileInformationFactory). En el siguiente ejemplo de código de la [muestra de StorageDataSource y GetVirtualizedFilesVector](https://code.msdn.microsoft.com/windowsapps/Data-source-adapter-sample-3d32e535) encontrarás el patrón de uso más común. No olvides que declarar el manifiesto **picturesLibrary** del paquete de funcionalidad de la aplicación y confirmar que hay imágenes en la carpeta de la biblioteca de imágenes.
+Para recuperar datos de archivos y carpetas, puedes usar las API en el espacio de nombres [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage). No obstante, los distintos métodos **GetFilesAsync**, **GetFoldersAsync** y **GetItemsAsync** no devuelven valores adecuados para enlaces a controles de lista. En cambio, debes enlazar a los valores devueltos de los métodos [**GetVirtualizedFilesVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizedfilesvector), [**GetVirtualizedFoldersVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizedfoldersvector) y [**GetVirtualizedItemsVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizeditemsvector) de la clase [**FileInformationFactory**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess.FileInformationFactory). En el siguiente ejemplo de código de la [muestra de StorageDataSource y GetVirtualizedFilesVector](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208.1%20Store%20app%20samples/99866-Windows%208.1%20Store%20app%20samples/StorageDataSource%20and%20GetVirtualizedFilesVector%20sample) encontrarás el patrón de uso más común. No olvides que declarar el manifiesto **picturesLibrary** del paquete de funcionalidad de la aplicación y confirmar que hay imágenes en la carpeta de la biblioteca de imágenes.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)

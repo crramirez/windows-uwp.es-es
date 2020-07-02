@@ -4,12 +4,12 @@ description: Cómo instalar la biblioteca de interfaz de usuario de Windows.
 ms.topic: reference
 ms.date: 05/08/2020
 keywords: windows 10, uwp, sdk del kit de herramientas
-ms.openlocfilehash: 585475df4138c6a5d4d8b885582137c972a64287
-ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
+ms.openlocfilehash: d96efb2f3de3084d74e06e70ff2811a944604f56
+ms.sourcegitcommit: 47899c30a39087bca1f058a4395cf58daacf5ae9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83775870"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345479"
 ---
 # <a name="getting-started-with-the-windows-ui-library"></a>Introducción a la biblioteca de interfaz de usuario de Windows
 
@@ -71,7 +71,7 @@ De manera opcional, puede activar "Incluir versión preliminar" para ver las ver
     * Agregue una referencia en la parte superior de su página XAML.
 
         ```xaml
-        xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+        xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
         ```
 
     * En su código (si quiere usar los nombres de tipos sin calificarlos), puede agregar una directiva using.

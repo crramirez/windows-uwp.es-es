@@ -1,17 +1,15 @@
 ---
 title: Comando validate de winget
 description: Valida un archivo de manifiesto para enviar software al Repositorio de manifiestos de paquete de la comunidad Microsoft en GitHub.
-author: KevinLaMS
-ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a5772e144a4226be9fbb4a4949aaac1e3d4408e6
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: ec1f15ef9086c1083430c9bbe55ea52827ae4bfb
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83824936"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334466"
 ---
 # <a name="validate-command-winget"></a>Comando validate (winget)
 
