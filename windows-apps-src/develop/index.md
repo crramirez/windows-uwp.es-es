@@ -5,12 +5,12 @@ keywords: uwp app development threading async platform overview portal develop d
 ms.date: 03/29/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f969c1c9ea5bb436ebad8d5e0410b6bf553885c0
-ms.sourcegitcommit: d1eba7cf79cd2885b5bf8f5501bc44a569ab9864
+ms.openlocfilehash: 86fa9fb7f2cea7f190640b02fdcf219c3376115d
+ms.sourcegitcommit: 6cdba316bdbd85a2429259ebfb59ff94440e234a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84172607"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882848"
 ---
 # <a name="develop-uwp-apps"></a>Desarrollar aplicaciones para UWP
 
@@ -41,7 +41,7 @@ Artículos sobre procedimientos y código para crear aplicaciones para UWP en Wi
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                 
-                            <img src="https://docs.microsoft.com//media/hubs/windows/win_developer-uwp.svg" alt=" "/>
+                            <img src="https://docs.microsoft.com//media/hubs/windows/win_developer-uwp.svg" alt="UWP overview"/>
                         </div>
                     </div>
                     <div class="cardText">
@@ -60,7 +60,7 @@ Artículos sobre procedimientos y código para crear aplicaciones para UWP en Wi
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                
-                            <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt=" " />
+                            <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt="Porting guide" />
                         </div>
                     </div>                
                     <div class="cardText">
