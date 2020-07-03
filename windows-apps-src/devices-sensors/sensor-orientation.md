@@ -6,20 +6,20 @@ ms.date: 05/24/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bfd84cd2f2255138b738ecb6dd7f6dab824d7ec4
-ms.sourcegitcommit: d1ef530ef4dfa34db7bc429ab5a0c19fc405885f
+ms.openlocfilehash: 4659aaba330d3b41451e91e450ff601e3fcf5407
+ms.sourcegitcommit: 42a2d9e47f682ba42d91fed587f4d5924bde9c9a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71247448"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85840769"
 ---
 # <a name="sensor-orientation"></a>Orientación del sensor
 
-Los datos de sensor procedentes de las clases [**Accelerometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer), [**Gyrometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer), [**Compass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Compass), [**Inclinometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer) y [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) se definen por medio de sus ejes de referencia. Estos ejes se definen a su vez mediante el marco de referencia del dispositivo y, por tanto, giran con el dispositivo cuando el usuario lo voltea. Si tu aplicación admite el giro automático y cambia su orientación para amoldarse al dispositivo cuando el usuario lo gire, deberás ajustar los datos de sensor para el giro antes de usarlos.
+Los datos de sensor procedentes de las clases [**Accelerometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer), [**Gyrometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer), [**Compass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Compass), [**Inclinometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer) y [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) se definen por medio de sus ejes de referencia. Estos ejes se definen mediante el marco de referencia del dispositivo y giran con el dispositivo cuando el usuario lo convierte. Si tu aplicación admite el giro automático y cambia su orientación para amoldarse al dispositivo cuando el usuario lo gire, deberás ajustar los datos de sensor para el giro antes de usarlos.
 
 ### <a name="important-apis"></a>API importantes
 
-- [**Windows. Devices. sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+- [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
 - [**Windows. Devices. Sensors. Custom**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Custom)
 
 ## <a name="display-orientation-vs-device-orientation"></a>Orientación de la pantalla y orientación del dispositivo
@@ -30,15 +30,15 @@ En los diagramas siguientes, tanto el dispositivo como la orientación de la pan
 
 En este diagrama se muestra la orientación de pantalla y de dispositivo en [horizontal](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations).
 
-![Orientación de la pantalla y del dispositivo en horizontal](images/sensor-orientation-a.PNG)
+:::image type="content" source="images/sensor-orientation-a-small.jpg" alt-text="Orientación de la pantalla y del dispositivo en horizontal":::
 
 En el diagrama siguiente se muestra la orientación de pantalla y de dispositivo en [LandscapeFlipped](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations).
 
-![Orientación de la pantalla y del dispositivo en LandscapeFlipped](images/sensor-orientation-b.PNG)
+![Orientación de la pantalla y del dispositivo en LandscapeFlipped](images/sensor-orientation-b-small.jpg)
 
 Este diagrama final muestra la orientación de la pantalla en horizontal mientras que la orientación del dispositivo es [LandscapeFlipped](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations).
 
-![Orientación de pantalla en Landscape con la orientación del dispositivo en LandscapeFlipped](images/sensor-orientation-c.PNG)
+![Orientación de pantalla en Landscape con la orientación del dispositivo en LandscapeFlipped](images/sensor-orientation-c-small.jpg)
 
 Los valores de orientación se consultan a través de la clase [**DisplayInformation**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayInformation), usando para ello el método [**GetForCurrentView**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.getforcurrentview) con la propiedad [**CurrentOrientation**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.currentorientation). Luego, se puede crear lógica contrastándolos con la enumeración [**DisplayOrientations**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations). No olvides que, por cada orientación que admitas, deberás admitir también una conversión de los ejes de referencia a dicha orientación.
 
@@ -48,10 +48,10 @@ Los fabricantes producen dispositivos tanto con orientación horizontal predeter
 
 | Orientación | Con orientación horizontal predeterminada | Con orientación vertical predeterminada |
 |-------------|-----------------|----------------|
-| **Horiz** | ![Dispositivo con orientación horizontal predeterminada en orientación Landscape](images/sensor-orientation-0.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Landscape](images/sensor-orientation-1.PNG) |
-| **Vertical** | ![Dispositivo con orientación horizontal predeterminada en orientación Portrait](images/sensor-orientation-2.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación Portrait](images/sensor-orientation-3.PNG) |
-| **LandscapeFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación LandscapeFlipped](images/sensor-orientation-4.PNG) | ![Dispositivo con orientación vertical predeterminada en orientación LandscapeFlipped](images/sensor-orientation-5.PNG) | 
-| **PortraitFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación PortraitFlipped](images/sensor-orientation-6.PNG)| ![Dispositivo con orientación vertical predeterminada en orientación PortraitFlipped](images/sensor-orientation-7.PNG) |
+| **Horizontal** | ![Dispositivo con orientación horizontal predeterminada en orientación Landscape](images/sensor-orientation-0-small.jpg) | ![Dispositivo con orientación vertical predeterminada en orientación Landscape](images/sensor-orientation-1-small.jpg) |
+| **Retrato** | ![Dispositivo con orientación horizontal predeterminada en orientación Portrait](images/sensor-orientation-2-small.jpg) | ![Dispositivo con orientación vertical predeterminada en orientación Portrait](images/sensor-orientation-3-small.jpg) |
+| **LandscapeFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación LandscapeFlipped](images/sensor-orientation-4-small.jpg) | ![Dispositivo con orientación vertical predeterminada en orientación LandscapeFlipped](images/sensor-orientation-5-small.jpg) | 
+| **PortraitFlipped** | ![Dispositivo con orientación horizontal predeterminada en orientación PortraitFlipped](images/sensor-orientation-6-small.jpg)| ![Dispositivo con orientación vertical predeterminada en orientación PortraitFlipped](images/sensor-orientation-7-small.jpg) |
 
 ## <a name="devices-broadcasting-display-and-headless-devices"></a>Difusión de presentaciones con dispositivos y dispositivos sin periféricos
 
@@ -63,12 +63,12 @@ Además, algunos dispositivos no disponen de una pantalla. Con estos dispositivo
 
 El encabezado de brújula depende de los ejes de referencia, de modo que cuando la orientación del dispositivo lo hace. La compensación se efectúa siguiendo esta tabla (suponiendo que el usuario mira al norte).
 
-| Orientación de la pantalla | Eje de referencia y encabezado de brújula | Encabezado de brújula de API al mirar al norte (landscape-first) | Encabezado de brújula de API al mirar al norte (portrait-first) |Compensación del encabezado de brújula (landscape-first) | Compensación del encabezado de brújula (portrait-first) |
+| Orientación de la pantalla | Eje de referencia y encabezado de brújula | Encabezado de la brújula de API cuando se enfrente al norte (horizontalmente-primero) | Encabezado de la brújula de API cuando se enfrente al norte (vertical-primero) |Compensación de encabezado de brújula (en horizontal: primero) | Compensación de encabezado de brújula (primero en vertical) |
 |---------------------|------------------------------------|---------------------------------------------------------|--------------------------------------------------------|------------------------------------------------|-----------------------------------------------|
-| Landscape           | -Z | 0   | 270 | Encabezado               | (Encabezado+90) % 360  |
-| Portrait            |  Y | 90  | 0   | (Encabezado+270) % 360 |  Encabezado              |
+| Horizontal           | -Z | 0   | 270 | Encabezado               | (Encabezado+90) % 360  |
+| Retrato            |  S | 90  | 0   | (Encabezado+270) % 360 |  Encabezado              |
 | LandscapeFlipped    |  Z | 180 | 90  | (Encabezado+180) % 360 | (Encabezado+270) % 360 |
-| PortraitFlipped     |  Y | 270 | 180 | (Encabezado+90) % 360  | (Encabezado+180) % 360 |
+| PortraitFlipped     |  S | 270 | 180 | (Encabezado+90) % 360  | (Encabezado+180) % 360 |
 
 Modifica el encabezado de brújula como se indica en la tabla para que dicho encabezado se muestre correctamente. En el siguiente fragmento de código, se muestra cómo hacerlo.
 
@@ -110,10 +110,10 @@ Esta tabla convierte los datos de acelerómetro y girómetro para los datos de l
 
 | Ejes de referencia        |  X |  Y | Z |
 |-----------------------|----|----|---|
-| **Horiz**         |  X |  Y | Z |
-| **Vertical**          |  Y | -X | Z |
-| **LandscapeFlipped**  | -X | -Y | Z |
-| **PortraitFlipped**   | -Y |  X | Z |
+| **Horizontal**         |  X |  Y | Z |
+| **Retrato**          |  S | -X | Z |
+| **LandscapeFlipped**  | -X | -y | Z |
+| **PortraitFlipped**   | -y |  X | Z |
 
 El siguiente ejemplo de código aplica estas conversiones al girómetro.
 
@@ -171,7 +171,11 @@ En la expresión anterior, los datos de sensor devuelven el objeto absoluto.
 
 | Orientación de la pantalla  | Giro en el sentido contrario a las agujas del reloj en torno a Z | Cuaternión de referencia (giro inverso) | Matriz de giro de referencia (giro inverso) |
 |----------------------|------------------------------------|-----------------------------------------|----------------------------------------------|
-| **Horiz**        | 0                                  | 1 + 0i + 0j + 0k                        | \[1 0 0<br/> 0 1 0<br/> 0 0 1\]               |
-| **Vertical**         | 90                                 | cos(-45⁰) + (i + j + k)*sin(-45⁰)       | \[0 1 0<br/>-1 0 0<br/>0 0 1]              |
+| **Horizontal**        | 0                                  | 1 + 0i + 0j + 0k                        | \[1 0 0<br/> 0 1 0<br/> 0 0 1\]               |
+| **Retrato**         | 90                                 | cos(-45⁰) + (i + j + k)*sin(-45⁰)       | \[0 1 0<br/>-1 0 0<br/>0 0 1]              |
 | **LandscapeFlipped** | 180                                | 0 - i - j - k                           | \[1 0 0<br/> 0 1 0<br/> 0 0 1]               |
 | **PortraitFlipped**  | 270                                | cos(-135⁰) + (i + j + k)*sin(-135⁰)     | \[0 -1 0<br/> 1  0 0<br/> 0  0 1]             |
+
+## <a name="see-also"></a>Vea también
+
+[Integración de sensores de movimiento y orientación](https://docs.microsoft.com/windows-hardware/design/whitepapers/integrating-motion-and-orientation-sensors)
