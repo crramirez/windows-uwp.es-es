@@ -6,12 +6,12 @@ ms.date: 05/29/2020
 ms.topic: article
 keywords: Windows 10, UWP, operadores móviles, facturación móvil, facturación de operadores móviles
 ms.localizationpriority: medium
-ms.openlocfilehash: 16783e71a170118f470a351a7f5dc4c2a178405e
-ms.sourcegitcommit: 8eae7aec4c4ffb8a0c30e9d03744942fb23958d9
+ms.openlocfilehash: 2be7938faddaf50c96005f32c77f523ebf4061e3
+ms.sourcegitcommit: ae195892efb9d3abd1190776617984d4219c6777
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84334220"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85913231"
 ---
 # <a name="mobile-operator-billing"></a>Facturación de operadores de telefonía móvil
 
@@ -30,7 +30,7 @@ Actualmente, los operadores móviles admiten la facturación de operadores móvi
 | País/región       | Operadores de telefonía móvil                                        |
 |----------------------|---------------------------------------------------------|
 | Australia            | Optus                                                   |
-| Austria              | Hutchison 3G Austria, a1 Telekom, T-Mobile/tele. ring  |
+| Austria              | A1 Telekom, Hutchison 3G Austria, T-Mobile/tele. ring  |
 | Bélgica              | Base, Proximus                                          |
 | Canadá               | Telus                                                   |
 | Chequia              | T-Mobile                                                |
@@ -39,7 +39,7 @@ Actualmente, los operadores móviles admiten la facturación de operadores móvi
 | Francia               | Naranja                                                  |
 | Alemania              | O2, Telekom Deutschland, Vodafone                       |
 | Hungría              | Telenor                                                 |
-| Italia                | Viento, Tre                                               |
+| Italia                | Tre, viento                                               |
 | Malasia             | Digi                                                    |
 | Países Bajos          | KPN/Telfort                                           |
 | Noruega               | Telenor/Talkmore, Telia/OneCall                     |
@@ -48,10 +48,10 @@ Actualmente, los operadores móviles admiten la facturación de operadores móvi
 | Eslovaquia             | Telekom eslovaco                                          |
 | Sudáfrica         | Vodacom                                                 |
 | España                | Naranja                                                  |
-| Suecia               | Telenor, 3                                              |
-| Suiza          | Swisscom, Sunrise                                       |
+| Suecia               | 3, Telenor                                              |
+| Suiza          | Amanecer, Swisscom                                       |
 | Taiwán               | FarEasTone                                              |
 | Turquía               | Turkcell                                                |
 | Emiratos Árabes Unidos | Etisalat                                                |
 | Estados Unidos        | Sprint, Verizon                                         |
-| Reino Unido       | O2, 3 RU, EE                                            |
+| Reino Unido       | 3 RU, EE, O2, Vodaphone                                 |
