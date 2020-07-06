@@ -1,17 +1,15 @@
 ---
 title: Envío del manifiesto al repositorio
-description: ''
-author: denelon
-ms.author: denelon
+description: Después de crear un manifiesto de paquete que describa su aplicación, estará listo para enviarlo al repositorio del Administrador de paquetes de Windows.
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c5ebcc564b4db16c1d16385cbeaf7fd6d82c8f18
-ms.sourcegitcommit: 8193aef04deb3514eb2d34bfe5cb9424ba12cd76
+ms.openlocfilehash: 19a66b2d0724eb0f4f8c3f171033e4e616751717
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83865032"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334594"
 ---
 # <a name="submit-your-manifest-to-the-repository"></a>Envío del manifiesto al repositorio
 
@@ -112,7 +110,7 @@ Todos los envíos de aplicaciones al repositorio del Administrador de paquetes d
 
 * El manifiesto cumple los [requisitos de esquemas](manifest.md#manifest-contents).
 * Todas las direcciones URL del manifiesto conducen a sitios web seguros.
-* El instalador y la aplicación están libres de virus.
+* El instalador y la aplicación están libres de virus. Es posible que se identifique el paquete como malware por equivocación. Si cree que se trata de un falso positivo, puede enviar el instalador al equipo de Defender para su análisis desde [este vínculo](https://www.microsoft.com/wdsi/filesubmission).
 * La aplicación se instala y desinstala correctamente tanto para administradores como para usuarios que no son administradores.
 * El instalador admite modos no interactivos.
 * Todas las entradas del manifiesto son precisas y no son engañosas.

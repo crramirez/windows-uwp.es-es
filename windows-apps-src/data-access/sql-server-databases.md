@@ -1,16 +1,16 @@
 ---
 title: Uso de una base de datos de SQL Server en una aplicación para UWP
 description: Usa una base de datos SQL Server en una aplicación para UWP.
-ms.date: 03/28/2019
+ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, database
 ms.localizationpriority: medium
-ms.openlocfilehash: 54907dac63580794b7df42fa2e61162d16be8a1b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d5c5c0f107a9e9a2adb0587b544a2c74b8321886
+ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75302569"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85448345"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>Uso de una base de datos de SQL Server en una aplicación para UWP
 Tu aplicación puede conectarse directamente a una base de datos de SQL Server y a continuación almacenar y recuperar datos mediante clases en el espacio de nombres [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient).
@@ -32,6 +32,9 @@ Abre el archivo **Package.appxmanifest** de tu proyecto para UWP en el diseñado
 En la pestaña **Funcionalidades**, activa la casilla **Enterprise Authentication** (Autenticación empresarial) si usas la autenticación de Windows para la autenticación de SQL Server.
 
 ![Funcionalidad de autenticación empresarial](images/enterprise-authentication.png)
+
+> [!IMPORTANT]
+> También debe seleccionar **Internet (cliente y servidor)** , **Internet (cliente)** y **Redes privadas (cliente y servidor)** , independientemente de si usa o no la autenticación de Windows.
 
 <a id="use-data" />
 

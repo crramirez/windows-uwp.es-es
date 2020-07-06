@@ -8,25 +8,25 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: ab67507153e0ff7065baffa92ea6ec35aee5b132
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 8775113c22716259f9449899b577481738dc6c0f
+ms.sourcegitcommit: da1c0ae251883987f105bc2919b2d67846194bc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580772"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85198523"
 ---
 # <a name="get-started-with-winui-30-for-desktop-apps"></a>Introducción a WinUI 3.0 para aplicaciones de escritorio
 
-La versión preliminar 1 de WinUI 3.0 presenta nuevas plantillas de proyecto que te permiten crear aplicaciones de escritorio administradas de C# y .NET y de escritorio de C++ o Win32 nativas con una interfaz de usuario totalmente basada en WinUI. Cuando se crean aplicaciones utilizando estas plantillas de proyecto, toda la interfaz de usuario de la aplicación se implementa mediante ventanas, controles y otros tipos de interfaz de usuario proporcionados por WinUI 3.0. 
+La versión preliminar 1 de WinUI 3.0 presenta nuevas plantillas de proyecto que te permiten crear aplicaciones de escritorio administradas de C# y .NET y de escritorio de C++ o Win32 nativas con una interfaz de usuario totalmente basada en WinUI. Cuando se crean aplicaciones utilizando estas plantillas de proyecto, toda la interfaz de usuario de la aplicación se implementa mediante ventanas, controles y otros tipos de interfaz de usuario proporcionados por WinUI 3.0.
 
-La versión preliminar 1 WinUI 3.0 agrega las siguientes plantillas de proyecto **WinUI in Desktop** (WinUI en escritorio) en Visual Studio 2019:
+En la versión preliminar 1 de WinUI 3.0 se agregan las siguientes plantillas de proyecto a Visual Studio 2019 para la creación de aplicaciones de escritorio que usan WinUI 3.0:
 
-* Aplicaciones y bibliotecas de C# que tienen como destino .NET 5:
-  * Blank App, Packaged (WinUI in Desktop) (Aplicación vacía, empaquetada [WinUI en el escritorio])
-  * Class Library (WinUI in Desktop) (Biblioteca de clases [WinUI en el escritorio])
+* Plantillas de proyecto para las aplicaciones y bibliotecas de C# diseñadas para .NET 5:
+  * **Aplicación vacía, empaquetada (WinUI en el escritorio)**
+  * **Biblioteca de clases (WinUI en el escritorio)**
 
-* Aplicaciones Win32 o C++:
-  * Blank App, Packaged (WinUI in Desktop) (Aplicación vacía, empaquetada [WinUI en el escritorio])
+* Plantillas de proyecto para las aplicaciones de C++/Win32:
+  * **Aplicación vacía, empaquetada (WinUI en el escritorio)**
 
 Las plantillas de proyecto de aplicación generan un proyecto de aplicación WinUI y un [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) que está configurado para compilar la aplicación en un [paquete MSIX](https://docs.microsoft.com/windows/msix/overview) para su implementación.
 
@@ -41,6 +41,9 @@ Para usar WinUI 3 para las plantillas de proyecto de escritorio descritas en es
 3. Instala las versiones x64 y x86 de .NET 5 versión preliminar 4:
     * x64: [https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x64.exe](https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x64.exe)
     * x86: [https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x86.exe](https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x86.exe)
+
+    > [!NOTE]
+    > La versión preliminar 1 de WinUI 3.0 requiere la versión preliminar 4 de .NET 5. Las versiones preliminares posteriores de .NET 5 no son compatibles con la versión preliminar 1 de WinUI 3.0.
 
 4. Instala la extensión VSIX que incluye las plantillas de proyecto de la versión preliminar 1 de WinUI 3.0 para Visual Studio 2019. Para más información, consulta [estas instrucciones](index.md#visual-studio-project-templates).
 
@@ -70,7 +73,7 @@ Para usar WinUI 3 para las plantillas de proyecto de escritorio descritas en es
 
         ![Proyecto de aplicación](images/WinUI-csharp-packageproject.png)
 
-7. Para agregar un nuevo elemento a tu proyecto de aplicación, haz clic con el botón derecho en el nodo del proyecto ***nombre del proyecto* (Desktop)** en el **Explorador de soluciones** y selecciona **Agregar** -> **Nuevo elemento**. En el cuadro de diálogo **agregar nuevo elemento**, selecciona la pestaña **WinUI**, elige el elemento que deseas agregar y, a continuación, haz clic en **Agregar**. Puedes elegir entre los siguientes tipos de elementos:
+7. Para agregar un nuevo elemento a tu proyecto de aplicación, haz clic con el botón derecho en el nodo del proyecto ***nombre del proyecto* (Desktop)** en el **Explorador de soluciones** y selecciona **Agregar** -> **Nuevo elemento**. En el cuadro de diálogo **Agregar nuevo elemento**, selecciona la pestaña **WinUI**, elige el elemento que deseas agregar y, a continuación, haz clic en **Agregar**. Puedes elegir entre los siguientes tipos de elementos:
 
     * **Blank Page** (Página en blanco)
     * **Blank Window** (Ventana en blanco)

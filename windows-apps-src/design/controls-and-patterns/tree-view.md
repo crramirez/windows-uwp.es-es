@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 80072be15a28883e5d29a7393edd112cf6fa47be
-ms.sourcegitcommit: 7e8c7f89212c88dcc0274c69d2c3365194c0954a
+ms.openlocfilehash: d5308f49499f4bdec9db0087cef54ac2fa0bb805
+ms.sourcegitcommit: 69b7fe203d8384d0ade37122ae9d2c4568f6d168
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83688497"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267172"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -488,6 +488,10 @@ Si la vista de árbol tiene nodos no ejecutados, no se tienen en cuenta para la 
 - Si un usuario selecciona un nodo primario, también se seleccionan todos los elementos secundarios bajo ese elemento principal. Del mismo modo, si se seleccionan todos los nodos secundarios, también se selecciona el primario.
 - El método **SelectAll** solo agrega nodos ejecutados a la colección **SelectedNodes**.
 - Si se selecciona un nodo primario con elementos secundarios no ejecutados, se seleccionarán los elementos secundarios a medida que se ejecutan.
+
+#### <a name="selecteditemselecteditems"></a>SelectedItem/SelectedItems
+
+A partir de WinUI 2.2, TreeView dispone de las propiedades [SelectedItem](/uwp/api/microsoft.ui.xaml.controls.treeview.selecteditem) y [SelectedItems](/uwp/api/microsoft.ui.xaml.controls.treeview.selecteditems). Puede usarlas para obtener directamente el contenido de los nodos seleccionados. Si está habilitada la selección múltiple, SelectedItem contiene el primer elemento de la colección SelectedItems.
 
 ## <a name="code-examples"></a>Ejemplos de código
 

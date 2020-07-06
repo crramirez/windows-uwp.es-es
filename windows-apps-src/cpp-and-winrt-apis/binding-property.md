@@ -5,12 +5,12 @@ ms.date: 06/21/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, XAML, control, binding, property
 ms.localizationpriority: medium
-ms.openlocfilehash: 06934c1c3b23c244fb32ffa957cffb926ffd1bb0
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 12a20ae3df6ae83723550bf365aadab99b1b3b7b
+ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209200"
+ms.lasthandoff: 06/13/2020
+ms.locfileid: "84756537"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles de XAML; enlazar a una propiedad de C++/WinRT
 Una propiedad que se puede enlazar de forma eficaz a un control de XAML se conoce como una propiedad *observable*. Esta idea se basa en el patrón de diseño de software conocido como *patrón observador*. En este tema se muestra cómo implementar propiedades observables en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) y cómo enlazar controles de elementos XAML a dichas propiedades (para obtener información general, consulta [Enlace de datos](/windows/uwp/data-binding)).
@@ -49,14 +49,20 @@ namespace Bookstore
 >
 > Cualquier clase en tiempo de ejecución que declares en la aplicación y *que derive* de una clase base se conoce como una clase *que admite composición*. Las clases que admiten composición tienen restricciones. Para que una aplicación pase las pruebas del [kit de certificación de aplicaciones en Windows](../debug-test-perf/windows-app-certification-kit.md) que Visual Studio y Microsoft Store utilizan para validar los envíos (y para que la aplicación se incorpore correctamente a Microsoft Store), una clase que admite composición debe derivar en última instancia de una clase base de Windows. Eso significa que, en la raíz misma de la jerarquía de herencia, la clase debe ser un tipo que se origina en un espacio de nombres Windows.*. Si necesitas derivar una clase en tiempo de ejecución de una clase base, por ejemplo para implementar una clase **BindableBase** para todos los modelos de vista de los que puedes derivar, puedes derivar de [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject).
 >
-> Un modelo de vista es una abstracción de una vista y, por lo tanto, está enlazado directamente a la vista (el marcado XAML). Un modelo de datos es una abstracción de datos, solo lo consumen los modelos de vista y no se enlazan directamente a XAML. Por lo tanto, puedes declarar los modelos de datos no como clases en tiempo de ejecución, sino como estructuras o clases de C++. No es necesario declararlos en MIDL y tienes la libertad de usar cualquier jerarquía de herencia que prefieras.
+> Un modelo de vista es una abstracción de una vista y, por lo tanto, está enlazado directamente a la vista (el marcado XAML). Un modelo de datos es una abstracción de datos, solo lo consumen los modelos de vista y no se enlazan directamente a XAML. Por lo tanto, en lugar de declarar los modelos de datos como clases en tiempo de ejecución, puede hacerlo como estructuras o clases de C++. No es necesario declararlos en MIDL y tienes la libertad de usar cualquier jerarquía de herencia que prefieras.
 
 Guarda el archivo y compila el proyecto. Durante el proceso de compilación, la herramienta `midl.exe` se ejecuta para crear un archivo de metadatos de Windows Runtime (`\Bookstore\Debug\Bookstore\Unmerged\BookSku.winmd`) que describe la clase en tiempo de ejecución. Después se ejecutará la herramienta `cppwinrt.exe` para generar archivos de código fuente y ayudarte a crear y consumir tu clase en tiempo de ejecución. Estos archivos incluyen códigos auxiliares para que puedas empezar a implementar la clase en tiempo de ejecución **BookSku** que declaraste en tu archivo IDL. Estos archivos de código auxiliar son `\Bookstore\Bookstore\Generated Files\sources\BookSku.h` y `BookSku.cpp`.
 
 Haz clic con el botón derecho en el nodo del proyecto y haz clic en **Abrir carpeta en el Explorador de archivos**. Se abre la carpeta del proyecto en el Explorador de archivos. Ahí, copia los archivos de código auxiliar `BookSku.h` y `BookSku.cpp` de la carpeta `\Bookstore\Bookstore\Generated Files\sources\` a la carpeta del proyecto, que es `\Bookstore\Bookstore\`. En el **Explorador de soluciones** con el nodo de proyecto seleccionado, asegúrate de que **Mostrar todos los archivos** esté activado. Haz clic con el botón derecho en los archivos de código auxiliar que has copiado y luego haz clic en **Incluir en el proyecto**.
 
 ## <a name="implement-booksku"></a>Implementar **BookSku**
-Ahora, vamos a abrir `\Bookstore\Bookstore\BookSku.h` y `BookSku.cpp` e implementar nuestra clase en tiempo de ejecución. En `BookSku.h`, agrega un constructor que toma [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring), un miembro privado para almacenar la cadena de título y otro para el evento que generaremos cuando cambie el título. Después de hacer estos cambios, tu `BookSku.h` tendrá este aspecto.
+Ahora, vamos a abrir `\Bookstore\Bookstore\BookSku.h` y `BookSku.cpp` e implementar nuestra clase en tiempo de ejecución. Efectúe estos cambios en `BookSku.h`.
+
+- Agregue un constructor que tome el valor [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring). Este valor es la cadena de título.
+- Agregue un miembro privado para almacenar la cadena de título.
+- Agregue otro miembro privado para el evento que se generará cuando el título cambie.
+
+Después de hacer estos cambios, tu `BookSku.h` tendrá este aspecto.
 
 ```cppwinrt
 // BookSku.h
@@ -122,7 +128,7 @@ namespace winrt::Bookstore::implementation
 }
 ```
 
-En la función de mutación **Title**, comprobamos si se ha establecido un valor diferente del valor actual. Si es así, actualizamos el título y también generamos el evento [**INotifyPropertyChanged::PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) con un argumento igual al nombre de la propiedad que ha cambiado. Esto sirve para que la interfaz de usuario sepa qué valor de propiedad tiene que volver a consultar.
+En la función de mutación **Title**, comprobamos si se ha establecido un valor diferente del valor actual. Y, si es el caso, actualizamos el título y también generamos el evento [**INotifyPropertyChanged::PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) con un argumento igual que el nombre de la propiedad que cambió. Esto sirve para que la interfaz de usuario sepa qué valor de propiedad tiene que volver a consultar.
 
 ## <a name="declare-and-implement-bookstoreviewmodel"></a>Declarar e implementar **BookstoreViewModel**
 Nuestra página principal de XAML se enlazará a un modelo de vista principal. Y ese modelo de vista tendrá varias propiedades, incluida una de tipo **BookSku** . En este paso, declararemos e implementaremos la clase en tiempo de ejecución del modelo de vista principal.

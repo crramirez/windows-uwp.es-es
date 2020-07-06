@@ -1,17 +1,15 @@
 ---
 title: Creación de un manifiesto de paquete
-description: ''
-author: denelon
-ms.author: denelon
+description: Si quiere enviar un paquete de software al repositorio del Administrador de paquetes de Windows, cree un manifiesto de paquete para empezar.
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8eceb29abbdc7f765628dbd8dbd6f6d0be21f132
-ms.sourcegitcommit: e2689c72d5b381eafdb1075090d1961f4c1cb37a
+ms.openlocfilehash: 7ecc6687527ca330f466e6a97ef14c0b5c9b56cf
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84055159"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334612"
 ---
 # <a name="create-your-package-manifest"></a>Creación de un manifiesto de paquete
 
@@ -58,7 +56,7 @@ License: string # The open source license or copyright.
 InstallerType: string # Enumeration of supported installer types (exe, msi, msix, inno, wix, nullsoft, appx).
 Installers:
   - Arch: string # Enumeration of supported architectures.
-  - URL: string # Path to download installation file.
+  - Url: string # Path to download installation file.
   - Sha256: string # SHA256 calculated from installer.
 ManifestVersion: 0.1.0
 ```
@@ -164,6 +162,17 @@ ManifestVersion: 0.1.0
 
 > [!NOTE]
 > Si el instalador es un archivo .exe y se compiló con Nullsoft o Inno, puedes especificar esos valores en su lugar. Cuando se especifique Nullsoft o Inno, el cliente establecerá automáticamente los comportamientos de instalación silenciosa y silenciosa con progreso para el instalador.
+
+## <a name="installer-switches"></a>Cambios del instalador
+
+A menudo, puede averiguar qué elementos `Switches` silenciosos están disponibles para un instalador al pasar `-?` al instalador desde la línea de comandos. Estos son algunos de los elementos `Swtiches` silenciosos habituales que se pueden usar para distintos tipos de instalador.
+
+| Instalador | Comando  | Documentación |  
+| :--- | :-- | :--- |  
+| MSI | `/q` | [Opciones de la línea de comandos MSI](https://docs.microsoft.com/windows/win32/msi/command-line-options) |
+| InstallShield | `/s`  | [Parámetros de la línea de comandos InstallShield](https://docs.flexera.com/installshield19helplib/helplibrary/IHelpSetup_EXECmdLine.htm) |
+| Inno Setup | `/SILENT or /VERYSILENT` | [Documentación de Inno Setup](https://jrsoftware.org/ishelp/) |
+| Nullsoft | `/S` | [Instaladores/desinstaladores silenciosos de Nullsoft](https://nsis.sourceforge.io/Docs/Chapter4.html#silent) |
 
 ## <a name="tips-and-best-practices"></a>Sugerencias y procedimientos recomendados
 

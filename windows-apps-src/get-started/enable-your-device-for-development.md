@@ -6,12 +6,12 @@ keywords: Introducción a Visual Studio con licencia de desarrollador, dispositi
 ms.date: 05/22/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f41c7b706f4c088142a77092cf176ed543e21567
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: 4402200726da93bb820946c9849d8c15bd1c5d8d
+ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854781"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85448395"
 ---
 # <a name="enable-your-device-for-development"></a>Habilitar el dispositivo para el desarrollo
 
@@ -39,43 +39,6 @@ Para habilitar el modo de desarrollador u obtener acceso a otras opciones de con
 
 > [!NOTE]
 > Para habilitar el modo de desarrollador se requiere acceso de administrador. Si el dispositivo pertenece a una organización, puede que esta opción esté deshabilitada.
-
-Esta es la página de configuración de la familia de dispositivos de escritorio:
-
-![Ve a Configuración, elige Actualización y seguridad y, luego, elige Para desarrolladores para ver las opciones.](images/devmode-pc-options.png)
-
-## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a>¿Qué opción de configuración debo elegir: transferencia local de aplicaciones o modo de desarrollador?
-
-> [!NOTE]
-> A partir de la compilación 18956 de Windows Insider, se ha retirado la opción de instalación de prueba y el modo de desarrollador ahora es un comando de alternancia. Consulta más información sobre la instalación de prueba en la sección siguiente.
-
- Puedes habilitar un dispositivo para el desarrollo o solo para transferir aplicaciones localmente.
-
--   El valor predeterminado es *aplicaciones de Microsoft Store*. Si no vas a desarrollar aplicaciones ni estás usando aplicaciones internas especiales emitidas por tu compañía, mantén esta configuración activa.
--   La *transferencia local* consiste en instalar y después ejecutar o probar una aplicación que no tiene el certificado de Microsoft Store. Por ejemplo, una aplicación interna de tu empresa solamente.
--   El *Modo de desarrollador* te permite realizar la instalación de prueba de aplicaciones y también ejecutar aplicaciones desde Visual Studio en modo de depuración.
-
-De manera predeterminada, solo puedes instalar aplicaciones para Plataforma universal de Windows (UWP) desde Microsoft Store. Si modificas esta configuración para usar las funciones de desarrollador, puede cambiar el nivel de seguridad de tu dispositivo. No debes instalar aplicaciones proveniente de orígenes sin comprobar.
-
-### <a name="sideload-apps"></a>Instalación de prueba de aplicaciones
-
-> [!NOTE]
-> A partir de la compilación 18956 de Windows Insider, la instalación de prueba está habilitada de forma predeterminada. Ahora, puedes implementar un paquete MSIX firmado en un dispositivo sin una configuración especial.
-
-Por lo general, la opción de aplicaciones transferidas localmente la usan las empresas y centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store, o cualquier otra persona que necesite ejecutar aplicaciones de fuentes distintas a Microsoft. En este caso, la organización suele aplicar una directiva que deshabilita el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para más información, consulta los artículos de TechNet [Instalación de prueba de aplicaciones en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) y [Aspectos básicos de Microsoft Intune](https://docs.microsoft.com/mem/intune/fundamentals/).
-
-Información específica de la familia de dispositivos
-
--   En la familia de dispositivos de escritorio: puedes instalar un paquete de la aplicación (.appx) y cualquier certificado necesario para ejecutar la aplicación. Para hacerlo, ejecuta el script de Windows PowerShell que se creó con el paquete ("Add-AppDevPackage.ps1"). Para más información, consulta [Empaquetado de aplicaciones para UWP](/windows/msix/package/packaging-uwp-apps).
-
--   En la familia de dispositivos móviles: si el certificado necesario ya está instalado, puedes pulsar en el archivo para instalar cualquier archivo .appx que te hayan enviado por correo electrónico o que tengas en una tarjeta SD.
-
-
-**Transferir localmente aplicaciones** es una opción más segura que el modo de desarrollador porque no permite instalar en el dispositivo aplicaciones que no tengan un certificado de confianza.
-
-> [!NOTE]
-> Aunque transfieras aplicaciones localmente, solo deberías instalar aplicaciones procedentes de orígenes de confianza. Cuando instalas una aplicación transferida localmente que no tiene el certificado de Microsoft Store, confirmas que tienes todos los derechos necesarios para transferir localmente la aplicación y que eres el único responsable de los daños que la instalación y la ejecución de esta aplicación puedan causar. Consulta la sección Windows &gt; Microsoft Store de esta [declaración de privacidad](https://privacy.microsoft.com/privacystatement).
-
 
 ### <a name="developer-mode"></a>Modo de desarrollador
 
@@ -106,6 +69,26 @@ Para obtener instrucciones específicas sobre la configuración del dispositivo,
 - [Portal de dispositivos para Xbox](../xbox-apps/device-portal-xbox.md)
 
 Si se producen problemas al habilitar el modo de desarrollador o el portal de dispositivos, consulta el foro [Known Issues](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) (problemas conocidos) para buscar soluciones para estos problemas, o visita [Error al instalar el paquete de modo de desarrollador](#failure-to-install-developer-mode-package) para obtener más detalles y saber cuáles KB de WSUS deberían habilitarse para desbloquear el paquete de modo de desarrollador.
+
+### <a name="sideload-apps"></a>Instalación de prueba de aplicaciones
+
+> [!NOTE]
+> A partir de la actualización más reciente de Windows 10, la instalación de prueba está habilitada de forma predeterminada. Ahora, puedes implementar un paquete MSIX firmado en un dispositivo sin una configuración especial. Si usa una versión anterior de Windows 10, las configuraciones predeterminadas solo le permitirán ejecutar aplicaciones de Microsoft Store. Deberá habilitar la instalación de prueba para instalar aplicaciones de fuentes distintas a Microsoft.
+
+Por lo general, la opción de aplicaciones transferidas localmente la usan las empresas y centros docentes que necesitan instalar aplicaciones personalizadas en dispositivos administrados sin necesidad de ir Microsoft Store, o cualquier otra persona que necesite ejecutar aplicaciones de fuentes distintas a Microsoft. En este caso, la organización suele aplicar una directiva que deshabilita el ajuste *Aplicaciones para UWP*, como se mostró anteriormente en la imagen de la página de configuración. La organización también proporciona el certificado necesario y la ubicación de instalación para transferir aplicaciones localmente. Para más información, consulta los artículos de TechNet [Instalación de prueba de aplicaciones en Windows 10](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) y [Aspectos básicos de Microsoft Intune](https://docs.microsoft.com/mem/intune/fundamentals/).
+
+Información específica de la familia de dispositivos
+
+-   En la familia de dispositivos de escritorio: puedes instalar un paquete de la aplicación (.appx) y cualquier certificado necesario para ejecutar la aplicación. Para hacerlo, ejecuta el script de Windows PowerShell que se creó con el paquete ("Add-AppDevPackage.ps1"). Para más información, consulta [Empaquetado de aplicaciones para UWP](/windows/msix/package/packaging-uwp-apps).
+
+-   En la familia de dispositivos móviles: si el certificado necesario ya está instalado, puedes pulsar en el archivo para instalar cualquier archivo .appx que te hayan enviado por correo electrónico o que tengas en una tarjeta SD.
+
+
+**Transferir localmente aplicaciones** es una opción más segura que el modo de desarrollador porque no permite instalar en el dispositivo aplicaciones que no tengan un certificado de confianza.
+
+> [!NOTE]
+> Aunque transfieras aplicaciones localmente, solo deberías instalar aplicaciones procedentes de orígenes de confianza. Cuando instalas una aplicación transferida localmente que no tiene el certificado de Microsoft Store, confirmas que tienes todos los derechos necesarios para transferir localmente la aplicación y que eres el único responsable de los daños que la instalación y la ejecución de esta aplicación puedan causar. Consulta la sección Windows &gt; Microsoft Store de esta [declaración de privacidad](https://privacy.microsoft.com/privacystatement).
+
 
 ### <a name="ssh"></a>SSH
 

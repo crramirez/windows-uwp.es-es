@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 444699c00a17dd90fe4c08c44ff56d540cadb3d6
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: fd561096dc53f85186698c981693693a6d3b9e64
+ms.sourcegitcommit: d95ccb47c616bd32c56e491490a6baf30185c8c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729868"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295542"
 ---
 # <a name="call-windows-runtime-apis-in-desktop-apps"></a>Llamada a las a API de Windows Runtime en aplicaciones de escritorio
 
@@ -59,16 +59,16 @@ Existen dos opciones para los proyectos de .NET:
 
     ![Cuadro de diálogo Agregar referencia](images/desktop-to-uwp/browse-references.png)
 
-2. Agrega una referencia a estos archivos.
+2. Agregue una referencia a todos los archivos siguientes.
 
     |Archivo|Ubicación|
     |--|--|
-    |System.Runtime.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-    |System.Runtime.WindowsRuntime.UI.Xaml|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-    |System.Runtime.InteropServices.WindowsRuntime|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+    |System.Runtime.WindowsRuntime.dll|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+    |System.Runtime.WindowsRuntime.UI.Xaml.dll|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
+    |System.Runtime.InteropServices.WindowsRuntime.dll|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
     |windows.winmd|C:\Archivos de programa (x86)\Windows Kits\10\UnionMetadata\\<*versión de SDK*>\Facade|
-    |Windows.Foundation.UniversalApiContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\\<*versión de SDK*>\Windows.Foundation.UniversalApiContract\<*versión*>|
-    |Windows.Foundation.FoundationContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\\<*versión de SDK*>\Windows.Foundation.FoundationContract\<*versión*>|
+    |Windows.Foundation.UniversalApiContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\\<*versión de SDK*>\Windows.Foundation.UniversalApiContract\\<*versión*>|
+    |Windows.Foundation.FoundationContract.winmd|C:\Archivos de programa (x86)\Windows Kits\10\References\\<*versión de SDK*>\Windows.Foundation.FoundationContract\\<*versión*>|
 
 3. En la ventana **Propiedades**, establece el campo **Copia local** de cada archivo *.winmd* en **False**.
 

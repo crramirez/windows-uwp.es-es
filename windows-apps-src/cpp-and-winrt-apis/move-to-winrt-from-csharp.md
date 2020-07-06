@@ -5,12 +5,12 @@ ms.date: 07/15/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, puerto, migrar, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 38ad2d4f2b0af65424e6d9fa50f2c21b626e1914
-ms.sourcegitcommit: 3125d5e2e32831481790266f44967851585888b3
+ms.openlocfilehash: 21032a99c389e968728fe2dac2875475efc351c4
+ms.sourcegitcommit: 379fd00bfcc6c5f1e3c7e379a367b08641a7f961
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84172836"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84819011"
 ---
 # <a name="move-to-cwinrt-from-c"></a>Migrar a C++/WinRT desde C#
 
@@ -24,14 +24,14 @@ En el caso práctico del tema [Migración del ejemplo de Clipboard a C++/WinRT d
 
 En lo que se refiere a los tipos de cambio en la migración que debes esperar, puedes agruparlos en cuatro categorías.
 
-- [**Migración de la proyección del lenguaje**](#port-the-language-projection). Windows Runtime (WinRT) se *proyecta* en varios lenguajes de programación. Cada una de esas proyecciones de lenguaje está diseñada para que suene idiomática en el lenguaje de programación en cuestión. En C#, algunos tipos de Windows Runtime se proyectan como tipos .NET. Por ejemplo, traducirás [**System.Collections.Generic.IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1) de nuevo a [**Windows.Foundation.Collections.IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1). También en C#, algunas operaciones de Windows Runtime se proyectan como características de lenguaje adecuadas de C#. Un ejemplo sería el uso de la sintaxis de operador `+=` en C# para registrar un delegado de control de eventos. Por lo tanto, traducirás características del lenguaje; por ejemplo, para volver a la operación fundamental que se está realizando (el registro de eventos, en este caso).
-- [**Migración de la sintaxis del lenguaje**](#port-language-syntax). Muchos de estos cambios son transformaciones mecánicas simples, en las que se reemplaza un símbolo por otro. Por ejemplo, se cambia un punto (`.`) por dos signos de dos puntos (`::`).
-- [**Procedimiento de migración del lenguaje**](#port-language-procedure). Algunos de estos pueden ser cambios sencillos y repetitivos (como de `myObject.MyProperty` a `myObject.MyProperty()`). Otros requieren cambios más complejos (por ejemplo, portar un procedimiento que implique el uso de **System.Text.StringBuilder** a uno que implique el uso de **std::wostringstream**).
+- [**Migración de la proyección del lenguaje**](#changes-that-involve-the-language-projection). Windows Runtime (WinRT) se *proyecta* en varios lenguajes de programación. Cada una de esas proyecciones de lenguaje está diseñada para que suene idiomática en el lenguaje de programación en cuestión. En C#, algunos tipos de Windows Runtime se proyectan como tipos .NET. Por ejemplo, traducirás [**System.Collections.Generic.IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1) de nuevo a [**Windows.Foundation.Collections.IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1). También en C#, algunas operaciones de Windows Runtime se proyectan como características de lenguaje adecuadas de C#. Un ejemplo sería el uso de la sintaxis de operador `+=` en C# para registrar un delegado de control de eventos. Por lo tanto, traducirás características del lenguaje; por ejemplo, para volver a la operación fundamental que se está realizando (el registro de eventos, en este caso).
+- [**Migración de la sintaxis del lenguaje**](#changes-that-involve-the-language-syntax). Muchos de estos cambios son transformaciones mecánicas simples, en las que se reemplaza un símbolo por otro. Por ejemplo, se cambia un punto (`.`) por dos signos de dos puntos (`::`).
+- [**Procedimiento de migración del lenguaje**](#changes-that-involve-procedures-within-the-language). Algunos de estos pueden ser cambios sencillos y repetitivos (como de `myObject.MyProperty` a `myObject.MyProperty()`). Otros requieren cambios más complejos (por ejemplo, portar un procedimiento que implique el uso de **System.Text.StringBuilder** a uno que implique el uso de **std::wostringstream**).
 - [**Tareas relacionadas con la portación específicas de C++/WinRT**](#porting-related-tasks-that-are-specific-to-cwinrt). C# se encarga de completar determinados detalles de Windows Runtime de manera implícita y en segundo plano. Estos detalles se realizan explícitamente en C++/WinRT. Un ejemplo sería el uso de un archivo `.idl` para definir las clases en tiempo de ejecución.
 
 El resto de este tema está estructurado según esa taxonomía.
 
-## <a name="port-the-language-projection"></a>Migración de la proyección del lenguaje
+## <a name="changes-that-involve-the-language-projection"></a>Cambios relacionados con la proyección de lenguaje
 
 ||C#|C++/WinRT|Consulta también|
 |-|-|-|-|
@@ -39,7 +39,8 @@ El resto de este tema está estructurado según esa taxonomía.
 |Espacios de nombres de proyección|`using System;`|`using namespace Windows::Foundation;`||
 ||`using System.Collections.Generic;`|`using namespace Windows::Foundation::Collections;`||
 |Tamaño de una colección|`collection.Count`|`collection.Size()`|[Migración del método **BuildClipboardFormatsOutputString**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring)|
-|Colección de solo lectura|[**IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1)|[**IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1)|[Migración del método **BuildClipboardFormatsOutputString**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring)|
+|Tipo de colección típico|[**IList\<T\>** ](/dotnet/api/system.collections.generic.ilist-1) y **Agregar** para agregar un elemento.|[**IVector\<T\>** ](/uwp/api/windows.foundation.collections.ivector-1) y **Anexar** para agregar un elemento. Si usa un elemento **std::vector** en alguna parte, emplee **push_back** para agregar un elemento.||
+|Tipo de colección de solo lectura|[**IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1)|[**IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1)|[Migración del método **BuildClipboardFormatsOutputString**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring)|
 |Delegado del controlador de eventos como miembro de clase|`myObject.EventName += Handler;`|`token = myObject.EventName({ get_weak(), &Class::Handler });`|[Migración del método **EnableClipboardContentChangedNotifications**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#enableclipboardcontentchangednotifications)|
 |Delegado del controlador de eventos de revocación|`myObject.EventName -= Handler;`|`myObject.EventName(token);`|[Migración del método **EnableClipboardContentChangedNotifications**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#enableclipboardcontentchangednotifications)|
 |Contenedor asociativo|[**IDictionary\<K, V\>** ](/dotnet/api/system.collections.generic.idictionary-2)|[**IMap\<K, V\>** ](/uwp/api/windows.foundation.collections.imap-2)||
@@ -104,27 +105,30 @@ void OpenButton_Click(Object sender, Windows.UI.Xaml.RoutedEventArgs e);
 > [!NOTE]
 > Declara la función como `void` incluso si la *implementas* como [Desencadenamiento y olvido](/windows/uwp/cpp-and-winrt-apis/concurrency-2#fire-and-forget).
 
-## <a name="port-language-syntax"></a>Sintaxis del lenguaje de migración
+## <a name="changes-that-involve-the-language-syntax"></a>Cambios relacionados con la sintaxis del lenguaje
 
 ||C#|C++/WinRT|Consulta también|
 |-|-|-|-|
 |Modificadores de acceso|`public \<member\>`|`public:`<br>&nbsp;&nbsp;&nbsp;&nbsp;`\<member\>`|[Migración del método **Button_Click**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#button_click)|
+|Acceso a un miembro de datos|`this.variable`|`this->variable`||
 |Acción asincrónica|`async Task ...`|`IAsyncAction ...`||
 |Operación asincrónica|`async Task<T> ...`|`IAsyncOperation<T> ...`||
 |Método Fire-and-forget (implica una asincronía)|`async void ...`|`winrt::fire_and_forget ...`|[Migración del método **CopyButton_Click**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#copybutton_click)|
-|Espera cooperativa|`await ...`|`co_await ...`|[Migración del método **CopyButton_Click**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#copybutton_click)|
 |Acceso a una constante enumerada|`E.Value`|`E::Value`|[Migración del método **DisplayChangedFormats**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#displaychangedformats)|
+|Espera cooperativa|`await ...`|`co_await ...`|[Migración del método **CopyButton_Click**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#copybutton_click)|
+|Colección de tipos proyectados como campo privado|`private List<MyRuntimeClass> myRuntimeClasses = new List<MyRuntimeClass>();`|`std::vector`<br>`<MyNamespace::MyRuntimeClass>`<br>`m_myRuntimeClasses;`||
+|Construcción de GUID|`private static readonly Guid myGuid = new Guid("C380465D-2271-428C-9B83-ECEA3B4A85C1");`|`winrt::guid myGuid{ 0xC380465D, 0x2271, 0x428C, { 0x9B, 0x83, 0xEC, 0xEA, 0x3B, 0x4A, 0x85, 0xC1} };`||
 |Separador de espacios de nombres|`A.B.T`|`A::B::T`||
 |Null|`null`|`nullptr`|[Migración del método **UpdateStatus**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#updatestatus)|
+|Obtención de un objeto type|`typeof(MyType)`|`winrt::xaml_typename<MyType>()`|[Migración de la propiedad **Scenarios**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#scenarios)|
 |Declaración de parámetros para un método|`MyType`|`MyType const&`|[Parameter-passing](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)|
 |Declaración de parámetros para un método asincrónico|`MyType`|`MyType`|[Parameter-passing](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)|
 |Llamada a un método estático|`T.Method()`|`T::Method()`||
 |Cadenas|`string` o **System.String**|[**winrt::hstring**](/uw/cpp-ref-for-winrt/hstring)|[Control de cadenas en C++/WinRT](/windows/uwp/cpp-and-winrt-apis/strings)|
 |Literal de cadena|`"a string literal"`|`L"a string literal"`|[Migración del constructor, **Current** y **FEATURE_NAME**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#the-constructor-current-and-feature_name)|
-|Literal de cadena sin formato/textual|`@"verbatim string literal"`|`LR"(raw string literal)"`|[Migración del método **DisplayToast**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp##displaytoast)|
-|Acceso a un miembro de datos|`this.variable`|`this->variable`||
-|Using-directive|`using A.B.C;`|`using namespace A::B::C;`|[Migración del constructor, **Current** y **FEATURE_NAME**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#the-constructor-current-and-feature_name)|
 |Tipo inferido (o deducido)|`var`|`auto`|[Migración del método **BuildClipboardFormatsOutputString**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring)|
+|Using-directive|`using A.B.C;`|`using namespace A::B::C;`|[Migración del constructor, **Current** y **FEATURE_NAME**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#the-constructor-current-and-feature_name)|
+|Literal de cadena sin formato/textual|`@"verbatim string literal"`|`LR"(raw string literal)"`|[Migración del método **DisplayToast**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp##displaytoast)|
 
 > [!NOTE]
 > Si un archivo de encabezado no contiene una directiva de `using namespace` para un espacio de nombres determinado, deberás calificar completamente todos los nombres de tipo de ese espacio de nombre, o por lo menos lo suficiente como para que el compilador los pueda encontrar. Para obtener un ejemplo, consulta [Migración del método **DisplayToast**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp##displaytoast).
@@ -145,7 +149,7 @@ En el caso de las funciones de miembro, de nuevo deberás decidir si cada una de
 
 En el tema [Migración del ejemplo de Clipboard a C++/WinRT desde C#](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp), pudimos usar *el mismo* marcado XAML (incluidos los recursos) y los archivos de recursos en el proyecto de C# y de C++/WinRT. En algunos casos, se requerirán ediciones en el marcado para lograrlo. Consulta el tema [Copia de XAML y estilos necesarios para terminar de portar **MainPage**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#copy-the-xaml-and-styles-necessary-to-finish-up-porting-mainpage).
 
-## <a name="port-language-procedure"></a>Procedimiento de migración del lenguaje
+## <a name="changes-that-involve-procedures-within-the-language"></a>Cambios que implican procedimientos del lenguaje
 
 ||C#|C++/WinRT|Consulta también|
 |-|-|-|-|
@@ -168,13 +172,39 @@ En el tema [Migración del ejemplo de Clipboard a C++/WinRT desde C#](/windows/u
 |Creación de cadenas|`StringBuilder builder;`<br>`builder.Append(...);`|`std::wostringstream builder;`<br>`builder << ...;`|[String-building](#string-building)|
 |Interpolación de cadenas|`$"{i++}) {s.Title}"`|[**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring) o [**winrt::hstring::operator+** ](/uwp/cpp-ref-for-winrt/hstring#operator-concatenation-operator)|[Migración del método **OnNavigatedTo**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#onnavigatedto)|
 |Cadena vacía para la comparación|**System.String.Empty**|[**winrt::hstring::empty**](/uwp/cpp-ref-for-winrt/hstring#hstringempty-function)|[Migración del método **UpdateStatus**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#updatestatus)|
+|Creación de una cadena vacía|`var myEmptyString = String.Empty;`|`winrt::hstring myEmptyString{ L"" };`||
 |Operaciones de diccionario|`map[k] = v; // replaces any existing`<br>`v = map[k]; // throws if not present`<br>`map.ContainsKey(k)`|`map.Insert(k, v); // replaces any existing`<br>`v = map.Lookup(k); // throws if not present`<br>`map.HasKey(k)`||
 |Conversión de tipos (iniciar en caso de error)|`(MyType)v`|`v.as<MyType>()`|[Migración del método **Footer_Click**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#footer_click)|
 |Conversión de tipos (null en caso de error)|`v as MyType`|`v.try_as<MyType>()`|[Migración del método **PasteButton_Click**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#pastebutton_click)|
 |Los elementos XAML con x:Name son propiedades.|`MyNamedElement`|`MyNamedElement()`|[Migración del constructor, **Current** y **FEATURE_NAME**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#the-constructor-current-and-feature_name)|
 |Cambio al subproceso de interfaz de usuario|**CoreDispatcher.RunAsync**|**CoreDispatcher.RunAsync** o [**winrt::resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground)|[Migración del método **NotifyUser**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#notifyuser) y [Migración del método **HistoryAndRoaming**](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#historyandroaming)|
+|Construcción de elementos de la interfaz de usuario con código imperativo en una página XAML|Consulte la [construcción de elementos de la interfaz de usuario](#ui-element-construction).|Consulte la [construcción de elementos de la interfaz de usuario](#ui-element-construction).||
 
 En las secciones siguientes se explican con más detalle los elementos de la tabla.
+
+### <a name="ui-element-construction"></a>Construcción de elementos de la interfaz de usuario
+
+En estos ejemplos de código se muestra la construcción de un elemento de la interfaz de usuario en el código imperativo de una página XAML.
+
+```csharp
+var myTextBlock = new TextBlock()
+{
+    Text = "Text",
+    Style = (Windows.UI.Xaml.Style)this.Resources["MyTextBlockStyle"]
+};
+```
+
+```cppwinrt
+TextBlock myTextBlock;
+myTextBlock.Text(L"Text");
+myTextBlock.Style(
+    winrt::unbox_value<Windows::UI::Xaml::Style>(
+        Resources().Lookup(
+            winrt::box_value(L"MyTextBlockStyle")
+        )
+    )
+);
+```
 
 ### <a name="tostring"></a>ToString()
 
