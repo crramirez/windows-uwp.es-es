@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: 6cc020930e3b768f74ddb7cdfef3338ae537bd5d
-ms.sourcegitcommit: f806d5f3b0c1e046c903d3388092c0e059d21858
+ms.openlocfilehash: 7d340b3db12aef964a65860855acc0f0722cda64
+ms.sourcegitcommit: 6cdba316bdbd85a2429259ebfb59ff94440e234a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791031"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882931"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Los creadores de aplicaciones de Fluent Design System para Windows
 
@@ -58,7 +58,7 @@ Además de instrucciones de diseño, nuestros artículos sobre Fluent Design tam
 </Grid>
 ```
 
-![](images/fluent/xaml-example.png)
+![Ejemplo de XAML](images/fluent/xaml-example.png)
 
 
 > Si no estás familiarizado con el desarrollo para UWP, consulta nuestra [página de introducción a UWP](/windows/uwp/get-started).

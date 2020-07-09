@@ -4,12 +4,12 @@ description: Enumera los paquetes NuGet de la biblioteca de interfaz de usuario 
 ms.topic: article
 ms.date: 04/15/2020
 keywords: windows 10, uwp, sdk del kit de herramientas
-ms.openlocfilehash: 2bda405977733a6191c4434fd8bd2c63b2ce10ce
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: fdb11193273f7f6c54ef82076939c033d5a4168c
+ms.sourcegitcommit: 6cdba316bdbd85a2429259ebfb59ff94440e234a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580712"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882872"
 ---
 # <a name="windows-ui-library-nuget-packages"></a>Paquetes NuGet de la biblioteca de interfaz de usuario de Windows
 
@@ -25,7 +25,7 @@ NuGet es un administrador de paquetes estándar para aplicaciones .NET, que est�
 
 Al buscar en el administrador de paquetes de Visual Studio, debería ver una lista similar a esta (los números de versión pueden ser diferentes, pero los nombres deben ser los mismos).
 
-![](images/NugetPackages.png)
+![Administrador de paquetes NuGet](images/NugetPackages.png)
 
 ## <a name="update-nuget-packages"></a>Actualización de paquetes NuGet
 
