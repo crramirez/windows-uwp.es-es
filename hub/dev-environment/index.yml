@@ -9,12 +9,12 @@ metadata:
   ms.date: 06/12/2020
   ms.prod: dev-environment
   ms.topic: landing-page
-  ms.openlocfilehash: 4d30b505c4ced08a906f443a65d0e7d0a34a5e01
-  ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
+  ms.openlocfilehash: 68b448a5d7e6c9b56112ec0a0160a3681849d4ef
+  ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/12/2020
-  ms.locfileid: "84746744"
+  ms.lasthandoff: 07/20/2020
+  ms.locfileid: "86493180"
 landingContent:
 - title: Introducción a Python
   linkLists:
@@ -28,8 +28,8 @@ landingContent:
       url: ../python/web-frameworks.md
     - text: Configuración para scripts de automatización
       url: ../python/scripting.md
-    - text: Configuración de bases de datos con WSL
-      url: ../python/databases.md
+    - text: Conexión de bases de datos con WSL
+      url: https://docs.microsoft.com/windows/wsl/tutorials/wsl-database
   - linkListType: tutorial
     links:
     - text: Prueba de algunos aspectos básicos de Python
@@ -58,8 +58,8 @@ landingContent:
       url: ../nodejs/beginners.md
     - text: Desarrollo de aplicaciones web
       url: ../nodejs/web-frameworks.md
-    - text: Conexión de bases de datos
-      url: ../nodejs/databases.md
+    - text: Conexión de bases de datos con WSL
+      url: https://docs.microsoft.com/windows/wsl/tutorials/wsl-database
     - text: Uso de contenedores de Docker
       url: ../nodejs/containers.md
   - linkListType: tutorial

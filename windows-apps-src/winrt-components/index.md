@@ -6,22 +6,23 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 39759bec429bfe7952777d9669b7971a09136116
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: db49dfc613b6f7ca2afdb6cc7bdb6b6407751402
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82034139"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493510"
 ---
 # <a name="windows-runtime-components"></a>Componentes de Windows Runtime
 
-Los componentes de Windows Runtime son módulos de software independientes a los que puedes hacer referencia y que puedes usar desde cualquier lenguaje, como C#, C++/WinRT, Visual Basic, JavaScript y C++/CX. Puedes usar Visual Studio para crear componentes de Windows Runtime que puedan usarse en aplicaciones de la Plataforma universal de Windows (UWP).
+Un componente de Windows Runtime es un módulo de software independiente al que puede hacer referencia y que puede usar con cualquier lenguaje de Windows Runtime (como C#, C++/WinRT, Visual Basic, JavaScript y C++/CX). Puede usar Visual Studio para crear un componente de Windows Runtime que pueda usarse en la aplicación de la Plataforma universal de Windows (UWP).
 
 > [!NOTE]
-> Si eres desarrollador de C++, te recomendamos que uses [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) para las nuevas aplicaciones. C++/WinRT es una moderna proyección de lenguaje C++17 totalmente estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivos de encabezado y diseñada para darte acceso de primera clase a la API moderna de Windows. Para obtener información sobre cómo crear un componente de Windows Runtime con C++/WinRT, consulta [Crear eventos en C++/WinRT](../cpp-and-winrt-apis/author-events.md).
+> Si eres desarrollador de C++, te recomendamos que uses [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) para las nuevas aplicaciones. C++/WinRT es una moderna proyección de lenguaje C++17 totalmente estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivos de encabezado y diseñada para darte acceso de primera clase a la API moderna de Windows. Para obtener información sobre cómo crear un componente de Windows Runtime con C++/WinRT, consulte [Componentes de Windows Runtime con C++/WinRT](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt).
 
 | Tema | Descripción |
 |-------|-------------|
+| [Componentes de Windows Runtime con C++/WinRT](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) | En este tema se muestra cómo usar C++/WinRT para crear y consumir un componente de Windows Runtime&mdash;, que es un componente que se puede llamar desde una aplicación universal de Windows compilada mediante el lenguaje de Windows Runtime. |
 | [Componentes de Windows Runtime con C++/CX](creating-windows-runtime-components-in-cpp.md) | En este tema se muestra cómo usar C++/CX para crear un componente de Windows Runtime&mdash;, que es un componente que se puede llamar desde una aplicación universal de Windows compilada mediante el lenguaje de Windows Runtime. |
 | [Tutorial para crear un componente de Windows Runtime en C++/CX y llamarlo desde JavaScript o C#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md) | En este tutorial se muestra cómo crear un archivo DLL básico del componente de Windows Runtime que se pueda llamar desde JavaScript, C# o Visual Basic. Antes de comenzar este tutorial, asegúrate de que conoces conceptos como la interfaz binaria abstracta (ABI), las clases de referencia y las extensiones del componente de Visual C++, que facilitan el trabajo con clases de referencia. Para obtener más información, consulta [Crear componentes de Windows Runtime en C++](creating-windows-runtime-components-in-cpp.md) y [Referencia del lenguaje de Visual C++ (C++/CX)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx). |
 | [Componentes de Windows Runtime con C# y Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) | Puedes usar código administrado para crear tus propios tipos de Windows Runtime, empaquetados en un componente de Windows Runtime. Puedes usar tu componente en aplicaciones de la Plataforma universal de Windows (UWP) con C++, JavaScript, Visual Basic o C#. En este tema se describen las reglas de creación de un componente y se analizan algunos aspectos de la compatibilidad con .NET para Windows Runtime. En general, esa compatibilidad está diseñada para ser transparente para los programadores de .NET. Sin embargo, cuando creas un componente para su uso con JavaScript o C++, debes tener en cuenta las diferencias en la forma en que esos lenguajes son compatibles con Windows Runtime. |

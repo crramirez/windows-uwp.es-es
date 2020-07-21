@@ -7,6 +7,8 @@
           href: desktop/index.md
         - name: Elección de la plataforma de aplicaciones
           href: desktop/choose-your-platform.md
+        - name: Plantillas de Visual Studio para aplicaciones de Windows
+          href: desktop/visual-studio-templates.md
         - name: Modernización de las aplicaciones de escritorio
           items:
             - name: Introducción
@@ -77,18 +79,23 @@
       items:
         - name: Introducción
           href: winui/index.md
-        - name: "Biblioteca de interfaz de usuario de Windows\_3.0, versión preliminar\_1"
+        - name: "Biblioteca de interfaz de usuario de Windows\_3.0, versión preliminar\_2"
           items:
-            - name: Descarga y notas de la versión
+            - name: Introducción y notas de la versión
               href: winui/winui3/index.md
             - name: "Introducción a WinUI\_3.0 para aplicaciones de escritorio"
               href: winui/winui3/get-started-winui3-for-desktop.md
+            - name: "Introducción a WinUI\_3 para aplicaciones para UWP"
+              href: winui/winui3/get-started-winui3-for-uwp.md
+            - name: Controles XAML con plantilla para aplicaciones para UWP y WinUI 3 con C++ /WinRT
+              href: winui/winui3/xaml-templated-controls-cppwinrt-winui3.md
         - name: Biblioteca de interfaz de usuario de Windows 2.x
-          href: winui/winui2/index.md
           items:
+            - name: Introducción
+              href: winui/winui2/index.md
             - name: Instalación
               items:
-                - name: Introducción
+                - name: Introducción a WinUI 2.x
                   href: winui/winui2/getting-started.md
                 - name: Lista de paquetes NuGet
                   href: winui/winui2/nuget-packages.md

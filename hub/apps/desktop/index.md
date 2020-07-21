@@ -7,12 +7,12 @@ keywords: windows win32, desarrollo de escritorio
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: d052ad0f670bccd9b32d2e3643520dd6129ed22a
-ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
+ms.openlocfilehash: 20399b9a6398b1f17f74d2de74cc4b5e4ba270ac
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84262746"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493000"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Compilación de aplicaciones de escritorio para PC Windows
 
@@ -20,9 +20,7 @@ En este artículo se proporciona la información necesaria para empezar a compil
 
 ## <a name="platforms-for-desktop-apps"></a>Plataformas para aplicaciones de escritorio
 
-Hay cuatro plataformas principales para compilar aplicaciones de escritorio para equipos Windows. Cada plataforma proporciona un modelo de aplicación que define el ciclo de vida de la aplicación, un conjunto completo de controles de interfaz de usuario, y el acceso a un conjunto completo de API nativas o administradas para usar las características de Windows.
-
-En la tabla siguiente se presentan las plataformas. Para obtener una comparación detallada de estas plataformas junto con los recursos adicionales de cada una, consulta [Elección de la plataforma de aplicaciones](choose-your-platform.md).
+Hay cuatro plataformas principales para compilar aplicaciones de escritorio para equipos Windows. Cada plataforma proporciona un modelo de aplicación que define el ciclo de vida de la aplicación, un marco de trabajo completo de la interfaz de usuario y un conjunto de controles de interfaz de usuario que permiten crear aplicaciones de escritorio como Word, Excel y Photoshop, y el acceso a un conjunto completo de API nativas o administradas para usar las características de Windows. Para obtener una comparación detallada de estas plataformas junto con los recursos adicionales de cada una, consulta [Elección de la plataforma de aplicaciones](choose-your-platform.md).
 
 <br/>
 
@@ -46,8 +44,8 @@ En la tabla siguiente se presentan las plataformas. Para obtener una comparació
 <td><a href="/windows/uwp/get-started/">Introducción</a><br/><a href="/uwp/">Referencia de las API</a><br/><a href="https://github.com/Microsoft/Windows-universal-samples">Ejemplos</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://docs.microsoft.com/windows/win32/">Win32</a></td>
-<td><p>Plataforma preferida para aplicaciones Windows C/C++ nativas que requieren acceso directo a Windows y al hardware.</p></td>
+<td><a href="https://docs.microsoft.com/windows/win32/">C++/Win32</a></td>
+<td><p>Plataforma preferida para aplicaciones Windows nativas que requieren acceso directo a Windows y al hardware.</p></td>
 <td><a href="/windows/win32/desktop-programming/">Introducción</a><br/><a href="/windows/win32/apiindex/windows-api-list/">Referencia de las API</a><br/><a href="https://github.com/Microsoft/Windows-classic-samples">Ejemplos</a></td>
 </tr>
 <tr class="odd">
@@ -64,7 +62,7 @@ En la tabla siguiente se presentan las plataformas. Para obtener una comparació
 </table>
 
 > [!NOTE]
-> Todas estas plataformas proporcionan un completo marco de trabajo de la interfaz de usuario, así como un conjunto de controles, que te permiten crear aplicaciones de escritorio como Word, Excel y Photoshop, que se ejecutan en el escritorio clásico de Windows y aprovechan al máximo las características específicas de ese entorno. En Windows 10, todas estas plataformas también admiten el uso de la biblioteca de interfaz de usuario de Windows (WinUI) para crear sus interfaces de usuario. Para más información sobre WinUI para aplicaciones de escritorio, consulta [esta sección](choose-your-platform.md#windows-ui-library).
+> En Windows 10, todas estas plataformas también admiten el uso de la biblioteca de interfaz de usuario de Windows (WinUI) para crear interfaces de usuario. Para más información sobre WinUI para aplicaciones de escritorio, consulta [esta sección](choose-your-platform.md#windows-ui-library).
 
 ## <a name="update-existing-desktop-apps-for-windows-10"></a>Actualización de aplicaciones de escritorio existentes para Windows 10
 
@@ -94,6 +92,7 @@ Si estás creando una nueva aplicación de escritorio para Windows, aquí tienes
 | Artículo | Descripción |
 |---------|-------------|
 | [Elección de la plataforma de aplicaciones](choose-your-platform.md) | Proporciona una comparación detallada de las principales plataformas de aplicaciones de escritorio y puede ayudarte a elegir la plataforma adecuada para tus necesidades. En este artículo también se proporcionan vínculos útiles a documentos de cada plataforma. |
+| [Plantillas de proyecto Visual Studio para aplicaciones de Windows](visual-studio-templates.md) | Describe las plantillas de proyecto y elementos que Visual Studio proporciona para ayudarle a compilar aplicaciones para dispositivos Windows 10 mediante el uso de C\# o C++. |
 | [Modernización de las aplicaciones de escritorio](/windows/apps/desktop/modernize) | Describe las características de desarrollo de Windows 10 y UWP más recientes que puedes usar en cualquier aplicación de escritorio, incluidas las aplicaciones de escritorio de WPF, Windows Forms y C++ Win32. |
 | [Características y tecnologías](/windows/apps/features-and-technologies) | Proporciona información general sobre las características de Windows a las que se puede acceder a través de cada una de las plataformas de aplicaciones de escritorio principales, además de vínculos a los documentos relacionados. |
 

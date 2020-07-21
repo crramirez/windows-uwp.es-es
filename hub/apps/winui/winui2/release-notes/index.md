@@ -1,14 +1,14 @@
 ---
 title: Notas de la versión de WinUI
 description: Índice de notas de la versión de WinUI.
-ms.date: 05/08/2020
+ms.date: 07/15/2020
 ms.topic: reference
-ms.openlocfilehash: cf1cf75d7f92107c88f27008bff53c76d37715ec
-ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
+ms.openlocfilehash: 4161b8d8a74ffc493c44bba5104c54cb911861c6
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83775817"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492880"
 ---
 # <a name="windows-ui-library-2x-release-notes"></a>Notas de la versión de la biblioteca de interfaz de usuario de Windows UI 2.x
 
@@ -52,6 +52,6 @@ Historial de versiones del [paquete NuGet Microsoft.UI.Xaml](https://www.nuget.o
 | [2.1](winui-2.1.md) | Estable | Abril de 2019 | [Notas de la versión](winui-2.1.md) | **Primera versión de código abierto** de [GitHub](https://github.com/microsoft/microsoft-ui-xaml). Incluye [ItemsRepeater](winui-2.1.md#itemsrepeater), [AnimatedVisualPlayer](winui-2.1.md#animatedvisualplayer), [TeachingTip](winui-2.1.md#teachingtip), [RadioMenuFlyoutItem](winui-2.1.md#radiomenuflyoutitem), [CompactDensity](winui-2.1.md#compactdensity) y [Shadows](winui-2.1.md#shadows). |
 | [2.0](winui-2.0.md) | Estable | Octubre de 2018 | [Notas de la versión](winui-2.0.md) | **Versión inicial**. Incluye las características y los controles de Fluent nativos para las aplicaciones para UWP de Windows.  |
 
-### <a name="winui-3-preview-1"></a>WinUI 3, versión preliminar 1
+### <a name="windows-ui-library-3-preview-2-july-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)
 
-Para obtener más información sobre la prueba de versiones preliminares de WinUI 3, consulta [WinUI 3.0, versión preliminar 1](../../winui3/index.md).
+Para información sobre la prueba de versiones preliminares de WinUI 3, consulte [Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)](../../winui3/index.md).
