@@ -12,7 +12,7 @@
         - name: Introducción a la automatización
           href: ../python/scripting.md
         - name: Introducción a las bases de datos
-          href: ../python/databases.md
+          href: 'https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
         - name: Preguntas más frecuentes
           href: ../python/faqs.md
         - name: Recursos
@@ -30,7 +30,7 @@
         - name: Introducción a los marcos web
           href: ../nodejs/web-frameworks.md
         - name: Introducción a las bases de datos
-          href: ../nodejs/databases.md
+          href: '.https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
         - name: Introducción a los contenedores
           href: ../nodejs/containers.md
     - name: Desarrollo con Android
@@ -92,10 +92,10 @@
         - name: Cambiar el entorno de desarrollo
           href: mac-to-windows.md
         - name: Métodos abreviados de teclado
-          href: 'mac-to-windows.md#keyboard-shortcuts'
+          href: mac-to-windows.md#keyboard-shortcuts
         - name: Accesos directos de panel táctil
-          href: 'mac-to-windows.md#trackpad-shortcuts'
+          href: mac-to-windows.md#trackpad-shortcuts
         - name: Terminal y shell
-          href: 'mac-to-windows.md#terminal-and-shell'
+          href: mac-to-windows.md#terminal-and-shell
         - name: Aplicaciones y utilidades
-          href: 'mac-to-windows.md#apps-and-utilities'
+          href: mac-to-windows.md#apps-and-utilities
