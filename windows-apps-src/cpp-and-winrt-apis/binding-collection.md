@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, XAML, control, binding, collection
 ms.localizationpriority: medium
-ms.openlocfilehash: a98056190d035910a8ed83d2f37799a98b685ce6
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 388e8ebb062dbbb33ffb269f2adcced34a7e577c
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "70304510"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493650"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>Controles de elementos de XAML; enlazar a una colección C++/WinRT
 
@@ -22,6 +22,7 @@ Si deseas seguir este tema, es mejor que primero crees el proyecto que se descri
 > Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
 
 ## <a name="what-does-observable-mean-for-a-collection"></a>¿Qué significa *observable* con respecto a una colección?
+
 Si una clase en tiempo de ejecución que representa una colección elige generar el evento [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) cada vez que un elemento se agregue a ella o se quite de ella, la clase en tiempo de ejecución es una colección observable. El control de elementos XAML puede enlazarse a estos eventos, y controlarlos, mediante la recuperación de la colección actualizada y luego actualizarse automáticamente para mostrar los elementos actuales.
 
 > [!NOTE]
@@ -93,6 +94,7 @@ Windows::Foundation::Collections::IObservableVector<Bookstore::BookSku> Bookstor
 ```
 
 ## <a name="bind-a-listbox-to-the-bookskus-property"></a>Enlaza un elemento ListBox a la propiedad **BookSkus**.
+
 Abre `MainPage.xaml`, que contiene el marcado XAML de nuestra página principal de la interfaz de usuario. Agrega el siguiente marcado dentro del mismo elemento **StackPanel** que **Button**.
 
 ```xaml
@@ -121,9 +123,11 @@ void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 Ahora compila y ejecuta el proyecto. Haz clic en el botón para ejecutar el controlador de eventos **Clic**. Observamos que la implementación de **Append** genera un evento para informar a la interfaz de usuario de que ha cambiado la colección; y el elemento **ListBox** vuelve a consultar la colección para actualizar su propio valor de **Items**. Igual que antes, el título de uno de los libros cambia. Dicho cambio de título se refleja en el botón y en el cuadro de lista.
 
 ## <a name="important-apis"></a>API importantes
+
 * [IObservableVector&lt;T&gt;::VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
 * [Plantilla de función winrt::make ](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>Temas relacionados
+
 * [Consumir API con C++/WinRT](consume-apis.md)
 * [Crear API con C++/WinRT](author-apis.md)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d00a41c5a58935a4ecfe623c71a1264a2dc1132
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 6db47510b28e42ab1ef638af6a980eb4ca7290d4
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71339612"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493170"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>Virtualización de datos de ListView y GridView
 
@@ -41,7 +41,7 @@ La virtualización de datos incremental carga los datos en secuencia. Un [**List
 
 Un origen de datos como el siguiente, es una lista en memoria que se puede extender continuamente. El control de elementos solicitará elementos con el indexador [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist) estándar y las propiedades de recuento. El recuento debe representar el número de elementos localmente, no el tamaño real del conjunto de datos.
 
-Cuando el control de elementos se acerque al final de los datos existentes, llamará a [**ISupportIncrementalLoading.HasMoreItems**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems). Si devuelves **true**, a continuación, llamará a [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) pasando un número de elementos para cargar recomendado. Dependiendo desde dónde se están cargando datos (disco local, red o nube), puedes cargar un número diferente de elementos que el recomendado. Por ejemplo, si el servicio admite lotes de 50 elementos, pero el control de elementos solo solicita 10, puede cargar 50. Carga los datos desde el backend, agrégalos a la lista y genera una notificación de cambio a través de la interfaz [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) o [**IObservableVector&lt;T&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_), para que el control de elementos reconozca los elementos nuevos. Asimismo, también devuelve un recuento de los elementos cargados realmente. Si cargas menos elementos que lo recomendado o el control de elementos se ha movido panorámicamente/desplazado incluso más aún en el transcurso, se llamará nuevamente al origen de datos para obtener más elementos y el ciclo continuará. Para obtener más información, descarga el [ejemplo de enlace de datos XAML](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) para Windows 8.1 y vuelve a usar su código fuente en tu aplicación de Windows 10.
+Cuando el control de elementos se acerque al final de los datos existentes, llamará a [**ISupportIncrementalLoading.HasMoreItems**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems). Si devuelves **true**, a continuación, llamará a [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) pasando un número de elementos para cargar recomendado. Dependiendo desde dónde se están cargando datos (disco local, red o nube), puedes cargar un número diferente de elementos que el recomendado. Por ejemplo, si el servicio admite lotes de 50 elementos, pero el control de elementos solo solicita 10, puede cargar 50. Carga los datos desde el backend, agrégalos a la lista y genera una notificación de cambio a través de la interfaz [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) o [**IObservableVector&lt;T&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_), para que el control de elementos reconozca los elementos nuevos. Asimismo, también devuelve un recuento de los elementos cargados realmente. Si cargas menos elementos que lo recomendado o el control de elementos se ha movido panorámicamente/desplazado incluso más aún en el transcurso, se llamará nuevamente al origen de datos para obtener más elementos y el ciclo continuará. Para obtener más información, descarga el [ejemplo de enlace de datos XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20data%20binding%20sample%20(Windows%208)) para Windows 8.1 y vuelve a usar su código fuente en tu aplicación de Windows 10.
 
 ## <a name="random-access-data-virtualization"></a>Virtualización de datos de acceso aleatorio
 
