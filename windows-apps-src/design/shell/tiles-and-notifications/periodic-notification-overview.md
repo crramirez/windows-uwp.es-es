@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 617b5d013c8452733fae2a1fa7c16180d37fbe57
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 241d59d096775646a5da1301bdd4b44f67c6abf1
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259720"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493420"
 ---
 # <a name="periodic-notification-overview"></a>Introducción a las notificaciones periódicas
  
@@ -25,11 +25,11 @@ Las notificaciones periódicas, también denominadas notificaciones de sondeo, a
 
 Las notificaciones periódicas permiten a la aplicación obtener actualizaciones activas de icono con niveles mínimos de inversión de clientes y servicio de nube. También son un excelente método para distribuir el mismo contenido a una audiencia amplia.
 
-**Tenga en cuenta**   puede obtener más información si descarga el [ejemplo de notificaciones de extracción y periódicas](https://code.msdn.microsoft.com/windowsapps/push-and-periodic-de225603) para Windows 8.1 y vuelve a usar su código fuente en su aplicación de Windows 10.
+**Nota:**    Puede obtener más información si descarga el [ejemplo de notificaciones de extracción y periódicas](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Push%20and%20periodic%20notifications%20client-side%20sample%20(Windows%208)) para Windows 8.1 y vuelve a usar su código fuente en su aplicación de Windows 10.
 
  
 
-## <a name="how-it-works"></a>Cómo funciona
+## <a name="how-it-works"></a>Funcionamiento
 
 
 Las notificaciones periódicas requieren que la aplicación hospede un servicio de nube. Todos los usuarios que tienen la aplicación instalada sondean el servicio de forma periódica. En cada intervalo de sondeo, por ejemplo, una vez cada hora, Windows envía una solicitud HTTP GET al URI, descarga el contenido del icono o distintivo solicitado (como XML) que se suministra en la respuesta a la solicitud, y muestra el contenido en el icono de la aplicación.
@@ -48,9 +48,9 @@ La respuesta del servidor de nube incluye el contenido descargado. El contenido 
 
 Para comenzar a sondear llama a uno de estos métodos:
 
--   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (mosaico)
+-   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (icono)
 -   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (distintivo)
--   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (mosaico)
+-   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (icono)
 
 Cuando se llama a uno de estos métodos, se sondea inmediatamente el URI y el icono o distintivo se actualiza con el contenido recibido. Después de este sondeo inicial, Windows continúa proporcionando actualizaciones con el intervalo solicitado. El sondeo continúa hasta que lo detienes explícitamente (con [**TileUpdater.StopPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater.StopPeriodicUpdate)), se desinstala tu aplicación o, en el caso de un icono secundario, se quita el icono. En caso contrario, Windows sigue sondeando las actualizaciones del icono o distintivo aunque la aplicación no vuelva a iniciarse nunca.
 
@@ -68,9 +68,9 @@ Si proporcionas una hora de inicio, la primera llamada al método sondea el cont
 
 El URI solo se sondea si el dispositivo está en línea. Si la red está disponible pero no se puede establecer contacto con el URI por algún motivo, esta iteración del intervalo de sondeo se omite y el URI se sondeará de nuevo en el siguiente intervalo. Si el dispositivo está en estado apagado, suspendido o hibernado cuando se alcanza un intervalo de sondeo, el URI se sondea cuando el dispositivo se enciende o se reactiva.
 
-### <a name="handling-app-updates"></a>Administración de las actualizaciones de aplicaciones
+### <a name="handling-app-updates"></a>Control de actualizaciones de aplicaciones
 
-Si publicas una actualización de la aplicación que cambie el URI de sondeo, debes agregar una [tarea en segundo plano de desencadenador de hora](../../../launch-resume/run-a-background-task-on-a-timer-.md) diaria que llame a StartPeriodicUpdate con el nuevo URI para garantizar que los iconos utilizan el nuevo URI. De lo contrario, si los usuarios recibe la actualización de la aplicación pero no la inician, sus iconos seguirá utilizando el URI antiguo, lo que puede causar que no se muestren si el URI ya no es válido o si la carga devuelta hace referencia a imágenes locales que ya no existen.
+Si publica una actualización de la aplicación que cambia el URI de sondeo, debe agregar una [tarea en segundo plano de desencadenador de tiempo](../../../launch-resume/run-a-background-task-on-a-timer-.md) diario que llama a StartPeriodicUpdate con el nuevo URI para asegurarse de que los mosaicos usan el nuevo URI. De lo contrario, si los usuarios reciben la actualización de la aplicación, pero no inician la aplicación, sus iconos seguirán usando el URI anterior, que puede que no se muestren si el URI no es válido o si la carga devuelta hace referencia a imágenes locales que ya no existen.
 
 ## <a name="expiration-of-tile-and-badge-notifications"></a>Expiración de las notificaciones de icono y de distintivo
 
@@ -90,7 +90,7 @@ Si la cola ha alcanzado su capacidad de cinco notificaciones, la próxima notifi
 
 Puedes usar la cola y las etiquetas de notificaciones para implementar diferentes escenarios de notificación. Por ejemplo, una aplicación de bolsa podría enviar cinco notificaciones, cada una en relación con una cotización diferente y etiquetada con el nombre de la cotización. Esto permite que la cola nunca contenga dos notificaciones para la misma cotización; la más antigua se considera obsoleta.
 
-Para obtener más información, consulta [Uso de la cola de notificaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh781199(v=win.10)).
+Para obtener más información, vea [usar la cola de notificaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh781199(v=win.10)).
 
 ### <a name="enabling-the-notification-queue"></a>Habilitar la cola de notificaciones
 
@@ -103,7 +103,7 @@ Debes proporcionar un URI único para cada notificación que quieras que Windows
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Directrices para las notificaciones periódicas](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-periodic-notification-overview)
-* [Configuración de notificaciones periódicas para distintivos](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
-* [Configuración de notificaciones periódicas para iconos](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
+* [Directrices sobre notificaciones periódicas](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-periodic-notification-overview)
+* [Cómo configurar notificaciones periódicas para distintivos](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
+* [Cómo configurar notificaciones periódicas para iconos](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
  

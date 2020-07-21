@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc45f21acf5b9a485cf6bd5ead18482f1920bf99
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 979dabe193fc1ab6ecaa8c31a70ca2364448986e
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260149"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493290"
 ---
 # <a name="getting-started-common-controls"></a>Introducción: controles habituales
 
@@ -25,17 +25,17 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 | Control de iOS (clase/protocolo) | Control de UWP equivalente |
 |------------------------------|--------------------------------------|
 | Indicador de actividad (**UIActivityIndicatorView**) | [**ProgressRing**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing) <br/> Consulta también [Inicio rápido: agregar controles de progreso](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10)) |
-| Vista de banner de publicidad (**ADBannerView**) y delegado de vista de banner de publicidad (**ADBannerViewDelegate**) | [Control](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) <br/> Consulta también [Mostrar anuncios en tu aplicación](../monetize/display-ads-in-your-app.md) |
-| Botón (UIButton) | [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) <br/> Consulta también [Inicio rápido: agregar controles de botón](https://docs.microsoft.com/previous-versions/windows/apps/jj153346(v=win.10)) |
+| Vista de banner de publicidad (**ADBannerView**) y delegado de vista de banner de publicidad (**ADBannerViewDelegate**) | [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) <br/> Vea también [mostrar anuncios en la aplicación](../monetize/display-ads-in-your-app.md) |
+| Botón (UIButton) | [Botón](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) <br/> Consulta también [Inicio rápido: agregar controles de botón](https://docs.microsoft.com/previous-versions/windows/apps/jj153346(v=win.10)) |
 | Selector de fecha (UIDatePicker) | [DatePicker](https://docs.microsoft.com/previous-versions/windows/apps/br211681(v=win.10)) |
-| Vista de imagen (UIImageView) | [Image](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) <br/> Consulta también [Image e ImageBrush](https://docs.microsoft.com/windows/uwp/controls-and-patterns/images-imagebrushes) |
+| Vista de imagen (UIImageView) | [Imagen](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) <br/> Consulta también [Image e ImageBrush](https://docs.microsoft.com/windows/uwp/controls-and-patterns/images-imagebrushes) |
 | Etiqueta (UILabel) | [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) <br/> Consulta también [Inicio rápido: mostrar texto](https://docs.microsoft.com/previous-versions/windows/apps/hh700392(v=win.10)) |
 | Vista de mapa (MKMapView) y delegado de vista de mapa (MKMapViewDelegate) | Vea [mapas de Bing para aplicaciones para UWP](https://msdn.microsoft.com/library/hh846481) |
 | Controlador de navegación (UINavigationController) y delegado de controlador de navegación (UINavigationControllerDelegate) | [Frame](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) <br/> Consulta también [Navegación](https://docs.microsoft.com/windows/uwp/layout/navigation-basics). |
 | Control de páginas (UIPageControl) | [Page](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) <br/> Consulta también [Navegación](https://docs.microsoft.com/windows/uwp/layout/navigation-basics). |
 | Vista de selector (UIPickerView) y delegado de vista de selector (UIPickerViewDelegate) | [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox) <br/> Consulta también [Agregar cuadros combinados y cuadros de lista](https://docs.microsoft.com/previous-versions/windows/apps/hh780616(v=win.10)) |
 | Barra de progreso (UIProgressView) | [ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar) <br/> Consulta también [Inicio rápido: agregar controles de progreso](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10)) |
-| Vista de desplazamiento (UIScrollView) y delegado de vista de desplazamiento (UIScrollViewDelegate) | [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) <br/>  Consulta también [Ejemplo de desplazamiento, movimiento panorámico y zoom con lenguaje XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9) |
+| Vista de desplazamiento (UIScrollView) y delegado de vista de desplazamiento (UIScrollViewDelegate) | [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) <br/>  Consulta también [Ejemplo de desplazamiento, movimiento panorámico y zoom con lenguaje XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample%20(Windows%208)) |
 | Barra de búsqueda (UISearchBar) y delegado de barra de búsqueda (UISearchBarDelegate) | Consulta [Agregar búsqueda a una aplicación](https://docs.microsoft.com/previous-versions/windows/apps/jj130767(v=win.10)) <br/>  Consulta también [Inicio rápido: agregar búsqueda a una aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh868180(v=win.10)) |
 | Control segmentado (UISegmentedControl) | Ninguno |
 | Control deslizante (UISlider) | [Control deslizante](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) <br/>  Consulta también [Cómo agregar un control deslizante](https://docs.microsoft.com/previous-versions/windows/apps/hh868197(v=win.10)) |
@@ -46,12 +46,12 @@ Los controles de UWP son inteligentes en el sentido de que pueden detectar el ti
 | Campo de texto (UITextField) y delegado de campo de texto (UITextFieldDelegate) | [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) <br/>  Consulta también [Mostrar y editar texto](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-controls) |
 | Vista de texto (UITextView) y delegado de vista de texto (UITextViewDelegate) | [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) <br/>  Consulta también [Inicio rápido: mostrar texto](https://docs.microsoft.com/previous-versions/windows/apps/hh700392(v=win.10)) |
 | Vista (UIView) y controlador de vista (UIViewController) | [Page](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) <br/>  Consulta también [Navegación](https://docs.microsoft.com/windows/uwp/layout/navigation-basics). |
-| Vista web (UIWebView) y delegado de vista web (UIWebViewDelegate) | [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) <br/>  Consulta también [Ejemplo de control WebView XAML](https://code.msdn.microsoft.com/windowsapps/XAML-WebView-control-sample-58ad63f7) |
+| Vista web (UIWebView) y delegado de vista web (UIWebViewDelegate) | [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) <br/>  Consulta también [Ejemplo de control WebView XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20WebView%20control%20sample%20(Windows%208)) |
 | Ventana (UIWindow) | [Frame](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) <br/>  Consulta también [Navegación](https://docs.microsoft.com/windows/uwp/layout/navigation-basics). |
 
 Para ver aún más controles, consulta [Lista de controles](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/).
 
-**Tenga en cuenta**  para obtener una lista de controles para aplicaciones UWP que usan JavaScript y HTML, consulte la [lista de controles](https://docs.microsoft.com/previous-versions/windows/apps/hh465453(v=win.10)).
+**Nota:**    Para obtener una lista de controles para las aplicaciones para UWP con JavaScript y HTML, consulte la [lista de controles](https://docs.microsoft.com/previous-versions/windows/apps/hh465453(v=win.10)).
 
 ### <a name="next-step"></a>Paso siguiente
 
@@ -59,6 +59,6 @@ Para ver aún más controles, consulta [Lista de controles](https://docs.microso
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [compilación 2014: ¿Qué sucede con la interfaz de usuario y los controles XAML?](https://channel9.msdn.com/Events/Build/2014/2-516)
-* [compilación 2014: desarrollo de aplicaciones con el marco de interfaz de usuario XAML común](https://channel9.msdn.com/Events/Build/2014/2-507)
-* [compilación 2014: uso de Visual Studio para compilar aplicaciones convergidas en XAML](https://channel9.msdn.com/Events/Build/2014/3-591)
+* [Build 2014: Información sobre los controles y la interfaz de usuario de XAML](https://channel9.msdn.com/Events/Build/2014/2-516)
+* [Build 2014: Desarrollar aplicaciones con el marco de trabajo de la interfaz de usuario de XAML común](https://channel9.msdn.com/Events/Build/2014/2-507)
+* [Build 2014: Usar Visual Studio para crear aplicaciones XAML convergidas](https://channel9.msdn.com/Events/Build/2014/3-591)

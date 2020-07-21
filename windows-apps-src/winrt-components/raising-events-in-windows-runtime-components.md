@@ -6,22 +6,22 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 084f9d17c773bbbfa0234d0093f0691583189c15
-ms.sourcegitcommit: 8008b7820793fa58b13e2938bf49969b3e692b46
+ms.openlocfilehash: b5b5678ad1a0666e6f008a2ec69ba63c35441edf
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688204"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493520"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Generación de eventos en componentes de Windows Runtime
 
 > [!NOTE]
-> Para obtener más información sobre la generación de eventos en un componente Windows Runtime de [c++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) , vea [crear eventos en c++/WinRT](../cpp-and-winrt-apis/author-events.md).
+> Para obtener más información sobre la generación de eventos en un componente Windows Runtime de [c++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) , vea [crear eventos en c++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-events).
 
 Si el componente de Windows Runtime genera un evento de un tipo delegado definido por el usuario en un subproceso en segundo plano (subproceso de trabajo) y desea que JavaScript pueda recibir el evento, puede implementarlo y/o generarlo de alguna de estas maneras.
 
 -   (Opción 1) Genere el evento a través de [**Windows. UI. Core. CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher) para calcular las referencias del evento en el contexto del subproceso de JavaScript. Aunque esta suele ser la mejor opción, en algunos escenarios es posible que no proporcione el rendimiento más rápido.
--   (Opción 2) Use el **objeto\<\> [Windows. Foundation. EventHandler](/uwp/api/windows.foundation.eventhandler-1)** (pero pierda la información de tipo de evento). Si la opción 1 no es factible, o si su rendimiento no es el adecuado, se trata de una buena opción siempre que se acepte la pérdida de información de tipo. Si va a crear un componente de Windows Runtime de C#, el tipo de **objeto\> Windows.\<Foundation. EventHandler** no está disponible; en su lugar, ese tipo se proyecta en [**System. EventHandler**](/dotnet/api/system.eventhandler), por lo que se debe usar en su lugar.
+-   (Opción 2) Usar ** [Windows. Foundation. EventHandler](/uwp/api/windows.foundation.eventhandler-1) \<Object\> ** (pero perder la información de tipo de evento). Si la opción 1 no es factible, o si su rendimiento no es el adecuado, se trata de una buena opción siempre que se acepte la pérdida de información de tipo. Si va a crear un componente de Windows Runtime de C#, el tipo **Windows. Foundation. \<Object\> EventHandler** no está disponible; en su lugar, ese tipo se proyecta en [**System. EventHandler**](/dotnet/api/system.eventhandler), por lo que debe usarlo en su lugar.
 -   (Opción 3) Crea tu propio proxy y código auxiliar para el componente. Esta opción es la más difícil de implementar, pero conserva la información de tipo y podría proporcionar un mejor rendimiento en comparación con la opción 1 en escenarios exigentes.
 
 Si solo se genera un evento en un subproceso en segundo plano sin usar una de estas opciones, un cliente de JavaScript no recibirá el evento.
@@ -74,9 +74,9 @@ public void MakeToastWithDispatcher(string message)
 ## <a name="option-2-use-eventhandlerltobjectgt-but-lose-type-information"></a>(Opción 2) Usar EventHandler&lt;Object&gt; y perder información de tipo
 
 > [!NOTE]
-> Si va a crear un componente de Windows Runtime de C#, el tipo de **objeto\> Windows.\<Foundation. EventHandler** no está disponible; en su lugar, ese tipo se proyecta en [**System. EventHandler**](/dotnet/api/system.eventhandler), por lo que se debe usar en su lugar.
+> Si va a crear un componente de Windows Runtime de C#, el tipo **Windows. Foundation. \<Object\> EventHandler** no está disponible; en su lugar, ese tipo se proyecta en [**System. EventHandler**](/dotnet/api/system.eventhandler), por lo que debe usarlo en su lugar.
 
-Otra manera de enviar un evento desde un subproceso en segundo plano es usar el objeto&gt; [Windows. Foundation. EventHandler](/uwp/api/windows.foundation.eventhandler)&lt;como el tipo del evento. Windows proporciona esta creación de instancias concreta del tipo genérico y proporciona un proxy y un código auxiliar para esta. El inconveniente es que se pierde la información de tipo de tus argumentos de evento y el remitente. Los clientes de C++ y. NET deben saber a través de la documentación qué tipo recuperar cuando se recibe el evento. Los clientes de JavaScript no necesitan la información de tipo original. Encuentran las propiedades de los argumentos en función de sus nombres en los metadatos.
+Otra manera de enviar un evento desde un subproceso en segundo plano es usar el objeto [Windows. Foundation. EventHandler](/uwp/api/windows.foundation.eventhandler) &lt; &gt; como el tipo del evento. Windows proporciona esta creación de instancias concreta del tipo genérico y proporciona un proxy y un código auxiliar para esta. El inconveniente es que se pierde la información de tipo de tus argumentos de evento y el remitente. Los clientes de C++ y. NET deben saber a través de la documentación qué tipo recuperar cuando se recibe el evento. Los clientes de JavaScript no necesitan la información de tipo original. Encuentran las propiedades de los argumentos en función de sus nombres en los metadatos.
 
 En este ejemplo se muestra cómo usar Windows.Foundation.EventHandler&lt;Object&gt; en C#:
 
@@ -138,11 +138,11 @@ Este tutorial tiene estas partes.
 
 En la barra de menús de Visual Studio, elija **archivo &gt; nuevo proyecto**. En el cuadro de diálogo **Nuevo proyecto** , expande **JavaScript &gt; Universal de Windows** y, a continuación, selecciona **Aplicación vacía**. Nombra el proyecto ToasterApplication y después selecciona el botón **Aceptar**.
 
-Agregar un componente de Windows Runtime de C# a la solución: en el Explorador de soluciones, abre el menú contextual de la solución y, a continuación, elige **Agregar &gt; Nuevo proyecto**. Expanda **Visual &gt; C# Microsoft Store** y, a continuación, seleccione **Windows Runtime componente**. Asigna al proyecto el nombre de ToasterComponent y después selecciona el botón **Aceptar** . ToasterComponent será el espacio de nombres de raíz para los componentes que crearás en pasos posteriores.
+Agregar un componente de Windows Runtime de C# a la solución: en el Explorador de soluciones, abre el menú contextual de la solución y, a continuación, elige **Agregar &gt; Nuevo proyecto**. Expanda **Visual C# &gt; Microsoft Store** y, a continuación, seleccione **Windows Runtime componente**. Asigna al proyecto el nombre de ToasterComponent y después selecciona el botón **Aceptar** . ToasterComponent será el espacio de nombres de raíz para los componentes que crearás en pasos posteriores.
 
 En el Explorador de soluciones, abre el menú contextual para la solución y, a continuación, elige **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, selecciona **Propiedades de configuración** en el panel izquierdo y luego, en la parte superior del cuadro de diálogo, establece **Configuración** en **Depurar** y **Plataforma** en x86, x64 o ARM. Elija el botón **Aceptar** .
 
-**Plataforma importante** = cualquier CPU no funcionará porque no es válido para el archivo dll de Win32 de código nativo que agregará a la solución más adelante.
+**Importante**   Plataforma = cualquier CPU no funcionará porque no es válido para el archivo DLL de Win32 de código nativo que agregará a la solución más adelante.
 
 En el Explorador de soluciones, cambia el nombre class1.cs por ToasterComponent.cs para que coincida con el nombre del proyecto. Visual Studio cambia automáticamente el nombre de la clase en el archivo para que coincida con el nuevo nombre de archivo.
 
@@ -150,7 +150,7 @@ En el archivo .cs, agrega una directiva using para el espacio de nombres Windows
 
 Cuando necesitas proxies y códigos auxiliares, tu componente debe utilizar interfaces para exponer sus miembros públicos. En ToasterComponent.cs, define una interfaz para el notificador y otra para la notificación del sistema que produce el notificador.
 
-**Nota** en C# puede omitir este paso. En su lugar, crea primero una clase y, a continuación, abre su menú contextual y elige **Refactorizar &gt; Extraer interfaz**. En el código que se genera, otorga manualmente acceso público a las interfaces.
+**Nota:**   En C# puede omitir este paso. En su lugar, crea primero una clase y, a continuación, abre su menú contextual y elige **Refactorizar &gt; Extraer interfaz**. En el código que se genera, otorga manualmente acceso público a las interfaces.
 
 ```csharp
     public interface IToaster
@@ -218,7 +218,7 @@ A continuación, necesitamos clases que implementen estas interfaces y sean púb
 
 En el código anterior, creamos la notificación del sistema y, a continuación, hacemos girar un elemento de trabajo del grupo de subprocesos para iniciar la notificación. Aunque el IDE podría sugerir que apliques la palabra clave "await" para la llamada asincrónica, no es necesario en este caso porque el método no realiza ningún trabajo que dependa de los resultados de la operación.
 
-**Tenga en cuenta** que la llamada asincrónica del código anterior usa ThreadPool. RunAsync únicamente para mostrar una manera sencilla de desencadenar el evento en un subproceso en segundo plano. Este método en concreto se podría escribir como se muestra en el ejemplo siguiente y funcionaría correctamente porque el programador de tareas de .NET automáticamente calcula la referencia de las llamadas asincrónicas y "await" al subproceso de IU.
+**Nota:**   La llamada asincrónica en el código anterior usa ThreadPool. RunAsync únicamente para mostrar una manera sencilla de desencadenar el evento en un subproceso en segundo plano. Este método en concreto se podría escribir como se muestra en el ejemplo siguiente y funcionaría correctamente porque el programador de tareas de .NET automáticamente calcula la referencia de las llamadas asincrónicas y "await" al subproceso de IU.
   
 ```csharp
     public async void MakeToast(string message)
@@ -273,7 +273,7 @@ La función makeToast se debe enlazar a un botón. Actualice default.html para q
     </body>
 ```
 
-Si no usamos un TypedEventHandler, ahora podremos ejecutar la aplicación en el equipo local y hacer clic en el botón para realizar la notificación del sistema. Pero en nuestra aplicación, no ocurre nada. Para averiguar por qué, vamos a depurar el código administrado que activa el ToastCompletedEvent. Detenga el proyecto y, a continuación, en la barra de menús, elija **depurar &gt; propiedades de la aplicación del tostador**. Cambie **tipo de depurador** a **solo administrado**. De nuevo en la barra de menús, elija **depurar &gt; excepciones**y, a continuación, seleccione **excepciones de Common Language Runtime**.
+Si no usamos un TypedEventHandler, ahora podremos ejecutar la aplicación en el equipo local y hacer clic en el botón para realizar la notificación del sistema. Pero en nuestra aplicación, no ocurre nada. Para averiguar por qué, vamos a depurar el código administrado que activa el ToastCompletedEvent. Detenga el proyecto y, a continuación, en la barra de menús, elija **depurar propiedades de la &gt; aplicación del tostador**. Cambie **tipo de depurador** a **solo administrado**. De nuevo en la barra de menús, elija **depurar &gt; excepciones**y, a continuación, seleccione **excepciones de Common Language Runtime**.
 
 Ahora ejecuta la aplicación y haz clic en el botón para crear el Toast. El depurador detecta una excepción de conversión no válida. Aunque en el mensaje no resulta evidente, esta excepción se produce porque faltan servidores proxy para esa interfaz.
 
@@ -283,7 +283,7 @@ El primer paso para crear un servidor proxy y un código auxiliar para un compon
 
 ## <a name="to-generate-guids-for-the-components-interfaces-c-and-other-net-languages"></a>Para generar GUID para las interfaces del componente (C# y otros lenguajes .NET)
 
-En la barra de menús, elija &gt; herramientas crear GUID. En el cuadro de diálogo, seleccione 5. \[GUID ("xxxxxxxx-xxxx... XXXX ")\]. Elige el botón Nuevo GUID y, a continuación, elige el botón Copiar.
+En la barra de menús, elija herramientas &gt; crear GUID. En el cuadro de diálogo, seleccione 5. \[GUID ("xxxxxxxx-xxxx... XXXX ") \] . Elige el botón Nuevo GUID y, a continuación, elige el botón Copiar.
 
 ![herramienta Generador de GUID](./images/guidgeneratortool.png)
 
@@ -300,7 +300,7 @@ Repita estos pasos para la interfaz IToast.
 
 ## <a name="to-generate-guids-for-the-components-interfaces-c"></a>Para generar GUID para las interfaces del componente (C++)
 
-En la barra de menús, elija &gt; herramientas crear GUID. En el cuadro de diálogo, seleccione 3. Static const struct GUID = {...}. Elige el botón Nuevo GUID y, a continuación, elige el botón Copiar.
+En la barra de menús, elija herramientas &gt; crear GUID. En el cuadro de diálogo, seleccione 3. Static const struct GUID = {...}. Elige el botón Nuevo GUID y, a continuación, elige el botón Copiar.
 
 Pegue el GUID justo delante de la definición de la interfaz IToaster. Después de pegarlo, el GUID debe parecerse al del ejemplo siguiente. (No use el GUID del ejemplo. Cada interfaz debe tener su propio GUID).
 ```cpp
@@ -330,10 +330,10 @@ winmdidl /outdir:output "$(TargetPath)"
 midl /metadata_dir "%WindowsSdkDir%References\CommonConfiguration\Neutral" /iid "$(ProjectDir)$(TargetName)_i.c" /env win32 /h "$(ProjectDir)$(TargetName).h" /winmd "Output\$(TargetName).winmd" /W1 /char signed /nologo /winrt /dlldata "$(ProjectDir)dlldata.c" /proxy "$(ProjectDir)$(TargetName)_p.c" "Output\$(TargetName).idl"
 ```
 
-**Importante**  para una configuración de proyecto ARM o x64, cambie el parámetro MIDL/env a x64 o ARM32.
+**Importante**    En el caso de una configuración de proyecto ARM o x64, cambie el parámetro MIDL/env a x64 o ARM32.
 
 Para asegurarse de que el archivo IDL se regenera cada vez que se cambia el archivo. winmd, cambie **ejecutar el evento posterior** a la compilación a **cuando la compilación actualice la salida del proyecto.**
-La página de propiedades eventos de compilación debe ser similar ![a esta: eventos de compilación](./images/buildevents.png)
+La página de propiedades eventos de compilación debe ser similar a esta: ![ eventos de compilación](./images/buildevents.png)
 
 Recompila la solución para generar y compilar el código IDL.
 
@@ -341,7 +341,7 @@ Para comprobar que MIDL ha compilado la solución correctamente, busque ToasterC
 
 ## <a name="to-compile-the-proxy-and-stub-code-into-a-dll"></a>Para compilar el servidor proxy y el código auxiliar en un archivo DLL
 
-Ahora que tiene los archivos necesarios, puede compilarlos para generar un archivo DLL, que es un archivo de C++. Para simplificar esta tarea, agregue un nuevo proyecto para compilar los servidores proxy. Abra el menú contextual de la solución ToasterApplication y, a continuación, elija **agregar > nuevo proyecto**. En el panel izquierdo del cuadro de diálogo **nuevo proyecto** , expanda ** &gt; Visual C++ &gt; ventanas uniuniversales de Windows**y, a continuación, en el panel central, seleccione **dll (aplicaciones para UWP)**. (Observe que este no es un proyecto de componente de Windows Runtime de C++). Asigne un nombre a los servidores proxy del proyecto y elija el botón **Aceptar** . Estos archivos los actualizarán los eventos posteriores a la compilación cuando se produzca algún cambio en la clase de C#.
+Ahora que tiene los archivos necesarios, puede compilarlos para generar un archivo DLL, que es un archivo de C++. Para simplificar esta tarea, agregue un nuevo proyecto para compilar los servidores proxy. Abra el menú contextual de la solución ToasterApplication y, a continuación, elija **agregar > nuevo proyecto**. En el panel izquierdo del cuadro de diálogo **nuevo proyecto** , expanda **Visual C++ &gt; &gt; ventanas uniuniversales de Windows**y, a continuación, en el panel central, seleccione **dll (aplicaciones para UWP)**. (Observe que este no es un proyecto de componente de Windows Runtime de C++). Asigne un nombre a los servidores proxy del proyecto y elija el botón **Aceptar** . Estos archivos los actualizarán los eventos posteriores a la compilación cuando se produzca algún cambio en la clase de C#.
 
 De forma predeterminada, el proyecto Proxies genera archivos .h de encabezado y archivos .cpp de C++. Dado que un archivo DLL se compila a partir de los archivos generados desde MIDL, los archivos .h y .cpp no son necesarios. En Explorador de soluciones, abra el menú contextual para ellos, elija **quitar**y, a continuación, confirme la eliminación.
 
@@ -414,11 +414,11 @@ Pegue el nodo XML de las extensiones como un elemento secundario directo del nod
 
 Antes de continuar, es importante que de asegure de que:
 
--   El ClassId ProxyStub se establece en el primer GUID del archivo ToasterComponent\_i. c. Use el primer GUID que aparece definido en ese archivo para el ClassId. (Podría ser el mismo que el GUID de ITypedEventHandler2).
+-   El ClassId ProxyStub se establece en el primer GUID del archivo ToasterComponent \_ i. c. Use el primer GUID que aparece definido en ese archivo para el ClassId. (Podría ser el mismo que el GUID de ITypedEventHandler2).
 -   La ruta de acceso es la ruta de acceso relativa del paquete del proxy binario. (En este tutorial, proxies.dll está en la misma carpeta que ToasterApplication.winmd).
 -   Los GUID están en el formato correcto. (Es fácil equivocarse con esto).
--   Los identificadores de interfaz del manifiesto coinciden con los\_IID del archivo ToasterComponent i. c.
--   Los nombres de interfaz son únicos en el manifiesto. Dado que el sistema no utiliza estos nombres, puede elegir los que desees. Conviene que elijas nombres de interfaz que coincidan claramente con las interfaces que has definido. Para las interfaces generadas, los nombres deben indicar que se trata de interfaces generadas. Puede usar el archivo ToasterComponent\_i. c para ayudarle a generar nombres de interfaz.
+-   Los identificadores de interfaz del manifiesto coinciden con los IID del \_ archivo ToasterComponent i. c.
+-   Los nombres de interfaz son únicos en el manifiesto. Dado que el sistema no utiliza estos nombres, puede elegir los que desees. Conviene que elijas nombres de interfaz que coincidan claramente con las interfaces que has definido. Para las interfaces generadas, los nombres deben indicar que se trata de interfaces generadas. Puede usar el archivo ToasterComponent \_ i. c para ayudarle a generar nombres de interfaz.
 
 Si intenta ejecutar la solución ahora, obtendrá un error en el que se le informará de que proxies.dll no forma parte de la carga. Abra el menú contextual de la carpeta **referencias** en el proyecto ToasterApplication y, a continuación, elija **Agregar referencia**. Active la casilla situada junto al proyecto Proxies. Además, asegúrate de que la casilla situada junto a ToasterComponent también está seleccionada. Elija el botón **Aceptar** .
 

@@ -6,24 +6,24 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a5898d4157b216175c77356e5a27b4c58d049d9a
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8a6ad3b98c559dff8781c96a98a6428a4d1f95a4
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259638"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493130"
 ---
 # <a name="use-the-gyrometer"></a>Usar el girómetro
 
 
 **API importantes**
 
--   [**Windows. Devices. sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**Girómetro**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer)
+-   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**Gyrometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer)
 
-**AdventureWorks**
+**Ejemplo**
 
--   Para ver una implementación más completa, consulta la [muestra del girómetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer).
+-   Para obtener una implementación más completa, consulte el [ejemplo de girómetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer).
 
 Aprende a usar el girómetro para detectar los cambios en el movimiento del usuario.
 
@@ -31,7 +31,7 @@ Los girómetros complementan los acelerómetros como controladores de juegos. Lo
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Debe estar familiarizado con los eventos lenguaje XAML (XAML), C#Microsoft Visual y.
+Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 
 El dispositivo o emulador que uses debe ser compatible con un girómetro.
 
@@ -39,9 +39,9 @@ El dispositivo o emulador que uses debe ser compatible con un girómetro.
 
 Esta sección se divide en dos subsecciones: En la primera subsección, conocerás los pasos necesarios para crear una aplicación de girómetro simple desde cero. En la siguiente subsección se aplica la aplicación que acabas de crear.
 
-###  <a name="instructions"></a>Instrucciones
+###  <a name="instructions"></a>Instructions
 
--   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#** .
+-   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
 
 -   Abre el archivo MainPage.xaml.cs del proyecto y reemplaza el código existente con lo siguiente.
 
@@ -136,11 +136,11 @@ Tendrás que cambiar el nombre del espacio de nombres del fragmento de código a
 
 Deberás reemplazar la primera parte del nombre de la clase en el fragmento anterior por el espacio de nombres de tu aplicación. Por ejemplo, si creaste un proyecto denominado **GyrometerCS**, reemplazarías `x:Class="App1.MainPage"` por `x:Class="GyrometerCS.MainPage"`. También deberás reemplazar `xmlns:local="using:App1"` por `xmlns:local="using:GyrometerCS"`.
 
--   Presiona F5 (o selecciona **Depurar** > **Iniciar depuración**) para crear, implementar y ejecutar la aplicación.
+-   Presione F5 o seleccione **depurar**  >  **iniciar depuración** para compilar, implementar y ejecutar la aplicación.
 
 Con la aplicación en ejecución, puedes cambiar los valores de girómetro moviendo el dispositivo o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Para detener la aplicación, vuelva a Visual Studio y presione Mayús + F5 o seleccione **depurar**  >  **detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 
@@ -180,4 +180,4 @@ Estos nuevos valores se escriben en los bloques de texto que se encuentran en el
 
  ## <a name="related-topics"></a>Temas relacionados
 
-* [Ejemplo de girómetro](https://code.msdn.microsoft.com/windowsapps/Gyrometer-Sensor-Sample-4fe891d9)
+* [Muestra del girómetro](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Gyrometer%20sensor%20sample%20(Windows%208))

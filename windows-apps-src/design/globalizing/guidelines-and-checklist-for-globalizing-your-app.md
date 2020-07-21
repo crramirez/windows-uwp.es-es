@@ -8,12 +8,12 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: f08c8178781c82e8961fd180d4b75912359b4da9
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: d71cf2289654860b47aef18c117ac9d6d36fab0a
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730274"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493250"
 ---
 # <a name="guidelines-for-globalization"></a>Directrices sobre globalización
 
@@ -45,7 +45,7 @@ Diseñe y desarrolle su aplicación de forma que funcione correctamente en siste
 
 * [Recomendaciones para el uso de cadenas](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)
 * [Globalizar los formatos de fecha, hora y número](use-global-ready-formats.md)
-* [Descripción de los idiomas de Perfil de usuario y los lenguajes de manifiesto de aplicación](manage-language-and-region.md)
+* [Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación](manage-language-and-region.md)
 * [Etiquetas de lenguaje BCP-47](https://tools.ietf.org/html/bcp47)
 * [Recursos de aplicación y el sistema de administración de recursos](../../app-resources/index.md)
 * [Cómo el sistema de administración de recursos compara etiquetas de idioma](../../app-resources/how-rms-matches-lang-tags.md)
@@ -55,4 +55,4 @@ Diseñe y desarrolle su aplicación de forma que funcione correctamente en siste
 
 ## <a name="samples"></a>Ejemplos
 
-* [Ejemplo de preferencias de globalización](https://code.msdn.microsoft.com/windowsapps/Globalization-preferences-6654eb36)
+* [Ejemplo de preferencias de globalización](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Globalization%20preferences%20sample%20(Windows%208))

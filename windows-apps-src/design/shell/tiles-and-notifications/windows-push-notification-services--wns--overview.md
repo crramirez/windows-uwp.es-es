@@ -7,12 +7,12 @@ ms.date: 03/06/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fa70346dc6033ac1f879a1c2429c3c4222b8c0ec
-ms.sourcegitcommit: 368660812e143de5def5e5328a2eadb178cd5544
+ms.openlocfilehash: 41f258124824e6dc7d11aae085365e0d50d8a0f2
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129112"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493270"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Introducción a los Servicios de notificaciones de inserción de Windows (WNS) 
 
@@ -86,7 +86,7 @@ Después de crear correctamente un URI de canal, la aplicación lo envía a su s
 
 ### <a name="important-notes"></a>Notas importantes
 
--   No garantizamos que el URI de canal de notificación de una aplicación siempre sea el mismo. Recomendamos que la aplicación solicite un canal nuevo cada vez que se ejecute y que actualice su servicio cuando el URI cambie. El desarrollador nunca debe cambiar el URI de canal; debe considerarlo como una cadena de caja negra. En este momento, los URI de canal expiran después de 30 días. Si la aplicación de Windows 10 renueva periódicamente su canal en segundo plano, puedes descargar la [Muestra de notificaciones de inserción y periódicas](https://code.msdn.microsoft.com/windowsapps/push-and-periodic-de225603) para Windows 8.1 y volver a usar su código fuente y el patrón que muestra.
+-   No garantizamos que el URI de canal de notificación de una aplicación siempre sea el mismo. Recomendamos que la aplicación solicite un canal nuevo cada vez que se ejecute y que actualice su servicio cuando el URI cambie. El desarrollador nunca debe cambiar el URI de canal; debe considerarlo como una cadena de caja negra. En este momento, los URI de canal expiran después de 30 días. Si la aplicación de Windows 10 renueva periódicamente su canal en segundo plano, puedes descargar la [Muestra de notificaciones de inserción y periódicas](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Push%20and%20periodic%20notifications%20client-side%20sample%20(Windows%208)) para Windows 8.1 y volver a usar su código fuente y el patrón que muestra.
 -   El desarrollador es quien implementa la interfaz entre el servicio de nube y la aplicación cliente. Recomendamos que la aplicación pase por un proceso de autenticación con su propio servicio y transmita datos en un protocolo seguro, como HTTPS.
 -   Es importante que el servicio de nube siempre asegure que el URI de canal use el dominio "notify.windows.com". El servicio nunca debe insertar notificaciones en un canal en otro dominio. Si alguna vez la devolución de llamada de la aplicación se ve comprometida, un atacante malintencionado podría enviar un URI de canal para suplantar WNS. Sin inspeccionar el dominio, el servicio en la nube podría divulgar inconscientemente información a este atacante.
 -   Si tu servicio de nube intenta enviar una notificación a un canal expirado, WNS devolverá el [código de respuesta 410](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)). En respuesta a ese código, tu servicio no debe seguir intentando enviar notificaciones a ese URI.
