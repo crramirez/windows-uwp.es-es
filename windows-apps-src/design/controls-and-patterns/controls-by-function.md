@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c593ea76535bec6a9d8ab41f0bcd4f2299162615
-ms.sourcegitcommit: db48036af630f33f0a2f7a908bfdfec945f3c241
+ms.openlocfilehash: fc695b483eefef4210432d5ce55a23ae201740bc
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84437219"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493150"
 ---
 # <a name="controls-by-function"></a>Controles por función
 
@@ -324,7 +324,7 @@ Referencia: [Image](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.
 
 Diseño y procedimientos: [Image e ImageBrush](images-imagebrushes.md) 
 
-Código de ejemplo: [Muestra de imágenes XAML](https://code.msdn.microsoft.com/windowsapps/0f5d56ae-5e57-48e1-9cd9-993115b027b9)
+Código de ejemplo: [XAML Controls Gallery](https://docs.microsoft.com/samples/microsoft/xaml-controls-gallery/xaml-controls-gallery/)
 
 ## <a name="graphics-and-ink"></a>Gráficos y entrada de lápiz
 
@@ -353,7 +353,7 @@ Referencia: [Formas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Shapes.S
 
 Cómo: [dibujar formas](../../graphics/drawing-shapes.md) 
 
-Código de ejemplo: [Muestra de dibujo basado en vectores de XAML](https://code.msdn.microsoft.com/windowsapps/Drawing-bfc39296)
+Código de ejemplo: [Muestra de dibujo basado en vectores de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20vector-based%20drawing%20sample%20(Windows%208))
 
 ## <a name="layout-controls"></a>Controles de diseño
 
@@ -453,7 +453,7 @@ Referencia: [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Co
 
 Diseño y procedimientos: [Guía de controles de desplazamiento y movimiento panorámico](scroll-controls.md) 
 
-Código de ejemplo: [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+Código de ejemplo: [Muestra de desplazamiento, movimiento panorámico y zoom XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample%20(Windows%208))
 
 ### <a name="stack-panel"></a>Panel de pila
 Panel de diseño en el que los elementos secundarios se organizan en una sola línea y se pueden orientar horizontal o verticalmente.
@@ -591,7 +591,7 @@ Referencia: [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Control
 
 Diseño y procedimientos: Directrices para vistas web 
 
-Código de ejemplo: [Muestra de control WebView XAML](https://code.msdn.microsoft.com/windowsapps/XAML-WebView-control-sample-58ad63f7)
+Código de ejemplo: [Muestra de control WebView XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20WebView%20control%20sample%20(Windows%208))
 
 ### <a name="semantic-zoom"></a>Zoom semántico
 
@@ -612,7 +612,7 @@ Referencia: [SemanticZoom](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Co
 
 Diseño y procedimientos: [Guía de control de zoom semántico](semantic-zoom.md)
 
-Código de ejemplo: [Agrupación de GridView y ejemplo de SemanticZoom XAML](https://code.msdn.microsoft.com/windowsapps/groupedgridview-77c59e8e)
+Código de ejemplo: [Agrupación de GridView y ejemplo de SemanticZoom XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20GridView%20grouping%20and%20SemanticZoom%20sample%20(Windows%208))
 
 ## <a name="progress-controls"></a>Controles de progreso
 
@@ -682,7 +682,7 @@ Referencia: [PasswordBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Con
 
 Diseño y procedimientos: [Controles de texto](text-controls.md), [Guía de control del cuadro de contraseña](password-box.md) 
 
-Código de ejemplo: [Muestra de visualización de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a), [Muestra de edición de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
+Código de ejemplo: [Muestra de visualización de texto XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20display%20sample%20(Windows%208)), [Muestra de edición de texto XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20editing%20sample%20(Windows%208))
 
 ### <a name="rich-edit-box"></a>Cuadro de texto enriquecido
 Control que permite a un usuario editar documentos de texto enriquecido con contenido como texto con formato, hipervínculos e imágenes.
@@ -695,7 +695,7 @@ Referencia: [RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Con
 
 Diseño y procedimientos: [Controles de texto](text-controls.md), [Guía de control del cuadro de edición con formato](rich-edit-box.md)
 
-Código de ejemplo: [Muestra de texto XAML](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
+Código de ejemplo: [Muestra de texto XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20display%20sample%20(Windows%208))
 
 ### <a name="search-box"></a>Cuadro de búsqueda
 Consulta Cuadro de sugerencias automáticas.
