@@ -8,44 +8,20 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 8775113c22716259f9449899b577481738dc6c0f
-ms.sourcegitcommit: da1c0ae251883987f105bc2919b2d67846194bc5
+ms.openlocfilehash: 7393d4d1bae227bf3b586a54fba5d43ca2dcb53e
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85198523"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493410"
 ---
-# <a name="get-started-with-winui-30-for-desktop-apps"></a>Introducción a WinUI 3.0 para aplicaciones de escritorio
+# <a name="get-started-with-winui-3-for-desktop-apps"></a>Introducción a WinUI 3.0 para aplicaciones de escritorio
 
-La versión preliminar 1 de WinUI 3.0 presenta nuevas plantillas de proyecto que te permiten crear aplicaciones de escritorio administradas de C# y .NET y de escritorio de C++ o Win32 nativas con una interfaz de usuario totalmente basada en WinUI. Cuando se crean aplicaciones utilizando estas plantillas de proyecto, toda la interfaz de usuario de la aplicación se implementa mediante ventanas, controles y otros tipos de interfaz de usuario proporcionados por WinUI 3.0.
-
-En la versión preliminar 1 de WinUI 3.0 se agregan las siguientes plantillas de proyecto a Visual Studio 2019 para la creación de aplicaciones de escritorio que usan WinUI 3.0:
-
-* Plantillas de proyecto para las aplicaciones y bibliotecas de C# diseñadas para .NET 5:
-  * **Aplicación vacía, empaquetada (WinUI en el escritorio)**
-  * **Biblioteca de clases (WinUI en el escritorio)**
-
-* Plantillas de proyecto para las aplicaciones de C++/Win32:
-  * **Aplicación vacía, empaquetada (WinUI en el escritorio)**
-
-Las plantillas de proyecto de aplicación generan un proyecto de aplicación WinUI y un [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) que está configurado para compilar la aplicación en un [paquete MSIX](https://docs.microsoft.com/windows/msix/overview) para su implementación.
+La versión preliminar 2 de WinUI 3 presenta nuevas plantillas de proyecto que te permiten crear aplicaciones de escritorio administradas de C#/.NET Core y de escritorio de C++/Win32 nativo con una interfaz de usuario totalmente basada en WinUI. Cuando se crean aplicaciones utilizando estas plantillas de proyecto, toda la interfaz de usuario de la aplicación se implementa mediante ventanas, controles y otros tipos de interfaz de usuario proporcionados por WinUI 3. Para obtener una lista completa de las plantillas de proyecto, vea [esta sección](index.md#project-templates-for-winui-3).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para usar WinUI 3 para las plantillas de proyecto de escritorio descritas en este artículo, configura el equipo de desarrollo siguiendo estas instrucciones:
-
-1. Asegúrate de que el equipo de desarrollo tenga instalado Windows 10, versión 1803 (compilación 17134) o una versión posterior. WinUI 3 para aplicaciones de escritorio requiere la versión 1803 del sistema operativo o una posterior.
-
-2. Instala Visual Studio 2019, versión 16.7 versión preliminar 1. Para más información, consulta [estas instrucciones](index.md#configure-your-dev-environment).
-
-3. Instala las versiones x64 y x86 de .NET 5 versión preliminar 4:
-    * x64: [https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x64.exe](https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x64.exe)
-    * x86: [https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x86.exe](https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x86.exe)
-
-    > [!NOTE]
-    > La versión preliminar 1 de WinUI 3.0 requiere la versión preliminar 4 de .NET 5. Las versiones preliminares posteriores de .NET 5 no son compatibles con la versión preliminar 1 de WinUI 3.0.
-
-4. Instala la extensión VSIX que incluye las plantillas de proyecto de la versión preliminar 1 de WinUI 3.0 para Visual Studio 2019. Para más información, consulta [estas instrucciones](index.md#visual-studio-project-templates).
+Para usar WinUI 3 para las plantillas de proyecto de escritorio descritas en este artículo, configure el equipo de desarrollo e instale WinUI 3, versión preliminar 2 siguiendo las instrucciones que encontrará [aquí](index.md#install-winui-3-preview-2).
 
 ## <a name="create-a-winui-3-desktop-app-for-c-and-net-5"></a>Creación de una aplicación de escritorio de WinUI 3 para C# y .NET 5
 
@@ -69,18 +45,11 @@ Para usar WinUI 3 para las plantillas de proyecto de escritorio descritas en es
 
         ![Proyecto de aplicación](images/WinUI-csharp-appproject.png)
 
-    * ***Nombre de proyecto* (Package)** : Es un [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) que está configurado para compilar la aplicación en un paquete MSIX para la implementación. Este proyecto contiene el [manifiesto de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root) para la aplicación y es el proyecto de inicio de la solución de forma predeterminada.
+    * ***Nombre de proyecto* (Package)** : Es un [Proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) que está configurado para compilar la aplicación en un [paquete MSIX](https://docs.microsoft.com/windows/msix/overview). Con ello se proporciona una experiencia de implementación moderna, la capacidad de integrarse con las características de Windows 10 a través de extensiones de paquete y mucho más. Este proyecto contiene el [manifiesto de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root) para la aplicación y es el proyecto de inicio de la solución de forma predeterminada.
 
         ![Proyecto de aplicación](images/WinUI-csharp-packageproject.png)
 
-7. Para agregar un nuevo elemento a tu proyecto de aplicación, haz clic con el botón derecho en el nodo del proyecto ***nombre del proyecto* (Desktop)** en el **Explorador de soluciones** y selecciona **Agregar** -> **Nuevo elemento**. En el cuadro de diálogo **Agregar nuevo elemento**, selecciona la pestaña **WinUI**, elige el elemento que deseas agregar y, a continuación, haz clic en **Agregar**. Puedes elegir entre los siguientes tipos de elementos:
-
-    * **Blank Page** (Página en blanco)
-    * **Blank Window** (Ventana en blanco)
-    * **Custom Control** (Control personalizado)
-    * **Diccionario de recursos**
-    * **Resources File** (Archivo de recursos)
-    * **User Control** (Control de usuario)
+7. Para agregar un nuevo elemento a tu proyecto de aplicación, haz clic con el botón derecho en el nodo del proyecto ***nombre del proyecto* (Desktop)** en el **Explorador de soluciones** y selecciona **Agregar** -> **Nuevo elemento**. En el cuadro de diálogo **Agregar nuevo elemento**, selecciona la pestaña **WinUI**, elige el elemento que deseas agregar y, a continuación, haz clic en **Agregar**. Para más detalles sobre los elementos disponibles, consulte [esta sección](index.md#item-templates-for-winui-3).
 
     ![Nuevo elemento](images/WinUI-csharp-newitem.png)
 
@@ -108,18 +77,11 @@ Para usar WinUI 3 para las plantillas de proyecto de escritorio descritas en es
 
         ![Proyecto de aplicación](images/WinUI-cpp-appproject.png)
 
-    * ***Nombre de proyecto* (Package)** : Es un [proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) que está configurado para compilar la aplicación en un paquete MSIX para la implementación. Este proyecto contiene el [manifiesto de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root) para la aplicación y es el proyecto de inicio de la solución de forma predeterminada.
+    * ***Nombre de proyecto* (Package)** : Es un [Proyecto de paquete de aplicación de Windows](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) que está configurado para compilar la aplicación en un [paquete MSIX](https://docs.microsoft.com/windows/msix/overview). Con ello se proporciona una experiencia de implementación moderna, la capacidad de integrarse con las características de Windows 10 a través de extensiones de paquete y mucho más. Este proyecto contiene el [manifiesto de paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root) para la aplicación y es el proyecto de inicio de la solución de forma predeterminada.
 
         ![Proyecto de paquete](images/WinUI-cpp-packageproject.png)
 
-7. Para agregar un nuevo elemento a tu proyecto de aplicación, haz clic con el botón derecho en el nodo del proyecto ***nombre del proyecto* (Desktop)** en el **Explorador de soluciones** y selecciona **Agregar** -> **Nuevo elemento**. En el cuadro de diálogo **Agregar nuevo elemento**, selecciona la pestaña **WinUI**, elige el elemento que deseas agregar y, a continuación, haz clic en **Agregar**. Puedes elegir entre los siguientes tipos de elementos:
-
-    * **Blank Page** (Página en blanco)
-    * **Blank Window** (Ventana en blanco)
-    * **Custom Control** (Control personalizado)
-    * **Diccionario de recursos**
-    * **Resources File** (Archivo de recursos)
-    * **User Control** (Control de usuario)
+7. Para agregar un nuevo elemento a tu proyecto de aplicación, haz clic con el botón derecho en el nodo del proyecto ***nombre del proyecto* (Desktop)** en el **Explorador de soluciones** y selecciona **Agregar** -> **Nuevo elemento**. En el cuadro de diálogo **Agregar nuevo elemento**, selecciona la pestaña **WinUI**, elige el elemento que deseas agregar y, a continuación, haz clic en **Agregar**. Para más detalles sobre los elementos disponibles, consulte [esta sección](index.md#item-templates-for-winui-3).
 
     ![Nuevo elemento](images/WinUI-cpp-newitem.png)
 
@@ -127,8 +89,8 @@ Para usar WinUI 3 para las plantillas de proyecto de escritorio descritas en es
 
 ## <a name="known-issues-and-limitations"></a>Problemas y limitaciones conocidos
 
-Para ver una lista de problemas conocidos y limitaciones de la versión preliminar 1, consulta [esta sección](index.md#preview-1-limitations-and-known-issues).
+Para ver una lista de problemas conocidos y limitaciones, consulte [esta sección](index.md#preview-2-limitations-and-known-issues).
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [WinUI 3.0](index.md)
+* [Biblioteca de interfaz de usuario de Windows 3](index.md)

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a07fc5c669d3c9cd374a4a031fba2ee6ef6d5756
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 24c19e6746b7b8f346fcb2edd2056470ac909216
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74257287"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493620"
 ---
 # <a name="images-and-image-brushes"></a>Imágenes y pinceles de imagen
 
@@ -155,7 +155,7 @@ Para más información sobre cómo diseñar teniendo en cuenta la escala, consul
 
 Es habitual especificar elementos Image e ImageBrush con XAML en lugar de código. Esto es así porque estos elementos suelen ser el resultado de herramientas de diseño como parte de una definición de interfaz de usuario de XAML.
 
-Si defines un elemento Image o ImageBrush mediante código, usa los constructores predeterminados y establece la propiedad de origen relevante ([Image.Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) o [ImageBrush.ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)). Las propiedades de origen requieren un elemento [BitmapImage](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (no un identificador URI) cuando se establecen mediante código. Si el origen es una secuencia, usa el método [SetSourceAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) para inicializar el valor. Si el origen es un identificador URI, que incluye contenido en la aplicación que usa los esquemas **ms-appx** o **ms-resource**, utiliza el constructor [BitmapImage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) que toma un URI. También puedes considerar la posibilidad de controlar el evento [ImageOpened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) si hay problemas de temporización al recuperar o descodificar el origen de la imagen, ya que es posible que necesites que aparezca otro contenido hasta que el origen de la imagen esté disponible. Para obtener código de ejemplo, consulta [Muestra de imágenes XAML](https://code.msdn.microsoft.com/windowsapps/0f5d56ae-5e57-48e1-9cd9-993115b027b9).
+Si defines un elemento Image o ImageBrush mediante código, usa los constructores predeterminados y establece la propiedad de origen relevante ([Image.Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.source) o [ImageBrush.ImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imagebrush.imagesource)). Las propiedades de origen requieren un elemento [BitmapImage](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.BitmapImage) (no un identificador URI) cuando se establecen mediante código. Si el origen es una secuencia, usa el método [SetSourceAsync](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync) para inicializar el valor. Si el origen es un identificador URI, que incluye contenido en la aplicación que usa los esquemas **ms-appx** o **ms-resource**, utiliza el constructor [BitmapImage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage) que toma un URI. También puedes considerar la posibilidad de controlar el evento [ImageOpened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapimage.imageopened) si hay problemas de temporización al recuperar o descodificar el origen de la imagen, ya que es posible que necesites que aparezca otro contenido hasta que el origen de la imagen esté disponible. Para código de ejemplo, consulte [XAML Controls Gallery](https://docs.microsoft.com/samples/microsoft/xaml-controls-gallery/xaml-controls-gallery/).
 
 > [!NOTE]
 > Si estableces imágenes mediante código, puedes usar el control automático para obtener acceso a los recursos sin calificar con calificadores de referencia cultural y de escala actuales, o bien puedes usar [ResourceManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) y [ResourceMap](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceMap) con calificadores de escala y referencia cultural para obtener los recursos directamente. Para obtener más información, consulta [Sistema de administración de recursos](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10)).

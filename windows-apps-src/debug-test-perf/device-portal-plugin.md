@@ -2,29 +2,29 @@
 ms.assetid: 82ab5fc9-3a7f-4d9e-9882-077ccfdd0ec9
 title: Escribir un complemento personalizado para el Portal de dispositivos
 description: Obtén información sobre cómo escribir una aplicación para UWP que usa el Portal de dispositivos Windows para hospedar una página web y proporcionar información de diagnóstico.
-ms.date: 03/24/2017
+ms.date: 07/06/2020
 ms.topic: article
 keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
-ms.openlocfilehash: 4881fe961979243849728d3f835c449e0f71f4b4
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: b806344fa7e0517caf4d04efaaa605371a200202
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75683848"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493210"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>Escribir un complemento personalizado para el Portal de dispositivos
 
 Obtén información sobre cómo escribir una aplicación para UWP que usa el Portal de dispositivos Windows para hospedar una página web y proporcionar información de diagnóstico.
 
-A partir de Creators Update, puedes usar el Portal de dispositivos para hospedar las interfaces de diagnóstico de tu aplicación. En este artículo se describen las tres partes necesarias para crear un objeto DevicePortalProvider para tu aplicación: los cambios de appxmanifest, la configuración de conexión de la aplicación al servicio Portal de dispositivos y controlar una solicitud entrante. Para comenzar, también se proporciona una aplicación de ejemplo (disponible próximamente). 
+A partir de Windows 10 Creators Update, (versión 1703, compilación 15063), puede usar el Portal de dispositivos para hospedar las interfaces de diagnóstico de la aplicación. En este artículo se describen las tres partes necesarias para crear un objeto DevicePortalProvider para la aplicación: los cambios del [manifiesto de paquete de la aplicación](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest), la configuración de la conexión de la aplicación al [servicio de Portal de dispositivos](/windows/uwp/debug-test-perf/device-portal) y el control de una solicitud entrante.
 
 ## <a name="create-a-new-uwp-app-project"></a>Creación de un proyecto de aplicación para UWP
-En esta guía, crearemos todo en una solución para hacerlo más sencillo.
 
-En Microsoft Visual Studio 2019, crea un proyecto de aplicación para UWP. Ve a Archivo > Nuevo > Proyecto y selecciona Aplicación vacía (Windows universal) para C# y, a continuación, haz clic en Siguiente. En el cuadro de diálogo Configurar el nuevo proyecto. Asigna al proyecto el nombre "DevicePortalProvider" y, a continuación, haz clic en Crear. Esta será la aplicación que contiene el servicio de aplicaciones. Asegúrate de elegir "Windows 10 Creators Update (10.0; Compilación 15063)" para compatibilidad.  Es posible que tengas que actualizar Visual Studio o instalar el nuevo SDK. Consulta más información [aquí](https://blogs.windows.com/buildingapps/2017/04/05/updating-tooling-windows-10-creators-update/). 
+En Microsoft Visual Studio, cree un proyecto de aplicación para UWP. Vaya a **Archivo > Nuevo > Proyecto** y seleccione **Aplicación vacía (Windows universal) para C#** y, a continuación, haga clic en **Siguiente**. En el cuadro de diálogo **Configurar el nuevo proyecto**. Asigne al proyecto el nombre "DevicePortalProvider" y, a continuación, haga clic en **Crear**. Esta será la aplicación que contiene el servicio de aplicaciones. Es posible que deba actualizar Visual Studio o instalar la versión más reciente de [Windows SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/).
 
-## <a name="add-the-deviceportalprovider-extension-to-your-packageappxmanifest-file"></a>Agregar la extensión devicePortalProvider al archivo package.appxmanifest
+## <a name="add-the-deviceportalprovider-extension-to-your-application-package-manifest"></a>Adición de la extensión devicePortalProvider al manifiesto de paquete de aplicación
+
 Tendrás que agregar algo de código a tu archivo *package.appxmanifest* para que tu aplicación sea funcional como complemento del Portal de dispositivos. En primer lugar, agrega las siguientes definiciones de espacio de nombres a la parte superior del archivo. Agrégalas también al atributo `IgnorableNamespaces`.
 
 ```xml

@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: dbe40498d128fa483f2c414e088060ec90fc1c22
-ms.sourcegitcommit: c4f912ba0313ae49632f81e38d7d2d983ac132ad
+ms.openlocfilehash: 8c2133c4f1132b55d62149ad5aaf42e04fc5da5b
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84200788"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493330"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>Hospedaje de un control personalizado de UWP en una aplicación Win32 de C++
 
@@ -63,12 +63,7 @@ Después, agrega un proyecto de aplicación para **UWP (C++/WinRT)** a la soluci
     1. Haz clic con el botón derecho en el proyecto **MyUWPApp** y selecciona **Administrar paquetes NuGet**.
     2. Selecciona la pestaña **Examinar**, busca el paquete [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) e instala la versión 6.0.0 o posterior de dicho paquete.
 
-4. Haz clic con el botón derecho en el nodo **MyUWPApp** y selecciona **Propiedades**. En la página **Propiedades comunes** -> **C++/WinRT**, establece las siguientes propiedades y, a continuación, haz clic en **Aplicar**.
-
-    * Establece **Nivel de detalle** en **normal**.
-    * Establece **Optimizado** en **No**.
-
-    Cuando hayas terminado, la página de propiedades debe tener el siguiente aspecto.
+4. Haz clic con el botón derecho en el nodo **MyUWPApp** y selecciona **Propiedades**. En la página **Propiedades comunes** -> **C++/WinRT**, establezca la propiedad **Nivel de detalle** en **normal** y, a continuación, haga clic en **Aplicar**. Cuando hayas terminado, la página de propiedades debe tener el siguiente aspecto.
 
     ![Propiedades de proyecto de C++/WinRT](images/xaml-islands/xaml-island-cpp-1.png)
 
@@ -260,6 +255,9 @@ A continuación, revisa la clase **App** predeterminada en el proyecto **MyUWPAp
             }
         }
         ```
+
+        > [!NOTE]
+        > La instrucción `#include "App.g.cpp"` es necesaria cuando la propiedad **Optimizado** de la página **Propiedades comunes** -> **C++/WinRT** de las propiedades del proyecto se establece en **Sí**. Este es el valor predeterminado para los nuevos proyectos de C++/WinRT. Para más información sobre los efectos de la propiedad **Optimizado**, consulte [esta sección](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access).
 
 4. Agrega un nuevo archivo de encabezado al proyecto **MyUWPApp** con el nombre **app.base.h**.
 5. Agrega el código siguiente al archivo **app.base.h**, guarda el archivo y ciérralo.

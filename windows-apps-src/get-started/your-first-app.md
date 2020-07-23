@@ -6,12 +6,12 @@ ms.date: 01/25/2017
 ms.topic: article
 keywords: windows 10, uwp, primera aplicación, c#, c++, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: d0870212df4deb7f12f790107ec988fac3eb69ab
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d1731ec0a2b2df247d88be008af2cc6647a3bd6b
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685150"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493380"
 ---
 # <a name="create-your-first-app"></a>Creación de la primera aplicación
 
@@ -21,9 +21,9 @@ Para empezar, elija su lenguaje favorito.
 
 ## <a name="c-and-xaml"></a>C# y XAML
 
-Usa tus conocimientos de .NET, WPF o Silverlight para compilar aplicaciones mediante el lenguaje XAML con C#.
+Use sus conocimientos de .NET, WPF o Silverlight para compilar aplicaciones en C# con el lenguaje XAML.
 
-* [Crear una aplicación "Hello, world" mediante XAML con C#](create-a-hello-world-app-xaml-universal.md)
+* [Creación de una aplicación "Hola mundo" mediante XAML con C#](create-a-hello-world-app-xaml-universal.md)
 
 Si quiere aprender los aspectos básicos o simplemente refrescar su memoria, consulte la siguiente documentación:
 
@@ -31,26 +31,26 @@ Si quiere aprender los aspectos básicos o simplemente refrescar su memoria, con
 * [Conceptos básicos de VB para principiantes](https://docs.microsoft.com/learn/?l=jqMOvLKbC_9206218965)
 * [Guía de Windows 10 para desarrolladores](https://docs.microsoft.com/learn/)
 
-Si está listo para intentar algo un poco más divertido que "Hello, World!", pruebe estos tutoriales:
+## <a name="cwinrt-and-xaml"></a>C++/WinRT y XAML
 
-* [ XAML y enlace de datos en UWP ](xaml-basics-intro.md)
-* [Un juego de UWP 2D simple para Microsoft Store, escrito en C # y MonoGame](get-started-tutorial-game-mg2d.md)
+Aproveche sus conocimientos de programación en C++ estándar para compilar aplicaciones en C++/WinRT con lenguaje XAML.
 
+* [Creación de una aplicación "Hola mundo" mediante XAML con C++/WinRT](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cppwinrt)
+
+Obtenga más información sobre C++/WinRT.
+
+* [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)
 
 ## <a name="visualc-component-extensions-ccx-and-xaml"></a>Extensiones de componentes de Visual C++ (C++/CX) y XAML
 
-Aproveche su experiencia en programación en C ++ para compilar aplicaciones utilizando las extensiones de componentes de Visual C ++ (C ++ / CX) con XAML.
+Aproveche sus conocimientos de programación en C++ para compilar aplicaciones utilizando las extensiones de componentes de Visual C++ (C++/CX) con lenguaje XAML.
 
-* [Crear una aplicación "Hello, world" mediante XAML con C++/CX](create-a-basic-windows-10-app-in-cpp.md)
+* [Creación de una aplicación "Hola mundo" con C++/CX](create-a-basic-windows-10-app-in-cpp.md)
 
-Obtenga más información sobre C++ aquí:
+Obtenga más información sobre C++ aquí.
 
 * [C ++ para aplicaciones UWP](https://docs.microsoft.com/cpp/cppcx/universal-windows-apps-cpp?view=vs-2019)
 * [C ++ para aplicaciones de escritorio](https://docs.microsoft.com/cpp/windows/desktop-applications-visual-cpp?view=vs-2019)
-
-Si está listo para intentar algo un poco más divertido que "Hello, World!", pruebe estos tutoriales:
-
-* [ XAML y enlace de datos en UWP ](xaml-basics-intro.md)
 
 ## <a name="javascript-and-html"></a>JavaScript y HTML
 
@@ -68,8 +68,14 @@ Las aplicaciones web se pueden empaquetar fácilmente en el marco UWP como aplic
 * [Aplicaciones web hospedadas](https://developer.microsoft.com/windows/pwa)
 * [Convertir su aplicación web en una aplicación para UWP](../porting/hwa-create-windows.md)
 
+## <a name="next-steps"></a>Pasos siguientes
 
-## <a name="see-also"></a>Vea también
+Cuando esté listo para intentar algo un poco más divertido que "Hola mundo", pruebe estos tutoriales.
+
+* [Tutorial: Crear una interfaz de usuario](/windows/uwp/design/basics/xaml-basics-ui)
+* [Un juego de UWP 2D simple para Microsoft Store, escrito en C # y MonoGame](get-started-tutorial-game-mg2d.md)
+
+## <a name="see-also"></a>Consulte también
 
 * [Empezar a crear el código](create-uwp-apps.md)
 * [¿Qué es una aplicación para UWP?](universal-application-platform-guide.md)

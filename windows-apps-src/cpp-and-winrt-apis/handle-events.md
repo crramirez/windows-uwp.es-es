@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar c ++ cpp, winrt, proyectado, proyección, controlador, evento, delegado
 ms.localizationpriority: medium
-ms.openlocfilehash: eae966c130c52305b53cc4122844aeae49ecab92
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5960de52c6cd68e98f80e7618f34dd0a94d08312
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82267493"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493370"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Control de eventos mediante delegados en C++/WinRT
 
@@ -295,6 +295,6 @@ Si controlas un evento con la función miembro de un objeto o desde dentro de un
 * [función winrt::implements::get_strong](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Crear eventos en C++/WinRT](author-events.md)
-* [Operaciones simultáneas y asincrónicas con C++/WinRT](concurrency.md)
-* [Referencias fuertes y débiles de C++/WinRT](weak-references.md)
+* [Crear eventos en C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-events)
+* [Operaciones simultáneas y asincrónicas con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency)
+* [Referencias fuertes y débiles de C++/WinRT](/windows/uwp/cpp-and-winrt-apis/weak-references)

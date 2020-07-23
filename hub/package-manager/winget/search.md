@@ -4,12 +4,12 @@ description: Consulta los orígenes en busca de aplicaciones disponibles que se 
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 366d2176fe9465495d8ed8f2eeb7912229bd07f1
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: 7038f9b31c4c0446e3af56cac2d118598347d4d3
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334472"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493260"
 ---
 # <a name="search-command-winget"></a>Comando search (winget)
 
@@ -48,7 +48,7 @@ Las cadenas de búsqueda se pueden filtrar con las siguientes opciones.
 | **--name**      |  Limita la búsqueda al nombre de la aplicación. |
 | **--moniker**  |    Limita la búsqueda al moniker especificado. |
 | **--tag**    |  Limita la búsqueda a las etiquetas que se muestran para la aplicación. |
-| **--command**   |   Limita la búsqueda al nombre de la aplicación. |
+| **--command**   |   Limita la búsqueda a los comandos que se muestran para la aplicación. |
 
 La cadena se tratará como una subcadena. De forma predeterminada, la búsqueda también distingue entre mayúsculas y minúsculas. Por ejemplo, `winget search micro` podría devolver lo siguiente:
 

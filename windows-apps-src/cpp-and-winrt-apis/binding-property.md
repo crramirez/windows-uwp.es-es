@@ -5,20 +5,22 @@ ms.date: 06/21/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, XAML, control, binding, property
 ms.localizationpriority: medium
-ms.openlocfilehash: 12a20ae3df6ae83723550bf365aadab99b1b3b7b
-ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
+ms.openlocfilehash: 5ba06ece905e6a91a2279f0fe78e867a8f943bb3
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2020
-ms.locfileid: "84756537"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492940"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>Controles de XAML; enlazar a una propiedad de C++/WinRT
+
 Una propiedad que se puede enlazar de forma eficaz a un control de XAML se conoce como una propiedad *observable*. Esta idea se basa en el patrón de diseño de software conocido como *patrón observador*. En este tema se muestra cómo implementar propiedades observables en [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) y cómo enlazar controles de elementos XAML a dichas propiedades (para obtener información general, consulta [Enlace de datos](/windows/uwp/data-binding)).
 
 > [!IMPORTANT]
 > Para conocer los conceptos y términos esenciales que te ayuden a entender cómo consumir y crear clases en tiempo de ejecución con C++/WinRT, consulta [Consumir API con C++/WinRT](consume-apis.md) y [Crear API con C++/WinRT ](author-apis.md).
 
 ## <a name="what-does-observable-mean-for-a-property"></a>¿Qué significa *observable* con respecto a una propiedad?
+
 Supongamos que una clase en tiempo de ejecución denominada **BookSku** tiene una propiedad denominada **Title**. Si **BookSku** elige generar el evento [**INotifyPropertyChanged::PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) siempre que el valor de **Title** cambie, la propiedad **Title** será una propiedad observable. Es el comportamiento de **BookSku** (generar o no generar el evento) que determina cuáles de sus propiedades, si las hay, son observables.
 
 Un elemento de texto XAML o control puede enlazarse a estos eventos y controlarlos mediante la recuperación de los valores actualizados y luego actualizarse automáticamente para mostrar el nuevo valor.
@@ -27,7 +29,8 @@ Un elemento de texto XAML o control puede enlazarse a estos eventos y controlarl
 > Para más información sobre cómo instalar y usar la Extensión de Visual Studio (VSIX) para C++/WinRT y el paquete de NuGet (que juntos proporcionan la plantilla de proyecto y compatibilidad de la compilación), consulta [Compatibilidad de Visual Studio para C++/WinRT](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
 ## <a name="create-a-blank-app-bookstore"></a>Crear una aplicación en blanco (Bookstore)
-Para empezar, crea un proyecto en Microsoft Visual Studio. Crea un proyecto **Aplicación en blanco (C++/WinRT)** y asígnale el nombre *Bookstore*.
+
+Para empezar, crea un proyecto en Microsoft Visual Studio. Crea un proyecto **Aplicación en blanco (C++/WinRT)** y asígnale el nombre *Bookstore*. Asegúrese de que la opción **Colocar la solución y el proyecto en el mismo directorio** esté desactivada. Elija como destino la versión más reciente disponible de manera general (es decir, no en versión preliminar) de Windows SDK.
 
 Vamos a crear una nueva clase para representar un libro que tenga una propiedad de título observable. Vamos a crear y consumir la clase dentro de la misma unidad de compilación. Pero queremos poder enlazar a esta clase desde XAML y para ello tiene que ser una clase en tiempo de ejecución. Y vamos a usar C++/WinRT tanto para crearla como para consumirla.
 
@@ -240,7 +243,7 @@ namespace winrt::Bookstore::implementation
 ...
 ```
 
-En `\Bookstore\Bookstore\MainPage.cpp`, llama a [**winrt::make**](/uwp/cpp-ref-for-winrt/make) (con el tipo de implementación) para asignar una nueva instancia del tipo proyectado a m_mainViewModel. Asigna un valor inicial para el título del libro. Implementa el descriptor de acceso para la propiedad MainViewModel. Y, por último, actualiza el título del libro en el controlador de eventos del botón. Quita también la propiedad **MyProperty**.
+En `\Bookstore\Bookstore\MainPage.cpp`, como se muestra en la lista siguiente, realice los cambios siguientes. Llame a [**winrt::make**](/uwp/cpp-ref-for-winrt/make) (con el tipo de implementación **BookstoreViewModel**) para asignar una nueva instancia del tipo **BookstoreViewModel** proyectado a *m_mainViewModel*. Como hemos visto anteriormente, el constructor **BookstoreViewModel** crea un nuevo objeto **BookSku** como miembro de datos privado, estableciendo su título inicialmente en `L"Atticus"`. En el controlador de eventos del botón (**ClickHandler**), actualice el título del libro a su título publicado. Por último, implemente el descriptor de acceso para la propiedad **MainViewModel**. Quita también la propiedad **MyProperty**.
 
 ```cppwinrt
 // MainPage.cpp

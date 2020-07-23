@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, estándar, c++, cpp, winrt, projected, proyectado, projection, proyección, implementation, implementación, implement, implementar, runtime class, clase en tiempo de ejecución, activation, activación
 ms.localizationpriority: medium
-ms.openlocfilehash: fcdeaec3728306de420baa4a2aea06ef1952641e
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 64f605fc716970d2fd4ca534a0c31fb62baa34d4
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255269"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493670"
 ---
 # <a name="author-apis-with-cwinrt"></a>Crear API con C++/WinRT
 
@@ -178,7 +178,7 @@ struct MyRuntimeClass_base : implements<D, MyProject::IMyRuntimeClass, I...>
 
 Por lo tanto, en este contexto, en la raíz de la jerarquía de herencia, vuelve a ser la plantilla de la estructura base [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements).
 
-Para obtener más detalles, el código y un tutorial sobre la creación de API en un componente de Windows Runtime, consulta [Crear eventos en C++/ WinRT](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component).
+Para obtener más detalles, el código y un tutorial sobre la creación de API en un componente de Windows Runtime, consulte [Componentes de Windows Runtime con C++/WinRT](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) y [Creación de eventos en C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-events).
 
 ## <a name="if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui"></a>Si vas a crear una clase en tiempo de ejecución a la que se hará referencia en tu interfaz de usuario de XAML
 
@@ -751,5 +751,7 @@ Esto requiere que todos los miembros de la jerarquía de la clase acuerden el va
 * [Función winrt::Windows::Foundation::IUnknown::as](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)
 
 ## <a name="related-topics"></a>Temas relacionados
-* [Consumir API con C++/WinRT](consume-apis.md)
-* [Controles de XAML; enlazar a una propiedad de C++/WinRT](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [Crear eventos en C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-events)
+* [Consumir API con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/consume-apis)
+* [Componentes de Windows Runtime con C++/WinRT](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt)
+* [Controles de XAML; enlazar a una propiedad de C++/WinRT](/windows/uwp/cpp-and-winrt-apis/binding-property)

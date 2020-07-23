@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, aprender python, python en windows para principiantes, instalar python con microsoft store, python con vs code, pygame en windows
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 688ae004dad8653e70d86b3b91652b6898c1e9d3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5dee553fedc81f0b482d4b79f4d7d8be3a7bb106
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74881284"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493500"
 ---
 # <a name="get-started-using-python-on-windows-for-beginners"></a>Introducción al uso de Python en Windows para principiantes
 
@@ -202,7 +202,7 @@ Te recomendamos los siguientes recursos que te permitirán seguir obteniendo inf
 
 ### <a name="working-with-python-in-vs-code"></a>Trabajar con Python en VS Code
 
-- [Edición de Python en VS Code](https://code.visualstudio.com/docs/python/editing): obtén más información sobre cómo aprovechar las ventajas de la compatibilidad de Autocompletar e IntelliSense de VS Code con Python, incluida la forma de personalizar sus comportamientos, o simplemente desactívalas.
+- [Edición de Python en VS Code](https://code.visualstudio.com/docs/python/editing): obtenga más información sobre cómo aprovechar las ventajas de la compatibilidad de Autocompletar e IntelliSense de VS Code con Python, incluida la forma de personalizar sus comportamientos, o simplemente desactívelas.
 
 - [Detección de errores de Python](https://code.visualstudio.com/docs/python/linting): la detección de errores es el proceso de ejecución de un programa que analizará el código para detectar posibles errores. Obtén información sobre las distintas formas de compatibilidad de la detección de errores que VS Code proporciona para Python y cómo configurarlas.
 

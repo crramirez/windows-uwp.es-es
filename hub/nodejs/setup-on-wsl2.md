@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, learning nodejs, node on windows, node on wsl, node on linux on windows, install node on windows, nodejs with vs code, develop with node on windows, develop with nodejs on windows, install node on WSL, NodeJS on Windows Subsystem for Linux
 ms.localizationpriority: medium
 ms.date: 06/09/2020
-ms.openlocfilehash: 494db609db577bd2b199f828fcf80e80a5c8c624
-ms.sourcegitcommit: 22ed0d4edad5e6bab352e641cf86cf455cf83825
+ms.openlocfilehash: e8fb06cb1e68d5dfa7f23e6966f917c96eb79859
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133978"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493280"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>Configuración del entorno de desarrollo de Node.js con WSL 2
 
@@ -36,7 +36,7 @@ Se recomienda actualizar la distribución de Linux con regularidad, incluso inme
 
 El nuevo Terminal Windows permite habilitar varias pestañas (cambia rápidamente entre varias líneas de comando de Linux, el símbolo del sistema de Windows, PowerShell, la CLI de Azure, etc.), crear enlaces de teclado personalizados (teclas de método abreviado para abrir o cerrar pestañas, copiar y pegar, etc.), usar la característica de búsqueda y configurar temas personalizados (esquemas de colores, estilos y tamaños de fuente, imagen de fondo/desenfoque/transparencia). [Más información](https://docs.microsoft.com/windows/terminal).
 
-1. Obtén [Terminal Windows (versión preliminar) en Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701): al instalar a través de Microsoft Store, las actualizaciones se controlan automáticamente.
+1. Obtenga [Terminal Windows en Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701): al instalar a través de Microsoft Store, las actualizaciones se controlan automáticamente.
 
 2. Una vez instalado, abre Terminal Windows y selecciona **Configuración** para personalizar el terminal con el archivo `settings.json`.
 
@@ -140,5 +140,5 @@ Ya tienes configurado un entorno de desarrollo de Node.js. Para empezar a usar e
 
 - [Introducción a Node.js para principiantes](./beginners.md)
 - [Introducción a los marcos web de Node.js en Windows](./web-frameworks.md)
-- [Introducción a la conexión de aplicaciones de Node.js a una base de datos](./databases.md)
+- [Introducción a la conexión de aplicaciones de Node.js a una base de datos](https://docs.microsoft.com/windows/wsl/tutorials/wsl-database)
 - [Introducción al uso de contenedores de Docker con Node.js](./containers.md)

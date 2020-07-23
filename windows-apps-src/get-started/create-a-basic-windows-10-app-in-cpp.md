@@ -6,14 +6,14 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c388b9b81744c0d27d96c1f97b4e405af63eaef
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 79022d1be13b98be4b086cbe452e55767ca0cedc
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80524083"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492920"
 ---
-# <a name="create-a-hello-world-app-in-ccx"></a>Crear una aplicación "Hello world" en C++/CX
+# <a name="create-a-hello-world-app-in-ccx"></a>Creación de una aplicación "Hola mundo" en C++/CX
 
 > [!IMPORTANT]
 > Este tutorial usa C++/CX. Microsoft ha lanzado C ++ / WinRT: una proyección de lenguaje C ++ 17 moderna completamente estándar para las API de Windows Runtime (WinRT). Para obtener más información sobre este lenguaje, consulte [ C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/).
@@ -99,10 +99,10 @@ Cada archivo .xaml de una carpeta de proyecto tiene asociados un archivo .xaml.h
 Veamos primero los archivos del proyecto.
 
 -   **App.xaml, App.xaml.h, App.xaml.cpp:** Representan el objeto Application, que es un punto de entrada de la aplicación. App.xaml no contiene marcado de interfaz de usuario de la página, pero puedes agregar estilos de interfaz de usuario y otros elementos a los que desees que se pueda acceder desde cualquier página. Los archivos de código subyacente contienen controladores para los eventos **OnLaunched** y **OnSuspending**. Por lo general, aquí tienes que agregar código personalizado para que inicialice tu aplicación cuando se inicie y realice la limpieza cuando se suspenda o finalice.
--   **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:** contienen el marcado XAML y el código subyacente para la página de "inicio" predeterminada de una aplicación. No dispone de compatibilidad de navegación ni de controles integrados.
+-   **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:** Contenga el marcado XAML y el código subyacente para la página de "inicio" predeterminada en una aplicación. No dispone de compatibilidad de navegación ni de controles integrados.
 -   **pch.h, pch.cpp:** Un archivo de encabezado precompilado y el archivo que lo incluye en su proyecto. En pch.h, puedes incluir cualquier encabezado que no cambie a menudo y que se incluyan en otros archivos de la solución.
 -   **Package.appxmanifest:** Un archivo XML que describe las funcionalidades del dispositivo que necesita su aplicación, así como la información de versión de su aplicación y otros metadatos. Para abrir este archivo en el **Diseñador de manifiestos**, solo tienes que hacer doble clic en él.
--   **HelloWorld\_TemporaryKey.pfx:** una clave que permite la implementación de la aplicación en este equipo desde Visual Studio.
+-   **HelloWorld\_TemporaryKey.pfx:** Una clave que permite la implementación de la aplicación en este equipo desde Visual Studio.
 
 ## <a name="a-first-look-at-the-code"></a>Un primer vistazo al código
 
@@ -247,9 +247,9 @@ En la aplicación puedes escribir en el [**TextBox**](https://docs.microsoft.com
 
    Al mismo tiempo, en MainPage.xaml, el XAML para [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) se actualiza para declarar el controlador de eventos de [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click), de esta manera:
 
-    ```xaml
-    <Button Content="Say &quot;Hello&quot;" Click="Button_Click"/>
-    ```
+```xaml
+<Button Content="Say &quot;Hello&quot;" Click="Button_Click"/>
+```
 
    Podrías haber agregado esto simplemente al código xaml de forma manual, lo cual puede resultar útil si no se carga el diseñador. Si escribes esto manualmente, escribe "Click" y deja que IntelliSense haga aparecer la opción para agregar un nuevo controlador de eventos. De este modo, Visual Studio creará la declaración del método y el código auxiliar necesarios.
 
@@ -257,12 +257,12 @@ En la aplicación puedes escribir en el [**TextBox**](https://docs.microsoft.com
 
 5.  En MainPage.xaml.cpp, agregue el siguiente código al **botón \_Haga clic** en el controlador de eventos que acaba de crear. Este código recupera el nombre de usuario del control de la clase [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) `nameInput` y lo usa para crear un saludo. La clase [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) `greetingOutput` muestra el resultado.
 
-    ```cpp
-    void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
-    {
-        greetingOutput->Text = "Hello, " + nameInput->Text + "!";
-    }
-    ```
+```cpp
+void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+    greetingOutput->Text = "Hello, " + nameInput->Text + "!";
+}
+```
 
 6.  Establece el proyecto como el proyecto de inicio y presiona F5 para compilar y ejecutar la aplicación. Cuando escribes un nombre en el cuadro de texto y haces clic en el botón, la aplicación muestra un saludo personalizado.
 
@@ -279,20 +279,20 @@ Es fácil personalizar la apariencia de tu aplicación. De manera predeterminada
 1.  Abre App.xaml.
 2.  En la etiqueta de apertura [**Aplicación**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application), edita la propiedad [**RequestedTheme**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.requestedtheme) y establece su valor en **Oscuro**:
 
-    ```xaml
-    RequestedTheme="Dark"
-    ```
+```xaml
+RequestedTheme="Dark"
+```
 
-    Esta es la etiqueta [**Aplicación**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) completa con el tema oscuro:
+    Here's the full [**Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) tag with the dark theme :
 
-    ```xaml
-        <Application
-        x:Class="HelloWorld.App"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:HelloWorld"
-        RequestedTheme="Dark">
-    ```
+```xaml
+    <Application
+    x:Class="HelloWorld.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloWorld"
+    RequestedTheme="Dark">
+```
 
 3.  Presiona F5 para compilarla y ejecutarla. Observa que usa el tema oscuro.
 
@@ -315,15 +315,15 @@ Ahora mismo, en la aplicación de Windows el texto es muy pequeño y difícil de
 5.  Expande el grupo **Varios** y busca la propiedad **Style**.
 6.  Haz clic en el marcador de propiedad (el cuadro verde situado a la derecha de la propiedad **Style**) y después, en el menú, elige **Recurso del sistema** > **BaseTextBlockStyle**.
 
-      **BaseTextBlockStyle** es un recurso que se define en el [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) en <root>\\ Archivos de aplicación \\ Kits de Windows \\ 10 \\ Incluidos \\ winrt \\ xaml \\ diseño \\ generic.xaml.
+     **BaseTextBlockStyle** es un recurso que se define en el [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) en <root>\\ Archivos de aplicación \\ Kits de Windows \\ 10 \\ Incluidos \\ winrt \\ xaml \\ diseño \\ generic.xaml.
 
     ![Ventana de propiedades, vista Propiedades](images/xaml-hw-style-cpp.png)
 
      En la superficie de diseño XAML, la apariencia del texto cambia. En el editor XAML, se actualiza el XAML para [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock):
 
-    ```xaml
-    <TextBlock Text="What's your name?" Style="{ThemeResource BaseTextBlockStyle}"/>
-    ```
+```xaml
+<TextBlock Text="What's your name?" Style="{ThemeResource BaseTextBlockStyle}"/>
+```
 
 7.  Repite el proceso para establecer el tamaño de fuente y asignar **BaseTextBlockStyle** al elemento `greetingOutput`[**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock).
 
@@ -331,16 +331,16 @@ Ahora mismo, en la aplicación de Windows el texto es muy pequeño y difícil de
 
     Tu XAML ahora tiene esta apariencia:
 
-    ```xaml
-    <StackPanel x:Name="contentPanel" Margin="120,30,0,0">
-        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="18" Text="What's your name?"/>
-        <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
-            <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
-            <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
-        </StackPanel>
-        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="18" x:Name="greetingOutput"/>
+```xaml
+<StackPanel x:Name="contentPanel" Margin="120,30,0,0">
+    <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="18" Text="What's your name?"/>
+    <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
+        <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
+        <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
     </StackPanel>
-    ```
+    <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="18" x:Name="greetingOutput"/>
+</StackPanel>
+```
 
 8.  Presiona F5 para compilar y ejecutar la aplicación. Ahora tiene esta apariencia:
 
@@ -354,27 +354,27 @@ Ahora haremos que la interfaz de usuario se adapte a diferentes tamaños de pant
 
 1.  En el editor XAML, agrega este bloque de XAML después de la etiqueta de apertura del elemento raíz [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid).
 
-    ```xaml
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup>
-            <VisualState x:Name="wideState">
-                <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowWidth="641" />
-                </VisualState.StateTriggers>
-            </VisualState>
-            <VisualState x:Name="narrowState">
-                <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowWidth="0" />
-                </VisualState.StateTriggers>
-                <VisualState.Setters>
-                    <Setter Target="contentPanel.Margin" Value="20,30,0,0"/>
-                    <Setter Target="inputPanel.Orientation" Value="Vertical"/>
-                    <Setter Target="inputButton.Margin" Value="0,4,0,0"/>
-                </VisualState.Setters>
-            </VisualState>
-        </VisualStateGroup>
-    </VisualStateManager.VisualStateGroups>
-    ```
+```xaml
+<VisualStateManager.VisualStateGroups>
+    <VisualStateGroup>
+        <VisualState x:Name="wideState">
+            <VisualState.StateTriggers>
+                <AdaptiveTrigger MinWindowWidth="641" />
+            </VisualState.StateTriggers>
+        </VisualState>
+        <VisualState x:Name="narrowState">
+            <VisualState.StateTriggers>
+                <AdaptiveTrigger MinWindowWidth="0" />
+            </VisualState.StateTriggers>
+            <VisualState.Setters>
+                <Setter Target="contentPanel.Margin" Value="20,30,0,0"/>
+                <Setter Target="inputPanel.Orientation" Value="Vertical"/>
+                <Setter Target="inputButton.Margin" Value="0,4,0,0"/>
+            </VisualState.Setters>
+        </VisualState>
+    </VisualStateGroup>
+</VisualStateManager.VisualStateGroups>
+```
 
 2.  Depura la aplicación en el equipo local. Verás que la interfaz de usuario es igual que antes, a menos que la ventana tenga un ancho inferior a 641 píxeles independientes del dispositivo (DIP).
 3.  Depura la aplicación en el emulador de dispositivos móviles. Observa que la interfaz de usuario use las propiedades definidas en `narrowState` y aparezca correctamente en la pantalla pequeña.
