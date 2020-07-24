@@ -1,4 +1,4 @@
-- name: Introducción
+- name: Información general
   href: index.md
 - name: Conceptos básicos de diseño
   items:
@@ -84,19 +84,19 @@
       items:
         - name: Botones
           href: controls-and-patterns/buttons.md
-        - name: Casilla
+        - name: Casillas
           href: controls-and-patterns/checkbox.md
         - name: Cuadros combinados y cuadros de lista
           href: controls-and-patterns/combo-box.md
         - name: Hipervínculos
           href: controls-and-patterns/hyperlinks.md
-        - name: Botón de selección
+        - name: Botones de radio
           href: controls-and-patterns/radio-button.md
         - name: Control de clasificación
           href: controls-and-patterns/rating.md
-        - name: Control deslizante
+        - name: Controles deslizantes
           href: controls-and-patterns/slider.md
-        - name: Alternancia
+        - name: Modificadores para alternar
           href: controls-and-patterns/toggles.md
     - name: Colecciones
       items:
@@ -360,7 +360,7 @@
                   items:
                     - name: Introducción
                       href: shell/tiles-and-notifications/toast-desktop-apps.md
-                    - name: 'Aplicaciones de C#'
+                    - name: Aplicaciones de C#
                       href: shell/tiles-and-notifications/send-local-toast-desktop.md
                     - name: Aplicaciones de C++ WRL
                       href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
@@ -525,7 +525,7 @@
       href: devices/designing-for-MR.md
 - name: Facilidad de uso
   items:
-    - name: Introducción
+    - name: Información general
       href: usability/index.md
     - name: Accesibilidad
       href: accessibility/accessibility.md
