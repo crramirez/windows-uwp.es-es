@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc1ec762e5c6f69db608805ac58cfb9469114beb
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bf1372289afcc8649fff6c2ed56ad85aad46b76c
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372270"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997992"
 ---
 # <a name="xphase-attribute"></a>Atributo x:Phase
 
@@ -30,11 +30,11 @@ Usa **x:Phase** con la [extensión de marcado {x:Bind}](x-bind-markup-extension.
 
 | Término | Descripción |
 |------|-------------|
-| PhaseValue | Un número que indica la fase en la que se procesará el elemento. El valor predeterminado es 0. | 
+| PhaseValue | Un número que indica la fase en la que se procesará el elemento. El valor predeterminado es 0. | 
 
 ## <a name="remarks"></a>Comentarios
 
-Si una lista se mueve panorámicamente con el dedo o la rueda del ratón, tal vez no se puedan representar los elementos a la misma velocidad que el desplazamiento en función de la complejidad de la plantilla de datos. Esto es especialmente cierto para un dispositivo portátil con una CPU eficiente como un teléfono o una tableta.
+Si una lista se mueve panorámicamente con el dedo o la rueda del ratón, tal vez no se puedan representar los elementos a la misma velocidad que el desplazamiento en función de la complejidad de la plantilla de datos. Esto es especialmente cierto para un dispositivo portátil con una CPU eficaz, como una tableta.
 
 El escalonamiento habilita la representación incremental de la plantilla de datos para que se pueda priorizar el contenido y que los elementos más importantes se representen primero. Así la lista puede mostrar contenido de cada elemento en caso de desplazamiento rápido y representar más elementos de cada plantilla conforme el tiempo lo vaya permitiendo.
 
@@ -79,5 +79,5 @@ Los números de fase no necesitan ser contiguos y son los mismos que el valor de
 
 El escalonamiento solo afecta a los enlaces [{x:Bind}](x-bind-markup-extension.md) , no a los enlaces [{Binding}](binding-markup-extension.md) .
 
-El escalonamiento solo se aplica cuando la plantilla de elementos se representa usando un control que tiene constancia del escalonamiento. Para Windows 10, que significa [ **ListView** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) y [ **GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView). El escalonamiento no se aplicará a las plantillas de datos usadas en otros controles de elementos ni en otros escenarios, como las secciones [**ContentTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.contenttemplate) o [**Hub**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Hub). En estos casos, todos los elementos de la interfaz de usuario serán datos enlazados a la vez.
+El escalonamiento solo se aplica cuando la plantilla de elementos se representa usando un control que tiene constancia del escalonamiento. Para Windows 10, esto significa [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) y [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView). El escalonamiento no se aplicará a las plantillas de datos usadas en otros controles de elementos ni en otros escenarios, como las secciones [**ContentTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.contenttemplate) o [**Hub**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Hub). En estos casos, todos los elementos de la interfaz de usuario serán datos enlazados a la vez.
 

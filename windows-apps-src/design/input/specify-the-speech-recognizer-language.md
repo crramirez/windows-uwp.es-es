@@ -8,12 +8,12 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a1db38120252febefd55933fa106f473b3f920d8
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 8e672d67909a9090ac622ec53894a53fa8485f16
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234863"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997772"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>Especificar el idioma del reconocedor de voz
 
@@ -33,7 +33,7 @@ Debes tener un conocimiento básico del reconocimiento de voz y de las restricci
 
 Si no está familiarizado con el desarrollo de aplicaciones de Windows, consulte estos temas para familiarizarse con las tecnologías que se describen aquí.
 
--   [Creación de la primera aplicación](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
+-   [Crea tu primera aplicación.](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
 -   Encontrarás más información acerca de los eventos, en [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
 
 **Instrucciones para la experiencia del usuario:**
@@ -79,7 +79,7 @@ var language = new Windows.Globalization.Language("en-US");
 var recognizer = new SpeechRecognizer(language); 
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 
 Una restricción de tema puede configurarse mediante la adición de [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint) a la colección [**Restricciones**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) de [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) y, luego, llamando a [**CompileConstraintsAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync). Un [**SpeechRecognitionResultStatus**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus) de **TopicLanguageNotSupported** se devuelve si el reconocedor no se inicializa con un idioma de tema admitido.
@@ -90,15 +90,9 @@ Una gramática SRGS es un formato XML estándar abierto representado por la clas
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-**Desarrolladores**
-
 * [Interacciones de voz](speech-interactions.md)
 
-**Diseñadores**
-
-* [Directrices para el diseño de voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
-
-**Ejemplos**
+**Muestras**
 
 * [Muestra de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  

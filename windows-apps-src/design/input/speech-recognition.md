@@ -8,19 +8,19 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5192177edf284d1fe6e0c6eb06bf8713fbff8b4e
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: 8ecdd882357a7e20506ab6116748d57ab0dde33f
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218385"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997722"
 ---
 # <a name="speech-recognition"></a>Reconocimiento de voz
 
 
 Usa el reconocimiento de voz para proporcionar datos de entrada, especificar una acción o un comando y realizar tareas.
 
-> **API importantes**: [**Windows.Media.SpeechRecognition**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition)
+> **API importantes**: [ **Windows. Media. SpeechRecognition**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition)
 
 El reconocimiento de voz incluye un tiempo de ejecución de voz, varias API de reconocimiento para programar el tiempo de ejecución, gramáticas listas para usar para el dictado y la búsqueda en Internet, y una interfaz de usuario predeterminada del sistema que ayuda a los usuarios a descubrir y usar las funciones de reconocimiento de voz.
 
@@ -221,21 +221,21 @@ La gramática predeterminada de dictado de texto libre tiene la capacidad de rec
 La gramática de búsqueda web, como una gramática de dictado, contiene un gran número de palabras y frases que puede decir un usuario. Sin embargo, está optimizada para reconocer los términos que suelen usar las personas cuando buscan en la web.
 
 > [!NOTE]
-> debido a que las gramáticas de dictado predefinida y búsqueda web pueden ser grandes y, como están en línea (no en el dispositivo), es posible que el rendimiento no sea tan rápido como con una gramática personalizada instalada en el dispositivo.     
+> Dado que las gramáticas de dictado predefinidas y de búsqueda web pueden ser grandes y, como están en línea (no en el dispositivo), es posible que el rendimiento no sea tan rápido como con una gramática personalizada instalada en el dispositivo.     
 
 Estas gramáticas predefinidas pueden usarse para reconocer hasta 10 segundos de entrada de voz y no requieren ningún esfuerzo de edición por su parte. Sin embargo, sí requieren una conexión a una red.
 
-Para usar las restricciones de servicios web, la compatibilidad del dictado y la entrada de voz deben estar habilitadas en **Configuración**, activando la opción "Conocerme" en **Configuración -> Privacidad -> Voz, entrada manuscrita y escritura por teclado**.
+Para usar restricciones de servicio Web, la compatibilidad con la entrada y la dictado de voz debe estar habilitada en la **configuración** activando la opción "ir a la información" en **configuración-> privacidad-> voz, entrada manuscrita y escritura**.
 
-Aquí se muestra cómo comprobar si la entrada de voz está habilitada y, si no lo está, cómo abrir la página Configuración -> Privacidad -> Voz, entrada manuscrita y escritura por teclado.
+Aquí se muestra cómo probar si la entrada de voz está habilitada y abrir la página Configuración-> privacidad-> voz, entrada manuscrita y escritura, si no lo está.
 
-En primer lugar, inicializamos una variable global (HResultPrivacyStatementDeclined) en el valor de HResult de 0x80045509. Vea [control de excepciones para en C\# o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/dn532194(v=win.10)).
+En primer lugar, inicializamos una variable global (HResultPrivacyStatementDeclined) en el valor de HResult de 0x80045509. Vea [control de excepciones para en C \# o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/dn532194(v=win.10)).
 
 ```csharp
 private static uint HResultPrivacyStatementDeclined = 0x80045509;
 ```
 
-A continuación, capturamos las excepciones estándar durante el reconocimiento y probamos si el valor [**HResult**](https://docs.microsoft.com/uwp/api/Windows.Foundation.HResult) es igual al valor de la variable HResultPrivacyStatementDeclined. Si es así, mostramos una advertencia y llamamos a `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` para abrir la página Configuración.
+A continuación, se detectan las excepciones estándar durante recogntion y se prueba si el valor [**HRESULT**](https://docs.microsoft.com/uwp/api/Windows.Foundation.HResult) es igual al valor de la variable HResultPrivacyStatementDeclined. Si es así, se muestra una advertencia y `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` se llama a para abrir la página de configuración.
 
 ```csharp
 catch (Exception exception)
@@ -278,9 +278,9 @@ Una gramática SRGS (Especificación de gramática de reconocimiento de voz) es
 
 Usa un archivo XML de definición de comando de voz (VCD) para definir los comandos que el usuario puede decir para iniciar acciones al activar tu aplicación. Para obtener más información, consulte [activación de una aplicación en primer plano con comandos de voz a través de Cortana](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana).
 
-Consulte [**SpeechRecognitionVoiceCommandDefinitionConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint)/
+Consulte [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint)/
 
-**Tenga en cuenta**  el tipo de restricción que use dependerá de la complejidad de la experiencia de reconocimiento que desee crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
+**Nota:**    El tipo de restricción que use dependerá de la complejidad de la experiencia de reconocimiento que desee crear. Cualquier enfoque puede ser la mejor opción para una tarea de reconocimiento determinada y puedes encontrar usos para todos los tipos de restricción en tu aplicación.
 Para comenzar con las restricciones, consulta [Definir restricciones de reconocimiento personalizadas](define-custom-recognition-constraints.md).
 
 La gramática de dictado predefinida de la aplicación para Windows universal reconoce la mayoría de las palabras y frases cortas de un idioma. Se activa de manera predeterminada cuando se crea una instancia a un objeto reconocedor de voz sin restricciones personalizadas.
@@ -368,17 +368,8 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-
-**Desarrolladores**
 * [Interacciones de voz](speech-interactions.md)
-**Diseñadores**
-* [Directrices para el diseño de voz](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
+
 **Muestras**
-* [Ejemplo de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
- 
 
- 
-
-
-
-
+* [Muestra de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

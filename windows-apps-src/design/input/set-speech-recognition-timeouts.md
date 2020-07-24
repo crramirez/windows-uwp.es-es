@@ -8,19 +8,19 @@ keywords: voz, reconocimiento de voz, lenguaje natural, dictado, entrada, intera
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0df5f6c2e12b3b2e761ce45f95930dc179ef367f
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 026dd160ade3fa89af48e4f3ab8efaa85a80f490
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258255"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997762"
 ---
 # <a name="set-speech-recognition-timeouts"></a>Establecer tiempos de espera de reconocimiento de voz
 
 
 Establece durante cuánto tiempo un reconocedor de voz pasa por alto el silencio o los sonidos irreconocibles (balbuceo) y continúa escuchando la entrada de voz.
 
-> **API importantes**: [**Timeouts**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.timeouts), [**SpeechRecognizerTimeouts**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts)
+> **API importantes**: [**tiempos de espera**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.timeouts), [**SpeechRecognizerTimeouts**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts)
 
 ## <a name="set-a-timeout"></a>Establecer un tiempo de espera
 
@@ -31,7 +31,7 @@ Aquí especificamos diversos valores de [**Timeouts**](https://docs.microsoft.co
 -   BabbleTimeout: el período de tiempo que un SpeechRecognizer continúa escuchando sonidos no reconocibles (hablante) antes de que se suponga que la entrada de voz ha finalizado y finaliza la operación de reconocimiento.
 -   EndSilenceTimeout: el período de tiempo en que un objeto SpeechRecognizer detecta silencio (después de que se hayan generado los resultados de reconocimiento) y da por hecho que ha finalizado la entrada de voz.
 
-**Tenga en cuenta** que se pueden establecer los tiempos de espera de  para cada reconocedor.
+**Nota:**    Los tiempos de espera se pueden establecer para cada reconocedor.
 
  
 
@@ -44,14 +44,8 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-
 * [Interacciones de voz](speech-interactions.md)
-**Ejemplos**
-* [Ejemplo de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
- 
 
- 
+**Muestras**
 
-
-
-
+* [Muestra de reconocimiento de voz y síntesis de voz](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

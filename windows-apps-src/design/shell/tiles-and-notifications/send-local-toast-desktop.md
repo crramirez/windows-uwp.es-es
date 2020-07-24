@@ -1,6 +1,6 @@
 ---
 Description: Obtenga información sobre cómo las aplicaciones de C# de Win32 pueden enviar notificaciones del sistema local y controlar el usuario que hace clic en la notificación del sistema.
-title: Enviar una notificación del sistema local desde las aplicaciones de escritorio de C#
+title: Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Send a local toast notification from desktop C# apps
 template: detail.hbs
@@ -8,14 +8,14 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar un sistema local, un puente de escritorio, msix, paquetes dispersos, C#, C Sharp, notificación del sistema, WPF
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d8332745b44bc688fbf2ca7cf3b42cf7300d579
-ms.sourcegitcommit: 179f8098d10e338ad34fa84934f1654ec58161cd
+ms.openlocfilehash: 6f1eef86045f44fa75363b54fa58e3e7089d64e0
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717646"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997932"
 ---
-# <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar una notificación del sistema local desde las aplicaciones de escritorio de C#
+# <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
 
 Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está utilizando paquetes MSIX o dispersos.
 
@@ -58,17 +58,17 @@ public class MyNotificationActivator : NotificationActivator
 A continuación, debe registrarse con la plataforma de notificación. Hay pasos diferentes en función de si usa paquetes MSIX/dispersos o Win32 clásico. Si admite ambos, debe realizar ambos pasos (sin embargo, no es necesario bifurcar el código, nuestra biblioteca lo controla automáticamente).
 
 
-### <a name="msixsparse-packages"></a>Paquetes MSIX/dispersos
+#### <a name="msixsparse-packages"></a>[Paquetes MSIX/dispersos](#tab/msix-sparse)
 
 Si usa un paquete [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) o [disperso](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) (o si admite ambos), en el **paquete. appxmanifest**, agregue:
 
 1. Declaración de **xmlns: com**
 2. Declaración de **xmlns: Desktop**
 3. En el atributo **IgnorableNamespaces** , **com** y **Desktop**
-4. **com: extensión** para el activador com con el GUID del paso #4. No olvide incluir el `Arguments="-ToastActivated"` para saber que el lanzamiento proviene de una notificación del sistema
-5. **Desktop: Extension** para **Windows. toastNotificationActivation** para declarar el CLSID del activador del sistema (el GUID del paso #3).
+4. **com: extensión** para el activador com con el GUID del paso #2. No olvide incluir el `Arguments="-ToastActivated"` para saber que el lanzamiento proviene de una notificación del sistema
+5. **Desktop: Extension** para **Windows. toastNotificationActivation** para declarar el CLSID del activador del sistema (el GUID del paso #2).
 
-**Paquete. appxmanifest**
+**Package.appxmanifest**
 
 ```xml
 <!--Add these namespaces-->
@@ -104,15 +104,15 @@ Si usa un paquete [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-
 ```
 
 
-### <a name="classic-win32"></a>Win32 clásico
+#### <a name="classic-win32"></a>[Win32 clásico](#tab/classic)
 
-Si usa Win32 clásico (o si admite ambos), tendrá que declarar el identificador de modelo de usuario de la aplicación (AUMID) y el activador de notificaciones del sistema (GUID del paso #3) en el acceso directo de la aplicación en Inicio.
+Si usa Win32 clásico (o si admite ambos), tendrá que declarar el identificador de modelo de usuario de la aplicación (AUMID) y el activador de notificaciones del sistema (GUID del paso #2) en el acceso directo de la aplicación en Inicio.
 
 Seleccione un AUMID único que identifique la aplicación Win32. Normalmente tiene el formato [CompanyName]. [AppName], pero desea asegurarse de que es único en todas las aplicaciones (no dude en agregar algunos dígitos al final).
 
-#### <a name="step-31-wix-installer"></a>Paso 3,1: instalador de WiX
+### <a name="step-31-wix-installer"></a>Paso 3,1: instalador de WiX
 
-Si usa WiX para el instalador, edite el archivo **product. WXS** para agregar las dos propiedades de acceso directo al acceso directo del menú Inicio, tal como se muestra a continuación. Asegúrese de que el GUID del paso #3 se `{}` incluye como se muestra a continuación.
+Si usa WiX para el instalador, edite el archivo **product. WXS** para agregar las dos propiedades de acceso directo al acceso directo del menú Inicio, tal como se muestra a continuación. Asegúrese de que el GUID del paso #2 se `{}` incluye como se muestra a continuación.
 
 **Producto. WXS**
 
@@ -132,9 +132,9 @@ Si usa WiX para el instalador, edite el archivo **product. WXS** para agregar la
 > Para usar las notificaciones realmente, debe instalar la aplicación a través del instalador una vez antes de la depuración, para que el acceso directo de inicio con el AUMID y el CLSID estén presentes. Después de que el acceso directo de inicio esté presente, puede depurar con F5 desde Visual Studio.
 
 
-#### <a name="step-32-register-aumid-and-com-server"></a>Paso 3,2: registrar el servidor AUMID y COM
+### <a name="step-32-register-aumid-and-com-server"></a>Paso 3,2: registrar el servidor AUMID y COM
 
-A continuación, independientemente del instalador, en el código de inicio de la aplicación (antes de llamar a las API de notificación), llame al método **RegisterAumidAndComServer** , especificando la clase de activador de notificaciones del paso #3 y el AUMID usado anteriormente.
+A continuación, independientemente del instalador, en el código de inicio de la aplicación (antes de llamar a las API de notificación), llame al método **RegisterAumidAndComServer** , especificando la clase de activador de notificaciones del paso #2 y el AUMID usado anteriormente.
 
 ```csharp
 // Register AUMID and COM server (for MSIX/sparse package apps, this no-ops)
@@ -145,12 +145,14 @@ Si es compatible con el paquete MSIX o disperso y con Win32 clásico, puede llam
 
 Este método le permite llamar a las API de compatibilidad para enviar y administrar notificaciones sin tener que proporcionar constantemente su AUMID. Y inserta la clave del registro LocalServer32 para el servidor COM.
 
+---
+
 
 ## <a name="step-4-register-com-activator"></a>Paso 4: registrar el activador COM
 
 En el caso de los paquetes MSIX y dispersos y de las aplicaciones Win32 clásicas, debe registrar el tipo de activador de notificaciones para que pueda controlar las activaciones del sistema.
 
-En el código de inicio de la aplicación, llame al método **RegisterActivator** siguiente, pasando su implementación de la clase **NotificationActivator** que creó en el paso #3. Se debe llamar a esta para que reciba cualquier activación del sistema.
+En el código de inicio de la aplicación, llame al método **RegisterActivator** siguiente, pasando su implementación de la clase **NotificationActivator** que creó en el paso #2. Se debe llamar a esta para que reciba cualquier activación del sistema.
 
 ```csharp
 // Register COM server and activator type
@@ -165,7 +167,7 @@ El envío de una notificación es idéntico a las aplicaciones para UWP, salvo q
 > [!NOTE]
 > Instale la [biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para que pueda construir notificaciones mediante C#, tal y como se muestra a continuación, en lugar de usar XML sin formato.
 
-Asegúrese de usar el **ToastContent** que se muestra a continuación (o la plantilla ToastGeneric si va a diseñar XML manualmente), ya que las plantillas de notificación del sistema de Windows 8.1 heredadas no activarán el activador de notificación com que creó en el paso #3.
+Asegúrese de usar el **ToastContent** que se muestra a continuación (o la plantilla ToastGeneric si va a diseñar XML manualmente), ya que las plantillas de notificación del sistema de Windows 8.1 heredadas no activarán el activador de notificación com que creó en el paso #2.
 
 > [!IMPORTANT]
 > Las imágenes http solo se admiten en aplicaciones de paquetes MSIX/dispersos que tienen la capacidad de Internet en su manifiesto. Las aplicaciones Win32 clásicas no admiten imágenes http; debe descargar la imagen en los datos de la aplicación local y hacer referencia a ella localmente.
