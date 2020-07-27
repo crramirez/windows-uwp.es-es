@@ -178,14 +178,12 @@
       href: ../publish/insights-report.md
     - name: Informe de rendimiento de la publicidad
       href: ../publish/advertising-performance-report.md
-    - name: Informe de campaña publicitaria
-      href: ../publish/ad-campaign-report.md
     - name: Descargar informes de análisis
       href: ../publish/download-analytic-reports.md
-- name: Recibir pagos
+- name: Recepción del pago
   href: ../publish/getting-paid-apps.md
   items:
-    - name: Configurar la cuenta de pago y los formularios fiscales
+    - name: Configuración de la cuenta de pago y los formularios de impuestos
       href: ../publish/setting-up-your-payout-account-and-tax-forms.md
     - name: 'Umbrales de pago, métodos y períodos de tiempo'
       href: ../publish/payment-thresholds-methods-and-timeframes.md
@@ -210,3 +208,5 @@
       href: ../publish/store-app-quality.md
     - name: Código de conducta del desarrollador
       href: ../publish/store-developer-code-of-conduct.md
+    - name: "Declaración de revelación de marketing, selección de ubicación y clasificación del producto de Microsoft\_Store"
+      href: 'https://aka.ms/disclosurepolicypdf'

@@ -426,7 +426,7 @@
                 - name: Anuncios intersticiales
                   href: ../monetize/interstitial-ads.md
                   items:
-                    - name: 'Código de ejemplo de anuncios intersticiales en C#'
+                    - name: Código de ejemplo de anuncios intersticiales en C#
                       href: ../monetize/interstitial-ad-sample-code-in-c.md
                     - name: Código de ejemplo de anuncios intersticiales en JavaScript
                       href: ../monetize/interstitial-ad-sample-code-in-javascript.md
@@ -448,7 +448,7 @@
                 - name: Controlar errores de anuncios
                   href: ../monetize/error-handling-with-advertising-libraries.md
                   items:
-                    - name: 'Tutorial de control de errores en XAML y C#'
+                    - name: Tutorial de control de errores en XAML y C#
                       href: ../monetize/error-handling-in-xamlc-walkthrough.md
                     - name: Tutorial de control de errores en JavaScript
                       href: ../monetize/error-handling-in-javascript-walkthrough.md
@@ -457,7 +457,7 @@
               items:
                 - name: Guía de solución de problemas de HTML y JavaScript
                   href: ../monetize/html-and-javascript-troubleshooting-guide.md
-                - name: 'Guía de solución de problemas de XAML y C#'
+                - name: Guía de solución de problemas de XAML y C#
                   href: ../monetize/xaml-and-c-troubleshooting-guide.md
             - name: Notas de la versión
               href: ../monetize/release-notes-for-the-advertising-libraries.md
@@ -722,8 +722,6 @@
                   href: ../monetize/change-the-billing-state-of-a-subscription-for-a-user.md
                 - name: "Renovar una clave de identificador de Microsoft\_Store"
                   href: ../monetize/renew-a-windows-store-id-key.md
-            - name: API de metadatos de la aplicación para redes de publicidad
-              href: ../monetize/app-metadata-api-for-advertising-networks.md
         - name: Enviar solicitudes a Store
           href: ../monetize/send-requests-to-the-store.md
         - name: Agregar características de prueba comercial (RDX)
@@ -801,7 +799,7 @@
           href: ../cpp-and-winrt-apis/move-to-winrt-from-wrl.md
         - name: "Portabilidad de una aplicación de ejemplo desde\_C#"
           href: ../cpp-and-winrt-apis/clipboard-to-winrt-from-csharp.md
-        - name: 'Migrar a C++/WinRT desde C#'
+        - name: Migrar a C++/WinRT desde C#
           href: ../cpp-and-winrt-apis/move-to-winrt-from-csharp.md
         - name: Interoperabilidad con la ABI
           href: ../cpp-and-winrt-apis/interop-winrt-abi.md
@@ -819,7 +817,7 @@
           items:
             - name: Categorías de valor y referencias
               href: ../cpp-and-winrt-apis/cpp-value-categories.md
-    - name: 'C#/WinRT'
+    - name: C#/WinRT
       href: ../csharp-winrt/index.md
     - name: Seguridad
       href: ../security/index.md
@@ -930,6 +928,8 @@
     - name: Componentes de Windows Runtime
       href: ../winrt-components/index.md
       items:
+        - name: "Componentes de Windows\_Runtime con C++/WinRT"
+          href: ../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md
         - name: "Componentes de Windows\_Runtime con C++/CX"
           href: ../winrt-components/creating-windows-runtime-components-in-cpp.md
         - name: "Tutorial de un C++componente de Windows\_Runtime de C++/CX"
@@ -1438,7 +1438,7 @@
           href: ../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md
         - name: Procedimientos recomendados para usar el grupo de subprocesos
           href: ../threading-async/best-practices-for-using-the-thread-pool.md
-        - name: 'Llamar a API asincrónicas en C# o Visual Basic'
+        - name: Llamar a API asincrónicas en C# o Visual Basic
           href: ../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md
         - name: Crear un elemento de trabajo periódico
           href: ../threading-async/create-a-periodic-work-item.md

@@ -3,12 +3,12 @@ title: WinUI 3, versión preliminar 2 (julio de 2020)
 description: Introducción a WinUI 3, versión preliminar 2.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 6dd29b7da0ce2d0f3a08538d392792337f1e1b5a
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 0acea4520f10d5f64baa29cb64fdf0ba1cc4552e
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493077"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997962"
 ---
 # <a name="windows-ui-library-3-preview-2-july-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)
 
@@ -103,6 +103,9 @@ Las siguientes plantillas de elementos están disponibles para usarse en un proy
 ## <a name="bug-fixes-and-other-improvements-in-winui-3-preview-2"></a>Correcciones de errores y otras mejoras en WinUI 3, versión preliminar 2
 
 Esta es una lista completa de correcciones de errores y otras actualizaciones para la versión preliminar 2. Consulte el [anuncio de la versión](https://aka.ms/winui3/preview2-announcement) para obtener una lista de las correcciones de errores más importantes que se han solucionado en esta versión.
+
+> [!NOTE]
+> La versión preliminar 2 de WinUI 3 usa la versión 2.4.2 de la biblioteca WinUI 2. 
 
 - [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-5.0) e [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-5.0) ahora funcionan según lo previsto en las aplicaciones de escritorio en C#.
   - Esto ha resuelto un par de otros problemas en torno a los controles de colecciones que no se actualizaban en la interfaz de usuario, aunque sí lo hacían en el back-end.

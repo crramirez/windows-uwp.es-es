@@ -23,11 +23,13 @@
     - name: Tu primera aplicación
       href: ../get-started/your-first-app.md
       items:
-        - name: 'Crear una aplicación "Hola, mundo" (C#)'
+        - name: Una aplicación "Hola mundo" en C#
           href: ../get-started/create-a-hello-world-app-xaml-universal.md
-        - name: 'Crear una aplicación "Hola, mundo" (C++)'
+        - name: Una aplicación "Hola mundo" en C++/WinRT
+          href: ../get-started/create-a-basic-windows-10-app-in-cppwinrt.md
+        - name: Una aplicación "Hola mundo" en C++/CX
           href: ../get-started/create-a-basic-windows-10-app-in-cpp.md
-        - name: 'Crear una aplicación "Hola, mundo" (JS)'
+        - name: Una aplicación "Hola mundo" en JavaScript
           href: ../get-started/create-a-hello-world-app-js-uwp.md
     - name: Compilar una aplicación compleja
       href: ../get-started/plan-your-app.md
