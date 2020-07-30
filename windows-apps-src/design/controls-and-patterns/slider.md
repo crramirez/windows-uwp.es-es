@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ed202bca80518333201595987c4af631f82f0853
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a1de8437c5b463b13e3adb8c4d7eb7161663f4d6
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970790"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997972"
 ---
 # <a name="sliders"></a>Controles deslizantes
 
@@ -73,10 +73,6 @@ Usa el control deslizante si:
 </td>
 </tr>
 </table>
-
-Un control deslizante para controlar el volumen en Windows Phone.
-
-![Un control deslizante para controlar el volumen en Windows Phone](images/control-examples/slider-phone.png)
 
 Un control deslizante para cambiar el tamaño del texto en la configuración de pantalla de Windows.
 

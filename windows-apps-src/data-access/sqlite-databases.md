@@ -5,12 +5,12 @@ ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp, SQLite, base de datos
 ms.localizationpriority: medium
-ms.openlocfilehash: c8eb384be08addd75e77f37d6fb579a179e68581
-ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
+ms.openlocfilehash: 0db89408d5bc0af8b9101768a6498e70f9be6147
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85448355"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997942"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Usar una base de datos de SQLite en una aplicación para UWP
 Puedes usar SQLite para almacenar y recuperar datos en una base de datos ligera en el dispositivo del usuario. Esta guía te muestra cómo hacerlo.
@@ -75,7 +75,7 @@ Elige la pestaña **Examinar** y busca el paquete **Microsoft.Data.SQLite**. Ins
 
 ![Paquete de SQLite](images/sqlite-package.png)
 
-Ve a la sección [Agregar y recuperar datos en una base de datos de SQLite](#use-data) de esta guía.
+Ve a la sección [Agregar y recuperar datos en una base de datos de SQLite](/windows/uwp/data-access/sqlite-databases#add-and-retrieve-data-in-a-sqlite-database) de esta guía.
 
 ### <a name="the-minimum-version-of-your-project-targets-the-fall-creators-update"></a>La versión mínima del proyecto está destinada a Fall Creators Update
 
@@ -122,7 +122,6 @@ No tienes que hacer esto. Pero si tienes un motivo para incluir una versión esp
 
 ![Paquete de SQLite](images/sqlite-package-v2.png)
 
-<a id="use-data" />
 
 ## <a name="add-and-retrieve-data-in-a-sqlite-database"></a>Agregar y recuperar datos en una base de datos de SQLite
 
@@ -173,7 +172,6 @@ using Microsoft.Data.Sqlite;
 using System.Collections.Generic;
 ```
 
-<a id="initialize" />
 
 ### <a name="initialize-the-sqlite-database"></a>Inicializar la base de datos de SQLite
 
@@ -217,7 +215,6 @@ public App()
 }
 ```
 
-<a id="insert" />
 
 ### <a name="insert-data-into-the-sqlite-database"></a>Insertar datos en la base de datos de SQLite
 
@@ -247,7 +244,6 @@ public static void AddData(string inputText)
 }
 ```
 
-<a id="retrieve" />
 
 ### <a name="retrieve-data-from-the-sqlite-database"></a>Recuperar datos de la base de datos de SQLite
 
