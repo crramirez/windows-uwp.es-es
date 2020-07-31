@@ -1,101 +1,117 @@
 - name: Entorno de desarrollo de Windows
-  href: index.yml
+  href: overview.md
   items:
-    - name: Desarrollo con Python
+    - name: Información general
       items:
-        - name: Introducción
-          href: ../python/index.yml
-        - name: Introducción para principiantes
-          href: ../python/beginners.md
-        - name: Introducción al desarrollo web
-          href: ../python/web-frameworks.md
-        - name: Introducción a la automatización
-          href: ../python/scripting.md
-        - name: Introducción a las bases de datos
-          href: 'https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
-        - name: Preguntas más frecuentes
-          href: ../python/faqs.md
-        - name: Recursos
-          href: ../python/resources.md
-    - name: Desarrollo con Node.js
-      items:
-        - name: Introducción
-          href: ../nodejs/index.yml
-        - name: Configuración con WSL2 (Linux)
-          href: ../nodejs/setup-on-wsl2.md
-        - name: Configuración con Windows (principiantes)
-          href: ../nodejs/setup-on-windows.md
-        - name: Introducción para principiantes
-          href: ../nodejs/beginners.md
-        - name: Introducción a los marcos web
-          href: ../nodejs/web-frameworks.md
-        - name: Introducción a las bases de datos
-          href: '.https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
-        - name: Introducción a los contenedores
-          href: ../nodejs/containers.md
-    - name: Desarrollo con Android
-      items:
-        - name: Introducción
-          href: ../android/overview.md
-        - name: Introducción a Android nativo
-          href: ../android/native-android.md
-        - name: Introducción al modo multiplataforma
-          items:
-            - name: Xamarin nativo
-              href: ../android/xamarin-android.md
-            - name: Xamarin.Forms
-              href: ../android/xamarin-forms.md
-            - name: React Native
-              href: ../android/react-native.md
-            - name: 'PWA (Ionic, PhoneGap y Cordova)'
-              href: ../android/pwa.md
-        - name: Configuración de Defender para mejorar el rendimiento
-          href: ../android/defender-settings.md
-        - name: Prueba en el dispositivo o emulador
-          href: ../android/emulator.md
-    - name: Administrador de paquetes de Windows
-      items:
-        - name: Introducción
-          href: ../package-manager/index.md
-        - name: Uso de la herramienta winget
-          items:
-            - name: Introducción
-              href: ../package-manager/winget/index.md
-            - name: Comando hash
-              href: ../package-manager/winget/hash.md
-            - name: Comando help
-              href: ../package-manager/winget/help.md
-            - name: Comando install
-              href: ../package-manager/winget/install.md
-            - name: Comando search
-              href: ../package-manager/winget/search.md
-            - name: Comando show
-              href: ../package-manager/winget/show.md
-            - name: Comando source
-              href: ../package-manager/winget/source.md
-            - name: Comando validate
-              href: ../package-manager/winget/validate.md
-        - name: Envío de paquetes
-          items:
-            - name: Introducción
-              href: ../package-manager/package/index.md
-            - name: Creación de un manifiesto de paquete
-              href: ../package-manager/package/manifest.md
-            - name: Envío del manifiesto al repositorio
-              href: ../package-manager/package/repository.md
-    - name: Subsistema de Windows para Linux
-      href: 'https://docs.microsoft.com/windows/wsl/'
-    - name: Terminal Windows
-      href: 'https://docs.microsoft.com/windows/terminal/'
-    - name: Guía de Mac a Windows
-      items:
-        - name: Cambiar el entorno de desarrollo
+        - name: Sugerencias sobre el flujo de trabajo y el rendimiento
+          href: tips.md
+        - name: Historias de los desarrolladores
+          href: dev-stories.md
+        - name: Tutoriales populares
+          href: tutorials.md
+        - name: Guía de Mac a Windows
           href: mac-to-windows.md
         - name: Métodos abreviados de teclado
           href: mac-to-windows.md#keyboard-shortcuts
-        - name: Accesos directos de panel táctil
-          href: mac-to-windows.md#trackpad-shortcuts
-        - name: Terminal y shell
-          href: mac-to-windows.md#terminal-and-shell
-        - name: Aplicaciones y utilidades
-          href: mac-to-windows.md#apps-and-utilities
+    - name: Rutas de acceso de desarrollo
+      items:
+        - name: Introducción a Python
+          items:
+            - name: Introducción
+              href: ../python/index.yml
+            - name: Introducción para principiantes
+              href: ../python/beginners.md
+            - name: Introducción al desarrollo web
+              href: ../python/web-frameworks.md
+            - name: Introducción a la automatización
+              href: ../python/scripting.md
+            - name: Preguntas más frecuentes
+              href: ../python/faqs.md
+        - name: Introducción a Node.js
+          items:
+            - name: Introducción
+              href: ../nodejs/index.yml
+            - name: Configuración con WSL2
+              href: ../nodejs/setup-on-wsl2.md
+            - name: Configuración con Windows (principiantes)
+              href: ../nodejs/setup-on-windows.md
+            - name: Introducción para principiantes
+              href: ../nodejs/beginners.md
+            - name: Introducción a los marcos web
+              href: ../nodejs/web-frameworks.md
+        - name: Introducción a Android
+          items:
+            - name: Introducción
+              href: ../android/overview.md
+            - name: Introducción a Android nativo
+              href: ../android/native-android.md
+            - name: Introducción al modo multiplataforma
+              items:
+                - name: Xamarin nativo
+                  href: ../android/xamarin-android.md
+                - name: Xamarin.Forms
+                  href: ../android/xamarin-forms.md
+                - name: React Native
+                  href: ../android/react-native.md
+                - name: 'PWA (Ionic, PhoneGap y Cordova)'
+                  href: ../android/pwa.md
+            - name: Configuración de Defender para mejorar el rendimiento
+              href: ../android/defender-settings.md
+            - name: Prueba en el dispositivo o emulador
+              href: ../android/emulator.md
+        - name: Introducción a C y C++
+          href: 'https://docs.microsoft.com/cpp/'
+        - name: Introducción a C#
+          href: 'https://docs.microsoft.com/dotnet/csharp/'
+        - name: Introducción a Java en Azure
+          href: 'https://docs.microsoft.com/azure/developer/java/'
+        - name: Introducción a PowerShell
+          href: 'https://docs.microsoft.com/powershell/'
+        - name: Introducción a las bases de datos en WSL
+          href: 'https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
+    - name: Herramientas y plataformas
+      items:
+        - name: Subsistema de Windows para Linux
+          href: 'https://docs.microsoft.com/windows/wsl/'
+        - name: Terminal Windows
+          href: 'https://docs.microsoft.com/windows/terminal/'
+        - name: Administrador de paquetes de Windows
+          items:
+            - name: Introducción
+              href: ../package-manager/index.md
+            - name: Uso de la herramienta winget
+              items:
+                - name: Introducción
+                  href: ../package-manager/winget/index.md
+                - name: Comando hash
+                  href: ../package-manager/winget/hash.md
+                - name: Comando help
+                  href: ../package-manager/winget/help.md
+                - name: Comando install
+                  href: ../package-manager/winget/install.md
+                - name: Comando search
+                  href: ../package-manager/winget/search.md
+                - name: Comando show
+                  href: ../package-manager/winget/show.md
+                - name: Comando source
+                  href: ../package-manager/winget/source.md
+                - name: Comando validate
+                  href: ../package-manager/winget/validate.md
+            - name: Envío de paquetes
+              items:
+                - name: Introducción
+                  href: ../package-manager/package/index.md
+                - name: Creación de un manifiesto de paquete
+                  href: ../package-manager/package/manifest.md
+                - name: Envío del manifiesto al repositorio
+                  href: ../package-manager/package/repository.md
+        - name: PowerToys
+          href: 'https://github.com/microsoft/PowerToys'
+        - name: Código de VS
+          href: 'https://code.visualstudio.com/docs'
+        - name: Visual Studio
+          href: 'https://docs.microsoft.com/visualstudio/windows/?view=vs-2019'
+        - name: Azure
+          href: 'https://docs.microsoft.com/azure/?product=featured'
+        - name: .NET
+          href: 'https://docs.microsoft.com/dotnet/'
