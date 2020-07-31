@@ -6,12 +6,12 @@ ms.date: 05/08/2019
 ms.localizationpriority: medium
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: 6bae7fdef4e9cdf05dfa6f56160f1021033123e6
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c214a31162b64853fd2115170ef1fd7766cafe96
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77705780"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997952"
 ---
 # <a name="features-and-technologies-for-windows-apps"></a>Características y tecnologías de las aplicaciones de Windows
 
@@ -38,7 +38,7 @@ Para obtener más información sobre las distintas formas de usar Windows Ink en
 
 ### <a name="speech-interactions"></a>Interacciones de voz
 
-![initial reconocimiento screen for a constraint based on a sgrs grammar file](images/speech-listening-initial.png)
+![pantalla de reconocimiento inicial para una restricción basada en un archivo de gramática SGRS](images/speech-listening-initial.png)
 
 ![pantalla de reconocimiento final para una restricción basada en un archivo de gramática SGRS](images/speech-listening-complete.png)
 

@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Mac to Windows, shortcut key mapping, move from Unix to Windows, transition from Mac to Windows, help moving from MacBook to Surface, how to use Windows for a Macintosh user, switching from Macintosh to Windows, help changing dev environments, Mac OS X to Windows, help moving from Mac to PC
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 457abcec97247afcc0d63c983c8a6cda2de51c66
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: fa137ab51f0bb53e2907fa319d79ed77eb7ed655
+ms.sourcegitcommit: 1e06168ada5ce6013b1d07c428548f084464a286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81643697"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363714"
 ---
 # <a name="guide-for-changing-your-dev-environment-from-mac-to-windows"></a>Guía para cambiar el entorno de desarrollo de Mac a Windows
 
@@ -66,27 +66,52 @@ Nota: Algunos de estos métodos abreviados requieren un "panel táctil de precis
 
 Nota: Las opciones de panel táctil se pueden configurar en ambas plataformas.
 
-## <a name="terminal-and-shell"></a>Terminal y shell
+## <a name="command-line-shells-and-terminals"></a>Shells y terminales de línea de comandos
 
-Windows proporciona varias alternativas al emulador de terminal de Mac.
+Windows admite varios shells y terminales de línea de comandos que a veces funcionan de manera ligeramente diferente en el shell BASH de Mac y en las aplicaciones de emulador de terminal, como Terminal e iTerm.
 
-1. Línea de comandos de Windows
+### <a name="windows-shells"></a>Shells de Windows
 
-La línea de comandos de Windows aceptará comandos DOS y es la herramienta de línea de comandos que se usa con más frecuencia en Windows. Para abrirla: Presiona **Tecla Windows+R** para abrir el cuadro **Ejecutar** y, a continuación, escribe **cmd** y haz clic en **Aceptar**. Para abrir una línea de comandos de administrador, escribe **cmd** y, a continuación, presiona **Ctrl+Mayús+ENTRAR**.
+Windows tiene dos shells de línea de comandos principales:
 
-2. PowerShell
+1. **[PowerShell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7)** : es un marco de administración de configuración y automatización de tareas entre plataformas, que consta de un shell de línea de comandos y un lenguaje de scripting integrado en .NET. Con PowerShell, los administradores, los desarrolladores y los usuarios avanzados pueden controlar y automatizar rápidamente tareas que administran procesos complejos y distintos aspectos del entorno y del sistema operativo en el que se ejecutan. PowerShell es [código completamente abierto](https://github.com/powershell/powershell) y, puesto que es multiplataforma, también [está disponible para Mac y Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell?view=powershell-7).
 
-"[PowerShell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-6) es un shell de línea de comandos y lenguaje de scripting basado en tareas integrados en .NET. PowerShell ayuda a los administradores del sistema y a los usuarios avanzados a automatizar rápidamente las tareas que administran los sistemas operativos". En otras palabras, se trata de una línea de comandos muy eficaz y es especialmente popular entre los administradores del sistema.
+    **Usuarios de shell BASH de Mac y Linux**: PowerShell también admite muchos alias de comandos con los que ya está familiarizado. Por ejemplo:
+    - Mostrar el contenido del directorio actual con: `ls`
+    - Mover archivos con: `mv`
+    - Mover a un directorio nuevo con: `cd <path>`
 
-Casualmente, PowerShell [también está disponible para Mac](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6).
+    Algunos comandos y argumentos son diferentes en PowerShell con respecto a BASH. Para más información, escriba: [`get-help`](https://docs.microsoft.com/powershell/scripting/learn/ps101/02-help-system?view=powershell-7) en PowerShell o revise los [alias de compatibilidad](https://docs.microsoft.com/powershell/scripting/samples/appendix-1---compatibility-aliases?view=powershell-7) en los documentos.
 
-3. Subsistema de Windows para Linux (WSL)
+    Para ejecutar PowerShell como administrador, escriba "PowerShell" en el menú Inicio de Windows y, a continuación, seleccione "Ejecutar como administrador".
 
-WSL permite ejecutar un shell de Linux en Windows. Esto significa que puedes ejecutar **Bash** u otro shell, en función de tu elección y de la distribución de Linux específica instalada. El uso de WSL proporcionará el tipo de entorno más conocido para los usuarios de Mac. Por ejemplo, usarás **ls** para enumerar los archivos de un directorio actual, no **dir** como lo harías con la línea de comandos de Windows. Para obtener información sobre la instalación y el uso de WSL, consulta la [Guía de instalación del Subsistema de Windows para Linux para Windows 10](https://docs.microsoft.com/windows/wsl/install-win10).
+2. **Línea de comandos de Windows (Cmd)** : Windows se sigue suministrando con el símbolo del sistema tradicional (y la consola, consulte más abajo), por lo que se proporciona compatibilidad con los archivos por lotes y los comandos compatibles con MS-DOS actuales y heredados. Cmd es útil cuando se ejecutan archivos por lotes u operaciones de línea de comandos anteriores o existentes; pero, en general, se recomienda a los usuarios que aprendan y usen PowerShell, ya que Cmd está ahora en mantenimiento y no se mejorará ni incluirá características nuevas en el futuro.
 
-4. Terminal Windows (versión preliminar)
+### <a name="linux-shells"></a>Shells de Linux
 
-Terminal Windows es una aplicación que combina herramientas de línea de comandos y shells de diversos orígenes, como la línea de comandos tradicional de Windows, PowerShell y el Subsistema de Windows para Linux. Aunque, actualmente, se encuentra en versión preliminar, ya contiene varias características útiles, como la compatibilidad con varias pestañas, paneles divididos, temas y estilos personalizados y compatibilidad total con Unicode. Terminal Windows se puede instalar desde [Microsoft Store en Windows 10](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701?activetab=pivot:overviewtab).
+Ahora se puede instalar el Subsistema de Windows para Linux (WSL) para admitir la ejecución de un shell de Linux en Windows. Esto significa que puede ejecutar **bash**, con la distribución de Linux específica que elija, integrado directamente en Windows. El uso de WSL proporcionará el tipo de entorno más conocido para los usuarios de Mac. Por ejemplo, usará **ls** para enumerar los archivos de un directorio actual, no **dir** como lo haría en el shell Cmd de Windows tradicional. Para obtener información sobre la instalación y el uso de WSL, consulta la [Guía de instalación del Subsistema de Windows para Linux para Windows 10](https://docs.microsoft.com/windows/wsl/install-win10). Las distribuciones de Linux que se pueden instalar en Windows con WSL incluyen:
+
+1. [Ubuntu 20.04 LTS](https://www.microsoft.com/store/apps/9n6svws3rx71)
+2. [Kali Linux](https://www.microsoft.com/store/apps/9PKR34TNCV07)
+3. [Debian GNU/Linux](https://www.microsoft.com/store/apps/9MSVKQC78PK6)
+4. [OpenSUSE Leap 15.1](https://www.microsoft.com/store/apps/9NJFZK00FGKV)
+5. [SUSE Linux Enterprise Server 15 SP1](https://www.microsoft.com/store/apps/9PN498VPMF3Z)
+
+Por mencionar algunas. Puede encontrar más en los [documentos de instalación de WSL](https://docs.microsoft.com/windows/wsl/install-win10#install-your-linux-distribution-of-choice) e instalarlas directamente desde [Microsoft Store](https://www.microsoft.com/search/shop/apps?q=linux&category=Developer+tools).
+
+## <a name="windows-terminals"></a>Terminales Windows
+
+Además de muchas ofertas de terceros, Microsoft ofrece dos "terminales": aplicaciones GUI que proporcionan acceso a las aplicaciones y shells de línea de comandos.
+
+1. **[Terminal Windows](https://docs.microsoft.com/windows/terminal/)** : Terminal Windows es una aplicación de terminal de línea de comandos nueva, moderna y muy configurable, que proporciona una experiencia de usuario de línea de comandos de baja latencia y rendimiento muy alto, varias pestañas, paneles de ventana divididos, temas y estilos personalizados, varios "perfiles" para diferentes shells o aplicaciones de línea de comandos, y muchas oportunidades para configurar y personalizar muchos aspectos de la experiencia del usuario de línea de comandos.
+
+    Puede usar Terminal Windows para abrir pestañas conectadas a PowerShell, shells de WSL (como Ubuntu o Debian), el símbolo del sistema de Windows tradicional o cualquier otra aplicación de línea de comandos (por ejemplo, SSH, CLI de Azure, Git Bash).
+
+2. **[Consola](https://docs.microsoft.com/windows/console/)** : En Mac y Linux, los usuarios suelen iniciar su aplicación de terminal preferida, que después crea y se conecta al shell predeterminado del usuario (por ejemplo, BASH).
+
+    Sin embargo, debido a una peculiaridad del historial, los usuarios de Windows normalmente inician su shell y Windows se inicia automáticamente y conecta una aplicación de consola de GUI.
+
+    Aunque todavía se pueden iniciar shells directamente y usar la consola de Windows heredada, se recomienda encarecidamente que los usuarios instalen y usen Terminal Windows para experimentar la mejor experiencia de línea de comandos más rápida y productiva.
 
 ## <a name="apps-and-utilities"></a>Aplicaciones y utilidades
 

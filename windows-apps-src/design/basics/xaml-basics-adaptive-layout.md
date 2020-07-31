@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b9c5348063f277d4d76cbea120689328bcc217b1
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 389b4ec2566a392de35ae43505274511b4294f9f
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684150"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997792"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Crear diseños adaptables
 
@@ -332,4 +332,4 @@ Como alternativa, si quieres obtener más información sobre cómo se creó la a
 
 ## <a name="get-the-final-version-of-the-photolab-sample"></a>Obtener la versión final del ejemplo de PhotoLab
 
-Este tutorial no crea la aplicación completa de edición de fotos, así que asegúrate de echar un vistazo a la [versión final](https://github.com/Microsoft/Windows-appsample-photo-lab) para ver otras funciones, como las animaciones personalizadas y la compatibilidad con teléfonos.
+Este tutorial no crea la aplicación completa de edición de fotos, así que asegúrese de echar un vistazo a la [versión final](https://github.com/Microsoft/Windows-appsample-photo-lab) para ver otras funciones, como las animaciones personalizadas y los estilos.

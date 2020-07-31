@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, frequently, asked, questions, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 95f5ad82831b6b07e0bbc2127947f777f0cd50e5
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 23f1733f5710d86c8481899f5865d0c190e21885
+ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81759926"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87296191"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Preguntas más frecuentes sobre C++/WinRT
 Respuestas a preguntas que probablemente tengas acerca de la creación y del consumo de las API de Windows Runtime con [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -197,6 +197,9 @@ Para solucionar uno o ambos problemas, puedes hacer lo siguiente.
 #pragma pop_macro("TRY")
 #pragma pop_macro("GetCurrentTime")
 ```
+
+## <a name="how-do-i-speed-up-symbol-loading"></a>¿Cómo puedo acelerar la carga de símbolos?
+En Visual Studio, **Herramientas** > **Opciones** > **Depuración** > **Símbolos** > marque *Cargar solo los módulos especificados*. Después, puede hacer clic con el botón derecho en los DLL de la lista de pilas y cargar módulos individuales.
 
 > [!NOTE]
 > Si en este tema no hemos respondido a tu pregunta, podrás encontrar ayuda en la [comunidad de desarrolladores de C++ de Visual Studio](https://developercommunity.visualstudio.com/spaces/62/index.html) o mediante la [etiqueta `c++-winrt` en Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

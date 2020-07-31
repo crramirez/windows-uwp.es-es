@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projection, get, getting, started
 ms.localizationpriority: medium
-ms.openlocfilehash: 968c347927edf0ad44476ec4bdca97aae19bb9a4
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 3e17e3f8107e82547ec0d367099f621e5b2e590a
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493040"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997852"
 ---
 # <a name="get-started-with-cwinrt"></a>Introducción a C++/WinRT
 
@@ -71,7 +71,9 @@ Con la configuración del proyecto predeterminada, los encabezados incluidos pro
 Los encabezados contienen las API de Windows proyectadas en C++/WinRT. En otras palabras, para cada tipo de Windows, C++/WinRT define un equivalente de C++ descriptivo (denominado el *tipo proyectado*). Un tipo proyectado tiene el mismo nombre completo que el tipo de Windows, pero se coloca en el espacio de nombres **winrt** de C++. La colocación de estas inclusiones en tu encabezado precompilado reduce el tiempo de compilación incremental.
 
 > [!IMPORTANT]
-> Siempre que quieras usar un tipo desde un espacio de nombres de Windows, incluye el archivo de encabezado de espacio de nombres de Windows C++/WinRT correspondiente, tal como se ha mostrado anteriormente. El encabezado *correspondiente* es el que tiene el mismo nombre que el espacio de nombres del tipo. Por ejemplo, para usar la proyección de C++/WinRT para la clase en tiempo de ejecución [**Windows::Foundation::Collections::PropertySet**](/uwp/api/windows.foundation.collections.propertyset), `#include <winrt/Windows.Foundation.Collections.h>`. Si incluyes `winrt/Windows.Foundation.Collections.h`, no necesitas incluir *también*`winrt/Windows.Foundation.h`. Cada encabezado de proyección de C++/WinRT incluye su archivo de encabezado de espacio de nombres principal, por lo que no *necesitas* incluirlo de manera explícita. Sin embargo, si lo haces, no se producirá ningún error.
+> Siempre que quiera usar un tipo de un espacio de nombres de Windows, debe usar `#include` para el archivo de encabezado de espacio de nombres de Windows C++/WinRT correspondiente, tal como se ha mostrado anteriormente. El encabezado *correspondiente* es el que tiene el mismo nombre que el espacio de nombres del tipo. Por ejemplo, para usar la proyección de C++/WinRT para la clase en tiempo de ejecución [**Windows::Foundation::Collections::PropertySet**](/uwp/api/windows.foundation.collections.propertyset), incluya el encabezado `winrt/Windows.Foundation.Collections.h`.
+> 
+> Es habitual que un encabezado de proyección de C++/WinRT incluya automáticamente su archivo de encabezado de espacio de nombres primario. Por lo tanto, por ejemplo, `winrt/Windows.Foundation.Collections.h` incluye `winrt/Windows.Foundation.h`. Pero no debe confiar en este comportamiento, ya que es un detalle de implementación que cambia con el tiempo. Debe incluir explícitamente los encabezados que necesite.
 
 ```cppwinrt
 using namespace winrt;

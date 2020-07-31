@@ -4,7 +4,7 @@ title: Barra de comandos
 label: App bars/command bars
 template: detail.hbs
 op-migration-status: ready
-ms.date: 05/19/2017
+ms.date: 07/23/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 868b4145-319b-4a97-82bd-c98d966144db
@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 97507e0d9a954bc102bd4d2bcd825369df4cced7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: f7b2c260d20c95012297c1f78037626844f6badf
+ms.sourcegitcommit: 83225cd9f3ef184277fc293d09982ecd511cc088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970050"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87160891"
 ---
 # <a name="command-bar"></a>Barra de comandos
 
@@ -54,10 +54,6 @@ El control CommandBar es un control de propósito general, flexible y ligero que
 Una barra de comandos expandida.
 
 ![Barra de comandos expandida](images/control-examples/command-bar-photos.png)
-
-Una barra de comandos en el Calendario de Outlook en Windows Phone.
-
-![Barra de comandos de la aplicación Calendario de Outlook](images/control-examples/command-bar-calendar-phone.png)
 
 ## <a name="anatomy"></a>Anatomía
 
@@ -260,7 +256,7 @@ Aunque los modos Mínima y Oculta son de utilidad en algunas situaciones, ten en
 Cambiar la propiedad ClosedDisplayMode para proporcionar más o menos información de una sugerencia al usuario afecta al diseño de los elementos adyacentes. Por el contrario, cuando el objeto CommandBar cambia entre cerrado y abierto, no afecta al diseño de otros elementos.
 
 ## <a name="placement"></a>Selección de ubicación
-Las barras de comandos se pueden colocar en la parte superior de la ventana de la aplicación, en la parte inferior de la ventana de la aplicación y de manera alineada.
+Las barras de comandos se pueden colocar en la parte superior de la ventana de la aplicación, en la parte inferior de la ventana de la aplicación y de manera alineada, integrándolas en un control de diseño como ```Grid.row```.
 
 ![Ejemplo 1 de colocación de barra de la aplicación](images/AppbarGuidelines_Placement1.png)
 

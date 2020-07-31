@@ -5,12 +5,12 @@ ms.date: 07/10/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c++, cpp, winrt, proyección, pasar, parámetros, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c5ce6a30e68fe6fc26316bc2f41c6e2556b98ef
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 51cde2332d3d9df9d1f488aa7f8246f9e1e2ed36
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255259"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997982"
 ---
 # <a name="passing-parameters-into-the-abi-boundary"></a>Pasar parámetros a los límites de la ABI
 
@@ -55,9 +55,9 @@ Las colecciones de Windows Runtime ya son de tipo **Iterable**.
 | **std::initializer_list\<U\>** | Sí | No | **U** debe ser convertible a **T**.|
 | `{ ForwardIt begin, ForwardIt end }` | Sí | No | `*begin` debe ser convertible a **T**.|
 
-Ten en cuenta que **IIterable\<U\>** y **std::vector\<U\>** no se permiten, incluso si **U** es convertible a **T**. En cuanto a **std::vector\<U\>** , puedes usar la versión de doble iterador (tienes más detalles a continuación).
+Tenga en cuenta que **IIterable\<U\>** y **std::vector\<U\>** no están permitidos, incluso si **U** es convertible a **T**. En cuanto a **std::vector\<U\>** , puede usar la versión de doble iterador (tiene más detalles a continuación).
 
-En algunos casos, el objeto que tienes puede implementar el valor **Iterable** que quieras. Por ejemplo, el elemento **IVectorView\<StorageFile\>** que produjo [**FileOpenPicker.PickMultipleFilesAsync**](/uwp/api/windows.storage.pickers.fileopenpicker.pickmultiplefilesasync) implementa el valor **IIterable<StorageFile>** . Pero también implementa  **IIterable <IStorageItem>** ; solo tienes que pedirlo explícitamente.
+En algunos casos, el objeto que tienes puede implementar el valor **Iterable** que quieras. Por ejemplo, el elemento **IVectorView\<StorageFile\>** producido por [**FileOpenPicker.PickMultipleFilesAsync**](/uwp/api/windows.storage.pickers.fileopenpicker.pickmultiplefilesasync) implementa **IIterable\<StorageFile\>** . Pero también implementa  **IIterable \<IStorageItem\>** ; solo tienes que pedirlo explícitamente.
 
 ```cppwinrt
 IVectorView<StorageFile> pickedFiles{ co_await filePicker.PickMultipleFilesAsync() };
@@ -96,7 +96,7 @@ La implementación de [**IIterator\<T\>.GetMany(T\[\])** ](/uwp/api/windows.foun
 
 **winrt::param::vector_view\<T\>** y **winrt::param::async_vector_view\<T\>** simplifican la transferencia de parámetros a las API que usan **IVectorView\<T\>** .
 
-Puedes usar [**IVector\<T\>.GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview) para obtener un elemento **IVectorView** desde **IVector**.
+Puede usar [**IVector\<T\>.GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview) para obtener un elemento **IVectorView** de **IVector**.
 
 |Tipos que puedes pasar|Sincronización|Async|Notas|
 |-|-|-|-|
@@ -127,7 +127,7 @@ Puedes usar **IMap::GetView** para obtener un elemento **IMapView** de un **IMap
 
 ## <a name="vector-parameters"></a>Parámetros de vector
 
-**winrt::param::vector\<T\>** simplifica la operación de pasar parámetros a las API que toman **IVector\<T\>** .
+**winrt::param::vector\<T\>** simplifica la transferencia de parámetros a las API que usan **IVector\<T\>** .
 
 |Tipos que puedes pasar|Notas|
 |-|-|
@@ -140,7 +140,7 @@ Si el método muta el vector, entonces la única forma de observar la mutación 
 
 ## <a name="map-parameters"></a>Asignar parámetros
 
-**winrt::param::map\<T\>** simplifica la operación de pasar parámetros a las API que toman **IMap\<T\>** .
+**winrt::param::map\<T\>** simplifica la transferencia de parámetros a las API que usan **IMap\<T\>** .
 
 |Tipos que puedes pasar|Notas|
 |-|-|
@@ -154,7 +154,7 @@ Si el método muta la asignación, entonces la única forma de observar la mutac
 
 ## <a name="array-parameters"></a>Parámetros de matriz
 
-El elemento **winrt::array_view\<T\>** no está en el espacio de nombres **winrt::param**, pero se usa para parámetros que son matrices de estilo C &mdash;también conocidas como *matrices conformes*.
+El elemento **winrt::array_view\<T\>** no está en el espacio de nombres **winrt::param**, pero se usa para parámetros que son matrices de estilo C&mdash;también conocidas como *matrices conformes*.
 
 |Tipos que puedes pasar|Notas|
 |-|-|

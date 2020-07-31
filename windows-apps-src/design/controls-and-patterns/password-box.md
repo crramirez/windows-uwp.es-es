@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 57002a1edafd5dd7a367220fc0425fdc52b711d1
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: b68b5bc5fc6042d7abeae6944c351af178b70874
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970850"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86998022"
 ---
 # <a name="password-box"></a>Cuadro de contraseña
 
@@ -145,9 +145,7 @@ El valor de la propiedad [PasswordRevealMode](https://docs.microsoft.com/uwp/api
 
 Otros valores de enumeración de la propiedad [PasswordRevealMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordRevealMode), como **Oculta** y **Visible**, ocultan el botón para mostrar la contraseña y te permiten decidir mediante programación si la contraseña debe permanecer oculta.
 
-Para ocultar siempre la contraseña, debes establecer la propiedad PasswordRevealMode en Oculta. A menos que necesites que la contraseña siempre esté oculta, puedes proporcionar una interfaz de usuario personalizada para permitir que el usuario cambie la propiedad PasswordRevealMode entre las opciones Oculta y Visible.
-
-En versiones anteriores de Windows Phone, PasswordBox usaba una casilla para activar o desactivar la ocultación de la contraseña. Puedes crear una interfaz de usuario similar para tu aplicación, tal como se muestra en el siguiente ejemplo. Asimismo, también puedes usar otros controles, como [ToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton), para permitir al usuario cambiar de modo.
+Para ocultar siempre la contraseña, debes establecer la propiedad PasswordRevealMode en Oculta. A menos que necesites que la contraseña siempre esté oculta, puedes proporcionar una interfaz de usuario personalizada para permitir que el usuario cambie la propiedad PasswordRevealMode entre las opciones Oculta y Visible. Por ejemplo, puede usar una casilla para alternar si la contraseña está oculta, tal y como se muestra en el ejemplo siguiente. Asimismo, también puedes usar otros controles, como [ToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton), para permitir al usuario cambiar de modo.
 
 Este ejemplo muestra cómo usar una clase [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) para permitir al usuario cambiar el modo de mostrar la contraseña en una clase PasswordBox.
 

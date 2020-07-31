@@ -5,12 +5,12 @@ keywords: XAML, UWP, Getting Started
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 707c2ed110498f4ef18fea31ace87d1fd2434112
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d8f8d869bd18b6d3e6897d91b2616bc4eb1335d0
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67820342"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997842"
 ---
 # <a name="create-data-bindings"></a>Crear enlaces de datos
 
@@ -18,7 +18,7 @@ Imagina que has implementado una interfaz de usuario de buen aspecto llena de im
 
 En este tutorial, aprenderás cómo sustituir tu esquema repetitivo por enlaces de datos y crear otros vínculos directos entre la interfaz de usuario y los datos. También aprenderás a dar formato a los datos o convertirlos para mostrarlos, y mantener sincronizados la interfaz de usuario y los datos. Al completar este tutorial, podrás mejorar la simplicidad y la organización del código XAML y C#, para facilitar su mantenimiento y ampliación.
 
-Empezaremos con una versión simplificada del ejemplo PhotoLab. Esta versión para principiantes incluye los diseños completos de la capa de datos y el XAML básico, dejando de lado muchas funciones para que sea más fácil examinar el código. Este tutorial no crea aplicaciones completas, así que asegúrate de echar un vistazo a la versión final para ver funciones como las animaciones personalizadas y la compatibilidad con teléfonos. Puedes encontrar la versión final en la carpeta raíz del repositorio [Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). 
+Empezaremos con una versión simplificada del ejemplo PhotoLab. Esta versión para principiantes incluye los diseños completos de la capa de datos y el XAML básico, dejando de lado muchas funciones para que sea más fácil examinar el código. En este tutorial no se crean aplicaciones completas, así que asegúrese de echar un vistazo a la versión final para ver funciones, como las animaciones personalizadas y los diseños adaptables. Puedes encontrar la versión final en la carpeta raíz del repositorio [Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -160,7 +160,7 @@ En el ejemplo PhotoLab, un uso de un enlace como este es conectar el control pri
               ItemsSource="{x:Bind Images}" 
     ```
 
-    La propiedad **Images** es de tipo **ObservableCollection\<ImageFileInfo\>** , de modo que los elementos individuales mostrados en **GridView** son del tipo **ImageFileInfo**. Esto coincide con el valor **x:DataType** descrito en la parte 1. 
+    La propiedad **Images** es de tipo **ObservableCollection\<ImageFileInfo\>** , de modo que los elementos individuales mostrados en **GridView** son de tipo **ImageFileInfo**. Esto coincide con el valor **x:DataType** descrito en la parte 1. 
 
 Todos los enlaces que hemos visto hasta ahora son enlaces de una vez, de solo lectura, que es el comportamiento predeterminado de expresiones **x:Bind** sencillas. Los datos se cargan solo durante la inicialización, lo que conviene para enlaces de alto rendimiento: perfectos para dar soporte a varias vistas complejas de grandes conjuntos de datos. 
 
@@ -173,7 +173,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
 
 El valor de la propiedad **Images** nunca cambia pero, dado que la propiedad es de tipo **ObservableCollection\<T\>** , el *contenido* de la colección puede cambiar; el enlace notará automáticamente los cambios y actualizará la interfaz de usuario. 
 
-Para probar esto, vamos a agregar temporalmente un botón que elimina la imagen seleccionada actualmente. Este botón no está en la versión final porque seleccionar una imagen te llevaría a una página de detalles. Sin embargo, el comportamiento de **ObservableCollection\<T\>** sigue siendo importante en la muestra final de PhotoLab, porque el código XAML se inicializa en el constructor de página (a través de la llamada al método **InitializeComponent**), pero la colección **Images** se rellena más adelante en el método **OnNavigatedTo**. 
+Para probar esto, vamos a agregar temporalmente un botón que elimina la imagen seleccionada actualmente. Este botón no está en la versión final porque seleccionar una imagen te llevaría a una página de detalles. Sin embargo, el comportamiento de **ObservableCollectionT\<T\>** sigue siendo importante en la muestra final de PhotoLab, porque el código XAML se inicializa en el constructor de página (a través de la llamada al método **InitializeComponent**), pero la colección **Images** se rellena más adelante en el método **OnNavigatedTo**. 
 
 **Agregar un botón Eliminar**
 
@@ -198,7 +198,7 @@ Para probar esto, vamos a agregar temporalmente un botón que elimina la imagen 
 
     Este método simplemente elimina la imagen seleccionada de la colección **Images**. 
 
-Ahora ejecuta la aplicación y usa el botón para eliminar unas pocas imágenes. Como podrás ver, la interfaz de usuario se actualiza automáticamente, gracias a los enlaces de datos y el tipo **ObservableCollection\<T\>** . 
+Ahora ejecuta la aplicación y usa el botón para eliminar unas pocas imágenes. Como podrá ver, la interfaz de usuario se actualiza automáticamente, gracias a los enlaces de datos y el tipo **ObservableCollection\<T\>** . 
 
 > [!Note]
 > Como desafío, intenta agregar dos botones que muevan la imagen seleccionada hacia arriba o hacia abajo de la lista y, a continuación, realiza un x:Bind entre sus eventos Clic y dos nuevos métodos similares a DeleteSelectedImage.
@@ -428,7 +428,7 @@ En primer lugar, sin embargo, deberás adjuntar la **DetailPage** para que la ap
 1. En MainPage.xaml, busca la clase **GridView** llamada **ImageGridView** y agrega un valor **ItemClick**. 
 
     > [!TIP] 
-    > Si escribes el cambio que viene a continuación, en lugar de copiar y pegar, verás una ventana emergente de IntelliSense que dice "\<Controlador de nuevo evento\>". Si presionas la tecla tabulador, se rellenará el valor con un nombre de controlador de método predeterminado y automáticamente se cerrará el método mostrado en el siguiente paso. A continuación, puedes presionar F12 para navegar al método en el código subyacente. 
+    > Si escribe el cambio que viene a continuación, en lugar de copiar y pegar, verá una ventana emergente de IntelliSense que dice "\<New Event Handler\>". Si presionas la tecla tabulador, se rellenará el valor con un nombre de controlador de método predeterminado y automáticamente se cerrará el método mostrado en el siguiente paso. A continuación, puedes presionar F12 para navegar al método en el código subyacente. 
 
     **Antes**
     ```xaml
