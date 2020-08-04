@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: 83c6fc59d1161352eda636c91c89f34d87391545
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 4c54101306d2382a4e0301e89410d58abfb87743
+ms.sourcegitcommit: dccba7256765116f06cf96143eb3cbaa12d7fe0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234599"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523541"
 ---
 # <a name="input-and-interactions"></a>Entrada e interacciones
 
@@ -67,7 +67,7 @@ See our <b>[Input primer](index.md)</b> to familiarize yourself with each input 
         <a href="/windows/uwp/design/input/guidelines-for-rotation">Rotación</a><br/>
         <a href="/windows/uwp/design/input/guidelines-for-textselection">Selección de texto e imágenes</a><br/>
         <a href="/windows/uwp/design/input/guidelines-for-targeting">Selección de destino</a><br/>
-        <a href="/windows/uwp/design/input/guidelines-for-visualfeedback">Información visual</a><br/>
+        <a href="/windows/uwp/design/input/guidelines-for-visualfeedback">Comentarios visuales</a><br/>
     :::column-end:::
     :::column:::
         <h2 style="margin-top: 10px; margin-bottom: 0px">Voz e inteligencia artificial</h2>
