@@ -9,20 +9,20 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 14c447312361166148da6a5a8c2b20165fabbe97
-ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
+ms.openlocfilehash: 1e06a87ce771f603721c928b984d0f57d8e45013
+ms.sourcegitcommit: 1d53d89bd3d044f4a2dc290b93c1ad15a088b361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80487529"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87547317"
 ---
 # <a name="create-and-register-a-winmain-com-background-task"></a>Crear y registrar una tarea en segundo plano COM de WinMain
 
 > [!TIP]
-> el método BackgroundTaskBuilder. SetTaskEntryPointClsid está disponible a partir de Windows 10, versión 2004.
+> El método BackgroundTaskBuilder. SetTaskEntryPointClsid está disponible a partir de Windows 10, versión 2004.
 
 > [!NOTE]
-> este escenario no es aplicable a las aplicaciones de WinMain empaquetadas. Las aplicaciones de UWP detectarán errores al intentar implementar este escenario.
+> Este escenario solo es aplicable a las aplicaciones de WinMain empaquetadas. Las aplicaciones de UWP detectarán errores al intentar implementar este escenario.
 
 **API importantes**
 
@@ -41,15 +41,15 @@ En los pasos siguientes se muestra cómo escribir una nueva clase que implementa
 2.  En esa nueva clase, implemente la interfaz [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) . El método [**IBackgroundTask. Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) es un punto de entrada necesario al que se llamará cuando se desencadene el evento especificado. Este método es necesario en cada tarea en segundo plano.
 
 > [!NOTE]
-> La propia clase de tarea en segundo plano&mdash;y todas las demás clases del proyecto de tarea en segundo plano&mdash;deben ser **públicas**.
+> La propia clase de tarea en segundo plano &mdash; y todas las demás clases del proyecto de tarea en segundo plano &mdash; deben ser **públicas**.
 
 En el código de ejemplo siguiente se muestra una clase de tarea en segundo plano básica que cuenta las principales y las escribe en un archivo hasta que se solicita su cancelación.
 
-En C++el ejemplo/WinRT se implementa la clase de tarea en segundo plano como [**coclase com**](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/author-coclasses#implement-the-coclass-and-class-factory).
+En el ejemplo de/WinRT de C++ se implementa la clase de tarea en segundo plano como [**coclase com**](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/author-coclasses#implement-the-coclass-and-class-factory).
 
 
 <details>
-<summary>Muestra de código de tarea en segundo plano</summary>
+<summary>Ejemplo de código de tarea en segundo plano</summary>
 <p>
 
 ```csharp
@@ -264,9 +264,9 @@ namespace PackagedWinMainBackgroundTaskSample {
 
 ## <a name="add-the-support-code-to-instantiate-the-com-class"></a>Agregar el código de soporte para crear una instancia de la clase COM
 
-Para que la tarea en segundo plano se active en una aplicación de WinMain de plena confianza, la clase de tarea en segundo plano debe tener código de compatibilidad para que COM entienda cómo iniciar el proceso de la aplicación si no se está ejecutando y, a continuación, comprender qué instancia del proceso es. Actualmente, el servidor para administrar nuevas activaciones para esa tarea en segundo plano.
+Para que la tarea en segundo plano se active en una aplicación WinMain de plena confianza, la clase de tarea en segundo plano debe tener código de soporte técnico para que COM entienda cómo iniciar el proceso de la aplicación si no se está ejecutando y, a continuación, comprender qué instancia del proceso es actualmente el servidor para administrar nuevas activaciones para esa tarea en segundo plano.
 
-1.  COM debe saber cómo iniciar el proceso de la aplicación si aún no se está ejecutando. El proceso de aplicación que hospeda el código de la tarea en segundo plano debe declararse en el manifiesto del paquete. En el código de ejemplo siguiente se muestra cómo se hospeda **SampleTask** en **SampleBackgroundApp. exe**. Cuando se inicia la tarea en segundo plano cuando no hay ningún proceso en ejecución, **SampleBackgroundApp. exe** se inicia con los argumentos **de proceso "-StartSampleTaskServer"** .
+1.  COM debe saber cómo iniciar el proceso de la aplicación si aún no se está ejecutando. El proceso de aplicación que hospeda el código de la tarea en segundo plano debe declararse en el manifiesto del paquete. En el código de ejemplo siguiente se muestra cómo se hospeda **SampleTask** dentro **SampleBackgroundApp.exe**. Cuando se inicia la tarea en segundo plano cuando no se está ejecutando ningún proceso, **SampleBackgroundApp.exe** se iniciará con los argumentos **de proceso "-StartSampleTaskServer"**.
 
 ```xml
 
@@ -1043,7 +1043,7 @@ int wmain(_In_ int argc, _In_reads_(argc) const wchar** argv)
 </details>
 
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 A diferencia de las aplicaciones para UWP que pueden ejecutar tareas en segundo plano en modo de espera moderno, las aplicaciones WinMain no pueden ejecutar código desde las fases de energía más bajas del modo de espera moderno. Para más información, consulte el [modo de espera moderno](https://docs.microsoft.com/windows-hardware/design/device-experiences/modern-standby) .
 
@@ -1058,8 +1058,8 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 * [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)
 * [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)
 * [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)
-* [Crear y registrar una tarea en segundo plano dentro del proceso](create-and-register-an-inproc-background-task.md).
-* [Convertir una tarea en segundo plano fuera de proceso en una tarea en segundo plano en proceso](convert-out-of-process-background-task.md)
+* [Cree y registre una tarea en segundo plano en proceso](create-and-register-an-inproc-background-task.md).
+* [Convertir una tarea en segundo plano fuera del proceso en una tarea en segundo plano dentro del proceso](convert-out-of-process-background-task.md)
 
 **Guía de tareas en segundo plano**
 
@@ -1067,6 +1067,6 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
 * [Cómo desencadenar eventos de suspensión, reanudación y en segundo plano en aplicaciones UWP (durante la depuración)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
 
-**Referencia de la API de tareas en segundo plano**
+**Referencia de API de tareas en segundo plano**
 
-* [**Windows. ApplicationModel. Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+* [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
