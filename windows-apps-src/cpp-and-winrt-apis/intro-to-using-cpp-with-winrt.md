@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, estándar, c ++, cpp, winrt, proyección, introducción
 ms.localizationpriority: medium
-ms.openlocfilehash: ddf2cd876ac629f4cb3c49e349e43dee8fdb0c7a
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 41ded061a1111c55eb2c71b80cba34c0ce0fc50e
+ms.sourcegitcommit: 7c6cc0d972213bb3abab600423c27db50a7c702b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730300"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477497"
 ---
 # <a name="introduction-to-cwinrt"></a>Introducción a C++/WinRT
 &nbsp;
@@ -33,7 +33,7 @@ Windows Runtime se basa en las API del Modelo de objetos componentes (COM) y se 
 Cuando vayas a las [API de Windows Runtime](https://docs.microsoft.com/uwp/api/), haz clic en el cuadro combinado **Lenguaje** en la esquina superior derecha y selecciona **C++/WinRT** para ver los bloques de sintaxis de API tal y como aparecen en la proyección de lenguaje C++/WinRT.
 
 ## <a name="visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package"></a>Compatibilidad de Visual Studio con C++/WinRT, XAML, la extensión VSIX y el paquete NuGet
-Para obtener compatibilidad con Visual Studio, necesitarás Visual Studio 2019 o Visual Studio 2017 (como mínimo la versión 15.6, pero se recomienda la 15.7). Desde el instalador de Visual Studio, instala la carga de trabajo **Desarrollo con la Plataforma universal de Windows**. En **Detalles de la instalación** > **Desarrollo de la Plataforma universal de Windows**, marca las opciones de las **herramientas de la Plataforma universal de Windows de C++ (v14x)** , si aún no lo has hecho. Además, en Windows, en **Configuración** > **Actualización y seguridad** > **Para desarrolladores**, selecciona la opción **Modo de programador** en lugar de **Efectuar instalación de prueba de aplicaciones**.
+Para obtener compatibilidad con Visual Studio, necesitarás Visual Studio 2019 o Visual Studio 2017 (como mínimo la versión 15.6, pero se recomienda la 15.7). Desde el instalador de Visual Studio, instale la carga de trabajo **Desarrollo con la Plataforma universal de Windows**. En **Detalles de la instalación** > **Desarrollo de la Plataforma universal de Windows**, marca las opciones de las **herramientas de la Plataforma universal de Windows de C++ (v14x)** , si aún no lo has hecho. Además, en Windows, en **Configuración** > **Actualización y seguridad** > **Para desarrolladores**, selecciona la opción **Modo de programador** en lugar de **Efectuar instalación de prueba de aplicaciones**.
 
 Aunque se recomienda que realices el desarrollo con las versiones más recientes de Visual Studio y Windows SDK, si usas una versión de C++/WinRT incluida con Windows SDK anterior a 10.0.17763.0 (Windows 10, versión 1809), para usar los encabezados de los espacios de nombres de Windows mencionados anteriormente, necesitarás en el proyecto una versión de destino de Windows SDK como mínimo 10.0.17134.0 (Windows 10, versión 1803).
 
