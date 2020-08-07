@@ -450,6 +450,18 @@
           href: input/respond-to-the-presence-of-the-touch-keyboard.md
         - name: Usar el ámbito de entrada para cambiar el teclado táctil
           href: input/use-input-scope-to-change-the-touch-keyboard.md
+    - name: Entrada de texto
+      items:
+        - name: Entrada de texto personalizado
+          href: input/custom-text-input.md
+        - name: Ajuste de escala de texto
+          href: input/text-scaling.md
+        - name: Seleccionar texto e imágenes
+          href: input/guidelines-for-textselection.md
+        - name: Editores de métodos de entrada
+          href: input/input-method-editors.md
+        - name: Editor de métodos de entrada (IME)
+          href: input/input-method-editor-requirements.md
     - name: Controlador para juegos y control remoto
       href: input/gamepad-and-remote-interactions.md
     - name: Panel táctil
@@ -497,10 +509,6 @@
       href: input/input-injection.md
     - name: Identificar dispositivos de entrada
       href: input/identify-input-devices.md
-    - name: Entrada de texto personalizado
-      href: input/custom-text-input.md
-    - name: Ajuste de escala de texto
-      href: input/text-scaling.md
     - name: Arrastrar y colocar
       href: input/drag-and-drop.md
     - name: Zoom óptico y cambio de tamaño
@@ -509,8 +517,6 @@
       href: input/guidelines-for-panning.md
     - name: Rotación
       href: input/guidelines-for-rotation.md
-    - name: Seleccionar texto e imágenes
-      href: input/guidelines-for-textselection.md
     - name: Establecer destinos
       href: input/guidelines-for-targeting.md
     - name: Información visual
