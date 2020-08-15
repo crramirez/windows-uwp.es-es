@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 keywords: Accesibilidad en Windows 10, Accesibilidad, compilación de aplicaciones de Win32 accesibles, compilación de aplicaciones para UWP accesibles, compilación de aplicaciones para WPF accesibles, compilación de aplicaciones de WinForms accesibles
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: 2739546061febcfc96403ed5520fdcbd8bc2c462
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 04dc3571f6b2d8ddf57a3695330070d7c5b5061e
+ms.sourcegitcommit: 9beb6cce7375b726ad90ee84b72754268ae2819a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "76725938"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88047792"
 ---
 # <a name="accessibility-in-windows-10"></a>Accesibilidad en Windows 10
 
@@ -77,21 +77,21 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
 
       Desarrolla aplicaciones y herramientas accesibles en la plataforma establecida para las aplicaciones de Windows administradas con un modelo de interfaz de usuario de XAML y .NET Framework.
 
-      [Procedimientos recomendados de accesibilidad](https://docs.microsoft.com/dotnet/framework/ui-automation/accessibility-best-practices)
+      [Procedimientos de accesibilidad recomendados](https://docs.microsoft.com/dotnet/framework/ui-automation/accessibility-best-practices)
 
-      [Aspectos básicos de la automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/index)
+      [Fundamentos de UI Automation](https://docs.microsoft.com/dotnet/framework/ui-automation/index)
 
-      [Proveedores de Automatización de la interfaz de usuario para código administrado](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-providers-for-managed-code)
+      [Proveedores de UI Automation para código administrado](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-providers-for-managed-code)
 
-      [Clientes de Automatización de la interfaz de usuario para código administrado](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-clients-for-managed-code)
+      [Clientes de UI Automation para código administrado](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-clients-for-managed-code)
 
-      [Patrones de control de Automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-patterns)
+      [Patrones de control de UI Automation](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-patterns)
 
-      [Patrón de texto de Automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-text-pattern)
+      [Modelo de texto de UI Automation](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-text-pattern)
 
-      [Tipos de control de Automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-types)
+      [Tipos de control de UI Automation](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-types)
 
-      [Especificación de Automatización de la interfaz de usuario y compromiso de la comunidad](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-specification-and-community-promise)
+      [Especificación de Automatización de la interfaz de usuario y Promesa de la comunidad](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-specification-and-community-promise)
    :::column-end:::
    :::column:::
       ![Aplicaciones de la plataforma Windows Forms](images/platform-winforms.png)
@@ -104,9 +104,9 @@ En esta página se proporciona información sobre cómo los distintos marcos de 
 
       [Creación de una aplicación de Windows accesible](https://docs.microsoft.com/dotnet/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application)
 
-      [Propiedades de los controles de formularios de Windows Forms que admiten las directrices de accesibilidad](https://docs.microsoft.com/dotnet/framework/winforms/advanced/properties-on-windows-forms-controls-that-support-accessibility-guidelines)
+      [Propiedades de los controles de formularios Windows Forms que admiten las directrices de accesibilidad](https://docs.microsoft.com/dotnet/framework/winforms/advanced/properties-on-windows-forms-controls-that-support-accessibility-guidelines)
 
-      [Provisión de información de accesibilidad de controles en un formulario de Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
+      [Proporcionar información de accesibilidad de controles en Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -135,12 +135,12 @@ Descarga y ejecuta ejemplos completos de Windows que muestren varias caracterís
 
 :::row:::
    :::column:::
-      [Explorador de ejemplo de código](https://docs.microsoft.com/samples/browse/)
+      [Código de ejemplo de explorador](https://docs.microsoft.com/samples/browse/)
 
       El nuevo explorador de ejemplos reemplaza la galería de código de MSDN.
    :::column-end:::
    :::column:::
-      [Galería de código de MSDN (retirada)](https://code.msdn.microsoft.com/site/search?query=accessibility&f%5B0%5D.Value=accessibility&f%5B0%5D.Type=SearchText&ac=2)
+      [Galería de código de MSDN (archivo de GitHub)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample)
 
       Descarga ejemplos para Windows, Windows Phone, Microsoft Azure, Office, SharePoint, Silverlight y otros productos.
    :::column-end:::
