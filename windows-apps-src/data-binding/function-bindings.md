@@ -5,17 +5,17 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 879be9591bae36a1dbcd485387fbb4ac7f502fea
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5d74e99526ed5531db92ba88a1053e07a3fc993b
+ms.sourcegitcommit: c7f33dbe9516d28664df1b91e03edca3cb9fb0c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66360083"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87871691"
 ---
 # <a name="functions-in-xbind"></a>Funciones de x:Bind
 
 > [!NOTE]
-> Para obtener información general sobre el uso del enlace de datos en la aplicación con **{x:Bind}** y para realizar una comparación general entre **{x:Bind}** y **{Binding}** , consulta el tema [Enlace de datos en profundidad](data-binding-in-depth.md).
+> Para obtener información general sobre el uso del enlace de datos en la aplicación con **{x:Bind}** (y para realizar una comparación total entre **{x:Bind}** y **{Binding}** ), consulta el tema [Enlace de datos en profundidad](data-binding-in-depth.md) y [Extensión de marcado {x:Bind}](../xaml-platform/x-bind-markup-extension.md).
 
 A partir de la versión 1607 de Windows 10, **{x: Bind}** admite el uso de una función como el paso hoja de la ruta de acceso de enlace. Esto permite lo siguiente:
 
@@ -61,7 +61,7 @@ class ColorEntry
 
 ## <a name="path-to-the-function"></a>Ruta de acceso a la función
 
-La ruta de acceso a la función se especifica como otras tantas rutas de acceso de propiedades y puede incluir puntos (.), indexadores o conversiones para localizar la función.
+La [ruta de acceso a la función](../xaml-platform/x-bind-markup-extension.md#property-path) se especifica como otras tantas rutas de acceso de propiedades y puede incluir [puntos](../xaml-platform/x-bind-markup-extension.md#property-path-resolution) (.), [indexadores](../xaml-platform/x-bind-markup-extension.md#collections) o [conversiones](../xaml-platform/x-bind-markup-extension.md#casting) para localizar la función.
 
 Las funciones estáticas pueden especificarse mediante la sintaxis XMLNamespace:ClassName.MethodName. Por ejemplo, usa la sintaxis siguiente para enlazar a funciones estáticas en el código subyacente.
 
@@ -120,7 +120,7 @@ El motor de enlace reacciona a las notificaciones de cambio de propiedad que se 
 ```
 
 ```csharp
-public class Person:INotifyPropertyChanged
+public class Person : INotifyPropertyChanged
 {
     //Implementation for an Icon property and a CancellationToken property with PropertyChanged notifications
     ...
@@ -183,3 +183,6 @@ En un escenario con un enlace bidireccional, es necesario especificar una segund
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```
+
+## <a name="see-also"></a>Consulte también
+* [Extensión de marcado {x:Bind}](../xaml-platform/x-bind-markup-extension.md)
