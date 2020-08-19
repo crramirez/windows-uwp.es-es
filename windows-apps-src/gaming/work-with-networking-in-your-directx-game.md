@@ -6,21 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, redes, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 005dc30bc71d6d9087a3cc15880ffa3936d0a7f7
-ms.sourcegitcommit: 22ed0d4edad5e6bab352e641cf86cf455cf83825
+ms.openlocfilehash: 6b0dd6168d932d1c131ca6bcd4530795c6ed1ba3
+ms.sourcegitcommit: b408494ebe8489b9ba84fb8bfd893d90c8524020
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133968"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88576858"
 ---
 # <a name="networking-for-games"></a>Conexión en red de juegos
-
-
 
 Aprende a desarrollar e incorporar características de red en un juego DirectX.
 
 ## <a name="concepts-at-a-glance"></a>Conceptos de un vistazo
-
 
 En tu juego DirectX puedes usar una variedad de características de red, ya sea un juego independiente sencillo o juegos masivos de varios jugadores. El uso más simple de las funciones de red sería almacenar nombres de usuario y puntuaciones del juego en un servidor de red central.
 
@@ -30,28 +27,26 @@ Para los juegos de punto a punto, la aplicación de cada jugador controla la ent
 
 Para juegos de un solo jugador, generalmente se usa un servicio o servidor web central para almacenar nombres de usuario, puntuaciones de juego y demás datos varios. En estos juegos, la velocidad y la latencia de las transferencias de red no son tan importantes dado que no afectan directamente la operación de juego.
 
-Las condiciones de la red pueden cambiar en cualquier momento. Por ello, los juegos que usan API de red deben controlar las excepciones de red que puedan producirse. Para obtener más información sobre el control de las excepciones de red, consulta [Conceptos básicos de redes](https://docs.microsoft.com/windows/uwp/networking/networking-basics).
+Las condiciones de la red pueden cambiar en cualquier momento. Por ello, los juegos que usan API de red deben controlar las excepciones de red que puedan producirse. Para obtener más información sobre el control de las excepciones de red, consulta [Conceptos básicos de redes](/windows/uwp/networking/networking-basics).
 
 Los firewall y proxy web son comunes y pueden afectar la capacidad de usar las características de red. Un juego que usa la red debe estar preparado para controlar correctamente los firewall y proxy.
 
 Para dispositivos móviles, es importante supervisar los recursos de red disponibles y actuar en consecuencia cuando esté en redes medidas donde los costes de los datos y el roaming pueden ser significativos.
 
-El aislamiento de red forma parte del modelo de seguridad de la aplicación usado por Windows. Windows detecta activamente los límites de la red y aplica las restricciones de acceso a la red para el aislamiento. Las aplicaciones deben declarar funcionalidades de aislamiento de red para definir el ámbito de acceso de red. Sin declarar estas funcionalidades, tu aplicación no tendrá acceso a los recursos de red. Consulta [Cómo configurar las funcionalidades de aislamiento de red](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) para obtener más información acerca de cómo Windows aplica el aislamiento de red para las aplicaciones.
+El aislamiento de red forma parte del modelo de seguridad de la aplicación usado por Windows. Windows detecta activamente los límites de la red y aplica las restricciones de acceso a la red para el aislamiento. Las aplicaciones deben declarar funcionalidades de aislamiento de red para definir el ámbito de acceso de red. Sin declarar estas funcionalidades, tu aplicación no tendrá acceso a los recursos de red. Consulta [Cómo configurar las funcionalidades de aislamiento de red](/previous-versions/windows/apps/hh770532(v=win.10)) para obtener más información acerca de cómo Windows aplica el aislamiento de red para las aplicaciones.
 
 ## <a name="design-considerations"></a>Consideraciones de diseño
 
-
 En los juegos DirectX se puede usar una variedad de API de red. Por ello, es importante elegir la API correcta. Windows admite una variedad de API de red que tu aplicación puede usar para comunicarse con otros equipos y dispositivos a través de Internet o de redes privadas. Tu primer paso es determinar qué características de red necesita tu aplicación.
 
-Las API de red más populares para los juegos son:
+Estas son las API de red más populares para los juegos.
 
--   TCP y sockets: proporciona una conexión confiable. Usa TCP para las operaciones de juego que no necesitan seguridad. TCP permite que el servidor escale con facilidad. Por ello, se usa comúnmente en juegos que usan el modelo de infraestructura (servidor cliente o punto a punto de Internet). TCP puede ser usado por juegos ad hoc (punto a punto local) a través de Wi-Fi Direct y Bluetooth. TCP generalmente se usa para movimiento de objetos en juegos, interacción de caracteres, conversaciones de texto y demás operaciones. La clase [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) proporciona un socket TCP que se puede usar en los juegos de Microsoft Store. La clase **StreamSocket** se usa con clases relacionadas en el espacio de nombres [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets).
--   TCP y sockets que usan SSL: proporciona una conexión confiable que evita interceptaciones. Usa conexiones TCP con SSL para operaciones de juego que requieren de seguridad. El cifrado y la sobrecarga de SSL agrega un coste de latencia y rendimiento. Por ello es el único que se usa cuando se necesita seguridad. TCP con SSL generalmente se usa para iniciar sesión, comprar y vender activos, y crear y administrar personajes. La clase [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) proporciona un socket TCP que admite SSL.
--   UDP y sockets: proporciona transferencias de red no confiables con poca sobrecarga. UDP se usa para operaciones de juego que requieren de poca latencia y pueden tolerar cierto grado de pérdida de paquetes. Generalmente se usa para juegos de lucha, disparos y rastreo, audio de red y conversaciones de voz. La clase [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket) proporciona un socket UDP que se puede usar en los juegos de Microsoft Store. La clase **DatagramSocket** se usa con clases relacionadas en el espacio de nombres [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets).
--   Cliente HTTP: proporciona una conexión confiable a servidores HTTP. El escenario de redes más común es obtener acceso a un sitio web para recuperar o almacenar datos. Un ejemplo simple sería un juego que usa un sitio web para almacenar información del usuario y puntuación de juegos. Cuando se usa con SSL para seguridad, puede usarse un cliente HTTP para iniciar sesión, comercializar activos, administrar y crear caracteres de juego. La clase [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) proporciona una API de cliente http moderna para su uso en Microsoft Store Games. La clase **HttpClient** se usa con clases relacionadas en el espacio de nombres [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http).
+-   TCP y sockets: proporciona una conexión confiable. Usa TCP para las operaciones de juego que no necesitan seguridad. TCP permite que el servidor escale con facilidad. Por ello, se usa comúnmente en juegos que usan el modelo de infraestructura (servidor cliente o punto a punto de Internet). TCP puede ser usado por juegos ad hoc (punto a punto local) a través de Wi-Fi Direct y Bluetooth. TCP generalmente se usa para movimiento de objetos en juegos, interacción de caracteres, conversaciones de texto y demás operaciones. La clase [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) proporciona un socket TCP que se puede usar en los juegos de Microsoft Store. La clase **StreamSocket** se usa con clases relacionadas en el espacio de nombres [**Windows::Networking::Sockets**](/uwp/api/Windows.Networking.Sockets).
+-   TCP y sockets que usan SSL: proporciona una conexión confiable que evita interceptaciones. Usa conexiones TCP con SSL para operaciones de juego que requieren de seguridad. El cifrado y la sobrecarga de SSL agrega un coste de latencia y rendimiento. Por ello es el único que se usa cuando se necesita seguridad. TCP con SSL generalmente se usa para iniciar sesión, comprar y vender activos, y crear y administrar personajes. La clase [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) proporciona un socket TCP que admite SSL.
+-   UDP y sockets: proporciona transferencias de red no confiables con poca sobrecarga. UDP se usa para operaciones de juego que requieren de poca latencia y pueden tolerar cierto grado de pérdida de paquetes. Generalmente se usa para juegos de lucha, disparos y rastreo, audio de red y conversaciones de voz. La clase [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket) proporciona un socket UDP que se puede usar en los juegos de Microsoft Store. La clase **DatagramSocket** se usa con clases relacionadas en el espacio de nombres [**Windows::Networking::Sockets**](/uwp/api/Windows.Networking.Sockets).
+-   Cliente HTTP: proporciona una conexión confiable a servidores HTTP. El escenario de redes más común es obtener acceso a un sitio web para recuperar o almacenar datos. Un ejemplo simple sería un juego que usa un sitio web para almacenar información del usuario y puntuación de juegos. Cuando se usa con SSL para seguridad, puede usarse un cliente HTTP para iniciar sesión, comercializar activos, administrar y crear caracteres de juego. La clase [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient) proporciona una API de cliente http moderna para su uso en Microsoft Store Games. La clase **HttpClient** se usa con clases relacionadas en el espacio de nombres [**Windows::Web::Http**](/uwp/api/Windows.Web.Http).
 
 ## <a name="handling-network-exceptions-in-your-directx-game"></a>Administrar las excepciones de red en tu juego de DirectX
-
 
 Cuando se produce una excepción de red en tu juego DirectX, significa que se produjo un error o problema importante. Las excepciones pueden producirse por muchas razones cuando se usan las API de red. A menudo, la excepción puede producirse por cambios en la conectividad de red u otros problemas de red con el servidor o host remoto.
 
@@ -75,60 +70,57 @@ Cuando se produce una excepción en un juego DirectX que es una aplicación para
 Las API de red admiten distintos métodos para recuperar esta información detallada sobre la causa de una excepción.
 
 -   Un método para recuperar el valor **HRESULT** del error que provocó la excepción. La lista de posibles valores de **HRESULT** es grande y no especificada. El valor **HRESULT** puede recuperarse al usar cualquiera de las API para redes.
--   Un método auxiliar que convierte el valor **HRESULT** en un valor de enumeración. La lista de posibles valores de enumeración es especificada y relativamente pequeña. Hay un método auxiliar disponible para las clases de socket en [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets).
+-   Un método auxiliar que convierte el valor **HRESULT** en un valor de enumeración. La lista de posibles valores de enumeración es especificada y relativamente pequeña. Hay un método auxiliar disponible para las clases de socket en [**Windows::Networking::Sockets**](/uwp/api/Windows.Networking.Sockets).
 
 ### <a name="exceptions-in-windowsnetworkingsockets"></a>Excepciones en Windows.Networking.Sockets
 
-El constructor de la clase [**HostName**](https://docs.microsoft.com/uwp/api/Windows.Networking.HostName) que se usa con los sockets puede generar una excepción si la cadena pasada no es un nombre de host válido (contiene caracteres que no se pueden usar en un nombre de host). Si una aplicación obtiene la intervención del usuario para el **HostName** de una conexión del mismo nivel para juegos, el constructor debe estar en un bloque try/catch. Si se genera una excepción, la aplicación podrá notificar al usuario y solicitar otro nombre de host.
+El constructor de la clase [**HostName**](/uwp/api/Windows.Networking.HostName) que se usa con los sockets puede generar una excepción si la cadena pasada no es un nombre de host válido (contiene caracteres que no se pueden usar en un nombre de host). Si una aplicación obtiene la intervención del usuario para el **HostName** de una conexión del mismo nivel para juegos, el constructor debe estar en un bloque try/catch. Si se genera una excepción, la aplicación podrá notificar al usuario y solicitar otro nombre de host.
 
 Agregar código para validar una cadena para un nombre de host del usuario
 
-```cpp
+```cppcx
+// Define some variables at the class level.
+Windows::Networking::HostName^ remoteHost;
 
-    // Define some variables at the class level.
-    Windows::Networking::HostName^ remoteHost;
+bool isHostnameFromUser = false;
+bool isHostnameValid = false;
 
-    bool isHostnameFromUser = false;
-    bool isHostnameValid = false;
+///...
 
-    ///...
+// If the value of 'remoteHostname' is set by the user in a control as input 
+// and is therefore untrusted input and could contain errors. 
+// If we can't create a valid hostname, we notify the user in statusText 
+// about the incorrect input.
 
-    // If the value of 'remoteHostname' is set by the user in a control as input 
-    // and is therefore untrusted input and could contain errors. 
-    // If we can't create a valid hostname, we notify the user in statusText 
-    // about the incorrect input.
+String ^hostString = remoteHostname;
 
-    String ^hostString = remoteHostname;
+try 
+{
+    remoteHost = ref new Windows::Networking:Host(hostString);
+    isHostnameValid = true;
+}
+catch (InvalidArgumentException ^ex)
+{
+    statusText->Text = "You entered a bad hostname, please re-enter a valid hostname.";
+    return;
+}
 
-    try 
-    {
-        remoteHost = ref new Windows::Networking:Host(hostString);
-        isHostnameValid = true;
-    }
-    catch (InvalidArgumentException ^ex)
-    {
-        statusText->Text = "You entered a bad hostname, please re-enter a valid hostname.";
-        return;
-    }
+isHostnameFromUser = true;
 
-    isHostnameFromUser = true;
-
-
-    // ... Continue with code to execute with a valid hostname.
+// ... Continue with code to execute with a valid hostname.
 ```
 
-El espacio de nombres [**Windows.Networking.Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) tiene enumeraciones y métodos auxiliares convenientes para controlar errores al usar sockets. Esto puede ser útil para controlar de un modo diferente excepciones de red específicas en la aplicación.
+El espacio de nombres [**Windows.Networking.Sockets**](/uwp/api/Windows.Networking.Sockets) tiene enumeraciones y métodos auxiliares convenientes para controlar errores al usar sockets. Esto puede ser útil para controlar de un modo diferente excepciones de red específicas en la aplicación.
 
-Encontrar un error en [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) o una operación [**StreamSocketListener**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener) hace que se arroje una excepción. La causa de la excepción es un valor de error representado como un valor **HRESULT**. El método [**SocketError.GetStatus**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.socketerror.getstatus) se usa para convertir un error de red de una operación de socket en un valor de enumeración [**SocketErrorStatus**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.SocketErrorStatus). La mayoría de los valores de enumeración **SocketErrorStatus** corresponden a un error devuelto por la operación de Windows Sockets nativa. Una aplicación puede filtrar según valores **SocketErrorStatus** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
+Encontrar un error en [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) o una operación [**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener) hace que se arroje una excepción. La causa de la excepción es un valor de error representado como un valor **HRESULT**. El método [**SocketError.GetStatus**](/uwp/api/windows.networking.sockets.socketerror.getstatus) se usa para convertir un error de red de una operación de socket en un valor de enumeración [**SocketErrorStatus**](/uwp/api/Windows.Networking.Sockets.SocketErrorStatus). La mayoría de los valores de enumeración **SocketErrorStatus** corresponden a un error devuelto por la operación de Windows Sockets nativa. Una aplicación puede filtrar según valores **SocketErrorStatus** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
 Para los errores de validación de parámetros, una aplicación también puede usar el **HRESULT** de la excepción para obtener información más detallada del error que causó la excepción. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Para la mayoría de los errores de validación de parámetros, el **HRESULT** devuelto es **E \_ INVALIDARG**.
 
 Agregar código para controlar excepciones cuando se intenta hacer una conexión de socket de secuencias
 
-```cpp
+```cppcx
 using namespace Windows::Networking;
 using namespace Windows::Networking::Sockets;
-
     
     // Define some more variables at the class level.
 
@@ -222,14 +214,13 @@ using namespace Windows::Networking::Sockets;
 
 ### <a name="exceptions-in-windowswebhttp"></a>Excepciones en Windows.Web.Http
 
-El constructor de la clase [**Windows::Foundation::Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) usado con [**Windows::Web::Http::HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) puede arrojar una excepción si se pasa una cadena con un URI no válido (contiene caracteres no permitidos en un URI). En C++, no hay ningún método para probar y analizar una cadena en un URI. Si una aplicación obtiene la entrada del usuario para **Windows:: Foundation:: URI**, el constructor debe estar en un bloque try/catch. Si se arroja una excepción, la aplicación puede notificar al usuario y solicitar un nuevo URI.
+El constructor de la clase [**Windows::Foundation::Uri**](/uwp/api/Windows.Foundation.Uri) usado con [**Windows::Web::Http::HttpClient**](/uwp/api/Windows.Web.Http.HttpClient) puede arrojar una excepción si se pasa una cadena con un URI no válido (contiene caracteres no permitidos en un URI). En C++, no hay ningún método para probar y analizar una cadena en un URI. Si una aplicación obtiene la entrada del usuario para **Windows:: Foundation:: URI**, el constructor debe estar en un bloque try/catch. Si se arroja una excepción, la aplicación puede notificar al usuario y solicitar un nuevo URI.
 
-La aplicación también debe comprobar que el esquema en el URI sea HTTP o HTTPS, dado que estos son los únicos esquemas admitidos por [**Windows::Web::Http::HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient).
+La aplicación también debe comprobar que el esquema en el URI sea HTTP o HTTPS, dado que estos son los únicos esquemas admitidos por [**Windows::Web::Http::HttpClient**](/uwp/api/Windows.Web.Http.HttpClient).
 
 Agregar código para validar una cadena para un URI del usuario
 
-```cpp
-
+```cppcx
     // Define some variables at the class level.
     Windows::Foundation::Uri^ resourceUri;
 
@@ -269,15 +260,15 @@ Agregar código para validar una cadena para un URI del usuario
     // ... Continue with code to execute with a valid URI.
 ```
 
-El espacio de nombres [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/windows.web.http) no tiene una función de conveniencia. Por lo tanto, una aplicación que usa [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) y otras clases de este espacio de nombres necesita usar el valor **HRESULT** .
+El espacio de nombres [**Windows::Web::Http**](/uwp/api/windows.web.http) no tiene una función de conveniencia. Por lo tanto, una aplicación que usa [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient) y otras clases de este espacio de nombres necesita usar el valor **HRESULT** .
 
-En las aplicaciones con C++, [**Platform::Exception**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [**Platform::Exception::HResult**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#hresult) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [**Platform::Exception::Message**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#message) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
+En las aplicaciones con C++, [**Platform::Exception**](/cpp/cppcx/platform-exception-class) representa un error durante la ejecución de la aplicación cuando se produce una excepción. La propiedad [**Platform::Exception::HResult**](/cpp/cppcx/platform-exception-class#hresult) devuelve el valor **HRESULT** asignado a la excepción concreta. La propiedad [**Platform::Exception::Message**](/cpp/cppcx/platform-exception-class#message) devuelve la cadena proporcionada por el sistema asociada con el valor **HRESULT**. Los valores posibles de **HRESULT** se enumeran en el archivo de encabezado *Winerror.h*. Una aplicación puede filtrar según valores **HRESULT** concretos para modificar el comportamiento de la aplicación en función del motivo de la excepción.
 
 Para la mayoría de los errores de validación de parámetros, el **HRESULT** devuelto es **E \_ INVALIDARG**. Para algunas llamadas a métodos no válidas, el valor de **HRESULT** devuelto es **E\_ILLEGAL\_METHOD\_CALL**.
 
-Agregar código para controlar excepciones cuando se intenta usar [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) para conectarse a un servidor HTTP
+Agregar código para controlar excepciones cuando se intenta usar [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient) para conectarse a un servidor HTTP
 
-```cpp
+```cppcx
 using namespace Windows::Foundation;
 using namespace Windows::Web::Http;
     
@@ -361,34 +352,31 @@ using namespace Windows::Web::Http;
             }
         }
     });
-    
-
 ```
 
 ## <a name="related-topics"></a>Temas relacionados
 
+### <a name="other-resources"></a>Otros recursos
 
-**Otros recursos**
+* [Conectar con un socket de datagramas](/previous-versions/windows/apps/jj635238(v=win.10))
+* [Conectar a un recurso de red con un socket de secuencias](/previous-versions/windows/apps/jj150599(v=win.10))
+* [Conexión a servicios de red](/previous-versions/windows/apps/hh452976(v=win.10))
+* [Conexión a servicios web](/previous-versions/windows/apps/hh761504(v=win.10))
+* [Conceptos básicos de redes](/windows/uwp/networking/networking-basics)
+* [Procedimiento para configurar las funcionalidades de aislamiento de red](/previous-versions/windows/apps/hh770532(v=win.10))
+* [Cómo habilitar el aislamiento de red de bucle invertido y de depuración](/previous-versions/windows/apps/hh780593(v=win.10))
 
-* [Conectar con un socket de datagramas](https://docs.microsoft.com/previous-versions/windows/apps/jj635238(v=win.10))
-* [Conectar a un recurso de red con un socket de secuencias](https://docs.microsoft.com/previous-versions/windows/apps/jj150599(v=win.10))
-* [Conexión a servicios de red](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
-* [Conexión a servicios web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
-* [Conceptos básicos de redes](https://docs.microsoft.com/windows/uwp/networking/networking-basics)
-* [Procedimiento para configurar las funcionalidades de aislamiento de red](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-* [Cómo habilitar el aislamiento de red de bucle invertido y de depuración](https://docs.microsoft.com/previous-versions/windows/apps/hh780593(v=win.10))
+### <a name="reference"></a>Referencia
 
-**Referencia**
+* [DatagramSocket](/uwp/api/Windows.Networking.Sockets.DatagramSocket)
+* [HttpClient](/uwp/api/Windows.Web.Http.HttpClient)
+* [StreamSocket](/uwp/api/Windows.Networking.Sockets.StreamSocket)
+* [Windows:: Web:: http (espacio de nombres)](/uwp/api/Windows.Web.Http)
+* [Windows:: Networking:: Sockets (espacio de nombres)](/uwp/api/Windows.Networking.Sockets)
 
-* [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket)
-* [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)
-* [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket)
-* [**Windows:: Web:: http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)
-* [**Windows:: Networking:: Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
+### <a name="sample-apps"></a>Aplicaciones de ejemplo
 
-**Ejemplos**
-
-* [Muestra de DatagramSocket](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/ControlChannelTrigger%20StreamSocket%20sample%20(Windows%208))
+* [Muestra de DatagramSocket](/samples/microsoft/windows-universal-samples/datagramsocket/)
 * [Ejemplo de HttpClient](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/HttpClient%20sample)
 * [Muestra de proximidad](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/Proximity%20sample%20(Windows%208))
-* [Muestra StreamSocket](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
+* [Muestra StreamSocket](/samples/microsoft/windows-universal-samples/streamsocket/)
