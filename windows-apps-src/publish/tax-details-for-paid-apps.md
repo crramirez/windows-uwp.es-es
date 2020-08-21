@@ -6,15 +6,20 @@ ms.date: 03/05/2019
 ms.topic: article
 keywords: Windows 10, UWP, impuestos, impuestos de aplicación, requisitos fiscales, expansión de comercio, tasa de impuestos
 ms.localizationpriority: medium
-ms.openlocfilehash: f81d469760e8c690066e668416116d9fc8ba879d
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: f1147ab6ee76b1d7615d6acaadaf6190db96c668
+ms.sourcegitcommit: 829af8cf4679a6aa9e7ecad961e1e33a09235028
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234563"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88681266"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Detalles de impuestos para desarrolladores de aplicaciones y juegos de Windows y publicadores de Azure Marketplace
 
+En general, se asignan responsabilidades de impuestos sobre las ventas de clientes finales entre Microsoft y un desarrollador/publicador basado en el país y el escenario de compra en el que se venden las ofertas.  En determinados países (países administrados por Microsoft), Microsoft asume la responsabilidad de administrar los impuestos sobre los clientes finales, que puede englobar la validación del estado comercial de los clientes mediante la obtención de los números de registros fiscales o los certificados de exención, relaciones con clientes sujetas a una administración más minuciosa y cómputo, recaudación o pago de impuestos. En aquellos casos en los que las ventas se realizan mediante asociados, Microsoft asume que todos los asociados son empresas y, como tal, cumplen debidamente sus obligaciones fiscales. Microsoft administra los impuestos sobre clientes finales por los anunciantes para su comodidad y, en este sentido, ha adoptado los escenarios más comunes para determinar los países y las estrategias para administrar los impuestos sobre los clientes finales.  Microsoft no ofrece ninguna garantía de que las acciones de Microsoft cumplirán íntegramente las obligaciones de los anunciantes en los países administrados por Microsoft. En el caso de todos los países administrados de Microsoft, Microsoft recomienda que los desarrolladores y publicadores trabajen con sus propios asesores fiscales para determinar si la transferencia de impuestos administrada de Microsoft es suficiente para satisfacer los requisitos de cumplimiento del desarrollador/publicador. Esto es particularmente importante para todos los países administrados por Microsoft desde los que los anunciantes venden sus productos. Por ejemplo, un desarrollador/publicador establecido en y vender ofertas en Arabia Saudí puede determinar que confiar en Microsoft para administrar los impuestos puede no ser suficiente para satisfacer las obligaciones de cumplimiento del desarrollador/publicador.
+
+En el caso de todos los países que no son países administrados de Microsoft (los países administrados para desarrolladores y editores), los anunciantes reconocen y acuerdan que los publicadores tienen la responsabilidad exclusiva de determinar y administrar los impuestos finales del cliente, como el registro, el cálculo fiscal, la recopilación y la remisión, la validación del estado de la empresa de los clientes y la entrega de Los anunciantes reconocen que, con respecto a cualquier venta en un país administrado por el desarrollador o publicador, es posible que Microsoft no pueda proporcionar.
+
+En algunos casos, los países administrados de Microsoft pueden convertirse en países administrados por desarrolladores y editores, y viceversa.
 
 Para comprender las consideraciones fiscales para la selección de precios y la responsabilidad fiscal en el contrato del desarrollador de aplicaciones o el contrato del anunciante moderno, consulte los países o regiones de distribución en las tablas siguientes.
 
@@ -74,7 +79,7 @@ Para comprender las consideraciones fiscales para la selección de precios y la 
 | Islas Caimán                   | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
 | República Centroafricana         | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
 | Chad                             | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
-| Chile                            | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
+| Chile                            | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables. Los impuestos se restan del precio antes del pago. impuestos.       | Precio menos el 19 % de impuestos, menos los honorarios de Store  | Microsoft          |
 | China                            | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
 | Isla de Navidad                 | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
 | Islas Cocos (Keeling)          | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
@@ -164,7 +169,7 @@ Para comprender las consideraciones fiscales para la selección de precios y la 
 | Mauritania                       | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
 | Mauricio                        | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
 | Mayotte                          | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
-| México                           | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
+| México                           | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | Precio menos el 16 % de impuestos, menos los honorarios de Store  | Microsoft          |
 | Micronesia                       | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
 | Moldova                          | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables.                                                                   | Precio menos los honorarios de Store                 | Desarrollador          |
 | Mónaco                           | El precio seleccionado es el precio de venta final e incluye todos los impuestos aplicables. Los impuestos se restan del precio antes del pago.              | Precio menos el 20 % de impuestos, menos los honorarios de Store  | Microsoft          |
