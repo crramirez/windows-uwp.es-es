@@ -1,58 +1,58 @@
 ---
 ms.assetid: c92c0ea8-f742-4fc1-a3d7-e90aac11953e
-description: Usa la API de opiniones de Microsoft Store para enviar respuestas mediante programación a opiniones sobre tu aplicación en la Store.
-title: Responder a opiniones con servicios de la Store Windows
+description: Use la API de Microsoft Store Reviews para enviar mediante programación las respuestas a las revisiones de la aplicación en la tienda.
+title: Respuesta a las revisiones mediante servicios de almacenamiento
 ms.date: 06/04/2018
 ms.topic: article
-keywords: windows 10, uwp, Microsoft Store reviews API, API de opiniones de Microsoft Store, respond to reviews, responder a las opiniones
+keywords: Windows 10, UWP, Microsoft Store API Reviews, responder a las revisiones
 ms.localizationpriority: medium
-ms.openlocfilehash: b5462f5b98cee202e32b8266539f929127434a4e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 3a88f55555245ac64982b01920e538295c2ffbd2
+ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260196"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846855"
 ---
-# <a name="respond-to-reviews-using-store-services"></a>Responder a opiniones con servicios de la Store Windows
+# <a name="respond-to-reviews-using-store-services"></a>Respuesta a las revisiones mediante servicios de almacenamiento
 
-Usa la *API de opiniones de Microsoft Store* para responder mediante programación a las opiniones de la aplicación en la Store. Esta API es especialmente útil para los desarrolladores que desean responder de forma masiva a muchas revisiones sin usar el centro de Partners. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas provenientes de la aplicación o el servicio.
+Use la *API de Microsoft Store Reviews* para responder mediante programación a las revisiones de la aplicación en la tienda. Esta API es especialmente útil para los desarrolladores que desean responder de forma masiva a muchas revisiones sin usar el centro de Partners. Esta API usa Azure Active Directory (Azure AD) para autenticar las llamadas provenientes de la aplicación o el servicio.
 
 Los siguientes pasos describen el proceso de principio a fin:
 
 1.  Asegúrate de que se hayan completado todos los [requisitos previos](#prerequisites).
-2.  Antes de llamar a un método en la API de opiniones de Microsoft Store, [obtén un token de acceso de Azure AD](#obtain-an-azure-ad-access-token). Después de obtener un token, tienes 60 minutos para utilizar dicho token en llamadas a la API de opiniones de Microsoft Store antes de que expire. Después de que el token expire, puedes generar uno nuevo.
-3.  [Llama a la API de opiniones de Microsoft Store](#call-the-windows-store-reviews-api).
+2.  Antes de llamar a un método en la API de Microsoft Store Reviews, [obtenga un token de acceso Azure ad](#obtain-an-azure-ad-access-token). Después de obtener un token, tiene 60 minutos para usar este token en las llamadas a la API de Microsoft Store Reviews antes de que expire el token. Después de que el token expire, puedes generar uno nuevo.
+3.  [Llame a la API de Microsoft Store Reviews](#call-the-windows-store-reviews-api).
 
 > [!NOTE]
 > Además de usar la API de Microsoft Store Reviews para responder mediante programación a las revisiones, puede responder de forma alternativa a las revisiones [mediante el centro de Partners](../publish/respond-to-customer-reviews.md).
 
 <span id="prerequisites" />
 
-## <a name="step-1-complete-prerequisites-for-using-the-microsoft-store-reviews-api"></a>Paso 1: Completar los requisitos previos para usar la API de opiniones de Microsoft Store
+## <a name="step-1-complete-prerequisites-for-using-the-microsoft-store-reviews-api"></a>Paso 1: completar los requisitos previos para usar la API de Microsoft Store Reviews
 
-Antes de empezar a escribir código para llamar a la API de opiniones de Microsoft Store, asegúrate de que has completado los siguientes requisitos previos.
+Antes de empezar a escribir código para llamar a la API de Microsoft Store Reviews, asegúrese de que ha completado los requisitos previos siguientes.
 
-* Tú (o tu organización) debes tener un directorio de Azure AD y un permiso de [Administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el directorio. Si ya usas Office 365 u otros servicios empresariales de Microsoft, ya tienes un directorio de Azure AD. De lo contrario, puede [crear un nuevo Azure ad en el centro de Partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin cargo adicional.
+* Usted (o su organización) tiene que tener un directorio de Azure AD y el permiso de [Administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el directorio. Si usa Microsoft 365 u otros servicios empresariales de Microsoft, ya tiene el directorio de Azure AD. De lo contrario, puede [crear un nuevo Azure ad en el centro de Partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin cargo adicional.
 
-* Debe asociar una aplicación Azure AD a la cuenta del centro de Partners, recuperar el identificador de inquilino y el identificador de cliente de la aplicación y generar una clave. La aplicación de Azure AD representa la aplicación o el servicio desde donde quieres originar la llamada a la API de opiniones de Microsoft Store. Necesitas el identificador de inquilino, de cliente y la clave para obtener un token de acceso de Azure AD que se pasa a la API.
+* Debe asociar una aplicación Azure AD a la cuenta del centro de Partners, recuperar el identificador de inquilino y el identificador de cliente de la aplicación y generar una clave. La aplicación Azure AD representa la aplicación o el servicio del que desea llamar a la API de Microsoft Store Reviews. Necesita el identificador de inquilino, el identificador de cliente y la clave para obtener un token de acceso de Azure AD para pasar a la API.
     > [!NOTE]
-    > Solo debes realizar esta tarea una vez. Una vez que tengas el identificador de inquilino, de cliente y la clave, puedes volver a usarlos cuando necesites crear un nuevo token de acceso de Azure AD.
+    > Solo tiene que realizar esta tarea una vez. Una vez que tenga el identificador de inquilino, el identificador de cliente y la clave, puede volver a usarlos cada vez que tenga que crear un nuevo token de acceso de Azure AD.
 
 Para asociar una aplicación Azure AD a la cuenta del centro de Partners y recuperar los valores necesarios:
 
-1.  En el centro de Partners, [asocie la cuenta del centro de Partners de su organización con el directorio de Azure ad de su organización](../publish/associate-azure-ad-with-partner-center.md).
+1.  En el Centro de partners, [asocie la cuenta del Centro de partners de la organización con el directorio de Azure AD de la organización](../publish/associate-azure-ad-with-partner-center.md).
 
-2.  A continuación, en la página **usuarios** de la sección **configuración** de la cuenta del centro de partners, [agregue la Azure ad aplicación](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) que representa la aplicación o el servicio que usará para responder a las revisiones. Asegúrate de que se asignas a esta aplicación el rol de **Administrador**. Si la aplicación aún no existe en el directorio de Azure AD, puede [crear una nueva aplicación de Azure ad en el centro de Partners](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account). 
+2.  A continuación, en la página **usuarios** de la sección **configuración** de la cuenta del centro de partners, [agregue la Azure ad aplicación](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) que representa la aplicación o el servicio que usará para responder a las revisiones. Asegúrese de asignar a esta aplicación el rol **Administrador**. Si la aplicación aún no existe en el directorio de Azure AD, puede [crear una nueva aplicación de Azure AD en el Centro de partners](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account). 
 
-3.  Vuelve a la página **Usuarios**, haz clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y copia los valores de **Identificador de inquilino** e **Identificador de cliente**.
+3.  Vuelva a la página **Usuarios**, haga clic en el nombre de la aplicación de Azure AD para ir a la configuración de la aplicación y, a continuación, copie los valores de **Identificador de inquilino** e **Identificador de cliente**.
 
-4. Haz clic en **Agregar nueva clave**. En la siguiente pantalla, copia el valor **Clave**. No podrás acceder a esta información de nuevo después de salir de la página. Para obtener más información, consulta [Administrar claves para una aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
+4. Haga clic en **Agregar nueva clave**. En la pantalla siguiente, copie el valor de **Clave**. Después de salir de esta página no podrá tener acceso de nuevo a esta información. Para más información, consulte [Administrar claves para una aplicación de Azure AD](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys).
 
 <span id="obtain-an-azure-ad-access-token" />
 
-## <a name="step-2-obtain-an-azure-ad-access-token"></a>Paso 2: Obtención de un token de acceso de Azure AD
+## <a name="step-2-obtain-an-azure-ad-access-token"></a>Paso 2: Obtención de un token de acceso de Azure AD
 
-Antes de llamar a cualquiera de los métodos en la API de opiniones de Microsoft Store, primero debes obtener un token de acceso de Azure AD para pasarlo al encabezado **Authorization** de cada método en la API. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
+Antes de llamar a cualquiera de los métodos de la API de Microsoft Store Reviews, primero debe obtener un token de acceso Azure AD que pase al encabezado **Authorization** de cada método de la API. Una vez que haya obtenido un token de acceso, tiene 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
 
 Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
@@ -67,26 +67,26 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-Para el valor de *identificador de\_de inquilino* en el URI de entrada y los parámetros de cliente *\_ID.* y *cliente\_secreto* , especifique el identificador de inquilino, el identificador de cliente y la clave de la aplicación que recuperó del centro de Partners en la sección anterior. Para el parámetro *resource*, debes especificar ```https://manage.devcenter.microsoft.com```.
+Para el valor de * \_ identificador de inquilino* en el URI de post y los parámetros de * \_ identificador de cliente* y * \_ secreto de cliente* , especifique el identificador de inquilino, el identificador de cliente y la clave de la aplicación que recuperó del centro de Partners en la sección anterior. Para el parámetro *resource*, tiene que especificar ```https://manage.devcenter.microsoft.com```.
 
 Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
 <span id="call-the-windows-store-reviews-api" />
 
-## <a name="step-3-call-the-microsoft-store-reviews-api"></a>Paso 3: Llamar a la API de opiniones de Microsoft Store
+## <a name="step-3-call-the-microsoft-store-reviews-api"></a>Paso 3: llamar a la API de Microsoft Store Reviews
 
-Cuando tengas un token de acceso de Azure AD, podrás llamar a la API de opiniones de Microsoft Store. Debes pasar el token de acceso al encabezado **Authorization** de cada método.
+Una vez que tenga un Azure AD token de acceso, estará listo para llamar a la API de Microsoft Store Reviews. Debes pasar el token de acceso al encabezado **Authorization** de cada método.
 
-La API de opiniones de Microsoft Store contiene varios métodos que puedes utilizar para determinar si tienes permiso para responder a una opinión determinada y enviar respuestas a una o varias opiniones. Sigue este proceso para usar la API:
+La API de Microsoft Store Reviews contiene varios métodos que se pueden usar para determinar si se permite responder a una revisión determinada y enviar respuestas a una o más revisiones. Siga este proceso para usar esta API:
 
-1. Obtén los identificadores de las opiniones a las que quieres responder. Los identificadores de opinión están disponibles en los datos de respuesta del método [obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de Microsoft Store y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [informe de opiniones](../publish/reviews-report.md).
-2. Llama al método [obtener información de respuesta de opiniones de la aplicación](get-response-info-for-app-reviews.md) para determinar si tienes permiso para responder a las opiniones. Cuando un cliente envía una opinión, puede elegir no recibir respuestas a dicha opinión. No puedes responder a opiniones enviadas por clientes que han elegido no recibir respuestas a opiniones.
-3. Llama al método [enviar respuestas a opiniones de la aplicación](submit-responses-to-app-reviews.md) para responder mediante programación a las opiniones.
+1. Obtenga los identificadores de las revisiones a las que desea responder. Los identificadores de revisión están disponibles en los datos de respuesta del método [Get App Reviews](get-app-reviews.md) de la API de Microsoft Store Analytics y en la [descarga sin conexión](../publish/download-analytic-reports.md) del [Informe de revisiones](../publish/reviews-report.md).
+2. Llame al método [Get Response info for App Reviews](get-response-info-for-app-reviews.md) para determinar si se le permite responder a las revisiones. Cuando un cliente envía una revisión, puede optar por no recibir respuestas a su revisión. No puede responder a las revisiones enviadas por los clientes que han elegido no recibir respuestas de revisión.
+3. Llame al método [enviar respuestas a las revisiones](submit-responses-to-app-reviews.md) de la aplicación para responder a las revisiones mediante programación.
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Obtener revisiones de la aplicación](get-app-reviews.md)
+* [Obtener las opiniones de la aplicación](get-app-reviews.md)
 * [Obtención de información de respuesta para las revisiones de la aplicación](get-response-info-for-app-reviews.md)
 * [Enviar respuestas a las revisiones de la aplicación](submit-responses-to-app-reviews.md)
 
