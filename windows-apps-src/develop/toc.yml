@@ -1379,6 +1379,8 @@
               href: ../launch-resume/create-and-register-an-inproc-background-task.md
             - name: Crear y registrar una tarea en segundo plano fuera del proceso
               href: ../launch-resume/create-and-register-a-background-task.md
+            - name: Crear y registrar una tarea en segundo plano COM de WinMain
+              href: ../launch-resume/create-and-register-a-winmain-background-task.md
             - name: Migrar una tarea en segundo plano fuera de proceso a una tarea en segundo plano en proceso
               href: ../launch-resume/convert-out-of-process-background-task.md
             - name: Depurar una tarea en segundo plano
