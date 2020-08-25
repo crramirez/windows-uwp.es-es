@@ -1,6 +1,6 @@
 ---
 title: Preguntas más frecuentes sobre el uso de Python en Windows.
-description: Preguntas más frecuentes sobre el uso de Python en Windows.
+description: Obtenga ayuda con las respuestas a las preguntas más frecuentes (P+F) sobre el uso de Python en Windows para el desarrollo.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, pip, py.exe, rutas de acceso al archivo, PYTHONPATH, desarrollo de python, empaquetado de python
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 6dbf86e0f9435e44140159ebb2bcbc3d67928999
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 2541186a1dd0f205d88e1e14c146934490afff55
+ms.sourcegitcommit: b6138f9565252460ace6fa0acdc2a902e591681a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74663562"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88243267"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Preguntas más frecuentes sobre el uso de Python en Windows.
 

@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c6eb22fbe0488fa9a36160ce9e704d10727e4c9
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8bb01c76879bd00e10286ef429415cf4817315b7
+ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66364483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88502430"
 ---
 # <a name="search-and-find-in-page"></a>Búsqueda y buscar en la página
 
@@ -56,7 +56,7 @@ La búsqueda es una función común y los usuarios encontrarán la interfaz de u
 
 Entre algunos ámbitos comunes de la búsqueda se incluyen:
 
-**Global** y **contextual o refinar.**   Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
+**Global** y **contextual o refinar.**  Búsqueda en varias fuentes de contenido en la nube y local. Entre los resultados variados se incluyen las direcciones URL, documentos, medios, acciones, aplicaciones, etc.
 
 **Web.**   Buscar en un índice web. Los resultados incluyen páginas, entidades y respuestas.
 
@@ -87,13 +87,12 @@ Para la mayoría de las aplicaciones, es mejor tener un campo de entrada de text
 
 Antes de hacer clic en el icono de búsqueda:
 
-![Ejemplo de icono de búsqueda y cuadro de búsqueda contraído](images/search-icon-collapsed.png)
+![Ejemplo de icono de búsqueda y cuadro de búsqueda contraído](images/search-icon-collapsed-maps.png)
 
- 
 
 Después de hacer clic en el icono de búsqueda:
 
-![Ejemplo de icono de búsqueda y cuadro de búsqueda expandido](images/search-icon-expanded.png)
+![Ejemplo de búsqueda en un menú de navegación](images/search-icon-expanded-maps.png)
 
  
 
@@ -120,13 +119,13 @@ Buscar como una acción en la barra de herramientas de Windows:
 
 Búsqueda como entrada en el lienzo de la aplicación:
 
-![Ejemplo de búsqueda en un lienzo de la aplicación](images/search-canvas-contacts.png)
+![Ejemplo de búsqueda en un lienzo de la aplicación](images/search-app-canvas.png)
 
  
 
-Buscar en un panel de navegación:
+Búsqueda en un panel de navegación en la aplicación Mapas:
 
-![Ejemplo de búsqueda en un menú de navegación](images/search-navmenu.png)
+![Ejemplo de búsqueda en un menú de navegación](images/search-icon-expanded-maps.png)
 
  
 

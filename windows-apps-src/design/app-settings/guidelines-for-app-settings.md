@@ -4,16 +4,16 @@ title: Directrices para la configuración de una aplicación
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 08/07/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a9b27094a5861151b907dc7787828068122e4a54
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 418c33952c4be6be08683b5e396f423f771bb997
+ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88502389"
 ---
 # <a name="guidelines-for-app-settings"></a>Directrices para la configuración de una aplicación
 
@@ -46,13 +46,13 @@ La manera en la que los usuarios acceden a la página de configuración de la ap
 
 Para el diseño del panel de navegación, el elemento Configuración de la aplicación debe ser el último de la lista de navegación de opciones y estar anclado en la parte inferior:
 
-![punto de entrada de la configuración de la aplicación para el panel de navegación](images/appsettings-entrypoint-navpane.png)
+![punto de entrada de la configuración de la aplicación para el panel de navegación](images/appsettings-nav-settings.png)
 
 **Barra de la aplicación**
 
-Si usas la [barra de aplicaciones](../controls-and-patterns/app-bars.md) o la barra de herramientas, coloca el punto de entrada de configuración como el último elemento en el menú de desbordamiento "Más". Si es importante tener una mayor detectabilidad del punto de entrada de configuración de la aplicación, colócalo directamente en una barra de la aplicación y no en el desbordamiento.
+Si usa una [barra de aplicaciones](../controls-and-patterns/app-bars.md) o barra de herramientas, coloque el punto de entrada de configuración como uno de los últimos elementos en el menú de desbordamiento "Más". Si es importante tener una mayor detectabilidad del punto de entrada de configuración de la aplicación, colócalo directamente en una barra de la aplicación y no en el desbordamiento.
 
-![punto de entrada de la configuración de la aplicación para la barra de la aplicación](images/appsettings-entrypoint-tabs.png)
+![punto de entrada de la configuración de la aplicación para la barra de la aplicación](../controls-and-patterns/images/appbar_rs2_overflow_icons.png)
 
 **Hub**
 
@@ -69,15 +69,10 @@ En lugar de esconder el punto de entrada de la configuración de la aplicación 
 ## <a name="layout"></a>Diseño
 
 
-Tanto en las plataformas móviles como de escritorio, la ventana de configuración de la aplicación debe abrirse en pantalla completa y llenar toda la ventana. Si el menú de configuración de la aplicación tiene hasta cuatro grupos de nivel superior, estos grupos deben estar en cascada descendente en una columna.
-
-Escritorio:
+La ventana de configuración de la aplicación debe abrirse en pantalla completa y llenar toda la ventana. Si el menú de configuración de la aplicación tiene hasta cuatro grupos de nivel superior, estos grupos deben estar en cascada descendente en una columna.
 
 ![diseño de la página de configuración de la aplicación en un equipo de escritorio](images/appsettings-layout-navpane-desktop.png)
 
-Móvil:
-
-![diseño de la página de configuración de la aplicación en un teléfono](images/appsettings-layout-navpane-mobile.png)
 
 ## <a name="color-mode-settings"></a>Configuración de "Modo de color"
 

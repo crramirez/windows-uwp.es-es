@@ -1,6 +1,6 @@
 ---
 title: Recursos para el desarrollo con Python en Windows
-description: Lista de recursos para el desarrollo con Python en Windows.
+description: Obtenga información sobre los recursos útiles para el desarrollo con Python en Windows, como cursos en línea y desarrollo web.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, microsoft, windows 10, tutoriales, cursos en línea, blogs, eventos
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 24bda3a9eb76dac2e584540161e551ce6bb7ff4e
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 136da1d69a61cb90c9c80cab5d7ecd822d64820d
+ms.sourcegitcommit: b6138f9565252460ace6fa0acdc2a902e591681a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75683668"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88243247"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Recursos para el desarrollo con Python en Windows
 

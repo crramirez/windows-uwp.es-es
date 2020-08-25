@@ -4,19 +4,19 @@ title: Zoom semántico
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 08/07/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 35613366078531a9e342df0b4314d049fde844e9
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3398be1569143e253b2b9cb9ee25133ee7fe5fd9
+ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88502349"
 ---
 # <a name="semantic-zoom"></a>Zoom semántico
 
@@ -59,17 +59,17 @@ No confundas el zoom semántico con el zoom óptico. Aunque comparten la misma i
 </tr>
 </table>
 
+**XAML Controls Gallery**
+
+En la sección SemanticZoom de la galería de controles se muestra una experiencia de navegación que permite a los usuarios acercar y alejar rápidamente secciones agrupadas de tipos de control. 
+
+![ejemplo de zoom semántico usado en la Galería de controles de XAMl](images/semanticzoom-gallery.gif)
+
 **Aplicación Fotos**
 
 Este es un zoom semántico usado en la aplicación Fotos. Las fotos se agrupan por mes. Al seleccionar un encabezado de mes en la vista de cuadrícula predeterminada, se aleja a la vista de lista de mes para obtener una navegación más rápida.
 
 ![Un zoom semántico en la aplicación Fotos](images/control-examples/semantic-zoom-photos.png)
-
-**Libreta de direcciones**
-
-Una libreta de direcciones es otro ejemplo de un conjunto de datos por el que puede ser mucho más fácil navegar con un zoom semántico. Puedes usar la vista alejada para saltar rápidamente a la letra que quieras (imagen de la izquierda), mientras que la vista ampliada muestra los elementos de datos individuales (imagen de la derecha).
-
-![Ejemplo de zoom semántico en una lista de contactos](images/semanticzoom-win10.png)
 
 ## <a name="create-a-semantic-zoom"></a>Creación de un zoom semántico
 
@@ -82,7 +82,7 @@ Los 3 elementos que necesitas para un zoom semántico son:
 
 Antes de usar el zoom semántico, debes saber cómo usar una vista de lista con los datos agrupados. Para más información, consulte [Vista de lista y vista de cuadrícula](listview-and-gridview.md). 
 
-> **Nota**&nbsp;Para definir la vista ampliada y la vista reducida del control SemanticZoom, puedes usar cualquiera de los dos controles que implementan la interfaz &nbsp;[ISemanticZoomInformation](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ISemanticZoomInformation). El marco XAML proporciona tres controles que implementan esta interfaz: ListView, GridView y Hub.
+> **Nota**&nbsp;Para definir la vista ampliada y la vista reducida del control SemanticZoom, puedes usar cualquiera de los dos controles que implementan la interfaz &nbsp;[ISemanticZoomInformation](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ISemanticZoomInformation). El marco XAML proporciona 3 controles que implementan esta interfaz: ListView, GridView y Hub.
  
  Este XAML muestra la estructura del control SemanticZoom. Puedes asignar otros controles a las propiedades ZoomedOutView y ZoomedInView.
  
@@ -165,7 +165,7 @@ Este código XAML define un control ListView para la vista alejada. Este ejemplo
 
 La vista alejada y la vista ampliada deberían estar sincronizadas, de modo que si un usuario sincroniza un grupo en la vista alejada, los detalles de ese mismo grupo se muestran en la vista ampliada. Puedes usar una clase [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) o agregar código para sincronizar las vistas.
 
-Todos los controles que vínculos a la misma clase CollectionViewSource tendrán siempre el mismo elemento actual. Si las dos vistas usan el mismo CollectionViewSource que su origen de datos, la clase CollectionViewSource sincroniza las vistas automáticamente. Para más información, consulta [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource).
+Todos los controles que vínculos a la misma clase CollectionViewSource tendrán siempre el mismo elemento actual. Si las dos vistas usan el mismo CollectionViewSource que su origen de datos, la clase CollectionViewSource sincroniza las vistas automáticamente. Para obtener más información, consulta [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource).
 
 Si no usas CollectionViewSource para sincronizar las vistas, deberías controlar el evento [ViewChangeStarted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.viewchangestarted) y sincronizar los elementos del controlador de eventos, tal como se muestra aquí.
 
