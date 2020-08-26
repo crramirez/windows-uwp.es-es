@@ -6,14 +6,14 @@ label: Send a local toast notification from desktop C# apps
 template: detail.hbs
 ms.date: 01/23/2018
 ms.topic: article
-keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar un sistema local, un puente de escritorio, msix, paquetes dispersos, C#, C Sharp, notificación del sistema, WPF
+keywords: 'Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar un sistema local, un puente de escritorio, msix, paquetes dispersos, C#, C Sharp, notificación del sistema, WPF, enviar notificaciones del sistema WPF, enviar notificaciones del sistema, notificación del sistema #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f1eef86045f44fa75363b54fa58e3e7089d64e0
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 8a339a4f2dca52a9bc04b1bba92f149a3e627878
+ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997932"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846755"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
 

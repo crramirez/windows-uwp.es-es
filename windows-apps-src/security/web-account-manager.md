@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: e5b835c837ca750f2ccc1ebad9ec119047b02ce7
-ms.sourcegitcommit: 97d2ef33253af210ad2d4f036b4820056ff03f62
+ms.openlocfilehash: 7cf4cfa4b87842cd7113b36220cdfdff69449a3a
+ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85441632"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846795"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
@@ -20,7 +20,7 @@ En este artículo se describe cómo usar **[AccountsSettingsPane](https://docs.m
 > [!NOTE]
 > Para obtener un ejemplo de código completo, vea el [ejemplo de WebAccountManagement en github](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement).
 
-## <a name="get-set-up"></a>Prepárate
+## <a name="get-set-up"></a>Configuración
 
 En primer lugar, crea una aplicación vacía en Visual Studio. 
 
@@ -158,7 +158,7 @@ Ejecuta el código anterior y obtendrás un panel con un aspecto similar al sigu
 
 ![Panel de configuración de la cuenta](images/tb-2.png)
 
-### <a name="request-a-token"></a>Solicitud de un token
+### <a name="request-a-token"></a>Solicitar un token
 
 Una vez que se muestra la opción cuenta de Microsoft en el **AccountsSettingsPane**, es necesario controlar lo que ocurre cuando el usuario la selecciona. Registramos nuestro método GetMsaToken para que se activara cuando el usuario eligiera iniciar sesión con su cuenta de Microsoft, por lo que obtendremos el token allí. 
 
@@ -174,7 +174,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 En este ejemplo, pasamos la cadena "WL. Basic" al parámetro de _ámbito_ . El ámbito representa el tipo de información que estás solicitando desde el servicio proveedor en un usuario específico. Ciertos ámbitos proporcionan acceso únicamente a la información básica de un usuario, como el nombre y la dirección de correo electrónico, mientras que otros ámbitos pueden conceder acceso a información confidencial, como las fotos del usuario o la bandeja de entrada de correo electrónico. Por lo general, la aplicación debe usar el ámbito menos permisivo necesario para lograr su función. Los proveedores de servicios proporcionarán documentación sobre qué ámbitos son necesarios para obtener los tokens para su uso con sus servicios. 
 
-* Para ámbitos de Office 365 y Outlook.com, consulta [Authenticate Office 365 and Outlook.com APIs using the v2.0 authentication endpoint](https://developer.microsoft.com/graph/docs/concepts/auth_overview) (Autenticar las API de Office 365 y Outlook.com mediante el punto de conexión de autenticación v2.0). 
+* Para los ámbitos Microsoft 365 y Outlook.com, consulte [uso de la API de REST de Outlook (versión 2,0)](/previous-versions/office/office-365-api/api/version-2.0/use-outlook-rest-api). 
 * Para los ámbitos de OneDrive, consulte [autenticación e inicio de sesión de onedrive](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes). 
 
 > [!TIP]

@@ -1,82 +1,82 @@
 ---
-Description: Con el fin de agregar y administrar los usuarios de cuentas, primero debe asociar su cuenta de centro de partners con Azure Active Directory de su organización.
-title: Asociar Azure Active Directory con su cuenta de centro de partners
+Description: Para agregar y administrar usuarios de cuenta, primero debe asociar la cuenta del centro de Partners con el Azure Active Directory de su organización.
+title: Asociar Azure Active Directory con su cuenta del centro de Partners
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, azure ad, inquilino de azure, inquilino de aad, inquilino de azure ad, administración de inquilinos, inquilinos
+keywords: Windows 10, UWP, Azure ad, inquilino de Azure, inquilino de AAD, inquilino de Azure ad, administración de inquilinos, inquilinos
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d830fb3a984faecd93519b4e682ade59077d2d6
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: fa26f4ea3fa91f43dea117ff5ffd2fec87514544
+ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787225"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846765"
 ---
-# <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Asociar Azure Active Directory con su cuenta de centro de partners
+# <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Asociar Azure Active Directory con su cuenta del centro de Partners
 
-Para [agregar y administrar los usuarios con cuentas](add-users-groups-and-azure-ad-applications.md), primero debe asociar su cuenta de centro de partners con Azure Active Directory de su organización. 
+Para [Agregar y administrar usuarios de cuenta](add-users-groups-and-azure-ad-applications.md), primero debe asociar la cuenta del centro de Partners con el Azure Active Directory de su organización. 
 
-[Centro de partners](https://partner.microsoft.com/dashboard) aprovecha Azure AD para la administración y acceso a la cuenta de varios usuarios. Si la organización ya usa Office 365 u otros servicios empresariales de Microsoft, ya tienes Azure AD. En caso contrario, puede crear un nuevo inquilino de Azure AD desde dentro del centro de partners, sin cargo adicional.
+El [centro de Partners](https://partner.microsoft.com/dashboard) aprovecha Azure ad para el acceso y la administración de cuentas de varios usuarios. Si su organización ya usa Microsoft 365 u otros servicios empresariales de Microsoft, ya tiene Azure AD. De lo contrario, puede crear un nuevo inquilino de Azure AD desde el centro de Partners sin cargo adicional.
 
 > [!TIP]
-> Este tema es específico para el programa para desarrolladores de aplicaciones de Windows en [centro de partners](https://partner.microsoft.com/dashboard), pero la asociación de un inquilino y administración de usuarios funcionan de forma similar para las cuentas en el programa de aplicación de escritorio de Windows (consulte [Windows Programa de aplicación de escritorio](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) para obtener más información) y en el programa para desarrolladores de Hardware de Windows (donde las referencias a la **Manager** rol también se aplica a las cuentas de Hardware con el **administrador**  función; vea [panel administración](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) para obtener más información).
+> Este tema es específico del programa para desarrolladores de aplicaciones de Windows en el [centro de Partners](https://partner.microsoft.com/dashboard), pero la Asociación de un inquilino y la administración de usuarios funciona de forma similar para las cuentas en el programa de aplicación de escritorio de Windows (consulte programa de aplicación de [escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) para obtener más información) y en el programa para desarrolladores de hardware de [Dashboard Administration](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) Windows (donde las referencias **al rol de** **Administrador** también se aplica
 
-Un único inquilino de Azure AD puede asociarse a varias cuentas del centro de partners. Solo debe tener un inquilino de Azure AD asociado a su cuenta de centro de partners para agregar varios usuarios de la cuenta, pero también tiene la opción para agregar a varios inquilinos de Azure AD a una sola cuenta de centro de partners. Cualquier usuario con el **Manager** rol en la cuenta del centro de partners tendrá la opción de agregar y quitar los inquilinos de Azure AD de la cuenta.
-
-> [!IMPORTANT]
-> Después de asociar su cuenta de centro de partners con su inquilino de Azure AD, con el fin de agregar y administrar los usuarios de la cuenta de ese inquilino, necesitará iniciar sesión en el centro de asociados como un usuario en el mismo inquilino que tiene el **Manager** rol.
-
-
-## <a name="associate-your-partner-center-account-with-your-organizations-existing-azure-ad-tenant"></a>Asociar inquilino de Azure AD existente de su organización en su cuenta del centro de partners
-
-Si su organización ya usa Azure AD, siga estos pasos para vincular la cuenta del centro de partners.
-
-1.  Desde [centro de partners](https://partner.microsoft.com/dashboard), seleccione el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, seleccione **opciones del desarrollador**. En el **configuración** menú, seleccione **inquilinos**.
-2.  Seleccione **asociar Azure AD con su cuenta de centro de partners**.
-3.  Escribe tus credenciales de Azure AD del inquilino que quieras asociar.
-4.  Revisa el nombre de la organización y de dominio de tu inquilino de Azure AD. Para completar la asociación, selecciona **Confirmar**.
-5.  Si la asociación se realiza correctamente, a continuación, estará listo para agregar y administrar los usuarios de cuentas en el **usuarios** sección en el centro de partners.
+Un único inquilino de Azure AD puede asociarse a varias cuentas del centro de Partners. Solo necesita tener un inquilino de Azure AD asociado a la cuenta del centro de partners para agregar varios usuarios de la cuenta, pero también tiene la opción de agregar varios inquilinos de Azure AD a una sola cuenta de centro de Partners. Cualquier usuario con el rol **Administrador** en la cuenta del Centro de partners tendrá la opción de agregar y quitar inquilinos de Azure AD de la cuenta.
 
 > [!IMPORTANT]
-> Para crear nuevos usuarios, o realizar otros cambios en Azure AD, tendrás que iniciar sesión en ese inquilino de Azure AD con una cuenta que tiene [permiso de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para dicho inquilino. Sin embargo, no es necesario el permiso de administrador global con el fin de asociar al inquilino o para agregar los usuarios que ya existen en ese inquilino a su cuenta de centro de partners.
+> Después de asociar la cuenta del centro de Partners con el inquilino de Azure AD, para agregar y administrar usuarios de cuenta en ese inquilino, deberá iniciar sesión en el centro de partners como usuario del mismo inquilino que tenga el rol de **Administrador** .
 
 
-## <a name="create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account"></a>Crear un nuevo de Azure AD para asociar su cuenta de centro de partners
+## <a name="associate-your-partner-center-account-with-your-organizations-existing-azure-ad-tenant"></a>Asociar la cuenta del centro de Partners con el inquilino de Azure AD existente de su organización
 
-Si necesita configurar un nuevo anuncio de Azure para vincular con la cuenta del centro de partners, siga estos pasos.
+Si su organización ya usa Azure AD, siga estos pasos para vincular la cuenta del centro de Partners.
 
-1.  Desde [centro de partners](https://partner.microsoft.com/dashboard), seleccione el icono de engranaje (cerca de la esquina superior derecha del panel) y, a continuación, seleccione **opciones del desarrollador**. En el **configuración** menú, seleccione **inquilinos**.
-2.  Selecciona **Crear nuevo Azure AD**.
-3.  Escribe la información de directorio para la nueva Azure AD:
-    - **Nombre de dominio**: El nombre único que vamos a usar para el dominio de Azure AD, junto con ". onmicrosoft.com". Por ejemplo, si escribes "ejemplo", el dominio de Azure AD sería "ejemplo.onmicrosoft.com".
-    - **Póngase en contacto con el correo electrónico**: Una dirección de correo electrónico donde podemos enviarte sobre su cuenta si es necesario.
-    - **Información de cuenta de usuario de administrador global**: El nombre, último nombre, nombre de usuario y contraseña que desea usar para la nueva cuenta de administrador global.
+1.  En el [centro de Partners](https://partner.microsoft.com/dashboard), seleccione el icono de engranaje (cerca de la esquina superior derecha del panel) y, después, seleccione Configuración del **desarrollador**. En el menú **configuración** , seleccione **inquilinos**.
+2.  Seleccione **asociar Azure ad con su cuenta del centro de Partners**.
+3.  Escriba sus credenciales de Azure AD para el inquilino que desea asociar.
+4.  Revise el nombre de dominio y de la organización para el inquilino de Azure AD. Para completar la asociación, seleccione **Confirmar**.
+5.  Si la asociación se realiza correctamente, estará listo para agregar y administrar los usuarios de la cuenta en la sección **Usuarios** del Centro de partners.
+
+> [!IMPORTANT]
+> Con el fin de crear nuevos usuarios o realizar otros cambios en el Azure AD, deberá iniciar sesión en ese Azure AD inquilino con una cuenta que tenga [permiso de administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para ese inquilino. Sin embargo, no necesita permisos de administrador global para asociar el inquilino o para agregar usuarios que ya existen en ese inquilino a su cuenta del centro de Partners.
+
+
+## <a name="create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account"></a>Cree una nueva Azure AD de marca para asociarla a su cuenta del centro de Partners
+
+Si necesita configurar una nueva Azure AD para vincularla a su cuenta del centro de Partners, siga estos pasos.
+
+1.  En el [centro de Partners](https://partner.microsoft.com/dashboard), seleccione el icono de engranaje (cerca de la esquina superior derecha del panel) y, después, seleccione Configuración del **desarrollador**. En el menú **configuración** , seleccione **inquilinos**.
+2.  Seleccione **crear nueva Azure ad**.
+3.  Escriba la información del directorio para la nueva instancia de Azure AD:
+    - **Nombre de dominio**: el nombre único que se va a usar para el dominio de Azure ad, junto con ". onmicrosoft.com". Por ejemplo, si escribió "ejemplo", el dominio de AD Azure sería "ejemplo.onmicrosoft.com".
+    - **Dirección de correo electrónico de contacto**: una dirección de correo electrónico para ponernos en contacto con información sobre la cuenta si es necesario.
+    - **Información de la cuenta de usuario del administrador global**: nombre, apellidos, nombre de usuario y contraseña que desea utilizar para la nueva cuenta de administrador global.
 4.  Haz clic en **Crear** para confirmar la nueva información del dominio y de la cuenta.
-5.  Inicia sesión con tu nuevo nombre de usuario y contraseña de administrador global de Azure AD para empezar a [agregar y administrar usuarios de la cuenta adicionales](add-users-groups-and-azure-ad-applications.md).
+5.  Inicie sesión con su nuevo Azure AD nombre de usuario y contraseña de administrador global para empezar a [Agregar y administrar usuarios de cuentas adicionales](add-users-groups-and-azure-ad-applications.md).
 
 
-## <a name="manage-azure-ad-tenant-associations"></a>Administrar las asociaciones de inquilino de Azure AD
+## <a name="manage-azure-ad-tenant-associations"></a>Administrar Azure AD asociaciones de inquilinos
 
-Después de un inquilino de Azure AD que haya asociado con su cuenta de centro de partners, puede agregar nuevos inquilinos o quite los inquilinos existentes desde el **inquilinos** página.
-
-
-### <a name="add-multiple-azure-ad-tenants-to-your-partner-center-account"></a>Agregar a varios inquilinos de Azure AD a su cuenta de centro de partners
-
-Cualquier usuario que tenga el **Manager** rol para una cuenta de centro de partners puede asociar los inquilinos de Azure AD con la cuenta.
-
-Para asociar un nuevo inquilino, selecciona **Asociar otro inquilino de Azure AD** y luego sigue los pasos indicados anteriormente. Ten en cuenta que se te pedirán tus credenciales en el inquilino de Azure AD que quieres asociar.
+Después de asociar un inquilino de Azure AD a la cuenta del centro de Partners, puede agregar nuevos inquilinos o quitar los inquilinos existentes de la página de **inquilinos** .
 
 
-### <a name="remove-an-azure-ad-tenant-from-your-partner-center-account"></a>Eliminar a un inquilino de Azure AD de su cuenta de centro de partners
+### <a name="add-multiple-azure-ad-tenants-to-your-partner-center-account"></a>Adición de varios inquilinos de Azure AD a la cuenta del centro de Partners
 
-Cualquier usuario que tenga el **Manager** rol para una cuenta de centro de partners puede quitar los inquilinos de Azure AD de la cuenta.
+Cualquier usuario que tenga el rol de **Administrador** de una cuenta del centro de Partners puede asociar Azure ad inquilinos con la cuenta.
+
+Para asociar un inquilino nuevo, seleccione **asociar otro inquilino de Azure ad**y, a continuación, siga los pasos indicados anteriormente. Tenga en cuenta que se le pedirán sus credenciales en el Azure AD inquilino que desea asociar.
+
+
+### <a name="remove-an-azure-ad-tenant-from-your-partner-center-account"></a>Quitar un inquilino de Azure AD de la cuenta del centro de Partners
+
+Cualquier usuario que tenga el rol de **Administrador** de una cuenta del centro de Partners puede quitar Azure ad inquilinos de la cuenta.
 
 > [!IMPORTANT]
-> Cuando se quita un inquilino, todos los usuarios que se han agregado a la cuenta del centro de partners de ese inquilino ya no podrá iniciar sesión en la cuenta. 
+> Cuando se elimina un inquilino, todos los usuarios que se agregaron a la cuenta del Centro de partners de ese inquilino ya no podrán iniciar sesión en la cuenta. 
 
-Para quitar un inquilino, busque su nombre en el **inquilinos** página (en **configuración de la cuenta**), a continuación, seleccione **quitar**. Se te pedirá que confirmes que quieres quitar el inquilino. Una vez hecho esto, ningún usuario en ese inquilino podrán iniciar sesión en la cuenta del centro de partners, y se quitarán los permisos que ha configurado para esos usuarios.
+Para quitar un inquilino, busque su nombre en la página de **inquilinos** (en configuración de la **cuenta**) y, luego, seleccione **quitar**. Se le pedirá que confirme que desea eliminar el inquilino. Una vez hecho esto, ningún usuario de ese inquilino podrá iniciar sesión en la cuenta del Centro de partners y se eliminarán los permisos que haya configurado para esos usuarios.
 
 > [!TIP]
-> No se puede quitar a un inquilino si has iniciado sesión en el centro de partners mediante una cuenta en el mismo inquilino. Para quitar un inquilino, debe iniciar sesión en el centro de partners como un **Manager** para otro inquilino que está asociado con la cuenta. Si hay solo un inquilino asociado a la cuenta, dicho inquilino solo puede quitarse después de iniciar sesión con la cuenta de Microsoft que abrió dicha cuenta.
+> No se puede eliminar un inquilino si ha iniciado sesión en el Centro de partners con una cuenta de ese mismo inquilino. Para eliminar un inquilino, debe iniciar sesión en el Centro de partners como **Administrador** de otro inquilino que esté asociado con la cuenta. Si solo hay un inquilino asociado con la cuenta, ese inquilino solo se podrá eliminar después de iniciar sesión con la cuenta Microsoft que abrió la cuenta.
 
 
