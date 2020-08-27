@@ -1,6 +1,6 @@
 ---
-Description: Obtenga información sobre cómo el movimiento fluida usa direccionalidad y gravedad.
 title: 'Direccionalidad y gravedad: animación en aplicaciones de Windows'
+description: Obtenga información sobre el uso de la dirección de movimiento, la dirección de navegación y la gravedad en escenas animadas mediante la visualización de ejemplos.
 label: Directionality and gravity
 template: detail.hbs
 ms.date: 10/02/2018
@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ddcfac5e36500a8fc6dc41c7c86037f5a1483203
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a9b6fbc639ac225e68a6ae1b008537cba6f72ead
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970650"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88943115"
 ---
 # <a name="directionality-and-gravity"></a>Direccionalidad y gravedad
 
@@ -59,7 +59,7 @@ Cuando la navegación hace que un objeto viaje de la escena anterior a la nueva 
 
 Para la navegación hacia atrás, se invierte el movimiento (de B a a). Cuando el usuario se desplaza hacia atrás, se espera que se devuelva al estado anterior lo antes posible. El tiempo es más rápido, más directo y usa la aceleración de deceleración.
 
-Aquí, estos priciples se aplican cuando el elemento seleccionado permanece en pantalla durante la navegación hacia delante y hacia atrás.
+En este caso, estos principios se aplican cuando el elemento seleccionado permanece en pantalla durante la navegación hacia delante y hacia atrás.
 
 ![Ejemplo de interfaz de usuario de movimiento continuo](images/continuous3.gif)
 

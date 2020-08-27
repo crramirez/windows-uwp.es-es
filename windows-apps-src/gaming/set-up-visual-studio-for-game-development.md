@@ -1,17 +1,17 @@
 ---
 title: Herramientas de Visual Studio para la programación de juegos
-description: Aquí encontrarás información general acerca de las herramientas específicas de DirectX disponibles en Visual Studio.
+description: Obtenga información sobre las herramientas para la programación de juegos de DirectX que están disponibles en Visual Studio, incluidos el editor de imágenes, el editor de modelos y el diseñador de sombras.
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, juegos, visual studio, herramientas, directx
+keywords: Windows 10, UWP, juegos, Visual Studio, herramientas, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: f4ff471ae4c45761a1c1dad5819e97c8245746a1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c97c24eca55cf43559b9f518eaf2fbc4656aa374
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368136"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942815"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Herramientas de Visual Studio para la programación de juegos
 
@@ -19,7 +19,7 @@ ms.locfileid: "66368136"
 
 **Resumen**
 
--   [Crear un proyecto de juego DirectX desde una plantilla](user-interface.md)
+-   [Crear un proyecto de juego DirectX con una plantilla](user-interface.md)
 -   Visual Studio tools para programación de juegos DirectX
 
 
@@ -45,7 +45,7 @@ Crea [archivos de personalizaciones de compilación](#build-customizations-for-3
 
 Para obtener más información, consulta [Trabajar con texturas e imágenes](https://docs.microsoft.com/visualstudio/designers/working-with-textures-and-images?view=vs-2015).
 
-> **Tenga en cuenta**  no pretende ser un reemplazo para una aplicación de edición de imágenes de todas las características del Editor de imágenes, pero es adecuado para escenarios de edición y visualización sencilla muchos.
+> **Nota:**    El editor de imágenes no pretende ser un sustituto para una aplicación completa de edición de imágenes de características, pero es adecuado para muchos escenarios sencillos de visualización y edición.
 
  
 
@@ -64,7 +64,7 @@ Esta es la captura de pantalla de un modelo en el editor con iluminación aplica
 
 Para obtener más información, consulta [Trabajar con modelos 3D](https://docs.microsoft.com/visualstudio/designers/working-with-3-d-models?view=vs-2015).
 
-> **Tenga en cuenta**  el Editor de modelos no pretende ser un sustituto para un modelo completo de características Editar aplicación, pero es adecuado para escenarios de edición y visualización sencilla muchos.
+> **Nota:**    El editor de modelos no pretende ser un sustituto para una aplicación completa de edición de modelos de características, pero es adecuado para muchos escenarios sencillos de visualización y edición.
 
  
 
@@ -114,9 +114,9 @@ Para obtener más información, consulta [Trabajar con sombreadores](https://doc
 ## <a name="build-customizations-for-3d-assets"></a>Personalizaciones de compilación para activos 3D
 
 
-Puedes agregar personalizaciones de compilación a tu proyecto para que Visual Studio convierta recursos en formatos utilizables. A continuación, puedes cargar los activos en tu aplicación y usarlos al crear y llenar recursos de DirectX tal como lo harías en cualquier otra aplicación de DirectX.
+Puedes agregar personalizaciones de compilación a tu proyecto para que Visual Studio convierta recursos en formatos utilizables. Después, puede cargar los activos en la aplicación y usarlos creando y rellenando los recursos de DirectX igual que haría en cualquier otra aplicación DirectX.
 
-Para agregar una personalización de compilación, haz clic con el botón secundario en el proyecto del **Explorador de soluciones** y selecciona **Personalizaciones de compilación...** . Puedes agregar los siguientes tipos de personalizaciones de compilación a tu proyecto.
+Para agregar una personalización de compilación, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **compilaciones de compilación..**.. Puede Agregar los siguientes tipos de personalizaciones de compilación al proyecto.
 
 -   La canalización de contenido de imagen toma archivos de imagen como entrada y muestra archivos de DirectDraw Surface (.dds) como salida.
 -   La canalización de contenido de malla toma archivos de malla (como .fbx) y muestra archivos de malla .cmo como salida.

@@ -1,17 +1,17 @@
 ---
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
-description: Tareas iniciales con controles habituales
 title: Tareas iniciales con controles habituales
+description: Vea una lista de vínculos a temas sobre controles de Plataforma universal de Windows comunes (UWP) y sus controles de iOS equivalentes.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 979dabe193fc1ab6ecaa8c31a70ca2364448986e
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 86debeae4a4d8d3e3fb1a4084a3cf1ebef10f9d6
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493290"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88943075"
 ---
 # <a name="getting-started-common-controls"></a>Introducción: controles habituales
 

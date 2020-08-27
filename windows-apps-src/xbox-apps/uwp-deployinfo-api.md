@@ -1,21 +1,21 @@
 ---
-title: Referencia de API de información de implementación de Device Portal
-description: Obtén información sobre cómo acceder a la API de información de implementación mediante programación.
+title: Referencia de API de información de implementación de portal de dispositivos
+description: Obtenga información sobre cómo usar la API de REST del portal de dispositivos Xbox deployinfo para solicitar información de implementación de uno o más paquetes instalados.
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
-ms.openlocfilehash: 7543b41c6ee1d9c07f4540012f84dccc10bb4d76
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5260125625ced6c258a683bcfb9b552e57d07f06
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57638010"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88943005"
 ---
-# <a name="requests-deployment-information-for-one-or-more-installed-packages"></a>Solicita la información de implementación para uno o más paquetes instalados.
+# <a name="requests-deployment-information-for-one-or-more-installed-packages"></a>Solicita información de implementación de uno o más paquetes instalados.
 
 **Solicitud**
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :------
 POST | /ext/app/deployinfo
 <br />
@@ -29,25 +29,25 @@ POST | /ext/app/deployinfo
 
 **Cuerpo de la solicitud**
 
-Una matriz JSON en el siguiente formato:
+Una matriz JSON con el siguiente formato:
 
 * DeployInfo
-  * PackageFullName: Nombre del paquete del que solicitamos información.
-  * OverlayFolder: ruta de acceso opcional a una ruta de acceso de carpeta de superposición si se usa esta característica.
+  * PackageFullName: nombre del paquete al que se solicita información.
+  * OverlayFolder: ruta de acceso opcional a una ruta de acceso de la carpeta de superposición si se usa esta característica.
 
 ###<a name="response"></a>Respuesta
 
 **Cuerpo de respuesta**
 
-Una matriz JSON con el siguiente formato (algunos campos son opcionales):
+Una matriz JSON en el formato siguiente (algunos campos son opcionales):
 
 * DeployInfo
-  * PackageFullName: Nombre del paquete del que recibimos información.
-  * DeployType: El tipo de implementación.
-  * DeployPathOrSpecifiers: Una ruta de implementación para implementaciones sueltas o especificadores instalados para implementaciones empaquetadas.
-  * DeployDrive: La unidad en la que se implementa el paquete para tipos de implementación aplicables.
-  * DeploySizeInBytes: El tamaño en bytes del paquete para los tipos de implementación aplicables.
-  * OverlayFolder: La carpeta de superposición para implementaciones que admiten esta característica.
+  * PackageFullName: nombre del paquete sobre el que se va a recibir información.
+  * DeployType: el tipo de implementación.
+  * DeployPathOrSpecifiers: una ruta de acceso de implementación para implementaciones sueltas o especificadores instalados para implementaciones empaquetadas.
+  * DeployDrive: la unidad en la que se implementa el paquete para los tipos de implementación aplicables.
+  * DeploySizeInBytes: el tamaño en bytes del paquete para los tipos de implementación aplicables.
+  * OverlayFolder: la carpeta de superposición para implementaciones que admiten esta característica.
 
 **Código de estado**
 

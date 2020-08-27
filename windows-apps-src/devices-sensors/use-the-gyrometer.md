@@ -1,17 +1,17 @@
 ---
 ms.assetid: 454953E1-DD8F-44B7-A614-7BAD8C683536
 title: Usar el girómetro
-description: Aprende a usar el girómetro para detectar los cambios en el movimiento del usuario.
+description: Aprenda a usar la API de girómetro para integrar la entrada del girómetro en la aplicación que detecta cambios en el movimiento del usuario, como la velocidad angular y el movimiento de rotación.
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a6ad3b98c559dff8781c96a98a6428a4d1f95a4
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 10d65a6b752c904d7145c3c5e09194dab7c8e0a5
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493130"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88943095"
 ---
 # <a name="use-the-gyrometer"></a>Usar el girómetro
 

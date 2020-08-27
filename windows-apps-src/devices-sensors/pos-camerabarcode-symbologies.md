@@ -1,16 +1,16 @@
 ---
 title: Simbologías del escáner de códigos de barras de la cámara
-description: Simbologías admitidas del escáner de códigos de barras de cámara
+description: Vea códigos de barras de ejemplo para cada una de las simbologías admitidas por el descodificador de código de barras del software que se incluye con Windows 10.
 ms.date: 05/02/2018
 ms.topic: article
 keywords: Windows 10, UWP, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 481d10f2fea076f45124a3c75819dfe6494300bf
-ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
+ms.openlocfilehash: a9618402a6ee76a20ff5f95418ee7280b39db4a2
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85448405"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88943135"
 ---
 # <a name="symbologies"></a>Simbologías
 
