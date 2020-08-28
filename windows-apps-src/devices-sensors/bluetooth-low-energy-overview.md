@@ -1,45 +1,45 @@
 ---
 title: Bluetooth de bajo consumo
-description: En este tema se proporciona una introducción rápida de Bluetooth LE en aplicaciones para UWP.
+description: Obtenga información sobre la especificación de baja energía de Bluetooth (LE) en aplicaciones UWP que define los protocolos para la detección y la comunicación entre dispositivos de eficacia energética.
 ms.date: 03/19/2017
 ms.topic: article
-keywords: windows 10, uwp, bluetooth, bluetooth LE, low energy, gatt, gap, central, peripheral, periférico, client, cliente, server, servidor, watcher, monitor, publisher, editor
+keywords: Windows 10, UWP, Bluetooth, Bluetooth LE, baja energía, GATT, brecha, centro, periférico, cliente, servidor, monitor y publicador
 ms.localizationpriority: medium
-ms.openlocfilehash: 4859dfb540b252f379a0ec3cbfe52985c0776fd9
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 56fcb84f5dddc0c49e48c49787a4278a1f10446f
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684857"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043397"
 ---
 # <a name="bluetooth-low-energy"></a>Bluetooth de bajo consumo
-Bluetooth Low Energy (LE) es una especificación que define los protocolos de detección y comunicación entre dispositivos de consumo eficiente. La detección de dispositivos se hace a través del protocolo de perfil de acceso genérico (GAP). Después de la detección, la comunicación de dispositivo a dispositivo se hace a través del protocolo de atributo genérico (GATT). En este tema se proporciona una introducción rápida de Bluetooth LE en aplicaciones para UWP. Para ver más detalles sobre Bluetooth LE, consulta [Bluetooth Core Specification](https://www.bluetooth.com/specifications/bluetooth-core-specification/) versión 4.0, donde se presentó Bluetooth LE. 
+Bluetooth de baja energía (LE) es una especificación que define los protocolos para la detección y la comunicación entre dispositivos de eficacia energética. La detección de dispositivos se realiza a través del Protocolo de Perfil de acceso genérico (GAP). Después de la detección, la comunicación entre dispositivos se realiza a través del Protocolo de atributo genérico (GATT). En este tema se proporciona información general rápida sobre Bluetooth LE en aplicaciones para UWP. Para ver más detalles acerca de Bluetooth LE, consulte la versión 4,0 de la [especificación básica de Bluetooth](https://www.bluetooth.com/specifications/bluetooth-core-specification/) , donde se presentó Bluetooth le. 
 
 ![Roles de Bluetooth LE](images/gatt-roles.png)
 
 *Los roles GATT y GAP se introdujeron en la versión 1703 de Windows 10*
 
-Los protocolos GATT y GAP se pueden implementar en tu aplicación para UWP usando los siguientes espacios de nombres.
+Los protocolos GATT y GAP se pueden implementar en la aplicación para UWP mediante el uso de los siguientes espacios de nombres.
 - [Windows.Devices.Bluetooth.GenericAttributeProfile](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile)
-- [Windows. Devices. Bluetooth. Advertisement](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
+- [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
 
 ## <a name="central-and-peripheral"></a>Central y periféricos
-Los dos roles principales de detección se llaman Central y Periférico. En general, Windows funciona en modo Central y se conecta a distintos dispositivos periféricos. 
+Los dos roles principales de detección se denominan central y periféricos. En general, Windows funciona en modo central y se conecta a varios dispositivos periféricos. 
 
 ## <a name="attributes"></a>Atributos
-Un acrónimo común que verás en la API de Windows Bluetooth es GATT (atributo genérico). El perfil GATT define la estructura de datos y modos de funcionamiento por los que se comunican dos dispositivos Bluetooth LE. El atributo es el principal bloque base de GATT. Los tipos principales de atributos son servicios, características y descriptores. Estos atributos tienen un rendimiento diferente entre clientes y servidores, por lo que es más útil hablar sobre su interacción en las secciones pertinentes. 
+Un acrónimo común que verá en las API de Windows Bluetooth es atributo genérico (GATT). El perfil GATT define la estructura de los datos y los modos de funcionamiento por los que se comunican dos dispositivos Bluetooth LE. El atributo es el bloque de creación principal de GATT. Los principales tipos de atributos son los servicios, las características y los descriptores. Estos atributos se realizan de manera diferente entre clientes y servidores, por lo que resulta más útil analizar su interacción en las secciones correspondientes. 
 
 ![Jerarquía de atributo típica en un perfil común](images/gatt-service.png)
 
 *El servicio de tarifa cardíaca se expresa en el formulario de API del servidor GATT*
 
 ## <a name="client-and-server"></a>Cliente y servidor
-Después de que se haya establecido una conexión, el dispositivo que contiene los datos (normalmente un sensor pequeño de IoT o dispositivo transportable) se conoce como el servidor. El dispositivo que usa esos datos para realizar una función se conoce como el cliente. Por ejemplo, un PC Windows (cliente) lee los datos de un monitor de frecuencia cardiaca (servidor) para hacer un seguimiento de que un usuario está haciendo ejercicio de manera óptima. Para más información, consulta los temas [Cliente GATT](gatt-client.md) y [Servidor GATT](gatt-server.md).
+Una vez establecida una conexión, el dispositivo que contiene los datos (normalmente un sensor de IoT pequeño o portátil) se conoce como servidor. El dispositivo que usa esos datos para realizar una función se conoce como el cliente. Por ejemplo, un equipo de Windows (cliente) lee los datos de un monitor de frecuencia de corazón (servidor) para hacer un seguimiento de que un usuario está trabajando de forma óptima. Para obtener más información, consulte los temas sobre el [cliente GATT](gatt-client.md) y el [servidor GATT](gatt-server.md) .
 
-## <a name="watchers-and-publishers-beacons"></a>Monitores y editores (balizas)
-Además de los roles Central y Periférico, existen los roles Observador y Emisor. Los emisores se conocen como balizas, no se comunica a través de GATT porque usan el espacio limitado que se proporciona en el paquete de anuncio para la comunicación. Del mismo modo, un observador no tiene que establecer una conexión para recibir datos, busca los anuncios cercanos. Para configurar Windows de modo que observe los anuncios cercanos, usa la clase [BluetoothLEAdvertisementWatcher](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher). Para difundir cargas de baliza, usa la clase [BluetoothLEAdvertisementPublisher](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher). Para más información, consulta el tema [Anuncio](ble-beacon.md).
+## <a name="watchers-and-publishers-beacons"></a>Monitores y publicadores (balizas)
+Además de los roles central y periféricos, hay roles de observador y de difusión. Los emisores se conocen normalmente como balizas, no se comunican a través de GATT porque usan el espacio limitado proporcionado en el paquete de anuncios para la comunicación. Del mismo modo, un observador no tiene que establecer una conexión para recibir datos, sino que busca anuncios cercanos. Para configurar Windows para observar anuncios cercanos, use la clase [BluetoothLEAdvertisementWatcher](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher) . Para difundir las cargas de señalización, utilice la clase [BluetoothLEAdvertisementPublisher](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher) . Para obtener más información, vea el tema sobre el [anuncio](ble-beacon.md) .
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 - [Windows.Devices.Bluetooth.GenericAttributeProfile](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile)
-- [Windows. Devices. Bluetooth. Advertisement](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
+- [Windows.Devices.Bluetooth.Advertisement](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
 - [Especificación de núcleos de Bluetooth](https://www.bluetooth.com/specifications/bluetooth-core-specification)

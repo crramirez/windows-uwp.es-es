@@ -1,6 +1,6 @@
 ---
-Description: Use el control ParallaxView para agregar profundidad y movimiento a la aplicación.
-title: Use Parallax para agregar profundidad y movimiento a la aplicación.
+title: Uso de parallax para agregar profundidad y movimiento a la aplicación
+description: Obtenga información sobre cómo usar el control ParallaxView en una aplicación de UWP para crear un efecto visual en el que los elementos más cercanos al visor se muevan más rápido que los elementos en segundo plano.
 ms.assetid: ''
 label: Parallax View
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d659683d6871d9d48fd17b73c74477e7bd03e258
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5ded09e2de6e3aafa0108d3f7ef66808cb02bfd8
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970500"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043577"
 ---
 # <a name="parallax"></a>Parallax
 
@@ -45,7 +45,7 @@ Parallax es un efecto visual en el que los elementos más cercanos al visor se m
 
 ## <a name="parallax-and-the-fluent-design-system"></a>Parallax y el sistema de diseño fluida
 
- Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Parallax es un componente del sistema de diseño fluida que agrega movimiento, profundidad y escala a la aplicación. Para obtener más información, vea [información general sobre el diseño de Fluent](/windows/apps/fluent-design-system).
+ Fluent Design System te ayuda a crear interfaces de usuario modernas y claras que incorporan luz, profundidad, movimiento, materiales y escala. Parallax es un componente del sistema de diseño fluida que agrega movimiento, profundidad y escala a la aplicación. Para más información, consulta la [Introducción a Fluent Design](/windows/apps/fluent-design-system).
 
 ## <a name="how-it-works-in-a-user-interface"></a>Cómo funciona en una interfaz de usuario
 
@@ -125,4 +125,4 @@ Para obtener una lista completa de las formas de personalizar Parallax, vea la c
 
 - [Clase ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
 - [Fluent Design para UWP](/windows/apps/fluent-design-system)
-- [Ciencia en el sistema: diseño y profundidad fluidas](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
+- [Ciencia en el sistema: Fluent Design y profundidad](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)

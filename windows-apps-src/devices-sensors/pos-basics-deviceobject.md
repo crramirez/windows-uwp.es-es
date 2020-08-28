@@ -1,23 +1,24 @@
 ---
 title: Objetos de dispositivo PointOfService
-description: Obtener información sobre la creación de objetos de dispositivo PointOfService
+description: Obtenga información sobre cómo crear un objeto de dispositivo PointOfService y obtener información sobre el ciclo de vida de objetos de dispositivo en el modelo de aplicación Plataforma universal de Windows (UWP).
 ms.date: 06/19/2018
 ms.topic: article
-keywords: windows 10, uwp, punto de servicio, pos
+keywords: Windows 10, UWP, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: a2fa7e107d890a5be7c8d27af03289b839ec3c09
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 4c9a5008756831eed9819a3b323d167dcc4b2744
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209991"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043407"
 ---
 # <a name="pointofservice-device-objects"></a>Objetos de dispositivo PointOfService
 
 ## <a name="creating-a-device-object"></a>Crear un objeto de dispositivo
-Una vez que has identificado el dispositivo PointOfService que deseas usar, desde una enumeración nueva o un DeviceID almacenado, solo tienes que llamar a [**FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.fromidasync) con el [**DeviceID**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) que has elegido mediante programación o que el usuario ha seleccionado para crear un nuevo objeto de dispositivo de Punto de servicio.
 
-Esta muestra intenta crear un nuevo objeto BarcodeScanner con FromIdAsync mediante un DeviceID. Si hay un error al crear el objeto, se escribe un mensaje de depuración.
+Una vez que haya identificado el dispositivo PointOfService que quiere usar, ya sea desde una nueva enumeración o una DeviceID almacenada, solo tiene que llamar a [**FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.fromidasync) con el[**DeviceID**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) que haya elegido mediante programación, o bien el usuario ha seleccionado crear un nuevo objeto de dispositivo de punto de servicio.
+
+En este ejemplo se intenta crear un nuevo objeto BarcodeScanner con FromIdAsync mediante DeviceID. Si se produce un error al crear el objeto, se escribe un mensaje de depuración.
 
 ```Csharp
 
@@ -34,17 +35,18 @@ Esta muestra intenta crear un nuevo objeto BarcodeScanner con FromIdAsync median
     
 ```
 
-Una vez que tengas un objeto de dispositivo, puedes tener acceso a los métodos del dispositivo, a las propiedades y a los eventos.  
+Una vez que tenga un objeto de dispositivo, podrá tener acceso a los métodos, propiedades y eventos del dispositivo.  
 
-## <a name="device-object-lifecycle"></a>Ciclo de vida de objetos de dispositivos
-Antes de Windows 8, las aplicaciones tenían un ciclo de vida simple. Las aplicaciones Win32 y. NET se están ejecutando o no y los periféricos PointOfService se solían reclamar para el ciclo de vida de aplicación completo. Cuando un usuario las minimiza o sale de ellas, continúan ejecutándose. Esto funcionó bien hasta que los dispositivos portátiles y la administración de la energía empezaron a cobrar cada vez más importancia.
+## <a name="device-object-lifecycle"></a>Ciclo de vida de objetos de dispositivo
 
-Windows 8 introdujo un nuevo modelo de aplicación con las aplicaciones para UWP. En un nivel alto, se agregó un nuevo estado, el estado suspendido. Una aplicación para UWP pasa a estar suspendida poco después de que el usuario la minimice o cambie a otra aplicación. Esto significa que se detienen los subprocesos de la aplicación, la aplicación permanece en memoria a menos que el sistema operativo necesite reclamar recursos y los objetos de dispositivo que representan periféricos de PointOfService se cierran automáticamente para permitir que otras aplicaciones obtengan acceso a los periféricos. Cuando el usuario vuelve a la aplicación, se puede restaurar rápidamente en un estado de ejecución y restaurar las conexiones de periféricos de PointOfService siempre que sigan estando disponibles durante la reanudación.
+Antes de Windows 8, las aplicaciones tenían un ciclo de vida simple. Las aplicaciones Win32 y .NET están en ejecución o no se están ejecutando y, por lo general, los periféricos PointOfService se han reclamado para el ciclo de vida completo de la aplicación. Cuando un usuario las minimiza o sale de ellas, continúan ejecutándose. Esto funcionó bien hasta que los dispositivos portátiles y la administración de la energía empezaron a cobrar cada vez más importancia.
 
-Puede detectar cuándo se cierra un objeto por cualquier motivo con un \<DeviceObject\>. Después, el controlador de eventos Closed anota el identificador de dispositivo para volver a establecer la conexión en el futuro.   Como alternativa, puedes desear controlar esto en una notificación de suspensión de aplicaciones para guardar el id. de dispositivo para volver a establecer las conexiones del dispositivo en la notificación de la reanudación de la aplicación.  Asegúrese de no doblar los controladores de eventos y las acciones duplicadas del objeto de dispositivo en ambos \<DeviceObject\>. Cerrado y suspender aplicación.
+Windows 8 presentó un nuevo modelo de aplicación con aplicaciones de UWP. En un nivel alto, se agregó un nuevo estado, el estado suspendido. Una aplicación para UWP se suspende poco después de que el usuario la minimice o cambie a otra aplicación. Esto significa que los subprocesos de la aplicación se detienen, la aplicación se deja en memoria a menos que el sistema operativo necesite reclamar recursos y que los objetos de dispositivo que representan periféricos de PointOfService se cierren automáticamente para permitir el acceso de otras aplicaciones a los periféricos. Cuando el usuario vuelve a la aplicación, se puede restaurar rápidamente a un estado de ejecución y restaurar las conexiones de periféricos de PointOfService siempre que estén disponibles en el currículo.
+
+Puede detectar cuándo se cierra un objeto por cualquier motivo con \<DeviceObject\> . Después, el controlador de eventos Closed anota el identificador de dispositivo para volver a establecer la conexión en el futuro.   Como alternativa, puede que desee controlar esto en una notificación de suspensión de la aplicación para guardar el identificador del dispositivo para volver a establecer las conexiones del dispositivo en la notificación de reanudación de la aplicación.  Asegúrese de no doblar los controladores de eventos y las acciones duplicadas del objeto de dispositivo en ambos \<DeviceObject\> . Cerrado y suspender aplicación.
 
 > [!TIP]
-> Consulta los temas siguientes para obtener más información acerca del ciclo de vida de la aplicación para la Plataforma universal de Windows (UWP) de Windows 10:
+> Consulte los temas siguientes para obtener más información sobre el ciclo de vida de las aplicaciones de Windows 10 Plataforma universal de Windows (UWP):
 > - [Ciclo de vida de la aplicación de Windows 10 Plataforma universal de Windows (UWP)](../launch-resume/app-lifecycle.md)
 > - [Controlar la suspensión de la aplicación](../launch-resume/suspend-an-app.md)
 > - [Controlar la reanudación de aplicaciones](../launch-resume/resume-an-app.md)

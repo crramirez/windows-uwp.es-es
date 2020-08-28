@@ -1,49 +1,49 @@
 ---
-Description: Puede enviar aplicaciones a la Microsoft Store en más de 100 idiomas.
-title: Idiomas admitidos
+title: Idiomas compatibles
+description: Vea una tabla de los idiomas y los códigos de idioma correspondientes que se admiten para enviar aplicaciones a la Microsoft Store.
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 716a6e86e03feb6edcbc5cde5aa37d0282df6aca
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
-ms.translationtype: HT
+ms.openlocfilehash: a3b3ada3415e6f1abc98dc3c351f6db791adc984
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244291"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043437"
 ---
-# <a name="supported-languages"></a>Idiomas admitidos
+# <a name="supported-languages"></a>Idiomas compatibles
 
 
-Puede enviar aplicaciones a la Microsoft Store en más de 100 idiomas.
+Puede enviar aplicaciones al Microsoft Store en más de 100 idiomas.
 
-Para más información sobre cómo configurar los idiomas en sus aplicaciones, consulte [globalización y localización](../design/globalizing/globalizing-portal.md) y [entender idiomas de perfil de usuario y aplicación manifiesto idiomas](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
+Para obtener más información sobre la configuración de idiomas en las aplicaciones, consulte [globalización y localización](../design/globalizing/globalizing-portal.md) , y descripción de los idiomas de los [perfiles de usuario y los lenguajes del manifiesto de aplicación](../design/globalizing/manage-language-and-region.md). También disponemos de un [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) que puede ayudarte a escribir aplicaciones que admiten varios idiomas.
 
-## <a name="supported-languages"></a>Idiomas admitidos
+## <a name="supported-languages"></a>Idiomas compatibles
 
 
-Estos son los idiomas que admite la Microsoft Store. La aplicación debe admitir al menos uno de estos idiomas. 
+Estos son los idiomas que admite el Microsoft Store. La aplicación debe admitir al menos uno de estos idiomas. 
 
-Los códigos de idioma que no se incluyen aquí no se admiten el Store. Se recomienda que no incluya los paquetes destinados a los códigos de idioma que no aparecen a continuación; Estos paquetes no se distribuirá a los clientes y pueden provocar retrasos o errores en la certificación.
+El almacén no admite los códigos de idioma que no se incluyen aquí. Se recomienda no incluir paquetes destinados a códigos de idioma distintos de los que se enumeran a continuación; Estos paquetes no se distribuirán a los clientes y pueden provocar retrasos o errores en la certificación.
 
-| Nombre de idioma         | Códigos de idiomas admitidos                                                                                                                                                                              |
+| Nombre de idioma         | Códigos de idioma admitidos                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Árabe                | ar, ar-sa, ar-ae, ar-bh, ar-dz, ar-eg, ar-iq, ar-jo, ar-kw, ar-lb, ar-ly, ar-ma, ar-om, ar-qa, ar-sy, ar-tn, ar-ye                                                                                    |
 | Afrikáans             | af, af-za                                                                                                                                                                                             |
-| Albano              | sq, sq-al                                                                                                                                                                                             |
+| Albanés              | sq, sq-al                                                                                                                                                                                             |
 | Amárico               | am, am-et                                                                                                                                                                                             |
 | Armenio              | hy, hy-am                                                                                                                                                                                             |
 | Asamés              | as, as-in                                                                                                                                                                                             |
-| Azerbaiyano           | AZ árabes, árabes-az-az, az-cyrl, az-cyrl-az, az-latn, az-latn-az                                                                                                                                     |
-| Euskera (Euskera)       | eu, eu-es                                                                                                                                                                                             |
+| Azerbaiyano           | AZ-árabe, AZ-árabes-AZ, AZ-Cyrl, AZ-Cyrl-AZ, AZ-latn, AZ-latn-AZ                                                                                                                                     |
+| Vasco (España)       | eu, eu-es                                                                                                                                                                                             |
 | Bielorruso            | be, be-by                                                                                                                                                                                             |
 | Bengalí                | bn, bn-bd, bn-in                                                                                                                                                                                      |
 | Bosnio               | bs, bs-cyrl, bs-cyrl-ba, bs-latn, bs-latn-ba                                                                                                                                                          |
 | Búlgaro             | bg, bg-bg                                                                                                                                                                                             |
 | Catalán               | ca, ca-es, ca-es-valencia                                                                                                                                                                             |
 | Cheroqui              | chr-cher, chr-cher-us, chr-latn                                                                                                                                                                       |
-| Chino (simplificado)  | zh-Hans, zh-cn, zh-hans-cn, zh-sg, zh-hans-sg                                                                                                                                                     |
+| Chino (simplificado)  | ZH-Hans, zh-CN, ZH-Hans-CN, ZH-SG, ZH-Hans-SG                                                                                                                                                     |
 | Chino (tradicional) | zh-Hant, zh-hk, zh-mp, zh-tw, zh-hant-hk, zh-hant-mo, zh-hant-tw                                                                                                                                      |
 | Croata              | hr, hr-hr, hr-ba                                                                                                                                                                                      |
 | Checo                 | cs, cs-cz                                                                                                                                                                                             |
@@ -73,7 +73,7 @@ Los códigos de idioma que no se incluyen aquí no se admiten el Store. Se recom
 | isiZulu               | zu, zu-za                                                                                                                                                                                             |
 | Italiano               | it, it-it, it-ch                                                                                                                                                                                      |
 | Japonés              | ja , ja-jp                                                                                                                                                                                            |
-| Kannada               | kn, kn-in                                                                                                                                                                                             |
+| Canarés               | kn, kn-in                                                                                                                                                                                             |
 | Kazajo                | kk, kk-kz                                                                                                                                                                                             |
 | Khmer                 | km, km-kh                                                                                                                                                                                             |
 | Quiché               | quc-latn, qut-gt, qut-latn                                                                                                                                                                            |
@@ -91,24 +91,24 @@ Los códigos de idioma que no se incluyen aquí no se admiten el Store. Se recom
 | Malayo                 | ms, ms-bn, ms-my                                                                                                                                                                                      |
 | Malayalam             | ml, ml-in                                                                                                                                                                                             |
 | Maltés               | mt, mt-mt                                                                                                                                                                                             |
-| Maorí                 | mi, mi-latn, mi-nz                                                                                                                                                                                    |
-| Marathi               | mr, mr-in                                                                                                                                                                                             |
+| Maori                 | mi, mi-latn, mi-nz                                                                                                                                                                                    |
+| Maratí               | mr, mr-in                                                                                                                                                                                             |
 | Mongol (cirílico)  | mn-cyrl, mn-mong, mn-mn, mn-phag                                                                                                                                                                      |
-| Nepali                | ne, ne-np                                                                                                                                                                                             |
+| Nepalí                | ne, ne-np                                                                                                                                                                                             |
 | Noruego             | nb, nb-no, nn, nn-no, no, no-no                                                                                                                                                                      |
 | Odia                  | or, or-in                                                                                                                                                                                             |
 | Persa               | fa, fa-ir                                                                                                                                                                                             |
 | Polaco                | pl, pl-pl                                                                                                                                                                                             |
 | Portugués (Brasil)   | pt-br                                                                                                                                                                                                 |
 | Portugués (Portugal) | pt, pt-pt                                                                                                                                                                                             |
-| Punyabí               | pa, pa-arab, pa-arab-pk, pa-deva, pa-in                                                                                                                                                               |
+| Punjabi               | pa, pa-arab, pa-arab-pk, pa-deva, pa-in                                                                                                                                                               |
 | Quechua               | quz, quz-bo, quz-ec, quz-pe                                                                                                                                                                           |
 | Rumano              | ro, ro-ro                                                                                                                                                                                             |
 | Ruso               | ru , ru-ru                                                                                                                                                                                            |
 | Gaélico escocés       | gd-gb, gd-latn                                                                                                                                                                                        |
 | Serbio (latino)       | sr-Latn, sr-latn-cs, sr, sr-latn-ba, sr-latn-me, sr-latn-rs                                                                                                                                           |
 | Serbio (cirílico)    | sr-cyrl, sr-cyrl-ba, sr-cyrl-cs, sr-cyrl-me, sr-cyrl-rs                                                                                                                                               |
-| Sesotho sa leboa      | nso, nso-za                                                                                                                                                                                           |
+| Sotho septentrional      | nso, nso-za                                                                                                                                                                                           |
 | Setsuana              | tn, tn-bw, tn-za                                                                                                                                                                                      |
 | Sindhi                | sd-arab, sd-arab-pk, sd-deva                                                                                                                                                                          |
 | Cingalés               | si, si-lk                                                                                                                                                                                             |
@@ -118,7 +118,7 @@ Los códigos de idioma que no se incluyen aquí no se admiten el Store. Se recom
 | Sueco               | sv, sv-se, sv-fi                                                                                                                                                                                      |
 | Tayiko (cirílico)      | tg-arab, tg-cyrl, tg-cyrl-tj, tg-latn                                                                                                                                                                 |
 | Tamil                 | ta, ta-in                                                                                                                                                                                             |
-| Tártaro                 | tt-arab, tt-cyrl, tt-latn, tt-ru                                                                                                                                                                      |
+| Tatar                 | tt-arab, tt-cyrl, tt-latn, tt-ru                                                                                                                                                                      |
 | Telugu                | te, te-in                                                                                                                                                                                             |
 | Tailandés                  | th, th-th                                                                                                                                                                                             |
 | Tigriña              | ti, ti-et                                                                                                                                                                                             |

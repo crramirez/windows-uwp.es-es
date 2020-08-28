@@ -1,44 +1,44 @@
 ---
-Description: Obtenga información sobre cómo usar descartar Universal en las notificaciones del sistema.
-title: Descartar universal
+title: Descartar Universal
+description: Obtenga información sobre cómo usar el descartado universal para descartar una notificación del sistema de un dispositivo y hacer que se descarte la misma notificación en otros dispositivos.
 label: Universal Dismiss
 template: detail.hbs
 ms.date: 12/15/2017
 ms.topic: article
-keywords: windows 10, uwp, notificación del sistema, centro de actividades en la nube, descartar universal, notificación, entre dispositivos, descartar una vez descartar en todas partes
+keywords: Windows 10, UWP, notificación del sistema, centro de actividades en la nube, descarte universal, notificación, dispositivo cruzado, descartar una vez descartadas
 ms.localizationpriority: medium
-ms.openlocfilehash: 0dc87e8856e35d60660c2643b70b820b2857b488
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fff9315b9a5645d8a981ca899c1c37acb04de07c
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57605100"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043457"
 ---
-# <a name="universal-dismiss"></a>Descartar universal
+# <a name="universal-dismiss"></a>Descartar Universal
 
-Descartar universal, con tecnología del Centro de actividades en la nube, significa que, al descartar una notificación de un dispositivo, también se descarta la misma notificación en tus otros dispositivos.
+Descartado universal, con el centro de actividades en la nube, significa que cuando se descarta una notificación de un dispositivo, también se descarta la misma notificación en los demás dispositivos.
 
 > [!IMPORTANT]
-> **Requiere la actualización de aniversario de**: Debe tener como destino el SDK 14393 y se ejecuta la compilación 14393 o posterior para usar descartar Universal.
+> **Requiere actualización de aniversario**: debe tener como destino el SDK 14393 y ejecutar la compilación 14393 o superior para usar el descartado universal.
 
-El ejemplo habitual de este escenario es avisos de calendario... tienes una aplicación de calendario en ambos dispositivos... obtienes un aviso en el teléfono y el escritorio... haces clic en descartar en el escritorio... gracias a Descartar universal, ¡también se descarta el aviso en el teléfono! **Habilitación de descartar Universal solo requiere una línea de código!**
+El ejemplo común de este escenario son los recordatorios de calendario... tiene una aplicación de calendario en ambos dispositivos... recibirá un recordatorio en el teléfono y en el escritorio... Haga clic en descartar en el escritorio... Gracias al descarte universal, el recordatorio del teléfono también se descarta. **La habilitación del descartado universal solo requiere una línea de código.**
 
 <img alt="Diagram of Universal Dismiss" src="images/universal-dismiss.gif" width="406"/>
 
-En este escenario, el hecho de clave es que **la misma aplicación se instala en varios dispositivos**, lo que significa que **cada dispositivo ya está recibiendo notificaciones**. Una aplicación de calendario es el ejemplo icónico, ya que normalmente se instala la misma aplicación de calendario tanto en tu PC con Windows como en tu teléfono, y cada instancia de la aplicación ya te envía recordatorios en cada dispositivo. Al agregar compatibilidad con Descartar universal, esas instancias de los mismos recordatorios se pueden vincular en todos los dispositivos.
+En este escenario, el hecho clave es que **la misma aplicación se instala en varios dispositivos**, lo que significa que **cada dispositivo ya recibe notificaciones**. Una aplicación de calendario es el ejemplo de iconos, ya que normalmente tiene la misma aplicación de calendario instalada en el equipo Windows y en el teléfono, y cada instancia de la aplicación ya le envía recordatorios en cada dispositivo. Al agregar compatibilidad con descartado universal, esas instancias de los mismos recordatorios se pueden vincular entre dispositivos.
 
 
-## <a name="how-to-enable-universal-dismiss"></a>Cómo habilitar Descartar universal
+## <a name="how-to-enable-universal-dismiss"></a>Cómo habilitar el descartado universal
 
-Como desarrollador, es muy fácil habilitar Descartar universal. Solo tienes que proporcionar un id. que nos permita vincular cada notificación en todos los dispositivos, para que cuando el usuario descarte una notificación de un dispositivo, se descarte la notificación vinculada correspondiente desde el otro dispositivo.
+Como desarrollador, la habilitación del descarte universal es muy fácil. Solo tiene que proporcionar un identificador que nos permita vincular cada notificación entre los dispositivos, de modo que cuando el usuario descarte una notificación de un dispositivo, se descartará la notificación vinculada correspondiente del otro dispositivo.
 
-![Diagrama de RemoteId de Descartar universal](images/universal-dismiss-remoteid.jpg)
+![Diagrama RemoteId de descarte universal](images/universal-dismiss-remoteid.jpg)
 
-> **RemoteId**: Un identificador que identifica de forma única una notificación *en todos los dispositivos*.
+> **RemoteId**: un identificador que identifica de forma única una notificación *en todos los dispositivos*.
 
-T solo toma una línea de código para agregar RemoteId, ¡habilitando la compatibilidad para Descartar universal! La manera de generar tu RemoteId depende de ti. Sin embargo, debes asegurarte de que identifica de manera única tu notificación en todos los dispositivos y que se puede generar el mismo identificador desde distintas instancias de la aplicación que se ejecuta en diferentes dispositivos.
+t solo toma una línea de código para agregar RemoteId, lo que habilita la compatibilidad con el descartado universal. No obstante, el modo en que se genera el RemoteId depende de usted, por lo que debe asegurarse de que identifica de forma única la notificación en todos los dispositivos y de que se puede generar el mismo identificador a partir de diferentes instancias de la aplicación que se ejecutan en distintos dispositivos.
 
-Por ejemplo, en mi aplicación de planificador de deberes, genero mi RemoteId diciendo que es del tipo "recordatorio" y, a continuación, incluyo el id. de la cuenta en línea y el identificador en línea del elemento de deberes. Puedo generar de forma coherente el mismo RemoteId exacto, con independencia del dispositivo que envía la notificación, dado que estos id. en línea se comparten entre los dispositivos.
+Por ejemplo, en mi aplicación de agenda de trabajos, geneme mi RemoteId diciendo que es de tipo "recordatorio" y, a continuación, he incluido el identificador de cuenta en línea y el identificador en línea del elemento de deberes. Puedo generar de forma coherente exactamente el mismo RemoteId, independientemente del dispositivo que envíe la notificación, ya que estos identificadores en línea se comparten entre los dispositivos.
 
 ```csharp
 var toast = new ScheduledToastNotification(content.GetXml(), startTime);
@@ -53,16 +53,16 @@ if (ApiInformation.IsPropertyPresent(typeof(ScheduledToastNotification).FullName
 ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
 ```
 
-El siguiente código se ejecuta tanto en mi teléfono como en la aplicación de escritorio, lo que significa que la notificación en ambos dispositivos tendrán el mismo RemoteId.
+El código siguiente se ejecuta en mi aplicación de escritorio y teléfono, lo que significa que la notificación en ambos dispositivos tendrá el mismo RemoteId.
 
-¡Eso es todo lo que tienes que hacer! Cuando el usuario descarte (o haga clic en) una notificación, comprobaremos si tiene un RemoteId y, de ser así, distribuiremos un descarte de ese RemoteId en todos los dispositivos del usuario.
+Eso es todo lo que tiene que hacer. Cuando el usuario descarte (o haga clic en) una notificación, se comprobará si tiene un RemoteId y, en caso afirmativo, se descartará un descartado de ese RemoteId en todos los dispositivos del usuario.
 
-**Problema conocido**: Recuperando el **RemoteId** a través de la `ToastNotificationHistory.GetHistory()` API siempre devolverá una cadena vacía en lugar de **RemoteId** que especificó. No te preocupes, todo es funcional; solo se trata de recuperar el valor que se ha roto.
+**Problema conocido**: la recuperación de **RemoteId** a través de la `ToastNotificationHistory.GetHistory()` API siempre devolverá una cadena vacía en lugar de la **RemoteId** especificada. No se preocupe, todo es funcional, solo recupera el valor que se ha interrumpido.
 
 > [!NOTE]
-> Si el usuario o la empresa deshabilita la [creación de reflejo de notificación](notification-mirroring.md) para tu aplicación (o deshabilita por completo la creación de reflejo de notificación), Descartar universal no funcionará, puesto que no tenemos tus notificaciones en la nube.
+> Si el usuario o la empresa deshabilita la [creación de reflejo](notification-mirroring.md) de la notificación de la aplicación (o deshabilita por completo la creación de reflejo de la notificación), el descartado universal no funcionará, ya que no tenemos las notificaciones en la nube.
 
 
 ## <a name="supported-devices"></a>Dispositivos compatibles
 
-Desde la Actualización de aniversario, Descartar universal se admite en Windows Mobile y Escritorio de Windows. Descartar universal funciona en ambas direcciones, entre PC y PC, PC y teléfono, y teléfono y teléfono.
+Desde la actualización de aniversario, se admite el descartado universal en Windows Mobile y el escritorio de Windows. El descarte universal funciona en ambas direcciones, entre PC PC, PC-Phone y teléfono.

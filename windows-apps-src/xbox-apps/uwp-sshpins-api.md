@@ -1,42 +1,42 @@
 ---
-title: Referencia de API de anclas SSH del Portal de dispositivos
-description: Obtén información sobre cómo quitar todas las anclas SSH de confianza mediante programación.
+title: Referencia de API de SSH PIN del portal de dispositivos
+description: Aprenda a quitar todos los pin de Secure Shell de confianza (SSH) mediante programación con la API de REST de/ext/App/sshpins Xbox Device portal.
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
-ms.openlocfilehash: 2c7dc6fab021c11c98276ee53af161bea25601a9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 307af4cdd4e998832f4a2fe7a8f874615fe10ad7
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57663360"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043537"
 ---
-# <a name="ssh-pins-api-reference"></a>Referencia de API de anclas SSH
-Puedes quitar todas las anclas SSH de confianza de tu kit de desarrollo con esta API de REST.
+# <a name="ssh-pins-api-reference"></a>Referencia de API de PIN de SSH
+Puede quitar todos los pin SSH de confianza de su DevKit mediante esta API de REST.
 
-## <a name="remove-trusted-ssh-pins"></a>Quitar anclas SSH de confianza
+## <a name="remove-trusted-ssh-pins"></a>Quitar PIN SSH de confianza
 
 **Solicitud**
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
-DELETE | /ext/app/sshpins
+Delete | /ext/app/sshpins
 <br />
 **Parámetros de URI**
 
-- Ninguno
+- None
 
 **Encabezados de solicitud**
 
-- Ninguno
+- None
 
 **Cuerpo de la solicitud**   
 
-- Ninguno
+- None
 
 **Respuesta**   
 
-- Ninguno 
+- None 
 
 **Código de estado**
 
@@ -44,7 +44,7 @@ Esta API tiene los siguientes códigos de estado previstos.
 
 Código de estado HTTP      | Descripción
 :------     | :-----
-204 | La solicitud para borrar las anclas fue correcta.
+204 | La solicitud para borrar los PIN se realizó correctamente.
 4XX | Códigos de error
 5XX | Códigos de error
 

@@ -1,24 +1,24 @@
 ---
 ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
-description: Aprende a detectar errores de AdControl en la aplicación.
 title: Tutorial de control de errores en XAML y C#
+description: Siga este tutorial para obtener información sobre cómo detectar y controlar los errores de un control en una aplicación XAML/C#.
 ms.date: 02/18/2020
 ms.topic: article
-keywords: windows 10, uwp, anuncios, publicidad, control de errores, XAML, c#
+keywords: 'Windows 10, UWP, anuncios, publicidad, control de errores, XAML, c #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c856322c4940e5bbb28cb17c6da7fa49d4c3465
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.openlocfilehash: 4526f44c1a38af79886a7404eb932416a4414f77
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507129"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043507"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tutorial de control de errores en XAML y C#
 
 >[!WARNING]
 > A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-En este tutorial se muestra cómo detectar errores relacionados con los anuncios en la aplicación. Este tutorial usa un objeto [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un anuncio de banner, pero los conceptos generales en él también se aplican a anuncios intersticiales y anuncios nativos.
+En este tutorial se muestra cómo detectar errores relacionados con ad en la aplicación. En este tutorial se usa un [control AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un banner, pero los conceptos generales de también se aplican a los anuncios intersticiales y a los anuncios nativos.
 
 En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que contiene un objeto **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md). 
 
@@ -71,11 +71,11 @@ En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que conti
     }
     ```
 
-4.  Cree y ejecute el proyecto. Una vez que se ejecute la aplicación, verás un mensaje similar al siguiente en la ventana **Resultados** de Visual Studio.
+4.  Compile y ejecute el proyecto. Una vez que se ejecute la aplicación, verás un mensaje similar al siguiente en la ventana **Resultados** de Visual Studio.
     ```json
     AdControl error (): MicrosoftAdvertising.Shared.AdException: all ad requests must use the same application ID within a single application (0, d25517cb-12d4-4699-8bdc-52040c712cab) ErrorCode: ClientConfiguration
     ```
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
+* [Ejemplos de publicidad de GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
