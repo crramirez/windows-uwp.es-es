@@ -1,17 +1,17 @@
 ---
 title: Complemento del modo de desarrollo de Xbox
-description: Proporciona información sobre la aplicación Complemento del modo de desarrollo de Xbox.
+description: Obtenga información sobre la aplicación complementaria de modo de desarrollo de Xbox que le permite conectarse de forma remota a una consola de Xbox One y controlarla.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
 ms.localizationpriority: medium
-ms.openlocfilehash: b04272c99d9062be2eaea27aa5b107e6078872f8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 372f9e5e5d7a719025d3b70e2d921101efea9c73
+ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57616830"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970283"
 ---
 # <a name="xbox-dev-mode-companion"></a>Complemento del modo de desarrollo de Xbox
 
@@ -20,7 +20,7 @@ La aplicación Complemento del modo de desarrollo de Xbox te permite conectarte 
 ## <a name="how-to-get-the-app"></a>Cómo obtener la aplicación  
 Descarga la aplicación [Xbox Dev Mode Companion (Preview) (Complemento del modo de desarrollo de Xbox [vista previa])](https://www.microsoft.com/store/p/xbox-dev-mode-companion/9nblggh519cp).
 
-## <a name="how-to-connect"></a>Cómo conectar   
+## <a name="how-to-connect"></a>Cómo conectarse   
 Para conectarse a la consola:
 
 1. Iniciar la aplicación.   

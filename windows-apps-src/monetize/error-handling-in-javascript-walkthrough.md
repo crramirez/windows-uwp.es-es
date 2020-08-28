@@ -1,26 +1,26 @@
 ---
 ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
-description: Aprende a detectar errores de AdControl en la aplicación.
+description: Siga este tutorial para obtener información sobre cómo detectar y controlar los errores de un control en una aplicación de JavaScript y HTML5.
 title: Tutorial de control de errores en JavaScript
 ms.date: 02/18/2020
 ms.topic: article
-keywords: windows 10, uwp, anuncios, ads, publicidad, advertising, control de errores, error handling, javascript
+keywords: Windows 10, UWP, anuncios, publicidad, control de errores, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 918c2d289317b63216f11aecc3ec3c758921c19f
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.openlocfilehash: 6bbd892f47f0191455df3b235bdb5125a45ea4fc
+ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507139"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970253"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>Tutorial de control de errores en JavaScript
 
 >[!WARNING]
 > A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-En este tutorial se muestra cómo detectar errores relacionados con los anuncios en la aplicación JavaScript. Este tutorial usa un objeto [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un anuncio de banner, pero los conceptos generales en él también se aplican a anuncios intersticiales y anuncios nativos.
+En este tutorial se muestra cómo detectar errores relacionados con ad en la aplicación de JavaScript. En este tutorial se usa un [control AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un banner, pero los conceptos generales de también se aplican a los anuncios intersticiales y a los anuncios nativos.
 
-En estos ejemplos se da por hecho que tienes una aplicación JavaScript que contiene un objeto **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md). Para obtener un ejemplo de proyecto completo que muestre cómo agregar anuncios en banner a una aplicación JavaScript o HTML, consulta los [ejemplos de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
+En estos ejemplos se supone que tiene una aplicación de JavaScript que contiene una **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en HTML 5 y JavaScript](adcontrol-in-html-5-and-javascript.md). Para obtener un ejemplo de proyecto completo que muestre cómo agregar anuncios en banner a una aplicación JavaScript o HTML, consulta los [ejemplos de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 
 1.  En el archivo default.html, agrega un valor para el evento **onErrorOccurred** en el que definas la propiedad **data-win-options** en el elemento **div** para el objeto **AdControl**. Encuentra el siguiente código en el archivo default.html.
     ``` HTML
@@ -69,4 +69,4 @@ En estos ejemplos se da por hecho que tienes una aplicación JavaScript que cont
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
+* [Ejemplos de publicidad de GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)

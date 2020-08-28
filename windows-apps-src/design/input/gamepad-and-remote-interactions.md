@@ -1,6 +1,6 @@
 ---
-Description: Optimice la aplicación para la entrada de la consola Xbox y el control remoto.
 title: Interacciones con controlador para juegos y control remoto
+description: Vea instrucciones, recomendaciones y sugerencias sobre cómo optimizar la aplicación para la entrada desde el controlador de juegos de Xbox y el control remoto.
 ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
 label: Gamepad and remote interactions
 template: detail.hbs
@@ -9,12 +9,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fd39acbf6549cddc075f8b63779f06a802bfdbb
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 34bdda207350d980e323b27a7b98e3c0112d06f4
+ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234673"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970183"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>Interacciones con controlador para juegos y control remoto
 
@@ -292,7 +292,7 @@ Cuando se usa [CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Co
 
 Si bien no se pueden apilar los elementos de una `CommandBar` verticalmente, colocarlos contra la dirección del desplazamiento (por ejemplo, a la izquierda o derecha de una lista de desplazamiento vertical, o en la parte superior o inferior de una lista de desplazamiento horizontal) es otra opción que podrías considerar si funciona bien para el diseño de tu interfaz de usuario.
 
-Si tu aplicación tiene una `CommandBar` cuyos elementos deben ser fácilmente accesibles para los usuarios, es aconsejable que consideres colocar estos elementos dentro de una propiedad [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) y los quites de la `CommandBar`. `ContextFlyout`es una propiedad de [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) y es el [menú contextual](../controls-and-patterns/dialogs-and-flyouts/index.md) asociado a ese elemento. En el equipo, al hacer clic con el botón derecho en un elemento con una propiedad `ContextFlyout`, aparecerá el menú contextual correspondiente. En Xbox One, esto ocurrirá al presionar el botón **Menú** mientras el foco está en dicho elemento.
+Si tu aplicación tiene una `CommandBar` cuyos elementos deben ser fácilmente accesibles para los usuarios, es aconsejable que consideres colocar estos elementos dentro de una propiedad [ContextFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextflyout) y los quites de la `CommandBar`. `ContextFlyout` es una propiedad de [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) y es el [menú contextual](../controls-and-patterns/dialogs-and-flyouts/index.md) asociado a ese elemento. En el equipo, al hacer clic con el botón derecho en un elemento con una propiedad `ContextFlyout`, aparecerá el menú contextual correspondiente. En Xbox One, esto ocurrirá al presionar el botón **Menú** mientras el foco está en dicho elemento.
 
 ### <a name="ui-layout-challenges"></a>Desafíos de diseño de la interfaz de usuario
 
@@ -319,7 +319,7 @@ La [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListVi
 
 #### <a name="solutions"></a>Soluciones
 
-**Reorganización de la interfaz de usuario<a name="ui-rearrange"></a>**
+**Reorganización de la interfaz de usuario <a name="ui-rearrange"></a>**
 
 A menos que tu foco inicial se coloque en la parte inferior de la página, los elementos de la interfaz de usuario colocados encima de una lista con desplazamiento larga son por lo general más accesibles que si se encuentran debajo.
 Si este nuevo diseño funciona para los otros dispositivos, cambiar el diseño para todas las familias de dispositivos en lugar de hacer cambios especiales a la interfaz de usuario solo para Xbox One puede ser un enfoque menos costoso.
@@ -327,7 +327,7 @@ Además, colocar los elementos de la interfaz de usuario en contra de la direcci
 
 ![Aplicación inmobiliaria: botones situados encima de la lista con desplazamiento larga](images/designing-for-tv/2d-focus-navigation-and-interaction-ui-rearrange.png)
 
-**Interacción con el foco<a name="engagement"></a>**
+**Interacción con el foco <a name="engagement"></a>**
 
 Cuando se *requiere* la participación, todo la `ListView` se convierte en un objeto de foco único. El usuario podrá saltear el contenido de la lista para ir al siguiente elemento activable. Lee más acerca de los controles que admiten participación y cómo usarlos en [Participación del foco](#focus-engagement).
 
@@ -514,7 +514,7 @@ Cuando `Slider` requiera la participación del foco, el usuario puede llegar al 
 
 Aparte del control [Slider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider), hay otros controles a los cuales conviene solicitar participación, como por ejemplo:
 
-- [ListBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)
+- [Identificación](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)
 - [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [FlipView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView)
@@ -548,14 +548,14 @@ Algunos controles causan la captura del foco con frecuencia suficiente como para
 
 | Control               | Valor predeterminado de participación del foco  |
 |-----------------------|---------------------------|
-| CalendarDatePicker    | Por                        |
-| FlipView              | Off                       |
-| GridView              | Off                       |
-| ListBox               | Off                       |
-| ListView              | Off                       |
-| ScrollViewer          | Off                       |
-| SemanticZoom          | Off                       |
-| Control deslizante                | Por                        |
+| CalendarDatePicker    | Activado                        |
+| FlipView              | Desactivado                       |
+| GridView              | Desactivado                       |
+| ListBox               | Desactivado                       |
+| ListView              | Desactivado                       |
+| ScrollViewer          | Desactivado                       |
+| SemanticZoom          | Desactivado                       |
+| Control deslizante                | Activado                        |
 
 El resto de los controles de Windows producirá cambios de comportamiento o visuales cuando `IsFocusEngagementEnabled="True"` .
 

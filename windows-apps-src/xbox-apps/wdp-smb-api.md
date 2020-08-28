@@ -1,17 +1,17 @@
 ---
 title: Referencia de API de SMB de Device Portal
-description: Obtén información sobre cómo tener acceso a las API de SMB mediante programación.
+description: Aprenda a usar la API de REST del portal de dispositivos de Xbox/ext/SMB/developerfolder para acceder a la carpeta del Desarrollador en la consola Xbox One a través del explorador de archivos.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 1f0eb76e-fe3e-4674-a27e-229beec7e63d
 ms.localizationpriority: medium
-ms.openlocfilehash: a1040ec91af767d9472842b5ba656d347e7782d0
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 80a49d324c27754a2686ba4d954b47e7529df330
+ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244071"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970213"
 ---
 # <a name="developer-folder-api-reference"></a>Referencia de API de carpeta de desarrollador
 
@@ -25,23 +25,23 @@ Puedes obtener acceso a la carpeta de desarrollador mediante la siguiente solici
 * El nombre de usuario para acceder al recurso compartido de archivos.
 * La contraseña para acceder al recurso compartido de archivos.
 
-Método      | URI de la solicitud
+Método      | URI de solicitud
 :------     | :-----
 GET | /ext/smb/developerfolder
 
 **Parámetros de URI**
 
-- Ninguno
+- None
 
 **Encabezados de solicitud**
 
-- Ninguno
+- None
 
 **Cuerpo de la solicitud**
 
-- Ninguno
+- None
 
-**Respuesta**   
+**Ante**   
 Ruta de acceso: la ruta de acceso al recurso compartido de archivos del desarrollador de archivos.   
 Nombre de usuario: nombre de usuario necesario para obtener acceso al recurso compartido de archivos del desarrollador.   
 Contraseña: la contraseña necesaria para obtener acceso al recurso compartido de archivos del desarrollador.   

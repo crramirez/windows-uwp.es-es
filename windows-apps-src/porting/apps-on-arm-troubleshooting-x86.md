@@ -1,54 +1,54 @@
 ---
 title: Solución de problemas de aplicaciones de escritorio x86
-description: Problemas comunes con aplicaciones x86 cuando se ejecutan en ARM y cómo solucionarlos.
+description: Obtenga información acerca de cómo solucionar problemas comunes con una aplicación de escritorio x86 que se ejecuta en ARM64, incluida información acerca de los controladores, las extensiones de Shell y la depuración.
 ms.date: 05/09/2018
 ms.topic: article
-keywords: windows 10 s, siempre conectado, emulación x86 en ARM, solución de problemas
+keywords: Windows 10 s, siempre conectado, emulación x86 en ARM, solución de problemas
 ms.localizationpriority: medium
-ms.openlocfilehash: a71f33438a336aba67afbb30b19987b0e0aef83b
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 4dbb3c485d3f6ba3ba410e2a960162880b6f3660
+ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683938"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970273"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>Solución de problemas de aplicaciones de escritorio x86
 >[!IMPORTANT]
-> El SDK de ARM64 ahora está disponible como parte de Visual Studio 15.8 Preview 1. Te recomendamos que vuelvas a compilar la aplicación para ARM64 para que la aplicación se ejecute a velocidad nativa total. Para obtener más información, consulta entrada de blog [Early preview of Visual Studio support for Windows 10 on ARM development](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) (Vista previa de compatibilidad de Visual Studio para Windows 10 en el desarrollo de ARM).
+> El SDK de ARM64 ahora está disponible como parte de Visual Studio 15,8 Preview 1. Se recomienda volver a compilar la aplicación en ARM64 para que la aplicación se ejecute con una velocidad nativa completa. Para obtener más información, consulte la entrada [de blog sobre la versión preliminar temprana de la compatibilidad de Visual Studio con el desarrollo de Windows 10 en ARM](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) .
 
-Si una aplicación de escritorio x86 no funciona de forma que lo hace en un equipo x86, aquí te ofrecemos algunas indicaciones para ayudarte a solucionar problemas.
+Si una aplicación de escritorio x86 no funciona de la forma que hace en un equipo x86, aquí tiene algunas instrucciones para ayudarle a solucionar problemas.
 
-|Problema|Solución|
+|Incidencia|Solución|
 |-----|--------|
-| La aplicación se basa en un controlador que no está diseñado para ARM. | Volver a compilar el controlador x86 para ARM64. Consulta [Compilar controladores de ARM64 con el WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers). |
-| La aplicación solo está disponible para x64. | Si desarrollas para Microsoft Store, envía una versión ARM de tu aplicación. Consulta [Arquitecturas de paquete de aplicación](/windows/msix/package/device-architecture) para más información. Si eres un desarrollador de Win32, te recomendamos que vuelvas a compilar tu aplicación para ARM64. Para obtener más información, consulta [Early preview of Visual Studio support for Windows 10 on ARM development](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) (Vista previa de compatibilidad de Visual Studio para Windows 10 en el desarrollo de ARM). |
-| La aplicación usa una versión de OpenGL posterior a 1.1 o requiere OpenGL acelerado por hardware. | Usa el modo DirectX de la aplicación, si está disponible. Las aplicaciones x86 que usan DirectX 9, DirectX 10, DirectX 11 y DirectX 12 funcionarán en ARM. Para obtener más información, consulta [Juegos y gráficos DirectX](https://docs.microsoft.com/windows/desktop/directx). |
-| Tu aplicación x86 no funciona como esperabas. | Prueba a usar el Solucionador de problemas de compatibilidad siguiendo las instrucciones del [Solucionador de problemas de compatibilidad de programas en ARM](apps-on-arm-program-compat-troubleshooter.md). Para otros pasos de solución de problemas, consulta el artículo [Solución de problemas de aplicaciones x86 en ARM](apps-on-arm-troubleshooting-x86.md). |
+| La aplicación se basa en un controlador que no está diseñado para ARM. | Vuelva a compilar el controlador x86 en ARM64. Vea [Building ARM64 drivers with the WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers). |
+| La aplicación solo está disponible para x64. | Si desarrolla para Microsoft Store, envíe una versión ARM de la aplicación. Para obtener más información, consulte [arquitecturas de paquetes de aplicaciones](/windows/msix/package/device-architecture). Si es un desarrollador de Win32, se recomienda volver a compilar la aplicación en ARM64. Para obtener más información, consulte [vista previa temprana de la compatibilidad de Visual Studio con Windows 10 en el desarrollo en ARM](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/). |
+| La aplicación usa una versión de OpenGL posterior a 1,1 o requiere OpenGL acelerado por hardware. | Use el modo DirectX de la aplicación, si está disponible. las aplicaciones x86 que usan DirectX 9, DirectX 10, DirectX 11 y DirectX 12 funcionarán en ARM. Para obtener más información, consulte [gráficos y juegos de DirectX](https://docs.microsoft.com/windows/desktop/directx). |
+| La aplicación x86 no funciona según lo esperado. | Pruebe a usar el solucionador de problemas de compatibilidad siguiendo las instrucciones del [solucionador de problemas de compatibilidad de programas en ARM](apps-on-arm-program-compat-troubleshooter.md). Para ver otros pasos para la solución de problemas, consulte el artículo [solución de problemas de aplicaciones x86 en ARM](apps-on-arm-troubleshooting-x86.md) . |
 
 ## <a name="best-practices-for-wow"></a>Prácticas recomendadas para WOW
-Un problema común se produce cuando una aplicación detecta que se ejecuta en WOW y, a continuación, se da por hecho que se encuentra en un sistema x64. Después de hacer esta suposición, la aplicación puede hacer lo siguiente:
+Un problema común se produce cuando una aplicación detecta que se está ejecutando bajo WOW y, a continuación, supone que se encuentra en un sistema x64. Una vez hecho esto, la aplicación puede hacer lo siguiente:
 
-- Intenta instalar la versión x64 de sí misma, que no se admite en ARM.
-- Comprueba otro software en la vista del registro nativo.
-- Supongamos que está disponible un .NET Framework de 64 bits.
+- Intente instalar la versión x64 de sí mismo, que no se admite en ARM.
+- Compruebe si hay otro software en la vista del registro nativo.
+- Suponga que hay disponible una versión de .NET Framework de 64 bits.
 
-Por lo general, una aplicación no debe hacer suposiciones sobre el sistema host cuando tiene la determinación de ejecutarse en WOW. Evita interactuar con componentes nativos del sistema operativo tanto como sea posible.
+Por lo general, una aplicación no debe realizar suposiciones sobre el sistema host cuando se determina que se ejecuta bajo WOW. Evite interactuar tanto como sea posible con componentes nativos del sistema operativo.
 
-Una aplicación puede colocar las claves del registro en la vista del registro nativo o realizar funciones en función de la presencia de WOW. El **IsWow64Process** original solo indica si la aplicación se ejecuta en un equipo x64. Las aplicaciones deben usar ahora [IsWow64Process2](https://docs.microsoft.com/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process2) para determinar si se está ejecutando en un sistema con compatibilidad WOW. 
+Una aplicación puede colocar las claves del registro en la vista del registro nativo o realizar funciones según la presencia de WOW. El **IsWow64Process**  original indica solo si la aplicación se ejecuta en un equipo x64. Ahora, las aplicaciones deben usar [IsWow64Process2](https://docs.microsoft.com/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process2) para determinar si se están ejecutando en un sistema con compatibilidad con wow. 
 
 ## <a name="drivers"></a>Controladores 
-Todos los controladores modo kernel, los controladores [Marco de controlador de modo usuario (UMDF)](https://docs.microsoft.com/windows-hardware/drivers/wdf/overview-of-the-umdf) y los controladores de impresión deben compilarse para que coincidan con la arquitectura del sistema operativo. Si una aplicación x86 tiene un controlador, ese controlador debe compilarse para ARM64. La aplicación x86 puede funcionar bien en modo de emulación, sin embargo, su controlador tendrá que recompilarse para ARM64 y cualquier experiencia de aplicación que dependa del controlador no estará disponible. Para obtener más información sobre la compilación del controlador para ARM64, consulta [Compilar controladores de ARM64 con el WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers).
+Se deben compilar todos los controladores de modo kernel, los controladores de [marco de trabajo de controlador de modo de usuario (UMDF)](https://docs.microsoft.com/windows-hardware/drivers/wdf/overview-of-the-umdf) y los controladores de impresión para que coincidan con la arquitectura del sistema operativo. Si una aplicación x86 tiene un controlador, dicho controlador debe volver a compilarse para ARM64. La aplicación x86 puede ejecutarse correctamente en la emulación. sin embargo, su controlador tendrá que volver a compilarse para ARM64 y cualquier experiencia de aplicación que dependa del controlador no estará disponible. Para obtener más información sobre cómo compilar el controlador para ARM64, consulte [Building ARM64 drivers with the WDK](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers).
 
 ## <a name="shell-extensions"></a>Extensiones de Shell de : 
-Aplicaciones que intentan enlazar componentes de Windows o cargar sus archivos DLL en procesos de Windows tendrán que volver a compilar los archivos DLL para que coincida con la arquitectura del sistema; es decir, ARM64. Normalmente, se usan en los editores de métodos de entrada (IME), las tecnologías de asistencia y las aplicaciones de extensión de Shell (por ejemplo, para mostrar los iconos de almacenamiento en la nube en el explorador o en un menú contextual). Para obtener información sobre cómo volver a compilar las aplicaciones o archivos DLL para ARM64, consulta la entrada de blog [Early preview of Visual Studio support for Windows 10 on ARM development](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) (Vista previa de compatibilidad de Visual Studio para Windows 10 en el desarrollo de ARM). 
+Las aplicaciones que intentan enlazar componentes de Windows o cargar sus archivos dll en procesos de Windows deberán volver a compilar esos archivos DLL para que coincidan con la arquitectura del sistema. es decir, ARM64. Normalmente, se usan en los editores de métodos de entrada (IME), las tecnologías de asistencia y las aplicaciones de extensión de Shell (por ejemplo, para mostrar los iconos de almacenamiento en la nube en el explorador o en un menú contextual). Para obtener información sobre cómo volver a compilar las aplicaciones o los archivos dll en ARM64, consulte la entrada [de blog sobre la versión preliminar temprana de la compatibilidad de Visual Studio con Windows 10 en el desarrollo de ARM](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) . 
 
 ## <a name="debugging"></a>Depuración
-Para investigar el comportamiento de la aplicación con más detalle, consulta [Depuración en ARM](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugging-arm64) para obtener más información sobre herramientas y estrategias para la depuración en ARM.
+Para investigar el comportamiento de la aplicación con más detalle, consulte [depuración en ARM](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugging-arm64) para más información sobre las herramientas y las estrategias de depuración en ARM.
 
-## <a name="virtual-machines"></a>Máquinas virtuales
-La plataforma de hipervisor de Windows no se admite en la plataforma de PC de Qualcomm Snapdragon 835 Mobile. Además, ejecutar máquinas virtuales con Hyper-V no funcionará. Continuamos invirtiendo en estas tecnologías en futuros conjuntos de chips de Qualcomm. 
+## <a name="virtual-machines"></a>Virtual Machines
+La plataforma del hipervisor de Windows no se admite en la plataforma de PC móvil Qualcomm Snapdragon 835. Por lo tanto, la ejecución de máquinas virtuales con Hyper-V no funcionará. Seguimos realizando inversiones en estas tecnologías en los conjuntos de chips de Qualcomm futuros. 
 
 ## <a name="dynamic-code-generation"></a>Generación dinámica de código
 Las aplicaciones de escritorio x86 se emulan en ARM64 por el sistema que genera instrucciones de ARM64 en tiempo de ejecución. Esto significa que, si una aplicación de escritorio x86 impide la generación o modificación dinámica de código en su proceso, no se admite la ejecución de esa aplicación como x86 en ARM64. 
 
-Se trata de una mitigación de seguridad que algunas aplicaciones habilitan en su proceso mediante la API de [SetProcessMitigationPolicy](https://docs.microsoft.com/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setprocessmitigationpolicy) con la marca `ProcessDynamicCodePolicy`. Para ejecutarse correctamente en ARM64 como un proceso x86, esta directiva de mitigación tendrá que estar deshabilitada. 
+Se trata de una mitigación de seguridad que algunas aplicaciones habilitan en su proceso mediante la API de [SetProcessMitigationPolicy](https://docs.microsoft.com/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setprocessmitigationpolicy) con la `ProcessDynamicCodePolicy` marca. Para ejecutarse correctamente en ARM64 como un proceso x86, esta directiva de mitigación tendrá que estar deshabilitada. 

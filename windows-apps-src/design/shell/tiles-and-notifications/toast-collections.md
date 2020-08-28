@@ -1,32 +1,32 @@
 ---
-Description: Obtenga información sobre cómo agrupar notificaciones en el centro de actividades con colecciones.
-title: Colecciones de notificaciones del sistema
+title: Colecciones del sistema
+description: Obtenga información sobre cómo organizar las notificaciones del sistema para la aplicación mediante la creación, actualización o eliminación de las colecciones de notificaciones en el centro de actividades.
 label: Toast Collections
 template: detail.hbs
 ms.date: 05/16/2018
 ms.topic: article
-keywords: windows 10, uwp, notificación, colecciones, colección, agrupar notificaciones, agrupación de notificaciones, agrupar, organizar el centro de actividades, notificación del sistema
+keywords: Windows 10, UWP, notificación, recopilaciones, recopilación, notificaciones de grupo, notificaciones de agrupación, grupo, organizar, centro de actividades, notificación del sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: 19fc1ed49fe5a3ea7d628684226b960ef2bc0732
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: aff6b933e04611013761c10ad7a76824f7347855
+ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684178"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970073"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a>Agrupación de notificaciones del sistema con colecciones
-Usa colecciones para organizar las notificaciones del sistema de la aplicación en el Centro de actividades. Las colecciones ayudan a los usuarios a encontrar con mayor facilidad información en el Centro de actividades y permitir a los desarrolladores administrar mejor sus notificaciones.  Las API siguientes permiten la eliminación, creación y actualización de colecciones de notificaciones.
+Use recopilaciones para organizar las notificaciones del sistema de la aplicación en el centro de actividades. Las colecciones ayudan a los usuarios a encontrar información en el centro de actividades más fácilmente y permiten a los desarrolladores administrar mejor las notificaciones.  Las API siguientes permiten quitar, crear y actualizar colecciones de notificaciones.
 
 > [!IMPORTANT]
-> **Requiere la actualización Creators Update**: debes utilizar SDK 15063 y estar ejecutando la compilación 15063 o superior para usar las colecciones de notificaciones del sistema. Entre las API relacionadas se incluyen [Windows.UI.Notifications.ToastCollection](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastcollection) y [Windows.UI.Notifications.ToastCollectionManager](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastcollectionmanager).
+> **Requiere Creators Update**: debe tener como destino el SDK 15063 y ejecutar la compilación 15063 o superior para usar las recopilaciones del sistema. Entre las API relacionadas se incluyen [Windows. UI. notifications. ToastCollection](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastcollection)y [Windows. UI. notifications. ToastCollectionManager](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastcollectionmanager)
 
-Puedes ver el ejemplo siguiente con una aplicación de mensajería que separa las notificaciones basadas en el grupo de chat; cada título (chat de proyecto Comp Sci 160A, mensajes directos, Lacrosse Team Chat) es una colección independiente.  Ten en cuenta cómo se agrupan de manera diferente las notificaciones como si procedieran de una aplicación independiente, aunque todas las notificaciones provienen de la misma aplicación.  Si buscando una manera más sutil de organizar las notificaciones, consulta [encabezados de notificación del sistema](toast-headers.md).  
-![ejemplo de colección con dos grupos diferentes de notificaciones](images/toast-collection-example.png)
+Puede ver el ejemplo siguiente con una aplicación de mensajería que separa las notificaciones basadas en el grupo de chat. cada título (COMP SCI 160A Project chat, Direct messages, lacrosse Team chat) es una colección independiente.  Observe cómo las notificaciones se agrupan de forma distintiva como si fueran de una aplicación independiente, aunque se trata de todas las notificaciones de la misma aplicación.  Si está buscando una forma más sutil de organizar las notificaciones, consulte encabezados del [sistema](toast-headers.md).  
+![Ejemplo de colección con dos grupos de notificaciones diferentes](images/toast-collection-example.png)
 
-## <a name="creating-collections"></a>Creación de colecciones
-Al crear cada colección, debes proporcionar un nombre para mostrar y un icono, que se muestran en el Centro de actividades como parte del título de la colección, como se muestra en la imagen anterior. Las colecciones también requieren un argumento de inicio para ayudar a la aplicación a navegar a la ubicación correcta dentro de la aplicación cuando el usuario hace clic en el título de la colección.  
+## <a name="creating-collections"></a>Crear colecciones
+Al crear cada colección, es necesario proporcionar un nombre para mostrar y un icono, que se muestran dentro del centro de actividades como parte del título de la colección, como se muestra en la imagen anterior. Las colecciones también requieren un argumento Launch para ayudar a la aplicación a navegar a la ubicación correcta dentro de la aplicación cuando el usuario hace clic en el título de la colección.  
 
-### <a name="create-a-collection"></a>Crear una colección
+### <a name="create-a-collection"></a>Creación de una colección
 
 ``` csharp 
 public const string toastCollectionId = "ToastCollection";
@@ -49,10 +49,10 @@ public async void CreateToastCollection()
 }
 ```
 
-## <a name="sending-notifications-to-a-collection"></a>Enviar notificaciones a una colección
-Trataremos el envío de notificaciones desde tres canalizaciones de notificaciones del sistema diferentes: local, programada y de inserción.  Para cada uno de estos ejemplos crearemos una notificación del sistema de muestra para enviarla con el código que se muestra inmediatamente a continuación y, a continuación nos centraremos en cómo agregar la notificación del sistema a una colección mediante cada canalización.
+## <a name="sending-notifications-to-a-collection"></a>Envío de notificaciones a una colección
+Trataremos el envío de notificaciones de tres canalizaciones del sistema: locales, programadas e inserciones.  En cada uno de estos ejemplos vamos a crear una notificación de ejemplo para enviar con el código que se muestra a continuación, nos centraremos en cómo agregar la notificación del sistema a una colección a través de cada canalización.
 
-Construir la carga de notificación:
+Construya la carga de notificación:
 
 ``` csharp
 public const string toastCollectionId = "MyToastCollection";
@@ -85,7 +85,7 @@ var notifier = await ToastNotificationManager.GetDefault().GetToastNotifierForTo
 notifier.Show(toast);
 ```
 
-### <a name="add-a-scheduled-toast-to-a-collection"></a>Agregar una notificación del sistema programada a una colección
+### <a name="add-a-scheduled-toast-to-a-collection"></a>Agregar un sistema de notificación programado a una recopilación
 
 ``` csharp
 // Create scheduled toast from XML above
@@ -98,17 +98,17 @@ var notifier = await ToastNotificationManager.GetDefault().GetToastNotifierForTo
 notifier.AddToSchedule(scheduledToast);
 ```
 
-### <a name="send-a-push-toast-to-a-collection"></a>Enviar una notificación del sistema de inserción a una colección
-Para notificaciones del sistema de inserción, debes agregar el encabezado X-WNS-CollectionId a los mensajes POST.
+### <a name="send-a-push-toast-to-a-collection"></a>Enviar una notificación de envío a una recopilación
+En el caso de las notificaciones de extracción, debe agregar el encabezado X-WNS-CollectionId al mensaje POST.
 ```csharp
 // Add header to HTTP request
 request.Headers.Add("X-WNS-CollectionId", collectionId); 
 
 ```
 
-## <a name="managing-collections"></a>Gestión de colecciones
-#### <a name="create-the-toast-collection-manager"></a>Crear el administrador de la colección del sistema
-Para el resto de los fragmentos de código de esta sección "Administrar colecciones" vamos a usar el siguiente collectionManager.
+## <a name="managing-collections"></a>Administrar colecciones
+#### <a name="create-the-toast-collection-manager"></a>Crear el administrador de la colección de notificaciones
+En el resto de los fragmentos de código de esta sección "administrar colecciones", usaremos el collectionManager siguiente.
 ```csharp
 ToastCollectionManger collectionManager = ToastNotificationManager.GetDefault().GetToastCollectionManager();
 ```
@@ -119,7 +119,7 @@ ToastCollectionManger collectionManager = ToastNotificationManager.GetDefault().
 IReadOnlyList<ToastCollection> collections = await collectionManager.FindAllToastCollectionsAsync();
 ``` 
 
-#### <a name="get-the-number-of-collections-created"></a>Obtener el número de colecciones creadas
+#### <a name="get-the-number-of-collections-created"></a>Obtiene el número de colecciones creadas
 
 ``` csharp
 int toastCollectionCount = (await collectionManager.FindAllToastCollectionsAsync()).Count;
@@ -132,7 +132,7 @@ await collectionManager.RemoveToastCollectionAsync(MainPage.toastCollectionId);
 ```
 
 #### <a name="update-a-collection"></a>Actualizar una colección
-Para actualizar colecciones, crea una nueva colección con el mismo id. y guarda la nueva instancia de la colección.
+Puede actualizar las colecciones creando una nueva colección con el mismo identificador y guardando la nueva instancia de la colección.
 ``` csharp
 string displayName = "Updated Display Name"; 
 string launchArg = "UpdatedLaunchArgs"; 
@@ -148,11 +148,11 @@ ToastCollection updatedToastCollection = new ToastCollection(MainPage.toastColle
 await collectionManager.SaveToastCollectionAsync(updatedToastCollection);                               
 ```
 ## <a name="managing-toasts-within-a-collection"></a>Administrar notificaciones del sistema dentro de una colección
-#### <a name="group-and-tag-properties"></a>Propiedades de grupos y etiquetas
-Las propiedades de grupos y etiquetas identifican de manera única y conjunta una notificación dentro de una colección.  Grupo (y etiqueta) actúa como clave principal compuesta (más de un identificador) para identificar la notificación. Por ejemplo, si quieres quitar o reemplazar una notificación, tienes que poder especificar *qué notificación* quieres quitar o reemplazar. Para ello, especifica la etiqueta y el grupo. Un ejemplo es una aplicación de mensajería.  El desarrollador podría usar el id. de conversación como el grupo y el id. del mensaje como la etiqueta.
+#### <a name="group-and-tag-properties"></a>Propiedades de grupo y etiqueta
+Las propiedades de grupo y etiqueta juntas identifican de forma única una notificación dentro de una colección.  Group (y tag) sirve como clave principal compuesta (más de un identificador) para identificar la notificación. Por ejemplo, si desea quitar o reemplazar una notificación, tiene que ser capaz de especificar *la notificación* que desea quitar o reemplazar; para ello, especifique la etiqueta y el grupo. Un ejemplo es una aplicación de mensajería.  El desarrollador podría usar el identificador de conversación como grupo y el identificador del mensaje como etiqueta.
 
 #### <a name="remove-a-toast-from-a-collection"></a>Quitar una notificación del sistema de una colección
-Puedes quitar notificaciones del sistema individuales con los id. de etiquetas y grupos, o borrar todas las notificaciones del sistema de una colección.
+Puede quitar notificaciones del sistema individuales mediante los ID. de etiqueta y de grupo, o borrar todas las notificaciones del sistema de una colección.
 ``` csharp
 // Get the history
 var collectionHistory = await ToastNotificationManager.GetDefault().GetHistoryForToastCollectionAsync(MainPage.toastCollectionId);
@@ -161,7 +161,7 @@ var collectionHistory = await ToastNotificationManager.GetDefault().GetHistoryFo
 collectionHistory.Remove(tag, group); 
 ```
 
-#### <a name="clear-all-toasts-within-a-collection"></a>Borrar todas las notificaciones del sistema dentro de una colección
+#### <a name="clear-all-toasts-within-a-collection"></a>Borrar todas las notificaciones del sistema de una colección
 ``` csharp
 // Get the history
 var collectionHistory = await ToastNotificationManager.GetDefault().GetHistoryForToastCollectionAsync(MainPage.toastCollectionId);
@@ -171,23 +171,23 @@ collectionHistory.Clear();
 ```
 
 
-## <a name="collections-in-notifications-visualizer"></a>Colecciones de Notifications Visualizer
-Puedes usar la herramienta [Notifications Visualizer](notifications-visualizer.md) para ayudar a diseñar tus colecciones. Sigue los pasos siguientes:
+## <a name="collections-in-notifications-visualizer"></a>Recopilaciones en el visualizador de notificaciones
+Puede usar la herramienta [visualizador de notificaciones](notifications-visualizer.md) como ayuda para diseñar sus colecciones. Siga estos pasos:
 
-* Haz clic en el icono del engranaje de la esquina inferior derecha. 
-* Selecciona "Colecciones de notificaciones del sistema".
-* Encima de la vista previa de la notificación del sistema, hay un menú desplegable "Colección de notificaciones del sistema". Selecciona Administrar colecciones.
-* Haz clic en "Agregar colección", rellena los datos de la colección y guarda.
-* Puedes agregar más colecciones o hacer clic fuera del cuadro Administrar colecciones para volver a la pantalla principal.
-* Selecciona la colección a la que quieres agregar la notificación del sistema en el menú desplegable "Colección de notificaciones del sistema".
-* Cuando desencadenes la notificación del sistema, se agregará a la colección correspondiente en el Centro de actividades.
+* Haga clic en el icono de engranaje en la esquina inferior derecha. 
+* Seleccione "colecciones del sistema".
+* Encima de la vista previa de la notificación del sistema, hay un menú desplegable "colección de notificaciones". Seleccione administrar recopilaciones.
+* Haga clic en ' agregar colección ', rellene los detalles de la colección y guárdelos.
+* Puede agregar más recopilaciones o hacer clic fuera del cuadro administrar recopilaciones para volver a la pantalla principal.
+* Seleccione la colección a la que desea agregar la notificación del sistema en el menú desplegable "colección de notificaciones".
+* Al activar la notificación del sistema, se agregará a la recopilación correspondiente en el centro de actividades.
 
 
 ## <a name="other-details"></a>Otros detalles
-Las colecciones de notificaciones del sistema que crees también se reflejarán en la configuración de notificaciones del usuario.  Los usuarios pueden alternar la configuración de cada colección individual para activar o desactivar estos subgrupos.  Si las notificaciones estén desactivadas en el nivel superior de la aplicación, todas las notificaciones de las colecciones también se desactivarán.  Además, de manera predeterminada cada colección mostrará 3 notificaciones en el Centro de actividades y el usuario podrá expandirla para mostrar hasta 20 notificaciones.
+Las recopilaciones del sistema que cree también se reflejarán en la configuración de notificaciones del usuario.  Los usuarios pueden alternar la configuración de cada colección individual para activar o desactivar estos subgrupos.  Si las notificaciones están desactivadas en el nivel superior de la aplicación, también se desactivarán todas las notificaciones de recopilación.  Además, cada colección mostrará de forma predeterminada 3 notificaciones en el centro de actividades y el usuario puede expandirlo para mostrar hasta 20 notificaciones.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Contenido del sistema](adaptive-interactive-toasts.md)
+* [Contenido de notificaciones del sistema](adaptive-interactive-toasts.md)
 * [Encabezados del sistema](toast-headers.md)
 * [Biblioteca de notificaciones en GitHub (parte del kit de herramientas de la comunidad de Windows)](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
