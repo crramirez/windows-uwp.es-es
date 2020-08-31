@@ -1,16 +1,16 @@
 ---
 title: Procedimientos recomendados de Xbox
-description: Cómo optimizar la aplicación para Xbox.
+description: Obtenga información sobre cómo optimizar la aplicación Plataforma universal de Windows (UWP) para Xbox One siguiendo estas prácticas recomendadas de desarrollo de Xbox.
 ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ce69549996a5adfb8c5d2d585753cf95ef3fdc3
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 8aaf8759b59c8ccbb5b09ba969675096700ce9e8
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684903"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094462"
 ---
 # <a name="xbox-best-practices"></a>Procedimientos recomendados de Xbox
 
@@ -49,19 +49,19 @@ Los televisores no administran las intensidades extremas de color tan bien como 
 
 Las aplicaciones para UWP se escalan automáticamente para garantizar que los elementos de interfaz de usuario (como los controles y las fuentes) sean legibles en todos los dispositivos. Aquellas aplicaciones que usan XAML se escalan en un 200 %, mientras que las aplicaciones que usan HTML se escalan en un 150 %. Si quieres controlar mejor el aspecto de tu aplicación en Xbox, deshabilita el factor de escala predeterminado y usa las dimensiones en píxeles reales de una HDTV (1920 x 1080). Si quieres obtener información acerca de cómo conseguir que tu aplicación tenga un aspecto genial en Xbox, échale un vistazo a [Cómo desactivar el ajuste de escala](disable-scaling.md) y [Escalado y píxeles efectivos](../design/basics/design-and-ui-intro.md#effective-pixels-and-scaling).
 
-Si quieres hacerte una idea de cómo aplicar estas prácticas a una aplicación para UWP, ¡echa un vistazo a este vídeo!
+Si quiere obtener una visión de estos procedimientos aplicados a una aplicación de UWP, eche un vistazo a este vídeo.
 </br>
 </br>
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Tailoring-your-UWP-app-for-Xbox/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
 
 ## <a name="channel-9"></a>Channel 9
 
-Las siguientes conversaciones que encontrarás en [Channel 9](https://channel9.msdn.com/) te serán de gran ayuda para crear aplicaciones sorprendentes en Xbox:
+Las siguientes conversaciones sobre [Channel 9](https://channel9.msdn.com/) son una excelente fuente de información para compilar aplicaciones increíbles en Xbox:
 
 - [Building Great Universal Windows Platform (UWP) Apps for Xbox](https://channel9.msdn.com/Events/Build/2016/B883) (Crear excelentes aplicaciones para la Plataforma universal de Windows para Xbox)
 - [Adapt Your App for Xbox One and TV](https://channel9.msdn.com/Events/Build/2016/T651-R1) (Adapta tu aplicación para Xbox One y el televisor)
-- [Desarrollo de UWP 1: creación de una interfaz de usuario adaptable](https://channel9.msdn.com/Events/Build/2016/L724-R1)
-- [Web Apps más allá del explorador: las plataformas multiplataforma coinciden entre dispositivos](https://channel9.msdn.com/Events/Build/2016/B888)
+- [UWP Development 1: Building an Adaptive UI (Desarrollo UWP 1: crear una interfaz de usuario adaptable)](https://channel9.msdn.com/Events/Build/2016/L724-R1)
+- [Web Apps Beyond the Browser: Cross-Platform Meets Cross Device (Aplicaciones web más allá del navegador: opción multiplataforma para todos los dispositivos)](https://channel9.msdn.com/Events/Build/2016/B888)
 
 ## <a name="app-dev-on-xbox"></a>Desarrollo de aplicaciones en Xbox
 
@@ -70,7 +70,7 @@ El evento **App dev on Xbox** es un excelente punto de partida para que los desa
 * [Ver las sesiones grabadas](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
 * [Lea las entradas de blog](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [UWP en Xbox One](index.md)
 - [Diseño para Xbox y televisión](../design/devices/designing-for-tv.md)

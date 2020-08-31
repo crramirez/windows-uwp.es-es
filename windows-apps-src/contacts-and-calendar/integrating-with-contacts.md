@@ -4,15 +4,15 @@ MSHAttr: PreferredLib:/library/windows/apps
 title: Conectar la aplicación a acciones en una tarjeta de contacto
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, contactos, tarjeta de contacto, anotación, contacts, contact card, annotation
+keywords: Windows 10, UWP, contactos, tarjeta de contacto, anotación
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.localizationpriority: medium
-ms.openlocfilehash: 8310b7c5b629d8d3a35a05b1124b140ebf35cf17
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 246a74ca008e1b8c89460aabb652accf35c842b1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061871"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154719"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>Conectar la aplicación a acciones en una tarjeta de contacto
 
@@ -181,13 +181,13 @@ Igual que la tarjeta de contacto, cada pestaña recuerda la aplicación que el u
 
 ## <a name="perform-operations-when-users-select-your-app-in-a-contact-card"></a>Realizar operaciones cuando los usuarios seleccionan tu aplicación en una tarjeta de contacto
 
-Invalida el método [Application.OnActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) en el archivo **App.cs** y navega por los usuarios a una página de la aplicación. La [muestra de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration) muestra una manera de hacerlo.
+Invalida el método [Application.OnActivated](/uwp/api/windows.ui.xaml.application.onactivated) en el archivo **App.cs** y navega por los usuarios a una página de la aplicación. La [muestra de integración de la tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration) muestra una manera de hacerlo.
 
-En el archivo de código subyacente de la página, invalida el método [Page.OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto). La tarjeta de contacto pasa este método, el nombre de la operación y el identificador del usuario.
+En el archivo de código subyacente de la página, invalida el método [Page.OnNavigatedTo](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto). La tarjeta de contacto pasa este método, el nombre de la operación y el identificador del usuario.
 
-Para iniciar una llamada de audio o vídeo, consulta la [muestra de VoIP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). Encontrarás la API completa en el espacio de nombres [WIndows.ApplicationModel.Calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls).
+Para iniciar una llamada de audio o vídeo, consulta la [muestra de VoIP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). Encontrarás la API completa en el espacio de nombres [WIndows.ApplicationModel.Calls](/uwp/api/windows.applicationmodel.calls).
 
-Para facilitar la mensajería, consulta el espacio de nombres [Windows.ApplicationModel.Chat](https://docs.microsoft.com/uwp/api/windows.applicationmodel.chat).
+Para facilitar la mensajería, consulta el espacio de nombres [Windows.ApplicationModel.Chat](/uwp/api/windows.applicationmodel.chat).
 
 También puedes iniciar otra aplicación. Eso es lo que hace este código.
 

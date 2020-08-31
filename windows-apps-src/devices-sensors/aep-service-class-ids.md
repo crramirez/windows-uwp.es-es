@@ -6,22 +6,22 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0af0e8b17578c2ef3cd3fb0a466446b06f8e4a00
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: 025db9ae6ed3b7ab2c532ddc140fd5279db58777
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854741"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168619"
 ---
 # <a name="aep-service-class-ids"></a>Identificadores de clase de servicio AEP
 
 Los servicios de extremo de asociación (AEP) proporcionan un contrato de programación de los servicios que admite un dispositivo a través de un protocolo determinado. Algunos de estos servicios han establecido identificadores que deben usarse al hacer referencia a ellos. Estos contratos se identifican con la propiedad **System.Devices.AepService.ServiceClassId**. En este tema se muestran varios identificadores de clases de servicios AEP conocidos. El identificador de clase de servicio AEP también se aplica a los protocolos con identificadores de clase personalizada.
 
-Los desarrolladores de aplicaciones deben usar filtros de sintaxis de consulta avanzada (AQS) basados en los identificadores de clases para limitar sus consultas a los servicios AEP que planeen usar. Esto limitará los resultados de la consulta a los servicios relevantes y aumentará considerablemente el rendimiento, la vida útil de la batería y la calidad del servicio para el dispositivo. Por ejemplo, una aplicación puede usar estos identificadores de clases de servicio para usar un dispositivo como una sincronización de Miracast o como representador de medios digitales DLNA (DMR). Para obtener más información sobre la interacción de los dispositivos y servicios entre sí, consulta [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind).
+Los desarrolladores de aplicaciones deben usar filtros de sintaxis de consulta avanzada (AQS) basados en los identificadores de clases para limitar sus consultas a los servicios AEP que planeen usar. Esto limitará los resultados de la consulta a los servicios relevantes y aumentará considerablemente el rendimiento, la vida útil de la batería y la calidad del servicio para el dispositivo. Por ejemplo, una aplicación puede usar estos identificadores de clases de servicio para usar un dispositivo como una sincronización de Miracast o como representador de medios digitales DLNA (DMR). Para obtener más información sobre la interacción de los dispositivos y servicios entre sí, consulta [**DeviceInformationKind**](/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind).
 
 > **API importantes**
 >
-> - [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
+> - [**Windows.Devices.Enumeration**](/uwp/api/Windows.Devices.Enumeration)
 
 ## <a name="bluetooth-and-bluetooth-le-services"></a>Servicios Bluetooth y Bluetooth LE
 
@@ -110,7 +110,7 @@ En general, todos los servicios WSD tienen aplicado su nombre con hash en un GUI
 
 ## <a name="aqs-sample"></a>Ejemplo de AQS
 
-Esta AQS filtrará todos los objetos **AssociationEndpointService** UPnP compatibles con DIAL. En este caso, [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) se establece en **AsssociationEndpointService**.
+Esta AQS filtrará todos los objetos **AssociationEndpointService** UPnP compatibles con DIAL. En este caso, [**DeviceInformationKind**](/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) se establece en **AsssociationEndpointService**.
 
 ``` syntax
 System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND

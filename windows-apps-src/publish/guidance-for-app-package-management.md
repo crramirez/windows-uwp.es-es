@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4615503c41df6cef891ab8e77024d9951c489b38
-ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
+ms.openlocfilehash: 5ecd8cc96196c31615eac032183956de3bee9e4b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84945964"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171059"
 ---
 # <a name="guidance-for-app-package-management"></a>Orientación para administrar paquetes de la aplicación
 
@@ -52,7 +52,7 @@ Después de hacer que la aplicación no esté disponible, la verá en el centro 
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Quitar paquetes de una familia de dispositivos anteriormente compatibles
 
-Si quita todos los paquetes de una determinada [familia de dispositivos](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) que la aplicación admitía anteriormente, se le pedirá que confirme que es su intención antes de guardar los cambios en la página **paquetes** .
+Si quita todos los paquetes de una determinada [familia de dispositivos](/uwp/extension-sdks/device-families-overview) que la aplicación admitía anteriormente, se le pedirá que confirme que es su intención antes de guardar los cambios en la página **paquetes** .
 
 Al publicar un envío que quita todos los paquetes que podrían ejecutarse en una familia de dispositivos que la aplicación admitía previamente, los nuevos clientes no podrán adquirir la aplicación en esa familia de dispositivos. Siempre puedes publicar otra actualización más adelante para proporcionar paquetes para esa familia de dispositivos de nuevo.
 

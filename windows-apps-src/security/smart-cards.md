@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: ff17facbb22e4e336b302415b0b64d0dffda93e0
-ms.sourcegitcommit: 68051d2adcf3facc036c9f4c76d82bb4d342a75f
+ms.openlocfilehash: 5c792cde951b2bf01585256f51f67a545d96510d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67498885"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170839"
 ---
 # <a name="smart-cards"></a>Tarjetas inteligentes
 
@@ -20,7 +20,7 @@ ms.locfileid: "67498885"
 
 En este tema se explica la manera en que las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar tarjetas inteligentes para conectar a los usuarios para proteger los servicios de red, incluido cómo obtener acceso a los lectores de tarjetas inteligentes físicas, crear tarjetas inteligentes virtuales, comunicarse con tarjetas inteligentes, autenticar usuarios, restablecer los PIN de usuario y quitar o desconectar tarjetas inteligentes. 
 
-## <a name="configure-the-app-manifest"></a>Configurar el manifiesto de la aplicación
+## <a name="configure-the-app-manifest"></a>Configuración del manifiesto de la aplicación
 
 
 Para que la aplicación pueda autenticar los usuarios mediante tarjetas inteligentes o tarjetas inteligentes virtuales, debes establecer la funcionalidad **Certificados de usuario compartidos** en el archivo Package.appxmanifest.
@@ -28,7 +28,7 @@ Para que la aplicación pueda autenticar los usuarios mediante tarjetas intelige
 ## <a name="access-connected-card-readers-and-smart-cards"></a>Acceder a lectores de tarjetas conectados y tarjetas inteligentes
 
 
-Para consultar lectores y tarjetas inteligentes conectadas deberás pasar el identificador del dispositivo (especificado en [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation)) al método [**SmartCardReader.FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardreader.fromidasync). Para acceder a las tarjetas inteligentes conectadas al dispositivo lector devuelto, llama a [**SmartCardReader.FindAllCardsAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardreader.findallcardsasync).
+Para consultar lectores y tarjetas inteligentes conectadas deberás pasar el identificador del dispositivo (especificado en [**DeviceInformation**](/uwp/api/Windows.Devices.Enumeration.DeviceInformation)) al método [**SmartCardReader.FromIdAsync**](/uwp/api/windows.devices.smartcards.smartcardreader.fromidasync). Para acceder a las tarjetas inteligentes conectadas al dispositivo lector devuelto, llama a [**SmartCardReader.FindAllCardsAsync**](/uwp/api/windows.devices.smartcards.smartcardreader.findallcardsasync).
 
 ```cs
 string selector = SmartCardReader.GetDeviceSelector();
@@ -48,7 +48,7 @@ foreach (DeviceInformation device in devices)
 }
 ```
 
-También deberás habilitar la aplicación para que busque eventos [**CardAdded**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardreader.cardadded) mediante una función que determine el comportamiento de la aplicación cuando se inserte una tarjeta.
+También deberás habilitar la aplicación para que busque eventos [**CardAdded**](/uwp/api/windows.devices.smartcards.smartcardreader.cardadded) mediante una función que determine el comportamiento de la aplicación cuando se inserte una tarjeta.
 
 ```cs
 private void reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
@@ -57,16 +57,16 @@ private void reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
 }
 ```
 
-Después, puedes pasar cada objeto [**SmartCard**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCard) devuelto a [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) para acceder a los métodos que permiten que tu aplicación acceda a su configuración y la personalice.
+Después, puedes pasar cada objeto [**SmartCard**](/uwp/api/Windows.Devices.SmartCards.SmartCard) devuelto a [**SmartCardProvisioning**](/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) para acceder a los métodos que permiten que tu aplicación acceda a su configuración y la personalice.
 
 ## <a name="create-a-virtual-smart-card"></a>Crear una tarjeta inteligente virtual
 
 
-Para crear una tarjeta inteligente virtual usando [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning), tu aplicación primero debe proporcionar un nombre descriptivo, una clave de administración y una [**SmartCardPinPolicy**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardPinPolicy). Por lo general, el nombre descriptivo es algo que se proporciona a la aplicación, pero esta debe proporcionar también una clave de administración y generar una instancia de la **SmartCardPinPolicy** actual antes de pasar los tres valores a [**RequestVirtualSmartCardCreationAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync).
+Para crear una tarjeta inteligente virtual usando [**SmartCardProvisioning**](/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning), tu aplicación primero debe proporcionar un nombre descriptivo, una clave de administración y una [**SmartCardPinPolicy**](/uwp/api/Windows.Devices.SmartCards.SmartCardPinPolicy). Por lo general, el nombre descriptivo es algo que se proporciona a la aplicación, pero esta debe proporcionar también una clave de administración y generar una instancia de la **SmartCardPinPolicy** actual antes de pasar los tres valores a [**RequestVirtualSmartCardCreationAsync**](/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync).
 
-1.  Crea una nueva instancia de una clase [**SmartCardPinPolicy**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardPinPolicy).
-2.  Para generar el valor de clave de administración, llama a [**CryptographicBuffer.GenerateRandom**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.cryptographicbuffer.generaterandom) mediante el valor de clave de administración proporcionado por el servicio o por la herramienta de administración.
-3.  Pasa estos valores junto con la cadena *FriendlyNameText* a [**RequestVirtualSmartCardCreationAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync).
+1.  Crea una nueva instancia de una clase [**SmartCardPinPolicy**](/uwp/api/Windows.Devices.SmartCards.SmartCardPinPolicy).
+2.  Para generar el valor de clave de administración, llama a [**CryptographicBuffer.GenerateRandom**](/uwp/api/windows.security.cryptography.cryptographicbuffer.generaterandom) mediante el valor de clave de administración proporcionado por el servicio o por la herramienta de administración.
+3.  Pasa estos valores junto con la cadena *FriendlyNameText* a [**RequestVirtualSmartCardCreationAsync**](/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync).
 
 ```cs
 SmartCardPinPolicy pinPolicy = new SmartCardPinPolicy();
@@ -81,10 +81,10 @@ SmartCardProvisioning provisioning = await
           pinPolicy);
 ```
 
-Después de que el método [**RequestVirtualSmartCardCreationAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync) haya devuelto el objeto [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) asociado, la tarjeta inteligente virtual está aprovisionada y lista para usar.
+Después de que el método [**RequestVirtualSmartCardCreationAsync**](/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcardcreationasync) haya devuelto el objeto [**SmartCardProvisioning**](/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) asociado, la tarjeta inteligente virtual está aprovisionada y lista para usar.
 
 >[!NOTE]
->Para crear una tarjeta inteligente virtual mediante una aplicación para UWP, el usuario que ejecuta la aplicación debe ser miembro del grupo Administradores. Si el usuario no es miembro del grupo Administradores, se producirá un error en la creación de una tarjeta inteligente virtual.
+>Para crear una tarjeta inteligente virtual mediante una aplicación de UWP, el usuario que ejecuta la aplicación debe ser miembro del grupo administradores. Si el usuario no es miembro del grupo administradores, se producirá un error en la creación de la tarjeta inteligente virtual.
 
 ## <a name="handle-authentication-challenges"></a>Administrar los desafíos de autenticación
 
@@ -118,11 +118,11 @@ Verás que hacemos referencia a este código en el resto del tema; en él revisa
 
 Ahora que tenemos definida la lógica de los desafíos de autenticación, podemos comunicarnos con el lector para acceder a la tarjeta inteligente, o bien, acceder a una tarjeta inteligente virtual para la autenticación.
 
-1.  Para comenzar el desafío, llama a [**GetChallengeContextAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.getchallengecontextasync) desde el objeto [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) asociado con la tarjeta inteligente. Esto generará una instancia de [**SmartCardChallengeContext**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardChallengeContext), que contiene el valor de [**Desafío**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardchallengecontext.challenge) de la tarjeta.
+1.  Para comenzar el desafío, llama a [**GetChallengeContextAsync**](/uwp/api/windows.devices.smartcards.smartcardprovisioning.getchallengecontextasync) desde el objeto [**SmartCardProvisioning**](/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) asociado con la tarjeta inteligente. Esto generará una instancia de [**SmartCardChallengeContext**](/uwp/api/Windows.Devices.SmartCards.SmartCardChallengeContext), que contiene el valor de [**Desafío**](/uwp/api/windows.devices.smartcards.smartcardchallengecontext.challenge) de la tarjeta.
 
 2.  A continuación, pasa el valor del desafío de la tarjeta y la clave de administración proporcionada por el servicio o por la herramienta de administración al **ChallengeResponseAlgorithm** que hemos definido en el ejemplo anterior.
 
-3.  [**VerifyResponseAsync** ](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardchallengecontext.verifyresponseasync) devolverá **true** si la autenticación se realiza correctamente.
+3.  [**VerifyResponseAsync**](/uwp/api/windows.devices.smartcards.smartcardchallengecontext.verifyresponseasync) devolverá **true** si la autenticación es correcta.
 
 ```cs
 bool verifyResult = false;
@@ -146,8 +146,8 @@ using (SmartCardChallengeContext context =
 
 Para cambiar el PIN asociado a una tarjeta inteligente:
 
-1.  Accede a la tarjeta y genera el objeto [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) asociado.
-2.  Llama a [**RequestPinChangeAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestpinchangeasync) para mostrar al usuario una interfaz de usuario para que complete esta operación.
+1.  Accede a la tarjeta y genera el objeto [**SmartCardProvisioning**](/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) asociado.
+2.  Llama a [**RequestPinChangeAsync**](/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestpinchangeasync) para mostrar al usuario una interfaz de usuario para que complete esta operación.
 3.  Si el PIN se cambió correctamente, la llamada devolverá **true**.
 
 ```cs
@@ -159,10 +159,10 @@ bool result = await provisioning.RequestPinChangeAsync();
 
 Solicitar el restablecimiento de un PIN:
 
-1.  Llama a [**RequestPinResetAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestpinresetasync) para iniciar la operación. Esta llamada incluye un método [**SmartCardPinResetHandler**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardpinresethandler) que representa la tarjeta inteligente y la solicitud de restablecimiento del PIN.
-2.  [**SmartCardPinResetHandler** ](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardpinresethandler) proporciona información que nuestros **ChallengeResponseAlgorithm**, ajustados en un [ **SmartCardPinResetDeferral** ](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardPinResetDeferral) llamar, que utiliza para comparar el valor de desafío de la tarjeta y la clave de administración proporcionada por la herramienta de administración o de servicio para autenticar la solicitud.
+1.  Llama a [**RequestPinResetAsync**](/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestpinresetasync) para iniciar la operación. Esta llamada incluye un método [**SmartCardPinResetHandler**](/uwp/api/windows.devices.smartcards.smartcardpinresethandler) que representa la tarjeta inteligente y la solicitud de restablecimiento del PIN.
+2.  [**SmartCardPinResetHandler**](/uwp/api/windows.devices.smartcards.smartcardpinresethandler) proporciona información que nuestro elemento **ChallengeResponseAlgorithm**, encapsulado en una llamada a [**SmartCardPinResetDeferral**](/uwp/api/Windows.Devices.SmartCards.SmartCardPinResetDeferral) usa para comparar el valor del desafío de la tarjeta con la clave de administración proporcionada por el servicio o por la herramienta de administración con el fin de autenticar la solicitud.
 
-3.  Si el desafío es correcto, la llamada a [**RequestPinResetAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestpinresetasync) finaliza y devuelve **true** si el PIN se restableció correctamente.
+3.  Si el desafío es correcto, la llamada a [**RequestPinResetAsync**](/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestpinresetasync) finaliza y devuelve **true** si el PIN se restableció correctamente.
 
 ```cs
 SmartCardProvisioning provisioning =
@@ -193,7 +193,7 @@ bool result = await provisioning.RequestPinResetAsync(
 ## <a name="remove-a-smart-card-or-virtual-smart-card"></a>Quitar una tarjeta inteligente o una tarjeta inteligente virtual
 
 
-Cuando se quita una tarjeta inteligente física, se activa un evento [**CardRemoved**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardreader.cardremoved) cuando la tarjeta se elimina.
+Cuando se quita una tarjeta inteligente física, se activa un evento [**CardRemoved**](/uwp/api/windows.devices.smartcards.smartcardreader.cardremoved) cuando la tarjeta se elimina.
 
 Asocia la activación de este evento con el lector de tarjetas usando el método que define el comportamiento de tu aplicación al quitar la tarjeta o el lector como un controlador de eventos. Este comportamiento puede ser tan simple como proporcionar una notificación al usuario cuando se retira la tarjeta.
 
@@ -202,7 +202,7 @@ reader = card.Reader;
 reader.CardRemoved += HandleCardRemoved;
 ```
 
-La retirada de una tarjeta inteligente virtual se controla mediante programación; para ello, se recupera primero la tarjeta y, después, se llama a [**RequestVirtualSmartCardDeletionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcarddeletionasync) desde el objeto [**SmartCardProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) devuelto.
+La retirada de una tarjeta inteligente virtual se controla mediante programación; para ello, se recupera primero la tarjeta y, después, se llama a [**RequestVirtualSmartCardDeletionAsync**](/uwp/api/windows.devices.smartcards.smartcardprovisioning.requestvirtualsmartcarddeletionasync) desde el objeto [**SmartCardProvisioning**](/uwp/api/Windows.Devices.SmartCards.SmartCardProvisioning) devuelto.
 
 ```cs
 bool result = await SmartCardProvisioning

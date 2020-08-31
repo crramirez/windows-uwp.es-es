@@ -1,27 +1,27 @@
 ---
 title: Windows Hello
-description: En este artículo se describe la nueva tecnología Windows Hello que se incluirá como parte del sistema operativo Windows 10 y se explica cómo los desarrolladores pueden implementarla para proteger sus servicios back-end y aplicaciones para la Plataforma universal de Windows (UWP). En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10.
+description: En este artículo se describe la nueva tecnología de Windows Hello que se envía como parte del sistema operativo Windows 10 y se describe cómo los desarrolladores pueden implementar esta tecnología para proteger sus aplicaciones Plataforma universal de Windows (UWP) y los servicios back-end. En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10.
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 06699d01dad5aec107fbecf8450bd10fa51f9230
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 152254e5b4c0bfb8aec1e88a8d370863df88fe85
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259837"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170889"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
 En este artículo se describe la nueva tecnología de Windows Hello que se incluye como parte del sistema operativo Windows 10 y se describe cómo los desarrolladores pueden implementar esta tecnología para proteger sus aplicaciones Plataforma universal de Windows (UWP) y los servicios back-end. En él se resaltan las funcionalidades específicas de estas tecnologías para ayudar a mitigar las amenazas que surgen del uso de credenciales convencionales y se proporcionan instrucciones sobre el diseño y la implementación de estas tecnologías como parte de una implementación de Windows 10.
 
-Ten en cuenta que este artículo se centra en el desarrollo de aplicaciones. Para información sobre los detalles de implementación y la arquitectura de Windows Hello, consulta la [Guía de Windows Hello en TechNet](https://docs.microsoft.com/windows/keep-secure/microsoft-passport-guide).
+Ten en cuenta que este artículo se centra en el desarrollo de aplicaciones. Para obtener información sobre la arquitectura y los detalles de implementación de Windows Hello, consulte la [Guía de Windows Hello en TechNet](/windows/keep-secure/microsoft-passport-guide).
 
-Para obtener un ejemplo de código completo, consulta el [ejemplo de código de Windows Hello en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MicrosoftPassport).
+Para obtener un ejemplo de código completo, vea el [ejemplo de código de Windows Hello en github](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MicrosoftPassport).
 
-Para ver un tutorial paso a paso sobre cómo crear una aplicación para UWP con Windows Hello y el servicio de autenticación de respaldo, consulta los artículos [Aplicación de inicio de sesión de Windows Hello](microsoft-passport-login.md) y [Servicio de inicio de sesión de Windows Hello](microsoft-passport-login-auth-service.md).
+Para ver un tutorial paso a paso sobre cómo crear una aplicación para UWP con Windows Hello y el servicio de autenticación de respaldo, consulte los artículos [aplicación de inicio de sesión](microsoft-passport-login.md) de Windows Hello y servicio de inicio de sesión de [Windows Hello](microsoft-passport-login-auth-service.md) .
 
 ## <a name="1-introduction"></a>1 Introducción
 
@@ -45,62 +45,62 @@ El método común de usar una dirección de correo como nombre de usuario empeor
 
 Es difícil solucionar los problemas que presentan las contraseñas. Tan solo aumentar las exigencias de las directivas de contraseña no es suficiente, ya que los usuarios pueden simplemente reciclar, compartir o anotar las contraseñas. Aunque la educación de los usuarios es fundamental para la seguridad de autenticación, tampoco elimina el problema por sí sola.
 
-Windows Hello reemplaza las contraseñas por autenticación sólida en dos fases (2FA) mediante la comprobación de las credenciales existentes y la creación de una credencial específica protegida por un gesto de usuario basado en PIN. 
+Windows Hello reemplaza las contraseñas con una autenticación sólida de dos factores (2FA) mediante la comprobación de las credenciales existentes y la creación de una credencial específica del dispositivo que protege un gesto de usuario biométrico o basado en PIN. 
 
 
 ## <a name="2-what-is-windows-hello"></a>2 ¿Qué es Windows Hello?
 
-Windows Hello es el nombre que Microsoft dio al nuevo sistema de inicio de sesión biométrico integrado en Windows 10. Dado que está integrado directamente en el sistema operativo, Windows Hello permite la identificación por rostro o huella digital para desbloquear los dispositivos de los usuarios. La autenticación se produce cuando el usuario proporciona su identificador biométrico único para obtener acceso a las credenciales específicas del dispositivo, lo que significa que un atacante que robe el dispositivo no podrá iniciar sesión en él a menos que cuente con el PIN. El almacén de credenciales seguro de Windows protege los datos biométricos en el dispositivo. Si usas Windows Hello para desbloquear un dispositivo, el usuario autorizado obtiene acceso a todos sus servicios, sitios web, datos, aplicaciones y experiencia de Windows.
+Windows Hello es el nombre que Microsoft dio al nuevo sistema de inicio de sesión biométrico integrado en Windows 10. Dado que está integrado directamente en el sistema operativo, Windows Hello permite la identificación por rostro o huella digital para desbloquear los dispositivos de los usuarios. La autenticación se produce cuando el usuario proporciona su identificador biométrico único para tener acceso a las credenciales específicas del dispositivo, lo que significa que un atacante que robe el dispositivo no podrá iniciar sesión en él a menos que dicho atacante tenga el PIN. El almacén de credenciales seguro de Windows protege los datos biométricos en el dispositivo. Si usas Windows Hello para desbloquear un dispositivo, el usuario autorizado obtiene acceso a todos sus servicios, sitios web, datos, aplicaciones y experiencia de Windows.
 
-El autenticador de Windows Hello se conoce como un saludo. Un saludo es único para la combinación de un dispositivo individual y un usuario específico. No se mueve entre dispositivos, no se comparte con un servidor o la aplicación que llama y no se pueden extraer fácilmente de un dispositivo. Si varios usuarios comparten un dispositivo, cada uno de ellos necesita configurar su propia cuenta. Cada cuenta obtiene un único saludo para ese dispositivo. Se puede considerar un saludo como un token que puedes usar para desbloquear (o liberar) una credencial almacenada. El saludo en sí no autentica el usuario en una aplicación o servicio, sino que libera las credenciales que sí pueden hacerlo. En otras palabras, Hello no es una credencial de usuario, pero es un segundo factor del proceso de autenticación.
+El autenticador de Windows Hello se conoce como un saludo. Un saludo es único para la combinación de un dispositivo individual y un usuario específico. No se mueve entre dispositivos, no se comparte con un servidor o la aplicación que llama y no se pueden extraer fácilmente de un dispositivo. Si varios usuarios comparten un dispositivo, cada uno de ellos necesita configurar su propia cuenta. Cada cuenta obtiene un único saludo para ese dispositivo. Se puede considerar un saludo como un token que puedes usar para desbloquear (o liberar) una credencial almacenada. El saludo en sí no autentica el usuario en una aplicación o servicio, sino que libera las credenciales que sí pueden hacerlo. En otras palabras, el saludo no es una credencial de usuario, pero es un segundo factor para el proceso de autenticación.
 
-### <a name="21-windows-hello-authentication"></a>2.1 Autenticación de Windows Hello
+### <a name="21-windows-hello-authentication"></a>autenticación de Windows Hello 2,1
 
-Windows Hello ofrece una forma eficaz para que un dispositivo reconozca a un usuario individual y eso aborda la primera parte de la ruta entre un usuario y un elemento de datos o servicio solicitado. Después de que el dispositivo haya reconocido al usuario, aún tiene que autenticarlo antes de determinar si va a conceder acceso a un recurso solicitado. Windows Hello proporciona una autenticación 2FA altamente eficaz, totalmente integrada en Windows, y reemplaza las contraseñas reutilizables por la combinación de un dispositivo específico y gesto biométrico o PIN.
+Windows Hello ofrece una forma eficaz para que un dispositivo reconozca a un usuario individual y eso aborda la primera parte de la ruta entre un usuario y un elemento de datos o servicio solicitado. Después de que el dispositivo haya reconocido al usuario, aún tiene que autenticarlo antes de determinar si va a conceder acceso a un recurso solicitado. Windows Hello proporciona un 2FA seguro que está totalmente integrado en Windows y reemplaza las contraseñas reutilizables con la combinación de un dispositivo específico y un gesto o un PIN biométricos.
 
-No obstante, Windows Hello no es tan solo un sustituto de los sistemas 2FA tradicionales. Conceptualmente, es similar a una tarjeta inteligente: la autenticación se realiza mediante primitivas criptográficas en lugar de comparaciones de cadenas y el material de clave del usuario se protege en el interior de hardware resistente a manipulaciones. Windows Hello no necesita tampoco los componentes de infraestructura extra necesarios para la implementación de tarjetas inteligentes. En particular, no se necesita una infraestructura de claves públicas (PKI) para administrar los certificados, si no tienes ninguna. Windows Hello combina las principales ventajas que ofrecen las tarjetas inteligentes (flexibilidad de implementación de tarjetas inteligentes virtuales y una seguridad sólida para tarjetas inteligentes físicas) sin ninguna de sus desventajas.
+No obstante, Windows Hello no es solo un sustituto de los sistemas 2FA tradicionales. Conceptualmente, es similar a una tarjeta inteligente: la autenticación se realiza mediante primitivas criptográficas en lugar de comparaciones de cadenas y el material de clave del usuario se protege en el interior de hardware resistente a manipulaciones. Windows Hello no requiere los componentes de infraestructura adicionales necesarios para la implementación de tarjetas inteligentes, ya sea. En particular, no se necesita una infraestructura de claves públicas (PKI) para administrar los certificados, si no tienes ninguna. Windows Hello combina las principales ventajas de las tarjetas inteligentes (flexibilidad de implementación para tarjetas inteligentes virtuales y seguridad sólida para tarjetas inteligentes físicas) sin ninguna de sus desventajas.
 
-### <a name="22-how-windows-hello-works"></a>2.2 Cómo funciona Windows Hello
+### <a name="22-how-windows-hello-works"></a>2,2 Cómo funciona Windows Hello
 
-Cuando el usuario configura Windows Hello en su equipo, genera un nuevo par de claves pública y privada en el dispositivo. El [módulo de plataforma segura](https://docs.microsoft.com/windows/keep-secure/trusted-platform-module-overview) (TPM) genera y protege esta clave privada. Si el dispositivo no tiene un chip de TPM, la clave privada se cifra y se protege mediante software. Además, los dispositivos con TPM generan un bloque de datos que se puede usar para certificar que una clave está enlazada al TPM. Esta información de atestación puede usarse en la solución para decidir si se concede al usuario un nivel diferente de autorización, por ejemplo.
+Cuando el usuario configura Windows Hello en su equipo, genera un nuevo par de claves pública y privada en el dispositivo. El [módulo de plataforma segura](/windows/keep-secure/trusted-platform-module-overview) (TPM) genera y protege esta clave privada. Si el dispositivo no tiene un chip de TPM, la clave privada se cifra y se protege mediante software. Además, los dispositivos con TPM generan un bloque de datos que se puede usar para certificar que una clave está enlazada al TPM. Esta información de atestación puede usarse en la solución para decidir si se concede al usuario un nivel diferente de autorización, por ejemplo.
 
-Para habilitar Windows Hello en un dispositivo, el usuario debe tener su cuenta de Azure Active Directory o cuenta de Microsoft asociada en la configuración de Windows.
+Para habilitar Windows Hello en un dispositivo, el usuario debe tener una cuenta de Azure Active Directory o una cuenta de Microsoft conectada en la configuración de Windows.
 
-#### <a name="221-how-keys-are-protected"></a>2.2.1 Cómo se protegen claves
+#### <a name="221-how-keys-are-protected"></a>2.2.1 cómo se protegen las claves
 
-Cada vez que se genere material de clave, este se debe proteger contra los ataques. La forma más sólida de hacer esto es mediante hardware especializado. El uso de módulos de seguridad de hardware (HSM) para generar, almacenar y procesar claves para aplicaciones críticas para la seguridad tiene una larga trayectoria. Las tarjetas inteligentes son un tipo especial de HSM, como lo son también los dispositivos compatibles con el estándar Trusted Computing Group TPM. Siempre que es posible, la implementación de Windows Hello saca provecho de las ventajas del hardware TPM incorporado para generar, almacenar y procesar claves. Sin embargo, Windows Hello y Windows Hello para el trabajo no necesitan ningún TPM incorporado.
+Cada vez que se genere material de clave, este se debe proteger contra los ataques. La forma más sólida de hacer esto es mediante hardware especializado. El uso de módulos de seguridad de hardware (HSM) para generar, almacenar y procesar claves para aplicaciones críticas para la seguridad tiene una larga trayectoria. Las tarjetas inteligentes son un tipo especial de HSM, como lo son también los dispositivos compatibles con el estándar Trusted Computing Group TPM. Siempre que sea posible, la implementación de Windows Hello aprovecha el hardware de TPM incorporado para generar, almacenar y procesar claves. Sin embargo, Windows Hello y Windows Hello for work no requieren un TPM incorporado.
 
 Siempre que sea factible, Microsoft recomienda el uso de hardware de TPM. El TPM protege contra una variedad de ataques conocidos y posibles, incluidos los ataques de fuerza bruta contra los PIN. Además, el TPM proporciona un nivel adicional de protección después de un bloqueo de la cuenta. Si el TPM bloquea el material de clave, el usuario tendrá que restablecer el PIN. Restablecer el PIN significa que se quitarán todas las claves y certificados cifrados con el material de clave anterior.
 
-#### <a name="222-authentication"></a>2.2.2 Autenticación
+#### <a name="222-authentication"></a>2.2.2 autenticación
 
 Cuando un usuario quiere acceder a material de clave protegido, el proceso de autenticación: el usuario escribe un PIN o realiza un gesto biométrico para desbloquear el dispositivo, un proceso denominado a veces "liberar la clave".
 
-Una aplicación nunca puede usar las claves de otra aplicación y un usuario nunca puede usar las claves de otro usuario. Estas claves se usan para firmar las solicitudes que se envían al proveedor de identidades o IDP, solicitando acceso a los recursos especificados. Las aplicaciones pueden usar API específicas para solicitar operaciones que requieren material de clave para determinadas acciones. El acceso a través de estas API requiere validación explícita mediante un gesto de usuario y el material de clave no se expone a la aplicación solicitante. En cambio, la aplicación solicita una acción específica, como la firma de un fragmento de datos, y el nivel de Windows Hello controla el trabajo real y devuelve los resultados.
+Una aplicación nunca puede usar las claves de otra aplicación y un usuario nunca puede usar las claves de otro usuario. Estas claves se usan para firmar las solicitudes que se envían al proveedor de identidades o IDP, solicitando acceso a los recursos especificados. Las aplicaciones pueden usar API específicas para solicitar operaciones que requieren material de clave para determinadas acciones. El acceso a través de estas API requiere validación explícita mediante un gesto de usuario y el material de clave no se expone a la aplicación solicitante. En su lugar, la aplicación solicita una acción específica, como firmar un fragmento de datos, y la capa de Windows Hello controla el trabajo real y devuelve los resultados.
 
-### <a name="23-getting-ready-to-implement-windows-hello"></a>2.3 Prepararse para implementar Windows Hello
+### <a name="23-getting-ready-to-implement-windows-hello"></a>2,3 preparar la implementación de Windows Hello
 
-Ahora que tenemos un conocimiento básico de cómo funciona Windows Hello, veamos cómo se implementa en nuestras propias aplicaciones.
+Ahora que tenemos un conocimiento básico de cómo funciona Windows Hello, echemos un vistazo a cómo implementarlos en nuestras propias aplicaciones.
 
-Existen diferentes escenarios que se pueden implementar con Windows Hello. Por ejemplo, iniciar sesión en tu aplicación en un dispositivo. Otro escenario habitual sería autenticarse en un servicio. En lugar de usar un nombre de inicio de sesión y una contraseña, se usará Windows Hello. En los siguientes capítulos, analizaremos la implementación de un par de escenarios diferentes, como la autenticación en los servicios con Windows Hello y cómo pasar de un sistema existente que usa el nombre de usuario y contraseña a un sistema que usa Windows Hello.
+Hay diferentes escenarios que se pueden implementar con Windows Hello. Por ejemplo, iniciar sesión en tu aplicación en un dispositivo. Otro escenario habitual sería autenticarse en un servicio. En lugar de usar un nombre de inicio de sesión y una contraseña, utilizará Windows Hello. En los capítulos siguientes, trataremos la implementación de un par de escenarios diferentes, incluido cómo autenticarse en los servicios con Windows Hello y cómo convertir de un sistema de nombre de usuario o contraseña existente en un sistema de Windows Hello.
 
-Por último, ten en cuenta que las API de Windows Hello necesitan el uso del SDK de Windows 10 que coincida con el sistema operativo en el que se usará la aplicación. Es decir, se debe usar el SDK de Windows 10.0.10240 para las aplicaciones que se van a implementar en Windows 10 y el 10.0.10586 para las aplicaciones que se van a implementar en Windows 10, versión 1511.
+Por último, tenga en cuenta que las API de Windows Hello requieren el uso del SDK de Windows 10 que coincida con el sistema operativo en el que se usará la aplicación. Es decir, se debe usar el SDK de Windows 10.0.10240 para las aplicaciones que se van a implementar en Windows 10 y el 10.0.10586 para las aplicaciones que se van a implementar en Windows 10, versión 1511.
 
-## <a name="3-implementing-windows-hello"></a>3 Implementación de Windows Hello
+## <a name="3-implementing-windows-hello"></a>3 implementación de Windows Hello
 
-En este capítulo, comenzamos con un escenario sin desarrollar que no tiene ningún sistema de autenticación existente y explicaremos cómo implementar Windows Hello.
+En este capítulo, comenzaremos con un escenario de Virgen sin ningún sistema de autenticación existente y explicaremos cómo implementar Windows Hello.
 
 En la sección siguiente se describe cómo migrar desde un sistema existente que usa nombre de usuario y contraseña. Sin embargo, aunque ese capítulo te interese más, es recomendable echar un vistazo a este capítulo para obtener un conocimiento básico sobre el proceso y el código necesario.
 
 ### <a name="31-enrolling-new-users"></a>3.1 Inscripción de nuevos usuarios
 
-Comenzamos con un servicio totalmente nuevo que usará Windows Hello y un nuevo usuario hipotético que está listo para iniciar sesión en un dispositivo nuevo.
+Comenzamos con un nuevo servicio de marca que usará Windows Hello y un nuevo usuario hipotético que esté listo para registrarse en un dispositivo nuevo.
 
-El primer paso es comprobar que el usuario puede usar Windows Hello. La aplicación comprueba la configuración de usuario y las capacidades de la máquina para asegurarse de que puede crear las claves del identificador de usuario. Si la aplicación determina que el usuario todavía no ha habilitado Windows Hello, le pide al usuario que lo configure antes usarla.
+El primer paso consiste en comprobar que el usuario puede usar Windows Hello. La aplicación comprueba la configuración de usuario y las capacidades de la máquina para asegurarse de que puede crear las claves del identificador de usuario. Si la aplicación determina que el usuario aún no ha habilitado Windows Hello, solicita al usuario que lo configure antes de usar la aplicación.
 
-Para habilitar Windows Hello, el usuario solo tiene que configurar un PIN en la configuración de Windows, a menos que lo haya configurado durante la configuración rápida (OOBE).
+Para habilitar Windows Hello, el usuario solo tiene que configurar un PIN en la configuración de Windows, a menos que el usuario lo configure durante la configuración rápida (OOBE).
 
-En las siguientes líneas de código se muestra una manera simple de comprobar si el usuario está preparado para usar Windows Hello.
+Las siguientes líneas de código muestran una forma sencilla de comprobar si el usuario está configurado para Windows Hello.
 
 ```csharp
 var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
@@ -115,16 +115,16 @@ El siguiente paso es pedir al usuario la información necesaria para registrarse
 
 En este escenario, usamos la dirección de correo como el identificador único del usuario. Una vez que el usuario se registre, considera la posibilidad de enviar un correo electrónico de validación para asegurarte de que la dirección sea válida. Esto te proporciona un mecanismo para restablecer la cuenta, si fuera necesario.
 
-Si el usuario configuró su PIN, la aplicación crea el objeto [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential) del usuario. La aplicación también puede adquirir información opcional de atestación de la clave para obtener la prueba criptográfica de que la clave se genera en el TPM. La clave pública generada y, opcionalmente, la atestación, se envían al servidor back-end para registrar el dispositivo que se está usando. Cada par de claves generado en cada uno de los dispositivos será único.
+Si el usuario configuró su PIN, la aplicación crea el objeto [**KeyCredential**](/uwp/api/Windows.Security.Credentials.KeyCredential) del usuario. La aplicación también puede adquirir información opcional de atestación de la clave para obtener la prueba criptográfica de que la clave se genera en el TPM. La clave pública generada y, opcionalmente, la atestación, se envían al servidor back-end para registrar el dispositivo que se está usando. Cada par de claves generado en cada uno de los dispositivos será único.
 
-El código para crear la [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential) tiene el aspecto siguiente:
+El código para crear la [**KeyCredential**](/uwp/api/Windows.Security.Credentials.KeyCredential) tiene el aspecto siguiente:
 
 ```csharp
 var keyCreationResult = await KeyCredentialManager.RequestCreateAsync(
     AccountId, KeyCredentialCreationOption.ReplaceExisting);
 ```
 
-El método [**RequestCreateAsync**](https://docs.microsoft.com/previous-versions/windows/dn973048(v=win.10)) es la parte que crea las claves pública y privada. Si el dispositivo tiene el chip TPM correcto, las API solicitarán el chip TPM para crear las claves pública y privada, y almacenar el resultado; si no hay ningún chip TPM disponible, el sistema operativo creará el par de claves en el código. No hay ninguna manera de que la aplicación acceda directamente a las claves privadas creadas. Parte de la creación de los pares de claves es también la información de atestación resultante. (Consulta el capítulo siguiente para más información sobre la atestación).
+El método [**RequestCreateAsync**](/previous-versions/windows/dn973048(v=win.10)) es la parte que crea las claves pública y privada. Si el dispositivo tiene el chip TPM correcto, las API solicitarán el chip TPM para crear las claves pública y privada, y almacenar el resultado; si no hay ningún chip TPM disponible, el sistema operativo creará el par de claves en el código. No hay ninguna manera de que la aplicación acceda directamente a las claves privadas creadas. Parte de la creación de los pares de claves es también la información de atestación resultante. (Consulta el capítulo siguiente para más información sobre la atestación).
 
 Después de crear la información de par de claves y atestación en el dispositivo del usuario, la clave pública, la información de atestación opcional y el identificador único (como la dirección de correo) deben enviarse al servicio de registro de back-end y almacenarse en el back-end.
 
@@ -132,11 +132,11 @@ Para permitir al usuario acceder a la aplicación en varios dispositivos, el ser
 
 Un esquema de base de datos de muestra para almacenar esta información en el backend podría tener este aspecto:
 
-![Esquema de base de datos de muestra de Windows Hello](images/passport-db.png)
+![Esquema de la base de datos de ejemplo Windows Hello](images/passport-db.png)
 
 La lógica del registro podría tener el siguiente aspecto:
 
-![Lógica del registro de Windows Hello](images/passport-registration.png)
+![Lógica de registro de Windows Hello](images/passport-registration.png)
 
 Evidentemente, la información de registro que recopiles puede incluir mucha más información de identificación que lo hace en este escenario simple. Por ejemplo, si tu aplicación accede a un servicio protegido, como por ejemplo, para la banca, tendrías que solicitar comprobación de la identidad y otras cosas como parte del proceso de suscripción. Cuando se cumplan todas las condiciones, la clave pública de este usuario se almacenará en el back-end y se usará para la validación la próxima vez que el usuario utilice el servicio.
 
@@ -208,18 +208,18 @@ Cuando recibe la clave RSA generada, la declaración de atestación y el certifi
 - El certificado AIK tiene validez temporal.
 - Todos los certificados de la CA emisora de la cadena tienen validez temporal y no se han revocado.
 - La declaración de atestación está formada correctamente.
-- La firma del blob [**KeyAttestation**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates.KeyAttestationHelper) usa una clave pública de AIK.
-- La clave pública incluida en el blob [**KeyAttestation**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates.KeyAttestationHelper) coincide con la clave RSA pública que el cliente envió junto con la declaración de atestación.
+- La firma del blob [**KeyAttestation**](/uwp/api/Windows.Security.Cryptography.Certificates.KeyAttestationHelper) usa una clave pública de AIK.
+- La clave pública incluida en el blob [**KeyAttestation**](/uwp/api/Windows.Security.Cryptography.Certificates.KeyAttestationHelper) coincide con la clave RSA pública que el cliente envió junto con la declaración de atestación.
 
 La aplicación podría asignar al usuario un nivel de autorización diferente, en función de estas condiciones. Por ejemplo, si se produce un error en una de estas comprobaciones, podría no inscribir al usuario o podría limitar lo que el usuario puede hacer.
 
-### <a name="32-logging-on-with-windows-hello"></a>3.2 Inicio de sesión con Windows Hello
+### <a name="32-logging-on-with-windows-hello"></a>3,2 Inicio de sesión con Windows Hello
 
 Una vez que el usuario se inscribe en el sistema, puede usar la aplicación. Según el escenario, puedes pedir a los usuarios que se autentiquen para poder empezar a usar la aplicación o simplemente pedirles que se autentiquen cuando empiecen a usar los servicios back-end.
 
 ### <a name="33-force-the-user-to-sign-in-again"></a>3.3 Exigir al usuario que vuelva a iniciar sesión
 
-En algunos escenarios, quizás prefieras que el usuario demuestre que es la persona que ha iniciado sesión antes de acceder a la aplicación o a veces antes de hacer una acción determinada dentro de la aplicación. Por ejemplo, antes de que una aplicación de banca envíe el comando de transferencia de dinero al servidor, quieres asegurarte de que es el usuario, en lugar de alguien encontró un dispositivo conectado, que intenta realizar una transacción. Puedes exigir al usuario que inicie sesión nuevamente en la aplicación mediante la clase [**UserConsentVerifier**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier). La siguiente línea de código obligará al usuario a escribir sus credenciales.
+En algunos escenarios, quizás prefieras que el usuario demuestre que es la persona que ha iniciado sesión antes de acceder a la aplicación o a veces antes de hacer una acción determinada dentro de la aplicación. Por ejemplo, antes de que una aplicación de banca envíe el comando de transferencia de dinero al servidor, quieres asegurarte de que es el usuario, en lugar de alguien encontró un dispositivo conectado, que intenta realizar una transacción. Puedes exigir al usuario que inicie sesión nuevamente en la aplicación mediante la clase [**UserConsentVerifier**](/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier). La siguiente línea de código obligará al usuario a escribir sus credenciales.
 
 La siguiente línea de código obligará al usuario a escribir sus credenciales.
 
@@ -235,7 +235,7 @@ Por supuesto, también puedes usar el mecanismo de respuesta de desafío del ser
 
 ### <a name="34-authentication-at-the-backend"></a>3.4 Autenticación en el backend
 
-Cuando la aplicación intente acceder a un servicio back-end protegido, el servicio envía un desafío a la aplicación. La aplicación usa la clave privada del usuario para firmar el desafío y lo vuelve a enviar al servidor. Dado que el servidor almacenó la clave pública de ese usuario, usa las API criptográficas estándar para asegurarse de que el mensaje se firmó con la clave privada correcta. En el cliente, el inicio de sesión lo hacen las API de Windows Hello, el desarrollador nunca tendrá acceso a la clave privada de ningún usuario.
+Cuando la aplicación intente acceder a un servicio back-end protegido, el servicio envía un desafío a la aplicación. La aplicación usa la clave privada del usuario para firmar el desafío y lo vuelve a enviar al servidor. Dado que el servidor almacenó la clave pública de ese usuario, usa las API criptográficas estándar para asegurarse de que el mensaje se firmó con la clave privada correcta. En el cliente, la firma se realiza mediante las API de Windows Hello; el desarrollador nunca tendrá acceso a la clave privada de ningún usuario.
 
 Además de comprobar las claves, el servicio también puede comprobar la atestación de clave y decidir si hay limitaciones invocadas sobre el almacenamiento de las claves en el dispositivo. Por ejemplo, si el dispositivo usa TPM para proteger las claves, la seguridad es mayor que cuando los dispositivos almacenan las claves sin TPM. La lógica de back-end podría decidir, por ejemplo, que el usuario solo pueda transferir cierta cantidad de dinero cuando no se usa ningún TPM para reducir los riesgos.
 
@@ -243,7 +243,7 @@ La atestación solo está disponible para los dispositivos que tienen un chip TP
 
 El flujo de trabajo de cliente podría parecerse al del siguiente gráfico:
 
-![Flujo de trabajo de cliente de Windows Hello](images/passport-client-workflow.png)
+![Flujo de trabajo del cliente de Windows Hello](images/passport-client-workflow.png)
 
 Cuando la aplicación llama al servicio en el backend, el servidor envía un desafío. El desafío se firma con el siguiente código:
 
@@ -267,7 +267,7 @@ if (openKeyResult.Status == KeyCredentialStatus.Success)
 }
 ```
 
-La primera línea, [**KeyCredentialManager.OpenAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredentialmanager.openasync), pedirá al sistema operativo que abra el identificador de clave. Si se lleva a cabo correctamente, puedes firmar el mensaje de desafío con el método [**KeyCredential.RequestSignAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredential.requestsignasync), que hará que el sistema operativo solicite el PIN o las credenciales biométricas del usuario a través de Windows Hello. El desarrollador no tendrá en ningún momento acceso a la clave privada del usuario. Todo se protege a través de las API.
+La primera línea, [**KeyCredentialManager.OpenAsync**](/uwp/api/windows.security.credentials.keycredentialmanager.openasync), pedirá al sistema operativo que abra el identificador de clave. Si se lleva a cabo correctamente, puedes firmar el mensaje de desafío con el método [**KeyCredential.RequestSignAsync**](/uwp/api/windows.security.credentials.keycredential.requestsignasync), que hará que el sistema operativo solicite el PIN o las credenciales biométricas del usuario a través de Windows Hello. El desarrollador no tendrá en ningún momento acceso a la clave privada del usuario. Todo se protege a través de las API.
 
 Las API solicitan al sistema operativo que firme el desafío con la clave privada. El sistema luego pide al usuario un código PIN o un inicio de sesión biométrico configurado. Cuando se especifique la información correcta, el sistema puede pedir al chip TPM que realice las funciones criptográficas y firme el desafío. (O bien, puede usar la solución de software de reserva, si no hay ningún TPM disponible). El cliente debe enviar el desafío firmado de vuelta al servidor.
 
@@ -338,9 +338,9 @@ La implementación del mecanismo correcto de desafío y respuesta está fuera de
 
 ### <a name="35-enrolling-another-device"></a>3.5 Inscribir otro dispositivo
 
-Hoy en día, es común que los usuarios tengan varios dispositivos con las mismas aplicaciones instaladas. ¿Cómo funciona esto si se usa Windows Hello con varios dispositivos?
+Hoy en día, es común que los usuarios tengan varios dispositivos con las mismas aplicaciones instaladas. ¿Cómo funciona esto cuando se usa Windows Hello con varios dispositivos?
 
-Si se usa Windows Hello, cada dispositivo creará un único conjunto de claves pública y privada. Esto significa que si quieres que un usuario pueda usar varios dispositivos, el back-end debe ser capaz de almacenar varias claves públicas de este usuario. Consulta el diagrama de base de datos de la sección 2.1 para ver un ejemplo de la estructura de la tabla.
+Al usar Windows Hello, cada dispositivo creará un conjunto de claves privada y pública único. Esto significa que si quieres que un usuario pueda usar varios dispositivos, el back-end debe ser capaz de almacenar varias claves públicas de este usuario. Consulta el diagrama de base de datos de la sección 2.1 para ver un ejemplo de la estructura de la tabla.
 
 El registro de otro dispositivo es prácticamente igual que el registro de un usuario por primera vez. Aún tienes que asegurarte de que el usuario que se registra en el nuevo dispositivo es realmente el usuario que dice ser. Puedes hacerlo con cualquier mecanismo de autenticación en dos fases que se use actualmente. Existen varias maneras de lograr esto de forma segura. Todo depende del escenario.
 
@@ -357,7 +357,7 @@ Para que sea más fácil para el usuario reconocer los dispositivos que están r
 
 ### <a name="36-using-multiple-accounts-in-your-app"></a>3.6 Usar varias cuentas en tu aplicación
 
-Además de admitir varios dispositivos en una sola cuenta, también es común admitir varias cuentas en una sola aplicación. Por ejemplo, quizás te conectas a varias cuentas de Twitter desde dentro de la aplicación. Con Windows Hello, puedes crear varios pares de claves y admitir varias cuentas en la aplicación.
+Además de admitir varios dispositivos en una sola cuenta, también es común admitir varias cuentas en una sola aplicación. Por ejemplo, quizás te conectas a varias cuentas de Twitter desde dentro de la aplicación. Con Windows Hello, puede crear varios pares de claves y admitir varias cuentas dentro de la aplicación.
 
 Una forma de hacerlo guardando en un almacenamiento aislado el nombre de usuario o el identificador único que se describió en el capítulo anterior. Por lo tanto, cada vez que crees una nueva cuenta, almacenas el identificador de cuenta en el almacenamiento aislado.
 
@@ -369,15 +369,15 @@ var openKeyResult = await KeyCredentialManager.OpenAsync(AccountId);
 
 El resto del flujo es el mismo que hemos descrito antes. Para ser más precisos, todas estas cuentas se protegen con el mismo código PIN o gesto biométrico, ya que en este escenario se usan en un único dispositivo con la misma cuenta de Windows.
 
-## <a name="4-migrating-an-existing-system-to-windows-hello"></a>4 Migración de un sistema existente a Windows Hello
+## <a name="4-migrating-an-existing-system-to-windows-hello"></a>4 migración de un sistema existente a Windows Hello
 
 En esta sección breve, trataremos una aplicación existente para la Plataforma universal de Windows y un sistema back-end que usan una base de datos que almacena el nombre de usuario y contraseña con hash. Estas aplicaciones recopilan las credenciales del usuario cuando se inician y usan estos datos cuando el sistema back-end devuelve el desafío de autenticación.
 
-Aquí, describiremos los fragmentos que deben cambiarse o reemplazarse para que Windows Hello funcione.
+Aquí describiremos qué partes deben cambiarse o reemplazarse para que Windows Hello funcione.
 
 Ya hemos descrito la mayoría de las técnicas en los capítulos anteriores. Agregar Windows Hello al sistema existente implica agregar un par de flujos diferentes en la parte de registro y autenticación del código.
 
-Un método es permitir al usuario elegir cuándo realizar una actualización. Una vez que el usuario haya iniciado sesión en la aplicación y después de detectar que la aplicación y el sistema operativo son capaces de admitir Windows Hello, puedes preguntar al usuario si quiere actualizar las credenciales para usar este sistema más moderno y seguro. Puedes usar el siguiente código para comprobar si el usuario es capaz de usar Windows Hello.
+Un método es permitir al usuario elegir cuándo realizar una actualización. Después de que el usuario inicie sesión en la aplicación y detecte que la aplicación y el sistema operativo son capaces de admitir Windows Hello, puede preguntar al usuario si desea actualizar las credenciales para usar este sistema moderno y más seguro. Puede usar el código siguiente para comprobar si el usuario es capaz de usar Windows Hello.
 
 ```csharp
 var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
@@ -387,28 +387,28 @@ La interfaz de usuario podría tener el siguiente aspecto:
 
 ![Interfaz de usuario de Windows Hello](images/passport-ui.png)
 
-Si el usuario opta por empezar a usar Windows Hello, debes crear el objeto [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential), tal como se describe más arriba. El servidor de registro en el backend agrega la clave pública y la declaración de atestación opcional a la base de datos. Dado que el usuario ya se autenticó con el nombre de usuario y la contraseña, el servidor puede vincular las nuevas credenciales a la información de usuario actual en la base de datos. El modelo de base de datos podría ser el mismo que en el que se usa en el ejemplo descrito anteriormente.
+Si el usuario decide empezar a usar Windows Hello, cree el [**KeyCredential**](/uwp/api/Windows.Security.Credentials.KeyCredential) descrito antes. El servidor de registro en el backend agrega la clave pública y la declaración de atestación opcional a la base de datos. Dado que el usuario ya se autenticó con el nombre de usuario y la contraseña, el servidor puede vincular las nuevas credenciales a la información de usuario actual en la base de datos. El modelo de base de datos podría ser el mismo que en el que se usa en el ejemplo descrito anteriormente.
 
-Si la aplicación pudo crear el objeto [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential) de los usuarios, almacena el identificador de usuario en el almacenamiento aislado para que el usuario pueda seleccionar esta cuenta en la lista cuando la aplicación se inicie de nuevo. A partir de este punto, el flujo sigue exactamente los ejemplos que se describen en los capítulos anteriores.
+Si la aplicación pudo crear el objeto [**KeyCredential**](/uwp/api/Windows.Security.Credentials.KeyCredential) de los usuarios, almacena el identificador de usuario en el almacenamiento aislado para que el usuario pueda seleccionar esta cuenta en la lista cuando la aplicación se inicie de nuevo. A partir de este punto, el flujo sigue exactamente los ejemplos que se describen en los capítulos anteriores.
 
-El paso final de la migración a un escenario de Windows Hello completo consiste en deshabilitar la opción de nombre de inicio de sesión y contraseña en la aplicación, y eliminar las contraseñas con hash almacenadas de la base de datos.
+El último paso en la migración a un escenario completo de Windows Hello es deshabilitar la opción nombre de inicio de sesión y contraseña en la aplicación y quitar las contraseñas con hash almacenadas de la base de datos.
 
 ## <a name="5-summary"></a>5 Resumen
 
-Windows 10 presenta un mayor nivel de seguridad que también es muy sencillo de poner en práctica. Windows Hello proporciona un nuevo sistema de inicio de sesión biométrico que reconoce al usuario e invalida activamente los esfuerzos para sortear la identificación correcta. Por eso, puede ofrecer varias capas de claves y certificados que nunca se podrán revelar o usar fuera del módulo de plataforma segura. Además, existe una capa de seguridad adicional disponible a través del uso opcional de claves y certificados de identidad de atestación.
+Windows 10 presenta un mayor nivel de seguridad que también es muy sencillo de poner en práctica. Windows Hello proporciona un nuevo sistema de inicio de sesión biométrico que reconoce al usuario e invalida activamente los esfuerzos para sortear la identificación correcta. Después, puede proporcionar varias capas de claves y certificados que nunca se pueden mostrar o usar fuera del módulo de plataforma segura. Además, existe una capa de seguridad adicional disponible a través del uso opcional de claves y certificados de identidad de atestación.
 
 Como desarrollador, puedes usar esta guía de diseño e implementación de estas tecnologías con el fin de agregar fácilmente una autenticación segura a tus implementaciones de Windows 10 para proteger las aplicaciones y los servicios back-end. El código necesario es mínimo y fácil de entender. El trabajo pesado lo hace Windows 10.
 
-Las opciones de implementación flexibles permiten que Windows Hello reemplace el sistema de autenticación existente o funcione con este. La experiencia de implementación es fácil y económica. No se requiere ninguna infraestructura adicional para implementar la seguridad de Windows 10. Con Microsoft Hello integrado en el sistema operativo, Windows 10 ofrece la solución más segura para los problemas de autenticación a los que se enfrenta el desarrollador moderno.
+Las opciones de implementación flexibles permiten a Windows Hello reemplazar o trabajar junto con el sistema de autenticación existente. La experiencia de implementación es fácil y económica. No se requiere ninguna infraestructura adicional para implementar la seguridad de Windows 10. Con Microsoft Hello integrado en el sistema operativo, Windows 10 ofrece la solución más segura a los problemas de autenticación dirigidos al desarrollador moderno.
 
-¡Misión logra! Acabas de hacer que Internet sea un lugar seguro.
+¡Misión cumplida! Acabas de hacer que Internet sea un lugar seguro.
 
 ## <a name="6-resources"></a>6 Recursos
 
 ### <a name="61-articles-and-sample-code"></a>6.1 Artículos y código de ejemplo
 
-- [Información general de Windows Hello](https://support.microsoft.com/help/17215)
-- [Detalles de implementación de Windows Hello](https://docs.microsoft.com/windows/keep-secure/microsoft-passport-guide)
+- [Introducción a Windows Hello](https://support.microsoft.com/help/17215)
+- [Detalles de implementación de Windows Hello](/windows/keep-secure/microsoft-passport-guide)
 - [Ejemplo de código de Windows Hello en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MicrosoftPassport)
 
 ### <a name="62-terminology"></a>6.2 Terminología

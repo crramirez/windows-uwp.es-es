@@ -5,16 +5,16 @@ author: maiak
 ms.author: maiak
 ms.date: 02/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: a6954538159c6fffb3185aa8b3137af26e17b32f
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: 72264b51edcc0b02aa335b8766100c196a0d5090
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629096"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168819"
 ---
 # <a name="use-symbols-in-net-traceprocessing"></a>Usar símbolos en .NET TraceProcessing
 
-[TraceProcessor](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.traceprocessor) admite la carga de símbolos y la obtención de pilas de varios orígenes de datos. La siguiente aplicación de consola examina los ejemplos de CPU y genera la duración estimada en la que se estaba ejecutando una función específica (en función del muestreo estadístico del seguimiento del uso de CPU).
+[TraceProcessor](/dotnet/api/microsoft.windows.eventtracing.traceprocessor) admite la carga de símbolos y la obtención de pilas de varios orígenes de datos. La siguiente aplicación de consola examina los ejemplos de CPU y genera la duración estimada en la que se estaba ejecutando una función específica (en función del muestreo estadístico del seguimiento del uso de CPU).
 
 ```csharp
 using Microsoft.Windows.EventTracing;
@@ -94,7 +94,7 @@ winlogon.exe: 20.15 ms
 
 ## <a name="symbols-format"></a>Formato de símbolos
 
-Internamente, TraceProcessor usa el formato [SymCache](https://docs.microsoft.com/windows-hardware/test/wpt/loading-symbols#symcache-path) , que es una memoria caché de algunos de los datos almacenados en un archivo PDB. Al cargar los símbolos, TraceProcessor requiere que se especifique una ubicación que se va a usar para estos archivos SymCache (una ruta de acceso de SymCache) y que, opcionalmente, se puede especificar un SymbolPath para acceder a los PDB. Cuando se proporciona un SymbolPath, TraceProcessor creará archivos SymCache a partir de archivos PDB según sea necesario y el procesamiento posterior de los mismos datos puede usar los archivos SymCache directamente para mejorar el rendimiento.
+Internamente, TraceProcessor usa el formato [SymCache](/windows-hardware/test/wpt/loading-symbols#symcache-path) , que es una memoria caché de algunos de los datos almacenados en un archivo PDB. Al cargar los símbolos, TraceProcessor requiere que se especifique una ubicación que se va a usar para estos archivos SymCache (una ruta de acceso de SymCache) y que, opcionalmente, se puede especificar un SymbolPath para acceder a los PDB. Cuando se proporciona un SymbolPath, TraceProcessor creará archivos SymCache a partir de archivos PDB según sea necesario y el procesamiento posterior de los mismos datos puede usar los archivos SymCache directamente para mejorar el rendimiento.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

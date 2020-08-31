@@ -6,12 +6,12 @@ keywords: contactos, correo electrónico, enviar
 ms.date: 10/11/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e7839a26afca81913e50296ac5ed9bb9210edbf2
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 47d07fa1932aae87704f7922762a8f0b7e430444
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997902"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154669"
 ---
 # <a name="send-email"></a>Enviar correo electrónico
 
@@ -25,7 +25,7 @@ Se muestra cómo iniciar el cuadro de diálogo de redacción de correo electrón
 
 ## <a name="launch-the-compose-email-dialog"></a>Iniciar el cuadro de diálogo de redacción de correo electrónico
 
-Crea un nuevo objeto [**EmailMessage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Email.EmailMessage) y define los datos que quieras que se rellenen previamente en el cuadro de diálogo de redacción de correo electrónico. Llama a [**ShowComposeNewEmailAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailmanager.showcomposenewemailasync) para que se muestre el cuadro de diálogo.
+Crea un nuevo objeto [**EmailMessage**](/uwp/api/Windows.ApplicationModel.Email.EmailMessage) y define los datos que quieras que se rellenen previamente en el cuadro de diálogo de redacción de correo electrónico. Llama a [**ShowComposeNewEmailAsync**](/uwp/api/windows.applicationmodel.email.emailmanager.showcomposenewemailasync) para que se muestre el cuadro de diálogo.
 
 ``` cs
 private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient,
@@ -47,11 +47,11 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 ```
 
 >[!NOTE]
-> Los datos adjuntos que agregue a un correo electrónico mediante la clase [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) solo se mostrarán en la aplicación mail. Si los usuarios tienen algún otro programa de correo configurado como programa de correo electrónico predeterminado, la ventana de redacción aparecerá sin los datos adjuntos. Este es un problema conocido.
+> Los datos adjuntos que agregue a un correo electrónico mediante la clase [EmailAttachment](/uwp/api/windows.applicationmodel.email.emailattachment) solo se mostrarán en la aplicación mail. Si los usuarios tienen algún otro programa de correo configurado como programa de correo electrónico predeterminado, la ventana de redacción aparecerá sin los datos adjuntos. Este es un problema conocido.
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de correo electrónico. Para información sobre la selección de contactos para usarlos como destinatarios de un mensaje de correo electrónico, consulta [Seleccionar contactos](selecting-contacts.md). Consulta [**PickSingleFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync) para seleccionar un archivo y usarlo como datos adjuntos de correo electrónico.
+Este tema te ha enseñado a iniciar el cuadro de diálogo de redacción de correo electrónico. Para información sobre la selección de contactos para usarlos como destinatarios de un mensaje de correo electrónico, consulta [Seleccionar contactos](selecting-contacts.md). Consulta [**PickSingleFileAsync**](/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync) para seleccionar un archivo y usarlo como datos adjuntos de correo electrónico.
 
 ## <a name="related-topics"></a>Temas relacionados
 

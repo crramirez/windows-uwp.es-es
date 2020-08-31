@@ -1,55 +1,55 @@
 ---
-title: Extracción de actualización con modificadores de origen (SourceModifiers)
-description: Crea controles personalizados Pull-to-Refresh con SourceModifiers
+title: Incorporación de cambios a la actualización con modificadores de origen
+description: Obtenga información sobre cómo usar la característica SourceModifier de InteractionTracker para crear un control de extracción a actualización personalizado.
 ms.date: 10/10/2017
 ms.topic: article
-keywords: windows 10, uwp, animación
+keywords: Windows 10, UWP, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 87e4eb90b4801d01ecb85c91b5e64ccc9155d199
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: b20b4b22d1de2252864287b97bedc4a1fc176602
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318095"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053965"
 ---
-# <a name="pull-to-refresh-with-source-modifiers"></a>Extracción de actualización con modificadores de origen (SourceModifiers)
+# <a name="pull-to-refresh-with-source-modifiers"></a>Incorporación de cambios a la actualización con modificadores de origen
 
-En este artículo analizaremos más a fondo cómo usar la característica de SourceModifier de un InteractionTracker y mostraremos su uso mediante la creación de un control personalizado de extracción de actualización (Pull-to-Refresh).
+En este artículo, profundizaremos en el uso de la característica SourceModifier de InteractionTracker y demostrar su uso mediante la creación de un control personalizado de incorporación de cambios a la actualización.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
-En este artículo damos por hecho que estás familiarizado con los conceptos tratados en estos artículos:
+Aquí se supone que está familiarizado con los conceptos descritos en estos artículos:
 
-- [Animaciones de entrada](input-driven-animations.md)
-- [Experiencias de manipulación personalizado con InteractionTracker](interaction-tracker-manipulations.md)
-- [Animaciones en función de relación](relation-animations.md)
+- [Animaciones controladas por entradas](input-driven-animations.md)
+- [Experiencias de manipulación personalizada con InteractionTracker](interaction-tracker-manipulations.md)
+- [Animaciones basadas en relaciones](relation-animations.md)
 
-## <a name="what-is-a-sourcemodifier-and-why-are-they-useful"></a>¿Qué es un SourceModifier y por qué resultan útiles?
+## <a name="what-is-a-sourcemodifier-and-why-are-they-useful"></a>¿Qué es un SourceModifier y por qué son útiles?
 
-Al igual que los [InertiaModifiers](inertia-modifiers.md), los SourceModifiers proporcionan un mayor control sobre el movimiento de un InteractionTracker. Pero a diferencia de los InertiaModifiers, que definen el movimiento después de que InteractionTracker entre en el estado de inercia, los SourceModifiers definen el movimiento mientras InteractionTracker sigue en el estado de interacción. En estos casos, la experiencia que se desea diferente que la tradicional de "obedecer al dedo".
+Al igual que [InertiaModifiers](inertia-modifiers.md), SourceModifiers proporciona un control granular más preciso sobre el movimiento de una InteractionTracker. Pero, a diferencia de InertiaModifiers, que define el movimiento después de que InteractionTracker entre en la inercia, SourceModifiers define el movimiento mientras InteractionTracker todavía está en su estado de interactuación. En estos casos, desea una experiencia diferente a la del "palo" tradicional del dedo.
 
-Un ejemplo clásico de esto es la experiencia de extracción para actualización: cuando el usuario extrae la lista para actualizar el contenido y la lista se mueve de forma panorámica a la misma velocidad que el dedo y se detiene tras una distancia determinada, el movimiento puede parecer brusco y mecánico. Una experiencia más natural sería presentar una especie de resistencia mientras el usuario interactúa activamente con la lista. Este pequeño matice ayuda a la experiencia general del usuario final cuando interactúa con una lista, que es más dinámica y atractiva. En la sección Ejemplo, analizaremos en más detalle sobre cómo crear esta experiencia.
+Un ejemplo clásico es la experiencia de extracción a actualización: cuando el usuario extrae la lista para actualizar el contenido y la lista se mueve a la misma velocidad que el dedo y se detiene después de cierta distancia, el movimiento se sentiría brusco y mecánico. Una experiencia más natural sería introducir una sensación de resistencia mientras el usuario interactúa activamente con la lista. Este pequeño matiz ayuda a hacer que la experiencia global del usuario final interactúe con una lista más dinámica y atractiva. En la sección ejemplo, veremos con más detalle cómo crear esto.
 
-Existen 2 tipos de SourceModifiers:
+Hay dos tipos de modificadores de origen:
 
-- DeltaPosition: Es la diferencia entre la posición actual del fotograma y la posición anterior de fotograma del dedo durante la interacción de movimiento panorámico táctil. Este modificador de origen te permite modificar la posición diferencial de la interacción antes de enviarla para su procesamiento posterior. Se trata de un parámetro de tipo Vector3 y el desarrollador puede optar por modificar cualquiera de los atributos X, Y o Z de la posición antes de pasarlo al InteractionTracker.
-- DeltaScale: Es la diferencia entre la escala actual del fotograma del y la escala del fotograma anterior que se ha aplicado durante la interacción de zoom táctil. Este modificador de origen te permite modificar el nivel de zoom de la interacción. Se trata de un tipo de atributo float que el desarrollador puede modificar antes de pasarlo a InteractionTracker.
+- DeltaPosition: es la diferencia entre la posición del marco actual y la posición del marco anterior del dedo durante la interacción de la panorámica táctil. Este modificador de origen permite modificar la posición Delta de la interacción antes de enviarla para su posterior procesamiento. Se trata de un parámetro de tipo Vector3 y el desarrollador puede elegir modificar cualquiera de los atributos X o Y o Z de la posición antes de pasarlo a InteractionTracker.
+- DeltaScale: es la diferencia entre la escala de fotogramas actual y la escala de fotograma anterior que se aplicó durante la interacción de zoom táctil. Este modificador de origen le permite modificar el nivel de zoom de la interacción. Se trata de un atributo de tipo float que el desarrollador puede modificar antes de pasarlo a InteractionTracker.
 
-Cuando InteractionTracker entra en estado de inercia, evalúa todos los SourceModifiers que tiene asignados y determina si alguno de ellos es aplicable. Esto significa que puedes crear y asignar varios modificadores de origen a un InteractionTracker. Pero, al definir cada uno de ellos, debes hacer lo siguiente:
+Cuando InteractionTracker está en su estado de interactuación, evalúa cada uno de los modificadores de origen asignados a él y determina si se aplica cualquiera de ellos. Esto significa que puede crear y asignar varios modificadores de origen a un InteractionTracker. Sin embargo, al definir cada uno, debe hacer lo siguiente:
 
-1. Definir la condición: Una expresión que defina la instrucción condicional cuando debe aplicarse este SourceModifier específico.
-1. Definir DeltaPosition/DeltaScale: La expresión del modificador de origen que modifique DeltaPosition o DeltaScale cuando se cumpla la condición definida anteriormente.
+1. Defina la condición: una expresión que define la instrucción condicional cuando se debe aplicar este modificador de origen específico.
+1. Defina DeltaPosition/DeltaScale: expresión del modificador de origen que modifica DeltaPosition o DeltaScale cuando se cumple la condición definida anteriormente.
 
 ## <a name="example"></a>Ejemplo
 
-Ahora veamos cómo puedes usar los modificadores de origen para crear una experiencia de extracción de actualización personalizada con un control ListView de XAML existente. Vamos a usar un lienzo como el "Panel de actualización" que se apilará sobre un control ListView de XAML para crear esta experiencia.
+Ahora veamos cómo se pueden usar los modificadores de origen para crear una experiencia de extracción a actualización personalizada con un control ListView de XAML existente. Usaremos un lienzo como el "panel de actualización" que se apilará sobre un ListView XAML para compilar esta experiencia.
 
-Para la experiencia del usuario final, queremos crear el efecto de "resistencia" mientras el usuario esté realizando activamente el movimiento panorámico de la lista (con la función táctil) y deje de realizarlo después de que la posición vaya más allá de un punto determinado.
+En el caso de la experiencia del usuario final, queremos crear el efecto de "resistencia", ya que el usuario está colocando de forma activa la lista (con funcionalidad táctil) y ha dejado el movimiento panorámico una vez que la posición va más allá de un punto determinado.
 
-![Lista con extracción de actualización](images/animation/city-list.gif)
+![Lista con extracción para actualizar](images/animation/city-list.gif)
 
-El código de trabajo para esta experiencia se puede encontrar en el [repositorio de Windows UI Dev Labs en GitHub](https://github.com/microsoft/WindowsCompositionSamples). Este es el recorrido paso a paso para la creación de esa experiencia.
-En el código de marcado XAML, tienes lo siguiente:
+El código de trabajo para esta experiencia puede encontrarse en el repositorio de desarrollo de la [interfaz de usuario de Windows en github](https://github.com/microsoft/WindowsCompositionSamples). Este es el tutorial paso a paso para crear esa experiencia.
+En el código de marcado XAML, tiene lo siguiente:
 
 ```xaml
 <StackPanel Height="500" MaxHeight="500" x:Name="ContentPanel" HorizontalAlignment="Left" VerticalAlignment="Top" >
@@ -67,9 +67,9 @@ ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.IsScrollInertiaEnabled="F
 </StackPanel>
 ```
 
-Dado que ListView (`ThumbnailList`) es un control XAML que ya desplaza, necesitas que el desplazamiento se encadene a su elemento principal(`ContentPanel`) cuando alcance el elemento más alto y no se pueda desplazar más. (ContentPanel es donde se aplicarán los modificadores de origen). Para ello deberá establecer ScrollViewer.IsVerticalScrollChainingEnabled **true** en el marcado de ListView. También deberás establecer el modo de encadenamiento de VisualInteractionSource en **Always**.
+Como ListView ( `ThumbnailList` ) es un control XAML que ya se desplaza, necesita que el desplazamiento se encadene hasta su elemento primario ( `ContentPanel` ) cuando alcanza el elemento de nivel superior y ya no se puede desplazar. (ContentPanel es donde se aplicarán los modificadores de origen). Para que esto suceda, debe establecer ScrollViewer. IsVerticalScrollChainingEnabled en **true** en el marcado de ListView. También tendrá que establecer el modo de encadenamiento en el VisualInteractionSource en **Always**.
 
-Debes establecer el controlador PointerPressedEvent con el parámetro _handledEventsToo_ en **true**. Sin esta opción, PointerPressedEvent no se encadenará a ContentPanel, ya que el control ListView marcará esos eventos como controlados y no se enviarán a la cadena visual.
+Debe establecer el controlador PointerPressedEvent con el parámetro _handledEventsToo_ como **true**. Sin esta opción, PointerPressedEvent no se encadenará a ContentPanel, ya que el control ListView marcará esos eventos como controlados y no se enviarán a la cadena visual.
 
 ```csharp
 //The PointerPressed handler needs to be added using AddHandler method with the //handledEventsToo boolean set to "true"
@@ -78,7 +78,7 @@ Debes establecer el controlador PointerPressedEvent con el parámetro _handledEv
 ContentPanel.AddHandler(PointerPressedEvent, new PointerEventHandler( Window_PointerPressed), true);
 ```
 
-Ahora estás listo para vincular esto con InteractionTracker. Empieza por configurar InteractionTracker, VisualInteractionSource y la expresión que aprovechará la posición de InteractionTracker.
+Ahora ya está listo para asociarlo con InteractionTracker. Empiece por configurar InteractionTracker, VisualInteractionSource y la expresión que aprovechará la posición de InteractionTracker.
 
 ```csharp
 // InteractionTracker and VisualInteractionSource setup.
@@ -100,7 +100,7 @@ m_positionExpression.SetReferenceParameter("tracker", _tracker);
 _contentPanelVisual.StartAnimation("Offset.Y", m_positionExpression);
 ```
 
-Con esta configuración, el panel de actualización está fuera de la ventanilla en su posición inicial y todo lo el usuario ve es listView. Cuando el movimiento panorámico alcanza ContentPanel, se activará el evento PointerPressed, en el que pedirás al sistema que use InteractionTracker para controlar la experiencia de manipulación.
+Con esta configuración, el panel de actualización está fuera de la ventanilla en su posición de inicio y todo lo que ve el usuario es listView cuando el movimiento panorámico alcanza el valor de ContentPanel, se desencadena el evento PointerPressed, donde se pide al sistema que use InteractionTracker para impulsar la experiencia de manipulación.
 
 ```csharp
 private void Window_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -113,11 +113,11 @@ if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Touch
 ```
 
 > [!NOTE]
-> Si no es necesario el encadenamiento de eventos controlados, se puede agregar el controlador PointerPressedEvent directamente mediante el marcado XAML con el atributo (`PointerPressed="Window_PointerPressed"`).
+> Si no es necesario encadenar eventos controlados, se puede Agregar el controlador PointerPressedEvent directamente a través del marcado XAML mediante el atributo ( `PointerPressed="Window_PointerPressed"` ).
 
-El paso siguiente es configurar los modificadores de origen. Vas a utilizar 2 modificadores de origen para obtener este comportamiento; _Resistance_ y _Stop_.
+El siguiente paso consiste en configurar los modificadores de origen. Usará 2 modificadores de origen para obtener este comportamiento; _Resistencia_ y _detención_.
 
-- Resistance: Mueve DeltaPosition.Y a la mitad de la velocidad hasta que llega a la altura del panel de actualización (RefreshPanel).
+- Resistencia: mueva el DeltaPosition. Y a la mitad de la velocidad hasta que alcance el alto de la RefreshPanel.
 
 ```csharp
 CompositionConditionalValue resistanceModifier = CompositionConditionalValue.Create (_compositor);
@@ -131,7 +131,7 @@ resistanceModifier.Condition = resistanceCondition;
 resistanceModifier.Value = resistanceAlternateValue;
 ```
 
-- Stop: Deja de moverse una vez que RefreshPanel está en pantalla.
+- Detener: dejar de moverse después de que todo el RefreshPanel esté en la pantalla.
 
 ```csharp
 CompositionConditionalValue stoppingModifier = CompositionConditionalValue.Create (_compositor);
@@ -147,10 +147,10 @@ List<CompositionConditionalValue> modifierList = new List<CompositionConditional
 _interactionSource.ConfigureDeltaPositionYModifiers(modifierList);
 ```
 
-Este diagrama ofrece una visualización de la configuración de los SourceModifiers.
+Este diagrama proporciona una visualización de la configuración de SourceModifiers.
 
-![Diagrama del movimiento panorámico](images/animation/source-modifiers-diagram.png)
+![Diagrama de movimiento panorámico](images/animation/source-modifiers-diagram.png)
 
-Ahora, con los SourceModifiers, observarás que cuando el se realiza el movimiento panorámico de ListView hacia abajo y se alcanza al elemento de nivel superior, el panel de actualización se baja a la mitad del ritmo del movimiento panorámico hasta que llega a la altura de RefreshPanel y luego deja de moverse.
+Ahora con el SourceModifiers, observará que cuando se desplaza hacia abajo el control ListView y llega al elemento superior, el panel de actualización se extrae a la mitad del ritmo del pan hasta que alcanza el alto de RefreshPanel y, a continuación, se detiene.
 
-En la muestra completa se usa una animación de fotograma clave para hacer girar un icono durante la interacción en el lienzo RefreshPanel. En su lugar se puede usar cualquier contenido, o puedes utilizar la posición de InteractionTracker para controlar esa animación por separado.
+En el ejemplo completo, se usa una animación de fotogramas clave para girar un icono durante la interacción en el lienzo RefreshPanel. Cualquier contenido puede usarse en su lugar o usar la posición de InteractionTracker para dirigir esa animación por separado.

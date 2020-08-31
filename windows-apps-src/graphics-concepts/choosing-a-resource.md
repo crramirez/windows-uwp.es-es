@@ -1,90 +1,90 @@
 ---
 title: Elección de un recurso
-description: Un recurso es una colección de datos que se usa en la canalización 3D.
+description: Obtenga información sobre cómo identificar y seleccionar los mejores recursos que se van a enlazar con diferentes fases de la canalización de gráficos 3D en la aplicación.
 ms.assetid: 6BAD6287-2930-42F8-BF51-69A379D1D2C3
 keywords:
 - Elección de un recurso
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ccc99395dba2f2d1894db81fb48abb59f9a8ba4f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 69527915988136854e201b82332c17f3e0134290
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57613400"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094473"
 ---
 # <a name="choosing-a-resource"></a>Elección de un recurso
 
 
-Un recurso es una colección de datos que se usa en la canalización 3D. La creación de recursos y la definición de su comportamiento constituyen el primer paso para la programación de la aplicación. En esta guía se tratan los aspectos básicos para elegir los recursos necesarios para la aplicación.
+Un recurso es una colección de datos utilizada por la canalización 3D. La creación de recursos y la definición de su comportamiento es el primer paso para programar la aplicación. En esta guía se tratan los temas básicos para elegir los recursos necesarios para la aplicación.
 
-## <a name="span-ididentifybindingspanspan-ididentifybindingspanspan-ididentifybindingspanidentify-pipeline-stages-that-need-resources"></a><span id="Identify_Binding"></span><span id="identify_binding"></span><span id="IDENTIFY_BINDING"></span>Identificar las fases de canalización que necesitan recursos
+## <a name="span-ididentify_bindingspanspan-ididentify_bindingspanspan-ididentify_bindingspanidentify-pipeline-stages-that-need-resources"></a><span id="Identify_Binding"></span><span id="identify_binding"></span><span id="IDENTIFY_BINDING"></span>Identificación de las fases de canalización que necesitan recursos
 
 
-El primer paso es elegir la o las fases de [canalización de gráficos](graphics-pipeline.md) que usarán un recurso. Es decir, identificar cada fase que va a leer datos de un recurso, así como las fases que escribirán datos en un recurso. Conocer las fases de canalización donde se usarán los recursos determina las API a las que se llamará para enlazar el recurso con la fase.
+El primer paso es elegir la fase de [canalización de gráficos](graphics-pipeline.md) (o fases) que usará un recurso. Es decir, identifique cada fase que va a leer los datos de un recurso, así como las fases que escribirán los datos en un recurso. Conocer las fases de canalización en las que se usarán los recursos determina las API a las que se llamará para enlazar el recurso a la fase.
 
-En esta tabla se enumeran los tipos de recursos que pueden enlazarse en cada fase de canalización. Incluye si el recurso puede enlazarse como una entrada o una salida.
+En esta tabla se enumeran los tipos de recursos que se pueden enlazar a cada fase de canalización. Incluye si el recurso se puede enlazar como entrada o como salida.
 
-| Fase de canalización  | Entrada/salida | Recurso               | Tipo de recurso                           |
+| Fase de canalización  | Dentro/fuera | Resource               | Tipo de recurso                           |
 |-----------------|--------|------------------------|-----------------------------------------|
-| Ensamblador de entrada | Acercar     | Búfer de vértices          | Búfer                                  |
-| Ensamblador de entrada | Acercar     | Búfer de índices           | Búfer                                  |
-| Fases de sombreador   | Acercar     | Vista del recurso de sombreador    | Buffer, Texture1D, Texture2D, Texture3D |
-| Fases de sombreador   | Acercar     | Búfer de constantes del sombreador | Búfer                                  |
-| Salida de secuencia   | Alejar    | Búfer                 | Búfer                                  |
-| Fusión de salida   | Alejar    | Vista de destino de representación     | Buffer, Texture1D, Texture2D, Texture3D |
-| Fusión de salida   | Alejar    | Vista de galería de símbolos de profundidad     | Texture1D, Texture2D                    |
+| Ensamblador de entrada | En     | Búfer de vértices          | Buffer                                  |
+| Ensamblador de entrada | En     | Búfer de índice           | Buffer                                  |
+| Fases del sombreador   | En     | Sombreador: ResourceView    | Buffer, Texture1D, Texture2D, Texture3D |
+| Fases del sombreador   | En     | Shader: búfer de constantes | Buffer                                  |
+| Salida de flujo   | Fuera    | Buffer                 | Buffer                                  |
+| Fusión de salida   | Fuera    | Representación: vista de destino     | Buffer, Texture1D, Texture2D, Texture3D |
+| Fusión de salida   | Fuera    | Vista de profundidad/estarcido     | Texture1D, Texture2D                    |
 
  
 
-## <a name="span-ididentifyusagespanspan-ididentifyusagespanspan-ididentifyusagespanidentify-how-each-resource-will-be-used"></a><span id="Identify_Usage"></span><span id="identify_usage"></span><span id="IDENTIFY_USAGE"></span>Identificar cómo se utilizarán cada recurso
+## <a name="span-ididentify_usagespanspan-ididentify_usagespanspan-ididentify_usagespanidentify-how-each-resource-will-be-used"></a><span id="Identify_Usage"></span><span id="identify_usage"></span><span id="IDENTIFY_USAGE"></span>Identificar cómo se utilizará cada recurso
 
 
-Una vez que hayas elegido las fases de canalización que usará la aplicación (y, por lo tanto, los recursos que requiere cada fase), el siguiente paso es determinar cómo se usará cada recurso, es decir, si la CPU o la GPU puede acceder a un recurso.
+Una vez que haya elegido las fases de canalización que va a usar la aplicación (y, por lo tanto, los recursos que necesitará cada fase), el siguiente paso es determinar cómo se usará cada recurso, es decir, si se puede tener acceso a un recurso mediante la CPU o la GPU.
 
-El hardware en el que se ejecuta la aplicación tendrá un mínimo de una CPU y una GPU. Para elegir un valor de uso, considera qué tipo de procesador necesita leer o escribir en el recurso de las siguientes opciones.
+El hardware en el que se ejecuta la aplicación tendrá como mínimo una CPU y una GPU. Para elegir un valor de uso, tenga en cuenta qué tipo de procesador debe leer o escribir en el recurso de las siguientes opciones.
 
-| Uso de recursos | Puede actualizarse mediante                    | Frecuencia de actualización |
+| Resource Usage | Se puede actualizar mediante                    | Frecuencia de actualización |
 |----------------|--------------------------------------|---------------------|
-| Predeterminado        | GPU                                  | con poca frecuencia        |
-| Dinámico        | CPU                                  | con frecuencia          |
-| Preconfiguración        | GPU                                  | n/d                 |
-| Inmutable      | CPU (solo en tiempo de creación de recursos) | n/d                 |
+| Valor predeterminado        | GPU                                  | con poca frecuencia        |
+| Dinámica        | CPU                                  | mayor          |
+| Ensayo        | GPU                                  | N/D                 |
+| Inmutable      | CPU (solo en el momento de creación de recursos) | N/D                 |
 
  
 
-El uso predeterminado debe usarse para un recurso que se espera sea actualizado por la CPU con poca frecuencia (menos de una vez por fotograma). En teoría, la CPU nunca escribiría directamente en un recurso con el uso predeterminado a fin de evitar posibles disminuciones de rendimiento.
+El uso predeterminado se debe usar para un recurso que se espera que la CPU actualice con poca frecuencia (menos de una vez por fotograma). Idealmente, la CPU nunca escribiría directamente en un recurso con uso predeterminado para evitar posibles penalizaciones de rendimiento.
 
-El uso dinámico debe usarse para un recurso que la CPU actualiza con relativa frecuencia (una vez o más por fotograma). Una situación típica para un recurso dinámico sería crear búferes dinámicos de vértices e índices que se completarán en tiempo de ejecución con datos sobre la geometría visibles desde el punto de vista del usuario para cada fotograma. Estos búferes se usarían para representar solo la geometría visible para el usuario para ese fotograma.
+El uso dinámico debe usarse en un recurso que la CPU actualice con relativa frecuencia (una o más por fotograma). Un escenario típico de un recurso dinámico sería crear búferes dinámicos de vértices y de índices que se rellenarían en tiempo de ejecución con datos sobre la geometría visible desde el punto de vista del usuario para cada fotograma. Estos búferes se utilizarían para representar solo la geometría visible para el usuario para ese marco.
 
-El uso provisional debe usarse para copiar datos desde y hacia otros recursos. Una situación típica sería copiar datos en un recurso con el uso predeterminado (al cual la CPU no puede acceder) en un recurso con el uso provisional (al cual puede acceder la CPU).
+El uso del almacenamiento provisional debe usarse para copiar datos en otros recursos y desde ellos. Un escenario típico sería copiar los datos de un recurso con uso predeterminado (al que la CPU no puede acceder) a un recurso con uso de almacenamiento provisional (al que la CPU puede tener acceso).
 
-Los recursos inmutables deberían usarse cuando los datos en el recurso no cambiarán nunca.
+Los recursos inmutables deben usarse cuando los datos del recurso nunca cambien.
 
-Otra forma de ver este concepto es pensar en lo que hace una aplicación con un recurso.
+Otra forma de ver la misma idea es pensar en lo que hace una aplicación con un recurso.
 
-| Cómo la aplicación usa el recurso     | Uso de recursos       |
+| Cómo usa la aplicación el recurso     | Resource Usage       |
 |---------------------------------------|----------------------|
 | Cargar una vez y no actualizar nunca            | Inmutable o predeterminado |
-| La aplicación rellena el recurso repetidamente | Dinámico              |
-| Representar en la textura                     | Predeterminado              |
-| Acceso de CPU a los datos de GPU                | Preconfiguración              |
+| La aplicación rellena recursos repetidamente | Dinámica              |
+| Representar en textura                     | Valor predeterminado              |
+| Acceso de CPU de los datos de GPU                | Ensayo              |
 
  
 
-Si no estás seguro de qué uso elegir, empieza con el uso predeterminado, ya que se espera que se el caso más común. Un búfer de constantes de sombreador es el tipo de recurso que siempre debería tener un uso predeterminado.
+Si no está seguro de qué uso elegir, empiece con el uso predeterminado, ya que se espera que sea el caso más común. Un búfer de constantes de sombreador es el tipo de recurso que siempre debería tener el uso predeterminado.
 
-## <a name="span-idresourcetypesandpipelinestagesspanspan-idresourcetypesandpipelinestagesspanspan-idresourcetypesandpipelinestagesspanbinding-resources-to-pipeline-stages"></a><span id="Resource_Types_and_Pipeline_stages"></span><span id="resource_types_and_pipeline_stages"></span><span id="RESOURCE_TYPES_AND_PIPELINE_STAGES"></span>Enlazar recursos a etapas de canalización
+## <a name="span-idresource_types_and_pipeline_stagesspanspan-idresource_types_and_pipeline_stagesspanspan-idresource_types_and_pipeline_stagesspanbinding-resources-to-pipeline-stages"></a><span id="Resource_Types_and_Pipeline_stages"></span><span id="resource_types_and_pipeline_stages"></span><span id="RESOURCE_TYPES_AND_PIPELINE_STAGES"></span>Enlazar recursos a fases de canalización
 
 
-Un recurso puede enlazarse a más de una fase de canalización al mismo tiempo, siempre que se cumplan las restricciones especificadas cuando se creó el recurso. Estas restricciones se especifican como marcas de uso, marcas de enlace o marcas de acceso a la CPU. En concreto, un recurso puede enlazarse como entrada y salida simultáneamente, siempre que la parte de lectura y escritura de un recurso no se produzcan al mismo tiempo.
+Un recurso se puede enlazar a más de una fase de canalización al mismo tiempo, siempre que se cumplan las restricciones especificadas cuando se creó el recurso. Estas restricciones se especifican como marcas de uso, marcas de enlace o marcas de acceso a la CPU. Más concretamente, un recurso se puede enlazar como una entrada y una salida simultáneamente siempre y cuando no se pueda realizar la lectura y la escritura de una parte de un recurso al mismo tiempo.
 
-Al enlazar un recurso, piensa en cómo la CPU y la GPU accederán al recurso. Los recursos que están diseñados para un solo propósito (no uses las marcas de uso múltiple, de enlace y de acceso a la CPU) muy probablemente generarán un mejor rendimiento.
+Al enlazar un recurso, piense en cómo la GPU y la CPU tendrán acceso al recurso. Los recursos que están diseñados para un solo propósito (no se usan varias marcas de acceso de uso, enlace y CPU) serán más que probablemente resulten un mejor rendimiento.
 
-Por ejemplo, considera el caso de un destino de representación que se use como textura varias veces. Puede ser más rápido tener dos recursos: un destino de representación y una textura usada como recurso del sombreador. Cada recurso usaría solo una marca de enlace, indicado como "destino de representación" o "recurso del sombreador". Los datos se copiarían de la textura de destino de representación a la textura del sombreador.
+Por ejemplo, considere el caso de un destino de representación que se usa como textura varias veces. Es posible que sea más rápido tener dos recursos: un destino de representación y una textura utilizada como un recurso de sombreador. Cada recurso usaría solo una marca de enlace, que indica "destino de representación" o "recurso de sombreador". Los datos se copiarán de la textura de representación-destino a la textura del sombreador.
 
-La técnica que se incluye en este ejemplo puede mejorar el rendimiento al aislar la escritura del destino de representación de la lectura de la textura del sombreador. La única manera de estar seguros es implementar ambos enfoques y medir la diferencia de rendimiento en la aplicación en particular.
+Esta técnica en este ejemplo puede mejorar el rendimiento aislando la escritura de destino de representación de la lectura del sombreador-textura. La única manera de asegurarse es implementar ambos enfoques y medir la diferencia de rendimiento en una aplicación concreta.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 

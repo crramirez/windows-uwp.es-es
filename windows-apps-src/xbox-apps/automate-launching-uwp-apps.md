@@ -4,12 +4,12 @@ description: Los desarrolladores pueden usar la activación de protocolos y la a
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
-ms.openlocfilehash: abc0b40178dc9b7c386342af6a6d85c6fb61945a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 661576ede9a940f7f8aa71715900306d2c2b28a9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320267"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154879"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Automatizar el inicio de aplicaciones de Windows 10 para UWP
 
@@ -48,7 +48,7 @@ Para activar la aplicación con un protocolo, usa la línea de comandos con el i
   scheme://username:password@host:port/path.extension?query#fragment
   ```
 
-El objeto de URI tiene métodos para analizar una cadena URI en este formato. Para obtener más información, consulta [Uri class (MSDN)](https://docs.microsoft.com/uwp/api/windows.foundation.uri). 
+El objeto de URI tiene métodos para analizar una cadena URI en este formato. Para obtener más información, consulta [Uri class (MSDN)](/uwp/api/windows.foundation.uri). 
 
 Ejemplos:
 
@@ -136,7 +136,7 @@ Esta opción no admite argumentos de línea de comandos.
 
 ### <a name="launcher-application"></a>Aplicación de selector
 
-Puedes crear una aplicación independiente que admita el uso de COM para el inicio. En el ejemplo siguiente se muestra el código de C++ para iniciarse con la activación de inicio en un programa selector. Con este código, puedes crear un objeto **ApplicationActivationManager** y llamar a **ActivateApplication** pasando el AUMID encontrado anteriormente y los argumentos correspondientes. Para obtener más información acerca de los otros parámetros, consulta el tema sobre el [método IApplicationActivationManager::ActivateApplication (MSDN)](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication).
+Puedes crear una aplicación independiente que admita el uso de COM para el inicio. En el ejemplo siguiente se muestra el código de C++ para iniciarse con la activación de inicio en un programa selector. Con este código, puedes crear un objeto **ApplicationActivationManager** y llamar a **ActivateApplication** pasando el AUMID encontrado anteriormente y los argumentos correspondientes. Para obtener más información acerca de los otros parámetros, consulta el tema sobre el [método IApplicationActivationManager::ActivateApplication (MSDN)](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication).
 
 ```
 #include <ShObjIdl.h>
@@ -212,4 +212,3 @@ En resumen, puedes usar distintos métodos para iniciar la aplicación para UWP.
 
 ## <a name="see-also"></a>Vea también
 - [UWP en Xbox One](index.md)
-

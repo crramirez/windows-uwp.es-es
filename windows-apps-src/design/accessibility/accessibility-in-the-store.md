@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ad128aca1a633c5ce33830b5ee9231f7a794a60c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 320d5cc4232d613a4fb437fbd11f3c83287b3030
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969680"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154109"
 ---
 # <a name="accessibility-in-the-store"></a>Accesibilidad en la Tienda  
 
@@ -40,7 +40,7 @@ Debes declarar tu aplicación como accesible si la has compilado para ello y has
     * usar métodos abreviados de teclado para alcanzar una funcionalidad de la aplicación principal;
     * usar los gestos táctiles del narrador para la equivalencia con el tabulador y las flechas para dispositivos sin teclado.
 * Garantizar que la interfaz de usuario de tu aplicación es accesible visualmente, es decir, que tiene una relación de contraste de texto mínima de 4.5:1, que no depende solamente del color para transmitir la información, etc.
-* Usar herramientas de prueba de accesibilidad como [**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) y [**UIAVerify**](https://docs.microsoft.com/windows/desktop/WinAuto/ui-automation-verify) para comprobar la implementación que has realizado de la accesibilidad y resolver todos los errores de prioridad 1 notificados por dichas herramientas.
+* Usar herramientas de prueba de accesibilidad como [**Inspect**](/windows/desktop/WinAuto/inspect-objects) y [**UIAVerify**](/windows/desktop/WinAuto/ui-automation-verify) para comprobar la implementación que has realizado de la accesibilidad y resolver todos los errores de prioridad 1 notificados por dichas herramientas.
 * Comprobar los principales escenarios de la aplicación de principio a fin usando el narrador, la lupa, el teclado en pantalla, un tema de contraste alto y con la opción de ppp ajustada.
 
 Consulta el tema [Lista de comprobación para accesibilidad](accessibility-checklist.md) para obtener un revisión de estos procedimientos y vínculos a recursos que te ayudarán a llevarlos a cabo.
@@ -48,4 +48,4 @@ Consulta el tema [Lista de comprobación para accesibilidad](accessibility-check
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>Temas relacionados    
-* [Accesibilidad](accessibility.md) 
+* [Accesibilidad](accessibility.md)

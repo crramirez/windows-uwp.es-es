@@ -6,12 +6,12 @@ ms.date: 03/05/2019
 ms.topic: article
 keywords: Windows 10, UWP, impuestos, impuestos de aplicación, requisitos fiscales, expansión de comercio, tasa de impuestos
 ms.localizationpriority: medium
-ms.openlocfilehash: f1147ab6ee76b1d7615d6acaadaf6190db96c668
-ms.sourcegitcommit: 829af8cf4679a6aa9e7ecad961e1e33a09235028
+ms.openlocfilehash: 2d78a5a6af362a52b55830f279b3fffc1fb74346
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681266"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170879"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Detalles de impuestos para desarrolladores de aplicaciones y juegos de Windows y publicadores de Azure Marketplace
 
@@ -24,10 +24,10 @@ En algunos casos, los países administrados de Microsoft pueden convertirse en p
 Para comprender las consideraciones fiscales para la selección de precios y la responsabilidad fiscal en el contrato del desarrollador de aplicaciones o el contrato del anunciante moderno, consulte los países o regiones de distribución en las tablas siguientes.
 
 > [!NOTE]
-> El ajuste de expansión del comercio puede tener implicaciones en el pago de un conjunto limitado de países o regiones. Para obtener más información sobre el ajuste de expansión comercial y los mercados en los que se aplica, consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y la lista de [países/regiones afectados](define-market-selection.md#price-considerations-for-specific-markets).
+> El ajuste de expansión del comercio puede tener implicaciones en el pago de un conjunto limitado de países o regiones. Para obtener más información sobre el ajuste de expansión comercial y los mercados en los que se aplica, consulta el [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement) y la lista de [países/regiones afectados](define-market-selection.md#price-considerations-for-specific-markets).
 
 > [!IMPORTANT]
-> La responsabilidad fiscal de los países o regiones del reseller y las circunstancias (como se describe [a continuación](#reseller-countriesregions)) está incluida en el documento C del [contrato de desarrollo](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)de la aplicación, a pesar de la información de la tabla siguiente.
+> La responsabilidad fiscal de los países o regiones del reseller y las circunstancias (como se describe [a continuación](#reseller-countriesregions)) está incluida en el documento C del [contrato de desarrollo](/legal/windows/agreements/app-developer-agreement)de la aplicación, a pesar de la información de la tabla siguiente.
 > Tenga en cuenta que la columna **implicación de pagos** solo se aplica a los desarrolladores de aplicaciones y juegos de Windows. Las tasas de impuestos que se indican en esta columna están sujetas a cambios en cualquier momento, y Microsoft no puede garantizar que las tasas de las tablas siguientes siempre sean precisas.
 
 
@@ -289,7 +289,7 @@ Algunos partners de facturación de Microsoft pueden recolectar y remitir los im
 
 ## <a name="reseller-countriesregions"></a>Países y regiones de revendedor
 
-En determinados países o regiones, Microsoft actúa como su revendedor (en lugar de su agente) para que sus aplicaciones y productos en la aplicación estén disponibles en Store. Para obtener más información acerca de los términos y condiciones para países o regiones de revendedores, consulta el [Acuerdo para desarrolladores de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
+En determinados países o regiones, Microsoft actúa como su revendedor (en lugar de su agente) para que sus aplicaciones y productos en la aplicación estén disponibles en Store. Para obtener más información acerca de los términos y condiciones para países o regiones de revendedores, consulta el [Acuerdo para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement).
 
 Lo siguiente se aplica solo a los desarrolladores de aplicaciones y juegos de Windows:   
 

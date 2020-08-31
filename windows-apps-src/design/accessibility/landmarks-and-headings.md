@@ -1,5 +1,5 @@
 ---
-Description: Describe las características de los encabezados y los puntos de referencia de accesibilidad.
+description: Describe los puntos de referencia y las características de los encabezados de accesibilidad.
 ms.assetid: 019CC63D-D915-4EBD-9442-DE899AB973C9
 title: Puntos de referencia y encabezados
 label: Landmarks and Headings
@@ -8,34 +8,39 @@ ms.date: 01/24/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 28a1bd46646deae8f6e6519d72295d42ce2766db
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 942c24e8f5c7c521502ee5a9f9eb7175bf04b94f
+ms.sourcegitcommit: 2a1ceeacf5cdadc803bad83dc3ceb57a16ce79a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359559"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89067517"
 ---
 # <a name="landmarks-and-headings"></a>Puntos de referencia y encabezados
 
-Normalmente una interfaz de usuario se organiza de una manera visualmente eficiente, lo que permite a los usuarios sin problemas de visión encontrar lo que le interesa sin tener que perder tiempo leyendo *todos* el contenido. Un usuario que emplee un lector de pantalla debe tener esta misma capacidad de discernir rápidamente. Los puntos de referencia y los encabezados definen secciones de una interfaz de usuario que ayudan a que la navegación sea más eficaz para los usuarios de tecnología de asistencia (AT). Marcar el contenido con puntos de referencia y encabezados proporciona a un usuario de un lector de pantalla la opción de discernir rápidamente el contenido de forma similar a como lo hace un usuario sin problemas de visión.
+Una interfaz de usuario se organiza normalmente de forma visualmente eficaz, lo que permite a un usuario con visión rápida hojear lo que le interesa sin tener que ralentizarse para leer *todo* el contenido. Un usuario lector de pantalla debe tener esta misma capacidad de desnatamiento. Los puntos de referencia y los encabezados definen secciones de una interfaz de usuario que ayudan en una navegación más eficaz para los usuarios de tecnología de asistencia (en). Al marcar el contenido en puntos de referencia y encabezados, se proporciona un usuario de lector de pantalla con la opción de hojear el contenido de forma similar a como lo haría un usuario de la vista.
 
-Los conceptos de [puntos de referencia ARIA](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page), [encabezados ARIA](https://www.w3.org/TR/WCAG20-TECHS/ARIA12.html) y [encabezados HTML](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/H42.html) llevan años utilizándose en el contenido web para permitir una navegación más rápida a los usuarios de lectores de pantalla. Las páginas web usan los puntos de referencia y los encabezados para que su contenido sea más utilizable, ya que permiten a los usuarios de tecnología de asistencia acceder rápidamente al fragmento grande (punto de referencia) y al fragmento más pequeño (encabezado). En concreto, los lectores de pantalla cuentan con comandos que permiten a los usuarios saltar entre puntos de referencia y entre encabezados (siguiente o anterior, o un nivel de encabezado específico). Por estos mismos motivos, es importante tener en cuenta los puntos de referencia y los encabezados en tus aplicaciones.
+Los conceptos de [puntos de referencia de Aria](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page), [encabezados de Aria](https://www.w3.org/TR/WCAG20-TECHS/ARIA12.html)y [encabezados HTML](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/H42.html) se han usado en el contenido web durante años para permitir una navegación más rápida por los usuarios del lector de pantalla. Las páginas web usan puntos de referencia y encabezados para que el contenido sea más fácil de usar, ya que permite al usuario obtener acceso rápidamente al fragmento grande (punto de referencia) y al fragmento más pequeño (título). En concreto, los lectores de pantalla tienen comandos que permiten a los usuarios saltar entre puntos de referencia y saltar entre los encabezados (nivel de encabezado siguiente o anterior o específico). Es importante tener en cuenta los puntos de referencia y los encabezados de las aplicaciones por las mismas razones.
 
-Los puntos de referencia permiten agrupar el contenido en distintas categorías, como búsqueda, navegación, contenido principal, etc. Una vez agrupado, el usuario de tecnología de asistencia puede navegar rápidamente entre los grupos. Esta navegación rápida permite al usuario omitir cantidades potencialmente significativas de contenido que anteriormente podría haber tenido que recorrer punto por punto, lo que resultaba en una experiencia de baja calidad. 
+Los puntos de referencia permiten agrupar el contenido en diversas categorías, como la búsqueda, la navegación, el contenido principal, etc. Una vez agrupado, el usuario en puede desplazarse rápidamente entre los grupos. Esta navegación rápida permite al usuario omitir cantidades potencialmente substanciales de contenido que antes se había tenido que navegar por elementos por elemento para una experiencia deficiente.
 
-Por ejemplo, si usas un panel de pestañas, considéralo un punto de referencia de navegación. Si usas un cuadro de edición de búsqueda, considéralo un punto de referencia de búsqueda, y piensa en la posibilidad de configurar el contenido principal como un punto de referencia de contenido principal. Tanto si está dentro de algún punto de referencia como si está fuera, considera la posibilidad de establecer subelementos como encabezados de niveles de título lógicos. 
+Por ejemplo, al usar un panel de pestañas, considere este punto de referencia de navegación. Cuando use un cuadro de edición de búsqueda, tenga en cuenta este punto de referencia de búsqueda y considere la posibilidad de configurar el contenido principal como punto de referencia de contenido principal. Ya sea dentro de un punto de referencia o incluso fuera de un punto de referencia, considere la posibilidad de establecer subelementos como encabezados con niveles de encabezado lógicos.
 
-Piensa en la página **Accesibilidad** de la aplicación Configuración de Windows. 
+Considere la página **accesibilidad** en la aplicación configuración de Windows.
 
-![La página Accesibilidad de la aplicación Configuración de Windows](images/EaseOfAccessSettings.png)  
+![Página de accesibilidad en la aplicación de configuración de Windows](images/EaseOfAccessSettings.png)  
 
-Hay un cuadro de edición de búsqueda ajustado dentro de un punto de referencia de búsqueda. Los elementos de navegación de la izquierda están ajustados en un punto de referencia de navegación, y el contenido principal de la derecha está ajustado en un punto de referencia de contenido principal. Si vamos un poco más allá, en el punto de referencia navegación hay un encabezado de grupo principal llamado **Accesibilidad**, que es un nivel 1 de encabezado. Debajo están las opciones secundarias **Visión**, **Audición**, etc. Estas tienen un nivel 2 de encabezado. En el contenido principal se siguen estableciendo encabezados, y el asunto principal, **Pantalla**, se establece como nivel 1 de encabezado y los subgrupos como **Hacer todo más grande** como nivel 2 de encabezado. 
+Hay un cuadro de edición de búsqueda que se ajusta dentro de un punto de referencia de búsqueda. Los elementos de navegación de la izquierda se ajustan dentro de un punto de referencia de navegación y el contenido principal de la derecha se ajusta dentro de un punto de referencia de contenido principal. Tomando esto más en el punto de referencia de navegación hay un encabezado de grupo principal denominado **accesibilidad** , que es un nivel de encabezado 1. En, son las subopciones **vison**, **audición**, etc. Tienen un nivel de encabezado 2. La configuración de los encabezados continúa en el contenido principal de nuevo al establecer el asunto principal, **Mostrar**, como nivel de encabezado 1 y subgrupos, por ejemplo, **hacer que todo sea mayor** que el nivel de encabezado 2.
 
-La aplicación Configuración sería accesible sin puntos de referencia y encabezados, pero resulta más fácil de usar con ellos. Un usuario de lector de pantalla puede ir de manera rápida y fácil al grupo (punto de referencia) que necesite y luego acceder igual de rápido al subgrupo (encabezado). 
+La aplicación de configuración sería accesible sin puntos de referencia y encabezados, pero es más fácil de usar con ellas. Un usuario de lector de pantalla puede llegar rápida y fácilmente al grupo (punto de referencia) que necesitan y, a continuación, llegar rápidamente al subgrupo (encabezado).
 
-Usa [AutomationProperties.LandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LandmarkTypeProperty) para configurar el elemento de interfaz de usuario como el [tipo de punto de referencia](https://docs.microsoft.com/windows/desktop/WinAuto/landmark-type-identifiers) que quieras. Este elemento de la interfaz de usuario de punto de referencia encapsula todos los demás elementos de la interfaz de usuario que tienen sentido para ese punto de referencia. 
+Use [AutomationProperties. LandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LandmarkTypeProperty) para configurar el elemento de la interfaz de usuario como el [tipo de referencia](https://docs.microsoft.com/windows/desktop/WinAuto/landmark-type-identifiers) que desea. Este elemento de la interfaz de usuario de punto de referencia encapsularía todos los demás elementos de la interfaz de usuario que tienen sentido para ese punto de referencia.
 
-Usa [AutomationProperties.LocalizedLandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LocalizedLandmarkTypeProperty) para dar un nombre específicamente al punto de referencia. Si se selecciona un tipo de punto de referencia predefinido como principal o de navegación, estos nombres se usarán para el nombre del punto de referencia. Sin embargo, si se establece el tipo de punto de referencia como personalizada, es necesario dar un nombre específicamente al punto de referencia mediante esta propiedad. También puedes usar esta propiedad para reemplazar los nombres predeterminados de los tipos de punto de referencia no personalizados. 
+Use [AutomationProperties. LocalizedLandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LocalizedLandmarkTypeProperty) para asignar el nombre específico al punto de referencia. Si selecciona un tipo de punto de referencia predefinido como principal o de navegación, se usarán estos nombres para el nombre de punto de referencia. Sin embargo, si establece el tipo de punto de referencia en personalizado, debe asignar nombre específicamente al punto de referencia a través de esta propiedad. También puede usar esta propiedad para invalidar los nombres predeterminados de los tipos de puntos de referencia no personalizados.
 
-Usa [AutomationProperties.HeadingLevel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.headinglevelproperty) para establecer el elemento de la interfaz de usuario como un encabezado de un nivel específico desde *Level1* a *Level9*.
+Use [AutomationProperties. HeadingLevel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.headinglevelproperty) para establecer el elemento de la interfaz de usuario como un encabezado de un nivel específico de *Level1* a *Level9*.
 
+## <a name="examples"></a>Ejemplos
+
+Para obtener numerosos ejemplos de código que muestran cómo resolver muchos problemas comunes de accesibilidad de programación en las aplicaciones de escritorio de Windows, consulte [ejemplos de código para resolver problemas comunes de accesibilidad de programación en aplicaciones de escritorio de Windows](https://docs.microsoft.com/accessibility-tools-docs/).
+
+[Microsoft Accessibility Insights para Windows](https://github.com/microsoft/accessibility-insights-windows)hace referencia directamente a estos ejemplos de código, lo que puede ayudar a destacar muchos problemas de accesibilidad en la interfaz de usuario.

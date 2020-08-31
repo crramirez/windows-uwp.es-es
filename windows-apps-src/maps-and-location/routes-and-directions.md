@@ -1,17 +1,17 @@
 ---
 title: Mostrar rutas e indicaciones en un mapa
-description: Solicita rutas e indicaciones y muéstralas en tu aplicación.
+description: Obtenga información sobre cómo recuperar rutas y direcciones mediante la clase MapRouteFinder y mostrarlas en un MapControl en una aplicación Plataforma universal de Windows (UWP).
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
 ms.date: 09/20/2017
 ms.topic: article
-keywords: windows 10, uwp, ruta, mapa, ubicación, indicaciones
+keywords: Windows 10, UWP, ruta, mapa, ubicación, direcciones
 ms.localizationpriority: medium
-ms.openlocfilehash: e9e464f9a3b49d3a94edbc8593df58e1e7c24515
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 49c3d47bb4e1a20f89200950d505d382ac2e8335
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259338"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094732"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>Mostrar rutas e indicaciones en un mapa
 
@@ -20,8 +20,8 @@ ms.locfileid: "74259338"
 Solicita rutas e indicaciones y muéstralas en tu aplicación.
 
 >[!Note]
->Para más información sobre el uso de mapas en tu aplicación, descarga el [ejemplo de mapa para la Plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl).
->Si los mapas no son una característica principal de tu aplicación, considera la posibilidad de iniciar la aplicación de mapas de Windows en su lugar. Puedes usar los esquemas URI `bingmaps:`, `ms-drive-to:` y `ms-walk-to:` para iniciar la aplicación Mapas de Windows para mostrar mapas específicos e indicaciones paso a paso. Para obtener más información, consulta [Iniciar la aplicación Mapas de Windows](https://docs.microsoft.com/windows/uwp/launch-resume/launch-maps-app).
+>Para obtener más información sobre el uso de mapas en su aplicación, descargue el [ejemplo de mapa de plataforma universal de Windows (UWP)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl).
+>Si la asignación no es una característica básica de la aplicación, considere la posibilidad de iniciar la aplicación Windows Maps en su lugar. Puedes usar los esquemas URI `bingmaps:`, `ms-drive-to:` y `ms-walk-to:` para iniciar la aplicación Mapas de Windows para mostrar mapas específicos e indicaciones paso a paso. Para obtener más información, consulta [Iniciar la aplicación Mapas de Windows](https://docs.microsoft.com/windows/uwp/launch-resume/launch-maps-app).
 
  
 ## <a name="an-intro-to-maproutefinder-results"></a>Introducción a los resultados de MapRouteFinder
@@ -31,25 +31,25 @@ Así es como están relacionadas las clases de rutas e indicaciones:
 
 * La clase [**MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) tiene métodos que obtienen rutas e indicaciones. Estos métodos devuelven un [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult).
 
-* La clase [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult) contiene un objeto [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute). Obtén acceso a este objeto a través de la propiedad [**Route**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route) de **MapRouteFinderResult**.
+* La clase [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult) contiene un objeto [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute). Obtenga acceso a este objeto a través de la propiedad [**Route**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route) de **MapRouteFinderResult**.
 
-* La clase [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) contiene una colección de objetos [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg). Obtén acceso a esta colección a través de la propiedad [**Legs**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproute.legs) de **MapRoute**.
+* La clase [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) contiene una colección de objetos [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg). Obtenga acceso a esta colección a través de la propiedad [**piernass**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproute.legs) de **MapRoute**.
 
-* Cada clase [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) contiene una colección de objetos [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver). Accede a esta colección a través de la propiedad [**Maneuvers**](https://docs.microsoft.com/uwp/api/windows.services.maps.maprouteleg.maneuvers) de **MapRouteLeg**.
+* Cada clase [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) contiene una colección de objetos [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver). Obtenga acceso a esta colección a través de la propiedad [**maniobras**](https://docs.microsoft.com/uwp/api/windows.services.maps.maprouteleg.maneuvers) de **MapRouteLeg**.
 
-Obtén una ruta e indicaciones para ir a pie o en coche mediante una llamada a los métodos de la clase [**MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder). Por ejemplo, [**GetDrivingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getdrivingrouteasync) o [**GetWalkingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getwalkingrouteasync).
+Obtenga una ruta de conducción o de caminar llamando a los métodos de la clase [**MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) . Por ejemplo, [**GetDrivingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getdrivingrouteasync) o [**GetWalkingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getwalkingrouteasync).
 
 Cuando solicitas una ruta, puedes especificar lo siguiente:
 
 * Puedes proporcionar un punto inicial y un punto final o puedes proporcionar una serie de puntos de trayecto para calcular la ruta.
 
-    Los puntos de referencia *Stop*agrega tramos de ruta adicionales, cada uno con su propio itinerario. Para especificar puntos de referencia *stop*, usa cualquiera de las sobrecargas de [**GetDrivingRouteFromWaypointsAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getwalkingroutefromwaypointsasync).
+    Los puntos de *interrupción de detención* agregan segmentos de ruta adicionales, cada uno con su propio itinerario. Para especificar los puntos de *interrupción de detención* , use cualquiera de las sobrecargas de [**GetDrivingRouteFromWaypointsAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getwalkingroutefromwaypointsasync) .
 
-    El punto de referencia *Via* define ubicaciones intermedias entre puntos de referencia *stop*. No agregan tramos de ruta.  Son simplemente puntos de referencia que debe atravesar una ruta. Para especificar puntos de referencia *stop*, usa cualquiera de las sobrecargas de [**GetDrivingRouteFromWaypointsAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getdrivingroutefromenhancedwaypointsasync).
+    *A través* de puntos de trayecto define ubicaciones intermedias entre puntos de *interrupción de detención* . No agregan segmentos de ruta.  Son simplemente puntos de acceso que una ruta debe atravesar. Para especificar a *través* de puntos de trayecto, use cualquiera de las sobrecargas de [**GetDrivingRouteFromEnhancedWaypointsAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getdrivingroutefromenhancedwaypointsasync) .
 
-* Puedes especificar optimizaciones (por ejemplo, minimizar la distancia).
+* Puede especificar las optimizaciones (por ejemplo, minimizar la distancia).
 
-* Puedes especificar restricciones (por ejemplo, evitar autopistas).
+* Puede especificar restricciones (por ejemplo, evitar carreteras).
 
 ## <a name="display-directions"></a>Mostrar indicaciones
 
@@ -58,7 +58,7 @@ El objeto [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.
 El objeto [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) calculado tiene propiedades que proporcionan el tiempo necesario para recorrer la ruta, la longitud de la ruta y la colección de objetos [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) que contienen los tramos de la ruta. Cada objeto **MapRouteLeg** contiene una colección de objetos [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver). El objeto **MapRouteManeuver** contiene indicaciones a las que puedes tener acceso mediante su propiedad [**InstructionText**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutemaneuver.instructiontext).
 
 >[!IMPORTANT]
->Debes especificar una clave de autenticación de mapas antes de poder usar servicios de mapa. Para obtener más información, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
+>Debe especificar una clave de autenticación de Maps para poder usar Map Services. Para obtener más información, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
 
  
 
@@ -138,10 +138,10 @@ You have reached your destination.
 ## <a name="display-routes"></a>Mostrar rutas
 
 
-Para mostrar un objeto [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) en un [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl), construye una [**MapRouteView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapRouteView) con el objeto **MapRoute**. A continuación, agrega la **MapRouteView** a la colección [**Routes**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.routes) del **MapControl**.
+Para mostrar un objeto [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) en un [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl), construye una [**MapRouteView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapRouteView) con el objeto **MapRoute**. A continuación, agregue **MapRouteView** a la colección [**Routes**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.routes) de la **clase MapControl**.
 
 >[!IMPORTANT]
->Debes especificar una clave de autenticación de mapas antes de poder usar servicios de mapa o el control de mapa. Para obtener más información, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
+>Debe especificar una clave de autenticación de Maps para poder usar los servicios de mapa o el control de mapa. Para obtener más información, consulta [Solicitar una clave de autenticación de mapas](authentication-key.md).
 
  
 
@@ -190,11 +190,11 @@ private async void ShowRouteOnMap()
 }
 ```
 
-En este ejemplo se muestra lo siguiente en un [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) denominado **MapWithRoute**.
+Este ejemplo muestra lo siguiente en una [**clase MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) denominada **MapWithRoute**.
 
 ![control de mapa con la ruta visualizada.](images/routeonmap.png)
 
-Esta es una versión de este ejemplo que usa un punto de referencia *via* entre dos puntos de referencia *stop*:
+Esta es una versión de este ejemplo que usa un punto de trayecto *a través* de entre dos puntos de *interrupción de detención* :
 
 ```csharp
 using System;
@@ -244,5 +244,5 @@ private async void ShowRouteOnMap()
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [Ejemplo de mapa de UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [Directrices de diseño para mapas](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* [Vídeo de compilación 2015: uso de mapas y ubicación en el teléfono, la tableta y el PC de las aplicaciones de Windows](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Vídeo de compilación de 2015: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps (Aprovechar los mapas y la ubicación entre teléfonos, tabletas y equipos en tus aplicaciones Windows)](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Ejemplo de aplicación de tráfico para UWP](https://github.com/Microsoft/Windows-appsample-trafficapp)

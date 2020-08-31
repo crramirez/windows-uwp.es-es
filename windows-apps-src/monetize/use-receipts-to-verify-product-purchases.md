@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows 10, UWP, compras desde la aplicación, IAPs, confirmaciones, Windows. ApplicationModel. Store
 ms.localizationpriority: medium
-ms.openlocfilehash: ba87de0755469f373f9000f3d96d3021c9197985
-ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
+ms.openlocfilehash: 0bbdaa8164e5d3a7e660fc4667b7cfe3c090bc10
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82148886"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171329"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Usar recibos para comprobar la compra de productos
 
@@ -20,15 +20,15 @@ Cada transacción Microsoft Store que tiene como resultado una compra de product
 El acceso a esta información es compatible con escenarios en los que la aplicación necesita comprobar que un usuario ha adquirido la aplicación o que ha realizado compras de complementos (también denominadas productos en la aplicación o IAP) desde el Microsoft Store. Por ejemplo, imagina un juego que ofrece contenido descargado. Si el usuario que compró el contenido quiere jugar en otro dispositivo, debes comprobar que ese usuario ya sea propietario del contenido. Esta es la manera de hacerlo.
 
 > [!IMPORTANT]
-> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows. ApplicationModel. Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) para obtener y validar una confirmación para una compra desde la aplicación. Si usa el espacio de nombres [Windows. Services. Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store) para las compras desde la aplicación (introducida en la versión 1607 de Windows 10 y disponible para los proyectos que tienen como destino **Windows 10 aniversario Edition (10,0). Compilación 14393)** o una versión posterior en Visual Studio), este espacio de nombres no proporciona una API para obtener confirmaciones de compra para compras desde la aplicación. Sin embargo, puede usar un método REST en la API de colección Microsoft Store para obtener datos de una transacción de compra. Para obtener más información, consulta [Recibos de las compras desde la aplicación](in-app-purchases-and-trials.md#receipts).
+> En este artículo se muestra cómo usar los miembros del espacio de nombres [Windows. ApplicationModel. Store](/uwp/api/Windows.ApplicationModel.Store) para obtener y validar una confirmación para una compra desde la aplicación. Si usa el espacio de nombres [Windows. Services. Store](/uwp/api/Windows.Services.Store) para las compras desde la aplicación (introducida en la versión 1607 de Windows 10 y disponible para los proyectos que tienen como destino **Windows 10 aniversario Edition (10,0). Compilación 14393)** o una versión posterior en Visual Studio), este espacio de nombres no proporciona una API para obtener confirmaciones de compra para compras desde la aplicación. Sin embargo, puede usar un método REST en la API de colección Microsoft Store para obtener datos de una transacción de compra. Para obtener más información, consulta [Recibos de las compras desde la aplicación](in-app-purchases-and-trials.md#receipts).
 
 ## <a name="requesting-a-receipt"></a>Solicitar un recibo
 
 
 El espacio de nombres **Windows.ApplicationModel.Store** admite varias formas de obtener un recibo:
 
-* Cuando realizas una compra usando [CurrentApp.RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) o [CurrentApp.RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) (o una de las sobrecargas de este método), el valor devuelto contiene el recibo.
-* Puedes llamar al método [CurrentApp.GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync) para recuperar la información de recibo actual para tu aplicación y para cualquier complemento de la aplicación.
+* Cuando realizas una compra usando [CurrentApp.RequestAppPurchaseAsync](/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) o [CurrentApp.RequestProductPurchaseAsync](/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) (o una de las sobrecargas de este método), el valor devuelto contiene el recibo.
+* Puedes llamar al método [CurrentApp.GetAppReceiptAsync](/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync) para recuperar la información de recibo actual para tu aplicación y para cualquier complemento de la aplicación.
 
 Un recibo de aplicación tiene la siguiente apariencia.
 
@@ -87,7 +87,7 @@ Puedes usar cualquiera de estos ejemplos de recibo para probar tu código de val
 
 ## <a name="validating-a-receipt"></a>Validar un recibo
 
-Para validar la autenticidad de un recibo, necesitas que tu sistema back-end (un servicio web o algo similar) compruebe la firma del recibo usando el certificado público. Para obtener este certificado, use la dirección ```https://lic.apps.microsoft.com/licensing/certificateserver/?cid=CertificateId%60%60%60, where ```URL CertificateId ' ' ' es el valor de **CertificateId** en la recepción.
+Para validar la autenticidad de un recibo, necesitas que tu sistema back-end (un servicio web o algo similar) compruebe la firma del recibo usando el certificado público. Para obtener este certificado, use la dirección URL ```https://lic.apps.microsoft.com/licensing/certificateserver/?cid=CertificateId%60%60%60, where ``` CertificateId ' ' ' es el valor de **CertificateId** en la recepción.
 
 Este es un ejemplo del proceso de validación. Este código se ejecuta en una aplicación de consola de .NET Framework que incluye una referencia al ensamblado **System.Security**.
 
@@ -146,7 +146,7 @@ Este elemento contiene información sobre una compra desde la aplicación de la 
 |-------------|-------------------|
 |  **Id**  |    Identifica la compra.           |
 |  **AppId**  |     Identifica la aplicación a través del cual el usuario realizó la compra.           |
-|  **IdProducto**  |     Identifica el producto comprado.           |
+|  **ProductId**  |     Identifica el producto comprado.           |
 |  **ProductType**  |    Determina el tipo de producto. Actualmente solo admite un valor de **Duradero**.          |  
 |  **PurchaseDate**  |    Fecha cuando se realizó la compra.          |  |
 

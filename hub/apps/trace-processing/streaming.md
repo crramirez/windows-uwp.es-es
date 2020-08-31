@@ -5,12 +5,12 @@ author: maiak
 ms.author: maiak
 ms.date: 02/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: e04f306a6a5c03d1f502b9cfb6c2cbb737e0098f
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: 6ad0f5977ed4d739ce3133c9e67c0eefc6e0cbd9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629086"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168829"
 ---
 # <a name="use-streaming-with-traceprocessor"></a>Uso de streaming con TraceProcessor
 
@@ -141,7 +141,7 @@ De forma predeterminada, todos los datos de streaming se proporcionan durante el
 
 Algunas diferencias clave en el uso entre el almacenamiento en búfer y el streaming:
 
-1. El almacenamiento en búfer devuelve un [&gt;IPendingResult&lt;t ](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.ipendingresult-1)y el resultado que contiene solo está disponible antes de que se haya procesado el seguimiento. Una vez procesado el seguimiento, los resultados se pueden enumerar mediante técnicas como foreach y LINQ.
+1. El almacenamiento en búfer devuelve un [IPendingResult &lt; T &gt; ](/dotnet/api/microsoft.windows.eventtracing.ipendingresult-1)y el resultado que contiene solo está disponible antes de que se haya procesado el seguimiento. Una vez procesado el seguimiento, los resultados se pueden enumerar mediante técnicas como foreach y LINQ.
 2. Streaming devuelve void y, en su lugar, toma un argumento de devolución de llamada. Llama una vez a la devolución de llamada cuando cada elemento está disponible. Dado que los datos no se almacenan en búfer, nunca hay una lista de resultados que se deben enumerar con foreach o LINQ: la devolución de llamada de streaming necesita almacenar en búfer la parte de los datos que desea guardar para su uso una vez completado el procesamiento.
 3. El código para procesar los datos almacenados en búfer aparece después de la llamada a Trace. Process (), cuando los resultados pendientes están disponibles.
 4. El código para procesar los datos de streaming aparece antes de la llamada a Trace. Process (), como devolución de llamada al seguimiento. UseStreaming. use... método ().
@@ -176,7 +176,7 @@ Además, trace. UseStreaming () proporciona eventos analizados para varios tipos
 
 Por último, trace. UseStreaming () también proporciona los eventos subyacentes que se usan para correlacionar los datos de la lista anterior. Estos eventos subyacentes son:
 
-| Código                                                        | Descripción                                                                                | Se incluye en                                 |
+| Código                                                        | Descripción                                                                                | Incluido en                                 |
 |-------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------|
 | seguimiento. UseStreaming(). UseCompactContextSwitchEvents()        | Secuencias analizadas eventos de cambio de contexto de compactos.                                              | seguimiento. UseStreaming(). UseContextSwitchData() |
 | seguimiento. UseStreaming(). UseContextSwitchEvents()               | Eventos de cambio de contexto analizados de secuencias. Es posible que SwitchInThreadIds no sea preciso en algunos casos. | seguimiento. UseStreaming(). UseContextSwitchData() |

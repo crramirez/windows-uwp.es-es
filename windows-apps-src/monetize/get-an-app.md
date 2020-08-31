@@ -1,50 +1,50 @@
 ---
 ms.assetid: DAF92881-6AF6-44C7-B466-215F5226AE04
-description: Utilice este método en la API de envío de Microsoft Store para recuperar información acerca de una aplicación específica que está registrada en la cuenta del centro de partners.
+description: Use este método en la API de envío de Microsoft Store para recuperar información acerca de una aplicación específica registrada en su cuenta del centro de Partners.
 title: Obtener una aplicación
 ms.date: 02/28/2018
 ms.topic: article
-keywords: windows 10, uwp, Microsoft Store submission API, API de envío de Microsoft Store, app, aplicación
+keywords: Windows 10, UWP, API de envío de Microsoft Store, aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 96efc6145d382d4f6a996e541d638f2a1d896e80
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 29f4b7fdb196e1463f4e738618694363094933f0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372661"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171479"
 ---
 # <a name="get-an-app"></a>Obtener una aplicación
 
-Utilice este método en la API de envío de Microsoft Store para recuperar información acerca de una aplicación específica que está registrada en la cuenta del centro de partners.
+Use este método en la API de envío de Microsoft Store para recuperar información acerca de una aplicación específica registrada en su cuenta del centro de Partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) para la API de envío de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* Si todavía no lo ha hecho, complete todos los [requisitos previos](create-and-manage-submissions-using-windows-store-services.md#prerequisites) de la API de envío de Microsoft Store.
+* [Obtén un token de acceso de Azure AD](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Una vez que haya obtenido un token de acceso, tiene 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
 Este método tiene la siguiente sintaxis. Consulta las siguientes secciones para ver ejemplos de uso y descripciones tanto del encabezado como del cuerpo de la solicitud.
 
-| Método | URI de la solicitud                                                      |
+| Método | URI de solicitud                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}` |
 
 
-### <a name="request-header"></a>Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de solicitud
 
-| Header        | Tipo   | Descripción                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
+| Authorization | string | Necesario. El token de acceso de Azure AD del formulario **Bearer** &lt;*token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
 | Nombre        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Obligatorio. El Id. de la Tienda de la aplicación que se recuperará. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Necesario. El Id. de la Tienda de la aplicación que se recuperará. Para obtener más información sobre el identificador de la Tienda, consulta [Ver detalles de identidad de las aplicaciones](../publish/view-app-identity-details.md).  |
 
 
 ### <a name="request-body"></a>Cuerpo de la solicitud
@@ -53,14 +53,14 @@ No incluyas un cuerpo de la solicitud para este método.
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-En el siguiente ejemplo se muestra cómo recuperar información acerca de una aplicación con el valor de Id. de la Store 9NBLGGH4R315.
+En el ejemplo siguiente se muestra cómo recuperar información sobre una aplicación con el valor de ID. de almacén 9NBLGGH4R315.
 
 ```json
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Respuesta
+## <a name="response"></a>Response
 
 En el siguiente ejemplo se muestra el cuerpo de la respuesta JSON de una llamada satisfactoria a este método. Para obtener más información acerca de los valores del cuerpo de la respuesta, consulta [Recurso de aplicación](get-app-data.md#application_object).
 
@@ -91,12 +91,12 @@ Si la solicitud no se puede completar correctamente, la respuesta contendrá uno
 | Código de error |  Descripción   |
 |--------|------------------|
 | 404  | No se pudo encontrar la aplicación especificada. |
-| 409  | La aplicación usa una característica del centro de partners que está [no compatible actualmente con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | La aplicación usa una característica del centro de partners que [actualmente no es compatible con la API de envío de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Crear y administrar envíos de uso de servicios de Microsoft Store](create-and-manage-submissions-using-windows-store-services.md)
+* [Crear y administrar envíos con Microsoft Store Services](create-and-manage-submissions-using-windows-store-services.md)
 * [Obtener todas las aplicaciones](get-all-apps.md)
-* [Obtener los vuelos de paquete para una aplicación](get-flights-for-an-app.md)
-* [Obtenga complementos para una aplicación](get-add-ons-for-an-app.md)
+* [Obtener paquetes piloto para una aplicación](get-flights-for-an-app.md)
+* [Obtener complementos para una aplicación](get-add-ons-for-an-app.md)

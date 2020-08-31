@@ -1,33 +1,33 @@
 ---
 title: Animaciones basadas en el tiempo
-description: Usa las clases KeyFrameAnimation para cambiar la interfaz de usuario con el tiempo.
+description: Aprenda a usar las clases KeyFrameAnimations para crear animaciones basadas en tiempo que guíen a los usuarios a través de cambios en la interfaz de usuario.
 ms.date: 12/12/2018
 ms.topic: article
-keywords: windows 10, uwp, animación
+keywords: Windows 10, UWP, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 838a8c3a6dfe89de49fddefd28c53cea563408cf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c63f59e7bcf282dc829d0fb8fa5971113f7638ad
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593170"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053595"
 ---
 # <a name="time-based-animations"></a>Animaciones basadas en tiempo
 
-Cuando cambian un componente de la experiencia de usuario o esta en su totalidad, los usuarios finales a menudo lo ven de dos formas: con el tiempo o de forma instantánea. En la plataforma Windows, la primera opción es preferible a la última: experiencias de usuario al instante cambian a menudo se confunden y sorprenden a los usuarios finales porque no pueden seguir ¿qué ha ocurrido. Por ello, el usuario final percibe la experiencia como molesta y poco natural.
+Cuando un componente de, o toda la experiencia del usuario cambia, los usuarios finales suelen observar esto de dos maneras: a lo largo del tiempo o de forma instantánea. En la plataforma Windows, la primera es preferible a las experiencias de usuario más recientes que cambian con frecuencia y se sorprende a los usuarios finales, ya que no pueden seguir lo que ha sucedido. A continuación, el usuario final percibe la experiencia como discordante y no natural.
 
-En su lugar, puedes cambiar la interfaz de usuario con el tiempo para guiar al usuario final a través de los cambios en la experiencia o notificárselos. En la plataforma de Windows esto se realiza mediante el uso de animaciones basadas en tiempo, también conocidas como KeyFrameAnimations. Las KeyFrameAnimations te permiten cambiar una interfaz de usuario con el tiempo y controlar todos los aspectos de la animación, incluido cómo y cuándo se inicia y cómo llega a su estado final. Por ejemplo, animar un objeto a una nueva posición en 300 milisegundos es más agradable que "teletransportarlo" allí de forma instantánea. Cuando se usan animaciones en lugar de cambios instantáneos, el resultado final es una experiencia más agradable y atractiva.
+En su lugar, puede cambiar la interfaz de usuario a lo largo del tiempo para guiar al usuario final a través de o notificarles los cambios en la experiencia. En la plataforma de Windows, esto se hace mediante animaciones basadas en el tiempo, también conocido como KeyFrameAnimations. KeyFrameAnimations permiten cambiar una interfaz de usuario a lo largo del tiempo y controlar cada aspecto de la animación, lo que incluye cómo y cuándo se inicia y cómo alcanza su estado final. Por ejemplo, la animación de un objeto en una nueva posición superior a 300 milisegundos es más agradable que el "teleporting" al instante. Al usar animaciones en lugar de cambios instantáneos, el resultado neto es una experiencia más agradable y atractiva.
 
 ## <a name="types-of-time-based-animations"></a>Tipos de animaciones basadas en tiempo
 
-Existen dos categorías de animaciones basadas en tiempo que puedes usar para crear experiencias de usuario atractivas en Windows:
+Existen dos categorías de animaciones basadas en el tiempo que puede usar para crear experiencias de usuario atractivas en Windows:
 
-**Animaciones explícitas**: Como su nombre indica, inicias la animación explícitamente para realizar actualizaciones.
-**Animaciones implícitas**: Estas animaciones las activa el sistema por ti cuando se cumple una condición.
+**Animaciones explícitas** : como el nombre indica, se inicia explícitamente la animación para efectuar actualizaciones.
+**Animaciones implícitas** : el sistema inicia estas animaciones en su nombre cuando se cumple una condición.
 
-En este artículo analizaremos cómo crear y usar animaciones basadas en tiempo _explícitas_ con KeyFrameAnimations.
+En este artículo, se explica cómo crear y usar animaciones _explícitas_ basadas en tiempo con KeyFrameAnimations.
 
-Tanto para las animaciones basadas en implícitas como para las explícitas existen diferentes tipos, que se corresponden a los distintos tipos de propiedades de CompositionObjects que se pueden animar.
+En el caso de animaciones basadas en tiempo implícitas y explícitas, hay tipos diferentes, correspondientes a los diferentes tipos de propiedades de CompositionObjects, que se pueden animar.
 
 - ColorKeyFrameAnimation
 - QuaternionKeyFrameAnimation
@@ -36,57 +36,57 @@ Tanto para las animaciones basadas en implícitas como para las explícitas exis
 - Vector3KeyFrameAnimation
 - Vector4KeyFrameAnimation
 
-## <a name="create-time-based-animations-with-keyframeanimations"></a>Creación de animaciones basadas en tiempo con KeyFrameAnimations
+## <a name="create-time-based-animations-with-keyframeanimations"></a>Crear animaciones basadas en tiempo con KeyFrameAnimations
 
-Antes de describir cómo crear animaciones basadas en tiempo explícitas con KeyFrameAnimations, vamos a revisar algunos conceptos.
+Antes de describir cómo crear animaciones explícitas basadas en tiempo con KeyFrameAnimations, vamos a analizar algunos conceptos.
 
-- Fotogramas clave: Se trata de la "instantáneas" individuales que una animación irá animando.
-  - Se definen como pares de clave y valor. La clave representa el progreso entre 0 y 1,es decir, en qué punto de la duración de la animación tiene lugar esta "instantánea". El otro parámetro representa el valor de la propiedad en este momento.
-- Propiedades de KeyFrameAnimation: Opciones de personalización puedes aplicar para satisfacer las necesidades de la interfaz de usuario.
-  - DelayTime: El tiempo que transcurre antes del inicio de una animación tras una llamada a StartAnimation.
-  - Duration: duración de la animación.
-  - IterationBehavior: recuento o comportamiento repetitivo infinito de una animación.
-  - IterationCount: número de veces limitadas que se repetirá una animación de fotogramas clave
-  - KeyFrameCount: lectura del número de fotogramas clave en una animación de fotogramas clave determinada
+- Fotogramas clave: son las "instantáneas" individuales en las que se animará una animación.
+  - Definido como pares clave-valor &. La clave representa el progreso entre 0 y 1, también conocido en qué punto de la duración de la animación tiene lugar la "instantánea". El otro parámetro representa el valor de la propiedad en este momento.
+- Propiedades de KeyFrameAnimation: opciones de personalización que se pueden aplicar para satisfacer las necesidades de la interfaz de usuario.
+  - DelayTime: tiempo antes de que se inicie una animación después de llamar a StartAnimation.
+  - Duración: duración de la animación.
+  - IterationBehavior: recuento o comportamiento de repetición infinito para una animación.
+  - IterationCount: número de veces finitas que se repetirá una animación de fotogramas clave.
+  - Recuento de fotogramas clave: lectura de cuántos fotogramas clave en una animación de fotogramas clave determinada.
   - StopBehavior: especifica el comportamiento de un valor de propiedad de animación cuando se llama a StopAnimation
-  - Direction: Especifica la dirección de la animación para su reproducción.
-- Animation Group: Inicio de varias animaciones al mismo tiempo.
-  - Se suele usar cuando se desea animar varias propiedades a la vez.
+  - Direction: especifica la dirección de la animación para la reproducción.
+- Grupo de animación: iniciar varias animaciones al mismo tiempo.
+  - Se utiliza a menudo cuando se desea animar varias propiedades al mismo tiempo.
 
-Para obtener más información, consulta [CompositionAnimationGroup](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionanimationgroup).
+Para obtener más información, consulte [CompositionAnimationGroup](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionanimationgroup).
 
-Con estos conceptos en mente, vamos a comentar la fórmula general para crear una KeyFrameAnimation:
+Teniendo en cuenta estos conceptos, vamos a consultar la fórmula general para construir un KeyFrameAnimation:
 
-1. Identifica el CompositionObject y su propiedad respectiva que tengas que animar.
-1. Crea una plantilla de tipo KeyFrameAnimation en el compositor que coincida con el tipo de propiedad que quieres animar.
-1. Con la plantilla de animación, empezar a agregar fotogramas clave y a definir las propiedades de la animación.
-    - Se requiere al menos un fotograma clave (el fotograma clave 100 % o 1f).
-    - Se recomienda definir también una duración.
-1. Una vez que esté listo para ejecutar esta animación, a continuación, llamar a StartAnimation(...) en el CompositionObject, destinadas a la propiedad que desea animar. Concretamente:
+1. Identifique el CompositionObject y su propiedad respectiva que debe animar.
+1. Cree una plantilla de tipo KeyFrameAnimation del compositor que coincida con el tipo de propiedad que desee animar.
+1. Con la plantilla de animación, empiece a agregar fotogramas clave y a definir propiedades de la animación.
+    - Se requiere al menos un fotograma clave (el fotograma clave 100% o 1F).
+    - También se recomienda definir una duración.
+1. Una vez que esté listo para ejecutar esta animación, llame a StartAnimation (...) en el CompositionObject, dirigido a la propiedad que desea animar. Concretamente:
     - `visual.StartAnimation("targetProperty", CompositionAnimation animation);`
     - `visual.StartAnimationGroup(AnimationGroup animationGroup);`
-1. Si tiene una animación en ejecución y que desea detener la animación o un grupo de animación, puede usar estas API:
+1. Si tiene una animación en ejecución y desea detener la animación o el grupo de animaciones, puede usar estas API:
     - `visual.StopAnimation("targetProperty");`
     - `visual.StopAnimationGroup(AnimationGroup AnimationGroup);`
 
-Veamos un ejemplo para ver esta fórmula en acción.
+Echemos un vistazo a un ejemplo para ver esta fórmula en acción.
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo, desea animar el desplazamiento de un objeto visual desde < 0,0,0 > a < 200,0,0 > superior a 1 segundo. Además quieres ver que el objeto visual se anime entre estas posiciones 10 veces.
+En este ejemplo, desea animar el desplazamiento de un control visual desde <0, 0, 0> a <200, 0, 0> más de 1 segundo. Además, desea ver la animación visual entre estas posiciones 10 veces.
 
-![Animación de los fotogramas clave](images/animation/animated-rectangle.gif)
+![Animación de fotogramas clave](images/animation/animated-rectangle.gif)
 
-Primero tenemos que empezar por identificar el CompositionObject y la propiedad que quieres animar. En este caso, el cuadrado rojo lo representa una objeto visual de composición denominado `redVisual`. La animación se inicia desde este objeto.
+Primero debe empezar por identificar el CompositionObject y la propiedad que desea animar. En este caso, el cuadrado rojo se representa mediante un visual de composición denominado `redVisual` . La animación se inicia a partir de este objeto.
 
-A continuación, ya que quieres animar la propiedad Offset, deberás crear una Vector3KeyFrameAnimation (Offset es de tipo Vector3). También debes definir los fotogramas clave correspondientes para la KeyFrameAnimation.
+Después, como desea animar la propiedad offset, debe crear un Vector3KeyFrameAnimation (el desplazamiento es del tipo Vector3). También se definen los fotogramas clave correspondientes para el KeyFrameAnimation.
 
 ```csharp
     Vector3KeyFrameAnimation animation = compositor.CreateVector3KeyFrameAnimation();
     animation.InsertKeyFrame(1f, new Vector3(200f, 0f, 0f));
 ```
 
-A continuación, defina las propiedades de la KeyFrameAnimation para describir su duración, junto con el comportamiento para animar entre las dos posiciones (actual y < 200,0,0 >) 10 veces.
+A continuación, defina las propiedades de KeyFrameAnimation para describir su duración, junto con el comportamiento para animar entre las dos posiciones (actual y <200, 0,0>) 10 veces.
 
 ```csharp
     animation.Duration = TimeSpan.FromSeconds(2);
@@ -95,7 +95,7 @@ A continuación, defina las propiedades de la KeyFrameAnimation para describir s
     animation.IterationCount = 10;
 ```
 
-Por último, para poder ejecutar una animación, debes iniciarla en una propiedad de un CompositionObject.
+Por último, para ejecutar una animación, debe iniciarla en una propiedad de un CompositionObject.
 
 ```csharp
 redVisual.StartAnimation("Offset", animation);

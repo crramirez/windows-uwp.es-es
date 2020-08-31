@@ -6,16 +6,16 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d5ac50cdba542de56ffb1daee01da12d4979ac45
-ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
+ms.openlocfilehash: 01e3a1d012e6c309f1c486417708457dd31c2c22
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84945983"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171009"
 ---
 # <a name="package-version-numbering"></a>Numeración de la versión del paquete
 
-Cada paquete que proporciones debe tener un número de versión (proporcionado como un valor en el atributo **Version** del elemento [Package/Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) en el manifiesto de la aplicación). El Microsoft Store exige ciertas reglas relacionadas con los números de versión, que funcionan de forma ligeramente diferente en diferentes versiones del sistema operativo.
+Cada paquete que proporciones debe tener un número de versión (proporcionado como un valor en el atributo **Version** del elemento [Package/Identity](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) en el manifiesto de la aplicación). El Microsoft Store exige ciertas reglas relacionadas con los números de versión, que funcionan de forma ligeramente diferente en diferentes versiones del sistema operativo.
 
 > [!NOTE]
 > En este tema se hace referencia a "packages", pero a menos que se indique lo contrario, las mismas reglas se aplican a los números de versión de los archivos. msix/. appx y. msixbundle/. appxbundle.
@@ -28,7 +28,7 @@ Cada paquete que proporciones debe tener un número de versión (proporcionado c
 
 Al elegir un paquete de UWP del envío publicado, el Microsoft Store usará siempre el paquete de versión más reciente que sea aplicable al dispositivo Windows 10 del cliente. Esto te da más flexibilidad y te permite controlar qué paquetes se proporcionan a los clientes en tipos específicos de dispositivo. Es importante señalar que puedes enviar los paquetes en cualquier orden; no es necesario que los paquetes de un envío posterior tengan un número de versión más alto.
 
-Puede proporcionar varios paquetes de UWP con el mismo número de versión. Sin embargo, los paquetes con el mismo número de versión no pueden tener también la misma arquitectura, ya que la identidad completa que la Tienda usa para cada paquete debe ser exclusiva. Para obtener más información, consulta [**Identity**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity).
+Puede proporcionar varios paquetes de UWP con el mismo número de versión. Sin embargo, los paquetes con el mismo número de versión no pueden tener también la misma arquitectura, ya que la identidad completa que la Tienda usa para cada paquete debe ser exclusiva. Para obtener más información, consulta [**Identity**](/uwp/schemas/appxpackage/uapmanifestschema/element-identity).
 
 Cuando se proporcionan varios paquetes UWP que usan el mismo número de versión, se usará la arquitectura (en el orden x64, x86, ARM, neutral) para decidir cuál es de rango superior (cuando el almacén determina qué paquete se debe proporcionar al dispositivo de un cliente). Al clasificar lotes de aplicaciones que usan el mismo número de versión, se detiene en cuenta la arquitectura de mayor rango. Un lote de aplicaciones con un paquete x64 tiene un rango superior a otro que solo contenga un paquete x86.
 

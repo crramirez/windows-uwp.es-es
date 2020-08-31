@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b30f2e9d08fd36686045523c54180829570cbd2d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5da59c85f2b091ce21b9da5bb676a410a4b318ba
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372869"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171319"
 ---
 # <a name="getting-started-animation"></a>Introducción: Animación
 
@@ -54,9 +54,9 @@ A continuación, vuelve a mostrar el rectángulo. En la ventana **Objetos y esca
 
 Por último, haz clic en el botón **Reproducir** para ver qué sucede.
 
-Puedes compilar y ejecutar el proyecto haciendo clic en el botón de ejecución verde en la parte superior de la ventana (también puedes presionar F5). Si lo haces, verás que el proyecto efectivamente se compila y ejecuta, pero el rectángulo verde no se mueve ni un ápice, como un bebé plantado en el pasillo de un supermercado junto al dulce que sus padres no quieren comprarle. Para iniciar la animación, tienes que agregar una línea de código al proyecto. A continuación se muestra cómo hacerlo.
+Puedes compilar y ejecutar el proyecto haciendo clic en el botón de ejecución verde en la parte superior de la ventana (también puedes presionar F5). Si lo haces, verás que el proyecto efectivamente se compila y ejecuta, pero el rectángulo verde no se mueve ni un ápice, como un bebé plantado en el pasillo de un supermercado junto al dulce que sus padres no quieren comprarle. Para iniciar la animación, tienes que agregar una línea de código al proyecto. Esta es la manera de hacerlo.
 
-Guarda el proyecto abriendo el menú **Archivo** y seleccionando **Guardar MainPage.xaml**. Vuelve a Visual Studio. Si Visual Studio muestra un cuadro de diálogo que pregunta si deseas volver a cargar el archivo modificado, selecciona **Sí**. Haz doble clic en el archivo **MainPage.xaml.cs** (que está oculto en **MainPage.xaml**) para abrirlo, y agrega el siguiente código justo encima del método público MainPage():
+Guarda el proyecto abriendo el menú **Archivo** y seleccionando **Guardar MainPage.xaml**. Vuelva a Visual Studio Si Visual Studio muestra un cuadro de diálogo que pregunta si deseas volver a cargar el archivo modificado, selecciona **Sí**. Haz doble clic en el archivo **MainPage.xaml.cs** (que está oculto en **MainPage.xaml**) para abrirlo, y agrega el siguiente código justo encima del método público MainPage():
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -68,7 +68,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 Vuelve a ejecutar el proyecto y verás que el rectángulo está animado. ¡Bien!
 
-Si abres el archivo MainPage.xaml en la vista **XAML**, verás el código XAML que Blend ha agregado mientras trabajabas en el diseñador. En especial, fíjate en el código de los elementos `<Storyboard>` y `<Rectangle>`. El siguiente código se muestra a modo de ejemplo. Los puntos suspensivos indican código no relacionado que se omite por razones de brevedad; se han agregado saltos de línea para facilitar la lectura del código.
+Si abres el archivo MainPage.xaml en la vista **XAML**, verás el código XAML que Blend ha agregado mientras trabajabas en el diseñador. En especial, fíjate en el código de los elementos `<Storyboard>` y `<Rectangle>`. El código siguiente muestra un ejemplo. Los puntos suspensivos indican código no relacionado que se omite por razones de brevedad; se han agregado saltos de línea para facilitar la lectura del código.
 
 ```xml
 ...
@@ -124,10 +124,10 @@ Si abres el archivo MainPage.xaml en la vista **XAML**, verás el código XAML q
 ...
 ```
 
-Puedes modificar este XAML manualmente o regresar a Blend y seguir trabajando desde allí. Con Blend es más divertido crear interfaces de usuario atractivas, y la capacidad para animarlas mediante una herramienta gráfica puede acelerar considerablemente el tiempo de desarrollo. Para más información sobre las animaciones, consulta [Información general sobre animaciones](https://docs.microsoft.com/windows/uwp/graphics/animations-overview).
+Puedes modificar este XAML manualmente o regresar a Blend y seguir trabajando desde allí. Con Blend es más divertido crear interfaces de usuario atractivas, y la capacidad para animarlas mediante una herramienta gráfica puede acelerar considerablemente el tiempo de desarrollo. Para más información sobre las animaciones, consulta [Información general sobre animaciones](../design/motion/xaml-animation.md).
 
-**Tenga en cuenta**  para obtener información acerca de las animaciones para <span class="legacy-term">aplicaciones para UWP con JavaScript y HTML</span>, consulte [animar la interfaz de usuario (HTML)](https://docs.microsoft.com/previous-versions/windows/apps/hh465165(v=win.10)).
+**Nota:**    Para obtener información sobre las animaciones de las <span class="legacy-term">aplicaciones para UWP con JavaScript y HTML</span>, consulte [animación de la interfaz de usuario (html)](/previous-versions/windows/apps/hh465165(v=win.10)).
 
 ### <a name="next-step"></a>Paso siguiente
 
-[Introducción: ¿Qué sigue?](getting-started-what-next.md)
+[Introducción: ¿Qué debo hacer a continuación?](getting-started-what-next.md)

@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bf1372289afcc8649fff6c2ed56ad85aad46b76c
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 70c867441aff2532627f6e2bb1bfbdc50a1510dc
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997992"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169029"
 ---
 # <a name="xphase-attribute"></a>Atributo x:Phase
 
 
-Usa **x:Phase** con la [extensión de marcado {x:Bind}](x-bind-markup-extension.md) para representar los elementos [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) y [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) de forma incremental y mejorar la experiencia de movimiento panorámica. **x:Phase** proporciona una manera declarativa de lograr el mismo efecto que si se usase el evento [**ContainerContentChanging**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) para controlar manualmente la representación de los elementos de lista. Consulta también [Actualizar los elementos ListView and GridView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
+Usa **x:Phase** con la [extensión de marcado {x:Bind}](x-bind-markup-extension.md) para representar los elementos [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) y [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView) de forma incremental y mejorar la experiencia de movimiento panorámica. **x:Phase** proporciona una manera declarativa de lograr el mismo efecto que si se usase el evento [**ContainerContentChanging**](/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) para controlar manualmente la representación de los elementos de lista. Consulta también [Actualizar los elementos ListView and GridView de forma incremental](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
 ## <a name="xaml-attribute-usage"></a>Uso del atributo XAML
 
@@ -32,7 +32,7 @@ Usa **x:Phase** con la [extensión de marcado {x:Bind}](x-bind-markup-extension.
 |------|-------------|
 | PhaseValue | Un número que indica la fase en la que se procesará el elemento. El valor predeterminado es 0. | 
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Si una lista se mueve panorámicamente con el dedo o la rueda del ratón, tal vez no se puedan representar los elementos a la misma velocidad que el desplazamiento en función de la complejidad de la plantilla de datos. Esto es especialmente cierto para un dispositivo portátil con una CPU eficaz, como una tableta.
 
@@ -69,15 +69,14 @@ La plantilla de datos describe 4 fases:
 3.  Muestra los bloques de texto prettyFileSize y prettyImageSize.
 4.  Muestra la imagen.
 
-El escalonamiento es una característica de [{x:Bind}](x-bind-markup-extension.md) que funciona con los controles derivados de [**ListViewBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase) y que procesa incrementalmente la plantilla de elementos para el enlace de datos. Al representar elementos de lista, **ListViewBase** representa una sola fase para todos los elementos en la vista antes de pasar a la fase siguiente. El trabajo de representación se realiza en lotes divididos por tiempo para que durante el desplazamiento por la lista se pueda reevaluar el trabajo necesario y no se realice en el caso de elementos que ya no queden a la vista.
+El escalonamiento es una característica de [{x:Bind}](x-bind-markup-extension.md) que funciona con los controles derivados de [**ListViewBase**](/uwp/api/Windows.UI.Xaml.Controls.ListViewBase) y que procesa incrementalmente la plantilla de elementos para el enlace de datos. Al representar elementos de lista, **ListViewBase** representa una sola fase para todos los elementos en la vista antes de pasar a la fase siguiente. El trabajo de representación se realiza en lotes divididos por tiempo para que durante el desplazamiento por la lista se pueda reevaluar el trabajo necesario y no se realice en el caso de elementos que ya no queden a la vista.
 
-El atributo **x:Phase** se puede especificar en cualquier elemento de una plantilla de datos que use [{x:Bind}](x-bind-markup-extension.md). Cuando un elemento tiene una fase distinta de 0, el elemento se ocultará de la vista (a través de **Opacity**, no **Visibility**) hasta que dicha fase se procese y se actualicen los enlaces. Cuando se desplace un control derivado de [**ListViewBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), reciclará las plantillas de elemento de los elementos que ya no están en la pantalla para representar los nuevos elementos visibles. Los elementos de la interfaz de usuario dentro de la plantilla conservan sus valores antiguos hasta que están enlazados a datos nuevamente. El escalonamiento hace que el paso de enlace de datos se retrase y, por tanto, necesite ocultar los elementos de interfaz de usuario en caso de que estén obsoletos.
+El atributo **x:Phase** se puede especificar en cualquier elemento de una plantilla de datos que use [{x:Bind}](x-bind-markup-extension.md). Cuando un elemento tiene una fase distinta de 0, el elemento se ocultará de la vista (a través de **Opacity**, no **Visibility**) hasta que dicha fase se procese y se actualicen los enlaces. Cuando se desplace un control derivado de [**ListViewBase**](/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), reciclará las plantillas de elemento de los elementos que ya no están en la pantalla para representar los nuevos elementos visibles. Los elementos de la interfaz de usuario dentro de la plantilla conservan sus valores antiguos hasta que están enlazados a datos nuevamente. El escalonamiento hace que el paso de enlace de datos se retrase y, por tanto, necesite ocultar los elementos de interfaz de usuario en caso de que estén obsoletos.
 
 Cada elemento de interfaz de usuario puede tener solo una fase especificada. Si es así, se aplicará a todos los enlaces en el elemento. Si no se especifica una fase, se supone la fase 0.
 
-Los números de fase no necesitan ser contiguos y son los mismos que el valor de [**ContainerContentChangingEventArgs.Phase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.containercontentchangingeventargs.phase). El evento [**ContainerContentChanging**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) se presentará para cada fase antes de que se procesen los enlaces **x:Phase**.
+Los números de fase no necesitan ser contiguos y son los mismos que el valor de [**ContainerContentChangingEventArgs.Phase**](/uwp/api/windows.ui.xaml.controls.containercontentchangingeventargs.phase). El evento [**ContainerContentChanging**](/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) se presentará para cada fase antes de que se procesen los enlaces **x:Phase**.
 
 El escalonamiento solo afecta a los enlaces [{x:Bind}](x-bind-markup-extension.md) , no a los enlaces [{Binding}](binding-markup-extension.md) .
 
-El escalonamiento solo se aplica cuando la plantilla de elementos se representa usando un control que tiene constancia del escalonamiento. Para Windows 10, esto significa [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) y [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView). El escalonamiento no se aplicará a las plantillas de datos usadas en otros controles de elementos ni en otros escenarios, como las secciones [**ContentTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.contenttemplate) o [**Hub**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Hub). En estos casos, todos los elementos de la interfaz de usuario serán datos enlazados a la vez.
-
+El escalonamiento solo se aplica cuando la plantilla de elementos se representa usando un control que tiene constancia del escalonamiento. Para Windows 10, esto significa [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) y [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView). El escalonamiento no se aplicará a las plantillas de datos usadas en otros controles de elementos ni en otros escenarios, como las secciones [**ContentTemplate**](/uwp/api/windows.ui.xaml.controls.contentcontrol.contenttemplate) o [**Hub**](/uwp/api/Windows.UI.Xaml.Controls.Hub). En estos casos, todos los elementos de la interfaz de usuario serán datos enlazados a la vez.

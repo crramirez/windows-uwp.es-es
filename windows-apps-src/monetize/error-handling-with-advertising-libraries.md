@@ -4,31 +4,31 @@ description: Aprende a controlar los errores generados por la clase AdControl en
 title: Controlar errores de anuncios
 ms.date: 02/18/2020
 ms.topic: article
-keywords: windows 10, uwp, anuncios, publicidad, control de errores, javascript, XAML, c#
+keywords: 'Windows 10, UWP, anuncios, publicidad, control de errores, JavaScript, XAML, c #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e3cc4d3d0b0cde40117a8534589f48c9d463c44
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.openlocfilehash: 2a1a82c9977bfbe61712d39e4d23fdd68cd598ae
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507119"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171559"
 ---
 # <a name="handle-ad-errors"></a>Controlar errores de anuncios
 
 >[!WARNING]
 > A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-Las clases [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol),  [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) y [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) tienen cada una un evento **ErrorOccurred** que se genera si se produce un error relacionado con los anuncios. El código de la aplicación puede controlar este evento y examinar las propiedades [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errorcode) y [ErrorMessage](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errormessage) del objeto de argumentos de evento para ayudar a determinar la causa del error.
+Cada una de las clases [AdControl](/uwp/api/microsoft.advertising.winrt.ui.adcontrol),  [InterstitialAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad)y [NativeAdsManagerV2](/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) tiene un evento **ErrorOccurred** que se genera si se produce un error relacionado con ad. El código de la aplicación puede controlar este evento y examinar las propiedades [ErrorCode](/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errorcode) y [errorMessage](/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errormessage) del objeto args del evento para ayudar a determinar la causa del error.
 
 <span id="bkmk-dotnet"/>
 
 ## <a name="xaml-apps"></a>Aplicaciones para XAML
 
-Para controlar errores relacionados con los anuncios en una aplicación XAML:
+Para controlar los errores relacionados con ad en una aplicación XAML:
 
-1. Asigna el evento **ErrorOccurred** del objeto **AdControl**, **InterstitialAd** o **NativeAdsManagerV2** al nombre de un delegado de controlador de eventos.
+1. Asigne el evento **ErrorOccurred** del objeto **AdControl**, **InterstitialAd**o **NativeAdsManagerV2** al nombre de un delegado de controlador de eventos.
 
-2. Codifica el delegado de controlador de eventos de error para que use dos parámetros: un elemento **Object** para el remitente y un objeto [AdErrorEventArgs](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs).
+2. Codifica el delegado de controlador de eventos de error para que use dos parámetros: un elemento **Object** para el remitente y un objeto [AdErrorEventArgs](/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs).
 
 Este es un ejemplo que asigna un delegado denominado **OnAdError** al evento **ErrorOccurred** de un objeto **AdControl** denominado *myBannerAdControl*.
 
@@ -60,7 +60,7 @@ Para controlar los errores de **ErrorOccur** en una aplicación de JavaScript:
 
 2.  Codifica el controlador de eventos.
 
-Este es un ejemplo que asigna un controlador de eventos denominado **errorLogger** al evento **ErrorOccurred** de un objeto **AdControl**.
+Este es un ejemplo que asigna un controlador de eventos denominado **errorLogger** al evento **ErrorOccurred** de un objeto **AdControl** .
 
 > [!div class="tabbedCodeSnippets"]
 ``` html
@@ -70,9 +70,9 @@ Este es un ejemplo que asigna un controlador de eventos denominado **errorLogger
 </div>
 ```
 
-La función de control de errores es declarativo y deben ir en la [markSupportedForProcessing](https://docs.microsoft.com/previous-versions/windows/apps/hh967819(v=win.10)) función.
+La función de control de errores es declarativo y deben ir en la [markSupportedForProcessing](/previous-versions/windows/apps/hh967819(v=win.10)) función.
 
-El controlador de errores detecta el objeto de error de JavaScript cuando se produce un error. El objeto de error proporciona dos argumentos al controlador de errores. Para obtener más información, consulta [propiedades especiales de error en métodos asincrónicos de Windows Runtime](https://docs.microsoft.com/scripting/jswinrt/special-error-properties-from-asynchronous-windows-runtime-methods).
+El controlador de errores detecta el objeto de error de JavaScript cuando se produce un error. El objeto de error proporciona dos argumentos al controlador de errores. Para obtener más información, consulta [propiedades especiales de error en métodos asincrónicos de Windows Runtime](/scripting/jswinrt/special-error-properties-from-asynchronous-windows-runtime-methods).
 
 Este es un ejemplo de una función de control de errores denominada **errorLogger**, que controla el evento **onErrorOccurred**.
 

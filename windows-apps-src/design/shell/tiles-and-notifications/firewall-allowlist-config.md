@@ -7,19 +7,19 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: Windows 10, UWP, WNS, servicio de notificaciones de Windows, notificación, Windows, firewall, solución de problemas, IP, tráfico, empresa, red, IPv4, VIP, FQDN, dirección IP pública
 ms.localizationpriority: medium
-ms.openlocfilehash: 9594b90bd3bf9a4db082586a2823f4013340b85a
-ms.sourcegitcommit: b5232934702b28102c4014a96b34f2e459c9660d
+ms.openlocfilehash: a2eb09a0b1cc6f135a23b038207bb442eb741bf8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928012"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169209"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>Configuraciones de firewall y proxy de empresa para admitir el tráfico de WNS
 
-## <a name="background"></a>Información previa
+## <a name="background"></a>Fondo
 Muchas empresas usan firewalls para bloquear el tráfico de red y los puertos no deseados; Desafortunadamente, esto también puede bloquear aspectos importantes como las comunicaciones del servicio de notificaciones de Windows. Esto significa que todas las notificaciones enviadas a través de WNS se quitarán en determinadas configuraciones de red. Para evitar esto, los administradores de red pueden agregar la lista de FQDN o VIP de WNS aprobados a su lista de exenciones para permitir que el tráfico de WNS pase a través del firewall. A continuación se muestran más detalles sobre cómo y qué agregar, así como la compatibilidad con distintos tipos de proxy.
 
-## <a name="proxy-support"></a>Compatibilidad con proxy
+## <a name="proxy-support"></a>Compatibilidad del proxy
 
 > [!Note]
 > Los clientes de Windows **no** admiten todos los servidores proxy, la conexión a WNS debe ser una conexión directa.
@@ -85,10 +85,10 @@ Si usa el servicio de notificación heredado, MPNS, los intervalos de direccione
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Inicio rápido: Envío de una notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
-* [Cómo solicitar, crear y guardar un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
-* [Cómo interceptar notificaciones para aplicaciones en ejecución](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
-* [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
-* [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
-* [Directrices y lista de comprobación de notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [Inicio rápido: Envío de una notificación de inserción](/previous-versions/windows/apps/hh868252(v=win.10))
+* [Cómo solicitar, crear y guardar un canal de notificación](/previous-versions/windows/apps/hh465412(v=win.10))
+* [Cómo interceptar notificaciones para aplicaciones en ejecución](/previous-versions/windows/apps/jj709907(v=win.10))
+* [Cómo autenticar con los Servicios de notificaciones de inserción de Windows (WNS)](/previous-versions/windows/apps/hh465407(v=win.10))
+* [Solicitud de servicio de notificaciones de inserción y encabezados de respuesta](/previous-versions/windows/apps/hh465435(v=win.10))
+* [Directrices y lista de comprobación de notificaciones de inserción](./windows-push-notification-services--wns--overview.md)
  

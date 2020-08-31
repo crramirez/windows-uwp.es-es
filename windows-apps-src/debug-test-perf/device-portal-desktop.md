@@ -2,20 +2,23 @@
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Portal de dispositivos para dispositivos de escritorio Windows
 description: Aprende cómo Windows Device Portal abre diagnóstico y automatización en el escritorio de Windows.
-ms.date: 02/06/2019
+ms.date: 08/20/2020
 ms.topic: article
 keywords: windows 10, uwp, device portal
 ms.localizationpriority: medium
-ms.openlocfilehash: 73f7e827c0ec8ca289d3523da06601de978a91d2
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: dc3ca2379ae7dd704d96e383cc02314ee9423fb7
+ms.sourcegitcommit: 508fb9e763aa5967beebf7bf5e77d7ad12baa566
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79210191"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714494"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Portal de dispositivos para dispositivos de escritorio Windows
 
-El Portal de dispositivos Windows permite ver información de diagnóstico e interactuar con el equipo de escritorio mediante HTTP desde una ventana del navegador. Puedes usar Device Portal para lo siguiente:
+El Portal de dispositivos Windows es una herramienta de depuración que permite ver información de diagnóstico e interactuar con el equipo de escritorio a través de HTTP desde un explorador web. Para depurar otros dispositivos, consulte [Introducción al Portal de dispositivos Windows](device-portal.md).
+
+
+Puedes usar Device Portal para lo siguiente:
 - Ver y manipular una lista de procesos en ejecución
 - Instalar, eliminar, iniciar y cerrar aplicaciones
 - Cambiar de perfiles Wi-Fi, ver la intensidad de señal y ver la ipconfig
@@ -35,44 +38,59 @@ A partir de Windows 10, versión 1607, algunas de las características más reci
 
 ### <a name="turn-on-device-portal"></a>Activación del Portal de dispositivos
 
-Puedes habilitar el Portal de dispositivos en la sección **Para desarrolladores** de **Configuración**. Al habilitarlo, también debes crear un nombre de usuario y una contraseña correspondientes. No uses tu cuenta de Microsoft u otras credenciales de Windows. 
+Puedes habilitar el Portal de dispositivos en la sección **Para desarrolladores** de **Configuración**. Al habilitarlo, también debes crear un nombre de usuario y una contraseña correspondientes. No uses tu cuenta de Microsoft u otras credenciales de Windows.
 
-![Sección Portal de dispositivos de la aplicación Configuración](images/device-portal/device-portal-desk-settings.png) 
+![Sección Portal de dispositivos de la aplicación Configuración](images/device-portal/device-portal-desk-settings.png)
 
-Una vez que el Portal de dispositivos esté habilitado, verás vínculos web en la parte inferior de la sección. Anota el número de puerto añadido al final de las direcciones URL mostradas: este número se genera aleatoriamente cuando se habilita el Portal de dispositivos, pero debe permanecer coherente entre los distintos reinicios del dispositivo de escritorio. 
+Una vez que el Portal de dispositivos esté habilitado, verás vínculos web en la parte inferior de la sección. Anota el número de puerto añadido al final de las direcciones URL mostradas: este número se genera aleatoriamente cuando se habilita el Portal de dispositivos, pero debe permanecer coherente entre los distintos reinicios del dispositivo de escritorio.
 
-Estos vínculos ofrecen dos formas de conectarte al Portal de dispositivos: a través de la red local (incluida VPN) o a través del host local.
+Estos vínculos ofrecen dos formas de conectarte al Portal de dispositivos: a través de la red local (incluida VPN) o a través del host local. Una vez conectado, debería tener un aspecto similar al siguiente:
+
+![Portal de dispositivos](images/device-portal/device-portal-example.png)
+
+
+### <a name="turn-off-device-portal"></a>Desactivación del Portal de dispositivos
+
+Puede deshabilitar el Portal de dispositivos en la sección **Para desarrolladores** de **Configuración**.
 
 ### <a name="connect-to-device-portal"></a>Conectarte al Portal de dispositivos
 
-Para conectarte a través del host local, abre una ventana del navegador y escribe la dirección que se muestra aquí para el tipo de conexión que estés usando.
+Para conectarse a través del host local, abra una ventana del explorador y escriba la dirección que se muestra aquí para el tipo de conexión que esté usando.
 
 * Localhost: `http://127.0.0.1:<PORT>` o `http://localhost:<PORT>`
 * Red local: `https://<IP address of the desktop>:<PORT>`
 
 Se necesita HTTPS para la autenticación y la comunicación segura.
 
-Si usas el Portal de dispositivos en un entorno protegido, como un laboratorio de pruebas, en el que confíes en todos los usuarios de la red local, no tengas información personal en el dispositivo y existan requisitos únicos, puedes deshabilitar la opción Autenticación. Esto permite la comunicación sin cifrar y que cualquier persona que tenga la dirección IP del equipo se conecte a él y lo controle.
+Si usa el Portal de dispositivos en un entorno protegido, como un laboratorio de pruebas, donde confía en todos los usuarios de la red local, no tiene información personal sobre el dispositivo y tiene requisitos únicos, puede deshabilitar la opción Autenticación. Esto permite la comunicación sin cifrar y que cualquier persona que tenga la dirección IP del equipo se conecte a él y lo controle.
 
 ## <a name="device-portal-content-on-windows-desktop"></a>Contenido del Portal de dispositivos en un dispositivo de escritorio Windows
 
-El Portal de dispositivos en un dispositivo de escritorio Windows proporciona el conjunto estándar de páginas. Para obtener descripciones detalladas de estas, consulta [Introducción al Portal de dispositivos Windows](device-portal.md).
+El Portal de dispositivos en un dispositivo de escritorio Windows mostrará el conjunto de páginas que se describen en [Introducción al Portal de dispositivos Windows](device-portal.md).
 
 - Administrador de aplicaciones
+- Xbox Live
 - Explorador de archivos
 - Procesos en ejecución
 - Rendimiento
-- Depurar
-- Seguimiento de eventos para Windows (ETW)
+- Depuración
+- Registro de ETW (Seguimiento de eventos para Windows)
 - Seguimiento del rendimiento
 - Administrador de dispositivos
-- Funciones de red
-- Datos de bloqueos
+- Bluetooth
+- Redes
+- Datos de bloqueo
 - Características
 - Mixed Reality
 - Depurador de instalación en streaming
-- Ubicación
+- Location
 - Borrador
+
+## <a name="using-device-portal-for-windows-desktop-to-test-and-debug-msix-apps"></a>Uso del Portal de dispositivos para un dispositivo de escritorio Windows con la finalidad de probar y depurar aplicaciones MSIX
+
+
+> [!VIDEO https://www.youtube.com/embed/PdgXeOMt4hk]
+
 
 ## <a name="more-device-portal-options"></a>Más opciones del Portal de dispositivos
 
@@ -105,7 +123,7 @@ Desde un símbolo del sistema administrativo, puedes habilitar y configurar comp
     - Ejecuta una versión independiente del Portal de dispositivos con una configuración específica y mensajes de depuración visibles. Esto resulta muy útil para crear un [complemento empaquetado](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-plugin). 
     - Consulta el [artículo de MSDN Magazine](https://msdn.microsoft.com/magazine/mt826332.aspx) para obtener más información acerca de cómo ejecutar esto como un sistema con el fin de probar completamente el complemento empaquetado.
 
-## <a name="common-errors-and-issues"></a>Errores y problemas comunes
+## <a name="troubleshooting"></a>Solución de problemas
 
 A continuación se muestran algunos errores comunes que pueden surgir al configurar el Portal de dispositivos.
 
@@ -129,7 +147,7 @@ Si los paquetes de desarrollo no están instalados, puede que veas este error. S
 
 Si usas una conexión a Internet de uso medido, puede que recibas este error. No podrás descargar los paquetes de desarrollo en una conexión de uso medido.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [Introducción al Portal de dispositivos Windows](device-portal.md)
-* [Referencia de API principal del Portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Referencia de API principal de Device Portal](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

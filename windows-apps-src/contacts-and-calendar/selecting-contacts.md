@@ -6,22 +6,22 @@ keywords: contactos, selección seleccionar un solo contacto seleccionar varios 
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 634b72032b37fe4a6bc4ea44a2e4fe27abede47d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: dcf8fefb82de3cccf3d914ae6003c991107888e1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255072"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154689"
 ---
 # <a name="select-contacts"></a>Seleccionar contactos
 
 
 
-Mediante el espacio de nombres [**Windows.ApplicationModel.Contacts**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts), tienes varias opciones para seleccionar contactos. Aquí te mostraremos cómo seleccionar un único contacto o varios contactos, y aprenderás a configurar el selector de contactos para recuperar solamente la información de contacto que necesita tu aplicación.
+Mediante el espacio de nombres [**Windows.ApplicationModel.Contacts**](/uwp/api/Windows.ApplicationModel.Contacts), tienes varias opciones para seleccionar contactos. Aquí te mostraremos cómo seleccionar un único contacto o varios contactos, y aprenderás a configurar el selector de contactos para recuperar solamente la información de contacto que necesita tu aplicación.
 
 ## <a name="set-up-the-contact-picker"></a>Configuración del selector de contactos
 
-Crea una instancia de [**Windows.ApplicationModel.Contacts.ContactPicker**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.ContactPicker) y asígnala a una variable.
+Crea una instancia de [**Windows.ApplicationModel.Contacts.ContactPicker**](/uwp/api/Windows.ApplicationModel.Contacts.ContactPicker) y asígnala a una variable.
 
 ```cs
 var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
@@ -29,15 +29,15 @@ var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
 
 ## <a name="set-the-selection-mode-optional"></a>Establecer el modo de selección (opcional)
 
-De manera predeterminada, el selector de contactos recupera todos los datos disponibles para los contactos que selecciona el usuario. La propiedad [**SelectionMode**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpicker.selectionmode) permite configurar el selector de contactos para recuperar únicamente los campos de datos que necesita la aplicación. Esta es una forma más eficaz de usar el selector de contactos si solo necesitas un subconjunto de los datos de contacto disponibles.
+De manera predeterminada, el selector de contactos recupera todos los datos disponibles para los contactos que selecciona el usuario. La propiedad [**SelectionMode**](/uwp/api/windows.applicationmodel.contacts.contactpicker.selectionmode) permite configurar el selector de contactos para recuperar únicamente los campos de datos que necesita la aplicación. Esta es una forma más eficaz de usar el selector de contactos si solo necesitas un subconjunto de los datos de contacto disponibles.
 
-Primero, establece la propiedad [**SelectionMode**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpicker.selectionmode) en **Fields**:
+Primero, establece la propiedad [**SelectionMode**](/uwp/api/windows.applicationmodel.contacts.contactpicker.selectionmode) en **Fields**:
 
 ```cs
 contactPicker.SelectionMode = Windows.ApplicationModel.Contacts.ContactSelectionMode.Fields;
 ```
 
-Luego, usa la propiedad [**DesiredFieldsWithContactFieldType**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpicker.desiredfieldswithcontactfieldtype) para especificar los campos que quieres que recupere el selector de contactos. En este ejemplo se configura el selector de contactos para que recupere direcciones de correo electrónico:
+Luego, usa la propiedad [**DesiredFieldsWithContactFieldType**](/uwp/api/windows.applicationmodel.contacts.contactpicker.desiredfieldswithcontactfieldtype) para especificar los campos que quieres que recupere el selector de contactos. En este ejemplo se configura el selector de contactos para que recupere direcciones de correo electrónico:
 
 ``` cs
 contactPicker.DesiredFieldsWithContactFieldType.Add(Windows.ApplicationModel.Contacts.ContactFieldType.Email);
@@ -49,7 +49,7 @@ contactPicker.DesiredFieldsWithContactFieldType.Add(Windows.ApplicationModel.Con
 Contact contact = await contactPicker.PickContactAsync();
 ```
 
-Usa [**PickContactsAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpicker.pickcontactsasync) si quieres que el usuario seleccione uno o varios contactos.
+Use [**PickContactsAsync**](/uwp/api/windows.applicationmodel.contacts.contactpicker.pickcontactsasync) si desea que el usuario seleccione uno o más contactos.
 
 ```cs
 public IList<Contact> contacts;
@@ -60,7 +60,7 @@ contacts = await contactPicker.PickContactsAsync();
 
 Cuando vuelva el selector, comprueba si el usuario seleccionó algún contacto. Si es así, procesa la información de contacto.
 
-En este ejemplo se muestra cómo procesar un solo contacto. Aquí se recupera el nombre del contacto y se copia en un control [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) denominado *OutputName*.
+En este ejemplo se muestra cómo procesar un solo contacto. Aquí se recupera el nombre del contacto y se copia en un control [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) denominado *OutputName*.
 
 ```cs
 if (contact != null)
@@ -167,7 +167,7 @@ private void AppendContactFieldValues<T>(TextBlock content, IList<T> fields)
 
 ## <a name="complete-example-multiple-contacts"></a>Ejemplo completo (varios contactos)
 
-En este ejemplo se usa el selector de contactos para recuperar varios contactos y luego se agregan los contactos a un control [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) denominado `OutputContacts`.
+En este ejemplo se usa el selector de contactos para recuperar varios contactos y luego se agregan los contactos a un control [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) denominado `OutputContacts`.
 
 ```cs
 MainPage rootPage = MainPage.Current;

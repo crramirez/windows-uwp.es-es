@@ -1,17 +1,17 @@
 ---
 title: Introducción a la navegación
-description: Introducción a la navegación
+description: Obtenga información sobre cómo agregar navegación por páginas a una aplicación de Windows 10 que tiene varias vistas mediante la clase de marco Plataforma universal de Windows (UWP).
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 22d2f73ba6a14ace1319285ca436db4738f84548
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 3d26bf6e63c61207142b8945c48f9925a7459844
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493300"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094692"
 ---
 # <a name="getting-started-navigation"></a>Introducción: Navegación
 

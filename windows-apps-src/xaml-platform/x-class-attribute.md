@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dcda1677a8b5d289fd4c5e86db69212004f00824
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: be238be3414fb17ff64a5c6d5da713f614c297be
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371100"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169089"
 ---
 # <a name="xclass-attribute"></a>Atributo x:Class
 
@@ -32,11 +32,11 @@ Configura la compilación de XAML para unir clases parciales entre el marcado y 
 | Término | Descripción |
 |------|-------------|
 | espacio de nombres | Opcional. Especifica un espacio de nombres que contiene la clase parcial identificada por _classname_. Si se especifica _namespace_, un punto (.) separa _namespace_ y _classname_. Si se especifica _namespace_ , se da por hecho que _classname_ no tiene espacio de nombres. |
-| classname | Obligatorio. Especifica el nombre de la clase parcial que conecta el código XAML cargado y el código subyacente para ese XAML. | 
+| classname | Necesario. Especifica el nombre de la clase parcial que conecta el código XAML cargado y el código subyacente para ese XAML. | 
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**x:Class** se puede declarar como un atributo para cualquier elemento que sea la raíz de un árbol de archivos u objetos XAML y que se compile mediante acciones de compilación, o para la raíz de [**Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) en la definición de una aplicación compilada. Declarar **x:Class** en cualquier elemento que no sea una raíz de nodo y en cualquier circunstancia referente a un archivo XAML que no esté compilado mediante la acción de compilación **Page**, genera un error en tiempo de compilación.
+**x:Class** se puede declarar como un atributo para cualquier elemento que sea la raíz de un árbol de archivos u objetos XAML y que se compile mediante acciones de compilación, o para la raíz de [**Application**](/uwp/api/Windows.UI.Xaml.Application) en la definición de una aplicación compilada. Declarar **x:Class** en cualquier elemento que no sea una raíz de nodo y en cualquier circunstancia referente a un archivo XAML que no esté compilado mediante la acción de compilación **Page**, genera un error en tiempo de compilación.
 
 La clase que se utiliza como **x:Class** no puede ser una clase anidada.
 
@@ -45,4 +45,3 @@ El valor del atributo **x:Class** debe ser una cadena que especifique el nombre 
 ## <a name="clr-language-rules"></a>Reglas del lenguaje CLR
 
 Si bien el archivo de código subyacente puede ser un archivo de C++, existen ciertas convenciones que aún siguen el formato del lenguaje CLR para que no haya diferencias en la sintaxis de XAML. En particular, el separador entre los componentes del espacio de nombres y de la clase de nombres de un valor **x:Class** es siempre un punto ("."), aunque el separador para el caso equivalente en el archivo de código C++ asociado al código XAML sea "::". Si declaras espacios de nombres anidados en C++, el separador entre las cadenas sucesivas de espacios de nombres anidados también debe ser "." en lugar de "::" cuando especifiques la parte *namespace* del valor **x:Class**.
-

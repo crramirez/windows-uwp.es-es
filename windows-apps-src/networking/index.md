@@ -1,17 +1,17 @@
 ---
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
-description: Tecnologías para el acceso a redes y servicios web.
+description: Vea una lista de vínculos a artículos acerca de las tecnologías de red y servicios web disponibles para los desarrolladores de la Plataforma universal de Windows (UWP).
 title: Servicios web y redes
 ms.date: 11/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 673f774c4d686726b59ff4e52e356ec0bc319379
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 169412c21714f2777db3e6078a6528dc863277ea
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66370766"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094612"
 ---
 # <a name="networking-and-web-services"></a>Servicios web y redes
 

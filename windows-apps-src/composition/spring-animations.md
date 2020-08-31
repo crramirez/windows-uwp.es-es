@@ -1,85 +1,85 @@
 ---
 title: Animaciones de muelle
-description: Aprende a usar animaciones de muelle con movimiento natural.
+description: Aprenda a crear experiencias de Spring Motion en sus aplicaciones mediante las API de NaturalMotionAnimation.
 ms.date: 10/10/2017
 ms.topic: article
-keywords: windows 10, uwp, animación
+keywords: Windows 10, UWP, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: f86ab8b3e55b7680c5ba3e47c37d1cda8c42cebb
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: ecfb6fc001fbf42f70d40ee16abc45aa221c0a75
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062005"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053875"
 ---
 # <a name="spring-animations"></a>Animaciones de muelle
 
-En este artículo se muestra cómo usar NaturalMotionAnimations de muelle.
+En el artículo se muestra cómo usar Spring NaturalMotionAnimations.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
-En este artículo damos por hecho que estás familiarizado con los conceptos tratados en estos artículos:
+Aquí se supone que está familiarizado con los conceptos descritos en estos artículos:
 
 - [Animaciones de movimiento naturales](natural-animations.md)
 
-## <a name="why-springs"></a>¿Por qué los muelles?
+## <a name="why-springs"></a>¿Por qué muelles?
 
-Los muelles son una experiencia de movimiento común que todos hemos experimentado en algún momento en nuestras vidas; desde juguetes ondulantes a experimentos en clase de física con un bloque atado a un muelle. El movimiento oscilante de un muelle a menudo provoca una respuesta emocional alegre y desenfadada de quienes lo ven. Como resultado, el movimiento de un muelle se traslada bien a la interfaz de usuario de la aplicación para quienes quieren crear una experiencia de movimiento más alegre que sorprenda más al usuario final que un Cubic Bezier tradicional. En estos casos, el movimiento del muelle no solo crea una experiencia de movimiento más alegre, sino que también puede ayudar a llamar la atención respecto a un contenido nuevo o que se anime en ese momento. En función el idioma de personalización de marca o movimiento de la aplicación, la oscilación es más pronunciada y visible, pero en otros casos es más sutil.
+Los muelles son una experiencia de movimiento común que hemos experimentado en algún momento en nuestras vidas; desde Slinky Toys hasta las experiencias de la clase física con un bloque asociado con muelles. El movimiento oscilante de un muelle suele mencionar una respuesta emocional playful y lighthearted de las personas que lo ven. Como resultado, el movimiento de un muelle se traduce bien en la interfaz de usuario de la aplicación para aquellos que desean crear una experiencia de movimiento de livelier que "extrae" más al usuario final que una Bézier cúbica tradicional. En estos casos, el movimiento de primavera no solo crea una experiencia de movimiento de livelier, sino que también puede ayudar a atraer la atención al contenido nuevo o que anima actualmente. En función de la marca de la aplicación o del lenguaje de movimiento, la oscilación es más pronunciada y visible, pero en otros casos es más sutil.
 
-![movimiento con animación Spring](images/animation/offset-spring.gif)
-movimiento de![con animación Bézier cúbica](images/animation/offset-cubic-bezier.gif)
+![Movimiento con movimiento de la animación Spring ](images/animation/offset-spring.gif)
+ ![ con animación Bézier cúbica](images/animation/offset-cubic-bezier.gif)
 
-## <a name="using-springs-in-your-ui"></a>Uso de muelles en la interfaz de usuario
+## <a name="using-springs-in-your-ui"></a>Usar muelles en la interfaz de usuario
 
-Como se ha mencionado anteriormente, los muelles pueden ser un movimiento útil que integrar en la aplicación para presentar una experiencia de la interfaz de usuario familiar y divertida. Los usos habituales de los muelles en una interfaz de usuario son:
+Como se mencionó anteriormente, los muelles pueden ser un movimiento útil para integrarse en la aplicación con el fin de presentar una experiencia de interfaz de usuario muy familiar y playful. El uso común de los muelles en la interfaz de usuario es:
 
-| Descripción de uso de los muelles | Ejemplo visual |
+| Descripción del uso de Spring | Ejemplo visual |
 | ------------------------ | -------------- |
-| Crear una experiencia de movimiento "sorprendente" y más alegre. (Animación de la escala) | ![Escalar el movimiento con una animación de muelle](images/animation/scale-spring.gif) |
-| Hacer que una experiencia de movimiento parezca sutilmente más dinámica. (Animación del desplazamiento) | ![Desplazar el movimiento con una animación de muelle](images/animation/offset-spring.gif) |
+| Realización de una experiencia de movimiento "pop" y mire livelier. (Animar escala) | ![Movimiento de escala con la animación de Spring](images/animation/scale-spring.gif) |
+| Crear una experiencia de movimiento ligeramente más enérgico (animación de desplazamiento) | ![Movimiento de desplazamiento con animación Spring](images/animation/offset-spring.gif) |
 
-En todos estos casos, el movimiento de muelle se puede desencadenar mediante el salto a un nuevo valor y la oscilación alrededor de él o mediante una oscilación alrededor de su valor actual con una cierta velocidad inicial.
+En cada uno de estos casos, el movimiento de resorte se puede desencadenar mediante la "primavera" y el oscilar alrededor de un nuevo valor o oscilar alrededor de su valor actual con cierta velocidad inicial.
 
-![Oscilación de la animación de muelle](images/animation/spring-animation-diagram.png)
+![Oscilación de la animación Spring](images/animation/spring-animation-diagram.png)
 
 ## <a name="defining-your-spring-motion"></a>Definición del movimiento de muelle
 
-Para crear una experiencia de muelle, se usan las API NaturalMotionAnimation. Específicamente se crea una SpringNaturalMotionAnimation mediante los métodos Create* del Compositor. Luego es posible definir las siguientes propiedades del movimiento:
+Puede crear una experiencia de Spring mediante las API de NaturalMotionAnimation. En concreto, cree un SpringNaturalMotionAnimation con los métodos Create * en el compositor. A continuación, podrá definir las siguientes propiedades del movimiento:
 
-- DampingRatio: Expresa el nivel de amortiguación del movimiento de muelle usado en la animación.
+- DampingRatio: expresa el nivel de amortiguación del movimiento de muelle usado en la animación.
 
-| Valor de la relación de atenuación | Descripción |
+| Valor de ratio de amortiguación | Descripción |
 | ------------------- | ----------- |
-| DampingRatio = 0 | Sin atenuación: El muelle oscilará durante mucho tiempo. |
-| 0 < DampingRatio < 1 | Sin atenuación: El muelle oscilará entre poco tiempo y mucho tiempo. |
-| DampingRatio = 1 | Con mucha atenuación: El muelle no realizará ninguna oscilación. |
-| DampingRation > 1 | Sobreatenuación: El muelle llegará rápidamente a su destino con una desaceleración brusca y sin oscilación. |
+| DampingRatio = 0 | No atenuado: el muelle oscilará durante mucho tiempo. |
+| 0 < DampingRatio < 1 | Subatenuada: el muelle oscilará entre un poco y mucho. |
+| DampingRatio = 1 | Criticallydamped: el muelle no llevará a cabo ninguna oscilación. |
+| DampingRation > 1 | Sobreatenuado: el muelle alcanzará rápidamente su destino con una deceleración brusca y sin oscilación. |
 
-- Period: El tiempo que tarda el muelle en llevar a cabo una única oscilación.
-- Final/Starting Value: Las posiciones definidas inicial y final del movimiento del muelle (si no se definen, el valor inicial o el valor final serán el valor actual).
-- Initial Velocity: La velocidad inicial del movimiento controlada por programación.
+- Period: el tiempo que tarda el muelle en realizar una oscilación única.
+- Valor final o inicial: se definen las posiciones inicial y final del movimiento de muelle (si no se define, el valor inicial o el valor final serán el valor actual).
+- Velocidad inicial: velocidad inicial mediante programación para el movimiento.
 
-También puedes definir un conjunto de propiedades del movimiento que sean iguales que KeyFrameAnimations:
+También puede definir un conjunto de propiedades del movimiento que son iguales que KeyFrameAnimations:
 
-- DelayTime/Delay Behavior
+- Comportamiento de DelayTime/Delay
 - StopBehavior
 
-En los casos habituales de la animación del desplazamiento y de la escala y el tamaño, el equipo de diseño de Windows recomienda los siguientes valores por para DampingRatio y Period para diferentes tipos de muelles:
+En los casos comunes de animación de desplazamiento y escalado/tamaño, el equipo de diseño de Windows recomienda los siguientes valores para DampingRatio y period para diferentes tipos de muelles:
 
-| Propiedad | Muelle normal | Muelle atenuado | Muelle menos atenuado |
+| Propiedad | Muelle normal | Muelle amortiguado | Muelle menos humedecido |
 | -------- | ------------- | --------------- | -------------------- |
-| Offset | DampingRatio = 0.8 <br/> Period = 50 ms | DampingRatio = 0.85 <br/> Period = 50 ms | DampingRatio = 0.65 <br/> Period = 60 ms |
-| Scale/Size | DampingRatio = 0.7 <br/> Period = 50 ms | DampingRatio = 0.8 <br/> Period = 50 ms | DampingRatio = 0.6 <br/> Period = 60 ms |
+| Offset | Relación de amortiguación = 0,8 <br/> Período = 50 ms | Relación de amortiguación = 0,85 <br/> Período = 50 ms | Relación de amortiguación = 0,65 <br/> Período = 60 ms |
+| Escala/tamaño | Relación de amortiguación = 0,7 <br/> Período = 50 ms | Relación de amortiguación = 0,8 <br/> Período = 50 ms | Relación de amortiguación = 0,6 <br/> Período = 60 ms |
 
-Una vez que hayas definido las propiedades, puedes pasar la NaturalMotionAnimation de tu muelle en el método StartAnimation de un CompositionObject o en la propiedad Motion de InertiaModifier de un InteractionTracker.
+Una vez que haya definido las propiedades, puede pasar el NaturalMotionAnimation de Spring en el método StartAnimation de un CompositionObject o la propiedad Motion de una InteractionTracker InertiaModifier.
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo, crearás una experiencia de interfaz de usuario de navegación y lienzo en la que, cuando el usuario haga clic en un botón de expansión, un panel de navegación se animará con un movimiento oscilación tipo muelle.
+En este ejemplo, se crea una experiencia de navegación y de interfaz de usuario de lienzo en la que, cuando el usuario hace clic en un botón de expansión, un panel de navegación se anima con un movimiento de oscilación.
 
-![Animación de muelle al hacer clic](images/animation/spring-animation-on-click.gif)
+![Animación de resorte al hacer clic](images/animation/spring-animation-on-click.gif)
 
-Empieza por definir la animación de muelle en el evento de clic para cuando se abra el panel de navegación. A continuación define las propiedades de la animación utilizando la característica de InitialValueExpression para emplear una expresión para definir FinalValue. También realizas el seguimiento de si el panel se abre o no y, cuando esté listo, si se inicia la animación.
+Empiece por definir la animación Spring dentro del evento en el que se hizo clic para cuando aparezca el panel de navegación. A continuación, defina las propiedades de la animación mediante la característica InitialValueExpression para usar una expresión para definir el FinalValue. También puede realizar un seguimiento de si el panel está abierto o no y, cuando esté listo, iniciar la animación.
 
 ```csharp
 private void Button_Clicked(object sender, RoutedEventArgs e)
@@ -103,11 +103,11 @@ _springAnimation.InitialValueExpression["FinalValue"] = "this.StartingValue - 25
 }
 ```
 
-¿Y si quisieras vincular este movimiento a una entrada? Por lo tanto, si el usuario final desliza el dedo hacia fuera, ¿los paneles aparecen con un movimiento de muelle? Y lo que más importante, si el usuario desliza el dedo con más o menos velocidad o fuerza, ¿el movimiento se adapta a la velocidad del usuario final?
+¿Ahora qué ocurre si desea asociar este movimiento a la entrada? Por lo tanto, si el usuario final se desliza hacia afuera, los paneles tienen un movimiento de muelle? Y lo que es más importante, si el usuario desliza el dedo más duro o más rápido, el movimiento se adapta en función de la velocidad del usuario final.
 
-![Animación de muelle al deslizar el dedo](images/animation/spring-animation-on-swipe.gif)
+![Animación Spring al deslizar rápidamente](images/animation/spring-animation-on-swipe.gif)
 
-Para ello, puedes tomar la misma animación de muelle y pasarla a un InertiaModifier con InteractionTracker. Para obtener más información sobre InputAnimations e InteractionTracker, consulta [Experiencias de manipulación personalizadas con InteractionTracker](interaction-tracker-manipulations.md). Para este ejemplo de código vamos a suponer que ya has configurado InteractionTracker y VisualInteractionSource. Nos centraremos en crear los InertiaModifiers que tomarán una NaturalMotionAnimation, en este caso un muelle.
+Para ello, puede realizar la misma animación Spring y pasarla a un InertiaModifier con InteractionTracker. Para obtener más información sobre InputAnimations y InteractionTracker, vea [experiencias de manipulación personalizada con InteractionTracker](interaction-tracker-manipulations.md). En este ejemplo de código, se asumirá que ya ha configurado InteractionTracker y VisualInteractionSource. Nos centraremos en crear el InertiaModifiers que se tomará en un NaturalMotionAnimation, en este caso un muelle.
 
 ```csharp
 // InteractionTracker and the VisualInteractionSource previously setup
@@ -145,18 +145,18 @@ StartAnimation("Translation.X", exp);
 }
 ```
 
-Ahora en la interfaz de usuario tienes una animación de muelle tanto controlada por programación como controlada por entradas.
+Ahora ya tiene una animación de Spring de programación y controlada por entrada en la interfaz de usuario.
 
-En resumen, los pasos para usar una animación de muelle en la aplicación son:
+En Resumen, los pasos para usar una animación de Spring en la aplicación:
 
-1. Crea tu SpringAnimation en el compositor.
-1. Define las propiedades de la SpringAnimation si deseas valores que no sean los predeterminados:
+1. Cree su SpringAnimation fuera del compositor.
+1. Defina las propiedades de SpringAnimation si desea valores no predeterminados:
     - DampingRatio
-    - Period
-    - Final Value
-    - Initial Value
-    - Initial Velocity
-1. Asigna a un destino.
-    - Si vas a animar una propiedad de CompositionObject, pasa SpringAnimation como parámetro a StartAnimation.
-    - Si quieres usarla con la entrada, establece la propiedad de NaturalMotion de un InertiaModifier como SpringAnimation.
+    - Período
+    - Valor final
+    - Valor inicial
+    - Velocidad inicial
+1. Asignar al destino.
+    - Si va a animar una propiedad CompositionObject, pase SpringAnimation como parámetro a StartAnimation.
+    - Si desea usar with Input, establezca la propiedad NaturalMotion de un InertiaModifier en SpringAnimation.
 

@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ad94d7b887e28ac01156592ac47cfc9ac4783193
-ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
+ms.openlocfilehash: ff252faf4dd49929ec46c2ceaa02f94011e6b225
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83775907"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169329"
 ---
 # <a name="connected-animation-for-windows-apps"></a>Animación conectada para aplicaciones de Windows
 
@@ -22,7 +22,7 @@ Las animaciones conectadas te permiten crear una experiencia de navegación din�
 
 En una animación conectada, un elemento aparece en "continuar" entre dos vistas durante un cambio en el contenido de la interfaz de usuario, volando por la pantalla desde su ubicación en la vista de origen hasta su destino en la nueva vista. Esto hace hincapié en el contenido común entre las vistas y crea un efecto atractivo y dinámico como parte de una transición.
 
-> **API importantes**: [clase ConnectedAnimation](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), [clase ConnectedAnimationService](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
+> **API importantes**:  [clase ConnectedAnimation](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), [clase ConnectedAnimationService](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
 
 
 ## <a name="examples"></a>Ejemplos
@@ -63,12 +63,12 @@ Al navegar entre las páginas, es importante que el usuario comprenda qué nuevo
 
 ## <a name="when-to-use-connected-animation"></a>Cuándo se debe usar la animación conectada
 
-Las animaciones conectadas suelen usarse al cambiar las páginas, aunque se pueden aplicar a cualquier experiencia en la que se cambia el contenido en una interfaz de usuario y se desea que el usuario mantenga el contexto. Debe plantearse el uso de una animación conectada en lugar de una [transición de navegación de obtención de detalles](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) cada vez que haya una imagen u otra parte de la interfaz de usuario compartida entre las vistas de origen y de destino.
+Las animaciones conectadas suelen usarse al cambiar las páginas, aunque se pueden aplicar a cualquier experiencia en la que se cambia el contenido en una interfaz de usuario y se desea que el usuario mantenga el contexto. Debe plantearse el uso de una animación conectada en lugar de una [transición de navegación de obtención de detalles](/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) cada vez que haya una imagen u otra parte de la interfaz de usuario compartida entre las vistas de origen y de destino.
 
 ## <a name="configure-connected-animation"></a>Configurar animación conectada
 
 > [!IMPORTANT]
-> Esta característica requiere que la versión de destino de la aplicación sea Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior. La propiedad de configuración no está disponible en los SDK anteriores. Puede tener como destino una versión mínima inferior al SDK 17763 con código adaptativo o XAML condicional. Para obtener más información, consulte [versiones adaptables](/windows/uwp/debug-test-perf/version-adaptive-apps)de las aplicaciones.
+> Esta característica requiere que la versión de destino de la aplicación sea Windows 10, versión 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) o posterior. La propiedad de configuración no está disponible en los SDK anteriores. Puede tener como destino una versión mínima inferior al SDK 17763 con código adaptativo o XAML condicional. Para obtener más información, consulte [versiones adaptables](../../debug-test-perf/version-adaptive-apps.md)de las aplicaciones.
 
 A partir de la versión 1809 de Windows 10, las animaciones conectadas incluyen un diseño fluido al proporcionar configuraciones de animación adaptadas específicamente a la navegación de páginas hacia delante y hacia atrás.
 
@@ -102,7 +102,7 @@ Para lograr los distintos efectos, algunas configuraciones omiten estas propieda
 | - | - | - |
 | Peso | Sí | Sí* <br/> **La traducción básica de a a B usa esta función de aceleración, pero la "DIP" tiene su propia función de aceleración.*  |
 | Directo | No <br/> *Anima por 150MS.*| No <br/> *Usa la función de aceleración decelerada.* |
-| Básica | Sí | Sí |
+| Básico | Sí | Sí |
 
 ## <a name="how-to-implement-connected-animation"></a>Cómo implementar la animación conectada
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ff826be0f5b0b8e9a6723fbb1593663f1748c3d
-ms.sourcegitcommit: d708ac4ec4fac0135dafc0d8c5161ef9fd945ce7
+ms.openlocfilehash: 7d41e49f599e1fe5e835443f7c8cb732e625491e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85069468"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168599"
 ---
 # <a name="bluetooth-developer-faq"></a>Preguntas más frecuentes de los desarrolladores de Bluetooth
 
@@ -22,7 +22,7 @@ Hay varias discusiones en línea en torno a este tema general, así que vamos a 
 
 ### <a name="bluetooth-le-windowsdevicesbluetoothgenericattributeprofile"></a>Bluetooth LE (Windows. Devices. Bluetooth. GenericAttributeProfile)
 
-Use las API de GATT cuando se comunique con un dispositivo que admita Bluetooth de baja energía. Si el caso de uso es poco frecuente, el ancho de banda bajo o requiere poca energía, Bluetooth de baja energía es la respuesta. El espacio de nombres principal que incluye esta funcionalidad es [Windows. Devices. Bluetooth. GenericAttributeProfile](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile). 
+Use las API de GATT cuando se comunique con un dispositivo que admita Bluetooth de baja energía. Si el caso de uso es poco frecuente, el ancho de banda bajo o requiere poca energía, Bluetooth de baja energía es la respuesta. El espacio de nombres principal que incluye esta funcionalidad es [Windows. Devices. Bluetooth. GenericAttributeProfile](/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile). 
 
 **Cuándo no usar Bluetooth LE**
 - Alto ancho de banda, escenarios de alta frecuencia. Si necesita mantener la sincronización constantemente con grandes cantidades de datos, considere la posibilidad de usar Bluetooth clásico o quizás incluso WiFi. 
@@ -33,7 +33,7 @@ Las API de RFCOMM proporcionan a los desarrolladores un socket para realizar una
 
 **Cuándo no usar Bluetooth RFCOMM** 
 - Notificaciones. El protocolo GATT de Bluetooth tiene un comando específico para esto y dará como resultado un dibujo de energía significativamente menor y tiempos de respuesta más rápidos. 
-- Comprobando detección de proximidad o presencia. Mejor usar las [API de anuncios](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement) y conectarse a través de Bluetooth le. 
+- Comprobando detección de proximidad o presencia. Mejor usar las [API de anuncios](/uwp/api/windows.devices.bluetooth.advertisement) y conectarse a través de Bluetooth le. 
 
 
 ## <a name="why-does-my-bluetooth-le-device-stop-responding-after-a-disconnect"></a>¿Por qué mi dispositivo Bluetooth LE deja de responder tras una desconexión?
@@ -63,7 +63,7 @@ En este ejemplo, iniciamos el emparejamiento con un dispositivo sin usar cifrado
 
 No tiene que emparejar dispositivos antes de usarlos si usa Bluetooth RFCOMM (clásico). A partir de Windows 10, versión 1607, puedes simplemente consultar si hay dispositivos cercanos y conectarte a ellos. La [RFCOMM Chat Sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BluetoothRfcommChat) (Muestra de chat de RFCOMM) actualizada muestra esta funcionalidad. 
 
-**(14393 y versiones anteriores)** Esta característica no está disponible para Bluetooth de baja energía (cliente GATT), por lo que todavía tendrá que emparejar a través de la página Configuración o mediante las API de [Windows. Devices. Enumeration](https://docs.microsoft.com/uwp/api/windows.devices.enumeration) para tener acceso a estos dispositivos.
+**(14393 y versiones anteriores)** Esta característica no está disponible para Bluetooth de baja energía (cliente GATT), por lo que todavía tendrá que emparejar a través de la página Configuración o mediante las API de [Windows. Devices. Enumeration](/uwp/api/windows.devices.enumeration) para tener acceso a estos dispositivos.
 
 **(15030 y versiones posteriores)** Ya no es necesario emparejar dispositivos Bluetooth. Use las nuevas API asincrónicas, como GetGattServicesAsync y GetCharacteristicsAsync, para consultar el estado actual del dispositivo remoto. Vea los [documentos de cliente](gatt-client.md) para obtener más detalles. 
 

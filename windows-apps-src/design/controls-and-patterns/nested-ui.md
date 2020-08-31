@@ -1,6 +1,6 @@
 ---
-Description: Usar la interfaz de usuario anidada para permitir varias acciones en un elemento de lista
 title: Interfaz de usuario anidada en elementos de lista
+description: Obtenga información sobre cómo crear una interfaz de usuario anidada en los elementos ListView y GridView para presentar a los usuarios opciones adicionales para realizar acciones importantes.
 label: Nested UI in list items
 template: detail.hbs
 ms.date: 05/19/2017
@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d2372044076e1885602dec806df95ad60e789cdd
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 9a8b53eef3538ca637fa5b351b74125eebdfe2b3
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968090"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942845"
 ---
 # <a name="nested-ui-in-list-items"></a>Interfaz de usuario anidada en elementos de lista
 

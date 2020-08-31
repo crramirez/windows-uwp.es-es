@@ -4,12 +4,12 @@ description: En este artículo se incluye una descripción general de la API de 
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
-ms.openlocfilehash: 693abe68fcc7e4a341d773c6fa1af0d777c60c15
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: a20838a6d58eede75efb2441680aba6629db1700
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322156"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154209"
 ---
 # <a name="cpusets-for-game-development"></a>CPUSets para el desarrollo de juegos
 
@@ -43,16 +43,16 @@ GetSystemCpuSetInformation(cpuSets, size, &size, curProc, 0);
 
 Cada instancia de **SYSTEM_CPU_SET_INFORMATION** devuelta contiene información sobre una unidad de procesamiento única, también conocida como un conjunto de CPU. Esto no significa necesariamente que representa un único componente físico de hardware. Las CPU que usan hyperthreading tendrán varios núcleos lógicos ejecutándose en un único núcleo de procesamiento físico. La programación de varios subprocesos en diferentes núcleos lógicos que residen en el mismo núcleo físico permite optimizar los recursos de nivel de hardware que, de lo contrario, requerirían más trabajo en el nivel del kernel. Dos subprocesos programados en núcleos lógicos independientes en el mismo núcleo físico deben compartir el tiempo de CPU, pero se ejecutarían de forma más eficaz que si se programaran en el mismo núcleo lógico.
 
-### <a name="systemcpusetinformation"></a>SYSTEM_CPU_SET_INFORMATION
+### <a name="system_cpu_set_information"></a>SYSTEM_CPU_SET_INFORMATION
 
 La información de cada instancia de esta estructura de datos que devuelve **GetSystemCpuSetInformation** contiene información sobre una unidad de procesamiento única en la que se pueden programar los subprocesos. Dada la amplia gama de dispositivos de destino posible, una gran parte de la información de la estructura de datos **SYSTEM_CPU_SET_INFORMATION** puede no ser aplicable al desarrollo de juegos. La Tabla 1 proporciona una explicación de los miembros de datos que son útiles para el desarrollo de juegos.
 
  **Tabla 1. Miembros de datos útiles para el desarrollo de juegos.**
 
-| Nombre de miembro  | Tipo de datos | Descripción |
+| Nombre del miembro  | Tipo de datos | Descripción |
 | ------------- | ------------- | ------------- |
 | Tipo  | CPU_SET_INFORMATION_TYPE  | Tipo de información de la estructura. Si su valor no es **CpuSetInformation**, debe omitirse.  |
-| Id  | unsigned long  | Identificador de conjunto de CPU especificado. Este es el identificador que debe usarse con las funciones de conjunto de CPU como **SetThreadSelectedCpuSets**.  |
+| Identificador  | unsigned long  | Identificador de conjunto de CPU especificado. Este es el identificador que debe usarse con las funciones de conjunto de CPU como **SetThreadSelectedCpuSets**.  |
 | Agrupar  | unsigned short  | Especifica el "grupo de procesadores" del conjunto de CPU. Los grupos de procesadores permiten que un equipo tenga más de 64 núcleos lógicos, así como el intercambio directo de las CPU mientras se ejecuta el sistema. Es poco común ver un equipo que no es un servidor con más de un grupo. A menos que escribas aplicaciones destinadas a ejecutarse en servidores grandes o granjas de servidores, es mejor usar conjuntos de CPU en un solo grupo porque la mayoría de equipos de consumo solo tienen un grupo de procesadores. Todos los demás valores de esta estructura guardan relación con el miembro Group.  |
 | LogicalProcessorIndex  | unsigned char  | Índice relativo de grupo del conjunto de CPU.  |
 | CoreIndex  | unsigned char  | Índice relativo de grupo del núcleo de la CPU física donde se encuentra el conjunto de CPU.  |
@@ -64,15 +64,15 @@ Los otros miembros de datos proporcionan información que es bastante improbable
 
 A continuación se incluyen algunos ejemplos del tipo de información recopilada de las aplicaciones para UWP que se ejecutan en distintos tipos de hardware.
 
-**Tabla 2. Información devuelta de una aplicación para UWP que se ejecuta en Microsoft Lumia 950. Este es un ejemplo de un sistema que tiene varias cachés de último nivel. El Lumia 950 incluye un proceso de Qualcomm 808 Snapdragon que contenga un doble núcleo ARM Cortex A57 y cuatro núcleos de CPU de ARM Cortex A53.**
+**Tabla 2. Información devuelta desde una aplicación de UWP que se ejecuta en un Microsoft Lumia 950. Este es un ejemplo de un sistema que tiene varias memorias caché de último nivel. La característica Lumia 950 es un proceso de Snapdragon de Qualcomm 808 que contiene una CPU de doble núcleo Cortex A57 y cuatro núcleos de ARM Cortex A53.**
 
   ![Tabla 2](images/cpusets-table2.png)
 
-**Tabla 3. Información devuelta de una aplicación para UWP que se ejecuta en un equipo típico. Este es un ejemplo de un sistema que usa hyperthreading; cada núcleo físico tiene dos núcleos lógicos en los que se pueden programar subprocesos. En este caso, el sistema contenía un Intel xenón CPU E5-2620.**
+**Tabla 3. Información devuelta desde una aplicación de UWP que se ejecuta en un equipo típico. Este es un ejemplo de un sistema que utiliza hyperthreading; cada núcleo físico tiene dos núcleos lógicos en los que se pueden programar subprocesos. En este caso, el sistema contenía una CPU Intel xenón E5-2620.**
 
   ![Tabla 3](images/cpusets-table3.png)
 
-**Tabla 4. Información devuelta de una aplicación para UWP en un dispositivo Microsoft Surface Pro 4 de cuatro núcleos. Este sistema tenía una CPU de Intel Core i5-6300.**
+**Tabla 4. La información devuelta desde una aplicación de UWP que se ejecuta en un núcleo cuádruple de Microsoft Surface Pro 4. Este sistema tenía una CPU Intel Core i5-6300.**
 
   ![Tabla 4](images/cpusets-table4.png)
 
@@ -182,7 +182,7 @@ for (size_t i = 0; i < count; ++i)
 
 El diseño de caché que se muestra en la figura 1 es un ejemplo del tipo de diseño que se puede ver de un sistema. Esta figura es una ilustración de las cachés de un Microsoft Lumia 950. La comunicación entre subprocesos que se produce entre la CPU 256 y la CPU 260 supondría una sobrecarga significativa porque requeriría que el sistema mantuviese la coherencia de sus cachés L2.
 
-**Figura 1. Arquitectura de memoria caché se encuentra en un dispositivo de Microsoft Lumia 950.**
+**Figura 1. Arquitectura de caché encontrada en un dispositivo Microsoft Lumia 950.**
 
 ![Caché del Lumia 950](images/cpusets-lumia950cache.png)
 
@@ -191,7 +191,6 @@ El diseño de caché que se muestra en la figura 1 es un ejemplo del tipo de dis
 La API de CPUSets disponible para el desarrollo de UWP proporciona una cantidad considerable de información y control sobre las opciones de multithreading. La complejidad adicional en comparación con las API multiproceso de desarrollo de Windows presenta alguna curva de aprendizaje, pero la mayor flexibilidad permite, en última instancia, un rendimiento superior en una amplia gama de equipos de consumo y otros destinos de hardware.
 
 ## <a name="additional-resources"></a>Recursos adicionales
-- [Conjuntos de CPU (MSDN)](https://docs.microsoft.com/windows/desktop/ProcThread/cpu-sets)
-- [Ejemplo de CPUSets proporcionada por ATG](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
+- [Conjuntos de CPU (MSDN)](/windows/desktop/ProcThread/cpu-sets)
+- [Muestra de CPUSets proporcionada por ATG](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
 - [UWP en Xbox One](index.md)
-

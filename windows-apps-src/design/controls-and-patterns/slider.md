@@ -1,6 +1,6 @@
 ---
-Description: Permite al usuario establecer un valor en un intervalo determinado.
 title: Controles deslizantes
+description: Obtenga información sobre cómo implementar un control deslizante de Windows UI Library que permita al usuario seleccionar entre un intervalo de valores mediante el desplazamiento de un control de posición por una pista.
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a1de8437c5b463b13e3adb8c4d7eb7161663f4d6
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: a51bfb262e81668d167a380a9f3572011dbf7e2c
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997972"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88943105"
 ---
 # <a name="sliders"></a>Controles deslizantes
 
