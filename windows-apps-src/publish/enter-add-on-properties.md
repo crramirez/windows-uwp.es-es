@@ -4,14 +4,14 @@ title: Especificar las propiedades de complemento
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, complemento, propiedades, período de suscripción, duración del producto, tipo de contenido, iap, compra desde la aplicación, producto desde la aplicación
+keywords: Windows 10, UWP, complemento, propiedades, periodo de suscripción, duración del producto, tipo de contenido, IAP, compra desde la aplicación, producto en la aplicación
 ms.localizationpriority: medium
-ms.openlocfilehash: 59c7e5b2c9ceea534f530bc6880b32a808c91e70
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 9d092f443ab643b74cdd0221c96540fed0c7d474
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210401"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158001"
 ---
 # <a name="enter-add-on-properties"></a>Especificar las propiedades de complemento
 
@@ -22,40 +22,40 @@ Cuando envías un complemento, las opciones de la página **Propiedades** te ayu
 El tipo de producto se selecciona en el momento de [crear el complemento](set-your-add-on-product-id.md). Aquí se muestra el tipo de producto seleccionado, pero no se puede cambiar.
 
 > [!TIP]
-> Si el complemento no se ha publicado, es posible eliminar el envío y empezar de nuevo si quieres elegir un tipo de producto distinto.
+> Si no ha publicado el complemento, puede eliminarlo y empezar de nuevo si desea elegir un tipo de producto diferente.
 
-Los campos que ves en esta página variarán, en función del tipo de producto del complemento.
+Los campos que se ven en esta página variarán en función del tipo de producto del complemento.
 
 
 ## <a name="product-lifetime"></a>Duración del producto
 
-Si has seleccionado **Duradero** para el tipo de producto, aquí se muestra la opción **Duración del producto**. La **duración del producto** predeterminada para un complemento duradero es **para siempre**, lo que significa que el complemento no caduca nunca. Si lo prefiere, puede cambiar la **duración del producto** para que el complemento expire después de una duración establecida (con opciones de 1-365 días).
+Si seleccionó **durable** para el tipo de producto, aquí se muestra la **duración del producto** . La **duración del producto** predeterminada para un complemento duradero es **para siempre**, lo que significa que el complemento no caduca nunca. Si lo prefiere, puede cambiar la **duración del producto** para que el complemento expire después de una duración establecida (con opciones de 1-365 días).
 
 
 ## <a name="quantity"></a>Cantidad
 
-Si seleccionaste **Consumible administrado por la Tienda** para el tipo de producto, aquí se muestra la opción **Cantidad**. Debes escribir un número entre 1 y 1000000. Esta cantidad se concederá al cliente cuando adquiera el complemento y la Tienda hará un seguimiento del saldo cuando la aplicación notifique el consumo del complemento por parte del cliente.
+Si seleccionó **consumible administrado** por el almacén para el tipo de producto, aquí se muestra la **cantidad** . Debes escribir un número entre 1 y 1000000. Esta cantidad se concederá al cliente cuando adquiera el complemento y la Tienda hará un seguimiento del saldo cuando la aplicación notifique el consumo del complemento por parte del cliente.
 
 
 ## <a name="subscription-period"></a>Período de suscripción
 
-Si seleccionaste **Suscripción** para el tipo de producto, aquí se muestra la opción **Período de suscripción**. Elige una opción para especificar la frecuencia a la que se le cobrará a un cliente por la suscripción. La opción predeterminada es **mensual**, pero también puede seleccionar **3 meses**, **6 meses**, **anualmente**o **24 meses**.
+Si seleccionó **suscripción** para el tipo de producto, aquí se muestra el **período de suscripción** . Elija una opción para especificar la frecuencia con que se cobrará a un cliente por la suscripción. La opción predeterminada es **mensual**, pero también puede seleccionar **3 meses**, **6 meses**, **anualmente**o **24 meses**.
 
 > [!IMPORTANT]
-> Después de publicar el complemento, no podrás cambiar la selección de **Período de suscripción**.
+> Una vez publicado el complemento, no se puede cambiar la selección del **período de suscripción** .
 
 
-## <a name="free-trial"></a>Prueba gratuita
+## <a name="free-trial"></a>Evaluación gratuita
 
-Si seleccionaste **Suscripción** para el tipo de producto, aquí también se muestra la opción **Evaluación gratuita**. La opción predeterminada es **Sin prueba gratuita**. Si lo prefieres, puedes permitir que los clientes usen el complemento de forma gratuita durante un período de tiempo establecido (ya sea **1 semana** o **1 mes**). 
+Si seleccionó **suscripción** para el tipo de producto, la **evaluación gratuita** también se muestra aquí. La opción predeterminada es **ninguna evaluación gratuita.** Si lo prefiere, puede permitir que los clientes usen el complemento de forma gratuita durante un período de tiempo determinado ( **1 semana** o **1 mes**). 
 
 > [!IMPORTANT]
-> Después de publicar el complemento, no podrás cambiar la selección de **Evaluación gratuita**.
+> Una vez publicado el complemento, no se puede cambiar la selección de la **versión de evaluación gratuita** .
 
 
 ## <a name="content-type"></a>Tipo de contenido
 
-Sea cual sea el tipo de producto del complemento, será necesario indicar el tipo de contenido que se ofrece. Para la mayoría de complementos, el tipo de contenido debe ser **Descarga de software electrónico**. Si hay otra opción de la lista que describa mejor tu complemento (por ejemplo, si ofreces una descarga de música o un libro electrónico), selecciona esa opción en su lugar.
+Independientemente del tipo de producto del complemento, debe indicar el tipo de contenido que está ofreciendo. Para la mayoría de complementos, el tipo de contenido debe ser **Descarga de software electrónico**. Si otra opción de la lista describe mejor el complemento (por ejemplo, si está ofreciendo una descarga de música o un libro electrónico), seleccione esa opción en su lugar.
 
 Estas son las posibles opciones para el tipo de contenido de un complemento:
 
@@ -81,7 +81,7 @@ Estos campos son opcionales para todos los tipos de complementos.
 
 Tienes la opción de proporcionar hasta diez palabras clave de hasta 30 caracteres cada una para cada complemento que envíes. Tu aplicación podrá, entonces, buscar los complementos que coincidan con estas palabras. Esta función te permite crear pantallas en la aplicación que pueden cargar complementos sin tener que especificar directamente el id. de producto en el código de la aplicación. Puedes cambiar las palabras clave del complemento en cualquier momento, sin tener que realizar cambios en el código de la aplicación ni volver a enviarla.
 
-Para consultar este campo, usa la propiedad [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) del [espacio de nombres Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), usa la propiedad [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords)).
+Para consultar este campo, use la propiedad [StoreProduct. keywords](/uwp/api/windows.services.store.storeproduct.Keywords) en el [espacio de nombres Windows. Services. Store](/uwp/api/Windows.Services.Store). (O bien, si está usando el [espacio de nombres Windows. ApplicationModel. Store](/uwp/api/Windows.ApplicationModel.Store), use la propiedad [ProductListing. keywords](/uwp/api/windows.applicationmodel.store.productlisting.Keywords) ).
 
 > [!NOTE]
 > Las palabras clave no están disponibles para su uso en paquetes destinados a Windows 8 y Windows 8.1.
@@ -90,11 +90,11 @@ Para consultar este campo, usa la propiedad [StoreProduct.Keywords](https://docs
 
 ### <a name="custom-developer-data"></a>Datos del desarrollador personalizados
 
-Es posible escribir hasta 3000 caracteres en el campo **Datos del desarrollador personalizados** (anteriormente denominado **Etiqueta**) para proporcionar contexto adicional para el producto desde la aplicación. A menudo, se realiza con una cadena XML, pero puedes introducir cualquier cosa que quieras en este campo. Tu aplicación puede consultar este campo para leer su contenido (aunque la aplicación no puede editar los datos ni revertir los cambios).
+Puede escribir hasta 3000 caracteres en el campo de **datos del desarrollador personalizado** (anteriormente denominado **etiqueta**) para proporcionar contexto adicional para el producto en la aplicación. A menudo, se trata de una cadena XML, pero se puede escribir cualquier cosa que se desee en este campo. A continuación, la aplicación puede consultar este campo para leer su contenido (aunque la aplicación no puede editar los datos y devolver los cambios).
 
-Por ejemplo, supongamos que tienes un juego y que vendes un complemento que permite al cliente tener acceso a niveles adicionales. Con el campo **Datos del desarrollador personalizados**, la aplicación puede realizar una consulta para ver qué niveles están disponibles cuando un cliente tiene este complemento. Puedes ajustar el valor en cualquier momento (en este caso, los niveles que se incluyen), sin tener que realizar cambios en el código de la aplicación ni volver a enviar la aplicación, simplemente actualizando la información del campo **Datos del desarrollador personalizados** y publicando un envío actualizado para el complemento.
+Por ejemplo, supongamos que tiene un juego y está vendiendo un complemento que permite al cliente acceder a niveles adicionales. Mediante el campo **personalizado de datos para desarrolladores** , la aplicación puede consultar para ver qué niveles están disponibles cuando un cliente posee este complemento. Puede ajustar el valor en cualquier momento (en este caso, los niveles que se incluyen), sin tener que realizar cambios en el código en la aplicación o volver a enviar la aplicación, actualizando la información en el campo de **datos de desarrollador personalizado** del complemento y publicando después un envío actualizado para el complemento.
 
-Para consultar este campo, usa la propiedad [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) del [espacio de nombres Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (O, si estás usando el [espacio de nombres Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), usa la propiedad [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag)).
+Para consultar este campo, use la propiedad [StoreSku. CustomDeveloperData](/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) en el [espacio de nombres Windows. Services. Store](/uwp/api/Windows.Services.Store). (O bien, si está usando el [espacio de nombres Windows. ApplicationModel. Store](/uwp/api/Windows.ApplicationModel.Store), use la propiedad [ProductListing. Tag](/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag) ).
 
 > [!NOTE]
 > El campo **datos de desarrollador personalizados** no está disponible para su uso en paquetes destinados a Windows 8 y Windows 8.1.

@@ -4,26 +4,26 @@ description: Representa sombras de alta fidelidad en dispositivos más rápidos,
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, juegos, mapas de sombras, directx
+keywords: Windows 10, UWP, juegos, mapas de sombras, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 1087a063fa19bea716b86143c10097711cef9205
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2c21b1c77b15435458d75a1772a914aa95048559
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367907"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168299"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a>Compatibilidad con mapas de sombras en una variedad de hardware
 
 
 
 
-Representa sombras de alta fidelidad en dispositivos más rápidos, y sombras más rápidas en dispositivos menos eficaces. Parte 4 de [Tutorial: Implementar los volúmenes de instantáneas con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Representa sombras de alta fidelidad en dispositivos más rápidos, y sombras más rápidas en dispositivos menos eficaces. Parte 4 de [Tutorial: implementar volúmenes de sombra con búferes de profundidad en Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## <a name="comparison-filter-types"></a>Comparación de tipos de filtros
 
 
-Usa solamente el filtrado lineal si el dispositivo puede tolerar una disminución de rendimiento. Por lo general, nivel de características de Direct3D 9\_dispositivos 1 no tienen suficiente capacidad para piezas de repuesto para el filtrado lineal en las sombras. En estos dispositivos, usa en cambio el filtrado de punto. Cuando usas el filtrado lineal, ajusta el sombreador de píxeles para que combine los contornos de sombra.
+Usa solamente el filtrado lineal si el dispositivo puede tolerar una disminución de rendimiento. Por lo general, los dispositivos de nivel de característica 9 1 de Direct3D \_ no tienen suficiente capacidad de reserva para el filtrado lineal en las sombras. En estos dispositivos, usa en cambio el filtrado de punto. Cuando usas el filtrado lineal, ajusta el sombreador de píxeles para que combine los contornos de sombra.
 
 Crea el muestrario de comparación para el filtrado de punto:
 
@@ -108,17 +108,17 @@ return float4(input.color * (light + shadow), 1.f);
 ## <a name="shadow-buffer-size"></a>Tamaño del búfer de sombras
 
 
-Si bien los mapas de sombras más grandes no tienen tanto efecto pixelado, requieren más espacio en la memoria de gráficos. Experimenta con distintos tamaños de mapas de sombras en tu juego y observa los resultados en distintos tipos de dispositivos y distintos tipos de pantalla. Considera una optimización, como mapas de sombras en cascada, para obtener mejores resultados con menos memoria de gráficos. Consulta [Técnicas habituales para mejorar los mapas de profundidad de sombras](https://docs.microsoft.com/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps).
+Si bien los mapas de sombras más grandes no tienen tanto efecto pixelado, requieren más espacio en la memoria de gráficos. Experimenta con distintos tamaños de mapas de sombras en tu juego y observa los resultados en distintos tipos de dispositivos y distintos tipos de pantalla. Considera una optimización, como mapas de sombras en cascada, para obtener mejores resultados con menos memoria de gráficos. Consulta [Técnicas habituales para mejorar los mapas de profundidad de sombras](/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps).
 
 ## <a name="shadow-buffer-depth"></a>Profundidad del búfer de sombras
 
 
-Una mayor precisión en el búfer de sombras dará resultados de prueba de profundidad más precisos, lo que ayuda a evitar problemas de rivalidad en el búfer z (z-buffer fighting). Pero al igual que los mapas de sombras más grandes, una mayor precisión requiere más memoria. Experimentar con profundidades diferentes tipos de precisión en tu juego - DXGI\_formato\_R24G8\_TYPELESS frente a DXGI\_formato\_R16\_TYPELESS - y observe la velocidad y calidad en niveles de características diferentes.
+Una mayor precisión en el búfer de sombras dará resultados de prueba de profundidad más precisos, lo que ayuda a evitar problemas de rivalidad en el búfer z (z-buffer fighting). Pero al igual que los mapas de sombras más grandes, una mayor precisión requiere más memoria. Experimente con tipos de precisión de profundidad diferentes en el formato de tipo DXGI R24G8 con el \_ \_ formato dxgi y sin \_ \_ \_ \_ tipo, y observe la velocidad y la calidad de los distintos niveles de características.
 
 ## <a name="optimizing-precompiled-shaders"></a>Optimizar sombreadores precompilados
 
 
-Las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar compilación dinámica de sombreador, pero resulta más rápido usar vínculos dinámicos de sombreador. También puedes usar directivas de compilador y bloques `#ifdef` para crear versiones distintas de sombreadores. Esto se realiza al abrir el archivo del proyecto de Visual Studio en un editor de texto y agregar varias entradas `<FxcCompiler>` para el HLSL (cada una con las definiciones de preprocesador apropiadas). Tenga en cuenta que esto exige que los nombres de archivo diferente; en este caso, Visual Studio agrega \_punto y \_lineal a las distintas versiones del sombreador.
+Las aplicaciones para la Plataforma universal de Windows (UWP) pueden usar compilación dinámica de sombreador, pero resulta más rápido usar vínculos dinámicos de sombreador. También puedes usar directivas de compilador y bloques `#ifdef` para crear versiones distintas de sombreadores. Esto se realiza al abrir el archivo del proyecto de Visual Studio en un editor de texto y agregar varias entradas `<FxcCompiler>` para el HLSL (cada una con las definiciones de preprocesador apropiadas). Tenga en cuenta que esto requiere nombres de archivo diferentes; en este caso, Visual Studio anexa \_ Point y \_ linear a las distintas versiones del sombreador.
 
 La entrada del archivo del proyecto para la versión de filtro lineal del sombreador se define LINEAR:
 
@@ -175,7 +175,3 @@ La entrada del archivo del proyecto para la versión de filtro lineal del sombre
  
 
  
-
-
-
-

@@ -4,14 +4,14 @@ title: Iniciar el Centro de opiniones desde la aplicación
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, Centro de opiniones, iniciar, Feedback Hub, launch
+keywords: Windows 10, UWP, centro de comentarios, lanzamiento
 ms.localizationpriority: medium
-ms.openlocfilehash: 589cad0c5055f0bfbade457e035702ee2cffd43d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: efdc4a4b39f71b26658e3fbaf57287098b23e4be
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259250"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158499"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Iniciar el Centro de opiniones desde la aplicación
 
@@ -20,14 +20,14 @@ Puedes animar a los clientes a dejar comentarios agregando un control (como un b
 Para iniciar el Centro de opiniones desde la aplicación, usa una API que se incluya con el [Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK). Se recomienda usar esta API para iniciar el Centro de opiniones desde un elemento de la interfaz de usuario de tu aplicación que siga nuestras directrices para el diseño.
 
 > [!NOTE]
-> El Centro de opiniones solo está disponible en dispositivos que ejecutan la versión 10.0.14271 o posterior de un sistema operativo Windows 10 que se base en [familias de dispositivos](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) móviles o de escritorio. Te recomendamos que muestres un control de comentarios en la aplicación solo si el Centro de opiniones está disponible en el dispositivo del usuario. El código de este tema muestra cómo hacerlo.
+> El Centro de opiniones solo está disponible en dispositivos que ejecutan la versión 10.0.14271 o posterior de un sistema operativo Windows 10 que se base en [familias de dispositivos](../get-started/universal-application-platform-guide.md) móviles o de escritorio. Te recomendamos que muestres un control de comentarios en la aplicación solo si el Centro de opiniones está disponible en el dispositivo del usuario. El código de este tema muestra cómo hacerlo.
 
 ## <a name="how-to-launch-feedback-hub-from-your-app"></a>Cómo iniciar el Centro de opiniones desde la aplicación
 
 Para iniciar el Centro de opiniones desde la aplicación:
 
-1. [Instala Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk).
-2. Abre el proyecto en Visual Studio.
+1. [Instale el SDK de Microsoft Store Services](microsoft-store-services-sdk.md#install-the-sdk).
+2. Abra el proyecto en Visual Studio.
 3. En el Explorador de soluciones, haz clic con el botón secundario en el nodo **Referencias** del proyecto y haz clic en **Agregar referencia**.
 4. En el cuadro de diálogo **Administrador de referencias**, expande **Windows Universal** y haz clic en **Extensiones**.
 5. En la lista de los SDK, haz clic en la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar**.
@@ -38,21 +38,21 @@ Para iniciar el Centro de opiniones desde la aplicación:
     > [!NOTE]
     > Te recomendamos que ocultes el control de comentarios de manera predeterminada y que lo muestres en el código de inicialización solo si el Centro de opiniones está disponible en el dispositivo del usuario. En el paso siguiente se muestra cómo hacerlo.
 
-    El siguiente código muestra la definición XAML de una clase [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) que está configurada como se describió anteriormente.
+    El siguiente código muestra la definición XAML de una clase [Button](/uwp/api/Windows.UI.Xaml.Controls.Button) que está configurada como se describió anteriormente.
 
     ```XML
     <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
     ```
 
-7. En el código de inicialización de la página de la aplicación que hospeda el control de comentarios, usa el método estático [IsSupported](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported) de la clase [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) para determinar si el Centro de opiniones está disponible en el dispositivo del usuario. El Centro de opiniones solo está disponible en dispositivos que ejecutan la versión 10.0.14271 o posterior de un sistema operativo Windows 10 que se base en [familias de dispositivos](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) móviles o de escritorio.
+7. En el código de inicialización de la página de la aplicación que hospeda el control de comentarios, usa el método estático [IsSupported](/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported) de la clase [StoreServicesFeedbackLauncher](/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) para determinar si el Centro de opiniones está disponible en el dispositivo del usuario. El Centro de opiniones solo está disponible en dispositivos que ejecutan la versión 10.0.14271 o posterior de un sistema operativo Windows 10 que se base en [familias de dispositivos](../get-started/universal-application-platform-guide.md) móviles o de escritorio.
 
-    Si esta propiedad devuelve **true**, haz que el control sea visible. El siguiente código muestra cómo hacerlo para una clase [Button](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button).
+    Si esta propiedad devuelve **true**, haz que el control sea visible. El siguiente código muestra cómo hacerlo para una clase [Button](/uwp/api/windows.ui.xaml.controls.button).
 
     [!code-csharp[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#ToggleFeedbackVisibility)]
       > [!NOTE]
-      > Aunque el Centro de opiniones no es compatible con dispositivos Xbox en este momento, la propiedad **IsSupported** devuelve actualmente **true** en dispositivos Xbox que ejecutan la versión 10.0.14271 o posterior de Windows 10. Este es un problema conocido que se resolverá en una futura versión de Microsoft Store Services SDK.  
+      > Aunque el centro de comentarios no se admite en dispositivos Xbox en este momento, la propiedad **IsSupported** devuelve actualmente **true** en los dispositivos Xbox que ejecutan la versión 10.0.14271 o posterior de Windows 10. Este es un problema conocido que se resolverá en una futura versión de Microsoft Store Services SDK.  
 
-8. En el controlador de eventos que se ejecuta cuando el usuario hace clic en el control, obtén un objeto [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) y llama al método [LaunchAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync) para iniciar la aplicación Centro de opiniones. Hay dos sobrecargas para este método: una sin parámetros y otra que acepta un diccionario de pares clave y valor que contienen los metadatos que quieres asociar a los comentarios. En el ejemplo siguiente se muestra cómo iniciar el Centro de opiniones en el controlador de eventos [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) para una clase [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button).
+8. En el controlador de eventos que se ejecuta cuando el usuario hace clic en el control, obtén un objeto [StoreServicesFeedbackLauncher](/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) y llama al método [LaunchAsync](/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync) para iniciar la aplicación Centro de opiniones. Hay dos sobrecargas para este método: una sin parámetros y otra que acepta un diccionario de pares clave y valor que contienen los metadatos que quieres asociar a los comentarios. En el ejemplo siguiente se muestra cómo iniciar el Centro de opiniones en el controlador de eventos [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) para una clase [Button](/uwp/api/Windows.UI.Xaml.Controls.Button).
 
     [!code-csharp[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#FeedbackButtonClick)]
 
@@ -76,4 +76,4 @@ También te recomendamos que uses una o varias de las siguientes opciones de ubi
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Informe Comentarios](../publish/feedback-report.md)
+* [Informe de comentarios](../publish/feedback-report.md)

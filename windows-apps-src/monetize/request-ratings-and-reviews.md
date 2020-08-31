@@ -1,34 +1,34 @@
 ---
 Description: Obtenga información sobre las distintas formas en las que puede permitir que los clientes evalúen y revisen su aplicación mediante programación.
-title: Solicitar calificaciones y opiniones de tu aplicación
+title: Solicitar calificaciones y revisiones para la aplicación
 ms.date: 01/22/2019
 ms.topic: article
-keywords: windows 10, uwp, calificaciones, opiniones
+keywords: Windows 10, UWP, clasificaciones y revisiones
 ms.localizationpriority: medium
-ms.openlocfilehash: b167f4cc40ee72e6405436bacee28f2f20b4623c
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: c0a668ac66f48e386a6299a64e5bcc18cec4fccc
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210721"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158379"
 ---
-# <a name="request-ratings-and-reviews-for-your-app"></a>Solicitar calificaciones y opiniones de tu aplicación
+# <a name="request-ratings-and-reviews-for-your-app"></a>Solicitar calificaciones y revisiones para la aplicación
 
-Puedes agregar código a la aplicación Plataforma universal de Windows (UWP) para solicitar mediante programación a los clientes que califiquen u opinen sobre tu aplicación. Existen varias formas de hacerlo:
-* Puedes mostrar un diálogo de calificaciones y opiniones directamente en el contexto de la aplicación.
-* Puedes abrir mediante programación la página de calificaciones y opiniones para tu aplicación en Microsoft Store.
+Puede agregar código a la aplicación Plataforma universal de Windows (UWP) para pedir a los clientes que califiquen o revisen su aplicación mediante programación. Puede hacer esto de varias maneras:
+* Puede mostrar un cuadro de diálogo de clasificación y revisión directamente en el contexto de la aplicación.
+* Puede abrir mediante programación la página clasificación y revisión de la aplicación en el Microsoft Store.
 
 Cuando esté preparado para analizar los datos de clasificación y revisión, puede ver los datos en el centro de Partners o usar la API de Microsoft Store Analytics para recuperar estos datos mediante programación.
 
 > [!IMPORTANT]
-> Al agregar una función de clasificación dentro de la aplicación, todas las revisiones deben enviar al usuario a los mecanismos de clasificación de la tienda, con independencia de la clasificación por estrellas elegida. Si recopila comentarios o comentarios de los usuarios, debe estar claro que no están relacionados con la clasificación o las revisiones de la aplicación en la tienda, sino que se envían directamente al desarrollador de la aplicación. Consulte el código de conducta para desarrolladores para obtener más información relacionada con [actividades fraudulentas o deshonestos](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
+> Al agregar una función de clasificación dentro de la aplicación, todas las revisiones deben enviar al usuario a los mecanismos de clasificación de la tienda, con independencia de la clasificación por estrellas elegida. Si recopila comentarios o comentarios de los usuarios, debe estar claro que no están relacionados con la clasificación o las revisiones de la aplicación en la tienda, sino que se envían directamente al desarrollador de la aplicación. Consulte el código de conducta para desarrolladores para obtener más información relacionada con [actividades fraudulentas o deshonestos](/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
 
-## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Mostrar un diálogo de clasificación y reseña en la aplicación
+## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Mostrar un cuadro de diálogo de clasificación y revisión en la aplicación
 
-Para mostrar mediante programación un cuadro de diálogo de la aplicación que solicita al cliente que califique la aplicación y envíe una revisión, llame al método [RequestRateAndReviewAppAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestrateandreviewappasync) en el espacio de nombres [Windows. Services. Store](https://docs.microsoft.com/uwp/api/windows.services.store) . 
+Para mostrar mediante programación un cuadro de diálogo de la aplicación que solicita al cliente que califique la aplicación y envíe una revisión, llame al método [RequestRateAndReviewAppAsync](/uwp/api/windows.services.store.storecontext.requestrateandreviewappasync) en el espacio de nombres [Windows. Services. Store](/uwp/api/windows.services.store) . 
 
 > [!IMPORTANT]
-> La solicitud para mostrar el diálogo de clasificación y opiniones se debe llamar en el subproceso de la interfaz de usuario en tu aplicación.
+> Se debe llamar a la solicitud para mostrar el cuadro de diálogo clasificación y revisión en el subproceso de la interfaz de usuario de la aplicación.
 
 ```csharp
 using Windows.ApplicationModel.Store;
@@ -103,11 +103,11 @@ private async Task PromptUserToRateApp()
 
 El método **RequestRateAndReviewAppAsync** se presentó en la versión 1809 de Windows 10 y solo se puede usar en proyectos que tengan como destino la **actualización 2018 de octubre de windows 10 (10,0; Compilación 17763)** o una versión posterior en Visual Studio.
 
-### <a name="response-data-for-the-rating-and-review-request"></a>Datos de respuesta para la solicitud de calificaciones y opiniones
+### <a name="response-data-for-the-rating-and-review-request"></a>Datos de respuesta para la solicitud de clasificación y revisión
 
-Después de enviar la solicitud para mostrar el cuadro de diálogo clasificación y revisión, la propiedad [ExtendedJsonData](https://docs.microsoft.com/uwp/api/windows.services.store.storerateandreviewresult.extendedjsondata) de la clase [StoreRateAndReviewResult](https://docs.microsoft.com/uwp/api/windows.services.store.storerateandreviewresult) contiene una cadena con formato JSON que indica si la solicitud se realizó correctamente.
+Después de enviar la solicitud para mostrar el cuadro de diálogo clasificación y revisión, la propiedad [ExtendedJsonData](/uwp/api/windows.services.store.storerateandreviewresult.extendedjsondata) de la clase [StoreRateAndReviewResult](/uwp/api/windows.services.store.storerateandreviewresult) contiene una cadena con formato JSON que indica si la solicitud se realizó correctamente.
 
-El siguiente ejemplo muestra el valor devuelto para esta solicitud después de que el cliente envíe correctamente una calificación o reseña.
+En el ejemplo siguiente se muestra el valor devuelto para esta solicitud después de que el cliente envíe correctamente una clasificación o una revisión.
 
 ```json
 { 
@@ -119,7 +119,7 @@ El siguiente ejemplo muestra el valor devuelto para esta solicitud después de q
 }
 ```
 
-El siguiente ejemplo muestra el valor devuelto para esta solicitud después de que el cliente no elija enviar una calificación o reseña.
+En el ejemplo siguiente se muestra el valor devuelto para esta solicitud después de que el cliente decida no enviar una clasificación o una revisión.
 
 ```json
 { 
@@ -128,32 +128,32 @@ El siguiente ejemplo muestra el valor devuelto para esta solicitud después de q
 }
 ```
 
-En la siguiente tabla se describen los campos en la cadena de datos con formato JSON.
+En la tabla siguiente se describen los campos de la cadena de datos con formato JSON.
 
 | Campo          | Descripción                                                                                                                                   |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| *estatus*       | Una cadena que indica si el cliente envió correctamente una calificación o reseña. Los valores admitidos son **success** y **aborted**. |
-| *Data*         | Un objeto que contiene un valor booleano único denominado *updated*. Este valor indica si el cliente ha actualizado una calificación o reseña existente. El objeto *data* objeto solo se incluye en respuestas realizadas correctamente. |
-| *errorDetails* | Una cadena que contiene la información de errores de la solicitud.                                                                                     |
+| *status*       | Cadena que indica si el cliente envió correctamente una clasificación o una revisión. Los valores admitidos son **correcto** y **anulado**. |
+| *data*         | Objeto que contiene un valor booleano único denominado *actualizado*. Este valor indica si el cliente actualizó una clasificación o revisión existente. El objeto de *datos* solo se incluye en las respuestas Success. |
+| *errorDetails* | Cadena que contiene los detalles del error de la solicitud.                                                                                     |
 
-## <a name="launch-the-rating-and-review-page-for-your-app-in-the-store"></a>Iniciar la página de calificaciones y opiniones de la aplicación en la Store
+## <a name="launch-the-rating-and-review-page-for-your-app-in-the-store"></a>Inicio de la página clasificación y revisión de la aplicación en la tienda
 
-Si deseas abrir mediante programación la página de calificaciones y opiniones para tu aplicación en la Store, puedes usar el método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) con el esquema URI ```ms-windows-store://review``` como se muestra en este ejemplo de código.
+Si desea abrir mediante programación la página clasificación y revisión de la aplicación en la tienda, puede usar el método [LaunchUriAsync](/uwp/api/windows.system.launcher.launchuriasync) con el ```ms-windows-store://review``` esquema de URI tal y como se muestra en este ejemplo de código.
 
 ```csharp
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://review/?ProductId=9WZDNCRFHVJL"));
 ```
 
-Para obtener más información, consulta [Iniciar la aplicación Microsoft Store](../launch-resume/launch-store-app.md).
+Para obtener más información, consulte [Inicio de la aplicación Microsoft Store](../launch-resume/launch-store-app.md).
 
 ## <a name="analyze-your-ratings-and-reviews-data"></a>Analizar los datos de calificaciones y opiniones
 
-Para analizar los datos de calificaciones y opiniones de los clientes, tienes varias opciones:
-* Puede usar el informe de [revisiones](../publish/reviews-report.md) del centro de partners para ver las clasificaciones y las revisiones de sus clientes. También puedes descargar este informe para verlo sin conexión.
-* Puedes usar los métodos [Obtener la clasificación de la aplicación](get-app-ratings.md) y [Obtener opiniones de la aplicación](get-app-reviews.md) en la API de análisis de la Store para recuperar mediante programación las calificaciones y opiniones de los clientes en formato JSON.
+Para analizar las clasificaciones y revisar los datos de los clientes, tiene varias opciones:
+* Puede usar el informe de [revisiones](../publish/reviews-report.md) del centro de partners para ver las clasificaciones y las revisiones de sus clientes. También puede descargar este informe para verlo sin conexión.
+* Puede usar los métodos [obtener clasificaciones de aplicaciones](get-app-ratings.md) y [obtener revisiones de aplicaciones](get-app-reviews.md) en Store Analytics API para recuperar mediante programación las clasificaciones y las revisiones de sus clientes en formato JSON.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Enviar solicitudes a la tienda](send-requests-to-the-store.md)
+* [Enviar solicitudes a Store](send-requests-to-the-store.md)
 * [Iniciar la aplicación de Microsoft Store](../launch-resume/launch-store-app.md)
 * [Informe Críticas](../publish/reviews-report.md)

@@ -1,53 +1,49 @@
 ---
 title: Mosaico de subrecurso Texture3D
-description: Esta tabla muestra cómo los subrecursos Texture3D se organizan en mosaico.
+description: Vea una tabla que muestra cómo se muestran los Subrecursos Texture3D en mosaico, en función de los bits por píxel del mosaico Texture2D.
 ms.assetid: 210D03E4-CF12-47E0-BA2F-C8D059B17D3E
 keywords:
 - Mosaico de subrecurso Texture3D
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b63fdeeffd4b95afab6556b6f0318732ff988b0
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9ee4ff5c87022f9fd303b1331665a2551704cb93
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370906"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167949"
 ---
 # <a name="texture3d-subresource-tiling"></a>Mosaico de subrecurso Texture3D
 
 
-Esta tabla muestra cómo los subrecursos [**Texture3D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture3d) se organizan en mosaico. Los valores de esta tabla no cuentan el empaquetado de MIP de cola.
+En esta tabla se muestra cómo se muestran los Subrecursos de [**Texture3D**](/windows/desktop/direct3dhlsl/sm5-object-texture3d) en mosaico. Los valores de esta tabla no cuentan el empaquetado de la cola MIP.
 
-Esta tabla toma la organización en mosaico de [**Texture2D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d), divide las dimensiones x/y por 4 y agrega 16 capas de profundidad. Todos los mosaicos del primer plano (plano 2D del mosaicos que definen las primeras 16 capas de profundidad) aparecen antes que los planos posteriores.
+En esta tabla se toma el mosaico [**Texture2D**](/windows/desktop/direct3dhlsl/sm5-object-texture2d) y se dividen las dimensiones x/y en 4 cada una de ellas y se agregan 16 niveles de profundidad. Todos los mosaicos para el primer plano (plano 2D de mosaicos que definen las 16 primeras capas de profundidad) aparecen antes que los planos posteriores.
 
-**Nota** En la implementación inicial de los recursos de streaming no se expone la compatibilidad de   [**Texture3D**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture3d) con dichos recursos de streaming, pero aquí se incluyen las formas de mosaico deseadas por su posible compatibilidad en una versión futura.
+**Tenga en cuenta**que la compatibilidad con  [**Texture3D**](/windows/desktop/direct3dhlsl/sm5-object-texture3d) en los recursos de streaming no se expone en la implementación inicial de los recursos de streaming, pero las formas de iconos deseadas se enumeran aquí para una posible compatibilidad en una versión futura.
 
  
 
-| Bits/píxel (1 muestra/píxel) | Dimensiones de mosaico (píxeles, A x A x P) |
+| Bits/píxel (1 ejemplo/píxel) | Dimensiones del mosaico (píxeles, a la x) |
 |-----------------------------|---------------------------------|
-| 8                           | 64 x 32 x 32                        |
-| 16                          | 32 x 32 x 32                        |
-| 32                          | 32 x 32 x 16                        |
-| 64                          | 32 x 16 x 16                        |
-| 128                         | 16 x 16 x 16                        |
-| BC1, 4                       | 128 x 64 x 16                       |
-| BC2, 3, 5, 6 y 7                 | 64 x 64 x 16                        |
+| 8                           | 64x32x32                        |
+| 16                          | 32x32x32                        |
+| 32                          | 32x32x16                        |
+| 64                          | 32x16x16                        |
+| 128                         | 16x16x16                        |
+| BC1, 4                       | 128x64x16                       |
+| BC2, 3, 5, 6, 7                 | 64x64x16                        |
 
  
 
-Recuentos de bits de formato no compatibles con los recursos de streaming son 96 formatos bpp, formatos de vídeo, DXGI\_formato\_R1\_UNORM, DXGI\_formato\_R8G8\_B8G8\_UNORM, y DXGI\_formato\_R8R8\_G8B8\_UNORM.
+Los recuentos de bits de formato no admitidos en los recursos de streaming son formatos de 96 BPP, formatos de vídeo, formato de DXGI \_ \_ R1 \_ UNORM, formato de dxgi \_ \_ R8G8 \_ B8G8 \_ UNORM y formato de dxgi \_ \_ R8R8 \_ \_ G8B8 UNORM.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[¿Cómo se coloca en mosaico de área de un recurso de transmisión por secuencias](how-a-streaming-resource-s-area-is-tiled.md)
+[¿Cómo se organiza en mosaico el área de un recurso de streaming?](how-a-streaming-resource-s-area-is-tiled.md)
 
  
 
  
-
-
-
-

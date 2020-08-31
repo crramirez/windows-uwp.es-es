@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0032a5bbaafabab3c847b2b7c48536873f4532dd
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
+ms.openlocfilehash: 07c814fc48e47b2bdc8980ac72732783d7ea9139
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826168"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158029"
 ---
 # <a name="avoid-common-certification-failures"></a>Evitar errores de certificación comunes
 
@@ -19,7 +19,7 @@ ms.locfileid: "66826168"
 Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplicaciones no se puedan certificar o problemas que pueden detectarse durante una comprobación puntual después de que la aplicación se haya publicado.
 
 > [!NOTE]
-> No olvide revisar la [las directivas de Microsoft Store](store-policies.md) para asegurarse de que la aplicación cumple todos los requisitos en la lista.
+> Asegúrese de revisar las [directivas de Microsoft Store](store-policies.md) para asegurarse de que la aplicación cumple todos los requisitos que se enumeran allí.
 
 -   Envía la aplicación solamente cuando esté terminada. Puedes usar la descripción de la aplicación para mencionar las próximas funciones, pero asegúrate de que no contenga secciones incompletas, vínculos a páginas web en construcción o cualquier elemento que pueda dar al cliente la impresión de que la aplicación está incompleta.
 
@@ -27,25 +27,21 @@ Repasa esta lista para evitar problemas que, con frecuencia, hacen que las aplic
 
 -   Prueba tu aplicación en diversas configuraciones para asegurarte de que sea lo más estable posible.
 
--   Asegúrate de que tu aplicación no se bloquee, si no existe conectividad de red. Aun si se requiere una conexión para usar realmente la aplicación, es necesario que tenga un rendimiento adecuado cuando no haya conexión.
+-   Asegúrese de que la aplicación no se bloquea sin conectividad de red. Aun si se requiere una conexión para usar realmente la aplicación, es necesario que tenga un rendimiento adecuado cuando no haya conexión.
 
--   No te olvides de [proporciona toda la información necesaria](notes-for-certification.md) que se requiere para usar tu aplicación, como el nombre de usuario y contraseña para una cuenta de prueba en el caso de que tu aplicación necesite que los usuarios se registren en un servicio, o todos los pasos necesarios para acceder a funciones ocultas o bloqueadas.
+-   [Proporcione la información necesaria](notes-for-certification.md) para usar la aplicación, como el nombre de usuario y la contraseña de una cuenta de prueba si la aplicación requiere que los usuarios inicien sesión en un servicio o en los pasos necesarios para tener acceso a las características ocultas o bloqueadas.
 
--   Incluir un [URL de la política de privacidad](enter-app-properties.md#privacy-policy-url) si su aplicación requiere una; por ejemplo, si la aplicación tiene acceso a cualquier tipo de información personal de cualquier manera o en caso contrario es requerido por la ley. Para ayudar a determinar si la aplicación requiere una directiva de privacidad, revise el [acuerdo del desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y [las directivas de Microsoft Store](store-policies.md).
+-   Incluya una [dirección URL de directiva de privacidad](enter-app-properties.md#privacy-policy-url) si la aplicación requiere una. por ejemplo, si la aplicación tiene acceso a cualquier tipo de información personal de algún modo o lo requiere la ley. Para ayudar a determinar si la aplicación requiere una directiva de privacidad, revise el [contrato para desarrolladores de aplicaciones](/legal/windows/agreements/app-developer-agreement) y las directivas de [Microsoft Store](store-policies.md).
 
 -   Asegúrate de que la descripción de la aplicación refleja fielmente lo que hace la aplicación. Para obtener ayuda, consulta nuestras directrices sobre cómo [escribir una buena descripción de la aplicación](write-a-great-app-description.md).
 
--   Proporciona respuestas completas y precisas a todas las preguntas de la sección [Clasificaciones por edades](age-ratings.md).
+-   Proporcione respuestas completas y precisas a todas las preguntas de la sección [clasificaciones de edad](age-ratings.md) .
 
 -   No [declares tu aplicación como accesible](product-declarations.md#this-app-has-been-tested-to-meet-accessibility-guidelines), a menos que hayas realizado en ella ingeniería específica y la hayas probado en escenarios de accesibilidad.
 
--   Si tu aplicación usa las API de comercio de la Tienda Windows desde el espacio de nombres [**Windows.ApplicationModel.Store**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store), asegúrate de probar la aplicación y comprobar que administre excepciones típicas. Asimismo, asegúrate de que la aplicación use la clase [**CurrentApp**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) y no la clase [**CurrentAppSimulator**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator), que está destinada a fines de prueba solamente. (Ten en cuenta si la aplicación está destinada a Windows 10, versión 1607 (o posteriores), se recomienda usar los miembros del espacio de nombres [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) en lugar del espacio de nombres Windows.ApplicationModel.Store).
+-   Si tu aplicación usa las API de comercio de la Tienda Windows desde el espacio de nombres [**Windows.ApplicationModel.Store**](/uwp/api/Windows.ApplicationModel.Store), asegúrate de probar la aplicación y comprobar que administre excepciones típicas. Además, asegúrese de que la aplicación usa la clase [**CurrentApp**](/uwp/api/Windows.ApplicationModel.Store.CurrentApp) y no la clase [**CurrentAppSimulator**](/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) , que solo es para fines de prueba. (Tenga en cuenta que si la aplicación tiene como destino Windows 10, versión 1607 o posterior, se recomienda que use los miembros del espacio de nombres [Windows. Services. Store](/uwp/api/windows.services.store) en lugar del espacio de nombres Windows. ApplicationModel. Store).
 
 
  
 
  
-
-
-
-

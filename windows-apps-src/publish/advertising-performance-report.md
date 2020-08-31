@@ -1,72 +1,72 @@
 ---
-Description: Para ver los datos de rendimiento de las unidades de ad en sus aplicaciones, use el informe de rendimiento de publicidad en el centro de partners.
+Description: Para ver los datos de rendimiento de las unidades de anuncios de las aplicaciones, use el informe de rendimiento de publicidad del centro de Partners.
 title: Informe de rendimiento de la publicidad
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a96f6f6593a8ccc6714f67b6f825a6416750b432
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: bb9c6a43b9411b2297cc4cbf35dfdb2177e5dab7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57640280"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155379"
 ---
 # <a name="advertising-performance-report"></a>Informe de rendimiento de la publicidad
 
 
-El **anunciar el informe de rendimiento** en [centro de partners](https://partner.microsoft.com/dashboard) muestra cómo la [las unidades de anuncios](in-app-ads.md) realiza, incluidos anuncios de la Comunidad. En este informe se incluyen datos de varios proveedores de anuncios de aplicaciones para UWP que usan la [mediación de anuncios](in-app-ads.md#mediation).
+El **Informe de rendimiento de publicidad** del [centro de Partners](https://partner.microsoft.com/dashboard) muestra el rendimiento de las [unidades de anuncios](in-app-ads.md) , incluidos los anuncios de la comunidad. Este informe incluye datos de varios proveedores de AD en aplicaciones UWP que usan la [mediación de anuncios](in-app-ads.md#mediation).
 
-Para ver este informe, amplía **Analizar** en el menú de navegación izquierdo y luego selecciona **Rendimiento de los anuncios**. Puede ver estos datos en el centro de partners, o descargar los datos del informe para ver sin conexión, haga clic en los iconos de flecha en la página. También puedes recuperar mediante programación estos datos mediante el método [Obtener los datos de rendimiento de los anuncios](../monetize/get-ad-performance-data.md) en nuestra [API de REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
+Para ver este informe, expanda **analizar** en el menú de navegación izquierdo y, a continuación, seleccione **rendimiento de ad**. Puede ver estos datos en el centro de Partners o descargar los datos del informe para verlos sin conexión haciendo clic en los iconos de flecha de la página. Como alternativa, puede recuperar estos datos mediante programación con el método [Get ad performance Data](../monetize/get-ad-performance-data.md) en nuestra API de [REST de análisis](../monetize/access-analytics-data-using-windows-store-services.md).
 
-Al visualizar los informes de rendimiento de la publicidad, ten en cuenta que los datos de los informes de los últimos tres días pueden cambiar, ya que recibimos y procesamos nuevos datos procedentes de varios orígenes. Asimismo, pueden producirse modificaciones de datos hasta de los 90 días anteriores.
+Al ver los informes de rendimiento de anuncios, tenga en cuenta que los datos de informes de los últimos tres días pueden cambiar a medida que reciben y procesan datos nuevos de diversos orígenes. Además, las reactivaciones de datos pueden producir hasta 90 días en el pasado.
 
-## <a name="apply-filters"></a>Aplicar filtros
+## <a name="apply-filters"></a>Aplicación de filtros
 
-Cerca de la parte superior de la página, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es 30D (30 días), pero también puedes mostrar los datos durante 3, 6 o 12 meses o durante un intervalo de fechas personalizado que especifiques.
+Cerca de la parte superior de la página, puede seleccionar el período de tiempo para el que desea mostrar los datos. La selección predeterminada es 30D (30 días), pero puede optar por mostrar los datos de 3, 6 o 12 meses, o de un intervalo de datos personalizado que especifique.
 
-También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por unidad de anuncios, aplicación, proveedor de anuncios y tipo de dispositivo. Puede elegir entre las siguientes opciones:
+También puede expandir **filtros** para filtrar todos los datos de esta página por unidad de anuncio, aplicación, proveedor de AD y tipo de dispositivo. Puede elegir entre las siguientes opciones:
 
-* **Agregación**: Elija cómo se agregan los datos del informe y cómo se puede filtrar aún más. De manera predeterminada, este filtro está establecido en **Todas las unidades de anuncio**. También puedes cambiar este filtro a **Todas las aplicaciones** o a **Todos los proveedores de anuncios**, o puedes agregar los datos por una determinada aplicación en la que uses anuncios.
-* **Proveedores de AD**: Filtrar el informe para datos de rendimiento para determinados [proveedores ad](in-app-ads.md#paid-networks). De manera predeterminada, el informe muestra datos de todos los proveedores de anuncios. Esta opción se desactivará si has elegido **Todos los proveedores de anuncios** en la lista desplegable **Agregación**.
-* **dispositivo**: Filtrar el informe para datos de rendimiento para determinados tipos de dispositivos. De manera predeterminada, el informe muestra datos de todos los tipos de dispositivo.
+* **Agregación**: elija cómo se agregan los datos del informe y cómo se pueden filtrar más. De forma predeterminada, este filtro se establece en **todas las unidades de anuncios**. Opcionalmente, puede cambiar este filtro a **todas las aplicaciones** o a **todos los proveedores de ad**, o bien puede optar por agregarlo por una aplicación específica en la que use anuncios.
+* **Proveedores de ad**: filtre el informe por los datos de rendimiento de determinados [proveedores de ad](in-app-ads.md#paid-networks). De forma predeterminada, el informe muestra los datos de todos los proveedores de ad. Esta opción se deshabilitará si selecciona **todos los proveedores de ad** en el menú desplegable **agregación** .
+* **Dispositivo**: filtre el informe por los datos de rendimiento de determinados tipos de dispositivos. De forma predeterminada, el informe muestra los datos de todos los tipos de dispositivos.
 
 ## <a name="overall-performance"></a>Rendimiento general
 
-En esta sección se muestran métricas de rendimiento de anuncios en una vista de gráfico o mapamundi para las unidades de anuncio, aplicaciones y proveedores de anuncios que has seleccionado en los filtros de informe.
+En esta sección se muestran las métricas de rendimiento de AD en un gráfico o una vista del mapa del mundo para las unidades de anuncios, las aplicaciones y los proveedores de anuncios seleccionados en los filtros de informe.
 
-Para cambiar a una vista diferente de los datos, haz clic en **Gráfico** o **Mapa** en la parte superior de la sección **Rendimiento general**. En la vista de mapa, los tonos más oscuros representan los valores más altos y tonos más claros representan valores más bajos. Puedes mantener el mouse sobre un país o región específico en el mapa para analizar el valor de la métrica seleccionada. También puedes acercar cualquier área del mapa para ver datos referentes a países más pequeños.
+Para cambiar a una vista diferente de los datos, haga clic en **gráfico** o en **mapa** en la parte superior de la sección **rendimiento general** . En la vista de mapa, los tonos más oscuros representan los valores más altos y tonos más claros representan valores más bajos. Puedes mantener el mouse sobre un país o región específico en el mapa para analizar el valor de la métrica seleccionada. También puedes acercar cualquier área del mapa para ver datos referentes a países más pequeños.
 
-Puedes restringir los datos mostrados en el gráfico o mapa haciendo clic en el icono de filtro situado junto al menú desplegable **Gráfico** o **Mapa**. Este filtro te permite elegir hasta seis unidades de anuncio, aplicaciones o proveedores de anuncios diferentes para compararlos en la vista de gráfico o mapa. El tipo de datos que puedes elegir en este filtro depende de lo que hayas seleccionado para el filtro de nivel superior de **Agregación** en la parte superior del informe.
+Para refinar los datos que se muestran en el gráfico o el mapa, haga clic en el icono de filtro junto a la lista desplegable **gráfico** o **mapa** . Este filtro permite elegir entre hasta seis unidades de anuncios, aplicaciones o proveedores de ad diferentes para realizar la comparación en el gráfico o la vista del mapa. El tipo de datos que puede elegir en este filtro depende de lo que haya seleccionado para el filtro de nivel superior de **agregación** en la parte superior del informe.
 
 
 ## <a name="overall-performance-breakdown"></a>Desglose del rendimiento general
 
-En esta sección se muestra una tabla que incluye todas las métricas de rendimiento de anuncios para el conjunto de datos especificado mediante los filtros que has seleccionado en el informe.
+En esta sección se muestra una tabla que contiene todas las métricas de rendimiento de ad del conjunto de datos especificado por los filtros que ha seleccionado en el informe.
 
 ## <a name="performance-metrics"></a>Métricas de rendimiento
 
-El informe **Rendimiento de publicidad** incluye los datos de las siguientes métricas de rendimiento. Algunas métricas se muestran solo para determinados proveedores de anuncios.
+El informe de **rendimiento de publicidad** incluye datos de las siguientes métricas de rendimiento. Algunas métricas solo se muestran para determinados proveedores de ad.
 
 |  Métrica  |  Descripción  |
 |----------|---------------|
-| Ingresos estimados  |  La cantidad estimada de dinero que has recibido de los anuncios que se ejecutan en la aplicación. |
-| eCPM  |  Rentabilidad por mil impresiones. |
-| Solicitudes  | El número de veces que se ha enviado una solicitud de anuncio desde la aplicación.  |
-| Impresiones  | El número de veces que se ha mostrado un anuncio en la aplicación.  |
-| Velocidad de relleno  | El porcentaje de solicitudes de anuncio enviadas desde la aplicación en las que se ha mostrado un anuncio.  |
-| Clics  |  El número de veces que alguien ha hecho clic en un anuncio en la aplicación. |
-| CTR  |  La tasa de clics, es decir, el número de veces que se ha hecho clic en un anuncio dividido por el número de impresiones. |
-| Capacidad de visualización | El porcentaje de impresiones de anuncios que se pueden ver en la aplicación. Para obtener más información sobre cómo se calcula este valor, vea [optimizar la capacidad de visualización de las unidades de ad](../monetize/optimize-ad-unit-viewability.md). |
-| Créditos ganados  | Si estás realizando una campaña de [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has ganado por el espacio de anuncios promocionales al mostrar anuncios de la comunidad en tu aplicación.  |
-| Créditos gastados  | Si estás realizando una campaña de [anuncios de la Comunidad](https://docs.microsoft.com/windows/uwp/publish/about-community-ads), esto indica el número de créditos que has gastado en los anuncios para tu aplicación.  |
+| Ingresos estimados  |  La cantidad de dinero calculada que ha recibido de los anuncios que se ejecutan en la aplicación. |
+| eCPM  |  Costo efectivo por miles de impresiones. |
+| Requests  | El número de veces que se envió una solicitud de ad desde la aplicación.  |
+| Impresiones  | El número de veces que se mostró un anuncio en la aplicación.  |
+| Velocidad de relleno  | El porcentaje de solicitudes de ad enviadas desde la aplicación en la que se mostró un anuncio.  |
+| Clics  |  El número de veces que alguien hizo clic en un anuncio en la aplicación. |
+| CALEND  |  Tasa de clics, es decir, el número de veces que se hizo clic en un anuncio, dividido por el número de impresiones. |
+| Visualización | Porcentaje de impresiones de anuncios que se pueden ver en la aplicación. Para obtener más detalles sobre cómo se calcula este valor, vea [optimizar la capacidad de visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md). |
+| Créditos obtenidos  | Si está ejecutando una campaña de ad de la [comunidad](./about-community-ads.md) , indica el número de créditos que ha obtenido para el espacio de anuncios promocional mostrando anuncios de la comunidad en la aplicación.  |
+| Créditos invertidos  | Si está ejecutando una campaña de ad de la [comunidad](./about-community-ads.md) , indica el número de créditos que ha empleado en los anuncios de la aplicación.  |
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Anuncios en aplicaciones](in-app-ads.md)
 * [Mostrar anuncios en tu aplicación con el SDK de Microsoft Advertising](../monetize/display-ads-in-your-app.md)
-* [Optimizar la capacidad de visualización de las unidades de ad](../monetize/optimize-ad-unit-viewability.md)
+* [Optimizar la visualización de las unidades de anuncios](../monetize/optimize-ad-unit-viewability.md)
 
 
  

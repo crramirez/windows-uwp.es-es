@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo usar la creación de reflejo de la notificación en las notificaciones del sistema.
+description: Obtenga información acerca de cómo usar la creación de reflejo de la notificación, basado en el centro de actividades en la nube, para ver las notificaciones del sistema del teléfono en su equipo.
 title: Reflejo de notificaciones
 label: Notification mirroring
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 12/15/2017
 ms.topic: article
 keywords: Windows 10, UWP, notificación del sistema, centro de actividades en la nube, creación de reflejo de notificaciones, notificación, dispositivo cruzado
 ms.localizationpriority: medium
-ms.openlocfilehash: b897c6574f6cbfe78406d1c624f2e3b7286ef582
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 13e3e9f0b675ef0e5f9e0787f0544f87689cf74a
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971060"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054015"
 ---
 # <a name="notification-mirroring"></a>Reflejo de notificaciones
 
@@ -52,7 +52,7 @@ Los desarrolladores de aplicaciones de Windows, las empresas y los usuarios pued
 
 En ocasiones, es posible que tenga una notificación específica del dispositivo que no desea que se refleje en otros dispositivos. Puede evitar que una notificación específica se refleje estableciendo la propiedad de **creación de reflejo** en la notificación del sistema. Actualmente, esta propiedad de creación de reflejo solo se puede establecer en las notificaciones locales (no se puede especificar cuando se envía una notificación de extracción de WNS).
 
-**Problema conocido**: la recuperación de la propiedad de creación de `ToastNotificationHistory.GetHistory()` reflejo a través de la API siempre devolverá el valor predeterminado (**permitido**) en lugar de la opción especificada. No se preocupe, todo es funcional, solo recupera el valor que se ha interrumpido.
+**Problema conocido**: la recuperación de la propiedad de creación de reflejo a través de la `ToastNotificationHistory.GetHistory()` API siempre devolverá el valor predeterminado (**permitido**) en lugar de la opción especificada. No se preocupe, todo es funcional, solo recupera el valor que se ha interrumpido.
 
 ```csharp
 var toast = new ToastNotification(xml)
@@ -67,7 +67,7 @@ ToastNotificationManager.CreateToastNotifier().Show(toast);
 
 ### <a name="as-a-developer-opt-out-completely"></a>Como desarrollador, no participar completamente
 
-Algunos desarrolladores pueden optar por elegir completamente su aplicación para la creación de reflejo de la notificación. Aunque creemos que todas las aplicaciones se beneficiarían de la creación de reflejo, hacemos que sea fácil rechazarla. Basta con llamar al método siguiente una vez y la aplicación se deshabilitará. Por ejemplo, puede colocar esta llamada en el constructor de la aplicación dentro `App.xaml.cs`de...
+Algunos desarrolladores pueden optar por elegir completamente su aplicación para la creación de reflejo de la notificación. Aunque creemos que todas las aplicaciones se beneficiarían de la creación de reflejo, hacemos que sea fácil rechazarla. Basta con llamar al método siguiente una vez y la aplicación se deshabilitará. Por ejemplo, puede colocar esta llamada en el constructor de la aplicación dentro de `App.xaml.cs` ...
 
 ```csharp
 public App()

@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: Windows 10, UWP, finalizador, vídeo, captura de pantalla, imagen, icono, lista de tiendas, imágenes de la lista de tiendas
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a09395a57a83eaa57124173723b96a87d14b3b3
-ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
+ms.openlocfilehash: da9d6517a43550693596d15c735e3134c5c60a7a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746755"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155319"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>Capturas de pantalla, imágenes y tráileres de aplicaciones
 
@@ -32,7 +32,7 @@ Tiene la opción de proporcionar capturas de pantallas para las distintas famili
 Solo se necesita una captura de pantalla (para cualquier familia de dispositivos) para el envío, aunque puede proporcionar varios; hasta 9 capturas de pantallas de escritorio y hasta 8 capturas de pantallas para las demás familias de dispositivos. Se recomienda proporcionar al menos cuatro capturas de pantallas para cada familia de dispositivos que admita la aplicación para que los usuarios puedan ver el aspecto que tendrá la aplicación en el tipo de dispositivo. (No incluya capturas de pantallas de las familias de dispositivos que no admita la aplicación). Tenga en cuenta que las capturas de pantallas del **escritorio** también se mostrarán a los clientes en Surface Hub dispositivos.
 
 > [!NOTE]
-> Microsoft Visual Studio proporciona una [herramienta que le ayudará a capturar capturas de pantallas](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator#BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store).
+> Microsoft Visual Studio proporciona una [herramienta que le ayudará a capturar capturas de pantallas](/visualstudio/debugger/run-windows-store-apps-in-the-simulator#BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store).
 
 Cada captura de pantalla debe ser un archivo. png en orientación horizontal o vertical, y el tamaño del archivo no puede ser mayor que 50 MB.
 
@@ -81,7 +81,7 @@ Esta imagen puede aparecer en varias páginas de la tienda para Windows 10 (incl
 
 Esta imagen es necesaria para la presentación adecuada en Windows Phone 8,1 y versiones anteriores. Si la aplicación publicada anteriormente admite Windows Phone 8,1 o una versión anterior, y no proporciona esta imagen, los clientes verán un icono en blanco con la lista de la aplicación. (Esto también se aplica a los clientes de Windows 10 si la aplicación solo tiene paquetes que tienen como destino Windows Phone 8,1 o una versión anterior).
 
-Si el envío *solo* incluye paquetes UWP, no es necesario que proporcione esta imagen (a menos que active la casilla para **clientes en Windows 10 y Xbox), muestre las imágenes de logotipo cargadas en lugar de las imágenes de mis paquetes**, tal como se describe en la sección siguiente).
+Si el envío *solo* incluye paquetes UWP, no es necesario que proporcione esta imagen (a menos que active la casilla para  **clientes en Windows 10 y Xbox), muestre las imágenes de logotipo cargadas en lugar de las imágenes de mis paquetes**, tal como se describe en la sección siguiente).
 
 ### <a name="display-only-uploaded-logo-images-in-the-store"></a>Mostrar solo las imágenes de logotipo cargadas en la tienda
 
@@ -169,7 +169,7 @@ Hay requisitos adicionales en función del tipo de archivo.
 
 | Vídeo | Audio |
 | --- | --- |
-| <ul><li>Códec: [H. 264](https://docs.microsoft.com/windows/desktop/DirectShow/h-264-video-types) (avc1)  </li><li>Examen progresivo (sin entrelazado)</li><li>Perfil alto</li><li>2 fotogramas B consecutivos</li><li>GOP cerrado. GOP de la mitad de la velocidad de fotogramas</li><li>CABAC</li><li>50 MB/s </li><li>Espacio de colores: 4.2.0</li></ul> | <ul><li>Códec: AAC-LC</li><li>Canales: sonido estéreo o envolvente</li><li>Frecuencia de muestreo: 48 KHz</li><li>Velocidad de bits de audio: 384 KB/s para estéreo, 512 KB/s para sonido envolvente</li></ul> |
+| <ul><li>Códec: [H. 264](/windows/desktop/DirectShow/h-264-video-types) (avc1)  </li><li>Examen progresivo (sin entrelazado)</li><li>Perfil alto</li><li>2 fotogramas B consecutivos</li><li>GOP cerrado. GOP de la mitad de la velocidad de fotogramas</li><li>CABAC</li><li>50 MB/s </li><li>Espacio de colores: 4.2.0</li></ul> | <ul><li>Códec: AAC-LC</li><li>Canales: sonido estéreo o envolvente</li><li>Frecuencia de muestreo: 48 KHz</li><li>Velocidad de bits de audio: 384 KB/s para estéreo, 512 KB/s para sonido envolvente</li></ul> |
 
 > [!WARNING]
 > Es posible que los clientes no escuchen audio para archivos MP4 codificados con códecs distintos de AVC1.
@@ -231,7 +231,3 @@ En **Windows Phone 8,1 y versiones anteriores**, se pueden usar dos tamaños de 
 > Asegúrese de proporcionar una imagen de icono de icono de la aplicación 300 x 300 en la sección [logotipos](#store-logos) de la tienda para cualquier envío que admita Windows Phone 8,1 o una versión anterior. Esto garantizará que la aplicación no aparezca en el almacén con un icono en blanco.  
 
 **Por Windows 8.1 y versiones anteriores**, algunos diseños promocionales pueden utilizar una imagen con un tamaño de **414 x 180** píxeles. Si la aplicación se ejecuta en Windows 8.1 o versiones anteriores, se recomienda proporcionar una imagen en este tamaño.
-
-
-
-

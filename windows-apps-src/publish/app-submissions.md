@@ -6,12 +6,12 @@ keywords: lista de comprobación, Windows, UWP, envío, envío, juego, aplicaci�
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 39a71a54fcc2792b799f630a94d1382c01643536
-ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
+ms.openlocfilehash: 1359fb530dec1a35b2ab2994442b65ec441cc0ac
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84945981"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158069"
 ---
 # <a name="app-submissions"></a>Envíos de aplicaciones
 
@@ -40,13 +40,13 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 ### <a name="pricing-and-availability-page"></a>Página Precios y disponibilidad
 | Nombre de campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Mercados**                   | Predeterminado: todos los mercados posibles  | [Definir los precios y la selección del mercado](define-pricing-and-market-selection.md)         |
+| **Mercados**                   | Predeterminado: todos los mercados posibles  | [Definir los precios y la selección del mercado](./define-market-selection.md)         |
 | **Audiencia**                | Valor predeterminado: público público | [Audiencia](choose-visibility-options.md#audience) |
 | **Detectabilidad**                | Valor predeterminado: hacer que esta aplicación esté disponible y reconocible en el almacén | [Detectabilidad](choose-visibility-options.md#discoverability) |
 | **Programación**                  | Valor predeterminado: liberar lo antes posible        | [Configurar la programación precisa del lanzamiento](configure-precise-release-scheduling.md) |
-| **Precio base**                | Requerido                                    | [Establecer y programar los precios de las aplicaciones](set-and-schedule-app-pricing.md)              |
+| **Precio base**                | Obligatorio                                    | [Establecer y programar los precios de las aplicaciones](set-and-schedule-app-pricing.md)              |
 | **Evaluación gratuita**                | Valor predeterminado: sin prueba gratuita                      | [Evaluación gratuita](set-app-pricing-and-availability.md#free-trial)              |
-| **Precio de oferta**              | Opcional                                    | [Poner aplicaciones y complementos a la venta](put-apps-and-add-ons-on-sale.md)           |
+| **Precio de oferta**              | Opcional                                    | [Poner aplicaciones y complementos en oferta](put-apps-and-add-ons-on-sale.md)           |
 | **Licencias organizativas**    | Valor predeterminado: Permitir que las organizaciones adquieran licencias por volumen | [Opciones de licencia organizativas](organizational-licensing.md)        |
       |
 
@@ -55,13 +55,13 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 | Nombre de campo                    | Notas                                       | Para obtener más información                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| **Categoría y subcategoría**  | Requerido                                    | [Tabla de categoría y subcategoría](category-and-subcategory-table.md)       |
-| **Dirección URL de la directiva de privacidad**            | Necesario para muchas aplicaciones. Consulta el [contrato de desarrollador de aplicaciones](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) y las [directivas de Microsoft Store](store-policies.md#105-personal-information) | [Dirección URL de la directiva de privacidad](enter-app-properties.md#privacy-policy-url)        |
+| **Categoría y subcategoría**  | Obligatorio                                    | [Tabla de categoría y subcategoría](category-and-subcategory-table.md)       |
+| **Dirección URL de la directiva de privacidad**            | Necesario para muchas aplicaciones. Consulta el [contrato de desarrollador de aplicaciones](/legal/windows/agreements/app-developer-agreement) y las [directivas de Microsoft Store](store-policies.md#105-personal-information) | [Dirección URL de la directiva de privacidad](enter-app-properties.md#privacy-policy-url)        |
 | **Sitio web**                   | Opcional                                    | [Sitio web](enter-app-properties.md#website)                   |
 | **Información de contacto de soporte técnico**      | Obligatorio si el producto está disponible en Xbox; de lo contrario, opcional (pero recomendado)                                   | [Información de contacto de soporte técnico](enter-app-properties.md#support-contact-info)              |
 | **Configuración del juego**             | Opcional (solo es aplicable a juegos)         | [Configuración del juego](enter-app-properties.md#game-settings) |
-| **Modo de pantalla**             | Opcional                   | [Modo de pantalla](enter-app-properties.md#display-mode) |
-| **Declaraciones de producto**          | Valor predeterminado: Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble; Windows puede incluir datos de la aplicación en las copias de seguridad automáticas en OneDrive | [Declaraciones de producto](app-declarations.md) |
+| **Modo de presentación**             | Opcional                   | [Modo de presentación](enter-app-properties.md#display-mode) |
+| **Declaraciones de producto**          | Valor predeterminado: Los clientes pueden instalar esta aplicación en unidades alternativas o almacenamiento extraíble; Windows puede incluir datos de la aplicación en las copias de seguridad automáticas en OneDrive | [Declaraciones de producto](./product-declarations.md) |
 | **Requisitos del sistema**      | Opcional                                    | [Requisitos del sistema](enter-app-properties.md#system-requirements)      |
 
 <span/>
@@ -70,7 +70,7 @@ Los elementos que debes proporcionar o especificar se indican a continuación. A
 
 | Nombre de campo                    | Notas                                       | Para obtener más información                          |
 |-------------------------------|---------------------------------------------|----------------------------------------|
-| **Clasificaciones por edades**               | Requerido                                    | [Clasificaciones por edades](age-ratings.md)          |
+| **Clasificaciones por edades**               | Obligatorio                                    | [Clasificaciones por edades](age-ratings.md)          |
 
 <span/>
 
@@ -96,7 +96,7 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 | **Capturas de pantalla**               | Obligatorio (al menos una captura de pantalla; se recomiendan cuatro o más)          | [Capturas de pantalla](app-screenshots-and-images.md#screenshots)          |
 | **Logotipos de Store**               | Recomendar necesario para algunas versiones del sistema operativo | [Logotipos de Store](app-screenshots-and-images.md#store-logos)             |
 | **Clips finales**                  | Opcional                                    | [Clips finales](app-screenshots-and-images.md#trailers)                | 
-| **Imagen de Windows 10 y Xbox (ilustración de 16:9 Super Hero)**     | Se recomienda        | [Imagen de Windows 10 y Xbox (ilustración de 16:9 Super Hero)](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+| **Imagen de Windows 10 y Xbox (ilustración de 16:9 Super Hero)**     | Recomendado        | [Imagen de Windows 10 y Xbox (ilustración de 16:9 Super Hero)](app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
 | **Imágenes de Xbox**     | Necesario para la presentación adecuada si se publica en Xbox        | [Imágenes de Xbox](app-screenshots-and-images.md#xbox-images) |
 | **Campos adicionales**  | Opcional                                    | [Campos adicionales](create-app-store-listings.md#supplemental-fields) 
 | **Términos de búsqueda**              | Opcional                                    | [Términos de búsqueda](create-app-store-listings.md#search-terms)         |
@@ -112,7 +112,7 @@ Necesitarás toda la información necesaria como mínimo para uno de los idiomas
 | Nombre de campo                    | Notas                                       | Para obtener más información                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Opciones de retención de publicación**     | Valor predeterminado: publicar este envío en cuanto pase la certificación (o por las fechas seleccionadas en la sección programación)      | [Opciones de retención de publicación](manage-submission-options.md#publishing-hold-options)    
-| **Notas para certificación**     | Se recomienda          | [Notas para certificación](notes-for-certification.md)             |
+| **Notas para certificación**     | Recomendado          | [Notas para certificación](notes-for-certification.md)             |
 | **Funcionalidades restringidas**     | Obligatorio si el producto declara cualquier [funcionalidad restringida](../packaging/app-capability-declarations.md#restricted-capabilities)    | [Funcionalidades restringidas](manage-submission-options.md#publishing-hold-options)       
 
 <span/>

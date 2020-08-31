@@ -1,17 +1,17 @@
 ---
 title: Procedimientos de entrada para juegos
-description: Obtén información sobre patrones y técnicas para el uso eficaz de los dispositivos de entrada.
+description: Aprenda patrones y técnicas para usar de forma eficaz los dispositivos de entrada en juegos Plataforma universal de Windows (UWP).
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
 ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: aa2036cb8d91b17d084e4e4922d01d4256bdb7de
-ms.sourcegitcommit: 29eb375bc634bf733be58107c1d648dc818da7f8
+ms.openlocfilehash: eb543e86221f8f1a37565c2e6e6bf1fe4a8d3635
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051330"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054495"
 ---
 # <a name="input-practices-for-games"></a>Procedimientos de entrada para juegos
 
@@ -314,7 +314,7 @@ En el caso de los dispositivos de juego que admiten informes de batería detalla
 
 Si el código realiza alguna acción (como dibujar la interfaz de usuario) en función del porcentaje de duración de la batería restante, asegúrese de que se ajusta a los valores anteriores. Por ejemplo, si desea advertir al jugador de que la batería del controlador es baja, hágalo cuando llegue al 10%.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Windows.SysTEM. Clase de usuario](https://docs.microsoft.com/uwp/api/windows.system.user)
 * [Interfaz Windows. Gaming. Input. IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)

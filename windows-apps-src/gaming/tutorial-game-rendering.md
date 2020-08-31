@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos y representación
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a3f689f86e629ce81946927fa732a3ab692b219
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: a87382aeffb0e0b7a8eaca1c4baec8561049e91e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409514"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168249"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>Plataforma de representación II: representación de juego
 
@@ -21,7 +21,7 @@ ms.locfileid: "85409514"
 En el [marco de representación I](tutorial--assembling-the-rendering-pipeline.md), hemos explicado cómo se toma la información de la escena y se presenta en la pantalla de presentación. Ahora, tomaremos un paso atrás y aprenderemos a preparar los datos para la representación.
 
 >[!Note]
->Si no ha descargado el código de juego más reciente para este ejemplo, vaya a [juego de ejemplo de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de características de UWP. Para obtener instrucciones sobre cómo descargar el ejemplo, consulte [obtener los ejemplos de UWP en github](/windows/uwp/get-started/get-uwp-app-samples).
+>Si no ha descargado el código de juego más reciente para este ejemplo, vaya a [juego de ejemplo de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de características de UWP. Para obtener instrucciones sobre cómo descargar el ejemplo, consulte [obtener los ejemplos de UWP en github](../get-started/get-app-samples.md).
 
 ## <a name="objective"></a>Objetivo
 
@@ -243,7 +243,7 @@ Este método se usa para:
 * Crear un objeto [de estado de muestra](tutorial--assembling-the-rendering-pipeline.md#sampler-state) que encapsula la información de muestreo de una textura
 * Cree un grupo de tareas que contenga todas las tareas asincrónicas creadas por el método. Espera a que se completen todas estas tareas asincrónicas y, a continuación, llama a __FinalizeCreateGameDeviceResources__.
 * Cree un cargador mediante el [cargador básico](tutorial--assembling-the-rendering-pipeline.md#the-basicloader-class). Agregue las operaciones de carga asincrónica del cargador como tareas en el grupo de tareas creado anteriormente.
-* Los métodos como __basicloader:: LoadShaderAsync__ y __Basicloader:: LoadTextureAsync__ se usan para cargar:
+* Los métodos como __basicloader:: LoadShaderAsync__ y  __Basicloader:: LoadTextureAsync__ se usan para cargar:
     * objetos de sombreador compilados (VertextShader. CSO, VertexShaderFlat. CSO, u. CSO y PixelShaderFlat. CSO). Para obtener más información, vaya a [varios formatos de archivo de sombreador](tutorial--assembling-the-rendering-pipeline.md#various-shader-file-formats).
     * texturas específicas del juego (assets \\ Seafloor. DDS, metal_texture. DDS, cellceiling. DDS, cellfloor. DDS, CELLWall. DDS).
 

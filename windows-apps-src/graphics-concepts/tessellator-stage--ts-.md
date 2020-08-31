@@ -1,92 +1,92 @@
 ---
 title: Fase de Tessellator (TS)
-description: La fase de Tessellator (TS) crea un patrón de muestreo del dominio que representa la revisión de geometría y genera un conjunto de objetos más pequeños (triángulos, puntos o líneas) que conectan estas muestras.
+description: La fase del teselador (TS) crea un patrón de muestreo del dominio que representa la revisión geométrica y genera un conjunto de objetos más pequeños (triángulos, puntos o líneas) que conectan estos ejemplos.
 ms.assetid: 2F006F3D-5A04-4B3F-8BC7-55567EFCFA6C
 keywords:
 - Fase de Tessellator (TS)
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b8960d9723460fcbb8cec71da0998958cac8a6e8
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 90dfb8d28be786cb542e72fde5a24bed4de68f78
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370941"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167979"
 ---
 # <a name="tessellator-ts-stage"></a>Fase de Tessellator (TS)
 
 
-La fase de Tessellator (TS) crea un patrón de muestreo del dominio que representa la revisión de geometría y genera un conjunto de objetos más pequeños (triángulos, puntos o líneas) que conectan estas muestras.
+La fase del teselador (TS) crea un patrón de muestreo del dominio que representa la revisión geométrica y genera un conjunto de objetos más pequeños (triángulos, puntos o líneas) que conectan estos ejemplos.
 
-## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Propósito y usos
+## <a name="span-idpurpose_and_usesspanspan-idpurpose_and_usesspanspan-idpurpose_and_usesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Propósito y usos
 
 
-El siguiente diagrama resalta las fases de la canalización de gráficos de Direct3D.
+En el diagrama siguiente se resaltan las fases de la canalización de gráficos Direct3D.
 
-![Diagrama de la canalización de Direct3D 11 que destaca las fases de sombreador de casco, Tessellator y sombreador de dominios](images/d3d11-pipeline-stages-tessellation.png)
+![diagrama de la canalización de Direct3D 11 que resalta las fases de sombreador de casco, del teselador y sombreador de dominio](images/d3d11-pipeline-stages-tessellation.png)
 
-El siguiente diagrama muestra el progreso a través de las fases de la teselación.
+En el diagrama siguiente se muestra la progresión a través de las fases de teselación.
 
-![Diagrama de progreso de la teselación](images/tess-prog.png)
+![diagrama de progresión de teselación](images/tess-prog.png)
 
-El progreso comienza con la superficie de subdivisión de bajo nivel de detalle. A continuación, el progreso destaca la revisión de entrada con la revisión de geometría correspondiente, las muestras de dominio y los triángulos que conectan estos ejemplos. Por último, el progreso destaca los vértices que corresponden a estas muestras.
+La progresión comienza con la superficie de subdivisión de menor detalle. La progresión resalta la revisión de entrada con la revisión geométrica correspondiente, ejemplos de dominio y triángulos que conectan estos ejemplos. Finalmente, la progresión resalta los vértices que corresponden a estos ejemplos.
 
-El tiempo de ejecución de Direct3D admite tres fases que implementan la teselación, lo que convierte las superficies de subdivisión de bajo nivel de detalle en primitivos de mayor nivel de detalle en la GPU. La teselación descompone (o desglosa) las superficies de orden superior en estructuras adecuadas para la representación.
+El tiempo de ejecución de Direct3D admite tres fases que implementan Teselación, que convierte las superficies de subdivisiones de bajo detalle en primitivas más detalladas en la GPU. Mosaicos de teselación (o rotura) de superficies de orden superior en estructuras adecuadas para la representación.
 
-En conjunto, las fases de teselación convierten las superficies de orden superior (que permiten que el modelo sea sencillo y eficaz) en muchos triángulos para la representación detallada dentro de la canalización de gráficos de Direct3D.
+Las fases de teselación funcionan juntas para convertir superficies de orden superior (que mantienen el modelo de forma sencilla y eficaz) en muchos triángulos para la representación detallada dentro de la canalización de gráficos de Direct3D.
 
-La teselación usa la GPU para calcular una superficie más detallada a partir de una superficie construida desde revisiones de cuadrados, revisiones de triángulos o isolíneas. Para aproximarse a la superficie de orden superior, cada revisión se subdivide en triángulos, puntos o líneas mediante factores de teselación. La canalización de gráficos de Direct3D implementa la teselación mediante tres fases de canalización:
+La teselación usa la GPU para calcular una superficie más detallada de una superficie construida a partir de las cuádruples revisiones, parches de triángulo o isolíneas. Para aproximar la superficie de orden superior, cada revisión se divide en triángulos, puntos o líneas mediante factores de teselación. La canalización de gráficos de Direct3D implementa la teselación mediante tres fases de canalización:
 
--   [Fase del sombreador de casco (HS)](hull-shader-stage--hs-.md): Una fase del sombreador programable que produce una revisión de la geometría (y constantes de revisión) que se corresponde con cada revisión de entrada (cuadrado, triángulo o línea).
--   Fase de Tessellator (TS): Una fase de canalización de función fija que crea un patrón de muestreo del dominio que representa la revisión de geometría y genera un conjunto de objetos más pequeños (triángulos, puntos o líneas) que conectan estas muestras.
--   [Fase del sombreador de dominio (DS)](domain-shader-stage--ds-.md): Una fase del sombreador programable que calcula la posición del vértice correspondiente a cada muestra del dominio.
+-   [Fase de sombreador de casco (HS)](hull-shader-stage--hs-.md) : una fase de sombreador programable que genera una revisión de geometría (y constantes de revisión) que se corresponden con cada revisión de entrada (cuádruple, triángulo o línea).
+-   Fase del teselador (TS): una fase de canalización de función fija que crea un patrón de muestreo del dominio que representa la revisión de geometría y genera un conjunto de objetos más pequeños (triángulos, puntos o líneas) que conectan estos ejemplos.
+-   [Fase de sombreador de dominios (DS)](domain-shader-stage--ds-.md) : una fase de sombreador programable que calcula la posición del vértice que corresponde a cada ejemplo de dominio.
 
-Al implementar la teselación en el hardware, una canalización de gráficos puede evaluar modelos de menor nivel de detalle (con un recuento de polígonos más bajo) y representar con mayor detalle. Aunque es posible realizar teselación de software, la teselación implementada por hardware puede generar una cantidad increíble de detalles visuales (incluida la compatibilidad con la asignación de desplazamientos) sin agregar dichos detalles visuales a los tamaños de modelo y paralizar las frecuencias de actualización.
+Mediante la implementación de teselación en hardware, una canalización de gráficos puede evaluar modelos de menor detalle (recuento de polígonos inferiores) y representar con mayor detalle. Aunque se puede hacer la teselación de software, la teselación implementada por el hardware puede generar una cantidad increíble de detalles visuales (incluida la compatibilidad con la asignación de desplazamiento) sin agregar los detalles visuales a los tamaños del modelo y las tasas de actualización de paralyzing.
 
 Ventajas de la teselación:
 
--   La teselación ahorra una gran cantidad de memoria y de ancho de banda, lo que permite que una aplicación represente superficies con mayor detalle a partir de modelos de baja resolución. La técnica de teselación implementada en la canalización de gráficos de Direct3D también admite la asignación de desplazamientos, lo que puede producir unas cantidades sorprendentes de detalles de la superficie.
--   La teselación admite técnicas de representación escalable, como niveles de detalle continuos o dependientes de la vista que se pueden calcular sobre la marcha.
--   La teselación mejora el rendimiento ya que realiza cálculos costosos con menor frecuencia (realiza los cálculos en un modelo de menor nivel de detalle). Esto podría incluir los cálculos de fusión mediante el uso de formas de fusión o destinos de morfología para los cálculos de animaciones o física realistas para la detección de colisiones o la dinámica de cuerpos blandos.
+-   La teselación ahorra gran cantidad de memoria y ancho de banda, lo que permite que una aplicación represente superficies más detalladas de modelos de baja resolución. La técnica de teselación implementada en la canalización de gráficos de Direct3D también admite la asignación de desplazamiento, que puede generar sorprendentes cantidades de detalles de la superficie.
+-   Teselación admite técnicas de representación escalables, como Continuous o View dependent Level-of-detail que se pueden calcular sobre la marcha.
+-   La teselación mejora el rendimiento al realizar cálculos caros con una frecuencia menor (realizar cálculos en un modelo de detalles más bajo). Esto podría incluir los cálculos de mezcla mediante formas de mezcla o destinos de transformación para la animación realista o cálculos físicos para la detección de colisiones o la dinámica del cuerpo flexible.
 
-La canalización de gráficos de Direct3D implementa la teselación en el hardware, lo que descarga el trabajo de la CPU a la GPU. Esto puede provocar enormes mejoras del rendimiento si una aplicación implementa un gran número de destinos de morfología o modelos de enmascaramiento/deformación más sofisticados.
+La canalización de gráficos Direct3D implementa la teselación en el hardware, que no carga el trabajo de la CPU a la GPU. Esto puede dar lugar a mejoras de rendimiento muy grandes si una aplicación implementa un gran número de destinos transformativos y/o modelos más sofisticados.
 
-El Tessellator es una etapa de función fija que se inicializa mediante el enlace de un [sombreador de casco](hull-shader-stage--hs-.md) a la canalización. (consulte [How To: Inicializar la etapa del Teselador](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-advanced-stages-tessellator-initialize)). El propósito de la fase de Tessellator es subdividir un dominio (cuadrado, triángulo o línea) en muchos objetos más pequeños (triángulos, puntos o líneas). El Tessellator descompone un dominio canónico en un sistema de coordenadas normalizado (de cero a uno). Por ejemplo, un dominio cuadrado se tesela en un cuadrado de la unidad.
+Del teselador es una fase de función fija que se inicializa mediante el enlace de un [sombreador de casco](hull-shader-stage--hs-.md) a la canalización. (vea [Cómo: inicializar la fase del teselador](/windows/desktop/direct3d11/direct3d-11-advanced-stages-tessellator-initialize)). El propósito de la fase del teselador es subdividir un dominio (cuádruple, Tri o line) en muchos objetos más pequeños (triángulos, puntos o líneas). Del teselador coloca en mosaico un dominio canónico en un sistema de coordenadas normalizado (cero a uno). Por ejemplo, un dominio cuádruple se Tesela en un cuadrado de unidad.
 
-### <a name="span-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanspan-idphasesinthetessellatortsstagespanphases-in-the-tessellator-ts-stage"></a><span id="Phases_in_the_Tessellator__TS__stage"></span><span id="phases_in_the_tessellator__ts__stage"></span><span id="PHASES_IN_THE_TESSELLATOR__TS__STAGE"></span>Fases de la etapa del Teselador (TS)
+### <a name="span-idphases_in_the_tessellator__ts__stagespanspan-idphases_in_the_tessellator__ts__stagespanspan-idphases_in_the_tessellator__ts__stagespanphases-in-the-tessellator-ts-stage"></a><span id="Phases_in_the_Tessellator__TS__stage"></span><span id="phases_in_the_tessellator__ts__stage"></span><span id="PHASES_IN_THE_TESSELLATOR__TS__STAGE"></span>Fases en la etapa del teselador (TS)
 
-La fase de Tessellator (TS) funciona en dos fases:
+La fase del teselador (TS) funciona en dos fases:
 
--   La primera fase procesa los factores de teselación, para lo que soluciona problemas de redondeo, administra factores muy pequeños, reduce y combina factores y usa la aritmética de punto flotante de 32 bits.
--   La segunda fase genera listas de puntos o topología en función del tipo de partición seleccionado. Esta es la tarea principal del escenario del Tessellator y usa fracciones de 16 bits con aritmética de punto fijo. La aritmética de punto fijo permite la aceleración de hardware a la vez que se mantiene una precisión aceptable. Por ejemplo, dada una revisión ancho de 64 metros, esta precisión puede colocar puntos con una resolución de 2 mm.
+-   En la primera fase se procesan los factores de teselación, se corrigen los problemas de redondeo, se controlan los factores muy pequeños, se reducen y se combinan los factores mediante la aritmética de punto flotante de 32 bits.
+-   La segunda fase genera listas de puntos o topologías según el tipo de partición seleccionado. Esta es la tarea principal de la fase del teselador y usa fracciones de 16 bits con aritmética de punto fijo. La aritmética de punto fijo permite la aceleración de hardware manteniendo una precisión aceptable. Por ejemplo, dada una revisión de ancho de 64, esta precisión puede colocar puntos en una resolución de 2 mm.
 
-    | Tipo de particiones | Intervalo                       |
+    | Tipo de creación de particiones | Intervalo                       |
     |----------------------|-----------------------------|
-    | Fraccionarios\_impar      | \[1...63\]                  |
-    | Fraccionarios\_incluso     | Intervalo de TessFactor: \[2..64\] |
-    | Enteros              | Intervalo de TessFactor: \[1..64\] |
-    | Pow2                 | Intervalo de TessFactor: \[1..64\] |
+    | Fraccionario \_ impar      | \[1... 63\]                  |
+    | Separadores fraccionarios \_     | Intervalo de TessFactor: \[ 2.. 64\] |
+    | Entero              | Intervalo de TessFactor: \[ 1.. 64\] |
+    | Pow2                 | Intervalo de TessFactor: \[ 1.. 64\] |
 
      
 
-La teselación se implementa con dos fases de sombreadores programables: un [sombreador de casco](hull-shader-stage--hs-.md) y un [sombreador de dominios](domain-shader-stage--ds-.md). Estas fases de sombreador se programan con código HLSL, que se define en el modelo de sombreador 5. Los destinos de sombreador son: hs\_5\_0 y ds\_5\_0. El título crea el sombreador y luego el código para el hardware se extrae de los sombreadores compilados pasados al tiempo de ejecución cuando los sombreadores se enlazan a la canalización.
+La teselación se implementa con dos fases del sombreador programable: un [sombreador de casco](hull-shader-stage--hs-.md) y un [sombreador de dominios](domain-shader-stage--ds-.md). Estas fases del sombreador se programan con código HLSL que se define en el modelo de sombreador 5. Los destinos del sombreador son: HS \_ 5 \_ 0 y DS \_ 5 \_ 0. El título crea el sombreador y, a continuación, se extrae el código del hardware de los sombreadores compilados que se pasan al tiempo de ejecución cuando los sombreadores se enlazan a la canalización.
 
-### <a name="span-idenablingdisablingtessellationspanspan-idenablingdisablingtessellationspanspan-idenablingdisablingtessellationspanenablingdisabling-tessellation"></a><span id="Enabling_disabling_tessellation"></span><span id="enabling_disabling_tessellation"></span><span id="ENABLING_DISABLING_TESSELLATION"></span>Habilitación o deshabilitación de teselación
+### <a name="span-idenabling_disabling_tessellationspanspan-idenabling_disabling_tessellationspanspan-idenabling_disabling_tessellationspanenablingdisabling-tessellation"></a><span id="Enabling_disabling_tessellation"></span><span id="enabling_disabling_tessellation"></span><span id="ENABLING_DISABLING_TESSELLATION"></span>Habilitar o deshabilitar la teselación
 
-Para habilitar la teselación, crea un sombreador de casco y enlázalo a la fase del sombreador de casco (esto configura automáticamente la fase de Tessellator). Para generar las posiciones finales de los vértices a partir de las revisiones teseladas, también debes crear un [sombreador de dominios](domain-shader-stage--ds-.md) y enlazarlo a la fase del sombreador de dominios. Una vez habilitada la teselación, la entrada de datos en la fase del ensamblador de entrada (IA) deben ser datos de revisión. La topología de ensamblador de entrada debe ser una topología constante de revisión.
+Habilite la teselación creando un sombreador de casco y enlazándolo a la fase del sombreador de casco (Esto configura automáticamente la fase del teselador). Para generar las posiciones finales del vértice a partir de las revisiones teselas, también debe crear un [sombreador de dominios](domain-shader-stage--ds-.md) y enlazarlo a la fase del sombreador del dominio. Una vez habilitada la teselación, la entrada de datos en la etapa del ensamblador de entrada (IA) debe ser datos de revisión. La topología del ensamblador de entrada debe ser una topología de constantes de revisión.
 
-Para deshabilitar la teselación, establece el sombreador de casco y el sombreador de dominios en **NULL**. Ni la [fase del sombreador de geometría (GS)](geometry-shader-stage--gs-.md) ni la [fase de salida de flujo (SO)](stream-output-stage--so-.md) pueden leer puntos de control de salida del sombreador de casco ni datos de revisión.
+Para deshabilitar la teselación, establezca el sombreador de casco y el sombreador de dominios en **null**. Ni la fase del [sombreador de geometría (GS)](geometry-shader-stage--gs-.md) ni la de [salida de flujo (SO)](stream-output-stage--so-.md) pueden leer puntos de control de salida del sombreador de casco o datos de revisión.
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
-
-
-El teselador opera una vez por revisión con los factores de teselación (que especifican con qué precisión se teselará el dominio) y el tipo de partición (que especifica el algoritmo usado para dividir una revisión) que se pasan desde la fase del sombreador de casco.
-
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Salida
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entradas
 
 
-El teselador devuelve las coordenadas uv (y, opcionalmente, w) y la topología de superficie para la fase del sombreador de dominios.
+Del teselador funciona una vez por revisión mediante los factores de teselación (que especifican el grado de teselación del dominio) y el tipo de creación de particiones (que especifica el algoritmo que se usa para segmentar una revisión) que se pasan desde la fase del sombreador de casco.
+
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Genere
+
+
+Del teselador genera coordenadas UV (y, opcionalmente, w) y la topología de superficie en la etapa del sombreador de dominio.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
@@ -96,7 +96,3 @@ El teselador devuelve las coordenadas uv (y, opcionalmente, w) y la topología d
  
 
  
-
-
-
-

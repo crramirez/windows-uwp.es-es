@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e1e27ad47385b3ded743d39cc6a347cab5960ce
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: d9d9041b5e90ce8ffc16fe0158dda597f99b41bc
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493140"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157949"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Desbloqueo de Windows con dispositivos complementarios (IoT) Windows Hello
 
@@ -40,7 +40,7 @@ Existen numerosas formas de uso del marco del dispositivo complementario Windows
 
 ### <a name="biometric-enabled-windows-hello-companion-devices"></a>Dispositivos complementarios Windows Hello habilitados para biométrica
 
-Si el dispositivo complementario admite biometría, en algunos casos, el [marco biométrico de Windows](https://msdn.microsoft.com/windows/hardware/commercialize/design/device-experiences/windows-hello) puede ser una solución mejor que el marco del dispositivo complementario Windows Hello. Póngase en contacto con [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com) y le ayudaremos a elegir el enfoque adecuado.
+Si el dispositivo complementario admite biometría, en algunos casos, el [marco biométrico de Windows](/windows-hardware/design/device-experiences/windows-hello) puede ser una solución mejor que el marco del dispositivo complementario Windows Hello. Póngase en contacto con [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com) y le ayudaremos a elegir el enfoque adecuado.
 
 ### <a name="components-of-the-solution"></a>Componentes de la solución
 
@@ -52,7 +52,7 @@ El marco del dispositivo complementario Windows Hello se implementa como un serv
 
 La integración con el marco del dispositivo complementario Windows Hello requiere:
 
-- Una aplicación del dispositivo complementario Windows Hello [Plataforma universal de Windows (UWP)](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) para el dispositivo complementario, descargada de la tienda de aplicaciones de Windows. 
+- Una aplicación del dispositivo complementario Windows Hello [Plataforma universal de Windows (UWP)](../get-started/universal-application-platform-guide.md) para el dispositivo complementario, descargada de la tienda de aplicaciones de Windows. 
 - La capacidad de crear dos claves HMAC de 256 bits en el dispositivo complementario Windows Hello y generar HMAC con él (mediante SHA-256).
 - Configuración de seguridad en el escritorio Windows 10 configurada correctamente. El servicio de autenticación complementario requerirá que se configure este PIN antes de que cualquier dispositivo complementario Windows Hello pueda conectarse a él. Los usuarios deben configurar un PIN a través de Configuración > Cuentas > Opciones de inicio de sesión.
 

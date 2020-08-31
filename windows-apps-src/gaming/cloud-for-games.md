@@ -1,17 +1,17 @@
 ---
 title: Uso de servicios en la nube con juegos para UWP
-description: Obtén más información acerca de cómo implementar la nube como un back-end para tus juegos para UWP.
+description: Al desarrollar juegos para UWP en plataformas y dispositivos, use un back-end en la nube para ayudar a escalar los juegos según la demanda.
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 ms.date: 03/27/2018
 ms.topic: article
 keywords: Windows 10, UWP, juegos, Cloud Services
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d959c490474a6280d878be9679abafc31b565d8
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: 7c0cfd98a37c4822d80eded7fe69e23c54bcdc89
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846865"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054415"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>Uso de servicios en la nube con juegos para UWP
 
@@ -48,7 +48,7 @@ Descubre cómo otros desarrolladores han implementado soluciones en la nube en s
     <col width="30%" />
     </colgroup>
     <tr class="header" align="left">
-        <th>Developer</th>
+        <th>Desarrollador</th>
         <th>Descripción</th>
         <th>Escenarios clave de juegos</th>
         <th>Más información</th>
@@ -180,7 +180,7 @@ A continuación se indican algunas maneras de usar las ofertas de la nube de Azu
 | Procesamiento de datos de juegos en tiempo real  | Realizar un análisis en tiempo real de los datos de jugadores para mejorar el juego.| [Azure Stream Analytics](https://azure.microsoft.com/services/stream-analytics/) | Procesamiento de transmisiones en tiempo real en la nube.  |
 | Desarrollo de un juego predictivo         | Crear un juego dinámico personalizado según los datos de jugadores.  | [Azure Machine Learning](https://azure.microsoft.com/services/machine-learning/) | Servicio en la nube totalmente administrado que te permite compilar, implementar y compartir fácilmente soluciones de análisis predictivo.  |
 | Recopilación y análisis de datos de juegos| Procesamiento en paralelo masivo de datos de bases de datos relacionales y no relacionales. | [Azure Data Warehouse](https://azure.microsoft.com/services/sql-data-warehouse/)| Almacenamiento de datos elástico como servicio con funcionalidades de clase empresarial.   |
-| Atraer a los usuarios para aumentar el uso y la retención| Envíe notificaciones de envío de destino a cualquier plataforma desde cualquier back-end para generar interés y fomentar acciones de juego específicas | [Azure Notification Hubs](https://azure.microsoft.com/services/notification-hubs/)| Difusión rápida para llegar a millones de dispositivos móviles en todas las plataformas principales: &mdash; iOS, Android, Windows, Kindle, Baidu. El juego se puede hospedar en cualquier &mdash; nube de back-end o en un entorno local.|
+| Atraer a los usuarios para aumentar el uso y la retención| Envíe notificaciones de envío de destino a cualquier plataforma desde cualquier back-end para generar interés y fomentar acciones de juego específicas | [Centros de notificaciones de Azure](https://azure.microsoft.com/services/notification-hubs/)| Difusión rápida para llegar a millones de dispositivos móviles en todas las plataformas principales: &mdash; iOS, Android, Windows, Kindle, Baidu. El juego se puede hospedar en cualquier &mdash; nube de back-end o en un entorno local.|
 | Transmita contenido multimedia a sus audiencias locales e internacionales mientras protege su contenido| Los juegos de calidad de difusión y los clips cinematográficos se pueden inspeccionar desde todos los dispositivos| [Azure Media Services](https://azure.microsoft.com/services/media-services/)| Streaming de vídeo a petición y en directo con capacidades de Content Delivery Network integradas. Usar un reproductor para todas sus necesidades de reproducción, incluye protección y cifrado de contenido.| 
 | Desarrollo, distribución y prueba de versiones beta de las aplicaciones móviles | Pruebe y distribuya su aplicación móvil. Rendimiento de la aplicación y administración de la experiencia del usuario. | [HockeyApp](https://azure.microsoft.com/services/hockeyapp/)| Integra informes de bloqueo y métricas de usuario con una plataforma de distribución de aplicaciones y comentarios de usuario. Admite aplicaciones de Android, Cordova, iOS, OS X, Unity, Windows y Xamarin. Además, considere el control de misión de [Visual Studio Mobile Center](https://visualstudio.microsoft.com/app-center/) &mdash; para aplicaciones que combine análisis enriquecidos, informes de errores, notificaciones de envío, distribución de aplicaciones y mucho más. |
 | Creación de campañas de marketing para aumentar el uso y la retención  | Enviar notificaciones de inserción a los reproductores de destino para generar interés y fomentar acciones específicas del juego según el análisis de datos. | [Mobile Engagement](https://azure.microsoft.com/services/mobile-engagement/) : se retirará el 2018 de marzo y actualmente solo está disponible para los clientes existentes. |  Aumentar el tiempo de juego y la retención del usuario en las principales plataformas (iOS, Android, Windows y Windows Phone). |

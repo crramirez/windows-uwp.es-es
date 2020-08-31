@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo el movimiento fluida usa las funciones de tiempo y de aceleración.
+description: Obtenga información acerca de la importancia de la sincronización y la aceleración para que el movimiento parezca natural en los objetos que entran, salen o se mueven dentro de la interfaz de usuario.
 title: Sincronización y aceleración
 label: Timing and easing
 template: detail.hbs
@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 098a75da573a977aa393197a61a62b0337f0dc06
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 46ec373ffb7ad141bcff36c33fa35900c888daf8
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970510"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054435"
 ---
 # <a name="timing-and-easing"></a>Sincronización y aceleración
 

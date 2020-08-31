@@ -4,34 +4,34 @@ title: Crear un elemento de trabajo periódico
 description: Obtén información sobre cómo crear un elemento de trabajo que se repita periódicamente.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, UWP, elemento de trabajo periódico, subprocesos, temporizadores
+keywords: Windows 10, UWP, elemento de trabajo periódico, subprocesamiento, temporizadores
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e045c12f96cc9404abb4ba9be395eb49b1ab850
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 0a69ddc9afd051808a047af0e34b4e33d4250dc1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321996"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155239"
 ---
 # <a name="create-a-periodic-work-item"></a>Crear un elemento de trabajo periódico
 
 
 <b>API importantes</b>
 
--   [**CreatePeriodicTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createperiodictimer)
--   [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer)
+-   [**CreatePeriodicTimer**](/uwp/api/windows.system.threading.threadpooltimer.createperiodictimer)
+-   [**ThreadPoolTimer**](/uwp/api/Windows.System.Threading.ThreadPoolTimer)
 
 Obtén información sobre cómo crear un elemento de trabajo que se repita periódicamente.
 
 ## <a name="create-the-periodic-work-item"></a>Crear el elemento de trabajo periódico
 
-Usa el método [**CreatePeriodicTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createperiodictimer) para crear un elemento de trabajo periódico. Envía un lambda que realice el trabajo y usa el parámetro *period* para especificar el intervalo entre los envíos. El período se especifica con una estructura [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan). El elemento de trabajo se volverá a enviar cada vez que transcurra el período, de manera que debes asegurarte de que el período sea lo suficientemente largo como para que se complete el trabajo.
+Usa el método [**CreatePeriodicTimer**](/uwp/api/windows.system.threading.threadpooltimer.createperiodictimer) para crear un elemento de trabajo periódico. Envía un lambda que realice el trabajo y usa el parámetro *period* para especificar el intervalo entre los envíos. El período se especifica con una estructura [**TimeSpan**](/uwp/api/Windows.Foundation.TimeSpan). El elemento de trabajo se volverá a enviar cada vez que transcurra el período, de manera que debes asegurarte de que el período sea lo suficientemente largo como para que se complete el trabajo.
 
-[**CreateTimer** ](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) devuelve un [ **ThreadPoolTimer** ](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer) objeto. Almacena este objeto en caso de que se deba cancelar el temporizador.
+[**CreateTimer**](/uwp/api/windows.system.threading.threadpooltimer.createtimer) devuelve un objeto [**ThreadPoolTimer**](/uwp/api/Windows.System.Threading.ThreadPoolTimer). Almacena este objeto en caso de que se deba cancelar el temporizador.
 
-> **Tenga en cuenta**  evitar especificar un valor de cero (o cualquier valor inferior a un milisegundo) para el intervalo. Esto hará que el temporizador periódico se comporte como un temporizador de único disparo.
+> **Nota:**    Evite especificar un valor de cero (o cualquier valor inferior a un milisegundo) para el intervalo. Esto hará que el temporizador periódico se comporte como un temporizador de único disparo.
 
-> **Tenga en cuenta**  puede usar [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+> **Nota:**    Puede usar [**CoreDispatcher. RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso a la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta una vez cada 60 segundos:
 
@@ -87,7 +87,7 @@ En el siguiente ejemplo se crea un elemento de trabajo que se ejecuta una vez ca
 
 ## <a name="handle-cancellation-of-the-periodic-work-item-optional"></a>Controlar la cancelación del elemento de trabajo periódico (opcional)
 
-Si es necesario, puedes controlar la cancelación del temporizador periódico con un elemento [**TimerDestroyedHandler**](https://docs.microsoft.com/uwp/api/windows.system.threading.timerdestroyedhandler). Usa la sobrecarga [**CreatePeriodicTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createperiodictimer) para proporcionar un lambda adicional que controle la cancelación del elemento de trabajo periódico.
+Si es necesario, puedes controlar la cancelación del temporizador periódico con un elemento [**TimerDestroyedHandler**](/uwp/api/windows.system.threading.timerdestroyedhandler). Usa la sobrecarga [**CreatePeriodicTimer**](/uwp/api/windows.system.threading.threadpooltimer.createperiodictimer) para proporcionar un lambda adicional que controle la cancelación del elemento de trabajo periódico.
 
 En el siguiente ejemplo se crea un elemento de trabajo periódico que se repite cada 60 segundos y también proporciona un controlador de cancelación:
 
@@ -186,7 +186,7 @@ En el siguiente ejemplo se crea un elemento de trabajo periódico que se repite 
 
 ## <a name="cancel-the-timer"></a>Cancelar el temporizador
 
-Cuando sea necesario, llama al método [**Cancel**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.cancel) para interrumpir la repetición del elemento de trabajo periódico. Si el elemento de trabajo se está ejecutando cuando se cancela el temporizador periódico, puede completarse. Cuando se han completado todas las instancias del elemento de trabajo periódico, se llama a [**TimerDestroyedHandler**](https://docs.microsoft.com/uwp/api/windows.system.threading.timerdestroyedhandler) (si existe).
+Cuando sea necesario, llama al método [**Cancel**](/uwp/api/windows.system.threading.threadpooltimer.cancel) para interrumpir la repetición del elemento de trabajo periódico. Si el elemento de trabajo se está ejecutando cuando se cancela el temporizador periódico, puede completarse. Cuando se han completado todas las instancias del elemento de trabajo periódico, se llama a [**TimerDestroyedHandler**](/uwp/api/windows.system.threading.timerdestroyedhandler) (si existe).
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -196,7 +196,7 @@ Cuando sea necesario, llama al método [**Cancel**](https://docs.microsoft.com/u
 > PeriodicTimer->Cancel();
 > ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Para obtener información sobre los temporizadores de un solo uso, consulta [Enviar un elemento de trabajo con un temporizador](use-a-timer-to-submit-a-work-item.md).
 

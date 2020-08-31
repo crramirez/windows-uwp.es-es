@@ -5,29 +5,29 @@ ms.date: 08/29/2018
 ms.topic: article
 keywords: Windows 10, UWP, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: ee61a428115522717f8ff57ef7a0fc04f19aae41
-ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
+ms.openlocfilehash: baa556958750b4f88997746786a9b5fe92e601b4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89043387"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168519"
 ---
 # <a name="use-a-software-trigger"></a>Usar un desencadenador de software
 
-Puede ser útil controlar el acto de digitalizar desde el software si usa un escáner de código de barras en el modo de presentación o si el escáner no tiene un desencadenador físico, como un escáner de códigos de barras basado en la cámara. Puede iniciar el proceso de digitalización mediante una llamada a [StartSoftwareTriggerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.startsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StartSoftwareTriggerAsync).
+Puede ser útil controlar el acto de digitalizar desde el software si usa un escáner de código de barras en el modo de presentación o si el escáner no tiene un desencadenador físico, como un escáner de códigos de barras basado en la cámara. Puede iniciar el proceso de digitalización mediante una llamada a [StartSoftwareTriggerAsync](/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.startsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StartSoftwareTriggerAsync).
 
-En función del valor de [IsDisabledOnDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdisabledondatareceived#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDisabledOnDataReceived) , el escáner puede examinar solo un código de barras y, a continuación, detener o examinar continuamente hasta que llame a [StopSoftwareTriggerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.stopsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StopSoftwareTriggerAsync).
+En función del valor de [IsDisabledOnDataReceived](/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdisabledondatareceived#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDisabledOnDataReceived) , el escáner puede examinar solo un código de barras y, a continuación, detener o examinar continuamente hasta que llame a [StopSoftwareTriggerAsync](/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.stopsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StopSoftwareTriggerAsync).
 
-Establezca el valor deseado de [IsDisabledOnDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdisabledondatareceived#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDisabledOnDataReceived) para controlar el comportamiento del analizador cuando se descodifica un código de barras.
+Establezca el valor deseado de [IsDisabledOnDataReceived](/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdisabledondatareceived#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDisabledOnDataReceived) para controlar el comportamiento del analizador cuando se descodifica un código de barras.
 
-| Valor | Descripción |
+| Value | Descripción |
 | ----- | ----------- |
 | True   | Examinar solo un código de barras y detener |
 | Falso  | Examinar los códigos de barras continuamente sin detenerse |
 
 
 > [!Important]
-> Confirme que el escáner de códigos de barras admite el uso de desencadenadores de software. para ello, compruebe primero la propiedad [IsSoftwareTriggerSupported](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannercapabilities.issoftwaretriggersupported#Windows_Devices_PointOfService_BarcodeScannerCapabilities_IsSoftwareTriggerSupported).
+> Confirme que el escáner de códigos de barras admite el uso de desencadenadores de software. para ello, compruebe primero la propiedad [IsSoftwareTriggerSupported](/uwp/api/windows.devices.pointofservice.barcodescannercapabilities.issoftwaretriggersupported#Windows_Devices_PointOfService_BarcodeScannerCapabilities_IsSoftwareTriggerSupported).
 
 En el ejemplo siguiente se muestra cómo iniciar el análisis mediante un desencadenador de software, que detendrá el análisis una vez que recorre un código de barras:
 

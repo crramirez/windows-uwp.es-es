@@ -1,31 +1,31 @@
 ---
-Description: Obtenga información sobre cómo usar audio personalizada en las notificaciones del sistema.
+description: Obtenga información sobre cómo usar el audio personalizado en las notificaciones del sistema para que la aplicación exprese los efectos de sonido únicos de la marca.
 title: Audio personalizado en notificaciones del sistema
 label: Custom audio on toasts
 template: detail.hbs
 ms.date: 12/15/2017
 ms.topic: article
-keywords: windows 10, uwp, notificación del sistema, audio personalizado, notificación, audio, sonido
+keywords: Windows 10, UWP, notificación del sistema, audio personalizado, notificación, audio, sonido
 ms.localizationpriority: medium
-ms.openlocfilehash: 982340901d13f17945c1e7ffa11099f52732f619
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 81bec439f17cadb7db0576dafcf4299f0978b192
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57644070"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054465"
 ---
 # <a name="custom-audio-on-toasts"></a>Audio personalizado en notificaciones del sistema
 
-Las notificaciones del sistema pueden usar audio personalizado, lo permite a tu aplicación expresar los efectos de sonido únicos de tu marca. Por ejemplo, una aplicación de mensajería puede usar su propio sonido de mensajería en sus notificaciones del sistema de manera que el usuario pueda saber al instante que ha recibido una notificación de la aplicación, en lugar de oír el sonido de notificación genérico.
+Las notificaciones del sistema pueden usar el audio personalizado, que permite a la aplicación expresar los efectos de sonido únicos de la marca. Por ejemplo, una aplicación de mensajería puede usar su propio sonido de mensajería en sus notificaciones del sistema, por lo que el usuario puede saber al instante que ha recibido una notificación de la aplicación, en lugar de oír el sonido de notificación genérico.
 
-## <a name="install-uwp-community-toolkit-nuget-package"></a>Instalar el paquete NuGet del Kit de herramientas de la comunidad de UWP
+## <a name="install-uwp-community-toolkit-nuget-package"></a>Instalar el paquete NuGet de UWP Community Toolkit
 
-Para crear notificaciones mediante código, se recomienda encarecidamente usar la biblioteca de notificaciones del kit de herramientas de la comunidad de UWP, que proporciona un modelo de objeto para el contenido XML de notificación. Podrías crear manualmente el XML de notificación, pero es propenso a errores y resulta complicado. La biblioteca de notificaciones del Kit de herramientas de la comunidad de UWP se compila y se mantiene por el equipo que tiene la propiedad de las notificaciones de Microsoft.
+Para crear notificaciones a través de código, se recomienda encarecidamente usar la biblioteca de notificaciones del kit de herramientas de la comunidad de UWP, que proporciona un modelo de objetos para el contenido XML de notificación. Podría construir manualmente el XML de notificación, pero esto es propenso a errores y es confuso. El equipo que posee notificaciones en Microsoft crea y mantiene la biblioteca de notificaciones dentro del kit de herramientas de la comunidad de UWP.
 
-Instala [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) desde NuGet (estamos usando la versión 1.0.0 en esta documentación).
+Instale [Microsoft. Toolkit. UWP. notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) desde NuGet (estamos usando la versión 1.0.0 en esta documentación).
 
 
-## <a name="add-namespace-declarations"></a>Agregar declaraciones de espacios de nombres
+## <a name="add-namespace-declarations"></a>Incorporación de declaraciones de espacio de nombres
 
 `Windows.UI.Notifications` incluye el icono y la API del sistema. `Microsoft.Toolkit.Uwp.Notifications` incluye la biblioteca de notificaciones.
 
@@ -35,9 +35,9 @@ using Windows.UI.Notifications;
 ```
 
 
-## <a name="construct-the-notification"></a>Construir la notificación
+## <a name="construct-the-notification"></a>Construcción de la notificación
 
-El contenido de las notificaciones del sistema incluye texto e imágenes, además de botones y entradas. Consulta [enviar notificaciones del sistema local](send-local-toast.md) para ver un fragmento de código completo.
+El contenido de la notificación del sistema incluye texto e imágenes, así como botones y entradas. Consulte envío de una [notificación del sistema local](send-local-toast.md) para ver un fragmento de código completo.
 
 ```csharp
 ToastContent toastContent = new ToastContent()
@@ -50,11 +50,11 @@ ToastContent toastContent = new ToastContent()
 ```
 
 
-## <a name="add-the-custom-audio"></a>Agregar el audio personalizado
+## <a name="add-the-custom-audio"></a>Adición del audio personalizado
 
-Windows Mobile siempre ha admitido audio personalizado en las notificaciones del sistema. Sin embargo, Escritorio solo ha agregado compatibilidad para audio personalizado en la versión 1511 (compilación 10586). Si envías una notificación del sistema que contenga audio personalizado a un dispositivo de escritorio anterior a la versión 1511, se silenciará la notificación del sistema. Por lo tanto, para Escritorio versión preliminar 1511, NO debes incluir el audio personalizado en la notificación del sistema, para que la notificación del sistema use al menos el sonido de la notificación predeterminado.
+Windows Mobile siempre ha admitido el audio personalizado en las notificaciones del sistema. Sin embargo, Desktop solo agregó compatibilidad con audio personalizado en la versión 1511 (compilación 10586). Si envía una notificación del sistema que contiene audio personalizado a un dispositivo de escritorio antes de la versión 1511, la notificación del sistema será silenciosa. Por lo tanto, para la versión de escritorio anterior a la 1511, no debe incluir el audio personalizado en la notificación del sistema, por lo que la notificación usará al menos el sonido de notificación predeterminado.
 
-**Problema conocido**: Si usa Desktop versión 1511, el audio del sistema personalizada solo funcionará si la aplicación se instala mediante el Store. Eso significa que no puedes probar localmente tu audio personalizado en Escritorio antes de enviarlo a la Store, pero el audio funcionará correctamente una vez instalado desde la Store. Hemos corregido esto en la Actualización de aniversario, de manera que el audio personalizado desde tu aplicación implementada localmente funcionará correctamente.
+**Problema conocido**: Si usa la versión de escritorio 1511, el audio del sistema de notificación personalizado solo funcionará si la aplicación se instala a través de la tienda. Esto significa que no puede probar localmente el audio personalizado en el escritorio antes de enviarlo a la tienda, pero el audio funcionará correctamente una vez que se haya instalado desde la tienda. Este problema se ha corregido en la actualización de aniversario, de modo que el audio personalizado de la aplicación implementada localmente funcione correctamente.
 
 ```csharp
 ?
@@ -77,10 +77,10 @@ if (supportsCustomAudio)
 }
 ```
 
-Los tipos de archivo de audio admitidos son...
+Entre los tipos de archivo de audio admitidos se incluyen...
 
 - .aac
-- .flac
+- . flac
 - .m4a
 - .mp3
 - .wav
@@ -89,7 +89,7 @@ Los tipos de archivo de audio admitidos son...
 
 ## <a name="send-the-notification"></a>Enviar la notificación
 
-Ahora que se ha finalizado el contenido de la notificación del sistema, el envío de la notificación es bastante sencillo.
+Ahora que el contenido del sistema está completo, el envío de la notificación es bastante sencillo.
 
 ```csharp
 // Create the toast notification from the previous toast content
@@ -102,6 +102,6 @@ ToastNotificationManager.CreateToastNotifier().Show(notification);
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Ejemplo de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-toast-with-custom-audio)
+- [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-toast-with-custom-audio)
 - [Enviar una notificación del sistema local](send-local-toast.md)
-- [Documentación de contenido de notificación del sistema](adaptive-interactive-toasts.md)
+- [Documentación del contenido del sistema](adaptive-interactive-toasts.md)

@@ -1,17 +1,17 @@
 ---
-description: Cómo usar la información de contactos y calendario en la aplicación para UWP.
+description: Descubra formas de permitir que los usuarios accedan a sus contactos y citas para poder compartir contenido, correos electrónicos, información de calendario o mensajes.
 title: Contactos y calendario
 ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
 ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp, contacts, calendar, appointments, email messages
 ms.localizationpriority: medium
-ms.openlocfilehash: b2e3f0b1d93d2b2c32e117f61fd7514077ca3923
-ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
+ms.openlocfilehash: e94810ef3fac9c21221181338b7efd8d78fefb97
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2020
-ms.locfileid: "84756551"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054155"
 ---
 # <a name="contacts-my-people-and-calendar"></a>Contactos, Mis allegados y calendario
 

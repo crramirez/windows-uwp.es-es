@@ -5,14 +5,14 @@ author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-keywords: Android, Windows, Windows Defender, configuración, configuración, exclusiones,% USERPROFILE%, devenv. exe, rendimiento, velocidad, compilación, Gradle
+keywords: Android, Windows, Windows Defender, configuración, configuración, exclusiones,% USERPROFILE%, devenv.exe, rendimiento, velocidad, compilación, Gradle
 ms.date: 04/28/2020
-ms.openlocfilehash: d818c4f568698a121fb7051ec5e6e2d246bff924
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: 0437ffc263c618e52c7a3e4dc3256e9fcd502c8e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255139"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154869"
 ---
 # <a name="update-windows-defender-settings-to-improve-performance"></a>Actualización de la configuración de Windows Defender para mejorar el rendimiento
 
@@ -20,7 +20,7 @@ En esta guía se explica cómo configurar exclusiones en la configuración de se
 
 ## <a name="windows-defender-overview"></a>Información general de Windows Defender
 
-En Windows 10, versión 1703 y versiones posteriores, la aplicación [antivirus de Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/windows-defender-security-center-antivirus) forma parte de la seguridad de Windows. Windows Defender pretende mantener su equipo seguro con protección en tiempo real integrada frente a virus, ransomware, spyware y otras amenazas de seguridad.
+En Windows 10, versión 1703 y versiones posteriores, la aplicación [antivirus de Windows Defender](/windows/security/threat-protection/windows-defender-antivirus/windows-defender-security-center-antivirus) forma parte de la seguridad de Windows. Windows Defender pretende mantener su equipo seguro con protección en tiempo real integrada frente a virus, ransomware, spyware y otras amenazas de seguridad.
 
 **Sin embargo**, la protección en tiempo real de Windows Defender también reducirá drásticamente el acceso al sistema de archivos y la velocidad de compilación al desarrollar aplicaciones Android.
 
@@ -48,18 +48,18 @@ Para mejorar la velocidad de compilación de Android, agregue exclusiones en el 
 
 En la siguiente lista se muestra la ubicación predeterminada de cada directorio de Android Studio que se recomienda agregar como exclusión del análisis en tiempo real de Windows Defender:
 
-- Caché de Gradle:`%USERPROFILE%\.gradle`
-- Proyectos de Android Studio:`%USERPROFILE%\AndroidStudioProjects`
-- Android SDK:`%USERPROFILE%\AppData\Local\Android\SDK`
-- Archivos del sistema de Android Studio:`%USERPROFILE%\.AndroidStudio<version>\system`
+- Caché de Gradle: `%USERPROFILE%\.gradle`
+- Proyectos de Android Studio: `%USERPROFILE%\AndroidStudioProjects`
+- Android SDK: `%USERPROFILE%\AppData\Local\Android\SDK`
+- Archivos del sistema de Android Studio: `%USERPROFILE%\.AndroidStudio<version>\system`
 
 Es posible que estas ubicaciones de directorio no se apliquen al proyecto si no ha usado las ubicaciones predeterminadas establecidas por Android Studio o si ha descargado un proyecto de GitHub (por ejemplo). Considere la posibilidad de agregar una exclusión al directorio del proyecto de desarrollo de Android actual, donde pueda encontrarse.
 
 Las exclusiones adicionales que puede tener en cuenta incluyen:
 
-- Proceso del entorno de desarrollo de Visual Studio:`devenv.exe`
-- Proceso de compilación de Visual Studio:`msbuild.exe`
-- Directorio JetBrains:`%LOCALAPPDATA%\JetBrains\<Transient directory (folder)>`
+- Proceso del entorno de desarrollo de Visual Studio: `devenv.exe`
+- Proceso de compilación de Visual Studio: `msbuild.exe`
+- Directorio JetBrains: `%LOCALAPPDATA%\JetBrains\<Transient directory (folder)>`
 
 Para obtener más información acerca de cómo agregar exclusiones de detección de antivirus, incluido cómo personalizar ubicaciones de directorio para directiva de grupo entornos controlados, consulte la sección [impacto de antivirus](https://developer.android.com/studio/intro/studio-config#antivirus-impact) de la documentación de Android Studio.
 
@@ -68,7 +68,7 @@ Para obtener más información acerca de cómo agregar exclusiones de detección
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Desarrollo de aplicaciones de pantalla dual para Android y obtención del SDK de dispositivo Surface Duo](https://docs.microsoft.com/dual-screen/android/)
+- [Desarrollo de aplicaciones de pantalla dual para Android y obtención del SDK de dispositivo Surface Duo](/dual-screen/android/)
 
 - [Agregar exclusiones de Windows Defender para mejorar el rendimiento](./defender-settings.md)
 

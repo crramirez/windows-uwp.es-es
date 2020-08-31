@@ -1,92 +1,92 @@
 ---
 title: Animaciones controladas por entradas
-description: Más información sobre cómo usar animaciones de entrada en la interfaz de usuario de tu aplicación.
+description: Obtenga información sobre la API de InputAnimation y cómo usar animaciones controladas por la entrada para crear un movimiento de respuesta dinámica en la interfaz de usuario de la aplicación.
 ms.date: 10/10/2017
 ms.topic: article
-keywords: windows 10, uwp, animación
+keywords: Windows 10, UWP, animación
 ms.localizationpriority: medium
-ms.openlocfilehash: 94d15fc7f2443475020aa7e134c076b833db46a8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 0f9abd902e39b645f27b7a0f5d521097ca4aff8a
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597760"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054365"
 ---
 # <a name="input-driven-animations"></a>Animaciones controladas por entradas
 
-En este artículo se proporciona una introducción a la API InputAnimation y recomienda cómo utilizar estos tipos de animaciones en la interfaz de usuario.
+En este artículo se proporciona una introducción a la API de InputAnimation y se recomienda usar estos tipos de animaciones en la interfaz de usuario.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
-En este artículo damos por hecho que estás familiarizado con los conceptos tratados en estos artículos:
+Aquí se supone que está familiarizado con los conceptos descritos en estos artículos:
 
-- [Animaciones en función de relación](relation-animations.md)
+- [Animaciones basadas en relaciones](relation-animations.md)
 
-## <a name="smooth-motion-driven-from-user-interactions"></a>Movimiento suave controlado por interacciones del usuario
+## <a name="smooth-motion-driven-from-user-interactions"></a>Movimiento suave controlado por las interacciones del usuario
 
-En el lenguaje de diseño Fluent Design, la interacción entre los usuarios finales y las aplicaciones es de suma importancia. Las aplicaciones no solo tienen que buscar el elemento, sino que también deben responder de forma natural y dinámica a los usuarios que interactúan con ellas. Esto significa que cuando se coloca un dedo en la pantalla, la interfaz de usuario debe reaccionar de forma elegante a los distintos grados de la entrada, y el desplazamiento debe parecer homogéneo y obedecer al dedo que se desplaza por la pantalla.
+En el lenguaje de diseño fluida, la interacción entre los usuarios finales y las aplicaciones es de la máxima importancia. Las aplicaciones no solo tienen que buscar el elemento, sino que también responden de forma natural y dinámica a los usuarios que interactúan con ellos. Esto significa que cuando se coloca un dedo en la pantalla, la interfaz de usuario debe reaccionar correctamente a los grados de entrada cambiantes; el desplazamiento debe ser suave y ceñirse a la panorámica de un dedo por la pantalla.
 
-Crear una interfaz de usuario que responda de forma dinámica y fluida a los resultados de las entradas del usuario produce una mayor participación de los usuarios: el movimiento no solo se visualizará correctamente sino que transmitirá una sensación agradable y natural cuando los usuarios interactúen con las distintas experiencias de la interfaz de usuario. Esto permite a los usuarios finales conectar de un modo más sencillo con la aplicación, lo que hace que la experiencia sea memorable y agradable.
+La creación de una interfaz de usuario que responda de forma dinámica y fluida a los resultados de los datos proporcionados por el usuario con mayor interacción de usuario: el movimiento ahora no solo tiene un buen aspecto, sino que es bueno y natural cuando los usuarios interactúan con sus diferentes experiencias de IU. Esto permite a los usuarios finales conectarse con mayor facilidad a su aplicación, lo que hace que la experiencia sea más memorable y agradables.
 
-## <a name="expanding-past-just-touch"></a>Expansión justo más allá de la pulsación
+## <a name="expanding-past-just-touch"></a>Expandir solo la entrada táctil
 
-Aunque la entrada táctil es una de las interfaces más comunes que los usuarios finales utilizan para manipular el contenido de la interfaz de usuario, también utilizarán algunas otras modalidades de entrada, como el mouse y el lápiz. En estos casos, es importante que los usuarios finales perciban que la interfaz de usuario responde dinámicamente a su entrada, independientemente de qué modalidad de entrada decidan usar. Debes estar al corriente de las distintas modalidades de entrada a la hora de diseñar experiencias de movimiento basado en entradas.
+Aunque Touch es una de las interfaces más comunes que los usuarios finales usan para manipular el contenido de la interfaz de usuario, también usarán otras modalidades de entrada, como el mouse y el lápiz. En estos casos, es importante que los usuarios finales perciban que la interfaz de usuario responde de forma dinámica a la entrada, independientemente de qué modal de entrada decida usar. Debe ser Cognizant de las distintas modalidades de entrada al diseñar experiencias de movimiento controladas por la entrada.
 
-## <a name="different-input-driven-motion-experiences"></a>Distintas experiencias de movimiento basado en entradas
+## <a name="different-input-driven-motion-experiences"></a>Experiencias de movimiento controladas por entrada diferentes
 
-El espacio InputAnimation proporciona varias experiencias diferentes para crear movimiento que responda de forma dinámica. Al igual que el resto del sistema de animación de la interfaz de usuario de Windows, estas animaciones controladas por entradas funcionan en un subproceso independiente, lo que ayuda a contribuir a la experiencia de movimiento dinámico. Sin embargo, en algunos casos en los que la experiencia aprovecha los controles y componentes XAML existentes, partes de esas experiencias siguen vinculadas al subproceso de la interfaz de usuario.
+El espacio InputAnimation proporciona varias experiencias diferentes para crear un movimiento de respuesta dinámica. Al igual que el resto del sistema de animación de la interfaz de usuario de Windows, estas animaciones controladas por entrada operan en un subproceso independiente, lo que ayuda a contribuir a la experiencia de movimiento dinámico. Sin embargo, en algunos casos en los que la experiencia aprovecha los controles y componentes de XAML existentes, algunas de esas experiencias siguen siendo enlazadas a subprocesos de interfaz de usuario.
 
-Existen tres experiencias principales que se crean al producir animaciones de movimiento dinámico controlado por entradas:
+Hay tres experiencias principales que se crean al compilar animaciones de movimiento basadas en la entrada dinámica:
 
-1. Mejora de las experiencias existentes de ScrollViewer: Permite que la posición de un ScrollViewer de XAML controle las experiencias de animación dinámica.
-1. Experiencias controladas por la posición del puntero: Aprovecha la posición de un cursor en un UIElement con posicionamiento probado para controlar experiencias de animación dinámica.
-1. Experiencias de manipulación personalizadas con InteractionTracker: Crear experiencias de manipulación totalmente personalizadas fuera del subproceso con InteractionTracker (por ejemplo, un lienzo de desplazamiento o zoom).
+1. Mejora de las experiencias de ScrollView existentes: habilita la posición de un ScrollViewer de XAML para impulsar experiencias de animación dinámicas.
+1. Experiencias orientadas a la posición del puntero: Use la posición de un cursor en un UIElement de la prueba de posicionamiento para impulsar experiencias dinámicas de animación.
+1. Experiencias de manipulación personalizada con InteractionTracker: cree una experiencia de manipulación completamente personalizada y sin subproceso con InteractionTracker (por ejemplo, un lienzo de desplazamiento y zoom).
 
-## <a name="enhancing-existing-scrollviewer-experiences"></a>Mejora de las experiencias existentes de ScrollViewer
+## <a name="enhancing-existing-scrollviewer-experiences"></a>Mejorar las experiencias de ScrollViewer existentes
 
-Una de las formas habituales de crear experiencias más dinámicas es basarse en un control ScrollViewer de XAML existente. En estas situaciones, se aprovecha la posición de desplazamiento de un ScrollViewer para crear componentes adicionales de la interfaz de usuario que hagan que una experiencia de desplazamiento simple sea más dinámica. Algunos ejemplos incluyen los encabezados permanentes o discretos y el efecto parallax.
+Una de las formas más comunes de crear experiencias más dinámicas es basarse en un control ScrollViewer XAML existente. En estas situaciones, se aprovecha la posición de desplazamiento de un ScrollViewer para crear componentes adicionales de la interfaz de usuario que permiten una experiencia de desplazamiento simple más dinámica. Algunos ejemplos son los encabezados de permanencia y tímida y el Parallax.
 
-![Vista de lista con efecto parallax](images/animation/parallax.gif)
+![Vista de lista con Parallax](images/animation/parallax.gif)
 
-![Un encabezado discreto](images/animation/shy-header.gif)
+![Un encabezado tímida](images/animation/shy-header.gif)
 
-Al crear estos tipos de experiencias, hay una fórmula general que se debe seguir:
+Al crear estos tipos de experiencias, hay una fórmula general que debe seguir:
 
-1. Accede a ScrollManipulationPropertySet fuera del ScrollViewer de XAML que desees que controle una animación.
-    - Se hace a través de la API ElementCompositionPreview.GetScrollViewerManipulationPropertySet(UIElement element).
-    - Devuelve un CompositionPropertySet que contiene una propiedad denominada **Translation**.
-1. Crea una ExpressionAnimation de Composición con una ecuación que haga referencia a la propiedad Translation.
-1. Inicia la animación en una propiedad de un CompositionObject.
+1. Obtenga acceso a ScrollManipulationPropertySet fuera de la ScrollViewer de XAML que quiere controlar una animación.
+    - Se realiza a través de la API ElementCompositionPreview. GetScrollViewerManipulationPropertySet (Elemento UIElement)
+    - Devuelve un CompositionPropertySet que contiene una propiedad denominada **Translation** .
+1. Cree una composición ExpressionAnimation con una ecuación que haga referencia a la propiedad Translation.
+1. Inicie la animación en la propiedad de un CompositionObject.
 
-Para obtener más información sobre la creación de estas experiencias, consulta [Mejorar las experiencias existentes de ScrollViewer](scroll-input-animations.md).
+Para obtener más información sobre la creación de estas experiencias, vea [mejorar las experiencias de ScrollViewer existentes](scroll-input-animations.md).
 
-## <a name="pointer-position-driven-experiences"></a>Experiencias controladas por la posición del puntero
+## <a name="pointer-position-driven-experiences"></a>Experiencias orientadas a la posición del puntero
 
-Otra experiencia dinámica habitual en la que participan las entradas es controlar una animación en función de la posición de un puntero, como el cursor de un mouse. En estos casos, los desarrolladores aprovechan la ubicación de un cursor cuando se prueba su posicionamiento dentro de un UIElement de XAML que hace posible crear experiencias como Spotlight Reveal (Mostrar el foco de luz).
+Otra experiencia dinámica común que implica la entrada es impulsar una animación basada en la posición de un puntero, como un cursor del mouse. En estas situaciones, los desarrolladores aprovechan la ubicación de un cursor cuando se prueba el posicionamiento en un UIElement de XAML que permite crear experiencias como Spotlight.
 
-![Ejemplo de un foco de luz del puntero](images/animation/spotlight-reveal.gif)
+![Ejemplo de Spotlight de puntero](images/animation/spotlight-reveal.gif)
 
-![Ejemplo de rotación del puntero](images/animation/pointer-rotate.gif)
+![Ejemplo de rotación de puntero](images/animation/pointer-rotate.gif)
 
-Al crear estos tipos de experiencias, hay una fórmula general que se debe seguir:
+Al crear estos tipos de experiencias, hay una fórmula general que debe seguir:
 
-1. Accede a PointerPositionPropertySet de un UIElement de XAML del que desees saber la posición del cursor cuando se pruebe su posicionamiento.
-    - Se hace a través de la API ElementCompositionPreview.GetPointerPositionPropertySet(UIElement element).
-    - Devuelve un CompositionPropertySet que contiene una propiedad denominada **Position**.
-1. Crea una CompositionExpressionAnimation con una ecuación que haga referencia a la propiedad Position.
-1. Inicia la animación en una propiedad de un CompositionObject.
+1. Acceda a PointerPositionPropertySet fuera de un UIElement de XAML que quieras conocer la posición del cursor cuando se probó la visita.
+    - Se realiza a través de la API ElementCompositionPreview. GetPointerPositionPropertySet (Elemento UIElement)
+    - Devuelve un CompositionPropertySet que contiene una propiedad denominada **Position** .
+1. Cree un CompositionExpressionAnimation con una ecuación que haga referencia a la propiedad Position.
+1. Inicie la animación en la propiedad de un CompositionObject.
 
-## <a name="custom-manipulation-experiences-with-interactiontracker"></a>Experiencias de manipulación personalizadas con InteractionTracker
+## <a name="custom-manipulation-experiences-with-interactiontracker"></a>Experiencias de manipulación personalizada con InteractionTracker
 
-Uno de los desafíos a la hora de utilizar ScrollViewer de XAML es que está vinculado al subproceso de la interfaz de usuario. Como resultado, la experiencia de desplazamiento y zoom a menudo puede retrasarse y vibrar si el subproceso de interfaz de usuario está ocupado, lo que produce una experiencia poco atractiva. Además, muchos aspectos de la experiencia de ScrollViewer no se pueden personalizar. InteractionTracker se creó para resolver ambos problemas al proporcionar un conjunto de bloques de creación para crear experiencias de manipulación personalizadas que se ejecuten en un subproceso independiente.
+Uno de los desafíos relacionados con el uso de un ScrollViewer de XAML es que está enlazado al subproceso de interfaz de usuario. Como resultado, la experiencia de desplazamiento y zoom a menudo se puede retrasar y vibrar si el subproceso de la interfaz de usuario está ocupado y tiene como resultado una experiencia no atractiva. Además, no es posible personalizar muchos aspectos de la experiencia de ScrollViewer. InteractionTracker se creó para resolver ambos problemas proporcionando un conjunto de bloques de creación para crear experiencias de manipulación personalizadas que se ejecutan en un subproceso independiente.
 
-![Ejemplo de interacciones en 3D](images/animation/interactions-3d.gif)
+![ejemplo de interacciones 3D](images/animation/interactions-3d.gif)
 
-![Ejemplo de tirar para animar](images/animation/pull-to-animate.gif)
+![Extraer del ejemplo de animación](images/animation/pull-to-animate.gif)
 
-Al crear estos experiencias con InteractionTracker, hay una fórmula general que se debe seguir:
+Al crear experiencias con InteractionTracker, hay una fórmula general que debe seguir:
 
-1. Crea el objeto InteractionTracker y define sus propiedades.
-1. Crear VisualInteractionSources para cualquier CompositionVisual que debe capturar entradas para que las consuma InteractionTracker.
-1. Crea una ExpressionAnimation de composición con una ecuación que haga referencia la propiedad Position de InteractionTracker.
-1. Inicia la animación en una propiedad de un elemento visual de composición que desees que esté controlado por InteractionTracker.
+1. Cree el objeto InteractionTracker y defina sus propiedades.
+1. Cree VisualInteractionSources para cualquier CompositionVisual que debería capturar la entrada de InteractionTracker que se va a consumir.
+1. Cree una composición ExpressionAnimation con una ecuación que haga referencia a la propiedad Position de InteractionTracker.
+1. Inicie la animación en la propiedad de un control visual de composición que quiera que esté controlada por InteractionTracker.

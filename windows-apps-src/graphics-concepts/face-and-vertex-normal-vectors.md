@@ -1,89 +1,89 @@
 ---
 title: Vectores normales de caras y vértices
-description: Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.
+description: Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector viene determinada por el orden en el que se definen los vértices y por si el sistema de coordenadas es una mano derecha o izquierda.
 ms.assetid: 02333579-9749-4612-B121-23F97898A3E0
 keywords:
 - Vectores normales de caras y vértices
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7146fe6489d61c641b7104e8c7c25728550c1c54
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ef0d3ea5a3bc0f5c4ac6b6b660dc543919d297ec
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370662"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168169"
 ---
 # <a name="face-and-vertex-normal-vectors"></a>Vectores normales de caras y vértices
 
 
-Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo.
+Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector viene determinada por el orden en el que se definen los vértices y por si el sistema de coordenadas es una mano derecha o izquierda.
 
-## <a name="span-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanspan-idperpendicularunitnormalvectorforafrontfacespanperpendicular-unit-normal-vector-for-a-front-face"></a><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>Vector normal de unidad perpendicular por una cara frontal
-
-
-Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector está determinada por el orden en que se definen los vértices y por si el sistema de coordenadas es diestro o zurdo. El vector normal de cara apunta hacia el lado frontal de la cara. En Direct3D, solo está visible la parte frontal de una cara. Una cara anterior es una en que los vértices se definen en el orden de las agujas del reloj.
-
-En la siguiente ilustración se muestra un vector normal para una cara anterior:
-
-![un vector normal para una cara anterior](images/nrmlvect.png)
-
-## <a name="span-idcullingbackfacesspanspan-idcullingbackfacesspanspan-idcullingbackfacesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Se enfrenta a atrás de caras traseras
+## <a name="span-idperpendicular_unit_normal_vector_for_a_front_facespanspan-idperpendicular_unit_normal_vector_for_a_front_facespanspan-idperpendicular_unit_normal_vector_for_a_front_facespanperpendicular-unit-normal-vector-for-a-front-face"></a><span id="Perpendicular_unit_normal_vector_for_a_front_face"></span><span id="perpendicular_unit_normal_vector_for_a_front_face"></span><span id="PERPENDICULAR_UNIT_NORMAL_VECTOR_FOR_A_FRONT_FACE"></span>Vector normal de unidad perpendicular para una cara frontal
 
 
-Cualquier cara que no es anterior es posterior. Direct3D no siempre representa caras posteriores; se dice que las caras posteriores deben seleccionarse. La selección de cara posterior significa eliminar las caras posteriores de la representación. Puedes cambiar el modo de selección para representar caras posteriores si quieres. Consulta [Culling State (Estado de selección)](https://docs.microsoft.com/windows/desktop/direct3d9/culling-state) para obtener más información.
+Cada cara de una malla tiene un vector normal de unidad perpendicular. La dirección del vector viene determinada por el orden en el que se definen los vértices y por si el sistema de coordenadas es una mano derecha o izquierda. La cara normal apunta fuera del lado frontal de la cara. En Direct3D, solo está visible la parte frontal de una cara. Una cara frontal es aquella en la que los vértices se definen en el orden de las agujas del reloj.
 
-## <a name="span-idvertexunitnormalsspanspan-idvertexunitnormalsspanspan-idvertexunitnormalsspanvertex-unit-normals"></a><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>Normales de la unidad de vértice
+En la ilustración siguiente se muestra un vector normal para una cara frontal:
 
+![un vector normal para una cara frontal](images/nrmlvect.png)
 
-Direct3D usa los vectores normales de unidad de vértice para la iluminación, los efectos de texturas y el sombreado Gouraud.
-
-En la siguiente ilustración se muestran vectores normales de vértice:
-
-![vectores normales de vértice](images/vertnrml.png)
-
-Al aplicar el sombreado Gouraud a un polígono, Direct3D usa los vectores normales de vértice para calcular el ángulo entre la fuente de luz y la superficie. Calcula los valores de color e intensidad de los vértices y los interpola para cada punto a través de todas las superficies del primitivo. Direct3D calcula el valor de la intensidad de la luz utilizando el ángulo. Cuanto mayor sea el ángulo, menos luz brillará en la superficie.
-
-## <a name="span-idflatsurfacesspanspan-idflatsurfacesspanspan-idflatsurfacesspanflat-surfaces"></a><span id="Flat_surfaces"></span><span id="flat_surfaces"></span><span id="FLAT_SURFACES"></span>Superficies planas
+## <a name="span-idculling_back_facesspanspan-idculling_back_facesspanspan-idculling_back_facesspanculling-back-faces"></a><span id="Culling_back_faces"></span><span id="culling_back_faces"></span><span id="CULLING_BACK_FACES"></span>Selección de caras atrás
 
 
-Si vas a crear un objeto que es plano, establece vectores normales de vértice que apunten de forma perpendicular a la superficie.
+Cualquier cara que no sea una cara frontal es una cara trasera. Direct3D no siempre representa caras inversas; se dice que las caras atrás se seleccionan. La selección de la cara posterior significa eliminar caras de la representación. Si lo desea, puede cambiar el modo de selección de datos para que represente caras. Consulte [Estado de selección](/windows/desktop/direct3d9/culling-state) de datos para obtener más información.
 
-En la siguiente ilustración se muestra una superficie plana formada por dos triángulos con vectores normales de vértice:
-
-![superficie plana formada por dos triángulos con vectores normales de vértice](images/flatvert.png)
-
-## <a name="span-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspanspan-idsmoothshadingonanon-flatobjectspansmooth-shading-on-a-non-flat-object"></a><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>Sombreado suave en un objeto que no sean planas
+## <a name="span-idvertex_unit_normalsspanspan-idvertex_unit_normalsspanspan-idvertex_unit_normalsspanvertex-unit-normals"></a><span id="Vertex_unit_normals"></span><span id="vertex_unit_normals"></span><span id="VERTEX_UNIT_NORMALS"></span>Normales de unidad de vértice
 
 
-En lugar de que el objeto sea plano, lo más probable es que el objeto se componga de franjas de triángulos y los triángulos no son coplanos. Una forma sencilla de lograr sombreado suave entre todos los triángulos de la franja consiste en calcular primero el vector normal de superficie para cada cara poligonal con la que el vértice esté asociado. El vector normal de vértice puede establecerse para que cree un ángulo igual con cada superficie normal. Sin embargo, es posible que este método no sea lo suficientemente eficaz para los primitivos complejos.
+Direct3D usa las normales de unidad de vértices para los efectos de sombreado Gouraud, iluminación y textura.
 
-Este método se ilustra en el diagrama siguiente, que muestra dos superficies, S1 y S2, con el ángulo visto desde arriba. Los vectores normales de S1 y S2 se muestran en color azul. El vector normal de vértice se muestra en rojo. El ángulo que el vector normal de vértice crea con el vector normal de superficie de S1 es el mismo que el ángulo entre el vector normal de vértice y de superficie de S2. Cuando estas dos superficies se iluminan y se sombrean con sombreado Gouraud, el resultado es un borde redondeado y sombreado suavemente entre ellos.
+En la ilustración siguiente se muestran las normales de vértice:
 
-En la siguiente ilustración se muestran dos superficies (S1 y S2) y sus vectores normales y el vector normal de vértice:
+![normales de vértices](images/vertnrml.png)
 
-![dos superficies (S1 y S2) y sus vectores normales y el vector normal de vértice](images/gvert.png)
+Al aplicar el sombreado Gouraud a un polígono, Direct3D usa las normales de vértice para calcular el ángulo entre la fuente de luz y la superficie. Calcula los valores de color y intensidad de los vértices y los interpola para cada punto de todas las superficies primitivas. Direct3D calcula el valor de la intensidad de la luz mediante el ángulo. Cuanto mayor sea el ángulo, menos luz se iluminará en la superficie.
 
-Si el vector normal de vértice se inclina hacia una de las caras con las que está asociado, la intensidad de la luz aumenta o disminuye para los puntos de esa superficie, en función del ángulo que crea con la fuente de luz. En el diagrama siguiente se muestra un ejemplo. Estas superficies se muestran con el ángulo en la parte superior. El vector normal de vértice se inclina hacia S1, lo que produce que el ángulo con la fuente de luz sea menor que si el vector normal de vértice tuviera ángulos iguales con los vectores normales de superficie.
+## <a name="span-idflat_surfacesspanspan-idflat_surfacesspanspan-idflat_surfacesspanflat-surfaces"></a><span id="Flat_surfaces"></span><span id="flat_surfaces"></span><span id="FLAT_SURFACES"></span>Superficies planas
 
-En la siguiente ilustración se muestran dos superficies (S1 y S2) con un vector normal de vértice que se inclina hacia una cara:
+
+Si va a crear un objeto plano, establezca el valor normal del vértice en el punto perpendicular a la superficie.
+
+En la ilustración siguiente se muestra una superficie plana compuesta por dos triángulos con normales de vértice:
+
+![superficie plana compuesta por dos triángulos con normales de vértice](images/flatvert.png)
+
+## <a name="span-idsmooth_shading_on_a_non-flat_objectspanspan-idsmooth_shading_on_a_non-flat_objectspanspan-idsmooth_shading_on_a_non-flat_objectspansmooth-shading-on-a-non-flat-object"></a><span id="Smooth_shading_on_a_non-flat_object"></span><span id="smooth_shading_on_a_non-flat_object"></span><span id="SMOOTH_SHADING_ON_A_NON-FLAT_OBJECT"></span>Sombreado suave en un objeto no plano
+
+
+En lugar de un objeto plano, es más probable que el objeto esté formado por franjas de triángulo y que los triángulos no sean coplanos. Una manera sencilla de lograr un sombreado suave en todos los triángulos de la franja es calcular primero el vector normal de la superficie para cada cara poligonal a la que está asociado el vértice. El vértice normal se puede establecer para crear un ángulo igual con cada superficie normal. Sin embargo, es posible que este método no sea lo suficientemente eficaz para primitivas complejas.
+
+Este método se muestra en el siguiente diagrama, que muestra dos superficies, S1 y S2 que se han encontrado en el borde anterior. Los vectores normales para S1 y S2 se muestran en azul. El vector normal del vértice se muestra en rojo. El ángulo que el vector normal de vértice realiza con la superficie normal de S1 es el mismo que el del vértice normal y el normal de la superficie de S2. Cuando estas dos superficies están iluminadas y sombreadas con el sombreado Gouraud, el resultado es un borde con un sombreado suave y con una curvatura suave.
+
+En la ilustración siguiente se muestran dos superficies (S1 y S2) y sus vectores normales y vector normal de vértice:
+
+![dos superficies (S1 y S2) y sus vectores normales y vector normal de vértice](images/gvert.png)
+
+Si el vértice normal se inclina hacia uno de los rostros con el que está asociado, hace que la intensidad de la luz aumente o disminuya para los puntos de la superficie, dependiendo del ángulo que realice con la fuente de luz. En el diagrama siguiente se muestra un ejemplo. Estas superficies se ven perimetrales. El vértice normal se inclina hacia S1, lo que hace que tenga un ángulo más pequeño con la fuente de luz que si el vértice normal tuviera ángulos iguales con las normales de la superficie.
+
+En la ilustración siguiente se muestran dos superficies (S1 y S2) con un vector normal de vértice que se inclina hacia una cara:
 
 ![dos superficies (S1 y S2) con un vector normal de vértice que se inclina hacia una cara](images/gvert2.png)
 
-## <a name="span-idsharpedgesspanspan-idsharpedgesspanspan-idsharpedgesspansharp-edges"></a><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>Bordes nítidos
+## <a name="span-idsharp_edgesspanspan-idsharp_edgesspanspan-idsharp_edgesspansharp-edges"></a><span id="Sharp_edges"></span><span id="sharp_edges"></span><span id="SHARP_EDGES"></span>Bordes nítidos
 
 
-Puedes usar el sombreado Gouraud para mostrar algunos objetos en una escena en 3D con contornos afilados. Para ello, duplica los vectores normales de vértice en cualquier intersección de caras donde se requiera un contorno afilado.
+Puede usar el sombreado Gouraud para mostrar algunos objetos en una escena 3D con bordes nítidos. Para ello, duplique los vectores normales de vértices en cualquier intersección de caras en las que se requiera un borde nítido.
 
-En la siguiente ilustración se muestran vectores normales de vértice duplicados en contornos afilados:
+En la ilustración siguiente se muestran vectores normales de vértices duplicados en bordes nítidos:
 
-![vectores normales de vértice duplicados en contornos afilados](images/shade1.png)
+![vectores normales de vértices duplicados en bordes agudos](images/shade1.png)
 
-Si usas los métodos DrawPrimitive para representar la escena, define el objeto con contornos afilados como una lista de triángulos, en lugar de una franja de triángulos. Cuando defines un objeto como una franja de triángulos, Direct3D lo trata como un polígono único compuesto por varias caras triangulares. El sombreado Gouraud se aplica tanto a través de cada cara del polígono como entre las caras adyacentes.
+Si usa los métodos DrawPrimitive para representar la escena, defina el objeto con bordes nítidos como una lista de triángulos, en lugar de una franja de triángulo. Al definir un objeto como una franja de triángulo, Direct3D lo trata como un único polígono compuesto por varias caras triangulares. El sombreado Gouraud se aplica tanto en cada cara del polígono como entre caras adyacentes.
 
-El resultado es un objeto sombreado suavemente de una cara a la otra. Dado que una lista de triángulos es un polígono compuesto por una serie de caras triangulares no contiguas, Direct3D aplica el sombreado Gouraud en cada cara del polígono. Sin embargo, no se aplica de una cara a la otra. Si dos o más triángulos de una lista de triángulos son adyacentes, parecerá que tienen un contorno afilado entre ellos.
+El resultado es un objeto que se sombrea suavemente de la superficie a la superficie. Dado que una lista de triángulos es un polígono compuesto por una serie de caras triangular discontinuas, Direct3D aplica sombreado Gouraud en cada cara del polígono. Sin embargo, no se aplica de la esfera a la superficie. Si dos o más triángulos de una lista de triángulo son adyacentes, parecen tener un borde nítido entre ellos.
 
-Otra alternativa es cambiar a sombreado plano al representar objetos con contornos afilados. Este es el método más eficaz desde el punto de vista computacional, pero puede provocar que algunos objetos de la escena no se representen de la misma forma realista que los objetos que tienen sombreado Gouraud.
+Otra alternativa es cambiar a sombreado plano al representar objetos con bordes nítidos. Este es el método más eficaz, pero puede dar lugar a que los objetos de la escena no se representen de forma realista como los objetos con sombreado Gouraud.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
@@ -93,7 +93,3 @@ Otra alternativa es cambiar a sombreado plano al representar objetos con contorn
  
 
  
-
-
-
-

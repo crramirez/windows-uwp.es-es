@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información acerca de cómo se unen los aspectos básicos de movimiento fluida en la aplicación.
+description: Obtenga información sobre cómo los aspectos básicos del movimiento fluida como el tiempo, la aceleración, la direccionalidad y la gravedad se unen en la aplicación.
 title: 'Movimiento en la práctica: animación en aplicaciones de Windows'
 label: Motion in practice
 template: detail.hbs
@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 45ab6c593b9e20f778e4b352a8b284cefe57c9a8
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 8604d925ffefc96cd74726909afab6e2016cce76
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970330"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054535"
 ---
 # <a name="bringing-it-together"></a>Reunir
 

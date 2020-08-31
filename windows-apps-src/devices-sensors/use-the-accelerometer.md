@@ -1,17 +1,17 @@
 ---
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: Usar el acelerómetro
-description: Aprende a usar el acelerómetro para responder al movimiento del usuario.
+description: Obtenga información sobre cómo crear una aplicación básica que se base en un solo sensor, el acelerómetro, para responder a los movimientos del usuario.
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b2fe6fe4c7fe22d71e2154be2db082bb43cc4ed1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e38d64750b410369a9ff9ebf871267b03e0ad07e
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369693"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054345"
 ---
 # <a name="use-the-accelerometer"></a>Usar el acelerómetro
 
@@ -23,15 +23,15 @@ ms.locfileid: "66369693"
 
 **Ejemplo**
 
--   Para ver una implementación más completa, consulta la [muestra de acelerómetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).
+-   Para obtener una implementación más completa, consulte el [ejemplo de acelerómetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).
 
 Aprende a usar el acelerómetro para responder al movimiento del usuario.
 
 Una aplicación de juego sencilla puede usar un único sensor, el acelerómetro, como un dispositivo de entrada. Estas aplicaciones suelen usar uno o dos ejes de entrada. Pero también pueden usar el evento shake como otra fuente de entrada.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
-Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
+Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 
 El dispositivo o emulador que estés usando debe ser compatible con un acelerómetro.
 
@@ -39,9 +39,9 @@ El dispositivo o emulador que estés usando debe ser compatible con un aceleróm
 
 Esta sección se divide en dos subsecciones: En la primera subsección, conocerás los pasos necesarios para crear una aplicación de acelerómetro simple desde cero. En la siguiente subsección se aplica la aplicación que acabas de crear.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
--   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#** .
+-   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
 
 -   Abre el archivo MainPage.xaml.cs del proyecto y reemplaza el código existente con lo siguiente.
 
@@ -136,11 +136,11 @@ Tendrás que cambiar el nombre del espacio de nombres del fragmento de código a
 
 Deberás reemplazar la primera parte del nombre de la clase en el fragmento anterior por el espacio de nombres de tu aplicación. Por ejemplo, si creaste un proyecto denominado **AccelerometerCS**, reemplazarías `x:Class="App1.MainPage"` por `x:Class="AccelerometerCS.MainPage"`. También deberás reemplazar `xmlns:local="using:App1"` por `xmlns:local="using:AccelerometerCS"`.
 
--   Presione F5 o seleccione **depurar** &gt; **Iniciar depuración** para compilar, implementar y ejecutar la aplicación.
+-   Presiona F5 (o selecciona **Depurar** &gt; **Iniciar depuración**) para crear, implementar y ejecutar la aplicación.
 
 Con la aplicación en ejecución, puedes cambiar los valores de acelerómetro moviendo el dispositivo o usando herramientas del emulador.
 
--   Detener la aplicación, vuelva a Visual Studio y presione MAYÚS + F5 o seleccione **depurar** &gt; **Detener depuración** para detener la aplicación.
+-   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** &gt; **Detener depuración** para detener la aplicación.
 
 ### <a name="explanation"></a>Explicación
 

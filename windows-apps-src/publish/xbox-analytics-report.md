@@ -1,134 +1,134 @@
 ---
-Description: El informe de análisis de Xbox en Centro de partners muestra estadísticas acerca de cómo los clientes se han comprometido con las características de Xbox en su producto.
-title: Informe de Análisis de Xbox
+Description: El informe de análisis de Xbox del centro de Partners muestra estadísticas sobre cómo los clientes intervienen con las características de Xbox del producto.
+title: Informe de análisis de Xbox
 ms.date: 03/21/2019
 ms.topic: article
-keywords: windows 10, uwp, análisis de xbox, análisis dinámicos de xbox, estadística de xbox
+keywords: Windows 10, UWP, análisis de Xbox, análisis de Xbox Live, estadísticas de Xbox
 ms.localizationpriority: medium
-ms.openlocfilehash: a6dc1650e1220cd808422a2aa705d4cbab9f59fb
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: d38e60fbe99db09f5fb49e440249ed9454d44c35
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788179"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157939"
 ---
-# <a name="xbox-analytics-report"></a>Informe de Análisis de Xbox
+# <a name="xbox-analytics-report"></a>Informe de análisis de Xbox
 
-El **Xbox analytics** notificar en [centro de partners](https://partner.microsoft.com/dashboard) muestra estadísticas acerca de los clientes interactúan con las características de Xbox en su juego. También proporciona información sobre el estado del servicio para ayudarte a solucionar errores de cliente.
+El informe de **análisis de Xbox** del [centro de Partners](https://partner.microsoft.com/dashboard) muestra estadísticas sobre cómo los clientes intervienen con las características de Xbox del juego. También proporciona información sobre el estado del servicio para ayudarle a solucionar los errores de los clientes.
 
 > [!IMPORTANT]
-> Solo verás este informe si publicas un juego para Xbox o un juego que usa servicios de Xbox Live. Para ello, debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye los juegos publicados por [asociados de Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview#microsoft-partners) y juegos enviadas mediante el [ ID@Xbox programa](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview#id). Juegos se publican a través de la [programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) no están visibles actualmente en este informe.
+> Solo verá este informe si está publicando un juego para Xbox o un juego que usa los servicios de Xbox Live. Para ello, debe seguir el [proceso de aprobación del concepto](../gaming/concept-approval.md), que incluye juegos publicados por asociados de [Microsoft](/gaming/xbox-live/developer-program-overview#microsoft-partners) y juegos enviados a través del [ ID@Xbox programa](/gaming/xbox-live/developer-program-overview#id). Los juegos publicados a través del [programa de creadores de Xbox Live](/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) no están visibles actualmente en este informe.
 
-Puede ver el **Xbox analytics** informe en el menú de navegación izquierdo para su juego expandiendo **analizar** y seleccionando **Xbox analytics**.  Puede ver estos datos en el centro de partners, o [descargar el informe](download-analytic-reports.md) ver sin conexión.
+Puede ver el informe de **análisis de Xbox** en el menú de navegación izquierdo del juego expandiendo el **análisis y** seleccionando el análisis de **Xbox**.  Puede ver estos datos en el centro de Partners o [descargar el informe](download-analytic-reports.md) para verlo sin conexión.
 
 
-## <a name="overview-tab"></a>Pestaña Introducción
+## <a name="overview-tab"></a>Pestaña Información general
 
-Las secciones de la pestaña **Introducción** muestran información sobre quiénes son tus jugadores y cómo están interactuando con las características de Xbox Live.
+Las secciones de la pestaña **información general** muestran información sobre quién son sus jugadores y cómo intervienen con las características de Xbox Live.
 
-Para muchas de estas estadísticas, también mostramos el **promedio de Xbox** para que puedas ver fácilmente cómo interactúan los clientes con Xbox en comparación con el cliente promedio de Xbox.
+Para muchas de estas estadísticas, también se muestra la **media** de la Xbox para que pueda ver fácilmente cómo los clientes interactúan con Xbox en comparación con el cliente de Xbox promedio.
 
 > [!NOTE]
-> Estas estadísticas son de clientes que están conectados a Xbox Live, no todos los clientes de Xbox.
+> Estas estadísticas son de clientes que están conectados a Xbox Live, no a todos los clientes de Xbox.
 
 
 ### <a name="concurrent-usage"></a>Uso simultáneo
 
-En esta sección se muestran datos de uso casi en tiempo real (con latencia de entre 5 y 15 minutos) sobre el promedio de clientes que usan tu juego cada minuto u hora. Para elegir el intervalo de tiempo (desde **Última hora** hasta **Últimos 7 días**), selecciona el icono de filtro de la esquina superior derecha de esta sección.
+En esta sección se muestran datos de uso casi en tiempo real (con una latencia de 5-15 minutos) sobre el promedio de clientes que juegan el juego cada minuto o hora. Puede elegir el intervalo de tiempo (de la **última hora** hasta los **últimos 7 días**) seleccionando el icono de filtro en la esquina superior derecha de esta sección.
 
 
-### <a name="gamerscore-distribution"></a>Distribución de puntuación de jugador
+### <a name="gamerscore-distribution"></a>Distribución de Gamerscore
 
-En esta sección se muestra información sobre la puntuación de jugador de tus clientes. Puedes seleccionar **Todos los juegos** para ver la distribución de la puntuación total a través de tus clientes o seleccionar **Este juego** para ver la distribución de la puntuación de jugador obtenida solo a través de tu juego.
+En esta sección se muestra información sobre el Gamerscore de los clientes. Puede seleccionar **todos los juegos** para ver la distribución del total de Gamerscore en todos los clientes o seleccionar **este juego** para ver la distribución de Gamerscore obtenida solo a través del juego.
 
 
 ### <a name="achievement-unlocks"></a>Desbloqueos de logros
 
-En esta sección se muestra el número total de clientes que han desbloqueado cada logro del intervalo de tiempo especificado. Para elegir el intervalo de tiempo (**Último día**, **Últimos 30 días** o **Duración**), selecciona el icono de filtro de la esquina superior derecha de esta sección.
+En esta sección se muestra el número total de clientes que han desbloqueado cada logro en el intervalo de tiempo especificado. Puede elegir el intervalo de tiempo (el**último día**, los **últimos 30 días**o la **duración**) seleccionando el icono de filtro en la esquina superior derecha de esta sección.
 
 
-### <a name="game-statistics"></a>Estadísticas de juegos
+### <a name="game-statistics"></a>Estadísticas del juego
 
-En esta sección se incluyen pestañas que puedes seleccionar para mostrar datos diferentes para los clientes de tu juego. Ten en cuenta que las estadísticas de esta sección hacen referencia al uso de características en general y no dentro de tu producto específico.
+En esta sección se incluyen pestañas que puede seleccionar para Mostrar datos diferentes para los clientes del juego. Tenga en cuenta que las estadísticas de esta sección hacen referencia al uso de características en general y no dentro de su producto específico.
 
-- En la pestaña **Social usage** se muestran los datos relacionados con la forma de interacción social de tus clientes.
-   - **Game invites** muestra el porcentaje de tus clientes que han enviado invitaciones (para cualquier juego).
-   - **Charla de grupo** muestra el porcentaje de los clientes que usan la charla de grupo (para cualquier juego).
-   - **Mensajes de texto** muestra el porcentaje de los clientes que envían mensajes a través del Shell de Xbox (para cualquier juego).
-- La pestaña **Streaming usage** muestra los porcentajes de clientes de tu juego que ven o hacen streaming del juego (para cualquier juego) en Twitch y YouTube.
-- La pestaña **Game DVR usage** muestra datos relacionados con el modo en que los clientes graban y ven un juego. Puedes ver los porcentajes de clientes que han visto y cargado clips de juegos y capturas de pantalla del juego (para cualquier juego).
+- En la pestaña **uso social** se muestran los datos relacionados con el modo en que los clientes interactúan con la social.
+   - Los **invitados del juego** muestran el porcentaje de los clientes que han enviado invitados (para cualquier juego).
+   - **Chat de entidad** muestra el porcentaje de los clientes que usan el chat de terceros (para cualquier juego).
+   - **Mensajes de texto** muestra el porcentaje de los clientes que envían mensajes a través de la consola Xbox (para cualquier juego).
+- En la pestaña **uso de streaming** se muestran los porcentajes de los clientes del juego que ven o transmiten por secuencias (para cualquier juego) en Twitch y YouTube.
+- En la pestaña **uso de DVR de juego** se muestran datos relacionados con el modo en que los clientes registran y ven el juego. Puede ver los porcentajes de los clientes que han visto y cargado clips de juegos y capturas de pantallas de juego (para cualquier juego).
 
 
 ### <a name="friends-and-followers"></a>Amigos y seguidores
 
-En esta sección se muestra **Median number of friends** y **Median number of followers** para los clientes que usan tu juego.
+En esta sección se muestra el **número medio de amigos** y el **número medio de seguidores** para los clientes que juegan su juego.
 
 
-### <a name="accessory-usage"></a>Uso de accesorios
+### <a name="accessory-usage"></a>Uso del accesorio
 
-En este gráfico se muestran los porcentajes de los clientes de tu juego que usan unidades de disco duro externas y que usan Mandos Inalámbricos Xbox Elite (en Xbox).
+Este gráfico muestra los porcentajes de los clientes del juego que usan unidades de disco duro externas y que usan controladores inalámbricos de Xbox Elite (en Xbox).
 
-Estos datos no indican los clientes que han instalado tu producto en unidades de disco duro externas o usan un mando Elite para jugar. Se refiere a cuántos de los clientes de tu producto usan estas características en general.
+Estos datos no significan que los clientes que instalaron el producto en discos duros externos o usaran un controlador Elite mientras lo reproducen. En general, se refiere a cuántos de los clientes del producto utilizan estas características.
 
 
 ### <a name="connection-type"></a>Tipo de conexión
 
-En este gráfico se muestran los porcentajes de los clientes de tu producto que usan conexiones a Internet **Por cable** frente a las conexiones a Internet de tipo **Inalámbrico** (en Xbox).
+Este gráfico muestra los porcentajes de los clientes del producto que usan conexiones de Internet **cableadas** frente a **redes inalámbricas** (en Xbox).
 
 
-## <a name="xbox-live-service-health-tab"></a>Pestaña Estado del servicio de Xbox Live
+## <a name="xbox-live-service-health-tab"></a>Pestaña Estado del servicio Xbox Live
 
-Las secciones de la **pestaña Estado del servicio de Xbox Live** te ayudan a comprender el impacto de los errores de cliente de Xbox Live, incluida la limitación de velocidad. También te permite explorar por extremo y código de estado para obtener información que te ayuda a resolver estos problemas y te mantiene informado sobre la disponibilidad de servicio de Xbox Live específica de las llamadas de tu producto.
+Las secciones de la **pestaña Estado del servicio Xbox Live** le ayudan a comprender el impacto de los errores de cliente de Xbox Live, incluida la limitación de velocidad. También le permite profundizar en el punto de conexión y el código de estado para obtener información que le ayude a resolver estos problemas, y le mantiene informado sobre la disponibilidad del servicio Xbox Live específico para las llamadas del producto.
 
 > [!NOTE]
-> Al revisar esta información y resolver problemas, te recomendamos establecer prioridades en la limitación de la velocidad, ya que esos errores suelen tener el mayor impacto en el cliente.
+> Al revisar esta información y solucionar problemas, se recomienda establecer la prioridad de la limitación de velocidad, ya que estos errores suelen tener el mayor impacto en el cliente.
 
 
-### <a name="apply-filters"></a>Aplicar filtros
+### <a name="apply-filters"></a>Aplicación de filtros
 
-Cerca de la parte superior de la pestaña, puedes seleccionar el período de tiempo durante el que quieres mostrar los datos. La selección predeterminada es **30D** (30 días), pero también puedes mostrar los datos durante **7D** (7 días) o durante un intervalo de fechas personalizado que especifiques (de no más de 30 días). Para un intervalo de fechas personalizado, ten en cuenta que todos los gráficos recortarán el intervalo del gráfico al primer y último día de los datos proporcionados dentro del intervalo de fechas que escribas.
+Cerca de la parte superior de la pestaña, puede seleccionar el período de tiempo para el que desea mostrar los datos. La selección predeterminada es **30D** (30 días), pero puede elegir mostrar los datos de **7D** (7 días) o un intervalo de fechas personalizado que especifique (no más de 30 días). En el caso de un intervalo de fechas personalizado, tenga en cuenta que todos los gráficos recortarán el intervalo del gráfico hasta el primer y último día de los datos proporcionados en el intervalo de fechas especificado.
 
-También puedes expandir la opción **Filtros** para filtrar todos los datos de esta página por versión de paquete, tipo de dispositivo o espacio aislado.
-- **Versión del paquete**: El filtro predeterminado es **todas las versiones**, pero puede limitar los datos de estado del servicio a una versión específica del paquete.
-- **Tipo de dispositivo**: El valor predeterminado es **todos los dispositivos**, pero puede limitar los datos de estado del servicio a un tipo de dispositivo específico.
-- **Espacio aislado**: El valor predeterminado es **RETAIL**, pero puede limitar los datos de estado del servicio a un espacio aislado específico.
+También puede expandir **filtros** para filtrar todos los datos de esta página por la versión del paquete, el tipo de dispositivo o el espacio aislado.
+- **Versión del paquete**: el filtro predeterminado es **todas las versiones**, pero puede limitar los datos de estado del servicio a una versión específica del paquete.
+- **Tipo de dispositivo**: la configuración predeterminada es **todos los dispositivos**, pero puede limitar los datos de estado del servicio a un tipo de dispositivo específico.
+- **Espacio aislado**: el valor predeterminado es **venta directa**, pero puede limitar los datos de estado del servicio a un espacio aislado específico.
 
-La información de todos los gráficos que aparecen a continuación reflejará el intervalo de fechas y los filtros que hayas seleccionado. Algunas secciones también te permiten aplicar filtros adicionales.
+La información de todos los gráficos que se enumeran a continuación reflejará el intervalo de fechas y los filtros que haya seleccionado. Algunas secciones también permiten aplicar filtros adicionales.
 
 
 ### <a name="client-errors-by-service"></a>Errores de cliente por servicio
 
-El gráfico **Client errors by service** muestra el número de errores de cliente diarios (4xx) por cada servicio de Xbox Live durante el período de tiempo seleccionado.
+El gráfico **errores de cliente por servicio** muestra el número de errores de cliente (4xx) diarios en cada servicio de Xbox Live durante el período de tiempo seleccionado.
 
-También puedes ver solo los errores de limitación de velocidad seleccionando **Rate limiting**. Muestra el número de errores de limitación de velocidad diaria (429) y de exención de limitación de velocidad (429E) en cada servicio de Xbox Live durante el período de tiempo seleccionado.
-
-> [!NOTE]
-> Un código de estado 429E se devolvió realmente de manera correcta como código de estado 200, pero habría tenido límite de velocidad si el servicio estuviera teniendo un volumen alto en el momento, por lo que recomendamos que lo trate exactamente igual como si hubiera aplicado (429).
-
-De manera predeterminada, este gráfico muestra los seis servicios principales por número de errores. Puedes seleccionar el icono de filtro en la esquina superior derecha de esta sección para elegir diferentes servicios. Puedes ver errores para un máximo de seis servicios a la vez.
+También puede ver solo los errores de limitación de velocidad seleccionando **limitación de velocidad**. Esto muestra el número de errores de límite de velocidad diaria (429) y de limitación de velocidad (429E) en cada servicio de Xbox Live durante el período de tiempo seleccionado.
 
 > [!NOTE]
-> La leyenda solo muestra el prefijo distintivo para cada servicio (por ejemplo, **presence** en lugar de **presence.xboxlive.com**). Encontrarás la dirección de servicio completo en la tabla **Client errors by endpoint** que se encuentra debajo de la pestaña **Estado del servicio de Xbox Live**.
+> Un código de estado 429E se devolvió correctamente como un código de estado 200, pero se habría limitado la velocidad si el servicio experimentase un volumen elevado en el tiempo, por lo que se recomienda tratarlo exactamente igual que si se aplicara (429).
 
-
-### <a name="service-availability"></a>Disponibilidad de servicio
-
-En el gráfico **Disponibilidad del servicio** muestra la disponibilidad diaria en cada servicio de Xbox Live durante el período de tiempo seleccionado. Esto se calcula como *1-(errores de servidor totales (5xx)/respuesta totales)* y es específico de tu producto, no de Xbox Live en su conjunto.
-
-De manera predeterminada, este gráfico muestra los seis servicios que han tenido la menor disponibilidad. Puedes seleccionar el icono de filtro en la esquina superior derecha de esta sección para elegir diferentes servicios. Puedes ver la disponibilidad para un máximo de seis servicios a la vez.
+De forma predeterminada, este gráfico muestra los seis primeros servicios por recuento de errores. Puede seleccionar el icono de filtro en la esquina superior derecha de esta sección para elegir distintos servicios. Puede ver los errores de hasta seis servicios a la vez.
 
 > [!NOTE]
-> La leyenda solo muestra el prefijo distintivo para cada servicio (por ejemplo, **presence** en lugar de **presence.xboxlive.com**). Encontrarás la dirección de servicio completo en la tabla **Client errors by endpoint** que se encuentra debajo de la pestaña **Estado del servicio de Xbox Live**.
+> La leyenda solo muestra el prefijo distintivo de cada servicio (por ejemplo, **presencia** en lugar de **Presence.XboxLive.com**). Puede encontrar la dirección de servicio completa en la tabla **errores de cliente por extremo** en la parte inferior de la pestaña **Estado del servicio Xbox Live** .
+
+
+### <a name="service-availability"></a>Disponibilidad del servicio
+
+El gráfico de **disponibilidad del servicio** muestra la disponibilidad diaria en cada servicio de Xbox Live durante el período de tiempo seleccionado. Se calcula como *1-(total de errores de servidor (5xx)/total de respuestas)* y es específico de su producto, no de Xbox Live en su totalidad.
+
+De forma predeterminada, este gráfico muestra los seis servicios que han experimentado la disponibilidad más baja. Puede seleccionar el icono de filtro en la esquina superior derecha de esta sección para elegir distintos servicios. Puede ver la disponibilidad de hasta seis servicios a la vez.
+
+> [!NOTE]
+> La leyenda solo muestra el prefijo distintivo de cada servicio (por ejemplo, **presencia** en lugar de **Presence.XboxLive.com**). Puede encontrar la dirección de servicio completa en la tabla **errores de cliente por extremo** en la parte inferior de la pestaña **Estado del servicio Xbox Live** .
 
 
 ### <a name="client-errors-by-endpoint"></a>Errores de cliente por extremo
 
-En la tabla **Errores de cliente por extremo** se muestra el número de errores de cliente diarios (4xx) desglosados por cada servicio de Xbox Live, extremo y código de estado durante el período de tiempo seleccionado. De manera predeterminada, la tabla se ordena por el número total de respuestas de servicio en orden descendente, pero puedes cambiar el criterio de ordenación haciendo clic en cualquiera de los encabezados de columna.
+La tabla **errores de cliente por punto de conexión** muestra el número de errores de cliente (4xx) diarios desglosados por cada servicio, punto de conexión y código de estado de Xbox Live durante el período de tiempo seleccionado. De forma predeterminada, la tabla se ordena por el número total de respuestas de servicio en orden descendente, pero puede cambiar el criterio de ordenación haciendo clic en cualquiera de los encabezados de columna.
 
-También puedes ver solo los errores de limitación de velocidad seleccionando **Rate limiting**. Muestra el número de errores de limitación de velocidad diaria (429) y de exención de limitación de velocidad (429E) en cada servicio de Xbox Live, extremo y código de estado durante el período de tiempo seleccionado.
+También puede ver solo los errores de limitación de velocidad seleccionando **limitación de velocidad**. Esto muestra el número de errores de límite de velocidad diaria (429) y de limitación de velocidad (429E) en cada servicio de Xbox Live, punto de conexión y código de estado durante el período de tiempo seleccionado.
 
 > [!NOTE]
-> Un código de estado 429E se devolvió realmente de manera correcta como código de estado 200, pero habría tenido límite de velocidad si el servicio estuviera teniendo un volumen alto en el momento, por lo que recomendamos que lo trate exactamente igual como si hubiera aplicado (429).
+> Un código de estado 429E se devolvió correctamente como un código de estado 200, pero se habría limitado la velocidad si el servicio experimentase un volumen elevado en el tiempo, por lo que se recomienda tratarlo exactamente igual que si se aplicara (429).
 
 
 

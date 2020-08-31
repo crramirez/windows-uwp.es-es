@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 28419df1a37ff640db7246b54e50da5bfce9fedb
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7c8d3fd007e688bd11423c32bd175203a6f1917d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372619"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157889"
 ---
 # <a name="intro-to-certificates"></a>Introducción a los certificados
 
@@ -22,13 +22,13 @@ En este artículo se describe el uso de certificados en las aplicaciones de la P
 
 ### <a name="shared-certificate-stores"></a>Almacenes de certificados compartidos
 
-Aplicaciones de UWP usan el nuevo modelo de aplicación isolationist introducido en Windows 8. En este modelo, las aplicaciones se ejecutan en una estructura de sistema operativo de bajo nivel, denominada contenedor de la aplicación, que prohíbe que la aplicación tenga acceso a recursos o archivos fuera de sí misma a menos que se le permita explícitamente. En las siguientes secciones se describen las implicaciones que esto tiene en la infraestructura de clave pública (PKI).
+Las aplicaciones para UWP usan el nuevo modelo de aplicación aislacionista introducido en Windows 8. En este modelo, las aplicaciones se ejecutan en una estructura de sistema operativo de bajo nivel, denominada contenedor de la aplicación, que prohíbe que la aplicación tenga acceso a recursos o archivos fuera de sí misma a menos que se le permita explícitamente. En las siguientes secciones se describen las implicaciones que esto tiene en la infraestructura de clave pública (PKI).
 
 ### <a name="certificate-storage-per-app-container"></a>Almacenamiento de certificados por contenedor de aplicación
 
 Los certificados destinados al uso en un contenedor de aplicación específico se almacenan en ubicaciones de contenedor por usuario y por aplicación. Una aplicación que se ejecuta en un contenedor de aplicación tiene acceso de escritura solo a su propio almacén de certificados. Si la aplicación agrega certificados a cualquiera de sus almacenes, no los podrán leer otras aplicaciones. Si se desinstala una aplicación, también se quitarán los certificados específicos de esta. Una aplicación también tiene acceso de lectura a los almacenes de certificados del equipo local que no sean Mi almacén y el almacén de solicitudes.
 
-### <a name="cache"></a>Memoria caché
+### <a name="cache"></a>instancias y claves
 
 Cada contenedor de aplicación tiene una caché aislada en la que puede almacenar certificados de emisor necesarios para la validación, listas de revocación de certificados (CRL) y respuestas de protocolo de estado de certificados en línea (OCSP).
 
@@ -53,18 +53,18 @@ El estándar de certificado de clave pública X.509 se ha revisado varias veces 
 
 ![Certificado x.509 versiones 1, 2 y 3](images/x509certificateversions.png)
 
-Algunos de estos campos y extensiones se pueden especificar directamente al usar la clase [**CertificateRequestProperties**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates.CertificateRequestProperties) para crear una solicitud de certificado. Pero la mayoría no se puede especificar. La autoridad emisora puede rellenar estos campos o pueden dejarse en blanco. Para obtener más información acerca de los campos, consulta las siguientes secciones:
+Algunos de estos campos y extensiones se pueden especificar directamente al usar la clase [**CertificateRequestProperties**](/uwp/api/Windows.Security.Cryptography.Certificates.CertificateRequestProperties) para crear una solicitud de certificado. Pero la mayoría no se puede especificar. La autoridad emisora puede rellenar estos campos o pueden dejarse en blanco. Para obtener más información acerca de los campos, consulta las siguientes secciones:
 
 ### <a name="version-1-fields"></a>Campos de la versión 1
 
 | Campo | Descripción |
 |-------|-------------|
-| `Version` | Especifica el número de versión del certificado codificado. Actualmente, los valores posibles de este campo son 0, 1 o 2. |
+| Versión | Especifica el número de versión del certificado codificado. Actualmente, los valores posibles de este campo son 0, 1 o 2. |
 | Número de serie | Contiene un entero positivo único asignado por la entidad de certificación (CA) al certificado. |
 | Algoritmo de firma | Contiene un identificador de objeto (OID) que especifica el algoritmo usado por la CA para firmar el certificado. Por ejemplo, 1.2.840.113549.1.1.5 especifica un algoritmo hash SHA-1 combinado con el algoritmo de cifrado RSA de RSA Laboratories. |
 | Emisor | Contiene el nombre distintivo (DN) X.500 de la entidad de certificación que creó y firmó el certificado. |
 | Validez | Especifica el intervalo de tiempo durante el cual el certificado es válido. Las fechas hasta el final de 2049 usan el formato de Hora universal coordinada (Hora del meridiano de Greenwich) (aammddhhmmssz). Las fechas a partir del 1 de enero de 2050 usan el formato de hora generalizada (aaaammddhhmmssz). |
-| Subject | Contiene un nombre distintivo X.500 de la entidad asociada con la clave pública contenida en el certificado. |
+| Asunto | Contiene un nombre distintivo X.500 de la entidad asociada con la clave pública contenida en el certificado. |
 | Clave pública | Contiene la clave pública y la información de algoritmo asociada. |
 
 ### <a name="version-2-fields"></a>Campos de la versión 2
@@ -88,12 +88,11 @@ Un certificado X.509 versión 3 contiene los campos definidos en la versión 1 y
 | Puntos de distribución CRL | Contiene el URI de la lista de revocación de certificados (CRL) de base. |
 | Uso mejorado de clave | Especifica la manera en que se puede utilizar la clave pública contenida en el certificado. |
 | Nombre alternativo del emisor | Especifica una o más formas de nombre alternativas para el emisor de la solicitud de certificado. |
-| Uso de la clave | Especifica restricciones en las operaciones que puede realizar la clave pública contenida en el certificado.|
+| Uso de claves | Especifica restricciones en las operaciones que puede realizar la clave pública contenida en el certificado.|
 | Restricciones de nombre  | Especifica el espacio de nombres en el que deben encontrarse todos los nombres de firmantes en una jerarquía de certificados. La extensión solo se utiliza en un certificado de CA. |
 | Restricciones de directiva | Restringen la validación de rutas prohibiendo la asignación de directivas o exigiendo que cada certificado de la jerarquía contenga un identificador de directiva aceptable. La extensión solo se utiliza en un certificado de CA. |
 | Asignaciones de directiva | Especifica las directivas de una CA subordinada correspondientes a directivas de la CA emisora. |
 | Período de uso de clave privada | Especifica un período de validez distinto para la clave privada que para el certificado con el que la clave privada está asociada. |
-| Nombre alternativo del firmante | Especifica una o más formas de nombre alternativas para el firmante de la solicitud de certificado. Algunos ejemplos de formas alternativas son direcciones de correo electrónico, nombres DNS, direcciones IP y URI. |
+| Nombre alternativo del sujeto | Especifica una o más formas de nombre alternativas para el firmante de la solicitud de certificado. Algunos ejemplos de formas alternativas son direcciones de correo electrónico, nombres DNS, direcciones IP y URI. |
 | Atributos de directorio de firmantes | Contiene atributos de identificación, como la nacionalidad del firmante del certificado. El valor de extensión es una secuencia de pares de valores OID. |
 | Identificador de clave del firmante | Diferencia entre varias claves públicas de las que el firmante del certificado es titular. El valor de extensión suele ser un hash SHA-1 de la clave. |
-

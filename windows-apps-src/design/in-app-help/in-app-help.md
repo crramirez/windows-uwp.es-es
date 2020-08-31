@@ -1,5 +1,5 @@
 ---
-Description: Diseñar una ayuda eficaz para que se muestre de forma reactiva desde la aplicación.
+description: Obtenga información sobre el uso de la ayuda en la aplicación reactiva como método predeterminado para mostrar la ayuda de los usuarios y sobre los tipos de ayuda en la aplicación.
 title: Directrices para el diseño de la ayuda en la aplicación.
 label: In-app help
 template: detail.hbs
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 6208b71b-37a7-40f5-91b0-19b665e7458a
 ms.localizationpriority: medium
-ms.openlocfilehash: 4783d28e4da6c06df0d0676f4a7d28ef3995481a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d7144a72dd3af1c9c902e0dfd401799f50ea55b0
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57610060"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054175"
 ---
 # <a name="in-app-help-pages"></a>Páginas de ayuda en la aplicación
 
@@ -35,27 +35,27 @@ Hay varias maneras de incluir la ayuda en la aplicación, aunque todas siguen lo
 
 Incluir una página independiente o varias dentro de la aplicación es una forma rápida y sencilla de mostrar instrucciones útiles.
 
--   **Ser conciso:** Una gran biblioteca de temas de ayuda es difícil de manejar y adecuado para obtener ayuda en la aplicación.
--   **Ser coherente:** Asegúrese de que pueden llegar a las páginas de ayuda a los usuarios del mismo modo desde cualquier parte de la aplicación. Nunca deberían buscar la ayuda.
--   **Examen de los usuarios, no de lectura:** Dado que la Ayuda que se va a buscar un usuario podría estar en la misma página que otros temas de ayuda, asegúrese de que pueden saber fácilmente que quieran centrarse en.
+-   **Sé conciso:** Una gran biblioteca de temas de ayuda resulta difícil de usar y no es adecuada para la ayuda en la aplicación.
+-   **Sé coherente:** asegúrate de que los usuarios puedan llegar a las páginas de ayuda de la misma forma desde cualquier parte de la aplicación. Nunca deberían buscar la ayuda.
+-   **Los usuarios ojean, no leen:** dado que la ayuda que un usuario está buscando puede estar en la misma página que otros temas de ayuda, asegúrate de que puedan distinguir fácilmente la que necesitan.
 
 
 #### <a name="popups"></a>Elementos emergentes
 
 Los elementos emergentes permiten ofrecer una ayuda muy contextual, es decir, mostrar las instrucciones y recomendaciones relevantes para la tarea específica que el usuario intenta realizar.
 
--   **Se centran en uno de los problemas:** Espacio está restringido aún más en un menú emergente a una página de ayuda. Los elementos emergentes de ayuda deben hacer referencia de manera específica a una sola tarea para resultar eficaces.
--   **Visibilidad es importante:** Dado que solo se pueden ver elementos emergentes de Ayuda desde una ubicación, asegúrese de que está claramente visibles para el usuario sin ser obstructiva. Si no lo ve claramente, es posible que el usuario abandone el elemento emergente en busca de una página de ayuda.
--   **No usa demasiados recursos:** Ayuda no debe retrasarse o ser lentitud al cargar. Si incluyes vídeos o archivos de audio de alta resolución en los elementos emergentes, es más probable que frustres al usuario en lugar de ayudarlo.
+-   **Céntrate en un problema:** el espacio está aún más restringido en un elemento emergente que una página de ayuda. Los elementos emergentes de ayuda deben hacer referencia de manera específica a una sola tarea para resultar eficaces.
+-   **La visibilidad es importante:** los elementos emergentes solo pueden verse desde una ubicación, por lo que debes asegurarte de que sean claramente visibles para el usuario sin obstaculizar. Si no lo ve claramente, es posible que el usuario abandone el elemento emergente en busca de una página de ayuda.
+-   **No uses demasiados recursos:** la ayuda no debe retrasarse ni cargarse lentamente. Si incluyes vídeos o archivos de audio de alta resolución en los elementos emergentes, es más probable que frustres al usuario en lugar de ayudarlo.
 
 #### <a name="descriptions"></a>Descripciones
 
 En ocasiones, puede ser útil proporcionar más información acerca de una característica cuando un usuario la esté inspeccionando. Las descripciones son similares a la interfaz de usuario informativa, pero la principal diferencia entre ellas reside en que la segunda intenta enseñar y ofrecer indicaciones al usuario sobre características que no conocen, mientras que una descripción detallada mejora la comprensión sobre características de aplicaciones en las que el usuario ya está interesado.
 
--   **No se enseñan los conceptos básicos:** Se supone que el usuario ya conoce los aspectos básicos de cómo usar el elemento que se describe. Aclarar u ofrecer más información resulta útil; decirle lo que ya conoce, no.
--   **Describe las interacciones interesantes:** Uno de los mejores usos de descripciones es instruye al usuario sobre cómo pueden interactuar una que ya conocen acerca de características. De este modo, obtendrá más información sobre algo que ya le gusta usar.
--   **Permanecer fuera de la vista:** Mucho como interfaz de usuario con instrucciones, descripciones deben evitar la interferencia con el disfrute de un usuario de la aplicación.
+-   **No enseñes los conceptos básicos:** da por hecho que el usuario ya conoce los conceptos básicos sobre el uso del elemento que estás describiendo. Aclarar u ofrecer más información resulta útil; decirle lo que ya conoce, no.
+-   **Describe interacciones interesantes:** uno de los usos recomendados de las descripciones es enseñar al usuario el modo en que interactúan las características que ya conocen. De este modo, obtendrá más información sobre algo que ya le gusta usar.
+-   **Hazte a un lado:** del mismo modo que la interfaz de usuario informativa, las descripciones no deben interferir con la experiencia de un usuario en la aplicación.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Directrices para obtener ayuda de la aplicación](guidelines-for-app-help.md)
+* [Directrices para la ayuda de la aplicación](guidelines-for-app-help.md)

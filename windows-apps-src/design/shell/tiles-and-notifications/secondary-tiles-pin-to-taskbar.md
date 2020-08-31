@@ -1,5 +1,5 @@
 ---
-Description: Obtenga información sobre cómo anclar iconos secundarios en la barra de tareas.
+description: Obtenga información sobre cómo anclar iconos secundarios en la barra de tareas, lo que permite a los usuarios acceder rápidamente al contenido dentro de la aplicación.
 title: Anclar iconos secundarios a la barra de tareas
 label: Pin secondary tiles to taskbar
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 11/28/2018
 ms.topic: article
 keywords: Windows 10, UWP, anclar a la barra de tareas, icono secundario, anclar iconos secundarios a la barra de tareas, acceso directo
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d4041faf2fbc729291da902e66be1e0979f9d97
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a57fa9c6a268b22df3c1772e0aec111c769d907b
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971020"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054195"
 ---
 # <a name="pin-secondary-tiles-to-taskbar"></a>Anclar iconos secundarios a la barra de tareas
 
@@ -21,7 +21,7 @@ Al igual que anclar iconos secundarios al inicio, puede anclar iconos secundario
 <img alt="Taskbar pinning" src="../images/taskbar/pin-secondary-ui.png" width="972"/>
 
 > [!IMPORTANT]
-> **API de acceso limitado**: esta API es una característica de acceso limitado. Para usar esta API, póngase en [taskbarsecondarytile@microsoft.com](mailto:taskbarsecondarytile@microsoft.com?Subject=Limited%20Access%20permission%20to%20use%20secondary%20tiles%20on%20taskbar)contacto con.
+> **API de acceso limitado**: esta API es una característica de acceso limitado. Para usar esta API, póngase en contacto con [taskbarsecondarytile@microsoft.com](mailto:taskbarsecondarytile@microsoft.com?Subject=Limited%20Access%20permission%20to%20use%20secondary%20tiles%20on%20taskbar) .
 
 > **Requiere la actualización de octubre de 2018**: debe tener como destino el SDK 17763 y ejecutar la compilación 17763 o superior para anclar a la barra de tareas.
 
@@ -229,4 +229,4 @@ await StartScreenManager.GetDefault().TryRemoveSecondaryTileAsync("myTileId");
 ## <a name="resources"></a>Recursos
 
 * [Clase TaskbarManager](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager)
-* [Anclar iconos secundarios al inicio](secondary-tiles-pinning.md)
+* [Anclar iconos secundarios a Inicio](secondary-tiles-pinning.md)

@@ -1,17 +1,17 @@
 ---
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: Usar el inclinómetro
-description: Aprende a usar el inclinómetro para determinar la rotación alrededor del eje X (pitch), la rotación alrededor del eje y la rotación alrededor del eje Y (yaw).
+description: Obtenga información sobre cómo crear una aplicación básica que use el dispositivo de entrada de inclinómetro para determinar el paso, el rollo y el guiñada.
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 15ea49ea0e8e334158000248caf26f662ee5bd35
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ebfbdda8f5f7bf308ee427ab79d8dd45969e3108
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369642"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054335"
 ---
 # <a name="use-the-inclinometer"></a>Usar el inclinómetro
 
@@ -19,19 +19,19 @@ ms.locfileid: "66369642"
 **API importantes**
 
 -   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**Inclinómetro**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer)
+-   [**Inclinometer**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer)
 
 **Ejemplo**
 
--   Para ver una implementación más completa, consulta la [muestra de inclinómetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
+-   Para obtener una implementación más completa, consulte el [ejemplo inclinómetro](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
 
 Aprende a usar el inclinómetro para determinar la rotación alrededor del eje X (pitch), la rotación alrededor del eje y la rotación alrededor del eje Y (yaw).
 
 Algunos juegos en 3D necesitan un inclinómetro como dispositivo de entrada. Un ejemplo común es el simulador de vuelos, que asigna los tres ejes del inclinómetro (X, Y y Z) a los datos de entrada del timón de profundidad, el alerón y el timón de dirección del avión.
 
- ## <a name="prerequisites"></a>Requisitos previos
+ ## <a name="prerequisites"></a>Prerrequisitos
 
-Debe estar familiarizado con Extensible Application Markup Language (XAML), Microsoft Visual C#y eventos.
+Debes estar familiarizado con el lenguaje XAML, Microsoft Visual C# y eventos.
 
 El dispositivo o emulador que estés usando debe tener un inclinómetro.
 
@@ -39,9 +39,9 @@ El dispositivo o emulador que estés usando debe tener un inclinómetro.
 
 Esta sección se divide en dos subsecciones: En la primera subsección, conocerás los pasos necesarios para crear una aplicación de inclinómetro simple desde cero. En la siguiente subsección se aplica la aplicación que acabas de crear.
 
-###  <a name="instructions"></a>Instrucciones
+###  <a name="instructions"></a>Instructions
 
--   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#** .
+-   Crea un nuevo proyecto. Para ello, elige una **Aplicación vacía (Windows universal)** en las plantillas de proyecto **Visual C#**.
 
 -   Abre el archivo MainPage.xaml.cs del proyecto y reemplaza el código existente con lo siguiente.
 
@@ -136,11 +136,11 @@ Tendrás que cambiar el nombre del espacio de nombres del fragmento de código a
 
 Deberás reemplazar la primera parte del nombre de la clase en el fragmento anterior por el espacio de nombres de tu aplicación. Por ejemplo, si creaste un proyecto denominado **InclinometerCS**, reemplazarías `x:Class="App1.MainPage"` por `x:Class="InclinometerCS.MainPage"`. También deberás reemplazar `xmlns:local="using:App1"` por `xmlns:local="using:InclinometerCS"`.
 
--   Presiona F5 (o selecciona **Depurar** > **Iniciar depuración**) para crear, implementar y ejecutar la aplicación.
+-   Presione F5 o seleccione **depurar**  >  **iniciar depuración** para compilar, implementar y ejecutar la aplicación.
 
 Con la aplicación en ejecución, puedes cambiar los valores de inclinómetro moviendo el dispositivo o usando herramientas del emulador.
 
--   Detén la aplicación. Para ello, vuelve a Visual Studio y presiona Mayús + F5 o selecciona **Depurar** > **Detener depuración** para detener la aplicación.
+-   Para detener la aplicación, vuelva a Visual Studio y presione Mayús + F5 o seleccione **depurar**  >  **detener depuración** para detener la aplicación.
 
 ###  <a name="explanation"></a>Explicación
 

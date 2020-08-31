@@ -6,32 +6,32 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, subprocesos, grupo de subprocesos
 ms.localizationpriority: medium
-ms.openlocfilehash: a9da63e05380987d69d97a74123e593acd0b8cb1
-ms.sourcegitcommit: 2dbf4a3f3473c1d3a0ad988bcbae6e75dfee3640
+ms.openlocfilehash: 3576f907e4ab601013d22fe9ae7697e0ec523ce4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619349"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155209"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Enviar un elemento de trabajo al grupo de subprocesos
 
-\[Se actualizó con aplicaciones para UWP en Windows 10. Para artículos de Windows 8. x, consulte el [archivo](https://docs.microsoft.com/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN)\]
+\[ Se actualizó con aplicaciones para UWP en Windows 10. Para artículos de Windows 8. x, consulte el [archivo](/previous-versions/windows/apps/mt244353(v=win.10))\]
 
 <b>API importantes</b>
 
--   [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)
--   [**IAsyncAction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)
+-   [**RunAsync**](/uwp/api/windows.system.threading.threadpool.runasync)
+-   [**IAsyncAction**](/uwp/api/Windows.Foundation.IAsyncAction)
 
 Obtén información acerca de cómo realizar trabajo en un subproceso separado mediante el envío de un elemento de trabajo al grupo de subprocesos. Usa esto para mantener una interfaz de usuario con capacidad de respuesta mientras se completa un trabajo que tarda una cantidad de tiempo considerable, y para completar varias tareas en paralelo.
 
 ## <a name="create-and-submit-the-work-item"></a>Crear y enviar el elemento de trabajo
 
-Crea un elemento de trabajo mediante una llamada a [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync). Proporciona un delegado que haga el trabajo (puedes usar una función lambda o una función delegada). Ten en cuenta que **RunAsync** devuelve un objeto [**IAsyncAction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction). Almacena este objeto para usarlo en el paso siguiente.
+Crea un elemento de trabajo mediante una llamada a [**RunAsync**](/uwp/api/windows.system.threading.threadpool.runasync). Proporciona un delegado que haga el trabajo (puedes usar una función lambda o una función delegada). Ten en cuenta que **RunAsync** devuelve un objeto [**IAsyncAction**](/uwp/api/Windows.Foundation.IAsyncAction). Almacena este objeto para usarlo en el paso siguiente.
 
-Hay tres versiones de [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync) disponibles para que puedas especificar opcionalmente la prioridad del elemento de trabajo, así como controlar si se ejecuta simultáneamente con otros elementos de trabajo.
+Hay tres versiones de [**RunAsync**](/uwp/api/windows.system.threading.threadpool.runasync) disponibles para que puedas especificar opcionalmente la prioridad del elemento de trabajo, así como controlar si se ejecuta simultáneamente con otros elementos de trabajo.
 
 >[!NOTE]
->Use [**CoreDispatcher. RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso al subproceso de la interfaz de usuario y mostrar el progreso del elemento de trabajo.
+>Use [**CoreDispatcher. RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync) para tener acceso al subproceso de la interfaz de usuario y mostrar el progreso del elemento de trabajo.
 
 En el siguiente ejemplo se crea un elemento de trabajo y se envía un lambda para que realice el trabajo:
 
@@ -269,13 +269,13 @@ auto asyncAction = ThreadPool::RunAsync(workItem);
 m_workItem = asyncAction;
 ```
 
-Después de la llamada a [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync), el grupo de subprocesos pone el elemento de trabajo en cola y este se ejecuta cuando hay un subproceso disponible. Los elementos de trabajo del grupo de subprocesos se ejecutan de manera asincrónica en cualquier orden, de manera que debes asegurarte de que los elementos de trabajo funcionen de manera independiente.
+Después de la llamada a [**RunAsync**](/uwp/api/windows.system.threading.threadpool.runasync), el grupo de subprocesos pone el elemento de trabajo en cola y este se ejecuta cuando hay un subproceso disponible. Los elementos de trabajo del grupo de subprocesos se ejecutan de manera asincrónica en cualquier orden, de manera que debes asegurarte de que los elementos de trabajo funcionen de manera independiente.
 
-Ten en cuenta que el elemento de trabajo comprueba la propiedad [**IAsyncInfo.Status**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncinfo.status) y existe si el elemento de trabajo se cancela.
+Ten en cuenta que el elemento de trabajo comprueba la propiedad [**IAsyncInfo.Status**](/uwp/api/windows.foundation.iasyncinfo.status) y existe si el elemento de trabajo se cancela.
 
 ## <a name="handle-work-item-completion"></a>Controlar la finalización del elemento de trabajo
 
-Proporciona un controlador de finalización mediante la configuración de la propiedad [**IAsyncAction.Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) del elemento de trabajo. Proporciona un delegado (puedes usar una función lambda o una función delegada) para controlar que el elemento de trabajo se complete. Por ejemplo, usa [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) para acceder al subproceso de interfaz de usuario y mostrar el resultado.
+Proporciona un controlador de finalización mediante la configuración de la propiedad [**IAsyncAction.Completed**](/uwp/api/windows.foundation.iasyncaction.completed) del elemento de trabajo. Proporciona un delegado (puedes usar una función lambda o una función delegada) para controlar que el elemento de trabajo se complete. Por ejemplo, usa [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync) para acceder al subproceso de interfaz de usuario y mostrar el resultado.
 
 En el siguiente ejemplo se actualiza la interfaz de usuario con el resultado del elemento de trabajo enviado en el paso 1:
 
@@ -350,7 +350,7 @@ Ten en cuenta que el controlador de finalización comprueba si el elemento de tr
 
 ## <a name="summary-and-next-steps"></a>Resumen y pasos siguientes
 
-Puede obtener más información si descarga el código de esta guía de inicio rápido en el [ejemplo de creación de un elemento de trabajo ThreadPool](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Thread%20pool%20sample) escrito para Windows 8.1 y vuelve a usar el\_código fuente en una aplicación Win Unap Windows 10.
+Puede obtener más información si descarga el código de esta guía de inicio rápido en el [ejemplo de creación de un elemento de trabajo ThreadPool](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Thread%20pool%20sample) escrito para Windows 8.1 y vuelve a usar el código fuente en una \_ aplicación Win Unap Windows 10.
 
 ## <a name="related-topics"></a>Temas relacionados
 

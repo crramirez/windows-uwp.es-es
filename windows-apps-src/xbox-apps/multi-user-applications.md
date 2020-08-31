@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 ms.localizationpriority: medium
-ms.openlocfilehash: 0364964f069537ee934771184eb9c6ffda6f346f
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: 52a740f3dec2f0106beb76a6a96903ac71bf5035
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970293"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157799"
 ---
 # <a name="introduction-to-multi-user-applications"></a>Introducción a las aplicaciones multiusuario
 
@@ -44,11 +44,11 @@ Para formar parte del modelo multiusuario:
 Los desarrolladores pueden usar KeyRoutedEventArgs.DeviceId, que se usa en lo eventos enrutados KeyUp y KeyDown, para diferenciar los eventos generados desde diferentes modos de entrada.
 Con el método Windows.System.UserDeviceAssociation.FindUserFromDeviceId, la identificación del usuario asociado a una entrada específica resultará más sencilla.
 
-Consulta el tema [KeyRoutedEventArgs.DeviceId](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.deviceid) para obtener más información.
+Consulta el tema [KeyRoutedEventArgs.DeviceId](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.deviceid) para obtener más información.
 
 
 ## <a name="guidance-on-which-model-to-choose"></a>Orientación sobre qué modelo elegir
 Todas las aplicaciones para UWP y la mayoría de los juegos de usuario único pueden escribirse para que sean de tipo SUA. Te recomendamos que uses el modelo multiusuario de Xbox One en juegos multijugador.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [UWP en Xbox One](index.md)

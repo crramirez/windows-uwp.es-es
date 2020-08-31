@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, requisitos de paquete, paquetes, formato de paquete, versión admitida, enviar
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c478b038ff729f753696d10fc18b21391a3a7de
-ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
+ms.openlocfilehash: 851aaa28a7c42d395a16ee78a49a7e8bc5712f62
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84945993"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158109"
 ---
 # <a name="app-package-requirements"></a>Requisitos del paquete de la aplicación
 
@@ -47,9 +47,9 @@ Con un lote de la aplicación, un usuario solo descargará los archivos relevant
 
 ## <a name="building-the-app-package-manually"></a>Compilar el paquete de la aplicación manualmente
 
-Si no usas Visual Studio para crear tu paquete, debes [crear el manifiesto de tu paquete manualmente](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-create-a-package-manifest-manually).
+Si no usas Visual Studio para crear tu paquete, debes [crear el manifiesto de tu paquete manualmente](/uwp/schemas/appxpackage/how-to-create-a-package-manifest-manually).
 
-Asegúrate de revisar la documentación del [manifiesto del paquete de la aplicación](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest) para conocer los requisitos y detalles completos del manifiesto. El manifiesto debe seguir el esquema de manifiesto de paquetes a fin de aprobar la certificación.
+Asegúrate de revisar la documentación del [manifiesto del paquete de la aplicación](/uwp/schemas/appxpackage/appx-package-manifest) para conocer los requisitos y detalles completos del manifiesto. El manifiesto debe seguir el esquema de manifiesto de paquetes a fin de aprobar la certificación.
 
 El manifiesto debe incluir información específica sobre tu cuenta y tu aplicación. Puedes encontrar esta información en [Ver detalles de identidad de la aplicación](view-app-identity-details.md) en la sección **Administración de aplicaciones** de la página de introducción a la aplicación en el panel.
 
@@ -57,7 +57,7 @@ El manifiesto debe incluir información específica sobre tu cuenta y tu aplicac
 > Los valores del manifiesto distinguen mayúsculas de minúsculas. También deben coincidir los espacios y otras puntuaciones. Escribe los valores cuidadosamente y revísalos para asegurarte de que son correctos.
 
 
-Los paquetes de aplicaciones (. msixbundle o. appxbundle) usan un manifiesto diferente. Revisa la documentación del [manifiesto de lotes](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) para conocer los requisitos y detalles para los manifiestos de lotes de aplicaciones. Tenga en cuenta que en un. msixbundle o. appxbundle, el manifiesto de cada paquete incluido debe utilizar los mismos elementos y atributos, excepto el atributo **processorArchitecture** del elemento [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
+Los paquetes de aplicaciones (. msixbundle o. appxbundle) usan un manifiesto diferente. Revisa la documentación del [manifiesto de lotes](/uwp/schemas/bundlemanifestschema/bundle-manifest) para conocer los requisitos y detalles para los manifiestos de lotes de aplicaciones. Tenga en cuenta que en un. msixbundle o. appxbundle, el manifiesto de cada paquete incluido debe utilizar los mismos elementos y atributos, excepto el atributo **processorArchitecture** del elemento [Identity](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) .
 
 > [!TIP]
 > Asegúrese de ejecutar el [Kit de certificación de aplicaciones de Windows](../debug-test-perf/windows-app-certification-kit.md) antes de enviar los paquetes. Esto puede ayudarte a determinar si tu manifiesto tiene algún problema que pueda causar errores de certificación o envío.
@@ -77,7 +77,7 @@ Los paquetes de la aplicación deben cumplir con estos requisitos.
 
 ## <a name="supported-versions"></a>Versiones compatibles
 
-En el caso de las aplicaciones UWP, todos los paquetes deben tener como destino una versión de Windows 10 compatible con el almacén. Las versiones que admite el paquete deben indicarse en los atributos **MinVersion** y **MaxVersionTested** del elemento [TargetDeviceFamily](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) del manifiesto de la aplicación.
+En el caso de las aplicaciones UWP, todos los paquetes deben tener como destino una versión de Windows 10 compatible con el almacén. Las versiones que admite el paquete deben indicarse en los atributos **MinVersion** y **MaxVersionTested** del elemento [TargetDeviceFamily](/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) del manifiesto de la aplicación.
 
 Las versiones admitidas actualmente son de: 
 - Mínimo: 10.0.10240.0
@@ -86,12 +86,8 @@ Las versiones admitidas actualmente son de:
 
 ## <a name="storemanifest-xml-file"></a>Archivo XML de StoreManifest
 
-StoreManifest.xml es un archivo de configuración opcional que se puede incluir en paquetes de la aplicación. Su finalidad es habilitar características, como la declaración de la aplicación como Microsoft Store aplicación de dispositivo o la declaración de requisitos que un paquete depende de que se aplique a un dispositivo, que el manifiesto del paquete no cubre. Si se usa, StoreManifest.xml se envía con el paquete de la aplicación y debe estar en la carpeta raíz del proyecto principal de la aplicación. Para obtener más información, consulta [Esquema StoreManifest](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal).
+StoreManifest.xml es un archivo de configuración opcional que se puede incluir en paquetes de la aplicación. Su finalidad es habilitar características, como la declaración de la aplicación como Microsoft Store aplicación de dispositivo o la declaración de requisitos que un paquete depende de que se aplique a un dispositivo, que el manifiesto del paquete no cubre. Si se usa, StoreManifest.xml se envía con el paquete de la aplicación y debe estar en la carpeta raíz del proyecto principal de la aplicación. Para obtener más información, consulta [Esquema StoreManifest](/uwp/schemas/storemanifest/store-manifest-schema-portal).
 
  
 
  
-
-
-
-
