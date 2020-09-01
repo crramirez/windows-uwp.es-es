@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 785047b3ee5f18fa4f6ea8fd78f6d8ab7a92e8e6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8a3231f608984c9d1f67df71de9cab4cfecd9a13
+ms.sourcegitcommit: deb2867924ce16efcabfa011892157b7aa4fa2d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173429"
+ms.locfileid: "89187900"
 ---
 # <a name="keyboard-accelerators"></a>Aceleradores de teclado
 
@@ -386,7 +386,7 @@ De forma predeterminada, cuando se declaran los aceleradores de teclado, todos l
 
 *Cuadro combinado de tecla de aceleración en la información sobre herramientas*
 
-En el caso de los objetos [Button](/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton)y [AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , la tecla de aceleración se anexa a la información sobre herramientas predeterminada del control. En el caso de los objetos [MenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.appbarbutton) y [ToggleMenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)), se muestra la tecla de aceleración con el texto de control flotante.
+En el caso de los objetos [Button](/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton)y [AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton) , la tecla de aceleración se anexa a la información sobre herramientas predeterminada del control. En el caso de los objetos [MenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.appbarbutton) y [ToggleMenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem) , se muestra la tecla de aceleración con el texto de control flotante.
 
 > [!NOTE]
 > Al especificar una información sobre herramientas (vea button1 en el ejemplo siguiente) se invalida este comportamiento.

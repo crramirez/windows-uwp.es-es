@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: cb82c137bf2aa0d1cd4e03025d3babace07549b5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 151abd02b34263cdd92b917127f306c25ebc5e0d
+ms.sourcegitcommit: deb2867924ce16efcabfa011892157b7aa4fa2d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173419"
+ms.locfileid: "89187842"
 ---
 # <a name="keyboard-events"></a>Eventos de teclado
 
@@ -107,15 +107,16 @@ El evento [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) se genera si
 
 Las teclas modificadoras son teclas como Ctrl o Mayús que los usuarios suelen presionar en combinación con otras teclas. Tu aplicación puede usar estas combinaciones como métodos abreviados de teclado para invocar comandos de la aplicación.
 
-Las combinaciones de teclas de método abreviado se detectan usando código en los controladores de eventos [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) y [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup). Después, puedes seguir el estado de las teclas modificadoras presionadas que te interesen. Cuando se produce un evento de teclado para una tecla que no es modificadora, puedes comprobar si hay una tecla modificadora presionada al mismo tiempo.
+Puede detectar combinaciones de teclas de método abreviado en los controladores de eventos [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) y [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) . Cuando se produce un evento de teclado para una tecla no modificadora, puede comprobar si una tecla modificadora está en estado presionado.
+
+Como alternativa, la función [**GetKeyState ()**](/uwp/api/windows.ui.core.corewindow.getkeystate) de [**corewindow**](/uwp/api/windows.ui.core.corewindow) (obtenida a través de [**corewindow. GetForCurrentThread ()**](/uwp/api/windows.ui.core.corewindow.getforcurrentthread)) también se puede usar para comprobar el estado del modificador cuando se presiona una tecla no modificadora.
+
+En los siguientes ejemplos se implementa este segundo método, mientras que también se incluye código auxiliar para la primera implementación.
 
 > [!NOTE]
 > La tecla Alt está representada por el valor **VirtualKey.Menu**.
 
- 
-
 ### <a name="shortcut-keys-example"></a>Ejemplo de teclas de método abreviado
-
 
 En el siguiente ejemplo se muestra cómo implementar teclas de método abreviado. En este ejemplo, los usuarios pueden controlar la reproducción multimedia con los botones Reproducir, Pausa y Detener, o bien con las teclas de método abreviado Ctrl+P, Ctrl+A y Ctrl+S. El XAML de los botones muestra los métodos abreviados mediante las propiedades [**AutomationProperties**](/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties) e información sobre herramientas en las etiquetas de los botones. Esta información automática es importante para mejorar la facilidad de uso y de acceso de tu aplicación. Para obtener más información, vea [accesibilidad del teclado](../accessibility/keyboard-accessibility.md).
 

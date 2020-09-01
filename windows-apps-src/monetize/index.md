@@ -6,12 +6,12 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: windows 10, uwp, monetize, engage, promote, Store services
 ms.localizationpriority: medium
-ms.openlocfilehash: 7beee974bceceab02984ae6499a9c5db0b0281b9
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: dd6262677cd548fa8e690fde5a90ab1f2662ea2a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74259300"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155649"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetización, interacción y servicios de Store
 
@@ -94,7 +94,7 @@ Maximiza los ingresos publicitarios de tus aplicaciones usando el servicio de me
         ![Análisis](images/monetize-analytics-pie-chart.png)
     :::column-end:::
     :::column span="2":::
-**Análisis**
+**Analytics**
 
 Los informes de análisis detallados te permiten ver el rendimiento de los anuncios en las aplicaciones, facilitándote la información necesaria para maximizar los ingresos por anuncios. También proporcionamos una API de RESTful que puedes usar para obtener estos datos programáticamente.
 
@@ -111,7 +111,7 @@ Los informes de análisis detallados te permiten ver el rendimiento de los anunc
  Tema                | Descripción                 |
 |--------------------|-----------------------------|
 | [Programa de afiliados de Microsoft](https://www.microsoftaffiliates.com/) | Consigue comisiones vinculando productos de Microsoft desde la aplicación, el blog, la página web u otras comunicaciones. Puedes vincular productos a aplicaciones, juegos, música, películas, hardware, accesorios y otros productos que se vendan en Microsoft Store.
-| [Experimentación A/B](https://docs.microsoft.com/windows/uwp/monetize/run-app-experiments-with-a-b-testing) | Ejecuta pruebas A/B en tus aplicaciones para medir la eficacia de los cambios de características en algunos clientes antes de habilitar los cambios de forma generalizada.
+| [Experimentación A/B](./run-app-experiments-with-a-b-testing.md) | Ejecuta pruebas A/B en tus aplicaciones para medir la eficacia de los cambios de características en algunos clientes antes de habilitar los cambios de forma generalizada.
 | [Conectar con clientes con Microsoft Store Services SDK](microsoft-store-services-sdk.md) | Microsoft Store Services SDK proporciona bibliotecas y herramientas que puedes usar para agregar características a las aplicaciones que te ayudarán a atraer a los clientes. Estas características incluyen notificaciones dirigidas, pruebas A/B e inicio del Centro de opiniones desde la aplicación.
 | [Iniciar el Centro de opiniones desde la aplicación](launch-feedback-hub-from-your-app.md) | Agrega código a tus aplicaciones para UWP para dirigir a los clientes de Windows 10 al Centro de opiniones, donde pueden enviar sus problemas y sugerencias, así como votar. A continuación, administra estas opiniones en el [Informe de comentarios](../publish/feedback-report.md) del Centro de partners. Esta característica requiere Microsoft Store Services SDK. 
 | [Configurar la aplicación para notificaciones de inserción dirigidas](configure-your-app-to-receive-dev-center-notifications.md) | Registra un canal de notificaciones para que tu aplicación para UWP pueda recibir [notificaciones de inserción del Centro de partners](../publish/send-push-notifications-to-your-apps-customers.md) y realizar un seguimiento de la tasa de inicios de la aplicación derivados de estas notificaciones. Esta característica requiere Microsoft Store Services SDK.
@@ -126,11 +126,11 @@ Los informes de análisis detallados te permiten ver el rendimiento de los anunc
 
 Mantente al día del rendimiento de la aplicación en Store usando estos informes.
 
-- [Resumen de pago](../publish/payout-summary.md)
-- [Informe Adquisiciones](../publish/acquisitions-report.md)
-- [Informe Adquisiciones de complementos](../publish/add-on-acquisitions-report.md)
-- [Informe de rendimiento de publicidad](../publish/advertising-performance-report.md)
+- [Resumen de pagos](../publish/payout-summary.md)
+- [Informe de adquisiciones](../publish/acquisitions-report.md)
+- [Informe de adquisiciones de complementos](../publish/add-on-acquisitions-report.md)
+- [Informe de rendimiento de la publicidad](../publish/advertising-performance-report.md)
 - [Obtener datos de análisis mediante nuestra API de REST](access-analytics-data-using-windows-store-services.md)
 - [Crear segmentos de clientes](../publish/create-customer-segments.md)
-- [Informe Comentarios](../publish/feedback-report.md)
+- [Informe de comentarios](../publish/feedback-report.md)
 - [Informe de uso](../publish/usage-report.md)

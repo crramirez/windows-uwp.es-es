@@ -3,12 +3,12 @@ title: WinUI 3, versión preliminar 2 (julio de 2020)
 description: Introducción a WinUI 3, versión preliminar 2.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 0acea4520f10d5f64baa29cb64fdf0ba1cc4552e
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 4d971ffd3ec44ab766122dbb80847b9c2ccfc891
+ms.sourcegitcommit: e6b1ed3c9ddcf650e2f71c29d81bffac6ab292f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997962"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89116810"
 ---
 # <a name="windows-ui-library-3-preview-2-july-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)
 
@@ -34,7 +34,7 @@ WinUI 3 versión, preliminar 2 incluye plantillas de proyecto de Visual Studio p
 
 1. Asegúrese de que el equipo de desarrollo tenga instalada la versión 1803 de Windows 10 (compilación 17134), o cualquier versión más reciente.
 
-2. Instale [Visual Studio 2019, versión 16.7 versión preliminar 3](https://visualstudio.microsoft.com/vs/preview).
+2. Instale [Visual Studio 2019, versión 16.7.2](https://visualstudio.microsoft.com/vs/).
 
     Debe incluir las siguientes cargas de trabajo al instalar Visual Studio:
     - Desarrollo de escritorio de .NET
@@ -44,7 +44,10 @@ WinUI 3 versión, preliminar 2 incluye plantillas de proyecto de Visual Studio p
     - Desarrollo de escritorio con C++
     - El componente opcional *Herramientas de la Plataforma universal de Windows para C++ (v142)* para la carga de trabajo de la Plataforma universal de Windows (vea "Detalles de la instalación" en la sección "Desarrollo con la Plataforma universal de Windows", en el panel derecho).
 
-3. Si desea crear proyectos de escritorio WinUI para aplicaciones de C#/.NET 5 y C++/Win32, también debe instalar las versiones x64 y x86 de .NET 5, versión preliminar 5:
+    Después de descargar Visual Studio, asegúrese de habilitar las versiones preliminares de .NET en el programa: 
+    - Vaya a Herramientas > Opciones > Características de vista previa > seleccione "Usar versiones preliminares del SDK de .NET Core (requiere reinicio)". 
+
+3. Si desea crear proyectos de escritorio de WinUI para aplicaciones de C#/.NET 5 y C++/Win32, también debe instalar las versiones x64 y x86 de .NET 5, versión preliminar 5. **Tenga en cuenta que .NET 5, versión preliminar 5, es actualmente la única versión preliminar de .NET 5 compatible con WinUI 3**:
 
     - x64: [https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x64.exe](https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x64.exe)
     - x86: [https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x86.exe](https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x86.exe)
@@ -52,6 +55,7 @@ WinUI 3 versión, preliminar 2 incluye plantillas de proyecto de Visual Studio p
 4. Descargue e instale el [paquete VSIX de WinUI 3, versión preliminar 2](https://aka.ms/winui3/previewdownload). Este paquete VSIX agrega las plantillas de proyecto WinUI 3 y el paquete NuGet que contiene las bibliotecas de WinUI 3 a Visual Studio 2019.
 
     Para obtener instrucciones sobre cómo agregar el paquete VSIX a Visual Studio, consulte [Buscar y usar extensiones de Visual Studio](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2019#install-without-using-the-manage-extensions-dialog-box).
+
 
 ## <a name="create-winui-projects"></a>Creación de proyectos WinUI
 
@@ -211,8 +215,23 @@ La versión preliminar 2 de WinUI 3 es compatible con equipos en los que se ej
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-- En aplicaciones de escritorio de C#:
-  - Debe usar `WinRT.WeakReference<T>` en lugar de `System.WeakReference<T>` para las referencias débiles a objetos de Windows (incluidos los objetos XAML).
+
+- Aplicaciones para UWP de C#:
+
+  El marco WinUI 3 es un conjunto de componentes de WinRT y, aunque que WinRT tiene tipos y objetos similares a los que se encuentran en .NET, estos no son compatibles de forma inherente.  Las proyecciones de C#/WinRT controlan la interoperabilidad entre .NET y WinRT en .NET 5, lo que hoy le permite usar libremente las interfaces de .NET en su aplicación de .NET 5. 
+  
+  Sin embargo, C#/WinRT no puede controlar la interoperabilidad en las aplicaciones de .NET Native, por lo que las API de WinUI 3 se proyectan directamente en las aplicaciones para UWP. Por lo tanto, ya no puede usar esas mismas interfaces de .NET. **Una vez que las aplicaciones para UWP dejen de usar .NET Native, esta limitación ya no existirá**.
+
+  Por ejemplo, la API de `INotifyPropertyChanged` se proyecta en el espacio de nombres `System.ComponentModel` para WinUI3 en las aplicaciones de escritorio, pero aparece en el espacio de nombres `Microsoft.UI.Xaml.Data` para WinUI3 en las aplicaciones para UWP (y todas las aplicaciones de C++). 
+  
+  Este problema afecta a:
+    - `INotifyPropertyChanged` (y tipos relacionados)
+    - `INotifyCollectionChanged`
+    - `ICommand`
+
+> [!Note] 
+> Con `INotifyPropertyChanged` y `INotifyCollectionChanged` no funciona como se esperaba, y la clase `ObservableCollection<T>` también se verá afectada. Para obtener un ejemplo de implementación de su propia versión de `ObservableCollection<T>`, consulte [este ejemplo](https://github.com/microsoft/Xaml-Controls-Gallery/blob/winui3preview/XamlControlsGallery/CollectionsInterop.cs). 
+
 
 ## <a name="xaml-controls-gallery-winui-3-preview-2-branch"></a>XAML Controls Gallery (rama de WinUI 3, versión preliminar 2)
 

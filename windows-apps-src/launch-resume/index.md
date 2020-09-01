@@ -6,12 +6,12 @@ ms.date: 10/04/2017
 ms.topic: article
 keywords: windows 10, uwp, background task, app service, connected devices, remote systems
 ms.localizationpriority: medium
-ms.openlocfilehash: 9280a240f35c2fdf5290c94d837e2fafc008dbfd
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 3e3a8266c3f1f9ce80496770fb79c96be5db9d6b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80483010"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158739"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Inicio, reanudación y tareas en segundo plano
 
@@ -27,14 +27,14 @@ Esta sección incluye información sobre los siguientes asuntos:
 - Cómo agregar y configurar una pantalla de presentación para la aplicación.
 - Cómo ampliar tu aplicación a través de paquetes que los usuarios puedan instalar desde Microsoft Store.
 
-## <a name="the-app-lifecycle"></a>El ciclo de vida de la aplicación
+## <a name="the-app-lifecycle"></a>Ciclo de vida de la aplicación
 
 En esta sección se detalla el ciclo de vida de una aplicación para la Plataforma universal de Windows (UWP) desde el momento en que se activa hasta que se cierra.
 
 | Tema | Descripción |
 |-------|-------------|
 | [Ciclo de vida de la aplicación](app-lifecycle.md)               | Obtén información sobre el ciclo de vida de una aplicación para UWP y lo que sucede cuando Windows inicia, suspende y reanuda la aplicación. |
-| [Controlar el inicio previo de aplicaciones](handle-app-prelaunch.md) | Aprende a administrar el inicio previo de aplicaciones.                                                                              |
+| [Administrar el inicio previo de aplicaciones](handle-app-prelaunch.md) | Aprende a administrar el inicio previo de aplicaciones.                                                                              |
 | [Controlar la activación de aplicaciones](activate-an-app.md)     | Aprende a administrar la activación de aplicaciones.                                                                             |
 | [Controlar la suspensión de aplicaciones](suspend-an-app.md)         | Aprende a guardar datos importantes de la aplicación cuando el sistema la suspende.                                 |
 | [Controlar la reanudación de aplicaciones](resume-an-app.md)           | Aprende a actualizar el contenido mostrado cuando el sistema reanuda la aplicación.                                        |
@@ -52,11 +52,11 @@ En la sección [Iniciar una aplicación con un URI](launch-app-with-uri.md) se d
 
 | Tema | Descripción |
 |-------|-------------|
-| [Iniciar la aplicación predeterminada de un URI](launch-default-app.md) | Aprende a iniciar la aplicación predeterminada de un identificador de recursos uniforme (URI). Los URI te permiten iniciar otra aplicación para realizar una tarea específica. En este tema también se proporciona una descripción general de los muchos esquemas de URI integrados en Windows. |
+| [Iniciar la aplicación predeterminada para un URI](launch-default-app.md) | Aprende a iniciar la aplicación predeterminada de un identificador de recursos uniforme (URI). Los URI te permiten iniciar otra aplicación para realizar una tarea específica. En este tema también se proporciona una descripción general de los muchos esquemas de URI integrados en Windows. |
 | [Controlar la activación de URI](handle-uri-activation.md) | Aprende a registrar una aplicación para convertirla en el controlador predeterminado de un nombre de esquema de identificador uniforme de recursos (URI). |
 | [Iniciar una aplicación para obtener resultados](how-to-launch-an-app-for-results.md) | Aprende a iniciar una aplicación desde otra aplicación y a intercambiar datos entre las dos. Esto se denomina iniciar una aplicación para obtener resultados. |
 | [Elegir y guardar los tonos con el esquema de URI ms-tonepicker](launch-ringtone-picker.md) | En este tema se describe el esquema de URI ms-tonepicker y cómo usarlo para mostrar un selector de tono para seleccionar un tono, guardar un tono y obtener el nombre descriptivo de un tono. |
-| [Iniciar la aplicación Configuración de Windows](launch-settings-app.md) | Aprende a iniciar la aplicación Configuración de Windows desde la aplicación. En este tema se describe el esquema de URI ms-settings. Usa este esquema de URI para iniciar la aplicación Configuración de Windows en páginas específicas de configuración. |
+| [Cómo iniciar la aplicación Configuración de Windows](launch-settings-app.md) | Aprende a iniciar la aplicación Configuración de Windows desde la aplicación. En este tema se describe el esquema de URI ms-settings. Usa este esquema de URI para iniciar la aplicación Configuración de Windows en páginas específicas de configuración. |
 | [Iniciar la aplicación de Microsoft Store](launch-store-app.md) | En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación para UWP en páginas específicas de Store. |
 | [Iniciar la aplicación Mapas de Windows](launch-maps-app.md) | Aprende a iniciar la aplicación Mapas de Windows desde la aplicación. |
 | [Iniciar la aplicación Contactos](launch-people-apps.md) | En este tema se describe el esquema de URI ms-people. La aplicación puede usar este esquema de URI para iniciar la aplicación Contactos para acciones específicas. |
@@ -95,7 +95,7 @@ La sección [Tareas en segundo plano](support-your-app-with-background-tasks.md)
 | Tema | Descripción |
 |-------|-------------|
 | [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)                                       | Asegúrate de que tu aplicación cumple los requisitos para ejecutar tareas en segundo plano. |
-| [Acceder a sensores y dispositivos desde una tarea en segundo plano](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) permite que tu aplicación para la Plataforma universal de Windows acceda a sensores y dispositivos periféricos en segundo plano, incluso cuando la aplicación en primer plano está suspendida. |
+| [Acceder a sensores y dispositivos desde una tarea en segundo plano](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) permite que tu aplicación para la Plataforma universal de Windows acceda a sensores y dispositivos periféricos en segundo plano, incluso cuando la aplicación en primer plano está suspendida. |
 | [Crear y registrar una tarea en segundo plano dentro del proceso](create-and-register-an-inproc-background-task.md)       | Crea y registra una tarea en segundo plano que se ejecute en el mismo proceso que la aplicación en primer plano. |
 | [Crear y registrar una tarea en segundo plano fuera del proceso](create-and-register-a-background-task.md)           | Crea y registra una tarea en segundo plano que se ejecute en un proceso independiente de la aplicación y regístralo para que se ejecute cuando tu aplicación no esté en primer plano. |
 | [Crear y registrar una tarea en segundo plano de COM para una aplicación WinMain](create-and-register-a-winmain-background-task.md) | Crea una tarea en segundo plano de COM que se pueda ejecutar en el proceso principal o fuera de proceso cuando la aplicación WinMain empaquetada no esté en ejecución. |
@@ -105,16 +105,16 @@ La sección [Tareas en segundo plano](support-your-app-with-background-tasks.md)
 | [Agrupar el registro de tareas en segundo plano](group-background-tasks.md)                                             | Aísla el registro de tareas en segundo plano con grupos. |
 | [Controlar una tarea en segundo plano cancelada](handle-a-cancelled-background-task.md)                                 | Aprende a crear una tarea en segundo plano que reconozca solicitudes de cancelación y detenga el trabajo, y que informe de la cancelación a la aplicación a través del almacenamiento persistente. |
 | [Supervisar el progreso y la finalización de tareas en segundo plano](monitor-background-task-progress-and-completion.md)       | Aprende a diseñar tu aplicación para que reconozca el progreso y la finalización de una tarea en segundo plano. |
-| [Optimización de la actividad en segundo plano](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) |Aprende a reducir la energía usada en segundo plano y a interactuar con la configuración de usuario en relación con la actividad en segundo plano. |
+| [Optimización de la actividad en segundo plano](../debug-test-perf/optimize-background-activity.md) |Aprende a reducir la energía usada en segundo plano y a interactuar con la configuración de usuario en relación con la actividad en segundo plano. |
 | [Registrar una tarea en segundo plano](register-a-background-task.md)                                                 | Aprende a crear una función que pueda reutilizarse para registrar de forma segura la mayoría de las tareas en segundo plano. |
-| [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)         | Aprende a crear una tarea en segundo plano que responda a eventos [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType). |
+| [Responder a eventos del sistema con tareas en segundo plano](respond-to-system-events-with-background-tasks.md)         | Aprende a crear una tarea en segundo plano que responda a eventos [**SystemTrigger**](/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType). |
 | [Ejecutar una tarea en segundo plano en un temporizador](run-a-background-task-on-a-timer-.md)                                    | Aprende a programar una tarea en segundo plano única o a ejecutar una tarea en segundo plano periódica. |
 | [Ejecutar en segundo plano de manera indefinida](run-in-the-background-indefinetly.md)                                    | Usa la funcionalidad para ejecutar una tarea en segundo plano o una sesión de ejecución extendida en segundo plano de manera indefinida. |
-| [Desencadenar una tarea en segundo plano desde dentro de la aplicación](trigger-background-task-from-app.md) | Aprende a usar [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger) para activar una tarea en segundo plano desde dentro de la aplicación.|
+| [Desencadenar una tarea en segundo plano desde dentro de la aplicación](trigger-background-task-from-app.md) | Aprende a usar [ApplicationTrigger](/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger) para activar una tarea en segundo plano desde dentro de la aplicación.|
 | [Establecer condiciones para ejecutar una tarea en segundo plano](set-conditions-for-running-a-background-task.md)             | Aprende a establecer condiciones que controlen cuándo se ejecutará tu tarea en segundo plano. |
-| [Transferir datos en segundo plano](https://docs.microsoft.com/windows/uwp/networking/background-transfers)                 | Usa la API de transferencia en segundo plano para copiar archivos en segundo plano. |
+| [Transferir datos en segundo plano](../networking/background-transfers.md)                 | Usa la API de transferencia en segundo plano para copiar archivos en segundo plano. |
 | [Actualizar un icono dinámico desde una tarea en segundo plano](update-a-live-tile-from-a-background-task.md)                   | Usa una tarea en segundo plano para actualizar el icono dinámico de tu aplicación con contenido actualizado. |
-| [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)                                                   | Aprende a usar la clase [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) para ejecutar código ligero en segundo plano mientras el dispositivo está enchufado. |
+| [Usar un desencadenador de mantenimiento](use-a-maintenance-trigger.md)                                                   | Aprende a usar la clase [**MaintenanceTrigger**](/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) para ejecutar código ligero en segundo plano mientras el dispositivo está enchufado. |
 
 ## <a name="remote-systems"></a>Sistemas remotos
 

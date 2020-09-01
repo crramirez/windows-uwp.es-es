@@ -6,12 +6,12 @@ ms.date: 02/12/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2de9d5ae04c526c7c35fda4a7aef713814b4fbc2
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: db6cf7937e0d757d946154a4c87e7e4da3fde2cb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77258331"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175759"
 ---
 # <a name="app-to-app-communication"></a>Comunicación entre aplicaciones
 
@@ -35,6 +35,6 @@ Las aplicaciones para UWP también pueden crear [servicios de aplicaciones ](../
 | [Arrastrar y colocar](../design/input/drag-and-drop.md) | En este artículo se explica cómo agregar la funcionalidad de arrastrar y colocar elementos en la aplicación para UWP. Arrastrar y soltar es una forma clásica y natural de interactuar con contenido, como imágenes y archivos. Una vez implementada, la opción para arrastrar y colocar elementos funciona perfectamente en todos los sentidos; por ejemplo, de una aplicación a otra, de una aplicación al escritorio y del escritorio a una aplicación. |
 | [Crear y usar un servicio de aplicación](../launch-resume/how-to-create-and-consume-an-app-service.md) | En este artículo se explica cómo crear un servicio de aplicaciones en una aplicación para UWP que proporciona servicios a otras aplicaciones para UWP.  |
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
-- [Desarrollar aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/develop/)
+- [Desarrollar aplicaciones para UWP](../develop/index.md)

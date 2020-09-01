@@ -6,19 +6,19 @@ ms.date: 07/22/2019
 ms.topic: article
 keywords: windows 10, uwp, packaging
 ms.localizationpriority: medium
-ms.openlocfilehash: bb772007cd5c4391634f9df6ba0b6d2037a7b5de
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 35adf8db66bbfaa1be11c0b389efea88b5c2437b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77089481"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164369"
 ---
 # <a name="packaging-apps"></a>Empaquetado de aplicaciones
 
-Esta sección contiene vínculos o artículos sobre el empaquetado de aplicaciones para la Plataforma universal de Windows (UWP) en paquetes de la aplicación MSIX y .appx para su implementación e instalación. Algunos de estos vínculos se dirigen a artículos relevantes de la [documentación de MSIX](https://docs.microsoft.com/windows/msix/).
+Esta sección contiene vínculos o artículos sobre el empaquetado de aplicaciones para la Plataforma universal de Windows (UWP) en paquetes de la aplicación MSIX y .appx para su implementación e instalación. Algunos de estos vínculos se dirigen a artículos relevantes de la [documentación de MSIX](/windows/msix/).
 
 > [!NOTE]
-> El formato original del empaquetado de aplicaciones para UWP en Windows 10 era .appx. A partir de Windows 10, versión 1809, el nombre de este formato de empaquetado cambió a .msix y se amplió para admitir todos los tipos de aplicaciones de Windows, incluidas las aplicaciones de escritorio en .NET y C++/Win32. También se ha ampliado la compatibilidad con MSIX a las versiones anteriores de Windows. Para más información, consulta la [documentación de MSIX](https://docs.microsoft.com/windows/msix/).
+> El formato original del empaquetado de aplicaciones para UWP en Windows 10 era .appx. A partir de Windows 10, versión 1809, el nombre de este formato de empaquetado cambió a .msix y se amplió para admitir todos los tipos de aplicaciones de Windows, incluidas las aplicaciones de escritorio en .NET y C++/Win32. También se ha ampliado la compatibilidad con MSIX a las versiones anteriores de Windows. Para más información, consulta la [documentación de MSIX](/windows/msix/).
 
 | Tema | Descripción |
 |-------|-------------|
@@ -31,5 +31,5 @@ Esta sección contiene vínculos o artículos sobre el empaquetado de aplicacion
 | [Instalar aplicaciones para Windows 10 con el Instalador de aplicación](/windows/msix/app-installer/app-installer-root) | El Instalador de aplicación permite instalar las aplicaciones para Windows 10 haciendo doble clic en el paquete de la aplicación. |
 | [Instalar aplicaciones con la herramienta WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | Windows Application Deployment (WinAppDeployCmd.exe) es una herramienta de línea de comandos que se puede usar para implementar una aplicación para UWP desde una máquina con Windows 10 en cualquier dispositivo con Windows 10 Mobile. Puedes usar esta herramienta para implementar un paquete de aplicación si el dispositivo con Windows 10 Mobile está conectado mediante USB o disponible en la misma subred sin necesidad de Microsoft Visual Studio o la solución para dicha aplicación. Este artículo describe cómo instalar aplicaciones para UWP con esta herramienta. |
 | [Configurar compilaciones automatizadas para la aplicación para UWP](auto-build-package-uwp-apps.md) | Si quieres empaquetar tu aplicación dentro de un proceso de compilación automatizado, este tema muestra cómo hacerlo con Visual Studio Team Services (VSTS). |
-| [Declaraciones de funcionalidades de las aplicaciones](app-capability-declarations.md) | Las funcionalidades deben declararse en el [manifiesto del paquete](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest) de la aplicación para poder obtener acceso a determinadas API o ciertos recursos, como imágenes o música, o a dispositivos, como la cámara o el micrófono. |
+| [Declaraciones de funcionalidades de las aplicaciones](app-capability-declarations.md) | Las funcionalidades deben declararse en el [manifiesto del paquete](/uwp/schemas/appxpackage/appx-package-manifest) de la aplicación para poder obtener acceso a determinadas API o ciertos recursos, como imágenes o música, o a dispositivos, como la cámara o el micrófono. |
 | [Descargar e instalar actualizaciones de paquetes desde Store](self-install-package-updates.md) | La aplicación para UWP puede buscar mediante programación actualizaciones de paquete, así como instalarlas. La aplicación también puede consultar los paquetes que se marcaron como obligatorios en el Centro de partners y deshabilitar la funcionalidad hasta que se instale la actualización obligatoria.  |
