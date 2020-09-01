@@ -3,12 +3,12 @@ title: WinUI 3, versión preliminar 2 (julio de 2020)
 description: Introducción a WinUI 3, versión preliminar 2.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 4d971ffd3ec44ab766122dbb80847b9c2ccfc891
-ms.sourcegitcommit: e6b1ed3c9ddcf650e2f71c29d81bffac6ab292f4
+ms.openlocfilehash: c57132ec5219ef32f2b2b69168592e07f49d904b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89116810"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168779"
 ---
 # <a name="windows-ui-library-3-preview-2-july-2020"></a>Biblioteca de interfaz de usuario de Windows 3, versión preliminar 2 (julio de 2020)
 
@@ -54,7 +54,7 @@ WinUI 3 versión, preliminar 2 incluye plantillas de proyecto de Visual Studio p
 
 4. Descargue e instale el [paquete VSIX de WinUI 3, versión preliminar 2](https://aka.ms/winui3/previewdownload). Este paquete VSIX agrega las plantillas de proyecto WinUI 3 y el paquete NuGet que contiene las bibliotecas de WinUI 3 a Visual Studio 2019.
 
-    Para obtener instrucciones sobre cómo agregar el paquete VSIX a Visual Studio, consulte [Buscar y usar extensiones de Visual Studio](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2019#install-without-using-the-manage-extensions-dialog-box).
+    Para obtener instrucciones sobre cómo agregar el paquete VSIX a Visual Studio, consulte [Buscar y usar extensiones de Visual Studio](/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2019#install-without-using-the-manage-extensions-dialog-box).
 
 
 ## <a name="create-winui-projects"></a>Creación de proyectos WinUI
@@ -99,10 +99,10 @@ Las siguientes plantillas de elementos están disponibles para usarse en un proy
 |----------|----------|-------------|
 | Página en blanco (WinUI) | C# y C++ | Agrega un archivo XAML y un archivo de código que define una nueva página que se deriva de la clase **Microsoft.UI.Xaml.Controls.Page** de la biblioteca de WinUI. |
 | Ventana en blanco (WinUI en Escritorio) | C# y C++ | Agrega un archivo XAML y un archivo de código que define una nueva ventana que se deriva de la clase **Microsoft.UI.Xaml.Window** de la biblioteca de WinUI. |
-| Control personalizado (WinUI) | C# y C++ | Agrega un archivo de código para crear un control con plantilla con un estilo predeterminado. El control con plantilla se deriva de la clase **Microsoft.UI.Xaml.Controls.Control** de la biblioteca de WinUI.<p></p>Para ver un tutorial que muestra cómo usar esta plantilla de elemento, vea [Controles XAML con plantilla para aplicaciones para UWP y WinUI 3 con C++ /WinRT](xaml-templated-controls-cppwinrt-winui3.md). Para más información sobre los controles con plantilla, vea [Controles XAML personalizados](https://docs.microsoft.com/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls). |
+| Control personalizado (WinUI) | C# y C++ | Agrega un archivo de código para crear un control con plantilla con un estilo predeterminado. El control con plantilla se deriva de la clase **Microsoft.UI.Xaml.Controls.Control** de la biblioteca de WinUI.<p></p>Para ver un tutorial que muestra cómo usar esta plantilla de elemento, vea [Controles XAML con plantilla para aplicaciones para UWP y WinUI 3 con C++ /WinRT](xaml-templated-controls-cppwinrt-winui3.md). Para más información sobre los controles con plantilla, vea [Controles XAML personalizados](/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls). |
 | Diccionario de recursos (WinUI) | C# y C++ | Agrega una colección vacía y con clave de recursos XAML. Para más información, consulte [Referencias a ResourceDictionary y a los recursos XAML](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references). |
 | Archivo de recursos (WinUI) | C# y C++ | Agrega un archivo para almacenar los recursos de cadena y condicionales de la aplicación. Puede usar este elemento para ayudar a localizar la aplicación. Para más información, consulte [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de aplicación](/windows/uwp/app-resources/localize-strings-ui-manifest). |
-| Control de usuario (WinUI) | C# y C++ | Agrega un archivo XAML y un archivo de código para crear un control de usuario que se deriva de la clase **Microsoft.UI.Xaml.Controls.UserControl** de la biblioteca de WinUI. Normalmente, un control de usuario encapsula controles existentes relacionados y proporciona su propia lógica.<p></p>Para más información sobre los controles de usuario, vea [Controles XAML personalizados](https://docs.microsoft.com/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls). |
+| Control de usuario (WinUI) | C# y C++ | Agrega un archivo XAML y un archivo de código para crear un control de usuario que se deriva de la clase **Microsoft.UI.Xaml.Controls.UserControl** de la biblioteca de WinUI. Normalmente, un control de usuario encapsula controles existentes relacionados y proporciona su propia lógica.<p></p>Para más información sobre los controles de usuario, vea [Controles XAML personalizados](/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls). |
 
 ## <a name="bug-fixes-and-other-improvements-in-winui-3-preview-2"></a>Correcciones de errores y otras mejoras en WinUI 3, versión preliminar 2
 
@@ -111,10 +111,10 @@ Esta es una lista completa de correcciones de errores y otras actualizaciones pa
 > [!NOTE]
 > La versión preliminar 2 de WinUI 3 usa la versión 2.4.2 de la biblioteca WinUI 2. 
 
-- [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-5.0) e [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-5.0) ahora funcionan según lo previsto en las aplicaciones de escritorio en C#.
+- [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-5.0) e [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-5.0) ahora funcionan según lo previsto en las aplicaciones de escritorio en C#.
   - Esto ha resuelto un par de otros problemas en torno a los controles de colecciones que no se actualizaban en la interfaz de usuario, aunque sí lo hacían en el back-end.
   - *Gracias a @hshristov por presentar una [incidencia similar](https://github.com/microsoft/microsoft-ui-xaml/issues/2490) en GitHub.*
-- Ahora, la versión preliminar 2 es compatible con [.NET 5 versión preliminar 5](https://docs.microsoft.com/dotnet/api/?view=net-5.0) para aplicaciones de escritorio.
+- Ahora, la versión preliminar 2 es compatible con [.NET 5 versión preliminar 5](/dotnet/api/?view=net-5.0) para aplicaciones de escritorio.
 - WinUI 3 ahora tiene paridad con [WinUI 2.4](../winui2/release-notes/winui-2.4.md), que incluye nuevos controles y características como un control [NavigationView jerárquico](../winui2/release-notes/winui-2.4.md#hierarchical-navigation) y [ProgressRing](../winui2/release-notes/winui-2.4.md#progressring).
 - Bloqueo corregido: al usar [TabView](/windows/uwp/design/controls-and-patterns/tab-view) con la función táctil.
 - [NavigationView](/windows/uwp/design/controls-and-patterns/navigationview) en el [Ejemplo de XAML Controls Gallery](#xaml-controls-gallery-winui-3-preview-2-branch) ahora usa el modo izquierdo en lugar del modo compacto izquierdo.
@@ -122,7 +122,7 @@ Esta es una lista completa de correcciones de errores y otras actualizaciones pa
   - *Gracias a @paulovilla por presentar [esta incidencia](https://github.com/microsoft/microsoft-ui-xaml/issues/2563) en GitHub.*
 - Bloqueo corregido: al interactuar con la interfaz de usuario XAML mientras el menú [TextBox](/windows/uwp/design/controls-and-patterns/text-box) está activo.
 - El texto del título del [Ejemplo de XAML Controls Gallery ](#xaml-controls-gallery-winui-3-preview-2-branch) ya no aparece codificado después de navegar a varias páginas.
-- El uso de la función táctil con [WebView2](https://docs.microsoft.com/microsoft-edge/webview2/) ya no desplaza ligeramente la posición.
+- El uso de la función táctil con [WebView2](/microsoft-edge/webview2/) ya no desplaza ligeramente la posición.
 - Las clases de WinUIEdit.dll se han movido del espacio de nombres Windows.UI.Text al espacio de nombres Microsoft.UI.Text.
 - Bloqueo corregido: al seleccionar un elemento en [TreeView](/windows/uwp/design/controls-and-patterns/tree-view) en modo de selección múltiple (en la versión 1803 de Windows 10).
 - Los miembros de punto, rectángulo y tamaño ahora son de tipo doble en la proyección C# de las API para aplicaciones de escritorio.
@@ -152,7 +152,7 @@ Las siguientes características y capacidades se introdujeron en WinUI 3, versi�
 - [RadialGradientBrush](/windows/uwp/design/style/brushes#radial-gradient-brushes)
 - [Actualizaciones de TabView](/windows/uwp/design/controls-and-patterns/tab-view)
 - Actualizaciones de temas oscuros
-- Mejoras y actualizaciones para [WebView2](https://docs.microsoft.com/microsoft-edge/hosting/webview2)
+- Mejoras y actualizaciones para [WebView2](/microsoft-edge/hosting/webview2)
   - Compatibilidad con valores altos de PPP
   - Compatibilidad con el cambio de tamaño y desplazamiento de ventanas
   - Actualizado para poder usar una versión más reciente de Edge
