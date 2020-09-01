@@ -1,21 +1,21 @@
 ---
-Description: Consulta cómo publicar tus aplicaciones de Windows en Microsoft Store.
+description: Obtenga información sobre cómo registrarse en el Centro de partners para publicar sus aplicaciones y juegos de Windows en Microsoft Store.
 title: Publicar aplicaciones de Windows
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, publishing, publish, selling, sell, distribute, distributing, store, dashboard
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d30eb37e9633496e510a2e05ec48cc819bd51c9
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 19607823ce98aa71a8e3abecb94b82ff06a08352
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614975"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164129"
 ---
 # <a name="publish-windows-apps-and-games"></a>Publicar aplicaciones y juegos de Windows  
 
-Puedes usar el [Centro de partners](https://partner.microsoft.com/dashboard) para publicar tus aplicaciones y juegos en Microsoft Store. [Regístrate hoy](https://developer.microsoft.com/store/register).
+Puedes usar el [Centro de partners](https://partner.microsoft.com/dashboard) para publicar tus aplicaciones y juegos en Microsoft Store. [Registrarse hoy](https://developer.microsoft.com/store/register)
 
 <br/>
 
@@ -25,7 +25,7 @@ Puedes usar el [Centro de partners](https://partner.microsoft.com/dashboard) par
         <h3 style="margin-top: 10px; margin-bottom: 0px">Envíos de aplicaciones</h3>
         <p style="margin-top: 0px; margin-bottom: 50px">Descubre lo que necesitas para crear un envío y obtener la certificación de la aplicación.</p>
         <br>
-        <a href="app-submissions.md">Lista de comprobación de envíos de aplicaciones</a><br/>
+        <a href="app-submissions.md">Lista de comprobación de envío de la aplicación</a><br/>
         <a href="the-app-certification-process.md">Proceso de certificación</a><br/>
         <a href="store-policies.md">Directivas de Microsoft Store</a><br/>
         <a href="//docs.microsoft.com/legal/windows/agreements/app-developer-agreement">Acuerdo para desarrolladores de aplicaciones</a><br/>
@@ -74,7 +74,7 @@ Puedes usar el [Centro de partners](https://partner.microsoft.com/dashboard) par
         <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg" alt="Multi-connect icon" />
         <h3 style="margin-top: 10px; margin-bottom: 0px">Interactuar con los clientes</h3>
         <a href="create-customer-groups.md">Crear grupos de clientes</a><br/>
-        <a href="send-push-notifications-to-your-apps-customers.md">Enviar notificaciones de inserción</a><br/>
+        <a href="send-push-notifications-to-your-apps-customers.md">Enviar notificaciones de inserción.</a><br/>
         <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">Crear ofertas dirigidas</a><br/>
     :::column-end:::
 :::row-end:::
@@ -85,7 +85,7 @@ Puedes usar el [Centro de partners](https://partner.microsoft.com/dashboard) par
     :::column:::
         <img src="https://docs.microsoft.com/media/illustrations/bcs-user-management-add-customer-1.svg" alt="Account icon" />
         <h3 style="margin-top: 10px; margin-bottom: 0px">Administrar cuentas de usuario</h3>
-        <a href="associate-azure-ad-with-dev-center.md">Configurar Azure AD</a><br/>
+        <a href="associate-azure-ad-with-dev-center.md">Configuración de Azure AD</a><br/>
         <a href="add-users-groups-and-azure-ad-applications.md">Agregar usuarios de la cuenta</a><br/>
         <a href="set-custom-permissions-for-account-users.md">Roles y permisos</a><br/>
     :::column-end:::
