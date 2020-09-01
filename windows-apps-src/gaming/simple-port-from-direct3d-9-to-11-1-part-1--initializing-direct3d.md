@@ -4,14 +4,14 @@ description: Aprende a convertir el código de inicialización de Direct3D 9 a D
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, juegos, direct3d 11, inicialización, migrar, direct3d 9
+keywords: Windows 10, UWP, juegos, Direct3D 11, inicialización, migración, Direct3D 9
 ms.localizationpriority: medium
-ms.openlocfilehash: c5a7f33ddbc6d70af5293b92165892c2098e452d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 576b065293f792732bb36f91c9c4117cf3f4a5c6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368031"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159179"
 ---
 # <a name="initialize-direct3d-11"></a>Inicializar Direct3D 11
 
@@ -19,9 +19,9 @@ ms.locfileid: "66368031"
 
 **Resumen**
 
--   1ª parte: Inicializar Direct3D 11
--   [Parte 2: Convertir el marco de trabajo de representación](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
--   [Parte 3: El bucle de juego de puerto](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
+-   Parte 1: Inicializar Direct3D 11
+-   [Parte 2: Convertir el marco de representación](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
+-   [Parte 3: Migrar el bucle del juego](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
 Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a obtener identificadores para el dispositivo Direct3D y el contexto de dispositivo, y a usar DXGI para configurar una cadena de intercambio. Parte 1 del tutorial [Migrar una aplicación simple de Direct3D 9 a DirectX 11 y la Plataforma universal de Windows (UWP)](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
@@ -29,7 +29,7 @@ Aprende a convertir el código de inicialización de Direct3D 9 a Direct3D 11, a
 ## <a name="initialize-the-direct3d-device"></a>Inicializar el dispositivo Direct3D
 
 
-En Direct3D 9, creamos un identificador para el dispositivo Direct3D llamando a [**IDirect3D9::CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-createdevice). Empezamos obteniendo un puntero a [**IDirect3D9 interface**](https://docs.microsoft.com/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3d9) y especificamos un número de parámetros para controlar la configuración del dispositivo Direct3D y la cadena de intercambio. Antes de hacer esto, llamamos a [**GetDeviceCaps**](https://docs.microsoft.com/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) para asegurarnos de que no estábamos pidiéndole al dispositivo que hiciera algo que no podía.
+En Direct3D 9, creamos un identificador para el dispositivo Direct3D llamando a [**IDirect3D9::CreateDevice**](/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-createdevice). Empezamos obteniendo un puntero a [**IDirect3D9 interface**](/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3d9) y especificamos un número de parámetros para controlar la configuración del dispositivo Direct3D y la cadena de intercambio. Antes de hacer esto, llamamos a [**GetDeviceCaps**](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) para asegurarnos de que no estábamos pidiéndole al dispositivo que hiciera algo que no podía.
 
 Direct3D 9
 
@@ -69,11 +69,11 @@ m_pD3D->CreateDevice(
 
 En Direct3D 11, el contexto del dispositivo y la infraestructura de gráficos se consideran de manera independiente del dispositivo en sí. La inicialización se divide en varios pasos.
 
-Primero, creamos el dispositivo. Obtenemos una lista de los niveles de característica que el dispositivo admite. Esta lista informa la mayor parte de lo que necesitamos saber sobre la GPU. Además no es necesario que creemos una interfaz solo para acceder a Direct3D. En cambio, usamos la API principal de [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice). Obtenemos un identificador para el dispositivo y su contexto inmediato. El contexto del dispositivo se usa para establecer el estado de canalización y generar comandos de representación.
+Primero, creamos el dispositivo. Obtenemos una lista de los niveles de característica que el dispositivo admite. Esta lista informa la mayor parte de lo que necesitamos saber sobre la GPU. Además no es necesario que creemos una interfaz solo para acceder a Direct3D. En cambio, usamos la API principal de [**D3D11CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice). Obtenemos un identificador para el dispositivo y su contexto inmediato. El contexto del dispositivo se usa para establecer el estado de canalización y generar comandos de representación.
 
 Después de crear el dispositivo Direct3D 11 y su contexto, podemos aprovechar la funcionalidad del puntero COM para obtener la versión más reciente de las interfaces, lo cual incluye capacidad adicional, siempre recomendable.
 
-> **Tenga en cuenta**    D3D\_característica\_nivel\_9\_1 (que corresponde al modelo de sombreador 2.0) es el nivel mínimo que se debe admitir el juego de Microsoft Store. (Los paquetes ARM de tu juego se producirá un error de certificación si no son compatibles con 9\_1.) Si su juego también incluye una ruta de acceso de representación para las características de 3 modelo de sombreador y, después, debe incluir D3D\_característica\_nivel\_9\_3 en la matriz.
+> **Nota:**    \_El nivel de característica de D3D \_ \_ 9 \_ 1 (que corresponde al modelo de sombreador 2,0) es el nivel mínimo que el juego de Microsoft Store debe admitir. (Los paquetes ARM del juego producirán un error de certificación si no admite 9 \_ 1.) si el juego incluye también una ruta de representación para las características del modelo de sombreador 3, debe incluir \_ \_ el nivel \_ de características de D3D 9 \_ 3 en la matriz.
 
  
 
@@ -125,7 +125,7 @@ Direct3D 11 incluye una API de dispositivo denominada infraestructura de gráfic
 
 El dispositivo Direct3D implementa una interfaz COM para DXGI. Primero necesitamos obtener esa interfaz y usarla para solicitar el adaptador DXGI que hospeda el dispositivo. Luego usamos el adaptador DXGI para crear una fábrica de DXGI.
 
-> **Tenga en cuenta**    son interfaces COM, por lo que podría ser usar su primera respuesta [ **QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). En cambio, debes usar punteros inteligentes [**Microsoft::WRL::ComPtr**](https://docs.microsoft.com/cpp/windows/comptr-class). Luego, simplemente llama al método [**Como()** ](https://docs.microsoft.com/previous-versions/br230426(v=vs.140)), suministrando un puntero COM vacío del tipo de interfaz correcto.
+> **Nota:**    Se trata de interfaces COM, por lo que la primera respuesta podría ser usar [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). En cambio, debes usar punteros inteligentes [**Microsoft::WRL::ComPtr**](/cpp/windows/comptr-class). Luego, simplemente llama al método [**Como()**](/previous-versions/br230426(v=vs.140)), suministrando un puntero COM vacío del tipo de interfaz correcto.
 
  
 
@@ -147,9 +147,9 @@ dxgiAdapter->GetParent(
     );
 ```
 
-Ahora que tenemos la fábrica de DXGI, podemos usarla para crear la cadena de intercambio. Definamos los parámetros de la cadena de intercambio. Se debe especificar el formato de la superficie; elegiremos [ **DXGI\_formato\_B8G8R8A8\_UNORM** ](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) porque es compatible con Direct2D. Deshabilitaremos el ajuste de escala de la pantalla, el muestreo múltiple y la representación en estéreo, porque no se usarán en este ejemplo. Dado que estamos ejecutando directamente en una clase CoreWindow, podemos dejar el ancho y el alto establecidos en 0 y obtener los valores de pantalla completa de manera automática.
+Ahora que tenemos la fábrica de DXGI, podemos usarla para crear la cadena de intercambio. Definamos los parámetros de la cadena de intercambio. Es necesario especificar el formato de la superficie. elegiremos el [**formato de DXGI \_ \_ B8G8R8A8 \_ UNORM**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) porque es compatible con Direct2D. Deshabilitaremos el ajuste de escala de la pantalla, el muestreo múltiple y la representación en estéreo, porque no se usarán en este ejemplo. Dado que estamos ejecutando directamente en una clase CoreWindow, podemos dejar el ancho y el alto establecidos en 0 y obtener los valores de pantalla completa de manera automática.
 
-> **Tenga en cuenta**    conjunto siempre el *SDKVersion* parámetro D3D11\_SDK\_versión para aplicaciones UWP.
+> **Nota:**    Establezca siempre el parámetro *SDKVersion* en la \_ versión del SDK \_ de D3D11 para las aplicaciones para UWP.
 
  
 
@@ -167,9 +167,9 @@ dxgiFactory->CreateSwapChainForCoreWindow(
 swapChain.As(&m_swapChain);
 ```
 
-Para asegurarse de que no representar con más frecuencia que realmente puede mostrar la pantalla, establecemos latencia del marco de 1 y el uso [ **DXGI\_intercambiar\_efecto\_VOLTEAR\_SEQUENTIAL** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_effect). Esto ahorra energía y es un requisito de certificación de almacenamiento. Obtendremos más detalles sobre la presentación en pantalla en la segunda parte de este tutorial.
+Para asegurarse de que no se representen con más frecuencia de lo que la pantalla puede mostrar realmente, se establece la latencia de fotogramas en 1 y se usa el [**efecto de intercambio de DXGI \_ \_ \_ volteo \_ secuencial**](/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_effect). Esto ahorra energía y es un requisito de certificación de almacenamiento. Obtendremos más detalles sobre la presentación en pantalla en la segunda parte de este tutorial.
 
-> **Tenga en cuenta**    puede usar multithreading (por ejemplo, [ **ThreadPool** ](https://docs.microsoft.com/uwp/api/Windows.System.Threading) los elementos de trabajo) para continuar con otro trabajo mientras se bloquea el subproceso de representación.
+> **Nota:**    Puede usar multithreading (por ejemplo, elementos de trabajo [**ThreadPool**](/uwp/api/Windows.System.Threading) ) para continuar con otras tareas mientras se bloquea el subproceso de representación.
 
  
 
@@ -184,7 +184,7 @@ Ahora podemos configurar el búfer de reserva para la representación.
 ## <a name="configure-the-back-buffer-as-a-render-target"></a>Configurar el búfer de reserva como un destino de representación
 
 
-Primero tenemos que obtener un identificador para el búfer de reserva. (Tenga en cuenta que el búfer de reserva es propiedad de la cadena de intercambio DXGI, mientras que en DirectX 9 pertenecía el dispositivo Direct3D.) A continuación, se informa al dispositivo Direct3D para usarlo como el destino de representación mediante la creación de un destino de representación *vista* con el búfer de reserva.
+Primero tenemos que obtener un identificador para el búfer de reserva. (Ten en cuenta que el búfer de reserva es propiedad de la cadena de intercambio DXGI, mientras que en DirectX 9 era propiedad del dispositivo Direct3D). Después, le indicamos al dispositivo que usara Direct3D como el destino de representación mediante la creación de un destino de representación *vista* con el búfer de reserva.
 
 **Direct3D 11**
 
@@ -222,12 +222,8 @@ CD3D11_VIEWPORT viewport(
 m_d3dContext->RSSetViewports(1, &viewport);
 ```
 
-Ahora que tenemos un identificador de dispositivo y un destino de representación de pantalla completa, estamos listos para cargar y dibujar geometría. Seguir [parte 2: Representación](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md).
+Ahora que tenemos un identificador de dispositivo y un destino de representación de pantalla completa, estamos listos para cargar y dibujar geometría. Continúa con la [Parte 2: Representación](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md).
 
  
 
  
-
-
-
-

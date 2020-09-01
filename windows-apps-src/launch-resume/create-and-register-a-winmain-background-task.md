@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 1e06a87ce771f603721c928b984d0f57d8e45013
-ms.sourcegitcommit: 1d53d89bd3d044f4a2dc290b93c1ad15a088b361
+ms.openlocfilehash: 72b6196f0b4607f2414eb94220dd31190ef93245
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87547317"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156019"
 ---
 # <a name="create-and-register-a-winmain-com-background-task"></a>Crear y registrar una tarea en segundo plano COM de WinMain
 
@@ -26,18 +26,18 @@ ms.locfileid: "87547317"
 
 **API importantes**
 
--   [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
--   [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+-   [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
 Cree una clase de tarea en segundo plano COM y regístrela para que se ejecute en la aplicación de WinMain empaquetada de plena confianza en respuesta a los desencadenadores. Puedes usar tareas en segundo plano para proporcionar funcionalidad cuando la aplicación esté suspendida o no se esté ejecutando. En este tema se muestra cómo crear y registrar una tarea en segundo plano que se puede ejecutar en el proceso de aplicación en primer plano u otro proceso.
 
 ## <a name="create-the-background-task-class"></a>Creación de la clase de tareas en segundo plano
 
-Puedes ejecutar código en segundo plano escribiendo clases que implementen la interfaz [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask). Este código se ejecuta cuando se desencadena un evento específico mediante, por ejemplo, [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) o [**TimeTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.TimeTrigger).
+Puedes ejecutar código en segundo plano escribiendo clases que implementen la interfaz [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask). Este código se ejecuta cuando se desencadena un evento específico mediante, por ejemplo, [**SystemTrigger**](/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) o [**TimeTrigger**](/uwp/api/Windows.ApplicationModel.Background.TimeTrigger).
 
-En los pasos siguientes se muestra cómo escribir una nueva clase que implementa la interfaz [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) y agregarla al proceso principal.
+En los pasos siguientes se muestra cómo escribir una nueva clase que implementa la interfaz [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) y agregarla al proceso principal.
 
-1.  [**Consulte estas instrucciones**](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-enhance) para hacer referencia a las API de WinRT en la solución de aplicación WinMain empaquetada. Esto es necesario para usar IBackgroundTask y las API relacionadas.
+1.  [**Consulte estas instrucciones**](/windows/apps/desktop/modernize/desktop-to-uwp-enhance) para hacer referencia a las API de WinRT en la solución de aplicación WinMain empaquetada. Esto es necesario para usar IBackgroundTask y las API relacionadas.
 2.  En esa nueva clase, implemente la interfaz [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) . El método [**IBackgroundTask. Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) es un punto de entrada necesario al que se llamará cuando se desencadene el evento especificado. Este método es necesario en cada tarea en segundo plano.
 
 > [!NOTE]
@@ -45,7 +45,7 @@ En los pasos siguientes se muestra cómo escribir una nueva clase que implementa
 
 En el código de ejemplo siguiente se muestra una clase de tarea en segundo plano básica que cuenta las principales y las escribe en un archivo hasta que se solicita su cancelación.
 
-En el ejemplo de/WinRT de C++ se implementa la clase de tarea en segundo plano como [**coclase com**](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/author-coclasses#implement-the-coclass-and-class-factory).
+En el ejemplo de/WinRT de C++ se implementa la clase de tarea en segundo plano como [**coclase com**](../cpp-and-winrt-apis/author-coclasses.md#implement-the-coclass-and-class-factory).
 
 
 <details>
@@ -391,7 +391,7 @@ sampleTaskServer.Start();
 
 ## <a name="register-the-background-task-to-run"></a>Registrar la tarea en segundo plano por ejecutar
 
-1.  Averigüe si la tarea en segundo plano ya está registrada recorriendo en iteración la propiedad [**BackgroundTaskRegistration. AllTasks**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks) . *Este paso es importante*; Si la aplicación no comprueba los registros de tareas en segundo plano existentes, puede registrar fácilmente la tarea varias veces, lo que provoca problemas de rendimiento y agota el tiempo de CPU disponible de la tarea antes de que se pueda completar el trabajo. Una aplicación puede usar el mismo punto de entrada para administrar todas las tareas en segundo plano y usar otras propiedades como el [**nombre**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.name#Windows_ApplicationModel_Background_BackgroundTaskRegistration_Name) o el [**TaskId**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.taskid#Windows_ApplicationModel_Background_BackgroundTaskRegistration_TaskId) asignados a un [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration) para decidir qué trabajo debe realizarse.
+1.  Averigüe si la tarea en segundo plano ya está registrada recorriendo en iteración la propiedad [**BackgroundTaskRegistration. AllTasks**](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks) . *Este paso es importante*; Si la aplicación no comprueba los registros de tareas en segundo plano existentes, puede registrar fácilmente la tarea varias veces, lo que provoca problemas de rendimiento y agota el tiempo de CPU disponible de la tarea antes de que se pueda completar el trabajo. Una aplicación puede usar el mismo punto de entrada para administrar todas las tareas en segundo plano y usar otras propiedades como el [**nombre**](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.name#Windows_ApplicationModel_Background_BackgroundTaskRegistration_Name) o el [**TaskId**](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.taskid#Windows_ApplicationModel_Background_BackgroundTaskRegistration_TaskId) asignados a un [**BackgroundTaskRegistration**](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration) para decidir qué trabajo debe realizarse.
 
 En el ejemplo siguiente se recorre en iteración la propiedad **AllTasks** y se establece una variable de marca en true si la tarea ya está registrada.
 
@@ -432,9 +432,9 @@ for (auto const& task : allTasks)
 
 ```
 
-1.  Si aún no está registrada, usa [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para crear una instancia de la tarea en segundo plano. El punto de entrada de la tarea debe ser el nombre de tu clase de tarea en segundo plano con el espacio de nombres como prefijo.
+1.  Si aún no está registrada, usa [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para crear una instancia de la tarea en segundo plano. El punto de entrada de la tarea debe ser el nombre de tu clase de tarea en segundo plano con el espacio de nombres como prefijo.
 
-El desencadenador de tarea en segundo plano controla cuándo se ejecutará la tarea en segundo plano. Para obtener una lista de posibles desencadenadores, vea el espacio de nombres [**Windows. ApplicationModel. Background**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background) .
+El desencadenador de tarea en segundo plano controla cuándo se ejecutará la tarea en segundo plano. Para obtener una lista de posibles desencadenadores, vea el espacio de nombres [**Windows. ApplicationModel. Background**](/uwp/api/windows.applicationmodel.background) .
 
 > [!NOTE]
 > Solo se admite un subconjunto de desencadenadores para las tareas en segundo plano empaquetadas.
@@ -471,7 +471,7 @@ if (!taskRegistered)
 
 ```
 
-1.  Puedes agregar una condición para controlar si la tarea se ejecutará después de que se produzca el evento del desencadenador (opcional). Por ejemplo, si no desea que la tarea se ejecute hasta que esté disponible Internet, use la condición **InternetAvailable**. Para obtener una lista de posibles condiciones, consulta [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType).
+1.  Puedes agregar una condición para controlar si la tarea se ejecutará después de que se produzca el evento del desencadenador (opcional). Por ejemplo, si no desea que la tarea se ejecute hasta que esté disponible Internet, use la condición **InternetAvailable**. Para obtener una lista de posibles condiciones, consulta [**SystemConditionType**](/uwp/api/Windows.ApplicationModel.Background.SystemConditionType).
 
 El siguiente código de muestra asigna una condición que requiere que el usuario esté presente:
 
@@ -485,7 +485,7 @@ builder.AddCondition(SystemCondition{ SystemConditionType::InternetAvailable });
 // The code in the next step goes here.
 ```
 
-4.  Registra la tarea en segundo plano llamando al método Register en el objeto [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder). Almacena el resultado de [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) para usarlo en el siguiente paso. Tenga en cuenta que la función Register puede devolver errores en forma de excepciones. Asegúrese de llamar a Register en try-catch.
+4.  Registra la tarea en segundo plano llamando al método Register en el objeto [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder). Almacena el resultado de [**BackgroundTaskRegistration**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) para usarlo en el siguiente paso. Tenga en cuenta que la función Register puede devolver errores en forma de excepciones. Asegúrese de llamar a Register en try-catch.
 
 El siguiente código registra la tarea en segundo plano y almacena el resultado:
 
@@ -1045,7 +1045,7 @@ int wmain(_In_ int argc, _In_reads_(argc) const wchar** argv)
 
 ## <a name="remarks"></a>Observaciones
 
-A diferencia de las aplicaciones para UWP que pueden ejecutar tareas en segundo plano en modo de espera moderno, las aplicaciones WinMain no pueden ejecutar código desde las fases de energía más bajas del modo de espera moderno. Para más información, consulte el [modo de espera moderno](https://docs.microsoft.com/windows-hardware/design/device-experiences/modern-standby) .
+A diferencia de las aplicaciones para UWP que pueden ejecutar tareas en segundo plano en modo de espera moderno, las aplicaciones WinMain no pueden ejecutar código desde las fases de energía más bajas del modo de espera moderno. Para más información, consulte el [modo de espera moderno](/windows-hardware/design/device-experiences/modern-standby) .
 
 Consulta los siguientes temas relacionados para obtener referencia de las API, una guía conceptual sobre tareas en segundo plano e instrucciones más detalladas para escribir aplicaciones que usan tareas en segundo plano.
 
@@ -1065,8 +1065,8 @@ Consulta los siguientes temas relacionados para obtener referencia de las API, u
 
 * [Directrices para tareas en segundo plano](guidelines-for-background-tasks.md)
 * [Depurar una tarea en segundo plano](debug-a-background-task.md)
-* [Cómo desencadenar eventos de suspensión, reanudación y en segundo plano en aplicaciones UWP (durante la depuración)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+* [Cómo desencadenar eventos de suspensión, reanudación y en segundo plano en aplicaciones UWP (durante la depuración)](/previous-versions/hh974425(v=vs.110))
 
 **Referencia de API de tareas en segundo plano**
 
-* [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+* [**Windows.ApplicationModel.Background**](/uwp/api/Windows.ApplicationModel.Background)

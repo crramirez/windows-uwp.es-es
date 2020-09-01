@@ -1,89 +1,89 @@
 ---
-Description: Obtenga información sobre cómo registrar su aplicación UWP para recibir notificaciones de inserción que se envían desde el centro de partners.
-title: Configurar la aplicación para notificaciones push dirigidas
+Description: Obtenga información sobre cómo registrar la aplicación para UWP para recibir notificaciones de envío enviadas desde el centro de Partners.
+title: Configurar la aplicación para notificaciones de inserción dirigidas
 ms.date: 02/08/2017
 ms.topic: article
-keywords: destino de Windows 10, uwp, Microsoft Store Services SDK, las notificaciones de inserción, centro de partners
+keywords: SDK de Windows 10, UWP, Microsoft Store Services, notificaciones de envío de destino, centro de Partners
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
-ms.openlocfilehash: a23da0bf740abfeece0047b8afab2ebff987f9d1
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: d6a420befac980574cf64e8a599d122df4c99ef4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58335053"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155659"
 ---
-# <a name="configure-your-app-for-targeted-push-notifications"></a>Configurar la aplicación para notificaciones push dirigidas
+# <a name="configure-your-app-for-targeted-push-notifications"></a>Configurar la aplicación para notificaciones de inserción dirigidas
 
-Puede usar el **notificaciones de inserción** página en el centro de partners para ponerse en contacto directamente con los clientes mediante el envío de notificaciones de inserción a los dispositivos en el que se instala la aplicación de plataforma Universal de Windows (UWP) de destino. Por ejemplo, puedes usar las notificaciones push dirigidas para sugerir a los clientes que realicen una determinada acción, como valorar tu aplicación o probar una nueva característica. Puedes enviar diferentes tipos de notificaciones de inserción, incluidas notificaciones del sistema, notificaciones de icono y notificaciones XML sin formato. También puedes supervisar la tasa de inicios de la aplicación que se derivan de las notificaciones de inserción. Para obtener más información acerca de esta característica, consulta [Enviar notificaciones de inserción a los clientes de la aplicación](../publish/send-push-notifications-to-your-apps-customers.md).
+Puede usar la página **notificaciones** de envío del centro de partners para interactuar directamente con los clientes mediante el envío de notificaciones de envío de destino a los dispositivos en los que está instalada la aplicación plataforma universal de Windows (UWP). Por ejemplo, puedes usar las notificaciones push dirigidas para sugerir a los clientes que realicen una determinada acción, como valorar tu aplicación o probar una nueva característica. Puedes enviar diferentes tipos de notificaciones de inserción, incluidas notificaciones del sistema, notificaciones de icono y notificaciones XML sin formato. También puedes supervisar la tasa de inicios de la aplicación que se derivan de las notificaciones de inserción. Para obtener más información acerca de esta característica, consulta [Enviar notificaciones de inserción a los clientes de la aplicación](../publish/send-push-notifications-to-your-apps-customers.md).
 
-Para poder enviar notificaciones push destinadas a sus clientes desde el centro de partners, debe usar un método de la [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) clase en el de Microsoft Store Services SDK para registrar la aplicación para recibir notificaciones. Puede usar los métodos adicionales de esta clase para notificar al centro de partners que se inició la aplicación en respuesta a una notificación de inserción de destino (si desea realizar un seguimiento de la tasa de lanzamientos de la aplicación que se obtienen de las notificaciones) y para dejar de recibir notificaciones.
+Para poder enviar notificaciones de envío de destino a los clientes desde el centro de Partners, debe usar un método de la clase [StoreServicesEngagementManager](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) en el SDK de Microsoft Store Services para registrar la aplicación para recibir notificaciones. Puede usar métodos adicionales de esta clase para notificar al centro de partners que la aplicación se ha iniciado como respuesta a una notificación de envío de destino (si desea realizar un seguimiento de la tasa de lanzamientos de la aplicación que se han producido en las notificaciones) y para dejar de recibir notificaciones.
 
-## <a name="configure-your-project"></a>Configurar tu proyecto
+## <a name="configure-your-project"></a>Configurar el proyecto
 
 Antes de escribir código, sigue estos pasos para agregar una referencia al Microsoft Store Services SDK en tu proyecto:
 
 1. Si aún no lo has hecho, [instala el Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk) en el equipo de desarrollo. 
-2. Abre el proyecto en Visual Studio.
+2. Abra el proyecto en Visual Studio.
 3. En el Explorador de soluciones, haz clic con el botón secundario en el nodo **Referencias** del proyecto y haz clic en **Agregar referencia**.
 4. En el cuadro de diálogo **Administrador de referencias**, expande **Windows Universal** y haz clic en **Extensiones**.
 5. En la lista de los SDK, haz clic en la casilla junto a **Microsoft Engagement Framework** y haz clic en **Aceptar**.
 
-## <a name="register-for-push-notifications"></a>Registrar para notificaciones de inserción
+## <a name="register-for-push-notifications"></a>Registro de notificaciones push
 
-Para registrar la aplicación para recibir notificaciones de inserción de destino desde el centro de partners:
+Para registrar la aplicación para recibir notificaciones de envío de destino desde el centro de Partners:
 
-1. En tu proyecto, busca una sección de código que se ejecute durante el inicio en el que puedes registrar tu aplicación para la recepción de notificaciones.
+1. En el proyecto, busque una sección de código que se ejecute durante el inicio en el que puede registrar la aplicación para recibir notificaciones.
 2. Agrega esta instrucción en la parte superior del archivo de código.
 
     [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#EngagementNamespace)]
 
-3. Obtén un objeto [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) y llama a una de las sobrecargas [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) del código de inicio que identificaste anteriormente. Se llamará a este método cada vez que se inicie la aplicación.
+3. Obtén un objeto [StoreServicesEngagementManager](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) y llama a una de las sobrecargas [RegisterNotificationChannelAsync](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) del código de inicio que identificaste anteriormente. Se llamará a este método cada vez que se inicie la aplicación.
 
-  * Si desea que el centro de partners para crear su propio URI de canal para las notificaciones, llame a la [RegisterNotificationChannelAsync()](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) sobrecargar.
+  * Si desea que el centro de Partners cree su propio URI de canal para las notificaciones, llame a la sobrecarga [RegisterNotificationChannelAsync ()](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) .
 
       [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync1)]
       > [!IMPORTANT]
-      > Si tu aplicación también llama a [CreatePushNotificationChannelForApplicationAsync](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) para crear un canal de notificación de WNS, asegúrate de que el código no llama a [CreatePushNotificationChannelForApplicationAsync](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) y a la sobrecarga [RegisterNotificationChannelAsync()](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) al mismo tiempo. Si necesitas llamar a estos dos métodos, llámalos secuencialmente y espera la devolución de un método antes de llamar al otro.
+      > Si la aplicación también llama a [CreatePushNotificationChannelForApplicationAsync](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) para crear un canal de notificación para WNS, asegúrese de que el código no llama a [CreatePushNotificationChannelForApplicationAsync](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) y la sobrecarga [RegisterNotificationChannelAsync ()](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) simultáneamente. Si necesitas llamar a estos dos métodos, llámalos secuencialmente y espera la devolución de un método antes de llamar al otro.
 
-  * Si desea especificar el canal de URI que se utiliza para recibir notificaciones de inserción de destino del centro de partners, llamada la [RegisterNotificationChannelAsync(StoreServicesNotificationChannelParameters)](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) sobrecargar. Por ejemplo, es posible que quieras hacer esto si tu aplicación ya usa Servicios de notificaciones de inserción de Windows (WNS) y quieres usar el mismo URI de canal. Primero debes crear un objeto [StoreServicesNotificationChannelParameters](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters) y asignar la propiedad [CustomNotificationChannelUri](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri) al URI de tu canal.
+  * Si desea especificar el URI de canal que se va a usar para las notificaciones de envío de destino del centro de Partners, llame a la sobrecarga de [RegisterNotificationChannelAsync (StoreServicesNotificationChannelParameters)](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) . Por ejemplo, es posible que quieras hacer esto si tu aplicación ya usa Servicios de notificaciones de inserción de Windows (WNS) y quieres usar el mismo URI de canal. Primero debes crear un objeto [StoreServicesNotificationChannelParameters](/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters) y asignar la propiedad [CustomNotificationChannelUri](/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri) al URI de tu canal.
 
       [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync2)]
 
 > [!NOTE]
-> Al llamar al método **RegisterNotificationChannelAsync**, se crea un archivo denominado MicrosoftStoreEngagementSDKId.txt en al almacén de datos de aplicaciones local para la aplicación (la carpeta devuelta por la propiedad [ApplicationData.LocalFolder](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalFolder)). Este archivo contiene el id. usado por la infraestructura de notificaciones push dirigidas. Asegúrate de que la aplicación no modifica ni elimina este archivo. De lo contrario, los usuarios pueden recibir varias instancias de notificaciones o puede que estas no se comporten correctamente de otro modo.
+> Cuando se llama al método **RegisterNotificationChannelAsync** , se crea un archivo denominado MicrosoftStoreEngagementSDKId.txt en el almacén de datos de la aplicación local para la aplicación (la carpeta devuelta por la propiedad [ApplicationData. LocalFolder](/uwp/api/Windows.Storage.ApplicationData.LocalFolder) ). Este archivo contiene un identificador que usa la infraestructura de notificaciones de envío de destino. Asegúrese de que la aplicación no modifique ni elimine este archivo. De lo contrario, los usuarios pueden recibir varias instancias de notificaciones, o bien es posible que las notificaciones no se comporten correctamente de otras maneras.
 
 <span id="notification-customers" />
 
-### <a name="how-targeted-push-notifications-are-routed-to-customers"></a>Cómo se enrutan las notificaciones push dirigidas a los clientes
+### <a name="how-targeted-push-notifications-are-routed-to-customers"></a>Cómo se enrutan las notificaciones de envío de destino a los clientes
 
-Cuando la aplicación llama a **RegisterNotificationChannelAsync**, este método toma la cuenta de Microsoft del cliente que ha iniciado sesión en el dispositivo. Más adelante, cuando se envía una notificación push destinadas a un segmento que incluye a este cliente, Partner Center envía la notificación a los dispositivos que están asociados con la cuenta de Microsoft de este cliente.
+Cuando la aplicación llama a **RegisterNotificationChannelAsync**, este método recopila el cuenta de Microsoft del cliente que ha iniciado sesión actualmente en el dispositivo. Más adelante, cuando se envía una notificación de envío de destino a un segmento que incluye a este cliente, el centro de Partners envía la notificación a los dispositivos asociados al cuenta de Microsoft de este cliente.
 
-Ten en cuenta que, si el cliente que ha iniciado la aplicación cede su dispositivo a otra persona para que lo use mientras todavía está conectado en el dispositivo con su cuenta de Microsoft, esa persona podrá ver la notificación que estaba dirigida al cliente original. Esto puede tener consecuencias imprevistas, en particular para las aplicaciones que ofrecen servicios a los que los clientes pueden conectarse para usarlos. Para impedir que otros usuarios vean tus notificaciones dirigidas en este escenario, llama al método [UnregisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) cuando los clientes cierren sesión en la aplicación. Para más información, consulta [Anular el registro para notificaciones push](#unregister) más tarde en este artículo.
+Si el cliente que inició la aplicación proporciona su dispositivo a otra persona para usar mientras todavía está conectado al dispositivo con sus cuenta de Microsoft, tenga en cuenta que la otra persona puede ver la notificación dirigida al cliente original. Esto puede tener consecuencias no deseadas, especialmente en el caso de las aplicaciones que ofrecen servicios que los clientes pueden iniciar sesión para usar. Para evitar que otros usuarios vean las notificaciones de destino en este escenario, llame al método [UnregisterNotificationChannelAsync](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) cuando los clientes cierren sesión en la aplicación. Para obtener más información, consulte [anulación del registro para las notificaciones de envío](#unregister) más adelante en este artículo.
 
-### <a name="how-your-app-responds-when-the-user-launches-your-app"></a>Cómo responde la aplicación cuando el usuario la inicia
+### <a name="how-your-app-responds-when-the-user-launches-your-app"></a>Cómo responde la aplicación cuando el usuario inicia la aplicación
 
-Después de la aplicación se registra para recibir notificaciones y se [enviar una notificación push a los clientes de la aplicación desde el centro de partners](../publish/send-push-notifications-to-your-apps-customers.md), uno de los siguientes puntos de entrada en la aplicación se llamará cuando el usuario inicia la aplicación en la respuesta con la notificación push. Si tienes código que quieres que se ejecute cuando el usuario inicie la aplicación, puedes agregar el código a uno de estos puntos de entrada de tu aplicación.
+Una vez que la aplicación se ha registrado para recibir notificaciones y [envía una notificación de inserción a los clientes de la aplicación desde el centro de Partners](../publish/send-push-notifications-to-your-apps-customers.md), se llamará a uno de los siguientes puntos de entrada de la aplicación cuando el usuario inicie la aplicación en respuesta a la notificación de inserción. Si tienes código que quieres que se ejecute cuando el usuario inicie la aplicación, puedes agregar el código a uno de estos puntos de entrada de tu aplicación.
 
-  * Si la notificación de inserción tiene un tipo de activación en primer plano, anula el método [OnActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) de la clase **App** de tu proyecto y agrega el código a este método.
+  * Si la notificación de inserción tiene un tipo de activación en primer plano, anula el método [OnActivated](/uwp/api/windows.ui.xaml.application.onactivated) de la clase **App** de tu proyecto y agrega el código a este método.
 
-  * Si la notificación de inserción tiene un tipo de activación en segundo plano, agrega el código al método [Run](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) para la [tarea en segundo plano](../launch-resume/support-your-app-with-background-tasks.md).
+  * Si la notificación de inserción tiene un tipo de activación en segundo plano, agrega el código al método [Run](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) para la [tarea en segundo plano](../launch-resume/support-your-app-with-background-tasks.md).
 
 Por ejemplo, es posible que quieras recompensar a los usuarios de la aplicación que hayan adquirido complementos de pago en la aplicación regalándoles un complemento gratuito. En este caso, puedes enviar una notificación de inserción a un [segmento de clientes](../publish/create-customer-segments.md) que esté dirigida específicamente a esos usuarios. A continuación, puedes agregar código para regalarles una [compra desde la aplicación](in-app-purchases-and-trials.md) gratuita en uno de los puntos de entrada señalados anteriormente.
 
-## <a name="notify-partner-center-of-your-app-launch"></a>Notificar al centro de partners de su inicio de la aplicación
+## <a name="notify-partner-center-of-your-app-launch"></a>Notificar al centro de partners del inicio de la aplicación
 
-Si selecciona el **velocidad de inicio de aplicación de seguimiento** opción para la notificación de inserción de destino en el centro de partners, llamada la [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) método desde el punto de entrada correspondiente en la aplicación notifique al centro de partners que se inició la aplicación en respuesta a una notificación de inserción.
+Si selecciona la opción de seguimiento de la **frecuencia de inicio** de la aplicación para la notificación de inserción de destino en el centro de Partners, llame al método [ParseArgumentsAndTrackAppLaunch](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) desde el punto de entrada adecuado en la aplicación para notificar al centro de partners que la aplicación se inició en respuesta a una notificación de inserción.
 
-Este método devuelve también los argumentos de inicio originales de la aplicación. Cuando opta por controlar la velocidad de inicio de la aplicación para la notificación de inserción, iniciar un seguimiento opaco A que identificador se agrega los argumentos de inicio para ayudar a realizar un seguimiento de la aplicación en el centro de partners. Debe pasar los argumentos de inicio para la aplicación a la [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) , este método y envía el identificador de seguimiento al centro de partners, quita el identificador de seguimiento de los argumentos de inicio y devuelve el original Iniciar argumentos en el código.
+Este método devuelve también los argumentos de inicio originales de la aplicación. Si decide realizar el seguimiento de la tasa de inicio de la aplicación de la notificación de envío, se agrega un identificador de seguimiento opaco a los argumentos de inicio para ayudar a realizar un seguimiento del inicio de la aplicación en el centro de Partners. Debe pasar los argumentos de inicio de la aplicación al método [ParseArgumentsAndTrackAppLaunch](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) y este método envía el identificador de seguimiento al centro de Partners, quita el identificador de seguimiento de los argumentos de inicio y devuelve los argumentos de inicio originales al código.
 
-La forma de llamar al método depende del tipo de activación de la notificación push:
+La forma en que se llama a este método depende del tipo de activación de la notificación de extracción:
 
-* Si la notificación de inserción tiene un tipo de activación en primer plano, llama a este método desde la invalidación del método [OnActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) y pasa los argumentos que están disponibles en el objeto [ToastNotificationActivatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs) que se pasa a este método. El siguiente ejemplo de código da por hecho que el archivo de código tiene instrucciones **using** para los espacios de nombres **Microsoft.Services.Store.Engagement** y **Windows.ApplicationModel.Activation**.
+* Si la notificación de inserción tiene un tipo de activación en primer plano, llama a este método desde la invalidación del método [OnActivated](/uwp/api/windows.ui.xaml.application.onactivated) y pasa los argumentos que están disponibles en el objeto [ToastNotificationActivatedEventArgs](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs) que se pasa a este método. El siguiente ejemplo de código da por hecho que el archivo de código tiene instrucciones **using** para los espacios de nombres **Microsoft.Services.Store.Engagement** y **Windows.ApplicationModel.Activation**.
 
   [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/App.xaml.cs#OnActivated)]
 
-* Si la notificación de inserción tiene un tipo de activación en segundo plano, llama a este método desde el método [Run](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) para tu [tarea en segundo plano](../launch-resume/support-your-app-with-background-tasks.md) y pasa los argumentos que están disponibles en el objeto [ToastNotificationActionTriggerDetail](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationActionTriggerDetail) que se pasa a este método. El siguiente ejemplo de código da por hecho que el archivo de código tiene instrucciones **using** para los espacios de nombres **Microsoft.Services.Store.Engagement**, **Windows.ApplicationModel.Background** y **Windows.UI.Notifications**.
+* Si la notificación de inserción tiene un tipo de activación en segundo plano, llama a este método desde el método [Run](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) para tu [tarea en segundo plano](../launch-resume/support-your-app-with-background-tasks.md) y pasa los argumentos que están disponibles en el objeto [ToastNotificationActionTriggerDetail](/uwp/api/Windows.UI.Notifications.ToastNotificationActionTriggerDetail) que se pasa a este método. El siguiente ejemplo de código da por hecho que el archivo de código tiene instrucciones **using** para los espacios de nombres **Microsoft.Services.Store.Engagement**, **Windows.ApplicationModel.Background** y **Windows.UI.Notifications**.
 
   [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#Run)]
 
@@ -91,15 +91,15 @@ La forma de llamar al método depende del tipo de activación de la notificació
 
 ## <a name="unregister-for-push-notifications"></a>Anular el registro para notificaciones de inserción
 
-Si desea que la aplicación para dejar de recibir notificaciones de inserción desde el centro de partners, llamada de destino la [UnregisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) método.
+Si desea que la aplicación deje de recibir notificaciones de envío de destino del centro de Partners, llame al método [UnregisterNotificationChannelAsync](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) .
 
 [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#UnregisterNotificationChannelAsync)]
 
-Ten en cuenta que este método invalida el canal que se esté utilizando para las notificaciones, de manera que la aplicación ya no recibirá notificaciones de inserción de *ningún* servicio. Después de que se ha cerrado, el canal no puede utilizarse nuevamente para todos los servicios, incluidas las notificaciones de inserción de destino desde el centro de partners y otras notificaciones con WNS. Para reanudar el envío de notificaciones de inserción a esta aplicación, la aplicación debe solicitar un nuevo canal.
+Ten en cuenta que este método invalida el canal que se esté utilizando para las notificaciones, de manera que la aplicación ya no recibirá notificaciones de inserción de *ningún* servicio. Una vez que se ha cerrado, no se puede volver a usar el canal para ningún servicio, incluidas las notificaciones de envío de destino del centro de Partners y otras notificaciones que usan WNS. Para reanudar el envío de notificaciones de inserción a esta aplicación, la aplicación debe solicitar un nuevo canal.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Enviar notificaciones de inserción a los clientes de la aplicación](../publish/send-push-notifications-to-your-apps-customers.md)
-* [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)
-* [Cómo solicitar, crear y guardar un canal de notificación](https://docs.microsoft.com/previous-versions/windows/apps/hh868221(v=win.10))
-* [Microsoft Store Services SDK](https://docs.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)
+* [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
+* [Cómo solicitar, crear y guardar un canal de notificación](/previous-versions/windows/apps/hh868221(v=win.10))
+* [Microsoft Store Services SDK](./microsoft-store-services-sdk.md)

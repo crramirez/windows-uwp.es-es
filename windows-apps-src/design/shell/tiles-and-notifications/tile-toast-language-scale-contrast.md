@@ -1,95 +1,95 @@
 ---
-Description: Las ventanas y notificaciones del sistema pueden cargar cadenas y archivos adaptados al idioma, el factor de escala de visualización, el contraste alto y otros contextos de tiempo de ejecución.
-title: Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.
+Description: Los iconos y las notificaciones del sistema pueden cargar cadenas e imágenes personalizadas para el idioma de visualización, mostrar el factor de escala, el contraste alto y otros contextos en tiempo de ejecución.
+title: Compatibilidad con las notificaciones de icono y del sistema para el idioma, la escala y el contraste alto
 template: detail.hbs
 ms.date: 10/12/2017
 ms.topic: article
-keywords: windows 10, uwp, recursos, imagen, activo, MRT, calificador
+keywords: windows 10, uwp, resource, image, asset, MRT, qualifier
 ms.localizationpriority: medium
-ms.openlocfilehash: aa6e93196d30c15374129eee7714604cfab7b82e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 88bcd5d6ce59d0561e76f46f6291f58ad03ddf3c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601480"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156739"
 ---
-# <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Compatibilidad de ventanas y notificaciones del sistema para el idioma, la escala y el contraste alto.
+# <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Compatibilidad con las notificaciones de icono y del sistema para el idioma, la escala y el contraste alto
 
-Las ventanas y notificaciones del sistema pueden cargar cadenas y archivos adaptados al idioma, el [factor de escala de visualización](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), el contraste alto y otros contextos de tiempo de ejecución. Para obtener información sobre cómo usar calificadores en los nombres de los archivos de recursos, consulte [adaptar los recursos de idioma, la escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md) y [iconos de aplicación y los logotipos](/windows/uwp/design/style/app-icons-and-logos).
+Los iconos y las notificaciones del sistema pueden cargar cadenas e imágenes personalizadas para el idioma de visualización, [Mostrar el factor de escala](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), el contraste alto y otros contextos en tiempo de ejecución. Para obtener información sobre cómo usar calificadores en los nombres de los archivos de recursos, consulte [adaptar los recursos para el idioma, la escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md) y los [iconos y logotipos](../../style/app-icons-and-logos.md)de la aplicación.
 
-Para obtener más información sobre la propuesta de valor de localizar tu aplicación, consulta [Globalización y localización](../../globalizing/globalizing-portal.md).
+Para más información sobre la propuesta de valor de localizar la aplicación, consulta [Globalización y localización](../../globalizing/globalizing-portal.md).
 
-## <a name="refer-to-a-string-resource-from-a-template"></a>Referirse a un recurso de cadena desde una plantilla
+## <a name="refer-to-a-string-resource-from-a-template"></a>Referencia a un recurso de cadena de una plantilla
 
-En tu ventana o plantilla de notificación del sistema, puedes consultar un recurso de cadena con el esquema de URI (identificador uniforme de recursos) `ms-resource` seguido de un identificador de recursos de cadena simple. Por ejemplo, si tienes un archivo Resources.resx que contenga una entrada de recursos cuyo nombre es "Farewell", en ese caso deberás tener un recurso de cadena con el identificador "Farewell". Para obtener más información sobre identificadores de recursos de cadena y archivos de recursos (.resw), consulta [Localizar las cadenas de la interfaz de usuario y el manifiesto de paquete de la aplicación](../../../app-resources/localize-strings-ui-manifest.md).
+En la plantilla de icono o del sistema, puede hacer referencia a un recurso de cadena mediante el `ms-resource` esquema URI (identificador uniforme de recursos) seguido de un identificador de recurso de cadena simple. Por ejemplo, si tiene un archivo resources. resx que contiene una entrada de recurso cuyo nombre es "despedida", tiene un recurso de cadena con el identificador "despedida". Para obtener más información sobre los identificadores de recursos de cadena y los archivos de recursos (. resw), consulte [localizar cadenas en la interfaz de usuario y el manifiesto del paquete de la aplicación](../../../app-resources/localize-strings-ui-manifest.md).
 
-Esta es la forma en que aparecería una referencia al identificador de recursos de cadena "Farewell" en el cuerpo [texto](/uwp/schemas/tiles/tilesschema/element-text?branch=live) de la plantilla de contenido, usando `ms-resource`.
+Este es el aspecto de una referencia al identificador de recurso de cadena "despedida" en el cuerpo del [texto](/uwp/schemas/tiles/tilesschema/element-text?branch=live) del contenido de la plantilla, mediante `ms-resource` .
 
 ```xml
 <text id="1">ms-resource:Farewell</text>
 ```
 
-Si se omite el esquema de URI `ms-resource`, el cuerpo del texto es tan solo una cadena literal, y *no* una referencia a un identificador.
+Si omite el `ms-resource` esquema de URI, el cuerpo del texto es simplemente un literal de cadena y *no* una referencia a un identificador.
 
 ```xml
 <text id="1">Farewell</text>
 ```
 
-## <a name="refer-to-an-image-resource-from-a-template"></a>Referirse a un recurso de imagen desde una plantilla
+## <a name="refer-to-an-image-resource-from-a-template"></a>Referencia a un recurso de imagen desde una plantilla
 
-En tu ventana o plantilla de notificación del sistema, puedes hacer referencia a un recurso de imagen usando el esquema de URI (identificador uniforme de recursos) `ms-appx`, seguido del nombre del recurso de imagen. Se trata de la misma manera en que se hace referencia a un recurso de imagen en el marcado XAML (para obtener más información, consulta [Hacer referencia a una imagen u otro activo de marcado y código XAML](../../../app-resources/images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)).
+En la plantilla de icono o del sistema, puede hacer referencia a un recurso de imagen mediante el `ms-appx` esquema URI (identificador uniforme de recursos) seguido del nombre del recurso de imagen. Esta es la misma manera en que se hace referencia a un recurso de imagen en el marcado XAML (para obtener más información, vea [hacer referencia a una imagen u otro recurso desde el marcado y el código XAML](../../../app-resources/images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)).
 
-Por ejemplo, podrías denominar a las carpetas de esta manera.
+Por ejemplo, puede asignar un nombre a carpetas como este.
 
 ```
 \Assets\Images\contrast-standard\welcome.png
 \Assets\Images\contrast-high\welcome.png
 ```
 
-En ese caso, tiene un recurso de imagen único y su nombre (como ruta de acceso absoluta) es `/Assets/Images/welcome.png`. Esta es la manera de usar este nombre en la plantilla.
+En ese caso, tiene un recurso de imagen único y su nombre (como una ruta de acceso absoluta) es `/Assets/Images/welcome.png` . Aquí se muestra cómo usar ese nombre en la plantilla.
 
 ```xml
 <image id="1" src="ms-appx:///Assets/Images/welcome.png"/>
 ```
 
-Observa cómo en este URI de ejemplo, el esquema ("`ms-appx`") va seguido de "`://`", seguido a su vez por una ruta absoluta (una ruta absoluta comienza por "`/`").
+Observe cómo en este URI de ejemplo el esquema (" `ms-appx` ") va seguido de " `://` ", que va seguido de una ruta de acceso absoluta (una ruta de acceso absoluta comienza por " `/` ").
 
-## <a name="hosting-and-loading-images-in-the-cloud"></a>Alojamiento y carga de imágenes en la nube
+## <a name="hosting-and-loading-images-in-the-cloud"></a>Hospedaje y carga de imágenes en la nube
 
-Los esquemas de URI `ms-resource` y `ms-appx` llevan a cabo la comparación automática de calificadores para buscar el recurso que sea más adecuado para el contexto actual. Los esquemas de URI web (por ejemplo, `http`, `https` y `ftp`) no realizan ninguna comparación automática de esta clase.
+Los `ms-resource` `ms-appx` esquemas de URI y realizan la coincidencia automática del calificador para buscar el recurso más adecuado para el contexto actual. Los esquemas de URI web (por ejemplo, `http` , `https` y `ftp` ) no realizan ninguna coincidencia automática.
 
-En su lugar, anexa al URI de la imagen una cadena de consulta que describa el valor o valores de calificador solicitados.
+En su lugar, anexe al URI de la imagen una cadena de consulta que describa el valor o los valores del calificador solicitados.
 
 ```xml
 <image id="1" src="http://www.contoso.com/Assets/Images/welcome.png?ms-lang=en-US"/>
 ```
 
-A continuación, en el servicio de aplicación que proporciona las imágenes, implementa un controlador HTTP que inspeccione y use la cadena de consulta para determinar qué imagen devolver.
+A continuación, en el servicio de aplicaciones que proporciona las imágenes, implemente un controlador HTTP que inspeccione y use la cadena de consulta para determinar la imagen que se va a devolver.
 
-También debes establecer el atributo [**addImageQuery**](/uwp/schemas/tiles/tilesschema/element-visual?branch=live) en `true` en la carga de trabajo XML de [ventana](/uwp/schemas/tiles/tilesschema/schema-root?branch=live) o [notificación del sistema](/uwp/schemas/tiles/toastschema/schema-root?branch=live). El atributo **addImageQuery** aparece en los elementos `visual`, `binding` e `image` de los esquemas de ventanas y notificaciones del sistema. Establecer explícitamente **addImageQuery** en un elemento invalida cualquier valor establecido en un elemento anterior. Por ejemplo, un valor **addImageQuery** de `true` en un elemento `image` invalida un **addImageQuery** de `false` en su elemento primario de `binding`.
+También debe establecer el atributo [**addImageQuery**](/uwp/schemas/tiles/tilesschema/element-visual?branch=live) en `true` en la carga XML del [icono](/uwp/schemas/tiles/tilesschema/schema-root?branch=live) o la notificación del [sistema](/uwp/schemas/tiles/toastschema/schema-root?branch=live) . El atributo **addImageQuery** aparece en los `visual` `binding` elementos, y `image` de los esquemas de icono y del sistema. Al establecer **addImageQuery** explícitamente en un elemento, se invalida cualquier valor establecido en un antecesor. Por ejemplo, un valor **addImageQuery** de `true` en un `image` elemento invalida un **addImageQuery** de `false` en su `binding` elemento primario.
 
-Estas son las cadenas de consulta que puedes usar.
+Estas son las cadenas de consulta que puede usar.
 
-| Calificador | Cadena de consulta | Ejemplo |
+| Calificador: | Cadena de consulta | Ejemplo |
 | --------- | ------------ | ------- |
-| Escala | ms-scale | ?ms-scale=400 |
-| Idioma | ms-lang | ?ms-lang=en-US |
-| Compare | ms-contrast | ?ms-contrast=high |
+| Escala | a escala de MS | ? MS-Scale = 400 |
+| Idioma | MS-lang | ? MS-lang = en-US |
+| Compare | MS-Contrast | ? MS-Contrast = alto |
 
-Para ver una tabla de referencia de todos los valores de calificador posibles que puedes usar en las cadenas de consulta, atiende a [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues).
+Para obtener una tabla de referencia de todos los posibles valores de calificador que puede usar en las cadenas de consulta, vea [ResourceContext. QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues).
 
 ## <a name="important-apis"></a>API importantes
 
-* [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
+* [ResourceContext. QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Tamaños de pantalla y los puntos de interrupción para el diseño dinámico](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md)
-* [Adaptar los recursos de idioma, la escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md)
-* [Directrices de activos de ventanas e iconos](app-assets.md).
+* [Tamaños de pantalla y puntos de interrupción de diseño adaptativo](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md)
+* [Adapte los recursos para el idioma, la escala y otros calificadores](../../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [Directrices para los recursos de iconos e iconos](../../style/app-icons-and-logos.md).
 * [Globalización y localización](../../globalizing/globalizing-portal.md)
 * [Localizar cadenas en la interfaz de usuario y el manifiesto de paquete de la aplicación](../../../app-resources/localize-strings-ui-manifest.md)
-* [Hacer referencia a una imagen u otros activos de código y marcado XAML](../../../app-resources/images-tailored-for-scale-theme-contrast.md)
-* [AddImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
-* [Esquema de icono](/uwp/schemas/tiles/tilesschema/schema-root?branch=live)
-* [Esquema de notificación del sistema](/uwp/schemas/tiles/toastschema/schema-root?branch=live)
+* [Referencia a una imagen u otro recurso desde el marcado y el código XAML](../../../app-resources/images-tailored-for-scale-theme-contrast.md)
+* [addImageQuery](/uwp/schemas/tiles/tilesschema/element-visual?branch=live)
+* [Esquema de iconos](/uwp/schemas/tiles/tilesschema/schema-root?branch=live)
+* [Esquema de notificaciones del sistema](/uwp/schemas/tiles/toastschema/schema-root?branch=live)

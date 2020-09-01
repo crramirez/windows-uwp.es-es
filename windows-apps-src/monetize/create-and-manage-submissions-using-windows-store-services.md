@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: API de envío de Microsoft Store de Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 38a59db4115332a374c96c8a4400dbaccff9cd82
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: af0d36f2fa76fe9bb5bd253436f3d434a860e7ec
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846825"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155629"
 ---
 # <a name="create-and-manage-submissions"></a>Crear y administrar usuarios
 
@@ -40,21 +40,21 @@ En los pasos siguientes se describe el proceso de un extremo a otro del uso de l
 
 Antes de empezar a escribir código para llamar a la API de envío de Microsoft Store, asegúrese de que ha completado los requisitos previos siguientes.
 
-* Usted (o su organización) tiene que tener un directorio de Azure AD y el permiso de [Administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el directorio. Si usa Microsoft 365 u otros servicios empresariales de Microsoft, ya tiene el directorio de Azure AD. De lo contrario, puede [crear un nuevo Azure ad en el centro de Partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin cargo adicional.
+* Usted (o su organización) tiene que tener un directorio de Azure AD y el permiso de [Administrador global](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el directorio. Si usa Microsoft 365 u otros servicios empresariales de Microsoft, ya tiene el directorio de Azure AD. De lo contrario, puede [crear un nuevo Azure ad en el centro de Partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin cargo adicional.
 
 * Tiene que [asociar una aplicación Azure AD a su cuenta del Centro de partners](#associate-an-azure-ad-application-with-your-windows-partner-center-account) y obtener el identificador de inquilino, el identificador de cliente y la clave. Necesitará estos valores para obtener un token de acceso de Azure AD, que usará en las llamadas a la API de envío de Microsoft Store.
 
 * Preparación de la aplicación para su uso con la API de envío de Microsoft Store:
 
-  * Si la aplicación aún no existe en el centro de Partners, debe [reservar su nombre en el centro de partners para crear la aplicación](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name). No se puede usar el Microsoft Store API de envío para crear una aplicación en el centro de Partners. debe trabajar en el centro de partners para crearlo y, después, puede usar la API para tener acceso a la aplicación y crear envíos para ella mediante programación. Sin embargo, puedes usar la API para crear complementos y paquetes piloto mediante programación antes de crear envíos para estos.
+  * Si la aplicación aún no existe en el centro de Partners, debe [reservar su nombre en el centro de partners para crear la aplicación](../publish/create-your-app-by-reserving-a-name.md). No se puede usar el Microsoft Store API de envío para crear una aplicación en el centro de Partners. debe trabajar en el centro de partners para crearlo y, después, puede usar la API para tener acceso a la aplicación y crear envíos para ella mediante programación. Sin embargo, puedes usar la API para crear complementos y paquetes piloto mediante programación antes de crear envíos para estos.
 
-  * Antes de poder crear un envío para una aplicación determinada mediante esta API, primero debe [crear un envío para la aplicación en el centro de Partners](https://docs.microsoft.com/windows/uwp/publish/app-submissions), lo que incluye responder al cuestionario de [clasificación por edades](https://docs.microsoft.com/windows/uwp/publish/age-ratings) . Después de realizar este paso, podrás crear mediante programación nuevos envíos para esta aplicación con la API. No es necesario crear un envío de complementos o de paquetes piloto antes de usar la API para esos tipos de envíos.
+  * Antes de poder crear un envío para una aplicación determinada mediante esta API, primero debe [crear un envío para la aplicación en el centro de Partners](../publish/app-submissions.md), lo que incluye responder al cuestionario de [clasificación por edades](../publish/age-ratings.md) . Después de realizar este paso, podrás crear mediante programación nuevos envíos para esta aplicación con la API. No es necesario crear un envío de complementos o de paquetes piloto antes de usar la API para esos tipos de envíos.
 
-  * Si creas o actualizas un envío de aplicaciones y necesitas incluir un paquete de aplicaciones, [prepara el paquete de aplicaciones](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements).
+  * Si creas o actualizas un envío de aplicaciones y necesitas incluir un paquete de aplicaciones, [prepara el paquete de aplicaciones](../publish/app-package-requirements.md).
 
-  * Si vas a crear o actualizar el envío de una aplicación y necesitas incluir capturas de pantalla o imágenes para la descripción de Tienda, [prepara las imágenes y capturas de pantalla de la aplicación](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images).
+  * Si vas a crear o actualizar el envío de una aplicación y necesitas incluir capturas de pantalla o imágenes para la descripción de Tienda, [prepara las imágenes y capturas de pantalla de la aplicación](../publish/app-screenshots-and-images.md).
 
-  * Si vas a crear o actualizar un envío de complementos y debes incluir un icono, [prepara el icono](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions).
+  * Si vas a crear o actualizar un envío de complementos y debes incluir un icono, [prepara el icono](../publish/create-add-on-store-listings.md).
 
 <span id="associate-an-azure-ad-application-with-your-windows-partner-center-account" />
 
@@ -79,7 +79,7 @@ Antes de poder usar la API de envío de Microsoft Store, debe asociar una aplica
 
 Antes de llamar a cualquiera de los métodos de la API de envío de Microsoft Store, primero debe obtener un token de acceso Azure AD que pase al encabezado **Authorization** de cada método de la API. Una vez que haya obtenido un token de acceso, tiene 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
 
-Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
+Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](/azure/active-directory/azuread-dev/v1-oauth2-client-creds-grant-flow) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
 ```json
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
@@ -94,7 +94,7 @@ grant_type=client_credentials
 
 Para el valor de * \_ identificador de inquilino* en el URI de post y los parámetros de * \_ identificador de cliente* y * \_ secreto de cliente* , especifique el identificador de inquilino, el identificador de cliente y la clave de la aplicación que recuperó del centro de Partners en la sección anterior. Para el parámetro *resource*, tiene que especificar ```https://manage.devcenter.microsoft.com```.
 
-Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
+Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](/azure/active-directory/azuread-dev/v1-protocols-oauth-code#refreshing-the-access-tokens).
 
 Para obtener ejemplos que muestran cómo obtener un token de acceso mediante código de C#, Java o Python, consulte los [ejemplos de código](#code-examples)de API de envío de Microsoft Store.
 
@@ -109,7 +109,7 @@ Una vez que tenga un Azure AD token de acceso, puede llamar a los métodos en la
 
 | Escenario       | Descripción                                                                 |
 |---------------|----------------------------------------------------------------------|
-| Apps |  Recupere los datos de todas las aplicaciones registradas en su cuenta del centro de Partners y cree envíos para las aplicaciones. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Obtención de datos de la aplicación](get-app-data.md)</li><li>[Administración de envíos de aplicaciones](manage-app-submissions.md)</li></ul> |
+| Aplicaciones |  Recupere los datos de todas las aplicaciones registradas en su cuenta del centro de Partners y cree envíos para las aplicaciones. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Obtención de datos de la aplicación](get-app-data.md)</li><li>[Administración de envíos de aplicaciones](manage-app-submissions.md)</li></ul> |
 | Complementos | Obtén, crea, elimina complementos para las aplicaciones y, a continuación, obtén, crea o elimina envíos para los complementos. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Administración de complementos](manage-add-ons.md)</li><li>[Manage add-on submissions (Administrar envíos de complemento)](manage-add-on-submissions.md)</li></ul> |
 | Paquetes piloto | Obtén, crea, elimina paquetes piloto para las aplicaciones y, a continuación, obtén, crea o elimina envíos para los paquetes piloto. Para obtener más información sobre estos métodos, consulta los siguientes artículos: <ul><li>[Administración de paquetes piloto](manage-flights.md)</li><li>[Manage package flight submissions (Administrar envíos de paquetes piloto)](manage-flight-submissions.md)</li></ul> |
 
@@ -132,11 +132,11 @@ Como alternativa a llamar a la API de envío de Microsoft Store directamente, ta
 
 Para obtener más información, consulte nuestra [Página de StoreBroker en github](https://github.com/Microsoft/StoreBroker).
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 | Incidencia      | Solución                                          |
 |---------------|---------------------------------------------|
-| Después de llamar a la API de envío de Microsoft Store desde PowerShell, los datos de respuesta de la API están dañados si se convierten del formato JSON a un objeto de PowerShell mediante el cmdlet [ConvertFrom-JSON](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertFrom-Json) y luego vuelven al formato JSON mediante el cmdlet [ConvertTo-JSON](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) . |  De forma predeterminada, el parámetro *-Depth* del cmdlet [ConvertTo-JSON](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) se establece en 2 niveles de objetos, que es demasiado superficial para la mayoría de los objetos JSON devueltos por la API de envío de Microsoft Store. Cuando llames a la cmdlet [ConvertTo Json](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json), establece el parámetro de *-Profundidad* en un número mayor, como 20. |
+| Después de llamar a la API de envío de Microsoft Store desde PowerShell, los datos de respuesta de la API están dañados si se convierten del formato JSON a un objeto de PowerShell mediante el cmdlet [ConvertFrom-JSON](/powershell/module/5.1/microsoft.powershell.utility/ConvertFrom-Json) y luego vuelven al formato JSON mediante el cmdlet [ConvertTo-JSON](/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) . |  De forma predeterminada, el parámetro *-Depth* del cmdlet [ConvertTo-JSON](/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) se establece en 2 niveles de objetos, que es demasiado superficial para la mayoría de los objetos JSON devueltos por la API de envío de Microsoft Store. Cuando llames a la cmdlet [ConvertTo Json](/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json), establece el parámetro de *-Profundidad* en un número mayor, como 20. |
 
 ## <a name="additional-help"></a>Ayuda adicional
 

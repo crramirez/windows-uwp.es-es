@@ -7,18 +7,18 @@ ms.date: 05/16/2018
 ms.topic: article
 keywords: Windows 10, UWP, notificación, recopilaciones, recopilación, notificaciones de grupo, notificaciones de agrupación, grupo, organizar, centro de actividades, notificación del sistema
 ms.localizationpriority: medium
-ms.openlocfilehash: aff6b933e04611013761c10ad7a76824f7347855
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: 7cd99519f7213f85c50a14db0597daa4e10f8360
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970073"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156759"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a>Agrupación de notificaciones del sistema con colecciones
 Use recopilaciones para organizar las notificaciones del sistema de la aplicación en el centro de actividades. Las colecciones ayudan a los usuarios a encontrar información en el centro de actividades más fácilmente y permiten a los desarrolladores administrar mejor las notificaciones.  Las API siguientes permiten quitar, crear y actualizar colecciones de notificaciones.
 
 > [!IMPORTANT]
-> **Requiere Creators Update**: debe tener como destino el SDK 15063 y ejecutar la compilación 15063 o superior para usar las recopilaciones del sistema. Entre las API relacionadas se incluyen [Windows. UI. notifications. ToastCollection](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastcollection)y [Windows. UI. notifications. ToastCollectionManager](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastcollectionmanager)
+> **Requiere Creators Update**: debe tener como destino el SDK 15063 y ejecutar la compilación 15063 o superior para usar las recopilaciones del sistema. Entre las API relacionadas se incluyen [Windows. UI. notifications. ToastCollection](/uwp/api/windows.ui.notifications.toastcollection)y [Windows. UI. notifications. ToastCollectionManager](/uwp/api/windows.ui.notifications.toastcollectionmanager)
 
 Puede ver el ejemplo siguiente con una aplicación de mensajería que separa las notificaciones basadas en el grupo de chat. cada título (COMP SCI 160A Project chat, Direct messages, lacrosse Team chat) es una colección independiente.  Observe cómo las notificaciones se agrupan de forma distintiva como si fueran de una aplicación independiente, aunque se trata de todas las notificaciones de la misma aplicación.  Si está buscando una forma más sutil de organizar las notificaciones, consulte encabezados del [sistema](toast-headers.md).  
 ![Ejemplo de colección con dos grupos de notificaciones diferentes](images/toast-collection-example.png)

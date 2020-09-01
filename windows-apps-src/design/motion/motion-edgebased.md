@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 02108ad2926fc1514ca94f08d11f565bc342a62d
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 2fd92209e821d0d07f5cffda0850423e0496b03a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970320"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156829"
 ---
 # <a name="edge-based-ui-animations"></a>Animaciones de UI en el borde
 
@@ -23,7 +23,7 @@ ms.locfileid: "82970320"
 
 Las animaciones en el borde muestran u ocultan una interfaz de usuario que se origina en el borde de la pantalla. Tanto el usuario como la aplicación pueden comenzar las acciones de mostrar u ocultar. La interfaz de usuario puede superponerse a la aplicación o formar parte de la superficie de la aplicación principal. Si la interfaz de usuario forma parte de la superficie de la aplicación, puede que sea necesario cambiar el tamaño del resto de la aplicación para que quepa.
 
-> **API importantes**: [ **clase EdgeUIThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
+> **API importantes**: [ **clase EdgeUIThemeTransition**](/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
 
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
@@ -45,18 +45,14 @@ Las animaciones en el borde muestran u ocultan una interfaz de usuario que se or
 
 
 **Para desarrolladores**
-* [Introducción a las animaciones](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
-* [Animación de interfaz de usuario en el borde](https://docs.microsoft.com/previous-versions/windows/apps/jj649428(v=win.10))
-* [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
-* [**Clase EdgeUIThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
-* [**Clase PaneThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PaneThemeTransition)
-* [Animación de atenuación](https://docs.microsoft.com/previous-versions/windows/apps/jj649429(v=win.10))
-* [Animación de reposiciones](https://docs.microsoft.com/previous-versions/windows/apps/jj649434(v=win.10))
+* [Introducción a las animaciones](./xaml-animation.md)
+* [Animación de interfaz de usuario en el borde](/previous-versions/windows/apps/jj649428(v=win.10))
+* [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](/previous-versions/windows/apps/hh452703(v=win.10))
+* [**Clase EdgeUIThemeTransition**](/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
+* [**Clase PaneThemeTransition**](/uwp/api/Windows.UI.Xaml.Media.Animation.PaneThemeTransition)
+* [Animación de atenuación](/previous-versions/windows/apps/jj649429(v=win.10))
+* [Animación de reposiciones](/previous-versions/windows/apps/jj649434(v=win.10))
 
  
 
  
-
-
-
-

@@ -1,5 +1,5 @@
 ---
-Description: En el siguiente artículo se describen todas las propiedades y elementos dentro de la carga XML de contenido del sistema.
+Description: En el siguiente artículo se describen todas las propiedades y elementos de la carga XML del contenido del sistema.
 title: Esquema XML de contenido del sistema
 ms.assetid: AF49EFAC-447E-44C3-93C3-CCBEDCF07D22
 label: Toast content XML schema
@@ -8,22 +8,22 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 33244391ca9f2ffcba21adacccebf2e9b1d73419
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: cf3bf3733e17312ee0750006d2b8f94c70dbbd43
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363360"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156659"
 ---
 # <a name="toast-content-xml-schema"></a>Esquema XML de contenido del sistema
 
  
 
-En el siguiente artículo se describen todas las propiedades y elementos dentro de la carga XML de contenido del sistema.
+A continuación se describen todas las propiedades y los elementos de la carga XML del contenido del sistema.
 
 En los siguientes esquemas XML, el sufijo "?" significa que el atributo es opcional.
 
-## <a name="ltvisualgt-and-ltaudiogt"></a>&lt;visual&gt; y &lt;audio&gt;
+## <a name="ltvisualgt-and-ltaudiogt"></a>&lt;visual &gt; y &lt; audio&gt;
 
 ```
 <toast launch? duration? activationType? scenario? >
@@ -43,12 +43,12 @@ En los siguientes esquemas XML, el sufijo "?" significa que el atributo es opcio
 </toast>
 ```
 
-**Los atributos &lt;notificaciones del sistema&gt;**
+**Atributos en la &lt; notificación del sistema&gt;**
 
 launch?
 
 -   launch? = string
--   Este atributo es opcional.
+-   Es un atributo opcional.
 -   Una cadena que se pasa a la aplicación cuando la notificación del sistema la activa.
 -   Según el valor de activationType, este valor puede recibirlo la aplicación en primer plano, dentro de la tarea en segundo plano, o bien otra aplicación que se inicie con protocolo desde la aplicación original.
 -   El formato y el contenido de esta cadena los define la aplicación para su propio uso.
@@ -58,14 +58,14 @@ launch?
 duration?
 
 -   duration? = "short|long"
--   Este atributo es opcional. El valor predeterminado es "short".
+-   Es un atributo opcional. El valor predeterminado es "short".
 -   Esto está aquí solo para escenarios específicos y appCompat. Ya no necesitas esto para el escenario de alarma.
 -   No recomendamos usar esta propiedad.
 
 activationType?
 
 -   activationType? = "foreground | background | protocol | system"
--   Este atributo es opcional.
+-   Es un atributo opcional.
 -   El valor predeterminado es "foreground".
 
 scenario?
@@ -75,51 +75,51 @@ scenario?
 -   No es necesario a menos que en el escenario aparezca una alarma, un recordatorio o una llamada entrante.
 -   No usar solo para mantener la notificación de forma persistente en la pantalla.
 
-**Los atributos &lt;visual&gt;**
+**Atributos en &lt; Visual&gt;**
 
 lang?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
 
 baseUri?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
 
 addImageQuery?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
 
-**Los atributos &lt;enlace&gt;**
+**Atributos en &lt; Binding&gt;**
 
 template?
 
--   \[¿Importante\] plantilla? = "ToastGeneric"
+-   \[\]¿Plantilla importante? = "ToastGeneric"
 -   Si estás usando cualquiera de las nuevas características de notificaciones interactivas y adaptables, asegúrate de empezar a usar la plantilla "ToastGeneric" en lugar de la plantilla heredada.
 -   Es posible que las plantillas heredadas funcionen con las nuevas acciones ahora, pero este no es su uso previsto y no podemos garantizar que sigan funcionando.
 
 lang?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
 
 baseUri?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
 
 addImageQuery?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
 
-**Los atributos &lt;texto&gt;**
+**Atributos en &lt; texto&gt;**
 
 lang?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-visual) para obtener detalles sobre este atributo opcional.
 
-**Los atributos &lt;imagen&gt;**
+**Atributos de la &lt; imagen&gt;**
 
 src
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-image) para obtener detalles sobre este atributo obligatorio.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-image) para obtener detalles sobre este atributo obligatorio.
 
 placement?
 
@@ -131,11 +131,11 @@ placement?
 
 alt?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-image) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-image) para obtener detalles sobre este atributo opcional.
 
 addImageQuery?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-image) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-image) para obtener detalles sobre este atributo opcional.
 
 hint-crop?
 
@@ -144,21 +144,21 @@ hint-crop?
 -   "none" es el valor predeterminado, que significa no recortar.
 -   "circle" recorta la imagen en una forma circular. Úsalo para las imágenes de perfil de los contactos, imágenes de personas, etc.
 
-**Los atributos &lt;audio&gt;**
+**Atributos de &lt; audio&gt;**
 
 src?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-audio) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-audio) para obtener detalles sobre este atributo opcional.
 
 loop?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-audio) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-audio) para obtener detalles sobre este atributo opcional.
 
 silent?
 
--   Consulta [este artículo de esquema de elemento](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/element-audio) para obtener detalles sobre este atributo opcional.
+-   Consulta [este artículo de esquema de elemento](/uwp/schemas/tiles/toastschema/element-audio) para obtener detalles sobre este atributo opcional.
 
-## <a name="schemas-ltactiongt"></a>Esquemas: &lt;action&gt;
+## <a name="schemas-ltactiongt"></a>Esquemas: &lt; acción&gt;
 
 
 En los siguientes esquemas XML, el sufijo "?" significa que el atributo es opcional.
@@ -177,18 +177,18 @@ En los siguientes esquemas XML, el sufijo "?" significa que el atributo es opcio
 </toast>
 ```
 
-**Los atributos &lt;entrada&gt;**
+**Atributos de &lt; entrada&gt;**
 
 id
 
 -   id = string
--   Este atributo es obligatorio.
+-   Este atributo es necesario.
 -   El atributo id es necesario y los desarrolladores lo usan para recuperar las entradas de usuario una vez activada la aplicación (en primer o en segundo plano).
 
-type
+tipo
 
 -   type = "text | selection"
--   Este atributo es obligatorio.
+-   Este atributo es necesario.
 -   Se usa para especificar una entrada de texto o una entrada de una lista de selecciones predefinidas.
 -   En dispositivos móviles y de escritorio, sirve para especificar si quieres una entrada de cuadro de texto o una entrada de cuadro de lista.
 
@@ -210,24 +210,24 @@ defaultInput?
 -   Si el tipo de entrada es "text", se tratará como una entrada de cadena.
 -   Si el tipo de entrada es "selection", se espera que sea el identificador de una de las opciones disponibles dentro de los elementos de esta entrada.
 
-**Los atributos &lt;selección&gt;**
+**Atributos en la &lt; selección&gt;**
 
 id
 
--   Este atributo es obligatorio. Se usa para identificar las selecciones del usuario. El identificador se devuelve a la aplicación.
+-   Este atributo es necesario. Se usa para identificar las selecciones del usuario. El identificador se devuelve a la aplicación.
 
-content
+contenido
 
--   Este atributo es obligatorio. Proporciona la cadena que se mostrará en este elemento de la selección.
+-   Este atributo es necesario. Proporciona la cadena que se mostrará en este elemento de la selección.
 
-**Los atributos &lt;acción&gt;**
+**Atributos en &lt; acción&gt;**
 
-content
+contenido
 
 -   content = string
 -   El atributo content es obligatorio. Proporciona la cadena de texto que se muestra en el botón.
 
-arguments
+argumentos
 
 -   arguments = string
 -   El atributo arguments es obligatorio. Describe los datos definidos por la aplicación que la aplicación puede recuperar más adelante cuando se active al realizar el usuario esta acción.
@@ -255,7 +255,7 @@ hint-inputId
 
 El sistema puede controlar las acciones para posponer y descartar notificaciones si no quieres que la aplicación controle el aplazamiento o la reprogramación de notificaciones como una tarea en segundo plano. Las acciones controladas por el sistema se pueden combinar (o especificarse individualmente), pero no se recomienda implementar una acción para posponer sin una acción para descartar.
 
-Cuadro combinado de los comandos del sistema: SnoozeAndDismiss
+Combinación de comandos del sistema: SnoozeAndDismiss
 
 ```
 <toast>
@@ -290,13 +290,13 @@ Para crear acciones individuales para posponer y descartar, haz lo siguiente:
 -   Especifica el activationType = "system"
 -   Especificar los argumentos = "snooze" | "dismiss"
 -   Especifica el contenido:
-    -   Si quieres que las cadenas localizadas de "snooze" y "dismiss" se muestren en las acciones, especifica el contenido para que sea una cadena vacía: &lt;action content = ""/&gt;
-    -   Si quieres una cadena personalizada, proporciona solo su valor: &lt;action content="Remind me later" /&gt;
+    -   Si desea que las cadenas localizadas de "posponer" y "descartar" se muestren en las acciones, especifique que el contenido sea una cadena vacía: &lt; acción Content = ""/&gt;
+    -   Si desea una cadena personalizada, solo tiene que proporcionar su valor: &lt; Action Content = "Recordármelo más tarde"/&gt;
 -   Especifica la entrada:
     -   Si no quieres que el usuario seleccione un intervalo de aplazamiento y, en su lugar, solo quieres que la notificación se posponga solo una vez en un intervalo de tiempo definido por el sistema (que es coherente en todo el sistema operativo), no crees ningún &lt;input&gt; en absoluto.
     -   Si quieres proporcionar las selecciones de intervalo de aplazamiento:
         -   Especifica hint-inputId en la acción de posponer
-        -   Haz coincidir el identificador de la entrada con el hint-inputId de la acción de posponer: &lt;input id="snoozeTime"&gt;&lt;/input&gt;&lt;action hint-inputId="snoozeTime"/&gt;
+        -   Coincide con el identificador de la entrada con la sugerencia-inputId de la acción de posponer: &lt; ID. de entrada = "snoozeTime" &gt; &lt; /Input &gt; &lt; sugerencia de acción-inputId = "snoozeTime"/&gt;
         -   Especifica el identificador de selección para que sea un nonNegativeInteger que represente el intervalo de aplazamiento en minutos: &lt;selection id="240" /&gt; significa pospuesto 4 horas
         -   Asegúrate de que el valor de defaultInput en &lt;input&gt; coincida con uno de los identificadores de los elementos secundarios de &lt;selection&gt;.
         -   Proporciona hasta (pero no más de) 5 valores &lt;selection&gt;

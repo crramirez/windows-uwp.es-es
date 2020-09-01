@@ -1,54 +1,54 @@
 ---
 title: Fase de salida de flujo (SO)
-description: La fase de salida de flujo (SO) saca (o transmite) continuamente datos de vértices desde la fase activa anterior a uno o más búferes de la memoria. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse desde la CPU.
+description: La fase de salida de la secuencia (SO) genera continuamente datos de vértices (o flujos) de la fase activa anterior en uno o varios búferes de la memoria. Los datos que se transmiten a la memoria pueden volver a reproducirse en la canalización como datos de entrada o de lectura desde la CPU.
 ms.assetid: DE89E99F-39BC-4B34-B80F-A7D373AA7C0A
 keywords:
 - Fase de salida de flujo (SO)
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e3614b7bde3a87c8f5fa6fdc0eada560fd7bbcdc
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f56036ecc083d72f552954860d04750c1c83b8b6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370965"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156209"
 ---
 # <a name="stream-output-so-stage"></a>Fase de salida de flujo (SO)
 
 
-La fase de salida de flujo (SO) saca (o transmite) continuamente datos de vértices desde la fase activa anterior a uno o más búferes de la memoria. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse desde la CPU.
+La fase de salida de la secuencia (SO) genera continuamente datos de vértices (o flujos) de la fase activa anterior en uno o varios búferes de la memoria. Los datos que se transmiten a la memoria pueden volver a reproducirse en la canalización como datos de entrada o de lectura desde la CPU.
 
-## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Propósito y usos
-
-
-![Diagrama de ubicación de la fase de salida de flujo en la canalización](images/d3d10-pipeline-stages-so.png)
-
-La fase de salida de flujo transmite datos de primitivos de desde la canalización a la memoria en tránsito hacia el rasterizador. Los datos de la etapa anterior pueden trasmitirse a la memoria o pasarse al rasterizador. Los datos trasmitidos a la memoria pueden regresar a la canalización como datos de entrada o volver a leerse desde la CPU.
-
-Los datos trasmitidos a la memoria pueden volver a leerse en la canalización en un pase de representación posterior o pueden copiarse en un recurso de almacenamiento provisional (para que pueda leerlos la CPU). La cantidad de datos trasmitidos puede variar; Direct3D está diseñado para administrar los datos sin necesidad de consultar (a la GPU) sobre la cantidad de datos que se escriben.--&gt;
-
-Existen dos formas de transmitir datos de salida de flujo a la canalización:
-
--   Los datos de la secuencia de flujo pueden devolverse a la fase del ensamblador de entrada (IA).
--   Los datos de la secuencia de flujo pueden ser leerlos sombreadores programables mediante el uso de funciones [Load](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-load).
-
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
+## <a name="span-idpurpose_and_usesspanspan-idpurpose_and_usesspanspan-idpurpose_and_usesspanpurpose-and-uses"></a><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Propósito y usos
 
 
-Los datos de vértices procedentes de una fase anterior del sombreador.
+![diagrama de la ubicación de la fase de salida de flujo en la canalización](images/d3d10-pipeline-stages-so.png)
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Salida
+La fase Stream-Output transmite los datos primitivos de la canalización a la memoria de su camino al rasterizador. Los datos de la fase anterior pueden transmitirse a la memoria o pasarse al rasterizador. Los datos que se transmiten a la memoria pueden volver a reproducirse en la canalización como datos de entrada o de lectura desde la CPU.
+
+Los datos que se transmiten a la memoria se pueden volver a leer en la canalización en una fase de representación subsiguiente, o bien se pueden copiar en un recurso de almacenamiento provisional (de modo que la CPU pueda leerlos). La cantidad de datos transmitidos puede variar; Direct3D está diseñado para controlar los datos sin necesidad de consultar (la GPU) la cantidad de datos escritos.--&gt;
+
+Hay dos maneras de alimentar los datos de salida de flujo en la canalización:
+
+-   Los datos de salida de flujo se pueden volver a alimentar en la fase del ensamblador de entrada (IA).
+-   Los datos de salida de flujo se pueden leer mediante sombreadores programables mediante el uso de funciones de [carga](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-load) .
+
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entradas
 
 
-La fase de salida de flujo (SO) devuelve (o transmite) continuamente datos de vértices de la fase activa anterior, como la fase del sombreador de geometría (GS), a uno o más búferes de la memoria. Si la fase de sombreador de geometría (GS) está inactiva, la fase de salida de Stream (así) continuamente envía los datos de vértice de la etapa del sombreador de dominio (DS) en los búferes de memoria (o si DS también está inactiva, de la etapa del sombreador de vértices (VS)).
+Datos de vértices de una fase de sombreador anterior.
 
-Cuando una franja de triángulos o líneas está enlazada con la fase del ensamblador de entrada (IA), cada franja se convierte en una lista antes de transmitirse. Los vértices siempre se escriben como primitivos completos (por ejemplo, 3 vértices cada vez en el caso de los triángulos); los primitivos incompletos nunca se transmiten. Los tipos de primitivos con proximidad descartan los datos de proximidad antes de transmitir los datos.
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Genere
 
-La fase de salida de flujo admite hasta 4 búferes al mismo tiempo.
 
--   Si transmites datos a varios búferes, cada búfer únicamente puede capturar un elemento individual (hasta 4 componentes) de datos por vértice, con un intervalo de datos implícito igual al ancho del elemento en cada búfer (compatible con la forma en que se pueden enlazar los búferes de elemento único para la entrada en las fases de sombreador). Además, si los búferes tienen diferentes tamaños, la escritura se detiene en cuanto uno de los búferes está lleno.
--   Si transmites datos a un único búfer, este búfer puede capturar hasta 64 componentes escalares de datos por vértice (256 bytes o menos) o el intervalo del vértice puede tener hasta 2048 bytes.
+La fase de salida de la secuencia (SO) envía continuamente los datos de vértices (o flujos) de la fase activa anterior, como la fase del sombreador de geometría (GS), a uno o varios búferes de la memoria. Si la fase del sombreador de geometría (GS) está inactiva, la fase de salida de la secuencia (SO) genera continuamente los datos de vértices de la fase del sombreador de dominios (DS) en los búferes de la memoria (o si DS también está inactivo, desde la fase del sombreador de vértices (VS)).
+
+Cuando un triángulo o una franja de líneas está enlazada a la fase del ensamblador de entrada (IA), cada franja se convierte en una lista antes de que se transmitan. Los vértices siempre se escriben como tipos primitivos completos (por ejemplo, 3 vértices a la vez para triángulos). los primitivos incompletos nunca se transmiten por secuencias. Los tipos primitivos con adyacencias descartan los datos de adyacencia antes de la transmisión de datos.
+
+La fase Stream-Output admite hasta 4 búferes simultáneamente.
+
+-   Si está transmitiendo datos en varios búferes, cada búfer solo puede capturar un único elemento (hasta 4 componentes) de datos por vértice, con un intervalo de datos implícito igual al ancho del elemento en cada búfer (compatible con la forma en que se pueden enlazar los búferes de un solo elemento para la entrada en fases del sombreador). Además, si los búferes tienen tamaños diferentes, la escritura se detiene en cuanto uno de los búferes esté lleno.
+-   Si está transmitiendo datos en un solo búfer, el búfer puede capturar hasta 64 componentes escalares de datos por vértice (256 bytes o menos) o el intervalo de vértices puede tener hasta 2048 bytes.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
@@ -58,7 +58,3 @@ La fase de salida de flujo admite hasta 4 búferes al mismo tiempo.
  
 
  
-
-
-
-

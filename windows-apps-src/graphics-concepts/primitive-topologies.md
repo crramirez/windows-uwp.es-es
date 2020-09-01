@@ -1,91 +1,87 @@
 ---
 title: Topologías primitivas
-description: Direct3D admite varias topologías de primitivos, que definen cómo interpreta y representa la canalización los vértices, como listas de puntos, listas de líneas y series de triángulos.
+description: Direct3D admite varias topologías primitivas, que definen cómo se interpretan y representan los vértices mediante la canalización, como las listas de puntos, las listas de líneas y las franjas de triángulo.
 ms.assetid: 7AA5A4A2-0B7C-431D-B597-684D58C02BA5
 keywords:
 - Topologías primitivas
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b7a60b3eba8545eeeea4cf477a40e044578c166
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 45abb0c356b4ee6923bf6edd0b462f568749de5e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371241"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156339"
 ---
 # <a name="primitive-topologies"></a>Topologías primitivas
 
 
-Direct3D admite varias topologías de primitivos, que definen cómo interpreta y representa la canalización los vértices, como listas de puntos, listas de líneas y series de triángulos.
+Direct3D admite varias topologías primitivas, que definen cómo se interpretan y representan los vértices mediante la canalización, como las listas de puntos, las listas de líneas y las franjas de triángulo.
 
-## <a name="span-idprimitivetypesspanspan-idprimitivetypesspanspan-idprimitivetypesspanbasic-primitive-topologies"></a><span id="Primitive_Types"></span><span id="primitive_types"></span><span id="PRIMITIVE_TYPES"></span>Topologías primitivas básicas
-
-
-Se admiten las siguientes topologías primitivas (o tipos primitivos):
-
--   [Seleccione las listas](point-lists.md)
--   [Listas de línea](line-lists.md)
--   [Bandas de línea](line-strips.md)
--   [Listas de triángulo](triangle-lists.md)
--   [Triángulo bandas](triangle-strips.md)
-
-Para una visualización de cada tipo primitivo, consulta el diagrama más adelante en este tema en [Dirección de generación y posiciones de los vértices iniciales](#winding-direction-and-leading-vertex-positions).
-
-La [fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md) lee los datos de los búferes de vértices e índices, ensambla los datos en estos primitivos y, a continuación, envía los datos a las demás fases de la canalización.
-
-## <a name="span-idprimitiveadjacencyspanspan-idprimitiveadjacencyspanspan-idprimitiveadjacencyspanprimitive-adjacency"></a><span id="Primitive_Adjacency"></span><span id="primitive_adjacency"></span><span id="PRIMITIVE_ADJACENCY"></span>Proximidad primitivo
+## <a name="span-idprimitive_typesspanspan-idprimitive_typesspanspan-idprimitive_typesspanbasic-primitive-topologies"></a><span id="Primitive_Types"></span><span id="primitive_types"></span><span id="PRIMITIVE_TYPES"></span>Topologías primitivas básicas
 
 
-Todos los tipos primitivos de Direct3D (excepto la lista de puntos) están disponibles en dos versiones: un tipo primitivo con adyacencia y otro sin. Los primitivos con adyacencia contienen algunos de los vértices circundantes, mientras que los primitivos sin adyacencia solo contienen los vértices del primitivo de destino. Por ejemplo, el primitivo de lista de líneas tiene un primitivo de lista de líneas correspondiente que incluye adyacencia.
+Se admiten las siguientes topologías primitivas básicas (o tipos primitivos):
 
-Los primitivos adyacentes están destinadas a proporcionar más información sobre la geometría y solo son visibles a través de un sombreador de geometría. La adyacencia resulta útil para los sombreadores de geometría que usan la detección de silueta, la extrusión de volumen de sombra, etc.
+-   [Listas de puntos](point-lists.md)
+-   [Listas de líneas](line-lists.md)
+-   [Series de líneas](line-strips.md)
+-   [Listas de triángulos](triangle-lists.md)
+-   [Series de triángulos](triangle-strips.md)
 
-Por ejemplo, supongamos que quieres dibujar una lista de triángulos con adyacencia. Una lista de triángulos que contiene 36 vértices (con adyacencia) dará como resultado 6 primitivos completados. Los primitivos con adyacencia (excepto las series de líneas) contienen exactamente el doble de vértices que el primitivo equivalente sin adyacencia, donde cada vértice adicional es un vértice adyacente.
+Para ver una visualización de cada tipo primitivo, vea el diagrama que aparece más adelante en este tema en [dirección de bobinado y posiciones de vértice iniciales](#winding-direction-and-leading-vertex-positions).
 
-## <a name="span-idwindingdirectionandleadingvertexpositionsspanspan-idwindingdirectionandleadingvertexpositionsspanspan-idwindingdirectionandleadingvertexpositionsspanspan-idwinding-direction-and-leading-vertex-positionsspanwinding-direction-and-leading-vertex-positions"></a><span id="Winding_Direction_and_Leading_Vertex_Positions"></span><span id="winding_direction_and_leading_vertex_positions"></span><span id="WINDING_DIRECTION_AND_LEADING_VERTEX_POSITIONS"></span><span id="winding-direction-and-leading-vertex-positions"></span>Dirección de devanado y líderes de posiciones de vértice
+La [fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md) Lee los datos de los búferes de vértices y de índices, ensambla los datos en estos primitivos y, a continuación, envía los datos a las fases de canalización restantes.
+
+## <a name="span-idprimitive_adjacencyspanspan-idprimitive_adjacencyspanspan-idprimitive_adjacencyspanprimitive-adjacency"></a><span id="Primitive_Adjacency"></span><span id="primitive_adjacency"></span><span id="PRIMITIVE_ADJACENCY"></span>Adyacencia primitiva
 
 
-Como se muestra en la siguiente ilustración, un vértice inicial es el primer vértice no adyacente de un primitivo. Un tipo primitivo puede tener varios vértices iniciales definidos, siempre que cada uno de ellos se utilice para un primitivo diferente.
+Todos los tipos primitivos de Direct3D (excepto la lista de puntos) están disponibles en dos versiones: un tipo primitivo con adyacencias y un tipo primitivo sin adyacencias. Los primitivos con adyacencias contienen algunos de los vértices circundantes, mientras que los primitivos sin adyacencias contienen solo los vértices de la primitiva de destino. Por ejemplo, el primitivo de la lista de líneas tiene un primitivo de lista de líneas correspondiente que incluye la adyacencia.
 
--   Para una serie de triángulos con adyacencia, los vértices iniciales son 0, 2, 4, 6, etc.
--   Para una serie de líneas con adyacencia, los vértices iniciales son 1, 2, 3, etc.
--   Un primitivo adyacente, por otro lado, no tiene ningún vértice inicial.
+Los primitivos adyacentes están diseñados para proporcionar más información sobre su geometría y solo son visibles a través de un sombreador de geometría. La adyacencia es útil para los sombreadores de geometría que utilizan la detección de silueta, la extrusión de volumen de sombra, etc.
 
-La siguiente ilustración muestra el orden de los vértices de todos los tipos primitivos que el ensamblador de entrada puede producir.
+Por ejemplo, supongamos que desea dibujar una lista de triángulos con adyacencias. Una lista de triángulos que contiene 36 vértices (con adyacencias) producirá 6 primitivas completadas. Las primitivas con adyacencias (excepto las bandas de líneas) contienen exactamente el doble de vértices que el primitivo equivalente sin adyacencias, donde cada vértice adicional es un vértice adyacente.
 
-![Diagrama del orden de los vértices de los tipos primitivos](images/d3d10-primitive-topologies.png)
+## <a name="span-idwinding_direction_and_leading_vertex_positionsspanspan-idwinding_direction_and_leading_vertex_positionsspanspan-idwinding_direction_and_leading_vertex_positionsspanspan-idwinding-direction-and-leading-vertex-positionsspanwinding-direction-and-leading-vertex-positions"></a><span id="Winding_Direction_and_Leading_Vertex_Positions"></span><span id="winding_direction_and_leading_vertex_positions"></span><span id="WINDING_DIRECTION_AND_LEADING_VERTEX_POSITIONS"></span><span id="winding-direction-and-leading-vertex-positions"></span>Dirección de bobinado y posiciones de vértice iniciales
 
-En la siguiente tabla, se describen los símbolos de la ilustración anterior.
 
-| Símbolo                                                                                   | Nombre              | Descripción                                                                         |
+Como se muestra en la siguiente ilustración, un vértice inicial es el primer vértice no adyacente de un primitivo. Un tipo primitivo puede tener varios vértices iniciales definidos, siempre y cuando cada uno se use para un primitivo diferente.
+
+-   En el caso de una franja de triángulo con adyacencias, los vértices iniciales son 0, 2, 4, 6, etc.
+-   En el caso de una franja de líneas con adyacencias, los vértices iniciales son 1, 2, 3, etc.
+-   Por otro lado, un primitivo adyacente no tiene ningún vértice inicial.
+
+En la ilustración siguiente se muestra el orden de los vértices de todos los tipos primitivos que puede generar el ensamblador de entrada.
+
+![diagrama de ordenación de vértices para tipos primitivos](images/d3d10-primitive-topologies.png)
+
+Los símbolos de la ilustración anterior se describen en la tabla siguiente.
+
+| Símbolo                                                                                   | NOMBRE              | Descripción                                                                         |
 |------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|
-| ![Símbolo de un vértice](images/d3d10-primitive-topologies-vertex.png)                     | Vértice            | Un punto en el espacio 3D.                                                                |
-| ![Símbolo de la dirección de generación](images/d3d10-primitive-topologies-winding-direction.png) | Dirección de generación | Orden de los vértices al ensamblar un primitivo. Puede ser en el sentido de las agujas del reloj o en sentido opuesto. |
-| ![Símbolo de vértice inicial](images/d3d10-primitive-topologies-leading-vertex.png)       | Vértice inicial    | Primer vértice no adyacente de un primitivo que contiene datos por constante.       |
+| ![símbolo de un vértice](images/d3d10-primitive-topologies-vertex.png)                     | Vértice            | Punto en el espacio 3D.                                                                |
+| ![símbolo de dirección de bobinado](images/d3d10-primitive-topologies-winding-direction.png) | Dirección de bobinado | El orden de los vértices al ensamblar un primitivo. Puede ser en el sentido contrario a las agujas del reloj. |
+| ![símbolo para el vértice inicial](images/d3d10-primitive-topologies-leading-vertex.png)       | Vértice inicial    | Primer vértice no adyacente de un primitivo que contiene datos por constante.       |
 
  
 
-## <a name="span-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspanspan-idgeneratingmultiplestripsspangenerating-multiple-strips"></a><span id="Generating_Multiple_Strips"></span><span id="generating_multiple_strips"></span><span id="GENERATING_MULTIPLE_STRIPS"></span>Generar varias bandas
+## <a name="span-idgenerating_multiple_stripsspanspan-idgenerating_multiple_stripsspanspan-idgenerating_multiple_stripsspangenerating-multiple-strips"></a><span id="Generating_Multiple_Strips"></span><span id="generating_multiple_strips"></span><span id="GENERATING_MULTIPLE_STRIPS"></span>Generación de varias bandas
 
 
-Puedes generar varias series a través del corte en tiras. Para realizar un corte en tiras, puedes llamar explícitamente a la función HLSL [RestartStrip](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-so-restartstrip) o insertar un valor de índice especial en el búfer de índices. Este valor es -1, que es 0xffffffff para índices de 32 bits o 0xffff para índices de 16 bits.
+Puede generar varias bandas a través de la reducción de la franja. Puede realizar un corte de franja llamando explícitamente a la función HLSL [RestartStrip](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-so-restartstrip) o insertando un valor de índice especial en el búfer de índice. Este valor es-1, que es 0xFFFFFFFF para índices de 32 bits o 0xFFFF para índices de 16 bits.
 
-Un índice de -1 indica un "corte" o un "reinicio" explícito de la serie actual. El índice anterior completa la serie o el primitivo anterior y el índice siguiente inicia un nuevo primitivo o serie.
+Un índice de – 1 indica un "cortar" explícito o un "reinicio" de la franja actual. El índice anterior completa el primitivo o la franja anterior y el índice siguiente inicia una nueva banda o primitiva.
 
-Para obtener más información acerca de cómo generar varias series, consulta [Fase de sombreador de geometría (GS)](geometry-shader-stage--gs-.md).
+Para obtener más información sobre la generación de varias bandas, consulte la [fase del sombreador de geometría (GS)](geometry-shader-stage--gs-.md).
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Etapa del ensamblador de entrada (IA)](input-assembler-stage--ia-.md)
+[Fase del ensamblador de entrada (IA)](input-assembler-stage--ia-.md)
 
 [Canalización de gráficos](graphics-pipeline.md)
 
  
 
  
-
-
-
-

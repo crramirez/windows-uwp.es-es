@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos y programación
 ms.localizationpriority: medium
-ms.openlocfilehash: a87b979dc48f8977047599cac6a32ba0d901bd63
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: 6c1da82eaff074dfd3e925c298f9839dbb70ee3d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606364"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156509"
 ---
 # <a name="game-programming-resources"></a>Recursos de programación de juegos
 
@@ -23,7 +23,7 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 ## <a name="game-programming-reference"></a>Referencia de programación de juegos
 
 
--   [Gráficos y juegos](https://docs.microsoft.com/windows/desktop/graphics-and-multimedia)
+-   [Gráficos y juegos](/windows/desktop/graphics-and-multimedia)
 -   [Referencia de OpenGL](https://www.opengl.org/sdk/docs/man4/)
 
 ## <a name="game-design-guidance"></a>Guía de diseño de juegos
@@ -43,7 +43,7 @@ Para obtener más información sobre la programación de juegos en Windows, cons
 
 -   [Kit de herramientas de DirectX](  https://github.com/Microsoft/DirectXTK)
 -   [Biblioteca de procesamiento de texturas de DirectXTex](  https://github.com/Microsoft/DirectXTex)
--   [Diagnóstico de gráficos](https://docs.microsoft.com/visualstudio/debugger/overview-of-visual-studio-graphics-diagnostics?view=vs-2015) de Microsoft Visual Studio
+-   [Diagnóstico de gráficos](/visualstudio/debugger/overview-of-visual-studio-graphics-diagnostics?view=vs-2015) de Microsoft Visual Studio
 -   [Win2D](https://github.com/Microsoft/Win2D): Una API de Windows Runtime fácil de usar para la representación de elementos gráficos 2D de modo inmediato con aceleración de GPU.
 -   [Ángulo de Microsoft Store](https://github.com/microsoft/angle/wiki) : ejecuta contenido de OpenGL es en Windows mediante la traducción de llamadas de API de OpenGL es a llamadas API de DirectX 11.
 
@@ -81,7 +81,3 @@ Para obtener más información sobre la programación de juegos en Windows, cons
  
 
  
-
-
-
-

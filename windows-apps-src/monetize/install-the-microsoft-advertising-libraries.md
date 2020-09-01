@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10, UWP, anuncios, publicidad, instalación, SDK, biblioteca de publicidad
 ms.localizationpriority: medium
-ms.openlocfilehash: d5c5c18c41996c5d46c261f351a900fea2532a93
-ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
+ms.openlocfilehash: a7ec56281c5f1d441d3808fa91491d0d290018f3
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89094681"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155499"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Instala el SDK de Microsoft Advertising
 
@@ -69,7 +69,7 @@ Para instalar el SDK de Microsoft Advertising en un proyecto de UWP específico 
 
 5. En el cuadro de búsqueda, escriba **Microsoft. Advertising. Xaml** (para un proyecto XAML) o **Microsoft.Advertising.JS** (para un proyecto de JavaScript/HTML) e instale el paquete correspondiente. Cuando el paquete termine de instalarse, guarde la solución.
     > [!NOTE]
-    > Si la ventana de **salida** informa de un error *de instalación-paquete* que indica que la ruta de acceso especificada es demasiado larga, es posible que deba configurar NuGet para extraer paquetes en una ubicación alternativa con una ruta de acceso más corta que la predeterminada. Para ello, agrega el valor `repositoryPath` a un archivo nuget.config en el equipo y asígnalo a una ruta de carpeta corta donde se puedan extraer paquetes de NuGet. Para obtener más información, consulta [este artículo](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior) en la documentación de NuGet. Como alternativa, puedes mover tu proyecto de Visual Studio a otra carpeta con una ruta más corta.
+    > Si la ventana de **salida** informa de un error *de instalación-paquete* que indica que la ruta de acceso especificada es demasiado larga, es posible que deba configurar NuGet para extraer paquetes en una ubicación alternativa con una ruta de acceso más corta que la predeterminada. Para ello, agrega el valor `repositoryPath` a un archivo nuget.config en el equipo y asígnalo a una ruta de carpeta corta donde se puedan extraer paquetes de NuGet. Para obtener más información, consulta [este artículo](/nuget/consume-packages/configuring-nuget-behavior) en la documentación de NuGet. Como alternativa, puedes mover tu proyecto de Visual Studio a otra carpeta con una ruta más corta.
 
 6. Cierre la solución y vuelva a abrirla.
 
@@ -104,7 +104,7 @@ Para ver tutoriales que muestran cómo empezar a usar las API de publicidad, con
 
 ## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk"></a>Descripción de los paquetes de .NET Framework en el SDK de Microsoft Advertising
 
-La biblioteca de Microsoft.Advertising.dll del [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) (para aplicaciones UWP) se configura como un *paquete de marco*. Esta biblioteca contiene las API de publicidad en los espacios de nombres [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) y [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui).
+La biblioteca de Microsoft.Advertising.dll del [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) (para aplicaciones UWP) se configura como un *paquete de marco*. Esta biblioteca contiene las API de publicidad en los espacios de nombres [Microsoft.Advertising](/uwp/api/microsoft.advertising) y [Microsoft.Advertising.WinRT.UI](/uwp/api/microsoft.advertising.winrt.ui).
 
 Dado que esta biblioteca es un paquete de marco, esto significa que, una vez que un usuario instala una versión de la aplicación que usa esta biblioteca, esta biblioteca se actualiza automáticamente en el dispositivo a través de Windows Update cada vez que se publica una nueva versión de la biblioteca con correcciones y mejoras de rendimiento. Esto ayuda a garantizar que los clientes siempre tengan la última versión disponible de la biblioteca instalada en sus dispositivos.
 

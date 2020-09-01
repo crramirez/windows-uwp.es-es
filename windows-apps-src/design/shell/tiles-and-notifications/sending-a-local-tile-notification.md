@@ -7,36 +7,36 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a6b61463204b4ae60fbb853cd00a10c7185a084
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a8e3bee4a32c4a66ece5f486386340e9f9122f87
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66362703"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156809"
 ---
 # <a name="send-a-local-tile-notification"></a>Enviar una notificación de icono local
  
 
-Iconos de aplicación principal en Windows 10 se definen en el manifiesto de aplicación, mientras que los iconos secundarios mediante programación se crean y definidos por el código de aplicación. En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables. (Una notificación local es aquella que se envía desde el código de la aplicación frente a la que se envía o extrae de un servidor web).
+Los iconos de la aplicación principal de Windows 10 se definen en el manifiesto de la aplicación, mientras que los iconos secundarios se crean mediante programación y se definen mediante el código de la aplicación. En este artículo se describe cómo enviar una notificación de icono local a un icono principal y un icono secundario con el uso de plantillas de iconos adaptables. (Una notificación local es aquella que se envía desde el código de la aplicación frente a la que se envía o extrae de un servidor web).
 
 ![icono predeterminado e icono con notificación](images/sending-local-tile-01.png)
 
 > [!NOTE] 
->Obtén información sobre cómo [crear iconos adaptables](create-adaptive-tiles.md) y el [esquema de contenido de ventana](../tiles-and-notifications/tile-schema.md).
+>Obtenga información sobre cómo [crear iconos adaptables](create-adaptive-tiles.md) y [esquemas de contenido de mosaicos](../tiles-and-notifications/tile-schema.md).
 
  
 
-## <a name="install-the-nuget-package"></a>Instalación del paquete NuGet
+## <a name="install-the-nuget-package"></a>Instalación del paquete NuGet.
 
 
 Recomendamos instalar el [paquete de NuGet de la librería de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), que simplifica las cosas al generar cargas de iconos con objetos en lugar de XML sin formato.
 
 Los ejemplos de código en línea de este artículo son para C# usando la biblioteca de notificaciones. (Si prefieres crear tu propio XML, puedes encontrar ejemplos de código sin la librería de notificaciones al final del artículo.)
 
-## <a name="add-namespace-declarations"></a>Agregar declaraciones de espacios de nombres
+## <a name="add-namespace-declarations"></a>Incorporación de declaraciones de espacio de nombres
 
 
-Para acceder a las API del icono, incluye el espacio de nombres [**Windows.UI.Notifications**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications). También recomendamos incluir el espacio de nombres **Microsoft.Toolkit.Uwp.Notifications** para que puedas aprovechar nuestras API auxiliares de iconos (debes instalar el paquete NuGet [de la librería de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para acceder a estas API).
+Para acceder a las API del icono, incluye el espacio de nombres [**Windows.UI.Notifications**](/uwp/api/Windows.UI.Notifications). También se recomienda incluir el espacio de nombres **Microsoft. Toolkit. UWP. notifications** para que pueda aprovechar las ventajas de nuestras API auxiliares de mosaico (debe instalar el paquete NuGet de la [biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para tener acceso a estas API).
 
 ```csharp
 using Windows.UI.Notifications;
@@ -46,7 +46,7 @@ using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ## <a name="create-the-notification-content"></a>Crear el contenido de la notificación
 
 
-En Windows 10, las cargas del mosaico se definen mediante las plantillas de mosaico adaptable, que le permiten crear diseños personalizados de visuales para las notificaciones. (Para obtener información sobre las posibilidades de los iconos adaptables, consulta los artículos [Crear iconos adaptables](create-adaptive-tiles.md).)
+En Windows 10, las cargas de iconos se definen mediante plantillas de iconos adaptables, que te permiten crear diseños visuales personalizados para tus notificaciones. (Para obtener información sobre lo que es posible con los iconos adaptables, consulte [crear iconos adaptables](create-adaptive-tiles.md)).
 
 Este ejemplo de código crea el contenido de iconos adaptables para iconos medianos y anchos.
 
@@ -125,7 +125,7 @@ El contenido de las notificaciones es similar al siguiente cuando se muestra en 
 ## <a name="create-the-notification"></a>Crear la notificación
 
 
-Una vez que dispongas del contenido de la notificación, debes crear un nuevo [**TileNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification). El constructor **TileNotification** toma un objeto [**XmlDocument**](https://docs.microsoft.com/uwp/api/windows.data.xml.dom.xmldocument) de Windows Runtime, que puedes obtener del método **TileContent.GetXml** si estás usando [la librería de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/).
+Una vez que dispongas del contenido de la notificación, debes crear un nuevo [**TileNotification**](/uwp/api/Windows.UI.Notifications.TileNotification). El constructor **TileNotification** toma un objeto [**XmlDocument**](/uwp/api/windows.data.xml.dom.xmldocument) de Windows Runtime, que puedes obtener del método **TileContent.GetXml** si estás usando [la librería de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/).
 
 Este ejemplo de código crea una notificación para un icono nuevo.
 
@@ -152,7 +152,7 @@ Aunque el envío local de una notificación de iconos es sencillo, enviar la not
 
 **Icono principal**
 
-Para enviar una notificación a un icono principal, usa [**TileUpdateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdateManager) para crear un actualizador de iconos para el icono principal y envía la notificación llamando a "Update". Independientemente de si es visible, el icono principal de tu aplicación siempre existe, por lo que puedes enviarle notificaciones aunque no esté anclado. Si el usuario ancla tu icono principal más adelante, las notificaciones que enviaste aparecerán entonces.
+Para enviar una notificación a un icono principal, usa [**TileUpdateManager**](/uwp/api/Windows.UI.Notifications.TileUpdateManager) para crear un actualizador de iconos para el icono principal y envía la notificación llamando a "Update". Independientemente de si es visible, el icono principal de tu aplicación siempre existe, por lo que puedes enviarle notificaciones aunque no esté anclado. Si el usuario ancla tu icono principal más adelante, las notificaciones que enviaste aparecerán entonces.
 
 Este ejemplo de código envía una notificación a un icono principal.
 
@@ -164,7 +164,7 @@ TileUpdateManager.CreateTileUpdaterForApplication().Update(notification);
 
 **Icono secundario**
 
-Para enviar una notificación a un icono secundario, asegúrate primero de que el icono secundario existe. Si intentas crear un actualizador de iconos para un icono secundario que no existe (por ejemplo, si el usuario ha desanclado el icono secundario), se generará una excepción. Puedes usar [**SecondaryTile.Exists**](https://docs.microsoft.com/uwp/api/Windows.UI.StartScreen.SecondaryTile#Windows_UI_StartScreen_SecondaryTile_Exists_System_String_) (tileId) para averiguar si tu icono secundario está anclado después crear un actualizador para el icono secundario y enviar la notificación.
+Para enviar una notificación a un icono secundario, asegúrate primero de que el icono secundario existe. Si intentas crear un actualizador de iconos para un icono secundario que no existe (por ejemplo, si el usuario ha desanclado el icono secundario), se generará una excepción. Puedes usar [**SecondaryTile.Exists**](/uwp/api/Windows.UI.StartScreen.SecondaryTile#Windows_UI_StartScreen_SecondaryTile_Exists_System_String_) (tileId) para averiguar si tu icono secundario está anclado después crear un actualizador para el icono secundario y enviar la notificación.
 
 Este ejemplo de código envía una notificación a un icono secundario.
 
@@ -202,11 +202,11 @@ Las notificaciones de inserción o periódicas solo pueden agregar nuevas notifi
 ## <a name="next-steps"></a>Pasos siguientes
 
 
-**Uso de la cola de notificación**
+**Uso de la cola de notificaciones**
 
-Ahora que has realizado tu primera actualización de iconos, puedes habilitar una [cola de notificaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh868234(v=win.10)) para expandir la funcionalidad del icono.
+Ahora que has realizado tu primera actualización de iconos, puedes habilitar una [cola de notificaciones](/previous-versions/windows/apps/hh868234(v=win.10)) para expandir la funcionalidad del icono.
 
-**Otros métodos de entrega de notificación**
+**Otros métodos de entrega de notificaciones**
 
 Este artículo te muestra cómo enviar la actualización de iconos como una notificación. Para explorar otros métodos de entrega de notificaciones, incluidos los programados, periódicos y de inserción, consulta [Entrega de notificaciones](choosing-a-notification-delivery-method.md).
 
@@ -233,7 +233,7 @@ public string XmlEncode(string text)
 
 Si prefieres trabajar con XML sin formato en lugar del paquete NuGet [de la librería de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/), usa estos ejemplos de código alternativos para los tres primeros ejemplos proporcionados en este artículo. El resto de los ejemplos de código se puede usar o bien con [la librería de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) o bien con XML sin formato.
 
-Agregar declaraciones de espacios de nombres
+Incorporación de declaraciones de espacio de nombres
 
 ```csharp
 using Windows.UI.Notifications;
@@ -288,15 +288,11 @@ var notification = new TileNotification(doc);
 
 * [Crear iconos adaptables](create-adaptive-tiles.md)
 * [Esquema de contenido de icono](../tiles-and-notifications/tile-schema.md)
-* [Biblioteca de notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
-* [Ejemplo de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
-* [**Espacio de nombres Windows.UI.Notifications**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
-* [Uso de la cola de notificación (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/hh868234(v=win.10))
+* [Biblioteca Notificaciones](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+* [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
+* [**Espacio de nombres Windows.UI.Notifications**](/uwp/api/Windows.UI.Notifications)
+* [Cómo usar la cola de notificaciones (XAML)](/previous-versions/windows/apps/hh868234(v=win.10))
 * [Entrega de notificaciones](choosing-a-notification-delivery-method.md)
  
 
  
-
-
-
-

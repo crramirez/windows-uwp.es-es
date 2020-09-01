@@ -7,19 +7,19 @@ ms.date: 01/11/2018
 ms.topic: article
 keywords: Windows 10, UWP, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: f2700f0e5ffa8c2d1c9f0500e967096763757cd9
-ms.sourcegitcommit: 9aef3bc26a56b8d266b3089d509f79b119234b6f
+ms.openlocfilehash: 50ed0246941645824ee0705582a9efbf2b193dc9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80538187"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155779"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Actualizar un icono dinámico desde una tarea en segundo plano
 
 **API importantes**
 
--   [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
--   [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+-   [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
 Usa una tarea en segundo plano para actualizar el icono dinámico de tu aplicación con contenido actualizado.
 
@@ -31,15 +31,15 @@ Este vídeo te muestra cómo agregar iconos dinámicos a tus aplicaciones.
 
 Para habilitar un icono dinámico para la aplicación, agregue un nuevo Windows Runtime proyecto de componente a la solución. Este es un ensamblado independiente que el sistema operativo carga y ejecuta en segundo plano cuando un usuario instala tu aplicación.
 
-1.  En el Explorador de soluciones, haz clic con el botón secundario en la solución, haz clic en **Agregar** y luego haz clic en **Nuevo proyecto**.
-2.  En el diálogo **Agregar nuevo proyecto**, selecciona la plantilla **Componente de Windows en tiempo de ejecución** en la sección **Instalado &gt; Otros lenguajes &gt; Visual C# &gt; Windows Universal**
+1.  En el Explorador de soluciones, haga clic con el botón derecho en la solución; luego, en **Agregar** y en **Nuevo proyecto**.
+2.  En el cuadro de diálogo **Agregar nuevo proyecto** , seleccione la plantilla de **componentes de Windows Runtime** en la sección ** &gt; &gt; &gt; Windows universal de otros lenguajes instalados Visual C#** .
 3.  Asigna el nombre BackgroundTasks al proyecto y haz clic o pulsa **Aceptar**. Microsoft Visual Studio agrega el nuevo proyecto a la solución.
 4.  En el proyecto principal, agrega una referencia al proyecto BackgroundTasks.
 
 ## <a name="implement-the-background-task"></a>Implementar la tarea en segundo plano
 
 
-Implementa la interfaz [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) para crear una clase que actualice el icono dinámico de tu aplicación. El trabajo en segundo plano se incluye en el método Run. En este caso, la tarea obtiene una fuente de distribución para los blogs de MSDN. Para impedir que la tarea se cierre de forma prematura mientras aún se ejecuta el código asincrónico, obtén un aplazamiento.
+Implementa la interfaz [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) para crear una clase que actualice el icono dinámico de tu aplicación. El trabajo en segundo plano se incluye en el método Run. En este caso, la tarea obtiene una fuente de distribución para los blogs de MSDN. Para impedir que la tarea se cierre de forma prematura mientras aún se ejecuta el código asincrónico, obtén un aplazamiento.
 
 1.  En el Explorador de soluciones, cambia el nombre del archivo generado automáticamente, Class1.cs, a BlogFeedBackgroundTask.cs.
 2.  En BlogFeedBackgroundTask.cs, reemplaza el código generado automáticamente con el código auxiliar de la clase **BlogFeedBackgroundTask**.
@@ -152,16 +152,16 @@ Para configurar el manifiesto del paquete, ábrelo y agrégale una nueva declara
 6.  Haz clic o pulsa en la pestaña **IU de la aplicación**.
 7.  Establece **Notificaciones de pantallas de bloqueo** en **Distintivo y texto de imagen**.
 8.  Establece una ruta de acceso en un icono de 24 x 24 píxeles en el campo **Logotipo del distintivo** .
-    **Importante**  este icono debe usar solo píxeles monocromáticos y transparentes.
+    **Importante**    Este icono debe usar solo píxeles monocromáticos y transparentes.
 9.  En el campo **Logotipo pequeño**, establece una ruta de acceso en un icono de 30 x 30 píxeles.
 10. En el campo **Logotipo ancho** , establece una ruta de acceso a un icono de 310 x 150 píxeles.
 
 ## <a name="register-the-background-task"></a>Registrar la tarea en segundo plano
 
 
-Crea un [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para registrar tu tarea.
+Crea un [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) para registrar tu tarea.
 
-> **Nota**  a partir de Windows 8.1, los parámetros de registro de tareas en segundo plano se validan en el momento del registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. La aplicación debe poder enfrentarse a los escenarios en que se produce un error en el registro de tareas en segundo plano. Por ejemplo, usa una instrucción condicional para comprobar si hay errores de registro y después vuelve a probar el registro con errores con valores de parámetros diferentes.
+> **Nota:**    A partir de Windows 8.1, los parámetros de registro de tareas en segundo plano se validan en el momento del registro. Se devuelve un error si cualquiera de los parámetros de registro no es válido. La aplicación debe poder enfrentarse a los escenarios en que se produce un error en el registro de tareas en segundo plano. Por ejemplo, usa una instrucción condicional para comprobar si hay errores de registro y después vuelve a probar el registro con errores con valores de parámetros diferentes.
  
 
 En la página principal de tu aplicación, agrega el método **RegisterBackgroundTask** y llámalo en el controlador de eventos **OnNavigatedTo**.
@@ -256,11 +256,11 @@ Para depurar la tarea en segundo plano, establece un punto de interrupción en e
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
-* [**TileUpdateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdateManager)
-* [**TileNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification)
-* [Dar soporte a tu aplicación mediante tareas en segundo plano](support-your-app-with-background-tasks.md)
-* [Instrucciones y listas de comprobación para iconos y distintivos](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)
+* [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+* [**TileUpdateManager**](/uwp/api/Windows.UI.Notifications.TileUpdateManager)
+* [**TileNotification**](/uwp/api/Windows.UI.Notifications.TileNotification)
+* [Hacer que tu aplicación sea compatible con las tareas en segundo plano](support-your-app-with-background-tasks.md)
+* [Directrices y lista de comprobación de iconos y distintivos](../design/shell/tiles-and-notifications/creating-tiles.md)
 
  
 

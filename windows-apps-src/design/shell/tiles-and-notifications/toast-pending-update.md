@@ -1,53 +1,53 @@
 ---
-Description: Obtenga información sobre cómo crear interacciones de varios pasos en las notificaciones.
+description: Obtenga información sobre cómo usar la notificación del sistema con la activación de actualizaciones pendientes para crear interacciones de varios pasos en las notificaciones del sistema.
 title: Notificación del sistema con activación de actualización pendiente
 label: Toast with pending update activation
 template: detail.hbs
 ms.date: 12/14/2017
 ms.topic: article
-keywords: windows 10, uwp, notificaciones del sistema, actualización pendiente, pendingupdate, interactividad de varios pasos, interacciones de varios pasos
+keywords: Windows 10, UWP, notificación del sistema, actualización pendiente, pendingupdate, interactividad de varios pasos y interacciones de varios pasos
 ms.localizationpriority: medium
-ms.openlocfilehash: b1574ee2913bd2889af204aae1089dc170df95b8
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 00551414fbefe5591813731337653964bd2524f3
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648560"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054545"
 ---
 # <a name="toast-with-pending-update-activation"></a>Notificación del sistema con activación de actualización pendiente
 
-Puedes usar **PendingUpdate** para crear interacciones de varios pasos en tus notificaciones del sistema. Por ejemplo, como se muestra a continuación, puedes crear una serie de notificaciones del sistema donde las notificaciones del sistema posteriores dependen de las respuestas de las notificaciones del sistema anteriores.
+Puede usar **PendingUpdate** para crear interacciones de varios pasos en las notificaciones del sistema. Por ejemplo, como se muestra a continuación, puede crear una serie de notificaciones del sistema en las que las notificaciones posteriores dependen de las respuestas de las notificaciones del sistema anteriores.
 
 ![Notificación del sistema con actualización pendiente](images/toast-pendingupdate.gif)
 
 > [!IMPORTANT]
-> **Requiere escritorio Fall Creators Update y 2.0.0 de biblioteca de notificaciones**: Debe ejecutar escritorio compilación 16299 o superior para ver el trabajo de actualización pendiente. Debes usar la versión 2.0.0 o superior de la [Biblioteca NuGet de notificaciones del Kit de herramientas de la comunidad de UWP](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para asignar **PendingUpdate** en tus botones. **PendingUpdate** solo se admite en Escritorio y se ignorará en otros dispositivos.
+> **Requiere Desktop Fall Creators Update y 2.0.0 de la biblioteca de notificaciones**: debe estar ejecutando desktop Build 16299 o superior para ver el trabajo de actualización pendiente. Debe usar la versión 2.0.0 o posterior de la [biblioteca NuGet de notificaciones de Community Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) para asignar **PendingUpdate** en sus botones. **PendingUpdate** solo se admite en el escritorio y se omitirá en otros dispositivos.
 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
-Este artículo supone un conocimiento práctico de...
+En este artículo se supone que tiene conocimientos prácticos de...
 
-- [Creación de contenido de notificación del sistema](adaptive-interactive-toasts.md)
-- [Enviar una notificación del sistema y activación en segundo plano de control](send-local-toast.md)
+- [Construir contenido del sistema](adaptive-interactive-toasts.md)
+- [Enviar una notificación del sistema y controlar la activación en segundo plano](send-local-toast.md)
 
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
-Para implementar una notificación del sistema que usa una actualización pendiente como suya tras el comportamiento de activación...
+Para implementar una notificación del sistema que usa la actualización pendiente como su comportamiento después de la activación...
 
-1. En los botones de activación en segundo plano de notificación del sistema, especifica un **AfterActivationBehavior** de **PendingUpdate**.
+1. En los botones de activación en segundo plano del sistema, especifique un **AfterActivationBehavior** de **PendingUpdate**
 
-2. Asignar un **Etiqueta** (y, opcionalmente, **Grupo**) al enviar la notificación del sistema
+2. Asignar una **etiqueta** (y, opcionalmente, **agrupar**) al enviar la notificación del sistema
 
-3. Cuando el usuario hace clic en el botón, se activará la tarea en segundo plano y la notificación del sistema se mantendrá en pantalla en un estado de actualización pendiente.
+3. Cuando el usuario haga clic en el botón, se activará la tarea en segundo plano y la notificación del sistema se mantendrá en pantalla en estado de actualización pendiente.
 
-4. En la tarea en segundo plano, envía una notificación del sistema nueva con el nuevo contenido, usando la misma **Etiqueta** y **Grupo**.
+4. En la tarea en segundo plano, envíe un nuevo aviso con el nuevo contenido, con la misma **etiqueta** y **Grupo**
 
 
 ## <a name="assign-pendingupdate"></a>Asignar PendingUpdate
 
-En los botones de activación en segundo plano, establece el **AfterActivationBehavior** en **PendingUpdate**. Ten en cuenta que esto solo funciona para los botones que tienen un **ActivationType** de **Segundo plano**.
+En los botones de activación en segundo plano, establezca **AfterActivationBehavior** en **PendingUpdate**. Tenga en cuenta que esto solo funciona con los botones que tienen un **ActivationType** de **fondo**.
 
 ```csharp
 new ToastButton("Yes", "action=orderLunch")
@@ -72,7 +72,7 @@ new ToastButton("Yes", "action=orderLunch")
 
 ## <a name="use-a-tag-on-the-notification"></a>Usar una etiqueta en la notificación
 
-Para poder reemplazar la notificación más adelante, debemos asignar la **Etiqueta** (y, opcionalmente, el **Grupo**) en la notificación.
+Para reemplazar posteriormente la notificación, es necesario asignar la **etiqueta** (y, opcionalmente, el **Grupo**) en la notificación.
 
 ```csharp
 // Create the notification
@@ -86,11 +86,11 @@ ToastNotificationManager.CreateToastNotifier().Show(notif);
 ```
 
 
-## <a name="replace-the-toast-with-new-content"></a>Reemplazar la notificación del sistema por el nuevo contenido
+## <a name="replace-the-toast-with-new-content"></a>Reemplazar la notificación del sistema por contenido nuevo
 
-En respuesta a la acción del usuario de hacer clic en el botón, se desencadena la tarea en segundo plano y necesita reemplazar la notificación del sistema por el nuevo contenido. Para remplaza la notificación del sistema, solo tiene que enviar una notificación del sistema nueva con la misma **Etiqueta** y **Grupo**.
+En respuesta al usuario que hace clic en el botón, la tarea en segundo plano se desencadena y debe reemplazar el aviso por el nuevo contenido. Para reemplazar la notificación del sistema, solo tiene que enviar una nueva notificación con la misma **etiqueta** y **Grupo**.
 
-Se recomienda **establecer el audio en silencio** en reemplazos en respuesta a una acción de clic en el botón, puesto que el usuario ya está interactuando con la notificación del sistema.
+Se recomienda encarecidamente **establecer el audio en modo silencioso** en los reemplazos en respuesta a un clic de botón, ya que el usuario ya está interactuando con la notificación del sistema.
 
 ```csharp
 // Generate new content
@@ -116,7 +116,7 @@ ToastNotificationManager.CreateToastNotifier().Show(notif);
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Ejemplo de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-toast-pending-update)
-- [Enviar una activación local del sistema y de identificador](send-local-toast.md)
-- [Documentación de contenido de notificación del sistema](adaptive-interactive-toasts.md)
-- [Barra de progreso de la notificación del sistema](toast-progress-bar.md)
+- [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-toast-pending-update)
+- [Enviar una notificación del sistema local y controlar la activación](send-local-toast.md)
+- [Documentación del contenido del sistema](adaptive-interactive-toasts.md)
+- [Barra de progreso del sistema](toast-progress-bar.md)

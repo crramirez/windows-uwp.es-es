@@ -8,43 +8,43 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
-ms.openlocfilehash: 4052ac6daddcfecabb839d16fd5f81c3d207d01b
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 721e54fc7e0fc9d6e6dc18109ea39b1326534646
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233684"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156989"
 ---
 # <a name="add-an-inktoolbar-to-a-windows-app"></a>Agregar un control InkToolbar a una aplicación de Windows
 
 
 
-Hay dos controles diferentes que facilitan la entrada manuscrita en las aplicaciones de Windows: [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) e [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar).
+Hay dos controles diferentes que facilitan la entrada manuscrita en las aplicaciones de Windows: [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas) e [**InkToolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar).
 
-El control [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) proporciona la funcionalidad básica de Windows Ink. Úsalo para representar la entrada manuscrita como un trazo de lápiz (con la configuración predeterminada de color y espesor) o como un trazo de borrado.
+El control [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas) proporciona la funcionalidad básica de Windows Ink. Úsalo para representar la entrada manuscrita como un trazo de lápiz (con la configuración predeterminada de color y espesor) o como un trazo de borrado.
 
 > Para obtener información detallada sobre la implementación de InkCanvas, consulte [interacciones de lápiz y lápiz en aplicaciones de Windows](pen-and-stylus-interactions.md).
 
 Como una superposición completamente transparente, el control InkCanvas no proporciona ninguna interfaz de usuario integrada para establecer propiedades de trazo de lápiz. Si quieres cambiar la experiencia de entrada manuscrita predeterminada, permite que los usuarios establezcan las propiedades de trazo de lápiz y admite otras características de entrada manuscrita personalizadas. Para hacerlo, tienes dos opciones:
 
-- En el código subyacente, usa el objeto subyacente [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) enlazado al control InkCanvas.
+- En el código subyacente, usa el objeto subyacente [**InkPresenter**](/uwp/api/windows.ui.input.inking.inkpresenter) enlazado al control InkCanvas.
 
   Las API de InkPresenter admiten una amplia personalización de la experiencia de entrada manuscrita. Para obtener más información, consulte [interacciones de lápiz y lápiz en aplicaciones de Windows](pen-and-stylus-interactions.md).
 
-- Enlazar un control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) al control InkCanvas. De forma predeterminada, el control InkToolbar proporciona una colección personalizable y extensible de botones para activar características relacionadas con la tinta, como el tamaño del trazo, el color de la tinta y la punta del lápiz.
+- Enlazar un control [**InkToolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar) al control InkCanvas. De forma predeterminada, el control InkToolbar proporciona una colección personalizable y extensible de botones para activar características relacionadas con la tinta, como el tamaño del trazo, el color de la tinta y la punta del lápiz.
 
   El control InkToolbar se describe en este tema.
 
-> **API importantes**: [**clase InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), clase [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar), [**clase InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter), [**Windows. UI. Input. inking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
+> **API importantes**: [**clase InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas), clase [**InkToolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar), [**clase InkPresenter**](/uwp/api/windows.ui.input.inking.inkpresenter), [**Windows. UI. Input. inking**](/uwp/api/Windows.UI.Input.Inking)
 
 ## <a name="default-inktoolbar"></a>Control InkToolbar predeterminado
 
-De forma predeterminada, el control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) incluye botones para dibujar, borrar, resaltar y mostrar una galería de símbolos (regla o Protractor). Dependiendo de la característica, en un control flotante se proporcionan otros comandos y opciones de configuración, como los destinados a definir el color y el grosor del trazo o a borrar todas las entradas de lápiz.
+De forma predeterminada, el control [**InkToolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar) incluye botones para dibujar, borrar, resaltar y mostrar una galería de símbolos (regla o Protractor). Dependiendo de la característica, en un control flotante se proporcionan otros comandos y opciones de configuración, como los destinados a definir el color y el grosor del trazo o a borrar todas las entradas de lápiz.
 
 ![InkToolbar](./images/ink/ink-tools-invoked-toolbar-small.png)  
 *Barra de herramientas de Windows Ink predeterminada*
 
-Para agregar un control [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) predeterminado a una aplicación de entrada manuscrita, simplemente colóquelo en la misma página que el [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) y asocie los dos controles.
+Para agregar un control [**InkToolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar) predeterminado a una aplicación de entrada manuscrita, simplemente colóquelo en la misma página que el [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas) y asocie los dos controles.
 
 1. En MainPage.xaml, declara un objeto contenedor (para este ejemplo, usamos un control Grid) para la superficie de entrada manuscrita.
 2. Declara un objeto InkCanvas como elemento secundario del contenedor. (El tamaño del control InkCanvas se hereda del contenedor).
@@ -83,11 +83,11 @@ En esta sección, nos centraremos en algunos escenarios básicos de personalizac
 
 Cuando agrega una barra de herramientas de entrada manuscrita a la aplicación, puede aceptar la ubicación predeterminada y orientaion de la barra de herramientas o establecerlas según lo requiera la aplicación o el usuario.
 
-**LENGUAJE**
+**XAML**
 
-Especifique explícitamente la ubicación y la orientación de la barra de herramientas a través de las propiedades [VerticalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.VerticalAlignment), [HorizontalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.HorizontalAlignment)y [Orientation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar?branch=rs3.Orientation) .
+Especifique explícitamente la ubicación y la orientación de la barra de herramientas a través de las propiedades [VerticalAlignment](/uwp/api/windows.ui.xaml.frameworkelement.VerticalAlignment), [HorizontalAlignment](/uwp/api/windows.ui.xaml.frameworkelement.HorizontalAlignment)y [Orientation](/uwp/api/windows.ui.xaml.controls.inktoolbar?branch=rs3.Orientation) .
 
-| Default | Explícito |
+| Valor predeterminado | Explícita |
 | --- | --- |
 | ![Ubicación y orientación de la barra de herramientas de entrada manuscrita predeterminada](./images/ink/location-default-small.png) | ![Ubicación y orientación de la barra de herramientas de tinta explícita](./images/ink/location-explicit-small.png) |
 | *Ubicación y orientación predeterminadas de la barra de herramientas de Windows Ink* | *Ubicación y orientación explícita de la barra de herramientas de Windows Ink* |
@@ -108,7 +108,7 @@ En algunos casos, es posible que desee establecer la ubicación y la orientació
 ![Configuración de mano dominante](./images/ink/location-handedness-setting.png)  
 *Configuración de mano dominante*
 
-Puede consultar este valor mediante la propiedad HandPreference de Windows. UI. ViewManagement y establecer el [HorizontalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.HorizontalAlignment) según el valor devuelto. En este ejemplo, se busca la barra de herramientas en el lado izquierdo de la aplicación para una persona que se va a usar a la izquierda y en el lado derecho de una persona con la mano adecuada.
+Puede consultar este valor mediante la propiedad HandPreference de Windows. UI. ViewManagement y establecer el [HorizontalAlignment](/uwp/api/windows.ui.xaml.frameworkelement.HorizontalAlignment) según el valor devuelto. En este ejemplo, se busca la barra de herramientas en el lado izquierdo de la aplicación para una persona que se va a usar a la izquierda y en el lado derecho de una persona con la mano adecuada.
 
 **Descargar este ejemplo desde la ubicación de la [barra de herramientas de entrada y el ejemplo de orientación (Basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)**
 
@@ -129,7 +129,7 @@ public MainPage()
 
 **Ajustar dinámicamente al estado de usuario o de dispositivo**
 
-También puede usar el enlace para buscar las actualizaciones de la interfaz de usuario en función de los cambios en las preferencias del usuario, la configuración del dispositivo o los Estados de los dispositivos. En el ejemplo siguiente, se expande el ejemplo anterior y se muestra cómo colocar dinámicamente la barra de herramientas de la tinta en función de la orientación del dispositivo mediante el enlace, un objeto ViewMOdel y la interfaz [INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged) . 
+También puede usar el enlace para buscar las actualizaciones de la interfaz de usuario en función de los cambios en las preferencias del usuario, la configuración del dispositivo o los Estados de los dispositivos. En el ejemplo siguiente, se expande el ejemplo anterior y se muestra cómo colocar dinámicamente la barra de herramientas de la tinta en función de la orientación del dispositivo mediante el enlace, un objeto ViewMOdel y la interfaz [INotifyPropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged) . 
 
 **Descargar este ejemplo desde la ubicación de la [barra de herramientas de entrada y el ejemplo de orientación (dinámico)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)**
 
@@ -137,12 +137,12 @@ También puede usar el enlace para buscar las actualizaciones de la interfaz de 
     1. Agregue una nueva carpeta al proyecto y llámela **ViewModels**.
     1. Agregue una nueva clase a la carpeta ViewModels (en este ejemplo, se le llamó **InkToolbarSnippetHostViewModel.CS**).
         > [!NOTE] 
-        > Usamos el [patrón singleton](https://docs.microsoft.com/previous-versions/msp-n-p/ff650849(v=pandp.10)) , ya que solo necesitamos un objeto de este tipo para la vida útil de la aplicación.
+        > Usamos el [patrón singleton](/previous-versions/msp-n-p/ff650849(v=pandp.10)) , ya que solo necesitamos un objeto de este tipo para la vida útil de la aplicación.
 
     1. Agregue `using System.ComponentModel` el espacio de nombres al archivo.
     1. Agregue una variable miembro estática denominada **instancia**y una propiedad estática de solo lectura denominada **instancia**. Haga que el constructor sea privado para asegurarse de que solo se puede tener acceso a esta clase a través de la propiedad de instancia.   
         > [!NOTE] 
-        > Esta clase hereda de la interfaz [INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged) , que se usa para notificar a los clientes, normalmente los clientes de enlace, que un valor de propiedad ha cambiado. Vamos a usar esto para controlar los cambios en la orientación del dispositivo (expandiremos este código y explicaremos más adelante en un paso posterior).  
+        > Esta clase hereda de la interfaz [INotifyPropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged) , que se usa para notificar a los clientes, normalmente los clientes de enlace, que un valor de propiedad ha cambiado. Vamos a usar esto para controlar los cambios en la orientación del dispositivo (expandiremos este código y explicaremos más adelante en un paso posterior).  
 
         ```csharp
         using System.ComponentModel;
@@ -172,7 +172,7 @@ También puede usar el enlace para buscar las actualizaciones de la interfaz de 
 
     1. Agregue dos propiedades bool a la clase InkToolbarSnippetHostViewModel: **LeftHandedLayout** (la misma funcionalidad que el ejemplo anterior solo XAML) y **PortraitLayout** (orientación del dispositivo).
         >[!NOTE] 
-        > La propiedad PortraitLayout es configurable e incluye la definición para el evento [PropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) .
+        > La propiedad PortraitLayout es configurable e incluye la definición para el evento [PropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) .
 
         ```csharp
         public bool LeftHandedLayout
@@ -209,12 +209,12 @@ También puede usar el enlace para buscar las actualizaciones de la interfaz de 
         }
         ```
 
-1. Ahora, vamos a agregar un par de clases de convertidor a nuestro proyecto. Cada clase contiene un objeto Convert que devuelve un valor de alineación ( [HorizontalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.horizontalalignment) o [VerticalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.verticalalignment)).
+1. Ahora, vamos a agregar un par de clases de convertidor a nuestro proyecto. Cada clase contiene un objeto Convert que devuelve un valor de alineación ( [HorizontalAlignment](/uwp/api/windows.ui.xaml.horizontalalignment) o [VerticalAlignment](/uwp/api/windows.ui.xaml.verticalalignment)).
     1. Agregue una nueva carpeta al proyecto y llámela **convertidores**.
     1. Agregue dos clases nuevas a la carpeta Converters (en este ejemplo, se les llama **HorizontalAlignmentFromHandednessConverter.CS** y **VerticalAlignmentFromAppViewConverter.CS**).
     1. Agregue `using Windows.UI.Xaml` `using Windows.UI.Xaml.Data` espacios de nombres y a cada archivo.
-    1. Cambie cada clase a `public` y especifique que implementa la interfaz [IValueConverter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter) .
-    1. Agregue los métodos [Convert](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) y [ConvertBack](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) a cada archivo, como se muestra aquí (se deja el método ConvertBack en modo no implementado).
+    1. Cambie cada clase a `public` y especifique que implementa la interfaz [IValueConverter](/uwp/api/windows.ui.xaml.data.ivalueconverter) .
+    1. Agregue los métodos [Convert](/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) y [ConvertBack](/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) a cada archivo, como se muestra aquí (se deja el método ConvertBack en modo no implementado).
         - HorizontalAlignmentFromHandednessConverter coloca la barra de herramientas de entrada manuscrita en el lado derecho de la aplicación para los usuarios que se entregan a la derecha y en el lado izquierdo de la aplicación para los usuarios que se entregan a la izquierda.
         ```csharp
         using System;
@@ -282,8 +282,8 @@ También puede usar el enlace para buscar las actualizaciones de la interfaz de 
 1. Ahora, abra el archivo MainPage.xaml.cs.
     1. Agregue `using using locationandorientation.ViewModels` a la lista de espacios de nombres para asociar el ViewModel.
     1. Agregue `using Windows.UI.ViewManagement` a la lista de espacios de nombres para habilitar la escucha de cambios en la orientación del dispositivo.
-    1. Agregue el código [WindowSizeChangedEventHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.windowsizechangedeventhandler) .
-    1. Establezca [DataContext](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement.DataContext) para la vista en la instancia singleton de la clase InkToolbarSnippetHostViewModel. 
+    1. Agregue el código [WindowSizeChangedEventHandler](/uwp/api/windows.ui.xaml.windowsizechangedeventhandler) .
+    1. Establezca [DataContext](/uwp/api/Windows.UI.Xaml.FrameworkElement.DataContext) para la vista en la instancia singleton de la clase InkToolbarSnippetHostViewModel. 
     ```csharp
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
@@ -413,7 +413,7 @@ Puedes invalidar este comportamiento predeterminado y especificar el botón sele
 Para este ejemplo, inicializamos la barra de herramientas predeterminada con el botón de lápiz seleccionado y el lápiz activado (en lugar del bolígrafo).
 
 1. Usa la declaración de XAML para los controles InkCanvas e InkToolbar del ejemplo anterior.
-2. En el código subyacente, configura un controlador para el evento [Loaded](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.loaded) del objeto [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar).
+2. En el código subyacente, configura un controlador para el evento [Loaded](/uwp/api/windows.ui.xaml.frameworkelement.loaded) del objeto [InkToolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar).
 
   ```csharp
   /// <summary>
@@ -428,12 +428,12 @@ Para este ejemplo, inicializamos la barra de herramientas predeterminada con el 
   }
   ```
 
-3. En el controlador del evento [Loaded](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.loaded):
-    1. Obtén una referencia al botón [InkToolbarPencilButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton) integrado.
+3. En el controlador del evento [Loaded](/uwp/api/windows.ui.xaml.frameworkelement.loaded):
+    1. Obtén una referencia al botón [InkToolbarPencilButton](/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton) integrado.
 
-    Al pasar un objeto [InkToolbarTool.Pencil](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbartool) en el método [GetToolButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar.gettoolbutton), se devuelve un objeto [InkToolbarToolButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbartoolbutton) para el botón [InkToolbarPencilButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton).
+    Al pasar un objeto [InkToolbarTool.Pencil](/uwp/api/windows.ui.xaml.controls.inktoolbartool) en el método [GetToolButton](/uwp/api/windows.ui.xaml.controls.inktoolbar.gettoolbutton), se devuelve un objeto [InkToolbarToolButton](/uwp/api/windows.ui.xaml.controls.inktoolbartoolbutton) para el botón [InkToolbarPencilButton](/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton).
 
-    2. Establece [ActiveTool](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar.activetool) en el objeto devuelto en el paso anterior.
+    2. Establece [ActiveTool](/uwp/api/windows.ui.xaml.controls.inktoolbar.activetool) en el objeto devuelto en el paso anterior.
 
 ```CSharp
 /// <summary>
@@ -457,21 +457,21 @@ private void inkToolbar_Loaded(object sender, RoutedEventArgs e)
 
 Como hemos mencionado, la barra de herramientas de Windows Ink incluye una colección de botones integrados predeterminados. Estos botones aparecen en el siguiente orden (de izquierda a derecha):
 
-- [InkToolbarBallpointPenButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarballpointpenbutton)
-- [InkToolbarPencilButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton)
-- [InkToolbarHighlighterButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarhighlighterbutton)
-- [InkToolbarEraserButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbareraserbutton)
-- [InkToolbarRulerButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarrulerbutton)
+- [InkToolbarBallpointPenButton](/uwp/api/windows.ui.xaml.controls.inktoolbarballpointpenbutton)
+- [InkToolbarPencilButton](/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton)
+- [InkToolbarHighlighterButton](/uwp/api/windows.ui.xaml.controls.inktoolbarhighlighterbutton)
+- [InkToolbarEraserButton](/uwp/api/windows.ui.xaml.controls.inktoolbareraserbutton)
+- [InkToolbarRulerButton](/uwp/api/windows.ui.xaml.controls.inktoolbarrulerbutton)
 
 Para este ejemplo, inicializamos la barra de herramientas solo con los botones de bolígrafo, lápiz y borrador integrados.
 
 Puedes hacerlo mediante XAML o código subyacente.
 
-**LENGUAJE**
+**XAML**
 
 Modifica la declaración de XAML para los controles InkCanvas e InkToolbar del primer ejemplo.
-- Agrega un atributo [InitialControls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar.initialcontrols) y establece su valor en "[None](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarinitialcontrols)". Esta acción borra la colección predeterminada de botones integrados.
-- Agrega los botones InkToolbar específicos necesarios para la aplicación. Aquí, agregamos solo los botones [InkToolbarBallpointPenButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarballpointpenbutton), [InkToolbarPencilButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton) e [InkToolbarEraserButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbareraserbutton).
+- Agrega un atributo [InitialControls](/uwp/api/windows.ui.xaml.controls.inktoolbar.initialcontrols) y establece su valor en "[None](/uwp/api/windows.ui.xaml.controls.inktoolbarinitialcontrols)". Esta acción borra la colección predeterminada de botones integrados.
+- Agrega los botones InkToolbar específicos necesarios para la aplicación. Aquí, agregamos solo los botones [InkToolbarBallpointPenButton](/uwp/api/windows.ui.xaml.controls.inktoolbarballpointpenbutton), [InkToolbarPencilButton](/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton) e [InkToolbarEraserButton](/uwp/api/windows.ui.xaml.controls.inktoolbareraserbutton).
 > [!NOTE]
 > Los botones se agregan a la barra de herramientas en el orden definido por el marco, no en el orden especificado aquí.
 
@@ -534,7 +534,7 @@ Modifica la declaración de XAML para los controles InkCanvas e InkToolbar del p
   </Grid>
   ```
 
-2. En el código subyacente, configura un controlador para el evento [Loading](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.loading) del objeto [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar).
+2. En el código subyacente, configura un controlador para el evento [Loading](/uwp/api/windows.ui.xaml.frameworkelement.loading) del objeto [InkToolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar).
 
   ```csharp
   /// <summary>
@@ -549,12 +549,12 @@ Modifica la declaración de XAML para los controles InkCanvas e InkToolbar del p
   }
   ```
 
-3. Establece [InitialControls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar.initialcontrols) en "[None](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarinitialcontrols)".
-4. Crea referencias de objetos para los botones que necesita tu aplicación. Aquí, agregamos solo los botones [InkToolbarBallpointPenButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarballpointpenbutton), [InkToolbarPencilButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton) e [InkToolbarEraserButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbareraserbutton).
+3. Establece [InitialControls](/uwp/api/windows.ui.xaml.controls.inktoolbar.initialcontrols) en "[None](/uwp/api/windows.ui.xaml.controls.inktoolbarinitialcontrols)".
+4. Crea referencias de objetos para los botones que necesita tu aplicación. Aquí, agregamos solo los botones [InkToolbarBallpointPenButton](/uwp/api/windows.ui.xaml.controls.inktoolbarballpointpenbutton), [InkToolbarPencilButton](/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton) e [InkToolbarEraserButton](/uwp/api/windows.ui.xaml.controls.inktoolbareraserbutton).
   > [!NOTE]
   > Los botones se agregan a la barra de herramientas en el orden definido por el marco, no en el orden especificado aquí.
 
-5. Método [Add](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobjectcollection.add) para agregar los botones al control InkToolbar.
+5. Método [Add](/uwp/api/windows.ui.xaml.dependencyobjectcollection.add) para agregar los botones al control InkToolbar.
 
   ```csharp
   /// <summary>
@@ -630,14 +630,14 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 ```
 
-4. Especifica que la clase CalligraphicPen se deriva de [InkToolbarCustomPen](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarcustompen).
+4. Especifica que la clase CalligraphicPen se deriva de [InkToolbarCustomPen](/uwp/api/windows.ui.xaml.controls.inktoolbarcustompen).
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
 {
 }
 ```
 
-5. Invalida [CreateInkDrawingAttributesCore](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarcustompen.createinkdrawingattributescore) para especificar tu propio tamaño de trazo y pincel.
+5. Invalida [CreateInkDrawingAttributesCore](/uwp/api/windows.ui.xaml.controls.inktoolbarcustompen.createinkdrawingattributescore) para especificar tu propio tamaño de trazo y pincel.
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
 {
@@ -648,7 +648,7 @@ class CalligraphicPen : InkToolbarCustomPen
 }
 ```
 
-6. Crea un objeto [InkDrawingAttributes](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkdrawingattributes) y establece las propiedades de [forma de la punta del lápiz](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkdrawingattributes.pentip), [rotación de la punta](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkdrawingattributes.pentiptransform), [tamaño del trazo](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkdrawingattributes.size) y [color del trazo](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkdrawingattributes.color).
+6. Crea un objeto [InkDrawingAttributes](/uwp/api/windows.ui.input.inking.inkdrawingattributes) y establece las propiedades de [forma de la punta del lápiz](/uwp/api/windows.ui.input.inking.inkdrawingattributes.pentip), [rotación de la punta](/uwp/api/windows.ui.input.inking.inkdrawingattributes.pentiptransform), [tamaño del trazo](/uwp/api/windows.ui.input.inking.inkdrawingattributes.size) y [color del trazo](/uwp/api/windows.ui.input.inking.inkdrawingattributes.color).
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
 {
@@ -678,11 +678,11 @@ class CalligraphicPen : InkToolbarCustomPen
 }
 ```
 
-**LENGUAJE**
+**XAML**
 
 A continuación, agregamos las referencias necesarias para el lápiz personalizado en MainPage.xaml.
 
-1. Declaramos un diccionario de recursos de página local que cree una referencia al lápiz personalizado (`CalligraphicPen`) definido en CalligraphicPen.cs y una [colección de pinceles](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.BrushCollection) compatibles con el lápiz personalizado (`CalligraphicPenPalette`).
+1. Declaramos un diccionario de recursos de página local que cree una referencia al lápiz personalizado (`CalligraphicPen`) definido en CalligraphicPen.cs y una [colección de pinceles](/uwp/api/Windows.UI.Xaml.Media.BrushCollection) compatibles con el lápiz personalizado (`CalligraphicPenPalette`).
 ```xaml
 <Page.Resources>
     <!-- Add the custom CalligraphicPen to the page resources. -->
@@ -695,11 +695,11 @@ A continuación, agregamos las referencias necesarias para el lápiz personaliza
 </Page.Resources>
 ```
 
-2. A continuación, agregamos un control InkToolbar con un elemento [InkToolbarCustomPenButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarcustompenbutton) secundario.
+2. A continuación, agregamos un control InkToolbar con un elemento [InkToolbarCustomPenButton](/uwp/api/windows.ui.xaml.controls.inktoolbarcustompenbutton) secundario.
 
   El botón de lápiz personalizado incluye las dos referencias de recursos estáticos declaradas en los recursos de página: `CalligraphicPen` y `CalligraphicPenPalette`.
 
-  También especificamos el alcance del control deslizante de tamaño de trazo ([MinStrokeWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpenbutton.minstrokewidth), [MaxStrokeWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpenbutton.maxstrokewidth) y [SelectedStrokeWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpenbutton.selectedstrokewidthproperty)), el pincel seleccionado ([SelectedBrushIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpenbutton.selectedbrushindex)) y el icono para el botón de lápiz personalizado ([SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon)).
+  También especificamos el alcance del control deslizante de tamaño de trazo ([MinStrokeWidth](/uwp/api/windows.ui.xaml.controls.inktoolbarpenbutton.minstrokewidth), [MaxStrokeWidth](/uwp/api/windows.ui.xaml.controls.inktoolbarpenbutton.maxstrokewidth) y [SelectedStrokeWidth](/uwp/api/windows.ui.xaml.controls.inktoolbarpenbutton.selectedstrokewidthproperty)), el pincel seleccionado ([SelectedBrushIndex](/uwp/api/windows.ui.xaml.controls.inktoolbarpenbutton.selectedbrushindex)) y el icono para el botón de lápiz personalizado ([SymbolIcon](/uwp/api/windows.ui.xaml.controls.symbolicon)).
 ```xaml
 <Grid Grid.Row="1">
     <InkCanvas x:Name="inkCanvas" />
@@ -734,13 +734,13 @@ Por lo general, la entrada táctil se utiliza para la manipulación directa de u
 Cuando se inicia la aplicación, solo se admite la entrada manuscrita con lápiz y la entrada táctil se usa para realizar movimientos panorámicos o de zoom en la superficie de entrada manuscrita. Si la entrada manuscrita táctil está habilitada, no se pueden realizar movimientos panorámicos ni de zoom en la superficie de entrada manuscrita mediante la entrada táctil.
 
 > [!NOTE]
-> Consulta [Controles de entrada manuscrita](../controls-and-patterns/inking-controls.md) para conocer las directrices sobre la experiencia del usuario de [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) y [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar). Las siguientes recomendaciones son pertinentes para este ejemplo:
-> - El control [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar)y la entrada manuscrita en general se experimentan mejor a través de un lápiz activo. Sin embargo, la entrada manuscrita con el mouse y táctil puede admitirse si tu aplicación lo requiere. 
+> Consulta [Controles de entrada manuscrita](../controls-and-patterns/inking-controls.md) para conocer las directrices sobre la experiencia del usuario de [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) y [**InkToolbar**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbar). Las siguientes recomendaciones son pertinentes para este ejemplo:
+> - El control [**InkToolbar**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbar)y la entrada manuscrita en general se experimentan mejor a través de un lápiz activo. Sin embargo, la entrada manuscrita con el mouse y táctil puede admitirse si tu aplicación lo requiere. 
 > - Si admites la entrada manuscrita con la entrada táctil, se recomienda usar el icono de "ED5F" de la fuente "Segoe MLD2 Assets" para el botón de alternancia, con una información sobre herramientas "Escritura táctil". 
 
-**LENGUAJE**
+**XAML**
 
-1. En primer lugar, declaramos un elemento [**InkToolbarCustomToggleButton**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbarCustomToggleButton) (toggleButton) con un agente de escucha de eventos Click que especifica el controlador de eventos (Toggle_Custom).
+1. En primer lugar, declaramos un elemento [**InkToolbarCustomToggleButton**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbarCustomToggleButton) (toggleButton) con un agente de escucha de eventos Click que especifica el controlador de eventos (Toggle_Custom).
 
 ```xaml 
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -848,19 +848,19 @@ namespace Ink_Basic_InkToolbar
 
 Puedes crear un botón de herramienta personalizada para invocar una herramienta que no sea lápiz y que esté definida por la aplicación.
 
-De manera predeterminada, [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) procesa todas las entradas como trazos de lápiz o trazos de borrado. Esto incluye la entrada que modificó una prestación de hardware secundaria, como el botón de menú contextual del lápiz, el botón secundario del mouse o similares. Sin embargo, [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) puede configurarse para dejar una entrada determinada sin procesar que, a continuación, se pasa a la aplicación para procesarla de forma personalizada.
+De manera predeterminada, [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) procesa todas las entradas como trazos de lápiz o trazos de borrado. Esto incluye la entrada que modificó una prestación de hardware secundaria, como el botón de menú contextual del lápiz, el botón secundario del mouse o similares. Sin embargo, [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) puede configurarse para dejar una entrada determinada sin procesar que, a continuación, se pasa a la aplicación para procesarla de forma personalizada.
 
-En este ejemplo, definimos un botón de herramienta personalizada que, cuando se activa, hace que los trazos posteriores se procesen y se representen como un lazo de selección (línea discontinua) en lugar de como una entrada manuscrita. Todos los trazos de lápiz que se hagan dentro de los límites del área de selección se establecen en [**Selected**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstroke.selected).
+En este ejemplo, definimos un botón de herramienta personalizada que, cuando se activa, hace que los trazos posteriores se procesen y se representen como un lazo de selección (línea discontinua) en lugar de como una entrada manuscrita. Todos los trazos de lápiz que se hagan dentro de los límites del área de selección se establecen en [**Selected**](/uwp/api/windows.ui.input.inking.inkstroke.selected).
 
 > [!NOTE]
 > Consulta Controles de entrada manuscrita para conocer las directrices sobre la experiencia del usuario de InkCanvas y InkToolbar. La siguiente recomendación es pertinente para este ejemplo:
 > - Si se proporciona selección de trazo, se recomienda usar el icono de EF20 de la fuente Segoe MLD2 Assets para el botón de herramienta, con una información sobre herramientas "Herramienta de selección". 
  
-**LENGUAJE**
+**XAML**
 
-1. En primer lugar, declaramos un elemento [**InkToolbarCustomToolButton**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbarCustomToolButton) (customToolButton) con un agente de escucha de eventos Click que especifica el controlador de eventos (customToolButton_Click) donde se configura la selección de trazos. (También hemos agregado un conjunto de botones para copiar, cortar y pegar la selección de trazos).
+1. En primer lugar, declaramos un elemento [**InkToolbarCustomToolButton**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbarCustomToolButton) (customToolButton) con un agente de escucha de eventos Click que especifica el controlador de eventos (customToolButton_Click) donde se configura la selección de trazos. (También hemos agregado un conjunto de botones para copiar, cortar y pegar la selección de trazos).
 
-2. También agregamos un elemento Canvas para dibujar el trazo de selección. Si usas una capa independiente para dibujar el trazo de selección, [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) y su contenido no se modifican. 
+2. También agregamos un elemento Canvas para dibujar el trazo de selección. Si usas una capa independiente para dibujar el trazo de selección, [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) y su contenido no se modifican. 
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -915,9 +915,9 @@ En este ejemplo, definimos un botón de herramienta personalizada que, cuando se
 
 **Código subyacente**
 
-2. A continuación, controlamos el evento Click para [**InkToolbarCustomToolButton**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbarCustomToolButton) en el archivo de código subyacente MainPage.xaml.cs.
+2. A continuación, controlamos el evento Click para [**InkToolbarCustomToolButton**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbarCustomToolButton) en el archivo de código subyacente MainPage.xaml.cs.
 
-   Este controlador configura [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) para pasar la entrada sin procesar a la aplicación. 
+   Este controlador configura [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) para pasar la entrada sin procesar a la aplicación. 
 
    Para obtener un paso más detallado de este código: Consulte la sección entrada de paso a través para el procesamiento avanzado de [interacciones de lápiz y Windows Ink en aplicaciones Windows](pen-and-stylus-interactions.md).
 
@@ -1109,15 +1109,15 @@ namespace Ink_Basic_InkToolbar
 
 ### <a name="custom-ink-rendering"></a>Representación de entrada de lápiz personalizada
 
-De manera predeterminada, la entrada de lápiz se procesa en un subproceso en segundo plano de baja latencia y se representa como "húmeda" mientras se dibuja. Cuando se completa el trazo (se levanta el lápiz o el dedo o se libera el botón del mouse), el trazo se procesa en el subproceso de la interfaz de usuario y se representa como "seco" en la capa de [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) (lo verás sobre el contenido de la aplicación y reemplazando la entrada de lápiz húmeda).
+De manera predeterminada, la entrada de lápiz se procesa en un subproceso en segundo plano de baja latencia y se representa como "húmeda" mientras se dibuja. Cuando se completa el trazo (se levanta el lápiz o el dedo o se libera el botón del mouse), el trazo se procesa en el subproceso de la interfaz de usuario y se representa como "seco" en la capa de [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) (lo verás sobre el contenido de la aplicación y reemplazando la entrada de lápiz húmeda).
 
 La plataforma de entrada de lápiz te permite invalidar este comportamiento y personalizar totalmente la experiencia de entrada de lápiz mediante el secado personalizado de la entrada de lápiz.
 
-Para obtener más información sobre el secado personalizado, consulte [interacciones de lápiz y Windows Ink en aplicaciones de Windows](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions#custom-ink-rendering).
+Para obtener más información sobre el secado personalizado, consulte [interacciones de lápiz y Windows Ink en aplicaciones de Windows](./pen-and-stylus-interactions.md#custom-ink-rendering).
 
 > [!NOTE]
-> El secado personalizado y la clase [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)  
-> Si tu aplicación invalida el comportamiento predeterminado de representación de entrada de lápiz de la clase [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) con una implementación de secado personalizado, los trazos de lápiz representados ya no están disponibles para InkToolbar y los comandos de borrado integrados de InkToolbar no funcionan según lo previsto. Para proporcionar la funcionalidad de borrado, debes controlar todos los eventos de puntero, realizar la prueba de posicionamiento en cada trazo e invalidar el comando "Borrar todas las entradas de lápiz" integrado.
+> El secado personalizado y la clase [**InkToolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar)  
+> Si tu aplicación invalida el comportamiento predeterminado de representación de entrada de lápiz de la clase [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) con una implementación de secado personalizado, los trazos de lápiz representados ya no están disponibles para InkToolbar y los comandos de borrado integrados de InkToolbar no funcionan según lo previsto. Para proporcionar la funcionalidad de borrado, debes controlar todos los eventos de puntero, realizar la prueba de posicionamiento en cada trazo e invalidar el comando "Borrar todas las entradas de lápiz" integrado.
 
 ## <a name="related-articles"></a>Artículos relacionados
 

@@ -5,18 +5,18 @@ ms.date: 06/19/2018
 ms.topic: article
 keywords: Windows 10, UWP, punto de servicio, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c9a5008756831eed9819a3b323d167dcc4b2744
-ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
+ms.openlocfilehash: db6b47a29e302cb962e5b91cfba823eb7f89db81
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89043407"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156609"
 ---
 # <a name="pointofservice-device-objects"></a>Objetos de dispositivo PointOfService
 
 ## <a name="creating-a-device-object"></a>Crear un objeto de dispositivo
 
-Una vez que haya identificado el dispositivo PointOfService que quiere usar, ya sea desde una nueva enumeración o una DeviceID almacenada, solo tiene que llamar a [**FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.fromidasync) con el[**DeviceID**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) que haya elegido mediante programación, o bien el usuario ha seleccionado crear un nuevo objeto de dispositivo de punto de servicio.
+Una vez que haya identificado el dispositivo PointOfService que quiere usar, ya sea desde una nueva enumeración o una DeviceID almacenada, solo tiene que llamar a [**FromIdAsync**](/uwp/api/windows.devices.pointofservice.barcodescanner.fromidasync) con el[**DeviceID**](/uwp/api/windows.devices.enumeration.deviceinformation.id) que haya elegido mediante programación, o bien el usuario ha seleccionado crear un nuevo objeto de dispositivo de punto de servicio.
 
 En este ejemplo se intenta crear un nuevo objeto BarcodeScanner con FromIdAsync mediante DeviceID. Si se produce un error al crear el objeto, se escribe un mensaje de depuración.
 

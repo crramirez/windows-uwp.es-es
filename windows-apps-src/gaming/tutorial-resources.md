@@ -1,16 +1,16 @@
 ---
 title: Extender el juego de ejemplo
-description: Obtenga información sobre cómo implementar una superposición de XAML para un juego DirectX de UWP.
+description: Obtenga información sobre cómo usar XAML en lugar de Direct2D para la superposición en el juego de DirectX de Basic Plataforma universal de Windows (UWP).
 keywords: DirectX, XAML
 ms.date: 10/24/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 06b52e5b6fdba1db83c941e770cd49360085accf
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: be2ef3b4d5c3cce4a4305a8faa1f4af5dea3e8bc
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409554"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156379"
 ---
 # <a name="extend-the-sample-game"></a>Extender el juego de ejemplo
 
@@ -43,7 +43,7 @@ Definir superposición | Definido en un archivo XAML, `\*.xaml` . Una vez que en
 Elementos de la interfaz de usuario | Los elementos de la interfaz de usuario XAML proceden de elementos estandarizados que forman parte de la Windows Runtime las API XAML, incluidas [**Windows:: UI:: XAML**](/uwp/api/Windows.UI.Xaml) y [**Windows:: UI:: XAML:: Controls**](/uwp/api/Windows.UI.Xaml.Controls). El código que controla el comportamiento de los elementos de interfaz de usuario XAML se define en un archivo de código subyacente: Main.xaml.cpp. | Las formas simples se pueden dibujar como rectángulos y elipses.
 Cambio de tamaño de ventana | Controla naturalmente el cambio de tamaño y la visualización de los eventos de cambio de estado, transformando la superposición en consecuencia | Es necesario especificar manualmente cómo volver a dibujar los componentes de la superposición.
 
-Otra gran diferencia implica la [cadena de intercambio](/windows/uwp/graphics-concepts/swap-chains). No tiene que adjuntar la cadena de intercambio a un objeto [**Windows:: UI:: Core:: CoreWindow**](/uwp/api/windows.ui.core.corewindow) . En su lugar, una aplicación de DirectX que incorpora XAML asocia una cadena de intercambio cuando se construye un nuevo objeto [**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel) . 
+Otra gran diferencia implica la [cadena de intercambio](../graphics-concepts/swap-chains.md). No tiene que adjuntar la cadena de intercambio a un objeto [**Windows:: UI:: Core:: CoreWindow**](/uwp/api/windows.ui.core.corewindow) . En su lugar, una aplicación de DirectX que incorpora XAML asocia una cadena de intercambio cuando se construye un nuevo objeto [**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel) . 
 
 En el fragmento de código siguiente se muestra cómo declarar XAML para **SwapChainPanel** en el archivo [**DirectXPage. Xaml**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/DirectXPage.xaml) .
 ```xml
@@ -78,7 +78,7 @@ void App::OnLaunched(_In_ LaunchActivatedEventArgs^ /* args */)
 
 Para asociar la cadena de intercambio configurada a la instancia de [**SwapChainPanel**](/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) definida por el código XAML, debe obtener un puntero a la implementación de la interfaz [**ISwapChainPanelNative**](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-iswapchainpanelnative) nativa subyacente y llamar a [**ISwapChainPanelNative:: SetSwapChain**](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-iswapchainpanelnative-setswapchain) en ella, pasándole la cadena de intercambio configurada. 
 
-El siguiente fragmento de código de [**DX::D eviceresources:: CreateWindowSizeDependentResources**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/Common/DeviceResources.cpp#L218-L521) detalla esto para la interoperabilidad de DirectX/XAML:
+El siguiente fragmento de código de  [**DX::D eviceresources:: CreateWindowSizeDependentResources**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/Common/DeviceResources.cpp#L218-L521) detalla esto para la interoperabilidad de DirectX/XAML:
 
 ```cpp
         ComPtr<IDXGIDevice3> dxgiDevice;
@@ -130,7 +130,7 @@ El siguiente fragmento de código de [**DX::D eviceresources:: CreateWindowSizeD
 
 Para obtener más información sobre este proceso, consulta el tema sobre [interoperación entre DirectX y XAML](directx-and-xaml-interop.md).
 
-## <a name="sample"></a>Muestra
+## <a name="sample"></a>Ejemplo
 
 Para descargar la versión de este juego que usa XAML para la superposición, vaya al [juego de ejemplo de filmación de Direct3D (XAML)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameXaml).
 

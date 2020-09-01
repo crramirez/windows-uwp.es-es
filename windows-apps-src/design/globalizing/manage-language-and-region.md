@@ -7,12 +7,12 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 9998436b106acce6a9223140e66d2633c2210a54
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: c4f1857ba4afe5eba271f7022c64aca26eb6b6b8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493360"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156939"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>Comprender los idiomas del perfil del usuario y los idiomas de manifiesto de la aplicación
 Un usuario de Windows puede usar la **configuración**  >  **hora &** la  >  **región de idioma & idioma** para configurar una lista ordenada de los idiomas para mostrar preferidos, o simplemente un solo idioma de visualización preferido. Un lenguaje puede tener una variante regional. Por ejemplo, puede seleccionar español como se habla en España, español, como se habla en México, español, como se habla en el Estados Unidos, entre otros.
@@ -170,7 +170,7 @@ En la tabla siguiente se incluyen ejemplos de lo que el usuario verá en la inte
 </tr>
 <tr>
 <td align="left">Español (España) (predeterminado); Español (México); Español (Latinoamérica); Portugués (Brasil)</td>
-<td align="left">Inglés (EE. UU.)</td>
+<td align="left">Inglés (EE.UU.)</td>
 <td align="left">ninguno</td>
 <td align="left">Español (España)</td>
 <td align="left">UI: Español (España) (usa el valor predeterminado dado que no existe reserva disponible para el inglés)<br>Fechas/Horas/Números Español (España)</td>
@@ -193,7 +193,7 @@ En la tabla siguiente se incluyen ejemplos de lo que el usuario verá en la inte
 </table>
 
 >[!NOTE]
-> Para obtener una lista de los códigos de país o región estándar usados por Microsoft, consulte la [lista de países o regiones oficiales](/windows/uwp/publish/supported-languages).
+> Para obtener una lista de los códigos de país o región estándar usados por Microsoft, consulte la [lista de países o regiones oficiales](../../publish/supported-languages.md).
 
 ## <a name="important-apis"></a>API importantes
 * [GlobalizationPreferences. Languages](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)

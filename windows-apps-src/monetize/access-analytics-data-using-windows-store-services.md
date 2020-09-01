@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows 10, UWP, servicios de tienda, Microsoft Store API de Analytics
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 51b0180d6b550cda082b5ee10530194824a48e33
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: 8becf9149d0afa888d0024619df06f2103c7bf8b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846805"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158649"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Acceder a datos de análisis mediante servicios de almacenamiento
 
@@ -30,7 +30,7 @@ Los siguientes pasos describen el proceso de principio a fin:
 
 Antes de empezar a escribir código para llamar a la API de Microsoft Store Analytics, asegúrese de que ha completado los requisitos previos siguientes.
 
-* Usted (o su organización) tiene que tener un directorio de Azure AD y el permiso de [Administrador global](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el directorio. Si usa Microsoft 365 u otros servicios empresariales de Microsoft, ya tiene el directorio de Azure AD. De lo contrario, puede [crear un nuevo Azure ad en el centro de Partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin cargo adicional.
+* Usted (o su organización) tiene que tener un directorio de Azure AD y el permiso de [Administrador global](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) para el directorio. Si usa Microsoft 365 u otros servicios empresariales de Microsoft, ya tiene el directorio de Azure AD. De lo contrario, puede [crear un nuevo Azure ad en el centro de Partners](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) sin cargo adicional.
 
 * Debe asociar una aplicación Azure AD a la cuenta del centro de Partners, recuperar el identificador de inquilino y el identificador de cliente de la aplicación y generar una clave. La aplicación Azure AD representa la aplicación o el servicio del que desea llamar a la API de Microsoft Store Analytics. Necesita el identificador de inquilino, el identificador de cliente y la clave para obtener un token de acceso de Azure AD para pasar a la API.
     > [!NOTE]
@@ -52,7 +52,7 @@ Para asociar una aplicación Azure AD a la cuenta del centro de Partners y recup
 
 Antes de llamar a cualquiera de los métodos de la API de Microsoft Store Analytics, primero debe obtener un token de acceso Azure AD que pase al encabezado **Authorization** de cada método de la API. Una vez que haya obtenido un token de acceso, tiene 60 minutos para usarlo antes de que expire. Después de que el token expire, puedes actualizar el token para que puedas continuar usándolo en llamadas adicionales a la API.
 
-Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
+Para obtener el token de acceso, sigue las instrucciones en [Llamadas de servicio a servicio utilizando las credenciales del cliente](/azure/active-directory/azuread-dev/v1-oauth2-client-creds-grant-flow) para enviar un HTTP POST al punto de conexión ```https://login.microsoftonline.com/<tenant_id>/oauth2/token```. Este es un ejemplo de solicitud.
 
 ```json
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
@@ -67,7 +67,7 @@ grant_type=client_credentials
 
 Para el valor de * \_ identificador de inquilino* en el URI de post y los parámetros de * \_ identificador de cliente* y * \_ secreto de cliente* , especifique el identificador de inquilino, el identificador de cliente y la clave de la aplicación que recuperó del centro de Partners en la sección anterior. Para el parámetro *resource*, tiene que especificar ```https://manage.devcenter.microsoft.com```.
 
-Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
+Una vez que expire el token de acceso, puedes actualizarlo siguiendo las instrucciones que se muestran [aquí](/azure/active-directory/azuread-dev/v1-protocols-oauth-code#refreshing-the-access-tokens).
 
 <span id="call-the-windows-store-analytics-api" />
 
@@ -95,18 +95,18 @@ Los siguientes métodos de análisis están disponibles para las aplicaciones UW
 
 ### <a name="methods-for-desktop-applications"></a>Métodos para aplicaciones de escritorio
 
-Los siguientes métodos de análisis están disponibles para su uso por parte de las cuentas de desarrollador que pertenecen al [programa de aplicación de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program).
+Los siguientes métodos de análisis están disponibles para su uso por parte de las cuentas de desarrollador que pertenecen al [programa de aplicación de escritorio de Windows](/windows/desktop/appxpkg/windows-desktop-application-program).
 
 | Escenario       | Métodos      |
 |---------------|--------------------|
 | Instala . |  <ul><li>[Obtener instalaciones de aplicaciones de escritorio](get-desktop-app-installs.md)</li></ul> |
-| Blocks |  <ul><li>[Obtener bloques de actualización de la aplicación de escritorio](get-desktop-block-data.md)</li><li>[Obtener detalles de bloque de actualización de la aplicación de escritorio](get-desktop-block-data-details.md)</li></ul> |
+| Blocks |  <ul><li>[Get upgrade blocks for your desktop application](get-desktop-block-data.md) (Obtener bloques de actualización para la aplicación de escritorio)</li><li>[Get upgrade block details for your desktop application](get-desktop-block-data-details.md) (Obtener detalles de bloques de actualización para la aplicación de escritorio)</li></ul> |
 | Errores de aplicación |  <ul><li>[Obtener datos de informes de errores de la aplicación de escritorio](get-desktop-application-error-reporting-data.md)</li><li>[Obtener los detalles asociados a un error en la aplicación de escritorio](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Obtener el seguimiento de pila asociado a un error en la aplicación de escritorio](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Descargar el archivo CAB asociado a un error en la aplicación de escritorio](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
-| Información detallada | <ul><li>[Obtener información detallada de la aplicación de escritorio](get-insights-data-for-your-desktop-app.md)</li></ul>  |
+| Información detallada | <ul><li>[Get insights data for your desktop application](get-insights-data-for-your-desktop-app.md) (Obtener información importante para la aplicación de escritorio)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Métodos para los servicios de Xbox Live
 
-Los siguientes métodos adicionales están disponibles para su uso por parte de las cuentas de desarrollador con juegos que usan los [servicios de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md).
+Los siguientes métodos adicionales están disponibles para su uso por parte de las cuentas de desarrollador con juegos que usan los [servicios de Xbox Live](/gaming/xbox-live/developer-program-overview.md).
 
 | Escenario       | Métodos      |
 |---------------|--------------------|
@@ -116,7 +116,7 @@ Los siguientes métodos adicionales están disponibles para su uso por parte de 
 
 ### <a name="methods-for-hardware-and-drivers"></a>Métodos para hardware y controladores
 
-Las cuentas de desarrollador que pertenecen al [programa del panel de hardware de Windows](https://docs.microsoft.com/windows-hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tienen acceso a un conjunto adicional de métodos para recuperar datos de análisis del hardware y los controladores. Para obtener más información, consulte [API del panel de hardware](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
+Las cuentas de desarrollador que pertenecen al [programa del panel de hardware de Windows](/windows-hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) tienen acceso a un conjunto adicional de métodos para recuperar datos de análisis del hardware y los controladores. Para obtener más información, consulte [API del panel de hardware](/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Ejemplo de código
 

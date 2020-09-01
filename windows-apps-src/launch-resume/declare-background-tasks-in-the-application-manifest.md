@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, tarea en segundo plano
 ms.localizationpriority: medium
-ms.openlocfilehash: e1580bdc62585cb777334c217419b4de6a691add
-ms.sourcegitcommit: 894decaf374f22bf39d4aecc1ab50d34ac011e31
+ms.openlocfilehash: 5b66cffa25dce28be22a1347b10e121e75936c25
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162570"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155959"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Declarar tareas en segundo plano en el manifiesto de la aplicación
 
@@ -20,8 +20,8 @@ ms.locfileid: "88162570"
 
 **API importantes**
 
--   [**Esquema BackgroundTasks**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
--   [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+-   [**Esquema BackgroundTasks**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**Windows.ApplicationModel.Background**](/uwp/api/Windows.ApplicationModel.Background)
 
 Habilita el uso de tareas en segundo plano declarándolas como extensiones en el manifiesto de la aplicación.
 
@@ -90,7 +90,7 @@ Copia este código al elemento Extensions (agregarás atributos en los siguiente
 
 2.  Cambia la lista del atributo Task Type para indicar el tipo de registro de tareas usado con esta tarea en segundo plano. Si la tarea en segundo plano se registra con varios tipos de desencadenadores, agrega elementos Task y atributos Type adicionales para cada uno.
 
-    **Nota:**    Asegúrese de enumerar cada uno de los tipos de desencadenador que está usando o la tarea en segundo plano no se registrará en los tipos de desencadenadores no declarados (el método de [**registro**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) producirá un error y producirá una excepción).
+    **Nota:**    Asegúrese de enumerar cada uno de los tipos de desencadenador que está usando o la tarea en segundo plano no se registrará en los tipos de desencadenadores no declarados (el método de [**registro**](/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) producirá un error y producirá una excepción).
 
     Este ejemplo de fragmento de código indica el uso de desencadenadores de eventos del sistema y de notificaciones de inserción:
 
@@ -171,7 +171,7 @@ En este XML de ejemplo se declara una tarea en segundo plano que se ejecuta en e
 </Extensions>
 ```
 
-Cuando se especifica **EntryPoint**, la aplicación recibe una devolución de llamada al método especificado cuando se activa el desencadenador. Si no especifica un **punto**de entrada, la aplicación recibe la devolución de llamada a través de [OnBackgroundActivated ()](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated).  Consulte [crear y registrar una tarea en segundo plano en proceso](create-and-register-an-inproc-background-task.md) para obtener más información.
+Cuando se especifica **EntryPoint**, la aplicación recibe una devolución de llamada al método especificado cuando se activa el desencadenador. Si no especifica un **punto**de entrada, la aplicación recibe la devolución de llamada a través de  [OnBackgroundActivated ()](/uwp/api/windows.ui.xaml.application.onbackgroundactivated).  Consulte [crear y registrar una tarea en segundo plano en proceso](create-and-register-an-inproc-background-task.md) para obtener más información.
 
 ### <a name="specify-where-your-background-task-runs-with-the-resourcegroup-attribute"></a>Especifique dónde se ejecuta la tarea en segundo plano con el atributo ResourceGroup.
 

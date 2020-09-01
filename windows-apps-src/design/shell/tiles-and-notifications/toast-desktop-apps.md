@@ -7,16 +7,16 @@ ms.date: 05/01/2018
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, puente de escritorio, msix, paquete disperso, opciones para enviar notificaciones del sistema, servidor com, activador com, com, com falsificado, sin com, sin com, enviar notificaciones de envío
 ms.localizationpriority: medium
-ms.openlocfilehash: b84120a592a1c2f5f18c6b6121568cbf126a582e
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: e2a70ebddd649b43424222e40165b19c9d567850
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234540"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156719"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Notificaciones del sistema de aplicaciones de escritorio
 
-Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay varias opciones diferentes para las aplicaciones de escritorio debido a los diferentes esquemas de activación.
+Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay varias opciones diferentes para las aplicaciones de escritorio debido a los diferentes esquemas de activación.
 
 En este artículo, se enumeran las opciones que tiene para enviar una notificación del sistema en Windows 10. Cada opción es totalmente compatible...
 
@@ -28,7 +28,7 @@ En este artículo, se enumeran las opciones que tiene para enviar una notificaci
 
 En la tabla siguiente se muestran las opciones para admitir las notificaciones del sistema dentro de la aplicación de escritorio y las características admitidas correspondientes. Puede usar la tabla para seleccionar la mejor opción para su escenario.<br/><br/>
 
-| Opción | Objetos visuales | Acciones | Entradas | Activa en proceso |
+| Opción | Objetos visuales | Actions | Entradas | Activa en proceso |
 | -- | -- | -- | -- | -- |
 | [Activador COM](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
 | [Sin CLSID de COM/stub](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
@@ -38,7 +38,7 @@ En la tabla siguiente se muestran las opciones para admitir las notificaciones d
 
 Esta es la opción preferida que funciona con las aplicaciones de escritorio y es compatible con todas las características de notificación. No tenga miedo del "activador COM"; tenemos una biblioteca para las aplicaciones [de C#](send-local-toast-desktop.md) y [C++](send-local-toast-desktop-cpp-wrl.md) que hace que resulte muy sencillo, incluso si nunca ha escrito un servidor com antes.<br/><br/>
 
-| Objetos visuales | Acciones | Entradas | Activa en proceso |
+| Objetos visuales | Actions | Entradas | Activa en proceso |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ✔️ | ✔️ |
 
@@ -61,7 +61,7 @@ Para obtener información sobre cómo usar esta opción, consulte [enviar una no
 
 Se trata de una opción alternativa si no puede implementar un activador COM. Sin embargo, sacrificará algunas características, como la compatibilidad de entrada (cuadros de texto en la notificación del sistema) y la activación en proceso.<br/><br/>
 
-| Objetos visuales | Acciones | Entradas | Activa en proceso |
+| Objetos visuales | Actions | Entradas | Activa en proceso |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ❌ | ❌ |
 
@@ -74,13 +74,13 @@ Con esta opción, si admite Win32 clásico, está mucho más limitado en las pla
 | Protocolo ToastGeneric | ✔️ | ✔️ |
 | Plantillas heredadas | ✔️ | ❌ |
 
-En el caso de las aplicaciones empaquetadas [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) y las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps), solo tiene que enviar notificaciones del sistema como si fuera una aplicación de UWP. Cuando el usuario haga clic en la notificación del sistema, la aplicación se iniciará con los argumentos de inicio que especificó en la notificación del sistema.
+En el caso de las aplicaciones empaquetadas [MSIX](/windows/msix/desktop/source-code-overview) y las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps), solo tiene que enviar notificaciones del sistema como si fuera una aplicación de UWP. Cuando el usuario haga clic en la notificación del sistema, la aplicación se iniciará con los argumentos de inicio que especificó en la notificación del sistema.
 
 En el caso de las aplicaciones Win32 clásicas, configure el AUMID para que pueda enviar notificaciones del sistema y, a continuación, especifique también un CLSID en el acceso directo. Puede ser cualquier GUID aleatorio. No agregue el servidor COM o el activador. Está agregando un "stub" COM CLSID, que hará que el centro de actividades conserve la notificación. Tenga en cuenta que solo puede usar notificaciones de activación de protocolo, ya que el CLSID de código auxiliar interrumpirá la activación de cualquier otra activación del sistema. Por lo tanto, debe actualizar la aplicación para admitir la activación del protocolo y hacer que el protocolo del sistema Active su propia aplicación.
 
 
 ## <a name="resources"></a>Recursos
 
-* [Enviar una notificación del sistema local desde las aplicaciones de escritorio de C#](send-local-toast-desktop.md)
-* [Enviar una notificación del sistema local desde las aplicaciones de la WRL de C++ de escritorio](send-local-toast-desktop-cpp-wrl.md)
+* [Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio](send-local-toast-desktop.md)
+* [Enviar una notificación del sistema local desde aplicaciones de C++ WRL de escritorio](send-local-toast-desktop-cpp-wrl.md)
 * [Documentación del contenido del sistema](adaptive-interactive-toasts.md)

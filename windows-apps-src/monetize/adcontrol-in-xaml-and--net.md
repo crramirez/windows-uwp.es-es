@@ -1,44 +1,44 @@
 ---
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
-description: Aprende a usar la clase AdControl para mostrar anuncios de banner en una aplicación XAML para Windows 10 (UWP).
+description: Obtenga información sobre cómo usar la clase AdControl para mostrar anuncios de banner en una aplicación XAML para Windows 10 (UWP).
 title: AdControl en XAML y .NET
 ms.date: 02/18/2020
 ms.topic: article
-keywords: Windows 10, UWP, anuncios, publicidad, AdControl, control de anuncios, XAML, .NET, tutorial
+keywords: Windows 10, UWP, ADS, Advertising, AdControl, ad control, XAML, .net, tutorial
 ms.localizationpriority: medium
-ms.openlocfilehash: 7472343dcff4ac7f80d3bcea917e38849f513be6
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.openlocfilehash: 8d1d1e75754bc9f3bed0be862a38ede43d55ad52
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507209"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155669"
 ---
 # <a name="adcontrol-in-xaml-and-net"></a>AdControl en XAML y .NET
 
 >[!WARNING]
 > A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-En este tutorial se muestra cómo usar la clase [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar anuncios de banner en una aplicación para Plataforma universal de Windows (UWP) XAML para Windows 10 que se implementa mediante C#.
+En este tutorial se muestra cómo usar la clase [AdControl](/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar los anuncios de banner en una aplicación XAML plataforma universal de Windows (UWP) para Windows 10 que se implementa mediante C#.
 
 > [!NOTE]
 > El SDK de Microsoft Advertising también admite aplicaciones XAML que se implementan mediante C++. Para ver un proyecto de ejemplo completo, consulta las [muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Instala el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) con Visual Studio 2015 o una versión posterior de Visual Studio. Para obtener instrucciones de instalación, consulta [este artículo](install-the-microsoft-advertising-libraries.md).
+* Instale el [SDK de Microsoft Advertising](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) con visual Studio 2015 o una versión posterior de Visual Studio. Para obtener instrucciones de instalación, consulte [este artículo](install-the-microsoft-advertising-libraries.md).
 
-## <a name="integrate-a-banner-ad-into-your-app"></a>Integrar un anuncio de banner en la aplicación
+## <a name="integrate-a-banner-ad-into-your-app"></a>Integración de un anuncio de banner en la aplicación
 
 1. En Visual Studio, abre el proyecto o crea uno nuevo.
 
     > [!NOTE]
-    > Si estás usando un proyecto existente, abre el archivo Package.appxmanifest en el proyecto y asegúrate de que la funcionalidad **Internet (cliente)** está seleccionada. La aplicación necesita esta funcionalidad para recibir anuncios de prueba y anuncios dinámicos.
+    > Si utiliza un proyecto existente, abra el archivo package. appxmanifest en el proyecto y asegúrese de que la opción **Internet (cliente)** está seleccionada. La aplicación necesita esta funcionalidad para recibir anuncios de prueba y anuncios en directo.
 
 2. Si el destino del proyecto es **Cualquier CPU**, actualiza el proyecto para que use una salida de compilación específica por arquitectura (por ejemplo, **x86**). Si el destino del proyecto es **Cualquier CPU**, no podrás agregar una referencia a la biblioteca de publicidad de Microsoft correctamente a través de los siguientes pasos. Para obtener más información, consulta [Errores de referencia derivados de orientar el proyecto a Cualquier CPU](known-issues-for-the-advertising-libraries.md#reference_errors).
 
-3. Agrega una referencia al SDK de Microsoft Advertising en el proyecto:
+3. Agregue una referencia al SDK de Microsoft Advertising en el proyecto:
 
-    1. Desde la ventana del **Explorador de soluciones**, haz clic con el botón secundario en **Referencias** y, a continuación, selecciona **Agregar referencia...**
+    1. En la ventana de **Explorador de soluciones** , haga clic con el botón derecho en **referencias**y seleccione **Agregar referencia..** .
     2.  En **Administrador de referencias**, expande **Universal Windows**, haz clic en **Extensiones** y, después, selecciona la casilla junto a **Microsoft Advertising SDK for XAML** (versión 10.0).
     3.  En el **Administrador de referencias**, haz clic en Aceptar.
 
@@ -77,10 +77,10 @@ En este tutorial se muestra cómo usar la clase [AdControl](https://docs.microso
     </Page>
     ```
 
-5. En la etiqueta **Grid**, agrega el código para **AdControl**. Asigna las propiedades [AdUnitId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) y [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) a los [valores de unidad de anuncios de prueba](set-up-ad-units-in-your-app.md#test-ad-units). Ajusta también el **Alto** y el **Ancho** del control para que se corresponda con uno de los [tamaños de anuncios admitidos para anuncios de banner](supported-ad-sizes-for-banner-ads.md).
+5. En la etiqueta **Grid**, agrega el código para **AdControl**. Asigne las propiedades  [AdUnitId](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) y [ApplicationID](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) a los [valores de unidad de ad de prueba](set-up-ad-units-in-your-app.md#test-ad-units). Ajuste también el **alto** y el **ancho** del control para que sea uno de los [tamaños de anuncio admitidos para los anuncios de banner](supported-ad-sizes-for-banner-ads.md).
 
     > [!NOTE]
-    > Cada **AdControl** tiene una *unidad de anuncio* correspondiente que se usa por nuestros servicios para proporcionar anuncios al control y cada unidad de anuncio consta de un *Id. de unidad de anuncio* e *Id. de aplicación*. En estos pasos, asignas los valores del Id. de la unidad de anuncios de prueba y del Id. de aplicación a tu control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la tienda, debe [reemplazar estos valores de prueba con valores dinámicos](#release) del centro de Partners.
+    > Cada **AdControl** tiene una *unidad de anuncio* correspondiente que los servicios usan para servir anuncios al control, y cada unidad de ad está formada por un *identificador de unidad de ad* y un identificador de *aplicación*. En estos pasos, asignará el identificador de unidad de ad de prueba y los valores de ID. de aplicación al control. Estos valores de prueba solo se pueden usar en una versión de prueba de la aplicación. Antes de publicar la aplicación en la tienda, debe [reemplazar estos valores de prueba con valores dinámicos](#release) del centro de Partners.
 
     La etiqueta **Grid** completa tiene el aspecto de este código.
 
@@ -122,15 +122,15 @@ En este tutorial se muestra cómo usar la clase [AdControl](https://docs.microso
 
 <span id="release" />
 
-## <a name="release-your-app-with-live-ads"></a>Publicar tu aplicación con anuncios dinámicos
+## <a name="release-your-app-with-live-ads"></a>Publique su aplicación con anuncios en vivo
 
-1. Asegúrate de que el uso de anuncios de banner en tu aplicación sigue nuestras [directrices para anuncios de banner](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads).
+1. Asegúrate de que el uso de anuncios de banner en tu aplicación siga nuestras [directrices para anuncios de banner](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads).
 
 2.  En el centro de Partners, vaya a la página [anuncios en la aplicación](../publish/in-app-ads.md) y [cree una unidad de anuncio](set-up-ad-units-in-your-app.md#live-ad-units). Especifica el tipo de unidad de anuncio **Banner**. Anota el identificador de unidad de anuncio y el identificador de la aplicación.
     > [!NOTE]
-    > Los valores de id. de la aplicación para unidades de anuncios de prueba y unidades de anuncios dinámicas de UWP tienen diferentes formatos. Los valores de id. de la aplicación de prueba son GUID. Cuando se crea una unidad de ad de UWP activa en el centro de Partners, el valor de identificador de la aplicación de la unidad de anuncio coincide siempre con el identificador de almacén de la aplicación (un valor de identificador de almacén de ejemplo es similar a 9NBLGGH4R315).
+    > Los valores de ID. de aplicación para las unidades de anuncios de prueba y las unidades de anuncio de UWP en directo tienen distintos formatos. Los valores de ID. de aplicación de prueba son GUID. Cuando se crea una unidad de ad de UWP activa en el centro de Partners, el valor de identificador de la aplicación de la unidad de anuncio coincide siempre con el identificador de almacén de la aplicación (un valor de identificador de almacén de ejemplo es similar a 9NBLGGH4R315).
 
-3. También tienes la opción de habilitar la mediación de anuncios para el **AdControl** mediante la configuración de las opciones de la sección [Configuración de la mediación](../publish/in-app-ads.md#mediation) de la página [Anuncios desde la aplicación](../publish/in-app-ads.md). La mediación de anuncios te permite maximizar las capacidades de ingresos por anuncios y de promoción de la aplicación al mostrar anuncios de varias redes de anuncios, incluidos los anuncios de otras redes de anuncios de pago, como Taboola y Smaato, y anuncios de campañas de promoción de aplicaciones de Microsoft.
+3. Opcionalmente, puede habilitar la mediación de anuncios para **AdControl** si configura los valores en la sección [configuración de mediación](../publish/in-app-ads.md#mediation) en la página [ADS en la aplicación](../publish/in-app-ads.md) . La mediación de anuncios permite maximizar las funcionalidades de promoción de ingresos y de las aplicaciones de anuncios mediante la visualización de anuncios de varias redes de anuncios, incluidos los anuncios de otras redes de anuncios de pago como Taboola y Smaato y los anuncios de las campañas de promoción de aplicaciones de Microsoft.
 
 4.  En el código, reemplace los valores de unidad de ad de prueba (**ApplicationID** y **AdUnitId**) por los valores activos generados en el centro de Partners.
 
@@ -140,16 +140,16 @@ En este tutorial se muestra cómo usar la clase [AdControl](https://docs.microso
 
 <span id="manage" />
 
-## <a name="manage-ad-units-for-multiple-ad-controls-in-your-app"></a>Administrar unidades de anuncios para varios controles de anuncios en tu aplicación
+## <a name="manage-ad-units-for-multiple-ad-controls-in-your-app"></a>Administrar unidades de anuncios para varios controles de AD en la aplicación
 
-Puedes usar varios objetos **AdControl** en una sola aplicación (por ejemplo, cada página de la aplicación puede hospedar un objeto **AdControl** diferente). En este escenario, te recomendamos que asignes una unidad de anuncios diferente para cada control. Con unidades de anuncios diferentes para cada control podrás, por separado, [configurar las opciones de mediación](../publish/in-app-ads.md#mediation) y obtener discretos [datos de informes](../publish/advertising-performance-report.md) para cada control. Esto también permite a nuestros servicios optimizar mejor los anuncios que publicamos en tu aplicación.
+Puede usar varios objetos de **AdControl** en una sola aplicación (por ejemplo, cada página de la aplicación podría hospedar un objeto de **AdControl** diferente). En este escenario, se recomienda asignar una unidad de anuncio diferente a cada control. El uso de diferentes unidades de anuncio para cada control le permite [configurar por separado los valores de mediación](../publish/in-app-ads.md#mediation) y obtener [datos de informes](../publish/advertising-performance-report.md) discretos para cada control. Esto también permite a nuestros servicios optimizar mejor los anuncios que sirven a su aplicación.
 
 > [!IMPORTANT]
-> Puedes usar cada unidad de anuncios solo en una aplicación. Si usas una unidad de anuncios en más de una aplicación, no se publicarán anuncios para esa unidad de anuncios.
+> Puede usar cada unidad de anuncio en una sola aplicación. Si usa una unidad de anuncio en más de una aplicación, los anuncios no se servirán para esa unidad de ad.
 
 ## <a name="related-topics"></a>Temas relacionados
 
 * [Directrices para anuncios de banner](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads)
 * [Tutorial de control de errores en XAML/C#](error-handling-in-xamlc-walkthrough.md).
-* [Muestras de publicidad en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
+* [Ejemplos de publicidad de GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
 * [Configurar unidades de anuncio para la aplicación](set-up-ad-units-in-your-app.md)

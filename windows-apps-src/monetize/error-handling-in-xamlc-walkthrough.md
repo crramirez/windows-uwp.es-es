@@ -6,19 +6,19 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: 'Windows 10, UWP, anuncios, publicidad, control de errores, XAML, c #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 4526f44c1a38af79886a7404eb932416a4414f77
-ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
+ms.openlocfilehash: 7ad3d7dfcbf191960fba03808270a55d3128d4f0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89043507"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158589"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a>Tutorial de control de errores en XAML y C#
 
 >[!WARNING]
 > A partir del 1 de junio de 2020, se cerrará la plataforma de monetización de Microsoft ad para aplicaciones UWP de Windows. [Más información](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-En este tutorial se muestra cómo detectar errores relacionados con ad en la aplicación. En este tutorial se usa un [control AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un banner, pero los conceptos generales de también se aplican a los anuncios intersticiales y a los anuncios nativos.
+En este tutorial se muestra cómo detectar errores relacionados con ad en la aplicación. En este tutorial se usa un [control AdControl](/uwp/api/microsoft.advertising.winrt.ui.adcontrol) para mostrar un banner, pero los conceptos generales de también se aplican a los anuncios intersticiales y a los anuncios nativos.
 
 En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que contiene un objeto **AdControl**. Para obtener instrucciones paso a paso que muestran cómo agregar un objeto **AdControl** a la aplicación, consulta [AdControl en XAML y .NET](adcontrol-in-xaml-and--net.md). 
 
@@ -34,7 +34,7 @@ En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que conti
       Width="300" />
     ```
 
-2.   Después de la propiedad **Width**, pero antes de la etiqueta de cierre, asigna un nombre de un controlador de evento de error a el evento[ErrorOccurred](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.erroroccurred). En este tutorial, el nombre del controlador de evento de error es **OnAdError**.
+2.   Después de la propiedad **Width**, pero antes de la etiqueta de cierre, asigna un nombre de un controlador de evento de error a el evento[ErrorOccurred](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.erroroccurred). En este tutorial, el nombre del controlador de evento de error es **OnAdError**.
     ``` xml
     <UI:AdControl
       ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
@@ -49,7 +49,7 @@ En estos ejemplos se da por hecho que tienes una aplicación XAML o C# que conti
 
 3.  Para generar un error en tiempo de ejecución, crea un segundo objeto **AdControl** con un id. de la aplicación diferente. Dado que todos los objetos **AdControl** de una aplicación deben usar el mismo id. de la aplicación, al crear un objeto **AdControl** adicional con un id. de la aplicación diferente se producirá un error.
 
-    Define un segundo objeto **AdControl** en MainPage.xaml justo después del primer **AdControl**y establece la propiedad [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) en cero ("0").
+    Define un segundo objeto **AdControl** en MainPage.xaml justo después del primer **AdControl**y establece la propiedad [ApplicationId](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) en cero ("0").
     ``` xml
     <UI:AdControl
         ApplicationId="0"

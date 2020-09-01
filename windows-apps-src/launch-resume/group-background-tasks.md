@@ -1,33 +1,33 @@
 ---
-title: Agrupar registro de tarea en segundo plano
-description: Registra y anula el registro de tareas en segundo plano como parte de un grupo para aislar esos registros.
+title: Agrupar el registro de tareas en segundo plano
+description: Registrar o anular el registro de las tareas en segundo plano como parte de un grupo para aislar esos registros.
 ms.date: 04/05/2017
 ms.topic: article
-keywords: windows 10, tarea en segundo plano
-ms.openlocfilehash: a70c814e5e35359746076c5418d1f1d973e61773
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+keywords: Windows 10, tarea en segundo plano
+ms.openlocfilehash: 61419ac45acd27758e3c874ac4b03510561ccaf8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57623860"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155869"
 ---
-# <a name="group-background-task-registration"></a>Agrupar registro de tarea en segundo plano
+# <a name="group-background-task-registration"></a>Agrupar el registro de tareas en segundo plano
 
 **API importantes**
 
-[Clase BackgroundTaskRegistrationGroup](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistrationgroup)
+[Clase BackgroundTaskRegistrationGroup](/uwp/api/windows.applicationmodel.background.backgroundtaskregistrationgroup)
 
-Ahora se pueden registrar tareas en segundo plano en un grupo, que puedes considerar como espacio de nombres lógico. Este aislamiento ayuda a garantizar que los diferentes componentes de una aplicación, o diferentes bibliotecas, no interfieren con el registro de tareas en segundo plano de cada uno de los otros.
+Ahora se pueden registrar tareas en segundo plano en un grupo, que se puede considerar como un espacio de nombres lógico. Este aislamiento ayuda a garantizar que los distintos componentes de una aplicación, o bibliotecas diferentes, no interfieran con el registro de tareas en segundo plano de los demás.
 
-Cuando una aplicación y el marco (o biblioteca) que utiliza registra un fondo de la tarea con el mismo nombre, la aplicación podría quitar accidentalmente los registros de tareas en segundo plano del marco. Los autores de aplicaciones también podrían quitar accidentalmente los registros de tareas en segundo plan de biblioteca y marco porque no pudieron anular el registro de todas las tareas en segundo plano registradas con [BackgroundTaskRegistration.AllTasks](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.AllTasks).  Con los grupos, puede aislar los registros de tareas en segundo plano para que esto no suceda.
+Cuando una aplicación y el marco (o biblioteca) que usa registra una tarea en segundo plano con el mismo nombre, la aplicación podría quitar accidentalmente los registros de tareas en segundo plano del marco. Los autores de aplicaciones también podrían quitar accidentalmente los registros de tareas en segundo plano de Marcos y bibliotecas, ya que podrían anular el registro de todas las tareas en segundo plano registradas mediante [BackgroundTaskRegistration. AllTasks](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.AllTasks).  Con los grupos, puede aislar los registros de tareas en segundo plano para que esto no suceda.
 
 ## <a name="features-of-groups"></a>Características de los grupos
 
-* Los grupos se identifican de manera única por un GUID. También pueden tener una cadena de nombre descriptivo asociado que es más fácil de leer durante la depuración.
+* Los grupos se pueden identificar de forma única mediante un GUID. También pueden tener una cadena de nombre descriptivo asociada que es más fácil de leer durante la depuración.
 * Se pueden registrar varias tareas en segundo plano en un grupo.
-* Las tareas en segundo plano registradas en un grupo no aparecerán en [BackgroundTaskRegistration.AllTasks](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.AllTasks). Por lo tanto, las aplicaciones que usan actualmente **BackgroundTaskRegistration.AllTasks** para anular el registro de sus tareas no anulan accidentalmente el registro de las tareas en segundo plano registradas en un grupo. Consulte [anular el registro de tareas en segundo plano en un grupo](#unregister-background-tasks-in-a-group) siguiente para ver cómo anular el registro de todos los desencadenadores en segundo plano que se han registrado como parte de un grupo.
-* Cada registro de tareas en segundo plano tendrá una propiedad de grupo para determinar con qué grupo está asociado.
-* Tareas en segundo plano en curso registrar con un grupo hará que la activación recorrer [BackgroundTaskRegistrationGroup.BackgroundActivated](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistrationgroup.BackgroundActivated) eventos en lugar de [Application.OnBackgroundActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated#Windows_UI_Xaml_Application_OnBackgroundActivated_Windows_ApplicationModel_Activation_BackgroundActivatedEventArgs_).
+* Las tareas en segundo plano registradas en un grupo no aparecerán en [BackgroundTaskRegistration. AllTasks](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.AllTasks). Por lo tanto, las aplicaciones que usan actualmente **BackgroundTaskRegistration. AllTasks** para anular el registro de sus tareas no eliminarán accidentalmente las tareas en segundo plano registradas en un grupo. Consulte [anulación del registro de tareas en segundo plano en un grupo](#unregister-background-tasks-in-a-group) siguiente para ver cómo anular el registro de todos los desencadenadores en segundo plano que se han registrado como parte de un grupo.
+* Cada registro de tareas en segundo plano tendrá una propiedad de grupo para determinar a qué grupo está asociado.
+* El registro de tareas en segundo plano en proceso con un grupo hará que la activación pase por el evento [BackgroundTaskRegistrationGroup. BackgroundActivated](/uwp/api/windows.applicationmodel.background.backgroundtaskregistrationgroup.BackgroundActivated) en lugar de [Application. OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated#Windows_UI_Xaml_Application_OnBackgroundActivated_Windows_ApplicationModel_Activation_BackgroundActivatedEventArgs_).
 
 ## <a name="register-a-background-task-in-a-group"></a>Registrar una tarea en segundo plano en un grupo
 
@@ -77,8 +77,8 @@ public static void RegisterBackgroundTaskInGroup()
 
 ## <a name="unregister-background-tasks-in-a-group"></a>Anular el registro de tareas en segundo plano en un grupo
 
-A continuación se muestra cómo anular el registro de las tareas en segundo plano que se han registrado como parte de un grupo.
-Dado que las tareas en segundo plano registradas en un grupo no aparecen en [BackgroundTaskRegistration.AllTasks](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.AllTasks), debe iterar a través de los grupos, buscar las tareas en segundo plano registradas para cada grupo y anular su registro.
+A continuación se muestra cómo anular el registro de las tareas en segundo plano que se registraron como parte de un grupo.
+Dado que las tareas en segundo plano registradas en un grupo no aparecen en [BackgroundTaskRegistration. AllTasks](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.AllTasks), debe recorrer en iteración los grupos, buscar las tareas en segundo plano registradas en cada grupo y anular su registro.
 
 ```csharp
 private static void UnRegisterAllTasks()
@@ -102,7 +102,7 @@ private static void UnRegisterAllTasks()
 
 ## <a name="register-persistent-events"></a>Registrar eventos persistentes
 
-Al usar los grupos de registro de tareas en segundo plano con tareas en segundo plano en proceso, las activaciones en segundo plano se dirigen hacia el evento del grupo del lugar del evento del objeto Application o CoreApplication. Esto permite que varios componentes dentro de la aplicación controlen la activación en lugar de colocar todas las rutas de código de activación en el objeto Application. A continuación se muestra cómo registrarse para el evento activado en segundo plano del grupo. Comprueba primero [BackgroundTaskRegistration.GetTaskGroup](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.gettaskgroup) para determinar si ya se ha registrado el grupo. De no ser así, crea un grupo nuevo con tu identificador y nombre descriptivo. A continuación, registra un controlador de eventos para el evento BackgroundActivated en el grupo.
+Cuando se usan grupos de registro de tareas en segundo plano con tareas en segundo plano en proceso, las activaciones en segundo plano se dirigen al evento del grupo en lugar de a la del objeto de aplicación o CoreApplication. Esto permite que varios componentes de la aplicación controlen la activación en lugar de colocar todas las rutas de acceso del código de activación en el objeto de aplicación. A continuación se muestra cómo registrarse para el evento activado en segundo plano del grupo. En primer lugar, compruebe [BackgroundTaskRegistration. GetTaskGroup](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.gettaskgroup) para determinar si el grupo ya se ha registrado. Si no es así, cree un nuevo grupo con el identificador y el nombre descriptivo. A continuación, registre un controlador de eventos en el evento BackgroundActivated del grupo.
 
 ```csharp
 void RegisterPersistentEvent()

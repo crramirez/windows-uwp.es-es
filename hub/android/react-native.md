@@ -7,12 +7,12 @@ manager: jken
 ms.topic: article
 keywords: Android, Windows, reAct nativo, emulador, exponer, paquete de metro, terminal
 ms.date: 04/28/2020
-ms.openlocfilehash: db49e3ed12fee8e7ced7680e305a84afb89f32a2
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: 50c117154b103ca4e201f21bc643e7cbfa609b84
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255239"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157719"
 ---
 # <a name="get-started-developing-for-android-using-react-native"></a>Introducción al desarrollo para Android con reAct Native
 
@@ -57,7 +57,7 @@ ReAct Native es un marco de trabajo de aplicaciones móviles [de código abierto
     ```
 
     > [!NOTE]
-    > Si se usa para usar `npx create-react-native-app`, eso seguirá funcionando, pero la inicialización de la CLI de exposición tiene [algunas ventajas adicionales](https://github.com/react-native-community/discussions-and-proposals/issues/23).
+    > Si se usa para usar `npx create-react-native-app` , eso seguirá funcionando, pero la inicialización de la CLI de exposición tiene [algunas ventajas adicionales](https://github.com/react-native-community/discussions-and-proposals/issues/23).
 
 3. Abra el nuevo directorio "My-New-App":
 
@@ -75,11 +75,11 @@ ReAct Native es un marco de trabajo de aplicaciones móviles [de código abierto
 
 5. Para ver el proyecto que se ejecuta en un dispositivo Android, debe instalar primero [la aplicación cliente de exposición con el Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US) en el dispositivo Android. Una vez instalada la aplicación cliente de exposición, ábrala en el dispositivo y seleccione **examinar código QR**. Una vez registrado el código QR, podrá ver el paquete compilar tanto en el dispositivo como en la ventana del paquete metro que se ejecuta en localhost en el explorador.
 
-6. Para ver el proyecto que se ejecuta en un emulador de Android, primero deberá abrir Android Studio y, a continuación, crear e iniciar un dispositivo virtual. **Tools** > **AVD Manager** > **[+ Create Virtual Device.](https://developer.android.com/studio/run/managing-avds#createavd)**... Una vez creado el dispositivo virtual, seleccione el botón Launch ▷ en la columna **Actions** del Device Manager virtual de Android para iniciar la emulación del dispositivo. Una vez que el dispositivo virtual está abierto, vuelva a la ventana de paquete metro que se ejecuta en la ventana del explorador de Internet y seleccione "ejecutar en dispositivo o emulador Android" en la columna izquierda. Debería ver un mensaje emergente que le permite saber que el paquete de metro está "intentando abrir un simulador..." y, después, vea la aplicación cliente de exposición abierta en el dispositivo Android emulado y, una vez que haya terminado de descargar el paquete de JavaScript, verá que se muestra la aplicación de reAct Native. (Si tiene problemas, [Compruebe los documentos de exposición del emulador de Android](https://docs.expo.io/workflow/android-studio-emulator/)).
+6. Para ver el proyecto que se ejecuta en un emulador de Android, primero deberá abrir Android Studio y, a continuación, crear e iniciar un dispositivo virtual. **Herramientas**  >  de **Administrador**  >  de AVD **[+ Crear dispositivo virtual..](https://developer.android.com/studio/run/managing-avds#createavd)**.. Una vez creado el dispositivo virtual, seleccione el botón Launch ▷ en la columna **Actions** del Device Manager virtual de Android para iniciar la emulación del dispositivo. Una vez que el dispositivo virtual está abierto, vuelva a la ventana de paquete metro que se ejecuta en la ventana del explorador de Internet y seleccione "ejecutar en dispositivo o emulador Android" en la columna izquierda. Debería ver un mensaje emergente que le permite saber que el paquete de metro está "intentando abrir un simulador..." y, después, vea la aplicación cliente de exposición abierta en el dispositivo Android emulado y, una vez que haya terminado de descargar el paquete de JavaScript, verá que se muestra la aplicación de reAct Native. (Si tiene problemas, [Compruebe los documentos de exposición del emulador de Android](https://docs.expo.io/workflow/android-studio-emulator/)).
 
 7. Abra el proyecto de reAct Native para empezar a trabajar en la aplicación. Debería ver los cambios actualizados automáticamente en la aplicación que se ejecuta a través del cliente de exposición en el dispositivo o en el Android Emulator.
 
-8. Intente cambiar el texto de la vista de la página de aterrizaje para decir: "Hola mundo!". Puede hacerlo en el IDE que prefiera. (Se recomienda VS Code o Android Studio). El archivo de la página de aterrizaje variará en función de la plantilla que elija. Puede ser `App.js`, `App.tsx`o. `HomeScreen.js`
+8. Intente cambiar el texto de la vista de la página de aterrizaje para decir: "Hola mundo!". Puede hacerlo en el IDE que prefiera. (Se recomienda VS Code o Android Studio). El archivo de la página de aterrizaje variará en función de la plantilla que elija. Puede ser `App.js` , `App.tsx` o `HomeScreen.js` .
 
     ```typescript
     export default function App() {
@@ -109,7 +109,7 @@ ReAct Native es un marco de trabajo de aplicaciones móviles [de código abierto
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- [Desarrollo de aplicaciones de pantalla dual para Android y obtención del SDK de dispositivo Surface Duo](https://docs.microsoft.com/dual-screen/android/)
+- [Desarrollo de aplicaciones de pantalla dual para Android y obtención del SDK de dispositivo Surface Duo](/dual-screen/android/)
 
 - [Agregar exclusiones de Windows Defender para mejorar el rendimiento](defender-settings.md)
 

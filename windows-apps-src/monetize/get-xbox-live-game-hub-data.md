@@ -1,90 +1,90 @@
 ---
-description: Usa este método en la API de análisis de Microsoft Store para obtener datos del hub de juegos de Xbox Live.
-title: Obtener datos del hub de juegos de Xbox Live
+description: Use este método en la API de Microsoft Store Analytics para obtener datos de la central de juegos de Xbox Live.
+title: Obtener datos del concentrador de juegos de Xbox Live
 ms.date: 06/04/2018
 ms.topic: article
-keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live, Game Hubs, hubs de juegos
+keywords: Windows 10, UWP, servicios de tienda, Microsoft Store API de análisis, análisis de Xbox Live, centros de juegos
 ms.localizationpriority: medium
-ms.openlocfilehash: 83f86f4c7dc5fba10650701d2830a7dce809e4ce
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: aa714eafbc8357a66128045cf3b5f2effc9f067a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321800"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155559"
 ---
-# <a name="get-xbox-live-game-hub-data"></a>Obtener datos del hub de juegos de Xbox Live
+# <a name="get-xbox-live-game-hub-data"></a>Obtener datos del hub de juegos de Xbox Live
 
 
-Usa este método en la API de análisis de Microsoft Store para obtener datos de hub de juegos de tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md). Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
+Use este método en la API de Microsoft Store Analytics para obtener datos del centro de juegos para el [juego habilitado para Xbox Live](/gaming/xbox-live/index.md). Esta información también está disponible en el [Informe de análisis de Xbox](../publish/xbox-analytics-report.md) del centro de Partners.
 
 > [!IMPORTANT]
-> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Este método solo admite juegos para Xbox o juegos que usan los servicios de Xbox Live. Estos juegos deben pasar por el [proceso de aprobación del concepto](../gaming/concept-approval.md), que incluye juegos publicados por [asociados de Microsoft](/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [ ID@Xbox programa](/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados a través del [programa de creadores de Xbox Live](/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* Si aún no lo ha hecho, complete todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) de la API de Microsoft Store Analytics.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Una vez que haya obtenido un token de acceso, tiene 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud       |
+| Método | URI de solicitud       |
 |--------|----------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
 
 
-### <a name="request-header"></a>Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de solicitud
 
-| Header        | Tipo   | Descripción                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
+| Authorization | string | Necesario. El token de acceso de Azure AD del formulario **Bearer** &lt;*token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Parámetro        | Tipo   |  Descripción      |  Requerido  
+| Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos de hub de juegos de Xbox Live.  |  Sí  |
-| metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **communitymanagergamehub**.  |  Sí  |
-| startDate | date | La fecha de inicio del intervalo de fechas de los datos del hub de juegos que se van a recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
-| endDate | date | Fecha de finalización del intervalo de fechas de los datos del hub de juegos que se van a recuperar. El valor predeterminado es la fecha actual. |  No  |
-| top | entero | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
-| skip | entero | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
+| applicationId | string | El [identificador de almacén](in-app-purchases-and-trials.md#store-ids) del juego para el que desea recuperar los datos de la central de juegos de Xbox Live.  |  Sí  |
+| metricType | string | Cadena que especifica el tipo de datos de análisis de Xbox Live que se va a recuperar. Para este método, especifique el valor **communitymanagergamehub**.  |  Sí  |
+| startDate | date | Fecha de inicio del intervalo de fechas de los datos del centro de juegos que se va a recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
+| endDate | date | Fecha de finalización del intervalo de fechas de los datos del centro de juegos que se va a recuperar. La fecha predeterminada es la actual. |  No  |
+| top | int | Número de filas de datos que se devuelven en la solicitud. El valor máximo y el valor predeterminado, si no se especifican, es 10 000. Si hay más filas en la consulta, el cuerpo de la respuesta incluye un vínculo que puedes usar para solicitar la siguiente página de datos. |  No  |
+| skip | int | Número de filas que se omiten en la consulta. Usa este parámetro para consultar grandes conjuntos de datos. Por ejemplo, los valores top=10000 y skip=0 recuperan las primeras 10 000 filas de datos, los valores top=10000 y skip=10000 recuperan las siguientes 10 000 filas de datos, y así sucesivamente. |  No  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-El siguiente ejemplo muestra una solicitud para obtener datos del hub de juegos para tu juego habilitado para Xbox Live. Sustituye el valor *applicationId* por el Id de Store del juego.
+En el ejemplo siguiente se muestra una solicitud para obtener datos del centro de juegos para el juego habilitado para Xbox Live. Reemplace el valor de *ApplicationID* por el identificador de almacén del juego.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics?applicationId=9NBLGGGZ5QDR&metrictype=communitymanagergamehub&top=10&skip=0 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Respuesta
+## <a name="response"></a>Response
 
 
-| Valor      | Tipo   | Descripción                  |
+| Value      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Una matriz de objetos que contienen datos del hub de juegos para cada fecha del intervalo de fechas especificado. Para más información sobre los datos de cada objeto, consulta la tabla siguiente.                                                                                                                      |
-| @nextLink  | string | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, se devuelve este valor si el parámetro **top** de la solicitud está establecido en 10000, pero resulta que hay más de 10000 filas de datos de la consulta. |
-| TotalCount | entero    | El número total de filas del resultado de datos de la consulta.  |
+| Value      | array  | Matriz de objetos que contiene los datos del centro de juegos para cada fecha del intervalo de fechas especificado. Para obtener más información acerca de los datos de cada objeto, vea la tabla siguiente.                                                                                                                      |
+| @nextLink  | string | Si hay páginas adicionales de datos, esta cadena contiene un URI que puedes usar para solicitar la siguiente página de datos. Por ejemplo, este valor se devuelve si el parámetro **Top** de la solicitud se establece en 10000, pero hay más de 10000 filas de datos para la consulta. |
+| TotalCount | int    | El número total de filas del resultado de datos de la consulta.  |
 
 
 Los elementos de la matriz *Value* contienen los siguientes valores.
 
-| Valor               | Tipo   | Descripción                           |
+| Value               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| date                | string | La fecha de los datos del hub de juegos de este objeto. |
-| applicationId       | string | El Id de Store del juego sobre la que estás recuperando los datos del hub de juegos.     |
-| gameHubLikeCount     | número |   El número de "Me gusta" agregados a la página del hub de juegos en la fecha especificada.   |
-| gameHubCommentCount          | número |  El número de comentarios agregados a la página del hub de juegos en la fecha especificada.  |
-| gameHubShareCount           | número | El número de veces que la página del hub de juegos de tu aplicación fue compartida por los clientes en la fecha especificada.   |
-| gameHubFollowerCount          | número | El número de seguidores de siempre para la página del hub de juegos para la aplicación.   |
+| date                | string | Fecha de los datos del centro de juegos de este objeto. |
+| applicationId       | string | El identificador de almacén del juego para el que se recuperan los datos del centro de juegos.     |
+| gameHubLikeCount     | number |   El número de like agregados a la página del concentrador de juego en la fecha especificada.   |
+| gameHubCommentCount          | number |  El número de comentarios agregados a la página del concentrador de juegos de la aplicación en la fecha especificada.  |
+| gameHubShareCount           | number | El número de veces que los clientes han compartido la página del concentrador de juegos de la aplicación en la fecha especificada.   |
+| gameHubFollowerCount          | number | El número de seguidores de tiempo para la página del centro de juegos de la aplicación.   |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
@@ -118,9 +118,9 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Acceder a los datos de análisis con servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
-* [Obtener datos de análisis de Xbox Live](get-xbox-live-analytics.md)
-* [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
-* [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
-* [Obtener datos de club de Xbox Live](get-xbox-live-club-data.md)
-* [Obtener datos para varios jugadores de Xbox Live](get-xbox-live-multiplayer-data.md)
+* [Acceder a datos de análisis mediante servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Obtener datos de análisis de Xbox Live](get-xbox-live-analytics.md)
+* [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
+* [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
+* [Obtener datos del club de Xbox Live](get-xbox-live-club-data.md)
+* [Obtener datos de multijugador de Xbox Live](get-xbox-live-multiplayer-data.md)

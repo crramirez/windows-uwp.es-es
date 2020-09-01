@@ -1,66 +1,66 @@
 ---
 title: Introducción a las transformaciones
-description: Las transformaciones matriciales controlan muchos de los cálculos de bajo nivel de los gráficos 3D.
+description: Las transformaciones de matriz controlan gran parte de las matemáticas de bajo nivel de los gráficos 3D.
 ms.assetid: B5220EE8-2533-4B55-BF58-A3F9F612B977
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fe97d689711202511dcfec023b718cd1ba9b0b1d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0f8efd1984ae8a726870bd8e7aaa3960baf91218
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370935"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156219"
 ---
 # <a name="transform-overview"></a>Introducción a las transformaciones
 
-Las transformaciones matriciales controlan muchos de los cálculos de bajo nivel de los gráficos 3D.
+Las transformaciones de matriz controlan gran parte de las matemáticas de bajo nivel de los gráficos 3D.
 
-La canalización de geometría toma vértices como entrada. El motor de transformación aplica las transformaciones de mundo, vista y proyección a los vértices, recorta el resultado y pasa todo al rasterizador.
+La canalización de geometría toma los vértices como entrada. El motor de transformación aplica las transformaciones mundo, vista y proyección a los vértices, recorta el resultado y pasa todo al rasterizador.
 
 | Transformación y espacio                           | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Coordenadas del modelo en el espacio de modelo              | Al principio de la canalización, se declaran los vértices de un modelo con respecto a un sistema de coordenadas local. Este es un origen local y una orientación. Esta orientación de coordenadas se suele denominar *espacio de modelo*. Coordenadas individuales se denominan *coordenadas del modelo*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Transformación de mundos en espacio de mundos              | La primera fase de la canalización de geometría transforma los vértices de un modelo de su sistema de coordenadas local en un sistema de coordenadas que usan todos los objetos de una escena. El proceso de cambiar la orientación los vértices se denomina la [Transformación de mundos](world-transform.md), que se convierte del espacio de modelo en una nueva orientación llamada *espacio de mundos*. Cada vértice en el espacio de mundo se declara usando *coordenadas del mundo*.                                                                                                                                                                                                                                                                                                                           |
-| Transformación de vista en espacio de vista (espacio de cámara) | En la siguiente fase, los vértices que describen el mundo en 3D se orientan con respecto a una cámara. Es decir, la aplicación elige un punto de vista para la escena y las coordenadas del espacio de mundo se reubican y giran alrededor de la vista de la cámara, convirtiendo el espacio de mundo en *espacio de vista* (también llamado *espacio de cámara*). Esta es la [Transformación de vista](view-transform.md), que se convierte de espacio de mundo en espacio de vista.                                                                                                                                                                                                                                                                                                                        |
-| Transformación de la proyección en espacio de proyección    | La siguiente fase es la [Transformación de la proyección](projection-transform.md), que se convierte de espacio de vista en espacio de proyección. En esta parte de la canalización, los objetos se escalan normalmente en relación a la distancia a la que están del visor para crear la ilusión de profundidad en una escena; los objetos cercanos parecen más grandes que los objetos distantes. Por cuestiones de simplicidad, esta documentación se refiere al espacio en el que existen vértices después de la transformación de la proyección en *espacio de proyección*. Algunos libros de gráficos pueden hacer referencia a un espacio de proyección como *espacio homogéneo posterior a la perspectiva*. No todas las transformaciones de proyección modifican a escala el tamaño de los objetos de una escena. Estas proyecciones pueden denominarse *proyecciones afines* o *ortogonales*. |
-| Recorte en el espacio de pantalla                      | En la parte final de la canalización, se quitan los vértices que no estarán visibles en la pantalla, de modo que el rasterizador no pierde tiempo calculando los colores y sombreados de algo que nunca se verá. Este proceso se denomina *recorte*. Después del recorte, los vértices restantes se modifican a escala según los parámetros de ventanilla y se convierten en coordenadas de pantalla. Los vértices resultantes, que se muestran en la pantalla cuando la escena se rasteriza, existen en *espacio de pantalla*.                                                                                                                                                                                                                                                    |
+| Coordenadas del modelo en el espacio del modelo              | En el encabezado de la canalización, los vértices de un modelo se declaran en relación con un sistema de coordenadas local. Se trata de un origen local y una orientación. A menudo, esta orientación de las coordenadas se conoce como *espacio de modelo*. Las coordenadas individuales se denominan *coordenadas del modelo*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Transformación universal en el espacio universal              | La primera fase de la canalización de geometría transforma los vértices de un modelo de su sistema de coordenadas local en un sistema de coordenadas que usan todos los objetos de una escena. El proceso de reorientar los vértices se denomina [transformación universal](world-transform.md), que convierte del espacio de modelo a una nueva orientación denominada *espacio universal*. Cada vértice del espacio universal se declara mediante *coordenadas universales*.                                                                                                                                                                                                                                                                                                                           |
+| Ver transformación en el espacio de la vista (espacio de la cámara) | En la fase siguiente, los vértices que describen el mundo 3D están orientados con respecto a una cámara. Es decir, la aplicación elige un punto de vista para la escena y las coordenadas del espacio universal se reubican y giran en torno a la vista de la cámara, lo que convierte el espacio universal en el espacio de la *vista* (también conocido como espacio de la *cámara*). Esta es la [transformación](view-transform.md)de la vista, que convierte el espacio universal en el espacio de la vista.                                                                                                                                                                                                                                                                                                                        |
+| Transformación de proyección en el espacio de proyección    | La siguiente fase es la [transformación de proyección](projection-transform.md), que convierte de la vista espacio en el espacio de proyección. En esta parte de la canalización, los objetos normalmente se escalan con relación a su distancia desde el visor para dar la sensación de profundidad a una escena. los objetos de cierre se crean para que aparezcan más grandes que los objetos lejanos. Para simplificar, en esta documentación se hace referencia al espacio en el que los vértices existen después de la transformación de proyección como *espacio de proyección*. Algunos libros de gráficos pueden hacer referencia al espacio de proyección como *espacio homogéneo posterior a la perspectiva*. No todas las transformaciones de proyección escalan el tamaño de los objetos en una escena. Una proyección como esta se denomina a veces una proyección *afín* o *ortogonal*. |
+| Recorte en el espacio de pantalla                      | En la parte final de la canalización, se quitan los vértices que no serán visibles en la pantalla, de modo que el rasterizador no dedique tiempo a calcular los colores y el sombreado para algo que nunca se verá. Este proceso se denomina *recorte*. Después del recorte, los vértices restantes se escalan según los parámetros de la ventanilla y se convierten en coordenadas de pantalla. Los vértices resultantes, que se muestran en la pantalla cuando se rasteriza la escena, existen en el *espacio de pantalla*.                                                                                                                                                                                                                                                    |
 
  
 
-Las transformaciones se usan para convertir la geometría de objetos de un espacio de coordenadas a otro. Direct3D usa matrices para realizar transformaciones 3D. Las matrices crean transformaciones 3D. Puedes combinar matrices para producir una única matriz que abarque varias transformaciones.
+Las transformaciones se usan para convertir la geometría de objeto de un espacio de coordenadas a otro. Direct3D usa matrices para realizar transformaciones 3D. Las matrices crean transformaciones 3D. Puede combinar matrices para generar una matriz única que abarque varias transformaciones.
 
-Puedes transformar coordenadas entre espacio de modelo, espacio del mundo y espacio de vista.
+Puede transformar las coordenadas entre el espacio del modelo, el espacio universal y el espacio de la vista.
 
--   [Transformación de mundos](world-transform.md): convierte un espacio de modelo en un espacio de mundo.
--   [Transformación de vista](view-transform.md): convierte de espacio del mundo en espacio de vista.
--   [Transformación de proyección](projection-transform.md): convierte un espacio de vista en un espacio de proyección.
+-   [Transformación universal](world-transform.md) : convierte el espacio del modelo al espacio universal.
+-   [Vista](view-transform.md) de la transformación: convierte el espacio universal en el espacio de vista.
+-   [Transformación de proyección](projection-transform.md) : convierte el espacio de vista en el espacio de proyección.
 
-## <a name="span-idmatrixtransformsspanspan-idmatrixtransformsspanspan-idmatrixtransformsspanmatrix-transforms"></a><span id="Matrix_Transforms"></span><span id="matrix_transforms"></span><span id="MATRIX_TRANSFORMS"></span>Transformaciones de matriz
+## <a name="span-idmatrix_transformsspanspan-idmatrix_transformsspanspan-idmatrix_transformsspanmatrix-transforms"></a><span id="Matrix_Transforms"></span><span id="matrix_transforms"></span><span id="MATRIX_TRANSFORMS"></span>Transformaciones de matriz
 
 
-En las aplicaciones que funcionan con gráficos 3D, puedes usar transformaciones geométricas para hacer lo siguiente:
+En las aplicaciones que funcionan con gráficos 3D, puede usar transformaciones geométricas para hacer lo siguiente:
 
 -   Expresar la ubicación de un objeto con respecto a otro objeto.
--   Girar y cambiar el tamaño de objetos.
--   Cambiar posiciones de visualización, direcciones y perspectivas.
+-   Rotar y ajustar el tamaño de los objetos.
+-   Cambiar las posiciones, las direcciones y las perspectivas de visualización.
 
-Puedes transformar cualquier punto (x, y, z) en otro punto (x', y', z') mediante el uso de una matriz 4 x 4, como se muestra en la siguiente ecuación.
+Puede transformar cualquier punto (x, y, z) en otro punto (x ', y ', z ') mediante una matriz 4x4, tal como se muestra en la siguiente ecuación.
 
-![ecuación de transformación de cualquier punto en otro punto](images/matmult.png)
+![ecuación de transformar cualquier punto en otro punto](images/matmult.png)
 
-Realiza las siguientes ecuaciones en (x, y, z) y la matriz para producir el punto (x', y', z').
+Realice las ecuaciones siguientes en (x, y, z) y en la matriz para generar el punto (x ', y ', z ').
 
 ![ecuaciones para el nuevo punto](images/matexpnd.png)
 
-Las transformaciones más comunes son traslación, rotación y escala. Puedes combinar las matrices que producen estos efectos en una única matriz para calcular varias transformaciones a la vez. Por ejemplo, puedes crear una única matriz para trasladar y girar una serie de puntos.
+Las transformaciones más comunes son traducción, rotación y escalado. Puede combinar las matrices que producen estos efectos en una sola matriz para calcular varias transformaciones a la vez. Por ejemplo, puede crear una matriz única para traducir y girar una serie de puntos.
 
-Las matrices se escriben en orden de fila-columna. Una matriz que escala uniformemente vértices en cada eje, denominado escala uniforme, se representa mediante la siguiente matriz usando notación matemática.
+Las matrices se escriben en orden de fila y columna. Una matriz que escala uniformemente los vértices a lo largo de cada eje, conocido como escala uniforme, se representa mediante la siguiente matriz mediante notación matemática.
 
-![ecuación de una matriz para escala uniforme](images/matrix.png)
+![ecuación de una matriz para el escalado uniforme](images/matrix.png)
 
-En C++, Direct3D declara matrices como una matriz de dos dimensiones, una estructura de matriz. El siguiente ejemplo muestra cómo inicializar una estructura de [**D3DMATRIX**](https://docs.microsoft.com/windows/desktop/direct3d9/d3dmatrix) para que funcione como una matriz de escala uniforme (factor de escala "s").
+En C++, Direct3D declara las matrices como una matriz bidimensional mediante una estructura de matriz. En el ejemplo siguiente se muestra cómo inicializar una estructura [**D3DMATRIX**](/windows/desktop/direct3d9/d3dmatrix) para que actúe como una matriz de escala uniforme (factor de escala "s").
 
 ```cpp
 D3DMATRIX scale = {
@@ -71,14 +71,14 @@ D3DMATRIX scale = {
 };
 ```
 
-## <a name="span-idtranslatespanspan-idtranslatespanspan-idtranslatespantranslate"></a><span id="Translate"></span><span id="translate"></span><span id="TRANSLATE"></span>Translate
+## <a name="span-idtranslatespanspan-idtranslatespanspan-idtranslatespantranslate"></a><span id="Translate"></span><span id="translate"></span><span id="TRANSLATE"></span>Traducir
 
 
-La siguiente ecuación traslada el punto (x, y, z) a un nuevo punto (x', y', z').
+La ecuación siguiente traduce el punto (x, y, z) a un nuevo punto (x ', y ', z ').
 
 ![ecuación de una matriz de traslación para un nuevo punto](images/transl8.png)
 
-Puedes crear manualmente una matriz de traslación en C++. El siguiente ejemplo muestra el código fuente de una función que crea una matriz para trasladar los vértices.
+Puede crear manualmente una matriz de traducción en C++. En el ejemplo siguiente se muestra el código fuente de una función que crea una matriz para traducir los vértices.
 
 ```cpp
 D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
@@ -95,16 +95,16 @@ D3DXMATRIX Translate(const float dx, const float dy, const float dz) {
 ## <a name="span-idscalespanspan-idscalespanspan-idscalespanscale"></a><span id="Scale"></span><span id="scale"></span><span id="SCALE"></span>Escala
 
 
-La siguiente ecuación escala el punto (x, y, z) según valores arbitrarios en las direcciones x-, y- y z- para ir a un nuevo punto (x', y', z').
+La ecuación siguiente escala el punto (x, y, z) mediante valores arbitrarios en las direcciones x-, y-y z-a un punto nuevo (x ', y ', z ').
 
 ![ecuación de una matriz de escala para un nuevo punto](images/matscale.png)
 
-## <a name="span-idrotatespanspan-idrotatespanspan-idrotatespanrotate"></a><span id="Rotate"></span><span id="rotate"></span><span id="ROTATE"></span>Girar
+## <a name="span-idrotatespanspan-idrotatespanspan-idrotatespanrotate"></a><span id="Rotate"></span><span id="rotate"></span><span id="ROTATE"></span>Rota
 
 
-Las transformaciones que se describen aquí son para los sistemas de coordenadas izquierdos y, por lo tanto, pueden ser diferentes de las matrices de transformación que hayas visto en otro lugar.
+Las transformaciones que se describen aquí son para los sistemas de coordenadas de la mano izquierda y, por tanto, pueden ser diferentes de las matrices de transformación que se han encontrado en otro lugar.
 
-La siguiente ecuación gira el punto (x, y, z) alrededor del eje x, generando un nuevo punto (x', y', z').
+La siguiente ecuación gira el punto (x, y, z) alrededor del eje x, lo que produce un nuevo punto (x ', y ', z ').
 
 ![ecuación de una matriz de rotación x para un nuevo punto](images/matxrot.png)
 
@@ -116,9 +116,9 @@ La siguiente ecuación gira el punto alrededor del eje z.
 
 ![ecuación de una matriz de rotación z para un nuevo punto](images/matzrot.png)
 
-En estas matrices de ejemplo, la letra griega theta significa el ángulo de rotación, en radianes. Los ángulos se miden en el sentido de las agujas del reloj mirando el eje de rotación hacia el origen.
+En estas matrices de ejemplo, la letra griega Theta representa el ángulo de rotación, en radianes. Los ángulos se miden en el sentido de las agujas del reloj al mirar el eje de giro hacia el origen.
 
-El siguiente código muestra una función para controlar la rotación alrededor del eje X.
+En el código siguiente se muestra una función que controla la rotación sobre el eje X.
 
 ```cpp
     // Inputs are a pointer to a matrix (pOut) and an angle in radians.
@@ -134,24 +134,24 @@ El siguiente código muestra una función para controlar la rotación alrededor 
 }
 ```
 
-## <a name="span-idconcatenatingmatricesspanspan-idconcatenatingmatricesspanspan-idconcatenatingmatricesspanconcatenating-matrices"></a><span id="Concatenating_Matrices"></span><span id="concatenating_matrices"></span><span id="CONCATENATING_MATRICES"></span>Concatenación de Matrices
+## <a name="span-idconcatenating_matricesspanspan-idconcatenating_matricesspanspan-idconcatenating_matricesspanconcatenating-matrices"></a><span id="Concatenating_Matrices"></span><span id="concatenating_matrices"></span><span id="CONCATENATING_MATRICES"></span>Concatenación de matrices
 
 
-Una ventaja de usar matrices es que se pueden combinar los efectos de dos o más matrices multiplicándolas. Esto significa que, para girar un modelo y después trasladarlo a alguna ubicación, no es necesario aplicar dos matrices. En su lugar, se multiplican las matrices de rotación y traslación para generar una matriz compuesta que contiene todos los efectos. Este proceso, denominado concatenación de matriz, se puede escribir en la siguiente ecuación.
+Una ventaja de usar matrices es que se pueden combinar los efectos de dos o más matrices multiplicándolos. Esto significa que, para girar un modelo y, a continuación, convertirlo en una ubicación, no es necesario aplicar dos matrices. En su lugar, se multiplican las matrices de traslación y rotación para producir una matriz compuesta que contiene todos sus efectos. Este proceso, denominado concatenación de matriz, se puede escribir con la siguiente ecuación.
 
 ![ecuación de concatenación de matriz](images/matrxcat.png)
 
-En esta ecuación, C es la matriz compuesta que se está creando y desde M₁ a Mₙ son las matrices individuales. En la mayoría de los casos, se concatenan solo dos o tres matrices, pero no hay ningún límite.
+En esta ecuación, C es la matriz compuesta que se está creando y M ₁ a MN son las matrices individuales. En la mayoría de los casos, solo se concatenan dos o tres matrices, pero no hay ningún límite.
 
-El orden en que se realiza la multiplicación de matrices es fundamental. La fórmula anterior refleja la regla de izquierda a derecha de la concatenación de matrices. Es decir, los efectos visibles de las matrices que usas para crear una matriz compuesta se producen en el orden de izquierda a derecha. En el siguiente ejemplo se muestra una matriz de mundo típica. Imagina que estás creando la matriz de mundo para un platillo volador típico. Probablemente quieras girar el platillo volador alrededor de su centro (el eje y del espacio de modelo) y trasladarlo a otra ubicación en la escena. Para lograr este efecto, primero debes crear una matriz de rotación y, a continuación, multiplicarla por una matriz de traslación, como se muestra en la siguiente ecuación.
+El orden en el que se realiza la multiplicación de matrices es fundamental. La fórmula anterior refleja la regla de izquierda a derecha de la concatenación de matrices. Es decir, los efectos visibles de las matrices que se usan para crear una matriz compuesta se producen en orden de izquierda a derecha. En el ejemplo siguiente se muestra una matriz universal típica. Imagine que va a crear la matriz mundial para un típica volando Saucer. Probablemente quiera girar el Saucer volando en torno a su centro, el eje y del espacio del modelo, y convertirlo en otra ubicación de la escena. Para lograr este efecto, primero se crea una matriz de rotación y, a continuación, se multiplica por una matriz de traslación, tal como se muestra en la siguiente ecuación.
 
-![ecuación de giro en función de una matriz de rotación y una matriz de traslación](images/wrldexpl.png)
+![ecuación de giro basada en una matriz de rotación y una matriz de traslación](images/wrldexpl.png)
 
-En esta fórmula, R<sub>y</sub> es una matriz de rotación alrededor del eje y, y T<sub>w</sub> es una traslación a alguna posición en coordenadas del mundo.
+En esta fórmula, R<sub>y</sub> es una matriz de rotación sobre el eje y, y T<sub>w</sub> es una traducción a alguna posición en coordenadas universales.
 
-El orden en el que se multiplican las matrices es importante porque, a diferencia de dos valores escalares, la multiplicación de matrices no es conmutativa. La multiplicación de matrices en orden tiene el efecto visual de la traslación del platillo hasta su posición en el espacio del mundo y, a continuación, la rotación alrededor del origen del mundo.
+El orden en que se multiplican las matrices es importante porque, a diferencia de la multiplicación de dos valores escalares, la multiplicación de matrices no es conmutativa. La multiplicación de las matrices en el orden opuesto tiene el efecto visual de traducir el Saucer volando a su posición de espacio mundial y, a continuación, girarlo alrededor del origen mundial.
 
-Independientemente de qué tipo de matriz vas a crear, recuerda la regla de izquierda a derecha para asegurarte de obtener los efectos esperados.
+Independientemente del tipo de matriz que cree, recuerde la regla de izquierda a derecha para asegurarse de que se obtienen los efectos esperados.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
@@ -161,7 +161,3 @@ Independientemente de qué tipo de matriz vas a crear, recuerda la regla de izqu
  
 
  
-
-
-
-

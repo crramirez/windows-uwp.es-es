@@ -7,12 +7,12 @@ manager: jken
 ms.topic: article
 keywords: Android en Windows, Xamarin. Android, reAct Native, Cordova, iónico, PhoneGap, juego Android de c++, Windows Defender, emulador
 ms.date: 04/28/2020
-ms.openlocfilehash: d43420f442fd5dfcb2b885fb0369964a113e9bac
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: e215d9e08fcef7ddb1caae40bd8f3a83e183d197
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255249"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157709"
 ---
 # <a name="overview-of-android-development-on-windows"></a>Información general sobre el desarrollo de Android en Windows
 
@@ -29,7 +29,7 @@ Además, en esta guía se proporcionarán sugerencias sobre el uso de Windows pa
 
 - [Prueba en un emulador o dispositivo Android](emulator.md)
 - [Actualización de la configuración de Windows Defender para mejorar el rendimiento](defender-settings.md)
-- [Desarrollo de aplicaciones de pantalla dual para Android y obtención del SDK de dispositivo Surface Duo](https://docs.microsoft.com/dual-screen/android/)
+- [Desarrollo de aplicaciones de pantalla dual para Android y obtención del SDK de dispositivo Surface Duo](/dual-screen/android/)
 
 ## <a name="native-android"></a>Android nativo
 
@@ -80,9 +80,9 @@ Un código base se compone normalmente de **código de interfaz**de usuario para
 
 ## <a name="game-development"></a>Desarrollo de juegos
 
-El desarrollo de juegos para Android suele ser único en el desarrollo de una aplicación Android estándar, ya que los juegos suelen usar la lógica de representación personalizada, que a menudo se escribe en OpenGL o Vulkan. Por esta razón, y debido a las muchas bibliotecas de C disponibles que admiten el desarrollo de juegos, es habitual que los desarrolladores usen [C/C++ con Visual Studio](https://docs.microsoft.com/cpp/cross-platform/?view=vs-2019), junto con el [Kit de desarrollo nativo (NDK)](https://docs.microsoft.com/cpp/cross-platform/create-an-android-native-activity-app?view=vs-2019)de Android, para crear juegos para Android. [Introducción a C/C++ para el desarrollo de juegos](native-android.md#use-c-or-c-for-android-game-development).
+El desarrollo de juegos para Android suele ser único en el desarrollo de una aplicación Android estándar, ya que los juegos suelen usar la lógica de representación personalizada, que a menudo se escribe en OpenGL o Vulkan. Por esta razón, y debido a las muchas bibliotecas de C disponibles que admiten el desarrollo de juegos, es habitual que los desarrolladores usen [C/C++ con Visual Studio](/cpp/cross-platform/?view=vs-2019), junto con el [Kit de desarrollo nativo (NDK)](/cpp/cross-platform/create-an-android-native-activity-app?view=vs-2019)de Android, para crear juegos para Android. [Introducción a C/C++ para el desarrollo de juegos](native-android.md#use-c-or-c-for-android-game-development).
 
-Otra ruta de acceso común para desarrollar juegos para Android es usar un motor de juegos. Hay muchos motores gratuitos y de código abierto, como [Unity con Visual Studio](https://docs.microsoft.com/visualstudio/cross-platform/visual-studio-tools-for-unity?view=vs-2019), no [real Engine](https://docs.unrealengine.com/en-US/Platforms/Mobile/Android/GettingStarted/index.html), [monogame con Xamarin](https://docs.microsoft.com/xamarin/graphics-games/monogame/introduction/), [UrhoSharp con](https://docs.microsoft.com/xamarin/graphics-games/urhosharp/introduction)Xamarin, [SkiaSharp con Xamarin. Forms](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/graphics/skiasharp/) CocoonJS, App Game kit, Fusion, Corona SDK, cocos 2D, etc.
+Otra ruta de acceso común para desarrollar juegos para Android es usar un motor de juegos. Hay muchos motores gratuitos y de código abierto, como [Unity con Visual Studio](/visualstudio/cross-platform/visual-studio-tools-for-unity?view=vs-2019), no [real Engine](https://docs.unrealengine.com/en-US/Platforms/Mobile/Android/GettingStarted/index.html), [monogame con Xamarin](/xamarin/graphics-games/monogame/introduction/), [UrhoSharp con](/xamarin/graphics-games/urhosharp/introduction)Xamarin, [SkiaSharp con Xamarin. Forms](/xamarin/xamarin-forms/user-interface/graphics/skiasharp/) CocoonJS, App Game kit, Fusion, Corona SDK, cocos 2D, etc.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -91,6 +91,6 @@ Otra ruta de acceso común para desarrollar juegos para Android es usar un motor
 - [Introducción al desarrollo para Android con Xamarin. Forms](xamarin-forms.md)
 - [Introducción al desarrollo para Android con reAct Native](react-native.md)
 - [Introducción al desarrollo de un PWA para Android](pwa.md)
-- [Desarrollo de aplicaciones de pantalla dual para Android y obtención del SDK de dispositivo Surface Duo](https://docs.microsoft.com/dual-screen/android/)
+- [Desarrollo de aplicaciones de pantalla dual para Android y obtención del SDK de dispositivo Surface Duo](/dual-screen/android/)
 - [Agregar exclusiones de Windows Defender para mejorar el rendimiento](defender-settings.md)
 - [Habilitar la compatibilidad con la virtualización para mejorar el rendimiento del emulador](emulator.md#enable-virtualization-support)

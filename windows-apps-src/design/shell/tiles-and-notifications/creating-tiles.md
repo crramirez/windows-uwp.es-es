@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8823116b8fed3503ccf0dadc488956c93ae6c32b
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: f2c2dd6df44e477e34dfddfd6d2c1315b8f32ec2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234456"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156779"
 ---
 # <a name="tiles-for-windows-apps"></a>Iconos de aplicaciones de Windows
 
@@ -51,15 +51,15 @@ Hay algunos elementos que deberías actualizar:
 -   ShortName: dado que no hay espacio limitado para que el nombre para mostrar quepa en los iconos, recomendamos que especifiques un ShortName también, para asegurarte de que el nombre de la aplicación no se trunca.
 -   Imágenes de logotipo:
 
-    Debes cambiar estas imágenes por las tuyas, Tienes la opción de proporcionar imágenes para diferentes escalas visuales, pero no tienes que proporcionarlas todas. Para garantizar que tu aplicación se ve bien en una gran variedad de dispositivos, te recomendamos que ofrezcas versiones de escala de 100 %, 200 % y 400 % de cada imagen. Consulte [iconos y logotipos de aplicaciones](/windows/uwp/design/style/app-icons-and-logos) para obtener más información sobre la generación de estos recursos.
+    Debes cambiar estas imágenes por las tuyas, Tienes la opción de proporcionar imágenes para diferentes escalas visuales, pero no tienes que proporcionarlas todas. Para garantizar que tu aplicación se ve bien en una gran variedad de dispositivos, te recomendamos que ofrezcas versiones de escala de 100 %, 200 % y 400 % de cada imagen. Consulte [iconos y logotipos de aplicaciones](../../style/app-icons-and-logos.md) para obtener más información sobre la generación de estos recursos.
 
     Las imágenes a escala siguen esta convención de nomenclatura:
     
     * &lt; nombre &gt; *de la imagen.* &lt; factor &gt; de escala*de escala.* &lt; extensión &gt; de archivo de imagen* 
 
-    Por ejemplo: SplashScreen. Scale-100. png
+    Por ejemplo: SplashScreen.scale-100.png
 
-    Al hacer referencia a la imagen, se hace referencia a ella como * &lt; nombre &gt; *de la imagen.* &lt; extensión &gt; de archivo de imagen* ("SplashScreen. png" en este ejemplo). El sistema seleccionará automáticamente la imagen a escala adecuada para el dispositivo desde las imágenes que hayas proporcionado.
+    Al hacer referencia a la imagen, se hace referencia a ella como * &lt; nombre &gt; *de la imagen.* &lt; extensión &gt; de archivo de imagen* ("SplashScreen.png" en este ejemplo). El sistema seleccionará automáticamente la imagen a escala adecuada para el dispositivo desde las imágenes que hayas proporcionado.
 
 -   No es necesario, pero sí muy recomendable, ofrecer logotipos para tamaños de iconos grandes y anchos para que el usuario pueda cambiar el tamaño del icono de la aplicación a esos tamaños. Para proporcionar estas imágenes adicionales, cree un elemento **DefaultTile** y use los atributos **Wide310x150Logo** y **Square310x310Logo** para especificar las imágenes adicionales:
 ```    XML
