@@ -6,12 +6,12 @@ ms.date: 03/27/2018
 ms.topic: article
 keywords: Windows 10, UWP, juegos, Cloud Services
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c0cfd98a37c4822d80eded7fe69e23c54bcdc89
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: ca575975b27a71798b7cad1cac0cc83ec870d756
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054415"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173179"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>Uso de servicios en la nube con juegos para UWP
 
@@ -170,7 +170,7 @@ A continuación se indican algunas maneras de usar las ofertas de la nube de Azu
 | Almacenamiento en la nube de datos de juegos       | Los datos de los juegos más recientes se almacenan en la nube y se envían a dispositivos cliente. | [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)| Sin limitación de los tipos de archivo que se pueden almacenar; almacenamiento de objetos para grandes cantidades de datos sin estructurar, como imágenes, audio, vídeo y mucho más.  |
 | Tablas de almacenamiento datos temporales| Las transacciones de juegos (cambios en los estados de juego) se almacenan temporalmente en tablas. | [Azure Table Storage](https://azure.microsoft.com/services/storage/tables/)| Los datos de juegos pueden almacenarse en un esquema flexible según las necesidades del juego. |
 | Poner en cola transacciones y solicitudes de juegos| Las transacciones de juegos se procesan en forma de cola. | [Azure Queue Storage](https://azure.microsoft.com/services/storage/queues/)| Las colas absorben las ráfagas de tráfico inesperadas y pueden impedir que los servidores se sobrecarguen con una avalancha repentina de solicitudes durante el juego.   |
-| Base de datos de juegos relacional escalable| Almacenamiento estructurado de datos relacionales, como las transacciones en el juego, en la base de datos. | [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)| Base de datos SQL como servicio ([comparación con SQL en una máquina virtual](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)).  |
+| Base de datos de juegos relacional escalable| Almacenamiento estructurado de datos relacionales, como las transacciones en el juego, en la base de datos. | [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)| Base de datos SQL como servicio ([comparación con SQL en una máquina virtual](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview)).  |
 | Base de datos de juegos escalable y distribuida de baja latencia| Lectura, escritura y consulta rápidas de datos del juego y el reproductor con flexibilidad de esquema. | [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)| Base de datos de documentos NoSQL de baja latencia como servicio.   |
 | Uso del centro de datos propio con los servicios de Azure | El juego se recupera del propio centro de datos y se envía a los dispositivos cliente. | [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) | Permite a tu organización ofrecer servicios de Azure del propio centro de datos que te ayudarán a mejorar tus logros.  |
 | Transferencia de fragmentos de datos de gran tamaño| Los archivos de gran tamaño, como los de imagen, audio y vídeo de juegos, se pueden enviar a los usuarios desde la ubicación emergente más cercana de la Red de entrega de contenido (CDN) con CDN de Azure.    | [Azure Content Delivery Network](https://azure.microsoft.com/services/cdn/) | Basada en una topología de red moderna de grandes nodos centralizadas, la red CDN de Azure controla picos repentinos de tráfico y cargas elevadas para aumentar considerablemente la velocidad y la disponibilidad, lo que da lugar a mejoras significativas de la experiencia del usuario.  |
@@ -221,7 +221,7 @@ Estamos innovando y agregando nuevas características constantemente. Para obten
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-* [Guía de desarrollo de juegos de Windows 10](https://docs.microsoft.com/windows/uwp/gaming/e2e)
+* [Guía de desarrollo de juegos de Windows 10](./e2e.md)
 * [Azure para juegos](https://azure.microsoft.com/solutions/gaming/)
 * [Playfab](https://playfab.com/)
 * [Microsoft for Startups](https://startups.microsoft.com)

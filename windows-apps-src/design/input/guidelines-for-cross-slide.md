@@ -6,12 +6,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 685c71ca0e6ed0989932b7c9a0169088d5b83bd2
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: e5f86da29900e0ef83fb0bf41d2c8d9fe59727f2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82558838"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172519"
 ---
 # <a name="guidelines-for-cross-slide"></a>Instrucciones para el deslizamiento transversal
 
@@ -20,9 +20,9 @@ ms.locfileid: "82558838"
 
 **API importantes**
 
--   [**CrossSliding**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crosssliding)
--   [**CrossSlideThresholds**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crossslidethresholds)
--   [**Windows. UI. Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
+-   [**CrossSliding**](/uwp/api/windows.ui.input.gesturerecognizer.crosssliding)
+-   [**CrossSlideThresholds**](/uwp/api/windows.ui.input.gesturerecognizer.crossslidethresholds)
+-   [**Windows.UI.Input**](/uwp/api/Windows.UI.Input)
 
 Usa el gesto de deslizamiento transversal para admitir la selección con el gesto de deslizar rápidamente y las interacciones de arrastrar (mover) con el gesto de deslizar.
 
@@ -54,9 +54,9 @@ En esta imagen se muestra cómo un usuario toca un elemento de la interfaz de us
 
 Aquí encontrarás algunas directrices que debes tener en cuenta a la hora de incluir la funcionalidad de deslizar transversalmente en tu aplicación.
 
-Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección. Para más información, consulta [Agregar controles ListView](https://docs.microsoft.com/previous-versions/windows/apps/hh465382(v=win.10)).
+Usa el deslizamiento transversal para listas y colecciones que se desplazan en una sola dirección. Para más información, consulta [Agregar controles ListView](/previous-versions/windows/apps/hh465382(v=win.10)).
 
-**Tenga en cuenta**  que, en los casos en que el área de contenido puede moverse en dos direcciones, como exploradores Web o lectores electrónicos, se debe usar la interacción con hora de mantener presionada para invocar el menú contextual para objetos como imágenes e hipervínculos.
+**Nota:**    En los casos en los que el área de contenido se puede desplazar en dos direcciones, como exploradores Web o lectores electrónicos, se debe usar la interacción con hora de mantener presionada para invocar el menú contextual para objetos como imágenes e hipervínculos.
 
  
 
@@ -123,7 +123,7 @@ Por estas razones, la interacción de selección mediante el deslizamiento trans
 
 ### <span id="draganddrop"></span><span id="DRAGANDDROP"></span>
 
-**Arrastre**
+**Arrastrar**
 
 Usa la acción de arrastrar para mover uno o más objetos de un lugar a otro.
 
@@ -145,13 +145,9 @@ Si es necesario mover más de un objeto, deja que los usuarios seleccionen vario
 - [Entrada: muestra de prueba de acceso táctil](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
 - [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
 - [Entrada: ejemplo de entrada de lápiz simplificada](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
-- [Entrada: muestra de gestos de Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [Entrada: muestra de gestos de Windows 8](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Entrada: ejemplo de manipulaciones y gestos](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [Muestra de entrada táctil de DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
  
 
  
-
-
-
-

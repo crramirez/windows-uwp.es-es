@@ -1,111 +1,111 @@
 ---
-description: Usa este método en la API de análisis de Microsoft Store para obtener datos de análisis de Xbox Live.
-title: Obtener datos de análisis de Xbox Live
+description: Use este método en la API de Microsoft Store Analytics para obtener datos de análisis de Xbox Live.
+title: Obtener datos de análisis de Xbox Live
 ms.date: 06/04/2018
 ms.topic: article
-keywords: windows 10, uwp, Store services, servicios de Store, Microsoft Store analytics API, API de análisis de Microsoft Store, Xbox Live analytics, análisis de Xbox Live,
+keywords: Windows 10, UWP, servicios de tienda, Microsoft Store API de análisis, análisis de Xbox Live
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ab41001f7331defc6d37b0561e2844392ccca3c
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5649a81e1c6e869e9e010841cb31432350bb33d6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321850"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172889"
 ---
-# <a name="get-xbox-live-analytics-data"></a>Obtener datos de análisis de Xbox Live
+# <a name="get-xbox-live-analytics-data"></a>Obtener datos de análisis de Xbox Live
 
-Usa este método en la API de análisis de Microsoft Store para obtener los últimos 30 días de datos de análisis general de los clientes al reproducir tu [juego habilitado para Xbox Live](https://docs.microsoft.com/gaming/xbox-live/index.md), incluido el uso de datos del accesorio para dispositivo, tipo de conexión a Internet, distribución de la puntuación del jugador, estadísticas del juego y amigos y seguidores. Esta información también está disponible en el [informe de análisis de Xbox](../publish/xbox-analytics-report.md) en el centro de partners.
+Use este método en la API de Microsoft Store Analytics para obtener los últimos 30 días de datos de análisis general para los clientes que juegan su [juego habilitado para Xbox Live](/gaming/xbox-live/index.md), incluido el uso de accesorios de dispositivo, el tipo de conexión a Internet, la distribución de Gamerscore, las estadísticas de juegos y los datos de amigos y seguidores. Esta información también está disponible en el [Informe de análisis de Xbox](../publish/xbox-analytics-report.md) del centro de Partners.
 
 > [!IMPORTANT]
-> Este método solo admite juegos para Xbox o juegos que usan servicios de Xbox Live. Estos juegos debe pasar por el [proceso de aprobación de concepto](../gaming/concept-approval.md), que incluye juegos publicados por [partners de Microsoft](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [programa ID@Xbox](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados mediante el [Programa de creadores de Xbox Live](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
+> Este método solo admite juegos para Xbox o juegos que usan los servicios de Xbox Live. Estos juegos deben pasar por el [proceso de aprobación del concepto](../gaming/concept-approval.md), que incluye juegos publicados por [asociados de Microsoft](/gaming/xbox-live/developer-program-overview.md#microsoft-partners) y juegos enviados a través del [ ID@Xbox programa](/gaming/xbox-live/developer-program-overview.md#id). Este método no admite actualmente juegos publicados a través del [programa de creadores de Xbox Live](/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md).
 
-Los datos de análisis adicionales para juegos habilitados para Xbox Live están disponibles a través de los siguientes métodos:
-* [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
-* [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
-* [Obtener datos del centro de juegos de Xbox Live](get-xbox-live-game-hub-data.md)
-* [Obtener datos de club de Xbox Live](get-xbox-live-club-data.md)
-* [Obtener datos para varios jugadores de Xbox Live](get-xbox-live-multiplayer-data.md)
-* [Obtener datos de uso simultáneo de Xbox Live](get-xbox-live-concurrent-usage-data.md)
+Los datos de análisis adicionales de los juegos habilitados para Xbox Live están disponibles a través de los métodos siguientes:
+* [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
+* [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
+* [Obtener datos del hub de juegos de Xbox Live](get-xbox-live-game-hub-data.md)
+* [Obtener datos del club de Xbox Live](get-xbox-live-club-data.md)
+* [Obtener datos de multijugador de Xbox Live](get-xbox-live-multiplayer-data.md)
+* [Obtener datos de uso simultáneo de Xbox Live](get-xbox-live-concurrent-usage-data.md)
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* Si aún no lo ha hecho, complete todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) de la API de Microsoft Store Analytics.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Una vez que haya obtenido un token de acceso, tiene 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud       |
+| Método | URI de solicitud       |
 |--------|----------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
 
 
-### <a name="request-header"></a>Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de solicitud
 
-| Header        | Tipo   | Descripción                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
+| Authorization | string | Necesario. El token de acceso de Azure AD del formulario **Bearer** &lt;*token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Parámetro        | Tipo   |  Descripción      |  Requerido  
+| Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | string | El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que quieres recuperar los datos generales de análisis de Xbox Live.  |  Sí  |
-| metricType | string | Una cadena que especifica el tipo de datos de análisis de Xbox Live que recuperar. En este método, especifica el valor **productvalues**.  |  Sí  |
+| applicationId | string | El [identificador de almacén](in-app-purchases-and-trials.md#store-ids) del juego para el que desea recuperar los datos generales de análisis de Xbox Live.  |  Sí  |
+| metricType | string | Cadena que especifica el tipo de datos de análisis de Xbox Live que se va a recuperar. Para este método, especifique el valor **productvalues**.  |  Sí  |
 
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-El siguiente ejemplo muestra una solicitud para obtener datos de análisis generales para los clientes que juegan tu juego habilitado para Xbox Live. Sustituye el valor *applicationId* por el Id de Store del juego.
+En el ejemplo siguiente se muestra una solicitud para obtener datos de análisis general para los clientes que juegan su juego habilitado para Xbox Live. Reemplace el valor de *ApplicationID* por el identificador de almacén del juego.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics?applicationId=9NBLGGGZ5QDR&metrictype=productvalues HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Respuesta
+## <a name="response"></a>Response
 
-Este método devuelve una matriz *Value* que contiene los siguientes objetos.
+Este método devuelve una matriz de *valores* que contiene los siguientes objetos.
 
 | Object      | Descripción                  |
 |-------------|---------------------------------------------------|
-| ProductData   |   Contiene un objeto [DeviceProperties](#deviceproperties) y un objeto [UserProperties](#userproperties) que contiene los últimos 30 días de datos de análisis de dispositivos y usuarios de tu juego.    |  
-| XboxwideData   |  Contiene un objeto [DeviceProperties](#deviceproperties) y un objeto [UserProperties](#userproperties) que contiene los últimos 30 días de datos medios de análisis de dispositivos y usuarios todos los clientes Xbox Live, en porcentajes. Estos datos se incluyen para compararlos con los datos de tu juego.   |                                           
+| ProductData   |   Contiene un objeto [DeviceProperties](#deviceproperties) y un objeto [UserProperties](#userproperties) que contienen los últimos 30 días de datos de análisis de dispositivo y usuario para el juego.    |  
+| XboxwideData   |  Contiene un objeto [DeviceProperties](#deviceproperties) y un objeto [UserProperties](#userproperties) que contienen los últimos 30 días de datos de análisis de dispositivo y usuario promedio para todos los clientes de Xbox Live, como porcentajes. Estos datos se incluyen con fines de comparación con los datos del juego.   |                                           
 
 
 ### <a name="deviceproperties"></a>DeviceProperties
 
-Este recurso contiene datos de uso del dispositivo de tu juego o los datos de uso medio del dispositivo de todos los clientes de Xbox Live durante los últimos 30 días.
+Este recurso contiene los datos de uso de los dispositivos para los datos de uso de dispositivos del juego o promedio para todos los clientes de Xbox Live durante los últimos 30 días.
 
-| Valor           | Tipo    | Descripción        |
+| Value           | Tipo    | Descripción        |
 |-----------------|---------|------|
-|  applicationId               |    string     |  El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que has recuperado los datos de análisis.   |
-|  connectionTypeDistribution               |    array     |   Contiene objetos que indican cuántos clientes usan una conexión a Internet con cable en comparación con una conexión a Internet inalámbrica en Xbox. Cada objeto tiene dos campos de cadena: <ul><li>**conType**: Especifica el tipo de conexión.</li><li>**deviceCount**: En el **ProductData** objeto, este campo especifica el número de clientes de su juego que utilizan el tipo de conexión. En el objeto **XboxwideData**, este campo especifica el porcentaje de todos los clientes de Xbox Live que usan el tipo de conexión.</li></ul>   |     
-|  deviceCount               |   string      |  En el objeto **ProductData**, este campo especifica el número de dispositivos de clientes en los que se ha jugado el juego durante los últimos 30 días. En el objeto **XboxwideData**, este campo es siempre 1 e indica un porcentaje inicial del 100 % para los datos de todos los clientes de Xbox Live.   |     
-|  eliteControllerPresentDeviceCount               |   string      |  En el objeto **ProductData**, este campo especifica el número de clientes de tu juego que usa el Mando Inalámbrico Xbox Elite. En el objeto **XboxwideData**, este campo especifica el porcentaje de todos los clientes de Xbox Live que usan el Mando Inalámbrico Xbox Elite.  |     
-|  externalDrivePresentDeviceCount               |   string      |  En el objeto **ProductData**, este campo especifica el número de clientes de tu juego que usa una unidad de disco externa en Xbox. En el objeto **XboxwideData**, este campo especifica el porcentaje de todos los clientes de Xbox Live que usan una unidad de disco externa en Xbox.  |
+|  applicationId               |    string     |  El [identificador de almacén](in-app-purchases-and-trials.md#store-ids) del juego para el que recuperó los datos de análisis.   |
+|  connectionTypeDistribution               |    array     |   Contiene objetos que indican cuántos clientes usan una conexión a Internet cableada en lugar de una conexión inalámbrica a Internet en Xbox. Cada objeto tiene dos campos de cadena: <ul><li>**contype**: especifica el tipo de conexión.</li><li>**deviceCount**: en el objeto **ProductData** , este campo especifica el número de clientes del juego que usan el tipo de conexión. En el objeto **XboxwideData** , este campo especifica el porcentaje de todos los clientes de Xbox Live que usan el tipo de conexión.</li></ul>   |     
+|  deviceCount               |   string      |  En el objeto **ProductData** , este campo especifica el número de dispositivos de cliente en los que se ha jugado el juego durante los últimos 30 días. En el objeto **XboxwideData** , este campo es siempre 1, lo que indica un porcentaje inicial del 100% para los datos de todos los clientes de Xbox Live.   |     
+|  eliteControllerPresentDeviceCount               |   string      |  En el objeto **ProductData** , este campo especifica el número de clientes del juego que usan el controlador inalámbrico de Xbox Elite. En el objeto **XboxwideData** , este campo especifica el porcentaje de todos los clientes de Xbox Live que usan el controlador inalámbrico de Xbox Elite.  |     
+|  externalDrivePresentDeviceCount               |   string      |  En el objeto **ProductData** , este campo especifica el número de clientes del juego que usan una unidad de disco duro externa en Xbox. En el objeto **XboxwideData** , este campo especifica el porcentaje de todos los clientes de Xbox Live que usan una unidad de disco duro externa en Xbox.  |
 
 
 ### <a name="userproperties"></a>UserProperties
 
-Este recurso contiene datos de usuario de tu juego o datos de usuario de todos los clientes de Xbox Live durante los últimos 30 días.
+Este recurso contiene los datos de usuario del juego o el promedio de datos de usuario de todos los clientes de Xbox Live durante los últimos 30 días.
 
-| Valor           | Tipo    | Descripción        |
+| Value           | Tipo    | Descripción        |
 |-----------------|---------|------|
-|  applicationId               |    string     |   El [Id. de Store](in-app-purchases-and-trials.md#store-ids) del juego para la que has recuperado los datos de análisis.  |
-|  userCount               |    string     |   En el objeto **ProductData**, este campo especifica el número de clientes que han jugado el juego durante los últimos 30 días. En el objeto **XboxwideData**, este campo es siempre 1 e indica un porcentaje inicial del 100 % para los datos de todos los clientes de Xbox Live.   |     
-|  dvrUsageCounts               |   array      |  Contiene objetos que indican cuántos clientes han usado DVR de juegos para grabar y ver el juego. Cada objeto tiene dos campos de cadena: <ul><li>**dvrName**: Especifica el juego DVR característica que se usa. Los valores posibles son **gameClipUploads**, **gameClipViews**, **screenshotUploads** y **screenshotViews**.</li><li>**userCount**: En el **ProductData** objeto, este campo especifica el número de clientes de su juego que utiliza la característica DVR de juego especificada. En el objeto **XboxwideData**, este campo especifica el porcentaje de todos los clientes de Xbox Live que usaron la función de DVR de juego especificada.</li></ul>   |     
-|  followerCountPercentiles               |   array      |  Contiene objetos que proporcionan información sobre el número de seguidores de clientes. Cada objeto tiene dos campos de cadena: <ul><li>**percentage**: Actualmente, este valor siempre es 50, lo que indica que los datos de seguidores se proporcionan como un valor medio.</li><li>**value**: En el **ProductData** objeto, este campo especifica el número medio de seguidores para los clientes de su juego. En el objeto **XboxwideData**, este campo especifica el número medio de seguidores de todos los clientes de Xbox Live.</li></ul>  |   
-|  friendCountPercentiles               |   array      |  Contiene objetos que proporcionan información sobre el número de amigos de clientes. Cada objeto tiene dos campos de cadena: <ul><li>**percentage**: Actualmente, este valor siempre es 50, lo que indica que los datos de sus amigos se proporcionan como un valor medio.</li><li>**value**: En el **ProductData** objeto, este campo especifica el número medio de amigos para los clientes de su juego. En el objeto **XboxwideData**, este campo especifica el número medio de amigos de todos los clientes de Xbox Live.</li></ul>  |     
-|  gamerScoreRangeDistribution               |   array      |  Contiene objetos que proporcionan información sobre la distribución de puntuaciones de jugador de clientes. Cada objeto tiene dos campos de cadena: <ul><li>**scoreRange**: El intervalo de puntuación para el que el campo siguiente proporciona los datos de uso. Por ejemplo, **10K-25K**.</li><li>**userCount**: En el **ProductData** objeto, este campo especifica el número de clientes de tu juego que tienen una puntuación en el intervalo especificado para todos los juegos que hayan reproducido. En el objeto **XboxwideData**, este campo especifica el porcentaje de todos los clientes de Xbox Live que tienen una puntuación de jugador en el intervalo especificado para todos los juegos que han jugado.</li></ul>  |
-|  titleGamerScoreRangeDistribution               |   array      |  Contiene objetos que proporcionan información sobre la distribución de puntuaciones de jugador de tu juego. Cada objeto tiene dos campos de cadena: <ul><li>**scoreRange**: El intervalo de puntuación para el que el campo siguiente proporciona los datos de uso. Por ejemplo, **100-200**.</li><li>**userCount**: En el **ProductData** objeto, este campo especifica el número de clientes de tu juego que tienen una puntuación en el intervalo especificado para su juego. En el objeto **XboxwideData**, este campo especifica el porcentaje de todos los clientes de Xbox Live que tienen una puntuación de jugador en el intervalo especificado para tu juego.</li></ul>   |
-|  socialUsageCounts               |   array      |  Contiene objetos que proporcionan información sobre el uso social de clientes. Cada objeto tiene dos campos de cadena: <ul><li>**scName**: El tipo de uso de redes sociales. Por ejemplo, **gameInvites** y **textMessages**.</li><li>**userCount**: En el **ProductData** objeto, este campo especifica el número de clientes de su juego que han participado en el tipo de uso de redes sociales especificado. En el objeto **XboxwideData**, este campo especifica el porcentaje de todos los clientes de Xbox Live que han participado en el tipo de uso social especificado.</li></ul>   |
-|  streamingUsageCounts               |   array      |  Contiene objetos que proporcionan información sobre el uso de streaming de clientes. Cada objeto tiene dos campos de cadena: <ul><li>**stName**: El tipo de plataforma de streaming. Por ejemplo, **youtubeUsage**, **twitchUsage** y **mixerUsage**.</li><li>**userCount**: En el **ProductData** objeto, este campo especifica el número de clientes de su juego que ha usado la plataforma de streaming especificada. En el objeto **XboxwideData**, este campo especifica el porcentaje de todos los clientes de Xbox Live que han usado la plataforma de streaming especificada.</li></ul>  |
+|  applicationId               |    string     |   El [identificador de almacén](in-app-purchases-and-trials.md#store-ids) del juego para el que recuperó los datos de análisis.  |
+|  userCount               |    string     |   En el objeto **ProductData** , este campo especifica el número de clientes que han jugado el juego durante los últimos 30 días. En el objeto **XboxwideData** , este campo es siempre 1, lo que indica un porcentaje inicial del 100% para los datos de todos los clientes de Xbox Live.   |     
+|  dvrUsageCounts               |   array      |  Contiene objetos que indican cuántos clientes han usado Game DVR para grabar y ver el juego. Cada objeto tiene dos campos de cadena: <ul><li>**dvrName**: especifica la característica de DVR utilizada. Los valores posibles son **gameClipUploads**, **gameClipViews**, **screenshotUploads**y **screenshotViews**.</li><li>**userCount**: en el objeto **ProductData** , este campo especifica el número de clientes del juego que USARon la característica DVR de juego especificada. En el objeto **XboxwideData** , este campo especifica el porcentaje de todos los clientes de Xbox Live que usaron la característica de DVR de juego especificada.</li></ul>   |     
+|  followerCountPercentiles               |   array      |  Contiene objetos que proporcionan detalles sobre el número de seguidores para los clientes. Cada objeto tiene dos campos de cadena: <ul><li>**porcentaje**: Actualmente, este valor siempre es 50, lo que indica que los datos del seguimiento se proporcionan como un valor medio.</li><li>**valor**: en el objeto **ProductData** , este campo especifica el número medio de seguidores para los clientes del juego. En el objeto **XboxwideData** , este campo especifica el número medio de seguidores para todos los clientes de Xbox Live.</li></ul>  |   
+|  friendCountPercentiles               |   array      |  Contiene objetos que proporcionan detalles sobre el número de amigos para los clientes. Cada objeto tiene dos campos de cadena: <ul><li>**porcentaje**: Actualmente, este valor siempre es 50, lo que indica que los datos de los amigos se proporcionan como un valor medio.</li><li>**valor**: en el objeto **ProductData** , este campo especifica el número medio de amigos para los clientes del juego. En el objeto **XboxwideData** , este campo especifica el número medio de amigos para todos los clientes de Xbox Live.</li></ul>  |     
+|  gamerScoreRangeDistribution               |   array      |  Contiene objetos que proporcionan detalles sobre la distribución de Gamerscore para los clientes. Cada objeto tiene dos campos de cadena: <ul><li>**scoreRange**: el intervalo de Gamerscore para el que el siguiente campo proporciona datos de uso. Por ejemplo, **10k-25.000**.</li><li>**userCount**: en el objeto **ProductData** , este campo especifica el número de clientes del juego que tienen un Gamerscore en el intervalo especificado para todos los juegos que han jugado. En el objeto **XboxwideData** , este campo especifica el porcentaje de todos los clientes de Xbox Live que tienen un Gamerscore en el intervalo especificado para todos los juegos que han jugado.</li></ul>  |
+|  titleGamerScoreRangeDistribution               |   array      |  Contiene objetos que proporcionan detalles sobre la distribución de Gamerscore para el juego. Cada objeto tiene dos campos de cadena: <ul><li>**scoreRange**: el intervalo de Gamerscore para el que el siguiente campo proporciona datos de uso. Por ejemplo, **100-200**.</li><li>**userCount**: en el objeto **ProductData** , este campo especifica el número de clientes del juego que tienen un Gamerscore en el intervalo especificado para el juego. En el objeto **XboxwideData** , este campo especifica el porcentaje de todos los clientes de Xbox Live que tienen un Gamerscore en el intervalo especificado para el juego.</li></ul>   |
+|  socialUsageCounts               |   array      |  Contiene objetos que proporcionan detalles sobre el uso social de los clientes. Cada objeto tiene dos campos de cadena: <ul><li>**scName**: el tipo de uso social. Por ejemplo, **gameInvites** y **textMessages**.</li><li>**userCount**: en el objeto **ProductData** , este campo especifica el número de clientes del juego que han participado en el tipo de uso social especificado. En el objeto **XboxwideData** , este campo especifica el porcentaje de todos los clientes de Xbox Live que han participado en el tipo de uso social especificado.</li></ul>   |
+|  streamingUsageCounts               |   array      |  Contiene objetos que proporcionan detalles sobre el uso de streaming para los clientes. Cada objeto tiene dos campos de cadena: <ul><li>**stName**: el tipo de plataforma de streaming. Por ejemplo, **youtubeUsage**, **twitchUsage**y **mixerUsage**.</li><li>**userCount**: en el objeto **ProductData** , este campo especifica el número de clientes del juego que han usado la plataforma de streaming especificada. En el objeto **XboxwideData** , este campo especifica el porcentaje de todos los clientes de Xbox Live que han usado la plataforma de streaming especificada.</li></ul>  |
 
 
 ### <a name="response-example"></a>Ejemplo de respuesta
@@ -409,10 +409,10 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Acceder a los datos de análisis con servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
-* [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
-* [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
-* [Obtener datos del centro de juegos de Xbox Live](get-xbox-live-game-hub-data.md)
-* [Obtener datos de club de Xbox Live](get-xbox-live-club-data.md)
-* [Obtener datos para varios jugadores de Xbox Live](get-xbox-live-multiplayer-data.md)
-* [Obtener datos de uso simultáneo de Xbox Live](get-xbox-live-concurrent-usage-data.md)
+* [Acceder a datos de análisis mediante servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Obtener datos de logros de Xbox Live](get-xbox-live-achievements-data.md)
+* [Obtener datos de estado de Xbox Live](get-xbox-live-health-data.md)
+* [Obtener datos del concentrador de juegos de Xbox Live](get-xbox-live-game-hub-data.md)
+* [Obtener datos del club de Xbox Live](get-xbox-live-club-data.md)
+* [Obtener datos de multijugador de Xbox Live](get-xbox-live-multiplayer-data.md)
+* [Obtener datos de uso simultáneo de Xbox Live](get-xbox-live-concurrent-usage-data.md)

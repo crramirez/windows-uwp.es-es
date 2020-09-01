@@ -1,64 +1,64 @@
 ---
 title: Agregar métodos de entrada e interactividad en la muestra de Marble Maze
-description: Aprende acerca de procedimientos clave a tener en cuenta cuando trabajas con dispositivos de entrada.
+description: Obtenga información sobre las prácticas clave que hay que tener en cuenta al trabajar con dispositivos de entrada.
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, entrada, ejemplo
 ms.localizationpriority: medium
-ms.openlocfilehash: f078cd721406120105efb35d1519e7fd0b36e74c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d4c3742ed843deca9d7d8edba033addd2e4888fe
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258606"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172079"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Agregar métodos de entrada e interactividad en la muestra de Marble Maze
 
 
 
 
-Los juegos de la plataforma universal de Windows (UWP) se ejecutan en una variedad de dispositivos, como equipos de escritorio, portátiles y tabletas. Un dispositivo puede tener muchos mecanismos de entrada y de control. En este documento se describen las prácticas clave que se deben tener en cuenta al trabajar con dispositivos de entrada y se muestra cómo Marble Maze aplica estas prácticas.
+Los juegos de Plataforma universal de Windows (UWP) se ejecutan en una amplia variedad de dispositivos, como equipos de escritorio, equipos portátiles y tabletas. Un dispositivo puede tener una gran cantidad de mecanismos de entrada y control. En este documento se describen las prácticas clave que se deben tener en cuenta al trabajar con dispositivos de entrada y se muestra cómo Marble Maze aplica estas prácticas.
 
 > [!NOTE]
-> El código de ejemplo correspondiente a este documento se encuentra en el [Ejemplo de juego de Marble Maze con DirectX](https://github.com/microsoft/Windows-appsample-marble-maze).
+> El código de ejemplo que corresponde a este documento se encuentra en el [ejemplo Game Marble Maze de DirectX](https://github.com/microsoft/Windows-appsample-marble-maze).
 
  
 A continuación se indican algunos de los puntos principales que se tratan en este documento para trabajar con métodos de entrada en el juego:
 
--   Cuando sea posible, da soporte a varios dispositivos de entrada para que el juego pueda acomodarse a una amplia variedad de preferencias y habilidades entre los clientes. Aunque los dispositivos de juego y el uso del sensor son opcionales, los recomendamos para mejorar la experiencia del jugador. Hemos diseñado API de dispositivo de juego y sensor para que te resulte más fácil integrar estos dispositivos de entrada.
+-   Cuando sea posible, da soporte a varios dispositivos de entrada para que el juego pueda acomodarse a una amplia variedad de preferencias y habilidades entre los clientes. Aunque los dispositivos de juego y el uso del sensor son opcionales, los recomendamos para mejorar la experiencia del jugador. Hemos diseñado el dispositivo de juego y las API de sensor para facilitar la integración de estos dispositivos de entrada.
 
--   Para inicializar la función táctil, debes registrar los eventos de ventana, por ejemplo, la activación, la liberación o el movimiento del puntero. Para inicializar el acelerómetro, crea un objeto [Windows::Devices::Sensors::Accelerometer](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer) al inicializar la aplicación. El mando Xbox no requiere inicialización.
+-   Para inicializar la función táctil, debes registrar los eventos de ventana, por ejemplo, la activación, la liberación o el movimiento del puntero. Para inicializar el acelerómetro, crea un objeto [Windows::Devices::Sensors::Accelerometer](/uwp/api/Windows.Devices.Sensors.Accelerometer) al inicializar la aplicación. La controladora Xbox no requiere inicialización.
 
--   Para los juegos de un solo jugador, considera la posibilidad de combinar entrada de todos los mandos posibles de Xbox. De este modo, no tendrás que hacer un seguimiento de qué entrada procede de cada controlador. O, simplemente, realizar un seguimiento de la entrada solo desde el controlador agregado más recientemente, tal y como hacemos en este ejemplo.
+-   En el caso de los juegos de un solo jugador, considere la posibilidad de combinar la entrada de todos los controladores de Xbox posibles. De este modo, no tendrás que hacer un seguimiento de qué entrada procede de cada controlador. O bien, solo tiene que realizar un seguimiento de la entrada desde el último controlador agregado, como hacemos en este ejemplo.
 
 -   Procesa los eventos de Windows antes de procesar los dispositivos de entrada.
 
--   El mando de la Xbox y el acelerómetro admiten el sondeo. Es decir, puedes hacer un sondeo de datos cuando lo necesites. Para la entrada táctil, registra los eventos táctiles en estructuras de datos que estén disponibles para tu código de procesamiento de entrada.
+-   La controladora Xbox y el acelerómetro admiten el sondeo. Es decir, puedes hacer un sondeo de datos cuando lo necesites. Para la entrada táctil, registra los eventos táctiles en estructuras de datos que estén disponibles para tu código de procesamiento de entrada.
 
 -   Considera si deseas normalizar los valores de entrada en un formato común. Al hacerlo así, puedes simplificar la forma en que otros componentes interpretan la entrada de tu juego, como la simulación de efectos físicos, y se facilita la escritura de juegos que funcionan en varias resoluciones de pantalla.
 
 ## <a name="input-devices-supported-by-marble-maze"></a>Dispositivos de entrada compatibles con Marble Maze
 
 
-Marble Maze es compatible con el mando de la Xbox, el mouse y la función táctil para seleccionar elementos de menú, mientras que para controlar el desarrollo del juego es compatible con el mando de la Xbox, el mouse, la función táctil y el acelerómetro. Marble Maze usa las API [Windows::Gaming::Input](https://docs.microsoft.com/uwp/api/windows.gaming.input) para realizar un sondeo del controlador para la entrada. La entrada táctil permite que las aplicaciones puedan realizar un seguimiento de la entrada de las huellas de los dedos y responder a ella. El acelerómetro es un sensor que mide la fuerza que se aplica en los ejes X, Y y Z. Al usar Windows Runtime, puedes realizar un sondeo del estado actual del acelerómetro, así como recibir eventos táctiles mediante el mecanismo de administración de eventos de Windows Runtime.
+Marble Maze es compatible con el controlador Xbox, el mouse y el toque para seleccionar elementos de menú y el controlador Xbox, el mouse, el toque y el acelerómetro para controlar la reproducción de juegos. Marble Maze usa las API [Windows:: Gaming:: Input](/uwp/api/windows.gaming.input) para sondear el controlador en busca de datos de entrada. La entrada táctil permite que las aplicaciones puedan realizar un seguimiento de la entrada de las huellas de los dedos y responder a ella. Un acelerómetro es un sensor que mide la fuerza que se aplica a lo largo de los ejes X, Y y Z. Al usar Windows Runtime, puedes realizar un sondeo del estado actual del acelerómetro, así como recibir eventos táctiles mediante el mecanismo de administración de eventos de Windows Runtime.
 
 > [!NOTE]
-> Este documento usa el término táctil para referirse tanto a la entrada táctil como de mouse y el término puntero para referirse a cualquier dispositivo que use eventos de puntero. Dado que la función táctil y el mouse usan eventos de puntero estándar, puedes usar cualquier dispositivo para seleccionar elementos de menú y controlar el juego.
+> En este documento se usa la función táctil para hacer referencia tanto a la entrada táctil como a la entrada del mouse y al puntero para hacer referencia a cualquier dispositivo que utilice eventos de puntero. Dado que la función táctil y el mouse usan eventos de puntero estándar, puedes usar cualquier dispositivo para seleccionar elementos de menú y controlar el juego.
 
  
 
 > [!NOTE]
-> El manifiesto de paquete define que la única rotación admitida sea **Landscape** para el juego, ya que así se impide que la orientación cambie al girar el dispositivo para hacer rodar la canica. Para ver el manifiesto de paquete, abre **Package.appxmanifest** en el **Explorador de soluciones** de Visual Studio.
+> El manifiesto del paquete establece el **panorama** como el único giro admitido para que el juego Evite que la orientación cambie al girar el dispositivo para revertir la canica. Para ver el manifiesto del paquete, Abra **Package. appxmanifest** en el **Explorador de soluciones** en Visual Studio.
 
  
 
 ## <a name="initializing-input-devices"></a>Inicialización de dispositivos de entrada
 
 
-El mando de la Xbox no requiere inicialización. Para inicializar la función táctil, debes registrar los eventos de ventana, tales como la activación, la liberación o el movimiento del puntero (por ejemplo, el usuario pulsa el botón del mouse o toca la pantalla). Para inicializar el acelerómetro, tienes que crear un objeto [Windows::Devices::Sensors::Accelerometer](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer) al inicializar la aplicación.
+La controladora Xbox no requiere inicialización. Para inicializar Touch, debe registrarse para eventos de ventana como cuando se activa el puntero (por ejemplo, el reproductor presiona el botón del mouse o toca la pantalla), se suelta y se mueve. Para inicializar el acelerómetro, tienes que crear un objeto [Windows::Devices::Sensors::Accelerometer](/uwp/api/Windows.Devices.Sensors.Accelerometer) al inicializar la aplicación.
 
-El siguiente ejemplo muestra cómo se registra el método **App::SetWindow** para los eventos de puntero [Windows::UI::Core::CoreWindow::PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.PointerPressed), [Windows::UI::Core::CoreWindow::PointerReleased](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.PointerReleased) y [Windows::UI::Core::CoreWindow::PointerMoved](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.PointerMoved). Estos eventos se registran durante la inicialización de la aplicación y antes del bucle del juego.
+En el ejemplo siguiente se muestra cómo el método **App:: SetWindow** se registra para los eventos de puntero [Windows:: UI:: Core:: CoreWindow::P ointerpressed](/uwp/api/windows.ui.core.corewindow.PointerPressed), [Windows:: UI:: Core:: CoreWindow::P OINTERRELEASED](/uwp/api/windows.ui.core.corewindow.PointerReleased)y [Windows:: UI:: Core:: CoreWindow::P ointermoved](/uwp/api/windows.ui.core.corewindow.PointerMoved) . Estos eventos se registran durante la inicialización de la aplicación y antes del bucle del juego.
 
 Estos eventos se controlan en un subproceso independiente que invoca a los controladores de eventos.
 
@@ -78,20 +78,20 @@ window->PointerMoved += ref new TypedEventHandler<CoreWindow^, PointerEventArgs^
     &App::OnPointerMoved);
 ```
 
-La clase **MarbleMazeMain** también crea un objeto **std::map** para eventos táctiles. La clave de este objeto map es un valor que identifica de manera exclusiva el puntero de entrada. Cada clave se asigna a la distancia entre cada punto táctil y el centro de la pantalla. Marble Maze después usa estos valores para calcular la cantidad de inclinación del laberinto.
+La clase **MarbleMazeMain** también crea un objeto **STD:: Map** para contener los eventos Touch. La clave de este objeto map es un valor que identifica de manera exclusiva el puntero de entrada. Cada clave se asigna a la distancia entre cada punto táctil y el centro de la pantalla. Marble Maze después usa estos valores para calcular la cantidad de inclinación del laberinto.
 
 ```cpp
 typedef std::map<int, XMFLOAT2> TouchMap;
 TouchMap        m_touches;
 ```
 
-La clase **MarbleMazeMain** también contiene un objeto [Accelerometer](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer).
+La clase **MarbleMazeMain** también contiene un objeto [Accelerometer](/uwp/api/Windows.Devices.Sensors.Accelerometer) .
 
 ```cpp
 Windows::Devices::Sensors::Accelerometer^           m_accelerometer;
 ```
 
-El objeto **Accelerometer** se inicializa en el constructor **MarbleMazeMain**, tal como se muestra en el siguiente ejemplo. El método [Windows::Devices::Sensors::Accelerometer::GetDefault](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer.GetDefault) devuelve una instancia del acelerómetro predeterminado. Si no hay un acelerómetro predeterminado, **Accelerometer::GetDefault** devolverá **nullptr**.
+El objeto **Accelerometer** se inicializa en el constructor **MarbleMazeMain** , tal y como se muestra en el ejemplo siguiente. El método [Windows::D evices:: sensors:: Accelerometer:: GetDefault](/uwp/api/Windows.Devices.Sensors.Accelerometer.GetDefault) devuelve una instancia del acelerómetro predeterminado. Si no hay ningún acelerómetro predeterminado, **Accelerometer:: GetDefault** devuelve **nullptr**.
 
 ```cpp
 // Returns accelerometer ref if there is one; nullptr otherwise.
@@ -100,16 +100,16 @@ m_accelerometer = Windows::Devices::Sensors::Accelerometer::GetDefault();
 
 ##  <a name="navigating-the-menus"></a>Navegación por los menús
 
-Puedes usar el mouse, la función táctil o el mando de Xbox para navegar por los menús, como se indica a continuación:
+Puede usar el mouse, el toque o el controlador Xbox para navegar por los menús, como se indica a continuación:
 
 -   Usa el control de dirección para cambiar el elemento de menú activo.
--   Usa la entrada táctil, el botón A, o el botón Menú para seleccionar un elemento de menú o cerrar el menú actual, como por ejemplo la tabla de máximas puntuaciones.
--   Usa el botón Menú para pausar o reanudar el juego.
+-   Use la función táctil, el botón a o el botón de menú para seleccionar un elemento de menú o cerrar el menú actual, como la tabla de puntuación alta.
+-   Use el botón de menú para pausar o reanudar el juego.
 -   Haz clic en un elemento de menú con el mouse para elegir esa acción.
 
-###  <a name="tracking-xbox-controller-input"></a>Seguimiento de la entrada del mando de la Xbox
+###  <a name="tracking-xbox-controller-input"></a>Seguimiento de la entrada del controlador Xbox
 
-Para realizar un seguimiento de los controladores para juegos actualmente conectados al dispositivo, **MarbleMazeMain** define una variable de miembro, **m_myGamepads**, que es una colección de objetos [Windows::Gaming::Input::Gamepad](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad). Esto se inicializa en el constructor de este modo:
+Para realizar un seguimiento de los controladores de juegos actualmente conectados al dispositivo, **MarbleMazeMain** define una variable miembro, **m_myGamepads**, que es una colección de objetos [Windows:: Gaming:: Input:: controlador de juegos](/uwp/api/windows.gaming.input.gamepad) . Se inicializa en el constructor de la siguiente manera:
 
 ```cpp
 m_myGamepads = ref new Vector<Gamepad^>();
@@ -120,7 +120,7 @@ for (auto gamepad : Gamepad::Gamepads)
 }
 ```
 
-Además, el constructor **MarbleMazeMain** registra eventos para cuando se agregan o eliminan controladores para juegos:
+Además, el constructor **MarbleMazeMain** registra eventos para cuando se agregan o quitan controladores de juegos:
 
 ```cpp
 Gamepad::GamepadAdded += 
@@ -143,16 +143,16 @@ Gamepad::GamepadRemoved +=
 });
 ```
 
-Cuando se agrega un controlador para juegos, se agrega a **m_myGamepads**; cuando se quita un controlador para juegos, comprobamos si el controlador para juegos está en **m_myGamepads**, y si es así, se quita. En ambos casos, establecemos **m_currentGamepadNeedsRefresh** a **verdadero**, lo que indica que hay que volver a asignar **m_gamepad**.
+Cuando se agrega un controlador de juegos, se agrega a **m_myGamepads**; Cuando se quita un controlador de juegos, se comprueba si el controlador de juegos está en **m_myGamepads**y, si es así, se quita. En ambos casos, se establece **m_currentGamepadNeedsRefresh** en **true**, lo que indica que es necesario reasignar **m_gamepad**.
 
-Por último, asignamos un controlador para juegos a **m_gamepad** y ponemos **m_currentGamepadNeedsRefresh** en **falso**:
+Por último, se asigna un controlador de juegos a **m_gamepad** y se establece **m_currentGamepadNeedsRefresh** en **false**:
 
 ```cpp
 m_gamepad = GetLastGamepad();
 m_currentGamepadNeedsRefresh = false;
 ```
 
-En el método **Update**, comprobamos si **m_gamepad** debe reasignarse:
+En el método de **actualización** , se comprueba si es necesario reasignar **m_gamepad** :
 
 ```cpp
 if (m_currentGamepadNeedsRefresh)
@@ -168,7 +168,7 @@ if (m_currentGamepadNeedsRefresh)
 }
 ```
 
-Si es necesario reasignar **m_gamepad**, le asignamos el controlador para juegos agregado más recientemente usando **GetLastGamepad**, que se define de este modo:
+Si es necesario reasignar **m_gamepad** , se le asigna el controlador de juegos agregado más recientemente, con **GetLastGamepad**, que se define de la manera siguiente:
 
 ```cpp
 Gamepad^ MarbleMaze::MarbleMazeMain::GetLastGamepad()
@@ -184,11 +184,11 @@ Gamepad^ MarbleMaze::MarbleMazeMain::GetLastGamepad()
 }
 ```
 
-Este método simplemente devuelve el último controlador para juegos en **m_myGamepads**.
+Este método simplemente devuelve el último controlador de juegos en **m_myGamepads**.
 
-Puedes conectar hasta cuatro mandos de Xbox en un dispositivo Windows 10. Para evitar tener que saber cuál es el mando activo, solo seguimos el controlador para juegos agregado más recientemente. Si el juego admite más de un jugador, se debe realizar el seguimiento de la entrada de cada jugador por separado.
+Puede conectar hasta cuatro controladores de Xbox a un dispositivo de Windows 10. Para evitar tener que averiguar qué controlador es el activo, solo tiene que realizar un seguimiento de los controladores de juegos agregados más recientemente. Si el juego admite más de un jugador, se debe realizar el seguimiento de la entrada de cada jugador por separado.
 
-El método **MarbleMazeMain::Update** sondea el controlador para juegos para la entrada:
+El método **MarbleMazeMain:: Update** sondea la entrada del controlador para juegos:
 
 ```cpp
 if (m_gamepad != nullptr)
@@ -198,9 +198,9 @@ if (m_gamepad != nullptr)
 }
 ```
 
-Hacemos un seguimiento de la lectura de la entrada que obtuvimos en la última trama con **m_oldReading**, y la última lectura de entrada con **m_newReading**, que obtenemos llamando a [Gamepad::GetCurrentReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad.GetCurrentReading). Esto devuelve un objeto [GamepadReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadreading), que contiene información sobre el estado actual del controlador para juegos.
+Realizamos un seguimiento de la lectura de entrada que obtuvimos en el último fotograma con **m_oldReading**, y la última lectura de entrada con **m_newReading**, que obtenemos llamando a un [controlador para juegos:: GetCurrentReading](/uwp/api/windows.gaming.input.gamepad.GetCurrentReading). Esto devuelve un objeto [GamepadReading](/uwp/api/windows.gaming.input.gamepadreading) , que contiene información sobre el estado actual del controlador de juegos.
 
-Para comprobar si se acaba de pulsar o liberar un botón, definimos **MarbleMazeMain::ButtonJustPressed** y **MarbleMazeMain::ButtonJustReleased**, que comparan las lecturas del botón de esta trama y la última. Esto permite que podamos realizar una acción solo en el momento en que se presiona o libera el botón inicialmente, y no cuando el botón se está pulsando:
+Para comprobar si un botón se acaba de presionar o soltar, definimos **MarbleMazeMain:: ButtonJustPressed** y **MarbleMazeMain:: ButtonJustReleased**, que comparan las lecturas de los botones desde este fotograma y el último fotograma. De este modo, podemos realizar una acción solo en el momento en que un botón se presiona o se suelta inicialmente, y no cuando se mantiene:
 
 ```cpp
 bool MarbleMaze::MarbleMazeMain::ButtonJustPressed(GamepadButtons selection)
@@ -222,9 +222,9 @@ bool MarbleMaze::MarbleMazeMain::ButtonJustReleased(GamepadButtons selection)
 }
 ```
 
-Las lecturas de los [GamepadButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons) se comparan usando operaciones bit a bit&mdash;comprobamos si se está pulsando un botón con *bit a bit y* (&). Podemos determinar si un botón se acaba de pulsar o liberar comparando la lectura antigua con la nueva.
+Las lecturas de [GamepadButtons](/uwp/api/windows.gaming.input.gamepadbuttons) se comparan mediante las operaciones bit a bit que se &mdash; comprueban si se presiona un botón mediante el *operador and bit a bit* (&). Determinamos si un botón se acaba de presionar o soltar comparando la lectura antigua y la nueva lectura.
 
-Con los métodos anteriores, comprobamos si determinados botones se han pulsado y si realizan todas las acciones correspondientes que se deben producir. Por ejemplo, al pulsar el botón Menú (**GamepadButtons::Menu**), el estado del juego cambia de activo a pausa o de pausa a activo.
+Con los métodos anteriores, se comprueba si se han presionado determinados botones y se realizan las acciones correspondientes que se deben producir. Por ejemplo, cuando se presiona el botón de menú (**GamepadButtons:: MENU**), el estado del juego cambia de activo a en pausa o en pausa a activo.
 
 ```cpp
 if (ButtonJustPressed(GamepadButtons::Menu) || m_pauseKeyPressed)
@@ -242,7 +242,7 @@ if (ButtonJustPressed(GamepadButtons::Menu) || m_pauseKeyPressed)
 }
 ```
 
-También comprobamos si el jugador pulsa el botón Vista, en cuyo caso se reinicia el juego o se borra la tabla de puntuaciones máximas:
+También comprobamos si el reproductor presiona el botón ver, en cuyo caso se reiniciará el juego o se borrará la tabla de puntuaciones máximas:
 
 ```cpp
 if (ButtonJustPressed(GamepadButtons::View) || m_homeKeyPressed)
@@ -324,7 +324,7 @@ case GameState::InGamePaused:
 
 ### <a name="tracking-touch-and-mouse-input"></a>Seguimiento de la entrada táctil y de mouse
 
-Para la entrada táctil y de mouse, se elige un elemento de menú cuando el usuario lo toca o hace clic en él. En el siguiente ejemplo se muestra cómo el método **MarbleMazeMain::Update** procesa la entrada del puntero para seleccionar elementos de menú. La variable miembro **m\_pointQueue** realiza un seguimiento de las ubicaciones donde el usuario toca o hace clic en la pantalla. La forma en que Marble Maze recopila la entrada del puntero se describe con más detalle más adelante en este documento, en la sección [Procesamiento de entrada de puntero](#processing-pointer-input).
+Para la entrada táctil y de mouse, se elige un elemento de menú cuando el usuario lo toca o hace clic en él. En el ejemplo siguiente se muestra cómo el método **MarbleMazeMain:: Update** procesa la entrada de puntero para seleccionar los elementos de menú. La variable miembro **m \_ pointQueue** realiza un seguimiento de las ubicaciones en las que el usuario toca o hizo clic en la pantalla. La forma en que Marble Maze recopila la entrada de puntero se describe con más detalle más adelante en este documento en la sección [procesar la entrada de puntero](#processing-pointer-input).
 
 ```cpp
 // Check whether the user chose a button from the UI. 
@@ -358,7 +358,7 @@ void UserInterface::HitTest(D2D1_POINT_2F point)
 
 ### <a name="updating-the-game-state"></a>Actualización del estado de juego
 
-Una vez que el método **MarbleMazeMain::Update** procesa la entrada táctil y del mando, actualiza el estado del juego si se pulsó cualquier botón.
+Después de que el método **MarbleMazeMain:: Update** procese el controlador y la entrada táctil, actualiza el estado del juego si se presionó cualquier botón.
 
 ```cpp
 // Update the game state if the user chose a menu option. 
@@ -377,18 +377,18 @@ if (m_highScoreButton.IsPressed())
 ##  <a name="controlling-game-play"></a>Control del juego
 
 
-El bucle del juego y el método **MarbleMazeMain::Update** funcionan juntos para actualizar el estado de los objetos del juego. Si el juego acepta la entrada de varios dispositivos, puedes acumular la entrada desde todos los dispositivos en un conjunto de variables para que puedas escribir código que sea más fácil de mantener. El método **MarbleMazeMain::Update** define un conjunto de variables que acumula el movimiento de todos los dispositivos.
+El bucle de juego y el método **MarbleMazeMain:: Update** funcionan juntos para actualizar el estado de los objetos de juego. Si el juego acepta la entrada de varios dispositivos, puedes acumular la entrada desde todos los dispositivos en un conjunto de variables para que puedas escribir código que sea más fácil de mantener. El método **MarbleMazeMain:: Update** define un conjunto de variables que acumula el movimiento de todos los dispositivos.
 
 ```cpp
 float combinedTiltX = 0.0f;
 float combinedTiltY = 0.0f;
 ```
 
-El mecanismo de entrada puede variar entre los distintos dispositivos de entrada. Por ejemplo, la entrada del puntero está controlada mediante el modelo de administración de eventos de Windows Runtime. Por otra parte, se hace un sondeo de los datos de entrada desde el mando de la Xbox cuando se necesite. Recomendamos que siempre sigas el mecanismo de entrada indicado para cada dispositivo determinado. En esta sección se describe cómo Marble Maze lee la entrada de cada dispositivo, cómo actualiza los valores de entrada combinados y cómo usa los valores de entrada combinados para actualizar el estado del juego.
+El mecanismo de entrada puede variar entre los distintos dispositivos de entrada. Por ejemplo, la entrada del puntero está controlada mediante el modelo de administración de eventos de Windows Runtime. Por el contrario, sondea los datos de entrada desde el controlador Xbox cuando lo necesite. Recomendamos que siempre sigas el mecanismo de entrada indicado para cada dispositivo determinado. En esta sección se describe cómo Marble Maze lee la entrada de cada dispositivo, cómo actualiza los valores de entrada combinados y cómo usa los valores de entrada combinados para actualizar el estado del juego.
 
 ###  <a name="processing-pointer-input"></a>Procesamiento de entrada de puntero
 
-Cuando trabajes con la entrada de puntero, llama al método [Windows::UI::Core::CoreDispatcher::ProcessEvents](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) para procesar eventos de ventana. Llama a este método en el bucle del juego antes de actualizar o representar la escena. Marble Maze lo llama en el método **App:: Run**: 
+Cuando trabajes con la entrada de puntero, llama al método [Windows::UI::Core::CoreDispatcher::ProcessEvents](/uwp/api/windows.ui.core.coredispatcher.processevents) para procesar eventos de ventana. Llama a este método en el bucle del juego antes de actualizar o representar la escena. Marble Maze lo llama en el método **App:: Run** : 
 
 ```cpp
 while (!m_windowClosed)
@@ -413,9 +413,9 @@ while (!m_windowClosed)
 }
 ```
 
-Si la ventana es visible, pasamos **CoreProcessEventsOption::ProcessAllIfPresent** a **ProcessEvents** para procesar todos los eventos en cola y regresar inmediatamente; de lo contrario, pasamos **CoreProcessEventsOption::ProcessOneAndAllPending** para procesar todos los eventos en cola y esperar al siguiente evento nuevo. Una vez que se han procesado los eventos, Marble Maze representa y presenta el siguiente marco.
+Si la ventana está visible, pasamos **CoreProcessEventsOption::P rocessallifpresent** a **ProcessEvents** para procesar todos los eventos en cola y volver inmediatamente. de lo contrario, pasamos **CoreProcessEventsOption::P rocessoneandallpending** para procesar todos los eventos en cola y esperar al siguiente evento nuevo. Una vez que se han procesado los eventos, Marble Maze representa y presenta el siguiente marco.
 
-Windows en tiempo de ejecución llama al controlador registrado para cada evento que ha ocurrido. El método **App::SetWindow** registra eventos y reenvía la información del puntero a la clase **MarbleMazeMain**.
+Windows en tiempo de ejecución llama al controlador registrado para cada evento que ha ocurrido. El método **App:: SetWindow** se registra para los eventos y reenvía la información de puntero a la clase **MarbleMazeMain** .
 
 ```cpp
 void App::OnPointerPressed(
@@ -440,7 +440,7 @@ void App::OnPointerMoved(
 }
 ```
 
-La clase **MarbleMazeMain** reacciona ante los eventos de puntero mediante la actualización del objeto map que contiene los eventos de entrada táctil. Se llama al método **MarbleMazeMain::AddTouch** cuando se presiona el puntero por primera vez, por ejemplo, si el usuario toca inicialmente la pantalla en un dispositivo con funcionalidad táctil. Se llama al método **MarbleMazeMain::UpdateTouch** cuando se mueve la posición del puntero. Se llama al método **MarbleMazeMain::RemoveTouch** cuando se libera el puntero, por ejemplo, si el usuario deja de tocar la pantalla.
+La clase **MarbleMazeMain** reacciona a los eventos de puntero mediante la actualización del objeto de mapa que contiene los eventos de toque. Se llama al método **MarbleMazeMain:: AddTouch** cuando se presiona el puntero por primera vez, por ejemplo, cuando el usuario toca inicialmente la pantalla en un dispositivo habilitado para tocar. Se llama al método **MarbleMazeMain:: UpdateTouch** cuando se mueve la posición del puntero. Se llama al método **MarbleMazeMain:: RemoveTouch** cuando se libera el puntero, por ejemplo, cuando el usuario deja de tocar la pantalla.
 
 ```cpp
 void MarbleMazeMain::AddTouch(int id, Windows::Foundation::Point point)
@@ -462,7 +462,7 @@ void MarbleMazeMain::RemoveTouch(int id)
 }
 ```
 
-La función **PointToTouch** traslada la posición actual del puntero de modo que el origen esté en el centro de la pantalla y después escala las coordenadas para que estén en un rango aproximado entre -1,0 y +1,0. Esto facilita el cálculo de la inclinación del laberinto de forma constante en todos los distintos métodos de entrada.
+La función **PointToTouch** traduce la posición actual del puntero para que el origen se encuentra en el centro de la pantalla y, a continuación, escala las coordenadas para que alcancen aproximadamente entre-1,0 y + 1,0. Esto facilita el cálculo de la inclinación del laberinto de forma constante en todos los distintos métodos de entrada.
 
 ```cpp
 inline XMFLOAT2 PointToTouch(Windows::Foundation::Point point, Windows::Foundation::Size bounds)
@@ -475,7 +475,7 @@ inline XMFLOAT2 PointToTouch(Windows::Foundation::Point point, Windows::Foundati
 }
 ```
 
-El método **MarbleMazeMain::Update** actualiza los valores de entrada combinada incrementando el factor de inclinación en un valor de escala constante. Este valor de escala se determinó experimentando varios valores distintos.
+El método **MarbleMazeMain:: Update** actualiza los valores de entrada combinados incrementando el factor de inclinación mediante un valor de escala constante. Este valor de escala se determinó experimentando varios valores distintos.
 
 ```cpp
 // Account for touch input.
@@ -490,9 +490,9 @@ for (TouchMap::const_iterator iter = m_touches.cbegin();
 
 ### <a name="processing-accelerometer-input"></a>Procesamiento de la entrada del acelerómetro
 
-Para procesar la entrada del acelerómetro, el método **MarbleMazeMain::Update** llama al método [Windows::Devices::Sensors::Accelerometer::GetCurrentReading](https://docs.microsoft.com/uwp/api/windows.devices.sensors.accelerometer.getcurrentreading). Este método devuelve un objeto [Windows::Devices::Sensors::AccelerometerReading](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.AccelerometerReading), que representa una lectura del acelerómetro. Las propiedades **Windows::Devices::Sensors::AccelerometerReading::AccelerationX** y **Windows::Devices::Sensors::AccelerometerReading::AccelerationY** contienen la aceleración de fuerza G a lo largo de los ejes X e Y, respectivamente.
+Para procesar la entrada de acelerómetro, el método **MarbleMazeMain:: Update** llama al método [Windows::D Evices:: sensors:: Accelerometer:: GetCurrentReading](/uwp/api/windows.devices.sensors.accelerometer.getcurrentreading) . Este método devuelve un objeto [Windows::Devices::Sensors::AccelerometerReading](/uwp/api/Windows.Devices.Sensors.AccelerometerReading), que representa una lectura del acelerómetro. Las propiedades **Windows::D evices:: sensors:: AccelerometerReading:: AccelerationX** y **Windows::D Evices:: sensors:: AccelerometerReading:: accelerationy** contienen la aceleración g-Force a lo largo de los ejes X e y, respectivamente.
 
-En el siguiente ejemplo se muestra cómo el método **MarbleMazeMain::Update** sondea el acelerómetro y actualiza los valores de entrada combinada. Al inclinar el dispositivo, la gravedad hace que la canica se mueva más rápido.
+En el ejemplo siguiente se muestra cómo el método **MarbleMazeMain:: Update** sondea el acelerómetro y actualiza los valores de entrada combinados. Al inclinar el dispositivo, la gravedad hace que la canica se mueva más rápido.
 
 ```cpp
 // Account for sensors.
@@ -512,11 +512,11 @@ if (m_accelerometer != nullptr)
 }
 ```
 
-Como no se puede estar seguro de que el equipo del usuario tenga un acelerómetro, asegúrate de tener siempre un objeto [Accelerometer](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer) válido antes de sondear el acelerómetro.
+Como no puede estar seguro de que un acelerómetro está presente en el equipo del usuario, asegúrese siempre de que tiene un objeto de [acelerómetro](/uwp/api/Windows.Devices.Sensors.Accelerometer) válido antes de sondear el acelerómetro.
 
-### <a name="processing-xbox-controller-input"></a>Procesamiento de la entrada del mando de la Xbox
+### <a name="processing-xbox-controller-input"></a>Procesar la entrada del controlador Xbox
 
-En el método **MarbleMazeMain::Update**, usamos **m_newReading** para procesar la entrada desde el stick analógico izquierdo:
+En el método **MarbleMazeMain:: Update** , usamos **m_newReading** para procesar la entrada desde el stick analógico izquierdo:
 
 ```cpp
 float leftStickX = static_cast<float>(m_newReading.LeftThumbstickX);
@@ -532,23 +532,23 @@ if ((oppositeSquared + adjacentSquared) > m_deadzoneSquared)
 }
 ```
 
-Comprobamos si la entrada desde el stick analógico izquierdo está fuera de la zona muerta, y si es así, la agregamos a **combinedTiltX** y **combinedTiltY** (multiplicada por un factor de escala) a fin de inclinar la escena.
+Comprobamos si la entrada del stick analógico izquierdo está fuera de la zona muerta y, si es así, la agregamos a **combinedTiltX** y **combinedTiltY** (multiplicado por un factor de escala) para inclinar la fase.
 
 > [!IMPORTANT]
-> Cuando trabajes con el mando de la Xbox, siempre ten en cuenta la zona muerta. La zona muerta se refiere a la varianza entre mandos y sus sensibilidades para el movimiento inicial. En algunos mandos, es posible que un pequeño movimiento no genere ninguna lectura, pero en otros podría generar una lectura apreciable. Para tener esto en cuenta en tu juego, crea una zona sin movimiento para el movimiento inicial del stick analógico. Para obtener más información sobre la zona muerta, consulta [Lectura de las palancas de control](gamepad-and-vibration.md#reading-the-thumbsticks).
+> Cuando trabaje con el controlador Xbox, siempre debe tener en cuenta la zona muerta. La zona muerta se refiere a la varianza entre mandos y sus sensibilidades para el movimiento inicial. En algunos mandos, es posible que un pequeño movimiento no genere ninguna lectura, pero en otros podría generar una lectura apreciable. Para tener esto en cuenta en tu juego, crea una zona sin movimiento para el movimiento inicial del stick analógico. Para obtener más información acerca de la zona muerta, consulte [lectura de thumbsticks](gamepad-and-vibration.md#reading-the-thumbsticks).
 
  
 
 ###  <a name="applying-input-to-the-game-state"></a>Aplicación de la entrada al estado del juego
 
-Los dispositivos notifican los valores de entrada de varias maneras. Por ejemplo, la entrada del puntero podría expresarse en coordenadas de la pantalla y la entrada del mando podría estar en un formato totalmente distinto. Uno de los retos al combinar la entrada de varios dispositivos en un único conjunto de valores de entrada es la normalización, es decir, la conversión de valores a un formato común. Marble Maze normaliza los valores al escalarlos al intervalo \[-1,0, 1,0\]. La función **PointToTouch**, que ya se ha descrito en esta sección, convierte las coordenadas de pantalla en valores normalizados que están en un intervalo aproximado entre -1,0 y +1,0.
+Los dispositivos notifican los valores de entrada de varias maneras. Por ejemplo, la entrada del puntero podría expresarse en coordenadas de la pantalla y la entrada del mando podría estar en un formato totalmente distinto. Uno de los retos al combinar la entrada de varios dispositivos en un único conjunto de valores de entrada es la normalización, es decir, la conversión de valores a un formato común. Marble Maze normaliza los valores mediante su escalado al intervalo \[ -1,0, 1,0 \] . La función **PointToTouch** , que se describe anteriormente en esta sección, convierte las coordenadas de pantalla en valores normalizados que van aproximadamente entre-1,0 y + 1,0.
 
 > [!TIP]
-> Incluso si la aplicación usa un método de entrada, recomendamos que siempre normalices los valores de entrada. Al hacerlo así, puedes simplificar la forma en que otros componentes interpretan la entrada de tu juego, como la simulación de efectos físicos, y se facilita la escritura de juegos que funcionan en varias resoluciones de pantalla.
+> Incluso si la aplicación usa un método de entrada, recomendamos que siempre normalice los valores de entrada. Al hacerlo así, puedes simplificar la forma en que otros componentes interpretan la entrada de tu juego, como la simulación de efectos físicos, y se facilita la escritura de juegos que funcionan en varias resoluciones de pantalla.
 
  
 
-Una vez que el método **MarbleMazeMain::Update** procesa la entrada, crea un vector que representa el efecto de la inclinación del laberinto en la canica. En el siguiente ejemplo se muestra cómo Marble Maze usa la función [XMVector3Normalize](https://docs.microsoft.com/windows/desktop/api/directxmath/nf-directxmath-xmvector3normalize) para crear un vector de gravedad normalizado. La variable **maxTilt** limita la cantidad de inclinación del laberinto e impide que este se incline de lado.
+Después de que el método **MarbleMazeMain:: Update** procese la entrada, crea un vector que representa el efecto de la inclinación del laberinto en la canica. En el siguiente ejemplo se muestra cómo Marble Maze usa la función [XMVector3Normalize](/windows/desktop/api/directxmath/nf-directxmath-xmvector3normalize) para crear un vector de gravedad normalizado. La variable **maxTilt** restringe la cantidad por la que el laberinto inclina y evita que el laberinto se incline en su lado.
 
 ```cpp
 const float maxTilt = 1.0f / 8.0f;
@@ -562,7 +562,7 @@ XMVECTOR gravity = XMVectorSet(
 gravity = XMVector3Normalize(gravity);
 ```
 
-Para completar la actualización de los objetos de la escena, Marble Maze pasa el vector de gravedad actualizado a la simulación de efectos físicos, actualiza la simulación de efectos físicos durante el tiempo transcurrido desde el marco anterior y actualiza la posición y la orientación de la canica. Si la canica se sale del laberinto, el método **MarbleMazeMain::Update** vuelve a colocarla en el último punto de control que tocó la canica y restablece el estado de la simulación de efectos físicos.
+Para completar la actualización de los objetos de la escena, Marble Maze pasa el vector de gravedad actualizado a la simulación de efectos físicos, actualiza la simulación de efectos físicos durante el tiempo transcurrido desde el marco anterior y actualiza la posición y la orientación de la canica. Si la canica ha caído a través del laberinto, el método **MarbleMazeMain:: Update** vuelve a colocar la canica en el último punto de control que la canica toca y restablece el estado de la simulación física.
 
 ```cpp
 XMFLOAT3A g;
@@ -603,7 +603,7 @@ if (marblePosition.z >= resetDepth)
 }
 ```
 
-En esta sección no se describe cómo funciona la simulación de efectos físicos. Para más información sobre esto, consulta **Physics.h** and **Physics.cpp**, en los orígenes de Marble Maze.
+En esta sección no se describe cómo funciona la simulación de efectos físicos. Para obtener más información sobre esto, vea **física. h** y **física. cpp** en los orígenes de Marble Maze.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -613,14 +613,10 @@ Lee [Agregar audio a la muestra de Marble Maze](adding-audio-to-the-marble-maze-
 ## <a name="related-topics"></a>Temas relacionados
 
 
-* [Adición de audio al ejemplo de Marble Maze](adding-audio-to-the-marble-maze-sample.md)
-* [Agregar contenido visual al ejemplo de Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
-* [Desarrollo de Marble Maze, un juego de C++ UWP en y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [Agregar audio a la muestra de Marble Maze](adding-audio-to-the-marble-maze-sample.md)
+* [Agregar contenido visual a la muestra de Marble Maze](adding-visual-content-to-the-marble-maze-sample.md)
+* [Desarrollo de Marble Maze, un juego para UWP en C++ y DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 
  
-
-
-
-

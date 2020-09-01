@@ -1,5 +1,5 @@
 ---
-Description: En este artículo se tratan las cuatro opciones \#de notificación&8212; local, programada, periódica \#y de extracción&8212; que proporcionan actualizaciones de iconos y notificaciones del sistema.
+Description: En este artículo se tratan las cuatro opciones de notificación&\# 8212; local, programada, periódica y de extracción&\# 8212; que proporcionan actualizaciones de iconos y notificaciones del sistema.
 title: Elegir un método de entrega de notificaciones
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1df2048ea54b3ffc7c62270841b2be650bb90ea
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 166ff20e792c5cf4a5969e954ed1b7d04e5c5c9f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970830"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173299"
 ---
 # <a name="choose-a-notification-delivery-method"></a>Elegir un método de entrega de notificaciones
 
@@ -79,7 +79,7 @@ Esta tabla resume los tipos de entrega de notificaciones.
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">Inserción</td>
+<td align="left">Insertar</td>
 <td align="left">Icono, distintivo, notificación del sistema, sin procesar</td>
 <td align="left">Las notificaciones se envían desde un servidor de nube aunque la aplicación no se esté ejecutando.</td>
 <td align="left"><ul>
@@ -151,10 +151,10 @@ Las notificaciones de inserción necesitan un servicio de nube que administre ca
 
 De forma predeterminada, las notificaciones de inserción caducan tres días después de que se reciban en el dispositivo. Si es necesario, puedes invalidar este valor predeterminado con una fecha de caducidad explícita (las notificaciones del sistema tienen un máximo de tres días).
 
-Para obtener más información, consulte:
+Para más información, consulte:
 
 -   [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
--   [Directrices para notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+-   [Directrices para notificaciones de inserción](./windows-push-notification-services--wns--overview.md)
 -   [Ejemplos de código de notificaciones de aplicaciones de Windows](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
@@ -163,15 +163,11 @@ Para obtener más información, consulte:
 
 * [Enviar una notificación de icono local](sending-a-local-tile-notification.md)
 * [Enviar una notificación del sistema local](send-local-toast.md)
-* [Directrices para notificaciones de inserción](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
-* [Directrices sobre notificaciones del sistema](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-badges-notifications)
+* [Directrices para notificaciones de inserción](./windows-push-notification-services--wns--overview.md)
+* [Directrices sobre notificaciones del sistema](./index.md)
 * [Introducción a las notificaciones periódicas](periodic-notification-overview.md)
 * [Introducción a los Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
 * [Ejemplos de código de notificaciones de aplicaciones de Windows en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
  
 
  
-
-
-
-

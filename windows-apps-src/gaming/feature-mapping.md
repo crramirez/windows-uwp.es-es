@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, DirectX 9, DirectX 11, portabilidad
 ms.localizationpriority: medium
-ms.openlocfilehash: 3470c8153cc0f6ba6d272e5ed1163c7f2c911c4c
-ms.sourcegitcommit: 7c1711d68496b781ed7d5b54e8ef5442e58661fa
+ms.openlocfilehash: 8f7bdc8cef43ffa323cae89459ac9bcb549c10f1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88578229"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172049"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Asignar características de DirectX 9 a las API de DirectX 11
 
@@ -21,23 +21,23 @@ Consulte también [planeación del puerto DirectX](plan-your-directx-port.md)y [
 
 ## <a name="mapping-direct3d-9-to-directx-11-apis"></a>Asignar Direct3D 9 a las API de DirectX 11
 
-[Direct3D](https://docs.microsoft.com/windows/desktop/direct3d) sigue siendo la base de los elementos gráficos DirectX, pero la API cambió a partir de DirectX 9:
+[Direct3D](/windows/desktop/direct3d) sigue siendo la base de los elementos gráficos DirectX, pero la API cambió a partir de DirectX 9:
 
--   La Infraestructura de gráficos de Microsoft DirectX (DXGI) se usa para configurar adaptadores de gráficos. Usa [DXGI](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dx-graphics-dxgi) para seleccionar formatos de búfer, crear cadenas de intercambio, presentar marcos y crear recursos compartidos. Consulta [Introducción a DXGI](https://docs.microsoft.com/windows/desktop/direct3ddxgi/d3d10-graphics-programming-guide-dxgi).
--   El contexto de dispositivo de Direct3D se usa para establecer el estado de canalización y generar comandos de representación. La mayoría de nuestras muestras usan un contexto inmediato para representar directamente en el dispositivo. Direct3D 11 también admite la representación multithreading, en cuyo caso se usan contextos diferidos. Consulta [Introducción a un dispositivo en Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-intro).
--   Algunas características ya no se usan, particularmente la canalización de función fija. Consulta [Características desusadas](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-api-features-deprecated).
+-   La Infraestructura de gráficos de Microsoft DirectX (DXGI) se usa para configurar adaptadores de gráficos. Usa [DXGI](/windows/desktop/direct3ddxgi/dx-graphics-dxgi) para seleccionar formatos de búfer, crear cadenas de intercambio, presentar marcos y crear recursos compartidos. Consulta [Introducción a DXGI](/windows/desktop/direct3ddxgi/d3d10-graphics-programming-guide-dxgi).
+-   El contexto de dispositivo de Direct3D se usa para establecer el estado de canalización y generar comandos de representación. La mayoría de nuestras muestras usan un contexto inmediato para representar directamente en el dispositivo. Direct3D 11 también admite la representación multithreading, en cuyo caso se usan contextos diferidos. Consulta [Introducción a un dispositivo en Direct3D 11](/windows/desktop/direct3d11/overviews-direct3d-11-devices-intro).
+-   Algunas características ya no se usan, particularmente la canalización de función fija. Consulta [Características desusadas](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-api-features-deprecated).
 
-Para obtener una lista completa de las características de  Direct3D 11, consulta [Características de Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-features) y [Características de Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-1-features).
+Para obtener una lista completa de las características de  Direct3D 11, consulta [Características de Direct3D 11](/windows/desktop/direct3d11/direct3d-11-features) y [Características de Direct3D 11](/windows/desktop/direct3d11/direct3d-11-1-features).
 
 ## <a name="moving-from-direct2d-9-to-direct2d-11"></a>Pasar de Direct2D 9 a Direct2D 11
 
-[Direct2D (Windows)](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) sigue siendo parte importante de los gráficos DirectX y Windows. Todavía puedes usar Direct2D para dibujar juegos 2D y dibujar superposiciones (HUD) sobre Direct3D.
+[Direct2D (Windows)](/windows/desktop/Direct2D/direct2d-portal) sigue siendo parte importante de los gráficos DirectX y Windows. Todavía puedes usar Direct2D para dibujar juegos 2D y dibujar superposiciones (HUD) sobre Direct3D.
 
 Direct2D se ejecuta encima de Direct3D. Los juegos 2D pueden implementarse en cualquiera de sus API. Por ejemplo, un juego 2D implementado con Direct3D puede usar la proyección ortográfica, establecer valores Z para controlar el orden de dibujo de primitivos y usar sombreadores de píxeles para agregar efectos especiales.
 
-Dado que Direct2D se basa en Direct3D, también usa DXGI y contextos de dispositivo. Consulta [Introducción a la API de Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/the-direct2d-api).
+Dado que Direct2D se basa en Direct3D, también usa DXGI y contextos de dispositivo. Consulta [Introducción a la API de Direct2D](/windows/desktop/Direct2D/the-direct2d-api).
 
-La API [DirectWrite](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal) agrega compatibilidad para texto con formato otorgado mediante Direct2D. Consulta [Introducción a DirectWrite](https://docs.microsoft.com/windows/desktop/DirectWrite/introducing-directwrite).
+La API [DirectWrite](/windows/desktop/DirectWrite/direct-write-portal) agrega compatibilidad para texto con formato otorgado mediante Direct2D. Consulta [Introducción a DirectWrite](/windows/desktop/DirectWrite/introducing-directwrite).
 
 ## <a name="replace-deprecated-helper-libraries"></a>Reemplazar bibliotecas de aplicaciones auxiliares desusadas
 
@@ -49,56 +49,56 @@ D3DX y DXUT están en desuso y no pueden usarse para juegos de UWP. Estas biblio
 
 ## <a name="move-shader-programs-from-fx-to-hlsl"></a>Trasladar programas sombreadores de FX a HLSL
 
-La biblioteca de utilidades de D3DX (D3DX 9, D3DX 10 y D3DX 11), incluidos los efectos, está en desuso para UWP. Todos los juegos de DirectX para UWP controlan la canalización de gráficos con [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl) sin efectos.
+La biblioteca de utilidades de D3DX (D3DX 9, D3DX 10 y D3DX 11), incluidos los efectos, está en desuso para UWP. Todos los juegos de DirectX para UWP controlan la canalización de gráficos con [HLSL](/windows/desktop/direct3dhlsl/dx-graphics-hlsl) sin efectos.
 
 Visual Studio todavía usa FXC como opción avanzada para compilar objetos de sombreador. Los sombreadores de los juegos de la UWP se compilan con anticipación. El código de bytes se carga en tiempo de ejecución y, a continuación, cada recurso de sombreador se enlaza a la canalización de elementos gráficos durante el pase de representación apropiado. Los sombreadores deben moverse a sus propios archivos .HLSL independientes y las técnicas de representación deben implementarse en el código C++.
 
 Para ver rápidamente la carga de recursos de sombreador, consulta [Migración simple de Direct3D 9 a UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md).
 
-Direct3D 11 incorporó el modelo de sombreador 5, que requiere el nivel de característica 11 0 de Direct3D \_ (o superior). Consulta [HLSL Shader Model 5 Features for Direct3D 11 (Características del modelo de sombreador 5 de HLSL para Direct3D 11)](https://docs.microsoft.com/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl).
+Direct3D 11 incorporó el modelo de sombreador 5, que requiere el nivel de característica 11 0 de Direct3D \_ (o superior). Consulta [HLSL Shader Model 5 Features for Direct3D 11 (Características del modelo de sombreador 5 de HLSL para Direct3D 11)](/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl).
 
 ## <a name="replace-xnamath-and-d3dxmath"></a>Reemplazar XNAMath y D3DXMath
 
-El código que usa XNAMath (o D3DXMath) debe migrarse a [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal). DirectXMath incluye tipos portátiles entre x86, x64 y ARM. Consulta [Migración de código de la biblioteca de matemáticas XNA](https://docs.microsoft.com/windows/desktop/dxmath/pg-xnamath-migration).
+El código que usa XNAMath (o D3DXMath) debe migrarse a [DirectXMath](/windows/desktop/dxmath/directxmath-portal). DirectXMath incluye tipos portátiles entre x86, x64 y ARM. Consulta [Migración de código de la biblioteca de matemáticas XNA](/windows/desktop/dxmath/pg-xnamath-migration).
 
-Ten en cuenta que con los sombreadores conviene usar tipos flotantes de DirectXMath. Por ejemplo las estructuras [**XMFLOAT4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4) y [**XMFLOAT4X4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4x4) alinean los datos de manera conveniente para los búferes de constantes.
+Ten en cuenta que con los sombreadores conviene usar tipos flotantes de DirectXMath. Por ejemplo las estructuras [**XMFLOAT4**](/windows/desktop/api/directxmath/ns-directxmath-xmfloat4) y [**XMFLOAT4X4**](/windows/desktop/api/directxmath/ns-directxmath-xmfloat4x4) alinean los datos de manera conveniente para los búferes de constantes.
 
 ## <a name="replace-directsound-with-xaudio2-and-background-audio"></a>Reemplazar DirectSound con XAudio2 (y audio de fondo)
 
 DirectSound no es compatible con la UWP:
 
--   Usa [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal) para agregar efectos de sonido a tu juego.
+-   Usa [XAudio2](/windows/desktop/xaudio2/xaudio2-apis-portal) para agregar efectos de sonido a tu juego.
 
 ##  <a name="replace-directinput-with-xinput-and-windows-runtime-apis"></a>Reemplazar DirectInput con las API de XInput y Windows Runtime
 
 DirectInput no es compatible con la UWP:
 
--   Usa la clase para las devoluciones de llamada de eventos de entrada [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) para la entrada táctil, de mouse y de teclado.
--   Usa [XInput](https://docs.microsoft.com/windows/desktop/xinput/getting-started-with-xinput) 1.4 para la compatibilidad con el dispositivo de juego y los auriculares con micrófono. Si estás usando una base de código compartido para escritorio y UWP, consulta [XInput Versions (Versiones de XInput)](https://docs.microsoft.com/windows/desktop/xinput/xinput-versions) para obtener información sobre la compatibilidad con versiones anteriores.
--   Regístrate para usar los eventos de la clase [**EdgeGesture**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.EdgeGesture) si tu juego necesita usar la barra de aplicaciones.
+-   Usa la clase para las devoluciones de llamada de eventos de entrada [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) para la entrada táctil, de mouse y de teclado.
+-   Usa [XInput](/windows/desktop/xinput/getting-started-with-xinput) 1.4 para la compatibilidad con el dispositivo de juego y los auriculares con micrófono. Si estás usando una base de código compartido para escritorio y UWP, consulta [XInput Versions (Versiones de XInput)](/windows/desktop/xinput/xinput-versions) para obtener información sobre la compatibilidad con versiones anteriores.
+-   Regístrate para usar los eventos de la clase [**EdgeGesture**](/uwp/api/Windows.UI.Input.EdgeGesture) si tu juego necesita usar la barra de aplicaciones.
 
 ## <a name="use-microsoft-media-foundation-instead-of-directshow"></a>Usar Microsoft Media Foundation en lugar de DirectShow
 
-DirectShow ya no forma parte de la API de DirectX ni de la API de Windows. [Microsoft Media Foundation](https://docs.microsoft.com/windows/desktop/medfound/microsoft-media-foundation-sdk) proporciona contenido de vídeo para Direct3D mediante superficies compartidas. Consulta [Las API de vídeo en Direct3D 11](https://docs.microsoft.com/windows/desktop/medfound/direct3d-11-video-apis).
+DirectShow ya no forma parte de la API de DirectX ni de la API de Windows. [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk) proporciona contenido de vídeo para Direct3D mediante superficies compartidas. Consulta [Las API de vídeo en Direct3D 11](/windows/desktop/medfound/direct3d-11-video-apis).
 
 ## <a name="replace-directplay-with-networking-code"></a>Reemplazar DirectPlay con código de red
 
 Microsoft DirectPlay está en desuso. Si tu juego usa servicios de red, debes proporcionar un código de red que cumpla con los requisitos de UWP. Usa estas API:
 
--   [Win32 y COM para aplicaciones UWP (funciones de red) (Windows)](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps)
--   [**Espacio de nombres Windows.Networking (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking)
--   [**Espacio de nombres Windows.Networking.Sockets (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
--   [**Espacio de nombres Windows.Networking.Connectivity (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity)
--   [**Espacio de nombres Windows.ApplicationModel.Background (Windows)**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+-   [Win32 y COM para aplicaciones UWP (funciones de red) (Windows)](/uwp/win32-and-com/win32-and-com-for-uwp-apps)
+-   [**Espacio de nombres Windows.Networking (Windows)**](/uwp/api/Windows.Networking)
+-   [**Espacio de nombres Windows.Networking.Sockets (Windows)**](/uwp/api/Windows.Networking.Sockets)
+-   [**Espacio de nombres Windows.Networking.Connectivity (Windows)**](/uwp/api/Windows.Networking.Connectivity)
+-   [**Espacio de nombres Windows.ApplicationModel.Background (Windows)**](/uwp/api/Windows.ApplicationModel.Background)
 
 Estos artículos te ayudarán a agregar características de red y a declarar la compatibilidad de las redes en el manifiesto del paquete de la aplicación.
 
--   [Conexión con sockets (aplicaciones para UWP con C#/VB/C + + y XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
--   [Conexión con WebSockets (aplicaciones para UWP con C#/VB/C + + y XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh994396(v=win.10))
--   [Conexión a servicios web (aplicaciones para UWP con C#/VB/C + + y XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
--   [Conceptos básicos de redes](https://docs.microsoft.com/windows/uwp/networking/networking-basics)
+-   [Conexión con sockets (aplicaciones para UWP con C#/VB/C + + y XAML) (Windows)](/previous-versions/windows/apps/hh452976(v=win.10))
+-   [Conexión con WebSockets (aplicaciones para UWP con C#/VB/C + + y XAML) (Windows)](/previous-versions/windows/apps/hh994396(v=win.10))
+-   [Conexión a servicios web (aplicaciones para UWP con C#/VB/C + + y XAML) (Windows)](/previous-versions/windows/apps/hh761504(v=win.10))
+-   [Conceptos básicos de redes](../networking/networking-basics.md)
 
-Ten en cuenta que todas las aplicaciones para UWP (incluidos los juegos) usan tipos específicos de tareas en segundo plano para mantener la conectividad mientras la aplicación está suspendida. Si tu juego necesita mantener el estado de conexión durante la suspensión, consulta [Conceptos básicos de redes](https://docs.microsoft.com/windows/uwp/networking/networking-basics).
+Ten en cuenta que todas las aplicaciones para UWP (incluidos los juegos) usan tipos específicos de tareas en segundo plano para mantener la conectividad mientras la aplicación está suspendida. Si tu juego necesita mantener el estado de conexión durante la suspensión, consulta [Conceptos básicos de redes](../networking/networking-basics.md).
 
 ## <a name="function-mapping"></a>Asignación de funciones
 
@@ -134,7 +134,7 @@ Usa esta tabla cuando tengas que convertir código de Direct3D 9 a Direct3D 11. 
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-testcooperativelevel">IDirect3DDevice9::TestCooperativeLevel</a></p></td>
-<td align="left"><p>Llame a <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> con la marca de DXGI_PRESENT_TEST establecida.</p></td>
+<td align="left"><p>Llame a <a href="/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> con la marca de DXGI_PRESENT_TEST establecida.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9">IDirect3DBaseTexture9</a></p>
@@ -194,7 +194,7 @@ Usa esta tabla cuando tengas que convertir código de Direct3D 9 a Direct3D 11. 
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-reset">IDirect3DDevice9:: RESET</a></p></td>
-<td align="left"><p>El dispositivo LOST y POOL_MANAGED ya no existen. <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> puede producir un error con un valor devuelto <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a> .</p></td>
+<td align="left"><p>El dispositivo LOST y POOL_MANAGED ya no existen. <a href="/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> puede producir un error con un valor devuelto <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a> .</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawrectpatch">IDirect3DDevice9:DrawRectPatch</a></p>

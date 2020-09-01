@@ -8,26 +8,26 @@ keywords: información visual,información de foco,información táctil,informac
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fcb6945c488bc1b715c339fa39949ea62bdb2a12
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 9ced83ca771f4954f8e42dc42e0882d1a5b7c6b1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970080"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172459"
 ---
 # <a name="guidelines-for-visual-feedback"></a>Directrices para información visual
 
 Usa la información visual para mostrar a los usuarios cuándo se detectan, se interpretan y se controlan sus interacciones. La información visual puede ayudar a los usuarios al promover la interacción. Indica si una interacción se ha realizado correctamente, lo que mejora la sensación de control del usuario. También transmite los estados del sistema y reduce los errores.
 
-> **API importantes**: [**Windows. Devices. Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows. UI. Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows. UI. Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
+> **API importantes**:  [**Windows. Devices. Input**](/uwp/api/Windows.Devices.Input), [**Windows. UI. Input**](/uwp/api/Windows.UI.Input), [**Windows. UI. Core**](/uwp/api/Windows.UI.Core)
 
 ## <a name="recommendations"></a>Recomendaciones
 
 - Intente limitar el Modifcations de una plantilla de control a los que estén directamente relacionados con su intención de diseño, ya que los cambios extensos pueden afectar al rendimiento y la accesibilidad del control y de la aplicación. 
-    - Vea [estilos XAML](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles) para obtener más información sobre cómo personalizar las propiedades de un control, incluidas las propiedades de estado visual.
-    - Vea la [clase UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) para obtener más información sobre cómo realizar cambios en una plantilla de control.
+    - Vea [estilos XAML](../controls-and-patterns/xaml-styles.md) para obtener más información sobre cómo personalizar las propiedades de un control, incluidas las propiedades de estado visual.
+    - Vea la [clase UserControl](/uwp/api/windows.ui.xaml.controls.usercontrol) para obtener más información sobre cómo realizar cambios en una plantilla de control.
     - Considere la posibilidad de crear su propio control con plantilla personalizado si necesita realizar cambios significativos en una plantilla de control. Para obtener un ejemplo de un control con plantilla personalizado, vea el [ejemplo de control personalizado de edición](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
-- No uses visualizaciones táctiles en situaciones en que podrían interferir con el uso de la aplicación. Para más información, consulta [**ShowGestureFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback).
+- No uses visualizaciones táctiles en situaciones en que podrían interferir con el uso de la aplicación. Para más información, consulta [**ShowGestureFeedback**](/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback).
 - No muestres información a menos que sea absolutamente necesario. No muestres información visual a menos que esta sirva para añadir valor que no se encuentra disponible en ningún otro sitio. De este modo, mantendrás la interfaz de usuario ordenada y organizada.
 - Intenta no personalizar drásticamente los comportamientos de la información visual de los gestos integrados de Windows, ya que esto podría generar una experiencia del usuario confusa e incoherente.
 
@@ -44,7 +44,7 @@ Al usar los controles de plataforma XAML disponibles, te aseguras de que la apli
 
 Los comentarios visuales dependen por lo general del dispositivo de entrada (táctil, panel táctil, mouse, lápiz o pluma, teclado, etc.). Por ejemplo, la información integrada para un mouse por lo general implica mover y cambiar el cursor, mientras que la entrada táctil o de lápiz requiere visualizaciones de contacto, y la navegación y entrada de teclado usa rectángulos de foco y resaltado.
 
-Usa [**ShowGestureFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback) para establecer el comportamiento de la información para los gestos de la plataforma.
+Usa [**ShowGestureFeedback**](/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback) para establecer el comportamiento de la información para los gestos de la plataforma.
 
 Si personalizas la interfaz de usuario de información, asegúrate de proporcionar información que sea adecuada y admita todos los modos de entrada.
 
@@ -58,7 +58,7 @@ Estos son algunos ejemplos de visualizaciones de contacto integradas en Windows.
 
 Todas las aplicaciones de Windows admiten elementos visuales de foco alrededor de controles interactivos más definidos en la aplicación. Estos nuevos elementos visuales de foco son totalmente personalizables y se pueden deshabilitar cuando sea necesario.
 
-En el caso de la **experiencia de 10 pies** típica del uso de Xbox y TV, Windows admite **revelar el foco**, un efecto de iluminación que anima el borde de los elementos que pueden recibir el foco, como un botón, cuando se centra a través de la entrada del teclado o del controlador de juegos. Para obtener más información, consulte [diseñar para Xbox y TV](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv#reveal-focus).
+En el caso de la **experiencia de 10 pies** típica del uso de Xbox y TV, Windows admite **revelar el foco**, un efecto de iluminación que anima el borde de los elementos que pueden recibir el foco, como un botón, cuando se centra a través de la entrada del teclado o del controlador de juegos. Para obtener más información, consulte [diseñar para Xbox y TV](../devices/designing-for-tv.md#reveal-focus).
 
 ## <a name="color-branding--customizing"></a>Personalización de marca de color y personalización
 
@@ -73,7 +73,7 @@ Para cambiar el grosor del tipo de borde (principal o secundario) usa **FocusVis
 ```
 ![Grosores de los márgenes visuales de foco de alta visibilidad](images/FocusMargin.png)
 
-El margen es una propiedad de tipo [**Grosor**](https://docs.microsoft.com/dotnet/api/system.windows.thickness)y, por lo tanto, el margen se puede personalizar para que aparezca únicamente en determinadas partes del control. Vea a continuación ![: el foco visual del margen visual de ancho de la visibilidad solo inferior](images/FocusThicknessSide.png)
+El margen es una propiedad de tipo [**Grosor**](/dotnet/api/system.windows.thickness)y, por lo tanto, el margen se puede personalizar para que aparezca únicamente en determinadas partes del control. Vea a continuación: el ![ foco visual del margen visual de ancho de la visibilidad solo inferior](images/FocusThicknessSide.png)
 
 El margen es el espacio entre los límites visuales del control y el inicio del *borde secundario*de los objetos visuales de foco. El margen predeterminado se **1px** fuera de los límites del control. Puede editar este margen para cada control, cambiando la propiedad **FocusVisualMargin** :
 ```XAML
@@ -114,7 +114,7 @@ Para cambiar los colores según el control, modifica las propiedades de los elem
 
 ### <a name="for-developers"></a>Para desarrolladores
 
-- [Interacciones del usuario personalizadas](https://docs.microsoft.com/windows/uwp/design/layout/index)
+- [Interacciones del usuario personalizadas](../layout/index.md)
 
 ### <a name="samples"></a>Ejemplos
 
@@ -130,7 +130,7 @@ Para cambiar los colores según el control, modifica las propiedades de los elem
 - [Entrada: muestra de prueba de acceso táctil](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
 - [Ejemplo de desplazamiento, panorámica y zoom de XAML](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
 - [Entrada: ejemplo de entrada de lápiz simplificada](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
-- [Entrada: muestra de gestos de Windows 8](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [Entrada: muestra de gestos de Windows 8](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Entrada: ejemplo de manipulaciones y gestos](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [Muestra de entrada táctil de DirectX](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
  

@@ -1,53 +1,53 @@
 ---
 title: Exposición de recursos de streaming de HLSL
-description: Se necesita una sintaxis específica del lenguaje High Level Shader Language (HLSL) de Microsoft para admitir los recursos de streaming en Shader Model 5.
+description: Se requiere una sintaxis específica de lenguaje de sombreado de alto nivel (HLSL) de Microsoft para admitir recursos de streaming en el modelo de sombreador 5.
 ms.assetid: 00A40D82-0565-43DC-82AB-0675B7E772E3
 keywords:
 - Exposición de recursos de streaming de HLSL
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: db8a368f6cd9e0b6d38fb16d81dbc31a0f8a615f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: decb0ff2d791417326a70b06c0fdd6a25ea2d119
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370603"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173089"
 ---
 # <a name="hlsl-streaming-resources-exposure"></a>Exposición de recursos de streaming de HLSL
 
 
-Se necesita una sintaxis específica del lenguaje High Level Shader Language (HLSL) de Microsoft para admitir los recursos de streaming en [Shader Model 5](https://docs.microsoft.com/windows/desktop/direct3dhlsl/d3d11-graphics-reference-sm5).
+Se requiere una sintaxis específica de lenguaje de sombreado de alto nivel (HLSL) de Microsoft para admitir recursos de streaming en el [modelo de sombreador 5](/windows/desktop/direct3dhlsl/d3d11-graphics-reference-sm5).
 
-La sintaxis HLSL para Shader Model 5 solo se admite en dispositivos con compatibilidad con recursos de streaming. Cada método HLSL pertinente para los recursos de streaming de la siguiente tabla acepta un parámetro opcional adicional (comentarios) o dos (restricción y comentarios en este orden). Por ejemplo, un método **Sample** es:
+La sintaxis de HLSL para el modelo de sombreador 5 solo se permite en dispositivos con compatibilidad con recursos de streaming. Cada método HLSL relevante para los recursos de streaming en la tabla siguiente acepta uno (comentarios) o dos (abrazadera y comentarios en este orden) parámetros opcionales adicionales. Por ejemplo, un método de **ejemplo** es:
 
-**Ejemplo (muestra, ubicación \[, desplazamiento \[, abrazadera \[, comentarios\] \] \])**
+**Ejemplo (muestra, ubicación \[ , desplazamiento \[ , abrazadera \[ , comentarios \] \] \] )**
 
-Un ejemplo de método **Sample** es [**Texture2D.Sample(S,float,int,float,uint)** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/t2darray-sample-s-float-int-float-uint-).
+Un ejemplo de método de **ejemplo** es [**Texture2D. sample (S, Float, int, Float, uint)**](/windows/desktop/direct3dhlsl/t2darray-sample-s-float-int-float-uint-).
 
-Los parámetros de desplazamiento, restricción y comentarios son opcionales. Debes especificar todos los parámetros opcionales hasta el que necesites, que sea coherente con las reglas de C++ de los argumentos de la función predeterminada. Por ejemplo, si es necesario el estado de comentarios, los parámetros de desplazamiento y restricción deben proporcionarse explícitamente en **Sample**, aunque no sean necesarios lógicamente.
+Los parámetros offset, Clamp y feedback son opcionales. Debe especificar todos los parámetros opcionales hasta el que necesite, lo que es coherente con las reglas de C++ de los argumentos de función predeterminados. Por ejemplo, si se necesita el estado de los comentarios, los parámetros offset y Clamp deben proporcionarse explícitamente al **ejemplo**, aunque es posible que no sean necesarios lógicamente.
 
-El parámetro de restricción es un valor de tipo float escalar. El valor literal de restricción =0.0f indica que no se realiza la operación de restricción.
+El parámetro Clamp es un valor Float escalar. El valor literal de Clamp = 0.0 f indica que no se realiza la operación de abrazadera.
 
-El parámetro de comentarios es una variable **uint** que puedes proporcionar a la función intrínseca de consulta de acceso a la memoria [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped). No debes modificar ni interpretar el valor del parámetro; sin embargo, el compilador no proporciona ningún análisis avanzado ni diagnóstico para detectar si se ha modificado el valor.
+El parámetro feedback es una variable **uint** que se puede proporcionar a la función [**CheckAccessFullyMapped**](/windows/desktop/direct3dhlsl/checkaccessfullymapped) intrínseca de consulta de acceso a la memoria. No debe modificar ni interpretar el valor del parámetro feedback. pero el compilador no proporciona ningún diagnóstico y análisis avanzados para detectar si modificó el valor.
 
-Esta es la sintaxis de [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped):
+Esta es la sintaxis de [**CheckAccessFullyMapped**](/windows/desktop/direct3dhlsl/checkaccessfullymapped):
 
-**bool CheckAccessFullyMapped(in uint FeedbackVar);**
+**bool CheckAccessFullyMapped (en uint FeedbackVar);**
 
-[**CheckAccessFullyMapped** ](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) interpreta el valor de *FeedbackVar* y devuelve true si todos los datos que se obtiene acceso se ha asignado en el recurso; de lo contrario, **CheckAccessFullyMapped**devuelve false.
+[**CheckAccessFullyMapped**](/windows/desktop/direct3dhlsl/checkaccessfullymapped) interpreta el valor de *FeedbackVar* y devuelve true si todos los datos a los que se tiene acceso se asignaron en el recurso; de lo contrario, **CheckAccessFullyMapped** devuelve false.
 
-Si hay el parámetro de restricción o comentarios, el compilador emite una variante de la instrucción básica. Por ejemplo, la muestra de un recurso de streaming genera la instrucción `sample_cl_s`.
+Si el parámetro clamp o feedback está presente, el compilador emite una variante de la instrucción básica. Por ejemplo, el ejemplo de un recurso de streaming genera la `sample_cl_s` instrucción.
 
-Si no se especifica ni la restricción ni los comentarios, el compilador emite la instrucción básica, de tal forma que no hay ningún cambio en el comportamiento actual.
+Si no se especifican Clamp ni feedback, el compilador emite la instrucción básica, de modo que no hay ningún cambio en el comportamiento actual.
 
-El valor de restricción de 0.0f indica que no se realiza ninguna restricción; por lo tanto, el compilador del controlador puede personalizar aún más la instrucción en el hardware de destino. Si los comentarios son un registro NULL en una instrucción, no se usan; por lo tanto, el compilador del controlador puede personalizar aún más la instrucción en la arquitectura de destino.
+El valor de Clamp de 0,0 f indica que no se realiza ninguna abrazadera; por lo tanto, el compilador de controladores puede personalizar aún más la instrucción al hardware de destino. Si los comentarios son un registro nulo en una instrucción, los comentarios no se usan. por lo tanto, el compilador de controladores puede adaptar aún más la instrucción a la arquitectura de destino.
 
-Si el compilador HLSL deduce que la restricción es 0.0f y los comentarios no se usan, el compilador emite la instrucción básica correspondiente (por ejemplo, `sample` en lugar de `sample_cl_s`).
+Si el compilador de HLSL infiere que la abrazadera es 0,0 f y los comentarios no se usan, el compilador emite la instrucción básica correspondiente (por ejemplo, `sample` en lugar de `sample_cl_s` ).
 
-Si un acceso a los recursos de streaming consta de varias instrucciones de código de bytes constituyentes, por ejemplo, para recursos estructurados, el compilador agrega valores de comentarios individuales a través de la operación OR para generar el valor de comentarios final. Por lo tanto, verás un valor de comentarios solo para dicho acceso complejo.
+Si un acceso a recursos de streaming consta de varias instrucciones de código de bytes constituyentes, por ejemplo, para los recursos estructurados, el compilador agrega valores de comentarios individuales a través de la operación o para generar el valor final de los comentarios. Por lo tanto, verá un valor de comentarios único para este tipo de acceso complejo.
 
-En esta tabla se resumen los métodos HLSL que se modifican para admitir los comentarios o la restricción. Todos funcionan en recursos que no son de streaming y en iconos de todas las dimensiones. Los recursos que no son de streaming siempre se muestran como asignados por completo.
+Esta es la tabla de Resumen de los métodos de HLSL que se cambian para admitir comentarios y/o abrazadera. Todas ellas funcionan en recursos en mosaico y sin streaming de todas las dimensiones. Los recursos que no son de streaming parecen estar totalmente asignados.
 
 <table>
 <colgroup>
@@ -56,17 +56,17 @@ En esta tabla se resumen los métodos HLSL que se modifican para admitir los com
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/d3d11-graphics-reference-sm5-objects">Objetos HLSL</a> </th>
-<th align="left">Métodos intrínsecos con la opción de comentarios (*); también hay la opción de restricción</th>
+<th align="left"><a href="/windows/desktop/direct3dhlsl/d3d11-graphics-reference-sm5-objects">Objetos HLSL</a> </th>
+<th align="left">Métodos intrínsecos con la opción feedback (*)-también tiene la opción Clamp</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[RW]Texture2D</p>
-<p>[RW]Texture2DArray</p>
+<td align="left"><p>RW Texture2D</p>
+<p>RW Texture2DArray</p>
 <p>TextureCUBE</p>
 <p>TextureCUBEArray</p></td>
-<td align="left"><p>Gather</p>
+<td align="left"><p>Recopilar</p>
 <p>GatherRed</p>
 <p>GatherGreen</p>
 <p>GatherBlue</p>
@@ -78,14 +78,14 @@ En esta tabla se resumen los métodos HLSL que se modifican para admitir los com
 <p>GatherCmpAlpha</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[RW]Texture1D</p>
-<p>[RW]Texture1DArray</p>
-<p>[RW]Texture2D</p>
-<p>[RW]Texture2DArray</p>
-<p>[RW]Texture3D</p>
+<td align="left"><p>RW Texture1D</p>
+<p>RW Texture1DArray</p>
+<p>RW Texture2D</p>
+<p>RW Texture2DArray</p>
+<p>RW Texture3D</p>
 <p>TextureCUBE</p>
 <p>TextureCUBEArray</p></td>
-<td align="left"><p>Sample*</p>
+<td align="left"><p>AdventureWorks</p>
 <p>SampleBias*</p>
 <p>SampleCmp*</p>
 <p>SampleCmpLevelZero</p>
@@ -93,17 +93,17 @@ En esta tabla se resumen los métodos HLSL que se modifican para admitir los com
 <p>SampleLevel</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[RW]Texture1D</p>
-<p>[RW]Texture1DArray</p>
-<p>[RW]Texture2D</p>
+<td align="left"><p>RW Texture1D</p>
+<p>RW Texture1DArray</p>
+<p>RW Texture2D</p>
 <p>Texture2DMS</p>
-<p>[RW]Texture2DArray</p>
+<p>RW Texture2DArray</p>
 <p>Texture2DArrayMS</p>
-<p>[RW]Texture3D</p>
-<p>[RW]Buffer</p>
-<p>[RW]ByteAddressBuffer</p>
-<p>[RW]StructuredBuffer</p></td>
-<td align="left">Load</td>
+<p>RW Texture3D</p>
+<p>RW Búfer</p>
+<p>RW ByteAddressBuffer</p>
+<p>RW StructuredBuffer</p></td>
+<td align="left">Cargar</td>
 </tr>
 </tbody>
 </table>
@@ -113,12 +113,8 @@ En esta tabla se resumen los métodos HLSL que se modifican para admitir los com
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Canalización de acceso a recursos de streaming](pipeline-access-to-streaming-resources.md)
+[Acceso de canalización a recursos de streaming](pipeline-access-to-streaming-resources.md)
 
  
 
  
-
-
-
-

@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, iconos secundarios, instrucciones, instrucciones, procedimientos recomendados
 ms.localizationpriority: medium
-ms.openlocfilehash: 400b0d48fd68c720d613325d1938c0c4a70931a7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 83f8a095a4e15c3ec0ebb02eebc183cf4beb01ea
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971030"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172339"
 ---
 # <a name="secondary-tile-guidance"></a>Guía de mosaicos secundarios
 
@@ -49,6 +49,6 @@ Tenga en cuenta las siguientes recomendaciones al habilitar iconos secundarios e
 
 * [Información general sobre mosaicos secundarios](secondary-tiles.md)
 * [Anclar iconos secundarios](secondary-tiles-pinning.md)
-* [Activos en mosaico](app-assets.md)
+* [Activos en mosaico](../../style/app-icons-and-logos.md)
 * [Documentación de contenido de mosaico](create-adaptive-tiles.md)
 * [Enviar una notificación de icono local](sending-a-local-tile-notification.md)

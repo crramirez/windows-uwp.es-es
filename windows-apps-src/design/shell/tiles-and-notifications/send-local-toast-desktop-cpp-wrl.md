@@ -1,22 +1,22 @@
 ---
 Description: Obtenga información sobre cómo las aplicaciones de la WRL de Win32 C++ pueden enviar notificaciones del sistema local y controlar el usuario al hacer clic en la notificación del sistema.
-title: Enviar una notificación del sistema local desde las aplicaciones de la WRL de C++ de escritorio
+title: Enviar una notificación del sistema local desde aplicaciones de C++ WRL de escritorio
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
 ms.date: 03/07/2018
 ms.topic: article
 keywords: Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar notificaciones locales, puente de escritorio, msix, paquete disperso, C++, CPP, CPlusPlus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e103c41de7bf169629085fd259e23e17804360d
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: e1aae390cf9047c8c93b4d24084c87bc90af8d80
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234667"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172309"
 ---
-# <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar una notificación del sistema local desde las aplicaciones de la WRL de C++ de escritorio
+# <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>Enviar una notificación del sistema local desde aplicaciones de C++ WRL de escritorio
 
-Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está usando MSIX o un paquete disperso.
+Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está usando MSIX o un paquete disperso.
 
 > [!IMPORTANT]
 > Si va a escribir una aplicación para UWP, consulte la [documentación de UWP](send-local-toast.md). En el caso de otros idiomas del escritorio, vea [escritorio C#](send-local-toast-desktop.md).
@@ -94,7 +94,7 @@ A continuación, debe registrarse con la plataforma de notificación. Hay pasos 
 
 ### <a name="msixsparse-package"></a>MSIX/paquete disperso
 
-Si usa [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) o un [paquete disperso](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) (o si admite ambos), en el **paquete. appxmanifest**, agregue:
+Si usa [MSIX](/windows/msix/desktop/source-code-overview) o un [paquete disperso](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) (o si admite ambos), en el **paquete. appxmanifest**, agregue:
 
 1. Declaración de **xmlns: com**
 2. Declaración de **xmlns: Desktop**
@@ -102,7 +102,7 @@ Si usa [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overvi
 4. **com: extensión** para el activador com con el GUID del paso #4. No olvide incluir el `Arguments="-ToastActivated"` para saber que el lanzamiento proviene de una notificación del sistema
 5. **Desktop: Extension** para **Windows. toastNotificationActivation** para declarar el CLSID del activador del sistema (el GUID del paso #4).
 
-**Paquete. appxmanifest**
+**Package.appxmanifest**
 
 ```xml
 <Package
@@ -395,7 +395,7 @@ if (SUCCEEDED(hr))
 
 ## <a name="step-10-deploying-and-debugging"></a>Paso 10: implementación y depuración
 
-Para implementar y depurar la aplicación de paquete MSIX/Sparse, vea [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](/windows/uwp/porting/desktop-to-uwp-debug).
+Para implementar y depurar la aplicación de paquete MSIX/Sparse, vea [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](/windows/msix/desktop/desktop-to-uwp-debug).
 
 Para implementar y depurar la aplicación clásica de Win32, debe instalar la aplicación a través del instalador una vez antes de la depuración, para que el acceso directo de inicio con el AUMID y el CLSID estén presentes. Después de que el acceso directo de inicio esté presente, puede depurar con F5 desde Visual Studio.
 
@@ -416,13 +416,13 @@ Si obtiene numerosos `unresolved external symbol` errores de compilación, proba
 
 Si admite Windows 8.1 o inferior, querrá comprobar en tiempo de ejecución si está ejecutando en Windows 10 antes de llamar a cualquier API de **DesktopNotificationManagerCompat** o enviar cualquier notificación del sistema de ToastGeneric.
 
-Windows 8 presentó notificaciones del sistema, pero usó las plantillas del sistema de notificaciones [heredadas](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10)), como ToastText01. La activación se controló mediante el evento **activado** en memoria en la clase **ToastNotification** , ya que las notificaciones del sistema solo eran elementos emergentes breves que no se guardaron. Windows 10 presentó notificaciones de [ToastGeneric interactivas](adaptive-interactive-toasts.md)y también incorporó el centro de actividades en el que las notificaciones se conservan durante varios días. La introducción del centro de actividades requirió la introducción de un activador COM, de modo que la notificación del sistema se pueda activar los días después de su creación.
+Windows 8 presentó notificaciones del sistema, pero usó las plantillas del sistema de notificaciones [heredadas](/previous-versions/windows/apps/hh761494(v=win.10)), como ToastText01. La activación se controló mediante el evento **activado** en memoria en la clase **ToastNotification** , ya que las notificaciones del sistema solo eran elementos emergentes breves que no se guardaron. Windows 10 presentó notificaciones de [ToastGeneric interactivas](adaptive-interactive-toasts.md)y también incorporó el centro de actividades en el que las notificaciones se conservan durante varios días. La introducción del centro de actividades requirió la introducción de un activador COM, de modo que la notificación del sistema se pueda activar los días después de su creación.
 
 | SO | ToastGeneric | Activador COM | Plantillas del sistema de notificaciones heredadas |
 | -- | ------------ | ------------- | ---------------------- |
-| Windows 10 | Compatible | Compatible. | Compatible (pero no activará el servidor COM) |
-| Windows 8.1/8 | N/A | N/D | Compatible |
-| Windows 7 y versiones inferiores | N/A | N/A | N/D |
+| Windows 10 | Compatible | Compatible | Compatible (pero no activará el servidor COM) |
+| Windows 8.1/8 | N/D | N/D | Compatible |
+| Windows 7 y versiones inferiores | N/D | N/D | N/D |
 
 Para comprobar si se está ejecutando en Windows 10, incluya el `<VersionHelpers.h>` encabezado y compruebe el método **IsWindows10OrGreater** . Si devuelve true, continúe llamando a todos los métodos descritos en esta documentación. 
 

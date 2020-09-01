@@ -6,15 +6,15 @@ Search.Product: eADQiWindows 10XVcnh
 title: Windows Information Protection (WIP)
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, Windows Information Protection, datos empresariales, protección de datos empresariales, edp, aplicaciones habilitadas
+keywords: Windows 10, UWP, Windows Information Protection, datos empresariales, protección de datos empresariales,
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
-ms.openlocfilehash: f6e3839ac2c15c1f976a9135b121ffea26174d41
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 69bab48836d7679d8bcec5f9132bca88d7607cdb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259614"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173249"
 ---
 # <a name="windows-information-protection-wip"></a>Windows Information Protection (WIP)
 
@@ -31,7 +31,7 @@ WIP, junto con MDM, proporciona a la organización un mayor poder sobre cómo se
 
 Con MDM y MAM, los administradores pueden identificar qué aplicaciones pueden acceder a los archivos que pertenecen a la organización y si los usuarios pueden copiar los datos de estos archivos y luego pegarlos en documentos personales.
 
-Así es como funciona. Los usuarios inscriben sus dispositivos en el sistema de administración de dispositivos móviles (MDM). Un administrador de la organización administrativa usa Microsoft Intune o System Center Configuration Manager (SCCM) para definir y luego implementar una directiva en los dispositivos inscritos.
+Aquí le mostramos cómo funciona: Los usuarios inscriben sus dispositivos en el sistema de administración de dispositivos móviles (MDM). Un administrador de la organización administrativa usa Microsoft Intune o System Center Configuration Manager (SCCM) para definir y luego implementar una directiva en los dispositivos inscritos.
 
 Si no es necesario que los usuarios inscriban sus dispositivos, los administradores usarán su sistema MAM para definir e implementar una directiva que se aplique a aplicaciones específicas. Cuando los usuarios instalen cualquiera de esas aplicaciones, recibirán la directiva asociada.
 
@@ -43,7 +43,7 @@ Si los usuarios anulan la inscripción de su dispositivo del sistema MDM de la o
 
 > **Más información sobre WIP** <br>
 * [Introducción a Windows Information Protection](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
-* [Proteger los datos de la empresa mediante Windows Information Protection (WIP)](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
+* [Protege los datos de tu empresa con Windows Information Protection (WIP)](/windows/whats-new/edp-whats-new-overview)
 
 Si la aplicación está en la lista de aplicaciones permitidas, todos los datos generados por la aplicación están sujetos a las restricciones de la directiva. Esto significa que si los administradores revocan el acceso del usuario a los datos de empresa, dichos usuarios perderán el acceso a todos los datos de la aplicación que has creado.
 
@@ -61,13 +61,13 @@ Por ejemplo, si la directiva permite a los usuarios pegar datos de empresa en un
 
 Si estás listo para optimizar tu aplicación, consulta una de estas guías:
 
-**Para las aplicaciones Plataforma universal de Windows (UWP) que se compilan conC#**
+**Para las aplicaciones Plataforma universal de Windows (UWP) que se compilan con C #**
 
-[Guía para desarrolladores sobre Windows Information Protection (WIP)](wip-dev-guide.md).
+[Guía del desarrollador de Windows Information Protection (WIP)](wip-dev-guide.md).
 
-**Para las aplicaciones de escritorio que se compilan conC++**
+**Para aplicaciones de escritorio creadas con C++**
 
-[Guía para desarrolladores sobre Windows Information Protection (WIP)](https://docs.microsoft.com/previous-versions/windows/desktop/EDP/wip-developer-guide?redirectedfrom=MSDN).
+[Guía del desarrollador de Windows Information Protection (WIP) (C++)](/previous-versions/windows/desktop/EDP/wip-developer-guide).
 
 
 ## <a name="create-non-enlightened-enterprise-app"></a>Crear una aplicación empresarial no habilitada

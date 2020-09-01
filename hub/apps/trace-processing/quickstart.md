@@ -5,12 +5,12 @@ author: maiak
 ms.author: maiak
 ms.date: 02/20/2020
 ms.topic: quickstart
-ms.openlocfilehash: 162646baff9b2d08f6fc0ea4862802216cff9619
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: 5f8671d8a1490710837908bb4df8f4aa3c99ecdd
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629109"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172659"
 ---
 # <a name="quickstart-process-your-first-trace"></a>Inicio rápido: procesar el primer seguimiento
 
@@ -34,7 +34,7 @@ Microsoft. Windows. EventTracing. Processing. All
 
 Puede usar este paquete en una aplicación de consola para mostrar las líneas de comandos de proceso contenidas en un seguimiento de ETW (archivo. ETL).
 
-1. Cree una nueva aplicación de consola de .NET Core. En Visual Studio, seleccione Archivo, nuevo, proyecto... y elija la plantilla aplicación de consola (.NET Core) para C#.
+1. Cree una nueva aplicación de consola de .NET Core. En Visual Studio, seleccione Archivo, nuevo, proyecto... y seleccione la plantilla aplicación de consola (.NET Core) para C#.
 
     Escriba un nombre de proyecto, por ejemplo, TraceProcessorQuickstart y elija crear.
 
@@ -79,7 +79,7 @@ Puede usar este paquete en una aplicación de consola para mostrar las líneas d
 
     En Explorador de soluciones, haga clic con el botón derecho en el proyecto y elija Propiedades. Cambie a la pestaña depurar y escriba la ruta de acceso a un seguimiento (archivo. ETL) en los argumentos de la aplicación.
 
-    Si aún no tiene un archivo de seguimiento, puede usar la [grabadora de rendimiento de Windows](https://docs.microsoft.com/windows-hardware/test/wpt/start-a-recording) para crear uno.
+    Si aún no tiene un archivo de seguimiento, puede usar la [grabadora de rendimiento de Windows](/windows-hardware/test/wpt/start-a-recording) para crear uno.
 
 3. Ejecute la aplicación.
 

@@ -1,17 +1,17 @@
 ---
 title: Referencia de API de captura multimedia
-description: Obtén información sobre cómo tener acceso a la API de captura multimedia mediante programación.
+description: Obtenga información sobre cómo capturar una representación PNG de la pantalla actual mediante la API de REST del portal de dispositivos Xbox.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 3f92c8fd-4096-4972-97da-01ae5db6423c
 ms.localizationpriority: medium
-ms.openlocfilehash: 7dcd4c6c39a983ab11bfacd391bfa78942601258
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: ee1ccba3fe2a3f83a95c3538cb267730f7770c4c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244061"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172739"
 ---
 # <a name="media-capture-api-reference"></a>Referencia de API de captura multimedia #
 
@@ -19,7 +19,7 @@ ms.locfileid: "59244061"
 
 Puedes capturar una representación de PNG de la pantalla actual mediante el siguiente formato de solicitud.
 
-| Método        | URI de la solicitud     | 
+| Método        | URI de solicitud     | 
 | ------------- |-----------------|
 | GET           | /ext/screenshot |
 
@@ -35,13 +35,13 @@ Puedes especificar los siguientes parámetros adicionales en el URI de la solici
 
 **Encabezados de solicitud**
 
-* Ninguno
+* None
 
 **Cuerpo de la solicitud**
 
-* Ninguno
+* None
 
-## <a name="response"></a>Respuesta
+## <a name="response"></a>Response
 
 **Código de estado**
 

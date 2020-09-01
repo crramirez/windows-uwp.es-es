@@ -6,22 +6,22 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, security
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b870bd59cb5b6c524cf85165fa182314b93c855
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 52dc4364689ac04910c5b42cfe2dbcfd3b895b21
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259818"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172829"
 ---
 # <a name="web-authentication-broker"></a>Agente de autenticación web
 
 
 
 
-En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc. El método [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) envía una solicitud al proveedor de identidad en línea y obtiene un token de acceso que describe los recursos del proveedor a los que tiene acceso la aplicación.
+En este artículo se explica cómo conectar tu aplicación de la Plataforma universal de Windows (UWP) a un proveedor de identidad en línea que usa protocolos de autenticación como OpenID u OAuth, como Facebook, Twitter, Flickr, Instagram, etc. El método [**AuthenticateAsync**](/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) envía una solicitud al proveedor de identidad en línea y obtiene un token de acceso que describe los recursos del proveedor a los que tiene acceso la aplicación.
 
 >[!NOTE]
->Para obtener una muestra de código completa que funcione, clona el [Repositorio del agente de autenticación web en GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker).
+>Para obtener un ejemplo de código de trabajo completo, Clone el [repositorio de WebAuthenticationBroker en github](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker).
 
  
 
@@ -35,7 +35,7 @@ Debes registrar tu aplicación con el proveedor de identidad en línea con el cu
 
 El URI de solicitud consta de la dirección desde la que envías la solicitud de autenticación a tu proveedor en línea anexada con otra información obligatoria, como un secreto o identificador de la aplicación, un URI de redirección donde se envía al usuario después de completar la autenticación, y el tipo de respuesta esperado. Puedes preguntarle al proveedor qué parámetros se requieren.
 
-El URI de solicitud se envía como el parámetro *requestUri* del método [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync). Debe ser una dirección segura (debe comenzar con `https://`)
+El URI de solicitud se envía como el parámetro *requestUri* del método [**AuthenticateAsync**](/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync). Debe ser una dirección segura (debe comenzar con `https://` )
 
 En el siguiente ejemplo se muestra cómo crear el URI de solicitud.
 
@@ -50,7 +50,7 @@ System.Uri endURI = new System.Uri(endURL);
 ## <a name="connect-to-the-online-provider"></a>Conectarse al proveedor en línea
 
 
-Llama al método [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) para conectarte al proveedor de identidad en línea y obtener un token de acceso. El método toma el URI creado en el paso anterior como el parámetro *requestUri* y un URI al que quieres que se redireccione el usuario como el parámetro *callbackUri*.
+Llama al método [**AuthenticateAsync**](/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) para conectarte al proveedor de identidad en línea y obtener un token de acceso. El método toma el URI creado en el paso anterior como el parámetro *requestUri* y un URI al que quieres que se redireccione el usuario como el parámetro *callbackUri*.
 
 ```cs
 string result;
@@ -87,14 +87,14 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->Además de [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync), el espacio de nombres [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web) contiene un método [**AuthenticateAndContinue**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker#methods). No llame a este método. Está diseñado para aplicaciones destinadas solo a Windows Phone 8,1 y está en desuso a partir de Windows 10.
+>Además de [**AuthenticateAsync**](/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync), el espacio de nombres [**Windows.Security.Authentication.Web**](/uwp/api/Windows.Security.Authentication.Web) contiene un método [**AuthenticateAndContinue**](/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker#methods). No llame a este método. Está diseñado solo para aplicaciones destinadas a Windows Phone 8.1 y está en desuso a partir de Windows 10.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>Conéctate con inicio de sesión único (SSO).
 
 
-De forma predeterminada, el agente de autenticación web no permite que haya cookies. Por esto, aunque el usuario de la aplicación indique que quiere mantener la sesión iniciada (por ejemplo, al activar una casilla en el cuadro de diálogo de inicio de sesión del proveedor), deberá iniciar sesión cada vez que quiera tener acceso a los recursos de dicho proveedor. Para iniciar sesión con inicio de sesión único (SSO), el proveedor de identidad en línea debe haber habilitado SSO para el agente de autenticación web y la aplicación debe llamar la sobrecarga de [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync), que no toma un parámetro *callbackUri*. Esto permitirá que las cookies persistentes se almacenen mediante el agente de autenticación web, para que las llamadas de autenticación futuras realizadas por la misma aplicación no requieran que el usuario inicie sesión varias veces (el usuario "ha iniciado sesión" de forma eficaz hasta que el token de acceso caduque).
+De forma predeterminada, el agente de autenticación web no permite que haya cookies. Por esto, aunque el usuario de la aplicación indique que quiere mantener la sesión iniciada (por ejemplo, al activar una casilla en el cuadro de diálogo de inicio de sesión del proveedor), deberá iniciar sesión cada vez que quiera tener acceso a los recursos de dicho proveedor. Para iniciar sesión con inicio de sesión único (SSO), el proveedor de identidad en línea debe haber habilitado SSO para el agente de autenticación web y la aplicación debe llamar la sobrecarga de [**AuthenticateAsync**](/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync), que no toma un parámetro *callbackUri*. Esto permitirá que el agente de autenticación Web almacene las cookies persistentes, de modo que las llamadas de autenticación futuras por la misma aplicación no requieran que el usuario inicie sesión de forma repetida (el usuario se "ha iniciado sesión" hasta que expire el token de acceso).
 
-Para habilitar SSO, el proveedor en línea debe permitir registrar una URI de redirección en la forma de `ms-app://<appSID>`, donde `<appSID>` es el SID de tu aplicación. Puedes encontrar el SID de tu aplicación en la página del desarrollador de la aplicación, o llamando al método [**GetCurrentApplicationCallbackUri**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.getcurrentapplicationcallbackuri).
+Para admitir el inicio de sesión único, el proveedor en línea debe permitirle registrar un URI de redirección en el formulario `ms-app://<appSID>` , donde `<appSID>` es el SID de la aplicación. Puedes encontrar el SID de tu aplicación en la página del desarrollador de la aplicación, o llamando al método [**GetCurrentApplicationCallbackUri**](/uwp/api/windows.security.authentication.web.webauthenticationbroker.getcurrentapplicationcallbackuri).
 
 ```cs
 string result;
@@ -136,7 +136,7 @@ Hay varias maneras de solucionar los problemas de las API del agente de autentic
 
 ### <a name="operational-logs"></a>Registros operativos
 
-Con frecuencia, los registros operativos ayudan a determinar qué no está funcionando. Hay un canal de registro de eventos dedicado Microsoft-Windows-webauth\\operativo que permite a los desarrolladores de sitios web comprender cómo el agente de autenticación Web está procesando sus páginas Web. Para habilitarlo, inicie eventvwr. exe y habilite el registro operativo en la aplicación y los servicios\\Microsoft\\Windows\\webauth. Asimismo, el agente de autenticación web anexa una cadena única a la cadena de agente de usuario para identificarse en el servidor web. La cadena es "MSAuthHost/1.0". Ten en cuenta que el número de versión podría cambiar en el futuro, por lo que no debes depender de dicho número de versión en tu código. Este es un ejemplo de la cadena de agente de usuario completa, seguida de los pasos completos de depuración.
+Con frecuencia, los registros operativos ayudan a determinar qué no está funcionando. Hay un canal de registro de eventos dedicado Microsoft-Windows-webauth \\ operativo que permite a los desarrolladores de sitios web comprender cómo el agente de autenticación Web está procesando sus páginas Web. Para habilitarlo, inicie eventvwr.exe y habilite el registro operativo en la aplicación y los servicios \\ Microsoft \\ Windows \\ webauth. Asimismo, el agente de autenticación web anexa una cadena única a la cadena de agente de usuario para identificarse en el servidor web. La cadena es "MSAuthHost/1.0". Ten en cuenta que el número de versión podría cambiar en el futuro, por lo que no debes depender de dicho número de versión en tu código. Este es un ejemplo de la cadena de agente de usuario completa, seguida de los pasos completos de depuración.
 
 `User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0; MSAuthHost/1.0)`
 
@@ -157,7 +157,7 @@ El depurador web Fiddler puede usarse con aplicaciones.
 
 1.  Dado que AuthHost se ejecuta en su propio contenedor de aplicaciones, para darle la funcionalidad de red privada debe establecer una clave del registro: Windows Registry Editor version 5,00
 
-    **HKEY\_equipo local de\_** \\**software**\\**las opciones de ejecución de archivo de imagen** de **Microsoft**\\**Windows NT**\\**CurrentVersion**\\\\**authhost. exe**\\**EnablePrivateNetwork** = 00000001
+    **HKEY \_ SOFTWARE de \_ equipo local** \\ **SOFTWARE** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **Image File Execution Options** \\ **authhost.exe** \\ **EnablePrivateNetwork** = 00000001
 
     Si no tiene esta clave del registro, puede crearla en un símbolo del sistema con privilegios de administrador.
 

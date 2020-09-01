@@ -1,84 +1,80 @@
 ---
 title: Características de muestreo de texturas de recursos de streaming
-description: Las características de muestreo de texturas de los recursos de streaming incluyen la obtención de los comentarios de estado del sombreador sobre las áreas asignadas, la comprobación de si todos los datos a los que se accede se han asignado en el recurso, la compresión para ayudar a los sombreadores a evitar áreas de recursos de streaming con mapas MIP que se sabe que no se han asignado y la detección de que el LOD mínimo se ha asignado completamente para la totalidad de una superficie de filtro de texturas.
+description: Recursos de streaming las características de muestreo de textura incluyen la obtención de comentarios sobre el estado del sombreador sobre las áreas asignadas, la comprobación de si todos los datos a los que se tiene acceso se han asignado en el recurso, la fijación a los sombreadores de ayuda evita áreas en los recursos de streaming de mipmapped que se sabe que no están asignados y la detección de lo que el
 ms.assetid: C2B2DD69-8354-417A-894D-6235A8B48B53
 keywords:
 - Características de muestreo de texturas de recursos de streaming
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: eb0e870aa467641f82d24f03278a199ab56d0c8d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 823b7b6ba7835f62277e15fa41fb968c6f4a167f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370971"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173049"
 ---
 # <a name="streaming-resources-texture-sampling-features"></a>Características de muestreo de texturas de recursos de streaming
 
 
-Las características de muestreo de texturas de los recursos de streaming incluyen la obtención de los comentarios de estado del sombreador sobre las áreas asignadas, la comprobación de si todos los datos a los que se accede se han asignado en el recurso, la compresión para ayudar a los sombreadores a evitar áreas de recursos de streaming con mapas MIP que se sabe que no se han asignado y la detección de que el LOD mínimo se ha asignado completamente para la totalidad de una superficie de filtro de texturas.
+Recursos de streaming las características de muestreo de textura incluyen la obtención de comentarios sobre el estado del sombreador sobre las áreas asignadas, la comprobación de si todos los datos a los que se tiene acceso se han asignado en el recurso, la fijación a los sombreadores de ayuda evita áreas en los recursos de streaming de mipmapped que se sabe que no están asignados y la detección de lo que el
 
-## <a name="span-idrequirementsofstreamingresourcestexturesamplingfeaturesspanspan-idrequirementsofstreamingresourcestexturesamplingfeaturesspanspan-idrequirementsofstreamingresourcestexturesamplingfeaturesspanrequirements-of-streaming-resources-texture-sampling-features"></a><span id="Requirements_of_streaming_resources_texture_sampling_features"></span><span id="requirements_of_streaming_resources_texture_sampling_features"></span><span id="REQUIREMENTS_OF_STREAMING_RESOURCES_TEXTURE_SAMPLING_FEATURES"></span>Características de muestreo de textura de los requisitos de recursos de streaming
-
-
-Las características de muestreo de texturas descritas aquí requieren el [nivel 2](tier-2.md) de compatibilidad de recursos de streaming.
-
-## <a name="span-idshaderstatusfeedbackaboutmappedareasspanspan-idshaderstatusfeedbackaboutmappedareasspanspan-idshaderstatusfeedbackaboutmappedareasspanshader-status-feedback-about-mapped-areas"></a><span id="Shader_status_feedback_about_mapped_areas"></span><span id="shader_status_feedback_about_mapped_areas"></span><span id="SHADER_STATUS_FEEDBACK_ABOUT_MAPPED_AREAS"></span>Comentarios sobre el estado del sombreador acerca de las áreas asignadas
+## <a name="span-idrequirements_of_streaming_resources_texture_sampling_featuresspanspan-idrequirements_of_streaming_resources_texture_sampling_featuresspanspan-idrequirements_of_streaming_resources_texture_sampling_featuresspanrequirements-of-streaming-resources-texture-sampling-features"></a><span id="Requirements_of_streaming_resources_texture_sampling_features"></span><span id="requirements_of_streaming_resources_texture_sampling_features"></span><span id="REQUIREMENTS_OF_STREAMING_RESOURCES_TEXTURE_SAMPLING_FEATURES"></span>Requisitos de las características de muestreo de textura de recursos de streaming
 
 
-Cualquier instrucción de sombreador que lee o escribe en un recurso de streaming hace que se registre información sobre el estado. Este estado se expone como un valor de retorno adicional opcional en cada instrucción de acceso de recurso que entra en un registro temporal de 32 bits. El contenido del valor devuelto es opaco. Es decir, no se permite la lectura directa por parte del programa sombreador. No obstante, puedes usar la función [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) para extraer la información de estado.
+Las características de muestreo de textura que se describen aquí requieren el nivel de nivel [2](tier-2.md) de compatibilidad con recursos de streaming.
 
-## <a name="span-idfullymappedcheckspanspan-idfullymappedcheckspanspan-idfullymappedcheckspanfully-mapped-check"></a><span id="Fully_mapped_check"></span><span id="fully_mapped_check"></span><span id="FULLY_MAPPED_CHECK"></span>Verificación totalmente asignada
-
-
-La función [**CheckAccessFullyMapped**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/checkaccessfullymapped) interpreta el estado devuelto desde un acceso a la memoria e indica si todos los datos a los que se tiene acceso se han asignado en el recurso. **CheckAccessFullyMapped** devuelve el valor true (0xFFFFFFFF) si los datos estaban asignados o false (0x00000000) si los datos estaban sin asignar.
-
-Durante las operaciones de filtro, a veces el peso de un elemento de textura determinado termina siendo 0.0. Un ejemplo es un ejemplo lineal con las coordenadas de textura que se encuentran directamente en un centro de la textura: 3 otros elementos de textura (cuáles son pueden variar por hardware) contribuyen al filtro pero con el peso de 0. Estos elementos de textura de peso O no contribuyen al resultado del filtro, por lo que si se producen, se colocan en iconos **NULL** y no cuentan como un acceso sin asignar. Ten en cuenta que la misma garantía se aplica a los filtros de textura que incluyen varios niveles de MIP; si los elementos de textura de uno de los mapas MIP no está asignado, pero el peso de esos elementos de textura es 0, estos no cuentan como un acceso sin asignar.
-
-Cuando el muestreo de un formato que tiene componentes de menos de 4 (como DXGI\_formato\_R8\_UNORM), los elementos de textura que se encuentran en **NULL** iconos del resultado en el un **NULL** asignado que es conocida, independientemente de qué componentes realmente examina el sombreador en el resultado de acceso. Por ejemplo, para leer desde R8\_no aparecerán UNORM y el resultado de lectura en el sombreador con.gba/.yzw de enmascaramiento que lee la textura en absoluto. Sin embargo, si la dirección del elemento de textura es un icono asignado **NULL**, la operación aún se cuenta como un acceso de asignación **NULL**.
-
-El sombreador puede comprobar el estado y tomar cualquier curso de acción en caso de error. Por ejemplo, un curso de acción puede ser registrar los "elementos faltantes"(por ejemplo, a través de escritura UAV) o emitir otra lectura comprimida a un LOD más amplio que se sepa que está asignado. Una aplicación podría querer realizar el seguimiento de los accesos correctos también, para hacerse una idea de a qué parte del conjunto asignado de los iconos se ha accedido.
-
-Una complicación para el registro es que no existe ningún mecanismo para notificar el conjunto exacto de los iconos a los que se habría accedido. La aplicación puede hacer suposiciones conservadoras basadas en el conocimiento de las coordenadas que usa para acceder, así como usar la instrucción LOD; por ejemplo, [**tex2Dlod**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)) devuelve el cálculo del LOD de hardware.
-
-Otra complicación es que un gran número de accesos será a los mismos iconos, por lo que se producirá mucho registro redundante y posiblemente contención en la memoria. Podría resultar conveniente si al hardware se le pudiera dar la opción de no molestarse en informar sobre los accesos a iconos si ya se han notificado antes en otra parte. Quizá el estado de dicho seguimiento podría restablecerse desde la API (probablemente en los límites del marco).
-
-## <a name="span-idper-sampleminlodclampspanspan-idper-sampleminlodclampspanspan-idper-sampleminlodclampspanper-sample-minlod-clamp"></a><span id="Per-sample_MinLOD_clamp"></span><span id="per-sample_minlod_clamp"></span><span id="PER-SAMPLE_MINLOD_CLAMP"></span>Clamp de MinLOD por ejemplo
+## <a name="span-idshader_status_feedback_about_mapped_areasspanspan-idshader_status_feedback_about_mapped_areasspanspan-idshader_status_feedback_about_mapped_areasspanshader-status-feedback-about-mapped-areas"></a><span id="Shader_status_feedback_about_mapped_areas"></span><span id="shader_status_feedback_about_mapped_areas"></span><span id="SHADER_STATUS_FEEDBACK_ABOUT_MAPPED_AREAS"></span>Comentarios sobre el estado del sombreador sobre las áreas asignadas
 
 
-Para ayudar a los sombreadores a evitar áreas en los recursos de streaming con mapas MIP que se sepa que no están asignadas, mayoría de las instrucciones de sombreador que implican el uso de una muestra (filtrado) tienen un modo que permite al sombreador pasar un parámetro de compresión MinLOD float32 adicional a la muestra de textura. Este valor está en el espacio de números de mapa MIP de la vista, en contra de lo que sucede en el recurso subyacente.
+Cualquier instrucción del sombreador que lee y/o escribe en un recurso de streaming hace que se registre la información de estado. Este estado se expone como un valor de devolución adicional opcional en todas las instrucciones de acceso a recursos que entran en un registro temporal de 32 bits. El contenido del valor devuelto es opaco. Es decir, no se permite la lectura directa por parte del programa de sombreador. Sin embargo, puede usar la función [**CheckAccessFullyMapped**](/windows/desktop/direct3dhlsl/checkaccessfullymapped) para extraer la información de estado.
 
-El hardware realiza` max(fShaderMinLODClamp,fComputedLOD) `en el mismo lugar en el cálculo de LOD donde se produce la compresión MinLOD por recurso, que es también un [**max**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-max)().
-
-Si el resultado de aplicar la abrazadera LOD por muestra y cualquier otras garras LOD definidas en la muestra es un conjunto vacío, el resultado es el mismo fuera de límites acceso resultado como el bloqueo de minLOD por recurso: 0 para los componentes en el formato de superficie y los valores predeterminados para los componentes que faltan.
-
-La instrucción LOD (por ejemplo, [**tex2Dlod**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)), que precede a la compresión minLOD por muestra descrita aquí, devuelve un LOD comprimido y un LOD sin comprimir. El LOD comprimido devuelto desde esta instrucción LOD refleja toda la compresión, incluida la compresión por recurso, pero no una compresión por muestra. La compresión por muestra la controla el sombreador y la conoce en cualquier caso, para que el creador del sombreador pueda aplicar manualmente esa compresión al valor devuelto de la instrucción LOD si lo desea.
-
-## <a name="span-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanspan-idminmaxreductionfilteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtrado de reducción de Mín./máx.
+## <a name="span-idfully_mapped_checkspanspan-idfully_mapped_checkspanspan-idfully_mapped_checkspanfully-mapped-check"></a><span id="Fully_mapped_check"></span><span id="fully_mapped_check"></span><span id="FULLY_MAPPED_CHECK"></span>Comprobación totalmente asignada
 
 
-Las aplicaciones pueden elegir administrar sus propias estructuras de datos que les notifique la apariencia de las asignaciones correspondientes a un recurso de streaming. Un ejemplo sería una superficie que contenga un elemento de textura para contener información relativa a cada icono de un recurso de streaming. Se podría almacenar el primer LOD asignado en una ubicación de icono determinada. Al realizar un muestreo detallado de esta estructura de datos de manera similar al modo en que se pretende realizar el muestreo del recurso de streaming, se podría detectar cuál será el LOD mínimo que está asignado completamente para la totalidad de una superficie de filtro de textura. Para ayudar a facilitar este proceso, Direct3D 11.2 presenta un nuevo modo de muestra de propósito general, el filtrado mínimo/máximo.
+La función [**CheckAccessFullyMapped**](/windows/desktop/direct3dhlsl/checkaccessfullymapped) interpreta el estado devuelto desde un acceso a la memoria e indica si todos los datos a los que se tiene acceso se han asignado en el recurso. **CheckAccessFullyMapped** devuelve true (0xFFFFFFFF) si los datos se asignaron o false (0x00000000) si los datos se han desasignado.
 
-La utilidad del filtrado mínimo/máximo para el seguimiento del LOD puede resultar útil para otros fines, como, quizá, el filtrado de las superficies de profundidad.
+Durante las operaciones de filtro, a veces el peso de un textura determinado termina en 0,0. Un ejemplo es una muestra lineal con coordenadas de textura que se encuentran directamente en un centro de textura: 3 otros textura (que pueden variar según el hardware) contribuyen al filtro pero con 0 peso. Estos 0 pesos textura no contribuyen al resultado del filtro, por lo que si se producen en iconos **nulos** , no se cuentan como accesos no asignados. Tenga en cuenta que la misma garantía se aplica a los filtros de textura que incluyen varios niveles de MIP. Si el textura de uno de los mapas de información no está asignado, pero el peso de esos textura es 0, esos textura no cuentan como un acceso sin asignar.
 
-El filtrado reducción mínimo/máximo es un modo presente en las muestras que obtiene el mismo conjunto de elementos textura que capturaría un filtro de texturas normal. Sin embargo, en lugar fusionar los valores para generar una respuesta, devuelve el min() o max() de los elementos de textura capturados, componente a componente (por ejemplo, el mínimo de todos los valores de R por separado del mínimo de todos los valores de G, y así sucesivamente).
+Cuando se realiza un muestreo de un formato que tiene menos de 4 componentes (como el formato de DXGI \_ \_ R8 \_ UNORM), cualquier textura que se encuentra en mosaicos **nulos** da como resultado el informado de un acceso asignado **nulo** , independientemente de los componentes que el sombreador examine realmente en el resultado. Por ejemplo, la lectura de R8 \_ UNORM y el enmascaramiento del resultado de lectura en el sombreador con. GBA/. YZW parecería que no necesitara leer la textura en absoluto. Pero si la dirección textura es un mosaico asignado **nulo** , la operación todavía cuenta como un acceso de asignación **null** .
 
-Las operaciones de mínimo/máximo siguen las reglas de precisión aritmética de Direct3D. El orden de las comparaciones no importa.
+El sombreador puede comprobar el estado y llevar a cabo cualquier curso de acción deseado en caso de error. Por ejemplo, un curso de acción puede ser el registro de "errores" (por ejemplo, a través de UAV Write) o la emisión de otra lectura fijada a un LOD más general que se sabe que está asignado. Es posible que una aplicación desee realizar un seguimiento de los accesos correctos también con el fin de obtener una idea de qué parte del conjunto de mosaicos asignados tiene acceso.
 
-Durante las operaciones de filtro que no son de mínimo/máximo, a veces el peso de un determinado elemento de textura termina siendo 0,0. Un ejemplo es una muestra lineal con coordenadas de textura que caigan directamente en el centro de un elemento de texto; es ese caso, otros 3 elementos de textura (que pueden variar según el hardware) contribuyen al filtro, pero con un peso de 0. Para cualquiera de estos elementos de textura cuyo peso sería 0 en un filtro de no mínimo/máximo, estos elementos de textura siguen sin contribuir al resultado (y los pesos no se afectan de ningún otro modo a la operación de filtro mínimo/máximo).
+Una complicación para el registro es que no existe ningún mecanismo para informar del conjunto exacto de mosaicos al que se habría tenido acceso. La aplicación puede hacer conjeturas conservadoras en función de conocer las coordenadas utilizadas para el acceso, así como de utilizar la instrucción LOD; por ejemplo, [**tex2Dlod**](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)) devuelve el cálculo de LOD de hardware.
 
-La compatibilidad de esta característica depende de la compatibilidad de [nivel 2](tier-2.md) de los recursos de streaming.
+Otra complicación es que muchos de los accesos serán a los mismos iconos, por lo que se producirá una gran cantidad de registros redundantes y posiblemente contención en la memoria. Podría ser conveniente si el hardware pudiera tener la opción de no molestarse en el acceso al icono de informe si se notificaba en otro lugar antes. Quizás el estado de este seguimiento podría restablecerse desde la API (probablemente en los límites del marco).
+
+## <a name="span-idper-sample_minlod_clampspanspan-idper-sample_minlod_clampspanspan-idper-sample_minlod_clampspanper-sample-minlod-clamp"></a><span id="Per-sample_MinLOD_clamp"></span><span id="per-sample_minlod_clamp"></span><span id="PER-SAMPLE_MINLOD_CLAMP"></span>Abrazadera MinLOD por muestra
+
+
+Para ayudar a los sombreadores a evitar áreas en los recursos de streaming de mipmapped que se sabe que no están asignados, la mayoría de las instrucciones de sombreador que implican el uso de una muestra (filtrado) tienen un modo que permite al sombreador pasar un parámetro de la abrazadera de float32 MinLOD adicional al ejemplo de textura. Este valor se encuentra en el espacio de número de mipmap de la vista, en lugar del recurso subyacente.
+
+El hardware realiza ` max(fShaderMinLODClamp,fComputedLOD) ` en el mismo lugar en el cálculo de LOD en el que se produce la abrazadera MinLOD por recurso, que también es un [**Max**](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-max)().
+
+Si el resultado de aplicar la abrazadera de LOD por muestra y cualquier otra abrazadera de LOD definida en la muestra es un conjunto vacío, el resultado es el mismo que el resultado de acceso fuera del límite como la abrazadera minLOD por recurso: 0 para los componentes en el formato de superficie y los valores predeterminados para los componentes que faltan.
+
+La instrucción LOD (por ejemplo, [**tex2Dlod**](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)), que preasigna la abrazadera de minLOD por muestra que se describe aquí, devuelve un LOD con compresión y no fija. El LOD fijado devuelto por esta instrucción LOD refleja todas las abrazaderas, incluida la abrazadera por recurso, pero no una abrazadera por muestra. De todos modos, el sombreador controla y conoce la abrazadera por muestra, por lo que el autor del sombreador puede aplicar manualmente esa abrazadera al valor devuelto de la instrucción LOD si lo desea.
+
+## <a name="span-idmin_max_reduction_filteringspanspan-idmin_max_reduction_filteringspanspan-idmin_max_reduction_filteringspanminmax-reduction-filtering"></a><span id="Min_Max_reduction_filtering"></span><span id="min_max_reduction_filtering"></span><span id="MIN_MAX_REDUCTION_FILTERING"></span>Filtrado de reducción mín./máx.
+
+
+Las aplicaciones pueden optar por administrar sus propias estructuras de datos que les informan del aspecto de las asignaciones para un recurso de streaming. Un ejemplo sería una superficie que contiene un textura para contener información para cada mosaico en un recurso de streaming. Podría almacenar el primer LOD que está asignado en una ubicación de mosaico determinada. Al realizar un muestreo cuidadoso de esta estructura de datos de forma similar a como se pretende que se muestree el recurso de streaming, es posible que descubra cuál será el valor de LOD mínimo que se asigna por completo para una superficie de filtro de textura completa. Para facilitar este proceso, Direct3D 11,2 presenta un nuevo modo de muestra de uso general, filtrado mínimo y máximo.
+
+La utilidad de filtrado mínimo/máximo para el seguimiento de LOD puede ser útil para otros propósitos, como, quizás el filtrado de superficies de profundidad.
+
+El filtrado de reducción mínimo/máximo es un modo en los muestreadores que capturan el mismo conjunto de textura que un filtro de textura normal debería obtener. Pero en lugar de combinar los valores para generar una respuesta, devuelve el valor mínimo () o máximo () de textura recuperado, por componente (por ejemplo, el valor mínimo de todos los valores de R, independientemente del valor mínimo de todos los valores G, etc.).
+
+Las operaciones Min/Max siguen las reglas de precisión aritmética de Direct3D. No importa el orden de las comparaciones.
+
+Durante las operaciones de filtro que no son Min/Max, a veces el peso de un textura determinado termina siendo 0,0. Un ejemplo es una muestra lineal con coordenadas de textura que se encuentran directamente en un centro de textura; en ese caso, 3 otros textura (que pueden variar según el hardware) contribuyen al filtro, pero con 0 peso. En el caso de cualquiera de estos textura que sería 0 peso en un filtro distinto de Min/Max, si el filtro es Min/Max, estos textura todavía no contribuyen al resultado (y los pesos no afectan a la operación de filtro min/max).
+
+La compatibilidad con esta característica depende de la compatibilidad de [nivel 2](tier-2.md) con los recursos de streaming.
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Temas relacionados
 
 
-[Canalización de acceso a recursos de streaming](pipeline-access-to-streaming-resources.md)
+[Acceso de canalización a recursos de streaming](pipeline-access-to-streaming-resources.md)
 
  
 
  
-
-
-
-

@@ -1,20 +1,20 @@
 ---
 Description: Obtenga información sobre cómo anclar un icono secundario para que se inicie desde la aplicación de Windows.
-title: Anclar iconos secundarios al inicio
+title: Anclar iconos secundarios a Inicio
 label: Pin secondary tiles to Start
 template: detail.hbs
 ms.date: 05/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, iconos secundarios, PIN, anclaje, Inicio rápido, ejemplo de código, ejemplo, secondarytile
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c535e7e2abaf68212cb0a2f6daac8741b6548a5
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 7499a9a4040850595f616a5de0badb9efeab635f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971050"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172319"
 ---
-# <a name="pin-secondary-tiles-to-start"></a>Anclar iconos secundarios al inicio
+# <a name="pin-secondary-tiles-to-start"></a>Anclar iconos secundarios a Inicio
 
 
 Este tema le guía por los pasos necesarios para crear un icono secundario para su aplicación de Windows y anclarlo al menú Inicio.
@@ -181,6 +181,6 @@ Para obtener información sobre cómo mostrar contenido enriquecido en el icono 
 
 * [Información general sobre mosaicos secundarios](secondary-tiles.md)
 * [Guía de mosaicos secundarios](secondary-tiles-guidance.md)
-* [Activos en mosaico](app-assets.md)
+* [Activos en mosaico](../../style/app-icons-and-logos.md)
 * [Documentación de contenido de mosaico](create-adaptive-tiles.md)
 * [Enviar una notificación de icono local](sending-a-local-tile-notification.md)

@@ -1,44 +1,44 @@
 ---
 title: Fase del ensamblador de entrada (IA)
-description: La fase del ensamblador de entrada (IA) proporciona datos de primitivos y de adyacencia a la canalización, como triángulos, líneas y puntos, que incluyen los id. de semántica para reducir el procesamiento de primitivos que todavía no se procesaron con el fin de que los sombreadores sean más eficientes.
+description: La fase del ensamblador de entrada (IA) proporciona datos primitivos y de adyacen a la canalización, como triángulos, líneas y puntos, incluidos los identificadores semánticos para mejorar la eficacia de los sombreadores reduciendo el procesamiento a primitivos que aún no se han procesado.
 ms.assetid: AF1DC611-C872-47F1-BF1A-92C68C8903E6
 keywords:
 - Fase del ensamblador de entrada (IA)
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 70957cbce10da25943b3c6347ccbbc81aafb5739
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8b1ba0205a837383e1c646664c0550e055227412
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370768"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173069"
 ---
 # <a name="input-assembler-ia-stage"></a>Fase del ensamblador de entrada (IA)
 
 
-La fase del ensamblador de entrada (IA) proporciona datos de primitivos y de adyacencia a la canalización, como triángulos, líneas y puntos, que incluyen los id. de semántica para reducir el procesamiento de primitivos que todavía no se procesaron con el fin de que los sombreadores sean más eficientes.
+La fase del ensamblador de entrada (IA) proporciona datos primitivos y de adyacen a la canalización, como triángulos, líneas y puntos, incluidos los identificadores semánticos para mejorar la eficacia de los sombreadores reduciendo el procesamiento a primitivos que aún no se han procesado.
 
 ## <a name="span-idpurpose-and-usesspanspan-idpurpose-and-usesspanspan-idpurpose-and-usesspanpurpose-and-uses"></a><span id="Purpose-and-uses"></span><span id="purpose-and-uses"></span><span id="PURPOSE-AND-USES"></span>Propósito y usos
 
 
-La finalidad de la fase del ensamblador de entrada (IA) es leer datos de primitivos (puntos, líneas y triángulos) desde los búferes rellenados por el usuario, agrupar los datos en primitivos que usarán las otras fases de la canalización y adjuntar [valores generados por el sistema](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics) para ayudar a que los sombreadores sean más eficientes. Los valores generados por el sistema son cadenas de texto que también se denominan semántica. Se construyen las fases del sombreador programable desde un núcleo de sombreador común, que usa valores generados por el sistema (por ejemplo, un id. de primitivo, instancia o vértice), para que la fase del sombreador pueda reducir el procesamiento solo a los primitivos, las instancias o los vértices que todavía no se procesaron.
+El propósito de la fase del ensamblador de entrada (IA) es leer los datos primitivos (puntos, líneas y triángulos) de los búferes rellenados por el usuario y ensamblar los datos en primitivos que usarán las otras fases de canalización, y para adjuntar [valores generados](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics) por el sistema para ayudar a que los sombreadores sean más eficaces. Los valores generados por el sistema son cadenas de texto que también se denominan semánticas. Las fases del sombreador programable se construyen a partir de un núcleo de sombreador común, que usa valores generados por el sistema (como un identificador primitivo, un identificador de instancia o un identificador de vértice), de modo que la fase del sombreador puede reducir el procesamiento a solo los primitivos, las instancias o los vértices que aún no se han procesado.
 
-La fase de IA puede integrar vértices en varios [tipos primitivos](primitive-topologies.md) distintos (por ejemplo, listas de líneas, series de triángulos o primitivos con adyacencia). Los tipos de primitivos como una lista de triángulos con adyacencia y una lista de línea con adyacencia admiten la [fase de sombreador de geometría (GS)](geometry-shader-stage--gs-.md).
+La fase IA puede ensamblar vértices en varios [tipos primitivos](primitive-topologies.md) diferentes (como listas de líneas, tiras de triángulos o primitivas con adyacencias). Los tipos primitivos, como una lista de triángulos con adyacencias y una lista de líneas con adyacencias, admiten la [fase del sombreador de geometría (GS)](geometry-shader-stage--gs-.md).
 
-La información de adyacencia solo es visible para una aplicación en un sombreador de geometría. Si se invoca un sombreador de geometría con un triángulo con adyacencia, por ejemplo, los datos de entrada contendrían 3 vértices para cada triángulo y 3 vértices para datos de adyacencia por triángulo.
+La información de adyacencias solo es visible para una aplicación en un sombreador de geometría. Si se invocó un sombreador de geometría con un triángulo que incluye la adyacencia, por ejemplo, los datos de entrada contendrían 3 vértices para cada triángulo y 3 vértices para los datos de adyacencia por triángulo.
 
-Cuando se solicita la salida de datos de adyacencia a la fase de IA, los datos de entrada deben incluir datos de adyacencia. Es posible que debas proporcionar un vértice ficticio (formar un triángulo incorrecto) o, quizás, marcar uno de los atributos de vértice para comprobar si el vértice existe o no. También sería necesario que un sombreador de geometría lo detectara y lo controlara, aunque la selección de geometría incorrecta sucederá en la fase de rasterización.
+Cuando se solicita la fase IA para generar datos de adyacencias, los datos de entrada deben incluir datos de adyacencia. Esto puede requerir que se proporcione un vértice ficticio (formando un triángulo degenerado) o quizás mediante la marcación de uno de los atributos de vértice si el vértice existe o no. Esto también debe detectarse y administrarse mediante un sombreador de geometría, aunque la selección de geometría degenerada se producirá en la fase de rasterizador.
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>entrada
-
-
-La fase de IA lee datos de la memoria: datos de primitivos (puntos, líneas o triángulos), de los búferes rellenados por el usuario.
-
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Salida
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Entradas
 
 
-La fase de IA ensambla los datos en primitivos, adjunta valores generados por el sistema y los genera como primitivos que usará la [fase del sombreador de vértices (VS)](vertex-shader-stage--vs-.md) y, a continuación, otras fases de la canalización.
+La fase IA Lee los datos de la memoria: datos primitivos (puntos, líneas o triángulos), de búferes rellenos por el usuario.
+
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Genere
+
+
+La fase de IA ensambla los datos en primitivos y asocia los valores generados por el sistema, y genera como primitivas que usarán la [fase del sombreador de vértices (vs)](vertex-shader-stage--vs-.md) y, a continuación, otras fases de canalización.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>En esta sección
 
@@ -56,12 +56,12 @@ La fase de IA ensambla los datos en primitivos, adjunta valores generados por el
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="primitive-topologies.md">Topologías de primitivas</a></p></td>
-<td align="left"><p>Direct3D admite varias topologías de primitivos, que definen cómo interpreta y representa la canalización los vértices, como listas de puntos, listas de líneas y series de triángulos.</p></td>
+<td align="left"><p><a href="primitive-topologies.md">Topologías primitivas</a></p></td>
+<td align="left"><p>Direct3D admite varias topologías primitivas, que definen cómo se interpretan y representan los vértices mediante la canalización, como las listas de puntos, las listas de líneas y las franjas de triángulo.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="using-system-generated-values.md">Con los valores generados por el sistema</a></p></td>
-<td align="left"><p>La fase del ensamblador de entrada (IA) genera valores generados por el sistema (basándose en la <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics">semántica</a> de entrada proporcionada por el usuario) para admitir determinadas eficiencias en las operaciones del sombreador. Al adjuntar datos, como un id. de instancia (visible para la <a href="vertex-shader-stage--vs-.md">fase del sombreador de vértices (VS)</a>), un id. de vértice (visible para VS) o un id. de primitivo (visible para la <a href="geometry-shader-stage--gs-.md">fase del sombreador de geometría (GS)</a>/<a href="pixel-shader-stage--ps-.md">fase del sombreador de píxeles (PS)</a>), una fase del sombreador posterior puede ver estos valores del sistema para optimizar el procesamiento en esa fase.</p></td>
+<td align="left"><p><a href="using-system-generated-values.md">Uso de valores generados por el sistema</a></p></td>
+<td align="left"><p>Los valores generados por el sistema se generan mediante la fase del ensamblador de entrada (IA) (según la <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics">semántica</a>de entrada proporcionada por el usuario) para permitir ciertas eficiencias en las operaciones del sombreador. Al adjuntar datos, como un identificador de instancia (visible para la <a href="vertex-shader-stage--vs-.md">fase del sombreador de vértices (vs)</a>), un identificador de vértice (visible para vs) o un identificador primitivo (visible para la fase del sombreador de píxeles de la <a href="geometry-shader-stage--gs-.md">fase GS)</a>, / <a href="pixel-shader-stage--ps-.md">Pixel Shader (PS) stage</a>una etapa del sombreador posterior puede buscar estos valores del sistema para optimizar el procesamiento en esa fase.</p></td>
 </tr>
 </tbody>
 </table>
@@ -76,7 +76,3 @@ La fase de IA ensambla los datos en primitivos, adjunta valores generados por el
  
 
  
-
-
-
-

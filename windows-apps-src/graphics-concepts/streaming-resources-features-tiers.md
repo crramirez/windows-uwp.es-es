@@ -1,31 +1,31 @@
 ---
 title: Niveles de características de recursos de streaming
-description: Direct3D admite los recursos de streaming en tres niveles de funcionalidades.
+description: Obtenga acceso a artículos sobre los tres niveles de funcionalidades de características para los recursos de streaming de Direct3D, denominados previamente recursos en mosaico.
 ms.assetid: 6AE7EA72-3929-4BB4-8780-F0CF26192D87
 keywords:
 - Niveles de características de recursos de streaming
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c872d289c67161e414671d3d509401f0539a7675
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: ee27244c4d4c2797b71c9d5c8c2c5185a99596b5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57631450"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173059"
 ---
 # <a name="streaming-resources-features-tiers"></a>Niveles de características de recursos de streaming
 
 
-Direct3D admite los recursos de streaming en tres niveles de funcionalidades.
+Direct3D admite recursos de streaming en tres niveles de funcionalidad.
 
-El nivel 1 proporciona funcionalidades básicas para los recursos de streaming.
+El nivel 1 proporciona capacidades básicas para los recursos de streaming.
 
-El nivel 2 agrega funcionalidades a las del nivel 1, como garantizar mapas MIP de texturas sin empaquetar cuando el tamaño es al menos una forma de icono estándar; instrucciones del sombreador para la compresión de nivel de detalle (LOD) y para obtener el estado de la operación del sombreador; además, la lectura en iconos asignados NULL tratan el valor de muestra como cero.
+El nivel 2 agrega funcionalidades más allá del nivel 1, como garantizar el mipmap de textura no empaquetada cuando el tamaño es al menos una forma de mosaico estándar. instrucciones del sombreador para la compresión de nivel de detalle (LOD) y para obtener el estado de la operación del sombreador; Además, la lectura de los mosaicos asignados con valores NULL trata el valor muestreado como cero.
 
-El nivel 3 agrega capacidades de Texture3D, además de las del nivel 2.
+El nivel 3 agrega funcionalidades de Texture3D, más allá del nivel 2.
 
-Existen funciones de consulta disponibles en las versiones de Direct3D para validar la compatibilidad del hardware y los controladores para los recursos de streaming y en qué nivel.
+Las funciones de consulta están disponibles en las versiones de Direct3D, para validar la compatibilidad de hardware y controladores con los recursos de streaming y en qué nivel de nivel.
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>En esta sección
 
@@ -44,15 +44,15 @@ Existen funciones de consulta disponibles en las versiones de Direct3D para vali
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="tier-1.md">Nivel 1</a></p></td>
-<td align="left"><p>Esta sección describe la compatibilidad del nivel 1.</p></td>
+<td align="left"><p>En esta sección se describe la compatibilidad de nivel 1.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="tier-2.md">Nivel 2</a></p></td>
-<td align="left"><p>La compatibilidad de nivel 2 para los recursos de streaming agrega funcionalidades a las del nivel 1, como garantizar mapas MIP de texturas sin empaquetar cuando el tamaño es al menos una forma de icono estándar; instrucciones del sombreador para la compresión de nivel de detalle (LOD) y para obtener el estado de la operación del sombreador; además, la lectura en iconos asignados NULL tratan el valor de muestra como cero.</p></td>
+<td align="left"><p>La compatibilidad de nivel 2 con recursos de streaming agrega funcionalidades más allá del nivel 1, como garantizar el mipmap de textura no empaquetada cuando el tamaño es al menos una forma de mosaico estándar. instrucciones del sombreador para la compresión de nivel de detalle (LOD) y para obtener el estado de la operación del sombreador; Además, la lectura de los mosaicos asignados con valores NULL trata el valor muestreado como cero.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="tier-3.md">Nivel 3</a></p></td>
-<td align="left"><p>El nivel 3 agrega compatibilidad para Texture3D para los recursos de streaming, además de las funcionalidades del <a href="tier-2.md">nivel 2</a>.</p></td>
+<td align="left"><p>El nivel 3 agrega compatibilidad con Texture3D para los recursos de streaming, además de las capacidades del <a href="tier-2.md">nivel 2</a> .</p></td>
 </tr>
 </tbody>
 </table>

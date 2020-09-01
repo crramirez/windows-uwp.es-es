@@ -6,12 +6,12 @@ ms.date: 08/09/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 32c3460b1af226adfa969d02a695f1d6436390be
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: cfd507be6ca09818ec07d12a83c2a272514b08f6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970550"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172399"
 ---
 # <a name="pointer-click-animations"></a>Animaciones para clic de puntero
 
@@ -20,7 +20,7 @@ ms.locfileid: "82970550"
 Usa las animaciones de puntero para proporcionar comentarios visuales a los usuarios cuando presionen un elemento. La animación de puntero abajo reduce e inclina ligeramente el elemento presionado y se reproduce cuando se pulsa un elemento por primera vez. La animación de puntero arriba, que restablece el elemento a su posición original, se reproduce cuando el usuario suelta el puntero.
 
 
-> **API importantes**: [**clase PointerUpThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation), [**clase PointerDownThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation)
+> **API importantes**: [**clase PointerUpThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation), [**clase PointerDownThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation)
 
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
@@ -29,16 +29,12 @@ Usa las animaciones de puntero para proporcionar comentarios visuales a los usua
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Introducción a las animaciones](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
-* [Animación de los clics del puntero](https://docs.microsoft.com/previous-versions/windows/apps/jj649432(v=win.10))
-* [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
-* [**Clase PointerUpThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation)
-* [**Clase PointerDownThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation)
+* [Introducción a las animaciones](./xaml-animation.md)
+* [Animación de los clics del puntero](/previous-versions/windows/apps/jj649432(v=win.10))
+* [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](/previous-versions/windows/apps/hh452703(v=win.10))
+* [**Clase PointerUpThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation)
+* [**Clase PointerDownThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation)
 
  
 
  
-
-
-
-

@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: Windows 10, UWP, API de WinRT, WNS
 localizationpriority: medium
-ms.openlocfilehash: 382dca376e2393d83c2803043b61db76226b3995
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 4bca7e4159c0a4950c95d5d5ef2f34362175a8a7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970870"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173309"
 ---
 # <a name="alternate-push-channels-using-vapid-in-windows"></a>Canales de inserciones alternativos mediante VAPID en Windows 
 A partir de la actualización de Fall Creators, las aplicaciones de Windows pueden usar la autenticación VAPID para enviar notificaciones de envío.  
@@ -111,7 +111,5 @@ Si desea utilizar otra forma de cifrado, la clave es usar el formato sin procesa
 ## <a name="related-topics"></a>Temas relacionados
 - [Tipos de canales de notificaciones](channel-types.md)
 - [Servicios de notificaciones de inserción de Windows (WNS)](windows-push-notification-services--wns--overview.md)
-- [Clase PushNotificationChannel](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannel)
-- [Clase PushNotificationChannelManager](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager)
-
-
+- [Clase PushNotificationChannel](/uwp/api/windows.networking.pushnotifications.pushnotificationchannel)
+- [Clase PushNotificationChannelManager](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager)

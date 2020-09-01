@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, interfaz de usuario, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: cbe67a50cd51f17aa628ff2e02955fd90781392f
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: eca248887985fc6d33ca6d6b552a0b61a98ce428
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942825"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173109"
 ---
 # <a name="add-a-user-interface"></a>Agregar una interfaz de usuario
 
@@ -21,7 +21,7 @@ ms.locfileid: "88942825"
 Ahora que el juego tiene sus objetos visuales 3D, es el momento de centrarse en agregar algunos elementos 2D para que el juego pueda proporcionar comentarios sobre el estado del juego al jugador. Esto puede realizarse mediante la adición de opciones de menú simples y componentes de visualización de inicio en la parte superior de la salida de la canalización de gráficos 3D.
 
 >[!Note]
->Si no ha descargado el código de juego más reciente para este ejemplo, vaya a [juego de ejemplo de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de características de UWP. Para obtener instrucciones sobre cómo descargar el ejemplo, consulte [obtener los ejemplos de UWP en github](/windows/uwp/get-started/get-uwp-app-samples).
+>Si no ha descargado el código de juego más reciente para este ejemplo, vaya a [juego de ejemplo de Direct3D](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Este ejemplo forma parte de una gran colección de ejemplos de características de UWP. Para obtener instrucciones sobre cómo descargar el ejemplo, consulte [obtener los ejemplos de UWP en github](../get-started/get-app-samples.md).
 
 ## <a name="objective"></a>Objetivo
 
@@ -258,7 +258,7 @@ La parte de **acción** de la superposición se actualiza mediante el método [*
 - "Pulse para reproducirlo de nuevo..."
 - "Cargando nivel, espere..."
 - "Pulse para continuar..."
-- Ninguno
+- None
 
 > [!NOTE]
 > Ambos métodos se tratarán con más detalle en la sección [representación del estado del juego](#representing-game-state) .
@@ -342,7 +342,7 @@ Estado del juego | Método de conjunto de estado | Campos de estado
 Carga | [GameInfoOverlay::SetGameLoading](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L254-L306) |**Título**</br>Carga de recursos </br>**Cuerpo**</br> Imprime de forma incremental "." para implicar la carga de la actividad.
 Estadísticas de inicio y puntuación iniciales | [GameInfoOverlay::SetGameStats](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L310-L354) |**Título**</br>Puntuación alta</br> **Cuerpo**</br> Niveles completados # </br>Total de puntos #</br>Total de capturas #
 Inicio de nivel | [GameInfoOverlay::SetLevelStart](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L413-L471) |**Título**</br>Dosis #</br>**Cuerpo**</br>Descripción del objetivo de nivel.
-Juego en pausa | [GameInfoOverlay::SetPause](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L475-L502) |**Título**</br>Juego en pausa</br>**Cuerpo**</br>Ninguno
+Juego en pausa | [GameInfoOverlay::SetPause](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L475-L502) |**Título**</br>Juego en pausa</br>**Cuerpo**</br>None
 Juego terminado | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**Título**</br>Fin</br> **Cuerpo**</br> Niveles completados # </br>Total de puntos #</br>Total de capturas #</br>Niveles completados #</br>Puntuación alta #
 Juego ganado | [GameInfoOverlay::SetGameOver](https://github.com/Microsoft/Windows-universal-samples/blob/5f0d0912214afc1c2a7c7470203933ddb46f7c89/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp#L358-L409) |**Título**</br>¡ GANÓ!</br> **Cuerpo**</br> Niveles completados # </br>Total de puntos #</br>Total de capturas #</br>Niveles completados #</br>Puntuación alta #
 

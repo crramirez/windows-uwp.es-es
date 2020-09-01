@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: Windows 10, puente de escritorio, iconos secundarios, PIN, anclaje, Inicio rápido, ejemplo de código, ejemplo, secondarytile, aplicación de escritorio, Win32, WinForms, WPF
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ddcd96eadbb6d2edbc3a72fa58ff3cc8931a09b
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 111d66e69ddb9cff56f36a26bd8094429fe808ef
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730364"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172379"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Anclar iconos secundarios desde la aplicación de escritorio
 
@@ -29,12 +29,12 @@ Agregar un icono secundario desde la aplicación de WPF o WinForms es muy simila
 
 ## <a name="package-your-app-with-desktop-bridge"></a>Empaquetar la aplicación con el puente de escritorio
 
-Si no ha empaquetado la aplicación con el puente de escritorio, [primero debe hacerlo](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) antes de poder usar las api de Windows Runtime.
+Si no ha empaquetado la aplicación con el puente de escritorio, [primero debe hacerlo](/windows/msix/desktop/source-code-overview) antes de poder usar las api de Windows Runtime.
 
 
 ## <a name="enable-access-to-iinitializewithwindow-interface"></a>Habilitar el acceso a la interfaz IInitializeWithWindow
 
-Si la aplicación está escrita en un lenguaje administrado como C# o Visual Basic, declare la interfaz IInitializeWithWindow en el código de la aplicación con el atributo [ComImport](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute) y GUID, tal como se muestra en el siguiente ejemplo de C#. En este ejemplo se da por hecho que el archivo de código tiene una instrucción using para el espacio de nombres System.Runtime.InteropServices.
+Si la aplicación está escrita en un lenguaje administrado como C# o Visual Basic, declare la interfaz IInitializeWithWindow en el código de la aplicación con el atributo [ComImport](/dotnet/api/system.runtime.interopservices.comimportattribute) y GUID, tal como se muestra en el siguiente ejemplo de C#. En este ejemplo se da por hecho que el archivo de código tiene una instrucción using para el espacio de nombres System.Runtime.InteropServices.
 
 ```csharp
 [ComImport]
@@ -66,7 +66,7 @@ SecondaryTile tile = new SecondaryTile(
 
 ## <a name="assign-the-window-handle"></a>Asignar el identificador de ventana
 
-Este es el paso clave para las aplicaciones de escritorio. Convierta el objeto en un objeto [IInitializeWithWindow](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow) . A continuación, llame al método [IInitializeWithWindow. Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) y pase el identificador de la ventana que desee que sea el propietario del cuadro de diálogo modal. En el siguiente ejemplo de C# se muestra cómo pasar el identificador de la ventana principal de la aplicación al método.
+Este es el paso clave para las aplicaciones de escritorio. Convierta el objeto en un objeto [IInitializeWithWindow](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow) . A continuación, llame al método [IInitializeWithWindow.Initialize](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) y pase el identificador de la ventana que desee que sea el propietario del cuadro de diálogo modal. En el siguiente ejemplo de C# se muestra cómo pasar el identificador de la ventana principal de la aplicación al método.
 
 ```csharp
 // Assign the window handle

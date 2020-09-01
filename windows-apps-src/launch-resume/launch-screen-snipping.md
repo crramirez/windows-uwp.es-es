@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP, Uri, recorte, boceto
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d9469dd6efd3598ab7abd9791a976385f4dfce49
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 2d7471f414922eb1e4923079082ee6abfd8418bd
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684664"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167819"
 ---
 # <a name="launch-screen-snipping"></a>Iniciar el recorte de pantalla
 
@@ -23,11 +23,11 @@ El URI **MS-screenclip:** permite que la aplicación se abra automáticamente e 
 
 **MS-screenclip:** toma los siguientes parámetros:
 
-| Parámetro | Escribe | Necesario | Descripción |
+| Parámetro | Tipo | Obligatorio | Descripción |
 | --- | --- | --- | --- |
-| origen | cadena | no | Una cadena de forma libre para indicar el origen que inició el URI. |
-| delayInSeconds | entero | no | Un valor entero, de 1 a 30. Especifica el retraso, en segundos completos, entre la llamada del URI y el momento en que se inician los recortes. |
-| callbackformat | cadena | no | Este parámetro no está disponible. |
+| source | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
+| delayInSeconds | int | No | Un valor entero, de 1 a 30. Especifica el retraso, en segundos completos, entre la llamada del URI y el momento en que se inician los recortes. |
+| callbackformat | string | no | Este parámetro no está disponible. |
 
 ## <a name="launching-the-snip--sketch-app"></a>Inicio del recorte & aplicación de boceto
 
@@ -35,14 +35,14 @@ El URI **MS-screensketch:** permite iniciar mediante programación el recorte & 
 
 **MS-screensketch:** toma los siguientes parámetros:
 
-| Parámetro | Escribe | Necesario | Descripción |
+| Parámetro | Tipo | Obligatorio | Descripción |
 | --- | --- | --- | --- |
-| sharedAccessToken | cadena | no | Token que identifica el archivo que se va a abrir en el recorte & aplicación de boceto. Recuperado de [SharedStorageAccessManager. AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Si se omite este parámetro, la aplicación se iniciará sin abrir un archivo. |
-| secondarySharedAccessToken | cadena | no | Una cadena que identifica un archivo JSON con metadatos sobre el recorte. Los metadatos pueden incluir un campo **clipPoints** con una matriz de coordenadas x, y y/o un [userActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity). |
-| origen | cadena | no | Una cadena de forma libre para indicar el origen que inició el URI. |
-| isTemporary | bool | no | Si se establece en true, el boceto de pantalla intentará eliminar el archivo después de abrirlo. |
+| sharedAccessToken | string | no | Token que identifica el archivo que se va a abrir en el recorte & aplicación de boceto. Recuperado de [SharedStorageAccessManager. AddFile](/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). Si se omite este parámetro, la aplicación se iniciará sin abrir un archivo. |
+| secondarySharedAccessToken | string | no | Una cadena que identifica un archivo JSON con metadatos sobre el recorte. Los metadatos pueden incluir un campo **clipPoints** con una matriz de coordenadas x, y y/o un [userActivity](/uwp/api/windows.applicationmodel.useractivities.useractivity). |
+| source | string | no | Una cadena de forma libre para indicar el origen que inició el URI. |
+| isTemporary | bool | No | Si se establece en true, el boceto de pantalla intentará eliminar el archivo después de abrirlo. |
 
-En el ejemplo siguiente se llama al método [LaunchUriAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) para enviar una imagen para recortar & boceto de la aplicación del usuario.
+En el ejemplo siguiente se llama al método [LaunchUriAsync](/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) para enviar una imagen para recortar & boceto de la aplicación del usuario.
 
 ```csharp
 

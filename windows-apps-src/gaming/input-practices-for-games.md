@@ -6,12 +6,12 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, entrada
 ms.localizationpriority: medium
-ms.openlocfilehash: eb543e86221f8f1a37565c2e6e6bf1fe4a8d3635
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: d8ea74f7053cfdd0aeb6ef3dbe032afdb089f420
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054495"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173119"
 ---
 # <a name="input-practices-for-games"></a>Procedimientos de entrada para juegos
 
@@ -25,23 +25,23 @@ Al leer este tema, aprenderá lo siguiente:
 
 ## <a name="choosing-an-input-device-class"></a>Elección de una clase de dispositivo de entrada
 
-Hay muchos tipos diferentes de API de entrada disponibles, como [ArcadeStick](https://docs.microsoft.com/uwp/api/windows.gaming.input.arcadestick), [FlightStick](https://docs.microsoft.com/uwp/api/windows.gaming.input.flightstick)y [controlador de juegos](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad). ¿Cómo se decide qué API usar para el juego?
+Hay muchos tipos diferentes de API de entrada disponibles, como [ArcadeStick](/uwp/api/windows.gaming.input.arcadestick), [FlightStick](/uwp/api/windows.gaming.input.flightstick)y [controlador de juegos](/uwp/api/windows.gaming.input.gamepad). ¿Cómo se decide qué API usar para el juego?
 
 Debe elegir cualquier API que le proporcione la entrada más adecuada para el juego. Por ejemplo, si va a crear un juego de plataforma 2D, probablemente solo puede usar la clase de **controlador para juegos** y no molestarse en la funcionalidad adicional disponible a través de otras clases. Esto restringe el juego para admitir solo los controladores de juegos y proporcionar una interfaz coherente que funcionará en muchos controladores de interfaz de juegos diferentes sin necesidad de código adicional.
 
-Por otro lado, en el caso de simulaciones complejas de vuelos y carreras, es posible que desee enumerar todos los objetos de [RawGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.rawgamecontroller) como línea base para asegurarse de que admiten cualquier dispositivo de nicho que puedan tener los jugadores, incluidos los dispositivos como pedales o aceleradores independientes que siguen siendo utilizados por un solo jugador. 
+Por otro lado, en el caso de simulaciones complejas de vuelos y carreras, es posible que desee enumerar todos los objetos de [RawGameController](/uwp/api/windows.gaming.input.rawgamecontroller) como línea base para asegurarse de que admiten cualquier dispositivo de nicho que puedan tener los jugadores, incluidos los dispositivos como pedales o aceleradores independientes que siguen siendo utilizados por un solo jugador. 
 
-Desde allí, puede usar el método **FromGameController** de una clase de entrada, como [controlador de juegos. FromGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad.fromgamecontroller), para ver si cada dispositivo tiene una vista más seleccionada. Por ejemplo, si el dispositivo es también un **controlador de juegos**, puede que desee ajustar la interfaz de usuario de asignación de botones para reflejarlo y proporcionar algunas asignaciones de botones predeterminados razonables para elegir. (Esto contrasta con la exigencia de que el reproductor configure manualmente las entradas del controlador de juegos si solo usa **RawGameController**). 
+Desde allí, puede usar el método **FromGameController** de una clase de entrada, como [controlador de juegos. FromGameController](/uwp/api/windows.gaming.input.gamepad.fromgamecontroller), para ver si cada dispositivo tiene una vista más seleccionada. Por ejemplo, si el dispositivo es también un **controlador de juegos**, puede que desee ajustar la interfaz de usuario de asignación de botones para reflejarlo y proporcionar algunas asignaciones de botones predeterminados razonables para elegir. (Esto contrasta con la exigencia de que el reproductor configure manualmente las entradas del controlador de juegos si solo usa **RawGameController**). 
 
-Como alternativa, puede consultar el ID. de proveedor (VID) y el ID. de producto (PID) de un **RawGameController** (con [HardwareVendorId](https://docs.microsoft.com/uwp/api/windows.gaming.input.rawgamecontroller.HardwareVendorId) y [HardwareProductId](https://docs.microsoft.com/uwp/api/windows.gaming.input.rawgamecontroller.HardwareProductId), respectivamente) y proporcionar las asignaciones de botones sugeridos para los dispositivos populares, a la vez que sigue siendo compatible con dispositivos desconocidos que salen en el futuro a través de asignaciones manuales por parte del reproductor.
+Como alternativa, puede consultar el ID. de proveedor (VID) y el ID. de producto (PID) de un **RawGameController** (con [HardwareVendorId](/uwp/api/windows.gaming.input.rawgamecontroller.HardwareVendorId) y [HardwareProductId](/uwp/api/windows.gaming.input.rawgamecontroller.HardwareProductId), respectivamente) y proporcionar las asignaciones de botones sugeridos para los dispositivos populares, a la vez que sigue siendo compatible con dispositivos desconocidos que salen en el futuro a través de asignaciones manuales por parte del reproductor.
 
 ## <a name="keeping-track-of-connected-controllers"></a>Seguimiento de los controladores conectados
 
-Aunque cada tipo de controlador incluye una lista de controladores conectados (por ejemplo, [controlador de juegos.](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad.Gamepads)controladores de juegos), es una buena idea mantener su propia lista de controladores. Consulte [la lista](gamepad-and-vibration.md#the-gamepads-list) de controladores de juegos para obtener más información (cada tipo de controlador tiene una sección con el mismo nombre en su propio tema).
+Aunque cada tipo de controlador incluye una lista de controladores conectados (por ejemplo, [controlador de juegos.](/uwp/api/windows.gaming.input.gamepad.Gamepads)controladores de juegos), es una buena idea mantener su propia lista de controladores. Consulte [la lista](gamepad-and-vibration.md#the-gamepads-list) de controladores de juegos para obtener más información (cada tipo de controlador tiene una sección con el mismo nombre en su propio tema).
 
 Sin embargo, ¿qué ocurre cuando el reproductor desconecta el controlador o se conecta a uno nuevo? Debe controlar estos eventos y actualizar la lista en consecuencia. Consulte [Agregar y quitar controladores de juegos](gamepad-and-vibration.md#adding-and-removing-gamepads) para obtener más información (de nuevo, cada tipo de controlador tiene una sección con el mismo nombre en su propio tema).
 
-Dado que los eventos agregados y quitados se generan de forma asincrónica, puede obtener resultados incorrectos cuando se trabaja con la lista de controladores. Por lo tanto, siempre que tenga acceso a la lista de controladores, debe colocar un bloqueo en torno a él para que solo un subproceso pueda acceder a él a la vez. Esto puede hacerse con el [Runtime de simultaneidad](https://docs.microsoft.com/cpp/parallel/concrt/concurrency-runtime), en concreto la [clase critical_section](https://docs.microsoft.com/cpp/parallel/concrt/reference/critical-section-class), en ** &lt; PPL. h &gt; **.
+Dado que los eventos agregados y quitados se generan de forma asincrónica, puede obtener resultados incorrectos cuando se trabaja con la lista de controladores. Por lo tanto, siempre que tenga acceso a la lista de controladores, debe colocar un bloqueo en torno a él para que solo un subproceso pueda acceder a él a la vez. Esto puede hacerse con el [Runtime de simultaneidad](/cpp/parallel/concrt/concurrency-runtime), en concreto la [clase critical_section](/cpp/parallel/concrt/reference/critical-section-class), en ** &lt; PPL. h &gt; **.
 
 Otro aspecto que hay que tener en cuenta es que la lista de controladores conectados estará inicialmente vacía y tarda dos o dos segundos en rellenarse. Por lo tanto, si solo asigna el controlador de juegos actual en el método de inicio, será **null**.
 
@@ -166,11 +166,11 @@ void OnGamepadRemoved(Platform::Object^ sender, Gamepad^ args)
 
 ## <a name="tracking-users-and-their-devices"></a>Seguimiento de usuarios y sus dispositivos
 
-Todos los dispositivos de entrada se asocian con un [usuario](https://docs.microsoft.com/uwp/api/windows.system.user) para que su identidad pueda vincularse a su juego, logros, cambios de configuración y otras actividades. Los usuarios pueden iniciar sesión o cerrar sesión en y es habitual que un usuario diferente inicie sesión en un dispositivo de entrada que permanezca conectado al sistema después de que el usuario anterior haya cerrado la sesión. Cuando un usuario inicia o cierra sesión, se genera el evento [IGameController. UserChanged](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller.UserChanged) . Puedes registrar un controlador de eventos para este evento a fin de realizar un seguimiento de los jugadores y de los dispositivos que usan.
+Todos los dispositivos de entrada se asocian con un [usuario](/uwp/api/windows.system.user) para que su identidad pueda vincularse a su juego, logros, cambios de configuración y otras actividades. Los usuarios pueden iniciar sesión o cerrar sesión en y es habitual que un usuario diferente inicie sesión en un dispositivo de entrada que permanezca conectado al sistema después de que el usuario anterior haya cerrado la sesión. Cuando un usuario inicia o cierra sesión, se genera el evento [IGameController. UserChanged](/uwp/api/windows.gaming.input.igamecontroller.UserChanged) . Puedes registrar un controlador de eventos para este evento a fin de realizar un seguimiento de los jugadores y de los dispositivos que usan.
 
 La identidad del usuario también es la manera en que un dispositivo de entrada está asociado a su [controlador de navegación de IU](ui-navigation-controller.md)correspondiente.
 
-Por estos motivos, se debe realizar un seguimiento de la entrada del reproductor y correlacionarla con la propiedad de [usuario](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller.User) de la clase Device (heredada de la interfaz [IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller) ).
+Por estos motivos, se debe realizar un seguimiento de la entrada del reproductor y correlacionarla con la propiedad de [usuario](/uwp/api/windows.gaming.input.igamecontroller.User) de la clase Device (heredada de la interfaz [IGameController](/uwp/api/windows.gaming.input.igamecontroller) ).
 
 En el ejemplo [UserGamepadPairingUWP](/samples/microsoft/xbox-atg-samples/usergamepadpairinguwp/) se muestra cómo se puede realizar un seguimiento de los usuarios y los dispositivos que están usando.
 
@@ -230,7 +230,7 @@ Estas dos funciones primero derivan el estado booleano de la selección del bot�
 
 ## <a name="detecting-complex-button-arrangements"></a>Detección de disposiciones de botones complejas
 
-Cada botón de un dispositivo de entrada proporciona una lectura digital que indica si está presionado (inactivo) o liberado (arriba). Por motivos de eficacia, las lecturas de los botones no se representan como valores booleanos individuales; en su lugar, se empaquetan todas en campos de bits que se representan mediante enumeraciones específicas de dispositivo como [GamepadButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons). Para leer botones específicos, se usa el enmascaramiento bit a bit para aislar los valores que te interesan. Se presiona un botón (abajo) cuando se establece su bit correspondiente; de lo contrario, se libera (up).
+Cada botón de un dispositivo de entrada proporciona una lectura digital que indica si está presionado (inactivo) o liberado (arriba). Por motivos de eficacia, las lecturas de los botones no se representan como valores booleanos individuales; en su lugar, se empaquetan todas en campos de bits que se representan mediante enumeraciones específicas de dispositivo como [GamepadButtons](/uwp/api/windows.gaming.input.gamepadbuttons). Para leer botones específicos, se usa el enmascaramiento bit a bit para aislar los valores que te interesan. Se presiona un botón (abajo) cuando se establece su bit correspondiente; de lo contrario, se libera (up).
 
 Recordar cómo se determinan los botones individuales para que se presionen o se liberen; Aquí se muestran los controladores de juegos, pero los principios son los mismos para el Stick Arcade, la rueda de carreras y los otros tipos de dispositivos de entrada.
 
@@ -297,13 +297,13 @@ Esta fórmula puede aplicarse para probar cualquier número de botones en cualqu
 
 ## <a name="get-the-state-of-the-battery"></a>Obtención del estado de la batería
 
-Para cualquier dispositivo de juego que implementa la interfaz [IGameControllerBatteryInfo](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo) , puede llamar a [TryGetBatteryReport](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo.TryGetBatteryReport) en la instancia del controlador para obtener un objeto [BatteryReport](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport) que proporcione información sobre la batería en el controlador. Puede obtener propiedades como la velocidad a la que se carga la batería ([ChargeRateInMilliwatts](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.ChargeRateInMilliwatts)), la capacidad de energía estimada de una nueva batería ([DesignCapacityInMilliwattHours](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.DesignCapacityInMilliwattHours)) y la capacidad energética totalmente cargada de la batería actual ([FullChargeCapacityInMilliwattHours](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.FullChargeCapacityInMilliwattHours)).
+Para cualquier dispositivo de juego que implementa la interfaz [IGameControllerBatteryInfo](/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo) , puede llamar a [TryGetBatteryReport](/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo.TryGetBatteryReport) en la instancia del controlador para obtener un objeto [BatteryReport](/uwp/api/windows.devices.power.batteryreport) que proporcione información sobre la batería en el controlador. Puede obtener propiedades como la velocidad a la que se carga la batería ([ChargeRateInMilliwatts](/uwp/api/windows.devices.power.batteryreport.ChargeRateInMilliwatts)), la capacidad de energía estimada de una nueva batería ([DesignCapacityInMilliwattHours](/uwp/api/windows.devices.power.batteryreport.DesignCapacityInMilliwattHours)) y la capacidad energética totalmente cargada de la batería actual ([FullChargeCapacityInMilliwattHours](/uwp/api/windows.devices.power.batteryreport.FullChargeCapacityInMilliwattHours)).
 
 En el caso de los dispositivos de juego que admiten informes de batería detallados, puede obtener este y más información acerca de la batería, tal y como se detalla en [obtener información](../devices-sensors/get-battery-info.md)de la batería. Sin embargo, la mayoría de los controladores de juegos no admiten ese nivel de informes de batería y, en su lugar, usan Hardware de bajo costo. En el caso de estos controladores, tendrá que tener en cuenta las consideraciones siguientes:
 
 * **ChargeRateInMilliwatts** y **DesignCapacityInMilliwattHours** siempre serán **null**.
 
-* Puede obtener el porcentaje de la batería mediante el cálculo de [RemainingCapacityInMilliwattHours](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.RemainingCapacityInMilliwattHours)  /  **FullChargeCapacityInMilliwattHours**. Debe omitir los valores de estas propiedades y solo tratar el porcentaje calculado.
+* Puede obtener el porcentaje de la batería mediante el cálculo de [RemainingCapacityInMilliwattHours](/uwp/api/windows.devices.power.batteryreport.RemainingCapacityInMilliwattHours)  /  **FullChargeCapacityInMilliwattHours**. Debe omitir los valores de estas propiedades y solo tratar el porcentaje calculado.
 
 * El porcentaje de la viñeta anterior siempre será uno de los siguientes:
 
@@ -314,9 +314,9 @@ En el caso de los dispositivos de juego que admiten informes de batería detalla
 
 Si el código realiza alguna acción (como dibujar la interfaz de usuario) en función del porcentaje de duración de la batería restante, asegúrese de que se ajusta a los valores anteriores. Por ejemplo, si desea advertir al jugador de que la batería del controlador es baja, hágalo cuando llegue al 10%.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-* [Windows.SysTEM. Clase de usuario](https://docs.microsoft.com/uwp/api/windows.system.user)
-* [Interfaz Windows. Gaming. Input. IGameController](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
-* [Enumeración Windows. Gaming. Input. GamepadButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons)
+* [Windows.SysTEM. Clase de usuario](/uwp/api/windows.system.user)
+* [Interfaz Windows. Gaming. Input. IGameController](/uwp/api/windows.gaming.input.igamecontroller)
+* [Enumeración Windows. Gaming. Input. GamepadButtons](/uwp/api/windows.gaming.input.gamepadbuttons)
 * [Ejemplo de UserGamepadPairingUWP](/samples/microsoft/xbox-atg-samples/usergamepadpairinguwp/)

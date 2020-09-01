@@ -1,44 +1,44 @@
 ---
 title: Agregar compatibilidad con Mis allegados a una aplicación
-description: Explica cómo agregar compatibilidad con Mis allegados a una aplicación y cómo anclar y Desanclar contactos
+description: Explica cómo agregar compatibilidad con mis personas a una aplicación y cómo anclar y desanclar contactos.
 ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e58334dafa35004080b7ed109fa90e253399040
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 2eea2d228ddf5ad6dfaef227bfaeb0bafb071490
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683483"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170499"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>Agregar compatibilidad con Mis allegados a una aplicación
 
 > [!Note]
 > A partir de la actualización de Windows 10 de mayo de 2019 (versión 1903), las instalaciones nuevas de Windows 10 ya no mostrarán "personas en la barra de tareas" de forma predeterminada. Para habilitar la característica, los clientes pueden hacer clic con el botón derecho en la barra de tareas y presionar "Mostrar personas en la barra de tareas". No se recomienda que los desarrolladores agreguen soporte técnico a sus aplicaciones y visite el blog para [desarrolladores de Windows](https://blogs.windows.com/windowsdeveloper/) para obtener más información sobre la optimización de aplicaciones para Windows 10.
 
-La función Mis allegados permite a los usuarios a anclar contactos desde una aplicación directamente a la barra de tareas, creando un nuevo objeto de contacto con el que pueden interactuar de varias maneras. Este artículo muestra cómo se puede agregar compatibilidad para esta función, permitiendo a los usuarios anclar contactos directamente desde tu aplicación. Cuando se anclan contactos se dispone de nuevos tipos de interacción, como [Compartir con Mis allegados](my-people-sharing.md) y [notificaciones](my-people-notifications.md).
+La característica mis personas permite a los usuarios anclar contactos de una aplicación directamente a su barra de tareas, lo que crea un nuevo objeto de contacto con el que pueden interactuar de varias maneras. En este artículo se muestra cómo puede Agregar compatibilidad con esta característica, lo que permite a los usuarios anclar contactos directamente desde su aplicación. Cuando se anclan los contactos, se ponen a su disposición nuevos tipos de interacción con el usuario, como [el uso compartido](my-people-sharing.md) y las [notificaciones](my-people-notifications.md)de mis personas.
 
-![Chat Mis allegados](images/my-people-chat.png)
+![Chat mis personas](images/my-people-chat.png)
 
 ## <a name="requirements"></a>Requisitos
 
-+ Windows 10 y Microsoft Visual Studio 2019. Para obtener detalles sobre la instalación, consulta [Prepararse para Visual Studio](https://docs.microsoft.com/windows/uwp/get-started/get-set-up).
-+ Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para comenzar con C#, consulta [Crear una aplicación "Hello, world"](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++ Windows 10 y Microsoft Visual Studio 2019. Para obtener información detallada sobre la instalación, vea [configurar con Visual Studio](../get-started/get-set-up.md).
++ Conocimientos básicos de C# o algún lenguaje similar de programación orientado a objetos. Para empezar a trabajar con C#, vea [crear una aplicación "Hello, World"](../get-started/create-a-hello-world-app-xaml-universal.md).
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
-Hay tres cosas que debes hacer para habilitar la aplicación para usar la función Mis allegados:
+Hay tres cosas que debe hacer para permitir que la aplicación use la característica mis personas:
 
-1. [Declare la compatibilidad con el contrato de activación shareTarget en el manifiesto de aplicación.](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [Anote los contactos que los usuarios pueden compartir para usar la aplicación.](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
-3.  Admitir varias instancias de tu aplicación en ejecución al mismo tiempo. Los usuarios deben poder interactuar con una versión completa de la aplicación mientras la usan en un panel de contactos.  Pueden incluso usarla en varios paneles de contactos a la vez.  Para admitir esto, la aplicación debe poder ejecutar varias vistas al mismo tiempo. Para obtener información sobre cómo hacerlo, consulta el artículo ["Mostrar varias vistas en una aplicación"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views).
+1. [Declare la compatibilidad con el contrato de activación shareTarget en el manifiesto de aplicación.](./my-people-sharing.md#declaring-support-for-the-share-contract)
+2. [Anote los contactos que los usuarios pueden compartir para usar la aplicación.](./my-people-sharing.md#annotating-contacts)
+3.  Compatibilidad con varias instancias de la aplicación que se ejecutan al mismo tiempo. Los usuarios deben poder interactuar con una versión completa de la aplicación mientras la usan en un panel de contactos.  Incluso pueden usarlo en varios paneles de contacto a la vez.  Para admitir esto, la aplicación debe ser capaz de ejecutar varias vistas simultáneamente. Para obtener información sobre cómo hacerlo, vea el artículo ["Mostrar varias vistas de una aplicación"](../design/layout/show-multiple-views.md).
 
-Cuando lo hayas hecho, la aplicación aparecerá en el panel de contactos de contactos marcados.
+Cuando lo haya hecho, la aplicación aparecerá en el panel de contactos para los contactos anotados.
 
-## <a name="declaring-support-for-the-contract"></a>Declaración de compatibilidad para el contrato
+## <a name="declaring-support-for-the-contract"></a>Declarar la compatibilidad del contrato
 
-Para declarar la compatibilidad para el contrato de Mis allegados, abre tu aplicación en Visual Studio. En el **Explorador de soluciones**, haz clic con el botón derecho en **Package.appxmanifest** y selecciona **Abrir con**. En el menú, selecciona **Editor XML (texto)** y haz clic en **Aceptar**. Realiza los siguientes cambios en el manifiesto:
+Para declarar la compatibilidad con el contrato mis personas, abra la aplicación en Visual Studio. En el **Explorador de soluciones**, haga clic con el botón derecho en **Package. Appxmanifest** y seleccione **abrir con**. En el menú, seleccione **Editor XML (texto))** y haga clic en **Aceptar**. Realice los siguientes cambios en el manifiesto:
 
 **Antes**
 
@@ -76,15 +76,15 @@ Para declarar la compatibilidad para el contrato de Mis allegados, abre tu aplic
 
 ```
 
-Con esta adición, ahora se puede iniciar la aplicación a través del contrato **windows. ContactPanel**, que te permite interactuar con los paneles de contacto.
+Con esta adición, la aplicación ahora se puede iniciar a través de **Windows. ** Contrato de ContactPanel, que permite interactuar con los paneles de contacto.
 
-## <a name="annotating-contacts"></a>Anotación de contactos
+## <a name="annotating-contacts"></a>Anotar contactos
 
-Para permitir que los contactos de tu aplicación aparezcan en la barra de tareas mediante el panel Mis allegados, debes escribirlos en el almacén de contactos de Windows.  Para obtener información sobre cómo escribir los contactos, consulta la [Muestra de tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration).
+Para permitir que los contactos de la aplicación aparezcan en la barra de tareas mediante el panel mis personas, debe escribirlos en el almacén de contactos de Windows.  Para obtener información sobre cómo escribir contactos, vea el [ejemplo de tarjeta Contact](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration).
 
-La aplicación también debe escribir una anotación en cada contacto. Las anotaciones son elementos de datos de la aplicación que se asocian con un contacto. La anotación debe contener la clase activable correspondiente a la vista deseada en su miembro **ProviderProperties** y declarar la compatibilidad con la operación **ContactProfile**.
+La aplicación también debe escribir una anotación para cada contacto. Las anotaciones son fragmentos de datos de la aplicación que están asociados a un contacto. La anotación debe contener la clase activable correspondiente a la vista deseada en su miembro **ProviderProperties** y declarar la compatibilidad con la operación **ContactProfile** .
 
-Puedes anotar contactos en cualquier momento mientras se ejecuta la aplicación pero, por lo general, debes anotar los contactos tan pronto como se agreguen al almacén de contactos de Windows.
+Puede anotar contactos en cualquier momento mientras la aplicación se está ejecutando, pero generalmente debe anotar los contactos en cuanto se agreguen al almacén de contactos de Windows.
 
 ```Csharp
 if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 5))
@@ -104,11 +104,11 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-El "appId" es el nombre de familia de paquete, seguido por '!' y el identificador de clase activable. Para buscar el Nombre de familia de paquete, abre **Package.appxmanifest** mediante el editor predeterminado y busca en la pestaña "Empaquetado". Aquí, "Aplicación" es la clase activable correspondiente a la vista de inicio de la aplicación.
+"AppId" es el nombre de familia del paquete, seguido de "!". y el identificador de clase activable. Para buscar el nombre de familia del paquete, Abra **Package. appxmanifest** con el editor predeterminado y mire en la pestaña "empaquetado". Aquí, "app" es la clase activable correspondiente a la vista de inicio de la aplicación.
 
 ## <a name="allow-contacts-to-invite-new-potential-users"></a>Permitir a los contactos invitar a nuevos usuarios potenciales
 
-De forma predeterminada, la aplicación solo aparecerá en el panel de contactos para los contactos que hayas anotado específicamente.  Esto es para evitar confusiones con los contactos con los que no se puede interactuar a través de la aplicación.  Si quieres que la aplicación se muestre para contactos que la aplicación no conoce (para invitar a los usuarios a agregar determinado contacto con su cuenta, por ejemplo), puedes agregar lo siguiente al manifiesto:
+De forma predeterminada, la aplicación solo aparecerá en el panel de contactos para los contactos que haya anotado específicamente.  Esto es para evitar la confusión con los contactos con los que no se puede interactuar a través de la aplicación.  Si desea que la aplicación aparezca para los contactos que la aplicación no conoce (para invitar a los usuarios a agregar ese contacto a su cuenta, por ejemplo), puede agregar lo siguiente al manifiesto:
 
 **Antes**
 
@@ -140,17 +140,17 @@ De forma predeterminada, la aplicación solo aparecerá en el panel de contactos
 </Applications>
 ```
 
-Con este cambio, la aplicación aparecerá como una opción disponible en el panel de contactos para todos los contactos que el usuario haya anclado.  Cuando la aplicación se activa mediante el contrato del panel de contactos, debes comprobar para ver si el contacto es uno que conoce la aplicación.  De lo contrario, deberías mostrar la experiencia de nuevo usuario de la aplicación.
+Con este cambio, la aplicación aparecerá como una opción disponible en el panel de contacto para todos los contactos que el usuario haya anclado.  Cuando la aplicación se activa mediante el contrato del panel de contactos, debe comprobar si el contacto es uno de los que conoce su aplicación.  Si no es así, debe mostrar la nueva experiencia de usuario de la aplicación.
 
 ![Panel de contactos Mis allegados](images/my-people.png)
 
 ## <a name="support-for-email-apps"></a>Compatibilidad con aplicaciones de correo electrónico
 
-Si estás escribiendo una aplicación de correo electrónico, no necesitas anotar cada contacto manualmente.  Si declaras compatibilidad para el panel de contactos y para el protocolo mailto:, la aplicación aparecerá automáticamente para los usuarios con dirección de correo electrónico.
+Si está escribiendo una aplicación de correo electrónico, no es necesario anotar cada contacto manualmente.  Si declara la compatibilidad con el panel contacto y para el protocolo mailto:, la aplicación aparecerá automáticamente para los usuarios con una dirección de correo electrónico.
 
 ## <a name="running-in-the-contact-panel"></a>Ejecución en el panel de contactos
 
-Ahora que la aplicación aparece en el panel de contactos para algunos o todos los usuarios, necesitas controlar la activación con el contrato del panel de contactos.
+Ahora que la aplicación aparece en el panel de contactos de algunos o de todos los usuarios, debe controlar la activación con el contrato del panel de contactos.
 
 ```Csharp
 override protected void OnActivated(IActivatedEventArgs e)
@@ -172,29 +172,29 @@ override protected void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-Cuando la aplicación se activa con este contrato, recibirá un [objeto ContactPanelActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.contactpanelactivatedeventargs).  Este objeto contiene el identificador del contacto con el que está intentando interactuar la aplicación al inicio y un objeto [ContactPanel](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpanel). Debes mantener una referencia a este objeto ContactPanel, que te permitirá interactuar con el panel.
+Cuando la aplicación se active con este contrato, recibirá un [objeto ContactPanelActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.contactpanelactivatedeventargs).  Contiene el identificador del contacto con el que la aplicación está intentando interactuar en el inicio y un objeto [ContactPanel](/uwp/api/windows.applicationmodel.contacts.contactpanel) . Debe mantener una referencia a este objeto ContactPanel, que le permitirá interactuar con el panel.
 
-El objeto ContactPanel tiene dos eventos a los que la aplicación debe escuchar:
-+ El evento **LaunchFullAppRequested** se envía cuando el usuario ha invocado el elemento de interfaz de usuario que solicita que tu aplicación completa se inicie en su propia ventana.  La aplicación es responsable de iniciarse por sí misma, pasando por todo el contexto necesario.  Eres libre de hacer esto, aunque te gustaría (por ejemplo, a través del inicio de protocolo).
-+ El **evento de cierre** se envía cuando la aplicación va a cerrarse, lo que te permite guardar cualquier contexto.
+El objeto ContactPanel tiene dos eventos para los que la aplicación debe escuchar:
++ El evento **LaunchFullAppRequested** se envía cuando el usuario ha invocado el elemento de la interfaz de usuario que solicita que se inicie la aplicación completa en su propia ventana.  La aplicación es responsable de iniciarse, pasando todo el contexto necesario.  Puede hacerlo de forma gratuita si lo desea (por ejemplo, mediante el inicio de protocolo).
++ El **evento de cierre** se envía cuando la aplicación está a punto de cerrarse, lo que le permite guardar cualquier contexto.
 
-El objeto ContactPanel también te permite establecer el color de fondo del encabezado del panel de contacto (si no se establece, tomará como predeterminado el tema del sistema) y cerrar mediante programación el panel de contactos.
+El objeto ContactPanel también le permite establecer el color de fondo del encabezado del panel de contacto (si no se establece, el valor predeterminado será el tema del sistema) y cerrar mediante programación el panel contacto.
 
 ## <a name="supporting-notification-badging"></a>Compatibilidad con distintivos de notificación
 
-Si quieres que los contactos anclados a la barra de tareas se identifiquen cuando las nuevas notificaciones lleguen de la aplicación relacionada a dicha persona, debes incluir el parámetro **hint-people** en tus [notificaciones del sistema](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts) y la expresión [Notificaciones de Mis allegados](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-notifications).
+Si desea que los contactos anclados a la barra de tareas se contengan en el distintivo cuando lleguen nuevas notificaciones de la aplicación que están relacionadas con esa persona, debe incluir el parámetro **Hint-People** en las [notificaciones del sistema](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md) y las notificaciones expresivas de [mis personas](./my-people-notifications.md).
 
-![Distintivos de notificación de Contactos](images/my-people-badging.png)
+![Distintivos de notificación de personas](images/my-people-badging.png)
 
-Para identificar un contacto, el nodo del sistema de nivel superior debe incluir el parámetro hint-people para indicar el contacto remitente o relacionado. Este parámetro puede tener cualquiera de los valores siguientes:
+Para notificar a un contacto, el nodo notificador de nivel superior debe incluir el parámetro Hint-People para indicar el envío o el contacto relacionado. Este parámetro puede tener cualquiera de los siguientes valores:
 + **Dirección de correo electrónico** 
-    + P. ej. [https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/](mailto:johndoe@mydomain.com)
+    + Por ejemplo, mailto:johndoe@mydomain.com
 + **Número de teléfono** 
-    + P. ej. tel:888-888-8888
-+ **ID. remoto** 
-    + P. ej. remoteid:1234
+    + Por ejemplo, Tel: 888-888-8888
++ **Id. remoto** 
+    + Por ejemplo, remoteid: 1234
 
-Este es un ejemplo de cómo identificar una notificación del sistema relacionada con una persona determinada:
+Este es un ejemplo de cómo identificar una notificación del sistema relacionada con una persona específica:
 ```XML
 <toast hint-people="mailto:johndoe@mydomain.com">
     <visual lang="en-US">
@@ -206,21 +206,21 @@ Este es un ejemplo de cómo identificar una notificación del sistema relacionad
 ```
 
 > [!NOTE]
-> Si tu aplicación utiliza las [API ContactStore](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactstore) y la propiedad [StoredContact.RemoteId](https://docs.microsoft.com/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para vincular contactos almacenados en el PC con contactos almacenados de forma remota, es esencial que el valor de la propiedad RemoteId sea único y estable. Esto significa que el identificador remoto debe identificar de forma consistente una sola cuenta de usuario y debería contener una etiqueta única que no entre en conflicto con los identificadores remotos de otros contactos del PC, incluidos los contactos propiedad de otras aplicaciones.
-> Si no se garantiza que los identificadores remotos utilizados por tu aplicación sean únicos y estables, puedes utilizar la clase RemoteIdHelper mostrada más adelante en este tema para agregar una etiqueta única a todos tus identificadores remotos antes de agregarlos al sistema. O puedes decidir no utilizar en absoluto la propiedad RemoteId y en su lugar crear una propiedad personalizada extendida en la que almacenar los identificadores remotos de tus contactos.
+> Si la aplicación usa las [API de ContactStore](/uwp/api/windows.applicationmodel.contacts.contactstore) y usa la propiedad [StoredContact. RemoteId](/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) para vincular contactos almacenados en el equipo con contactos almacenados de forma remota, es fundamental que el valor de la propiedad RemoteId sea estable y único. Esto significa que el identificador remoto debe identificar de forma coherente una sola cuenta de usuario y debe contener una etiqueta única para garantizar que no entra en conflicto con los identificadores remotos de otros contactos en el equipo, incluidos los contactos que son propiedad de otras aplicaciones.
+> Si no se garantiza que los identificadores remotos usados por la aplicación sean stable y Unique, puede usar la clase RemoteIdHelper que se muestra más adelante en este tema para agregar una etiqueta única a todos los identificadores remotos antes de agregarlos al sistema. O bien, puede optar por no usar la propiedad RemoteId en absoluto y, en su lugar, crear una propiedad extendida personalizada en la que almacenar los identificadores remotos para sus contactos.
 
-## <a name="the-pinnedcontactmanager-class"></a>Clase PinnedContactManager
+## <a name="the-pinnedcontactmanager-class"></a>La clase PinnedContactManager
 
-La clase [PinnedContactManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager) se usa para administrar los contactos que están anclados a la barra de tareas. Esta clase te permite anclar y desanclar contactos, determinar si un contacto está anclado y determinar si el sistema en el que se ejecuta la aplicación admite el anclaje en una superficie determinada.
+El [PinnedContactManager](/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager) se usa para administrar los contactos que se anclan a la barra de tareas. Esta clase le permite anclar y desanclar contactos, determinar si un contacto está anclado y determinar si el anclaje en una superficie determinada es compatible con el sistema en el que se está ejecutando actualmente la aplicación.
 
-Puedes recuperar el objeto PinnedContactManager mediante el método **GetDefault**:
+Puede recuperar el objeto PinnedContactManager mediante el método **GetDefault** :
 
 ```Csharp
 PinnedContactManager pinnedContactManager = PinnedContactManager.GetDefault();
 ```
 
-## <a name="pinning-and-unpinning-contacts"></a>Anclado y desanclado de contactos
-Ahora puedes anclar y desanclar contactos mediante la clase PinnedContactManager que acabas de crear. Los métodos **RequestPinContactAsync** y **RequestUnpinContactAsync** proporcionan al usuario diálogos de confirmación, por lo que deben llamarse desde proceso del contenedor de subproceso único de aplicaciones (ASTA o subproceso de usuario).
+## <a name="pinning-and-unpinning-contacts"></a>Anclar y desanclar contactos
+Ahora puede anclar y desanclar contactos con el PinnedContactManager que acaba de crear. Los métodos **RequestPinContactAsync** y **RequestUnpinContactAsync** proporcionan al usuario cuadros de diálogo de confirmación, por lo que deben llamarse desde el subproceso de la aplicación de contenedor uniproceso (asta o IU).
 
 ```Csharp
 async void PinContact (Contact contact)
@@ -236,7 +236,7 @@ async void UnpinContact (Contact contact)
 }
 ```
 
-También puedes anclar varios contactos a la vez:
+También puede anclar varios contactos a la vez:
 
 ```Csharp
 async Task PinMultipleContacts(Contact[] contacts)
@@ -251,11 +251,11 @@ async Task PinMultipleContacts(Contact[] contacts)
 
 **Nota:** 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 + [Uso compartido de Mis allegados](my-people-sharing.md)
 + [Mis personas notificatons](my-people-notifications.md)
 + [Vídeo de Channel 9 sobre cómo agregar soporte técnico para mis usuarios a una aplicación](https://channel9.msdn.com/Events/Build/2017/P4056)
 + [Ejemplo de integración de mis personas](https://github.com/tonyPendolino/MyPeopleBuild2017)
 + [Ejemplo de tarjeta de contacto](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
-+ [Documentación de la clase PinnedContactManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
-+ [Conectar la aplicación a acciones en una tarjeta de contacto](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/integrating-with-contacts)
++ [Documentación de la clase PinnedContactManager](/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
++ [Conectar la aplicación a acciones en una tarjeta de contacto](./integrating-with-contacts.md)

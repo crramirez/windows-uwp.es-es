@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c4072070837d0bde67b644e2536bc2c93b0efc3
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: e6b01f961a28e3a6db52725c4f2f26dc3b3aaee9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053975"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172369"
 ---
 # <a name="raw-notification-overview"></a>Introducción a las notificaciones sin procesar
 
@@ -35,12 +35,12 @@ Fijémonos en una aplicación de colaboración de documentos teóricos para ver 
 
 Todas las notificaciones sin procesar son notificaciones de envío, de modo que la configuración necesaria para enviar y recibir notificaciones de envío también lo será para las notificaciones sin procesar:
 
--   Debes tener un canal de WNS válido para enviar notificaciones sin procesar. Para obtener más información sobre cómo adquirir un canal de notificaciones de envío, consulta [Cómo solicitar, crear y guardar un canal de notificaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10)).
--   Debes incluir la funcionalidad de **Internet** en el manifiesto de la aplicación. En el editor de manifiestos de Microsoft Visual Studio, encontrarás esta opción en la pestaña **Capacidades** como **Internet (cliente)**. Para obtener más información, vea [**capacidades**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-capabilities).
+-   Debes tener un canal de WNS válido para enviar notificaciones sin procesar. Para obtener más información sobre cómo adquirir un canal de notificaciones de envío, consulta [Cómo solicitar, crear y guardar un canal de notificaciones](/previous-versions/windows/apps/hh465412(v=win.10)).
+-   Debes incluir la funcionalidad de **Internet** en el manifiesto de la aplicación. En el editor de manifiestos de Microsoft Visual Studio, encontrarás esta opción en la pestaña **Capacidades** como **Internet (cliente)**. Para obtener más información, vea [**capacidades**](/uwp/schemas/appxpackage/appxmanifestschema/element-capabilities).
 
 El cuerpo de la notificación está en un formato definido por la aplicación. El cliente recibe los datos como una cadena terminada en null (**HSTRING**) que solo la aplicación conoce.
 
-Si el cliente no está conectado, WNS almacenará las notificaciones sin procesar en la memoria caché, pero solo si la notificación incluye el encabezado [X-WNS-Cache-Policy](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)). Sin embargo, solo se almacenará y enviará una única notificación sin procesar cuando el dispositivo vuelva a estar conectado.
+Si el cliente no está conectado, WNS almacenará las notificaciones sin procesar en la memoria caché, pero solo si la notificación incluye el encabezado [X-WNS-Cache-Policy](/previous-versions/windows/apps/hh465435(v=win.10)). Sin embargo, solo se almacenará y enviará una única notificación sin procesar cuando el dispositivo vuelva a estar conectado.
 
 Pueden suceder tres cosas con una notificación sin procesar: que se envíe a la aplicación que se está ejecutando a través de un evento de entrega de notificaciones, que se envíe a una tarea en segundo plano o que se descarte. Si el cliente no está conectado y WNS trata de enviar una notificación sin procesar, esta se descartará.
 
@@ -50,12 +50,12 @@ Pueden suceder tres cosas con una notificación sin procesar: que se envíe a la
 Enviar una notificación sin procesar es lo mismo que enviar una notificación del sistema o de icono, pero con estas diferencias:
 
 -   El encabezado HTTP Content-Type debe estar establecido en "application/octet-stream".
--   El encabezado HTTP [X-WNS-Type](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) debe estar establecido en "wns/raw".
+-   El encabezado HTTP [X-WNS-Type](/previous-versions/windows/apps/hh465435(v=win.10)) debe estar establecido en "wns/raw".
 -   El cuerpo de la notificación puede contener cualquier carga de cadena que no supere los 5 KB de tamaño.
 
 Las notificaciones sin procesar están pensadas para usarse como mensajes breves que activan la aplicación para que realice una acción, como ponerse en contacto directamente con el servicio para sincronizar una gran cantidad de datos o efectuar una modificación de estado local en función del contenido de la notificación. Ten en cuenta que no existe garantía de que las notificaciones de envío de WNS se entreguen, de modo que tu aplicación y tu servicio de nube deben contemplar la posibilidad de que la notificación sin procesar no llegue al cliente (si, por ejemplo, no está conectado).
 
-Para obtener más información sobre cómo enviar notificaciones de envío, consulta [Inicio rápido: envío de una notificación de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10)).
+Para obtener más información sobre cómo enviar notificaciones de envío, consulta [Inicio rápido: envío de una notificación de inserción](/previous-versions/windows/apps/hh868252(v=win.10)).
 
 ## <a name="receiving-a-raw-notification"></a>Recibir una notificación sin procesar
 
@@ -68,34 +68,34 @@ Tu aplicación puede recibir notificaciones sin procesar de dos modos:
 Una aplicación puede recurrir a cualquiera de estos dos mecanismos para recibir notificaciones sin procesar. Si una aplicación implementa tanto el controlador de eventos de entrega de notificaciones como las tareas en segundo plano desencadenadas por las notificaciones sin procesar, y dicha aplicación se está ejecutando, tendrá prioridad el evento de entrega de notificaciones.
 
 -   Si la aplicación se está ejecutando, el evento de entrega de notificaciones tendrá prioridad sobre la tarea en segundo plano y la aplicación tendrá la primera oportunidad de procesar la notificación.
--   El controlador de eventos de entrega de notificaciones puede establecer la propiedad [**PushNotificationReceivedEventArgs.Cancel**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs.Cancel) del evento en **true**, para indicar que la notificación sin procesar no debe pasar a su tarea en segundo plano correspondiente cuando exista un controlador. Si la propiedad **Cancel** se establece en **false** o no se establece (el valor predeterminado es **false**), la notificación sin procesar desencadenará la tarea en segundo plano después de que el controlador de eventos de entrega de notificaciones haya completado su trabajo.
+-   El controlador de eventos de entrega de notificaciones puede establecer la propiedad [**PushNotificationReceivedEventArgs.Cancel**](/uwp/api/Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs.Cancel) del evento en **true**, para indicar que la notificación sin procesar no debe pasar a su tarea en segundo plano correspondiente cuando exista un controlador. Si la propiedad **Cancel** se establece en **false** o no se establece (el valor predeterminado es **false**), la notificación sin procesar desencadenará la tarea en segundo plano después de que el controlador de eventos de entrega de notificaciones haya completado su trabajo.
 
 ### <a name="notification-delivery-events"></a>Eventos de entrega de notificaciones
 
-Tu aplicación puede usar un evento de entrega de notificaciones ([**PushNotificationReceived**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannel.PushNotificationReceived)) para recibir notificaciones sin procesar mientras se esté usando la aplicación. Cuando el servicio de nube envía una notificación sin procesar, la aplicación en ejecución puede recibirla controlando el evento de entrega de notificaciones en el URI de canal.
+Tu aplicación puede usar un evento de entrega de notificaciones ([**PushNotificationReceived**](/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannel.PushNotificationReceived)) para recibir notificaciones sin procesar mientras se esté usando la aplicación. Cuando el servicio de nube envía una notificación sin procesar, la aplicación en ejecución puede recibirla controlando el evento de entrega de notificaciones en el URI de canal.
 
 Si la aplicación no se está ejecutando y no usa [tareas en segundo plano](#background-tasks-triggered-by-raw-notifications)), WNS quita cualquier notificación sin procesar enviada a esa aplicación. Si no quieres desperdiciar los recursos de tu servicio de nube, considera la posibilidad de implementar lógica en el servicio para saber si la aplicación está activa. Hay dos maneras de obtener esta información: una aplicación puede informar al servicio expresamente de que está lista para recibir notificaciones, o bien WNS puede indicar al servicio cuándo detenerse.
 
 -   **La aplicación notifica al servicio de nube**: la aplicación puede ponerse en contacto con su servicio para avisarle de que se está ejecutando en primer plano. El inconveniente de este método reside en que la aplicación puede terminar poniéndose en contacto con el servicio con demasiada frecuencia, si bien reporta la ventaja de que el servicio siempre sabrá cuándo estará lista para recibir notificaciones sin procesar entrantes. Otra ventaja consiste en que, cuando la aplicación se pone en contacto con su servicio, este sabrá que puede enviar notificaciones sin procesar a la instancia específica de dicha aplicación, en lugar de difundirlas.
--   **El servicio de nube responde a los mensajes de respuesta de WNS**: el servicio de tu aplicación puede usar la información de [X-WNS-NotificationStatus](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) y [X-WNS-DeviceConnectionStatus](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) que WNS devuelve para saber cuándo dejar de enviar notificaciones sin procesar a la aplicación. Cuando el servicio envía una notificación a un canal a modo de HTTP POST, recibirá uno de los siguientes mensajes en la respuesta:
+-   **El servicio de nube responde a los mensajes de respuesta de WNS**: el servicio de tu aplicación puede usar la información de [X-WNS-NotificationStatus](/previous-versions/windows/apps/hh465435(v=win.10)) y [X-WNS-DeviceConnectionStatus](/previous-versions/windows/apps/hh465435(v=win.10)) que WNS devuelve para saber cuándo dejar de enviar notificaciones sin procesar a la aplicación. Cuando el servicio envía una notificación a un canal a modo de HTTP POST, recibirá uno de los siguientes mensajes en la respuesta:
 
     -   **X-WNS-NotificationStatus: dropped**: indica que el cliente no recibió la notificación. Se puede decir con certeza que la respuesta **dropped** viene provocada por el hecho de que la aplicación ya no se ejecuta en primer plano en el dispositivo del usuario.
-    -   **X-WNS-DeviceConnectionStatus: disconnected** o **X-WNS-DeviceConnectionStatus: tempconnected**: indica que el cliente de Windows ya no está conectado a WNS. Observa que, para recibir este mensaje de WNS, tienes que solicitarlo expresamente definiendo el encabezado [X-WNS-RequestForStatus](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) en el HTTP POST de la notificación.
+    -   **X-WNS-DeviceConnectionStatus: disconnected** o **X-WNS-DeviceConnectionStatus: tempconnected**: indica que el cliente de Windows ya no está conectado a WNS. Observa que, para recibir este mensaje de WNS, tienes que solicitarlo expresamente definiendo el encabezado [X-WNS-RequestForStatus](/previous-versions/windows/apps/hh465435(v=win.10)) en el HTTP POST de la notificación.
 
     El servicio de nube de tu aplicación puede usar la información de estos mensajes de estado para cesar sus intentos de comunicarse mediante notificaciones sin procesar y reanudará su envío cuando la aplicación vuelva a ejecutarse en primer plano y se ponga en contacto con él.
 
-    Ten en cuenta que no debes basarte en [X-WNS-NotificationStatus](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) para averiguar si la notificación se ha entregado al cliente correctamente.
+    Ten en cuenta que no debes basarte en [X-WNS-NotificationStatus](/previous-versions/windows/apps/hh465435(v=win.10)) para averiguar si la notificación se ha entregado al cliente correctamente.
 
-    Si quieres obtener más información, consulta [Encabezados de respuesta y solicitud del servicio de notificaciones de inserción](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)).
+    Si quieres obtener más información, consulta [Encabezados de respuesta y solicitud del servicio de notificaciones de inserción](/previous-versions/windows/apps/hh465435(v=win.10)).
 
 ### <a name="background-tasks-triggered-by-raw-notifications"></a>Tareas en segundo plano desencadenadas por las notificaciones sin procesar
 
 > [!IMPORTANT]
-> Antes de usar tareas en segundo plano de notificaciones sin procesar, la aplicación debe tener acceso en segundo plano a través de [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_).
+> Antes de usar tareas en segundo plano de notificaciones sin procesar, la aplicación debe tener acceso en segundo plano a través de [**BackgroundExecutionManager.RequestAccessAsync**](/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_).
 
  
 
-La tarea en segundo plano se debe registrar con un [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger); de lo contrario, dicha tarea no se ejecutará cuando se reciba una notificación sin procesar.
+La tarea en segundo plano se debe registrar con un [**PushNotificationTrigger**](/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger); de lo contrario, dicha tarea no se ejecutará cuando se reciba una notificación sin procesar.
 
 Una tarea en segundo plano desencadenada por una notificación sin procesar permite que el servicio de nube de tu aplicación se ponga en contacto con la aplicación, incluso cuando la aplicación no se esté ejecutando (aunque puede hacer que se ejecute). Esto sucede sin que la aplicación tenga que mantener una conexión continua. Las notificaciones sin procesar son las únicas que pueden desencadenar tareas en segundo plano. Además, aunque las notificaciones de inserción de tipo notificación, notificación del sistema o notificación de icono no puedan desencadenar tareas en segundo plano, las tareas en segundo plano desencadenadas por las notificaciones sin procesar sí que pueden actualizar iconos e invocar notificaciones del sistema a través de llamadas a la API local.
 
@@ -103,10 +103,10 @@ Pensemos en una aplicación que se usa para leer libros electrónicos con el fin
 
 Para usar una notificación sin procesar para desencadenar una tarea en segundo plano, tu aplicación debe hacer lo siguiente:
 
-1.  Solicitar permiso para ejecutar tareas en segundo plano (que el usuario puede revocar en cualquier momento) con [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_).
+1.  Solicitar permiso para ejecutar tareas en segundo plano (que el usuario puede revocar en cualquier momento) con [**BackgroundExecutionManager.RequestAccessAsync**](/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_).
 2.  Implementar la tarea en segundo plano. Para obtener más información, consulte [compatibilidad con la aplicación con tareas en segundo plano](../../../launch-resume/support-your-app-with-background-tasks.md) .
 
-A continuación se invoca la tarea en segundo plano en respuesta a [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger) cada vez que se reciba una notificación sin procesar relativa a la aplicación. Esta tarea en segundo plano interpreta la carga específica para la aplicación de la notificación sin procesar y actúa en consecuencia.
+A continuación se invoca la tarea en segundo plano en respuesta a [**PushNotificationTrigger**](/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger) cada vez que se reciba una notificación sin procesar relativa a la aplicación. Esta tarea en segundo plano interpreta la carga específica para la aplicación de la notificación sin procesar y actúa en consecuencia.
 
 Solo se puede ejecutar una tarea en segundo plano en una aplicación cada vez. En caso de que se desencadene una tarea en segundo plano relativa a una aplicación para la que ya hay una tarea ejecutándose, la primera deberá finalizar para que la siguiente comience.
 
@@ -117,15 +117,11 @@ Para obtener más información, descarga el [Ejemplo de notificaciones sin proce
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Instrucciones para notificaciones sin procesar](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-raw-notification-overview)
-* [Inicio rápido: Crear y registrar una tarea en segundo plano de notificación sin procesar](https://docs.microsoft.com/previous-versions/windows/apps/jj676800(v=win.10))
-* [Inicio rápido: interceptar notificaciones de inserción para aplicaciones en ejecución](https://docs.microsoft.com/previous-versions/windows/apps/jj709908(v=win.10))
-* [**RawNotification**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.RawNotification)
-* [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)
+* [Instrucciones para notificaciones sin procesar]()
+* [Inicio rápido: Crear y registrar una tarea en segundo plano de notificación sin procesar](/previous-versions/windows/apps/jj676800(v=win.10))
+* [Inicio rápido: interceptar notificaciones de inserción para aplicaciones en ejecución](/previous-versions/windows/apps/jj709908(v=win.10))
+* [**RawNotification**](/uwp/api/Windows.Networking.PushNotifications.RawNotification)
+* [**BackgroundExecutionManager.RequestAccessAsync**](/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)
  
 
  
-
-
-
-

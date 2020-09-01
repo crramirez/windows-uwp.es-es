@@ -1,36 +1,36 @@
 ---
-title: Iniciar la aplicación Microsoft Store
-description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede utilizar este esquema de URI para iniciar la aplicación de Microsoft Store a páginas específicas en el Store.
+title: Iniciar la aplicación de Microsoft Store
+description: En este tema se describe el esquema de URI ms-windows-store. La aplicación puede usar este esquema de URI para iniciar la aplicación Microsoft Store en páginas específicas del almacén.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fd0e7137f31a8f1620f7937b52efe1ca84a6b99a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1a31c762c002e711a87e99e2f97de6c26e2c8b48
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370786"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172989"
 ---
-# <a name="launch-the-microsoft-store-app"></a>Iniciar la aplicación Microsoft Store
+# <a name="launch-the-microsoft-store-app"></a>Iniciar la aplicación de Microsoft Store
 
 
 
-Este tema se describe la **ms-windows-store:** Esquema de URI. La aplicación puede usar este esquema de URI para iniciar la aplicación de Microsoft Store a páginas específicas en el almacén mediante el uso de la [ **LaunchUriAsync** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) método.
+En este tema se describe el esquema de URI **ms-windows-store:**. La aplicación puede usar este esquema de URI para iniciar la aplicación Microsoft Store en páginas específicas del almacén mediante el método [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) .
 
-En este ejemplo se muestra cómo abrir Microsoft Store a la página Juegos:
+En este ejemplo se muestra cómo abrir la tienda en la página juegos:
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
 ```
 
-## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: Referencia de esquema URI
+## <a name="ms-windows-store-uri-scheme-reference"></a>referencia del esquema de URI ms-windows-store:
 
 <table>
 <tr><th>Descripción</th><th></th><th>Esquema de URI</th></tr>
 <tr><td>Inicia la página principal de la Tienda.</td><td /><td>ms-windows-store://home</td></tr>
-<tr><td>Inicia un segmento vertical de nivel superior en la Tienda.<p>Nota: No todos los usuarios tengan acceso a todos los mercados verticales.</p>
+<tr><td>Inicia un segmento vertical de nivel superior en la Tienda.<p>Nota: no todos los usuarios tienen acceso a todos los segmentos verticales.</p>
 </td><td /><td>
 <p>ms-windows-store://navigatetopage/?Id=Apps </p>
 <p>ms-windows-store://navigatetopage/?Id=Games</p>
@@ -40,11 +40,11 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </td>
 </tr>
 <tr>
-<td rowspan="4">Inicia la página de detalles del producto (PDP) de un producto. <p>Se recomienda para los clientes de Windows 10 Store ID y funcionará en todas las versiones de sistema operativo, pero las formas de la operación anteriores (p. ej.: PFN) son todavía compatibles.</p>
-<p>Estos valores se pueden encontrar en <a href="https://partner.microsoft.com/dashboard">centro de partners</a> en el <a href="https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details">identidad de aplicación</a> página en la sección de administración de la aplicación para cada aplicación.</p>
+<td rowspan="4">Inicia la página de detalles del producto (PDP) de un producto. <p>El Id. de la Tienda se recomienda para los clientes de Windows 10 y funcionará en todas las versiones del sistema operativo, pero aún se admiten las formas anteriores de hacerlo anteriores (por ejemplo, PFN).</p>
+<p>Estos valores se pueden encontrar en <a href="https://partner.microsoft.com/dashboard">centro de Partners</a> en la página identidad de la <a href="https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details">aplicación</a> en la sección Administración de aplicaciones de cada aplicación.</p>
 </td>
 <td>
-Id. de Store <p>(recomendado)</p>
+Id. de Store <p>(Se recomienda)</p>
 </td>
 <td>
 <p>ms-windows-store://pdp/?ProductId=9WZDNCRFHVJL</p>
@@ -66,7 +66,7 @@ Id. de Store <p>(recomendado)</p>
 </tr>
 <tr>
 <td rowspan="4">Inicia la escritura de una experiencia de revisión de un producto.</td>
-<td>Id. de Store <p>(recomendado)</p></td>
+<td>Id. de Store <p>(Se recomienda)</p></td>
 <td>ms-windows-store://review/?ProductId=9WZDNCRFHVJL </td>
 </tr>
 <tr>

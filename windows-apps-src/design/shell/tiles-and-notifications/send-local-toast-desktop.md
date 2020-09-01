@@ -8,16 +8,16 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: 'Windows 10, UWP, Win32, escritorio, notificaciones del sistema, enviar una notificación del sistema, enviar un sistema local, un puente de escritorio, msix, paquetes dispersos, C#, C Sharp, notificación del sistema, WPF, enviar notificaciones del sistema WPF, enviar notificaciones del sistema, notificación del sistema #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a339a4f2dca52a9bc04b1bba92f149a3e627878
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: 1e78e68cdd44890b50209f3f900c538278bd523c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846755"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172299"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Enviar una notificaciones del sistema local desde aplicaciones de C# de escritorio
 
-Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está utilizando paquetes MSIX o dispersos.
+Las aplicaciones de escritorio (incluidas las aplicaciones empaquetadas de [MSIX](/windows/msix/desktop/source-code-overview) , las aplicaciones que usan [paquetes dispersos](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) para obtener la identidad del paquete y las aplicaciones Win32 clásicas no empaquetadas) pueden enviar notificaciones del sistema interactivas como aplicaciones de Windows. Sin embargo, hay algunos pasos especiales para las aplicaciones de escritorio debido a los diferentes esquemas de activación y a la falta de identidad del paquete si no está utilizando paquetes MSIX o dispersos.
 
 > [!IMPORTANT]
 > Si va a escribir una aplicación para UWP, consulte la [documentación de UWP](send-local-toast.md). En el caso de otros idiomas del escritorio, consulte [escritorio de C++ WRL](send-local-toast-desktop-cpp-wrl.md).
@@ -60,7 +60,7 @@ A continuación, debe registrarse con la plataforma de notificación. Hay pasos 
 
 #### <a name="msixsparse-packages"></a>[Paquetes MSIX/dispersos](#tab/msix-sparse)
 
-Si usa un paquete [MSIX](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) o [disperso](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) (o si admite ambos), en el **paquete. appxmanifest**, agregue:
+Si usa un paquete [MSIX](/windows/msix/desktop/source-code-overview) o [disperso](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) (o si admite ambos), en el **paquete. appxmanifest**, agregue:
 
 1. Declaración de **xmlns: com**
 2. Declaración de **xmlns: Desktop**
@@ -338,7 +338,7 @@ DesktopNotificationManagerCompat.History.Clear();
 
 ## <a name="step-8-deploying-and-debugging"></a>Paso 8: implementación y depuración
 
-Para implementar y depurar la aplicación MSIX, consulte [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](/windows/uwp/porting/desktop-to-uwp-debug).
+Para implementar y depurar la aplicación MSIX, consulte [Ejecutar, depurar y probar una aplicación de escritorio empaquetada](/windows/msix/desktop/desktop-to-uwp-debug).
 
 Para implementar y depurar la aplicación clásica de Win32, debe instalar la aplicación a través del instalador una vez antes de la depuración, para que el acceso directo de inicio con el AUMID y el CLSID estén presentes. Después de que el acceso directo de inicio esté presente, puede depurar con F5 desde Visual Studio.
 
@@ -359,4 +359,3 @@ Problema **corregido: la aplicación no se centra después de hacer clic**en la 
 * [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/desktop-toasts)
 * [Notificaciones del sistema de aplicaciones de escritorio](toast-desktop-apps.md)
 * [Documentación del contenido del sistema](adaptive-interactive-toasts.md)
-

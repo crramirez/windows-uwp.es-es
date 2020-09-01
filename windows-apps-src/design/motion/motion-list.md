@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4264a9a3a75c076fc033bb98dad45ff8dc99f2ef
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a2a61dd70915195673dacaed78510eb7b7c2f2f0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970290"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172409"
 ---
 # <a name="add-and-delete-animations"></a>Agregar y eliminar animaciones
 
@@ -21,7 +21,7 @@ ms.locfileid: "82970290"
 
 Las animaciones de listas te permiten insertar o quitar uno o varios elementos de una colección, como un álbum de fotos o una lista de resultados de búsqueda.
 
-> **API importantes**: [ **clase AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition)
+> **API importantes**: [ **clase AddDeleteThemeTransition**](/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition)
 
 
 ## <a name="dos-and-donts"></a>Cosas que hacer y cosas que evitar
@@ -38,15 +38,11 @@ Las animaciones de listas te permiten insertar o quitar uno o varios elementos d
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-* [Introducción a las animaciones](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
-* [Animación de incorporaciones y eliminaciones de listas](https://docs.microsoft.com/previous-versions/windows/apps/jj649430(v=win.10))
-* [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
-* [**Clase AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition)
+* [Introducción a las animaciones](./xaml-animation.md)
+* [Animación de incorporaciones y eliminaciones de listas](/previous-versions/windows/apps/jj649430(v=win.10))
+* [Inicio rápido: animación de la interfaz de usuario con animaciones de la biblioteca](/previous-versions/windows/apps/hh452703(v=win.10))
+* [**Clase AddDeleteThemeTransition**](/uwp/api/windows.ui.xaml.media.animation.adddeletethemetransition)
 
  
 
  
-
-
-
-

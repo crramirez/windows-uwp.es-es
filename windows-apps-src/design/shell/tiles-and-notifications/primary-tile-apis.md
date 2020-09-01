@@ -1,44 +1,44 @@
 ---
-Description: Mediante programación, puedes anclar el icono principal de tu propia aplicación a Inicio, al igual que puedes anclar iconos secundarios. Y puedes comprobar si está anclado actualmente.
-title: API de icono principal
+Description: Puede anclar el icono principal de la aplicación mediante programación para que se inicie, al igual que puede anclar iconos secundarios. También puede comprobar si está anclado actualmente.
+title: API de iconos principales
 label: Primary tile API's
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
-keywords: windows 10, uwp, StartScreenManager, anclar icono principal, api de icono principal, comprobar si el icono está anclado, icono dinámico
+keywords: Windows 10, UWP, StartScreenManager, icono principal de PIN, API de iconos principales, comprobar si el icono está anclado, icono dinámico
 ms.localizationpriority: medium
-ms.openlocfilehash: 04d7c66b358a3a465522ad3b56d8ae926358ae57
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 569ef5de9298a0fb9da58e4aaa88689c35b98c72
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57596200"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172349"
 ---
 # <a name="primary-tile-apis"></a>API de icono principal
  
 
-Las API de icono principal te permiten comprobar si tu aplicación está anclada actualmente a Inicio y solicitar anclar el icono principal de la aplicación.
+Las API de iconos principales permiten comprobar si la aplicación está anclada al inicio y solicitar anclar el icono principal de la aplicación.
 
 > [!IMPORTANT]
-> **Requiere la actualización Creators**: Debe tener como destino el SDK 15063 y se ejecuta la compilación 15063 o posterior para usar la API del icono principal.
+> **Requiere Creators Update**: debe tener como destino el SDK 15063 y ejecutar la compilación 15063 o superior para usar las API del icono principal.
 
-> **API importantes**: [**Clase StartScreenManager**](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
-
-
-## <a name="when-to-use-primary-tile-apis"></a>Cuándo usar las API de icono principal
-
-Inviertes mucho esfuerzo en el diseño de una gran experiencia para el icono principal de la aplicación y ahora tienes la oportunidad de pedir al usuario que la ancle a Inicio. Pero antes de profundizar en el código, hay algunas cosas que debes tener en cuenta mientras estás diseñando tu experiencia:
-
-* **Cosas que hacer** Crea una experiencia de usuario sin interrupciones y fácilmente descartable en tu aplicación con una llamada a la acción "Anclar icono dinámico" clara.
-* **Cosas que hacer** Explica con claridad el valor del icono dinámico de tu aplicación antes de pedirle al usuario que lo ancle.
-* **Debes evitar** pedir al usuario que ancle el icono de tu aplicación si ya está anclado el icono o el dispositivo no lo admite (más información a continuación).
-* **Debes evitar** pedir pidas varias veces al usuario que ancle el icono de la aplicación (probablemente acabará siendo una molestia para ellos).
-* **Debes evitar** llamar a la API de ancla sin interacción explícita del usuario o cuando la aplicación está minimizada o no abierta.
+> **API importantes**: [**clase StartScreenManager**](/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [RequestAddAppListEntryAsync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
 
 
-## <a name="checking-whether-the-apis-exist"></a>Comprobar la existencia de la API
+## <a name="when-to-use-primary-tile-apis"></a>Cuándo usar las API de iconos principales
 
-Si la aplicación admite versiones anteriores de Windows 10, debes comprobar si estas API de icono principal están disponibles. Haces esto con ApiInformation. Si las API de icono principal no están disponibles, evita ejecutar llamadas a las API.
+Usted pone un gran esfuerzo en diseñar una gran experiencia para el icono principal de la aplicación y ahora tiene la oportunidad de pedirle al usuario que lo ancle a iniciar. Pero antes de profundizar en el código, aquí tiene algunas cosas que debe tener en cuenta a la vez que está diseñando su experiencia:
+
+* Cree una experiencia de **usuario no disruptiva** y fácilmente descartable en la aplicación con una llamada clara a la acción.
+* Explique claramente el valor del icono dinámico de la aplicación antes de pedir al usuario **que lo ancle** .
+* **No** pida a un usuario que ancle el icono de la aplicación si el icono ya está anclado o el dispositivo no lo admite (más información a continuación).
+* **No** pida al usuario repetidamente que ancle el icono de la aplicación (probablemente se molestará).
+* **No** llame a la API de PIN sin interacción explícita del usuario o cuando la aplicación se minimice o no se abra.
+
+
+## <a name="checking-whether-the-apis-exist"></a>Comprobando si existe la API
+
+Si la aplicación es compatible con versiones anteriores de Windows 10, debe comprobar si estas API de iconos principales están disponibles. Para ello, use ApiInformation. Si las API de los iconos principales no están disponibles, evite ejecutar llamadas a las API.
 
 ```csharp
 if (ApiInformation.IsTypePresent("Windows.UI.StartScreen.StartScreenManager"))
@@ -52,9 +52,9 @@ else
 ```
 
 
-## <a name="check-if-start-supports-your-app"></a>Comprueba si Inicio admite tu aplicación
+## <a name="check-if-start-supports-your-app"></a>Comprobar si el inicio es compatible con la aplicación
 
-En función del menú Inicio actual, y del tipo de aplicación, es posible que no se admita tu aplicación a la pantalla Inicio actual. Solo Escritorio y Móvil admiten anclar el icono principal a Inicio. Por lo tanto, antes de mostrar cualquier interfaz de usuario de anclaje o ejecutar cualquier código de anclaje, debes comprobar primero si la aplicación se admite incluso para la pantalla Inicio actual. Si no la admite, no pidas al usuario que ancle el icono.
+Según el menú Inicio actual y el tipo de aplicación, es posible que no se admita el anclaje de la aplicación a la pantalla Inicio actual. Solo soporte técnico de escritorio y móvil anclando el icono principal al inicio. Por lo tanto, antes de mostrar cualquier interfaz de usuario de PIN o ejecutar cualquier código PIN, primero debe comprobar si la aplicación se admite incluso para la pantalla de inicio actual. Si no se admite, no se pide al usuario que ancle el icono.
 
 ```csharp
 // Get your own app list entry
@@ -66,9 +66,9 @@ bool isSupported = StartScreenManager.GetDefault().SupportsAppListEntry(entry);
 ```
 
 
-## <a name="check-whether-youre-currently-pinned"></a>Comprueba que estás anclado actualmente
+## <a name="check-whether-youre-currently-pinned"></a>Compruebe si está anclado actualmente
 
-Para averiguar si tu icono principal está anclado actualmente a Inicio, usa el método [ContainsAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_).
+Para averiguar si el icono principal está anclado actualmente para iniciarse, use el método [ContainsAppListEntryAsync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_) .
 
 ```csharp
 // Get your own app list entry
@@ -79,16 +79,16 @@ bool isPinned = await StartScreenManager.GetDefault().ContainsAppListEntryAsync(
 ```
 
 
-##  <a name="pin-your-primary-tile"></a>Anclar tu icono principal
+##  <a name="pin-your-primary-tile"></a>Anclar el icono principal
 
-Si actualmente tu icono principal no está anclado, y el icono es compatible con Inicio, es posible que quieras mostrar una sugerencia a los usuarios de que pueden anclar tu icono principal.
+Si el icono principal no está anclado actualmente y el icono es compatible con el inicio, es posible que quiera mostrar una sugerencia a los usuarios para que puedan anclar el icono principal.
 
 > [!NOTE]
-> Debe llamar a esta API desde un subproceso de interfaz de usuario mientras la aplicación está en primer plano y solo debe llamar a esta API después de que el usuario ha solicitado intencionadamente anclar el icono principal (por ejemplo, después de que el usuario hace clic en Sí en una sugerencia sobre anclar el icono).
+> Se debe llamar a esta API desde un subproceso de interfaz de usuario mientras la aplicación está en primer plano y solo se debe llamar a esta API una vez que el usuario haya solicitado intencionadamente el icono principal (por ejemplo, después de que el usuario haga clic en sí para anclar el icono).
 
-Si el usuario hace clic en el botón para anclar el icono principal, a continuación llamaría al método [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_) para solicitar que el icono se anclar a Inicio. Esta acción mostrará un cuadro de diálogo en el que se le pedirá al usuario que confirme que quiere que el icono quede anclado a Inicio.
+Si el usuario hace clic en el botón para anclar el icono principal, llamaría al método [RequestAddAppListEntryAsync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_) para solicitar que el icono se inicie. Se mostrará un cuadro de diálogo que pide al usuario que confirme que desea que se inicie el icono.
 
-Esto devolverá un valor booleano que indica si el icono está ahora anclado a Inicio. Si ya se ha anclado tu icono, este inmediatamente devolverá true sin mostrar el cuadro de diálogo al usuario. Si el usuario hace clic en No en el cuadro de diálogo, o no se admite el anclaje del icono a Inicio, devolverá false. De lo contrario, el usuario hizo clic en Sí, el icono se ancló y la API devolverá true.
+Esto devolverá un valor booleano que representa si el icono está anclado al inicio. Si el icono ya estaba anclado, se devolverá inmediatamente true sin mostrar el cuadro de diálogo al usuario. Si el usuario hace clic en no en el cuadro de diálogo o no se admite el anclar el icono a Inicio, se devolverá FALSE. De lo contrario, el usuario hizo clic en sí y el icono se ancló, y la API devolverá True.
 
 ```csharp
 // Get your own app list entry
@@ -101,7 +101,7 @@ bool isPinned = await StartScreenManager.GetDefault().RequestAddAppListEntryAsyn
 
 ## <a name="resources"></a>Recursos
 
-* [Ejemplo de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-pin-primary-tile)
+* [Muestra de código completo en GitHub](https://github.com/WindowsNotifications/quickstart-pin-primary-tile)
 * [Anclar a la barra de tareas](../pin-to-taskbar.md)
 * [Iconos, distintivos y notificaciones](index.md)
-* [Documentación de icono adaptable](create-adaptive-tiles.md)
+* [Documentación adaptable de iconos](create-adaptive-tiles.md)

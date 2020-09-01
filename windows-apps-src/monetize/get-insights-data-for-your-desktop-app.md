@@ -1,98 +1,98 @@
 ---
-description: Utilice este método en la API de análisis de Microsoft Store para obtener datos de insights para su aplicación de escritorio.
-title: Obtener datos de información de la aplicación de escritorio
+description: Use este método en la API de Microsoft Store Analytics para obtener datos de información para su aplicación de escritorio.
+title: Obtener información detallada de la aplicación de escritorio
 ms.date: 07/31/2018
 ms.topic: article
-keywords: Windows 10, uwp, servicios de Store, API, información de análisis de Microsoft Store
+keywords: Windows 10, UWP, servicios de tienda, API de análisis de Microsoft Store, información
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8f6f4b2df1cda14bc1f363a1f9100e416f26489b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bd60425a5ec3c040417aded818c766db80eb59eb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372462"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172899"
 ---
-# <a name="get-insights-data-for-your-desktop-application"></a>Obtener datos de información de la aplicación de escritorio
+# <a name="get-insights-data-for-your-desktop-application"></a>Obtener información detallada de la aplicación de escritorio
 
-Use este método en la API de análisis de Microsoft Store para obtener información relacionada con las métricas de mantenimiento para una aplicación de escritorio que se ha agregado a la [programa de aplicación de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program). Estos datos también están disponibles en el [informe de mantenimiento](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) para aplicaciones de escritorio en el centro de partners.
+Use este método en la API de Microsoft Store Analytics para obtener datos de información relacionada con las métricas de estado de una aplicación de escritorio que ha agregado al [programa de aplicación de escritorio de Windows](/windows/desktop/appxpkg/windows-desktop-application-program). Estos datos también están disponibles en el [Informe de mantenimiento](/windows/desktop/appxpkg/windows-desktop-application-program#health-report) de las aplicaciones de escritorio del centro de Partners.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar este método, primero debes hacer lo siguiente:
 
-* Si aún no lo has hecho, completa todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) para la API de análisis de Microsoft Store.
-* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Después de obtener un token de acceso, tienes 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
+* Si aún no lo ha hecho, complete todos los [requisitos previos](access-analytics-data-using-windows-store-services.md#prerequisites) de la API de Microsoft Store Analytics.
+* [Obtén un token de acceso de Azure AD](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) para usarlo en el encabezado de la solicitud de este método. Una vez que haya obtenido un token de acceso, tiene 60 minutos para usarlo antes de que expire. Si el token expira, puedes obtener uno nuevo.
 
 ## <a name="request"></a>Solicitud
 
 
 ### <a name="request-syntax"></a>Sintaxis de la solicitud
 
-| Método | URI de la solicitud       |
+| Método | URI de solicitud       |
 |--------|----------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/insights``` |
 
 
-### <a name="request-header"></a>Encabezado de la solicitud
+### <a name="request-header"></a>Encabezado de solicitud
 
-| Header        | Tipo   | Descripción                                                                 |
+| Encabezado        | Tipo   | Descripción                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorización | string | Obligatorio. El token de acceso de Azure AD en el formulario **portador** &lt; *token*&gt;. |
+| Authorization | string | Necesario. El token de acceso de Azure AD del formulario **Bearer** &lt;*token*&gt;. |
 
 
 ### <a name="request-parameters"></a>Parámetros de solicitud
 
-| Parámetro        | Tipo   |  Descripción      |  Requerido  
+| Parámetro        | Tipo   |  Descripción      |  Obligatorio  
 |---------------|--------|---------------|------|
-| applicationId | string | El identificador de producto de la aplicación de escritorio para el que desea obtener datos de insights. Para obtener el identificador de producto de una aplicación de escritorio, abra cualquier [análisis de informes para su aplicación de escritorio en el centro de partners](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program) (como el **informe de mantenimiento**) y recuperar el identificador de producto de la dirección URL. Si no especifica este parámetro, el cuerpo de respuesta contendrá datos de información para todas las aplicaciones registradas en su cuenta.  |  No  |
-| startDate | date | La fecha de inicio del intervalo de fechas de datos de insights para recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
-| endDate | date | La fecha de finalización del intervalo de fechas de datos de insights para recuperar. El valor predeterminado es la fecha actual. |  No  |
-| filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y un valor asociados a los operadores **eq** o **ne**; asimismo, puedes combinar las instrucciones mediante **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *Filtro = tipo de datos eq 'adquisición'* . <p/><p/>Actualmente, este método solo admite el filtro **estado**.  | No   |
+| applicationId | string | El ID. del producto de la aplicación de escritorio para la que desea obtener datos de información. Para obtener el identificador de producto de una aplicación de escritorio, abra el [Informe de análisis de la aplicación de escritorio en el centro de Partners](/windows/desktop/appxpkg/windows-desktop-application-program) (como el **Informe de mantenimiento**) y recupere el identificador de producto de la dirección URL. Si no especifica este parámetro, el cuerpo de la respuesta contendrá datos de información para todas las aplicaciones registradas en su cuenta.  |  No  |
+| startDate | date | Fecha de inicio del intervalo de fechas de datos de información que se va a recuperar. El valor predeterminado es 30 días antes de la fecha actual. |  No  |
+| endDate | date | Fecha de finalización del intervalo de fechas de datos de información que se va a recuperar. La fecha predeterminada es la actual. |  No  |
+| filter | string  | Una o más instrucciones que filtran las filas de la respuesta. Cada instrucción contiene un nombre de campo del cuerpo de la respuesta y el valor que están asociados a los operadores **EQ** o **ne** , y las instrucciones se pueden combinar con **and** u **or**. Ten en cuenta que en el parámetro *filter* los valores de la cadena deben estar entre comillas simples. Por ejemplo, *Filter = DataType EQ ' Acquisition '*. <p/><p/>Actualmente, este método solo admite el **Estado**del filtro.  | No   |
 
 ### <a name="request-example"></a>Ejemplo de solicitud
 
-El ejemplo siguiente muestra una solicitud de obtención de datos de insights. Reemplace el *applicationId* valor con el valor adecuado para su aplicación de escritorio.
+En el ejemplo siguiente se muestra una solicitud para obtener datos de información. Reemplace el valor de *ApplicationID* por el valor adecuado para su aplicación de escritorio.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/insights?applicationId=10238467886765136388&startDate=6/1/2018&endDate=6/15/2018&filter=dataType eq 'health' HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## <a name="response"></a>Respuesta
+## <a name="response"></a>Response
 
 ### <a name="response-body"></a>Cuerpo de la respuesta
 
-| Valor      | Tipo   | Descripción                  |
+| Value      | Tipo   | Descripción                  |
 |------------|--------|-------------------------------------------------------|
-| Valor      | array  | Una matriz de objetos que contienen datos de información de la aplicación. Para obtener más información acerca de los datos de cada objeto, vea el [valores Insight](#insight-values) sección más adelante.                                                                                                                      |
-| TotalCount | entero    | El número total de filas del resultado de datos de la consulta.                 |
+| Value      | array  | Matriz de objetos que contienen datos de información de la aplicación. Para obtener más información acerca de los datos de cada objeto, consulte la sección [valores](#insight-values) de la información más adelante.                                                                                                                      |
+| TotalCount | int    | El número total de filas del resultado de datos de la consulta.                 |
 
 
-### <a name="insight-values"></a>Valores de información
+### <a name="insight-values"></a>Valores de Insight
 
 Los elementos de la matriz *Value* contienen los siguientes valores.
 
-| Valor               | Tipo   | Descripción                           |
+| Value               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | string | El identificador de producto de la aplicación de escritorio para el que se recuperaron datos de insights.     |
-| insightDate                | string | La fecha en la que hemos identificado que el cambio en una métrica específica. Esta fecha representa el final de la semana en que se detectó un aumento significativo o disminuir en una métrica en comparación con la semana anterior a éste. |
-| dataType     | string | Una cadena que especifica el área de análisis general que le informa de esta información. Actualmente, este método solo admite **estado**.    |
-| insightDetail          | array | Uno o varios [InsightDetail valores](#insightdetail-values) que representan los detalles para obtener información actual.    |
+| applicationId       | string | El ID. del producto de la aplicación de escritorio para la que ha recuperado los datos de información.     |
+| insightDate                | string | Fecha en la que se identificó el cambio en una métrica específica. Esta fecha representa el final de la semana en el que se ha detectado un aumento o una disminución significativos en una métrica en comparación con la semana anterior. |
+| dataType     | string | Una cadena que especifica el área de análisis general A la que informa esta información. Actualmente, este método solo admite el **Estado**.    |
+| insightDetail          | array | Uno o más [valores de InsightDetail](#insightdetail-values) que representan los detalles de la información actual.    |
 
 
 ### <a name="insightdetail-values"></a>Valores de InsightDetail
 
-| Valor               | Tipo   | Descripción                           |
+| Value               | Tipo   | Descripción                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | Una cadena que indica la métrica que describe la información actual o la dimensión actual. Actualmente, este método solo admite el valor **HitCount**.  |
-| SubDimensions         | array |  Uno o más objetos que describen una sola métrica para la perspectiva.   |
-| PercentChange            | string |  El porcentaje que ha cambiado la métrica a través de la base de clientes todo.  |
-| DimensionName           | string |  El nombre de la métrica que se describe en la dimensión actual. Algunos ejemplos son **EventType**, **mercado**, **DeviceType**, y **PackageVersion**.   |
-| DimensionValue              | string | El valor de la métrica que se describe en la dimensión actual. Por ejemplo, si **DimensionName** es **EventType**, **DimensionValue** podría ser **bloqueo** o **bloqueo** .   |
-| FactValue     | string | El valor absoluto de la métrica en la fecha en que se ha detectado la recomendación.  |
-| Direction | string |  La dirección del cambio (**positivo** o **negativo**).   |
-| Fecha              | string |  La fecha en la que hemos identificado que el cambio relacionado con la información actual o la dimensión actual.   |
+| FactName           | string | Cadena que indica la métrica que describe la actual información o la dimensión actual. Actualmente, este método solo admite el valor **HitCount**.  |
+| Subdimensións         | array |  Uno o más objetos que describen una sola métrica para la información.   |
+| PercentChange            | string |  Porcentaje de cambio de la métrica en toda la base de clientes.  |
+| DimensionName           | string |  Nombre de la métrica descrita en la dimensión actual. Entre los ejemplos se incluyen **EventType**, **Market**, **DeviceType**y **PackageVersion**.   |
+| DimensionValue              | string | El valor de la métrica que se describe en la dimensión actual. Por ejemplo, si **DimensionName** es **EventType**, **DimensionValue** podría **bloquearse** o **bloquearse**.   |
+| FactValue     | string | Valor absoluto de la métrica en la fecha en que se detectó la información.  |
+| Dirección | string |  Dirección del cambio (**positivo** o **negativo**).   |
+| Date              | string |  Fecha en la que se identificó el cambio relacionado con la información actual o la dimensión actual.   |
 
 ### <a name="response-example"></a>Ejemplo de respuesta
 
@@ -151,6 +151,6 @@ En el ejemplo siguiente se muestra el cuerpo de una respuesta JSON de ejemplo re
 
 ## <a name="related-topics"></a>Temas relacionados
 
-* [Programa de aplicación de escritorio de Windows](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
-* [Informe de mantenimiento](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report)
-* [Acceder a los datos de análisis con servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)
+* [Programa de aplicación de escritorio de Windows](/windows/desktop/appxpkg/windows-desktop-application-program)
+* [Informe de estado](/windows/desktop/appxpkg/windows-desktop-application-program#health-report)
+* [Acceder a datos de análisis mediante servicios de Microsoft Store](access-analytics-data-using-windows-store-services.md)

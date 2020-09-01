@@ -5,12 +5,12 @@ ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 65a4643e6a73e0eb015fc40c7354d0cd307fa0d1
-ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
+ms.openlocfilehash: b4cf26d4f4fe5fa33f9f214da32263031188c5f0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469550"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172259"
 ---
 # <a name="bluetooth-gatt-server"></a>Servidor Bluetooth GATT
 
@@ -29,8 +29,8 @@ En este artículo se muestran las API de servidor de atributo genérico (GATT) d
 
 **API importantes**
 
-- [**Windows. Devices. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
-- [**Windows. Devices. Bluetooth. GenericAttributeProfile**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
+- [**Windows.Devices.Bluetooth**](/uwp/api/Windows.Devices.Bluetooth)
+- [**Windows. Devices. Bluetooth. GenericAttributeProfile**](/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
 
 ## <a name="overview"></a>Información general
 
@@ -45,7 +45,7 @@ La aplicación puede declarar uno o varios servicios que se van a publicar en Wi
 Cada servicio, característica y descriptor se define por su propio UUID único de 128 bits.
 > Todas las API de Windows usan el término GUID, pero el estándar Bluetooth los define como UUID. Para nuestros fines, estos dos términos son intercambiables, por lo que seguiremos usando el término UUID. 
 
-Si el atributo es estándar y está definido por el firma de Bluetooth, también tendrá un identificador corto de 16 bits correspondiente (por ejemplo, el UUID de nivel de batería es 0000**2A19**-0000-1000-8000-00805F9B34FB y el identificador corto es 0x2A19). Estos UUID estándar pueden verse en [GattServiceUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids) y [GattCharacteristicUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids).
+Si el atributo es estándar y está definido por el firma de Bluetooth, también tendrá un identificador corto de 16 bits correspondiente (por ejemplo, el UUID de nivel de batería es 0000**2A19**-0000-1000-8000-00805F9B34FB y el identificador corto es 0x2A19). Estos UUID estándar pueden verse en [GattServiceUuids](/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids) y [GattCharacteristicUuids](/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids).
 
 Si su aplicación está implementando su propio servicio personalizado, se tendrá que generar un UUID personalizado. Esto se realiza fácilmente en Visual Studio a través de herramientas-> CreateGuid (use la opción 5 para obtenerla en "xxxxxxxx-xxxx-... XXXX "formato). Este UUID se puede usar ahora para declarar nuevos servicios locales, características o descriptores.
 
@@ -182,7 +182,7 @@ async void ReadCharacteristic_ReadRequested(GattLocalCharacteristic sender, Gatt
 }
 ``` 
 
-### <a name="write"></a>Escritura
+### <a name="write"></a>Write
 Cuando un dispositivo remoto intenta escribir un valor en una característica, se llama al evento WriteRequested con detalles sobre el dispositivo remoto, la característica en la que se va a escribir y el propio valor: 
 
 ```csharp

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, juegos, DirectX, carga de recursos
 ms.localizationpriority: medium
-ms.openlocfilehash: 56eaebfeb6d644c4c15f14f0613b1e3b1781f637
-ms.sourcegitcommit: 22ed0d4edad5e6bab352e641cf86cf455cf83825
+ms.openlocfilehash: fae4906c93dc1016933b4fade0b0da447c8a0e20
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133998"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172029"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Cargar recursos en tu juego DirectX
 
@@ -81,7 +81,7 @@ La carga asincrónica se controla con la plantilla **task** de la Biblioteca de 
 
 Es posible encadenar tareas juntas mediante la sintaxis **.then()**. Cuando se completa una operación, puede ejecutarse otra operación asincrónica que depende de los resultados de la operación previa. De este modo, puedes cargar, convertir y administrar activos complejos en subprocesos independientes, casi invisibles para el jugador.
 
-Para más información, consulta [Programación asincrónica en C++](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+Para más información, consulta [Programación asincrónica en C++](../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md).
 
 Ahora veamos la estructura básica de la declaración y creación de un método asincrónico para cargar archivos, **ReadDataAsync**.
 
@@ -112,7 +112,7 @@ task<Platform::Array<byte>^> BasicReaderWriter::ReadDataAsync(
 }
 ```
 
-En este código, cuando tu código llama al método **ReadDataAsync** definido arriba, se crea una tarea para leer un búfer del sistema de archivos. Cuando termina, una tarea encadenada toma el búfer y transmite los bytes de ese búfer en una matriz, mediante el tipo [**DataReader**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) estático.
+En este código, cuando tu código llama al método **ReadDataAsync** definido arriba, se crea una tarea para leer un búfer del sistema de archivos. Cuando termina, una tarea encadenada toma el búfer y transmite los bytes de ese búfer en una matriz, mediante el tipo [**DataReader**](/uwp/api/Windows.Storage.Streams.DataReader) estático.
 
 ```cpp
 m_basicReaderWriter = ref new BasicReaderWriter();
@@ -126,7 +126,7 @@ return m_basicReaderWriter->ReadDataAsync(filename).then([=](const Platform::Arr
 
 Esta es la llamada que haces a **ReadDataAsync**. Cuando termina, tu código recibe una matriz de bytes leídos desde el archivo proporcionado. Dado que **ReadDataAsync** se define como una tarea, puedes usar una expresión lambda para realizar una operación específica cuando se devuelve la matriz de bytes; por ejemplo, pasar esos datos de bytes a una función DirectX que pueda usarlos.
 
-Si tu juego es lo suficientemente simple; carga los recursos con un método como este, cuando el usuario inicie el juego. Puedes hacer esto antes de iniciar el bucle principal del juego desde algún punto de la secuencia de llamada de la implementación [**IFrameworkView::Run**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview.run). Nuevamente llamas a los métodos de carga de recursos de manera asincrónica, para que el juego pueda iniciarse más rápido y el jugador no tenga que esperar hasta que termine la carga para sus primeras interacciones.
+Si tu juego es lo suficientemente simple; carga los recursos con un método como este, cuando el usuario inicie el juego. Puedes hacer esto antes de iniciar el bucle principal del juego desde algún punto de la secuencia de llamada de la implementación [**IFrameworkView::Run**](/uwp/api/windows.applicationmodel.core.iframeworkview.run). Nuevamente llamas a los métodos de carga de recursos de manera asincrónica, para que el juego pueda iniciarse más rápido y el jugador no tenga que esperar hasta que termine la carga para sus primeras interacciones.
 
 ¡Pero no quieres que el juego propiamente dicho empiece con cargas asincrónicas sin completar! Crea algún método de señalización de carga completa, como un campo específico, y usa las expresiones lambdas en tus métodos de carga para que se establezca la señal cuando terminen. Comprueba la variable antes de iniciar cualquier componente que use esos recursos cargados.
 
@@ -239,7 +239,7 @@ task<void> BasicLoader::LoadMeshAsync(
 }
 ```
 
-**CreateMesh** interpreta los datos de bytes cargados desde el archivo y crea un búfer de vértices y un búfer de índice para la malla pasando las listas de vértices e índices, respectivamente, a [**ID3D11Device:: CreateBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) y especificando el búfer de \_ vértices de enlace D3D11 \_ o el búfer de \_ Índice de D3D11 \_ \_ \_ . Este código se usa en **BasicLoader**:
+**CreateMesh** interpreta los datos de bytes cargados desde el archivo y crea un búfer de vértices y un búfer de índice para la malla pasando las listas de vértices e índices, respectivamente, a [**ID3D11Device:: CreateBuffer**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) y especificando el búfer de \_ vértices de enlace D3D11 \_ o el búfer de \_ Índice de D3D11 \_ \_ \_ . Este código se usa en **BasicLoader**:
 
 ```cpp
 void BasicLoader::CreateMesh(
@@ -302,7 +302,7 @@ void BasicLoader::CreateMesh(
 
 Normalmente creas un par de búferes de vértices e índices para todas las mallas del juego. Puedes elegir dónde y cuándo cargar las mallas. Si tienes varias mallas, quizás quieres cargar algunas del disco en puntos específicos del juego; por ejemplo, durante estados de carga predefinidos específicos.  Para mallas grandes, como datos de terreno, puedes transmitir los vértices de una memoria caché; pero este es un procedimiento más complejo y no lo incluimos en este tema.
 
-Recuerda que debes conocer el formato de los datos de vértices. Hay muchísimas formas de representar datos de vértices en las herramientas que se usan para crear modelos. También hay muchas formas de representar el diseño de entrada de los datos de vértices en Direct3D, como franjas y listas de triángulos. Para obtener más información sobre los datos de vértices, consulta [Introducción a los búferes en Direct3D 11](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-intro) y [Primitivos](https://docs.microsoft.com/windows/desktop/direct3d9/primitives).
+Recuerda que debes conocer el formato de los datos de vértices. Hay muchísimas formas de representar datos de vértices en las herramientas que se usan para crear modelos. También hay muchas formas de representar el diseño de entrada de los datos de vértices en Direct3D, como franjas y listas de triángulos. Para obtener más información sobre los datos de vértices, consulta [Introducción a los búferes en Direct3D 11](/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-intro) y [Primitivos](/windows/desktop/direct3d9/primitives).
 
 Echemos un vistazo ahora a la carga de texturas.
 
@@ -310,7 +310,7 @@ Echemos un vistazo ahora a la carga de texturas.
 
 El activo más común en un juego, y el que comprime la mayoría de los archivos en disco y memoria, son las texturas. Al igual que las mallas, las texturas pueden tener varios formatos y, cuando las cargas, las conviertes a un formato que Direct3D pueda usar. Las texturas también vienen en una amplia variedad de tipos para crear distintos efectos. Los niveles de MIP para texturas se pueden usar para mejorar la apariencia y el rendimiento de objetos distantes; los mapas de luces y suciedad se usan para efectos de capa y detalles encima de una textura base, y los mapas normales se usan en cálculos de iluminación por píxel. En un juego moderno, una escena común puede tener miles de texturas individuales y el código debe administrar a todas de manera efectiva.
 
-También al igual que las mallas, hay varios formatos específicos para que el uso de la memoria sea más eficaz. Dado que las texturas fácilmente consumen una amplia parte de la memoria de GPU (y del sistema), por lo general se comprimen de alguna forma. No es necesario que comprimas las texturas del juego. Puedes usar cualquier algoritmo de compresión y descompresión, siempre que proporciones los datos a los sombreadores de Direct3D en un formato que les resulte comprensible (como un mapa de bits [**Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d)).
+También al igual que las mallas, hay varios formatos específicos para que el uso de la memoria sea más eficaz. Dado que las texturas fácilmente consumen una amplia parte de la memoria de GPU (y del sistema), por lo general se comprimen de alguna forma. No es necesario que comprimas las texturas del juego. Puedes usar cualquier algoritmo de compresión y descompresión, siempre que proporciones los datos a los sombreadores de Direct3D en un formato que les resulte comprensible (como un mapa de bits [**Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d)).
 
 Direct3D proporciona soporte para los algoritmos de compresión de texturas DXT, aunque no todos los formatos DXT son compatibles con el hardware gráfico del jugador. Los archivos DDS contienen texturas DXT (y otros formatos de compresión de texturas) y llevan el sufijo .dds.
 
@@ -320,14 +320,14 @@ Un archivo DDS es un archivo binario que contiene la siguiente información:
 
 -   Una descripción de los datos del archivo.
 
-    Los datos se describen con una descripción de encabezado mediante el [** \_ encabezado DDS**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-header); el formato de píxel se define mediante los píxeles de [**DDS \_ **](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-pixelformat). Tenga en cuenta que el ** \_ encabezado DDS** y las estructuras de ** \_ PIXELFORMAT de DDS** reemplazan las estructuras DDSURFACEDESC2, DDSCAPS2 y DDPIXELFORMAT de DirectDraw 7 desusadas. **DDS \_ HEADER** es el equivalente binario de DDSURFACEDESC2 y DDSCAPS2. **DDS \_ PIXELFORMAT** es el equivalente binario de DDPIXELFORMAT.
+    Los datos se describen con una descripción de encabezado mediante el [** \_ encabezado DDS**](/windows/desktop/direct3ddds/dds-header); el formato de píxel se define mediante los píxeles de [**DDS \_ **](/windows/desktop/direct3ddds/dds-pixelformat). Tenga en cuenta que el ** \_ encabezado DDS** y las estructuras de ** \_ PIXELFORMAT de DDS** reemplazan las estructuras DDSURFACEDESC2, DDSCAPS2 y DDPIXELFORMAT de DirectDraw 7 desusadas. **DDS \_ HEADER** es el equivalente binario de DDSURFACEDESC2 y DDSCAPS2. **DDS \_ PIXELFORMAT** es el equivalente binario de DDPIXELFORMAT.
 
     ```cpp
     DWORD               dwMagic;
     DDS_HEADER          header;
     ```
 
-    Si el valor de **dwFlags** en [**DDS \_ PIXELFORMAT**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-pixelformat) se establece en DDPF \_ FourCC y **dwFourCC** se establece en "contenido DX10", se presentará una estructura de [**encabezado DDS adicional \_ \_ DXT10**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-header-dxt10) para acomodar las matrices de textura o los formatos de DXGI que no se pueden expresar como un formato de píxel RGB, como los formatos de punto flotante, los formatos sRGB, etc. Cuando la **estructura \_ \_ DXT10 del encabezado DDS** esté presente, toda la descripción de los datos tendrá el siguiente aspecto.
+    Si el valor de **dwFlags** en [**DDS \_ PIXELFORMAT**](/windows/desktop/direct3ddds/dds-pixelformat) se establece en DDPF \_ FourCC y **dwFourCC** se establece en "contenido DX10", se presentará una estructura de [**encabezado DDS adicional \_ \_ DXT10**](/windows/desktop/direct3ddds/dds-header-dxt10) para acomodar las matrices de textura o los formatos de DXGI que no se pueden expresar como un formato de píxel RGB, como los formatos de punto flotante, los formatos sRGB, etc. Cuando la **estructura \_ \_ DXT10 del encabezado DDS** esté presente, toda la descripción de los datos tendrá el siguiente aspecto.
 
     ```cpp
     DWORD               dwMagic;
@@ -340,13 +340,13 @@ Un archivo DDS es un archivo binario que contiene la siguiente información:
     BYTE bdata[]
     ```
 
--   Puntero a una matriz de bytes que contiene las superficies restantes, como los niveles de mapas MIP, caras de un mapa de cubos, profundidades de una textura de volumen. Sigue estos vínculos para obtener más información sobre el diseño de un archivo DDS para: una [textura](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-file-layout-for-textures), un [mapa de cubos](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-file-layout-for-cubic-environment-maps) o una [textura de volumen](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-file-layout-for-volume-textures).
+-   Puntero a una matriz de bytes que contiene las superficies restantes, como los niveles de mapas MIP, caras de un mapa de cubos, profundidades de una textura de volumen. Sigue estos vínculos para obtener más información sobre el diseño de un archivo DDS para: una [textura](/windows/desktop/direct3ddds/dds-file-layout-for-textures), un [mapa de cubos](/windows/desktop/direct3ddds/dds-file-layout-for-cubic-environment-maps) o una [textura de volumen](/windows/desktop/direct3ddds/dds-file-layout-for-volume-textures).
 
     ```cpp
     BYTE bdata2[]
     ```
 
-Muchas herramientas exportan al formato DDS. Si no tienes una herramienta que exporte la textura a este formato, piensa en crear una. Para más información sobre el formato DDS y cómo usarlo en tu código, consulta [Guía de programación para DDS](https://docs.microsoft.com/windows/desktop/direct3ddds/dx-graphics-dds-pguide). En nuestro ejemplo, usaremos DDS.
+Muchas herramientas exportan al formato DDS. Si no tienes una herramienta que exporte la textura a este formato, piensa en crear una. Para más información sobre el formato DDS y cómo usarlo en tu código, consulta [Guía de programación para DDS](/windows/desktop/direct3ddds/dx-graphics-dds-pguide). En nuestro ejemplo, usaremos DDS.
 
 Al igual que con otros tipos de recursos, lees los datos de un archivo como un flujo de bytes. Cuando termina la tarea de carga, la llamada a lambda ejecuta código (el método **CreateTexture**) para procesar el flujo de bytes en un formato que Direct3D pueda usar.
 
@@ -371,7 +371,7 @@ task<void> BasicLoader::LoadTextureAsync(
 }
 ```
 
-En el fragmento de código anterior, la expresión lambda comprueba si el nombre de archivo tiene una extensión de "dds". Si la tiene, supones que es una textura DDS. De lo contrario, usa las API de Windows Imaging Component (WIC) para saber cuál es el formato y decodificar los datos como un mapa de bits. De una u otra forma, el resultado será un mapa de bits [**Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) (o un error).
+En el fragmento de código anterior, la expresión lambda comprueba si el nombre de archivo tiene una extensión de "dds". Si la tiene, supones que es una textura DDS. De lo contrario, usa las API de Windows Imaging Component (WIC) para saber cuál es el formato y decodificar los datos como un mapa de bits. De una u otra forma, el resultado será un mapa de bits [**Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) (o un error).
 
 ```cpp
 void BasicLoader::CreateTexture(
@@ -511,7 +511,7 @@ void BasicLoader::CreateTexture(
 }
 ```
 
-Cuando este código se completa, tienes [**Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) en la memoria, cargada desde un archivo de imagen. Al igual que con las mallas, probablemente tengas varias texturas en el juego y en una escena determinada. Piensa en crear memorias caché para texturas de acceso frecuente por escena o por nivel, en lugar de cargarlas a todas cuando el juego o nivel se inician.
+Cuando este código se completa, tienes [**Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) en la memoria, cargada desde un archivo de imagen. Al igual que con las mallas, probablemente tengas varias texturas en el juego y en una escena determinada. Piensa en crear memorias caché para texturas de acceso frecuente por escena o por nivel, en lugar de cargarlas a todas cuando el juego o nivel se inician.
 
 (Puedes analizar con mayor profundidad el método **CreateDDSTextureFromMemory** llamado en la muestra anterior, en [Código completo para DDSTextureLoader](complete-code-for-ddstextureloader.md)).
 
@@ -551,7 +551,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 ```
 
-En este ejemplo, se usa la instancia de **BasicReaderWriter** (**m \_ BasicReaderWriter**) para leer en el archivo objeto de sombreador compilado (. CSO) proporcionado como un flujo de bytes. Cuando la tarea termina, la expresión lambda llama a [**ID3D11Device::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader) con los datos de bytes cargados desde el archivo. La devolución de llamada debe establecer una marca que indique que la carga se realizó correctamente y el código debe comprobar esta marca antes de ejecutar el sombreador.
+En este ejemplo, se usa la instancia de **BasicReaderWriter** (**m \_ BasicReaderWriter**) para leer en el archivo objeto de sombreador compilado (. CSO) proporcionado como un flujo de bytes. Cuando la tarea termina, la expresión lambda llama a [**ID3D11Device::CreatePixelShader**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader) con los datos de bytes cargados desde el archivo. La devolución de llamada debe establecer una marca que indique que la carga se realizó correctamente y el código debe comprobar esta marca antes de ejecutar el sombreador.
 
 Los sombreadores de vértices son un poco más complejos. Para un sombreador de vértices, también cargas un diseño de entrada independiente que define los datos de vértices. El siguiente código se usa para cargar asincrónicamente un sombreador de vértices junto con un diseño de entrada de vértices personalizado. Asegúrate de que la información de vértices que cargas desde las mallas pueda representarse en este diseño de entrada de manera correcta.
 
@@ -601,7 +601,7 @@ En este diseño particular, cada vértice tiene los siguientes datos procesados 
 -   Un vector normal para el vértice, también representado como tres valores de punto flotante de 32 bits.
 -   Un valor de coordenada para la textura 2D transformada (u, v), representado como un par de valores flotantes de 32 bits.
 
-Estos elementos de entrada por vértice se denominan [semántica de HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics). Son un conjunto de registros definidos que se usa para pasar datos desde y hacia el objeto de sombreador compilado. La canalización ejecuta el sombreador de vértices una vez para cada vértice en la malla que cargaste. La semántica define la entrada al sombreador de vértices (y la salida de él) a medida que se ejecuta y proporciona estos datos para los cálculos por vértice en el código HLSL del sombreador.
+Estos elementos de entrada por vértice se denominan [semántica de HLSL](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics). Son un conjunto de registros definidos que se usa para pasar datos desde y hacia el objeto de sombreador compilado. La canalización ejecuta el sombreador de vértices una vez para cada vértice en la malla que cargaste. La semántica define la entrada al sombreador de vértices (y la salida de él) a medida que se ejecuta y proporciona estos datos para los cálculos por vértice en el código HLSL del sombreador.
 
 Ahora carga el objeto del sombreador de vértices.
 
@@ -687,11 +687,11 @@ task<void> BasicLoader::LoadShaderAsync(
 }
 ```
 
-En este código, después de leer los datos de bytes para el archivo CSO del sombreador de vértices, creas el sombreador de vértices llamando a [**ID3D11Device::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader). A continuación, creas el diseño de entrada para el sombreador en la misma expresión lambda.
+En este código, después de leer los datos de bytes para el archivo CSO del sombreador de vértices, creas el sombreador de vértices llamando a [**ID3D11Device::CreateVertexShader**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader). A continuación, creas el diseño de entrada para el sombreador en la misma expresión lambda.
 
 Otros tipos de sombreador, como los sombreadores de casco y geometría, también pueden requerir una configuración específica. Encontrarás el código completo para una variedad de métodos de carga de sombreadores en [Código completo para BasicLoader](complete-code-for-basicloader.md) y en [Muestra de carga de recursos de Direct3D](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/Direct3D%20resource%20loading%20sample%20(Windows%208)/C%2B%2B).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Llegados a este punto, deberías comprender y poder crear o modificar métodos para cargar asincrónicamente activos y recursos comunes para juegos, como mallas, texturas y sombreadores compilados.
 
@@ -705,7 +705,3 @@ Llegados a este punto, deberías comprender y poder crear o modificar métodos p
  
 
  
-
-
-
-

@@ -7,12 +7,12 @@ ms.date: 11/07/2017
 ms.topic: article
 keywords: Windows 10, UWP, globalización, localizabilidad, localización
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f07e7901bf89ed73087833c92b7a3ba29165fec
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 4b914c0a2bcfae630b8b491ed702b237ce0eaaee
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493450"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172539"
 ---
 # <a name="make-your-app-localizable"></a>Hacer que la aplicación sea localizable
 
@@ -87,7 +87,7 @@ Cuando se instala una aplicación que contiene datos de idioma localizados, es p
 > [!NOTE]
 > No es posible instalar compatibilidad de idioma adicional para la aplicación después de la instalación inicial. Si cambia el idioma predeterminado después de instalar una aplicación, la aplicación continúa usando solo los recursos de idioma originales.
 
-Si desea asegurarse de que todos los recursos de idioma están disponibles después de la instalación, cree un archivo de configuración para el paquete de aplicación que especifique que se requieren determinados recursos durante la instalación (incluidos los recursos de idioma). Esta característica de instalación optimizada se habilita automáticamente cuando se genera el. appxbundle de la aplicación durante el empaquetado. Para obtener más información, consulte [asegurarse de que los recursos se instalan en un dispositivo independientemente de si un dispositivo los requiere](https://docs.microsoft.com/previous-versions/dn482043(v=vs.140)).
+Si desea asegurarse de que todos los recursos de idioma están disponibles después de la instalación, cree un archivo de configuración para el paquete de aplicación que especifique que se requieren determinados recursos durante la instalación (incluidos los recursos de idioma). Esta característica de instalación optimizada se habilita automáticamente cuando se genera el. appxbundle de la aplicación durante el empaquetado. Para obtener más información, consulte [asegurarse de que los recursos se instalan en un dispositivo independientemente de si un dispositivo los requiere](/previous-versions/dn482043(v=vs.140)).
 
 Opcionalmente, para asegurarse de que todos los recursos están instalados (no solo un subconjunto), puede deshabilitar la generación de. appxbundle al empaquetar la aplicación. Sin embargo, esto no es recomendable, ya que puede aumentar el tiempo de instalación de la aplicación.
 
@@ -135,14 +135,14 @@ Después de que las cadenas se separan en archivos de recursos, pueden traducirs
 Ten en cuenta estas opciones.
 
 - **Puedes traducir los archivos de recursos abriéndolos directamente en el proyecto.** Este enfoque funciona bien para un proyecto que tiene un pequeño volumen de cadenas que se deben traducir en dos o tres idiomas. Puede ser apropiado para un escenario en el que un desarrollador habla más de un idioma y quiere controlar el proceso de traducción. Este enfoque se beneficia de ser rápido, no requiere ninguna herramienta y minimiza el riesgo de que se procesen las traducciones. Pero no es escalable. En particular, los recursos de diferentes idiomas pueden perder la sincronización con facilidad, lo que causa malas experiencias de usuario y dolores de cabeza en el mantenimiento.
-- **Los archivos de recursos de cadena están en formato de texto XML o ResJSON, por lo que se puede entregar para su traducción mediante cualquier editor de texto. Los archivos traducidos se copiarán de nuevo en el proyecto.** Debes tener en cuenta que, si los traductores usan este método, es posible que acaben traduciendo por accidente las etiquetas XML, pero podrán trabajar en un entorno que no sea el proyecto Microsoft Visual Studio. Puedes usar este método para aquellos proyectos que debas traducir en unos pocos idiomas. El formato XLIFF es un formato XML que se diseñó específicamente para la localización, y que es compatible con varias de herramientas y proveedores de localización. Asimismo, puedes usar el [Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/previous-versions/windows/apps/jj572370(v=win.10)) para crear archivos XLIFF a partir de otros archivos de recursos como, por ejemplo, .resw o .resjson.
+- **Los archivos de recursos de cadena están en formato de texto XML o ResJSON, por lo que se puede entregar para su traducción mediante cualquier editor de texto. Los archivos traducidos se copiarán de nuevo en el proyecto.** Debes tener en cuenta que, si los traductores usan este método, es posible que acaben traduciendo por accidente las etiquetas XML, pero podrán trabajar en un entorno que no sea el proyecto Microsoft Visual Studio. Puedes usar este método para aquellos proyectos que debas traducir en unos pocos idiomas. El formato XLIFF es un formato XML que se diseñó específicamente para la localización, y que es compatible con varias de herramientas y proveedores de localización. Asimismo, puedes usar el [Kit de herramientas para aplicaciones multilingües](/previous-versions/windows/apps/jj572370(v=win.10)) para crear archivos XLIFF a partir de otros archivos de recursos como, por ejemplo, .resw o .resjson.
 
 > [!NOTE]
 > La localización también podría ser necesaria para otros recursos, como imágenes y archivos de audio.
 
 También debe tener en cuenta lo siguiente:
 
-- **Herramientas de localización** Hay varias herramientas de localización disponibles para analizar archivos de recursos y permitir que los traductores solo editen las cadenas traducibles. Este enfoque reduce el riesgo de que un traductor edite las etiquetas XML por error, pero tiene la desventaja de introducir un nuevo proceso y herramienta al proceso de localización. Una herramienta de localización es adecuada para los proyectos con un gran volumen de cadenas, pero con un número pequeño de idiomas. Para obtener más información, consulta el artículo acerca de [Cómo usar el Kit de herramientas para aplicaciones multilingües](https://docs.microsoft.com/previous-versions/windows/apps/jj572370(v=win.10)).
+- **Herramientas de localización** Hay varias herramientas de localización disponibles para analizar archivos de recursos y permitir que los traductores solo editen las cadenas traducibles. Este enfoque reduce el riesgo de que un traductor edite las etiquetas XML por error, pero tiene la desventaja de introducir un nuevo proceso y herramienta al proceso de localización. Una herramienta de localización es adecuada para los proyectos con un gran volumen de cadenas, pero con un número pequeño de idiomas. Para obtener más información, consulta el artículo acerca de [Cómo usar el Kit de herramientas para aplicaciones multilingües](/previous-versions/windows/apps/jj572370(v=win.10)).
 - **Proveedores de localización** Considere la posibilidad de usar un proveedor de localización si la aplicación contiene grandes cadenas que deben traducirse en un gran número de idiomas. Un proveedor de localizaciones puede darte consejo sobre las herramientas y los procesos, así como traducir tus archivos de recursos. Esta es una solución ideal, pero también la opción más costosa, y puede aumentar los tiempos de entrega para el contenido traducido.
 
 ## <a name="keep-access-keys-and-labels-consistent"></a>Mantener coherentes las claves de acceso y las etiquetas

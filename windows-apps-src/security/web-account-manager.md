@@ -6,21 +6,21 @@ ms.topic: article
 keywords: windows 10, uwp, security
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cf4cfa4b87842cd7113b36220cdfdff69449a3a
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: 69e60d8ef919a05493f47f086ee992afe8bfeb4c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846795"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172839"
 ---
 # <a name="web-account-manager"></a>Administrador de cuentas web
 
-En este artículo se describe cómo usar **[AccountsSettingsPane](https://docs.microsoft.com/uwp/api/Windows.UI.ApplicationSettings.AccountsSettingsPane)** para conectar la aplicación plataforma universal de Windows (UWP) con proveedores de identidades externos, como Microsoft o Facebook, mediante las API del administrador de cuentas web de Windows 10. Aprenderá a solicitar el permiso de un usuario para usar sus cuenta de Microsoft, obtener un token de acceso y usarlo para realizar operaciones básicas (como obtener datos de perfil o cargar archivos en su cuenta de OneDrive). Los pasos son similares para obtener permiso del usuario y acceso con cualquier proveedor de identidades que admita el Administrador de cuentas web.
+En este artículo se describe cómo usar **[AccountsSettingsPane](/uwp/api/Windows.UI.ApplicationSettings.AccountsSettingsPane)** para conectar la aplicación plataforma universal de Windows (UWP) con proveedores de identidades externos, como Microsoft o Facebook, mediante las API del administrador de cuentas web de Windows 10. Aprenderá a solicitar el permiso de un usuario para usar sus cuenta de Microsoft, obtener un token de acceso y usarlo para realizar operaciones básicas (como obtener datos de perfil o cargar archivos en su cuenta de OneDrive). Los pasos son similares para obtener permiso del usuario y acceso con cualquier proveedor de identidades que admita el Administrador de cuentas web.
 
 > [!NOTE]
 > Para obtener un ejemplo de código completo, vea el [ejemplo de WebAccountManagement en github](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement).
 
-## <a name="get-set-up"></a>Configuración
+## <a name="get-set-up"></a>Prepárate
 
 En primer lugar, crea una aplicación vacía en Visual Studio. 
 
@@ -76,7 +76,7 @@ Si ejecutas la aplicación y haces clic en el botón "Iniciar sesión", debería
 El panel está vacío porque el sistema solo proporciona un shell de interfaz de usuario. El desarrollador es quien rellena mediante programación el panel con los proveedores de identidades. 
 
 > [!TIP]
-> Opcionalmente, puede usar **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** en lugar de **[Show](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)**, que devolverá un **[IAsyncAction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)** para consultar el estado de la operación. 
+> Opcionalmente, puede usar **[ShowAddAccountAsync](/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** en lugar de **[Show](/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)**, que devolverá un **[IAsyncAction](/uwp/api/Windows.Foundation.IAsyncAction)** para consultar el estado de la operación. 
 
 ## <a name="register-for-accountcommandsrequested"></a>Registrarse para AccountCommandsRequested
 
@@ -133,7 +133,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 
 Ten en cuenta que también pasamos la cadena "consumers" al parámetro *authority* opcional. Esto es porque Microsoft proporciona dos tipos diferentes de autenticación: cuentas Microsoft (MSA) para "consumers" y Azure Active Directory (AAD) para "organizations". La autoridad "consumers" indica que queremos la opción de MSA. Si estás desarrollando una aplicación de empresa, usa en su lugar la cadena "organizations".
 
-Por último, agregue el proveedor a **AccountsSettingsPane** mediante la creación de un nuevo **[WebAccountProviderCommand](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.webaccountprovidercommand)** similar al siguiente: 
+Por último, agregue el proveedor a **AccountsSettingsPane** mediante la creación de un nuevo **[WebAccountProviderCommand](/uwp/api/windows.ui.applicationsettings.webaccountprovidercommand)** similar al siguiente: 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -178,7 +178,7 @@ En este ejemplo, pasamos la cadena "WL. Basic" al parámetro de _ámbito_ . El �
 * Para los ámbitos de OneDrive, consulte [autenticación e inicio de sesión de onedrive](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes). 
 
 > [!TIP]
-> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminada) u otra propiedad especial relacionada con la experiencia de inicio de sesión, escríbala en la propiedad **[WebTokenRequest. AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema omita la propiedad al almacenar en caché la cuenta Web, lo que evita que se produzcan discrepancias de la cuenta en la memoria caché.
+> Opcionalmente, si la aplicación usa una sugerencia de inicio de sesión (para rellenar el campo de usuario con una dirección de correo electrónico predeterminada) u otra propiedad especial relacionada con la experiencia de inicio de sesión, escríbala en la propiedad **[WebTokenRequest. AppProperties](/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** . Esto hará que el sistema omita la propiedad al almacenar en caché la cuenta Web, lo que evita que se produzcan discrepancias de la cuenta en la memoria caché.
 
 Si estás desarrollando una aplicación de empresa, probablemente querrás conectarte a una instancia de Azure Active Directory (AAD) y usar la API de Microsoft Graph en lugar de los servicios de MSA habituales. En este escenario, usa el siguiente código en su lugar: 
 
@@ -214,7 +214,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 > [!NOTE]
 > Si recibe un error al solicitar un token, asegúrese de que ha asociado la aplicación a la tienda tal y como se describe en el paso uno. La aplicación no podrá obtener un token si omites este paso. 
 
-Cuando tengas un token, podrás usarlo para llamar a la API de tu proveedor. En el código siguiente, llamaremos a la [información de usuario Microsoft Live API](https://docs.microsoft.com/office/) para obtener información básica sobre el usuario y mostrarla en la interfaz de usuario. Sin embargo, tenga en cuenta que en la mayoría de los casos se recomienda almacenar el token una vez obtenido y usarlo en un método independiente.
+Cuando tengas un token, podrás usarlo para llamar a la API de tu proveedor. En el código siguiente, llamaremos a la [información de usuario Microsoft Live API](/office/) para obtener información básica sobre el usuario y mostrarla en la interfaz de usuario. Sin embargo, tenga en cuenta que en la mayoría de los casos se recomienda almacenar el token una vez obtenido y usarlo en un método independiente.
 
 ```csharp
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
@@ -250,7 +250,7 @@ El método para llamar a las distintas API de REST varía según el proveedor; c
 
 Los tokens son útiles para obtener información acerca de un usuario de inmediato, pero suelen tener distintas duraciones; los tokens de MSA, por ejemplo, solo son válidos para unas pocas horas. Afortunadamente, no es necesario volver a mostrar el **AccountsSettingsPane** cada vez que expire un token. Una vez que un usuario ha autorizado la aplicación una vez, puedes almacenar la información de la cuenta del usuario para usarla posteriormente. 
 
-Para ello, use la clase **[WebAccount](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount)** . Una **cuenta** webse devuelve mediante el mismo método que se usó para solicitar el token:
+Para ello, use la clase **[WebAccount](/uwp/api/windows.security.credentials.webaccount)** . Una **cuenta** webse devuelve mediante el mismo método que se usó para solicitar el token:
 
 ```csharp
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
@@ -265,7 +265,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 }
 ```
 
-Una vez que tenga una instancia de **WebAccount** , puede almacenarla fácilmente. En el ejemplo siguiente, usamos LocalSettings. Para obtener más información sobre el uso de LocalSettings y otros métodos para almacenar datos de usuario, vea [almacenar y recuperar la configuración y los datos](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)de la aplicación.
+Una vez que tenga una instancia de **WebAccount** , puede almacenarla fácilmente. En el ejemplo siguiente, usamos LocalSettings. Para obtener más información sobre el uso de LocalSettings y otros métodos para almacenar datos de usuario, vea [almacenar y recuperar la configuración y los datos](../design/app-settings/store-and-retrieve-app-data.md)de la aplicación.
 
 ```csharp
 private async void StoreWebAccount(WebAccount account)
@@ -338,7 +338,7 @@ Dado que es muy sencillo obtener un token de forma silenciosa, debes usar este p
 
 ## <a name="remove-a-stored-account"></a>Quitar una cuenta almacenada
 
-Si conserva una cuenta Web, puede que desee ofrecer a los usuarios la posibilidad de desasociar su cuenta con la aplicación. De esta manera, pueden "cerrar sesión" de la aplicación: la información de su cuenta ya no se cargará automáticamente al iniciarse. Para ello, quite primero cualquier información de proveedor y cuenta guardada del almacenamiento. Después, llame a **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** para borrar la memoria caché e invalidar los tokens existentes que pueda tener la aplicación. 
+Si conserva una cuenta Web, puede que desee ofrecer a los usuarios la posibilidad de desasociar su cuenta con la aplicación. De esta manera, pueden "cerrar sesión" de la aplicación: la información de su cuenta ya no se cargará automáticamente al iniciarse. Para ello, quite primero cualquier información de proveedor y cuenta guardada del almacenamiento. Después, llame a **[SignOutAsync](/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** para borrar la memoria caché e invalidar los tokens existentes que pueda tener la aplicación. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)
@@ -398,7 +398,7 @@ No te excedas con el texto del encabezado; mantenlo breve y simple. Si el proces
 
 Puedes agregar comandos personalizados a la interfaz AccountsSettingsPane, que aparecerán como vínculos debajo de la colección de WebAccountProviders admitidos. Los comandos personalizados son geniales para tareas simples relacionadas con las cuentas de usuario, como mostrar una directiva de privacidad o iniciar una página de soporte técnico para los usuarios que tienen problemas. 
 
-Este es un ejemplo: 
+Veamos un ejemplo: 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCommandsRequestedEventArgs e)
@@ -420,13 +420,13 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 En teoría, puedes usar comandos de configuración para cualquier cosa. Sin embargo, se recomienda limitar su uso a escenarios intuitivos relacionados con las cuentas como las descritas anteriormente. 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Windows.Security.Authentication.Web.Core namespace (Espacio de nombres Windows.Security.Authentication.Web.Core)](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
+[Windows.Security.Authentication.Web.Core namespace (Espacio de nombres Windows.Security.Authentication.Web.Core)](/uwp/api/windows.security.authentication.web.core)
 
-[Windows.Security.Credentials Namespace (Espacio de nombres Windows.Security.Credentials)](https://docs.microsoft.com/uwp/api/windows.security.credentials)
+[Windows.Security.Credentials Namespace (Espacio de nombres Windows.Security.Credentials)](/uwp/api/windows.security.credentials)
 
-[Clase AccountsSettingsPane](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane)
+[Clase AccountsSettingsPane](/uwp/api/windows.ui.applicationsettings.accountssettingspane)
 
 [Agente de autenticación web](web-authentication-broker.md)
 
